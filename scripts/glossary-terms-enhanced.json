@@ -41,7 +41,9 @@
       ],
       "forms": {
         "base": "account"
-      }
+      },
+      "translation_note": "A digital identity on Ethereum with an address, balance, and optional code.",
+      "script_rule": "translate"
     },
     "account abstraction": {
       "id": "account-abstraction",
@@ -59,7 +61,8 @@
       "forms": {
         "base": "account abstraction",
         "nominalization": "account abstraction"
-      }
+      },
+      "script_rule": "translate"
     },
     "address": {
       "id": "address",
@@ -77,7 +80,8 @@
       "forms": {
         "base": "address"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "A unique hexadecimal identifier (0x...) for an Ethereum account. NOT a physical location."
     },
     "bundler": {
       "id": "bundler",
@@ -94,7 +98,8 @@
       ],
       "forms": {
         "base": "bundler"
-      }
+      },
+      "script_rule": "translate"
     },
     "cold wallet": {
       "id": "cold-wallet",
@@ -112,7 +117,8 @@
       "translation_note": "Frequently translated literally as 'chilled'; loses technical context of offline storage",
       "forms": {
         "base": "cold wallet"
-      }
+      },
+      "script_rule": "translate"
     },
     "derivation path": {
       "id": "derivation-path",
@@ -130,7 +136,8 @@
       "translation_note": "Often mistranslated as 'route' or 'way'; critical for wallet recovery guides",
       "forms": {
         "base": "derivation path"
-      }
+      },
+      "script_rule": "translate"
     },
     "digital signature": {
       "id": "digital-signatures",
@@ -148,7 +155,8 @@
       "forms": {
         "base": "digital signature"
       },
-      "term_family": "sign"
+      "term_family": "sign",
+      "script_rule": "translate"
     },
     "elliptic curve digital signature algorithm (ecdsa)": {
       "id": "ecdsa",
@@ -165,7 +173,8 @@
       ],
       "forms": {
         "base": "elliptic curve digital signature algorithm (ecdsa)"
-      }
+      },
+      "script_rule": "translate"
     },
     "erc-4337": {
       "id": "erc-4337",
@@ -182,7 +191,8 @@
       ],
       "forms": {
         "base": "erc-4337"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "externally owned account (eoa)": {
       "id": "eoa",
@@ -199,7 +209,8 @@
       ],
       "forms": {
         "base": "externally owned account (eoa)"
-      }
+      },
+      "script_rule": "translate"
     },
     "guardian": {
       "id": "guardian",
@@ -216,7 +227,8 @@
       ],
       "forms": {
         "base": "guardian"
-      }
+      },
+      "script_rule": "translate"
     },
     "hardware wallet": {
       "id": "hardware-wallet",
@@ -234,7 +246,8 @@
       "translation_note": "Often mistranslated as 'physical wallet' or 'cold wallet'; needs specific term to distinguish from software-based security",
       "forms": {
         "base": "hardware wallet"
-      }
+      },
+      "script_rule": "translate"
     },
     "hot wallet": {
       "id": "hot-wallet",
@@ -252,7 +265,8 @@
       "translation_note": "Frequently translated literally as 'warm'; loses technical context of internet connectivity",
       "forms": {
         "base": "hot wallet"
-      }
+      },
+      "script_rule": "translate"
     },
     "key": {
       "id": "key",
@@ -269,7 +283,8 @@
       ],
       "forms": {
         "base": "key"
-      }
+      },
+      "script_rule": "translate"
     },
     "key derivation function (kdf)": {
       "id": "kdf",
@@ -286,7 +301,8 @@
       ],
       "forms": {
         "base": "key derivation function (kdf)"
-      }
+      },
+      "script_rule": "translate"
     },
     "keystore": {
       "id": "keystore",
@@ -303,7 +319,8 @@
       ],
       "forms": {
         "base": "keystore"
-      }
+      },
+      "script_rule": "translate"
     },
     "multi-signature": {
       "id": "multi-signature",
@@ -320,7 +337,8 @@
       ],
       "forms": {
         "base": "multi-signature"
-      }
+      },
+      "script_rule": "translate"
     },
     "multisig": {
       "id": "multisig",
@@ -339,7 +357,8 @@
         "base": "multisig"
       },
       "morph_family": "sign",
-      "morph_note": "Romance languages require gender agreement for signed/signature"
+      "morph_note": "Romance languages require gender agreement for signed/signature",
+      "script_rule": "translate"
     },
     "non-custodial": {
       "id": "non-custodial",
@@ -356,7 +375,8 @@
       ],
       "forms": {
         "base": "non-custodial"
-      }
+      },
+      "script_rule": "translate"
     },
     "passkey": {
       "id": "passkey",
@@ -374,7 +394,8 @@
       "translation_note": "Newer WebAuthn standard; needs distinction from passwords and seed phrases",
       "forms": {
         "base": "passkey"
-      }
+      },
+      "script_rule": "translate"
     },
     "paymaster": {
       "id": "paymaster",
@@ -391,7 +412,8 @@
       ],
       "forms": {
         "base": "paymaster"
-      }
+      },
+      "script_rule": "translate"
     },
     "private key": {
       "id": "private-key",
@@ -409,7 +431,8 @@
       "forms": {
         "base": "private key"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "Secret cryptographic key for signing transactions. NEVER share. Security-critical term."
     },
     "public key": {
       "id": "public-key",
@@ -445,7 +468,8 @@
       "forms": {
         "base": "seed phrase"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "12 or 24 word sequence to recover a wallet. SECURITY-CRITICAL: must be translated precisely."
     },
     "self-custody": {
       "id": "self-custody",
@@ -462,7 +486,8 @@
       ],
       "forms": {
         "base": "self-custody"
-      }
+      },
+      "script_rule": "translate"
     },
     "signature": {
       "id": "signature",
@@ -482,7 +507,9 @@
       },
       "term_family": "sign",
       "morph_family": "sign",
-      "morph_note": "Romance languages require gender agreement for signed/signature"
+      "morph_note": "Romance languages require gender agreement for signed/signature",
+      "translation_note": "Cryptographic proof that a transaction was authorized by the key holder.",
+      "script_rule": "translate"
     },
     "signing": {
       "id": "signing",
@@ -501,7 +528,8 @@
         "base": "signing",
         "gerund": "signing"
       },
-      "term_family": "sign"
+      "term_family": "sign",
+      "script_rule": "translate"
     },
     "smart account": {
       "id": "smart-account",
@@ -518,7 +546,8 @@
       ],
       "forms": {
         "base": "smart account"
-      }
+      },
+      "script_rule": "translate"
     },
     "social recovery": {
       "id": "social-recovery",
@@ -535,7 +564,8 @@
       ],
       "forms": {
         "base": "social recovery"
-      }
+      },
+      "script_rule": "translate"
     },
     "useroperation": {
       "id": "useroperation",
@@ -553,7 +583,8 @@
       "forms": {
         "base": "useroperation",
         "nominalization": "useroperation"
-      }
+      },
+      "script_rule": "translate"
     },
     "wallet": {
       "id": "wallet",
@@ -571,7 +602,8 @@
       "forms": {
         "base": "wallet"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "Software or hardware for managing crypto keys and assets. NOT a physical wallet."
     },
     "zero address": {
       "id": "zero-address",
@@ -588,7 +620,8 @@
       ],
       "forms": {
         "base": "zero address"
-      }
+      },
+      "script_rule": "translate"
     },
     "activation": {
       "id": "activation",
@@ -606,7 +639,8 @@
       "forms": {
         "base": "activation",
         "nominalization": "activation"
-      }
+      },
+      "script_rule": "translate"
     },
     "attestation": {
       "id": "attestation",
@@ -627,7 +661,9 @@
       },
       "term_family": "attest",
       "morph_family": "attest",
-      "morph_note": "Ethereum 'attestation' is a specific object; general verb confuses with legal witnessing"
+      "morph_note": "Ethereum 'attestation' is a specific object; general verb confuses with legal witnessing",
+      "translation_note": "A validator's vote on the state of the chain. Specific PoS consensus term.",
+      "script_rule": "translate"
     },
     "beacon chain": {
       "id": "beacon-chain",
@@ -645,7 +681,8 @@
       "forms": {
         "base": "beacon chain"
       },
-      "script_rule": "C_context_dependent"
+      "script_rule": "C_context_dependent",
+      "translation_note": "The PoS coordination layer of Ethereum. Named component."
     },
     "beacon node": {
       "id": "beacon-node",
@@ -662,7 +699,8 @@
       ],
       "forms": {
         "base": "beacon node"
-      }
+      },
+      "script_rule": "translate"
     },
     "beacon-block": {
       "id": "beacon-block",
@@ -698,7 +736,8 @@
       ],
       "forms": {
         "base": "block builder"
-      }
+      },
+      "script_rule": "translate"
     },
     "block proposer": {
       "id": "block-proposer",
@@ -715,7 +754,8 @@
       ],
       "forms": {
         "base": "block proposer"
-      }
+      },
+      "script_rule": "translate"
     },
     "builder": {
       "id": "builder",
@@ -734,7 +774,8 @@
         "base": "builder"
       },
       "morph_family": "build",
-      "morph_note": "'Block builder' is specialized MEV role; 'constructing' vs 'software building' differ"
+      "morph_note": "'Block builder' is specialized MEV role; 'constructing' vs 'software building' differ",
+      "script_rule": "translate"
     },
     "builder separation": {
       "id": "builder-separation",
@@ -752,7 +793,8 @@
       "forms": {
         "base": "builder separation",
         "nominalization": "builder separation"
-      }
+      },
+      "script_rule": "translate"
     },
     "casper ffg": {
       "id": "casper-ffg",
@@ -769,7 +811,8 @@
       ],
       "forms": {
         "base": "casper ffg"
-      }
+      },
+      "script_rule": "translate"
     },
     "checkpoint": {
       "id": "checkpoint",
@@ -786,7 +829,8 @@
       ],
       "forms": {
         "base": "checkpoint"
-      }
+      },
+      "script_rule": "translate"
     },
     "churn limit": {
       "id": "churn-limit",
@@ -804,7 +848,8 @@
       "translation_note": "Validator entry/exit queue rate; 'movement limit' or 'rotation limit' too vague",
       "forms": {
         "base": "churn limit"
-      }
+      },
+      "script_rule": "translate"
     },
     "committee": {
       "id": "committee",
@@ -821,7 +866,8 @@
       ],
       "forms": {
         "base": "committee"
-      }
+      },
+      "script_rule": "translate"
     },
     "consensus": {
       "id": "consensus",
@@ -839,7 +885,8 @@
       "forms": {
         "base": "consensus"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "Agreement among network nodes on the state of the blockchain."
     },
     "consensus client": {
       "id": "consensus-client",
@@ -856,7 +903,9 @@
       ],
       "forms": {
         "base": "consensus client"
-      }
+      },
+      "translation_note": "Software implementing Ethereum's proof-of-stake consensus (e.g., Prysm, Lighthouse).",
+      "script_rule": "translate"
     },
     "consensus layer": {
       "id": "consensus-layer",
@@ -873,7 +922,8 @@
       ],
       "forms": {
         "base": "consensus layer"
-      }
+      },
+      "script_rule": "translate"
     },
     "consensus mechanism": {
       "id": "consensus-mechanism",
@@ -890,7 +940,8 @@
       ],
       "forms": {
         "base": "consensus mechanism"
-      }
+      },
+      "script_rule": "translate"
     },
     "consensus rules": {
       "id": "consensus-rules",
@@ -907,7 +958,8 @@
       ],
       "forms": {
         "base": "consensus rules"
-      }
+      },
+      "script_rule": "translate"
     },
     "distributed validator technology (dvt)": {
       "id": "distributed-validator-technology-dvt",
@@ -934,7 +986,8 @@
           "term": "DVT",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "effective balance": {
       "id": "effective-balance",
@@ -951,7 +1004,8 @@
       ],
       "forms": {
         "base": "effective balance"
-      }
+      },
+      "script_rule": "translate"
     },
     "epoch": {
       "id": "epoch",
@@ -968,7 +1022,9 @@
       ],
       "forms": {
         "base": "epoch"
-      }
+      },
+      "translation_note": "A period of 32 slots (~6.4 minutes) in the beacon chain. NOT a geological epoch.",
+      "script_rule": "translate"
     },
     "equivocation": {
       "id": "equivocation",
@@ -986,7 +1042,8 @@
       "forms": {
         "base": "equivocation",
         "nominalization": "equivocation"
-      }
+      },
+      "script_rule": "translate"
     },
     "execution-payload": {
       "id": "execution-payload",
@@ -1022,7 +1079,9 @@
       ],
       "forms": {
         "base": "exit"
-      }
+      },
+      "translation_note": "A validator leaving the active set. Specific staking term, not a general 'exit'.",
+      "script_rule": "translate"
     },
     "finality": {
       "id": "finality",
@@ -1042,7 +1101,8 @@
       },
       "term_family": "finalize",
       "morph_family": "finalize",
-      "morph_note": "'Finality' is chain property; 'finalized' is block state; must distinguish from 'finishing'"
+      "morph_note": "'Finality' is chain property; 'finalized' is block state; must distinguish from 'finishing'",
+      "script_rule": "translate"
     },
     "fork choice algorithm": {
       "id": "fork-choice-algorithm",
@@ -1059,7 +1119,8 @@
       ],
       "forms": {
         "base": "fork choice algorithm"
-      }
+      },
+      "script_rule": "translate"
     },
     "gasper": {
       "id": "gasper",
@@ -1099,7 +1160,8 @@
       ],
       "forms": {
         "base": "holographic consensus"
-      }
+      },
+      "script_rule": "translate"
     },
     "inactivity leak": {
       "id": "inactivity-leak",
@@ -1117,7 +1179,8 @@
       "translation_note": "Gradual loss of stake, not a one-time penalty; must convey progressive nature",
       "forms": {
         "base": "inactivity leak"
-      }
+      },
+      "script_rule": "translate"
     },
     "issuance": {
       "id": "issuance",
@@ -1134,7 +1197,8 @@
       ],
       "forms": {
         "base": "issuance"
-      }
+      },
+      "script_rule": "translate"
     },
     "justified": {
       "id": "justified",
@@ -1151,7 +1215,8 @@
       ],
       "forms": {
         "base": "justified"
-      }
+      },
+      "script_rule": "translate"
     },
     "liquid staking": {
       "id": "liquid-staking",
@@ -1170,7 +1235,8 @@
         "base": "liquid staking",
         "gerund": "liquid staking"
       },
-      "term_family": "stake"
+      "term_family": "stake",
+      "script_rule": "translate"
     },
     "liquid staking token (lst)": {
       "id": "liquid-staking-token-lst",
@@ -1210,7 +1276,8 @@
           "term": "liquid staking derivative",
           "status": "accepted"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "lmd-ghost": {
       "id": "lmd-ghost",
@@ -1227,7 +1294,8 @@
       ],
       "forms": {
         "base": "lmd-ghost"
-      }
+      },
+      "script_rule": "translate"
     },
     "maxeb": {
       "id": "maxeb",
@@ -1275,7 +1343,8 @@
         "base": "miner",
         "gerund": "mining"
       },
-      "term_family": "mine"
+      "term_family": "mine",
+      "script_rule": "translate"
     },
     "mining": {
       "id": "mining",
@@ -1334,7 +1403,8 @@
         "base": "pooled staking",
         "gerund": "pooled staking"
       },
-      "term_family": "stake"
+      "term_family": "stake",
+      "script_rule": "translate"
     },
     "proof-of-authority": {
       "id": "proof-of-authority",
@@ -1393,7 +1463,8 @@
           "note": "May become preferred per content lead -- pending"
         },
         "PoS"
-      ]
+      ],
+      "script_rule": "translate"
     },
     "proposer": {
       "id": "proposer",
@@ -1412,7 +1483,8 @@
         "base": "proposer"
       },
       "morph_family": "propose",
-      "morph_note": "'Block proposer' translates differently than general 'to propose an idea'"
+      "morph_note": "'Block proposer' translates differently than general 'to propose an idea'",
+      "script_rule": "translate"
     },
     "proposer-boost": {
       "id": "proposer-boost",
@@ -1459,7 +1531,8 @@
           "term": "PBS",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "re-org": {
       "id": "re-org",
@@ -1477,7 +1550,8 @@
       "translation_note": "'Rearrangement' doesn't capture the removal of blocks; aliases: chain reorganization, reorg",
       "forms": {
         "base": "re-org"
-      }
+      },
+      "script_rule": "translate"
     },
     "reorg": {
       "id": "reorg",
@@ -1530,7 +1604,8 @@
         "base": "restaking",
         "gerund": "restaking"
       },
-      "term_family": "stake"
+      "term_family": "stake",
+      "script_rule": "translate"
     },
     "secret-leader-election": {
       "id": "secret-leader-election",
@@ -1594,7 +1669,8 @@
       },
       "term_family": "slash",
       "morph_family": "slash",
-      "morph_note": "Metaphorical penalty; action vs state require different idioms in TH/HI"
+      "morph_note": "Metaphorical penalty; action vs state require different idioms in TH/HI",
+      "script_rule": "translate"
     },
     "slot": {
       "id": "slot",
@@ -1611,7 +1687,9 @@
       ],
       "forms": {
         "base": "slot"
-      }
+      },
+      "translation_note": "A 12-second time period in the beacon chain. NOT a physical slot or opening.",
+      "script_rule": "translate"
     },
     "social-slashing": {
       "id": "social-slashing",
@@ -1649,7 +1727,8 @@
         "base": "solo staking",
         "gerund": "solo staking"
       },
-      "term_family": "stake"
+      "term_family": "stake",
+      "script_rule": "translate"
     },
     "ssle": {
       "id": "ssle",
@@ -1666,7 +1745,8 @@
       ],
       "forms": {
         "base": "ssle"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "stake": {
       "id": "stake",
@@ -1686,7 +1766,9 @@
       },
       "term_family": "stake",
       "morph_family": "stake",
-      "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper"
+      "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper",
+      "translation_note": "Financial deposit (noun) or the act of depositing ETH (verb) to participate in consensus. NOT a wooden stake.",
+      "script_rule": "translate"
     },
     "stake-grinding": {
       "id": "stake-grinding",
@@ -1727,7 +1809,9 @@
       },
       "term_family": "stake",
       "morph_family": "stake",
-      "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper"
+      "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper",
+      "translation_note": "ETH that has been deposited for consensus participation. Adjective form of 'stake'.",
+      "script_rule": "translate"
     },
     "staker": {
       "id": "staker",
@@ -1750,7 +1834,9 @@
       },
       "term_family": "stake",
       "morph_family": "stake",
-      "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper"
+      "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper",
+      "translation_note": "Person or entity that has deposited ETH to participate in consensus.",
+      "script_rule": "translate"
     },
     "staking": {
       "id": "staking",
@@ -1773,7 +1859,9 @@
       },
       "term_family": "stake",
       "morph_family": "stake",
-      "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper"
+      "morph_note": "Arabic: verbal noun vs agent noun use distinct patterns. JP/KO: noun is loanword, verb needs native helper",
+      "translation_note": "The act of depositing ETH to participate in consensus. Gerund of 'stake'.",
+      "script_rule": "translate"
     },
     "staking as a service": {
       "id": "staking-as-a-service",
@@ -1790,7 +1878,8 @@
       ],
       "forms": {
         "base": "staking as a service"
-      }
+      },
+      "script_rule": "translate"
     },
     "staking deposit": {
       "id": "staking-deposit",
@@ -1808,7 +1897,8 @@
       "forms": {
         "base": "staking deposit"
       },
-      "term_family": "stake"
+      "term_family": "stake",
+      "script_rule": "translate"
     },
     "staking pool": {
       "id": "staking-pool",
@@ -1826,7 +1916,8 @@
       "forms": {
         "base": "staking pool"
       },
-      "term_family": "stake"
+      "term_family": "stake",
+      "script_rule": "translate"
     },
     "supermajority": {
       "id": "supermajority",
@@ -1843,7 +1934,8 @@
       ],
       "forms": {
         "base": "supermajority"
-      }
+      },
+      "script_rule": "translate"
     },
     "sync committee": {
       "id": "sync-committee",
@@ -1860,7 +1952,8 @@
       ],
       "forms": {
         "base": "sync committee"
-      }
+      },
+      "script_rule": "translate"
     },
     "unstaking": {
       "id": "unstaking",
@@ -1879,7 +1972,8 @@
         "base": "unstaking",
         "gerund": "unstaking"
       },
-      "term_family": "stake"
+      "term_family": "stake",
+      "script_rule": "translate"
     },
     "validator": {
       "id": "validator",
@@ -1900,7 +1994,8 @@
       "term_family": "validate",
       "script_rule": "B_always_translate",
       "morph_family": "validate",
-      "morph_note": "CN/VI: technical 'validation' vs 'validator' role uses different semantic registers"
+      "morph_note": "CN/VI: technical 'validation' vs 'validator' role uses different semantic registers",
+      "translation_note": "Software entity (node) that validates blocks in proof-of-stake. Sometimes refers to the human operator. NOT the same as 'miner' (PoW)."
     },
     "validator lifecycle": {
       "id": "validator-lifecycle",
@@ -1917,7 +2012,8 @@
       ],
       "forms": {
         "base": "validator lifecycle"
-      }
+      },
+      "script_rule": "translate"
     },
     "weak-subjectivity": {
       "id": "weak-subjectivity",
@@ -1955,7 +2051,9 @@
         "base": "withdrawal"
       },
       "morph_family": "withdraw",
-      "morph_note": "Action vs resulting transaction are grammatically distinct in Arabic"
+      "morph_note": "Action vs resulting transaction are grammatically distinct in Arabic",
+      "translation_note": "Removing staked ETH from a validator. Specific to PoS staking context.",
+      "script_rule": "translate"
     },
     "withdrawal-credentials": {
       "id": "withdrawal-credentials",
@@ -1991,7 +2089,8 @@
       ],
       "forms": {
         "base": "bls"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "bls-signature": {
       "id": "bls-signature",
@@ -2028,7 +2127,8 @@
       "translation_note": "Mathematical binding (e.g., KZG commitment); 'promise' or 'obligation' misses the cryptographic meaning",
       "forms": {
         "base": "commitment"
-      }
+      },
+      "script_rule": "translate"
     },
     "cryptography": {
       "id": "cryptography",
@@ -2045,7 +2145,8 @@
       ],
       "forms": {
         "base": "cryptography"
-      }
+      },
+      "script_rule": "translate"
     },
     "dagger-hashimoto": {
       "id": "dagger-hashimoto",
@@ -2081,7 +2182,8 @@
       ],
       "forms": {
         "base": "distributed hash table (dht)"
-      }
+      },
+      "script_rule": "translate"
     },
     "ecc": {
       "id": "ecc",
@@ -2098,7 +2200,8 @@
       ],
       "forms": {
         "base": "ecc"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "elliptic curve": {
       "id": "elliptic-curve",
@@ -2115,7 +2218,8 @@
       ],
       "forms": {
         "base": "elliptic curve"
-      }
+      },
+      "script_rule": "translate"
     },
     "encryption": {
       "id": "encryption",
@@ -2134,7 +2238,8 @@
         "base": "encryption",
         "nominalization": "encryption"
       },
-      "term_family": "encrypt"
+      "term_family": "encrypt",
+      "script_rule": "translate"
     },
     "entropy": {
       "id": "entropy",
@@ -2151,7 +2256,8 @@
       ],
       "forms": {
         "base": "entropy"
-      }
+      },
+      "script_rule": "translate"
     },
     "ethash": {
       "id": "ethash",
@@ -2168,7 +2274,8 @@
       ],
       "forms": {
         "base": "ethash"
-      }
+      },
+      "script_rule": "translate"
     },
     "hash": {
       "id": "hash",
@@ -2189,7 +2296,8 @@
       "term_family": "hash",
       "script_rule": "C_context_dependent",
       "morph_family": "hash",
-      "morph_note": "Usually loanword noun; verb often 'calculate the checksum' in formal docs"
+      "morph_note": "Usually loanword noun; verb often 'calculate the checksum' in formal docs",
+      "translation_note": "A fixed-length output from a cryptographic function. Also used as verb ('to hash data')."
     },
     "hash function": {
       "id": "hash-function",
@@ -2208,7 +2316,8 @@
         "base": "hash function",
         "nominalization": "hash function"
       },
-      "term_family": "hash"
+      "term_family": "hash",
+      "script_rule": "translate"
     },
     "hash rate": {
       "id": "hash-rate",
@@ -2228,7 +2337,8 @@
       },
       "term_family": "hash",
       "morph_family": "hash",
-      "morph_note": "Usually loanword noun; verb often 'calculate the checksum' in formal docs"
+      "morph_note": "Usually loanword noun; verb often 'calculate the checksum' in formal docs",
+      "script_rule": "translate"
     },
     "hashing": {
       "id": "hashing",
@@ -2250,7 +2360,8 @@
       },
       "term_family": "hash",
       "morph_family": "hash",
-      "morph_note": "Usually loanword noun; verb often 'calculate the checksum' in formal docs"
+      "morph_note": "Usually loanword noun; verb often 'calculate the checksum' in formal docs",
+      "script_rule": "translate"
     },
     "keccak-256": {
       "id": "keccak-256",
@@ -2267,7 +2378,8 @@
       ],
       "forms": {
         "base": "keccak-256"
-      }
+      },
+      "script_rule": "translate"
     },
     "kzg": {
       "id": "kzg",
@@ -2284,7 +2396,8 @@
       ],
       "forms": {
         "base": "kzg"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "merkle patricia trie": {
       "id": "merkle-patricia-trie",
@@ -2301,7 +2414,8 @@
       ],
       "forms": {
         "base": "merkle patricia trie"
-      }
+      },
+      "script_rule": "translate"
     },
     "merkle proof": {
       "id": "merkle-proof",
@@ -2318,7 +2432,8 @@
       ],
       "forms": {
         "base": "merkle proof"
-      }
+      },
+      "script_rule": "translate"
     },
     "merkle root": {
       "id": "merkle-root",
@@ -2335,7 +2450,8 @@
       ],
       "forms": {
         "base": "merkle root"
-      }
+      },
+      "script_rule": "translate"
     },
     "merkle tree": {
       "id": "merkle-tree",
@@ -2352,7 +2468,8 @@
       ],
       "forms": {
         "base": "merkle tree"
-      }
+      },
+      "script_rule": "translate"
     },
     "network hashrate": {
       "id": "network-hashrate",
@@ -2369,7 +2486,8 @@
       ],
       "forms": {
         "base": "network hashrate"
-      }
+      },
+      "script_rule": "translate"
     },
     "randomness": {
       "id": "randomness",
@@ -2386,7 +2504,8 @@
       ],
       "forms": {
         "base": "randomness"
-      }
+      },
+      "script_rule": "translate"
     },
     "secure hash algorithm (sha)": {
       "id": "sha",
@@ -2403,7 +2522,8 @@
       ],
       "forms": {
         "base": "secure hash algorithm (sha)"
-      }
+      },
+      "script_rule": "translate"
     },
     "sha": {
       "id": "sha",
@@ -2420,7 +2540,8 @@
       ],
       "forms": {
         "base": "sha"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "shard / shard chain": {
       "id": "shard",
@@ -2437,7 +2558,8 @@
       ],
       "forms": {
         "base": "shard / shard chain"
-      }
+      },
+      "script_rule": "translate"
     },
     "tee": {
       "id": "tee",
@@ -2454,7 +2576,8 @@
       ],
       "forms": {
         "base": "tee"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "trusted setup": {
       "id": "trusted-setup",
@@ -2472,7 +2595,8 @@
       "translation_note": "One-time initialization phase (e.g., KZG ceremony); needs consistent term",
       "forms": {
         "base": "trusted setup"
-      }
+      },
+      "script_rule": "translate"
     },
     "application programming interface (api)": {
       "id": "api",
@@ -2489,7 +2613,8 @@
       ],
       "forms": {
         "base": "application programming interface (api)"
-      }
+      },
+      "script_rule": "translate"
     },
     "apr": {
       "id": "apr",
@@ -2506,7 +2631,8 @@
       ],
       "forms": {
         "base": "apr"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "apy": {
       "id": "apy",
@@ -2523,7 +2649,8 @@
       ],
       "forms": {
         "base": "apy"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "automated market maker (amm)": {
       "id": "automated-market-maker-amm",
@@ -2550,7 +2677,8 @@
           "term": "AMM",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "blockchain oracle": {
       "id": "blockchain-oracle",
@@ -2567,7 +2695,8 @@
       ],
       "forms": {
         "base": "blockchain oracle"
-      }
+      },
+      "script_rule": "translate"
     },
     "borrowing": {
       "id": "borrowing",
@@ -2585,7 +2714,8 @@
       "forms": {
         "base": "borrowing",
         "gerund": "borrowing"
-      }
+      },
+      "script_rule": "translate"
     },
     "chainlink": {
       "id": "chainlink",
@@ -2622,7 +2752,8 @@
       "forms": {
         "base": "collateral"
       },
-      "term_family": "collateralize"
+      "term_family": "collateralize",
+      "script_rule": "translate"
     },
     "de-peg": {
       "id": "de-peg",
@@ -2640,7 +2771,8 @@
       "translation_note": "Must relate clearly to 'peg' translation",
       "forms": {
         "base": "de-peg"
-      }
+      },
+      "script_rule": "translate"
     },
     "decentralized exchange (dex)": {
       "id": "dex",
@@ -2657,7 +2789,8 @@
       ],
       "forms": {
         "base": "decentralized exchange (dex)"
-      }
+      },
+      "script_rule": "translate"
     },
     "decentralized finance (defi)": {
       "id": "decentralized-finance-defi",
@@ -2688,7 +2821,9 @@
       ],
       "avoid": [
         "Decentralized Finance"
-      ]
+      ],
+      "translation_note": "Financial services on blockchain without intermediaries. 'DeFi' stays Latin.",
+      "script_rule": "translate"
     },
     "flash loan": {
       "id": "flash-loan",
@@ -2705,7 +2840,8 @@
       ],
       "forms": {
         "base": "flash loan"
-      }
+      },
+      "script_rule": "translate"
     },
     "impermanent loss": {
       "id": "impermanent-loss",
@@ -2722,7 +2858,8 @@
       ],
       "forms": {
         "base": "impermanent loss"
-      }
+      },
+      "script_rule": "translate"
     },
     "index": {
       "id": "index",
@@ -2739,7 +2876,8 @@
       ],
       "forms": {
         "base": "index"
-      }
+      },
+      "script_rule": "translate"
     },
     "lending": {
       "id": "lending",
@@ -2757,7 +2895,8 @@
       "forms": {
         "base": "lending",
         "gerund": "lending"
-      }
+      },
+      "script_rule": "translate"
     },
     "liquidation": {
       "id": "liquidation",
@@ -2776,7 +2915,8 @@
         "base": "liquidation",
         "nominalization": "liquidation"
       },
-      "term_family": "liquidate"
+      "term_family": "liquidate",
+      "script_rule": "translate"
     },
     "liquidity": {
       "id": "liquidity",
@@ -2794,7 +2934,8 @@
       "forms": {
         "base": "liquidity"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "How easily an asset can be traded. DeFi-specific meaning: assets in a pool."
     },
     "liquidity pool": {
       "id": "liquidity-pool",
@@ -2811,7 +2952,8 @@
       ],
       "forms": {
         "base": "liquidity pool"
-      }
+      },
+      "script_rule": "translate"
     },
     "liquidity provider": {
       "id": "liquidity-provider",
@@ -2828,7 +2970,8 @@
       ],
       "forms": {
         "base": "liquidity provider"
-      }
+      },
+      "script_rule": "translate"
     },
     "liquidity tokens": {
       "id": "liquidity-tokens",
@@ -2845,7 +2988,8 @@
       ],
       "forms": {
         "base": "liquidity tokens"
-      }
+      },
+      "script_rule": "translate"
     },
     "modexp": {
       "id": "modexp",
@@ -2862,7 +3006,8 @@
       ],
       "forms": {
         "base": "modexp"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "oracle": {
       "id": "oracle",
@@ -2880,7 +3025,8 @@
       "forms": {
         "base": "oracle"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "A service providing external data to smart contracts. NOT a mythological oracle."
     },
     "oracle-problem": {
       "id": "oracle-problem",
@@ -2917,7 +3063,8 @@
       "translation_note": "A mouthful in most languages; 'too much security' is common but wrong",
       "forms": {
         "base": "overcollateralization"
-      }
+      },
+      "script_rule": "translate"
     },
     "peg": {
       "id": "peg",
@@ -2935,7 +3082,8 @@
       "translation_note": "Highly idiomatic; translating as physical 'hook' or 'pin' is confusing in financial context",
       "forms": {
         "base": "peg"
-      }
+      },
+      "script_rule": "translate"
     },
     "prediction market": {
       "id": "prediction-market",
@@ -2952,7 +3100,8 @@
       ],
       "forms": {
         "base": "prediction market"
-      }
+      },
+      "script_rule": "translate"
     },
     "price feed": {
       "id": "price-feed",
@@ -2969,7 +3118,8 @@
       ],
       "forms": {
         "base": "price feed"
-      }
+      },
+      "script_rule": "translate"
     },
     "price impact": {
       "id": "price-impact",
@@ -2987,7 +3137,8 @@
       "translation_note": "Distinct from slippage but often conflated in translations",
       "forms": {
         "base": "price impact"
-      }
+      },
+      "script_rule": "translate"
     },
     "slippage": {
       "id": "slippage",
@@ -3005,7 +3156,8 @@
       "translation_note": "One of the most inconsistently translated terms; 'sliding' or 'deviation' common but wrong",
       "forms": {
         "base": "slippage"
-      }
+      },
+      "script_rule": "translate"
     },
     "stablecoin": {
       "id": "stablecoin",
@@ -3040,7 +3192,8 @@
       ],
       "forms": {
         "base": "strategy"
-      }
+      },
+      "script_rule": "translate"
     },
     "swap": {
       "id": "swap",
@@ -3060,7 +3213,8 @@
       },
       "term_family": "swap",
       "morph_family": "swap",
-      "morph_note": "DE/NL: noun (Tausch) and verb (tauschen) differ; DeFi context needs technical synonyms"
+      "morph_note": "DE/NL: noun (Tausch) and verb (tauschen) differ; DeFi context needs technical synonyms",
+      "script_rule": "translate"
     },
     "tellor": {
       "id": "tellor",
@@ -3115,7 +3269,8 @@
       ],
       "forms": {
         "base": "vault"
-      }
+      },
+      "script_rule": "translate"
     },
     "yield farming": {
       "id": "yield-farming",
@@ -3151,7 +3306,9 @@
       ],
       "forms": {
         "base": "api"
-      }
+      },
+      "translation_note": "Application Programming Interface. Technical acronym, keep Latin.",
+      "script_rule": "keep_latin"
     },
     "decentralized application (dapp)": {
       "id": "decentralized-application-dapp",
@@ -3188,7 +3345,9 @@
         "dapps",
         "Dapps",
         "DApps"
-      ]
+      ],
+      "translation_note": "Application running on a blockchain. Prefer 'app' or 'onchain app' for new content.",
+      "script_rule": "translate"
     },
     "devp2p": {
       "id": "devp2p",
@@ -3262,7 +3421,8 @@
       ],
       "forms": {
         "base": "faucet"
-      }
+      },
+      "script_rule": "translate"
     },
     "foundry": {
       "id": "foundry",
@@ -3279,7 +3439,8 @@
       ],
       "forms": {
         "base": "foundry"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "hardhat": {
       "id": "hardhat",
@@ -3296,7 +3457,8 @@
       ],
       "forms": {
         "base": "hardhat"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "ipfs": {
       "id": "ipfs",
@@ -3331,7 +3493,8 @@
       ],
       "forms": {
         "base": "json-rpc"
-      }
+      },
+      "script_rule": "translate"
     },
     "kurtosis": {
       "id": "kurtosis",
@@ -3443,7 +3606,8 @@
       ],
       "forms": {
         "base": "remix"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "slither": {
       "id": "slither",
@@ -3479,7 +3643,8 @@
       ],
       "forms": {
         "base": "ssz"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "subgraph": {
       "id": "subgraph",
@@ -3496,7 +3661,8 @@
       ],
       "forms": {
         "base": "subgraph"
-      }
+      },
+      "script_rule": "translate"
     },
     "testnet faucet": {
       "id": "testnet-faucet",
@@ -3513,7 +3679,8 @@
       ],
       "forms": {
         "base": "testnet faucet"
-      }
+      },
+      "script_rule": "translate"
     },
     "web3": {
       "id": "web3",
@@ -3531,7 +3698,8 @@
       "forms": {
         "base": "web3"
       },
-      "script_rule": "A_always_latin"
+      "script_rule": "A_always_latin",
+      "translation_note": "The vision of a decentralized internet built on blockchain. Proper noun-like, often kept as 'Web3'."
     },
     "cryptocurrency": {
       "id": "cryptocurrency",
@@ -3548,7 +3716,8 @@
       ],
       "forms": {
         "base": "cryptocurrency"
-      }
+      },
+      "script_rule": "translate"
     },
     "digital asset": {
       "id": "digital-asset",
@@ -3565,7 +3734,8 @@
       ],
       "forms": {
         "base": "digital asset"
-      }
+      },
+      "script_rule": "translate"
     },
     "eth": {
       "id": "eth",
@@ -3583,7 +3753,8 @@
       "forms": {
         "base": "eth"
       },
-      "script_rule": "A_always_latin"
+      "script_rule": "A_always_latin",
+      "translation_note": "The ticker symbol for ether (Ethereum's native cryptocurrency). Always keep as 'ETH' in Latin."
     },
     "eth1": {
       "id": "eth1",
@@ -3602,7 +3773,8 @@
         "base": "eth1"
       },
       "deprecated": true,
-      "note": "Legacy term. Preferred: 'execution layer'. Deprecated by ecosystem consensus; only used in historical context."
+      "note": "Legacy term. Preferred: 'execution layer'. Deprecated by ecosystem consensus; only used in historical context.",
+      "script_rule": "translate"
     },
     "eth2": {
       "id": "eth2",
@@ -3621,7 +3793,8 @@
         "base": "eth2"
       },
       "deprecated": true,
-      "note": "Legacy term. Preferred: 'consensus layer'. Deprecated by ecosystem consensus; only used in historical context."
+      "note": "Legacy term. Preferred: 'consensus layer'. Deprecated by ecosystem consensus; only used in historical context.",
+      "script_rule": "translate"
     },
     "ether": {
       "id": "ether",
@@ -3642,7 +3815,9 @@
       "note": "Lowercase when referring to the currency/denomination. Title case only when referring to the person (Hal Finney, Nick Szabo).",
       "avoid": [
         "Ether"
-      ]
+      ],
+      "translation_note": "The native cryptocurrency of Ethereum. Lowercase when referring to the currency. NOT the chemical ether.",
+      "script_rule": "translate"
     },
     "etherscan": {
       "id": "etherscan",
@@ -3659,7 +3834,8 @@
       ],
       "forms": {
         "base": "etherscan"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "go ethereum (geth)": {
       "id": "go-ethereum-geth",
@@ -3686,7 +3862,8 @@
           "term": "Go Ethereum",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "wrapped ether (weth)": {
       "id": "wrapped-ether-weth",
@@ -3713,7 +3890,8 @@
           "term": "WETH",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "51% attack": {
       "id": "51%-attack",
@@ -3730,7 +3908,8 @@
       ],
       "forms": {
         "base": "51% attack"
-      }
+      },
+      "script_rule": "translate"
     },
     "ai agent": {
       "id": "ai-agent",
@@ -3747,7 +3926,8 @@
       ],
       "forms": {
         "base": "ai agent"
-      }
+      },
+      "script_rule": "translate"
     },
     "anonymity set": {
       "id": "anonymity-set",
@@ -3764,7 +3944,8 @@
       ],
       "forms": {
         "base": "anonymity set"
-      }
+      },
+      "script_rule": "translate"
     },
     "anti-sybil": {
       "id": "anti-sybil",
@@ -3781,7 +3962,8 @@
       ],
       "forms": {
         "base": "anti-sybil"
-      }
+      },
+      "script_rule": "translate"
     },
     "archive node": {
       "id": "archive-node",
@@ -3798,7 +3980,8 @@
       ],
       "forms": {
         "base": "archive node"
-      }
+      },
+      "script_rule": "translate"
     },
     "asic": {
       "id": "asic",
@@ -3815,7 +3998,8 @@
       ],
       "forms": {
         "base": "asic"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "assert": {
       "id": "assert",
@@ -3832,7 +4016,8 @@
       ],
       "forms": {
         "base": "assert"
-      }
+      },
+      "script_rule": "translate"
     },
     "autonomous agent": {
       "id": "autonomous-agent",
@@ -3849,7 +4034,8 @@
       ],
       "forms": {
         "base": "autonomous agent"
-      }
+      },
+      "script_rule": "translate"
     },
     "besu": {
       "id": "besu",
@@ -3885,7 +4071,8 @@
       ],
       "forms": {
         "base": "big-endian"
-      }
+      },
+      "script_rule": "translate"
     },
     "bitcoin": {
       "id": "bitcoin",
@@ -3921,7 +4108,9 @@
       ],
       "forms": {
         "base": "block"
-      }
+      },
+      "translation_note": "A unit of bundled transactions added to the blockchain. NOT a physical block or obstruction.",
+      "script_rule": "translate"
     },
     "block explorer": {
       "id": "block-explorer",
@@ -3938,7 +4127,8 @@
       ],
       "forms": {
         "base": "block explorer"
-      }
+      },
+      "script_rule": "translate"
     },
     "block header": {
       "id": "block-header",
@@ -3955,7 +4145,8 @@
       ],
       "forms": {
         "base": "block header"
-      }
+      },
+      "script_rule": "translate"
     },
     "block propagation": {
       "id": "block-propagation",
@@ -3973,7 +4164,8 @@
       "forms": {
         "base": "block propagation",
         "nominalization": "block propagation"
-      }
+      },
+      "script_rule": "translate"
     },
     "block reward": {
       "id": "block-reward",
@@ -3990,7 +4182,8 @@
       ],
       "forms": {
         "base": "block reward"
-      }
+      },
+      "script_rule": "translate"
     },
     "block status": {
       "id": "block-status",
@@ -4007,7 +4200,8 @@
       ],
       "forms": {
         "base": "block status"
-      }
+      },
+      "script_rule": "translate"
     },
     "block time": {
       "id": "block-time",
@@ -4024,7 +4218,8 @@
       ],
       "forms": {
         "base": "block time"
-      }
+      },
+      "script_rule": "translate"
     },
     "block validation": {
       "id": "block-validation",
@@ -4043,7 +4238,8 @@
         "base": "block validation",
         "nominalization": "block validation"
       },
-      "term_family": "validate"
+      "term_family": "validate",
+      "script_rule": "translate"
     },
     "blockchain": {
       "id": "blockchain",
@@ -4061,7 +4257,8 @@
       "forms": {
         "base": "blockchain"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "A distributed ledger of linked blocks. The entire database of transactions."
     },
     "bootnode": {
       "id": "bootnode",
@@ -4078,7 +4275,8 @@
       ],
       "forms": {
         "base": "bootnode"
-      }
+      },
+      "script_rule": "translate"
     },
     "censorship resistant": {
       "id": "censorship-resistant",
@@ -4095,7 +4293,8 @@
       ],
       "forms": {
         "base": "censorship resistant"
-      }
+      },
+      "script_rule": "translate"
     },
     "chain": {
       "id": "chain",
@@ -4114,7 +4313,9 @@
         "base": "chain"
       },
       "morph_family": "chain",
-      "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU"
+      "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU",
+      "translation_note": "Short for blockchain. In compounds: 'onchain', 'cross-chain', 'sidechain'.",
+      "script_rule": "translate"
     },
     "client-diversity": {
       "id": "client-diversity",
@@ -4151,7 +4352,8 @@
       "forms": {
         "base": "compiling",
         "gerund": "compiling"
-      }
+      },
+      "script_rule": "translate"
     },
     "computational infeasibility": {
       "id": "computational-infeasibility",
@@ -4168,7 +4370,8 @@
       ],
       "forms": {
         "base": "computational infeasibility"
-      }
+      },
+      "script_rule": "translate"
     },
     "considered for inclusion (cfi)": {
       "id": "cfi",
@@ -4185,7 +4388,8 @@
       ],
       "forms": {
         "base": "considered for inclusion (cfi)"
-      }
+      },
+      "script_rule": "translate"
     },
     "crypto": {
       "id": "crypto",
@@ -4202,7 +4406,9 @@
       ],
       "forms": {
         "base": "crypto"
-      }
+      },
+      "translation_note": "Short for cryptocurrency or cryptography depending on context.",
+      "script_rule": "translate"
     },
     "cryptoeconomics": {
       "id": "cryptoeconomics",
@@ -4219,7 +4425,8 @@
       ],
       "forms": {
         "base": "cryptoeconomics"
-      }
+      },
+      "script_rule": "translate"
     },
     "dag": {
       "id": "dag",
@@ -4236,7 +4443,8 @@
       ],
       "forms": {
         "base": "dag"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "decentralization": {
       "id": "decentralization",
@@ -4255,7 +4463,8 @@
         "base": "decentralization",
         "nominalization": "decentralization"
       },
-      "term_family": "decentralize"
+      "term_family": "decentralize",
+      "script_rule": "translate"
     },
     "decentralized": {
       "id": "decentralized",
@@ -4274,7 +4483,8 @@
         "base": "decentralized"
       },
       "term_family": "decentralize",
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "Distributed across many participants with no central authority."
     },
     "decentralized physical infrastructure (depin)": {
       "id": "decentralized-physical-infrastructure-depin",
@@ -4301,7 +4511,8 @@
           "term": "DePIN",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "decentralized science (desci)": {
       "id": "decentralized-science-desci",
@@ -4328,7 +4539,8 @@
           "term": "DeSci",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "decryption": {
       "id": "decryption",
@@ -4347,7 +4559,8 @@
         "base": "decryption",
         "nominalization": "decryption"
       },
-      "term_family": "encrypt"
+      "term_family": "encrypt",
+      "script_rule": "translate"
     },
     "devnet": {
       "id": "devnet",
@@ -4364,7 +4577,8 @@
       ],
       "forms": {
         "base": "devnet"
-      }
+      },
+      "script_rule": "translate"
     },
     "difficulty": {
       "id": "difficulty",
@@ -4381,7 +4595,8 @@
       ],
       "forms": {
         "base": "difficulty"
-      }
+      },
+      "script_rule": "translate"
     },
     "difficulty bomb": {
       "id": "difficulty-bomb",
@@ -4398,7 +4613,8 @@
       ],
       "forms": {
         "base": "difficulty bomb"
-      }
+      },
+      "script_rule": "translate"
     },
     "discovery": {
       "id": "discovery",
@@ -4415,7 +4631,8 @@
       ],
       "forms": {
         "base": "discovery"
-      }
+      },
+      "script_rule": "translate"
     },
     "double spend": {
       "id": "double-spend",
@@ -4432,7 +4649,8 @@
       ],
       "forms": {
         "base": "double spend"
-      }
+      },
+      "script_rule": "translate"
     },
     "erigon": {
       "id": "erigon",
@@ -4466,10 +4684,11 @@
       "sources": [
         "manual"
       ],
-      "translation_note": "Proper noun. Always transliterated in non-Latin scripts (not translated). Must be consistent across all content.",
+      "translation_note": "The blockchain network itself. Proper noun, always transliterate in non-Latin scripts.",
       "forms": {
         "base": "Ethereum"
-      }
+      },
+      "script_rule": "translate"
     },
     "ethereum classic": {
       "id": "ethereum-classic",
@@ -4486,7 +4705,8 @@
       ],
       "forms": {
         "base": "ethereum classic"
-      }
+      },
+      "script_rule": "translate"
     },
     "ethereum foundation": {
       "id": "ethereum-foundation",
@@ -4504,7 +4724,8 @@
       "forms": {
         "base": "ethereum foundation",
         "nominalization": "ethereum foundation"
-      }
+      },
+      "script_rule": "translate"
     },
     "ethereum mainnet": {
       "id": "ethereum-mainnet",
@@ -4521,7 +4742,8 @@
       ],
       "forms": {
         "base": "ethereum mainnet"
-      }
+      },
+      "script_rule": "translate"
     },
     "execution client": {
       "id": "execution-client",
@@ -4538,7 +4760,8 @@
       ],
       "forms": {
         "base": "execution client"
-      }
+      },
+      "script_rule": "translate"
     },
     "execution layer": {
       "id": "execution-layer",
@@ -4555,7 +4778,8 @@
       ],
       "forms": {
         "base": "execution layer"
-      }
+      },
+      "script_rule": "translate"
     },
     "finalized": {
       "id": "finalized",
@@ -4575,7 +4799,8 @@
       },
       "term_family": "finalize",
       "morph_family": "finalize",
-      "morph_note": "'Finality' is chain property; 'finalized' is block state; must distinguish from 'finishing'"
+      "morph_note": "'Finality' is chain property; 'finalized' is block state; must distinguish from 'finishing'",
+      "script_rule": "translate"
     },
     "finney": {
       "id": "finney",
@@ -4596,7 +4821,8 @@
       "note": "Lowercase when referring to the currency/denomination. Title case only when referring to the person (Hal Finney, Nick Szabo).",
       "avoid": [
         "Finney"
-      ]
+      ],
+      "script_rule": "translate"
     },
     "fork": {
       "id": "fork",
@@ -4616,7 +4842,9 @@
       },
       "term_family": "fork",
       "morph_family": "fork",
-      "morph_note": "Often loanword as noun but translated as 'divergence' as verb in RU/PL"
+      "morph_note": "Often loanword as noun but translated as 'divergence' as verb in RU/PL",
+      "translation_note": "A change in protocol creating an alternative chain. NOT an eating utensil.",
+      "script_rule": "translate"
     },
     "fraud proof": {
       "id": "fraud-proof",
@@ -4633,7 +4861,8 @@
       ],
       "forms": {
         "base": "fraud proof"
-      }
+      },
+      "script_rule": "translate"
     },
     "frontier": {
       "id": "frontier",
@@ -4650,7 +4879,8 @@
       ],
       "forms": {
         "base": "frontier"
-      }
+      },
+      "script_rule": "translate"
     },
     "full node": {
       "id": "full-node",
@@ -4667,7 +4897,8 @@
       ],
       "forms": {
         "base": "full node"
-      }
+      },
+      "script_rule": "translate"
     },
     "genesis block": {
       "id": "genesis-block",
@@ -4684,7 +4915,8 @@
       ],
       "forms": {
         "base": "genesis block"
-      }
+      },
+      "script_rule": "translate"
     },
     "gossip protocol": {
       "id": "gossip-protocol",
@@ -4701,7 +4933,8 @@
       ],
       "forms": {
         "base": "gossip protocol"
-      }
+      },
+      "script_rule": "translate"
     },
     "hard fork": {
       "id": "hard-fork",
@@ -4721,7 +4954,8 @@
       },
       "term_family": "fork",
       "morph_family": "fork",
-      "morph_note": "Often loanword as noun but translated as 'divergence' as verb in RU/PL"
+      "morph_note": "Often loanword as noun but translated as 'divergence' as verb in RU/PL",
+      "script_rule": "translate"
     },
     "history-expiry": {
       "id": "history-expiry",
@@ -4757,7 +4991,8 @@
       ],
       "forms": {
         "base": "integrated development environment (ide)"
-      }
+      },
+      "script_rule": "translate"
     },
     "interoperable": {
       "id": "interoperable",
@@ -4774,7 +5009,8 @@
       ],
       "forms": {
         "base": "interoperable"
-      }
+      },
+      "script_rule": "translate"
     },
     "layer 1 (l1)": {
       "id": "layer-1-l1",
@@ -4806,7 +5042,9 @@
         "Layer 1",
         "layer-1",
         "Layer-1"
-      ]
+      ],
+      "translation_note": "The base blockchain (e.g., Ethereum mainnet). Lowercase, not title-cased.",
+      "script_rule": "translate"
     },
     "light client": {
       "id": "light-client",
@@ -4823,7 +5061,8 @@
       ],
       "forms": {
         "base": "light client"
-      }
+      },
+      "script_rule": "translate"
     },
     "light node": {
       "id": "light-node",
@@ -4840,7 +5079,8 @@
       ],
       "forms": {
         "base": "light node"
-      }
+      },
+      "script_rule": "translate"
     },
     "lighthouse": {
       "id": "lighthouse",
@@ -4896,7 +5136,8 @@
       "forms": {
         "base": "mainnet"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "The primary Ethereum network (as opposed to testnets). Proper noun, capitalize."
     },
     "message": {
       "id": "message",
@@ -4913,7 +5154,8 @@
       ],
       "forms": {
         "base": "message"
-      }
+      },
+      "script_rule": "translate"
     },
     "message call": {
       "id": "message-call",
@@ -4930,7 +5172,8 @@
       ],
       "forms": {
         "base": "message call"
-      }
+      },
+      "script_rule": "translate"
     },
     "metadata": {
       "id": "metadata",
@@ -4947,7 +5190,8 @@
       ],
       "forms": {
         "base": "metadata"
-      }
+      },
+      "script_rule": "translate"
     },
     "metamask": {
       "id": "metamask",
@@ -4983,7 +5227,8 @@
       ],
       "forms": {
         "base": "modular blockchain"
-      }
+      },
+      "script_rule": "translate"
     },
     "monolithic blockchain": {
       "id": "monolithic-blockchain",
@@ -5000,7 +5245,8 @@
       ],
       "forms": {
         "base": "monolithic blockchain"
-      }
+      },
+      "script_rule": "translate"
     },
     "nethermind": {
       "id": "nethermind",
@@ -5036,7 +5282,8 @@
       ],
       "forms": {
         "base": "network"
-      }
+      },
+      "script_rule": "translate"
     },
     "nimbus": {
       "id": "nimbus",
@@ -5073,7 +5320,8 @@
       "forms": {
         "base": "node"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "A computer running Ethereum client software. NOT a mathematical vertex or physical junction."
     },
     "off-chain": {
       "id": "off-chain",
@@ -5092,7 +5340,8 @@
         "base": "off-chain"
       },
       "morph_family": "chain",
-      "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU"
+      "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU",
+      "script_rule": "translate"
     },
     "off-ramp": {
       "id": "off-ramp",
@@ -5110,7 +5359,8 @@
       "translation_note": "Must pair with 'on-ramp' translation",
       "forms": {
         "base": "off-ramp"
-      }
+      },
+      "script_rule": "translate"
     },
     "offchain": {
       "id": "offchain",
@@ -5142,7 +5392,9 @@
         "Off-chain",
         "Off-Chain",
         "Off Chain"
-      ]
+      ],
+      "translation_note": "Not recorded on the blockchain. Written without hyphen (like 'offline'). Adjective.",
+      "script_rule": "translate"
     },
     "ommer (uncle) block": {
       "id": "ommer",
@@ -5159,7 +5411,8 @@
       ],
       "forms": {
         "base": "ommer (uncle) block"
-      }
+      },
+      "script_rule": "translate"
     },
     "on-chain": {
       "id": "on-chain",
@@ -5178,7 +5431,8 @@
         "base": "on-chain"
       },
       "morph_family": "chain",
-      "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU"
+      "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU",
+      "script_rule": "translate"
     },
     "on-ramp": {
       "id": "on-ramp",
@@ -5196,7 +5450,8 @@
       "translation_note": "One of the hardest metaphors to translate; literal 'ramp' translations are confusing",
       "forms": {
         "base": "on-ramp"
-      }
+      },
+      "script_rule": "translate"
     },
     "onboarding": {
       "id": "onboarding",
@@ -5214,7 +5469,8 @@
       "translation_note": "Often translated as 'training' or 'hiring'; in crypto means user's first wallet/app interaction",
       "forms": {
         "base": "onboarding"
-      }
+      },
+      "script_rule": "translate"
     },
     "onchain": {
       "id": "onchain",
@@ -5246,7 +5502,9 @@
         "On-chain",
         "On-Chain",
         "On Chain"
-      ]
+      ],
+      "translation_note": "Recorded on the blockchain. Written without hyphen (like 'online'). Adjective.",
+      "script_rule": "translate"
     },
     "peer": {
       "id": "peer",
@@ -5263,7 +5521,9 @@
       ],
       "forms": {
         "base": "peer"
-      }
+      },
+      "translation_note": "A connected computer in the network. Technical networking term, not a social equal.",
+      "script_rule": "translate"
     },
     "peer-to-peer": {
       "id": "peer-to-peer",
@@ -5280,7 +5540,8 @@
       ],
       "forms": {
         "base": "peer-to-peer"
-      }
+      },
+      "script_rule": "translate"
     },
     "peer-to-peer network": {
       "id": "peer-to-peer-network",
@@ -5297,7 +5558,8 @@
       ],
       "forms": {
         "base": "peer-to-peer network"
-      }
+      },
+      "script_rule": "translate"
     },
     "permissioned": {
       "id": "permissioned",
@@ -5315,7 +5577,8 @@
       "translation_note": "Must contrast clearly with 'permissionless'; pair should be standardized together",
       "forms": {
         "base": "permissioned"
-      }
+      },
+      "script_rule": "translate"
     },
     "permissionless": {
       "id": "permissionless",
@@ -5332,7 +5595,8 @@
       ],
       "forms": {
         "base": "permissionless"
-      }
+      },
+      "script_rule": "translate"
     },
     "privacy": {
       "id": "privacy",
@@ -5349,7 +5613,9 @@
       ],
       "forms": {
         "base": "privacy"
-      }
+      },
+      "translation_note": "In Ethereum context: protecting transaction and identity data on a public blockchain.",
+      "script_rule": "translate"
     },
     "private chain": {
       "id": "private-chain",
@@ -5366,7 +5632,8 @@
       ],
       "forms": {
         "base": "private chain"
-      }
+      },
+      "script_rule": "translate"
     },
     "proof of attendance": {
       "id": "proof-of-attendance",
@@ -5383,7 +5650,8 @@
       ],
       "forms": {
         "base": "proof of attendance"
-      }
+      },
+      "script_rule": "translate"
     },
     "proof-of-work (pow)": {
       "id": "pow",
@@ -5411,7 +5679,8 @@
           "status": "accepted"
         },
         "PoW"
-      ]
+      ],
+      "script_rule": "translate"
     },
     "protocol": {
       "id": "protocol",
@@ -5427,10 +5696,11 @@
         "ethglossary",
         "manual"
       ],
-      "translation_note": "Set of rules governing network communication. In Ethereum context, refers to the Ethereum protocol (the rules that define the network).",
+      "translation_note": "The set of rules governing the Ethereum network. NOT a medical or diplomatic protocol.",
       "forms": {
         "base": "protocol"
-      }
+      },
+      "script_rule": "translate"
     },
     "prysm": {
       "id": "prysm",
@@ -5466,7 +5736,8 @@
       ],
       "forms": {
         "base": "public goods"
-      }
+      },
+      "script_rule": "translate"
     },
     "re-entrancy attack": {
       "id": "re-entrancy-attack",
@@ -5483,7 +5754,8 @@
       ],
       "forms": {
         "base": "re-entrancy attack"
-      }
+      },
+      "script_rule": "translate"
     },
     "real world assets (rwa)": {
       "id": "real-world-assets-rwa",
@@ -5510,7 +5782,8 @@
           "term": "RWA",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "recursive length prefix (rlp)": {
       "id": "rlp",
@@ -5527,7 +5800,8 @@
       ],
       "forms": {
         "base": "recursive length prefix (rlp)"
-      }
+      },
+      "script_rule": "translate"
     },
     "regenerative finance (refi)": {
       "id": "regenerative-finance-refi",
@@ -5554,7 +5828,8 @@
           "term": "ReFi",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "reth": {
       "id": "reth",
@@ -5601,7 +5876,8 @@
           "term": "RPGF",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "reward": {
       "id": "reward",
@@ -5618,7 +5894,8 @@
       ],
       "forms": {
         "base": "reward"
-      }
+      },
+      "script_rule": "translate"
     },
     "self-sovereignty": {
       "id": "self-sovereignty",
@@ -5636,7 +5913,8 @@
       "translation_note": "'Independence' doesn't capture the ownership-of-identity/assets meaning",
       "forms": {
         "base": "self-sovereignty"
-      }
+      },
+      "script_rule": "translate"
     },
     "sepolia": {
       "id": "sepolia",
@@ -5673,7 +5951,8 @@
       "forms": {
         "base": "serialization",
         "nominalization": "serialization"
-      }
+      },
+      "script_rule": "translate"
     },
     "slasher": {
       "id": "slasher",
@@ -5692,7 +5971,8 @@
         "base": "slasher",
         "gerund": "slashing"
       },
-      "term_family": "slash"
+      "term_family": "slash",
+      "script_rule": "translate"
     },
     "snark": {
       "id": "snark",
@@ -5709,7 +5989,8 @@
       ],
       "forms": {
         "base": "snark"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "soft fork": {
       "id": "soft-fork",
@@ -5729,7 +6010,8 @@
       },
       "term_family": "fork",
       "morph_family": "fork",
-      "morph_note": "Often loanword as noun but translated as 'divergence' as verb in RU/PL"
+      "morph_note": "Often loanword as noun but translated as 'divergence' as verb in RU/PL",
+      "script_rule": "translate"
     },
     "stark": {
       "id": "stark",
@@ -5746,7 +6028,8 @@
       ],
       "forms": {
         "base": "stark"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "state bloat": {
       "id": "state-bloat",
@@ -5764,7 +6047,8 @@
       "translation_note": "'Bloat' translated as 'swelling' or 'illness' in many languages",
       "forms": {
         "base": "state bloat"
-      }
+      },
+      "script_rule": "translate"
     },
     "state-expiry": {
       "id": "state-expiry",
@@ -5801,7 +6085,8 @@
       "translation_note": "Must not imply 'no status' or 'no country'",
       "forms": {
         "base": "statelessness"
-      }
+      },
+      "script_rule": "translate"
     },
     "swarm": {
       "id": "swarm",
@@ -5818,7 +6103,8 @@
       ],
       "forms": {
         "base": "swarm"
-      }
+      },
+      "script_rule": "translate"
     },
     "sybil attack": {
       "id": "sybil-attack",
@@ -5835,7 +6121,8 @@
       ],
       "forms": {
         "base": "sybil attack"
-      }
+      },
+      "script_rule": "translate"
     },
     "syncing": {
       "id": "syncing",
@@ -5855,7 +6142,8 @@
         "gerund": "syncing"
       },
       "morph_family": "sync",
-      "morph_note": "Long formal word for noun vs short English-derived slang for verb/action"
+      "morph_note": "Long formal word for noun vs short English-derived slang for verb/action",
+      "script_rule": "translate"
     },
     "szabo": {
       "id": "szabo",
@@ -5876,7 +6164,8 @@
       "note": "Lowercase when referring to the currency/denomination. Title case only when referring to the person (Hal Finney, Nick Szabo).",
       "avoid": [
         "Szabo"
-      ]
+      ],
+      "script_rule": "translate"
     },
     "teku": {
       "id": "teku",
@@ -5912,7 +6201,8 @@
       ],
       "forms": {
         "base": "terminal total difficulty (ttd)"
-      }
+      },
+      "script_rule": "translate"
     },
     "testnet": {
       "id": "testnet",
@@ -5929,7 +6219,9 @@
       ],
       "forms": {
         "base": "testnet"
-      }
+      },
+      "translation_note": "A test network for development. Opposite of mainnet.",
+      "script_rule": "translate"
     },
     "total value locked (tvl)": {
       "id": "total-value-locked-tvl",
@@ -5956,7 +6248,8 @@
           "term": "TVL",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "trust assumptions": {
       "id": "trust-assumptions",
@@ -5973,7 +6266,8 @@
       ],
       "forms": {
         "base": "trust assumptions"
-      }
+      },
+      "script_rule": "translate"
     },
     "trust-minimized": {
       "id": "trust-minimized",
@@ -5991,7 +6285,8 @@
       "translation_note": "More precise than 'trustless'; 'low trust' sounds like a negative attribute",
       "forms": {
         "base": "trust-minimized"
-      }
+      },
+      "script_rule": "translate"
     },
     "trustless": {
       "id": "trustless",
@@ -6008,7 +6303,8 @@
       ],
       "forms": {
         "base": "trustless"
-      }
+      },
+      "script_rule": "translate"
     },
     "trustlessness": {
       "id": "trustlessness",
@@ -6025,7 +6321,8 @@
       ],
       "forms": {
         "base": "trustlessness"
-      }
+      },
+      "script_rule": "translate"
     },
     "turing complete": {
       "id": "turing-complete",
@@ -6042,7 +6339,8 @@
       ],
       "forms": {
         "base": "turing complete"
-      }
+      },
+      "script_rule": "translate"
     },
     "tx": {
       "id": "tx",
@@ -6059,7 +6357,8 @@
       ],
       "forms": {
         "base": "tx"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "utxo": {
       "id": "utxo",
@@ -6076,7 +6375,8 @@
       ],
       "forms": {
         "base": "utxo"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "web 3.0": {
       "id": "web-3-0",
@@ -6093,7 +6393,8 @@
       ],
       "forms": {
         "base": "web 3.0"
-      }
+      },
+      "script_rule": "translate"
     },
     "web2": {
       "id": "web2",
@@ -6110,7 +6411,8 @@
       ],
       "forms": {
         "base": "web2"
-      }
+      },
+      "script_rule": "translate"
     },
     "whitepaper": {
       "id": "whitepaper",
@@ -6127,7 +6429,8 @@
       ],
       "forms": {
         "base": "whitepaper"
-      }
+      },
+      "script_rule": "translate"
     },
     "witness": {
       "id": "witness",
@@ -6163,7 +6466,8 @@
       ],
       "forms": {
         "base": "yellow paper"
-      }
+      },
+      "script_rule": "translate"
     },
     "decentralized autonomous organization (dao)": {
       "id": "dao",
@@ -6180,7 +6484,9 @@
       ],
       "forms": {
         "base": "decentralized autonomous organization (dao)"
-      }
+      },
+      "translation_note": "Organization governed by smart contract rules and member votes. 'DAO' stays Latin.",
+      "script_rule": "translate"
     },
     "delegate": {
       "id": "delegate",
@@ -6198,7 +6504,8 @@
       "forms": {
         "base": "delegate"
       },
-      "term_family": "delegate"
+      "term_family": "delegate",
+      "script_rule": "translate"
     },
     "delegation": {
       "id": "delegation",
@@ -6217,7 +6524,8 @@
         "base": "delegation",
         "nominalization": "delegation"
       },
-      "term_family": "delegate"
+      "term_family": "delegate",
+      "script_rule": "translate"
     },
     "ethereum improvement proposal (eip)": {
       "id": "eip",
@@ -6234,7 +6542,8 @@
       ],
       "forms": {
         "base": "ethereum improvement proposal (eip)"
-      }
+      },
+      "script_rule": "translate"
     },
     "governance": {
       "id": "governance",
@@ -6270,7 +6579,8 @@
       ],
       "forms": {
         "base": "off-chain governance"
-      }
+      },
+      "script_rule": "translate"
     },
     "on-chain governance": {
       "id": "on-chain-governance",
@@ -6287,7 +6597,8 @@
       ],
       "forms": {
         "base": "on-chain governance"
-      }
+      },
+      "script_rule": "translate"
     },
     "proposal": {
       "id": "proposal",
@@ -6306,7 +6617,8 @@
         "base": "proposal"
       },
       "morph_family": "propose",
-      "morph_note": "'Block proposer' translates differently than general 'to propose an idea'"
+      "morph_note": "'Block proposer' translates differently than general 'to propose an idea'",
+      "script_rule": "translate"
     },
     "public good": {
       "id": "public-good",
@@ -6324,7 +6636,8 @@
       "forms": {
         "base": "public good",
         "plural": "public goods"
-      }
+      },
+      "script_rule": "translate"
     },
     "quadratic funding": {
       "id": "quadratic-funding",
@@ -6342,7 +6655,8 @@
       "forms": {
         "base": "quadratic funding",
         "gerund": "quadratic funding"
-      }
+      },
+      "script_rule": "translate"
     },
     "quadratic voting": {
       "id": "quadratic-voting",
@@ -6360,7 +6674,8 @@
       "forms": {
         "base": "quadratic voting",
         "gerund": "quadratic voting"
-      }
+      },
+      "script_rule": "translate"
     },
     "randao": {
       "id": "randao",
@@ -6377,7 +6692,8 @@
       ],
       "forms": {
         "base": "randao"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "treasury": {
       "id": "treasury",
@@ -6394,7 +6710,8 @@
       ],
       "forms": {
         "base": "treasury"
-      }
+      },
+      "script_rule": "translate"
     },
     "vote": {
       "id": "vote",
@@ -6414,7 +6731,8 @@
       },
       "term_family": "vote",
       "morph_family": "vote",
-      "morph_note": "Governance: 'ballot'(n) vs 'act of voting'(v) use different stems in Finno-Ugric"
+      "morph_note": "Governance: 'ballot'(n) vs 'act of voting'(v) use different stems in Finno-Ugric",
+      "script_rule": "translate"
     },
     "voting": {
       "id": "voting",
@@ -6436,7 +6754,8 @@
       },
       "term_family": "vote",
       "morph_family": "vote",
-      "morph_note": "Governance: 'ballot'(n) vs 'act of voting'(v) use different stems in Finno-Ugric"
+      "morph_note": "Governance: 'ballot'(n) vs 'act of voting'(v) use different stems in Finno-Ugric",
+      "script_rule": "translate"
     },
     "decentralized identity (did)": {
       "id": "decentralized-identity-did",
@@ -6463,7 +6782,8 @@
           "term": "DID",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "ethereum name service (ens)": {
       "id": "ens",
@@ -6480,7 +6800,8 @@
       ],
       "forms": {
         "base": "ethereum name service (ens)"
-      }
+      },
+      "script_rule": "translate"
     },
     "kyc": {
       "id": "kyc",
@@ -6497,7 +6818,8 @@
       ],
       "forms": {
         "base": "kyc"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "siwe": {
       "id": "siwe",
@@ -6514,7 +6836,8 @@
       ],
       "forms": {
         "base": "siwe"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "stealth-address": {
       "id": "stealth-address",
@@ -6550,7 +6873,8 @@
       ],
       "forms": {
         "base": "verifiable credential"
-      }
+      },
+      "script_rule": "translate"
     },
     "back-running": {
       "id": "back-running",
@@ -6568,7 +6892,8 @@
       "forms": {
         "base": "back-running",
         "gerund": "back-running"
-      }
+      },
+      "script_rule": "translate"
     },
     "front-running": {
       "id": "front-running",
@@ -6586,7 +6911,8 @@
       "forms": {
         "base": "front-running",
         "gerund": "front-running"
-      }
+      },
+      "script_rule": "translate"
     },
     "maximal extractable value (mev)": {
       "id": "mev",
@@ -6603,7 +6929,9 @@
       ],
       "forms": {
         "base": "maximal extractable value (mev)"
-      }
+      },
+      "translation_note": "Value extracted by reordering/inserting transactions in a block. 'MEV' stays Latin.",
+      "script_rule": "translate"
     },
     "mev-boost": {
       "id": "mev-boost",
@@ -6639,7 +6967,8 @@
       ],
       "forms": {
         "base": "sandwich attack"
-      }
+      },
+      "script_rule": "translate"
     },
     "searcher": {
       "id": "searcher",
@@ -6656,7 +6985,8 @@
       ],
       "forms": {
         "base": "searcher"
-      }
+      },
+      "script_rule": "translate"
     },
     "berlin": {
       "id": "berlin",
@@ -6673,7 +7003,8 @@
       ],
       "forms": {
         "base": "berlin"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "byzantium": {
       "id": "byzantium",
@@ -6690,7 +7021,8 @@
       ],
       "forms": {
         "base": "byzantium"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "byzantium fork": {
       "id": "byzantium-fork",
@@ -6707,7 +7039,8 @@
       ],
       "forms": {
         "base": "byzantium fork"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "cancun": {
       "id": "cancun",
@@ -6724,7 +7057,8 @@
       ],
       "forms": {
         "base": "cancun"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "constantinople": {
       "id": "constantinople",
@@ -6741,7 +7075,8 @@
       ],
       "forms": {
         "base": "constantinople"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "constantinople fork": {
       "id": "constantinople-fork",
@@ -6758,7 +7093,8 @@
       ],
       "forms": {
         "base": "constantinople fork"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "dencun upgrade": {
       "id": "dencun-upgrade",
@@ -6793,7 +7129,8 @@
       "avoid": [
         "dencun",
         "DENCUN"
-      ]
+      ],
+      "script_rule": "translate"
     },
     "eip-7702": {
       "id": "eip-7702",
@@ -6829,7 +7166,8 @@
       ],
       "forms": {
         "base": "erc-4626"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "ethereum request for comments (erc)": {
       "id": "erc",
@@ -6846,7 +7184,8 @@
       ],
       "forms": {
         "base": "ethereum request for comments (erc)"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "fusaka": {
       "id": "fusaka",
@@ -6929,7 +7268,8 @@
       ],
       "forms": {
         "base": "homestead"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "istanbul": {
       "id": "istanbul",
@@ -6946,7 +7286,8 @@
       ],
       "forms": {
         "base": "istanbul"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "pectra": {
       "id": "pectra",
@@ -6996,7 +7337,8 @@
       ],
       "forms": {
         "base": "shanghai"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "shapella": {
       "id": "shapella",
@@ -7047,7 +7389,8 @@
       "forms": {
         "base": "the merge"
       },
-      "script_rule": "C_context_dependent"
+      "script_rule": "C_context_dependent",
+      "translation_note": "The 2022 upgrade transitioning Ethereum from proof-of-work to proof-of-stake. Named event."
     },
     "verkle trees": {
       "id": "verkle-trees",
@@ -7064,7 +7407,8 @@
       ],
       "forms": {
         "base": "verkle trees"
-      }
+      },
+      "script_rule": "transliterate"
     },
     "batching": {
       "id": "batching",
@@ -7082,7 +7426,8 @@
       "translation_note": "'Stacking' or 'grouping' miss the technical efficiency aspect",
       "forms": {
         "base": "batching"
-      }
+      },
+      "script_rule": "translate"
     },
     "blob": {
       "id": "blob",
@@ -7099,7 +7444,9 @@
       ],
       "forms": {
         "base": "blob"
-      }
+      },
+      "translation_note": "Binary large object. In Ethereum: data attached to transactions for L2 scaling (EIP-4844).",
+      "script_rule": "translate"
     },
     "blobspace": {
       "id": "blobspace",
@@ -7116,7 +7463,8 @@
       ],
       "forms": {
         "base": "blobspace"
-      }
+      },
+      "script_rule": "translate"
     },
     "bridge": {
       "id": "bridge",
@@ -7137,7 +7485,8 @@
       "term_family": "bridge",
       "script_rule": "B_always_translate",
       "morph_family": "bridge",
-      "morph_note": "Physical bridge noun vs functional/computing verb; HU/FI agglutinative suffixes change"
+      "morph_note": "Physical bridge noun vs functional/computing verb; HU/FI agglutinative suffixes change",
+      "translation_note": "Infrastructure for transferring assets between blockchains (noun). Also used as verb ('to bridge tokens'). NOT a physical bridge."
     },
     "cross-chain": {
       "id": "cross-chain",
@@ -7154,7 +7503,8 @@
       ],
       "forms": {
         "base": "cross-chain"
-      }
+      },
+      "script_rule": "translate"
     },
     "da": {
       "id": "da",
@@ -7171,7 +7521,8 @@
       ],
       "forms": {
         "base": "da"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "da layer": {
       "id": "da-layer",
@@ -7188,7 +7539,8 @@
       ],
       "forms": {
         "base": "da layer"
-      }
+      },
+      "script_rule": "translate"
     },
     "dac": {
       "id": "dac",
@@ -7205,7 +7557,8 @@
       ],
       "forms": {
         "base": "dac"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "danksharding": {
       "id": "danksharding",
@@ -7223,7 +7576,8 @@
       "forms": {
         "base": "danksharding",
         "gerund": "danksharding"
-      }
+      },
+      "script_rule": "translate"
     },
     "das": {
       "id": "das",
@@ -7240,7 +7594,8 @@
       ],
       "forms": {
         "base": "das"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "data availability": {
       "id": "data-availability",
@@ -7257,7 +7612,9 @@
       ],
       "forms": {
         "base": "data availability"
-      }
+      },
+      "translation_note": "The guarantee that block data is accessible for verification.",
+      "script_rule": "translate"
     },
     "data availability layer": {
       "id": "data-availability-layer",
@@ -7274,7 +7631,8 @@
       ],
       "forms": {
         "base": "data availability layer"
-      }
+      },
+      "script_rule": "translate"
     },
     "data-availability-sampling": {
       "id": "data-availability-sampling",
@@ -7324,7 +7682,8 @@
       ],
       "forms": {
         "base": "eip-4844"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "erasure-coding": {
       "id": "erasure-coding",
@@ -7361,7 +7720,8 @@
       "translation_note": "Literal translations sound like a physical emergency exit",
       "forms": {
         "base": "escape hatch"
-      }
+      },
+      "script_rule": "translate"
     },
     "fault proof": {
       "id": "fault-proof",
@@ -7379,7 +7739,8 @@
       "translation_note": "Needs standardization alongside existing 'fraud proof' entry",
       "forms": {
         "base": "fault proof"
-      }
+      },
+      "script_rule": "translate"
     },
     "forced withdrawal": {
       "id": "forced-withdrawal",
@@ -7397,7 +7758,8 @@
       "translation_note": "Must sound like a 'protocol right' not an 'aggressive act'",
       "forms": {
         "base": "forced withdrawal"
-      }
+      },
+      "script_rule": "translate"
     },
     "interoperability": {
       "id": "interoperability",
@@ -7414,7 +7776,8 @@
       ],
       "forms": {
         "base": "interoperability"
-      }
+      },
+      "script_rule": "translate"
     },
     "layer 2 (l2)": {
       "id": "layer-2-l2",
@@ -7446,7 +7809,9 @@
         "Layer 2",
         "layer-2",
         "Layer-2"
-      ]
+      ],
+      "translation_note": "Networks built on top of Ethereum for scaling. Lowercase, not title-cased.",
+      "script_rule": "translate"
     },
     "optimistic rollup": {
       "id": "optimistic-rollup",
@@ -7464,7 +7829,8 @@
       "forms": {
         "base": "optimistic rollup"
       },
-      "script_rule": "D_hybrid"
+      "script_rule": "D_hybrid",
+      "translation_note": "L2 scaling solution assuming transactions are valid unless challenged."
     },
     "peerdas": {
       "id": "peerdas",
@@ -7510,7 +7876,8 @@
       ],
       "forms": {
         "base": "plasma"
-      }
+      },
+      "script_rule": "translate"
     },
     "proto-danksharding": {
       "id": "proto-danksharding",
@@ -7528,7 +7895,8 @@
       "forms": {
         "base": "proto-danksharding",
         "gerund": "proto-danksharding"
-      }
+      },
+      "script_rule": "translate"
     },
     "prover": {
       "id": "prover",
@@ -7545,7 +7913,8 @@
       ],
       "forms": {
         "base": "prover"
-      }
+      },
+      "script_rule": "translate"
     },
     "rollup": {
       "id": "rollup",
@@ -7563,7 +7932,8 @@
       "forms": {
         "base": "rollup"
       },
-      "script_rule": "C_context_dependent"
+      "script_rule": "C_context_dependent",
+      "translation_note": "Layer 2 scaling technology that bundles transactions. Always a noun, never used as a verb in Ethereum."
     },
     "rollups": {
       "id": "rollups",
@@ -7580,7 +7950,8 @@
       ],
       "forms": {
         "base": "rollups"
-      }
+      },
+      "script_rule": "translate"
     },
     "sequencer": {
       "id": "sequencer",
@@ -7597,7 +7968,8 @@
       ],
       "forms": {
         "base": "sequencer"
-      }
+      },
+      "script_rule": "translate"
     },
     "settlement": {
       "id": "settlement",
@@ -7615,7 +7987,8 @@
       "translation_note": "'Payment' or 'agreement' miss the finality meaning; L2-specific context",
       "forms": {
         "base": "settlement"
-      }
+      },
+      "script_rule": "translate"
     },
     "sidechain": {
       "id": "sidechain",
@@ -7634,7 +8007,8 @@
         "base": "sidechain"
       },
       "morph_family": "chain",
-      "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU"
+      "morph_note": "Prefixes 'on-'/'off-' become complex prepositional phrases in TR/HU",
+      "script_rule": "translate"
     },
     "state channel": {
       "id": "state-channel",
@@ -7651,7 +8025,8 @@
       ],
       "forms": {
         "base": "state channel"
-      }
+      },
+      "script_rule": "translate"
     },
     "state channels": {
       "id": "state-channels",
@@ -7668,7 +8043,8 @@
       ],
       "forms": {
         "base": "state channels"
-      }
+      },
+      "script_rule": "translate"
     },
     "throughput": {
       "id": "throughput",
@@ -7686,7 +8062,8 @@
       "translation_note": "'Performance' or 'yield' too broad; must convey transactions-per-second specifically",
       "forms": {
         "base": "throughput"
-      }
+      },
+      "script_rule": "translate"
     },
     "validity proof": {
       "id": "validity-proof",
@@ -7703,7 +8080,8 @@
       ],
       "forms": {
         "base": "validity proof"
-      }
+      },
+      "script_rule": "translate"
     },
     "validium": {
       "id": "validium",
@@ -7720,7 +8098,8 @@
       ],
       "forms": {
         "base": "validium"
-      }
+      },
+      "script_rule": "translate"
     },
     "verifier": {
       "id": "verifier",
@@ -7739,7 +8118,8 @@
         "base": "verifier"
       },
       "morph_family": "verify",
-      "morph_note": "ZK contexts distinguish heavily between prover and verifier; must be non-interchangeable"
+      "morph_note": "ZK contexts distinguish heavily between prover and verifier; must be non-interchangeable",
+      "script_rule": "translate"
     },
     "zero-knowledge": {
       "id": "zero-knowledge",
@@ -7756,7 +8136,8 @@
       ],
       "forms": {
         "base": "zero-knowledge"
-      }
+      },
+      "script_rule": "translate"
     },
     "zero-knowledge proof": {
       "id": "zk-proof",
@@ -7773,7 +8154,9 @@
       ],
       "forms": {
         "base": "zero-knowledge proof"
-      }
+      },
+      "translation_note": "Cryptographic proof that something is true without revealing the underlying data.",
+      "script_rule": "translate"
     },
     "zero-knowledge rollup": {
       "id": "zk-rollup",
@@ -7790,7 +8173,8 @@
       ],
       "forms": {
         "base": "zero-knowledge rollup"
-      }
+      },
+      "script_rule": "translate"
     },
     "zk": {
       "id": "zk",
@@ -7807,7 +8191,9 @@
       ],
       "forms": {
         "base": "zk"
-      }
+      },
+      "translation_note": "Short for zero-knowledge. Cryptographic technique. Keep as 'ZK' in Latin.",
+      "script_rule": "keep_latin"
     },
     "zk-snark": {
       "id": "zk-snark",
@@ -7824,7 +8210,8 @@
       ],
       "forms": {
         "base": "zk-snark"
-      }
+      },
+      "script_rule": "translate"
     },
     "zk-stark": {
       "id": "zk-stark",
@@ -7841,7 +8228,8 @@
       ],
       "forms": {
         "base": "zk-stark"
-      }
+      },
+      "script_rule": "translate"
     },
     "zkevm": {
       "id": "zkevm",
@@ -7877,7 +8265,8 @@
       ],
       "forms": {
         "base": "application binary interface (abi)"
-      }
+      },
+      "script_rule": "translate"
     },
     "bytecode": {
       "id": "bytecode",
@@ -7894,7 +8283,8 @@
       ],
       "forms": {
         "base": "bytecode"
-      }
+      },
+      "script_rule": "translate"
     },
     "call data": {
       "id": "call-data",
@@ -7912,7 +8302,8 @@
       "translation_note": "'Phone data' or 'shouting data' mistranslations in some languages",
       "forms": {
         "base": "call data"
-      }
+      },
+      "script_rule": "translate"
     },
     "composability": {
       "id": "composability",
@@ -7929,7 +8320,8 @@
       ],
       "forms": {
         "base": "composability"
-      }
+      },
+      "script_rule": "translate"
     },
     "composable": {
       "id": "composable",
@@ -7946,7 +8338,8 @@
       ],
       "forms": {
         "base": "composable"
-      }
+      },
+      "script_rule": "translate"
     },
     "constructor": {
       "id": "constructor",
@@ -7963,7 +8356,8 @@
       ],
       "forms": {
         "base": "constructor"
-      }
+      },
+      "script_rule": "translate"
     },
     "contract": {
       "id": "contract",
@@ -7980,7 +8374,9 @@
       ],
       "forms": {
         "base": "contract"
-      }
+      },
+      "translation_note": "Smart contract -- code deployed on the blockchain. NOT a legal agreement.",
+      "script_rule": "translate"
     },
     "contract account": {
       "id": "contract-account",
@@ -7997,7 +8393,8 @@
       ],
       "forms": {
         "base": "contract account"
-      }
+      },
+      "script_rule": "translate"
     },
     "contract creation transaction": {
       "id": "contract-creation-transaction",
@@ -8015,7 +8412,8 @@
       "forms": {
         "base": "contract creation transaction",
         "nominalization": "contract creation transaction"
-      }
+      },
+      "script_rule": "translate"
     },
     "deploy": {
       "id": "deploy",
@@ -8033,7 +8431,9 @@
       "forms": {
         "base": "deploy"
       },
-      "term_family": "deploy"
+      "term_family": "deploy",
+      "translation_note": "To publish a smart contract to the blockchain. Similar to software deployment.",
+      "script_rule": "translate"
     },
     "deployment": {
       "id": "deployment",
@@ -8052,7 +8452,8 @@
         "base": "deployment",
         "nominalization": "deployment"
       },
-      "term_family": "deploy"
+      "term_family": "deploy",
+      "script_rule": "translate"
     },
     "deposit contract": {
       "id": "deposit-contract",
@@ -8069,7 +8470,8 @@
       ],
       "forms": {
         "base": "deposit contract"
-      }
+      },
+      "script_rule": "translate"
     },
     "ethereum virtual machine (evm)": {
       "id": "evm",
@@ -8086,7 +8488,9 @@
       ],
       "forms": {
         "base": "ethereum virtual machine (evm)"
-      }
+      },
+      "translation_note": "Stack-based runtime that executes smart contract bytecode. 'EVM' stays Latin, full name translates.",
+      "script_rule": "translate"
     },
     "event": {
       "id": "event",
@@ -8103,7 +8507,9 @@
       ],
       "forms": {
         "base": "event"
-      }
+      },
+      "translation_note": "In Solidity: a logging mechanism in smart contracts. NOT a calendar event.",
+      "script_rule": "translate"
     },
     "events": {
       "id": "events",
@@ -8120,7 +8526,8 @@
       ],
       "forms": {
         "base": "events"
-      }
+      },
+      "script_rule": "translate"
     },
     "evm assembly language": {
       "id": "evm-assembly-language",
@@ -8137,7 +8544,8 @@
       ],
       "forms": {
         "base": "evm assembly language"
-      }
+      },
+      "script_rule": "translate"
     },
     "fallback function": {
       "id": "fallback-function",
@@ -8155,7 +8563,8 @@
       "forms": {
         "base": "fallback function",
         "nominalization": "fallback function"
-      }
+      },
+      "script_rule": "translate"
     },
     "formal-verification": {
       "id": "formal-verification",
@@ -8192,7 +8601,8 @@
       "translation_note": "'Making gas better' is a common mistranslation; means reducing costs",
       "forms": {
         "base": "gas optimization"
-      }
+      },
+      "script_rule": "translate"
     },
     "immutability": {
       "id": "immutability",
@@ -8209,7 +8619,8 @@
       ],
       "forms": {
         "base": "immutability"
-      }
+      },
+      "script_rule": "translate"
     },
     "immutable": {
       "id": "immutable",
@@ -8226,7 +8637,8 @@
       ],
       "forms": {
         "base": "immutable"
-      }
+      },
+      "script_rule": "translate"
     },
     "immutable deployed code problem": {
       "id": "immutable-deployed-code-problem",
@@ -8243,7 +8655,8 @@
       ],
       "forms": {
         "base": "immutable deployed code problem"
-      }
+      },
+      "script_rule": "translate"
     },
     "kevm": {
       "id": "kevm",
@@ -8260,7 +8673,8 @@
       ],
       "forms": {
         "base": "kevm"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "library": {
       "id": "library",
@@ -8277,7 +8691,9 @@
       ],
       "forms": {
         "base": "library"
-      }
+      },
+      "translation_note": "In Solidity: reusable deployed code that other contracts can call. NOT a book library.",
+      "script_rule": "translate"
     },
     "log": {
       "id": "log",
@@ -8294,7 +8710,9 @@
       ],
       "forms": {
         "base": "log"
-      }
+      },
+      "translation_note": "In Solidity: data emitted by events. NOT a physical log or diary.",
+      "script_rule": "translate"
     },
     "opcode": {
       "id": "opcode",
@@ -8311,7 +8729,9 @@
       ],
       "forms": {
         "base": "opcode"
-      }
+      },
+      "translation_note": "Operation code -- a single instruction in the EVM. Keep Latin in code contexts.",
+      "script_rule": "translate"
     },
     "overflow": {
       "id": "overflow",
@@ -8328,7 +8748,8 @@
       ],
       "forms": {
         "base": "overflow"
-      }
+      },
+      "script_rule": "translate"
     },
     "precompile": {
       "id": "precompile",
@@ -8346,7 +8767,8 @@
       "translation_note": "Must avoid confusion with 'pre-compiled code' in general software development",
       "forms": {
         "base": "precompile"
-      }
+      },
+      "script_rule": "translate"
     },
     "proxy contract": {
       "id": "proxy-contract",
@@ -8363,7 +8785,8 @@
       ],
       "forms": {
         "base": "proxy contract"
-      }
+      },
+      "script_rule": "translate"
     },
     "reentrancy": {
       "id": "reentrancy",
@@ -8380,7 +8803,8 @@
       ],
       "forms": {
         "base": "reentrancy"
-      }
+      },
+      "script_rule": "translate"
     },
     "reentrancy guard": {
       "id": "reentrancy-guard",
@@ -8398,7 +8822,8 @@
       "translation_note": "Often translated as 're-entry shield'; needs precise security term",
       "forms": {
         "base": "reentrancy guard"
-      }
+      },
+      "script_rule": "translate"
     },
     "require": {
       "id": "require",
@@ -8415,7 +8840,9 @@
       ],
       "forms": {
         "base": "require"
-      }
+      },
+      "translation_note": "Solidity keyword that checks conditions in smart contracts. Keep as-is in code contexts.",
+      "script_rule": "translate"
     },
     "revert": {
       "id": "revert",
@@ -8432,7 +8859,8 @@
       ],
       "forms": {
         "base": "revert"
-      }
+      },
+      "script_rule": "translate"
     },
     "self-destruct": {
       "id": "self-destruct",
@@ -8450,7 +8878,8 @@
       "translation_note": "Old term was 'suicide'; needs standard 'delete/remove' framing",
       "forms": {
         "base": "self-destruct"
-      }
+      },
+      "script_rule": "translate"
     },
     "singleton": {
       "id": "singleton",
@@ -8467,7 +8896,8 @@
       ],
       "forms": {
         "base": "singleton"
-      }
+      },
+      "script_rule": "translate"
     },
     "smart contract": {
       "id": "smart-contract",
@@ -8485,7 +8915,8 @@
       "forms": {
         "base": "smart contract"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "Self-executing code deployed on Ethereum. Combines 'smart' (automated) + 'contract' (agreement encoded as code)."
     },
     "solidity": {
       "id": "solidity",
@@ -8503,7 +8934,8 @@
       "forms": {
         "base": "solidity"
       },
-      "script_rule": "A_always_latin"
+      "script_rule": "A_always_latin",
+      "translation_note": "Programming language for Ethereum smart contracts. Proper noun, keep Latin."
     },
     "solidity inline assembly": {
       "id": "solidity-inline-assembly",
@@ -8520,7 +8952,8 @@
       ],
       "forms": {
         "base": "solidity inline assembly"
-      }
+      },
+      "script_rule": "translate"
     },
     "source-code-verification": {
       "id": "source-code-verification",
@@ -8556,7 +8989,8 @@
       ],
       "forms": {
         "base": "sstore"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "state": {
       "id": "state",
@@ -8573,7 +9007,8 @@
       ],
       "forms": {
         "base": "state"
-      }
+      },
+      "script_rule": "translate"
     },
     "state-trie": {
       "id": "state-trie",
@@ -8628,7 +9063,8 @@
       ],
       "forms": {
         "base": "upgradeable contract"
-      }
+      },
+      "script_rule": "translate"
     },
     "vyper": {
       "id": "vyper",
@@ -8645,7 +9081,8 @@
       ],
       "forms": {
         "base": "vyper"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "airdrop": {
       "id": "airdrop",
@@ -8662,7 +9099,8 @@
       ],
       "forms": {
         "base": "airdrop"
-      }
+      },
+      "script_rule": "translate"
     },
     "allowance": {
       "id": "allowance",
@@ -8679,7 +9117,8 @@
       ],
       "forms": {
         "base": "allowance"
-      }
+      },
+      "script_rule": "translate"
     },
     "approve": {
       "id": "approve",
@@ -8696,7 +9135,8 @@
       ],
       "forms": {
         "base": "approve"
-      }
+      },
+      "script_rule": "translate"
     },
     "burn": {
       "id": "burn",
@@ -8716,7 +9156,8 @@
       },
       "term_family": "burn",
       "morph_family": "burn",
-      "morph_note": "Literal 'fire' vs 'permanent removal from circulation'"
+      "morph_note": "Literal 'fire' vs 'permanent removal from circulation'",
+      "script_rule": "translate"
     },
     "burning": {
       "id": "burning",
@@ -8738,7 +9179,8 @@
       },
       "term_family": "burn",
       "morph_family": "burn",
-      "morph_note": "Literal 'fire' vs 'permanent removal from circulation'"
+      "morph_note": "Literal 'fire' vs 'permanent removal from circulation'",
+      "script_rule": "translate"
     },
     "claim": {
       "id": "claim",
@@ -8758,7 +9200,8 @@
         "base": "claim"
       },
       "morph_family": "claim",
-      "morph_note": "Action(v) to right(n) to status(adj); each needs specific phrasing in Asian languages"
+      "morph_note": "Action(v) to right(n) to status(adj); each needs specific phrasing in Asian languages",
+      "script_rule": "translate"
     },
     "cliff": {
       "id": "cliff",
@@ -8776,7 +9219,8 @@
       "translation_note": "Literal 'geographical cliff' translations are very common and confusing",
       "forms": {
         "base": "cliff"
-      }
+      },
+      "script_rule": "translate"
     },
     "collectible": {
       "id": "collectible",
@@ -8793,7 +9237,8 @@
       ],
       "forms": {
         "base": "collectible"
-      }
+      },
+      "script_rule": "translate"
     },
     "dai": {
       "id": "dai",
@@ -8810,7 +9255,8 @@
       ],
       "forms": {
         "base": "dai"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "erc-1155": {
       "id": "erc-1155",
@@ -8939,7 +9385,8 @@
       "translation_note": "'Breaking' or 'division' miss the 'creating fractions' meaning",
       "forms": {
         "base": "fractionalization"
-      }
+      },
+      "script_rule": "translate"
     },
     "fungible token": {
       "id": "fungible-token",
@@ -8956,7 +9403,8 @@
       ],
       "forms": {
         "base": "fungible token"
-      }
+      },
+      "script_rule": "translate"
     },
     "governance token": {
       "id": "governance-token",
@@ -8973,7 +9421,8 @@
       ],
       "forms": {
         "base": "governance token"
-      }
+      },
+      "script_rule": "translate"
     },
     "lp token": {
       "id": "lp-token",
@@ -8990,7 +9439,8 @@
       ],
       "forms": {
         "base": "lp token"
-      }
+      },
+      "script_rule": "translate"
     },
     "mint": {
       "id": "mint",
@@ -9010,7 +9460,8 @@
       },
       "term_family": "mint",
       "morph_family": "mint",
-      "morph_note": "Lacks direct financial equivalent in non-Western languages"
+      "morph_note": "Lacks direct financial equivalent in non-Western languages",
+      "script_rule": "translate"
     },
     "minting": {
       "id": "minting",
@@ -9032,7 +9483,8 @@
       },
       "term_family": "mint",
       "morph_family": "mint",
-      "morph_note": "Lacks direct financial equivalent in non-Western languages"
+      "morph_note": "Lacks direct financial equivalent in non-Western languages",
+      "script_rule": "translate"
     },
     "non-fungible token (nft)": {
       "id": "nft",
@@ -9049,7 +9501,9 @@
       ],
       "forms": {
         "base": "non-fungible token (nft)"
-      }
+      },
+      "translation_note": "Unique digital token proving ownership. 'NFT' stays Latin in most contexts.",
+      "script_rule": "translate"
     },
     "poap": {
       "id": "poap",
@@ -9066,7 +9520,8 @@
       ],
       "forms": {
         "base": "poap"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "soulbound token (sbt)": {
       "id": "soulbound-token-sbt",
@@ -9093,7 +9548,8 @@
           "term": "SBT",
           "status": "preferred"
         }
-      ]
+      ],
+      "script_rule": "translate"
     },
     "token": {
       "id": "token",
@@ -9111,7 +9567,8 @@
       "forms": {
         "base": "token"
       },
-      "script_rule": "B_always_translate"
+      "script_rule": "B_always_translate",
+      "translation_note": "A digital asset on Ethereum following a standard (ERC-20, ERC-721). NOT a physical coin or voucher."
     },
     "token factory": {
       "id": "token-factory",
@@ -9128,7 +9585,8 @@
       ],
       "forms": {
         "base": "token factory"
-      }
+      },
+      "script_rule": "translate"
     },
     "token uri": {
       "id": "token-uri",
@@ -9145,7 +9603,8 @@
       ],
       "forms": {
         "base": "token uri"
-      }
+      },
+      "script_rule": "translate"
     },
     "tokenization": {
       "id": "tokenization",
@@ -9163,7 +9622,8 @@
       "forms": {
         "base": "tokenization",
         "nominalization": "tokenization"
-      }
+      },
+      "script_rule": "translate"
     },
     "transfer": {
       "id": "transfer",
@@ -9180,7 +9640,9 @@
       ],
       "forms": {
         "base": "transfer"
-      }
+      },
+      "translation_note": "Moving tokens between addresses. In ERC-20 context, a specific function name.",
+      "script_rule": "translate"
     },
     "usdc": {
       "id": "usdc",
@@ -9197,7 +9659,8 @@
       ],
       "forms": {
         "base": "usdc"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "utility token": {
       "id": "utility-token",
@@ -9214,7 +9677,8 @@
       ],
       "forms": {
         "base": "utility token"
-      }
+      },
+      "script_rule": "translate"
     },
     "vesting": {
       "id": "vesting",
@@ -9232,7 +9696,8 @@
       "translation_note": "Often translated as 'clothing' (from Latin root) or 'investment'",
       "forms": {
         "base": "vesting"
-      }
+      },
+      "script_rule": "translate"
     },
     "wbtc": {
       "id": "wbtc",
@@ -9249,7 +9714,8 @@
       ],
       "forms": {
         "base": "wbtc"
-      }
+      },
+      "script_rule": "keep_latin"
     },
     "wrapped token": {
       "id": "wrapped-token",
@@ -9266,7 +9732,8 @@
       ],
       "forms": {
         "base": "wrapped token"
-      }
+      },
+      "script_rule": "translate"
     },
     "base fee": {
       "id": "base-fee",
@@ -9283,7 +9750,8 @@
       ],
       "forms": {
         "base": "base fee"
-      }
+      },
+      "script_rule": "translate"
     },
     "blob-fee": {
       "id": "blob-fee",
@@ -9319,7 +9787,9 @@
       ],
       "forms": {
         "base": "gas"
-      }
+      },
+      "translation_note": "Unit measuring computational effort on Ethereum. Metaphor for fuel. NOT chemical/physical gas.",
+      "script_rule": "translate"
     },
     "gas fee": {
       "id": "gas-fee",
@@ -9336,7 +9806,8 @@
       ],
       "forms": {
         "base": "gas fee"
-      }
+      },
+      "script_rule": "translate"
     },
     "gas limit": {
       "id": "gas-limit",
@@ -9353,7 +9824,8 @@
       ],
       "forms": {
         "base": "gas limit"
-      }
+      },
+      "script_rule": "translate"
     },
     "gas price": {
       "id": "gas-price",
@@ -9370,7 +9842,8 @@
       ],
       "forms": {
         "base": "gas price"
-      }
+      },
+      "script_rule": "translate"
     },
     "gwei": {
       "id": "gwei",
@@ -9405,7 +9878,8 @@
       ],
       "forms": {
         "base": "intent"
-      }
+      },
+      "script_rule": "translate"
     },
     "internal transaction": {
       "id": "internal-transaction",
@@ -9423,7 +9897,8 @@
       "forms": {
         "base": "internal transaction",
         "nominalization": "internal transaction"
-      }
+      },
+      "script_rule": "translate"
     },
     "max fee": {
       "id": "max-fee",
@@ -9440,7 +9915,8 @@
       ],
       "forms": {
         "base": "max fee"
-      }
+      },
+      "script_rule": "translate"
     },
     "max fee per gas": {
       "id": "max-fee-per-gas",
@@ -9457,7 +9933,8 @@
       ],
       "forms": {
         "base": "max fee per gas"
-      }
+      },
+      "script_rule": "translate"
     },
     "mempool": {
       "id": "mempool",
@@ -9474,7 +9951,9 @@
       ],
       "forms": {
         "base": "mempool"
-      }
+      },
+      "translation_note": "Pool of pending transactions waiting to be included in a block.",
+      "script_rule": "translate"
     },
     "nonce": {
       "id": "nonce",
@@ -9491,7 +9970,9 @@
       ],
       "forms": {
         "base": "nonce"
-      }
+      },
+      "translation_note": "A counter ensuring each transaction is unique. Cryptographic term: 'number used once'.",
+      "script_rule": "translate"
     },
     "pending transaction": {
       "id": "pending-transaction",
@@ -9509,7 +9990,8 @@
       "forms": {
         "base": "pending transaction",
         "nominalization": "pending transaction"
-      }
+      },
+      "script_rule": "translate"
     },
     "priority fee": {
       "id": "priority-fee",
@@ -9526,7 +10008,8 @@
       ],
       "forms": {
         "base": "priority fee"
-      }
+      },
+      "script_rule": "translate"
     },
     "receipt": {
       "id": "receipt",
@@ -9543,7 +10026,9 @@
       ],
       "forms": {
         "base": "receipt"
-      }
+      },
+      "translation_note": "A record of a transaction's execution result. Technical blockchain term.",
+      "script_rule": "translate"
     },
     "solver": {
       "id": "solver",
@@ -9560,7 +10045,8 @@
       ],
       "forms": {
         "base": "solver"
-      }
+      },
+      "script_rule": "translate"
     },
     "tip": {
       "id": "tip",
@@ -9577,7 +10063,9 @@
       ],
       "forms": {
         "base": "tip"
-      }
+      },
+      "translation_note": "Priority fee paid to validators for faster inclusion. NOT a gratuity tip.",
+      "script_rule": "translate"
     },
     "transaction": {
       "id": "transaction",
@@ -9596,7 +10084,9 @@
         "base": "transaction",
         "nominalization": "transaction"
       },
-      "term_family": "transact"
+      "term_family": "transact",
+      "translation_note": "A cryptographically signed data submission to the Ethereum blockchain. Not a financial transaction in the traditional sense.",
+      "script_rule": "translate"
     },
     "transaction fee": {
       "id": "transaction-fee",
@@ -9613,7 +10103,8 @@
       ],
       "forms": {
         "base": "transaction fee"
-      }
+      },
+      "script_rule": "translate"
     },
     "transaction hash": {
       "id": "transaction-hash",
@@ -9630,7 +10121,8 @@
       ],
       "forms": {
         "base": "transaction hash"
-      }
+      },
+      "script_rule": "translate"
     },
     "transaction pool": {
       "id": "transaction-pool",
@@ -9647,7 +10139,8 @@
       ],
       "forms": {
         "base": "transaction pool"
-      }
+      },
+      "script_rule": "translate"
     },
     "wei": {
       "id": "wei",
