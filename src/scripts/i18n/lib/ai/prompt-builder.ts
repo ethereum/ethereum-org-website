@@ -92,7 +92,7 @@ ${htmlRule}
       : "Transliterate the author field into the target script (phonetic, not semantic). Pseudonyms or GitHub handles (e.g., qbzzt, jdourlens) must stay in Latin."
 
   return `Format rules:
-- Frontmatter: translate the values of title, description, and breadcrumb. ${authorRule} Change the \`lang\` field to \`${targetLanguage}\`. Keep all other fields (tags, skill, published, sidebarDepth) unchanged. Preserve YAML structure exactly.
+- Frontmatter: translate the values of title, description, and breadcrumb. Translate concept tags but keep brand-name tags in Latin (per site rules above). ${authorRule} Change the \`lang\` field to \`${targetLanguage}\`. Keep all other fields (skill, published, sidebarDepth) unchanged. Preserve YAML structure exactly.
 - Preserve all markdown syntax (headings, lists, links) and their indentation exactly.
 - Preserve all JSX/HTML components and their attributes exactly.
 - Preserve heading anchor IDs exactly as in English ({#anchor-id}).

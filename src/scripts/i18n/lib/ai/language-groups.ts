@@ -55,10 +55,9 @@ export function needsTransliteration(code: string): boolean {
  */
 export function getSiteSpecificNotes(group: LanguageGroup): string {
   const common = `
-Site-specific rules for ethereum.org:
+Site-specific rules for ethereum.org (group-specific overrides below take precedence):
 - Frontmatter tags array: brand-name tags (Solidity, MetaMask, ERC-20) stay in Latin script. Concept tags (smart contracts, testing) should be translated.
 - Code blocks: never translate functional code. Always translate code comments.
-- Internal links (href starting with /) must stay exactly as in English.
 - Do not translate (keep in original Latin script): ticker symbols (ETH, BTC, ERC, EIP, BLS), URLs, domains, EVM opcodes (SSTORE, CALL, PUSH), hex values (0x...), cryptographic primitives (SHA-256, Keccak-256, ECDSA, zk-SNARKs), network names (Mainnet, Sepolia, Holesky, Goerli), license identifiers (MIT, Apache-2.0), mathematical notations and formulas.
 - Treat client implementation names (Lighthouse, Prysm, Geth, Nethermind, Besu, Teku, Lodestar, Nimbus) as proper nouns; do not translate them. In non-Latin scripts, phonetic transliteration alongside the Latin name is acceptable.
 - Use community glossary terms as provided. In languages with grammatical cases, decline glossary terms to fit the surrounding sentence naturally.
@@ -93,10 +92,9 @@ Site-specific rules for ethereum.org:
     case "cyrillic":
       return `${common}
 - Use Western Arabic numerals (1, 2, 3) -- not native numeral scripts.
-- Use correct grammatical plural categories (one/few/many/other). Decline glossary terms and English loanwords according to the grammatical case of the surrounding sentence.`
+- Use correct grammatical plural categories (one/few/many/other) as appropriate for the target language.`
 
     case "latin":
-      return `${common}
-- Brand names must stay in English (do not translate Solidity, MetaMask, etc.).`
+      return common
   }
 }
