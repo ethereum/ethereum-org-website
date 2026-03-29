@@ -636,15 +636,13 @@ async function processLanguage(
     langGenerated += result.generated
     langFailed += result.failed
 
-    // Save after each batch (incremental)
+    // Save and commit after each batch (zero data loss)
     saveTranslations(lang.code, existing)
+    commitProgress(lang.code)
   }
 
   const finalCount = Object.keys(existing).length
   log(`[${lang.code}] Done: ${finalCount}/${totalTerms} terms`)
-
-  // Commit progress so work isn't lost if the action crashes
-  commitProgress(lang.code)
 
   return { generated: langGenerated, failed: langFailed, skipped: 0 }
 }

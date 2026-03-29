@@ -46,14 +46,22 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npx tsx scripts/generate-translations-sdk.ts
 
-      - name: Final commit and push
+      - name: Squash all translation commits into one
         run: |
-          git add scripts/translations/
-          if git diff --staged --quiet; then
-            echo "No new translations to commit"
-          else
-            git commit -m "data: glossary translations (final batch)
+          # Find the commit before the first translation commit
+          BASE=$(git log --oneline --format="%H" -- scripts/translations/ | tail -1)
+          PARENT=$(git log --oneline --format="%H" ${BASE}^ -1 2>/dev/null || echo "")
+          if [ -n "$PARENT" ]; then
+            echo "Squashing translation commits since $PARENT"
+            git reset --soft $PARENT
+            git add scripts/translations/
+            git commit -m "data: glossary translations (519 terms x 24 languages)
+
+          Generated via Gemini 3.1 Pro Preview with @google/genai SDK.
+          16 concurrent streams, 10 terms per batch.
 
           Co-Authored-By: Gemini <noreply@google.com>"
-            git push
+            git push --force-with-lease
+          else
+            echo "No translation commits to squash"
           fi
