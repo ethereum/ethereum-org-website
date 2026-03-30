@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react/*"
+import type { Meta, StoryObj } from "@storybook/react"
 import { fn } from "@storybook/test"
 
 import { CreateAccountIcon } from "../icons"

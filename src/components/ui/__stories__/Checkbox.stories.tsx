@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react/*"
+import type { Meta, StoryObj } from "@storybook/react"
 
 import CheckboxComponent, { type CheckboxProps } from "../checkbox"
 import { HStack, VStack } from "../flex"
