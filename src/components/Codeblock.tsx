@@ -24,7 +24,7 @@ const makeTransparent = (theme: PrismTheme): PrismTheme => ({
   plain: { ...theme.plain, backgroundColor: "transparent" },
 })
 
-const lightTheme = makeTransparent(themes.duotoneLight)
+const lightTheme = makeTransparent(themes.oneLight)
 const darkTheme = makeTransparent(themes.duotoneDark)
 
 const TopBarItem = ({
