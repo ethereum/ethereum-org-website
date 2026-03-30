@@ -6,6 +6,7 @@ import { useTheme } from "next-themes"
 import { Highlight, Prism, type PrismTheme, themes } from "prism-react-renderer"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
+import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -26,21 +27,6 @@ const makeTransparent = (theme: PrismTheme): PrismTheme => ({
 
 const lightTheme = makeTransparent(themes.oneLight)
 const darkTheme = makeTransparent(themes.duotoneDark)
-
-const TopBarItem = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-      "ms-2 rounded border px-2 py-1 shadow-[1px_1px_8px_1px_rgba(var(--black),_0.5)] transition-transform duration-100",
-      "hover:scale-105 hover:cursor-pointer hover:bg-gray-200 hover:shadow-md hover:transition-transform hover:duration-100",
-      "bg-background-highlight hover:bg-background",
-      className
-    )}
-    {...props}
-  />
-)
 
 const getValidChildrenForCodeblock = (child: unknown): string | undefined => {
   try {
@@ -143,31 +129,41 @@ const Codeblock = ({
                 )
               })}
               {!fromHomepage && (
-                <Flex className="absolute end-4 top-3 justify-end">
+                <Flex className="absolute end-4 top-3 justify-end gap-2">
                   {allowCollapse &&
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
-                      <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
+                      <Button
+                        variant="outline"
+                        className="bg-background-highlight"
+                        size="sm"
+                        onClick={() => setIsCollapsed(!isCollapsed)}
+                      >
                         {isCollapsed ? t("show-all") : t("show-less")}
-                      </TopBarItem>
+                      </Button>
                     )}
                   {shouldShowCopyWidget && (
-                    <CopyToClipboard text={codeText}>
-                      {(isCopied) => (
-                        <TopBarItem>
-                          {!isCopied ? (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      asChild
+                      className="bg-background-highlight"
+                    >
+                      <CopyToClipboard text={codeText}>
+                        {(isCopied) =>
+                          !isCopied ? (
                             <>
                               {t("copy")}
-                              <Clipboard className="mb-1 ms-1 inline-block size-[1em]" />
+                              <Clipboard className="size-[1em]" />
                             </>
                           ) : (
                             <>
                               {t("copied")}
-                              <ClipboardCheck className="mb-1 ms-1 inline-block size-[1em]" />
+                              <ClipboardCheck className="size-[1em]" />
                             </>
-                          )}
-                        </TopBarItem>
-                      )}
-                    </CopyToClipboard>
+                          )
+                        }
+                      </CopyToClipboard>
+                    </Button>
                   )}
                 </Flex>
               )}
