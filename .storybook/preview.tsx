@@ -77,7 +77,7 @@ const preview: Preview = {
     layout: "centered",
     // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
     viewport: {
-      viewports: breakpointSet.reduce<{
+      options: breakpointSet.reduce<{
         [token: string]: {
           name: string
           styles: Record<"width" | "height", string>
