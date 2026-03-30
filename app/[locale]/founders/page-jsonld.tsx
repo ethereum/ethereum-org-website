@@ -17,9 +17,7 @@ export default async function FoundersPageJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-founders",
-  })
+  const t = await getTranslations("page-founders")
 
   const url = normalizeUrlForJsonLd(locale, `/founders/`)
 

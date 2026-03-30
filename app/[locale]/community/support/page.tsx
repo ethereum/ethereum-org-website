@@ -29,7 +29,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({ namespace: "page-community-support" })
+  const t = await getTranslations("page-community-support")
 
   return (
     <div>

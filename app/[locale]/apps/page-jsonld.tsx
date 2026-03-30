@@ -19,7 +19,7 @@ export default async function AppsJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
 
   const url = normalizeUrlForJsonLd(locale, "/apps/")
 

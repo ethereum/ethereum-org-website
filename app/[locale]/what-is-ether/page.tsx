@@ -39,9 +39,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = params
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    namespace: "page-what-is-ether",
-  })
+  const t = await getTranslations("page-what-is-ether")
 
   const [
     { contributors, lastEditLocaleTimestamp },

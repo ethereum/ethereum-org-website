@@ -9,9 +9,7 @@ import {
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function LearnPageJsonLD({ locale, contributors }) {
-  const t = await getTranslations({
-    namespace: "page-learn",
-  })
+  const t = await getTranslations("page-learn")
 
   const url = normalizeUrlForJsonLd(locale, `/learn/`)
 

@@ -106,8 +106,8 @@ export default async function EventsJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-community-events" })
-  const common = await getTranslations({ namespace: "common" })
+  const t = await getTranslations("page-community-events")
+  const common = await getTranslations("common")
 
   const year = getLocaleYear(locale)
   const url = normalizeUrlForJsonLd(locale, `/community/events/`)

@@ -13,9 +13,7 @@ export default async function Layer2NetworksPageJsonLD({
   layer2Data,
   contributors,
 }) {
-  const t = await getTranslations({
-    namespace: "page-layer-2-networks",
-  })
+  const t = await getTranslations("page-layer-2-networks")
 
   const url = normalizeUrlForJsonLd(locale, `/layer-2/networks/`)
 

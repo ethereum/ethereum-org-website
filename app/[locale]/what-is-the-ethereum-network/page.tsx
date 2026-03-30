@@ -30,9 +30,7 @@ import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-n
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
-  const t = await getTranslations({
-    namespace: "page-what-is-the-ethereum-network",
-  })
+  const t = await getTranslations("page-what-is-the-ethereum-network")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(

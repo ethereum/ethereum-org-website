@@ -17,7 +17,7 @@ export default async function CommunityJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-community" })
+  const t = await getTranslations("page-community")
 
   const url = normalizeUrlForJsonLd(locale, `/community/`)
 

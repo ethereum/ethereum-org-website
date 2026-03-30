@@ -33,9 +33,7 @@ export const getLanguagesDisplayInfo = async (): Promise<
 }
 
 export const getNavigation = async () => {
-  const t = await getTranslations({
-    namespace: "common",
-  })
+  const t = await getTranslations("common")
 
   const linkSections: NavSections = buildNavigation(t)
 

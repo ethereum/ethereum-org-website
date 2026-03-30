@@ -19,9 +19,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-ethereum-history-founder-and-ownership",
-  })
+  const t = await getTranslations("page-ethereum-history-founder-and-ownership")
 
   const url = normalizeUrlForJsonLd(
     locale,
