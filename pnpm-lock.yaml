@@ -302,8 +302,8 @@ importers:
         specifier: ^10.4.19
         version: 10.4.21(postcss@8.5.4)
       chromatic:
-        specifier: 12.0.0
-        version: 12.0.0(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10))
+        specifier: 16.0.0
+        version: 16.0.0(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10))
       decompress:
         specifier: ^4.2.1
         version: 4.2.1
@@ -374,7 +374,7 @@ importers:
         specifier: 10.3.3
         version: 10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10)
       storybook-next-intl:
-        specifier: ^10.1.1
+        specifier: 10.1.1
         version: 10.1.1(next-intl@4.8.3(next@16.2.1(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.53.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)(typescript@5.8.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))
       tailwindcss:
         specifier: ^3.4.4
@@ -6105,8 +6105,8 @@ packages:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
     engines: {node: '>= 14.16.0'}
 
-  chromatic@12.0.0:
-    resolution: {integrity: sha512-X7v26BLfAzHCU92nxPsCuvt+MazmA7S6cN7pCRRhnDYChDxHES48YvXarOybLdlH9kNP/3lMyknu6iseTh0T9A==}
+  chromatic@13.3.5:
+    resolution: {integrity: sha512-MzPhxpl838qJUo0A55osCF2ifwPbjcIPeElr1d4SHcjnHoIcg7l1syJDrAYK/a+PcCBrOGi06jPNpQAln5hWgw==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -6117,8 +6117,8 @@ packages:
       '@chromatic-com/playwright':
         optional: true
 
-  chromatic@13.3.5:
-    resolution: {integrity: sha512-MzPhxpl838qJUo0A55osCF2ifwPbjcIPeElr1d4SHcjnHoIcg7l1syJDrAYK/a+PcCBrOGi06jPNpQAln5hWgw==}
+  chromatic@16.0.0:
+    resolution: {integrity: sha512-O81RVGDXXoreNeG894hjaUx08xep+C/BA6aJNMZkwSjH7Lln8IweZekBpBEoQPNNpjmHyZvcTIwN/aGitdK53Q==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -17273,7 +17273,7 @@ snapshots:
   '@testing-library/dom@10.4.0':
     dependencies:
       '@babel/code-frame': 7.29.0
-      '@babel/runtime': 7.27.4
+      '@babel/runtime': 7.29.2
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
       chalk: 4.1.2
@@ -19069,11 +19069,11 @@ snapshots:
     dependencies:
       readdirp: 4.1.2
 
-  chromatic@12.0.0(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10)):
+  chromatic@13.3.5(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10)):
     optionalDependencies:
       '@chromatic-com/playwright': 0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10)
 
-  chromatic@13.3.5(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10)):
+  chromatic@16.0.0(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10)):
     optionalDependencies:
       '@chromatic-com/playwright': 0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10)
 
