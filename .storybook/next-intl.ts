@@ -1,3 +1,6 @@
+import { readFileSync } from "fs"
+import { join } from "path"
+
 export const baseLocales = {
   en: { title: "English", left: "En" },
   zh: { title: "中国人", left: "Zh" },
@@ -27,37 +30,40 @@ export const ns = [
 ] as const
 const supportedLngs = Object.keys(baseLocales)
 
+const rootDir = join(import.meta.dirname, "..")
+
 /**
  * Taking the ns array and generating those files for each language available.
  */
-const messagesByLocale = ns.reduce((acc, n) => {
-  supportedLngs.forEach((lng) => {
-    if (!acc[lng]) acc[lng] = {}
+const messagesByLocale = ns.reduce(
+  (acc, n) => {
+    supportedLngs.forEach((lng) => {
+      if (!acc[lng]) acc[lng] = {}
 
-    try {
-      acc[lng] = {
-        ...acc[lng],
-        [n]: {
-          ...acc[lng][n],
-          ...require(`../src/intl/${lng}/${n}.json`),
-        },
+      try {
+        const filePath = join(rootDir, "src", "intl", lng, `${n}.json`)
+        acc[lng] = {
+          ...acc[lng],
+          [n]: {
+            ...acc[lng][n],
+            ...JSON.parse(readFileSync(filePath, "utf-8")),
+          },
+        }
+      } catch {
+        const fallbackPath = join(rootDir, "src", "intl", "en", `${n}.json`)
+        acc[lng] = {
+          ...acc[lng],
+          [n]: {
+            ...acc[lng][n],
+            ...JSON.parse(readFileSync(fallbackPath, "utf-8")),
+          },
+        }
       }
-    } catch {
-      acc[lng] = {
-        ...acc[lng],
-        [n]: {
-          ...acc[lng][n],
-          ...require(`../src/intl/en/${n}.json`),
-        },
-      }
-    }
-  })
+    })
 
-  return acc
-}, {})
-console.log(
-  "🚀 ~ constresources:Resource=ns.reduce ~ resources:",
-  messagesByLocale
+    return acc
+  },
+  {} as Record<string, Record<string, Record<string, string>>>
 )
 
 const nextIntl = {
