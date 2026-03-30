@@ -163,8 +163,8 @@
     "typescript": "^5.5.2",
     "unified": "^10.0.0",
     "unist-util-visit": "^5.0.0",
-    "xml2js": "^0.6.2",
-    "@storybook/addon-docs": "9.1.6"
+    "vite": "^7.0.0",
+    "xml2js": "^0.6.2"
   },
   "packageManager": "pnpm@10.12.4",
   "pnpm": {
