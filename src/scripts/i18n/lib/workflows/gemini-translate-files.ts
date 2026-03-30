@@ -16,6 +16,10 @@ import { join } from "path"
 import { translateFile } from "../ai/gemini-translate"
 import { filterGlossaryFlat } from "../ai/glossary-lookup"
 import {
+  updateJsonManifest,
+  writeMarkdownManifest,
+} from "../ai/manifest-generator"
+import {
   initProgress,
   isFileCompleted,
   isLanguageCompleted,
@@ -219,6 +223,26 @@ async function translateLanguage(
 
       // Commit immediately -- serialized by the shared committer's queue
       await committer.commitFile(destPath, result.translatedContent, language)
+
+      // Stamp manifest: record which English source version this translation
+      // was made against, enabling drift detection later
+      try {
+        const rootDir = process.cwd()
+        if (file.type === "markdown") {
+          writeMarkdownManifest(
+            join(rootDir, destPath),
+            file.path,
+            file.content
+          )
+        } else {
+          const localeDir = join(rootDir, `src/intl/${language}`)
+          updateJsonManifest(localeDir, file.path, file.content)
+        }
+      } catch (err) {
+        console.warn(
+          `  [manifest] ${file.path}: failed to write manifest (non-fatal): ${err instanceof Error ? err.message : String(err)}`
+        )
+      }
 
       translatedFiles.push({
         path: destPath,
