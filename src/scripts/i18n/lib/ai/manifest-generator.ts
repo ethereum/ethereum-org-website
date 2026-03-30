@@ -139,6 +139,9 @@ const HEADING_RE = /^(#{1,6})\s+(.+?)(?:\s*\{#([^}]+)\})?\s*$/
 interface ParsedSection {
   id: string
   level: number
+  /** Heading label text (without the {#id} anchor) */
+  label: string
+  /** Body content below the heading (excludes the heading line itself) */
   content: string
 }
 
@@ -158,6 +161,7 @@ function parseMarkdownSections(content: string): ParsedSection[] {
     sections.push({
       id: "_frontmatter",
       level: 0,
+      label: "",
       content: fmMatch[1],
     })
     body = content.slice(fmMatch[1].length)
@@ -173,17 +177,20 @@ function parseMarkdownSections(content: string): ParsedSection[] {
   // Split into lines and parse headings
   const lines = body.split("\n")
   let currentContent = ""
+  let currentLabel = ""
   let currentId = "_intro"
   let currentLevel = 0
 
   for (const line of lines) {
     const match = line.match(HEADING_RE)
     if (match) {
-      // Save previous section
-      if (currentContent.trim() || currentId === "_intro") {
+      // Save previous section (always push if it has a label -- heading sections
+      // with empty body content still need to exist in the trie for nesting)
+      if (currentContent.trim() || currentId === "_intro" || currentLabel) {
         sections.push({
           id: currentId,
           level: currentLevel,
+          label: currentLabel,
           content: currentContent,
         })
       }
@@ -195,17 +202,20 @@ function parseMarkdownSections(content: string): ParsedSection[] {
       // Use custom ID if present, otherwise generate from heading text
       currentId = customId || `_auto:${slugifyHeading(headingText)}`
       currentLevel = level
-      currentContent = line + "\n"
+      currentLabel = headingText
+      // Body content starts empty -- heading line is NOT included in content
+      currentContent = ""
     } else {
       currentContent += line + "\n"
     }
   }
 
   // Push final section
-  if (currentContent.trim()) {
+  if (currentContent.trim() || currentLabel) {
     sections.push({
       id: currentId,
       level: currentLevel,
+      label: currentLabel,
       content: currentContent,
     })
   }
@@ -227,88 +237,89 @@ function slugifyHeading(text: string): string {
 /**
  * Build a merkle trie from parsed markdown sections.
  *
- * Sections are nested by heading level:
- * - h2 sections contain h3 children
- * - h3 sections contain h4 children
- * - Leaf sections (no children) hash their content directly
- * - Branch sections hash the concatenation of their children's hashes
+ * Two-pass approach:
+ * 1. Build a flat list of nodes with parent references based on heading level
+ * 2. Assemble into a nested trie and compute hashes bottom-up
+ *
+ * Each heading section has _label and _content leaves, plus any child headings.
  */
 function buildMarkdownTrie(sections: ParsedSection[]): Record<string, TrieNode> {
   const root: Record<string, TrieNode> = {}
 
-  // Stack tracks the current nesting: [level, parentChildren]
-  const stack: Array<{ level: number; children: Record<string, TrieNode> }> = [
-    { level: 0, children: root },
-  ]
+  // Pass 1: build nodes and determine parent-child relationships
+  interface SectionNode {
+    id: string
+    level: number
+    label: string
+    content: string
+    children: Record<string, SectionNode>
+  }
+
+  const rootNode: SectionNode = {
+    id: "_root",
+    level: -1,
+    label: "",
+    content: "",
+    children: {},
+  }
+
+  // Stack of ancestors -- each entry is the most recent node at that depth
+  const stack: SectionNode[] = [rootNode]
 
   for (const section of sections) {
-    // Special cases: frontmatter and intro are always at root level
+    const node: SectionNode = {
+      id: section.id,
+      level: section.level,
+      label: section.label,
+      content: section.content,
+      children: {},
+    }
+
     if (section.id === "_frontmatter" || section.id === "_intro") {
-      root[section.id] = { hash: hashContent(section.content) }
+      rootNode.children[section.id] = node
       continue
     }
 
-    // Pop stack to find the right parent level
+    // Pop stack to find parent (first ancestor with lower level)
     while (stack.length > 1 && stack[stack.length - 1].level >= section.level) {
-      // Before popping, finalize the parent's hash from its children
-      const popped = stack.pop()!
-      const parentEntry = findNodeInParent(stack[stack.length - 1].children, popped)
-      if (parentEntry && parentEntry.children && Object.keys(parentEntry.children).length > 0) {
-        parentEntry.hash = merkleHash(parentEntry.children)
-      }
+      stack.pop()
     }
 
-    const parent = stack[stack.length - 1].children
-    const node: TrieNode = { hash: hashContent(section.content) }
-
-    // This node might get children later (if lower-level headings follow)
-    parent[section.id] = node
-
-    // Push onto stack as potential parent for deeper headings
-    const nodeChildren: Record<string, TrieNode> = {}
-    node.children = nodeChildren
-    stack.push({ level: section.level, children: nodeChildren })
+    // Add as child of current stack top
+    stack[stack.length - 1].children[section.id] = node
+    stack.push(node)
   }
 
-  // Unwind stack and finalize hashes
-  while (stack.length > 1) {
-    const popped = stack.pop()!
-    const parentEntry = findNodeInParent(stack[stack.length - 1].children, popped)
-    if (parentEntry && parentEntry.children && Object.keys(parentEntry.children).length > 0) {
-      parentEntry.hash = merkleHash(parentEntry.children)
+  // Pass 2: convert to TrieNode with hashes, bottom-up
+  function toTrieNode(node: SectionNode): TrieNode {
+    // Special nodes (frontmatter, intro) -- just hash content
+    if (node.id === "_frontmatter" || node.id === "_intro") {
+      return { hash: hashContent(node.content) }
+    }
+
+    // Regular heading section: _label + _content + child headings
+    const children: Record<string, TrieNode> = {
+      _label: { hash: hashContent(node.label) },
+      _content: { hash: hashContent(node.content) },
+    }
+
+    // Add child heading sections
+    for (const [childId, childNode] of Object.entries(node.children)) {
+      children[childId] = toTrieNode(childNode)
+    }
+
+    return {
+      hash: merkleHash(children),
+      children,
     }
   }
 
-  // Clean up empty children objects (leaves don't need them)
-  cleanEmptyChildren(root)
+  // Build root trie from rootNode's children
+  for (const [id, node] of Object.entries(rootNode.children)) {
+    root[id] = toTrieNode(node)
+  }
 
   return root
-}
-
-/** Find a node in a parent's children that matches the given stack entry */
-function findNodeInParent(
-  parentChildren: Record<string, TrieNode>,
-  stackEntry: { children: Record<string, TrieNode> }
-): TrieNode | undefined {
-  for (const node of Object.values(parentChildren)) {
-    if (node.children === stackEntry.children) return node
-  }
-  return undefined
-}
-
-/** Remove empty children objects from leaf nodes */
-function cleanEmptyChildren(trie: Record<string, TrieNode>): void {
-  for (const node of Object.values(trie)) {
-    if (node.children) {
-      if (Object.keys(node.children).length === 0) {
-        delete node.children
-      } else {
-        cleanEmptyChildren(node.children)
-        // Recompute hash from children
-        node.hash = merkleHash(node.children)
-      }
-    }
-  }
 }
 
 // ---------------------------------------------------------------------------
