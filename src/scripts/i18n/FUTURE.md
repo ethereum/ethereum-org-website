@@ -125,6 +125,36 @@
 
 **Prerequisite:** Quality sweep readiness. This is a pre-sweep cleanup item.
 
+### 12. CI Enforcement for Custom Header IDs
+
+**Problem:** Markdown content files must have unique custom header IDs
+(`{#anchor-id}`) on all h1-h4 elements. These IDs are critical for:
+- Section-level drift detection (manifest generator keys by header ID)
+- Incremental translation splicing (match sections by ID across languages)
+- URL fragment stability (anchor links shared across locales)
+
+PR #17896 fixed 126 missing IDs, but there is no CI check to prevent
+regressions. New content can be merged without header IDs.
+
+**Proposed solution:** Add a check to the CI pipeline that:
+1. Scans all `public/content/*.md` files (excluding translations)
+2. Skips content inside code fences
+3. Flags any h1-h4 header missing a `{#custom-id}` anchor
+4. Flags duplicate IDs within the same file
+5. Fails the build if violations are found
+
+**Implementation options:**
+- Extend the existing `pnpm markdown-checker` script
+- Or add a standalone script run as a separate CI step
+- The manifest generator's `parseMarkdownSections()` already does this
+  parsing and could be reused
+
+**Complexity:** Low. The parsing logic exists. Just needs a CLI wrapper
+and a CI integration point.
+
+**Prerequisite:** Must be in place before incremental translation launches
+(Priority 4). Not needed for the quality sweep (Priority 3).
+
 ---
 
 ## Image Translation
