@@ -96,6 +96,18 @@ module.exports = (phase) => {
 
       return config
     },
+    // Turbopack loader equivalents for the webpack() config above
+    turbopack: {
+      rules: {
+        "*.yaml": { loaders: ["yaml-loader"], as: "*.js" },
+        "*.yml": { loaders: ["yaml-loader"], as: "*.js" },
+        "*.svg": { loaders: ["@svgr/webpack"], as: "*.js" },
+        "*.md": { loaders: ["raw-loader"], as: "*.js" },
+        "*.mp3": { as: "*.static" },
+      },
+    },
+    // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
+    serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
@@ -240,5 +252,4 @@ module.exports = withSentryConfig(module.exports, {
   silent: true,
   widenClientFileUpload: true,
   disableLogger: true,
-  automaticVercelMonitors: true,
 })

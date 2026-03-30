@@ -23,7 +23,7 @@ const HomeHero = async ({
   image2xl,
   alt: altProp,
 }: HomeHeroProps) => {
-  const locale = getLocale()
+  const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "page-index" })
 
   const baseImage = image ?? heroBase
