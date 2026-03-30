@@ -1,6 +1,3 @@
-import { readFileSync } from "fs"
-import { join } from "path"
-
 export const baseLocales = {
   en: { title: "English", left: "En" },
   zh: { title: "中国人", left: "Zh" },
@@ -30,10 +27,11 @@ export const ns = [
 ] as const
 const supportedLngs = Object.keys(baseLocales)
 
-const rootDir = join(import.meta.dirname, "..")
-
 /**
  * Taking the ns array and generating those files for each language available.
+ * Uses require() because this file is bundled by webpack for the browser —
+ * webpack resolves require() at build time. Node-only APIs like fs or
+ * import.meta.dirname do not work here.
  */
 const messagesByLocale = ns.reduce(
   (acc, n) => {
@@ -41,21 +39,19 @@ const messagesByLocale = ns.reduce(
       if (!acc[lng]) acc[lng] = {}
 
       try {
-        const filePath = join(rootDir, "src", "intl", lng, `${n}.json`)
         acc[lng] = {
           ...acc[lng],
           [n]: {
             ...acc[lng][n],
-            ...JSON.parse(readFileSync(filePath, "utf-8")),
+            ...require(`../src/intl/${lng}/${n}.json`),
           },
         }
       } catch {
-        const fallbackPath = join(rootDir, "src", "intl", "en", `${n}.json`)
         acc[lng] = {
           ...acc[lng],
           [n]: {
             ...acc[lng][n],
-            ...JSON.parse(readFileSync(fallbackPath, "utf-8")),
+            ...require(`../src/intl/en/${n}.json`),
           },
         }
       }
