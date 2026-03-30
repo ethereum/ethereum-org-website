@@ -176,7 +176,7 @@ You will currently find the setup of these modes in [the `./storybook/modes.ts` 
 When using a mode at either the component level (all stories in a given file) or at the story level, they are supplied under the `chromatic` parameter.
 
 ```tsx
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { langViewportModes } from "../../../../.storybook/modes"
 
