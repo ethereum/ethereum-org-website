@@ -108,8 +108,7 @@ const Codeblock = ({
               style={style}
             >
               {tokens.map((line, i) => {
-                return i === tokens.length - 1 &&
-                  line[0].content === "" ? null : (
+                return i === tokens.length - 1 && line[0].empty ? null : (
                   <div
                     key={i}
                     style={{ display: "table-row" }}
