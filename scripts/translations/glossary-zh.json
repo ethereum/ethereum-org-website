@@ -8927,49 +8927,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "EIP-7702 是 Pectra 升级中引入的账户抽象提案，允许外部拥有账户暂时作为智能合约运行。"
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP-7702"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier kept in Latin script as per rules."
-  },
   "allowance": {
     "term": "授权额度",
     "aliases": [
@@ -9375,49 +9332,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Transliterated to Hanzi as per the requested script_rule, though the original English name 'Teku' is standard in tech documentation."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "EIP-4844 引入了携带 blob 的交易，以显著降低以太坊 Rollup 的数据成本。"
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "EIP_4844"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -12141,49 +12055,6 @@
     "confidence": "high",
     "notes": "Translated primarily as a noun in the context of DeFi."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "ERC-4626 是一项用于收益型代币化金库的标准。"
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC4626"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "reentrancy": {
     "term": "重入",
     "aliases": [
@@ -13637,49 +13508,6 @@
     "confidence": "high",
     "notes": "Transliterated as the established proper noun for the city."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "ERC-777 代币标准通过引入钩子函数提供了高级特性。"
-      },
-      "heading": {
-        "term": "ERC-777 代币标准"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "pending transaction": {
     "term": "待处理交易",
     "aliases": [
@@ -14416,49 +14244,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "ERC-223是一个代币标准，旨在解决ERC-20标准中因意外转账到不兼容合约而导致的代币丢失问题。"
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Identity translation rule applied."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -14542,49 +14327,6 @@
       "gender": null,
       "animacy": null,
       "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "ERC-4337 在以太坊主网上实现了账户抽象，无需进行共识层协议的更改。"
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
       "formality": "neutral"
     },
     "plurals": null,
@@ -15309,49 +15051,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "链上",
-    "aliases": [],
-    "transliteration": "lian shang",
-    "morphology": {
-      "noun": {
-        "singular": "链上"
-      },
-      "verb": null,
-      "adjective": "链上",
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "链上",
-        "example": "所有去中心化应用的交易数据都记录在链上。"
-      },
-      "heading": {
-        "term": "链上"
-      },
-      "tag": {
-        "term": "链上"
-      },
-      "ui": {
-        "term": "链上"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Code context adheres to rule: onchain without hyphen."
   },
   "swarm": {
     "term": "蜂群",
@@ -16121,49 +15820,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Used as both a noun and a verb in Chinese context."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "ERC-1363 是一种允许在代币转移或授权后执行代码的支付代币标准。"
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per rules."
   },
   "usdc": {
     "term": "USDC",
@@ -17586,53 +17242,6 @@
       },
       "code": {
         "term": "censorshipResistant"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "off-chain": {
-    "term": "链下",
-    "aliases": [
-      "链外"
-    ],
-    "transliteration": "liàn xià",
-    "morphology": {
-      "noun": {
-        "singular": "链下"
-      },
-      "verb": null,
-      "adjective": "链下的",
-      "agent": null,
-      "negation": "链上",
-      "compounds": {
-        "offchain-transaction": "链下交易"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "链下",
-        "example": "为了降低Gas费用，许多应用将计算过程放在链下执行。"
-      },
-      "heading": {
-        "term": "链下"
-      },
-      "tag": {
-        "term": "链下"
-      },
-      "ui": {
-        "term": "链下"
-      },
-      "code": {
-        "term": "offchain"
       }
     },
     "grammar": {
@@ -21183,54 +20792,6 @@
     "confidence": "high",
     "notes": "In crypto applications, onboarding refers to the process of getting a user set up with a wallet and initial funds."
   },
-  "peer-to-peer network": {
-    "term": "点对点网络",
-    "aliases": [
-      "对等网络",
-      "P2P网络"
-    ],
-    "transliteration": "diǎn duì diǎn wǎng luò",
-    "morphology": {
-      "noun": {
-        "singular": "点对点网络"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "peer-to-peer-trading": "点对点交易"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "点对点网络",
-        "example": "以太坊是一个建立在点对点网络上的去中心化系统。"
-      },
-      "heading": {
-        "term": "点对点网络"
-      },
-      "tag": {
-        "term": "点对点网络"
-      },
-      "ui": {
-        "term": "点对点网络"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Often abbreviated as P2P网络 in casual and technical discussions."
-  },
   "permissioned": {
     "term": "许可型",
     "aliases": [
@@ -22111,96 +21672,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Kept in Latin script in Chinese text as it is the standard convention."
-  },
-  "off-chain governance": {
-    "term": "链下治理",
-    "aliases": [
-      "链外治理"
-    ],
-    "transliteration": "liànxià zhìlǐ",
-    "morphology": {
-      "noun": {
-        "singular": "链下治理"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "链下治理",
-        "example": "以太坊的改进提案(EIP)流程是典型的链下治理机制。"
-      },
-      "heading": {
-        "term": "链下治理"
-      },
-      "tag": {
-        "term": "链下治理"
-      },
-      "ui": {
-        "term": "链下治理"
-      },
-      "code": {
-        "term": "offchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "on-chain governance": {
-    "term": "链上治理",
-    "aliases": [
-      "链内治理"
-    ],
-    "transliteration": "liànshàng zhìlǐ",
-    "morphology": {
-      "noun": {
-        "singular": "链上治理"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "链上治理",
-        "example": "去中心化自治组织(DAO)通常采用链上治理系统来自动执行代币持有者的投票结果。"
-      },
-      "heading": {
-        "term": "链上治理"
-      },
-      "tag": {
-        "term": "链上治理"
-      },
-      "ui": {
-        "term": "链上治理"
-      },
-      "code": {
-        "term": "onchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "sandwich attack": {
     "term": "三明治攻击",

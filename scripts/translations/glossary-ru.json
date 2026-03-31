@@ -10161,55 +10161,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "Предложение EIP-7702 добавляет новый тип транзакции для абстракции учетных записей в обновлении Pectra."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "EIP-7702",
-      "two": "EIP-7702",
-      "few": "EIP-7702",
-      "many": "EIP-7702",
-      "other": "EIP-7702"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Acronyms/Identifiers are kept in Latin script and do not inflect in Russian. Gender is neuter matching the implied 'предложение' (proposal)."
-  },
   "allowance": {
     "term": "разрешение",
     "aliases": [
@@ -10668,51 +10619,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Transliteration of the product name Teku."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [
-      "Proto-Danksharding"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "Обновление EIP-4844 вводит новый тип транзакций с большими двоичными объектами данных."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip-4844"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13796,49 +13702,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "Стандарт ERC-4626 предоставляет унифицированный интерфейс для токенизированных хранилищ, приносящих доход."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "erc-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC4626"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Standard name, kept in Latin script as per instructions."
-  },
   "reentrancy": {
     "term": "повторный вход",
     "aliases": [
@@ -15437,55 +15300,6 @@
     "confidence": "high",
     "notes": "Proper noun representing a protocol upgrade."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "Стандарт ERC-777 предоставляет расширенные возможности по сравнению с ERC-20."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC-777"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": "ERC-777",
-      "few": "ERC-777",
-      "many": "ERC-777",
-      "other": "ERC-777"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per Ethereum technical standards naming conventions."
-  },
   "pending transaction": {
     "term": "ожидающая транзакция",
     "aliases": [
@@ -16322,55 +16136,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "Стандарт ERC-223 предотвращает случайную потерю токенов при переводе на контракты, не поддерживающие их прием."
-      },
-      "heading": {
-        "term": "Стандарт ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223 Токен"
-      },
-      "code": {
-        "term": "erc_223"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-223",
-      "two": "ERC-223",
-      "few": "ERC-223",
-      "many": "ERC-223",
-      "other": "ERC-223"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Acronym stays in Latin as per instructions."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [],
@@ -16474,55 +16239,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Used in the context of intent-based architectures."
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "Стандарт ERC-4337 позволяет использовать смарт-контракты в качестве основных учетных записей."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": "ERC-4337",
-      "few": "ERC-4337",
-      "many": "ERC-4337",
-      "other": "ERC-4337"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Acronyms and standard identifiers are typically not inflected in Russian."
   },
   "paymaster": {
     "term": "пеймейстер",
@@ -17356,58 +17072,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "ончейн",
-    "aliases": [
-      "внутрисетевой",
-      "на блокчейне"
-    ],
-    "transliteration": "onchejn",
-    "morphology": {
-      "noun": {
-        "singular": "ончейн"
-      },
-      "verb": null,
-      "adjective": "ончейновый",
-      "agent": null,
-      "negation": "оффчейн",
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ончейн",
-        "example": "Все эти транзакции рассчитываются ончейн, что гарантирует их неизменность."
-      },
-      "heading": {
-        "term": "Ончейн"
-      },
-      "tag": {
-        "term": "ончейн"
-      },
-      "ui": {
-        "term": "Ончейн"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "casual"
-    },
-    "plurals": {
-      "one": "ончейн",
-      "two": "ончейна",
-      "few": "ончейна",
-      "many": "ончейнов",
-      "other": "ончейна"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphen according to the specific rule. Commonly functions as an invariable adverb in Russian sentences."
   },
   "swarm": {
     "term": "рой",
@@ -18279,55 +17943,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Both 'эирдроп' and 'аирдроп' are widely used in the Russian-speaking crypto community."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "Стандарт ERC-1363 позволяет смарт-контракту исполнять код сразу после получения токенов."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": "ERC-1363",
-      "few": "ERC-1363",
-      "many": "ERC-1363",
-      "other": "ERC-1363"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as it is a specific technical identifier."
   },
   "usdc": {
     "term": "USDC",
@@ -19946,60 +19561,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Adjectives pluralize based on the noun they modify; provided forms reflect common genitive cases used with numbers."
-  },
-  "off-chain": {
-    "term": "оффчейн",
-    "aliases": [
-      "вне блокчейна",
-      "вне сети"
-    ],
-    "transliteration": "offcheyn",
-    "morphology": {
-      "noun": {
-        "singular": "оффчейн"
-      },
-      "verb": null,
-      "adjective": "оффчейн",
-      "agent": null,
-      "negation": "ончейн",
-      "compounds": {
-        "offchain-data": "оффчейн-данные"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "оффчейн",
-        "example": "Многие транзакции проводятся оффчейн для снижения комиссий и увеличения скорости."
-      },
-      "heading": {
-        "term": "Оффчейн"
-      },
-      "tag": {
-        "term": "оффчейн"
-      },
-      "ui": {
-        "term": "Оффчейн"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "casual"
-    },
-    "plurals": {
-      "one": "оффчейн",
-      "two": "оффчейн",
-      "few": "оффчейн",
-      "many": "оффчейн",
-      "other": "оффчейн"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions. Often used invariantly as an adverb or indeclinable adjective in Russian."
   },
   "da": {
     "term": "DA",
@@ -23976,60 +23537,6 @@
     "confidence": "high",
     "notes": "Direct transliteration 'онбординг' is standard industry jargon in Russian tech and crypto contexts."
   },
-  "peer-to-peer network": {
-    "term": "одноранговая сеть",
-    "aliases": [
-      "P2P-сеть",
-      "пиринговая сеть"
-    ],
-    "transliteration": "odnorangovaya set'",
-    "morphology": {
-      "noun": {
-        "singular": "одноранговая сеть"
-      },
-      "verb": null,
-      "adjective": "одноранговый",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "peer-to-peer network topology": "топология одноранговой сети"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "одноранговой сети",
-        "example": "Узлы в одноранговой сети обмениваются транзакциями напрямую друг с другом."
-      },
-      "heading": {
-        "term": "Одноранговая сеть"
-      },
-      "tag": {
-        "term": "P2P-сеть"
-      },
-      "ui": {
-        "term": "Одноранговая сеть"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "одноранговая сеть",
-      "two": "одноранговые сети",
-      "few": "одноранговые сети",
-      "many": "одноранговых сетей",
-      "other": "одноранговые сети"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "с разрешенным доступом",
     "aliases": [
@@ -25007,98 +24514,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Often left in Latin script as 'Web2', but 'Веб2' is the accepted translated format."
-  },
-  "off-chain governance": {
-    "term": "оффчейн-управление",
-    "aliases": [
-      "внецепочечное управление",
-      "управление вне сети"
-    ],
-    "transliteration": "offcheyn-upravlenie",
-    "morphology": {
-      "noun": {
-        "singular": "оффчейн-управление"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "оффчейн-управлении",
-        "example": "При оффчейн-управлении предварительное обсуждение обновлений происходит на форумах и в социальных сетях."
-      },
-      "heading": {
-        "term": "Оффчейн-управление"
-      },
-      "tag": {
-        "term": "оффчейн-управление"
-      },
-      "ui": {
-        "term": "Оффчейн-управление"
-      },
-      "code": {
-        "term": "offchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "According to Russian orthography, foreign prefixes forming compound nouns use a hyphen, thus 'оффчейн-управление', treating 'offchain' as a unified uninflected modifier."
-  },
-  "on-chain governance": {
-    "term": "ончейн-управление",
-    "aliases": [
-      "внутрицепочечное управление",
-      "управление в сети"
-    ],
-    "transliteration": "oncheyn-upravlenie",
-    "morphology": {
-      "noun": {
-        "singular": "ончейн-управление"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ончейн-управлением",
-        "example": "DAO автоматизирует принятие решений с помощью смарт-контрактов с ончейн-управлением."
-      },
-      "heading": {
-        "term": "Ончейн-управление"
-      },
-      "tag": {
-        "term": "ончейн-управление"
-      },
-      "ui": {
-        "term": "Ончейн-управление"
-      },
-      "code": {
-        "term": "onchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Hyphenated due to Russian rules for compound nouns with uninflected foreign first parts."
   },
   "sandwich attack": {
     "term": "сэндвич-атака",

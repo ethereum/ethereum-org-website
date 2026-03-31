@@ -8828,49 +8828,6 @@
     "confidence": "medium",
     "notes": "Translated literally as simpul boot. Kept 'boot' due to its technical significance in networking."
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "Pembaruan Pectra menyertakan EIP-7702 untuk meningkatkan fleksibilitas abstraksi akun."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "Detail EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "allowance": {
     "term": "jatah",
     "aliases": [
@@ -9274,51 +9231,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Product name, untranslated"
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [
-      "Proto-Danksharding"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "Pembaruan EIP-4844 bertujuan untuk menurunkan biaya transaksi di jaringan rollup lapisan 2."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip_4844"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -12009,49 +11921,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "Standar ERC-4626 menyederhanakan integrasi brankas penghasil imbal hasil dalam aplikasi terdesentralisasi."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC4626"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "reentrancy": {
     "term": "reentransi",
     "aliases": [
@@ -13445,49 +13314,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "ERC-777 adalah standar token lanjutan yang memungkinkan interaksi kontrak pintar yang lebih kompleks."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as it is a technical identifier."
-  },
   "pending transaction": {
     "term": "transaksi tertunda",
     "aliases": [
@@ -14210,49 +14036,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "Standar ERC-223 diusulkan untuk mencegah hilangnya token saat dikirim ke kontrak yang tidak mendukungnya."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "erc-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -14343,49 +14126,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Translated as 'intensi' to capture the specific technical nuance of intent-based architectures."
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "ERC-4337 memperkenalkan abstraksi akun tanpa mengubah protokol inti Ethereum."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "paymaster": {
     "term": "juru bayar",
@@ -15108,51 +14848,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "onchain",
-    "aliases": [
-      "dalam rantai"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "onchain"
-      },
-      "verb": null,
-      "adjective": "onchain",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "onchain",
-        "example": "Aset digital tersebut sepenuhnya diatur oleh kontrak pintar onchain."
-      },
-      "heading": {
-        "term": "Onchain"
-      },
-      "tag": {
-        "term": "onchain"
-      },
-      "ui": {
-        "term": "Onchain"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per specific terminology rules."
   },
   "swarm": {
     "term": "Swarm",
@@ -15910,49 +15605,6 @@
       "gender": null,
       "animacy": "inanimate",
       "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "Token ini mengimplementasikan standar ERC-1363 agar dapat digunakan untuk pembayaran langsung."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
       "formality": "neutral"
     },
     "plurals": null,
@@ -17360,49 +17012,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain": {
-    "term": "luar rantai",
-    "aliases": [
-      "offchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "luar rantai",
-      "agent": null,
-      "negation": "dalam rantai",
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "luar rantai",
-        "example": "Banyak solusi penskalaan memproses transaksi secara offchain untuk menghemat biaya gas."
-      },
-      "heading": {
-        "term": "Luar Rantai"
-      },
-      "tag": {
-        "term": "luar-rantai"
-      },
-      "ui": {
-        "term": "Luar Rantai"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Both 'luar rantai' and the loanword 'offchain' (without hyphen) are heavily used in Indonesian."
   },
   "da": {
     "term": "DA",
@@ -20883,52 +20492,6 @@
     "confidence": "high",
     "notes": "Often used interchangeably with the English loanword 'onboarding' in IT contexts."
   },
-  "peer-to-peer network": {
-    "term": "jaringan peer-to-peer",
-    "aliases": [
-      "jaringan rekan-ke-rekan",
-      "jaringan ujung ke ujung"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "jaringan peer-to-peer"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "jaringan peer-to-peer",
-        "example": "Ethereum beroperasi pada jaringan peer-to-peer yang terdesentralisasi."
-      },
-      "heading": {
-        "term": "Jaringan Peer-to-Peer"
-      },
-      "tag": {
-        "term": "jaringan peer-to-peer"
-      },
-      "ui": {
-        "term": "Jaringan Peer-to-Peer"
-      },
-      "code": {
-        "term": "jaringan_p2p"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "'Peer-to-peer' is heavily retained in Indonesian technical literature."
-  },
   "permissioned": {
     "term": "berizin",
     "aliases": [
@@ -21783,96 +21346,6 @@
       "animacy": "inanimate",
       "part_of_speech": "proper_noun",
       "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "off-chain governance": {
-    "term": "tata kelola luar rantai",
-    "aliases": [
-      "tata kelola offchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "tata kelola luar rantai"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "tata kelola luar rantai",
-        "example": "Diskusi di forum komunitas merupakan bagian dari tata kelola luar rantai."
-      },
-      "heading": {
-        "term": "Tata Kelola Luar Rantai"
-      },
-      "tag": {
-        "term": "tata-kelola-luar-rantai"
-      },
-      "ui": {
-        "term": "Tata Kelola Luar Rantai"
-      },
-      "code": {
-        "term": "offchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "on-chain governance": {
-    "term": "tata kelola dalam rantai",
-    "aliases": [
-      "tata kelola onchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "tata kelola dalam rantai"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "tata kelola dalam rantai",
-        "example": "Mekanisme pemungutan suara menggunakan token kripto adalah contoh tata kelola dalam rantai."
-      },
-      "heading": {
-        "term": "Tata Kelola Dalam Rantai"
-      },
-      "tag": {
-        "term": "tata-kelola-dalam-rantai"
-      },
-      "ui": {
-        "term": "Tata Kelola Dalam Rantai"
-      },
-      "code": {
-        "term": "onchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
     },
     "plurals": null,
     "source": "llm",

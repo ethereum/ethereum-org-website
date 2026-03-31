@@ -9953,55 +9953,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "Návrh EIP-7702 přináší abstrakci účtů v rámci síťového upgradu Pectra."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP-7702"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "EIP-7702",
-      "two": "EIP-7702",
-      "few": "EIP-7702",
-      "many": "EIP-7702",
-      "other": "EIP-7702"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Acronyms/Identifiers generally remain uninflected and take neuter agreement in prose when standing alone, or agree with the implicit noun 'návrh' (masculine)."
-  },
   "allowance": {
     "term": "povolený limit",
     "aliases": [
@@ -10463,57 +10414,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Treated as an indeclinable neuter noun in Czech."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [
-      "Proto-Danksharding"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "Aktualizace sítě úspěšně zavedla návrh EIP-4844 pro snížení transakčních poplatků."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844 Specifikace"
-      },
-      "code": {
-        "term": "eip_4844"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "EIP-4844",
-      "two": "EIP-4844",
-      "few": "EIP-4844",
-      "many": "EIP-4844",
-      "other": "EIP-4844"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Acronyms/numbers are generally indeclinable and treated as invariant neuter or masculine."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13572,55 +13472,6 @@
     "confidence": "high",
     "notes": "As a verbal noun (gerund), 'vypůjčování' does not generally change form in the plural. For countable loans, 'výpůjčky' is used."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "Standard ERC-4626 sjednocuje rozhraní pro výnosové trezory."
-      },
-      "heading": {
-        "term": "Standard ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "Kompatibilní s ERC-4626"
-      },
-      "code": {
-        "term": "erc4626"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4626",
-      "two": "ERC-4626",
-      "few": "ERC-4626",
-      "many": "ERC-4626",
-      "other": "ERC-4626"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "reentrancy": {
     "term": "reentrance",
     "aliases": [
@@ -15220,55 +15071,6 @@
     "confidence": "high",
     "notes": "Název protokolu se běžně v českých textech skloňuje podle jména města (bez Berlína, k Berlínu)."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "Tento token používá pokročilý standard ERC-777."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "erc777"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": "ERC-777",
-      "few": "ERC-777",
-      "many": "ERC-777",
-      "other": "ERC-777"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "pending transaction": {
     "term": "čekající transakce",
     "aliases": [
@@ -16098,55 +15900,6 @@
     "confidence": "high",
     "notes": "Similar to 'pověření', the noun 'ověření' remains morphologically invariant in nominative plural forms."
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "Standard ERC-223 řeší problém ztracených tokenů při převodech do nepodporujících kontraktů."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "Standard ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-223",
-      "two": "ERC-223",
-      "few": "ERC-223",
-      "many": "ERC-223",
-      "other": "ERC-223"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier strictly kept in Latin as instructed."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -16244,55 +15997,6 @@
       "few": "záměry",
       "many": "záměrů",
       "other": "záměry"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "Standard ERC-4337 umožňuje abstrakci účtů bez změny konsensu."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": "ERC-4337",
-      "few": "ERC-4337",
-      "many": "ERC-4337",
-      "other": "ERC-4337"
     },
     "source": "llm",
     "confidence": "high",
@@ -17115,56 +16819,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Typically remains a half-loanword 'gossip protokol', literal 'protokol drbů' is rare in practice."
-  },
-  "on-chain": {
-    "term": "onchain",
-    "aliases": [
-      "v blockchainu",
-      "na síti"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "onchainový",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "onchain",
-        "example": "Všechna transakční data jsou uložena onchain a nelze je změnit."
-      },
-      "heading": {
-        "term": "Onchain"
-      },
-      "tag": {
-        "term": "Onchain"
-      },
-      "ui": {
-        "term": "Zobrazit onchain data"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "onchain",
-      "two": "onchain",
-      "few": "onchain",
-      "many": "onchain",
-      "other": "onchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Used typically as an undeclined adjective or adverb in Czech."
   },
   "swarm": {
     "term": "Swarm",
@@ -18026,55 +17680,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Anglický termín je plně integrován do české krypto terminologie a skloňuje se podle vzoru hrad."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "Standard ERC-1363 umožňuje smart kontraktům reagovat bezprostředně po obdržení tokenů."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": "ERC-1363",
-      "few": "ERC-1363",
-      "many": "ERC-1363",
-      "other": "ERC-1363"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "usdc": {
     "term": "USDC",
@@ -19671,55 +19276,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Tvar přídavného jména se skloňuje podle rodů a čísel nadřazeného jména (odolný/odolná/odolné)."
-  },
-  "off-chain": {
-    "term": "offchain",
-    "aliases": [
-      "mimo řetězec"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "offchainový",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "offchain",
-        "example": "Výpočty probíhají offchain, aby se minimalizovaly poplatky za transakce."
-      },
-      "heading": {
-        "term": "Offchain"
-      },
-      "tag": {
-        "term": "offchain"
-      },
-      "ui": {
-        "term": "Offchain"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": "null",
-      "animacy": "null",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "offchain",
-      "two": "offchain",
-      "few": "offchain",
-      "many": "offchain",
-      "other": "offchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Podle pravidel je tvar napsán bez spojovníku."
   },
   "da": {
     "term": "DA",
@@ -23685,58 +23241,6 @@
     "confidence": "high",
     "notes": "The English term 'onboarding' is fully integrated into Czech IT and corporate jargon."
   },
-  "peer-to-peer network": {
-    "term": "peer-to-peer síť",
-    "aliases": [
-      "P2P síť",
-      "rovnocenná síť"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "síť"
-      },
-      "verb": null,
-      "adjective": "peer-to-peer",
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "peer-to-peer síť",
-        "example": "Ethereum funguje jako plně decentralizovaná peer-to-peer síť."
-      },
-      "heading": {
-        "term": "Peer-to-peer síť"
-      },
-      "tag": {
-        "term": "p2p-síť"
-      },
-      "ui": {
-        "term": "P2P Síť"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": null,
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "peer-to-peer síť",
-      "two": "peer-to-peer sítě",
-      "few": "peer-to-peer sítě",
-      "many": "peer-to-peer sítí",
-      "other": "peer-to-peer sítě"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "s řízeným přístupem",
     "aliases": [
@@ -24706,110 +24210,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Generally treated as an indeclinable proper noun in Czech."
-  },
-  "off-chain governance": {
-    "term": "offchain správa",
-    "aliases": [
-      "řízení mimo řetězec",
-      "offchainové řízení"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "offchain správa"
-      },
-      "verb": null,
-      "adjective": "offchainový",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "offchain správu",
-        "example": "Mnoho projektů využívá pro svá rozhodnutí offchain správu prostřednictvím fór a signálového hlasování."
-      },
-      "heading": {
-        "term": "Offchain správa"
-      },
-      "tag": {
-        "term": "Offchain správa"
-      },
-      "ui": {
-        "term": "Offchain správa"
-      },
-      "code": {
-        "term": "offchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "offchain správa",
-      "two": "offchain správy",
-      "few": "offchain správy",
-      "many": "offchain správ",
-      "other": "offchain správám"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions."
-  },
-  "on-chain governance": {
-    "term": "onchain správa",
-    "aliases": [
-      "řízení na řetězci",
-      "onchainové řízení"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "onchain správa"
-      },
-      "verb": null,
-      "adjective": "onchainový",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "onchain správě",
-        "example": "Při onchain správě jsou pravidla hlasování zapsána přímo do smart kontraktů."
-      },
-      "heading": {
-        "term": "Onchain správa"
-      },
-      "tag": {
-        "term": "Onchain správa"
-      },
-      "ui": {
-        "term": "Onchain správa"
-      },
-      "code": {
-        "term": "onchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "onchain správa",
-      "two": "onchain správy",
-      "few": "onchain správy",
-      "many": "onchain správ",
-      "other": "onchain správám"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions."
   },
   "sandwich attack": {
     "term": "sendvičový útok",

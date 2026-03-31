@@ -9821,49 +9821,6 @@
     "confidence": "high",
     "notes": "Technical term directly transliterated as meaning is strictly tied to Ethereum networking."
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "EIP-7702 हे अकाउंट ॲब्स्ट्रॅक्शनसाठी एक महत्त्वाचे अपग्रेड आहे."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP-7702"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier, preserved in Latin script per rule."
-  },
   "allowance": {
     "term": "मंजुरी",
     "aliases": [
@@ -10298,49 +10255,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Transliterated as a product name."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "लेयर २ रोलअप्ससाठी गॅस फी कमी करण्यासाठी EIP-4844 अद्यतन लागू केले जाईल."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip4844"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Protocol/upgrade name kept in Latin."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13381,57 +13295,6 @@
     "confidence": "high",
     "notes": "Used as a verbal noun in the context of DeFi."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [
-      "ईआरसी-4626"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "टोकनाइज्ड व्हॉल्ट्ससाठी ERC-4626 हे एक मानक आहे."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC-4626"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4626",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4626"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per instructions."
-  },
   "reentrancy": {
     "term": "पुनर्प्रवेश",
     "aliases": [
@@ -14996,49 +14859,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "ERC-777 हा स्मार्ट कॉन्ट्रॅक्ट्ससाठी एक प्रगत टोकन स्टँडर्ड आहे."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC-777"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "pending transaction": {
     "term": "प्रलंबित व्यवहार",
     "aliases": [],
@@ -15846,57 +15666,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc223-token": "ERC-223 टोकन"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "हा स्मार्ट कॉन्ट्रॅक्ट ERC-223 मानकांचे पालन करतो."
-      },
-      "heading": {
-        "term": "ERC-223 मानक"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-223",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-223"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per rules."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [],
@@ -15996,57 +15765,6 @@
       "few": null,
       "many": null,
       "other": "उद्देश"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc-4337-standard": "ERC-4337 मानक"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "ERC-4337 हे इथेरियमवर खाते अमूर्तीकरण (account abstraction) सक्षम करते."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4337"
     },
     "source": "llm",
     "confidence": "high",
@@ -16877,55 +16595,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "ऑनचेन",
-    "aliases": [
-      "चेनवर"
-    ],
-    "transliteration": "ôncen",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "ऑनचेन",
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ऑनचेन",
-        "example": "ब्लॉकचेनवरील सर्व व्यवहारांची नोंद ऑनचेन ठेवली जाते."
-      },
-      "heading": {
-        "term": "ऑनचेन"
-      },
-      "tag": {
-        "term": "ऑनचेन"
-      },
-      "ui": {
-        "term": "ऑनचेन डेटा"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ऑनचेन",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ऑनचेन"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions."
   },
   "swarm": {
     "term": "स्वॉर्म",
@@ -17792,49 +17461,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": "ERC-1363",
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "हे टोकन ERC-1363 मानकावर आधारित आहे."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC-1363"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier, kept in Latin script."
   },
   "usdc": {
     "term": "USDC",
@@ -19407,53 +19033,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Adjectives typically do not vary by plural in this composite form."
-  },
-  "off-chain": {
-    "term": "ऑफचेन",
-    "aliases": [
-      "ब्लॉकचेन बाहेरील"
-    ],
-    "transliteration": "ôphacēna",
-    "morphology": {
-      "noun": {
-        "singular": "ऑफचेन"
-      },
-      "verb": null,
-      "adjective": "ऑफचेन",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "offchain-transaction": "ऑफचेन व्यवहार"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ऑफचेन",
-        "example": "नेटवर्कवरील गर्दी कमी करण्यासाठी काही व्यवहार ऑफचेन केले जातात."
-      },
-      "heading": {
-        "term": "ऑफचेन"
-      },
-      "tag": {
-        "term": "ऑफचेन"
-      },
-      "ui": {
-        "term": "ऑफचेन"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions."
   },
   "da": {
     "term": "DA",
@@ -23297,57 +22876,6 @@
     "confidence": "high",
     "notes": "Heavily used as a transliterated term in the Marathi IT sector."
   },
-  "peer-to-peer network": {
-    "term": "पीअर-टू-पीअर नेटवर्क",
-    "aliases": [
-      "समवयस्क जाळे"
-    ],
-    "transliteration": "pîara-ṭû-pîara neṭavarka",
-    "morphology": {
-      "noun": {
-        "singular": "पीअर-टू-पीअर नेटवर्क"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "पीअर-टू-पीअर नेटवर्क",
-        "example": "इथेरियम हे एक विकेंद्रित पीअर-टू-पीअर नेटवर्क आहे, जेथे मध्यस्थाची आवश्यकता नसते."
-      },
-      "heading": {
-        "term": "पीअर-टू-पीअर नेटवर्क"
-      },
-      "tag": {
-        "term": "P2P नेटवर्क"
-      },
-      "ui": {
-        "term": "पीअर-टू-पीअर नेटवर्क"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "पीअर-टू-पीअर नेटवर्क",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "पीअर-टू-पीअर नेटवर्क्स"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "परवानगीयुक्त",
     "aliases": [
@@ -24303,108 +23831,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Often written with Devanagari digit २ or Latin 2 interchangeably in Marathi."
-  },
-  "off-chain governance": {
-    "term": "ऑफचेन प्रशासन",
-    "aliases": [
-      "ऑफचेन गव्हर्नन्स"
-    ],
-    "transliteration": "ŏphcen praśāsan",
-    "morphology": {
-      "noun": {
-        "singular": "ऑफचेन प्रशासन"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ऑफचेन प्रशासन",
-        "example": "ऑफचेन प्रशासन प्रामुख्याने समुदाय मंचांवर आणि चर्चांमध्ये चालते."
-      },
-      "heading": {
-        "term": "ऑफचेन प्रशासन"
-      },
-      "tag": {
-        "term": "ऑफचेन प्रशासन"
-      },
-      "ui": {
-        "term": "ऑफचेन प्रशासन"
-      },
-      "code": {
-        "term": "offchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ऑफचेन प्रशासन",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ऑफचेन प्रशासने"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphen per offchain styling rule."
-  },
-  "on-chain governance": {
-    "term": "ऑनचेन प्रशासन",
-    "aliases": [
-      "ऑनचेन गव्हर्नन्स"
-    ],
-    "transliteration": "ŏncen praśāsan",
-    "morphology": {
-      "noun": {
-        "singular": "ऑनचेन प्रशासन"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ऑनचेन प्रशासन",
-        "example": "ऑनचेन प्रशासन थेट स्मार्ट कॉन्ट्रॅक्टद्वारे लागू केले जाते."
-      },
-      "heading": {
-        "term": "ऑनचेन प्रशासन"
-      },
-      "tag": {
-        "term": "ऑनचेन प्रशासन"
-      },
-      "ui": {
-        "term": "ऑनचेन प्रशासन"
-      },
-      "code": {
-        "term": "onchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ऑनचेन प्रशासन",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ऑनचेन प्रशासने"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphen per onchain styling rule."
   },
   "sandwich attack": {
     "term": "सँडविच हल्ला",

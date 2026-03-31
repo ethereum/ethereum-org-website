@@ -10035,55 +10035,6 @@
     "confidence": "high",
     "notes": "Often referred to informally as 'бутнода' (feminine)."
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "Оновлення Pectra включає EIP-7702, що значно покращує абстракцію облікових записів."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "eip-7702"
-      },
-      "ui": {
-        "term": "Деталі EIP-7702"
-      },
-      "code": {
-        "term": "EIP-7702"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "EIP-7702",
-      "two": "EIP-7702",
-      "few": "EIP-7702",
-      "many": "EIP-7702",
-      "other": "EIP-7702"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Latin script strictly kept as per EIP identifier conventions."
-  },
   "allowance": {
     "term": "дозвіл",
     "aliases": [
@@ -10538,49 +10489,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Script rule transliterate applied. Treated as an indeclinable neuter noun."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "Оновлення мережі включає EIP-4844 для впровадження прото-данкшардингу."
-      },
-      "heading": {
-        "term": "Пропозиція EIP-4844"
-      },
-      "tag": {
-        "term": "eip-4844"
-      },
-      "ui": {
-        "term": "Деталі EIP-4844"
-      },
-      "code": {
-        "term": "eip-4844"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Script rule keep_latin applied."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13586,55 +13494,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "Стандарт ERC-4626 оптимізує інтеграцію сховищ токенів."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "erc_4626"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4626",
-      "two": "ERC-4626",
-      "few": "ERC-4626",
-      "many": "ERC-4626",
-      "other": "ERC-4626"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin as per script rules."
-  },
   "reentrancy": {
     "term": "повторний вхід",
     "aliases": [
@@ -15192,51 +15051,6 @@
     "confidence": "high",
     "notes": "Protocol upgrade code name. Transliterated as a proper geographical noun."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc_777_standard": "стандарт ERC-777"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "Стандарт ERC-777 дозволяє створювати токени зі складною логікою завдяки використанню хуків."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "Токен ERC-777"
-      },
-      "code": {
-        "term": "erc777"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per script rules. Gender is masculine, inheriting from 'стандарт' (standard)."
-  },
   "pending transaction": {
     "term": "транзакція в очікуванні",
     "aliases": [
@@ -16049,55 +15863,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "Стандарт ERC-223 був запропонований для вирішення проблеми випадкової втрати токенів при переказах на несумісні контракти."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-223",
-      "two": "ERC-223",
-      "few": "ERC-223",
-      "many": "ERC-223",
-      "other": "ERC-223"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -16199,49 +15964,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "У вузькотехнічному контексті розробники іноді використовують транслітерацію 'інтент'."
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "Стандарт ERC-4337 впроваджує абстракцію облікових записів без змін на рівні консенсусу."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per standardization of Ethereum proposals."
   },
   "paymaster": {
     "term": "пеймайстер",
@@ -17032,56 +16754,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "ончейн",
-    "aliases": [
-      "внутрішньомережевий",
-      "на блокчейні"
-    ],
-    "transliteration": "onchein",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "ончейн",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ончейн",
-        "example": "Ця транзакція виконується ончейн, тому потребує сплати комісії."
-      },
-      "heading": {
-        "term": "Ончейн"
-      },
-      "tag": {
-        "term": "ончейн"
-      },
-      "ui": {
-        "term": "Ончейн"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ончейн",
-      "two": "ончейн",
-      "few": "ончейн",
-      "many": "ончейн",
-      "other": "ончейн"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written as a single word 'ончейн' without a hyphen per standard crypto localization guidelines."
   },
   "swarm": {
     "term": "Рій",
@@ -17951,55 +17623,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Phonetic adaptation is standard in the UA crypto community."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "Стандарт ERC-1363 дозволяє виконувати код одразу після переказу токенів."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "erc-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": "ERC-1363",
-      "few": "ERC-1363",
-      "many": "ERC-1363",
-      "other": "ERC-1363"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier, kept in Latin script."
   },
   "usdc": {
     "term": "USDC",
@@ -19582,52 +19205,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain": {
-    "term": "офчейн",
-    "aliases": [
-      "позамережевий",
-      "позаланцюговий"
-    ],
-    "transliteration": "ofchein",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "офчейновий",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "offchain-data": "офчейн-дані"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "офчейн",
-        "example": "Значна частина транзакцій обробляється офчейн для зниження комісій."
-      },
-      "heading": {
-        "term": "Офчейн"
-      },
-      "tag": {
-        "term": "офчейн"
-      },
-      "ui": {
-        "term": "Офчейн"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "adverb",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Used consistently without hyphens per instructions. Acts mainly as an invariable adjective/adverb in Ukrainian."
   },
   "da": {
     "term": "DA",
@@ -23588,58 +23165,6 @@
     "confidence": "high",
     "notes": "Widely adopted loanword in Ukrainian IT and crypto sectors."
   },
-  "peer-to-peer network": {
-    "term": "однорангова мережа",
-    "aliases": [
-      "P2P-мережа",
-      "пірингова мережа"
-    ],
-    "transliteration": "odnoranhova merezha",
-    "morphology": {
-      "noun": {
-        "singular": "однорангова мережа"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "одноранговій мережі",
-        "example": "Блокчейн функціонує як децентралізована база даних у розподіленій одноранговій мережі."
-      },
-      "heading": {
-        "term": "Однорангова мережа"
-      },
-      "tag": {
-        "term": "P2P"
-      },
-      "ui": {
-        "term": "Однорангова мережа"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "однорангова мережа",
-      "two": "однорангові мережі",
-      "few": "однорангові мережі",
-      "many": "однорангових мереж",
-      "other": "однорангових мереж"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "з обмеженим доступом",
     "aliases": [
@@ -24608,108 +24133,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Used as an uninflected proper noun."
-  },
-  "off-chain governance": {
-    "term": "офчейн управління",
-    "aliases": [
-      "позаланцюгове управління"
-    ],
-    "transliteration": "ofchein upravlinnia",
-    "morphology": {
-      "noun": {
-        "singular": "офчейн управління"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "офчейн управління",
-        "example": "Офчейн управління відбувається на форумах та через обговорення спільноти, а не безпосередньо в смартконтрактах."
-      },
-      "heading": {
-        "term": "Офчейн управління"
-      },
-      "tag": {
-        "term": "Офчейн управління"
-      },
-      "ui": {
-        "term": "Офчейн управління"
-      },
-      "code": {
-        "term": "offchain-governance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "офчейн управління",
-      "two": "офчейн управління",
-      "few": "офчейн управління",
-      "many": "офчейн управлінь",
-      "other": "офчейн управлінням"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per the prompt rules."
-  },
-  "on-chain governance": {
-    "term": "ончейн управління",
-    "aliases": [
-      "внутрішньоланцюгове управління"
-    ],
-    "transliteration": "onchein upravlinnia",
-    "morphology": {
-      "noun": {
-        "singular": "ончейн управління"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ончейн управління",
-        "example": "Ончейн управління дозволяє автоматичне виконання прийнятих рішень безпосередньо в блокчейні."
-      },
-      "heading": {
-        "term": "Ончейн управління"
-      },
-      "tag": {
-        "term": "Ончейн управління"
-      },
-      "ui": {
-        "term": "Ончейн управління"
-      },
-      "code": {
-        "term": "onchain-governance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ончейн управління",
-      "two": "ончейн управління",
-      "few": "ончейн управління",
-      "many": "ончейн управлінь",
-      "other": "ончейн управлінням"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per the prompt rules."
   },
   "sandwich attack": {
     "term": "сендвіч-атака",

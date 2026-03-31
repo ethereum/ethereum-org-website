@@ -9684,49 +9684,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "పెక్ట్రా అప్‌గ్రేడ్‌లో EIP-7702 ద్వారా ఖాతా నైరూప్యత మెరుగుపరచబడింది."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Identifier kept in Latin script per script rules."
-  },
   "allowance": {
     "term": "అనుమతి మొత్తం",
     "aliases": [
@@ -10169,49 +10126,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Proper noun, no plural required."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "EIP-4844 నవీకరణ రోలప్‌ల కోసం డేటా ఫీజులను తగ్గిస్తుంది."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip_4844"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13177,49 +13091,6 @@
     "confidence": "high",
     "notes": "Used here as a gerund/verbal noun."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "యీల్డ్ బేరింగ్ వాల్ట్‌ల కోసం ERC-4626 ఒక ప్రామాణికం."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC4626"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Protocol standard, kept in Latin as per instructions."
-  },
   "reentrancy": {
     "term": "రీఎంట్రెన్సీ",
     "aliases": [
@@ -14776,49 +14647,6 @@
     "confidence": "high",
     "notes": "Transliterated into Telugu script as instructed."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "ERC-777 అనేది ఒక అధునాతన టోకెన్ ప్రమాణం."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC-777"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical standard identifier kept in Latin script per rules."
-  },
   "pending transaction": {
     "term": "పెండింగ్ లావాదేవీ",
     "aliases": [
@@ -15587,49 +15415,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "ERC-223 టోకెన్ స్టాండర్డ్ బదిలీ సమస్యలను పరిష్కరిస్తుంది."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Script rule applied to keep Latin."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [],
@@ -15725,57 +15510,6 @@
       "few": null,
       "many": null,
       "other": "ఉద్దేశ్యాలు"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc-4337-standard": "ERC-4337 ప్రామాణికం"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "ERC-4337 ఖాతా అబ్‌స్ట్రాక్షన్‌ను ప్రారంభిస్తుంది."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4337లు"
     },
     "source": "llm",
     "confidence": "high",
@@ -16596,57 +16330,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "ఆన్‌చెయిన్",
-    "aliases": [
-      "ఆన్-చెయిన్"
-    ],
-    "transliteration": "ānceyin",
-    "morphology": {
-      "noun": {
-        "singular": "ఆన్‌చెయిన్"
-      },
-      "verb": null,
-      "adjective": "ఆన్‌చెయిన్",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ఆన్‌చెయిన్",
-        "example": "స్మార్ట్ కాంట్రాక్ట్ ద్వారా ఈ లావాదేవీ మొత్తం ఆన్‌చెయిన్ లో నమోదు చేయబడింది."
-      },
-      "heading": {
-        "term": "ఆన్‌చెయిన్"
-      },
-      "tag": {
-        "term": "ఆన్‌చెయిన్"
-      },
-      "ui": {
-        "term": "ఆన్‌చెయిన్"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ఆన్‌చెయిన్",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ఆన్‌చెయిన్"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens in Telugu form per guidelines."
   },
   "swarm": {
     "term": "స్వార్మ్",
@@ -17505,55 +17188,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "చెల్లింపులను సులభతరం చేయడానికి ERC-1363 టోకెన్ ప్రమాణం ఉపయోగపడుతుంది."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-1363లు"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Payable token standard."
   },
   "usdc": {
     "term": "USDC",
@@ -19062,47 +18696,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain": {
-    "term": "ఆఫ్‌చెయిన్",
-    "aliases": [],
-    "transliteration": "āphceyin",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "ఆఫ్‌చెయిన్",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ఆఫ్‌చెయిన్",
-        "example": "నెట్‌వర్క్ స్కేలింగ్ పెంచడానికి ఆఫ్‌చెయిన్ లావాదేవీల ప్రాసెసింగ్ చాలా అవసరం."
-      },
-      "heading": {
-        "term": "ఆఫ్‌చెయిన్"
-      },
-      "tag": {
-        "term": "ఆఫ్‌చెయిన్"
-      },
-      "ui": {
-        "term": "ఆఫ్‌చెయిన్"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens as per the rule."
   },
   "da": {
     "term": "DA",
@@ -23062,59 +22655,6 @@
     "confidence": "high",
     "notes": "Kept as a transliterated term as it represents the UX flow of a crypto app, bypassing confusing HR terms like 'శిక్షణ'."
   },
-  "peer-to-peer network": {
-    "term": "పీర్-టు-పీర్ నెట్‌వర్క్",
-    "aliases": [
-      "వ్యక్తుల మధ్య నెట్‌వర్క్"
-    ],
-    "transliteration": "pīr-ṭu-pīr neṭvark",
-    "morphology": {
-      "noun": {
-        "singular": "పీర్-టు-పీర్ నెట్‌వర్క్"
-      },
-      "verb": null,
-      "adjective": "పీర్-టు-పీర్",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "peer-to-peer network node": "పీర్-టు-పీర్ నెట్‌వర్క్ నోడ్"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "పీర్-టు-పీర్ నెట్‌వర్క్‌లో",
-        "example": "బ్లాక్‌చెయిన్ అనేది కేంద్రీకృత సర్వర్ లేకుండా ఒక పీర్-టు-పీర్ నెట్‌వర్క్‌లో పనిచేస్తుంది."
-      },
-      "heading": {
-        "term": "పీర్-టు-పీర్ నెట్‌వర్క్"
-      },
-      "tag": {
-        "term": "P2P నెట్‌వర్క్"
-      },
-      "ui": {
-        "term": "పీర్-టు-పీర్ నెట్‌వర్క్"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "పీర్-టు-పీర్ నెట్‌వర్క్",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "పీర్-టు-పీర్ నెట్‌వర్క్‌లు"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Direct transliteration is predominantly used in Telugu computing and networking contexts."
-  },
   "permissioned": {
     "term": "అనుమతిగల",
     "aliases": [
@@ -24094,108 +23634,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain governance": {
-    "term": "ఆఫ్‌చైన్ పాలన",
-    "aliases": [
-      "చైన్-వెలుపలి పాలన"
-    ],
-    "transliteration": "āphcain pālana",
-    "morphology": {
-      "noun": {
-        "singular": "ఆఫ్‌చైన్ పాలన"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ఆఫ్‌చైన్ పాలన",
-        "example": "ఈ ప్రాజెక్ట్ నిర్ణయాల కోసం ఆఫ్‌చైన్ పాలనను ఉపయోగిస్తుంది."
-      },
-      "heading": {
-        "term": "ఆఫ్‌చైన్ పాలన"
-      },
-      "tag": {
-        "term": "ఆఫ్‌చైన్ పాలన"
-      },
-      "ui": {
-        "term": "ఆఫ్‌చైన్ పాలన"
-      },
-      "code": {
-        "term": "offchain-governance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ఆఫ్‌చైన్ పాలన",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ఆఫ్‌చైన్ పాలనలు"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens in 'offchain' per rules, combined with Telugu word for governance."
-  },
-  "on-chain governance": {
-    "term": "ఆన్‌చైన్ పాలన",
-    "aliases": [
-      "చైన్-లోపలి పాలన"
-    ],
-    "transliteration": "āncain pālana",
-    "morphology": {
-      "noun": {
-        "singular": "ఆన్‌చైన్ పాలన"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ఆన్‌చైన్ పాలన",
-        "example": "టోకెన్ హోల్డర్లు ఆన్‌చైన్ పాలన ద్వారా ఓటు వేస్తారు."
-      },
-      "heading": {
-        "term": "ఆన్‌చైన్ పాలన"
-      },
-      "tag": {
-        "term": "ఆన్‌చైన్ పాలన"
-      },
-      "ui": {
-        "term": "ఆన్‌చైన్ పాలన"
-      },
-      "code": {
-        "term": "onchain-governance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ఆన్‌చైన్ పాలన",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ఆన్‌చైన్ పాలనలు"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens in 'onchain' per rules."
   },
   "sandwich attack": {
     "term": "శాండ్‌విచ్ దాడి",

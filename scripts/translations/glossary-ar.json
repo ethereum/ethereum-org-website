@@ -10010,55 +10010,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "يقدم EIP-7702 تحسينات على تجريد الحسابات في الشبكة."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "1 EIP-7702",
-      "two": "2 EIP-7702",
-      "few": "3 EIP-7702",
-      "many": "11 EIP-7702",
-      "other": "100 EIP-7702"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as it is a specific technical identifier."
-  },
   "allowance": {
     "term": "سماحية",
     "aliases": [
@@ -10498,51 +10449,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Product name transliterated into Arabic script."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [
-      "Proto-Danksharding"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "سيؤدي تنفيذ مقترح EIP-4844 إلى تقليل رسوم المعاملات في شبكات الطبقة الثانية."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip-4844"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Protocol acronyms and numbers are kept in Latin script per convention."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13632,55 +13538,6 @@
     "confidence": "high",
     "notes": "Masdar (verbal noun) for borrow."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "معيار ERC-4626 يوحد واجهات الخزائن المدرة للعوائد."
-      },
-      "heading": {
-        "term": "معيار ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "erc_4626"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4626",
-      "two": "ERC-4626",
-      "few": "ERC-4626",
-      "many": "ERC-4626",
-      "other": "ERC-4626"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Standard name kept in Latin script with Western Arabic numerals per instructions."
-  },
   "reentrancy": {
     "term": "إعادة الدخول",
     "aliases": [
@@ -15228,55 +15085,6 @@
     "confidence": "high",
     "notes": "Cities are feminine in Arabic grammar."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "يعتبر ERC-777 معياراً متقدماً للرموز يوفر ميزات متطورة."
-      },
-      "heading": {
-        "term": "معيار ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "إرسال ERC-777"
-      },
-      "code": {
-        "term": "ERC777"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": "ERC-777",
-      "few": "ERC-777",
-      "many": "ERC-777",
-      "other": "ERC-777"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per script_rule."
-  },
   "pending transaction": {
     "term": "معاملة معلقة",
     "aliases": [
@@ -16060,49 +15868,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "يعالج معيار ERC-223 بعض المشكلات المرتبطة بتحويلات الرموز في المعايير السابقة."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per rules."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [],
@@ -16198,56 +15963,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "يتيح معيار ERC-4337 تجريد الحساب في شبكة إيثريوم."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "zero": "0 ERC-4337",
-      "one": "ERC-4337",
-      "two": "2 ERC-4337",
-      "few": "ERC-4337",
-      "many": "ERC-4337",
-      "other": "ERC-4337"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per script_rule. Usually treated as a proper noun and invariant in Arabic plurals."
   },
   "paymaster": {
     "term": "مدير الدفع",
@@ -17094,55 +16809,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "على السلسلة",
-    "aliases": [
-      "داخل السلسلة"
-    ],
-    "transliteration": "ala al-silsila",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "على السلسلة",
-      "agent": null,
-      "negation": "خارج السلسلة",
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "على السلسلة",
-        "example": "يتم تسجيل جميع المعاملات وتخزينها على السلسلة لضمان الشفافية."
-      },
-      "heading": {
-        "term": "على السلسلة"
-      },
-      "tag": {
-        "term": "على-السلسلة"
-      },
-      "ui": {
-        "term": "على السلسلة"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "على السلسلة",
-      "two": "على السلسلة",
-      "few": "على السلسلة",
-      "many": "على السلسلة",
-      "other": "على السلسلة"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Translated as a prepositional phrase functioning as an adjective/adverb."
   },
   "swarm": {
     "term": "سرب",
@@ -18039,55 +17705,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "يسمح معيار ERC-1363 بتنفيذ التعليمات البرمجية فور إتمام التحويل."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": "ERC-1363",
-      "few": "ERC-1363",
-      "many": "ERC-1363",
-      "other": "ERC-1363"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per instructions."
   },
   "usdc": {
     "term": "USDC",
@@ -19637,59 +19254,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Adjectives map their gender and number to the noun they modify. Provided plurals are masculine by default."
-  },
-  "off-chain": {
-    "term": "خارج السلسلة",
-    "aliases": [
-      "أوف تشين"
-    ],
-    "transliteration": "kharij al-silsila",
-    "morphology": {
-      "noun": {
-        "singular": "خارج السلسلة"
-      },
-      "verb": null,
-      "adjective": "خارج السلسلة",
-      "agent": null,
-      "negation": "على السلسلة",
-      "compounds": {
-        "offchain-data": "بيانات خارج السلسلة"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "خارج السلسلة",
-        "example": "تتم معالجة بعض المعاملات خارج السلسلة لتقليل الرسوم وزيادة سرعة التنفيذ."
-      },
-      "heading": {
-        "term": "خارج السلسلة"
-      },
-      "tag": {
-        "term": "خارج-السلسلة"
-      },
-      "ui": {
-        "term": "خارج السلسلة"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": "neutral",
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "خارج السلسلة",
-      "two": "خارج السلسلة",
-      "few": "خارج السلسلة",
-      "many": "خارج السلسلة",
-      "other": "خارج السلسلة"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Functions grammatically as a prepositional phrase, therefore invariable for plurals."
   },
   "da": {
     "term": "DA",
@@ -23650,57 +23214,6 @@
     "confidence": "high",
     "notes": "Used broadly in IT/crypto for initializing user experiences."
   },
-  "peer-to-peer network": {
-    "term": "شبكة الند للند",
-    "aliases": [
-      "شبكة نظير لنظير"
-    ],
-    "transliteration": "shabakat an-nidd lin-nidd",
-    "morphology": {
-      "noun": {
-        "singular": "شبكة الند للند"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "شبكة الند للند",
-        "example": "تعمل تقنية البلوكتشين على شبكة الند للند دون الحاجة إلى خادم مركزي."
-      },
-      "heading": {
-        "term": "شبكة الند للند"
-      },
-      "tag": {
-        "term": "شبكة الند للند"
-      },
-      "ui": {
-        "term": "شبكة الند للند"
-      },
-      "code": {
-        "term": "p2p_network"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "شبكة الند للند",
-      "two": "شبكتا الند للند",
-      "few": "شبكات الند للند",
-      "many": "شبكة الند للند",
-      "other": "شبكة الند للند"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "مصرح به",
     "aliases": [
@@ -24679,110 +24192,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Proper noun, remains invariable in plurals. Western Arabic numeral '2' is preferred in tech contexts."
-  },
-  "off-chain governance": {
-    "term": "حوكمة خارج السلسلة",
-    "aliases": [
-      "إدارة خارج السلسلة"
-    ],
-    "transliteration": "hawkama kharij al-silsila",
-    "morphology": {
-      "noun": {
-        "singular": "حوكمة خارج السلسلة"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "الحوكمة خارج السلسلة",
-        "example": "تستخدم إيثيريوم الحوكمة خارج السلسلة لمناقشة مقترحات التحسين قبل تنفيذها."
-      },
-      "heading": {
-        "term": "حوكمة خارج السلسلة"
-      },
-      "tag": {
-        "term": "حوكمة خارج السلسلة"
-      },
-      "ui": {
-        "term": "حوكمة خارج السلسلة"
-      },
-      "code": {
-        "term": "offchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "zero": "صفر حوكمة خارج السلسلة",
-      "one": "حوكمة خارج السلسلة",
-      "two": "حوكمتان خارج السلسلة",
-      "few": "حوكمات خارج السلسلة",
-      "many": "حوكمات خارج السلسلة",
-      "other": "حوكمة خارج السلسلة"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Refers to decision-making processes that occur away from the blockchain consensus layer."
-  },
-  "on-chain governance": {
-    "term": "حوكمة على السلسلة",
-    "aliases": [
-      "إدارة على السلسلة"
-    ],
-    "transliteration": "hawkama 'ala al-silsila",
-    "morphology": {
-      "noun": {
-        "singular": "حوكمة على السلسلة"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "الحوكمة على السلسلة",
-        "example": "تتيح الحوكمة على السلسلة تنفيذ التغييرات على البروتوكول تلقائياً بناءً على تصويت الرموز المميزة."
-      },
-      "heading": {
-        "term": "حوكمة على السلسلة"
-      },
-      "tag": {
-        "term": "حوكمة على السلسلة"
-      },
-      "ui": {
-        "term": "حوكمة على السلسلة"
-      },
-      "code": {
-        "term": "onchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "zero": "صفر حوكمة على السلسلة",
-      "one": "حوكمة على السلسلة",
-      "two": "حوكمتان على السلسلة",
-      "few": "حوكمات على السلسلة",
-      "many": "حوكمات على السلسلة",
-      "other": "حوكمة على السلسلة"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Refers to governance rules encoded directly into the blockchain protocol."
   },
   "sandwich attack": {
     "term": "هجوم الشطيرة",

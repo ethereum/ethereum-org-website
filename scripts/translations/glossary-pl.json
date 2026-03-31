@@ -9986,55 +9986,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "Propozycja EIP-7702 wprowadza nowy typ transakcji w nadchodzącej aktualizacji sieci."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "eip-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "EIP-7702",
-      "two": "EIP-7702",
-      "few": "EIP-7702",
-      "many": "EIP-7702",
-      "other": "EIP-7702"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Standard identifier, indeclinable."
-  },
   "allowance": {
     "term": "limit wydatków",
     "aliases": [
@@ -10474,51 +10425,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Product name. Left untranslated."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [
-      "Proto-Danksharding"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "Implementacja EIP-4844 znacząco zmniejszyła koszty transakcji na warstwie drugiej."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip-4844"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13584,55 +13490,6 @@
     "confidence": "high",
     "notes": "Used as a verbal noun (gerund) in Polish."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "Standard ERC-4626 ułatwia deweloperom integrację skarbców generujących zysk."
-      },
-      "heading": {
-        "term": "Standard ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC4626"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4626",
-      "two": null,
-      "few": "ERC-4626",
-      "many": "ERC-4626",
-      "other": "ERC-4626"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Indeclinable proper noun identifier."
-  },
   "reentrancy": {
     "term": "reentrancja",
     "aliases": [
@@ -15210,55 +15067,6 @@
     "confidence": "high",
     "notes": "Often used in apposition ('aktualizacja Berlin') avoiding declension in natural technical Polish."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "Standard ERC-777 wprowadza zaawansowane funkcje dla tokenów, takie jak haki (hooks)."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC-777"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": "ERC-777",
-      "few": "ERC-777",
-      "many": "ERC-777",
-      "other": "ERC-777"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier, usually indeclinable in Polish."
-  },
   "pending transaction": {
     "term": "oczekująca transakcja",
     "aliases": [
@@ -16075,55 +15883,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "Standard ERC-223 rozwiązuje niektóre krytyczne problemy związane z gubieniem tokenów przy przelewach ERC-20."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-223",
-      "two": "ERC-223",
-      "few": "ERC-223",
-      "many": "ERC-223",
-      "other": "ERC-223"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Invariable acronym standard indicator."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -16225,55 +15984,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "Standard ERC-4337 wprowadza abstrakcję konta w Ethereum bez konieczności zmiany protokołu warstwy bazowej."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": "ERC-4337",
-      "few": "ERC-4337",
-      "many": "ERC-4337",
-      "other": "ERC-4337"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Acronyms are generally undeclinable in standard written Polish."
   },
   "paymaster": {
     "term": "paymaster",
@@ -17101,57 +16811,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "onchain",
-    "aliases": [
-      "on-chain",
-      "w łańcuchu",
-      "onchainowy"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "onchainowy",
-      "agent": null,
-      "negation": "offchain",
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "onchain",
-        "example": "Wszystkie dane dotyczące tego inteligentnego kontraktu są przechowywane onchain."
-      },
-      "heading": {
-        "term": "Onchain"
-      },
-      "tag": {
-        "term": "onchain"
-      },
-      "ui": {
-        "term": "Dane Onchain"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "adjective",
-      "formality": "casual"
-    },
-    "plurals": {
-      "one": "onchain",
-      "two": "onchain",
-      "few": "onchain",
-      "many": "onchain",
-      "other": "onchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Commonly used as an uninflected loanword functioning as an adverb or adjective. Kept without hyphen per instructions."
   },
   "swarm": {
     "term": "Swarm",
@@ -18021,55 +17680,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Widely adopted loanword in the Polish crypto community; declension follows standard inanimate masculine patterns."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "Standard ERC-1363 rozszerza ERC-20, dodając możliwość powiadamiania o przelewach."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "erc-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "erc1363"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": "ERC-1363",
-      "few": "ERC-1363",
-      "many": "ERC-1363",
-      "other": "ERC-1363"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "usdc": {
     "term": "USDC",
@@ -19635,56 +19245,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Plurals provided for non-masculine-personal, typical for inanimate objects like systems or blockchains."
-  },
-  "off-chain": {
-    "term": "offchain",
-    "aliases": [
-      "poza łańcuchem",
-      "pozałańcuchowy"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "offchainowy",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "offchain",
-        "example": "Skalowanie w warstwie drugiej przetwarza większość transakcji offchain."
-      },
-      "heading": {
-        "term": "Transakcje Offchain"
-      },
-      "tag": {
-        "term": "offchain"
-      },
-      "ui": {
-        "term": "Offchain"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "adverb",
-      "formality": "casual"
-    },
-    "plurals": {
-      "one": "offchain",
-      "two": "offchain",
-      "few": "offchain",
-      "many": "offchain",
-      "other": "offchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per the requested rules. Acts mostly as an uninflected adverb or adjective ('offchainowy' in slang) in Polish crypto contexts."
   },
   "da": {
     "term": "DA",
@@ -23639,60 +23199,6 @@
     "confidence": "high",
     "notes": "English loanword 'onboarding' is standard jargon in Polish tech and crypto, favored over literal translations like 'szkolenie'."
   },
-  "peer-to-peer network": {
-    "term": "sieć peer-to-peer",
-    "aliases": [
-      "sieć równy z równym",
-      "sieć P2P"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "sieć peer-to-peer"
-      },
-      "verb": null,
-      "adjective": "peer-to-peer",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "p2p-node": "węzeł peer-to-peer"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "sieci peer-to-peer",
-        "example": "Architektura Ethereum jest oparta na zdecentralizowanej sieci peer-to-peer."
-      },
-      "heading": {
-        "term": "Sieć peer-to-peer"
-      },
-      "tag": {
-        "term": "Sieć P2P"
-      },
-      "ui": {
-        "term": "Dołącz do Sieci P2P"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": null,
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "sieć peer-to-peer",
-      "two": "sieci peer-to-peer",
-      "few": "sieci peer-to-peer",
-      "many": "sieci peer-to-peer",
-      "other": "sieci peer-to-peer"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "wymagający zezwolenia",
     "aliases": [
@@ -24663,109 +24169,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Often treated as an undeclinable proper noun."
-  },
-  "off-chain governance": {
-    "term": "zarządzanie offchain",
-    "aliases": [
-      "zarządzanie poza łańcuchem"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "zarządzanie offchain"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "zarządzaniu offchain",
-        "example": "Wiele projektów wciąż polega na zarządzaniu offchain w celu podejmowania kluczowych decyzji."
-      },
-      "heading": {
-        "term": "Zarządzanie Offchain"
-      },
-      "tag": {
-        "term": "zarzadzanie-offchain"
-      },
-      "ui": {
-        "term": "Zarządzanie offchain"
-      },
-      "code": {
-        "term": "offchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "zarządzanie offchain",
-      "two": "dwa zarządzania offchain",
-      "few": "trzy zarządzania offchain",
-      "many": "pięć zarządzań offchain",
-      "other": "zarządzań offchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Offchain is written without a hyphen following the provided guidelines."
-  },
-  "on-chain governance": {
-    "term": "zarządzanie onchain",
-    "aliases": [
-      "zarządzanie w łańcuchu",
-      "zarządzanie wewnątrzłańcuchowe"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "zarządzanie onchain"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "zarządzanie onchain",
-        "example": "Zarządzanie onchain pozwala na automatyczne egzekwowanie decyzji społeczności za pomocą inteligentnych kontraktów."
-      },
-      "heading": {
-        "term": "Zarządzanie Onchain"
-      },
-      "tag": {
-        "term": "zarzadzanie-onchain"
-      },
-      "ui": {
-        "term": "Zarządzanie onchain"
-      },
-      "code": {
-        "term": "onchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "zarządzanie onchain",
-      "two": "dwa zarządzania onchain",
-      "few": "trzy zarządzania onchain",
-      "many": "pięć zarządzań onchain",
-      "other": "zarządzań onchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Onchain is written without a hyphen following the provided guidelines."
   },
   "sandwich attack": {
     "term": "atak kanapkowy",

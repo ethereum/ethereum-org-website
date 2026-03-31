@@ -8991,49 +8991,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "Bản cập nhật Pectra sẽ tích hợp EIP-7702 để cải thiện trừu tượng hóa tài khoản."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "eip-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier, preserved as per rules."
-  },
   "allowance": {
     "term": "hạn mức",
     "aliases": [
@@ -9441,49 +9398,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Target language uses Latin script, so no transliteration is applied."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "Bản nâng cấp EIP-4844 giới thiệu các giao dịch mang theo blob để giảm đáng kể phí rollup."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip_4844"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -12191,49 +12105,6 @@
     "confidence": "high",
     "notes": "Used both as noun and verb in Vietnamese without inflection."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "Tiêu chuẩn ERC-4626 giúp tối ưu hóa khả năng tương tác của các kho bạc lợi suất trên Ethereum."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC4626"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Protocol standard, kept as is."
-  },
   "reentrancy": {
     "term": "tái xâm nhập",
     "aliases": [
@@ -13662,49 +13533,6 @@
     "confidence": "high",
     "notes": "Kept as 'Berlin' following the rule for Latin script proper nouns."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "Tiêu chuẩn ERC-777 cung cấp tính năng hook cho token để kiểm soát quá trình nhận."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "erc-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "pending transaction": {
     "term": "giao dịch đang chờ xử lý",
     "aliases": [
@@ -14444,52 +14272,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [
-      "tiêu chuẩn ERC-223",
-      "chuẩn ERC-223"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "Tiêu chuẩn ERC-223 được đề xuất để giải quyết vấn đề mất token khi gửi nhầm đến một hợp đồng không hỗ trợ trên chuẩn ERC-20."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "erc-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -14582,49 +14364,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Widely used translation in account abstraction and decentralized finance contexts."
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "Tiêu chuẩn ERC-4337 giới thiệu tính năng trừu tượng hóa tài khoản mà không cần thay đổi giao thức cốt lõi."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "erc_4337"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "paymaster": {
     "term": "bên trả phí",
@@ -15347,51 +15086,6 @@
       "gender": null,
       "animacy": "inanimate",
       "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "on-chain": {
-    "term": "trên chuỗi",
-    "aliases": [
-      "onchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "trên chuỗi"
-      },
-      "verb": null,
-      "adjective": "trên chuỗi",
-      "agent": null,
-      "negation": "ngoài chuỗi",
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "trên chuỗi",
-        "example": "Mọi thay đổi về trạng thái của hợp đồng thông minh đều được ghi lại công khai trên chuỗi."
-      },
-      "heading": {
-        "term": "Trên chuỗi"
-      },
-      "tag": {
-        "term": "Trên chuỗi"
-      },
-      "ui": {
-        "term": "Trên chuỗi"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
       "formality": "neutral"
     },
     "plurals": null,
@@ -16166,49 +15860,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Commonly used as a loanword in both noun and verb forms within the Vietnamese crypto community."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "Tiêu chuẩn ERC-1363 cho phép thực hiện thanh toán token và kích hoạt mã hợp đồng trong một giao dịch duy nhất."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "erc-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical standard identifier kept exactly as in English."
   },
   "usdc": {
     "term": "USDC",
@@ -17627,49 +17278,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain": {
-    "term": "ngoài chuỗi",
-    "aliases": [
-      "offchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "ngoài chuỗi",
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ngoài chuỗi",
-        "example": "Các giải pháp mở rộng lớp 2 xử lý giao dịch ngoài chuỗi để tiết kiệm chi phí."
-      },
-      "heading": {
-        "term": "Ngoài Chuỗi"
-      },
-      "tag": {
-        "term": "ngoai-chuoi"
-      },
-      "ui": {
-        "term": "Ngoài Chuỗi"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Vietnamese context heavily uses 'offchain' as a loan word, but 'ngoài chuỗi' is the proper translation."
   },
   "da": {
     "term": "DA",
@@ -21203,51 +20811,6 @@
     "confidence": "high",
     "notes": "Translated to focus on the process of bringing new users into the ecosystem."
   },
-  "peer-to-peer network": {
-    "term": "mạng ngang hàng",
-    "aliases": [
-      "mạng P2P"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "mạng ngang hàng"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "mạng ngang hàng",
-        "example": "Bitcoin được thiết kế như một mạng ngang hàng không cần máy chủ trung tâm."
-      },
-      "heading": {
-        "term": "Mạng ngang hàng"
-      },
-      "tag": {
-        "term": "P2P"
-      },
-      "ui": {
-        "term": "Mạng Ngang Hàng"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "có cấp phép",
     "aliases": [
@@ -22133,96 +21696,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain governance": {
-    "term": "quản trị ngoài chuỗi",
-    "aliases": [
-      "quản trị offchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "quản trị ngoài chuỗi"
-      },
-      "verb": null,
-      "adjective": "quản trị ngoài chuỗi",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "quản trị ngoài chuỗi",
-        "example": "Cộng đồng thường thảo luận các đề xuất thông qua quản trị ngoài chuỗi trước khi tiến hành nâng cấp mã nguồn."
-      },
-      "heading": {
-        "term": "Quản trị ngoài chuỗi"
-      },
-      "tag": {
-        "term": "quản-trị-ngoài-chuỗi"
-      },
-      "ui": {
-        "term": "Quản trị ngoài chuỗi"
-      },
-      "code": {
-        "term": "offchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "'offchain' written without hyphen as per the prompt rules."
-  },
-  "on-chain governance": {
-    "term": "quản trị trên chuỗi",
-    "aliases": [
-      "quản trị onchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "quản trị trên chuỗi"
-      },
-      "verb": null,
-      "adjective": "quản trị trên chuỗi",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "quản trị trên chuỗi",
-        "example": "Hệ thống quản trị trên chuỗi cho phép người nắm giữ token bỏ phiếu trực tiếp thông qua các hợp đồng thông minh."
-      },
-      "heading": {
-        "term": "Quản trị trên chuỗi"
-      },
-      "tag": {
-        "term": "quản-trị-trên-chuỗi"
-      },
-      "ui": {
-        "term": "Quản trị trên chuỗi"
-      },
-      "code": {
-        "term": "onchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "'onchain' written without hyphen as per the prompt rules."
   },
   "sandwich attack": {
     "term": "tấn công sandwich",

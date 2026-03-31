@@ -9715,49 +9715,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "پیکٹرا اپ گریڈ میں EIP-7702 جیسی اہم تجاویز شامل کی گئی ہیں جو اکاؤنٹ ایبسٹریکشن کو بہتر بناتی ہیں۔"
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP-7702"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per script_rule."
-  },
   "allowance": {
     "term": "الاؤنس",
     "aliases": [
@@ -10188,49 +10145,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Transliterated directly into Nastaliq as it is a specific product name."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "نیٹ ورک اپ گریڈ میں EIP-4844 شامل ہے جو لیئر ۲ کی گیس فیس کو نمایاں طور پر کم کر دے گا۔"
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844 کی تفصیلات"
-      },
-      "code": {
-        "term": "eip_4844"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per EIP standard naming conventions."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13198,49 +13112,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "اس نئے سمارٹ کنٹریکٹ میں ۲ مختلف ٹوکنز ERC-4626 معیار کی پاسداری کرتے ہیں۔"
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC-4626"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per rules."
-  },
   "reentrancy": {
     "term": "مکرر داخلہ",
     "aliases": [
@@ -14738,57 +14609,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc-777-standard": "ERC-777 کا معیار"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "اسمارٹ کانٹریکٹ میں ERC-777 ٹوکنز ۱ یا ۲ ہکس کے ساتھ استعمال ہوتے ہیں۔"
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC-777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-777"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per rules."
-  },
   "pending transaction": {
     "term": "زیرِ التوا لین دین",
     "aliases": [
@@ -15630,55 +15450,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "اس ٹوکن نے محفوظ منتقلی کے لیے ERC-223 کا معیار اپنایا ہے۔"
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC-223"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-223",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-223s"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "poap": {
     "term": "POAP",
     "aliases": [],
@@ -15779,55 +15550,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "اس معیار کو ERC-4337 کہا جاتا ہے، جو ایتھیریم پر ۱ نئے دور کا آغاز ہے۔"
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4337"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per the rule."
   },
   "paymaster": {
     "term": "پے ماسٹر",
@@ -16631,49 +16353,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "آن چین",
-    "aliases": [
-      "بلاک چین پر"
-    ],
-    "transliteration": "Onchain",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "آن چین",
-      "agent": null,
-      "negation": "آف چین",
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "آن چین",
-        "example": "اس لین دین کا تمام ڈیٹا آن چین محفوظ کیا گیا ہے۔"
-      },
-      "heading": {
-        "term": "آن چین ڈیٹا"
-      },
-      "tag": {
-        "term": "آن چین"
-      },
-      "ui": {
-        "term": "آن چین دیکھیں"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written consistently as a single unhyphenated concept 'onchain' per instructions, transliterated effectively in Nastaliq."
   },
   "swarm": {
     "term": "سوارم",
@@ -17527,55 +17206,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Universally adopted transliteration in crypto Urdu communities."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "یہ نیا سمارٹ کنٹریکٹ ERC-1363 کے معیار پر مبنی ہے۔"
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC-1363"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-1363"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as it is a specific technical identifier."
   },
   "usdc": {
     "term": "USDC",
@@ -19078,47 +18708,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain": {
-    "term": "آف چین",
-    "aliases": [],
-    "transliteration": "offchain",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "آف چین",
-      "agent": null,
-      "negation": "آن چین",
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "آف چین",
-        "example": "فیس کم کرنے کے لیے صارفین اپنی ٹرانزیکشنز کو آف چین پراسیس کرتے ہیں۔"
-      },
-      "heading": {
-        "term": "آف چین"
-      },
-      "tag": {
-        "term": "آف چین"
-      },
-      "ui": {
-        "term": "آف چین"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written as آف چین, corresponds to offchain in English (without hyphen)."
   },
   "da": {
     "term": "DA",
@@ -23014,60 +22603,6 @@
     "confidence": "high",
     "notes": null
   },
-  "peer-to-peer network": {
-    "term": "ہم مرتبہ نیٹ ورک",
-    "aliases": [
-      "پیئر ٹو پیئر نیٹ ورک",
-      "پی ۲ پی نیٹ ورک"
-    ],
-    "transliteration": "hum martaba network",
-    "morphology": {
-      "noun": {
-        "singular": "ہم مرتبہ نیٹ ورک"
-      },
-      "verb": null,
-      "adjective": "ہم مرتبہ",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "p2p-exchange": "ہم مرتبہ ایکسچینج"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ہم مرتبہ نیٹ ورک",
-        "example": "یہ کریپٹو کرنسی ۱ غیر مرکزی ہم مرتبہ نیٹ ورک پر مبنی ہے۔"
-      },
-      "heading": {
-        "term": "ہم مرتبہ نیٹ ورک"
-      },
-      "tag": {
-        "term": "ہم مرتبہ نیٹ ورک"
-      },
-      "ui": {
-        "term": "ہم مرتبہ نیٹ ورک"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ہم مرتبہ نیٹ ورک",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ہم مرتبہ نیٹ ورکس"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "اجازت یافتہ",
     "aliases": [
@@ -23972,108 +23507,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Uses native Urdu numeral ۲."
-  },
-  "off-chain governance": {
-    "term": "آف چین طرز حکمرانی",
-    "aliases": [
-      "آف چین گورننس"
-    ],
-    "transliteration": "offchain tarz-e-hukmrani",
-    "morphology": {
-      "noun": {
-        "singular": "آف چین طرز حکمرانی"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "آف چین طرز حکمرانی",
-        "example": "یہ فیصلہ آف چین طرز حکمرانی کے ذریعے فورمز پر بحث کے بعد کیا گیا۔"
-      },
-      "heading": {
-        "term": "آف چین طرز حکمرانی"
-      },
-      "tag": {
-        "term": "آف چین طرز حکمرانی"
-      },
-      "ui": {
-        "term": "آف چین طرز حکمرانی"
-      },
-      "code": {
-        "term": "offchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "آف چین طرز حکمرانی",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "آف چین طرز حکمرانی"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Translated 'governance' to 'tarz-e-hukmrani' while phoneticizing 'offchain' without hyphens."
-  },
-  "on-chain governance": {
-    "term": "آن چین طرز حکمرانی",
-    "aliases": [
-      "آن چین گورننس"
-    ],
-    "transliteration": "onchain tarz-e-hukmrani",
-    "morphology": {
-      "noun": {
-        "singular": "آن چین طرز حکمرانی"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "آن چین طرز حکمرانی",
-        "example": "آن چین طرز حکمرانی ٹوکن ہولڈرز کو براہ راست سمارٹ کنٹریکٹس پر ووٹ دینے کی اجازت دیتی ہے۔"
-      },
-      "heading": {
-        "term": "آن چین طرز حکمرانی"
-      },
-      "tag": {
-        "term": "آن چین طرز حکمرانی"
-      },
-      "ui": {
-        "term": "آن چین طرز حکمرانی"
-      },
-      "code": {
-        "term": "onchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "آن چین طرز حکمرانی",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "آن چین طرز حکمرانی"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "sandwich attack": {
     "term": "سینڈوچ حملہ",

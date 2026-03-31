@@ -8961,49 +8961,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702는",
-        "example": "EIP-7702는 외부 소유 계정(EOA)이 일시적으로 스마트 컨트랙트처럼 기능할 수 있도록 지원하는 제안입니다."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP-7702"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "allowance": {
     "term": "허용량",
     "aliases": [
@@ -9414,51 +9371,6 @@
       },
       "code": {
         "term": "teku"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "eip_4844_transaction": "EIP-4844 트랜잭션"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844는",
-        "example": "EIP-4844는 블롭(blob)을 도입하여 롤업의 데이터 가용성 비용을 대폭 줄입니다."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip4844"
       }
     },
     "grammar": {
@@ -12194,49 +12106,6 @@
     "confidence": "high",
     "notes": "Translated as 차입 to clearly indicate the action of taking a loan (borrowing) rather than providing one (lending)."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626은",
-        "example": "ERC-4626은 토큰화된 금고(vault)의 API를 표준화합니다."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "erc-4626"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script."
-  },
   "reentrancy": {
     "term": "재진입",
     "aliases": [
@@ -13638,49 +13507,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "ERC-777은 훅(hook)을 포함하는 고급 이더리움 토큰 표준입니다."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC-777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "pending transaction": {
     "term": "대기 중인 트랜잭션",
     "aliases": [
@@ -14400,49 +14226,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223은",
-        "example": "ERC-223은 스마트 컨트랙트에서 토큰을 실수로 잃어버리는 문제를 방지합니다."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -14532,49 +14315,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "In recent web3 transaction contexts, the English term 'intent' is directly transliterated as '인텐트' rather than translated to '의도' to convey the specific technical architecture."
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337은",
-        "example": "ERC-4337은 이더리움에서 합의 계층의 변경 없이 계정 추상화를 구현하는 표준입니다."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "paymaster": {
     "term": "페이마스터",
@@ -15296,54 +15036,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "온체인",
-    "aliases": [
-      "체인 상의",
-      "온-체인"
-    ],
-    "transliteration": "onchein",
-    "morphology": {
-      "noun": {
-        "singular": "온체인"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "onchain-data": "온체인 데이터"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "온체인에",
-        "example": "스마트 컨트랙트의 모든 실행 기록은 온체인에 투명하게 기록됩니다."
-      },
-      "heading": {
-        "term": "온체인"
-      },
-      "tag": {
-        "term": "온체인"
-      },
-      "ui": {
-        "term": "온체인"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens in Korean as well."
   },
   "swarm": {
     "term": "스웜",
@@ -16122,49 +15814,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "'에어드랍' is also a highly common variant in casual crypto contexts, but '에어드롭' is the standard transliteration."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363은",
-        "example": "ERC-1363은 스마트 컨트랙트에서 토큰을 지불하고 코드를 실행하기 위한 표준입니다."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per script_rule."
   },
   "usdc": {
     "term": "USDC",
@@ -17597,51 +17246,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "As an adjective, '검열 저항적(인)' is used, while '검열 저항성' is the noun form."
-  },
-  "off-chain": {
-    "term": "오프체인",
-    "aliases": [],
-    "transliteration": "opeuchein",
-    "morphology": {
-      "noun": {
-        "singular": "오프체인"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "offchain-transaction": "오프체인 트랜잭션"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "오프체인에서",
-        "example": "일부 연산은 블록체인의 부하를 줄이기 위해 오프체인에서 처리됩니다."
-      },
-      "heading": {
-        "term": "오프체인 솔루션"
-      },
-      "tag": {
-        "term": "오프체인"
-      },
-      "ui": {
-        "term": "오프체인 데이터"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens in English/Korean code conventions when applied."
   },
   "da": {
     "term": "DA",
@@ -21153,52 +20757,6 @@
     "confidence": "high",
     "notes": "Widely transliterated as '온보딩' to refer to a user's first interaction with a platform."
   },
-  "peer-to-peer network": {
-    "term": "P2P 네트워크",
-    "aliases": [
-      "피어투피어 네트워크",
-      "동등 계층 네트워크"
-    ],
-    "transliteration": "P2P neteuwokeu",
-    "morphology": {
-      "noun": {
-        "singular": "P2P 네트워크"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "P2P 네트워크",
-        "example": "이더리움은 탈중앙화된 P2P 네트워크를 기반으로 작동합니다."
-      },
-      "heading": {
-        "term": "P2P 네트워크"
-      },
-      "tag": {
-        "term": "P2P 네트워크"
-      },
-      "ui": {
-        "term": "P2P 네트워크"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "P2P is universally understood and preferred over the full phonetic transliteration '피어투피어'."
-  },
   "permissioned": {
     "term": "허가형",
     "aliases": [
@@ -22070,92 +21628,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain governance": {
-    "term": "오프체인 거버넌스",
-    "aliases": [],
-    "transliteration": "opeuchein geobeoneonseu",
-    "morphology": {
-      "noun": {
-        "singular": "오프체인 거버넌스"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "오프체인 거버넌스는",
-        "example": "커뮤니티 토론은 주로 오프체인 거버넌스를 통해 이루어집니다."
-      },
-      "heading": {
-        "term": "오프체인 거버넌스"
-      },
-      "tag": {
-        "term": "오프체인 거버넌스"
-      },
-      "ui": {
-        "term": "오프체인 거버넌스"
-      },
-      "code": {
-        "term": "offchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens in English as well according to convention."
-  },
-  "on-chain governance": {
-    "term": "온체인 거버넌스",
-    "aliases": [],
-    "transliteration": "onchein geobeoneonseu",
-    "morphology": {
-      "noun": {
-        "singular": "온체인 거버넌스"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "온체인 거버넌스의",
-        "example": "스마트 컨트랙트를 통한 투표는 온체인 거버넌스의 한 예입니다."
-      },
-      "heading": {
-        "term": "온체인 거버넌스"
-      },
-      "tag": {
-        "term": "온체인 거버넌스"
-      },
-      "ui": {
-        "term": "온체인 거버넌스"
-      },
-      "code": {
-        "term": "onchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens in English as well according to convention."
   },
   "sandwich attack": {
     "term": "샌드위치 공격",

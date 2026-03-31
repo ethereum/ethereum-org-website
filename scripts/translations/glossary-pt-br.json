@@ -9750,55 +9750,6 @@
     "confidence": "high",
     "notes": "Embora signifique 'nó de inicialização', 'bootnode' é o termo técnico preferido e mais amplamente utilizado em pt-br no contexto de infraestrutura Ethereum."
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "A EIP-7702 permite que contas de propriedade externa deleguem sua execução a um contrato inteligente."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "Suporte a EIP-7702"
-      },
-      "code": {
-        "term": "eip7702"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "EIP-7702",
-      "two": "EIPs-7702",
-      "few": "EIPs-7702",
-      "many": "EIPs-7702",
-      "other": "EIPs-7702"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Tratado no feminino ('a EIP') por ser uma Proposta de Melhoria do Ethereum (Ethereum Improvement Proposal)."
-  },
   "allowance": {
     "term": "permissão",
     "aliases": [
@@ -10232,51 +10183,6 @@
     },
     "grammar": {
       "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [
-      "Proto-Danksharding"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "A EIP-4844 introduziu um novo tipo de transação que aceita blobs de dados."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip-4844"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
       "animacy": "inanimate",
       "part_of_speech": "proper_noun",
       "formality": "neutral"
@@ -13306,55 +13212,6 @@
     "confidence": "high",
     "notes": "In Portuguese, 'empréstimo' can mean both borrowing and lending. 'Tomar emprestado' refers specifically to the act of borrowing."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "O padrão ERC-4626 é usado para padronizar cofres de rendimento tokenizados."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "erc4626"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4626",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4626"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "reentrancy": {
     "term": "reentrada",
     "aliases": [
@@ -14908,55 +14765,6 @@
     "confidence": "high",
     "notes": "Exônimo padrão em português para a cidade e a atualização correspondente."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "O padrão de token ERC-777 oferece recursos avançados, como ganchos de recebimento."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "erc-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC777"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-777s"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Mantido em inglês conforme padrão técnico."
-  },
   "pending transaction": {
     "term": "transação pendente",
     "aliases": [
@@ -15764,49 +15572,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "O padrão ERC-223 foi proposto para evitar a perda acidental de tokens enviados para contratos incompatíveis."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "erc223"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -15906,55 +15671,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Usado no contexto de arquiteturas baseadas em intents (intent-centric)."
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "O padrão ERC-4337 introduz a abstração de conta na rede principal do Ethereum sem alterar o protocolo base."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC_4337"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4337"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Mantido em inglês conforme a regra de script, por ser um identificador de padrão."
   },
   "paymaster": {
     "term": "pagador",
@@ -16785,56 +16501,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "onchain",
-    "aliases": [
-      "na cadeia",
-      "na rede"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "onchain",
-      "agent": null,
-      "negation": "offchain",
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "onchain",
-        "example": "Todos os dados do contrato inteligente são armazenados onchain."
-      },
-      "heading": {
-        "term": "Onchain"
-      },
-      "tag": {
-        "term": "Onchain"
-      },
-      "ui": {
-        "term": "Onchain"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "onchain",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "onchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions. Treated as an invariable adjective/adverb in Portuguese."
   },
   "swarm": {
     "term": "Swarm",
@@ -17697,55 +17363,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Apesar da regra apontar tradução, 'airdrop' é um estrangeirismo consolidado no português brasileiro."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "O padrão ERC-1363 permite que contratos inteligentes sejam executados logo após a transferência dos tokens."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "erc-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": "masculine",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-1363"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "usdc": {
     "term": "USDC",
@@ -19307,56 +18924,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Adjetivo de dois gêneros em português; a flexão ocorre apenas em número."
-  },
-  "off-chain": {
-    "term": "offchain",
-    "aliases": [
-      "fora da cadeia",
-      "fora da rede"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "offchain",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "offchain",
-        "example": "As transações processadas offchain são liquidadas posteriormente na rede principal."
-      },
-      "heading": {
-        "term": "Offchain"
-      },
-      "tag": {
-        "term": "offchain"
-      },
-      "ui": {
-        "term": "Offchain"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "offchain",
-      "two": "offchain",
-      "few": "offchain",
-      "many": "offchain",
-      "other": "offchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Escrito sem hífen conforme especificado na regra. Frequentemente usado como adjetivo ou advérbio invariável em português."
   },
   "da": {
     "term": "DA",
@@ -23197,52 +22764,6 @@
     "confidence": "high",
     "notes": "Often left untranslated ('onboarding') in the corporate and tech Brazilian world, but 'integração' is the standard translation."
   },
-  "peer-to-peer network": {
-    "term": "rede ponto a ponto",
-    "aliases": [
-      "rede P2P",
-      "rede peer-to-peer"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "rede ponto a ponto"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "rede ponto a ponto",
-        "example": "O Ethereum opera através de uma rede ponto a ponto global e descentralizada."
-      },
-      "heading": {
-        "term": "Rede Ponto a Ponto"
-      },
-      "tag": {
-        "term": "rede-p2p"
-      },
-      "ui": {
-        "term": "Rede Ponto a Ponto"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "permissionado",
     "aliases": [
@@ -24188,110 +23709,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain governance": {
-    "term": "governança offchain",
-    "aliases": [
-      "governança fora da cadeia",
-      "governança fora da rede"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "governança offchain"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "governança offchain",
-        "example": "Discussões em fóruns da comunidade e chamadas públicas são elementos críticos da governança offchain."
-      },
-      "heading": {
-        "term": "Governança Offchain"
-      },
-      "tag": {
-        "term": "Governança Offchain"
-      },
-      "ui": {
-        "term": "Governança Offchain"
-      },
-      "code": {
-        "term": "offchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "governança offchain",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "governanças offchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Escrito sem hífen conforme as diretrizes do termo."
-  },
-  "on-chain governance": {
-    "term": "governança onchain",
-    "aliases": [
-      "governança na cadeia",
-      "governança na rede"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "governança onchain"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "governança onchain",
-        "example": "A governança onchain permite que detentores de tokens votem em propostas diretamente através de contratos inteligentes."
-      },
-      "heading": {
-        "term": "Governança Onchain"
-      },
-      "tag": {
-        "term": "Governança Onchain"
-      },
-      "ui": {
-        "term": "Governança Onchain"
-      },
-      "code": {
-        "term": "onchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": "feminine",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "governança onchain",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "governanças onchain"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Escrito sem hífen conforme as diretrizes do termo."
   },
   "sandwich attack": {
     "term": "ataque sanduíche",

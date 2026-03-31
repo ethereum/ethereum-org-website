@@ -9799,55 +9799,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": "EIP-7702",
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "பெக்ட்ரா மேம்படுத்தலில் EIP-7702 கணக்கு சுருக்கத்தை எளிதாக்குகிறது."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "EIP-7702",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "EIP-7702கள்"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Keep Latin strictly."
-  },
   "allowance": {
     "term": "அனுமதித்தொகை",
     "aliases": [
@@ -10308,49 +10259,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Transliterated product name."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "EIP-4844 மூலம் தரவு கட்டணங்கள் கணிசமாகக் குறைகின்றன."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip_4844"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per rules."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13427,57 +13335,6 @@
     "confidence": "high",
     "notes": "Used as a gerund/verbal noun in Tamil."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc-4626-token": "ERC-4626 டோக்கன்"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626ஐ",
-        "example": "டெவலப்பர்கள் ERC-4626ஐ பயன்படுத்தி புதிய ஸ்மார்ட் ஒப்பந்தங்களை உருவாக்குகின்றனர்."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "erc4626"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-4626",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4626s"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per script_rule."
-  },
   "reentrancy": {
     "term": "மறுநுழைவு",
     "aliases": [
@@ -15038,57 +14895,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": "ERC-777",
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "standard": "ERC-777 தரம்"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "இந்த ஸ்மார்ட் ஒப்பந்தம் ERC-777 தரத்தைப் பயன்படுத்துகிறது."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC-777"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-777கள்"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier kept in Latin script as per Ethereum localization guidelines."
-  },
   "pending transaction": {
     "term": "நிலுவையில் உள்ள பரிவர்த்தனை",
     "aliases": [
@@ -15942,57 +15748,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc-223-token": "ERC-223 டோக்கன்"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "ERC-223 என்பது டோக்கன் பரிமாற்ற சிக்கல்களைத் தீர்க்கும் ஒரு தரநிலையாகும்."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-223",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-223"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Latin script strictly kept as per rules."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [],
@@ -16096,49 +15851,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "ERC-4337 கணக்கு சுருக்கத்தை (account abstraction) செயல்படுத்துகிறது."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC4337"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Latin script kept as per script_rule."
   },
   "paymaster": {
     "term": "கட்டணதாரர்",
@@ -16916,58 +16628,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Translated conceptually as 'dissemination protocol' for technical accuracy, with literal translation provided as an alias."
-  },
-  "on-chain": {
-    "term": "சங்கிலியக",
-    "aliases": [
-      "ஆன்செயின்",
-      "பிளாக்செயினில்"
-    ],
-    "transliteration": "caṅkiliyaka",
-    "morphology": {
-      "noun": {
-        "singular": "சங்கிலியகம்"
-      },
-      "verb": null,
-      "adjective": "சங்கிலியக",
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "சங்கிலியக",
-        "example": "இந்த பரிவர்த்தனை சங்கிலியக முறையில் நடக்கிறது."
-      },
-      "heading": {
-        "term": "சங்கிலியக"
-      },
-      "tag": {
-        "term": "சங்கிலியக"
-      },
-      "ui": {
-        "term": "ஆன்செயின்"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "சங்கிலியகம்",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "சங்கிலியகங்கள்"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens in English contexts as per rule."
   },
   "swarm": {
     "term": "திரள்",
@@ -17846,55 +17506,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Phonetic adaptation of 'airdrop' is widely used in Tamil crypto communities."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "ERC-1363 டோக்கன் தரம் ஸ்மார்ட் ஒப்பந்தங்களுக்குள் கட்டணங்களைச் செலுத்த அனுமதிக்கிறது."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": null
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per rules."
   },
   "usdc": {
     "term": "USDC",
@@ -19476,51 +19087,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Acts as an adjective modifier in Tamil."
-  },
-  "off-chain": {
-    "term": "ஆஃப்செயின்",
-    "aliases": [
-      "சங்கிலிக்கு வெளியே"
-    ],
-    "transliteration": "Āfceyiṉ",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "ஆஃப்செயின்",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "offchain-transaction": "ஆஃப்செயின் பரிவர்த்தனை"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ஆஃப்செயின்",
-        "example": "ஆஃப்செயின் பரிவர்த்தனைகள் கட்டணங்களைக் குறைக்க உதவுகின்றன."
-      },
-      "heading": {
-        "term": "ஆஃப்செயின்"
-      },
-      "tag": {
-        "term": "ஆஃப்செயின்"
-      },
-      "ui": {
-        "term": "ஆஃப்செயின்"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions. Typically used as a modifier."
   },
   "da": {
     "term": "DA",
@@ -23454,60 +23020,6 @@
     "confidence": "high",
     "notes": "Translated conceptually to mean successfully integrating a user into a new digital environment/app."
   },
-  "peer-to-peer network": {
-    "term": "சக-பயனர் வலையமைப்பு",
-    "aliases": [
-      "பியர்-டு-பியர் நெட்வொர்க்",
-      "நேரடிப் பகிர்வு வலையமைப்பு"
-    ],
-    "transliteration": "Saga-payanar valaiyamaippu",
-    "morphology": {
-      "noun": {
-        "singular": "சக-பயனர் வலையமைப்பு"
-      },
-      "verb": null,
-      "adjective": "சக-பயனர் வலையமைப்பு சார்ந்த",
-      "agent": null,
-      "negation": "சக-பயனர் வலையமைப்பு அல்ல",
-      "compounds": {
-        "peer_to_peer_transaction": "சக-பயனர் பரிவர்த்தனை"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "சக-பயனர் வலையமைப்பில்",
-        "example": "எத்தேரியம் ஒரு சக-பயனர் வலையமைப்பில் இயங்குகிறது."
-      },
-      "heading": {
-        "term": "சக-பயனர் வலையமைப்பு"
-      },
-      "tag": {
-        "term": "சக-பயனர் வலையமைப்பு"
-      },
-      "ui": {
-        "term": "சக-பயனர் வலையமைப்பு"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "சக-பயனர் வலையமைப்பு",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "சக-பயனர் வலையமைப்புகள்"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "அனுமதிக்குட்பட்ட",
     "aliases": [
@@ -24518,109 +24030,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain governance": {
-    "term": "ஆஃப்செயின் ஆளுமை",
-    "aliases": [
-      "சங்கிலிப்புற ஆளுமை"
-    ],
-    "transliteration": "āfceyiṉ āḷumai",
-    "morphology": {
-      "noun": {
-        "singular": "ஆஃப்செயின் ஆளுமை"
-      },
-      "verb": null,
-      "adjective": "ஆஃப்செயின் ஆளுமை சார்ந்த",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ஆஃப்செயின் ஆளுமை",
-        "example": "இந்த முடிவுகள் அனைத்தும் ஆஃப்செயின் ஆளுமை மூலம் எடுக்கப்படுகின்றன."
-      },
-      "heading": {
-        "term": "ஆஃப்செயின் ஆளுமை"
-      },
-      "tag": {
-        "term": "ஆஃப்செயின்-ஆளுமை"
-      },
-      "ui": {
-        "term": "ஆஃப்செயின் ஆளுமை"
-      },
-      "code": {
-        "term": "offchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ஆஃப்செயின் ஆளுமை",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ஆஃப்செயின் ஆளுமைகள்"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept 'offchain' conceptually unified as requested via common phonetic adaptation in crypto Tamil."
-  },
-  "on-chain governance": {
-    "term": "ஆன்செயின் ஆளுமை",
-    "aliases": [
-      "சங்கிலியக ஆளுமை",
-      "சங்கிலிமேல் ஆளுமை"
-    ],
-    "transliteration": "āṉceyiṉ āḷumai",
-    "morphology": {
-      "noun": {
-        "singular": "ஆன்செயின் ஆளுமை"
-      },
-      "verb": null,
-      "adjective": "ஆன்செயின் ஆளுமை சார்ந்த",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ஆன்செயின் ஆளுமை",
-        "example": "வாக்களிப்பு செயல்முறைகள் ஆன்செயின் ஆளுமை மூலம் பிளாக்செயினில் நிர்வகிக்கப்படுகின்றன."
-      },
-      "heading": {
-        "term": "ஆன்செயின் ஆளுமை"
-      },
-      "tag": {
-        "term": "ஆன்செயின்-ஆளுமை"
-      },
-      "ui": {
-        "term": "ஆன்செயின் ஆளுமை"
-      },
-      "code": {
-        "term": "onchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ஆன்செயின் ஆளுமை",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ஆன்செயின் ஆளுமைகள்"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept 'onchain' conceptually unified as requested via common phonetic adaptation in crypto Tamil."
   },
   "sandwich attack": {
     "term": "சாண்ட்விச் தாக்குதல்",

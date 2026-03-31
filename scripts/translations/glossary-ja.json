@@ -8869,49 +8869,6 @@
     "confidence": "high",
     "notes": null
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "EIP-7702はPectraアップグレードに含まれるアカウント抽象化の提案です。"
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per rules."
-  },
   "allowance": {
     "term": "アローワンス",
     "aliases": [
@@ -9319,52 +9276,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Transliterated to katakana per instructions."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [
-      "プロト・ダンクシャーディング",
-      "Proto-Danksharding"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "EIP-4844の導入により、レイヤー2ネットワークのガス代が大幅に削減されます。"
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip_4844"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -12092,49 +12003,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": "ERC-4626",
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "ERC-4626は、トークン化された利回り付きボールトの標準化を目的としています。"
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC4626"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per rules."
-  },
   "reentrancy": {
     "term": "リエントランシー",
     "aliases": [
@@ -13533,49 +13401,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "ERC-777はフック機能を持つ高度なトークン規格です。"
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC-777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "script_rule: keep_latin"
-  },
   "pending transaction": {
     "term": "保留中のトランザクション",
     "aliases": [
@@ -14303,49 +14128,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "ERC-223は、互換性のないコントラクトへ誤ってトークンを送信してしまう問題に対処したトークン標準です。"
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per instructions."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -14429,49 +14211,6 @@
       "gender": null,
       "animacy": "inanimate",
       "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "ERC-4337はプロトコルの変更なしでアカウント抽象化を実現します。"
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
       "formality": "neutral"
     },
     "plurals": null,
@@ -15188,49 +14927,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "オンチェーン",
-    "aliases": [],
-    "transliteration": "Onchēn",
-    "morphology": {
-      "noun": {
-        "singular": "オンチェーン"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "オンチェーン",
-        "example": "すべてのトランザクションはオンチェーンで記録されます。"
-      },
-      "heading": {
-        "term": "オンチェーン"
-      },
-      "tag": {
-        "term": "オンチェーン"
-      },
-      "ui": {
-        "term": "オンチェーン"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphen per instruction."
   },
   "swarm": {
     "term": "スウォーム",
@@ -15984,49 +15680,6 @@
       "gender": null,
       "animacy": null,
       "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "ERC-1363は支払い可能なトークンのための拡張規格です。"
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": null,
-      "part_of_speech": "proper_noun",
       "formality": "neutral"
     },
     "plurals": null,
@@ -17421,49 +17074,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Translated as a noun for the base term, with adjective forms detailed in morphology."
-  },
-  "off-chain": {
-    "term": "オフチェーン",
-    "aliases": [],
-    "transliteration": "ofuchēn",
-    "morphology": {
-      "noun": {
-        "singular": "オフチェーン"
-      },
-      "verb": null,
-      "adjective": "オフチェーンの",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "オフチェーン",
-        "example": "オフチェーンでのトランザクションにより、手数料を削減できます。"
-      },
-      "heading": {
-        "term": "オフチェーン"
-      },
-      "tag": {
-        "term": "オフチェーン"
-      },
-      "ui": {
-        "term": "オフチェーン"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions."
   },
   "da": {
     "term": "DA",
@@ -20997,51 +20607,6 @@
     "confidence": "high",
     "notes": null
   },
-  "peer-to-peer network": {
-    "term": "ピア・ツー・ピア・ネットワーク",
-    "aliases": [
-      "P2Pネットワーク"
-    ],
-    "transliteration": "pia tsuu pia nettowaaku",
-    "morphology": {
-      "noun": {
-        "singular": "ピア・ツー・ピア・ネットワーク"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ピア・ツー・ピア・ネットワーク",
-        "example": "イーサリアムは、中央サーバーに依存しないピア・ツー・ピア・ネットワークで構成されています。"
-      },
-      "heading": {
-        "term": "ピア・ツー・ピア・ネットワーク"
-      },
-      "tag": {
-        "term": "P2Pネットワーク"
-      },
-      "ui": {
-        "term": "P2Pネットワーク"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Commonly abbreviated to P2Pネットワーク in typical usage."
-  },
   "permissioned": {
     "term": "パーミッションド",
     "aliases": [
@@ -21930,92 +21495,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Latin script is overwhelmingly the standard in Japanese text for this term."
-  },
-  "off-chain governance": {
-    "term": "オフチェーン・ガバナンス",
-    "aliases": [],
-    "transliteration": "ofuchēn gabanansu",
-    "morphology": {
-      "noun": {
-        "singular": "オフチェーン・ガバナンス"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "オフチェーン・ガバナンス",
-        "example": "コミュニティの決定はオフチェーン・ガバナンスを通じて行われます。"
-      },
-      "heading": {
-        "term": "オフチェーン・ガバナンス"
-      },
-      "tag": {
-        "term": "オフチェーン・ガバナンス"
-      },
-      "ui": {
-        "term": "オフチェーン・ガバナンス"
-      },
-      "code": {
-        "term": "offchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Transliterated to katakana and joined with a middle dot; off-chain written without hyphens internally."
-  },
-  "on-chain governance": {
-    "term": "オンチェーン・ガバナンス",
-    "aliases": [],
-    "transliteration": "onchēn gabanansu",
-    "morphology": {
-      "noun": {
-        "singular": "オンチェーン・ガバナンス"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "オンチェーン・ガバナンス",
-        "example": "オンチェーン・ガバナンスにより、すべての投票がブロックチェーン上に記録されます。"
-      },
-      "heading": {
-        "term": "オンチェーン・ガバナンス"
-      },
-      "tag": {
-        "term": "オンチェーン・ガバナンス"
-      },
-      "ui": {
-        "term": "オンチェーン・ガバナンス"
-      },
-      "code": {
-        "term": "onchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Transliterated to katakana and joined with a middle dot; on-chain written without hyphens internally."
   },
   "sandwich attack": {
     "term": "サンドイッチ攻撃",

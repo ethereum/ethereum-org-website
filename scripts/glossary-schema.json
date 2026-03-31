@@ -79,6 +79,11 @@
           "type": "string",
           "description": "Free-text note about this term's usage, caveats, or lifecycle. Use for legacy terms (e.g., 'Legacy Ethereum term. Preferred: consensus layer'), PoW-vs-PoS disambiguation (e.g., 'Applies to proof-of-work systems; do not confuse with validator in PoS'), or any other guidance that doesn't fit elsewhere."
         },
+        "casing": {
+          "type": "string",
+          "description": "English capitalization rule. standard: lowercase, capitalize at sentence start (gas, block). proper: always capitalized (Ethereum, Solidity). uppercase: always all-caps (EVM, NFT, ETH). fixed: never alter, use exact stored string (zkEVM, DeFi, MetaMask, ethereum.org).",
+          "enum": ["standard", "proper", "uppercase", "fixed"]
+        },
         "aliases": {
           "type": "array",
           "description": "Alternative English forms that resolve to this concept. Each alias can be a plain string or an object with status metadata.",

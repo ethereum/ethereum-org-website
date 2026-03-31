@@ -9366,49 +9366,6 @@
     "confidence": "high",
     "notes": "Portmanteau of 'boot' and 'node'; best preserved via phonetic transliteration."
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "EIP-7702 পেক্ট্রা আপগ্রেডের মাধ্যমে স্মার্ট কন্ট্রাক্ট ওয়ালেটের জন্য একাউন্ট অ্যাবস্ট্রাকশন সুবিধা প্রদান করে।"
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP-7702"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier kept in Latin script as per rules."
-  },
   "allowance": {
     "term": "অ্যালাউন্স",
     "aliases": [
@@ -9831,49 +9788,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Consensus client name transliterated per rules."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "EIP-4844 ইথেরিয়াম রোলআপের জন্য ডেটা স্টোরেজ খরচ উল্লেখযোগ্যভাবে কমিয়ে দেয়।"
-      },
-      "heading": {
-        "term": "EIP-4844 আপডেট"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844 বিবরণ"
-      },
-      "code": {
-        "term": "eip_4844"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Protocol improvement proposal kept in Latin script per rules."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -12882,55 +12796,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "টোকেনাইজড ইয়েল্ড ভল্টের জন্য ERC-4626 একটি স্ট্যান্ডার্ড ইন্টারফেস প্রদান করে।"
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "erc4626"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4626",
-      "two": "ERC-4626",
-      "few": "ERC-4626",
-      "many": "ERC-4626",
-      "other": "ERC-4626"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Protocol standard identifier kept in Latin script."
-  },
   "reentrancy": {
     "term": "রিএন্ট্রান্সি",
     "aliases": [
@@ -14488,49 +14353,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": "ERC-777",
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "ERC-777 টোকেন স্ট্যান্ডার্ডটি স্মার্ট কন্ট্রাক্টে হুক ব্যবহারের সুবিধা প্রদান করে।"
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "ERC-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "script_rule: keep_latin applied."
-  },
   "pending transaction": {
     "term": "অপেক্ষমাণ লেনদেন",
     "aliases": [
@@ -15248,49 +15070,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "ERC-223 টোকেন স্ট্যান্ডার্ড ইআরসি-২০ এর কিছু ট্রান্সফার সমস্যা সমাধান করে।"
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "poap": {
     "term": "POAP",
     "aliases": [],
@@ -15377,55 +15156,6 @@
     "plurals": null,
     "source": "llm",
     "confidence": "medium",
-    "notes": null
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "ERC-4337 ইথেরিয়ামে স্মার্ট অ্যাকাউন্ট সমর্থন করতে সাহায্য করে।"
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4337"
-    },
-    "source": "llm",
-    "confidence": "high",
     "notes": null
   },
   "paymaster": {
@@ -16237,55 +15967,6 @@
     "confidence": "high",
     "notes": null
   },
-  "on-chain": {
-    "term": "অনচেইন",
-    "aliases": [],
-    "transliteration": "onchein",
-    "morphology": {
-      "noun": {
-        "singular": "অনচেইন"
-      },
-      "verb": null,
-      "adjective": "অনচেইন",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "অনচেইন",
-        "example": "আমাদের প্ল্যাটফর্মের প্রতিটি ট্রানজ্যাকশন ডেটা অনচেইন সংরক্ষণ করা হয়।"
-      },
-      "heading": {
-        "term": "অনচেইন"
-      },
-      "tag": {
-        "term": "অনচেইন"
-      },
-      "ui": {
-        "term": "অনচেইন ডেটা"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "অনচেইন",
-      "two": "অনচেইন",
-      "few": "অনচেইন",
-      "many": "অনচেইন",
-      "other": "অনচেইন"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions."
-  },
   "swarm": {
     "term": "সোয়ার্ম",
     "aliases": [
@@ -17091,51 +16772,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Universally known in the crypto context as 'এয়ারড্রপ'."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc-1363-token": "ERC-1363 টোকেন"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "ERC-1363 স্ট্যান্ডার্ড টোকেন ট্রান্সফারের সাথে কাস্টম কোড একজিকিউট করার সুবিধা দেয়।"
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": "neuter",
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical standard identifier kept exactly as-is in Latin script."
   },
   "usdc": {
     "term": "USDC",
@@ -18616,47 +18252,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain": {
-    "term": "অফচেইন",
-    "aliases": [],
-    "transliteration": "ophchein",
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "অফচেইন",
-      "agent": null,
-      "negation": "অনচেইন",
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "অফচেইন",
-        "example": "মূল ব্লকচেইনের বাইরে লেনদেন দ্রুত সম্পন্ন করতে অফচেইন সমাধান ব্যবহার করা হয়।"
-      },
-      "heading": {
-        "term": "অফচেইন"
-      },
-      "tag": {
-        "term": "অফচেইন"
-      },
-      "ui": {
-        "term": "অফচেইন"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per instructions."
   },
   "da": {
     "term": "DA",
@@ -22271,57 +21866,6 @@
     "confidence": "high",
     "notes": "Kept as transliteration because standard translations like 'training' miss the web3 context."
   },
-  "peer-to-peer network": {
-    "term": "পিয়ার-টু-পিয়ার নেটওয়ার্ক",
-    "aliases": [
-      "পিটুপি নেটওয়ার্ক"
-    ],
-    "transliteration": "piyar-tu-piyar netwayark",
-    "morphology": {
-      "noun": {
-        "singular": "পিয়ার-টু-পিয়ার নেটওয়ার্ক"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "পিয়ার-টু-পিয়ার নেটওয়ার্ক",
-        "example": "ইথেরিয়াম একটি বিকেন্দ্রীকৃত পিয়ার-টু-পিয়ার নেটওয়ার্ক এর মাধ্যমে কাজ করে।"
-      },
-      "heading": {
-        "term": "পিয়ার-টু-পিয়ার নেটওয়ার্ক"
-      },
-      "tag": {
-        "term": "পিয়ার-টু-পিয়ার"
-      },
-      "ui": {
-        "term": "পিয়ার-টু-পিয়ার নেটওয়ার্ক"
-      },
-      "code": {
-        "term": "p2p_network"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "পিয়ার-টু-পিয়ার নেটওয়ার্ক",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "পিয়ার-টু-পিয়ার নেটওয়ার্কগুলো"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "অনুমতিসাপেক্ষ",
     "aliases": [
@@ -23237,108 +22781,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain governance": {
-    "term": "অফচেইন পরিচালনা",
-    "aliases": [
-      "অফচেইন শাসন"
-    ],
-    "transliteration": "aphacēina paricālanā",
-    "morphology": {
-      "noun": {
-        "singular": "অফচেইন পরিচালনা"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "অফচেইন পরিচালনা",
-        "example": "অফচেইন পরিচালনার ক্ষেত্রে সম্প্রদায়ের সদস্যরা ব্লকচেইনের বাইরে আলোচনা করে সিদ্ধান্ত নেন।"
-      },
-      "heading": {
-        "term": "অফচেইন পরিচালনা"
-      },
-      "tag": {
-        "term": "অফচেইন পরিচালনা"
-      },
-      "ui": {
-        "term": "অফচেইন পরিচালনা"
-      },
-      "code": {
-        "term": "offchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "অফচেইন পরিচালনা",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "অফচেইন পরিচালনা ব্যবস্থাগুলো"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Hyphen removed from transliteration in Bengali standardizing to 'অফচেইন' as requested for English rules but adapted locally."
-  },
-  "on-chain governance": {
-    "term": "অনচেইন পরিচালনা",
-    "aliases": [
-      "অনচেইন শাসন"
-    ],
-    "transliteration": "anacēina paricālanā",
-    "morphology": {
-      "noun": {
-        "singular": "অনচেইন পরিচালনা"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "অনচেইন পরিচালনা",
-        "example": "অনচেইন পরিচালনা ব্যবস্থায় স্মার্ট কন্ট্রাক্টের মাধ্যমে প্রস্তাবনার ওপর ভোট গ্রহণ করা হয়।"
-      },
-      "heading": {
-        "term": "অনচেইন পরিচালনা"
-      },
-      "tag": {
-        "term": "অনচেইন পরিচালনা"
-      },
-      "ui": {
-        "term": "অনচেইন পরিচালনা"
-      },
-      "code": {
-        "term": "onchainGovernance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "অনচেইন পরিচালনা",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "অনচেইন পরিচালনা ব্যবস্থাগুলো"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Standardized to 'অনচেইন' with no hyphens."
   },
   "sandwich attack": {
     "term": "স্যান্ডউইচ আক্রমণ",

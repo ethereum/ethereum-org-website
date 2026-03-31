@@ -9828,49 +9828,6 @@
     "confidence": "high",
     "notes": "English 'bootnode' is also widely understood, but 'başlatma düğümü' is the correct technical translation."
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "EIP-7702, Pectra güncellemesi ile hesap soyutlama özelliklerini geliştirir."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP7702"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Technical identifier, must be kept in Latin characters exactly as written."
-  },
   "allowance": {
     "term": "harcama izni",
     "aliases": [
@@ -10289,51 +10246,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Product name kept in its original form."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [
-      "Proto-Danksharding"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "EIP-4844 teklifi, Katman 2 ağlarında işlem ücretlerini önemli ölçüde düşürmeyi hedefler."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip-4844"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Standard Ethereum Improvement Proposal designation, kept exactly as written."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13273,49 +13185,6 @@
     "confidence": "high",
     "notes": "Used as a verbal noun in Turkish to match the '-ing' gerund form."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "ERC-4626, tokenize edilmiş getiri kasaları için standart bir arayüz sağlar."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "erc-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "erc4626"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "reentrancy": {
     "term": "yeniden giriş",
     "aliases": [
@@ -14845,57 +14714,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "erc-777-standard": "ERC-777 standardı"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "Bu akıllı sözleşme ERC-777 token standardını uygular."
-      },
-      "heading": {
-        "term": "ERC-777"
-      },
-      "tag": {
-        "term": "erc-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-777'ler"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept as Latin string per script_rule. Suffixes are separated with an apostrophe in Turkish (e.g., ERC-777'nin)."
-  },
   "pending transaction": {
     "term": "bekleyen işlem",
     "aliases": [
@@ -15721,49 +15539,6 @@
     "confidence": "high",
     "notes": null
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "ERC-223 standardı, ERC-20 token transferlerinde sıklıkla karşılaşılan token kaybı sorunlarını çözer."
-      },
-      "heading": {
-        "term": "ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "ERC-223"
-      },
-      "code": {
-        "term": "erc223"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "poap": {
     "term": "POAP",
     "aliases": [
@@ -15868,49 +15643,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Used widely in 'intent-based architectures' (niyet odaklı mimariler)."
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "ERC-4337 standardı, Ethereum ağında hesap soyutlamasını uygular."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "erc-4337"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "paymaster": {
     "term": "ödemeci",
@@ -16710,53 +16442,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "zincir üstü",
-    "aliases": [
-      "onchain",
-      "zinciriçi"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "zincir üstü",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "on-chain governance": "zincir üstü yönetişim",
-        "on-chain data": "zincir üstü veri"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "zincir üstü",
-        "example": "Tüm akıllı kontrat işlemleri zincir üstü gerçekleştiği için herkes tarafından doğrulanabilir."
-      },
-      "heading": {
-        "term": "Zincir Üstü"
-      },
-      "tag": {
-        "term": "onchain"
-      },
-      "ui": {
-        "term": "Zincir Üstü"
-      },
-      "code": {
-        "term": "onchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written as two words in Turkish. Follows the hyphen removal rule for standard 'onchain' representation."
   },
   "swarm": {
     "term": "Swarm",
@@ -17659,55 +17344,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Directly adopted as a loanword in the Turkish crypto community. Native translations exist but are rarely used."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "ERC-1363 standardı, token transferi onaylandıktan hemen sonra alıcı sözleşmede kod yürütülmesine olanak tanır."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-1363'ler"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "usdc": {
     "term": "USDC",
@@ -19322,52 +18958,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain": {
-    "term": "zincirdışı",
-    "aliases": [
-      "offchain",
-      "zincir dışı"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "zincirdışı",
-      "agent": null,
-      "negation": null,
-      "compounds": {
-        "transaction": "zincirdışı işlem"
-      }
-    },
-    "contexts": {
-      "prose": {
-        "term": "zincirdışı",
-        "example": "Rollup'lar, ölçeklenebilirliği artırmak için zincirdışı hesaplama kullanır."
-      },
-      "heading": {
-        "term": "Zincirdışı"
-      },
-      "tag": {
-        "term": "Zincirdışı"
-      },
-      "ui": {
-        "term": "Zincirdışı"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Written without hyphens per specific terminology rules for 'onchain'/'offchain' adaptation."
   },
   "da": {
     "term": "DA",
@@ -23290,52 +22880,6 @@
     "confidence": "high",
     "notes": "In crypto/Web3 context, onboarding is universally about getting users integrated into the ecosystem/app, so 'sisteme katılım' is most appropriate."
   },
-  "peer-to-peer network": {
-    "term": "eşler arası ağ",
-    "aliases": [
-      "P2P ağ",
-      "noktadan noktaya ağ"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "eşler arası ağ"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "eşler arası ağlar",
-        "example": "Blokzinciri teknolojisi, işlemlerin doğrudan onaylandığı merkeziyetsiz eşler arası ağlar üzerinde çalışır."
-      },
-      "heading": {
-        "term": "Eşler Arası Ağ"
-      },
-      "tag": {
-        "term": "P2P Ağ"
-      },
-      "ui": {
-        "term": "Eşler Arası Ağ"
-      },
-      "code": {
-        "term": "eslerArasiAg"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "izinli",
     "aliases": [
@@ -24303,104 +23847,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "off-chain governance": {
-    "term": "zincir dışı yönetişim",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "zincir dışı yönetişim"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "zincir dışı yönetişim",
-        "example": "Proje, topluluk forumlarındaki zincir dışı yönetişim süreçleriyle yönlendirilmektedir."
-      },
-      "heading": {
-        "term": "Zincir Dışı Yönetişim"
-      },
-      "tag": {
-        "term": "zincir-disi-yonetisim"
-      },
-      "ui": {
-        "term": "Zincir Dışı Yönetişim"
-      },
-      "code": {
-        "term": "offchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "zincir dışı yönetişim",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "zincir dışı yönetişimler"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kural gereği İngilizce bağlamında tire kullanılmamıştır; Türkçede 'zincir dışı' ayrı yazılır."
-  },
-  "on-chain governance": {
-    "term": "zincir içi yönetişim",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "zincir içi yönetişim"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "zincir içi yönetişimi",
-        "example": "Token sahipleri zincir içi yönetişimi kullanarak oylama yapabilirler."
-      },
-      "heading": {
-        "term": "Zincir İçi Yönetişim"
-      },
-      "tag": {
-        "term": "zincir-ici-yonetisim"
-      },
-      "ui": {
-        "term": "Zincir İçi Yönetişim"
-      },
-      "code": {
-        "term": "onchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "zincir içi yönetişim",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "zincir içi yönetişimler"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kural gereği İngilizce bağlamında tire kullanılmamıştır; Türkçede 'zincir içi' ayrı yazılır."
   },
   "sandwich attack": {
     "term": "sandviç saldırısı",

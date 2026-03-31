@@ -9821,55 +9821,6 @@
     "confidence": "medium",
     "notes": "Descriptive translation meaning 'starting/initiating node'."
   },
-  "eip-7702": {
-    "term": "EIP-7702",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-7702"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-7702",
-        "example": "EIP-7702 inaboresha utendaji na usalama wa akaunti za watumiaji."
-      },
-      "heading": {
-        "term": "EIP-7702"
-      },
-      "tag": {
-        "term": "EIP-7702"
-      },
-      "ui": {
-        "term": "EIP-7702"
-      },
-      "code": {
-        "term": "EIP_7702"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "abbreviation",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "EIP-7702",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "EIP-7702"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Maintained in English as it is a specific standard identifier."
-  },
   "allowance": {
     "term": "kibali",
     "aliases": [
@@ -10305,49 +10256,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Product name. Standard Latin orthography maintained in Swahili texts."
-  },
-  "eip-4844": {
-    "term": "EIP-4844",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "EIP-4844"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "EIP-4844",
-        "example": "EIP-4844 inatarajiwa kupunguza gharama za miamala kwa suluhisho za kiwango cha pili."
-      },
-      "heading": {
-        "term": "EIP-4844"
-      },
-      "tag": {
-        "term": "EIP-4844"
-      },
-      "ui": {
-        "term": "EIP-4844"
-      },
-      "code": {
-        "term": "eip-4844"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Protocol improvement proposal identifier; standard practice is keeping it untranslated."
   },
   "peerdas": {
     "term": "PeerDAS",
@@ -13351,49 +13259,6 @@
     "confidence": "high",
     "notes": "Uncountable noun in class U."
   },
-  "erc-4626": {
-    "term": "ERC-4626",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4626"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4626",
-        "example": "Kiwango cha ERC-4626 kinarahisisha uunganishaji wa mkataba wa amana."
-      },
-      "heading": {
-        "term": "ERC-4626"
-      },
-      "tag": {
-        "term": "ERC-4626"
-      },
-      "ui": {
-        "term": "ERC-4626"
-      },
-      "code": {
-        "term": "ERC4626"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Standard protocol identifier, kept in Latin script."
-  },
   "reentrancy": {
     "term": "uingiaji upya",
     "aliases": [
@@ -14942,55 +14807,6 @@
     "confidence": "high",
     "notes": "Place name acts as the protocol upgrade identifier directly."
   },
-  "erc-777": {
-    "term": "ERC-777",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-777"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-777",
-        "example": "Kiwango cha ERC-777 kinaruhusu mikataba mahiri kupokea tokani kwa njia salama zaidi."
-      },
-      "heading": {
-        "term": "Kiwango cha ERC-777"
-      },
-      "tag": {
-        "term": "erc-777"
-      },
-      "ui": {
-        "term": "ERC-777"
-      },
-      "code": {
-        "term": "ERC777"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-777",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-777"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script as per instructions. It is an acronym for Ethereum Request for Comments."
-  },
   "pending transaction": {
     "term": "muamala unaosubiri",
     "aliases": [
@@ -15804,49 +15620,6 @@
     "confidence": "high",
     "notes": "Noun class 11 (u-). 'Msimbo chanzo' is a standard term for source code."
   },
-  "erc-223": {
-    "term": "ERC-223",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-223"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-223",
-        "example": "Kiwango cha ERC-223 kinalenga kutatua matatizo ya upotevu wa tokeni unaopatikana katika ERC-20."
-      },
-      "heading": {
-        "term": "Kiwango cha ERC-223"
-      },
-      "tag": {
-        "term": "ERC-223"
-      },
-      "ui": {
-        "term": "Tokeni ya ERC-223"
-      },
-      "code": {
-        "term": "ERC223"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Kept in Latin script per rule."
-  },
   "poap": {
     "term": "POAP",
     "aliases": [],
@@ -15946,55 +15719,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Noun class 9/10 (n-/n-)."
-  },
-  "erc-4337": {
-    "term": "ERC-4337",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-4337"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-4337",
-        "example": "Kiwango cha ERC-4337 kinaruhusu ufupishaji wa akaunti."
-      },
-      "heading": {
-        "term": "ERC-4337"
-      },
-      "tag": {
-        "term": "ERC-4337"
-      },
-      "ui": {
-        "term": "ERC-4337"
-      },
-      "code": {
-        "term": "ERC-4337"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "ERC-4337",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-4337"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Ethereum standard identifier, kept in Latin script as per rules."
   },
   "paymaster": {
     "term": "mlipiaji",
@@ -16763,49 +16487,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": null
-  },
-  "on-chain": {
-    "term": "kwenye mnyororo",
-    "aliases": [
-      "ndani ya mnyororo"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "kwenye mnyororo",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "kwenye mnyororo",
-        "example": "Data zote za miamala zinahifadhiwa moja kwa moja kwenye mnyororo bila kuhitaji mpatanishi."
-      },
-      "heading": {
-        "term": "Kwenye Mnyororo"
-      },
-      "tag": {
-        "term": "kwenye-mnyororo"
-      },
-      "ui": {
-        "term": "Kwenye Mnyororo"
-      },
-      "code": {
-        "term": "kwenye_mnyororo"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": "Swahili doesn't hyphenate this prepositional phrase."
   },
   "swarm": {
     "term": "Kundi",
@@ -17653,55 +17334,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Often left as airdrop in informal crypto parlance; mgao wa bure is technically precise."
-  },
-  "erc-1363": {
-    "term": "ERC-1363",
-    "aliases": [],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "ERC-1363"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "ERC-1363",
-        "example": "Tokeni inafuata kiwango cha ERC-1363 kwa malipo ya hali ya juu."
-      },
-      "heading": {
-        "term": "ERC-1363"
-      },
-      "tag": {
-        "term": "ERC-1363"
-      },
-      "ui": {
-        "term": "ERC-1363"
-      },
-      "code": {
-        "term": "ERC1363"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "proper_noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "ERC-1363",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "ERC-1363"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "usdc": {
     "term": "USDC",
@@ -19252,49 +18884,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Represented primarily as a descriptive adjective phrase matching noun classes depending on usage."
-  },
-  "off-chain": {
-    "term": "nje ya mnyororo",
-    "aliases": [
-      "offchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": null,
-      "verb": null,
-      "adjective": "ya nje ya mnyororo",
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "nje ya mnyororo",
-        "example": "Miamala ya nje ya mnyororo inasaidia kupunguza msongamano na ada katika mtandao mkuu."
-      },
-      "heading": {
-        "term": "Nje ya Mnyororo"
-      },
-      "tag": {
-        "term": "nje-ya-mnyororo"
-      },
-      "ui": {
-        "term": "Nje ya Mnyororo"
-      },
-      "code": {
-        "term": "offchain"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "adjective",
-      "formality": "neutral"
-    },
-    "plurals": null,
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "da": {
     "term": "DA",
@@ -23227,57 +22816,6 @@
     "confidence": "high",
     "notes": "Refers to the process of bringing users into the ecosystem."
   },
-  "peer-to-peer network": {
-    "term": "mtandao wa rika-kwa-rika",
-    "aliases": [
-      "mtandao wa P2P"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "mtandao wa rika-kwa-rika"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": {}
-    },
-    "contexts": {
-      "prose": {
-        "term": "mtandao wa rika-kwa-rika",
-        "example": "Ethereum inafanya kazi kama mtandao wa rika-kwa-rika uliogatuliwa."
-      },
-      "heading": {
-        "term": "Mtandao wa Rika-kwa-Rika"
-      },
-      "tag": {
-        "term": "rika-kwa-rika"
-      },
-      "ui": {
-        "term": "Mtandao wa P2P"
-      },
-      "code": {
-        "term": "p2pNetwork"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "neutral"
-    },
-    "plurals": {
-      "one": "mtandao wa rika-kwa-rika",
-      "two": "mitandao miwili ya rika-kwa-rika",
-      "few": "mitandao michache ya rika-kwa-rika",
-      "many": "mitandao mingi ya rika-kwa-rika",
-      "other": "mitandao ya rika-kwa-rika"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
   "permissioned": {
     "term": "yenye ruhusa",
     "aliases": [],
@@ -24234,109 +23772,6 @@
     "source": "llm",
     "confidence": "high",
     "notes": "Web2 is commonly used as-is in tech contexts in Swahili, occasionally referred to as Wavuti2."
-  },
-  "off-chain governance": {
-    "term": "utawala nje ya mnyororo",
-    "aliases": [
-      "utawala wa offchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "utawala nje ya mnyororo"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "utawala nje ya mnyororo",
-        "example": "Ethereum kimsingi hutumia utawala nje ya mnyororo kupitia michakato kama EIPs."
-      },
-      "heading": {
-        "term": "Utawala Nje ya Mnyororo"
-      },
-      "tag": {
-        "term": "utawala-nje-ya-mnyororo"
-      },
-      "ui": {
-        "term": "Utawala Nje Ya Mnyororo"
-      },
-      "code": {
-        "term": "offchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "utawala nje ya mnyororo",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "tawala nje ya mnyororo"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
-  },
-  "on-chain governance": {
-    "term": "utawala kwenye mnyororo",
-    "aliases": [
-      "utawala ndani ya mnyororo",
-      "utawala wa onchain"
-    ],
-    "transliteration": null,
-    "morphology": {
-      "noun": {
-        "singular": "utawala kwenye mnyororo"
-      },
-      "verb": null,
-      "adjective": null,
-      "agent": null,
-      "negation": null,
-      "compounds": null
-    },
-    "contexts": {
-      "prose": {
-        "term": "utawala kwenye mnyororo",
-        "example": "Utawala kwenye mnyororo huruhusu wapiga kura kutekeleza mabadiliko moja kwa moja kupitia mikataba nadhifu."
-      },
-      "heading": {
-        "term": "Utawala Kwenye Mnyororo"
-      },
-      "tag": {
-        "term": "utawala-kwenye-mnyororo"
-      },
-      "ui": {
-        "term": "Utawala Kwenye Mnyororo"
-      },
-      "code": {
-        "term": "onchain_governance"
-      }
-    },
-    "grammar": {
-      "gender": null,
-      "animacy": "inanimate",
-      "part_of_speech": "noun",
-      "formality": "formal"
-    },
-    "plurals": {
-      "one": "utawala kwenye mnyororo",
-      "two": null,
-      "few": null,
-      "many": null,
-      "other": "tawala kwenye mnyororo"
-    },
-    "source": "llm",
-    "confidence": "high",
-    "notes": null
   },
   "sandwich attack": {
     "term": "shambulio la sandwichi",
