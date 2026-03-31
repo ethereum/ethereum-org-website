@@ -88,6 +88,12 @@ A GitHub Action exports approved translations from Supabase to the repo's JSON f
 - **Git-as-backend for community writes**: Merge conflicts, race conditions, sluggish UX. Not realistic for an interactive app.
 - **Move lookup module to direct DB queries**: No performance benefit at this scale. Adds a runtime dependency. Keep it reading JSON.
 
+## Future consideration: separate repo
+
+The glossary could eventually live in its own repo (e.g., `ethereum/translation-glossary`). This makes sense once the data stabilizes and multiple consumers exist (this repo's pipeline, ethglossary.xyz community platform, other ecosystem projects). A standalone repo would allow independent versioning, cleaner CI, and easier external consumption.
+
+**Not now**: the glossary is tightly coupled to the translation pipeline during active development. Splitting adds sync friction and a cross-repo dependency. Revisit when the community platform is built and the glossary becomes a standalone data product.
+
 ## References
 
 - Gemini assessment: "DB for source, JSON for distribution" (2026-03-31)
