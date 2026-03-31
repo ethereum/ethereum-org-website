@@ -1,0 +1,48 @@
+import os
+import json
+import sys
+
+# พาธไปยังไฟล์ภาษาไทยในโปรเจกต์
+TH_PATH = "src/data/translations/th/"
+
+# รายการคำศัพท์ที่ต้องการตรวจสอบความถูกต้อง
+TERM_CHECK = {
+    "บล็อกเชน": "Blockchain", 
+    "สมาร์ทคอนแทรค": "Smart Contract",
+    "อีเธอร์": "Ether"
+}
+
+def validate_thai_files():
+    print("🔍 Starting Thai content validation...")
+    error_count = 0
+    
+    if not os.path.exists(TH_PATH):
+        print(f"❌ Error: Path not found: {TH_PATH}")
+        return
+
+    for root, dirs, files in os.walk(TH_PATH):
+        for file in files:
+            if file.endswith(".json"):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        # ตรวจสอบว่า JSON รูปแบบถูกต้องไหม
+                        json.loads(content)
+                        
+                        # ตรวจสอบคำศัพท์มาตรฐาน
+                        for th, en in TERM_CHECK.items():
+                            if th in content:
+                                print(f"⚠️  Suggestion: Found '{th}' in {file}. Consider using '{en}' for consistency.")
+                except Exception as e:
+                    print(f"❌ Failed to parse: {file_path} - {str(e)}")
+                    error_count += 1
+
+    if error_count > 0:
+        print(f"\n🚫 Total errors found: {error_count}")
+        sys.exit(1)
+    else:
+        print("\n✅ All Thai translation files are valid!")
+
+if __name__ == "__main__":
+    validate_thai_files()
