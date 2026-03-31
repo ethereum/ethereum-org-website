@@ -781,7 +781,7 @@ The solution is to have separate functions in `UserProxy` for commonly used func
 
 In addition to the vulnerabilities above, the solution in this tutorial has several drawbacks that Ethereum can help us address.
 
-- *Censorship resistance*. Currently, users can use your server, a competing server set up by someone else, or connect to Ethereum directly, which incurs gas costs. Using [ERC-4337](https://docs.erc4337.io/#what-is-erc-4337) lets users traverse a large pool of servers, reducing the likelihood that their transactions will be censored.
+- *Censorship resistance*. Currently, users can use your server, a competing server set up by someone else, or connect to Ethereum directly, which incurs gas costs. Using [ERC-4337](https://docs.erc4337.io/#what-is-erc-4337) lets users offer their transaction to a large pool of servers, reducing the likelihood that their transactions will be censored.
 - *EOA owned assets*. As noted above, [EIP-7702](https://eip7702.io/) can be used to manage assets already owned by an EOA address. This has its difficulties, but sometimes it is necessary.
 
 I hope to publish tutorials about adding these features in the near future.
