@@ -8,7 +8,7 @@ import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
-import allContributors from "../../../.all-contributorsrc"
+import allContributors from "../../../all-contributors.json"
 
 export interface Contributor {
   login: string

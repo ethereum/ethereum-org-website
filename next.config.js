@@ -1,10 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-})
-
 const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
@@ -48,12 +44,6 @@ module.exports = (phase) => {
         "https://ethereum.org",
     },
     webpack: (config) => {
-      // Parse .all-contributorsrc as JSON (no .json extension)
-      config.module.rules.push({
-        test: /\.all-contributorsrc$/,
-        type: "json",
-      })
-
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: "yaml-loader",
@@ -253,7 +243,7 @@ module.exports = (phase) => {
     }
   }
 
-  return withBundleAnalyzer(withNextIntl(nextConfig))
+  return withNextIntl(nextConfig)
 }
 
 module.exports = withSentryConfig(module.exports, {
