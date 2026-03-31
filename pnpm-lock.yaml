@@ -394,9 +394,6 @@ importers:
       unist-util-visit:
         specifier: ^5.0.0
         version: 5.0.0
-      vite:
-        specifier: ^7.0.0
-        version: 7.3.1(@types/node@20.17.57)(jiti@2.6.1)(terser@5.40.0)(yaml@2.8.0)
       xml2js:
         specifier: ^0.6.2
         version: 0.6.2
@@ -19977,6 +19974,7 @@ snapshots:
       '@esbuild/win32-arm64': 0.27.4
       '@esbuild/win32-ia32': 0.27.4
       '@esbuild/win32-x64': 0.27.4
+    optional: true
 
   escalade@3.2.0: {}
 
@@ -24446,6 +24444,7 @@ snapshots:
       jiti: 2.6.1
       terser: 5.40.0
       yaml: 2.8.0
+    optional: true
 
   vm-browserify@1.1.2: {}
 
