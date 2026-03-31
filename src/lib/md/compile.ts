@@ -1,8 +1,9 @@
 import fs from "fs"
 import { join } from "path"
 
-import { SerializeOptions } from "next-mdx-remote/dist/types"
 import { compileMDX, MDXRemoteProps } from "next-mdx-remote/rsc"
+
+type SerializeOptions = NonNullable<MDXRemoteProps["options"]>
 import { getPlaiceholder } from "plaiceholder"
 import remarkSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
