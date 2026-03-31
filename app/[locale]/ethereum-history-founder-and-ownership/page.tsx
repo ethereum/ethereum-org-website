@@ -572,10 +572,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-ethereum-history-founder-and-ownership",
-  })
+  const t = await getTranslations("page-ethereum-history-founder-and-ownership")
 
   return await getMetadata({
     locale,

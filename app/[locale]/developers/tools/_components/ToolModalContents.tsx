@@ -21,11 +21,8 @@ import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
 const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
   const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-developers-tools")
+  const tCommon = await getTranslations("common")
 
   const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 

@@ -38,10 +38,7 @@ const Page = async (props: {
   const { toolId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer apps data available")
@@ -172,10 +169,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   return await getMetadata({
     locale,

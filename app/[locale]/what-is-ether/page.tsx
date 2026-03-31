@@ -709,10 +709,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ether",
-  })
+  const t = await getTranslations("page-what-is-ether")
 
   return await getMetadata({
     locale,

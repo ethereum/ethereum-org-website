@@ -22,7 +22,7 @@ export const getLanguagesDisplayInfo = async (): Promise<
   LocaleDisplayInfo[]
 > => {
   const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("common")
 
   // Early return if no locales
   if (!FILTERED_LOCALES?.length) return []

@@ -49,10 +49,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-trillion-dollar-security",
-  })
+  const t = await getTranslations("page-trillion-dollar-security")
 
   const { contributors } = await getAppPageContributorInfo(
     "trillion-dollar-security",
@@ -1096,10 +1093,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-trillion-dollar-security",
-  })
+  const t = await getTranslations("page-trillion-dollar-security")
 
   return await getMetadata({
     locale,

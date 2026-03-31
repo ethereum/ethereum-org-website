@@ -64,7 +64,7 @@ const BigNumber = async ({
   variant,
 }: BigNumberProps) => {
   const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("common")
 
   const lastUpdatedDisplay =
     lastUpdated && isValidDate(lastUpdated)
