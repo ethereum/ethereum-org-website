@@ -12,7 +12,13 @@ Consumers:
 3. **Dashboard** (`glossary-dashboard.html`) -- fetches JSON via HTTP
 4. **Future: community platform** (ethglossary.xyz rebuild) -- SIWE auth, user feedback
 
-## Decision: JSON now, database later, sync between them
+## Decision: JSON only for now. No site integration complexity.
+
+**Key constraint**: These files live in `scripts/` -- they are NOT in `src/`, `public/`, or `app/`. Next.js does not touch them. They have zero impact on bundle size, build time, or the live site. They stay as standalone data files consumed only by the translation pipeline and developer tooling.
+
+**Future**: When a dedicated community-facing frontend is built (ethglossary.xyz rebuild), migrate to SQL (likely Supabase). The JSON files become a build artifact exported from the database. Return to this document when that work begins.
+
+## Migration path: JSON -> SQL (when ready)
 
 ### Phase 1: JSON (current)
 
