@@ -667,5 +667,12 @@
     "link": "https://x.com/ETHBhopal",
     "logoImage": "https://pbs.twimg.com/profile_images/1948524184826519552/UovL_jXR_400x400.jpg",
     "bannerImage": "https://pbs.twimg.com/profile_images/1948524184826519552/UovL_jXR_400x400.jpg"
+  },
+  {
+    "title": "Ethereum Research Symposium (ETHReS) 2026",
+    "location": "Prague, Czech Republic",
+    "link": "https://ethres.org",
+    "logoImage": "/images/meetups/ethres-2026-banner.jpg",
+    "bannerImage": "/images/meetups/ethres-2026-banner.jpg"
   }
 ]
