@@ -170,9 +170,7 @@ const rehypeImg = (options: Options) => {
         }
 
         // Replace slashes from windows paths with forward slashes
-        const originalPath = path
-          .join(/* turbopackIgnore: true */ srcPath, src)
-          .replace(/\\/g, "/")
+        const originalPath = path.join(srcPath, src).replace(/\\/g, "/")
         const translatedImgPath = getTranslatedImgPath(originalPath, locale)
         const imageIsTranslated = checkIfImageIsTranslated(translatedImgPath)
 
