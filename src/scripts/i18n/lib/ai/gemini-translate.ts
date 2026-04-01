@@ -22,6 +22,10 @@ import {
   restoreComments,
 } from "./code-block-extractor"
 import {
+  normalizeContent,
+  type ContentNode,
+} from "./content-normalizer"
+import {
   validateTranslatedJson,
   validateTranslatedMarkdown,
   type ValidationResult,
@@ -85,6 +89,10 @@ export interface TranslateFileOptions {
   glossaryTerms: Map<string, string>
   /** Set by JSON batching when HTML tags have been extracted to placeholders */
   htmlExtracted?: boolean
+  /** Use the content normalizer for placeholder-based translation */
+  useNormalizer?: boolean
+  /** Content has been normalized with HTML-PLACEHOLDER tags (set internally) */
+  normalized?: boolean
 }
 
 export interface TranslateFileResult {
@@ -125,7 +133,12 @@ export async function translateFile(
     return translateJsonFile(options)
   }
 
-  // Markdown: extract code blocks first
+  // Markdown with normalizer: placeholder-based translation
+  if (options.useNormalizer) {
+    return translateNormalizedMarkdown(options)
+  }
+
+  // Markdown legacy path: extract code blocks first
   const { prose, blocks } = extractCodeBlocks(fileContent)
 
   if (blocks.length > 0) {
@@ -187,6 +200,290 @@ export async function translateFile(
     translatedContent: finalContent,
     tokensUsed: totalTokens,
   }
+}
+
+/**
+ * Translate markdown using the content normalizer.
+ *
+ * Flow:
+ *   1. Normalize: replace non-translatable content with placeholders
+ *   2. Chunk if needed (same heading-based chunking as legacy path)
+ *   3. Send normalized prose to Gemini (with placeholder rules in prompt)
+ *   4. Verify all placeholders survived in response
+ *   5. Reconstruct: replace block placeholders with originals,
+ *      rebuild wrapper placeholders with translated text
+ *   6. Translate code comments separately (from normalizer tree)
+ */
+async function translateNormalizedMarkdown(
+  options: TranslateFileOptions
+): Promise<TranslateFileResult> {
+  const { filePath, fileContent, targetLanguage, glossaryTerms } = options
+
+  // Step 1: Normalize
+  const { normalized, tree, extractions } = normalizeContent(fileContent)
+
+  const blockCount = Array.from(extractions.keys()).filter(
+    (k) => !k.startsWith("LINK:") && !k.startsWith("HTMLTAG:")
+  ).length
+  const wrapperCount = extractions.size - blockCount
+
+  console.log(
+    `  [normalize] ${filePath}: ${blockCount} block + ${wrapperCount} wrapper placeholders ` +
+      `(${fileContent.length} -> ${normalized.length} chars)`
+  )
+
+  // Step 2: Chunk if needed
+  const chunks = chunkProse(normalized, PROSE_SIZE_THRESHOLD)
+  let translatedProse: string
+  let totalTokens = { input: 0, output: 0 }
+
+  if (chunks.length === 1) {
+    const result = await callGemini(
+      { ...options, fileContent: normalized, normalized: true },
+      { filePath, targetLanguage }
+    )
+    translatedProse = result.translatedContent
+    totalTokens = result.tokensUsed
+  } else {
+    console.log(`  [chunk] ${filePath}: split into ${chunks.length} chunks`)
+    const translatedChunks: string[] = []
+    for (let i = 0; i < chunks.length; i++) {
+      const result = await callGemini(
+        { ...options, fileContent: chunks[i], normalized: true },
+        { filePath, targetLanguage, chunkIndex: i, totalChunks: chunks.length }
+      )
+      translatedChunks.push(result.translatedContent)
+      totalTokens.input += result.tokensUsed.input
+      totalTokens.output += result.tokensUsed.output
+    }
+    translatedProse = translatedChunks.join("\n\n")
+  }
+
+  // Step 4: Verify placeholders survived
+  const missingPlaceholders = verifyPlaceholders(normalized, translatedProse)
+  if (missingPlaceholders.length > 0) {
+    console.warn(
+      `  [normalize] ${filePath}: ${missingPlaceholders.length} placeholder(s) missing in translation:\n` +
+        missingPlaceholders.map((p) => `    - ${p}`).join("\n")
+    )
+  }
+
+  // Step 5: Reconstruct
+  let finalContent = reconstructFromPlaceholders(translatedProse, extractions)
+
+  // Step 6: Translate code comments (from normalizer tree)
+  const commentNodes = collectCommentNodes(tree)
+  if (commentNodes.length > 0) {
+    try {
+      finalContent = await translateNormalizedComments(
+        finalContent,
+        commentNodes,
+        targetLanguage,
+        glossaryTerms,
+        filePath
+      )
+    } catch (error) {
+      console.warn(
+        `  [comments] ${filePath}: comment translation failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+      )
+    }
+  }
+
+  return {
+    translatedContent: finalContent,
+    tokensUsed: totalTokens,
+  }
+}
+
+/**
+ * Verify all placeholder tags from the normalized input survive in the translation.
+ * Returns a list of missing placeholders.
+ */
+function verifyPlaceholders(
+  normalized: string,
+  translated: string
+): string[] {
+  const missing: string[] = []
+
+  // Block placeholders (self-closing)
+  const blockRe = /<HTML-PLACEHOLDER-(?:CODEBLOCK|CODE|COMPONENT|IMAGE)-[a-f0-9]+ \/>/g
+  let match
+  while ((match = blockRe.exec(normalized)) !== null) {
+    if (!translated.includes(match[0])) {
+      missing.push(match[0])
+    }
+  }
+
+  // Wrapper open tags
+  const wrapperOpenRe = /<HTML-PLACEHOLDER-(?:LINK|HTMLTAG)-[a-f0-9]+>/g
+  while ((match = wrapperOpenRe.exec(normalized)) !== null) {
+    if (!translated.includes(match[0])) {
+      missing.push(match[0])
+    }
+  }
+
+  // Wrapper close tags
+  const wrapperCloseRe = /<\/HTML-PLACEHOLDER-(?:LINK|HTMLTAG)-[a-f0-9]+>/g
+  while ((match = wrapperCloseRe.exec(normalized)) !== null) {
+    if (!translated.includes(match[0])) {
+      missing.push(match[0])
+    }
+  }
+
+  return missing
+}
+
+/**
+ * Reconstruct final markdown from Gemini's translated output and the extraction map.
+ *
+ * Block placeholders are replaced with their originals.
+ * Wrapper placeholders are rebuilt with the (potentially translated) text
+ * that Gemini placed between the tags.
+ */
+function reconstructFromPlaceholders(
+  translated: string,
+  extractions: Map<string, string>
+): string {
+  let result = translated
+
+  // Block placeholders: direct replacement with originals
+  extractions.forEach((original, placeholder) => {
+    if (placeholder.startsWith("LINK:") || placeholder.startsWith("HTMLTAG:")) {
+      return
+    }
+    result = result.replace(placeholder, original)
+  })
+
+  // Wrapper placeholders: LINK
+  extractions.forEach((original, key) => {
+    if (!key.startsWith("LINK:")) return
+    const hash = key.slice(5)
+    const openTag = `<HTML-PLACEHOLDER-LINK-${hash}>`
+    const closeTag = `</HTML-PLACEHOLDER-LINK-${hash}>`
+
+    const openIdx = result.indexOf(openTag)
+    const closeIdx = result.indexOf(closeTag)
+    if (openIdx >= 0 && closeIdx >= 0) {
+      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
+      const urlMatch = original.match(/\]\(([^)]+)\)/)
+      if (urlMatch) {
+        const rebuilt = `[${translatedText}](${urlMatch[1]})`
+        result =
+          result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+      }
+    }
+  })
+
+  // Wrapper placeholders: HTMLTAG
+  extractions.forEach((original, key) => {
+    if (!key.startsWith("HTMLTAG:")) return
+    const hash = key.slice(8)
+    const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+    const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+
+    const openIdx = result.indexOf(openTag)
+    const closeIdx = result.indexOf(closeTag)
+    if (openIdx >= 0 && closeIdx >= 0) {
+      const translatedText = result.slice(openIdx + openTag.length, closeIdx)
+      const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
+      const closingMatch = original.match(/<\/(\w+)>/)
+      if (tagMatch && closingMatch) {
+        const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
+        result =
+          result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+      }
+    }
+  })
+
+  return result
+}
+
+/**
+ * Collect code comment nodes from the normalizer tree.
+ */
+function collectCommentNodes(
+  tree: ContentNode[]
+): Array<{ text: string; language: string; line: string; commentType: string }> {
+  const comments: Array<{ text: string; language: string; line: string; commentType: string }> = []
+
+  function visit(node: ContentNode): void {
+    if (node.type === "code-comment") {
+      comments.push({
+        text: node.content,
+        language: node.meta.language,
+        line: node.meta.line,
+        commentType: node.meta.commentType,
+      })
+    }
+    if ("children" in node && node.children) {
+      for (const child of node.children) {
+        visit(child)
+      }
+    }
+  }
+
+  for (const node of tree) {
+    visit(node)
+  }
+  return comments
+}
+
+/**
+ * Translate code comments using data from the normalizer tree.
+ * Same approach as translateCodeComments but sources from the tree.
+ */
+async function translateNormalizedComments(
+  content: string,
+  commentNodes: Array<{ text: string; language: string; line: string; commentType: string }>,
+  targetLanguage: string,
+  glossaryTerms: Map<string, string>,
+  filePath: string
+): Promise<string> {
+  if (commentNodes.length === 0) return content
+
+  const commentPayload: Record<string, string> = {}
+  for (let i = 0; i < commentNodes.length; i++) {
+    commentPayload[`c${i}`] = commentNodes[i].text
+  }
+
+  const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
+  const glossaryLines: string[] = []
+  glossaryTerms.forEach((loc, en) => glossaryLines.push(`  ${en} = ${loc}`))
+  const glossaryHint =
+    glossaryLines.length > 0
+      ? `\nUse these exact translations for glossary terms:\n${glossaryLines.slice(0, 30).join("\n")}`
+      : ""
+
+  const commentPrompt = `Translate these code comments to ${languageName}. Return ONLY a JSON object with the same keys and translated values. Do not add explanations.${glossaryHint}
+
+${JSON.stringify(commentPayload, null, 2)}`
+
+  const result = await callGeminiRaw(commentPrompt, {
+    filePath,
+    targetLanguage,
+    label: "code-comments",
+  })
+
+  let translatedMap: Record<string, string>
+  try {
+    const cleaned = stripCodeBlockWrapping(result.text, "json")
+    translatedMap = JSON.parse(cleaned)
+  } catch {
+    console.warn("  [comments] Could not parse comment translation response")
+    return content
+  }
+
+  // Replace English comments with translated ones in the final content
+  for (let i = 0; i < commentNodes.length; i++) {
+    const original = commentNodes[i].text
+    const translated = translatedMap[`c${i}`]
+    if (translated && translated !== original) {
+      // Replace first occurrence (comments may repeat, handle one at a time)
+      content = content.replace(original, translated)
+    }
+  }
+
+  return content
 }
 
 /**
@@ -318,14 +615,11 @@ async function translateCodeComments(
   }
 
   const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
+  const glossaryLines: string[] = []
+  glossaryTerms.forEach((loc, en) => glossaryLines.push(`  ${en} = ${loc}`))
   const glossaryHint =
-    glossaryTerms.size > 0
-      ? `\nUse these exact translations for glossary terms:\n${[
-          ...glossaryTerms.entries(),
-        ]
-          .slice(0, 30)
-          .map(([en, loc]) => `  ${en} = ${loc}`)
-          .join("\n")}`
+    glossaryLines.length > 0
+      ? `\nUse these exact translations for glossary terms:\n${glossaryLines.slice(0, 30).join("\n")}`
       : ""
 
   const commentPrompt = `Translate these code comments to ${languageName}. Return ONLY a JSON object with the same keys and translated values. Do not add explanations.${glossaryHint}
@@ -392,6 +686,7 @@ async function callGemini(
     targetLanguage,
     glossaryTerms,
     htmlExtracted,
+    normalized,
   } = options
 
   const languageName = LANGUAGE_NAMES[targetLanguage] || targetLanguage
@@ -403,6 +698,7 @@ async function callGemini(
     languageName,
     glossaryTerms,
     htmlExtracted,
+    normalized,
   })
 
   // Retry loop for validation failures (API call retries are in callGeminiRaw)
