@@ -12,42 +12,7 @@ import {
   JSX_COMPONENT_REGEX,
   TRANSLATABLE_ATTRIBUTES,
 } from "./types"
-
-/**
- * Check if a string appears to be English text (not a variable, URL, or code).
- * Uses heuristics: contains spaces, common English words, or sentence structure.
- */
-function isLikelyEnglishText(value: string): boolean {
-  // Skip empty or very short values
-  if (!value || value.length < 3) return false
-
-  // Skip URLs
-  if (/^https?:\/\//.test(value)) return false
-
-  // Skip paths
-  if (/^[/.]/.test(value) || /\.(png|jpg|svg|gif|json|md)$/i.test(value))
-    return false
-
-  // Skip variables/placeholders like {variable} or {{variable}}
-  if (/^\{.*\}$/.test(value)) return false
-
-  // Skip CSS classes or technical identifiers (camelCase/kebab-case only)
-  if (/^[a-z][a-zA-Z0-9-]*$/.test(value) && !value.includes(" ")) return false
-
-  // Skip emoji-only values
-  if (/^[\p{Emoji}\s]+$/u.test(value)) return false
-
-  // Skip numbers-only
-  if (/^[\d.,\s%$€£]+$/.test(value)) return false
-
-  // Likely English if it contains spaces (multi-word) or common English patterns
-  if (value.includes(" ")) return true
-
-  // Single words that look like natural language (capitalized, common endings)
-  if (/^[A-Z][a-z]+(?:ing|ed|er|est|ly|tion|ness)?$/.test(value)) return true
-
-  return false
-}
+import { isTranslatableValue } from "../shared-patterns"
 
 /**
  * Extract surrounding context (lines before/after) for translation accuracy.
@@ -115,7 +80,7 @@ export function extractAttributesFromContent(
       }
 
       // Check if the value looks like English text needing translation
-      if (!isLikelyEnglishText(attrValue)) {
+      if (!isTranslatableValue(attrValue)) {
         continue
       }
 

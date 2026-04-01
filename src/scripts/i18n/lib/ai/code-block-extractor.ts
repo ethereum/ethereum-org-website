@@ -7,6 +7,8 @@
  * for separate translation.
  */
 
+import { FENCED_BLOCK_RE, FRONTMATTER_RE } from "../shared-patterns"
+
 /** A single extracted code block */
 export interface CodeBlock {
   index: number
@@ -40,11 +42,6 @@ const PLACEHOLDER_SUFFIX = " -->"
 function makePlaceholder(index: number): string {
   return `${PLACEHOLDER_PREFIX}${index}${PLACEHOLDER_SUFFIX}`
 }
-
-// Matches ``` or ~~~ fenced code blocks (with optional language tag)
-// Matches fenced code blocks: non-empty content OR empty (just a newline between fences)
-const FENCED_BLOCK_RE =
-  /^([ \t]*)(```|~~~)([^\n]*)\n([\s\S]*?)\n\1\2[ \t]*$|^([ \t]*)(```|~~~)([^\n]*)\n\5\6[ \t]*$/gm
 
 /**
  * Extract all fenced code blocks from markdown, replacing each
@@ -431,7 +428,7 @@ export function chunkProse(
   // Extract frontmatter if present
   let frontmatter = ""
   let body = prose
-  const fmMatch = prose.match(/^(---\n[\s\S]*?\n---\n)/)
+  const fmMatch = prose.match(FRONTMATTER_RE)
   if (fmMatch) {
     frontmatter = fmMatch[1]
     body = prose.slice(fmMatch[1].length)

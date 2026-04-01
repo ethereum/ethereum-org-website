@@ -1,30 +1,28 @@
 /**
  * Types for JSX attribute extraction and translation
+ *
+ * Shared patterns (ATTRIBUTE_RE, TRANSLATABLE_ATTRIBUTES, etc.) are
+ * defined in ../shared-patterns.ts and re-exported here for backward
+ * compatibility with existing consumers.
  */
 
-/** Regex to match JSX/HTML-style attributes with quoted values */
-export const JSX_ATTRIBUTE_REGEX =
-  /\b([a-zA-Z][\w-]*)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)')/g
+// Re-export shared patterns -- canonical definitions in shared-patterns.ts
+export {
+  ATTRIBUTE_RE as JSX_ATTRIBUTE_REGEX,
+  TRANSLATABLE_ATTRIBUTES,
+  type TranslatableAttribute,
+} from "../shared-patterns"
+
+// Local import for use in interfaces below
+import type { TranslatableAttribute } from "../shared-patterns"
 
 /** Regex to identify JSX component opening tags */
-export const JSX_COMPONENT_REGEX = /<([A-Z][a-zA-Z0-9]*)\s+([^>]*?)(?:\/>|>)/g
+export const JSX_COMPONENT_RE = /<([A-Z][a-zA-Z0-9]*)\s+([^>]*?)(?:\/>|>)/g
 
-/** Attributes that contain human-readable text requiring translation */
-export const TRANSLATABLE_ATTRIBUTES = [
-  "title",
-  "description",
-  "alt",
-  "label",
-  "aria-label",
-  "placeholder",
-  "buttonLabel",
-  "name",
-  "caption",
-  "contentPreview",
-  "location",
-] as const
-
-export type TranslatableAttribute = (typeof TRANSLATABLE_ATTRIBUTES)[number]
+/**
+ * @deprecated Use JSX_COMPONENT_RE instead (consistent _RE suffix)
+ */
+export const JSX_COMPONENT_REGEX = JSX_COMPONENT_RE
 
 /** A single extracted attribute from a JSX component */
 export interface ExtractedAttribute {
