@@ -89,6 +89,11 @@ export default function HomepageSectionImage({
     quality: 40,
   })
 
+  // Remove blurWidth/blurHeight from rest to avoid React DOM warnings
+  // (Next.js getImageProps includes them but they're not valid HTML attributes)
+  delete (rest as Record<string, unknown>).blurWidth
+  delete (rest as Record<string, unknown>).blurHeight
+
   return (
     <picture className={className}>
       <source
