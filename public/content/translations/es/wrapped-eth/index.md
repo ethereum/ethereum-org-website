@@ -1,6 +1,6 @@
 ---
-title: ¿Qué es el ether envuelto (WETH)?
-description: Una introducción al ether envuelto (WETH), un envoltorio compatible con ERC-20 para el ether (ETH). 
+title: "¿Qué es el ether envuelto (WETH)?"
+description: "Una introducción al ether envuelto (WETH), un envoltorio compatible con ERC-20 para el ether (ETH)."
 lang: es
 ---
 
@@ -19,7 +19,7 @@ Puede desenvolver WETH por ETH utilizando el contrato inteligente de WETH. Puede
 
 **Aproximadamente el ~3 % del suministro circulante de ETH está bloqueado en el contrato del token WETH**, lo que lo convierte en uno de los [contratos inteligentes](/glossary/#smart-contract) más utilizados. WETH es especialmente importante para los usuarios que interactúan con aplicaciones en las finanzas descentralizadas (DeFi).
 
-## ¿Por qué necesitamos envolver ETH como un ERC-20? {#why-do-we-need-to-wrap-eth} 
+## ¿Por qué necesitamos envolver ETH como un ERC-20? {#why-do-we-need-to-wrap-eth}
 
 [ERC-20](/developers/docs/standards/tokens/erc-20/) define una interfaz estándar para tokens transferibles, por lo que cualquiera puede crear tokens que interactúen sin problemas con aplicaciones y tokens que utilicen este estándar en el ecosistema de Ethereum. Dado que **el ETH es anterior al estándar ERC-20**, el ETH no cumple con esta especificación. Esto significa que **no puede** intercambiar fácilmente ETH por otros tokens ERC-20 o **usar ETH en aplicaciones que utilicen el estándar ERC-20**. Envolver ETH le da la oportunidad de hacer lo siguiente:
 
