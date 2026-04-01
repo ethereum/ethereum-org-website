@@ -208,23 +208,25 @@ export interface NormalizedContent {
 // ---------------------------------------------------------------------------
 
 function codeblockTag(hash: string): string {
-  return `<HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
+  return `<HTML-PLACEHOLDER-CODEBLOCK-${hash} />`
 }
 
 function codeTag(hash: string): string {
-  return `<HTML-PLACEHOLDER-CODE-${hash}>`
+  return `<HTML-PLACEHOLDER-CODE-${hash} />`
 }
 
 function componentTag(hash: string): string {
-  return `<HTML-PLACEHOLDER-COMPONENT-${hash}>`
+  return `<HTML-PLACEHOLDER-COMPONENT-${hash} />`
 }
 
 function imageTag(hash: string): string {
-  return `<HTML-PLACEHOLDER-IMAGE-${hash}>`
+  return `<HTML-PLACEHOLDER-IMAGE-${hash} />`
 }
 
-function htmlTagOpenTag(hash: string): string {
-  return `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+function htmlTagOpenTag(hash: string, selfClosing = false): string {
+  return selfClosing
+    ? `<HTML-PLACEHOLDER-HTMLTAG-${hash} />`
+    : `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
 }
 
 function htmlTagCloseTag(hash: string): string {
@@ -530,7 +532,7 @@ function extractHtmlTags(
       }
 
       const hash = shortHash(fullMatch)
-      const placeholder = htmlTagOpenTag(hash)
+      const placeholder = htmlTagOpenTag(hash, true)
 
       const inert: Record<string, string> = {}
       let match: RegExpExecArray | null
@@ -739,9 +741,9 @@ function normalizeWhitespace(markdown: string): string {
  * not on the content-addressed hashes embedded in placeholder tags.
  */
 const BLOCK_PLACEHOLDER_RE =
-  /<HTML-PLACEHOLDER-(?:CODEBLOCK|CODE|COMPONENT|IMAGE)-[a-f0-9]+>/g
+  /<HTML-PLACEHOLDER-(?:CODEBLOCK|CODE|COMPONENT|IMAGE)-[a-f0-9]+ \/>/g
 const WRAPPER_TAG_RE =
-  /<\/?HTML-PLACEHOLDER-(?:LINK|HTMLTAG)-[a-f0-9]+>/g
+  /<\/?HTML-PLACEHOLDER-(?:LINK|HTMLTAG)-[a-f0-9]+(?:\s\/)?>/g
 
 function stripPlaceholderTags(text: string): string {
   return text
@@ -776,7 +778,7 @@ export function normalizeContent(markdown: string): NormalizedContent {
   // Pre-validation: reject content containing reserved placeholder syntax.
   // A contributor could innocently include these strings in docs about
   // the normalizer itself, which would corrupt the translation pipeline.
-  const RESERVED_PLACEHOLDER = /<\/?HTML-PLACEHOLDER-[A-Z]+-[a-f0-9]+>/
+  const RESERVED_PLACEHOLDER = /<\/?HTML-PLACEHOLDER-[A-Z]+-[a-f0-9]+[\s/]*>/
   if (RESERVED_PLACEHOLDER.test(markdown)) {
     throw new Error(
       "Content contains reserved <HTML-PLACEHOLDER-...> syntax. " +
