@@ -20,19 +20,16 @@ export const VIDEO_CATEGORIES = [
       "staking",
       "withdrawals",
     ],
-    minVideos: 4,
   },
   {
     key: "network-upgrades",
     labelKey: "page-videos-category-network-upgrades",
     tags: ["upgrades", "pectra", "dencun", "eip-4844", "blobs", "history"],
-    minVideos: 4,
   },
   {
     key: "roadmap-and-priorities",
     labelKey: "page-videos-category-roadmap-and-priorities",
     tags: ["roadmap", "pbs", "mev"],
-    minVideos: 4,
   },
   {
     key: "scaling-and-layer-2",
@@ -45,7 +42,6 @@ export const VIDEO_CATEGORIES = [
       "zk-rollups",
       "zero-knowledge-proofs",
     ],
-    minVideos: 4,
   },
   {
     key: "use-cases",
@@ -70,18 +66,15 @@ export const VIDEO_CATEGORIES = [
       "dao",
       "identity",
     ],
-    minVideos: 4,
   },
   {
     key: "privacy-and-security",
     labelKey: "page-videos-category-privacy-and-security",
     tags: ["security", "authentication", "privacy", "governance"],
-    minVideos: 4,
   },
   {
     key: "community-stories",
     labelKey: "page-videos-category-community-stories",
     tags: ["contributing", "translations", "ai", "agents"],
-    minVideos: 4,
   },
 ] as const

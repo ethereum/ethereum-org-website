@@ -605,13 +605,9 @@ export type VideoCardData = {
   slug: string
   title: string
   description: string
-  youtubeId: string
   uploadDate: string
   duration: string
-  educationLevel: "beginner" | "intermediate" | "advanced"
   topic: string[]
-  format: VideoFormat
-  author: string
   thumbnailUrl: string
 }
 

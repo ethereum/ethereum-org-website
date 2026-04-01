@@ -23,7 +23,6 @@ import {
 } from "@/components/ui/accordion"
 import YouTube from "@/components/YouTube"
 
-import { cn } from "@/lib/utils/cn"
 import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -49,7 +48,7 @@ const VideoLandingPage = async (props: {
   }
 
   const { frontmatter } = data
-  const transcriptMdx = data.content.trim() ? data.content : null
+  const transcriptMdx = data.content.trim() || null
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -78,7 +77,7 @@ const VideoLandingPage = async (props: {
 
       <MainArticle className="max-w-4xl space-y-8 px-4 md:px-8">
         <h2 className="sr-only">{t("page-videos-watch-video")}</h2>
-        <div className={cn("sticky top-24 z-10 md:static")}>
+        <div className="sticky top-24 z-10 md:static">
           <YouTube
             id={frontmatter.youtubeId}
             title={frontmatter.title}
@@ -91,11 +90,11 @@ const VideoLandingPage = async (props: {
           {formatDate(frontmatter.uploadDate, locale, { timeZone: "UTC" })}
         </p>
 
-        {transcriptMdx && transcriptMdx.trim().length > 0 && (
+        {transcriptMdx && (
           <Accordion type="single" collapsible>
             <AccordionItem value="transcript">
               <AccordionTrigger className="py-4">
-                <h2 className="text-xl">{t("view-transcript")}</h2>
+                <h2 className="text-xl">{t("page-videos-view-transcript")}</h2>
               </AccordionTrigger>
               {/* forceMount keeps transcript in DOM for SEO crawlers */}
               <AccordionContent

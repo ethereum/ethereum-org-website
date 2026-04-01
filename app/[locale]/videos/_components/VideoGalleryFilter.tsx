@@ -25,8 +25,6 @@ import {
 } from "@/components/ui/select"
 import { Tag, TagButton } from "@/components/ui/tag"
 
-import { cn } from "@/lib/utils/cn"
-
 import { getVideosByCategory } from "../utils"
 
 type SortOrder = "newest" | "oldest" | "az"
@@ -35,7 +33,6 @@ type Category = {
   key: string
   labelKey: string
   tags: readonly string[]
-  minVideos: number
 }
 
 interface VideoGalleryFilterProps {
@@ -81,14 +78,12 @@ const VideoGalleryFilter = ({
     const sorted = [...searchFiltered]
     switch (sortOrder) {
       case "newest":
-        return sorted.sort(
-          (a, b) =>
-            new Date(b.uploadDate).getTime() - new Date(a.uploadDate).getTime()
+        return sorted.sort((a, b) =>
+          b.uploadDate > a.uploadDate ? 1 : b.uploadDate < a.uploadDate ? -1 : 0
         )
       case "oldest":
-        return sorted.sort(
-          (a, b) =>
-            new Date(a.uploadDate).getTime() - new Date(b.uploadDate).getTime()
+        return sorted.sort((a, b) =>
+          a.uploadDate > b.uploadDate ? 1 : a.uploadDate < b.uploadDate ? -1 : 0
         )
       case "az":
         return sorted.sort((a, b) => a.title.localeCompare(b.title))
@@ -254,9 +249,7 @@ const VideoGalleryFilter = ({
           <p className="text-body-medium">{t("page-videos-no-results")}</p>
         </div>
       ) : (
-        <div
-          className={cn("grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3")}
-        >
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {sortedVideos.map((video) => (
             <Card key={video.slug} href={`/videos/${video.slug}/`}>
               <CardBanner className="aspect-video h-auto">

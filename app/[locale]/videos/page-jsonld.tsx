@@ -65,7 +65,16 @@ export default async function VideosPageJsonLD({
         name: t("page-videos-hero-title"),
         description: t("page-videos-meta-description"),
         numberOfItems: videos.length,
-        itemListElement: videos.slice(0, 10).map((video, index) => ({
+        itemListElement: [...videos]
+          .sort((a, b) =>
+            b.uploadDate > a.uploadDate
+              ? 1
+              : b.uploadDate < a.uploadDate
+                ? -1
+                : 0
+          )
+          .slice(0, 10)
+          .map((video, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name: video.title,

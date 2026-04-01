@@ -12,6 +12,7 @@ import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
 // These are module-scoped Maps that persist for the duration of the build process.
 const videoDataCache = new Map<string, VideoData>()
 const videosCache = new Map<string, VideoCardData[]>()
+let slugsCache: string[] | null = null
 
 /**
  * Resolve the absolute path to a video's index.md for a given locale.
@@ -104,15 +105,24 @@ function toVideoCardData(data: VideoData): VideoCardData {
     slug,
     title: fm.title,
     description: fm.description,
-    youtubeId: fm.youtubeId,
     uploadDate: fm.uploadDate,
     duration: fm.duration,
-    educationLevel: fm.educationLevel,
     topic: fm.topic,
-    format: fm.format,
-    author: fm.author,
     thumbnailUrl: fm.customThumbnailUrl || getDefaultThumbnailUrl(fm.youtubeId),
   }
+}
+
+/**
+ * Get all video slugs by scanning the content/videos directory.
+ * Results are cached for the duration of the build.
+ */
+export async function getVideoSlugs(): Promise<string[]> {
+  if (slugsCache) return slugsCache
+
+  const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
+  const entries = await readdir(videosDir, { withFileTypes: true })
+  slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
+  return slugsCache
 }
 
 /**
@@ -126,9 +136,7 @@ export async function getVideos(
   const cached = videosCache.get(locale)
   if (cached) return cached
 
-  const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
-  const entries = await readdir(videosDir, { withFileTypes: true })
-  const slugs = entries.filter((e) => e.isDirectory()).map((e) => e.name)
+  const slugs = await getVideoSlugs()
 
   const results = await Promise.all(
     slugs.map(async (slug) => {
@@ -145,39 +153,4 @@ export async function getVideos(
   const videos = results.filter((v): v is VideoCardData => v !== null)
   videosCache.set(locale, videos)
   return videos
-}
-
-/**
- * Get all video slugs by scanning the content/videos directory.
- */
-export async function getVideoSlugs(): Promise<string[]> {
-  const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
-  const entries = await readdir(videosDir, { withFileTypes: true })
-  return entries.filter((e) => e.isDirectory()).map((e) => e.name)
-}
-
-/**
- * Get the markdown body (transcript) for a video.
- * Returns empty string if no body content exists.
- */
-export async function getTranscript(
-  slug: string,
-  locale: string = DEFAULT_LOCALE
-): Promise<string> {
-  const data = await getVideoData(slug, locale)
-  return data.content
-}
-
-/**
- * Get the title and description for a video from its frontmatter.
- */
-export async function getVideoMeta(
-  slug: string,
-  locale: string = DEFAULT_LOCALE
-): Promise<{ title: string; description: string }> {
-  const data = await getVideoData(slug, locale)
-  return {
-    title: data.frontmatter.title,
-    description: data.frontmatter.description,
-  }
 }

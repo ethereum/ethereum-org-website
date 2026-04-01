@@ -7,7 +7,7 @@ import {
 } from "next-intl/server"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
-import SimpleHero from "@/components/Hero/SimpleHero"
+import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
