@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" font-family="monospace" font-size="14">
+  <style>
+    text { fill: #222; }
+    .label { font-weight: bold; font-size: 13px; }
+    .note { font-size: 12px; fill: #666; }
+    line, path { stroke: #444; stroke-width: 1.5; }
+  </style>
+
+  <!-- Title -->
+  <text x="260" y="24" text-anchor="middle" font-weight="bold" font-size="15">ERC-4626 (synchronous)</text>
+
+  <!-- Lifelines -->
+  <text x="80" y="60" text-anchor="middle" class="label">Investor</text>
+  <line x1="80" y1="70" x2="80" y2="180" stroke-dasharray="4,4"/>
+
+  <text x="400" y="60" text-anchor="middle" class="label">Vault</text>
+  <line x1="400" y1="70" x2="400" y2="180" stroke-dasharray="4,4"/>
+
+  <!-- deposit arrow -->
+  <line x1="80" y1="95" x2="390" y2="95" marker-end="url(#arrow)"/>
+  <text x="235" y="88" text-anchor="middle" font-size="12">deposit(assets)</text>
+
+  <!-- shares arrow -->
+  <line x1="400" y1="125" x2="90" y2="125" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+  <text x="235" y="118" text-anchor="middle" font-size="12">shares (instant)</text>
+
+  <!-- Note -->
+  <text x="260" y="165" text-anchor="middle" class="note">Done in one transaction</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#444"/>
+    </marker>
+  </defs>
+</svg>

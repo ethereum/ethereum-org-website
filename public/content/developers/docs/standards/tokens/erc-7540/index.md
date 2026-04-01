@@ -27,54 +27,15 @@ In all these cases, the vault cannot provide an instant exchange rate at request
 
 **ERC-4626 (synchronous)**
 
-```text
-  Investor                          Vault
-     │                                │
-     │──── deposit(assets) ──────────>│
-     │<─── shares (instant) ─────────│
-     │                                │
-     done in one transaction
-```
+![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
 
 **ERC-7540 (asynchronous)**
 
-```text
-  Investor              Vault                   Manager
-     │                    │                        │
-     │── requestDeposit()─>│                        │
-     │   assets locked     │── batch to manager ───>│
-     │                     │                        │
-     │                     │       ┌────────────────┤
-     │                     │       │ Step 1: Approve │
-     │                     │       │ (set asset price,│
-     │                     │       │  release assets  │
-     │                     │       │  for investment) │
-     │                     │       │                  │
-     │                     │       │ ... manager      │
-     │                     │       │ invests ...      │
-     │                     │       │                  │
-     │                     │       │ Step 2: Issue    │
-     │                     │       │ (set share price,│
-     │                     │       │  mint shares)    │
-     │                     │       └────────────────┤
-     │                     │                        │
-     │                     │<── fulfillment ────────│
-     │                     │                        │
-     │── deposit() ───────>│                        │
-     │<── shares ──────────│                        │
-     │   (claim)           │                        │
-```
+![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
 
 **Request lifecycle**
 
-```text
-  ┌──────────┐    ┌──────────┐    ┌──────────┐
-  │ PENDING  │───>│CLAIMABLE │───>│ CLAIMED  │
-  │          │    │          │    │          │
-  │ request  │    │ approved │    │ investor │
-  │ submitted│    │ + priced │    │ claims   │
-  └──────────┘    └──────────┘    └──────────┘
-```
+![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
 
 The key difference is **forward pricing**: unlike ERC-4626's immediate pricing, exchange rates in ERC-7540 are determined at fulfillment time, not request time. This mirrors traditional fund subscriptions where allocations occur at NAV strikes rather than submission time.
 
