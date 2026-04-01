@@ -6,24 +6,24 @@ lang: en
 
 ## Introduction {#introduction}
 
-ERC-7540 extends the [ERC-4626 Tokenized Vault Standard](/developers/docs/standards/tokens/erc-4626/) by adding support for **asynchronous deposit and redemption flows**. While ERC-4626 requires deposits and redemptions to complete atomically in a single transaction, many real-world use cases need a delay between a user's request and the actual settlement.
+ERC-7540 extends the [ERC-4626 Tokenized Vault Standard](/developers/docs/standards/tokens/erc-4626/) by adding support for **asynchronous deposit and redemption flows**. It introduces a **request-then-claim pattern**: users first submit a request (locking their assets or shares), then claim the result after the vault has processed it.
 
-ERC-7540 introduces a **request-then-claim pattern**: users first submit a request (locking their assets or shares), then claim the result after the vault has processed it. This two-step approach enables vaults to handle scenarios that require off-chain processing, delayed settlement, or compliance checks.
-
-The standard is described fully in [EIP-7540](https://eips.ethereum.org/EIPS/eip-7540).
-
-### Why asynchronous vaults? {#why-async}
-
-ERC-4626 works well when a vault can instantly determine the exchange rate and settle in one transaction. But this breaks down for:
+This is needed when a vault cannot settle instantly in one transaction, for example:
 
 - **Real-world asset (RWA) protocols** like tokenized treasuries, private credit, and other assets with T+1 or T+2 settlement cycles
 - **Undercollateralized lending** where credit assessments happen off-chain
 - **Cross-chain vault strategies** where bridging introduces delays
 - **Liquid staking tokens** with unbonding periods
 
-In all these cases, the vault cannot provide an instant exchange rate at request time. ERC-7540 solves this by separating the request from the claim.
+Vaults can choose to be asynchronous on deposits only, redemptions only, or both. This flexibility lets vault developers add async flows only where the underlying strategy requires it, while keeping the other side synchronous.
 
-### ERC-4626 vs ERC-7540 {#comparison}
+The key concept is **forward pricing**: unlike ERC-4626's immediate pricing, exchange rates in ERC-7540 are determined at fulfillment time, not request time. This mirrors traditional fund subscriptions where allocations occur at NAV strikes rather than submission time.
+
+## Prerequisites {#prerequisites}
+
+To better understand this page, we recommend you first read about [token standards](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/), and [ERC-4626](/developers/docs/standards/tokens/erc-4626/).
+
+## ERC-4626 vs ERC-7540 {#comparison}
 
 **ERC-4626 (synchronous)**
 
@@ -36,12 +36,6 @@ In all these cases, the vault cannot provide an instant exchange rate at request
 **Request lifecycle**
 
 ![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
-
-The key difference is **forward pricing**: unlike ERC-4626's immediate pricing, exchange rates in ERC-7540 are determined at fulfillment time, not request time. This mirrors traditional fund subscriptions where allocations occur at NAV strikes rather than submission time.
-
-## Prerequisites {#prerequisites}
-
-To better understand this page, we recommend you first read about [token standards](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/), and [ERC-4626](/developers/docs/standards/tokens/erc-4626/).
 
 ## ERC-7540 Functions and Features {#body}
 
@@ -129,9 +123,9 @@ Returns whether `operator` is approved to act on behalf of `controller`.
 
 ### Request IDs {#request-ids}
 
-Request IDs discriminate between different batches of requests. All requests sharing the same `requestId` are fungible: they transition between states together and receive the same exchange rate.
+Request IDs differentiate between different batches of requests. All requests sharing the same `requestId` are fungible: they transition between states together and receive the same exchange rate.
 
-When a vault returns `requestId = 0` for all requests, only the `controller` address discriminates request state. Multiple requests from the same controller are aggregated.
+When a vault returns `requestId = 0` for all requests, only the `controller` address differentiates request state. Multiple requests from the same controller are aggregated.
 
 ### Events {#events}
 
@@ -178,16 +172,6 @@ event OperatorSet(
 ### Preview functions {#preview-functions}
 
 In asynchronous vaults, `previewDeposit`, `previewMint`, `previewRedeem`, and `previewWithdraw` **MUST** revert because the exchange rate is not known until the request is fulfilled. This is a key behavioral difference from ERC-4626.
-
-### Implementation flexibility {#implementation-flexibility}
-
-Vaults may implement:
-
-- Asynchronous deposits only
-- Asynchronous redemptions only
-- Both (fully asynchronous)
-- Variable or fixed exchange rates between request and claim
-- Different underlying accounting mechanisms (global, per-user, or batched)
 
 ## Further reading {#further-reading}
 
