@@ -810,15 +810,15 @@ export function normalizeContent(markdown: string): NormalizedContent {
   // 7. Strip heading anchor IDs
   normalized = stripHeadingIds(normalized)
 
-  // 8. Whitespace normalization
-  normalized = normalizeWhitespace(normalized)
-
   // The remaining prose is translatable.
-  // Hash the prose with placeholder tags stripped so that changes to
-  // inert content (URLs, code, paths) embedded in placeholder hashes
-  // don't affect the translatable hash.
+  // For HASHING: strip placeholder tags and normalize whitespace so
+  // that blank-line changes don't trigger retranslation.
+  // For GEMINI: return `normalized` with original whitespace intact
+  // so the translated output preserves the same paragraph structure.
   if (normalized.trim()) {
-    const proseForHashing = stripPlaceholderTags(normalized)
+    const proseForHashing = normalizeWhitespace(
+      stripPlaceholderTags(normalized)
+    )
     tree.push({
       type: "prose",
       translatable: true,
