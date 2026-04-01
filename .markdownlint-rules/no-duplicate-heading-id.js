@@ -12,8 +12,22 @@ module.exports = {
   parser: "none",
   function: (params, onError) => {
     const seenIds = new Map()
+    const allIds = new Set()
     let inCodeFence = false
 
+    // First pass: collect all existing IDs
+    for (const line of params.lines) {
+      if (line.trimStart().startsWith("```")) {
+        inCodeFence = !inCodeFence
+        continue
+      }
+      if (inCodeFence) continue
+      const m = HEADING_ID_RE.exec(line)
+      if (m) allIds.add(m[1])
+    }
+
+    // Second pass: flag duplicates with fix info
+    inCodeFence = false
     for (let i = 0; i < params.lines.length; i++) {
       const line = params.lines[i]
 
@@ -30,10 +44,23 @@ module.exports = {
       const prevLine = seenIds.get(id)
 
       if (prevLine !== undefined) {
+        // Find next available suffix
+        let suffix = 2
+        while (allIds.has(`${id}-${suffix}`)) suffix++
+        const newId = `${id}-${suffix}`
+        allIds.add(newId)
+
+        const col = line.indexOf(`{#${id}}`)
         onError({
           lineNumber: i + 1,
-          detail: `Duplicate {#${id}} -- first used on line ${prevLine}`,
+          detail: `Duplicate {#${id}} -- first used on line ${prevLine}. Fix: {#${newId}}`,
           context: line.trim(),
+          fixInfo: {
+            lineNumber: i + 1,
+            editColumn: col + 1,
+            deleteCount: `{#${id}}`.length,
+            insertText: `{#${newId}}`,
+          },
         })
       } else {
         seenIds.set(id, i + 1)
