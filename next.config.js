@@ -98,6 +98,7 @@ module.exports = (phase) => {
     },
     trailingSlash: true,
     images: {
+      qualities: [5, 10, 20, 35, 40, 75, 90, 100],
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
       remotePatterns: [
         {

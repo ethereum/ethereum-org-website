@@ -48,6 +48,11 @@ const HomeHero = async ({
     props: { srcSet: srcSetBase, ...rest },
   } = getImageProps({ ...common, ...baseImage, quality: 5 })
 
+  // Remove blurWidth/blurHeight from rest to avoid React DOM warnings
+  // (Next.js getImageProps includes them but they're not valid HTML attributes)
+  delete (rest as Record<string, unknown>).blurWidth
+  delete (rest as Record<string, unknown>).blurHeight
+
   return (
     <div className={cn("w-full", className)}>
       <div className="h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
