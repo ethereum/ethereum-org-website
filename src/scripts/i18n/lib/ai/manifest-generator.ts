@@ -61,6 +61,23 @@ export interface PerFileManifest {
   englishHash: string
   /** Per-section hashes from the English source trie */
   sections: Record<string, string>
+  /**
+   * Placeholder IDs in the order they appear in the translated file.
+   *
+   * Populated by the Gemini response handler after translation. The
+   * English trie records each placeholder's inert values (URLs, paths,
+   * classNames). This array records the order Gemini returned them in
+   * for this locale, which may differ from English due to natural
+   * word-order reordering.
+   *
+   * Enables deterministic propagation of inert-value changes (e.g.,
+   * an English href update) to translated files without re-translating:
+   * walk the translated markdown, match placeholders in this order,
+   * and swap in updated values.
+   *
+   * undefined until first Gemini translation populates it.
+   */
+  placeholderOrder?: string[]
 }
 
 /**

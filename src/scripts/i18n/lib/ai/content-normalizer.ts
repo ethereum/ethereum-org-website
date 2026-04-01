@@ -169,6 +169,22 @@ interface LinkTextNode extends BaseNode {
   hash: string
 }
 
+/** Interior node wrapping an embedded HTML element (a, div, span, etc.) */
+interface HtmlTagNode extends BaseNode {
+  type: "html-tag"
+  translatable: false
+  placeholder: string
+  children: ContentNode[]
+  meta: { tagName: string; inertAttributes: Record<string, string> }
+}
+
+/** Translatable leaf -- text content inside an HTML element */
+interface HtmlTagTextNode extends BaseNode {
+  type: "html-tag-text"
+  translatable: true
+  hash: string
+}
+
 /** Discriminated union of all content node types */
 export type ContentNode =
   | ProseNode
@@ -183,6 +199,8 @@ export type ContentNode =
   | ImageAltNode
   | LinkNode
   | LinkTextNode
+  | HtmlTagNode
+  | HtmlTagTextNode
 
 /** Result of normalizing markdown content */
 export interface NormalizedContent {
@@ -212,6 +230,14 @@ function componentTag(hash: string): string {
 
 function imageTag(hash: string): string {
   return `<HTML-PLACEHOLDER-IMAGE-${hash}>`
+}
+
+function htmlTagOpenTag(hash: string): string {
+  return `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+}
+
+function htmlTagCloseTag(hash: string): string {
+  return `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
 }
 
 function linkOpenTag(hash: string): string {
@@ -419,6 +445,127 @@ function extractComponents(
 }
 
 // ---------------------------------------------------------------------------
+// Pass 2c: Embedded HTML elements
+// ---------------------------------------------------------------------------
+
+/**
+ * Common HTML tags found in ethereum.org markdown content.
+ * Lowercase only -- PascalCase is handled by component extraction.
+ */
+const HTML_TAGS = "a|div|span|p|table|tr|td|th|thead|tbody|img|br|hr|ul|ol|li|strong|em|b|i|code|pre|blockquote|iframe|video|source|details|summary"
+
+/**
+ * Matches opening+closing HTML tags with content: <tag attrs>...</tag>
+ * Non-greedy on content. Self-closing tags (br, hr, img) are handled
+ * separately below.
+ */
+const HTML_TAG_WITH_CHILDREN_RE = new RegExp(
+  `<(${HTML_TAGS})(\\s[^>]*)?>([\\s\\S]*?)<\\/\\1>`,
+  "gi"
+)
+
+/** Self-closing HTML tags: <img src="..." />, <br />, <hr /> */
+const HTML_SELF_CLOSING_RE = new RegExp(
+  `<(${HTML_TAGS})(\\s[^>]*)?\\s*\\/?>`,
+  "gi"
+)
+
+function extractHtmlTags(
+  markdown: string,
+  tree: ContentNode[],
+  extractions: Map<string, string>
+): string {
+  // Tags with children first (like <a href="...">text</a>)
+  let result = markdown.replace(
+    HTML_TAG_WITH_CHILDREN_RE,
+    (fullMatch: string, tagName: string, attrStr: string, children: string) => {
+      // Skip tags with no attributes -- nothing inert to track
+      if (!attrStr || !attrStr.trim()) {
+        return fullMatch
+      }
+
+      const hash = shortHash(fullMatch)
+      const open = htmlTagOpenTag(hash)
+      const close = htmlTagCloseTag(hash)
+
+      // Parse all attributes as inert (HTML attrs are structural)
+      const inert: Record<string, string> = {}
+      let match: RegExpExecArray | null
+      ATTRIBUTE_RE.lastIndex = 0
+      while ((match = ATTRIBUTE_RE.exec(attrStr)) !== null) {
+        inert[match[1]] = match[2] ?? match[3]
+      }
+
+      const childNodes: ContentNode[] = []
+      if (children.trim()) {
+        childNodes.push({
+          type: "html-tag-text",
+          translatable: true,
+          content: children,
+          hash: leafHash(children),
+        })
+      }
+
+      tree.push({
+        type: "html-tag",
+        translatable: false,
+        content: fullMatch,
+        placeholder: `${open}...${close}`,
+        children: childNodes,
+        meta: { tagName, inertAttributes: inert },
+      })
+
+      extractions.set(`HTMLTAG:${hash}`, fullMatch)
+
+      // Wrapper style: text stays visible for Gemini, tags become placeholders
+      if (children.trim()) {
+        return `${open}${children}${close}`
+      }
+      return open
+    }
+  )
+
+  // Self-closing tags with attributes (e.g., <img src="..." />)
+  result = result.replace(
+    HTML_SELF_CLOSING_RE,
+    (fullMatch: string, tagName: string, attrStr: string) => {
+      if (!attrStr || !attrStr.trim()) {
+        return fullMatch
+      }
+
+      // Skip if already wrapped by the children pass above
+      if (fullMatch.includes("HTML-PLACEHOLDER")) {
+        return fullMatch
+      }
+
+      const hash = shortHash(fullMatch)
+      const placeholder = htmlTagOpenTag(hash)
+
+      const inert: Record<string, string> = {}
+      let match: RegExpExecArray | null
+      ATTRIBUTE_RE.lastIndex = 0
+      while ((match = ATTRIBUTE_RE.exec(attrStr)) !== null) {
+        inert[match[1]] = match[2] ?? match[3]
+      }
+
+      tree.push({
+        type: "html-tag",
+        translatable: false,
+        content: fullMatch,
+        placeholder,
+        children: [],
+        meta: { tagName, inertAttributes: inert },
+      })
+
+      extractions.set(placeholder, fullMatch)
+      return placeholder
+    }
+  )
+
+  return result
+}
+
+// ---------------------------------------------------------------------------
 // Pass 3: Inline code
 // ---------------------------------------------------------------------------
 
@@ -603,7 +750,7 @@ function normalizeWhitespace(markdown: string): string {
 const BLOCK_PLACEHOLDER_RE =
   /<HTML-PLACEHOLDER-(?:CODEBLOCK|CODE|COMPONENT|IMAGE)-[a-f0-9]+>/g
 const WRAPPER_TAG_RE =
-  /<\/?HTML-PLACEHOLDER-LINK-[a-f0-9]+>/g
+  /<\/?HTML-PLACEHOLDER-(?:LINK|HTMLTAG)-[a-f0-9]+>/g
 
 function stripPlaceholderTags(text: string): string {
   return text
@@ -620,12 +767,13 @@ function stripPlaceholderTags(text: string): string {
  *
  * Extraction order (each pass operates on the output of the previous):
  *   1. Fenced code blocks -> placeholders (comments extracted as leaves)
- *   2. JSX/HTML components -> placeholders (translatable attrs as leaves)
- *   3. Inline code -> placeholders
- *   4. Images -> placeholders (alt text extracted as leaf)
- *   5. Links -> wrapper placeholders (text stays, URL in metadata)
- *   6. Heading anchor IDs -> stripped
- *   7. Whitespace -> normalized
+ *   2. JSX components (PascalCase) -> placeholders (translatable attrs as leaves)
+ *   3. Embedded HTML tags (lowercase) -> wrapper placeholders (attrs as inert)
+ *   4. Inline code -> placeholders
+ *   5. Images -> placeholders (alt text extracted as leaf)
+ *   6. Links -> wrapper placeholders (text stays, URL in metadata)
+ *   7. Heading anchor IDs -> stripped
+ *   8. Whitespace -> normalized
  *
  * @param markdown - Raw markdown section content
  * @returns Normalized content with tree and extraction map
@@ -651,22 +799,25 @@ export function normalizeContent(markdown: string): NormalizedContent {
   // 1. Code fences first (prevents # comments from being parsed as headings)
   normalized = extractCodeFences(normalized, tree, extractions)
 
-  // 2. JSX/HTML components (before inline code to avoid matching backticks in attrs)
+  // 2. JSX components (PascalCase, before inline code to avoid matching backticks in attrs)
   normalized = extractComponents(normalized, tree, extractions)
 
-  // 3. Inline code
+  // 3. Embedded HTML tags (lowercase -- a, div, span, img, etc.)
+  normalized = extractHtmlTags(normalized, tree, extractions)
+
+  // 4. Inline code
   normalized = extractInlineCode(normalized, tree, extractions)
 
-  // 4. Images (before links -- image syntax ![...] would otherwise match [...])
+  // 5. Images (before links -- image syntax ![...] would otherwise match [...])
   normalized = extractImages(normalized, tree, extractions)
 
-  // 5. Links (wrapper style -- text stays in normalized form)
+  // 6. Links (wrapper style -- text stays in normalized form)
   normalized = extractLinks(normalized, tree, extractions)
 
-  // 6. Strip heading anchor IDs
+  // 7. Strip heading anchor IDs
   normalized = stripHeadingIds(normalized)
 
-  // 7. Whitespace normalization
+  // 8. Whitespace normalization
   normalized = normalizeWhitespace(normalized)
 
   // The remaining prose is translatable.
