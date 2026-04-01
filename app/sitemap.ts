@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next"
 
 import { getFullUrl } from "@/lib/utils/url"
-import { getVideos } from "@/lib/utils/videos"
+import { getVideoSlugs } from "@/lib/utils/videos"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import { routing } from "@/i18n/routing"
 import { getAllPagesWithTranslations } from "@/lib/i18n/translationRegistry"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -46,16 +47,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
 
-  // Add video landing pages (dynamic routes not discovered by getAllPagesWithTranslations)
-  const videos = await getVideos()
-  for (const video of videos) {
-    const url = getFullUrl(DEFAULT_LOCALE, `/videos/${video.slug}/`)
-    entries.push({
-      url,
-      changeFrequency: "monthly",
-      priority: 0.6,
-      lastModified: new Date(),
-    })
+  // Add video pages (dynamic routes not discovered by getAllPagesWithTranslations)
+  const videoSlugs = await getVideoSlugs()
+  for (const slug of videoSlugs) {
+    const videoSlug = `/videos/${slug}/`
+    const alternates = {
+      languages: {
+        "x-default": getFullUrl(DEFAULT_LOCALE, videoSlug),
+        ...Object.fromEntries(
+          routing.locales.map((locale) => [
+            locale,
+            getFullUrl(locale, videoSlug),
+          ])
+        ),
+      },
+    }
+
+    for (const locale of routing.locales) {
+      const url = getFullUrl(locale, videoSlug)
+      if (seenUrls.has(url)) continue
+      seenUrls.add(url)
+      entries.push({ url, alternates, changeFrequency: "monthly", priority: 0.6 })
+    }
   }
 
   return entries

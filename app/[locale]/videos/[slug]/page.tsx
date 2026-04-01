@@ -29,8 +29,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getVideoData, getVideoSlugs } from "@/lib/utils/videos"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
 import VideoPageJsonLD from "./page-jsonld"
 
 import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
@@ -118,12 +116,9 @@ const VideoLandingPage = async (props: {
   )
 }
 
-// Only pre-render English video pages at build time (42 pages).
-// Other locale variants render on-demand via SSR and are cached by Next.js.
-// This avoids 42 slugs x 25 locales = 1,050 pages at build time.
 export async function generateStaticParams() {
   const slugs = await getVideoSlugs()
-  return slugs.map((slug) => ({ locale: DEFAULT_LOCALE, slug }))
+  return slugs.map((slug) => ({ slug }))
 }
 
 export async function generateMetadata(props: {
