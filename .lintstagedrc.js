@@ -9,4 +9,5 @@ const formatCommand = "prettier --write"
 
 module.exports = {
   "*.{js,jsx,ts,tsx}": [buildEslintCommand, formatCommand],
+  "public/content/**/*.md": "markdownlint-cli2",
 }

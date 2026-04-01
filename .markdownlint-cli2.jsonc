@@ -1,0 +1,30 @@
+{
+  // Custom rules
+  "customRules": [
+    ".markdownlint-rules/require-heading-id.js",
+    ".markdownlint-rules/no-duplicate-heading-id.js"
+  ],
+
+  // Rule configuration
+  "config": {
+    // Start conservative: disable all built-in rules, enable selectively
+    "default": false,
+
+    // MD001: Heading levels increment by one (no h2 -> h4 skips)
+    // Flexible on starting level -- only checks increments
+    "MD001": true,
+
+    // MD024: No duplicate heading text among siblings
+    "MD024": { "siblings_only": true },
+
+    // MD041: First line must be top-level heading -- DISABLED
+    // Our files start at h1, h2, or h3 depending on layout
+    "MD041": false,
+
+    // Custom: Every h1-h4 must have {#anchor-id}
+    "heading-requires-id": true,
+
+    // Custom: No duplicate {#id} anchors in the same file
+    "no-duplicate-heading-id": true
+  }
+}
