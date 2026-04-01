@@ -77,35 +77,36 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
 export const getTutorialsData = async (
   locale: string
 ): Promise<ITutorial[]> => {
-  // Read tutorials from filesystem in parallel using dynamic imports
+  const contentRoot = join(process.cwd(), "public/content")
+
   const tutorialPromises = (internalTutorialSlugs as string[]).map(
     async (slug) => {
       try {
         let fileContents: string
         let isTranslated = true
 
+        const enPath = join(
+          contentRoot,
+          "developers/tutorials",
+          slug,
+          "index.md"
+        )
+
         if (locale === DEFAULT_LOCALE) {
-          // English: read directly from content directory
-          fileContents = (
-            await import(
-              `../../../public/content/developers/tutorials/${slug}/index.md`
-            )
-          ).default
+          fileContents = await fsp.readFile(enPath, "utf-8")
         } else {
-          // Non-English: try translation first, fallback to English
+          const translatedPath = join(
+            contentRoot,
+            "translations",
+            locale,
+            "developers/tutorials",
+            slug,
+            "index.md"
+          )
           try {
-            fileContents = (
-              await import(
-                `../../../public/content/translations/${locale}/developers/tutorials/${slug}/index.md`
-              )
-            ).default
+            fileContents = await fsp.readFile(translatedPath, "utf-8")
           } catch {
-            // Fallback to English content
-            fileContents = (
-              await import(
-                `../../../public/content/developers/tutorials/${slug}/index.md`
-              )
-            ).default
+            fileContents = await fsp.readFile(enPath, "utf-8")
             isTranslated = false
           }
         }
