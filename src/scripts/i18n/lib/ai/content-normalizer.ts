@@ -700,7 +700,7 @@ function extractLinks(
  * Strips {#anchor-id} from heading lines.
  * These are non-translatable metadata added by content authors.
  */
-const HEADING_ID_RE = /^(#{1,6}\s+.+?)\s*\{#[^}]+\}\s*$/gm
+const HEADING_ID_RE = /^(#{1,6}\s+.+?)[ \t]*\{#[^}]+\}[ \t]*$/gm
 
 function stripHeadingIds(markdown: string): string {
   return markdown.replace(HEADING_ID_RE, "$1")
