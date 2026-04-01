@@ -122,14 +122,6 @@ interface ComponentAttributeNode extends BaseNode {
   meta: { attributeName: string; componentName: string }
 }
 
-/** Translatable leaf -- children text inside a component */
-interface ComponentChildrenNode extends BaseNode {
-  type: "component-children"
-  translatable: true
-  hash: string
-  meta: { componentName: string }
-}
-
 /** Inert leaf -- inline code span */
 interface InlineCodeNode extends BaseNode {
   type: "inline-code"
@@ -193,7 +185,6 @@ export type ContentNode =
   | CodeBodyNode
   | ComponentNode
   | ComponentAttributeNode
-  | ComponentChildrenNode
   | InlineCodeNode
   | ImageNode
   | ImageAltNode
@@ -389,14 +380,17 @@ function extractComponents(
 
       const childNodes: ContentNode[] = [...translatable]
 
-      // Children prose is translatable
+      // Recursively normalize children to decompose nested HTML tags,
+      // inline code, links, etc. into their own sub-nodes.
       if (children.trim()) {
-        childNodes.push({
-          type: "component-children",
-          translatable: true,
-          content: children,
-          hash: leafHash(children),
-          meta: { componentName: name },
+        const childResult = normalizeContent(children)
+        // Merge the sub-tree into this component's children
+        for (const childNode of childResult.tree) {
+          childNodes.push(childNode)
+        }
+        // Merge child extractions into parent
+        childResult.extractions.forEach((v, k) => {
+          extractions.set(k, v)
         })
       }
 
@@ -455,18 +449,18 @@ function extractComponents(
 const HTML_TAGS = "a|div|span|p|table|tr|td|th|thead|tbody|img|br|hr|ul|ol|li|strong|em|b|i|code|pre|blockquote|iframe|video|source|details|summary"
 
 /**
- * Matches opening+closing HTML tags with content: <tag attrs>...</tag>
- * Non-greedy on content. Self-closing tags (br, hr, img) are handled
- * separately below.
+ * Matches opening+closing HTML tags with attributes and content.
+ * Requires at least one attribute (\s+) to avoid matching bare tags
+ * like <li> that would consume nested <a href="..."> children.
  */
 const HTML_TAG_WITH_CHILDREN_RE = new RegExp(
-  `<(${HTML_TAGS})(\\s[^>]*)?>([\\s\\S]*?)<\\/\\1>`,
+  `<(${HTML_TAGS})(\\s[^>]+)>([\\s\\S]*?)<\\/\\1>`,
   "gi"
 )
 
-/** Self-closing HTML tags: <img src="..." />, <br />, <hr /> */
+/** Self-closing HTML tags with attributes: <img src="..." />, etc. */
 const HTML_SELF_CLOSING_RE = new RegExp(
-  `<(${HTML_TAGS})(\\s[^>]*)?\\s*\\/?>`,
+  `<(${HTML_TAGS})(\\s[^>]+)\\s*\\/?>`,
   "gi"
 )
 
@@ -475,15 +469,15 @@ function extractHtmlTags(
   tree: ContentNode[],
   extractions: Map<string, string>
 ): string {
-  // Tags with children first (like <a href="...">text</a>)
-  let result = markdown.replace(
-    HTML_TAG_WITH_CHILDREN_RE,
+  // Loop until no more matches -- handles nested tags (e.g., <a> inside <li>)
+  // where the outer tag has no attributes and passes through, exposing the inner tag.
+  let result = markdown
+  let prevResult = ""
+  while (prevResult !== result) {
+    prevResult = result
+    result = result.replace(
+      HTML_TAG_WITH_CHILDREN_RE,
     (fullMatch: string, tagName: string, attrStr: string, children: string) => {
-      // Skip tags with no attributes -- nothing inert to track
-      if (!attrStr || !attrStr.trim()) {
-        return fullMatch
-      }
-
       const hash = shortHash(fullMatch)
       const open = htmlTagOpenTag(hash)
       const close = htmlTagCloseTag(hash)
@@ -523,16 +517,13 @@ function extractHtmlTags(
       }
       return open
     }
-  )
+    )
+  } // end while loop for nested tags
 
   // Self-closing tags with attributes (e.g., <img src="..." />)
   result = result.replace(
     HTML_SELF_CLOSING_RE,
     (fullMatch: string, tagName: string, attrStr: string) => {
-      if (!attrStr || !attrStr.trim()) {
-        return fullMatch
-      }
-
       // Skip if already wrapped by the children pass above
       if (fullMatch.includes("HTML-PLACEHOLDER")) {
         return fullMatch
