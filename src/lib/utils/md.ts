@@ -10,12 +10,12 @@ import { dateToString } from "@/lib/utils/date"
 
 import internalTutorialSlugs from "@/data/internalTutorials.json"
 
-import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
 function getContentRoot() {
-  return join(process.cwd(), CONTENT_DIR)
+  return join(process.cwd(), "public/content")
 }
 
 export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {

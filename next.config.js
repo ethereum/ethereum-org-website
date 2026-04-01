@@ -101,6 +101,19 @@ module.exports = (phase) => {
         "*.md": { loaders: ["raw-loader"], as: "*.js" },
         "*.mp3": { as: "*.static" },
       },
+      // Suppress file-tracing warnings from the MDX pipeline. These files
+      // use dynamic path.join/readFile to read markdown content at runtime.
+      // outputFileTracingExcludes already prevents over-bundling.
+      ignoreIssue: [
+        {
+          path: "**/src/lib/**",
+          description: /Overly broad patterns/,
+        },
+        {
+          path: "**",
+          title: /Encountered unexpected file/,
+        },
+      ],
     },
     // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
     serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
