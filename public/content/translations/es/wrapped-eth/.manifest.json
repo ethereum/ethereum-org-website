@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "englishSource": "public/content/wrapped-eth/index.md",
+  "translatedAt": "2026-04-02T02:57:53.735Z",
+  "englishHash": "ac8445ead45e",
+  "sections": {
+    "_frontmatter": "2e5b3b357f5c",
+    "_intro": "01ba4719c80b",
+    "intro-to-weth": "6a0cb5e3712e",
+    "intro-to-weth/_label": "8e04277479ea",
+    "intro-to-weth/_content": "c88fd77540be",
+    "intro-to-weth/_content/link-text:0": "8d7768a30791",
+    "intro-to-weth/_content/link-text:1": "3e9b8d74d6bc",
+    "intro-to-weth/_content/link-text:2": "81fbd2f198c9",
+    "intro-to-weth/_content/prose:0": "f5ab92c8ff06",
+    "intro-to-weth/why-do-we-need-to-wrap-eth": "c40b5c0b111e",
+    "intro-to-weth/why-do-we-need-to-wrap-eth/_label": "0a4244a41aaa",
+    "intro-to-weth/why-do-we-need-to-wrap-eth/_content": "ab1ca539f394",
+    "intro-to-weth/why-do-we-need-to-wrap-eth/_content/link-text:0": "1f090d6c3bb9",
+    "intro-to-weth/why-do-we-need-to-wrap-eth/_content/prose:0": "18ed60d0df99",
+    "intro-to-weth/weth-vs-eth-differences": "575a377dd9e5",
+    "intro-to-weth/weth-vs-eth-differences/_label": "c3eb652ad7bd",
+    "intro-to-weth/weth-vs-eth-differences/_content": "98a02d8c18c0",
+    "intro-to-weth/weth-vs-eth-differences/_content/link-text:0": "b92f0d72bdb2",
+    "intro-to-weth/weth-vs-eth-differences/_content/link-text:1": "a13bebeb57e1",
+    "intro-to-weth/weth-vs-eth-differences/_content/link-text:2": "b73ab4da4a2d",
+    "intro-to-weth/weth-vs-eth-differences/_content/prose:0": "b26fc8e80b69",
+    "intro-to-weth/faq": "3d5434337a31",
+    "intro-to-weth/faq/_label": "e956a9404b46",
+    "intro-to-weth/faq/_content": "230307830538",
+    "intro-to-weth/faq/_content/component-attribute:0": "81ba95276a66",
+    "intro-to-weth/faq/_content/prose:0": "d9374ad7110c",
+    "intro-to-weth/faq/_content/component-attribute:1": "8a1228efe8f6",
+    "intro-to-weth/faq/_content/prose:1": "cef492226dfa",
+    "intro-to-weth/faq/_content/component-attribute:2": "75a27a923c9e",
+    "intro-to-weth/faq/_content/link-text:0": "9630465620f4",
+    "intro-to-weth/faq/_content/prose:2": "d6d5af78656f",
+    "intro-to-weth/faq/_content/component-attribute:3": "c3fa0b992b5b",
+    "intro-to-weth/faq/_content/link-text:1": "48c81c23a6f8",
+    "intro-to-weth/faq/_content/link-text:2": "3684de0e12df",
+    "intro-to-weth/faq/_content/link-text:3": "2b5edf516693",
+    "intro-to-weth/faq/_content/prose:3": "caf55f467ece",
+    "intro-to-weth/faq/_content/prose:4": "49209c332ea3",
+    "intro-to-weth/further-reading": "35cbebd79341",
+    "intro-to-weth/further-reading/_label": "4082f515b2f4",
+    "intro-to-weth/further-reading/_content": "0e5b463a5261",
+    "intro-to-weth/further-reading/_content/link-text:0": "bcea47a88bae",
+    "intro-to-weth/further-reading/_content/link-text:1": "63c1dd41a703",
+    "intro-to-weth/further-reading/_content/link-text:2": "940522a5556c",
+    "intro-to-weth/further-reading/_content/prose:0": "e7daba29bb2b"
+  },
+  "placeholderOrder": [
+    "LINK-67edbe",
+    "LINK-41737e",
+    "LINK-74b3ba",
+    "LINK-fb2e62",
+    "LINK-3a4c05",
+    "LINK-a21a82",
+    "LINK-956e7c",
+    "COMPONENT-326f81",
+    "COMPONENT-036a64",
+    "COMPONENT-740f77",
+    "LINK-d29fbd",
+    "COMPONENT-5c1d6d",
+    "LINK-5d9457",
+    "LINK-da7442",
+    "LINK-a90d81",
+    "LINK-92f28b",
+    "LINK-defdd7",
+    "LINK-0fdf2e"
+  ],
+  "placeholderMap": {
+    "COMPONENT-326f81": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/wrapped-eth",
+        "eventName": "clicked Do you pay to wrap/unwrap ETH?"
+      }
+    },
+    "COMPONENT-036a64": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/wrapped-eth",
+        "eventName": "clicked Is WETH safe?"
+      }
+    },
+    "COMPONENT-740f77": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/wrapped-eth",
+        "eventName": "clicked Why am I seeing different WETH tokens?"
+      }
+    },
+    "LINK-d29fbd": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      }
+    },
+    "COMPONENT-5c1d6d": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/wrapped-eth",
+        "eventName": "clicked What are the WETH contracts on other networks?"
+      }
+    },
+    "LINK-5d9457": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+      }
+    },
+    "LINK-da7442": {
+      "type": "link",
+      "values": {
+        "url": "https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1"
+      }
+    },
+    "LINK-a90d81": {
+      "type": "link",
+      "values": {
+        "url": "https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006"
+      }
+    },
+    "LINK-67edbe": {
+      "type": "link",
+      "values": {
+        "url": "https://www.wrapeth.com/"
+      }
+    },
+    "LINK-41737e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#erc-20"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-fb2e62": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/standards/tokens/erc-20/"
+      }
+    },
+    "LINK-3a4c05": {
+      "type": "link",
+      "values": {
+        "url": "/eth/supply/"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-956e7c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/merge/issuance"
+      }
+    },
+    "LINK-92f28b": {
+      "type": "link",
+      "values": {
+        "url": "https://weth.tkn.eth.limo/"
+      }
+    },
+    "LINK-defdd7": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+      }
+    },
+    "LINK-0fdf2e": {
+      "type": "link",
+      "values": {
+        "url": "https://zellic.io/blog/formal-verification-weth"
+      }
+    }
+  }
+}
