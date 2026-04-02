@@ -4,7 +4,9 @@
   // Custom rules
   "customRules": [
     ".markdownlint-rules/require-heading-id.js",
-    ".markdownlint-rules/no-duplicate-heading-id.js"
+    ".markdownlint-rules/no-duplicate-heading-id.js",
+    ".markdownlint-rules/lowercase-heading-id.js",
+    ".markdownlint-rules/match-english-heading-ids.js"
   ],
 
   // Rule configuration
@@ -27,10 +29,19 @@
     // Our files start at h1, h2, or h3 depending on layout
     "MD041": false,
 
+    // MD051: Link fragments must point to valid heading anchors
+    "MD051": true,
+
     // Custom: Every h1-h4 must have {#anchor-id}
     "heading-requires-id": true,
 
     // Custom: No duplicate {#id} anchors in the same file
-    "no-duplicate-heading-id": true
+    "no-duplicate-heading-id": true,
+
+    // Custom: Heading IDs must be lowercase
+    "lowercase-heading-id": true,
+
+    // Custom: Translation IDs must match English source (flag only, no auto-fix)
+    "match-english-heading-ids": true
   }
 }
