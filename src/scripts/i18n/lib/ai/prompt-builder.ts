@@ -150,6 +150,7 @@ This content has been pre-processed. Non-translatable elements have been replace
    <HTML-PLACEHOLDER-COMPONENT-****** /> = childless JSX component (will be restored)
 
 2. WRAPPER placeholders -- translate the text BETWEEN the tags, keep the tags themselves:
+   <HTML-PLACEHOLDER-CODEBLOCK-******>translate this text</HTML-PLACEHOLDER-CODEBLOCK-******> = markdown/text fence (translate the prose inside)
    <HTML-PLACEHOLDER-LINK-******>translate this text</HTML-PLACEHOLDER-LINK-******>
    <HTML-PLACEHOLDER-HTMLTAG-******>translate this text</HTML-PLACEHOLDER-HTMLTAG-******>
    <HTML-PLACEHOLDER-COMPONENT-******>translate this text</HTML-PLACEHOLDER-COMPONENT-******>

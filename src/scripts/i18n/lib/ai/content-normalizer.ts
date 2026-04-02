@@ -253,6 +253,9 @@ function linkCloseTag(hash: string): string {
 // Pass 1: Fenced code blocks
 // ---------------------------------------------------------------------------
 
+/** Language tags that indicate prose content, not executable code */
+const PROSE_FENCE_TAGS = new Set(["md", "markdown", "mdx", "text", "txt", ""])
+
 function extractCodeFences(
   markdown: string,
   tree: ContentNode[],
@@ -266,10 +269,38 @@ function extractCodeFences(
       const codeContent = groups[3] ?? ""
 
       const hash = shortHash(fullMatch)
-      const placeholder = codeblockTag(hash)
-
-      // Extract comments from the code block as translatable leaves
       const language = langTag.toLowerCase().split(/\s+/)[0] || ""
+
+      // Markdown/text fences contain prose, not code.
+      // Treat the body as translatable content (like component children).
+      if (PROSE_FENCE_TAGS.has(language) && codeContent.trim()) {
+        const open = `<HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
+        const close = `</HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
+
+        // Recursively normalize the prose content inside the fence
+        const childResult = normalizeContent(codeContent)
+        const children: ContentNode[] = []
+        for (const childNode of childResult.tree) {
+          children.push(childNode)
+        }
+        childResult.extractions.forEach((v, k) => {
+          extractions.set(k, v)
+        })
+
+        tree.push({
+          type: "code-fence",
+          translatable: false,
+          content: fullMatch,
+          placeholder: `${open}...${close}`,
+          children,
+        })
+
+        extractions.set(`CODEBLOCK:${hash}`, fullMatch)
+        return `${indent}${open}\n${childResult.normalized}\n${indent}${close}`
+      }
+
+      // True code fences: extract comments as translatable leaves
+      const placeholder = codeblockTag(hash)
       const { comments } = extractComments(codeContent, language)
 
       const children: ContentNode[] = []
@@ -755,9 +786,9 @@ function normalizeWhitespace(markdown: string): string {
  * not on the content-addressed hashes embedded in placeholder tags.
  */
 const BLOCK_PLACEHOLDER_RE =
-  /<HTML-PLACEHOLDER-(?:CODEBLOCK|CODE|IMAGE)-[a-f0-9]+ \/>/g
+  /<HTML-PLACEHOLDER-(?:CODE|IMAGE)-[a-f0-9]+ \/>/g
 const WRAPPER_TAG_RE =
-  /<\/?HTML-PLACEHOLDER-(?:LINK|HTMLTAG|COMPONENT)-[a-f0-9]+(?:\s\/)?>/g
+  /<\/?HTML-PLACEHOLDER-(?:CODEBLOCK|LINK|HTMLTAG|COMPONENT)-[a-f0-9]+(?:\s\/)?>/g
 
 function stripPlaceholderTags(text: string): string {
   return text

@@ -470,7 +470,7 @@ function verifyPlaceholders(
   const missing: string[] = []
 
   // Block placeholders (self-closing)
-  const blockRe = /<HTML-PLACEHOLDER-(?:CODEBLOCK|CODE|COMPONENT|IMAGE)-[a-f0-9]+ \/>/g
+  const blockRe = /<HTML-PLACEHOLDER-(?:CODE|IMAGE)-[a-f0-9]+ \/>/g
   let match
   while ((match = blockRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
@@ -478,8 +478,16 @@ function verifyPlaceholders(
     }
   }
 
+  // Self-closing CODEBLOCK (true code) and COMPONENT (childless)
+  const selfClosingRe = /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT)-[a-f0-9]+ \/>/g
+  while ((match = selfClosingRe.exec(normalized)) !== null) {
+    if (!translated.includes(match[0])) {
+      missing.push(match[0])
+    }
+  }
+
   // Wrapper open tags
-  const wrapperOpenRe = /<HTML-PLACEHOLDER-(?:LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
+  const wrapperOpenRe = /<HTML-PLACEHOLDER-(?:CODEBLOCK|LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
   while ((match = wrapperOpenRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -487,7 +495,7 @@ function verifyPlaceholders(
   }
 
   // Wrapper close tags
-  const wrapperCloseRe = /<\/HTML-PLACEHOLDER-(?:LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
+  const wrapperCloseRe = /<\/HTML-PLACEHOLDER-(?:CODEBLOCK|LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
   while ((match = wrapperCloseRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -512,7 +520,7 @@ function reconstructFromPlaceholders(
 
   // Block placeholders: direct replacement with originals
   extractions.forEach((original, placeholder) => {
-    if (placeholder.startsWith("LINK:") || placeholder.startsWith("HTMLTAG:") || placeholder.startsWith("COMPONENT:")) {
+    if (placeholder.startsWith("LINK:") || placeholder.startsWith("HTMLTAG:") || placeholder.startsWith("COMPONENT:") || placeholder.startsWith("CODEBLOCK:")) {
       return
     }
     result = result.replace(placeholder, original)
@@ -575,6 +583,27 @@ function reconstructFromPlaceholders(
       const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
       if (openingTagMatch && closingTagMatch) {
         const rebuilt = `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedChildren}</${closingTagMatch[1]}>`
+        result =
+          result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+      }
+    }
+  })
+
+  // Wrapper placeholders: CODEBLOCK (prose/markdown fences)
+  extractions.forEach((original, key) => {
+    if (!key.startsWith("CODEBLOCK:")) return
+    const hash = key.slice(10)
+    const openTag = `<HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
+    const closeTag = `</HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
+
+    const openIdx = result.indexOf(openTag)
+    const closeIdx = result.indexOf(closeTag)
+    if (openIdx >= 0 && closeIdx >= 0) {
+      const translatedContent = result.slice(openIdx + openTag.length, closeIdx)
+      // Rebuild the fence with original language tag and translated content
+      const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
+      if (fenceMatch) {
+        const rebuilt = `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedContent.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
         result =
           result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
       }
