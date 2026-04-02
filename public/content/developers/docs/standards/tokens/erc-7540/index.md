@@ -31,13 +31,15 @@ ERC-7540 splits this into two steps. The investor first calls `requestDeposit()`
 
 ![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
 
-Each request moves through three states: pending (submitted, waiting for processing), claimable (fulfilled and priced), and claimed (investor has collected their shares or assets).
-
-![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
+The redemption flow works the same way: `requestRedeem()` locks shares, and once fulfilled the investor calls `redeem()` to claim assets.
 
 ## ERC-7540 Functions and Features {#body}
 
 ERC-7540 inherits the full ERC-4626 interface but repurposes `deposit`/`mint`/`withdraw`/`redeem` as claim functions. The new `requestDeposit` and `requestRedeem` functions handle the initial request step.
+
+Each request moves through three states: pending (submitted, waiting for processing), claimable (fulfilled and priced), and claimed (investor has collected their shares or assets).
+
+![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
 
 ### Deposit request flow {#deposit-request-flow}
 
