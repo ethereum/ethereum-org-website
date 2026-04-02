@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { langViewportModes } from "@/storybook/modes"
 

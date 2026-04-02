@@ -1,6 +1,6 @@
 import { AppWindowMac } from "lucide-react"
 import Image from "next/image"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { CardBanner } from "@/components/ui/card"
 import { VStack } from "@/components/ui/flex"
