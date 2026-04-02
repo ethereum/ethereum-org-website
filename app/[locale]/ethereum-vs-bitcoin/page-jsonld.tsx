@@ -19,9 +19,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-ethereum-vs-bitcoin",
-  })
+  const t = await getTranslations("page-ethereum-vs-bitcoin")
 
   const url = normalizeUrlForJsonLd(locale, `/ethereum-vs-bitcoin/`)
 

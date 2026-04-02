@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "lib": ["dom", "dom.iterable", "esnext", "ES2021.String"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "ES2021.String"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -13,13 +18,21 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"],
-      "@/storybook-utils": ["./.storybook/utils.ts"],
-      "@/storybook/*": ["./.storybook/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ],
+      "@/storybook-utils": [
+        "./.storybook/utils.ts"
+      ],
+      "@/storybook/*": [
+        "./.storybook/*"
+      ]
     },
     "plugins": [
       {
@@ -33,7 +46,12 @@
     "**/*.ts",
     "**/*.tsx",
     ".storybook/**/*",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "./public", "./src/intl"]
+  "exclude": [
+    "node_modules",
+    "./public",
+    "./src/intl"
+  ]
 }

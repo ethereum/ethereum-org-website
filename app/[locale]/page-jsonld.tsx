@@ -16,9 +16,7 @@ export default async function IndexPageJsonLD({
 }: {
   locale: Lang | undefined
 }) {
-  const t = await getTranslations({
-    namespace: "page-index",
-  })
+  const t = await getTranslations("page-index")
 
   const url = normalizeUrlForJsonLd(locale, `/`)
 

@@ -101,8 +101,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({ locale, namespace: "page-index" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-index")
+  const tCommon = await getTranslations("common")
   const { direction: dir, isRtl } = getDirection(locale)
 
   // Fetch data using the new data-layer functions (already cached)
@@ -163,7 +163,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
-  const bentoItems = await getBentoBoxItems(locale)
+  const bentoItems = await getBentoBoxItems()
 
   const ethPriceHasError = "error" in ethPrice
 
@@ -936,7 +936,7 @@ export async function generateMetadata(props: {
   const { locale } = params
 
   try {
-    const t = await getTranslations({ locale, namespace: "page-index" })
+    const t = await getTranslations("page-index")
     return await getMetadata({
       locale,
       slug: [""],

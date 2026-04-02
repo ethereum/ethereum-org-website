@@ -17,7 +17,7 @@ export default async function BugBountyJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-bug-bounty" })
+  const t = await getTranslations("page-bug-bounty")
 
   const url = normalizeUrlForJsonLd(locale, `/bug-bounty/`)
 

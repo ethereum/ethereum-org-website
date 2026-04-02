@@ -17,9 +17,7 @@ export default async function RoadmapPageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-roadmap",
-  })
+  const t = await getTranslations("page-roadmap")
 
   const url = normalizeUrlForJsonLd(locale, `/roadmap/`)
 
