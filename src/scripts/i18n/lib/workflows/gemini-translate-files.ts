@@ -233,7 +233,9 @@ async function translateLanguage(
           writeMarkdownManifest(
             join(rootDir, destPath),
             file.path,
-            file.content
+            file.content,
+            result.placeholderOrder,
+            result.placeholderMap
           )
         } else {
           const localeDir = join(rootDir, `src/intl/${language}`)

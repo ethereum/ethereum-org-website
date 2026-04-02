@@ -95,9 +95,19 @@ export interface TranslateFileOptions {
   normalized?: boolean
 }
 
+/** Inert value associated with a placeholder (URL, path, className, etc.) */
+export interface PlaceholderInert {
+  type: string
+  values: Record<string, string>
+}
+
 export interface TranslateFileResult {
   translatedContent: string
   tokensUsed: { input: number; output: number }
+  /** Placeholder IDs in the order they appear in the translated output */
+  placeholderOrder?: string[]
+  /** Map of placeholder ID -> inert values (URLs, paths, classNames) */
+  placeholderMap?: Record<string, PlaceholderInert>
 }
 
 /** Optional metadata for richer Gemini API call logging */
@@ -268,15 +278,19 @@ async function translateNormalizedMarkdown(
     )
   }
 
-  // Step 5: Reconstruct
+  // Step 5: Capture placeholderOrder from Gemini's response (before reconstruction)
+  const placeholderOrder = extractPlaceholderOrder(translatedProse)
+
+  // Step 6: Build placeholderMap from the normalizer tree
+  const placeholderMap = buildPlaceholderMap(tree, extractions)
+
+  // Step 7: Reconstruct
   let finalContent = reconstructFromPlaceholders(translatedProse, extractions)
 
-  // Step 6: Restore heading anchor IDs from English source.
-  // The normalizer strips {#id} for hashing; Gemini never sees them.
-  // We copy them back by matching heading level and position.
+  // Step 8: Restore heading anchor IDs from English source.
   finalContent = restoreHeadingIds(finalContent, fileContent)
 
-  // Step 7: Translate code comments (from normalizer tree)
+  // Step 9: Translate code comments (from normalizer tree)
   const commentNodes = collectCommentNodes(tree)
   if (commentNodes.length > 0) {
     try {
@@ -297,7 +311,112 @@ async function translateNormalizedMarkdown(
   return {
     translatedContent: finalContent,
     tokensUsed: totalTokens,
+    placeholderOrder,
+    placeholderMap,
   }
+}
+
+/**
+ * Extract placeholder IDs from translated text in the order they appear.
+ * Called BEFORE reconstruction so the tags are still present.
+ */
+function extractPlaceholderOrder(translated: string): string[] {
+  const order: string[] = []
+  // Match all placeholder tags (self-closing and wrapper open tags, not close tags)
+  const re = /<HTML-PLACEHOLDER-([A-Z]+-[a-f0-9]+)(?:\s\/)?>/g
+  let match
+  while ((match = re.exec(translated)) !== null) {
+    order.push(match[1])
+  }
+  return order
+}
+
+/**
+ * Build a map from placeholder ID to its inert values.
+ *
+ * Sources data from the normalizer tree nodes, keyed by the same
+ * placeholder IDs that appear in the normalized output.
+ */
+function buildPlaceholderMap(
+  tree: ContentNode[],
+  extractions: Map<string, string>
+): Record<string, PlaceholderInert> {
+  const map: Record<string, PlaceholderInert> = {}
+
+  function visit(node: ContentNode): void {
+    if (node.type === "link" && "meta" in node) {
+      // Extract hash from placeholder: "<HTML-PLACEHOLDER-LINK-abc123>...</...>"
+      const hashMatch = node.placeholder.match(/LINK-([a-f0-9]+)/)
+      if (hashMatch) {
+        map[`LINK-${hashMatch[1]}`] = {
+          type: "link",
+          values: { url: node.meta.url },
+        }
+      }
+    }
+
+    if (node.type === "image" && "meta" in node) {
+      const hashMatch = node.placeholder.match(/IMAGE-([a-f0-9]+)/)
+      if (hashMatch) {
+        map[`IMAGE-${hashMatch[1]}`] = {
+          type: "image",
+          values: { path: node.meta.path },
+        }
+      }
+    }
+
+    if (node.type === "html-tag" && "meta" in node) {
+      const hashMatch = node.placeholder.match(/HTMLTAG-([a-f0-9]+)/)
+      if (hashMatch) {
+        map[`HTMLTAG-${hashMatch[1]}`] = {
+          type: "html-tag",
+          values: { tagName: node.meta.tagName, ...node.meta.inertAttributes },
+        }
+      }
+    }
+
+    if (node.type === "component" && "meta" in node) {
+      const hashMatch = node.placeholder.match(/COMPONENT-([a-f0-9]+)/)
+      if (hashMatch) {
+        map[`COMPONENT-${hashMatch[1]}`] = {
+          type: "component",
+          values: { componentName: node.meta.componentName, ...node.meta.inertAttributes },
+        }
+      }
+    }
+
+    if (node.type === "code-fence") {
+      const hashMatch = node.placeholder.match(/CODEBLOCK-([a-f0-9]+)/)
+      if (hashMatch) {
+        map[`CODEBLOCK-${hashMatch[1]}`] = {
+          type: "code-fence",
+          values: {},
+        }
+      }
+    }
+
+    if (node.type === "inline-code") {
+      const hashMatch = node.placeholder.match(/CODE-([a-f0-9]+)/)
+      if (hashMatch) {
+        map[`CODE-${hashMatch[1]}`] = {
+          type: "inline-code",
+          values: { content: node.content },
+        }
+      }
+    }
+
+    if ("children" in node && node.children) {
+      for (const child of node.children) {
+        visit(child)
+      }
+    }
+  }
+
+  for (const node of tree) {
+    visit(node)
+  }
+
+  return map
 }
 
 /**

@@ -78,6 +78,19 @@ export interface PerFileManifest {
    * undefined until first Gemini translation populates it.
    */
   placeholderOrder?: string[]
+  /**
+   * Map of placeholder ID -> inert values (URLs, paths, classNames).
+   *
+   * Built from the normalizer tree at translation time. Each key is a
+   * placeholder ID (e.g., "LINK-a21a82") and the value contains the
+   * non-translatable attributes associated with that placeholder.
+   *
+   * Used with placeholderOrder to deterministically propagate inert-value
+   * changes to translated files without re-translating.
+   *
+   * undefined until first Gemini translation populates it.
+   */
+  placeholderMap?: Record<string, { type: string; values: Record<string, string> }>
 }
 
 /**
@@ -450,7 +463,9 @@ function flattenTrie(
 export function writeMarkdownManifest(
   translationPath: string,
   englishSourcePath: string,
-  englishContent: string
+  englishContent: string,
+  placeholderOrder?: string[],
+  placeholderMap?: Record<string, { type: string; values: Record<string, string> }>
 ): void {
   const fileManifest = generateFileManifest(englishContent, "markdown")
   const manifestPath = join(dirname(translationPath), ".manifest.json")
@@ -461,6 +476,8 @@ export function writeMarkdownManifest(
     translatedAt: new Date().toISOString(),
     englishHash: fileManifest.hash,
     sections: flattenTrie(fileManifest.trie),
+    placeholderOrder,
+    placeholderMap,
   }
 
   mkdirSync(dirname(manifestPath), { recursive: true })
