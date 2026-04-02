@@ -4,10 +4,15 @@
  * For large JSON files (>120 top-level keys), splits into ~100-key batches
  * to stay within Gemini's reliable output range.
  *
- * For JSON values containing embedded HTML (<a>, <strong>, <br/>, etc.),
- * extracts tags to numbered placeholders before translation and restores
- * them after. This prevents Gemini from mangling or dropping HTML structure.
+ * For JSON values containing embedded HTML with attributes (e.g., <a href>),
+ * extracts to content-addressed wrapper placeholders matching the markdown
+ * normalizer's format: <HTML-PLACEHOLDER-HTMLTAG-{hash}>text</...>
+ *
+ * Simple formatting tags (<strong>, <em>, <br>) pass through to Gemini
+ * since they have no inert attributes and Gemini handles them correctly.
  */
+
+import { createHash } from "crypto"
 
 type JsonValue =
   | string
@@ -43,8 +48,20 @@ const BATCH_SIZE = 100
 /** Avoid tiny final batches -- absorb up to this many extra keys */
 const BATCH_BUFFER = 20
 
-/** HTML tag pattern: opening, closing, and self-closing tags */
-const HTML_TAG_RE = /<\/?[a-zA-Z][^>]*\/?>/g
+/** 6-char hex digest for content-addressed placeholder IDs */
+function shortHash(content: string): string {
+  return createHash("sha256").update(content, "utf8").digest("hex").slice(0, 6)
+}
+
+/**
+ * Matches HTML tags WITH attributes and their content:
+ *   <a href="...">text</a>
+ * Does NOT match simple tags like <strong>, <em>, <br>.
+ */
+const HTML_TAG_WITH_ATTRS_RE = /<([a-zA-Z][a-zA-Z0-9]*)(\s[^>]+)>([\s\S]*?)<\/\1>/g
+
+/** Self-closing HTML tags with attributes: <img src="..." />, <br class="..." /> */
+const HTML_SELF_CLOSING_WITH_ATTRS_RE = /<([a-zA-Z][a-zA-Z0-9]*)(\s[^>]+)\s*\/?>/g
 
 // ---------------------------------------------------------------------------
 // Public API
@@ -211,14 +228,32 @@ function extractHtmlFromString(
   path: string
 ): string {
   const entries: PlaceholderEntry[] = []
-  let counter = 0
 
-  const result = text.replace(HTML_TAG_RE, (match) => {
-    const placeholder = `<!-- HTML_${counter} -->`
-    entries.push({ placeholder, original: match })
-    counter++
-    return placeholder
-  })
+  // Tags with children and attributes: <a href="...">text</a>
+  // Use wrapper placeholders so Gemini can reorder within the value
+  let result = text.replace(
+    HTML_TAG_WITH_ATTRS_RE,
+    (fullMatch, tagName, attrs, children) => {
+      const hash = shortHash(fullMatch)
+      const open = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+      const close = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+      entries.push({ placeholder: `HTMLTAG:${hash}`, original: fullMatch })
+      return `${open}${children}${close}`
+    }
+  )
+
+  // Self-closing tags with attributes: <img src="..." />
+  result = result.replace(
+    HTML_SELF_CLOSING_WITH_ATTRS_RE,
+    (fullMatch, tagName, attrs) => {
+      // Skip if already wrapped by the previous pass
+      if (fullMatch.includes("HTML-PLACEHOLDER")) return fullMatch
+      const hash = shortHash(fullMatch)
+      const placeholder = `<HTML-PLACEHOLDER-HTMLTAG-${hash} />`
+      entries.push({ placeholder, original: fullMatch })
+      return placeholder
+    }
+  )
 
   if (entries.length > 0) {
     map.set(path, entries)
@@ -280,11 +315,33 @@ function restoreHtmlInString(
 
   let result = text
   for (const { placeholder, original } of entries) {
-    if (!result.includes(placeholder)) {
-      failures.push(`${path}: missing ${placeholder} (was: ${original})`)
-      continue
+    if (placeholder.startsWith("HTMLTAG:")) {
+      // Wrapper placeholder: rebuild original tag around translated text
+      const hash = placeholder.slice(8)
+      const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+      const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+
+      const openIdx = result.indexOf(openTag)
+      const closeIdx = result.indexOf(closeTag)
+      if (openIdx >= 0 && closeIdx >= 0) {
+        const translatedText = result.slice(openIdx + openTag.length, closeIdx)
+        const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
+        const closingMatch = original.match(/<\/(\w+)>/)
+        if (tagMatch && closingMatch) {
+          const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
+          result = result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+        }
+      } else {
+        failures.push(`${path}: missing wrapper ${openTag} (was: ${original})`)
+      }
+    } else {
+      // Self-closing placeholder: direct replacement
+      if (!result.includes(placeholder)) {
+        failures.push(`${path}: missing ${placeholder} (was: ${original})`)
+        continue
+      }
+      result = result.replace(placeholder, original)
     }
-    result = result.replace(placeholder, original)
   }
   return result
 }

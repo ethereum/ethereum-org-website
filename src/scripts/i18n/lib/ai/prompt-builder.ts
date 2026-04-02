@@ -79,7 +79,11 @@ function getFormatRules(
 ): string {
   if (fileType === "json") {
     const htmlRule = htmlExtracted
-      ? `- \`<!-- HTML_N -->\` placeholders are stand-ins for HTML tags managed by our pipeline. You MUST preserve them EXACTLY as-is -- same text, same position, same numbering. Do NOT remove, translate, modify, or renumber them. They will be restored to HTML tags automatically after translation.`
+      ? `- Some HTML tags have been replaced with placeholder tags:
+  - Self-closing: \`<HTML-PLACEHOLDER-HTMLTAG-****** />\` -- preserve exactly, do not modify.
+  - Wrapper: \`<HTML-PLACEHOLDER-HTMLTAG-******>text</HTML-PLACEHOLDER-HTMLTAG-******>\` -- translate the text between tags, keep the tags themselves. You may reorder wrapper pairs to match natural ${targetLanguage} word order.
+  - Simple formatting tags (<strong>, <em>, etc.) are NOT placeholders -- preserve them around your translated text.
+  - NEVER translate, modify, or remove placeholder tags. Every placeholder must appear exactly once in the output.`
       : `- Preserve HTML tags within values exactly (<a href="...">, <strong>, etc.).`
 
     return `Format rules:
