@@ -83,23 +83,11 @@ Este modelo permite a divulgação seletiva, especialmente quando combinado com 
 
 #### 💡Estudo de caso: Identidade Digital Nacional (NDI) do Butão no Ethereum {#case-study-bhutan-ndi}
 
-- Fornece acesso a credenciais de identidade verificáveis para os quase 800.000 cidadãos do Butão
+- Fornece acesso a credenciais verificáveis para os quase 800.000 cidadãos do Butão
 - Migrado da rede Polygon [para a rede principal do Ethereum](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) em outubro de 2025
 - Mais de [234.000 identidades digitais](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) emitidas até março de 2025
 
-O Reino do Butão [migrou seu sistema de Identidade Digital Nacional (NDI)](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) para o Ethereum em outubro de 2025. Construído sobre os princípios de identidade descentralizada e identidade auto-soberana, o sistema NDI do Butão usa identificadores descentralizados e credenciais verificáveis para emitir credenciais assinadas digitalmente diretamente para a carteira pessoal de um cidadão. Ao ancorar provas criptográficas dessas credenciais no Ethereum, o sistema garante que elas sejam autênticas, à prova de adulteração e possam ser verificadas por qualquer parte sem consultar uma autoridade central.
-
-A arquitetura do sistema enfatiza a privacidade através do uso da tecnologia de [prova de conhecimento zero (ZKP)](/zero-knowledge-proofs/). Essa implementação de "divulgação seletiva" permite que os cidadãos provem fatos específicos (por exemplo, "Tenho mais de 18 anos" ou "Sou um cidadão") para acessar serviços sem revelar os dados pessoais subjacentes, como o número completo da identidade ou a data de nascimento exata. Isso demonstra um uso poderoso e real do Ethereum para um sistema de identidade nacional seguro, centrado no usuário e que preserva a privacidade.
-
-#### 💡Estudo de caso: QuarkID da Cidade de Buenos Aires na [Segunda Camada](/layer-2/) do Ethereum, ZKSync Era {#case-study-buenos-aires-quarkid}
-
-- Emissão de credenciais de identidade descentralizadas para mais de [3,6 milhões de usuários](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo) no lançamento
-- O QuarkID é um protocolo de código aberto reconhecido como um [Bem Público Digital](https://www.digitalpublicgoods.net/r/quarkid) sob os Objetivos de Desenvolvimento Sustentável da ONU
-- Enfatiza um modelo de "[governo como usuário](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)", no qual a cidade não é dona do protocolo, dando aos cidadãos total propriedade e privacidade dos dados
-
-Em 2024, o Governo da Cidade de Buenos Aires (GCBA) integrou o QuarkID, a "estrutura de confiança digital" de código aberto construída pela Secretaria de Inovação e Transformação Digital do GCBA, no miBA, o aplicativo oficial da cidade para que os residentes acessem serviços governamentais e documentos oficiais. No lançamento, todos os mais de 3,6 milhões de usuários do miBA receberam identidades digitais descentralizadas que lhes permitem gerenciar e compartilhar documentos e certificados digitais verificáveis on-chain, incluindo credenciais de cidadania, certidões de nascimento, casamento e óbito, registros fiscais, registros de vacinação e muito mais.
-
-Construído na rede de [Segunda Camada](/layer-2/) do Ethereum, ZKSync Era, o sistema QuarkID usa a tecnologia ZKP para permitir que os cidadãos verifiquem credenciais pessoais ponto a ponto por meio de seus dispositivos móveis — sem expor dados pessoais desnecessários. O programa destaca um modelo de "governo como usuário", no qual o GCBA atua como um usuário do protocolo QuarkID, de código aberto e interoperável, em vez de atuar como um proprietário centralizado. Essa arquitetura habilitada para ZKP fornece um recurso de privacidade chave: nenhum terceiro, nem mesmo o GCBA, pode rastrear como, quando ou por que um cidadão usa suas credenciais. Este programa bem-sucedido oferece aos cidadãos identidade auto-soberana completa e controle sobre seus dados sensíveis, tudo protegido pela rede globalmente distribuída do Ethereum.
+O Reino do Butão [migrou seu sistema de Identidade Digital Nacional (NDI)](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) para o Ethereum em outubro de 2025. Construído sobre os princípios de identidade descentralizada e identidade auto-soberana, o sistema NDI do Butão usa identificadores descentralizados e credenciais verificáveis para emitir credenciais assinadas digitalmente diretamente para a carteira pessoal de um cidadão. Ao ancorar esquemas de emissores dessas credenciais no Ethereum, o sistema garante que elas sejam autênticas, à prova de adulteração e possam ser verificadas por qualquer parte sem consultar uma autoridade central.
 
 ## O que são atestados? {#what-are-attestations}
 
@@ -188,8 +176,6 @@ Existem muitos projetos ambiciosos usando Ethereum como base para soluções de 
 - **[SpruceID](https://www.spruceid.com/)** - _Um projeto de identidade descentralizada que permite aos usuários controlar a identidade digital com contas Ethereum e perfis ENS, em vez de depender de serviços de terceiros._
 - **[Serviço de Atestado Ethereum (EAS)](https://attest.org/)** - _Um livro-razão/protocolo descentralizado para fazer atestados on-chain ou off-chain sobre qualquer coisa._
 - **[Prova de Humanidade](https://www.proofofhumanity.id)** - _A Prova de Humanidade (ou PoH) é um sistema de verificação de identidade social construído em Ethereum._
-- **[BrightID](https://www.brightid.org/)** - _Uma rede de identidade social descentralizada e de código aberto que busca reformar a verificação de identidade por meio da criação e análise de um grafo social._
-- **[walt.id](https://walt.id)** — _Infraestrutura de identidade descentralizada e de carteira de código aberto que permite que desenvolvedores e organizações aproveitem a identidade auto-soberana e NFTs/SBTs._
 - **[Veramo](https://veramo.io/)** - _Uma estrutura JavaScript que facilita para qualquer pessoa o uso de dados criptograficamente verificáveis em seus aplicativos._
 
 ## Leitura adicional {#further-reading}

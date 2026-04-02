@@ -19,9 +19,7 @@ export default async function FindWalletPageJsonLD({
   contributors: FileContributor[]
   wallets: WalletData[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-wallets-find-wallet",
-  })
+  const t = await getTranslations("page-wallets-find-wallet")
 
   const url = normalizeUrlForJsonLd(locale, `/wallets/find-wallet/`)
 

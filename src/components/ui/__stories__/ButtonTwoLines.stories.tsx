@@ -1,5 +1,5 @@
 import { Circle } from "lucide-react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { ButtonTwoLines as ButtonTwoLinesComponent } from "../buttons/ButtonTwoLines"
 import { HStack, Stack } from "../flex"

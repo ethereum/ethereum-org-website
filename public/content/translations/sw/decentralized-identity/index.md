@@ -83,23 +83,11 @@ Mfumo huu unaruhusu ufichuzi wa kuchagua, hasa unapojumuishwa na teknolojia ya f
 
 #### 💡Uchunguzi kifani: Kitambulisho cha Kidijitali cha Kitaifa cha Bhutan (NDI) kwenye Ethereum {#case-study-bhutan-ndi}
 
-- Hutoa ufikiaji wa vitambulisho vya utambulisho vinavyoweza kuthibitishwa kwa takriban raia 800,00a wa Bhutan
+- Hutoa ufikiaji wa vitambulisho vinavyoweza kuthibitishwa kwa takriban raia 800,00a wa Bhutan
 - Ilihamishwa kutoka mtandao wa Polygon [hadi mtandao mkuu wa Ethereum](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) mnamo Oktoba 2025
 - Zaidi ya [vitambulisho vya kidijitali 234,000](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) vilitolewa kufikia Machi 2025
 
-Ufalme wa Bhutan [ulihamisha mfumo wake wa Kitambulisho cha Kidijitali cha Kitaifa (NDI)](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) hadi Ethereum mnamo Oktoba 2025. Uliojengwa juu ya kanuni za utambulisho uliogatuliwa na utambulisho wa kujitawala, mfumo wa NDI wa Bhutan hutumia vitambulisho vilivyogatuliwa na vitambulisho vinavyoweza kuthibitishwa kutoa vitambulisho vilivyosainiwa kidijitali moja kwa moja kwenye pochi ya kibinafsi ya raia. Kwa kutia nanga uthibitisho wa kikriptografia wa vitambulisho hivi kwenye Ethereum, mfumo huhakikisha kuwa ni halisi, hauwezi kuchezewa, na unaweza kuthibitishwa na mhusika yeyote bila kuuliza mamlaka kuu.
-
-Usanifu wa mfumo unasisitiza faragha kupitia matumizi ya teknolojia ya [uthibitisho wa zero-knowledge (ZKP)](/zero-knowledge-proofs/). Utekelezaji huu wa "ufichuzi wa kuchagua" unaruhusu raia kuthibitisha ukweli maalum (k.m., "Nina umri wa zaidi ya miaka 18" au "Mimi ni raia") ili kufikia huduma bila kufichua data ya msingi ya kibinafsi, kama vile nambari yao kamili ya kitambulisho au tarehe kamili ya kuzaliwa. Hii inaonyesha matumizi yenye nguvu, ya ulimwengu halisi ya Ethereum kwa mfumo wa kitambulisho cha kitaifa ulio salama, unaomlenga mtumiaji, na unaolinda faragha.
-
-#### 💡Uchunguzi kifani: QuarkID ya Jiji la Buenos Aires kwenye Ethereum [Safu ya 2](/layer-2/) ZKSync Era {#case-study-buenos-aires-quarkid}
-
-- Ilitoa vitambulisho vya utambulisho vilivyogatuliwa kwa zaidi ya [watumiaji milioni 3.6](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo) wakati wa uzinduzi
-- QuarkID ni itifaki ya chanzo-wazi inayotambuliwa kama [Bidhaa ya Umma ya Kidijitali](https://www.digitalpublicgoods.net/r/quarkid) chini ya Malengo ya Maendeleo Endelevu ya Umoja wa Mataifa
-- Inasisitiza mfumo wa "[serikali-kama-mtumiaji](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)", ambapo jiji halimiliki itifaki, na kuwapa raia umiliki kamili wa data na faragha
-
-Mnamo 2024, Serikali ya Jiji la Buenos Aires (GCBA) iliunganisha QuarkID, “mfumo wa uaminifu wa kidijitali” wa chanzo-wazi uliojengwa na Sekretarieti ya Ubunifu na Mabadiliko ya Kidijitali ya GCBA, katika miBA, programu rasmi ya jiji kwa wakaazi kupata huduma za serikali na nyaraka rasmi. Wakati wa uzinduzi, watumiaji wote milioni 3.6+ wa miBA walitolewa utambulisho wa kidijitali uliogatuliwa unaowaruhusu kusimamia na kushiriki nyaraka na vyeti vya kidijitali vinavyoweza kuthibitishwa kwenye mnyororo, ikiwa ni pamoja na vitambulisho vya uraia, vyeti vya kuzaliwa, ndoa, na kifo, rekodi za kodi, rekodi za chanjo, na zaidi.
-
-Uliojengwa kwenye mtandao wa Ethereum [Safu ya 2](/layer-2/) ZKSync Era, mfumo wa QuarkID unatumia teknolojia ya ZKP kuruhusu raia kuthibitisha vitambulisho vya kibinafsi rika-kwa-rika kupitia vifaa vyao vya mkononi&mdash;bila kufichua data isiyo ya lazima ya kibinafsi. Mpango huu unaangazia mfumo wa “serikali-kama-mtumiaji” ambapo GCBA hufanya kazi kama mtumiaji mmoja wa itifaki ya QuarkID ya chanzo-wazi, inayoweza kushirikiana, badala ya kufanya kazi kama mmiliki wa kati. Usanifu huu unaowezeshwa na ZKP unatoa kipengele muhimu cha faragha: hakuna mhusika mwingine, hata GCBA, anayeweza kufuatilia jinsi, lini, au kwa nini raia anatumia vitambulisho vyake. Mpango huu wenye mafanikio huwapa raia utambulisho kamili wa kujitawala na udhibiti juu ya data zao nyeti, zote zikilindwa na mtandao wa Ethereum uliosambazwa kimataifa.
+Ufalme wa Bhutan [ulihamisha mfumo wake wa Kitambulisho cha Kidijitali cha Kitaifa (NDI)](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) hadi Ethereum mnamo Oktoba 2025. Uliojengwa juu ya kanuni za utambulisho uliogatuliwa na utambulisho wa kujitawala, mfumo wa NDI wa Bhutan hutumia vitambulisho vilivyogatuliwa na vitambulisho vinavyoweza kuthibitishwa kutoa vitambulisho vilivyosainiwa kidijitali moja kwa moja kwenye pochi ya kibinafsi ya raia. Kwa kutia nanga skema za watoaji wa vitambulisho hivi kwenye Ethereum, mfumo huhakikisha kuwa ni halisi, hauwezi kuchezewa, na unaweza kuthibitishwa na mhusika yeyote bila kuuliza mamlaka kuu.
 
 ## Uthibitishaji ni nini? {#what-are-attestations}
 
@@ -188,8 +176,6 @@ Kuna miradi mingi kabambe inayotumia Ethereum kama msingi wa masuluhisho ya utam
 - **[SpruceID](https://www.spruceid.com/)** - _Mradi wa utambulisho uliogatuliwa unaoruhusu watumiaji kudhibiti utambulisho wa kidijitali na akaunti za Ethereum na wasifu wa ENS badala ya kutegemea huduma za watu wengine._
 - **[Huduma ya Uthibitishaji ya Ethereum (EAS)](https://attest.org/)** - _Leja/itifaki iliyogatuliwa ya kufanya uthibitishaji kwenye mnyororo au nje ya mnyororo kuhusu chochote._
 - **[Uthibitisho wa Ubinadamu](https://www.proofofhumanity.id)** - _Uthibitisho wa Ubinadamu (au PoH) ni mfumo wa uthibitishaji wa utambulisho wa kijamii uliojengwa kwenye Ethereum._
-- **[BrightID](https://www.brightid.org/)** - _Mtandao wa utambulisho wa kijamii uliogatuliwa, wa chanzo-wazi unaotaka kurekebisha uthibitishaji wa utambulisho kupitia uundaji na uchambuzi wa grafu ya kijamii._
-- **[walt.id](https://walt.id)** — _Miundombinu ya utambulisho uliogatuliwa wa chanzo-wazi na pochi inayowawezesha wasanidi programu na mashirika kutumia utambulisho wa kujitawala na NFTs/SBTs._
 - **[Veramo](https://veramo.io/)** - _Mfumo wa JavaScript unaorahisisha mtu yeyote kutumia data inayoweza kuthibitishwa kikriptografia katika programu zao._
 
 ## Masomo zaidi {#further-reading}

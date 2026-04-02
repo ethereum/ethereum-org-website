@@ -38,11 +38,8 @@ const Page = async (props: {
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-community-events")
+  const tCommon = await getTranslations("common")
 
   const events = mapEventTranslations(_events, t)
 
@@ -151,10 +148,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   return await getMetadata({
     locale,

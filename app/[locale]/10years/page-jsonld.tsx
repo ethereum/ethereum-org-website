@@ -17,9 +17,7 @@ export default async function TenYearJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   const url = normalizeUrlForJsonLd(locale, "/10years/")
 

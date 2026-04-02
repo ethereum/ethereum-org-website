@@ -224,6 +224,17 @@ Finematics ला ZK-रोलअप समजावून सांगतान
 
 ## zkEVM वर कोण काम करत आहे? {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>L2 विरुद्ध L1 साठी zkEVM</AlertTitle>
+<AlertDescription>
+खालील प्रकल्प लेअर २ रोलअप्स तयार करण्यासाठी zkEVM तंत्रज्ञानाचा वापर करतात. L1 ब्लॉक पडताळणीसाठी zkEVM वापरण्यावर देखील संशोधन सुरू आहे, ज्यामुळे व्हॅलिडेटर्सना ट्रान्झॅक्शनची पुन्हा अंमलबजावणी न करता इथरियम ब्लॉक्सची पडताळणी करणे शक्य होईल.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 zkEVMs वर काम करणाऱ्या प्रकल्पांमध्ये हे समाविष्ट आहे:
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM हा Ethereum फाउंडेशनद्वारे निधीबद्ध केलेला एक प्रकल्प आहे, जो EVM-सुसंगत ZK-रोलअप आणि Ethereum ब्लॉक्ससाठी वैधता पुरावे तयार करण्याची यंत्रणा विकसित करतो._

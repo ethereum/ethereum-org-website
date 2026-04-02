@@ -99,6 +99,8 @@ C'est ici que le calcul vérifiable entre en jeu. Lorsqu'un nœud exécute une t
 
 Les [rollups ZK](/developers/docs/scaling/zk-rollups) et les [validiums](/developers/docs/scaling/validium/) sont deux solutions d'évolutivité hors chaîne qui utilisent des preuves de validité pour offrir une évolutivité sécurisée. Ces protocoles exécutent des milliers de transactions hors chaîne et soumettent des preuves pour vérification sur Ethereum. Ces résultats peuvent être appliqués immédiatement une fois la preuve vérifiée, permettant ainsi à Ethereum de traiter plus de transactions, sans augmenter le calcul sur la couche de base.
 
+Au-delà de la mise à l'échelle de la couche 2, les preuves à divulgation nulle de connaissance peuvent également vérifier l'exécution des blocs L1 d'Ethereum elle-même. Le zkEVM pour la vérification L1 permettrait aux validateurs de vérifier les blocs en vérifiant une preuve plutôt qu'en réexécutant toutes les transactions -- permettant des limite de gaz plus élevées sans augmenter les exigences matérielles des validateurs.
+
 ### Réduire la corruption et la collusion dans le vote en chaîne {#secure-blockchain-voting}
 
 Les systèmes de vote de la blockchain ont de nombreuses caractéristiques favorables : ils sont entièrement auditables, blindés contre les attaques, résistants à la censure et exempts de contraintes géographiques. Mais même les systèmes de vote en chaîne ne sont pas à l'abri du problème de la **collusion**.

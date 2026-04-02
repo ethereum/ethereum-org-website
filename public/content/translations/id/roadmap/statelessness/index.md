@@ -79,6 +79,8 @@ Pengusul blok menggunakan data status untuk membuat "saksi" - kumpulan data mini
 
 Weak statelessness berada dalam tahap penelitian lanjutan, tetapi bergantung pada pemisahan pengusul-pembangun dan Pohon Verkle yang telah diimplementasikan sehingga saksi kecil dapat diteruskan di antara rekan-rekan. Ini berarti weak statelessness mungkin masih beberapa tahun lagi dari mainnet Ethereum.
 
+zkEVM untuk verifikasi L1 adalah teknologi pelengkap yang dapat lebih meningkatkan verifikasi stateless. Alih-alih hanya memeriksa saksi, validator dapat memverifikasi bukti zero-knowledge bahwa seluruh blok telah dieksekusi dengan benar -- memberikan kepastian kriptografis tanpa menjalankan kembali transaksi.
+
 ### Strong statelessness {#strong-statelessness}
 
 Strong statelessness menghilangkan kebutuhan node mana pun untuk menyimpan data status. Sebaliknya, transaksi dikirim dengan saksi yang dapat diagregasi oleh produsen blok. Produsen blok kemudian bertanggung jawab untuk menyimpan hanya status yang diperlukan untuk menghasilkan saksi bagi akun yang relevan. Tanggung jawab atas status hampir seluruhnya dipindahkan ke pengguna, karena mereka mengirim saksi dan 'daftar akses' untuk mendeklarasikan akun dan kunci penyimpanan mana yang berinteraksi dengan mereka. Hal ini akan memungkinkan node yang sangat ringan, tetapi ada pengorbanan termasuk membuatnya lebih sulit untuk bertransaksi dengan kontrak pintar.

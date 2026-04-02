@@ -14,6 +14,7 @@ const {
   fixAsciiGuillemets,
   fixBlockComponentLineBreaks,
   fixTickerTranspositions,
+  fixMisplacedBacktickAroundJsxFragment,
   escapeMdxAngleBrackets,
   removeOrphanedClosingTags,
   normalizeFrontmatterDates,
@@ -49,6 +50,13 @@ const {
   fixMissingComponentClosingTags,
   fixMangledDocLinks,
   fixBrandCapitalization,
+  fixFrontmatterLang,
+  fixCrossScriptPunctuation,
+  fixJsxAttributeSpacing,
+  fixSpanWrappedBackticks,
+  fixBoldWrappedOrderedListNumerals,
+  fixEscapedQuotesInJsxAttributes,
+  fixTranslatedJsonPlaceholders,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -299,6 +307,40 @@ test.describe("Standalone Fixes", () => {
     })
   })
 
+  test.describe("fixMisplacedBacktickAroundJsxFragment", () => {
+    test("moves closing backtick to wrap </> in code span", () => {
+      const input = "tunatumia kipengele tupu (`<> ...` </>) ili kuzifanya"
+      const { content, fixCount } = fixMisplacedBacktickAroundJsxFragment(input)
+      expect(content).toBe(
+        "tunatumia kipengele tupu (`<> ... </>`) ili kuzifanya"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes already-escaped \\</> variant", () => {
+      const input = "tunatumia kipengele tupu (`<> ...` \\</>) ili kuzifanya"
+      const { content, fixCount } = fixMisplacedBacktickAroundJsxFragment(input)
+      expect(content).toBe(
+        "tunatumia kipengele tupu (`<> ... </>`) ili kuzifanya"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct backtick placement unchanged", () => {
+      const input = "we use an empty component (`<> ... </>`) to combine"
+      const { content, fixCount } = fixMisplacedBacktickAroundJsxFragment(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = "```tsx\n(`<> ...` </>)\n```"
+      const { content, fixCount } = fixMisplacedBacktickAroundJsxFragment(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
   test.describe("escapeMdxAngleBrackets", () => {
     test("escapes < before digit", () => {
       const input = "Requires <5GB of disk space"
@@ -404,6 +446,28 @@ test.describe("Standalone Fixes", () => {
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
     })
+
+    test("preserves </em> when <em> is on previous line", () => {
+      const input =
+        '  <li><a href="https://eips.ethereum.org/EIPS/eip-2200">EIP-2200</a> – <em>\nweitere Änderungen der Gaspreisverfahrenscodes.</em></li>'
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("collapses double period after orphaned tag removal", () => {
+      const input = "funguo za BLS za kutoa.</em></em>. Ili mthibitishaji"
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe("funguo za BLS za kutoa. Ili mthibitishaji")
+      expect(fixCount).toBe(2)
+    })
+
+    test("collapses double comma after orphaned tag removal", () => {
+      const input = "first,</em>, second"
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe("first, second")
+      expect(fixCount).toBe(1)
+    })
   })
 
   test.describe("fixBlockComponentLineBreaks", () => {
@@ -447,6 +511,24 @@ test.describe("Standalone Fixes", () => {
       const { content } = fixBlockComponentLineBreaks(input)
       // Should NOT insert a blank line between them
       expect(content).toBe(input)
+    })
+
+    test("does not break AlertTitle onto new line (Alert must not match AlertTitle)", () => {
+      const input =
+        "<AlertContent>\n<AlertTitle>Do not confuse with zkEVM</AlertTitle>"
+      const { content } = fixBlockComponentLineBreaks(input)
+      // AlertTitle is NOT a block component; it should stay on one line
+      expect(content).toContain(
+        "<AlertTitle>Do not confuse with zkEVM</AlertTitle>"
+      )
+    })
+
+    test("does not break AlertDescription onto new line", () => {
+      const input = "<AlertDescription>Some warning text</AlertDescription>"
+      const { content } = fixBlockComponentLineBreaks(input)
+      // AlertDescription IS in BLOCK_MDX_COMPONENTS, so its opening/closing get line-broken
+      // But the close regex should still work correctly
+      expect(content).toContain("</AlertDescription>")
     })
   })
 
@@ -504,6 +586,31 @@ test.describe("Standalone Fixes", () => {
 
     test("leaves ASCII-only values unchanged", () => {
       const input = "---\ntitle: About Ethereum\n---\nContent"
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("quotes values containing colon-space (YAML nested mapping)", () => {
+      const input =
+        "---\ndescription: Una spiegazione degli account di Ethereum: le loro strutture dati.\n---\nContent"
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      expect(content).toContain(
+        'description: "Una spiegazione degli account di Ethereum: le loro strutture dati."'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("quotes values containing hash (YAML comment)", () => {
+      const input = "---\ntitle: Section #1 overview\n---\nContent"
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      expect(content).toContain('title: "Section #1 overview"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves colon-space in already-quoted values unchanged", () => {
+      const input =
+        '---\ndescription: "Ethereum accounts: their data structures"\n---\nContent'
       const { content, fixCount } = quoteFrontmatterNonAscii(input)
       expect(content).toBe(input)
       expect(fixCount).toBe(0)
@@ -2193,6 +2300,473 @@ author: Ori Pomerantz
       expect(content).toContain('<DocLink href="/roadmap/beacon-chain/">')
       expect(content).toContain('<DocLink href="/roadmap/merge/">')
       expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("removeOrphanedClosingTags — closer before opener", () => {
+    test("removes </em> appearing before <em> on same line", () => {
+      const input =
+        '<li></em><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> - <em>Optymalizuje koszt.</em></li>'
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe(
+        '<li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> - <em>Optymalizuje koszt.</em></li>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not remove </em> that follows <em> (correct order)", () => {
+      const input = "<li><em>text</em> and <a href='/x'>link</a></li>"
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("removes leading orphan even when counts are equal", () => {
+      const input = "</em>some text <em>more text</em>"
+      const { content, fixCount } = removeOrphanedClosingTags(input)
+      expect(content).toBe("some text <em>more text</em>")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("quoteFrontmatterNonAscii — smart quote handling", () => {
+    test("replaces smart quotes instead of double-wrapping", () => {
+      const input =
+        "---\nsummaryPoint1: \u201CZasady gry\u201D\nlang: pl\n---\n\nContent"
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      // Should replace smart quotes with straight quotes, not wrap
+      expect(content).toContain('summaryPoint1: "Zasady gry"')
+      expect(content).not.toContain('""')
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles value already in straight quotes (no change)", () => {
+      const input = '---\ntitle: "Already quoted"\nlang: pl\n---\n\nContent'
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      expect(content).toContain('title: "Already quoted"')
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles mixed smart quotes and non-ASCII", () => {
+      const input =
+        "---\nsummaryPoint1: \u201CPolski tekst z \u0142\u201D\nlang: pl\n---\n\nContent"
+      const { content } = quoteFrontmatterNonAscii(input)
+      expect(content).toContain('summaryPoint1: "Polski tekst z \u0142"')
+      // Outer smart quotes replaced with straight quotes
+      expect(content).not.toContain("\u201C")
+      expect(content).not.toContain("\u201D")
+    })
+
+    test("preserves inner smart quotes inside already-quoted value", () => {
+      const input =
+        '---\ndescription: "Wyja\u015Bnienie mechanizmu \u201CProof-of stake\u201D."\nlang: pl\n---\n\nContent'
+      const { content, fixCount } = quoteFrontmatterNonAscii(input)
+      // Inner smart quotes must stay -- they're typographic, not YAML delimiters
+      expect(content).toContain("\u201CProof-of stake\u201D")
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixJsxAttributeSpacing", () => {
+    test('normalizes href = "..." to href="..."', () => {
+      const input =
+        '<a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">text</a>'
+      const { content, fixCount } = fixJsxAttributeSpacing(input)
+      expect(content).toBe(
+        '<a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">text</a>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("normalizes multiple spaced attributes", () => {
+      const input = '<Component href = "/path" id = "test">'
+      const { content, fixCount } = fixJsxAttributeSpacing(input)
+      expect(content).toBe('<Component href="/path" id="test">')
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves correctly formatted attributes unchanged", () => {
+      const input = '<a href="https://example.com">link</a>'
+      const { content, fixCount } = fixJsxAttributeSpacing(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const input = '```\n<a href = "test">\n```'
+      const { content, fixCount } = fixJsxAttributeSpacing(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixEscapedQuotesInJsxAttributes", () => {
+    test("removes backslash-escaped quotes in JSX attributes", () => {
+      const input =
+        '<ButtonLink variant=\\"outline-color\\" href=\\"/roadmap/danksharding/\\">Zaidi</ButtonLink>'
+      const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
+      expect(content).toBe(
+        '<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Zaidi</ButtonLink>'
+      )
+      expect(fixCount).toBeGreaterThan(0)
+    })
+
+    test("leaves normal JSX attributes unchanged", () => {
+      const input =
+        '<ButtonLink variant="outline" href="/path/">Text</ButtonLink>'
+      const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips fenced code blocks", () => {
+      const input = '```\n<Tag attr=\\"val\\">\n```'
+      const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("only fixes lines that look like JSX tags", () => {
+      const input = 'This is prose with a \\" quote in it'
+      const { content, fixCount } = fixEscapedQuotesInJsxAttributes(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixFrontmatterLang", () => {
+    test("fixes lang: en to target locale", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody text`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(`---\ntitle: "Test"\nlang: ur\n---\n\nBody text`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes wrong locale to correct one", () => {
+      const input = `---\ntitle: "Test"\nlang: ja\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ko")
+      expect(content).toBe(`---\ntitle: "Test"\nlang: ko\n---\n\nBody`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct locale unchanged", () => {
+      const input = `---\ntitle: "Test"\nlang: ur\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when no frontmatter", () => {
+      const input = `# Just a heading\n\nNo frontmatter here`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when no lang field in frontmatter", () => {
+      const input = `---\ntitle: "Test"\nskill: beginner\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns unchanged when locale is empty string", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles lang with extra whitespace", () => {
+      const input = `---\ntitle: "Test"\nlang:   en  \n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "ar")
+      expect(content).toContain("lang: ar")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles quoted lang value", () => {
+      const input = `---\ntitle: "Test"\nlang: "en"\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "hi")
+      expect(content).toContain("lang: hi")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not modify lang-like text in body", () => {
+      const input = `---\ntitle: "Test"\nlang: ur\n---\n\nlang: en appears in body`
+      const { content, fixCount } = fixFrontmatterLang(input, "ur")
+      expect(content).toBe(input)
+      expect(content).toContain("lang: en appears in body")
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles hyphenated locale codes", () => {
+      const input = `---\ntitle: "Test"\nlang: en\n---\n\nBody`
+      const { content, fixCount } = fixFrontmatterLang(input, "zh-tw")
+      expect(content).toContain("lang: zh-tw")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixCrossScriptPunctuation", () => {
+    test("replaces \u3002 with \u06D4 for locale ur", () => {
+      const input =
+        "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toBe(
+        "\u06CC\u06C1 \u0627\u06CC\u06A9 \u062C\u0645\u0644\u06C1 \u06C1\u06D2\u06D4"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with \u06D4 for locale ar", () => {
+      const input = "\u0647\u0630\u0627 \u0646\u0635\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ar")
+      expect(content).toBe("\u0647\u0630\u0627 \u0646\u0635\u06D4")
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with \u0964 for locale hi", () => {
+      const input =
+        "\u092F\u0939 \u090F\u0915 \u0935\u093E\u0915\u094D\u092F \u0939\u0948\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "hi")
+      expect(content).toBe(
+        "\u092F\u0939 \u090F\u0915 \u0935\u093E\u0915\u094D\u092F \u0939\u0948\u0964"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("replaces \u3002 with . for locale de (Latin)", () => {
+      const input = "Dies ist ein Satz\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "de")
+      expect(content).toBe("Dies ist ein Satz.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does NOT replace \u3002 for locale ja (CJK)", () => {
+      const input = "\u3053\u308C\u306F\u6587\u3067\u3059\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ja")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does NOT replace \u3002 for locale zh (CJK)", () => {
+      const input = "\u8FD9\u662F\u4E00\u4E2A\u53E5\u5B50\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "zh")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch \u3002 inside code fences", () => {
+      const input = "text\u3002\n```\ncode\u3002\n```\nmore\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toContain("code\u3002")
+      expect(fixCount).toBe(2)
+    })
+
+    test("handles multiple \u3002 in one file", () => {
+      const input = "first\u3002 second\u3002 third\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).not.toContain("\u3002")
+      expect(fixCount).toBe(3)
+    })
+
+    test("no-op when no CJK punctuation present", () => {
+      const input = "Normal text with no CJK."
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns fixCount 0 when locale is empty", () => {
+      const input = "text\u3002"
+      const { content, fixCount } = fixCrossScriptPunctuation(input, "")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixSpanWrappedBackticks", () => {
+    test('unwraps <span dir="ltr"> around backtick content', () => {
+      const input = '<span dir="ltr">`APPLY(S,TX) -> S\'`</span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`APPLY(S,TX) -> S'`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple occurrences in one file", () => {
+      const input = [
+        '<span dir="ltr">`code1`</span> some text',
+        '<span dir="ltr">`code2`</span> more text',
+      ].join("\n")
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`code1` some text\n`code2` more text")
+      expect(fixCount).toBe(2)
+    })
+
+    test('does not touch <span dir="ltr"> wrapping non-backtick content', () => {
+      const input = '<span dir="ltr">2026-03-15</span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch backticks that are NOT inside spans", () => {
+      const input = "Use `eth_getBalance` to query the balance."
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles whitespace inside the span", () => {
+      const input = '<span dir="ltr"> `some_code` </span>'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`some_code`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("no-op when pattern not present", () => {
+      const input = "Plain text with no spans or backticks."
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("returns correct fixCount", () => {
+      const input = [
+        '<span dir="ltr">`a`</span>',
+        '<span dir="ltr">`b`</span>',
+        '<span dir="ltr">`c`</span>',
+      ].join(" ")
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(fixCount).toBe(3)
+      expect(content).toBe("`a` `b` `c`")
+    })
+
+    test("skips code fences", () => {
+      const input = '```\n<span dir="ltr">`code`</span>\n```'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("unwraps backticks around span (pattern 2: span visible as code)", () => {
+      const input = '`<span dir="ltr">kR</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`kR`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple pattern 2 occurrences", () => {
+      const input =
+        '`<span dir="ltr">S[i]</span>` and `<span dir="ltr">S[i-1]</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`S[i]` and `S[i-1]`")
+      expect(fixCount).toBe(2)
+    })
+
+    test("handles mixed pattern 1 and pattern 2", () => {
+      const input =
+        '<span dir="ltr">`code`</span> and `<span dir="ltr">kR</span>`'
+      const { content, fixCount } = fixSpanWrappedBackticks(input)
+      expect(content).toBe("`code` and `kR`")
+      expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("fixBoldWrappedOrderedListNumerals", () => {
+    test("moves bold markers off numeral for ur locale", () => {
+      const input = "**1. some text**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("1. **some text**")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multi-digit numbers", () => {
+      const input = "**12. longer item here**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("12. **longer item here**")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple list items", () => {
+      const input = "**1. first**\n\n**2. second**\n\n**3. third**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe("1. **first**\n\n2. **second**\n\n3. **third**")
+      expect(fixCount).toBe(3)
+    })
+
+    test("no-op for non-ur locale", () => {
+      const input = "**1. some text**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ar"
+      )
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch bold text without leading numeral", () => {
+      const input = "**some bold text without number**"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("preserves trailing punctuation", () => {
+      const input =
+        "**8. \u0622\u0646 \u0686\u06CC\u0646 \u0645\u0627\u0631\u06A9\u06CC\u0679 \u067E\u0644\u06CC\u0633\u0632**\u060C \u0634\u0646\u0627\u062E\u062A"
+      const { content, fixCount } = fixBoldWrappedOrderedListNumerals(
+        input,
+        "ur"
+      )
+      expect(content).toContain("8. **")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixTranslatedJsonPlaceholders", () => {
+    test("restores translated placeholder names to English", () => {
+      const en = JSON.stringify({ key: "{days} ago" })
+      const tr = JSON.stringify({ key: "{siku} zilizopita" })
+      const { content, fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      const parsed = JSON.parse(content)
+      expect(parsed.key).toBe("{days} zilizopita")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple placeholders in one value", () => {
+      const en = JSON.stringify({ k: "{count} of {total}" })
+      const tr = JSON.stringify({ k: "{hesabu} ya {jumla}" })
+      const { content, fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      const parsed = JSON.parse(content)
+      expect(parsed.k).toBe("{count} ya {total}")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct placeholders unchanged", () => {
+      const en = JSON.stringify({ k: "{days} ago" })
+      const tr = JSON.stringify({ k: "{days} zilizopita" })
+      const { fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips keys not present in English", () => {
+      const en = JSON.stringify({ a: "hello" })
+      const tr = JSON.stringify({ a: "habari", b: "{extra}" })
+      const { fixCount } = fixTranslatedJsonPlaceholders(tr, en)
+      expect(fixCount).toBe(0)
     })
   })
 })

@@ -1,73 +1,72 @@
 ---
-title: Ethereum per sviluppatori JavaScript
-description: Impara a sviluppare per Ethereum usando progetti e strumenti basati su JavaScript.
+title: Ethereum per gli sviluppatori JavaScript
+description: Scopri come sviluppare per Ethereum usando progetti e strumenti basati su JavaScript.
 lang: it
 ---
 
-JavaScript è tra i linguaggi più popolari nell'ecosistema Ethereum. C'è persino un [team](https://github.com/ethereumjs) che si occupa di trasferire Ethereum il più possibile in JavaScript.
+JavaScript è tra i linguaggi più popolari nell'ecosistema di Ethereum. Infatti, c'è un [team](https://github.com/ethereumjs) dedicato a portare quanto più possibile di Ethereum su JavaScript.
 
-Esistono opportunità per scrivere in JavaScript (o simile) a [tutti i livelli dello stack](/developers/docs/ethereum-stack/).
+Ci sono opportunità per scrivere in JavaScript (o qualcosa di simile) a [tutti i livelli dello stack](/developers/docs/ethereum-stack/).
 
 ## Interagire con Ethereum {#interact-with-ethereum}
 
-### Librerie API JavaScript {#javascript-api-libraries}
+### Librerie di API JavaScript {#javascript-api-libraries}
 
-Se vuoi scrivere in JavaScript per interrogare la blockchain, inviare transazioni e altro ancora, il modo più comodo per farlo è utilizzare una [libreria API JavaScript](/developers/docs/apis/javascript/). Queste API consentono agli sviluppatori di interagire facilmente con i [nodi della rete Ethereum](/developers/docs/nodes-and-clients/).
+Se desideri scrivere in JavaScript per interrogare la blockchain, inviare transazioni e altro ancora, il modo più conveniente per farlo è usare una [libreria di API JavaScript](/developers/docs/apis/javascript/). Queste API consentono agli sviluppatori di interagire facilmente con i [nodi nella rete di Ethereum](/developers/docs/nodes-and-clients/).
 
-Puoi utilizzare queste librerie per interagire con i contratti intelligenti su Ethereum, quindi è possibile creare una dapp in cui, semplicemente, utilizzi JavaScript per interagire con i contratti pre-esistenti.
+Puoi usare queste librerie per interagire con i contratti intelligenti su Ethereum, in modo che sia possibile creare una dApp in cui usi semplicemente JavaScript per interagire con contratti preesistenti.
 
-**Dai un'occhiata a:**
+**Dai un'occhiata a**
 
-- [Web3.js](https://web3js.readthedocs.io/)
-- [Ethers.js](https://docs.ethers.io/) _– Contiene l'implementazione del portafoglio di Ethereum e le utility in JavaScript e TypeScript._
-- [viem](https://viem.sh): un'interfaccia TypeScript per Ethereum che fornisce primitivi con assenza di stato di basso livello per interagire con Ethereum.
+- [Web3.js](https://web3js.readthedocs.io)
+- [Ethers.js](https://ethers.org) – _include l'implementazione di un portafoglio Ethereum e utilità in JavaScript e TypeScript._
+- [viem](https://viem.sh) – _un'interfaccia TypeScript per Ethereum che fornisce primitive senza stato di basso livello per interagire con Ethereum._
+- [Drift](https://ryangoree.github.io/drift/) – _una meta-libreria TypeScript con caching integrato, hook e mock di test per uno sviluppo su Ethereum senza sforzo attraverso le librerie web3._
 
 ### Contratti intelligenti {#smart-contracts}
 
-Se sei uno sviluppatore JavaScript e vorresti scrivere il tuo contratto intelligente, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). Questo è il linguaggio di contratti intelligenti più popolare ed è sintatticamente simile a JavaScript, che lo rende più facile da imparare.
+Se sei uno sviluppatore JavaScript e vuoi scrivere il tuo contratto intelligente, potresti voler familiarizzare con [Solidity](https://solidity.readthedocs.io). Questo è il linguaggio per contratti intelligenti più popolare ed è sintatticamente simile a JavaScript, il che potrebbe renderlo più facile da imparare.
 
-Di più sui [contratti intelligenti](/developers/docs/smart-contracts/).
+Maggiori informazioni sui [contratti intelligenti](/developers/docs/smart-contracts/).
 
 ## Comprendere il protocollo {#understand-the-protocol}
 
-### La macchina virtuale Ethereum {#the-ethereum-virtual-machine}
+### La macchina virtuale di Ethereum {#the-ethereum-virtual-machine}
 
-Esiste un'implementazione JavaScript della [macchina virtuale di Ethereum](/developers/docs/evm/), che supporta le regole più recenti relative alle diramazioni della rete. Le regole relative alle diramazioni si riferiscono alle modifiche apportate alla macchina virtuale di Ethereum (EVM) a seguito di upgrade pianificati.
+Esiste un'implementazione in JavaScript della [macchina virtuale di Ethereum](/developers/docs/evm/). Supporta le ultime regole di biforcazione. Le regole di biforcazione si riferiscono alle modifiche apportate all'EVM a seguito di aggiornamenti pianificati.
 
-È suddivisa in vari pacchetti JavaScript che puoi leggere per comprendere meglio:
+È suddivisa in vari pacchetti JavaScript che puoi consultare per comprendere meglio:
 
-- Conti
+- Account
 - Blocchi
 - La blockchain stessa
 - Transazioni
-- E molto altro...
+- E altro ancora...
 
-Ciò ti aiuterà a comprendere cose come "cos'è la struttura dei dati di un conto?".
+Questo ti aiuterà a capire cose come "qual è la struttura dei dati di un account?".
 
-Se preferisci invece leggere codice, questo codice JavaScript può essere un'alternativa interessante alla lettura della nostra documentazione.
+Se preferisci leggere il codice, questo JavaScript potrebbe essere un'ottima alternativa alla lettura della nostra documentazione.
 
-**Guarda il monorepo**  
-[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
+**Dai un'occhiata all'EVM**  
+[`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
 ### Nodi e client {#nodes-and-clients}
 
-Un client di Ethereumjs è in sviluppo attivo e ti consentirà di approfondire il funzionamento dei client di Ethereum in un linguaggio che comprendi: JavaScript!
+Un client Ethereumjs è in fase di sviluppo attivo e ti consente di approfondire il funzionamento dei client di Ethereum in un linguaggio che comprendi: JavaScript!
 
-Era ospitato in una [`repository`](https://github.com/ethereumjs/ethereumjs-client) indipendente, tuttavia, è stato in seguito unito nella repository singola di EthereumVM come pacchetto.
-
-**Guarda il client**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+**Dai un'occhiata al client**  
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Altri progetti {#other-projects}
 
-Ci sono molte altre novità nel mondo di JavaScript per Ethereum, tra cui:
+Ci sono anche molte altre cose in corso nel mondo di Ethereum JavaScript, tra cui:
 
-- librerie di utilità per i portafogli.
-- strumenti per generare, importare ed esportare chiavi Ethereum.
-- un'implementazione di `merkle-patricia-tree`, una struttura di dati delineata nel yellow paper di Ethereum.
+- librerie di utilità per portafogli.
+- strumenti per generare, importare ed esportare chiavi di Ethereum.
+- un'implementazione del `merkle-patricia-tree` – una struttura dati delineata nello yellow paper di Ethereum.
 
-Approfondisci ciò che ti interessa maggiormente sulla [repository EthereumJS](https://github.com/ethereumjs)
+Approfondisci ciò che ti interessa di più nella [repository di EthereumJS](https://github.com/ethereumjs)
 
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

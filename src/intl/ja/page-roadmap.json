@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "依存関係を事前にマッピングすることで、同期、並列実行、並列ディスク読み取りを高速化します。",
   "page-roadmap-glamsterdam-bal-item-3": "ステート集約型のアプリのガス代を削減し、ガス代の予測可能性を向上させます",
   "page-roadmap-hegota-discussed-title": "ヘゴタで計画中",
-  "page-roadmap-hegota-discussed-item-1": "現在、提案について議論中です。"
+  "page-roadmap-hegota-discussed-item-1": "現在、提案について議論中です。",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "ゼロ知識証明により、バリデータがトランザクションを再実行することなくEthereumのブロックを検証できるようになり、ハードウェア要件を上げることなく、より高いガスリミットが可能になります。"
 }

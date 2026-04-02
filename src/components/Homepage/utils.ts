@@ -1,8 +1,6 @@
 import type { StaticImageData } from "next/image"
 import { getTranslations } from "next-intl/server"
 
-import type { Lang } from "@/lib/types"
-
 import { cn } from "@/lib/utils/cn"
 
 import ImpactImage from "@/public/images/impact_transparent.png"
@@ -101,8 +99,8 @@ const getPosition = (position: number): string =>
     stylesByPosition.xl[position]
   )
 
-export const getBentoBoxItems = async (locale: Lang): Promise<BentoItem[]> => {
-  const t = await getTranslations({ locale, namespace: "page-index" })
+export const getBentoBoxItems = async (): Promise<BentoItem[]> => {
+  const t = await getTranslations("page-index")
 
   const getCopy = (category: Category, href: string): CopyDetails => ({
     title: t(`page-index-bento-${category}-title`),

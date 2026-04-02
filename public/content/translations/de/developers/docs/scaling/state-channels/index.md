@@ -1,247 +1,247 @@
 ---
-title: "Zustandskanäle"
-description: "Eine Einführung in Zustandskanäle und Zahlungskanäle als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird."
+title: State Channels
+description: "Eine Einführung in State Channels und Payment Channels als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird."
 lang: de
 sidebarDepth: 3
 ---
 
-State Channels ermöglichen es Teilnehmenden, sicher außerhalb der Blockchain (offchain) zu transaktieren, während die Interaktion mit dem Ethereum-Mainnet auf ein Minimum reduziert bleibt. Die Peers eines Channels können eine beliebige Anzahl von Offchain-Transaktionen durchführen, wobei lediglich zwei Onchain-Transaktionen erforderlich sind – zum Öffnen und Schließen des Channels. Dadurch wird eine äußerst hohe Transaktionsdurchsatzrate erreicht und die Kosten für Nutzer:innen gesenkt.
+State Channels ermöglichen es den Teilnehmern, sicher Off-Chain zu transagieren, während die Interaktion mit dem [Ethereum](/)-Mainnet auf ein Minimum beschränkt bleibt. Kanal-Peers können eine beliebige Anzahl von Off-Chain-Transaktionen durchführen, während sie nur zwei Transaktionen auf der Blockchain einreichen, um den Kanal zu öffnen und zu schließen. Dies ermöglicht einen extrem hohen Transaktionsdurchsatz und führt zu geringeren Kosten für die Nutzer.
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten unsere Seiten zu [Skalierungslösungen für Ethereum](/developers/docs/scaling/) und [Layer 2](/layer-2/) gelesen und verstanden haben.
+Sie sollten unsere Seiten zur [Ethereum-Skalierung](/developers/docs/scaling/) und zu [Ebene 2](/layer-2/) gelesen und verstanden haben.
 
-## Was sind Channels? {#what-are-channels}
+## Was sind Kanäle? {#what-are-channels}
 
-Öffentliche Blockchains wie Ethereum stoßen aufgrund ihrer dezentralen Architektur an Skalierungsgrenzen: Onchain-Transaktionen müssen von allen Knoten ausgeführt werden. Um die Dezentralisierung des Netzwerks zu bewahren, müssen Knoten in der Lage sein, das Transaktionsvolumen eines Blocks auch mit bescheidener Hardware zu verarbeiten. Dies begrenzt den maximalen Transaktionsdurchsatz. Blockchain-Channels lösen dieses Problem, indem sie Nutzer:innen ermöglichen, außerhalb der Hauptkette zu interagieren, dabei aber weiterhin die Sicherheit der Mainchain für die finale Abrechnung nutzen.
+Öffentliche Blockchains wie Ethereum stehen aufgrund ihrer verteilten Architektur vor Skalierbarkeitsherausforderungen: Transaktionen auf der Blockchain müssen von allen Blockchain-Knoten ausgeführt werden. Blockchain-Knoten müssen in der Lage sein, das Transaktionsvolumen in einem Block mit bescheidener Hardware zu bewältigen, was dem Transaktionsdurchsatz eine Grenze setzt, um das Netzwerk dezentralisiert zu halten. Blockchain-Kanäle lösen dieses Problem, indem sie es den Nutzern ermöglichen, Off-Chain zu interagieren, während sie sich für die endgültige Abwicklung weiterhin auf die Sicherheit der Hauptkette verlassen.
 
-Channels sind einfache Peer-to-Peer-Protokolle, die es zwei Parteien erlauben, zahlreiche Transaktionen untereinander durchzuführen und lediglich das Endergebnis in die Blockchain einzutragen. Mithilfe kryptografischer Verfahren wird nachgewiesen, dass die zusammengefassten Daten tatsächlich das Ergebnis einer gültigen Sequenz von Zwischentransaktionen sind. Ein Smart Contract vom Typ ["Multisignatur" (Multisig)](/developers/docs/smart-contracts/#multisig) stellt sicher, dass die Transaktionen von den berechtigten Parteien signiert wurden.
+Kanäle sind einfache Peer-to-Peer-Protokolle, die es zwei Parteien ermöglichen, viele Transaktionen untereinander durchzuführen und dann nur die Endergebnisse auf der Blockchain zu veröffentlichen. Der Kanal verwendet Kryptografie, um zu beweisen, dass die von ihnen generierten Zusammenfassungsdaten tatsächlich das Ergebnis einer gültigen Menge von Zwischentransaktionen sind. Ein ["Mehrfachsignatur"](/developers/docs/smart-contracts/#multisig)-Smart Contract stellt sicher, dass die Transaktionen von den richtigen Parteien signiert werden.
 
-Bei Channels werden Zustandsänderungen von den beteiligten Parteien selbst ausgeführt und validiert, wodurch die Rechenlast auf der Ausführungsebene von Ethereum minimiert wird. Dies verringert die Netzwerkbelastung auf Ethereum und beschleunigt gleichzeitig die Transaktionsverarbeitung für Nutzer:innen.
+Mit Kanälen werden Zustandsänderungen von interessierten Parteien ausgeführt und validiert, was die Berechnungen auf der Ausführungsebene von Ethereum minimiert. Dies verringert die Überlastung auf Ethereum und erhöht zudem die Transaktionsverarbeitungsgeschwindigkeiten für die Nutzer.
 
-Jeder Channel wird durch einen [Multisignatur-Smart-Contract (Multisig)](/developers/docs/smart-contracts/#multisig) verwaltet, der auf Ethereum ausgeführt wird. Um einen Channel zu eröffnen, stellen die Teilnehmenden den Channel-Contract onchain bereit und zahlen Guthaben in diesen ein. Anschließend signieren beide Parteien gemeinsam eine Zustandsaktualisierung, um den Anfangszustand des Channels festzulegen; danach können sie schnell und ohne Einschränkungen offchain transaktieren.
+Jeder Kanal wird von einem [Mehrfachsignatur-Smart Contract](/developers/docs/smart-contracts/#multisig) verwaltet, der auf Ethereum läuft. Um einen Kanal zu öffnen, stellen die Teilnehmer den Kanalvertrag auf der Blockchain bereit und zahlen Gelder in diesen ein. Beide Parteien signieren gemeinsam eine Zustandsaktualisierung, um den Zustand des Kanals zu initialisieren, wonach sie schnell und frei Off-Chain transagieren können.
 
-Zum Schließen des Channels reichen die Teilnehmenden den zuletzt vereinbarten Zustand des Channels onchain ein. Danach verteilt der Smart Contract die eingesperrten Mittel entsprechend der jeweiligen Guthabenstände im endgültigen Zustand des Channels.
+Um den Kanal zu schließen, reichen die Teilnehmer den zuletzt vereinbarten Zustand des Kanals auf der Blockchain ein. Anschließend verteilt der Smart Contract die gesperrten Gelder entsprechend dem Guthaben jedes Teilnehmers im Endzustand des Kanals.
 
-Peer-to-Peer-Channels eignen sich besonders gut für Szenarien, in denen eine festgelegte Gruppe von Teilnehmenden häufig miteinander transaktieren möchte, ohne dabei sichtbare Overhead-Kosten zu verursachen. Blockchain-Channels lassen sich in zwei Kategorien einteilen: **Payment Channels** (Zahlungs-Channels) und **State Channels** (Zustands-Channels).
+Peer-to-Peer-Kanäle sind besonders nützlich für Situationen, in denen einige vordefinierte Teilnehmer mit hoher Frequenz transagieren möchten, ohne dass ein sichtbarer Mehraufwand entsteht. Blockchain-Kanäle fallen in zwei Kategorien: **Payment Channels** und **State Channels**.
 
-## Zahlungs-Channels {#payment-channels}
+## Payment Channels {#payment-channels}
 
-Ein Zahlungs-Channel lässt sich am besten als ein „zweiseitiges Kassenbuch“ beschreiben, das gemeinsam von zwei Nutzer:innen geführt wird. Der Anfangssaldo dieses Kassenbuchs entspricht der Summe der Einlagen, die beim Öffnen des Channels in den Onchain-Contract eingesperrt wurden. Überweisungen innerhalb eines Zahlungs-Channels können augenblicklich erfolgen und benötigen – abgesehen von einer einmaligen Onchain-Transaktion zur Eröffnung sowie einer abschließenden Transaktion zum Schließen des Channels – keine direkte Interaktion mit der eigentlichen Blockchain.
+Ein Payment Channel lässt sich am besten als ein „Zwei-Wege-Ledger“ beschreiben, der von zwei Nutzern gemeinsam geführt wird. Das anfängliche Guthaben des Ledgers ist die Summe der Einlagen, die während der Kanaleröffnungsphase im Vertrag auf der Blockchain gesperrt wurden. Transfers über Payment Channels können sofort und ohne Beteiligung der eigentlichen Blockchain selbst durchgeführt werden, mit Ausnahme einer anfänglichen einmaligen Erstellung auf der Blockchain und einer eventuellen Schließung des Kanals.
 
-Aktualisierungen des Kassenbuchsaldos (d. h. des Zustands des Zahlungs-Channels) bedürfen der Zustimmung aller am Channel beteiligten Parteien. Eine Channel-Aktualisierung, die von allen Teilnehmenden signiert wurde, gilt als final – vergleichbar mit einer Transaktion auf Ethereum.
+Aktualisierungen des Ledger-Guthabens (d. h. des Zustands des Payment Channels) erfordern die Zustimmung aller Parteien im Kanal. Eine Kanalaktualisierung, die von allen Kanalteilnehmern signiert wurde, gilt als abgeschlossen, ähnlich wie eine Transaktion auf Ethereum.
 
-Zahlungs-Channels zählten zu den frühesten Skalierungslösungen und wurden entwickelt, um teure Onchain-Aktivitäten bei einfachen Nutzerinteraktionen (z. B. ETH-Überweisungen, atomare Swaps, Mikrozahlungen) auf ein Minimum zu reduzieren. Die Teilnehmenden eines Channels können beliebig viele sofortige und gebührenfreie Transaktionen untereinander durchführen, solange die Bilanz ihrer gegenseitigen Überweisungen den Betrag der eingezahlten Tokens nicht überschreitet.
+Payment Channels gehörten zu den frühesten Skalierungslösungen, die entwickelt wurden, um teure Aktivitäten auf der Blockchain bei einfachen Nutzerinteraktionen (z. B. ETH-Transfers, Atomic Swaps, Mikrozahlungen) zu minimieren. Kanalteilnehmer können eine unbegrenzte Anzahl von sofortigen, gebührenfreien Transaktionen untereinander durchführen, solange die Nettosumme ihrer Transfers die eingezahlten Token nicht übersteigt.
 
-## Zustands-Channels {#state-channels}
+## State Channels {#state-channels}
 
-Abgesehen von der Unterstützung von Offchain-Zahlungen haben sich Zahlungs-Channels für die Verarbeitung allgemeiner Zustandsübergangslogik als ungeeignet erwiesen. Zustands-Channels (State Channels) wurden entwickelt, um dieses Problem zu lösen und Channels für die Skalierung allgemeiner Berechnungen nutzbar zu machen.
+Abgesehen von der Unterstützung von Off-Chain-Zahlungen haben sich Payment Channels nicht als nützlich für die Handhabung allgemeiner Zustandsübergangslogik erwiesen. State Channels wurden geschaffen, um dieses Problem zu lösen und Kanäle für die Skalierung von Allzweckberechnungen nutzbar zu machen.
 
-Zustands-Channels weisen nach wie vor viele Gemeinsamkeiten mit Zahlungs-Channels auf. Zum Beispiel interagieren Nutzer:innen durch den Austausch kryptografisch signierter Nachrichten (Transaktionen), die auch von den übrigen Channel-Teilnehmenden signiert werden müssen. Wird eine vorgeschlagene Zustandsaktualisierung nicht von allen Teilnehmenden signiert, gilt sie als ungültig.
+State Channels haben immer noch viel mit Payment Channels gemeinsam. Zum Beispiel interagieren Nutzer, indem sie kryptografisch signierte Nachrichten (Transaktionen) austauschen, die die anderen Kanalteilnehmer ebenfalls signieren müssen. Wenn eine vorgeschlagene Zustandsaktualisierung nicht von allen Teilnehmern signiert wird, gilt sie als ungültig.
 
-Im Unterschied zu Zahlungs-Channels verwaltet ein Zustands-Channel jedoch nicht nur die Guthaben der Nutzer:innen, sondern führt zudem den aktuellen Zustand des Contract-Speichers (d. h. die Werte der Contract-Variablen) fortlaufend mit.
+Zusätzlich zur Speicherung der Nutzerguthaben verfolgt der Kanal jedoch auch den aktuellen Zustand des Vertragsspeichers (d. h. die Werte der Vertragsvariablen).
 
-Dadurch wird es möglich, einen Smart Contract außerhalb der Blockchain (offchain) zwischen zwei Nutzer:innen auszuführen. In diesem Szenario bedürfen Aktualisierungen des internen Zustands des Smart Contracts lediglich der Zustimmung derjenigen Peers, die den Channel eingerichtet haben.
+Dies macht es möglich, einen Smart Contract Off-Chain zwischen zwei Nutzern auszuführen. In diesem Szenario erfordern Aktualisierungen des internen Zustands des Smart Contracts nur die Zustimmung der Peers, die den Kanal erstellt haben.
 
-Obwohl dies das zuvor beschriebene Skalierbarkeitsproblem löst, hat es Auswirkungen auf die Sicherheit. Auf Ethereum wird die Gültigkeit von Zustandsübergängen durch das Konsensprotokoll des Netzwerks sichergestellt. Dadurch ist es unmöglich, ungültige Zustandsaktualisierungen für einen Smart Contract vorzuschlagen oder dessen Ausführung zu manipulieren.
+Während dies das zuvor beschriebene Skalierbarkeitsproblem löst, hat es Auswirkungen auf die Sicherheit. Auf Ethereum wird die Gültigkeit von Zustandsübergängen durch das Konsensprotokoll des Netzwerks durchgesetzt. Dies macht es unmöglich, eine ungültige Aktualisierung des Zustands eines Smart Contracts vorzuschlagen oder die Ausführung des Smart Contracts zu ändern.
 
-Zustands-Channels bieten nicht dieselben Sicherheitsgarantien. Ein Zustands-Channel stellt gewissermaßen eine Miniaturversion des Mainnets dar. Da nur eine begrenzte Anzahl von Teilnehmenden die Regeln durchsetzt, steigt die Wahrscheinlichkeit böswilligen Verhaltens (z. B. das Vorschlagen ungültiger Zustandsaktualisierungen). Die Sicherheit von Zustands-Channels beruht auf einem Streitschlichtungssystem, das auf [Betrugsnachweisen](/glossary/#fraud-proof) basiert.
+State Channels haben nicht die gleichen Sicherheitsgarantien. Bis zu einem gewissen Grad ist ein State Channel eine Miniaturversion des Mainnets. Da nur eine begrenzte Anzahl von Teilnehmern die Regeln durchsetzt, steigt die Wahrscheinlichkeit von böswilligem Verhalten (z. B. das Vorschlagen ungültiger Zustandsaktualisierungen). State Channels beziehen ihre Sicherheit aus einem Streitschlichtungssystem, das auf [Betrugsnachweisen](/glossary/#fraud-proof) basiert.
 
-## Wie Zustands-Channels funktionieren {#how-state-channels-work}
+## Wie State Channels funktionieren {#how-state-channels-work}
 
-Im Grunde ist die Aktivität in einem Zustands-Channel eine Sitzung von Interaktionen zwischen Benutzern und einem Blockchain-System. Nutzer:innen kommunizieren überwiegend außerhalb der Blockchain (offchain) miteinander und interagieren mit der zugrundeliegenden Blockchain lediglich zum Öffnen oder Schließen des Channels sowie zur Beilegung allfälliger Streitigkeiten zwischen den Teilnehmenden.
+Grundsätzlich ist die Aktivität in einem State Channel eine Sitzung von Interaktionen, an der Nutzer und ein Blockchain-System beteiligt sind. Die Nutzer kommunizieren meist Off-Chain miteinander und interagieren nur mit der zugrunde liegenden Blockchain, um den Kanal zu öffnen, den Kanal zu schließen oder mögliche Streitigkeiten zwischen den Teilnehmern beizulegen.
 
-Der folgende Abschnitt beschreibt den grundlegenden Arbeitsablauf eines Zustands-Channels:
+Der folgende Abschnitt skizziert den grundlegenden Arbeitsablauf eines State Channels:
 
-### Öffnen des Channels {#opening-the-channel}
+### Öffnen des Kanals {#opening-the-channel}
 
-Das Öffnen eines Channels erfordert, dass die Teilnehmer Mittel in einen Smart Contract im Mainnet einbringen. Die Einlage fungiert auch als virtueller Deckel, so dass die teilnehmenden Akteure frei Transaktionen durchführen können, ohne Zahlungen sofort abwickeln zu müssen. Erst wenn der Channel onchain finalisiert ist, rechnen die Parteien untereinander ab und heben den Rest ihres Deckels ab.
+Das Öffnen eines Kanals erfordert, dass die Teilnehmer Gelder in einen Smart Contract im Mainnet einzahlen. Die Einzahlung fungiert auch als virtueller Deckel, sodass die teilnehmenden Akteure frei transagieren können, ohne Zahlungen sofort begleichen zu müssen. Erst wenn der Kanal auf der Blockchain finalisiert wird, rechnen die Parteien miteinander ab und heben ab, was von ihrem Deckel übrig ist.
 
-Diese Einlage dient auch als Sicherheit, um ehrliches Verhalten von jedem Teilnehmer zu garantieren. Wenn Einleger während der Streitbeilegungsphase bösartiger Handlungen für schuldig befunden werden, wird ihre Einlage durch den Vertrag gekürzt (Slashing).
+Diese Einzahlung dient auch als Kaution, um ehrliches Verhalten jedes Teilnehmers zu garantieren. Wenn Einleger während der Streitschlichtungsphase böswilliger Handlungen für schuldig befunden werden, führt der Vertrag ein Slashing ihrer Einzahlung durch.
 
-Die Channel-Peers müssen einen Anfangszustand unterzeichnen, dem sie alle zustimmen. Dies dient als Genesis des Zustands-Channels, nach der die Benutzer mit Transaktionen beginnen können.
+Kanal-Peers müssen einen Anfangszustand signieren, auf den sie sich alle einigen. Dies dient als Genesis des State Channels, wonach die Nutzer mit dem Transagieren beginnen können.
 
-### Nutzung des Channels {#using-the-channel}
+### Nutzung des Kanals {#using-the-channel}
 
-Nach der Initialisierung des Zustands des Channels interagieren die Peers, indem sie Transaktionen unterzeichnen und sie sich zur Genehmigung gegenseitig zusenden. Die Teilnehmer initiieren mit diesen Transaktionen Zustandsaktualisierungen und unterzeichnen Zustandsaktualisierungen von anderen. Jede Transaktion umfasst Folgendes:
+Nach der Initialisierung des Kanalzustands interagieren die Peers, indem sie Transaktionen signieren und sie sich gegenseitig zur Genehmigung senden. Die Teilnehmer initiieren mit diesen Transaktionen Zustandsaktualisierungen und signieren Zustandsaktualisierungen von anderen. Jede Transaktion umfasst Folgendes:
 
-- Eine **Nonce**, die als eindeutige ID für Transaktionen dient und Replay-Angriffe verhindert. Sie identifiziert auch die Reihenfolge, in der Zustandsaktualisierungen stattgefunden haben (was für die Streitbeilegung wichtig ist).
+- Eine **Nonce**, die als eindeutige ID für Transaktionen fungiert und Replay-Angriffe verhindert. Sie identifiziert auch die Reihenfolge, in der Zustandsaktualisierungen aufgetreten sind (was für die Streitschlichtung wichtig ist)
 
-- Der alte Zustand des Channels
+- Den alten Zustand des Kanals
 
-- Der neue Zustand des Channels
+- Den neuen Zustand des Kanals
 
-- Die Transaktion, die den Zustandsübergang auslöst (z. B. sendet Alice 5 ETH an Bob).
+- Die Transaktion, die den Zustandsübergang auslöst (z. B. Alice sendet 5 ETH an Bob)
 
-Zustandsaktualisierungen im Channel werden nicht onchain übertragen, wie es normalerweise der Fall ist, wenn Benutzer im Mainnet interagieren, was mit dem Ziel von Zustands-Channels übereinstimmt, den Onchain-Fußabdruck zu minimieren. Solange sich die Teilnehmer über Zustandsaktualisierungen einig sind, sind diese so endgültig wie eine Ethereum-Transaktion. Die Teilnehmer müssen sich nur auf den Konsens des Mainnets verlassen, wenn es zu einem Streitfall kommt.
+Zustandsaktualisierungen im Kanal werden nicht auf der Blockchain übertragen, wie es normalerweise der Fall ist, wenn Nutzer im Mainnet interagieren, was mit dem Ziel von State Channels übereinstimmt, den Fußabdruck auf der Blockchain zu minimieren. Solange sich die Teilnehmer auf Zustandsaktualisierungen einigen, sind diese so endgültig wie eine Ethereum-Transaktion. Die Teilnehmer müssen sich nur dann auf den Konsens des Mainnets verlassen, wenn ein Streitfall auftritt.
 
-### Schließen des Channels {#closing-the-channel}
+### Schließen des Kanals {#closing-the-channel}
 
-Das Schließen eines Zustands-Channels erfordert die Übermittlung des endgültigen, vereinbarten Zustands des Channels an den Onchain-Smart-Contract. Zu den in der Zustandsaktualisierung referenzierten Details gehören die Anzahl der Züge jedes Teilnehmers und eine Liste der genehmigten Transaktionen.
+Das Schließen eines State Channels erfordert die Übermittlung des endgültigen, vereinbarten Zustands des Kanals an den Smart Contract auf der Blockchain. Zu den in der Zustandsaktualisierung referenzierten Details gehören die Anzahl der Züge jedes Teilnehmers und eine Liste der genehmigten Transaktionen.
 
-Nach der Überprüfung, dass die Zustandsaktualisierung gültig ist (d. h. von allen Parteien unterzeichnet wurde), finalisiert der Smart Contract den Channel und verteilt die gesperrten Gelder entsprechend dem Ergebnis des Channels. Offchain getätigte Zahlungen werden auf den Zustand von Ethereum angewendet und jeder Teilnehmer erhält seinen verbleibenden Anteil der gesperrten Gelder.
+Nach der Überprüfung, ob die Zustandsaktualisierung gültig ist (d. h. sie ist von allen Parteien signiert), finalisiert der Smart Contract den Kanal und verteilt die gesperrten Gelder entsprechend dem Ergebnis des Kanals. Off-Chain getätigte Zahlungen werden auf den Zustand von Ethereum angewendet und jeder Teilnehmer erhält seinen verbleibenden Anteil der gesperrten Gelder.
 
-Das oben beschriebene Szenario stellt dar, was im Idealfall („Happy Case“) passiert. Manchmal können Benutzer keine Einigung erzielen und den Channel nicht finalisieren (der „Sad Case“). Jeder der folgenden Punkte könnte auf die Situation zutreffen:
+Das oben beschriebene Szenario stellt dar, was im Idealfall passiert. Manchmal können sich die Nutzer jedoch nicht einigen und den Kanal finalisieren (der Problemfall). Eines der folgenden Dinge könnte auf die Situation zutreffen:
 
 - Teilnehmer gehen offline und schlagen keine Zustandsübergänge vor
 
-- Teilnehmer weigern sich, gültige Zustandsaktualisierungen mitzuzeichnen
+- Teilnehmer weigern sich, gültige Zustandsaktualisierungen mitzuunterzeichnen
 
-- Teilnehmer versuchen, den Channel zu finalisieren, indem sie eine alte Zustandsaktualisierung an den Onchain-Vertrag vorschlagen
+- Teilnehmer versuchen, den Kanal zu finalisieren, indem sie dem Vertrag auf der Blockchain eine alte Zustandsaktualisierung vorschlagen
 
-- Teilnehmer schlagen ungültige Zustandsübergänge zur Unterzeichnung durch andere vor
+- Teilnehmer schlagen ungültige Zustandsübergänge vor, die andere signieren sollen
 
-Immer wenn der Konsens zwischen den teilnehmenden Akteuren in einem Channel zusammenbricht, ist die letzte Option, sich auf den Konsens des Mainnets zu verlassen, um den endgültigen, gültigen Zustand des Channels durchzusetzen. In diesem Fall erfordert das Schließen des Zustands-Channels die Beilegung von Streitigkeiten onchain.
+Wann immer der Konsens zwischen den teilnehmenden Akteuren in einem Kanal zusammenbricht, besteht die letzte Option darin, sich auf den Konsens des Mainnets zu verlassen, um den endgültigen, gültigen Zustand des Kanals durchzusetzen. In diesem Fall erfordert das Schließen des State Channels die Beilegung von Streitigkeiten auf der Blockchain.
 
 ### Beilegung von Streitigkeiten {#settling-disputes}
 
-Normalerweise einigen sich die Parteien in einem Channel im Voraus auf die Schließung des Channels und unterzeichnen gemeinsam den letzten Zustandsübergang, den sie an den Smart Contract übermitteln. Sobald die Aktualisierung onchain genehmigt ist, endet die Ausführung des Offchain-Smart-Contracts und die Teilnehmer verlassen den Channel mit ihrem Geld.
+Typischerweise einigen sich die Parteien in einem Kanal im Voraus auf die Schließung des Kanals und unterzeichnen gemeinsam den letzten Zustandsübergang, den sie an den Smart Contract übermitteln. Sobald die Aktualisierung auf der Blockchain genehmigt ist, endet die Ausführung des Off-Chain-Smart Contracts und die Teilnehmer verlassen den Kanal mit ihrem Geld.
 
-Jedoch kann eine Partei eine Onchain-Anfrage stellen, um die Ausführung des Smart Contracts zu beenden und den Channel zu finalisieren – ohne auf die Zustimmung ihres Gegenübers zu warten. Wenn eine der zuvor beschriebenen Situationen eintritt, die den Konsens brechen, kann jede Partei den Onchain-Vertrag auslösen, um den Channel zu schließen und Gelder zu verteilen. Dies sorgt für **Vertrauenslosigkeit** (Trustlessness) und stellt sicher, dass ehrliche Parteien ihre Einlagen jederzeit abziehen können, unabhängig von den Handlungen der anderen Partei.
+Eine Partei kann jedoch eine Anfrage auf der Blockchain einreichen, um die Ausführung des Smart Contracts zu beenden und den Kanal zu finalisieren – ohne auf die Zustimmung ihres Gegenübers zu warten. Wenn eine der zuvor beschriebenen konsensbrechenden Situationen eintritt, kann jede Partei den Vertrag auf der Blockchain auslösen, um den Kanal zu schließen und die Gelder zu verteilen. Dies sorgt für **Vertrauenslosigkeit** und stellt sicher, dass ehrliche Parteien ihre Einlagen jederzeit abheben können, unabhängig von den Handlungen der anderen Partei.
 
-Um den Austritt aus dem Channel zu verarbeiten, muss der Benutzer die letzte gültige Zustandsaktualisierung der Anwendung an den Onchain-Vertrag übermitteln. Wenn dies bestätigt wird (d. h. es trägt die Unterschrift aller Parteien), werden die Gelder zu ihren Gunsten umverteilt.
+Um den Kanalaustritt zu verarbeiten, muss der Nutzer die letzte gültige Zustandsaktualisierung der Anwendung an den Vertrag auf der Blockchain übermitteln. Wenn dies bestätigt wird (d. h. es trägt die Signatur aller Parteien), werden die Gelder zu ihren Gunsten umverteilt.
 
-Es gibt jedoch eine Verzögerung bei der Ausführung von Austrittsanfragen einzelner Benutzer. Wenn der Antrag auf Abschluss des Channels einstimmig genehmigt wurde, wird die Onchain-Austrittstransaktion sofort ausgeführt.
+Es gibt jedoch eine Verzögerung bei der Ausführung von Austrittsanfragen einzelner Nutzer. Wenn die Anfrage zum Abschluss des Kanals einstimmig genehmigt wurde, wird die Austrittstransaktion auf der Blockchain sofort ausgeführt.
 
-Die Verzögerung kommt bei Austritten einzelner Benutzer aufgrund der Möglichkeit betrügerischer Handlungen ins Spiel. Zum Beispiel könnte ein Channel-Teilnehmer versuchen, den Channel auf Ethereum zu finalisieren, indem er eine ältere Zustandsaktualisierung onchain einreicht.
+Die Verzögerung kommt bei Einzelnutzeraustritten aufgrund der Möglichkeit betrügerischer Handlungen ins Spiel. Zum Beispiel könnte ein Kanalteilnehmer versuchen, den Kanal auf Ethereum zu finalisieren, indem er eine ältere Zustandsaktualisierung auf der Blockchain einreicht.
 
-Als Gegenmaßnahme ermöglichen Zustands-Channels ehrlichen Benutzern, ungültige Zustandsaktualisierungen anzufechten, indem sie den neuesten, gültigen Zustand des Channels onchain einreichen. Zustands-Channels sind so konzipiert, dass neuere, vereinbarte Zustandsaktualisierungen ältere Zustandsaktualisierungen übertrumpfen.
+Als Gegenmaßnahme ermöglichen State Channels ehrlichen Nutzern, ungültige Zustandsaktualisierungen anzufechten, indem sie den neuesten, gültigen Zustand des Kanals auf der Blockchain einreichen. State Channels sind so konzipiert, dass neuere, vereinbarte Zustandsaktualisierungen ältere Zustandsaktualisierungen übertrumpfen.
 
-Sobald ein Peer das Onchain-Streitbeilegungssystem auslöst, muss die andere Partei innerhalb einer Frist (dem sogenannten „Challenge Window“) antworten. Dies ermöglicht es Benutzern, die Austrittstransaktion anzufechten, insbesondere wenn die andere Partei eine veraltete Aktualisierung anwendet.
+Sobald ein Peer das Streitschlichtungssystem auf der Blockchain auslöst, muss die andere Partei innerhalb einer Frist (dem sogenannten Anfechtungsfenster) reagieren. Dies ermöglicht es den Nutzern, die Austrittstransaktion anzufechten, insbesondere wenn die andere Partei eine veraltete Aktualisierung anwendet.
 
-Wie auch immer der Fall sein mag, Channel-Benutzer haben immer starke Finalitätsgarantien: Wenn der in ihrem Besitz befindliche Zustandsübergang von allen Mitgliedern unterzeichnet wurde und die jüngste Aktualisierung ist, dann hat er die gleiche Finalität wie eine reguläre Onchain-Transaktion. Sie müssen die andere Partei zwar immer noch onchain anfechten, aber das einzig mögliche Ergebnis ist die Finalisierung des letzten gültigen Zustands, den sie besitzen.
+Wie auch immer der Fall sein mag, Kanalnutzer haben immer starke Finalitätsgarantien: Wenn der Zustandsübergang in ihrem Besitz von allen Mitgliedern signiert wurde und die jüngste Aktualisierung ist, dann hat er die gleiche Finalität wie eine reguläre Transaktion auf der Blockchain. Sie müssen die andere Partei zwar immer noch auf der Blockchain anfechten, aber das einzig mögliche Ergebnis ist die Finalisierung des letzten gültigen Zustands, den sie besitzen.
 
-### Wie interagieren Zustands-Channels mit Ethereum? {#how-do-state-channels-interact-with-ethereum}
+### Wie interagieren State Channels mit Ethereum? {#how-do-state-channels-interact-with-ethereum}
 
-Obwohl sie als Offchain-Protokolle existieren, haben Zustands-Channels eine Onchain-Komponente: den Smart Contract, der beim Öffnen des Channels auf Ethereum bereitgestellt wird. Dieser Vertrag kontrolliert die in den Channel eingezahlten Vermögenswerte, überprüft Zustandsaktualisierungen und schlichtet Streitigkeiten zwischen den Teilnehmern.
+Obwohl sie als Off-Chain-Protokolle existieren, haben State Channels eine Komponente auf der Blockchain: den Smart Contract, der beim Öffnen des Kanals auf Ethereum bereitgestellt wird. Dieser Vertrag kontrolliert die in den Kanal eingezahlten Vermögenswerte, verifiziert Zustandsaktualisierungen und schlichtet Streitigkeiten zwischen den Teilnehmern.
 
-Zustands-Channels veröffentlichen keine Transaktionsdaten oder Zustands-Commitments im Mainnet, im Gegensatz zu [Layer-2](/layer-2/)-Skalierungslösungen. Sie sind jedoch stärker mit dem Mainnet verbunden als beispielsweise [Sidechains](/developers/docs/scaling/sidechains/), was sie etwas sicherer macht.
+State Channels veröffentlichen im Gegensatz zu [Ebene 2](/layer-2/)-Skalierungslösungen keine Transaktionsdaten oder Zustandsverpflichtungen im Mainnet. Sie sind jedoch stärker mit dem Mainnet verbunden als beispielsweise [Sidechains](/developers/docs/scaling/sidechains/), was sie etwas sicherer macht.
 
-Zustands-Channels stützen sich für die folgenden Punkte auf das Ethereum-Hauptprotokoll:
+State Channels verlassen sich für Folgendes auf das Haupt-Ethereum-Protokoll:
 
 #### 1. Liveness {#liveness}
 
-Der Onchain-Vertrag, der beim Öffnen des Channels bereitgestellt wird, ist für die Funktionalität des Channels verantwortlich. Wenn der Vertrag auf Ethereum läuft, ist der Channel immer zur Nutzung verfügbar. Umgekehrt kann eine Sidechain immer ausfallen, selbst wenn das Mainnet betriebsbereit ist, was die Gelder der Benutzer gefährdet.
+Der beim Öffnen des Kanals bereitgestellte Vertrag auf der Blockchain ist für die Funktionalität des Kanals verantwortlich. Wenn der Vertrag auf Ethereum läuft, ist der Kanal immer für die Nutzung verfügbar. Umgekehrt kann eine Sidechain jederzeit ausfallen, selbst wenn das Mainnet betriebsbereit ist, was die Gelder der Nutzer gefährdet.
 
 #### 2. Sicherheit {#security}
 
-Bis zu einem gewissen Grad stützen sich Zustands-Channels auf Ethereum, um Sicherheit zu bieten und Benutzer vor bösartigen Peers zu schützen. Wie in späteren Abschnitten erörtert, verwenden Channels einen Betrugsnachweis-Mechanismus, der es Benutzern ermöglicht, Versuche, den Channel mit einer ungültigen oder veralteten Aktualisierung zu finalisieren, anzufechten.
+Bis zu einem gewissen Grad verlassen sich State Channels auf Ethereum, um Sicherheit zu bieten und Nutzer vor böswilligen Peers zu schützen. Wie in späteren Abschnitten besprochen, verwenden Kanäle einen Betrugsnachweis-Mechanismus, der es Nutzern ermöglicht, Versuche anzufechten, den Kanal mit einer ungültigen oder veralteten Aktualisierung zu finalisieren.
 
-In diesem Fall legt die ehrliche Partei den neuesten gültigen Zustand des Channels als Betrugsnachweis dem Onchain-Vertrag zur Überprüfung vor. Betrugsnachweise ermöglichen es sich gegenseitig misstrauenden Parteien, Offchain-Transaktionen durchzuführen, ohne dabei ihre Gelder zu riskieren.
+In diesem Fall stellt die ehrliche Partei den neuesten gültigen Zustand des Kanals als Betrugsnachweis für den Vertrag auf der Blockchain zur Überprüfung bereit. Betrugsnachweise ermöglichen es Parteien, die einander misstrauen, Off-Chain-Transaktionen durchzuführen, ohne dabei ihre Gelder zu riskieren.
 
-#### 3. Endgültigkeit {#finality}
+#### 3. Finalität {#finality}
 
-Zustandsaktualisierungen, die von Channel-Benutzern gemeinsam unterzeichnet werden, gelten als so gut wie Onchain-Transaktionen. Dennoch erreicht jede Aktivität innerhalb des Channels erst dann echte Finalität, wenn der Channel auf Ethereum geschlossen wird.
+Zustandsaktualisierungen, die von Kanalnutzern gemeinsam signiert wurden, gelten als genauso gut wie Transaktionen auf der Blockchain. Dennoch erreicht die gesamte Aktivität im Kanal erst dann echte Finalität, wenn der Kanal auf Ethereum geschlossen wird.
 
-Im optimistischen Fall können beide Parteien kooperieren, die endgültige Zustandsaktualisierung unterzeichnen und onchain einreichen, um den Channel zu schließen, woraufhin die Gelder entsprechend dem endgültigen Zustand des Channels verteilt werden. Im pessimistischen Fall, in dem jemand versucht zu betrügen, indem er eine falsche Zustandsaktualisierung onchain postet, wird seine Transaktion erst nach Ablauf des „Challenge Window“ finalisiert.
+Im optimistischen Fall können beide Parteien kooperieren, die endgültige Zustandsaktualisierung signieren und auf der Blockchain einreichen, um den Kanal zu schließen, wonach die Gelder entsprechend dem Endzustand des Kanals verteilt werden. Im pessimistischen Fall, in dem jemand versucht zu betrügen, indem er eine falsche Zustandsaktualisierung auf der Blockchain veröffentlicht, wird seine Transaktion erst finalisiert, wenn das Anfechtungsfenster abgelaufen ist.
 
-## Virtuelle Zustands-Channels {#virtual-state-channels}
+## Virtuelle State Channels {#virtual-state-channels}
 
-Die naive Implementierung eines Zustands-Channels wäre, einen neuen Vertrag bereitzustellen, wenn zwei Benutzer eine Anwendung offchain ausführen möchten. Dies ist nicht nur undurchführbar, sondern hebt auch die Kosteneffizienz von Zustands-Channels auf (Onchain-Transaktionskosten können sich schnell summieren).
+Die naive Implementierung eines State Channels bestünde darin, einen neuen Vertrag bereitzustellen, wenn zwei Nutzer eine Anwendung Off-Chain ausführen möchten. Dies ist nicht nur unpraktikabel, sondern macht auch die Kosteneffizienz von State Channels zunichte (Transaktionskosten auf der Blockchain können sich schnell summieren).
 
-Um dieses Problem zu lösen, wurden „virtuelle Channels“ geschaffen. Im Gegensatz zu regulären Channels, die Onchain-Transaktionen zum Öffnen und Schließen erfordern, kann ein virtueller Channel geöffnet, ausgeführt und finalisiert werden, ohne mit der Hauptkette zu interagieren. Mit dieser Methode ist es sogar möglich, Streitigkeiten offchain beizulegen.
+Um dieses Problem zu lösen, wurden „virtuelle Kanäle“ geschaffen. Im Gegensatz zu regulären Kanälen, die Transaktionen auf der Blockchain zum Öffnen und Beenden erfordern, kann ein virtueller Kanal ohne Interaktion mit der Hauptkette geöffnet, ausgeführt und finalisiert werden. Mit dieser Methode ist es sogar möglich, Streitigkeiten Off-Chain beizulegen.
 
-Dieses System beruht auf der Existenz sogenannter „Ledger-Channels“, die onchain finanziert wurden. Virtuelle Channels zwischen zwei Parteien können auf einem bestehenden Ledger-Channel aufgebaut werden, wobei der/die Eigentümer des Ledger-Channels als Vermittler dienen.
+Dieses System beruht auf der Existenz sogenannter „Ledger-Kanäle“, die auf der Blockchain finanziert wurden. Virtuelle Kanäle zwischen zwei Parteien können auf einem bestehenden Ledger-Kanal aufgebaut werden, wobei der oder die Eigentümer des Ledger-Kanals als Vermittler dienen.
 
-Benutzer in jedem virtuellen Channel interagieren über eine neue Vertragsinstanz, wobei der Ledger-Channel mehrere Vertragsinstanzen unterstützen kann. Der Zustand des Ledger-Channels enthält auch mehr als einen Vertragsspeicherzustand, was die parallele Ausführung von Anwendungen offchain zwischen verschiedenen Benutzern ermöglicht.
+Nutzer in jedem virtuellen Kanal interagieren über eine neue Vertragsinstanz, wobei der Ledger-Kanal mehrere Vertragsinstanzen unterstützen kann. Der Zustand des Ledger-Kanals enthält auch mehr als einen Vertragsspeicherzustand, was die parallele Ausführung von Anwendungen Off-Chain zwischen verschiedenen Nutzern ermöglicht.
 
-Genau wie bei regulären Channels tauschen die Benutzer Zustandsaktualisierungen aus, um die Zustandsmaschine voranzubringen. Sofern kein Streitfall auftritt, muss der Vermittler nur beim Öffnen oder Schließen des Channels kontaktiert werden.
+Genau wie bei regulären Kanälen tauschen die Nutzer Zustandsaktualisierungen aus, um die Zustandsmaschine (State Machine) voranzutreiben. Sofern kein Streitfall auftritt, muss der Vermittler nur beim Öffnen oder Beenden des Kanals kontaktiert werden.
 
-### Virtuelle Zahlungs-Channels {#virtual-payment-channels}
+### Virtuelle Payment Channels {#virtual-payment-channels}
 
-Virtuelle Zahlungs-Channels funktionieren nach der gleichen Idee wie virtuelle Zustands-Channels: Teilnehmer, die mit demselben Netzwerk verbunden sind, können Nachrichten weiterleiten, ohne einen neuen Channel onchain öffnen zu müssen. In virtuellen Zahlungs-Channels werden Wertübertragungen über einen oder mehrere Vermittler geleitet, mit der Garantie, dass nur der beabsichtigte Empfänger die überwiesenen Gelder erhalten kann.
+Virtuelle Payment Channels basieren auf derselben Idee wie virtuelle State Channels: Teilnehmer, die mit demselben Netzwerk verbunden sind, können Nachrichten weiterleiten, ohne einen neuen Kanal auf der Blockchain öffnen zu müssen. In virtuellen Payment Channels werden Werttransfers über einen oder mehrere Vermittler geleitet, mit der Garantie, dass nur der beabsichtigte Empfänger die transferierten Gelder erhalten kann.
 
-## Anwendungen von Zustands-Channels {#applications-of-state-channels}
+## Anwendungen von State Channels {#applications-of-state-channels}
 
 ### Zahlungen {#payments}
 
-Frühe Blockchain-Channels waren einfache Protokolle, die es zwei Teilnehmern ermöglichten, schnelle, kostengünstige Übertragungen offchain durchzuführen, ohne hohe Transaktionsgebühren im Mainnet zahlen zu müssen. Heute sind Zahlungs-Channels immer noch nützlich für Anwendungen, die für den Austausch und die Einzahlung von Ether und Token konzipiert sind.
+Frühe Blockchain-Kanäle waren einfache Protokolle, die es zwei Teilnehmern ermöglichten, schnelle, gebührenarme Transfers Off-Chain durchzuführen, ohne hohe Transaktionsgebühren im Mainnet zahlen zu müssen. Heute sind Payment Channels immer noch nützlich für Anwendungen, die für den Austausch und die Einzahlung von Ether und Token konzipiert sind.
 
-Channel-basierte Zahlungen haben die folgenden Vorteile:
+Kanalbasierte Zahlungen haben die folgenden Vorteile:
 
-1. **Durchsatz**: Die Menge an Offchain-Transaktionen pro Channel ist nicht mit dem Durchsatz von Ethereum verbunden, der von verschiedenen Faktoren beeinflusst wird, insbesondere von der Blockgröße und der Blockzeit. Durch die Ausführung von Transaktionen offchain können Blockchain-Channels einen höheren Durchsatz erzielen.
+1. **Durchsatz**: Die Menge der Off-Chain-Transaktionen pro Kanal ist unabhängig vom Durchsatz von Ethereum, der von verschiedenen Faktoren beeinflusst wird, insbesondere von der Blockgröße und der Blockzeit. Durch die Ausführung von Transaktionen Off-Chain können Blockchain-Kanäle einen höheren Durchsatz erzielen.
 
-2. **Datenschutz**: Da Channels offchain existieren, werden Details der Interaktionen zwischen den Teilnehmern nicht auf der öffentlichen Blockchain von Ethereum aufgezeichnet. Channel-Benutzer müssen nur beim Finanzieren und Schließen von Channels oder bei der Beilegung von Streitigkeiten onchain interagieren. Daher sind Channels für Personen nützlich, die privatere Transaktionen wünschen.
+2. **Privatsphäre**: Da Kanäle Off-Chain existieren, werden Details der Interaktionen zwischen den Teilnehmern nicht auf der öffentlichen Blockchain von Ethereum aufgezeichnet. Kanalnutzer müssen nur dann auf der Blockchain interagieren, wenn sie Kanäle finanzieren und schließen oder Streitigkeiten beilegen. Daher sind Kanäle nützlich für Personen, die privatere Transaktionen wünschen.
 
-3. **Latenz**: Offchain-Transaktionen, die zwischen Channel-Teilnehmern durchgeführt werden, können sofort abgewickelt werden, wenn beide Parteien kooperieren, was Verzögerungen reduziert. Im Gegensatz dazu erfordert das Senden einer Transaktion im Mainnet das Warten darauf, dass Knoten die Transaktion verarbeiten, einen neuen Block mit der Transaktion erstellen und einen Konsens erzielen. Benutzer müssen möglicherweise auch auf weitere Block-Bestätigungen warten, bevor sie eine Transaktion als finalisiert betrachten.
+3. **Latenz**: Off-Chain-Transaktionen, die zwischen Kanalteilnehmern durchgeführt werden, können sofort abgewickelt werden, wenn beide Parteien kooperieren, was Verzögerungen reduziert. Im Gegensatz dazu erfordert das Senden einer Transaktion im Mainnet das Warten darauf, dass Blockchain-Knoten die Transaktion verarbeiten, einen neuen Block mit der Transaktion produzieren und einen Konsens erzielen. Nutzer müssen möglicherweise auch auf weitere Blockbestätigungen warten, bevor sie eine Transaktion als finalisiert betrachten.
 
-4. **Kosten**: Zustands-Channels sind besonders nützlich in Situationen, in denen eine Gruppe von Teilnehmern über einen langen Zeitraum viele Zustandsaktualisierungen austauschen wird. Die einzigen anfallenden Kosten sind das Öffnen und Schließen des Smart Contracts des Zustands-Channels; jede Zustandsänderung zwischen dem Öffnen und Schließen des Channels wird billiger als die letzte, da die Abwicklungskosten entsprechend verteilt werden.
+4. **Kosten**: State Channels sind besonders nützlich in Situationen, in denen eine Gruppe von Teilnehmern über einen langen Zeitraum viele Zustandsaktualisierungen austauscht. Die einzigen anfallenden Kosten sind das Öffnen und Schließen des State Channel-Smart Contracts; jede Zustandsänderung zwischen dem Öffnen und Schließen des Kanals wird billiger als die vorherige sein, da die Abwicklungskosten entsprechend verteilt werden.
 
-Die Implementierung von Zustands-Channels auf Layer-2-Lösungen wie [Rollups](/developers/docs/scaling/#rollups) könnte sie für Zahlungen noch attraktiver machen. Obwohl Channels günstige Zahlungen ermöglichen, können die Kosten für die Einrichtung des Onchain-Vertrags im Mainnet während der Eröffnungsphase teuer werden – besonders wenn die Gasgebühren in die Höhe schnellen. Auf Ethereum basierende Rollups bieten [niedrigere Transaktionsgebühren](https://l2fees.info/) und können den Overhead für Channel-Teilnehmer reduzieren, indem sie die Einrichtungsgebühren senken.
+Die Implementierung von State Channels auf Ebene 2-Lösungen, wie z. B. [Rollups](/developers/docs/scaling/#rollups), könnte sie für Zahlungen noch attraktiver machen. Während Kanäle günstige Zahlungen bieten, können die Kosten für die Einrichtung des Vertrags auf der Blockchain im Mainnet während der Eröffnungsphase teuer werden – insbesondere wenn die Gasgebühren in die Höhe schnellen. Ethereum-basierte Rollups bieten [niedrigere Transaktionsgebühren](https://l2fees.info/) und können den Mehraufwand für Kanalteilnehmer reduzieren, indem sie die Einrichtungsgebühren senken.
 
-### Mikrotransaktionen {#microtransactions}
+### Mikrozahlungen {#microtransactions}
 
-Mikrotransaktionen sind Zahlungen mit geringem Wert (z. B. weniger als ein Bruchteil eines Dollars), die Unternehmen nicht ohne Verluste abwickeln können. Diese Unternehmen müssen Zahlungsdienstleister bezahlen, was sie nicht können, wenn die Marge bei Kundenzahlungen zu gering ist, um einen Gewinn zu erzielen.
+Mikrozahlungen sind Zahlungen mit geringem Wert (z. B. weniger als ein Bruchteil eines Dollars), die Unternehmen nicht ohne Verluste verarbeiten können. Diese Unternehmen müssen Zahlungsdienstleister bezahlen, was sie nicht tun können, wenn die Marge bei Kundenzahlungen zu gering ist, um einen Gewinn zu erzielen.
 
-Zahlungskanäle lösen dieses Problem, indem sie den mit Mikrotransaktionen verbundenen Overhead reduzieren. Zum Beispiel kann ein Internetdienstanbieter (ISP) einen Zahlungskanal mit einem Kunden eröffnen, der es ermöglicht, bei jeder Nutzung des Dienstes kleine Zahlungen zu streamen.
+Payment Channels lösen dieses Problem, indem sie den mit Mikrozahlungen verbundenen Mehraufwand reduzieren. Zum Beispiel kann ein Internetdienstanbieter (ISP) einen Payment Channel mit einem Kunden eröffnen, der es ihm ermöglicht, jedes Mal, wenn er den Dienst nutzt, kleine Zahlungen zu streamen.
 
-Abgesehen von den Kosten für das Öffnen und Schließen des Kanals entstehen den Teilnehmern keine weiteren Kosten für Mikrotransaktionen (keine Gasgebühren). Dies ist eine Win-Win-Situation, da Kunden mehr Flexibilität bei der Höhe ihrer Zahlungen für Dienstleistungen haben und Unternehmen bei profitablen Mikrotransaktionen keine Einbußen erleiden.
+Über die Kosten für das Öffnen und Schließen des Kanals hinaus entstehen den Teilnehmern keine weiteren Kosten für Mikrozahlungen (keine Gasgebühren). Dies ist eine Win-Win-Situation, da Kunden mehr Flexibilität bei der Bezahlung von Dienstleistungen haben und Unternehmen keine profitablen Mikrozahlungen entgehen.
 
 ### Dezentralisierte Anwendungen {#decentralized-applications}
 
-Ähnlich wie Zahlungskanäle können Zustandskanäle (State Channels) bedingte Zahlungen gemäß den Endzuständen der Zustandsmaschine durchführen. Zustandskanäle können auch beliebige Zustandsübergangslogik unterstützen, was sie für die Ausführung generischer Anwendungen Off-Chain nützlich macht.
+Wie Payment Channels können State Channels bedingte Zahlungen entsprechend den Endzuständen der Zustandsmaschine vornehmen. State Channels können auch beliebige Zustandsübergangslogik unterstützen, was sie nützlich für die Ausführung generischer Apps Off-Chain macht.
 
-Zustandskanäle sind oft auf einfache rundenbasierte Anwendungen beschränkt, da dies die Verwaltung der an den On-Chain-Vertrag gebundenen Mittel erleichtert. Außerdem ist es bei einer begrenzten Anzahl von Parteien, die den Zustand der Off-Chain-Anwendung in Abständen aktualisieren, relativ einfach, unehrliches Verhalten zu bestrafen.
+State Channels sind oft auf einfache rundenbasierte Anwendungen beschränkt, da dies die Verwaltung der an den Vertrag auf der Blockchain gebundenen Gelder erleichtert. Da außerdem nur eine begrenzte Anzahl von Parteien den Zustand der Off-Chain-Anwendung in Intervallen aktualisiert, ist die Bestrafung unehrlichen Verhaltens relativ unkompliziert.
 
-Die Effizienz einer Zustandskanal-Anwendung hängt auch von ihrem Design ab. Zum Beispiel könnte ein Entwickler den App-Kanalvertrag einmal On-Chain bereitstellen und anderen Spielern ermöglichen, die App wiederzuverwenden, ohne On-Chain gehen zu müssen. In diesem Fall dient der ursprüngliche App-Kanal als Hauptkanal (Ledger Channel), der mehrere virtuelle Kanäle unterstützt, von denen jeder eine neue Instanz des Smart Contracts der App Off-Chain ausführt.
+Die Effizienz einer State Channel-Anwendung hängt auch von ihrem Design ab. Zum Beispiel könnte ein Entwickler den App-Kanalvertrag einmal auf der Blockchain bereitstellen und anderen Spielern erlauben, die App wiederzuverwenden, ohne auf die Blockchain gehen zu müssen. In diesem Fall dient der anfängliche App-Kanal als Ledger-Kanal, der mehrere virtuelle Kanäle unterstützt, von denen jeder eine neue Instanz des Smart Contracts der App Off-Chain ausführt.
 
-Ein möglicher Anwendungsfall für Zustandskanal-Anwendungen sind einfache Zweispieler-Spiele, bei denen Mittel basierend auf dem Spielergebnis verteilt werden. Der Vorteil hierbei ist, dass Spieler sich nicht gegenseitig vertrauen müssen (Vertrauenslosigkeit) und der On-Chain-Vertrag, nicht die Spieler, die Zuteilung der Mittel und die Beilegung von Streitigkeiten kontrolliert (Dezentralisierung).
+Ein potenzieller Anwendungsfall für State Channel-Anwendungen sind einfache Zwei-Spieler-Spiele, bei denen die Gelder basierend auf dem Spielergebnis verteilt werden. Der Vorteil hierbei ist, dass die Spieler einander nicht vertrauen müssen (Vertrauenslosigkeit) und der Vertrag auf der Blockchain, nicht die Spieler, die Zuweisung von Geldern und die Beilegung von Streitigkeiten kontrolliert (Dezentralisierung).
 
-Weitere mögliche Anwendungsfälle für Zustandskanal-Apps umfassen ENS-Namenseigentum, NFT-Ledger und viele mehr.
+Weitere mögliche Anwendungsfälle für State Channel-Apps umfassen den Besitz von ENS-Namen, NFT-Ledger und viele mehr.
 
 ### Atomare Transfers {#atomic-transfers}
 
-Frühe Zahlungskanäle waren auf Transfers zwischen zwei Parteien beschränkt, was ihre Nutzbarkeit einschränkte. Die Einführung virtueller Kanäle ermöglichte es jedoch Einzelpersonen, Transfers über Zwischenstellen (d. h. mehrere P2P-Kanäle) weiterzuleiten, ohne einen neuen Kanal On-Chain eröffnen zu müssen.
+Frühe Payment Channels waren auf Transfers zwischen zwei Parteien beschränkt, was ihre Nutzbarkeit einschränkte. Die Einführung virtueller Kanäle ermöglichte es Einzelpersonen jedoch, Transfers über Vermittler (d. h. mehrere P2P-Kanäle) zu leiten, ohne einen neuen Kanal auf der Blockchain öffnen zu müssen.
 
-Häufig als „Multi-Hop-Transfers“ beschrieben, sind geroutete Zahlungen atomar (d. h., entweder gelingen alle Teile der Transaktion oder sie scheitert insgesamt). Atomare Transfers verwenden [Hash-Zeitsperren-Verträge (HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts), um sicherzustellen, dass die Zahlung nur freigegeben wird, wenn bestimmte Bedingungen erfüllt sind, wodurch das Kontrahentenrisiko verringert wird.
+Gemeinhin als „Multi-Hop-Transfers“ beschrieben, sind geroutete Zahlungen atomar (d. h. entweder sind alle Teile der Transaktion erfolgreich oder sie schlägt insgesamt fehl). Atomare Transfers verwenden [Hashed Timelock Contracts (HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts), um sicherzustellen, dass die Zahlung nur freigegeben wird, wenn bestimmte Bedingungen erfüllt sind, wodurch das Kontrahentenrisiko verringert wird.
 
-## Nachteile der Verwendung von Zustands-Channels {#drawbacks-of-state-channels}
+## Nachteile der Nutzung von State Channels {#drawbacks-of-state-channels}
 
 ### Liveness-Annahmen {#liveness-assumptions}
 
-Um die Effizienz zu gewährleisten, setzen Zustands-Channels Zeitlimits für die Fähigkeit der Channel-Teilnehmer, auf Streitigkeiten zu reagieren. Diese Regel geht davon aus, dass die Peers immer online sein werden, um die Channel-Aktivität zu überwachen und bei Bedarf Anfechtungen zu bestreiten.
+Um die Effizienz zu gewährleisten, legen State Channels zeitliche Begrenzungen für die Fähigkeit der Kanalteilnehmer fest, auf Streitigkeiten zu reagieren. Diese Regel geht davon aus, dass Peers immer online sind, um die Kanalaktivität zu überwachen und Anfechtungen bei Bedarf zu bestreiten.
 
-In der Realität können Benutzer aus Gründen, die außerhalb ihrer Kontrolle liegen (z. B. schlechte Internetverbindung, mechanischer Defekt usw.), offline gehen. Wenn ein ehrlicher Benutzer offline geht, kann ein bösartiger Peer die Situation ausnutzen, indem er dem Schiedsrichtervertrag alte Zwischenzustände vorlegt und die zugesagten Gelder stiehlt.
+In der Realität können Nutzer aus Gründen, die außerhalb ihrer Kontrolle liegen, offline gehen (z. B. schlechte Internetverbindung, mechanisches Versagen usw.). Wenn ein ehrlicher Nutzer offline geht, kann ein böswilliger Peer die Situation ausnutzen, indem er dem Schiedsrichtervertrag alte Zwischenzustände präsentiert und die gebundenen Gelder stiehlt.
 
-Einige Channels verwenden „Watchtowers“ – Entitäten, die dafür verantwortlich sind, Onchain-Streitigkeiten im Namen anderer zu beobachten und die notwendigen Maßnahmen zu ergreifen, wie z. B. die Benachrichtigung der betroffenen Parteien. Dies kann jedoch die Kosten für die Nutzung eines Zustands-Channels erhöhen.
+Einige Kanäle verwenden „Watchtowers“ (Wachtürme) – Entitäten, die dafür verantwortlich sind, Streitfälle auf der Blockchain im Namen anderer zu beobachten und notwendige Maßnahmen zu ergreifen, wie z. B. die Alarmierung der betroffenen Parteien. Dies kann jedoch die Kosten für die Nutzung eines State Channels erhöhen.
 
 ### Datenunverfügbarkeit {#data-unavailability}
 
-Wie bereits erläutert, erfordert die Anfechtung einer ungültigen Streitigkeit die Vorlage des neuesten, gültigen Zustands des Zustands-Channels. Dies ist eine weitere Regel, die auf einer Annahme beruht – dass Benutzer Zugriff auf den neuesten Zustand des Channels haben.
+Wie bereits erklärt, erfordert die Anfechtung eines ungültigen Streits die Präsentation des neuesten, gültigen Zustands des State Channels. Dies ist eine weitere Regel, die auf einer Annahme basiert – dass die Nutzer Zugriff auf den neuesten Zustand des Kanals haben.
 
-Obwohl es vernünftig ist, von den Channel-Benutzern zu erwarten, dass sie Kopien des Offchain-Anwendungszustands speichern, können diese Daten aufgrund von Fehlern oder mechanischen Ausfällen verloren gehen. Wenn der Benutzer die Daten nicht gesichert hat, kann er nur hoffen, dass die andere Partei keine ungültige Austrittsanfrage mit alten Zustandsübergängen in ihrem Besitz finalisiert.
+Obwohl es vernünftig ist zu erwarten, dass Kanalnutzer Kopien des Zustands der Off-Chain-Anwendung speichern, können diese Daten durch Fehler oder mechanisches Versagen verloren gehen. Wenn der Nutzer die Daten nicht gesichert hat, kann er nur hoffen, dass die andere Partei keine ungültige Austrittsanfrage unter Verwendung alter Zustandsübergänge in ihrem Besitz finalisiert.
 
-Ethereum-Benutzer müssen sich nicht mit diesem Problem befassen, da das Netzwerk Regeln zur Datenverfügbarkeit durchsetzt. Transaktionsdaten werden von allen Knoten gespeichert und verbreitet und stehen den Benutzern bei Bedarf zum Herunterladen zur Verfügung.
+Ethereum-Nutzer müssen sich nicht mit diesem Problem auseinandersetzen, da das Netzwerk Regeln zur Datenverfügbarkeit durchsetzt. Transaktionsdaten werden von allen Blockchain-Knoten gespeichert und verbreitet und stehen den Nutzern bei Bedarf zum Download zur Verfügung.
 
 ### Liquiditätsprobleme {#liquidity-issues}
 
-Um einen Blockchain-Channel einzurichten, müssen die Teilnehmer für die Lebensdauer des Channels Gelder in einem Onchain-Smart-Contract sperren. Dies reduziert die Liquidität der Channel-Benutzer und beschränkt Channels auch auf diejenigen, die es sich leisten können, Gelder im Mainnet gesperrt zu halten.
+Um einen Blockchain-Kanal einzurichten, müssen die Teilnehmer Gelder in einem Smart Contract auf der Blockchain für den Lebenszyklus des Kanals sperren. Dies verringert die Liquidität der Kanalnutzer und beschränkt Kanäle auch auf diejenigen, die es sich leisten können, Gelder im Mainnet gesperrt zu halten.
 
-Jedoch können Ledger-Channels – betrieben von einem Offchain-Dienstanbieter (OSP) – Liquiditätsprobleme für Benutzer reduzieren. Zwei Peers, die mit einem Ledger-Channel verbunden sind, können einen virtuellen Channel erstellen, den sie jederzeit vollständig offchain öffnen und finalisieren können.
+Ledger-Kanäle – betrieben von einem Off-Chain-Dienstleister (OSP) – können jedoch Liquiditätsprobleme für Nutzer verringern. Zwei Peers, die mit einem Ledger-Kanal verbunden sind, können einen virtuellen Kanal erstellen, den sie jederzeit komplett Off-Chain öffnen und finalisieren können.
 
-Offchain-Dienstanbieter könnten auch Channels mit mehreren Peers eröffnen, was sie für die Weiterleitung von Zahlungen nützlich macht. Natürlich müssen Benutzer Gebühren an OSPs für ihre Dienste zahlen, was für einige unerwünscht sein kann.
+Off-Chain-Dienstleister könnten auch Kanäle mit mehreren Peers öffnen, was sie nützlich für das Routing von Zahlungen macht. Natürlich müssen die Nutzer Gebühren an OSPs für deren Dienste zahlen, was für einige unerwünscht sein könnte.
 
 ### Griefing-Angriffe {#griefing-attacks}
 
-Griefing-Angriffe sind ein häufiges Merkmal von auf Betrugsnachweisen basierenden Systemen. Ein Griefing-Angriff nützt dem Angreifer nicht direkt, sondern fügt dem Opfer Leid (d. h. Schaden) zu, daher der Name.
+Griefing-Angriffe sind ein häufiges Merkmal von Systemen, die auf Betrugsnachweisen basieren. Ein Griefing-Angriff nützt dem Angreifer nicht direkt, sondern verursacht dem Opfer Kummer (d. h. Schaden), daher der Name.
 
-Betrugsnachweise sind anfällig für Griefing-Angriffe, da die ehrliche Partei auf jede Streitigkeit, auch auf ungültige, reagieren muss, sonst riskiert sie, ihre Gelder zu verlieren. Ein bösartiger Teilnehmer kann sich entscheiden, wiederholt veraltete Zustandsübergänge onchain zu posten, was die ehrliche Partei zwingt, mit dem gültigen Zustand zu antworten. Die Kosten für diese Onchain-Transaktionen können sich schnell summieren, was dazu führt, dass ehrliche Parteien dabei Verluste erleiden.
+Der Betrugsnachweis ist anfällig für Griefing-Angriffe, da die ehrliche Partei auf jeden Streitfall reagieren muss, auch auf ungültige, oder riskiert, ihre Gelder zu verlieren. Ein böswilliger Teilnehmer kann beschließen, wiederholt veraltete Zustandsübergänge auf der Blockchain zu veröffentlichen, was die ehrliche Partei zwingt, mit dem gültigen Zustand zu antworten. Die Kosten für diese Transaktionen auf der Blockchain können sich schnell summieren, was dazu führt, dass ehrliche Parteien dabei den Kürzeren ziehen.
 
 ### Vordefinierte Teilnehmergruppen {#predefined-participant-sets}
 
-Konstruktionsbedingt bleibt die Anzahl der Teilnehmer, die einen Zustands-Channel bilden, während seiner gesamten Lebensdauer fest. Dies liegt daran, dass eine Aktualisierung der Teilnehmergruppe den Betrieb des Kanals, insbesondere bei der Finanzierung des Kanals oder der Beilegung von Streitigkeiten, komplizieren würde. Das Hinzufügen oder Entfernen von Teilnehmern würde auch zusätzliche Onchain-Aktivitäten erfordern, was den Aufwand für die Benutzer erhöht.
+Konstruktionsbedingt bleibt die Anzahl der Teilnehmer, die einen State Channel bilden, während seiner gesamten Lebensdauer fest. Dies liegt daran, dass die Aktualisierung der Teilnehmergruppe den Betrieb des Kanals verkomplizieren würde, insbesondere bei der Finanzierung des Kanals oder der Beilegung von Streitigkeiten. Das Hinzufügen oder Entfernen von Teilnehmern würde auch zusätzliche Aktivitäten auf der Blockchain erfordern, was den Mehraufwand für die Nutzer erhöht.
 
-Obwohl dies Zustands-Channels leichter verständlich macht, schränkt es die Nützlichkeit von Channel-Designs für Anwendungsentwickler ein. Dies erklärt zum Teil, warum Zustands-Channels zugunsten anderer Skalierungslösungen wie Rollups aufgegeben wurden.
+Während dies das Nachdenken über State Channels erleichtert, schränkt es die Nützlichkeit von Kanaldesigns für Anwendungsentwickler ein. Dies erklärt teilweise, warum State Channels zugunsten anderer Skalierungslösungen, wie z. B. Rollups, aufgegeben wurden.
 
 ### Parallele Transaktionsverarbeitung {#parallel-transaction-processing}
 
-Die Teilnehmer im Zustands-Channel senden abwechselnd Zustandsaktualisierungen, weshalb sie am besten für „rundenbasierte Anwendungen“ (z. B. ein Zwei-Spieler-Schachspiel) geeignet sind. Dies eliminiert die Notwendigkeit, gleichzeitige Zustandsaktualisierungen zu handhaben und reduziert die Arbeit, die der Onchain-Vertrag leisten muss, um Poster von veralteten Aktualisierungen zu bestrafen. Ein Nebeneffekt dieses Designs ist jedoch, dass Transaktionen voneinander abhängig sind, was die Latenz erhöht und die allgemeine Benutzererfahrung beeinträchtigt.
+Die Teilnehmer im State Channel senden Zustandsaktualisierungen abwechselnd, weshalb sie am besten für „rundenbasierte Anwendungen“ (z. B. ein Zwei-Spieler-Schachspiel) funktionieren. Dies beseitigt die Notwendigkeit, gleichzeitige Zustandsaktualisierungen zu handhaben, und reduziert die Arbeit, die der Vertrag auf der Blockchain leisten muss, um Poster veralteter Aktualisierungen zu bestrafen. Ein Nebeneffekt dieses Designs ist jedoch, dass Transaktionen voneinander abhängig sind, was die Latenz erhöht und die allgemeine Nutzererfahrung verschlechtert.
 
-Einige Zustands-Channels lösen dieses Problem, indem sie ein „Vollduplex“-Design verwenden, das den Offchain-Zustand in zwei unidirektionale „Simplex“-Zustände aufteilt und so gleichzeitige Zustandsaktualisierungen ermöglicht. Solche Designs verbessern den Offchain-Durchsatz und verringern Transaktionsverzögerungen.
+Einige State Channels lösen dieses Problem durch die Verwendung eines „Vollduplex“-Designs, das den Off-Chain-Zustand in zwei unidirektionale „Simplex“-Zustände trennt, was gleichzeitige Zustandsaktualisierungen ermöglicht. Solche Designs verbessern den Off-Chain-Durchsatz und verringern Transaktionsverzögerungen.
 
-## Zustands-Channels verwenden {#use-state-channels}
+## State Channels nutzen {#use-state-channels}
 
-Mehrere Projekte bieten Implementierungen von Zustandskanälen, die Sie in Ihre dApps integrieren können:
+Mehrere Projekte bieten Implementierungen von State Channels an, die Sie in Ihre Dapps integrieren können:
 
 - [Connext](https://connext.network/)
 - [Kchannels](https://www.kchannels.io/)
@@ -249,13 +249,13 @@ Mehrere Projekte bieten Implementierungen von Zustandskanälen, die Sie in Ihre 
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-**Statuskanäle**
+**State Channels**
 
-- [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 12. Februar 2018_
-- [State Channels – eine Erklärung](https://www.jeffcoleman.ca/state-channels/) _6. Nov. 2015 – Jeff Coleman_
-- [Grundlagen von State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
-- [Blockchain State Channels: Ein Stand der Technik](https://ieeexplore.ieee.org/document/9627997)
+- [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
+- [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
+- [Basics of State Channels](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
+- [Blockchain State Channels: A State of the Art](https://ieeexplore.ieee.org/document/9627997)
 
-_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
+_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

@@ -5,6 +5,8 @@ import { useLocale } from "next-intl"
 
 import RadialChart from "@/components/RadialChart"
 
+import { numberFormat } from "@/lib/utils/numbers"
+
 const SlotCountdownChart = ({ children }: { children: string }) => {
   const [timeToNextBlock, setTimeToNextBlock] = useState(12)
   const locale = useLocale()
@@ -28,7 +30,7 @@ const SlotCountdownChart = ({ children }: { children: string }) => {
       <RadialChart
         value={timeToNextBlock}
         totalValue={12}
-        displayValue={new Intl.NumberFormat(locale, {
+        displayValue={numberFormat(locale, {
           style: "unit",
           unit: "second",
           unitDisplay: "narrow",

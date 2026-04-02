@@ -2,6 +2,8 @@ import { join } from "path"
 
 import type { FileContributor, Lang } from "@/lib/types"
 
+import { TEAM_LOGINS } from "@/data/team"
+
 import { CONTENT_PATH, DEFAULT_LOCALE } from "@/lib/constants"
 
 import {
@@ -12,6 +14,12 @@ import { getAppPageLastCommitDate } from "./gh"
 import { getLocaleTimestamp } from "./time"
 
 import { getGitHubContributors, getStaticGitHubContributors } from "@/lib/data"
+
+/** Sort team members to the end, preserving relative order within each group. */
+const sortTeamToEnd = (contributors: FileContributor[]): FileContributor[] =>
+  contributors.toSorted((a, b) =>
+    Number(TEAM_LOGINS.has(a.login)) - Number(TEAM_LOGINS.has(b.login))
+  )
 
 export const getMarkdownFileContributorInfo = async (
   slug: string,
@@ -33,8 +41,8 @@ export const getMarkdownFileContributorInfo = async (
     fileLang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   const contributors: FileContributor[] = englishOnly
-    ? gitHubContributors
-    : [...crowdinContributors, ...gitHubContributors]
+    ? sortTeamToEnd(gitHubContributors)
+    : [...crowdinContributors, ...sortTeamToEnd(gitHubContributors)]
 
   return { contributors, lastUpdatedDate }
 }
@@ -65,5 +73,8 @@ export const getAppPageContributorInfo = async (
   //   )
   // }
 
-  return { contributors: uniqueGitHubContributors, lastEditLocaleTimestamp }
+  return {
+    contributors: sortTeamToEnd(uniqueGitHubContributors),
+    lastEditLocaleTimestamp,
+  }
 }

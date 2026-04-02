@@ -38,7 +38,7 @@ import heroImg from "@/public/images/upgrades/merge.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-founders" })
+  const t = await getTranslations("page-founders")
 
   const supportTags = {
     active: {
@@ -454,10 +454,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-founders",
-  })
+  const t = await getTranslations("page-founders")
 
   return await getMetadata({
     locale,

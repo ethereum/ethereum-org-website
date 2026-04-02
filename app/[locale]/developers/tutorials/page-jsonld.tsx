@@ -19,7 +19,7 @@ export default async function TutorialsPageJsonLD({
   internalTutorials: ITutorial[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-tutorials" })
+  const t = await getTranslations("page-developers-tutorials")
 
   const url = normalizeUrlForJsonLd(locale, `/developers/tutorials/`)
 
@@ -87,12 +87,15 @@ export default async function TutorialsPageJsonLD({
             "@type": "ListItem",
             position: index + 1,
             name: tutorial.title,
-            url: tutorial.href,
+            url: normalizeUrlForJsonLd(locale, tutorial.href),
             item: {
               "@type": "Course",
               name: tutorial.title,
-              description: tutorial.description,
-              url: tutorial.href,
+              description:
+                tutorial.description.length > 60
+                  ? tutorial.description.slice(0, 57) + "..."
+                  : tutorial.description,
+              url: normalizeUrlForJsonLd(locale, tutorial.href),
               provider: ethereumFoundationOrganization,
               courseMode: "online",
               educationalLevel: tutorial.skill ?? "beginner",

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Meta } from "@storybook/react"
+import { Meta } from "@storybook/nextjs"
 
 import { VStack } from "@/components/ui/flex"
 
