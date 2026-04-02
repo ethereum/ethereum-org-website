@@ -1,12 +1,13 @@
 /**
  * Trigger.dev scheduled tasks for data fetching.
  *
+ * Weekly tasks run on Sundays at midnight UTC.
  * Daily tasks run at midnight UTC.
  * Hourly tasks run every hour.
  */
 
 import * as Sentry from "@sentry/nextjs"
-import { schedules, task, tasks } from "@trigger.dev/sdk/v3"
+import { logger, schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
 import { fetchDeveloperTools } from "./fetchers/developer-tools"
 import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
@@ -19,8 +20,10 @@ import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
 import { fetchEvents } from "./fetchers/fetchEvents"
+import { fetchGasPrice } from "./fetchers/fetchGasPrice"
 import { fetchGFIs } from "./fetchers/fetchGFIs"
 import { fetchGitHistory } from "./fetchers/fetchGitHistory"
+import { fetchGitHubContributors } from "./fetchers/fetchGitHubContributors"
 import { fetchGithubRepoData } from "./fetchers/fetchGithubRepoData"
 import { fetchGrowThePie } from "./fetchers/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
@@ -37,6 +40,7 @@ import { set } from "./storage"
 export const KEYS = {
   APPS: "fetch-apps",
   CALENDAR_EVENTS: "fetch-calendar-events",
+  GITHUB_CONTRIBUTORS: "fetch-github-contributors",
   COMMUNITY_PICKS: "fetch-community-picks",
   DEVELOPER_TOOLS: "fetch-developer-tools",
   GFIS: "fetch-gfis",
@@ -54,6 +58,7 @@ export const KEYS = {
   ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
   ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
   ETH_PRICE: "fetch-eth-price",
+  GAS_PRICE: "fetch-gas-price",
   TOTAL_ETH_STAKED: "fetch-total-eth-staked",
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
@@ -63,6 +68,8 @@ export const KEYS = {
 
 // Task definition: storage key + fetch function
 type TaskDef = [string, () => Promise<unknown>]
+
+const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
 
 const DAILY: TaskDef[] = [
   [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
@@ -81,14 +88,15 @@ const DAILY: TaskDef[] = [
   [KEYS.EVENTS, fetchEvents],
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
+  [KEYS.BEACONCHAIN, fetchBeaconChain],
 ]
 
 const HOURLY: TaskDef[] = [
-  [KEYS.BEACONCHAIN, fetchBeaconChain],
   [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],
+  [KEYS.GAS_PRICE, fetchGasPrice],
   [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
   [KEYS.TOTAL_VALUE_LOCKED, fetchTotalValueLocked],
   [KEYS.STABLECOINS_DATA, fetchStablecoinsData],
@@ -99,28 +107,38 @@ function createDataTask([key, fetchFn]: TaskDef) {
   return task({
     id: key,
     retry: {
-      maxAttempts: 3,
-      factor: 2,
-      minTimeoutInMs: 2000,
-      maxTimeoutInMs: 30000,
-      randomize: true,
+      maxAttempts: 2,
+    },
+    catchError: async ({ error }) => {
+      logger.error(`[${key}] failed`, { error })
     },
     run: async () => {
       const data = await fetchFn()
       await set(key, data)
-      console.log(`✓ ${key}`)
+      logger.info(`✓ ${key}`)
       return { key }
     },
   })
 }
 
+const weeklyFetchTasks = WEEKLY.map(createDataTask)
 const dailyFetchTasks = DAILY.map(createDataTask)
 const hourlyFetchTasks = HOURLY.map(createDataTask)
 
 // Must export for trigger.dev to discover
-export const allFetchTasks = [...dailyFetchTasks, ...hourlyFetchTasks]
+export const allFetchTasks = [
+  ...weeklyFetchTasks,
+  ...dailyFetchTasks,
+  ...hourlyFetchTasks,
+]
 
 // ─── Scheduled orchestrators ───
+export const weeklyTask = schedules.task({
+  id: "weekly-data-fetch",
+  cron: "0 0 * * 0", // Sundays at midnight UTC
+  run: () => Promise.all(weeklyFetchTasks.map((t) => t.trigger())),
+})
+
 export const dailyTask = schedules.task({
   id: "daily-data-fetch",
   cron: "0 0 * * *",

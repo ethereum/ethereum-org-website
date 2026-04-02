@@ -4,6 +4,7 @@ description: "Настройте мониторинг для своего узл
 author: "Mario Havel"
 tags: [ "клиенты", "узлы" ]
 skill: intermediate
+breadcrumb: "Мониторинг Geth"
 lang: ru
 published: 2021-01-13
 ---

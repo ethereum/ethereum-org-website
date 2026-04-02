@@ -132,7 +132,6 @@ Níže je uvedeno několik projektů, které vám mohou pomoci nainstalovat a ov
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) – Nejrychlejší a nejjednodušší způsob nastavení plného uzlu. Jednořádkový instalační nástroj a TUI pro správu uzlů. Zdarma. Open source. Veřejné statky pro Ethereum od sólo stakerů. Podpora ARM64 a AMD64.
 - [eth-docker](https://eth-docker.net/) – Automatizované nastavení pomocí Dockeru zaměřené na snadný a bezpečný staking, vyžaduje základní znalosti terminálu a Dockeru, doporučeno pro mírně pokročilejší uživatele.
 - [Stereum](https://stereum-dev.github.io/ethereum-node-web-docs) – Spouštěč pro instalaci klientů na vzdálený server přes SSH připojení s průvodcem nastavení v GUI, řídicím centrem a mnoha dalšími funkcemi.
-- [NiceNode](https://www.nicenode.xyz/) – Spouštěč s přímočarým uživatelským zážitkem pro spuštění uzlu na vašem počítači. Stačí si vybrat klienty a spustit je na pár kliknutí. Stále ve vývoji.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) – Nástroj pro nastavení uzlu, který automaticky generuje konfiguraci Dockeru pomocí průvodce CLI. Napsáno v Go od Nethermind.
 
 ### Ruční nastavení klientů {#manual-setup}

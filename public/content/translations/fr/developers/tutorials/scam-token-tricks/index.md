@@ -11,6 +11,7 @@ tags:
     "TypeScript"
   ]
 skill: intermediate
+breadcrumb: "Tokens frauduleux"
 published: 2023-09-15
 lang: fr
 ---

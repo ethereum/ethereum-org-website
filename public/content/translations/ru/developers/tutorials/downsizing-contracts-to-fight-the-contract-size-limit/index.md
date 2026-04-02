@@ -5,6 +5,7 @@ author: Markus Waas
 lang: ru
 tags: [ "Solidity", "Умные контракты", "хранилище" ]
 skill: intermediate
+breadcrumb: "Уменьшение контрактов"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

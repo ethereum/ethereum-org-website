@@ -22,7 +22,7 @@ Khoa học phi tập trung cho phép có nhiều nguồn tài trợ đa dạng h
 
 ### Juan Benet - DeSci vận động
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## DeSci cải thiện khoa học như thế nào {#desci-improves-science}
 

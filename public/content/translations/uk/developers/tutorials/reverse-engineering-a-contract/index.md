@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: uk
 tags: [ "evm", "коди-операцій" ]
 skill: advanced
+breadcrumb: "Зворотна розробка"
 published: 2021-12-30
 ---
 

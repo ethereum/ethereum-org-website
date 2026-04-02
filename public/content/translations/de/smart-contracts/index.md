@@ -1,82 +1,90 @@
 ---
 title: Smart Contracts
-description: Eine nicht-technische Einführung in Smart Contracts
+metaTitle: "Smart Contracts: Was sie sind und ihre Vorteile"
+description: "Eine nicht-technische Einführung in Smart Contracts"
 lang: de
 ---
 
 # Einführung in Smart Contracts {#introduction-to-smart-contracts}
 
-Smart Contracts sind die grundlegenden Bausteine der Anwendungsebene von Ethereum. Sie sind Computerprogramme, die auf der [Blockchain](/glossary/#blockchain) gespeichert sind und der „Wenn dies, dann das“-Logik folgen. Sie werden garantiert nach den Regeln ausgeführt, die durch ihren Code definiert sind, die nach der Erstellung nicht mehr geändert werden können.
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
 
-Nick Szabo hat den Begriff „Smart Contract" geprägt. Im Jahr 1994 schrieb er eine [Einführung in das Konzept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) und 1996 eine [Untersuchung der Möglichkeiten von Smart Contracts](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Smart Contracts sind die grundlegenden Bausteine der Anwendungsebene von [Ethereum](/). Es handelt sich um Computerprogramme, die auf der [Blockchain](/glossary/#blockchain) gespeichert sind und einer „Wenn-Dann“-Logik folgen. Sie werden garantiert nach den durch ihren Code definierten Regeln ausgeführt, die nach der Erstellung nicht mehr geändert werden können.
 
-Szabo stellte sich einen digitalen Marktplatz vor, auf dem automatische, [kryptografisch sichere](/glossary/#cryptography) Prozesse Transaktionen und Geschäftsfunktionen ermöglichen, ohne dass vertrauenswürdige Vermittlungsinstanzen benötigt werden. Smart Contracts auf Ethereum realisieren eben diese Vision.
+Nick Szabo prägte den Begriff „Smart Contract“. Im Jahr 1994 schrieb er [eine Einführung in das Konzept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) und 1996 verfasste er [eine Untersuchung darüber, was Smart Contracts leisten könnten](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Dann sehen Sie sich an, wie Finematics Smart Contracts erklären:
+Szabo stellte sich einen digitalen Marktplatz vor, auf dem automatische, [kryptografisch sichere](/glossary/#cryptography) Prozesse Transaktionen und Geschäftsfunktionen ohne vertrauenswürdige Vermittler ermöglichen. Smart Contracts auf Ethereum setzen diese Vision in die Praxis um.
+
+Sehen Sie sich an, wie Finematics Smart Contracts erklärt:
 
 <YouTube id="pWGLtjG-F5c" />
 
 ## Vertrauen in herkömmliche Verträge {#trust-and-contracts}
 
-Eines der größten Probleme bei herkömmlichen Verträgen ist die Notwendigkeit, dass die Personen, denen Vertrauen entgegengebracht wird, die vertraglichen Regelungen auch einhalten.
+Eines der größten Probleme bei einem traditionellen Vertrag ist die Notwendigkeit von vertrauenswürdigen Personen, die die Ergebnisse des Vertrags umsetzen.
 
 Hier ist ein Beispiel:
 
-Alice und Bob liefern sich ein Fahrradrennen. Nehmen wir an, Alice wettet mit Bob um 10 EUR, dass sie das Rennen gewinnt. Bob ist zuversichtlich, dass er gewinnt, und nimmt die Wette an. Am Ende fährt Alice weit vor Bob ins Ziel und ist die klare Siegerin. Doch Bob weigert sich, den Wetteinsatz zu bezahlen, und behauptet, Alice hätte betrogen.
+Alice und Bob veranstalten ein Fahrradrennen. Nehmen wir an, Alice wettet mit Bob um 10 $, dass sie das Rennen gewinnen wird. Bob ist zuversichtlich, dass er der Gewinner sein wird, und geht auf die Wette ein. Am Ende beendet Alice das Rennen weit vor Bob und ist die klare Siegerin. Aber Bob weigert sich, die Wette auszuzahlen, und behauptet, Alice müsse betrogen haben.
 
-Dieses einfache Beispiel veranschaulicht, dass nicht kluge Vereinbarungen Probleme mit sich bringen können. Selbst wenn die Bedingungen der Vereinbarung erfüllt werden (z. B. Sie sind der Gewinner des Rennens), müssen Sie dennoch einer anderen Person vertrauen, dass die Vereinbarung erfüllt wird (z. B. Auszahlung des Wetteinsatzes).
+Dieses einfache Beispiel veranschaulicht das Problem mit jeder nicht-smarten Vereinbarung. Selbst wenn die Bedingungen der Vereinbarung erfüllt sind (d. h. Sie sind der Gewinner des Rennens), müssen Sie immer noch einer anderen Person vertrauen, dass sie die Vereinbarung erfüllt (d. h. die Wette auszahlt).
 
 ## Ein digitaler Verkaufsautomat {#vending-machine}
 
-Eine einfache Metapher für einen Smart Contract ist ein Verkaufsautomat, dessen Funktionsweise mit einem Smart Contract vergleichbar ist: konkrete Eingaben garantieren vorab festgelegte Leistungen.
+Eine einfache Metapher für einen Smart Contract ist ein Verkaufsautomat, der ähnlich wie ein Smart Contract funktioniert – bestimmte Eingaben garantieren vorher festgelegte Ausgaben.
 
-- Sie wählen ein Produkt.
-- Der Verkaufautomat zeigt den Preis an.
-- Sie zahlen den Preis.
-- Der Automat prüft, ob Sie den richtigen Betrag bezahlt haben.
-- Der Automat übergibt Ihnen Ihren Artikel.
+- Sie wählen ein Produkt aus
+- Der Verkaufsautomat zeigt den Preis an
+- Sie bezahlen den Preis
+- Der Verkaufsautomat überprüft, ob Sie den richtigen Betrag bezahlt haben
+- Der Verkaufsautomat gibt Ihnen Ihren Artikel
 
-Der Verkaufsautomat gibt das gewünschte Produkt erst dann aus, wenn alle Anforderungen erfüllt sind. Wenn Sie beispielsweise kein Produkt auswählen oder nicht genug Geld einwerfen, gibt der Automat kein Produkt aus.
+Der Verkaufsautomat gibt Ihr gewünschtes Produkt erst aus, nachdem alle Anforderungen erfüllt sind. Wenn Sie kein Produkt auswählen oder nicht genug Geld einwerfen, gibt der Verkaufsautomat Ihr Produkt nicht heraus.
 
 ## Automatische Ausführung {#automation}
 
-Der Hauptvorteil eines Smart Contracts besteht darin, dass er bestimmt eindeutigen Code ausführt, wenn bestimmte Bedingungen erfüllt sind. Es ist nicht nötig, auf einen Menschen zu warten, um das Ergebnis zu interpretieren oder zu verhandeln. Somit entfällt die Notwendigkeit von vertrauenswürdigen Vermittlern.
+Der Hauptvorteil eines Smart Contracts besteht darin, dass er deterministisch eindeutigen Code ausführt, wenn bestimmte Bedingungen erfüllt sind. Es ist nicht nötig, darauf zu warten, dass ein Mensch das Ergebnis interpretiert oder aushandelt. Dadurch entfällt die Notwendigkeit von vertrauenswürdigen Vermittlern.
 
-Sie könnten zum Beispiel einen Smart Contract schreiben, der Gelder für ein Kind auf einem Treuhandkonto verwahrt und es dem Kind ermöglicht, nach einem bestimmten Datum über die Geldmittel zu verfügen. Wenn jemand versucht, das Guthaben vor diesem Datum abzuheben, führt der Smart Contract die Transaktion nicht aus. Sie könnten auch einen Vertrag aufsetzen, der Ihnen automatisch eine digitale Version des Fahrzeugbriefs aushändigt, wenn Sie den Händler bezahlen.
+Zum Beispiel könnten Sie einen Smart Contract schreiben, der Gelder treuhänderisch für ein Kind verwaltet und es ihm ermöglicht, die Gelder nach einem bestimmten Datum abzuheben. Wenn es versucht, vor diesem Datum abzuheben, wird der Smart Contract nicht ausgeführt. Oder Sie könnten einen Vertrag schreiben, der Ihnen automatisch eine digitale Version eines Fahrzeugbriefs gibt, wenn Sie den Händler bezahlen.
 
 ## Vorhersehbare Ergebnisse {#predictability}
 
-Herkömmliche Verträge sind mehrdeutig, weil sie von Menschen ausgelegt und umgesetzt werden müssen. So könnten beispielsweise zwei Richter einen Vertrag unterschiedlich auslegen. Das könnte zu widersprüchlichen Entscheidungen und ungleichen Ergebnissen führen. Mit Smart Contracts ist das ausgeschlossen. Stattdessen führen sie alles genau auf Grundlage der programmierten Bedingungen aus, die dem Vertrag entsprechen. Diese Präzision bedingt, dass ein Smart Contract unter gleichen Umständen auch zum gleichen Ergebnis führt.
+Traditionelle Verträge sind mehrdeutig, da sie darauf angewiesen sind, dass Menschen sie interpretieren und umsetzen. Zum Beispiel könnten zwei Richter einen Vertrag unterschiedlich interpretieren, was zu inkonsistenten Entscheidungen und ungleichen Ergebnissen führen könnte. Smart Contracts schließen diese Möglichkeit aus. Stattdessen werden Smart Contracts genau basierend auf den im Code des Vertrags geschriebenen Bedingungen ausgeführt. Diese Präzision bedeutet, dass der Smart Contract unter denselben Umständen dasselbe Ergebnis liefert.
 
 ## Öffentliche Aufzeichnung {#public-record}
 
-Smart Contracts sind nützlich für Prüfungen und die Nachverfolgung. Da sich die Smart Contracts von Ethereum auf einer öffentlichen Blockchain befinden, kann jeder umgehend die Übertragung von Vermögenswerten und weiterer damit verbundenen Informationen nachvollziehen. So können Sie beispielsweise überprüfen, ob jemand Geld an Ihre Adresse geschickt hat.
+Smart Contracts sind nützlich für Prüfungen und Nachverfolgung. Da sich Ethereum-Smart-Contracts auf einer öffentlichen Blockchain befinden, kann jeder sofort Vermögensübertragungen und andere damit verbundene Informationen nachverfolgen. Zum Beispiel können Sie überprüfen, ob jemand Geld an Ihre Adresse gesendet hat.
 
 ## Schutz der Privatsphäre {#privacy-protection}
 
-Smart Contracts schützen zudem Ihre Daten. Da Ethereum ein pseudonymes Netzwerk ist (Transaktionen sind öffentlich an eine eindeutige kryptographische Adresse gebunden, nicht an eine Identität), können Sie Ihre Privatsphäre vor Beobachtern schützen.
+Smart Contracts schützen auch Ihre Privatsphäre. Da Ethereum ein pseudonymes Netzwerk ist (Ihre Transaktionen sind öffentlich an eine eindeutige kryptografische Adresse gebunden, nicht an Ihre Identität), können Sie Ihre Privatsphäre vor Beobachtern schützen.
 
 ## Sichtbare Bedingungen {#visible-terms}
 
-Letztlich können Sie wie bei herkömmlichen Verträgen prüfen, was in einem Smart Contract steht, bevor Sie diesen unterschreiben (oder anderweitig damit interagieren). Die Transparenz eines Smart Contracts garantiert, dass er von jedem überprüft werden kann.
+Schließlich können Sie, wie bei traditionellen Verträgen, überprüfen, was in einem Smart Contract steht, bevor Sie ihn unterzeichnen (oder anderweitig mit ihm interagieren). Die Transparenz eines Smart Contracts garantiert, dass jeder ihn genau prüfen kann.
 
 ## Anwendungsfälle für Smart Contracts {#use-cases}
 
-Smart Contracts können im Grunde alles, was auch Computerprogramme ausführen können.
+Smart Contracts können im Grunde alles tun, was Computerprogramme tun können.
 
-Sie können Berechnungen durchführen, Währungen erstellen, Daten speichern, [NFTs](/glossary/#nft) prägen, Kommunikationen senden und sogar Grafiken generieren. Hier sind einige gängige reale Anwendungen:
+Sie können Berechnungen durchführen, Währungen erstellen, Daten speichern, [NFTs](/glossary/#nft) prägen, Kommunikationen senden und sogar Grafiken generieren. Hier sind einige beliebte Beispiele aus der Praxis:
 
 - [Stablecoins](/stablecoins/)
-- [Einzigartige digitale Vermögenswerte erstellen und verteilen](/nft/)
-- [Ein automatischer, offener Währungsumtausch](/get-eth/#dex)
+- [Erstellung und Verteilung einzigartiger digitaler Vermögenswerte](/nft/)
+- [Ein automatischer, offener Währungsaustausch](/get-eth/#dex)
 - [Dezentralisiertes Gaming](/apps/categories/gaming)
-- [Eine Versicherungspolice mit automatisierter Auszahlung](https://etherisc.com/)
-- [Ein Standard, der es Menschen ermöglicht, individuelle, interoperable Währungen zu schaffen](/developers/docs/standards/tokens/)
+- [Eine Versicherungspolice, die automatisch auszahlt](https://etherisc.com/)
+- [Ein Standard, der es Menschen ermöglicht, maßgeschneiderte, interoperable Währungen zu erstellen](/developers/docs/standards/tokens/)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [So verändern Smart Contracts die Welt](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Smart Contracts: die Blockchain-Technologie, die Anwälte ersetzen wird](https://blockgeeks.com/guides/smart-contracts/)
+- [Wie Smart Contracts die Welt verändern werden](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Smart Contracts für Entwickler](/developers/docs/smart-contracts/)
-- [Lernen Sie, Smart Contracts zu programmieren](/developers/learning-tools/)
-- [Ethereum-Experte werden – was ist ein Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+- [Lernen Sie, Smart Contracts zu schreiben](/developers/learning-tools/)
+- [Mastering Ethereum – Was ist ein Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/openedition/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)
+
+<Divider />
+
+<QuizWidget quizKey="smart-contracts" />

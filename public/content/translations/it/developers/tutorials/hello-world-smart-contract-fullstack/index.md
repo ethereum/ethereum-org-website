@@ -12,6 +12,7 @@ tags:
   - "frontend"
   - "transazioni"
 skill: beginner
+breadcrumb: "Hello World fullstack"
 lang: it
 published: 2021-10-25
 ---

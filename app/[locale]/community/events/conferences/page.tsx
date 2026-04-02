@@ -23,7 +23,8 @@ import { mapEventTranslations } from "../utils"
 
 import { getEventsData } from "@/lib/data"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   const _events = (await getEventsData()) ?? []
@@ -134,11 +135,10 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
   const t = await getTranslations({
     locale,

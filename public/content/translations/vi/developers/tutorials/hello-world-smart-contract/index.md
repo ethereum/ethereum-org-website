@@ -11,6 +11,7 @@ tags:
     "triển khai"
   ]
 skill: beginner
+breadcrumb: "Hợp đồng Hello World"
 lang: vi
 published: 2021-03-31
 ---

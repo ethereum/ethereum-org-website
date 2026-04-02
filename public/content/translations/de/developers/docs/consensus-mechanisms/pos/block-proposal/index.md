@@ -1,32 +1,32 @@
 ---
 title: Block-Vorschlag
-description: Erklärung, wie Blöcke unter Proof-of-Stake-Ethereum vorgeschlagen werden.
+description: "Erklärung, wie Blöcke im Proof-of-Stake-Ethereum vorgeschlagen werden."
 lang: de
 ---
 
-Blöcke sind die grundlegenden Einheiten der Blockchain. Blöcke sind diskrete Informationseinheiten, die zwischen den Nodes weitergegeben, vereinbart und der Datenbank jedes Nodes hinzugefügt werden. Diese Seite erklärt, wie sie produziert werden.
+Blöcke sind die grundlegenden Einheiten der Blockchain. Blöcke sind diskrete Informationseinheiten, die zwischen Blockchain-Knoten weitergegeben, vereinbart und der Datenbank jedes Blockchain-Knotens hinzugefügt werden. Diese Seite erklärt, wie sie produziert werden.
 
 ## Voraussetzungen {#prerequisites}
 
-Block-Proposals sind Teil des Proof-of-Stake-Protokolls. Um diese Seite zu verstehen, empfehlen wir Ihnen, über [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) und die [Blockarchitektur](/developers/docs/blocks/) nachzulesen.
+Der Block-Vorschlag ist Teil des Proof-of-Stake-Protokolls. Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich über [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) und [Blockarchitektur](/developers/docs/blocks/) zu informieren.
 
 ## Wer produziert Blöcke? {#who-produces-blocks}
 
-Konten von Validatoren schlagen Blöcke vor. Die Konten von Validatoren werden von Node-Operatoren verwaltet, die Validatorensoftware als Teil ihrer Ausführungs- und Konsens-Clients betreiben und mindestens 32 ETH in den Einzahlungsvertrag transferiert haben. Allerdings ist jeder Validator nur gelegentlich für das Vorschlagen eines Blocks zuständig. Ethereum misst die Zeit in Slots und Epochen. Jeder Slot ist zwölf Sekunden lang und 32 Slots (6,4 Minuten) ergeben eine Epoche. Jeder Slot bietet eine Möglichkeit, Ethereum einen neuen Block hinzuzufügen.
+Validator-Konten schlagen Blöcke vor. Validator-Konten werden von Betreibern von Blockchain-Knoten verwaltet, die Validator-Software als Teil ihrer Ausführungs-Clients und Konsens-Clients ausführen und mindestens 32 ETH in den Einzahlungsvertrag eingezahlt haben. Jeder Validator ist jedoch nur gelegentlich dafür verantwortlich, einen Block vorzuschlagen. [Ethereum](/) misst die Zeit in Slots und Epochen. Jeder Slot dauert zwölf Sekunden, und 32 Slots (6,4 Minuten) bilden eine Epoche. Jeder Slot ist eine Gelegenheit, einen neuen Block zu Ethereum hinzuzufügen.
 
 ### Zufällige Auswahl {#random-selection}
 
-Ein einzelner Validator wird pseudo-zufällig ausgewählt, einen Block in jedem Slot vorzuschlagen. So etwas wie echte Zufälligkeit gibt es nicht in einer Blockchain, denn wenn jeder Node echte Zufallszahlen generieren würde, könnten sie keinen Konsens erzielen. Das Ziel ist es vielmehr, den Validatoren-Auswahlprozess unvorhersehbar zu machen. Die Zufälligkeit wird bei Ethereum durch einen Algorithmus namens RANDAO erreicht, der einen Hash vom Block-Proposer mit einem Seed mischt, der bei jedem Block aktualisiert wird. Dieser Wert wird genutzt, um einen spezifischen Validator aus dem gesamten Validatoren-Set auszuwählen. Die Auswahl der Validatoren wird zwei Epochen im Voraus als Schutz vor bestimmten Arten der Seed-Manipulation festgelegt.
+Ein einzelner Validator wird pseudozufällig ausgewählt, um in jedem Slot einen Block vorzuschlagen. Es gibt keine echte Zufälligkeit in einer Blockchain, denn wenn jeder Blockchain-Knoten wirklich zufällige Zahlen generieren würde, könnten sie nicht zu einem Konsens kommen. Stattdessen ist das Ziel, den Auswahlprozess der Validatoren unvorhersehbar zu machen. Die Zufälligkeit wird auf Ethereum mithilfe eines Algorithmus namens RANDAO erreicht, der einen Hash vom Block-Vorschlagenden mit einem Seed mischt, der bei jedem Block aktualisiert wird. Dieser Wert wird verwendet, um einen bestimmten Validator aus der gesamten Menge der Validatoren auszuwählen. Die Auswahl der Validatoren wird zwei Epochen im Voraus festgelegt, um sich vor bestimmten Arten der Seed-Manipulation zu schützen.
 
-Obwohl die Validatoren in jedem Slot zu RANDAO beitragen, wird der globale RANDAO-Wert nur einmal pro Epoche aktualisiert. Zur Berechnung des Index des nächsten Block-Proposers wird der RANDAO-Wert mit der Slot-Zahl vermischt, um einen eindeutigen Wert für jeden Slot zu erhalten. Die Wahrscheinlichkeit, dass ein einzelner Validator ausgewählt wird, ist nicht einfach `1/N` (wobei `N` = Gesamtzahl der aktiven Validatoren). Stattdessen wird sie nach dem effektiven ETH-Guthaben eines jeden Validators gewichtet. Das maximale Effektivguthaben beträgt 32 ETH (dies bedeutet, dass `ein Guthaben von < 32 ETH` zu einer niedrigeren Gewichtung führt als `ein Guthaben von == 32 ETH`, `ein Guthaben von > 32 ETH` führt jedoch nicht zu einer höheren Gewichtung als `ein Guthaben von == 32 ETH`).
+Obwohl Validatoren in jedem Slot zu RANDAO beitragen, wird der globale RANDAO-Wert nur einmal pro Epoche aktualisiert. Um den Index des nächsten Block-Vorschlagenden zu berechnen, wird der RANDAO-Wert mit der Slot-Nummer gemischt, um in jedem Slot einen eindeutigen Wert zu erhalten. Die Wahrscheinlichkeit, dass ein einzelner Validator ausgewählt wird, ist nicht einfach `1/N` (wobei `N` = gesamte aktive Validatoren). Stattdessen wird sie durch das effektive ETH-Guthaben jedes Validators gewichtet. Das maximale effektive Guthaben beträgt 32 ETH (das bedeutet, dass `balance < 32 ETH` zu einer geringeren Gewichtung führt als `balance == 32 ETH`, aber `balance > 32 ETH` führt nicht zu einer höheren Gewichtung als `balance == 32 ETH`).
 
-Nur ein Block-Proposer wird in jedem Slot ausgewählt. Unter normalen Bedigungen produziert und veröffentlicht ein einziger Block-Producer einen einzigen Block in ihrem dedizierten Slot. Das Erzeugen von zwei Blöcken für denselben Slot ist ein mit Slashing geahndetes Vergehen, das oft als „Äquivokation“ bezeichnet wird.
+In jedem Slot wird nur ein Block-Vorschlagender ausgewählt. Unter normalen Bedingungen erstellt und veröffentlicht ein einzelner Blockproduzent einen einzigen Block in seinem zugewiesenen Slot. Das Erstellen von zwei Blöcken für denselben Slot ist ein Vergehen, das mit Slashing bestraft wird und oft als „Equivocation“ (Doppeldeutigkeit) bezeichnet wird.
 
-## Wie wird der Block erzeugt? {#how-is-a-block-created}
+## Wie wird der Block erstellt? {#how-is-a-block-created}
 
-Es wird erwartet, dass der Block-Proposer einen signierten Beacon Block versendet, der auf der jüngsten Spitze der Chain aufbaut, entsprechend der Ansicht seines eigenen, lokal ausgeführten Abspaltungs-Wahl-Algorithmus. Der Abspaltungs-Wahl-Algorithmus wendet alle in der Warteschlange befindlichen Attestierungen an, die vom vorherigen Slot übrig geblieben sind. Dann findet er den Block mit dem größten kumulierten Gewicht an Attestierungen in seiner Historie. Dies ist der Parent Block für den neuen Block, der vom Proposer erstellt wird.
+Vom Block-Vorschlagenden wird erwartet, dass er einen signierten Beacon Chain-Block überträgt, der auf dem aktuellsten Kopf der Chain aufbaut, entsprechend der Sicht seines eigenen lokal ausgeführten Fork-Choice-Algorithmus. Der Fork-Choice-Algorithmus wendet alle in der Warteschlange befindlichen Bestätigungen an, die aus dem vorherigen Slot übrig geblieben sind, und findet dann den Block mit dem größten akkumulierten Gewicht an Bestätigungen in seiner Historie. Dieser Block ist der übergeordnete Block (Parent) des neuen Blocks, der vom Vorschlagenden erstellt wird.
 
-Der Block-Proposer erstellt einen Block, indem er Daten aus seiner eigenen lokalen Datenbank und Ansicht der Chain sammelt. Der Inhalt des Blocks ist in dem nachstehenden Ausschnitt dargestellt:
+Der Block-Vorschlagende erstellt einen Block, indem er Daten aus seiner eigenen lokalen Datenbank und seiner Sicht auf die Chain sammelt. Der Inhalt des Blocks wird im folgenden Ausschnitt gezeigt:
 
 ```rust
 class BeaconBlockBody(Container):
@@ -42,28 +42,28 @@ class BeaconBlockBody(Container):
     execution_payload: ExecutionPayload
 ```
 
-Das `randao_reveal`-Feld nimmt einen verifizierbaren zufälligen Wert an, den der Block-Proposer erzeugt, indem er die derzeitige Epochennummer signiert. `eth1_data` ist eine Stimme für die Ansicht des Block-Proposers auf den Einzahlungsvertrag, einschließlich der Root des Einzahlungs-Merkle-Trees und der Gesamtzahl an Einzahlungen, die eine Verifizierung neuer Einzahlungen ermöglichen. `graffiti` ist ein optionales Feld, welches verwendet wird, um dem Block eine Nachricht hinzuzufügen. `proposer_slashings` und `attester_slashings` sind Felder, die Beweise dafür enthalten, dass bestimmte Validatoren nach der Auffassung des Proposers in der Chain Vergehen begangen haben, die mit Slashing bestraft werden können. `deposits` ist eine Liste neuer Validator-Einzahlungen, die dem Block-Proposer bekannt sind, und `voluntary_exits` ist eine Liste von Validatoren, die aussteigen möchten und von denen der Block-Proposer im Gossip-Netzwerk der Konsensebene gehört hat. `sync_aggregate` ist ein Vektor, der anzeigt, welche Validatoren zuvor einem Synchronisierungskomitee (eine Untergruppe von Validatoren, die leichte Daten des Clients liefern) zugewiesen waren und an der Signierung von Daten teilgenommen haben.
+Das Feld `randao_reveal` nimmt einen verifizierbaren Zufallswert auf, den der Block-Vorschlagende durch Signieren der aktuellen Epochennummer erstellt. `eth1_data` ist eine Abstimmung für die Sicht des Block-Vorschlagenden auf den Einzahlungsvertrag, einschließlich der Wurzel des Einzahlungs-Merkle-Tries und der Gesamtzahl der Einzahlungen, die es ermöglichen, neue Einzahlungen zu verifizieren. `graffiti` ist ein optionales Feld, das verwendet werden kann, um dem Block eine Nachricht hinzuzufügen. `proposer_slashings` und `attester_slashings` sind Felder, die Beweise dafür enthalten, dass bestimmte Validatoren nach Ansicht des Vorschlagenden auf die Chain Vergehen begangen haben, die mit Slashing bestraft werden. `deposits` ist eine Liste neuer Validator-Einzahlungen, die dem Block-Vorschlagenden bekannt sind, und `voluntary_exits` ist eine Liste von Validatoren, die austreten möchten und von denen der Block-Vorschlagende im Gossip-Netzwerk der Konsensebene gehört hat. Das `sync_aggregate` ist ein Vektor, der zeigt, welche Validatoren zuvor einem Sync-Komitee (einer Untergruppe von Validatoren, die Light-Client-Daten bereitstellen) zugewiesen waren und an der Signierung von Daten teilgenommen haben.
 
-`execution_payload` ermöglicht die Weitergabe von Informationen über Transaktionen zwischen den Ausführungs- und Konsens-Clients. `execution_payload` ist ein Block mit Ausführungsdaten, der in einen Beacon Block eingebettet wird. Das Feld in `execution_payload` reflektiert die Blockstruktur, die im Yellowpaper für Ethereum aufgezeigt wird, mit dem Unterschied, dass es keine „Ommers“ gibt und `prev_randao` anstelle von `difficulty` existiert. Der Ausführungs-Client hat Zugriff auf einen lokalen Pool von Transaktionen, von denen es in seinem eigenen Gossip-Netzwerk gehört hat. Diese Transaktionen werden lokal ausgeführt, um einen aktualisierten Zustands-Trie zu generieren, der als „Post-State“ bezeichnet wird. Die Transaktionen sind in `execution_payload` als Liste, die `transactions` genannt wird, enthalten und der Post-State wird im Feld `state-root` zur Verfügung gestellt.
+Die `execution_payload` ermöglicht es, Informationen über Transaktionen zwischen den Ausführungs-Clients und Konsens-Clients weiterzugeben. Die `execution_payload` ist ein Block von Ausführungsdaten, der in einem Beacon Chain-Block verschachtelt wird. Die Felder innerhalb der `execution_payload` spiegeln die im Ethereum Yellow Paper skizzierte Blockstruktur wider, mit der Ausnahme, dass es keine Ommers gibt und `prev_randao` anstelle von `difficulty` existiert. Der Ausführungs-Client hat Zugriff auf einen lokalen Pool von Transaktionen, von denen er in seinem eigenen Gossip-Netzwerk gehört hat. Diese Transaktionen werden lokal ausgeführt, um einen aktualisierten Zustands-Trie zu generieren, der als Post-State bekannt ist. Die Transaktionen sind in der `execution_payload` als eine Liste namens `transactions` enthalten, und der Post-State wird im Feld `state-root` bereitgestellt.
 
-All diese Daten werden in einem Beacon Block gesammelt, signiert und an die Peers von Block-Proposern übertragen, die sie an ihre Peers weitergeben usw.
+All diese Daten werden in einem Beacon Chain-Block gesammelt, signiert und an die Peers des Block-Vorschlagenden übertragen, die ihn an ihre Peers weiterleiten usw.
 
-Lesen Sie mehr zur [Anatomie von Blöcken](/developers/docs/blocks).
+Lesen Sie mehr über die [Anatomie von Blöcken](/developers/docs/blocks).
 
 ## Was passiert mit dem Block? {#what-happens-to-blocks}
 
-Der Block wird zur lokalen Datenbank des Block-Proposers hinzugefügt und über das Gossip-Netzwerk der Konsensebene an die Peers übertragen. Wenn ein Validator den Block empfängt, überprüft er die darin enthaltenen Daten. Er verifiziert, dass der Block das richtige Parent hat, dem richtigen Slot zugeordnet ist, dass der Index des Proposers der erwartete ist, dass das RANDAO Reveal gültig ist und dass der Proposer nicht geslasht wird. `execution_payload` ist nicht gebündelt und der Ausführungs-Client des Validatoren führt die Transaktionen in der Liste wieder aus, um den vorgeschlagenen Zustandswechsel zu überprüfen. Vorausgesetzt, dass der Block all diese Prüfungen besteht, fügt jeder Validator den Block seiner eigenen kanonischen Chain hinzu. Der Prozess startet dann im nächsten Slot wieder von Neuem.
+Der Block wird der lokalen Datenbank des Block-Vorschlagenden hinzugefügt und über das Gossip-Netzwerk der Konsensebene an Peers übertragen. Wenn ein Validator den Block empfängt, verifiziert er die darin enthaltenen Daten, einschließlich der Überprüfung, ob der Block den richtigen übergeordneten Block (Parent) hat, dem richtigen Slot entspricht, der Index des Vorschlagenden der erwartete ist, der RANDAO-Reveal gültig ist und der Vorschlagende nicht mit Slashing bestraft wurde. Die `execution_payload` wird entbündelt, und der Ausführungs-Client des Validators führt die Transaktionen in der Liste erneut aus, um die vorgeschlagene Zustandsänderung zu überprüfen. Unter der Annahme, dass der Block all diese Überprüfungen besteht, fügt jeder Validator den Block seiner eigenen kanonischen Chain hinzu. Der Prozess beginnt dann im nächsten Slot von vorn.
 
-## Blockbelohnungen {#block-rewards}
+## Block-Belohnungen {#block-rewards}
 
-Der Block-Proposer wird für seine Arbeit bezahlt. Ihm steht eine `base_reward` zu, die als eine Funktion aus der Anzahl der aktiven Validatoren und deren Effektivguthaben berechnet wird. Der Block-Proposer erhält dann einen Anteil der `base_reward` für jede gültige Attestierung, die in diesem Block enthalten ist; je mehr Validatoren den Block attestieren, desto größer fällt die Belohnung für den Block-Proposer aus. Es gibt auch eine Belohnung für das Melden von Validatoren, die mit Slashing bestraft werden sollten, in der Höhe von `1/512 * Effektivguthaben` für jeden mit Slashing sanktionierten Validator.
+Der Block-Vorschlagende erhält eine Bezahlung für seine Arbeit. Es gibt eine `base_reward`, die als Funktion der Anzahl der aktiven Validatoren und ihrer effektiven Guthaben berechnet wird. Der Block-Vorschlagende erhält dann einen Bruchteil der `base_reward` für jede gültige Bestätigung, die im Block enthalten ist; je mehr Validatoren den Block bestätigen, desto größer ist die Belohnung des Block-Vorschlagenden. Es gibt auch eine Belohnung für das Melden von Validatoren, die mit Slashing bestraft werden sollten, in Höhe von `1/512 * effektives Guthaben` für jeden mit Slashing bestraften Validator.
 
 [Mehr zu Belohnungen und Strafen](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
 - [Einführung in Blöcke](/developers/docs/blocks/)
-- [Einführung zu Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
-- [Konsensspezifikationen auf Ethereum](https://github.com/ethereum/consensus-specs)
-- [Einführung zu Gasper](/developers/docs/consensus-mechanisms/pos/)
-- [Ethereum-Upgrade](https://eth2book.info/)
+- [Einführung in Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
+- [Ethereum-Konsens-Spezifikationen](https://github.com/ethereum/consensus-specs)
+- [Einführung in Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
+- [Upgrading Ethereum](https://eth2book.info/)

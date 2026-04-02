@@ -11,6 +11,7 @@ tags:
     "Alchemy"
   ]
 skill: beginner
+breadcrumb: "Bắt đầu"
 lang: vi
 published: 2020-10-30
 source: Medium

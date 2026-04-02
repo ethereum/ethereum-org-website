@@ -4,6 +4,7 @@ description: "En utilisant des composants modernes tels que TypeScript, React, V
 author: Ori Pomerantz
 tags: [ "TypeScript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
+breadcrumb: "UI avec WAGMI"
 published: 2023-11-01
 lang: fr
 sidebarDepth: 3

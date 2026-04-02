@@ -98,5 +98,6 @@
   "page-events-meetups-events-subtitle": "Tìm kiếm các cuộc thi hackathon, các buổi họp mặt cộng đồng và hội nghị sắp tới trong hệ sinh thái Ethereum.",
   "page-events-cta-title": "Tổ chức một sự kiện?",
   "page-events-cta-body": "Đây là một danh sách chưa đầy đủ được duy trì bởi cộng đồng của chúng tôi. Bạn có biết sự kiện Ethereum sắp tới nào để thêm vào danh sách này không?",
-  "page-events-cta-button": "Gửi sự kiện"
+  "page-events-cta-button": "Gửi sự kiện",
+  "item-logo": "Logo {item}"
 }

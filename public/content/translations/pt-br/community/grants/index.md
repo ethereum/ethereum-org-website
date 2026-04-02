@@ -20,6 +20,7 @@ Esta página é administrada por nossa comunidade. Se houver algo faltando ou er
 Esses programas abrangem um amplo ecossistema Ethereum ao oferecer recompensas a um grande escopo de projetos. Eles incluem soluções de dimensionamento, formação de comunidades, segurança, privacidade e muito mais. Essas recompensas não são específicas de nenhuma plataforma Ethereum e são um bom lugar para começar se você não tiver certeza.
 
 - [Programa de Apoio ao Ecossistema da EF](https://esp.ethereum.foundation) - _Financiamento de projetos de código aberto que beneficiam a Ethereum, com foco particular em ferramentas universais, infraestrutura, pesquisa e bens públicos_
+- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Diretório pesquisável de mais de 1.000 projetos apoiados pelo Ecosystem Support Program_
 - [Bolsas Acadêmicas](https://esp.ethereum.foundation/academic-grants) - _Bolsas para apoiar trabalhos acadêmicos relacionados à Ethereum_
 
 ## Agregadores de listas e plataformas de bolsas {#grant-list-aggregators}

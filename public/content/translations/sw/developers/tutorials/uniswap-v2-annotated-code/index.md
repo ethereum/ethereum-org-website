@@ -4,6 +4,7 @@ description: Mkataba wa Uniswap-v2 unafanyaje kazi? Kwa nini umeandikwa kwa njia
 author: Ori Pomerantz
 tags: [ "uimara" ]
 skill: intermediate
+breadcrumb: "Mwongozo wa Uniswap v2"
 published: 2021-05-01
 lang: sw
 ---

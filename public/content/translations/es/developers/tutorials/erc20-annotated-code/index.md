@@ -7,6 +7,7 @@ tags:
   - "solidity"
   - "erc-20"
 skill: beginner
+breadcrumb: "ERC-20 paso a paso"
 published: 2021-03-09
 ---
 

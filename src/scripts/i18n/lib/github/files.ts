@@ -1,6 +1,11 @@
 // GitHub file operations
 
-import { config, doNotTranslatePaths, gitHubBearerHeaders } from "../../config"
+import {
+  config,
+  doNotTranslatePaths,
+  gitHubBearerHeaders,
+  validateTargetPath,
+} from "../../config"
 import type {
   ContentType,
   GitHubCrowdinFileMetadata,
@@ -46,8 +51,40 @@ export const getAllEnglishFiles = async (): Promise<
     debugLog(`Runtime path exclusions: ${excludePath}`)
   }
 
+  // Multi-file mode: comma-separated paths each fetched individually
+  if (config.targetPaths.length > 1) {
+    const allFiles: GitHubQueryResponseItem[] = []
+    for (const singlePath of config.targetPaths) {
+      validateTargetPath(singlePath)
+      if (isPathExcluded(singlePath, allExcludedPaths)) {
+        console.log(`[INFO] Path ${singlePath} is in excluded paths, skipping`)
+        continue
+      }
+      if (isFilePath(singlePath)) {
+        console.log(`[INFO] Fetching file: ${singlePath}`)
+        try {
+          const files = await fetchSingleFile(singlePath)
+          allFiles.push(...files)
+        } catch (error) {
+          console.warn(
+            `[WARN] Could not fetch ${singlePath}, skipping: ${error instanceof Error ? error.message : String(error)}`
+          )
+        }
+      } else {
+        console.log(
+          `[WARN] Multi-path mode only supports files, skipping directory: ${singlePath}`
+        )
+      }
+    }
+    console.log(
+      `[INFO] Multi-file mode: ${allFiles.length} files from ${config.targetPaths.length} paths`
+    )
+    return allFiles
+  }
+
   // Determine if targetPath is a file or directory
   if (targetPath) {
+    validateTargetPath(targetPath)
     if (isPathExcluded(targetPath, allExcludedPaths)) {
       console.log(`[INFO] Path ${targetPath} is in excluded paths, skipping`)
       return []
@@ -148,10 +185,13 @@ export const getAllEnglishFiles = async (): Promise<
 async function fetchSingleFile(
   filePath: string
 ): Promise<GitHubQueryResponseItem[]> {
-  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}?ref=${config.baseBranch}`
+  const url = new URL(
+    `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}`
+  )
+  url.searchParams.set("ref", config.baseBranch)
 
   try {
-    const res = await fetchWithRetry(url, {
+    const res = await fetchWithRetry(url.toString(), {
       headers: gitHubBearerHeaders,
     })
 

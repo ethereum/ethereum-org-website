@@ -1,14 +1,10 @@
 ---
 title: Transfer dan persetujuan token ERC-20 dari kontrak pintar solidity
-description: Cara menggunakan kontrak pintar untuk berinteraksi dengan token menggunakan bahasa Solidity
+description: Bangun kontrak pintar DEX yang menangani transfer dan persetujuan token ERC-20 menggunakan Solidity.
 author: "jdourlens"
-tags:
-  - "kontrak pintar"
-  - "token"
-  - "solidity"
-  - "memulai"
-  - "erc-20"
+tags: ["kontrak pintar", "token", "Solidity", "erc-20"]
 skill: intermediate
+breadcrumb: "Transfer ERC-20"
 lang: id
 published: 2020-04-07
 source: EthereumDev
@@ -16,16 +12,16 @@ sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Dalam tutorial sebelumnya, kita mempelajari [anatomi token ERC-20 dalam Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) di blockchain Ethereum. Dalam artikel ini, kita akan melihat cara menggunakan kontrak pintar untuk berinteraksi dengan token menggunakan bahasa Solidity.
+Pada tutorial sebelumnya kita telah mempelajari [anatomi token ERC-20 di Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) pada blockchain Ethereum. Dalam artikel ini kita akan melihat bagaimana kita dapat menggunakan kontrak pintar untuk berinteraksi dengan token menggunakan bahasa Solidity.
 
-Untuk kontrak pintar ini, kita akan membuat bursa terdesentralisasi yang sangat mirip di mana pengguna bisa memperdagangkan Ethereum dengan [token ERC-20](/developers/docs/standards/tokens/erc-20/) kami yang baru digunakan.
+Untuk kontrak pintar ini, kita akan membuat pertukaran terdesentralisasi tiruan yang nyata di mana pengguna dapat menukar ether dengan [token ERC-20](/developers/docs/standards/tokens/erc-20/) kita yang baru saja disebarkan.
 
-Untuk tutorial ini, kami akan menggunakan kode yang kami tulis dalam tutorial sebelumnya sebagai dasarnya. DEX kami akan membuat instance kontrak dalam pembangunnya dan melakukan operasi:
+Untuk tutorial ini kita akan menggunakan kode yang kita tulis pada tutorial sebelumnya sebagai dasar. DEX kita akan membuat instansiasi kontrak di konstruktornya dan melakukan operasi:
 
-- penukaran token ke ether
-- penukaran ether ke token
+- menukar token menjadi ether
+- menukar ether menjadi token
 
-Kita akan memulai kode bursa Terdesentralisasi kita dengan menambahkan basis kode ERC20 sederhana kita:
+Kita akan memulai kode pertukaran terdesentralisasi kita dengan menambahkan basis kode ERC20 sederhana kita:
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -61,11 +57,11 @@ contract ERC20Basic is IERC20 {
 
 
    constructor() {
-    balances[msg.sender] = totalSupply_;
+	balances[msg.sender] = totalSupply_;
     }
 
     function totalSupply() public override view returns (uint256) {
-    return totalSupply_;
+	return totalSupply_;
     }
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {
@@ -105,7 +101,7 @@ contract ERC20Basic is IERC20 {
 
 ```
 
-Kontrak pintar DEX kita akan menggunakan ERC-20 dan mendapatkan semua pasokan:
+Kontrak pintar DEX baru kita akan menyebarkan ERC-20 dan mendapatkan semua pasokan:
 
 ```solidity
 contract DEX {
@@ -120,28 +116,28 @@ contract DEX {
     }
 
     function buy() payable public {
-        // TODO
+        // TODO // TODO
     }
 
     function sell(uint256 amount) public {
-        // TODO
+        // TODO // TODO
     }
 
 }
 ```
 
-Jadi sekarang kita memiliki DEX dan memiliki semua cadangan token yang tersedia. Kontrak memiliki dua fungsi:
+Jadi sekarang kita memiliki DEX kita dan ia memiliki semua cadangan token yang tersedia. Kontrak tersebut memiliki dua fungsi:
 
-- `buy`: Penggunan bisa mengirim ether dan mendapat token sebagai gantinya
-- `sell`: Pengguna bisa memutuskan mengirim token untuk mendapatkan ether kembali
+- `buy`: Pengguna dapat mengirim ether dan mendapatkan token sebagai gantinya
+- `sell`: Pengguna dapat memutuskan untuk mengirim token untuk mendapatkan ether kembali
 
-## Fungsi pembelian {#the-buy-function}
+## Fungsi buy {#the-buy-function}
 
-Mari kodekan fungsi pembelian. Terlebih dahulu kita akan memeriksa jumlah ether yang dimiliki message dan memverifikasi apakah kontrak memiliki cukup token dan apakah messagenya memliki beberapa ether di dalamnya. Jika kontrak memiliki cukup token, kontrak akan mengirim sejumlah token ke pengguna dan memancarkan aksi `Bought`.
+Mari kita kodekan fungsi buy. Pertama-tama kita perlu memeriksa jumlah ether yang terkandung dalam pesan dan memverifikasi bahwa kontrak memiliki cukup token dan bahwa pesan tersebut memiliki sejumlah ether di dalamnya. Jika kontrak memiliki cukup token, ia akan mengirimkan sejumlah token kepada pengguna dan memancarkan event `Bought`.
 
-Perhatikan bahwa jika kita memanggil fungsi yang diperlukan saat terjadi kesalahan, ether yang dikirimkan akan secara langsung dibalikkan dan diberikan kembali ke pengguna.
+Perhatikan bahwa jika kita memanggil fungsi require jika terjadi kesalahan, ether yang dikirim akan langsung dibatalkan (revert) dan diberikan kembali kepada pengguna.
 
-To keep things simple, we just exchange 1 token for 1 Wei.
+Agar tetap sederhana, kita hanya menukar 1 token dengan 1 Wei.
 
 ```solidity
 function buy() payable public {
@@ -154,37 +150,37 @@ function buy() payable public {
 }
 ```
 
-Jika pembelian berhasil, kita akan melihat dua aksi dalam transaksi: `Transfer` token dan aksi `Bought`.
+Jika pembelian berhasil, kita akan melihat dua event dalam transaksi: `Transfer` token dan event `Bought`.
 
-![Dua aksi dalam transaksi: Transfer dan Bought](./transfer-and-bought-events.png)
+![Dua event dalam transaksi: Transfer dan Bought](./transfer-and-bought-events.png)
 
-## Fungsi penjualan {#the-sell-function}
+## Fungsi sell {#the-sell-function}
 
-Fungsi yang bertanggungjawab untuk penjualan ini pertama-tama akan mengharuskan pengguna menyetujui jumlahnya dengan memanggil fungsi yang disetujui sebelumnya. Approving the transfer requires the ERC20Basic token instantiated by the DEX to be called by the user. This can be achieved by first calling the DEX contract's `token()` function to retrieve the address where DEX deployed the ERC20Basic contract called `token`. Then we create an instance of that contract in our session and call its `approve` function. Then we are able to call the DEX's `sell` function and swap our tokens back for ether. For example, this is how this looks in an interactive brownie session:
+Fungsi yang bertanggung jawab untuk penjualan pertama-tama akan mengharuskan pengguna untuk menyetujui jumlah tersebut dengan memanggil fungsi approve sebelumnya. Menyetujui transfer mengharuskan token ERC20Basic yang diinstansiasi oleh DEX dipanggil oleh pengguna. Hal ini dapat dicapai dengan terlebih dahulu memanggil fungsi `token()` dari kontrak DEX untuk mengambil alamat di mana DEX menyebarkan kontrak ERC20Basic yang disebut `token`. Kemudian kita membuat instansiasi dari kontrak tersebut di sesi kita dan memanggil fungsi `approve`-nya. Kemudian kita dapat memanggil fungsi `sell` dari DEX dan menukar token kita kembali menjadi ether. Sebagai contoh, seperti inilah tampilannya dalam sesi brownie interaktif:
 
 ```python
-#### Python in interactive brownie console...
+#### Python in interactive brownie console... # ### Python di konsol interaktif brownie...
 
-# deploy the DEX
+# deploy the DEX # deploy DEX
 dex = DEX.deploy({'from':account1})
 
-# call the buy function to swap ether for token
-# 1e18 is 1 ether denominated in wei
+# call the buy function to swap ether for token # panggil fungsi buy untuk menukar ether dengan token
+# 1e18 is 1 ether denominated in wei # 1e18 adalah 1 ether dalam denominasi wei
 dex.buy({'from': account2, 1e18})
 
-# get the deployment address for the ERC20 token
-# that was deployed during DEX contract creation
-# dex.token() returns the deployed address for token
+# get the deployment address for the ERC20 token # dapatkan alamat deployment untuk token ERC20
+# that was deployed during DEX contract creation # yang di-deploy selama pembuatan kontrak DEX
+# dex.token() returns the deployed address for token # dex.token() mengembalikan alamat yang di-deploy untuk token
 token = ERC20Basic.at(dex.token())
 
-# call the token's approve function
-# approve the dex address as spender
-# and how many of your tokens it is allowed to spend
+# call the token's approve function # panggil fungsi approve dari token
+# approve the dex address as spender # setujui alamat dex sebagai spender
+# and how many of your tokens it is allowed to spend # dan berapa banyak token Anda yang diizinkan untuk dibelanjakan
 token.approve(dex.address, 3e18, {'from':account2})
 
 ```
 
-Lalu saat fungsi penjualan dipanggil, kita akan memeriksa apakah transfer dari alamat pemanggil ke alamat kontrak berhasil dan kemudian mengirim Ether kembali ke alamat pemanggil.
+Kemudian ketika fungsi sell dipanggil, kita akan memeriksa apakah transfer dari alamat pemanggil ke alamat kontrak berhasil dan kemudian mengirimkan Ether kembali ke alamat pemanggil.
 
 ```solidity
 function sell(uint256 amount) public {
@@ -197,15 +193,15 @@ function sell(uint256 amount) public {
 }
 ```
 
-Jika semuanya berfungsi dengan baik, Anda akan melihat 2 aksi (`Transfer` dan `Sold`) dalam transaksi serta saldo token dan Ethereum Anda diperbarui.
+Jika semuanya berfungsi, Anda akan melihat 2 event (`Transfer` dan `Sold`) dalam transaksi dan saldo token serta saldo ether Anda diperbarui.
 
-![Dua aksi dalam transaksi: Transfer dan Sold](./transfer-and-sold-events.png)
+![Dua event dalam transaksi: Transfer dan Sold](./transfer-and-sold-events.png)
 
 <Divider />
 
-Dari tutorial ini, kita melihat cara memeriksa saldo dan allowance token ERC-20 dan juga cara memanggil `Transfer` dan `TransferFrom` dari kontrak pintar ERC20 yang menggunakan antarmukanya.
+Dari tutorial ini kita melihat cara memeriksa saldo dan izin (allowance) dari token ERC-20 dan juga cara memanggil `Transfer` dan `TransferFrom` dari kontrak pintar ERC20 menggunakan antarmuka.
 
-Once you make a transaction we have a JavaScript tutorial to [wait and get details about the transactions](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) that were made to your contract and a [tutorial to decode events generated by token transfers or any other events](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) as long as you have the ABI.
+Setelah Anda melakukan transaksi, kami memiliki tutorial JavaScript untuk [menunggu dan mendapatkan detail tentang transaksi](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) yang dilakukan ke kontrak Anda dan [tutorial untuk memecahkan kode event yang dihasilkan oleh transfer token atau event lainnya](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) selama Anda memiliki ABI.
 
 Berikut adalah kode lengkap untuk tutorial ini:
 
@@ -243,11 +239,11 @@ contract ERC20Basic is IERC20 {
 
 
    constructor() {
-    balances[msg.sender] = totalSupply_;
+	balances[msg.sender] = totalSupply_;
     }
 
     function totalSupply() public override view returns (uint256) {
-    return totalSupply_;
+	return totalSupply_;
     }
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {

@@ -4,6 +4,7 @@ description: "智能合約事件簡介，以及如何使用它們來記錄資料
 author: "jdourlens"
 tags: [ "smart contracts", "remix", "solidity", "events" ]
 skill: intermediate
+breadcrumb: "事件日誌"
 lang: zh-tw
 published: 2020-04-03
 source: EthereumDev

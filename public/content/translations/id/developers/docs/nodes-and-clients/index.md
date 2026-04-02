@@ -282,7 +282,7 @@ Mode sinkronisasi yang Anda pilih akan mempengaruhi persyaratan ukuran ruangan c
 | Besu         | 750GB+                           | 5TB+                      |
 | Erigon       | N/A                              | 1TB+                      |
 
-- Catatan: Erigon tidak melakukan Sinkronisasi Cepat, tapi Pemangkasan Penuh masih memungkinkan (~500GB)
+- Catatan: Erigon tidak melakukan Sinkronisasi Cepat, tapi Pemangkasan Penuh masih memungkinkan (\~500GB)
 
 Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah. Untuk data Geth dan Parity yang paling terbaru, lihat [data sinkronisasi penuh](https://etherscan.io/chartsync/chaindefault) dan [ data sinkronisasi arsip](https://etherscan.io/chartsync/chainarchive).
 

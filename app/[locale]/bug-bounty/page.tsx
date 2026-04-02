@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server"
 import type { ComponentProps } from "react"
 
-import type { ChildOnlyProp, CommitHistory, Lang, Params } from "@/lib/types"
+import type { ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 /* Uncomment for Bug Bounty Banner: */
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -109,19 +109,15 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   return b.score - a.score
 }
 
-export default async function Page({ params }: { params: Promise<Params> }) {
-  const { locale } = await params
+export default async function Page(props: { params: Promise<Params> }) {
+  const params = await props.params
+  const { locale } = params
 
   const t = await getTranslations({ namespace: "page-bug-bounty" })
   const tCommon = await getTranslations({ namespace: "common" })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "bug-bounty",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("bug-bounty", locale as Lang)
 
   const consensusBountyHunters: Node[] = consensusData.sort(sortBountyHuntersFn)
   const executionBountyHunters: Node[] = executionData.sort(sortBountyHuntersFn)
@@ -838,11 +834,10 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-bug-bounty" })

@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: vi
 tags: [ "Vyper", "erc-721", "Python" ]
 skill: beginner
+breadcrumb: "Vyper ERC-721"
 published: 2021-04-01
 ---
 

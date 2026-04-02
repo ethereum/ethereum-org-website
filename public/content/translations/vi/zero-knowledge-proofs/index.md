@@ -97,6 +97,8 @@ Chuỗi cần một phương pháp để xác thực các giao dịch ngoài chu
 
 [Bản tổng hợp không kiến thức](/developers/docs/scaling/zk-rollups) và [validium](/developers/docs/scaling/validium/) là hai giải pháp mở rộng quy mô ngoài chuỗi sử dụng bằng chứng hợp lệ để cung cấp khả năng mở rộng an toàn. Các giao thức này thực hiện hàng ngàn giao dịch ngoài chuỗi và gửi chứng cứ để xác minh trên Ethereum. Những kết quả đó có thể được áp dụng ngay lập tức sau khi chứng minh được xác thực, cho phép Ethereum xử lý nhiều giao dịch hơn mà không cần tăng cường tính toán trên lớp cơ sở.
 
+Ngoai viec mo rong lop 2, bang chung khong kien thuc cung co the tu xac minh viec thuc thi Khoi Ethereum L1. zkEVM cho viec xac minh L1 se cho phep trinh xac thuc xac minh cac Khoi bang cach kiem tra mot bang chung thay vi thuc thi lai tat ca cac giao dich -- cho phep gioi han gas cao hon ma khong lam tang yeu cau phan cung cua trinh xac thuc.
+
 ### Giảm thiểu hối lộ và thông đồng trong bỏ phiếu trên chuỗi {#secure-blockchain-voting}
 
 Các hệ thống bỏ phiếu dựa trên blockchain có nhiều đặc điểm thuận lợi: chúng hoàn toàn có thể được kiểm toán, an toàn trước các cuộc tấn công, chống lại sự kiểm duyệt, và không bị ràng buộc về mặt địa lý. Nhưng ngay cả các cơ chế bỏ phiếu trên chuỗi cũng không miễn nhiễm với vấn đề **thông đồng**.

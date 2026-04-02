@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: cs
 tags: [ "vrstva 2" ]
 skill: intermediate
+breadcrumb: "Krátké ABIs"
 published: 2022-04-01
 ---
 

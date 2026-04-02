@@ -45,7 +45,9 @@ function buildHubSchemaNodes(
   if (schema.address) {
     placeNode.address = {
       "@type": "PostalAddress" as const,
-      streetAddress: schema.address.streetAddress,
+      ...(schema.address.streetAddress && {
+        streetAddress: schema.address.streetAddress,
+      }),
       addressLocality: schema.address.addressLocality,
       ...(schema.address.postalCode && {
         postalCode: schema.address.postalCode,
@@ -56,7 +58,7 @@ function buildHubSchemaNodes(
 
   if (schema.containedInPlace) {
     placeNode.containedInPlace = {
-      "@type": "LocalBusiness" as const,
+      "@type": "Place" as const,
       name: schema.containedInPlace.name,
       ...(schema.containedInPlace.url && {
         url: schema.containedInPlace.url,
@@ -69,6 +71,8 @@ function buildHubSchemaNodes(
     "@id": seriesId,
     name: schema.eventSeriesName ?? "Open Ethereum Coworking Hours",
     description: schema.eventDescription,
+    startDate:
+      schema.schedule.startDate ?? new Date().toISOString().split("T")[0],
     isAccessibleForFree: true,
     url: hub.coworkingSignupUrl,
     eventStatus: "https://schema.org/EventScheduled",

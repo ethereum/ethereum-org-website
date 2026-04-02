@@ -16,7 +16,7 @@ type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
     tocItems: TableOfContentsProps["items"]
     heroSection: React.ReactNode
     contributors: FileContributor[]
-    lastEditLocaleTimestamp: string
+    lastEditLocaleTimestamp?: string
   }
 
 export const ContentLayout = ({

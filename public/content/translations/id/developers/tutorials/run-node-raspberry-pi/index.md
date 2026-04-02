@@ -1,267 +1,185 @@
 ---
-title: Cara mengubah Raspberry Pi 4 Anda menjadi node hanya dengan mem-flash memori MicroSD
-description: Nyalakan Raspberry Pi 4 Anda, sambungkan pada kabel ethernet, koneksikan ke diska SSD dan nyalakan perangkat untuk mengubah Raspberry Pi 4 menjadi simpul Ethereum utuh yang menjalankan lapisan eksekusi, atau lapisan konsensus (Rantai Suar / validator)
+title: Menjalankan node Ethereum di Raspberry Pi 4
+description: Flash Raspberry Pi 4 Anda, colokkan kabel ethernet, sambungkan disk SSD, dan nyalakan perangkat untuk mengubah Raspberry Pi 4 menjadi node Ethereum penuh + validator
 author: "EthereumOnArm"
-tags:
-  - "klien"
-  - "lapisan eksekusi"
-  - "lapisan konsensus"
-  - "node"
+tags: ["klien", "lapisan eksekusi", "lapisan konsensus", "node"]
 lang: id
 skill: intermediate
-published: 2020-05-07
-source: r/ethereum
-sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
+breadcrumb: "Node Raspberry Pi"
+published: 2022-06-10
+source: Ethereum on ARM
+sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 
-**TL;DR**: Nyalakan Raspberry Pi 4 Anda, sambungkan pada kabel ethernet, koneksikan ke diska SSD dan nyalakan perangkat untuk mengubah Raspberry Pi 4 menjadi simpul Ethereum utuh yang menjalankan lapisan eksekusi, atau lapisan konsensus (Rantai Suar / validator)
+**Ethereum on Arm adalah citra Linux kustom yang dapat mengubah Raspberry Pi menjadi node Ethereum.**
 
-[Pelajari tentang peningkatan Ethereum](/roadmap/)
+Untuk menggunakan Ethereum on Arm guna mengubah Raspberry Pi menjadi node Ethereum, perangkat keras berikut disarankan:
 
-Mari mulai dengan latar belakang dulu. Seperti yang Anda ketahui, kami telah mengalami beberapa masalah memori [[1]](/developers/tutorials/run-node-raspberry-pi/#references) dengan gambar Raspberry Pi 4 karena OS Raspbian masih 32bit [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (setidaknya pada userland). Sementara kami lebih suka memakai OS yang resmi, kami sampai pada kesimpulan bahwa, untuk menyelesaikan masalah ini, kami perlu beralih ke OS 64bit asli
-
-Disamping itu, klien konsensus tidak mendukung binari 32 bit sehingga menggunakan Raspbian akan memberi pengecualian pada Raspberry Pi 4 untuk menjalankan simpul lapisan konsensus (dan kemungkinan untuk melakukan penaruhan).
-
-Jadi, setelah beberapa kali pengujian kini kami merilis dua gambar berbeda berdasarkan Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): edisi lapisan eksekusi dan lapisan konsensus.
-
-Pada dasarnya, keduanya adalah gambar yang sama dan memasukkan fitur gambar berbasis Raspbian yang sama. Tetapi kedua lapisan itu dipasang untuk menjalankan perangkat lunak lapisan eksekusi atau lapisan konsensus secara bawaan.
-
-**Gambar menangani semua langkah penting**, dari menyiapkan lingkungan dan memformat cakram SSD sampai menginstal dan menjalankan perangkat lunak Ethereum maupun memulai sinkronisasi blockchain.
-
-## Fitur utama {#main-features}
-
-- Berbasis Ubuntu 20.04. 64bit
-- Membuat partisi dan memformat disk USB secara otomatis
-- Menambahkan memori pertukaran (modul kernel ZRAM + satu file pertukaran) berbasis kinerja Armbian [[7]](/developers/tutorials/run-node-raspberry-pi/#references)
-- Mengganti nama host dengan sesuatu seperti “ethnode-e2a3e6fe” berdasarkan hash MAC
-- Menjalankan perangkat lunak sebagai layanan systemd dan memulai sikronisasi Blockchain
-- Memasukkan repositori APT untuk menginstal dan meningkatkan perangkat lunak Ethereum
-- Memasukkan dasbor pengawasan berbasis Granfana / Prometheus
-
-## Perangkat lunak yang disertakan {#software-included}
-
-Kedua gambar memiliki paket yang sama, perbedaan keduanya hanya bahwa versi eksekusi menjalankan Geth secara bawaan dan versi konsensus menjalankan rantai suar Prysm secara bawaan.
-
-### Klien eksekusi {#execution-clients}
-
-- Geth [[8]](/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (binari resmi)
-- Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (terkompilasi silang)
-- Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (terkompilasi silang)
-- Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (terkompilasi)
-
-### Klien konsensus {#consensus-clients}
-
-- Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (binari resmi)
-- Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (terkompilasi)
-
-### Kerangka kerja Ethereum {#ethereum-framework}
-
-- Swarm [[14]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.7 (binari resmi)
-- Raiden Network [[15]](/developers/tutorials/run-node-raspberry-pi/#references): 0.200.0~rc1 (binari resmi)
-- IPFS [[16]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.0 (binari resmi)
-- Statusd [[17]](/developers/tutorials/run-node-raspberry-pi/#references): 0.52.3 (terkompilasi)
-- Vipnode [[18]](/developers/tutorials/run-node-raspberry-pi/#references): 2.3.3 (binari resmi)
-
-## Panduan instalasi dan penggunaan {#installation-guide-and-usage}
-
-### Perangkat keras dan pengaturan yang disarankan {#recommended-hardware-and-setup}
-
-- Raspberry 4 (model B) - 4GB
-- MicroSD Card (minimum 16 GB Class 10)
-- Disk USB 3.0 SSD (lihat bagian penyimpanan)
+- Papan Raspberry 4 (model B 8GB), Odroid M1, atau Rock 5B (RAM 8GB/16GB)
+- Kartu MicroSD (minimum 16 GB Kelas 10)
+- Disk SSD USB 3.0 minimum 2 TB atau SSD dengan casing USB ke SATA.
 - Catu daya
 - Kabel ethernet
-- Penerusan port 30303 (lapisan eksekusi) dan penerusan port 13000 (lapisan konsensus) [[4]](/developers/tutorials/run-node-raspberry-pi/#references)
-- Kasing dengan pembuang panas dan kipas (opsional tapi sangat disarankan)
-- Keyboard USB, Monitor, dan kabel HDMI (mikro-HDMI) (opsional)
+- Penerusan port (lihat klien untuk info lebih lanjut)
+- Casing dengan heatsink dan kipas
+- Keyboard USB, Monitor, dan kabel HDMI (micro-HDMI) (Opsional)
 
-## Penyimpanan {#storage}
+## Mengapa menjalankan Ethereum di ARM? {#why-run-ethereum-on-arm}
 
-Anda akan memerlukan SSD untuk menjalankan klien Ethereum (tanpa drive SSD sama sekali tidak mungkin menyinkronkan blockchain Ethereum). Ada 2 opsi:
+Papan ARM adalah komputer kecil yang sangat terjangkau dan fleksibel. Papan ini adalah pilihan yang baik untuk menjalankan node Ethereum karena dapat dibeli dengan harga murah, dikonfigurasi sehingga semua sumber dayanya hanya berfokus pada node, menjadikannya efisien, mengonsumsi daya yang rendah, dan secara fisik kecil sehingga dapat ditempatkan tanpa mengganggu di rumah mana pun. Sangat mudah juga untuk menjalankan node karena MicroSD Raspberry Pi cukup di-flash dengan citra yang sudah dibuat sebelumnya, tanpa perlu mengunduh atau membangun perangkat lunak.
 
-- Gunakan disk SSD portabel USB seperti SSD Portabel Samsung T5.
-- Gunakan Kasing Hard Drive Eksternal USB 3.0 dengan Disk SSD. Dalam kasus kami, kami menggunakan Inateck 2.5 Hard Drive Enclosure FE2011. Pastikan membeli kasing dengan chip yang sesuai dengan UAS, secara khusus, salah satu dari ini: JMicron (JMS567 atau JMS578) atau ASMedia (ASM1153E).
+## Bagaimana cara kerjanya? {#how-does-it-work}
 
-Dalam kedua kasus, hindari membeli disk SSD berkualitas rendah karena ini adalah komponen kunci node Anda dan bisa secara drastis memengaruhi kinerja (dan waktu sinkronisasi).
+Kartu memori Raspberry Pi di-flash dengan citra yang sudah dibuat sebelumnya. Citra ini berisi semua yang dibutuhkan untuk menjalankan node Ethereum. Dengan kartu yang telah di-flash, yang perlu dilakukan pengguna hanyalah menyalakan Raspberry Pi. Semua proses yang diperlukan untuk menjalankan node akan dimulai secara otomatis. Ini berfungsi karena kartu memori berisi sistem operasi (OS) berbasis Linux di mana proses tingkat sistem dijalankan secara otomatis yang mengubah unit tersebut menjadi node Ethereum.
 
-Ingatlah bahwa Anda harus menyambungkan disk dengan porta USB 3.0 (biru)
+Ethereum tidak dapat dijalankan menggunakan OS Linux Raspberry Pi yang populer "Raspbian" karena Raspbian masih menggunakan arsitektur 32-bit yang menyebabkan pengguna Ethereum mengalami masalah memori dan klien konsensus tidak mendukung biner 32-bit. Untuk mengatasi hal ini, tim Ethereum on Arm bermigrasi ke OS 64-bit asli yang disebut "Armbian".
 
-## Pengunduhan dan penginstalan gambar {#image-download-and-installation}
+**Citra menangani semua langkah yang diperlukan**, mulai dari menyiapkan lingkungan dan memformat disk SSD hingga menginstal dan menjalankan perangkat lunak Ethereum serta memulai sinkronisasi blockchain.
 
-### 1. Unduh gambar lapisan eksekusi dan konsensus {#1-download-execution-or-consensus-images}
+## Catatan tentang klien eksekusi dan konsensus {#note-on-execution-and-consensus-clients}
 
-<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
-  Unduh gambar lapisan eksekusi
-</ButtonLink>
+Citra Ethereum on Arm mencakup klien eksekusi dan konsensus yang sudah dibuat sebelumnya sebagai layanan. Sebuah node Ethereum mengharuskan kedua klien disinkronkan dan berjalan. Anda hanya perlu mengunduh dan mem-flash citra lalu memulai layanannya. Citra ini telah dimuat sebelumnya dengan klien eksekusi berikut:
 
-sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
+- Geth
+- Nethermind
+- Besu
 
-<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
-  Unduh gambar lapisan konsensus
-</ButtonLink>
+dan klien konsensus berikut:
 
-sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
+- Lighthouse
+- Nimbus
+- Prysm
+- Teku
 
-### 2. Flash gambarnya {#2-flash-the-image}
+Anda harus memilih masing-masing satu untuk dijalankan - semua klien eksekusi kompatibel dengan semua klien konsensus. Jika Anda tidak secara eksplisit memilih klien, node akan kembali ke default-nya - Geth dan Lighthouse - dan menjalankannya secara otomatis saat papan dinyalakan. Anda harus membuka port 30303 di router Anda agar Geth dapat menemukan dan terhubung ke rekan (peer).
 
-Masukkan microSD dalam Desktop / Laptop Anda dan unduh failnya (lapisan eksekusi, misalnya):
+## Mengunduh Citra {#downloading-the-image}
 
-```bash
-wget https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
+Citra Ethereum Raspberry Pi 4 adalah citra "plug and play" yang secara otomatis menginstal dan menyiapkan klien eksekusi dan konsensus, mengonfigurasinya untuk saling berkomunikasi dan terhubung ke jaringan Ethereum. Yang perlu dilakukan pengguna hanyalah memulai prosesnya menggunakan perintah sederhana.
+
+Unduh citra Raspberry Pi dari [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/Ec_VmUvr80VFjf3RYSU-NzkBmj2JOteDECj8Bibde929Gw?download=1) dan verifikasi hash SHA256:
+
+```sh
+# From directory containing the downloaded image # Dari direktori yang berisi image yang diunduh
+shasum -a 256 ethonarm_22.04.00.img.zip
+# Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f # Hash harus menghasilkan: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Catatan: Jika Anda tidak nyaman menggunakan baris perintah atau jika Anda menjalankan Windows, Anda bisa menggunakan [Etcher](https://etcher.io)
+Perhatikan bahwa citra untuk papan Rock 5B dan Odroid M1 tersedia di [halaman unduhan](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) Ethereum-on-Arm.
 
-Buka terminal dan periksa nama perangkat MicroSD Anda yang menjalankan:
+## Mem-flash MicroSD {#flashing-the-microsd}
 
-```bash
+Kartu MicroSD yang akan digunakan untuk Raspberry Pi harus dimasukkan terlebih dahulu ke desktop atau laptop agar dapat di-flash. Kemudian, perintah terminal berikut akan mem-flash citra yang diunduh ke kartu SD:
+
+```shell
+# check the MicroSD card name # periksa nama kartu MicroSD
 sudo fdisk -l
+
+>> sdxxx
 ```
 
-Anda akan melihat perangkat bernama mmcblk0 atau sdd. Ekstrak dan flash gambarnya:
+Sangat penting untuk memasukkan nama dengan benar karena perintah berikutnya menyertakan `dd` yang sepenuhnya menghapus konten kartu yang ada sebelum mendorong citra ke dalamnya. Untuk melanjutkan, navigasikan ke direktori yang berisi citra yang di-zip:
 
-```bash
-unzip ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
-sudo dd bs=1M if=ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img of=/dev/mmcblk0 && sync
+```shell
+# unzip and flash image # ekstrak dan flash image
+unzip ethonarm_22.04.00.img.zip
+sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=progress
 ```
 
-### 3. Masukkan MicroSD ke dalam Raspberry Pi 4. Sambungkan kabel Ethernet dan pasang disk SSD USB-nya (pastikan Anda menggunakan porta biru). {#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
+Kartu sekarang telah di-flash, sehingga dapat dimasukkan ke dalam Raspberry Pi.
 
-### 4. Nyalakan perangkatnya {#4-power-on-the-device}
+## Memulai node {#start-the-node}
 
-OS Ubuntu akan melakukan boot up dalam waktu kurang dari satu menit tapi **Anda harus menunggu kira-kira 10 menit** untuk memungkinkan skrip melakukan tugas yang diperlukan guna mengubah perangkat menjadi node Ethereum dan melakukan reboot Raspberry.
+Dengan kartu SD dimasukkan ke dalam Raspberry Pi, sambungkan kabel ethernet dan SSD lalu nyalakan daya. OS akan melakukan booting dan secara otomatis mulai melakukan tugas yang telah dikonfigurasi sebelumnya yang mengubah Raspberry Pi menjadi node Ethereum, termasuk menginstal dan membangun perangkat lunak klien. Ini mungkin akan memakan waktu 10-15 menit.
 
-Tergantung pada gambarnya, Anda akan menjalankan:
+Setelah semuanya diinstal dan dikonfigurasi, masuk ke perangkat melalui koneksi ssh atau menggunakan terminal secara langsung jika monitor dan keyboard terpasang ke papan. Gunakan akun `ethereum` untuk masuk, karena akun ini memiliki izin yang diperlukan untuk memulai node.
 
-- Klien eksekusi: Geth sebagai klien bawaan menyinkronkan ke rantai blok
-- Klien konsensus: Prysm sebagai klien bawaan menyinkronkan rantai suar (jaringan percobaan Goerli)
-
-### 5. Masuk {#5-log-in}
-
-Anda bisa masuk melalui SSH atau menggunakan konsolnya (jika Anda memiliki monitor dan keyboard yang terpasang)
-
-```bash
+```shell
 User: ethereum
 Password: ethereum
 ```
 
-Anda akan diminta mengubah kata sandi saat masuk pertama kali, sehingga Anda perlu melakukan log masuk sebanyak dua kali.
+Klien eksekusi default, Geth, akan dimulai secara otomatis. Anda dapat mengonfirmasi hal ini dengan memeriksa log menggunakan perintah terminal berikut:
 
-### 6. Buka porta 30303 untuk Geth dan 13000 jika Anda menjalankan rantai suar Prysm. Jika Anda tidak tahu caranya, cari di google "port forwarding" diikuti dengan model perute Anda. {#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
-
-### 7. Dapatkan output konsol {#7-get-console-output}
-
-Anda bisa melihat apa yang terjadi di balik layar dengan mengetik:
-
-```bash
-sudo tail -f /var/log/syslog
+```sh
+sudo journalctl -u geth -f
 ```
 
-**Selamat. Anda sedang menjalankan node Ethereum penuh pada Raspberry Pi 4 Anda.**
+Klien konsensus memang perlu dimulai secara eksplisit. Untuk melakukan ini, pertama-tama buka port 9000 di router Anda sehingga Lighthouse dapat menemukan dan terhubung ke rekan (peer). Kemudian aktifkan dan mulai layanan lighthouse:
 
-## Menyinkronkan Blockchain {#syncing-the-blockchain}
-
-Sekarang Anda perlu menunggu blockchain disinkronkan. Pada kasus lapisan eksekusi, ini dapat memakan waktu beberapa hari tergantung dari beberapa faktor, tetapi Anda dapat berharap dalam 5-7 hari.
-
-Jika Anda menjalankan lapisan konsensus jaringan percobaan Goerli Anda dapat mengharapkan 1-2 hari waktu sinkronisasi Rantai suar. Ingatlah bahwa Anda harus menyiapkan validatornya nanti untuk memulai proses penaruhan. [Cara menjalankan validator lapisan konsensus](/developers/tutorials/run-node-raspberry-pi/#validator)
-
-## Dasbor pengawasan {#monitoring-dashboards}
-
-Untuk rilis pertama ini, kami memasukkan 3 dasbor pengawasan berbasis Prometheus [[5]](/developers/tutorials/run-node-raspberry-pi/#references) / Grafana [[6]](/developers/tutorials/run-node-raspberry-pi/#references) untuk mengawasi data node dan klien (Geth dan Besu). Anda bisa mengaksesnya melalui browser web:
-
-```bash
-URL: http://your_raspberrypi_IP:3000
-User: admin
-Password: ethereum
+```sh
+sudo systemctl enable lighthouse-beacon
+sudo systemctl start lighthouse-beacon
 ```
 
-## Beralih klien {#switching-clients}
+Periksa klien menggunakan log:
 
-Semua klien beroperasi sebagai layanan systemd. Ini penting karena jika masalah muncul, sistem akan memunculkan kembali proses secara otomatis.
-
-Geth and Prysm beacon chain run by default (depending on what you are synchronizing, execution layer or consensus layer) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
-
-```bash
-sudo systemctl stop geth && sudo systemctl disable geth
+```sh
+sudo journalctl -u lighthouse-beacon
 ```
 
-Perintah untuk mengaktifkan dan memulai setiap klien eksekusi:
+Perhatikan bahwa klien konsensus akan disinkronkan dalam beberapa menit karena menggunakan sinkronisasi pos pemeriksaan (checkpoint sync). Klien eksekusi akan memakan waktu lebih lama - berpotensi beberapa jam, dan tidak akan dimulai sampai klien konsensus sudah selesai menyinkronkan (ini karena klien eksekusi membutuhkan target untuk disinkronkan, yang disediakan oleh klien konsensus yang disinkronkan).
 
-```bash
-sudo systemctl enable besu && sudo systemctl start besu
-sudo systemctl enable nethermind && sudo systemctl start nethermind
-sudo systemctl enable parity && sudo systemctl start parity
+Dengan layanan Geth dan Lighthouse berjalan dan disinkronkan, Raspberry Pi Anda sekarang menjadi node Ethereum! Sangat umum untuk berinteraksi dengan jaringan Ethereum menggunakan konsol Javascript Geth, yang dapat dilampirkan ke klien Geth pada port 8545. Dimungkinkan juga untuk mengirimkan perintah yang diformat sebagai objek JSON menggunakan alat permintaan seperti Curl. Lihat selengkapnya di [dokumentasi Geth](https://geth.ethereum.org/).
+
+Geth telah dikonfigurasi sebelumnya untuk melaporkan metrik ke dasbor Grafana yang dapat dilihat di peramban. Pengguna yang lebih mahir mungkin ingin menggunakan fitur ini untuk memantau kesehatan node mereka dengan menavigasi ke `ipaddress:3000`, memasukkan `user: admin` dan `passwd: ethereum`.
+
+## Validator {#validators}
+
+Sebuah validator juga dapat ditambahkan secara opsional ke klien konsensus. Perangkat lunak validator memungkinkan node Anda untuk berpartisipasi aktif dalam konsensus dan memberikan jaringan keamanan kriptoekonomi. Anda mendapatkan hadiah untuk pekerjaan ini dalam bentuk ETH. Untuk menjalankan validator, Anda harus terlebih dahulu memiliki 32 ETH, yang harus disetorkan ke dalam kontrak deposit. Deposit dapat dilakukan dengan mengikuti panduan langkah demi langkah di [Launchpad](https://launchpad.ethereum.org/). Lakukan ini di desktop/laptop, tetapi jangan buat kunci — ini dapat dilakukan langsung di Raspberry Pi.
+
+Buka terminal di Raspberry Pi dan jalankan perintah berikut untuk membuat kunci deposit:
+
+```
+sudo apt-get update
+sudo apt-get install staking-deposit-cli
+cd && deposit new-mnemonic --num_validators 1
 ```
 
-Klien konsensus:
+(Atau unduh [staking-deposit-cli](https://github.com/ethereum/staking-deposit-cli) untuk dijalankan pada mesin yang diisolasi (airgapped), dan jalankan perintah `deposit new-mnemnonic`)
 
-```bash
-sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
-sudo systemctl start lighthouse && sudo systemctl enable lighthouse
+Simpan frasa mnemonik dengan aman! Perintah di atas menghasilkan dua file di keystore node: kunci validator dan file data deposit. Data deposit perlu diunggah ke launchpad, sehingga harus disalin dari Raspberry Pi ke desktop/laptop. Ini dapat dilakukan menggunakan koneksi ssh atau metode salin/tempel lainnya.
+
+Setelah file data deposit tersedia di komputer yang menjalankan launchpad, file tersebut dapat diseret dan dilepaskan ke tanda `+` di layar launchpad. Ikuti instruksi di layar untuk mengirim transaksi ke kontrak deposit.
+
+Kembali ke Raspberry Pi, validator dapat dimulai. Ini memerlukan pengimporan kunci validator, mengatur alamat untuk mengumpulkan hadiah, dan kemudian memulai proses validator yang telah dikonfigurasi sebelumnya. Contoh di bawah ini adalah untuk Lighthouse—instruksi untuk klien konsensus lainnya tersedia di [dokumen Ethereum on Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/):
+
+```shell
+# import the validator keys # impor kunci validator
+lighthouse account validator import --directory=/home/ethereum/validator_keys
+
+# set the reward address # atur alamat hadiah
+sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
+
+# start the validator # mulai validator
+sudo systemctl start lighthouse-validator
 ```
 
-## Mengubah parameter {#changing-parameters}
+Selamat, Anda sekarang memiliki node Ethereum penuh dan validator yang berjalan di Raspberry Pi!
 
-File config klien terletak di direktori /etc/ethereum/. Anda bisa mengedit file ini dan memulai ulang layanan systemd untuk menerapkan perubahan. Pengecualiannya hanya pada Nethermind, yang selain itu, memiliki file config Jaringan Utama yang terletak di sini:
+## Detail lebih lanjut {#more-details}
 
-```bash
-/etc/nethermind/configs/mainnet.cfg
-```
-
-Data klien blockchain disimpan pada akun beranda Ethereum sebagai berikut (perhatikan tanda titiknya sebelum nama direktori):
-
-### Lapisan eksekusi {#execution-layer}
-
-```bash
-/home/ethereum/.geth
-/home/ethereum/.parity
-/home/ethereum/.besu
-/home/ethereum/.nethermind
-```
-
-### Lapisan konsensus {#consensus-layer}
-
-```bash
-/home/ethereum/.eth2
-/home/ethereum/.eth2validators
-/home/ethereum/.lighthouse
-```
-
-## Nethermind dan Hyperledger Besu {#nethermind-and-hyperledger-besu}
-
-Dua klien eksekusi hebat berikut menjadi alternatif yang bagus untuk Geth dan Parity. Semakin beragam jaringan, akan semakin baik, sehingga Anda bisa mencobanya dan berkontribusi pada kesehatan jaringan.
-
-Keduanya memerlukan pengujian lebih lanjut, silakan dicoba dan laporkan umpan balik Anda.
-
-## Cara menjalankan validator konsensus (penaruhan) {#validator}
-
-Setelah jaringan percobaan rantai suar Goerli disinkronkan, Anda dapat menjalankan validator dalam perangkat yang sama. Anda perlu mengikuti [langkah partisipasi ini](https://prylabs.net/participate).
-
-Pertama-tama, Anda perlu membuat akun secara manual dengan menjalankan binari "validator" dan menyiapkan kata sandi. Setelah Anda telah menyelesaikan langkah ini, Anda bisa menambahkan kata sandi ke `/etc/ethereum/prysm-validator.conf` dan memulai validator sebagai layanan systemd.
+Halaman ini memberikan gambaran umum tentang cara menyiapkan node Geth-Lighthouse dan validator menggunakan Raspberry Pi. Instruksi yang lebih rinci tersedia di [situs web Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Umpan balik dihargai {#feedback-appreciated}
 
-Kami berusaha keras menyiapkan Raspberry Pi 4 sebagai node Ethereum penuh, karena seperti yang kita ketahui basis pengguna perangkat ini yang besar bisa berdampak positif pada jaringan.
-
-Tolong diperhitungkan, karena ini adalah gambar pertama berbasis Ubuntu 20.04, jadi mungkin ada beberapa bug. Jika ada, ajukan masalah di [GitHub](https://github.com/diglos/ethereumonarm) atau hubungi kami di [Twitter](https://twitter.com/EthereumOnARM).
+Kami tahu Raspberry Pi memiliki basis pengguna yang sangat besar yang dapat berdampak sangat positif pada kesehatan jaringan Ethereum.
+Silakan pelajari detail dalam tutorial ini, coba jalankan di testnet, periksa GitHub Ethereum on Arm, berikan umpan balik, ajukan masalah (issue) dan permintaan tarik (pull request), serta bantu memajukan teknologi dan dokumentasi!
 
 ## Referensi {#references}
 
-1. [geth berulang kali gagal berfungsi dengan SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
-3. https://ubuntu.com/download/raspberry-pi
-4. https://wikipedia.org/wiki/Port_forwarding
-5. https://prometheus.io
-6. https://grafana.com
-7. https://forum.armbian.com/topic/5565-zram-vs-swap/
-8. https://geth.ethereum.org
-9. https://github.com/openethereum/openethereum \* ** Perhatikan bahwa OpenEthereum [telah menjadi usang](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) dan tidak lagi dipertahankan.** Gunakan dengan hati-hati dan sebaiknya beralih ke implementasi klien yang lain.
-10. https://nethermind.io
-11. https://www.hyperledger.org/projects/besu
-12. https://github.com/prysmaticlabs/prysm
-13. https://lighthouse.sigmaprime.io
-14. https://docs.ethswarm.org/
-15. https://raiden.network
-16. https://ipfs.io
-17. https://status.im
-18. https://vipnode.org
+1. https://ubuntu.com/download/raspberry-pi
+2. https://wikipedia.org/wiki/Port_forwarding
+3. https://prometheus.io
+4. https://grafana.com
+5. https://forum.armbian.com/topic/5565-zram-vs-swap/
+6. https://geth.ethereum.org
+7. https://nethermind.io
+8. https://www.hyperledger.org/projects/besu
+9. https://github.com/prysmaticlabs/prysm
+10. https://lighthouse.sigmaprime.io
+11. https://docs.ethswarm.org/
+12. https://raiden.network
+13. https://ipfs.io
+14. https://status.im
+15. https://vipnode.org

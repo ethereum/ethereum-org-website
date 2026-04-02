@@ -4,6 +4,7 @@ description: "Uma lista de verificações de diretrizes de segurança a consider
 author: "Trailofbits"
 tags: [ "Solidity", "smart contracts", "segurança" ]
 skill: intermediate
+breadcrumb: "Diretrizes de seguranca"
 lang: pt-br
 published: 2020-09-06
 source: Building secure contracts

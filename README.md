@@ -100,6 +100,12 @@ pnpm install
 
 > Note: On Ubuntu or Debian you may need to run `sudo apt update && sudo apt install nodejs npm` before running `corepack enable` or `pnpm install`.
 
+4. Set up environment variables
+
+```sh
+cp .env.example .env.local
+```
+
 #### Migrating from yarn to pnpm
 
 If you previously used `yarn` to install dependencies, you can safely migrate to `pnpm` by running the following commands:
@@ -2183,6 +2189,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/khawlahssn"><img src="https://avatars.githubusercontent.com/u/69622217?v=4?s=100" width="100px;" alt="Khawla"/><br /><sub><b>Khawla</b></sub></a><br /><a href="#tool-khawlahssn" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nicolasbalao"><img src="https://avatars.githubusercontent.com/u/61119970?v=4?s=100" width="100px;" alt="Nicolas Balao"/><br /><sub><b>Nicolas Balao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Anicolasbalao" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://neal.is"><img src="https://avatars.githubusercontent.com/u/3241395?v=4?s=100" width="100px;" alt="Neal O'Grady"/><br /><sub><b>Neal O'Grady</b></sub></a><br /><a href="#tool-Nealo" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://jgresham.xyz"><img src="https://avatars.githubusercontent.com/u/3721291?v=4?s=100" width="100px;" alt="Johns Gresham"/><br /><sub><b>Johns Gresham</b></sub></a><br /><a href="#maintenance-jgresham" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Dragoon0x"><img src="https://avatars.githubusercontent.com/u/255907778?v=4?s=100" width="100px;" alt="Dragoon"/><br /><sub><b>Dragoon</b></sub></a><br /><a href="#tool-Dragoon0x" title="Tools">🔧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://mushow.uk/"><img src="https://avatars.githubusercontent.com/u/105550256?v=4?s=100" width="100px;" alt="0xMushow"/><br /><sub><b>0xMushow</b></sub></a><br /><a href="#maintenance-0xMushow" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://samlaf.github.io/"><img src="https://avatars.githubusercontent.com/u/9342524?v=4?s=100" width="100px;" alt="Samuel Laferriere"/><br /><sub><b>Samuel Laferriere</b></sub></a><br /><a href="#content-samlaf" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

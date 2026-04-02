@@ -4,6 +4,7 @@ description: "Optimism의 표준 브리지는 어떻게 작동하나요? 왜 이
 author: Ori Pomerantz
 tags: [ "Solidity", "브리지", "레이어 2" ]
 skill: intermediate
+breadcrumb: "Optimism 브릿지"
 published: 2022-03-30
 lang: ko
 ---

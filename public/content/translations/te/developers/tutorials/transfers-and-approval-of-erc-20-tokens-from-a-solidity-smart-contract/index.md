@@ -10,6 +10,7 @@ tags:
     "erc-20"
   ]
 skill: intermediate
+breadcrumb: "ERC-20 బదిలీలు"
 lang: te
 published: 2020-04-07
 source: EthereumDev

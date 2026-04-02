@@ -4,6 +4,7 @@ description: Como colocar itens tokenizados para venda em um mercado descentrali
 author: "Alberto Cuesta Cañada"
 tags: [ "smart contracts", "erc-721", "Solidity", "tokens" ]
 skill: intermediate
+breadcrumb: "Mercado ERC-721"
 lang: pt-br
 published: 2020-03-19
 source: Hackernoon

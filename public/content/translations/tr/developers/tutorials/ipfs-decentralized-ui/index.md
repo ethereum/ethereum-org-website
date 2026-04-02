@@ -4,6 +4,7 @@ description: "Bu öğretici, okuyucuya bir merkeziyetsiz uygulama için kullanı
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
+breadcrumb: "Dapp UI için IPFS"
 lang: tr
 published: 2024-06-29
 ---

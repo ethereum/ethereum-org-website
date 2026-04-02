@@ -12,6 +12,7 @@ tags:
     "mud"
   ]
 skill: advanced
+breadcrumb: "ZK таємний стан"
 lang: uk
 published: 2025-03-15
 ---

@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: ja
 tags: [ "エージェント", "サーバー", "オフチェーン" ]
 skill: beginner
+breadcrumb: "Serverコンポーネント"
 published: 2024-07-15
 ---
 

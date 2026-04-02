@@ -1,119 +1,119 @@
 ---
-title: Domande frequenti (FAQ) del Programma di Traduzione
+title: Domande frequenti (FAQ) sul Programma di Traduzione
 lang: it
 description: Domande frequenti sul Programma di Traduzione di ethereum.org
 ---
 
 # Guida alla traduzione di ethereum.org {#translating-ethereum-guide}
 
-Se sei nuovo nel Programma di Traduzione e non vedi l'ora di prendervi parte, ecco alcune domande frequenti che possono aiutarti a cominciare. Usa questa guida per trovare le risposte alle domande più comuni.
+Se sei nuovo nel Programma di Traduzione e sei esitante a buttarti, ecco alcune FAQ che possono aiutarti a iniziare. Usa questa guida per trovare le risposte alle domande più comuni.
 
-## Posso ricevere un compenso per le traduzioni su ethereum.org? {#compensation}
+## Posso essere retribuito per tradurre ethereum.org? {#compensation}
 
 Ethereum.org è un sito web open-source, il che significa che chiunque può partecipare e contribuire.
 
-Il Programma di traduzione di ethereum.org è un'estensione di questo principio ed è organizzato con una filosofia simile.
+Il Programma di Traduzione di ethereum.org ne è un'estensione ed è organizzato con una filosofia simile in mente.
 
-L'obiettivo del Programma di traduzione è quello di rendere i contenuti di Ethereum accessibili a tutti, indipendentemente dalle lingue che parlano. Consente inoltre a qualsiasi persona bilingue di essere coinvolta nell'ecosistema Ethereum e contribuire in modo accessibile.
+L'obiettivo del Programma di Traduzione è rendere i contenuti di Ethereum accessibili a tutti, indipendentemente dalle lingue che parlano. Consente inoltre a qualsiasi persona bilingue di farsi coinvolgere nell'ecosistema di Ethereum e contribuire in modo accessibile.
 
-Per questo motivo, il Programma di traduzione è aperto e volontario, e la partecipazione non è soggetta a retribuzione. Se dovessimo compensare i traduttori per il numero di parole che traducono, potremmo invitare solo quelli con sufficiente esperienza di traduzione (traduttori professionisti) a partecipare al Programma di traduzione. Questo renderebbe il programma di traduzione esclusivo e ci impedirebbe di raggiungere gli obiettivi delineati, in particolare: permettere a tutti di partecipare ed essere coinvolti nell'ecosistema.
+Per questo motivo, il Programma di Traduzione è aperto e volontario, e la partecipazione non è soggetta a retribuzione. Se dovessimo retribuire i traduttori per il numero di parole che traducono, potremmo invitare a unirsi al Programma di Traduzione solo coloro con sufficiente esperienza di traduzione (traduttori professionisti). Ciò renderebbe il Programma di Traduzione esclusivo e ci impedirebbe di raggiungere gli obiettivi delineati, in particolare: consentire a tutti di partecipare e farsi coinvolgere nell'ecosistema.
 
-Facciamo ogni sforzo per permettere ai nostri collaboratori di avere successo nell'ecosistema Ethereum; abbiamo istituito numerosi incentivi non monetari, ad esempio: [l'offerta di POAP](/contributing/translation-program/acknowledgements/#poap) e un [certificato di traduttore](/contributing/translation-program/acknowledgements/#certificate), così come l'organizzazione delle [Classifiche di traduzione](/contributing/translation-program/acknowledgements/) e [l'inclusione di tutti i nostri traduttori nel sito](/contributing/translation-program/contributors/).
+Facciamo ogni sforzo per consentire ai nostri collaboratori di avere successo nell'ecosistema di Ethereum; sono in atto molti incentivi non monetari come: [offrire POAP](/contributing/translation-program/acknowledgements/#poap) e un [certificato di traduttore](/contributing/translation-program/acknowledgements/#certificate), oltre a organizzare le [Classifiche di Traduzione](/contributing/translation-program/acknowledgements/) e [elencare tutti i nostri traduttori sul sito](/contributing/translation-program/contributors/).
 
-## Come tradurre le stringhe con `<tag HTML>`? {#tags}
+## Come traduco le stringhe con i `<tag HTML>`? {#tags}
 
-Non tutte le stringhe sono scritte in forma di testo puro. Alcune stringhe sono composte da script misti, come i tag HTML (`<0>`, `</0>`). Ciò è dovuto solitamente alla presenza di collegamenti ipertestuali o stili alternativi all'interno di una frase.
+Non tutte le stringhe sono scritte in forma di puro testo. Ci sono alcune stringhe che consistono in script misti come i tag HTML (`<0>`, `</0>`). Questo di solito serve per i collegamenti ipertestuali o per stili alternativi nel mezzo di una frase.
 
-- Traduci il testo all'interno dei tag, ma non i tag stessi. Qualsiasi cosa racchiusa tra `<` e `>` non deve essere tradotta o rimossa.
-- Per mantenere preservare l'integrità della stringa, si consiglia di fare clic sul pulsante "Copia sorgente" in basso a sinistra. Così facendo si copia la stringa originale e la si incolla nella casella di testo e si chiarisce dove sono i tag, evitando errori.
+- Traduci il testo all'interno dei tag ma non i tag stessi. Qualsiasi cosa tra `<` e `>` non deve essere tradotta o rimossa.
+- Per mantenere la stringa al sicuro, ti consigliamo di fare clic sul pulsante "Copy Source" (Copia sorgente) in basso a sinistra. Questo copierà la stringa originale e la incollerà nella casella di testo. Ciò ti consente di chiarire dove si trovano i tag e ti aiuta a evitare errori.
 
-![Interfaccia Crowdin con il pulsante copia sorgente evidenziato](./html-tag-strings.png)
+![Interfaccia di Crowdin con il pulsante copia sorgente evidenziato](./html-tag-strings.png)
 
-È possibile spostare la posizione dei tag all'interno della stringa per renderla più naturale nella propria lingua, basta fare in modo di spostare l'intero tag.
+Puoi spostare la posizione dei tag all'interno della stringa per renderla più naturale nella tua lingua: assicurati solo di spostare l'intero tag.
 
-Per informazioni più approfondite sulla gestione di tag e frammenti di codice, consultare la [Guida di stile per la traduzione di ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
+Per informazioni più approfondite su come gestire i tag e i frammenti di codice, fai riferimento alla [Guida di stile per la traduzione di ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
-## Dove vanno a finire le stringhe? {#strings}
+## Dove si trovano le stringhe? {#strings}
 
-Spesso le stringhe di origine da sole potrebbero non essere sufficienti per fornire una traduzione accurata.
+Spesso le sole stringhe di origine potrebbero non essere sufficienti per fornire una traduzione accurata.
 
-- Dai un'occhiata a "screenshot" e "context" per maggiori informazioni. Nella sezione stringa sorgente, vedrai allegata l'immagine dello screenshot che mostra come viene utilizzata la stringa nel contesto.
-- Se hai ancora dubbi, apri una segnalazione nella sezione dei commenti. [Non sai come inserire un commento?](#comment)
+- Dai un'occhiata a "screenshots" (schermate) e "context" (contesto) per maggiori informazioni. Nella sezione della stringa di origine, vedrai l'immagine della schermata allegata che ti mostrerà come stiamo usando la stringa nel contesto.
+- Se sei ancora insicuro, segnalalo nella "sezione commenti". [Non sai come lasciare un commento?](#comment)
 
-![Indicazione di come è possibile fornire il contesto per una stringa con uno screenshot](./source-string.png)
+![Mostra come il contesto può essere fornito per una stringa con una schermata](./source-string.png)
 
-![Aggiunta di uno screenshot di esempio per il contesto](./source-string-2.png)
+![Un esempio di schermata aggiunta per il contesto](./source-string-2.png)
 
-## Come posso inserire commenti o porre domande? Vorrei segnalare un problema o errori di battitura... {#comment}
+## Come posso lasciare commenti o fare domande? Vorrei segnalare un problema o degli errori di battitura... {#comment}
 
-Se vuoi segnalare un problema su una particolare stringa che richiede attenzione, sentiti libero/a di inviare un commento.
+Se vuoi segnalare una stringa particolare che richiede attenzione, sentiti libero di inviare un commento.
 
-- Fai clic sul secondo pulsante della barra in alto a destra. La scheda nascosta apparirà sulla tua destra. Lascia un nuovo commento e fai clic sulla casella "Issue" in basso. È possibile specificare il tipo di problema scegliendo una delle opzioni dal menu a discesa.
-- Una volta inviato, verrà segnalato al nostro team. Risolveremo il problema e ti faremo sapere rispondendo al tuo commento e chiudendo la segnalazione.
-- Se segnalate una traduzione non corretta, la traduzione e l'alternativa suggerita saranno esaminati da un madrelingua durante la prossima recensione.
+- Fai clic sul secondo pulsante della barra in alto a destra. La scheda nascosta apparirà alla tua destra. Lascia un nuovo commento e fai clic sulla casella di controllo "Issue" (Problema) in basso. Puoi specificare il tipo di problema scegliendo una delle opzioni dal menu a discesa.
+- Una volta inviato, verrà segnalato al nostro team. Risolveremo il problema e te lo faremo sapere rispondendo al tuo commento e chiudendo il problema.
+- Se segnali una traduzione errata, la traduzione e l'alternativa da te suggerita verranno esaminate da un madrelingua durante la revisione successiva.
 
-![Indicazione di come inserire commenti e segnalare problemi](./comment-issue.png)
+![Mostra come fare commenti e segnalare problemi](./comment-issue.png)
 
-## Cos'è la Memoria di traduzione (TM)? {#translation-memory}
+## Cos'è la Memoria di Traduzione (TM)? {#translation-memory}
 
-La Memoria di traduzione (TM) è una funzionalità di Crowdin che memorizza tutte le stringhe precedentemente tradotte su [ethereum.org](https://ethereum.org/). Quando una stringa viene tradotta, viene automaticamente salvata nella TM del progetto. Può essere uno strumento utile per aiutarti a risparmiare tempo!
+La Memoria di Traduzione (TM) è una funzionalità di Crowdin che memorizza tutte le stringhe precedentemente tradotte su ethereum.org. Quando una stringa viene tradotta, viene salvata automaticamente nella TM del nostro progetto. Questo potrebbe essere uno strumento utile per aiutarti a risparmiare tempo!
 
-- Guarda la sezione "TM and MT Suggestions" per scoprire come altri traduttori hanno tradotto la stessa stringa o un contenuto simile. Se trovi un suggerimento con una percentuale di corrispondenza elevata, non esitare a sfruttare la traduzione esistente facendovi clic sopra.
-- Se non c'è nulla nella lista, puoi cercare nella TM tra le traduzioni precedenti e riutilizzarle per coerenza.
+- Guarda la sezione "TM and MT Suggestions" (Suggerimenti TM e MT) e vedrai come altri traduttori hanno tradotto la stessa stringa o una simile. Se trovi un suggerimento con un alto tasso di corrispondenza, sentiti libero di fare riferimento alla traduzione facendovi clic sopra.
+- Se non c'è nulla nell'elenco, puoi cercare nella TM le traduzioni fatte in precedenza e riutilizzarle per coerenza.
 
-![Uno screenshot della memoria di traduzione](./translation-memory.png)
+![Una schermata della memoria di traduzione](./translation-memory.png)
 
-## Come usare il glossario di Crowdin? {#glossary}
+## Come uso il glossario di Crowdin? {#glossary}
 
-La terminologia di Ethereum rappresenta un altro aspetto cruciale del nostro lavoro di traduzione, poiché spesso i nuovi termini tecnologici non sono ancora localizzati in molte lingue. Inoltre, ci sono termini che hanno significati diversi in contesti diversi. [Maggiori informazioni sulla traduzione della terminologia di Ethereum](#terminology)
+La terminologia di Ethereum è un'altra parte cruciale del nostro lavoro di traduzione, poiché spesso i nuovi termini tecnici non saranno ancora localizzati in molte lingue. Inoltre, ci sono termini che hanno significati diversi in contesti diversi. [Maggiori informazioni sulla traduzione della terminologia di Ethereum](#terminology)
 
-Il glossario Crowdin è la risorsa più adatta per chiarire termini e definizioni. Esistono due modi per consultare il glossario.
+Il glossario di Crowdin è il posto migliore per chiarire termini e definizioni. Ci sono due modi per fare riferimento al glossario.
 
-- Quando trovi un termine sottolineato nella stringa sorgente, puoi passarci il mouse sopra e visualizzare una breve definizione.
+- Primo, quando trovi un termine sottolineato nella stringa di origine, puoi passarci sopra con il mouse e vederne una breve definizione.
 
 ![Un esempio di definizione del glossario](./glossary-definition.png)
 
-- In alternativa, se vedi un termine che non è familiare ma non sottolineato, puoi cercare nella scheda del glossario (il terzo pulsante della colonna di destra). Troverai le spiegazioni dei termini specifici e di quelli frequentemente utilizzati nel progetto.
+- Secondo, se vedi un termine che non ti è familiare ma non è sottolineato, puoi cercare nella scheda del glossario (il terzo pulsante della colonna di destra). Troverai spiegazioni di termini specifici e di quelli usati frequentemente nel progetto.
 
-![Uno screenshot che mostra dove trovare la scheda del glossario in Crowdin](./glossary-tab.png)
+![Una schermata che mostra dove trovare la scheda del glossario in Crowdin](./glossary-tab.png)
 
-- Se ancora non riesci a trovarlo, è la tua occasione per aggiungere un nuovo termine! Ti invitiamo a cercarlo su un motore di ricerca e aggiungere la descrizione al glossario. Sarà di grande aiuto ad altri traduttori per comprendere meglio il termine.
+- Se ancora non riesci a trovarlo, è la tua occasione per aggiungere un nuovo termine! Ti incoraggiamo a cercarlo su un motore di ricerca e ad aggiungere la descrizione al glossario. Sarà di grande aiuto per gli altri traduttori per comprendere meglio il termine.
 
-![Uno screenshot che mostra come aggiungere un termine del glossario in Crowdin](./add-glossary-term.png)
+![Una schermata che mostra come aggiungere un termine del glossario a Crowdin](./add-glossary-term.png)
 
-### Politica sulla traduzione della terminologia {#terminology}
+### Politica di traduzione della terminologia {#terminology}
 
-_Per i nomi (marchi, aziende, persone) e i nuovi termini tecnologici (Beacon Chain, catene di frammenti, ecc.)_
+_Per nomi (marchi, aziende, persone) e nuovi termini tecnici (Beacon Chain, shard chain, ecc.)_
 
-Ethereum presenta molti termini nuovi, che sono stati coniati di recente. Può succedere che alcuni termini varino da un traduttore all'altro, in ragione dell'assenza di una traduzione ufficiale nella rispettiva lingua. Tali incongruenze possono causare malintesi e ridurre la leggibilità.
+Ethereum presenta molti nuovi termini che sono stati coniati di recente. Alcuni termini varieranno da traduttore a traduttore poiché non esiste una traduzione ufficiale nella rispettiva lingua. Tali incongruenze possono causare incomprensioni e diminuire la leggibilità.
 
-A causa della diversità linguistica e delle diverse standardizzazioni in ogni lingua, è stato quasi impossibile elaborare una politica di traduzione terminologica unificata che possa essere adattata a tutte le lingue supportate.
+A causa della diversità linguistica e delle diverse standardizzazioni in ogni lingua, è stato quasi impossibile elaborare una politica di traduzione della terminologia unificata che possa essere adattata in tutte le lingue supportate.
 
-Dopo un'attenta valutazione, abbiamo deciso di lasciare ai traduttori la libertà di optare per la terminologia più utilizzata.
+Dopo un'attenta considerazione, abbiamo preso la decisione di lasciare la terminologia usata più di frequente a voi, i traduttori.
 
-Ecco quello che suggeriamo quando trovi un termine che non ti è familiare:
+Ecco cosa suggeriamo, quando trovi un termine che non ti è familiare:
 
-- Consulta il [Glossario dei termini](#glossary), dove potresti scoprire come altri traduttori hanno tradotto un particolare termine in precedenza. Se pensi che il termine precedentemente tradotto non sia appropriato, sentiti libero di ripristinare la tua traduzione aggiungendo un nuovo termine al Glossario Crowdin.
-- Se non esistono traduzioni precedenti nel glossario, ti invitiamo a cercarla su un motore di ricerca o un articolo di stampa che mostri come il termine viene effettivamente utilizzato nella tua comunità.
-- Se non trovi alcun riferimento, sentiti libero di fidarti della tua intuizione e suggerisci una nuova traduzione nella tua lingua!
-- Se invece non ti senti sicuro, lascia il termine non tradotto. A volte, i termini inglesi sono più che adeguati per fornire definizioni accurate.
+- Fai riferimento al [Glossario dei termini](#glossary), potresti scoprire come altri traduttori lo hanno tradotto in precedenza. Se ritieni che il termine tradotto in precedenza non sia appropriato, sentiti libero di ripristinare la tua traduzione aggiungendo un nuovo termine al Glossario di Crowdin.
+- Se tale traduzione precedente non esiste nel Glossario, ti incoraggiamo a cercarla su un motore di ricerca o in un articolo dei media che mostri come il termine viene effettivamente utilizzato nella tua comunità.
+- Se non trovi alcun riferimento, sentiti libero di fidarti del tuo intuito e suggerire una nuova traduzione nella tua lingua!
+- Se ti senti meno sicuro nel farlo, lascia il termine non tradotto. A volte, i termini inglesi sono più che adeguati per fornire definizioni accurate.
 
-Ti consigliamo di non tradurre i nomi di marchi, aziende e personale poiché una traduzione potrebbe causare confusione inutile e difficoltà a livello di SEO.
+Ti consigliamo di lasciare non tradotti i nomi di marchi, aziende e personale, poiché una traduzione potrebbe causare inutile confusione e difficoltà SEO.
 
 ## Come funziona il processo di revisione? {#review-process}
 
-Per garantire un certo livello di qualità e coerenza nelle nostre traduzioni, lavoriamo con [Acolad](https://www.acolad.com/), uno dei più grandi fornitori di servizi linguistici a livello mondiale. Potendo contare su una rete di 20.000 linguisti professionisti, Acolad può fornire revisori professionisti per ogni lingua e tipo di contenuto di cui abbiamo bisogno.
+Per garantire un certo livello di qualità e coerenza nelle nostre traduzioni, lavoriamo con [Acolad](https://www.acolad.com/), uno dei maggiori fornitori di servizi linguistici a livello globale. Acolad ha 20.000 linguisti professionisti, il che significa che possono fornire revisori professionisti per ogni lingua e tipo di contenuto di cui abbiamo bisogno.
 
-Il processo di revisione è semplice; una volta che una certa [categoria di contenuti](/contributing/translation-program/) è stata tradotta al 100%, richiediamo una revisione. Il processo di revisione si svolge direttamente su Crowdin. Una volta completata la revisione, aggiorniamo il sito web con il contenuto tradotto.
+Il processo di revisione è semplice; una volta che un insieme di contenuti è tradotto al 100%, ordiniamo una revisione per quel gruppo di contenuti. Il processo di revisione si svolge direttamente in Crowdin. Una volta completata la revisione, aggiorniamo il sito web con i contenuti tradotti.
 
-## Come faccio ad aggiungere contenuti nella mia lingua? {#adding-foreign-language-content}
+## Come aggiungo contenuti nella mia lingua? {#adding-foreign-language-content}
 
-Attualmente, tutti i contenuti non in inglese sono tradotti direttamente dal contenuto originale in inglese, e qualsiasi contenuto non esistente in inglese non può essere aggiunto ad altre lingue.
+Attualmente, tutti i contenuti non in inglese vengono tradotti direttamente dai contenuti di origine in inglese e qualsiasi contenuto che non esiste in inglese non può essere aggiunto in altre lingue.
 
-Per consigliare nuovi contenuti per ethereum.org, puoi [creare un ticket](https://github.com/ethereum/ethereum-org-website/issues) su GitHub. Per essere inserito, il contenuto verrà redatto in inglese e tradotto in altre lingue utilizzando Crowdin.
+Per suggerire nuovi contenuti per ethereum.org, puoi [creare una issue](https://github.com/ethereum/ethereum-org-website/issues) su GitHub. Se aggiunto, il contenuto sarà scritto in inglese e tradotto in altre lingue utilizzando Crowdin.
 
-A breve prevediamo di aggiungere il supporto per l'inserimento di contenuti non in inglese.
+Prevediamo di aggiungere il supporto per l'aggiunta di contenuti non in inglese nel prossimo futuro.
 
-## Contattaci {#contact}
+## Mettiti in contatto {#contact}
 
-Grazie per aver letto tutte queste informazioni. Speriamo che ti aiutino a muovere i primi passi nel nostro programma. Sentiti libero di unirti al nostro [canale di traduzione di Discord](https://discord.gg/ethereum-org) per porre domande e collaborare con gli altri traduttori, o contattaci a translations@ethereum.org!
+Grazie per aver letto tutto questo. Speriamo che questo ti aiuti a integrarti nel nostro programma. Sentiti libero di unirti al nostro [canale di traduzione su Discord](https://discord.gg/ethereum-org) per fare domande e collaborare con altri traduttori, o contattaci all'indirizzo translations@ethereum.org!
