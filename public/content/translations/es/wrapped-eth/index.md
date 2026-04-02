@@ -1,6 +1,6 @@
 ---
-title: ¿Qué es el ether envuelto (WETH)?
-description: Una introducción al ether envuelto (WETH), un envoltorio compatible con ERC-20 para el ether (ETH). 
+title: "¿Qué es el ether envuelto (WETH)?"
+description: "Una introducción al ether envuelto (WETH), un envoltorio compatible con ERC-20 para el ether (ETH)."
 lang: es
 ---
 
