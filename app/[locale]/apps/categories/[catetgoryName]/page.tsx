@@ -28,6 +28,7 @@ import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -62,6 +63,20 @@ const Page = async (props: {
   }
 
   const t = await getTranslations("page-apps")
+  const appDescriptions = await getTranslations("page-app-descriptions")
+
+  const localizeApps = <T extends { name: string; description: string }>(
+    apps: T[]
+  ): T[] =>
+    apps.map((app) => ({
+      ...app,
+      description: getLocalizedDescription(
+        appDescriptions,
+        "app",
+        app.name,
+        app.description
+      ),
+    }))
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -160,7 +175,7 @@ const Page = async (props: {
             <div className="flex flex-col px-4 md:px-8">
               <h2>{t("page-apps-highlights-title")}</h2>
               <AppsHighlight
-                apps={highlightedApps}
+                apps={localizeApps(highlightedApps)}
                 matomoCategory={`category_page`}
               />
             </div>
