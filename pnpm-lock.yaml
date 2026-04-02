@@ -235,9 +235,6 @@ importers:
         specifier: ^0.8.0
         version: 0.8.1
     devDependencies:
-      '@chromatic-com/playwright':
-        specifier: ^0.12.4
-        version: 0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@chromatic-com/storybook':
         specifier: 5.1.1
         version: 5.1.1(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10))(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))
@@ -13167,6 +13164,7 @@ snapshots:
       - uglify-js
       - utf-8-validate
       - webpack-cli
+    optional: true
 
   '@chromatic-com/storybook@5.1.1(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10))(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))':
     dependencies:
@@ -13183,6 +13181,7 @@ snapshots:
   '@chromaui/rrweb-snapshot@2.0.0-alpha.18-noAbsolute':
     dependencies:
       postcss: 8.5.4
+    optional: true
 
   '@coinbase/wallet-sdk@3.9.3':
     dependencies:
@@ -13778,11 +13777,13 @@ snapshots:
     dependencies:
       '@lit-labs/ssr-dom-shim': 1.3.0
 
-  '@lukeed/csprng@1.1.0': {}
+  '@lukeed/csprng@1.1.0':
+    optional: true
 
   '@lukeed/uuid@2.0.1':
     dependencies:
       '@lukeed/csprng': 1.1.0
+    optional: true
 
   '@mdx-js/mdx@3.1.0(acorn@8.16.0)':
     dependencies:
@@ -15582,10 +15583,12 @@ snapshots:
       '@segment/analytics-generic-utils': 1.1.1
       dset: 3.1.4
       tslib: 2.8.1
+    optional: true
 
   '@segment/analytics-generic-utils@1.1.1':
     dependencies:
       tslib: 2.8.1
+    optional: true
 
   '@segment/analytics-node@1.3.0':
     dependencies:
@@ -15597,6 +15600,7 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - encoding
+    optional: true
 
   '@sentry-internal/browser-utils@10.46.0':
     dependencies:
@@ -16407,6 +16411,7 @@ snapshots:
       polished: 4.3.1
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       uuid: 9.0.1
+    optional: true
 
   '@storybook/addon-backgrounds@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -16414,6 +16419,7 @@ snapshots:
       memoizerific: 1.11.3
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
+    optional: true
 
   '@storybook/addon-controls@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -16421,6 +16427,7 @@ snapshots:
       dequal: 2.0.3
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
+    optional: true
 
   '@storybook/addon-docs@10.3.3(@types/react@19.2.14)(esbuild@0.25.12)(rollup@4.46.2)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12))':
     dependencies:
@@ -16451,6 +16458,7 @@ snapshots:
       ts-dedent: 2.2.0
     transitivePeerDependencies:
       - '@types/react'
+    optional: true
 
   '@storybook/addon-essentials@8.5.8(@types/react@19.2.14)(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -16467,11 +16475,13 @@ snapshots:
       ts-dedent: 2.2.0
     transitivePeerDependencies:
       - '@types/react'
+    optional: true
 
   '@storybook/addon-highlight@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@storybook/global': 5.0.0
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/addon-links@10.3.3(react@19.2.4)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))':
     dependencies:
@@ -16485,12 +16495,14 @@ snapshots:
       '@storybook/global': 5.0.0
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       tiny-invariant: 1.3.3
+    optional: true
 
   '@storybook/addon-outline@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@storybook/global': 5.0.0
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
+    optional: true
 
   '@storybook/addon-themes@10.3.3(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))':
     dependencies:
@@ -16500,11 +16512,13 @@ snapshots:
   '@storybook/addon-toolbars@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/addon-viewport@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       memoizerific: 1.11.3
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/blocks@8.5.8(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -16515,6 +16529,7 @@ snapshots:
     optionalDependencies:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
+    optional: true
 
   '@storybook/builder-webpack5@10.3.3(@swc/core@1.15.21)(esbuild@0.25.12)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(typescript@5.8.3)':
     dependencies:
@@ -16578,10 +16593,12 @@ snapshots:
       - esbuild
       - uglify-js
       - webpack-cli
+    optional: true
 
   '@storybook/components@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/core-webpack@10.3.3(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))':
     dependencies:
@@ -16592,6 +16609,7 @@ snapshots:
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
+    optional: true
 
   '@storybook/core@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)':
     dependencies:
@@ -16612,6 +16630,7 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+    optional: true
 
   '@storybook/csf-plugin@10.3.3(esbuild@0.25.12)(rollup@4.46.2)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12))':
     dependencies:
@@ -16626,14 +16645,17 @@ snapshots:
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       unplugin: 1.16.1
+    optional: true
 
   '@storybook/csf@0.1.12':
     dependencies:
       type-fest: 2.19.0
+    optional: true
 
   '@storybook/csf@0.1.13':
     dependencies:
       type-fest: 2.19.0
+    optional: true
 
   '@storybook/global@5.0.0': {}
 
@@ -16641,6 +16663,7 @@ snapshots:
     dependencies:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
+    optional: true
 
   '@storybook/icons@2.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
@@ -16650,6 +16673,7 @@ snapshots:
   '@storybook/manager-api@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/nextjs@10.3.3(@swc/core@1.15.21)(babel-plugin-macros@3.1.0)(esbuild@0.25.12)(next@16.2.1(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.53.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(type-fest@4.41.0)(typescript@5.8.3)(webpack-hot-middleware@2.26.1)(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12))':
     dependencies:
@@ -16743,10 +16767,12 @@ snapshots:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
       yaml-loader: 0.8.1
+    optional: true
 
   '@storybook/preview-api@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.8.3)(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12))':
     dependencies:
@@ -16773,6 +16799,7 @@ snapshots:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/react@10.3.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(typescript@5.8.3)':
     dependencies:
@@ -16801,6 +16828,7 @@ snapshots:
       - typescript
       - uglify-js
       - webpack-cli
+    optional: true
 
   '@storybook/server@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -16813,10 +16841,12 @@ snapshots:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
       yaml: 2.8.0
+    optional: true
 
   '@storybook/theming@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.27.4)':
     dependencies:
@@ -17253,7 +17283,8 @@ snapshots:
 
   '@types/retry@0.12.0': {}
 
-  '@types/semver@7.7.0': {}
+  '@types/semver@7.7.0':
+    optional: true
 
   '@types/semver@7.7.1': {}
 
@@ -17269,7 +17300,8 @@ snapshots:
 
   '@types/unist@3.0.3': {}
 
-  '@types/uuid@9.0.8': {}
+  '@types/uuid@9.0.8':
+    optional: true
 
   '@types/xml2js@0.4.14':
     dependencies:
@@ -18563,6 +18595,7 @@ snapshots:
   better-opn@3.0.2:
     dependencies:
       open: 8.4.2
+    optional: true
 
   big.js@5.2.2: {}
 
@@ -18606,7 +18639,8 @@ snapshots:
 
   brorand@1.1.0: {}
 
-  browser-assert@1.2.1: {}
+  browser-assert@1.2.1:
+    optional: true
 
   browserify-aes@1.2.0:
     dependencies:
@@ -19253,7 +19287,8 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
-  define-lazy-prop@2.0.0: {}
+  define-lazy-prop@2.0.0:
+    optional: true
 
   define-lazy-prop@3.0.0: {}
 
@@ -19378,7 +19413,8 @@ snapshots:
 
   dotenv@16.5.0: {}
 
-  dset@3.1.4: {}
+  dset@3.1.4:
+    optional: true
 
   dunder-proto@1.0.1:
     dependencies:
@@ -19649,6 +19685,7 @@ snapshots:
       esbuild: 0.25.12
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   esbuild@0.25.12:
     optionalDependencies:
@@ -20171,7 +20208,7 @@ snapshots:
 
   fork-ts-checker-webpack-plugin@8.0.0(typescript@5.8.3)(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12)):
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       chalk: 4.1.2
       chokidar: 3.6.0
       cosmiconfig: 7.1.0
@@ -20185,6 +20222,7 @@ snapshots:
       tapable: 2.2.2
       typescript: 5.8.3
       webpack: 5.99.9(@swc/core@1.15.21)(esbuild@0.25.12)
+    optional: true
 
   fork-ts-checker-webpack-plugin@9.1.0(typescript@5.8.3)(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12)):
     dependencies:
@@ -20744,7 +20782,8 @@ snapshots:
 
   is-decimal@2.0.1: {}
 
-  is-docker@2.2.1: {}
+  is-docker@2.2.1:
+    optional: true
 
   is-docker@3.0.0: {}
 
@@ -20860,6 +20899,7 @@ snapshots:
   is-wsl@2.2.0:
     dependencies:
       is-docker: 2.2.1
+    optional: true
 
   is-wsl@3.1.1:
     dependencies:
@@ -20923,7 +20963,8 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsdoc-type-pratt-parser@4.1.0: {}
+  jsdoc-type-pratt-parser@4.1.0:
+    optional: true
 
   jsesc@3.0.2: {}
 
@@ -21133,7 +21174,8 @@ snapshots:
 
   make-error@1.3.6: {}
 
-  map-or-similar@1.5.0: {}
+  map-or-similar@1.5.0:
+    optional: true
 
   markdown-extensions@2.0.0: {}
 
@@ -21337,6 +21379,7 @@ snapshots:
   memoizerific@1.11.3:
     dependencies:
       map-or-similar: 1.5.0
+    optional: true
 
   merge-stream@2.0.0: {}
 
@@ -21931,6 +21974,7 @@ snapshots:
       define-lazy-prop: 2.0.0
       is-docker: 2.2.1
       is-wsl: 2.2.0
+    optional: true
 
   opener@1.5.2: {}
 
@@ -22931,7 +22975,8 @@ snapshots:
 
   safe-buffer@5.2.1: {}
 
-  safe-identifier@0.4.2: {}
+  safe-identifier@0.4.2:
+    optional: true
 
   safe-push-apply@1.0.0:
     dependencies:
@@ -23291,6 +23336,7 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+    optional: true
 
   stream-browserify@3.0.0:
     dependencies:
@@ -23878,6 +23924,7 @@ snapshots:
     dependencies:
       acorn: 8.16.0
       webpack-virtual-modules: 0.6.2
+    optional: true
 
   unplugin@2.3.11:
     dependencies:
