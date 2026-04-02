@@ -4,7 +4,6 @@ on:
   pull_request:
     paths:
       - "public/content/**/*.md"
-      - "!public/content/translations/**"
 
 jobs:
   lint-markdown:
@@ -19,7 +18,6 @@ jobs:
         run: |
           FILES=$(git diff --name-only --diff-filter=ACMR origin/${{ github.base_ref }}...HEAD \
             | grep '^public/content/.*\.md$' \
-            | grep -v '^public/content/translations/' \
             || true)
           echo "files<<EOF" >> "$GITHUB_OUTPUT"
           echo "$FILES" >> "$GITHUB_OUTPUT"
