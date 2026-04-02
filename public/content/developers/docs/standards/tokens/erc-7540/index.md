@@ -6,18 +6,16 @@ lang: en
 
 ## Introduction {#introduction}
 
-ERC-7540 extends the [ERC-4626 Tokenized Vault Standard](/developers/docs/standards/tokens/erc-4626/) by adding support for **asynchronous deposit and redemption flows**. It introduces a **request-then-claim pattern**: users first submit a request (locking their assets or shares), then claim the result after the vault has processed it.
+ERC-7540 extends the [ERC-4626 Tokenized Vault Standard](/developers/docs/standards/tokens/erc-4626/) by adding support for asynchronous deposit and redemption flows. It introduces a request-then-claim pattern: users first submit a request (locking their assets or shares), then claim the result after the vault has processed it.
 
 This is needed when a vault cannot settle instantly in one transaction, for example:
 
-- **Real-world asset (RWA) protocols** like tokenized treasuries, private credit, and other assets with T+1 or T+2 settlement cycles
-- **Undercollateralized lending** where credit assessments happen off-chain
-- **Cross-chain vault strategies** where bridging introduces delays
-- **Liquid staking tokens** with unbonding periods
+- Real-world asset (RWA) protocols like tokenized treasuries, private credit, and other assets with T+1 or T+2 settlement cycles
+- Undercollateralized lending where credit assessments happen off-chain
+- Cross-chain vault strategies where bridging introduces delays
+- Liquid staking tokens with unbonding periods
 
 Vaults can choose to be asynchronous on deposits only, redemptions only, or both. This flexibility lets vault developers add async flows only where the underlying strategy requires it, while keeping the other side synchronous.
-
-The key concept is **forward pricing**: unlike ERC-4626's immediate pricing, exchange rates in ERC-7540 are determined at fulfillment time, not request time. This mirrors traditional fund subscriptions where allocations occur at NAV strikes rather than submission time.
 
 ## Prerequisites {#prerequisites}
 
@@ -25,21 +23,21 @@ To better understand this page, we recommend you first read about [token standar
 
 ## ERC-4626 vs ERC-7540 {#comparison}
 
-**ERC-4626 (synchronous)**
+In ERC-4626, a deposit settles atomically: the investor sends assets and receives shares back in a single transaction.
 
 ![ERC-4626 synchronous deposit flow](./erc-4626-sync-flow.svg)
 
-**ERC-7540 (asynchronous)**
+ERC-7540 splits this into two steps. The investor first calls `requestDeposit()` to lock assets, then waits for the vault manager to process the request. Once fulfilled, the investor calls `deposit()` to claim their shares. Exchange rates are determined at fulfillment time, not request time.
 
 ![ERC-7540 asynchronous deposit flow](./erc-7540-async-flow.svg)
 
-**Request lifecycle**
+Each request moves through three states: pending (submitted, waiting for processing), claimable (fulfilled and priced), and claimed (investor has collected their shares or assets).
 
 ![Request lifecycle: Pending, Claimable, Claimed](./request-lifecycle.svg)
 
 ## ERC-7540 Functions and Features {#body}
 
-ERC-7540 inherits the full ERC-4626 interface but repurposes `deposit`/`mint`/`withdraw`/`redeem` as **claim** functions. The new `requestDeposit` and `requestRedeem` functions handle the initial request step.
+ERC-7540 inherits the full ERC-4626 interface but repurposes `deposit`/`mint`/`withdraw`/`redeem` as claim functions. The new `requestDeposit` and `requestRedeem` functions handle the initial request step.
 
 ### Deposit request flow {#deposit-request-flow}
 
@@ -131,7 +129,7 @@ When a vault returns `requestId = 0` for all requests, only the `controller` add
 
 #### DepositRequest Event {#depositrequest-event}
 
-**MUST** be emitted when a deposit request is submitted via [`requestDeposit`](#requestdeposit).
+MUST be emitted when a deposit request is submitted via [`requestDeposit`](#requestdeposit).
 
 ```solidity
 event DepositRequest(
@@ -145,7 +143,7 @@ event DepositRequest(
 
 #### RedeemRequest Event {#redeemrequest-event}
 
-**MUST** be emitted when a redemption request is submitted via [`requestRedeem`](#requestredeem).
+MUST be emitted when a redemption request is submitted via [`requestRedeem`](#requestredeem).
 
 ```solidity
 event RedeemRequest(
@@ -159,7 +157,7 @@ event RedeemRequest(
 
 #### OperatorSet Event {#operatorset-event}
 
-**MUST** be emitted when an operator is approved or revoked via [`setOperator`](#setoperator).
+MUST be emitted when an operator is approved or revoked via [`setOperator`](#setoperator).
 
 ```solidity
 event OperatorSet(
@@ -171,7 +169,7 @@ event OperatorSet(
 
 ### Preview functions {#preview-functions}
 
-In asynchronous vaults, `previewDeposit`, `previewMint`, `previewRedeem`, and `previewWithdraw` **MUST** revert because the exchange rate is not known until the request is fulfilled. This is a key behavioral difference from ERC-4626.
+In asynchronous vaults, `previewDeposit`, `previewMint`, `previewRedeem`, and `previewWithdraw` MUST revert because the exchange rate is not known until the request is fulfilled. This is a key behavioral difference from ERC-4626.
 
 ## Further reading {#further-reading}
 
