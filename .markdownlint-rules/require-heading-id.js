@@ -110,9 +110,11 @@ module.exports = {
           context: line.trim(),
         }
 
-        if (isTranslation && englishHeadings) {
+        if (isTranslation) {
           const englishId =
-            englishHeadings[headingIndex] && englishHeadings[headingIndex].id
+            englishHeadings &&
+            englishHeadings[headingIndex] &&
+            englishHeadings[headingIndex].id
           if (englishId) {
             error.detail = `h${level} missing {#id}. English: {#${englishId}}`
             error.fixInfo = {
@@ -121,7 +123,7 @@ module.exports = {
               insertText: ` {#${englishId}}`,
             }
           } else {
-            error.detail = `h${level} missing {#id}. No English match found -- fix manually`
+            error.detail = `h${level} missing {#id}. Fix English source first`
           }
         } else {
           const suggested = slugify(text)
