@@ -271,7 +271,12 @@ async function translateNormalizedMarkdown(
   // Step 5: Reconstruct
   let finalContent = reconstructFromPlaceholders(translatedProse, extractions)
 
-  // Step 6: Translate code comments (from normalizer tree)
+  // Step 6: Restore heading anchor IDs from English source.
+  // The normalizer strips {#id} for hashing; Gemini never sees them.
+  // We copy them back by matching heading level and position.
+  finalContent = restoreHeadingIds(finalContent, fileContent)
+
+  // Step 7: Translate code comments (from normalizer tree)
   const commentNodes = collectCommentNodes(tree)
   if (commentNodes.length > 0) {
     try {
@@ -293,6 +298,46 @@ async function translateNormalizedMarkdown(
     translatedContent: finalContent,
     tokensUsed: totalTokens,
   }
+}
+
+/**
+ * Restore heading anchor IDs from the English source onto translated headings.
+ *
+ * Matches by heading level and sequential position. The normalizer strips
+ * {#anchor-id} before sending to Gemini; this copies them back from English.
+ */
+function restoreHeadingIds(translated: string, english: string): string {
+  const HEADING_RE = /^(#{1,6})\s+/gm
+  const HEADING_ID_RE = /^(#{1,6}\s+.+?)[ \t]*(\{#[^}]+\})[ \t]*$/gm
+
+  // Extract IDs from English in order
+  const englishIds: string[] = []
+  let match
+  while ((match = HEADING_ID_RE.exec(english)) !== null) {
+    englishIds.push(match[2])
+  }
+
+  if (englishIds.length === 0) return translated
+
+  // Find headings in translated text (without IDs) and append the English ID
+  let idIndex = 0
+  const lines = translated.split("\n")
+  for (let i = 0; i < lines.length; i++) {
+    if (idIndex >= englishIds.length) break
+    HEADING_RE.lastIndex = 0
+    if (HEADING_RE.test(lines[i]) && !lines[i].includes("{#")) {
+      lines[i] = `${lines[i].trimEnd()} ${englishIds[idIndex]}`
+      idIndex++
+    }
+  }
+
+  if (idIndex < englishIds.length) {
+    console.warn(
+      `  [heading-ids] Restored ${idIndex}/${englishIds.length} heading IDs (translated file has fewer headings)`
+    )
+  }
+
+  return lines.join("\n")
 }
 
 /**
