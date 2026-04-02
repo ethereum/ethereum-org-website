@@ -1,7 +1,7 @@
 import isChromatic from "chromatic/isChromatic"
 import { MotionGlobalConfig } from "motion/react"
 import { IBM_Plex_Mono, Inter } from "next/font/google"
-import type { Preview } from "@storybook/react"
+import type { Preview } from "@storybook/nextjs"
 
 import ThemeProvider from "@/components/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
@@ -40,10 +40,6 @@ export const breakpointSet: [token: string, value: string][] = [
 ]
 
 const preview: Preview = {
-  globals: {
-    locale: "en",
-    locales: baseLocales,
-  },
   decorators: [
     withNextThemes({
       themes: {
@@ -99,6 +95,10 @@ const preview: Preview = {
         }
       }, {}),
     },
+  },
+  initialGlobals: {
+    locale: "en",
+    locales: baseLocales,
   },
 }
 

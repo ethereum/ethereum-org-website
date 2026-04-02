@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Meta, type StoryObj } from "@storybook/react"
+import { Meta, type StoryObj } from "@storybook/nextjs"
 
 import SwitchComponent from "../switch"
 
