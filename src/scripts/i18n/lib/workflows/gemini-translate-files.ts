@@ -217,6 +217,7 @@ async function translateLanguage(
         fileType: file.type,
         targetLanguage: language,
         glossaryTerms: fileGlossary,
+        useNormalizer: file.type === "markdown",
       })
 
       const destPath = getDestinationFromPath(file.path, language)
