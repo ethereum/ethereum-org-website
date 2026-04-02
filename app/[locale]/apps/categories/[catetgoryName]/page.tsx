@@ -63,11 +63,8 @@ const Page = async (props: {
     throw new Error("Failed to fetch apps data")
   }
 
-  const t = await getTranslations({ locale, namespace: "page-apps" })
-  const tSubcategory = await getTranslations({
-    locale,
-    namespace: "app-subcategories",
-  })
+  const t = await getTranslations("page-apps")
+  const tSubcategory = await getTranslations("app-subcategories")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -208,7 +205,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, catetgoryName } = params
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
 
   // Normalize slug to lowercase
   const normalizedSlug = catetgoryName.toLowerCase()

@@ -30,10 +30,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tutorials",
-  })
+  const t = await getTranslations("page-developers-tutorials")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -92,10 +89,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tutorials",
-  })
+  const t = await getTranslations("page-developers-tutorials")
 
   return await getMetadata({
     locale,

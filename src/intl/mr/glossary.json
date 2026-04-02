@@ -76,7 +76,7 @@
   "constantinople-fork-term": "कॉन्स्टँटिनोपल फोर्क",
   "constantinople-fork-definition": "<a href=\"/glossary/#metropolis\">मेट्रोपॉलिस</a> टप्प्याचा दुसरा भाग, जो मूळतः 2018 च्या मध्यात नियोजित होता. हायब्रीड <a href=\"/glossary/#pow\">प्रूफ-ऑफ-वर्क</a>/<a href=\"/glossary/#pow\">प्रूफ-ऑफ-स्टेक</a> सहमती अल्गोरिदमवर स्विच करणे, इतर बदलांसह अपेक्षित होते.",
   "contract-account-term": "कॉन्ट्रॅक्ट खाते",
-  "contract-account-definition": "एक खाते ज्यात कोड असतो जो दुसऱ्या <a href=\"/glossary/#account\">खात्यातून</a> (<a href=\"/glossary/#eoa\">EOA]</a> किंवा <a href=\"/glossary/#contract-account\">कॉन्ट्रॅक्ट</a>) <a href=\"/glossary/#transaction\">व्यवहार</a> प्राप्त झाल्यावर कार्यान्वित होतो.",
+  "contract-account-definition": "एक खाते ज्यात कोड असतो जो दुसऱ्या <a href=\"/glossary/#account\">खात्यातून</a> (<a href=\"/glossary/#eoa\">EOA</a> किंवा <a href=\"/glossary/#contract-account\">कॉन्ट्रॅक्ट</a>) <a href=\"/glossary/#transaction\">व्यवहार</a> प्राप्त झाल्यावर कार्यान्वित होतो.",
   "contract-creation-transaction-term": "कॉन्ट्रॅक्ट निर्मिती व्यवहार",
   "contract-creation-transaction-definition": "एक विशेष <a href=\"/glossary/#transaction\">व्यवहार</a> ज्यात कॉन्ट्रॅक्टचा आरंभ कोड समाविष्ट असतो. प्राप्तकर्ता `null` वर सेट केला जातो आणि कॉन्ट्रॅक्ट वापरकर्त्याच्या ॲड्रेस आणि `nonce` वरून व्युत्पन्न केलेल्या ॲड्रेसवर तैनात केला जातो. याचा उपयोग <a href=\"/glossary/#contract-account\">कॉन्ट्रॅक्ट</a> नोंदणी करण्यासाठी आणि Ethereum ब्लॉकचेनवर नोंदवण्यासाठी केला जातो.",
   "cryptoeconomics-term": "क्रिप्टोइकॉनॉमिक्स",

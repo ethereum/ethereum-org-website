@@ -29,7 +29,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({ namespace: "page-community-support" })
+  const t = await getTranslations("page-community-support")
 
   return (
     <div>
@@ -409,10 +409,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-support",
-  })
+  const t = await getTranslations("page-community-support")
 
   return await getMetadata({
     locale,

@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section } from "@/components/ui/section"
@@ -10,11 +10,7 @@ interface OrganizerCTAProps {
 }
 
 export default async function OrganizerCTA({ className }: OrganizerCTAProps) {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   return (
     <Section

@@ -61,11 +61,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const discoverApps = getDiscoverApps(appsData, 6)
 
   // Get translations
-  const t = await getTranslations({ locale, namespace: "page-apps" })
-  const tSubcategory = await getTranslations({
-    locale,
-    namespace: "app-subcategories",
-  }) // TODO: Update to `await getTranslations("app-subcategories")` when #17898 merged
+  const t = await getTranslations("page-apps")
+  const tSubcategory = await getTranslations("app-subcategories")
 
   // Translate subcategory tags, falling back to the raw string
   const translateSubcategories = (tag: string) => {
@@ -73,10 +70,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     return tSubcategory.has(key) ? tSubcategory(key) : tag
   }
 
-  const translateApp = (app: AppData): AppData => ({
-    ...app,
-    subCategory: app.subCategory.map(translateSubcategories),
-  })
+  const translateApp = (app: AppData) =>
+    ({
+      ...app,
+      subCategory: app.subCategory.map(translateSubcategories),
+    }) as AppData
 
   const translatedAppsData = Object.fromEntries(
     Object.entries(appsData).map(([category, apps]) => [
@@ -196,7 +194,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
 
   return await getMetadata({
     locale,

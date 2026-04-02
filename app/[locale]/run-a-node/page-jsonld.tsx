@@ -19,9 +19,7 @@ export default async function RunANodePageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-run-a-node",
-  })
+  const t = await getTranslations("page-run-a-node")
 
   const url = normalizeUrlForJsonLd(locale, `/run-a-node/`)
 

@@ -21,11 +21,8 @@ import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
 const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
   const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-developers-tools")
+  const tCommon = await getTranslations("common")
 
   const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 
@@ -63,7 +60,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
             status={getCategoryTagStyle(categorySlug)}
             className="px-1 py-0"
           >
-            {tool.category}
+            {t(`page-developers-tools-category-${categorySlug}-title`)}
           </Tag>
           <h2 className="text-3xl">{tool.name}</h2>
           <TagsInlineText

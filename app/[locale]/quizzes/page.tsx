@@ -46,7 +46,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale })
+  const t = await getTranslations()
 
   return await getMetadata({
     locale,

@@ -19,7 +19,7 @@ export default async function DevelopersToolsJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-tools" })
+  const t = await getTranslations("page-developers-tools")
 
   const url = normalizeUrlForJsonLd(locale, "/developers/tools/")
 

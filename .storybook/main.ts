@@ -14,27 +14,22 @@ const config: StorybookConfig = {
     "../src/layouts/stories/*.stories.tsx",
     "../src/styles/*.stories.tsx",
   ],
+
   addons: [
     "@storybook/addon-links",
-    {
-      name: "@storybook/addon-essentials",
-      options: {
-        backgrounds: false,
-      },
-    },
-    "@storybook/addon-interactions",
     "@storybook/addon-themes",
     "@chromatic-com/storybook",
     "storybook-next-intl",
+    "@storybook/addon-docs",
   ],
+
   staticDirs: ["../public"],
+
   framework: {
     name: "@storybook/nextjs",
     options: {},
   },
-  docs: {
-    autodocs: "tag",
-  },
+
   webpackFinal: async (config) => {
     config.module = config.module || {}
     config.module.rules = config.module.rules || []
@@ -75,6 +70,7 @@ const config: StorybookConfig = {
 
     return config
   },
+
   typescript: {
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
@@ -82,8 +78,10 @@ const config: StorybookConfig = {
 
     reactDocgen: "react-docgen-typescript",
   },
+
   features: {
     experimentalRSC: true,
+    backgrounds: false,
   },
 }
 export default config
