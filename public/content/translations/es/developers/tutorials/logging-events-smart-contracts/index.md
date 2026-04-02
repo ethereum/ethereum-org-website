@@ -1,8 +1,8 @@
 ---
 title: Registrar datos de contratos inteligentes con eventos
-description: Una introducción a los eventos de los contratos inteligentes y cómo puede usarlos para registrar datos
+description: "Una introducción a los eventos de los contratos inteligentes y cómo puede usarlos para registrar datos"
 author: "jdourlens"
-tags: ["contratos inteligentes", "remix", "solidity", "eventos"]
+tags: ["contratos inteligentes", "Remix", "Solidity", "eventos"]
 skill: intermediate
 breadcrumb: Registro de eventos
 lang: es
