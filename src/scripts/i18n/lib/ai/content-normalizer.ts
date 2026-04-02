@@ -215,8 +215,16 @@ function codeTag(hash: string): string {
   return `<HTML-PLACEHOLDER-CODE-${hash} />`
 }
 
-function componentTag(hash: string): string {
+function componentSelfClosingTag(hash: string): string {
   return `<HTML-PLACEHOLDER-COMPONENT-${hash} />`
+}
+
+function componentOpenTag(hash: string): string {
+  return `<HTML-PLACEHOLDER-COMPONENT-${hash}>`
+}
+
+function componentCloseTag(hash: string): string {
+  return `</HTML-PLACEHOLDER-COMPONENT-${hash}>`
 }
 
 function imageTag(hash: string): string {
@@ -378,23 +386,29 @@ function extractComponents(
       }
 
       const hash = shortHash(fullMatch)
-      const placeholder = componentTag(hash)
 
       const childNodes: ContentNode[] = [...translatable]
 
       // Recursively normalize children to decompose nested HTML tags,
       // inline code, links, etc. into their own sub-nodes.
+      let normalizedChildren = ""
       if (children.trim()) {
         const childResult = normalizeContent(children)
-        // Merge the sub-tree into this component's children
+        normalizedChildren = childResult.normalized
         for (const childNode of childResult.tree) {
           childNodes.push(childNode)
         }
-        // Merge child extractions into parent
         childResult.extractions.forEach((v, k) => {
           extractions.set(k, v)
         })
       }
+
+      // Wrapper style: children text stays visible to Gemini.
+      // Translatable attributes (title, etc.) are in the tree for
+      // the JSX attribute translation phase to handle separately.
+      const open = componentOpenTag(hash)
+      const close = componentCloseTag(hash)
+      const placeholder = `${open}...${close}`
 
       tree.push({
         type: "component",
@@ -405,8 +419,8 @@ function extractComponents(
         meta: { componentName: name, inertAttributes: inert },
       })
 
-      extractions.set(placeholder, fullMatch)
-      return placeholder
+      extractions.set(`COMPONENT:${hash}`, fullMatch)
+      return `${open}${normalizedChildren}${close}`
     }
   )
 
@@ -421,7 +435,7 @@ function extractComponents(
       }
 
       const hash = shortHash(fullMatch)
-      const placeholder = componentTag(hash)
+      const placeholder = componentSelfClosingTag(hash)
 
       tree.push({
         type: "component",
@@ -741,9 +755,9 @@ function normalizeWhitespace(markdown: string): string {
  * not on the content-addressed hashes embedded in placeholder tags.
  */
 const BLOCK_PLACEHOLDER_RE =
-  /<HTML-PLACEHOLDER-(?:CODEBLOCK|CODE|COMPONENT|IMAGE)-[a-f0-9]+ \/>/g
+  /<HTML-PLACEHOLDER-(?:CODEBLOCK|CODE|IMAGE)-[a-f0-9]+ \/>/g
 const WRAPPER_TAG_RE =
-  /<\/?HTML-PLACEHOLDER-(?:LINK|HTMLTAG)-[a-f0-9]+(?:\s\/)?>/g
+  /<\/?HTML-PLACEHOLDER-(?:LINK|HTMLTAG|COMPONENT)-[a-f0-9]+(?:\s\/)?>/g
 
 function stripPlaceholderTags(text: string): string {
   return text

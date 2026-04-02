@@ -147,11 +147,12 @@ This content has been pre-processed. Non-translatable elements have been replace
    <HTML-PLACEHOLDER-CODEBLOCK-****** /> = code block (will be restored)
    <HTML-PLACEHOLDER-CODE-****** /> = inline code (will be restored)
    <HTML-PLACEHOLDER-IMAGE-****** /> = image (will be restored)
-   <HTML-PLACEHOLDER-COMPONENT-****** /> = JSX component (will be restored)
+   <HTML-PLACEHOLDER-COMPONENT-****** /> = childless JSX component (will be restored)
 
 2. WRAPPER placeholders -- translate the text BETWEEN the tags, keep the tags themselves:
    <HTML-PLACEHOLDER-LINK-******>translate this text</HTML-PLACEHOLDER-LINK-******>
    <HTML-PLACEHOLDER-HTMLTAG-******>translate this text</HTML-PLACEHOLDER-HTMLTAG-******>
+   <HTML-PLACEHOLDER-COMPONENT-******>translate this text</HTML-PLACEHOLDER-COMPONENT-******>
    You MAY reorder wrapper placeholders within a sentence to match natural ${targetLanguage} word order.
    Do NOT split a wrapper pair or nest them differently.
 

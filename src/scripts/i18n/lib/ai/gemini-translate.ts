@@ -315,7 +315,7 @@ function verifyPlaceholders(
   }
 
   // Wrapper open tags
-  const wrapperOpenRe = /<HTML-PLACEHOLDER-(?:LINK|HTMLTAG)-[a-f0-9]+>/g
+  const wrapperOpenRe = /<HTML-PLACEHOLDER-(?:LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
   while ((match = wrapperOpenRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -323,7 +323,7 @@ function verifyPlaceholders(
   }
 
   // Wrapper close tags
-  const wrapperCloseRe = /<\/HTML-PLACEHOLDER-(?:LINK|HTMLTAG)-[a-f0-9]+>/g
+  const wrapperCloseRe = /<\/HTML-PLACEHOLDER-(?:LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
   while ((match = wrapperCloseRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -348,7 +348,7 @@ function reconstructFromPlaceholders(
 
   // Block placeholders: direct replacement with originals
   extractions.forEach((original, placeholder) => {
-    if (placeholder.startsWith("LINK:") || placeholder.startsWith("HTMLTAG:")) {
+    if (placeholder.startsWith("LINK:") || placeholder.startsWith("HTMLTAG:") || placeholder.startsWith("COMPONENT:")) {
       return
     }
     result = result.replace(placeholder, original)
@@ -389,6 +389,28 @@ function reconstructFromPlaceholders(
       const closingMatch = original.match(/<\/(\w+)>/)
       if (tagMatch && closingMatch) {
         const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
+        result =
+          result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+      }
+    }
+  })
+
+  // Wrapper placeholders: COMPONENT (components with children)
+  extractions.forEach((original, key) => {
+    if (!key.startsWith("COMPONENT:")) return
+    const hash = key.slice(10)
+    const openTag = `<HTML-PLACEHOLDER-COMPONENT-${hash}>`
+    const closeTag = `</HTML-PLACEHOLDER-COMPONENT-${hash}>`
+
+    const openIdx = result.indexOf(openTag)
+    const closeIdx = result.indexOf(closeTag)
+    if (openIdx >= 0 && closeIdx >= 0) {
+      const translatedChildren = result.slice(openIdx + openTag.length, closeIdx)
+      // Rebuild: original opening tag + translated children + closing tag
+      const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
+      const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
+      if (openingTagMatch && closingTagMatch) {
+        const rebuilt = `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedChildren}</${closingTagMatch[1]}>`
         result =
           result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
       }
