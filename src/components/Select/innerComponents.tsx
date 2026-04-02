@@ -1,4 +1,10 @@
-import { createContext, useContext, useRef } from "react"
+import {
+  createContext,
+  isValidElement,
+  useContext,
+  useEffect,
+  useRef,
+} from "react"
 import { ChevronDown } from "lucide-react"
 import type {
   ContainerProps,
@@ -156,7 +162,7 @@ const Menu = <
 }
 
 const OPTION_HEIGHT = 36
-const VIRTUAL_THRESHOLD = 50 // Virtualize when more than 50 options
+const VIRTUAL_THRESHOLD = 30
 
 const MenuList = <
   Option,
@@ -192,8 +198,9 @@ const MenuList = <
       className={menuList()}
       items={childArray}
       focusedIndex={childArray.findIndex(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (child: any) => child?.props?.isFocused
+        (child) =>
+          isValidElement<{ isFocused?: boolean }>(child) &&
+          child.props.isFocused
       )}
       scrollRef={scrollRef}
     />
@@ -222,6 +229,13 @@ function VirtualizedMenuListInner({
     overscan: 5,
     initialOffset: focusedIndex > 0 ? focusedIndex * OPTION_HEIGHT : 0,
   })
+
+  // Scroll to focused option on keyboard navigation (arrow keys, Page Up/Down, Home/End)
+  useEffect(() => {
+    if (focusedIndex >= 0) {
+      virtualizer.scrollToIndex(focusedIndex, { align: "auto" })
+    }
+  }, [focusedIndex, virtualizer])
 
   return (
     <div

@@ -6,7 +6,6 @@ import { IS_PROD } from "./env"
 
 export const MATOMO_LS_KEY = "ethereum-org.matomo-opt-out"
 
-// Cache opt-out status to avoid synchronous localStorage reads on every interaction
 let cachedOptOut: boolean | null = null
 
 const isOptedOut = (): boolean => {
@@ -17,10 +16,9 @@ const isOptedOut = (): boolean => {
   } catch {
     cachedOptOut = false
   }
-  return cachedOptOut!
+  return cachedOptOut as boolean
 }
 
-// Allow cache refresh when opt-out status changes (e.g. from cookie banner)
 export const clearMatomoOptOutCache = () => {
   cachedOptOut = null
 }
@@ -43,7 +41,6 @@ export const trackCustomEvent = ({
 
   if (isOptedOut()) return
 
-  // Defer tracking to avoid blocking user interactions (improves INP)
   scheduleIdleCallback(() => {
     // Set custom URL removing any query params or hash fragments
     if (window) {
