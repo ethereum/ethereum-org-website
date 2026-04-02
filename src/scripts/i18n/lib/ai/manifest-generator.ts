@@ -460,16 +460,16 @@ function flattenTrie(
  * Call this after translating a markdown file to record which English
  * source version the translation was made against.
  */
-export function writeMarkdownManifest(
-  translationPath: string,
+/**
+ * Generate manifest content as a string (for committing via GitHub API).
+ */
+export function buildMarkdownManifestContent(
   englishSourcePath: string,
   englishContent: string,
   placeholderOrder?: string[],
   placeholderMap?: Record<string, { type: string; values: Record<string, string> }>
-): void {
+): string {
   const fileManifest = generateFileManifest(englishContent, "markdown")
-  const manifestPath = join(dirname(translationPath), ".manifest.json")
-
   const manifest: PerFileManifest = {
     version: 1,
     englishSource: englishSourcePath,
@@ -479,9 +479,28 @@ export function writeMarkdownManifest(
     placeholderOrder,
     placeholderMap,
   }
+  return JSON.stringify(manifest, null, 2) + "\n"
+}
 
+/**
+ * Write a .manifest.json sibling next to a translated markdown file (local disk).
+ */
+export function writeMarkdownManifest(
+  translationPath: string,
+  englishSourcePath: string,
+  englishContent: string,
+  placeholderOrder?: string[],
+  placeholderMap?: Record<string, { type: string; values: Record<string, string> }>
+): void {
+  const manifestPath = join(dirname(translationPath), ".manifest.json")
+  const content = buildMarkdownManifestContent(
+    englishSourcePath,
+    englishContent,
+    placeholderOrder,
+    placeholderMap
+  )
   mkdirSync(dirname(manifestPath), { recursive: true })
-  writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + "\n")
+  writeFileSync(manifestPath, content)
 }
 
 // ---------------------------------------------------------------------------
