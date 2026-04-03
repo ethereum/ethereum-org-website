@@ -6,7 +6,7 @@ lang: id
 
 Sebuah node Ethereum terdiri dari dua klien: [klien eksekusi](/developers/docs/nodes-and-clients/#execution-clients) dan [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients). Agar sebuah node dapat mengusulkan blok baru, node tersebut juga harus menjalankan [klien validator](#validators).
 
-Ketika Ethereum menggunakan [proof-of-work](/developers/docs/consensus-mechanisms/pow/), klien eksekusi sudah cukup untuk menjalankan node Ethereum penuh. Namun, sejak menerapkan [proof-of-stake](/developers/docs/consensus-mechanisms/pow/), klien eksekusi harus digunakan bersama dengan perangkat lunak lain yang disebut [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients).
+Ketika Ethereum menggunakan [proof-of-work](/developers/docs/consensus-mechanisms/pow/), klien eksekusi sudah cukup untuk menjalankan node Ethereum penuh. Namun, sejak menerapkan [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), klien eksekusi harus digunakan bersama dengan perangkat lunak lain yang disebut [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Diagram di bawah ini menunjukkan hubungan antara kedua klien Ethereum. Kedua klien terhubung ke jaringan peer-to-peer (P2P) masing-masing. Jaringan P2P yang terpisah diperlukan karena klien eksekusi menyebarkan (gossip) transaksi melalui jaringan P2P mereka, memungkinkan mereka untuk mengelola kumpulan transaksi lokal mereka, sementara klien konsensus menyebarkan blok melalui jaringan P2P mereka, memungkinkan konsensus dan pertumbuhan rantai.
 

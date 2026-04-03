@@ -6,7 +6,7 @@ lang: vi
 
 Một nút Ethereum bao gồm hai máy khách: một [máy khách thực thi](/developers/docs/nodes-and-clients/#execution-clients) và một [máy khách đồng thuận ](/developers/docs/nodes-and-clients/#consensus-clients). Để một nút đề xuất một khối mới, nó cũng phải chạy một [máy khách xác thực](#validators).
 
-Khi Ethereum sử dụng [bằng chứng công việc](/developers/docs/consensus-mechanisms/pow/), một máy khách thực thi là đủ để chạy một nút Ethereum đầy đủ. Tuy nhiên, kể từ khi triển khai [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pow/), máy khách thực thi phải được sử dụng cùng với một phần mềm khác được gọi là [máy khách đồng thuận ](/developers/docs/nodes-and-clients/#consensus-clients).
+Khi Ethereum sử dụng [bằng chứng công việc](/developers/docs/consensus-mechanisms/pow/), một máy khách thực thi là đủ để chạy một nút Ethereum đầy đủ. Tuy nhiên, kể từ khi triển khai [bằng chứng cổ phần](/developers/docs/consensus-mechanisms/pos/), máy khách thực thi phải được sử dụng cùng với một phần mềm khác được gọi là [máy khách đồng thuận ](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Sơ đồ dưới đây cho thấy mối quan hệ giữa hai máy khách Ethereum. Hai máy khách kết nối với các mạng ngang hàng (P2P) tương ứng của riêng chúng. Cần có các mạng P2P riêng biệt vì các máy khách thực thi lan truyền các giao dịch qua mạng P2P của chúng, cho phép chúng quản lý vùng giao dịch cục bộ của mình, trong khi các máy khách đồng thuận lan truyền các khối qua mạng P2P của chúng, cho phép sự đồng thuận và phát triển chuỗi.
 
