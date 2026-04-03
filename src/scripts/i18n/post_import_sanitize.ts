@@ -2922,6 +2922,98 @@ function fixBareRtlEquations(
 }
 
 /**
+ * Wrap bare LTR values in RTL files with <span dir="ltr"> to prevent
+ * BiDi rendering issues. Catches patterns Gemini may miss:
+ *
+ * - Numbers with Latin units: 32 ETH, 100 Gwei, 2 TB, 13s, 24h
+ * - Percentages: 12.5%, 51%, -12.5%
+ * - Currency: $100,000, $2,500 USD
+ * - Version/protocol IDs: v1.10.8, EIP-1559, ERC-721
+ * - Large formatted numbers: 21,000, 100,000
+ * - Decimal numbers with context: 0.000252 ETH
+ * - Multipliers: 2x, 100x
+ *
+ * Skips: code blocks, inline code, markdown link URLs, bare URLs,
+ * HTML attributes, already-wrapped spans, and frontmatter.
+ */
+function fixBareRtlValues(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!RTL_LOCALES.has(locale)) return { content, fixCount: 0 }
+  let fixCount = 0
+
+  const fmRe = /^(---\n[\s\S]*?\n---\n)/
+  const fmMatch = content.match(fmRe)
+  const frontmatter = fmMatch ? fmMatch[1] : ""
+  let body = fmMatch ? content.slice(frontmatter.length) : content
+
+  const parts = body.split(RTL_SKIP_PATTERN)
+
+  // Common Latin units that appear after numbers in ethereum.org content
+  const UNITS = "ETH|BTC|Gwei|gwei|Wei|wei|USD|EUR|GBP|MB|GB|TB|KB|TH\\/s|MH\\/s|GH\\/s|APR|APY"
+
+  // Pattern 1: Number + Latin unit (32 ETH, 100 Gwei, 2 TB, 13s, 24h)
+  const numUnitRe = new RegExp(
+    `(?<!<span dir="ltr">)(-?\\d[\\d,.]*\\s*(?:${UNITS}|[smh]\\b|x\\b))(?!\\s*<\\/span>)`,
+    "g"
+  )
+
+  // Pattern 2: Bare percentages (-12.5%, 51%)
+  const pctRe = /(?<!<span dir="ltr">)(-?\d[\d,.]*\s*%)(?!\s*<\/span>)/g
+
+  // Pattern 3: Currency with $ symbol ($100,000, $2,500 USD)
+  const currencyRe = /(?<!<span dir="ltr">)(\$\d[\d,.]*(?:\s*(?:USD|EUR|GBP))?)(?!\s*<\/span>)/g
+
+  // Pattern 4: Version/protocol IDs (v1.10.8, EIP-1559, ERC-721)
+  const versionRe = /(?<!<span dir="ltr">)((?:v\d+\.\d+(?:\.\d+)*|(?:EIP|ERC|BLS)-\d+))(?!\s*<\/span>)/g
+
+  // Pattern 5: Large formatted numbers standing alone (21,000 but not inside other patterns)
+  const largeNumRe = /(?<!<span dir="ltr">)(?<!\d)(\d{1,3}(?:,\d{3})+)(?!\s*(?:[a-zA-Z%]|<\/span>))/g
+
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 2 === 1) continue // Skip protected zones
+
+    let part = parts[i]
+    part = part.replace(numUnitRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
+    part = part.replace(pctRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
+    part = part.replace(currencyRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
+    part = part.replace(versionRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
+    part = part.replace(largeNumRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
+    parts[i] = part
+  }
+
+  body = parts.join("")
+  return { content: frontmatter + body, fixCount }
+}
+
+/**
+ * Fix units that ended up outside <span dir="ltr"> wrappers.
+ * Gemini sometimes produces: <span dir="ltr">$100,000</span> USD
+ * Correct form: <span dir="ltr">$100,000 USD</span>
+ */
+function fixUnitOutsideSpan(
+  content: string,
+  locale: string
+): { content: string; fixCount: number } {
+  if (!RTL_LOCALES.has(locale)) return { content, fixCount: 0 }
+  let fixCount = 0
+
+  const UNITS = "ETH|BTC|Gwei|gwei|Wei|wei|USD|EUR|GBP|MB|GB|TB|KB"
+  const re = new RegExp(
+    `(<span dir="ltr">)([^<]+)(<\\/span>)\\s*(${UNITS})`,
+    "g"
+  )
+
+  const fixed = content.replace(re, (_, open, inner, close, unit) => {
+    fixCount++
+    return `${open}${inner} ${unit}${close}`
+  })
+
+  return { content: fixed, fixCount }
+}
+
+/**
  * Remove redundant <span dir="ltr"> wrappers around backtick-delimited inline
  * code. MDX cannot nest markdown syntax (backticks) inside JSX (<span>), so
  * `<span dir="ltr">`\`...\``</span>` renders as broken text instead of inline
@@ -4641,9 +4733,23 @@ function processMarkdownFile(
           `Wrapped ${eqResult.fixCount} bare math equation(s) in <span dir="ltr"> for RTL`
         )
       }
+      const valResult = fixBareRtlValues(content, locale)
+      if (valResult.fixCount > 0) {
+        content = valResult.content
+        issues.push(
+          `Wrapped ${valResult.fixCount} bare LTR value(s) in <span dir="ltr"> for RTL`
+        )
+      }
+      const unitResult = fixUnitOutsideSpan(content, locale)
+      if (unitResult.fixCount > 0) {
+        content = unitResult.content
+        issues.push(
+          `Fixed ${unitResult.fixCount} unit(s) outside <span dir="ltr"> wrapper`
+        )
+      }
 
       // Remove redundant <span dir="ltr"> around backtick inline code
-      // (cleans up after fixBareRtlDates/fixBareRtlEquations and Gemini)
+      // (cleans up after fixBareRtl*/fixBareRtlValues and Gemini)
       const spanBtResult = fixSpanWrappedBackticks(content)
       if (spanBtResult.fixCount > 0) {
         content = spanBtResult.content
@@ -5339,6 +5445,8 @@ export const _testOnly = {
   warnExposedMdxTags,
   fixBareRtlDates,
   fixBareRtlEquations,
+  fixBareRtlValues,
+  fixUnitOutsideSpan,
   fixSpanWrappedBackticks,
   fixBoldWrappedOrderedListNumerals,
   warnTranslatedTechnicalNumerals,

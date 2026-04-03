@@ -31,7 +31,7 @@
 **Problem:** Gemini regresses on transliterations (author names, brand names like "Proto-danksharding") that the sanitizer then has to catch. The review stage currently finds many transliteration issues that should have been handled during translation.
 
 **Proposed solution:**
-- Include transliteration banks (from `.claude/translation-review/transliterations/`) directly in the translation prompt for non-Latin locales
+- Include transliteration banks directly in the translation prompt for non-Latin locales
 - Add language-group-specific transliteration rules to `prompt-builder.ts` (currently only general rules are sent)
 - The sanitizer already has `fixKnownBrandGarbles` with transliteration bank support -- ensure the translation prompt and sanitizer are aligned on the same bank
 
@@ -117,7 +117,7 @@
 **Goal:** Remove the Supabase fallback entirely so the pipeline queries one authoritative glossary source. The local glossary should be complete enough to be the sole source before the quality sweep (~$300-500 full retranslation).
 
 **Required before removal:**
-- Atlas confirms all Supabase/Crowdin glossary terms have been migrated to the enhanced glossary
+- Confirm all Supabase/Crowdin glossary terms have been migrated to the enhanced glossary
 - Tier 2/3 translations are complete (or at least coverage is sufficient for all 24 languages)
 - The local glossary is validated as a superset of the Supabase glossary
 
@@ -186,3 +186,46 @@ This is NOT about logos, decorative images, or screenshots. It's specifically ab
 - Understanding of how the site currently resolves image paths per locale
 
 **Relationship to text translation pipeline:** This could eventually integrate with the same drift detection and automation infrastructure (gemini-v4). An image's "freshness" can be tracked the same way as a markdown file's -- by SHA of the source image.
+
+---
+
+## Package Extraction
+
+### 13. Extract i18n Tooling into Standalone Packages
+
+**Problem:** The glossary, translation pipeline, and (future) image pipeline are
+all embedded in the ethereum-org-website repo. This creates repo bloat for
+cloners (~68MB manifests alone), dependency pollution (i18n-only deps mixed with
+website deps), and prevents reuse across other websites the team maintains.
+
+**Proposed approach:** Phased extraction:
+1. Extract the glossary (data + lookup module) into its own repo/package first
+   (most self-contained, clear public value as a blockchain terminology resource)
+2. Extract the pipeline core (prompt builder, normalizer, batcher, language
+   groups) once it stabilizes post-quality-sweep
+3. Repo-specific glue (Actions, sanitizer, manifests) stays in ethereum-org-website
+
+**Prerequisite:** Quality sweep complete, pipeline stable, manifest format locked.
+
+**Complexity:** Medium overall. Glossary extraction is low-medium; pipeline
+extraction is medium-high due to interface boundary work.
+
+---
+
+## Housekeeping
+
+### 14. Clean Up Working Docs
+
+**Problem:** FUTURE.md itself, along with other working documents in
+`src/scripts/i18n/` and `docs/`, have accumulated during active development.
+Some items may be stale, completed, or contain references to internal tooling
+that shouldn't be in the published repo.
+
+**Tasks:**
+- Audit FUTURE.md: remove completed items, update stale descriptions
+- Audit `docs/` for any internal-only content that shouldn't be published
+- Review `src/scripts/i18n/` for development artifacts vs production code
+- Ensure no internal process references leak into public-facing files
+
+**Prerequisite:** After quality sweep, when the pipeline is stable and the
+scope of what's "done" vs "future" is clear.
