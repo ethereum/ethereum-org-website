@@ -20,9 +20,8 @@ const WithdrawalCredentials: FC = () => {
 
   const mainnetHref = `https://beaconcha.in/validator/${inputValue}#deposits`
   const testnetHref = `https://hoodi.beaconcha.in/validator/${inputValue}#deposits`
-  const disabledClass = !inputValue.length
-    ? "pointer-events-none opacity-50"
-    : ""
+  const isDisabled = !inputValue.length
+  const disabledClass = isDisabled ? "pointer-events-none opacity-50" : ""
 
   return (
     <Flex className="flex-col gap-4">
@@ -35,7 +34,12 @@ const WithdrawalCredentials: FC = () => {
           placeholder={t("comp-withdrawal-credentials-placeholder")}
         />
         <Flex className="w-full flex-col gap-2 sm:w-fit sm:flex-row">
-          <ButtonLink href={mainnetHref} className={disabledClass}>
+          <ButtonLink
+            href={mainnetHref}
+            className={disabledClass}
+            aria-disabled={isDisabled || undefined}
+            tabIndex={isDisabled ? -1 : undefined}
+          >
             {t("page-staking:comp-withdrawal-credentials-verify", {
               network: "Mainnet",
             })}
@@ -44,6 +48,8 @@ const WithdrawalCredentials: FC = () => {
             href={testnetHref}
             variant="outline"
             className={disabledClass}
+            aria-disabled={isDisabled || undefined}
+            tabIndex={isDisabled ? -1 : undefined}
           >
             {t("page-staking:comp-withdrawal-credentials-verify", {
               network: CANONICAL_STAKING_TESTNET,
