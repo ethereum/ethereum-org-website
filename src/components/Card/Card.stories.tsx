@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl"
-import { Meta, type StoryObj } from "@storybook/react"
+import { Meta, type StoryObj } from "@storybook/nextjs"
 
 import { Button } from "../ui/buttons/Button"
 

@@ -11,7 +11,7 @@ summaryPoint2: Le reti di social media decentralizzate proteggono la privacy deg
 summaryPoint3: I token e gli NFT creano nuovi modi per monetizzare i contenuti.
 ---
 
-I social network svolgono un ruolo enorme nelle nostre comunicazioni e interazioni quotidiane. Tuttavia, il controllo centralizzato di queste piattaforme ha creato molti problemi: violazioni dei dati, interruzioni dei server, de-platforming, censura e violazioni della privacy sono alcuni dei compromessi che i social media spesso accettano. Per combattere questi problemi, gli sviluppatori stanno costruendo social network su [Ethereum](). I social network decentralizzati possono risolvere molti dei problemi delle piattaforme di social networking tradizionali e migliorare l'esperienza complessiva degli utenti.
+I social network svolgono un ruolo enorme nelle nostre comunicazioni e interazioni quotidiane. Tuttavia, il controllo centralizzato di queste piattaforme ha creato molti problemi: violazioni dei dati, interruzioni dei server, de-platforming, censura e violazioni della privacy sono alcuni dei compromessi che i social media spesso accettano. Per combattere questi problemi, gli sviluppatori stanno costruendo social network su [Ethereum](/). I social network decentralizzati possono risolvere molti dei problemi delle piattaforme di social networking tradizionali e migliorare l'esperienza complessiva degli utenti.
 
 ## Cosa sono i social network decentralizzati? {#what-are-decentralized-social-networks}
 

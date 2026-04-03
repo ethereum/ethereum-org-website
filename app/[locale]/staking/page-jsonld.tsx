@@ -19,9 +19,7 @@ export default async function StakingPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-staking",
-  })
+  const t = await getTranslations("page-staking")
 
   const url = normalizeUrlForJsonLd(locale, `/staking/`)
 

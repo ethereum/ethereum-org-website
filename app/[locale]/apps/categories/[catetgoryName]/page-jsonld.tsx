@@ -23,7 +23,7 @@ export default async function AppsCategoryJsonLD({
   appsData: Record<string, AppData[]>
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
 
   const url = normalizeUrlForJsonLd(locale, `/apps/categories/${categoryName}`)
   // Get apps for this category

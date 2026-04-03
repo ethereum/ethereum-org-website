@@ -1,5 +1,5 @@
 import { getImageProps, type StaticImageData } from "next/image"
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
@@ -23,8 +23,7 @@ const HomeHero = async ({
   image2xl,
   alt: altProp,
 }: HomeHeroProps) => {
-  const locale = getLocale()
-  const t = await getTranslations({ locale, namespace: "page-index" })
+  const t = await getTranslations("page-index")
 
   const baseImage = image ?? heroBase
   const xlImage = image2xl ?? image ?? hero2xl
@@ -47,6 +46,11 @@ const HomeHero = async ({
   const {
     props: { srcSet: srcSetBase, ...rest },
   } = getImageProps({ ...common, ...baseImage, quality: 5 })
+
+  // Remove blurWidth/blurHeight from rest to avoid React DOM warnings
+  // (Next.js getImageProps includes them but they're not valid HTML attributes)
+  delete (rest as Record<string, unknown>).blurWidth
+  delete (rest as Record<string, unknown>).blurHeight
 
   return (
     <div className={cn("w-full", className)}>

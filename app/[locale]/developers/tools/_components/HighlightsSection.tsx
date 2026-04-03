@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import AppCard from "@/components/AppCard"
 import { Image } from "@/components/Image"
@@ -18,11 +18,7 @@ import type { DeveloperTool } from "../types"
 import { getCategoryTagStyle } from "../utils"
 
 const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   // Don't render section if no tools to highlight
   if (tools.length === 0) return null

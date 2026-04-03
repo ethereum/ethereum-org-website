@@ -17,9 +17,9 @@ export default async function AcknowledgementsJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-contributing-translation-program-acknowledgements",
-  })
+  const t = await getTranslations(
+    "page-contributing-translation-program-acknowledgements"
+  )
 
   const url = normalizeUrlForJsonLd(
     locale,

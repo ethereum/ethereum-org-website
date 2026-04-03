@@ -25,7 +25,7 @@ export default async function DevelopersPageJsonLD({
   hackathons: EventItem[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-index" })
+  const t = await getTranslations("page-developers-index")
 
   const url = normalizeUrlForJsonLd(locale, `/developers/`)
 

@@ -26,7 +26,7 @@ import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.p
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-start" })
+  const t = await getTranslations("page-start")
 
   setRequestLocale(locale)
 
@@ -96,7 +96,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-start" })
+  const t = await getTranslations("page-start")
 
   return await getMetadata({
     locale,

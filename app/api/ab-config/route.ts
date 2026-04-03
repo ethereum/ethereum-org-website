@@ -4,6 +4,8 @@ import { IS_PROD } from "@/lib/utils/env"
 
 import type { ABTestConfig, MatomoExperiment } from "@/lib/ab-testing/types"
 
+export const revalidate = 3600
+
 const isExperimentActive = (experiment: MatomoExperiment): boolean => {
   const now = new Date()
 
@@ -30,8 +32,6 @@ const getPreviewConfig = () => ({
     variants: [{ name: "Original", weight: 100 }],
   },
 })
-
-export const revalidate = 3600
 
 export async function GET() {
   // Preview mode: Show menu with original default
