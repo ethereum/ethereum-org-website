@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import { init, push } from "@socialgouv/matomo-next"
 
+import { isOptedOut } from "@/lib/utils/matomo"
+
 // Module-level flag to prevent double initialization in React Strict Mode
 let matomoInitialized = false
 
@@ -45,6 +47,8 @@ export default function Matomo() {
     if (!previousPath) {
       return setPreviousPath(pathname)
     }
+
+    if (isOptedOut()) return setPreviousPath(pathname)
 
     push(["setReferrerUrl", previousPath])
     push(["setCustomUrl", pathname])
