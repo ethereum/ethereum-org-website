@@ -472,7 +472,7 @@ Questo è l'endpoint che riceve una richiesta di accesso dal provider di servizi
 
 Dovremmo essere in grado di usare [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) per leggere l'ID della richiesta di autenticazione. Tuttavia, non sono riuscito a farlo funzionare e non valeva la pena dedicarci molto tempo, quindi uso semplicemente un [parser XML di uso generale](https://www.npmjs.com/package/fast-xml-parser). L'informazione di cui abbiamo bisogno è l'attributo `ID` all'interno del tag `<samlp:AuthnRequest>`, che si trova al livello superiore dell'XML.
 
-## Utilizzare le firme di Ethereum
+## Utilizzare le firme di Ethereum {#using-ethereum-signatures}
 
 Ora che possiamo inviare un'identità utente al provider di servizi, il passo successivo è ottenere l'identità utente in modo affidabile. Viem ci consente di chiedere semplicemente al portafoglio l'indirizzo dell'utente, ma questo significa chiedere le informazioni al browser. Non controlliamo il browser, quindi non possiamo fidarci automaticamente della risposta che ne otteniamo.
 
