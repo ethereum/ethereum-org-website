@@ -40,10 +40,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-staking-deposit-contract",
-  })
+  const t = await getTranslations("page-staking-deposit-contract")
 
   return await getMetadata({
     locale,

@@ -1,77 +1,78 @@
 ---
-title: "اکثر پوچھے جانے والے سوالات"
-description: Common Ethereum questions about wallets, transactions, staking, and more.
-lang: ur-in
+title: "اکثر پوچھے گئے سوالات"
+description: "والیٹس، ٹرانزیکشنز، اسٹیکنگ، اور مزید کے بارے میں ایتھریم کے عام سوالات۔"
+lang: ur
 ---
 
-# اکثر پوچھے جانے والے سوالات {#faq}
+# اکثر پوچھے گئے سوالات {#faq}
 
-## I sent crypto to the wrong address {#wrong-wallet}
+## میں نے غلط ایڈریس پر کرپٹو بھیج دی ہے {#wrong-wallet}
 
-ایتھیریم پر بھیجی گئی ٹرانزیکشن ناقابل واپسی ہے۔ Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.
+ایتھریم پر بھیجی گئی ٹرانزیکشن ناقابل واپسی ہوتی ہے۔ بدقسمتی سے، اگر آپ نے غلط والیٹ میں ETH یا ٹوکنز بھیج دیے ہیں، تو ٹرانزیکشن کو واپس کرنے کا کوئی طریقہ نہیں ہے۔
 
-**What you can do:**
+**آپ کیا کر سکتے ہیں:**
 
-- **If you know the owner of the address**, contact them directly and ask them to return the funds
-- **If the address belongs to an exchange or known service**, contact their support team, as they may be able to help
-- **If you sent tokens to a contract address**, check whether the contract has a withdrawal or recovery function (this is rare)
+- **اگر آپ ایڈریس کے مالک کو جانتے ہیں**، تو ان سے براہ راست رابطہ کریں اور فنڈز واپس کرنے کا کہیں۔
+- **اگر ایڈریس کسی ایکسچینج یا معروف سروس کا ہے**، تو ان کی سپورٹ ٹیم سے رابطہ کریں، کیونکہ وہ مدد کر سکتے ہیں۔
+- **اگر آپ نے کسی کانٹریکٹ ایڈریس پر ٹوکن بھیجے ہیں**، تو چیک کریں کہ آیا کانٹریکٹ میں رقم نکالنے یا ریکوری کا فنکشن موجود ہے (ایسا شاذ و نادر ہی ہوتا ہے)۔
 
-In most cases, there is no way to recover the funds. No central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Always double-check the recipient address before confirming.
+زیادہ تر معاملات میں، فنڈز کی وصولی کا کوئی طریقہ نہیں ہوتا۔ کوئی بھی مرکزی تنظیم، ادارہ، یا شخص ایتھریم کا مالک نہیں ہے، جس کا مطلب ہے کہ کوئی بھی ٹرانزیکشنز کو واپس نہیں کر سکتا۔ تصدیق کرنے سے پہلے ہمیشہ وصول کنندہ کا ایڈریس دوبارہ چیک کریں۔
 
-## I lost access to my wallet {#lost-wallet-access}
+## میں نے اپنے والیٹ تک رسائی کھو دی ہے {#lost-wallet-access}
 
-Your recovery options depend on the type of wallet you use.
+آپ کے ریکوری کے اختیارات آپ کے استعمال کردہ والیٹ کی قسم پر منحصر ہیں۔
 
-### If you have your seed phrase (recovery phrase)
+### اگر آپ کے پاس اپنا سیڈ فریز (ریکوری فریز) ہے
 
-You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
+آپ اپنے سیڈ فریز کا استعمال کرتے ہوئے کسی بھی ہم آہنگ والیٹ ایپ میں اپنا والیٹ بحال کر سکتے ہیں۔ یہی وجہ ہے کہ اپنے سیڈ فریز کو آف لائن محفوظ رکھنا انتہائی ضروری ہے۔ بحالی کی ہدایات کے لیے اپنے والیٹ فراہم کنندہ کی دستاویزات چیک کریں۔
 
-### If you have lost your seed phrase
+### اگر آپ اپنا سیڈ فریز کھو چکے ہیں
 
-Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
+آپ کے سیڈ فریز یا پرائیویٹ کیز کے بغیر، آپ کے فنڈز بازیافت نہیں کیے جا سکتے۔ کوئی بھی، بشمول ethereum.org، آپ کا پاس ورڈ ری سیٹ نہیں کر سکتا یا سیلف کسٹڈی والیٹ تک رسائی بحال نہیں کر سکتا۔
 
-### If your account is on an exchange
+### اگر آپ کا اکاؤنٹ کسی ایکسچینج پر ہے
 
-If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
+اگر آپ کا اکاؤنٹ Coinbase، Binance، یا Kraken جیسی سینٹرلائزڈ ایکسچینج پر ہے، تو براہ راست ایکسچینج کی سپورٹ ٹیم سے رابطہ کریں۔ وہ اپنے پلیٹ فارم پر اکاؤنٹس کو کنٹرول کرتے ہیں اور پاس ورڈ ری سیٹ کرنے یا اکاؤنٹ کی ریکوری میں مدد کر سکتے ہیں۔
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
+**کبھی بھی اپنا سیڈ فریز کسی ایسے شخص کے ساتھ شیئر نہ کریں** جو آپ کے والیٹ کو بازیافت کرنے میں مدد کا دعویٰ کرے۔ یہ سب سے عام اسکیم کے ہتھکنڈوں میں سے ایک ہے۔ کوئی بھی جائز سروس کبھی بھی آپ کا سیڈ فریز نہیں مانگے گی۔
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <DocLink href="/guides/how-to-use-a-wallet/">
-  How to use a wallet
+  والیٹ کا استعمال کیسے کریں
 </DocLink>
 
-## My transaction is stuck or pending {#stuck-transaction}
+## میری ٹرانزیکشن پھنس گئی ہے یا زیر التوا ہے {#stuck-transaction}
 
-Transactions on Ethereum can get stuck when the gas fee you set was lower than what the network currently requires. Most wallets let you fix this:
+ایتھریم پر ٹرانزیکشنز اس وقت پھنس سکتی ہیں جب آپ کی مقرر کردہ گیس فیس نیٹ ورک کی موجودہ ضرورت سے کم ہو۔ زیادہ تر والیٹس آپ کو اسے ٹھیک کرنے کی سہولت دیتے ہیں:
 
-- **Speed up:** Resubmit the same transaction with a higher gas fee
-- **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
+- **تیز کریں (Speed up):** اسی ٹرانزیکشن کو زیادہ گیس فیس کے ساتھ دوبارہ جمع کروائیں
+- **منسوخ کریں (Cancel):** زیر التوا ٹرانزیکشن والے ہی نانس (nonce) کا استعمال کرتے ہوئے اپنے ہی ایڈریس پر 0 ETH کی ٹرانزیکشن بھیجیں
 
-### Helpful guides
+### مددگار گائیڈز
 
-- [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
-- [پینڈنگ ایتھیریم ٹرانزیکشنز کو کیسے منسوخ کریں](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+- [MetaMask پر زیر التوا ٹرانزیکشن کو تیز یا منسوخ کرنے کا طریقہ](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [زیر التوا ایتھریم ٹرانزیکشنز کو منسوخ کرنے کا طریقہ](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## میں اپنا ایتھیریم گیو اوے کیسے کلیم کر سکتا ہوں؟ {#giveaway-scam}
+## میں اپنے ایتھریم گیو اوے (giveaway) کا دعویٰ کیسے کر سکتا ہوں؟ {#giveaway-scam}
 
-ایتھیریم گیو اوے اسکیمز ہیں جو آپ کے ETH چرانے کے لیے بنائے گئے ہیں۔ Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+ایتھریم گیو اوے (giveaways) دراصل آپ کے ETH چرانے کے لیے بنائے گئے اسکیم ہوتے ہیں۔ ایسی پیشکشوں کے لالچ میں نہ آئیں جو حقیقت سے زیادہ اچھی لگیں۔ اگر آپ کسی گیو اوے ایڈریس پر ETH بھیجتے ہیں، تو آپ کو کوئی گیو اوے نہیں ملے گا، اور آپ اپنے فنڈز بھی بازیافت نہیں کر پائیں گے۔
 
-[اسکیم سے بچاؤ پر مزید](/security/#common-scams)
+[اسکیم سے بچاؤ کے بارے میں مزید](/security/#common-scams)
 
-## How do I stake ETH? {#how-to-stake}
+## میں ETH کو اسٹیک کیسے کروں؟ {#how-to-stake}
 
-ایک ویلیڈیٹر بننے کے لیے، آپ کو ایتھیریم ڈیپازٹ کنٹریکٹ میں 32 ETH اسٹیک کرنا ہوگا اور ایک ویلیڈیٹر نوڈ سیٹ اپ کرنا ہوگا۔ You can also participate with less ETH through staking pools.
+ویلیڈیٹر بننے کے لیے، آپ کو ایتھریم ڈپازٹ کانٹریکٹ میں 32 ETH اسٹیک کرنے اور ایک ویلیڈیٹر نوڈ سیٹ اپ کرنے کی ضرورت ہے۔ آپ اسٹیکنگ پولز کے ذریعے کم ETH کے ساتھ بھی حصہ لے سکتے ہیں۔
 
-More information is available on our [staking pages](/staking/) and at [the staking launchpad](https://launchpad.ethereum.org/).
+مزید معلومات ہمارے [اسٹیکنگ کے صفحات](/staking/) اور [اسٹیکنگ لانچ پیڈ](https://launchpad.ethereum.org/) پر دستیاب ہے۔
 
-## میں ایتھیریم کو کیسے مائن کروں؟ {#mining-ethereum}
+## میں ایتھریم کی مائننگ کیسے کروں؟ {#mining-ethereum}
 
-ایتھیریم مائننگ اب ممکن نہیں ہے۔ Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. اب، مائنرز کے بجائے، ایتھیریم میں ویلیڈیٹرز ہیں۔ کوئی بھی ETH [اسٹیک](/glossary/#staking) کر سکتا ہے اور نیٹ ورک کو محفوظ بنانے کے لیے ویلیڈیٹر سافٹ ویئر چلا کر اسٹیکنگ ریوارڈز حاصل کر سکتا ہے۔
+ایتھریم کی مائننگ اب ممکن نہیں ہے۔ ستمبر 2022 میں [دی مرج (The Merge)](/roadmap/merge/) کے دوران جب ایتھریم [پروف آف ورک](/glossary/#pow) سے [پروف آف اسٹیک](/glossary/#pos) پر منتقل ہوا تو مائننگ کو بند کر دیا گیا تھا۔ اب، مائنرز کے بجائے، ایتھریم میں ویلیڈیٹرز ہوتے ہیں۔ کوئی بھی شخص ETH کو [اسٹیک](/glossary/#staking) کر سکتا ہے اور نیٹ ورک کو محفوظ بنانے کے لیے ویلیڈیٹر سافٹ ویئر چلانے پر اسٹیکنگ کے انعامات حاصل کر سکتا ہے۔

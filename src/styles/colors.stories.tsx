@@ -1,6 +1,6 @@
 import { type ReactNode } from "react"
 import { capitalize } from "lodash"
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { HStack, Stack, VStack } from "@/components/ui/flex"
 

@@ -224,6 +224,17 @@ ZK-роллапи можуть стискати дані транзакцій к
 
 ## Хто працює над zkEVM? {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM для L2 порівняно з L1</AlertTitle>
+<AlertDescription>
+Проєкти нижче використовують технологію zkEVM для створення ролапів Layer 2. Також ведуться дослідження щодо використання zkEVM для перевірки блоків L1, що дозволило б валідаторам перевіряти блоки Ethereum без повторного виконання транзакцій.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 До проєктів, що працюють на zkEVMs відносяться:
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM — це проєкт, що фінансується Ethereum Foundation для розробки EVM-сумісного ZK-роллапу та механізму для генерації доказів дійсності для блоків Ethereum._

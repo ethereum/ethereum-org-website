@@ -17,9 +17,9 @@ export default async function ContributorsJsonLD({
   contributors: FileContributor[]
   locale: string
 }) {
-  const t = await getTranslations({
-    namespace: "page-contributing-translation-program-contributors",
-  })
+  const t = await getTranslations(
+    "page-contributing-translation-program-contributors"
+  )
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",

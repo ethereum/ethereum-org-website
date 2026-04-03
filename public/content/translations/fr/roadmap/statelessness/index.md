@@ -79,6 +79,8 @@ Les proposants de bloc utilisent les données d'état pour créer des « témoin
 
 L'absence d'état faible est à un stade de recherche avancé, mais elle repose sur l'implémentation de la séparation proposant-constructeur et les Arbres de Verkle, afin que de petits témoins puissent être transférés entre les pairs. Cela veut dire que l'absence d'était faible prendra probablement quelques années avant d'être introduite dans le réseau principal d'Ethereum.
 
+Le zkEVM pour la vérification L1 est une technologie complémentaire qui pourrait encore améliorer la vérification sans état. Au lieu de simplement vérifier les témoins, les validateurs pourraient vérifier une preuve à divulgation nulle de connaissance attestant que l'ensemble du bloc a été exécuté correctement -- offrant une certitude cryptographique sans réexécuter les transactions.
+
 ### Absence d'état forte {#strong-statelessness}
 
 L'absence d'état forte supprime le besoin pour tous les nœuds de stocker les données d'état. Au lieu de cela, les transactions sont envoyées avec des témoins qui peuvent être agrégés par les producteurs de blocs. Les producteurs de blocs sont alors chargés de stocker uniquement l'état nécessaire à la génération de témoins pour les comptes concernés. La responsabilité de l'état est presque entièrement transférée aux utilisateurs, car ils envoient des témoins et des « listes d'accès » pour déclarer avec quels comptes et clés de stockage ils interagissent. Cela permettrait de disposer de nœuds extrêmement légers, mais il y a des compromis, notamment la difficulté accrue de réaliser des transactions avec des contrats intelligents.

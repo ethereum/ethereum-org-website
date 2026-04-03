@@ -19,9 +19,7 @@ export default async function GetEthPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-get-eth",
-  })
+  const t = await getTranslations("page-get-eth")
 
   const url = normalizeUrlForJsonLd(locale, `/get-eth/`)
 

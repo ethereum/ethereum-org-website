@@ -33,6 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { stablecoins } from "./data"
@@ -78,8 +79,8 @@ const Section = ({
 async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-stablecoins")
+  const tCommon = await getTranslations("common")
 
   setRequestLocale(locale)
 
@@ -118,7 +119,7 @@ async function Page(props: { params: Promise<PageParams> }) {
       .sort((a, b) => b.market_cap - a.market_cap)
       .map(({ market_cap, ...rest }) => ({
         ...rest,
-        marketCap: new Intl.NumberFormat("en-US", {
+        marketCap: numberFormat(locale, {
           style: "currency",
           currency: "USD",
           minimumFractionDigits: 0,
@@ -761,7 +762,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+  const t = await getTranslations("page-stablecoins")
 
   return await getMetadata({
     locale,

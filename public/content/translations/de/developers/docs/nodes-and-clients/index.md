@@ -1,313 +1,313 @@
 ---
-title: Knotenpunkte (Nodes) und Anwendungen (Clients)
-description: "Eine Übersicht über Ethereum-Nodes und Client-Software, wie eine Node eingerichtet wird und warum Sie dies tun sollten."
+title: Blockchain-Knoten und Clients
+description: "Ein Überblick über Ethereum-Blockchain-Knoten und Client-Software sowie darüber, wie man einen Blockchain-Knoten einrichtet und warum man dies tun sollte."
 lang: de
 sidebarDepth: 2
 ---
 
-Ethereum ist ein verteiltes Netzwerk von Computern (bekannt als Nodes), auf denen Software ausgeführt wird, um Blöcke und Transaktionsdaten zu verifizieren. Die Software muss auf Ihrem Computer ausgeführt werden, um ihn in einen Ethereum-Knoten zu verwandeln. Für die Bildung eines Knotens sind zwei separate Softwarekomponenten (die sogenannten „Clients“) erforderlich.
+[Ethereum](/) ist ein verteiltes Netzwerk von Computern (bekannt als Blockchain-Knoten), auf denen Software ausgeführt wird, die Blöcke und Transaktionsdaten verifizieren kann. Die Software muss auf Ihrem Computer ausgeführt werden, um ihn in einen Ethereum-Blockchain-Knoten zu verwandeln. Es sind zwei separate Softwarekomponenten (bekannt als „Clients“ oder Anwendungen) erforderlich, um einen Blockchain-Knoten zu bilden.
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten das Konzept eines Peer-to-Peer-Netzwerks und die [Grundlagen der EVM](/developers/docs/evm/) verstehen, bevor Sie tiefer eintauchen und Ihre eigene Instanz eines Ethereum-Clients starten. Werfen Sie einen Blick auf unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/).
+Sie sollten das Konzept eines Peer-to-Peer-Netzwerks und die [Grundlagen der EVM](/developers/docs/evm/) verstehen, bevor Sie tiefer eintauchen und Ihre eigene Instanz eines Ethereum-Clients ausführen. Werfen Sie einen Blick auf unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/).
 
-Wenn das Thema Nodes für Sie neu ist, empfehlen wir Ihnen, sich zuerst unsere benutzerfreundliche Einführung zum [Betreiben eines Ethereum-Nodes](/run-a-node) anzusehen.
+Wenn das Thema Blockchain-Knoten neu für Sie ist, empfehlen wir Ihnen, sich zunächst unsere benutzerfreundliche Einführung zum [Betreiben eines Ethereum-Blockchain-Knotens](/run-a-node) anzusehen.
 
-## Was sind Nodes und Clients? {#what-are-nodes-and-clients}
+## Was sind Blockchain-Knoten und Clients? {#what-are-nodes-and-clients}
 
-Ein „Node“ ist jede Instanz von Ethereum-Client-Software, die mit anderen Computern verbunden ist, auf denen ebenfalls Ethereum-Software ausgeführt wird und so ein Netzwerk bildet. Ein Client ist eine Implementierung von Ethereum, die Daten entsprechend der Protokollregeln verifiziert und das Netzwerk sicher hält. Ein Knoten muss zwei Clients ausführen: einen Konsens- und einen Ausführungsclient.
+Ein „Blockchain-Knoten“ (Node) ist jede Instanz einer Ethereum-Client-Software, die mit anderen Computern verbunden ist, auf denen ebenfalls Ethereum-Software ausgeführt wird, und so ein Netzwerk bildet. Ein Client (eine Anwendung) ist eine Implementierung von Ethereum, die Daten anhand der Protokollregeln verifiziert und das Netzwerk sicher hält. Ein Blockchain-Knoten muss zwei Clients ausführen: einen Konsens-Client und einen Ausführungs-Client.
 
-- Der Ausführungsclient (auch als Execution Engine, EL-Client oder früher Eth1-Client bekannt) empfängt neue Transaktionen, die im Netzwerk übertragen werden, führt sie im EVM aus und verwaltet den aktuellen Zustand und die Datenbank aller aktuellen Ethereum-Daten.
-- Der Konsensclient (auch als Beacon-Node, CL-Client oder früher Eth2-Client bekannt) implementiert den Proof-of-Stake-Konsensalgorithmus, der es dem Netzwerk ermöglicht, basierend auf validierten Daten des Ausführungsclients eine Einigung zu erzielen. Darüber hinaus gibt es einen dritten Teil der Software, den so genannten „Validator“, der dem Konsensclient hinzugefügt werden kann und es einem Knoten ermöglicht, sich an der Sicherung des Netzwerks zu beteiligen.
+- Der Ausführungs-Client (auch bekannt als Execution Engine, EL-Client oder früher Eth1-Client) lauscht auf neue Transaktionen, die im Netzwerk übertragen werden, führt sie in der EVM aus und speichert den neuesten Status sowie die Datenbank aller aktuellen Ethereum-Daten.
+- Der Konsens-Client (auch bekannt als Beacon Node, CL-Client oder früher Eth2-Client) implementiert den Proof-of-Stake-Konsensalgorithmus, der es dem Netzwerk ermöglicht, basierend auf validierten Daten des Ausführungs-Clients eine Einigung zu erzielen. Es gibt auch eine dritte Softwarekomponente, bekannt als „Validator“, die dem Konsens-Client hinzugefügt werden kann und es einem Blockchain-Knoten ermöglicht, sich an der Sicherung des Netzwerks zu beteiligen.
 
-Diese Clients arbeiten zusammen, um den aktuellen Stand der Ethereum Chain zu verfolgen und den Nutzern die Interaktion mit dem Ethereum-Netzwerk zu ermöglichen. Das modulare Design, bei dem mehrere Softwarekomponenten zusammenarbeiten, wird als [eingekapselte Komplexität](https://vitalik.eth.limo/general/2022/02/28/complexity.html) bezeichnet. Dieser Ansatz machte es einfacher, [Die Zusammenführung](/roadmap/merge) nahtlos auszuführen, erleichtert die Wartung und Entwicklung von Client-Software und ermöglicht die Wiederverwendung einzelner Clients, beispielsweise im [Layer-2-Ökosystem](/layer-2/).
+Diese Clients arbeiten zusammen, um die Spitze der Ethereum-Chain zu verfolgen und es Benutzern zu ermöglichen, mit dem Ethereum-Netzwerk zu interagieren. Das modulare Design, bei dem mehrere Softwarekomponenten zusammenarbeiten, wird als [gekapselte Komplexität (encapsulated complexity)](https://vitalik.eth.limo/general/2022/02/28/complexity.html) bezeichnet. Dieser Ansatz machte es einfacher, [The Merge](/roadmap/merge) nahtlos auszuführen, erleichtert die Wartung und Entwicklung von Client-Software und ermöglicht die Wiederverwendung einzelner Clients, beispielsweise im [Ebene-2-Ökosystem](/layer-2/).
 
-![Gekoppelte Ausführungs- und Konsens-Clients](./eth1eth2client.png)
+![Gekoppelter Ausführungs- und Konsens-Client](./eth1eth2client.png)
 Vereinfachtes Diagramm eines gekoppelten Ausführungs- und Konsens-Clients.
 
-### Client-Diversität {#client-diversity}
+### Client-Vielfalt {#client-diversity}
 
-Sowohl [Ausführungs-Klienten](/developers/docs/nodes-and-clients/#execution-clients) als auch [Konsens-Clients](/developers/docs/nodes-and-clients/#consensus-clients) existieren in einer Vielzahl von Programmiersprachen, die von verschiedenen Teams entwickelt wurden.
+Sowohl [Ausführungs-Clients](/developers/docs/nodes-and-clients/#execution-clients) als auch [Konsens-Clients](/developers/docs/nodes-and-clients/#consensus-clients) existieren in einer Vielzahl von Programmiersprachen, die von verschiedenen Teams entwickelt wurden.
 
-Wenn mehrere Client-Implementierungen vorhanden sind, kann das Netzwerk gestärkt werden, indem die Abhängigkeit von einer einzigen Codebasis verringert wird. Das ideale Ziel besteht darin, Vielfalt zu erreichen, ohne dass ein einziger Client das Netzwerk dominiert, um somit potenzielle Einzelstellen von Fehlerquellen zu eliminieren.
-Die Vielfalt der Sprachen lädt auch eine breitere Entwicklergemeinschaft ein und ermöglicht es ihnen, Integrationen in ihrer bevorzugten Sprache zu erstellen.
+Mehrere Client-Implementierungen können das Netzwerk stärken, indem sie seine Abhängigkeit von einer einzigen Codebasis verringern. Das ideale Ziel ist es, Vielfalt zu erreichen, ohne dass ein Client das Netzwerk dominiert, wodurch ein potenzieller Single Point of Failure eliminiert wird.
+Die Vielfalt der Sprachen lädt auch eine breitere Entwickler-Community ein und ermöglicht es ihnen, Integrationen in ihrer bevorzugten Sprache zu erstellen.
 
-Erfahren Sie mehr über [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/).
+Erfahren Sie mehr über [Client-Vielfalt](/developers/docs/nodes-and-clients/client-diversity/).
 
-Diese Implementierungen haben gemeinsam, dass sie alle einer einzigen Spezifikation folgen. Spezifikationen legen fest, wie das Ethereum-Netzwerk und die Blockchain funktionieren. Jedes technische Detail ist definiert, und die Spezifikationen können wie folgt gefunden werden:
+Was diese Implementierungen gemeinsam haben, ist, dass sie alle einer einzigen Spezifikation folgen. Spezifikationen schreiben vor, wie das Ethereum-Netzwerk und die Blockchain funktionieren. Jedes technische Detail ist definiert und die Spezifikationen sind wie folgt zu finden:
 
 - Ursprünglich das [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
-- [Ausführungs-Spezifikationen](https://github.com/ethereum/execution-specs/)
-- [Konsens-Spezifikationen](https://github.com/ethereum/consensus-specs)
+- [Ausführungsspezifikationen (Execution specs)](https://github.com/ethereum/execution-specs/)
+- [Konsensspezifikationen (Consensus specs)](https://github.com/ethereum/consensus-specs)
 - [EIPs](https://eips.ethereum.org/), die in verschiedenen [Netzwerk-Upgrades](/ethereum-forks/) implementiert wurden
 
-### Tracking von Nodes im Netzwerk {#network-overview}
+### Verfolgung von Blockchain-Knoten im Netzwerk {#network-overview}
 
-Es gibt mehrere Tracker, die einen Echtzeit-Überblick über die Knoten im Ethereum-Netzwerk bieten. Beachten Sie, dass diese Crawler aufgrund der Natur dezentraler Netzwerke nur einen begrenzten Überblick über das Netzwerk bieten können und möglicherweise unterschiedliche Ergebnisse melden.
+Mehrere Tracker bieten einen Echtzeit-Überblick über die Blockchain-Knoten im Ethereum-Netzwerk. Beachten Sie, dass diese Crawler aufgrund der Natur dezentralisierter Netzwerke nur eine begrenzte Sicht auf das Netzwerk bieten können und möglicherweise unterschiedliche Ergebnisse melden.
 
-- [Karte der Nodes](https://etherscan.io/nodetracker) von Etherscan
+- [Karte der Blockchain-Knoten](https://etherscan.io/nodetracker) von Etherscan
 - [Ethernodes](https://ethernodes.org/) von Bitfly
-- [Nodewatch](https://www.nodewatch.io/) von Chainsafe, crawlt Konsens-Nodes
-- [Monitoreth](https://monitoreth.io/) – von MigaLabs, ein verteiltes Netzwerküberwachungstool
-- [Wöchentliche Netzwerkzustandsberichte](https://probelab.io) – von ProbeLab, unter Verwendung des [Nebula-Crawlers](https://github.com/dennis-tra/nebula) und anderer Tools
+- [Nodewatch](https://www.nodewatch.io/) von Chainsafe, crawlt Konsens-Knoten
+- [Monitoreth](https://monitoreth.io/) - von MigaLabs, ein verteiltes Netzwerk-Monitoring-Tool
+- [Wöchentliche Netzwerk-Gesundheitsberichte](https://probelab.io) - von ProbeLab, unter Verwendung des [Nebula-Crawlers](https://github.com/dennis-tra/nebula) und anderer Tools
 
-## Node-Typen {#node-types}
+## Arten von Blockchain-Knoten {#node-types}
 
-Wenn Sie [Ihre eigene Node betreiben](/developers/docs/nodes-and-clients/run-a-node/) möchten, sollten Sie verstehen, dass es verschiedene Node-Typen gibt, die Daten unterschiedlich verbrauchen. Die Clients können drei verschiedene Arten von Knoten ausführen: leichte, vollständige und Archivknoten. Es gibt auch Optionen für verschiedene Synchronisierungsstrategien, die eine schnellere Synchronisierungszeit ermöglichen. Die Synchronisierung bezieht sich darauf, wie schnell sie die aktuellsten Informationen über Ethereums Zustand erhalten kann.
+Wenn Sie [Ihren eigenen Blockchain-Knoten betreiben](/developers/docs/nodes-and-clients/run-a-node/) möchten, sollten Sie verstehen, dass es verschiedene Arten von Blockchain-Knoten gibt, die Daten unterschiedlich verbrauchen. Tatsächlich können Clients drei verschiedene Arten von Blockchain-Knoten ausführen: Light, Full und Archive. Es gibt auch Optionen für verschiedene Synchronisationsstrategien, die eine schnellere Synchronisationszeit ermöglichen. Synchronisation bezieht sich darauf, wie schnell die aktuellsten Informationen über den Status von Ethereum abgerufen werden können.
 
 ### Full Node {#full-node}
 
-Vollständige Knoten führen eine Block-für-Block-Validierung der Blockchain durch, einschließlich des Herunterladens und Verifizierens des Block-Inhalts und der Statusdaten für jeden Block. Es gibt verschiedene Klassen von Full Nodes – einige beginnen mit dem Genesis-Block und verifizieren jeden einzelnen Block in der gesamten Geschichte der Blockchain. Andere beginnen ihre Verifizierung bei einem neueren Block, den sie für gültig halten (z. B. Geths „Snap Sync“). Unabhängig davon, wo die Verifizierung beginnt, behalten Full Nodes nur eine lokale Kopie relativ aktueller Daten (in der Regel die letzten 128 Blöcke), sodass ältere Daten gelöscht werden können, um Speicherplatz zu sparen. Ältere Daten können wiederhergestellt werden, wenn sie benötigt werden.
+Full Nodes führen eine Block-für-Block-Validierung der Blockchain durch, einschließlich des Herunterladens und Verifizierens des Blockkörpers und der Statusdaten für jeden Block. Es gibt verschiedene Klassen von Full Nodes – einige beginnen beim Genesis-Block und verifizieren jeden einzelnen Block in der gesamten Geschichte der Blockchain. Andere beginnen ihre Verifizierung bei einem neueren Block, dem sie als gültig vertrauen (z. B. Geths „Snap Sync“). Unabhängig davon, wo die Verifizierung beginnt, behalten Full Nodes nur eine lokale Kopie relativ aktueller Daten (typischerweise die letzten 128 Blöcke), sodass ältere Daten gelöscht werden können, um Speicherplatz zu sparen. Ältere Daten können bei Bedarf neu generiert werden.
 
-- Speichert die vollständigen Blockchain-Daten (obwohl diese regelmäßig „geprunt“ werden, so dass ein vollständiger Knoten nicht alle Zustandsdaten bis zurück zur Genesis speichert)
-- Beteiligt sich an der Blockprüfung, überprüft alle Blöcke und Zustände.
-- Alle Status können entweder aus dem lokalen Speicher abgerufen oder von einem Full Node aus „Snapshots“ neu generiert werden.
-- Bedient das Netzwerk und liefert Daten auf Anfrage.
+- Speichert vollständige Blockchain-Daten (obwohl diese regelmäßig bereinigt werden, sodass ein Full Node nicht alle Statusdaten bis zum Genesis-Block speichert).
+- Nimmt an der Blockvalidierung teil, verifiziert alle Blöcke und Status.
+- Alle Status können von einem Full Node entweder aus dem lokalen Speicher abgerufen oder aus „Snapshots“ neu generiert werden.
+- Bedient das Netzwerk und stellt Daten auf Anfrage zur Verfügung.
 
-### Archiv-Node {#archive-node}
+### Archive Node {#archive-node}
 
-Archivierungsnodes sind Full Nodes, die jeden Block seit Genesis verifizieren und niemals irgendwelche heruntergeladenen Daten löschen.
+Archive Nodes sind Full Nodes, die jeden Block ab dem Genesis-Block verifizieren und niemals heruntergeladene Daten löschen.
 
-- Speichert alles im Full Node und baut zusätzlich ein Archiv von vergangenen Zuständen auf. Dies ist erforderlich, wenn Sie beispielsweise den Kontostand bei Block Nr. 4.000.000 abfragen oder Ihre eigenen Transaktionen einfach und zuverlässig testen möchten, ohne sie mithilfe von Tracing zu validieren.
-- Diese Daten werden in Einheiten von Terabytes dargestellt, was die Archivierungsknoten für den Durchschnittsnutzer weniger attraktiv macht, jedoch für Dienste wie Blockexplorer, Wallet-Anbieter und Chain-Analytics nützlich sein kann.
+- Speichert alles, was im Full Node aufbewahrt wird, und baut ein Archiv historischer Status auf. Dies wird benötigt, wenn Sie beispielsweise einen Kontostand bei Block #4.000.000 abfragen oder einfach und zuverlässig Ihre eigenen Transaktionssätze testen möchten, ohne sie mittels Tracing zu validieren.
+- Diese Daten umfassen Terabytes, was Archive Nodes für durchschnittliche Benutzer weniger attraktiv macht, aber für Dienste wie Blocksuchmaschinen, Wallet-Anbieter und Chain-Analysen nützlich sein kann.
 
-Das Synchronisieren von Clients in jedem anderen Modus als dem Archiv führt zu reduzierten (pruned) Blockchain-Daten. Das bedeutet, es gibt kein Archiv mit allen vergangenen Zuständen, der vollständige Node ist jedoch in der Lage, diese bei Bedarf zu erstellen.
+Das Synchronisieren von Clients in einem anderen Modus als dem Archivmodus führt zu bereinigten Blockchain-Daten. Das bedeutet, dass es kein Archiv aller historischen Status gibt, der Full Node diese jedoch bei Bedarf erstellen kann.
 
-Erfahren Sie mehr über [Archiv-Nodes](/developers/docs/nodes-and-clients/archive-nodes).
+Erfahren Sie mehr über [Archive Nodes](/developers/docs/nodes-and-clients/archive-nodes).
 
 ### Light Node {#light-node}
 
-Anstatt jeden Block herunterzuladen, laden Light Nodes nur Block-Header herunter. Diese Header enthalten zusammenfassende Informationen über den Inhalt der Blöcke. Alle anderen Informationen, die der leichte Node benötigt, werden von einem Full Node angefordert. Der leichte Node kann dann die empfangenen Daten unabhängig mit den Zustandswurzeln in den Block-Headern abgleichen. Leichte Nodes ermöglichen es Nutzern, am Ethereum-Netzwerk teilzunehmen, ohne die leistungsstarke Hardware oder hohe Bandbreite zu benötigen, die für den Betrieb von Full Nodes erforderlich sind. Irgendwann könnten leichte Nodes auf Mobiltelefonen oder eingebetteten Geräten laufen. Light Nodes nehmen nicht am Konsens teil (d. h. sie können keine Validatoren sein), aber sie können mit der gleichen Funktionalität und den gleichen Sicherheitsgarantien wie ein Full Node auf die Ethereum-Blockchain zugreifen.
+Anstatt jeden Block herunterzuladen, laden Light Nodes nur Block-Header herunter. Diese Header enthalten zusammenfassende Informationen über den Inhalt der Blöcke. Alle anderen Informationen, die der Light Node benötigt, werden von einem Full Node angefordert. Der Light Node kann dann die empfangenen Daten unabhängig anhand der Statuswurzeln (State Roots) in den Block-Headern verifizieren. Light Nodes ermöglichen es Benutzern, am Ethereum-Netzwerk teilzunehmen, ohne die leistungsstarke Hardware oder hohe Bandbreite zu benötigen, die für den Betrieb von Full Nodes erforderlich ist. Letztendlich könnten Light Nodes auf Mobiltelefonen oder eingebetteten Geräten laufen. Die Light Nodes nehmen nicht am Konsens teil (d. h. sie können keine Validatoren sein), aber sie können auf die Ethereum-Blockchain mit der gleichen Funktionalität und den gleichen Sicherheitsgarantien wie ein Full Node zugreifen.
 
-Leichte Clients sind ein Bereich, in dem Ethereum aktiv entwickelt wird. Es wird erwartet, dass wir bald neue leichte Clients für die Konsens- und Ausführungsebene entwickeln werden.
-Es gibt auch potenzielle Wege, um Light-Client-Daten über das [Gossip-Netzwerk](https://www.ethportal.net/) bereitzustellen. Dies ist vorteilhaft, da das Gossip-Netzwerk ein Netzwerk von leichten Nodes unterstützen könnte, ohne dass Full Nodes zur Bedienung von Anfragen erforderlich sind.
+Light Clients sind ein Bereich aktiver Entwicklung für Ethereum, und wir erwarten, bald neue Light Clients für die Konsensebene und die Ausführungsebene zu sehen.
+Es gibt auch potenzielle Wege, Light-Client-Daten über das [Gossip-Netzwerk](https://www.ethportal.net/) bereitzustellen. Dies ist vorteilhaft, da das Gossip-Netzwerk ein Netzwerk von Light Nodes unterstützen könnte, ohne dass Full Nodes Anfragen bedienen müssen.
 
-Ethereum unterstützt noch keine große Population von leichten Nodes, jedoch ist die Unterstützung von leichten Nodes ein Bereich, der sich in naher Zukunft voraussichtlich schnell entwickeln wird. Insbesondere Clients wie [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios) und [LodeStar](https://lodestar.chainsafe.io/) konzentrieren sich derzeit stark auf Light Nodes.
+Ethereum unterstützt noch keine große Anzahl von Light Nodes, aber die Unterstützung von Light Nodes ist ein Bereich, der sich voraussichtlich in naher Zukunft schnell entwickeln wird. Insbesondere Clients wie [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios) und [LodeStar](https://lodestar.chainsafe.io/) konzentrieren sich derzeit stark auf Light Nodes.
 
-## Warum sollte ich einen Ethereum-Node betreiben? {#why-should-i-run-an-ethereum-node}
+## Warum sollte ich einen Ethereum-Blockchain-Knoten betreiben? {#why-should-i-run-an-ethereum-node}
 
-Der Betrieb eines eigenen Knotens ermöglicht es Ihnen, Ethereum auf private, autarke und vertrauenswürdige Weise zu nutzen und gleichzeitig das Netz zu unterstützen, da es so robuster und dezentraler wird.
+Der Betrieb eines Blockchain-Knotens ermöglicht es Ihnen, Ethereum direkt, vertrauenslos und privat zu nutzen, während Sie das Netzwerk unterstützen, indem Sie es robuster und dezentralisiert halten.
 
-### Ihre Vorteile {#benefits-to-you}
+### Vorteile für Sie {#benefits-to-you}
 
-Der Betrieb eines eigenen Knotens erlaubt es Ihnen, Ethereum auf private, autarke und vertrauenswürdige Weise zu nutzen. Sie müssen dem Netzwerk nicht vertrauen, da Sie die Daten mit Ihrem Client selbst überprüfen können. „Nicht vertrauen, überprüfen“ ist ein beliebtes Mantra der Blockchain.
+Der Betrieb Ihres eigenen Blockchain-Knotens ermöglicht es Ihnen, Ethereum auf private, autarke und vertrauenslose Weise zu nutzen. Sie müssen dem Netzwerk nicht vertrauen, da Sie die Daten selbst mit Ihrem Client verifizieren können. „Nicht vertrauen, verifizieren“ (Don't trust, verify) ist ein beliebtes Blockchain-Mantra.
 
-- Ihr Node überprüft alle Transaktionen und Blöcke selbstständig anhand der Konsensregeln. Das bedeutet, dass Sie sich nicht auf andere Nodes im Netzwerk verlassen oder ihnen vollständig vertrauen müssen.
-- Sie können ein Ethereum-Wallet mit Ihrem eigenen Knoten verwenden. Sie können dApps sicherer und privater nutzen, da Sie Ihre Adressen und Guthaben nicht an Vermittler weitergeben müssen. Alles kann mit Ihrem eigenen Client überprüft werden. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) und [viele andere Wallets](/wallets/find-wallet/) bieten RPC-Import an, der es ihnen ermöglicht, Ihre Node zu verwenden.
-- Sie können andere Dienste betreiben und selbst hosten, die auf Daten von Ethereum angewiesen sind. Das kann zum Beispiel ein Beacon-Chain-Validator, Software wie Layer 2, Infrastruktur, Block-Explorer, Zahlungsprozessoren usw. sein.
-- Sie können Ihre eigenen benutzerdefinierten [RPC-Endpunkte](/developers/docs/apis/json-rpc/) bereitstellen. Sie könnten diese Endpunkte sogar öffentlich anbieten, um der Community zu helfen, große zentrale Anbieter zu vermeiden.
-- Sie können sich über **Interprozesskommunikation (IPC)** mit Ihrer Node verbinden oder die Node umschreiben, um Ihr Programm als Plugin zu laden. Dies gewährt eine niedrige Latenz, was sehr hilft, z. B. bei der Verarbeitung großer Datenmengen mit Web3-Bibliotheken oder wenn Sie Ihre Transaktionen so schnell wie möglich ersetzen müssen (d. h. Frontrunning).
-- Sie können ETH direkt einsetzen, um das Netzwerk zu sichern und Prämien zu verdienen. Siehe [Solo-Staking](/staking/solo/), um loszulegen.
+- Ihr Blockchain-Knoten verifiziert alle Transaktionen und Blöcke selbstständig anhand der Konsensregeln. Das bedeutet, dass Sie sich nicht auf andere Blockchain-Knoten im Netzwerk verlassen oder ihnen vollständig vertrauen müssen.
+- Sie können ein Ethereum-Wallet mit Ihrem eigenen Blockchain-Knoten verwenden. Sie können Dapps sicherer und privater nutzen, da Sie Ihre Adressen und Guthaben nicht an Vermittler weitergeben müssen. Alles kann mit Ihrem eigenen Client überprüft werden. [MetaMask](https://metamask.io), [Frame](https://frame.sh/) und [viele andere Wallets](/wallets/find-wallet/) bieten RPC-Import an, sodass sie Ihren Blockchain-Knoten verwenden können.
+- Sie können andere Dienste, die von Daten aus Ethereum abhängen, ausführen und selbst hosten. Dies könnte beispielsweise ein Beacon Chain-Validator, Software wie Ebene 2, Infrastruktur, Blocksuchmaschinen, Zahlungsabwickler usw. sein.
+- Sie können Ihre eigenen benutzerdefinierten [RPC-Endpunkte](/developers/docs/apis/json-rpc/) bereitstellen. Sie könnten diese Endpunkte sogar öffentlich für die Community anbieten, um ihr zu helfen, große zentralisierte Anbieter zu vermeiden.
+- Sie können sich über **Inter-process Communications (IPC)** mit Ihrem Blockchain-Knoten verbinden oder den Blockchain-Knoten so umschreiben, dass er Ihr Programm als Plugin lädt. Dies gewährt eine geringe Latenz, was sehr hilfreich ist, z. B. bei der Verarbeitung vieler Daten mit Web3-Bibliotheken oder wenn Sie Ihre Transaktionen so schnell wie möglich ersetzen müssen (d. h. Frontrunning).
+- Sie können ETH direkt staken, um das Netzwerk zu sichern und Belohnungen zu verdienen. Siehe [Solo-Staking](/staking/solo/), um loszulegen.
 
-![Wie Sie über Ihre Anwendung und Nodes auf Ethereum zugreifen](./nodes.png)
+![Wie Sie über Ihre Anwendung und Blockchain-Knoten auf Ethereum zugreifen](./nodes.png)
 
 ### Vorteile für das Netzwerk {#network-benefits}
 
-Eine Vielzahl von Nodes ist wichtig für die Gesundheit, Sicherheit und operative Belastbarkeit von Ethereum.
+Eine vielfältige Gruppe von Blockchain-Knoten ist wichtig für die Gesundheit, Sicherheit und betriebliche Widerstandsfähigkeit von Ethereum.
 
-- Full Nodes setzen die Konsensregeln durch, sodass sie nicht dazu verleitet werden können, Blöcke zu akzeptieren, die nicht den Regeln entsprechen. Dies sorgt für zusätzliche Sicherheit im Netzwerk, denn wenn alle Knoten leichte Nodes wären, die keine vollständige Verifizierung durchführen, könnten Validatoren das Netzwerk angreifen.
-- Im Falle eines Angriffs, der die kryptoökonomischen Abwehrmechanismen von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos) überwindet, kann eine soziale Wiederherstellung durch Full Nodes durchgeführt werden, die sich dafür entscheiden, der ehrlichen Chain zu folgen.
-- Mehr Knoten im Netzwerk führen zu einem vielfältigeren und robusteren Netzwerk, dem ultimativen Ziel der Dezentralisierung, das ein zensurresistentes und zuverlässiges System ermöglicht.
-- Full Nodes bieten den Zugang zu Blockchain-Daten für leichte Clients, die darauf angewiesen sind. Light Nodes speichern nicht die gesamte Blockchain, sondern verifizieren Daten über die [State Roots in den Block-Headern](/developers/docs/blocks/#block-anatomy). Sie können bei Bedarf weitere Informationen von Full Nodes anfordern.
+- Full Nodes setzen die Konsensregeln durch, sodass sie nicht dazu verleitet werden können, Blöcke zu akzeptieren, die diese nicht befolgen. Dies bietet zusätzliche Sicherheit im Netzwerk, denn wenn alle Blockchain-Knoten Light Nodes wären, die keine vollständige Verifizierung durchführen, könnten Validatoren das Netzwerk angreifen.
+- Im Falle eines Angriffs, der die kryptoökonomischen Verteidigungen von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos) überwindet, kann eine soziale Wiederherstellung (Social Recovery) durch Full Nodes durchgeführt werden, die sich entscheiden, der ehrlichen Chain zu folgen.
+- Mehr Blockchain-Knoten im Netzwerk führen zu einem vielfältigeren und robusteren Netzwerk, dem ultimativen Ziel der Dezentralisierung, was ein zensurresistentes und zuverlässiges System ermöglicht.
+- Full Nodes bieten Zugriff auf Blockchain-Daten für leichtgewichtige Clients, die darauf angewiesen sind. Light Nodes speichern nicht die gesamte Blockchain, sondern verifizieren Daten über die [Statuswurzeln in Block-Headern](/developers/docs/blocks/#block-anatomy). Sie können bei Bedarf weitere Informationen von Full Nodes anfordern.
 
 Wenn Sie einen Full Node betreiben, profitiert das gesamte Ethereum-Netzwerk davon, auch wenn Sie keinen Validator betreiben.
 
-## Eigene Node betreiben {#running-your-own-node}
+## Betreiben Ihres eigenen Blockchain-Knotens {#running-your-own-node}
 
-Haben Sie Interesse, Ihren eigenen Ethereum-Client zu betreiben?
+Interessiert daran, Ihren eigenen Ethereum-Client zu betreiben?
 
-Für eine einsteigerfreundliche Einführung besuchen Sie unsere Seite [Node betreiben](/run-a-node), um mehr zu erfahren.
+Für eine anfängerfreundliche Einführung besuchen Sie unsere Seite [Einen Blockchain-Knoten betreiben](/run-a-node), um mehr zu erfahren.
 
-Wenn Sie ein eher technischer Benutzer sind, finden Sie weitere Details und Optionen, wie Sie [Ihre eigene Node aufsetzen](/developers/docs/nodes-and-clients/run-a-node/) können.
+Wenn Sie eher ein technischer Benutzer sind, tauchen Sie in weitere Details und Optionen ein, wie Sie [Ihren eigenen Blockchain-Knoten hochfahren](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Alternativen {#alternatives}
 
-Die Einrichtung eines eigenen Knotens kann Sie Zeit und Ressourcen kosten, aber Sie müssen nicht immer eine eigene Instanz betreiben. In diesem Fall können Sie sich an einen externen API-Anbieter wenden. Für einen Überblick über die Nutzung dieser Dienste, schauen Sie sich [Nodes as a Service](/developers/docs/nodes-and-clients/nodes-as-a-service/) an.
+Das Einrichten eines eigenen Blockchain-Knotens kann Sie Zeit und Ressourcen kosten, aber Sie müssen nicht immer Ihre eigene Instanz betreiben. In diesem Fall können Sie einen API-Anbieter von Drittanbietern verwenden. Einen Überblick über die Nutzung dieser Dienste finden Sie unter [Blockchain-Knoten als Dienstleistung (Nodes as a Service)](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Wenn jemand in Ihrer Community einen Ethereum-Knoten mit öffentlichen APIs betreiben, können Sie Ihre Wallet in einen Community-Knoten über Custom RPC einbinden, um Ihre Privatsphäre besser zu schützen als bei der zufälligen Auswahl eines vertrauenswürdigen Dritten.
+Wenn jemand in Ihrer Community einen Ethereum-Blockchain-Knoten mit einer öffentlichen API betreibt, können Sie Ihre Wallets über Custom RPC auf einen Community-Knoten verweisen und mehr Privatsphäre gewinnen als bei einem zufälligen vertrauenswürdigen Drittanbieter.
 
-Wenn Sie andererseits einen Client betreiben, können Sie ihn mit Ihren Freunden teilen, die eventuell Bedarf haben.
+Andererseits können Sie, wenn Sie einen Client betreiben, diesen mit Ihren Freunden teilen, die ihn möglicherweise benötigen.
 
 ## Ausführungs-Clients {#execution-clients}
 
-Die Ethereum-Community unterhält mehrere quelloffene Ausführungsclients (früher als „Eth1-Clients“ oder einfach „Ethereum-Clients“ bezeichnet), die von verschiedenen Teams in unterschiedlichen Programmiersprachen entwickelt wurden. Dies macht das Netzwerk stärker und [vielfältiger](/developers/docs/nodes-and-clients/client-diversity/). Das ideale Ziel ist es, Vielfalt zu erreichen, ohne dass ein Client dominiert, um jede Art von einzelnen Ausfallpunkten zu reduzieren.
+Die Ethereum-Community pflegt mehrere Open-Source-Ausführungs-Clients (früher bekannt als „Eth1-Clients“ oder einfach „Ethereum-Clients“), die von verschiedenen Teams in unterschiedlichen Programmiersprachen entwickelt wurden. Dies macht das Netzwerk stärker und [vielfältiger](/developers/docs/nodes-and-clients/client-diversity/). Das ideale Ziel ist es, Vielfalt zu erreichen, ohne dass ein Client dominiert, um Single Points of Failure zu reduzieren.
 
-Diese Tabelle gibt einen Überblick über die verschiedenen Clients. Alle bestehen [Client-Tests](https://github.com/ethereum/tests) und werden aktiv gewartet, um mit Netzwerk-Upgrades auf dem neuesten Stand zu bleiben.
+Diese Tabelle fasst die verschiedenen Clients zusammen. Alle bestehen [Client-Tests](https://github.com/ethereum/tests) und werden aktiv gepflegt, um bei Netzwerk-Upgrades auf dem neuesten Stand zu bleiben.
 
-| Client                                                                                      | Sprache                  | Betriebssysteme       | Netzwerke                 | Synchronisationsstrategien                                                                      | Zustandsreduzierung |
-| ------------------------------------------------------------------------------------------- | ------------------------ | --------------------- | ------------------------- | ----------------------------------------------------------------------------------------------- | ------------------- |
-| [Geth](https://geth.ethereum.org/)                                                          | Go                       | Linux, Windows, MacOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Vollständig](#full-sync)                                                   | Archiv, Reduziert   |
-| [Nethermind](https://www.nethermind.io/)                                                    | C#, .NET | Linux, Windows, MacOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync) (ohne Bereitstellung), Schnell, [Vollständig](#full-sync) | Archiv, Reduziert   |
-| [Besu](https://besu.hyperledger.org/en/stable/)                                             | Java                     | Linux, Windows, MacOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Schnell](#fast-sync), [Vollständig](#full-sync)                            | Archiv, Reduziert   |
-| [Erigon](https://github.com/ledgerwatch/erigon)                                             | Go                       | Linux, Windows, MacOS | Mainnet, Sepolia, Holesky | [Vollständig](#full-sync)                                                                       | Archiv, Reduziert   |
-| [Reth](https://reth.rs/)                                                                    | Rust                     | Linux, Windows, MacOS | Mainnet, Sepolia, Holesky | [Vollständig](#full-sync)                                                                       | Archiv, Reduziert   |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(Beta)_ | TypeScript               | Linux, Windows, MacOS | Sepolia, Holesky          | [Vollständig](#full-sync)                                                                       | Reduziert           |
+| Client                                                                   | Sprache    | Betriebssysteme       | Netzwerke                 | Synchronisationsstrategien                                     | Statusbereinigung (Pruning) |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | -------------------------------------------------------------- | --------------------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Full](#full-sync)                         | Archive, Pruned             |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync) (ohne Bereitstellung), Fast, [Full](#full-sync) | Archive, Pruned             |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)     | Archive, Pruned             |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                             | Archive, Pruned             |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Hoodi | [Full](#full-sync)                                             | Archive, Pruned             |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Hoodi          | [Full](#full-sync)                                             | Pruned                      |
 
-Für mehr Informationen zu unterstützten Netzwerken, lesen Sie [Ethereum-Netzwerke](/developers/docs/networks/).
+Weitere Informationen zu unterstützten Netzwerken finden Sie unter [Ethereum-Netzwerke](/developers/docs/networks/).
 
-Jeder Client bietet einzigartige Anwendungsfälle und Vorteile, daher sollten Sie einen basierend auf Ihren eigenen Präferenzen wählen. Die Client-Vielfalt ermöglicht die Fokussierung der Implementierungen auf verschiedene Funktionen und Benutzergruppen. Sie können einen Client basierend auf Funktionen, Support, Programmiersprache oder Lizenzen auswählen.
+Jeder Client hat einzigartige Anwendungsfälle und Vorteile, daher sollten Sie einen basierend auf Ihren eigenen Vorlieben auswählen. Vielfalt ermöglicht es, Implementierungen auf verschiedene Funktionen und Zielgruppen auszurichten. Möglicherweise möchten Sie einen Client basierend auf Funktionen, Support, Programmiersprache oder Lizenzen auswählen.
 
 ### Besu {#besu}
 
-Hyperledger Besu ist ein Ethereum-Client auf Unternehmensebene für öffentliche und private Netzwerke. Er bietet alle Funktionen des Ethereum-Mainnets, von Tracing bis GraphQL, bietet ein umfangreiches Monitoring und wird von ConsenSys unterstützt, sowohl in offenen Community-Kanälen als auch durch kommerzielle SLA für Unternehmen. Er ist in Java geschrieben und durch Apache 2.0 lizenziert.
+Hyperledger Besu ist ein Ethereum-Client auf Unternehmensniveau für öffentliche und zugangsbeschränkte (permissioned) Netzwerke. Er führt alle Funktionen des Ethereum-Mainnets aus, von Tracing bis GraphQL, verfügt über umfassendes Monitoring und wird von ConsenSys unterstützt, sowohl in offenen Community-Kanälen als auch durch kommerzielle SLAs für Unternehmen. Er ist in Java geschrieben und unter Apache 2.0 lizenziert.
 
-Die umfangreiche [Dokumentation](https://besu.hyperledger.org/en/stable/) von Besu wird Sie durch alle Details zu seinen Funktionen und Setups führen.
+Die ausführliche [Dokumentation](https://besu.hyperledger.org/en/stable/) von Besu führt Sie durch alle Details zu seinen Funktionen und Setups.
 
 ### Erigon {#erigon}
 
-Erigon, früher bekannt als Turbo-Geth, begann als eine Abspaltung von Go Ethereum, die auf Geschwindigkeit und Speicherplatzeffizienz ausgerichtet ist. Es ist eine komplett neu entwickelte Implementierung von Ethereum, die derzeit in Go geschrieben ist, aber auch in anderen Sprachen implementiert werden kann. Das Ziel von Erigon ist es, eine schnellere, modularere und optimierte Implementierung von Ethereum anzubieten. Es kann eine vollständige Synchronisierung von Archivierungsknoten mit etwa 2 TB Speicherplatz in weniger als 3 Tagen durchführen.
+Erigon, früher bekannt als Turbo-Geth, begann als Fork von Go Ethereum, der auf Geschwindigkeit und Speicherplatzeffizienz ausgerichtet war. Erigon ist eine komplett neu gestaltete Implementierung von Ethereum, die derzeit in Go geschrieben ist, aber Implementierungen in anderen Sprachen befinden sich in der Entwicklung. Das Ziel von Erigon ist es, eine schnellere, modularere und optimiertere Implementierung von Ethereum bereitzustellen. Es kann eine vollständige Archive-Node-Synchronisation mit etwa 2 TB Speicherplatz in weniger als 3 Tagen durchführen.
 
 ### Go Ethereum {#geth}
 
-Go Ethereum (kurz Geth) ist eine der ursprünglichen Implementierungen des Ethereum-Protokolls. Derzeit ist es der am weitesten verbreitete Client mit der größten Benutzerbasis und der größten Vielfalt an Tools für Benutzer und Entwickler. Es ist in Go geschrieben, vollständig Open Source und unter der GNU LGPL v3 lizenziert.
+Go Ethereum (kurz Geth) ist eine der ursprünglichen Implementierungen des Ethereum-Protokolls. Derzeit ist es der am weitesten verbreitete Client mit der größten Benutzerbasis und einer Vielzahl von Tools für Benutzer und Entwickler. Er ist in Go geschrieben, vollständig Open Source und unter der GNU LGPL v3 lizenziert.
 
-Erfahren Sie mehr über Geth in seiner [Dokumentation](https://geth.ethereum.org/docs/).
+Erfahren Sie mehr über Geth in seiner [Dokumentation](https://geth.ethereum.org/docs).
 
 ### Nethermind {#nethermind}
 
-Nethermind ist eine Ethereum-Implementierung, die mit dem C# .NET Tech-Stack erstellt wurde, unter der LGPL-3.0 lizenziert ist und auf allen wichtigen Plattformen, einschließlich ARM, läuft. Sie bietet eine großartige Leistung mit:
+Nethermind ist eine Ethereum-Implementierung, die mit dem C# .NET-Tech-Stack erstellt wurde, unter LGPL-3.0 lizenziert ist und auf allen wichtigen Plattformen einschließlich ARM läuft. Sie bietet großartige Leistung mit:
 
-- einer optimierten virtuellen Maschine,
-- Zustandszugriff,
-- Netzwerkfunktionen und umfangreiche Features wie Prometheus-/Grafana-Dashboards, Unterstützung für Protokollierung auf Unternehmensebene mit Seq, JSON-RPC-Nachverfolgung und Analyse-Plug-ins.
+- einer optimierten Virtual Machine
+- Statuszugriff
+- Netzwerkfunktionen und umfangreichen Features wie Prometheus/Grafana-Dashboards, Seq-Enterprise-Logging-Unterstützung, JSON-RPC-Tracing und Analyse-Plugins.
 
-Nethermind hat auch eine [detaillierte Dokumentation](https://docs.nethermind.io), starken Entwickler-Support, eine Online-Community und 24/7-Support für Premium-Benutzer.
+Nethermind verfügt außerdem über eine [detaillierte Dokumentation](https://docs.nethermind.io), starken Entwickler-Support, eine Online-Community und 24/7-Support für Premium-Benutzer.
 
 ### Reth {#reth}
 
-Reth (kurz für Rust Ethereum) ist eine Ethereum-Full-Node-Implementierung, die den Schwerpunkt auf Benutzerfreundlichkeit, hohe Modularität, Geschwindigkeit und Effizienz legt. Reth wurde ursprünglich von Paradigm entwickelt und vorangetrieben und ist unter den Apache- und MIT-Lizenzen lizenziert.
+Reth (kurz für Rust Ethereum) ist eine Ethereum-Full-Node-Implementierung, die darauf ausgerichtet ist, benutzerfreundlich, hochgradig modular, schnell und effizient zu sein. Reth wurde ursprünglich von Paradigm entwickelt und vorangetrieben und ist unter den Apache- und MIT-Lizenzen lizenziert.
 
-Reth ist einsatzbereit und für die Verwendung in geschäftskritischen Umgebungen wie Staking- oder Hochverfügbarkeitsdiensten geeignet. Es zeigt eine gute Bilanz in Anwendungsfällen auf, bei denen hohe Leistung mit großen Spielräumen erforderlich ist, wie z. B. RPC, MEV, Indizierung, Simulationen und P2P-Aktivitäten.
+Reth ist produktionsbereit und eignet sich für den Einsatz in geschäftskritischen Umgebungen wie Staking oder Diensten mit hoher Verfügbarkeit. Es schneidet in Anwendungsfällen gut ab, in denen hohe Leistung mit großen Margen erforderlich ist, wie z. B. RPC, MEV, Indizierung, Simulationen und P2P-Aktivitäten.
 
-Erfahren Sie mehr im [Reth Book](https://reth.rs/) oder im [Reth GitHub-Repo](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
+Erfahren Sie mehr, indem Sie sich das [Reth Book](https://reth.rs/) oder das [Reth GitHub-Repository](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth) ansehen.
 
 ### In Entwicklung {#execution-in-development}
 
-Diese Clients befinden sich noch in einer frühen Entwicklungsphase und sind derzeit nicht für den Einsatz in Produktionsumgebungen empfohlen.
+Diese Clients befinden sich noch in einem frühen Entwicklungsstadium und werden noch nicht für den produktiven Einsatz empfohlen.
 
 #### EthereumJS {#ethereumjs}
 
-Der EthereumJS Execution Client (EthereumJS) ist in TypeScript geschrieben und besteht aus mehreren Paketen. Dazu gehören grundlegende Ethereum-Basiskomponenten wie die Klassen Block, Transaktion und Merkle-Patricia Trie sowie zentrale Client-Komponenten wie eine Implementierung der Ethereum Virtual Machine (EVM), eine Blockchain-Klasse und der DevP2P-Netzwerk-Stack.
+Der EthereumJS-Ausführungs-Client (EthereumJS) ist in TypeScript geschrieben und besteht aus einer Reihe von Paketen, einschließlich grundlegender Ethereum-Primitive, die durch die Klassen Block, Transaktion und Merkle-Patricia Trie repräsentiert werden, sowie Kern-Client-Komponenten, einschließlich einer Implementierung der Ethereum Virtual Machine (EVM), einer Blockchain-Klasse und dem DevP2P-Netzwerk-Stack.
 
 Erfahren Sie mehr darüber, indem Sie die [Dokumentation](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master) lesen.
 
 ## Konsens-Clients {#consensus-clients}
 
-Es gibt mehrere Konsens-Clients (früher als „Eth2“-Clients bekannt), um die [Konsens-Upgrades](/roadmap/beacon-chain/) zu unterstützen. Sie sind für die gesamte konsensbezogene Logik verantwortlich, einschließlich des Fork-Choice-Algorithmus, der Verarbeitung von Attestierungen und der Verwaltung von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Belohnungen und -Strafen.
+Es gibt mehrere Konsens-Clients (früher bekannt als „Eth2“-Clients), um die [Konsens-Upgrades](/roadmap/beacon-chain/) zu unterstützen. Sie sind für die gesamte konsensbezogene Logik verantwortlich, einschließlich des Fork-Choice-Algorithmus, der Verarbeitung von Bestätigungen (Attestations) und der Verwaltung von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)-Belohnungen und -Strafen.
 
-| Client                                                        | Sprache    | Betriebssysteme       | Netzwerke                                                |
-| ------------------------------------------------------------- | ---------- | --------------------- | -------------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, MacOS | Beacon Chain, Holesky, Pyrmont, Sepolia und mehr         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, MacOS | Beacon Chain, Holesky, Sepolia und mehr                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, MacOS | Beacon Chain, Holesky, Sepolia und mehr                  |
-| [Prysm](https://prysm.offchainlabs.com/docs/)                 | Go         | Linux, Windows, MacOS | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia und mehr |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, MacOS | Beacon Chain, Gnosis, Holesky, Sepolia und mehr          |
-| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, MacOS | Beacon Chain, Holesky, Sepolia und mehr                  |
+| Client                                                        | Sprache    | Betriebssysteme       | Netzwerke                                                 |
+| ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Pyrmont, Sepolia, und mehr         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, und mehr                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, und mehr                  |
+| [Prysm](https://prysm.offchainlabs.com/docs/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Pyrmont, Sepolia, und mehr |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Hoodi, Sepolia, und mehr          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Hoodi, Sepolia, und mehr                  |
 
 ### Lighthouse {#lighthouse}
 
-Lighthouse ist eine Konsens-Client-Implementierung, die in Rust unter der Apache-2.0-Lizenz geschrieben ist. Sie wird von Sigma Prime gewartet und ist seit der Entstehung der Beacon Chain stabil und produktionsbereit. Lighthouse wird von verschiedenen Unternehmen, Staking-Pools und Einzelpersonen genutzt. Es soll sicher, leistungsfähig und interoperabel in einer Vielzahl von Umgebungen sein – von Desktop-PCs bis hin zu anspruchsvollen automatisierten Implementierungen.
+Lighthouse ist eine Konsens-Client-Implementierung, die in Rust unter der Apache-2.0-Lizenz geschrieben wurde. Sie wird von Sigma Prime gepflegt und ist seit dem Genesis-Block der Beacon Chain stabil und produktionsbereit. Verschiedene Unternehmen, Staking-Pools und Einzelpersonen verlassen sich darauf. Sie zielt darauf ab, sicher, leistungsstark und interoperabel in einer Vielzahl von Umgebungen zu sein, von Desktop-PCs bis hin zu anspruchsvollen automatisierten Bereitstellungen.
 
 Die Dokumentation finden Sie im [Lighthouse Book](https://lighthouse-book.sigmaprime.io/)
 
 ### Lodestar {#lodestar}
 
-Lodestar ist eine produktionsbereite Konsens-Client-Implementierung, die in Typescript unter der LGPL-3.0-Lizenz geschrieben wurde. Sie wird von ChainSafe Systems gewartet und ist der neueste der Konsensus-Clients für Solo-Staker, Entwickler und Forscher. Lodestar besteht aus einem Beacon-Knoten und einem Validator-Client, die auf JavaScript-Implementierungen von Ethereum-Protokollen basieren. Lodestar zielt darauf ab, die Benutzerfreundlichkeit von Ethereum mit leichten Clients zu verbessern, die Zugänglichkeit für eine größere Gruppe von Entwicklern zu erweitern und weiter zur Vielfalt des Ökosystems beizutragen.
+Lodestar ist eine produktionsbereite Konsens-Client-Implementierung, die in TypeScript unter der LGPL-3.0-Lizenz geschrieben wurde. Sie wird von ChainSafe Systems gepflegt und ist der neueste der Konsens-Clients für Solo-Staker, Entwickler und Forscher. Lodestar besteht aus einem Beacon Node und einem Validator-Client, die auf JavaScript-Implementierungen von Ethereum-Protokollen basieren. Lodestar zielt darauf ab, die Benutzerfreundlichkeit von Ethereum mit Light Clients zu verbessern, die Zugänglichkeit für eine größere Gruppe von Entwicklern zu erweitern und weiter zur Vielfalt des Ökosystems beizutragen.
 
 Weitere Informationen finden Sie auf der [Lodestar-Website](https://lodestar.chainsafe.io/)
 
 ### Nimbus {#nimbus}
 
-Nimbus ist eine Konsens-Client-Implementierung, geschrieben in Nim unter der Apache-2.0-Lizenz. Sie ist ein produktionsbereiter Client und wird von Solo-Stakern und Staking-Pools verwendet. Nimbus ist auf Ressourceneffizienz ausgelegt, so dass er auf ressourcenbeschränkten Geräten und in der Unternehmensinfrastruktur gleichermaßen leicht ausgeführt werden kann, ohne dass die Stabilität oder die Prämien-Leistung beeinträchtigt wird. Ein geringerer Ressourcenbedarf bedeutet, dass der Client eine größere Sicherheitsmarge hat, wenn das Netzwerk unter Belastung steht.
+Nimbus ist eine Konsens-Client-Implementierung, die in Nim unter der Apache-2.0-Lizenz geschrieben wurde. Es ist ein produktionsbereiter Client, der von Solo-Stakern und Staking-Pools verwendet wird. Nimbus ist auf Ressourceneffizienz ausgelegt, sodass er problemlos auf ressourcenbeschränkten Geräten und in der Unternehmensinfrastruktur ausgeführt werden kann, ohne die Stabilität oder die Belohnungsleistung zu beeinträchtigen. Ein geringerer Ressourcenbedarf bedeutet, dass der Client eine größere Sicherheitsmarge hat, wenn das Netzwerk unter Stress steht.
 
 Erfahren Sie mehr in den [Nimbus-Dokumenten](https://nimbus.guide/)
 
 ### Prysm {#prysm}
 
-Prysm ist ein vollwertiger, open-source Konsensclient, der in Go unter der GPL-3.0-Lizenz geschrieben wurde. Er verfügt über eine optionale Webapp-UI und legt großen Wert auf Benutzerfreundlichkeit, Dokumentation und Konfigurierbarkeit sowohl für Stake-at-Home- als auch für institutionelle Benutzer.
+Prysm ist ein voll ausgestatteter Open-Source-Konsens-Client, der in Go unter der GPL-3.0-Lizenz geschrieben wurde. Er verfügt über eine optionale Web-App-Benutzeroberfläche und priorisiert Benutzererfahrung, Dokumentation und Konfigurierbarkeit sowohl für Heimanwender (Stake-at-Home) als auch für institutionelle Benutzer.
 
-Besuchen Sie die [Prysm-Dokumente](https://prysm.offchainlabs.com/docs/), um mehr zu erfahren.
+Besuchen Sie die [Prysm-Dokumentation](https://prysm.offchainlabs.com/docs/), um mehr zu erfahren.
 
 ### Teku {#teku}
 
-Teku ist einer der ursprünglichen Clients der Beacon Chain-Genesis. Neben den üblichen Zielen (Sicherheit, Robustheit, Stabilität, Benutzerfreundlichkeit, Leistung) zielt Teku speziell darauf ab, alle verschiedenen Konsensclient-Standards vollständig zu erfüllen.
+Teku ist einer der ursprünglichen Beacon Chain-Genesis-Clients. Neben den üblichen Zielen (Sicherheit, Robustheit, Stabilität, Benutzerfreundlichkeit, Leistung) zielt Teku speziell darauf ab, alle verschiedenen Konsens-Client-Standards vollständig zu erfüllen.
 
-Teku bietet sehr flexible Einsatzmöglichkeiten. Der Beacon Node und der Validator-Client können zusammen als ein ein Prozess ausgeführt werden, was für Solo-Staker äußerst praktisch ist. Die Nodes können aber auch separat für anspruchsvolle Staking-Operationen ausgeführt werden. Zudem ist Teku vollständig interoperabel mit [Web3Signer](https://github.com/ConsenSys/web3signer/) für die Sicherheit von Signierschlüsseln und Slashing-Schutz.
+Teku bietet sehr flexible Bereitstellungsoptionen. Der Beacon Node und der Validator-Client können zusammen als ein einziger Prozess ausgeführt werden, was für Solo-Staker äußerst praktisch ist, oder die Blockchain-Knoten können für anspruchsvolle Staking-Operationen separat ausgeführt werden. Darüber hinaus ist Teku vollständig interoperabel mit [Web3Signer](https://github.com/ConsenSys/web3signer/) für die Sicherheit von Signaturschlüsseln und den Slashing-Schutz.
 
-Teku ist in Java unter der Apache 2.0 Lizenz geschrieben. Es wird vom Protokoll-Team bei ConsenSys entwickelt, das auch für Besu und Web3Signer verantwortlich ist. Erfahren Sie mehr in den [Teku-Dokumenten](https://docs.teku.consensys.net/en/latest/).
+Teku ist in Java geschrieben und unter Apache 2.0 lizenziert. Es wird vom Protocols-Team bei ConsenSys entwickelt, das auch für Besu und Web3Signer verantwortlich ist. Erfahren Sie mehr in der [Teku-Dokumentation](https://docs.teku.consensys.net/en/latest/).
 
 ### Grandine {#grandine}
 
-Grandine ist eine Konsens-Client-Implementierung, geschrieben in Rust und unter der GPL-3.0-Lizenz. Es wird vom Grandine Core Team gepflegt und ist schnell, leistungsstark und leicht. Es ist für eine Vielzahl von Stakern geeignet – von Einzelstakern, die ressourcenarme Geräte wie Raspberry Pi verwenden, bis hin zu großen institutionellen Stakern, die Zehntausende von Validatoren betreiben.
+Grandine ist eine Konsens-Client-Implementierung, die in Rust unter der GPL-3.0-Lizenz geschrieben wurde. Sie wird vom Grandine Core Team gepflegt und ist schnell, leistungsstark und leichtgewichtig. Sie eignet sich für eine breite Palette von Stakern, von Solo-Stakern, die auf ressourcenarmen Geräten wie dem Raspberry Pi laufen, bis hin zu großen institutionellen Stakern, die Zehntausende von Validatoren betreiben.
 
 Die Dokumentation finden Sie im [Grandine Book](https://docs.grandine.io/)
 
 ## Synchronisationsmodi {#sync-modes}
 
-Um die aktuellen Daten im Netzwerk zu verfolgen und zu überprüfen, muss sich der Ethereum-Client mit dem neuesten Netzwerkstatus synchronisieren. Dazu werden Daten von Peers heruntergeladen, wobei ihre Integrität kryptographisch verifiziert und eine lokale Blockchain-Datenbank aufgebaut wird.
+Um aktuelle Daten im Netzwerk zu verfolgen und zu verifizieren, muss sich der Ethereum-Client mit dem neuesten Netzwerkstatus synchronisieren. Dies geschieht durch das Herunterladen von Daten von Peers, die kryptografisch auf ihre Integrität überprüft werden, und den Aufbau einer lokalen Blockchain-Datenbank.
 
-Die Synchronisationsmodi stellen verschiedene Ansätze für diesen Prozess mit unterschiedlichen Kompromissen dar. Die Clients unterscheiden sich auch in der Implementierung von Synchronisationsalgorithmen. Beziehen Sie sich immer auf die offizielle Dokumentation des von Ihnen gewählten Clients, um Einzelheiten zur Implementierung zu erfahren.
+Synchronisationsmodi stellen verschiedene Ansätze für diesen Prozess mit unterschiedlichen Kompromissen dar. Clients variieren auch in ihrer Implementierung von Synchronisationsalgorithmen. Beziehen Sie sich immer auf die offizielle Dokumentation Ihres gewählten Clients für spezifische Implementierungsdetails.
 
 ### Synchronisationsmodi der Ausführungsebene {#execution-layer-sync-modes}
 
-Die Ausführungsebene kann in verschiedenen Modi betrieben werden, um unterschiedlichen Anwendungsfällen gerecht zu werden – vom erneuten Ausführen des globalen Status der Blockchain bis hin zum reinen Synchronisieren mit dem aktuellen Stand der Chain von einem vertrauenswürdigen Checkpoint aus.
+Die Ausführungsebene kann in verschiedenen Modi ausgeführt werden, um unterschiedlichen Anwendungsfällen gerecht zu werden, von der erneuten Ausführung des Weltzustands der Blockchain bis hin zur reinen Synchronisation mit der Spitze der Chain von einem vertrauenswürdigen Checkpoint aus.
 
-#### Vollständige Synchronisierung {#full-sync}
+#### Full Sync {#full-sync}
 
-Eine vollständige Synchronisierung lädt alle Blöcke (inklusive Header und Blockinhalten) herunter und regeneriert den Status der Blockchain schrittweise, indem jeder Block ab Genesis aufgeführt wird.
+Ein Full Sync lädt alle Blöcke (einschließlich Header und Blockkörper) herunter und regeneriert den Status der Blockchain inkrementell, indem jeder Block ab dem Genesis-Block ausgeführt wird.
 
-- Minimiert das Vertrauen und bietet höchste Sicherheit, indem jede Transaktion verifiziert wird.
-- Bei einer steigenden Anzahl von Transaktionen kann es Tage bis Wochen dauern, alle Transaktionen zu bearbeiten.
+- Minimiert das Vertrauen und bietet die höchste Sicherheit durch die Verifizierung jeder Transaktion.
+- Mit einer zunehmenden Anzahl von Transaktionen kann es Tage bis Wochen dauern, alle Transaktionen zu verarbeiten.
 
-[Archiv-Nodes](#archive-node) führen eine vollständige Synchronisierung durch, um eine komplette Historie der Zustandsänderungen zu erstellen (und zu behalten), die durch jede Transaktion in jedem Block vorgenommen wurden.
+[Archive Nodes](#archive-node) führen einen Full Sync durch, um eine vollständige Historie der Statusänderungen aufzubauen (und beizubehalten), die durch jede Transaktion in jedem Block vorgenommen wurden.
 
-#### Schnelle Synchronisierung {#fast-sync}
+#### Fast Sync {#fast-sync}
 
-Wie bei einer vollständigen Synchronisierung lädt eine schnelle Synchronisierung alle Blöcke herunter (einschließlich Header, Transaktionen und Belegen). Anstatt jedoch die historischen Transaktionen neu zu verarbeiten, verlässt sich eine schnelle Synchronisierung auf die Belege, bis sie einen aktuellen Head erreicht hat. Danach beginnt sie, Blöcke zu importieren und zu verarbeiten, um einen vollständigen Node bereitzustellen.
+Wie ein Full Sync lädt ein Fast Sync alle Blöcke (einschließlich Header, Transaktionen und Belege) herunter. Anstatt jedoch die historischen Transaktionen neu zu verarbeiten, verlässt sich ein Fast Sync auf die Belege, bis er einen aktuellen Head erreicht, woraufhin er zum Importieren und Verarbeiten von Blöcken wechselt, um einen Full Node bereitzustellen.
 
-- Schnelle Synchronisierung – Strategie.
+- Schnelle Synchronisationsstrategie.
 - Reduziert den Verarbeitungsbedarf zugunsten der Bandbreitennutzung.
 
-#### Snap-Synchronisierung {#snap-sync}
+#### Snap Sync {#snap-sync}
 
-Snap-Synchronisierungen überprüfen ebenfalls die Chain Block für Block. Anstatt jedoch beim Genesis-Block zu beginnen, startet eine Snap-Synchronisierung bei einem aktuelleren „vertrauenswürdigen“ Checkpoint, von dem bekannt ist, dass er Teil der echten Blockchain ist. Der Knoten speichert in regelmäßigen Abständen Prüfpunkte und löscht dabei Daten, die älter als ein bestimmtes Alter sind. Diese Snapshots werden verwendet, um Statusdaten nach Bedarf wiederherzustellen, anstatt sie für immer zu speichern.
+Snap Syncs verifizieren die Chain ebenfalls Block für Block. Anstatt jedoch beim Genesis-Block zu beginnen, startet ein Snap Sync bei einem neueren „vertrauenswürdigen“ Checkpoint, von dem bekannt ist, dass er Teil der wahren Blockchain ist. Der Blockchain-Knoten speichert regelmäßige Checkpoints und löscht Daten, die älter als ein bestimmtes Alter sind. Diese Snapshots werden verwendet, um Statusdaten bei Bedarf neu zu generieren, anstatt sie für immer zu speichern.
 
-- Schnellste Synchronisierungsstrategie, derzeit Standard im Ethereum-Mainnet.
-- Spart eine Menge Festplattenkapazität und Netzwerkbandbreite, ohne die Sicherheit zu beeinträchtigen.
+- Schnellste Synchronisationsstrategie, derzeit Standard im Ethereum-Mainnet.
+- Spart viel Speicherplatz und Netzwerkbandbreite, ohne die Sicherheit zu beeinträchtigen.
 
-[Mehr zur Snap-Synchronisierung](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
+[Mehr zu Snap Sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
-#### Light-Synchronisierung {#light-sync}
+#### Light Sync {#light-sync}
 
-Der Light-Client-Modus lädt alle Block-Header und Blockdaten herunter und prüft einige davon nach Zufallsprinzip. Synchronisiert nur die Spitze der Chain vom vertrauenswürdigen Kontrollpunkt.
+Der Light-Client-Modus lädt alle Block-Header und Blockdaten herunter und verifiziert einige davon zufällig. Synchronisiert nur die Spitze der Chain vom vertrauenswürdigen Checkpoint aus.
 
-- Ruft nur den neuesten Zustand ab und verlässt sich dabei auf das Vertrauen in die Entwickler und den Konsensmechanismus.
+- Ruft nur den neuesten Status ab und verlässt sich dabei auf das Vertrauen in die Entwickler und den Konsensmechanismus.
 - Der Client ist in wenigen Minuten mit dem aktuellen Netzwerkstatus einsatzbereit.
 
-**Hinweis:** Die Light-Synchronisierung funktioniert noch nicht mit Proof-of-Stake-Ethereum – neue Versionen der Light-Synchronisierung sollten bald ausgeliefert werden!
+**Hinweis:** Light Sync funktioniert noch nicht mit Proof-of-Stake-Ethereum – neue Versionen von Light Sync sollten bald veröffentlicht werden!
 
 [Mehr zu Light Clients](/developers/docs/nodes-and-clients/light-clients/)
 
 ### Synchronisationsmodi der Konsensebene {#consensus-layer-sync-modes}
 
-#### Optimistische Synchronisierung {#optimistic-sync}
+#### Optimistic Sync {#optimistic-sync}
 
-Die „optimistische“ Synchronisierung ist eine Synchronisierungsstrategie nach der Zusammenführung, die als Opt-in und rückwärtskompatibel konzipiert ist und es Ausführungsknoten ermöglicht, sich über etablierte Methoden zu synchronisieren. Die Ausführungs-Engine kann Beacon-Blöcke _optimistisch_ importieren, ohne sie vollständig zu verifizieren, den neuesten Head finden und dann mit der Synchronisierung der Chain mit den oben genannten Methoden beginnen. Nachdem der Ausführungsclient aufgeholt hat, informiert er den Konsensclient über die Gültigkeit der Transaktionen auf der Beacon Chain.
+Optimistic Sync ist eine Post-Merge-Synchronisationsstrategie, die als Opt-in und abwärtskompatibel konzipiert ist und es Ausführungsknoten ermöglicht, sich über etablierte Methoden zu synchronisieren. Die Execution Engine kann Beacon-Blöcke _optimistisch_ importieren, ohne sie vollständig zu verifizieren, den neuesten Head finden und dann beginnen, die Chain mit den oben genannten Methoden zu synchronisieren. Nachdem der Ausführungs-Client aufgeholt hat, informiert er den Konsens-Client über die Gültigkeit der Transaktionen in der Beacon Chain.
 
-[Mehr zur optimistischen Synchronisierung](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
+[Mehr zu Optimistic Sync](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
-#### Checkpoint-Synchronisierung {#checkpoint-sync}
+#### Checkpoint Sync {#checkpoint-sync}
 
-Eine Checkpoint-Synchronisierung, auch bekannt als schwache Subjektivitätssynchronisierung, bietet eine überlegene Benutzererfahrung bei der Beacon-Node-Synchronisierung. Sie basiert auf Annahmen der [schwachen Subjektivität](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/), die das Synchronisieren der Beacon Chain von einem aktuellen Checkpoint mit schwacher Subjektivität anstelle des Genesis-Blocks ermöglicht. Checkpoint-Synchronisierungen machen die anfängliche Synchronisierungszeit erheblich schneller, mit ähnlichen Vertrauensannahmen wie bei der Synchronisierung vom [Genesis-Block](/glossary/#genesis-block).
+Ein Checkpoint Sync, auch bekannt als Weak Subjectivity Sync, schafft eine überlegene Benutzererfahrung für die Synchronisation eines Beacon Nodes. Er basiert auf Annahmen der [schwachen Subjektivität (Weak Subjectivity)](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/), die es ermöglichen, die Beacon Chain von einem kürzlichen Weak-Subjectivity-Checkpoint anstelle des Genesis-Blocks zu synchronisieren. Checkpoint Syncs machen die anfängliche Synchronisationszeit deutlich schneller, bei ähnlichen Vertrauensannahmen wie bei der Synchronisation ab dem [Genesis-Block](/glossary/#genesis-block).
 
-In der Praxis bedeutet dies, dass Ihr Knoten eine Verbindung zu einem entfernten Dienst herstellt, um die letzten abgeschlossenen Zustände herunterzuladen und die Daten ab diesem Punkt weiter zu überprüfen. Der Drittanbieter, der die Daten bereitstellt, ist vertrauenswürdig und sollte sorgfältig ausgewählt werden.
+In der Praxis bedeutet dies, dass sich Ihr Blockchain-Knoten mit einem Remote-Dienst verbindet, um aktuelle finalisierte Status herunterzuladen, und von diesem Punkt an mit der Verifizierung der Daten fortfährt. Dem Drittanbieter, der die Daten bereitstellt, wird vertraut, und er sollte sorgfältig ausgewählt werden.
 
-Mehr zur [Checkpoint-Synchronisierung](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
+Mehr zu [Checkpoint Sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [Ethereum 101 – Teil 2 – Nodes verstehen](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13. Februar 2019_
-- [Ethereum Full Nodes betreiben: Eine Anleitung für die kaum Motivierten](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7. November 2019_
+- [Ethereum 101 - Teil 2 - Blockchain-Knoten verstehen](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13. Februar 2019_
+- [Ethereum Full Nodes betreiben: Ein Leitfaden für die kaum Motivierten](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7. November 2019_
 
 ## Verwandte Themen {#related-topics}
 
@@ -316,4 +316,4 @@ Mehr zur [Checkpoint-Synchronisierung](https://notes.ethereum.org/@djrtwo/ws-syn
 
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Verwandeln Sie Ihren Raspberry Pi 4 in einen Validator-Node, indem Sie einfach die MicroSD-Karte flashen – Installationsanleitung](/developers/tutorials/run-node-raspberry-pi/) _– Flashen Sie Ihren Raspberry Pi 4, stecken Sie ein Ethernet-Kabel ein, schließen Sie die SSD-Festplatte an und schalten Sie das Gerät ein, um den Raspberry Pi 4 in einen vollwertigen Ethereum-Node zu verwandeln, der die Ausführungsebene (Mainnet) und/oder die Konsensebene (Beacon Chain/Validator) ausführt._
+- [Verwandeln Sie Ihren Raspberry Pi 4 in einen Validator-Knoten, indem Sie einfach die MicroSD-Karte flashen – Installationsanleitung](/developers/tutorials/run-node-raspberry-pi/) _– Flashen Sie Ihren Raspberry Pi 4, schließen Sie ein Ethernet-Kabel an, verbinden Sie die SSD-Festplatte und schalten Sie das Gerät ein, um den Raspberry Pi 4 in einen vollständigen Ethereum-Blockchain-Knoten zu verwandeln, der die Ausführungsebene (Mainnet) und/oder die Konsensebene (Beacon Chain / Validator) ausführt._

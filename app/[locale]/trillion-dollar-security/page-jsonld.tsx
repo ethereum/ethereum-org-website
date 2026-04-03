@@ -17,9 +17,7 @@ export default async function TrillionDollarSecurityPageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-trillion-dollar-security",
-  })
+  const t = await getTranslations("page-trillion-dollar-security")
 
   const url = normalizeUrlForJsonLd(locale, `/trillion-dollar-security/`)
 

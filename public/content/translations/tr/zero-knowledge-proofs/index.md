@@ -99,6 +99,8 @@ Tam bu noktada doğrulanabilir hesaplamalar devreye girer. Bir düğüm, Ethereu
 
 [Sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups) ve [validium'lar](/developers/docs/scaling/validium/), güvenli ölçeklenebilirlik sağlamak için geçerlilik kanıtları kullanan iki zincir dışı ölçeklendirme çözümüdür. Bu protokoller zincir dışında binlerce işlem gerçekleştirir ve Ethereum üzerinde doğrulama için kanıtlar sunar. Bu sonuçlar kanıt doğrulanır doğrulanmaz Ethereum üzerine uygulanır. Böylece temel katmanındaki hesaplamaları arttırmadan Ethereum'un daha fazla işlem gerçekleştirmesine olanak sağlar.
 
+Katman 2 ölçeklendirmesinin ötesinde, sıfır bilgi ispatları Ethereum L1 blok yürütmesinin kendisini de doğrulayabilir. L1 doğrulaması için zkEVM, doğrulayıcıların tüm işlemleri yeniden yürütmek yerine bir ispatı kontrol ederek blokları doğrulamasına olanak tanır -- bu da doğrulayıcı donanım gereksinimlerini artırmadan daha yüksek gaz limitlerini mümkün kılar.
+
 ### Zincir üstündeki oylamalarda rüşvet ve gizli anlaşmaları azaltma {#secure-blockchain-voting}
 
 Blok zincir oylama şemalarının pek çok olumlu özelliği vardır: tamamen denetlenebilirlik, saldırılara karşı güvenlik, sansüre dayanıklılık ve coğrafi koşullardan bağımsızlık. Ancak zincir üstü oylama şemaları bile **gizli anlaşma** sorununa karşı bağışık değildir.

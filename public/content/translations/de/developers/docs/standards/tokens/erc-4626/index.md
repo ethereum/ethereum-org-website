@@ -1,34 +1,34 @@
 ---
-title: "ERC-4626 Tokenisierter Tresor Standard "
-description: "Standard für  Ertragstragende Gewölbe."
+title: ERC-4626 Tokenized Vault Standard
+description: "Ein Standard für renditebringende Vaults."
 lang: de
 ---
 
 ## Einführung {#introduction}
 
-ERC-4626 ist ein Standard zur Optimierung und Vereinheitlichung der technischen Parameter von Ertragstragende bringenden Tresoren. Es bietet eine Standard-API für tokenisierte, Ertragstragende Tresore, die Anteile eines einzelnen zugrunde liegenden ERC-20-Tokens darstellen. ERC-4626 beschreibt außerdem eine optionale Erweiterung für tokenisierte Tresore unter Verwendung von ERC-20, die grundlegende Funktionen zum Einzahlen, Abheben von Token und Lesen von Guthaben bietet.
+ERC-4626 ist ein Standard zur Optimierung und Vereinheitlichung der technischen Parameter von renditebringenden Vaults. Er bietet eine Standard-API für tokenisierte renditebringende Vaults, die Anteile an einem einzigen zugrunde liegenden ERC-20-Token repräsentieren. ERC-4626 skizziert außerdem eine optionale Erweiterung für tokenisierte Vaults, die ERC-20 nutzen, und bietet grundlegende Funktionen für das Einzahlen und Abheben von Token sowie das Auslesen von Kontoständen.
 
-**Die Rolle von ERC-4626 in Ertragstragende Tresoren**
+**Die Rolle von ERC-4626 in renditebringenden Vaults**
 
-Kreditmärkte, Aggregatoren und Token mit intrinsischem Zinssatz helfen Benutzern, durch die Umsetzung verschiedener Strategien die beste Rendite für ihre Krypto-Token zu erzielen. Diese Strategien werden mit geringfügigen Abweichungen umgesetzt, was fehleranfällig sein oder eine Verschwendung von Entwicklungsressourcen bedeuten kann.
+Kreditmärkte, Aggregatoren und intrinsisch verzinsliche Token helfen Benutzern, die beste Rendite für ihre Krypto-Token zu finden, indem sie verschiedene Strategien ausführen. Diese Strategien werden mit leichten Variationen durchgeführt, was fehleranfällig sein kann oder Entwicklungsressourcen verschwendet.
 
-ERC-4626 in Ertragstragende Tresoren wird den Integrationsaufwand verringern und den Zugriff auf Erträge in verschiedenen Anwendungen mit geringem Spezialaufwand der Entwickler freigeben, indem konsistent und robustere Implementierungsmuster erstellt werden.
+ERC-4626 in renditebringenden Vaults wird den Integrationsaufwand verringern und den Zugang zu Renditen in verschiedenen Anwendungen mit geringem speziellem Aufwand für Entwickler freischalten, indem konsistentere und robustere Implementierungsmuster geschaffen werden.
 
 Der ERC-4626-Token wird vollständig in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) beschrieben.
 
-**Asynchrone Gewölbe Verlängerung (ERC-7540)**
+**Asynchrone Vault-Erweiterung (ERC-7540)**
 
-ERC-4626 ist für atomare Einzahlungen und Rücknahmen bis zu einem bestimmten Limit optimiert. Wenn das Limit erreicht ist, können keine neuen Einzahlungen oder Rücknahmen mehr vorgenommen werden. Diese Einschränkung funktioniert nicht gut für Smart-Contract-Systeme mit asynchronen Aktionen oder Verzögerungen als Voraussetzung für die Interaktion mit dem Vault (z. B. Protokolle für Real-World-Assets, Protokolle für unterbesicherte Kredite, kettenübergreifende Kreditprotokolle, liquide Staking-Token oder Versicherungssicherheitsmodule).
+ERC-4626 ist für atomare Einzahlungen und Rücknahmen bis zu einem bestimmten Limit optimiert. Wenn das Limit erreicht ist, können keine neuen Einzahlungen oder Rücknahmen eingereicht werden. Diese Einschränkung funktioniert nicht gut für ein Smart Contract-System mit asynchronen Aktionen oder Verzögerungen als Voraussetzung für die Interaktion mit dem Vault (z. B. Protokolle für reale Vermögenswerte, unterbesicherte Kreditprotokolle, Cross-Chain-Kreditprotokolle, Liquid Staking-Token oder Versicherungs-Sicherheitsmodule).
 
-ERC-7540 erweitert den Nutzen von ERC-4626 Gewölbe für asynchrone Anwendungsfälle. Die bestehende Vault-Schnittstelle (`deposit`/`withdraw`/`mint`/`redeem`) wird vollständig genutzt, um asynchrone Anfragen zu beanspruchen.
+ERC-7540 erweitert den Nutzen von ERC-4626-Vaults für asynchrone Anwendungsfälle. Die bestehende Vault-Schnittstelle (`deposit`/`withdraw`/`mint`/`redeem`) wird vollständig genutzt, um asynchrone Anfragen (Requests) geltend zu machen.
 
 Die ERC-7540-Erweiterung wird vollständig in [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) beschrieben.
 
-**Multi Asset Gewölbe Erweiterung (ERC-7575)**
+**Multi-Asset-Vault-Erweiterung (ERC-7575)**
 
-Ein fehlender Anwendungsfall, der von ERC-4626 nicht unterstützt wird, sind Tresore mit mehreren Vermögenswerten oder Einstiegspunkten wie Liquiditätsanbieter-Token (LP). Diese sind im Allgemeinen unhandlich oder nicht konform, da ERC-4626 selbst ein ERC-20 sein muss.
+Ein fehlender Anwendungsfall, der von ERC-4626 nicht unterstützt wird, sind Vaults, die über mehrere Vermögenswerte oder Einstiegspunkte verfügen, wie z. B. Liquidity-Provider-Token (LP-Token). Diese sind im Allgemeinen unhandlich oder nicht konform, da ERC-4626 vorschreibt, selbst ein ERC-20 zu sein.
 
-ERC-7575 fügt Unterstützung für Gewölbe mit mehreren Assets hinzu, indem die ERC-20-Token-Implementierung aus der ERC-4626-Implementierung ausgelagert wird.
+ERC-7575 fügt Unterstützung für Vaults mit mehreren Vermögenswerten hinzu, indem die ERC-20-Token-Implementierung aus der ERC-4626-Implementierung ausgelagert wird.
 
 Die ERC-7575-Erweiterung wird vollständig in [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) beschrieben.
 
@@ -46,7 +46,7 @@ Um diese Seite besser zu verstehen, empfehlen wir Ihnen, sich zunächst über [T
 function asset() public view returns (address assetTokenAddress)
 ```
 
-Diese Funktion gibt die Adresse des zugrunde liegenden Tokens zurück, der für den Tresor zum Buchen, Einzahlen und Abheben verwendet wird.
+Diese Funktion gibt die Adresse des zugrunde liegenden Tokens zurück, das für den Vault zur Buchführung, Einzahlung und Abhebung verwendet wird.
 
 #### totalAssets {#totalassets}
 
@@ -54,7 +54,7 @@ Diese Funktion gibt die Adresse des zugrunde liegenden Tokens zurück, der für 
 function totalAssets() public view returns (uint256)
 ```
 
-Diese Funktion gibt den Gesamtbetrag der vom Tresor gehaltenen Basiswerte zurück.
+Diese Funktion gibt den Gesamtbetrag der zugrunde liegenden Vermögenswerte zurück, die vom Vault gehalten werden.
 
 #### convertToShares {#convertoshares}
 
@@ -62,7 +62,7 @@ Diese Funktion gibt den Gesamtbetrag der vom Tresor gehaltenen Basiswerte zurüc
 function convertToShares(uint256 assets) public view returns (uint256 shares)
 ```
 
-Diese Funktion gibt die Anzahl der `shares` zurück, die vom Vault für die bereitgestellte Menge an `assets` ausgetauscht würden.
+Diese Funktion gibt die Menge an `shares` (Anteilen) zurück, die vom Vault gegen die bereitgestellte Menge an `assets` (Vermögenswerten) eingetauscht werden würde.
 
 #### convertToAssets {#convertoassets}
 
@@ -70,7 +70,7 @@ Diese Funktion gibt die Anzahl der `shares` zurück, die vom Vault für die bere
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
 ```
 
-Diese Funktion gibt die Menge der `assets` zurück, die vom Vault für die bereitgestellte Anzahl an `shares` ausgetauscht würden.
+Diese Funktion gibt die Menge an `assets` zurück, die vom Vault gegen die bereitgestellte Menge an `shares` eingetauscht werden würde.
 
 #### maxDeposit {#maxdeposit}
 
@@ -78,7 +78,7 @@ Diese Funktion gibt die Menge der `assets` zurück, die vom Vault für die berei
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-Diese Funktion gibt die maximale Menge an zugrunde liegenden Assets zurück, die in einem einzigen [`deposit`](#deposit)-Aufruf eingezahlt werden kann, wobei die Anteile für den `receiver` geprägt werden.
+Diese Funktion gibt den maximalen Betrag an zugrunde liegenden Vermögenswerten zurück, der in einem einzigen [`deposit`](#deposit)-Aufruf eingezahlt werden kann, wobei die Anteile für den `receiver` (Empfänger) geprägt werden.
 
 #### previewDeposit {#previewdeposit}
 
@@ -86,7 +86,7 @@ Diese Funktion gibt die maximale Menge an zugrunde liegenden Assets zurück, die
 function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
-Mit dieser Funktion können Benutzer die Auswirkungen ihrer Einzahlung auf den aktuellen Block simulieren.
+Diese Funktion ermöglicht es Benutzern, die Auswirkungen ihrer Einzahlung im aktuellen Block zu simulieren.
 
 #### deposit {#deposit}
 
@@ -94,7 +94,7 @@ Mit dieser Funktion können Benutzer die Auswirkungen ihrer Einzahlung auf den a
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
 ```
 
-Diese Funktion hinterlegt `assets` von zugrunde liegenden Token im Vault und überträgt das Eigentum an `shares` an den `receiver`.
+Diese Funktion zahlt `assets` der zugrunde liegenden Token in den Vault ein und gewährt dem `receiver` das Eigentum an den `shares`.
 
 #### maxMint {#maxmint}
 
@@ -102,7 +102,7 @@ Diese Funktion hinterlegt `assets` von zugrunde liegenden Token im Vault und üb
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-Diese Funktion gibt die maximale Anzahl an `shares` zurück, die in einem einzigen [`mint`](#mint)-Aufruf geprägt werden können, wobei die Anteile für den `receiver` geprägt werden.
+Diese Funktion gibt die maximale Anzahl an Anteilen zurück, die in einem einzigen [`mint`](#mint)-Aufruf geprägt werden können, wobei die Anteile für den `receiver` geprägt werden.
 
 #### previewMint {#previewmint}
 
@@ -110,7 +110,7 @@ Diese Funktion gibt die maximale Anzahl an `shares` zurück, die in einem einzig
 function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
-Mit dieser Funktion können Benutzer die Auswirkungen ihrer Münze auf den aktuellen Block simulieren.
+Diese Funktion ermöglicht es Benutzern, die Auswirkungen ihrer Prägung im aktuellen Block zu simulieren.
 
 #### mint {#mint}
 
@@ -118,7 +118,7 @@ Mit dieser Funktion können Benutzer die Auswirkungen ihrer Münze auf den aktue
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-Diese Funktion prägt genau `shares` Vault-Anteile für den `receiver`, indem `assets` von zugrunde liegenden Token hinterlegt werden.
+Diese Funktion prägt genau `shares` Vault-Anteile für den `receiver`, indem `assets` der zugrunde liegenden Token eingezahlt werden.
 
 #### maxWithdraw {#maxwithdraw}
 
@@ -126,7 +126,7 @@ Diese Funktion prägt genau `shares` Vault-Anteile für den `receiver`, indem `a
 function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
-Diese Funktion gibt die maximale Menge an zugrunde liegenden Assets zurück, die mit einem einzigen [`withdraw`](#withdraw)-Aufruf vom Guthaben des `owner` abgehoben werden kann.
+Diese Funktion gibt den maximalen Betrag an zugrunde liegenden Vermögenswerten zurück, der mit einem einzigen [`withdraw`](#withdraw)-Aufruf vom Guthaben des `owner` (Eigentümers) abgehoben werden kann.
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -134,7 +134,7 @@ Diese Funktion gibt die maximale Menge an zugrunde liegenden Assets zurück, die
 function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
-Mit dieser Funktion können Benutzer die Auswirkungen ihrer Abhebung im aktuellen Block simulieren.
+Diese Funktion ermöglicht es Benutzern, die Auswirkungen ihrer Abhebung im aktuellen Block zu simulieren.
 
 #### withdraw {#withdraw}
 
@@ -142,7 +142,7 @@ Mit dieser Funktion können Benutzer die Auswirkungen ihrer Abhebung im aktuelle
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
 ```
 
-Diese Funktion verbrennt `shares` vom `owner` und sendet genau `assets` Token vom Vault an den `receiver`.
+Diese Funktion verbrennt `shares` vom `owner` und sendet genau `assets` Token aus dem Vault an den `receiver`.
 
 #### maxRedeem {#maxredeem}
 
@@ -150,7 +150,7 @@ Diese Funktion verbrennt `shares` vom `owner` und sendet genau `assets` Token vo
 function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
-Diese Funktion gibt die maximale Anzahl an `shares` zurück, die durch einen [`redeem`](#redeem)-Aufruf vom Guthaben des `owner` eingelöst werden können.
+Diese Funktion gibt die maximale Anzahl an Anteilen zurück, die durch einen [`redeem`](#redeem)-Aufruf vom Guthaben des `owner` eingelöst werden können.
 
 #### previewRedeem {#previewredeem}
 
@@ -158,7 +158,7 @@ Diese Funktion gibt die maximale Anzahl an `shares` zurück, die durch einen [`r
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
-Mit dieser Funktion können Benutzer die Auswirkungen ihrer Einlösung im aktuellen Block simulieren.
+Diese Funktion ermöglicht es Benutzern, die Auswirkungen ihrer Einlösung im aktuellen Block zu simulieren.
 
 #### redeem {#redeem}
 
@@ -166,7 +166,7 @@ Mit dieser Funktion können Benutzer die Auswirkungen ihrer Einlösung im aktuel
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-Diese Funktion löst eine bestimmte Anzahl von `shares` vom `owner` ein und sendet `assets` des zugrunde liegenden Tokens vom Vault an den `receiver`.
+Diese Funktion löst eine bestimmte Anzahl von `shares` vom `owner` ein und sendet `assets` des zugrunde liegenden Tokens aus dem Vault an den `receiver`.
 
 #### totalSupply {#totalsupply}
 
@@ -174,7 +174,7 @@ Diese Funktion löst eine bestimmte Anzahl von `shares` vom `owner` ein und send
 function totalSupply() public view returns (uint256)
 ```
 
-Gibt die Gesamtzahl der im Umlauf befindlichen, nicht eingelösten Aktie zurück.
+Gibt die Gesamtzahl der nicht eingelösten Vault-Anteile im Umlauf zurück.
 
 #### balanceOf {#balanceof}
 
@@ -182,7 +182,7 @@ Gibt die Gesamtzahl der im Umlauf befindlichen, nicht eingelösten Aktie zurück
 function balanceOf(address owner) public view returns (uint256)
 ```
 
-Gibt die Gesamtmenge der Vault-Anteile zurück, die der `owner` aktuell besitzt.
+Gibt die Gesamtmenge an Vault-Anteilen zurück, die der `owner` derzeit besitzt.
 
 ### Übersicht der Schnittstelle {#mapOfTheInterface}
 
@@ -190,9 +190,9 @@ Gibt die Gesamtmenge der Vault-Anteile zurück, die der `owner` aktuell besitzt.
 
 ### Ereignisse {#events}
 
-#### Einzahlungsereignis
+#### Deposit-Ereignis
 
-**MUSS** ausgegeben werden, wenn Token über die Methoden [`mint`](#mint) und [`deposit`](#deposit) in den Vault eingezahlt werden.
+**MUSS** ausgelöst werden, wenn Token über die Methoden [`mint`](#mint) und [`deposit`](#deposit) in den Vault eingezahlt werden.
 
 ```solidity
 event Deposit(
@@ -203,11 +203,11 @@ event Deposit(
 )
 ```
 
-Wobei `sender` der Benutzer ist, der `assets` gegen `shares` getauscht und diese `shares` an den `owner` übertragen hat.
+Wobei `sender` der Benutzer ist, der `assets` gegen `shares` eingetauscht und diese `shares` an den `owner` übertragen hat.
 
-#### Ereignis zurückziehen
+#### Withdraw-Ereignis
 
-**MUSS** ausgegeben werden, wenn Anteile von einem Einzahler über die Methoden [`redeem`](#redeem) oder [`withdraw`](#withdraw) aus dem Vault abgehoben werden.
+**MUSS** ausgelöst werden, wenn Anteile von einem Einzahler über die Methoden [`redeem`](#redeem) oder [`withdraw`](#withdraw) aus dem Vault abgehoben werden.
 
 ```solidity
 event Withdraw(
@@ -219,9 +219,9 @@ event Withdraw(
 )
 ```
 
-Wobei `sender` der Benutzer ist, der die Abhebung ausgelöst und die dem `owner` gehörenden `shares` gegen `assets` getauscht hat. `receiver` ist der Benutzer, der die abgehobenen `assets` erhalten hat.
+Wobei `sender` der Benutzer ist, der die Abhebung ausgelöst und `shares`, die dem `owner` gehören, gegen `assets` eingetauscht hat. `receiver` ist der Benutzer, der die abgehobenen `assets` erhalten hat.
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [EIP-4626: Standard für tokenisierte Vaults](https://eips.ethereum.org/EIPS/eip-4626)
+- [EIP-4626: Tokenized Vault Standard](https://eips.ethereum.org/EIPS/eip-4626)
 - [ERC-4626: GitHub-Repo](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

@@ -17,9 +17,7 @@ export default async function ResourcesPageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-resources",
-  })
+  const t = await getTranslations("page-resources")
 
   const url = normalizeUrlForJsonLd(locale, `/resources/`)
 

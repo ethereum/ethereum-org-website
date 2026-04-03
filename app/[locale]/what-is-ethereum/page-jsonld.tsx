@@ -19,9 +19,7 @@ export default async function WhatIsEthereumPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-what-is-ethereum",
-  })
+  const t = await getTranslations("page-what-is-ethereum")
 
   const url = normalizeUrlForJsonLd(locale, `/what-is-ethereum/`)
 

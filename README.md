@@ -2195,6 +2195,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://mushow.uk/"><img src="https://avatars.githubusercontent.com/u/105550256?v=4?s=100" width="100px;" alt="0xMushow"/><br /><sub><b>0xMushow</b></sub></a><br /><a href="#maintenance-0xMushow" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://samlaf.github.io/"><img src="https://avatars.githubusercontent.com/u/9342524?v=4?s=100" width="100px;" alt="Samuel Laferriere"/><br /><sub><b>Samuel Laferriere</b></sub></a><br /><a href="#content-samlaf" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xSachinK"><img src="https://avatars.githubusercontent.com/u/73331595?v=4?s=100" width="100px;" alt="Sachin"/><br /><sub><b>Sachin</b></sub></a><br /><a href="#maintenance-0xSachinK" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nxxck"><img src="https://avatars.githubusercontent.com/u/48026464?v=4?s=100" width="100px;" alt="nxxck"/><br /><sub><b>nxxck</b></sub></a><br /><a href="#content-nxxck" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Nexonik2"><img src="https://avatars.githubusercontent.com/u/262324427?v=4?s=100" width="100px;" alt="Nexonik"/><br /><sub><b>Nexonik</b></sub></a><br /><a href="#content-nexonik2" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

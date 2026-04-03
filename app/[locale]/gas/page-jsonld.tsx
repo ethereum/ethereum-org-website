@@ -19,9 +19,7 @@ export default async function GasPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-gas",
-  })
+  const t = await getTranslations("page-gas")
 
   const url = normalizeUrlForJsonLd(locale, `/gas/`)
 
