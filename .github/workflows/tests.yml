@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Tests
 on:
   pull_request:
     branches: [dev, master, staging]
