@@ -529,22 +529,24 @@ function reconstructFromPlaceholders(
   })
 
   // Wrapper placeholders: LINK
+  // Loop to handle duplicate content-addressed placeholders (same link text+URL)
   extractions.forEach((original, key) => {
     if (!key.startsWith("LINK:")) return
     const hash = key.slice(5)
     const openTag = `<HTML-PLACEHOLDER-LINK-${hash}>`
     const closeTag = `</HTML-PLACEHOLDER-LINK-${hash}>`
+    const urlMatch = original.match(/\]\(([^)]+)\)/)
+    if (!urlMatch) return
 
-    const openIdx = result.indexOf(openTag)
-    const closeIdx = result.indexOf(closeTag)
-    if (openIdx >= 0 && closeIdx >= 0) {
+    let openIdx = result.indexOf(openTag)
+    while (openIdx >= 0) {
+      const closeIdx = result.indexOf(closeTag, openIdx)
+      if (closeIdx < 0) break
       const translatedText = result.slice(openIdx + openTag.length, closeIdx)
-      const urlMatch = original.match(/\]\(([^)]+)\)/)
-      if (urlMatch) {
-        const rebuilt = `[${translatedText}](${urlMatch[1]})`
-        result =
-          result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
-      }
+      const rebuilt = `[${translatedText}](${urlMatch[1]})`
+      result =
+        result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+      openIdx = result.indexOf(openTag)
     }
   })
 
@@ -554,18 +556,19 @@ function reconstructFromPlaceholders(
     const hash = key.slice(8)
     const openTag = `<HTML-PLACEHOLDER-HTMLTAG-${hash}>`
     const closeTag = `</HTML-PLACEHOLDER-HTMLTAG-${hash}>`
+    const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
+    const closingMatch = original.match(/<\/(\w+)>/)
+    if (!tagMatch || !closingMatch) return
 
-    const openIdx = result.indexOf(openTag)
-    const closeIdx = result.indexOf(closeTag)
-    if (openIdx >= 0 && closeIdx >= 0) {
+    let openIdx = result.indexOf(openTag)
+    while (openIdx >= 0) {
+      const closeIdx = result.indexOf(closeTag, openIdx)
+      if (closeIdx < 0) break
       const translatedText = result.slice(openIdx + openTag.length, closeIdx)
-      const tagMatch = original.match(/<(\w+)(\s[^>]*)?>/)
-      const closingMatch = original.match(/<\/(\w+)>/)
-      if (tagMatch && closingMatch) {
-        const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
-        result =
-          result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
-      }
+      const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
+      result =
+        result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+      openIdx = result.indexOf(openTag)
     }
   })
 
@@ -575,19 +578,19 @@ function reconstructFromPlaceholders(
     const hash = key.slice(10)
     const openTag = `<HTML-PLACEHOLDER-COMPONENT-${hash}>`
     const closeTag = `</HTML-PLACEHOLDER-COMPONENT-${hash}>`
+    const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
+    const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
+    if (!openingTagMatch || !closingTagMatch) return
 
-    const openIdx = result.indexOf(openTag)
-    const closeIdx = result.indexOf(closeTag)
-    if (openIdx >= 0 && closeIdx >= 0) {
+    let openIdx = result.indexOf(openTag)
+    while (openIdx >= 0) {
+      const closeIdx = result.indexOf(closeTag, openIdx)
+      if (closeIdx < 0) break
       const translatedChildren = result.slice(openIdx + openTag.length, closeIdx)
-      // Rebuild: original opening tag + translated children + closing tag
-      const openingTagMatch = original.match(/<([A-Z][a-zA-Z0-9]*)(\s[^>]*)?>/)
-      const closingTagMatch = original.match(/<\/([A-Z][a-zA-Z0-9]*)>/)
-      if (openingTagMatch && closingTagMatch) {
-        const rebuilt = `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedChildren}</${closingTagMatch[1]}>`
-        result =
-          result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
-      }
+      const rebuilt = `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedChildren}</${closingTagMatch[1]}>`
+      result =
+        result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+      openIdx = result.indexOf(openTag)
     }
   })
 
@@ -597,18 +600,18 @@ function reconstructFromPlaceholders(
     const hash = key.slice(10)
     const openTag = `<HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
     const closeTag = `</HTML-PLACEHOLDER-CODEBLOCK-${hash}>`
+    const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
+    if (!fenceMatch) return
 
-    const openIdx = result.indexOf(openTag)
-    const closeIdx = result.indexOf(closeTag)
-    if (openIdx >= 0 && closeIdx >= 0) {
+    let openIdx = result.indexOf(openTag)
+    while (openIdx >= 0) {
+      const closeIdx = result.indexOf(closeTag, openIdx)
+      if (closeIdx < 0) break
       const translatedContent = result.slice(openIdx + openTag.length, closeIdx)
-      // Rebuild the fence with original language tag and translated content
-      const fenceMatch = original.match(/^([ \t]*)(```|~~~)([^\n]*)/)
-      if (fenceMatch) {
-        const rebuilt = `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedContent.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
-        result =
-          result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
-      }
+      const rebuilt = `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedContent.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
+      result =
+        result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+      openIdx = result.indexOf(openTag)
     }
   })
 
