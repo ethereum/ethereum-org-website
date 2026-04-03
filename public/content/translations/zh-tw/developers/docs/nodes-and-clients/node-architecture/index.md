@@ -6,7 +6,7 @@ lang: zh-tw
 
 一個以太坊節點由兩個用戶端組成：一個[執行用戶端](/developers/docs/nodes-and-clients/#execution-clients)和一個[共識用戶端](/developers/docs/nodes-and-clients/#consensus-clients)。 節點若要提案新區塊，還必須執行[驗證器用戶端](#validators)。
 
-當以太坊使用[工作量證明](/developers/docs/consensus-mechanisms/pow/)時，一個執行用戶端已足夠執行一個以太坊全節點。 然而，自從實施[權益證明](/developers/docs/consensus-mechanisms/pow/)後，執行用戶端必須與另一個稱為[共識用戶端](/developers/docs/nodes-and-clients/#consensus-clients)的軟體一起使用。
+當以太坊使用[工作量證明](/developers/docs/consensus-mechanisms/pow/)時，一個執行用戶端已足夠執行一個以太坊全節點。 然而，自從實施[權益證明](/developers/docs/consensus-mechanisms/pos/)後，執行用戶端必須與另一個稱為[共識用戶端](/developers/docs/nodes-and-clients/#consensus-clients)的軟體一起使用。
 
 下圖顯示兩種以太坊用戶端的關係。 兩種用戶端與他們各自的點對點 (P2P) 網路相連。 執行用戶端透過其點對點網路廣播交易，來確保能夠管理自己的本機交易池，而共識用戶端透過其點對點網路廣播區塊，來確保共識和鏈增長，因此需要獨立的點對點網路。
 

@@ -79,6 +79,8 @@ Proponenci bloków używają danych o stanie do stworzenia „świadków” — 
 
 Słaba bezstanowość jest w zaawansowanym stadium badań, ale opiera się na podziale proponent-twórca oraz na drzewach Verkle, które należy wdrożyć tak, aby możliwe było przekazywanie małych świadków między użytkownikami. To oznacza, że słabą bezstanowość w sieci głównej Ethereum być może uda się wprowadzić za kilka lat.
 
+zkEVM do weryfikacji L1 to technologia komplementarna, która mogłaby dodatkowo usprawnić bezstanową weryfikację. Zamiast tylko sprawdzać świadków (witnesses), walidatorzy mogliby weryfikować dowód z wiedzą zerową, że cały blok został wykonany poprawnie -- zapewniając pewność kryptograficzną bez ponownego wykonywania transakcji.
+
 ### Silna bezstanowość {#strong-statelessness}
 
 Silna bezstanowość usuwa konieczność przechowywania danych o stanie przez każdy węzeł. Zamiast tego transakcje zostają wysłane wraz ze świadkami, którzy mogą zostać zagregowani przez twórców bloków. Twórcy bloków są następnie odpowiedzialni za przechowywanie tylko tych stanów, które są potrzebne do generowania świadków dla poszczególnych kont. Odpowiedzialność za stan jest całkowicie przeniesiona na użytkowników, ponieważ to oni wysyłają świadków oraz „listy dostępu”, aby zadeklarować, z którymi kontami i kluczami przechowywania wchodzą w interakcję. Umożliwiłoby to niezwykle lekkie węzły, ale wiążą się z tym też pewne kompromisy, jak utrudnienie transakcji z inteligentnymi kontraktami.

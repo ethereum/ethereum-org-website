@@ -17,9 +17,7 @@ export default async function Layer2PageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-layer-2",
-  })
+  const t = await getTranslations("page-layer-2")
 
   const url = normalizeUrlForJsonLd(locale, `/layer-2/`)
 

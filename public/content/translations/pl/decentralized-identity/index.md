@@ -83,23 +83,11 @@ Model ten pozwala na selektywne ujawnianie informacji, zwłaszcza w połączeniu
 
 #### 💡Studium przypadku: Narodowy cyfrowy dowód tożsamości (NDI) Bhutanu na Ethereum {#case-study-bhutan-ndi}
 
-- Zapewnia dostęp do weryfikowalnych poświadczeń tożsamości dla prawie 800 000 obywateli Bhutanu
+- Zapewnia dostęp do weryfikowalnych poświadczeń dla prawie 800 000 obywateli Bhutanu
 - Migracja z sieci Polygon [do sieci głównej Ethereum](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) w październiku 2025 r.
 - Ponad [234 000 cyfrowych dowodów tożsamości](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/) wydanych do marca 2025 r.
 
-Królestwo Bhutanu [zmigrowało swój system Narodowego Cyfrowego Dowodu Tożsamości (NDI)](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) na Ethereum w październiku 2025 r. Zbudowany na zasadach zdecentralizowanej tożsamości i suwerennej tożsamości, system NDI Bhutanu wykorzystuje zdecentralizowane identyfikatory i weryfikowalne poświadczenia do wydawania cyfrowo podpisanych poświadczeń bezpośrednio do osobistego portfela obywatela. Poprzez zakotwiczenie dowodów kryptograficznych tych poświadczeń na Ethereum system zapewnia, że są one autentyczne, odporne na manipulacje i mogą być weryfikowane przez każdą ze stron bez konieczności odpytywania organu centralnego.
-
-Architektura systemu kładzie nacisk na prywatność poprzez wykorzystanie technologii [dowodów o zerowej wiedzy (ZKP)](/zero-knowledge-proofs/). Ta implementacja „selektywnego ujawniania” pozwala obywatelom udowadniać określone fakty (np. „Mam ukończone 18 lat” lub „Jestem obywatelem”) w celu uzyskania dostępu do usług bez ujawniania podstawowych danych osobowych, takich jak pełny numer dowodu tożsamości czy dokładna data urodzenia. To pokazuje potężne, rzeczywiste zastosowanie Ethereum do stworzenia bezpiecznego, zorientowanego na użytkownika i chroniącego prywatność krajowego systemu dowodów tożsamości.
-
-#### 💡Studium przypadku: QuarkID miasta Buenos Aires na [warstwie 2](/layer-2/) Ethereum ZKSync Era {#case-study-buenos-aires-quarkid}
-
-- Wydano poświadczenia zdecentralizowanej tożsamości dla ponad [3,6 miliona użytkowników](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo) w momencie uruchomienia
-- QuarkID to protokół o otwartym kodzie źródłowym, uznany za [Cyfrowe Dobro Publiczne](https://www.digitalpublicgoods.net/r/quarkid) w ramach Celów Zrównoważonego Rozwoju ONZ
-- Podkreśla model „[rządu jako użytkownika](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)”, w którym miasto nie jest właścicielem protokołu, dając obywatelom pełną własność danych i prywatność
-
-W 2024 r. rząd miasta Buenos Aires (GCBA) zintegrował QuarkID, open-source'owy „system ramowy zaufania cyfrowego” stworzony przez Sekretariat Innowacji i Transformacji Cyfrowej GCBA, z miBA, oficjalną aplikacją miejską dla mieszkańców, umożliwiającą dostęp do usług rządowych i oficjalnych dokumentów. W momencie uruchomienia wszyscy ponad 3,6 miliona użytkowników miBA otrzymali zdecentralizowane tożsamości cyfrowe, które pozwalają im zarządzać i udostępniać weryfikowalne dokumenty i certyfikaty cyfrowe w łańcuchu, w tym poświadczenia obywatelstwa, akty urodzenia, małżeństwa i zgonu, dokumentację podatkową, zapisy o szczepieniach i inne.
-
-Zbudowany na sieci [warstwy 2](/layer-2/) Ethereum ZKSync Era system QuarkID wykorzystuje technologię ZKP, aby umożliwić obywatelom weryfikację osobistych poświadczeń w trybie peer-to-peer za pośrednictwem urządzeń mobilnych – bez ujawniania zbędnych danych osobowych. Program ten podkreśla model „rządu jako użytkownika”, w którym GCBA działa jako jeden z użytkowników otwartego i interoperacyjnego protokołu QuarkID, a nie jako scentralizowany właściciel. Ta architektura oparta na ZKP zapewnia kluczową funkcję prywatności: żadna strona trzecia, nawet GCBA, nie może śledzić, jak, kiedy i dlaczego obywatel używa swoich poświadczeń. Ten udany program zapewnia obywatelom pełną suwerenną tożsamość i kontrolę nad ich wrażliwymi danymi, a wszystko to jest zabezpieczone przez globalnie rozproszoną sieć Ethereum.
+Królestwo Bhutanu [zmigrowało swój system Narodowego Cyfrowego Dowodu Tożsamości (NDI)](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) na Ethereum w październiku 2025 r. Zbudowany na zasadach zdecentralizowanej tożsamości i suwerennej tożsamości, system NDI Bhutanu wykorzystuje zdecentralizowane identyfikatory i weryfikowalne poświadczenia do wydawania cyfrowo podpisanych poświadczeń bezpośrednio do osobistego portfela obywatela. Poprzez zakotwiczenie schematów wydawców tych poświadczeń na Ethereum system zapewnia, że są one autentyczne, odporne na manipulacje i mogą być weryfikowane przez każdą ze stron bez konieczności odpytywania organu centralnego.
 
 ## Co to są poświadczenia? {#what-are-attestations}
 
@@ -188,8 +176,6 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 - **[SpruceID](https://www.spruceid.com/)** – _Zdecentralizowany projekt tożsamości, który pozwala użytkownikom kontrolować tożsamość cyfrową za pomocą kont Ethereum i profili ENS, zamiast polegać na usługach stron trzecich._
 - **[Ethereum Attestation Service (EAS)](https://attest.org/)** – _Zdecentralizowany rejestr/protokół do tworzenia poświadczeń w łańcuchu lub poza nim na dowolny temat._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** – _Proof of Humanity (lub PoH) to system weryfikacji tożsamości społecznej zbudowany na Ethereum._
-- **[BrightID](https://www.brightid.org/)** – _Zdecentralizowana sieć tożsamości społecznościowych o otwartym kodzie źródłowym, która ma na celu zreformowanie weryfikacji tożsamości poprzez tworzenie i analizę grafu społecznego._
-- **[walt.id](https://walt.id)** — _Zdecentralizowana infrastruktura tożsamości i portfela o otwartym kodzie źródłowym, która umożliwia deweloperom i organizacjom wykorzystanie suwerennej tożsamości oraz NFT/SBT._
 - **[Veramo](https://veramo.io/)** – _Framework JavaScript, który ułatwia każdemu korzystanie z weryfikowalnych kryptograficznie danych w swoich aplikacjach._
 
 ## Dalsza lektura {#further-reading}

@@ -13,9 +13,7 @@ export default async function WalletsPageJsonLD({
   lastEditLocaleTimestamp,
   contributors,
 }) {
-  const t = await getTranslations({
-    namespace: "page-find-wallet",
-  })
+  const t = await getTranslations("page-find-wallet")
 
   const url = normalizeUrlForJsonLd(locale, `/wallets/`)
 

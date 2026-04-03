@@ -9,5 +9,5 @@ Sentry.init({
   environment,
   enabled: environment === "production",
   initialScope: { tags: { module: "app" } },
-  ignoreTransactions: ["middleware"],
+  ignoreTransactions: ["proxy"],
 })

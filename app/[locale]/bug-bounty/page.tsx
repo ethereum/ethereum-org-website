@@ -113,8 +113,8 @@ export default async function Page(props: { params: Promise<Params> }) {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ namespace: "page-bug-bounty" })
-  const tCommon = await getTranslations({ namespace: "common" })
+  const t = await getTranslations("page-bug-bounty")
+  const tCommon = await getTranslations("common")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("bug-bounty", locale as Lang)
@@ -840,7 +840,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-bug-bounty" })
+  const t = await getTranslations("page-bug-bounty")
 
   return await getMetadata({
     locale,

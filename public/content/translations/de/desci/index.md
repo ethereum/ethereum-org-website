@@ -22,7 +22,7 @@ Dezentralisierte Wissenschaft ermöglicht vielfältigere Finanzierungsquellen (v
 
 ### Juan Benet – Die DeSci-Bewegung
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## Wie DeSci die Wissenschaft verbessert {#desci-improves-science}
 

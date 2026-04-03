@@ -30,10 +30,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-ethereum-vs-bitcoin",
-  })
+  const t = await getTranslations("page-ethereum-vs-bitcoin")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("ethereum-vs-bitcoin", locale as Lang)
@@ -443,10 +440,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-ethereum-vs-bitcoin",
-  })
+  const t = await getTranslations("page-ethereum-vs-bitcoin")
 
   return await getMetadata({
     locale,

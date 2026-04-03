@@ -1,7 +1,6 @@
 import fs from "fs"
 import { join } from "path"
 
-import { SerializeOptions } from "next-mdx-remote/dist/types"
 import { compileMDX, MDXRemoteProps } from "next-mdx-remote/rsc"
 import { getPlaiceholder } from "plaiceholder"
 import remarkSlug from "rehype-slug"
@@ -14,6 +13,8 @@ import { Frontmatter, Layout, TocNodeType } from "../types"
 import rehypeImg from "@/lib/md/rehypeImg"
 import remarkInferToc from "@/lib/md/remarkInferToc"
 import { remarkPreserveJsx } from "@/lib/md/remarkPreserveJsx"
+
+type SerializeOptions = NonNullable<MDXRemoteProps["options"]>
 
 // Preprocess the markdown content
 function preprocessMarkdown(content: string) {

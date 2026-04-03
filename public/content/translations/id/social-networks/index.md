@@ -11,7 +11,7 @@ summaryPoint2: Jaringan media sosial terdesentralisasi melindungi privasi penggu
 summaryPoint3: Token dan NFT menciptakan cara baru untuk memonetisasi konten.
 ---
 
-Jejaring sosial memainkan peran besar dalam komunikasi dan interaksi kita sehari-hari. Namun, kontrol terpusat dari platform-platform ini telah menciptakan banyak masalah: pelanggaran data, pemadaman server, penghapusan platform (de-platforming), penyensoran, dan pelanggaran privasi adalah beberapa kompromi yang sering dilakukan oleh media sosial. Untuk mengatasi masalah ini, para pengembang membangun jejaring sosial di [Ethereum](). Jejaring sosial terdesentralisasi dapat memperbaiki banyak masalah dari platform jejaring sosial tradisional dan meningkatkan pengalaman pengguna secara keseluruhan.
+Jejaring sosial memainkan peran besar dalam komunikasi dan interaksi kita sehari-hari. Namun, kontrol terpusat dari platform-platform ini telah menciptakan banyak masalah: pelanggaran data, pemadaman server, penghapusan platform (de-platforming), penyensoran, dan pelanggaran privasi adalah beberapa kompromi yang sering dilakukan oleh media sosial. Untuk mengatasi masalah ini, para pengembang membangun jejaring sosial di [Ethereum](/). Jejaring sosial terdesentralisasi dapat memperbaiki banyak masalah dari platform jejaring sosial tradisional dan meningkatkan pengalaman pengguna secara keseluruhan.
 
 ## Apa itu jejaring sosial terdesentralisasi? {#what-are-decentralized-social-networks}
 

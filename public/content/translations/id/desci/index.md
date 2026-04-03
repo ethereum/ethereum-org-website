@@ -22,7 +22,7 @@ Sains terdesentralisasi memungkinkan sumber pendanaan yang lebih beragam (dari [
 
 ### Juan Benet - Gerakan DeSci
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## Bagaimana DeSci meningkatkan sains {#desci-improves-science}
 

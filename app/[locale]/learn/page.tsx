@@ -117,8 +117,8 @@ const ImageHeight200 = ({ src, alt }: ImageProps) => (
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-learn" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-learn")
+  const tCommon = await getTranslations("common")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("learn", locale as Lang)
@@ -738,7 +738,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-learn" })
+  const t = await getTranslations("page-learn")
 
   return await getMetadata({
     locale,
