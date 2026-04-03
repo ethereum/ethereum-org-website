@@ -1,3 +1,5 @@
+import countries from "i18n-iso-countries"
+
 import type { Continent } from "@/lib/types"
 
 // Continent → countries mapping for location parsing
@@ -105,4 +107,74 @@ export function parseLocationToContinent(location: string): Continent | null {
   const country = parts[parts.length - 1]?.trim()
   if (!country) return null
   return COUNTRY_TO_CONTINENT[country] || null
+}
+
+/**
+ * Aliases for country names that i18n-iso-countries doesn't recognize.
+ * Maps free-text names from external data to forms the package understands.
+ */
+const COUNTRY_NAME_ALIASES: Record<string, string> = {
+  "Hong Kong SAR": "Hong Kong",
+  // Add more here as needed
+}
+
+/**
+ * Translate an English country name into the target locale.
+ *
+ * Accepts informal English country names (e.g., "USA", "United States",
+ * "Hong Kong SAR") and returns the localized name.
+ *
+ * @param country - English country name (informal forms accepted)
+ * @param locale - Target locale code (e.g., "ja", "es", "ar")
+ * @returns Localized country name, or the original string if not recognized
+ */
+export function getCountryTranslation(
+  country: string,
+  locale: string
+): string {
+  if (!country) return country
+
+  const normalized = COUNTRY_NAME_ALIASES[country] ?? country
+  const code = countries.getAlpha2Code(normalized, "en")
+  if (!code) return country
+
+  return countries.getName(code, locale) ?? country
+}
+
+/**
+ * Localize an event location string by translating the country portion.
+ *
+ * Parses "City, Country" format, translates the country into the target
+ * locale, and reassembles. City names are left in their original script.
+ *
+ * Returns the original string unchanged if:
+ * - The location is "Online" (handled separately by i18n keys)
+ * - The country cannot be identified or translated
+ * - The locale is "en" (no translation needed)
+ *
+ * @param location - Raw location string (e.g., "Denver, USA")
+ * @param locale - Target locale code (e.g., "ja", "es", "ar")
+ * @returns Localized location string (e.g., "Denver, アメリカ合衆国")
+ */
+export function localizeLocation(location: string, locale: string): string {
+  if (!location || locale === "en") return location
+
+  if (location.toLowerCase() === "online") return location
+
+  const parts = location.split(/,\s*/)
+  const rawCountry = parts[parts.length - 1].trim()
+
+  const localizedCountry = getCountryTranslation(rawCountry, locale)
+
+  // Country wasn't translated -- return original
+  if (localizedCountry === rawCountry) return location
+
+  if (parts.length === 1) {
+    // No comma -- the whole string was the country (e.g., "Hong Kong SAR")
+    return localizedCountry
+  }
+
+  // Reassemble: "City, TranslatedCountry"
+  const city = parts.slice(0, -1).join(", ")
+  return `${city}, ${localizedCountry}`
 }

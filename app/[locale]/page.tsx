@@ -59,6 +59,7 @@ import { parseAppsOfTheWeek } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { formatDateRange } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
+import { localizeLocation } from "@/lib/utils/geography"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
@@ -850,7 +851,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                           })}
                         </CardParagraph>
                         <CardParagraph variant="uppercase">
-                          {location}
+                          {localizeLocation(location, locale)}
                         </CardParagraph>
                       </CardContent>
                     </Card>
