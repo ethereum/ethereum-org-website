@@ -42,6 +42,8 @@
     "lowercase-heading-id": true,
 
     // Custom: Translation IDs must match English source (flag only, no auto-fix)
-    "match-english-heading-ids": true
+    // DISABLED until translation pipeline with drift detection is in place.
+    // Rule file kept for future use as a pipeline validation step.
+    "match-english-heading-ids": false
   }
 }
