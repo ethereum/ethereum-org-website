@@ -76,7 +76,7 @@ Let's see how a Standard is so important to make things simple for us to inspect
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-20 Token. As you can
 see below we will use a simplified ABI, to make it a low friction example.
 
-#### Web3.py Example {#web3py-example}
+#### Web3.py Example {#web3py-example-2}
 
 First, make sure you have installed [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 

@@ -216,7 +216,7 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 
 Phew! Our fake money is all there! <Emoji text=":money_mouth_face:" size={1} />
 
-## Connect MetaMask to your UI {#connect-metamask-to-your-UI}
+## Connect MetaMask to your UI {#connect-metamask-to-your-ui}
 
 Now that our MetaMask wallet is set up, let's connect our dapp to it!
 
@@ -472,7 +472,7 @@ The text in the "Link to Asset", "Name", "Description" fields will comprise the 
 
 To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a convenient IPFS API and toolkit. In the next step, we'll explain exactly how to do this!
 
-## Use Pinata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Use Pinata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-ipfs}
 
 If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://app.pinata.cloud/auth/signup) and complete the steps to verify your email and account.
 
@@ -848,7 +848,7 @@ const onMintPressed = async () => {
 }
 ```
 
-## Deploy your NFT to a live website {#deploy-your-NFT}
+## Deploy your NFT to a live website {#deploy-your-nft}
 
 Ready to take your project live for users to interact with? Check out [this tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) for deploying your Minter to a live website.
 

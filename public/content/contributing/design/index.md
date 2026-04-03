@@ -10,7 +10,7 @@ Design is a critical component of any project, and by devoting your time and des
 
 Ultimately, this is a great way to build a diverse and impressive portfolio that showcases your design skills.
 
-## How to contribute?
+## How to contribute? {#how-to-contribute}
 
 ### <Emoji text=":one:" size={1} /> &nbsp;Provide feedback on early design prototypes {#design-critique}
 
@@ -45,7 +45,7 @@ If you feel comfortable taking on design challenges, you can visit our GitHub is
 3. Propose the solution in the corresponding GitHub issue or [create a new one.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
 4. Wait for the design team to review.
 
-### <Emoji text=":five:" size={1} /> &nbsp;Build Design System together {#Contribute-to-design-system}
+### <Emoji text=":five:" size={1} /> &nbsp;Build Design System together {#contribute-to-design-system}
 
 Our design system makes designing ethereum.org fun and easy. If you are an experienced designer, you can help us prepare many components for the website.
 
