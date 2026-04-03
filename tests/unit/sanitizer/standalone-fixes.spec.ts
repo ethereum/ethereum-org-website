@@ -57,6 +57,8 @@ const {
   fixBoldWrappedOrderedListNumerals,
   fixEscapedQuotesInJsxAttributes,
   fixTranslatedJsonPlaceholders,
+  fixBareRtlValues,
+  fixUnitOutsideSpan,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -2767,6 +2769,139 @@ author: Ori Pomerantz
       const tr = JSON.stringify({ a: "habari", b: "{extra}" })
       const { fixCount } = fixTranslatedJsonPlaceholders(tr, en)
       expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixBareRtlValues", () => {
+    test("wraps number with Latin unit", () => {
+      const input = "ایتھر کی مقدار 32 ETH ہے"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe('ایتھر کی مقدار <span dir="ltr">32 ETH</span> ہے')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps percentage", () => {
+      const input = "تقریباً 12.5% کمی"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe('تقریباً <span dir="ltr">12.5%</span> کمی')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps currency with symbol", () => {
+      const input = "قیمت $2,500 USD ہے"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe('قیمت <span dir="ltr">$2,500 USD</span> ہے')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps version/protocol ID", () => {
+      const input = "اپ گریڈ EIP-1559 کے بعد"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe('اپ گریڈ <span dir="ltr">EIP-1559</span> کے بعد')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps large formatted number", () => {
+      const input = "گیس کے 21,000 یونٹس"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe('گیس کے <span dir="ltr">21,000</span> یونٹس')
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips already-wrapped content", () => {
+      const input = 'مقدار <span dir="ltr">32 ETH</span> ہے'
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips content inside backticks", () => {
+      const input = "استعمال کریں `32 ETH` جمع کرنے کے لیے"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code fences", () => {
+      const input = "```\n32 ETH\n```"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("no-ops for non-RTL locales", () => {
+      const input = "costs 32 ETH to stake"
+      const { content, fixCount } = fixBareRtlValues(input, "es")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple values in one line", () => {
+      const input = "فیس 10 Gwei اور ٹپ 2 Gwei ہے"
+      const { content, fixCount } = fixBareRtlValues(input, "ar")
+      expect(content).toContain('<span dir="ltr">10 Gwei</span>')
+      expect(content).toContain('<span dir="ltr">2 Gwei</span>')
+      expect(fixCount).toBe(2)
+    })
+
+    test("skips frontmatter", () => {
+      const input = "---\ntitle: 32 ETH staking\n---\n\n32 ETH جمع کریں"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toContain("title: 32 ETH staking")
+      expect(content).toContain('<span dir="ltr">32 ETH</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("wraps multiplier", () => {
+      const input = "سائز 2x ہے"
+      const { content, fixCount } = fixBareRtlValues(input, "ur")
+      expect(content).toBe('سائز <span dir="ltr">2x</span> ہے')
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixUnitOutsideSpan", () => {
+    test("moves unit inside span", () => {
+      const input = '<span dir="ltr">$100,000</span> USD'
+      const { content, fixCount } = fixUnitOutsideSpan(input, "ur")
+      expect(content).toBe('<span dir="ltr">$100,000 USD</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("moves ETH inside span", () => {
+      const input = '<span dir="ltr">0.000252</span> ETH'
+      const { content, fixCount } = fixUnitOutsideSpan(input, "ur")
+      expect(content).toBe('<span dir="ltr">0.000252 ETH</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("moves Gwei inside span", () => {
+      const input = '<span dir="ltr">10</span> Gwei'
+      const { content, fixCount } = fixUnitOutsideSpan(input, "ar")
+      expect(content).toBe('<span dir="ltr">10 Gwei</span>')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct wrapping unchanged", () => {
+      const input = '<span dir="ltr">$100,000 USD</span>'
+      const { content, fixCount } = fixUnitOutsideSpan(input, "ur")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("no-ops for non-RTL locales", () => {
+      const input = '<span dir="ltr">$100,000</span> USD'
+      const { content, fixCount } = fixUnitOutsideSpan(input, "es")
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple instances", () => {
+      const input = '<span dir="ltr">100</span> Gwei اور <span dir="ltr">32</span> ETH'
+      const { content, fixCount } = fixUnitOutsideSpan(input, "ur")
+      expect(content).toContain('<span dir="ltr">100 Gwei</span>')
+      expect(content).toContain('<span dir="ltr">32 ETH</span>')
+      expect(fixCount).toBe(2)
     })
   })
 })

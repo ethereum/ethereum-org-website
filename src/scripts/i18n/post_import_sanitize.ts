@@ -2953,31 +2953,34 @@ function fixBareRtlValues(
   // Common Latin units that appear after numbers in ethereum.org content
   const UNITS = "ETH|BTC|Gwei|gwei|Wei|wei|USD|EUR|GBP|MB|GB|TB|KB|TH\\/s|MH\\/s|GH\\/s|APR|APY"
 
-  // Pattern 1: Number + Latin unit (32 ETH, 100 Gwei, 2 TB, 13s, 24h)
+  // Order matters: currency first (captures $), then numUnit (skips $ prefix)
+
+  // Pattern 1: Currency with $ symbol ($100,000, $2,500 USD)
+  const currencyRe = /(?<!<span dir="ltr">)(\$\d[\d,.]*(?:\s*(?:USD|EUR|GBP))?)(?!\s*<\/span>)/g
+
+  // Pattern 2: Number + Latin unit (32 ETH, 100 Gwei, 2 TB, 13s, 24h)
+  // Negative lookbehind for $ prevents double-wrapping currency amounts
   const numUnitRe = new RegExp(
-    `(?<!<span dir="ltr">)(-?\\d[\\d,.]*\\s*(?:${UNITS}|[smh]\\b|x\\b))(?!\\s*<\\/span>)`,
+    `(?<!<span dir="ltr">)(?<!\\$)(-?\\d[\\d,.]*\\s*(?:${UNITS}|[smh]\\b|x\\b))(?!\\s*<\\/span>)`,
     "g"
   )
 
-  // Pattern 2: Bare percentages (-12.5%, 51%)
+  // Pattern 3: Bare percentages (-12.5%, 51%)
   const pctRe = /(?<!<span dir="ltr">)(-?\d[\d,.]*\s*%)(?!\s*<\/span>)/g
-
-  // Pattern 3: Currency with $ symbol ($100,000, $2,500 USD)
-  const currencyRe = /(?<!<span dir="ltr">)(\$\d[\d,.]*(?:\s*(?:USD|EUR|GBP))?)(?!\s*<\/span>)/g
 
   // Pattern 4: Version/protocol IDs (v1.10.8, EIP-1559, ERC-721)
   const versionRe = /(?<!<span dir="ltr">)((?:v\d+\.\d+(?:\.\d+)*|(?:EIP|ERC|BLS)-\d+))(?!\s*<\/span>)/g
 
   // Pattern 5: Large formatted numbers standing alone (21,000 but not inside other patterns)
-  const largeNumRe = /(?<!<span dir="ltr">)(?<!\d)(\d{1,3}(?:,\d{3})+)(?!\s*(?:[a-zA-Z%]|<\/span>))/g
+  const largeNumRe = /(?<!<span dir="ltr">)(?<!\d)(\d{1,3}(?:,\d{3})+)(?!\s*(?:[a-zA-Z%$]|<\/span>))/g
 
   for (let i = 0; i < parts.length; i++) {
     if (i % 2 === 1) continue // Skip protected zones
 
     let part = parts[i]
+    part = part.replace(currencyRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
     part = part.replace(numUnitRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
     part = part.replace(pctRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
-    part = part.replace(currencyRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
     part = part.replace(versionRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
     part = part.replace(largeNumRe, (match) => { fixCount++; return `<span dir="ltr">${match}</span>` })
     parts[i] = part
