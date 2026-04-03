@@ -9,7 +9,7 @@ lang: ko
 published: 2025-04-30
 ---
 
-## 소개
+## 소개 {#introduction}
 
 [SAML](https://www.onelogin.com/learn/saml)은 웹2에서 [ID 공급자(IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider)가 [서비스 공급자(SP)](https://en.wikipedia.org/wiki/Service_provider_\(SAML\))에 대한 사용자 정보를 제공할 수 있도록 하는 데 사용되는 표준입니다.
 
@@ -22,7 +22,7 @@ published: 2025-04-30
 
 따라서 이미 알고 있는 많은 입문 자료가 포함될 것입니다. 자유롭게 건너뛰어도 좋습니다.
 
-### 이더리움 사용자를 위한 SAML
+### 이더리움 사용자를 위한 SAML {#saml-for-ethereum-people}
 
 SAML은 중앙화된 프로토콜입니다. 서비스 공급자(SP)는 해당 ID 공급자(IdP) 또는 해당 IdP의 인증서에 서명한 [인증 기관](https://www.ssl.com/article/what-is-a-certificate-authority-ca/)과 사전 신뢰 관계가 있는 경우에만 ID 공급자로부터 어설션(예: "이 사용자는 John이고, 그는 A, B, C를 수행할 수 있는 권한을 가져야 합니다")을 수락합니다.
 
@@ -32,7 +32,7 @@ SAML은 중앙화된 프로토콜입니다. 서비스 공급자(SP)는 해당 ID
 
 이것은 브라우저, SP, IdP 세 엔티티가 액세스를 위해 협상하는 방식입니다. SP는 사전에 브라우저를 사용하는 사용자에 대해 아무것도 알 필요 없이 IdP를 신뢰하기만 하면 됩니다.
 
-### SAML 사용자를 위한 이더리움
+### SAML 사용자를 위한 이더리움 {#ethereum-for-saml-people}
 
 이더리움은 탈중앙화된 시스템입니다.
 
@@ -51,7 +51,7 @@ SAML은 중앙화된 프로토콜입니다. 서비스 공급자(SP)는 해당 ID
 
 이더리움의 탈중앙화된 특성 때문에 모든 사용자가 인증을 생성할 수 있습니다. 신뢰할 수 있는 인증을 식별하려면 인증자의 신원이 중요합니다.
 
-## 설정
+## 설정 {#setup}
 
 첫 번째 단계는 SAML SP와 SAML IdP가 서로 통신하도록 하는 것입니다.
 
@@ -83,13 +83,13 @@ SAML은 중앙화된 프로토콜입니다. 서비스 공급자(SP)는 해당 ID
 
 5. IdP에 이메일 주소를 제공하고 <strong>서비스 공급자에 로그인</strong>을 클릭합니다. 서비스 공급자(포트 3000)로 다시 리디렉션되고 이메일 주소로 사용자를 인식하는지 확인합니다.
 
-### 자세한 설명
+### 자세한 설명 {#detailed-explanation}
 
 다음은 단계별로 일어나는 일입니다.
 
 ![이더리움 없는 일반 SAML 로그온](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
 이 파일에는 ID 공급자와 서비스 공급자 모두에 대한 구성이 포함되어 있습니다. 일반적으로 이 둘은 서로 다른 엔티티이지만 여기서는 단순화를 위해 코드를 공유할 수 있습니다.
 
@@ -167,7 +167,7 @@ export const idpPublicData = {
 
 ID 공급자의 공개 데이터는 비슷합니다. 사용자를 로그인하려면 `http://localhost:3001/idp/login`에 POST하고 사용자를 로그아웃하려면 `http://localhost:3001/idp/logout`에 POST하도록 지정합니다.
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 서비스 공급자를 구현하는 코드입니다.
 
@@ -342,7 +342,7 @@ app.listen(config.spPort, () => {
 
 이 express 애플리케이션으로 `spPort`를 수신합니다.
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
 ID 공급자입니다. 서비스 공급자와 매우 유사하며 아래 설명은 다른 부분에 대한 것입니다.
 
@@ -472,7 +472,7 @@ idpRouter.post(`/login`,
 
 인증 요청의 ID를 읽으려면 [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144)를 사용할 수 있어야 합니다. 하지만 작동하게 할 수 없었고 많은 시간을 할애할 가치가 없었기 때문에 [범용 XML 파서](https://www.npmjs.com/package/fast-xml-parser)를 사용했습니다. 필요한 정보는 XML의 최상위 수준에 있는 `<samlp:AuthnRequest>` 태그 내의 `ID` 속성입니다.
 
-## 이더리움 서명 사용하기
+## 이더리움 서명 사용하기 {#using-ethereum-signatures}
 
 이제 서비스 공급자에게 사용자 ID를 보낼 수 있으므로 다음 단계는 신뢰할 수 있는 방식으로 사용자 ID를 얻는 것입니다. Viem을 사용하면 지갑에 사용자 주소를 요청할 수 있지만, 이는 브라우저에 정보를 요청하는 것을 의미합니다. 브라우저를 제어할 수 없으므로 브라우저에서 받은 응답을 자동으로 신뢰할 수 없습니다.
 
@@ -490,7 +490,7 @@ pnpm start
 
 이 시점에서는 이더리움 주소에서 이메일 주소를 얻는 방법을 모르므로 대신 `<이더리움 주소>@bad.email.address`를 SP에 보고합니다.
 
-### 자세한 설명
+### 자세한 설명 {#detailed-explanation-2}
 
 변경 사항은 이전 다이어그램의 4-5단계에 있습니다.
 
@@ -700,7 +700,7 @@ idpRouter.post(`/login`,
 
 3단계 핸들러에서 `getLoginPage` 대신 이제 `getSignaturePage`를 사용합니다.
 
-## 이메일 주소 받기
+## 이메일 주소 받기 {#getting-the-email-address}
 
 다음 단계는 서비스 공급자가 요청한 식별자인 이메일 주소를 얻는 것입니다. 이를 위해 [이더리움 증명 서비스(EAS)](https://attest.org/)를 사용합니다.
 
@@ -756,7 +756,7 @@ pnpm start
 
 어느 쪽이든 이 작업을 마친 후 [http://localhost:3000](http://localhost:3000)으로 이동하여 지침을 따릅니다. 테스트 개인 키를 가져온 경우 받는 이메일은 `test_addr_0@example.com`입니다. 자신의 주소를 사용했다면 인증한 주소여야 합니다.
 
-### 자세한 설명
+### 자세한 설명 {#detailed-explanation-3}
 
 ![이더리움 주소에서 이메일로 가져오기](./fig-06-saml-sig-n-email.png)
 
@@ -873,13 +873,13 @@ GraphQL 쿼리입니다.
 
 새 함수를 사용하여 이메일 주소를 가져옵니다.
 
-## 탈중앙화는 어떻습니까?
+## 탈중앙화는 어떻습니까? {#what-about-decentralization}
 
 이 구성에서 사용자는 이더리움-이메일 주소 매핑을 위해 신뢰할 수 있는 인증자에 의존하는 한 다른 사람인 척할 수 없습니다. 그러나 ID 공급자는 여전히 중앙화된 구성 요소입니다. ID 공급자의 개인 키를 가진 사람은 누구나 서비스 공급자에게 거짓 정보를 보낼 수 있습니다.
 
 [다자간 계산(MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation)를 사용하는 솔루션이 있을 수 있습니다. 다음 튜토리얼에서 이에 대해 쓸 수 있기를 바랍니다.
 
-## 결론
+## 결론 {#conclusion}
 
 이더리움 서명과 같은 로그온 표준을 채택하는 것은 닭과 달걀 문제에 직면합니다. 서비스 공급자는 가능한 가장 넓은 시장에 어필하기를 원합니다. 사용자는 로그온 표준 지원에 대해 걱정하지 않고 서비스에 액세스할 수 있기를 원합니다.
 이더리움 IdP와 같은 어댑터를 만들면 이 장애물을 극복하는 데 도움이 될 수 있습니다.

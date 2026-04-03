@@ -73,7 +73,7 @@ This will yield the same information as provided on Etherscan's transaction page
 
 You can find dashboard [here](https://dune.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
 
-### Breaking Down Transactions {#breaking_down_transactions}
+### Breaking Down Transactions {#breaking-down-transactions}
 
 A submitted transaction includes several pieces of information including ([source](/developers/docs/transactions/)):
 

@@ -20,12 +20,12 @@ To better understand this page, we recommend you first read about [token standar
 
 ## ERC-1155 Functions and Features: {#body}
 
-- [Batch Transfer](#batch_transfers): Transfer multiple assets in a single call.
-- [Batch Balance](#batch_balance): Get the balances of multiple assets in a single call.
-- [Batch Approval](#batch_approval): Approve all tokens to an address.
-- [Hooks](#receive_hook): Receive tokens hook.
-- [NFT Support](#nft_support): If supply is only 1, treat it as NFT.
-- [Safe Transfer Rules](#safe_transfer_rule): Set of rules for secure transfer.
+- [Batch Transfer](#batch-transfers): Transfer multiple assets in a single call.
+- [Batch Balance](#batch-balance): Get the balances of multiple assets in a single call.
+- [Batch Approval](#batch-approval): Approve all tokens to an address.
+- [Hooks](#receive-hook): Receive tokens hook.
+- [NFT Support](#nft-support): If supply is only 1, treat it as NFT.
+- [Safe Transfer Rules](#safe-transfer-rule): Set of rules for secure transfer.
 
 ### Batch Transfers {#batch-transfers}
 
