@@ -67,30 +67,13 @@ Site-specific rules for ethereum.org (group-specific overrides below take preced
     case "rtl":
       return `${common}
 
-BiDi (bidirectional) rules for RTL languages -- CRITICAL for correct rendering:
-
-Content inside backticks (\`inline code\`) is already rendered as LTR monospace. Do NOT wrap backtick content in <span dir="ltr">.
-
-For ALL of the following patterns, wrap in <span dir="ltr">...</span> when they appear as bare text (not inside backticks):
-- Numbers with ANY Latin-based unit: <span dir="ltr">32 ETH</span>, <span dir="ltr">100 Gwei</span>, <span dir="ltr">2 TB</span>, <span dir="ltr">13s</span>, <span dir="ltr">24h</span>, <span dir="ltr">100 MB</span>
-- Percentages: <span dir="ltr">12.5%</span>, <span dir="ltr">51%</span>, <span dir="ltr">-12.5%</span>
-- Currency amounts with symbols or codes: <span dir="ltr">$100,000 USD</span>, <span dir="ltr">$2,500</span> (keep the unit/symbol INSIDE the span)
-- Mathematical expressions: <span dir="ltr">10^9</span>, <span dir="ltr">n > 2/3</span>, <span dir="ltr">x + y = z</span>
-- Version numbers and protocol IDs: <span dir="ltr">v1.10.8</span>, <span dir="ltr">EIP-1559</span>, <span dir="ltr">ERC-721</span>
-- Numeric dates and times: <span dir="ltr">June 18, 2022</span>, <span dir="ltr">12:00 UTC</span>
-- Large formatted numbers: <span dir="ltr">21,000</span>, <span dir="ltr">100,000</span>
-- Hex values and addresses: <span dir="ltr">0x71C7656EC7ab88b098defB751B7401B5f6d8976F</span>
-- Network metrics with units: <span dir="ltr">14.3 TH/s</span>, <span dir="ltr">5.2% APR</span>
-- Multipliers: <span dir="ltr">2x</span>, <span dir="ltr">100x</span>
-- Decimal numbers: <span dir="ltr">0.000252</span>, <span dir="ltr">1.000252</span>
-
-Do NOT wrap:
-- Text already transliterated into Arabic/Urdu script
-- Sentence-ending punctuation (period goes OUTSIDE the span)
-- Native Eastern Arabic numerals if used for prose in Urdu
-- Simple list numbers (1., 2., 3.) -- CSS handles these
-
-Other RTL rules:
+BiDi rules for RTL -- wrap LTR content in <span dir="ltr">...</span> to prevent layout flipping:
+- Wrap any technical string or number combined with Latin units, symbols, or operators: 32 ETH, 100 Gwei, 12.5%, $2,500 USD, v1.10.8, EIP-1559, > 0.01, 2x
+- Wrap numbers containing separators (commas/periods): 21,000, 0.000252
+- Wrap dates/times ONLY if they use Latin month names: June 18, 2022, 12:00 UTC
+- Keep units, currency symbols, and operators INSIDE: <span dir="ltr">$100,000 USD</span> (correct)
+- Punctuation (periods, commas, etc.) belonging to the RTL sentence stays OUTSIDE
+- Do NOT wrap content inside backticks or text transliterated into target script
 - Use Western Arabic numerals (1, 2, 3) for Arabic. Urdu uses native numerals for prose but Western for technical identifiers.
 - Never convert Gregorian dates to Hijri calendar.
 - The word "state" in blockchain context means computational state, not political state.
