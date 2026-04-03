@@ -9,7 +9,7 @@ lang: es
 published: 2025-04-30
 ---
 
-## Introducción
+## Introducción {#introduction}
 
 [SAML](https://www.onelogin.com/learn/saml) es un estándar utilizado en web2 que permite a un [proveedor de identidad (IdP)](https://es.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) proporcionar información de usuario a [proveedores de servicios (SP)](https://es.wikipedia.org/wiki/Service_provider_\(SAML\)).
 
@@ -22,7 +22,7 @@ Tenga en cuenta que este tutorial está escrito para dos públicos separados:
 
 Como resultado, va a contener mucho material introductorio que usted ya conoce. Si lo desea, puede saltarse esas partes.
 
-### SAML para personas de Ethereum
+### SAML para personas de Ethereum {#saml-for-ethereum-people}
 
 SAML es un protocolo centralizado. Un proveedor de servicios (SP) solo acepta aseveraciones (como "este es mi usuario John, debe tener permisos para hacer A, B y C") de un proveedor de identidad (IdP) si existe una relación de confianza previa ya sea con él, o con la [autoridad de certificación](https://www.ssl.com/article/what-is-a-certificate-authority-ca/) que firmó el certificado de ese IdP.
 
@@ -32,7 +32,7 @@ Por ejemplo, el SP puede ser una agencia de viajes que proporciona servicios de 
 
 Así es como las tres entidades, el navegador, el SP y el IdP, negocian el acceso. El SP no necesita saber nada sobre el usuario que utiliza el navegador de antemano, solo debe confiar en el IdP.
 
-### Ethereum para personas de SAML
+### Ethereum para personas de SAML {#ethereum-for-saml-people}
 
 Ethereum es un sistema descentralizado.
 
@@ -51,7 +51,7 @@ La firma solo verifica la dirección de Ethereum. Para obtener otros atributos d
 
 Debido a la naturaleza descentralizada de Ethereum, cualquier usuario puede realizar atestaciones. La identidad del atestador es importante para identificar qué atestaciones consideramos confiables.
 
-## Configuración
+## Configuración {#setup}
 
 El primer paso es disponer de un SP SAML y un IdP SAML que se comuniquen entre sí.
 
@@ -83,13 +83,13 @@ El primer paso es disponer de un SP SAML y un IdP SAML que se comuniquen entre s
 
 5. Proporcione al IdP su dirección de correo electrónico y haga clic en **Iniciar sesión en el proveedor de servicios**. Verá que es redirigido de vuelta al proveedor de servicios (puerto 3000) y que este lo reconoce por su dirección de correo electrónico.
 
-### Explicación detallada
+### Explicación detallada {#detailed-explanation}
 
 Esto es lo que sucede, paso a paso:
 
 ![Inicio de sesión SAML normal sin Ethereum](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
 Este archivo contiene la configuración tanto para el Proveedor de Identidad como para el Proveedor de Servicios. Normalmente serían dos entidades diferentes, pero aquí podemos compartir el código por simplicidad.
 
@@ -167,7 +167,7 @@ export const idpPublicData = {
 
 Los datos públicos para el proveedor de identidad son similares. Especifica que, para iniciar sesión, debe hacer POST a `http://localhost:3001/idp/login` y para cerrar sesión debe hacer POST a `http://localhost:3001/idp/logout`.
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 Este es el código que implementa un proveedor de servicios.
 
@@ -342,7 +342,7 @@ app.listen(config.spPort, () => {
 
 Escuche en el `spPort` con esta aplicación express.
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
 Este es el proveedor de identidad. Es muy similar al proveedor de servicios; las explicaciones a continuación son para las partes que difieren.
 
@@ -472,7 +472,7 @@ Este es el punto final que recibe una solicitud de inicio de sesión del proveed
 
 Deberíamos poder usar [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) para leer el ID de la solicitud de autenticación. Sin embargo, no pude lograr que funcionara y no valía la pena invertir mucho tiempo en ello, así que utilizo un [analizador XML de propósito general](https://www.npmjs.com/package/fast-xml-parser). La información que necesitamos es el atributo `ID` dentro de la etiqueta `<samlp:AuthnRequest>`, que se encuentra al nivel superior del XML.
 
-## Usando firmas de Ethereum
+## Usando firmas de Ethereum {#using-ethereum-signatures}
 
 Ahora que podemos enviar una identidad de usuario al proveedor de servicios, el siguiente paso es obtener la identidad del usuario de manera confiable. Viem nos permite simplemente solicitar la dirección del usuario a la billetera, pero esto implica pedirle esa información al navegador. No controlamos el navegador, por lo que no podemos confiar automáticamente en la respuesta que recibimos de él.
 
@@ -490,7 +490,7 @@ Luego navegue [al SP](http://localhost:3000) y siga las instrucciones.
 
 Tenga en cuenta que en este punto no sabemos cómo obtener la dirección de correo electrónico a partir de la dirección de Ethereum, por lo que en su lugar reportamos `<ethereum address>@bad.email.address` al SP.
 
-### Explicación detallada
+### Explicación detallada {#detailed-explanation-2}
 
 Los cambios se encuentran en los pasos 4 y 5 del diagrama anterior.
 
@@ -700,7 +700,7 @@ idpRouter.post(`/login`,
 
 En lugar de `getLoginPage`, ahora use `getSignaturePage` en el manejador del paso 3.
 
-## Obteniendo la dirección de correo electrónico
+## Obteniendo la dirección de correo electrónico {#getting-the-email-address}
 
 El siguiente paso es obtener la dirección de correo electrónico, el identificador solicitado por el proveedor de servicios. Para ello, usamos el [Ethereum Attestation Service (EAS)](https://attest.org/).
 
@@ -756,7 +756,7 @@ Luego proporcione su dirección de correo electrónico. Tiene dos maneras de hac
 
 De cualquier manera, después de hacer esto, navegue a [http://localhost:3000](http://localhost:3000) y siga las instrucciones. Si importó la clave privada de prueba, el correo que recibirá es `test_addr_0@example.com`. Si usó su propia dirección, debería ser la que usted haya atestiguado.
 
-### Explicación detallada
+### Explicación detallada {#detailed-explanation-3}
 
 ![Obteniendo de la dirección de Ethereum al correo electrónico](./fig-06-saml-sig-n-email.png)
 
@@ -873,13 +873,13 @@ Si hay un valor, use `decodeData` para decodificar los datos. No necesitamos los
 
 Use la nueva función para obtener la dirección de correo electrónico.
 
-## ¿Qué hay de la descentralización?
+## ¿Qué hay de la descentralización? {#what-about-decentralization}
 
 En esta configuración, los usuarios no pueden hacerse pasar por alguien que no son, siempre y cuando confiemos en atestadores de confianza para el mapeo de la dirección de Ethereum a la dirección de correo electrónico. Sin embargo, nuestro proveedor de identidad sigue siendo un componente centralizado. Quien tenga la clave privada del proveedor de identidad puede enviar información falsa al proveedor de servicios.
 
 Puede haber una solución usando [cómputo multipartito seguro (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Espero poder escribir sobre esto en un futuro tutorial.
 
-## Conclusión
+## Conclusión {#conclusion}
 
 La adopción de un estándar de inicio de sesión, como las firmas de Ethereum, enfrenta el problema del huevo y la gallina. Los proveedores de servicios quieren captar el mercado más amplio posible. Los usuarios quieren poder acceder a los servicios sin tener que preocuparse por si se admite su estándar de inicio de sesión.
 Crear adaptadores, como un IdP de Ethereum, puede ayudarnos a superar este obstáculo.
