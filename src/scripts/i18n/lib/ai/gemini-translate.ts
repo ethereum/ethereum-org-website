@@ -518,12 +518,14 @@ function reconstructFromPlaceholders(
 ): string {
   let result = translated
 
-  // Block placeholders: direct replacement with originals
+  // Block placeholders: replace ALL occurrences with originals.
+  // Content-addressed placeholders can appear multiple times when the
+  // same inline code/image appears repeatedly (e.g., `base fee` x5).
   extractions.forEach((original, placeholder) => {
     if (placeholder.startsWith("LINK:") || placeholder.startsWith("HTMLTAG:") || placeholder.startsWith("COMPONENT:") || placeholder.startsWith("CODEBLOCK:")) {
       return
     }
-    result = result.replace(placeholder, original)
+    result = result.split(placeholder).join(original)
   })
 
   // Wrapper placeholders: LINK

@@ -514,18 +514,23 @@ export function writeMarkdownManifest(
  * The dotfile prefix ensures loadMessages() skips it (filtered by
  * !entry.name.startsWith(".") in getNamespaces()).
  */
-export function updateJsonManifest(
-  localeDir: string,
+/**
+ * Build JSON manifest content as a string (for committing via GitHub API).
+ *
+ * Unlike markdown manifests (one per translated file), JSON manifests are
+ * per-locale (one .manifest.json per locale directory, tracking all namespace files).
+ */
+export function buildJsonManifestContent(
   englishFilePath: string,
-  englishContent: string
-): void {
-  const manifestPath = join(localeDir, ".manifest.json")
+  englishContent: string,
+  existingManifest?: string
+): string {
   const fileManifest = generateFileManifest(englishContent, "json")
 
   let manifest: PerLocaleJsonManifest
-  if (existsSync(manifestPath)) {
+  if (existingManifest) {
     try {
-      manifest = JSON.parse(readFileSync(manifestPath, "utf-8"))
+      manifest = JSON.parse(existingManifest)
     } catch {
       manifest = { version: 1, updatedAt: "", files: {} }
     }
@@ -540,5 +545,23 @@ export function updateJsonManifest(
     keys: flattenTrie(fileManifest.trie),
   }
 
-  writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + "\n")
+  return JSON.stringify(manifest, null, 2) + "\n"
+}
+
+/**
+ * Update the .manifest.json in a locale's intl directory (local disk).
+ */
+export function updateJsonManifest(
+  localeDir: string,
+  englishFilePath: string,
+  englishContent: string
+): void {
+  const manifestPath = join(localeDir, ".manifest.json")
+  let existing: string | undefined
+  if (existsSync(manifestPath)) {
+    existing = readFileSync(manifestPath, "utf-8")
+  }
+  const content = buildJsonManifestContent(englishFilePath, englishContent, existing)
+  mkdirSync(dirname(manifestPath), { recursive: true })
+  writeFileSync(manifestPath, content)
 }

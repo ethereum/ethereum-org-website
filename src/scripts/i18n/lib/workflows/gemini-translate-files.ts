@@ -17,7 +17,7 @@ import { translateFile } from "../ai/gemini-translate"
 import { filterGlossaryFlat } from "../ai/glossary-lookup"
 import {
   buildMarkdownManifestContent,
-  updateJsonManifest,
+  buildJsonManifestContent,
 } from "../ai/manifest-generator"
 import {
   initProgress,
@@ -240,9 +240,13 @@ async function translateLanguage(
           await committer.commitFile(manifestPath, manifestContent, language)
           console.log(`  [manifest] ${manifestPath}: committed`)
         } else {
-          const rootDir = process.cwd()
-          const localeDir = join(rootDir, `src/intl/${language}`)
-          updateJsonManifest(localeDir, file.path, file.content)
+          const jsonManifestContent = buildJsonManifestContent(
+            file.path,
+            file.content
+          )
+          const jsonManifestPath = `src/intl/${language}/.manifest.json`
+          await committer.commitFile(jsonManifestPath, jsonManifestContent, language)
+          console.log(`  [manifest] ${jsonManifestPath}: committed`)
         }
       } catch (err) {
         console.warn(
