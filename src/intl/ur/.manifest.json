@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-03T20:41:19.608Z",
+  "files": {
+    "src/intl/en/page-upgrades.json": {
+      "englishHash": "adf78333b820",
+      "translatedAt": "2026-04-03T20:41:19.608Z",
+      "keys": {
+        "page-upgrades-merge-infographic-el": "11702cd0b694",
+        "page-upgrades-merge-infographic-alt-text": "4f9a927c14e8",
+        "page-upgrades-beacon-date": "738fc0f4e90c",
+        "page-upgrades-merge-date": "a6d668454f6d",
+        "page-upgrades-shards-date": "3b014152f218",
+        "page-upgrades-pbs": "5617c50d4dae",
+        "page-upgrades-post-merge-banner-tutorial-ood": "5f93c2bde4d9",
+        "page-upgrades-upgrades-guide": "78bb4a87fa73",
+        "page-upgrades-upgrades-docking": "6f4341f10375",
+        "page-upgrades-shard-title": "31db937c81cf",
+        "page-upgrades-upgrades-beacon-chain": "50b9f48f17fd",
+        "consensus-beaconscan-title": "e99cba06a6cd",
+        "consensus-beaconscan-in-title": "d04b6b040ee0",
+        "consensus-beaconcha-in-desc": "04494a1cfa1b",
+        "consensus-beaconscan-desc": "426c27abf1c2",
+        "consensus-become-staker": "c67de372c38b",
+        "consensus-become-staker-desc": "ef033a063802",
+        "consensus-explore": "32c0cac2d464",
+        "consensus-run-beacon-chain": "742fcb94246d",
+        "consensus-run-beacon-chain-desc": "2a289ebea143",
+        "read-more": "8ccdd6d82975"
+      }
+    }
+  }
+}
