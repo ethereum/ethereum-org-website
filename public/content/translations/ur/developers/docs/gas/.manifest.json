@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "englishSource": "public/content/developers/docs/gas/index.md",
+  "translatedAt": "2026-04-03T19:31:52.328Z",
+  "englishHash": "f6bfffaed707",
+  "sections": {
+    "_frontmatter": "903f466a55ed",
+    "_intro": "99e23dc0df8b",
+    "_intro/link-text:0": "a13bebeb57e1",
+    "_intro/prose:0": "e35af26d8af0",
+    "prerequisites": "d0c38cad51be",
+    "prerequisites/_label": "865514682d01",
+    "prerequisites/_content": "938b99a314bb",
+    "prerequisites/_content/link-text:0": "81dc075c3d55",
+    "prerequisites/_content/link-text:1": "f7925209bc63",
+    "prerequisites/_content/prose:0": "70a9c5bcb904",
+    "what-is-gas": "b771c8c92488",
+    "what-is-gas/_label": "ddff5b514f29",
+    "what-is-gas/_content": "dff886d81c10",
+    "what-is-gas/_content/image-alt:0": "070f72356805",
+    "what-is-gas/_content/link-text:0": "931d210378d9",
+    "what-is-gas/_content/link-text:1": "a5a4244986ca",
+    "what-is-gas/_content/link-text:2": "cc99b23eb56b",
+    "what-is-gas/_content/prose:0": "4fbf3eec839d",
+    "how-are-gas-fees-calculated": "52eed583a258",
+    "how-are-gas-fees-calculated/_label": "b8cfc08b305b",
+    "how-are-gas-fees-calculated/_content": "0e0728281f93",
+    "how-are-gas-fees-calculated/_content/prose:0": "6426d0cd0ad2",
+    "how-are-gas-fees-calculated/base-fee": "b71972e97f53",
+    "how-are-gas-fees-calculated/base-fee/_label": "6efacc6c89ed",
+    "how-are-gas-fees-calculated/base-fee/_content": "e9eab83eb030",
+    "how-are-gas-fees-calculated/base-fee/_content/prose:0": "c93f28ab5986",
+    "how-are-gas-fees-calculated/priority-fee": "c03f952a29f7",
+    "how-are-gas-fees-calculated/priority-fee/_label": "ae3ee91b1ab4",
+    "how-are-gas-fees-calculated/priority-fee/_content": "d5258ebe7381",
+    "how-are-gas-fees-calculated/priority-fee/_content/prose:0": "fde4515f36b5",
+    "how-are-gas-fees-calculated/maxfee": "f379846066e0",
+    "how-are-gas-fees-calculated/maxfee/_label": "3c4276261081",
+    "how-are-gas-fees-calculated/maxfee/_content": "9bf57ca088dd",
+    "how-are-gas-fees-calculated/maxfee/_content/prose:0": "df7197549ca7",
+    "how-are-gas-fees-calculated/block-size": "16b1a9593e46",
+    "how-are-gas-fees-calculated/block-size/_label": "cd5c76d24155",
+    "how-are-gas-fees-calculated/block-size/_content": "5faeb9445572",
+    "how-are-gas-fees-calculated/block-size/_content/link-text:0": "2eec2f43ccd3",
+    "how-are-gas-fees-calculated/block-size/_content/link-text:1": "100a42db9d9e",
+    "how-are-gas-fees-calculated/block-size/_content/prose:0": "031033a4a322",
+    "how-are-gas-fees-calculated/calculating-fees-in-practice": "48c454b3df67",
+    "how-are-gas-fees-calculated/calculating-fees-in-practice/_label": "45024e98b690",
+    "how-are-gas-fees-calculated/calculating-fees-in-practice/_content": "9fc21db3ca62",
+    "how-are-gas-fees-calculated/calculating-fees-in-practice/_content/prose:0": "e3f2c804d1cb",
+    "why-do-gas-fees-exist": "3c80b30a7cd5",
+    "why-do-gas-fees-exist/_label": "b1dcb90d3e85",
+    "why-do-gas-fees-exist/_content": "955b46e4ebd1",
+    "why-do-gas-fees-exist/_content/image-alt:0": "a59651dbc0e1",
+    "why-do-gas-fees-exist/_content/link-text:0": "931d210378d9",
+    "why-do-gas-fees-exist/_content/prose:0": "1160717dc728",
+    "what-is-gas-limit": "41fb4343a06c",
+    "what-is-gas-limit/_label": "1d943a0fe99f",
+    "what-is-gas-limit/_content": "f3d4e4190d4e",
+    "what-is-gas-limit/_content/link-text:0": "81fbd2f198c9",
+    "what-is-gas-limit/_content/prose:0": "4bb3b198e10b",
+    "why-can-gas-fees-get-so-high": "86261ac8775a",
+    "why-can-gas-fees-get-so-high/_label": "94bf6cc9d829",
+    "why-can-gas-fees-get-so-high/_content": "7314a6b03be5",
+    "why-can-gas-fees-get-so-high/_content/prose:0": "1b976237ddf4",
+    "initiatives-to-reduce-gas-costs": "63a9d286c34c",
+    "initiatives-to-reduce-gas-costs/_label": "ef309277d206",
+    "initiatives-to-reduce-gas-costs/_content": "da21d2d936eb",
+    "initiatives-to-reduce-gas-costs/_content/link-text:0": "8fea95b70c0c",
+    "initiatives-to-reduce-gas-costs/_content/link-text:1": "5a5341f473a1",
+    "initiatives-to-reduce-gas-costs/_content/prose:0": "7d28f01d698d",
+    "monitoring-gas-fees": "c949313a6bf0",
+    "monitoring-gas-fees/_label": "6848de463c35",
+    "monitoring-gas-fees/_content": "7d8ae6a5e640",
+    "monitoring-gas-fees/_content/link-text:0": "d0299bb7f22b",
+    "monitoring-gas-fees/_content/link-text:1": "3dee05652774",
+    "monitoring-gas-fees/_content/link-text:2": "ce42adafba1e",
+    "monitoring-gas-fees/_content/link-text:3": "1ccf2eb604cf",
+    "monitoring-gas-fees/_content/link-text:4": "175f2a1b837b",
+    "monitoring-gas-fees/_content/prose:0": "2856f94f555f",
+    "related-tools": "0a6053cf780c",
+    "related-tools/_label": "3da6e153ee8c",
+    "related-tools/_content": "87dd61d75e89",
+    "related-tools/_content/link-text:0": "cc481a547b54",
+    "related-tools/_content/link-text:1": "fb8e2d3ff144",
+    "related-tools/_content/prose:0": "066bbc448fc1",
+    "further-reading": "866adf49c771",
+    "further-reading/_label": "4082f515b2f4",
+    "further-reading/_content": "302c94aa9f2e",
+    "further-reading/_content/link-text:0": "70b717453854",
+    "further-reading/_content/link-text:1": "3b8b079f7225",
+    "further-reading/_content/link-text:2": "b3054deb8294",
+    "further-reading/_content/link-text:3": "e313e79bcb1f",
+    "further-reading/_content/link-text:4": "f2be23535e0a",
+    "further-reading/_content/link-text:5": "b1032201e598",
+    "further-reading/_content/prose:0": "18ab532fa8ae"
+  },
+  "placeholderOrder": [
+    "LINK-a21a82",
+    "LINK-ab55fe",
+    "LINK-6c4cfe",
+    "IMAGE-8d0f5b",
+    "LINK-fb70b4",
+    "LINK-487ef0",
+    "LINK-d6a194",
+    "CODE-4347a1",
+    "CODE-bc2d4b",
+    "CODE-4347a1",
+    "CODE-bc2d4b",
+    "CODE-4347a1",
+    "CODE-3092a5",
+    "CODE-3092a5",
+    "CODE-139a3a",
+    "CODE-4347a1",
+    "CODE-bc2d4b",
+    "CODE-705f81",
+    "CODE-4347a1",
+    "CODE-8d1633",
+    "CODE-a4e696",
+    "CODE-7c58b1",
+    "LINK-76ff78",
+    "LINK-71a431",
+    "CODE-4a84d8",
+    "IMAGE-a3a784",
+    "LINK-fb70b4",
+    "LINK-adc8d3",
+    "LINK-6cf4d4",
+    "LINK-528387",
+    "LINK-fa46cd",
+    "LINK-28a3a2",
+    "LINK-b40ab7",
+    "LINK-5be5e8",
+    "LINK-57ec81",
+    "LINK-f9d221",
+    "LINK-1363cd",
+    "LINK-9e8957",
+    "LINK-42aa9f",
+    "LINK-bbdc7f",
+    "LINK-bbc24a",
+    "LINK-8c04f8",
+    "LINK-c7593d"
+  ],
+  "placeholderMap": {
+    "CODE-4347a1": {
+      "type": "inline-code",
+      "values": {
+        "content": "base fee"
+      }
+    },
+    "CODE-bc2d4b": {
+      "type": "inline-code",
+      "values": {
+        "content": "priority fee"
+      }
+    },
+    "CODE-3092a5": {
+      "type": "inline-code",
+      "values": {
+        "content": "priority"
+      }
+    },
+    "CODE-139a3a": {
+      "type": "inline-code",
+      "values": {
+        "content": "units of gas used * (base fee + priority fee)"
+      }
+    },
+    "CODE-705f81": {
+      "type": "inline-code",
+      "values": {
+        "content": "21,000 * (10 + 2) = 252,000 gwei"
+      }
+    },
+    "CODE-8d1633": {
+      "type": "inline-code",
+      "values": {
+        "content": "current base fee * 112.5%"
+      }
+    },
+    "CODE-a4e696": {
+      "type": "inline-code",
+      "values": {
+        "content": "202.7 gwei * 112.5% = 228.1 gwei"
+      }
+    },
+    "CODE-7c58b1": {
+      "type": "inline-code",
+      "values": {
+        "content": "maxFeePerGas"
+      }
+    },
+    "CODE-4a84d8": {
+      "type": "inline-code",
+      "values": {
+        "content": "max fee - (base fee + tip)"
+      }
+    },
+    "IMAGE-8d0f5b": {
+      "type": "image",
+      "values": {
+        "path": "./gas.png"
+      }
+    },
+    "IMAGE-a3a784": {
+      "type": "image",
+      "values": {
+        "path": "../transactions/gas-tx.png"
+      }
+    },
+    "LINK-a21a82": {
+      "type": "link",
+      "values": {
+        "url": "/"
+      }
+    },
+    "LINK-ab55fe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/transactions/"
+      }
+    },
+    "LINK-6c4cfe": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    },
+    "LINK-fb70b4": {
+      "type": "link",
+      "values": {
+        "url": "https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf"
+      }
+    },
+    "LINK-d6a194": {
+      "type": "link",
+      "values": {
+        "url": "https://wikipedia.org/wiki/Wei_Dai"
+      }
+    },
+    "LINK-487ef0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.investopedia.com/terms/b/bmoney.asp"
+      }
+    },
+    "LINK-76ff78": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/stats/averageGasLimit?interval=threeMonths"
+      }
+    },
+    "LINK-71a431": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/blocks/"
+      }
+    },
+    "LINK-adc8d3": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/smart-contracts/"
+      }
+    },
+    "LINK-6cf4d4": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/"
+      }
+    },
+    "LINK-528387": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/#layer-2-scaling"
+      }
+    },
+    "LINK-fa46cd": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/gastracker"
+      }
+    },
+    "LINK-28a3a2": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/gas-tracker"
+      }
+    },
+    "LINK-b40ab7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ethgastracker.com/"
+      }
+    },
+    "LINK-5be5e8": {
+      "type": "link",
+      "values": {
+        "url": "https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm"
+      }
+    },
+    "LINK-57ec81": {
+      "type": "link",
+      "values": {
+        "url": "https://www.cryptoneur.xyz/gas-fees-calculator"
+      }
+    },
+    "LINK-f9d221": {
+      "type": "link",
+      "values": {
+        "url": "https://www.blocknative.com/gas"
+      }
+    },
+    "LINK-1363cd": {
+      "type": "link",
+      "values": {
+        "url": "https://gas.network"
+      }
+    },
+    "LINK-9e8957": {
+      "type": "link",
+      "values": {
+        "url": "https://defiprime.com/gas"
+      }
+    },
+    "LINK-42aa9f": {
+      "type": "link",
+      "values": {
+        "url": "https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a"
+      }
+    },
+    "LINK-bbdc7f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.alchemy.com/overviews/solidity-gas-optimization"
+      }
+    },
+    "LINK-bbc24a": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-1559"
+      }
+    },
+    "LINK-8c04f8": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@timbeiko/1559-resources"
+      }
+    },
+    "LINK-c7593d": {
+      "type": "link",
+      "values": {
+        "url": "https://web.archive.org/web/20241126205908/https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes"
+      }
+    }
+  }
+}
