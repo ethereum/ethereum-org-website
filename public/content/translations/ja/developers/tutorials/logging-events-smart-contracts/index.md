@@ -4,6 +4,7 @@ description: "スマートコントラクトにおけるイベントを紹介し
 author: "jdourlens"
 tags: [ "スマートコントラクト", "Remix", "Solidity", "イベント" ]
 skill: intermediate
+breadcrumb: "イベントログ"
 lang: ja
 published: 2020-04-03
 source: EthereumDev

@@ -1,77 +1,78 @@
 ---
-title: Pengantar ether
-description: Pengantar pengembang untuk mata uang kripto ether.
+title: Pengantar teknis tentang ether
+description: Pengantar pengembang tentang mata uang kripto ether.
 lang: id
 ---
 
 ## Prasyarat {#prerequisites}
 
-Untuk membantu Anda lebih memahami halaman ini, kami sarankan Anda membaca [Pengantar Ethereum](/developers/docs/intro-to-ethereum/) terlebih dahulu.
+Untuk membantu Anda memahami halaman ini dengan lebih baik, kami sarankan Anda membaca [Pengantar Ethereum](/developers/docs/intro-to-ethereum/) terlebih dahulu.
 
 ## Apa itu mata uang kripto? {#what-is-a-cryptocurrency}
 
-Mata uang kripto adalah sarana pertukaran yang diamankan oleh buku besar berbasis blockchain.
+Mata uang kripto adalah alat tukar yang diamankan oleh buku besar berbasis blockchain.
 
-Sebuah sarana pertukaran adalah apa pun yang diterima luas sebagai pembayaran untuk barang dan layanan, dan sebuah buku besar adalah tempat penyimpanan data yang mencatat transaksi. Teknologi blockchain memungkinkan para pengguna membuat transaksi di buku besar tanpa mengandalkan pihak ketiga yang terpercaya untuk menjaga isi buku besarnya.
+Alat tukar adalah segala sesuatu yang diterima secara luas sebagai pembayaran untuk barang dan jasa, dan buku besar adalah penyimpanan data yang melacak transaksi. Teknologi blockchain memungkinkan pengguna untuk melakukan transaksi pada buku besar tanpa bergantung pada pihak ketiga tepercaya untuk memelihara buku besar tersebut.
 
-Mata uang kripto pertama adalah Bitcoin, yang dibuat oleh Satoshi Nakamoto. Sejak Bitcoin dirilis pada tahun 2009, orang-orang telah membuat ribuan mata uang kripto di banyak blockchain yang berbeda.
+Mata uang kripto pertama adalah Bitcoin, yang diciptakan oleh Satoshi Nakamoto. Sejak perilisan Bitcoin pada tahun 2009, orang-orang telah membuat ribuan mata uang kripto di berbagai blockchain yang berbeda.
 
 ## Apa itu ether? {#what-is-ether}
 
-**Ether (ETH)** adalah mata uang kripto yang digunakan untuk berbagai keperluan di jaringan Ethereum. Pada dasarnya, ini adalah satu-satunya bentuk pembayaran yang dapat diterima untuk biaya transaksi, dan setelah [penggabungan](/roadmap/merge) juga diperlukan untuk memvalidasi dan mengusulkan pemblokiran di Jaringan Utama. Ether juga digunakan sebagai bentuk jaminan utama di pasar pinjaman [DeFi](/defi), sebagai unit akun di pasar NFT, sebagai pembayaran yang diperoleh karena menjalanan layanan atau menjual barang dunia nyata, dan banyak lagi.
+**Ether (ETH)** adalah mata uang kripto yang digunakan untuk banyak hal di jaringan Ethereum. Pada dasarnya, ini adalah satu-satunya bentuk pembayaran yang dapat diterima untuk biaya transaksi, dan setelah [The Merge](/roadmap/merge), ether diperlukan untuk memvalidasi dan mengusulkan blok di Mainnet. Ether juga digunakan sebagai bentuk utama agunan di pasar pinjaman [DeFi](/defi), sebagai unit akun di pasar NFT, sebagai pembayaran yang diperoleh karena melakukan layanan atau menjual barang dunia nyata, dan banyak lagi.
 
-Ethereum memungkinkan pengembang untuk membuat [**aplikasi terdesentralisasi (dapp)**](/developers/docs/dapps), yang semuanya berbagi pool daya komputasi. Pool bersama ini terbatas, sehingga Ethereum memerlukan sebuah mekanisme untuk menentukan siapa yang dapat menggunakannya. Jika tidak, sebuah dapp dapat secara tidak sengaja atau dengan maksud jahat menghabiskan semua sumber daya jaringan, yang akan menghalangi pengguna lainnya untuk mengaksesnya.
+Ethereum memungkinkan pengembang untuk membuat [**aplikasi terdesentralisasi (dapps)**](/developers/docs/dapps), yang semuanya berbagi kumpulan daya komputasi. Kumpulan daya komputasi bersama ini terbatas, sehingga Ethereum memerlukan mekanisme untuk menentukan siapa yang dapat menggunakannya. Jika tidak, sebuah dapp dapat secara tidak sengaja atau dengan niat jahat menghabiskan semua sumber daya jaringan, yang akan memblokir orang lain untuk mengaksesnya.
 
-Mata uang kripto ether mendukung mekanisme penetapan harga untuk daya komputasi Ethereum. Ketika para pengguna ingin membuat transaksi, mereka harus membayar ether agar transaksi mereka dikenali di blockchain. Biaya pemakaian ini dikenal sebagai [biaya gas](/developers/docs/gas/), dan biaya gas bergantung pada jumlah daya komputasi yang diperlukan untuk mengeksekusi transaksi dan permintaan keseluruhan jaringan untuk daya komputasi pada saat itu.
+Mata uang kripto ether mendukung mekanisme penetapan harga untuk daya komputasi Ethereum. Ketika pengguna ingin melakukan transaksi, mereka harus membayar ether agar transaksi mereka dikenali di blockchain. Biaya penggunaan ini dikenal sebagai [biaya gas](/developers/docs/gas/), dan biaya gas bergantung pada jumlah daya komputasi yang diperlukan untuk mengeksekusi transaksi dan permintaan daya komputasi di seluruh jaringan pada saat itu.
 
-Oleh karena itu, sekalipun sebuah dapp jahat mengirimkan perulangan tak terhingga, transaksi pada akhirnya akan kehabisan gas dan terhenti, yang memungkinkan jaringan untuk kembali ke kondisi normal.
+Oleh karena itu, bahkan jika dapp yang berbahaya mengirimkan perulangan tak terbatas, transaksi tersebut pada akhirnya akan kehabisan ether dan berhenti, memungkinkan jaringan untuk kembali normal.
 
-Sifatnya [umum](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [untuk](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [menggabungkan](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum dan ether — ketika orang-orang merujuk "harga Ethereum," itu menggambarkan harga ether.
+Sangat [umum untuk menyamakan](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum dan ether — ketika orang merujuk pada "harga Ethereum," mereka sebenarnya sedang mendeskripsikan harga ether.
 
-## Mencetak ether {#minting-ether}
+## Mint ether {#minting-ether}
 
-Mencetak adalah proses di mana ether baru dibuat di buku besar Ethereum. Protokol Ethereum yang mendasarinya membuat ether baru, dan ini tidak memungkinkan untuk seorang pengguna membuat ether.
+Mint adalah proses di mana ether baru dibuat di buku besar Ethereum. Protokol Ethereum yang mendasarinya membuat ether baru, dan tidak mungkin bagi pengguna untuk membuat ether.
 
-Ether dicetak saat seorang penambang membuat sebuah blok di blockchain Ethereum. Sebagai insentif bagi para penambang, protokol memberikan imbalan di setiap blok, yang menambahkan saldo dari alamat yang ditetapkan oleh blok penambang. Nilai imbalan blok telah berubah dari waktu ke waktu, dan hari ini nilainya sebesar 2 ETH per blok.
+Ether di-mint sebagai hadiah untuk setiap blok yang diusulkan dan pada setiap pos pemeriksaan epoch untuk aktivitas validator lainnya yang terkait dengan pencapaian konsensus. Jumlah total yang diterbitkan bergantung pada jumlah validator dan berapa banyak ether yang telah mereka stake. Total penerbitan ini dibagi rata di antara validator dalam kasus ideal di mana semua validator jujur dan online, tetapi pada kenyataannya, ini bervariasi berdasarkan kinerja validator. Sekitar 1/8 dari total penerbitan diberikan kepada pengusul blok; sisanya didistribusikan ke validator lainnya. Pengusul blok juga menerima tip dari biaya transaksi dan pendapatan terkait MEV, tetapi ini berasal dari ether yang didaur ulang, bukan penerbitan baru.
 
 ## Membakar ether {#burning-ether}
 
-Sama halnya dengan pembuatan ether melalui imbalan blok, ether dapat dihancurkan oleh proses yang disebut 'pembakaran'. Ketika ether dibakar, ether dihilangkan dari perederan secara permananen.
+Selain membuat ether melalui hadiah blok, ether dapat dihancurkan melalui proses yang disebut 'pembakaran' (burning). Ketika ether dibakar, ether tersebut dihapus dari peredaran secara permanen.
 
-Pembakaran ether terjadi dalam setiap transaksi di Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
+Pembakaran ether terjadi di setiap transaksi di Ethereum. Ketika pengguna membayar transaksi mereka, biaya dasar gas, yang ditetapkan oleh jaringan sesuai dengan permintaan transaksional, akan dihancurkan. Hal ini, ditambah dengan ukuran blok yang bervariasi dan biaya gas maksimum, menyederhanakan estimasi biaya transaksi di Ethereum. Ketika permintaan jaringan tinggi, [blok](https://eth.blockscout.com/block/22580057) dapat membakar lebih banyak ether daripada yang di-mint, yang secara efektif mengimbangi penerbitan ether.
 
-Burning the base fee prevents various ways the miners could manipulate it otherwise. For example, if miners got the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
+Membakar biaya dasar menghambat kemampuan produsen blok untuk memanipulasi transaksi. Misalnya, jika produsen blok menerima biaya dasar, mereka dapat memasukkan transaksi mereka sendiri secara gratis dan menaikkan biaya dasar untuk orang lain. Sebagai alternatif, mereka dapat mengembalikan biaya dasar kepada beberapa pengguna secara offchain, yang mengarah ke pasar biaya transaksi yang lebih buram dan kompleks.
 
 ## Denominasi ether {#denominations}
 
-Karena banyak transaksi di Ethereum bernilai kecil, ether memiliki beberapa denominasi yang mungkin dirujuk untuk jumlah nilai yang lebih kecil. Dari denominasi ini, Wei dan gwei sangat penting.
+Karena nilai banyak transaksi di Ethereum kecil, ether memiliki beberapa denominasi yang dapat dirujuk sebagai unit akun yang lebih kecil. Dari denominasi ini, Wei dan gwei sangatlah penting.
 
-Wei adalah jumlah ether terkecil, dan sebagai hasilnya, banyak implementasi teknis, seperti [Yellowpaper Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf), akan mendasarkan semua penghitungan dalam Wei.
+Wei adalah jumlah ether terkecil yang mungkin, dan sebagai hasilnya, banyak implementasi teknis, seperti [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), akan mendasarkan semua perhitungan dalam Wei.
 
-Gwei, kependekan dari giga-wei, sering digunakan untuk menggambarkan biaya gas di Ethereum.
+Gwei, kependekan dari giga-wei, sering digunakan untuk mendeskripsikan biaya gas di Ethereum.
 
-| Denominasi | Nilai dalam ether | Penggunaan Umum                |
-| ---------- | ----------------- | ------------------------------ |
-| Wei        | 10<sup>-18</sup>  | Implementasi teknis            |
-| Gwei       | 10<sup>-9</sup>   | Biaya gas yang terbaca manusia |
+| Denominasi   | Nilai dalam ether | Penggunaan Umum           |
+| ------------ | ----------------- | ------------------------- |
+| Wei          | 10<sup>-18</sup>  | Implementasi teknis       |
+| Gwei         | 10<sup>-9</sup>   | Biaya gas yang dapat dibaca manusia |
 
 ## Mentransfer ether {#transferring-ether}
 
 Setiap transaksi di Ethereum berisi bidang `value`, yang menentukan jumlah ether yang akan ditransfer, dalam denominasi wei, untuk dikirim dari alamat pengirim ke alamat penerima.
 
-Ketika alamat penerima merupakan [kontrak pintar](/developers/docs/smart-contracts/), ether yang ditransfer ini dapat digunakan untuk membayar gas ketika kontrak pintar menjalankan kodenya.
+Ketika alamat penerima adalah [kontrak pintar](/developers/docs/smart-contracts/), ether yang ditransfer ini dapat digunakan untuk membayar gas ketika kontrak pintar mengeksekusi kodenya.
 
 [Lebih lanjut tentang transaksi](/developers/docs/transactions/)
 
-## Membuat kueri ether {#querying-ether}
+## Kueri ether {#querying-ether}
 
-Pengguna dapat membuat kueri saldo eter dari [akun](/developers/docs/accounts/) dengan memeriksa bidang `balance` akun, yang menunjukkan kepemilikan ether dalam mata uang wei.
+Pengguna dapat melakukan kueri saldo ether dari [akun](/developers/docs/accounts/) mana pun dengan memeriksa bidang `balance` akun tersebut, yang menunjukkan kepemilikan ether dalam denominasi wei.
 
-[Etherscan](https://etherscan.io) adalah sebuah peralatan populer untuk memeriksa saldo alamat melalui aplikasi berbasis web. Sebagai contoh, [halaman Etherscan ini](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) menampilkan saldo untuk Yayasan Ethereum.
+[Etherscan](https://etherscan.io) dan [Blockscout](https://eth.blockscout.com) adalah alat populer untuk memeriksa saldo alamat melalui aplikasi berbasis web. Misalnya, [halaman Blockscout ini](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe) menunjukkan saldo untuk Ethereum Foundation. Saldo akun juga dapat dikueri menggunakan dompet atau secara langsung dengan membuat permintaan ke node.
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Mendefiniskan Ether dan Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _Grup CME_
-- [Laporan Resmi Ethereum](/whitepaper/): Proposal asli untuk Ethereum. Dokumen ini memasukkan deskripsi ether dan motivasi dibalik pembuatannya.
+- [Mendefinisikan ether dan Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
+- [Whitepaper Ethereum](/whitepaper/): Proposal asli untuk Ethereum. Dokumen ini mencakup deskripsi tentang ether dan motivasi di balik penciptaannya.
+- [Kalkulator Gwei](https://www.alchemy.com/gwei-calculator): Gunakan kalkulator gwei ini untuk mengonversi wei, gwei, dan ether dengan mudah. Cukup masukkan jumlah wei, gwei, atau ETH apa pun dan hitung konversinya secara otomatis.
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

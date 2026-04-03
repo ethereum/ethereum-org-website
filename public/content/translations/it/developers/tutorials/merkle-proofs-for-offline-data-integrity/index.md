@@ -1,105 +1,109 @@
 ---
-title: Prove di Merkle per l'integrità dei dati offline
-description: Garantire l'integrità dei dati sulla catena per i dati memorizzati principalmente al di fuori di essa
+title: "Prove di Merkle per l'integrità dei dati fuori catena"
+description: "Garantire l'integrità dei dati on-chain per i dati che sono archiviati, per lo più, fuori catena"
 author: Ori Pomerantz
-tags:
-  - "archiviazione"
+tags: ["archiviazione"]
 skill: advanced
+breadcrumb: Prove di Merkle
 lang: it
 published: 2021-12-30
 ---
 
 ## Introduzione {#introduction}
 
-Idealmente, vorremmo archiviare tutto nell'archiviazione di Ethereum, memorizzata tra migliaia di computer e avente una disponibilità estremamente elevata (i dati non sono censurabili) e integrità (i dati non sono modificabili in un modo non autorizzato), ma archiviare una parola di 32 byte costa tipicamente 20.000 gas. Mentre scriviamo il presente articolo, tale costo equivale a 6,60 dollari. Ne consegue che 21 centesimi per byte sia un costo impraticabile per molti utilizzi.
+Idealmente vorremmo archiviare tutto nell'archiviazione di Ethereum, che è memorizzata su migliaia di computer e ha una disponibilità estremamente elevata (i dati non possono essere censurati) e integrità (i dati non possono essere modificati in modo non autorizzato), ma l'archiviazione di una parola di 32 byte costa in genere 20.000 gas. Nel momento in cui scrivo, questo costo equivale a 6,60 $. A 21 centesimi per byte, questo è troppo costoso per molti usi.
 
-Per risolvere questo problema l'ecosistema di Ethereum ha sviluppato [molti metodi alternativi per memorizzare dati in modo decentralizzato](/developers/docs/storage/). Solitamente occorre raggiungere un compromesso tra disponibilità e prezzo, mentre l'integrità è generalmente garantita.
+Per risolvere questo problema, l'ecosistema di Ethereum ha sviluppato [molti modi alternativi per archiviare i dati in modo decentralizzato](/developers/docs/storage/). Di solito comportano un compromesso tra disponibilità e prezzo. Tuttavia, l'integrità è solitamente garantita.
 
-In questo articolo imparerai **come** garantire l'integrità dei dati senza memorizzare i dati sulla blockchain, usando le [prove di Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
+In questo articolo imparerai **come** garantire l'integrità dei dati senza archiviare i dati sulla blockchain, utilizzando le [prove di Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
 
 ## Come funziona? {#how-does-it-work}
 
-In teoria, potremmo semplicemente memorizzare l'hash dei dati sulla catena e inviare tutti i dati nelle transazioni che lo richiedono. Anche questo però sarebbe troppo costoso. Un byte di dati per una transazione costa circa 16 gas, correntemente circa mezzo centesimo, o circa 5 dollari per kilobyte. 5.000 dollari per megabyte è un prezzo comunque proibitivo per molti utilizzi, anche senza il costo supplementare connesso all'hashing dei dati.
+In teoria potremmo semplicemente archiviare l'hash dei dati on-chain e inviare tutti i dati nelle transazioni che lo richiedono. Tuttavia, questo è ancora troppo costoso. Un byte di dati per una transazione costa circa 16 gas, attualmente circa mezzo centesimo, o circa 5 $ per kilobyte. A 5000 $ per megabyte, questo è ancora troppo costoso per molti usi, anche senza il costo aggiuntivo dell'hashing dei dati.
 
-La soluzione consiste nel procedere ripetutamente all'hashing di diverse sottoserie di dati, quindi per i dati che non devono essere inviati è sufficiente inviare un hash. A tale scopo puoi utilizzare un albero di Merkle, una struttura di dati ad albero in cui ogni nodo rappresenta un hash dei nodi sottostanti:
+La soluzione è eseguire ripetutamente l'hash di diversi sottoinsiemi di dati, in modo che per i dati che non è necessario inviare si possa semplicemente inviare un hash. Lo si fa utilizzando un albero di Merkle, una struttura dati ad albero in cui ogni nodo è un hash dei nodi sottostanti:
 
 ![Albero di Merkle](tree.png)
 
-L'hash principale è l'unica parte che deve essere memorizzata sulla catena. Per provare un dato valore, occorre fornire tutti gli hash che devono essere combinati con esso per ottenere il root. Ad esempio, per provare `C`, occorre fornire `D`, `H(A-B)` e `H(E-H)`.
+L'hash radice è l'unica parte che deve essere archiviata on-chain. Per provare un certo valore, fornisci tutti gli hash che devono essere combinati con esso per ottenere la radice. Ad esempio, per provare `C` fornisci `D`, `H(A-B)` e `H(E-H)`.
 
 ![Prova del valore di C](proof-c.png)
 
 ## Implementazione {#implementation}
 
-[Il campione di codice è disponibile qui](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
+[Il codice di esempio è fornito qui](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Codice esterno alla catena {#off-chain-code}
+### Codice fuori catena {#offchain-code}
 
-In questo articolo usiamo JavaScript per i calcoli al di fuori della catena. Gran parte delle app decentralizzate hanno i propri componenti esterni alla catena su JavaScript.
+In questo articolo utilizziamo JavaScript per i calcoli fuori catena. La maggior parte delle applicazioni decentralizzate ha il proprio componente fuori catena in JavaScript.
 
-#### Creare il root di Merkle {#creating-the-merkle-root}
+#### Creazione della radice di Merkle {#creating-the-merkle-root}
 
-Prima dobbiamo fornire il root di Merkle alla catena.
+Per prima cosa dobbiamo fornire la radice di Merkle alla catena.
 
 ```javascript
 const ethers = require("ethers")
 ```
 
-[Usiamo la funzione hash dal pacchetto ethers](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
+[Utilizziamo la funzione di hash dal pacchetto ethers](https://docs.ethers.io/v5/api/utils/hashing/#utils-keccak256).
 
 ```javascript
-// The raw data whose integrity we have to verify. The first two bytes a
-// are a user identifier, and the last two bytes the amount of tokens the
-// user owns at present.
+// I dati grezzi la cui integrità dobbiamo verificare. I primi due byte s
+// ono un identificatore utente, e gli ultimi due byte la quantità di token che l'
+// utente possiede attualmente.
 const dataArray = [
   0x0bad0010, 0x60a70020, 0xbeef0030, 0xdead0040, 0xca110050, 0x0e660060,
   0xface0070, 0xbad00080, 0x060d0091,
 ]
 ```
 
-Codificando ogni voce in un unico numero intero da 256 bit si ottiene un codice meno leggibile rispetto, ad esempio, all'utilizzo di JSON. Tuttavia, ciò comporta un'elaborazione significativamente ridotta per recuperare i dati nel contratto, quindi costi del gas molto inferiori. [JSON può essere letto sulla catena](https://github.com/chrisdotn/jsmnSol), ma è una cattiva idea, quindi se possibile consigliamo di evitarlo.
+La codifica di ogni voce in un singolo intero a 256 bit si traduce in un codice meno leggibile rispetto all'utilizzo di JSON, ad esempio. Tuttavia, questo significa un'elaborazione significativamente inferiore per recuperare i dati nel contratto, quindi costi del gas molto più bassi. [Puoi leggere JSON on-chain](https://github.com/chrisdotn/jsmnSol), è solo una cattiva idea se evitabile.
 
 ```javascript
-// The array of hash values, as BigInts
+// L'array dei valori di hash, come BigInt
 const hashArray = dataArray
 ```
 
-In questo caso, per iniziare i nostri dati sono valori da 256 bit, quindi non è necessaria alcuna elaborazione. Se usiamo una struttura di dati più complicata, come le stringhe, dovremo assicurarci di eseguire per prima cosa l'hashing dei dati, così da ottenere un insieme di hash. Anche questo, ricordiamo che non importa se gli utenti conoscono le informazioni altrui. In caso contrario, dovremmo eseguire l'hashing in modo tale che l'utente 1 non conosca il valore per l'utente 0, l'utente 2 non conosca il valore per l'utente 3, ecc.
+In questo caso i nostri dati sono valori a 256 bit per cominciare, quindi non è necessaria alcuna elaborazione. Se utilizziamo una struttura dati più complicata, come le stringhe, dobbiamo assicurarci di eseguire prima l'hash dei dati per ottenere un array di hash. Nota che questo è anche perché non ci interessa se gli utenti conoscono le informazioni di altri utenti. Altrimenti avremmo dovuto eseguire l'hash in modo che l'utente 1 non conosca il valore per l'utente 0, l'utente 2 non conosca il valore per l'utente 3, ecc.
 
 ```javascript
-// Convert between the string the hash function expects and the
-// BigInt we use everywhere else.
+// Converte tra la stringa che la funzione di hash si aspetta e il
+// BigInt che usiamo in ogni altra parte.
 const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
 
-La funzione hash di ethers prevede di ottenere una stringa in JavaScript con un numero esadecimale, come `0x60A7` e rispondere con un'altra stringa con la stessa struttura. Tuttavia, per il resto del codice è più facile usare `BigInt`, in modo da poter convertire in una stringa esadecimale e tornare indietro.
+La funzione di hash di ethers si aspetta di ricevere una stringa JavaScript con un numero esadecimale, come `0x60A7`, e risponde con un'altra stringa con la stessa struttura. Tuttavia, per il resto del codice è più facile usare `BigInt`, quindi convertiamo in una stringa esadecimale e viceversa.
 
 ```javascript
-// Symmetrical hash of a pair so we won't care if the order is reversed.
+// Hash simmetrico di una coppia, così non ci importerà se l'ordine è invertito.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
-Questa funzione è simmetrica (hash di una b [xor](https://en.wikipedia.org/wiki/Exclusive_or)). Questo significa che quando controlliamo la prova di Merkle, non dobbiamo preoccuparci di mettere il valore dalla prova prima o dopo il valore calcolato. Il controllo della prova di Merkle ha luogo sulla catena, quindi meno bisogna fare lì, meglio è.
+Questa funzione è simmetrica (hash di a [xor](https://en.wikipedia.org/wiki/Exclusive_or) b). Ciò significa che quando controlliamo la prova di Merkle non dobbiamo preoccuparci se inserire il valore della prova prima o dopo il valore calcolato. Il controllo della prova di Merkle viene eseguito on-chain, quindi meno dobbiamo fare lì, meglio è.
 
-Attenzione: La crittografia è più complessa di quanto sembri. La versione iniziale di questo articolo conteneva la funzione di hash `hash(a^b)`. Quella era una **cattiva** idea, poiché comportava che, conoscendo i valori legittimi di `a` e `b` avresti potuto usare `b' = a^b^a'` per provare qualsiasi valore `a'` desiderato. Con questa funzione dovresti calcolare `b'` così che `hash(a') ^ hash(b')` sia pari a un valore noto (il ramo successivo verso la radice), il che è molto più difficile.
+Attenzione:
+La crittografia è più difficile di quanto sembri.
+La versione iniziale di questo articolo aveva la funzione di hash `hash(a^b)`.
+È stata una **pessima** idea perché significava che se si conoscevano i valori legittimi di `a` e `b` si poteva usare `b' = a^b^a'` per provare qualsiasi valore `a'` desiderato.
+Con questa funzione dovresti calcolare `b'` in modo tale che `hash(a') ^ hash(b')` sia uguale a un valore noto (il ramo successivo sulla strada verso la radice), il che è molto più difficile.
 
 ```javascript
-// The value to denote that a certain branch is empty, doesn't
-// have a value
+// Il valore per indicare che un certo ramo è vuoto, non
+// ha un valore
 const empty = 0n
 ```
 
-Quando il numero di valori non è una potenza intera di due, dobbiamo gestire i rami vuoti. A tale scopo, questo programma inserisce zero come segnaposto.
+Quando il numero di valori non è una potenza intera di due, dobbiamo gestire i rami vuoti. Il modo in cui questo programma lo fa è inserire zero come segnaposto.
 
 ![Albero di Merkle con rami mancanti](merkle-empty-hash.png)
 
 ```javascript
-// Calculate one level up the tree of a hash array by taking the hash of
-// each pair in sequence
+// Calcola un livello superiore dell'albero di un array di hash prendendo l'hash di
+// ogni coppia in sequenza
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // To avoid over writing the input // Add an empty value if necessary (we need all the leaves to be // paired)
+  var inp = [...inputArray] // Per evitare di sovrascrivere l'input // Aggiunge un valore vuoto se necessario (abbiamo bisogno che tutte le foglie siano // accoppiate)
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -110,13 +114,13 @@ const oneLevelUp = (inputArray) => {
 } // oneLevelUp
 ```
 
-Questa funzione "scala" un livello nell'albero di Merkle eseguendo l'hashing di coppie di valori al livello corrente. Nota che questa non è l'implementazione più efficiente: avremmo potuto evitare di copiare l'input e aggiungere semplicemente `hashEmpty` nel punto appropriato del ciclo, ma questo codice è ottimizzato per migliorare la leggibilità.
+Questa funzione "sale" di un livello nell'albero di Merkle eseguendo l'hash delle coppie di valori al livello corrente. Nota che questa non è l'implementazione più efficiente, avremmo potuto evitare di copiare l'input e aggiungere semplicemente `hashEmpty` quando appropriato nel ciclo, ma questo codice è ottimizzato per la leggibilità.
 
 ```javascript
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // Climb up the tree until there is only one value, that is the // root. // // If a layer has an odd number of entries the // code in oneLevelUp adds an empty value, so if we have, for example, // 10 leaves we'll have 5 branches in the second layer, 3 // branches in the third, 2 in the fourth and the root is the fifth
+  result = [...inputArray] // Risale l'albero finché non c'è un solo valore, ovvero la // radice. // // Se un livello ha un numero dispari di voci, il // codice in oneLevelUp aggiunge un valore vuoto, quindi se abbiamo, per esempio, // 10 foglie avremo 5 rami nel secondo livello, 3 // rami nel terzo, 2 nel quarto e la radice è il quinto
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -124,57 +128,57 @@ const getMerkleRoot = (inputArray) => {
 }
 ```
 
-Per ottenere la radice, scala finché non resta un solo valore.
+Per ottenere la radice, sali finché non rimane un solo valore.
 
-#### Creare una prova di Merkle {#creating-a-merkle-proof}
+#### Creazione di una prova di Merkle {#creating-a-merkle-proof}
 
-Una prova di Merkle è data dai valori da sottoporre all'hashing insieme al valore dimostrato in modo da ottenere nuovamente il root di Merkle. Il valore da provare spesso è ricavabile da altri dati, quindi preferisco fornirlo separatamente anziché come parte del codice.
+Una prova di Merkle è costituita dai valori di cui eseguire l'hash insieme al valore da provare per riottenere la radice di Merkle. Il valore da provare è spesso disponibile da altri dati, quindi preferisco fornirlo separatamente piuttosto che come parte del codice.
 
 ```javascript
-// A merkle proof consists of the value of the list of entries to
-// hash with. Because we use a symmetrical hash function, we don't
-// need the item's location to verify the proof, only to create it
+// Una prova di merkle consiste nel valore della lista di voci da
+// sottoporre a hash. Poiché usiamo una funzione di hash simmetrica, non
+// abbiamo bisogno della posizione dell'elemento per verificare la prova, solo per crearla
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Until we reach the top
+    // Finché non raggiungiamo la cima
     while (currentLayer.length > 1) {
-        // No odd length layers
+        // Nessun livello di lunghezza dispari
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // If currentN is odd, add with the value before it to the proof
+               // Se currentN è dispari, aggiungi con il valore che lo precede alla prova
             ? currentLayer[currentN-1]
-               // If it is even, add the value after it
+               // Se è pari, aggiungi il valore che lo segue
             : currentLayer[currentN+1])
 
 ```
 
-Eseguiamo l'hashing di `(v[0],v[1])`, `(v[2],v[3])`, ecc. Quindi per i valori pari ci serve quello successivo, mentre per i valori dispari ci serve quello precedente.
+Eseguiamo l'hash di `(v[0],v[1])`, `(v[2],v[3])`, ecc. Quindi per i valori pari abbiamo bisogno di quello successivo, per i valori dispari di quello precedente.
 
 ```javascript
-        // Move to the next layer up
+        // Passa al livello successivo superiore
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
-    }   // while currentLayer.length > 1
+    } // while currentLayer.length > 1
 
     return result
-}   // getMerkleProof
+} // getMerkleProof
 ```
 
-### Codice on-chain {#on-chain-code}
+### Codice on-chain {#onchain-code}
 
-Finalmente abbiamo il codice che verifica la prova. Il codice on-chain è scritto in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). L'ottimizzazione è molto più importante qui, perché il gas è relativamente costoso.
+Infine abbiamo il codice che controlla la prova. Il codice on-chain è scritto in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). L'ottimizzazione è molto più importante qui perché il gas è relativamente costoso.
 
 ```solidity
-//SPDX-License-Identifier: Public Domain
+// SPDX-License-Identifier: Public Domain
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 ```
 
-L'ho scritto usando l'[ambiente di sviluppo Hardhat](https://hardhat.org/), che ci consente di avere l'[output della console da Solidity](https://hardhat.org/docs/cookbook/debug-logs) durante lo sviluppo.
+L'ho scritto utilizzando l'[ambiente di sviluppo Hardhat](https://hardhat.org/), che ci consente di avere l'[output della console da Solidity](https://hardhat.org/docs/cookbook/debug-logs) durante lo sviluppo.
 
 ```solidity
 
@@ -185,15 +189,15 @@ contract MerkleProof {
       return merkleRoot;
     }
 
-    // Extremely insecure, in production code access to
-    // this function MUST BE strictly limited, probably to an
-    // owner
+    // Estremamente insicuro, nel codice di produzione l'accesso a
+    // questa funzione DEVE ESSERE strettamente limitato, probabilmente a un
+    // proprietario
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
-    }   // setRoot
+    } // setRoot
 ```
 
-Imposta e ottieni le funzioni per il root di Merkle. Consentire a chiunque di aggiornare il root di Merkle è un'_idea assolutamente pessima_ in un sistema di produzione. Qui lo faccio per motivi di semplicità del codice di esempio. **Sconsiglio di farlo su un sistema in cui l'integrità dei dati è importante**.
+Funzioni set e get per la radice di Merkle. Lasciare che tutti aggiornino la radice di Merkle è un'_idea estremamente pessima_ in un sistema di produzione. Lo faccio qui per motivi di semplicità per il codice di esempio. **Non farlo su un sistema in cui l'integrità dei dati è davvero importante**.
 
 ```solidity
     function hash(uint _a) internal pure returns(uint) {
@@ -205,12 +209,12 @@ Imposta e ottieni le funzioni per il root di Merkle. Consentire a chiunque di ag
     }
 ```
 
-Questa funzione genera l'hash di una coppia. È semplicemente la traduzione di Solidity del codice in JavaScript per `hash` e `pairHash`.
+Questa funzione genera un hash di coppia. È solo la traduzione in Solidity del codice JavaScript per `hash` e `pairHash`.
 
-**Nota:** Questo è un altro caso d'ottimizzazione per migliorare la leggibilità. In base alla [definizione della funzione](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), potrebbe essere possibile memorizzare i dati come valore [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) ed evitare le conversioni.
+**Nota:** Questo è un altro caso di ottimizzazione per la leggibilità. In base alla [definizione della funzione](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), potrebbe essere possibile archiviare i dati come un valore [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) ed evitare le conversioni.
 
 ```solidity
-    // Verify a Merkle proof
+    // Verifica una prova di Merkle
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;
@@ -223,19 +227,21 @@ Questa funzione genera l'hash di una coppia. È semplicemente la traduzione di S
       return temp == merkleRoot;
     }
 
-}  // MarkleProof
+} // MarkleProof
 ```
 
-Nella notazione matematica, la verifica della prova di Merkle somiglia a questa: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Questo codice la implementa.
+Nella notazione matematica la verifica della prova di Merkle si presenta così: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Questo codice la implementa.
 
-## Prove di Merkle e rollup non si mescolano {#merkle-proofs-and-rollups}
+## Le prove di Merkle e i rollup non si mescolano {#merkle-proofs-and-rollups}
 
-Le prove di Merkle non funzionano bene con i [rollup](/developers/docs/scaling/#rollups). Il motivo è che i rollup scrivono tutti i dati della transazione su L1, ma elaborano su L2. Il costo medio per inviare una prova di Merkle con una transazione è di 638 gas per livello (correntemente, un byte nei dati della chiamata costa 16 gas se non è zero, e 4 se è zero). Se abbiamo 1024 parole di dati, una prova di Merkle richiede dieci livelli, o un totale di 6380 gas.
+Le prove di Merkle non funzionano bene con i [rollup](/developers/docs/scaling/#rollups). Il motivo è che i rollup scrivono tutti i dati della transazione sul livello 1 (L1), ma li elaborano sul livello 2 (L2). Il costo per inviare una prova di Merkle con una transazione è in media di 638 gas per livello (attualmente un byte nei dati di chiamata costa 16 gas se non è zero, e 4 se è zero). Se abbiamo 1024 parole di dati, una prova di Merkle richiede dieci livelli, o un totale di 6380 gas.
 
-Ad esempio, guardando a [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), la scrittura del gas del L1 costa circa 100 gwei e del L2 circa 0,001 gwei (questo è il prezzo normale, può aumentare con la congestione). Quindi, per il costo di un gas del L1, possiamo consumare centomila gas sull'elaborazione del L2. Supponendo di non sovrascrivere l'archiviazione, ciò significa che possiamo scrivere circa cinque parole all'archiviazione sul L2, per il prezzo di un gas del L1. Per una singola prova di Merkle, possiamo scrivere tutte le 1024 parole all'archiviazione (supponendo innanzitutto che siano calcolabili sulla catena, piuttosto che fornite in una transazione) e comunque avere una rimanenza di gran parte del gas.
+Guardando ad esempio a [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), la scrittura del gas su L1 costa circa 100 gwei e il gas su L2 costa 0,001 gwei (questo è il prezzo normale, può aumentare con la congestione). Quindi, per il costo di un gas su L1 possiamo spendere centomila gas per l'elaborazione su L2. Supponendo di non sovrascrivere l'archiviazione, ciò significa che possiamo scrivere circa cinque parole nell'archiviazione su L2 al prezzo di un gas su L1. Per una singola prova di Merkle possiamo scrivere l'intero blocco di 1024 parole nell'archiviazione (supponendo che possano essere calcolate on-chain in primo luogo, piuttosto che fornite in una transazione) e avere ancora la maggior parte del gas rimanente.
 
 ## Conclusione {#conclusion}
 
-Nella vita reale potresti non trovarti mai a implementare alberi di Merkle per conto tuo. Esistono librerie ben note e controllate che puoi usare e, in generale, è meglio non implementare primitivi crittografici autonomamente. Ma spero che ora tu abbia compreso meglio le prove di Merkle e possa decidere quando vale la pena usarle.
+Nella vita reale potresti non implementare mai gli alberi di Merkle da solo. Ci sono librerie ben note e controllate che puoi usare e, in generale, è meglio non implementare primitive crittografiche da soli. Ma spero che ora tu capisca meglio le prove di Merkle e possa decidere quando vale la pena usarle.
 
-Nota che benché le prove di Merkle preservino l'_integrità_, non preservano la _disponibilità_. Sapere che nessun altro può prendere le tue risorse è una magra consolazione se la memoria dati decide di non consentire l'accesso e non puoi neanche costruire un albero di Merkle per accedervi. Quindi gli alberi di Merkle funzionano meglio con qualche tipo di memoria decentralizzata, come IPFS.
+Nota che mentre le prove di Merkle preservano l'_integrità_, non preservano la _disponibilità_. Sapere che nessun altro può prendere i tuoi asset è una magra consolazione se l'archiviazione dei dati decide di negare l'accesso e non puoi nemmeno costruire un albero di Merkle per accedervi. Quindi gli alberi di Merkle sono usati al meglio con un qualche tipo di archiviazione decentralizzata, come IPFS.
+
+[Vedi qui per altri miei lavori](https://cryptodocguy.pro/).

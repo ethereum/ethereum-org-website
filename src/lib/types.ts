@@ -166,7 +166,6 @@ export type I18nLocale = {
   name: string
   localName: string
   langDir: Direction
-  dateFormat: string
   /**
    * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
    *   Fallback used when locale language name matches English name.
@@ -305,24 +304,11 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
-// Crowdin translation progress
-export type ProjectProgressData = {
-  languageId: string
-  words: {
-    total: number
-    approved: number
-  }
-}
-
 export type LocaleDisplayInfo = {
   localeOption: string
   sourceName: string
   targetName: string
   englishName: string
-  approvalProgress: number
-  wordsApproved: number
-  progress: string
-  words: string
   isBrowserDefault?: boolean
 }
 
@@ -402,6 +388,7 @@ export type Commit = {
       email: string
       date: string
     }
+    message: string
   }
   author: {
     avatar_url: string
@@ -503,7 +490,10 @@ export type CommonHeroProps<
    * The hero can render no buttons or up to and no more than two.
    * Can accept either button prop objects or React elements directly.
    */
-  buttons?: [HeroButtonProps | ReactElement, (HeroButtonProps | ReactElement)?]
+  buttons?: [
+    HeroButtonProps | ReactElement<unknown>,
+    (HeroButtonProps | ReactElement<unknown>)?,
+  ]
   /**
    * The primary title of the page
    */
@@ -857,7 +847,7 @@ type FilterInput = (
   itemIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type FilterOptionItem = {
   filterKey: string
@@ -874,7 +864,7 @@ type FilterOptionInput = (
   optionIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type UpdateFilterState = (
   filterIndex: number,

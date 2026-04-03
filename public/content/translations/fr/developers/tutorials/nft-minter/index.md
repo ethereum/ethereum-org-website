@@ -12,6 +12,7 @@ tags:
     "Pinata"
   ]
 skill: intermediate
+breadcrumb: "Dapp de frappe NFT"
 lang: fr
 published: 2021-10-06
 ---

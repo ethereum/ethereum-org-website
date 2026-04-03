@@ -1,6 +1,7 @@
 import { existsSync } from "fs"
 import { join } from "path"
 
+import { appsCategories } from "@/data/apps/categories"
 import { DEV_TOOL_CATEGORY_SLUG_LIST } from "@/data/developerTools"
 
 import {
@@ -12,9 +13,11 @@ import {
 import { getPostSlugs } from "../utils/md"
 import { getStaticPagePaths } from "../utils/staticPages"
 import { getPrimaryNamespaceForPath } from "../utils/translations"
-import { addSlashes } from "../utils/url"
+import { addSlashes, slugify } from "../utils/url"
 
 import { areNamespacesTranslated } from "./translationStatus"
+
+import { getAppsData } from "@/lib/data"
 
 async function isMdPageTranslated(
   locale: string,
@@ -47,9 +50,16 @@ function getPageType(slug: string): "md" | "intl" {
   return primaryNamespace ? "intl" : "md"
 }
 
+// Cache of translated locales per slug, ensuring consistent results across
+// all pages rendered during a single build. Without this cache, filesystem
+// checks via existsSync() could return different results for the same slug
+// at different points in the build, breaking hreflang reciprocity.
+const translatedLocalesCache = new Map<string, string[]>()
+
 /**
  * Get all translated locales for a given page slug.
  * Works for both MD pages and intl pages.
+ * Results are cached per slug for build-time consistency.
  *
  * @param slug - Page slug/path (e.g., "about" for MD or "/wallets/" for intl)
  * @returns Promise resolving to array of locale codes that have translations
@@ -58,6 +68,9 @@ function getPageType(slug: string): "md" | "intl" {
  *   await getTranslatedLocales("/wallets/") // => ["en", "es"]
  */
 export async function getTranslatedLocales(slug: string): Promise<string[]> {
+  const cached = translatedLocalesCache.get(slug)
+  if (cached) return cached
+
   const pageType = getPageType(slug)
   const translatedLocales: string[] = []
 
@@ -77,6 +90,7 @@ export async function getTranslatedLocales(slug: string): Promise<string[]> {
     }
   }
 
+  translatedLocalesCache.set(slug, translatedLocales)
   return translatedLocales
 }
 
@@ -86,12 +100,27 @@ type PageWithTranslations = {
   type: "md" | "intl"
 }
 
-function getDynamicIntlPagePaths(): string[] {
+async function getDynamicIntlPagePaths(): Promise<string[]> {
   // discoverStaticPages() excludes dynamic segments, so add known
   // generateStaticParams() routes that should be present in sitemap output.
-  return DEV_TOOL_CATEGORY_SLUG_LIST.map(
+  const devToolPaths = DEV_TOOL_CATEGORY_SLUG_LIST.map(
     (categorySlug) => `/developers/tools/${categorySlug}/`
   )
+
+  // App category pages
+  const appCategoryPaths = Object.values(appsCategories).map(
+    (category) => `/apps/categories/${category.slug}/`
+  )
+
+  // Individual app pages
+  const appsData = await getAppsData()
+  const appPaths = appsData
+    ? Object.values(appsData)
+        .flat()
+        .map((app) => `/apps/${slugify(app.name)}/`)
+    : []
+
+  return [...devToolPaths, ...appCategoryPaths, ...appPaths]
 }
 
 export async function getAllPagesWithTranslations(): Promise<
@@ -100,7 +129,10 @@ export async function getAllPagesWithTranslations(): Promise<
   const pages: PageWithTranslations[] = []
 
   const mdSlugs = await getPostSlugs("/")
-  const intlPaths = [...getStaticPagePaths(), ...getDynamicIntlPagePaths()]
+  const intlPaths = [
+    ...getStaticPagePaths(),
+    ...(await getDynamicIntlPagePaths()),
+  ]
   const uniqueIntlPaths = Array.from(new Set(intlPaths))
 
   for (const slug of mdSlugs) {

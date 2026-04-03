@@ -221,7 +221,7 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
 
     const validChildren = React.Children.toArray(children).filter((child) =>
       React.isValidElement(child)
-    ) as React.ReactElement[]
+    ) as React.ReactElement<unknown>[]
 
     /**
      * The visible avatars from max
@@ -240,10 +240,13 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
 
     const clonedChildren = reversedChildren.map((child, idx) => {
       const isFirst = idx === 0
-      return React.cloneElement(child, {
-        className: cn(isFirst ? "me-0" : "-me-2"),
-        size,
-      })
+      return React.cloneElement(
+        child as React.ReactElement<{ className?: string; size?: string }>,
+        {
+          className: cn(isFirst ? "me-0" : "-me-2"),
+          size,
+        }
+      )
     })
 
     const { container, fallback } = avatarStyles({ size })

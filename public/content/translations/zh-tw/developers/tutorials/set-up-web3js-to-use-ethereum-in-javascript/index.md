@@ -4,6 +4,7 @@ description: "了解如何設定與配置 web3.js 函式庫，以便從 JavaScri
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner
+breadcrumb: "web3.js設定"
 lang: zh-tw
 published: 2020-04-11
 source: EthereumDev

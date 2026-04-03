@@ -1,10 +1,10 @@
 ---
 title: "Ethereum für JavaScript-Entwickler"
-description: "Lernen, wie Sie JavaScript-basierte Projekte und Tools für die Ethereum-Entwicklung nutzen können"
+description: "Erfahren Sie, wie Sie mit JavaScript-basierten Projekten und Tools für Ethereum entwickeln."
 lang: de
 ---
 
-JavaScript ist eine der beliebtesten Sprachen im Ethereum-Ökosystem. Tatsächlich gibt es ein [Team](https://github.com/ethereumjs), das sich dafür einsetzt, so viel von Ethereum wie möglich auf JavaScript zu bringen.
+JavaScript gehört zu den beliebtesten Sprachen im Ethereum-Ökosystem. Tatsächlich gibt es ein [Team](https://github.com/ethereumjs), das sich der Aufgabe widmet, so viel von Ethereum wie möglich in JavaScript umzusetzen.
 
 Es gibt Möglichkeiten, JavaScript (oder etwas Ähnliches) auf [allen Ebenen des Stacks](/developers/docs/ethereum-stack/) zu schreiben.
 
@@ -12,20 +12,20 @@ Es gibt Möglichkeiten, JavaScript (oder etwas Ähnliches) auf [allen Ebenen des
 
 ### JavaScript-API-Bibliotheken {#javascript-api-libraries}
 
-Wenn du JavaScript schreiben möchtest, um die Blockchain abzufragen, Transaktionen zu senden und mehr, ist die Verwendung einer [JavaScript-API-Bibliothek](/developers/docs/apis/javascript/) der bequemste Weg. Diese APIs ermöglichen es Entwicklern, einfach mit den [Nodes im Ethereum-Netzwerk](/developers/docs/nodes-and-clients/) zu interagieren.
+Wenn Sie JavaScript schreiben möchten, um die Blockchain abzufragen, Transaktionen zu senden und mehr, ist der bequemste Weg dafür die Verwendung einer [JavaScript-API-Bibliothek](/developers/docs/apis/javascript/). Diese APIs ermöglichen es Entwicklern, einfach mit den [Blockchain-Knoten im Ethereum-Netzwerk](/developers/docs/nodes-and-clients/) zu interagieren.
 
-Sie können diese Bibliotheken verwenden, um mit Smart Contracts auf Ethereum zu interagieren. Das ermöglicht es, eine dApp für Fälle zu erstellen, in denen Sie nur JavaScript verwenden, um mit bereits bestehenden Verträgen zu interagieren.
+Sie können diese Bibliotheken verwenden, um mit Smart Contracts auf Ethereum zu interagieren. So ist es möglich, eine Dapp zu erstellen, bei der Sie nur JavaScript verwenden, um mit bereits bestehenden Verträgen zu interagieren.
 
-**Ansehen**
+**Sehen Sie sich Folgendes an:**
 
 - [Web3.js](https://web3js.readthedocs.io)
-- [Ethers.js](https://ethers.org) – _beinhaltet die Implementierung von Ethereum-Wallets und Utilities in JavaScript und TypeScript._
+- [Ethers.js](https://ethers.org) – _enthält eine Ethereum-Wallet-Implementierung und Dienstprogramme in JavaScript und TypeScript._
 - [viem](https://viem.sh) – _eine TypeScript-Schnittstelle für Ethereum, die zustandslose Low-Level-Primitive für die Interaktion mit Ethereum bereitstellt._
 - [Drift](https://ryangoree.github.io/drift/) – _eine TypeScript-Meta-Bibliothek mit integriertem Caching, Hooks und Test-Mocks für eine mühelose Ethereum-Entwicklung über Web3-Bibliotheken hinweg._
 
 ### Smart Contracts {#smart-contracts}
 
-Wenn du ein JavaScript-Entwickler bist und deinen eigenen Smart Contract schreiben möchtest, solltest du dich mit [Solidity](https://solidity.readthedocs.io) vertraut machen. Das ist die am weitesten verbreitete Smart-Contract-Sprache. Sie ist syntaktisch ähnlich wie JavaScript und erleichtert damit das Lernen.
+Wenn Sie ein JavaScript-Entwickler sind und Ihren eigenen Smart Contract schreiben möchten, sollten Sie sich mit [Solidity](https://solidity.readthedocs.io) vertraut machen. Dies ist die beliebteste Smart-Contract-Sprache und sie ist syntaktisch ähnlich wie JavaScript, was das Erlernen erleichtern kann.
 
 Mehr über [Smart Contracts](/developers/docs/smart-contracts/).
 
@@ -33,40 +33,40 @@ Mehr über [Smart Contracts](/developers/docs/smart-contracts/).
 
 ### Die Ethereum Virtual Machine {#the-ethereum-virtual-machine}
 
-Es gibt eine JavaScript-Implementierung der [Ethereum Virtual Machine](/developers/docs/evm/). Sie unterstützt die neuesten Fork-Regeln. Fork-Regeln beziehen sich auf Änderungen, die durch geplante Upgrades an EVM vorgenommen wurden.
+Es gibt eine JavaScript-Implementierung der [Ethereum Virtual Machine](/developers/docs/evm/). Sie unterstützt die neuesten Fork-Regeln. Fork-Regeln beziehen sich auf Änderungen an der EVM als Folge von geplanten Upgrades.
 
-Aufteteilt wird sie in verschiedene JavaScript-Pakete. Die können Sie sich ansehen, um ein besseres Verständnis zu erlangen:
+Sie ist in verschiedene JavaScript-Pakete aufgeteilt, die Sie sich ansehen können, um Folgendes besser zu verstehen:
 
 - Konten
 - Blöcke
 - Die Blockchain selbst
 - Transaktionen
-- Und mehr...
+- Und mehr ...
 
-Auf diese Weise werden Fragen wie "Was ist die Datenstruktur eines Kontos?" leichter verständlich.
+Dies wird Ihnen helfen, Dinge zu verstehen wie „Wie sieht die Datenstruktur eines Kontos aus?“.
 
-Wenn Sie sich lieber den geschriebenen Code durchlesen, ist dieses JavaScript eine gute Alternative, um sich all unsere Dokumente durchzulesen.
+Wenn Sie lieber Code lesen, könnte dieses JavaScript eine großartige Alternative zum Lesen unserer Dokumentation sein.
 
-**Schau dir die EVM an**
+**Sehen Sie sich die EVM an**  
 [`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
-### Nodes und Clients {#nodes-and-clients}
+### Blockchain-Knoten und Anwendungen {#nodes-and-clients}
 
-Einer der Clients von Ethereum befindet sich derzeit in der aktiven Entwicklungsphase, sodass Sie einen Einblick in die Funktionsweise der Ethereum-Clients erhalten können, in einer Programmiersprache, die Sie verstehen: JavaScript!
+Eine Ethereumjs-Anwendung befindet sich in aktiver Entwicklung, mit der Sie in einer Sprache, die Sie verstehen, nämlich JavaScript, untersuchen können, wie Ethereum-Anwendungen funktionieren!
 
-**Schau dir den Client an**
+**Sehen Sie sich die Anwendung an**  
 [`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Weitere Projekte {#other-projects}
 
-Im Bereich Ethereum-JavaScript gibt es noch weitere Neuerungen, darunter:
+Es gibt auch viele andere Dinge, die im Bereich Ethereum-JavaScript passieren, darunter:
 
-- Bibliotheken mit Wallet-Dienstprogrammen
-- Tools zum Erstellen, Importieren und Exportieren von Ethereum-Schlüsseln
-- eine Implementierung des `merkle-patricia-tree` – eine Datenstruktur, die im Ethereum Yellow Paper beschrieben wird.
+- Bibliotheken für Wallet-Dienstprogramme.
+- Tools zum Generieren, Importieren und Exportieren von Ethereum-Schlüsseln.
+- eine Implementierung des `merkle-patricia-tree` – einer Datenstruktur, die im Ethereum Yellow Paper beschrieben wird.
 
-Tauche im [EthereumJS-Repo](https://github.com/ethereumjs) in das ein, was dich am meisten interessiert.
+Vertiefen Sie sich in das, was Sie am meisten interessiert, im [EthereumJS-Repo](https://github.com/ethereumjs).
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
+_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

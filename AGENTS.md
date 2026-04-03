@@ -68,6 +68,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 
 - Use `interface` for object shapes, `type` for unions/intersections
 - Prefer explicit typing over `any` (ESLint enforces `fixToUnknown`)
+- **NEVER leave unused variables or parameters** - ESLint `unused-imports/no-unused-vars` will fail the Netlify build. The only allowed unused arg pattern is a single underscore `_`. Do NOT use `_prefixedNames` (e.g., `_foo`) - either use the variable or remove it from the signature entirely.
 - Use generic constraints for reusable components
 - Export types from dedicated files in `@/lib/types`
 
@@ -153,6 +154,7 @@ pnpm events-import         # Import community events
 6. **Consider i18n** - All user-facing text should be translatable (use `getTranslations` and `getLocale`)
 7. **Mobile-first** - Design for mobile, enhance for desktop
 8. **Accessibility** - Use Radix primitives, semantic HTML
+9. **Use locale-aware formatting wrappers** - Use `numberFormat()` from `src/lib/utils/numbers.ts` instead of `new Intl.NumberFormat()`, and `dateTimeFormat()` from `src/lib/utils/date.ts` instead of `new Intl.DateTimeFormat()` / `.toLocaleDateString()` / `.toLocaleTimeString()`. Both enforce correct numbering systems and calendar for Urdu and Arabic locales.
 
 ### Component Development
 
@@ -279,3 +281,10 @@ Required for Matomo integration:
 - **Platform**: Netlify (config in `netlify.toml`)
 - **Next.js Integration**: Uses `@netlify/plugin-nextjs` for seamless Netlify and Next.js compatibility
 - **Monitoring**: Matomo analytics integration
+
+## Internal Infrastructure
+
+The following external-looking services are managed by the ethereum.org team:
+
+- **`s3-dcl1.ethquokkaops.io`** — S3-compatible object storage for app screenshots and media. Used by the data layer to serve images for the `/dapps` and app listing pages. Downtime here means broken images on the live site.
+- **Netlify Blobs** (`@netlify/blobs`) — Key-value store used by the data layer to cache API responses. Accessed via `src/data-layer/storage.ts`.

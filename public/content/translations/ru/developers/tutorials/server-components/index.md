@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: ru
 tags: [ "агент", "сервер", "офчейн" ]
 skill: beginner
+breadcrumb: "Серверные компоненты"
 published: 2024-07-15
 ---
 

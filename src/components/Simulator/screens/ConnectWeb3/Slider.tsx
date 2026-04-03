@@ -1,6 +1,6 @@
 import { type ReactNode } from "react"
-import { motion } from "framer-motion"
 import { Check } from "lucide-react"
+import { motion } from "motion/react"
 
 import { HStack, VStack } from "@/components/ui/flex"
 

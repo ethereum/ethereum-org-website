@@ -4,6 +4,7 @@ description: "Návod pro začátečníky k posílání tokenů pomocí ethers.js
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "TOKENY" ]
 skill: beginner
+breadcrumb: "Odeslání tokenů"
 lang: cs
 published: 2021-04-06
 ---

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { Check } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
 import { Flex, VStack } from "@/components/ui/flex"
 import { Spinner } from "@/components/ui/spinner"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { getMaxFractionDigitsUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
@@ -31,14 +32,14 @@ export const Success = ({
 
   const usdAmount = sentEthAmount * ethPrice
 
-  const usdValue = new Intl.NumberFormat("en", {
+  const usdValue = numberFormat("en", {
     style: "currency",
     currency: "USD",
     notation: "compact",
     maximumFractionDigits: getMaxFractionDigitsUsd(usdAmount),
   }).format(usdAmount)
 
-  const sentEthValue = new Intl.NumberFormat("en", {
+  const sentEthValue = numberFormat("en", {
     maximumFractionDigits: 5,
   }).format(sentEthAmount)
 

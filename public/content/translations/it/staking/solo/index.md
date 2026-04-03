@@ -1,76 +1,77 @@
 ---
-title: Staking dometico dei tuoi ETH
-description: Una panoramica su come iniziare a mettere i tuoi ETH in staking domestico
+title: Fai staking di ETH da casa
+description: Una panoramica su come iniziare a fare staking di ETH da casa
 lang: it
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
-alt: Leslie il rinoceronte sul suo chip informatico.
+alt: Il rinoceronte Leslie sul suo chip per computer.
 sidebarDepth: 2
 summaryPoints:
-  - Ricevi le ricompense massime direttamente dal protocollo per mantenere il tuo validatore propriamente in funzione e online
-  - Opera hardware domestico e aggiungi personalmente alla sicurezza e decentralizzazione della rete di Ethereum
-  - Rimuovi la fiducia e non lasciar mai perdere il controllo delle chiavi dei tuoi fondi
+  - Ricevi le massime ricompense direttamente dal protocollo per mantenere il tuo validatore correttamente funzionante e online
+  - Esegui l'hardware da casa e contribuisci personalmente alla sicurezza e alla decentralizzazione della rete di Ethereum
+  - Rimuovi la fiducia e non cedere mai il controllo delle chiavi dei tuoi fondi
 ---
 
-## Cos'è lo staking domestico? {#what-is-solo-staking}
+## Cos'è lo staking da casa? {#what-is-solo-staking}
 
-Lo staking domestico è l'atto di [eseguire un nodo di Ethereum](/run-a-node/) connesso a Internet e depositare 32 ETH per attivare un [validatore](#faq), dandoti la capacità di partecipare direttamente al consenso della rete.
+Lo staking da casa è l'atto di [eseguire un nodo di Ethereum](/run-a-node/) connesso a Internet e depositare 32 ETH per attivare un [validatore](#faq), dandoti la possibilità di partecipare direttamente al consenso della rete.
 
-**Lo staking domestico aumenta la decentralizzazione della rete di Ethereum**, rendendola più resistente alla censura e robusta contro gli attacchi. Altri metodi di staking potrebbero non aiutare la rete nello stesso modo. Lo staking domestico è la migliore opzione di staking per proteggere Ethereum.
+**Lo staking da casa aumenta la decentralizzazione della rete di Ethereum**, rendendo [Ethereum](/) più resistente alla censura e robusto contro gli attacchi. Altri metodi di staking potrebbero non aiutare la rete negli stessi modi. Lo staking da casa è la migliore opzione di staking per proteggere Ethereum.
 
-Un nodo di Ethereum consiste sia nel client del livello di esecuzione (EL), che di un client del livello di consenso (CL). Questi client sono software che cooperano, insieme a una valida serie di chiavi di firma, per verificare le transazioni e i blocchi, attestare al capo corretto della catena, aggregare le attestazioni e proporre i blocchi.
+Un nodo di Ethereum è composto sia da un client del livello di esecuzione (EL), sia da un client del livello di consenso (CL). Questi client sono software che lavorano insieme, insieme a un set valido di chiavi di firma, per verificare le transazioni e i blocchi, attestare la corretta testa della catena, aggregare le attestazioni e proporre i blocchi.
 
-Gli staker domestici sono responsabili di utilizzare l'hardware necessario a eseguire questi client. Si consiglia vivamente di usare una macchina dedicata per questo, che operi da casa, il che è estremamente vantaggioso per l'integrità della rete.
+Gli staker da casa sono responsabili del funzionamento dell'hardware necessario per eseguire questi client. Si consiglia vivamente di utilizzare una macchina dedicata per questo scopo, gestita da casa: ciò è estremamente vantaggioso per la salute della rete.
 
-Uno staker domestico riceve ricompense direttamente dal protocollo per mantenere il proprio validatore correttamente in funzione e online.
+Uno staker da casa riceve ricompense direttamente dal protocollo per mantenere il proprio validatore correttamente funzionante e online.
 
 ## Perché fare staking da casa? {#why-stake-solo}
 
-Lo staking domestico richiede maggiori responsabilità, ma fornisce il massimo controllo sui propri fondi e sulla propria configurazione di staking.
+Lo staking da casa comporta maggiori responsabilità, ma ti offre il massimo controllo sui tuoi fondi e sulla configurazione dello staking.
 
 <CardGrid>
-  <Card title="Ottieni nuovi ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
-  <Card title="Controllo completo" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Sicurezza della rete" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Guadagna nuovi ETH" emoji="💸" description="Guadagna ricompense denominate in ETH direttamente dal protocollo quando il tuo validatore è online, senza che alcun intermediario prenda una percentuale." />
+  <Card title="Controllo totale" emoji="🎛️" description="Conserva le tue chiavi. Scegli la combinazione di client e hardware che ti consente di ridurre al minimo i rischi e contribuire al meglio alla salute e alla sicurezza della rete. I servizi di staking di terze parti prendono queste decisioni per te e non sempre fanno le scelte più sicure." />
+  <Card title="Sicurezza della rete" emoji="🔐" description="Lo staking da casa è il modo più d'impatto per fare staking. Eseguendo un validatore sul tuo hardware a casa, rafforzi la robustezza, la decentralizzazione e la sicurezza del protocollo di Ethereum." />
 </CardGrid>
 
-## Considerazioni prima dello staking domestico {#considerations-before-staking-solo}
+## Considerazioni prima di fare staking da casa {#considerations-before-staking-solo}
 
-Per quanto vorremmo che lo staking domestico fosse accessibile e privo di rischi per tutti, questa non è la realtà. Esistono serie considerazioni pratiche da tenere a mente prima di scegliere di mettere i propri ETH in staking domestico.
+Per quanto vorremmo che lo staking da casa fosse accessibile e privo di rischi per tutti, questa non è la realtà. Ci sono alcune considerazioni pratiche e serie da tenere a mente prima di scegliere di fare staking di ETH da casa.
 
 <InfoGrid>
-<ExpandableCard title="Lettura necessaria" eventCategory="SoloStaking" eventName="clicked required reading">
-Quando utilizzi il tuo nodo, dovresti dedicare del tempo a imparare come usare il software che hai scelto. Questo include la lettura della documentazione pertinente e seguire i canali di comunicazione di tali team di sviluppo.
+<ExpandableCard title="Letture obbligatorie" eventCategory="SoloStaking" eventName="clicked required reading">
+Quando gestisci il tuo nodo dovresti dedicare del tempo a imparare come utilizzare il software che hai scelto. Ciò comporta la lettura della documentazione pertinente e l'attenzione ai canali di comunicazione di quei team di sviluppo.
 
-Più comprendi il software che stai operando e il funzionamento del proof-of-stake, meno rischioso sarà come staker e più sarà facile risolvere qualsiasi problema che potrebbe sorgere lungo il percorso da operatore del nodo.
+Più comprendi il software che stai eseguendo e come funziona la prova di stake, meno rischioso sarà come staker e più facile sarà risolvere eventuali problemi che potrebbero sorgere lungo il percorso come operatore del nodo.
 </ExpandableCard>
 
-<ExpandableCard title="Dimestichezza con il computer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-La configurazione del nodo richiede un livello di dimestichezza ragionevole con il computer, sebbene nuovi strumenti stiano semplificando le procedure con il tempo. La comprensione dell'interfaccia della riga di comando è utile, ma non più rigorosamente richiesta.
+<ExpandableCard title="A proprio agio con i computer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+La configurazione del nodo richiede un ragionevole livello di dimestichezza nel lavorare con i computer, sebbene i nuovi strumenti stiano rendendo questo processo più semplice nel tempo. La comprensione dell'interfaccia a riga di comando è utile, ma non più strettamente necessaria.
 
-Richiede anche una configurazione hardware molto basilare e una minima comprensione delle specifiche consigliate minime.
+Richiede anche una configurazione hardware di base e una certa comprensione delle specifiche minime consigliate.
 </ExpandableCard>
 
 <ExpandableCard title="Gestione sicura delle chiavi" eventCategory="SoloStaking" eventName="clicked secure key management">
-Proprio come le chiavi private proteggono il tuo indirizzo di Ethereum, dovrai generare delle chiavi specificamente per il tuo validatore. Devi comprendere come mantenere al sicuro qualsiasi frase di seed o chiave privata.{' '}
+Proprio come le chiavi private proteggono il tuo indirizzo Ethereum, dovrai generare chiavi specifiche per il tuo validatore. Devi capire come mantenere al sicuro e protette eventuali frasi di recupero o chiavi private.{' '}
 
 [Sicurezza di Ethereum e prevenzione delle truffe](/security/)
 </ExpandableCard>
 
 <ExpandableCard title="Manutenzione" eventCategory="SoloStaking" eventName="clicked maintenance">
-L'hardware, talvolta, si guasta, le connessioni di rete generano errori e il software del client a volte necessita di aggiornamenti. La manutenzione del nodo è inevitabile e richiederà occasionalmente la tua attenzione. Vorrai assicurarti di esser consapevole di qualsiasi aggiornamento di rete anticipato o di altri aggiornamenti critici del client.
+L'hardware a volte si guasta, le connessioni di rete generano errori e il software del client occasionalmente necessita di aggiornamenti. La manutenzione del nodo è inevitabile e richiederà occasionalmente la tua attenzione. Vorrai assicurarti di rimanere informato su eventuali aggiornamenti di rete previsti o altri aggiornamenti critici del client.
 </ExpandableCard>
 
-<ExpandableCard title="Operatività affidabile" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-Le tue ricompense sono proporzionali al tempo in cui il tuo validatore è online e sta attestando propriamente. Le interruzioni comportano sanzioni proporzionali a quanti altri validatori sono offline nello stesso momento, ma <a href="#faq">non risultano in tagli</a>. Anche la larghezza di banda conta, poiché le ricompense sono ridotte per le attestazioni che non sono ricevute in tempo. I requisiti varieranno, ma si consiglia un minimo di 10 Mb/s in upload e download.
+<ExpandableCard title="Tempo di attività affidabile" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Le tue ricompense sono proporzionali al tempo in cui il tuo validatore è online e attesta correttamente. I tempi di inattività comportano penalità proporzionali a quanti altri validatori sono offline contemporaneamente, ma <a href="#faq">non comportano l'essere puniti (slashing)</a>. Anche la larghezza di banda è importante, poiché le ricompense vengono ridotte per le attestazioni che non vengono ricevute in tempo. I requisiti variano, ma si consiglia un minimo di 10 Mb/s in download e upload.
 </ExpandableCard>
 
-<ExpandableCard title="Rischio di taglio" eventCategory="SoloStaking" eventName="clicked slashing risk">
-Differente dalle sanzioni di inattività per esser offline, il <em>taglio</em> è una sanzione molto più seria, riservata alle infrazioni malevole. Operando un client di minoranza con le tue chiavi caricate su una sola macchina per volta, il tuo rischio di esser tagliato è minimizzato. Detto ciò, tutti gli staker devono esser consapevoli dei rischi di taglio.
+<ExpandableCard title="Rischio di essere puniti" eventCategory="SoloStaking" eventName="clicked slashing risk">
+A differenza delle penalità di inattività per essere offline, <em>punire</em> (slashing) è una penalità molto più grave riservata alle infrazioni dannose. Eseguendo un client di minoranza con le tue chiavi caricate su una sola macchina alla volta, il rischio di essere punito è ridotto al minimo. Detto questo, tutti gli staker devono essere consapevoli dei rischi di essere puniti.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Ulteriori informazioni sullo slashing e sul ciclo di vita dei validatori</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Maggiori informazioni sull'essere puniti e sul ciclo di vita del validatore</a>
 </ExpandableCard>
+
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -79,127 +80,130 @@ Differente dalle sanzioni di inattività per esser offline, il <em>taglio</em> �
 
 <StakingHowSoloWorks />
 
-Quando saranno attivi, riceverai le ricompense in ETH, che saranno depositate periodicamente al tuo indirizzo di prelievo.
+Mentre sei attivo guadagnerai ricompense in ETH, che verranno periodicamente depositate nel tuo indirizzo di prelievo.
 
-Se lo desideri, puoi smettere di essere un validatore; in questo modo viene meno il requisito di essere online e si interrompe qualsiasi ulteriore ricompensa. Il saldo rimanente sarà poi prelevato all'indirizzo di prelievo che hai indicato durante la configurazione.
+Se lo desideri, puoi uscire come validatore, il che elimina il requisito di essere online e interrompe ulteriori ricompense. Il tuo saldo rimanente verrà quindi prelevato all'indirizzo di prelievo che hai designato durante la configurazione.
 
-[Di più sulle ricompense di staking](/staking/withdrawals/)
+[Maggiori informazioni sui prelievi dello staking](/staking/withdrawals/)
 
-## Inizia con il Launchpad di Staking {#get-started-on-the-staking-launchpad}
+## Inizia sullo Staking Launchpad {#get-started-on-the-staking-launchpad}
 
-Il Launchpad di Staking è un'applicazione open source che ti aiuterà a diventare uno staker. Ti guiderà per la scelta dei tuoi client, la generazione delle tue chiavi e il deposito dei tuoi ETH al contratto di deposito di staking. Una lista di controllo è fornita per assicurarsi che tu abbia coperto tutto per configurare in sicurezza il tuo validatore.
+Lo Staking Launchpad è un'applicazione open source che ti aiuterà a diventare uno staker. Ti guiderà nella scelta dei tuoi client, nella generazione delle tue chiavi e nel deposito dei tuoi ETH nel contratto di deposito dello staking. Viene fornita una lista di controllo per assicurarti di aver coperto tutto per configurare il tuo validatore in modo sicuro.
 
 <StakingLaunchpadWidget />
 
-## Cosa considerare con il nodo e gli strumenti di configurazione del client {#node-tool-considerations}
+## Cosa considerare con gli strumenti di configurazione del nodo e del client {#node-tool-considerations}
 
-Esistono sempre più strumenti e servizi per aiutarti a mettere i tuoi ETH in staking domestico, ma ognuno presenta rischi e benefici differenti.
+Esiste un numero crescente di strumenti e servizi per aiutarti a fare staking di ETH da casa, ma ognuno comporta rischi e vantaggi diversi.
 
-Gli indicatori di attributo sono usati di seguito per segnalare punti di forza e debolezze notevoli che uno strumento di staking elencato potrebbe avere. Usa questa sezione come un riferimento per come definire questi attributi mentre stai scegliendo quali strumenti usare per guidarti per il tuo percorso di staking.
+Gli indicatori degli attributi vengono utilizzati di seguito per segnalare i punti di forza o di debolezza degni di nota che uno strumento di staking elencato potrebbe avere. Usa questa sezione come riferimento per come definiamo questi attributi mentre scegli quali strumenti ti aiuteranno nel tuo percorso di staking.
 
 <StakingConsiderations page="solo" />
 
-## Esplora gli strumenti del nodo e di configurazione del client {#node-and-client-tools}
+## Esplora gli strumenti di configurazione del nodo e del client {#node-and-client-tools}
 
-Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazione. Gli indicatori di cui sopra ti guideranno per gli strumenti seguenti.
+Sono disponibili diverse opzioni per aiutarti con la tua configurazione. Usa gli indicatori sopra per guidarti attraverso gli strumenti sottostanti.
 
 <ProductDisclaimer />
 
-### Strumenti del nodo
+### Strumenti per i nodi
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono contrassegnati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
+Tieni presente l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/) poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare un client di minoranza sono indicati come <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
 ### Generatori di chiavi
 
-Questi strumenti sono utilizzabili come un'alternativa alla [CLI di deposito di staking](https://github.com/ethereum/staking-deposit-cli/) per contribuire alla generazione di chiavi.
+Questi strumenti possono essere utilizzati come alternativa alla [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) per aiutare con la generazione delle chiavi.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un'occhiata alla nostra [politica di elenco dei prodotti](/contributing/adding-staking-products/) per verificare l'idoneità e sottoporcelo.
+Hai un suggerimento per uno strumento di staking che ci è sfuggito? Dai un'occhiata alla nostra [politica di inserimento dei prodotti](/contributing/adding-staking-products/) per vedere se sarebbe adatto e per inviarlo per la revisione.
 
-## Esplora le guide allo staking domestico {#staking-guides}
+## Esplora le guide allo staking da casa {#staking-guides}
 
 <StakingGuides />
 
 ## Domande frequenti {#faq}
 
-Esistono alcune domande molto comuni sullo staking che meritano di essere affrontate.
+Queste sono alcune delle domande più comuni sullo staking che vale la pena conoscere.
 
 <ExpandableCard title="Cos'è un validatore?">
 
-Un <em>validatore</em> è un'entità virtuale che risiede su Ethereum e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un <em>client del validatore</em> è il software che agisce per conto del validatore detenendone e usandone la chiave privata. Un singolo client del validatore può detenere molte coppie di chiavi, controllando molti validatori.
-
+Un <em>validatore</em> è un'entità virtuale che vive su Ethereum e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un <em>client del validatore</em> è il software che agisce per conto del validatore conservando e utilizzando la sua chiave privata. Un singolo client del validatore può contenere molte coppie di chiavi, controllando molti validatori.
 </ExpandableCard>
 
-<ExpandableCard title="Posso depositare più di 32 ETH?">
-Ogni coppia di chiavi associata ad un validatore richiede esattamente 32 ETH per esser attivata. Maggiori ETH depositati in una singola serie di chiavi non aumentano le potenziali ricompense, poiché ogni validatore è limitato a un <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo effettivo</a> di 32 ETH. Questo significa che lo staking è effettuato in incrementi di 32 ETH, ognuno con la propria serie di chiavi e il proprio saldo.
+<ExpandableCard title="Posso depositare più di 32 ETH?">
+Sì, i moderni account dei validatori sono in grado di contenere fino a 2048 ETH. Gli ETH aggiuntivi oltre i 32 si accumuleranno in modo graduale, aumentando con incrementi di numeri interi all'aumentare del tuo saldo reale. Questo è noto come il tuo <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo effettivo</a>.
 
-Non depositare più di 32 ETH per un singolo validatore. Non incrementerà le tue ricompense. Se un indirizzo di prelievo è stato impostato per il validatore, i fondi in eccesso oltre i 32 ETH saranno prelevati automaticamente a tale indirizzo durante la successiva [pulizia dei validatori](/staking/withdrawals/#validator-sweeping).
+Per aumentare il saldo effettivo di un account, e quindi aumentare le ricompense, deve essere superato un margine di 0,25 ETH al di sopra di qualsiasi soglia di ETH intero. Ad esempio, un account con un saldo reale di 32,9 e un saldo effettivo di 32 dovrebbe guadagnare altri 0,35 ETH per portare il suo saldo reale sopra 33,25 prima di innescare un aumento del saldo effettivo.
 
-Se lo staking domestico sembra troppo impegnativo per te, prendi in considerazione di utilizzare un fornitore di [staking come servizio](/staking/saas/) o, se hai meno di 32 ETH, dai un'occhiata ai [pool di staking](/staking/pools/).
+Questo margine impedisce anche che un saldo effettivo scenda fino a quando non è sceso di 0,25 ETH al di sotto del suo attuale saldo effettivo.
+
+Ogni coppia di chiavi associata a un validatore richiede almeno 32 ETH per essere attivata. Qualsiasi saldo superiore a questo può essere prelevato all'indirizzo di prelievo associato in qualsiasi momento tramite una transazione firmata da questo indirizzo. Eventuali fondi oltre il saldo effettivo massimo verranno automaticamente prelevati su base periodica.
+
+Se lo staking da casa ti sembra troppo impegnativo, considera l'utilizzo di un fornitore di [staking-as-a-service](/staking/saas/), o se stai lavorando con meno di 32 ETH, dai un'occhiata alle [pool di staking](/staking/pools/).
 </ExpandableCard>
 
-<ExpandableCard title="Sarà tagliato se resto offline? (tldr: No.)">
-Andare offline quando la rete sta finalizzando correttamente NON comporterà alcun taglio. Vengono applicate piccole <em>sanzioni di inattività</em> se il tuo validatore non è disponibile ad attestare per una data epoca (ciascuna lunga 6,4 minuti), ma queste sono molto differenti dal <em>taglio</em>. Queste sanzioni sono lievemente inferiori alla ricompensa che avresti ottenuto se il validatore fosse stato disponibile ad attestare e le perdite possono esser riguadagnate approssimativamente nello stesso periodo di tempo online.
+<ExpandableCard title="Verrò punito se vado offline? (in breve: No.)">
+Andare offline quando la rete sta finalizzando correttamente NON comporterà l'essere puniti. Si incorre in piccole <em>penalità di inattività</em> se il tuo validatore non è disponibile per attestare per una determinata epoca (ciascuna della durata di 6,4 minuti), ma questo è molto diverso dal <em>punire</em> (slashing). Queste penalità sono leggermente inferiori alla ricompensa che avresti guadagnato se il validatore fosse stato disponibile per attestare, e le perdite possono essere recuperate con circa la stessa quantità di tempo di nuovo online.
 
-Nota che le sanzioni per inattività sono proporzionali a quanti validatori sono offline contemporaneamente. Nei casi in cui una grande porzione della rete è offline in una volta sola, le sanzioni per ciascuno di questi validatori saranno maggiori rispetto a quando non è disponibile un singolo validatore.
+Nota che le penalità per inattività sono proporzionali a quanti validatori sono offline contemporaneamente. Nei casi in cui un'ampia porzione della rete è tutta offline contemporaneamente, le penalità per ciascuno di questi validatori saranno maggiori rispetto a quando un singolo validatore non è disponibile.
 
-In casi estremi, se la rete interrompe la finalizzazione poiché più di un terzo dei validatori è offline, questi utenti subiranno quella che è nota come <em>fuga d'inattività quadratica</em>, una riduzione esponenziale di ETH dai conti offline dei validatori. Questo consente alla rete, eventualmente, di auto-curarsi bruciando gli ETH dei validatori inattivi finché il loro saldo non raggiunge i 16 ETH, e a quel punto saranno automaticamente espulsi dal pool del validatore. I validatori online rimanenti alla fine comprenderanno ancora oltre i 2/3 della rete, soddisfacendo la super maggioranza necessaria per finalizzare nuovamente la catena.
+In casi estremi, se la rete smette di finalizzare a causa del fatto che più di un terzo dei validatori è offline, questi utenti subiranno quella che è nota come una <em>perdita di inattività quadratica</em>, che è un drenaggio esponenziale di ETH dagli account dei validatori offline. Ciò consente alla rete di autoguarirsi alla fine bruciando gli ETH dei validatori inattivi fino a quando il loro saldo non raggiunge i 16 ETH, a quel punto verranno automaticamente espulsi dalla pool dei validatori. I restanti validatori online alla fine comprenderanno di nuovo oltre i 2/3 della rete, soddisfacendo la supermaggioranza necessaria per finalizzare ancora una volta la catena.
 </ExpandableCard>
 
-<ExpandableCard title="Come mi assicuro di non esser tagliato?">
-In breve, non esiste una garanzia assoluta in questo senso, ma se agisci in buona fede, operi un client di maggioranza e mantieni le tue chiavi di firma solo su una macchina per volta, il rischio di esser tagliato è quasi pari a zero.
+<ExpandableCard title="Come mi assicuro di non essere punito?">
+In breve, questo non può mai essere completamente garantito, ma se agisci in buona fede, esegui un client di minoranza e mantieni le tue chiavi di firma solo su una macchina alla volta, il rischio di essere punito è quasi zero.
 
-Esistono solo alcuni modi specifici che possono risultare nel taglio e nell'espulsione di un validatore dalla rete. Al momento della scrittura, i tagli che si sono verificati sono stati esclusivamente un prodotto di configurazioni hardware ridondanti in cui le chiavi di firma erano memorizzate contemporaneamente su due macchine separate. Questo può risultare inavvertitamente in un <em>voto doppio</em> dalle tue chiavi, il che è un'infrazione tagliabile.
+Ci sono solo pochi modi specifici che possono portare un validatore a essere punito ed espulso dalla rete. Al momento della stesura, le punizioni che si sono verificate sono state esclusivamente il prodotto di configurazioni hardware ridondanti in cui le chiavi di firma sono archiviate su due macchine separate contemporaneamente. Ciò può inavvertitamente provocare un <em>doppio voto</em> dalle tue chiavi, che è un'infrazione punibile.
 
-Operare un client di super maggioranza (ogni client usato da oltre 2/3 della rete), preclude anch'esso un rischio di taglio potenziale nel caso in cui il client presenti un bug che risulti in una biforcazione della catena. Questo può risultare in una biforcazione difettosa che viene finalizzata. Correggere alla catena intesa richiederebbe l'invio di un <em>voto di contorno</em>, provando ad annullare un blocco finalizzato. Anche questa è un'infrazione tagliabile e può esser evitata semplicemente eseguendo invece un client di minoranza.
+L'esecuzione di un client di supermaggioranza (qualsiasi client utilizzato da oltre i 2/3 della rete) comporta anche il rischio di una potenziale punizione nel caso in cui questo client abbia un bug che si traduce in una biforcazione della catena. Ciò può provocare una biforcazione difettosa che viene finalizzata. Per correggere e tornare alla catena prevista sarebbe necessario inviare un <em>voto di accerchiamento</em> (surround vote) cercando di annullare un blocco finalizzato. Anche questa è un'infrazione punibile e può essere evitata semplicemente eseguendo invece un client di minoranza.
 
-I bug equivalenti in un <em>client di minoranza non sarebbero mai finalizzati</em> e, ciò risulterebbe in un voto di contorno, con la semplice conseguenza di sanzioni d'inattività, <em>non tagli</em>.
+Bug equivalenti in un <em>client di minoranza non finalizzerebbero mai</em> e quindi non si tradurrebbero mai in un voto di accerchiamento, e comporterebbero semplicemente penalità di inattività, <em>non l'essere puniti</em>.
 
 <ul>
   <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Scopri di più sull'importanza di eseguire un client di minoranza.</a></li>
-  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Scopri di più sulla prevenzione dei tagli</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Scopri di più sulla prevenzione delle punizioni</a></li>
 </ul>
 </ExpandableCard>
 
 <ExpandableCard title="Quale client è il migliore?">
-I client individuali potrebbero variare lievemente in termini di prestazioni e interfaccia utente, poiché ognuno è sviluppato da team differenti che usano diversi linguaggi di programmazione. Detto ciò, nessuno di essi è il "migliore." Tutti i client di produzione sono eccellenti pezzi di software, che eseguono tutti le stesse funzioni fondamentali per sincronizzarsi e interagire con la blockchain.
+I singoli client possono variare leggermente in termini di prestazioni e interfaccia utente, poiché ciascuno è sviluppato da team diversi utilizzando una varietà di linguaggi di programmazione. Detto questo, nessuno di loro è "il migliore". Tutti i client di produzione sono eccellenti software, che svolgono tutti le stesse funzioni principali per sincronizzarsi e interagire con la blockchain.
 
-Poiché tutti i client di produzione forniscono la stessa funzionalità di base, è davvero molto importante che tu scelga un <strong>client di minoranza</strong>, vale a dire qualsiasi client che NON sia attualmente in uso da una maggioranza di validatori sulla rete. Questo potrebbe sembrare controintuitivo, ma operare un client di maggioranza o di super maggioranza espone  maggiormente al rischio di tagli nel caso di un bug in quel client. Operare un client di minoranza riduce drasticamente tali rischi.
+Poiché tutti i client di produzione forniscono le stesse funzionalità di base, è in realtà molto importante scegliere un <strong>client di minoranza</strong>, ovvero qualsiasi client che NON è attualmente utilizzato dalla maggioranza dei validatori sulla rete. Questo potrebbe sembrare controintuitivo, ma l'esecuzione di un client di maggioranza o supermaggioranza ti espone a un rischio maggiore di essere punito in caso di bug in quel client. L'esecuzione di un client di minoranza limita drasticamente questi rischi.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Scopri di più sul perché la diversità dei client è fondamentale</a>
 </ExpandableCard>
 
-<ExpandableCard title="Posso semplicemente usare un VPS (server privato virtuale)?">
-Sebbene un server privato virtuale (VPS) possa essere usato come sostitutivo dell'hardware domestico, l'accesso e la posizione fisici del client del validatore <em>sono importanti</em>. Le soluzioni centralizzate su cloud come Amazon Web Services o Digital Ocean offrono la convenienza di non dover ottenere e operare l'hardware, a spese della centralizzazione della rete.
+<ExpandableCard title="Posso usare semplicemente un VPS (server privato virtuale)?">
+Sebbene un server privato virtuale (VPS) possa essere utilizzato in sostituzione dell'hardware domestico, l'accesso fisico e la posizione del tuo client del validatore <em>sono importanti</em>. Le soluzioni cloud centralizzate come Amazon Web Services o Digital Ocean offrono la comodità di non dover ottenere e gestire l'hardware, a scapito della centralizzazione della rete.
 
-Più client del validatore operano su una soluzione d'archiviazione su cloud centralizzata singola, più diventa pericoloso per questi utenti. Ogni evento che porta questi fornitori offline, che sia un attacco, domande regolatorie o solo guasti energetici o a Internet, manderanno offline al contempo ogni client del validatore che si basi su tale server.
+Più client del validatore sono in esecuzione su una singola soluzione di archiviazione cloud centralizzata, più diventa pericoloso per questi utenti. Qualsiasi evento che porti questi fornitori offline, che si tratti di un attacco, di richieste normative o semplicemente di interruzioni di corrente/Internet, farà sì che ogni client del validatore che si affida a questo server vada offline contemporaneamente.
 
-Le sanzioni offline sono proporzionali a quanti altri sono offline contemporaneamente. Usare un VPS aumenta notevolmente il rischio che le sanzioni offline saranno più severe e aumenta il rischio di fughe quadratiche o tagli nel caso in cui il guasto sia abbastanza grande. Per minimizzare i tuoi rischi e i rischi alla rete, gli utenti sono vivamente incoraggiati a procurarsi e utilizzare il proprio hardware.
+Le penalità offline sono proporzionali a quanti altri sono offline contemporaneamente. L'utilizzo di un VPS aumenta notevolmente il rischio che le penalità offline siano più gravi e aumenta il rischio di perdite quadratiche o di essere puniti nel caso in cui l'interruzione sia abbastanza grande. Per ridurre al minimo il proprio rischio e il rischio per la rete, gli utenti sono fortemente incoraggiati a ottenere e gestire il proprio hardware.
 </ExpandableCard>
 
-<ExpandableCard title="Come sblocco le mie ricompense o riprendo i miei ETH?">
+<ExpandableCard title="Come sblocco le mie ricompense o riottengo i miei ETH?">
 
-I prelievi di ogni tipo dalla beacon chain richiedono l'impostazione delle credenziali di prelievo.
+I prelievi di qualsiasi tipo dalla Beacon Chain richiedono l'impostazione delle credenziali di prelievo.
 
-I nuovi staker le hanno impostate al momento della generazione della chiave e del deposito. Gli staker esistenti che non lo hanno già impostato, possono aggiornare le proprie chiavi per supportare questa funzionalità.
+I nuovi staker lo impostano al momento della generazione della chiave e del deposito. Gli staker esistenti che non lo hanno già impostato possono aggiornare le proprie chiavi per supportare questa funzionalità.
 
-Una volta impostate le credenziali di prelievo, i pagamenti delle ricompense (gli ETH accumulati oltre i 32 iniziali) saranno distribuiti periodicamente e automaticamente all'indirizzo di prelievo.
+Una volta impostate le credenziali di prelievo, i pagamenti delle ricompense (ETH accumulati oltre i 32 iniziali) verranno periodicamente distribuiti automaticamente all'indirizzo di prelievo.
 
-Per sbloccare e ricevere il tuo intero saldo, devi inoltre completare il processo di uscita dal tuo validatore.
+Per sbloccare e ricevere indietro l'intero saldo devi anche completare il processo di uscita del tuo validatore.
 
-<ButtonLink href="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Maggiori informazioni sui prelievi dello staking</ButtonLink>
 </ExpandableCard>
 
-## Approfondimenti {#further-reading}
+## Letture consigliate {#further-reading}
 
-- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
-- [Problema di diversità dei client di Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
-- [Aiutare la diversità dei client](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
-- [La diversità del client sul livello di consenso di Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
-- [How to: acquistare l'hardware del validatore di Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Suggerimenti per la prevenzione dei tagli di Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian e Spacesider_
+- [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
+- [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
+- [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
+- [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
+- [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 <QuizWidget quizKey="staking-solo" />

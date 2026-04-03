@@ -44,7 +44,8 @@ import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-hea
 
 const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
@@ -56,10 +57,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/10years")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
@@ -73,7 +71,7 @@ const Page = async ({ params }: { params: PageParams }) => {
     <>
       <TenYearJsonLD locale={locale} contributors={contributors} />
       <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <TenYearHero locale={locale} />
+        <TenYearHero />
 
         <div
           className={cn(
@@ -375,17 +373,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   return await getMetadata({
     locale,

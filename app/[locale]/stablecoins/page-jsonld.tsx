@@ -9,9 +9,7 @@ import {
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function StablecoinsPageJsonLD({ locale, contributors }) {
-  const t = await getTranslations({
-    namespace: "page-stablecoins",
-  })
+  const t = await getTranslations("page-stablecoins")
 
   const url = normalizeUrlForJsonLd(locale, `/stablecoins/`)
 

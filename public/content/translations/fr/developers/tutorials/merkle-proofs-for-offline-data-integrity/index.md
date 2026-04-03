@@ -4,6 +4,7 @@ description: "Assurer l'intégrité des données en chaîne pour les données qu
 author: Ori Pomerantz
 tags: [ "stockage" ]
 skill: advanced
+breadcrumb: "Preuves Merkle"
 lang: fr
 published: 2021-12-30
 ---

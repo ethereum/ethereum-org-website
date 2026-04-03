@@ -1,62 +1,62 @@
 ---
 title: Menambahkan kuis
-description: Kebijakan yang kami gunakan ketika menambahkan kuis ke ethereum.org
+description: Kebijakan yang kami gunakan saat menambahkan kuis ke ethereum.org
 lang: id
 ---
 
 # Kuis {#quizzes}
 
-Kuis adalah kesempatan bagi pengguna untuk menguji diri mereka sendiri untuk mengetahui apakah mereka memahami konten pada halaman yang baru saja mereka baca. Pertanyaan hanya boleh berdasarkan pada konten yang disediakan di halaman tersebut dan tidak boleh menanyakan informasi yang tidak disebutkan di halaman tersebut.
+Kuis adalah kesempatan bagi pengguna untuk menguji diri mereka sendiri guna melihat apakah mereka memahami konten di halaman yang baru saja mereka baca. Pertanyaan hanya boleh didasarkan pada konten yang disediakan di halaman tersebut dan tidak boleh menanyakan informasi yang tidak disebutkan di halaman tersebut.
 
-Pertanyaan-pertanyaan tersebut disusun sebagai berikut. Pertanyaan yang diajukan, 1 jawaban yang benar dengan penjelasan mengapa jawaban tersebut benar, 3 jawaban yang salah dengan penjelasan mengapa jawaban tersebut salah.
+Pertanyaan disusun sebagai berikut. Perintah pertanyaan, 1 jawaban benar dengan penjelasan mengapa itu benar, 3 jawaban salah dengan penjelasan mengapa itu salah.
 
 Beberapa contoh kuis saat ini dapat ditemukan di sini:
 
-- [Lapisan 2](/layer-2)
+- [Layer 2](/layer-2)
 - [NFT](/nft/)
 - [Apa itu Ethereum?](/what-is-ethereum/)
 - [Apa itu ETH?](/what-is-ether/)
 
 ## Menambahkan kuis pembelajaran
 
-Jika ada halaman yang belum dibuatkan kuis pembelajaran, silakan [buka soal](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) untuk halaman tersebut.
+Jika ada halaman yang belum dibuatkan kuis pembelajarannya, silakan [buka masalah (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) untuk halaman tersebut.
 
-Harap berikan informasi berikut ini:
+Harap berikan informasi berikut:
 
-- Halaman yang ingin Anda tambahkan kuis
-- 5 pertanyaan dengan informasi sebagai berikut:
+- Halaman tempat Anda ingin menambahkan kuis
+- 5 pertanyaan dengan informasi berikut:
   - Bagian halaman yang menjadi dasar pertanyaan
-  - Pertanyaan yang diajukan
-  - 1 jawaban yang benar dengan penjelasan mengapa jawaban tersebut benar
-  - 3 jawaban yang salah, masing-masing dengan penjelasan mengapa jawaban tersebut salah
+  - Perintah pertanyaan
+  - 1 jawaban benar dengan penjelasan mengapa itu benar
+  - 3 jawaban salah, masing-masing dengan penjelasan mengapa itu salah
 
 ## Menambahkan pertanyaan kuis
 
-Jika ada pertanyaan yang ingin Anda tambahkan ke bank soal untuk kuis, silakan [buka soal](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) dan berikan informasi berikut:
+Jika ada pertanyaan yang ingin Anda tambahkan ke bank soal untuk sebuah kuis, silakan [buka masalah (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) dan berikan informasi berikut:
 
-- Halaman yang ingin Anda tambahkan pertanyaan kuis
-- Untuk setiap pertanyaan, berikan informasi berikut ini:
+- Halaman tempat Anda ingin menambahkan pertanyaan kuis
+- Untuk setiap pertanyaan, berikan informasi berikut:
   - Bagian halaman yang menjadi dasar pertanyaan
-  - Pertanyaan yang diajukan
-  - 1 jawaban yang benar dengan penjelasan mengapa jawaban tersebut benar
-  - 3 jawaban yang salah, masing-masing dengan penjelasan mengapa jawaban tersebut salah
+  - Perintah pertanyaan
+  - 1 jawaban benar dengan penjelasan mengapa itu benar
+  - 3 jawaban salah, masing-masing dengan penjelasan mengapa itu salah
 
 ## Memperbarui pertanyaan kuis
 
-Jika ada pertanyaan yang ingin Anda perbarui di bank soal untuk kuis, silakan [buka soal](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) dan berikan informasi berikut:
+Jika ada pertanyaan yang ingin Anda perbarui di bank soal untuk sebuah kuis, silakan [buka masalah (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) dan berikan informasi berikut:
 
-- Halaman yang ingin Anda perbarui pertanyaan kuisnya
-- Untuk setiap pertanyaan yang sedang diperbarui, berikan informasi berikut ini:
+- Halaman tempat Anda ingin memperbarui pertanyaan kuis
+- Untuk setiap pertanyaan yang diperbarui, berikan informasi berikut:
   - Bagian halaman yang menjadi dasar pertanyaan
-  - Pertanyaan yang diajukan dari pertanyaan yang ingin Anda perbarui
-  - Pertanyaan yang diajukan yang telah diperbarui
-  - 1 jawaban yang benar dengan penjelasan mengapa jawaban tersebut benar
-  - 3 jawaban yang salah, masing-masing dengan penjelasan mengapa jawaban tersebut salah
+  - Perintah pertanyaan dari pertanyaan yang ingin Anda perbarui
+  - Perintah pertanyaan yang diperbarui
+  - 1 jawaban benar dengan penjelasan mengapa itu benar
+  - 3 jawaban salah, masing-masing dengan penjelasan mengapa itu salah
 
 ## Menghapus pertanyaan kuis
 
-Jika konten sudah tidak ada lagi di halaman untuk sebuah pertanyaan dan perlu dihapus, silakan [buka soal](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) untuk menghapus pertanyaan tersebut dan berikan informasi berikut:
+Jika konten tidak lagi ada di halaman untuk sebuah pertanyaan dan perlu dihapus, silakan [buka masalah (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) untuk menghapus pertanyaan tersebut dan berikan informasi berikut:
 
-- Halaman yang ingin Anda hapus pertanyaan kuisnya
+- Halaman tempat Anda ingin menghapus pertanyaan kuis
 - Pertanyaan yang ingin Anda hapus
-- Jika perlu, jelaskan mengapa pertanyaan tersebut perlu dihapus
+- Penjelasan jika diperlukan mengenai mengapa pertanyaan tersebut harus dihapus

@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "जलद सिंक, समांतर अंमलबजावणी आणि समांतर डिस्क वाचनासाठी अवलंबित्वे आगाऊ मॅप करते.",
   "page-roadmap-glamsterdam-bal-item-3": "स्टेट-हेवी अ‍ॅप्ससाठी गॅस कमी करते आणि गॅस खर्चाची अंदाजक्षमता सुधारते.",
   "page-roadmap-hegota-discussed-title": "हेगोता साठी नियोजित",
-  "page-roadmap-hegota-discussed-item-1": "प्रस्ताव सध्या चर्चेत आहेत."
+  "page-roadmap-hegota-discussed-item-1": "प्रस्ताव सध्या चर्चेत आहेत.",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "झिरो-नॉलेज प्रूफ्स (Zero-knowledge proofs) मुळे व्हॅलिडेटर्सना ट्रान्झॅक्शनची पुन्हा अंमलबजावणी न करता इथरियम ब्लॉक्सची पडताळणी करणे शक्य होऊ शकते, ज्यामुळे हार्डवेअरची आवश्यकता न वाढवता उच्च गॅस मर्यादा (gas limits) सक्षम होतील."
 }

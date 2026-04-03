@@ -4,6 +4,7 @@ description: In this tutorial, you’ll build an NFT minter and learn how to cre
 author: "smudgil"
 tags: ["solidity", "NFT", "alchemy", "smart contracts", "frontend", "Pinata", "erc-721"]
 skill: intermediate
+breadcrumb: NFT minter dapp
 lang: en
 published: 2021-10-06
 ---

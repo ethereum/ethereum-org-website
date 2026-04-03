@@ -1,34 +1,31 @@
 ---
-title: Uso dei WebSocket
-description: Guida all'uso di WebSocket e Alchemy per creare richieste JSON-RPC e iscriversi a eventi.
+title: Utilizzare i WebSocket
+description: Guida all'uso dei WebSocket e di Alchemy per effettuare richieste JSON-RPC e iscriversi agli eventi.
 author: "Elan Halpern"
 lang: it
-tags:
-  - "alchemy"
-  - "websocket"
-  - "query"
-  - "javascript"
+tags: ["Alchemy", "websockets", "interrogazione", "JavaScript"]
 skill: beginner
-source: documentazione Alchemy
-sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
+breadcrumb: WebSocket
+source: Alchemy docs
+sourceUrl: https://www.alchemy.com/docs/reference/best-practices-for-using-websockets-in-web3
 published: 2020-12-01
 ---
 
-Questa è una guida entry level su come utilizzare Websocket e Alchemy per fare richieste alla blockchain Ethereum.
+Questa è una guida di base per utilizzare i WebSocket e Alchemy per effettuare richieste alla blockchain di Ethereum.
 
-## WebSocket e HTTP {#websockets-vs-http}
+## WebSocket contro HTTP {#websockets-vs-http}
 
-A differenza di HTTP, con i WebSocket non serve fare continuamente richieste quando si desiderano informazioni specifiche. I WebSocket mantengono una connessione con la rete (se configurati correttamente) e monitorano le modifiche.
+A differenza dell'HTTP, con i WebSocket non è necessario effettuare continuamente richieste quando si desiderano informazioni specifiche. I WebSocket mantengono una connessione di rete per te (se eseguiti correttamente) e restano in ascolto dei cambiamenti.
 
-Come avviene con ogni connessione di rete, non presupporre che un WebSocket rimanga aperto per sempre senza interruzioni; gestire correttamente a mano la caduta di connessione e la riconnessione può essere complicato. Un altro lato negativo dei WebSocket è che non si ottengono codici di stato HTTP come risposta ma solo il messaggio di errore.
+Come per qualsiasi connessione di rete, non si dovrebbe presumere che un WebSocket rimanga aperto per sempre senza interruzioni, ma gestire correttamente le connessioni interrotte e la riconnessione manuale può essere difficile da eseguire nel modo giusto. Un altro svantaggio dei WebSocket è che non si ottengono i codici di stato HTTP nella risposta, ma solo il messaggio di errore.
 
-​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) aggiunge automaticamente la gestione degli errori di WebSocket e i nuovi tentativi senza necessità di configurazione alcuna.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) aggiunge automaticamente la gestione dei guasti e dei tentativi dei WebSocket senza alcuna configurazione necessaria.
 
-## Facciamo una prova {#try-it-out}
+## Provalo {#try-it-out}
 
-Il modo più facile per testare i WebSocket è installare uno strumento da riga di comando per eseguire richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, è possibile inviare richieste come di seguito:
+Il modo più semplice per testare i WebSocket è installare uno strumento a riga di comando per effettuare richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, puoi inviare richieste come segue:
 
-_Nota: se hai un conto di Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un conto gratuito di Alchemy!](https://auth.alchemyapi.io/signup)_
+_Nota: se hai un account Alchemy puoi sostituire `demo` con la tua chiave API. [Registrati qui per un account Alchemy gratuito!](https://auth.alchemy.com/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -41,15 +38,15 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ## Come usare i WebSocket {#how-to-use-websockets}
 
-Per iniziare, apri un WebSocket usando l'URL WebSocket della tua app. Puoi trovare l'URL WebSocket della tua app aprendo la pagina dell'app [nel dashboard](https://dashboard.alchemyapi.io/) e facendo clic su "View Key". Tieni presente che l'URL della tua app per WebSocket è diverso dall'URL per le richieste HTTP, ma entrambi sono visualizzabili facendo clic su "View Key".
+Per iniziare, apri un WebSocket utilizzando l'URL WebSocket per la tua app. Puoi trovare l'URL WebSocket della tua app aprendo la pagina dell'app nella [tua dashboard](https://dashboard.alchemy.com/) e cliccando su "View Key" (Visualizza chiave). Nota che l'URL della tua app per i WebSocket è diverso dal suo URL per le richieste HTTP, ma entrambi possono essere trovati cliccando su "View Key".
 
-![Dove trovare l'URL WebSocket nella dashboard di Alchemy](./use-websockets.gif)
+![Dove trovare il tuo URL WebSocket nella tua dashboard di Alchemy](./use-websockets.gif)
 
-Tutte le API elencate in [Alchemy API Reference](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) possono essere utilizzate tramite WebSocket. A questo scopo, usa lo stesso payload che verrebbe inviato come corpo di una richiesta HTTP POST, ma invialo tramite il WebSocket.
+Qualsiasi API elencata nel [Riferimento API di Alchemy](https://www.alchemy.com/docs/reference/api-overview) può essere utilizzata tramite WebSocket. Per farlo, usa lo stesso payload che verrebbe inviato come corpo di una richiesta HTTP POST, ma invialo invece attraverso il WebSocket.
 
 ## Con Web3 {#with-web3}
 
-Passare ai WebSocket usando una libreria client come Web3 è semplice. Basta passare l'URL WebSocket anziché quello HTTP quando crei un'istanza del client Web3. Per esempio:
+Passare ai WebSocket mentre si utilizza una libreria client come Web3 è semplice. Basta passare l'URL WebSocket invece di quello HTTP quando si istanzia il proprio client Web3. Ad esempio:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -57,40 +54,40 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## API per l'iscrizione {#subscription-api}
+## API di iscrizione {#subscription-api}
 
-Se ti connetti tramite WebSocket, puoi usare altri due metodi: `eth_subscribe` e `eth_unsubscribe`. Ti consentiranno di attendere determinati eventi e di ricevere notifiche immediate.
+Quando si è connessi tramite un WebSocket, è possibile utilizzare due metodi aggiuntivi: `eth_subscribe` ed `eth_unsubscribe`. Questi metodi ti permetteranno di ascoltare eventi particolari e di essere avvisato immediatamente.
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Crea una nuova iscrizione agli eventi specificati. [Scopri di più su`eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
+Crea una nuova iscrizione per gli eventi specificati. [Scopri di più su `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parametri {#parameters}
 
-1. Tipi di iscrizioni
+1. Tipi di iscrizione
 2. Parametri opzionali
 
-Il primo argomento specifica il tipo di evento da attendere. Il secondo argomento contiene opzioni aggiuntive che dipendono dal primo argomento. I diversi tipi di descrizione, le loro opzioni e i payload degli eventi sono descritti di seguito.
+Il primo argomento specifica il tipo di evento da ascoltare. Il secondo argomento contiene opzioni aggiuntive che dipendono dal primo argomento. I diversi tipi di descrizione, le loro opzioni e i payload dei loro eventi sono descritti di seguito.
 
 #### Restituisce {#returns}
 
-L'ID dell'iscrizione: questo ID sarà allegato a ogni evento ricevuto e può anche essere usato per annullare l'iscrizione usando `eth_unsubscribe`.
+L'ID dell'iscrizione: questo ID sarà allegato a qualsiasi evento ricevuto e può anche essere utilizzato per annullare l'iscrizione utilizzando `eth_unsubscribe`.
 
 #### Eventi di iscrizione {#subscription-events}
 
-Mentre l'iscrizione è attiva, ricevi eventi che sono oggetti con i seguenti campi:
+Mentre l'iscrizione è attiva, riceverai eventi che sono oggetti con i seguenti campi:
 
-- `jsonrpc`: sempre "2.0"
-- `method`: sempre "eth_subscription"
-- `params`: un oggetto con i campi seguenti:
-  - `subscription`: l'ID di iscrizione restituito dalla chiamata a `eth_subscribe` che ha creato questa iscrizione.
-  - `result`: oggetto i cui contenuti variano in base al tipo di iscrizione.
+- `jsonrpc`: Sempre "2.0"
+- `method`: Sempre "eth_subscription"
+- `params`: Un oggetto con i seguenti campi:
+  - `subscription`: L'ID dell'iscrizione restituito dalla chiamata `eth_subscribe` che ha creato questa iscrizione.
+  - `result`: Un oggetto il cui contenuto varia a seconda del tipo di iscrizione.
 
 #### Tipi di iscrizione {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-Restituisce le informazione della transazione per tutte le transazioni aggiunte allo stato in sospeso. Questo tipo esegue l'iscrizione alle transazioni in sospeso, analogamente alla chiamata Web3 standard di `web3.eth.subscribe("pendingTransactions")`, ma è diverso perché emette _informazioni complete sulla transazione_ anziché solo gli hash della transazione.
+Restituisce le informazioni della transazione per tutte le transazioni che vengono aggiunte allo stato in sospeso. Questo tipo di iscrizione si iscrive alle transazioni in sospeso, in modo simile alla chiamata standard di Web3 `web3.eth.subscribe("pendingTransactions")`, ma differisce in quanto emette _informazioni complete sulla transazione_ piuttosto che solo gli hash della transazione.
 
 Esempio:
 
@@ -127,7 +124,7 @@ Esempio:
 
 Emette un evento ogni volta che una nuova intestazione viene aggiunta alla catena, anche durante una riorganizzazione della catena.
 
-Quando si verifica la riorganizzazione della catena, questa iscrizione emetterà un evento contenente tutte le nuove intestazioni della nuova catena. In particolare, significa che potresti vedere più intestazioni emesse con la stessa altezza e quando ciò si verifica l'ultima dovrebbe essere considerata quella corretta dopo una riorganizzazione.
+Quando si verifica una riorganizzazione della catena, questa iscrizione emetterà un evento contenente tutte le nuove intestazioni per la nuova catena. In particolare, questo significa che potresti vedere più intestazioni emesse con la stessa altezza, e quando ciò accade l'intestazione successiva dovrebbe essere considerata come quella corretta dopo una riorganizzazione.
 
 Esempio:
 
@@ -162,26 +159,26 @@ Esempio:
 
 3. `logs`
 
-Emette registri che fanno parte di blocchi appena aggiunti, corrispondenti ai criteri specificati per il filtro.
+Emette log che fanno parte di blocchi appena aggiunti che corrispondono ai criteri di filtro specificati.
 
-Quando avviene la riorganizzazione della catena, i registri che fanno parte dei blocchi sulla vecchia catena saranno emessi di nuovo con la proprietà `removed` impostata su `true`. Inoltre, vengono emessi i registri che fanno parte dei blocchi sulla nuova catena. Significa che sarà possibile trovare registri della stessa transazione diverse volte nel caso di una riorganizzazione.
+Quando si verifica una riorganizzazione della catena, i log che fanno parte dei blocchi sulla vecchia catena verranno emessi di nuovo con la proprietà `removed` impostata su `true`. Inoltre, vengono emessi i log che fanno parte dei blocchi sulla nuova catena, il che significa che è possibile vedere i log per la stessa transazione più volte in caso di riorganizzazione.
 
 Parametri
 
 1. Un oggetto con i seguenti campi:
-   - `address` (facoltativo): una stringa rappresentante un indirizzo o un array di stringhe analoghe.
-     - Saranno emessi solo i registri creati da uno di questi indirizzi.
-   - `topics`: array di specificatori di argomento.
-     - Ogni specificatore di argomento è `null`, una stringa rappresentante un argomento o un array di stringhe.
-     - Ogni posizione nell'array che non è `null` limita i registri emessi a quelli aventi uno degli argomenti indicati in quella posizione.
+   - `address` (opzionale): una stringa che rappresenta un indirizzo o un array di tali stringhe.
+     - Verranno emessi solo i log creati da uno di questi indirizzi.
+   - `topics`: un array di specificatori di argomenti.
+     - Ogni specificatore di argomento è `null`, una stringa che rappresenta un argomento o un array di stringhe.
+     - Ogni posizione nell'array che non è `null` limita i log emessi solo a quelli che hanno uno degli argomenti dati in quella posizione.
 
-Alcuni esempi di specifiche di argomento:
+Alcuni esempi di specifiche degli argomenti:
 
-- `[]`: ogni argomento è consentito.
-- `[A]`: A in prima posizione (e tutto il resto segue).
-- `[null, B]`: tutto nella prima posizione e B nella seconda (e tutto il resto segue).
-- `[A, B]`: A in prima posizione e B in seconda (e tutto il resto segue).
-- `[[A, B], [A, B]]`: (A o B) in prima posizione e (A o B) in seconda posizione (e tutto il resto segue).
+- `[]`: Qualsiasi argomento consentito.
+- `[A]`: A in prima posizione (e qualsiasi cosa dopo).
+- `[null, B]`: Qualsiasi cosa in prima posizione e B in seconda posizione (e qualsiasi cosa dopo).
+- `[A, B]`: A in prima posizione e B in seconda posizione (e qualsiasi cosa dopo).
+- `[[A, B], [A, B]]`: (A o B) in prima posizione e (A o B) in seconda posizione (e qualsiasi cosa dopo).
 
 Esempio:
 
@@ -211,15 +208,15 @@ Esempio:
 
 ### `eth_unsubscribe` {#eth-unsubscribe}
 
-Annulla un'iscrizione esistente in modo che non siano inviati altri eventi.
+Annulla un'iscrizione esistente in modo che non vengano inviati ulteriori eventi.
 
 Parametri
 
-1. ID di iscrizione, come precedentemente restituito da una chiamata `eth_subscribe`.
+1. ID dell'iscrizione, come precedentemente restituito da una chiamata `eth_subscribe`.
 
 Restituisce
 
-`true` se un'iscrizione è stata annullata o `false` se non esiste alcuna iscrizione con l'ID dato.
+`true` se un'iscrizione è stata annullata con successo, o `false` se non esisteva alcuna iscrizione con l'ID fornito.
 
 Esempio:
 
@@ -246,4 +243,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Registrati con Alchemy](https://auth.alchemyapi.io/signup) gratuitamente, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le notizie più recenti, seguici su [Twitter](https://twitter.com/AlchemyPlatform).
+[Registrati su Alchemy](https://auth.alchemy.com) gratuitamente, dai un'occhiata alla [nostra documentazione](https://www.alchemy.com/docs/) e, per le ultime notizie, seguici su [Twitter](https://x.com/AlchemyPlatform).

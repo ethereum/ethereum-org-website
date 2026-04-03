@@ -43,15 +43,13 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => {
   )
 }
 
-const TdsPage = async ({ params }: { params: PageParams }) => {
+const TdsPage = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-trillion-dollar-security",
-  })
+  const t = await getTranslations("page-trillion-dollar-security")
 
   const { contributors } = await getAppPageContributorInfo(
     "trillion-dollar-security",
@@ -1089,17 +1087,13 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-trillion-dollar-security",
-  })
+  const t = await getTranslations("page-trillion-dollar-security")
 
   return await getMetadata({
     locale,

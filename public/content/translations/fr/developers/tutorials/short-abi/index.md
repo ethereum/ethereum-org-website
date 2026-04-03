@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: fr
 tags: [ "couche 2" ]
 skill: intermediate
+breadcrumb: "ABIs courts"
 published: 2022-04-01
 ---
 

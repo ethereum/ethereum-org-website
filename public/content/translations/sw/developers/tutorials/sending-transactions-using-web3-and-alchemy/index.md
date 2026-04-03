@@ -4,6 +4,7 @@ description: "Huu ni mwongozo rahisi kwa wanaoanza wa kutuma miamala ya Ethereum
 author: "Elan Halpern"
 tags: ["transactions", "web3.js", "alchemy"]
 skill: beginner
+breadcrumb: "Tuma miamala"
 lang: sw
 published: 2020-11-04
 source: Alchemy docs

@@ -5,6 +5,7 @@ author: "EthereumOnArm"
 tags: [ "máy khách", "lớp thực thi", "lớp đồng thuận", "nút" ]
 lang: vi
 skill: intermediate
+breadcrumb: "Node Raspberry Pi"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/

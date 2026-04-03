@@ -1,229 +1,229 @@
 ---
-title: Penggabungan
-description: Pelajari tentang Penggabungan - ketika Jaringan Utama Ethereum mengadopsi bukti taruhan.
+title: The Merge
+description: Pelajari tentang The Merge - ketika Mainnet Ethereum mengadopsi proof-of-stake.
 lang: id
 template: upgrade
 image: /images/upgrades/merge.png
-alt:
-summaryPoint1: Jaringan Utama Ethereum menggunakan bukti taruhan, tetapi tidak selalu demikian.
-summaryPoint2: Peningkatan dari mekanisme bukti kerja yang asli menjadi bukti taruhan disebut Penggabungan.
-summaryPoint3: Penggabungan mengacu pada penggabungan Jaringan Utama Ethereum asli dengan rantai blok bukti taruhan terpisah yang disebut Rantai Suar, yang sekarang ada sebagai satu rantai.
-summaryPoint4: Penggabungan ini mengurangi konsumsi energi Ethereum sebesar ~99,95%.
+alt: 
+summaryPoint1: Mainnet Ethereum menggunakan proof-of-stake, tetapi tidak selalu demikian.
+summaryPoint2: Peningkatan dari mekanisme proof-of-work asli ke proof-of-stake disebut The Merge.
+summaryPoint3: The Merge merujuk pada penggabungan Mainnet Ethereum asli dengan blockchain proof-of-stake terpisah yang disebut Beacon Chain, yang kini ada sebagai satu rantai.
+summaryPoint4: The Merge mengurangi konsumsi energi Ethereum sebesar ~99,95%.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-  Penggabungan telah dilaksanakan pada tanggal 15 September 2022. Hal ini menyelesaikan transisi Ethereum ke konsensus bukti taruhan, yang secara resmi tidak lagi menggunakan bukti kerja dan mengurangi konsumsi energi sebesar ~99,95%.
+  The Merge dieksekusi pada 15 September 2022. Ini menyelesaikan transisi Ethereum ke konsensus proof-of-stake, secara resmi menghentikan penggunaan proof-of-work dan mengurangi konsumsi energi sebesar ~99,95%.
 </UpgradeStatus>
 
-## Apa itu Penggabungan? {#what-is-the-merge}
+## Apa itu The Merge? {#what-is-the-merge}
 
-Penggabungan adalah penyatuan lapisan eksekusi asli Ethereum (Jaringan Utama yang telah ada sejak [genesis](/ethereum-forks/#frontier)) dengan lapisan konsensus bukti taruhan baru, Rantai Suar. Ini menghilangkan kebutuhan akan penambangan yang boros energi dan sebagai gantinya memungkinkan jaringan untuk diamankan menggunakan ETH yang dipertaruhkan. Ini adalah langkah yang sangat menarik dalam mewujudkan visi Ethereum - skalabilitas, keamanan, dan keberlanjutan yang lebih baik.
+The Merge adalah penggabungan lapisan eksekusi asli Ethereum (Mainnet yang telah ada sejak [genesis](/ethereum-forks/#frontier)) dengan lapisan konsensus proof-of-stake barunya, Beacon Chain. Ini menghilangkan kebutuhan akan penambangan yang padat energi dan sebaliknya memungkinkan jaringan diamankan menggunakan ETH yang dikunci. Ini adalah langkah yang benar-benar menarik dalam mewujudkan visi [Ethereum](/)—lebih banyak skalabilitas, keamanan, dan keberlanjutan.
 
 <MergeInfographic />
 
-Pada awalnya, [Rantai Suar](/roadmap/beacon-chain/) dikirim secara terpisah dari [Jaringan Utama](/glossary/#mainnet). Jaringan Utama Ethereum - dengan semua akun, saldo, kontrak pintar, dan status rantai blok - tetap diamankan oleh [bukti kerja](/developers/docs/consensus-mechanisms/pow/), bahkan saat Rantai Suar berjalan paralel menggunakan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/). Penggabungan adalah saat kedua sistem ini akhirnya digabungkan, dan bukti kerja digantikan secara permanen oleh bukti taruhan.
+Awalnya, [Beacon Chain](/roadmap/beacon-chain/) diluncurkan secara terpisah dari [Mainnet](/glossary/#mainnet). Mainnet Ethereum - dengan semua akun, saldo, kontrak pintar, dan status blockchain-nya - terus diamankan oleh [proof-of-work](/developers/docs/consensus-mechanisms/pow/), bahkan ketika Beacon Chain berjalan secara paralel menggunakan [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The Merge adalah saat kedua sistem ini akhirnya bersatu, dan proof-of-work secara permanen digantikan oleh proof-of-stake.
 
-Bayangkan Ethereum adalah sebuah pesawat luar angkasa yang diluncurkan sebelum cukup siap untuk melakukan perjalanan antarbintang. Dengan Rantai Suar, komunitas membuat mesin baru dan lambung kapal yang dikeraskan. Setelah pengujian yang signifikan, tiba saatnya untuk menukar mesin baru dengan mesin lama di tengah penerbangan. Penggabungan mesin baru yang lebih efisien ke dalam kapal yang sudah ada memungkinkannya untuk menjelajah beberapa tahun cahaya dan menjelajahi alam semesta.
+Bayangkan Ethereum adalah pesawat luar angkasa yang diluncurkan sebelum benar-benar siap untuk perjalanan antarbintang. Dengan Beacon Chain, komunitas membangun mesin baru dan lambung yang diperkuat. Setelah pengujian yang signifikan, tiba saatnya untuk menukar mesin baru dengan yang lama di tengah penerbangan. Ini menggabungkan mesin baru yang lebih efisien ke dalam pesawat yang ada, memungkinkannya untuk menempuh tahun cahaya yang serius dan menjelajahi alam semesta.
 
-## Penggabungan dengan Jaringan Utama {#merging-with-mainnet}
+## Bergabung dengan Mainnet {#merging-with-mainnet}
 
-Bukti kerja mengamankan Jaringan Utama Ethereum dari awal hingga Penggabungan. Hal ini memungkinkan rantai blok Ethereum yang kita semua kenal hadir pada bulan Juli 2015 dengan semua fitur-fiturnya yang sudah tidak asing lagi - transaksi, kontrak pintar, akun, dll.
+Proof-of-work mengamankan Mainnet Ethereum dari genesis hingga The Merge. Ini memungkinkan blockchain Ethereum yang biasa kita gunakan mulai ada pada Juli 2015 dengan semua fitur yang sudah dikenal—transaksi, kontrak pintar, akun, dll.
 
-Sepanjang sejarah Ethereum, para pengembang mempersiapkan diri untuk transisi dari bukti kerja ke bukti taruhan. Pada tanggal 1 Desember 2020, Rantai Suar dibuat sebagai rantai blok yang terpisah dari Jaringan Utama, berjalan secara paralel.
+Sepanjang sejarah Ethereum, para pengembang bersiap untuk transisi akhir dari proof-of-work ke proof-of-stake. Pada 1 Desember 2020, Beacon Chain dibuat sebagai blockchain terpisah dari Mainnet, berjalan secara paralel.
 
-Rantai Suar pada awalnya tidak memproses transaksi Jaringan Utama. Sebaliknya, ia mencapai konsensus tentang keadaannya sendiri dengan menyetujui validator aktif dan saldo akun mereka. Setelah pengujian ekstensif, tiba saatnya bagi Rantai Suar untuk mencapai konsensus pada data dunia nyata. Setelah Penggabungan, Rantai Suar menjadi mesin konsensus untuk semua data jaringan, termasuk transaksi lapisan eksekusi dan saldo akun.
+Beacon Chain pada awalnya tidak memproses transaksi Mainnet. Sebaliknya, ia mencapai konsensus pada statusnya sendiri dengan menyetujui validator aktif dan saldo akun mereka. Setelah pengujian ekstensif, tiba saatnya bagi Beacon Chain untuk mencapai konsensus pada data dunia nyata. Setelah The Merge, Beacon Chain menjadi mesin konsensus untuk semua data jaringan, termasuk transaksi lapisan eksekusi dan saldo akun.
 
-Penggabungan ini merupakan peralihan resmi untuk menggunakan Rantai Suar sebagai mesin produksi blok. Penambangan tidak lagi menjadi sarana untuk menghasilkan blok yang valid. Sebagai gantinya, validator bukti taruhan telah mengadopsi peran ini dan sekarang bertanggung jawab untuk memproses keabsahan semua transaksi dan mengusulkan blok.
+The Merge mewakili peralihan resmi untuk menggunakan Beacon Chain sebagai mesin produksi blok. Penambangan tidak lagi menjadi sarana untuk memproduksi blok yang valid. Sebaliknya, validator proof-of-stake telah mengadopsi peran ini dan sekarang bertanggung jawab untuk memproses validitas semua transaksi dan mengusulkan blok.
 
-Tidak ada sejarah yang hilang dalam Penggabungan. Ketika Jaringan Utama bergabung dengan Rantai Suar, Jaringan Utama juga menggabungkan seluruh sejarah transaksi Ethereum.
+Tidak ada riwayat yang hilang dalam The Merge. Saat Mainnet bergabung dengan Beacon Chain, ia juga menggabungkan seluruh riwayat transaksional Ethereum.
 
 <Alert variant="update">
 <AlertContent>
 <AlertDescription>
-Transisi ke bukti taruhan ini mengubah cara penerbitan ether. Pelajari lebih lanjut tentang [pengeluaran ether sebelum dan setelah Penggabungan](/roadmap/merge/issuance/).
+Transisi ke proof-of-stake ini mengubah cara ether diterbitkan. Pelajari lebih lanjut tentang [penerbitan ether sebelum dan sesudah The Merge](/roadmap/merge/issuance/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 ### Pengguna dan pemegang {#users-holders}
 
-**Penggabungan tidak mengubah apa pun bagi pemegang/pengguna.**
+**The Merge tidak mengubah apa pun bagi pemegang/pengguna.**
 
-_Ini patut diulang_: Sebagai pengguna atau pemegang ETH atau aset digital lainnya di Ethereum, serta para staker non-simpul operator, **Anda tidak perlu melakukan apa pun dengan dana atau dompet Anda untuk mempertimbangkan Penggabungan.** ETH tetaplah ETH. Tidak ada yang namanya "ETH lama"/"ETH baru" atau "ETH1"/"ETH2" dan dompet bekerja sama persis setelah Penggabungan seperti yang mereka lakukan sebelumnya - orang yang memberi tahu Anda sebaliknya kemungkinan besar adalah penipu.
+_Ini perlu diulangi_: Sebagai pengguna atau pemegang ETH atau aset digital lainnya di Ethereum, serta staker yang tidak mengoperasikan node, **Anda tidak perlu melakukan apa pun dengan dana atau dompet Anda untuk memperhitungkan The Merge.** ETH tetaplah ETH. Tidak ada yang namanya "ETH lama"/"ETH baru" atau "ETH1"/"ETH2" dan dompet berfungsi persis sama setelah The Merge seperti sebelumnya—orang yang memberi tahu Anda sebaliknya kemungkinan besar adalah penipu.
 
-Meskipun telah menukar bukti kerja, seluruh sejarah Ethereum sejak awal tetap utuh dan tidak diubah oleh transisi ke bukti taruhan. Semua dana yang tersimpan di dompet Anda sebelum Penggabungan masih dapat diakses setelah Penggabungan. **Tidak diperlukan tindakan untuk meningkatkan dari pihak Anda.**
+Meskipun menukar proof-of-work, seluruh riwayat Ethereum sejak genesis tetap utuh dan tidak diubah oleh transisi ke proof-of-stake. Dana apa pun yang disimpan di dompet Anda sebelum The Merge masih dapat diakses setelah The Merge. **Tidak ada tindakan yang diperlukan untuk meningkatkan di pihak Anda.**
 
 [Lebih lanjut tentang keamanan Ethereum](/security/#eth2-token-scam)
 
-### Operator simpul dan pengembang dapp {#node-operators-dapp-developers}
+### Operator node dan pengembang dapp {#node-operators-dapp-developers}
 
 <ExpandableCard
-title="Operator dan penyedia simpul penaruhan"
-contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
+title="Operator dan penyedia node staking"
+contentPreview="Jika Anda adalah seorang staker yang menjalankan pengaturan node Anda sendiri atau penyedia infrastruktur node, ada beberapa hal yang perlu Anda waspadai setelah The Merge."
 id="staking-node-operators">
 
-Item-item tindakan utama meliputi:
+Item tindakan utama meliputi:
 
-1. Jalankan _kedua_ klien konsensus dan klien eksekusi; titik akhir pihak ketiga untuk mendapatkan data eksekusi tidak lagi berfungsi sejak Penggabungan.
+1. Jalankan _kedua_ klien konsensus dan klien eksekusi; titik akhir pihak ketiga untuk mendapatkan data eksekusi tidak lagi berfungsi sejak The Merge.
 2. Autentikasi klien eksekusi dan konsensus dengan rahasia JWT bersama sehingga mereka dapat berkomunikasi dengan aman.
-3. Tetapkan alamat `penerima biaya` untuk menerima tips biaya transaksi/MEV yang Anda peroleh.
+3. Tetapkan alamat `fee recipient` (penerima biaya) untuk menerima tip biaya transaksi/MEV yang Anda peroleh.
 
-Tidak menyelesaikan dua hal pertama di atas akan mengakibatkan simpul Anda terlihat sebagai "offline" hingga kedua lapisan disinkronkan dan diautentikasi.
+Tidak menyelesaikan dua item pertama di atas akan mengakibatkan node Anda terlihat sebagai "offline" hingga kedua lapisan disinkronkan dan diautentikasi.
 
-Tidak menetapkan `penerima biaya` akan tetap memungkinkan validator Anda berperilaku seperti biasa, tetapi Anda akan kehilangan tips biaya yang tidak terbakar dan MEV yang seharusnya Anda dapatkan dari blok yang diajukan oleh validator Anda.
+Tidak menetapkan `fee recipient` akan tetap memungkinkan validator Anda berperilaku seperti biasa, tetapi Anda akan kehilangan tip biaya yang tidak dibakar dan MEV apa pun yang seharusnya Anda peroleh di blok yang diusulkan validator Anda.
 </ExpandableCard>
 
 <ExpandableCard
-title="Operator simpul dan penyedia infrastruktur yang tidak memvalidasi"
-contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
+title="Operator node non-validasi dan penyedia infrastruktur"
+contentPreview="Jika Anda mengoperasikan node Ethereum non-validasi, perubahan paling signifikan yang datang dengan The Merge adalah persyaratan untuk menjalankan klien untuk KEDUA lapisan eksekusi DAN lapisan konsensus."
 id="node-operators">
 
-Hingga Penggabungan, klien eksekusi (seperti Geth, Erigon, Besu, atau Nethermind) sudah cukup untuk menerima, memvalidasi dengan benar, dan menyebarkan blok yang sedang digosipkan oleh jaringan. _Setelah Penggabungan_, validitas transaksi yang terkandung dalam muatan eksekusi sekarang juga bergantung pada validitas "blok konsensus" yang terkandung di dalamnya.
+Hingga The Merge, klien eksekusi (seperti Geth, Erigon, Besu, atau Nethermind) sudah cukup untuk menerima, memvalidasi dengan benar, dan menyebarkan blok yang digosipkan oleh jaringan. _Setelah The Merge_, validitas transaksi yang terkandung dalam muatan eksekusi sekarang juga bergantung pada validitas "blok konsensus" di mana ia terkandung.
 
-Sebagai hasilnya, sebuah simpul Ethereum penuh sekarang membutuhkan klien eksekusi dan klien konsensus. Kedua klien ini bekerja bersama menggunakan API Engine yang baru. API Engine memerlukan autentikasi menggunakan rahasia JWT, yang disediakan untuk kedua klien yang memungkinkan komunikasi yang aman.
+Akibatnya, node Ethereum penuh sekarang membutuhkan klien eksekusi dan klien konsensus. Kedua klien ini bekerja sama menggunakan Engine API baru. Engine API memerlukan autentikasi menggunakan rahasia JWT, yang disediakan untuk kedua klien yang memungkinkan komunikasi yang aman.
 
-Item-item tindakan utama meliputi:
+Item tindakan utama meliputi:
 
-- Menginstal klien konsensus selain klien eksekusi
+- Instal klien konsensus selain klien eksekusi
 - Autentikasi klien eksekusi dan konsensus dengan rahasia JWT bersama sehingga mereka dapat berkomunikasi dengan aman satu sama lain.
 
-Tidak menyelesaikan item di atas akan mengakibatkan simpul Anda tampak "offline" hingga kedua lapisan disinkronkan dan diautentikasi.
+Tidak menyelesaikan item di atas akan mengakibatkan node Anda tampak "offline" hingga kedua lapisan disinkronkan dan diautentikasi.
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Dapp dan pengembang kontrak pintar"
-contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
+title="Pengembang dapp dan kontrak pintar"
+contentPreview="The Merge dirancang untuk memiliki dampak minimal pada pengembang kontrak pintar dan dapp."
 id="developers">
 
-Penggabungan disertai dengan perubahan konsensus, yang juga mencakup perubahan yang terkait dengan:
+The Merge datang dengan perubahan pada konsensus, yang juga mencakup perubahan terkait dengan:
 
 <ul>
   <li>struktur blok</li>
-  <li>pengaturan waktu ruang/blok</li>
+  <li>waktu slot/blok</li>
   <li>perubahan opcode</li>
-  <li>sumber keacakan di dalam rantai</li>
-  <li>konsep dari <em>blok aman</em> dan <em>blok yang telah difinalisasi</em></li>
+  <li>sumber keacakan onchain</li>
+  <li>konsep <em>safe head</em> dan <em>blok yang difinalisasi</em></li>
 </ul>
 
-Untuk informasi lebih lanjut, lihat tulisan blog ini oleh Tim Beiko tentang <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Bagaimana Penggabungan Memengaruhi Lapisan Aplikasi Ethereum</a>.
+Untuk informasi lebih lanjut, lihat postingan blog oleh Tim Beiko tentang <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer">Bagaimana The Merge Berdampak pada Lapisan Aplikasi Ethereum</a>.
 
 </ExpandableCard>
 
-## Penggabungan dan konsumsi energi {#merge-and-energy}
+## The Merge dan konsumsi energi {#merge-and-energy}
 
-Penggabungan ini menandai berakhirnya bukti kerja untuk Ethereum dan memulai era Ethereum yang berkelanjutan dan ramah lingkungan. Konsumsi energi Ethereum turun sekitar 99,95%, menjadikan Ethereum sebagai rantai blok hijau. Pelajari lebih lanjut tentang [konsumsi energi Ethereum](/energy-consumption/).
+The Merge menandai akhir dari proof-of-work untuk Ethereum dan memulai era Ethereum yang lebih berkelanjutan dan ramah lingkungan. Konsumsi energi Ethereum turun sekitar 99,95%, menjadikan Ethereum sebagai blockchain hijau. Pelajari lebih lanjut tentang [konsumsi energi Ethereum](/energy-consumption/).
 
-## Penggabungan dan penskalaan {#merge-and-scaling}
+## The Merge dan peningkatan {#merge-and-scaling}
 
-Penggabungan juga membuka jalan untuk peningkatan skalabilitas lebih lanjut yang tidak mungkin dilakukan di bawah bukti kerja, mendekatkan Ethereum satu langkah lebih dekat untuk mencapai skala penuh, keamanan, dan keberlanjutan seperti yang diuraikan dalam [visi Ethereum](/roadmap/)nya.
+The Merge juga menyiapkan panggung untuk peningkatan skalabilitas lebih lanjut yang tidak mungkin dilakukan di bawah proof-of-work, membawa Ethereum selangkah lebih dekat untuk mencapai skala penuh, keamanan, dan keberlanjutan yang sedang dibangun oleh [peta jalannya](/roadmap/).
 
-## Kesalahpahaman tentang Penggabungan {#misconceptions}
-
-<ExpandableCard
-title="Miskonsepsi: &quot;Menjalankan simpul membutuhkan penaruhan 32 ETH.&quot;"
-contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e., run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
-
-Ada dua jenis simpul Ethereum: simpul yang dapat mengusulkan blok dan simpul yang tidak.
-
-Simpul yang mengusulkan blok hanya sejumlah kecil dari total simpul di Ethereum. Kategori ini mencakup simpul penambangan di bawah bukti kerja (proof-of-work/PoW) dan simpul validator di bawah bukti kepemilikan (proof-of-stake/PoS). Kategori ini membutuhkan sumber daya ekonomi (seperti kekuatan hash GPU dalam bukti kerja atau ETH yang dipertaruhkan dalam bukti taruhan) sebagai imbalan atas kemampuan untuk sesekali mengusulkan blok berikutnya dan mendapatkan imbalan protokol.
-
-Simpul lain dalam jaringan (yaitu mayoritas) tidak perlu menyediakan sumber daya ekonomi apa pun di luar komputer kelas konsumen dengan penyimpanan yang tersedia sebesar 1-2 TB dan koneksi internet. Simpul-simpul ini tidak mengusulkan blok, tetapi mereka masih memiliki peran penting dalam mengamankan jaringan dengan meminta pertanggungjawaban dari semua pengusul blok dengan mendengarkan blok-blok baru dan memverifikasi keabsahannya pada saat kedatangan sesuai dengan aturan konsensus jaringan. Jika blok tersebut valid, simpul akan terus menyebarkannya melalui jaringan. Jika blok tidak valid karena alasan apa pun, perangkat lunak simpul akan mengabaikannya sebagai tidak valid dan menghentikan penyebarannya.
-
-Menjalankan simpul yang tidak memproduksi blok memungkinkan bagi siapa pun di bawah kedua mekanisme konsensus (bukti kerja atau bukti taruhan); ini <em>sangat dianjurkan</em> bagi semua pengguna jika mereka memiliki kemampuan. Menjalankan sebuah simpul sangat berharga bagi Ethereum dan memberikan manfaat tambahan bagi setiap individu yang menjalankannya, seperti peningkatan keamanan, privasi, dan ketahanan terhadap sensor.
-
-Kemampuan bagi siapa pun untuk menjalankan simpul mereka sendiri adalah <em>mutlak penting</em> untuk menjaga desentralisasi jaringan Ethereum.
-
-[Lebih lanjut tentang menjalankan simpul Anda sendiri](/run-a-node/)
-
-</ExpandableCard>
+## Kesalahpahaman tentang The Merge {#misconceptions}
 
 <ExpandableCard
-title="Miskonsepsi: &quot;Penggabungan gagal mengurangi biaya gas.&quot;"
-contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+title="Kesalahpahaman: &quot;Menjalankan node membutuhkan staking 32 ETH.&quot;"
+contentPreview="Salah. Siapa pun bebas untuk menyinkronkan salinan Ethereum yang diverifikasi sendiri (yaitu, menjalankan node). Tidak ada ETH yang diperlukan—tidak sebelum The Merge, tidak setelah The Merge, tidak akan pernah.">
 
-Biaya gas adalah produk dari permintaan jaringan relatif terhadap kapasitas jaringan. Penggabungan tidak lagi menggunakan bukti kerja, beralih ke bukti taruhan untuk konsensus, tetapi tidak secara signifikan mengubah parameter apa pun yang secara langsung memengaruhi kapasitas atau keluaran jaringan.
+Ada dua jenis node Ethereum: node yang dapat mengusulkan blok dan node yang tidak.
 
-Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">peta perjalanan berbasis rollup</a>, upaya difokuskan pada penskalaan aktivitas pengguna di [lapisan ke-2](/layer-2/), sambil memungkinkan Jaringan Utama lapisan ke-1 sebagai lapisan penyelesaian terdesentralisasi yang aman yang dioptimalkan untuk penyimpanan data rollup untuk membantu membuat transaksi rollup menjadi jauh lebih murah secara eksponensial. Transisi ke bukti taruhan merupakan langkah awal yang penting untuk mewujudkan hal ini. [Lebih lanjut tentang gas dan biaya.](/developers/docs/gas/)
+Node yang mengusulkan blok hanyalah sebagian kecil dari total node di Ethereum. Kategori ini mencakup node penambangan di bawah proof-of-work (PoW) dan node validator di bawah proof-of-stake (PoS). Kategori ini membutuhkan komitmen sumber daya ekonomi (seperti kekuatan hash GPU dalam proof-of-work atau ETH yang dikunci dalam proof-of-stake) dengan imbalan kemampuan untuk sesekali mengusulkan blok berikutnya dan mendapatkan hadiah protokol.
+
+Node lain di jaringan (yaitu, mayoritas) tidak diharuskan untuk memberikan sumber daya ekonomi apa pun di luar komputer tingkat konsumen dengan penyimpanan yang tersedia 1-2 TB dan koneksi internet. Node ini tidak mengusulkan blok, tetapi mereka masih melayani peran penting dalam mengamankan jaringan dengan meminta pertanggungjawaban semua pengusul blok dengan mendengarkan blok baru dan memverifikasi validitasnya pada saat kedatangan sesuai dengan aturan konsensus jaringan. Jika blok tersebut valid, node terus menyebarkannya melalui jaringan. Jika blok tidak valid karena alasan apa pun, perangkat lunak node akan mengabaikannya sebagai tidak valid dan menghentikan penyebarannya.
+
+Menjalankan node yang tidak memproduksi blok dimungkinkan bagi siapa saja di bawah mekanisme konsensus mana pun (proof-of-work atau proof-of-stake); ini <em>sangat dianjurkan</em> untuk semua pengguna jika mereka memiliki sarana. Menjalankan node sangat berharga bagi Ethereum dan memberikan manfaat tambahan bagi setiap individu yang menjalankannya, seperti peningkatan keamanan, privasi, dan ketahanan terhadap sensor.
+
+Kemampuan bagi siapa saja untuk menjalankan node mereka sendiri <em>sangat penting</em> untuk mempertahankan desentralisasi jaringan Ethereum.
+
+[Lebih lanjut tentang menjalankan node Anda sendiri](/run-a-node/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Miskonsepsi: &quot;Transaksi secara signifikan dipercepat oleh Penggabungan.&quot;"
-contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
-"Kecepatan" transaksi dapat diukur dengan beberapa cara, termasuk waktu untuk dimasukkan ke dalam blok dan waktu finalisasi. Kedua hal ini sedikit berubah, tetapi tidak begitu kentara bagi pengguna.
+title="Kesalahpahaman: &quot;The Merge gagal mengurangi biaya gas.&quot;"
+contentPreview="Salah. The Merge adalah perubahan mekanisme konsensus, bukan perluasan kapasitas jaringan, dan tidak pernah dimaksudkan untuk menurunkan biaya gas.">
 
-Secara historis, pada bukti kerja, targetnya adalah memiliki blok baru setiap ~13,3 detik. Pada bukti taruhan, slot terjadi tepat setiap 12 detik, yang mana setiap slot merupakan kesempatan bagi validator untuk menerbitkan blok. Sebagian besar slot memiliki blok, tetapi belum tentu semuanya (misalnya, validator sedang offline). Pada bukti taruhan, blok diproduksi ~10% lebih sering dibandingkan dengan bukti kerja. Ini merupakan perubahan yang tidak terlalu signifikan dan kemungkinan tidak akan disadari oleh pengguna.
+Biaya gas adalah produk dari permintaan jaringan relatif terhadap kapasitas jaringan. The Merge menghentikan penggunaan proof-of-work, beralih ke proof-of-stake untuk konsensus, tetapi tidak secara signifikan mengubah parameter apa pun yang secara langsung memengaruhi kapasitas atau throughput jaringan.
 
-Bukti taruhan memperkenalkan konsep finalitas transaksi yang sebelumnya tidak ada. Dalam bukti kerja, kemampuan untuk membalikkan sebuah blok menjadi lebih sulit secara eksponensial dengan setiap blok yang ditambang di atas transaksi, tetapi tidak pernah mencapai nol. Dalam bukti taruhan, blok digabungkan ke dalam periode waktu (rentang waktu 6,4 menit yang terdiri dari 32 peluang blok) yang akan dipilih oleh para validator. Ketika jangka waktu berakhir, para validator memberikan suara untuk memutuskan apakah jangka waktu tersebut 'dibenarkan' atau tidak. Jika validator setuju untuk membenarkan jangka waktu, maka epoch tersebut akan difinalisasi di jangka waktu berikutnya. Membatalkan transaksi yang telah difinalisasi tidak ekonomis karena akan memerlukan pengambilan dan pembakaran lebih dari sepertiga total ETH yang dipertaruhkan.
+Dengan <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">peta jalan yang berpusat pada rollup</a>, upaya difokuskan pada peningkatan aktivitas pengguna di [layer 2](/layer-2/), sambil mengaktifkan Mainnet layer 1 sebagai lapisan penyelesaian terdesentralisasi yang aman yang dioptimalkan untuk penyimpanan data rollup guna membantu membuat transaksi rollup secara eksponensial lebih murah. Transisi ke proof-of-stake adalah pendahulu penting untuk mewujudkan hal ini. [Lebih lanjut tentang gas dan biaya.](/developers/docs/gas/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Miskonsepsi: &quot;Penggabungan memungkinkan penarikan penaruhan.&quot;"
-contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+title="Kesalahpahaman: &quot;Transaksi dipercepat secara substansial oleh The Merge.&quot;"
+contentPreview="Salah. Meskipun ada sedikit perubahan, kecepatan transaksi sebagian besar sama di layer 1 sekarang seperti sebelum The Merge.">
+"Kecepatan" transaksi dapat diukur dengan beberapa cara, termasuk waktu untuk dimasukkan ke dalam blok dan waktu untuk finalisasi. Keduanya sedikit berubah, tetapi tidak dengan cara yang akan diperhatikan pengguna.
 
-Awalnya setelah Penggabungan, para staker hanya dapat mengakses tip biaya dan MEV yang diperoleh sebagai hasil dari usulan blok. Imbalan ini dikreditkan ke akun non-penaruhan yang dikendalikan oleh validator (dikenal sebagai <em>penerima biaya</em>), dan tersedia segera. Imbalan ini terpisah dari imbalan protokol untuk menjalankan tugas validator.
+Secara historis, pada proof-of-work, targetnya adalah memiliki blok baru setiap ~13,3 detik. Di bawah proof-of-stake, slot terjadi tepat setiap 12 detik, yang masing-masing merupakan peluang bagi validator untuk menerbitkan blok. Sebagian besar slot memiliki blok, tetapi belum tentu semuanya (yaitu, validator sedang offline). Dalam proof-of-stake, blok diproduksi ~10% lebih sering daripada pada proof-of-work. Ini adalah perubahan yang cukup tidak signifikan dan tidak mungkin diperhatikan oleh pengguna.
 
-Sejak upgrade jaringan Shanghai/Capella, para staker sekarang dapat menunjuk alamat <em>penarikan</em> untuk mulai menerima pembayaran otomatis dari saldo penaruhan berlebihan (ETH di atas 32 dari imbalan protokol). Upgrade ini juga memungkinkan kemampuan bagi validator untuk membuka kunci dan mengklaim seluruh saldo saat keluar dari jaringan.
+Proof-of-stake memperkenalkan konsep finalitas transaksi yang sebelumnya tidak ada. Dalam proof-of-work, kemampuan untuk membalikkan blok menjadi semakin sulit secara eksponensial dengan setiap blok yang ditambang di atas transaksi, tetapi tidak pernah benar-benar mencapai nol. Di bawah proof-of-stake, blok digabungkan ke dalam epoch (rentang waktu 6,4 menit yang berisi 32 peluang untuk blok) yang dipilih oleh validator. Saat epoch berakhir, validator memilih apakah akan menganggap epoch tersebut 'dibenarkan'. Jika validator setuju untuk membenarkan epoch, itu akan difinalisasi di epoch berikutnya. Membatalkan transaksi yang difinalisasi secara ekonomi tidak layak karena akan membutuhkan perolehan dan pembakaran lebih dari sepertiga dari total ETH yang dikunci.
+
+</ExpandableCard>
+
+<ExpandableCard
+title="Kesalahpahaman: &quot;The Merge memungkinkan penarikan staking.&quot;"
+contentPreview="Salah, tetapi penarikan staking sejak itu telah diaktifkan melalui peningkatan Shanghai/Capella.">
+
+Awalnya setelah The Merge, staker hanya dapat mengakses tip biaya dan MEV yang diperoleh sebagai hasil dari proposal blok. Hadiah ini dikreditkan ke akun non-staking yang dikendalikan oleh validator (dikenal sebagai <em>fee recipient</em>), dan segera tersedia. Hadiah ini terpisah dari hadiah protokol untuk melakukan tugas validator.
+
+Sejak peningkatan jaringan Shanghai/Capella, staker sekarang dapat menunjuk <em>alamat penarikan</em> untuk mulai menerima pembayaran otomatis dari setiap kelebihan saldo staking (ETH di atas 32 dari hadiah protokol). Peningkatan ini juga memungkinkan kemampuan validator untuk membuka kunci dan mengklaim kembali seluruh saldonya saat keluar dari jaringan.
 
 [Lebih lanjut tentang penarikan staking](/staking/withdrawals/)
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Miskonsepsi: &quot;Sekarang Penggabungan telah selesai, dan penarikan diaktifkan, para staker bisa keluar semua sekaligus.&quot;"
-contentPreview="False. Validator exits are rate limited for security reasons.">
-Sejak meningkatkan Shanghai/Capella mengizinkan penarikan, para validator memiliki insentif untuk menarik saldo penaruhan mereka yang melebihi 32 ETH, karena dana-dana tersebut tidak meningkatkan hasil dan sebaliknya terkunci. Tergantung pada APR (ditentukan oleh total ETH yang dipertaruhkan), mungkin ada insentif untuk keluar dari validatornya untuk mengklaim seluruh saldo atau bahkan mempertaruhkan lebih lagi menggunakan imbalannya untuk mendapatkan hasil lebih banyak.
+title="Kesalahpahaman: &quot;Sekarang setelah The Merge selesai, dan penarikan diaktifkan, staker dapat keluar semua sekaligus.&quot;"
+contentPreview="Salah. Keluar validator dibatasi kecepatannya karena alasan keamanan.">
+Karena peningkatan Shanghai/Capella mengaktifkan penarikan, validator diberi insentif untuk menarik saldo staking mereka di atas 32 ETH, karena dana ini tidak menambah hasil dan sebaliknya terkunci. Bergantung pada APR (ditentukan oleh total ETH yang dikunci), mereka mungkin diberi insentif untuk keluar dari validator mereka untuk mengklaim kembali seluruh saldo mereka atau berpotensi melakukan stake lebih banyak lagi menggunakan hadiah mereka untuk mendapatkan lebih banyak hasil.
 
-Namun, perlu dicatat bahwa keluar penuh dari validator dibatasi oleh protokol, dan hanya sejumlah terbatas validator yang diizinkan keluar setiap jangka waktu (setiap 6,4 menit). Batas ini bervariasi tergantung pada jumlah validator aktif, tetapi berjumlah sekitar 0,33% dari total ETH yang dipertaruhkan dapat keluar dari jaringan dalam satu hari.
+Peringatan penting di sini, keluar validator penuh dibatasi kecepatannya oleh protokol, dan hanya sejumlah validator yang dapat keluar per epoch (setiap 6,4 menit). Batas ini berfluktuasi tergantung pada jumlah validator aktif, tetapi mencapai sekitar 0,33% dari total ETH yang dikunci dapat dikeluarkan dari jaringan dalam satu hari.
 
-Hal ini mencegah terjadinya pengeluaran dana penaruhan secara massal. Selain itu, hal ini mencegah penyerang potensial yang memiliki akses ke sebagian besar total ETH yang dipertaruhkan untuk melakukan pelanggaran yang dapat dipotong dan keluar/menarik semua saldo validator yang melanggar pada jangka waktu yang sama sebelum protokol dapat memberlakukan hukuman pemotongan.
+Ini mencegah eksodus massal dana yang dikunci. Selain itu, ini mencegah penyerang potensial dengan akses ke sebagian besar dari total ETH yang dikunci dari melakukan pelanggaran yang dapat dipotong dan keluar/menarik semua saldo validator yang melanggar di epoch yang sama sebelum protokol dapat menegakkan hukuman pemotongan.
 
-APR juga disengaja dinamis, memungkinkan pasar para staker untuk menyeimbangkan seberapa banyak mereka bersedia dibayar untuk membantu mengamankan jaringan. Jika tingkatnya terlalu rendah, maka validator akan keluar dengan batas kecepatan yang ditentukan oleh protokol. Secara perlahan ini akan meningkatkan APR bagi semua yang tetap tinggal, menarik staker baru atau yang kembali lagi.
+APR juga sengaja dibuat dinamis, memungkinkan pasar staker untuk menyeimbangkan berapa banyak mereka bersedia dibayar untuk membantu mengamankan jaringan. Jika tarifnya terlalu rendah, maka validator akan keluar pada tingkat yang dibatasi oleh protokol. Secara bertahap ini akan menaikkan APR untuk semua orang yang tersisa, menarik staker baru atau yang kembali lagi.
 </ExpandableCard>
 
-## Apa yang akan terjadi pada 'Eth2'? {#eth2}
+## Apa yang terjadi pada 'Eth2'? {#eth2}
 
-Istilah 'Eth2' telah dihentikan penggunaannya. Setelah menggabungkan 'Eth1' dan 'Eth2' menjadi satu rantai tunggal, tidak ada lagi kebutuhan untuk membedakan antara dua jaringan Ethereum; hanya ada Ethereum.
+Istilah 'Eth2' telah dihentikan. Setelah menggabungkan 'Eth1' dan 'Eth2' menjadi satu rantai, tidak perlu lagi membedakan antara dua jaringan Ethereum; yang ada hanyalah Ethereum.
 
-Untuk mengurangi kebingungan, komunitas telah memperbarui istilah-istilah berikut ini:
+Untuk membatasi kebingungan, komunitas telah memperbarui istilah-istilah ini:
 
-- 'Eth1' sekarang adalah 'lapisan eksekusi', yang menangani transaksi dan eksekusi.
-- 'Eth2' sekarang adalah 'lapisan konsensus', yang menangani konsensus bukti taruhan.
+- 'Eth1' sekarang menjadi 'lapisan eksekusi', yang menangani transaksi dan eksekusi.
+- 'Eth2' sekarang menjadi 'lapisan konsensus', yang menangani konsensus proof-of-stake.
 
-Pembaruan terminologi ini hanya mengubah konvensi penamaan; ini tidak mengubah tujuan atau peta perjalanan Ethereum.
+Pembaruan terminologi ini hanya mengubah konvensi penamaan; ini tidak mengubah tujuan atau peta jalan Ethereum.
 
-[Pelajari selengkapnya tentang penamaan ulang 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
+[Pelajari lebih lanjut tentang penggantian nama 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming)
 
 ## Hubungan antar peningkatan {#relationship-between-upgrades}
 
-Semua peningkatan Ethereum saling terkait. Jadi mari kita ringkas bagaimana Penggabungan ini berhubungan dengan peningkatan lain.
+Peningkatan Ethereum semuanya agak saling terkait. Jadi mari kita rekap bagaimana The Merge berhubungan dengan peningkatan lainnya.
 
-### Penggabungan dan Rantai Suar {#merge-and-beacon-chain}
+### The Merge dan Beacon Chain {#merge-and-beacon-chain}
 
-Pengabungan mewakili adopsi resmi Rantai Suar sebagai lapisan konsensus baru untuk lapisan eksekusi Jaringan Utama asli. Sejak Penggabungan, para validator ditugaskan untuk mengamankan Jaringan Utama Ethereum, dan penambangan menggunakan [bukti kerja](/developers/docs/consensus-mechanisms/pow/) tidak lagi merupakan cara yang valid untuk produksi blok.
+The Merge mewakili adopsi formal Beacon Chain sebagai lapisan konsensus baru ke lapisan eksekusi Mainnet asli. Sejak The Merge, validator ditugaskan untuk mengamankan Mainnet Ethereum, dan penambangan pada [proof-of-work](/developers/docs/consensus-mechanisms/pow/) tidak lagi menjadi sarana produksi blok yang valid.
 
-Blok diusulkan dengan memvalidasi simpul yang telah mempertaruhkan ETH dengan imbalan hak untuk berpartisipasi dalam konsensus. Peningkatan ini menyiapkan panggung untuk peningkatan skalabilitas di masa depan, termasuk pecahan.
+Blok sebaliknya diusulkan oleh node validasi yang telah men-stake ETH sebagai imbalan atas hak untuk berpartisipasi dalam konsensus. Peningkatan ini menyiapkan panggung untuk peningkatan skalabilitas di masa depan, termasuk sharding.
 
 <ButtonLink href="/roadmap/beacon-chain/">
-  Rantai Suar
+  Beacon Chain
 </ButtonLink>
 
-### Penggabungan dan peningkatan Shanghai {#merge-and-shanghai}
+### The Merge dan peningkatan Shanghai {#merge-and-shanghai}
 
-Untuk menyederhanakan dan memaksimalkan fokus pada transisi yang sukses ke bukti taruhan, peningkatan Penggabungan tidak menyertakan fitur-fitur tertentu yang telah diantisipasi seperti kemampuan untuk menarik ETH yang dipertaruhkan. Fungsionalitas ini diaktifkan secara terpisah dengan peningkatan Shanghai/Capella.
+Untuk menyederhanakan dan memaksimalkan fokus pada transisi yang sukses ke proof-of-stake, peningkatan The Merge tidak menyertakan fitur tertentu yang diantisipasi seperti kemampuan untuk menarik ETH yang dikunci. Fungsionalitas ini diaktifkan secara terpisah dengan peningkatan Shanghai/Capella.
 
-Bagi mereka yang ingin tahu, pelajari selengkapnya tentang [Apa yang Terjadi Setelah Penggabungan](https://youtu.be/7ggwLccuN5s?t=101), yang disajikan oleh Vitalik pada acara ETHGlobal April 2021.
+Bagi yang penasaran, pelajari lebih lanjut tentang [Apa yang Terjadi Setelah The Merge](https://youtu.be/7ggwLccuN5s?t=101), yang dipresentasikan oleh Vitalik di acara ETHGlobal April 2021.
 
-### Penggabungan dan pecahan {#merge-and-data-sharding}
+### The Merge dan sharding {#merge-and-data-sharding}
 
-Awalnya, rencananya adalah mengerjakan pecahan sebelum Penggabungan untuk mengatasi skalabilitas. Namun, dengan munculnya solusi penskalaan [lapisan ke-2](/layer-2/), prioritas berubah menjadi menggantikan bukti kerja dengan bukti taruhan terlebih dahulu.
+Awalnya, rencananya adalah mengerjakan sharding sebelum The Merge untuk mengatasi skalabilitas. Namun, dengan ledakan [solusi peningkatan layer 2](/layer-2/), prioritas bergeser ke menukar proof-of-work ke proof-of-stake terlebih dahulu.
 
-Rencana untuk pecahan berkembang dengan cepat, tetapi dengan munculnya dan keberhasilan teknologi lapisan ke-2 untuk meningkatkan eksekusi transaksi, rencana pecahan telah bergeser untuk menemukan cara yang paling optimal untuk mendistribusikan beban penyimpanan data panggilan terkompresi dari kontrak rollup, yang memungkinkan pertumbuhan kapasitas jaringan secara eksponensial. Hal ini tidak akan mungkin terjadi tanpa terlebih dahulu beralih ke bukti taruhan.
+Rencana untuk sharding berkembang pesat, tetapi mengingat kebangkitan dan keberhasilan teknologi layer 2 untuk meningkatkan eksekusi transaksi, rencana sharding telah bergeser untuk menemukan cara paling optimal untuk mendistribusikan beban penyimpanan calldata terkompresi dari kontrak rollup, memungkinkan pertumbuhan eksponensial dalam kapasitas jaringan. Ini tidak akan mungkin terjadi tanpa terlebih dahulu beralih ke proof-of-stake.
 
 <ButtonLink href="/roadmap/danksharding/">
-  Pecahan
+  Sharding
 </ButtonLink>
 
 ## Bacaan lebih lanjut {#further-reading}

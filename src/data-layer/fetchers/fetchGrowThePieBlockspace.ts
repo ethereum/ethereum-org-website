@@ -2,6 +2,8 @@ import type { BlockspaceData } from "@/lib/types"
 
 import { LAYER2_GROWTHEPIE_IDS } from "@/data/networks/growthepieIds"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_GROW_THE_PIE_BLOCKSPACE_TASK_ID =
   "fetch-grow-the-pie-blockspace"
 
@@ -33,7 +35,7 @@ export async function fetchGrowThePieBlockspace(): Promise<
   for (const networkId of LAYER2_GROWTHEPIE_IDS) {
     try {
       const url = `https://api.growthepie.com/v1/chains/blockspace/${networkId}.json`
-      const response = await fetch(url)
+      const response = await fetchRetry(url)
 
       if (!response.ok) {
         const status = response.status

@@ -4,6 +4,7 @@ description: "Kontrolní seznam bezpečnostních pokynů, které je třeba zvá�
 author: "Trailofbits"
 tags: [ "solidity", "chytré kontrakty", "bezpečnost" ]
 skill: intermediate
+breadcrumb: "Bezpečnostní pravidla"
 lang: cs
 published: 2020-09-06
 source: Building secure contracts

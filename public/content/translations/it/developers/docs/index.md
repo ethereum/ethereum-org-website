@@ -1,16 +1,16 @@
 ---
-title: Documentazione sullo sviluppo di Ethereum
-description: Presentazione della documentazione di sviluppo per ethereum.org.
+title: Documentazione per lo sviluppo su Ethereum
+description: Introduzione alla documentazione per sviluppatori di ethereum.org.
 lang: it
 ---
 
-Questa documentazione è progettata per aiutarti a creare con Ethereum. Tratta Ethereum come un concetto, spiega lo stack tecnologico di Ethereum e documenta argomenti avanzati per applicazioni e casi d'uso più complessi.
+Questa documentazione è progettata per aiutarti a sviluppare con [Ethereum](/). Tratta Ethereum come concetto, spiega lo stack tecnologico di Ethereum e documenta argomenti avanzati per applicazioni e casi d'uso più complessi.
 
-Questa è uno sforzo della community open source, quindi sentiti libero di suggerire nuovi argomenti, aggiungere contenuti e fornire esempi laddove pensi potrebbero essere utili. Tutta la documentazione è modificabile tramite GitHub – se se insicuro su come fare, [segui queste istruzioni](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
+Questo è uno sforzo open-source della community, quindi sentiti libero di suggerire nuovi argomenti, aggiungere nuovi contenuti e fornire esempi ovunque pensi possa essere utile. Tutta la documentazione può essere modificata tramite GitHub: se non sei sicuro di come fare, [segui queste istruzioni](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
 
 ## Moduli di sviluppo {#development-modules}
 
-Se questo è il tuo primo tentativo di sviluppo su Ethereum, consigliamo di cominciare dall'inizio e farsi strada come fosse un libro.
+Se questo è il tuo primo tentativo di sviluppo su Ethereum, ti consigliamo di iniziare dall'inizio e procedere come se stessi leggendo un libro.
 
 ### Argomenti fondamentali {#foundational-topics}
 

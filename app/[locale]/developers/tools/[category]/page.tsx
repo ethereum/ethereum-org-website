@@ -26,13 +26,12 @@ import DevelopersToolsCategoryJsonLD from "./page-jsonld"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-  searchParams,
-}: {
-  params: PageParams & { category: DeveloperToolCategorySlug }
-  searchParams: { toolId?: string }
+const Page = async (props: {
+  params: Promise<PageParams & { category: DeveloperToolCategorySlug }>
+  searchParams: Promise<{ toolId?: string }>
 }) => {
+  const searchParams = await props.searchParams
+  const params = await props.params
   const { locale, category } = params
   const { toolId } = searchParams
 
@@ -42,10 +41,7 @@ const Page = async ({
     notFound()
   }
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer tools data available")
@@ -150,21 +146,17 @@ export async function generateStaticParams() {
   return DEV_TOOL_CATEGORIES.map(({ slug }) => ({ category: slug }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; category: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; category: string }>
 }) {
+  const params = await props.params
   const { locale, category } = params
 
   if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
     notFound()
   }
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   return await getMetadata({
     locale,

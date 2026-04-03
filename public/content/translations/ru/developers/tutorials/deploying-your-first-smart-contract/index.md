@@ -10,6 +10,7 @@ tags:
     "развертывание"
   ]
 skill: beginner
+breadcrumb: "Первый контракт"
 lang: ru
 published: 2020-04-03
 source: EthereumDev

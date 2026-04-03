@@ -18,7 +18,7 @@ It's as easy as running `pnpm storybook` to boot up a dedicated localhost to see
 
 ## Setting up a component's stories
 
-> 🚨 NOTE: This project uses Storybook v8.6+, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
+> 🚨 NOTE: This project uses Storybook v10.3+, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
@@ -176,7 +176,7 @@ You will currently find the setup of these modes in [the `./storybook/modes.ts` 
 When using a mode at either the component level (all stories in a given file) or at the story level, they are supplied under the `chromatic` parameter.
 
 ```tsx
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { langViewportModes } from "../../../../.storybook/modes"
 

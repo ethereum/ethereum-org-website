@@ -4,6 +4,7 @@ description: "既存のコントラクトからスマートコントラクトを
 author: "jdourlens"
 tags: [ "スマートコントラクト", "Solidity", "Remix", "デプロイ", "構成可能性" ]
 skill: advanced
+breadcrumb: "コントラクト間連携"
 lang: ja
 published: 2020-04-05
 source: EthereumDev

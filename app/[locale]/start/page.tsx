@@ -23,9 +23,10 @@ import StartPageJsonLD from "./page-jsonld"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-start" })
+  const t = await getTranslations("page-start")
 
   setRequestLocale(locale)
 
@@ -89,14 +90,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-start" })
+  const t = await getTranslations("page-start")
 
   return await getMetadata({
     locale,

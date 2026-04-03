@@ -15,6 +15,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CollectiblesPage from "./_components/Collectibles/lazy"
@@ -30,19 +31,20 @@ const STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats`
 
 // Data fetching
 async function fetchBadges() {
-  const res = await fetch(BADGES_API)
+  const res = await fetch(BADGES_API, { cache: "force-cache" })
   if (!res.ok) throw new Error("Failed to fetch badges")
   return res.json()
 }
 async function fetchStats() {
-  const res = await fetch(STATS_API)
+  const res = await fetch(STATS_API, { cache: "force-cache" })
   if (!res.ok) throw new Error("Failed to fetch stats")
   return res.json()
 }
 
-export default async function Page({ params }: { params: PageParams }) {
+export default async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-collectibles" })
+  const t = await getTranslations("page-collectibles")
   setRequestLocale(locale)
 
   // Fetch data
@@ -110,7 +112,9 @@ export default async function Page({ params }: { params: PageParams }) {
               {/* Minted */}
               <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-8 text-accent-a max-md:col-span-2 xl:col-span-2 xl:p-6">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.collectorsCount?.toLocaleString(locale) ?? "-"}
+                  {stats.collectorsCount
+                    ? numberFormat(locale).format(stats.collectorsCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-minted")}
@@ -119,7 +123,9 @@ export default async function Page({ params }: { params: PageParams }) {
               {/* Collectors */}
               <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-b/20 bg-gradient-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.uniqueAddressesCount?.toLocaleString(locale) ?? "-"}
+                  {stats.uniqueAddressesCount
+                    ? numberFormat(locale).format(stats.uniqueAddressesCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-collectors")}
@@ -128,7 +134,9 @@ export default async function Page({ params }: { params: PageParams }) {
               {/* Unique Badges */}
               <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.collectiblesCount?.toLocaleString(locale) ?? "-"}
+                  {stats.collectiblesCount
+                    ? numberFormat(locale).format(stats.collectiblesCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-unique-badges")}
@@ -146,13 +154,12 @@ export default async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-collectibles" })
+  const t = await getTranslations("page-collectibles")
   return await getMetadata({
     locale,
     slug: ["collectibles"],

@@ -46,11 +46,10 @@ const VALID_CATEGORIES = Object.values(AppCategoryEnum)
 const isValidCategory = (category: string): category is AppCategoryEnum =>
   VALID_CATEGORIES.includes(category as AppCategoryEnum)
 
-const Page = async ({
-  params,
-}: {
-  params: PageParams & { catetgoryName: string }
+const Page = async (props: {
+  params: Promise<PageParams & { catetgoryName: string }>
 }) => {
+  const params = await props.params
   const { locale, catetgoryName } = params
   setRequestLocale(locale)
 
@@ -62,7 +61,7 @@ const Page = async ({
     throw new Error("Failed to fetch apps data")
   }
 
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -180,13 +179,12 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; catetgoryName: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; catetgoryName: string }>
 }) {
+  const params = await props.params
   const { locale, catetgoryName } = params
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
 
   // Normalize slug to lowercase
   const normalizedSlug = catetgoryName.toLowerCase()

@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
@@ -120,16 +120,12 @@ const WhyGrid = () => {
     </div>
   )
 }
-const DevelopersPage = async ({ params }: { params: PageParams }) => {
+const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
-  const tCommon = await getTranslations({
-    locale,
-    namespace: "common",
-  })
+  setRequestLocale(locale)
+  const t = await getTranslations("page-developers-index")
+  const tCommon = await getTranslations("common")
 
   const paths = await getBuilderPaths()
   const speedRunDetails = {
@@ -691,17 +687,13 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   return await getMetadata({
     locale,

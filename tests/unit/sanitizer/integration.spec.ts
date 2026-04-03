@@ -87,4 +87,34 @@ test.describe("Integration Tests", () => {
       expect(result.content).toBe(content)
     })
   })
+
+  test.describe("escaped backtick handling", () => {
+    test("preserves backslash inside inline code backticks", () => {
+      const content = [
+        "---",
+        "title: Test",
+        "---",
+        "",
+        "Note that backslashes `\\` in examples are for formatting.",
+      ].join("\n")
+
+      const result = processMarkdownFile("/tmp/test.md", content)
+      // The backslash inside `\` must be preserved
+      expect(result.content).toContain("`\\`")
+    })
+
+    test("still unescapes backslash-escaped backticks outside inline code", () => {
+      const content = [
+        "---",
+        "title: Test",
+        "---",
+        "",
+        "Some text with a stray \\` character.",
+      ].join("\n")
+
+      const result = processMarkdownFile("/tmp/test.md", content)
+      // \` in prose (not inside code spans) should become `
+      expect(result.content).toContain("Some text with a stray ` character.")
+    })
+  })
 })

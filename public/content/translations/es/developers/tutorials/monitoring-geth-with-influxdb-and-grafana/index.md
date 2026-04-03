@@ -4,6 +4,7 @@ description: "Configure la monitorización de su nodo de Geth con InfluxDB y Gra
 author: "Mario Havel"
 tags: [ "clientes", "nodos" ]
 skill: intermediate
+breadcrumb: "Monitorizar Geth"
 lang: es
 published: 2021-01-13
 ---

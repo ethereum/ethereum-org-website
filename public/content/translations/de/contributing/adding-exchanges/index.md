@@ -1,40 +1,40 @@
 ---
-title: Handelsplätze hinzufügen
-description: Richtlinien für das Hinzufügen von Handelsplätzen auf ethereum.org
+title: "Börsen hinzufügen"
+description: "Die Richtlinie, die wir beim Hinzufügen von Börsen zu ethereum.org anwenden"
 lang: de
 ---
 
-# Ethereum-Handelsplätze hinzufügen {#adding-ethereum-exchanges}
+# Hinzufügen von Ethereum-Börsen {#adding-ethereum-exchanges}
 
-Jeder kann neue Handelsplätze auf ethereum.org vorschlagen.
+Jeder kann neue Börsen auf ethereum.org vorschlagen.
 
 Wir listen sie derzeit auf:
 
 - [ethereum.org/get-eth](/get-eth/)
 
-Benutzer können auf dieser Seite Handelsplätze auf Grundlage des Wohnorts suchen. So lassen sich etwaige geografische Beschränkungen frühzeitig erkennen.
+Auf dieser Seite können Benutzer eingeben, wo sie leben, und sehen, welche Börsen sie nutzen können. Dies hilft dabei, geografische Einschränkungen frühzeitig zu erkennen.
 
-Daher sind für den Vorschlag eines Handeslplatzes einige bestimmte Informationen erforderlich.
+Aufgrund dieses Kontexts benötigen wir einige spezifische Informationen, wenn Sie eine Börse vorschlagen.
 
-**HINWEIS:** Wenn Sie einen dezentrale Handelsplatz auflisten möchten, machen Sie sich mit unserer [Richtlinie zum Auflisten von Wallets und Dapps](/contributing/adding-products/) vertraut.
+**HINWEIS:** Wenn Sie eine dezentralisierte Börse auflisten möchten, werfen Sie einen Blick auf unsere [Richtlinie für die Auflistung von Wallets und Dapps](/contributing/adding-products/).
 
-## Folgende Informationen sind erforderlich {#what-we-need}
+## Was wir benötigen {#what-we-need}
 
-- Die geografischen Beschränkungen, die für Handelsplätze gelten
-- Die Währungen, mit denen Benutzer ETH kaufen können
-- Nachweis, dass der Handelsplatz ein rechtmäßiges Handelsunternehmen ist
-- Alle zusätzlichen Informationen, die Sie haben, wie beispielsweise Informationen über das Unternehmen wie Betriebsjahre, finanzielle Situation usw.
+- Die geografischen Einschränkungen, die für die Börse gelten. Geografische Einschränkungen im Zusammenhang mit der Börse sollten auf einer speziellen Seite oder in einem Abschnitt der Website der Börse detailliert beschrieben werden.
+- Die Währungen, die Benutzer verwenden können, um ETH zu kaufen
+- Einen Nachweis, dass die Börse ein legitimes Handelsunternehmen ist
+- Alle zusätzlichen Informationen, die Sie möglicherweise haben – dies können Informationen über das Unternehmen sein, wie z. B. die Anzahl der Betriebsjahre, finanzielle Unterstützung usw.
 
-Wir benötigen diese Informationen, damit wir [den Nutzern helfen können, einen passenden Handelsplatz zu finden](/get-eth/#country-picker).
+Wir benötigen diese Informationen, damit wir [Benutzern genau helfen können, eine Börse zu finden, die sie nutzen können](/get-eth/#country-picker).
 
-Außerdem sind diese Informationen die Grundlage, dass ethereum.org darauf vertrauen kann, dass ein Handelsplatz ein legitimer und sicherer Dienst ist.
+Und damit ethereum.org sicherer sein kann, dass die Börse ein legitimer und sicherer Dienst ist.
 
 ---
 
-## Ihre Börse hinzufügen {#add-exchange}
+## Fügen Sie Ihre Börse hinzu {#add-exchange}
 
-Wenn Sie eine Börse zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
+Wenn Sie eine Börse zu ethereum.org hinzufügen möchten, erstellen Sie ein Issue auf GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
-  Ein Thema erstellen
+  Issue erstellen
 </ButtonLink>

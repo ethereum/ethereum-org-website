@@ -28,21 +28,17 @@ import type { DeveloperToolsByCategory } from "./types"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-  searchParams,
-}: {
-  params: PageParams
-  searchParams: { toolId?: string }
+const Page = async (props: {
+  params: Promise<PageParams>
+  searchParams: Promise<{ toolId?: string }>
 }) => {
+  const searchParams = await props.searchParams
+  const params = await props.params
   const { locale } = params
   const { toolId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer apps data available")
@@ -168,16 +164,12 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   return await getMetadata({
     locale,

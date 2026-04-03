@@ -1,257 +1,242 @@
 ---
-title: Block-Explorer
-description: Eine Einführung in Block-Explorer, Ihr Portal in die Welt der Blockchain-Daten – dort können Sie Informationen über Transaktionen, Konten, Verträge und mehr abfragen
+title: Blocksuchmaschinen
+description: "Eine Einführung in Blocksuchmaschinen, Ihr Portal in die Welt der Blockchain-Daten, wo Sie Informationen über Transaktionen, Konten, Verträge und mehr abfragen können."
 lang: de
 sidebarDepth: 3
 ---
 
-Block-Explorer sind das Portal zu den Daten von Ethereum. Sie können sie nutzen, um Echtzeitdaten zu Blöcken, Transaktionen, Validatoren, Konten und anderen On-Chain-Aktivitäten einzusehen.
+Blocksuchmaschinen sind Ihr Portal zu den Daten von Ethereum. Sie können sie verwenden, um Echtzeitdaten zu Blöcken, Transaktionen, Validatoren, Konten und anderen Aktivitäten auf der Blockchain zu sehen.
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten das Basiskonzept von Ethereum verstehen, damit Sie die Daten, die Sie über einen Block-Explorer erhalten, sinnvoll nutzen können. Beginnen Sie mit [einer Einführung in Ethereum](/developers/docs/intro-to-ethereum/).
+Sie sollten die grundlegenden Konzepte von Ethereum verstehen, damit Sie die Daten, die Ihnen eine Blocksuchmaschine liefert, nachvollziehen können. Beginnen Sie mit [einer Einführung in Ethereum](/developers/docs/intro-to-ethereum/).
+
+## Open-Source-Tools {#open-source-tools}
+
+- [3xpl](https://3xpl.com/ethereum) - Eine werbefreie Ethereum-Suchmaschine, die das Herunterladen ihrer Datensätze ermöglicht (Open-Core: Kernmodule sind Open Source)
+- [Beaconcha.in](https://beaconcha.in/)
+- [Blockscout](https://eth.blockscout.com/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
+- [Otterscan](https://otterscan.io/)
 
 ## Dienste {#services}
 
-- [Etherscan](https://etherscan.io/) -_Auch in Chinesisch, Koreanisch, Russisch und Japanisch verfügbar_
-- [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) -_Auch in Spanisch, Französisch, Italienisch, Niederländisch, Portugiesisch, Russisch, Chinesisch und Farsi verfügbar_
-- [Blockscout](https://eth.blockscout.com/)
+- [Blockchair](https://blockchair.com/ethereum) - Private Ethereum-Suchmaschine. Auch zum Sortieren und Filtern von (Mempool-)Daten. Verfügbar auf Spanisch, Französisch, Italienisch, Niederländisch, Portugiesisch, Russisch, Chinesisch und Farsi
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) -_Auch in Chinesisch, Spanisch, Französisch, Türkisch, Russisch, Koreanisch und Vietnamesisch verfügbar_
+- [Etherscan](https://etherscan.io/) - Auch verfügbar auf Chinesisch, Koreanisch, Russisch und Japanisch
+- [Ethplorer](https://ethplorer.io/) - Eine Blocksuchmaschine mit Fokus auf Token. Auch verfügbar auf Chinesisch, Spanisch, Französisch, Türkisch, Russisch, Koreanisch und Vietnamesisch
+- [Ethseer](https://ethseer.io)
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
-- [Ethseer](https://ethseer.io)
-
-## Open-Source-Werkzeuge {#open-source-tools}
-
-- [Otterscan](https://otterscan.io/)
-- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Daten {#data}
 
-Ethereum ist von Grund auf transparent und damit ist auch alles überprüfbar. Block-Explorer bieten eine Oberfläche, um diese Informationen zu erhalten. Das gilt sowohl für das Ethereum-Netzwerk als auch für die Testnets, wenn Sie diese Daten benötigen. Die Daten werden in Ausführungsdaten und Konsensdaten unterteilt. Die Ausführungsdaten beziehen sich auf die Transaktionen, die in einem bestimmten Block ausgeführt wurden. Die Konsensdaten beziehen sich auf die Blöcke selbst und die Validatoren, die sie vorgeschlagen haben.
+Ethereum ist von Grund auf transparent, sodass alles überprüfbar ist. Blocksuchmaschinen bieten eine Schnittstelle, um diese Informationen abzurufen. Und dies gilt sowohl für das Haupt-Ethereum-Netzwerk als auch für die Testnets, falls Sie diese Daten benötigen. Die Daten sind in Ausführungsdaten und Konsensdaten unterteilt. Die Ausführungsdaten beziehen sich auf die Transaktionen, die in einem bestimmten Block ausgeführt wurden. Die Konsensdaten beziehen sich auf die Blöcke selbst und die Validatoren, die sie vorgeschlagen haben.
 
-Im Folgenden finden Sie eine Zusammenfassung der Arten von Daten, die Sie über einem Block-Explorer erhalten können:
+Hier ist eine Zusammenfassung der Arten von Daten, die Sie von einer Blocksuchmaschine erhalten können.
 
 ### Ausführungsdaten {#execution-data}
 
-Neue Blöcke werden alle 12 Sekunden zu Ethereum hinzugefügt (es sei denn, ein Block-Proposer verpasst seinen Zug), so dass den Block-Explorern ein nahezu konstanter Datenstrom hinzugefügt wird. Blöcke enthalten viele wichtige Daten, die Sie vielleicht hilfreich finden:
+Neue Blöcke werden Ethereum alle 12 Sekunden hinzugefügt (es sei denn, ein Block-Vorschlagender verpasst seinen Zug), sodass ein nahezu konstanter Datenstrom zu Blocksuchmaschinen hinzugefügt wird. Blöcke enthalten viele wichtige Daten, die Sie nützlich finden könnten:
 
 **Standarddaten**
 
 - Blockhöhe - Die Blocknummer und Länge der Blockchain (in Blöcken) bei der Erstellung des aktuellen Blocks
 - Zeitstempel - Die Zeit, zu der ein Block vorgeschlagen wurde
 - Transaktionen - Die Anzahl der im Block enthaltenen Transaktionen
-- Gebührenempfänger - Die Adresse, die Gas-Trinkgelder aus Transaktionen erhalten hat
-- Block-Prämie - Der ETH-Betrag, der dem Validator, der den Block vorgeschlagen hat, zugesprochen wurde
+- Gebührenempfänger - Die Adresse, die Gasgebühr-Trinkgelder aus Transaktionen erhalten hat
+- Block-Belohnung - Die Menge an ETH, die dem Validator zugesprochen wird, der den Block vorgeschlagen hat
 - Größe - Die Größe der Daten innerhalb des Blocks (gemessen in Bytes)
-- Verbrauchtes Gas - Gesamte Gaseinheiten, die von den Transaktionen im Block verbraucht wurden
-- Gaslimit - Die Gaslimits, die von den Transaktionen im Block gesetzt wurden
-- Grundgebühr pro Gas - Der Mindestmultiplikator, der erforderlich ist, damit eine Transaktion in einen Block aufgenommen werden kann
-- Verbrannte Gebühren - Wie viel ETH in einem Block verbrannt wird
-- Extradaten - alle zusätzlichen Daten, die der Ersteller im Block eingefügt hat
+- Verwendetes Gas - Die gesamten Einheiten an Gas, die von den Transaktionen im Block verwendet wurden
+- Gaslimit - Die gesamten Gaslimits, die von den Transaktionen im Block festgelegt wurden
+- Grundgebühr pro Gas - Der minimale Multiplikator, der erforderlich ist, damit eine Transaktion in einen Block aufgenommen wird
+- Verbrannte Gebühren - Wie viel ETH im Block verbrannt wird
+- Zusätzliche Daten - Alle zusätzlichen Daten, die der Ersteller in den Block aufgenommen hat
 
 **Erweiterte Daten**
 
-- Hash - Der kryptografische Hash, der den Kopf eines Blocks darstellt (der eindeutige Identifier des Blocks)
-- Parent Hash - Der Hash des Blocks, der vor dem aktuellen Block kam
-- StateRoot - Der Wurzelhash des Merkle-Baums, der den gesamten Zustand des Systems speichert
+- Hash - Der kryptografische Hash, der den Block-Header darstellt (die eindeutige Kennung des Blocks)
+- Parent-Hash - Der Hash des Blocks, der vor dem aktuellen Block kam
+- StateRoot - Der Root-Hash des Merkle-Trie, der den gesamten Zustand des Systems speichert
 
-### Ressourcen {#gas}
+### Gas {#gas}
 
-Block-Explorer geben nicht nur Informationen zum Ressourcenverbrauch in Transkationen und Blöcken an, manche zeigen auch Informationen zu den aktuell im Netzwerk gültigen Ressourcenpreisen an. Das hilft Ihnen dabei, die Nutzung des Netzwerks zu verstehen, sichere Transaktionen auszuführen und nicht mehr Ressourcen zu beanspruchen als notwendig. Suchen Sie nach APIs, die Ihnen helfen können, diese Informationen in die Produktschnittstelle zu integrieren. Ressourcenspezifische Datenabdeckungen:
+Blocksuchmaschinen geben Ihnen nicht nur Daten über die Gas-Nutzung in Transaktionen und Blöcken, sondern einige geben Ihnen auch Informationen zu den aktuellen Gaspreisen des Netzwerks. Dies hilft Ihnen, die Netzwerknutzung zu verstehen, sichere Transaktionen einzureichen und nicht zu viel für Gas auszugeben. Halten Sie Ausschau nach APIs, die Ihnen helfen können, diese Informationen in die Benutzeroberfläche Ihres Produkts zu integrieren. Gas-spezifische Daten umfassen:
 
-- Geschätzte Gaseinheiten, die für eine sichere, aber langsame Transaktion benötigt werden (+ geschätzter Preis und Dauer)
-- Geschätzte Gaseinheiten, die für eine durchschnittliche Transaktion benötigt werden (+ geschätzter Preis und Dauer)
-- Geschätzte Gaseinheiten, die für eine schnelle Transaktion benötigt werden (+ geschätzter Preis und Dauer)
-- Durchschnittliche Bestätigungszeit auf Basis des Gaspreises
-- Verträge, die Gas verbrauchen - mit anderen Worten: beliebte Produkte, die im Netz viel genutzt werden
-- Konten, die Gas ausgeben - mit anderen Worten, häufige Nutzer des Netzes
+- Geschätzte Einheiten an Gas, die für eine sichere, aber langsame Transaktion benötigt werden (+ geschätzter Preis und Dauer)
+- Geschätzte Einheiten an Gas, die für eine durchschnittliche Transaktion benötigt werden (+ geschätzter Preis und Dauer)
+- Geschätzte Einheiten an Gas, die für eine schnelle Transaktion benötigt werden (+ geschätzter Preis und Dauer)
+- Durchschnittliche Bestätigungszeit basierend auf dem Gaspreis
+- Verträge, die Gas verbrauchen - mit anderen Worten, beliebte Produkte, die im Netzwerk stark genutzt werden
+- Konten, die Gas ausgeben - mit anderen Worten, häufige Netzwerknutzer
 
 ### Transaktionen {#transactions}
 
-Block-Explorer werden häufig eingesetzt, um den Status der Transaktionen abzurufen. Das liegt an dem Detailgrad, den sie bieten und der zusätzliche Sicherheit bietet. Die Transaktionsdetails enthalten Folgendes:
+Blocksuchmaschinen sind zu einem gängigen Ort geworden, an dem Menschen den Fortschritt ihrer Transaktionen verfolgen. Das liegt daran, dass der Detaillierungsgrad, den Sie erhalten können, zusätzliche Sicherheit bietet. Transaktionsdaten umfassen:
 
 **Standarddaten**
 
-- Transaktionshash - Ein Hash, der bei der Übermittlung der Transaktion generiert wird
+- Transaktions-Hash - Ein Hash, der generiert wird, wenn die Transaktion eingereicht wird
 - Status - Ein Hinweis darauf, ob die Transaktion ausstehend, fehlgeschlagen oder erfolgreich ist
-- Block - Der Block, in dem die Transaktion enthalten ist
-- Zeitstempel – der Zeitpunkt, zu dem eine Transaktion in einen von einem Validator vorgeschlagenen Block aufgenommen wurde
-- From - Die Adresse des Kontos, das die Transaktion übermittelt hat
-- To - Die Adresse des Empfängers oder des Smart Contracts, mit dem die Transaktion interagiert
-- Übertragene Token - Eine Liste der Token, die als Teil der Transaktion übertragen wurden
-- Wert - Der Gesamtwert der übertragenen ETH
-- Transaktionsgebühr – an den Validator gezahlte Summe, um die Transaktion zu verarbeiten (Berechnung: Gaspreis \* Gasverbrauch)
+- Block - Der Block, in den die Transaktion aufgenommen wurde
+- Zeitstempel - Die Zeit, zu der eine Transaktion in einen von einem Validator vorgeschlagenen Block aufgenommen wurde
+- Von - Die Adresse des Kontos, das die Transaktion eingereicht hat
+- An - Die Adresse des Empfängers oder Smart Contracts, mit dem die Transaktion interagiert
+- Übertragene Token - Eine Liste von Token, die als Teil der Transaktion übertragen wurden
+- Wert - Der gesamte ETH-Wert, der übertragen wird
+- Transaktionsgebühr - Der Betrag, der an den Validator gezahlt wird, um die Transaktion zu verarbeiten (berechnet durch Gaspreis\*verwendetes Gas)
 
 **Erweiterte Daten**
 
-- Gaslimit - Die maximale Anzahl von Gaseinheiten, die diese Transaktion verbrauchen kann
-- Verbrauchtes Gas - Die tatsächliche Menge an Gaseinheiten, die die Transaktion verbraucht hat
-- Gaspreis - Der festgelegte Preis pro Gaseinheit
-- Nonce - Die Transaktionsnummer für die Absenderadresse`"from"` (denken Sie daran, dass diese bei 0 beginnt, so dass eine Nonce von `100` die 101ste Transaktion wäre, die von diesem Konto übermittelt wurde)
-- Eingabedaten - Alle zusätzlichen Informationen, die für die Transaktion erforderlich sind
+- Gaslimit - Die maximale Anzahl an Gaseinheiten, die diese Transaktion verbrauchen kann
+- Verwendetes Gas - Die tatsächliche Menge an Gaseinheiten, die die Transaktion verbraucht hat
+- Gaspreis - Der pro Gaseinheit festgelegte Preis
+- Nonce - Die Transaktionsnummer für die `from`-Adresse (denken Sie daran, dass dies bei 0 beginnt, sodass eine Nonce von `100` tatsächlich die 101. Transaktion wäre, die von diesem Konto eingereicht wurde)
+- Eingabedaten - Alle zusätzlichen Informationen, die von der Transaktion benötigt werden
 
 ### Konten {#accounts}
 
-Es gibt viele Daten, auf die Sie über ein Konto zugreifen können. Daher wird häufig empfohlen, mehrere Konten zu verwenden, damit Ihr Vermögen und Ihre Assets nicht so leicht nachverfolgt werden können. Außerdem werden weitere Lösungen entwickelt, um Transaktionen und Kontoaktivitäten sicherer und privater zu gestalten. Im Folgenden finden Sie die Daten, die für Konten verfügbar sind:
+Es gibt viele Daten, auf die Sie über ein Konto zugreifen können. Aus diesem Grund wird oft empfohlen, mehrere Konten zu verwenden, damit Ihre Vermögenswerte und Werte nicht leicht verfolgt werden können. Es werden auch einige Lösungen entwickelt, um Transaktionen und Kontoaktivitäten privater zu gestalten. Aber hier sind die Daten, die für Konten verfügbar sind:
 
 **Benutzerkonten**
 
-- Account-Adresse - Die öffentliche Adresse, an die Sie Geld senden können
-- ETH-Guthaben - Der ETH-Betrag, der mit diesem Konto verbunden ist
-- Total Eth value - Der Wert der ETH
-- Token - Dem Konto zugeordnete Token und ihr Wert
-- Transaktionshistorie - Eine Liste aller Transaktionen, bei denen dieses Konto entweder der Absender oder der Empfänger war
+- Kontoadresse - Die öffentliche Adresse, an die Sie Gelder senden können
+- ETH-Guthaben - Die Menge an ETH, die mit diesem Konto verknüpft ist
+- Gesamter ETH-Wert - Der Wert der ETH
+- Token - Die mit dem Konto verknüpften Token und ihr Wert
+- Transaktionsverlauf - Eine Liste aller Transaktionen, bei denen dieses Konto entweder der Sender oder der Empfänger war
 
-**Intelligente Verträge**
+**Smart Contracts**
 
-Smart-Contract-Konten verfügen über die gleichen Daten wie ein Benutzerkonto, doch einige Block-Explorer zeigen zusätzlich auch einige Codeinformationen an. Beispiele:
+Smart-Contract-Konten verfügen über alle Daten, die auch ein Benutzerkonto hat, aber einige Blocksuchmaschinen zeigen sogar einige Code-Informationen an. Beispiele hierfür sind:
 
 - Vertragsersteller - Die Adresse, die den Vertrag im Mainnet bereitgestellt hat
-- Erstellungstransaktion - Die Transaktion, die die Bereitstellung im Mainnet beinhaltete
+- Erstellungstransaktion - Die Transaktion, die die Bereitstellung im Mainnet enthielt
 - Quellcode - Der Solidity- oder Vyper-Code des Smart Contracts
-- Vertrags-ABI - Die "Application Binary Interface" - die Aufrufe, die der Vertrag tätigt, und die empfangenen Daten
-- Vertragserstellungscode - Der kompilierte Bytecode des Smart Contracts – wird erstellt, wenn Sie einen in Solidity oder Vyper usw. geschriebenen Smart Contract kompilieren
-- Vertragsereignisse - Eine Historie der im Smart Contract aufgerufenen Methoden – im Grunde eine Möglichkeit zu sehen, wie der Vertrag verwendet wird und wie oft
+- Vertrags-ABI - Das Application Binary Interface des Vertrags – die Aufrufe, die der Vertrag tätigt, und die empfangenen Daten
+- Vertragserstellungscode - Der kompilierte Bytecode des Smart Contracts – erstellt, wenn Sie einen in Solidity oder Vyper usw. geschriebenen Smart Contract kompilieren.
+- Vertragsereignisse - Ein Verlauf der im Smart Contract aufgerufenen Methoden – im Grunde eine Möglichkeit zu sehen, wie der Vertrag genutzt wird und wie oft
 
 ### Token {#tokens}
 
-Token sind eine Art von Vertrag und enthalten ähnliche Daten wie ein Smart Contract. Doch dadurch, dass sie einen Wert haben und gehandelt werden können, weisen sie zusätzliche Datenpunkte auf:
+Token sind eine Art von Vertrag, daher haben sie ähnliche Daten wie ein Smart Contract. Da sie jedoch einen Wert haben und gehandelt werden können, weisen sie zusätzliche Datenpunkte auf:
 
 - Typ - Ob es sich um einen ERC-20, ERC-721 oder einen anderen Token-Standard handelt
 - Preis - Wenn es sich um einen ERC-20 handelt, haben sie einen aktuellen Marktwert
 - Marktkapitalisierung - Wenn es sich um einen ERC-20 handelt, haben sie eine Marktkapitalisierung (berechnet durch Preis\*Gesamtangebot)
 - Gesamtangebot - Die Anzahl der im Umlauf befindlichen Token
 - Inhaber - Die Anzahl der Adressen, die den Token halten
-- Transfers - Die Anzahl der Übertragungen des Tokens zwischen Konten
-- Transaktionshistorie - Eine Historie aller Transaktionen, die den Token betreffen
-- Vertragsadresse - Die Adresse des Tokens, die im Mainnet bereitgestellt wurde
-- Nachkommastellen - ERC-20-Token sind teilbar und haben Nachkommastellen
+- Übertragungen - Die Anzahl der Male, die der Token zwischen Konten übertragen wurde
+- Transaktionsverlauf - Ein Verlauf aller Transaktionen, die den Token beinhalten
+- Vertragsadresse - Die Adresse des Tokens, der im Mainnet bereitgestellt wurde
+- Dezimalstellen - ERC-20-Token sind teilbar und haben Dezimalstellen
 
 ### Netzwerk {#network}
 
-Einige Blockdaten geben Aufschluss über den Zustand von Ethereum im Allgemeinen.
+Einige Blockdaten befassen sich ganzheitlicher mit der Gesundheit von Ethereum.
 
-- Gesamttransaktionen - Die Anzahl der Transaktionen seit dem Start von Ethereum
-- Transaktionen pro Sekunde - Die Anzahl der Transaktionen, die innerhalb einer Sekunde verarbeitet werden können
-- ETH-Preis - Die aktuelle Bewertung von 1 ETH
-- Gesamtes ETH-Angebot - Anzahl der im Umlauf befindlichen ETH - neue ETH werden bei der Erstellung jedes Blocks in Form von Block-Prämien geschaffen
-- Marktkapitalisierung - Berechnung des Preises\*Angebot
+- Gesamte Transaktionen - Die Anzahl der Transaktionen seit der Erstellung von Ethereum
+- Transaktionen pro Sekunde - Die Anzahl der innerhalb einer Sekunde verarbeitbaren Transaktionen
+- ETH-Preis - Die aktuellen Bewertungen von 1 ETH
+- Gesamtes ETH-Angebot - Anzahl der im Umlauf befindlichen ETH – denken Sie daran, dass neue ETH mit der Erstellung jedes Blocks in Form von Block-Belohnungen geschaffen werden
+- Marktkapitalisierung - Berechnung von Preis\*Angebot
 
-## Daten der Konsensebene {#consensus-layer-data}
+## Konsensebene-Daten {#consensus-layer-data}
 
 ### Epoche {#epoch}
 
-Aus Sicherheitsgründen werden am Ende jeder Epoche (alle 6,4 Minuten) zufällig ausgewählte Gruppen von Validatoren gebildet. Epochendaten enthalten:
+Aus Sicherheitsgründen werden am Ende jeder Epoche (alle 6,4 Minuten) randomisierte Komitees von Validatoren gebildet. Epochendaten umfassen:
 
 - Epochennummer
-- Abgeschlossener Status - Ob die Epoche abgeschlossen wurde (Ja/Nein)
+- Finalisierungsstatus - Ob die Epoche finalisiert wurde (Ja/Nein)
 - Zeit - Die Zeit, zu der die Epoche endete
-- Attestierungen - Die Anzahl der Attestierungen in der Epoche (Stimmen für Blöcke innerhalb von Slots)
-- Einzahlungen - Die Anzahl der ETH-Einzahlungen, die in der Epoche enthalten sind (Validatoren müssen ETH einsetzen, um Validatoren zu werden)
-- Slashings - Anzahl der Strafen, die an die Proposer von Blöcken oder an die Attestierer vergeben wurden
-- Abstimmungsbeteiligung - Die Menge an eingesetzter ETH, die zur Attestierung von Blöcken verwendet wurde
-- Validatoren - Anzahl der aktiven Validatoren für die Epoche
-- Durchschnittliches Guthaben der Validatoren - Durchschnittliches Guthaben der aktiven Validatoren
-- Slots - Anzahl der in der Epoche enthaltenen Slots (Slots beinhalten einen gültigen Block)
+- Bestätigungen - Die Anzahl der Bestätigungen in der Epoche (Stimmen für Blöcke innerhalb von Slots)
+- Einzahlungen - Die Anzahl der in der Epoche enthaltenen ETH-Einzahlungen (Validatoren müssen ETH als Einsatz hinterlegen, um Validatoren zu werden)
+- Slashings - Anzahl der Strafen, die an Vorschlagende von Blöcken oder Bestätigende vergeben wurden
+- Wahlbeteiligung - Die Menge an als Einsatz hinterlegten ETH, die zur Bestätigung von Blöcken verwendet wurde
+- Validatoren - Anzahl der für die Epoche aktiven Validatoren
+- Durchschnittliches Validator-Guthaben - Durchschnittliches Guthaben für aktive Validatoren
+- Slots - Anzahl der in der Epoche enthaltenen Slots (Slots enthalten einen gültigen Block)
 
 ### Slot {#slot}
 
-Slots sind Möglichkeiten für die Blockerstellung. Folgende Daten sind zu Slots verfügbar:
+Slots sind Gelegenheiten zur Blockerstellung. Die für jeden Slot verfügbaren Daten umfassen:
 
 - Epoche - Die Epoche, in der der Slot gültig ist
 - Slot-Nummer
-- Status - Der Status des Slots (Vorgeschlagen/Fehlgeschlagen)
-- Zeit - Zeitstempel des Slots
-- Proposer - Der Validierer, der den Block für den Slot vorgeschlagen hat
-- Blockwurzel - Die Hash-Tree-Wurzel des Beacon-Blocks
-- Parent Root - Der Hash-Wert des vorhergehenden Blocks
-- Statuswurzel - Die Hash-Tree-Wurzel des BeaconState
-- Signature
-- Randao Reveal
-- Graffiti - Ein Block-Proposer kann seinem Block-Vorschlag eine 32 Byte lange Nachricht beifügen
+- Status - Der Status des Slots (Vorgeschlagen/Verpasst)
+- Zeit - Der Slot-Zeitstempel
+- Vorschlagender - Der Validator, der den Block für den Slot vorgeschlagen hat
+- Block-Root - Der Hash-Tree-Root des BeaconBlocks
+- Parent-Root - Der Hash des Blocks, der davor kam
+- State-Root - Der Hash-Tree-Root des BeaconStates
+- Signatur
+- Randao-Reveal
+- Graffiti - Ein Block-Vorschlagender kann eine 32 Byte lange Nachricht in seinen Blockvorschlag aufnehmen
 - Ausführungsdaten
   - Block-Hash
-  - Anzahl der Einzahlungen
-  - Einzahlungswurzel
-- Attestierungen - Anzahl der Attestierungen für den Block in diesem Slot
-- Einzahlungen - Anzahl der Einzahlungen in diesem Slot
-- Freiwillige Austritte - Anzahl der Validierer, die während des Slots ausgeschieden sind
-- Slashings - Anzahl der Strafen, die an die Proposer von Blöcken oder an die Attestierer vergeben wurden
-- Abstimmungen - Die Validatoren, die für den Block in diesem Slot gestimmt haben
+  - Einzahlungsanzahl
+  - Einzahlungs-Root
+- Bestätigungen - Anzahl der Bestätigungen für den Block in diesem Slot
+- Einzahlungen - Die Anzahl der Einzahlungen während dieses Slots
+- Freiwillige Austritte - Die Anzahl der Validatoren, die während des Slots ausgetreten sind
+- Slashings - Anzahl der Strafen, die an Vorschlagende von Blöcken oder Bestätigende vergeben wurden
+- Stimmen - Die Validatoren, die für den Block in diesem Slot gestimmt haben
 
 ### Blöcke {#blocks-1}
 
-Proof-of-Stake unterteilt die Zeit in Slots und Epochen. Damit gibt es neue Daten:
+Proof-of-Stake unterteilt die Zeit in Slots und Epochen. Das bedeutet also neue Daten!
 
-- Proposer - Der Validator, der algorithmisch ausgewählt wurde, um den neuen Block vorzuschlagen
+- Vorschlagender - Der Validator, der algorithmisch ausgewählt wurde, um den neuen Block vorzuschlagen
 - Epoche - Die Epoche, in der der Block vorgeschlagen wurde
 - Slot - Der Slot, in dem der Block vorgeschlagen wurde
-- Attestierungen - Die Anzahl der im Slot enthaltenen Attestierungen - Attestierungen sind wie Stimmen, die anzeigen, dass der Block bereit ist, in die Beacon Chain aufgenommen zu werden
+- Bestätigungen - Die Anzahl der im Slot enthaltenen Bestätigungen – Bestätigungen sind wie Stimmen, die anzeigen, dass der Block bereit ist, an die Beacon Chain zu gehen
 
 ### Validatoren {#validators}
 
-Validatoren sind dafür verantwortlich, Blöcke vorzuschlagen und sie innerhalb der Slots zu bestätigen.
+Validatoren sind dafür verantwortlich, Blöcke vorzuschlagen und sie innerhalb von Slots zu bestätigen.
 
 - Validator-Nummer - Eindeutige Nummer, die den Validator repräsentiert
-- Aktueller Kontostand - Der Kontostand des Validators einschließlich der Prämien
-- Effektives Guthaben - Das Guthaben des Validators, das für Staking verwendet wird
-- Einkommen - Die Prämien oder Strafen, die der Validator erhalten hat
-- Status - Ob der Validator gerade online und aktiv ist oder nicht
-- Attestierungseffektivität - Die durchschnittliche Zeit, die es dauert, bis die Attestierungen des Validators in die Chain aufgenommen werden
-- Berechtigung zur Aktivierung - Datum (und Epoche), an dem der Validator für die Validierung verfügbar wurde
+- Aktuelles Guthaben - Das Guthaben des Validators einschließlich Belohnungen
+- Effektives Guthaben - Das Guthaben des Validators, das für das Staking verwendet wird
+- Einkommen - Die vom Validator erhaltenen Belohnungen oder Strafen
+- Status - Ob der Validator derzeit online und aktiv ist oder nicht
+- Bestätigungseffektivität - Die durchschnittliche Zeit, die benötigt wird, bis die Bestätigungen des Validators in die Chain aufgenommen werden
+- Berechtigung zur Aktivierung - Datum (und Epoche), an dem der Validator zur Validierung verfügbar wurde
 - Aktiv seit - Datum (und Epoche), an dem der Validator aktiv wurde
 - Vorgeschlagene Blöcke - Der Block, den der Validator vorgeschlagen hat
-- Attestierungen - Die Attestierungen, die der Validator vorgelegt hat
-- Einzahlungen - Die Absenderadresse, der Transaktionshash, die Blocknummer, der Zeitstempel, der Betrag und der Status der vom Validator getätigten Staking-Einzahlungen
+- Bestätigungen - Die Bestätigungen, die der Validator bereitgestellt hat
+- Einzahlungen - Die Von-Adresse, der Transaktions-Hash, die Blocknummer, der Zeitstempel, der Betrag und der Status der vom Validator getätigten Staking-Einzahlung
 
-### Beglaubigungen {#attestations}
+### Bestätigungen {#attestations}
 
-Attestierungen sind "Ja"-Stimmen für die Aufnahme von Blöcken in die Chain. Ihre Daten beziehen sich auf eine Aufzeichnung der Attestierung und der bestätigenden Validatoren.
+Bestätigungen sind „Ja“-Stimmen, um Blöcke in die Chain aufzunehmen. Ihre Daten beziehen sich auf eine Aufzeichnung der Bestätigung und der Validatoren, die bestätigt haben.
 
-- Slot - Der Slot, in dem die Attestierung stattgefunden hat
-- Komitee-Index - Der Index des Komitees für den gegebenen Slot
-- Aggregationsbits - Stellt die aggregierte Attestierung aller an der Attestierung beteiligten Validatoren dar
-- Validatoren - Die Validatoren, die Attestierungen bereitgestellt haben
-- Wurzel des Beacon-Blocks - Zeigt auf den Block, für den die Validatoren attestieren
-- Quelle - Zeigt auf die letzte geprüfte Epoche
-- Target - Zeigt auf die letzte Epochengrenze
-- Signature
+- Slot - Der Slot, in dem die Bestätigung stattfand
+- Komitee-Index - Der Index des Komitees zum gegebenen Slot
+- Aggregationsbits - Repräsentiert die aggregierte Bestätigung aller teilnehmenden Validatoren an der Bestätigung
+- Validatoren - Die Validatoren, die Bestätigungen bereitgestellt haben
+- Beacon-Block-Root - Zeigt auf den Block, den die Validatoren bestätigen
+- Quelle - Zeigt auf die letzte gerechtfertigte Epoche
+- Ziel - Zeigt auf die letzte Epochengrenze
+- Signatur
 
 ### Netzwerk {#network-1}
 
-Die Daten der obersten Ebene der Konsensebene umfassen Folgendes:
+Die Top-Level-Daten der Konsensebene umfassen Folgendes:
 
 - Aktuelle Epoche
 - Aktueller Slot
 - Aktive Validatoren - Anzahl der aktiven Validatoren
-- Ausstehende Validatoren - Anzahl der Validatoren, die darauf warten, aktiv zu werden
-- Staked ETH - Höhe der im Netzwerk gestakten ETH
+- Ausstehende Validatoren - Anzahl der Validatoren, die darauf warten, aktiv geschaltet zu werden
+- Gestakte ETH - Menge an ETH, die im Netzwerk als Einsatz hinterlegt ist
 - Durchschnittliches Guthaben - Durchschnittliches ETH-Guthaben der Validatoren
 
-## Block Explorer {#block-explorers}
+## Weiterführende Literatur {#further-reading}
 
-- [Etherscan](https://etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für Ethereum Mainnet abrufen können
-- [Etherscan Sepolia](https://sepolia.etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für das Sepolia Testnet abrufen können
-- [Etherscan Hoodi](https://hoodi.etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für das Hoodi Testnet abrufen können
-- [3xpl](https://3xpl.com/ethereum) – ein werbefreier Open-Source-Ethereum-Explorer, der den Download seiner Datensätze erlaubt
-- [Beaconcha.in](https://beaconcha.in/) - ein Open-Source-Block-Explorer für Ethereum Mainnet
-- [Blockchair](https://blockchair.com/ethereum) – Der privateste Ethereum-Explorer. Auch zum Sortieren und Filtern von (Mempool-) Daten
-- [Etherchain](https://www.etherchain.org/) - Ein Block-Explorer für das Ethereum Mainnet
-- [Ethplorer](https://ethplorer.io/) - ein Block-Explorer mit Fokus auf Token für das Ethereum Mainnet
-- [Rantom](https://rantom.app/) - Ein benutzerfreundlicher Open-Source-DeFi- und NFT-Transaktions-Viewer für detaillierte Einblicke
-- [Ethernow](https://www.ethernow.xyz/) – ein Echtzeit-Transaktions-Explorer, der es ermöglicht, die Pre-Chain-Ebene des Ethereum-Mainnets einzusehen
-
-## Weiterführende Informationen {#further-reading}
-
-_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
+_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
 ## Verwandte Themen {#related-topics}
 

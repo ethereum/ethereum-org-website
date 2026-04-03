@@ -11,6 +11,7 @@ tags:
     "wasm"
   ]
 skill: intermediate
+breadcrumb: "Địa chỉ ẩn"
 published: 2025-11-30
 lang: vi
 sidebarDepth: 3

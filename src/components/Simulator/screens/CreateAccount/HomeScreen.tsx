@@ -1,6 +1,6 @@
 import { type HTMLAttributes } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 

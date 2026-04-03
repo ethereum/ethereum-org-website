@@ -11,6 +11,7 @@ tags:
     "typescript"
   ]
 skill: intermediate
+breadcrumb: "Трики scam-токенів"
 published: 2023-09-15
 lang: uk
 ---
