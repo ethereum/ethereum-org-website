@@ -14121,6 +14121,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "lo996",
+      "name": "lo996",
+      "avatar_url": "https://avatars.githubusercontent.com/u/136587632?v=4",
+      "profile": "https://github.com/lo996",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
