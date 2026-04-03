@@ -57,10 +57,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/10years")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
@@ -74,7 +71,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <TenYearJsonLD locale={locale} contributors={contributors} />
       <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <TenYearHero locale={locale} />
+        <TenYearHero />
 
         <div
           className={cn(
@@ -382,10 +379,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   return await getMetadata({
     locale,

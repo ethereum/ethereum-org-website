@@ -66,7 +66,7 @@ function redirectTo(request: NextRequest, pathname: string, status: number) {
   return NextResponse.redirect(url, status)
 }
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   const lowerPath = pathname.toLowerCase()

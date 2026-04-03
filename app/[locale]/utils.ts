@@ -7,10 +7,10 @@ import { getTranslations } from "next-intl/server"
 
 import type { AllHomepageActivityData, Lang, StatsBoxMetric } from "@/lib/types"
 
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+import { numberFormat } from "@/lib/utils/numbers"
 
 const formatLargeUSD = (value: number, locale: string): string => {
-  return new Intl.NumberFormat(locale, {
+  return numberFormat(locale, {
     style: "currency",
     currency: "USD",
     notation: "compact",
@@ -20,7 +20,7 @@ const formatLargeUSD = (value: number, locale: string): string => {
 }
 
 const formatSmallUSD = (value: number, locale: string): string => {
-  return new Intl.NumberFormat(locale, {
+  return numberFormat(locale, {
     style: "currency",
     currency: "USD",
     notation: "compact",
@@ -30,7 +30,7 @@ const formatSmallUSD = (value: number, locale: string): string => {
 }
 
 const formatLargeNumber = (value: number, locale: string): string => {
-  return new Intl.NumberFormat(locale, {
+  return numberFormat(locale, {
     notation: "compact",
     minimumSignificantDigits: 3,
     maximumSignificantDigits: 4,
@@ -49,8 +49,6 @@ export const getActivity = async (
 ): Promise<StatsBoxMetric[]> => {
   const t = await getTranslations("page-index")
 
-  const localeForNumberFormat = getLocaleForNumberFormat(locale)
-
   const hasEthStakerAndPriceData =
     "value" in totalEthStaked && "value" in ethPrice
   const totalStakedInUsd = hasEthStakerAndPriceData
@@ -68,7 +66,7 @@ export const getActivity = async (
       }
     : {
         ...totalEthStaked,
-        value: formatLargeUSD(totalStakedInUsd, localeForNumberFormat),
+        value: formatLargeUSD(totalStakedInUsd, locale),
       }
 
   const valueLocked =
@@ -76,7 +74,7 @@ export const getActivity = async (
       ? { error: totalValueLocked.error }
       : {
           ...totalValueLocked,
-          value: formatLargeUSD(totalValueLocked.value, localeForNumberFormat),
+          value: formatLargeUSD(totalValueLocked.value, locale),
         }
 
   const txs =
@@ -84,7 +82,7 @@ export const getActivity = async (
       ? { error: txCount.error }
       : {
           ...txCount,
-          value: formatLargeNumber(txCount.value, localeForNumberFormat),
+          value: formatLargeNumber(txCount.value, locale),
         }
 
   const medianTxCost =
@@ -92,7 +90,7 @@ export const getActivity = async (
       ? { error: txCostsMedianUsd.error }
       : {
           ...txCostsMedianUsd,
-          value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
+          value: formatSmallUSD(txCostsMedianUsd.value, locale),
         }
 
   const metrics: StatsBoxMetric[] = [

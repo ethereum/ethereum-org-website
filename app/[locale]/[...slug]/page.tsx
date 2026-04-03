@@ -133,7 +133,7 @@ export async function generateMetadata(props: {
       slug,
     })
   } catch (error) {
-    const t = await getTranslations({ locale, namespace: "common" })
+    const t = await getTranslations("common")
 
     // Return basic metadata for invalid paths
     return {

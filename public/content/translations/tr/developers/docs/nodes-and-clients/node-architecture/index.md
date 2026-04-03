@@ -6,7 +6,7 @@ lang: tr
 
 Bir Ethereum düğümü iki istemciden oluşur: bir [yürütüm istemcisi](/developers/docs/nodes-and-clients/#execution-clients) ve bir [mutabakat istemcisi](/developers/docs/nodes-and-clients/#consensus-clients). Bir düğümün yeni bir blok önerebilmesi için bir [doğrulayıcı istemcisi](#validators) de çalıştırması gerekir.
 
-Ethereum [iş ispatı](/developers/docs/consensus-mechanisms/pow/) kullanırken, tam bir Ethereum düğümünü çalıştırmak için bir yürütüm istemcisi yeterliydi. Ancak, [hisse ispatı](/developers/docs/consensus-mechanisms/pow/) uygulamasından bu yana, yürütüm istemcisinin [mutabakat istemcisi](/developers/docs/nodes-and-clients/#consensus-clients) adı verilen başka bir yazılımla birlikte kullanılması gerekir.
+Ethereum [iş ispatı](/developers/docs/consensus-mechanisms/pow/) kullanırken, tam bir Ethereum düğümünü çalıştırmak için bir yürütüm istemcisi yeterliydi. Ancak, [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) uygulamasından bu yana, yürütüm istemcisinin [mutabakat istemcisi](/developers/docs/nodes-and-clients/#consensus-clients) adı verilen başka bir yazılımla birlikte kullanılması gerekir.
 
 Aşağıdaki şema iki Ethereum istemcisi arasındaki ilişkiyi göstermekte. İki istemci kendilerine ait ilgili eşler arası (P2P) ağlarına bağlanır. Yürütüm istemcileri P2P ağı üzerinden işlem "dedikodu"su yaparken, ayrı P2P ağlarına ihtiyaç duyulur ve bu yerel işlem havuzlarını yönetmelerine olanak sağlar. Bu süreçte de fikir birliği istemcileri P2P ağı üzerinden blok dedikodularını yaparlar ve bu da mutabakatın ve zincir büyümesinin önünü açar.
 

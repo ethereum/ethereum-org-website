@@ -1,5 +1,7 @@
 import { Lang } from "../types"
 
+import { dateTimeFormat } from "./date"
+
 export const getLocaleTimestamp = (
   locale: Lang,
   timestamp: string,
@@ -13,11 +15,5 @@ export const getLocaleTimestamp = (
       day: "numeric",
     } as Intl.DateTimeFormatOptions)
   const date = new Date(timestamp)
-  return new Intl.DateTimeFormat(locale, opts).format(date)
-}
-
-export const getLocaleFormattedDate = (locale: Lang, date: string) => {
-  const walletLastUpdatedDate = new Date(date)
-
-  return new Intl.DateTimeFormat(locale).format(walletLastUpdatedDate)
+  return dateTimeFormat(locale, opts).format(date)
 }

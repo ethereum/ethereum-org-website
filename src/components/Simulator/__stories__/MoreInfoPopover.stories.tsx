@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react/*"
-import { fireEvent, within } from "@storybook/test"
+import { fireEvent, within } from "storybook/test"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Flex } from "@/components/ui/flex"
 

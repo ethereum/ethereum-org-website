@@ -23,7 +23,7 @@ export default async function DevelopersToolsCategoryJsonLD({
   categoryTools: DeveloperTool[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-tools" })
+  const t = await getTranslations("page-developers-tools")
 
   const url = normalizeUrlForJsonLd(locale, `/developers/tools/${category}`)
 

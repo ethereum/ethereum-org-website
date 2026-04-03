@@ -1,8 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { expect } from "@storybook/test"
-import { waitFor } from "@storybook/test"
-import { fireEvent } from "@storybook/test"
-import { within } from "@storybook/test"
+import { expect, fireEvent, waitFor, within } from "storybook/test"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import Component from "."
 

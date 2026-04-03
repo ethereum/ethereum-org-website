@@ -19,9 +19,7 @@ export default async function Layer2LearnPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-layer-2-learn",
-  })
+  const t = await getTranslations("page-layer-2-learn")
 
   const url = normalizeUrlForJsonLd(locale, `/layer-2/learn/`)
 
