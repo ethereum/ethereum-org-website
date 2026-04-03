@@ -29,7 +29,14 @@ function findClosestElementId(
 
 Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  tracesSampleRate: 0.01,
+  tracesSampler(samplingContext) {
+    // 10% of pageloads for reliable Web Vitals data
+    if (samplingContext.attributes?.["sentry.op"] === "pageload") {
+      return 0.1
+    }
+    // 1% for everything else
+    return 0.01
+  },
   debug: environment === "development",
   environment,
   enabled: environment === "production",
