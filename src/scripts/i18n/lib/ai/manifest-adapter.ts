@@ -12,6 +12,7 @@ import {
   type ContentTreeConfig,
   deserialize,
   diff,
+  type DiffEntry,
   type DiffResult,
   getInertValue,
   hasChanges,
