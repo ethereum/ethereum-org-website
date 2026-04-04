@@ -1,6 +1,6 @@
 ---
 title: Usare Ethereum per l'autenticazione Web2
-description: Dopo aver letto questo tutorial, uno sviluppatore sarà in grado di integrare il login di Ethereum (web3) con il login SAML, uno standard usato nel Web2 per fornire il single sign-on e altri servizi correlati. Questo permette di autenticare l'accesso alle risorse Web2 tramite le firme di Ethereum, con gli attributi dell'utente provenienti dalle attestazioni.
+description: "Dopo aver letto questo tutorial, uno sviluppatore sarà in grado di integrare il login di Ethereum (web3) con il login SAML, uno standard usato nel Web2 per fornire il single sign-on e altri servizi correlati. Questo permette di autenticare l'accesso alle risorse Web2 tramite le firme di Ethereum, con gli attributi dell'utente provenienti dalle attestazioni."
 author: Ori Pomerantz
 tags: ["Web2", "autenticazione", "eas"]
 skill: beginner
@@ -61,7 +61,7 @@ Il primo passo è far comunicare tra loro un SP SAML e un IdP SAML.
     git clone https://github.com/qbzzt/250420-saml-ethereum -b saml-only
     cd 250420-saml-ethereum
     pnpm install
-    ```
+        ```
 
 2. Crea chiavi con certificati autofirmati. Questo significa che la chiave è la propria autorità di certificazione e deve essere importata manualmente nel service provider. Consulta [la documentazione di OpenSSL](https://docs.openssl.org/master/man1/openssl-req/) per maggiori informazioni. 
 
@@ -71,13 +71,13 @@ Il primo passo è far comunicare tra loro un SP SAML e un IdP SAML.
     openssl req -new -x509 -days 365 -nodes -sha256 -out saml-sp.crt -keyout saml-sp.pem -subj /CN=sp/
     openssl req -new -x509 -days 365 -nodes -sha256 -out saml-idp.crt -keyout saml-idp.pem -subj /CN=idp/
     cd ..
-    ```
+        ```
 
 3. Avvia i server (sia SP che IdP)
 
         ```sh
     pnpm start
-    ```
+        ```
 
 4. Naviga verso l'SP all'URL [http://localhost:3000/](http://localhost:3000/) e clicca sul pulsante per essere reindirizzato all'IdP (porta 3001).
 
