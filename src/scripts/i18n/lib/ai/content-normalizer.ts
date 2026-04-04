@@ -338,7 +338,7 @@ function extractCodeFences(
       })
 
       extractions.set(placeholder, fullMatch)
-      return `${indent}${placeholder}`
+      return placeholder
     }
   )
 }
