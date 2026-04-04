@@ -2922,6 +2922,64 @@ function fixBareRtlEquations(
 }
 
 /**
+ * Fix misaligned closing code fences.
+ *
+ * When Gemini translates markdown with indented code fences (e.g., inside
+ * numbered lists), it sometimes strips the indentation from the closing
+ * fence while preserving it on the opening fence. This breaks syntax
+ * highlighting and confuses parsers.
+ *
+ * Example:
+ *   Input:  "    ```sh\n    cmd\n```"     (opening indented, closing not)
+ *   Output: "    ```sh\n    cmd\n    ```"  (closing indentation restored)
+ *
+ * Only fixes cases where the opening fence is indented and the closing
+ * fence is not. Does not touch correctly-aligned or non-indented fences.
+ */
+function fixMisalignedCodeFences(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  const lines = content.split("\n")
+
+  let inFence = false
+  let openIndent = ""
+  let openFenceChar = ""
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+
+    if (!inFence) {
+      // Check for indented opening fence
+      const openMatch = line.match(/^([ \t]+)(```|~~~)(.*)$/)
+      if (openMatch) {
+        inFence = true
+        openIndent = openMatch[1]
+        openFenceChar = openMatch[2]
+      }
+      continue
+    }
+
+    // Inside a fence -- look for closing fence
+    const closeMatch = line.match(/^([ \t]*)(```|~~~)\s*$/)
+    if (closeMatch && closeMatch[2] === openFenceChar) {
+      const closeIndent = closeMatch[1]
+      if (closeIndent.length < openIndent.length) {
+        // Misaligned: restore the opening fence's indentation
+        lines[i] = openIndent + openFenceChar
+        fixCount++
+      }
+      inFence = false
+      openIndent = ""
+      openFenceChar = ""
+    }
+  }
+
+  return { content: lines.join("\n"), fixCount }
+}
+
+/**
  * Wrap bare LTR values in RTL files with <span dir="ltr"> to prevent
  * BiDi rendering issues. Catches patterns Gemini may miss:
  *
@@ -4721,6 +4779,15 @@ function processMarkdownFile(
       const scriptWarnings = detectCrossScriptContamination(content, locale)
       issues.push(...scriptWarnings)
 
+      // Fix misaligned closing code fences (all locales)
+      const fenceResult = fixMisalignedCodeFences(content)
+      if (fenceResult.fixCount > 0) {
+        content = fenceResult.content
+        issues.push(
+          `Fixed ${fenceResult.fixCount} misaligned closing code fence(s)`
+        )
+      }
+
       // RTL-specific BiDi fixes: wrap bare dates and equations in <span dir="ltr">
       const dateResult = fixBareRtlDates(content, locale)
       if (dateResult.fixCount > 0) {
@@ -5448,6 +5515,7 @@ export const _testOnly = {
   warnExposedMdxTags,
   fixBareRtlDates,
   fixBareRtlEquations,
+  fixMisalignedCodeFences,
   fixBareRtlValues,
   fixUnitOutsideSpan,
   fixSpanWrappedBackticks,

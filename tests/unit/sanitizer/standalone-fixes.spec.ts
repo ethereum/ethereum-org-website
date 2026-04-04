@@ -59,6 +59,7 @@ const {
   fixTranslatedJsonPlaceholders,
   fixBareRtlValues,
   fixUnitOutsideSpan,
+  fixMisalignedCodeFences,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -2902,6 +2903,56 @@ author: Ori Pomerantz
       expect(content).toContain('<span dir="ltr">100 Gwei</span>')
       expect(content).toContain('<span dir="ltr">32 ETH</span>')
       expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("fixMisalignedCodeFences", () => {
+    test("fixes unindented closing fence when opening is indented", () => {
+      const input = "1. Step one\n\n    ```sh\n    pnpm install\n```"
+      const { content, fixCount } = fixMisalignedCodeFences(input)
+      expect(content).toBe("1. Step one\n\n    ```sh\n    pnpm install\n    ```")
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes multiple misaligned fences", () => {
+      const input =
+        "    ```sh\n    cmd1\n```\n\ntext\n\n    ```sh\n    cmd2\n```"
+      const { content, fixCount } = fixMisalignedCodeFences(input)
+      expect(content).toBe(
+        "    ```sh\n    cmd1\n    ```\n\ntext\n\n    ```sh\n    cmd2\n    ```"
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves correctly indented fences unchanged", () => {
+      const input = "    ```sh\n    pnpm install\n    ```"
+      const { content, fixCount } = fixMisalignedCodeFences(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves non-indented fences unchanged", () => {
+      const input = "```solidity\ncontract Foo {}\n```"
+      const { content, fixCount } = fixMisalignedCodeFences(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles mixed indented and non-indented fences", () => {
+      const input =
+        "    ```sh\n    cmd\n```\n\n```typescript\nconst x = 1\n```"
+      const { content, fixCount } = fixMisalignedCodeFences(input)
+      expect(content).toBe(
+        "    ```sh\n    cmd\n    ```\n\n```typescript\nconst x = 1\n```"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles tilde fences", () => {
+      const input = "    ~~~sh\n    cmd\n~~~"
+      const { content, fixCount } = fixMisalignedCodeFences(input)
+      expect(content).toBe("    ~~~sh\n    cmd\n    ~~~")
+      expect(fixCount).toBe(1)
     })
   })
 })

@@ -124,6 +124,8 @@ These patterns are covered by existing fix functions and should have regression 
 - **Bare LTR values in RTL** (`fixBareRtlValues`) -- numbers with Latin units (32 ETH, 100 Gwei), percentages (12.5%), currency ($2,500 USD), version/protocol IDs (EIP-1559), large formatted numbers (21,000), multipliers (2x) unwrapped in ar/ur files get `<span dir="ltr">` wrapping. Skips code blocks, inline code, URLs, existing spans, frontmatter. (gemini-v4, pattern #55)
 - **Unit outside BiDi span** (`fixUnitOutsideSpan`) -- Gemini sometimes produces `<span dir="ltr">$100,000</span> USD` with the unit outside; corrected to `<span dir="ltr">$100,000 USD</span>`. Matches known Latin units (ETH, BTC, Gwei, USD, etc.). (gemini-v4, pattern #56)
 
+- **Misaligned closing code fences** (`fixMisalignedCodeFences`) -- indented opening fences (4 spaces) with unindented closing fences, breaking syntax highlighting and parsers. Systematic across Gemini translations of files with list-item code blocks (e.g., `ethereum-for-web2-auth` in id, it locales). (gemini-v4/Anchor bug report, pattern #57)
+
 ## Recommendations for Future Sanitizer Iteration
 
 1. **Full-width parentheses** (#1) — Add regex to normalize `（` → `(` and `）` → `)` inside markdown link syntax
