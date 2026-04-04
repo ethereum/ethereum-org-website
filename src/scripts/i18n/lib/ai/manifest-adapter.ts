@@ -1,0 +1,215 @@
+/**
+ * Adapter between intl-content-tree package and our pipeline.
+ *
+ * Maps the package's generic API to our Gemini translation pipeline's
+ * needs. Handles:
+ * - Ethereum.org-specific translatableAttributes config
+ * - Manifest content generation as strings (for GitHub API commits)
+ * - Per-locale translation manifest for Gemini output data
+ */
+
+import {
+  type ContentTreeConfig,
+  deserialize,
+  diff,
+  type DiffResult,
+  getInertValue,
+  hasChanges,
+  MANIFEST_VERSION,
+  parseJson,
+  parseMarkdown,
+  serialize,
+  type TreeManifest,
+  type TreeNode,
+  validate,
+  type ValidationResult,
+} from "intl-content-tree"
+
+// ---------------------------------------------------------------------------
+// Ethereum.org config
+// ---------------------------------------------------------------------------
+
+/** Attributes whose values need translation on this site */
+const ETHEREUM_ORG_CONFIG: Partial<ContentTreeConfig> = {
+  depth: "element",
+  translatableAttributes: [
+    "title",
+    "description",
+    "alt",
+    "label",
+    "aria-label",
+    "placeholder",
+    "buttonLabel",
+    "name",
+    "caption",
+    "contentPreview",
+    "location",
+  ],
+}
+
+// ---------------------------------------------------------------------------
+// Source manifest (English content tree)
+// ---------------------------------------------------------------------------
+
+/**
+ * Parse English markdown and generate a manifest string for committing.
+ */
+export function buildMarkdownManifest(
+  englishContent: string,
+  sourceFile: string
+): string {
+  const tree = parseMarkdown(englishContent, ETHEREUM_ORG_CONFIG)
+  const manifest = serialize(tree, sourceFile)
+  return JSON.stringify(manifest, null, 2) + "\n"
+}
+
+/**
+ * Parse English JSON and generate a manifest string for committing.
+ */
+export function buildJsonManifest(
+  englishContent: string,
+  sourceFile: string
+): string {
+  const tree = parseJson(englishContent, ETHEREUM_ORG_CONFIG)
+  const manifest = serialize(tree, sourceFile)
+  return JSON.stringify(manifest, null, 2) + "\n"
+}
+
+/**
+ * Parse English content into a tree (for use by the translation pipeline).
+ */
+export function parseEnglishMarkdown(content: string): TreeNode {
+  return parseMarkdown(content, ETHEREUM_ORG_CONFIG)
+}
+
+/**
+ * Parse English JSON into a tree.
+ */
+export function parseEnglishJson(content: string): TreeNode {
+  return parseJson(content, ETHEREUM_ORG_CONFIG)
+}
+
+/**
+ * Detect drift between current English and a stored manifest.
+ */
+export function detectDrift(
+  currentEnglishContent: string,
+  storedManifestJson: string,
+  format: "markdown" | "json"
+): DiffResult {
+  const storedManifest: TreeManifest = JSON.parse(storedManifestJson)
+  const oldTree = deserialize(storedManifest)
+  const newTree =
+    format === "markdown"
+      ? parseMarkdown(currentEnglishContent, ETHEREUM_ORG_CONFIG)
+      : parseJson(currentEnglishContent, ETHEREUM_ORG_CONFIG)
+  return diff(oldTree, newTree)
+}
+
+/**
+ * Quick check: has the English content changed since the manifest was stamped?
+ */
+export function hasEnglishChanged(
+  currentEnglishContent: string,
+  storedManifestJson: string,
+  format: "markdown" | "json"
+): boolean {
+  const storedManifest: TreeManifest = JSON.parse(storedManifestJson)
+  const newTree =
+    format === "markdown"
+      ? parseMarkdown(currentEnglishContent, ETHEREUM_ORG_CONFIG)
+      : parseJson(currentEnglishContent, ETHEREUM_ORG_CONFIG)
+  return hasChanges(newTree, storedManifest)
+}
+
+/**
+ * Validate a markdown file's readiness for incremental tracking.
+ */
+export function validateMarkdown(content: string): ValidationResult {
+  const tree = parseMarkdown(content, ETHEREUM_ORG_CONFIG)
+  return validate(tree)
+}
+
+/**
+ * Get an inert value by path from an English content tree.
+ */
+export function getEnglishInertValue(
+  content: string,
+  path: string,
+  format: "markdown" | "json"
+): string | undefined {
+  const tree =
+    format === "markdown"
+      ? parseMarkdown(content, ETHEREUM_ORG_CONFIG)
+      : parseJson(content, ETHEREUM_ORG_CONFIG)
+  return getInertValue(tree, path)
+}
+
+// ---------------------------------------------------------------------------
+// Per-locale translation manifest (Gemini output data)
+// ---------------------------------------------------------------------------
+
+/**
+ * Per-locale translation manifest, stored alongside the English source
+ * manifest. Records how the LLM ordered elements in the translated
+ * output, enabling deterministic inert propagation without retranslation.
+ */
+export interface LocaleTranslationManifest {
+  version: number
+  locale: string
+  translatedAt: string
+  /** Hash of the English source manifest this was translated against */
+  englishManifestHash: string
+  /** Placeholder IDs in the order Gemini returned them */
+  placeholderOrder: string[]
+  /** Placeholder ID -> inert values at translation time */
+  placeholderMap: Record<
+    string,
+    { type: string; values: Record<string, string> }
+  >
+  /** Per-section translation status */
+  sections: Record<
+    string,
+    {
+      translatedAt: string
+      status: "success" | "failed" | "skipped"
+      glossaryVersion?: string
+    }
+  >
+}
+
+/**
+ * Build a locale translation manifest string for committing.
+ */
+export function buildLocaleTranslationManifest(opts: {
+  locale: string
+  englishManifestHash: string
+  placeholderOrder: string[]
+  placeholderMap: Record<
+    string,
+    { type: string; values: Record<string, string> }
+  >
+  sections: Record<
+    string,
+    {
+      translatedAt: string
+      status: "success" | "failed" | "skipped"
+      glossaryVersion?: string
+    }
+  >
+}): string {
+  const manifest: LocaleTranslationManifest = {
+    version: MANIFEST_VERSION,
+    locale: opts.locale,
+    translatedAt: new Date().toISOString(),
+    englishManifestHash: opts.englishManifestHash,
+    placeholderOrder: opts.placeholderOrder,
+    placeholderMap: opts.placeholderMap,
+    sections: opts.sections,
+  }
+  return JSON.stringify(manifest, null, 2) + "\n"
+}
+
+// Re-export types consumers need
+export type { DiffEntry, DiffResult, TreeManifest, TreeNode, ValidationResult }
+export { MANIFEST_VERSION }

@@ -16,9 +16,9 @@ import { join } from "path"
 import { translateFile } from "../ai/gemini-translate"
 import { filterGlossaryFlat } from "../ai/glossary-lookup"
 import {
-  buildMarkdownManifestContent,
-  buildJsonManifestContent,
-} from "../ai/manifest-generator"
+  buildJsonManifest,
+  buildMarkdownManifest,
+} from "../ai/manifest-adapter"
 import {
   initProgress,
   isFileCompleted,
@@ -229,23 +229,19 @@ async function translateLanguage(
       // was made against, enabling drift detection later
       try {
         if (file.type === "markdown") {
-          const manifestContent = buildMarkdownManifestContent(
-            file.path,
-            file.content,
-            result.placeholderOrder,
-            result.placeholderMap
-          )
-          // Commit manifest alongside the translation via GitHub API
+          // English source manifest (content tree hashes)
+          const manifestContent = buildMarkdownManifest(file.content, file.path)
           const manifestPath = destPath.replace(/index\.md$/, ".manifest.json")
           await committer.commitFile(manifestPath, manifestContent, language)
           console.log(`  [manifest] ${manifestPath}: committed`)
         } else {
-          const jsonManifestContent = buildJsonManifestContent(
-            file.path,
-            file.content
-          )
+          const jsonManifestContent = buildJsonManifest(file.content, file.path)
           const jsonManifestPath = `src/intl/${language}/.manifest.json`
-          await committer.commitFile(jsonManifestPath, jsonManifestContent, language)
+          await committer.commitFile(
+            jsonManifestPath,
+            jsonManifestContent,
+            language
+          )
           console.log(`  [manifest] ${jsonManifestPath}: committed`)
         }
       } catch (err) {

@@ -147,6 +147,9 @@ importers:
       humanize-duration:
         specifier: ^3.33.1
         version: 3.33.1
+      intl-content-tree:
+        specifier: ^0.1.0
+        version: 0.1.0
       lodash:
         specifier: ^4.18.1
         version: 4.18.1
@@ -7531,6 +7534,9 @@ packages:
   internmap@2.0.3:
     resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
     engines: {node: '>=12'}
+
+  intl-content-tree@0.1.0:
+    resolution: {integrity: sha512-iqxR1a+Sob+O7NBCBFIWctM0cmWOYPPSao7Sssk3KFvUeN8uUofwwzEw5pmGFIDLAqRJzMS38jqvG8Lp36Mc1Q==}
 
   intl-messageformat@11.2.0:
     resolution: {integrity: sha512-IhghAA8n4KSlXuWKzYsWyWb82JoYTzShfyvdSF85oJPnNOjvv4kAo7S7Jtkm3/vJ53C7dQNRO+Gpnj3iWgTjBQ==}
@@ -20761,6 +20767,8 @@ snapshots:
       side-channel: 1.1.0
 
   internmap@2.0.3: {}
+
+  intl-content-tree@0.1.0: {}
 
   intl-messageformat@11.2.0:
     dependencies:
