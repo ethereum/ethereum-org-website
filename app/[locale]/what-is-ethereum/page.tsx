@@ -51,10 +51,7 @@ import heroImg from "@/public/images/what-is-ethereum.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ethereum",
-  })
+  const t = await getTranslations("page-what-is-ethereum")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("what-is-ethereum", locale as Lang)
@@ -1096,10 +1093,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ethereum",
-  })
+  const t = await getTranslations("page-what-is-ethereum")
 
   return await getMetadata({
     locale,

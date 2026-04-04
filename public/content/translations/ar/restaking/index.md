@@ -144,7 +144,7 @@ buttons:
 <AlertDescription>
   <p className="mt-0"><strong>المؤسس المشارك لإيثريوم يكتب…</strong></p>
   <p className="mt-2">
-    حذر فيتاليك، المؤسس المشارك لإيثريوم، من المخاطر المحتملة لإعادة التخزين في تدوينة عام 2021 بعنوان <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> لا تفرط في تحميل الإجماع. </a>  
+    حذر فيتاليك، المؤسس المشارك لإيثريوم، من المخاطر المحتملة لإعادة التخزين في تدوينة عام 2021 بعنوان <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html"> لا تفرط في تحميل الإجماع. </a>  
 </p>
 </AlertDescription>
 </AlertContent>

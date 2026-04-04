@@ -55,7 +55,7 @@ const Page = async (props: {
   setRequestLocale(locale)
 
   // Get translations
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })

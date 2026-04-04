@@ -7,7 +7,7 @@ This guide explains how to implement server-side A/B tests on ethereum.org using
 Our A/B testing system provides:
 
 - **Server-side rendering** - Users see consistent variants on first page load with no layout shifts
-- **Matomo API integration** - Tests configured entirely in Matomo dashboard, no code deployments needed
+- **Matomo API integration** - Tests are configured entirely in the Matomo dashboard; no code deployments are needed
 - **GDPR compliance** - Cookie-less tracking using deterministic fingerprinting (IP + User-Agent)
 - **Multi-variant support** - Test 2+ variations with configurable weights / traffic splits
 - **Real-time updates** - Adjust experiment weights instantly via Matomo dashboard
@@ -134,7 +134,7 @@ Supports 3+ variants:
 
 1. Create your experiment in Matomo (set to "running")
 2. Implement `ABTestWrapper` in your component
-3. Test locally - the debug panel shows current assignment
+3. Test locally - the debug panel shows the current assignment
 4. Adjust weights in Matomo dashboard to test different scenarios
 
 ### Preview Mode
@@ -146,7 +146,7 @@ Supports 3+ variants:
 ### Production
 
 1. Deploy your component with `ABTestWrapper`
-2. Monitor experiment in Matomo dashboard
+2. Monitor the experiment in the Matomo dashboard
 3. Adjust traffic allocation as needed
 4. Analyze results and implement winning variant
 
@@ -224,7 +224,7 @@ NEXT_PUBLIC_IS_PREVIEW_DEPLOY=false
 
 1. **Check environment variables**: Ensure all Matomo config is set
 2. **Verify API token**: Must have "experiments" permission in Matomo
-3. **Check cache**: API responses cached for 1 hour, use dev mode for real-time updates
+3. **Check cache**: API responses are cached for 1 hour, use dev mode for real-time updates
 4. **Fallback behavior**: When API fails, all tests show original variant (safe default)
 
 ## Debug Panel

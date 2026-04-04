@@ -19,7 +19,7 @@ export default async function TutorialsPageJsonLD({
   internalTutorials: ITutorial[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-tutorials" })
+  const t = await getTranslations("page-developers-tutorials")
 
   const url = normalizeUrlForJsonLd(locale, `/developers/tutorials/`)
 

@@ -24,7 +24,7 @@ However, the technique explained here should work just as well for other rollups
 When discussing rollups, the term 'layer 1' (L1) is used for Mainnet, the production Ethereum network.
 The term 'layer 2' (L2) is used for the rollup or any other system that relies on L1 for security but does most of its processing offchain.
 
-## How can we further reduce the cost of L2 transactions? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## How can we further reduce the cost of L2 transactions? {#how-can-we-further-reduce-the-cost-of-l2-transactions}
 
 [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) have to preserve a record of every historical transaction so that anybody will be able to go through them and verify that the current state is correct.
 The cheapest way to get data into the Ethereum Mainnet is to write it as calldata.

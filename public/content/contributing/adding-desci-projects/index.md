@@ -23,7 +23,7 @@ Anyone is free to suggest a project to list on the DeSci page on ethereum.org. E
 - **Project should be part of the Ethereum ecosystem** - At ethereum.org we believe Ethereum (and its Layer 2's) to be the appropriate base layer for the DeSci movement.
 - **The project is fairly well established** - The project has real users that have been able to access the project's services for several months.
 
-### Nice-to-haves
+### Nice-to-haves {#nice-to-haves}
 
 - **Available in multiple languages** - Your project is translated into multiple languages allowing users around the world to access it.
 - **Educational resources** - Your product should have a well-designed onboarding experience to help and educate users. Or evidence of how-to content like articles or videos.

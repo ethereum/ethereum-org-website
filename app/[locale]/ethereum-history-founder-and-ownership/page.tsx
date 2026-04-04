@@ -26,9 +26,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    namespace: "page-ethereum-history-founder-and-ownership",
-  })
+  const t = await getTranslations("page-ethereum-history-founder-and-ownership")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(
@@ -574,10 +572,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-ethereum-history-founder-and-ownership",
-  })
+  const t = await getTranslations("page-ethereum-history-founder-and-ownership")
 
   return await getMetadata({
     locale,

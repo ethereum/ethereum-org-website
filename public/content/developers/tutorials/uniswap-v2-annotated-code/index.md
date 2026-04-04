@@ -82,7 +82,7 @@ This is most common flow, used by traders:
 5. Check if the amounts are acceptable (callers can specify a minimum amount below which they'd rather not add liquidity)
 6. Call the core contract.
 
-#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2-2}
 
 7. Mint liquidity tokens and send them to the caller
 8. Call `_update` to update the reserve amounts
@@ -108,7 +108,7 @@ This is most common flow, used by traders:
 
 These are the secure contracts which hold the liquidity.
 
-### UniswapV2Pair.sol {#UniswapV2Pair}
+### UniswapV2Pair.sol {#uniswapv2pair}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implements the actual pool that exchanges tokens. It is the core Uniswap functionality.
 
@@ -145,7 +145,7 @@ The [SafeMath library](https://docs.openzeppelin.com/contracts/2.x/api/math) is 
 A lot of calculations in the pool contract require fractions. However, fractions are not supported by the EVM.
 The solution that Uniswap found is to use 224 bit values, with 112 bits for the integer part, and 112 bits for the fraction. So `1.0` is represented as `2^112`, `1.5` is represented as `2^112 + 2^111`, etc.
 
-More details about this library are available [later in the document](#FixedPoint).
+More details about this library are available [later in the document](#fixedpoint).
 
 #### Variables {#pair-vars}
 
@@ -430,7 +430,7 @@ The liquidity providers get their cut simply by the appreciation of their liquid
                 if (rootK > rootKLast) {
 ```
 
-If there is new liquidity on which to collect a protocol fee. You can see the square root function [later in this article](#Math)
+If there is new liquidity on which to collect a protocol fee. You can see the square root function [later in this article](#math)
 
 ```solidity
                     uint numerator = totalSupply.mul(rootK.sub(rootKLast));
@@ -469,7 +469,7 @@ Note that while any transaction or contract _can_ call these functions, they are
     function mint(address to) external lock returns (uint liquidity) {
 ```
 
-This function is called when a liquidity provider adds liquidity to the pool. It mints additional liquidity tokens as a reward. It should be called from [a periphery contract](#UniswapV2Router02) that calls it after adding the liquidity in the same transaction (so nobody else would be able to submit a transaction that claims the new liquidity before the legitimate owner).
+This function is called when a liquidity provider adds liquidity to the pool. It mints additional liquidity tokens as a reward. It should be called from [a periphery contract](#uniswapv2router02) that calls it after adding the liquidity in the same transaction (so nobody else would be able to submit a transaction that claims the new liquidity before the legitimate owner).
 
 ```solidity
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
@@ -556,7 +556,7 @@ Update the state variables (`reserve0`, `reserve1`, and if needed `kLast`) and e
 ```
 
 This function is called when liquidity is withdrawn and the appropriate liquidity tokens need to be burned.
-It should also be called [from a periphery account](#UniswapV2Router02).
+It should also be called [from a periphery account](#uniswapv2router02).
 
 ```solidity
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
@@ -602,7 +602,7 @@ The rest of the `burn` function is the mirror image of the `mint` function above
     function swap(uint amount0Out, uint amount1Out, address to, bytes calldata data) external lock {
 ```
 
-This function is also supposed to be called from [a periphery contract](#UniswapV2Router02).
+This function is also supposed to be called from [a periphery contract](#uniswapv2router02).
 
 ```solidity
         require(amount0Out > 0 || amount1Out > 0, 'UniswapV2: INSUFFICIENT_OUTPUT_AMOUNT');
@@ -691,7 +691,7 @@ In that case there are two solutions:
 }
 ```
 
-### UniswapV2Factory.sol {#UniswapV2Factory}
+### UniswapV2Factory.sol {#uniswapv2factory}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) creates the pair exchanges.
 
@@ -813,7 +813,7 @@ Save the new pair information in the state variables and emit an event to inform
 
 These two functions allow `feeSetter` to control the fee recipient (if any), and to change `feeSetter` to a new address.
 
-### UniswapV2ERC20.sol {#UniswapV2ERC20}
+### UniswapV2ERC20.sol {#uniswapv2erc20}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
 
@@ -904,11 +904,11 @@ If everything is OK, treat this as [an ERC-20 approve](https://eips.ethereum.org
 
 The periphery contracts are the API (application program interface) for Uniswap. They are available for external calls, either from other contracts or decentralized applications. You could call the core contracts directly, but that's more complicated and you might lose value if you make a mistake. The core contracts only contain tests to make sure they aren't cheated, not sanity checks for anybody else. Those are in the periphery so they can be updated as needed.
 
-### UniswapV2Router01.sol {#UniswapV2Router01}
+### UniswapV2Router01.sol {#uniswapv2router01}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) has problems, and [should no longer be used](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Luckily, the periphery contracts are stateless and don't hold any assets, so it is easy to deprecate it and suggest people use the replacement, `UniswapV2Router02`, instead.
 
-### UniswapV2Router02.sol {#UniswapV2Router02}
+### UniswapV2Router02.sol {#uniswapv2router02}
 
 In most cases you would use Uniswap through [this contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
 You can see how to use it [here](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
@@ -1256,7 +1256,7 @@ Remove liquidity for ETH is almost the same, except that we receive the WETH tok
     }
 ```
 
-These functions relay meta-transactions to allow users without ether to withdraw from the pool, using [the permit mechanism](#UniswapV2ERC20).
+These functions relay meta-transactions to allow users without ether to withdraw from the pool, using [the permit mechanism](#uniswapv2erc20).
 
 ```solidity
 
@@ -1666,9 +1666,9 @@ These are the same variants used for normal tokens, but they call `_swapSupporti
 }
 ```
 
-These functions are just proxies that call the [UniswapV2Library functions](#uniswapV2library).
+These functions are just proxies that call the [UniswapV2Library functions](#uniswapv2library).
 
-### UniswapV2Migrator.sol {#UniswapV2Migrator}
+### UniswapV2Migrator.sol {#uniswapv2migrator}
 
 This contract was used to migrate exchanges from the old v1 to v2. Now that they have been migrated, it is no longer relevant.
 
@@ -1676,7 +1676,7 @@ This contract was used to migrate exchanges from the old v1 to v2. Now that they
 
 The [SafeMath library](https://docs.openzeppelin.com/contracts/2.x/api/math) is well documented, so there's no need to document it here.
 
-### Math {#Math}
+### Math {#math}
 
 This library contains some math functions that are not normally needed in Solidity code, so they aren't part of the language.
 
@@ -1721,7 +1721,7 @@ We should never need the square root of zero. The square roots of one, two, and 
 }
 ```
 
-### Fixed Point Fractions (UQ112x112) {#FixedPoint}
+### Fixed Point Fractions (UQ112x112) {#fixedpoint}
 
 This library handles fractions, which are normally not part of Ethereum arithmetic. It does this by encoding the number _x_ as _x\*2^112_. This lets us use the original addition and subtraction opcodes without a change.
 
@@ -1758,7 +1758,7 @@ Because y is `uint112`, the most it can be is 2^112-1. That number can still be 
 
 If we divide two `UQ112x112` values, the result is no longer multiplied by 2^112. So instead we take an integer for the denominator. We would have needed to use a similar trick to do multiplication, but we don't need to do multiplication of `UQ112x112` values.
 
-### UniswapV2Library {#uniswapV2library}
+### UniswapV2Library {#uniswapv2library}
 
 This library is used only by the periphery contracts
 

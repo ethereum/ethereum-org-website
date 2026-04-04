@@ -34,7 +34,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
   const [growThePieData, blobscanOverallStats] = await Promise.all([
@@ -236,7 +236,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   return await getMetadata({
     locale,

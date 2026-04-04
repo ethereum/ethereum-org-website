@@ -13,7 +13,7 @@ Cryptocurrency scams target people of all experience levels, including professio
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#scam-types) below.
 
 </AlertDescription>
 </AlertContent>

@@ -68,7 +68,7 @@ The bridge has two main flows:
 
 This is the code that runs on L1, the Ethereum Mainnet.
 
-### IL1ERC20Bridge {#IL1ERC20Bridge}
+### IL1ERC20Bridge {#il1erc20bridge}
 
 [This interface is defined here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol).
 It includes functions and definitions required for bridging ERC-20 tokens.
@@ -321,7 +321,7 @@ The same is true for the other events and the functions.
 
 ### CrossDomainEnabled {#crossdomainenabled}
 
-[This contract](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) is inherited by both bridges ([L1](#the-l1-bridge-contract) and [L2](#the-l2-bridge-contract)) to send messages to the other layer.
+[This contract](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) is inherited by both bridges ([L1](#the-l1-bridge-contract) and [L2](#l2-bridge-code)) to send messages to the other layer.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -479,7 +479,7 @@ import { IL1StandardBridge } from "./IL1StandardBridge.sol";
 import { IL1ERC20Bridge } from "./IL1ERC20Bridge.sol";
 ```
 
-[IL1ERC20Bridge](#IL1ERC20Bridge) and [IL1StandardBridge](#IL1StandardBridge) are explained above.
+[IL1ERC20Bridge](#il1erc20bridge) and [IL1StandardBridge](#il1standardbridge) are explained above.
 
 ```solidity
 import { IL2ERC20Bridge } from "../../L2/messaging/IL2ERC20Bridge.sol";
@@ -549,7 +549,7 @@ This line is how we specify to use the `SafeERC20` wrapper every time we use the
     address public l2TokenBridge;
 ```
 
-The address of [L2StandardBridge](#the-l2-bridge-contract).
+The address of [L2StandardBridge](#l2-bridge-code).
 
 ```solidity
 
@@ -988,7 +988,7 @@ We need to be able to bridge any L1 token, regardless of whether L2 support was 
 Functions and events to mint (create) and burn (destroy) tokens.
 The bridge should be the only entity that can run these functions to ensure the number of tokens is correct (equal to the number of tokens locked on L1).
 
-### L2StandardERC20 {#L2StandardERC20}
+### L2StandardERC20 {#l2standarderc20}
 
 [This is our implementation of the `IL2StandardERC20` interface](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol).
 Unless you need some kind of custom logic, you should use this one.
@@ -1096,7 +1096,7 @@ import { IL1ERC20Bridge } from "../../L1/messaging/IL1ERC20Bridge.sol";
 import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
 ```
 
-The [IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) interface is very similar to the [L1 equivalent](#IL1ERC20Bridge) we saw above.
+The [IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) interface is very similar to the [L1 equivalent](#il1erc20bridge) we saw above.
 There are two significant differences:
 
 1. On L1 you initiate deposits and finalize withdrawals.

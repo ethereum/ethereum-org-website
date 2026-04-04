@@ -17,7 +17,7 @@ export default async function AssetsJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-assets" })
+  const t = await getTranslations("page-assets")
 
   const url = normalizeUrlForJsonLd(locale, `/assets/`)
 

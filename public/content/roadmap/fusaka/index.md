@@ -280,7 +280,7 @@ The RPC method `eth_call` is not limited and will allow simulation of bigger tra
 
 EVM compilers like Solidity will implement and utilize the new function for counting zeros under the hood. New contracts might benefit from gas savings if they rely on this sort of operation. Follow releases and feature announcement of the smart contract language for documentation on potential savings.
 
-### Are there any changes for my existing smart contracts? {#what-clz-means-for-developers}
+### Are there any changes for my existing smart contracts? {#what-clz-means-for-developers-2}
 
 Fusaka has no direct affect that would break any existing contracts or change their behavior. Changes introduced to the execution layer are made with backward compatibility, however, always keep an eye on edge cases and potential impact.
 

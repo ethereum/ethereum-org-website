@@ -28,10 +28,7 @@ import { Section } from "../ui/section"
 const WhitepaperBridge = async () => {
   const locale = await getLocale()
   const { twFlipForRtl } = getDirection(locale as Lang)
-  const t = await getTranslations({
-    locale,
-    namespace: "component-whitepaper",
-  })
+  const t = await getTranslations("component-whitepaper")
 
   const evolutionKeys = [
     "evolution-pos",
