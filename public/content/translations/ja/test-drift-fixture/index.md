@@ -1,6 +1,6 @@
 ---
-title: トークン規格の理解
-description: イーサリアムで最も一般的なトークン規格とその仕組みに関するガイド。
+title: "トークン規格の理解"
+description: "イーサリアムで最も一般的なトークン規格とその仕組みに関するガイド。"
 image: /images/tokens/token-standards-hero.png
 alt: "トークン規格の図"
 template: tutorial
