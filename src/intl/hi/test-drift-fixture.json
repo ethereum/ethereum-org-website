@@ -1,0 +1,20 @@
+{
+  "test-title": "टोकन मानक",
+  "test-description": "इथेरियम पर उपयोग किए जाने वाले सबसे आम टोकन मानकों के बारे में जानें।",
+  "test-cta-primary": "शुरू करें",
+  "test-cta-secondary": "दस्तावेज़ देखें",
+  "test-stat-label": "कुल तैनात किए गए टोकन",
+  "test-banner-text": "टोकन के लिए नए हैं? हमारे <a href=\"/developers/docs/standards/tokens/\">टोकन मानकों के परिचय</a> से शुरू करें।",
+  "test-footnote": "टोकन डेटा <a href=\"https://eth.blockscout.com/tokens\" target=\"_blank\">Blockscout</a> से लिया गया है। मूल्य निर्धारण <a href=\"https://www.coingecko.com\" target=\"_blank\">CoinGecko</a> द्वारा प्रदान किया गया है।",
+  "test-filter-label": "मानक के अनुसार फ़िल्टर करें",
+  "test-empty-results": "आपके मानदंडों से मेल खाने वाले कोई टोकन नहीं मिले। कुछ फ़िल्टर हटाने का प्रयास करें।",
+  "test-nested": {
+    "section-title": "उन्नत विषय",
+    "section-description": "टोकन यांत्रिकी और सर्वोत्तम प्रथाओं के बारे में गहराई से जानें।"
+  },
+  "test-last-updated": "अंतिम अपडेट: अप्रैल 2025",
+  "test-multi-link": "<a href=\"https://sepolia.dev/\">Sepolia</a> पर <a href=\"https://remix.ethereum.org/\">Remix</a> के साथ तैनात करें, और <a href=\"https://eth.blockscout.com/\">Blockscout</a> पर सत्यापित करें।",
+  "test-welcome-user": "वापसी पर स्वागत है, {username}!",
+  "test-token-count": "{count, plural, =0 {कोई टोकन नहीं मिला} one {# टोकन मिला} other {# टोकन मिले}}",
+  "test-transfer-status": "{status, select, pending {आपका {amount} ETH का ट्रांसफर लंबित है} confirmed {आपके {amount} ETH के ट्रांसफर की पुष्टि हो गई है} failed {आपका {amount} ETH का ट्रांसफर विफल रहा} other {अज्ञात स्थिति}}"
+}
