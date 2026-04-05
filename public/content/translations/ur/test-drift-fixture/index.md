@@ -1,6 +1,6 @@
 ---
-title: ٹوکن کے معیارات کو سمجھنا
-description: ایتھیریم پر سب سے عام ٹوکن معیارات اور ان کے کام کرنے کے طریقے کے بارے میں ایک گائیڈ۔
+title: "ٹوکن کے معیارات کو سمجھنا"
+description: "ایتھیریم پر سب سے عام ٹوکن معیارات اور ان کے کام کرنے کے طریقے کے بارے میں ایک گائیڈ۔"
 image: /images/tokens/token-standards-hero.png
 alt: "ٹوکن معیارات کا خاکہ"
 template: tutorial
@@ -96,6 +96,6 @@ _خاکہ [Token Standards Illustrated](https://takenobu-hs.github.io/downloads/
 
 | معیار | قسم | گیس کی لاگت | استعمال کی صورت |
 |----------|------|----------|----------|
-| [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/) | قابل تبادلہ | <span dir="ltr">~21,000</span> | کرنسیاں، یوٹیلیٹی ٹوکنز |
-| [<span dir="ltr">ERC-721</span>](/developers/docs/standards/tokens/erc-721/) | ناقابل تبادلہ | <span dir="ltr">~65,000</span> | ڈیجیٹل آرٹ، جمع کرنے والی اشیاء |
-| [<span dir="ltr">ERC-1155</span>](/developers/docs/standards/tokens/erc-1155/) | ملٹی ٹوکن | <span dir="ltr">~35,000</span> | گیمنگ آئٹمز، مخلوط اثاثے |
+| [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/) | قابل تبادلہ | <span dir="ltr">\~21,000</span> | کرنسیاں، یوٹیلیٹی ٹوکنز |
+| [<span dir="ltr">ERC-721</span>](/developers/docs/standards/tokens/erc-721/) | ناقابل تبادلہ | <span dir="ltr">\~65,000</span> | ڈیجیٹل آرٹ، جمع کرنے والی اشیاء |
+| [<span dir="ltr">ERC-1155</span>](/developers/docs/standards/tokens/erc-1155/) | ملٹی ٹوکن | <span dir="ltr">\~35,000</span> | گیمنگ آئٹمز، مخلوط اثاثے |
