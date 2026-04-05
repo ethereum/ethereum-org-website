@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/test-drift-fixture.json",
+  "generatedAt": "2026-04-05T16:35:24.767Z",
+  "rootHash": "c92898b23641",
+  "tree": {
+    "contentHash": "d6a7be3926b8",
+    "anchorHash": "862595075552",
+    "children": {
+      "test-title": {
+        "contentHash": "f2d1f42d400b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-description": {
+        "contentHash": "6ad553921805",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-cta-primary": {
+        "contentHash": "61e8d44ad423",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-cta-secondary": {
+        "contentHash": "392e16f77e9f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-stat-label": {
+        "contentHash": "a64801bcb2eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-banner-text": {
+        "contentHash": "9572b7e351ab",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "test-footnote": {
+        "contentHash": "113f2f7ff1e7",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "test-filter-label": {
+        "contentHash": "1ca75065793c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-empty-results": {
+        "contentHash": "c388856d6328",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-nested": {
+        "contentHash": "53f1cff7ac9d",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "section-title": {
+            "contentHash": "aee4320b7383",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "section-description": {
+            "contentHash": "c434ff2db1dc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "section-title",
+          "section-description"
+        ]
+      },
+      "test-last-updated": {
+        "contentHash": "af3def13a1e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-multi-link": {
+        "contentHash": "2e00bf816a86",
+        "anchorHash": "b5bea41b6c62"
+      },
+      "test-welcome-user": {
+        "contentHash": "c816938ba090",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-token-count": {
+        "contentHash": "a3a2a5590937",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-transfer-status": {
+        "contentHash": "103178132046",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "test-title",
+      "test-description",
+      "test-cta-primary",
+      "test-cta-secondary",
+      "test-stat-label",
+      "test-banner-text",
+      "test-footnote",
+      "test-filter-label",
+      "test-empty-results",
+      "test-nested",
+      "test-last-updated",
+      "test-multi-link",
+      "test-welcome-user",
+      "test-token-count",
+      "test-transfer-status"
+    ]
+  }
+}
