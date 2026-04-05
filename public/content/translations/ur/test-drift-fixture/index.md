@@ -1,6 +1,6 @@
 ---
-title: "ٹوکن کے معیارات کو سمجھنا"
-description: "ایتھیریم پر سب سے عام ٹوکن معیارات اور ان کے کام کرنے کے طریقے کے بارے میں ایک گائیڈ۔"
+title: ٹوکن کے معیارات کو سمجھنا
+description: ایتھیریم پر سب سے عام ٹوکن معیارات اور ان کے کام کرنے کے طریقے کے بارے میں ایک گائیڈ۔
 image: /images/tokens/token-standards-hero.png
 alt: "ٹوکن معیارات کا خاکہ"
 template: tutorial
@@ -60,7 +60,7 @@ function transfer(address to, uint256 amount) public returns (bool) {
 
 بنیادی فیس نیٹ ورک کی طلب کی بنیاد پر اتار چڑھاؤ کا شکار ہوتی ہے۔ جب نیٹ ورک پر ہجوم ہوتا ہے، تو فیس میں فی بلاک <span dir="ltr">12.5%</span> تک اضافہ ہو سکتا ہے۔
 
-<ExpandableCard title="Why do NFT transfers cost more?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
+<ExpandableCard title="NFT کی منتقلی زیادہ مہنگی کیوں ہوتی ہے؟" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
 
 <span dir="ltr">NFT</span> کی منتقلی میں زیادہ پیچیدہ اسٹوریج آپریشنز شامل ہوتے ہیں۔ ہر ٹوکن کی ایک منفرد <span dir="ltr">ID</span> ہوتی ہے جسے انفرادی طور پر ٹریک کیا جانا چاہیے، اور منتقلی کی اجازت دینے سے پہلے کنٹریکٹ کو ملکیت کی تصدیق کرنی چاہیے۔ اس اضافی کمپیوٹیشن کے لیے مزید گیس درکار ہوتی ہے۔
 
@@ -68,7 +68,7 @@ function transfer(address to, uint256 amount) public returns (bool) {
 
 </ExpandableCard>
 
-<ExpandableCard title="How to reduce gas costs" eventCategory="/test-drift" eventName="clicked How to reduce gas costs">
+<ExpandableCard title="گیس کے اخراجات کیسے کم کریں؟" eventCategory="/test-drift" eventName="clicked How to reduce gas costs">
 
 ٹرانزیکشن کے اخراجات کو نمایاں طور پر کم کرنے کے لیے لیئر ۲ (l2) کے حل جیسے <a href="https://optimism.io">Optimism</a> یا [Arbitrum](/developers/docs/scaling/optimistic-rollups/) استعمال کرنے پر غور کریں۔ یہ رول اپس متعدد ٹرانزیکشنز کو ایک ساتھ جمع کرتے ہیں اور انہیں ایتھیریم مین نیٹ پر ایک ہی ٹرانزیکشن کے طور پر جمع کراتے ہیں۔
 
@@ -96,6 +96,6 @@ _خاکہ [Token Standards Illustrated](https://takenobu-hs.github.io/downloads/
 
 | معیار | قسم | گیس کی لاگت | استعمال کی صورت |
 |----------|------|----------|----------|
-| [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/) | قابل تبادلہ | <span dir="ltr">\~21,000</span> | کرنسیاں، یوٹیلیٹی ٹوکنز |
-| [<span dir="ltr">ERC-721</span>](/developers/docs/standards/tokens/erc-721/) | ناقابل تبادلہ | <span dir="ltr">\~65,000</span> | ڈیجیٹل آرٹ، جمع کرنے والی اشیاء |
-| [<span dir="ltr">ERC-1155</span>](/developers/docs/standards/tokens/erc-1155/) | ملٹی ٹوکن | <span dir="ltr">\~35,000</span> | گیمنگ آئٹمز، مخلوط اثاثے |
+| [<span dir="ltr">ERC-20</span>](/developers/docs/standards/tokens/erc-20/) | قابل تبادلہ | <span dir="ltr">~21,000</span> | کرنسیاں، یوٹیلیٹی ٹوکنز |
+| [<span dir="ltr">ERC-721</span>](/developers/docs/standards/tokens/erc-721/) | ناقابل تبادلہ | <span dir="ltr">~65,000</span> | ڈیجیٹل آرٹ، جمع کرنے والی اشیاء |
+| [<span dir="ltr">ERC-1155</span>](/developers/docs/standards/tokens/erc-1155/) | ملٹی ٹوکن | <span dir="ltr">~35,000</span> | گیمنگ آئٹمز، مخلوط اثاثے |
