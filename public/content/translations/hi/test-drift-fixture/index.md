@@ -1,6 +1,6 @@
 ---
-title: "टोकन मानकों को समझना"
-description: "इथेरियम पर सबसे आम टोकन मानकों और वे कैसे काम करते हैं, इसके लिए एक गाइड।"
+title: टोकन मानकों को समझना
+description: इथेरियम पर सबसे आम टोकन मानकों और वे कैसे काम करते हैं, इसके लिए एक गाइड।
 image: /images/tokens/token-standards-hero.png
 alt: "टोकन मानक आरेख"
 template: tutorial
@@ -60,7 +60,7 @@ NFT के लिए उदाहरण मेटाडेटा:
 
 आधार शुल्क नेटवर्क की मांग के आधार पर घटता-बढ़ता रहता है। जब नेटवर्क पर भीड़ होती है, तो शुल्क प्रति ब्लॉक 12.5% तक बढ़ सकता है।
 
-<ExpandableCard title="Why do NFT transfers cost more?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
+<ExpandableCard title="NFT ट्रांसफर अधिक महंगे क्यों होते हैं?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
 
 NFT ट्रांसफर में अधिक जटिल स्टोरेज संचालन शामिल होते हैं। प्रत्येक टोकन की एक विशिष्ट ID होती है जिसे व्यक्तिगत रूप से ट्रैक किया जाना चाहिए, और ट्रांसफर की अनुमति देने से पहले अनुबंध को स्वामित्व को सत्यापित करना चाहिए। इस अतिरिक्त गणना के लिए अधिक गैस की आवश्यकता होती है।
 
@@ -68,7 +68,7 @@ NFT ट्रांसफर में अधिक जटिल स्टोर
 
 </ExpandableCard>
 
-<ExpandableCard title="How to reduce gas costs" eventCategory="/test-drift" eventName="clicked How to reduce gas costs">
+<ExpandableCard title="गैस की लागत कैसे कम करें" eventCategory="/test-drift" eventName="clicked How to reduce gas costs">
 
 लेन-देन की लागत को काफी कम करने के लिए <a href="https://optimism.io">Optimism</a> या [Arbitrum](/developers/docs/scaling/optimistic-rollups/) जैसे लेयर 2 (l2) समाधानों का उपयोग करने पर विचार करें। ये रोलअप्स कई लेन-देन को एक साथ बैच करते हैं और उन्हें इथेरियम मेननेट पर एक ही लेन-देन के रूप में सबमिट करते हैं।
 
