@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/test-drift-fixture.json",
+  "generatedAt": "2026-04-05T20:46:37.374Z",
+  "rootHash": "11e932b5b8bf",
+  "tree": {
+    "contentHash": "bd830415eb0e",
+    "anchorHash": "ebb931e349f8",
+    "children": {
+      "test-title": {
+        "contentHash": "f2d1f42d400b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-description": {
+        "contentHash": "6ad553921805",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-cta-primary": {
+        "contentHash": "61e8d44ad423",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-cta-secondary": {
+        "contentHash": "392e16f77e9f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-stat-label": {
+        "contentHash": "a64801bcb2eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-banner-text": {
+        "contentHash": "4c532c7c2b80",
+        "anchorHash": "e3ce4a7feff7",
+        "children": {
+          "prose:1": {
+            "contentHash": "c1d4b55c5bf5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "6bd46ce07a2b",
+            "anchorHash": "5f94a3872b6a"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "test-footnote": {
+        "contentHash": "8795223c81bf",
+        "anchorHash": "7db750695035",
+        "children": {
+          "prose:2": {
+            "contentHash": "55c4d16e85c6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "3dee05652774",
+            "anchorHash": "3dc7d9ecc626"
+          },
+          "prose:3": {
+            "contentHash": "fab4278438f7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "ffcc5032ff84",
+            "anchorHash": "878ba36e4321"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
+      "test-filter-label": {
+        "contentHash": "1ca75065793c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-empty-results": {
+        "contentHash": "c388856d6328",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-nested": {
+        "contentHash": "53f1cff7ac9d",
+        "anchorHash": "f5818652a990",
+        "children": {
+          "section-title": {
+            "contentHash": "aee4320b7383",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "section-description": {
+            "contentHash": "c434ff2db1dc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "section-title",
+          "section-description"
+        ]
+      },
+      "test-last-updated": {
+        "contentHash": "af3def13a1e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "test-multi-link": {
+        "contentHash": "3d0317fbe244",
+        "anchorHash": "6bef3bd68c44",
+        "children": {
+          "prose:3": {
+            "contentHash": "0a5b58de3aca",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "f84ed4375595",
+            "anchorHash": "b6fe35389cb9"
+          },
+          "prose:4": {
+            "contentHash": "b8d31e852725",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "ab2db303fb7e",
+            "anchorHash": "2a6132a24da5"
+          },
+          "prose:5": {
+            "contentHash": "7a86417033c4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:2": {
+            "contentHash": "3dee05652774",
+            "anchorHash": "8758fb759338"
+          },
+          "prose:6": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:3",
+          "html-tag:0",
+          "prose:4",
+          "html-tag:1",
+          "prose:5",
+          "html-tag:2",
+          "prose:6"
+        ]
+      },
+      "test-welcome-user": {
+        "contentHash": "278169bfe3d4",
+        "anchorHash": "489e8f767b4f",
+        "children": {
+          "prose:1": {
+            "contentHash": "7360593cbf62",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "efd66a42c2df"
+          },
+          "prose:2": {
+            "contentHash": "bb7208bc9b5d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "test-token-count": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "b1e5f95a4e1d",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a3a2a5590937"
+          }
+        }
+      },
+      "test-transfer-status": {
+        "contentHash": "4b9f7d802648",
+        "anchorHash": "25f52e4173f7",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "103178132046"
+          }
+        }
+      }
+    },
+    "childrenOrder": [
+      "test-title",
+      "test-description",
+      "test-cta-primary",
+      "test-cta-secondary",
+      "test-stat-label",
+      "test-banner-text",
+      "test-footnote",
+      "test-filter-label",
+      "test-empty-results",
+      "test-nested",
+      "test-last-updated",
+      "test-multi-link",
+      "test-welcome-user",
+      "test-token-count",
+      "test-transfer-status"
+    ]
+  }
+}
