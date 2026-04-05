@@ -1,6 +1,6 @@
 ---
-title: "Comprendiendo los estándares de tokens"
-description: "Una guía sobre los estándares de tokens más comunes en Ethereum y cómo funcionan."
+title: Comprendiendo los estándares de tokens
+description: Una guía sobre los estándares de tokens más comunes en Ethereum y cómo funcionan.
 image: /images/tokens/token-standards-hero.png
 alt: "Diagrama de estándares de tokens"
 template: tutorial
@@ -60,7 +60,7 @@ Las transferencias de tokens requieren tarifas de gas denominadas en Gwei. Una t
 
 La tarifa base fluctúa según la demanda de la red. Cuando la red está congestionada, las tarifas pueden aumentar hasta un 12,5 % por bloque.
 
-<ExpandableCard title="Why do NFT transfers cost more?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
+<ExpandableCard title="¿Por qué cuestan más las transferencias de NFT?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
 
 Las transferencias de NFT implican operaciones de almacenamiento más complejas. Cada token tiene un ID único que debe rastrearse individualmente, y el contrato debe verificar la propiedad antes de permitir la transferencia. Este cálculo adicional requiere más gas.
 
@@ -68,7 +68,7 @@ Consulte la [documentación sobre el gas de Ethereum](/developers/docs/gas/) par
 
 </ExpandableCard>
 
-<ExpandableCard title="How to reduce gas costs" eventCategory="/test-drift" eventName="clicked How to reduce gas costs">
+<ExpandableCard title="Cómo reducir los costos de gas" eventCategory="/test-drift" eventName="clicked How to reduce gas costs">
 
 Considere usar soluciones de capa 2 (l2) como <a href="https://optimism.io">Optimism</a> o [Arbitrum](/developers/docs/scaling/optimistic-rollups/) para reducir significativamente los costos de transacción. Estos rollup agrupan múltiples transacciones y las envían a la red principal de Ethereum como una sola transacción.
 
