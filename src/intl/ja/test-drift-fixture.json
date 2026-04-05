@@ -1,0 +1,20 @@
+{
+  "test-title": "トークン規格",
+  "test-description": "イーサリアムで使用されている最も一般的なトークン規格について学びましょう。",
+  "test-cta-primary": "始める",
+  "test-cta-secondary": "ドキュメントを見る",
+  "test-stat-label": "デプロイされたトークンの総数",
+  "test-banner-text": "トークンは初めてですか？まずは<a href=\"/developers/docs/standards/tokens/\">トークン規格の紹介</a>から始めましょう。",
+  "test-footnote": "トークンデータの提供元：<a href=\"https://eth.blockscout.com/tokens\" target=\"_blank\">Blockscout</a>。価格データの提供元：<a href=\"https://www.coingecko.com\" target=\"_blank\">CoinGecko</a>。",
+  "test-filter-label": "規格で絞り込む",
+  "test-empty-results": "条件に一致するトークンが見つかりません。いくつかのフィルターを解除してみてください。",
+  "test-nested": {
+    "section-title": "高度なトピック",
+    "section-description": "トークンの仕組みとベストプラクティスについて掘り下げて解説します。"
+  },
+  "test-last-updated": "最終更新日: 2025年4月",
+  "test-multi-link": "<a href=\"https://sepolia.dev/\">Sepolia</a>上の<a href=\"https://remix.ethereum.org/\">Remix</a>でデプロイし、<a href=\"https://eth.blockscout.com/\">Blockscout</a>で検証します。",
+  "test-welcome-user": "お帰りなさい、{username}さん！",
+  "test-token-count": "{count, plural, =0 {トークンが見つかりません} one {# 個のトークンが見つかりました} other {# 個のトークンが見つかりました}}",
+  "test-transfer-status": "{status, select, pending {{amount} ETH の送金は保留中です} confirmed {{amount} ETH の送金は確認されました} failed {{amount} ETH の送金は失敗しました} other {不明なステータス}}"
+}
