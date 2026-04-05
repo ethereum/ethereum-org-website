@@ -60,7 +60,7 @@ function transfer(address to, uint256 amount) public returns (bool) {
 
 Базовая комиссия колеблется в зависимости от спроса в сети. Когда сеть перегружена, комиссии могут увеличиваться до 12,5% за блок.
 
-<ExpandableCard title="Why do NFT transfers cost more?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
+<ExpandableCard title="Почему переводы NFT стоят дороже?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
 
 Переводы NFT включают более сложные операции хранения. Каждый токен имеет уникальный идентификатор, который необходимо отслеживать индивидуально, и контракт должен подтвердить право собственности перед тем, как разрешить перевод. Эти дополнительные вычисления требуют больше газа.
 
@@ -68,7 +68,7 @@ function transfer(address to, uint256 amount) public returns (bool) {
 
 </ExpandableCard>
 
-<ExpandableCard title="How to reduce gas costs" eventCategory="/test-drift" eventName="clicked How to reduce gas costs">
+<ExpandableCard title="Как снизить расходы на газ" eventCategory="/test-drift" eventName="clicked How to reduce gas costs">
 
 Рассмотрите возможность использования решений уровня 2 (L2), таких как <a href="https://optimism.io">Optimism</a> или [Arbitrum](/developers/docs/scaling/optimistic-rollups/), чтобы значительно снизить транзакционные издержки. Эти роллапы объединяют несколько транзакций вместе и отправляют их в основную сеть Ethereum как одну транзакцию.
 
