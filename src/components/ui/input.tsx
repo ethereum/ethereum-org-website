@@ -14,7 +14,7 @@ const inputVariants = cva(
       hasError: {
         true: "border-error hover:not-disabled:border-error focus-visible:outline-error",
         false:
-          "border-body hover:not-disabled:border-primary-hover focus-visible:outline-primary-hover",
+          "border-input hover:not-disabled:border-primary-hover focus-visible:outline-primary-hover",
       },
     },
     defaultVariants: {
