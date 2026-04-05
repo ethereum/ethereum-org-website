@@ -1,0 +1,308 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/wrapped-eth/index.md",
+  "generatedAt": "2026-04-05T00:08:17.988Z",
+  "rootHash": "d633559232ed",
+  "tree": {
+    "contentHash": "6340dfc4e01b",
+    "anchorHash": "4ec470fb96be",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "9f1b990e4e9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "f06be46bd8e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "intro-to-weth": {
+        "contentHash": "e4958f753e49",
+        "anchorHash": "f6e7c03cdeda",
+        "labelHash": "8e04277479ea",
+        "children": {
+          "_label": {
+            "contentHash": "8e04277479ea",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:1": {
+            "contentHash": "f5818652a990",
+            "anchorHash": "a63ec4760456",
+            "children": {
+              "component:0": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "3c4c791ff1ab"
+              },
+              "component:1": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "component:0",
+              "component:1"
+            ]
+          },
+          "prose:0": {
+            "contentHash": "95f999f87365",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "3e9b8d74d6bc",
+            "anchorHash": "3e9b8d74d6bc"
+          },
+          "prose:2": {
+            "contentHash": "f6a44a690232",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "81fbd2f198c9",
+            "anchorHash": "81fbd2f198c9"
+          },
+          "prose:4": {
+            "contentHash": "bd8a05f16185",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "why-do-we-need-to-wrap-eth": {
+            "contentHash": "1c56d890cd73",
+            "anchorHash": "1632b6b96435",
+            "labelHash": "0a4244a41aaa",
+            "children": {
+              "_label": {
+                "contentHash": "0a4244a41aaa",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "1f090d6c3bb9",
+                "anchorHash": "1f090d6c3bb9"
+              },
+              "prose:1": {
+                "contentHash": "dc54b0a167b0",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "link:0",
+              "prose:1"
+            ]
+          },
+          "weth-vs-eth-differences": {
+            "contentHash": "22674a71a2a7",
+            "anchorHash": "bc15a0a8123f",
+            "labelHash": "c3eb652ad7bd",
+            "children": {
+              "_label": {
+                "contentHash": "c3eb652ad7bd",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "0d8a38cd9b26",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "b92f0d72bdb2",
+                "anchorHash": "b92f0d72bdb2"
+              },
+              "prose:2": {
+                "contentHash": "d9dd56f4ada7",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "a13bebeb57e1",
+                "anchorHash": "a13bebeb57e1"
+              },
+              "prose:4": {
+                "contentHash": "d5be3cf8fc39",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "b73ab4da4a2d",
+                "anchorHash": "b73ab4da4a2d"
+              },
+              "prose:6": {
+                "contentHash": "2145a7eee903",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "link:1",
+              "prose:2",
+              "link:3",
+              "prose:4",
+              "link:5",
+              "prose:6"
+            ]
+          },
+          "faq": {
+            "contentHash": "3661da76d0f2",
+            "anchorHash": "fcaec461d950",
+            "labelHash": "e956a9404b46",
+            "children": {
+              "_label": {
+                "contentHash": "e956a9404b46",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:1": {
+                "contentHash": "bb3e8379eab8",
+                "anchorHash": "4b9f7d802648",
+                "children": {
+                  "prose:0": {
+                    "contentHash": "d9374ad7110c",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                }
+              },
+              "component:2": {
+                "contentHash": "713d2673d2f7",
+                "anchorHash": "4b9f7d802648",
+                "children": {
+                  "prose:0": {
+                    "contentHash": "cef492226dfa",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                }
+              },
+              "component:3": {
+                "contentHash": "2c4b551e102f",
+                "anchorHash": "ccfa50ba0c0d",
+                "children": {
+                  "prose:0": {
+                    "contentHash": "d87421cfabb7",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "9630465620f4",
+                    "anchorHash": "9630465620f4"
+                  },
+                  "prose:2": {
+                    "contentHash": "b4df16c581af",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "prose:0",
+                  "link:1",
+                  "prose:2"
+                ]
+              },
+              "component:4": {
+                "contentHash": "d5f204cf75e4",
+                "anchorHash": "08442909bb27",
+                "children": {
+                  "prose:0": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:1": {
+                    "contentHash": "48c81c23a6f8",
+                    "anchorHash": "48c81c23a6f8"
+                  },
+                  "prose:2": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:3": {
+                    "contentHash": "3684de0e12df",
+                    "anchorHash": "3684de0e12df"
+                  },
+                  "prose:4": {
+                    "contentHash": "3973e022e932",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:5": {
+                    "contentHash": "2b5edf516693",
+                    "anchorHash": "2b5edf516693"
+                  }
+                },
+                "childrenOrder": [
+                  "prose:0",
+                  "link:1",
+                  "prose:2",
+                  "link:3",
+                  "prose:4",
+                  "link:5"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "component:1",
+              "component:2",
+              "component:3",
+              "component:4"
+            ]
+          },
+          "further-reading": {
+            "contentHash": "e849a20fa3d3",
+            "anchorHash": "ee0e87ac48d1",
+            "labelHash": "4082f515b2f4",
+            "children": {
+              "_label": {
+                "contentHash": "4082f515b2f4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "bcea47a88bae",
+                "anchorHash": "bcea47a88bae"
+              },
+              "prose:2": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:3": {
+                "contentHash": "63c1dd41a703",
+                "anchorHash": "63c1dd41a703"
+              },
+              "prose:4": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:5": {
+                "contentHash": "940522a5556c",
+                "anchorHash": "940522a5556c"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0",
+              "link:1",
+              "prose:2",
+              "link:3",
+              "prose:4",
+              "link:5"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "component:1",
+          "prose:0",
+          "link:1",
+          "prose:2",
+          "link:3",
+          "prose:4",
+          "why-do-we-need-to-wrap-eth",
+          "weth-vs-eth-differences",
+          "faq",
+          "further-reading"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "intro-to-weth"
+    ]
+  }
+}
