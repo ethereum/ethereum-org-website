@@ -17,6 +17,7 @@ import { translateFile } from "../ai/gemini-translate"
 import { filterGlossaryFlat } from "../ai/glossary-lookup"
 import {
   buildJsonManifest,
+  buildLocaleTranslationManifest,
   buildMarkdownManifest,
 } from "../ai/manifest-adapter"
 import {
@@ -230,19 +231,58 @@ async function translateLanguage(
       try {
         if (file.type === "markdown") {
           // English source manifest (content tree hashes)
-          const manifestContent = buildMarkdownManifest(file.content, file.path)
-          const manifestPath = destPath.replace(/index\.md$/, ".manifest.json")
-          await committer.commitFile(manifestPath, manifestContent, language)
-          console.log(`  [manifest] ${manifestPath}: committed`)
+          const sourceManifestContent = buildMarkdownManifest(
+            file.content,
+            file.path
+          )
+          const sourceManifestPath = destPath.replace(
+            /index\.md$/,
+            ".manifest-source.json"
+          )
+          await committer.commitFile(
+            sourceManifestPath,
+            sourceManifestContent,
+            language
+          )
+          console.log(`  [manifest-source] ${sourceManifestPath}: committed`)
+
+          // Translation manifest (element ordering + inert values from Gemini output)
+          if (result.placeholderOrder && result.placeholderMap) {
+            const parsed = JSON.parse(sourceManifestContent)
+            const translationManifestContent = buildLocaleTranslationManifest({
+              locale: language,
+              englishManifestHash: parsed.rootHash,
+              placeholderOrder: result.placeholderOrder,
+              placeholderMap: result.placeholderMap,
+              sections: {
+                _all: {
+                  translatedAt: new Date().toISOString(),
+                  status: "success",
+                },
+              },
+            })
+            const translationManifestPath = destPath.replace(
+              /index\.md$/,
+              ".manifest-translation.json"
+            )
+            await committer.commitFile(
+              translationManifestPath,
+              translationManifestContent,
+              language
+            )
+            console.log(
+              `  [manifest-translation] ${translationManifestPath}: committed`
+            )
+          }
         } else {
           const jsonManifestContent = buildJsonManifest(file.content, file.path)
-          const jsonManifestPath = `src/intl/${language}/.manifest.json`
+          const jsonManifestPath = `src/intl/${language}/.manifest-source.json`
           await committer.commitFile(
             jsonManifestPath,
             jsonManifestContent,
             language
           )
-          console.log(`  [manifest] ${jsonManifestPath}: committed`)
+          console.log(`  [manifest-source] ${jsonManifestPath}: committed`)
         }
       } catch (err) {
         console.warn(
