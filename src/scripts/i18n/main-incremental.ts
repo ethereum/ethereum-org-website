@@ -344,14 +344,17 @@ async function main() {
       let glossaryTerms = new Map<string, string>()
       try {
         const glossaryFile = path.join(
-          translationsDir,
-          `glossary-${task.locale}.json`
+          glossaryDataDir,
+          "glossary-terms-enhanced.json"
         )
         if (fs.existsSync(glossaryFile)) {
-          const glossaryData = JSON.parse(
-            fs.readFileSync(glossaryFile, "utf-8")
+          glossaryTerms = filterGlossaryFlat(
+            task.file.content,
+            task.file.type,
+            task.locale,
+            glossaryFile,
+            translationsDir
           )
-          glossaryTerms = filterGlossaryFlat(glossaryData, task.file.content)
         }
       } catch {
         // Glossary unavailable, continue without
