@@ -1,6 +1,6 @@
 ---
-title: "ریپڈ ایتھر (ڈبلیو ایتھ) کیا ہے"
-description: "ریپڈ ایتھر (ڈبلیو ایتھ) کا تعارف—ایتھر (ETH) کے لیے ایک ERC-20 سے مطابقت رکھنے والا ریپر۔"
+title: ریپڈ ایتھر (ڈبلیو ایتھ) کیا ہے
+description: ریپڈ ایتھر (ڈبلیو ایتھ) کا تعارف—ایتھر (ETH) کے لیے ایک ERC-20 سے مطابقت رکھنے والا ریپر۔
 lang: ur
 ---
 
@@ -17,7 +17,7 @@ lang: ur
 
 آپ <span dir="ltr">WETH</span> سمارٹ کنٹریکٹ کا استعمال کر کے <span dir="ltr">ETH</span> کے لیے <span dir="ltr">WETH</span> کو ان ریپ کر سکتے ہیں۔ آپ <span dir="ltr">WETH</span> سمارٹ کنٹریکٹ کے ساتھ کسی بھی مقدار میں <span dir="ltr">WETH</span> کو ریڈیم کر سکتے ہیں، اور آپ کو اتنی ہی مقدار میں <span dir="ltr">ETH</span> موصول ہوں گے۔ جمع کرائے گئے <span dir="ltr">WETH</span> کو پھر برن کر دیا جاتا ہے اور <span dir="ltr">WETH</span> کی گردش کرنے والی سپلائی سے نکال دیا جاتا ہے۔
 
-**گردش کرنے والی <span dir="ltr">ETH</span> سپلائی کا تقریباً <span dir="ltr">\~3%</span> حصہ <span dir="ltr">WETH</span> ٹوکن کنٹریکٹ میں مقفل ہے** جو اسے سب سے زیادہ استعمال ہونے والے [سمارٹ کنٹریکٹس](/glossary/#smart-contract) میں سے ایک بناتا ہے۔ <span dir="ltr">WETH</span> خاص طور پر ان صارفین کے لیے اہم ہے جو غیر مرکزی مالیات (<span dir="ltr">DeFi</span>) میں ایپلی کیشنز کے ساتھ تعامل کرتے ہیں۔
+**گردش کرنے والی <span dir="ltr">ETH</span> سپلائی کا تقریباً <span dir="ltr">~3%</span> حصہ <span dir="ltr">WETH</span> ٹوکن کنٹریکٹ میں مقفل ہے** جو اسے سب سے زیادہ استعمال ہونے والے [سمارٹ کنٹریکٹس](/glossary/#smart-contract) میں سے ایک بناتا ہے۔ <span dir="ltr">WETH</span> خاص طور پر ان صارفین کے لیے اہم ہے جو غیر مرکزی مالیات (<span dir="ltr">DeFi</span>) میں ایپلی کیشنز کے ساتھ تعامل کرتے ہیں۔
 
 ## ہمیں <span dir="ltr">ETH</span> کو <span dir="ltr">ERC-20</span> کے طور پر ریپ کرنے کی ضرورت کیوں ہے؟ {#why-do-we-need-to-wrap-eth}
 
@@ -38,25 +38,25 @@ lang: ur
 
 ## اکثر پوچھے گئے سوالات {#faq}
  
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="کیا ETH کو ریپ یا ان ریپ کرنے کی کوئی فیس ہے؟" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 آپ <span dir="ltr">WETH</span> کنٹریکٹ کا استعمال کرتے ہوئے <span dir="ltr">ETH</span> کو ریپ یا ان ریپ کرنے کے لیے گیس کی فیس ادا کرتے ہیں۔
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
+<ExpandableCard title="کیا WETH محفوظ ہے؟" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 <span dir="ltr">WETH</span> کو عام طور پر محفوظ سمجھا جاتا ہے کیونکہ یہ ایک سادہ، آزمودہ سمارٹ کنٹریکٹ پر مبنی ہے۔ <span dir="ltr">WETH</span> کنٹریکٹ کی رسمی طور پر تصدیق بھی کی گئی ہے، جو ایتھیریم پر سمارٹ کنٹریکٹس کے لیے اعلیٰ ترین حفاظتی معیار ہے۔
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="مجھے مختلف WETH ٹوکنز کیوں نظر آ رہے ہیں؟" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 اس صفحہ پر بیان کردہ [<span dir="ltr">WETH</span> کے مستند نفاذ](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) کے علاوہ، عملی طور پر دیگر اقسام بھی دستیاب ہیں۔ یہ ایپ ڈیولپرز کے ذریعے بنائے گئے کسٹم ٹوکنز یا دیگر بلاک چینز پر جاری کردہ ورژنز ہو سکتے ہیں، اور یہ مختلف طریقے سے برتاؤ کر سکتے ہیں یا ان کی حفاظتی خصوصیات مختلف ہو سکتی ہیں۔ **یہ جاننے کے لیے کہ آپ کس <span dir="ltr">WETH</span> نفاذ کے ساتھ تعامل کر رہے ہیں، ہمیشہ ٹوکن کی معلومات کو دو بار چیک کریں۔**
 
 </ExpandableCard>
 
-<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+<ExpandableCard title="دوسرے نیٹ ورکس پر WETH کے کون سے کنٹریکٹ ہیں؟" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
 
 - [ایتھیریم مین نیٹ](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [<span dir="ltr">Arbitrum</span>](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
