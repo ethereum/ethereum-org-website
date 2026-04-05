@@ -24,7 +24,15 @@ import * as path from "path"
 import i18nConfig from "../../../i18n.config.json"
 
 import { isGeminiAvailable } from "./lib/ai/gemini"
+import { callGeminiRaw } from "./lib/ai/gemini-translate"
 import { filterGlossaryFlat } from "./lib/ai/glossary-lookup"
+import {
+  buildIncrementalPrompt,
+  buildSectionList,
+  extractSections,
+  parseIncrementalResponse,
+  replaceSections,
+} from "./lib/ai/incremental-translate"
 import {
   buildJsonManifest,
   buildMarkdownManifest,
@@ -355,17 +363,83 @@ async function main() {
         )
       }
 
-      // Build sections for the prompt
-      // TODO: Parse English into sections and build TRANSLATE/CONTEXT list
-      // For now, this is a placeholder that will be fleshed out
-      // when we integrate with the normalizer's section parsing
-      console.log(
-        `  [${task.locale}] ${task.file.path}: section-level prompt TODO`
+      // Parse English and locale files into sections
+      const englishSections = extractSections(task.file.content)
+      const localeSections = extractSections(task.localeContent)
+
+      // Build TRANSLATE/CONTEXT section list
+      const sectionList = buildSectionList(
+        englishSections,
+        localeSections,
+        needsTranslation
       )
 
-      // TODO: callGeminiRaw with the incremental prompt
-      // TODO: parseIncrementalResponse
-      // TODO: replaceSections in task.localeContent
+      const translateCount = sectionList.filter(
+        (s) => s.action === "TRANSLATE"
+      ).length
+      if (translateCount === 0) {
+        console.log(
+          `  [${task.locale}] ${task.file.path}: no sections matched for translation`
+        )
+        continue
+      }
+
+      // Get language name for prompt
+      const langEntry = i18nConfig.find(
+        (l: { code: string }) => l.code === task.locale
+      )
+      const languageName = langEntry
+        ? (langEntry as { code: string; name: string }).name
+        : task.locale
+
+      // Build the batched prompt
+      const prompt = buildIncrementalPrompt({
+        filePath: task.file.path,
+        targetLanguage: task.locale,
+        languageName,
+        sections: sectionList,
+        glossaryTerms,
+      })
+
+      if (verbose) {
+        console.log(
+          `  [${task.locale}] prompt: ${prompt.length} chars, ${translateCount} TRANSLATE sections`
+        )
+      }
+
+      // Call Gemini
+      try {
+        const result = await callGeminiRaw(prompt, {
+          filePath: task.file.path,
+          targetLanguage: task.locale,
+          label: "incremental",
+        })
+
+        // Parse response
+        const translations = parseIncrementalResponse(result.text)
+        const translatedIds = Object.keys(translations)
+
+        console.log(
+          `  [${task.locale}] ${task.file.path}: received ${translatedIds.length} translated section(s) ` +
+            `(${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
+        )
+
+        // Replace sections in locale content
+        task.localeContent = replaceSections(task.localeContent, translations)
+
+        // Log any sections we requested but didn't get back
+        for (const id of needsTranslation) {
+          if (!translations[id]) {
+            console.warn(
+              `  [${task.locale}] ${task.file.path}: section "${id}" not returned by Gemini`
+            )
+          }
+        }
+      } catch (error) {
+        console.error(
+          `  [${task.locale}] ${task.file.path}: prose retranslation failed: ${error instanceof Error ? error.message : String(error)}`
+        )
+      }
     }
   }
 

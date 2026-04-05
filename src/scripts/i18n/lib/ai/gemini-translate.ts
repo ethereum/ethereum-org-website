@@ -5,7 +5,7 @@
  * Gemini handles the linguistics; we handle the guardrails.
  */
 
-import { GoogleGenAI, HarmBlockThreshold,HarmCategory } from "@google/genai"
+import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
 import { delay } from "../workflows/utils"
@@ -21,10 +21,7 @@ import {
   restoreCodeBlocks,
   restoreComments,
 } from "./code-block-extractor"
-import {
-  normalizeContent,
-  type ContentNode,
-} from "./content-normalizer"
+import { type ContentNode, normalizeContent } from "./content-normalizer"
 import {
   validateTranslatedJson,
   validateTranslatedMarkdown,
@@ -282,7 +279,7 @@ async function translateNormalizedMarkdown(
   const placeholderOrder = extractPlaceholderOrder(translatedProse)
 
   // Step 6: Build placeholderMap from the normalizer tree
-  const placeholderMap = buildPlaceholderMap(tree, extractions)
+  const placeholderMap = buildPlaceholderMap(tree)
 
   // Step 7: Reconstruct
   let finalContent = reconstructFromPlaceholders(translatedProse, extractions)
@@ -338,8 +335,7 @@ function extractPlaceholderOrder(translated: string): string[] {
  * placeholder IDs that appear in the normalized output.
  */
 function buildPlaceholderMap(
-  tree: ContentNode[],
-  extractions: Map<string, string>
+  tree: ContentNode[]
 ): Record<string, PlaceholderInert> {
   const map: Record<string, PlaceholderInert> = {}
 
@@ -380,7 +376,10 @@ function buildPlaceholderMap(
       if (hashMatch) {
         map[`COMPONENT-${hashMatch[1]}`] = {
           type: "component",
-          values: { componentName: node.meta.componentName, ...node.meta.inertAttributes },
+          values: {
+            componentName: node.meta.componentName,
+            ...node.meta.inertAttributes,
+          },
         }
       }
     }
@@ -463,10 +462,7 @@ function restoreHeadingIds(translated: string, english: string): string {
  * Verify all placeholder tags from the normalized input survive in the translation.
  * Returns a list of missing placeholders.
  */
-function verifyPlaceholders(
-  normalized: string,
-  translated: string
-): string[] {
+function verifyPlaceholders(normalized: string, translated: string): string[] {
   const missing: string[] = []
 
   // Block placeholders (self-closing)
@@ -479,7 +475,8 @@ function verifyPlaceholders(
   }
 
   // Self-closing CODEBLOCK (true code) and COMPONENT (childless)
-  const selfClosingRe = /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT)-[a-f0-9]+ \/>/g
+  const selfClosingRe =
+    /<HTML-PLACEHOLDER-(?:CODEBLOCK|COMPONENT)-[a-f0-9]+ \/>/g
   while ((match = selfClosingRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -487,7 +484,8 @@ function verifyPlaceholders(
   }
 
   // Wrapper open tags
-  const wrapperOpenRe = /<HTML-PLACEHOLDER-(?:CODEBLOCK|LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
+  const wrapperOpenRe =
+    /<HTML-PLACEHOLDER-(?:CODEBLOCK|LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
   while ((match = wrapperOpenRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -495,7 +493,8 @@ function verifyPlaceholders(
   }
 
   // Wrapper close tags
-  const wrapperCloseRe = /<\/HTML-PLACEHOLDER-(?:CODEBLOCK|LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
+  const wrapperCloseRe =
+    /<\/HTML-PLACEHOLDER-(?:CODEBLOCK|LINK|HTMLTAG|COMPONENT)-[a-f0-9]+>/g
   while ((match = wrapperCloseRe.exec(normalized)) !== null) {
     if (!translated.includes(match[0])) {
       missing.push(match[0])
@@ -522,7 +521,12 @@ function reconstructFromPlaceholders(
   // Content-addressed placeholders can appear multiple times when the
   // same inline code/image appears repeatedly (e.g., `base fee` x5).
   extractions.forEach((original, placeholder) => {
-    if (placeholder.startsWith("LINK:") || placeholder.startsWith("HTMLTAG:") || placeholder.startsWith("COMPONENT:") || placeholder.startsWith("CODEBLOCK:")) {
+    if (
+      placeholder.startsWith("LINK:") ||
+      placeholder.startsWith("HTMLTAG:") ||
+      placeholder.startsWith("COMPONENT:") ||
+      placeholder.startsWith("CODEBLOCK:")
+    ) {
       return
     }
     result = result.split(placeholder).join(original)
@@ -545,7 +549,9 @@ function reconstructFromPlaceholders(
       const translatedText = result.slice(openIdx + openTag.length, closeIdx)
       const rebuilt = `[${translatedText}](${urlMatch[1]})`
       result =
-        result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+        result.slice(0, openIdx) +
+        rebuilt +
+        result.slice(closeIdx + closeTag.length)
       openIdx = result.indexOf(openTag)
     }
   })
@@ -567,7 +573,9 @@ function reconstructFromPlaceholders(
       const translatedText = result.slice(openIdx + openTag.length, closeIdx)
       const rebuilt = `<${tagMatch[1]}${tagMatch[2] || ""}>${translatedText}</${closingMatch[1]}>`
       result =
-        result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+        result.slice(0, openIdx) +
+        rebuilt +
+        result.slice(closeIdx + closeTag.length)
       openIdx = result.indexOf(openTag)
     }
   })
@@ -586,10 +594,15 @@ function reconstructFromPlaceholders(
     while (openIdx >= 0) {
       const closeIdx = result.indexOf(closeTag, openIdx)
       if (closeIdx < 0) break
-      const translatedChildren = result.slice(openIdx + openTag.length, closeIdx)
+      const translatedChildren = result.slice(
+        openIdx + openTag.length,
+        closeIdx
+      )
       const rebuilt = `<${openingTagMatch[1]}${openingTagMatch[2] || ""}>${translatedChildren}</${closingTagMatch[1]}>`
       result =
-        result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+        result.slice(0, openIdx) +
+        rebuilt +
+        result.slice(closeIdx + closeTag.length)
       openIdx = result.indexOf(openTag)
     }
   })
@@ -610,7 +623,9 @@ function reconstructFromPlaceholders(
       const translatedContent = result.slice(openIdx + openTag.length, closeIdx)
       const rebuilt = `${fenceMatch[1]}${fenceMatch[2]}${fenceMatch[3]}\n${translatedContent.trim()}\n${fenceMatch[1]}${fenceMatch[2]}`
       result =
-        result.slice(0, openIdx) + rebuilt + result.slice(closeIdx + closeTag.length)
+        result.slice(0, openIdx) +
+        rebuilt +
+        result.slice(closeIdx + closeTag.length)
       openIdx = result.indexOf(openTag)
     }
   })
@@ -623,8 +638,18 @@ function reconstructFromPlaceholders(
  */
 function collectCommentNodes(
   tree: ContentNode[]
-): Array<{ text: string; language: string; line: string; commentType: string }> {
-  const comments: Array<{ text: string; language: string; line: string; commentType: string }> = []
+): Array<{
+  text: string
+  language: string
+  line: string
+  commentType: string
+}> {
+  const comments: Array<{
+    text: string
+    language: string
+    line: string
+    commentType: string
+  }> = []
 
   function visit(node: ContentNode): void {
     if (node.type === "code-comment") {
@@ -654,7 +679,12 @@ function collectCommentNodes(
  */
 async function translateNormalizedComments(
   content: string,
-  commentNodes: Array<{ text: string; language: string; line: string; commentType: string }>,
+  commentNodes: Array<{
+    text: string
+    language: string
+    line: string
+    commentType: string
+  }>,
   targetLanguage: string,
   glossaryTerms: Map<string, string>,
   filePath: string
@@ -729,7 +759,9 @@ async function translateJsonFile(
     )
   }
   if (prepared.htmlExtracted) {
-    console.log(`  [html-extract] ${filePath}: HTML tags replaced with placeholders`)
+    console.log(
+      `  [html-extract] ${filePath}: HTML tags replaced with placeholders`
+    )
   }
 
   const translatedBatches: string[] = []
@@ -965,7 +997,7 @@ async function callGemini(
  *
  * Returns the raw text response and token usage.
  */
-async function callGeminiRaw(
+export async function callGeminiRaw(
   prompt: string,
   metadata?: GeminiCallMetadata
 ): Promise<{ text: string; tokensUsed: { input: number; output: number } }> {
@@ -1008,7 +1040,9 @@ async function callGeminiRaw(
         )
         if (sourceMatch) {
           const [, preamble, sourceFile] = sourceMatch
-          console.log(`::group::Prompt preamble: ${ctx} (rules, glossary, hints)`)
+          console.log(
+            `::group::Prompt preamble: ${ctx} (rules, glossary, hints)`
+          )
           console.log(preamble.trim())
           console.log("::endgroup::")
           console.log(`::group::Source file: ${ctx} (${prompt.length} chars)`)

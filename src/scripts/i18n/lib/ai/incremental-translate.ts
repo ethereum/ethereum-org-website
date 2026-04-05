@@ -245,6 +245,125 @@ export function replaceSections(
 }
 
 // ---------------------------------------------------------------------------
+// Section extraction
+// ---------------------------------------------------------------------------
+
+interface ExtractedSection {
+  id: string
+  level: number
+  headingText: string
+  /** Body content below the heading (excludes heading line) */
+  body: string
+}
+
+/**
+ * Extract sections from a markdown file, keyed by heading {#id}.
+ * Returns sections in document order.
+ */
+export function extractSections(content: string): ExtractedSection[] {
+  const lines = content.split("\n")
+  const headingPattern = /^(#{1,6})\s+(.+?)(?:\s*\{#([^}]+)\})?\s*$/
+  const sections: ExtractedSection[] = []
+
+  // Find all heading positions
+  const headings: Array<{
+    line: number
+    level: number
+    id: string
+    text: string
+  }> = []
+  for (let i = 0; i < lines.length; i++) {
+    const match = lines[i].match(headingPattern)
+    if (match) {
+      const level = match[1].length
+      const rawText = match[2]
+      const customId = match[3]
+      if (customId) {
+        headings.push({
+          line: i,
+          level,
+          id: customId,
+          text: rawText.replace(/\s*\{#[^}]+\}/, "").trim(),
+        })
+      }
+    }
+  }
+
+  // Extract body content for each heading
+  for (let i = 0; i < headings.length; i++) {
+    const current = headings[i]
+    const bodyStart = current.line + 1
+    let bodyEnd = lines.length
+
+    // Find the end: next heading of same or higher level
+    for (let j = i + 1; j < headings.length; j++) {
+      if (headings[j].level <= current.level) {
+        bodyEnd = headings[j].line
+        break
+      }
+    }
+
+    const body = lines.slice(bodyStart, bodyEnd).join("\n").trim()
+    sections.push({
+      id: current.id,
+      level: current.level,
+      headingText: current.text,
+      body,
+    })
+  }
+
+  return sections
+}
+
+/**
+ * Build the TRANSLATE/CONTEXT section list for an incremental prompt.
+ *
+ * @param englishSections - Sections from current English file
+ * @param localeSections - Sections from existing locale file
+ * @param translateIds - Section IDs that need translation (from drift detection)
+ */
+export function buildSectionList(
+  englishSections: ExtractedSection[],
+  localeSections: ExtractedSection[],
+  translateIds: string[]
+): SectionForPrompt[] {
+  const localeMap = new Map<string, ExtractedSection>()
+  for (const s of localeSections) {
+    localeMap.set(s.id, s)
+  }
+
+  const translateSet = new Set(translateIds)
+  const result: SectionForPrompt[] = []
+
+  for (const section of englishSections) {
+    if (translateSet.has(section.id)) {
+      // Changed section: send English content for translation
+      result.push({
+        id: section.id,
+        action: "TRANSLATE",
+        content: section.body,
+        headingText: section.headingText,
+        level: section.level,
+      })
+    } else {
+      // Unchanged section: send existing locale translation as context
+      const localeSection = localeMap.get(section.id)
+      if (localeSection) {
+        result.push({
+          id: section.id,
+          action: "CONTEXT",
+          content: localeSection.body,
+          headingText: localeSection.headingText,
+          level: section.level,
+        })
+      }
+    }
+  }
+
+  return result
+}
+
+// ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
