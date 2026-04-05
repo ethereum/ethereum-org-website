@@ -1,6 +1,6 @@
 ---
-title: Comprendiendo los estándares de tokens
-description: Una guía sobre los estándares de tokens más comunes en Ethereum y cómo funcionan.
+title: "Comprendiendo los estándares de tokens"
+description: "Una guía sobre los estándares de tokens más comunes en Ethereum y cómo funcionan."
 image: /images/tokens/token-standards-hero.png
 alt: "Diagrama de estándares de tokens"
 template: tutorial
