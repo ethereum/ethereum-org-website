@@ -1,6 +1,6 @@
 ---
-title: ریپڈ ایتھر (ڈبلیو ایتھ) کیا ہے
-description: ریپڈ ایتھر (ڈبلیو ایتھ) کا تعارف—ایتھر (ETH) کے لیے ایک ERC-20 سے مطابقت رکھنے والا ریپر۔
+title: "ریپڈ ایتھر (ڈبلیو ایتھ) کیا ہے"
+description: "ریپڈ ایتھر (ڈبلیو ایتھ) کا تعارف—ایتھر (ETH) کے لیے ایک ERC-20 سے مطابقت رکھنے والا ریپر۔"
 lang: ur
 ---
 
@@ -17,7 +17,7 @@ lang: ur
 
 آپ <span dir="ltr">WETH</span> سمارٹ کنٹریکٹ کا استعمال کر کے <span dir="ltr">ETH</span> کے لیے <span dir="ltr">WETH</span> کو ان ریپ کر سکتے ہیں۔ آپ <span dir="ltr">WETH</span> سمارٹ کنٹریکٹ کے ساتھ کسی بھی مقدار میں <span dir="ltr">WETH</span> کو ریڈیم کر سکتے ہیں، اور آپ کو اتنی ہی مقدار میں <span dir="ltr">ETH</span> موصول ہوں گے۔ جمع کرائے گئے <span dir="ltr">WETH</span> کو پھر برن کر دیا جاتا ہے اور <span dir="ltr">WETH</span> کی گردش کرنے والی سپلائی سے نکال دیا جاتا ہے۔
 
-**گردش کرنے والی <span dir="ltr">ETH</span> سپلائی کا تقریباً <span dir="ltr">~3%</span> حصہ <span dir="ltr">WETH</span> ٹوکن کنٹریکٹ میں مقفل ہے** جو اسے سب سے زیادہ استعمال ہونے والے [سمارٹ کنٹریکٹس](/glossary/#smart-contract) میں سے ایک بناتا ہے۔ <span dir="ltr">WETH</span> خاص طور پر ان صارفین کے لیے اہم ہے جو غیر مرکزی مالیات (<span dir="ltr">DeFi</span>) میں ایپلی کیشنز کے ساتھ تعامل کرتے ہیں۔
+**گردش کرنے والی <span dir="ltr">ETH</span> سپلائی کا تقریباً <span dir="ltr">\~3%</span> حصہ <span dir="ltr">WETH</span> ٹوکن کنٹریکٹ میں مقفل ہے** جو اسے سب سے زیادہ استعمال ہونے والے [سمارٹ کنٹریکٹس](/glossary/#smart-contract) میں سے ایک بناتا ہے۔ <span dir="ltr">WETH</span> خاص طور پر ان صارفین کے لیے اہم ہے جو غیر مرکزی مالیات (<span dir="ltr">DeFi</span>) میں ایپلی کیشنز کے ساتھ تعامل کرتے ہیں۔
 
 ## ہمیں <span dir="ltr">ETH</span> کو <span dir="ltr">ERC-20</span> کے طور پر ریپ کرنے کی ضرورت کیوں ہے؟ {#why-do-we-need-to-wrap-eth}
 
