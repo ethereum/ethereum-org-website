@@ -1,0 +1,20 @@
+{
+  "test-title": "Стандарты токенов",
+  "test-description": "Узнайте о самых распространенных стандартах токенов, используемых в Эфириуме.",
+  "test-cta-primary": "Начать",
+  "test-cta-secondary": "Смотреть документацию",
+  "test-stat-label": "Всего развернуто токенов",
+  "test-banner-text": "Впервые работаете с токенами? Начните с нашего <a href=\"/developers/docs/standards/tokens/\">введения в стандарты токенов</a>.",
+  "test-footnote": "Данные о токенах получены из <a href=\"https://eth.blockscout.com/tokens\" target=\"_blank\">Blockscout</a>. Цены предоставлены <a href=\"https://www.coingecko.com\" target=\"_blank\">CoinGecko</a>.",
+  "test-filter-label": "Фильтровать по стандарту",
+  "test-empty-results": "Не найдено токенов, соответствующих вашим критериям. Попробуйте удалить некоторые фильтры.",
+  "test-nested": {
+    "section-title": "Продвинутые темы",
+    "section-description": "Подробный разбор механики токенов и лучших практик."
+  },
+  "test-last-updated": "Последнее обновление: апрель 2025 г.",
+  "test-multi-link": "Разверните с помощью <a href=\"https://remix.ethereum.org/\">Remix</a> в <a href=\"https://sepolia.dev/\">Sepolia</a> и верифицируйте в <a href=\"https://eth.blockscout.com/\">Blockscout</a>.",
+  "test-welcome-user": "С возвращением, {username}!",
+  "test-token-count": "{count, plural, =0 {Токены не найдены} one {Найден # токен} few {Найдено # токена} many {Найдено # токенов} other {Найдено # токенов}}",
+  "test-transfer-status": "{status, select, pending {Ваш перевод {amount} ETH находится в ожидании} confirmed {Ваш перевод {amount} ETH подтвержден} failed {Ваш перевод {amount} ETH не удался} other {Неизвестный статус}}"
+}
