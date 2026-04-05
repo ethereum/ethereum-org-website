@@ -148,8 +148,8 @@ importers:
         specifier: ^3.33.1
         version: 3.33.1
       intl-content-tree:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       lodash:
         specifier: ^4.18.1
         version: 4.18.1
@@ -7535,8 +7535,8 @@ packages:
     resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
     engines: {node: '>=12'}
 
-  intl-content-tree@0.1.1:
-    resolution: {integrity: sha512-xsNs+zzPFt4jEQFrm38tKaMrIGi1Opwa4EiMNBeMcXsLyZrqLxd8pHUkUlY77KLh6tL5Z0kWGcs+LEbklrhG9Q==}
+  intl-content-tree@0.1.2:
+    resolution: {integrity: sha512-06kIRNiCmUleTBBhVcEhnEHrlSMoswN7ALuOD2vHS0z9MU1byoQU7a0w2Uus8VC58ks+sjXZImMwm8FrLsyawg==}
 
   intl-messageformat@11.2.0:
     resolution: {integrity: sha512-IhghAA8n4KSlXuWKzYsWyWb82JoYTzShfyvdSF85oJPnNOjvv4kAo7S7Jtkm3/vJ53C7dQNRO+Gpnj3iWgTjBQ==}
@@ -20768,7 +20768,7 @@ snapshots:
 
   internmap@2.0.3: {}
 
-  intl-content-tree@0.1.1: {}
+  intl-content-tree@0.1.2: {}
 
   intl-messageformat@11.2.0:
     dependencies:
