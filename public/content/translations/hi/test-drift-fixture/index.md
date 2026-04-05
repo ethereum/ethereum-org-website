@@ -1,6 +1,6 @@
 ---
-title: टोकन मानकों को समझना
-description: इथेरियम पर सबसे आम टोकन मानकों और वे कैसे काम करते हैं, इसके लिए एक गाइड।
+title: "टोकन मानकों को समझना"
+description: "इथेरियम पर सबसे आम टोकन मानकों और वे कैसे काम करते हैं, इसके लिए एक गाइड।"
 image: /images/tokens/token-standards-hero.png
 alt: "टोकन मानक आरेख"
 template: tutorial
