@@ -1,11 +1,11 @@
 {
   "test-title": "Token Standards",
-  "test-description": "Learn about the most common token standards used on Ethereum.",
+  "test-description": "Learn about the most widely used token standards on the Ethereum network.",
   "test-cta-primary": "Get started",
   "test-cta-secondary": "View documentation",
   "test-stat-label": "Total tokens deployed",
   "test-banner-text": "New to tokens? Start with our <a href=\"/developers/docs/standards/tokens/\">introduction to token standards</a>.",
-  "test-footnote": "Token data sourced from <a href=\"https://eth.blockscout.com/tokens\" target=\"_blank\">Blockscout</a>. Pricing provided by <a href=\"https://www.coingecko.com\" target=\"_blank\">CoinGecko</a>.",
+  "test-footnote": "Token data sourced from <a href=\"https://eth.blockscout.com/tokens?type=ERC-20\" target=\"_blank\">Blockscout</a>. Pricing provided by <a href=\"https://www.coingecko.com\" target=\"_blank\">CoinGecko</a>.",
   "test-filter-label": "Filter by standard",
   "test-empty-results": "No tokens found matching your criteria. Try removing some filters.",
   "test-nested": {
@@ -16,5 +16,6 @@
   "test-multi-link": "Deploy with <a href=\"https://remix.ethereum.org/\">Remix</a> on <a href=\"https://sepolia.dev/\">Sepolia</a>, and verify on <a href=\"https://eth.blockscout.com/\">Blockscout</a>.",
   "test-welcome-user": "Welcome back, {username}!",
   "test-token-count": "{count, plural, =0 {No tokens found} one {# token found} other {# tokens found}}",
-  "test-transfer-status": "{status, select, pending {Your transfer of {amount} ETH is pending} confirmed {Your transfer of {amount} ETH has been confirmed} failed {Your transfer of {amount} ETH failed} other {Unknown status}}"
+  "test-transfer-status": "{status, select, pending {Your transfer of {amount} ETH is pending} confirmed {Your transfer of {amount} ETH has been confirmed} failed {Your transfer of {amount} ETH failed} other {Unknown status}}",
+  "test-new-key": "This is a brand new translation string added after the initial sweep."
 }

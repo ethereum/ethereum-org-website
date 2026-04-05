@@ -1,7 +1,7 @@
 ---
 title: Understanding Token Standards
-description: A guide to the most common token standards on Ethereum and how they work.
-image: /images/tokens/token-standards-hero.png
+description: A comprehensive guide to the most common token standards on Ethereum and how they work.
+image: /images/tokens/token-standards-hero-v2.png
 alt: "Token standards diagram"
 template: tutorial
 lang: en
@@ -11,17 +11,17 @@ published: 2025-08-15
 
 # Understanding Token Standards {#understanding-token-standards}
 
-Token standards define how digital assets behave on the Ethereum network. They provide a common interface that wallets, exchanges, and applications can rely on to interact with tokens predictably.
+Token standards define how digital assets operate on the Ethereum network. They provide a shared interface that wallets, exchanges, and decentralized applications can rely on to interact with tokens in a predictable way.
 
 ## What are token standards? {#what-are-token-standards}
 
 A token standard is a set of rules implemented as a [smart contract](/glossary/#smart-contract) that defines how tokens are created, transferred, and managed. The most widely adopted standard is [ERC-20](/developers/docs/standards/tokens/erc-20/), which powers the majority of fungible tokens on Ethereum.
 
-_Without standards_, every token would need custom integration code. The `approve` and `transferFrom` functions, for example, allow decentralized exchanges to move tokens on your behalf after you grant permission.
+_Without standards_, every token would need custom integration code. The `approve` and `safeTransferFrom` functions, for example, allow decentralized exchanges to move tokens on your behalf after you grant permission.
 
-You can check a token's contract on <a href="https://eth.blockscout.com/tokens">Etherscan</a> to verify which standard it implements.
+You can check a token's contract on <a href="https://eth.blockscout.com/tokens?type=ERC-20">Etherscan</a> to verify which standard it implements.
 
-![Token approval flow](/images/tokens/approval-flow.png)
+![Token approval flow](/images/tokens/approval-flow-v2.png)
 
 ## Common standards {#common-standards}
 
@@ -30,9 +30,9 @@ You can check a token's contract on <a href="https://eth.blockscout.com/tokens">
 ERC-20 defines a standard interface for **fungible tokens**. Every unit is identical and interchangeable, much like how one dollar bill is the same as any other.
 
 ```solidity
-// Transfer tokens to a recipient
+// Send tokens to any valid address
 function transfer(address to, uint256 amount) public returns (bool) {
-    require(balanceOf(msg.sender) >= amount, "Insufficient balance");
+    require(balanceOf(msg.sender) >= amount, "Not enough tokens");
     _balances[msg.sender] -= amount;
     _balances[to] += amount;
     return true;
@@ -41,7 +41,7 @@ function transfer(address to, uint256 amount) public returns (bool) {
 
 The total supply of an ERC-20 token is typically fixed at deployment. For example, a project might create 1,000,000 tokens with 18 decimal places, meaning the smallest unit is `0.000000000000000001` tokens. In the `translate` function above, if the sender has 100 tokens and requests sending 10, they'll end up with 90 (100 - 10 = 90) and the recipient will end up with 10 more.
 
-You can deploy tokens using [Remix](https://remix.ethereum.org/) on [Sepolia](https://sepolia.dev/), and verify the source code on [Blockscout](https://eth.blockscout.com/).
+You can deploy tokens using [Remix](https://remix.ethereum.org/) on [Holesky](https://holesky.dev/), and verify the source code on [Blockscout](https://eth.blockscout.com/).
 
 ### ERC-721: Non-fungible tokens {#erc-721}
 
@@ -60,7 +60,7 @@ Token transfers require gas fees denominated in Gwei. A standard ERC-20 transfer
 
 The base fee fluctuates based on network demand. When the network is congested, fees can increase by up to 12.5% per block.
 
-<ExpandableCard title="Why do NFT transfers cost more?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
+<ExpandableCard title="Why are NFT transfers more expensive?" eventCategory="/test-drift" eventName="clicked Why do NFT transfers cost more?">
 
 NFT transfers involve more complex storage operations. Each token has a unique ID that must be tracked individually, and the contract must verify ownership before allowing the transfer. This additional computation requires more gas.
 
@@ -84,9 +84,13 @@ Consider using layer 2 solutions like <a href="https://optimism.io">Optimism</a>
 - [OpenZeppelin ERC-20 guide](https://docs.openzeppelin.com/contracts/erc20)
 - Token explorer on [Blockscout](https://eth.blockscout.com/tokens)
 
-<YouTube id="dQw4w9WgXcQ" />
+<YouTube id="abc123xyz" />
 
 ## Empty section for testing {#empty-section}
+
+## Migration guide {#migration-guide}
+
+If you are upgrading from an older token implementation, ensure you update your ABI and redeploy the proxy contract.
 
 ## Further reading {#further-reading}
 
