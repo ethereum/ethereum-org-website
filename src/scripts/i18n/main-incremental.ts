@@ -467,7 +467,8 @@ async function main() {
       task.file.content,
       task.sourceManifestJson,
       task.translationManifest,
-      task.file.type
+      task.file.type,
+      task.localeContent
     )
 
     if (changes.length === 0) continue

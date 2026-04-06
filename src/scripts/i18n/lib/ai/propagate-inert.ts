@@ -72,7 +72,8 @@ export function detectInertChanges(
   englishContent: string,
   sourceManifestJson: string,
   translationManifest: LocaleTranslationManifest,
-  format: "markdown" | "json" = "markdown"
+  format: "markdown" | "json" = "markdown",
+  localeContent?: string
 ): InertChange[] {
   const changes: InertChange[] = []
   const drift = detectDrift(englishContent, sourceManifestJson, format)
@@ -82,6 +83,14 @@ export function detectInertChanges(
     format === "json"
       ? parseEnglishJson(englishContent)
       : parseEnglishMarkdown(englishContent)
+
+  // Parse locale file for fallback old-value lookup (inert values aren't
+  // translated, so the locale file has the same values as old English)
+  const localeTree = localeContent
+    ? format === "json"
+      ? parseEnglishJson(localeContent)
+      : parseEnglishMarkdown(localeContent)
+    : undefined
 
   // Get old manifest tree (has old anchor hashes for structural matching)
   const oldManifest: TreeManifest = JSON.parse(sourceManifestJson)
@@ -106,36 +115,59 @@ export function detectInertChanges(
       // Skip if anchor hash hasn't actually changed
       if (pair.oldAnchorHash === pair.newNode.anchorHash) continue
 
-      // Find translation manifest entry whose values hash to old anchorHash.
-      // consumed set prevents the same entry being matched twice when
-      // multiple nodes share identical old values (e.g. duplicate links).
+      // Try translation manifest first
       const manifestMatch = findManifestEntryByAnchorHash(
         translationManifest,
         pair.oldAnchorHash,
         consumed
       )
-      if (!manifestMatch) continue
-      consumed.add(manifestMatch.id)
+      if (manifestMatch) {
+        consumed.add(manifestMatch.id)
+      }
 
-      // Compare each inert value (with key aliasing: tree and normalizer
-      // use different names for the same attributes)
+      // Compare each inert value
       for (const [key, newValue] of Object.entries(newValues)) {
-        let oldValue =
-          manifestMatch.entry.values[key] ??
-          (key === "href" ? manifestMatch.entry.values.url : undefined) ??
-          (key === "url" ? manifestMatch.entry.values.href : undefined) ??
-          (key === "src" ? manifestMatch.entry.values.path : undefined) ??
-          (key === "path" ? manifestMatch.entry.values.src : undefined)
+        let oldValue: string | undefined
 
-        // Fallback: if key not found by name, find the manifest value
-        // whose hash matches the old anchorHash. Handles cases where the
-        // normalizer bundles attributes under different key names than
-        // the tree (e.g., tree "value" vs normalizer "emoji")
-        if (!oldValue) {
+        // Strategy 1: look up in translation manifest (with key aliasing)
+        if (manifestMatch) {
+          oldValue =
+            manifestMatch.entry.values[key] ??
+            (key === "href" ? manifestMatch.entry.values.url : undefined) ??
+            (key === "url" ? manifestMatch.entry.values.href : undefined) ??
+            (key === "src" ? manifestMatch.entry.values.path : undefined) ??
+            (key === "path" ? manifestMatch.entry.values.src : undefined)
+        }
+
+        // Strategy 2: hash-match individual manifest values (handles
+        // normalizer bundling attrs under different key names)
+        if (!oldValue && manifestMatch) {
           for (const v of Object.values(manifestMatch.entry.values)) {
             if (treeHash(v) === pair.oldAnchorHash) {
               oldValue = v
               break
+            }
+          }
+        }
+
+        // Strategy 3: parse locale file to get old value directly.
+        // Inert values aren't translated, so the locale file has the
+        // same URLs/paths as the old English. This bypasses the
+        // translation manifest entirely -- handles frontmatter fields,
+        // component attributes, and any other nodes the normalizer
+        // doesn't store in placeholderMap.
+        if (!oldValue && localeTree) {
+          const localeSection = findNodeById(localeTree, entry.id)
+          if (localeSection) {
+            for (const localePair of matchInertNodes(
+              localeSection,
+              oldSectionNode
+            )) {
+              if (localePair.newNode.id === pair.newNode.id) {
+                const localeValues = getNodeInertValues(localePair.newNode)
+                oldValue = localeValues[key]
+                break
+              }
             }
           }
         }
