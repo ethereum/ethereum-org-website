@@ -1,0 +1,26 @@
+{
+  "title": "سمارٹ کنٹریکٹ ٹولز",
+  "description": "ایتھیریم پر سمارٹ کنٹریکٹس بنانے، ٹیسٹ کرنے اور تعینات کرنے کے لیے بہترین ٹولز دریافت کریں۔",
+  "cta-primary": "شروع کریں",
+  "cta-secondary": "دستاویزات دیکھیں",
+  "stat-label": "اس ماہ تعینات کیے گئے کنٹریکٹس",
+  "banner-text": "کیا آپ سمارٹ کنٹریکٹس کے لیے نئے ہیں؟ ہمارے <a href=\"/developers/docs/smart-contracts/\">سمارٹ کنٹریکٹس کے تعارف</a> سے شروع کریں۔",
+  "footnote": "کنٹریکٹ کا ڈیٹا <a href=\"https://eth.blockscout.com/\" target=\"_blank\">Blockscout</a> سے لیا گیا ہے۔ گیس کی قیمتیں <a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a> سے ہیں۔ ٹولنگ کو <a href=\"https://www.openzeppelin.com/\" target=\"_blank\">اوپن زیپلن</a> کے ذریعے برقرار رکھا جاتا ہے۔",
+  "filter-label": "فریم ورک کے لحاظ سے فلٹر کریں",
+  "empty-results": "آپ کے معیار کے مطابق کوئی ٹولز نہیں ملے۔ اپنے فلٹرز کو تبدیل کرنے کی کوشش کریں۔",
+  "nested": {
+    "section-title": "ایڈوانسڈ پیٹرنز",
+    "section-description": "پراکسی کنٹریکٹس، اپ گریڈ ایبل پیٹرنز، اور گیس آپٹیمائزیشن کی تکنیکیں دریافت کریں۔",
+    "subsection": {
+      "label": "پراکسی پیٹرنز",
+      "hint": "Transparent، UUPS، اور beacon پراکسی کی عمل داریاں۔"
+    }
+  },
+  "icon-link": "<a href=\"/assets/smart-contracts-icon.svg\"></a>",
+  "multi-link-sentence": "<a href=\"https://sepolia.dev/\">Sepolia</a> پر <a href=\"https://remix.ethereum.org/\">Remix</a> کے ساتھ تعینات کریں، <a href=\"https://eth.blockscout.com/\">Blockscout</a> پر تصدیق کریں، اور <a href=\"https://www.openzeppelin.com/defender\">Defender</a> کے ساتھ آڈٹ کریں۔",
+  "welcome-user": "خوش آمدید، {username}!",
+  "tool-count": "{count, plural, =0 {کوئی ٹولز نہیں ملے} one {# ٹول ملا} other {# ٹولز ملے}}",
+  "deploy-status": "{status, select, pending {آپ کی تعیناتی کی تصدیق زیر التوا ہے} confirmed {آپ کا کنٹریکٹ {address} پر تعینات کر دیا گیا ہے} failed {تعیناتی ناکام ہو گئی: {reason}} other {نامعلوم اسٹیٹس}}",
+  "html-and-icu": "<a href=\"https://eth.blockscout.com/\">Blockscout</a> پر آپ کے پاس {count, plural, one {# فعال کنٹریکٹ ہے} other {# فعال کنٹریکٹس ہیں}}۔",
+  "dapp-description": "**Hardhat** ایک پیشہ ورانہ درجے کا ایتھیریم ڈیولپمنٹ ماحول ہے۔\n\n- **کمپائل**: کیشنگ کے ساتھ بلٹ ان Solidity کمپائلر۔\n- **ٹیسٹ**: Mocha انضمام کے ساتھ تیز ٹیسٹ رنر۔\n- **تعینات کرنا**: اسکرپٹ ایبل تعیناتی پائپ لائنز۔\n\n![Hardhat UI](https://raw.githubusercontent.com/NomicFoundation/hardhat/main/docs/.vuepress/public/hardhat-logo.png)\n\n*Hardhat ایتھیریم، Polygon، اور Arbitrum نیٹ ورکس کو سپورٹ کرتا ہے۔*"
+}
