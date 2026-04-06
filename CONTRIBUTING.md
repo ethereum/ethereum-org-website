@@ -1,8 +1,25 @@
-<h1 align="center" style="margin-top: 1em; margin-bottom: 2em;">
-  <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./public/images/assets/eth-transparent.png" alt="ethereum.org" width="125"></a></p>
-  <p>👋 Contributing to ethereum.org</p>
-</h1>
 
-### Thank you for your interest in contributing!
+# 🤝 Contributing to AI Multi-language Translator
 
-Please see [our contributing guide on ethereum.org](https://ethereum.org/contributing/) and [our GitHub repo homepage](https://github.com/ethereum/ethereum-org-website#how-to-contribute) for the latest information on how to contribute!
+ขอบคุณที่สนใจมาร่วมพัฒนาโปรเจกต์เครื่องมือแปลภาษาด้วย AI สำหรับชุมชน Web3 ครับ! โปรเจกต์นี้เริ่มต้นโดย **Project Maintainer จาก ethereum.org (Thai Localization)** เพื่อสร้างมาตรฐานใหม่ในการเข้าถึงข้อมูลเทคโนโลยี
+
+## 🚀 เรากำลังต้องการความช่วยเหลือในด้าน:
+
+- **Localization Accuracy:** ช่วยตรวจสอบความถูกต้องของศัพท์เทคนิค Blockchain และ Web3 ในภาษาไทย
+- **AI Prompt Optimization:** เสนอไอเดียการปรับจูน Prompt ให้ AI แปลออกมาได้สละสลวยและรักษาบริบท (Context) ได้ดีขึ้น
+- **Feature Requests:** หากคุณอยากให้โปรแกรมรองรับไฟล์ประเภทใหม่ๆ (เช่น JSON, PDF, หรือ Smart Contract Comments) สามารถเปิด Issue แจ้งได้เลย
+
+## 🛠️ ขั้นตอนการร่วมพัฒนา (How to Contribute)
+
+1. **Fork** โปรเจกต์นี้ไปยังบัญชีของคุณ
+2. **Create a Branch** สำหรับฟีเจอร์หรือการแก้ไขที่คุณต้องการทำ
+3. **Commit** การเปลี่ยนแปลงพร้อมคำอธิบายที่ชัดเจน
+4. **Open a Pull Request** เพื่อให้เราตรวจสอบและนำมารวมกับโปรเจกต์หลัก
+
+## 📜 มาตรฐานการทำงาน
+เรายึดถือมาตรฐานเดียวกับโครงการ Open Source ระดับโลก:
+- ใช้ศัพท์เทคนิคที่อ้างอิงจาก **ethereum.org Thai Glossary**
+- โค้ด Python ต้องอ่านง่ายและมีการทำ Comment อธิบาย
+
+---
+**ร่วมกันสร้างเครื่องมือที่จะทำให้ความรู้ Web3 เป็นเรื่องง่ายสำหรับคนไทยทุกคน!** 🇹🇭
