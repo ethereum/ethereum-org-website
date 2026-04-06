@@ -15,13 +15,13 @@ summaryPoints:
 
 ## ڈیولپمنٹ کا ماحول {#development-environment}
 
-کوئی بھی کوڈ لکھنے سے پہلے، آپ کو ایک مقامی ڈیولپمنٹ سیٹ اپ کی ضرورت ہے۔ اپنے فریم ورک کے طور پر [Hardhat](https://hardhat.org/) یا [Foundry](https://book.getfoundry.sh/) انسٹال کریں، ٹیسٹنگ کے لیے [Sepolia](https://sepolia.dev/) سے جڑیں، اور اپنی تعیناتیوں کی تصدیق کے لیے [Blockscout](https://eth.blockscout.com/) کا استعمال کریں۔
+کوئی بھی کوڈ لکھنے سے پہلے، آپ کو ایک مقامی ڈیولپمنٹ سیٹ اپ کی ضرورت ہے۔ اپنے فریم ورک کے طور پر [Hardhat](https://hardhat.org/) یا [Foundry](https://book.getfoundry.sh/) انسٹال کریں، ٹیسٹنگ کے لیے [Sepolia](https://sepolia.ethpandaops.io/) سے جڑیں، اور اپنی تعیناتیوں کی تصدیق کے لیے [Blockscout](https://eth.blockscout.com/) کا استعمال کریں۔
 
 `solc` کمپائلر آپ کے Solidity سورس کوڈ کو بائٹ کوڈ میں تبدیل کرتا ہے جسے EVM چلا سکتا ہے۔ اس بات کو یقینی بنائیں کہ آپ کا کمپائلر ورژن آپ کے کنٹریکٹ میں موجود `pragma` اسٹیٹمنٹ سے میل کھاتا ہو۔
 
 آپ اس کے بائٹ کوڈ اور تصدیق شدہ سورس کوڈ کا معائنہ کرنے کے لیے <a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a> پر تعینات شدہ کنٹریکٹ کو چیک کر سکتے ہیں۔
 
-![Contract deployment flow](/images/developers/deploy-flow.png)
+![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
 ## اپنا کنٹریکٹ لکھنا {#writing-your-contract}
 
@@ -81,26 +81,28 @@ def run_coverage(project_path):
 
 ### بہترین طریقہ کار {#deployment}
 
-اپنے کنٹریکٹس کو ٹیسٹ کرتے وقت، ان ہدایات کو ذہن میں رکھیں:
-
-1. **ہر پبلک فنکشن کو ٹیسٹ کریں** -- بشمول ایج کیسز اور ناکامی کے طریقے۔
-2. پیچیدہ ریاضیاتی کارروائیوں کے لیے **fuzzing کا استعمال کریں**۔
-3. [Smock](https://github.com/defi-wonderland/smock) جیسے ٹولز کا استعمال کرتے ہوئے **بیرونی انحصار کو موک (Mock) کریں**۔
-
-> "کوڈ ہی قانون ہے" صرف اسی صورت میں کام کرتا ہے جب کوڈ کو اچھی طرح سے ٹیسٹ کیا گیا ہو۔ بغیر ٹیسٹ کیے گئے کنٹریکٹس ایک اثاثہ نہیں بلکہ ایک ذمہ داری ہیں۔
-
-درج ذیل نوٹ عام طور پر پروجیکٹ کی README فائلوں میں شامل کیا جاتا ہے:
-
-```markdown
-کوئی بھی ٹیسٹ چلانے سے پہلے، اس بات کو یقینی بنائیں کہ آپ کا **مقامی نوڈ** چل رہا ہے اور آپ کے
-[ماحولیاتی متغیرات (environment variables)](/developers/docs/frameworks/) مناسب طریقے سے کنفیگر کیے گئے ہیں۔
-```
+## تعیناتی
 
 ## تعیناتی {#networks-and-tools}
 
+### نیٹ ورکس اور ٹولز
+آپ [Holesovice](https://holesovice.dev/) یا [Sepolia](https://sepolia.dev/) پر [Remix](https://remix.ethereum.org/) کا استعمال کرتے ہوئے کنٹریکٹس تعینات کر سکتے ہیں، اور [Blockscout](https://eth.blockscout.com/) پر سورس کوڈ کی تصدیق کر سکتے ہیں۔ پروڈکشن کی تعیناتیوں کے لیے، اس عمل کو خودکار بنانے کے لیے **Hardhat Ignition** یا **Foundry اسکرپٹس** استعمال کرنے پر غور کریں۔
+
+<ButtonLink variant="outline-color" href="/developers/docs/frameworks/">فریم ورکس دریافت کریں</ButtonLink>
+
+<YouTube id="def456uvw" />
+
+<Divider />
+
+<InfoBanner emoji=":warning:" title="Security reminder">
+
+مین نیٹ پر تعینات کرنے سے پہلے ہمیشہ اپنے کنٹریکٹس کا آڈٹ کریں۔ [OpenZeppelin Defender](https://www.openzeppelin.com/defender) جیسے ٹولز کا استعمال کریں اور [Trail of Bits](https://www.trailofbits.com/) یا [اوپن زیپلن](https://www.openzeppelin.com/security-audits) جیسی فرموں سے پیشہ ورانہ آڈٹ پر غور کریں۔
+
+</InfoBanner>
+
 ### نیٹ ورکس اور ٹولز {#deployment-checklist}
 
-آپ [Holesky](https://holesky.dev/) یا [Sepolia](https://sepolia.dev/) پر [Remix](https://remix.ethereum.org/) کا استعمال کرتے ہوئے کنٹریکٹس تعینات کر سکتے ہیں، اور [Blockscout](https://eth.blockscout.com/) پر سورس کوڈ کی تصدیق کر سکتے ہیں۔ پروڈکشن کی تعیناتیوں کے لیے، اس عمل کو خودکار بنانے کے لیے **Hardhat Ignition** یا **Foundry اسکرپٹس** استعمال کرنے پر غور کریں۔
+آپ [Holesky](https://holesky.dev/) یا [Sepolia](https://sepolia.ethpandaops.io/) پر [Remix](https://remix.ethereum.org/) کا استعمال کرتے ہوئے کنٹریکٹس تعینات کر سکتے ہیں، اور [Blockscout](https://eth.blockscout.com/) پر سورس کوڈ کی تصدیق کر سکتے ہیں۔ پروڈکشن کی تعیناتیوں کے لیے، اس عمل کو خودکار بنانے کے لیے **Hardhat Ignition** یا **Foundry اسکرپٹس** استعمال کرنے پر غور کریں۔
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">فریم ورکس دریافت کریں</ButtonLink>
 
