@@ -241,8 +241,10 @@ export function extractPlaceholderData(tree: TreeNode): {
         values.value = node.value
       }
       if (node.meta) {
+        // Include ALL meta keys (including tagName) so the hash of
+        // these values matches the tree's anchorHash computation.
         for (const [k, v] of Object.entries(node.meta)) {
-          if (k !== "tagName" && k !== "language" && k !== "name") {
+          if (k !== "language" && k !== "name") {
             values[k] = String(v)
           }
         }
