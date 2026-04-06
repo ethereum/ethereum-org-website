@@ -7,6 +7,8 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
   - "governance"
   - "upgrades"
 format: presentation

@@ -8,7 +8,6 @@ duration: "0:05:22"
 educationLevel: beginner
 topic:
   - "identity"
-  - "privacy"
 format: explainer
 author: Microsoft Security
 breadcrumb: "Decentralized Identity"

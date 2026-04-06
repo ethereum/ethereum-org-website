@@ -7,7 +7,7 @@ uploadDate: 2024-08-20
 duration: "0:12:45"
 educationLevel: beginner
 topic:
-  - "defi"
+  - "community-stories"
   - "community"
 format: interview
 author: When Shift Happens

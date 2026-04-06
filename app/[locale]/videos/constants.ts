@@ -1,12 +1,20 @@
 /**
  * Category configuration for the video gallery shelves.
+ *
  * Each category maps a URL-safe key to the tags that place a video in that shelf.
+ * The category key itself is always included as a tag so that any video can be
+ * explicitly assigned to a category by adding the key to its topic list.
+ *
+ * IMPORTANT: Avoid adding "cross-cutting" tags (e.g. "security", "governance",
+ * "history") to multiple categories — this causes videos to appear in the wrong
+ * shelves. Instead, use the category key tag on the video for explicit assignment.
  */
 export const VIDEO_CATEGORIES = [
   {
     key: "how-ethereum-works",
     labelKey: "page-videos-category-how-ethereum-works",
     tags: [
+      "how-ethereum-works",
       "consensus",
       "blockchain",
       "cryptography",
@@ -17,43 +25,50 @@ export const VIDEO_CATEGORIES = [
       "pow",
       "proof-of-authority",
       "pos",
-      "staking",
-      "withdrawals",
+      "smart-contracts",
     ],
   },
   {
     key: "network-upgrades",
     labelKey: "page-videos-category-network-upgrades",
-    tags: ["upgrades", "pectra", "dencun", "eip-4844", "blobs", "history"],
+    tags: [
+      "network-upgrades",
+      "upgrades",
+      "pectra",
+      "dencun",
+      "eip-4844",
+      "blobs",
+      "fusaka",
+    ],
   },
   {
     key: "roadmap-and-priorities",
     labelKey: "page-videos-category-roadmap-and-priorities",
-    tags: ["roadmap", "pbs", "mev"],
+    tags: ["roadmap-and-priorities", "pbs", "mev"],
   },
   {
     key: "scaling-and-layer-2",
     labelKey: "page-videos-category-scaling-and-layer-2",
     tags: [
+      "scaling-and-layer-2",
       "scaling",
       "layer-2",
       "rollups",
       "optimistic-rollups",
       "zk-rollups",
-      "zero-knowledge-proofs",
     ],
   },
   {
     key: "use-cases",
     labelKey: "page-videos-category-use-cases",
     tags: [
+      "use-cases",
       "defi",
       "finance",
       "nfts",
       "erc-721",
       "erc-1155",
       "lending",
-      "smart-contracts",
       "dapps",
       "restaking",
       "eigenlayer",
@@ -70,11 +85,11 @@ export const VIDEO_CATEGORIES = [
   {
     key: "privacy-and-security",
     labelKey: "page-videos-category-privacy-and-security",
-    tags: ["security", "authentication", "privacy", "governance"],
+    tags: ["privacy-and-security", "privacy", "authentication"],
   },
   {
     key: "community-stories",
     labelKey: "page-videos-category-community-stories",
-    tags: ["contributing", "translations", "ai", "agents"],
+    tags: ["community-stories", "contributing", "translations", "community"],
   },
 ] as const

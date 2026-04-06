@@ -8,7 +8,6 @@ duration: "0:15:25"
 educationLevel: beginner
 topic:
   - "smart-contracts"
-  - "defi"
 format: explainer
 author: Finematics
 breadcrumb: "Smart Contracts"
