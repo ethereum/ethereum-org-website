@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-04-06T18:05:42.065Z",
+  "englishManifestHash": "e24796f2682a",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2",
+    "HTML-TAG-3",
+    "HTML-TAG-4",
+    "HTML-TAG-5",
+    "HTML-TAG-6",
+    "HTML-TAG-7",
+    "HTML-TAG-8",
+    "ICU-VARIABLE-9",
+    "ICU-VARIABLE-10",
+    "ICU-VARIABLE-11",
+    "ICU-VARIABLE-12",
+    "HTML-TAG-13",
+    "JSON-VALUE-14",
+    "IMAGE-15"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/smart-contracts/"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eth.blockscout.com/?sort=holders",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://www.blocknative.com/gas-estimator",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://www.openzeppelin.com/",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/assets/smart-contracts-icon.svg"
+      }
+    },
+    "HTML-TAG-5": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://remix.ethereum.org/"
+      }
+    },
+    "HTML-TAG-6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://sepolia.dev/"
+      }
+    },
+    "HTML-TAG-7": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eth.blockscout.com/"
+      }
+    },
+    "HTML-TAG-8": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://www.openzeppelin.com/defender"
+      }
+    },
+    "ICU-VARIABLE-9": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{username}"
+      }
+    },
+    "ICU-VARIABLE-10": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, =0 {No tools found} one {# tool found} other {# tools found}}"
+      }
+    },
+    "ICU-VARIABLE-11": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{status, select, pending {Your deployment is pending confirmation} confirmed {Your contract has been deployed at {address}} failed {Deployment failed: {reason}} other {Unknown status}}"
+      }
+    },
+    "ICU-VARIABLE-12": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, one {# active contract} other {# active contracts}}"
+      }
+    },
+    "HTML-TAG-13": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eth.blockscout.com/"
+      }
+    },
+    "JSON-VALUE-14": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "IMAGE-15": {
+      "type": "image",
+      "values": {
+        "src": "https://raw.githubusercontent.com/NomicFoundation/hardhat/main/docs/.vuepress/public/hardhat-logo-v2.png"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-06T18:05:42.065Z",
+      "status": "success"
+    }
+  }
+}
