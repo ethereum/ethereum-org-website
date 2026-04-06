@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/test-incremental/index.md",
-  "generatedAt": "2026-04-06T22:01:45.170Z",
-  "rootHash": "b58975c0109b",
+  "generatedAt": "2026-04-06T22:16:57.650Z",
+  "rootHash": "d496e67b6c51",
   "tree": {
     "contentHash": "fa3770bba9b6",
-    "anchorHash": "a6d83ca10c24",
+    "anchorHash": "b156fed9b69c",
     "children": {
       "frontmatter:title": {
         "contentHash": "5e0f4e0d7562",
@@ -41,7 +41,7 @@
       },
       "development-environment": {
         "contentHash": "0985b66793b1",
-        "anchorHash": "64741737d540",
+        "anchorHash": "d612d14b987b",
         "labelHash": "8addd631aabb",
         "children": {
           "_label": {
@@ -70,7 +70,7 @@
           },
           "link:2": {
             "contentHash": "ab2db303fb7e",
-            "anchorHash": "f0ff47e1dad0"
+            "anchorHash": "a89aef9c623c"
           },
           "prose:11": {
             "contentHash": "a3cfacf4800f",
@@ -102,7 +102,7 @@
           },
           "html-tag:6": {
             "contentHash": "3dee05652774",
-            "anchorHash": "734a3b73d8d3"
+            "anchorHash": "88e19f260b15"
           },
           "prose:15": {
             "contentHash": "8cf418976907",
@@ -110,7 +110,7 @@
           },
           "image:7": {
             "contentHash": "479984df5bcb",
-            "anchorHash": "a0d89a6587c7"
+            "anchorHash": "31a86bca9cb7"
           }
         },
         "childrenOrder": [
@@ -342,7 +342,7 @@
       },
       "deployment": {
         "contentHash": "49d447ab5732",
-        "anchorHash": "4e14f0f5a34b",
+        "anchorHash": "f8ed24f79de4",
         "labelHash": "870a8ffd98f4",
         "children": {
           "_label": {
@@ -351,7 +351,7 @@
           },
           "networks-and-tools": {
             "contentHash": "a23edbc13886",
-            "anchorHash": "f87b2719d023",
+            "anchorHash": "97c2bcc5932e",
             "labelHash": "24932fdf5eba",
             "children": {
               "_label": {
@@ -380,7 +380,7 @@
               },
               "link:2": {
                 "contentHash": "ab2db303fb7e",
-                "anchorHash": "f0ff47e1dad0"
+                "anchorHash": "a89aef9c623c"
               },
               "prose:8": {
                 "contentHash": "482f4d543a4d",
