@@ -57,8 +57,10 @@ const ETHEREUM_ORG_CONFIG: Partial<ContentTreeConfig> = {
  */
 const ETHEREUM_ORG_JSON_CONFIG = {
   markdownValueDetector: (_, value: string): boolean => {
-    // Heuristic: contains markdown formatting patterns
-    return /\*\*|\n\n- |\n\n\d+\. |!\[.*\]\(|^\s*[-*] /m.test(value)
+    // Heuristic: requires structural markdown patterns (not just inline bold).
+    // Triggers on: paragraph-break + list items, numbered lists, or images.
+    // Does NOT trigger on standalone **bold** in normal prose.
+    return /\n\n[-*] |\n\n\d+\. |!\[.*\]\(/.test(value)
   },
 }
 

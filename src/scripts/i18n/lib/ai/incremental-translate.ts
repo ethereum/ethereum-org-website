@@ -76,7 +76,7 @@ export function buildIncrementalPrompt(
   const sectionBlocks = sections
     .map((s) => {
       const headingAttr = s.headingText
-        ? ` heading="${s.level ? "#".repeat(s.level) + " " : ""}${s.headingText}"`
+        ? ` heading="${(s.level ? "#".repeat(s.level) + " " : "") + s.headingText.replace(/"/g, "&quot;")}"`
         : ""
       return `<SECTION id="${s.id}" action="${s.action}"${headingAttr}>\n${s.content}\n</SECTION>`
     })
@@ -206,9 +206,10 @@ export function replaceSections(
 
   // Handle _preamble replacement (content between frontmatter and first heading)
   let lineIdx = 0
-  if (translations["_preamble"] !== undefined && sectionRanges.length > 0) {
+  if (translations["_preamble"] !== undefined) {
     const fmEnd = findFrontmatterEnd(lines)
-    const firstHeading = sectionRanges[0].startLine
+    const firstHeading =
+      sectionRanges.length > 0 ? sectionRanges[0].startLine : lines.length
     // Copy frontmatter
     for (let i = 0; i < fmEnd; i++) {
       result.push(lines[i])
@@ -217,7 +218,7 @@ export function replaceSections(
     result.push("")
     result.push(translations["_preamble"].trim())
     result.push("")
-    // Skip old preamble, start processing from first heading
+    // Skip old preamble, start processing from first heading (or EOF)
     lineIdx = firstHeading
   }
 

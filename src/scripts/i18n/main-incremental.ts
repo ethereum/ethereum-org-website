@@ -293,6 +293,9 @@ async function main() {
 
   const geminiAvailable = isGeminiAvailable()
 
+  // Track all Gemini output for sanitization in Phase 7
+  const geminiOutputForSanitizer: Array<{ path: string; content: string }> = []
+
   // Phase 3: Full Translation (for files without manifests)
   logSection("Phase 3: Full Translation")
 
@@ -345,6 +348,12 @@ async function main() {
           result.translatedContent,
           task.locale
         )
+
+        // Collect for Phase 7 sanitizer
+        geminiOutputForSanitizer.push({
+          path: path.resolve(task.destPath),
+          content: result.translatedContent,
+        })
 
         // Stamp manifests (non-fatal if this fails -- translation is
         // already committed, manifests can be regenerated on next run)
@@ -671,35 +680,44 @@ async function main() {
       )
       const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
       await committer.commitFile(jsonManifestPath, sourceManifest, task.locale)
+
+      // Update JSON translation manifest (keeps future drift detection reliable)
+      if (task.translationManifest) {
+        const parsed = JSON.parse(sourceManifest)
+        const updatedTM = {
+          ...task.translationManifest,
+          englishManifestHash: parsed.rootHash,
+          translatedAt: new Date().toISOString(),
+        }
+        const jsonTmPath = `src/intl/${task.locale}/.manifest-translation.json`
+        await committer.commitFile(
+          jsonTmPath,
+          JSON.stringify(updatedTM, null, 2) + "\n",
+          task.locale
+        )
+      }
     }
   }
 
   // Phase 7: Sanitize Gemini output
-  // Collect all files that went through Gemini (full translation or prose
-  // retranslation) for post-import sanitization (BiDi fixes, code fence
-  // alignment, etc.).
-  const geminiOutputFiles: Array<{ path: string; content: string }> = []
-
-  // Note: full translations (Phase 3) are not sanitized here -- they were
-  // committed directly and the full pipeline has its own sanitizer pass.
-
+  // Includes both full translations (Phase 3) and incremental prose
+  // retranslations (Phase 5). Covers markdown AND JSON for BiDi fixes,
+  // code fence alignment, etc.
   for (const task of fileLanguageTasks) {
-    if (task.file.type === "markdown") {
-      const destPath = getDestinationFromPath(task.file.path, task.locale)
-      geminiOutputFiles.push({
-        path: path.resolve(destPath),
-        content: task.localeContent,
-      })
-    }
+    const destPath = getDestinationFromPath(task.file.path, task.locale)
+    geminiOutputForSanitizer.push({
+      path: path.resolve(destPath),
+      content: task.localeContent,
+    })
   }
 
-  if (geminiOutputFiles.length > 0) {
+  if (geminiOutputForSanitizer.length > 0) {
     const englishContentMap = new Map<string, string>(
       englishFiles.map((f) => [f.path, f.content])
     )
     try {
       await runPostImportSanitization(
-        geminiOutputFiles,
+        geminiOutputForSanitizer,
         branchName,
         englishContentMap
       )

@@ -216,7 +216,7 @@ function applyInertChangesJson(
   }
 }
 
-/** Recursively replace oldValue with newValue in all string values of a JSON object. */
+/** Recursively replace oldValue with newValue in all string values of a JSON structure. */
 function jsonWalkReplace(
   o: Record<string, unknown>,
   oldValue: string,
@@ -227,7 +227,20 @@ function jsonWalkReplace(
     if (typeof v === "string" && v.includes(oldValue)) {
       o[k] = v.split(oldValue).join(newValue)
       found = true
-    } else if (typeof v === "object" && v !== null && !Array.isArray(v)) {
+    } else if (Array.isArray(v)) {
+      for (let i = 0; i < v.length; i++) {
+        if (typeof v[i] === "string" && (v[i] as string).includes(oldValue)) {
+          v[i] = (v[i] as string).split(oldValue).join(newValue)
+          found = true
+        } else if (typeof v[i] === "object" && v[i] !== null) {
+          if (
+            jsonWalkReplace(v[i] as Record<string, unknown>, oldValue, newValue)
+          ) {
+            found = true
+          }
+        }
+      }
+    } else if (typeof v === "object" && v !== null) {
       if (jsonWalkReplace(v as Record<string, unknown>, oldValue, newValue)) {
         found = true
       }
