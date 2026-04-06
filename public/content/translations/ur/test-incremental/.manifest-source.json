@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/test-incremental/index.md",
-  "generatedAt": "2026-04-06T18:07:05.119Z",
-  "rootHash": "871a6ce8cf0e",
+  "generatedAt": "2026-04-06T18:19:26.541Z",
+  "rootHash": "5708575a452b",
   "tree": {
     "contentHash": "f7d7d4111cbe",
-    "anchorHash": "0b95c861582c",
+    "anchorHash": "f8239ecfff51",
     "children": {
       "frontmatter:title": {
         "contentHash": "5e0f4e0d7562",
@@ -41,7 +41,7 @@
       },
       "development-environment": {
         "contentHash": "0985b66793b1",
-        "anchorHash": "397a6197c7ef",
+        "anchorHash": "d612d14b987b",
         "labelHash": "8addd631aabb",
         "children": {
           "_label": {
@@ -102,7 +102,7 @@
           },
           "html-tag:6": {
             "contentHash": "3dee05652774",
-            "anchorHash": "734a3b73d8d3"
+            "anchorHash": "88e19f260b15"
           },
           "prose:15": {
             "contentHash": "8cf418976907",
@@ -342,7 +342,7 @@
       },
       "deployment": {
         "contentHash": "00d7eeaf331f",
-        "anchorHash": "c5d907ac22ba",
+        "anchorHash": "9a446c25ef02",
         "labelHash": "870a8ffd98f4",
         "children": {
           "_label": {
@@ -351,7 +351,7 @@
           },
           "networks-and-tools": {
             "contentHash": "825cc28f7121",
-            "anchorHash": "ad7d8296914b",
+            "anchorHash": "ba65e277f2d3",
             "labelHash": "24932fdf5eba",
             "children": {
               "_label": {
@@ -380,7 +380,7 @@
               },
               "link:2": {
                 "contentHash": "ab2db303fb7e",
-                "anchorHash": "f0ff47e1dad0"
+                "anchorHash": "a89aef9c623c"
               },
               "prose:8": {
                 "contentHash": "482f4d543a4d",
@@ -396,7 +396,7 @@
               },
               "html-tag:4": {
                 "contentHash": "309a1e84d0dc",
-                "anchorHash": "48fda8ad4cd7"
+                "anchorHash": "44cc5b41aeec"
               },
               "component:11": {
                 "contentHash": "4b9f7d802648",
@@ -414,7 +414,7 @@
               },
               "component:13": {
                 "contentHash": "397da318ad9e",
-                "anchorHash": "641c55d69d73",
+                "anchorHash": "b67c83ada26c",
                 "children": {
                   "attr:title": {
                     "contentHash": "ad77a28ab6fb",
@@ -422,7 +422,7 @@
                   },
                   "attr:emoji": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "49c2433f8e76"
+                    "anchorHash": "fe4b570e22cc"
                   },
                   "prose:3": {
                     "contentHash": "cdf625a703f8",
