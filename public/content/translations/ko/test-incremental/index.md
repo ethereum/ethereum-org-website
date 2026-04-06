@@ -15,13 +15,13 @@ summaryPoints:
 
 ## 개발 환경 {#development-environment}
 
-코드를 작성하기 전에 로컬 개발 환경을 설정해야 합니다. 프레임워크로 [Hardhat](https://hardhat.org/) 또는 [Foundry](https://book.getfoundry.sh/)를 설치하고, 테스트를 위해 [Sepolia](https://sepolia.dev/)에 연결하며, 배포를 검증하기 위해 [Blockscout](https://eth.blockscout.com/)를 사용하세요.
+코드를 작성하기 전에 로컬 개발 환경을 설정해야 합니다. 프레임워크로 [Hardhat](https://hardhat.org/) 또는 [Foundry](https://book.getfoundry.sh/)를 설치하고, 테스트를 위해 [Sepolia](https://sepolia.ethpandaops.io/)에 연결하며, 배포를 검증하기 위해 [Blockscout](https://eth.blockscout.com/)를 사용하세요.
 
 `solc` 컴파일러는 Solidity 소스 코드를 EVM이 실행할 수 있는 바이트코드로 변환합니다. 컴파일러 버전이 컨트랙트의 `pragma` 구문과 일치하는지 확인하세요.
 
-<a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a>에서 배포된 컨트랙트를 확인하여 바이트코드와 검증된 소스 코드를 검사할 수 있습니다.
+<a href="https://eth.blockscout.com/address/0x5678" target="_blank">Blockscout</a>에서 배포된 컨트랙트를 확인하여 바이트코드와 검증된 소스 코드를 검사할 수 있습니다.
 
-![Contract deployment flow](/images/developers/deploy-flow.png)
+![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
 ## 컨트랙트 작성하기 {#writing-your-contract}
 
@@ -100,7 +100,7 @@ def run_coverage(project_path):
 
 ### 네트워크 및 도구 {#deployment-checklist}
 
-[Holesky](https://holesky.dev/) 또는 [Sepolia](https://sepolia.dev/)에서 [Remix](https://remix.ethereum.org/)를 사용하여 컨트랙트를 배포하고, [Blockscout](https://eth.blockscout.com/)에서 소스 코드를 검증할 수 있습니다. 프로덕션 배포의 경우, 프로세스를 자동화하기 위해 **Hardhat Ignition** 또는 **Foundry 스크립트** 사용을 고려해 보세요.
+[Holesky](https://holesky.dev/) 또는 [Sepolia](https://sepolia.ethpandaops.io/)에서 [Remix](https://remix.ethereum.org/)를 사용하여 컨트랙트를 배포하고, [Blockscout](https://eth.blockscout.com/)에서 소스 코드를 검증할 수 있습니다. 프로덕션 배포의 경우, 프로세스를 자동화하기 위해 **Hardhat Ignition** 또는 **Foundry 스크립트** 사용을 고려해 보세요.
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">프레임워크 탐색하기</ButtonLink>
 
