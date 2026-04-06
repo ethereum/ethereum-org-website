@@ -40,13 +40,13 @@ on:
         default: "false"
         type: boolean
       mode:
-        description: "Translation mode: 'full' (translate all) or 'incremental' (drift-based)"
+        description: "Translation mode: 'auto' (full for new files, incremental for existing) or 'full' (retranslate everything)"
         required: false
-        default: "full"
+        default: "auto"
         type: choice
         options:
+          - auto
           - full
-          - incremental
 
 jobs:
   translate:
@@ -68,8 +68,23 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run Gemini translation (full)
-        if: ${{ github.event.inputs.mode != 'incremental' }}
+      - name: Run translation (auto: full for new files, incremental for existing)
+        if: ${{ github.event.inputs.mode != 'full' }}
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main-incremental.ts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
+          TARGET_PATH: ${{ github.event.inputs.target_path }}
+          TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
+          BASE_BRANCH: ${{ github.event.inputs.base_branch }}
+          GEMINI_CONCURRENCY: ${{ github.event.inputs.concurrency }}
+          SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
+          VERBOSE: ${{ github.event.inputs.verbose }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          DRY_RUN: "false"
+
+      - name: Run Gemini translation (force full retranslation)
+        if: ${{ github.event.inputs.mode == 'full' }}
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main-gemini.ts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -84,18 +99,3 @@ jobs:
           VERBOSE: ${{ github.event.inputs.verbose }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           TRANSLATION_PIPELINE: Gemini
-
-      - name: Run incremental translation (drift-based)
-        if: ${{ github.event.inputs.mode == 'incremental' }}
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main-incremental.ts
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
-          TARGET_PATH: ${{ github.event.inputs.target_path }}
-          TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
-          BASE_BRANCH: ${{ github.event.inputs.base_branch }}
-          GEMINI_CONCURRENCY: ${{ github.event.inputs.concurrency }}
-          SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
-          VERBOSE: ${{ github.event.inputs.verbose }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          DRY_RUN: "false"

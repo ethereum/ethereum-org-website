@@ -24,7 +24,7 @@ import * as path from "path"
 import i18nConfig from "../../../i18n.config.json"
 
 import { isGeminiAvailable } from "./lib/ai/gemini"
-import { callGeminiRaw } from "./lib/ai/gemini-translate"
+import { callGeminiRaw, translateFile } from "./lib/ai/gemini-translate"
 import { filterGlossaryFlat } from "./lib/ai/glossary-lookup"
 import {
   buildIncrementalPrompt,
@@ -35,6 +35,7 @@ import {
 } from "./lib/ai/incremental-translate"
 import {
   buildJsonManifest,
+  buildLocaleTranslationManifest,
   buildMarkdownManifest,
   detectDrift,
   hasEnglishChanged,
@@ -69,6 +70,12 @@ interface DriftReport {
   removedCount: number
   reorderedCount: number
   unchanged: boolean
+}
+
+interface FullTranslationTask {
+  file: FileContext
+  locale: string
+  destPath: string
 }
 
 // ---------------------------------------------------------------------------
@@ -135,9 +142,10 @@ async function main() {
   )
   const translationsDir = path.join(glossaryDataDir, "translations")
 
-  // Phase 2: Drift Detection
+  // Phase 2: Drift Detection (auto-detect full vs incremental per file)
   logSection("Phase 2: Drift Detection")
 
+  const fullTranslationTasks: FullTranslationTask[] = []
   const driftReports: DriftReport[] = []
   const fileLanguageTasks: Array<{
     file: FileContext
@@ -180,28 +188,14 @@ async function main() {
         )
       }
 
-      // Check if locale file and manifests exist
-      if (!fs.existsSync(localePath)) {
-        console.log(
-          `  [${locale}] ${file.path}: no translation exists, needs full translation`
-        )
-        driftReports.push({
-          file: file.path,
-          locale,
-          inertCount: 0,
-          translatableCount: 0,
-          addedCount: 0,
-          removedCount: 0,
-          reorderedCount: 0,
-          unchanged: false,
-        })
-        continue
-      }
-
-      if (!fs.existsSync(sourceManifestPath)) {
-        console.log(
-          `  [${locale}] ${file.path}: no source manifest, needs full translation`
-        )
+      // Auto-detect: if no locale file or no source manifest, queue for
+      // full translation instead of incremental drift-based updates.
+      if (!fs.existsSync(localePath) || !fs.existsSync(sourceManifestPath)) {
+        const reason = !fs.existsSync(localePath)
+          ? "no translation exists"
+          : "no source manifest"
+        console.log(`  [${locale}] ${file.path}: ${reason} -> full translation`)
+        fullTranslationTasks.push({ file, locale, destPath })
         continue
       }
 
@@ -272,6 +266,7 @@ async function main() {
   const totalAdded = driftReports.reduce((s, r) => s + r.addedCount, 0)
   const totalRemoved = driftReports.reduce((s, r) => s + r.removedCount, 0)
   const totalUnchanged = driftReports.filter((r) => r.unchanged).length
+  console.log(`  Full translation: ${fullTranslationTasks.length} file(s)`)
   console.log(`  Unchanged: ${totalUnchanged}`)
   console.log(`  Inert drift: ${totalInert} (script-propagated, no Gemini)`)
   console.log(`  Translatable drift: ${totalProse} (needs Gemini)`)
@@ -283,13 +278,139 @@ async function main() {
     process.exit(0)
   }
 
-  if (fileLanguageTasks.length === 0) {
-    console.log("\nNo drift detected. Nothing to do.")
+  if (fileLanguageTasks.length === 0 && fullTranslationTasks.length === 0) {
+    console.log("\nNo drift detected and no new files. Nothing to do.")
     process.exit(0)
   }
 
-  // Phase 3: Inert Propagation
-  logSection("Phase 3: Inert Propagation")
+  const geminiAvailable = isGeminiAvailable()
+
+  // Phase 3: Full Translation (for files without manifests)
+  logSection("Phase 3: Full Translation")
+
+  if (fullTranslationTasks.length === 0) {
+    console.log("  No new files to translate.")
+  }
+
+  if (geminiAvailable) {
+    for (const task of fullTranslationTasks) {
+      console.log(`  [${task.locale}] ${task.file.path}: translating (full)...`)
+
+      // Build glossary for this locale
+      let glossaryTerms = new Map<string, string>()
+      try {
+        const glossaryFile = path.join(
+          glossaryDataDir,
+          "glossary-terms-enhanced.json"
+        )
+        if (fs.existsSync(glossaryFile)) {
+          glossaryTerms = filterGlossaryFlat(
+            task.file.content,
+            task.file.type,
+            task.locale,
+            glossaryFile,
+            translationsDir
+          )
+        }
+      } catch {
+        // Glossary unavailable, continue without
+      }
+
+      try {
+        const result = await translateFile({
+          filePath: task.file.path,
+          fileContent: task.file.content,
+          fileType: task.file.type,
+          targetLanguage: task.locale,
+          glossaryTerms,
+          useNormalizer: task.file.type === "markdown",
+        })
+
+        console.log(
+          `  [${task.locale}] ${task.file.path}: translated ` +
+            `(${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
+        )
+
+        // Commit translated file
+        await committer.commitFile(
+          task.destPath,
+          result.translatedContent,
+          task.locale
+        )
+
+        // Stamp manifests (non-fatal if this fails -- translation is
+        // already committed, manifests can be regenerated on next run)
+        try {
+          const sourceManifest =
+            task.file.type === "markdown"
+              ? buildMarkdownManifest(task.file.content, task.file.path)
+              : buildJsonManifest(task.file.content, task.file.path)
+
+          if (task.file.type === "markdown") {
+            const sourceManifestPath = task.destPath.replace(
+              /index\.md$/,
+              ".manifest-source.json"
+            )
+            await committer.commitFile(
+              sourceManifestPath,
+              sourceManifest,
+              task.locale
+            )
+
+            // Stamp translation manifest (if normalizer produced placeholder data)
+            if (result.placeholderOrder && result.placeholderMap) {
+              const parsed = JSON.parse(sourceManifest)
+              const translationManifest = buildLocaleTranslationManifest({
+                locale: task.locale,
+                englishManifestHash: parsed.rootHash,
+                placeholderOrder: result.placeholderOrder,
+                placeholderMap: result.placeholderMap,
+                sections: {
+                  _all: {
+                    translatedAt: new Date().toISOString(),
+                    status: "success",
+                  },
+                },
+              })
+              const tmPath = task.destPath.replace(
+                /index\.md$/,
+                ".manifest-translation.json"
+              )
+              await committer.commitFile(
+                tmPath,
+                translationManifest,
+                task.locale
+              )
+            }
+          } else {
+            const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
+            await committer.commitFile(
+              jsonManifestPath,
+              sourceManifest,
+              task.locale
+            )
+          }
+        } catch (err) {
+          console.warn(
+            `  [${task.locale}] ${task.file.path}: manifest write failed (non-fatal): ${err instanceof Error ? err.message : String(err)}`
+          )
+        }
+
+        console.log(`  [${task.locale}] ${task.destPath}: committed`)
+      } catch (error) {
+        console.error(
+          `  [${task.locale}] ${task.file.path}: full translation failed: ${error instanceof Error ? error.message : String(error)}`
+        )
+      }
+    }
+  } else if (fullTranslationTasks.length > 0) {
+    console.warn(
+      "[WARN] GEMINI_API_KEY not set, skipping full translation of new files"
+    )
+  }
+
+  // Phase 4: Inert Propagation
+  logSection("Phase 4: Inert Propagation")
 
   for (const task of fileLanguageTasks) {
     if (task.drift.inertDrift.length === 0) continue
@@ -321,10 +442,9 @@ async function main() {
     }
   }
 
-  // Phase 4: Prose Retranslation
-  logSection("Phase 4: Prose Retranslation")
+  // Phase 5: Prose Retranslation
+  logSection("Phase 5: Prose Retranslation")
 
-  const geminiAvailable = isGeminiAvailable()
   if (!geminiAvailable && totalProse > 0) {
     console.warn("[WARN] GEMINI_API_KEY not set, skipping prose retranslation")
   }
@@ -447,8 +567,8 @@ async function main() {
     }
   }
 
-  // Phase 5: Commit
-  logSection("Phase 5: Commit")
+  // Phase 6: Commit (incremental updates only; full translations committed in Phase 3)
+  logSection("Phase 6: Commit")
 
   for (const task of fileLanguageTasks) {
     const destPath = getDestinationFromPath(task.file.path, task.locale)
@@ -501,12 +621,12 @@ async function main() {
     }
   }
 
-  // Phase 6: Done
+  // Done
   const duration = ((Date.now() - startTime) / 1000).toFixed(1)
   logSection("Complete")
-  console.log(`[main] Incremental pipeline finished in ${duration}s`)
+  console.log(`[main] Pipeline finished in ${duration}s`)
   console.log(
-    `[main] Inert: ${totalInert}, Prose: ${totalProse}, Added: ${totalAdded}, Removed: ${totalRemoved}`
+    `[main] Full: ${fullTranslationTasks.length}, Inert: ${totalInert}, Prose: ${totalProse}, Added: ${totalAdded}, Removed: ${totalRemoved}`
   )
 }
 
