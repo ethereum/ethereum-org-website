@@ -17,7 +17,7 @@
     }
   },
   "icon-link": "<a href=\"/assets/smart-contracts-icon.svg\"></a>",
-  "multi-link-sentence": "<a href=\"https://sepolia.dev/\">Sepolia</a>에서 <a href=\"https://remix.ethereum.org/\">Remix</a>로 배포하고, <a href=\"https://eth.blockscout.com/\">Blockscout</a>에서 검증하며, <a href=\"https://www.openzeppelin.com/defender\">Defender</a>로 감사하세요.",
+  "multi-link-sentence": "<a href=\"https://sepolia.ethpandaops.io/\">Sepolia</a>에서 <a href=\"https://remix.ethereum.org/\">Remix</a>로 배포하고, <a href=\"https://eth.blockscout.com/\">Blockscout</a>에서 검증하며, <a href=\"https://www.openzeppelin.com/defender\">Defender</a>로 감사하세요.",
   "welcome-user": "다시 오신 것을 환영합니다, {username}님!",
   "tool-count": "{count, plural, =0 {찾은 도구 없음} one {#개의 도구 찾음} other {#개의 도구 찾음}}",
   "deploy-status": "{status, select, pending {배포가 확인 대기 중입니다} confirmed {컨트랙트가 {address}에 배포되었습니다} failed {배포 실패: {reason}} other {알 수 없는 상태}}",
