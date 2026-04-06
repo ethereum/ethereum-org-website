@@ -26,6 +26,7 @@ We are a welcoming community that will help you grow and educate in the [Ethereu
 - [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
+- [Suggest a video](/contributing/adding-videos/) – Suggest an educational video for the video gallery
 
 **Feature ideas**
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Let us know about any ideas you have for a new feature or design
