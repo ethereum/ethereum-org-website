@@ -17,7 +17,7 @@
     }
   },
   "icon-link": "<a href=\"/assets/smart-contracts-icon.svg\"></a>",
-  "multi-link-sentence": "<a href=\"https://sepolia.dev/\">Sepolia</a>で<a href=\"https://remix.ethereum.org/\">Remix</a>を使用してデプロイし、<a href=\"https://eth.blockscout.com/?sort=holders\">Blockscout</a>で検証し、<a href=\"https://www.openzeppelin.com/defender\">Defender</a>で監査します。",
+  "multi-link-sentence": "<a href=\"https://sepolia.ethpandaops.io/\">Sepolia</a>で<a href=\"https://remix.ethereum.org/\">Remix</a>を使用してデプロイし、<a href=\"https://eth.blockscout.com/?sort=holders\">Blockscout</a>で検証し、<a href=\"https://www.openzeppelin.com/defender\">Defender</a>で監査します。",
   "welcome-user": "お帰りなさい、{username}さん！",
   "tool-count": "{count, plural, =0 {ツールが見つかりません} one {# 個のツールが見つかりました} other {# 個のツールが見つかりました}}",
   "deploy-status": "{status, select, pending {デプロイの確認待ちです} confirmed {コントラクトが{address}にデプロイされました} failed {デプロイに失敗しました: {reason}} other {不明なステータス}}",
