@@ -11,7 +11,8 @@ published: 2025-08-15
 
 # Comprendiendo los estándares de tokens {#understanding-token-standards}
 
-Los estándares de tokens definen cómo operan los activos digitales en la red de Ethereum. Proporcionan una interfaz compartida en la que las billeteras, los intercambios y las aplicaciones descentralizadas pueden confiar para interactuar con los tokens de manera predecible.
+<!-- # Comprender los estándares de tokens -->
+Los estándares de tokens son los componentes básicos del ecosistema de tokens de Ethereum. Establecen una interfaz común que las billeteras, los intercambios y las aplicaciones descentralizadas utilizan para interactuar con los tokens de manera confiable y predecible.
 
 ## ¿Qué son los estándares de tokens? {#what-are-token-standards}
 
@@ -25,9 +26,12 @@ Puede revisar el contrato de un token en <a href="https://eth.blockscout.com/tok
 
 ## Estándares comunes {#common-standards}
 
+<!-- ## Estándares comunes -->
+
 ### ERC-20: Tokens fungibles {#erc-20}
 
-ERC-20 define una interfaz estándar para **tokens fungibles**. Cada unidad es idéntica e intercambiable, de manera muy similar a cómo un billete de un dólar es igual a cualquier otro.
+<!-- ### ERC-20: Tokens fungibles -->
+ERC-20 define una interfaz estándar para los **tokens fungibles**. Cada unidad es idéntica e intercambiable, de manera muy similar a cómo un billete de un dólar es igual a cualquier otro.
 
 ```solidity
 // Enviar tokens a cualquier dirección válida
@@ -41,7 +45,7 @@ function transfer(address to, uint256 amount) public returns (bool) {
 
 El suministro total de un token ERC-20 generalmente se fija en el despliegue. Por ejemplo, un proyecto podría crear 1.000.000 de tokens con 18 decimales, lo que significa que la unidad más pequeña es de `0.000000000000000001` tokens. En la función `translate` anterior, si el remitente tiene 100 tokens y solicita enviar 10, terminará con 90 (100 - 10 = 90) y el destinatario terminará con 10 más.
 
-Puede desplegar tokens usando [Remix](https://remix.ethereum.org/) en [Holesky](https://holesky.dev/) y verificar el código fuente en [Blockscout](https://eth.blockscout.com/).
+Puede desplegar tokens usando [Remix](https://remix.ethereum.org/) en [Holesovice](https://holesovice.dev/) y verificar el código fuente en [Blockscout](https://eth.blockscout.com/).
 
 ### ERC-721: Tokens no fungibles {#erc-721}
 
