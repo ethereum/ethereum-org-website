@@ -86,16 +86,15 @@ def run_coverage(project_path):
 ## デプロイ {#networks-and-tools}
 
 ### ネットワークとツール
+[Holesky](https://holesky.dev/)または[Sepolia](https://sepolia.ethpandaops.io/)上で[Remix](https://remix.ethereum.org/)を使用してコントラクトをデプロイし、[Blockscout](https://eth.blockscout.com/)でソースコードを検証できます。本番環境へのデプロイでは、プロセスを自動化するために**Hardhat Ignition**や**Foundryスクリプト**の使用を検討してください。
 
-[Holesovice](https://holesovice.dev/)または[Sepolia](https://sepolia.ethpandaops.io/)上で[Remix](https://remix.ethereum.org/)を使用してコントラクトをデプロイし、[Blockscout](https://eth.blockscout.com/)でソースコードを検証できます。本番環境へのデプロイでは、プロセスを自動化するために**Hardhat Ignition**や**Foundryスクリプト**の使用を検討してください。
+<ButtonLink variant="outline-color" href="/developers/docs/frameworks/overview/">フレームワークを探す</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/developers/docs/frameworks/">フレームワークを探す</ButtonLink>
-
-<YouTube id="def456uvw" />
+<YouTube id="abc123xyz" />
 
 <Divider />
 
-<InfoBanner emoji=":warning:" title="Security reminder">
+<InfoBanner emoji=":shield:" title="Security reminder">
 
 メインネットにデプロイする前に、必ずコントラクトを監査してください。[オープンツェッペリン Defender](https://www.openzeppelin.com/defender)のようなツールを使用し、[Trail of Bits](https://www.trailofbits.com/)や[オープンツェッペリン](https://www.openzeppelin.com/security-audits)などの企業による専門的な監査を検討してください。
 
