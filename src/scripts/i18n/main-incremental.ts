@@ -46,11 +46,7 @@ import {
   parseEnglishJson,
 } from "./lib/ai/manifest-adapter"
 import { applyInertChanges, detectInertChanges } from "./lib/ai/propagate-inert"
-import {
-  createBranchFromSha,
-  createBranchName,
-  getBranchObject,
-} from "./lib/github/branches"
+import { ensureStagingBranch } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
@@ -116,11 +112,8 @@ async function main() {
   logSection("Phase 1: Initialize")
 
   const baseBranch = process.env.BASE_BRANCH || config.baseBranch
-  const branchSuffix =
-    targetLanguages.length === 1 ? targetLanguages[0] : "incremental"
-  const branchName = createBranchName(branchSuffix)
-  const baseBranchObj = await getBranchObject(baseBranch)
-  await createBranchFromSha(branchName, baseBranchObj.sha)
+  const branchName = process.env.TRANSLATION_BRANCH || "intl/staging"
+  await ensureStagingBranch(branchName, baseBranch)
 
   console.log(`[main] Branch: ${branchName}`)
   console.log(`[main] Files: ${filePaths.join(", ")}`)
