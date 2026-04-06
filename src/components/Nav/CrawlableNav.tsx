@@ -8,10 +8,10 @@ import { buildNavigation } from "@/lib/nav/buildNavigation"
 function collectLinks(items: NavItem[]): { label: string; href: string }[] {
   const links: { label: string; href: string }[] = []
   for (const item of items) {
-    if ("href" in item && item.href) {
+    if (item.href) {
       links.push({ label: item.label, href: item.href })
     }
-    if ("items" in item && item.items) {
+    if (item.items) {
       links.push(...collectLinks(item.items))
     }
   }
@@ -37,10 +37,10 @@ const CrawlableNav = async () => {
   )
 
   return (
-    <nav aria-label="Site navigation links" className="sr-only">
+    <nav aria-hidden="true" className="sr-only" tabIndex={-1}>
       <ul>
-        {allLinks.map(({ label, href }) => (
-          <li key={href}>
+        {allLinks.map(({ label, href }, index) => (
+          <li key={`${href}-${index}`}>
             <Link href={href}>{label}</Link>
           </li>
         ))}
