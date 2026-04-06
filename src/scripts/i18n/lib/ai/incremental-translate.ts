@@ -75,10 +75,10 @@ export function buildIncrementalPrompt(
 
   const sectionBlocks = sections
     .map((s) => {
-      const heading = s.headingText
-        ? `<!-- ${s.level ? "#".repeat(s.level) + " " : ""}${s.headingText} -->\n`
+      const headingAttr = s.headingText
+        ? ` heading="${s.level ? "#".repeat(s.level) + " " : ""}${s.headingText}"`
         : ""
-      return `<SECTION id="${s.id}" action="${s.action}">\n${heading}${s.content}\n</SECTION>`
+      return `<SECTION id="${s.id}" action="${s.action}"${headingAttr}>\n${s.content}\n</SECTION>`
     })
     .join("\n\n")
 
@@ -369,6 +369,73 @@ function formatGlossary(terms: Map<string, string>): string {
 
   return `Community-voted glossary (use these exact translations):
 ${entries.join("\n")}`
+}
+
+// ---------------------------------------------------------------------------
+// JSON section extraction / replacement
+// ---------------------------------------------------------------------------
+
+/**
+ * Extract "sections" from a JSON file. Each top-level key (or nested
+ * key path) becomes a section whose body is the string value.
+ * Non-string values (objects) are flattened with "/" separators.
+ */
+export function extractJsonSections(content: string): ExtractedSection[] {
+  const obj = JSON.parse(content)
+  const sections: ExtractedSection[] = []
+
+  function walk(o: Record<string, unknown>, prefix: string) {
+    for (const [key, value] of Object.entries(o)) {
+      const id = prefix ? `${prefix}/${key}` : key
+      if (typeof value === "string") {
+        sections.push({
+          id,
+          level: prefix ? 2 : 1,
+          headingText: id,
+          body: value,
+        })
+      } else if (
+        typeof value === "object" &&
+        value !== null &&
+        !Array.isArray(value)
+      ) {
+        walk(value as Record<string, unknown>, id)
+      }
+    }
+  }
+
+  walk(obj, "")
+  return sections
+}
+
+/**
+ * Replace specific key values in a JSON string with fresh translations.
+ * Handles nested keys using "/" separator (e.g., "test-nested/section-title").
+ * Preserves formatting by operating on the parsed object and re-serializing.
+ */
+export function replaceJsonValues(
+  localeContent: string,
+  translations: Record<string, string>
+): string {
+  const obj = JSON.parse(localeContent)
+
+  for (const [keyPath, translated] of Object.entries(translations)) {
+    const parts = keyPath.split("/")
+    let target = obj
+    for (let i = 0; i < parts.length - 1; i++) {
+      if (target[parts[i]] && typeof target[parts[i]] === "object") {
+        target = target[parts[i]]
+      } else {
+        target = null as unknown as Record<string, unknown>
+        break
+      }
+    }
+    if (target) {
+      target[parts[parts.length - 1]] = translated
+    }
+  }
+
+  return JSON.stringify(obj, null, 2) + "\n"
 }
 
 // Re-export types for consumers
