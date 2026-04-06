@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/test-drift-fixture/index.md",
-  "generatedAt": "2026-04-06T04:07:31.283Z",
-  "rootHash": "74296f2a85b1",
+  "generatedAt": "2026-04-06T05:16:53.168Z",
+  "rootHash": "31133d3d3656",
   "tree": {
-    "contentHash": "1652a6708840",
-    "anchorHash": "aa3ce36b86e1",
+    "contentHash": "a281d61d4eb3",
+    "anchorHash": "e52702f63376",
     "children": {
       "frontmatter:title": {
         "contentHash": "6d8146a7c62c",
@@ -40,8 +40,8 @@
         "anchorHash": "242170abc15d"
       },
       "understanding-token-standards": {
-        "contentHash": "b6abe6f83a34",
-        "anchorHash": "aa95303c1f60",
+        "contentHash": "6267bf3c15a0",
+        "anchorHash": "c6db21ecd1a6",
         "labelHash": "6d8146a7c62c",
         "children": {
           "_label": {
@@ -49,12 +49,12 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "38eda1ca21d5",
+            "contentHash": "914e226dbd68",
             "anchorHash": "e3b0c44298fc"
           },
           "what-are-token-standards": {
             "contentHash": "baa1cd48ad60",
-            "anchorHash": "8a4cfc8eeeaa",
+            "anchorHash": "de1511db8d26",
             "labelHash": "5803b5422c1a",
             "children": {
               "_label": {
@@ -107,7 +107,7 @@
               },
               "image:5": {
                 "contentHash": "9ef2c2e8041b",
-                "anchorHash": "7cfe778181d2"
+                "anchorHash": "185a0e12811b"
               }
             },
             "childrenOrder": [
@@ -127,8 +127,8 @@
             ]
           },
           "common-standards": {
-            "contentHash": "34e8f2439ffc",
-            "anchorHash": "1c43129d04fb",
+            "contentHash": "92c74be2d5a3",
+            "anchorHash": "aa2243f02c91",
             "labelHash": "d14ae55ba7b5",
             "children": {
               "_label": {
@@ -136,8 +136,8 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "erc-20": {
-                "contentHash": "777edec4c1aa",
-                "anchorHash": "2fc375ad76fa",
+                "contentHash": "2ba699700e75",
+                "anchorHash": "b28ae910dfb0",
                 "labelHash": "775f12cc7559",
                 "children": {
                   "_label": {
@@ -185,8 +185,8 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:3": {
-                    "contentHash": "68d6cf553f27",
-                    "anchorHash": "eb2df8744082"
+                    "contentHash": "ca99e16bdf52",
+                    "anchorHash": "2933a1f2d99e"
                   },
                   "prose:9": {
                     "contentHash": "482f4d543a4d",
