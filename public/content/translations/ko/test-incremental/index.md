@@ -1,6 +1,6 @@
 ---
-title: 스마트 컨트랙트 구축 및 배포
-description: 이더리움 네트워크에서 스마트 컨트랙트를 작성, 테스트 및 배포하기 위한 실용적인 가이드입니다.
+title: "스마트 컨트랙트 구축 및 배포"
+description: "이더리움 네트워크에서 스마트 컨트랙트를 작성, 테스트 및 배포하기 위한 실용적인 가이드입니다."
 image: /images/developers/smart-contracts-hero-v2.png
 alt: "스마트 컨트랙트 배포 다이어그램"
 lang: ko

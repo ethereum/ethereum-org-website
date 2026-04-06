@@ -1,7 +1,7 @@
 ---
 title: "Создание и развертывание смарт-контрактов"
 description: "Практическое руководство по написанию, тестированию и развертыванию смарт-контрактов в сети Эфириум."
-image: /images/developers/smart-contracts-hero.png
+image: /images/developers/smart-contracts-hero-v2.png
 alt: "Диаграмма развертывания смарт-контракта"
 lang: ru
 emoji: ":computer:"
@@ -86,6 +86,7 @@ def run_coverage(project_path):
 ## Развертывание {#networks-and-tools}
 
 ### Сети и инструменты
+
 Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesovice](https://holesovice.dev/) или [Sepolia](https://sepolia.dev/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Изучить фреймворки</ButtonLink>
