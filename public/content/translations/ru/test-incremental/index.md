@@ -86,16 +86,15 @@ def run_coverage(project_path):
 ## Развертывание {#networks-and-tools}
 
 ### Сети и инструменты
+Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesky](https://holesky.dev/) или [Sepolia](https://sepolia.ethpandaops.io/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
 
-Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesovice](https://holesovice.dev/) или [Sepolia](https://sepolia.ethpandaops.io/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
+<ButtonLink variant="outline-color" href="/developers/docs/frameworks/overview/">Изучить фреймворки</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Изучить фреймворки</ButtonLink>
-
-<YouTube id="def456uvw" />
+<YouTube id="abc123xyz" />
 
 <Divider />
 
-<InfoBanner emoji=":warning:" title="Напоминание о безопасности">
+<InfoBanner emoji=":shield:" title="Напоминание о безопасности">
 
 Всегда проводите аудит своих контрактов перед развертыванием в Мейннете. Используйте такие инструменты, как [ОпенЗеппелин Defender](https://www.openzeppelin.com/defender), и рассмотрите возможность профессионального аудита от таких компаний, как [Trail of Bits](https://www.trailofbits.com/) или [ОпенЗеппелин](https://www.openzeppelin.com/security-audits).
 
