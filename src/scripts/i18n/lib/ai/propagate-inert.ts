@@ -178,7 +178,7 @@ export function detectInertChanges(
             key,
             oldValue,
             newValue,
-            placeholderId: manifestMatch.id,
+            placeholderId: manifestMatch?.id,
           })
         }
       }
