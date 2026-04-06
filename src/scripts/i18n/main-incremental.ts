@@ -113,7 +113,7 @@ async function main() {
   logSection("Phase 1: Initialize")
 
   const baseBranch = process.env.BASE_BRANCH || config.baseBranch
-  const branchName = `intl/${baseBranch}`
+  const branchName = process.env.TRANSLATION_BRANCH || "intl/pending"
   await ensureStagingBranch(branchName, baseBranch)
 
   console.log(`[main] Branch: ${branchName}`)

@@ -47,6 +47,11 @@ on:
         options:
           - auto
           - full
+      translation_branch:
+        description: "Override translation branch (default: intl/pending)"
+        required: false
+        type: string
+
 concurrency:
   group: i18n-translation
   cancel-in-progress: false
@@ -84,6 +89,7 @@ jobs:
           SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
           VERBOSE: ${{ github.event.inputs.verbose }}
           GITHUB_REPOSITORY: ${{ github.repository }}
+          TRANSLATION_BRANCH: ${{ github.event.inputs.translation_branch }}
           DRY_RUN: "false"
 
       - name: Run Gemini translation (force full retranslation)
