@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-04-06T06:24:50.297Z",
+  "englishManifestHash": "7960e1ab8143",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2",
+    "HTML-TAG-3",
+    "HTML-TAG-4",
+    "HTML-TAG-5",
+    "ICU-VARIABLE-6",
+    "ICU-VARIABLE-7",
+    "ICU-VARIABLE-8"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/developers/docs/standards/tokens/"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eth.blockscout.com/tokens?type=ERC-20",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://www.coingecko.com",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-3": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://remix.ethereum.org/"
+      }
+    },
+    "HTML-TAG-4": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://sepolia.dev/"
+      }
+    },
+    "HTML-TAG-5": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eth.blockscout.com/"
+      }
+    },
+    "ICU-VARIABLE-6": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{username}"
+      }
+    },
+    "ICU-VARIABLE-7": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, =0 {No tokens found} one {# token found} other {# tokens found}}"
+      }
+    },
+    "ICU-VARIABLE-8": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{status, select, pending {Your transfer of {amount} ETH is pending} confirmed {Your transfer of {amount} ETH has been confirmed} failed {Your transfer of {amount} ETH failed} other {Unknown status}}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-06T06:24:50.297Z",
+      "status": "success"
+    }
+  }
+}
