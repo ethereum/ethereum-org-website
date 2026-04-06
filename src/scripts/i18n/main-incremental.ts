@@ -40,8 +40,10 @@ import {
   buildLocaleTranslationManifest,
   buildMarkdownManifest,
   detectDrift,
+  extractPlaceholderData,
   hasEnglishChanged,
   type LocaleTranslationManifest,
+  parseEnglishJson,
 } from "./lib/ai/manifest-adapter"
 import { applyInertChanges, detectInertChanges } from "./lib/ai/propagate-inert"
 import {
@@ -395,28 +397,36 @@ async function main() {
               task.locale
             )
 
-            // Stamp translation manifest for JSON (enables incremental later)
-            if (result.placeholderOrder && result.placeholderMap) {
-              const parsed = JSON.parse(sourceManifest)
-              const translationManifest = buildLocaleTranslationManifest({
-                locale: task.locale,
-                englishManifestHash: parsed.rootHash,
-                placeholderOrder: result.placeholderOrder,
-                placeholderMap: result.placeholderMap,
-                sections: {
-                  _all: {
-                    translatedAt: new Date().toISOString(),
-                    status: "success",
-                  },
+            // Stamp translation manifest for JSON (enables incremental later).
+            // translateFile for JSON doesn't return placeholder data, so we
+            // extract it from the English tree directly.
+            const placeholderData =
+              result.placeholderOrder && result.placeholderMap
+                ? {
+                    placeholderOrder: result.placeholderOrder,
+                    placeholderMap: result.placeholderMap,
+                  }
+                : extractPlaceholderData(parseEnglishJson(task.file.content))
+
+            const parsed = JSON.parse(sourceManifest)
+            const translationManifest = buildLocaleTranslationManifest({
+              locale: task.locale,
+              englishManifestHash: parsed.rootHash,
+              placeholderOrder: placeholderData.placeholderOrder,
+              placeholderMap: placeholderData.placeholderMap,
+              sections: {
+                _all: {
+                  translatedAt: new Date().toISOString(),
+                  status: "success",
                 },
-              })
-              const jsonTmPath = `src/intl/${task.locale}/.manifest-translation.json`
-              await committer.commitFile(
-                jsonTmPath,
-                translationManifest,
-                task.locale
-              )
-            }
+              },
+            })
+            const jsonTmPath = `src/intl/${task.locale}/.manifest-translation.json`
+            await committer.commitFile(
+              jsonTmPath,
+              translationManifest,
+              task.locale
+            )
           }
         } catch (err) {
           console.warn(

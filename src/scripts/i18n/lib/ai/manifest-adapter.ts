@@ -24,6 +24,7 @@ import {
   type TreeNode,
   validate,
   type ValidationResult,
+  walk,
 } from "intl-content-tree"
 
 // ---------------------------------------------------------------------------
@@ -209,6 +210,52 @@ export function buildLocaleTranslationManifest(opts: {
     sections: opts.sections,
   }
   return JSON.stringify(manifest, null, 2) + "\n"
+}
+
+/**
+ * Extract placeholder data from a parsed tree for building translation
+ * manifests. Works for both markdown and JSON trees. Walks the tree
+ * collecting inert/mixed nodes with their meta values.
+ */
+export function extractPlaceholderData(tree: TreeNode): {
+  placeholderOrder: string[]
+  placeholderMap: Record<
+    string,
+    { type: string; values: Record<string, string> }
+  >
+} {
+  const order: string[] = []
+  const map: Record<string, { type: string; values: Record<string, string> }> =
+    {}
+
+  let counter = 0
+  for (const node of walk(tree)) {
+    if (
+      node.contentType === "inert" ||
+      (node.contentType === "mixed" &&
+        node.meta &&
+        Object.keys(node.meta).length > 0)
+    ) {
+      const values: Record<string, string> = {}
+      if (node.contentType === "inert" && node.value) {
+        values.value = node.value
+      }
+      if (node.meta) {
+        for (const [k, v] of Object.entries(node.meta)) {
+          if (k !== "tagName" && k !== "language" && k !== "name") {
+            values[k] = String(v)
+          }
+        }
+      }
+      if (Object.keys(values).length > 0) {
+        const id = `${node.elementType.toUpperCase()}-${counter++}`
+        order.push(id)
+        map[id] = { type: node.elementType, values }
+      }
+    }
+  }
+
+  return { placeholderOrder: order, placeholderMap: map }
 }
 
 // Re-export types consumers need
