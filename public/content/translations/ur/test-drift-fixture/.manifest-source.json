@@ -1,23 +1,23 @@
 {
   "version": 1,
   "sourceFile": "public/content/test-drift-fixture/index.md",
-  "generatedAt": "2026-04-05T20:47:18.110Z",
-  "rootHash": "54bd860de1f8",
+  "generatedAt": "2026-04-06T00:35:53.790Z",
+  "rootHash": "74296f2a85b1",
   "tree": {
-    "contentHash": "f92bb71796cc",
-    "anchorHash": "e960d7728d35",
+    "contentHash": "1652a6708840",
+    "anchorHash": "aa3ce36b86e1",
     "children": {
       "frontmatter:title": {
         "contentHash": "6d8146a7c62c",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:description": {
-        "contentHash": "c418e35e8ea0",
+        "contentHash": "7a94fb056ab9",
         "anchorHash": "e3b0c44298fc"
       },
       "frontmatter:image": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "6b08a9e540eb"
+        "anchorHash": "6f2acc3388f5"
       },
       "frontmatter:alt": {
         "contentHash": "a4d834e2fdc8",
@@ -40,8 +40,8 @@
         "anchorHash": "242170abc15d"
       },
       "understanding-token-standards": {
-        "contentHash": "8d7fbac3af95",
-        "anchorHash": "771b6ea4be65",
+        "contentHash": "b6abe6f83a34",
+        "anchorHash": "aa95303c1f60",
         "labelHash": "6d8146a7c62c",
         "children": {
           "_label": {
@@ -49,12 +49,12 @@
             "anchorHash": "e3b0c44298fc"
           },
           "prose:0": {
-            "contentHash": "084b3d67d3cc",
+            "contentHash": "38eda1ca21d5",
             "anchorHash": "e3b0c44298fc"
           },
           "what-are-token-standards": {
             "contentHash": "baa1cd48ad60",
-            "anchorHash": "e57196516719",
+            "anchorHash": "8a4cfc8eeeaa",
             "labelHash": "5803b5422c1a",
             "children": {
               "_label": {
@@ -91,7 +91,7 @@
               },
               "inline-code:3": {
                 "contentHash": "e3b0c44298fc",
-                "anchorHash": "b7f373226f52"
+                "anchorHash": "9177aa2c7d62"
               },
               "prose:10": {
                 "contentHash": "c296762566f1",
@@ -99,7 +99,7 @@
               },
               "html-tag:4": {
                 "contentHash": "d0299bb7f22b",
-                "anchorHash": "80aca4c86e75"
+                "anchorHash": "287c85b89e2e"
               },
               "prose:11": {
                 "contentHash": "edbb8b1ad8e8",
@@ -107,7 +107,7 @@
               },
               "image:5": {
                 "contentHash": "9ef2c2e8041b",
-                "anchorHash": "b57dfb49a382"
+                "anchorHash": "7cfe778181d2"
               }
             },
             "childrenOrder": [
@@ -127,8 +127,8 @@
             ]
           },
           "common-standards": {
-            "contentHash": "28223cbb7999",
-            "anchorHash": "d9e970179e26",
+            "contentHash": "34e8f2439ffc",
+            "anchorHash": "1c43129d04fb",
             "labelHash": "d14ae55ba7b5",
             "children": {
               "_label": {
@@ -136,8 +136,8 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "erc-20": {
-                "contentHash": "16ac401d38e0",
-                "anchorHash": "4c130b2f7f5d",
+                "contentHash": "777edec4c1aa",
+                "anchorHash": "2fc375ad76fa",
                 "labelHash": "775f12cc7559",
                 "children": {
                   "_label": {
@@ -149,12 +149,12 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "code-comment:2": {
-                    "contentHash": "aa50845802d9",
+                    "contentHash": "063504aa84d9",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "code-fence:3": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "6f2d8e9de0de"
+                    "anchorHash": "99822804a22e"
                   },
                   "prose:5": {
                     "contentHash": "7b039581627c",
@@ -185,8 +185,8 @@
                     "anchorHash": "e3b0c44298fc"
                   },
                   "link:3": {
-                    "contentHash": "ab2db303fb7e",
-                    "anchorHash": "f0ff47e1dad0"
+                    "contentHash": "68d6cf553f27",
+                    "anchorHash": "eb2df8744082"
                   },
                   "prose:9": {
                     "contentHash": "482f4d543a4d",
@@ -251,7 +251,7 @@
             ]
           },
           "gas-costs": {
-            "contentHash": "6f967e73c5ce",
+            "contentHash": "43effbd63f62",
             "anchorHash": "d184cdd76e86",
             "labelHash": "5eb9e73fad95",
             "children": {
@@ -264,11 +264,11 @@
                 "anchorHash": "e3b0c44298fc"
               },
               "component:2": {
-                "contentHash": "1c88f351f07c",
+                "contentHash": "3b05a8e5669f",
                 "anchorHash": "dfa5a1d93d1a",
                 "children": {
                   "attr:title": {
-                    "contentHash": "5548ec753ab2",
+                    "contentHash": "57d816435cc9",
                     "anchorHash": "e3b0c44298fc"
                   },
                   "attr:eventCategory": {
@@ -359,7 +359,7 @@
           },
           "tools-and-resources": {
             "contentHash": "1b8aa958a0b8",
-            "anchorHash": "3cd25b0311df",
+            "anchorHash": "2a665c8d741b",
             "labelHash": "7ccf18aadb29",
             "children": {
               "_label": {
@@ -420,11 +420,11 @@
               },
               "component:8": {
                 "contentHash": "4b9f7d802648",
-                "anchorHash": "45717c2b3261",
+                "anchorHash": "830b33532dbe",
                 "children": {
                   "attr:id": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "5f6b0b4e201f"
+                    "anchorHash": "604365fa1146"
                   }
                 }
               }
@@ -451,6 +451,25 @@
                 "anchorHash": "e3b0c44298fc"
               }
             }
+          },
+          "migration-guide": {
+            "contentHash": "e4c79f345996",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "8615f89fbf99",
+            "children": {
+              "_label": {
+                "contentHash": "8615f89fbf99",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "e399a3eb2038",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
           },
           "further-reading": {
             "contentHash": "309017fb7b13",
@@ -530,6 +549,7 @@
           "gas-costs",
           "tools-and-resources",
           "empty-section",
+          "migration-guide",
           "further-reading"
         ]
       }
