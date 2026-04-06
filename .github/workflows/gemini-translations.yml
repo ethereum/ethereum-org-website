@@ -68,7 +68,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run translation (auto: full for new files, incremental for existing)
+      - name: "Run translation (auto-detect full vs incremental)"
         if: ${{ github.event.inputs.mode != 'full' }}
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main-incremental.ts
         env:
