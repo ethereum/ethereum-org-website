@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/test-incremental.json",
-  "generatedAt": "2026-04-06T18:19:49.422Z",
-  "rootHash": "4131d4cbfdd2",
+  "generatedAt": "2026-04-06T19:15:46.802Z",
+  "rootHash": "49f3b6422ea7",
   "tree": {
     "contentHash": "f55695e64cbb",
-    "anchorHash": "10154d6356d9",
+    "anchorHash": "328c62dbbec6",
     "children": {
       "title": {
         "contentHash": "06043d852aa0",
@@ -52,7 +52,7 @@
       },
       "footnote": {
         "contentHash": "b39fd78490e5",
-        "anchorHash": "74eda645983c",
+        "anchorHash": "0b65267e4713",
         "children": {
           "prose:3": {
             "contentHash": "b2e54f498eb4",
@@ -60,7 +60,7 @@
           },
           "html-tag:0": {
             "contentHash": "3dee05652774",
-            "anchorHash": "fc9ce61c6ac5"
+            "anchorHash": "2437e4f6179a"
           },
           "prose:4": {
             "contentHash": "0e4bb10f4611",
@@ -279,7 +279,7 @@
       },
       "dapp-description": {
         "contentHash": "4f08c3022ab9",
-        "anchorHash": "1452f7675e13",
+        "anchorHash": "f6e53f98e86e",
         "children": {
           "prose:1": {
             "contentHash": "3c86276ce04a",
@@ -287,7 +287,7 @@
           },
           "image:0": {
             "contentHash": "25e99bc97d6b",
-            "anchorHash": "12772310feee"
+            "anchorHash": "859d44c65e41"
           },
           "prose:2": {
             "contentHash": "59807238216e",
