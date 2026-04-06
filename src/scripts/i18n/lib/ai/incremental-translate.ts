@@ -393,6 +393,53 @@ export function buildSectionList(
 }
 
 // ---------------------------------------------------------------------------
+// Section removal
+// ---------------------------------------------------------------------------
+
+/**
+ * Remove a markdown section by its heading {#id} anchor.
+ * Removes the heading line and all body content up to the next heading
+ * of the same or higher level (or EOF). For removal, we DO want to
+ * remove nested subsections (unlike replaceSections which is leaf-only).
+ */
+export function removeMarkdownSection(
+  content: string,
+  sectionId: string
+): string {
+  const lines = content.split("\n")
+  const headingPattern = /^(#{1,6})\s+(.+?)(?:\s*\{#([^}]+)\})?\s*$/
+  let startLine = -1
+  let startLevel = 0
+
+  // Find the heading with this ID
+  for (let i = 0; i < lines.length; i++) {
+    const match = lines[i].match(headingPattern)
+    if (match && match[3] === sectionId) {
+      startLine = i
+      startLevel = match[1].length
+      break
+    }
+  }
+
+  if (startLine === -1) return content
+
+  // Find the end: next heading of same or higher level (remove entire subtree)
+  let endLine = lines.length
+  for (let i = startLine + 1; i < lines.length; i++) {
+    const match = lines[i].match(headingPattern)
+    if (match && match[1].length <= startLevel) {
+      endLine = i
+      break
+    }
+  }
+
+  // Remove the section (and any trailing blank line)
+  const result = [...lines.slice(0, startLine), ...lines.slice(endLine)]
+
+  return result.join("\n")
+}
+
+// ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 

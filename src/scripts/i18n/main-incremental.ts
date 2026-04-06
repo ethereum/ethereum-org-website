@@ -32,6 +32,7 @@ import {
   extractJsonSections,
   extractSections,
   parseIncrementalResponse,
+  removeMarkdownSection,
   replaceJsonValues,
   replaceSections,
 } from "./lib/ai/incremental-translate"
@@ -481,6 +482,52 @@ async function main() {
       task.localeContent = content // Update in-memory for prose phase
       console.log(
         `  [${task.locale}] ${task.file.path}: ${applied} inert changes applied, ${skipped} skipped`
+      )
+    }
+  }
+
+  // Phase 4b: Remove deleted content
+  if (totalRemoved > 0) {
+    logSection("Phase 4b: Remove Deleted Content")
+
+    for (const task of fileLanguageTasks) {
+      if (task.drift.removed.length === 0) continue
+      const removedIds = task.drift.removed.map((e) => e.id)
+
+      if (task.file.type === "json") {
+        // Remove keys from JSON
+        try {
+          const obj = JSON.parse(task.localeContent)
+          for (const id of removedIds) {
+            const parts = id.split("/")
+            let target = obj
+            for (let i = 0; i < parts.length - 1; i++) {
+              if (target[parts[i]] && typeof target[parts[i]] === "object") {
+                target = target[parts[i]]
+              } else {
+                target = null as unknown as Record<string, unknown>
+                break
+              }
+            }
+            if (target) {
+              delete target[parts[parts.length - 1]]
+            }
+          }
+          task.localeContent = JSON.stringify(obj, null, 2) + "\n"
+        } catch {
+          console.warn(
+            `  [${task.locale}] ${task.file.path}: failed to parse JSON for removal`
+          )
+        }
+      } else {
+        // Remove sections from markdown by heading ID
+        for (const id of removedIds) {
+          task.localeContent = removeMarkdownSection(task.localeContent, id)
+        }
+      }
+
+      console.log(
+        `  [${task.locale}] ${task.file.path}: removed ${removedIds.length} deleted section(s): ${removedIds.join(", ")}`
       )
     }
   }
