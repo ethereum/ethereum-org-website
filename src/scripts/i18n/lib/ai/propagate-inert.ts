@@ -120,12 +120,26 @@ export function detectInertChanges(
       // Compare each inert value (with key aliasing: tree and normalizer
       // use different names for the same attributes)
       for (const [key, newValue] of Object.entries(newValues)) {
-        const oldValue =
+        let oldValue =
           manifestMatch.entry.values[key] ??
           (key === "href" ? manifestMatch.entry.values.url : undefined) ??
           (key === "url" ? manifestMatch.entry.values.href : undefined) ??
           (key === "src" ? manifestMatch.entry.values.path : undefined) ??
           (key === "path" ? manifestMatch.entry.values.src : undefined)
+
+        // Fallback: if key not found by name, find the manifest value
+        // whose hash matches the old anchorHash. Handles cases where the
+        // normalizer bundles attributes under different key names than
+        // the tree (e.g., tree "value" vs normalizer "emoji")
+        if (!oldValue) {
+          for (const v of Object.values(manifestMatch.entry.values)) {
+            if (treeHash(v) === pair.oldAnchorHash) {
+              oldValue = v
+              break
+            }
+          }
+        }
+
         if (oldValue && oldValue !== newValue) {
           changes.push({
             elementType: pair.newNode.elementType,
@@ -446,9 +460,16 @@ function* matchInertNodes(
 /**
  * Find a translation manifest entry whose values produce the given anchorHash.
  *
- * Replicates the intl-content-tree anchorHash formula:
- * - Single value: hash(value)
- * - Multiple values: hash(sorted_keys.map(k => values[k]).join('\0'))
+ * Tries multiple hash strategies to bridge the gap between the tree's
+ * anchorHash computation (ALL meta keys including tagName) and the
+ * content normalizer's placeholder format (may bundle attributes
+ * differently or use different key names like url vs href).
+ *
+ * Strategies tried in order:
+ * 1. Single value: hash(value)
+ * 2. All values sorted: hash(sorted_keys.map(k => values[k]).join('\0'))
+ * 3. Individual values: any single hash(v) matches (for bundled entries
+ *    where the tree node is a leaf but the manifest groups parent attrs)
  */
 function findManifestEntryByAnchorHash(
   manifest: LocaleTranslationManifest,
@@ -463,17 +484,28 @@ function findManifestEntryByAnchorHash(
     const keys = Object.keys(values)
     if (keys.length === 0) continue
 
+    // Strategy 1: single value
     if (keys.length === 1) {
       if (treeHash(values[keys[0]]) === oldAnchorHash) {
         return { id, entry }
       }
-    } else {
-      // Multi-value: sorted keys, null-separated (matches computeHashes)
-      const metaValues = keys
-        .sort()
-        .map((k) => values[k])
-        .join("\0")
-      if (treeHash(metaValues) === oldAnchorHash) {
+      continue
+    }
+
+    // Strategy 2: all values sorted (matches computeHashes for multi-meta nodes)
+    const metaValues = keys
+      .sort()
+      .map((k) => values[k])
+      .join("\0")
+    if (treeHash(metaValues) === oldAnchorHash) {
+      return { id, entry }
+    }
+
+    // Strategy 3: any individual value matches (for bundled entries where
+    // the normalizer groups parent+child attrs but the tree has separate
+    // leaf nodes, e.g. component emoji stored with componentName)
+    for (const v of Object.values(values)) {
+      if (treeHash(v) === oldAnchorHash) {
         return { id, entry }
       }
     }
