@@ -19,7 +19,7 @@ summaryPoints:
 
 `solc`コンパイラは、SolidityのソースコードをEVMが実行できるバイトコードに変換します。コンパイラのバージョンが、コントラクト内の`pragma`ステートメントと一致していることを確認してください。
 
-デプロイされたコントラクトは<a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a>で確認でき、そのバイトコードと検証済みのソースコードを検査できます。
+デプロイされたコントラクトは<a href="https://eth.blockscout.com/address/0x5678" target="_blank">Blockscout</a>で確認でき、そのバイトコードと検証済みのソースコードを検査できます。
 
 ![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
@@ -87,7 +87,7 @@ def run_coverage(project_path):
 
 ### ネットワークとツール
 
-[Holesovice](https://holesovice.dev/)または[Sepolia](https://sepolia.dev/)上で[Remix](https://remix.ethereum.org/)を使用してコントラクトをデプロイし、[Blockscout](https://eth.blockscout.com/)でソースコードを検証できます。本番環境へのデプロイでは、プロセスを自動化するために**Hardhat Ignition**や**Foundryスクリプト**の使用を検討してください。
+[Holesovice](https://holesovice.dev/)または[Sepolia](https://sepolia.ethpandaops.io/)上で[Remix](https://remix.ethereum.org/)を使用してコントラクトをデプロイし、[Blockscout](https://eth.blockscout.com/)でソースコードを検証できます。本番環境へのデプロイでは、プロセスを自動化するために**Hardhat Ignition**や**Foundryスクリプト**の使用を検討してください。
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">フレームワークを探す</ButtonLink>
 
