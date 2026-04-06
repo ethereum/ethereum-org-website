@@ -29,8 +29,10 @@ import { filterGlossaryFlat } from "./lib/ai/glossary-lookup"
 import {
   buildIncrementalPrompt,
   buildSectionList,
+  extractJsonSections,
   extractSections,
   parseIncrementalResponse,
+  replaceJsonValues,
   replaceSections,
 } from "./lib/ai/incremental-translate"
 import {
@@ -181,7 +183,10 @@ async function main() {
           rootDir,
           `src/intl/${locale}/.manifest-source.json`
         )
-        translationManifestPath = "" // JSON doesn't have translation manifests yet
+        translationManifestPath = path.join(
+          rootDir,
+          `src/intl/${locale}/.manifest-translation.json`
+        )
         localePath = path.join(
           rootDir,
           `src/intl/${locale}/${path.basename(file.path)}`
@@ -389,6 +394,29 @@ async function main() {
               sourceManifest,
               task.locale
             )
+
+            // Stamp translation manifest for JSON (enables incremental later)
+            if (result.placeholderOrder && result.placeholderMap) {
+              const parsed = JSON.parse(sourceManifest)
+              const translationManifest = buildLocaleTranslationManifest({
+                locale: task.locale,
+                englishManifestHash: parsed.rootHash,
+                placeholderOrder: result.placeholderOrder,
+                placeholderMap: result.placeholderMap,
+                sections: {
+                  _all: {
+                    translatedAt: new Date().toISOString(),
+                    status: "success",
+                  },
+                },
+              })
+              const jsonTmPath = `src/intl/${task.locale}/.manifest-translation.json`
+              await committer.commitFile(
+                jsonTmPath,
+                translationManifest,
+                task.locale
+              )
+            }
           }
         } catch (err) {
           console.warn(
@@ -487,9 +515,15 @@ async function main() {
         )
       }
 
-      // Parse English and locale files into sections
-      const englishSections = extractSections(task.file.content)
-      const localeSections = extractSections(task.localeContent)
+      // Parse English and locale files into sections (markdown or JSON)
+      const englishSections =
+        task.file.type === "json"
+          ? extractJsonSections(task.file.content)
+          : extractSections(task.file.content)
+      const localeSections =
+        task.file.type === "json"
+          ? extractJsonSections(task.localeContent)
+          : extractSections(task.localeContent)
 
       // Build TRANSLATE/CONTEXT section list
       const sectionList = buildSectionList(
@@ -549,7 +583,10 @@ async function main() {
         )
 
         // Replace sections in locale content
-        task.localeContent = replaceSections(task.localeContent, translations)
+        task.localeContent =
+          task.file.type === "json"
+            ? replaceJsonValues(task.localeContent, translations)
+            : replaceSections(task.localeContent, translations)
 
         // Log any sections we requested but didn't get back
         for (const id of needsTranslation) {

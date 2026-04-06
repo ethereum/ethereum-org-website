@@ -112,12 +112,15 @@ export function detectInertChanges(
       if (!manifestMatch) continue
       consumed.add(manifestMatch.id)
 
-      // Compare each inert value (with href/url aliasing)
+      // Compare each inert value (with key aliasing: tree and normalizer
+      // use different names for the same attributes)
       for (const [key, newValue] of Object.entries(newValues)) {
         const oldValue =
           manifestMatch.entry.values[key] ??
           (key === "href" ? manifestMatch.entry.values.url : undefined) ??
-          (key === "url" ? manifestMatch.entry.values.href : undefined)
+          (key === "url" ? manifestMatch.entry.values.href : undefined) ??
+          (key === "src" ? manifestMatch.entry.values.path : undefined) ??
+          (key === "path" ? manifestMatch.entry.values.src : undefined)
         if (oldValue && oldValue !== newValue) {
           changes.push({
             elementType: pair.newNode.elementType,
