@@ -1,7 +1,7 @@
 ---
 title: "سمارٹ کنٹریکٹس بنانا اور تعینات کرنا"
 description: "ایتھیریم نیٹ ورک پر سمارٹ کنٹریکٹس لکھنے، ٹیسٹ کرنے اور تعینات کرنے کے لیے ایک عملی گائیڈ۔"
-image: /images/developers/smart-contracts-hero-v2.png
+image: /images/developers/smart-contracts-hero.png
 alt: "سمارٹ کنٹریکٹ کی تعیناتی کا خاکہ"
 lang: ur
 emoji: ":computer:"
@@ -86,6 +86,7 @@ def run_coverage(project_path):
 ## تعیناتی {#networks-and-tools}
 
 ### نیٹ ورکس اور ٹولز
+
 آپ [Holesky](https://holesky.dev/) یا [Sepolia](https://sepolia.ethpandaops.io/) پر [Remix](https://remix.ethereum.org/) کا استعمال کرتے ہوئے کنٹریکٹس تعینات کر سکتے ہیں، اور [Blockscout](https://eth.blockscout.com/) پر سورس کوڈ کی تصدیق کر سکتے ہیں۔ پروڈکشن کی تعیناتیوں کے لیے، اس عمل کو خودکار بنانے کے لیے **Hardhat Ignition** یا **Foundry اسکرپٹس** استعمال کرنے پر غور کریں۔
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/overview/">فریم ورکس دریافت کریں</ButtonLink>

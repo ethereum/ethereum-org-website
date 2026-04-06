@@ -1,7 +1,7 @@
 ---
 title: "스마트 컨트랙트 구축 및 배포"
 description: "이더리움 네트워크에서 스마트 컨트랙트를 작성, 테스트 및 배포하기 위한 실용적인 가이드입니다."
-image: /images/developers/smart-contracts-hero-v2.png
+image: /images/developers/smart-contracts-hero.png
 alt: "스마트 컨트랙트 배포 다이어그램"
 lang: ko
 emoji: ":computer:"
@@ -86,6 +86,7 @@ def run_coverage(project_path):
 ## 배포 {#networks-and-tools}
 
 ### 네트워크 및 도구
+
 [Holesky](https://holesky.dev/) 또는 [Sepolia](https://sepolia.ethpandaops.io/)에서 [Remix](https://remix.ethereum.org/)를 사용하여 컨트랙트를 배포하고, [Blockscout](https://eth.blockscout.com/)에서 소스 코드를 검증할 수 있습니다. 프로덕션 배포의 경우, 프로세스를 자동화하기 위해 **Hardhat Ignition** 또는 **Foundry 스크립트** 사용을 고려해 보세요.
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/overview/">프레임워크 탐색하기</ButtonLink>

@@ -1,7 +1,7 @@
 ---
 title: "スマート・コントラクトの構築とデプロイ"
 description: "イーサリアムネットワーク上でスマート・コントラクトを記述、テスト、デプロイするための実践的なガイド。"
-image: /images/developers/smart-contracts-hero-v2.png
+image: /images/developers/smart-contracts-hero.png
 alt: "スマート・コントラクトのデプロイ図"
 lang: ja
 emoji: ":computer:"
@@ -86,6 +86,7 @@ def run_coverage(project_path):
 ## デプロイ {#networks-and-tools}
 
 ### ネットワークとツール
+
 [Holesky](https://holesky.dev/)または[Sepolia](https://sepolia.ethpandaops.io/)上で[Remix](https://remix.ethereum.org/)を使用してコントラクトをデプロイし、[Blockscout](https://eth.blockscout.com/)でソースコードを検証できます。本番環境へのデプロイでは、プロセスを自動化するために**Hardhat Ignition**や**Foundryスクリプト**の使用を検討してください。
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/overview/">フレームワークを探す</ButtonLink>
