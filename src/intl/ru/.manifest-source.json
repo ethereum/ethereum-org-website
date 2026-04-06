@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/test-incremental.json",
-  "generatedAt": "2026-04-06T22:05:35.247Z",
-  "rootHash": "453b14918365",
+  "generatedAt": "2026-04-06T22:17:17.939Z",
+  "rootHash": "49f3b6422ea7",
   "tree": {
     "contentHash": "f55695e64cbb",
-    "anchorHash": "8b308c1a45f4",
+    "anchorHash": "328c62dbbec6",
     "children": {
       "title": {
         "contentHash": "06043d852aa0",
@@ -150,7 +150,7 @@
       },
       "multi-link-sentence": {
         "contentHash": "8efd64df8517",
-        "anchorHash": "9af9588debc7",
+        "anchorHash": "5a9136390965",
         "children": {
           "prose:4": {
             "contentHash": "0a5b58de3aca",
@@ -166,7 +166,7 @@
           },
           "html-tag:1": {
             "contentHash": "ab2db303fb7e",
-            "anchorHash": "2a6132a24da5"
+            "anchorHash": "aaeea0368b1b"
           },
           "prose:6": {
             "contentHash": "9d03151eeb79",
