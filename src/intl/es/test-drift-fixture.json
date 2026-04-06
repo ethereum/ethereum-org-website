@@ -1,0 +1,21 @@
+{
+  "test-title": "Estándares de tokens",
+  "test-description": "Aprenda sobre los estándares de tokens más utilizados en la red Ethereum.",
+  "test-cta-primary": "Comenzar",
+  "test-cta-secondary": "Ver documentación",
+  "test-stat-label": "Total de tokens desplegados",
+  "test-banner-text": "¿Es nuevo en los tokens? Comience con nuestra <a href=\"/developers/docs/standards/tokens/\">introducción a los estándares de tokens</a>.",
+  "test-footnote": "Datos de tokens obtenidos de <a href=\"https://eth.blockscout.com/tokens?type=ERC-20\" target=\"_blank\">Blockscout</a>. Precios proporcionados por <a href=\"https://www.coingecko.com\" target=\"_blank\">CoinGecko</a>.",
+  "test-filter-label": "Filtrar por estándar",
+  "test-empty-results": "No se encontraron tokens que coincidan con sus criterios. Intente eliminar algunos filtros.",
+  "test-nested": {
+    "section-title": "Temas avanzados",
+    "section-description": "Análisis profundo de la mecánica de los tokens y las mejores prácticas."
+  },
+  "test-last-updated": "Última actualización: abril de 2025",
+  "test-multi-link": "Despliegue con <a href=\"https://remix.ethereum.org/\">Remix</a> en <a href=\"https://sepolia.dev/\">Sepolia</a> y verifique en <a href=\"https://eth.blockscout.com/\">Blockscout</a>.",
+  "test-welcome-user": "¡Bienvenido de nuevo, {username}!",
+  "test-token-count": "{count, plural, =0 {No se encontraron tokens} one {# token encontrado} other {# tokens encontrados}}",
+  "test-transfer-status": "{status, select, pending {Su transferencia de {amount} ETH está pendiente} confirmed {Su transferencia de {amount} ETH ha sido confirmada} failed {Su transferencia de {amount} ETH falló} other {Estado desconocido}}",
+  "test-new-key": "Esta es una cadena de traducción completamente nueva agregada después de la revisión inicial."
+}
