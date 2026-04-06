@@ -16,10 +16,15 @@
  *     --file public/content/wrapped-eth/index.md [--dry-run]
  */
 
-import { existsSync, readFileSync, writeFileSync } from "fs"
+import { existsSync, readFileSync, realpathSync, writeFileSync } from "fs"
 import { dirname, join, resolve } from "path"
 
-import { type TreeNode, walk } from "intl-content-tree"
+import {
+  hash as treeHash,
+  type SerializedNode,
+  type TreeNode,
+  walk,
+} from "intl-content-tree"
 
 import i18nConfig from "../../../../../i18n.config.json"
 
@@ -28,6 +33,7 @@ import {
   detectDrift,
   type LocaleTranslationManifest,
   parseEnglishMarkdown,
+  type TreeManifest,
 } from "./manifest-adapter"
 
 // ---------------------------------------------------------------------------
@@ -54,6 +60,12 @@ interface InertChange {
 /**
  * Compare current English against a stored source manifest and
  * translation manifest. Returns a list of inert values that changed.
+ *
+ * Strategy: walk the OLD manifest tree (SerializedNode) and the NEW
+ * parsed tree in parallel, matched by node ID at each level. For each
+ * inert leaf whose anchorHash differs, use hash() to find the
+ * translation manifest entry that produced the old hash, giving us
+ * both old and new values.
  */
 export function detectInertChanges(
   englishContent: string,
@@ -63,32 +75,52 @@ export function detectInertChanges(
   const changes: InertChange[] = []
   const drift = detectDrift(englishContent, sourceManifestJson, "markdown")
 
-  // Parse English once, reuse for all drift entries
-  const englishTree = parseEnglishMarkdown(englishContent)
+  // Parse current English tree (has new values)
+  const newTree = parseEnglishMarkdown(englishContent)
+
+  // Get old manifest tree (has old anchor hashes for structural matching)
+  const oldManifest: TreeManifest = JSON.parse(sourceManifestJson)
+
+  // Track consumed manifest entries so duplicate hashes (e.g. two links
+  // to the same URL) each match a distinct placeholder entry.
+  const consumed = new Set<string>()
 
   for (const entry of drift.inertDrift) {
-    const section = findNodeById(englishTree, entry.id)
-    if (!section) continue
+    const newSection = findNodeById(newTree, entry.id)
+    if (!newSection) continue
 
-    for (const node of walkInertLeaves(section)) {
-      const nodeValues = getNodeInertValues(node)
+    // Find old section in manifest's serialized tree
+    const oldSectionNode = findSerializedNode(oldManifest.tree, entry.id)
+    if (!oldSectionNode) continue
 
-      // Find matching manifest entry -- require ALL values to match
-      const manifestMatch = findInTranslationManifest(
+    // Walk both trees in parallel, yielding inert leaf pairs
+    for (const pair of matchInertNodes(newSection, oldSectionNode)) {
+      const newValues = getNodeInertValues(pair.newNode)
+      if (Object.keys(newValues).length === 0) continue
+
+      // Skip if anchor hash hasn't actually changed
+      if (pair.oldAnchorHash === pair.newNode.anchorHash) continue
+
+      // Find translation manifest entry whose values hash to old anchorHash.
+      // consumed set prevents the same entry being matched twice when
+      // multiple nodes share identical old values (e.g. duplicate links).
+      const manifestMatch = findManifestEntryByAnchorHash(
         translationManifest,
-        nodeValues
+        pair.oldAnchorHash,
+        consumed
       )
       if (!manifestMatch) continue
+      consumed.add(manifestMatch.id)
 
       // Compare each inert value (with href/url aliasing)
-      for (const [key, newValue] of Object.entries(nodeValues)) {
+      for (const [key, newValue] of Object.entries(newValues)) {
         const oldValue =
           manifestMatch.entry.values[key] ??
           (key === "href" ? manifestMatch.entry.values.url : undefined) ??
           (key === "url" ? manifestMatch.entry.values.href : undefined)
         if (oldValue && oldValue !== newValue) {
           changes.push({
-            elementType: node.elementType,
+            elementType: pair.newNode.elementType,
             key,
             oldValue,
             newValue,
@@ -214,7 +246,9 @@ function contextAwareReplace(
     }
 
     default:
-      // Fallback: direct replacement using callback to prevent $ injection
+      // Fallback: replace first occurrence only (intentional -- without
+      // structural context we can't safely replace all matches).
+      // Callback prevents $ injection in replacement string.
       return content.replace(oldValue, () => newValue)
   }
 }
@@ -266,20 +300,6 @@ function findNodeById(tree: TreeNode, id: string): TreeNode | undefined {
   return undefined
 }
 
-function* walkInertLeaves(node: TreeNode): Generator<TreeNode> {
-  if (
-    node.contentType === "inert" ||
-    (node.contentType === "mixed" &&
-      node.meta &&
-      Object.keys(node.meta).length > 0)
-  ) {
-    yield node
-  }
-  for (const child of node.children) {
-    yield* walkInertLeaves(child)
-  }
-}
-
 function getNodeInertValues(node: TreeNode): Record<string, string> {
   const values: Record<string, string> = {}
   if (node.contentType === "inert" && node.value) {
@@ -302,40 +322,87 @@ function getNodeInertValues(node: TreeNode): Record<string, string> {
 }
 
 /**
- * Find a manifest entry where ALL inert values match (not just one).
- * Returns the entry and its placeholder ID for targeted updates.
+ * Find a node in the serialized manifest tree by ID (recursive search).
  */
-function findInTranslationManifest(
-  manifest: LocaleTranslationManifest,
-  nodeValues: Record<string, string>
-):
-  | { id: string; entry: { type: string; values: Record<string, string> } }
-  | undefined {
-  for (const [id, entry] of Object.entries(manifest.placeholderMap)) {
-    if (allValuesMatch(entry.values, nodeValues)) {
-      return { id, entry }
-    }
+function findSerializedNode(
+  node: SerializedNode,
+  id: string
+): SerializedNode | undefined {
+  if (!node.children) return undefined
+  if (node.children[id]) return node.children[id]
+  for (const child of Object.values(node.children)) {
+    const found = findSerializedNode(child, id)
+    if (found) return found
   }
   return undefined
 }
 
 /**
- * Check that ALL inert values from the node match the manifest entry.
- * Prevents false matches when multiple elements share one value.
+ * Walk new tree and old serialized tree in parallel by matching child IDs.
+ * Yields inert leaf pairs with the new node (full data) and old anchorHash.
  */
-function allValuesMatch(
-  manifestValues: Record<string, string>,
-  nodeValues: Record<string, string>
-): boolean {
-  if (Object.keys(nodeValues).length === 0) return false
-  for (const [k, v] of Object.entries(nodeValues)) {
-    const manifestVal =
-      manifestValues[k] ??
-      (k === "href" ? manifestValues.url : undefined) ??
-      (k === "url" ? manifestValues.href : undefined)
-    if (manifestVal !== v) return false
+function* matchInertNodes(
+  newNode: TreeNode,
+  oldSerialized: SerializedNode
+): Generator<{ newNode: TreeNode; oldAnchorHash: string }> {
+  // Yield inert leaves AND mixed-content nodes that carry inert metadata.
+  // Mixed nodes (e.g. links) have both translatable text and inert attributes
+  // (href). getNodeInertValues downstream filters to inert keys only.
+  if (
+    newNode.contentType === "inert" ||
+    (newNode.contentType === "mixed" &&
+      newNode.meta &&
+      Object.keys(newNode.meta).length > 0)
+  ) {
+    yield { newNode, oldAnchorHash: oldSerialized.anchorHash }
   }
-  return true
+  // Recurse into children by matching IDs
+  if (oldSerialized.children) {
+    for (const child of newNode.children) {
+      const oldChild = oldSerialized.children[child.id]
+      if (oldChild) {
+        yield* matchInertNodes(child, oldChild)
+      }
+    }
+  }
+}
+
+/**
+ * Find a translation manifest entry whose values produce the given anchorHash.
+ *
+ * Replicates the intl-content-tree anchorHash formula:
+ * - Single value: hash(value)
+ * - Multiple values: hash(sorted_keys.map(k => values[k]).join('\0'))
+ */
+function findManifestEntryByAnchorHash(
+  manifest: LocaleTranslationManifest,
+  oldAnchorHash: string,
+  consumed: Set<string>
+):
+  | { id: string; entry: { type: string; values: Record<string, string> } }
+  | undefined {
+  for (const [id, entry] of Object.entries(manifest.placeholderMap)) {
+    if (consumed.has(id)) continue
+    const values = entry.values
+    const keys = Object.keys(values)
+    if (keys.length === 0) continue
+
+    if (keys.length === 1) {
+      if (treeHash(values[keys[0]]) === oldAnchorHash) {
+        return { id, entry }
+      }
+    } else {
+      // Multi-value: sorted keys, null-separated (matches computeHashes)
+      const metaValues = keys
+        .sort()
+        .map((k) => values[k])
+        .join("\0")
+      if (treeHash(metaValues) === oldAnchorHash) {
+        return { id, entry }
+      }
+    }
+  }
+  return undefined
 }
 
 function escapeRegex(str: string): string {
@@ -375,14 +442,19 @@ Options:
 
   const rootDir = process.cwd()
 
-  // Path traversal guard
+  // Path traversal guard (resolve + realpathSync to follow symlinks)
   const resolvedPath = resolve(rootDir, filePath)
   if (!resolvedPath.startsWith(rootDir)) {
     console.error("Error: file path must be within the project root")
     process.exit(1)
   }
+  const realPath = realpathSync(resolvedPath)
+  if (!realPath.startsWith(realpathSync(rootDir))) {
+    console.error("Error: file path resolves outside the project root")
+    process.exit(1)
+  }
 
-  const englishContent = readFileSync(resolvedPath, "utf-8")
+  const englishContent = readFileSync(realPath, "utf-8")
 
   const locales = i18nConfig
     .map((l: { code: string }) => l.code)

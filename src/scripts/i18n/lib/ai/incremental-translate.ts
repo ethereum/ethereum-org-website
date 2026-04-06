@@ -194,17 +194,14 @@ export function replaceSections(
     }
   }
 
-  // Calculate end lines (next heading of same or higher level, or EOF)
+  // Calculate end lines (next heading of ANY level, or EOF).
+  // Each section only covers its own direct body, not nested subsections.
+  // This prevents duplicate content when both parent and child are replaced.
   for (let i = 0; i < sectionRanges.length; i++) {
-    const current = sectionRanges[i]
-    let endLine = lines.length
-    for (let j = i + 1; j < sectionRanges.length; j++) {
-      if (sectionRanges[j].level <= current.level) {
-        endLine = sectionRanges[j].startLine
-        break
-      }
-    }
-    current.endLine = endLine
+    sectionRanges[i].endLine =
+      i + 1 < sectionRanges.length
+        ? sectionRanges[i + 1].startLine
+        : lines.length
   }
 
   // Build the output, replacing sections that have translations
@@ -289,19 +286,14 @@ export function extractSections(content: string): ExtractedSection[] {
     }
   }
 
-  // Extract body content for each heading
+  // Extract body content for each heading.
+  // Each section only covers its own direct body (up to next heading of ANY
+  // level), not nested subsections. Mirrors replaceSections logic.
   for (let i = 0; i < headings.length; i++) {
     const current = headings[i]
     const bodyStart = current.line + 1
-    let bodyEnd = lines.length
-
-    // Find the end: next heading of same or higher level
-    for (let j = i + 1; j < headings.length; j++) {
-      if (headings[j].level <= current.level) {
-        bodyEnd = headings[j].line
-        break
-      }
-    }
+    const bodyEnd =
+      i + 1 < headings.length ? headings[i + 1].line : lines.length
 
     const body = lines.slice(bodyStart, bodyEnd).join("\n").trim()
     sections.push({

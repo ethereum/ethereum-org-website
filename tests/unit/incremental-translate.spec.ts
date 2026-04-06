@@ -7,6 +7,7 @@
 import { expect, test } from "@playwright/test"
 
 import {
+  extractSections,
   parseIncrementalResponse,
   replaceSections,
 } from "@/scripts/i18n/lib/ai/incremental-translate"
@@ -142,17 +143,43 @@ test.describe("replaceSections", () => {
       "Next content.",
     ].join("\n")
 
-    const nestedEnglish = nestedLocale
-
-    const result = replaceSections(
-      nestedLocale,
-      { child: "New child content." },
-      nestedEnglish
-    )
+    const result = replaceSections(nestedLocale, {
+      child: "New child content.",
+    })
     expect(result).toContain("Parent content.")
     expect(result).toContain("New child content.")
     expect(result).toContain("Next content.")
     expect(result).toContain("### Child {#child}")
+  })
+
+  test("does not duplicate content when parent and child are both replaced", () => {
+    const nestedLocale = [
+      "## Parent {#parent}",
+      "",
+      "Parent content.",
+      "",
+      "### Child {#child}",
+      "",
+      "Child content.",
+      "",
+      "## Next {#next}",
+      "",
+      "Next content.",
+    ].join("\n")
+
+    const result = replaceSections(nestedLocale, {
+      parent: "New parent content.",
+      child: "New child content.",
+    })
+    // Each should appear exactly once (regression: previously duplicated)
+    const parentMatches = result.match(/New parent content\./g)
+    const childMatches = result.match(/New child content\./g)
+    expect(parentMatches).toHaveLength(1)
+    expect(childMatches).toHaveLength(1)
+    // Structure preserved
+    expect(result).toContain("## Parent {#parent}")
+    expect(result).toContain("### Child {#child}")
+    expect(result).toContain("Next content.")
   })
 
   test("preserves frontmatter", () => {
@@ -165,5 +192,34 @@ test.describe("replaceSections", () => {
     const result = replaceSections(locale, { third: "Final replacement." })
     expect(result).toContain("Final replacement.")
     expect(result).not.toContain("Contenido de la tercera seccion.")
+  })
+})
+
+test.describe("extractSections", () => {
+  test("extracts direct body only, not nested subsections", () => {
+    const md = [
+      "## Parent {#parent}",
+      "",
+      "Parent body.",
+      "",
+      "### Child {#child}",
+      "",
+      "Child body.",
+      "",
+      "## Sibling {#sibling}",
+      "",
+      "Sibling body.",
+    ].join("\n")
+
+    const sections = extractSections(md)
+    const parent = sections.find((s) => s.id === "parent")
+    const child = sections.find((s) => s.id === "child")
+
+    expect(parent).toBeDefined()
+    expect(parent!.body).toContain("Parent body.")
+    expect(parent!.body).not.toContain("Child body.")
+
+    expect(child).toBeDefined()
+    expect(child!.body).toContain("Child body.")
   })
 })
