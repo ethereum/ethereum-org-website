@@ -11,7 +11,7 @@ published: 2025-08-15
 
 # Understanding Token Standards {#understanding-token-standards}
 
-Token standards define how digital assets operate on the Ethereum network. They provide a shared interface that wallets, exchanges, and decentralized applications can rely on to interact with tokens in a predictable way.
+Token standards are the building blocks of the Ethereum token ecosystem. They establish a common interface that wallets, exchanges, and decentralized applications use to interact with tokens reliably and predictably.
 
 ## What are token standards? {#what-are-token-standards}
 
@@ -21,7 +21,7 @@ _Without standards_, every token would need custom integration code. The `approv
 
 You can check a token's contract on <a href="https://eth.blockscout.com/tokens?type=ERC-20">Etherscan</a> to verify which standard it implements.
 
-![Token approval flow](/images/tokens/approval-flow-v2.png)
+![Token approval flow](/images/tokens/approval-flow-v3.png)
 
 ## Common standards {#common-standards}
 
@@ -41,7 +41,7 @@ function transfer(address to, uint256 amount) public returns (bool) {
 
 The total supply of an ERC-20 token is typically fixed at deployment. For example, a project might create 1,000,000 tokens with 18 decimal places, meaning the smallest unit is `0.000000000000000001` tokens. In the `translate` function above, if the sender has 100 tokens and requests sending 10, they'll end up with 90 (100 - 10 = 90) and the recipient will end up with 10 more.
 
-You can deploy tokens using [Remix](https://remix.ethereum.org/) on [Holesky](https://holesky.dev/), and verify the source code on [Blockscout](https://eth.blockscout.com/).
+You can deploy tokens using [Remix](https://remix.ethereum.org/) on [Holesovice](https://holesovice.dev/), and verify the source code on [Blockscout](https://eth.blockscout.com/).
 
 ### ERC-721: Non-fungible tokens {#erc-721}
 
