@@ -1,6 +1,6 @@
 ---
-title: create-eth-appでDappのフロントエンド開発をはじめましょう
-description: create-eth-appの使い方と機能の概要
+title: "create-eth-appでDappのフロントエンド開発をはじめましょう"
+description: "create-eth-appの使い方と機能の概要"
 author: "Markus Waas"
 tags:
   - "create-eth-app"

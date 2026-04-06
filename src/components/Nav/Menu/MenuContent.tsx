@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import { tv } from "tailwind-variants"
 import { Content } from "@radix-ui/react-navigation-menu"
 

@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
@@ -17,6 +17,7 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
@@ -29,10 +30,11 @@ import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const EVENT_CATEGORY = "dashboard"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
   const [growThePieData, blobscanOverallStats] = await Promise.all([
@@ -55,7 +57,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
   const blobStats = {
     avgBlobFee: blobscanOverallStats.avgBlobFee,
-    totalBlobs: new Intl.NumberFormat(undefined, {
+    totalBlobs: numberFormat(locale, {
       notation: "compact",
       maximumFractionDigits: 1,
     }).format(blobscanOverallStats.totalBlobs),
@@ -66,11 +68,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     ...blobStats,
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "resources",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -230,14 +230,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   return await getMetadata({
     locale,

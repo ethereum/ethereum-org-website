@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Prima di leggere",
+  "heading": "Stai cercando di comprendere Ethereum?",
+  "description": "Questo whitepaper è stato pubblicato nel <strong>2014</strong>, prima del lancio di Ethereum. Dopo oltre 10 anni di sviluppo, importanti aggiornamenti e crescita dell'ecosistema, <strong>il whitepaper originale non riflette più ciò che Ethereum è oggi</strong>.",
+  "cta-learn": "Scopri Ethereum oggi",
+  "cta-download-pdf": "Scarica il PDF originale (2014)",
+  "whats-changed": "Cosa è cambiato dal 2014?",
+  "evolution-pos": "Ethereum è passato dalla prova di lavoro alla prova di stake (The Merge, 2022)",
+  "evolution-l2": "Le soluzioni di scalabilità di livello 2 ora elaborano milioni di transazioni",
+  "evolution-usecases": "DeFi, NFT e DAO sono emersi come principali casi d'uso",
+  "evolution-standards": "Gli standard dei contratti intelligenti (ERC-20, ERC-721) sono diventati le fondamenta del settore"
+}

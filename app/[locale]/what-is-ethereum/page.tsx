@@ -8,7 +8,7 @@ import {
 } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams, ToCItem } from "@/lib/types"
+import type { Lang, PageParams, ToCItem } from "@/lib/types"
 
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -22,7 +22,7 @@ import {
 } from "@/components/HighlightCard"
 import { Image } from "@/components/Image"
 import { Emphasis, Strong } from "@/components/IntlStringElements"
-import ListenToPlayer from "@/components/ListenToPlayer/server"
+import ListenToPlayer from "@/components/ListenToPlayer/lazy"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -35,6 +35,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
+import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
 import WhatIsEthereumPageJsonLD from "./page-jsonld"
 
 import contributionBanner from "@/public/images/doge-computer.png"
@@ -46,20 +48,13 @@ import etherBanner from "@/public/images/impact_transparent.png"
 import whenWhoBanner from "@/public/images/translatathon/walking.png"
 import heroImg from "@/public/images/what-is-ethereum.png"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ethereum",
-  })
+  const t = await getTranslations("page-what-is-ethereum")
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "what-is-ethereum",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("what-is-ethereum", locale as Lang)
 
   const tocItems: ToCItem[] = [
     { title: t("page-what-is-ethereum-toc-ethereum"), url: "#ethereum" },
@@ -130,6 +125,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <p>
                 {t.rich("page-what-is-ethereum-ethereum-intro-1", {
                   strong: Strong,
+                  a: (chunks) => <Link href="/">{chunks}</Link>,
                 })}
               </p>
               <p>
@@ -788,7 +784,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                       })}
                     </p>
                   </div>
-                  <ButtonLink href="/enterprise/">
+                  <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
                     {t("page-what-is-ethereum-start-business-cta")}
                   </ButtonLink>
                 </CardContent>
@@ -1055,7 +1051,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               </div>
             </Section>
 
-            <Section id="further-readon" className="space-y-8">
+            <Section id="further-reading" className="space-y-8">
               <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
                 {t("page-what-is-ethereum-further-reading-title")}
               </h2>
@@ -1091,17 +1087,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ethereum",
-  })
+  const t = await getTranslations("page-what-is-ethereum")
 
   return await getMetadata({
     locale,

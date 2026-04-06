@@ -49,7 +49,7 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 
 ## How do DAOs work? {#how-daos-work}
 
-The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
+The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which defines the rules of the organization and holds the group's treasury. Once the contract is live on [Ethereum](/), no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
@@ -74,15 +74,15 @@ Delegation is like the DAO version of representative democracy. Token holders de
 
 [ENS](https://claim.ens.domains/delegate-ranking) – ENS holders can delegate their votes to engaged community members to represent them.
 
-### Automatic transaction governance {#governance-example}
+### Automatic transaction governance {#governance-example-2}
 
 In many DAOs, transactions will be automatically executed if a quorum of members votes affirmative.
 
-#### A famous example {#governance-example}
+#### A famous example {#governance-example-3}
 
 [Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affirmative, as long as it is not vetoed by the founders.
 
-### Multisig governance {#governance-example}
+### Multisig governance {#governance-example-4}
 
 While DAOs may have thousands of voting members, funds can live in a [wallet](/glossary/#wallet) shared by 5-20 active community members who are trusted and usually doxxed (public identities known to the community). After a vote, the [multisig](/glossary/#multisig) signers execute the will of the community.
 

@@ -29,35 +29,37 @@ const supportedLngs = Object.keys(baseLocales)
 
 /**
  * Taking the ns array and generating those files for each language available.
+ * Uses require() because this file is bundled by webpack for the browser —
+ * webpack resolves require() at build time. Node-only APIs like fs or
+ * import.meta.dirname do not work here.
  */
-const messagesByLocale = ns.reduce((acc, n) => {
-  supportedLngs.forEach((lng) => {
-    if (!acc[lng]) acc[lng] = {}
+const messagesByLocale = ns.reduce(
+  (acc, n) => {
+    supportedLngs.forEach((lng) => {
+      if (!acc[lng]) acc[lng] = {}
 
-    try {
-      acc[lng] = {
-        ...acc[lng],
-        [n]: {
-          ...acc[lng][n],
-          ...require(`../src/intl/${lng}/${n}.json`),
-        },
+      try {
+        acc[lng] = {
+          ...acc[lng],
+          [n]: {
+            ...acc[lng][n],
+            ...require(`../src/intl/${lng}/${n}.json`),
+          },
+        }
+      } catch {
+        acc[lng] = {
+          ...acc[lng],
+          [n]: {
+            ...acc[lng][n],
+            ...require(`../src/intl/en/${n}.json`),
+          },
+        }
       }
-    } catch {
-      acc[lng] = {
-        ...acc[lng],
-        [n]: {
-          ...acc[lng][n],
-          ...require(`../src/intl/en/${n}.json`),
-        },
-      }
-    }
-  })
+    })
 
-  return acc
-}, {})
-console.log(
-  "🚀 ~ constresources:Resource=ns.reduce ~ resources:",
-  messagesByLocale
+    return acc
+  },
+  {} as Record<string, Record<string, Record<string, string>>>
 )
 
 const nextIntl = {

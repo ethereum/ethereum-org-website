@@ -10,6 +10,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { formatDate, getValidDate } from "@/lib/utils/date"
+import { numberFormat } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
 import { DEV_TOOL_CATEGORY_SLUGS } from "../constants"
@@ -20,11 +21,8 @@ import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
 const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
   const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-developers-tools")
+  const tCommon = await getTranslations("common")
 
   const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 
@@ -62,7 +60,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
             status={getCategoryTagStyle(categorySlug)}
             className="px-1 py-0"
           >
-            {tool.category}
+            {t(`page-developers-tools-category-${categorySlug}-title`)}
           </Tag>
           <h2 className="text-3xl">{tool.name}</h2>
           <TagsInlineText
@@ -125,7 +123,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
                           className="text-sm"
                           title={t("page-developers-tools-stats-stargazers")}
                         >
-                          ({new Intl.NumberFormat(locale).format(stargazers)}
+                          ({numberFormat(locale).format(stargazers)}
                         </span>
                         <Star className="-mx-[0.5ch] !size-3" />
                         <span className="text-sm">)</span>
@@ -139,7 +137,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
                           title={t("page-developers-tools-stats-downloads")}
                         >
                           (
-                          {new Intl.NumberFormat(locale, {
+                          {numberFormat(locale, {
                             notation: "compact",
                           }).format(downloads)}
                         </span>

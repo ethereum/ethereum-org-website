@@ -1,6 +1,6 @@
 ---
-title: Explorateurs de blocs
-description: Introduction aux explorateurs de blocs, votre portail vers le monde des données de la blockchain, où vous pouvez rechercher des informations sur les transactions, les comptes, les contrats et bien plus.
+title: Explorateurs de bloc
+description: "Introduction aux explorateurs de blocs, votre portail vers le monde des données de la blockchain, où vous pouvez rechercher des informations sur les transactions, les comptes, les contrats et bien plus."
 lang: fr
 sidebarDepth: 3
 ---
@@ -9,23 +9,21 @@ Les explorateurs de blocs sont votre portail vers les données Ethereum. Vous po
 
 ## Prérequis {#prerequisites}
 
-Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
+Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par [une introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Services {#services}
 
-- [Etherscan](https://etherscan.io/) - _Également disponible en chinois, coréen, russe et japonais_
+- [Etherscan](https://etherscan.io/) -_Également disponible en chinois, coréen, russe et japonais_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair](https://blockchair.com/ethereum) - _Également disponible en espagnol, français, italien, néerlandais, portugais, russe, chinois et Farsi_
+- [Blockchair](https://blockchair.com/ethereum) -_Également disponible en espagnol, français, italien, néerlandais, portugais, russe, chinois et farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
-- [Explorateurs de bloc DexGuru](https://ethereum.dex.guru/)
+- [Explorateur de blocs DexGuru](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
-- [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer](https://ethplorer.io/) - _Aussi disponible en chinois, espagnol, français, turc, russe, coréen et vietnamien_
+- [Ethplorer](https://ethplorer.io/) -_Également disponible en chinois, espagnol, français, turc, russe, coréen et vietnamien_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Rantom](https://rantom.app/)
 - [Ethseer](https://ethseer.io)
 
 ## Outils open source {#open-source-tools}
@@ -95,7 +93,7 @@ De plus en plus d'utilisateurs tirent parti des explorateurs de blocs pour suivr
 - Gas limit (limite de gaz) - Le nombre maximum d'unités de gaz que cette transaction peut consommer
 - Gas used (gaz utilisé) - Le montant réel des unités de gaz consommées par la transaction
 - Gas price (prix du gaz) - Le prix fixé par unité de gaz
-- Nonce - Le numéro de transaction pour l'adresse `from` (gardez à l'esprit que cela commence à 0 donc un nonce de `100` serait en fait la 101e transaction soumise par ce compte
+- Nonce - Le numéro de transaction pour l'adresse `from` (n'oubliez pas que la numérotation commence à 0 et qu'un nonce de `100` serait donc la 101e transaction soumise par ce compte)
 - Input data (données d'entrée) - Toutes les informations supplémentaires requises par la transaction
 
 ### Comptes {#accounts}
@@ -145,7 +143,7 @@ Certaines données de bloc sont préoccupées par la santé d'Ethereum de maniè
 - Total ETH supply (fourniture totale d'ETH) - Nombre d'ETH en circulation - souvenez-vous que de nouveaux ETH sont créés avec la création de chaque bloc sous la forme de récompenses de blocs
 - Market cap (capitalisation boursière) - Calcul du prix\*approvisionnement
 
-## Données de couche de consensus {#consensus-layer-data}
+## Données de la couche de consensus {#consensus-layer-data}
 
 ### Période {#epoch}
 
@@ -238,16 +236,12 @@ Les données de couches de consensus de haut niveau comprennent les éléments s
 
 ## Explorateurs de blocs {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau principal Ethereum
-- [Etherscan Sepolia](https://sepolia.etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau de test Sepolia
-- [Etherscan Hoodi](https://hoodi.etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau de test Hoodi
-- [3xpl](https://3xpl.com/ethereum) - un explorateur Ethereum open source sans publicité qui permet de télécharger ses ensembles de données
-- [Beaconcha.in](https://beaconcha.in/) - un explorateur de blocs open source pour le réseau principal Ethereum
-- [Blockchair](https://blockchair.com/ethereum) - l'explorateur Ethereum le plus privé. Également pour le tri et le filtrage des données (mempool)
+- [Etherscan](https://etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau principal Ethereum et les réseaux de test
+- [3xpl](https://3xpl.com/ethereum) - un explorateur Ethereum open source et sans publicité qui permet de télécharger ses ensembles de données
+- [Beaconcha.in](https://beaconcha.in/) - un explorateur de blocs open source pour le réseau principal Ethereum et les réseaux de test
+- [Blockchair](https://blockchair.com/ethereum) - l'explorateur Ethereum le plus privé. Egalement pour trier et filtrer des données (mempool).
 - [Etherchain](https://www.etherchain.org/) - un explorateur de blocs pour le réseau principal Ethereum
 - [Ethplorer](https://ethplorer.io/) - un explorateur de blocs axé sur les jetons pour le réseau principal Ethereum et le réseau de test Kovan
-- [Rantom](https://rantom.app/) - Un visualiseur de transactions DeFi et NFT open source convivial pour des informations détaillées
-- [Ethernow](https://www.ethernow.xyz/) - un explorateur de transactions en temps réel qui vous permet de voir la couche pré-chaîne du réseau principal Ethereum
 
 ## En savoir plus {#further-reading}
 

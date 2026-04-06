@@ -1,6 +1,6 @@
 ---
-title: Web3 金鑰儲存的定義
-description: Web3 金鑰儲存的正式定義
+title: "Web3 金鑰儲存的定義"
+description: "Web3 金鑰儲存的正式定義"
 lang: zh-tw
 sidebarDepth: 2
 ---

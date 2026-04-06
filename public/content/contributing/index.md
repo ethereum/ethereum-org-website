@@ -8,7 +8,7 @@ lang: en
 
 Ethereum.org is an open-source run project with **12 000+** contributors that help translate, write, design and maintain the website.
 
-We are a welcoming community that will help you grow and educate in the Ethereum ecosystem while also meaningfully contribute and get relevant practical experience!
+We are a welcoming community that will help you grow and educate in the [Ethereum](/) ecosystem while also meaningfully contribute and get relevant practical experience!
 
 ## Ways to contribute {#ways-to-contribute}
 
@@ -38,10 +38,11 @@ We are a welcoming community that will help you grow and educate in the Ethereum
 - [Add a staking product or service](/contributing/adding-staking-products/) – Add a project that helps facilitate solo staking, pooled staking, or staking as a service
 - [Add a wallet](/contributing/adding-wallets/) – Add a wallet for the [find wallets page](/wallets/find-wallet/)
 - [Suggest a project for our DeSci page](/contributing/adding-desci-projects/) – Add a project built on Ethereum that contributes to decentralized science
+- [Add a resource](/contributing/adding-resources/) – Add a useful resource to any relevant page
 
 Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
 
-## Good first tasks to start contributing
+## Good first tasks to start contributing {#good-first-tasks-to-start-contributing}
 
 These are few current tasks that you could help us solve and take responsibility for. For most you will need GitHub account as most changes to the website are made through GitHub.
 
@@ -89,7 +90,7 @@ If your contribution gets merged into ethereum.org, you will have a chance to cl
 
 [More on OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
-### How to claim
+### How to claim {#how-to-claim}
 1. Join our [Discord server](https://discord.gg/ethereum-org).
 2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel.
 3. Wait for a member of our team to send you a link to your OAT.
@@ -102,7 +103,7 @@ You should only use self-custody wallets to claim OATs. Do not use exchange acco
 GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
 
 
-### How to claim {#how-to-claim}
+### How to claim {#how-to-claim-2}
 
 1. Visit [GitPOAP](https://www.gitpoap.io).
 2. Connect with your wallet or even with your email through sign in option.

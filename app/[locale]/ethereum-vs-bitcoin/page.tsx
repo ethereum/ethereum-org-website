@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
@@ -30,18 +30,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-ethereum-vs-bitcoin",
-  })
+  const t = await getTranslations("page-ethereum-vs-bitcoin")
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "ethereum-vs-bitcoin",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("ethereum-vs-bitcoin", locale as Lang)
 
   const tocItems: ToCItem[] = [
     {
@@ -448,10 +440,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-ethereum-vs-bitcoin",
-  })
+  const t = await getTranslations("page-ethereum-vs-bitcoin")
 
   return await getMetadata({
     locale,

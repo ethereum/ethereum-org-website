@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Avatar, AvatarGroup } from "../avatar"
 import { HStack, VStack } from "../flex"

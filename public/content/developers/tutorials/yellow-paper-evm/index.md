@@ -4,6 +4,7 @@ description: Understanding the part of the Yellow Paper, the formal specificatio
 author: "qbzzt"
 tags: ["evm"]
 skill: intermediate
+breadcrumb: Yellow Paper EVM
 lang: en
 published: 2022-05-15
 ---
@@ -129,7 +130,7 @@ Equations 137-142 give us the initial conditions for running the EVM:
 
 Equation 143 tells us there are four possible conditions at each point in time during execution, and what to do with them:
 
-1.  `Z(σ,μ,A,I)`. Z represents a function that tests whether an operation creates an invalid state transition (see [exceptional halting](#942-exceptional-halting)). If it evaluates to True, the new state is identical to the old one (except gas gets burned) because the changes have not been implemented.
+1.  `Z(σ,μ,A,I)`. Z represents a function that tests whether an operation creates an invalid state transition (see [exceptional halting](#942-exceptional-halt)). If it evaluates to True, the new state is identical to the old one (except gas gets burned) because the changes have not been implemented.
 2.  If the opcode being executed is [`REVERT`](https://www.evm.codes/#fd), the new state is the same as the old state, some gas is lost.
 3.  If the sequence of operations is finished, as signified by a [`RETURN`](https://www.evm.codes/#f3)), the state is updated to the new state.
 4.  If we aren't at one of the end conditions 1-3, continue running.
@@ -274,4 +275,4 @@ Mathematical notation is precise and has allowed the Yellow Paper to specify eve
 - Programmers understand computer code.
   They may or may not understand mathematical notation.
 
-Maybe for these reasons, the newer [consensus layer specs](https://github.com/ethereum/consensus-specs/blob/dev/tests/core/pyspec/README.md) are written in Python. There are [execution layer specs in Python](https://ethereum.github.io/execution-specs), but they are not complete. Until and unless the entire Yellow Paper is also translated to Python or a similar language, the Yellow Paper will continue in service, and it is helpful to be able to read it.
+Maybe for these reasons, the newer [consensus layer specs](https://github.com/ethereum/consensus-specs/blob/master/tests/core/pyspec/README.md) are written in Python. There are [execution layer specs in Python](https://ethereum.github.io/execution-specs), but they are not complete. Until and unless the entire Yellow Paper is also translated to Python or a similar language, the Yellow Paper will continue in service, and it is helpful to be able to read it.

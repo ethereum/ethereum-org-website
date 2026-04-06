@@ -4,7 +4,7 @@ description: An introduction to optimistic rollups—a scaling solution used by 
 lang: en
 ---
 
-Optimistic rollups are layer 2 (L2) protocols designed to extend the throughput of Ethereum's base layer. They reduce computation on the main Ethereum chain by processing transactions offchain, offering significant improvements in processing speeds. Unlike other scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), optimistic rollups derive security from Mainnet by publishing transaction results onchain, or [plasma chains](/developers/docs/scaling/plasma/), which also verify transactions on Ethereum with fraud proofs, but store transaction data elsewhere.
+Optimistic rollups are layer 2 (L2) protocols designed to extend the throughput of Ethereum's base layer. They reduce computation on the main [Ethereum](/) chain by processing transactions offchain, offering significant improvements in processing speeds. Unlike other scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), optimistic rollups derive security from Mainnet by publishing transaction results onchain, or [plasma chains](/developers/docs/scaling/plasma/), which also verify transactions on Ethereum with fraud proofs, but store transaction data elsewhere.
 
 As computation is the slow, expensive part of using Ethereum, optimistic rollups can offer up to 10-100x improvements in scalability. Optimistic rollups also write transactions to Ethereum as `calldata` or in [blobs](/roadmap/danksharding/), reducing gas costs for users.
 
@@ -26,7 +26,7 @@ If the fraud proof succeeds, the rollup protocol re-executes the transaction(s) 
 
 If the rollup batch remains unchallenged (i.e., all transactions are correctly executed) after the challenge period elapses, it is deemed valid and accepted on Ethereum. Others can continue to build on an unconfirmed rollup block, but with a caveat: transaction results will be reversed if based on an incorrectly executed transaction published previously.
 
-## How do optimistic rollups interact with Ethereum? {#optimistic-rollups-and-Ethereum}
+## How do optimistic rollups interact with Ethereum? {#optimistic-rollups-and-ethereum}
 
 Optimistic rollups are [offchain scaling solutions](/developers/docs/scaling/#offchain-scaling) built to operate on top of Ethereum. Each optimistic rollup is managed by a set of smart contracts deployed on the Ethereum network. Optimistic rollups process transactions off the main Ethereum chain, but post offchain transactions (in batches) to an onchain rollup contract. Like the Ethereum blockchain, this transaction record is immutable and forms the "optimistic rollup chain."
 
@@ -253,7 +253,7 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-## Further reading on optimistic rollups
+## Further reading on optimistic rollups {#further-reading-on-optimistic-rollups}
 
 - [How do optimistic rollups work (The Complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [What is a Blockchain Rollup? A Technical Introduction](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
@@ -263,3 +263,7 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 - [How does Optimism's Rollup really work?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
+
+## Tutorials: Optimistic rollups and bridges on Ethereum {#tutorials}
+
+- [Optimism standard bridge contract walkthrough](/developers/tutorials/optimism-std-bridge-annotated-code/) _– An annotated code walkthrough of the Optimism standard bridge for moving assets between L1 and L2._

@@ -1,7 +1,7 @@
 import { Landmark, SquareCode, User } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
@@ -27,26 +27,34 @@ import { getMetadata } from "@/lib/utils/metadata"
 import GasTable from "./_components/GasTable"
 import WhatIsEtherPageJsonLD from "./page-jsonld"
 
+import { getEthPrice, getGasPriceData } from "@/lib/data"
 import heroImg from "@/public/images/eth.png"
 import ethOrgLogo from "@/public/images/eth-org-logo.png"
 import developersHubHero from "@/public/images/heroes/developers-hub-hero.png"
 import impactTransparent from "@/public/images/impact_transparent.png"
 import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
 
-const Page = async ({ params }: { params: { locale: Lang } }) => {
+const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
+  const params = await props.params
   const { locale } = params
+  setRequestLocale(locale)
 
-  const t = await getTranslations({
-    namespace: "page-what-is-ether",
-  })
+  const t = await getTranslations("page-what-is-ether")
 
-  const commitHistoryCache: CommitHistory = {}
-  const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "what-is-ether",
-      locale as Lang,
-      commitHistoryCache
-    )
+  const [
+    { contributors, lastEditLocaleTimestamp },
+    gasPriceData,
+    ethPriceData,
+  ] = await Promise.all([
+    getAppPageContributorInfo("what-is-ether", locale as Lang),
+    getGasPriceData(),
+    getEthPrice(),
+  ])
+
+  const gasTableInitialData =
+    gasPriceData && ethPriceData && !("error" in ethPriceData)
+      ? { gasPrice: gasPriceData.gasPrice, ethPriceUSD: ethPriceData.value }
+      : null
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: {
@@ -403,7 +411,24 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                   }
                 )}
               </p>
-              <GasTable />
+              <GasTable
+                labels={{
+                  transactionType: t(
+                    "page-what-is-ether-gas-table-transaction-type"
+                  ),
+                  typicalCostRange: t(
+                    "page-what-is-ether-gas-table-typical-cost-range"
+                  ),
+                  estimatedGasUnits: t(
+                    "page-what-is-ether-gas-table-estimated-gas-units"
+                  ),
+                  row1: t("page-what-is-ether-gas-table-row-1-1"),
+                  row2: t("page-what-is-ether-gas-table-row-2-1"),
+                  row3: t("page-what-is-ether-gas-table-row-3-1"),
+                }}
+                locale={locale}
+                initialData={gasTableInitialData}
+              />
             </div>
           </Section>
 
@@ -684,10 +709,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ether",
-  })
+  const t = await getTranslations("page-what-is-ether")
 
   return await getMetadata({
     locale,

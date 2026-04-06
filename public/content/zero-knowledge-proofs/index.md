@@ -36,7 +36,7 @@ Cryptocurrencies were intended to provide a means for users to conduct private, 
 
 There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as Zcash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
 
-By baking in zero-knowledge technology into the protocol, privacy-focused [blockchain](/glossary/#blockchain) networks allow [nodes](/glossary/#node) to validate transactions without needing to access transaction data. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) is an example of a proposed design that will enable native private transfers of value on the Ethereum blockchain. Such proposals are, however, difficult to implement due to a mixture of security, regulatory, and UX concerns.  
+By baking in zero-knowledge technology into the protocol, privacy-focused [blockchain](/glossary/#blockchain) networks allow [nodes](/glossary/#node) to validate transactions without needing to access transaction data. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) is an example of a proposed design that will enable native private transfers of value on the [Ethereum](/) blockchain. Such proposals are, however, difficult to implement due to a mixture of security, regulatory, and UX concerns.  
 
 **Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains**. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy. Unfortunately, because these are "opt-in" privacy tools they are associated with illicit activity. To overcome this, privacy has to eventually become the default on public blockchains. Learn more about [privacy on Ethereum](/privacy/).
 
@@ -98,6 +98,8 @@ The chain needs a way to validate offchain transactions without re-executing the
 This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of offchain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two offchain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions offchain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
+
+Beyond Layer 2 scaling, zero-knowledge proofs can also verify Ethereum L1 block execution itself. [zkEVM for L1 verification](/roadmap/zkevm/) would allow validators to verify blocks by checking a proof rather than re-executing all transactions—enabling higher gas limits without raising validator hardware requirements.
 
 ### Reducing bribery and collusion in onchain voting {#secure-blockchain-voting}
 

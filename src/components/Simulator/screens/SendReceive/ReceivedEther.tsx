@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { Info, X } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
 import type { SimulatorNavProps } from "@/lib/types"
+
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { getMaxFractionDigitsUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
@@ -60,11 +62,11 @@ export const ReceivedEther = ({
 
   const tokenBalances = received ? tokensWithEthBalance : defaultTokenBalances
 
-  const displayEth: string = new Intl.NumberFormat("en", {
+  const displayEth: string = numberFormat("en", {
     maximumFractionDigits: 5,
   }).format(ethReceiveAmount)
   const usdReceiveAmount = ethReceiveAmount * ethPrice
-  const displayUsd: string = new Intl.NumberFormat("en", {
+  const displayUsd: string = numberFormat("en", {
     style: "currency",
     currency: "USD",
     notation: "compact",

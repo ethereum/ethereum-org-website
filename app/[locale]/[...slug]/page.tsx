@@ -24,7 +24,8 @@ import { componentsMapping, layoutMapping } from "@/layouts"
 import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
 
-export default async function Page({ params }: { params: SlugPageParams }) {
+export default async function Page(props: { params: Promise<SlugPageParams> }) {
+  const params = await props.params
   const { locale, slug: slugArray } = params
 
   // Check if this specific path is in our valid paths
@@ -56,8 +57,6 @@ export default async function Page({ params }: { params: SlugPageParams }) {
   } = await getPageData({
     locale,
     slug,
-    // TODO: Address component typing error here (flip `FC` types to prop object types)
-    // @ts-expect-error Incompatible component function signatures
     baseComponents: mdComponents,
     componentsMapping,
     scope: {
@@ -122,7 +121,10 @@ export async function generateStaticParams() {
   }
 }
 
-export async function generateMetadata({ params }: { params: SlugPageParams }) {
+export async function generateMetadata(props: {
+  params: Promise<SlugPageParams>
+}) {
+  const params = await props.params
   const { locale, slug } = params
 
   try {
@@ -131,7 +133,7 @@ export async function generateMetadata({ params }: { params: SlugPageParams }) {
       slug,
     })
   } catch (error) {
-    const t = await getTranslations({ locale, namespace: "common" })
+    const t = await getTranslations("common")
 
     // Return basic metadata for invalid paths
     return {

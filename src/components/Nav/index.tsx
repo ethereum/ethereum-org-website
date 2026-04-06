@@ -8,7 +8,7 @@ import DesktopNav from "./DesktopNav"
 import MobileNav from "./MobileNav"
 
 const Nav = async () => {
-  const t = await getTranslations({ namespace: "common" })
+  const t = await getTranslations("common")
 
   return (
     <nav

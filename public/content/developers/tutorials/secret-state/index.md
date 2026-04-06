@@ -2,8 +2,9 @@
 title: Using zero-knowledge for a secret state
 description: onchain games are limited because they cannot keep any hidden information. After reading this tutorial, a reader will be able to combine zero-knowledge proofs and server components to create verifiable games with a secret state, offchain, component. The technique to do this will be demonstrated by creating a minesweeper game.
 author: Ori Pomerantz
-tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
+tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud", "privacy"]
 skill: advanced
+breadcrumb: ZK secret state
 lang: en
 published: 2025-03-15
 ---
@@ -176,7 +177,7 @@ This is what happens when the player requests a new game.
 
 4. The server detects the change in `PendingGame` and [runs the subscribed function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71). This function calls [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L110-L114), which in turn calls [`createGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L116-L144).
 
-5. The first thing `createGame` does is [create a random map with the appropriate number of mines](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). Then, it calls [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) to create a map with blank borders, which is necessary for Zokrates. Finally, `createGame` calls [`calculateMapHash`](#calculateMapHash), to get the hash of the map, which is used as the game ID.
+5. The first thing `createGame` does is [create a random map with the appropriate number of mines](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). Then, it calls [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) to create a map with blank borders, which is necessary for Zokrates. Finally, `createGame` calls [`calculateMapHash`](#calculatemaphash), to get the hash of the map, which is used as the game ID.
 
 6. The `newGame` function adds the new game to `gamesInProgress`.
 
@@ -434,7 +435,7 @@ On a production system we might use a more complicated [setup ceremony](https://
 
 **Note:** Compilation of Zokrates programs and key creation are slow processes. There is no need to repeat them every time, just when map size changes. On a production system you'd do them once, and then store the output. The only reason I am not doing it here is for the sake of simplicity.
 
-#### `calculateMapHash` {#calculateMapHash}
+#### `calculateMapHash` {#calculatemaphash}
 
 ```typescript
 const calculateMapHash = function (hashMe: boolean[][]): string {

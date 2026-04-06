@@ -4,6 +4,7 @@ description: "Este tutorial enseña al lector cómo usar IPFS para almacenar la 
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
+breadcrumb: "IPFS para UIs de dapps"
 lang: es
 published: 2024-06-29
 ---

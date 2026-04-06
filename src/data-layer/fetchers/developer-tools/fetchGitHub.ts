@@ -1,6 +1,6 @@
 import type { DeveloperToolsResponse } from "@/lib/types"
 
-import { retry, sleep } from "@/lib/utils/fetch"
+import { fetchRetry, sleep } from "@/data-layer/fetchers/fetchRetry"
 
 import type { DeveloperTool } from "./utils"
 
@@ -66,7 +66,7 @@ async function fetchReposBatch(
 
   const query = buildGraphQLQuery(repos)
 
-  const response = await fetch("https://api.github.com/graphql", {
+  const response = await fetchRetry("https://api.github.com/graphql", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
@@ -129,17 +129,13 @@ export async function fetchGitHub(
     const batch = allRepos.slice(i, i + BATCH_SIZE)
 
     try {
-      // Retry with exponential backoff (3 attempts: 0ms, 1s, 2s)
-      const batchResults = await retry(() => fetchReposBatch(batch))
+      const batchResults = await fetchReposBatch(batch)
 
       for (const [href, data] of batchResults) {
         repoDataMap.set(href, data)
       }
     } catch (error) {
-      console.error(
-        `Failed to fetch batch ${i / BATCH_SIZE + 1} after retries:`,
-        error
-      )
+      console.error(`Failed to fetch batch ${i / BATCH_SIZE + 1}:`, error)
       // Continue with next batch instead of failing entirely
     }
 

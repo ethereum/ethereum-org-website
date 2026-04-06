@@ -12,7 +12,7 @@ To better understand this page, we recommend you first read up on [consensus mec
 
 ## What is proof-of-stake (PoS)? {#what-is-pos}
 
-Proof-of-stake is a way to prove that validators have put something of value into the network that can be destroyed if they act dishonestly. In Ethereum's proof-of-stake, validators explicitly stake capital in the form of ETH into a smart contract on Ethereum. The validator is then responsible for checking that new blocks propagated over the network are valid and occasionally creating and propagating new blocks themselves. If they try to defraud the network (for example by proposing multiple blocks when they ought to send one or sending conflicting attestations), some or all of their staked ETH can be destroyed.
+Proof-of-stake is a way to prove that validators have put something of value into the network that can be destroyed if they act dishonestly. In [Ethereum's](/) proof-of-stake, validators explicitly stake capital in the form of ETH into a smart contract on Ethereum. The validator is then responsible for checking that new blocks propagated over the network are valid and occasionally creating and propagating new blocks themselves. If they try to defraud the network (for example by proposing multiple blocks when they ought to send one or sending conflicting attestations), some or all of their staked ETH can be destroyed.
 
 ## Validators {#validators}
 
@@ -37,7 +37,7 @@ More detail on finality can be found below.
 
 A transaction has "finality" in distributed networks when it is part of a block that can't change without a large amount of ETH getting burned. On proof-of-stake Ethereum, this is managed using "checkpoint" blocks. The first block in each epoch is a checkpoint. Validators vote for pairs of checkpoints that it considers to be valid. If a pair of checkpoints attracts votes representing at least two-thirds of the total staked ETH, the checkpoints are upgraded. The more recent of the two (target) becomes "justified". The earlier of the two is already justified because it was the "target" in the previous epoch. Now it is upgraded to "finalized". This process of upgrading the checkpoints is handled by **[Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437)**. Casper-FFG is a block finality tool for consensus. Once a block is finalized, it cannot be reverted or changed without a majority slashing of stakers, making it economically inviable.
 
-To revert a finalized block, an attacker would commit to losing at least one-third of the total supply of staked ETH. The exact reason for this is explained in this [Ethereum Foundation blog post](https://blog.ethereum.org/2016/05/09/on-settlement-finality/). Since finality requires a two-thirds majority, an attacker could prevent the network from reaching finality by voting with one-third of the total stake. There is a mechanism to defend against this: the [inactivity leak](https://eth2book.info/bellatrix/part2/incentives/inactivity). This activates whenever the chain fails to finalize for more than four epochs. The inactivity leak bleeds away the staked ETH from validators voting against the majority, allowing the majority to regain a two-thirds majority and finalize the chain.
+To revert a finalized block, an attacker would commit to losing at least one-third of the total supply of staked ETH. The exact reason for this is explained in this [Ethereum Foundation blog post](https://blog.ethereum.org/2016/05/09/on-settlement-finality). Since finality requires a two-thirds majority, an attacker could prevent the network from reaching finality by voting with one-third of the total stake. There is a mechanism to defend against this: the [inactivity leak](https://eth2book.info/bellatrix/part2/incentives/inactivity). This activates whenever the chain fails to finalize for more than four epochs. The inactivity leak bleeds away the staked ETH from validators voting against the majority, allowing the majority to regain a two-thirds majority and finalize the chain.
 
 ## Crypto-economic security {#crypto-economic-security}
 
@@ -88,7 +88,7 @@ Ethereum originally used proof-of-work but switched to proof-of-stake in Septemb
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [Why Proof of Stake (Nov 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
-- [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
+- [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity) _Vitalik Buterin_
 - [Proof-of-stake Ethereum attack and defense](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [A Proof of Stake Design Philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 - [Video: Vitalik Buterin explains proof-of-stake to Lex Fridman](https://www.youtube.com/watch?v=3yrqBG-7EVE)

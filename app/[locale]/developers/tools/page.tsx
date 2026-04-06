@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import { ContentHero } from "@/components/Hero"
@@ -28,21 +28,17 @@ import type { DeveloperToolsByCategory } from "./types"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-  searchParams,
-}: {
-  params: PageParams
-  searchParams: { toolId?: string }
+const Page = async (props: {
+  params: Promise<PageParams>
+  searchParams: Promise<{ toolId?: string }>
 }) => {
+  const searchParams = await props.searchParams
+  const params = await props.params
   const { locale } = params
   const { toolId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer apps data available")
@@ -72,11 +68,9 @@ const Page = async ({
   ) as DeveloperToolsByCategory
 
   // Get contributor info for JSON-LD
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "developers/tools",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -170,16 +164,12 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   return await getMetadata({
     locale,

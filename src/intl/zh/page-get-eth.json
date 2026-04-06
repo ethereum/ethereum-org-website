@@ -75,5 +75,6 @@
   "page-get-eth-your-address-desc-3": "把它想像成你的电子邮箱地址，只是它用来接收的是ETH。如果你想从一个交易所发送ETH到你的钱包，这个地址就是目的地。在发送前一定要多次检查，确保地址正确！",
   "page-get-eth-your-address-wallet-link": "查看钱包",
   "listing-policy-raise-issue-link": "提 issue",
-  "page-find-wallet-last-updated": "最近更新"
+  "page-find-wallet-last-updated": "最近更新",
+  "listing-policy-disclaimer": "本页所列产品并非官方认可，仅供参考。如果你想添加产品或对策略提供反馈，请在GitHub中提出问题。"
 }

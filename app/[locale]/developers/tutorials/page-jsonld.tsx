@@ -19,7 +19,7 @@ export default async function TutorialsPageJsonLD({
   internalTutorials: ITutorial[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-tutorials" })
+  const t = await getTranslations("page-developers-tutorials")
 
   const url = normalizeUrlForJsonLd(locale, `/developers/tutorials/`)
 
@@ -87,38 +87,27 @@ export default async function TutorialsPageJsonLD({
             "@type": "ListItem",
             position: index + 1,
             name: tutorial.title,
-            description: tutorial.description,
-            url: tutorial.href,
-          })),
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
-      },
-      {
-        "@type": "ItemList",
-        "@id": `${url}#tutorials`,
-        name: t("page-tutorial-title"),
-        description: t("page-tutorials-meta-description"),
-        url: url,
-        numberOfItems: internalTutorials.length,
-        itemListElement: internalTutorials
-          .slice(0, 10)
-          .map((tutorial, index) => ({
-            "@type": "Course",
-            name: tutorial.title,
-            description: tutorial.description,
-            url: tutorial.href,
-            provider: ethereumFoundationOrganization,
-            courseMode: "online",
-            educationalLevel: "beginner-intermediate",
-            inLanguage: locale,
-            isAccessibleForFree: true,
-            about: [
-              "Ethereum Development",
-              "Smart Contracts",
-              "Blockchain Programming",
-              "Web3",
-            ],
-            position: index + 1,
+            url: normalizeUrlForJsonLd(locale, tutorial.href),
+            item: {
+              "@type": "Course",
+              name: tutorial.title,
+              description:
+                tutorial.description.length > 60
+                  ? tutorial.description.slice(0, 57) + "..."
+                  : tutorial.description,
+              url: normalizeUrlForJsonLd(locale, tutorial.href),
+              provider: ethereumFoundationOrganization,
+              courseMode: "online",
+              educationalLevel: tutorial.skill ?? "beginner",
+              inLanguage: locale,
+              isAccessibleForFree: true,
+              about: [
+                "Ethereum Development",
+                "Smart Contracts",
+                "Blockchain Programming",
+                "Web3",
+              ],
+            },
           })),
         publisher: ethereumFoundationOrganization,
         reviewedBy: ethereumFoundationOrganization,

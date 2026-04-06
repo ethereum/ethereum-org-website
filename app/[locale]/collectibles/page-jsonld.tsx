@@ -24,7 +24,7 @@ export default async function CollectiblesJsonLD({
   stats: Stats
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-collectibles" })
+  const t = await getTranslations("page-collectibles")
 
   const url = normalizeUrlForJsonLd(locale, `/collectibles/`)
 

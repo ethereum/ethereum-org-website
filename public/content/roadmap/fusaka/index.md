@@ -8,7 +8,7 @@ lang: en
 
 **Ethereum's highly anticipated Fusaka upgrade went live on December 3, 2025**
 
-The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more new features and improves the experience for every Ethereum user and developer. The name consists of the execution layer upgrade Osaka and the consensus layer version named after the Fulu star. Both parts of Ethereum receive an upgrade that pushes Ethereum scaling, security and user experience to the future.
+The Fusaka network upgrade follows [Pectra](/roadmap/pectra/) and brings more new features and improves the experience for every [Ethereum](/) user and developer. The name consists of the execution layer upgrade Osaka and the consensus layer version named after the Fulu star. Both parts of Ethereum receive an upgrade that pushes Ethereum scaling, security and user experience to the future.
 
 <Alert variant="update">
 <AlertContent>
@@ -280,7 +280,7 @@ The RPC method `eth_call` is not limited and will allow simulation of bigger tra
 
 EVM compilers like Solidity will implement and utilize the new function for counting zeros under the hood. New contracts might benefit from gas savings if they rely on this sort of operation. Follow releases and feature announcement of the smart contract language for documentation on potential savings.
 
-### Are there any changes for my existing smart contracts? {#what-clz-means-for-developers}
+### Are there any changes for my existing smart contracts? {#what-clz-means-for-developers-2}
 
 Fusaka has no direct affect that would break any existing contracts or change their behavior. Changes introduced to the execution layer are made with backward compatibility, however, always keep an eye on edge cases and potential impact.
 

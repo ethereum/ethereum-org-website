@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Before you read",
+  "heading": "Looking to understand Ethereum?",
+  "description": "This whitepaper was published in <strong>2014</strong>, before Ethereum launched. After 10+ years of development, major upgrades, and ecosystem growth, <strong>the original whitepaper no longer reflects what Ethereum is today</strong>.",
+  "cta-learn": "Learn about Ethereum today",
+  "cta-download-pdf": "Download original PDF (2014)",
+  "whats-changed": "What's changed since 2014?",
+  "evolution-pos": "Ethereum moved from proof-of-work to proof-of-stake (The Merge, 2022)",
+  "evolution-l2": "Layer 2 scaling solutions now process millions of transactions",
+  "evolution-usecases": "DeFi, NFTs, and DAOs emerged as major use cases",
+  "evolution-standards": "Smart contract standards (ERC-20, ERC-721) became industry foundations"
+}

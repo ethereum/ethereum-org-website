@@ -1,61 +1,61 @@
 ---
 title: Introduzione allo stack di Ethereum
-description: Percorso all'interno dei vari livelli dello stack di Ethereum che indica anche come interagiscono.
+description: Una panoramica dei diversi livelli dello stack di Ethereum e di come si integrano tra loro.
 lang: it
 ---
 
-Come ogni stack di software, lo "stack di Ethereum" completo varia da progetto a progetto in base ai propri obiettivi.
+Come per qualsiasi stack software, lo "stack di Ethereum" completo varierà da progetto a progetto a seconda dei tuoi obiettivi.
 
-Sono comunque disponibili tecnologie base di Ethereum che aiutano a fornire un modello mentale di come le applicazioni software interagiscono con la blockchain Ethereum. Comprendere i livelli dello stack aiuterà anche a comprendere i molti modi in cui Ethereum può essere integrato all'interno di progetti software.
+Ci sono, tuttavia, componenti principali di Ethereum che aiutano a fornire un modello mentale di come le applicazioni software interagiscono con la blockchain di Ethereum. Comprendere i livelli dello stack ti aiuterà a capire i diversi modi in cui Ethereum può essere integrato nei progetti software.
 
-## Livello 1: macchina virtuale Ethereum {#ethereum-virtual-machine}
+## Livello 1: Macchina Virtuale di Ethereum {#ethereum-virtual-machine}
 
-La [Macchina Virtuale di Ethereum (EVM)](/developers/docs/evm/) è l'ambiente di esecuzione per i contratti intelligenti su Ethereum. Tutti i contratti intelligenti e i cambiamenti di stato sulle blockchain di Ethereum sono eseguiti dalle [transazioni](/developers/docs/transactions/). La EVM gestisce l'elaborazione di tutte le transazioni sulla rete Ethereum.
+La [Macchina Virtuale di Ethereum (EVM)](/developers/docs/evm/) è l'ambiente di esecuzione per i contratti intelligenti su Ethereum. Tutti i contratti intelligenti e le modifiche di stato sulla blockchain di Ethereum sono eseguiti tramite [transazioni](/developers/docs/transactions/). L'EVM gestisce tutta l'elaborazione delle transazioni sulla rete di Ethereum.
 
-Come avviene con ogni macchina virtuale, la EVM crea un livello di astrazione fra il codice in esecuzione e la macchina che esegue tale codice (il nodo Ethereum). Al momento la EVM è in esecuzione su migliaia di nodi distribuiti in tutto il mondo.
+Come per qualsiasi macchina virtuale, l'EVM crea un livello di astrazione tra il codice in esecuzione e la macchina esecutrice (un nodo di Ethereum). Attualmente, l'EVM è in esecuzione su migliaia di nodi distribuiti in tutto il mondo.
 
-La EVM utilizza un insieme di istruzioni opcode per eseguire attività specifiche. Questi (140) opcode (univoci) consentono all'EVM di essere [Turing-completa](https://en.wikipedia.org/wiki/Turing_completeness), cioè in grado di calcolare praticamente tutto, se sono presenti risorse sufficienti.
+Dietro le quinte, l'EVM utilizza un set di istruzioni opcode per eseguire compiti specifici. Questi opcode (140 unici) consentono all'EVM di essere [Turing-completa](https://en.wikipedia.org/wiki/Turing_completeness), il che significa che l'EVM è in grado di calcolare quasi tutto, date risorse sufficienti.
 
-A uno sviluppatore di dapp non serve conoscere a fondo la EVM, gli basta sapere che esiste e fa funzionare in modo affidabile tutte le applicazioni su Ethereum senza interruzioni.
+Come sviluppatore di dApp, non hai bisogno di sapere molto sull'EVM, se non che esiste e che alimenta in modo affidabile tutte le applicazioni su Ethereum senza tempi di inattività.
 
 ## Livello 2: Contratti intelligenti {#smart-contracts}
 
-I [contratti intelligenti](/developers/docs/smart-contracts/) sono i programmi eseguiti sulla blockchain di Ethereum.
+I [contratti intelligenti](/developers/docs/smart-contracts/) sono i programmi eseguibili che girano sulla blockchain di Ethereum.
 
-I contratti intelligenti sono scritti usando [linguaggi di programmazione](/developers/docs/smart-contracts/languages/) specifici, compilati al bytecode dell'EVM (istruzioni della macchina di basso livello, dette opcode).
+I contratti intelligenti sono scritti utilizzando specifici [linguaggi di programmazione](/developers/docs/smart-contracts/languages/) che vengono compilati in bytecode EVM (istruzioni macchina di basso livello chiamate opcode).
 
-Non solo i contratti intelligenti servono da librerie open source, ma sono essenzialmente servizi API aperti in continua esecuzione e non disattivabili. I contratti intelligenti forniscono funzioni pubbliche con cui gli utenti e le applicazioni ([dapp](/developers/docs/dapps/)) potrebbero interagire, senza necessitare di permessi. Qualsiasi applicazione potrebbe integrarsi con i contratti intelligenti distribuiti per comporre la funzionalità, come aggiungere [feed di dati](/developers/docs/oracles/) o supportare gli scambi di token. Inoltre, chiunque può distribuire nuovi contratti intelligenti a Ethereum per aggiungere funzionalità personalizzate che soddisfino le esigenze della loro applicazione.
+I contratti intelligenti non fungono solo da librerie open source, ma sono essenzialmente servizi API aperti sempre in esecuzione e che non possono essere disattivati. I contratti intelligenti forniscono funzioni pubbliche con cui gli utenti e le applicazioni ([dApp](/developers/docs/dapps/)) possono interagire, senza bisogno di permessi. Qualsiasi applicazione può integrarsi con i contratti intelligenti distribuiti per comporre funzionalità, come l'aggiunta di [feed di dati](/developers/docs/oracles/) o per supportare lo scambio di token. Inoltre, chiunque può distribuire nuovi contratti intelligenti su Ethereum al fine di aggiungere funzionalità personalizzate per soddisfare le esigenze della propria applicazione.
 
-Come sviluppatore di dapp, dovrvai scrivere i contratti intelligenti solo se desideri aggiungere funzionalità personalizzate alla blockchain di Ethereum. Potresti renderti conto di poter soddisfare gran parte o tutte le esigenze del tuo progetto, semplicemente integrando con contratti intelligenti esistenti, ad esempio, se desideri supportare pagamenti in stablecoin o consentire lo scambio decentralizzato di token.
+Come sviluppatore di dApp, dovrai scrivere contratti intelligenti solo se desideri aggiungere funzionalità personalizzate sulla blockchain di Ethereum. Potresti scoprire di poter soddisfare la maggior parte o tutte le esigenze del tuo progetto semplicemente integrandoti con i contratti intelligenti esistenti, ad esempio se desideri supportare i pagamenti in stablecoin o abilitare un exchange decentralizzato di token.
 
-## Livello 3: nodi Ethereum {#ethereum-nodes}
+## Livello 3: Nodi di Ethereum {#ethereum-nodes}
 
-Affinché un'applicazione interagisca con la blockchain di Ethereum, deve connettersi a un [nodo di Ethereum](/developers/docs/nodes-and-clients/). Connettersi a un nodo permette di leggere i dati della blockchain e/o inviare transazioni alla rete.
+Affinché un'applicazione possa interagire con la blockchain di Ethereum, deve connettersi a un [nodo di Ethereum](/developers/docs/nodes-and-clients/). Connettersi a un nodo ti consente di leggere i dati della blockchain e/o inviare transazioni alla rete.
 
-I nodi Ethereum sono computer che eseguono software, ovvero un client Ethereum. Un client è una implementazione di Ethereum che verifica tutte le transazioni presenti in un blocco, facendo in modo che la rete rimanga sicura e i dati siano accurati. **I nodi di Ethereum sono la blockchain di Ethereum**. Memorizzano in maniera collettiva lo stato della blockchain Ethereum e raggiungono il consenso sulle transazioni per modificare lo stato della blockchain.
+I nodi di Ethereum sono computer che eseguono un software: un client di Ethereum. Un client è un'implementazione di Ethereum che verifica tutte le transazioni in ogni blocco, mantenendo la rete sicura e i dati accurati. **I nodi di Ethereum sono la blockchain di Ethereum**. Essi memorizzano collettivamente lo stato della blockchain di Ethereum e raggiungono il consenso sulle transazioni per mutare lo stato della blockchain.
 
-Connettendo la tua applicazione a un nodo di Ethereum (tramite l'[API JSON-RPC](/developers/docs/apis/json-rpc/)), la tua applicazione può leggere i dati dalla blockchain (come i saldi dei conti degli utenti), nonché trasmettere le nuove transazioni alla rete (come trasferire ETH tra conti degli utenti o eseguire funzioni dei contratti intelligenti).
+Connettendo la tua applicazione a un nodo di Ethereum (tramite l'[API JSON-RPC](/developers/docs/apis/json-rpc/)), la tua applicazione è in grado di leggere i dati dalla blockchain (come i saldi degli account degli utenti) e di trasmettere nuove transazioni alla rete (come il trasferimento di ETH tra gli account degli utenti o l'esecuzione di funzioni dei contratti intelligenti).
 
-## Livello 4: API client Ethereum {#ethereum-client-apis}
+## Livello 4: API dei client di Ethereum {#ethereum-client-apis}
 
-Molte librerie (create e gestite dalla community open source di Ethereum) consentono alle applicazioni per gli utenti finali di connettersi e comunicare con la blockchain Ethereum.
+Molte librerie di utilità (create e mantenute dalla community open source di Ethereum) consentono alle tue applicazioni di connettersi e comunicare con la blockchain di Ethereum.
 
-Se un'applicazione per gli utenti è una Wweb app, è possibile decidere di installare tramite `npm install` un'[API JavaScript](/developers/docs/apis/javascript/) direttamente sul frontend. In alternativa, è possibile implementare questa funzionalità sul lato server, usando un'API [Python](/developers/docs/programming-languages/python/) o [Java](/developers/docs/programming-languages/java/).
+Se la tua applicazione rivolta all'utente è un'app web, potresti scegliere di eseguire `npm install` di un'[API JavaScript](/developers/docs/apis/javascript/) direttamente nel tuo frontend. O forse sceglierai di implementare questa funzionalità lato server, utilizzando un'API [Python](/developers/docs/programming-languages/python/) o [Java](/developers/docs/programming-languages/java/).
 
-Pur non essendo necessariamente parte dello stack, queste API eliminano gran parte della complessità necessaria per interagire direttamente con un nodo Ethereum. Assicurano inoltre funzioni di utilità (ad esempio la conversione da ETH ain Gwei) per fare in modo che gli sviluppatori dedichino meno tempo alle complessità dei client Ethereum e più tempo alle funzionalità specifiche dell'applicazione.
+Sebbene queste API non siano un pezzo necessario dello stack, astraggono gran parte della complessità dell'interazione diretta con un nodo di Ethereum. Forniscono anche funzioni di utilità (ad es. la conversione di ETH in Gwei) in modo che, come sviluppatore, tu possa dedicare meno tempo ad affrontare le complessità dei client di Ethereum e più tempo a concentrarti sulle funzionalità specifiche della tua applicazione.
 
-## Livello 5: applicazioni per gli utenti finali {#end-user-applications}
+## Livello 5: Applicazioni per l'utente finale {#end-user-applications}
 
-Al livello più alto dello stack ci sono le applicazioni rivolte agli utenti. Si tratta delle applicazioni standard utilizzate e create normalmente oggi, principalmente Web app ed applicazioni mobili.
+Al livello più alto dello stack ci sono le applicazioni rivolte all'utente. Queste sono le applicazioni standard che usi e crei regolarmente oggi: principalmente app web e mobili.
 
-Il modo di progettare queste interfacce utente rimane essenzialmente invariato. Spesso gli utenti non hanno bisogno di sapere che l'applicazione che stanno usando è stata creata usando una blockchain.
+Il modo in cui sviluppi queste interfacce utente rimane essenzialmente invariato. Spesso gli utenti non avranno bisogno di sapere che l'applicazione che stanno utilizzando è costruita usando una blockchain.
 
-## Vuoi scegliere il tuo stack ora? {#ready-to-choose-your-stack}
+## Pronto a scegliere il tuo stack? {#ready-to-choose-your-stack}
 
-Consulta la nostra guida per [configurare un ambiente di sviluppo locale](/developers/local-environment/) per un'applicazione Ethereum.
+Dai un'occhiata alla nostra guida per [configurare un ambiente di sviluppo locale](/developers/local-environment/) per la tua applicazione Ethereum.
 
 ## Letture consigliate {#further-reading}
 
-- [L'Architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
+- [L'architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

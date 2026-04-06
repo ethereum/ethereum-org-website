@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
@@ -33,6 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { stablecoins } from "./data"
@@ -75,10 +76,11 @@ const Section = ({
   <section className={cn("w-full px-8 py-4", className)} {...props} />
 )
 
-async function Page({ params }: { params: PageParams }) {
+async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-stablecoins")
+  const tCommon = await getTranslations("common")
 
   setRequestLocale(locale)
 
@@ -105,7 +107,7 @@ async function Page({ params }: { params: PageParams }) {
       .map(({ id, ...rest }) => {
         const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
         if (!coinMarketData) {
-          console.warn("CoinGecko stablecoin data not found:", id)
+          // CoinGecko data may not include all configured stablecoins
           return null
         }
         return { ...coinMarketData, ...rest }
@@ -117,7 +119,7 @@ async function Page({ params }: { params: PageParams }) {
       .sort((a, b) => b.market_cap - a.market_cap)
       .map(({ market_cap, ...rest }) => ({
         ...rest,
-        marketCap: new Intl.NumberFormat("en-US", {
+        marketCap: numberFormat(locale, {
           style: "currency",
           currency: "USD",
           minimumFractionDigits: 0,
@@ -410,11 +412,9 @@ async function Page({ params }: { params: PageParams }) {
     },
   ]
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "stablecoins",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -431,7 +431,7 @@ async function Page({ params }: { params: PageParams }) {
                   {t("page-stablecoins-why-stablecoins")}
                 </h2>
                 <p className="mb-6">
-                  {t("page-stablecoins-prices-definition")}{" "}
+                  <Translation id="page-stablecoins:page-stablecoins-prices-definition" />{" "}
                   <InlineLink href="#how">
                     {t("page-stablecoins-prices-definition-how")}
                   </InlineLink>
@@ -756,14 +756,13 @@ async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+  const t = await getTranslations("page-stablecoins")
 
   return await getMetadata({
     locale,

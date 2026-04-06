@@ -4,7 +4,7 @@ description: An explanation of Ethereum accounts – their data structures and t
 lang: en
 ---
 
-An Ethereum account is an entity with an ether (ETH) balance that can send messages on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
+An [Ethereum](/) account is an entity with an ether (ETH) balance that can send messages on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
 
 ## Prerequisites {#prerequisites}
 

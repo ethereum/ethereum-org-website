@@ -306,6 +306,10 @@ const config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -323,6 +327,7 @@ const config = {
         "counter-spin-9": "spin 18s linear infinite reverse",
         "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "fade-in": "fade-in 150ms ease-in-out",
+        blink: "blink 1.06s step-end infinite",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {

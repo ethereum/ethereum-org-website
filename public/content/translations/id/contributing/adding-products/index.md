@@ -1,100 +1,100 @@
 ---
 title: Menambahkan Produk
-description: Kebijakan yang kami gunakan ketika menambahkan dapp ke ethereum.org
+description: Kebijakan yang kami gunakan saat menambahkan dapps ke ethereum.org
 lang: id
 ---
 
 # Menambahkan produk Ethereum {#adding-products}
 
-Siapa pun bebas untuk mengusulkan dapp baru untuk sebagai konten di ethereum.org, jika dianggap sesuai. **Tidak, kami tidak akan mencantumkan dapp Anda di halaman beranda Anda** 😜
+Siapa pun bebas menyarankan dapps baru ke konten di ethereum.org, jika dirasa sesuai. **Tidak, kami tidak akan mencantumkan dapp Anda di beranda kami** 😜
 
-Dapp saat ini terdaftar di:
+Dapps saat ini dicantumkan di:
 
 - ethereum.org/dapps
 - ethereum.org/get-eth
 
-**Tolong hanya menyarankan tambahan baru di halaman ini.**
+**Harap hanya sarankan penambahan baru pada halaman-halaman ini.**
 
-Meskipun kami menyambut baik tambahan baru, saat ini kami memilih dapp berdasarkan pengalaman yang ingin kami hadirkan untuk pengguna kami. Ini didasarkan pada beberapa prinsip desain kami:
+Meskipun kami menyambut baik penambahan baru, kami memilih dapps saat ini berdasarkan pengalaman yang ingin kami ciptakan untuk pengguna kami. Ini didasarkan pada beberapa prinsip desain kami:
 
-- _Inspirasional_: apa pun di ethereum.org seharusnya menawarkan sesuatu yang baru ke pengguna
-- _Cerita yang bagus_: apa yang dirinci seharusnya menyediakan moment "aha"
-- _Kredibel_: semua hal seharusnya merupakan proyek/perusahaan sah untuk memperkecil risiko bagi pengguna
+- _Inspirasional_: apa pun di ethereum.org harus menawarkan sesuatu yang baru kepada pengguna
+- _Cerita yang bagus_: apa yang dicantumkan harus memberikan momen "aha"
+- _Kredibel_: semuanya harus berupa bisnis/proyek yang sah untuk meminimalkan risiko bagi pengguna
 
-Secara umum, **ethereum.org ingin menyediakan "pengalaman perkenalan tanpa hambatan" bagi pengguna baru**. Untuk itu, kami menambahkan dapp berdasarkan:
+Secara keseluruhan **ethereum.org ingin memberikan "pengalaman orientasi yang mulus" untuk pengguna baru**. Karena alasan itu, kami menambahkan dapps berdasarkan:
 
-- kemudahan dalam penggunaan
-- interoperabilitas dengan produk lainnya
+- kemudahan penggunaan
+- interoperabilitas dengan produk lain
 - keamanan
-- durasi penggunaan
+- umur panjang
 
-Inilah kerangka keputusan kami selengkapnya. Jangan ragu untuk memberikan umpan balik atau menyarankan perubahan.
+Berikut adalah kerangka keputusan kami secara lebih rinci. Jangan ragu untuk memberikan umpan balik atau menyarankan perubahan.
 
 ## Kerangka keputusan {#decision-framework}
 
 ### Kriteria untuk penyertaan: yang harus dimiliki {#criteria-for-inclusion-the-must-haves}
 
-- **Produk yang teruji keamanannya** – baik melalui audit, tim keamanan internal, atau metode lainnya, keamanan produk Anda harus teruji secara baik. Ini mengurangi resiko bagi pengguna kami dan menunjukkan bahwa Anda memperlakukan aspek keamanan dengan serius.
-- **Produk yang telah "beroperasi" selama lebih dari 6 bulan** – ini adalah indikasi keamanan lainnya. 6 bulan adalah kerangka waktu yang baik sampai bug dan eksploitasi kritikal telah ditemukan.
+- **Produk yang telah diuji keamanannya** – baik melalui audit, tim keamanan internal, atau metode lainnya, keamanan produk Anda harus diuji secara andal. Ini mengurangi risiko bagi pengguna kami dan menunjukkan kepada kami bahwa Anda menganggap serius masalah keamanan.
+- **Produk yang telah "tayang" selama lebih dari 6 bulan** – ini adalah indikasi keamanan lainnya. 6 bulan adalah jangka waktu yang baik untuk menemukan bug kritis dan eksploitasi.
 - **Dikerjakan oleh tim yang aktif** – ini membantu memastikan kualitas dan bahwa pengguna akan mendapatkan dukungan untuk pertanyaan mereka.
-- **Informasi rincian yang terbuka dan akurat** - Diharapkan bahwa setiap listing yang disarankan dari proyek dilengkapi dengan informasi yang jujur dan akurat. Produk yang memalsukan informasi rincian, seperti menyatakan produk Anda merupakan "sumber terbuka" padahal tidak demikian, akan dihapus.
+- **Informasi pencantuman yang jujur dan akurat** - diharapkan bahwa setiap saran pencantuman dari proyek disertai dengan informasi yang jujur dan akurat. Produk yang memalsukan informasi pencantuman, seperti menyatakan produk Anda adalah "sumber terbuka" (open-source) padahal tidak, akan dihapus.
 
-### Kriteria untuk penentuan peringkat: yang baik untuk dimiliki {#criteria-for-ranking-the-nice-to-haves}
+### Kriteria untuk peringkat: yang bagus untuk dimiliki {#criteria-for-ranking-the-nice-to-haves}
 
-Dapp Anda mungkin tidak dicantumkan di ethereum.org sejelas dapps lainnya karena kriteria berikut.
+Dapp Anda mungkin tidak dicantumkan di ethereum.org semenonjol yang lain karena kriteria berikut.
 
-**Dapp**
+**Dapps**
 
-- **Anda dapat mengaksesnya melalui mayoritas dompet yang dicantumkan** – dapp seharusnya dapat berfungsi dengan mayoritas dompet yang dicantumkan di ethereum.org.
-- **Pengguna dapat mencobanya sendiri –** pengguna individual seharusnya dapat menggunakan dapp Anda dan mencapai sesuatu yang nyata.
-- **Perkenalan** – produk Anda harus memiliki pengalaman onboarding yang dirancang dengan baik untuk membantu dan mendidik pengguna. Atau bukti tentang cara membuat konten seperti artikel atau video.
-- **Non-kustodian** – pengguna mengontrol dana mereka. Jika produk Anda menghilang, pengguna masih dapat mengakses dan memindahkan dana mereka.
-- **Dapat diakses secara global** – produk Anda tidak memiliki batasan geografis atau persyaratan KYC yang mengecualikan beberapa orang dari mengakses layanan Anda.
-- **Sumber terbuka** – kode Anda seharusnya dapat diakses dan Anda harus menerima PR dari komunitas yang lebih luas.
-- **Komunitas** – Anda memiliki komunitas yang berdedikasi, mungkin dapat dalam bentuk Discord, di mana pengguna dapat berinteraksi dengan tim Anda untuk mendapatkan bantuan atau menyarankan fitur baru.
+- **Anda dapat mengaksesnya melalui sebagian besar dompet yang dicantumkan** – dapps harus berfungsi dengan sebagian besar dompet yang dicantumkan di ethereum.org.
+- **Pengguna dapat mencobanya sendiri –** pengguna individu harus dapat menggunakan dapp Anda dan mencapai sesuatu yang nyata.
+- **Orientasi** – produk Anda harus memiliki pengalaman orientasi yang dirancang dengan baik untuk membantu dan mengedukasi pengguna. Atau bukti konten panduan seperti artikel atau video.
+- **Non-kustodian** – pengguna mengendalikan dana mereka. Jika produk Anda menghilang, pengguna masih dapat mengakses dan memindahkan dana mereka.
+- **Dapat diakses secara global** – produk Anda tidak memiliki batasan geografis atau persyaratan KYC yang mengecualikan orang-orang tertentu dari mengakses layanan Anda.
+- **Sumber terbuka** – kode Anda harus dapat diakses dan Anda harus menerima PR dari komunitas yang lebih luas.
+- **Komunitas** – Anda memiliki komunitas yang berdedikasi, mungkin sebuah Discord, di mana pengguna dapat berinteraksi dengan tim Anda untuk mendapatkan bantuan atau menyarankan fitur baru.
 
-## Kriteria dalam penerapan {#criteria-in-practice}
+## Kriteria dalam praktik {#criteria-in-practice}
 
-Semakin banyak kriteria yang Anda penuhi, semakin besar kemungkinan produk Anda akan menemukan jalan masuk ke ethereum.org.
+Semakin banyak kriteria yang Anda penuhi, semakin besar kemungkinan produk Anda akan masuk ke ethereum.org.
 
-Produk yang dicantumkan yang hanya memiliki kriteria yang harus dimiliki mungkin akan dihapus, jika terdapat suatu produk baru yang disarankan yang memenuhi kriteria yang harus dimiliki dan yang baik untuk dimiliki.
+Produk yang dicantumkan yang hanya memenuhi kriteria yang harus dimiliki dapat dihapus jika ada produk baru yang disarankan yang memenuhi kriteria yang harus dimiliki dan beberapa kriteria yang bagus untuk dimiliki.
 
-Hal lainnya yang akan berpengaruh terhadap keputusan ini:
+Hal-hal lain yang akan menjadi faktor dalam keputusan ini:
 
-- Akankan menambahkan dibandingkan menggantikan merusak UX halamannya?
-  - situs kami utamanya bersifat edukasi dan tujuan utamanya adalah menjelaskan Ethereum dan konsepnya yang relevan. Dengan menambahkan terlalu banyak opsi ke pengguna, halaman mungkin menjadi kurang dapat dipahami dan karenanya menjadi kurang berguna.
-- Apakah halaman ini sekarang melumpuhkan pengguna dengan pilihan-pilihannya?
-  - seperti ketika Anda duduk mencari tayangan Netflix selama berjam-jam karena Anda tidak dapat memutuskan apa yang akan ditonton. Membingungkan pengguna baru dengan terlalu banyak pilihan adalah suatu risiko.
+- Apakah menambahkan alih-alih mengganti akan merusak UX halaman tersebut?
+  - situs kami utamanya bersifat edukasional dan tujuan utamanya adalah untuk menjelaskan Ethereum dan konsep-konsepnya yang relevan. Dengan menambahkan terlalu banyak pilihan bagi pengguna, halaman mungkin menjadi kurang dapat dibaca dan karenanya kurang berguna.
+- Apakah halaman ini sekarang melumpuhkan pengguna dengan pilihan?
+  - seperti ketika Anda duduk menelusuri Netflix selama berjam-jam karena Anda tidak dapat memutuskan sesuatu untuk ditonton. Membingungkan pengguna baru dengan terlalu banyak pilihan adalah sebuah risiko.
 
 Ini adalah keputusan desain yang menjadi tanggung jawab ethereum.org.
 
-Namun, Anda tidak perlu khawatir, **akan ada tautan ke situs web lain yang mencantumkan peringkat dari lebih banyak dapp**
+Namun yakinlah, **akan ada tautan ke situs web lain yang memberi peringkat lebih banyak dapps**
 
-### Pengurutan Produk {#product-ordering}
+### Urutan Produk {#product-ordering}
 
-Hanya jika produk secara spesifik diurutkan, seperti secara alfabetikal, produk akan ditampilkan dari yang baru-baru ini paling banyak hingga paling sedikit ditambahkan ke halaman. Dengan kata lain, produk terbaru ditambahkan ke bagian bawah daftar.
+Kecuali jika produk diurutkan secara khusus dengan cara lain, seperti berdasarkan abjad, produk akan ditampilkan dari yang paling baru hingga yang paling lama ditambahkan ke halaman. Dengan kata lain, produk terbaru ditambahkan ke bagian bawah daftar.
 
-### Persyaratan penggunaan {#terms-of-use}
+### Ketentuan penggunaan {#terms-of-use}
 
-Tolong juga lihat [persyaratan penggunaan](/terms-of-use/) kami. Informasi tentang ethereum.org disediakan hanya untuk tujuan informasi umum.
+Harap merujuk juga pada [ketentuan penggunaan](/terms-of-use/) kami. Informasi di ethereum.org disediakan semata-mata untuk tujuan informasi umum.
 
 ## Pemeliharaan {#maintenance}
 
-Seperti natur Ethereum yang cair, tim dan produk datang silih berganti dan inovasi terjadi setiap hari, sehingga kami melakukan pemeriksaan konten secara rutin untuk:
+Sebagaimana sifat Ethereum yang dinamis, tim dan produk datang dan pergi serta inovasi terjadi setiap hari, jadi kami akan melakukan pemeriksaan rutin terhadap konten kami untuk:
 
-- pastikan bahwa semua dapp yang terdaftar masih memenuhi kriteria kami
-- memverifikasi bahwa tidak terdapat produk yang telah disarankan yang memenuhi lebih banyak kriteria kami daripada yang saat ini terdaftar
+- memastikan bahwa semua dapps yang dicantumkan masih memenuhi kriteria kami
+- memverifikasi bahwa tidak ada produk yang disarankan yang memenuhi lebih banyak kriteria kami daripada yang saat ini dicantumkan
 
-Anda dapat membantu kami untuk ini dengan memeriksa dan memberi tahu kami. [Buatlah sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) atau kirimkan email ke [website@ethereum.org](mailto:website@ethereum.org)
+Anda dapat membantu hal ini dengan memeriksa dan memberi tahu kami. [Buat sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) atau kirim email ke [website@ethereum.org](mailto:website@ethereum.org)
 
-_Kami juga memeriksa opsi untuk pengambilan suara sehingga komunitas dapat menunjukkan preferensi mereka dan menyorot produk terbaik di luar sana untuk direkomendasikan._
+_Kami juga sedang menyelidiki opsi untuk pemungutan suara sehingga komunitas dapat menunjukkan preferensi mereka dan menyoroti produk terbaik di luar sana untuk kami rekomendasikan._
 
 ---
 
 ## Tambahkan produk Anda {#add-your-product}
 
-Jika Anda ingin menambahkan dapp ke ethereum.org dan itu memenuhi kriteria, buatlah sebuah isu di GitHub.
+Jika Anda ingin menambahkan dapp ke ethereum.org dan memenuhi kriteria, beri tahu kami.
 
 <ButtonLink href="https://submitapp.paperform.co/">
-  Buat isu
+  Sarankan sebuah aplikasi
 </ButtonLink>
