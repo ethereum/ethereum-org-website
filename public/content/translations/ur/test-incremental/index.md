@@ -86,16 +86,15 @@ def run_coverage(project_path):
 ## تعیناتی {#networks-and-tools}
 
 ### نیٹ ورکس اور ٹولز
+آپ [Holesky](https://holesky.dev/) یا [Sepolia](https://sepolia.ethpandaops.io/) پر [Remix](https://remix.ethereum.org/) کا استعمال کرتے ہوئے کنٹریکٹس تعینات کر سکتے ہیں، اور [Blockscout](https://eth.blockscout.com/) پر سورس کوڈ کی تصدیق کر سکتے ہیں۔ پروڈکشن کی تعیناتیوں کے لیے، اس عمل کو خودکار بنانے کے لیے **Hardhat Ignition** یا **Foundry اسکرپٹس** استعمال کرنے پر غور کریں۔
 
-آپ [Holesovice](https://holesovice.dev/) یا [Sepolia](https://sepolia.ethpandaops.io/) پر [Remix](https://remix.ethereum.org/) کا استعمال کرتے ہوئے کنٹریکٹس تعینات کر سکتے ہیں، اور [Blockscout](https://eth.blockscout.com/) پر سورس کوڈ کی تصدیق کر سکتے ہیں۔ پروڈکشن کی تعیناتیوں کے لیے، اس عمل کو خودکار بنانے کے لیے **Hardhat Ignition** یا **Foundry اسکرپٹس** استعمال کرنے پر غور کریں۔
+<ButtonLink variant="outline-color" href="/developers/docs/frameworks/overview/">فریم ورکس دریافت کریں</ButtonLink>
 
-<ButtonLink variant="outline-color" href="/developers/docs/frameworks/">فریم ورکس دریافت کریں</ButtonLink>
-
-<YouTube id="def456uvw" />
+<YouTube id="abc123xyz" />
 
 <Divider />
 
-<InfoBanner emoji=":warning:" title="Security reminder">
+<InfoBanner emoji=":shield:" title="سیکیورٹی کی یاد دہانی">
 
 مین نیٹ پر تعینات کرنے سے پہلے ہمیشہ اپنے کنٹریکٹس کا آڈٹ کریں۔ [OpenZeppelin Defender](https://www.openzeppelin.com/defender) جیسے ٹولز کا استعمال کریں اور [Trail of Bits](https://www.trailofbits.com/) یا [اوپن زیپلن](https://www.openzeppelin.com/security-audits) جیسی فرموں سے پیشہ ورانہ آڈٹ پر غور کریں۔
 
