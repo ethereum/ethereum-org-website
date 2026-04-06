@@ -13,15 +13,22 @@ The pipeline classifies English changes into two categories:
 
 ## Architecture
 
-### Single Staging Branch
+### Translation Branch Strategy
 
-All pipeline runs commit to a single branch (`intl/staging` by default). This eliminates race conditions from concurrent runs and keeps translation PRs consolidated.
+The translation branch is derived from the base branch: `intl/{BASE_BRANCH}`. This means:
 
-- If the branch exists, the pipeline merges the base branch into it before committing.
-- If the branch doesn't exist, it creates one from the base branch.
+- `dev` (default base) -> `intl/dev`
+- `staging` (hot fixes) -> `intl/staging`
+- `master` (emergency fixes) -> `intl/master`
+
+Each base branch gets its own translation branch. This eliminates conflicts between regular dev translations and hot fix translations.
+
+For each pipeline run:
+- If the translation branch exists, the pipeline merges the base branch into it first (keeps it current).
+- If it doesn't exist, it creates one from the base branch HEAD.
 - A GitHub Actions concurrency group ensures only one pipeline run executes at a time (additional runs queue).
 
-The staging branch name is configurable via the `translation_branch` workflow input (useful for testing).
+When hot fix translations on `intl/staging` merge to `staging`, and `staging` later merges back to `dev` during prepare-release, the manifests come along. The `intl/dev` pipeline then sees those manifests and knows the hot-fixed content is already translated -- no redundant work.
 
 ### Manifests
 
@@ -50,7 +57,7 @@ When English content is removed (sections deleted, JSON keys removed), the pipel
 ### GitHub Actions
 
 ```yaml
-# Default: auto-detect mode
+# Default: auto-detect mode, targets dev -> intl/dev
 gh workflow run gemini-translations.yml \
   -f target_path="public/content/some-page/index.md" \
   -f target_languages="es,ja,ur"
@@ -60,20 +67,43 @@ gh workflow run gemini-translations.yml \
   -f target_path="public/content/some-page/index.md" \
   -f mode="full"
 
-# Use a test staging branch
+# Hot fix: translate against staging -> intl/staging
 gh workflow run gemini-translations.yml \
-  --ref test-branch \
-  -f base_branch="test-branch" \
-  -f translation_branch="intl/test-staging"
+  -f target_path="public/content/hotfixed-page/index.md" \
+  -f base_branch="staging"
+
+# Testing: use a feature branch as base -> intl/test-6/gemini-v4
+gh workflow run gemini-translations.yml \
+  --ref test-6/gemini-v4 \
+  -f base_branch="test-6/gemini-v4"
 ```
 
 ### Content Author Workflow
 
-1. Author writes/edits English content, merges PR to dev.
+1. Author writes/edits English content, merges PR to `dev`.
 2. Pipeline dispatches (manually or scheduled), detects changes, translates.
-3. Translations appear on `intl/staging` branch as a PR against dev.
+3. Translations appear on `intl/dev` as a PR against `dev`.
 4. Reviewer checks the translation PR, merges when satisfied.
-5. For component deprecations: remove from English first, let the pipeline strip it from locales, then a cleanup job can safely delete the component file.
+5. For component deprecations: remove from English first, let the pipeline strip it from locales (via removed content handling), then a cleanup job can safely delete the component file.
+
+### Hot Fix Workflow
+
+1. Hot fix merges directly to `staging` (or `master`).
+2. Dispatch pipeline with `-f base_branch="staging"`.
+3. Pipeline commits translations to `intl/staging`, opens PR against `staging`.
+4. Merge the translation PR. Hot fix is now translated in production.
+5. During the next prepare-release, `staging` merges back to `dev`. The manifests from the hot fix translation come along.
+6. The `intl/dev` pipeline sees those manifests and knows the hot-fixed content is already translated. No redundant Gemini calls.
+
+### Branch Lifecycle
+
+| Base branch | Translation branch | PR target | When |
+|---|---|---|---|
+| `dev` | `intl/dev` | `dev` | Normal content updates |
+| `staging` | `intl/staging` | `staging` | Hot fixes pre-release |
+| `master` | `intl/master` | `master` | Emergency production fixes |
+
+Each translation branch is created when first needed and persists across pipeline runs. After the translation PR is merged, the next pipeline run creates a fresh one from the current base branch HEAD.
 
 ### Recovery
 
@@ -91,7 +121,7 @@ gh workflow run gemini-translations.yml \
 - **English is the source of truth.** Non-English files should never be edited manually. The pipeline is the exclusive manipulator.
 - **Inert propagation avoids unnecessary LLM calls.** URL changes, path updates, and attribute changes are handled deterministically -- no Gemini tokens spent.
 - **Section-level granularity.** Only changed sections are retranslated, with unchanged sections provided as context. This preserves voice consistency while minimizing cost.
-- **One PR at a time.** The staging branch approach ensures there's never more than one open translation PR, avoiding manifest conflicts.
+- **One PR per base branch.** The `intl/{base}` naming ensures there's never more than one open translation PR per base branch, avoiding manifest conflicts. Hot fixes on `staging` and regular work on `dev` have separate translation branches.
 
 ## File Locations
 
