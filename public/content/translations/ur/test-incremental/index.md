@@ -19,7 +19,7 @@ summaryPoints:
 
 `solc` کمپائلر آپ کے Solidity سورس کوڈ کو بائٹ کوڈ میں تبدیل کرتا ہے جسے EVM چلا سکتا ہے۔ اس بات کو یقینی بنائیں کہ آپ کا کمپائلر ورژن آپ کے کنٹریکٹ میں موجود `pragma` اسٹیٹمنٹ سے میل کھاتا ہو۔
 
-آپ اس کے بائٹ کوڈ اور تصدیق شدہ سورس کوڈ کا معائنہ کرنے کے لیے <a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a> پر تعینات شدہ کنٹریکٹ کو چیک کر سکتے ہیں۔
+آپ اس کے بائٹ کوڈ اور تصدیق شدہ سورس کوڈ کا معائنہ کرنے کے لیے <a href="https://eth.blockscout.com/address/0x5678" target="_blank">Blockscout</a> پر تعینات شدہ کنٹریکٹ کو چیک کر سکتے ہیں۔
 
 ![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
@@ -87,7 +87,7 @@ def run_coverage(project_path):
 
 ### نیٹ ورکس اور ٹولز
 
-آپ [Holesovice](https://holesovice.dev/) یا [Sepolia](https://sepolia.dev/) پر [Remix](https://remix.ethereum.org/) کا استعمال کرتے ہوئے کنٹریکٹس تعینات کر سکتے ہیں، اور [Blockscout](https://eth.blockscout.com/) پر سورس کوڈ کی تصدیق کر سکتے ہیں۔ پروڈکشن کی تعیناتیوں کے لیے، اس عمل کو خودکار بنانے کے لیے **Hardhat Ignition** یا **Foundry اسکرپٹس** استعمال کرنے پر غور کریں۔
+آپ [Holesovice](https://holesovice.dev/) یا [Sepolia](https://sepolia.ethpandaops.io/) پر [Remix](https://remix.ethereum.org/) کا استعمال کرتے ہوئے کنٹریکٹس تعینات کر سکتے ہیں، اور [Blockscout](https://eth.blockscout.com/) پر سورس کوڈ کی تصدیق کر سکتے ہیں۔ پروڈکشن کی تعیناتیوں کے لیے، اس عمل کو خودکار بنانے کے لیے **Hardhat Ignition** یا **Foundry اسکرپٹس** استعمال کرنے پر غور کریں۔
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">فریم ورکس دریافت کریں</ButtonLink>
 
