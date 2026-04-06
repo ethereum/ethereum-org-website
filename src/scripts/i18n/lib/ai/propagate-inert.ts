@@ -32,6 +32,7 @@ import {
   buildMarkdownManifest,
   detectDrift,
   type LocaleTranslationManifest,
+  parseEnglishJson,
   parseEnglishMarkdown,
   type TreeManifest,
 } from "./manifest-adapter"
@@ -70,13 +71,17 @@ interface InertChange {
 export function detectInertChanges(
   englishContent: string,
   sourceManifestJson: string,
-  translationManifest: LocaleTranslationManifest
+  translationManifest: LocaleTranslationManifest,
+  format: "markdown" | "json" = "markdown"
 ): InertChange[] {
   const changes: InertChange[] = []
-  const drift = detectDrift(englishContent, sourceManifestJson, "markdown")
+  const drift = detectDrift(englishContent, sourceManifestJson, format)
 
   // Parse current English tree (has new values)
-  const newTree = parseEnglishMarkdown(englishContent)
+  const newTree =
+    format === "json"
+      ? parseEnglishJson(englishContent)
+      : parseEnglishMarkdown(englishContent)
 
   // Get old manifest tree (has old anchor hashes for structural matching)
   const oldManifest: TreeManifest = JSON.parse(sourceManifestJson)
@@ -144,14 +149,20 @@ export function detectInertChanges(
 /**
  * Apply inert changes to a translated file.
  *
- * Uses context-aware replacement to match within the expected
- * structural context (link URLs, image paths, backticks, attributes).
- * All replacements use callback functions to prevent $ injection.
+ * For markdown: context-aware regex replacement within structural
+ * patterns (link URLs, image paths, backticks, attributes).
+ * For JSON: parse, walk string values, replace, re-serialize.
+ * JSON needs this because quotes are escaped as \" in the raw file.
  */
 export function applyInertChanges(
   translatedContent: string,
-  changes: InertChange[]
+  changes: InertChange[],
+  format: "markdown" | "json" = "markdown"
 ): { content: string; applied: number; skipped: number } {
+  if (format === "json") {
+    return applyInertChangesJson(translatedContent, changes)
+  }
+
   let content = translatedContent
   let applied = 0
   let skipped = 0
@@ -174,6 +185,55 @@ export function applyInertChanges(
   }
 
   return { content, applied, skipped }
+}
+
+/**
+ * Apply inert changes to a JSON locale file.
+ * Parses the JSON, walks all string values, replaces old -> new,
+ * then re-serializes. Avoids regex issues with escaped quotes.
+ */
+function applyInertChangesJson(
+  translatedContent: string,
+  changes: InertChange[]
+): { content: string; applied: number; skipped: number } {
+  const obj = JSON.parse(translatedContent)
+  let applied = 0
+  let skipped = 0
+
+  for (const change of changes) {
+    const found = jsonWalkReplace(obj, change.oldValue, change.newValue)
+    if (found) {
+      applied++
+    } else {
+      skipped++
+    }
+  }
+
+  return {
+    content: JSON.stringify(obj, null, 2) + "\n",
+    applied,
+    skipped,
+  }
+}
+
+/** Recursively replace oldValue with newValue in all string values of a JSON object. */
+function jsonWalkReplace(
+  o: Record<string, unknown>,
+  oldValue: string,
+  newValue: string
+): boolean {
+  let found = false
+  for (const [k, v] of Object.entries(o)) {
+    if (typeof v === "string" && v.includes(oldValue)) {
+      o[k] = v.split(oldValue).join(newValue)
+      found = true
+    } else if (typeof v === "object" && v !== null && !Array.isArray(v)) {
+      if (jsonWalkReplace(v as Record<string, unknown>, oldValue, newValue)) {
+        found = true
+      }
+    }
+  }
+  return found
 }
 
 /**

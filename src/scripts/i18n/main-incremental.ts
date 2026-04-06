@@ -452,14 +452,16 @@ async function main() {
     const changes = detectInertChanges(
       task.file.content,
       task.sourceManifestJson,
-      task.translationManifest
+      task.translationManifest,
+      task.file.type
     )
 
     if (changes.length === 0) continue
 
     const { content, applied, skipped } = applyInertChanges(
       task.localeContent,
-      changes
+      changes,
+      task.file.type
     )
 
     if (applied > 0) {
