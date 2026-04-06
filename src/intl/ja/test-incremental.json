@@ -5,7 +5,7 @@
   "cta-secondary": "ドキュメントを見る",
   "stat-label": "今月デプロイされたコントラクト",
   "banner-text": "スマート・コントラクトは初めてですか？<a href=\"/developers/docs/smart-contracts/\">スマート・コントラクトの紹介</a>から始めましょう。",
-  "footnote": "コントラクトのデータは<a href=\"https://eth.blockscout.com/\" target=\"_blank\">Blockscout</a>から取得しています。ガス価格は<a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a>から取得しています。ツールは<a href=\"https://www.openzeppelin.com/\" target=\"_blank\">オープンツェッペリン</a>によって保守されています。",
+  "footnote": "コントラクトのデータは<a href=\"https://eth.blockscout.com/?sort=holders\" target=\"_blank\">Blockscout</a>から取得しています。ガス価格は<a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a>から取得しています。ツールは<a href=\"https://www.openzeppelin.com/\" target=\"_blank\">オープンツェッペリン</a>によって保守されています。",
   "filter-label": "フレームワークで絞り込む",
   "empty-results": "条件に一致するツールが見つかりません。フィルターを調整してみてください。",
   "nested": {
@@ -17,10 +17,10 @@
     }
   },
   "icon-link": "<a href=\"/assets/smart-contracts-icon.svg\"></a>",
-  "multi-link-sentence": "<a href=\"https://sepolia.dev/\">Sepolia</a>で<a href=\"https://remix.ethereum.org/\">Remix</a>を使用してデプロイし、<a href=\"https://eth.blockscout.com/\">Blockscout</a>で検証し、<a href=\"https://www.openzeppelin.com/defender\">Defender</a>で監査します。",
+  "multi-link-sentence": "<a href=\"https://sepolia.dev/\">Sepolia</a>で<a href=\"https://remix.ethereum.org/\">Remix</a>を使用してデプロイし、<a href=\"https://eth.blockscout.com/?sort=holders\">Blockscout</a>で検証し、<a href=\"https://www.openzeppelin.com/defender\">Defender</a>で監査します。",
   "welcome-user": "お帰りなさい、{username}さん！",
   "tool-count": "{count, plural, =0 {ツールが見つかりません} one {# 個のツールが見つかりました} other {# 個のツールが見つかりました}}",
   "deploy-status": "{status, select, pending {デプロイの確認待ちです} confirmed {コントラクトが{address}にデプロイされました} failed {デプロイに失敗しました: {reason}} other {不明なステータス}}",
-  "html-and-icu": "<a href=\"https://eth.blockscout.com/\">Blockscout</a>に {count, plural, one {# つのアクティブなコントラクト} other {# つのアクティブなコントラクト}} があります。",
-  "dapp-description": "**Hardhat**はプロフェッショナル向けのイーサリアム開発環境です。\n\n- **コンパイル**: キャッシュ機能を備えた組み込みのSolidityコンパイラ。\n- **テスト**: Mocha統合による高速なテストランナー。\n- **デプロイ**: スクリプト可能なデプロイパイプライン。\n\n![Hardhat UI](https://raw.githubusercontent.com/NomicFoundation/hardhat/main/docs/.vuepress/public/hardhat-logo.png)\n\n*Hardhatはイーサリアム、Polygon、Arbitrumネットワークをサポートしています。*"
+  "html-and-icu": "<a href=\"https://eth.blockscout.com/?sort=holders\">Blockscout</a>に {count, plural, one {# つのアクティブなコントラクト} other {# つのアクティブなコントラクト}} があります。",
+  "dapp-description": "**Hardhat**はプロフェッショナル向けのイーサリアム開発環境です。\n\n- **コンパイル**: キャッシュ機能を備えた組み込みのSolidityコンパイラ。\n- **テスト**: Mocha統合による高速なテストランナー。\n- **デプロイ**: スクリプト可能なデプロイパイプライン。\n\n![Hardhat UI](https://raw.githubusercontent.com/NomicFoundation/hardhat/main/docs/.vuepress/public/hardhat-logo-v2.png)\n\n*Hardhatはイーサリアム、Polygon、Arbitrumネットワークをサポートしています。*"
 }
