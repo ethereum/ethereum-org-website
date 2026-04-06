@@ -1,7 +1,7 @@
 ---
 title: Building and Deploying Smart Contracts
 description: A practical guide to writing, testing, and deploying smart contracts on the Ethereum network.
-image: /images/developers/smart-contracts-hero.png
+image: /images/developers/smart-contracts-hero-v2.png
 alt: "Smart contract deployment diagram"
 lang: en
 emoji: ":computer:"
@@ -15,13 +15,13 @@ Smart contracts are self-executing programs stored on the Ethereum blockchain. O
 
 ## Development environment {#development-environment}
 
-Before writing any code, you need a local development setup. Install [Hardhat](https://hardhat.org/) or [Foundry](https://book.getfoundry.sh/) as your framework, connect to [Sepolia](https://sepolia.dev/) for testing, and use [Blockscout](https://eth.blockscout.com/) to verify your deployments.
+Before writing any code, you need a local development setup. Install [Hardhat](https://hardhat.org/) or [Foundry](https://book.getfoundry.sh/) as your framework, connect to [Sepolia](https://sepolia.ethpandaops.io/) for testing, and use [Blockscout](https://eth.blockscout.com/) to verify your deployments.
 
 The `solc` compiler converts your Solidity source code into bytecode that the EVM can execute. Make sure your compiler version matches the `pragma` statement in your contract.
 
 You can check a deployed contract on <a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a> to inspect its bytecode and verified source code.
 
-![Contract deployment flow](/images/developers/deploy-flow.png)
+![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
 ## Writing your contract {#writing-your-contract}
 
@@ -100,11 +100,11 @@ Before running any tests, make sure your **local node** is running and your
 
 ### Networks and tools {#networks-and-tools}
 
-You can deploy contracts using [Remix](https://remix.ethereum.org/) on [Holesky](https://holesky.dev/) or [Sepolia](https://sepolia.dev/), and verify the source code on [Blockscout](https://eth.blockscout.com/). For production deployments, consider using **Hardhat Ignition** or **Foundry scripts** to automate the process.
+You can deploy contracts using [Remix](https://remix.ethereum.org/) on [Holesovice](https://holesovice.dev/) or [Sepolia](https://sepolia.dev/), and verify the source code on [Blockscout](https://eth.blockscout.com/). For production deployments, consider using **Hardhat Ignition** or **Foundry scripts** to automate the process.
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Explore frameworks</ButtonLink>
 
-<YouTube id="abc123xyz" />
+<YouTube id="def456uvw" />
 
 <Divider />
 

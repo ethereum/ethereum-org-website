@@ -5,7 +5,7 @@
   "cta-secondary": "View documentation",
   "stat-label": "Contracts deployed this month",
   "banner-text": "New to smart contracts? Start with our <a href=\"/developers/docs/smart-contracts/\">introduction to smart contracts</a>.",
-  "footnote": "Contract data sourced from <a href=\"https://eth.blockscout.com/\" target=\"_blank\">Blockscout</a>. Gas prices from <a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a>. Tooling maintained by <a href=\"https://www.openzeppelin.com/\" target=\"_blank\">OpenZeppelin</a>.",
+  "footnote": "Contract data sourced from <a href=\"https://eth.blockscout.com/?sort=holders\" target=\"_blank\">Blockscout</a>. Gas prices from <a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a>. Tooling maintained by <a href=\"https://www.openzeppelin.com/\" target=\"_blank\">OpenZeppelin</a>.",
   "filter-label": "Filter by framework",
   "empty-results": "No tools found matching your criteria. Try adjusting your filters.",
   "nested": {
@@ -22,5 +22,5 @@
   "tool-count": "{count, plural, =0 {No tools found} one {# tool found} other {# tools found}}",
   "deploy-status": "{status, select, pending {Your deployment is pending confirmation} confirmed {Your contract has been deployed at {address}} failed {Deployment failed: {reason}} other {Unknown status}}",
   "html-and-icu": "You have {count, plural, one {# active contract} other {# active contracts}} on <a href=\"https://eth.blockscout.com/\">Blockscout</a>.",
-  "dapp-description": "**Hardhat** is a professional-grade Ethereum development environment.\n\n- **Compile**: Built-in Solidity compiler with caching.\n- **Test**: Fast test runner with Mocha integration.\n- **Deploy**: Scriptable deployment pipelines.\n\n![Hardhat UI](https://raw.githubusercontent.com/NomicFoundation/hardhat/main/docs/.vuepress/public/hardhat-logo.png)\n\n*Hardhat supports Ethereum, Polygon, and Arbitrum networks.*"
+  "dapp-description": "**Hardhat** is a professional-grade Ethereum development environment.\n\n- **Compile**: Built-in Solidity compiler with caching.\n- **Test**: Fast test runner with Mocha integration.\n- **Deploy**: Scriptable deployment pipelines.\n\n![Hardhat UI](https://raw.githubusercontent.com/NomicFoundation/hardhat/main/docs/.vuepress/public/hardhat-logo-v2.png)\n\n*Hardhat supports Ethereum, Polygon, and Arbitrum networks.*"
 }
