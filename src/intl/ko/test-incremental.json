@@ -1,0 +1,26 @@
+{
+  "title": "스마트 컨트랙트 도구",
+  "description": "이더리움에서 스마트 컨트랙트를 구축, 테스트 및 배포하기 위한 최고의 도구를 살펴보세요.",
+  "cta-primary": "시작하기",
+  "cta-secondary": "문서 보기",
+  "stat-label": "이번 달 배포된 컨트랙트",
+  "banner-text": "스마트 컨트랙트가 처음이신가요? <a href=\"/developers/docs/smart-contracts/\">스마트 컨트랙트 소개</a>부터 시작해 보세요.",
+  "footnote": "컨트랙트 데이터는 <a href=\"https://eth.blockscout.com/?sort=holders\" target=\"_blank\">Blockscout</a>에서 제공합니다. 가스 가격은 <a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a>에서 제공합니다. 도구는 <a href=\"https://www.openzeppelin.com/\" target=\"_blank\">오픈제플린</a>에서 유지 관리합니다.",
+  "filter-label": "프레임워크별 필터링",
+  "empty-results": "조건에 맞는 도구를 찾을 수 없습니다. 필터를 조정해 보세요.",
+  "nested": {
+    "section-title": "고급 패턴",
+    "section-description": "프록시 컨트랙트, 업그레이드 가능한 패턴 및 가스 최적화 기법을 살펴보세요.",
+    "subsection": {
+      "label": "프록시 패턴",
+      "hint": "Transparent, UUPS 및 비콘(beacon) 프록시 구현입니다."
+    }
+  },
+  "icon-link": "<a href=\"/assets/smart-contracts-icon.svg\"></a>",
+  "multi-link-sentence": "<a href=\"https://sepolia.ethpandaops.io/\">Sepolia</a>에서 <a href=\"https://remix.ethereum.org/\">Remix</a>로 배포하고, <a href=\"https://eth.blockscout.com/\">Blockscout</a>에서 검증하며, <a href=\"https://www.openzeppelin.com/defender\">Defender</a>로 감사하세요.",
+  "welcome-user": "다시 오신 것을 환영합니다, {username}님!",
+  "tool-count": "{count, plural, =0 {도구를 찾을 수 없습니다} one {#개의 도구를 찾았습니다} other {#개의 도구를 찾았습니다}}",
+  "deploy-status": "{status, select, pending {배포가 승인 대기 중입니다} confirmed {컨트랙트가 {address}에 배포되었습니다} failed {배포 실패: {reason}} other {알 수 없는 상태}}",
+  "html-and-icu": "<a href=\"https://eth.blockscout.com/\">Blockscout</a>에 {count, plural, one {#개의 활성 컨트랙트가} other {#개의 활성 컨트랙트가}} 있습니다.",
+  "dapp-description": "**Hardhat**은 전문가급 이더리움 개발 환경입니다.\n\n- **컴파일**: 캐싱 기능이 내장된 Solidity 컴파일러입니다.\n- **테스트**: Mocha가 통합된 빠른 테스트 러너입니다.\n- **배포**: 스크립트 작성이 가능한 배포 파이프라인입니다.\n\n![Hardhat UI](https://raw.githubusercontent.com/NomicFoundation/hardhat/main/docs/.vuepress/public/hardhat-logo-v2.png)\n\n*Hardhat은 이더리움, Polygon 및 Arbitrum 네트워크를 지원합니다.*"
+}
