@@ -1,7 +1,7 @@
 ---
 title: Building and Deploying Smart Contracts
 description: A practical guide to writing, testing, and deploying smart contracts on the Ethereum network.
-image: /images/developers/smart-contracts-hero.png
+image: /images/developers/smart-contracts-hero-v2.png
 alt: "Smart contract deployment diagram"
 lang: en
 emoji: ":computer:"
@@ -11,7 +11,7 @@ summaryPoints:
   - Deploy to a testnet and verify on-chain
 ---
 
-Smart contracts are self-executing programs stored on the Ethereum blockchain. Once deployed, they run exactly as programmed and cannot be altered. This guide walks you through the full lifecycle from writing your first contract to deploying it on a live network.
+Smart contracts are programs that live on the Ethereum blockchain and execute automatically when triggered. They are immutable once deployed, meaning no one can change their behavior. This guide covers the complete workflow from writing your first contract to verifying it on a public network.
 
 ## Development environment {#development-environment}
 
@@ -49,7 +49,7 @@ contract SimpleStorage {
 
 ### What is "gas" and why does it matter? {#what-is-gas}
 
-Every operation in the EVM costs [gas](/developers/docs/gas/). A standard ERC-20 transfer uses approximately 21,000 gas units, while a complex DeFi interaction might consume 300,000 or more. The total transaction fee is calculated as (base_fee + priority_fee) * gas_used, payable in wei. For example, a transfer using 21,000 gas at a base fee of 30 Gwei with a 2 Gwei tip costs (30 + 2) * 21,000 = 672,000 Gwei. More complex logic means higher fees for users.
+Every operation in the EVM costs [gas](/developers/docs/gas/). A standard ERC-20 transfer uses approximately 21,000 gas units, while a complex DeFi interaction might consume 500,000 or more. The total transaction fee is calculated as (base_fee + priority_fee) * gas_used, payable in wei. For example, a transfer using 21,000 gas at a base fee of 30 Gwei with a 2 Gwei tip costs (30 + 2) * 21,000 = 672,000 Gwei. Higher complexity means higher costs for end users.
 
 <ExpandableCard title="How are gas fees calculated?" eventCategory="/test-incremental" eventName="clicked gas fees">
 
@@ -104,7 +104,7 @@ You can deploy contracts using [Remix](https://remix.ethereum.org/) on [Holesky]
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Explore frameworks</ButtonLink>
 
-<YouTube id="abc123xyz" />
+<YouTube id="def456uvw" />
 
 <Divider />
 
@@ -132,12 +132,6 @@ Always audit your contracts before deploying to mainnet. Use tools like [OpenZep
   </ButtonLink>
 </AlertContent>
 </Alert>
-
-## Community resources {#community-resources}
-
-For a deeper understanding, explore the [Ethereum Whitepaper](/whitepaper/), review the [Solidity documentation](https://docs.soliditylang.org/), and study real-world contracts on [OpenZeppelin](https://www.openzeppelin.com/contracts).
-
-<CategoryAppsGrid category="developer-tools" />
 
 ## Further reading {#further-reading}
 

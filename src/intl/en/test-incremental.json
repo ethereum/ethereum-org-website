@@ -1,13 +1,12 @@
 {
   "title": "Smart Contract Tools",
   "description": "Explore the best tools for building, testing, and deploying smart contracts on Ethereum.",
-  "cta-primary": "Get started",
+  "cta-primary": "Start building",
   "cta-secondary": "View documentation",
   "stat-label": "Contracts deployed this month",
   "banner-text": "New to smart contracts? Start with our <a href=\"/developers/docs/smart-contracts/\">introduction to smart contracts</a>.",
-  "footnote": "Contract data sourced from <a href=\"https://eth.blockscout.com/\" target=\"_blank\">Blockscout</a>. Gas prices from <a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a>. Tooling maintained by <a href=\"https://www.openzeppelin.com/\" target=\"_blank\">OpenZeppelin</a>.",
+  "footnote": "Contract data sourced from <a href=\"https://eth.blockscout.com/?sort=holders\" target=\"_blank\">Blockscout</a>. Gas prices from <a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a>. Tooling maintained by <a href=\"https://www.openzeppelin.com/\" target=\"_blank\">OpenZeppelin</a>.",
   "filter-label": "Filter by framework",
-  "empty-results": "No tools found matching your criteria. Try adjusting your filters.",
   "nested": {
     "section-title": "Advanced Patterns",
     "section-description": "Explore proxy contracts, upgradeable patterns, and gas optimization techniques.",
