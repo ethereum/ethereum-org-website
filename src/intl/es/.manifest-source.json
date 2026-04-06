@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/test-drift-fixture.json",
-  "generatedAt": "2026-04-06T06:17:43.805Z",
-  "rootHash": "7960e1ab8143",
+  "generatedAt": "2026-04-06T06:20:04.343Z",
+  "rootHash": "12a43c034d2e",
   "tree": {
-    "contentHash": "876dea61a6eb",
-    "anchorHash": "9069242249a1",
+    "contentHash": "fe2708407e81",
+    "anchorHash": "98843495d1a7",
     "children": {
       "test-title": {
         "contentHash": "f2d1f42d400b",
@@ -16,7 +16,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "test-cta-primary": {
-        "contentHash": "61e8d44ad423",
+        "contentHash": "ac1796280ca0",
         "anchorHash": "e3b0c44298fc"
       },
       "test-cta-secondary": {
@@ -52,7 +52,7 @@
       },
       "test-footnote": {
         "contentHash": "8795223c81bf",
-        "anchorHash": "f27c92e53f70",
+        "anchorHash": "dd7c5cc51c7b",
         "children": {
           "prose:2": {
             "contentHash": "55c4d16e85c6",
@@ -60,7 +60,7 @@
           },
           "html-tag:0": {
             "contentHash": "3dee05652774",
-            "anchorHash": "fb01547c264f"
+            "anchorHash": "94baf97b158a"
           },
           "prose:3": {
             "contentHash": "fab4278438f7",
