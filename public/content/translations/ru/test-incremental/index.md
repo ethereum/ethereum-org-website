@@ -15,13 +15,13 @@ summaryPoints:
 
 ## Среда разработки {#development-environment}
 
-Прежде чем писать какой-либо код, вам необходимо настроить локальную среду разработки. Установите [Hardhat](https://hardhat.org/) или [Foundry](https://book.getfoundry.sh/) в качестве фреймворка, подключитесь к [Sepolia](https://sepolia.dev/) для тестирования и используйте [Blockscout](https://eth.blockscout.com/) для верификации ваших развертываний.
+Прежде чем писать какой-либо код, вам необходимо настроить локальную среду разработки. Установите [Hardhat](https://hardhat.org/) или [Foundry](https://book.getfoundry.sh/) в качестве фреймворка, подключитесь к [Sepolia](https://sepolia.ethpandaops.io/) для тестирования и используйте [Blockscout](https://eth.blockscout.com/) для верификации ваших развертываний.
 
 Компилятор `solc` преобразует ваш исходный код на Solidity в байт-код, который может выполнить EVM. Убедитесь, что версия вашего компилятора совпадает с директивой `pragma` в вашем контракте.
 
-Вы можете проверить развернутый контракт в <a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a>, чтобы изучить его байт-код и верифицированный исходный код.
+Вы можете проверить развернутый контракт в <a href="https://eth.blockscout.com/address/0x5678" target="_blank">Blockscout</a>, чтобы изучить его байт-код и верифицированный исходный код.
 
-![Contract deployment flow](/images/developers/deploy-flow.png)
+![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
 ## Написание контракта {#writing-your-contract}
 
@@ -99,7 +99,7 @@ def run_coverage(project_path):
 
 ### Сети и инструменты {#deployment-checklist}
 
-Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesky](https://holesky.dev/) или [Sepolia](https://sepolia.dev/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
+Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesky](https://holesky.dev/) или [Sepolia](https://sepolia.ethpandaops.io/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Изучить фреймворки</ButtonLink>
 
