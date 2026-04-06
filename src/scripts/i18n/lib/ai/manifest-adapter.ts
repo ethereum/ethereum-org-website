@@ -49,6 +49,19 @@ const ETHEREUM_ORG_CONFIG: Partial<ContentTreeConfig> = {
   ],
 }
 
+/**
+ * Detect JSON string values that contain markdown syntax.
+ * When true, the value is parsed recursively using the markdown parser,
+ * decomposing links, images, and formatting into child nodes.
+ * Handles dapp descriptions and other rich-text JSON values.
+ */
+const ETHEREUM_ORG_JSON_CONFIG = {
+  markdownValueDetector: (_, value: string): boolean => {
+    // Heuristic: contains markdown formatting patterns
+    return /\*\*|\n\n- |\n\n\d+\. |!\[.*\]\(|^\s*[-*] /m.test(value)
+  },
+}
+
 // ---------------------------------------------------------------------------
 // Source manifest (English content tree)
 // ---------------------------------------------------------------------------
@@ -72,7 +85,11 @@ export function buildJsonManifest(
   englishContent: string,
   sourceFile: string
 ): string {
-  const tree = parseJson(englishContent, ETHEREUM_ORG_CONFIG)
+  const tree = parseJson(
+    englishContent,
+    ETHEREUM_ORG_CONFIG,
+    ETHEREUM_ORG_JSON_CONFIG
+  )
   const manifest = serialize(tree, sourceFile)
   return JSON.stringify(manifest, null, 2) + "\n"
 }
@@ -88,7 +105,7 @@ export function parseEnglishMarkdown(content: string): TreeNode {
  * Parse English JSON into a tree.
  */
 export function parseEnglishJson(content: string): TreeNode {
-  return parseJson(content, ETHEREUM_ORG_CONFIG)
+  return parseJson(content, ETHEREUM_ORG_CONFIG, ETHEREUM_ORG_JSON_CONFIG)
 }
 
 /**
@@ -104,7 +121,11 @@ export function detectDrift(
   const newTree =
     format === "markdown"
       ? parseMarkdown(currentEnglishContent, ETHEREUM_ORG_CONFIG)
-      : parseJson(currentEnglishContent, ETHEREUM_ORG_CONFIG)
+      : parseJson(
+          currentEnglishContent,
+          ETHEREUM_ORG_CONFIG,
+          ETHEREUM_ORG_JSON_CONFIG
+        )
   return diff(oldTree, newTree)
 }
 
@@ -120,7 +141,11 @@ export function hasEnglishChanged(
   const newTree =
     format === "markdown"
       ? parseMarkdown(currentEnglishContent, ETHEREUM_ORG_CONFIG)
-      : parseJson(currentEnglishContent, ETHEREUM_ORG_CONFIG)
+      : parseJson(
+          currentEnglishContent,
+          ETHEREUM_ORG_CONFIG,
+          ETHEREUM_ORG_JSON_CONFIG
+        )
   return hasChanges(newTree, storedManifest)
 }
 
@@ -143,7 +168,7 @@ export function getEnglishInertValue(
   const tree =
     format === "markdown"
       ? parseMarkdown(content, ETHEREUM_ORG_CONFIG)
-      : parseJson(content, ETHEREUM_ORG_CONFIG)
+      : parseJson(content, ETHEREUM_ORG_CONFIG, ETHEREUM_ORG_JSON_CONFIG)
   return getInertValue(tree, path)
 }
 

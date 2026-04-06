@@ -204,8 +204,24 @@ export function replaceSections(
         : lines.length
   }
 
-  // Build the output, replacing sections that have translations
+  // Handle _preamble replacement (content between frontmatter and first heading)
   let lineIdx = 0
+  if (translations["_preamble"] !== undefined && sectionRanges.length > 0) {
+    const fmEnd = findFrontmatterEnd(lines)
+    const firstHeading = sectionRanges[0].startLine
+    // Copy frontmatter
+    for (let i = 0; i < fmEnd; i++) {
+      result.push(lines[i])
+    }
+    // Insert translated preamble
+    result.push("")
+    result.push(translations["_preamble"].trim())
+    result.push("")
+    // Skip old preamble, start processing from first heading
+    lineIdx = firstHeading
+  }
+
+  // Build the output, replacing heading sections that have translations
   for (const section of sectionRanges) {
     // Copy lines before this section (or between sections)
     while (lineIdx < section.startLine) {
@@ -286,6 +302,26 @@ export function extractSections(content: string): ExtractedSection[] {
     }
   }
 
+  // Extract preamble: content between frontmatter and first heading.
+  // Many pages use the frontmatter title as h1, so prose between
+  // frontmatter and the first ## is the intro paragraph.
+  const frontmatterEnd = findFrontmatterEnd(lines)
+  const firstHeadingLine = headings.length > 0 ? headings[0].line : lines.length
+  if (frontmatterEnd < firstHeadingLine) {
+    const preamble = lines
+      .slice(frontmatterEnd, firstHeadingLine)
+      .join("\n")
+      .trim()
+    if (preamble.length > 0) {
+      sections.push({
+        id: "_preamble",
+        level: 0,
+        headingText: "",
+        body: preamble,
+      })
+    }
+  }
+
   // Extract body content for each heading.
   // Each section only covers its own direct body (up to next heading of ANY
   // level), not nested subsections. Mirrors replaceSections logic.
@@ -358,6 +394,15 @@ export function buildSectionList(
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
+
+/** Find the line after frontmatter ends (after closing ---). Returns 0 if no frontmatter. */
+function findFrontmatterEnd(lines: string[]): number {
+  if (lines.length === 0 || lines[0].trim() !== "---") return 0
+  for (let i = 1; i < lines.length; i++) {
+    if (lines[i].trim() === "---") return i + 1
+  }
+  return 0
+}
 
 function formatGlossary(terms: Map<string, string>): string {
   if (terms.size === 0) return ""

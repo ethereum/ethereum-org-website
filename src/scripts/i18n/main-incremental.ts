@@ -52,6 +52,7 @@ import {
   getBranchObject,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
 import { config } from "./config"
 
@@ -493,7 +494,10 @@ async function main() {
     for (const task of fileLanguageTasks) {
       const proseIds = task.drift.translatableDrift.map((e) => e.id)
       const addedIds = task.drift.added.map((e) => e.id)
-      const needsTranslation = [...proseIds, ...addedIds]
+      // Map tree's root-level prose:0 to _preamble (content before first heading)
+      const needsTranslation = [...proseIds, ...addedIds].map((id) =>
+        id === "prose:0" ? "_preamble" : id
+      )
 
       if (needsTranslation.length === 0) continue
 
@@ -667,6 +671,42 @@ async function main() {
       )
       const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
       await committer.commitFile(jsonManifestPath, sourceManifest, task.locale)
+    }
+  }
+
+  // Phase 7: Sanitize Gemini output
+  // Collect all files that went through Gemini (full translation or prose
+  // retranslation) for post-import sanitization (BiDi fixes, code fence
+  // alignment, etc.).
+  const geminiOutputFiles: Array<{ path: string; content: string }> = []
+
+  // Note: full translations (Phase 3) are not sanitized here -- they were
+  // committed directly and the full pipeline has its own sanitizer pass.
+
+  for (const task of fileLanguageTasks) {
+    if (task.file.type === "markdown") {
+      const destPath = getDestinationFromPath(task.file.path, task.locale)
+      geminiOutputFiles.push({
+        path: path.resolve(destPath),
+        content: task.localeContent,
+      })
+    }
+  }
+
+  if (geminiOutputFiles.length > 0) {
+    const englishContentMap = new Map<string, string>(
+      englishFiles.map((f) => [f.path, f.content])
+    )
+    try {
+      await runPostImportSanitization(
+        geminiOutputFiles,
+        branchName,
+        englishContentMap
+      )
+    } catch (error) {
+      console.warn(
+        `[main] Sanitization failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+      )
     }
   }
 
