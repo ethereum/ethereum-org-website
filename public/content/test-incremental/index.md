@@ -19,7 +19,7 @@ Before writing any code, you need a local development setup. Install [Hardhat](h
 
 The `solc` compiler converts your Solidity source code into bytecode that the EVM can execute. Make sure your compiler version matches the `pragma` statement in your contract.
 
-You can check a deployed contract on <a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a> to inspect its bytecode and verified source code.
+You can check a deployed contract on <a href="https://eth.blockscout.com/address/0x5678" target="_blank">Blockscout</a> to inspect its bytecode and verified source code.
 
 ![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
@@ -100,15 +100,15 @@ Before running any tests, make sure your **local node** is running and your
 
 ### Networks and tools {#networks-and-tools}
 
-You can deploy contracts using [Remix](https://remix.ethereum.org/) on [Holesovice](https://holesovice.dev/) or [Sepolia](https://sepolia.dev/), and verify the source code on [Blockscout](https://eth.blockscout.com/). For production deployments, consider using **Hardhat Ignition** or **Foundry scripts** to automate the process.
+You can deploy contracts using [Remix](https://remix.ethereum.org/) on [Holesovice](https://holesovice.dev/) or [Sepolia](https://sepolia.ethpandaops.io/), and verify the source code on [Blockscout](https://eth.blockscout.com/). For production deployments, consider using **Hardhat Ignition** or **Foundry scripts** to automate the process.
 
-<ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Explore frameworks</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/frameworks/overview/">Explore frameworks</ButtonLink>
 
 <YouTube id="def456uvw" />
 
 <Divider />
 
-<InfoBanner emoji=":warning:" title="Security reminder">
+<InfoBanner emoji=":shield:" title="Security reminder">
 
 Always audit your contracts before deploying to mainnet. Use tools like [OpenZeppelin Defender](https://www.openzeppelin.com/defender) and consider a professional audit from firms such as [Trail of Bits](https://www.trailofbits.com/) or [OpenZeppelin](https://www.openzeppelin.com/security-audits).
 
