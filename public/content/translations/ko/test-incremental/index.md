@@ -15,13 +15,13 @@ summaryPoints:
 
 ## 개발 환경 {#development-environment}
 
-코드를 작성하기 전에 로컬 개발 환경을 설정해야 합니다. 프레임워크로 [Hardhat](https://hardhat.org/) 또는 [Foundry](https://book.getfoundry.sh/)를 설치하고, 테스트를 위해 [Sepolia](https://sepolia.ethpandaops.io/)에 연결하며, 배포를 검증하기 위해 [Blockscout](https://eth.blockscout.com/)를 사용하세요.
+코드를 작성하기 전에 로컬 개발 환경을 설정해야 합니다. 프레임워크로 [Hardhat](https://hardhat.org/) 또는 [Foundry](https://book.getfoundry.sh/)를 설치하고, 테스트를 위해 [Sepolia](https://sepolia.dev/)에 연결하며, 배포를 검증하기 위해 [Blockscout](https://eth.blockscout.com/)를 사용하세요.
 
 `solc` 컴파일러는 Solidity 소스 코드를 EVM이 실행할 수 있는 바이트코드로 변환합니다. 컴파일러 버전이 컨트랙트의 `pragma` 구문과 일치하는지 확인하세요.
 
 <a href="https://eth.blockscout.com/address/0x5678" target="_blank">Blockscout</a>에서 배포된 컨트랙트를 확인하여 바이트코드와 검증된 소스 코드를 검사할 수 있습니다.
 
-![Contract deployment flow](/images/developers/deploy-flow-v2.png)
+![Contract deployment flow](/images/developers/deploy-flow.png)
 
 ## 컨트랙트 작성하기 {#writing-your-contract}
 
@@ -81,26 +81,28 @@ def run_coverage(project_path):
 
 ### 모범 사례 {#deployment}
 
-컨트랙트를 테스트할 때 다음 가이드라인을 염두에 두세요:
-
-1. **모든 공개 함수 테스트하기** -- 엣지 케이스와 실패 모드를 포함합니다.
-2. 복잡한 수학 연산에는 **퍼징(fuzzing) 사용하기**.
-3. [Smock](https://github.com/defi-wonderland/smock)과 같은 도구를 사용하여 **외부 종속성 모킹(mocking)하기**.
-
-> "코드가 법이다"라는 말은 코드가 철저하게 테스트되었을 때만 유효합니다. 테스트되지 않은 컨트랙트는 자산이 아니라 부채입니다.
-
-다음 참고 사항은 프로젝트 README 파일에 일반적으로 포함됩니다:
-
-```markdown
-테스트를 실행하기 전에 **로컬 노드**가 실행 중이고
-[환경 변수](/developers/docs/frameworks/)가 올바르게 구성되어 있는지 확인하세요.
-```
+## 배포
 
 ## 배포 {#networks-and-tools}
 
+### 네트워크 및 도구
+[Holesky](https://holesky.dev/) 또는 [Sepolia](https://sepolia.ethpandaops.io/)에서 [Remix](https://remix.ethereum.org/)를 사용하여 컨트랙트를 배포하고, [Blockscout](https://eth.blockscout.com/)에서 소스 코드를 검증할 수 있습니다. 프로덕션 배포의 경우, 프로세스를 자동화하기 위해 **Hardhat Ignition** 또는 **Foundry 스크립트** 사용을 고려해 보세요.
+
+<ButtonLink variant="outline-color" href="/developers/docs/frameworks/overview/">프레임워크 탐색하기</ButtonLink>
+
+<YouTube id="abc123xyz" />
+
+<Divider />
+
+<InfoBanner emoji=":shield:" title="보안 알림">
+
+메인넷에 배포하기 전에 항상 컨트랙트를 감사(audit)하세요. [오픈제플린 Defender](https://www.openzeppelin.com/defender)와 같은 도구를 사용하고, [Trail of Bits](https://www.trailofbits.com/) 또는 [오픈제플린](https://www.openzeppelin.com/security-audits)과 같은 회사의 전문적인 감사를 고려해 보세요.
+
+</InfoBanner>
+
 ### 네트워크 및 도구 {#deployment-checklist}
 
-[Holesovice](https://holesovice.dev/) 또는 [Sepolia](https://sepolia.ethpandaops.io/)에서 [Remix](https://remix.ethereum.org/)를 사용하여 컨트랙트를 배포하고, [Blockscout](https://eth.blockscout.com/)에서 소스 코드를 검증할 수 있습니다. 프로덕션 배포의 경우, 프로세스를 자동화하기 위해 **Hardhat Ignition** 또는 **Foundry 스크립트** 사용을 고려해 보세요.
+[Holesovice](https://holesovice.dev/) 또는 [Sepolia](https://sepolia.dev/)에서 [Remix](https://remix.ethereum.org/)를 사용하여 컨트랙트를 배포하고, [Blockscout](https://eth.blockscout.com/)에서 소스 코드를 검증할 수 있습니다. 프로덕션 배포의 경우, 프로세스를 자동화하기 위해 **Hardhat Ignition** 또는 **Foundry 스크립트** 사용을 고려해 보세요.
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">프레임워크 탐색하기</ButtonLink>
 
