@@ -15,13 +15,13 @@ summaryPoints:
 
 ## 開発環境 {#development-environment}
 
-コードを書く前に、ローカルの開発環境をセットアップする必要があります。フレームワークとして[Hardhat](https://hardhat.org/)または[Foundry](https://book.getfoundry.sh/)をインストールし、テストのために[Sepolia](https://sepolia.dev/)に接続し、デプロイの検証には[Blockscout](https://eth.blockscout.com/)を使用します。
+コードを書く前に、ローカルの開発環境をセットアップする必要があります。フレームワークとして[Hardhat](https://hardhat.org/)または[Foundry](https://book.getfoundry.sh/)をインストールし、テストのために[Sepolia](https://sepolia.ethpandaops.io/)に接続し、デプロイの検証には[Blockscout](https://eth.blockscout.com/)を使用します。
 
 `solc`コンパイラは、SolidityのソースコードをEVMが実行できるバイトコードに変換します。コンパイラのバージョンが、コントラクト内の`pragma`ステートメントと一致していることを確認してください。
 
 デプロイされたコントラクトは<a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a>で確認でき、そのバイトコードと検証済みのソースコードを検査できます。
 
-![Contract deployment flow](/images/developers/deploy-flow.png)
+![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
 ## コントラクトの記述 {#writing-your-contract}
 
@@ -81,26 +81,28 @@ def run_coverage(project_path):
 
 ### ベストプラクティス {#deployment}
 
-コントラクトをテストする際は、以下のガイドラインを念頭に置いてください。
-
-1. **すべてのパブリック関数をテストする** -- エッジケースや失敗モードも含めます。
-2. 複雑な数学的操作には**ファジングを使用する**。
-3. [Smock](https://github.com/defi-wonderland/smock)などのツールを使用して**外部依存関係をモックする**。
-
-> 「Code is law (コードは法である)」は、コードが徹底的にテストされている場合にのみ機能します。テストされていないコントラクトは資産ではなく、負債です。
-
-以下の注意事項は、プロジェクトのREADMEファイルによく含まれています。
-
-```markdown
-テストを実行する前に、**ローカルノード**が稼働しており、
-[環境変数](/developers/docs/frameworks/)が適切に設定されていることを確認してください。
-```
+## デプロイ
 
 ## デプロイ {#networks-and-tools}
 
+### ネットワークとツール
+[Holesovice](https://holesovice.dev/)または[Sepolia](https://sepolia.dev/)上で[Remix](https://remix.ethereum.org/)を使用してコントラクトをデプロイし、[Blockscout](https://eth.blockscout.com/)でソースコードを検証できます。本番環境へのデプロイでは、プロセスを自動化するために**Hardhat Ignition**や**Foundryスクリプト**の使用を検討してください。
+
+<ButtonLink variant="outline-color" href="/developers/docs/frameworks/">フレームワークを探す</ButtonLink>
+
+<YouTube id="def456uvw" />
+
+<Divider />
+
+<InfoBanner emoji=":warning:" title="Security reminder">
+
+メインネットにデプロイする前に、必ずコントラクトを監査してください。[オープンツェッペリン Defender](https://www.openzeppelin.com/defender)のようなツールを使用し、[Trail of Bits](https://www.trailofbits.com/)や[オープンツェッペリン](https://www.openzeppelin.com/security-audits)などの企業による専門的な監査を検討してください。
+
+</InfoBanner>
+
 ### ネットワークとツール {#deployment-checklist}
 
-[Holesky](https://holesky.dev/)または[Sepolia](https://sepolia.dev/)上で[Remix](https://remix.ethereum.org/)を使用してコントラクトをデプロイし、[Blockscout](https://eth.blockscout.com/)でソースコードを検証できます。本番環境へのデプロイでは、プロセスを自動化するために**Hardhat Ignition**や**Foundryスクリプト**の使用を検討してください。
+[Holesky](https://holesky.dev/)または[Sepolia](https://sepolia.ethpandaops.io/)上で[Remix](https://remix.ethereum.org/)を使用してコントラクトをデプロイし、[Blockscout](https://eth.blockscout.com/)でソースコードを検証できます。本番環境へのデプロイでは、プロセスを自動化するために**Hardhat Ignition**や**Foundryスクリプト**の使用を検討してください。
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">フレームワークを探す</ButtonLink>
 
