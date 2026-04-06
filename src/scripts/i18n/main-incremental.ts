@@ -116,6 +116,7 @@ async function main() {
   console.log(`[main] Dry run: ${dryRun}`)
 
   const committer = new SharedCommitter(branchName)
+  await committer.init()
 
   // Load English files
   const englishFiles: FileContext[] = []
