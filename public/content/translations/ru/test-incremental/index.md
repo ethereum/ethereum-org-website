@@ -15,13 +15,13 @@ summaryPoints:
 
 ## Среда разработки {#development-environment}
 
-Прежде чем писать какой-либо код, вам необходимо настроить локальную среду разработки. Установите [Hardhat](https://hardhat.org/) или [Foundry](https://book.getfoundry.sh/) в качестве фреймворка, подключитесь к [Sepolia](https://sepolia.dev/) для тестирования и используйте [Blockscout](https://eth.blockscout.com/) для верификации ваших развертываний.
+Прежде чем писать какой-либо код, вам необходимо настроить локальную среду разработки. Установите [Hardhat](https://hardhat.org/) или [Foundry](https://book.getfoundry.sh/) в качестве фреймворка, подключитесь к [Sepolia](https://sepolia.ethpandaops.io/) для тестирования и используйте [Blockscout](https://eth.blockscout.com/) для верификации ваших развертываний.
 
 Компилятор `solc` преобразует ваш исходный код на Solidity в байт-код, который может выполнить EVM. Убедитесь, что версия вашего компилятора совпадает с директивой `pragma` в вашем контракте.
 
 Вы можете проверить развернутый контракт в <a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a>, чтобы изучить его байт-код и верифицированный исходный код.
 
-![Contract deployment flow](/images/developers/deploy-flow.png)
+![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
 ## Написание контракта {#writing-your-contract}
 
@@ -81,25 +81,28 @@ def run_coverage(project_path):
 
 ### Лучшие практики {#deployment}
 
-При тестировании ваших контрактов помните о следующих рекомендациях:
-
-1. **Тестируйте каждую публичную функцию**, включая граничные случаи и сценарии сбоев.
-2. **Используйте фаззинг** для сложных математических операций.
-3. **Мокируйте внешние зависимости** с помощью таких инструментов, как [Smock](https://github.com/defi-wonderland/smock).
-
-> Принцип «Код — это закон» работает только в том случае, если код был тщательно протестирован. Непротестированные контракты — это обуза, а не актив.
-
-Следующее примечание часто включается в файлы README проектов:
-
-```markdown
-Перед запуском любых тестов убедитесь, что ваш **локальный узел** запущен, а [переменные среды](/developers/docs/frameworks/) настроены правильно.
-```
+## Развертывание
 
 ## Развертывание {#networks-and-tools}
 
+### Сети и инструменты
+Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesovice](https://holesovice.dev/) или [Sepolia](https://sepolia.dev/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
+
+<ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Изучить фреймворки</ButtonLink>
+
+<YouTube id="def456uvw" />
+
+<Divider />
+
+<InfoBanner emoji=":warning:" title="Напоминание о безопасности">
+
+Всегда проводите аудит своих контрактов перед развертыванием в Мейннете. Используйте такие инструменты, как [ОпенЗеппелин Defender](https://www.openzeppelin.com/defender), и рассмотрите возможность профессионального аудита от таких компаний, как [Trail of Bits](https://www.trailofbits.com/) или [ОпенЗеппелин](https://www.openzeppelin.com/security-audits).
+
+</InfoBanner>
+
 ### Сети и инструменты {#deployment-checklist}
 
-Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesky](https://holesky.dev/) или [Sepolia](https://sepolia.dev/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
+Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesky](https://holesky.dev/) или [Sepolia](https://sepolia.ethpandaops.io/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Изучить фреймворки</ButtonLink>
 
