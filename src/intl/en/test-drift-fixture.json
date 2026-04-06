@@ -1,11 +1,11 @@
 {
   "test-title": "Token Standards",
   "test-description": "Learn about the most widely used token standards on the Ethereum network.",
-  "test-cta-primary": "Get started",
+  "test-cta-primary": "Start learning",
   "test-cta-secondary": "View documentation",
   "test-stat-label": "Total tokens deployed",
   "test-banner-text": "New to tokens? Start with our <a href=\"/developers/docs/standards/tokens/\">introduction to token standards</a>.",
-  "test-footnote": "Token data sourced from <a href=\"https://eth.blockscout.com/tokens?type=ERC-20\" target=\"_blank\">Blockscout</a>. Pricing provided by <a href=\"https://www.coingecko.com\" target=\"_blank\">CoinGecko</a>.",
+  "test-footnote": "Token data sourced from <a href=\"https://eth.blockscout.com/tokens?type=ERC-20&sort=holders\" target=\"_blank\">Blockscout</a>. Pricing provided by <a href=\"https://www.coingecko.com\" target=\"_blank\">CoinGecko</a>.",
   "test-filter-label": "Filter by standard",
   "test-empty-results": "No tokens found matching your criteria. Try removing some filters.",
   "test-nested": {
