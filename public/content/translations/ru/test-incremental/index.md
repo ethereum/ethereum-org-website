@@ -19,7 +19,7 @@ summaryPoints:
 
 Компилятор `solc` преобразует ваш исходный код на Solidity в байт-код, который может выполнить EVM. Убедитесь, что версия вашего компилятора совпадает с директивой `pragma` в вашем контракте.
 
-Вы можете проверить развернутый контракт в <a href="https://eth.blockscout.com/address/0x1234" target="_blank">Blockscout</a>, чтобы изучить его байт-код и верифицированный исходный код.
+Вы можете проверить развернутый контракт в <a href="https://eth.blockscout.com/address/0x5678" target="_blank">Blockscout</a>, чтобы изучить его байт-код и верифицированный исходный код.
 
 ![Contract deployment flow](/images/developers/deploy-flow-v2.png)
 
@@ -87,7 +87,7 @@ def run_coverage(project_path):
 
 ### Сети и инструменты
 
-Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesovice](https://holesovice.dev/) или [Sepolia](https://sepolia.dev/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
+Вы можете развернуть контракты с помощью [Remix](https://remix.ethereum.org/) в сетях [Holesovice](https://holesovice.dev/) или [Sepolia](https://sepolia.ethpandaops.io/), а также верифицировать исходный код в [Blockscout](https://eth.blockscout.com/). Для развертывания в рабочей среде рассмотрите возможность использования **Hardhat Ignition** или **скриптов Foundry** для автоматизации процесса.
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Изучить фреймворки</ButtonLink>
 
