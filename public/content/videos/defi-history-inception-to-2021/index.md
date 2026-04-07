@@ -45,9 +45,9 @@ In the plethora of ICOs, there were also projects that we would today classify a
 - **Aave** — lending and borrowing
 - **Synthetix** (previously known as Havven) — a liquidity protocol for derivatives
 - **Ren** (previously Republic Protocol) — a protocol for providing access to inter-blockchain liquidity
-- **Kyber Network** — an on-chain liquidity protocol
+- **Kyber Network** — an onchain liquidity protocol
 - **0x** — an open protocol for peer-to-peer exchange of assets
-- **Bancor** — another on-chain liquidity protocol
+- **Bancor** — another onchain liquidity protocol
 
 Despite the bad reputation of 2017 ICO mania, some of the projects that emerged back then are now considered top protocols in DeFi.
 

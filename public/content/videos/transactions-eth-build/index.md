@@ -35,7 +35,7 @@ What I'm going to do is create a transaction and incentivize the miner to pick i
 
 ### Gas price strategy (4:20)
 
-The gas price is set to about 4.1 gwei by default — that's 4.1 billion wei. But we want to be more strategic about it and see what's going on on-chain right now. We can see that the last block had 78 transactions, and the gas price ranged from about 5 down to some minimum. Basically, we would need to be above 5 to get mined into that block. So let's set the gas price to 5.001 — just a little bit more.
+The gas price is set to about 4.1 gwei by default — that's 4.1 billion wei. But we want to be more strategic about it and see what's going on onchain right now. We can see that the last block had 78 transactions, and the gas price ranged from about 5 down to some minimum. Basically, we would need to be above 5 to get mined into that block. So let's set the gas price to 5.001 — just a little bit more.
 
 ### Converting to wei (5:20)
 

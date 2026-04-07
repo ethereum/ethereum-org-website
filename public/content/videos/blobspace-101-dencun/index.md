@@ -40,7 +40,7 @@ The two marketplaces — the one marketplace that is now being fractured into tw
 
 **Ryan:** Before we get into the history, Dom, can I just ask a very simple question — is blob space just block space for layer 2s?
 
-**Dom:** Pretty much, yes. All the data that layer 2s need to commit on-chain are going to go into these blobs, which is the new resource on layer 1. The layer 1 doesn't know what's inside these blobs — it's just there to prove that the layer 2 committed it so that no one can cheat.
+**Dom:** Pretty much, yes. All the data that layer 2s need to commit onchain are going to go into these blobs, which is the new resource on layer 1. The layer 1 doesn't know what's inside these blobs — it's just there to prove that the layer 2 committed it so that no one can cheat.
 
 **Ryan:** So blob space is just block space for layer 2s. Right now layer 2s are actually using Ethereum block space instead of blob space. What we're doing with EIP-4844 is partitioning off this new resource called blob space and making that cheap and very available for rollups, so now they can start consuming more blob space than they do block space.
 

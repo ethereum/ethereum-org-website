@@ -34,13 +34,13 @@ In a traditional company, a CEO works with executives to set the direction and b
 
 If a traditional company succeeds, most of the wealth will accrue to a few founders, some early employees, and investors who are generally already higher net worth. A DAO is a sort of crypto co-op, giving a wider group of people the opportunity to own a piece, participate in management, and share in the potential upside.
 
-### CityDAO and on-chain cities (2:28)
+### CityDAO and onchain cities (2:28)
 
 CityDAO grew out of my frustrations dealing with city bureaucracy and red tape while building a startup that helps cities better utilize their empty parking lots. It took us over three months to get a permit just to sell parking in San Francisco, and it was an archaic bureaucratic nightmare. Things like putting a parking lot to higher and better use — building a food truck park, logistics hub, maybe even new housing, a farmer's market — these are tedious, can take months or years, or even be illegal due to zoning laws.
 
 CityDAO was among the first DAOs brave enough to buy land. And speaking of bureaucracy, it took us over a month to do so under the current system. We had to find an agent, coordinate tours, make offers, wait for counteroffers, put down a deposit, form an LLC, and fill out paperwork.
 
-At CityDAO, we imagine an on-chain city where things like permitting, budgets, laws, deeds, and records are all transparent on a blockchain, and smart contracts can speed up transactions and reduce bureaucracy. Things that used to take weeks — like buying or selling land, or taking a loan out against your property — could happen in seconds through a smart contract.
+At CityDAO, we imagine an onchain city where things like permitting, budgets, laws, deeds, and records are all transparent on a blockchain, and smart contracts can speed up transactions and reduce bureaucracy. Things that used to take weeks — like buying or selling land, or taking a loan out against your property — could happen in seconds through a smart contract.
 
 ### How DAOs organize (3:49)
 

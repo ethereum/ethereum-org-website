@@ -31,7 +31,7 @@ The first part contains a lot of things — for example, with regards to smart a
 
 The first is the fact that you can trigger withdrawals and exits from your validator via the execution layer — the withdrawal credentials — basically eliminating the dependency on the node operator. The second, arguably even bigger in its effect, is that the maximum effective balance of a validator can now change. It used to be only 32 ETH as a fixed amount, and now it can be anywhere between 32 and 2,048 ETH.
 
-There's also a smaller one which basically leads to the fact that deposits are much quicker — on-chain registered from like 14 hours to less than an hour — but those two I think are the ones mostly relevant for our discussion here.
+There's also a smaller one which basically leads to the fact that deposits are much quicker — onchain registered from like 14 hours to less than an hour — but those two I think are the ones mostly relevant for our discussion here.
 
 ### EIP-7002: execution-layer-triggerable exits (2:58)
 
