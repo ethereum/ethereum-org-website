@@ -133,7 +133,9 @@ Pick topic tags that match the existing categories used in the gallery. Current 
 - **Privacy & Security**: `privacy-and-security`, `privacy`, `authentication`
 - **Community Stories**: `community-stories`, `contributing`, `translations`, `community`
 
-You can use new tags — they will be available for future category groupings.
+To ensure your video appears in a gallery category shelf, include at least one category key tag (the bold name in kebab-case, e.g. `use-cases` or `scaling-and-layer-2`). Videos without a recognized category tag will only appear in the "All" view and search results.
+
+You can also use new tags — they will be available for future category groupings.
 
 #### Step 5: Submit your PR {#step-5}
 
