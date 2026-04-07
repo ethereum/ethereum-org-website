@@ -1,15 +1,13 @@
 /**
  * Propagate inert-value changes from English to translated files.
  *
- * When English changes a URL, image path, inline code, or other
- * non-translatable attribute without changing translatable content,
- * this script updates all translated files deterministically --
- * no Gemini needed.
+ * When English changes a URL, image path, inline code, component
+ * attribute, or other non-translatable value without changing
+ * translatable content, this script updates all translated files
+ * deterministically -- no Gemini needed.
  *
- * Uses:
- * - intl-content-tree diff to detect which elements have inert drift
- * - .manifest-source.json to compare old vs new English hashes
- * - .manifest-translation.json to look up old inert values for replacement
+ * Uses intl-content-tree's extractInertChanges() for detection,
+ * then applies context-aware replacement per element type.
  *
  * Usage:
  *   npx ts-node -O '{"module":"commonjs"}' propagate-inert.ts \
@@ -20,17 +18,15 @@ import { existsSync, readFileSync, realpathSync, writeFileSync } from "fs"
 import { dirname, join, resolve } from "path"
 
 import {
-  hash as treeHash,
-  type SerializedNode,
-  type TreeNode,
-  walk,
+  deserialize,
+  diff,
+  extractInertChanges as extractFromTree,
 } from "intl-content-tree"
 
 import i18nConfig from "../../../../../i18n.config.json"
 
 import {
   buildMarkdownManifest,
-  detectDrift,
   type LocaleTranslationManifest,
   parseEnglishJson,
   parseEnglishMarkdown,
@@ -42,16 +38,14 @@ import {
 // ---------------------------------------------------------------------------
 
 interface InertChange {
-  /** Element type (link, image, inline-code, etc.) */
+  /** Element type (link, image, inline-code, component-attribute, etc.) */
   elementType: string
   /** The attribute/value key that changed */
   key: string
-  /** Old value (from translation manifest) */
+  /** Old value (from old English tree) */
   oldValue: string
   /** New value (from current English) */
   newValue: string
-  /** Placeholder ID from the translation manifest (for targeted updates) */
-  placeholderId?: string
 }
 
 // ---------------------------------------------------------------------------
@@ -59,133 +53,45 @@ interface InertChange {
 // ---------------------------------------------------------------------------
 
 /**
- * Compare current English against a stored source manifest and
- * translation manifest. Returns a list of inert values that changed.
+ * Compare current English against a stored source manifest. Returns a
+ * list of inert values that changed, with full context (element type,
+ * attribute name, old/new values).
  *
- * Strategy: walk the OLD manifest tree (SerializedNode) and the NEW
- * parsed tree in parallel, matched by node ID at each level. For each
- * inert leaf whose anchorHash differs, use hash() to find the
- * translation manifest entry that produced the old hash, giving us
- * both old and new values.
+ * Delegates to intl-content-tree's extractInertChanges() which walks
+ * old and new trees in parallel to extract precise change details.
  */
 export function detectInertChanges(
   englishContent: string,
   sourceManifestJson: string,
-  translationManifest: LocaleTranslationManifest,
   format: "markdown" | "json" = "markdown",
   localeContent?: string
 ): InertChange[] {
-  const changes: InertChange[] = []
-  const drift = detectDrift(englishContent, sourceManifestJson, format)
-
-  // Parse current English tree (has new values)
+  const oldManifest: TreeManifest = JSON.parse(sourceManifestJson)
+  const deserialized = deserialize(oldManifest)
   const newTree =
     format === "json"
       ? parseEnglishJson(englishContent)
       : parseEnglishMarkdown(englishContent)
+  const driftResult = diff(deserialized, newTree)
 
-  // Parse locale file for fallback old-value lookup (inert values aren't
-  // translated, so the locale file has the same values as old English)
-  const localeTree = localeContent
+  // extractInertChanges needs a fully parsed old tree (with values),
+  // not a deserialized manifest (hashes only). Use the locale file as
+  // the old tree source -- inert values aren't translated, so the
+  // locale file has the same URLs/paths as the old English.
+  const oldTree = localeContent
     ? format === "json"
       ? parseEnglishJson(localeContent)
       : parseEnglishMarkdown(localeContent)
-    : undefined
+    : deserialized
 
-  // Get old manifest tree (has old anchor hashes for structural matching)
-  const oldManifest: TreeManifest = JSON.parse(sourceManifestJson)
+  const treeChanges = extractFromTree(oldTree, newTree, driftResult)
 
-  // Track consumed manifest entries so duplicate hashes (e.g. two links
-  // to the same URL) each match a distinct placeholder entry.
-  const consumed = new Set<string>()
-
-  for (const entry of drift.inertDrift) {
-    const newSection = findNodeById(newTree, entry.id)
-    if (!newSection) continue
-
-    // Find old section in manifest's serialized tree
-    const oldSectionNode = findSerializedNode(oldManifest.tree, entry.id)
-    if (!oldSectionNode) continue
-
-    // Walk both trees in parallel, yielding inert leaf pairs
-    for (const pair of matchInertNodes(newSection, oldSectionNode)) {
-      const newValues = getNodeInertValues(pair.newNode)
-      if (Object.keys(newValues).length === 0) continue
-
-      // Skip if anchor hash hasn't actually changed
-      if (pair.oldAnchorHash === pair.newNode.anchorHash) continue
-
-      // Try translation manifest first
-      const manifestMatch = findManifestEntryByAnchorHash(
-        translationManifest,
-        pair.oldAnchorHash,
-        consumed
-      )
-      if (manifestMatch) {
-        consumed.add(manifestMatch.id)
-      }
-
-      // Compare each inert value
-      for (const [key, newValue] of Object.entries(newValues)) {
-        let oldValue: string | undefined
-
-        // Strategy 1: look up in translation manifest (with key aliasing)
-        if (manifestMatch) {
-          oldValue =
-            manifestMatch.entry.values[key] ??
-            (key === "href" ? manifestMatch.entry.values.url : undefined) ??
-            (key === "url" ? manifestMatch.entry.values.href : undefined) ??
-            (key === "src" ? manifestMatch.entry.values.path : undefined) ??
-            (key === "path" ? manifestMatch.entry.values.src : undefined)
-        }
-
-        // Strategy 2: hash-match individual manifest values (handles
-        // normalizer bundling attrs under different key names)
-        if (!oldValue && manifestMatch) {
-          for (const v of Object.values(manifestMatch.entry.values)) {
-            if (treeHash(v) === pair.oldAnchorHash) {
-              oldValue = v
-              break
-            }
-          }
-        }
-
-        // Strategy 3: parse locale file to get old value directly.
-        // Inert values aren't translated, so the locale file has the
-        // same URLs/paths as the old English. This bypasses the
-        // translation manifest entirely -- handles frontmatter fields,
-        // component attributes, and any other nodes the normalizer
-        // doesn't store in placeholderMap.
-        if (!oldValue && localeTree) {
-          const localeSection = findNodeById(localeTree, entry.id)
-          if (localeSection) {
-            for (const localePair of matchInertNodes(
-              localeSection,
-              oldSectionNode
-            )) {
-              if (localePair.newNode.id === pair.newNode.id) {
-                const localeValues = getNodeInertValues(localePair.newNode)
-                oldValue = localeValues[key]
-                break
-              }
-            }
-          }
-        }
-
-        if (oldValue && oldValue !== newValue) {
-          changes.push({
-            elementType: pair.newNode.elementType,
-            key,
-            oldValue,
-            newValue,
-            placeholderId: manifestMatch.id,
-          })
-        }
-      }
-    }
-  }
-
-  return changes
+  return treeChanges.map((c) => ({
+    elementType: c.elementType,
+    key: c.key || "value",
+    oldValue: c.oldValue,
+    newValue: c.newValue,
+  }))
 }
 
 // ---------------------------------------------------------------------------
@@ -195,10 +101,9 @@ export function detectInertChanges(
 /**
  * Apply inert changes to a translated file.
  *
- * For markdown: context-aware regex replacement within structural
- * patterns (link URLs, image paths, backticks, attributes).
+ * For markdown: context-aware replacement within structural patterns
+ * (link URLs, image paths, component attributes, frontmatter fields).
  * For JSON: parse, walk string values, replace, re-serialize.
- * JSON needs this because quotes are escaped as \" in the raw file.
  */
 export function applyInertChanges(
   translatedContent: string,
@@ -298,8 +203,9 @@ function jsonWalkReplace(
 /**
  * Replace an inert value using context-aware matching.
  *
- * All branches use callback functions to prevent $ injection in
- * replacement strings (C1 fix).
+ * Each element type has a specific pattern that scopes the replacement
+ * to the correct structural context, preventing false matches.
+ * All branches use callback functions to prevent $ injection.
  */
 function contextAwareReplace(
   content: string,
@@ -326,7 +232,6 @@ function contextAwareReplace(
 
     case "image": {
       // Match inside image path: ![alt](OLD)
-      // Uses permissive alt text pattern to handle ] in alt text
       const pattern = new RegExp(
         `(!\\[(?:[^\\]]|\\\\\\])*\\]\\()${escaped}(\\))`,
         "g"
@@ -344,8 +249,7 @@ function contextAwareReplace(
       })
     }
 
-    case "html-tag":
-    case "component-attribute": {
+    case "html-tag": {
       // Match inside attribute: key="OLD" or key='OLD'
       const pattern = new RegExp(
         `(${escapeRegex(key)}=["'])${escaped}(["'])`,
@@ -356,9 +260,43 @@ function contextAwareReplace(
       })
     }
 
+    case "component-attribute": {
+      // Match component attributes in multiple syntaxes:
+      // key="OLD", key='OLD', key={OLD}, key={{OLD}}
+      const escapedKey = escapeRegex(key)
+      const patterns = [
+        // String: key="OLD" or key='OLD'
+        new RegExp(`(${escapedKey}=["'])${escaped}(["'])`, "g"),
+        // JSX expression: key={OLD}
+        new RegExp(`(${escapedKey}=\\{)${escaped}(\\})`, "g"),
+        // JSX object: key={{OLD}}
+        new RegExp(`(${escapedKey}=\\{\\{)${escaped}(\\}\\})`, "g"),
+      ]
+      for (const pattern of patterns) {
+        const replaced = content.replace(pattern, (_, pre, post) => {
+          return `${pre}${newValue}${post}`
+        })
+        if (replaced !== content) return replaced
+      }
+      return content
+    }
+
+    case "frontmatter-field": {
+      // Match YAML frontmatter: key: OLD (only within --- fences)
+      const fmMatch = content.match(/^---\n([\s\S]*?)\n---/)
+      if (!fmMatch) return content
+      const fmContent = fmMatch[1]
+      const escapedKey = escapeRegex(key)
+      const pattern = new RegExp(`(^${escapedKey}:\\s*)${escaped}(\\s*$)`, "m")
+      const newFm = fmContent.replace(pattern, (_, pre, post) => {
+        return `${pre}${newValue}${post}`
+      })
+      if (newFm === fmContent) return content
+      return content.replace(fmMatch[1], newFm)
+    }
+
     case "code-body": {
       // Replace within code fences only, not in prose.
-      // Inner replace uses callback to prevent $ injection.
       return content.replace(
         /(```[^\n]*\n)([\s\S]*?)(```)/g,
         (_, open, body, close) => {
@@ -370,7 +308,6 @@ function contextAwareReplace(
     default:
       // Fallback: replace first occurrence only (intentional -- without
       // structural context we can't safely replace all matches).
-      // Callback prevents $ injection in replacement string.
       return content.replace(oldValue, () => newValue)
   }
 }
@@ -381,7 +318,7 @@ function contextAwareReplace(
 
 /**
  * Update the translation manifest to reflect propagated inert changes.
- * Only updates the specific placeholder entry identified during detection.
+ * Updates any placeholder entry whose values contain the old value.
  */
 export function updateTranslationManifest(
   manifest: LocaleTranslationManifest,
@@ -394,155 +331,23 @@ export function updateTranslationManifest(
 
   const newMap = { ...updated.placeholderMap }
   for (const change of changes) {
-    // Only update the specific placeholder entry, not all matching values
-    if (change.placeholderId && newMap[change.placeholderId]) {
-      const entry = newMap[change.placeholderId]
+    for (const [id, entry] of Object.entries(newMap)) {
       const newValues = { ...entry.values }
+      let changed = false
       for (const [k, v] of Object.entries(newValues)) {
         if (v === change.oldValue) {
           newValues[k] = change.newValue
+          changed = true
         }
       }
-      newMap[change.placeholderId] = { ...entry, values: newValues }
+      if (changed) {
+        newMap[id] = { ...entry, values: newValues }
+      }
     }
   }
   updated.placeholderMap = newMap
 
   return updated
-}
-
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
-
-function findNodeById(tree: TreeNode, id: string): TreeNode | undefined {
-  for (const node of walk(tree)) {
-    if (node.id === id) return node
-  }
-  return undefined
-}
-
-function getNodeInertValues(node: TreeNode): Record<string, string> {
-  const values: Record<string, string> = {}
-  if (node.contentType === "inert" && node.value) {
-    values.value = node.value
-  }
-  if (node.meta) {
-    for (const [k, v] of Object.entries(node.meta)) {
-      if (
-        k !== "tagName" &&
-        k !== "language" &&
-        k !== "containsMarkdown" &&
-        k !== "containsHtml" &&
-        k !== "name"
-      ) {
-        values[k] = v
-      }
-    }
-  }
-  return values
-}
-
-/**
- * Find a node in the serialized manifest tree by ID (recursive search).
- */
-function findSerializedNode(
-  node: SerializedNode,
-  id: string
-): SerializedNode | undefined {
-  if (!node.children) return undefined
-  if (node.children[id]) return node.children[id]
-  for (const child of Object.values(node.children)) {
-    const found = findSerializedNode(child, id)
-    if (found) return found
-  }
-  return undefined
-}
-
-/**
- * Walk new tree and old serialized tree in parallel by matching child IDs.
- * Yields inert leaf pairs with the new node (full data) and old anchorHash.
- */
-function* matchInertNodes(
-  newNode: TreeNode,
-  oldSerialized: SerializedNode
-): Generator<{ newNode: TreeNode; oldAnchorHash: string }> {
-  // Yield inert leaves AND mixed-content nodes that carry inert metadata.
-  // Mixed nodes (e.g. links) have both translatable text and inert attributes
-  // (href). getNodeInertValues downstream filters to inert keys only.
-  if (
-    newNode.contentType === "inert" ||
-    (newNode.contentType === "mixed" &&
-      newNode.meta &&
-      Object.keys(newNode.meta).length > 0)
-  ) {
-    yield { newNode, oldAnchorHash: oldSerialized.anchorHash }
-  }
-  // Recurse into children by matching IDs
-  if (oldSerialized.children) {
-    for (const child of newNode.children) {
-      const oldChild = oldSerialized.children[child.id]
-      if (oldChild) {
-        yield* matchInertNodes(child, oldChild)
-      }
-    }
-  }
-}
-
-/**
- * Find a translation manifest entry whose values produce the given anchorHash.
- *
- * Tries multiple hash strategies to bridge the gap between the tree's
- * anchorHash computation (ALL meta keys including tagName) and the
- * content normalizer's placeholder format (may bundle attributes
- * differently or use different key names like url vs href).
- *
- * Strategies tried in order:
- * 1. Single value: hash(value)
- * 2. All values sorted: hash(sorted_keys.map(k => values[k]).join('\0'))
- * 3. Individual values: any single hash(v) matches (for bundled entries
- *    where the tree node is a leaf but the manifest groups parent attrs)
- */
-function findManifestEntryByAnchorHash(
-  manifest: LocaleTranslationManifest,
-  oldAnchorHash: string,
-  consumed: Set<string>
-):
-  | { id: string; entry: { type: string; values: Record<string, string> } }
-  | undefined {
-  for (const [id, entry] of Object.entries(manifest.placeholderMap)) {
-    if (consumed.has(id)) continue
-    const values = entry.values
-    const keys = Object.keys(values)
-    if (keys.length === 0) continue
-
-    // Strategy 1: single value
-    if (keys.length === 1) {
-      if (treeHash(values[keys[0]]) === oldAnchorHash) {
-        return { id, entry }
-      }
-      continue
-    }
-
-    // Strategy 2: all values sorted (matches computeHashes for multi-meta nodes)
-    const metaValues = keys
-      .sort()
-      .map((k) => values[k])
-      .join("\0")
-    if (treeHash(metaValues) === oldAnchorHash) {
-      return { id, entry }
-    }
-
-    // Strategy 3: any individual value matches (for bundled entries where
-    // the normalizer groups parent+child attrs but the tree has separate
-    // leaf nodes, e.g. component emoji stored with componentName)
-    for (const v of Object.values(values)) {
-      if (treeHash(v) === oldAnchorHash) {
-        return { id, entry }
-      }
-    }
-  }
-  return undefined
 }
 
 function escapeRegex(str: string): string {
@@ -622,21 +427,10 @@ Options:
       console.log(`  [${locale}] No source manifest, skipping`)
       continue
     }
-    if (!existsSync(translationManifestPath)) {
-      console.log(`  [${locale}] No translation manifest, skipping`)
-      continue
-    }
 
     const sourceManifestJson = readFileSync(sourceManifestPath, "utf-8")
-    const translationManifest: LocaleTranslationManifest = JSON.parse(
-      readFileSync(translationManifestPath, "utf-8")
-    )
 
-    const changes = detectInertChanges(
-      englishContent,
-      sourceManifestJson,
-      translationManifest
-    )
+    const changes = detectInertChanges(englishContent, sourceManifestJson)
 
     if (changes.length === 0) {
       console.log(`  [${locale}] No inert changes`)
@@ -668,18 +462,24 @@ Options:
     // Write manifests FIRST so a crash before content write
     // leaves stale manifests (safe: re-run will re-detect and re-apply)
     const newSourceManifest = buildMarkdownManifest(englishContent, filePath)
-    const newSourceParsed = JSON.parse(newSourceManifest)
-    const updatedTranslationManifest = updateTranslationManifest(
-      translationManifest,
-      changes,
-      newSourceParsed.rootHash
-    )
+
+    if (existsSync(translationManifestPath)) {
+      const translationManifest: LocaleTranslationManifest = JSON.parse(
+        readFileSync(translationManifestPath, "utf-8")
+      )
+      const newSourceParsed = JSON.parse(newSourceManifest)
+      const updatedTranslationManifest = updateTranslationManifest(
+        translationManifest,
+        changes,
+        newSourceParsed.rootHash
+      )
+      writeFileSync(
+        translationManifestPath,
+        JSON.stringify(updatedTranslationManifest, null, 2) + "\n"
+      )
+    }
 
     writeFileSync(sourceManifestPath, newSourceManifest)
-    writeFileSync(
-      translationManifestPath,
-      JSON.stringify(updatedTranslationManifest, null, 2) + "\n"
-    )
 
     if (applied > 0) {
       writeFileSync(join(rootDir, translationPath), content)

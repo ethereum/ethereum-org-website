@@ -45,23 +45,6 @@ function buildSourceManifest(content: string): string {
   return JSON.stringify(serialize(tree, "test.md"), null, 2)
 }
 
-/** Build a minimal translation manifest with placeholder entries. */
-function buildTranslationManifest(
-  sourceManifest: string,
-  placeholders: Record<string, { type: string; values: Record<string, string> }>
-): LocaleTranslationManifest {
-  const parsed = JSON.parse(sourceManifest)
-  return {
-    version: 1,
-    locale: "es",
-    translatedAt: new Date().toISOString(),
-    englishManifestHash: parsed.rootHash,
-    placeholderOrder: Object.keys(placeholders),
-    placeholderMap: placeholders,
-    sections: {},
-  }
-}
-
 // ---------------------------------------------------------------------------
 // detectInertChanges
 // ---------------------------------------------------------------------------
@@ -74,24 +57,18 @@ test.describe("detectInertChanges", () => {
       "## Section {#test-section}\n\nSome [link](http://new.com) text.\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const translationManifest = buildTranslationManifest(sourceManifest, {
-      "LINK-001": {
-        type: "link",
-        values: { href: "http://old.com" },
-      },
-    })
-
     const changes = detectInertChanges(
       newEnglish,
       sourceManifest,
-      translationManifest
+      "markdown",
+      oldEnglish
     )
+
     expect(changes).toHaveLength(1)
     expect(changes[0].oldValue).toBe("http://old.com")
     expect(changes[0].newValue).toBe("http://new.com")
     expect(changes[0].elementType).toBe("link")
     expect(changes[0].key).toBe("href")
-    expect(changes[0].placeholderId).toBe("LINK-001")
   })
 
   test("detects an image path change", () => {
@@ -101,23 +78,17 @@ test.describe("detectInertChanges", () => {
       "## Images {#img-section}\n\n![Alt text](/new/path.png)\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const translationManifest = buildTranslationManifest(sourceManifest, {
-      "IMG-001": {
-        type: "image",
-        values: { src: "/old/path.png" },
-      },
-    })
-
     const changes = detectInertChanges(
       newEnglish,
       sourceManifest,
-      translationManifest
+      "markdown",
+      oldEnglish
     )
+
     expect(changes).toHaveLength(1)
     expect(changes[0].oldValue).toBe("/old/path.png")
     expect(changes[0].newValue).toBe("/new/path.png")
     expect(changes[0].elementType).toBe("image")
-    expect(changes[0].key).toBe("src")
   })
 
   test("returns empty when nothing changed", () => {
@@ -125,52 +96,33 @@ test.describe("detectInertChanges", () => {
       "## Section {#test-section}\n\nSome [link](http://same.com) text.\n"
 
     const sourceManifest = buildSourceManifest(english)
-    const translationManifest = buildTranslationManifest(sourceManifest, {
-      "LINK-001": {
-        type: "link",
-        values: { href: "http://same.com" },
-      },
-    })
-
     const changes = detectInertChanges(
       english,
       sourceManifest,
-      translationManifest
+      "markdown",
+      english
     )
+
     expect(changes).toHaveLength(0)
   })
 
-  test("handles duplicate URLs with consume-on-match", () => {
+  test("handles duplicate URLs", () => {
     const oldEnglish =
       "## Section {#dup-section}\n\n[first](http://same.com) and [second](http://same.com) links.\n"
     const newEnglish =
       "## Section {#dup-section}\n\n[first](http://changed.com) and [second](http://changed.com) links.\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-
-    // Two distinct placeholder entries with the same old value
-    const translationManifest = buildTranslationManifest(sourceManifest, {
-      "LINK-001": {
-        type: "link",
-        values: { href: "http://same.com" },
-      },
-      "LINK-002": {
-        type: "link",
-        values: { href: "http://same.com" },
-      },
-    })
-
     const changes = detectInertChanges(
       newEnglish,
       sourceManifest,
-      translationManifest
+      "markdown",
+      oldEnglish
     )
 
-    // Both links changed, each should match a distinct placeholder
     expect(changes).toHaveLength(2)
-    const ids = changes.map((c) => c.placeholderId)
-    expect(ids).toContain("LINK-001")
-    expect(ids).toContain("LINK-002")
+    expect(changes.every((c) => c.oldValue === "http://same.com")).toBe(true)
+    expect(changes.every((c) => c.newValue === "http://changed.com")).toBe(true)
   })
 
   test("detects multiple inert changes in one section", () => {
@@ -180,51 +132,76 @@ test.describe("detectInertChanges", () => {
       "## Section {#multi}\n\nA [link](http://new.com) and ![img](/new.png).\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const translationManifest = buildTranslationManifest(sourceManifest, {
-      "LINK-001": {
-        type: "link",
-        values: { href: "http://old.com" },
-      },
-      "IMG-001": {
-        type: "image",
-        values: { src: "/old.png" },
-      },
-    })
-
     const changes = detectInertChanges(
       newEnglish,
       sourceManifest,
-      translationManifest
+      "markdown",
+      oldEnglish
     )
+
     expect(changes).toHaveLength(2)
-    expect(changes.find((c) => c.key === "href")?.newValue).toBe(
+    expect(changes.find((c) => c.elementType === "link")?.newValue).toBe(
       "http://new.com"
     )
-    expect(changes.find((c) => c.key === "src")?.newValue).toBe("/new.png")
+    expect(changes.find((c) => c.elementType === "image")?.newValue).toBe(
+      "/new.png"
+    )
   })
 
   test("ignores sections without inert drift", () => {
-    // Only prose changed -- no inert drift
     const oldEnglish =
       "## Section {#prose-only}\n\nOld prose with [link](http://same.com).\n"
     const newEnglish =
       "## Section {#prose-only}\n\nNew prose with [link](http://same.com).\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const translationManifest = buildTranslationManifest(sourceManifest, {
-      "LINK-001": {
-        type: "link",
-        values: { href: "http://same.com" },
-      },
-    })
-
     const changes = detectInertChanges(
       newEnglish,
       sourceManifest,
-      translationManifest
+      "markdown",
+      oldEnglish
     )
-    // Link didn't change, so no inert changes detected
+
     expect(changes).toHaveLength(0)
+  })
+
+  test("detects component attribute changes", () => {
+    const oldEnglish = '## Test {#test}\n\n<YouTube id="abc123" />\n'
+    const newEnglish = '## Test {#test}\n\n<YouTube id="def456" />\n'
+
+    const sourceManifest = buildSourceManifest(oldEnglish)
+    const changes = detectInertChanges(
+      newEnglish,
+      sourceManifest,
+      "markdown",
+      oldEnglish
+    )
+
+    expect(changes).toHaveLength(1)
+    expect(changes[0].oldValue).toBe("abc123")
+    expect(changes[0].newValue).toBe("def456")
+    expect(changes[0].elementType).toBe("component-attribute")
+    expect(changes[0].key).toBe("id")
+  })
+
+  test("detects frontmatter field changes", () => {
+    const oldEnglish =
+      "---\ntitle: Test\nimage: /old.png\n---\n\n## Sec {#sec}\n\nBody.\n"
+    const newEnglish =
+      "---\ntitle: Test\nimage: /new.png\n---\n\n## Sec {#sec}\n\nBody.\n"
+
+    const sourceManifest = buildSourceManifest(oldEnglish)
+    const changes = detectInertChanges(
+      newEnglish,
+      sourceManifest,
+      "markdown",
+      oldEnglish
+    )
+
+    expect(changes).toHaveLength(1)
+    expect(changes[0].oldValue).toBe("/old.png")
+    expect(changes[0].newValue).toBe("/new.png")
+    expect(changes[0].elementType).toBe("frontmatter-field")
   })
 })
 
@@ -252,7 +229,7 @@ test.describe("applyInertChanges", () => {
     const locale = '<a href="http://old.com">enlace</a>'
     const { content } = applyInertChanges(locale, [
       {
-        elementType: "link",
+        elementType: "html-tag",
         key: "href",
         oldValue: "http://old.com",
         newValue: "http://new.com",
@@ -287,7 +264,7 @@ test.describe("applyInertChanges", () => {
     expect(content).toBe("Usa el comando `new-command` aqui.")
   })
 
-  test("replaces component attribute", () => {
+  test("replaces component attribute with string value", () => {
     const locale = '<InfoBanner emoji=":wave:">\nTexto\n</InfoBanner>'
     const { content } = applyInertChanges(locale, [
       {
@@ -298,6 +275,34 @@ test.describe("applyInertChanges", () => {
       },
     ])
     expect(content).toBe('<InfoBanner emoji=":rocket:">\nTexto\n</InfoBanner>')
+  })
+
+  test("replaces component attribute with JSX expression", () => {
+    const locale = "<Emoji size={1} />"
+    const { content } = applyInertChanges(locale, [
+      {
+        elementType: "component-attribute",
+        key: "size",
+        oldValue: "1",
+        newValue: "2",
+      },
+    ])
+    expect(content).toBe("<Emoji size={2} />")
+  })
+
+  test("replaces frontmatter field", () => {
+    const locale =
+      "---\ntitle: Titulo\nimage: /old/path.png\nlang: es\n---\n\nContenido."
+    const { content } = applyInertChanges(locale, [
+      {
+        elementType: "frontmatter-field",
+        key: "image",
+        oldValue: "/old/path.png",
+        newValue: "/new/path.png",
+      },
+    ])
+    expect(content).toContain("image: /new/path.png")
+    expect(content).toContain("title: Titulo")
   })
 
   test("replaces value inside code fences only", () => {
@@ -315,7 +320,6 @@ test.describe("applyInertChanges", () => {
         newValue: "new-value",
       },
     ])
-    // Prose occurrence is NOT replaced (code-body targets fences only)
     expect(content).toContain("old-value in prose.")
     expect(content).toContain("const x = 'new-value';")
   })
@@ -373,7 +377,6 @@ test.describe("applyInertChanges", () => {
         newValue: "http://new.com/$1/path",
       },
     ])
-    // $1 must appear literally, not be treated as a regex backreference
     expect(content).toBe("[link](http://new.com/$1/path) text.")
   })
 })
@@ -383,7 +386,7 @@ test.describe("applyInertChanges", () => {
 // ---------------------------------------------------------------------------
 
 test.describe("updateTranslationManifest", () => {
-  test("updates specific placeholder values", () => {
+  test("updates placeholder values by matching old value", () => {
     const manifest: LocaleTranslationManifest = {
       version: 1,
       locale: "es",
@@ -404,7 +407,6 @@ test.describe("updateTranslationManifest", () => {
           key: "href",
           oldValue: "http://old.com",
           newValue: "http://new.com",
-          placeholderId: "LINK-001",
         },
       ],
       "newhash"
@@ -416,7 +418,7 @@ test.describe("updateTranslationManifest", () => {
     )
   })
 
-  test("does not modify entries without matching placeholderId", () => {
+  test("does not modify entries with different values", () => {
     const manifest: LocaleTranslationManifest = {
       version: 1,
       locale: "es",
@@ -438,7 +440,6 @@ test.describe("updateTranslationManifest", () => {
           key: "href",
           oldValue: "http://old.com",
           newValue: "http://new.com",
-          placeholderId: "LINK-001",
         },
       ],
       "newhash"
@@ -447,7 +448,6 @@ test.describe("updateTranslationManifest", () => {
     expect(updated.placeholderMap["LINK-001"].values.href).toBe(
       "http://new.com"
     )
-    // LINK-002 should be untouched
     expect(updated.placeholderMap["LINK-002"].values.href).toBe(
       "http://keep.com"
     )

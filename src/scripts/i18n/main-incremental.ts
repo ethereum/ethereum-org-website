@@ -456,17 +456,10 @@ async function main() {
 
   for (const task of fileLanguageTasks) {
     if (task.drift.inertDrift.length === 0) continue
-    if (!task.translationManifest) {
-      console.log(
-        `  [${task.locale}] ${task.file.path}: no translation manifest, skipping inert propagation`
-      )
-      continue
-    }
 
     const changes = detectInertChanges(
       task.file.content,
       task.sourceManifestJson,
-      task.translationManifest,
       task.file.type,
       task.localeContent
     )
