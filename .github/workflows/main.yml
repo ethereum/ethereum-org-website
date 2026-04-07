@@ -1,0 +1,29 @@
+name: CI-Thai-Translation-Check
+
+on:
+  push:
+    branches: [ "dev", "พัม482930-แพทช์-1" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Check Formatting (Prettier)
+      run: npx prettier --check "src/content/translations/th/**/*.{md,json}"
+
+    - name: Build Test
+      run: npm run build
