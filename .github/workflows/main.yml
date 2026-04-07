@@ -2,7 +2,7 @@ name: CI-Thai-Translation-Check
 
 on:
   push:
-    branches: [ "dev", "Pum482930-แพทช์-1" ]
+    branches: [ "dev", "พัม482930-แพทช์-1" ]
   pull_request:
     branches: [ "dev" ]
 
