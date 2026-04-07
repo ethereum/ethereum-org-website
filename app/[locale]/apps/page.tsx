@@ -20,6 +20,7 @@ import {
   getHighlightedApps,
 } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { slugify } from "@/lib/utils/url"
@@ -62,6 +63,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   // Get translations
   const t = await getTranslations("page-apps")
+  const appDescriptions = await getTranslations("page-app-descriptions")
   const tSubcategory = await getTranslations("app-subcategories")
 
   // Translate subcategory tags, falling back to the raw string
@@ -87,6 +89,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
+
+  const localizeApps = <T extends { name: string; description: string }>(
+    apps: T[]
+  ): T[] =>
+    apps.map((app) => ({
+      ...app,
+      description: getLocalizedDescription(
+        appDescriptions,
+        "app",
+        app.name,
+        app.description
+      ),
+    }))
 
   const { contributors } = await getAppPageContributorInfo(
     "apps",
@@ -114,13 +129,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <MainArticle className="flex flex-col gap-32 py-10">
           <div className="flex flex-col gap-8 px-4 md:px-8">
             <h2>{t("page-apps-highlights-title")}</h2>
-            <AppsHighlight apps={highlightedApps.map(translateApp)} matomoCategory="apps" />
+            <AppsHighlight
+              apps={localizeApps(highlightedApps.map(translateApp))}
+              matomoCategory="apps"
+            />
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
             <h2>{t("page-apps-discover-title")}</h2>
             <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-              {discoverApps.map((app) => (
+              {localizeApps(discoverApps).map((app) => (
                 <AppCard
                   key={app.name}
                   name={app.name}
