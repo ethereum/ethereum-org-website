@@ -125,13 +125,13 @@ If you don't have a transcript, you can leave the body empty and the team will g
 
 Pick topic tags that match the existing categories used in the gallery. Current categories and their tags include:
 
-- **How Ethereum Works**: `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `staking`
-- **Network Upgrades**: `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `history`
-- **Roadmap & Priorities**: `roadmap`, `pbs`, `mev`
-- **Scaling & Layer 2**: `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`, `zero-knowledge-proofs`
-- **Use Cases**: `defi`, `nfts`, `smart-contracts`, `dapps`, `dao`, `identity`, `desci`, `refi`
-- **Privacy & Security**: `security`, `privacy`, `governance`
-- **Community Stories**: `contributing`, `translations`, `ai`, `agents`
+- **How Ethereum Works**: `how-ethereum-works`, `consensus`, `blockchain`, `cryptography`, `accounts`, `ethereum`, `intro`, `transactions`, `pos`, `smart-contracts`
+- **Network Upgrades**: `network-upgrades`, `upgrades`, `pectra`, `dencun`, `eip-4844`, `blobs`, `fusaka`
+- **Roadmap & Priorities**: `roadmap-and-priorities`, `pbs`, `mev`
+- **Scaling & Layer 2**: `scaling-and-layer-2`, `scaling`, `layer-2`, `rollups`, `optimistic-rollups`, `zk-rollups`
+- **Use Cases**: `use-cases`, `defi`, `finance`, `nfts`, `erc-721`, `erc-1155`, `lending`, `dapps`, `restaking`, `eigenlayer`, `dao`, `identity`, `desci`, `refi`
+- **Privacy & Security**: `privacy-and-security`, `privacy`, `authentication`
+- **Community Stories**: `community-stories`, `contributing`, `translations`, `community`
 
 You can use new tags — they will be available for future category groupings.
 
