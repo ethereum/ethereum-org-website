@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" font-family="monospace" font-size="13">
   <style>
-    text { fill: #222; }
+    text { fill: currentColor; }
     .label { font-weight: bold; font-size: 13px; }
-    .note { font-size: 11px; fill: #666; }
-    .step { font-size: 11px; fill: #555; }
-    line { stroke: #444; stroke-width: 1.5; }
+    .note { font-size: 11px; opacity: 0.6; }
+    .step { font-size: 11px; opacity: 0.7; }
+    line { stroke: currentColor; stroke-width: 1.5; }
     rect.box { fill: #f5f0ff; stroke: #7c5cbf; stroke-width: 1.5; rx: 4; }
   </style>
 
@@ -17,9 +17,9 @@
   <text x="560" y="58" text-anchor="middle" class="label">Manager</text>
 
   <!-- Lifelines -->
-  <line x1="90" y1="68" x2="90" y2="420" stroke-dasharray="4,4" stroke="#aaa"/>
-  <line x1="320" y1="68" x2="320" y2="420" stroke-dasharray="4,4" stroke="#aaa"/>
-  <line x1="560" y1="68" x2="560" y2="420" stroke-dasharray="4,4" stroke="#aaa"/>
+  <line x1="90" y1="68" x2="90" y2="420" stroke-dasharray="4,4" stroke="currentColor" opacity="0.4"/>
+  <line x1="320" y1="68" x2="320" y2="420" stroke-dasharray="4,4" stroke="currentColor" opacity="0.4"/>
+  <line x1="560" y1="68" x2="560" y2="420" stroke-dasharray="4,4" stroke="currentColor" opacity="0.4"/>
 
   <!-- requestDeposit -->
   <line x1="90" y1="95" x2="310" y2="95" marker-end="url(#arr)"/>
@@ -55,7 +55,7 @@
 
   <defs>
     <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#444"/>
+      <path d="M0,0 L8,3 L0,6" fill="currentColor"/>
     </marker>
   </defs>
 </svg>

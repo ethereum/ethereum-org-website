@@ -177,4 +177,4 @@ In asynchronous vaults, `previewDeposit`, `previewMint`, `previewRedeem`, and `p
 
 - [EIP-7540: Asynchronous ERC-4626 Tokenized Vaults](https://eips.ethereum.org/EIPS/eip-7540)
 - [EIP-4626: Tokenized Vault Standard](https://eips.ethereum.org/EIPS/eip-4626)
-- [Centrifuge: ERC-7540 Reference Implementation](https://github.com/centrifuge/liquidity-pools)
+- [ERC-7540 Reference Implementation](https://github.com/ERC4626-Alliance/ERC-7540-Reference)

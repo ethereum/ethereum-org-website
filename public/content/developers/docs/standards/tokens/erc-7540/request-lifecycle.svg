@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 140" font-family="monospace" font-size="13">
   <style>
-    text { fill: #222; }
+    text { fill: currentColor; }
     .state-label { font-weight: bold; font-size: 14px; }
-    .desc { font-size: 11px; fill: #666; }
+    .desc { font-size: 11px; opacity: 0.6; }
     rect { rx: 8; ry: 8; }
   </style>
 
@@ -16,7 +16,7 @@
   <text x="90" y="103" text-anchor="middle" class="desc">submitted</text>
 
   <!-- Arrow 1 -->
-  <line x1="160" y1="80" x2="200" y2="80" stroke="#444" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="160" y1="80" x2="200" y2="80" stroke="currentColor" stroke-width="2" marker-end="url(#arw)"/>
 
   <!-- CLAIMABLE box -->
   <rect x="200" y="40" width="140" height="80" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
@@ -25,7 +25,7 @@
   <text x="270" y="103" text-anchor="middle" class="desc">+ priced</text>
 
   <!-- Arrow 2 -->
-  <line x1="340" y1="80" x2="380" y2="80" stroke="#444" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="340" y1="80" x2="380" y2="80" stroke="currentColor" stroke-width="2" marker-end="url(#arw)"/>
 
   <!-- CLAIMED box -->
   <rect x="380" y="40" width="140" height="80" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
@@ -35,7 +35,7 @@
 
   <defs>
     <marker id="arw" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#444"/>
+      <path d="M0,0 L8,3 L0,6" fill="currentColor"/>
     </marker>
   </defs>
 </svg>

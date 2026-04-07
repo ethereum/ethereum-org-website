@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" font-family="monospace" font-size="14">
   <style>
-    text { fill: #222; }
+    text { fill: currentColor; }
     .label { font-weight: bold; font-size: 13px; }
-    .note { font-size: 12px; fill: #666; }
-    line, path { stroke: #444; stroke-width: 1.5; }
+    .note { font-size: 12px; opacity: 0.6; }
+    line, path { stroke: currentColor; stroke-width: 1.5; }
   </style>
 
   <!-- Title -->
@@ -29,7 +29,7 @@
 
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#444"/>
+      <path d="M0,0 L8,3 L0,6" fill="currentColor"/>
     </marker>
   </defs>
 </svg>
