@@ -5,13 +5,8 @@
  * extracts descriptions, and writes them to src/intl/en/ as
  * JSON namespace files for the translation pipeline.
  *
- * Usage:
- *   pnpm sync-external-descriptions          # from Blobs (prod)
- *   USE_MOCK_DATA=true pnpm sync-external-descriptions  # from mocks (dev)
- *
- * Exit codes:
- *   0 - Success (check stdout for "CHANGED" or "NO_CHANGES")
- *   1 - Error
+ * Run by the i18n-sync-external-descriptions GitHub Action (weekly).
+ * Change detection is handled by git diff in the workflow, not this script.
  */
 
 import * as fs from "fs"
@@ -128,7 +123,7 @@ function extractToolDescriptions(
 
 const INTL_DIR = path.resolve(process.cwd(), "src/intl/en")
 
-function writeNamespace(filename: string, data: Record<string, string>): boolean {
+function writeNamespace(filename: string, data: Record<string, string>): void {
   const filePath = path.join(INTL_DIR, filename)
 
   // Sort keys for stable diffs
@@ -137,16 +132,7 @@ function writeNamespace(filename: string, data: Record<string, string>): boolean
     sorted[key] = data[key]
   }
 
-  const newContent = JSON.stringify(sorted, null, 2) + "\n"
-
-  // Check if file exists and content matches
-  if (fs.existsSync(filePath)) {
-    const existing = fs.readFileSync(filePath, "utf-8")
-    if (existing === newContent) return false
-  }
-
-  fs.writeFileSync(filePath, newContent, "utf-8")
-  return true
+  fs.writeFileSync(filePath, JSON.stringify(sorted, null, 2) + "\n", "utf-8")
 }
 
 // ── Main ────────────────────────────────────────────────────────────────────
@@ -179,26 +165,10 @@ async function main() {
     `Extracted ${Object.keys(toolDescriptions).length} tool descriptions`
   )
 
-  const appChanged = writeNamespace(
-    "page-app-descriptions.json",
-    appDescriptions
-  )
-  const toolChanged = writeNamespace(
-    "page-developers-tools-descriptions.json",
-    toolDescriptions
-  )
+  writeNamespace("page-app-descriptions.json", appDescriptions)
+  writeNamespace("page-developers-tools-descriptions.json", toolDescriptions)
 
-  if (appChanged || toolChanged) {
-    console.log("Namespace files updated:")
-    if (appChanged)
-      console.log("  - src/intl/en/page-app-descriptions.json")
-    if (toolChanged)
-      console.log("  - src/intl/en/page-developers-tools-descriptions.json")
-    console.log("CHANGED")
-  } else {
-    console.log("No changes detected.")
-    console.log("NO_CHANGES")
-  }
+  console.log("Namespace files written. Use git diff to check for changes.")
 }
 
 main().catch((err) => {
