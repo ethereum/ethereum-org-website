@@ -1,6 +1,6 @@
 ---
 title: "Key pair — ETH.BUILD"
-description: "An interactive visual demonstration of public-private key pairs using the ETH.BUILD educational tool. Understand how cryptographic key pairs secure Ethereum accounts and enable transaction signing."
+description: "A demonstration of public-private key pairs using the ETH.BUILD educational tool. Understand how cryptographic key pairs secure Ethereum accounts and enable transaction signing."
 lang: en
 youtubeId: "9LtBDy67Tho"
 uploadDate: 2021-01-14
@@ -14,7 +14,7 @@ author: Austin Griffith
 breadcrumb: "Key Pairs (ETH.BUILD)"
 ---
 
-A tutorial by **Austin Griffith** demonstrating how public-private key pairs work using the ETH.BUILD visual programming tool — covering private key generation, public key derivation, message signing, and signature recovery.
+A tutorial by **Austin Griffith** demonstrating how public-private key pairs work using the ETH.BUILD visual programming tool, covering private key generation, public key derivation, message signing, and signature recovery.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=9LtBDy67Tho) published by Austin Griffith. It has been lightly edited for readability.*
 

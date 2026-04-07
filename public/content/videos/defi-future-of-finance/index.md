@@ -1,6 +1,6 @@
 ---
 title: "DeFi: the future of finance explained"
-description: "An overview of decentralized finance (DeFi) and how it compares to the current financial system. This video explores the problems DeFi solves and whether it has a chance to create a parallel financial ecosystem on Ethereum."
+description: "An overview of decentralized finance (DeFi) and how it compares to the current financial system."
 lang: en
 youtubeId: "H-O3r2YMWJ4"
 uploadDate: 2020-09-24
@@ -14,11 +14,11 @@ author: Finematics
 breadcrumb: "DeFi: Future of Finance"
 ---
 
-An explainer by **Finematics** covering the future of decentralized finance (DeFi) — comparing it to the current financial system, exploring the problems DeFi solves, its growth metrics, and whether it has a chance to create a parallel financial ecosystem on Ethereum.
+An explainer by **Finematics** covering the future of decentralized finance (DeFi), comparing it to the current financial system, exploring the problems DeFi solves, its growth metrics, and whether it has a chance to create a parallel financial ecosystem on Ethereum.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=H-O3r2YMWJ4) published by Finematics. It has been lightly edited for readability.*
 
-### A century of financial innovation (0:00)
+#### A century of financial innovation (0:00)
 
 The financial system that we know today went through decades of technological advances. The earliest attempts to make finance more efficient started as early as the 1920s with the introduction of accounting machines and punch cards. This was followed by the rise of mainframe computers that significantly sped up the banking system in the 1950s and beyond.
 
@@ -28,7 +28,7 @@ From the 1990s, thanks to the growing adoption of the internet, the computerizat
 
 Then comes the fintech revolution. PayPal, Robinhood, TransferWise, Revolut, and other fintech startups understood the tech-first approach known from other non-financial tech companies and offered their users seamless access to financial services — a completely different experience when compared to the clunky banking user interfaces.
 
-### Problems in traditional finance (2:09)
+#### Problems in traditional finance (2:09)
 
 Despite a century of innovations, the financial system is far from being perfect:
 
@@ -44,7 +44,7 @@ The whole financial infrastructure consists of siloed systems built with proprie
 
 This is exactly why we need something new — something better that can address some of these problems.
 
-### What is DeFi? (3:58)
+#### What is DeFi? (3:58)
 
 This is where decentralized finance comes into play. Instead of relying on old and inefficient infrastructure, DeFi leverages the power of cryptography, decentralization, and blockchain to build a new financial system. A system that can provide access to well-known financial services such as payments, lending, borrowing, and trading in a more efficient, fair, and open way.
 
@@ -54,7 +54,7 @@ This is where decentralized finance comes into play. Instead of relying on old a
 
 All of this is possible thanks to the invention of Bitcoin and Ethereum and their underlying technologies. In particular, Ethereum as a smart contract platform allows for creating any arbitrary financial applications. Because of these characteristics, Ethereum became the go-to blockchain for the vast majority of DeFi activities.
 
-### DeFi growth metrics (6:18)
+#### DeFi growth metrics (6:18)
 
 Decentralized finance has recently been experiencing tremendous growth. Some of the key metrics:
 
@@ -66,7 +66,7 @@ Decentralized finance has recently been experiencing tremendous growth. Some of 
 
 This is not only limited to cryptocurrencies, which can be quite volatile. Stablecoins that track the value of fiat currencies such as the US dollar also experienced tremendous growth in the DeFi ecosystem. The market cap of USDC, a popular stablecoin in DeFi, went from less than one billion dollars in April 2020 to over six billion dollars in 2021. DAI went from less than 100 million dollars in April 2020 to almost two billion dollars in 2021.
 
-### Real-world problems DeFi solves (8:00)
+#### Real-world problems DeFi solves (8:00)
 
 To understand the value proposition of decentralized finance even better, let's go through a few common problems in traditional finance and see how they can be addressed in DeFi.
 
@@ -80,7 +80,7 @@ Accounting — every record is publicly available on the blockchain, so accounti
 
 Equal access to financial services — a DeFi protocol doesn't care who you are. It just follows predefined rules that are exactly the same for everybody.
 
-### Challenges of DeFi (10:48)
+#### Challenges of DeFi (10:48)
 
 Although DeFi presents us with a unique value proposition, it comes with its own challenges. It brings more responsibility to the users, who are now truly owning their assets and have to make sure they store them in a secure way. There is not a lot of handholding here, especially when interacting with new DeFi protocols.
 
@@ -92,7 +92,7 @@ Hacks are another challenge of the DeFi space, making certain protocols — espe
 
 Uncollateralized loans and mortgages are big areas of traditional finance that are slightly harder to implement in DeFi. Fortunately, there are already protocols like Aave exploring different possibilities, such as credit delegation and tokenized mortgages.
 
-### The future of finance (12:38)
+#### The future of finance (12:38)
 
 Despite the challenges, DeFi is a unique zero-to-one innovation, and sorting out some of these challenges is just a matter of time. So what will happen to traditional finance if DeFi keeps innovating and growing at this tremendous pace?
 

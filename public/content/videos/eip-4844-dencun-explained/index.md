@@ -21,13 +21,13 @@ An explainer by **Finematics** covering EIP-4844 (proto-danksharding), the key u
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=HT9PHWloIiU) published by Finematics. It has been lightly edited for readability.*
 
-### Introduction (0:00)
+#### Introduction (0:00)
 
 Ethereum's scaling has been a hotly debated topic for a while. Layer 2 solutions have been at the forefront of this battle, offering a way to handle transactions off the main chain to alleviate congestion and reduce fees. But there's a catch — even L2s face limitations that hinder their efficiency and scalability. EIP-4844 is the next step in increasing L2's potential and aligning Ethereum with its scaling roadmap.
 
 So, what is EIP-4844 all about? How exactly does it help with scaling L2s? What new possibilities does it unlock? And is it true that it can reduce transaction fees on L2s by over 90%?
 
-### What is EIP-4844 and proto-danksharding (0:52)
+#### What is EIP-4844 and proto-danksharding (0:52)
 
 As a reminder, EIP stands for Ethereum Improvement Proposal, a process through which developers can suggest changes to the Ethereum protocol. EIP-4844, specifically, proposes a new type of transaction that can significantly enhance the way data is handled and processed on Ethereum. You might have also heard the name "proto-danksharding," which is now used interchangeably with EIP-4844.
 
@@ -39,7 +39,7 @@ Imagine doing a DEX swap on one of the rollups. If the current cost of doing suc
 
 EIP-4844 together with a few other EIPs will be included in the upcoming Dencun network upgrade.
 
-### Technical details (2:50)
+#### Technical details (2:50)
 
 Now, let's have a closer look at how EIP-4844 works.
 
@@ -65,7 +65,7 @@ In the case of optimistic rollups like Optimism or Arbitrum, they only need to p
 
 ZK rollups would provide two commitments to their transaction or state delta data: the blob commitment and the ZK rollup's own commitment using whatever proof system the rollup uses internally. They would also use a proof of equivalence protocol, using the previously mentioned point evaluation precompile, to prove that the two commitments refer to the same data.
 
-### Impact (6:25)
+#### Impact (6:25)
 
 The impact of EIP-4844 on the Ethereum ecosystem cannot be overstated. For starters, it dramatically improves the scalability of layer 2 solutions, reducing their operational costs and making them more competitive with other, cheap, alternative blockchains. The reduction in operational cost is possible as the vast majority of the cost currently incurred by rollups is due to the fees paid for calldata.
 
@@ -77,7 +77,7 @@ When it comes to the decrease in transaction costs on rollups, illustrated by ou
 
 One thing is certain — even if the main result is the increase in transaction throughput and the cost of transactions remains the same, EIP-4844 lays the foundation for even greater scalability in the future that will eventually result in cheaper transactions for the users.
 
-### Summary (8:04)
+#### Summary (8:04)
 
 The Ethereum community has already completed testing EIP-4844 on various testnets, with a mainnet launch expected on the 13th of March. This is a monumental step towards achieving unparalleled scalability for Ethereum. We can already see most of the major L2s committing to start using the new blob space as soon as the Dencun upgrade happens.
 

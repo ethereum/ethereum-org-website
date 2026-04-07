@@ -1,10 +1,10 @@
 ---
 title: "Ethereum's latest upgrade: Fusaka"
-description: "A short overview of Ethereum's Fusaka upgrade featuring Ethereum Foundation contributors and ecosystem builders who explain how Fusaka scales blobs for rollups, introduces passkey-based authentication, and increases L1 gas capacity."
+description: "A short overview of Ethereum's Fusaka upgrade featuring Ethereum Foundation contributors and ecosystem builders."
 lang: en
 youtubeId: "eCRZOuY2khM"
 uploadDate: 2025-12-05
-duration: "0:08:15"
+duration: "0:02:40"
 educationLevel: beginner
 topic:
   - "roadmap-and-priorities"
@@ -16,7 +16,7 @@ author: Ethereum Foundation
 breadcrumb: "Fusaka Upgrade"
 ---
 
-A short explainer by the **Ethereum Foundation** featuring multiple contributors who outline the key improvements shipping in the Fusaka hard fork — scaling data availability for rollups, passkey authentication for wallets, and L1 gas limit increases.
+A short explainer by the **Ethereum Foundation** featuring multiple contributors who outline the key improvements shipping in the Fusaka hard fork, scaling data availability for rollups, passkey authentication for wallets, and L1 gas limit increases.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=eCRZOuY2khM) published by Ethereum Foundation. It has been lightly edited for readability.*
 

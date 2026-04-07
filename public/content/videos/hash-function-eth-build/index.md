@@ -1,6 +1,6 @@
 ---
 title: "Hash function — ETH.BUILD"
-description: "An interactive visual demonstration of cryptographic hash functions using the ETH.BUILD educational tool. Learn how hash functions work and why they are fundamental to Ethereum's account and data integrity model."
+description: "A demonstration of cryptographic hash functions using the ETH.BUILD educational tool. Learn how hash functions work and why they are fundamental to Ethereum's account and data integrity model."
 lang: en
 youtubeId: "QJ010l-pBpE"
 uploadDate: 2021-01-14
@@ -14,7 +14,7 @@ author: Austin Griffith
 breadcrumb: "Hash Functions (ETH.BUILD)"
 ---
 
-A tutorial by **Austin Griffith** demonstrating how cryptographic hash functions work using the ETH.BUILD visual programming tool — covering determinism, fixed-length output, one-directional properties, and Merkle trees.
+A tutorial by **Austin Griffith** demonstrating how cryptographic hash functions work using the ETH.BUILD visual programming tool, covering determinism, fixed-length output, one-directional properties, and Merkle trees.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=QJ010l-pBpE) published by Austin Griffith. It has been lightly edited for readability.*
 

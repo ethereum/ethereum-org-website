@@ -1,6 +1,6 @@
 ---
 title: "Ethereum layer 2 scaling explained"
-description: "A comprehensive overview of layer 2 scaling solutions for Ethereum, including rollups, Plasma, state channels, and sidechains. Learn how these technologies reduce costs and increase throughput while inheriting Ethereum's security."
+description: "An overview of layer 2 scaling solutions for Ethereum, including rollups, Plasma, state channels, and sidechains."
 lang: en
 youtubeId: "BgCgauWVTs0"
 uploadDate: 2021-02-03
@@ -14,17 +14,17 @@ author: Finematics
 breadcrumb: "Layer 2 Scaling"
 ---
 
-An explainer by **Finematics** covering layer 2 scaling solutions for Ethereum — including channels, Plasma, sidechains, and rollups — and why rollups are emerging as the dominant scaling strategy.
+An explainer by **Finematics** covering layer 2 scaling solutions for Ethereum — including channels, Plasma, sidechains, and rollups, and why rollups are emerging as the dominant scaling strategy. Learn how these technologies reduce costs and increase throughput while inheriting Ethereum's security.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=BgCgauWVTs0) published by Finematics. It has been lightly edited for readability.*
 
-### Ethereum scaling (0:31)
+#### Ethereum scaling (0:31)
 
 Ethereum scaling has been one of the most discussed topics pretty much since the time when the network launched. The scaling debate always heats up after a period of major network congestion.
 
 One of the first periods like this was the 2017 crypto bull market, where the infamous CryptoKitties together with ICOs were able to clog up the entire Ethereum network, causing a major spike in gas fees. This year the network congestion came back even stronger, this time caused by the popularity of DeFi and yield farming. There were periods of time when even gas fees as high as 500+ gwei would not get your transaction verified for a while.
 
-### Scaling blockchains (1:20)
+#### Scaling blockchains (1:20)
 
 When it comes to scaling Ethereum or blockchains in general, there are two major ways of doing it: scaling the base layer itself — layer 1 — or scaling the network by offloading some of the work to another layer — layer 2.
 
@@ -34,25 +34,25 @@ Layer 2 is another layer built on top of layer 1. There are a few important poin
 
 Ethereum can currently process around 15 transactions per second on its base layer. Layer 2 scaling can dramatically increase the number of transactions — depending on the solution, processing between 2,000 and 4,000 transactions per second.
 
-### Ethereum 2.0 (2:39)
+#### Ethereum 2.0 (2:39)
 
 How about Ethereum 2.0? Wasn't that supposed to scale Ethereum? Yes — Ethereum 2.0 introduces proof of stake and sharding that will dramatically increase the transaction throughput on the base layer.
 
 Does it mean we don't need layer 2 scaling when Ethereum 2.0 ships? Not really — even with sharding, Ethereum will still need layer 2 scaling to be able to handle hundreds of thousands or even millions of transactions per second in the future.
 
-### Scalability trilemma (3:15)
+#### Scalability trilemma (3:15)
 
 This is also where the famous scalability trilemma comes into play. In theory, we could just skip layer 2 entirely and focus on scaling the base layer instead. This would require highly specialized nodes to handle the increased workload, which would lead to higher centralization and therefore lower the security and censorship-resistant properties of the network.
 
 Sticking to the fact that scalability should never come at the expense of security and decentralization, we are left with a combination of layer 1 and layer 2 scaling going forward into the future.
 
-### Layer 2 scaling (3:52)
+#### Layer 2 scaling (3:52)
 
 Layer 2 scaling is a collective term for solutions that help with increasing the capabilities of layer 1 by handling transactions off-chain. The two main capabilities that can be improved are transaction speed and transaction throughput. On top of that, layer 2 solutions can greatly reduce the gas fees.
 
 When it comes to actual scaling solutions, there are multiple options available. Some of the options are available right now and can increase the Ethereum network throughput in the near to medium term, while others are aiming for a medium to long-term time horizon. Some solutions are application-specific — for example, payment channels — while others, such as optimistic rollups, can be used for any arbitrary contract executions.
 
-### Channels (5:03)
+#### Channels (5:03)
 
 Channels are one of the first widely discussed scaling solutions. They allow participants to exchange their transactions a number of times while only submitting two transactions to the base layer. The most popular types of channels are state channels and their subtype, payment channels.
 
@@ -60,7 +60,7 @@ Although channels have the potential to easily process thousands of transactions
 
 The main project that leverages the power of state channels on Ethereum is Raiden. The concept of payment channels is also extensively used by Bitcoin's Lightning Network.
 
-### Plasma (6:04)
+#### Plasma (6:04)
 
 Plasma is a layer 2 scaling solution that was originally proposed by Joseph Poon and Vitalik Buterin. It's a framework for building scalable applications on Ethereum.
 
@@ -68,13 +68,13 @@ Plasma leverages the use of smart contracts and Merkle trees to enable the creat
 
 One of the drawbacks of Plasma is a long waiting period for users who want to withdraw their funds from layer 2. Plasma, similarly to channels, cannot be used to scale general-purpose smart contracts. The OMG Network is built on their own implementation of Plasma called More Viable Plasma. Matic Network is another example of a platform using an adapted version of the Plasma framework.
 
-### Sidechains (7:08)
+#### Sidechains (7:08)
 
 Sidechains are Ethereum-compatible independent blockchains with their own consensus models and block parameters. Interoperability with Ethereum is made possible by using the same Ethereum Virtual Machine, so contracts deployed to the Ethereum base layer can be directly deployed to the sidechain.
 
 xDai is one example of such a sidechain.
 
-### ZK rollups (8:11)
+#### ZK rollups (8:11)
 
 Rollups provide scaling by bundling — or "rolling up" — sidechain transactions into a single transaction and generating a cryptographic proof, also known as a SNARK (Succinct Non-interactive Argument of Knowledge). Only this proof is submitted to the base layer. With rollups, all transaction state and execution are handled in sidechains; the main Ethereum chain only stores transaction data.
 
@@ -86,7 +86,7 @@ Optimistic rollups run an EVM-compatible virtual machine called OVM (Optimistic 
 
 One of the main projects working on optimistic rollups is Optimism, which is getting closer and closer to their mainnet launch. When it comes to ZK rollups, Loopring and DeversiFi are good examples of decentralized exchanges built on layer 2. On top of that, we have zkSync enabling scalable crypto payments.
 
-### A rollup-centric roadmap (9:18)
+#### A rollup-centric roadmap (9:18)
 
 Rollup scalability can also be magnified by Ethereum 2.0. In fact, because rollups only need the data layer to be scaled, they can get a tremendous boost already in Ethereum 2.0 Phase 1, which is about the sharding of data.
 

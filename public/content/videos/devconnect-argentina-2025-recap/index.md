@@ -14,6 +14,6 @@ author: Ethereum Foundation
 breadcrumb: "Devconnect Recap"
 ---
 
-A highlight reel from **Devconnect Buenos Aires** and the first Ethereum World's Fair, bringing together the best moments from a week with 14,000+ attendees, 80+ events, and a celebration of Argentina's vibrant Ethereum community.
+A highlight reel from **Devconnect Buenos Aires**, including the first Ethereum World's Fair, bringing together the best moments from a week with 14,000+ attendees, 80+ events, and a celebration of Argentina's vibrant Ethereum community.
 
 *No transcript is available for this video as it is primarily a visual recap with music. Watch the [original video](https://www.youtube.com/watch?v=ABB2B4FcsF0) on YouTube.*

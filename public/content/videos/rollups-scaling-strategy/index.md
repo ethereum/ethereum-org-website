@@ -1,6 +1,6 @@
 ---
 title: "Rollups: the ultimate Ethereum scaling strategy?"
-description: "A deep dive into rollups as Ethereum's primary scaling strategy. This video explains how optimistic rollups (Arbitrum, Optimism) and zero-knowledge rollups work, comparing their trade-offs and examining why rollups have become the dominant approach to scaling Ethereum."
+description: "A deep dive into rollups as Ethereum's primary scaling strategy. This video explains how optimistic rollups (Arbitrum, Optimism) and zero-knowledge rollups work."
 lang: en
 youtubeId: "7pWxCklcNsU"
 uploadDate: 2021-04-14
@@ -16,11 +16,11 @@ author: Finematics
 breadcrumb: "Rollups"
 ---
 
-An explainer by **Finematics** covering rollups as Ethereum's primary scaling strategy — comparing optimistic rollups (Arbitrum, Optimism) with ZK rollups, and examining why rollups are considered the holy grail of Ethereum scaling.
+An explainer by **Finematics** covering rollups as Ethereum's primary scaling strategy. The video compares optimistic rollups (Arbitrum, Optimism) with ZK rollups, and examines why rollups have become the dominant method for scaling Ethereum.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=7pWxCklcNsU) published by Finematics. It has been lightly edited for readability.*
 
-### Layer 2 (1:17)
+#### Layer 2 (1:17)
 
 Ethereum scaling has been one of the most discussed topics in crypto. The scaling debate usually heats up during periods of high network activity such as the CryptoKitties craze in 2017, DeFi Summer of 2020, or the crypto bull market at the beginning of 2021. During these periods, the unparalleled demand for the Ethereum network resulted in extremely high gas fees, making it expensive for everyday users to pay for their transactions.
 
@@ -28,7 +28,7 @@ To tackle this problem, the search for the ultimate scaling solution has been on
 
 In general, there are three main ways to scale Ethereum — or in fact, most other blockchains: scaling the blockchain itself (layer 1 scaling), building on top of layer 1 (layer 2 scaling), and building on the side of layer 1 (sidechains).
 
-### Outside of layer 1 (1:58)
+#### Outside of layer 1 (1:58)
 
 When it comes to layer 1, Eth2 is the chosen solution for scaling the Ethereum blockchain. Eth2 refers to a set of interconnected changes such as the migration to proof of stake, merging the state of the proof-of-work blockchain into the new proof-of-stake chain, and sharding. Sharding, in particular, can dramatically increase the throughput of the Ethereum network, especially when combined with rollups.
 
@@ -42,7 +42,7 @@ To achieve this, rollup transactions are executed on a separate chain that can e
 
 Each rollup deploys a set of smart contracts on layer 1 that are responsible for processing deposits and withdrawals and verifying proofs. Proofs are also where the main distinction between different types of rollups comes into play. Optimistic rollups use fraud proofs, while ZK rollups use validity proofs.
 
-### Optimistic rollups (4:26)
+#### Optimistic rollups (4:26)
 
 Optimistic rollups post data to layer 1 and assume it's correct — hence the name "optimistic." If the posted data is valid, we are on the happy path and nothing else has to be done. The optimistic rollup benefits from not having to do any additional work in the optimistic scenario.
 
@@ -58,7 +58,7 @@ The system can work as expected and detect fraud even if there is only one hones
 
 When it comes to ZK rollups, there is no dispute resolution at all. This is possible by leveraging a clever piece of cryptography called zero-knowledge proofs — hence the name ZK rollups. In this model, every batch posted to layer 1 includes a cryptographic proof called a ZK-SNARK. The proof can be quickly verified by the layer 1 contract when the transaction batch is submitted, and invalid batches can be rejected straight away.
 
-### Other differences (7:28)
+#### Other differences (7:28)
 
 Due to the nature of the dispute resolution process, optimistic rollups have to give enough time to all network participants to submit fraud proofs before finalizing a transaction on layer 1. This period is usually quite long — to make sure that even in the worst-case scenario, fraudulent transactions can still be disputed. This causes withdrawals from optimistic rollups to be quite long, as users have to wait as much as a week or two to be able to withdraw their funds back to layer 1.
 
@@ -70,7 +70,7 @@ However, ZK rollups come with their own drawbacks. Due to the complexity of the 
 
 Optimistic rollups have a somewhat easier time with EVM compatibility. They still have to run their own version of the EVM with a few modifications, but 99% of contracts can be ported without making any changes. ZK rollups are also much more computation-heavy than optimistic rollups, meaning that nodes that compute ZK proofs have to be high-spec machines, making it hard for other users to run them.
 
-### Scaling improvements (9:32)
+#### Scaling improvements (9:32)
 
 When it comes to scaling improvements, both types of rollups should be able to scale Ethereum from around 15–45 transactions per second (depending on the transaction type) up to as many as 1,000–4,000 transactions per second. It's worth noting that it is possible to process even more transactions per second by offering more space for rollup batches on layer 1.
 
@@ -84,7 +84,7 @@ Although both Arbitrum and Optimism try to achieve the same goal — building EV
 
 Another major difference is the approach to handling transaction ordering and MEV. Arbitrum will initially run a sequencer responsible for ordering transactions, but they want to decentralize it in the long run. Optimism prefers another approach where the ordering of transactions — and hence the MEV — can be auctioned off to other parties for a certain period of time.
 
-### ZK rollups (13:10)
+#### ZK rollups (13:10)
 
 Although it looks like the Ethereum community is mostly focusing on optimistic rollups — at least in the short run — the projects working on ZK rollups are also progressing extremely quickly.
 
@@ -92,11 +92,11 @@ Loopring uses ZK rollup technology to scale its exchange and payment protocol. H
 
 StarkWare-based rollups are already extensively used by projects such as DeversiFi, Immutable X, and dYdX. As mentioned earlier, zkSync is working on an EVM-compatible virtual machine that will be able to fully support any arbitrary smart contracts written in Solidity.
 
-### DeFi (14:02)
+#### DeFi (14:02)
 
 Rollups should also have a big impact on DeFi. Users who were previously not able to transact on Ethereum due to high transaction fees will be able to stay in the ecosystem the next time network activity is high. Rollups will also enable a new breed of applications that require cheaper transactions and faster confirmation time — all while being fully secured by the Ethereum consensus. It looks like rollups may trigger another high-growth period for DeFi.
 
-### Challenges (14:29)
+#### Challenges (14:29)
 
 There are, however, a few challenges when it comes to rollups. Composability is one of them — in order to compose a transaction that uses multiple protocols, all of them would have to be deployed on the same rollup.
 
@@ -104,7 +104,7 @@ Another challenge is fractured liquidity. Without new money coming into the Ethe
 
 This also means that naturally there will be winners and losers. At the moment, the existing Ethereum ecosystem is not big enough to make use of all scaling solutions. This may — and probably will — change in the long run, but in the short run, we may see some rollups and other scaling solutions becoming ghost towns. In the future, we may also see users living entirely within one rollup ecosystem and not interacting with the main Ethereum chain and other scaling solutions for long periods of time.
 
-### Threat to sidechains (15:44)
+#### Threat to sidechains (15:44)
 
 One question that comes up very often when discussing rollups is whether they are a threat to sidechains. Sidechains will still have their place in the Ethereum ecosystem. Although the cost of transactions on layer 2 will be much lower than on layer 1, it will most likely still be high enough to price out certain types of applications such as games and other high-volume apps. This may change when Ethereum introduces sharding, but by then sidechains may create enough network effect to survive long term.
 

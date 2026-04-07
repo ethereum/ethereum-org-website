@@ -1,6 +1,6 @@
 ---
 title: "Ethereum's evolution: Fusaka, Glamsterdam, and beyond"
-description: "Preston Van Loon of Offchain Labs and Prysm presents at ETHDenver on Ethereum's upcoming protocol upgrades, covering the Fusaka and Glamsterdam roadmap milestones and the long-term evolution of the protocol."
+description: "Preston Van Loon on Ethereum's upcoming protocol upgrades, covering the Fusaka and Glamsterdam roadmap milestones and the long-term evolution of the protocol."
 lang: en
 youtubeId: "GgKveVMLnoo"
 uploadDate: 2025-03-01
@@ -15,11 +15,11 @@ author: ETHDenver
 breadcrumb: "Ethereum Evolution"
 ---
 
-A presentation by **Preston Van Loon** of Offchain Labs and Prysm, delivered at ETHDenver, covering Ethereum's recent upgrade velocity and what's ahead — including Pectra, Fusaka, PeerDAS, Glamsterdam, FOCIL, shorter slot times, and faster finality.
+A presentation by **Preston Van Loon** of Offchain Labs and Prysm, delivered at ETHDenver. Preston covers Ethereum's recent upgrade velocity and what's ahead for the network, including Pectra, Fusaka, PeerDAS, Glamsterdam, FOCIL, shorter slot times, and faster finality.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=GgKveVMLnoo) published by ETHDenver. It has been lightly edited for readability.*
 
-### Introduction (0:07)
+#### Introduction (0:07)
 
 **Host:** All right, everybody. Moving right along. We're going to talk about Ethereum's evolution with Preston Van Loon. Take it away.
 
@@ -29,7 +29,7 @@ There's a narrative you've probably heard before: Ethereum is too slow to ship. 
 
 I work on the Prysm consensus client. It's one of the key components of the Ethereum beacon chain. And I was in the trenches for the most recent updates — for Pectra, Fusaka. From what I saw on the inside, this was not some slow-moving bureaucracy that people have claimed for Ethereum for many years. It was actually a high-velocity, well-executed machine delivering some of the biggest upgrades we've seen ever in Ethereum's history.
 
-### Shipping three upgrades in one year (1:18)
+#### Shipping three upgrades in one year (1:18)
 
 What we shipped in 2025 were three major updates in one year. First, Pectra in May of 2025. This introduced native account abstraction, an increase to the validator max effective balance allowing for consolidations, and ten more EIPs. In May, this was the biggest upgrade in terms of EIPs that Ethereum had ever seen.
 
@@ -37,7 +37,7 @@ But then just seven months later, we shipped Fusaka — an even bigger upgrade i
 
 This is a testament to Ethereum shipping. This is a collaboration between five or six consensus clients, five execution clients, many researchers — over a hundred people involved in Ethereum's core development — and they're all shipping in coordination at the same time.
 
-### PeerDAS scaling (2:22)
+#### PeerDAS scaling (2:22)
 
 Let's take a look at the headliner for Fusaka: PeerDAS. PeerDAS is a very awesome scaling solution. Prior to PeerDAS, we had Pectra, and with Pectra you had to — as a node operator or validator — download every blob that came with a block. This was targeting six blobs per block. Everyone had to download it, and that's really a scaling bottleneck. If you want to increase that, you're asking node operators to proportionally increase their bandwidth usage for blobs.
 
@@ -47,7 +47,7 @@ Looking at the numbers: for Pectra, we had a target of six and a max of nine blo
 
 And then we got that large decrease in bandwidth where each block with a target of six blobs is now only 96 kilobytes of blob data that a validator had to store. Then again with BPO1, the blob-parameter-only fork, we increased the target to 10 and the max to 15. BPO2, which happened just a month later, went to 14 and 21 — which is double what we had in Pectra, but still 71% less bandwidth usage on blobs for solo stakers.
 
-### What's coming in Glamsterdam (4:30)
+#### What's coming in Glamsterdam (4:30)
 
 What's coming next in Glamsterdam? There are three really key things and one that's still active research.
 
@@ -57,7 +57,7 @@ The next thing we have is block-level access lists. This is a cool innovation wh
 
 The third thing is gas repricing. There have been benchmarks through this EIP that showed some opcodes were overpriced, some were underpriced. Now we're going to update the fees you pay for each opcode to reflect reality, making Ethereum more secure and more efficient.
 
-### The evolving role of L2s (6:14)
+#### The evolving role of L2s (6:14)
 
 There's one thing I want to talk about that Vitalik mentioned recently. He said in a tweet a couple of weeks ago that the original vision of L2s and their role in Ethereum no longer makes sense. It got a lot of headlines, and I think a lot of people took the wrong takeaway from this.
 
@@ -65,7 +65,7 @@ Let me tell you what it means from someone on the inside. Ethereum is scaling fa
 
 So the idea that we need general-purpose L2s — that is, L2s that are simply the same EVM we have on the L1, just copy and paste it a bunch of times and all they do is go faster — that's not the vision anymore. These L2s will thrive with specialization. Some of them will target things like privacy, gaming, specifics in DeFi, or extensions of the EVM. But if they're simply a clone copy of the L1, they're not part of the roadmap where we initially envisioned this kind of sharded paradigm through L2s.
 
-### FOCIL: protocol-level censorship resistance (7:25)
+#### FOCIL: protocol-level censorship resistance (7:25)
 
 Beyond Glamsterdam, there are three really cool things in active development and research. The first one is FOCIL — Fork-Choice Enforced Inclusion Lists.
 
@@ -75,23 +75,23 @@ FOCIL changes the power dynamic. Instead of saying block builders can choose all
 
 This is enforced through fork choice. Validators that see a block will not attest to it unless it has an inclusion list appended at the bottom. If they see one without the list, they'll consider that block invalid and just ignore it — they won't propagate it, they won't vote on it. This is still active research with some parameters still being decided, but the direction is clear: Ethereum is going to include censorship resistance at the protocol level.
 
-### Shorter slot times (9:24)
+#### Shorter slot times (9:24)
 
 The next really exciting one is shorter slot times. With Hegata — the fork after Glamsterdam — we're considering whether we can include shorter slot times or quick slots. That's not to say we jump all the way to six-second slots or even faster, but building the rails to make that possible.
 
 It sounds really simple — like, "let's just go faster." But you have to think about network propagation, validator attestation duties where they have a limited amount of time to perform, and then there's the economics. When I first experimented with this, I just changed the 12 to a 6 and suddenly everybody was making twice as much issuance — twice as much money — which is not really the intention behind shorter slot times. It's about going faster but keeping all things equal. So it's a very complex thing, but it has the possibility to get there in the endgame incrementally.
 
-### Faster finality (10:20)
+#### Faster finality (10:20)
 
 The third thing is faster finality. This is really important because Ethereum finalizes every two epochs — every 13 minutes — and there are applications that really depend on asking the question: is my transaction permanent? If the transaction has not been in a finalized epoch, then the answer is no — there is a small chance that it could be reorged away and the transaction needs to be submitted again.
 
 Now, if we have fast finality, things like exchanges, bridges, or any application can be assured that a transaction is final. First, instead of two epochs for finality, let's do it in one. Then we can say instead of epochs that are 32 slots long, let's shorten them to four slots. Now, if you couple this with six-second slot times, you're talking about finality in less than 30 seconds. That's a really cool endgame.
 
-### The north star (11:15)
+#### The north star (11:15)
 
 All this is built into the north star, where we say the L1 is fast with finalization in seconds. How do we get there? First, we start with PeerDAS — that's already shipped. That's given us a scalable layer for data availability. Next, we have Glamsterdam, mostly including ePBS, which is a clean implementation for proposer-builder separation and makes things like FOCIL more impactful. FOCIL comes in with censorship resistance, which is very harmonious with ePBS. With quicker slots, faster slot times make faster finality even more impactful. Then we get to this end goal where we really do have fast transactions that are finalized in seconds.
 
-### Closing (12:02)
+#### Closing (12:02)
 
 I want you to picture what life is like in two years. It's kind of hard to think because crypto moves so fast. This might be a reality in just two years: four or six-second transaction confirmation times; finality measured in seconds, not minutes; protocol-level enforcement for censorship resistance; protections against post-quantum cryptography; and L2s competing on features and new innovations, not just going faster. All this while still retaining the virtue that you can use a consumer-grade laptop or hardware to run a full node at home. Ethereum is accessible and remains accessible for everybody into the future.
 

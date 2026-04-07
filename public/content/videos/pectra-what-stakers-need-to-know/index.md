@@ -1,6 +1,6 @@
 ---
 title: "Ethereum Pectra upgrade: what stakers need to know"
-description: "Blockdaemon explains the Pectra upgrade from a staker's perspective, covering the practical impacts on validators, staking operations, and the key EIPs that affect staking in the Ethereum protocol."
+description: "Explaining the Pectra upgrade from a staker's perspective, covering the practical impacts on validators, staking operations, and the key EIPs that affect staking in the Ethereum protocol."
 lang: en
 youtubeId: "_UpAFpC7X6Y"
 uploadDate: 2025-01-22
@@ -15,15 +15,15 @@ author: Blockdaemon
 breadcrumb: "Pectra for Stakers"
 ---
 
-A webinar hosted by **Blockdaemon** with blockchain engineer Julia Schmidt (Aluvial) and Freddy Tänzer (Blockdaemon) discussing how the Pectra upgrade impacts ETH staking — covering execution-layer-triggerable withdrawals, max effective balance increases, validator consolidation, and liquid staking implications.
+A webinar hosted by **Blockdaemon** with blockchain engineer Julia Schmidt (Alluvial) and Freddy Tänzer (Blockdaemon) discussing how the Pectra upgrade impacts ETH staking. The webinar covers execution-layer-triggerable withdrawals, max effective balance increases, validator consolidation, and liquid staking implications.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=_UpAFpC7X6Y) published by Blockdaemon. It has been lightly edited for readability.*
 
-### Introduction (0:00)
+#### Introduction (0:00)
 
-**Host:** Hello and welcome to this Blockdaemon-hosted webinar focusing on Ethereum's upcoming Pectra upgrade. With us today is Julia Schmidt, blockchain engineer at Aluvial, and Freddy Tänzer, Blockdaemon Ethereum ecosystem lead, to discuss how Pectra's changes will impact ETH staking, the network as a whole, liquid staking services, and more. To kick things off, Freddy — could you give us a brief overview of the Pectra upgrade and what its impact on stakers will be?
+**Host:** Hello and welcome to this Blockdaemon-hosted webinar focusing on Ethereum's upcoming Pectra upgrade. With us today is Julia Schmidt, blockchain engineer at Alluvial, and Freddy Tänzer, Blockdaemon Ethereum ecosystem lead, to discuss how Pectra's changes will impact ETH staking, the network as a whole, liquid staking services, and more. To kick things off, Freddy — could you give us a brief overview of the Pectra upgrade and what its impact on stakers will be?
 
-### What is Pectra (1:28)
+#### What is Pectra (1:28)
 
 **Freddy Tänzer:** So Pectra is an Ethereum upgrade that is scheduled for late Q1 2025 — about March, might shift a little bit to the back, maybe April or so. It was actually supposed to be a small fork in the beginning, and then more and more things got added, so they actually divided it into two now.
 
@@ -33,7 +33,7 @@ The first is the fact that you can trigger withdrawals and exits from your valid
 
 There's also a smaller one which basically leads to the fact that deposits are much quicker — onchain registered from like 14 hours to less than an hour — but those two I think are the ones mostly relevant for our discussion here.
 
-### EIP-7002: execution-layer-triggerable exits (2:58)
+#### EIP-7002: execution-layer-triggerable exits (2:58)
 
 **Host:** For the first major change, Julia, could you explain how the process post-Pectra will change versus the current ways that withdrawals are initiated in Ethereum's staking ecosystem?
 
@@ -49,7 +49,7 @@ In the last Dencun upgrade, a new EIP changed the expiry time on these exit mess
 
 This is now solved with EIP-7002, which allows both the validator key and the withdrawal key to trigger the exit from the execution layer — simply by sending a transaction to a special withdrawal contract where you send a withdrawal request and specify either a full exit of the validator, or a partial withdrawal from the staked balance.
 
-### EIP-7251: max effective balance (4:15)
+#### EIP-7251: max effective balance (4:15)
 
 **Host:** Freddy, could you give us an overview of the max effective balance going forward from Pectra onwards, and how this will impact people who currently stake?
 
@@ -69,17 +69,17 @@ There's good news on slashing, too: the initial slashing penalty will go down dr
 
 The auto-compounding benefit mainly benefits smaller amounts of stake. If you have a thousand validators, you could manually launch a new one monthly. But if you have only one validator, you'd practically need to wait 32 years to compound.
 
-### Liquid staking implications (11:25)
+#### Liquid staking implications (11:25)
 
 **Host:** Julia, how does the consolidation of larger validators compare to the benefits of liquid staking? How will these decisions weigh up in a staker's mind post-Pectra?
 
-**Julia Schmidt:** At Aluvial, we've been closely following these changes and want to offer both solutions. The consolidation requests in Pectra are an interim solution that shouldn't affect your effective balance's earning time — it won't have to go through an activation queue again when consolidating multiple validators. The process is quite smooth.
+**Julia Schmidt:** At Alluvial, we've been closely following these changes and want to offer both solutions. The consolidation requests in Pectra are an interim solution that shouldn't affect your effective balance's earning time — it won't have to go through an activation queue again when consolidating multiple validators. The process is quite smooth.
 
 The fact that the initial slashing penalty has been lowered reduces the risk of running high-balance validators. The push from the Ethereum Foundation is really to consolidate as much as we can to reduce network load. There's a small disadvantage: in the very rare case that a max effective balance validator of 2,048 ETH gets slashed, it would go into the exit queue and your funds would be locked for a longer time — it would be like 64 validators getting slashed at once. So we'd try to offer flexible validator ceilings according to the client's risk appetite.
 
 On the utility side, a liquid staking token obviously adds liquidity — even with partial withdrawals from the execution layer, it won't be instant. You submit the transaction, it gets queued, then there's the exit epoch and withdrawal epoch. Liquid staking tokens still offer instant liquidity that partial withdrawals can't.
 
-### Next steps for stakers (16:20)
+#### Next steps for stakers (16:20)
 
 **Freddy Tänzer:** What we see is that financial institutions would typically stake between 65% and 85% of their ETH under custody, because they need the rest as a liquidity buffer for redemptions. With liquid staking, you can potentially increase the amount of ETH staked, which generates higher rewards.
 
@@ -89,11 +89,11 @@ Both sides benefit from Pectra — liquid staking gets the execution-layer withd
 
 A key advantage I haven't touched upon yet is the partial withdrawals — now that you can withdraw staked ETH from the execution layer, this opens up new avenues for protocols such as EigenLayer to trigger withdrawals and exits. There's a huge increase in functionality and interoperability that DeFi can now better incorporate into the full validator lifecycle, from deposit to exit. As a blockchain engineer, it's exciting to be able to automate the full workflow.
 
-### Closing (19:50)
+#### Closing (19:50)
 
-**Host:** Julia, where can people go to learn more about the Liquid Collective and Aluvial?
+**Host:** Julia, where can people go to learn more about the Liquid Collective and Alluvial?
 
-**Julia Schmidt:** You can follow Aluvial and Liquid Collective on Twitter, on X, on LinkedIn, or on the Aluvial website. We'll be sharing an article detailing the changes regarding the Pectra upgrade and how they'll affect the Ethereum landscape.
+**Julia Schmidt:** You can follow Alluvial and Liquid Collective on Twitter, on X, on LinkedIn, or on the Alluvial website. We'll be sharing an article detailing the changes regarding the Pectra upgrade and how they'll affect the Ethereum landscape.
 
 **Host:** Freddy, any updates to be shared regarding Pectra?
 

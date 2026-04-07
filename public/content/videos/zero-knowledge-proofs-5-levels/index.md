@@ -1,6 +1,6 @@
 ---
 title: "Zero-knowledge proofs explained in 5 levels of difficulty"
-description: "A computer scientist explains zero-knowledge proofs at five different levels of complexity, from a child to an expert. This WIRED video makes one of cryptography's most important concepts accessible to everyone."
+description: "A computer scientist explains zero-knowledge proofs at five different levels of complexity, from a child to an expert."
 lang: en
 youtubeId: "fOGdb1CTu5c"
 uploadDate: 2021-12-13
@@ -15,17 +15,17 @@ author: WIRED
 breadcrumb: "Zero-Knowledge Proofs"
 ---
 
-Computer scientist **Amit Sahai**, a professor at the UCLA Samueli School of Engineering, explains zero-knowledge proofs at five levels of complexity — from a child to an expert — in this **WIRED** production. The concept is demonstrated through physical analogies and discussed in increasing technical depth.
+Computer scientist **Amit Sahai**, a professor at the UCLA Samueli School of Engineering, explains zero-knowledge proofs at five levels of complexity, from a child to an expert, in this **WIRED** production. The concept is demonstrated through physical analogies and discussed in increasing technical depth, making one of cryptography's most important concepts accessible to everyone.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=fOGdb1CTu5c) published by WIRED. It has been lightly edited for readability.*
 
-### Introduction (0:00)
+#### Introduction (0:00)
 
 **Amit Sahai:** Hi, my name is Amit Sahai, and I'm a professor of computer science at the UCLA Samueli School of Engineering. Today, I've been asked to explain zero-knowledge proofs in five levels of increasing complexity.
 
 A zero-knowledge proof is a way for a prover to convince a verifier that some statement is true, and yet reveal no additional information beyond the fact that the statement is true. Zero-knowledge proofs are being used in blockchains and cryptocurrencies. Cryptographers are excited about zero-knowledge because of its amazing mathematical properties, but also because of its incredible applicability to so many different scenarios.
 
-### Level 1: child (0:41)
+#### Level 1: child (0:41)
 
 **Amit Sahai:** What's your favorite subject?
 
@@ -55,7 +55,7 @@ So Chelsea, in your own words, what is a zero-knowledge proof?
 
 **Chelsea:** Zero-knowledge proof is proof to a statement. You don't show them why or what. You just show them a tiny segment, or just do some sort of weird magic trick that's not really a magic trick, and they will be convinced. And you didn't show them why, or anything like that.
 
-### Level 2: teen (3:31)
+#### Level 2: teen (3:31)
 
 **Amit Sahai:** So have you ever heard the term zero-knowledge proof before?
 
@@ -85,7 +85,7 @@ So based on what we've discussed today, in your own words, what is a zero-knowle
 
 **Teen:** It's like if you have this really important secret that you want somebody to know about, but you don't want to tell them everything. You can use a zero-knowledge proof to prove to them that secret, but not give away all of it.
 
-### Level 3: college student (6:13)
+#### Level 3: college student (6:13)
 
 **Amit Sahai:** What are you studying?
 
@@ -131,7 +131,7 @@ Can you pick two countries at random, and we'll reveal two of the colors again.
 
 **Amit Sahai:** One great example is elections. If you could prove that an election was correctly conducted — that every vote was counted and it all added up to one person winning with a particular total — in zero-knowledge, then you don't have to give up the actual votes of any person. And yet everyone could see that it was done correctly.
 
-### Level 4: grad student (11:59)
+#### Level 4: grad student (11:59)
 
 **Amit Sahai:** It's so great to have you here and to talk with you, Eli. Can you tell me a little bit about your research?
 
@@ -165,7 +165,7 @@ Can you pick two countries at random, and we'll reveal two of the colors again.
 
 **Eli:** I think that's one of the reasons I was so drawn to multi-party computation. One of the most important problems in the world is the fact that so many people don't trust each other. To be able to use math to create technology that allows people to work together without having to trust each other is a really cool and awesome mission.
 
-### Level 5: expert (17:10)
+#### Level 5: expert (17:10)
 
 **Amit Sahai:** Shang-Hua, it's so great to see you again. I think last time we met was in 2017 or something like that.
 
