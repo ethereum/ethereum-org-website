@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Lang, PageParams } from "@/lib/types"
+import { AppCategory, AppData, Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -64,6 +64,26 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   // Get translations
   const t = await getTranslations("page-apps")
   const appDescriptions = await getTranslations("page-app-descriptions")
+  const tSubcategory = await getTranslations("app-subcategories")
+
+  // Translate subcategory tags, falling back to the raw string
+  const translateSubcategories = (tag: string) => {
+    const key = `subcategory-${slugify(tag)}`
+    return tSubcategory.has(key) ? tSubcategory(key) : tag
+  }
+
+  const translateApp = (app: AppData) =>
+    ({
+      ...app,
+      subCategory: app.subCategory.map(translateSubcategories),
+    }) as AppData
+
+  const translatedAppsData = Object.fromEntries(
+    Object.entries(appsData).map(([category, apps]) => [
+      category,
+      (apps as AppData[]).map(translateApp),
+    ])
+  ) as Record<AppCategory, AppData[]>
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -110,7 +130,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <div className="flex flex-col gap-8 px-4 md:px-8">
             <h2>{t("page-apps-highlights-title")}</h2>
             <AppsHighlight
-              apps={localizeApps(highlightedApps)}
+              apps={localizeApps(highlightedApps.map(translateApp))}
               matomoCategory="apps"
             />
           </div>
@@ -126,7 +146,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   thumbnail={app.image}
                   category={app.category}
                   categoryTagStatus={APP_TAG_VARIANTS[app.category]}
-                  tags={app.subCategory}
+                  tags={app.subCategory.map(translateSubcategories)}
                   href={`/apps/${slugify(app.name)}`}
                   imageSize="large"
                   customEventOptions={{
@@ -146,7 +166,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
             <h2>{t("page-apps-applications-title")}</h2>
-            <TopApps appsData={appsData} />
+            <TopApps appsData={translatedAppsData} />
           </div>
 
           {/* Note: Implemented this instead of swiper from design to allow for SSR */}
@@ -174,7 +194,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <h2>{t("page-apps-community-picks-title")}</h2>
             <CommunityPicks
               communityPicks={communityPicks}
-              appsData={appsData}
+              appsData={translatedAppsData}
             />
           </div>
 

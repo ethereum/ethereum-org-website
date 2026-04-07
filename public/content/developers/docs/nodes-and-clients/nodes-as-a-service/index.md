@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-## Introduction {#Introduction}
+## Introduction {#introduction}
 
 Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started.
 

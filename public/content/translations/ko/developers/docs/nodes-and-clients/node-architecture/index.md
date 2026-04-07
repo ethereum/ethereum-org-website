@@ -6,7 +6,7 @@ lang: ko
 
 이더리움 노드는 [실행 클라이언트](/developers/docs/nodes-and-clients/#execution-clients)와 [합의 클라이언트](/developers/docs/nodes-and-clients/#consensus-clients)의 두 클라이언트로 구성됩니다. 노드가 새 블록을 제안하려면 [검증자 클라이언트](#validators)도 실행해야 합니다.
 
-이더리움이 [작업 증명](/developers/docs/consensus-mechanisms/pow/)을 사용했을 때에는 실행 클라이언트만으로도 전체 이더리움 노드를 실행하기에 충분했습니다. 그러나 [지분 증명](/developers/docs/consensus-mechanisms/pow/)이 구현된 이후에는 실행 클라이언트는 [합의 클라이언트](/developers/docs/nodes-and-clients/#consensus-clients)라는 다른 소프트웨어와 함께 사용되어야 합니다.
+이더리움이 [작업 증명](/developers/docs/consensus-mechanisms/pow/)을 사용했을 때에는 실행 클라이언트만으로도 전체 이더리움 노드를 실행하기에 충분했습니다. 그러나 [지분 증명](/developers/docs/consensus-mechanisms/pos/)이 구현된 이후에는 실행 클라이언트는 [합의 클라이언트](/developers/docs/nodes-and-clients/#consensus-clients)라는 다른 소프트웨어와 함께 사용되어야 합니다.
 
 아래 다이어그램은 두 이더리움 클라이언트 간의 관계를 보여줍니다. 두 클라이언트는 각자의 peer-to-peer (P2P) 네트워크에 연결됩니다. 실행 클라이언트는 P2P 네트워크를 통해 트랜잭션을 가십하여 로컬 트랜잭션 풀을 관리하고, 합의 클라이언트는 P2P 네트워크를 통해 블록을 가십하여 합의와 체인 성장을 가능하게 하므로 별도의 P2P 네트워크가 필요합니다.
 

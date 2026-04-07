@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.1.0",
+  "version": "11.2.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -17,6 +17,8 @@
     "build-storybook": "storybook build",
     "build-storybook:chromatic": "storybook build --test",
     "chromatic": "chromatic --project-token fee8e66c9916",
+    "lint:md": "markdownlint-cli2 \"public/content/**/*.md\" \"!public/content/translations/**\"",
+    "lint:md:fix": "markdownlint-cli2 --fix \"public/content/**/*.md\" \"!public/content/translations/**\"",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
     "update-tutorials": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/update-tutorials-list.ts",
     "prepare": "husky",
@@ -141,6 +143,7 @@
     "husky": "^9.0.11",
     "image-size": "^1.0.2",
     "lint-staged": "^15.2.5",
+    "markdownlint-cli2": "^0.22.0",
     "mdast-util-toc": "^7.0.0",
     "minimist": "^1.2.8",
     "plaiceholder": "^3.0.0",

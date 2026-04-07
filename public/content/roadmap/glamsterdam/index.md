@@ -143,7 +143,7 @@ By pricing state-access actions more accurately Ethereum can be more resilient a
 
 **Resources**: [EIP-8038 technical specification](https://eips.ethereum.org/EIPS/eip-8038)
 
-## Network resilience
+## Network resilience {#network-resilience}
 
 Refinements to validator duties and exit processes ensure network stability during mass-slashing events and democratize liquidity. These improvements make the network more stable and ensure that all participants, large and small, are treated fairly.
 

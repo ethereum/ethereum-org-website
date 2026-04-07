@@ -5,15 +5,15 @@ description: A guide explaining how to send, receive tokens and connect to web3 
 lang: en
 ---
 
-# How to use a wallet
+# How to use a wallet {#how-to-use-a-wallet}
 
 Learn how to operate all the basic functions of a wallet. If you don’t have one yet, check out our [How to create an Ethereum account](/guides/how-to-create-an-ethereum-account/).
 
-## Open your wallet
+## Open your wallet {#open-your-wallet}
 
 You should see a dashboard that will likely show your balance and contain buttons to send and receive tokens.
 
-## Receive cryptocurrency
+## Receive cryptocurrency {#receive-cryptocurrency}
 
 Do you want to receive crypto into your wallet?
 
@@ -30,7 +30,7 @@ Different apps may vary or use different language, but they should take you thro
 3. Copy your Ethereum address to clipboard.
 4. Provide the sender with your receiving Ethereum address.
 
-## Send cryptocurrency
+## Send cryptocurrency {#send-cryptocurrency}
 
 Would you like to send ETH to another wallet?
 
@@ -46,7 +46,7 @@ Would you like to send ETH to another wallet?
 6. Ensure that your wallet has sufficient ETH to cover the transaction fee, which varies depending on network conditions. Most wallets will automatically add the suggested fee to the transaction which you can then confirm.
 7. Once your transaction is processed, the corresponding crypto amount will show up in the recipient’s account. This might take anywhere from a few seconds to a few minutes depending on how much the network is currently being used.
 
-## Connecting to projects
+## Connecting to projects {#connecting-to-projects}
 
 Your address will be the same in all Ethereum projects. You do not need to register individually on any project. Once you have a wallet, you can connect to any Ethereum project without any additional information. No emails or any other personal information are needed.
 
@@ -74,20 +74,20 @@ Your address will be the same in all Ethereum projects. You do not need to regis
 </AlertContent>
 </Alert>
 
-## Frequently asked questions
+## Frequently asked questions {#frequently-asked-questions}
 
-### If I own an ETH address, do I own the same address on other blockchains?
+### If I own an ETH address, do I own the same address on other blockchains? {#if-i-own-an-eth-address-do-i-own-the-same-address-on-other-blockchains}
 
 You can use the same address on all EVM compatible blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains, like Bitcoin, implement a completely separate set of network rules and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on which blockchains are supported.
 
-### Can I use the same address on multiple devices?
+### Can I use the same address on multiple devices? {#can-i-use-the-same-address-on-multiple-devices}
 
 Yes, you can use the same address on multiple devices. Wallets are technically only an interface to show you your balance and to make transactions, your account isn't stored inside the wallet, but on the blockchain.
 
-### I have not received the crypto, where can I check the status of a transaction?
+### I have not received the crypto, where can I check the status of a transaction? {#i-have-not-received-the-crypto-where-can-i-check-the-status-of-a-transaction}
 
 You can use [block explorers](/developers/docs/data-and-analytics/block-explorers/) to see the status of any transaction in real time. All you need to do is to search your wallet address or the ID of the transaction.
 
-### Can I cancel or return transactions?
+### Can I cancel or return transactions? {#can-i-cancel-or-return-transactions}
 
 No, once a transaction is confirmed, you cannot cancel the transaction.

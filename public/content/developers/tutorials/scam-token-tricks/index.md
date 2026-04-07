@@ -162,7 +162,7 @@ There are two potential red flags in this function.
 
 - The same issue we saw in `_transfer`, which is when `contract_owner` sends tokens they appear to come from `deployer`.
 
-### The fake events function `dropNewTokens` {#the-fake-events-function-dropNewTokens}
+### The fake events function `dropNewTokens` {#the-fake-events-function-dropnewtokens}
 
 Now we come to something that looks like an actual scam. I edited the function a bit for readability, but it's functionally equivalent.
 
