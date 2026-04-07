@@ -50,6 +50,17 @@ const VideoGalleryFilter = ({
   const [searchQuery, setSearchQuery] = useState("")
   const [sortOrder, setSortOrder] = useState<SortOrder>("newest")
 
+  // Compute video counts per category (from the full, unfiltered list)
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {}
+    for (const category of categories) {
+      counts[category.key] = getVideosByCategory(videos, [
+        ...category.tags,
+      ]).length
+    }
+    return counts
+  }, [videos, categories])
+
   // Filter by category
   const categoryFiltered = useMemo(() => {
     if (!selectedCategory) return videos
@@ -125,7 +136,7 @@ const VideoGalleryFilter = ({
             className="justify-center"
             onClick={() => setSelectedCategory(null)}
           >
-            {t("page-videos-category-all")}
+            {t("page-videos-category-all")} ({videos.length})
           </TagButton>
           {categories.map((category) => {
             const isActive = selectedCategory === category.key
@@ -137,7 +148,7 @@ const VideoGalleryFilter = ({
                 className="justify-center"
                 onClick={() => handleCategoryClick(category.key)}
               >
-                {t(category.labelKey)}
+                {t(category.labelKey)} ({categoryCounts[category.key] ?? 0})
               </TagButton>
             )
           })}
