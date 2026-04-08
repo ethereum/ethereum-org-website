@@ -17,7 +17,7 @@ An interview with **Justin Drake**, Ethereum Foundation researcher, covering Eth
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=wURmzLKhJco) published by Bankless. It has been lightly edited for readability.*
 
-#### Introduction and the quantum threat (0:00)
+#### Introduction and the quantum threat (0:00) {#introduction-and-the-quantum-threat-000}
 
 **Justin Drake:** One interesting shift of mindset for me in the last few months is that I've stopped thinking about post-quantum as a hurdle that we have to overcome and I think of it more as an opportunity. It's an opportunity for Ethereum to stand out as the very first global financial system that is post-quantum secure, not just relative to its competitors like Bitcoin and whatnot, but also relative to fiat and TradFi. And I think it would send a very strong message and kind of be a very natural security selling point for the world to migrate over to Ethereum.
 
@@ -35,7 +35,7 @@ So the goalposts are coming closer and closer, and you have this double exponent
 
 Now projecting into the future, my personal Q-Day is in 2032. This is a little bit of an optimistic take in the sense that it's possible they'll arrive a little bit later, but we need to be prepared for the worst case scenario. So I'd say there's at least a 1% chance that Q-Day is in 2032, more likely than not a double-digit percentage. Various experts will tell you somewhere between 2031 and 2038. One of my friends in the industry, Steve Bryley, founder and CEO of one of the biggest quantum error correction companies in the world, who happens to be based in Cambridge where I am — his personal Q-Day was 2032, but he's had this date for 15 years
 
-#### When is Q-Day and how do we prepare? (5:08)
+#### When is Q-Day and how do we prepare? (5:08) {#when-is-q-day-and-how-do-we-prepare-508}
 
 and it's always stayed the same.
 
@@ -51,7 +51,7 @@ and it's always stayed the same.
 
 **Justin Drake:** I can't speak for him, but one thing we should note is that Scott is primarily a theoretician. For a very long time he was working on the theory, not so much on the day-to-day of quantum computers, and I think that was partially the reason why he was so hedged. What's happening more and more is that there are real companies, real entrepreneurs building these things and he has an insider view. He's basically ingesting all this information. One of the things that he said recently is that the US government is starting to intervene with the publication of ideas. So we have companies and academics that might come up with improvements to Shor's algorithm, and those are not completely being disclosed, potentially for national security reasons.
 
-#### Physical qubits, logical qubits, and breaking ECDSA (10:11)
+#### Physical qubits, logical qubits, and breaking ECDSA (10:11) {#physical-qubits-logical-qubits-and-breaking-ecdsa-1011}
 
 **David Hoffman:** Wow. Okay. So governments are getting involved in this it sounds like. We're not actually sure all the work that's going on behind the scenes — we're only aware of the commercially viable work at this point. On the logical qubit piece, you said we have one logical qubit right now. There's physical qubits and logical qubits, and the thing to scale is logical qubits. In order to break ECDSA, how many logical qubits do we actually need? That's a metric I'm looking at, but is that even the right number? I've heard people talk about needing a thousand, or maybe 1,500. Is this a number we should be paying attention to?
 
@@ -69,7 +69,7 @@ Now on the runtimes, this is kind of interesting because there are two flavors o
 
 **Justin Drake:** Yes. And if indeed it is going to be a nation state that has access to these quantum computers first, unless crypto plays a major systemic role in the world, more likely than not they'll use their powers to attack things in a stealthy way — for example, spy on their adversaries. So that plays in our favor. But if you're dealing with a purely rational entity that's motivated by dollars, they might indeed go for Bitcoin or Ethereum.
 
-#### Quantum data centers and the Q-Day attack scenario (15:10)
+#### Quantum data centers and the Q-Day attack scenario (15:10) {#quantum-data-centers-and-the-q-day-attack-scenario-1510}
 
 **David Hoffman:** Last question on qubits. Are quantum computing data centers being built out right now? We have this massive data center buildout for AI. Is something similar starting to happen with quantum computers?
 
@@ -93,7 +93,7 @@ Now on the runtimes, this is kind of interesting because there are two flavors o
 
 **Justin Drake:** Exactly. Yes. And then you'd probably go and attack the biggest fish, which might be some exchange that hasn't put in the correct infrastructure to protect themselves. It turns out there's a very easy mitigation to quantum computers, the very first ones at least — don't reuse your addresses. When you reuse your address, you reuse the public key, and that means an attacker has time to crack the corresponding private key and then steal your funds the second time you use the address. So the best practice should be that if you're holding any funds in long-term cold storage, it should be a clean address for which the corresponding public key has never been revealed. Just to make this crystal clear: what a quantum computer allows you to
 
-#### Vulnerable Bitcoin addresses and the Satoshi coins (20:08)
+#### Vulnerable Bitcoin addresses and the Satoshi coins (20:08) {#vulnerable-bitcoin-addresses-and-the-satoshi-coins-2008}
 
 do is to go from the public key back to the private key. So it really jeopardizes the foundations of property.
 
@@ -119,7 +119,7 @@ It will be a process extended through time. And one interesting consequence is t
 
 **Justin Drake:** Yeah, so the rough number I have in mind is in line with those. It's about 2 million Bitcoin, let's say 10%. We have the 1 million from Satoshi and then roughly another million that hasn't moved for a very long time. We need to discount some of that because some zombie addresses are legitimate and will revive, but we should also increase it because there might be some recently spent addresses that will be lost. So 5 to 15% is the correct range. I would bet around 10–12%, which is very sizable — definitely in the hundreds of billions of dollars.
 
-#### The burn vs. salvage debate for Bitcoin (25:24)
+#### The burn vs. salvage debate for Bitcoin (25:24) {#the-burn-vs-salvage-debate-for-bitcoin-2524}
 
 One could kind of think through the game theory here. Option A is to try and burn the coins. The advantage is you don't have the hundreds of billions of dollars of sell pressure. If you analyze this with a short-term lens, that's the rational move. But the whole story of Bitcoin is strong property rights, so if you have a longer lens, you shouldn't want to burn the coins. It's very difficult to know which way the community will go. It's possible that ultimately the decision will be made by large holders — for example, Michael Saylor and MicroStrategy. Because these large holders will receive a copy of both versions of the Bitcoin — the one with the burn and the one without — and they can choose to dump the one they don't like. And we know that Saylor is in favor of burning, so he can single-handedly potentially manipulate the market and get the outcome that he wants.
 
@@ -131,7 +131,7 @@ The other option is they just leave that 10% to whoever can create the quantum c
 
 **Justin Drake:** Yes, that's very well said. But one small correction: this doesn't have to happen at Q-Day or after Q-Day. It can happen prior. At any point in time, the Bitcoin community or some subset of it can propose to make a fork. At the fork block number there would be two versions of Bitcoin the asset — just like the Bitcoin Cash fork. And ultimately this is decided by the market. Exchanges will set up the two versions of the asset and the market decides which one is the true Bitcoin. And it's possible that just because of short-term liquidity dynamics, the version which burns the coins, potentially ahead of Q-Day, is going to be the one that wins.
 
-#### The Michael Saylor scenario and Schelling points (30:29)
+#### The Michael Saylor scenario and Schelling points (30:29) {#the-michael-saylor-scenario-and-schelling-points-3029}
 
 **Ryan Sean Adams:** Right. So I'm Michael Saylor, I own 2–3% of Bitcoin supply, especially the liquid supply. I get both copies. We're forking the Bitcoin blockchain just like the Bitcoin fork wars of 2017. I want to preserve my value, so I sell all the bitcoins that are quantum susceptible and keep all the bitcoins on the version that burned the quantum susceptible coins. The price of the untouched blockchain goes down. The price of the burn version stays high because no one's selling it — Saylor's not selling, BlackRock's not selling. So you're saying the price of the quantum-solved Bitcoin will be higher and by market forces become the canonical Bitcoin.
 
@@ -155,7 +155,7 @@ The other option is they just leave that 10% to whoever can create the quantum c
 
 It certainly is incredible that this will have happened to a multi-trillion dollar network with such a prize bounty. It's unprecedented. But that could also happen, and maybe that's a better outcome for Bitcoin.
 
-#### Proof of seed phrase and the post-quantum signature size problem (35:06)
+#### Proof of seed phrase and the post-quantum signature size problem (35:06) {#proof-of-seed-phrase-and-the-post-quantum-signature-size-problem-3506}
 
 **Justin Drake:** Yeah. So I have a couple thoughts. The first one is that there is a rather sophisticated way of proving ownership of Bitcoin without going through the private key. This is known as a proof of seed phrase. The way you derive a Bitcoin address is in three steps: step one, you generate your seed phrase; step two, you do some manipulations on the seed phrase including hashing to derive your private key; then from the private key you derive the public key, which is the address that goes onchain. Now the private key is unfortunately no longer something that can prove ownership. But because of the hashing step, if you know your seed phrase, that is still a proof of ownership. So one thing that could happen — and technically speaking is the soundest way forward — is to freeze the Bitcoin but allow anyone to revive their Bitcoin with a proof of seed phrase.
 
@@ -177,7 +177,7 @@ What we're building for Ethereum is this fancy post-quantum signature aggregatio
 
 But there actually is a way to hedge the price of Bitcoin, which is very easy — you just go short BTC. Let's say you know for sure that you've cracked the private key of a wallet that holds 100,000 BTC. You short 100,000 BTC. That locks in your profit. And then no matter what the price of Bitcoin does, you've locked in your profit, which could be tens of billions of dollars.
 
-#### Bitcoin's social layer challenge and Ethereum's advantage (40:07)
+#### Bitcoin's social layer challenge and Ethereum's advantage (40:07) {#bitcoins-social-layer-challenge-and-ethereums-advantage-4007}
 
 **David Hoffman:** Now, I do want to flag that Justin, you think in a particular way, and the way you think is why you are in Ethereum. If you were a Bitcoiner, you would think a different way. The Bitcoiner way of thinking is very unique, very distinct — kind of a property rights maximalist. I think what Justin would do if he was in charge of Bitcoin is very different than what the general aggregate of Bitcoiners would do. I don't have an actionable question here, but I just want to highlight that.
 
@@ -205,7 +205,7 @@ When I was with the Ultrasound project, one of the things we were trying to do w
 
 **Justin Drake:** Exactly. Yes. If I were to make a concrete prediction, I'd say about 2%, which is roughly an order of magnitude less than Bitcoin. And this quantitative difference has qualitative consequences: in the case of Ethereum, I would strongly advocate for not doing anything and really honoring property rights, because at the end of the day, 2% is not a big deal. In the case of Bitcoin, 15% is a massive deal.
 
-#### Ethereum's three-layer post-quantum upgrade (45:05)
+#### Ethereum's three-layer post-quantum upgrade (45:05) {#ethereums-three-layer-post-quantum-upgrade-4505}
 
 **David Hoffman:** So Ethereum will have to make this same choice. Let's say 3% — whether to do the freeze and burn or just let it be a treasure hunt. Your hope is we go with the treasure hunt option, meaning some quantum attacker will scoop up that 1–3% of Ether. And if you zoom out, we're basically moving towards Ether being much better money than BTC. It will be non-interventionist, respectful of property rights, quantum secure, and it won't have the security budget issue that's going to plague Bitcoin in a couple halvings. So I think this is a big opportunity for the asset.
 
@@ -225,7 +225,7 @@ But when you zoom out, I'd argue the bigger issue — maybe 80% of it — is soc
 
 *(50:00)*
 
-#### Upgrading the execution layer: signature aggregation (50:00)
+#### Upgrading the execution layer: signature aggregation (50:00) {#upgrading-the-execution-layer-signature-aggregation-5000}
 
 really details some of the key milestones to making these upgrades.
 
@@ -243,7 +243,7 @@ The Ethereum Foundation has put in a lot of effort to start with hash-based sign
 
 And one of the ironic things about this approach is that it's actually a scalability increase relative to what we have today. The reason is that you don't have the fixed cost of 64 bytes per transaction. The transactions have zero bytes of signature data, and then you have this one master signature which gets amortized across all transactions in the block.
 
-#### Setting the industry standard with Bitcoin collaboration (55:28)
+#### Setting the industry standard with Bitcoin collaboration (55:28) {#setting-the-industry-standard-with-bitcoin-collaboration-5528}
 
 **David Hoffman:** Okay. So this is an upgrade for many other smart contract blockchains downstream of Ethereum, especially the ones that optimize for speed—
 
@@ -263,7 +263,7 @@ Going back to the other thing I said — it only relies on hash functions. Any s
 
 Now there are two caveats I want to highlight. Caveat number one is that we're dealing with more complex objects, and the solution we have here is what we call deep end-to-end formal verification.
 
-#### Formal verification, Poseidon, and the consensus layer (1:00:33)
+#### Formal verification, Poseidon, and the consensus layer (1:00:33) {#formal-verification-poseidon-and-the-consensus-layer-10033}
 
 We have our cryptographic object and we want to prove mathematically that it is sound — that it is impossible to forge a signature. And not only do we want to do this for the mathematics, but also for the code. Had you asked me 2–3 years ago if this was doable, I would have said yes, but it was extremely laborious and expensive. What we're seeing with the advent of AI is that this laborious and expensive work can be done 100 times faster and 100 times cheaper.
 
@@ -279,7 +279,7 @@ Unfortunately, the way you design hash functions is that you can't prove that th
 
 To unlock a certain performance optimization only available at the consensus layer, we have this notion of a stateful signature — the messages you sign have a counter that increases every time. Doesn't that remind you of something? The slot number. In Ethereum at the consensus layer, you will only ever sign a single message per slot. If you sign two, you get slashed. We use this constraint to have signatures that are 10 times more efficient to aggregate.
 
-#### Lean VM, the Lean Consensus roadmap, and 2029 timeline (1:05:17)
+#### Lean VM, the Lean Consensus roadmap, and 2029 timeline (1:05:17) {#lean-vm-the-lean-consensus-roadmap-and-2029-timeline-10517}
 
 This is the main difference — stateless hash functions at the execution layer versus stateful signatures at the consensus layer where the slot number increments. The aggregation technology has a name: Lean VM, a minimal zkVM for hash-based cryptography. Basically, Lean VM would be proving that this is a correct Merkle root. The main thing we're not completely sure about yet is whether this approach can unlock what I call the "tera gas frontier" — 1 gigagas per second at the L1, 10,000 TPS, but even more ambitiously, 1 teragas, 10 million transactions per second at the L2 using the data availability.
 
@@ -297,7 +297,7 @@ Right now we have devnets for Lean Consensus. And the specs are so easy to inges
 
 I think this will have interesting consequences for sustainability as well as governance. On governance, the way we do it today is roughly speaking
 
-#### Ethereum governance and the 2029 completion date (1:10:41)
+#### Ethereum governance and the 2029 completion date (1:10:41) {#ethereum-governance-and-the-2029-completion-date-11041}
 
 that we have five consensus layer clients and they all need to implement the upgrade in order to move forward. In the future, when we have 10 or 15 clients, we can just require the top 80% or the fastest 80% in order to move forward. That's more of a Darwinian competition that allows us to move much faster without waiting for the slowest client.
 
@@ -325,7 +325,7 @@ Another piece of good news is that we have no choice. We have to change the cryp
 
 That makes the coordination and coming to consensus much simpler.
 
-#### Quantum isn't just a crypto problem (1:15:06)
+#### Quantum isn't just a crypto problem (1:15:06) {#quantum-isnt-just-a-crypto-problem-11506}
 
 **David Hoffman:** I guess we should emphasize it's not just Ethereum that has no choice — no one in crypto has an alternative to this. Everyone in crypto has to do a rewrite. With Bitcoin it's just ECDSA, but that in itself is enough.
 
@@ -341,7 +341,7 @@ Where I would agree with you is that there has to be a very big change for all b
 
 **Justin Drake:** I disagree. You can just look at historical analysis — sea shells were superseded by salt, then silver, then gold, and now potentially Bitcoin superseding gold. Just because gold fails doesn't mean the next thing also has to fail. I'd say Ethereum is the very natural successor to Bitcoin as internet money. And just because Bitcoin fails doesn't mean Ethereum has to fail. I agree there might be some short-term pain, but we're also talking about long-term gain.
 
-#### The post-quantum opportunity and security budget reckoning (1:20:27)
+#### The post-quantum opportunity and security budget reckoning (1:20:27) {#the-post-quantum-opportunity-and-security-budget-reckoning-12027}
 
 **David Hoffman:** So what do we get at the end of this? 2030, Ethereum is post-quantum secure because Justin promised. What does Ethereum become? Is it the only one in its class, or do you expect other blockchains to follow and also achieve post-quantum security? Can you describe the system we have in 2030 if all of this comes to pass?
 
@@ -357,7 +357,7 @@ One interesting data point: the OG Beacon Chain launched in 2020, and the design
 
 We're already starting to see — just yesterday, Dario Amodei, one of the AI OGs, starting to have AI recursively improve themselves autonomously, which is extremely scary. This is basically what should start the exponential towards super intelligence.
 
-#### Bitcoin's security budget crisis and the 2032 reckoning (1:25:12)
+#### Bitcoin's security budget crisis and the 2032 reckoning (1:25:12) {#bitcoins-security-budget-crisis-and-the-2032-reckoning-12512}
 
 We have 2032 as potentially Q-Day, and we also have 2032 where Bitcoin will have what I believe is its final halving. You could call it B-Day — the Bitcoin day where there's some sort of reckoning, because the issuance will be way too low to secure it.
 
@@ -379,7 +379,7 @@ There is a possibility that BTC the asset could decouple from Bitcoin the chain 
 
 **Justin Drake:** And if I said different words like, "We're just going to remove the 21 million limit because the security budget isn't sufficient" — Bitcoiners also don't think like that. They're heading very fast towards a wall, and 2032 is the reckoning day.
 
-#### Harvest now, decrypt later — quantum risks beyond crypto (1:30:09)
+#### Harvest now, decrypt later — quantum risks beyond crypto (1:30:09) {#harvest-now-decrypt-later-quantum-risks-beyond-crypto-13009}
 
 **Ryan Sean Adams:** What about quantum as it relates to the rest of society? This is not just a crypto problem. Blockchains are uniquely susceptible, but other components of society are also susceptible. To what degree does a post-quantum Ethereum represent a tool for society to solve and prevent things in a post-quantum, post-AI world?
 
@@ -387,7 +387,7 @@ There is a possibility that BTC the asset could decouple from Bitcoin the chain 
 
 Then there's another problem with encryption: if material has been encrypted today and you're not using post-quantum secure encryption, that data can be decrypted in the future. There's this whole class of attack called "harvest now, decrypt later." I think it's realistic that we're going to have mass decryptions in society — lots of Signal messages, Telegram messages, or troves of Gmail messages all being decrypted simultaneously. That could have a very significant impact on society.
 
-#### Ethereum as defensive accelerationism and AI existential risk (1:30:09)
+#### Ethereum as defensive accelerationism and AI existential risk (1:30:09) {#ethereum-as-defensive-accelerationism-and-ai-existential-risk-13009}
 
 **Ryan Sean Adams:** Justin, when we were talking about these three compute technologies, it does feel like the one that sticks out is AI. You were talking about 2032 being sort of an AGI-type moment. One general question: as an extremely talented cryptographer, you are not an AGI. The concern is that as we enter the computing singularity, all bets are off. All the well-laid plans we make in 2026 to have our blockchains be quantum resistant — what if AGI figures out how to crack our quantum-resistant cryptography in some other way? As a cryptographer, are you worried about the unknown unknowns of artificial general intelligence and the things it could crack? What if we're prepared for a post-quantum world but not prepared for a post-AGI world?
 
@@ -401,7 +401,7 @@ I think it's plausible that if humanity survives, Ethereum plays a key role in t
 
 Working on Ethereum has taken a whole new meaning for me in the last few months. I was mostly ignoring AI, partly because I was obsessed with blockchain stuff, but also because it was a toy not long ago. But through my work, especially with formal verification and development
 
-#### The meaning of working on Ethereum in the age of AI (1:35:08)
+#### The meaning of working on Ethereum in the age of AI (1:35:08) {#the-meaning-of-working-on-ethereum-in-the-age-of-ai-13508}
 
 and coding, I'm seeing how powerful this stuff is. In the last few weeks and months I've been obsessed with AI, learning as much as I can. I'm by no means an expert, and maybe this is just a phase people go through when they open Pandora's box. But for me, working on Ethereum is now all about defensive accelerationism.
 
@@ -417,7 +417,7 @@ I think it's possible that in the coming months and years we'll have some sort o
 
 **Justin Drake:** I'm relatively zen about it. I've reached a point where I'm happy to die. I've lived a very happy life.
 
-#### Closing thoughts on probability of doom (1:40:04)
+#### Closing thoughts on probability of doom (1:40:04) {#closing-thoughts-on-probability-of-doom-14004}
 
 **Ryan Sean Adams:** What?
 

@@ -19,7 +19,7 @@ A presentation by **Linda Xie** at Devconnect on decentralized social media. Lin
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=4vl8eZEOwqk) published by Ethereum Foundation. It has been lightly edited for readability.*
 
-#### The problem with centralized social (0:00)
+#### The problem with centralized social (0:00) {#the-problem-with-centralized-social-000}
 
 I've been working in the crypto space for 11 years now and on the Farcaster team. Prior to that, I was building on top of Farcaster. So I'm really passionate about crypto and decentralized social and what it can do for society.
 
@@ -27,7 +27,7 @@ I think it's really helpful to first frame the issues with traditional social ri
 
 And lastly, if an account and data is owned by the platform, that means once the company itself shuts down, you won't be able to have access to that information. We've seen that time and time again. In the US, we had TikTok potentially be banned and we've had a lot of creators be concerned by that. There are plenty of countries where many of these platforms ban themselves. So this is a problem that people actually experience day-to-day.
 
-#### Open social graphs (1:30)
+#### Open social graphs (1:30) {#open-social-graphs-130}
 
 One of the benefits of decentralized social means that you can have access to the social graph at any point in time. There's no permission that you need in order to use this data. What's really great is you see at the bottom here there's an open social graph. All of this data can be pulled by any client, any developer, any platform, and you can use this data to build on top of this platform.
 
@@ -35,7 +35,7 @@ A great example — you've got the Farcaster app and then you also have the Base
 
 When you decide to use this platform, you no longer have to start from scratch. You're able to keep your own audience. You post once and then you're able to get distribution across multiple clients on the network. You can be a Farcaster user and still get more distribution through Base app as they're onboarding more users and creators. This is ultimately the best user experience. And clients are now competing for these users because the switching cost is really low — you don't have to start from scratch, you keep your audience, and so clients have to compete to build better user experiences.
 
-#### Benefits for builders (3:13)
+#### Benefits for builders (3:13) {#benefits-for-builders-313}
 
 Then you also have the builder side, where builders are getting consistently kicked off platforms. We've seen that with Twitter — it's kicking off a lot of crypto apps and builders, and that's a single point of failure for their companies. Bankr recently on the same day was booted off Twitter and Telegram. Fortunately they were able to get reinstated a few days later, but it really goes to show there are these single points of failure. If you're a builder spending all your time and resources trying to build out your app, it's an extremely painful experience to just have your distribution cut off immediately.
 
@@ -45,7 +45,7 @@ One thing that is really amazing about decentralized social is that in the same 
 
 You can see here — I posted a crossword puzzle called Miniword. Every single day people compete on this like a New York Times crossword puzzle. I posted once on Farcaster, it also goes on to Base app and all other clients. You're able to get that boost of distribution as a builder. If I tap to open the mini app, I can start interacting with it, and because the social data is permissionless to leverage, you can pull in all the times of different people on the network and people can compete for the best score. It becomes more of a social experience versus just doing a puzzle by yourself, and you can get more virality by leveraging the social graph.
 
-#### Crypto and embedded wallets (6:30)
+#### Crypto and embedded wallets (6:30) {#crypto-and-embedded-wallets-630}
 
 Decentralized social exists — we've seen it with Bluesky and they've done a great job of pulling in users as platforms get banned in different countries. However, the really special thing is when you combine crypto and decentralized social, because you're now creating experiences that you would never get on a traditional platform. That's something our team is really leaning into.
 
@@ -55,7 +55,7 @@ Users can also interact with mini apps onchain because they have their embedded 
 
 You can also have agents interacting in the feed. If you really believe in this agentic future where there's a lot of agents interacting with each other, crypto is the natural source they're using for sending funds to and from each other. You don't have to coordinate addresses or how someone's getting paid — you automatically know a user's address, you have all the information, it doesn't matter where they live in the world. You're able to interact with them directly. I really believe that crypto and agents and open social graphs are going to be playing a much larger role.
 
-#### Micro-tipping (8:36)
+#### Micro-tipping (8:36) {#micro-tipping-836}
 
 One of my favorite examples of what's really unique about open social graphs in crypto is micro-tipping. In the really early days of crypto, people were always talking about how it'd be amazing to do micro-tipping — if you're a creator posting really great content, being able to send a really small amount of funds to the creator. I would use these early Bitcoin tipping apps. But the problem in the early days was it was actually quite slow and expensive to send really small amounts of funds.
 
@@ -63,11 +63,11 @@ Now you have the ability to send transactions that are one cent or even lower be
 
 You can see my wallet activity history — I'm sending funds to other users on the network and I'm also receiving funds from other users that have set these allowances. There are even below-one-cent transactions, which is a pretty wild concept. These are people that live all over the world. If you're brand new to crypto and you join Farcaster, you have a wallet by default. Once you start posting high-quality content, people can just start automatically tipping you and you can build up a balance without ever having to purchase crypto. I've talked to so many users who said this was actually the first crypto they've earned for creating content or interacting with mini apps.
 
-#### Mini apps and creative tools (11:01)
+#### Mini apps and creative tools (11:01) {#mini-apps-and-creative-tools-1101}
 
 One of my favorite mini apps that showcases using the embedded wallet, crypto transactions, and the open social graph really well is Emerge, built by Atown and the team. It enables creators to put together a prompt that transforms your profile picture into some version of the prompt. Here's an example — Peachy, a very popular creator on the network, wrote a prompt to transform profile pictures into tarot cards. I was able to generate an image using my profile picture and share the mini app so others who are interested can generate their own. There are leaderboards of which prompts have done really well. If you're a creative person, you can create your own prompts and start earning — I paid 25 cents for this prompt transaction, and 418 other users also generated it, so Peachy is earning for creating this content, and it can go viral in the feed.
 
-#### The Warplet phenomenon (12:41)
+#### The Warplet phenomenon (12:41) {#the-warplet-phenomenon-1241}
 
 We actually had one of our highest daily active user days on Farcaster because of virality that happened recently. First, we have this unofficial mascot of Farcaster called Warplet. Dan, the co-founder of Farcaster, had created it. The team — including me — maybe didn't think it was the cutest to be the official mascot, so he released it into the community and said people can do whatever they want with it.
 
@@ -75,13 +75,13 @@ A developer named Angel took that and decided to build a mini app where you can 
 
 What was also really cool to see was different remix culture. Builders were saying, "Okay, you each have your Warplets now, so let's build games and fun experiences on top." There was ranking of "what's the ugliest Warplet?" and "what would a baby Warplet look like if you combine these two?" All these fun games were created on the network, which goes to show that when you leverage the social graph, you can make for a much more engaging experience as an app developer.
 
-#### Mini apps for social good (15:02)
+#### Mini apps for social good (15:02) {#mini-apps-for-social-good-1502}
 
 Here is an example of a mini app — actually Horsefax built this on the team. I think this is really important — you can support Roman Storm's legal defense fund. We used Daimo Pay, and you can pay with any token and contribute to the legal defense fund. Because it's an embedded wallet, you're never getting kicked out to use another app. You can immediately share that within your feed telling your followers you contributed. They can then discover this app and continue to donate as well. This is a mechanism to further share apps within the follower and audience that everyone has built themselves.
 
 Here's another similar example — a crowdfund built by Nicholas at Seed Club, like a GoFundMe or Kickstarter platform. You can see the different users that have contributed. You can tap in your embedded wallet and contribute funds directly through the Farcaster app. You never have to get kicked out. The creator was able to raise well past their goal, and you can share that in your feed so all your followers can discover the mini app as well.
 
-#### Challenges of decentralized social (16:41)
+#### Challenges of decentralized social (16:41) {#challenges-of-decentralized-social-1641}
 
 All of this is really awesome, and decentralized social sounds great, but I want to be really honest about the challenges. One thing to note is that it's small — very small relative to all these major traditional social platforms with users in the billions and hundreds of millions.
 
@@ -93,7 +93,7 @@ Spam is also an issue. This exists on centralized social platforms too — you c
 
 And then moderation — also a problem and challenge within traditional social platforms of making sure users are having a good experience and discovering content they're actually interested in. These are things we're always continuing to work on.
 
-#### Why now? (19:48)
+#### Why now? (19:48) {#why-now-1948}
 
 Decentralized social has existed for a while, but why now? I think it's all these primitives coming together. First, you have open social graphs that anyone can use and leverage. I'm talking to teams all the time that I didn't even know before — they were just building Farcaster mini apps because they're able to leverage the data without us.
 
@@ -105,7 +105,7 @@ Where this all plays out — I think email is a really good analogy. When you se
 
 Farcaster is increasingly spending more time on trading features; if you're not interested in that, Base app and Uno are really great about showcasing social features. That is the way social is supposed to be in the long run. We have a long way to go, but I really think this is the future of where social should be headed.
 
-#### Q&A (23:47)
+#### Q&A (23:47) {#qa-2347}
 
 **Moderator:** Thank you so much, Linda. We have some questions from the audience. I think what's really cool is in the real world, I can go outside in my neighborhood and there's so many things I can do freely. Digital neighborhoods aren't always the same, which is why the decentralized social thesis is very compelling, especially as more of our lives come online. There's a current shift where people on centralized social media platforms need to move to decentralized social media platforms. From your experience, how can we ease the migration?
 

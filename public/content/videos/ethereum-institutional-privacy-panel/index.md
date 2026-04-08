@@ -18,7 +18,7 @@ A panel at the Web3Privacy Now event during Devconnect 2025, moderated by **Oska
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=cZqlg4W1Els) published by Web3Privacy Now. It has been lightly edited for readability.*
 
-#### Introduction to Institutional Privacy Task Force (0:03)
+#### Introduction to Institutional Privacy Task Force (0:03) {#introduction-to-institutional-privacy-task-force-003}
 
 **Oskar Thorin:** Hello. Can you guys hear me? All right. Cool. So we'll first do a very short intro talk — like a 3 to 5 minute talk — and then that will lead into the panel. This is an abbreviated talk. The previous panel talked a lot about compliance and privacy and so on. I gave a previous talk at Cyban Congress that also touched on this, and there will be a longer version of this talk at DeFi Day later today. But what I want to talk about is institutional privacy on Ethereum.
 
@@ -30,7 +30,7 @@ A single large institution here can have a massive impact on which ecosystem eve
 
 In order for Ethereum to onboard these institutions, they need to address these privacy concerns. What we're trying to do at the Institutional Privacy Task Force is onboard institutions onto Ethereum and make sure their privacy goals are met. We do things like workshops, trying to demystify the space and make sure we can address institutional needs when it comes to privacy specifically. The first artifact we have is this institutional privacy map — we talk to massive institutions, understand their business use cases and requirements, open source as much as possible, and then talk to vendors in the space to connect institutions to the solution space. 
 
-#### Panel Introductions and Institutional Problems (5:00)
+#### Panel Introductions and Institutional Problems (5:00) {#panel-introductions-and-institutional-problems-500}
 
 **Oskar Thorin:** Sorry it was a bit fast, but hopefully understandable. So this panel has a lot of experts across research, policy, and engineering, and we'll talk about institutional privacy. 
 
@@ -48,7 +48,7 @@ From the other direction, *why be on a public blockchain?* These are complex mar
 
 **Amzah:** Yeah. So I work for ABN Amro, which is a big Dutch bank. We have 5 million retail customers. So we're not actually building something right now specifically in privacy, but what's coming up now is for example a digital identity wallet. Usually how that works is data is stored in a centralized database and then you connect with an outside provider or a third party, but that's of course not really safe. So we're already starting to think about how we can use ZK-proofs, for example, so we could have selective disclosure with outside parties. In that sense, we can protect our customer information and also let them connect with the broader Web3 environment.
 
-#### Concrete Workflows and Storage (10:07)
+#### Concrete Workflows and Storage (10:07) {#concrete-workflows-and-storage-1007}
 
 **Oskar Thorin:** Okay, great. If you pick one concrete flow that you might care about — like maybe some bond issues, trade, or treasury payment — who can see what exactly at what step, and what is stored onchain versus offchain? Maybe starting with François.
 
@@ -68,7 +68,7 @@ On the other end, maybe there is a trade of positions between lenders, and there
 
 **Amzah:** Yeah. I mostly agree with what Zach said. In the past, when institutions thought about privacy, they would just start a private chain where maybe 20 banks participate and only they are able to see what's in there. But actually, it's much more nuanced. It depends on the use case, what type of flows, and what the regulator needs to know. You can put balance information onchain in a more aggregated form using proof of reserves, for example.
 
-#### Non-Negotiable Requirements (15:26)
+#### Non-Negotiable Requirements (15:26) {#non-negotiable-requirements-1526}
 
 **Oskar Thorin:** Eugenio and Amzah, from banks, venues, and regulators, what are some non-negotiable requirements that you keep hearing over and over again? Like audit trails, KYC rules, or reporting requirements?
 
@@ -78,7 +78,7 @@ On the other end, maybe there is a trade of positions between lenders, and there
 
 **François:** Our co-founder spends weeks with customers in the institutional space, and the top-level demand that comes up is "control." Who sees what, when, and for what reason. And then you devolve those conversations into details and they become insanely customized. To us, this is great because the traditional finance world has spent decades building their accounting practices and AML/CTF flows. They are very specific about that control. So we're building those capabilities at the protocol layer and supporting customers in their journey.
 
-#### Trade-offs and Global Liquidity (18:10)
+#### Trade-offs and Global Liquidity (18:10) {#trade-offs-and-global-liquidity-1810}
 
 **Oskar Thorin:** What are the main trade-offs that you're currently living with? Performance versus privacy, or global liquidity versus typing controls, or onchain transparency versus offchain records? Starting with Zach.
 
@@ -88,7 +88,7 @@ On the other end, maybe there is a trade of positions between lenders, and there
 
 Of course, there are complexities. We care a lot about that white-glove experience for an institution entering that market, so they can have their own conditions. One of the challenges is the balance between privacy and threat resistance. There are threat actors that exist in the Web3 world, and we want to get a better handle on that to offer a fantastic experience. We're approaching decentralization carefully — we know how to do it, but we'll do it at the moment it best serves the customers.
 
-#### System Trust and Adoption Drivers (20:47)
+#### System Trust and Adoption Drivers (20:47) {#system-trust-and-adoption-drivers-2047}
 
 **Oskar Thorin:** Eugenio, how do you make these solutions trusted and usable by institutions and governments?
 
@@ -98,7 +98,7 @@ Of course, there are complexities. We care a lot about that white-glove experien
 
 **Amzah:** For us, it's really important that it's customizable. Blockchain is no longer just one use case where everything is fully public or fully private. It's not one-size-fits-all. What's also most important for us is to be regulatory compliant. The banking sector in Europe is heavily regulated, and if something isn't correct regarding privacy, it just doesn't fly with the regulators.
 
-#### Looking Ahead to 2026 (23:15)
+#### Looking Ahead to 2026 (23:15) {#looking-ahead-to-2026-2315}
 
 **Oskar Thorin:** All right, we're almost at the end. What is one building block — technical, operational, or policy-wise — that you think would meaningfully accelerate institutional adoption? And if we meet again in 2026, what do you think is realistic that would have happened this year?
 
@@ -110,7 +110,7 @@ Of course, there are complexities. We care a lot about that white-glove experien
 
 **François:** If we meet in a year, I would like to have launched the mainnet of Miden in the spring, so we can celebrate that. Beyond this, I would like us to be on our way to full decentralization. It will take a village. The core thing I want to see happen is more engagement. The idea that privacy is at odds with compliance isn't really true, but marrying the two takes work. We want institutions to help shape the kind of markets they want to see, because we know this is going to be messy and peculiar to their needs.
 
-#### Closing Thoughts (28:05)
+#### Closing Thoughts (28:05) {#closing-thoughts-2805}
 
 **Oskar Thorin:** I just want to give each of you 10 to 20 seconds to mention something that happened this week or a quick plug before we finish.
 

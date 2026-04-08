@@ -18,7 +18,7 @@ An Offstage interview at Devconnect where host Binji and Aave founder **Stani Ku
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=EWe-cjT9IQs) published by Ethereum Foundation. It has been lightly edited for readability.*
 
-#### Growing up in Finland (0:28)
+#### Growing up in Finland (0:28) {#growing-up-in-finland-028}
 
 **Binji:** So, we're going to play Jenga here. There are some questions associated with it. If you want to make a first move, we can get started.
 
@@ -48,7 +48,7 @@ An Offstage interview at Devconnect where host Binji and Aave founder **Stani Ku
 
 **Stani Kulechov:** My dad always wanted me to do tech because he saw the importance of computers. Internet was starting to come up. Libraries used to have computers — that was the first place. They were actually really supportive, to be honest.
 
-#### Getting the first computer (3:00)
+#### Getting the first computer (3:00) {#getting-the-first-computer-300}
 
 **Binji:** How do you explain to them what you do? Are they familiar with DeFi now?
 
@@ -58,7 +58,7 @@ An Offstage interview at Devconnect where host Binji and Aave founder **Stani Ku
 
 **Stani Kulechov:** Totally. Internet and computers gave access to information — you didn't have to go to libraries to learn something or ask your parents or your friends. And I think in a similar way, DeFi and crypto are giving access to financial tools. That's what really drives it for me. It's personal because I've seen directly how it can be helpful.
 
-#### Discovering Ethereum (5:30)
+#### Discovering Ethereum (5:30) {#discovering-ethereum-530}
 
 **Binji:** How'd you end up dropping out of law school and getting into Ethereum?
 
@@ -70,7 +70,7 @@ I started to develop smart contracts and was doing all this work on Ethereum. I 
 
 **Stani Kulechov:** We believe in freedom and what decentralized finance can do for a lot of people — empowering them. Building around a community of like-minded individuals really brings everything together.
 
-#### Building ETHLend and naming Aave (9:00)
+#### Building ETHLend and naming Aave (9:00) {#building-ethlend-and-naming-aave-900}
 
 **Binji:** Where did the name Aave come from?
 
@@ -82,7 +82,7 @@ We're going to be bigger than JPMorgan and all of these banks and networks. Why 
 
 **Stani Kulechov:** Yeah. And coming from a smaller town in Finland, what I realized is that there's a lot of people that actually are looking for what we're building — both inside and outside of our space.
 
-#### Aave vs traditional finance (12:00)
+#### Aave vs traditional finance (12:00) {#aave-vs-traditional-finance-1200}
 
 **Binji:** How do you differentiate between JPMorgan and Aave?
 
@@ -90,7 +90,7 @@ We're going to be bigger than JPMorgan and all of these banks and networks. Why 
 
 I shared it on the Ethereum Reddit in 2017 and I got a lot of excitement from the community from the very beginning. That's how the crypto community works. You don't need a business case or a pitch. You just show people something that they can build on.
 
-#### Security and user experience (14:30)
+#### Security and user experience (14:30) {#security-and-user-experience-1430}
 
 **Stani Kulechov:** Better access also means better security. How do you ensure that users don't get compromised by fishing attempts, and how do we do it better than in the traditional internet world? Solving this is important because we can't rely on a process where users are losing what they have, right? I think the most common thing is phishing. The UX of interacting with a blockchain doesn't have validation.
 
@@ -102,7 +102,7 @@ I shared it on the Ethereum Reddit in 2017 and I got a lot of excitement from th
 
 **Stani Kulechov:** Sometimes the idea doesn't have validation. Sometimes the idea can have validation but the execution is poor. So there are different components that are important. I kept just thinking, kept improving the product, and I think that was the right path.
 
-#### Angel investing (17:00)
+#### Angel investing (17:00) {#angel-investing-1700}
 
 **Binji:** You're a prolific angel investor. What do you look for when evaluating new builders?
 
@@ -112,7 +112,7 @@ I shared it on the Ethereum Reddit in 2017 and I got a lot of excitement from th
 
 **Stani Kulechov:** Not really, because there's always some value. You learn quite a lot, you progress the space. And typically you create a lot of talent as an output. Sometimes the investment doesn't work, but then the same team might go and start another company where they have more experience and might be more successful. Some are more successful than others, but overall they're all bets we're confident in.
 
-#### Retention vs acquisition (19:00)
+#### Retention vs acquisition (19:00) {#retention-vs-acquisition-1900}
 
 **Binji:** What's a metric you care about in crypto?
 
@@ -122,7 +122,7 @@ I shared it on the Ethereum Reddit in 2017 and I got a lot of excitement from th
 
 **Stani Kulechov:** Typically now, on the acquisition side, people think more about retention than acquisition. It highlights why people don't get more engaged — typically it's because there's a lack of product that might be engaging for these users. We've been focusing a decade on infrastructure. I think the application layer is the next decade, and that will help us scale the user base.
 
-#### Crypto volatility and institutional assets (20:30)
+#### Crypto volatility and institutional assets (20:30) {#crypto-volatility-and-institutional-assets-2030}
 
 **Binji:** Crypto is constantly seen as this volatile thing — bear market, bull market. Aave is like a counter to that, right? It's just steady throughout.
 
@@ -132,7 +132,7 @@ With the institutional assets like the Horizon market that we launched, you use 
 
 It's great for borrowers because they can access liquidity at any point. It's great for lenders because they can lend against traditional assets but do it onchain with stablecoins. I think for institutions, realizing the benefit of stablecoins and tokenized assets helps them think outside of the volatility — and stop thinking that crypto is purely about volatility.
 
-#### Ethereum as a trust layer (22:00)
+#### Ethereum as a trust layer (22:00) {#ethereum-as-a-trust-layer-2200}
 
 **Binji:** For Ethereum, one of the things I feel pretty passionate about is that it's a trust layer. Protocols like Aave show the trust in action in the real world. It's lend, borrow, backed by the economic security and the weight of trust that comes with these platforms.
 
@@ -142,7 +142,7 @@ It's great for borrowers because they can access liquidity at any point. It's gr
 
 **Stani Kulechov:** Obviously it doesn't see how much work goes into what we do day to day. A lot of things are taken at face value. But I think it has to be a fun process. Building has to be a fun process. You shouldn't be here if it's overwhelming. You should be here to enjoy doing what you do.
 
-#### Having fun while building (24:00)
+#### Having fun while building (24:00) {#having-fun-while-building-2400}
 
 **Binji:** GrAave is a great example of how to have fun. It's just unreal to me that the same team that's changing what modern finance looks like — what, the 30th largest bank in the world not considering collateralization, probably higher — is also doing GrAave. It proves you guys are bringing the crypto culture into the next generation of finance without forgoing the community and culture that brought you towards this world.
 
@@ -152,7 +152,7 @@ It's great for borrowers because they can access liquidity at any point. It's gr
 
 **Stani Kulechov:** I think the Aave app. Just focusing on simplicity. Simplicity scales. We're very energized about that direction — bringing more DeFi to the mainstream and doing it the right way, where everything is abstracted away and it's simple and easy to use.
 
-#### What makes you feel most alive (26:00)
+#### What makes you feel most alive (26:00) {#what-makes-you-feel-most-alive-2600}
 
 **Binji:** What makes you feel most alive?
 
@@ -166,7 +166,7 @@ It's great for borrowers because they can access liquidity at any point. It's gr
 
 **Stani Kulechov:** I just don't like the element of seriousness. I like the seriousness of getting things done, but I like the fact that you have to have fun in life, fun in work. I had a lot of freedom when I was growing up, and that created experiences I otherwise wouldn't have had.
 
-#### Why London (28:30)
+#### Why London (28:30) {#why-london-2830}
 
 **Binji:** You guys chose to be based in London as one of your main headquarters. Why London?
 
@@ -176,7 +176,7 @@ It's great for borrowers because they can access liquidity at any point. It's gr
 
 **Stani Kulechov:** We did recently, yeah.
 
-#### Inspiration and almost quitting (30:00)
+#### Inspiration and almost quitting (30:00) {#inspiration-and-almost-quitting-3000}
 
 **Binji:** Who's someone outside of crypto and tech that inspired you, whether it's your leadership style or when you were coming up?
 
@@ -186,7 +186,7 @@ It's great for borrowers because they can access liquidity at any point. It's gr
 
 **Stani Kulechov:** Yeah, sometimes. But it's kind of like a quit for the day. You just give up for the day to rest and there's always the next day. Especially if you have something that's hard to solve — like the puzzle here.
 
-#### End-user products and the Ethereum community (34:00)
+#### End-user products and the Ethereum community (34:00) {#end-user-products-and-the-ethereum-community-3400}
 
 **Binji:** What's the most important thing we need to do as the Ethereum community?
 
@@ -198,7 +198,7 @@ Figuring out how we can channel that energy, especially within end-user products
 
 **Stani Kulechov:** Definitely. We built this amazing infrastructure on the network layer, on the DeFi layer, and now the next layer is basically building what works and distributing it to everyone. DeFi for everyone.
 
-#### Closing (36:00)
+#### Closing (36:00) {#closing-3600}
 
 **Binji:** I think the majority of the people who discover Ethereum will discover it through these surfaces.
 

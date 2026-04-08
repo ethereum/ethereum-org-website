@@ -19,7 +19,7 @@ A keynote by **Bartek Kiepuszewski**, founder of L2BEAT, at Devcon SEA examining
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=ik2JxmHDmyw) published by Ethereum Foundation. It has been lightly edited for readability.*
 
-#### Introduction (0:00)
+#### Introduction (0:00) {#introduction-000}
 
 Being a founder of L2BEAT, I do have a unique opportunity to work with essentially every single L2 team out there, and we've been working with them since the very beginning of this space — which is like four years ago. That's incredible. Time flies by very quickly. We've worked with the early pioneers in ZK tech, we've worked with the Plasma Group that renamed to Optimism, we've worked with Arbitrum. And from this stage I do want to acknowledge all these teams, because without your support we certainly wouldn't be here. As L2BEAT, we are extremely thankful for all the support that the community gives us.
 
@@ -27,7 +27,7 @@ So let's have a look at what we've managed to achieve. First of all, we've manag
 
 The thing is, with all that growth comes also a lot of responsibility. We need to understand that end users who are using these systems are putting money into these rollups because they believe that rollups inherit the security of Ethereum. With that kind of realization, in my opinion, we need to start getting serious about security.
 
-#### Scaling Ethereum (2:10)
+#### Scaling Ethereum (2:10) {#scaling-ethereum-210}
 
 We've also managed to scale Ethereum. Ethereum was charming along quite fine, but it started to get really slow for the demand and the fees were getting really high. So surely we are scaling — these numbers also go up. This is incredible.
 
@@ -35,7 +35,7 @@ However, there is a "but." You know, guys, there's always a "but," right? And I'
 
 Because you know, we've been using training wheels for too long. If you're an adult using training wheels — and I repeat, it's been four years — then you are really immature. It's okay to use training wheels if you're a child. It's not okay to use training wheels if you're an adult. And I think it's time for all of us to really stop being shy about it. We should all speak out, and we shouldn't suffer from emperor's new clothes syndrome.
 
-#### The big "but": missing proof systems (4:30)
+#### The big "but": missing proof systems (4:30) {#the-big-but-missing-proof-systems-430}
 
 So what is this big "but"? Well, first of all, most L2s today do not have a proof system, which is kind of surprising because early pioneers like StarkNet, like zkSync, like Aztec — four years ago when they were launching their first application-specific rollups, they did have proof systems. So yes, you can launch today an L2 with one click of a button. However, is that really an L2? Is that really a rollup? What you're doing is launching something which is secured by a multisig. I don't think that's good enough.
 
@@ -43,13 +43,13 @@ The state of the ecosystem today is kind of like this on this diagram. On the le
 
 That chart on the right will also include all the Orbit stacks, which do have a proof system, however it's actually behind an often very short permissioned whitelist. Sometimes this whitelist is just one actor — it's the same as the state proposer. It's essentially the state proposer and it's only them who can challenge themselves. Like, what? Seriously.
 
-#### Security councils (6:00)
+#### Security councils (6:00) {#security-councils-600}
 
 Now, most L2s do not use security councils. What do we mean by a security council? A security council is essentially a multisig that consists of at least eight participants and requires a 75% consensus threshold. So you can think of it as a big multisig, but it's not just about the size — it's about the fact that we want the participants to be geographically decentralized. You might have heard yesterday an amazing presentation about the need for geo-diversification. That's what we want from these structures. And essentially, we want the participants most importantly to come from different companies and different jurisdictions. That's super important, and I'm going to show you some examples of why.
 
 Think about security councils as these supercharged multisigs. There's a very important social layer behind them. So this is the current state of things, and again, it's very bad. We only have security councils in Arbitrum, Optimism, Polygon, zkSync — and I know that StarkNet, Scroll, and interestingly Fuel are launching with a security council. Everybody else is essentially a very small, internal, often private multisig, and frankly it is extremely hard to tell the difference between these multisigs and simple EOAs.
 
-#### Data availability trust assumptions (7:25)
+#### Data availability trust assumptions (7:25) {#data-availability-trust-assumptions-725}
 
 The third big item that we did wrong is that most non-rollup L2s are set up with abysmal DA trust assumptions. And I use the word "abysmal" — A, because I like it, and B, because it's really, really bad.
 
@@ -59,7 +59,7 @@ A data availability committee was originally created and championed by StarkWare
 
 So all together, I'm sorry to say, but at the moment in most L2s, permissioned operators can steal or freeze your funds. We're here to make you all aware of that. Sorry to say it, but we need to change the attitude.
 
-#### Why proof systems matter (8:40)
+#### Why proof systems matter (8:40) {#why-proof-systems-matter-840}
 
 Why should we care about proof systems? There are at least three good reasons in our opinion why we should all have a working proof system.
 
@@ -71,7 +71,7 @@ Once you introduce a proof system, the situation is much harder for the maliciou
 
 Finally, proof systems — if you're Stage 2 — allow you to remove any intermediaries whatsoever. You don't need a security council, or if you do have it, it's only for emergency situations. So that may actually have profound regulatory implications. You may want to launch your L2 as a Stage 2 system from the very start. That's possible, but of course you do need to have a proof system — ideally you might want to have more than one. There are already some announcements of systems doing that, like the recent announcement from the Nethermind team building a rollup intended to be Stage 2 at launch.
 
-#### Why security councils, not multisigs (11:29)
+#### Why security councils, not multisigs (11:29) {#why-security-councils-not-multisigs-1129}
 
 That was about proof systems. Now, why security councils and not just simple multisigs? The reason is: don't believe multisigs are multisigs. That's the reason — unless there's a social layer that can actually convince you that these are fundamentally diversified.
 
@@ -83,7 +83,7 @@ Finally, quite recently we had an attack on a multisig. Don't think for a second
 
 So to sum up: if you have a Stage 0 rollup with no security council, essentially a malicious operator can do whatever they want with your funds. If you are a Stage 0 rollup with a security council, then an attacker needs to bribe a security council minority — maybe a hard thing to do, but much easier than bribing the security council majority, which you would need to do if your rollup has a proof system. And finally, no one can steal your funds if you're Stage 2. That's the promise of getting to Stage 2.
 
-#### Proposed reclassification (13:10)
+#### Proposed reclassification (13:10) {#proposed-reclassification-1310}
 
 The question is: do we have the right incentives for projects to actually care? The problem is that the only thing we can do — we as L2BEAT and we as the Ethereum community — is to apply social pressure. Vitalik said that starting next year he will plan to only publicly mention L2s that are Stage 1. He previously even said that he's not going to call systems rollups if they're not Stage 1.
 
@@ -93,7 +93,7 @@ What we're proposing to the community — and this is going to go on the forum f
 
 Then you have another category of systems that are not using Ethereum DA. They use additional trust assumptions that come with external DA. We call them "alt-DA" but they would include validiums, optimiums, and whatever hybrid construction you may create. However, they have to give you reasonable DA guarantees — that cannot be your basement. That has to be a reasonably sized data availability committee, or if you're using Celestia or Avail, you need to use the bridge.
 
-#### The "others" category and L2BEAT's pledge (16:05)
+#### The "others" category and L2BEAT's pledge (16:05) {#the-others-category-and-l2beats-pledge-1605}
 
 What about the others? We will put them into a third category, which we call — and now I'm waiting for community feedback on how to name these systems — our working name is "others." The point is they are secured by multisigs, and we will expose these multisigs for what they are. That's what we want to do in our UI.
 
@@ -107,7 +107,7 @@ Is it enough to just say "I've got a proof system"? No. Our pledge to the commun
 
 We're hiring researchers. We will do all that work. This is our pledge for the next year. I hope next year is going to be the year of L2s and rollups — however, it's not about launching a rollup with one click of a button. The point is you want to be able to launch a system with good security. Ideally you want to inherit as much security as possible from Ethereum. There's a lot of work to do for all of us to reach that. But if we don't, then all we're doing is essentially creating thousands of insecure sidechains. We don't want that, I think, as a community.
 
-#### Q&A (18:45)
+#### Q&A (18:45) {#qa-1845}
 
 **Host:** Let's do the Q&A. Is it important that rollups have a decentralized sequencer, or are other safety mechanisms sufficient?
 

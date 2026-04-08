@@ -18,7 +18,7 @@ A presentation by **Juan Benet**, founder of Protocol Labs and inventor of IPFS 
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=zkXM9H90g_E) published by EthCC. It has been lightly edited for readability.*
 
-#### Introduction to science and progress (0:10)
+#### Introduction to science and progress (0:10) {#introduction-to-science-and-progress-010}
 
 All right, hello everyone. My name is Juan. I'm here to talk about DeSci. I want to talk about how we can use DeSci to fund, organize, and open science. First off, this is what we're going to be talking through: I'm going to talk about science in general for a moment, then I'm going to talk about what the DeSci movement is, then about how we can fund the science commons. Then how DeSci is organizing the people, the projects, and the works around science. Then I want to speak a little bit about open access and reproducible science, and I want to finish with a call to action. So this will be pretty quick. We have a lot to cover, so I'll move fast.
 
@@ -34,7 +34,7 @@ Now, science has a ton of problems. There are all kinds of issues with the scien
 
 Once the studies are done and produced, only a fraction of those replicates. So there's all kinds of science that has been published and accepted and thought to be correct, only to find out later that a huge fraction of it can't actually be reproduced. So there's a huge reproducibility crisis. And there are even scientific discoveries whose artifacts are going missing. Think of the actual papers, code, or data associated with some result going missing from our knowledge banks. So there are all kinds of issues around science that need to be fixed, and this is part of what DeSci is about. This is tackling a range of these problems, not wholesale, not completely, but the DeSci community is trying to tackle a number of these issues.
 
-#### The DeSci movement (5:11)
+#### The DeSci movement (5:11) {#the-desci-movement-511}
 
 So what is DeSci? DeSci is a movement to improve science using Web3 tech and tools. Think of being able to use all of the magic of hash linking, blockchains, and smart contracts to create systems and structures that can improve how we do science across fields around the globe.
 
@@ -46,7 +46,7 @@ There are now several groups doing decentralized biotech funding, groups like Vi
 
 There are also now a lot of different meetups and conferences that are gathering these communities. Things like DeSci Day, DeSci Berlin, Schelling Point from the Gitcoin community, and Funding the Commons. These conferences are gathering a lot of the conversations around DeSci.
 
-#### Funding the commons (10:40)
+#### Funding the commons (10:40) {#funding-the-commons-1040}
 
 Let's talk about funding the commons. Maybe some of you have seen this diagram I've used in the past around the innovation chasm. In the science-to-technology translation, the DeSci part is mostly focused on the left part—just the science part—trying to think of better incentive structures and better ways of coordinating groups to produce better scientific output. It's worth noting that the total global R&D funding is, from one perspective, kind of massive, but from another perspective, not that large and hasn't changed that much in the last few decades, even though the throughput and outcome of the technology we're building has grown tremendously.
 
@@ -64,7 +64,7 @@ For example, groups like VitaDAO are creating a data structure giving out grants
 
 Certificates of impact are another fascinating structure representing retroactive funding. They enable participants, once they achieve some impact, to mint a certificate around that impact and sell it in the market to anybody that wants to claim that impact. That enables a speculative market to emerge, closing a loop across time to retroactively fund extremely important work. This is crucial because many times you only realize how valuable something is long after the work has been done.
 
-#### Organizing people and Data DAOs (15:28)
+#### Organizing people and Data DAOs (15:28) {#organizing-people-and-data-daos-1528}
 
 Now some quick thoughts about organizing people. In the past, GitHub has been tremendously successful in helping organize scientific discovery. Entire textbooks and fields have developed through GitHub. Many groups have used the basic primitives of GitHub around issues, code collaboration, and version control to organize communities of practice and science. But what isn't complete there is you don't have a way of creating organizations that do research, dealing with capital, or paying contributors.
 
@@ -78,7 +78,7 @@ You can think of bundling that kind of activity and data generation with somethi
 
 Some final notes on open access and reproducible science. IPFS has been used already a ton for many kinds of open science work. It's already living the dream of opening up access to a lot of science, supporting distributed Wikipedia copies, massive archives of papers, and datasets.
 
-#### Open access, reproducible science, and call to action (20:40)
+#### Open access, reproducible science, and call to action (20:40) {#open-access-reproducible-science-and-call-to-action-2040}
 
 We're not quite there yet with full reproducibility. This is an area that needs more work, but a lot of people have already done the thinking. There are really good specs and ideas around using standard reproducibility with IPFS to freeze all the assets and build a fully reproducible pipeline. You can summon back specific experiments from the past, bring back totally frozen VMs or containers, rerun all the data pipelines, and verify the experiments are correct.
 

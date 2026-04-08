@@ -20,7 +20,7 @@ A presentation by **Nixo Rokish** from the Ethereum Foundation at ETHBoulder, ex
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=ghyY_cRqd54) published by EthBoulder. It has been lightly edited for readability.*
 
-#### Introduction (0:12)
+#### Introduction (0:12) {#introduction-012}
 
 Thanks to all six of my friends who showed up. All right. I'm talking to you today about Ethereum core governance. My name is Nixo. I lead the protocol support team at the EF. Among all of our mandates, one of our mandates is to make the governance process clearer and easier to navigate for everybody else who participates in these things because Ethereum does include a whole lot more than just its core developers.
 
@@ -36,7 +36,7 @@ So last year there was a really contentious thing that happened. You might have 
 
 So that was sort of the straw that broke the camel's back on EOF and it ended up getting kicked out of the fork. Another thing that they have to consider is it has to be written and rigorously tested in six different languages because these clients are written in six different languages. So that's a really big testing matrix for them to work with. And because of that every tiny design choice gets subject to debate with no authority to resolve disagreements. So the question that brings up is who decides — which is the crux of governance.
 
-#### Misconceptions (5:23)
+#### Misconceptions (5:23) {#misconceptions-523}
 
 So that brings us to misconceptions and we'll address some of these. One is Vitalik decides what goes into the Ethereum protocol. An extension of that is that the EF controls everything. And a third one is it's all backroom deals — insiders, OGs making these decisions.
 
@@ -52,13 +52,13 @@ And I like this stupid tweet that I screenshotted here because it's like some ra
 
 It's all backroom deals, insiders, OGs — I understand a little bit more why this is a misconception because you basically come to these governance calls, there are a hundred people in these governance calls. It seems like they're all very comfortable with what's going on. You're lost. You have no idea how these decisions get made. You're like, "Is it my turn to talk yet?" And it feels like people are listening to the same 10 people to make these decisions.
 
-#### Meritocracy and participation stats (10:18)
+#### Meritocracy and participation stats (10:18) {#meritocracy-and-participation-stats-1018}
 
 But the truth is Ethereum development is more of a meritocracy than I've ever seen in most software development. All these people on this screenshot — this is one of three in this random ACD call that I decided to screenshot — none of these people were appointed to be here. Everybody is just sort of the people who showed up. They're the developers who have spent a lot of time with this protocol. They are the ones that people have acknowledged as being talented developers in this space consistently making good decisions, and nobody in this is appointed to be here.
 
 So I only joined the EF a little more than a year ago. I grabbed these stats. They only go back to March 2025. So less than a year. The average All Core Dev attendees — that's the governance calls — is 98. So on average there are 98 people in these calls. The max attendees in one call since then was 153. I think that was the day that we were deciding the Pectra mainnet date. And the total unique attendees is 567 just in the last year. I really like that metric because it does show that it's not the same 100 people going to these calls every time. These app developers, researchers, somebody hears about some feature that is being discussed, they show up to voice their opposition to it or their support of it and then they don't come to another call.
 
-#### How the governance process works (11:52)
+#### How the governance process works (11:52) {#how-the-governance-process-works-1152}
 
 So this is kind of a dry slide but I think it's important to go through — this is how Ethereum's governance currently works. So when one of these forks is being discussed the first thing that happens is people during this allocated time window are able to submit their headliner proposal. Headliner proposal is the major feature that we want people to rally around for this fork. This can be a community member, a researcher, a core dev — really anybody who submits one of these headliner proposals. Then the window ends and on the governance calls we sort of discuss which of these makes sense. People make their cases, people argue and there is consensus around which one we should choose for that upcoming fork.
 
@@ -68,7 +68,7 @@ So after a number of devnets — there could be two, there could be 10 — the c
 
 And then once the permissionless testnet is stable, the mainnet date is chosen. Following that, there's a 30-day buffer. This 30-day buffer exists because L2s and protocols have requested this in order to get ready for the fork. So that's a minimum of 30 days and then the fork happens.
 
-#### Call structure and coordination (15:01)
+#### Call structure and coordination (15:01) {#call-structure-and-coordination-1501}
 
 During this whole time there are some main call series happening. These are all public calls live-streamed on YouTube. The major ones are ACDE and ACDC. E is for execution layer — that's stuff like transactions, smart contract deployments, mempool management. ACDC is the consensus layer — so that's validator things like validator management, slashing. And those trade off Thursdays. So there's an ACD every single Thursday and one of them is ACDE and then the next one is ACDC, continuing that way.
 
@@ -76,7 +76,7 @@ The ACDE and ACDC calls focus on the fork that we're currently making and forks 
 
 And then there are breakout calls. Breakout calls are community members, researchers, developers saying, "Hey, I have a feature that I want to get into Ethereum two forks from now." And so they host these weekly, monthly, or bimonthly calls where they hash out the implementation details, change and iterate on the spec, and generally address all the questions that people have, all the known unknowns to make sure that it's in the best possible place to be included in the fork two forks from now. And those can be scheduled whenever the facilitator decides.
 
-#### An evolving process (15:29)
+#### An evolving process (15:29) {#an-evolving-process-1529}
 
 So one thing I want to impress upon everybody is that this process is anything but static. This process that I just described to you has been live for less than a year. Ethereum has been live for 10 years. But it constantly changes and the reason it constantly changes is because no one is in charge. And this process sort of evolves to figure out the most efficient way to operate. And like I say efficient, but the reputation that Ethereum governance has is being really stagnant, hard to get things through, confusing — and that's because when you have 100 to 500 people making decisions, I'm honestly impressed that this works at all.
 
@@ -88,7 +88,7 @@ So the other screenshot on the top is Tim proposing definitions for stages of in
 
 The third thing is commits over time on Forkcast. Forkcast is a product by my team, by Wolfram Mark, a guy on my team who created this mid-last year when my team in its current iteration was formed. And it has become such a canonical resource for people to use to interact with a fork, to see what's going into a fork and how it affects them. All of these things are less than two years old. So just the point I'm making is this process changes a lot. It's not static at all. It's not some frozen bureaucracy that's hard to get your foot in the door.
 
-#### Comparable governance systems (20:21)
+#### Comparable governance systems (20:21) {#comparable-governance-systems-2021}
 
 So just quickly I wanted to touch on the most similar decentralized systems of governance that I can see to Ethereum governance. And the point I'm kind of trying to make here is that this is sustainable — even though it's amazing that 100 to 500 people can make decisions, it is sustainable in the real world. We do see examples of this working.
 
@@ -96,13 +96,13 @@ The IETF is the Internet Engineering Task Force. It's the volunteer-run standard
 
 Things that this is not similar to: other blockchains that have onchain token voting. Ethereum specifically avoids any sort of voting mechanism because in my opinion that leads to avenues for capture and it sort of gets rid of the incentive to make things a meritocracy where people just trust the people who write the best code. And then there are L2s. They have multi-sigs. They have security councils. These are more like appointed positions that make these decisions. And that has its trade-offs. It's more centralized. It moves faster though.
 
-#### Why builders care (22:38)
+#### Why builders care (22:38) {#why-builders-care-2238}
 
 So why do builders care about governance? Because builders are literally who Ethereum is created for. Ethereum is not created for core devs. It's not created for validators. Sometimes these people get confused about that. Ethereum core devs and validators serve Ethereum which serves builders and users.
 
 And everybody has had that moment with an AI where you are getting way too in the weeds and it's trying to fix this little thing and it fails to zoom out and look at the whole purpose of the project. And core devs can be like that where they're trying to perfect the core development process. And it's very crucial in that case that builders come in because core development is so all-consuming that they're not also building on top of Ethereum most of the time. They are very involved in core development. It takes up all of their time. And so app builders really have to make an effort to come in and say, "Hey, we need this. This is crucial for Ethereum." Just to make sure that the perspective is there and that they're not just getting pigeonholed into just working for core developers.
 
-#### How to participate (24:40)
+#### How to participate (24:40) {#how-to-participate-2440}
 
 So how do you participate or get your feature in? This is sort of generic advice, but I think it is the best. Be loud about your pain points. Go on Twitter, write blog posts, identify solutions for your pain points. Speculate on the things that could help you. If you find other people who have those same pain points, generally you can find an EIP that exists to address that pain point or have someone help you write an EIP that does that.
 

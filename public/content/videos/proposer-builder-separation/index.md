@@ -19,13 +19,13 @@ This presentation explains how Ethereum's block production has evolved from a si
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=u8XvkTrjITs) published by CBER Forum. It has been lightly edited for readability.*
 
-#### Introduction (0:00)
+#### Introduction (0:00) {#introduction-000}
 
 My name is Barnabé Monnot. I'm going to be talking a bit about what's happening outside of the protocol, and in particular the concept of proposer-builder separation and how it's operated with relays and a lot of off-chain infrastructure.
 
 I like to think of the protocol as an abstract object that has certain powers. One of the powers that the protocol has is it's able to give rights to certain participants. We've seen in the previous talk that the protocol empowers validators to perform consensus duties, but it's not the only thing they do — we also have to pack blocks with transactions. We call that the execution duties, and that's what I want to focus on in this talk.
 
-#### Why validators use builders (0:46)
+#### Why validators use builders (0:46) {#why-validators-use-builders-046}
 
 What's interesting is even though the protocol is the one that originates these rights and gives them to the validators, what we observe in practice is that many validators choose not to exercise the right themselves. They choose to give the right to someone else to perform it on their behalf. And with "someone else" we know them in Ethereum as builders.
 
@@ -33,7 +33,7 @@ So what we observe is that even though validators continue to make these consens
 
 Today I want to discuss why validators use builders, where that relationship comes from — I'm going to introduce a bit about MEV and searchers along the way — then I'll tell you how this relationship is mediated, and I'll talk about the relays which exist today and in-protocol solutions that we're thinking about. I also want to zoom out a little, because it's easy to see these pictures and think "oh this is very frightening, what about decentralization?" I want to give you a sense that these are tradeoffs that are being made, but in my opinion are made in the right direction.
 
-#### The naive model and MEV (3:04)
+#### The naive model and MEV (3:04) {#the-naive-model-and-mev-304}
 
 You can think of a naive model of block production where the validator is selected according to a leader selection process, and they have to make a block containing a list of transactions from the mempool. In the most naive model, you really only have two parties — a validator listening to the mempool, and when it's their turn to make a block, they take out the transactions that pay the most fees and add them in, usually using not very sophisticated packing algorithms.
 
@@ -43,7 +43,7 @@ In the best case this profit comes from natural market function such as arbitrag
 
 This really gives a lot of power to the producer and makes the position of being the block producer extremely valuable. This producer privilege is something we now call **maximal extractable value (MEV)**.
 
-#### The role of searchers (5:43)
+#### The role of searchers (5:43) {#the-role-of-searchers-543}
 
 In practice, the producers may not know where the value is. You can have somewhat unsophisticated block producers — as mentioned, anybody can become a validator as long as they have sufficient capital and are able to run a node. In practice, I might not know how to do arbitrage or anything about financial markets. What I would want is for somebody to tell me where these opportunities are — a market of people competing to tell me what the best thing to do is as the block producer.
 
@@ -51,7 +51,7 @@ These entities that are very good at finding opportunities, we call them **searc
 
 This model works well in practice if the searcher trusts the producer to keep the bundle atomic. You might have heard recently of an attack on Ethereum that cost $25 million to a bunch of sandwichers — the root cause was that the attacker managed to break the atomicity of bundles, receiving the contents and trying to reorganize and modify them. That's a very important property that really only holds as long as the producer can be trusted not to break this atomicity.
 
-#### Why we need builders (8:16)
+#### Why we need builders (8:16) {#why-we-need-builders-816}
 
 What do you do if a producer is untrusted? Post-Merge in Ethereum, we have solo stakers — about 6% of the network — who we don't know. The searchers won't really want to send bundles to these block proposers because it's a bit too dangerous.
 
@@ -59,7 +59,7 @@ So the design that was arrived at is: instead of having searchers communicate bu
 
 Now you have this even deeper chain: the validator at one end, the user at the other, and in between this whole chain of intermediaries that continues to get denser over time. The builder does the execution part while the validator does consensus.
 
-#### How MEV-Boost relays work (13:01)
+#### How MEV-Boost relays work (13:01) {#how-mev-boost-relays-work-1301}
 
 Let's say you're a proposer and you want to get into this market. This block production service is a classical fair exchange problem — two parties trying to come to an agreement but they don't trust one another. Classic literature tells you that you can't do fair exchange without a trusted third party.
 
@@ -71,19 +71,19 @@ Second, the builders are making bids trying to compete to become the builder sel
 
 The economics of relays are complicated. Some are free, kind of like public goods. Others have developed revenue models — the Ultrasound relay, for example, has a "bid adjustment" where they take the difference between the best bid and the second best as revenue.
 
-#### Trust and the relay (17:01)
+#### Trust and the relay (17:01) {#trust-and-the-relay-1701}
 
 The relay is the trusted third party in the system. Say a relay serves an invalid block — people will immediately see it because it's signed, and they'll very quickly disconnect from that relay. You can even gossip some kind of fault proof. Within five blocks, if the relay doesn't perform well, people will stop trusting it and just disconnect.
 
 So it is based on trust, but with the assumption it can be replaced somewhat quickly. The relays aren't validators — they don't necessarily have stake and they don't have to have anything to do with Ethereum. It might be people we know and love today, but tomorrow it could be anyone.
 
-#### Enshrining PBS in the protocol (20:01)
+#### Enshrining PBS in the protocol (20:01) {#enshrining-pbs-in-the-protocol-2001}
 
 We're trying to eliminate the relay's trusted third-party status. We have a trusted third party that we like in Ethereum — and it's Ethereum itself. You can design in-protocol solutions that try to essentially enshrine the role of the relay and make the dependency on it optional.
 
 Right now, the Ethereum protocol sees part of what the validators are doing but is completely blind to the network of builders. We're trying to push it to have the Ethereum protocol become the trusted third party in the interaction between proposer and builder — in that sense, we don't need to rely on the relay anymore.
 
-#### Constraining builders, amplifying decentralization (22:05)
+#### Constraining builders, amplifying decentralization (22:05) {#constraining-builders-amplifying-decentralization-2205}
 
 The big picture is important. At every layer there seem to be different games happening and different players taking money from one another — is this traditional finance all over again? I want to argue that these tradeoffs are not coming from a bad place. They try to lean into properties of these systems that we think are helpful to scale them and make them more useful.
 
@@ -104,7 +104,7 @@ To amplify validator decentralization:
 - **Attester-proposer separation** — instead of making the validator the block producer by default, choosing a different set of people to become block producers and unbundling the roles
 - **Improved staking mechanisms** — the staking in Ethereum is a bit rudimentary today and can be improved
 
-#### Questions and closing (27:03)
+#### Questions and closing (27:03) {#questions-and-closing-2703}
 
 A question from the audience: in the traditional finance world, settlement time is being reduced from two days to one day. Would reducing the settlement time from 12 seconds to a shorter interval deal with some of the front-running problems?
 

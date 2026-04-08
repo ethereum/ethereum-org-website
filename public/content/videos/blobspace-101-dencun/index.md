@@ -20,7 +20,7 @@ This interview covers Ethereum's blob space resource, introduced with [EIP-4844 
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=dFjyUY3e53Q) published by Bankless. It has been lightly edited for readability.*
 
-#### Introduction to blob space (0:00)
+#### Introduction to blob space (0:00) {#introduction-to-blob-space-000}
 
 **Ryan Sean Adams:** Welcome to Bankless, where we explore the frontier of internet money and internet finance. This is how to get started, how to get better, how to front-run the opportunity. I'm here with David Hoffman, and we're here to help you become more bankless. You know how we say blockchains sell blocks? Well, soon Ethereum is going to be selling more than just blocks — it's going to be selling blobs too.
 
@@ -38,7 +38,7 @@ What does that mean for Ether? What does that mean for the marketplaces that ari
 
 Let's bring in our guest, Dom, also known as Domothy. He is a researcher at the Ethereum Foundation working on research and development of key Ethereum upgrades coming down the pipe, including EIP-4844 (the subject of today), full danksharding, and MEV burn.
 
-#### The history of the rollup-centric roadmap (10:00)
+#### The history of the rollup-centric roadmap (10:00) {#the-history-of-the-rollup-centric-roadmap-1000}
 
 **Ryan Sean Adams:** So Dom, to fully understand how we got to blob space, I think it's worthwhile going back down memory lane to understand the fullness of the Ethereum roadmap, because it came to a very logical conclusion of blobs and blob space. Can you take us back? Because at one point in time, Ethereum's rollup-centric roadmap was not a thing. We had this thing called execution sharding, which we never actually got. Where in the history of Ethereum's roadmap is appropriate to really understand the full context of blob space?
 
@@ -58,7 +58,7 @@ Now what we're doing with the rollup-centric roadmap is we're sharding out execu
 
 Back in late 2020, people realized rollups were starting to become incredibly good and popular, and they solved our execution scaling issue without the need for execution sharding. By going with an ecosystem of rollups rather than trying to be some layer 1 maximalist, rollups can make their own trade-offs, spin up their own blockchains, and experiment with novel things. Ethereum handles the verification — that's the core of what a blockchain is.
 
-#### What is blob space? (30:00)
+#### What is blob space? (30:00) {#what-is-blob-space-3000}
 
 **Ryan Sean Adams:** Now take us to the current state, Dom. We have many rollups using Ethereum layer 1 block space, paying high gas fees to post their state data so anyone can verify it. So, Dom, what is a blob?
 
@@ -72,7 +72,7 @@ It's essentially a sealed package. The layer 1 takes it, guarantees that everyon
 
 **Domothy:** Exactly. And another critical property of blobs is that they are automatically pruned after a period of time — currently around 18 days. The reason they're pruned is that to guarantee trustless verification, individuals only need that data available to prove finality and consensus over the rollup state within a specific window of challenge. You don't need a thousand nodes holding blobs from two years ago to verify your transaction today. When the window expires, you won't get it from an Ethereum node anymore; you get it from history providers, indexers, or the rollup's native block explorers. Storage on Ethereum is insanely expensive forever. Dropping the storage requirement allows us to scale blob throughput without destroying node operators' hard drives.
 
-#### Economics and full danksharding (55:00)
+#### Economics and full danksharding (55:00) {#economics-and-full-danksharding-5500}
 
 **Ryan Sean Adams:** We know that 4844 is step one — what we call proto-danksharding. It establishes the blob format and the isolated fee market, but the actual target number of blobs per block is constrained initially to be quite safe. What does this look like scaling towards full danksharding?
 
@@ -86,7 +86,7 @@ With a two-dimensional fee market — essentially a separate isolated road for b
 
 **Domothy:** Yes, they're entirely disconnected. And the reverse is true. If layer 2 throughput spikes immensely and thousands of rollups operate and congest the blob space, the resulting spike in blob base fees won't affect the cost of doing a simple transaction on Ethereum mainnet. The blob base fee operates exactly like EIP-1559 base fee, but on its own dimension. And to your earlier question about the burn — yes, the blob fee generates burned ETH to pay for the blob space data inclusion, totally separate from the block space base fee burn.
 
-#### The future of Ethereum scalability (75:00)
+#### The future of Ethereum scalability (75:00) {#the-future-of-ethereum-scalability-7500}
 
 **Ryan Sean Adams:** I want to get to what happens specifically at the release of 4844. Initially, there's obviously a very high expectation that when the blob capacity suddenly unlocks, there won't be enough rollup demand at that exact microsecond to fill it completely. Blob space will be almost comically cheap at launch. But isn't there the law of induced demand? If you have incredibly cheap resources, the applications that consume those resources explode in volume.
 

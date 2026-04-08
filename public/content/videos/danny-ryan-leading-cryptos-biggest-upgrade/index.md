@@ -19,7 +19,7 @@ An interview with **Danny Ryan**, co-founder of Etherealize and former lead coor
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=GZPLTF5ds2A) published by Ethereum Foundation. It has been lightly edited for readability.*
 
-#### Discovering the internet and early curiosity (0:36)
+#### Discovering the internet and early curiosity (0:36) {#discovering-the-internet-and-early-curiosity-036}
 
 **Host:** How's it going? When was the last time you played Jenga?
 
@@ -37,7 +37,7 @@ An interview with **Danny Ryan**, co-founder of Etherealize and former lead coor
 
 **Danny Ryan:** I was always the one that could fix things. My grandparents always quoted me — I was probably about seven — I would help them with their computer, and one time I said, "Sometimes you just have to turn it off and turn it back on." They quoted me on that forever.
 
-#### From mechanical engineering to software (5:02)
+#### From mechanical engineering to software (5:02) {#from-mechanical-engineering-to-software-502}
 
 **Host:** Was there an "aha" moment or a mentor that made you follow a certain path?
 
@@ -47,7 +47,7 @@ I was always kind of into computers because they were around, but I wasn't like 
 
 I'm not one of those "programming since the age of six" types. I'm not a crazy programmer, not a crazy mathematician. I'm just good at kind of seeing the problems and stitching them together.
 
-#### The freelance life in Louisiana (7:17)
+#### The freelance life in Louisiana (7:17) {#the-freelance-life-in-louisiana-717}
 
 **Host:** What do you do after college?
 
@@ -59,7 +59,7 @@ I'm not one of those "programming since the age of six" types. I'm not a crazy p
 
 I also started a screen printing business in high school. It's been going 20 years now. My best friend and partner runs it — it's called Girraphic. We started doing it for our band, then started doing all the shirts for our high school.
 
-#### The DAO hack and falling into Ethereum (11:13)
+#### The DAO hack and falling into Ethereum (11:13) {#the-dao-hack-and-falling-into-ethereum-1113}
 
 **Danny Ryan:** In 2016, a friend of mine sent me a New York Times article about the DAO. It had raised, I don't know, 120 million dollars — largest crowdfunding in history. I had known of Bitcoin. I'd transacted Bitcoin. I probably lost money on Bitcoin. It hadn't really clicked.
 
@@ -73,7 +73,7 @@ On day one, I was like, "Okay, I'm going to go to the New Orleans Ethereum meetu
 
 I learned about proof of stake and I was like, "That doesn't make any sense." Then I kept learning, and was like, "Maybe this does make sense. Maybe I could make a staking pool or something." I heard Casper was coming — that's what proof of stake was called — so I started reading the code. I was like, "Oh, they could do some more tests." I wrote some tests. At the end of 2017, the research team was like, "Hey, do you want a job?" Said, "Okay."
 
-#### Finding community in open source (14:35)
+#### Finding community in open source (14:35) {#finding-community-in-open-source-1435}
 
 **Host:** How'd you find your community and your people? How'd you build the confidence?
 
@@ -81,7 +81,7 @@ I learned about proof of stake and I was like, "That doesn't make any sense." Th
 
 The doors were comically wide open. I haven't had to walk through the doors in a long time, but I imagine for many sections of Ethereum, doors are pretty wide open given the nature of the work being in the open.
 
-#### Leading the merge (16:58)
+#### Leading the merge (16:58) {#leading-the-merge-1658}
 
 **Host:** A guy who wasn't into gaming because he was talking to girls, was in a band, started a screen printing business, funded the DAO hack — ended up joining this foundation by being helpful initially, and ended up essentially architecting possibly one of the most insane engineering feats of all time. How did you do the merge?
 
@@ -89,7 +89,7 @@ The doors were comically wide open. I haven't had to walk through the doors in a
 
 Which was representative of how valuable people like Vitalik's time and attention are — he's focused on other stuff. And I realized I could do the work but I could also do the things that other people weren't doing. I could figure out what needs to happen to move this all forward. People's heads are in the clouds, they're working on incredibly complex and difficult stuff. My frame was always, "What can I do to make this a reality?" Sometimes I was doing research, sometimes I was writing specifications, and increasingly it became communicating and coordinating across a very complex project.
 
-#### Work-life balance and managing stress (18:07)
+#### Work-life balance and managing stress (18:07) {#work-life-balance-and-managing-stress-1807}
 
 **Host:** How did you manage the stress?
 
@@ -99,7 +99,7 @@ I'm pretty consumed by my work — I think about it a lot. But I also know that 
 
 The technical problems are never the stressful problems. It's the complex technopolitical sphere. The people are the hard part.
 
-#### Co-founding Etherealize (20:02)
+#### Co-founding Etherealize (20:02) {#co-founding-etherealize-2002}
 
 **Host:** You recently co-founded Etherealize. Where did your interest for that come in? What keeps you excited about it, and why do you think that work is important?
 
@@ -117,7 +117,7 @@ You learn it's a civil organization, so the worst thing they can do is fine you 
 
 Then I went back to the EF, then left. Then Trump launched a memecoin — literally whiplash. Then I consider going back to the EF, and we close that door. The first interesting thing that landed in front of me was getting an intro to Vivek. I was like, "Oh — during this window, we might actually be able to get Ethereum adopted." Vivek has a really complementary energy, a complementary background from TradFi. I just said, "Okay, let's do it. Let's onboard the world."
 
-#### Why the world needs Ethereum (24:10)
+#### Why the world needs Ethereum (24:10) {#why-the-world-needs-ethereum-2410}
 
 **Host:** Why does the world need Ethereum?
 
@@ -125,7 +125,7 @@ Then I went back to the EF, then left. Then Trump launched a memecoin — litera
 
 Vivek had the "aha" moment in 2020, leaving Wall Street, learning about Ethereum — "Oh, all capital markets should be upgraded with Ethereum." And he's right. And it's time.
 
-#### The case for decentralization (25:47)
+#### The case for decentralization (25:47) {#the-case-for-decentralization-2547}
 
 **Host:** Ethereum is heavily focused on decentralization, on being credibly neutral. There's this criticism that you could forego decentralization for efficiency, onboard more people today. What's your rebuttal?
 
@@ -135,13 +135,13 @@ That's going to mean a ton to banks and financial institutions. And it's going t
 
 We have a little bit of work to do in terms of scale — although Pectra is launching and it's going to set the stage for massive amounts of scale, along with layer twos. We also have work to do evolving so these things are not just excellent decentralized protocols, but excellent products — safe products, easy-to-use products. As we make this transition, Ethereum actually is the best answer to onboard the world.
 
-#### Wishing people were nicer (27:38)
+#### Wishing people were nicer (27:38) {#wishing-people-were-nicer-2738}
 
 **Host:** What do you wish more people were aware of — doesn't even have to be a crypto thing — in the world today?
 
 **Danny Ryan:** I wish people were a little nicer to each other. And also realize that this whole crazy thing of modern society — be careful and treat it with care. It's complex. It's been in a moderately stable equilibrium. I think we can continue to improve it and should, but we shouldn't just throw it all away.
 
-#### The EF leadership transition and taking a stand (29:00)
+#### The EF leadership transition and taking a stand (29:00) {#the-ef-leadership-transition-and-taking-a-stand-2900}
 
 **Host:** Earlier in the year, when the EF was about to undergo changes, you were thrust into this spotlight. What was your reaction?
 
@@ -149,7 +149,7 @@ We have a little bit of work to do in terms of scale — although Pectra is laun
 
 I have a massive amount of respect for Aya. We're close friends, and we worked closely together for a long time. A lot of the decisions that she made, I helped make and support and execute. So it's funny to be pitted against her in a public arena when I'm not deeply philosophically divergent from her. I like to be kind. I like to treat people with respect, especially in public forums. She was very hurt, and that's absolutely not what I wanted. Honestly, that happening was probably the nail in the coffin for me not going back — which is the opposite of what the mob intended.
 
-#### Future cities and being human in the age of AI (32:06)
+#### Future cities and being human in the age of AI (32:06) {#future-cities-and-being-human-in-the-age-of-ai-3206}
 
 **Danny Ryan:** I just remembered — in eighth grade, I worked on this Future Cities project. My English teacher would pick one winner from the class and work with them all the way to nationals. We made a big model, planned a whole city, read a bunch of research, made up a future society. We went to nationals. Maybe that was a bit of foreshadowing.
 
@@ -159,7 +159,7 @@ I have a massive amount of respect for Aya. We're close friends, and we worked c
 
 That's why I'm optimistic about the things I'm working on — onboarding institutional capital into Ethereum, making these markets better. But I don't have the unbridled optimism of "if you just build decentralized awesome tech, the world's just going to be better."
 
-#### Kids and the future (39:00)
+#### Kids and the future (39:00) {#kids-and-the-future-3900}
 
 **Host:** You have kids. Let's say fast-forward twenty years — the things you believe in have worked out. How does that change the lives of your kids?
 
@@ -167,7 +167,7 @@ That's why I'm optimistic about the things I'm working on — onboarding institu
 
 Hopefully at least we have a fair and open and free society, partially because we can architect good systems on top of crypto. But AI is a complicating factor into "what is it to be human?"
 
-#### Values and speaking to institutions (42:34)
+#### Values and speaking to institutions (42:34) {#values-and-speaking-to-institutions-4234}
 
 **Host:** What's one value you'd never compromise on?
 
@@ -181,7 +181,7 @@ Hopefully at least we have a fair and open and free society, partially because w
 
 **Danny Ryan:** I don't have a go-to. I'm very dynamic. I read their language, understand what their needs are, understand what they're curious about, and figure out the right entry points and metaphors. I'm not a big planner.
 
-#### Life outside crypto (45:12)
+#### Life outside crypto (45:12) {#life-outside-crypto-4512}
 
 **Host:** What do you look up to outside of tech and crypto?
 
@@ -191,7 +191,7 @@ Hopefully at least we have a fair and open and free society, partially because w
 
 **Danny Ryan:** I hang out with my family. I work out and play outside. I play the piano. And I do my work.
 
-#### The host's origin story — leaving Optimism for the EF (56:50)
+#### The host's origin story — leaving Optimism for the EF (56:50) {#the-hosts-origin-story-leaving-optimism-for-the-ef-5650}
 
 **Host:** Why'd you leave Optimism?
 
@@ -203,7 +203,7 @@ I joined Coinbase as a product manager after college. Left eight or nine months 
 
 I think the reason I left was I felt like I did everything I could have done there. The EF is very unique in that it's done a lot — it's gotten a lot of flack for it, but it's done a lot to protect its neutrality, to protect its values. When I go speak to somebody, they don't think I want anything from them because the EF is not a startup. And I needed a new challenge.
 
-#### Securing Ethereum's future (59:26)
+#### Securing Ethereum's future (59:26) {#securing-ethereums-future-5926}
 
 **Host:** How do we make sure that Ethereum doesn't lose? What's the most controversial take you have to secure Ethereum's future?
 

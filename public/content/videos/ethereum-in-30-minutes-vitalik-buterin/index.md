@@ -18,7 +18,7 @@ breadcrumb: "Ethereum in 30 Minutes"
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=ei3tDRMjw6k) published by Ethereum Foundation. It has been lightly edited for readability.*
 
-#### Introduction (0:02)
+#### Introduction (0:02) {#introduction-002}
 
 Great, so Ethereum in 30 minutes. This is a presentation that I've given at basically every single Devcon since launch. What's interesting is how as Ethereum the ecosystem changes, and as Ethereum the protocol changes, as the times change, the contents also end up changing quite a bit. If you go back to the equivalent of this from 2015, you'll hear a lot about uncle blocks. Of course, uncle blocks are a feature of proof of work. Now we have proof of stake, and so we don't have uncle blocks anymore. Ethereum also of course now has layer 2s, and back then this would not contain layer 2s at all. Now we know layer 2s are half the story. Ethereum is above all an evolving ecosystem, and the contents of this are going to keep changing as the technology changes, and also as the emphasis of the ecosystem changes from building basic infrastructure to putting a huge amount of focus on applications.
 
@@ -30,7 +30,7 @@ How does the world computer work? The way that I think about this is layer one i
 
 Layer two is the GPU. Layer two is all of you in the room who are part of any single layer 2. Who here is part of a layer 2? Yay. Who here has used a layer 2? Who here has used layer 1? Good, we're all users here. There's lots of these different GPUs, and Ethereum the world computer is able to hold together because each and every one of these GPUs is connected to the trust machine through optimistic proof systems, zero-knowledge proofs, SNARKs, STARKs, plonk, or whatever the buzzwords are. All of these systems ensure that layer one is able to trustlessly verify what is going on inside of the layer 2s, and layer 2s also are able to trustlessly read what is happening on layer one.
 
-#### Decentralization and diversity (5:11)
+#### Decentralization and diversity (5:11) {#decentralization-and-diversity-511}
 
 There's an important interplay between these two components, and together they make up the Ethereum that is here today. What is the L1? It's a chain. It runs proof of stake. It doesn't break. What does this mean? Ethereum L1 is a chain that has existed altogether for more than nine years now, and it's existed in its current proof of stake form for a little bit over two years. One of the really important things for a base layer to have is clear evidence that you're building on a base layer that is decentralized, open, robust, and likely to keep those traits going forward into the future. 
 
@@ -42,7 +42,7 @@ Then we have "unidentified". Unidentified is not an actor, just like the "any" k
 
 One property that actually has gotten a lot better is client diversity. Ethereum about five years ago was basically just Geth. When you have an ecosystem that is dominated by one client, that itself becomes a central point of failure. Who here remembers the 2016 DoS attacks? You wake up at 5:17 AM, get a military-style wake-up call, go down to the war room, and someone discovered a bug in the client. The entire chain stops. We fix it, and then two or three days later someone finds another bug. That keeps going on for a whole month until eventually we have to hard fork. But during that period, the ability for Ethereum to have two different clients — at the time they were Geth and Parity — basically saved the chain. There were times when a bug would hit Geth but not Parity, and times when a bug would hit Parity but not Geth. Ethereum gained a lot from having multiple software implementations, and this is something that as of 2024 is probably at the best it's ever been in Ethereum's history.
 
-#### Multiple clients and robustness (10:40)
+#### Multiple clients and robustness (10:40) {#multiple-clients-and-robustness-1040}
 
 If we look at consensus clients, which handle the proof of stake part of Ethereum, and execution clients, which handle the EVM part of Ethereum, we can see the single client with the highest market share is Geth, which is somewhere around 50%. What happens if there is a bug in any Ethereum client literally today, right now? Check if Ethereum is still running. I'm going to guess it is — I'd bet 99.99% on PolyMarket. 
 
@@ -56,7 +56,7 @@ Two years ago, this chart was worse. Ethereum's decentralization is not only abl
 
 If you have 32 ETH, or less if you join a pool, there are more and more really interesting pool options appearing — like Obol squad staking, which allows you to create smaller pools with your friends. There are lots of different ways for you to become a staker, and if you do, you become part of this network of nodes securing the Ethereum blockchain.
 
-#### Node verification and scale (15:06)
+#### Node verification and scale (15:06) {#node-verification-and-scale-1506}
 
 I guess this is how the foundation propaganda describes it — it has a cute elephant. So good cheers for the elephant! You too can join the network and help secure it. Even if you're not a staker, you can also run an Ethereum node on your computer and voluntarily verify the chain. 
 
@@ -70,7 +70,7 @@ Staking with less ETH is also a very active research requirement. 32 ETH is stil
 
 What runs on the Ethereum L1? Some high-value applications. A lot of high-value DeFi runs on L1. ENS is currently on L1, though it's increasingly doing more with layer 2s. People hold assets on layer one. Furthermore, layer one manages block roots, state roots, and proof systems for layer 2s. It secures layer 2s. Layer one needs to be powerful enough to handle cross-layer operations, especially in the case where a layer 2 fails. The difference between a layer 2 and an independent chain is that even if your layer 2 is 51% attacked or the team shuts down, layer one still stands there to protect users. Users are able to prove their ownership and state inside of the layer 2 and migrate it back down to layer one. 
 
-#### L2 speeds and roadmaps (20:33)
+#### L2 speeds and roadmaps (20:33) {#l2-speeds-and-roadmaps-2033}
 
 Recently, there was a live experiment with this. dYdX v3 shut down recently, and the L2Beat people wrote their own implementation of escape hatch software. Without any involvement from the dYdX team, users were able to take any assets they had inside of dYdX v3 and bring them back down to the Ethereum L1. Exiting a layer 2 without the team's involvement is not just theory, it is reality.
 
@@ -82,7 +82,7 @@ Then the merge. Because of an interesting quirk of mathematics, even though the 
 
 The history of Ethereum: November 2013 was the whitepaper. July 2015 was the launch. Around 2018, Ethereum settled on its approximate design for proof of stake and data availability sampling. The original papers for data availability sampling and erasure coding I wrote back in 2017. 
 
-#### Casper and rollup scaling (25:27)
+#### Casper and rollup scaling (25:27) {#casper-and-rollup-scaling-2527}
 
 If you dig into GitHub, you can search for the directory called `simple_casper` and find contracts written in Serpent. Who here remembers Serpent? Who here uses Serpent? I mean, I think Python is really beautiful, but if you want that, you should code in Vyper. Vyper is actually great and has kept improving quite a bit. Inside that repo in 2017, we attempted to do full abstraction and write the proof of stake logic directly as a smart contract. We launched a demo at 11:20 PM Bangkok time on December 31, 2017 — we wanted to get something out before New Year's — and the demo ended up breaking pretty quickly. It was early days.
 

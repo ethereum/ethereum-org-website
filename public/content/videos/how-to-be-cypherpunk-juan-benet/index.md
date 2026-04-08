@@ -18,7 +18,7 @@ A keynote by **Juan Benet** at the Ethereum Cypherpunk Congress (ECC#2) in Bueno
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=B08IXHLOQp4) published by Web3Privacy Now. It has been lightly edited for readability.*
 
-#### Introduction (0:05)
+#### Introduction (0:05) {#introduction-005}
 
 **Host:** [applause] Thank you so much. And I love your dress today. It's amazing. Kilts are amazing by the way. I got to get married recently for one of the days and Scotland is amazing.
 
@@ -28,7 +28,7 @@ My name is Juan Benet. I've worked on IPFS, libp2p, Ethereum, Filecoin, Protocol
 
 There are many actions that you can take to be a cypherpunk. These are pictures of the first wave of cypherpunks. They are everyday normal people. Here are some pictures of later wave cypherpunks. And one of them was in the early and later cypherpunks. You can see Zooko with longer hair and Zooko with less hair.
 
-#### Cypherpunks write code (2:20)
+#### Cypherpunks write code (2:20) {#cypherpunks-write-code-220}
 
 Cypherpunks write code. This is one of the major tenets of this movement. A lot has been said about this, but remember that at the end of the day, we have to produce actual infrastructure, actual code that goes into hardware, actual code that powers the systems that we use every day. And it cannot be code for only a small elite group of extremely technical hackers. It must be code that everyone in the world can use. It must be things that are broadly disseminated. It must be things that compete in the highest levels of product user experience. It must be code that is as good and easy to use as any kind of centralized or less secure alternative. You have to compete not just on what is more private, but also on what is more convenient, what is more fun to use. What do people enjoy more? Because at the end of the day, people will choose based on those features and not on security. 
 
@@ -38,7 +38,7 @@ Cypherpunks fight for freedoms and rights. Think about the key freedoms that you
 
 Cypherpunks build utopias and protopias. We have positive visions for the future. We aspire to build wonderful worlds where we can live free and flourish together. We're pluralist in nature. We also prevent dystopias. We're keenly aware of bad possible futures. We are motivated to prevent the emergence of terrible outcomes. 1984 was very influential to the cypherpunk movement. Many individual cypherpunks wanted to avoid the Ministry of Truth. Wanted to avoid the mass surveillance that Orwell talked about and they took this very simple moral lesson from the book: Don't let it happen. It depends on you. And I'm telling you today, don't let it happen. It depends on you specifically. 
 
-#### Secure communications and funding (5:26)
+#### Secure communications and funding (5:26) {#secure-communications-and-funding-526}
 
 Cypherpunks enable secure and private communications, from coming up with breakthrough results in cryptography to enable public key crypto, breakthrough algorithms that make it practical, even more useful, and harder to break. Or not an innovation, just an important action in the moment. You can notice that sometimes you need to take some important action to correct the course of history. Mark Miller, one of the most prolific cypherpunks from the early days, pictured here, the second from the left, along with many other luminaries of that era, again, everyday normal people, knew that RSA and public key were being withheld and weren't being published. And so he took it upon himself to go and find the papers. He made photocopies of the papers individually, going to many different copier places to avoid leaving a trace. And then individually mailed those papers to a whole bunch of people to make sure that just in case these papers remain classified, the knowledge would get out on how to build this kind of cryptography. That action was pivotal in that moment. 
 
@@ -48,7 +48,7 @@ Cypherpunks resist and prevent censorship. A set of us when Turkey banned Wikipe
 
 Cypherpunks make money to develop and fund cryptography and privacy tech. This one is probably the most surprising to all of you here. What? We're talking about privacy and security, not money. Ah, but the cypherpunks, unlike many other developers in the history of open source, understand capital and understand the ways of the world and understand that you need to be able to fund large groups of people to develop software. They understand that it is extremely expensive to build high-quality software that millions of people can use. And so some of us build systems that can be cash-flow positive to be able to fund and develop lots of software. Think of Ethereum, a cash-flow positive system that has funded tons of ZK and FHE research and lots of other privacy tech. Think of Zcash, a cash-flow positive system that developed and funded ZK work. Think of Protocol Labs and Filecoin who have a cash-flow positive system developing and funding ZK and FHE, and more recent entrants, things like Starknet and Zama, who are doing a lot of the development themselves and are also creating the capital structure to be able to fund a ton of this research into the future. All of these groups not only develop their own stuff, they fund thousands of other people working on this tech. So as a cypherpunk, if you can make a cash-flow positive system, do it so that you can fund other work. And tons of projects do this today. 
 
-#### Legal battles and building together (10:17)
+#### Legal battles and building together (10:17) {#legal-battles-and-building-together-1017}
 
 Cypherpunks may have to face legal battles. Hopefully we can avoid it. Hopefully we can do everything by the book everywhere. But sometimes when powerful groups want to infringe on your freedoms, they will manipulate every system around and will attack you sometimes with legal battles. We had the crypto wars that had to be fought, and they had to be fought in court. Thankfully, we won them. There were three of them, many cases to prevent the flow of information, to prevent publication of important research, to force certain kind of devices like the Clipper chip. Each of these fights required lots of people, lots of lawyers, lots of policymakers, lots of people talking about why these issues matter and why it would be terrible to repeat that kind of problem. 
 
@@ -56,7 +56,7 @@ And today we have another version. Chat control in Europe is trying to take over
 
 Cypherpunks build together. Sometimes we do things on our own, but at the end of the day, we contribute our ideas and our code in open source to lots of other people, and we refine what we do by talking about it with each other, refining our ideas, refining our software, getting feedback. We do that through forums like the Cypherpunks mailing list or these kinds of forums in the Liberty community or the Ethereum research community. We do it by collaborating across many projects and teams, and we do it through communication venues like this. The Chaos Communication Congress helped convene a lot of these groups in the past, and now we have the Ethereum Cypherpunk Congress convening our group to talk about these ideas. And we also have been creating the Cypherpunk Retreat, a venue for a set of the builders in these systems and projects to come together and solve core problems that affect everybody. Shared problems that maybe we can tackle together, because oftentimes what we want to avoid is a super fragmented environment where nothing talks to each other and it's the massive centralized players competing with tiny little networks. If we build on open standards like open identity standards or open messaging standards, then we can build very large scale privacy-preserving systems. Things that are secure, but also interoperate. 
 
-#### Three open problems (15:27)
+#### Three open problems (15:27) {#three-open-problems-1527}
 
 Cypherpunks solve open problems. So I'm going to leave you with three critical open problems for the next 10 to 15 years, and hopefully one of you or a few of you in this room will get inspired by these open problems and will work on them. 
 

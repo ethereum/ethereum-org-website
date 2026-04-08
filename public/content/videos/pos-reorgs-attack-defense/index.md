@@ -19,13 +19,13 @@ This presentation explores the types of block reorganizations possible in proof 
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=xcPxwhrg3Ao) published by LisCon. It has been lightly edited for readability.*
 
-#### Introduction and background (0:03)
+#### Introduction and background (0:03) {#introduction-and-background-003}
 
 So welcome. Today I'm going to talk about the reorgs that are possible in proof-of-stake Ethereum.
 
 I recently joined the Ethereum Foundation, in particular the Robust Incentives Group. Basically we're a research team focused on anything incentives. I'm going to keep this short — this talk is packed and you can find most of our work on GitHub.
 
-#### Two types of reorgs (0:44)
+#### Two types of reorgs (0:44) {#two-types-of-reorgs-044}
 
 Today I want to talk about reorgs, and in particular I want to sketch out two different types of reorgs that are possible in the realm of proof-of-stake Ethereum.
 
@@ -37,7 +37,7 @@ Now ex-ante reorgs are slightly different. The idea is the attacker needs to sta
 
 You may wonder why would you even want to do this kind of reorg. Well, there's still MEV to be captured. If you're lucky, block N+2 has a lot of MEV — you can capture that by just copy-pasting whatever that block is. Worst case, you have basically two slots worth of transactions to listen to.
 
-#### Ex-post reorgs in proof of work (2:49)
+#### Ex-post reorgs in proof of work (2:49) {#ex-post-reorgs-in-proof-of-work-249}
 
 Before diving into ex-ante reorgs, which is the main topic of this talk, let me briefly recap ex-post reorgs and especially start with the proof-of-work context.
 
@@ -45,7 +45,7 @@ Basically it's a recap of the blog post by the usual suspects — Georgios and V
 
 In a nutshell, in proof of work Ethereum, ex-post reorgs are hard but they're not unfeasible. A 10% miner has a relatively good chance of mining some blocks in a row, and if the incentive is high enough — think there's one block with 100 ETH worth of MEV to capture — then maybe a one percent success rate may actually be enough to make it worthwhile trying to reorganize.
 
-#### Ex-post reorgs in proof of stake (3:39)
+#### Ex-post reorgs in proof of stake (3:39) {#ex-post-reorgs-in-proof-of-stake-339}
 
 In proof of stake it's a completely different ball game. We're talking about an absurd amount of stake required. I'm gonna walk you through how one might go about it to just emphasize how ridiculously difficult it is.
 
@@ -63,7 +63,7 @@ If we tally this up — block N+1 has attestations worth one-third plus one-thir
 
 To give you an idea of how ridiculous these assumptions are — even if you had a 65% staker, to control two-thirds of the committee in any given slot you have a probability of 0.05%. This goes to show that the power of parallel attestations is real — ex-post reorgs are incredibly difficult, if not virtually impossible, in proof-of-stake Ethereum.
 
-#### Ex-ante reorg attack mechanics (7:34)
+#### Ex-ante reorg attack mechanics (7:34) {#ex-ante-reorg-attack-mechanics-734}
 
 Now I'm gonna talk about ex-ante reorgs. This attack is based on a paper by Neuder and others. We've recently improved this attack significantly. We also wrote up a paper on it and managed to upload it on arXiv just in time.
 
@@ -75,7 +75,7 @@ What happens is the honest people don't see block N+1, so they will attest to bl
 
 Let's assume zero latency for the moment. In slot N+2, what we do as the attacker is release block N+1 and the private attestation all at the same time. The honest validators in slot N+2 need to attest to a block. From their view they see block N+2 and block N+1 with this one private attestation. If they run the fork choice they will find that block N+1 has more weight than block N+2, because N+1 has the private attestation which N+2 does not. Even all the honest validators will actually attest to block N+1. In N+3, trivially, N+1 will be viewed as the head of the chain.
 
-#### Network latency and the attack (10:25)
+#### Network latency and the attack (10:25) {#network-latency-and-the-attack-1025}
 
 I assumed zero latency, which obviously isn't how it works. There is latency — it takes time to propagate blocks and messages on the P2P layer.
 
@@ -83,7 +83,7 @@ The way an attacker can still pull off this kind of attack is by having a lot of
 
 To re-emphasize what's happening here: we have a proposer with a singular attester managing to pull off a one-block reorg. Not ideal, to say the least.
 
-#### Balancing strategies for longer reorgs (11:42)
+#### Balancing strategies for longer reorgs (11:42) {#balancing-strategies-for-longer-reorgs-1142}
 
 If you want to go fancy, you can pull off longer reorgs using a balancing strategy. The idea is to split the honest committee into different views of the chain.
 
@@ -97,7 +97,7 @@ To bring a two-block reorg to an end: block N+3 is proposed, you hear it early, 
 
 If you think about it, it's relatively cheap to do these reorgs under these assumptions. Even if you don't have perfect splits, because the P2P layer is so big you have a probability distribution that you can target such that the attack cost grows in the square root of the committee size.
 
-#### Proposer boost mitigation (15:17)
+#### Proposer boost mitigation (15:17) {#proposer-boost-mitigation-1517}
 
 Let's talk about the mitigation. What's the basic idea? We're going to give the proposer a bit more power. If a valid block arrives on time, let's boost the weight of this block for the duration of the slot. After that slot is done, we resume the usual LMD-GHOST score and it's business as usual.
 
@@ -107,7 +107,7 @@ The balancing stuff also doesn't work anymore because you have a 50/50 split but
 
 The idea is that with this mitigation in place, the adversary's attestations have to compete with the boost to convince honest validators to vote according to their liking. This breaks balancing strategies and prohibits basically all reorgs altogether. Good news — there's an open PR, so basically it will be merged before the Merge.
 
-#### Key takeaways (16:48)
+#### Key takeaways (16:48) {#key-takeaways-1648}
 
 Some key takeaways. I've talked about the differences between ex-post and ex-ante reorgs. I briefly sketched out the different landscapes for reorgs in proof of work versus proof of stake. I showed you how to pull off an ex-ante reorg but also importantly how to fix it.
 

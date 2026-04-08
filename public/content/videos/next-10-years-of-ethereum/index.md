@@ -17,7 +17,7 @@ A talk by **Fede Fernández**, founder of Lambda and co-founder of several Ether
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=2E-0DF0tFbc) published by Ethereum Foundation. It has been lightly edited for readability.*
 
-#### Ethereum as a verifiable computer (0:07)
+#### Ethereum as a verifiable computer (0:07) {#ethereum-as-a-verifiable-computer-007}
 
 I'm going to speak about the next 10 years of Ethereum — from verifiable computer to global economy. To me, Ethereum is a verifiable computer. I never liked the "world computer" meme. I think AWS or Google are the world computers — they have a lot of money, they have a lot of computers, but you have to trust them. The big difference between Ethereum and the rest of the computers is that it's verifiable. Ethereum is the world's first verifiable computer — no trusted computation, just economic incentives and mathematics.
 
@@ -25,7 +25,7 @@ This gives a huge edge over AWS or Google Cloud, because anything that happens i
 
 This makes Ethereum antifragile. Every attack, every week that somebody's trying to attack Ethereum — from North Korea or other state actors or private actors — it becomes stronger, because it's out there running and there's a lot of money and people trying to get it.
 
-#### Internet property rights (2:39)
+#### Internet property rights (2:39) {#internet-property-rights-239}
 
 So what does a verifiable computer enable? It enables internet property rights — true ownership. Instead of believing or trusting platform terms like the typical thing where you click "next" and agree to give all your data to a company, what you're doing is trusting private keys. Private keys are way better than trusting terms and services.
 
@@ -33,19 +33,19 @@ This creates global neutrality. A Chinese dev, a Russian trader, an American fun
 
 In the next 10 years, we're going to tokenize everything — from art, land, and even artificial intelligence. If kids are going to be studying with artificial intelligence, there's incentives for people to hack into AI and change the parameters so that the AI answers with whatever the hacker wants. We need Ethereum to verify that the AI is working properly, and there's a lot of people working on this.
 
-#### Ethereum's economy today (3:46)
+#### Ethereum's economy today (3:46) {#ethereums-economy-today-346}
 
 Ethereum created a whole economy — nowadays it's $300 billion. It's huge. L2s are growing, and every month there's three trillion in stablecoin monthly volume on Ethereum alone. We're three times bigger than Visa. One of the biggest advantages we have over Visa, the New York Stock Exchange, or any other exchange like Argentina's Merval is that we have composability — everything is in the same place. You can change your stablecoins for dollars, for a tokenized asset, for art, and this creates a flywheel because more people are adding more money and everything is happening at the same time in the same place, all the time. Actually, in that sense Ethereum is less fragmented than the capital markets of the world.
 
 So how did we create this? With a bubble. From 2017 to 2022 there was a huge bubble in crypto. Most projects were scams, from my point of view. Ethereum won because Vitalik, the EF, and the people building it had long-term visions — they were economically incentivized, but they wanted to make something bigger than themselves. That's why after the big bubble and the stagnation for three years, Ethereum won. We were winning in some way, and we could do things like ZK — Polygon, for example, where Sandeep put a lot of money for ZK to be a big thing. StarkWare the same. This enabled ZK as an amazing technology that from my point of view is going to be even bigger than blockchains.
 
-#### Product-market fit (5:29)
+#### Product-market fit (5:29) {#product-market-fit-529}
 
 However, this also created competitors, and it's something we sometimes forget. This bubble created new technologies like Solana, Sui, and Aptos that we should check because they're doing things that are interesting, and we should check them to improve ourselves.
 
 After the bubble, from my point of view, Ethereum found some product-market fit. The product-market fit is decentralized or permissionless verifiability plus privacy — something that we're trying to start building into the core of Ethereum — plus stablecoins. That's the true PMF. That's the basic thing that is working and growing. Most tokens are going down, but the volume of stablecoins is going up. It's a programmable, private, borderless USD. Right now we are 10 times bigger than competitors. That's an edge we have to keep working on, and we don't have to sleep on it and forget that this is one of the biggest PMFs we have.
 
-#### Technical challenges (6:26)
+#### Technical challenges (6:26) {#technical-challenges-626}
 
 There are two things I want to talk about today that I'm going to rant a little bit about: the technical challenges I see for Ethereum to keep winning in the next years, and the social and cultural challenges I think we have to work on. Performance, scalability, interop, privacy, security, post-quantum, and complexity.
 
@@ -59,29 +59,29 @@ I also believe the validator requirements should go up. I'm not sure the objecti
 
 I'm a huge fan of RISC-V. I am not a huge fan of Solidity, to be honest. Solidity is not Ethereum. Ethereum is not defined by Solidity. I respect the people working on it — it has been crucial, it's a simple language — but it has a lot of issues. I'm a big fan of RISC-V and I think this should be the default.
 
-#### L2 stacks and interop (10:00)
+#### L2 stacks and interop (10:00) {#l2-stacks-and-interop-1000}
 
 Most L2 stacks don't work. Most L2 stacks literally don't work — you clone the repo, you try to run it, and it doesn't work. I don't want to name or shame anybody, but this is related to incentives. Incentives are in place to launch a token, forget about it, and die. What we're trying to do with Lambda is make it so that anybody with one command can run an L2, and if we still believe in the rollup-centric roadmap, we have to make rollups easy to run.
 
 On interop and the centralization of rollups — the other day there was an outage in AWS, and a few of the rollups went down. I think this is super bad. People were ranting and they have a point. We need to move to Stage 2. We need decentralized sequencers, or we need to create censorship resistance. I believe in based rollups. Commit-boost is another piece of technology that Drew has been working on — an amazing public good to be able to create things like pre-confirmations. Lambda is also working on that.
 
-#### Privacy (11:29)
+#### Privacy (11:29) {#privacy-1129}
 
 The only thing I'm going to say about privacy is that I became public after I got a call from a lawyer saying, "Hey Fede, if you don't cooperate you're going to have big trouble." This happened a few years ago, and every once in a while I have an issue because of it. I'm still working on privacy — we're working on Maiden, we're working on privacy-related things for Sombra, for government. The only thing I'm going to say is I think we should all be able to work on privacy and we should support anybody working on privacy. Right now it's not clear what the rules are. We should support everyone — Roman, Alexey, the Samourai Wallet developers. We need to fight this all together. And obviously Ethereum needs privacy because if I want my mother to use Ethereum, she won't like the fact that everybody can see her transactions.
 
-#### Security and the Solidity compiler (12:27)
+#### Security and the Solidity compiler (12:27) {#security-and-the-solidity-compiler-1227}
 
 The Solidity compiler — if you check the GitHub contributors, there's only one or two people maintaining it. They're working very hard, but that's a huge issue. We don't have enough people working on the most important programming language on Ethereum. If we want to be here in the next 10 years, we need to fund that. The same with Vyper.
 
 The syntax of Solidity is simple — that's why people like it. However, the semantics and the compiler don't catch multiple bugs. I have worked in more than 20 programming languages, from Erlang to Rust. I have never had such a hard time with a programming language like Solidity. It's so easy to create security bugs. Many bugs could be caught at compile time if we had a better compiler. I think the long-term solution is the RISC-V EVM as the L1 default.
 
-#### Post-quantum cryptography (13:40)
+#### Post-quantum cryptography (13:40) {#post-quantum-cryptography-1340}
 
 We're working with Justin Drake on Lean Ethereum. We just went to Cambridge with three of our cryptographers to work on hash-based signatures and a minimal ZKVM. We're working on the Lean VM. Thank you so much to Justin and the Ethereum Foundation for making things easy for people like us that were very far away and not well-connected in terms of VC capital. If you ask me the things I'm most proud of in my life, it's working on Lean Ethereum.
 
 We're working on a ZKVM inspired by the Cairo VM that we at Lambda implemented with the help of StarkWare. Nethermind is also working on formal verification. We have a huge advantage over Bitcoin because our accelerationism and our attitude to work on multiple implementations, having many people checking things, and being more open in terms of core development and research gives us an advantage. Bitcoin has an issue with the deployment of post-quantum cryptography.
 
-#### Self-imposed stagnation (14:46)
+#### Self-imposed stagnation (14:46) {#self-imposed-stagnation-1446}
 
 Now the part where I want to be very clear. I'm a huge Ethereum fan. My company depends on Ethereum. If Ethereum has an issue in the next 10 years, my company and everything I have built for the last 12 years is done. We deployed dozens of millions of dollars in the last few months to create multiple new companies on top of Ethereum. I'm saying this because I love Ethereum — it's not because I want Ethereum to die. Improvement means speaking openly about the issues we have.
 
@@ -89,7 +89,7 @@ First problem: "we already won." This is self-imposed stagnation. Complacency le
 
 We didn't win yet — we're winning, but to keep winning we need to keep an open critical sphere of debate. We don't need to see comments like mine as someone being harsh on Ethereum. I'm very harsh on my engineers, I'm very harsh on myself and my company, but it's because I want the culture to improve.
 
-#### Open debate and governance (17:01)
+#### Open debate and governance (17:01) {#open-debate-and-governance-1701}
 
 I am part of the tech elite — I'm not speaking badly of other people, I'm saying I am part of the tech elite. We have to do this because it's been going on for quite some time. Two days ago I had a call with one of the top Ethereum researchers and I asked, "Why the hell are we doing this?" The answer was, "Because this person has been working on it for two years." That's not okay. If Lambda is doing something for two years and somebody else does something better, please kill what Lambda is doing. Ethereum is bigger than anybody.
 
@@ -97,19 +97,19 @@ This doesn't mean we have to be mean to the people working on it — we have to 
 
 Important decisions were made behind closed doors. I was part of that — there's social coordination happening. I don't like that. I like public debate. If we keep doing things behind closed doors, this is super fragile because state actors are trying to infiltrate the core of Ethereum — I know that for a fact. Check OpenBSD — they had state actors trying to enter the core by paying one developer. We need things to be open and public. Transparency makes things better for everyone.
 
-#### Learning from competitors (19:18)
+#### Learning from competitors (19:18) {#learning-from-competitors-1918}
 
 Another thing: lack of knowledge of what competitors are doing. I have gone to every Solana Breakpoint and I'm proud of that. Why? Because I see them as a competitor. It's not because I'm a Solana bull — it's because I want to learn from my competitor, I want to copy good ideas from them. They have a lot of smart people. The same with Sui and Aptos. We should copy anything that anybody else does that is good. Linux did this many times — Linux copied everything from Solaris. I was a big Solaris person, I worked at Sun Microsystems. But Linux was open and copied all the good things.
 
 Young people check these things. They don't care who is winning — they want to see who is driving things, who is more aggressive about taking over the world. That's how Linux became huge — Android is using Linux. We need to have that attitude to win.
 
-#### Culture and feedback loops (20:44)
+#### Culture and feedback loops (20:44) {#culture-and-feedback-loops-2044}
 
 Crowd-following mindset. Important debates aren't public. Echo chambers and excluding dissent kills feedback loops. I don't believe there's one correct ideology. I have a partner who is ultra-libertarian — he believes everything done by the state is bad. I have another partner closer to Peronism who thinks everything done by private actors is bad. I don't think public or private is what defines whether something is long-term good for society. I think systems that have closed feedback loops — where they learn from their users and stakeholders — are what make good systems in the long run.
 
 I think we should literally pay people to be contrarian. I have partners in my company who sometimes I want to fire because they're harsh on me, but at the end of the day I'm happy to have people who question my authority. We need that because it enforces good feedback loops. If we don't have a good culture that is open, we're going to have bad tech in the long run. And when we have bad tech, the good young blood doesn't come to Ethereum. We should debate more like Bitcoin — without the threats — but execute like Ethereum. We debate strongly, then we work together as a team.
 
-#### Lambda's work across Latin America (22:45)
+#### Lambda's work across Latin America (22:45) {#lambdas-work-across-latin-america-2245}
 
 So why should you listen to me? We're working in multiple countries in Latin America. With our partners — Diego Fernández, through Sombra — we have more than 10 million IDs minted on Ethereum. We're working with the government of Nuevo León in Mexico. We're working with multiple states here in Argentina. We're starting to talk in Colombia. Once you have IDs onchain, you can do KYC, you can give loans based on that. We're also working in Africa in different countries, creating infrastructure for passports and physical property rights. We're doing the same in Asia, in different Central Asian countries — I was recently in Uzbekistan.
 
@@ -117,7 +117,7 @@ We built an Ethereum L1 client. We have 40 people working on it. For L2, we're u
 
 Today I'm super proud — with Rodrigo, we've decided to create a partnership between Lambda, Boulder Tech, and IRSA to build something massive in the region. We're working with them on payment rails in Latin America. Lambda, with hundreds of engineers — we have almost 500 people, and we're not very good at marketing. I'm the only guy on Twitter! But we're working on so many things, and I'm super proud of what we're doing. I just hope we are more open to debate, to criticism, to make ETH and Ethereum as big as we want. Thank you everyone.
 
-#### Q&A (25:53)
+#### Q&A (25:53) {#qa-2553}
 
 **Host:** Thank you, Fede. We have some great questions from the audience. I have one question before all that. How do you feel right now? We're in Argentina, we're having Devconnect. Is there one word to describe how you feel?
 
@@ -143,6 +143,6 @@ Today I'm super proud — with Rodrigo, we've decided to create a partnership be
 
 **Fede Fernández:** Don't raise money until you have product-market fit. People are going to push you to raise money, and then you're going to have more problems than you think. Money is just a tool — it's gas to be able to build things. But there are more important things: connections, books. Try to work with people that are deeply motivated about what they're doing. Work with people that have ethics, that are trying to do something good for society, something they're proud of. You're doing this because you're proud of it. You want to tell your family, you want to tell your friends what you're doing. Follow the people doing things they're passionate about, and work on things that you will be proud of in 10 years.
 
-#### Closing (30:32)
+#### Closing (30:32) {#closing-3032}
 
 **Host:** Awesome. Well, thank you so much, Fede. Thank you for everything you do.

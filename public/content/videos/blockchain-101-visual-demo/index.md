@@ -18,7 +18,7 @@ Anders Brownworth's visual demonstration of how blockchain technology works, inc
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=_160oMzblY8) published by Anders Brownworth. It has been lightly edited for readability.*
 
-#### SHA-256 hash (0:01)
+#### SHA-256 hash (0:01) {#sha-256-hash-001}
 
 This is a blockchain demo. We're going to do this in a very visual way — we're going to make it very easy to understand by stepping through the key pieces of what a blockchain is.
 
@@ -28,7 +28,7 @@ So this is the hash of the name "Anders," all lowercase — it starts with `19ea
 
 I can type anything I want. You can have nothing — `e3b0` — that's the hash of nothing. Or you could type tons and tons of stuff. Matter of fact, you could put the Library of Congress in here and you would get a hash. The interesting thing is, regardless of whether there's a tiny amount of information, no information, or the entire Library of Congress, you're always going to get a hash that is this long. You're not going to be able to pre-guess what this is — you kind of have to put the data in to figure out what the hash is, but you'll always get exactly the same hash regardless of how many times you put exactly the same information in.
 
-#### Block (2:10)
+#### Block (2:10) {#block-210}
 
 What I'm going to do is extend this idea of a hash into something we're going to call a block. A block is exactly like the hash, but the data section has been broken out into three sections: one called "block" — just a number, this is block number 1 — a "nonce," which is just another number, and then some data just like we had before.
 
@@ -40,7 +40,7 @@ That's where the nonce comes in. The nonce is just a number you can set to try t
 
 It's stopped at 59,396 — and that one just happens to hash out to something that starts with four zeros. It satisfies my definition of what a signed block is.
 
-#### Blockchain (5:16)
+#### Blockchain (5:16) {#blockchain-516}
 
 So can you tell me what a blockchain is? It's probably just a chain of these blocks. Here's my blockchain — block number one has a nonce just like before, a data area, but then it has this "previous" field which is a bunch of zeros. Moving forward, this is block two, block three, block four — this blockchain has five blocks on it.
 
@@ -50,7 +50,7 @@ What happens if I change some information here? It's going to change the hash of
 
 If I go and change the last block, all I have to do is re-mine that one block. If I go way back in time and make a change, I have to mine this one, this one, this one, and this one. The more blocks that go by, the harder and harder it is to make a change. That's how a blockchain resists mutation — resists change.
 
-#### Distributed blockchain (9:18)
+#### Distributed blockchain (9:18) {#distributed-blockchain-918}
 
 So how would I know if my blockchain has been re-mined? Now we have a distributed blockchain. It looks exactly like the last blockchain, but this is Peer A. If you go down here, you can see Peer B, and it has an exact copy of the blockchain. There's also a Peer C — this could go on forever. There are many peers on the internet, and they all have a complete copy of the blockchain.
 
@@ -60,7 +60,7 @@ So I know just by glancing at this one little hash that something is wrong in th
 
 Blockchains can have 400,000 or 500,000 blocks very easily. Rather than checking through all of them, all you really have to do is look at the hash of the most recent one, and you can see if anything in the past was altered.
 
-#### Tokens (12:17)
+#### Tokens (12:17) {#tokens-1217}
 
 That's the entire thing — there is no more to it than that. But it's kind of not really useful because we don't have anything in the data area that means anything. What we really want is a token.
 
@@ -70,7 +70,7 @@ Here's where immutability is important. If I change something back here, the has
 
 One thing I would mention: we're not listing "Darcy has a hundred dollars and he's giving 25 to Bingley." We're only remembering money movements, not bank account balances. This begs the question — does Darcy have $25?
 
-#### Coinbase transaction (14:34)
+#### Coinbase transaction (14:34) {#coinbase-transaction-1434}
 
 We have a problem in this version of the blockchain: we don't actually know if Darcy has $25. So let's look at a Coinbase transaction. We add a Coinbase transaction to our blocks — it says we're going to invent a hundred dollars out of thin air and give it to Anders. There are no other transactions in this block because nobody had any money before this.
 
@@ -80,7 +80,7 @@ You add all these up and they don't go over a hundred. It follows a basic rule o
 
 If we zip forward in time, we see that Jackson is giving Alexa two dollars. Does Jackson actually have two dollars? We go back a block and see that Emily had gotten ten dollars from Anders and gave ten to Jackson. So Jackson does have the money. We can go backwards and find that out — that's one of the benefits of having the "previous" field.
 
-#### Closing (16:30)
+#### Closing (16:30) {#closing-1630}
 
 That's a basic blockchain running a currency on top of it. As you know, blockchains have many copies — everybody has a copy. If we mutate something and make it six dollars, the blocks go invalid and don't agree with the other copies. This resists tampering, which is what you want for a currency. It works very well for things that are small and transactional.
 

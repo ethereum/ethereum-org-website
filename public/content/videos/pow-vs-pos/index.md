@@ -19,7 +19,7 @@ A debate between **Lyn Alden** and **Justin Drake** on the foundational trade-of
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=1m12zgJ42dI) published by Bankless. It has been lightly edited for readability.*
 
-#### Introduction (0:00)
+#### Introduction (0:00) {#introduction-000}
 
 **Ryan Sean Adams:** Welcome to Bankless, where we explore the frontier of internet money and internet finance. This is Ryan Sean Adams, I'm here with David Hoffman, and we're here to help you become more bankless. Guys, you are in for a treat today. We've got two experts on proof of stake and proof of work, and they are debating which is better for creating a global money system — a crypto money system — proof of work or proof of stake. Lyn Alden and Justin Drake on the episode today. We're going to talk about a few things. Number one: which provides the most economic security, proof of work or proof of stake? Number two: which provides the best deterrence and recoverability in the face of the dreaded 51% attack? Number three: which minimizes governance power for the elites — which is more "power to the people"? Number four: which is economically the fairest system to participate in? And number five — this is personally my favorite — this conversation around proof of work being more commodity money and proof of stake being more equity money.
 
@@ -29,7 +29,7 @@ A debate between **Lyn Alden** and **Justin Drake** on the foundational trade-of
 
 **Justin Drake:** Doing great, thanks again for having me, guys.
 
-#### Framing the debate: monetary premium (7:30)
+#### Framing the debate: monetary premium (7:30) {#framing-the-debate-monetary-premium-730}
 
 **Ryan Sean Adams:** I want to start with the big question. I think we're trying to answer the meta question of whether proof of work or proof of stake is most amenable to the accrual of monetary premium — basically which of those two consensus protocols is most amenable to making a cryptocurrency a money. Justin, do you agree this is the correct framing?
 
@@ -41,7 +41,7 @@ A debate between **Lyn Alden** and **Justin Drake** on the foundational trade-of
 
 **Justin Drake:** I want to interject and argue why this analogy with equity and proof of stake is maybe a bad analogy. In the context of equity, you have the right to vote on anything — you can completely change the rules of the company. In proof-of-stake consensus, the consensus participants can't just arbitrarily change the rules. They can't say "we're just going to give ourselves a thousand ETH each" — that would be an invalid transaction. Ultimately the consensus participants are beholden to the community, and that is a huge difference relative to equity.
 
-#### Commodity money vs. equity money (10:06)
+#### Commodity money vs. equity money (10:06) {#commodity-money-vs-equity-money-1006}
 
 **Ryan Sean Adams:** Lyn, do you want to keep going with that conversation about proof of work as commodity and proof of stake as equity?
 
@@ -53,7 +53,7 @@ A debate between **Lyn Alden** and **Justin Drake** on the foundational trade-of
 
 **Lyn Alden:** I think there is some degree of spectrum, but for the most part it's a rather one-directional street. There are multiple ways to become an equity but very few ways to become a commodity. Commodities by their nature are somewhat rare and immutable. The ways to create a true commodity in the digital realm are extremely limited.
 
-#### 51% attacks: deterrence and recovery (15:30)
+#### 51% attacks: deterrence and recovery (15:30) {#51-attacks-deterrence-and-recovery-1530}
 
 **Justin Drake:** I want to compare proof of work and proof of stake on which is least liable to censorship attacks. One of the massive advantages of proof of stake is that the social layer has tools to intervene. In proof of work, if a 51% attacker comes in, they collect every single piece of reward, every single piece of issuance, every transaction fee. The honest miners turn off because it doesn't make sense to spend electricity without income. Then they want to liquidate, selling their hardware. The attacker can buy this hardware for pennies on the dollar and reinforce themselves. Even if the community manages a counter-attack, it would take months if not years to organize.
 
@@ -65,7 +65,7 @@ When it comes to security, it's not just about 51% attacks — it's also about b
 
 For recovering from 51% attacks: the only way in proof of stake is to soft-fork and take people's capital. If you phrase it as taking the attacker's capital, that sounds fine. But the attacker could be a regulated custodian — you're taking capital from people who had nothing to do with the attack.
 
-#### Complexity, bugs, and client diversity (30:35)
+#### Complexity, bugs, and client diversity (30:35) {#complexity-bugs-and-client-diversity-3035}
 
 **Justin Drake:** Complexity is not necessarily evil. Humanity thrives on it. In terms of proof-of-stake complexity — yes, it is more complex, at least 10x, maybe 100x. But it's complexity that at this point we have tamed. We have five different clients that have implemented the protocol, each with small teams of five to ten people. Client diversity enables the community to buy insurance against bugs.
 
@@ -75,7 +75,7 @@ On the topic of being continuously online — what we call weak subjectivity —
 
 Looking at the direction of proof of work long-term, you'll see increasing integration between miners and energy producers. The electrical grid naturally has to overproduce electricity. Proof-of-work systems are a really good load balancer for stranded energy. The cheapest source of electricity is virtually zero-cost stranded energy. Right now the biggest Bitcoin mining facility in the world has about 1% of total hash rate — it's already structurally decentralized.
 
-#### Fairness and the "rich get richer" argument (40:20)
+#### Fairness and the "rich get richer" argument (40:20) {#fairness-and-the-rich-get-richer-argument-4020}
 
 **Justin Drake:** In proof of stake, you have perfect fairness — you put in one unit of capital and get the exact same amount of rewards no matter how big or small. In proof of work, the big fish have unfair advantages. If you're a retail miner buying one rig, you're overpaying by 2x, 3x, 4x, 5x relative to professional miners buying in bulk. Because of Moore's law, attackers who want to attack have an advantage — they can pick the latest, most bleeding-edge hardware. For them, the price of electricity is largely irrelevant, because a 51% attack only needs to run for one day or one week. 99% of the cost is in the rigs and infrastructure, not the electricity.
 
@@ -85,7 +85,7 @@ The fact that proof of work is inherently unfair creates advantages for an attac
 
 In proof of work, you're essentially renting your ability to govern the system. Your machines degrade, your energy source could become less efficient, your hardware becomes less cutting edge. It's a constant series of decisions rather than a system that inherently benefits people who bought in first. No matter how much Bitcoin Michael Saylor has, he has zero control over what transactions are processed.
 
-#### Proof of work as "proof of stake with extra steps" (50:16)
+#### Proof of work as "proof of stake with extra steps" (50:16) {#proof-of-work-as-proof-of-stake-with-extra-steps-5016}
 
 **Justin Drake:** I don't know anyone — and I've been in this space for almost a decade — who mines Bitcoin as an individual at this point. It's all industrial. On the other hand, with proof of stake, everyone on this call — maybe except you, Lyn — are staking as individuals. The diversity on proof of stake is much, much larger. The barrier to entry is much lower — you basically just need a computer running 24/7.
 
@@ -97,11 +97,11 @@ On the "rich get richer" argument in proof of stake: I see it as wealth preserva
 
 On client diversity — at least last I checked, the biggest client has about 84% of Ethereum clients. You have some degree of diversification, but it's also partial illusion. In practice, one of the key things that protects against bugs is having the simplest possible code base.
 
-#### NIST, quantum, and long-term fundamentals (55:04)
+#### NIST, quantum, and long-term fundamentals (55:04) {#nist-quantum-and-long-term-fundamentals-5504}
 
 **Justin Drake:** If we want to be the internet of money, we need a time scale on the order of the internet itself — decades if not centuries. Complexity is something that has a half-life of maybe one year — it can be tamed and hardened. Over time, as lots of value is secured, systems can be trusted. The bugs will be fixed, the system will harden. What we should be looking at is long-term fundamentals. It turns out that proof of work is going to be completely disrupted by quantum computing in the next 20 to 30 years. Yes, there are short-term concerns with complexity, but if you zoom out and focus on fundamentals, there are fundamental reasons to be bearish on proof of work.
 
-#### The commodity money historical argument (1:00:34)
+#### The commodity money historical argument (1:00:34) {#the-commodity-money-historical-argument-10034}
 
 **David Hoffman:** Lyn, you've kind of taken the lead as a macro commentator focusing on commodity markets. Bitcoiners tend to focus on commodity properties and how Bitcoin consumes energy as a commodity. Is this partly a moral argument — that commodity money is just a better-suited money to the world?
 
@@ -113,13 +113,13 @@ Over time, that tends towards centralization. As debt builds up, the system gets
 
 **Lyn Alden:** I personally approach it from a tactical risk perspective. What is the system least likely to have tail risks? What is optimized for what it's trying to do? When it comes to the fairness argument, partially that gets mixed up with different things — proof of work versus proof of stake being one aspect, and the scarcity of tokens being another.
 
-#### The scarcity engine vs. the liquidity engine (1:10:31)
+#### The scarcity engine vs. the liquidity engine (1:10:31) {#the-scarcity-engine-vs-the-liquidity-engine-11031}
 
 **Justin Drake:** Proof of work and proof of stake from a meme perspective are almost the exact opposite. With proof of stake, you have what I call a scarcity engine — a mechanism to turn liquid ETH into frozen ETH used as collateral. My projections say roughly half of all ETH supply will eventually be staked. For proof of work, it's the opposite — issuance and transaction fees that miners earn need to be sold to cover electricity and hardware expenses. You've created a liquidity engine, constantly market-dumping. If you ask which is the best system to create money for the internet — the one constantly dumping or the one encouraging people to hold — I think it's obvious which is more valuable from a meme perspective.
 
 **Lyn Alden:** The more a system tries to do, the worse it's going to be at any one thing. As Ethereum has tried to harden its monetary policy, it's arguably lost market share in DeFi — from 97% of total value locked in late 2020 to 55% now. So far, Bitcoin doesn't really have competition from other systems. The brief periods of competition — Dogecoin memes, Bitcoin Cash — fade over time. One world is based on governance and making your ecosystem attractive. The other comes down to which is the hardest — what is the best at being money.
 
-#### Governance, immutability, and self-sovereignty (1:15:36)
+#### Governance, immutability, and self-sovereignty (1:15:36) {#governance-immutability-and-self-sovereignty-11536}
 
 **Lyn Alden:** At the minimum, a proof-of-stake system gives the units' holders more say over which transactions are processed and which are censored. But who gets to change the protocol and how — that goes outside the proof-of-work vs. proof-of-stake debate. You can have proof-of-work systems that look more equity-like — with difficulty bombs or super large blocks so people can't run their own node.
 
@@ -129,13 +129,13 @@ The meme of Bitcoin is self-sovereignty. You run your own node, nodes are small,
 
 **Lyn Alden:** With commodity monies, producers rarely have much control. Gold has a very high stock-to-flow ratio — gold miners have virtually no control over the system. That's been true in the Bitcoin ecosystem. During the block size wars, the majority of miners favored the block increase and still couldn't get it through. The node operators rejected it. That combination of division of powers — where you can just run a node and become self-sovereign, and separately mining gives you temporary ability to order transactions but no permanent allocation — is what maintains a decentralized system.
 
-#### The "rich get richer" rebuttal (1:25:13)
+#### The "rich get richer" rebuttal (1:25:13) {#the-rich-get-richer-rebuttal-12513}
 
 **Justin Drake:** On the "rich get richer" in proof of stake — I see it as wealth preservation, not wealth multiplication. When staking, you're paying opportunity cost of roughly 3% and getting compensated. Net, you're doing wealth preservation. Professional miners do the same thing — they hedge risk with futures, locking in returns that roughly match opportunity cost. Really, proof of work is just proof of stake with extra steps. The risk can be removed with financial products, and at the end of the day you have essentially the same financial product.
 
 **Lyn Alden:** What makes a commodity system decentralized is the combination of small nodes and separate mining. No matter how much Bitcoin someone holds, they have zero control over transaction ordering. That's the division of powers. If you're going to approximate immutability in the digital realm as much as possible, you're designing a system that is very decentralized, very hard to force changes on, with either no changes or opt-in changes. Anything that deviates from that model — ongoing forced buy-in from a small team of developers, development hubs, foundations — is inherently more equity-like regardless of the consensus mechanism.
 
-#### Closing arguments (1:30:42)
+#### Closing arguments (1:30:42) {#closing-arguments-13042}
 
 **Ryan Sean Adams:** This has been a fantastic conversation. This has probably been the best proof-of-stake versus proof-of-work conversation in history. Closing argument time. Justin, why is proof of stake the best way to create a crypto money?
 
@@ -151,7 +151,7 @@ If you were designing a blockchain to maximize monetary properties, you would ma
 
 When it comes to money suitable for putting your corporate treasury in, allocating part of your endowment, or holding 10% or more of your net worth — or managing sovereign reserves representing decades of accumulated trade surpluses — historically the best has been gold. Now we have new competitors. You'd select the most decentralized, the most immutable, the one that doesn't sacrifice any of those characteristics. That doesn't mean other systems aren't valuable — just because gold has value doesn't mean Tesla stock doesn't. They're different things doing different things. The perfect money is willing to sacrifice just about everything else in order to have the perfect attributes of money — whose main purpose is to be held and occasionally transacted with, compared to something trying to be a Swiss Army knife.
 
-#### Wrap-up (1:40:14)
+#### Wrap-up (1:40:14) {#wrap-up-14014}
 
 **Ryan Sean Adams:** I want to once again thank Lyn Alden and Justin Drake for joining us and having the best debate I've ever heard about proof of work versus proof of stake. Also a special thanks to Lyn for coming into what some might perceive as the "away team."
 

@@ -18,7 +18,7 @@ A presentation by **Peter Van Valkenburgh**, Executive Director of Coin Center, 
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=GQML0c1_4Gs) published by Ethereum Foundation. It has been lightly edited for readability.*
 
-#### Introduction (0:00)
+#### Introduction (0:00) {#introduction-000}
 
 This is a big stage with a long walk and I'm I'm old school, I'm afraid, so I do have a written out speech, but hopefully you'll enjoy. So, thank you for having me. Coin Center, my organization, has been around for 11 years. We're defending the developers and users of Bitcoin, Ethereum, subsequent cryptocurrency technologies from inappropriate government regulation in Washington DC. We know threats when we see them. So, a little over 9 years ago today, I stood on the stage in Shanghai at Ethereum's second DevCon and I warned about the dangers of doing ICOs. It was actually the leadoff presentation at the second DevCot. This is 2016. This is right at the start of the so-called ICO boom. That was long before Gary Gendler was at the SEC. It was before anyone had received a Wells notice. It was even before the DAO hack, which if you remember or were around at the time triggered the DAO report from the SEC in the beginning of their investigation and prosecution of people in crypto.
 
@@ -28,7 +28,7 @@ Americans Americans can use the tech. And perhaps even more importantly, courts 
 
 He's a software developer. And he is suing the Department of Justice in a Texas court to get declarative judgment that publishing software for privacy is not a crime and does not require a license in the United States. So, you may not know a lot about me or
 
-#### Privacy is existential (3:15)
+#### Privacy is existential (3:15) {#privacy-is-existential-315}
 
 Coin Center, but hopefully you know that you should trust me when I raise an alarm, when an alarm is warranted. If we're going to succeed in building and maintaining free and open financial infrastructure, we need to tread carefully. And that's why I want to talk today about privacy. Privacy is existential to Ethereum. Privacy is not a regulatory attack surface. I will not stand here and tell you not to build privacy the way I told you not to do ICOs in 2016.
 
@@ -36,7 +36,7 @@ Privacy is actually a way to narrow the attack surface. And the tornado cash pro
 
 And to prove that to you, the case I want to direct your attention to today is not a securities law prosecution. It's not even a money laundering or elicit finance prosecution. It's about minor extractable value or me. But before we get there, let's talk briefly about Frankenstein. As the good doctor said, how dangerous is the acquirement of knowledge, and how much happier that man is who believes his native town to be the world than he who aspires to become greater than his nature will allow.
 
-#### Mary Shelley and the one-way ratchet of knowledge (5:16)
+#### Mary Shelley and the one-way ratchet of knowledge (5:16) {#mary-shelley-and-the-one-way-ratchet-of-knowledge-516}
 
 Here's what I think Mary Shelley is saying in that novel. Privacy is not just about human dignity. It's about the efficient absence of knowledge. Just as it would be hard to live one's life with constant scrutiny, everybody always invading your privacy, it would also be hard to live your life with constant intimate knowledge of everyone else's private affairs. You constantly invading everyone else's privacy. Why is that? Because to become omnisient without omnipotence, to see everything without having the ability to fix everything, drives humans mad. It destroys our humanity with worry, hubris, and the pursuit of control over the uncontrollable.
 
@@ -46,7 +46,7 @@ It's not about proof of work. It's not about blockchains, a word that hadn't eve
 
 The cost of mediation increases transaction costs, limiting the minimum practical transaction size and cutting off the possibility for small casual transactions. And there is a broader cost, the loss of ability to make non-reversible payments for non-reversible services. With the possibility of reversal, the need for trust spreads. So, Satoshi's goal was actually neutrality as much as it was irreversibility. The ability to reverse is to him the origin of tremendous transaction costs associated with trust. He didn't come right out and say it in the white paper,
 
-#### The cost of mediating disputes (7:50)
+#### The cost of mediating disputes (7:50) {#the-cost-of-mediating-disputes-750}
 
 but I think what he means by mediating disputes is also policing fraud, stopping crime, obeying the laws and powers of nation states, and controlling people. We talk often about how computationally inefficient blockchains are, and they are. that even the monumental computing effort of globally verifying digital signatures without parallelization pales in comparison to the inefficiency inherent in a human dispute over the moral worth of every transaction and whether it should be included in the chain.
 
@@ -58,7 +58,7 @@ Better if they cannot even become aware of their power. Far better if they are b
 
 No. The best case for privacy is that validator neutrality depends on it because neutrality through decentralization will never be enough. Neutrality requires blindness. I would suggest humbly that there are
 
-#### Two rules of knowledge and power (10:24)
+#### Two rules of knowledge and power (10:24) {#two-rules-of-knowledge-and-power-1024}
 
 two fundamental rules of knowledge and power in blockchains. The first rule, nothing transparent remains neutral. A visible ledger will become a mediated ledger. It will be mediated by the self-interest of powerful validators, through self-interested manipulation like minor extractable value. It will be mediated by the off-chain pressure of powerful entities like corporations and nation states through the imposition of legal duties and liability for failure to honor those duties. If a validator has even a small amount of power, they will be made to exploit that power. A mapped world is a world that will be carved up.
 
@@ -70,7 +70,7 @@ Yes, my organization, Coin Center, will always be there to fight back against un
 
 Privacy pools are a wise approach to limiting that threat. Try as best as possible to deny the wrong people access to the good neutral tool, but note that the tool stops to be neutral. And even then, sometimes whoever's providing the anonymity set for that pool will fail to deny bad people access to that tool. And the onboarding transaction of those bad people will remain visible on the L1. And it will be powerful ammunition for our opponents.
 
-#### The Pereira Bueno case and MEV (13:26)
+#### The Pereira Bueno case and MEV (13:26) {#the-pereira-bueno-case-and-mev-1326}
 
 But the case that truly convinces me of the dire need for base layer privacy is not tornado cash. It's another case in the Southern District of New York, the Pereira Bueno case. Two brothers are being charged with criminal wire fraud. They found a way to use the MEV Boost software to sandwich attack other MEB boost users who were themselves sandwiching ordinary Ethereum users. They earned upwards of $20 million doing this. They didn't lie to anyone or misrepresent themselves to any fiduciary or contractual relationship partners. Nonetheless, the Southern District of New York prosecutors think that they are guilty of wire fraud, a federal felony, because they are not quote an honest validator.
 
@@ -78,7 +78,7 @@ When that term honest validation and honest validator appeared in the jury instr
 
 Minor extractable value is a disgusting reality of Ethereum. It too has its genesis in a lack of privacy. It is the public nature of DEX transactions that allows them to be easily sandwiched by validators. It is much harder, probably not impossible, but much harder to sandwich transactions if you can't see their economic fundamentals. But I don't just want base layer privacy as a way to discourage MEV. I want it as a way to defend validators.
 
-#### Legally enforceable duties of validators (15:23)
+#### Legally enforceable duties of validators (15:23) {#legally-enforceable-duties-of-validators-1523}
 
 The DOJ's larger gambit in the Pereira Bueno case is that validators have legally enforcable duties to one another due to the public nature of the transactions they validate. And if those duties are breached, validators, I think they think, should sue one another. And if they do not, the state, the Southern District of New York, should prosecute dishonest validators for crimes. And this doesn't just stop with wire fraud. If you can see a moneyaundering transaction or could have seen it using blockchain analysis, then how are you not complicit in that money laundering?
 
@@ -86,7 +86,7 @@ If you build on a version of the chain that has sanctioned transactions in it, a
 
 Willful blindness is not a defense, but actual blindness is. So if you really want trustlessness, if you truly want neutral infrastructure, if you want dumb pipes, then the pipes need to be actually blind to the that flows through them.
 
-#### Traditional finance pipelines and SWIFT (16:56)
+#### Traditional finance pipelines and SWIFT (16:56) {#traditional-finance-pipelines-and-swift-1656}
 
 Now, a good criticism of all this, you might say, Peter, we already have dumb pipes in the traditional financial industry, in the traditional global financial system, and that the operators of those dumb pipes are not cryptographically blind to the economic realities and the criminal aspects of the transactions that they put in their ledgers. The biggest of those pipes is called Swift. And this is a strong argument against what I was just saying.
 
@@ -102,7 +102,7 @@ And finally, even if Swift survives the current slowmoving crisis that's unfoldi
 
 Are we actually here for dumb pipes?
 
-#### Conclusions and defense of neutral infrastructure (22:14)
+#### Conclusions and defense of neutral infrastructure (22:14) {#conclusions-and-defense-of-neutral-infrastructure-2214}
 
 In conclusion, Coin Center is not going anywhere, and we will always be here to help defend protocol developers and infrastructure from unjust prosecution and over broad regulations. But without actual privacy, that fight gets harder and harder. What can we do? One, I believe Ethereum should have base layer privacy or at least become the root ledger for L2s that have blind and actually decentralized sequencers.
 
@@ -112,7 +112,7 @@ And we have a newlyannounced John Hancock project um which is finding ways to mi
 
 Privacy is existential. Thank you.
 
-#### Q&A session (24:21)
+#### Q&A session (24:21) {#qa-session-2421}
 
 **Host:** Thank you. Sharing I think one of the most important topics of our times by far. I think our first question is actually in the realm of — how do you view the explainer of privacy to new people? For such a long time the concept of privacy has been washed in this idea of secrecy — it's for people in hooded cloaks, etc. How much of an obstacle do you feel that is, especially when you think about lobbying efforts? You need the everyday person to also feel like this is something that's for them. Do you feel that's a big struggle? How do we mitigate that?
 

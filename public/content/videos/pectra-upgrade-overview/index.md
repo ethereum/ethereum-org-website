@@ -19,11 +19,11 @@ A presentation by **Christine Kim** at Devcon SEA covering the EIPs included in 
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=ufIDBCgdGwY) published by Ethereum Foundation. It has been lightly edited for readability.*
 
-#### Introduction (0:00)
+#### Introduction (0:00) {#introduction-000}
 
 We're going to talk about all the EIPs that are going into the Pectra upgrade. Quick disclaimer before I start: everything I'm about to say is all informational — for informational purposes — and should not be construed as financial or investment advice.
 
-#### When is Pectra mainnet (0:23)
+#### When is Pectra mainnet (0:23) {#when-is-pectra-mainnet-023}
 
 Before we get into what's going into Pectra, the question that I get asked the most is "when is Pectra going on mainnet?" So I'm just going to get that out of the way so we can get into the technical stuff.
 
@@ -43,7 +43,7 @@ Historically, developers have budgeted about two weeks between public testnet up
 
 Given all of the information I know right now and the progress developers have made so far on Pectra, my best analysis and guess is that Pectra mainnet will realistically happen next April 2025. Again, this is very tentative because a lot can change. Development happens on a week-to-week basis — developers are on these ACD calls talking about this bug they didn't expect in this EIP or this new EIP they want to add into Pectra.
 
-#### Execution layer EIPs (6:23)
+#### Execution layer EIPs (6:23) {#execution-layer-eips-623}
 
 Let's move on to the meat of this talk — what is going into the Pectra upgrade. There are ten EIPs going into Pectra, and four of them are focused on the execution layer.
 
@@ -55,7 +55,7 @@ Let's move on to the meat of this talk — what is going into the Pectra upgrade
 
 **EIP-7702** — set code for externally owned accounts. A new transaction type is coming into Ethereum. This transaction type will temporarily allow an EOA to have greater flexibility, enabling features like transaction batching, sponsored transactions, conditional transactions, and delegated security. You might be thinking, "is this the account abstraction vision coming alive on Ethereum?" No, it's not — it's a baby step. It's an early step to see what the real roadmap to true native account abstraction could look like on Ethereum. There was quite a bit of debate in terms of how developers should take that first step, and a lot of controversy around this one getting in and its design — but it's in.
 
-#### Consensus layer EIPs (12:00)
+#### Consensus layer EIPs (12:00) {#consensus-layer-eips-1200}
 
 There are six others — these are consensus layer EIPs.
 
@@ -69,11 +69,11 @@ There are six others — these are consensus layer EIPs.
 
 **EIP-7549** — move committee index outside attestation. This is a restructuring and refactoring of the way attestations are aggregated to reduce the networking load on Ethereum and save node bandwidth. When developers were including this in Pectra, they thought it was a great change with wonderful benefits and an easy one — but in practice, it turned out to be a lot harder to implement than expected.
 
-#### Summary (17:19)
+#### Summary (17:19) {#summary-1719}
 
 Pectra is a mixed bag of updates. It's going to do three things: first, fix critical shortcomings of Ethereum as a proof-of-stake blockchain — think about MaxEB, that's a critical fix because the validator set size can continue to grow unchecked. Second, improve the user experience — the new transaction type, more flexible designs, some improvements for more trustless designs for staking pools. And third, increase Ethereum's data availability capacity — that hasn't been formally included into Pectra but seems likely.
 
-#### EIPs removed from Pectra (18:02)
+#### EIPs removed from Pectra (18:02) {#eips-removed-from-pectra-1802}
 
 Here are all the EIPs that were removed from Pectra. This is kind of a first-time thing for an upgrade to have so many EIPs removed.
 
@@ -83,7 +83,7 @@ Here are all the EIPs that were removed from Pectra. This is kind of a first-tim
 
 These are now moved to Fusaka. Verkle was initially slated for Fusaka but has since been further delayed. EOF and PeerDAS are in Fusaka for now. There are other EIPs that developers will reconsider for inclusion in Fusaka — the SSZ transition, inclusion lists, changes to issuance, history expiry, ePBS, and account abstraction direction.
 
-#### Q&A (22:02)
+#### Q&A (22:02) {#qa-2202}
 
 **Host:** When EOF?
 

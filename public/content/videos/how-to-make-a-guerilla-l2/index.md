@@ -20,13 +20,13 @@ breadcrumb: "Guerilla L2"
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=WlsICV2OPAE) published by Web3Privacy Now. It has been lightly edited for readability.*
 
-#### Introduction and anarchist philosophy (0:05)
+#### Introduction and anarchist philosophy (0:05) {#introduction-and-anarchist-philosophy-005}
 
 **Fatemeh Fannizadeh:** [Applause] Well, thanks for being here. I know Vitalik is talking now. It's really an honor to have a few of you here and not in the matcha line over there. We're going to have a conversation today about guerilla L2s, and I think we're going to go there, but I present to you Melanie Premsyl, French philosopher and anarchist, who does the honor of joining us here. Do you want to give a little intro about yourself?
 
 **Melanie Premsyl:** Yeah. Hi everyone. So I'm a French philosopher. I'm studying anarchy and technology, and at the beginning I was more on the side of territory. Like in the center of France, for example, I don't know if you know Tarnac, or all that kind of group who are more a violent group. The main problem I encountered was that we need to be linked with other people in the world, and a lot of anarchist groups are very limited. We need a way we can communicate with more people from America or South America. And it's why now we are trying to create a bridge with crypto and everyone who is trying to find new ways to fight against the lack of privacy, the lack of liberty, and the violence of the state.
 
-#### The MEV brothers trial (1:52)
+#### The MEV brothers trial (1:52) {#the-mev-brothers-trial-152}
 
 **Fatemeh Fannizadeh:** Amazing. So basically, we met a couple of weeks ago in New York. We both were attending a trial that was happening in Manhattan where these two brothers, known as the MEV brothers, were being prosecuted because they sandwiched some sandwich bots. I went to the court to watch the trial, and I saw this person here reading Spinoza in French, and I was really curious about what was happening. There was no one in the audience but us two! So I got really curious about what got you, first and foremost an anarchist and philosopher rather than a technologist, to basically come to attend this specific trial, but also to think about Ethereum's governance and the whole validation system and the trial that was happening in New York. 
 
@@ -38,7 +38,7 @@ breadcrumb: "Guerilla L2"
 
 **Fatemeh Fannizadeh:** Okay. Yeah, that's fair enough. So for those who haven't followed the trial, after like three or four weeks, it was a mistrial. The jury couldn't come to a unanimous verdict and decide whether or not these two brothers were guilty of violating the rules of the blockchain or not—which is kind of a positive outcome, I think, for crypto, that a court or a jury doesn't decide what is right and what is wrong onchain. 
 
-#### Bridging blockchain with other communities (4:06)
+#### Bridging blockchain with other communities (4:06) {#bridging-blockchain-with-other-communities-406}
 
 **Fatemeh Fannizadeh:** But okay, if we just take a step back about what you said of anarchists looking into this technology in order to basically bridge between different groups. 
 
@@ -48,7 +48,7 @@ breadcrumb: "Guerilla L2"
 
 **Melanie Premsyl:** Yeah, I would like to say that, but I'm not sure, because you know there's a lot of people that need to make money, so that's the main purpose of it too. But I think we could just use it like a net communist, that just one part could be that kind of dream. I think it's a dream cake that can be done, but we need to have tools and design that help people out of the technical, very engineering kind of thinking, to understand what it is like.
 
-#### Decentralization and Layer 2s (6:55)
+#### Decentralization and Layer 2s (6:55) {#decentralization-and-layer-2s-655}
 
 **Fatemeh Fannizadeh:** That reminds me a lot about DAOs a few years ago. I don't know about you all, but I was really excited, I was thinking that DAOs are revolutionizing the way we organize as groups and communities onchain and the freedom we have. And in the end, all of this just fell flat. I don't think it manifested at all. It just became more about the voting system, it's not really democratic, it's all about making profit. This whole idea we had of DAOs as a social tool didn't really manifest. 
 
@@ -56,7 +56,7 @@ breadcrumb: "Guerilla L2"
 
 **Melanie Premsyl:** So I'm French. This is a big problem. Being French, we are a very state nation. So I'm always thinking in a pedagogical and very top-down way. And I think the L2 creates a way that everyone can create mini blockchains, and they are secured by the Layer 1. I would like to see if people can create pedagogical help for everyone for something that is free. I think a lot of groups, like associations, could create their own blockchain, and it will be a way—like you know, federalism is the big main subject of anarchism. How people can manage to hate each other maybe, but speak with each other. So we need to have this kind of federalism in the blockchain. Everyone has a Layer 2 with its own value, and so we speak with the same infrastructure. 
 
-#### Anarchy, freedom, and building tooling (9:53)
+#### Anarchy, freedom, and building tooling (9:53) {#anarchy-freedom-and-building-tooling-953}
 
 **Fatemeh Fannizadeh:** Yeah, I really like what you said about basically hating each other but still communicating, like not being toxic despite our differences. And the fact that there's like one L1 in this scenario, which would be Ethereum, is also oftentimes said as fascist because we all need to agree with this one set of rules. So it's this one system that is equal for everyone, and you have to basically submit to this L1 or you can move away, that's a whole other question. But if we can decentralize this into a various kind of tiny rollup L2 ecosystem, then we can bring back dissonance and disagreement within this common infrastructure. 
 

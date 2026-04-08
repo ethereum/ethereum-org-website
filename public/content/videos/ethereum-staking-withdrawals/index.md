@@ -19,7 +19,7 @@ An explainer by **Finematics** covering how staking withdrawals work on Ethereum
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=RwwU3P9n3uo) published by Finematics. It has been lightly edited for readability.*
 
-#### The Beacon Chain (0:31)
+#### The Beacon Chain (0:31) {#the-beacon-chain-031}
 
 With the Shanghai/Capella upgrade rapidly approaching, there is a lot of discussion about Ethereum staking withdrawals and what this means for the Ethereum ecosystem as a whole.
 
@@ -35,7 +35,7 @@ The next big step, the Merge, united the proof-of-stake consensus layer with the
 
 To minimize risk, the scope of the Merge was reduced, and no other features — outside of the proof-of-work to proof-of-stake switch — were included as part of the upgrade. The biggest "cut" that had to be done impacted withdrawals, which became the focus of the upcoming Shanghai/Capella upgrade.
 
-#### Withdrawals (2:09)
+#### Withdrawals (2:09) {#withdrawals-209}
 
 Staking withdrawals, as the name suggests, will allow stakers to withdraw their locked-up ETH. There are two types of withdrawals: "partial" and "full."
 
@@ -47,7 +47,7 @@ Once enabled, staking withdrawals will be automatically distributed every few da
 
 In order to start withdrawing their staking rewards, a validator will have to provide their withdrawal address only once. Given withdrawals affect both the consensus and execution layers of Ethereum, both parts of the network must be updated. "Shanghai" is the name of the execution layer upgrade containing withdrawals, which are specified in EIP-4895. "Capella" is the name of the counterpart consensus layer upgrade, activated at the same time. These two upgrades are sometimes also referred to as "Shapella."
 
-#### Mechanics (3:40)
+#### Mechanics (3:40) {#mechanics-340}
 
 In the Ethereum ecosystem, each validator has a corresponding index number. In addition, they also have two types of withdrawal credentials, defined as either `0x00` or `0x01`.
 
@@ -77,7 +77,7 @@ When building or processing a block, execution layer clients apply these withdra
 
 The design of withdrawals is simple yet extremely robust.
 
-#### Misconceptions (6:30)
+#### Misconceptions (6:30) {#misconceptions-630}
 
 The first misconception states that when processing withdrawals, there is a difference between a "full" and a "partial" withdrawal in terms of priority or ordering. Both full and partial withdrawals happen when the linear scan over the validator set reaches a validator's index. The only difference is that in the case of full withdrawals, a validator must leave the exit queue and reach the "withdrawable epoch" before the linear scan can pick it up.
 
@@ -93,7 +93,7 @@ Second, to ensure that the proof-of-stake consensus mechanism and the active set
 
 The first withdrawal scan will withdraw a lot of accumulated rewards — basically since the inception of the Beacon Chain. However, the subsequent ones will process a much smaller amount of ETH.
 
-#### Implications (8:39)
+#### Implications (8:39) {#implications-839}
 
 Enabling withdrawals will create an open, two-sided staking flow. Currently, the staking flow is one-sided — ETH can only flow into the network and never exit it. Interestingly, enabling withdrawals may incentivize even more people to stake, as they will know they can always withdraw their ETH if needed for something else.
 
@@ -103,7 +103,7 @@ Withdrawals will also impact liquid staking derivatives such as Lido, Rocket Poo
 
 Early adopters in liquid staking and centralized staking captured a vast majority of the market as they didn't have much competition. However, the market share of these incumbent players could see a major change once withdrawals are enabled, especially if they don't offer a competitive rate. The ability to shift freely between staking providers will benefit the ETH staking market.
 
-#### Summary (10:01)
+#### Summary (10:01) {#summary-1001}
 
 Enabling staking withdrawals is one of the most anticipated upgrades to Ethereum. It will be extremely important to make sure this change is executed smoothly. In order to help with testing, validators will have several devnets and testnets available to run through the process and iron out any potential issues before going live on the mainnet.
 

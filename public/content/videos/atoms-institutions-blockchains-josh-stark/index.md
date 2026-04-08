@@ -19,7 +19,7 @@ A philosophical keynote by **Josh Stark** of the Ethereum Foundation at Pragma D
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=zI07mqNdxzA) published by ETHGlobal. It has been lightly edited for readability.*
 
-#### Why can't we explain blockchains? (0:00)
+#### Why can't we explain blockchains? (0:00) {#why-cant-we-explain-blockchains-000}
 
 Hi everybody, thank you for being here at Pragma in Denver. My name is Josh. I work at the Ethereum Foundation — I've been with the EF for about five years now. I like to joke that my job is figuring out what my job should be, and that changes every six months.
 
@@ -31,7 +31,7 @@ We really need to get to the heart of it, and I don't think we're that close. It
 
 So this started as a very specific question that I had: what is the general-purpose technology? What is this fundamental capacity? And it turned into something that I find much more interesting.
 
-#### Claude Shannon and the idea of information (4:00)
+#### Claude Shannon and the idea of information (4:00) {#claude-shannon-and-the-idea-of-information-400}
 
 Let me tell you a story. In the 1930s and 40s, Claude Shannon was surrounded by the beginnings of a new age. At Bell Labs, he worked on fire control systems and cryptography during the war, and he started to think about a more general approach to information. He didn't call it information at first — in 1939 he wrote to a colleague that he was thinking about the "transmission of intelligence." The word information had a different meaning then.
 
@@ -41,7 +41,7 @@ Before this moment, no one really had this concept of information as a universal
 
 What I want you to take from this: there was a time before we had the idea of information and a time after. What if we are similarly missing something so fundamental? That's my hypothesis.
 
-#### Three clues (7:00)
+#### Three clues (7:00) {#three-clues-700}
 
 As I'm struggling to explain blockchains, I keep running into these weird things that I think are clues towards something bigger.
 
@@ -53,7 +53,7 @@ With cars, we talked about "horseless carriages," but at least we could name wha
 
 **Clue number three** — Satoshi's paper starts with these words: "commerce on the internet has come to rely almost exclusively on financial institutions serving as trusted third parties." Satoshi was comparing Bitcoin to institutions, not to other software. There's something there.
 
-#### Introducing hardness (11:00)
+#### Introducing hardness (11:00) {#introducing-hardness-1100}
 
 Here's my answer to what goes in that box. I call it **hardness**. Here's the story in five simple steps, and then we'll go into more depth.
 
@@ -71,7 +71,7 @@ Gold's inflation rate is reliable because of the physical properties of our plan
 
 You can think of atoms, institutions, and blockchains like building materials — like wood, concrete, and steel. They're different, but they're part of a shared category. And we use these things not to build buildings, but to build a civilization. Maybe with better materials, we can build a bigger, better, stronger civilization than the one we have now.
 
-#### What is hardness? (14:00)
+#### What is hardness? (14:00) {#what-is-hardness-1400}
 
 Let me give more precision to what I mean by hardness. This is not just any reliability that anything might have. Hardness is a specific kind. The thing to note first is that it's a type of reliability that matters for social coordination. Not just, you know, this table is reliably a table — but that you can pay your rent, that a contract will be enforced, that an economy is strong. That's the stuff that hardness is for.
 
@@ -87,7 +87,7 @@ And lastly, hardness comes from certain sources — atoms, institutions, and blo
 
 I like about this framework that it lets us ask deeper questions — not just talk about specific properties of blockchains, but compare all of these different things and think about where they're appropriate, how we use them, and in what combination.
 
-#### Atom hardness (19:00)
+#### Atom hardness (19:00) {#atom-hardness-1900}
 
 Atom hardness is about when we find reliability in nature around us — literal physical atoms but also other naturally occurring properties. We do this when we use gold beads for money, when we use physical structures to define property rights, or record property rights in a physical object like a deed.
 
@@ -101,7 +101,7 @@ And casts are often undermined by our increasing human control over nature. Usin
 
 But it's more subtle than that. Sometimes we have casts we don't even realize exist, but then they're gone because something changed. There was a hard cast about the speed of trading in financial markets for a long time — it could only be done at a certain pace, maybe the pace that someone can shout to each other on the floor. This cast was atom-hard — we just couldn't communicate faster than that. But new technology completely undermined those assumptions. We realized we actually liked a version of that old cast and remade it out of institutions — introducing regulations that limit the speed of trading and enforce circuit breakers.
 
-#### Institutional hardness (22:00)
+#### Institutional hardness (22:00) {#institutional-hardness-2200}
 
 Institutional hardness is a very wide category — it covers most things we might think of when we think of civilization. Our legal systems, legislatures, police forces, corporations, everything. All institutions that provide hardness of some kind. We created casts that gave order to our societies, punishing antisocial behavior. We created hardness as a platform, letting anyone create their own casts made hard by institutions if you follow certain rules. We created casts that spawned new assets and provided sources of credit to growing economies.
 
@@ -111,13 +111,13 @@ But it also has many weaknesses. It's limited by borders — only in certain cou
 
 And they're made of people, and people are bad. The reality is in this country and many others that many people have not really had access to the hardness provided by institutions. They weren't able to get a mortgage. They weren't able to open a bank account. Because when you staff an institution full of people, it's subject to their evils, their prejudices, their ideologies. And our reliance on institutional hardness is only increasing. The problem with software eating the world is that most software is really just made out of an institution behind the screen, and we're giving them more and more power as a result.
 
-#### Blockchain hardness (24:20)
+#### Blockchain hardness (24:20) {#blockchain-hardness-2420}
 
 Satoshi's invention was of course more than just Bitcoin — it was the kernel of a general-purpose technique for creating digital hardness in a digital environment. It has many strengths: universal global access, it's made of software and anyone can write software, the degree of hardness can be transparent and auditable, low startup cost, easy to iterate, and secured by market incentives — and markets are rational.
 
 But it also has weaknesses. It requires a technological civilization — we couldn't have had blockchains before now because of the requirements, and a civilization in the future that doesn't have what we have won't be able to use them either. It's made of software, and software can be written poorly. The scope of casts is limited to onchain environments. And it's secured by market incentives — and markets are irrational.
 
-#### Why this matters (25:10)
+#### Why this matters (25:10) {#why-this-matters-2510}
 
 So what does this mean? What does this give us? Why is this more than just an academic interest?
 
@@ -127,7 +127,7 @@ It explains why private or centralized blockchains are not interesting. A blockc
 
 It also helps understand the spectrum of possibilities and the default ideologies people fall into in the blockchain space. Many people are very focused on using blockchain hardness to compete with or replace institutional hardness — this is what a lot of the Bitcoin community is about, what a lot of DeFi is about. Even ENS is trying to replace or compete with DNS in some way. But then there are also people who see that blockchain hardness can do things that institutional hardness can't — ideas no one has ever tried before because we never had this capacity, this certain flavor of hardness. And now we can explore those things. Maybe NFTs are there, or games like Dark Forest, or the movement around autonomous worlds.
 
-#### Raising our ambitions (27:00)
+#### Raising our ambitions (27:00) {#raising-our-ambitions-2700}
 
 Most importantly, I think this framework raises our ambitions. Personally, this is what matters to me, and maybe it resonates with you — I'm not just here for these individual applications. I'm not someone who is just really all about Bitcoin or all about DeFi or all about NFTs. Maybe that's you too. There's something bigger going on here.
 

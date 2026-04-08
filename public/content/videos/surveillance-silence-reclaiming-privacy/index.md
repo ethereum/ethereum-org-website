@@ -18,11 +18,11 @@ A keynote by **Naomi Brockwell** at EthBoulder 2026 on the erosion of digital pr
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=nvJSFR1Q_JE) published by EthBoulder. It has been lightly edited for readability.*
 
-#### Two-part talk: warning + solution (00:00)
+#### Two-part talk: warning + solution (00:00) {#two-part-talk-warning-solution-0000}
 
 **Naomi:** Wonderful. Welcome everyone. Thank you for for being here. So, this is going to be a two-part talk. in the first part, it might get like a little intense. I have been known to get pretty intense when it comes to privacy and surveillance talks. the second part is going to be a little bit of a different tone. So in the first part I'm going to tell you a story and in the second part we're going to save the world. So if you guys are all cool with that we can get started. 
 
-#### The emperor's new clothes (00:44)
+#### The emperor's new clothes (00:44) {#the-emperors-new-clothes-0044}
 
 So act one. Let's start with act one of our story. The spell. So there once was an emperor who was sold a magnificent set of new clothes. The salesman told him, "These garments were special. Only the intelligent and virtuous could see them, and anyone unfit for their position would see nothing at all." The emperor couldn't see any clothes, but he was afraid to admit it. Saying so would mean confessing that he wasn't worthy to rule, so he said nothing. And when the emperor appeared in public parading through the streets, no one else could see the clothes either. 
 
@@ -32,7 +32,7 @@ So, at its core, let's go back here. At its core, this story isn't about clothes
 
 Now, in our story, each person thought that maybe they were the problem. So, they deferred to their neighbors and presumed that if something were truly wrong, someone else would have spoken up first. Everyone submitted to the wisdom of the crowd. And this was a bad strategy because the crowd was wrong. The emperor was naked. And because everyone stayed silent, consensus replaced truth. The silence of the crowd became proof that everything was fine. Now, this is exactly how privacy collapses in the modern world. 
 
-#### The machine (02:46)
+#### The machine (02:46) {#the-machine-0246}
 
 So, act two, the machine. Here's the modern version of the story. We live under the largest data collection regime in human history. We have built and we continue to feed an infrastructure of surveillance unlike anything the world has ever seen before. and the trajectory of where we're headed is a recipe for disaster. Now, why is that? Because right now, the only way that this ends well is if we can guarantee that someone bad will never gain control of this system. But if someone bad does eventually get control, this is like an atomic weapon of potential energy filled with all of the ingredients needed to completely control a population. 
 
@@ -42,13 +42,13 @@ It feels uneasy, right? And we feel it when an app asks for access that it doesn
 
 We feel that something is wrong when we skim a privacy policy and we know that we should read it carefully. Probably has some important stuff in there. And actually it says right in there in black and white that yes they are absolutely going to be sharing this intimate data and we don't even know who with but we click accept anyway because after all it can't be that bad or accepting these things wouldn't be the status quo right? If it were that bad everyone wouldn't be just doing this. 
 
-#### How bad is the status quo? (05:12)
+#### How bad is the status quo? (05:12) {#how-bad-is-the-status-quo-0512}
 
 So how bad is the status quo? How bad is this stuff really? Or maybe we should talk about this because some people think that this is just a matter of companies trying to sell us a better pair of shoes. This is just like a consumer thing, right? Or maybe it's just about social media companies learning about us to create a more finely tuned algorithm, right? That doesn't seem so dire. What's what's the problem with all of that?
 
 But right now, we are all consenting to a pervasive surveillance machine that is quietly invading every private area of our lives. Now, in some places like authoritarian regimes, this machine is used to control disscent before it happens by flagging potentially problematic people as more likely to join a protest movement and then targeting those people. Sometimes this machine is used to shape public sentiment or influence opinions or sway elections or get entire populations to to hate certain types of people by convincing them that those groups hate them. And then there are countries that publicly broadcast information about citizens whose social credit scores have dropped and then they use those scores to restrict travel, to limit their employment, to block their children from certain schools or to cut them off from opportunity entirely. 
 
-#### Data collection at trillion-dollar scale (06:26)
+#### Data collection at trillion-dollar scale (06:26) {#data-collection-at-trillion-dollar-scale-0626}
  
 And now with the AI revolution, the machine stops being just a record of your life and it becomes a prediction engine. So this is why this is important. So I want to make this concrete for you. So I'll just kind of go over this state of surveillance right now. 
  
@@ -56,7 +56,7 @@ I'm going to break the machine down into three parts. First one collected. How t
  
 But let's say that you're really lucky and you avoid the targeting of this system. But your children probably won't avoid it, and you have no idea whether they will or not. And this machinery that you're consenting to today, it doesn't go away. You don't know who will be in charge tomorrow.
 
-#### How this information is leaked (08:03)
+#### How this information is leaked (08:03) {#how-this-information-is-leaked-0803}
  
 So bucket two is how this information is then leaked. Every year the number of data breaches hits a new time high. Leaking all kinds of information that companies should never have collected in the first place. So location histories and medical records, financial data, private messages, and this information gets dumped into the wild, and it all ends up on the dark web to be used by organized cartels, by criminal gangs, and nation state hackers. 
 
@@ -68,7 +68,7 @@ And yet companies still decide to collect all of this unnecessary data, mountain
  
 So this is the crowd clapping at the parade, right? It's not because we're certain that every click and every accept is safe. It's because speaking up and opting out or switching tools feels harder than going along. 
 
-#### Backdoors & government interception (09:33) 
+#### Backdoors & government interception (09:33) {#backdoors-government-interception-0933} 
  
 So now let's talk about this third bucket, weaponized. So hostile foreign intelligent operations have already infiltrated core communication infrastructure. I was just chatting before to people about Salt Typhoon, right? China, for example, has been intercepting our calls and messages at scale. 
 
@@ -78,7 +78,7 @@ We know that it isn't possible for governments to make sure that they're the onl
 
 We know about one of them, Salt Typhoon, but we have no idea who's been collecting our sensitive, intimate communications in this very infrastructure that we rely on. 
  
-#### Why oversight is more rare than you think (10:51)
+#### Why oversight is more rare than you think (10:51) {#why-oversight-is-more-rare-than-you-think-1051}
 
 So, the emperor is naked and the only reason all of this persists is because the crowd keeps clapping. But there is another reason why the crowd keeps clapping. 
  
@@ -112,7 +112,7 @@ So, how many hundreds of millions of people are using Apple products and one guy
 
 There's another presentation where someone's dad bought home one of those home hubs, right? She decided to do some probing. Sometimes she plays with the different tools in the house and she wanted to figure out how it works. And it turns out that this popular consumer device that anyone could buy was being used as a hub in a massive Chinese botnet. So then the FBI sees a presentation. They end up taking a presentation offline classifying the investigation. They didn't know this was going on, but she was the one who brought it to their attention by just giving this presentation like, "Hey guys, I found this weird stuff going on." And that's how we find out that a massive Chinese botnet is invading all of our homes through this one specific device. What about all the other devices in our home that no one has bothered to even look at yet? 
 
-#### The silence problem & false consensus (16:30)
+#### The silence problem & false consensus (16:30) {#the-silence-problem-false-consensus-1630}
 
 So, that's that's where we're currently at right now. Surveillance today is pervasive, and it's invisible, and it's normalized, and it's justified, and we consider it industry standard. And that's where we're currently at.
 
@@ -134,7 +134,7 @@ So Eric Schmidt of Google, he has this famous atrocious quote where he says if y
 
 So, notice what's happening. Privacy has become framed as guilt and compliance has become framed as virtue. The good people are the ones who surrender to the access and the suspicious people are the ones who ask the questions. And now pushing back becomes socially costly. Once you attach that moral label to silence, the parade just runs itself.
 
-#### How do we stop the emperor's parade? (20:23)
+#### How do we stop the emperor's parade? (20:23) {#how-do-we-stop-the-emperors-parade-2023}
 
 Let's go back to our story. The emperor's new clothes. As the emperor marches through the street in his new clothes, the crowd applauds. They admire the craftsmanship. They praise the elegance. They comment on the cuts and the fabric and the way that the garments catch the light. And they compete to sound the most impressed. And courters lean forward and they're eager to be seen agreeing, and officials nod solemnly, and advisers add flourishes of technical praise and they invent details to prove that they understand what they're looking at, and some speak loudly hoping to be overheard, and others smile and say nothing, careful not to look confused. And no one wants to be the first to hesitate, and no one wants to be the one who asks obvious questions, and with every compliment the lie becomes harder to undo. 
 
@@ -158,7 +158,7 @@ So, the way this changes is not by waiting for the emperor to stop. It's by the 
 
 Now, when people when enough people stop applauding, the parade can't continue. And that's the part of the story that we're still writing here. So, it's not whether the emperor has no clothes. We all know that he doesn't have any clothes. The only question left is whether we keep walking alongside him, pretending that it is fine. 
 
-#### Part two: let's save the world (25:22)
+#### Part two: let's save the world (25:22) {#part-two-lets-save-the-world-2522}
 
 So on that kind of dire note, part two: let's save the world. Who wants a better future? Who wants a better future for future generations, for their children? Who wants to change things? Because we're completely empowered to make a difference. 
 
@@ -313,7 +313,7 @@ So every time you're in that juncture, just try see if it's something you can in
 On top of that, if legislators ban this stuff out of existence, because no one is fighting for it, because we're all saying, "Well, I have nothing to hide." This stuff will disappear. 
 
 
-#### The choices we have to make about the future we want to see (46:56) 
+#### The choices we have to make about the future we want to see (46:56) {#the-choices-we-have-to-make-about-the-future-we-want-to-see-4656} 
 
 So, I'll leave you on this note because I think we're running out of time here. Right now, we are at that juncture in the road where we have to make some choices about the world that we want to see. And I know there are a lot of people who are inconvenienced by these systems and it seems like a lot of work to move things over. 
 
