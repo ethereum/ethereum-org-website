@@ -77,4 +77,4 @@ jobs:
           Once merged, these strings will be picked up by the translation pipeline and translated into all 24 supported locales.
 
           This PR was created automatically by the \`i18n-sync-external-descriptions\` workflow." \
-            --label "i18n :globe_with_meridians:"
+            --label "translation 🌍"
