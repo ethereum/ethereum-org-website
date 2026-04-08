@@ -1,5 +1,6 @@
 import { compileMDX, type MDXRemoteProps } from "next-mdx-remote/rsc"
 import remarkGfm from "remark-gfm"
+import remarkHeadingId from "remark-heading-id"
 
 import { htmlElements } from "@/components/MdComponents"
 
@@ -23,7 +24,7 @@ export async function renderSimpleMarkdown(
     options: {
       parseFrontmatter: false,
       mdxOptions: {
-        remarkPlugins: [remarkGfm],
+        remarkPlugins: [remarkGfm, remarkHeadingId],
       },
     },
   })
