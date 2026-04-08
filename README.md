@@ -2199,6 +2199,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nxxck"><img src="https://avatars.githubusercontent.com/u/48026464?v=4?s=100" width="100px;" alt="nxxck"/><br /><sub><b>nxxck</b></sub></a><br /><a href="#content-nxxck" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Nexonik2"><img src="https://avatars.githubusercontent.com/u/262324427?v=4?s=100" width="100px;" alt="Nexonik"/><br /><sub><b>Nexonik</b></sub></a><br /><a href="#content-nexonik2" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lo996"><img src="https://avatars.githubusercontent.com/u/136587632?v=4?s=100" width="100px;" alt="lo996"/><br /><sub><b>lo996</b></sub></a><br /><a href="#maintenance-lo996" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://didier.krux.co"><img src="https://avatars.githubusercontent.com/u/9531862?v=4?s=100" width="100px;" alt="Didier Krux"/><br /><sub><b>Didier Krux</b></sub></a><br /><a href="#maintenance-didierkrux" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
