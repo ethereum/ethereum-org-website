@@ -37,7 +37,7 @@ const VideoLandingPage = async (props: {
 }) => {
   const { locale, slug } = await props.params
 
-  const t = await getTranslations({ locale, namespace: "page-videos" })
+  const t = await getTranslations("page-videos")
   setRequestLocale(locale)
 
   let data: VideoData | undefined
@@ -129,7 +129,7 @@ export async function generateMetadata(props: {
   try {
     data = await getVideoData(slug, locale)
   } catch {
-    const t = await getTranslations({ locale, namespace: "common" })
+    const t = await getTranslations("common")
     return {
       title: t("page-not-found"),
       description: t("page-not-found-description"),

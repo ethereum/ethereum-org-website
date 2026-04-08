@@ -17,7 +17,7 @@ export default async function VideosPageJsonLD({
   locale: string
   videos: VideoCardData[]
 }) {
-  const t = await getTranslations({ namespace: "page-videos" })
+  const t = await getTranslations("page-videos")
 
   const url = normalizeUrlForJsonLd(locale, `/videos/`)
 
@@ -75,11 +75,11 @@ export default async function VideosPageJsonLD({
           )
           .slice(0, 10)
           .map((video, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: video.title,
-          url: normalizeUrlForJsonLd(locale, `/videos/${video.slug}/`),
-        })),
+            "@type": "ListItem",
+            position: index + 1,
+            name: video.title,
+            url: normalizeUrlForJsonLd(locale, `/videos/${video.slug}/`),
+          })),
       },
     ],
   }

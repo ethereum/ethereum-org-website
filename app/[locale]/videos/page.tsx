@@ -30,7 +30,7 @@ const VideoGalleryPage = async (props: {
   setRequestLocale(locale)
 
   const videos = await getVideos(locale)
-  const t = await getTranslations({ locale, namespace: "page-videos" })
+  const t = await getTranslations("page-videos")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -64,7 +64,7 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { locale } = await props.params
 
-  const t = await getTranslations({ locale, namespace: "page-videos" })
+  const t = await getTranslations("page-videos")
 
   return await getMetadata({
     locale,
