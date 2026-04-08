@@ -79,8 +79,8 @@ const Section = ({
 async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-stablecoins")
+  const tCommon = await getTranslations("common")
 
   setRequestLocale(locale)
 
@@ -762,7 +762,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+  const t = await getTranslations("page-stablecoins")
 
   return await getMetadata({
     locale,

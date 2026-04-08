@@ -96,6 +96,18 @@ module.exports = (phase) => {
 
       return config
     },
+    // Turbopack loader equivalents for the webpack() config above
+    turbopack: {
+      rules: {
+        "*.yaml": { loaders: ["yaml-loader"], as: "*.js" },
+        "*.yml": { loaders: ["yaml-loader"], as: "*.js" },
+        "*.svg": { loaders: ["@svgr/webpack"], as: "*.js" },
+        "*.md": { loaders: ["raw-loader"], as: "*.js" },
+        "*.mp3": { as: "*.static" },
+      },
+    },
+    // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
+    serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
     images: {
       qualities: [5, 10, 20, 35, 40, 75, 90, 100],
@@ -241,6 +253,9 @@ module.exports = withSentryConfig(module.exports, {
   project: "ethorg",
   silent: true,
   widenClientFileUpload: true,
-  disableLogger: true,
-  automaticVercelMonitors: true,
+  webpack: {
+    treeshake: {
+      removeDebugLogging: true,
+    },
+  },
 })

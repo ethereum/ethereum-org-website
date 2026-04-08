@@ -10,6 +10,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag, TagsInlineText } from "@/components/ui/tag"
 
 import { formatDate, getValidDate } from "@/lib/utils/date"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { numberFormat } from "@/lib/utils/numbers"
 import { isExternal } from "@/lib/utils/url"
 
@@ -21,11 +22,18 @@ import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
 
 const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
   const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-developers-tools")
+  const tCommon = await getTranslations("common")
+  const toolDescriptions = await getTranslations(
+    "page-developers-tools-descriptions"
+  )
+
+  const translatedDescription = getLocalizedDescription(
+    toolDescriptions,
+    "tool",
+    tool.name,
+    tool.description
+  )
 
   const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 
@@ -63,7 +71,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
             status={getCategoryTagStyle(categorySlug)}
             className="px-1 py-0"
           >
-            {tool.category}
+            {t(`page-developers-tools-category-${categorySlug}-title`)}
           </Tag>
           <h2 className="text-3xl">{tool.name}</h2>
           <TagsInlineText
@@ -73,7 +81,10 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
           />
         </div>
         <div className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
-          {await renderSimpleMarkdown(tool.description, mdComponentOverrides)}
+          {await renderSimpleMarkdown(
+            translatedDescription,
+            mdComponentOverrides
+          )}
         </div>
         <div className="!mt-8 space-y-2">
           <p>{t("page-developers-tools-modal-links")}</p>

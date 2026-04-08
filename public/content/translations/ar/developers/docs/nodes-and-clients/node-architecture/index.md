@@ -6,7 +6,7 @@ lang: ar
 
 تتكون عقدة إيثريوم من عميلين: [عميل التنفيذ](/developers/docs/nodes-and-clients/#execution-clients) و[عميل الإجماع](/developers/docs/nodes-and-clients/#consensus-clients). لكي تقترح العقدة كتلة جديدة، يجب عليها أيضًا تشغيل [عميل مدقق](#validators).
 
-عندما كان إيثريوم يستخدم [إثبات العمل](/developers/docs/consensus-mechanisms/pow/)، كان عميل التنفيذ كافيًا لتشغيل عقدة إيثريوم كاملة. ولكن، منذ تطبيق [إثبات الحصة](/developers/docs/consensus-mechanisms/pow/)، يجب استخدام عميل التنفيذ إلى جانب برنامج آخر يسمى [عميل الإجماع](/developers/docs/nodes-and-clients/#consensus-clients).
+عندما كان إيثريوم يستخدم [إثبات العمل](/developers/docs/consensus-mechanisms/pow/)، كان عميل التنفيذ كافيًا لتشغيل عقدة إيثريوم كاملة. ولكن، منذ تطبيق [إثبات الحصة](/developers/docs/consensus-mechanisms/pos/)، يجب استخدام عميل التنفيذ إلى جانب برنامج آخر يسمى [عميل الإجماع](/developers/docs/nodes-and-clients/#consensus-clients).
 
 يوضح الرسم البياني أدناه العلاقة بين عميلي إيثريوم. يتصل العميلان بشبكات نظير إلى نظير (P2P) الخاصة بهما. هناك حاجة إلى شبكات P2P منفصلة حيث يقوم عملاء التنفيذ بالتحدث عن المعاملات عبر شبكة P2P الخاصة بهم، مما يمكنهم من إدارة مجموعة المعاملات المحلية الخاصة بهم، في حين يقوم عملاء الإجماع بحظر القيل والقال عبر شبكة P2P الخاصة بهم، مما يتيح الإجماع ونمو السلسلة.
 

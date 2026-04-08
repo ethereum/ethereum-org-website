@@ -238,7 +238,7 @@
   "merkle-root-term": "默克爾根",
   "merkle-root-definition": "默克爾根是默克爾樹的單一頂部雜湊值。它驗證區塊內的所有交易。",
   "message-term": "訊息",
-  "message-definition": "永遠不會序列化且僅在<a href=\"/glossary/#evm\">以太坊虛擬機</evm>內傳送的<a href=\"/glossary/#internal-transaction\">內部交易</a>。",
+  "message-definition": "永遠不會序列化且僅在<a href=\"/glossary/#evm\">以太坊虛擬機</a>內傳送的<a href=\"/glossary/#internal-transaction\">內部交易</a>。",
   "message-call-term": "訊息調用",
   "message-call-definition": "將<a href=\"/glossary/#message\">訊息</a>從一個帳戶傳遞到另一個帳戶的行為。如果目標帳戶與<a href=\"/glossary/#evm\">以太坊虛擬機</a>程式碼關聯，則虛擬機將以該物件的狀態和執行的訊息啟動。",
   "mev-term": "最大可提取價值 (MEV)",

@@ -76,7 +76,7 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 export default async function Page(props: { params: Promise<PageParams> }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-get-eth" })
+  const t = await getTranslations("page-get-eth")
 
   const tokenSwaps: CardListCardProps[] = [
     {
@@ -400,7 +400,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-get-eth" })
+  const t = await getTranslations("page-get-eth")
 
   return await getMetadata({
     locale,

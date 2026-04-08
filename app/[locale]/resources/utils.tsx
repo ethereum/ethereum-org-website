@@ -60,7 +60,7 @@ export const getResources = async ({
   avgBlobFee,
 }): Promise<DashboardSection[]> => {
   const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   // Fetch ETH price using the new data-layer function (already cached)
   const ethPrice = await getEthPrice()

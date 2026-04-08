@@ -8,7 +8,7 @@ lang: id
 published: 2025-04-30
 ---
 
-## Pengantar
+## Pengantar {#introduction}
 
 [SAML](https://www.onelogin.com/learn/saml) adalah standar yang digunakan di web2 untuk memungkinkan [penyedia identitas (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) menyediakan informasi pengguna untuk [penyedia layanan (SP)](https://en.wikipedia.org/wiki/Service_provider_(SAML)).
 
@@ -21,7 +21,7 @@ Perhatikan bahwa tutorial ini ditulis untuk dua audiens yang berbeda:
 
 Akibatnya, tutorial ini akan berisi banyak materi pengantar yang mungkin sudah Anda ketahui. Jangan ragu untuk melewatinya.
 
-### SAML untuk orang-orang Ethereum
+### SAML untuk orang-orang Ethereum {#saml-for-ethereum-people}
 
 SAML adalah protokol terpusat. Penyedia layanan (SP) hanya menerima asersi (seperti "ini adalah pengguna saya John, dia harus memiliki izin untuk melakukan A, B, dan C") dari penyedia identitas (IdP) jika ia memiliki hubungan kepercayaan yang sudah ada sebelumnya baik dengannya, atau dengan [otoritas sertifikat](https://www.ssl.com/article/what-is-a-certificate-authority-ca/) yang menandatangani sertifikat IdP tersebut.
 
@@ -31,7 +31,7 @@ Sebagai contoh, SP dapat berupa agen perjalanan yang menyediakan layanan perjala
 
 Ini adalah cara ketiga entitas, yaitu peramban, SP, dan IdP, bernegosiasi untuk mendapatkan akses. SP tidak perlu mengetahui apa pun tentang pengguna yang menggunakan peramban sebelumnya, hanya perlu memercayai IdP.
 
-### Ethereum untuk orang-orang SAML
+### Ethereum untuk orang-orang SAML {#ethereum-for-saml-people}
 
 Ethereum adalah sistem desentralisasi. 
 
@@ -50,7 +50,7 @@ Tanda tangan hanya memverifikasi alamat Ethereum. Untuk mendapatkan atribut peng
 
 Karena sifat desentralisasi dari Ethereum, setiap pengguna dapat membuat pengesahan. Identitas attestor penting untuk mengidentifikasi pengesahan mana yang kita anggap dapat diandalkan.
 
-## Persiapan
+## Persiapan {#setup}
 
 Langkah pertama adalah membuat SAML SP dan SAML IdP berkomunikasi satu sama lain.
 
@@ -60,7 +60,7 @@ Langkah pertama adalah membuat SAML SP dan SAML IdP berkomunikasi satu sama lain
     git clone https://github.com/qbzzt/250420-saml-ethereum -b saml-only
     cd 250420-saml-ethereum
     pnpm install
-```
+    ```
 
 2. Buat kunci dengan sertifikat yang ditandatangani sendiri. Ini berarti bahwa kunci tersebut adalah otoritas sertifikatnya sendiri, dan perlu diimpor secara manual ke penyedia layanan. Lihat [dokumentasi OpenSSL](https://docs.openssl.org/master/man1/openssl-req/) untuk informasi lebih lanjut. 
 
@@ -70,25 +70,25 @@ Langkah pertama adalah membuat SAML SP dan SAML IdP berkomunikasi satu sama lain
     openssl req -new -x509 -days 365 -nodes -sha256 -out saml-sp.crt -keyout saml-sp.pem -subj /CN=sp/
     openssl req -new -x509 -days 365 -nodes -sha256 -out saml-idp.crt -keyout saml-idp.pem -subj /CN=idp/
     cd ..
-```
+    ```
 
 3. Mulai server (baik SP maupun IdP)
 
     ```sh
     pnpm start
-```
+    ```
 
 4. Buka SP di URL [http://localhost:3000/](http://localhost:3000/) dan klik tombol untuk diarahkan ke IdP (port 3001).
 
 5. Berikan alamat email Anda kepada IdP dan klik **Login to the service provider**. Lihat bahwa Anda diarahkan kembali ke penyedia layanan (port 3000) dan bahwa ia mengenali Anda dari alamat email Anda.
 
-### Penjelasan terperinci
+### Penjelasan terperinci {#detailed-explanation}
 
 Inilah yang terjadi, langkah demi langkah:
 
 ![Logon SAML normal tanpa Ethereum](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
 File ini berisi konfigurasi untuk Penyedia Identitas dan Penyedia Layanan. Biasanya keduanya akan menjadi entitas yang berbeda, tetapi di sini kita dapat berbagi kode demi kesederhanaan.
 
@@ -166,7 +166,7 @@ export const idpPublicData = {
 
 Data publik untuk penyedia identitas juga serupa. Ini menentukan bahwa untuk memasukkan pengguna, Anda melakukan POST ke `http://localhost:3001/idp/login` dan untuk mengeluarkan pengguna, Anda melakukan POST ke `http://localhost:3001/idp/logout`.
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 Ini adalah kode yang mengimplementasikan penyedia layanan.
 
@@ -341,7 +341,7 @@ app.listen(config.spPort, () => {
 
 Dengarkan `spPort` dengan aplikasi express ini.
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
 Ini adalah penyedia identitas. Ini sangat mirip dengan penyedia layanan, penjelasan di bawah ini adalah untuk bagian-bagian yang berbeda.
 
@@ -471,7 +471,7 @@ Ini adalah titik akhir yang menerima permintaan masuk dari penyedia layanan. Ini
 
 Kita seharusnya dapat menggunakan [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) untuk membaca ID permintaan autentikasi. Namun, saya tidak dapat membuatnya berfungsi dan tidak sepadan menghabiskan banyak waktu untuk itu, jadi saya hanya menggunakan [pengurai XML serbaguna](https://www.npmjs.com/package/fast-xml-parser). Informasi yang kita butuhkan adalah atribut `ID` di dalam tag `<samlp:AuthnRequest>`, yang berada di tingkat atas XML.
 
-## Menggunakan tanda tangan Ethereum
+## Menggunakan tanda tangan Ethereum {#using-ethereum-signatures}
 
 Sekarang setelah kita dapat mengirim identitas pengguna ke penyedia layanan, langkah selanjutnya adalah mendapatkan identitas pengguna dengan cara yang tepercaya. Viem memungkinkan kita untuk sekadar meminta alamat pengguna dari dompet, tetapi ini berarti meminta informasi tersebut dari peramban. Kita tidak mengontrol peramban, jadi kita tidak dapat secara otomatis memercayai respons yang kita dapatkan darinya.
 
@@ -489,7 +489,7 @@ Kemudian buka [SP](http://localhost:3000) dan ikuti petunjuknya.
 
 Perhatikan bahwa pada titik ini kita tidak tahu cara mendapatkan alamat email dari alamat Ethereum, jadi sebagai gantinya kita melaporkan `<ethereum address>@bad.email.address` ke SP.
 
-### Penjelasan terperinci
+### Penjelasan terperinci {#detailed-explanation-2}
 
 Perubahannya ada pada langkah 4-5 dalam diagram sebelumnya.
 
@@ -700,7 +700,7 @@ idpRouter.post(`/login`,
 
 Alih-alih `getLoginPage`, sekarang gunakan `getSignaturePage` di penangan langkah 3.
 
-## Mendapatkan alamat email
+## Mendapatkan alamat email {#getting-the-email-address}
 
 Langkah selanjutnya adalah mendapatkan alamat email, pengidentifikasi yang diminta oleh penyedia layanan. Untuk melakukannya, kita menggunakan [Ethereum Attestation Service (EAS)](https://attest.org/).
 
@@ -756,7 +756,7 @@ Kemudian berikan alamat email Anda. Anda memiliki dua cara untuk melakukannya:
 
 Apa pun caranya, setelah Anda melakukan ini, buka [http://localhost:3000](http://localhost:3000) dan ikuti petunjuknya. Jika Anda mengimpor kunci pribadi pengujian, email yang Anda terima adalah `test_addr_0@example.com`. Jika Anda menggunakan alamat Anda sendiri, itu harus sesuai dengan apa yang Anda sahkan.
 
-### Penjelasan terperinci
+### Penjelasan terperinci {#detailed-explanation-3}
 
 ![Mendapatkan dari alamat Ethereum ke email](./fig-06-saml-sig-n-email.png)
 
@@ -873,13 +873,13 @@ Jika ada nilai, gunakan `decodeData` untuk mendekode data. Kita tidak memerlukan
 
 Gunakan fungsi baru untuk mendapatkan alamat email.
 
-## Bagaimana dengan desentralisasi?
+## Bagaimana dengan desentralisasi? {#what-about-decentralization}
 
 Dalam konfigurasi ini pengguna tidak dapat berpura-pura menjadi orang lain, selama kita mengandalkan attester yang dapat dipercaya untuk pemetaan alamat Ethereum ke email. Namun, penyedia identitas kita masih merupakan komponen terpusat. Siapa pun yang memiliki kunci pribadi penyedia identitas dapat mengirimkan informasi palsu ke penyedia layanan.
 
 Mungkin ada solusi menggunakan [komputasi multi-pihak (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Saya berharap dapat menulis tentang hal itu di tutorial mendatang.
 
-## Kesimpulan
+## Kesimpulan {#conclusion}
 
 Adopsi standar masuk, seperti tanda tangan Ethereum, menghadapi masalah ayam dan telur. Penyedia layanan ingin menarik pasar seluas mungkin. Pengguna ingin dapat mengakses layanan tanpa harus khawatir tentang dukungan standar masuk mereka.
 Membuat adaptor, seperti Ethereum IdP, dapat membantu kita mengatasi rintangan ini.

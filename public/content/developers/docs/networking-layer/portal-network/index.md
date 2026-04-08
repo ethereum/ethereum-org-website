@@ -59,7 +59,7 @@ The benefits of this network design are:
 
 The table below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
-### The Portal Networks
+### The Portal Networks {#the-portal-networks}
 
 | Beacon light client | State network                | Transaction gossip  | History network |
 | ------------------- | ---------------------------- | ------------------- | --------------- |

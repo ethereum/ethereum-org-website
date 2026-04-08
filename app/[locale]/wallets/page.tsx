@@ -49,7 +49,7 @@ const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-wallets" })
+  const t = await getTranslations("page-wallets")
 
   setRequestLocale(locale)
 
@@ -469,7 +469,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-wallets" })
+  const t = await getTranslations("page-wallets")
 
   return await getMetadata({
     locale,

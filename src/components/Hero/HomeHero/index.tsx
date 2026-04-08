@@ -1,5 +1,5 @@
 import { getImageProps, type StaticImageData } from "next/image"
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
@@ -23,8 +23,7 @@ const HomeHero = async ({
   image2xl,
   alt: altProp,
 }: HomeHeroProps) => {
-  const locale = getLocale()
-  const t = await getTranslations({ locale, namespace: "page-index" })
+  const t = await getTranslations("page-index")
 
   const baseImage = image ?? heroBase
   const xlImage = image2xl ?? image ?? hero2xl

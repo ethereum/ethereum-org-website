@@ -7,11 +7,8 @@ import Morpher from "@/components/Morpher/lazy"
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
 
-const TenYearHero = async ({ locale }: { locale: string }) => {
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+const TenYearHero = async () => {
+  const t = await getTranslations("page-10-year-anniversary")
 
   const WORDS = [
     t("page-10-year-censorship-resistance"),

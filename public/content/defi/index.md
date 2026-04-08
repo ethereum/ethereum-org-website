@@ -81,7 +81,7 @@ There's a decentralized alternative to most financial services. But Ethereum als
 - [Send money around the globe](#send-money)
 - [Stream money around the globe](#stream-money)
 - [Access stable currencies](#stablecoins)
-- [Borrow funds with collateral](#lending)
+- [Borrow funds with collateral](#lending-2)
 - [Borrow without collateral](#flash-loans)
 - [Start crypto savings](#saving)
 - [Trade tokens](#swaps)
@@ -180,7 +180,7 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 ### Start saving with crypto {#saving}
 
-#### Lending {#lending}
+#### Lending {#lending-2}
 
 You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). Here's an example:
 

@@ -26,10 +26,7 @@ import FindWalletPageJsonLD from "./page-jsonld"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-wallets-find-wallet",
-  })
+  const t = await getTranslations("page-wallets-find-wallet")
 
   setRequestLocale(locale)
 
@@ -91,10 +88,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-wallets-find-wallet",
-  })
+  const t = await getTranslations("page-wallets-find-wallet")
 
   return await getMetadata({
     locale,

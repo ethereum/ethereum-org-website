@@ -6,7 +6,7 @@ lang: cs
 
 Uzel sítě Ethereum se skládá ze dvou klientů: [exekučního klienta](/developers/docs/nodes-and-clients/#execution-clients) a [konsensuálního klienta](/developers/docs/nodes-and-clients/#consensus-clients). Aby mohl uzel navrhnout nový blok, musí na něm také běžet [klient validátoru](#validators).
 
-Když Ethereum používalo [důkaz prací](/developers/docs/consensus-mechanisms/pow/), stačil k provozování plného uzlu sítě Ethereum exekuční klient. Od zavedení [důkazu podílem](/developers/docs/consensus-mechanisms/pow/) se však musí exekuční klient používat společně s dalším softwarem, který se nazývá [konsensuální klient](/developers/docs/nodes-and-clients/#consensus-clients).
+Když Ethereum používalo [důkaz prací](/developers/docs/consensus-mechanisms/pow/), stačil k provozování plného uzlu sítě Ethereum exekuční klient. Od zavedení [důkazu podílem](/developers/docs/consensus-mechanisms/pos/) se však musí exekuční klient používat společně s dalším softwarem, který se nazývá [konsensuální klient](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Níže uvedený diagram znázorňuje vztah mezi dvěma klienty sítě Ethereum. Oba klienti se připojují ke svým vlastním sítím peer-to-peer (P2P). Jsou zapotřebí oddělené P2P sítě, protože exekuční klienti si přes svou P2P síť vyměňují transakce, což jim umožňuje spravovat jejich lokální transakční pool, zatímco konsensuální klienti si přes svou P2P síť vyměňují bloky, což umožňuje konsensus a růst řetězce.
 

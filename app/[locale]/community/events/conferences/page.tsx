@@ -29,10 +29,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   // Apply translations and compute eventTypes from tags if missing
   const events = mapEventTranslations(_events, t)
@@ -140,10 +137,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)
 

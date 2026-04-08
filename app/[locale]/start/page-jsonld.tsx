@@ -17,9 +17,7 @@ export default async function StartPageJsonLD({
   locale: Lang | undefined
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-start",
-  })
+  const t = await getTranslations("page-start")
 
   const url = normalizeUrlForJsonLd(locale, `/start/`)
 
