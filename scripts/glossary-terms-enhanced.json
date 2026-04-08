@@ -8751,9 +8751,18 @@
         {
           "term": "ZKP",
           "status": "accepted"
+        },
+        {
+          "term": "ZK-proof",
+          "status": "accepted",
+          "note": "ZK-Proof only in title-cased contexts"
         }
       ],
-      "note": "ZKP is the common acronym. Follow first-mention rule: spell out then use acronym."
+      "avoid": [
+        "ZK Proof",
+        "ZK proof"
+      ],
+      "note": "ZKP is the common acronym. ZK-proof (hyphenated, lowercase) is the accepted short form. Follow first-mention rule: spell out then use acronym."
     },
     "zero-knowledge rollup": {
       "id": "zk-rollup",
