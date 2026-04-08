@@ -92,7 +92,7 @@ import {
   getRSSData,
   getTotalValueLockedData,
 } from "@/lib/data"
-import EventFallback from "@/public/images/events/event-placeholder.png"
+import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -848,7 +848,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             className="max-w-full object-cover object-center"
                           />
                         ) : (
-                          <Image src={EventFallback} alt="" sizes="276px" />
+                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
                         )}
                       </CardBanner>
                       <CardContent>
