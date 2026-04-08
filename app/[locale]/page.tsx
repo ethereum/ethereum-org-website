@@ -60,6 +60,7 @@ import { cn } from "@/lib/utils/cn"
 import { formatDateRange } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { localizeLocation } from "@/lib/utils/geography"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import { formatPriceUSD } from "@/lib/utils/numbers"
 import { polishRSSList } from "@/lib/utils/rss"
@@ -104,6 +105,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-index")
   const tCommon = await getTranslations("common")
+  const appDescriptions = await getTranslations("page-app-descriptions")
   const { direction: dir, isRtl } = getDirection(locale)
 
   // Fetch data using the new data-layer functions (already cached)
@@ -629,7 +631,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <p className="text-lg">Start exploring Ethereum today</p>
                 </div>
                 <AppsHighlight
-                  apps={appsOfTheWeek}
+                  apps={appsOfTheWeek.map((app) => ({
+                    ...app,
+                    description: getLocalizedDescription(
+                      appDescriptions,
+                      "app",
+                      app.name,
+                      app.description
+                    ),
+                  }))}
                   matomoCategory="apps-of-the-week"
                 />
                 <div className="!mt-8 flex justify-center">

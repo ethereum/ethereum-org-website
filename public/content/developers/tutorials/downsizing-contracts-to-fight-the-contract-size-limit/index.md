@@ -79,7 +79,7 @@ require(msg.sender == owner, "Only the owner of this contract can call this func
 require(msg.sender == owner, "OW1");
 ```
 
-### Use custom errors instead of error messages
+### Use custom errors instead of error messages {#use-custom-errors-instead-of-error-messages}
 
 Custom errors have been introduced in [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). They are a great way to reduce the size of your contracts, because they are ABI-encoded as selectors (just like functions are).
 

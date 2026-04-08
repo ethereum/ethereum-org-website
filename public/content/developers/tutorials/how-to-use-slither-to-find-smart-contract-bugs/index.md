@@ -169,7 +169,7 @@ Slither comes with built-in [data dependency](https://github.com/crytic/slither/
 
 An example of data dependency usage can be found in the [dangerous strict equality detector](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). Here Slither will look for strict equality comparison to a dangerous value ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)), and will inform the user that it should use `>=` or `<=` rather than `==`, to prevent an attacker to trap the contract. Among other, the detector will consider as dangerous the return value of a call to `balanceOf(address)` ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)), and will use the data dependency engine to track its usage.
 
-#### Fixed-point computation {#fixed-point-computation}
+#### Fixed-point computation {#fixed-point-computation-2}
 
 If your analysis navigates through the CFG and follows the edges, you are likely to see already visited nodes. For example, if a loop is presented as shown below:
 

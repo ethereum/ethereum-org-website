@@ -11,6 +11,7 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { stripMarkdown } from "@/lib/utils/md"
 
 import { DEV_TOOL_CATEGORY_SLUGS } from "../constants"
@@ -19,6 +20,9 @@ import { getCategoryTagStyle } from "../utils"
 
 const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
   const t = await getTranslations("page-developers-tools")
+  const toolDescriptions = await getTranslations(
+    "page-developers-tools-descriptions"
+  )
 
   // Don't render section if no tools to highlight
   if (tools.length === 0) return null
@@ -61,7 +65,14 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
                       />
                     </CardBanner>
                     <CardParagraph variant="base" className="line-clamp-2">
-                      {stripMarkdown(tool.description)}
+                      {stripMarkdown(
+                        getLocalizedDescription(
+                          toolDescriptions,
+                          "tool",
+                          tool.name,
+                          tool.description
+                        )
+                      )}
                     </CardParagraph>
                   </div>
                   <AppCard
