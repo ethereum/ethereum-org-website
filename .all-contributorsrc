@@ -14131,6 +14131,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "didierkrux",
+      "name": "Didier Krux",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9531862?v=4",
+      "profile": "https://didier.krux.co",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
