@@ -1,6 +1,6 @@
 ---
 title: "Ethereum localism — global protocols, local power"
-description: "A discussion at EthBoulder 2025 exploring how Ethereum's global infrastructure can serve hyper-local communities, from community currencies and local governance to bio-regional citizenship."
+description: "A discussion at EthBoulder 2026 exploring how Ethereum's global infrastructure can serve hyper-local communities, from community currencies and local governance to bio-regional citizenship."
 lang: en
 youtubeId: "I4xb0rst6SQ"
 uploadDate: 2025-11-20
@@ -16,7 +16,7 @@ author: EthBoulder
 breadcrumb: "Ethereum Localism"
 ---
 
-A panel discussion with **Benjamin Life** and **Sarah Johnstone** at EthBoulder 2025 exploring the Ethereum Localism movement, including how Ethereum's global infrastructure can serve hyper-local communities through community currencies, local governance, bio-regional citizenship, and the principle of subsidiarity.
+A panel discussion with **Benjamin Life** and **Sarah Johnstone** at EthBoulder 2026 exploring the Ethereum Localism movement, including how Ethereum's global infrastructure can serve hyper-local communities through community currencies, local governance, bio-regional citizenship, and the principle of subsidiarity.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=I4xb0rst6SQ) published by EthBoulder. It has been lightly edited for readability.*
 

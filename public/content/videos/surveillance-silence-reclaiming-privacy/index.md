@@ -14,7 +14,7 @@ author: EthBoulder
 breadcrumb: "Reclaiming Privacy"
 ---
 
-A keynote by **Naomi Brockwell** at EthBoulder 2025 on the erosion of digital privacy, the infrastructure of mass surveillance, and practical tools everyone can use to build a more private digital life, from VPNs and encrypted email to GrapheneOS and decentralized mixnets.
+A keynote by **Naomi Brockwell** at EthBoulder 2026 on the erosion of digital privacy, the infrastructure of mass surveillance, and practical tools everyone can use to build a more private digital life, from VPNs and encrypted email to GrapheneOS and decentralized mixnets.
 
 *This transcript is an accessible copy of the [original video transcript](https://www.youtube.com/watch?v=nvJSFR1Q_JE) published by EthBoulder. It has been lightly edited for readability.*
 
