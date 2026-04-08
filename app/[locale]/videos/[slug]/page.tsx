@@ -67,7 +67,7 @@ const VideoLandingPage = async (props: {
       />
 
       <MainArticle className="max-w-4xl space-y-8 px-4 md:px-8">
-        <Breadcrumbs slug={breadcrumbSlug} startDepth={1} className="my-6" />
+        <Breadcrumbs slug={breadcrumbSlug} startDepth={1} className="mt-11" />
 
         <div className="sticky top-24 z-10 md:static">
           <YouTube

@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { Search, X } from "lucide-react"
+import { Search, Timer, X } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import type { VideoCardData } from "@/lib/types"
@@ -282,7 +282,12 @@ const VideoGalleryFilter = ({
                 >
                   {video.description}
                 </CardParagraph>
-                <CardParagraph variant="light" size="sm">
+                <CardParagraph
+                  variant="light"
+                  size="sm"
+                  className="inline-flex items-center gap-1"
+                >
+                  <Timer className="mb-px size-[1em]" />
                   {video.duration}
                 </CardParagraph>
               </CardContent>
