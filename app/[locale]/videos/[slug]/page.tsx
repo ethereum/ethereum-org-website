@@ -11,7 +11,6 @@ import type { VideoData } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
-import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { htmlElements } from "@/components/MdComponents"
@@ -66,17 +65,10 @@ const VideoLandingPage = async (props: {
         frontmatter={frontmatter}
         transcript={transcriptMdx}
       />
-      <SimpleHero
-        breadcrumbs={<Breadcrumbs slug={breadcrumbSlug} startDepth={1} />}
-        title={frontmatter.title}
-        subtitle={
-          <p className="text-lg text-body-medium">{frontmatter.description}</p>
-        }
-        className="max-w-3xl md:w-full"
-      />
 
       <MainArticle className="max-w-4xl space-y-8 px-4 md:px-8">
-        <h2 className="sr-only">{t("page-videos-watch-video")}</h2>
+        <Breadcrumbs slug={breadcrumbSlug} startDepth={1} className="my-6" />
+
         <div className="sticky top-24 z-10 md:static">
           <YouTube
             id={frontmatter.youtubeId}
@@ -85,10 +77,16 @@ const VideoLandingPage = async (props: {
           />
         </div>
 
-        <p className="text-body-medium">
-          {t("page-videos-date-published")}:{" "}
-          {formatDate(frontmatter.uploadDate, locale, { timeZone: "UTC" })}
-        </p>
+        <div className="space-y-4">
+          <h1>{frontmatter.title}</h1>
+
+          <p className="text-lg text-body-medium">{frontmatter.description}</p>
+
+          <p className="text-body-medium">
+            {t("page-videos-date-published")}:{" "}
+            {formatDate(frontmatter.uploadDate, locale, { timeZone: "UTC" })}
+          </p>
+        </div>
 
         {transcriptMdx && (
           <Accordion type="single" collapsible>
