@@ -30,9 +30,10 @@ function videoPath(slug: string, locale: string): string {
 
 /**
  * Default YouTube thumbnail URL derived from a video ID.
+ * Returns hqdefault (480x360) which is guaranteed to exist.
  */
 export function getDefaultThumbnailUrl(youtubeId: string): string {
-  return `https://img.youtube.com/vi/${youtubeId}/sddefault.jpg`
+  return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
 }
 
 /**
