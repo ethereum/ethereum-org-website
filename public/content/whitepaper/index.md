@@ -205,7 +205,7 @@ if !self.storage[calldataload(0)]:
   self.storage[calldataload(0)] = calldataload(32)
 ```
 
-Note that in reality the contract code is written in the low-level EVM code; this example is written in Serpent, one of our high-level languages, for clarity, and can be compiled down to EVM code. Suppose that the contract's storage starts off empty, and a transaction is sent with 10 ether value, 2000 gas, 0.001 ether gasprice, and 64 bytes of data, with bytes 0-31 representing the number `2` and bytes 32-63 representing the string `CHARLIE`. The process for the state transition function in this case is as follows:
+Note that in reality the contract code is written in the low-level EVM code; this example is written in Serpent, one of our high-level languages, for clarity, and can be compiled down to EVM code. Suppose that the contract's storage starts off empty, and a transaction is sent with 10 ether value, 2000 gas, 0.001 ether gasprice, and 64 bytes of data, with bytes 0-31 representing the number `2` and bytes 32-63 representing the string `CHARLIE`<sup>[fn3](#notes)</sup>. The process for the state transition function in this case is as follows:
 
 1. Check that the transaction is valid and well formed.
 2. Check that the transaction sender has at least 2000 \* 0.001 = 2 ether. If it is, then subtract 2 ether from the sender's account.
@@ -491,7 +491,7 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 
 1. A sophisticated reader may notice that in fact a Bitcoin address is the hash of the elliptic curve public key, and not the public key itself. However, it is in fact perfectly legitimate cryptographic terminology to refer to the pubkey hash as a public key itself. This is because Bitcoin's cryptography can be considered to be a custom digital signature algorithm, where the public key consists of the hash of the ECC pubkey, the signature consists of the ECC pubkey concatenated with the ECC signature, and the verification algorithm involves checking the ECC pubkey in the signature against the ECC pubkey hash provided as a public key and then verifying the ECC signature against the ECC pubkey.
 2. Technically, the median of the 11 previous blocks.
-3. Internally, 2 and "CHARLIE" are both numbers<sup>[fn3](#notes)</sup>, with the latter being in big-endian base 256 representation. Numbers can be at least 0 and at most 2<sup>256</sup>-1.
+3. Internally, 2 and "CHARLIE" are both numbers, with the latter being in big-endian base 256 representation. Numbers can be at least 0 and at most 2<sup>256</sup>-1.
 
 ### Further Reading {#further-reading}
 
