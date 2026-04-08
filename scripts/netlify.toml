@@ -1,0 +1,3 @@
+[build]
+  publish = "."
+  command = "echo 'static site'"
