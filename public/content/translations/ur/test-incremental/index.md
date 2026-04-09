@@ -1,6 +1,6 @@
 ---
-title: سمارٹ کنٹریکٹس بنانا اور تعینات کرنا
-description: ایتھیریم نیٹ ورک پر سمارٹ کنٹریکٹس لکھنے، ٹیسٹ کرنے اور تعینات کرنے کے لیے ایک عملی گائیڈ۔
+title: "سمارٹ کنٹریکٹس بنانا اور تعینات کرنا"
+description: "ایتھیریم نیٹ ورک پر سمارٹ کنٹریکٹس لکھنے، ٹیسٹ کرنے اور تعینات کرنے کے لیے ایک عملی گائیڈ۔"
 image: /images/developers/smart-contracts-hero-v3.png
 alt: "سمارٹ کنٹریکٹ کی تعیناتی کا خاکہ"
 lang: ur
@@ -49,7 +49,7 @@ contract SimpleStorage {
 
 ### "گیس" کیا ہے اور یہ کیوں اہم ہے؟ {#what-is-gas}
 
-EVM میں ہر آپریشن پر [گیس](/developers/docs/gas/) خرچ ہوتی ہے۔ ایک معیاری ERC-20 منتقلی میں تقریباً <span dir="ltr">21,000</span> گیس یونٹس استعمال ہوتے ہیں، جبکہ ایک پیچیدہ غیر مرکزی مالیات (DeFi) کے تعامل میں <span dir="ltr">300,000</span> یا اس سے زیادہ خرچ ہو سکتے ہیں۔ کل لین دین کی فیس کا حساب <span dir="ltr">(base_fee + priority_fee) * gas_used</span> کے طور پر کیا جاتا ہے، جو Wei میں قابل ادائیگی ہے۔ مثال کے طور پر، <span dir="ltr">30 Gwei</span> کی بنیادی فیس اور <span dir="ltr">2 Gwei</span> ٹپ کے ساتھ <span dir="ltr">21,000</span> گیس استعمال کرنے والی منتقلی کی لاگت <span dir="ltr">(30 + 2) * 21,000 = 672,000 Gwei</span> ہوتی ہے۔ زیادہ پیچیدہ لاجک کا مطلب صارفین کے لیے زیادہ فیس ہے۔
+EVM میں ہر آپریشن پر [گیس](/developers/docs/gas/) خرچ ہوتی ہے۔ ایک معیاری <span dir="ltr">ERC-20</span> منتقلی میں تقریباً <span dir="ltr">21,000</span> گیس یونٹس استعمال ہوتے ہیں، جبکہ ایک پیچیدہ غیر مرکزی مالیات (DeFi) کے تعامل میں <span dir="ltr">300,000</span> یا اس سے زیادہ خرچ ہو سکتے ہیں۔ کل لین دین کی فیس کا حساب <span dir="ltr">(base_fee + priority_fee) * gas_used</span> کے طور پر کیا جاتا ہے، جو Wei میں قابل ادائیگی ہے۔ مثال کے طور پر، <span dir="ltr">30 Gwei</span> کی بنیادی فیس اور <span dir="ltr">2 Gwei</span> ٹپ کے ساتھ <span dir="ltr">21,000</span> گیس استعمال کرنے والی منتقلی کی لاگت <span dir="ltr">(30 + 2) * 21,000 = 672,000 Gwei</span> ہوتی ہے۔ زیادہ پیچیدہ لاجک کا مطلب صارفین کے لیے زیادہ فیس ہے۔
 
 <ExpandableCard title="How are gas fees calculated?" eventCategory="/test-incremental" eventName="clicked gas fees">
 
