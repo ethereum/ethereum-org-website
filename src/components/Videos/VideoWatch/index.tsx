@@ -2,6 +2,12 @@ import { getTranslations } from "next-intl/server"
 
 import type { VideoData } from "@/lib/types"
 
+import {
+  Card,
+  CardContent,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import { LinkWithArrow } from "@/components/ui/Link"
 import YouTube from "@/components/YouTube"
 
@@ -33,25 +39,25 @@ const VideoWatch = async ({ slug, startTime }: VideoWatchProps) => {
   const t = await getTranslations("page-videos")
 
   return (
-    <div className="my-8 max-w-xl space-y-4">
+    <Card className="my-8 max-w-xl space-y-4 border bg-background-highlight p-4 md:p-6">
       <YouTube
         id={frontmatter.youtubeId}
         title={frontmatter.title}
-        className="mb-0"
+        className="m-0 overflow-hidden rounded-md"
         start={startTime}
       />
-      <div className="space-y-2">
-        <p className="text-lg font-semibold">{frontmatter.title}</p>
-        <p className="text-body-medium">
+      <CardContent className="p-0">
+        <CardTitle variant="semibold">{frontmatter.title}</CardTitle>
+        <CardParagraph variant="light">
           {frontmatter.description.split(/(?<=\.)\s/)[0]}
-        </p>
+        </CardParagraph>
         {hasTranscript && (
           <LinkWithArrow href={`/videos/${slug}/`}>
             {t("page-videos-watch-with-transcript")}
           </LinkWithArrow>
         )}
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   )
 }
 
