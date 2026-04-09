@@ -24,12 +24,26 @@ export async function fetchFileAtCommit(
   commitSha: string
 ): Promise<string | undefined> {
   const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}?ref=${commitSha}`
+  debugLog(`fetchFileAtCommit: ${filePath} @ ${commitSha.slice(0, 12)}`)
   const res = await fetchWithRetry(url, {
     headers: gitHubBearerHeaders,
   })
-  if (!res.ok) return undefined
+  if (!res.ok) {
+    console.warn(
+      `[fetchFileAtCommit] Failed: ${filePath} @ ${commitSha.slice(0, 12)} (${res.status})`
+    )
+    return undefined
+  }
   const data: { content?: string; encoding?: string } = await res.json()
-  if (!data.content || data.encoding !== "base64") return undefined
+  if (!data.content || data.encoding !== "base64") {
+    console.warn(
+      `[fetchFileAtCommit] Unexpected response for ${filePath}: encoding=${data.encoding}, hasContent=${!!data.content}`
+    )
+    return undefined
+  }
+  debugLog(
+    `fetchFileAtCommit: OK, ${Buffer.from(data.content, "base64").length} bytes`
+  )
   return Buffer.from(data.content, "base64").toString("utf-8")
 }
 

@@ -97,6 +97,15 @@ export async function detectInertChanges(
       oldManifest.sourceFile,
       oldManifest.sourceCommitSha
     )
+    if (!oldContent) {
+      console.warn(
+        `[detectInertChanges] Could not fetch old English for ${oldManifest.sourceFile} @ ${oldManifest.sourceCommitSha?.slice(0, 12)}. Inert changes will have empty old values.`
+      )
+    }
+  } else if (!oldContent && !oldManifest.sourceCommitSha) {
+    console.warn(
+      `[detectInertChanges] No sourceCommitSha in manifest for ${oldManifest.sourceFile || "unknown"}. Old values unavailable.`
+    )
   }
   if (oldContent) {
     oldTree =
