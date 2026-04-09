@@ -50,14 +50,14 @@ function buildSourceManifest(content: string): string {
 // ---------------------------------------------------------------------------
 
 test.describe("detectInertChanges", () => {
-  test("detects a link URL change", () => {
+  test("detects a link URL change", async () => {
     const oldEnglish =
       "## Section {#test-section}\n\nSome [link](http://old.com) text.\n"
     const newEnglish =
       "## Section {#test-section}\n\nSome [link](http://new.com) text.\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       newEnglish,
       sourceManifest,
       "markdown",
@@ -71,14 +71,14 @@ test.describe("detectInertChanges", () => {
     expect(changes[0].key).toBe("href")
   })
 
-  test("detects an image path change", () => {
+  test("detects an image path change", async () => {
     const oldEnglish =
       "## Images {#img-section}\n\n![Alt text](/old/path.png)\n"
     const newEnglish =
       "## Images {#img-section}\n\n![Alt text](/new/path.png)\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       newEnglish,
       sourceManifest,
       "markdown",
@@ -91,12 +91,12 @@ test.describe("detectInertChanges", () => {
     expect(changes[0].elementType).toBe("image")
   })
 
-  test("returns empty when nothing changed", () => {
+  test("returns empty when nothing changed", async () => {
     const english =
       "## Section {#test-section}\n\nSome [link](http://same.com) text.\n"
 
     const sourceManifest = buildSourceManifest(english)
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       english,
       sourceManifest,
       "markdown",
@@ -106,14 +106,14 @@ test.describe("detectInertChanges", () => {
     expect(changes).toHaveLength(0)
   })
 
-  test("handles duplicate URLs", () => {
+  test("handles duplicate URLs", async () => {
     const oldEnglish =
       "## Section {#dup-section}\n\n[first](http://same.com) and [second](http://same.com) links.\n"
     const newEnglish =
       "## Section {#dup-section}\n\n[first](http://changed.com) and [second](http://changed.com) links.\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       newEnglish,
       sourceManifest,
       "markdown",
@@ -125,14 +125,14 @@ test.describe("detectInertChanges", () => {
     expect(changes.every((c) => c.newValue === "http://changed.com")).toBe(true)
   })
 
-  test("detects multiple inert changes in one section", () => {
+  test("detects multiple inert changes in one section", async () => {
     const oldEnglish =
       "## Section {#multi}\n\nA [link](http://old.com) and ![img](/old.png).\n"
     const newEnglish =
       "## Section {#multi}\n\nA [link](http://new.com) and ![img](/new.png).\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       newEnglish,
       sourceManifest,
       "markdown",
@@ -148,14 +148,14 @@ test.describe("detectInertChanges", () => {
     )
   })
 
-  test("ignores sections without inert drift", () => {
+  test("ignores sections without inert drift", async () => {
     const oldEnglish =
       "## Section {#prose-only}\n\nOld prose with [link](http://same.com).\n"
     const newEnglish =
       "## Section {#prose-only}\n\nNew prose with [link](http://same.com).\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       newEnglish,
       sourceManifest,
       "markdown",
@@ -165,12 +165,12 @@ test.describe("detectInertChanges", () => {
     expect(changes).toHaveLength(0)
   })
 
-  test("detects component attribute changes", () => {
+  test("detects component attribute changes", async () => {
     const oldEnglish = '## Test {#test}\n\n<YouTube id="abc123" />\n'
     const newEnglish = '## Test {#test}\n\n<YouTube id="def456" />\n'
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       newEnglish,
       sourceManifest,
       "markdown",
@@ -184,14 +184,14 @@ test.describe("detectInertChanges", () => {
     expect(changes[0].key).toBe("id")
   })
 
-  test("detects frontmatter field changes", () => {
+  test("detects frontmatter field changes", async () => {
     const oldEnglish =
       "---\ntitle: Test\nimage: /old.png\n---\n\n## Sec {#sec}\n\nBody.\n"
     const newEnglish =
       "---\ntitle: Test\nimage: /new.png\n---\n\n## Sec {#sec}\n\nBody.\n"
 
     const sourceManifest = buildSourceManifest(oldEnglish)
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       newEnglish,
       sourceManifest,
       "markdown",

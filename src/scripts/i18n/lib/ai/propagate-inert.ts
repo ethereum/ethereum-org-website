@@ -57,16 +57,17 @@ interface InertChange {
  * list of inert values that changed, with full context (element type,
  * attribute name, old/new values).
  *
- * Delegates to intl-content-tree's extractInertChanges() which walks
- * old and new trees in parallel to extract precise change details.
+ * Uses the manifest's sourceCommitSha to fetch the old English content
+ * via the GitHub API, giving us a fully parsed old tree with real values.
  */
-export function detectInertChanges(
+export async function detectInertChanges(
   englishContent: string,
   sourceManifestJson: string,
   format: "markdown" | "json" = "markdown",
-  localeContent?: string
-): InertChange[] {
-  const oldManifest: TreeManifest = JSON.parse(sourceManifestJson)
+  oldEnglishContent?: string
+): Promise<InertChange[]> {
+  const oldManifest: TreeManifest & { sourceCommitSha?: string } =
+    JSON.parse(sourceManifestJson)
   const deserialized = deserialize(oldManifest)
   const newTree =
     format === "json"
@@ -74,15 +75,25 @@ export function detectInertChanges(
       : parseEnglishMarkdown(englishContent)
   const driftResult = diff(deserialized, newTree)
 
-  // extractInertChanges needs a fully parsed old tree (with values),
-  // not a deserialized manifest (hashes only). Use the locale file as
-  // the old tree source -- inert values aren't translated, so the
-  // locale file has the same URLs/paths as the old English.
-  const oldTree = localeContent
-    ? format === "json"
-      ? parseEnglishJson(localeContent)
-      : parseEnglishMarkdown(localeContent)
-    : deserialized
+  // Build the old tree with real values (needed by extractInertChanges).
+  // Priority: direct content > git history > deserialized (hashes only)
+  let oldTree = deserialized
+  let oldContent = oldEnglishContent
+  if (!oldContent && oldManifest.sourceCommitSha && oldManifest.sourceFile) {
+    // Lazy import to avoid pulling in GitHub config at module load time
+    // (which requires I18N_GITHUB_API_KEY and breaks unit tests)
+    const { fetchFileAtCommit } = await import("../github/files")
+    oldContent = await fetchFileAtCommit(
+      oldManifest.sourceFile,
+      oldManifest.sourceCommitSha
+    )
+  }
+  if (oldContent) {
+    oldTree =
+      format === "json"
+        ? parseEnglishJson(oldContent)
+        : parseEnglishMarkdown(oldContent)
+  }
 
   const treeChanges = extractFromTree(oldTree, newTree, driftResult)
 
@@ -430,7 +441,7 @@ Options:
 
     const sourceManifestJson = readFileSync(sourceManifestPath, "utf-8")
 
-    const changes = detectInertChanges(englishContent, sourceManifestJson)
+    const changes = await detectInertChanges(englishContent, sourceManifestJson)
 
     if (changes.length === 0) {
       console.log(`  [${locale}] No inert changes`)

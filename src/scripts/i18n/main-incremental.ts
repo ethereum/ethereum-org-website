@@ -47,7 +47,7 @@ import {
   parseEnglishJson,
 } from "./lib/ai/manifest-adapter"
 import { applyInertChanges, detectInertChanges } from "./lib/ai/propagate-inert"
-import { ensureStagingBranch } from "./lib/github/branches"
+import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
@@ -115,6 +115,7 @@ async function main() {
   const baseBranch = process.env.BASE_BRANCH || config.baseBranch
   const branchName = process.env.TRANSLATION_BRANCH || "intl/pending"
   await ensureStagingBranch(branchName, baseBranch)
+  const baseBranchSha = (await getBranchObject(baseBranch)).sha
 
   console.log(`[main] Branch: ${branchName}`)
   console.log(`[main] Files: ${filePaths.join(", ")}`)
@@ -354,8 +355,16 @@ async function main() {
         try {
           const sourceManifest =
             task.file.type === "markdown"
-              ? buildMarkdownManifest(task.file.content, task.file.path)
-              : buildJsonManifest(task.file.content, task.file.path)
+              ? buildMarkdownManifest(
+                  task.file.content,
+                  task.file.path,
+                  baseBranchSha
+                )
+              : buildJsonManifest(
+                  task.file.content,
+                  task.file.path,
+                  baseBranchSha
+                )
 
           if (task.file.type === "markdown") {
             const sourceManifestPath = task.destPath.replace(
@@ -457,11 +466,10 @@ async function main() {
   for (const task of fileLanguageTasks) {
     if (task.drift.inertDrift.length === 0) continue
 
-    const changes = detectInertChanges(
+    const changes = await detectInertChanges(
       task.file.content,
       task.sourceManifestJson,
-      task.file.type,
-      task.localeContent
+      task.file.type
     )
 
     if (changes.length === 0) continue
@@ -677,7 +685,8 @@ async function main() {
     if (task.file.type === "markdown") {
       const sourceManifest = buildMarkdownManifest(
         task.file.content,
-        task.file.path
+        task.file.path,
+        baseBranchSha
       )
       const sourceManifestPath = destPath.replace(
         /index\.md$/,
@@ -710,7 +719,8 @@ async function main() {
     } else {
       const sourceManifest = buildJsonManifest(
         task.file.content,
-        task.file.path
+        task.file.path,
+        baseBranchSha
       )
       const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
       await committer.commitFile(jsonManifestPath, sourceManifest, task.locale)

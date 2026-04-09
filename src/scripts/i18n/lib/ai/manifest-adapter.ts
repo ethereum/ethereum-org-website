@@ -73,11 +73,13 @@ const ETHEREUM_ORG_JSON_CONFIG = {
  */
 export function buildMarkdownManifest(
   englishContent: string,
-  sourceFile: string
+  sourceFile: string,
+  sourceCommitSha?: string
 ): string {
   const tree = parseMarkdown(englishContent, ETHEREUM_ORG_CONFIG)
   const manifest = serialize(tree, sourceFile)
-  return JSON.stringify(manifest, null, 2) + "\n"
+  const output = sourceCommitSha ? { ...manifest, sourceCommitSha } : manifest
+  return JSON.stringify(output, null, 2) + "\n"
 }
 
 /**
@@ -85,7 +87,8 @@ export function buildMarkdownManifest(
  */
 export function buildJsonManifest(
   englishContent: string,
-  sourceFile: string
+  sourceFile: string,
+  sourceCommitSha?: string
 ): string {
   const tree = parseJson(
     englishContent,
@@ -93,7 +96,8 @@ export function buildJsonManifest(
     ETHEREUM_ORG_JSON_CONFIG
   )
   const manifest = serialize(tree, sourceFile)
-  return JSON.stringify(manifest, null, 2) + "\n"
+  const output = sourceCommitSha ? { ...manifest, sourceCommitSha } : manifest
+  return JSON.stringify(output, null, 2) + "\n"
 }
 
 /**

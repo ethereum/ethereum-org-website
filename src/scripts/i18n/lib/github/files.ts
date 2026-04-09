@@ -15,6 +15,25 @@ import { fetchWithRetry } from "../utils/fetch"
 import { debugLog } from "../workflows/utils"
 
 /**
+ * Fetch a file's content from GitHub at a specific commit SHA.
+ * Returns the decoded string content, or undefined if the file
+ * doesn't exist at that commit.
+ */
+export async function fetchFileAtCommit(
+  filePath: string,
+  commitSha: string
+): Promise<string | undefined> {
+  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/contents/${filePath}?ref=${commitSha}`
+  const res = await fetchWithRetry(url, {
+    headers: gitHubBearerHeaders,
+  })
+  if (!res.ok) return undefined
+  const data: { content?: string; encoding?: string } = await res.json()
+  if (!data.content || data.encoding !== "base64") return undefined
+  return Buffer.from(data.content, "base64").toString("utf-8")
+}
+
+/**
  * Check if a path should be excluded
  */
 function isPathExcluded(filePath: string, excludedPaths: string[]): boolean {
