@@ -1,7 +1,7 @@
 ---
 title: "سمارٹ کنٹریکٹس بنانا اور تعینات کرنا"
 description: "ایتھیریم نیٹ ورک پر سمارٹ کنٹریکٹس لکھنے، ٹیسٹ کرنے اور تعینات کرنے کے لیے ایک عملی گائیڈ۔"
-image: /images/developers/smart-contracts-hero-v3.png
+image: /images/developers/smart-contracts-hero-v5.png
 alt: "سمارٹ کنٹریکٹ کی تعیناتی کا خاکہ"
 lang: ur
 emoji: ":computer:"
@@ -104,11 +104,11 @@ def run_coverage(project_path):
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">فریم ورکس دریافت کریں</ButtonLink>
 
-<YouTube id="xyz789abc" />
+<YouTube id="test10final" />
 
 <Divider />
 
-<InfoBanner emoji=":shield:" title="Security reminder">
+<InfoBanner emoji=":lock:" title="Security reminder">
 
 مین نیٹ پر تعینات کرنے سے پہلے ہمیشہ اپنے کنٹریکٹس کا آڈٹ کریں۔ [OpenZeppelin Defender](https://www.openzeppelin.com/defender) جیسے ٹولز کا استعمال کریں اور [Trail of Bits](https://www.trailofbits.com/) یا [اوپن زیپلن](https://www.openzeppelin.com/security-audits) جیسی فرموں سے پیشہ ورانہ آڈٹ پر غور کریں۔
 
