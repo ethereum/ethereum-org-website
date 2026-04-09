@@ -11,15 +11,13 @@ summaryPoints:
   - Your funds are safe today and wallet software will guide you through future migration
 ---
 
-# Post-quantum cryptography on Ethereum {#post-quantum-cryptography}
-
 Quantum computers will eventually be able to break the cryptographic methods that secure Ethereum and most other digital systems today. This page explains what that means, what is being done about it, and what you need to know.
 
 ## Why this matters {#why-this-matters}
 
 Ethereum relies on several forms of [cryptography](/glossary/#cryptography) to keep the network secure and protect user funds. The most important are:
 
-- **Elliptic curve cryptography (ECDSA)**: Used to sign transactions. Your Ethereum account's security depends on this.
+- **Elliptic curve digital signature algorithm (ECDSA)**: Used to sign transactions. Your Ethereum account's security depends on this.
 - **BLS signatures**: Used by [validators](/glossary/#validator) to reach [consensus](/glossary/#consensus) on the state of the network.
 - **KZG polynomial commitments**: Used for [data availability](/glossary/#data-availability) in Ethereum's scaling roadmap.
 - **ZK-proof systems**: Used by rollups and other applications to verify computations offchain.
@@ -32,7 +30,7 @@ In March 2026, Google Quantum AI published research estimating that breaking 256
 
 Current quantum hardware operates with a few thousand noisy physical qubits. Logical qubits (which correct for errors and perform reliable computation) require many physical qubits each. **The gap between current hardware and what is needed to break Ethereum's cryptography remains significant, but it is narrowing faster than many expected.**
 
-This is not an imminent threat. But cryptographic transitions take years, and Ethereum's security model is designed to last decades. Preparing now is prudent.
+This is not an imminent threat. But cryptographic transitions take years, and Ethereum's security model is designed to last centuries. Preparing now is prudent.
 
 ## The four vulnerable areas {#four-vulnerable-areas}
 
@@ -76,7 +74,7 @@ Both approaches are still being researched for efficiency and practicality at Et
 
 **Important nuance**: Accounts that have only received ether and never sent a transaction have not exposed their public key. Only the address (a hash of the public key) is visible, which provides some additional protection.
 
-**The approach**: Rather than a single protocol-wide migration, Ethereum plans to use [account abstraction](/roadmap/account-abstraction/) (specifically EIP-8141, being considered for Hegota in H2 2026) to give users **signature agility**. Individual accounts could switch to a post-quantum signature scheme without waiting for the entire protocol to change.
+**The approach**: Rather than a single protocol-wide migration, Ethereum plans to use [account abstraction](/roadmap/account-abstraction/) (specifically EIP-8141, being considered for Hegotá in second half of 2026) to give users **signature agility**. Individual accounts could switch to a post-quantum signature scheme without waiting for the entire protocol to change.
 
 This is a pragmatic approach. Users and wallets that want post-quantum protection early can adopt it voluntarily, while the broader migration happens over time.
 
@@ -90,7 +88,7 @@ This is a pragmatic approach. Users and wallets that want post-quantum protectio
 
 ## NIST standards {#nist-standards}
 
-In August 2024, the U.S. National Institute of Standards and Technology (NIST) finalized three post-quantum cryptography standards:
+In August 2024, the U.S. National Institute of Standards and Technology (NIST) finalized three post-quantum cryptography standards. These matter because they give the entire technology industry, including Ethereum, a shared set of vetted algorithms to build on rather than each project inventing its own.
 
 | Standard | Name | Type | Use case |
 |----------|------|------|----------|
@@ -162,7 +160,7 @@ Assets on Ethereum are controlled by account signatures. Once your account is mi
 
 <ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
-Ethereum has one of the most structured post-quantum programs of any blockchain: a dedicated team, funded research, weekly devnets, and a published migration roadmap. No blockchain has completed a full post-quantum transition yet. Ethereum's quantum-vulnerable dormant fund exposure is estimated at approximately 0.1%, compared to approximately 5% for Bitcoin.
+Ethereum has one of the most structured post-quantum programs of any blockchain: a dedicated team, funded research, weekly devnets, and a published migration roadmap. No blockchain has completed a full post-quantum transition yet. According to Ethereum Foundation estimates, Ethereum's quantum-vulnerable dormant fund exposure is approximately 0.1%.
 
 </ExpandableCard>
 
