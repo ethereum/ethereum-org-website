@@ -32,9 +32,9 @@ Current quantum hardware is far from this scale, operating with a few thousand n
 
 This is not an imminent threat. But cryptographic transitions take years, and Ethereum's security model is designed to last centuries. Ethereum's response is the **Lean Ethereum** roadmap, a deliberate, multi-year mission to rebuild Ethereum around primitives that will survive any cryptographic threat.
 
-## The four vulnerable areas {#four-vulnerable-areas}
+## Four areas vulnerable to quantum attack {#four-vulnerable-areas}
 
-In February 2026, Vitalik Buterin published a roadmap identifying four distinct areas of Ethereum's cryptography that need post-quantum upgrades. Each has different challenges and different solution paths.
+In February 2026, Vitalik Buterin [published a roadmap](https://x.com/VitalikButerin/status/2027075026378543132) identifying four distinct areas of Ethereum's cryptography that need post-quantum upgrades. Each has different challenges and different solution paths.
 
 ### 1. Consensus-layer BLS signatures {#consensus-bls}
 
@@ -42,9 +42,9 @@ In February 2026, Vitalik Buterin published a roadmap identifying four distinct 
 
 **Why it is vulnerable**: BLS signatures rely on elliptic curve pairings, which a quantum computer could break.
 
-**The approach**: The Ethereum Foundation is developing two complementary tools:
-- **leanXMSS**: A hash-based signature scheme for validators. Hash-based signatures are considered quantum-safe because they rely only on the security of hash functions, which quantum computers weaken but do not break.
-- **leanVM**: A minimal zkVM (zero-knowledge virtual machine) for SNARK-based signature aggregation. This preserves the efficiency benefits of combining many signatures into one, even after switching to quantum-safe schemes.
+**The approach**: The Lean Consensus roadmap includes developing two complementary tools:
+- **leanXMSS**: Ethereum will replace BLS signatures with leanXMSS, a hash-based signature scheme for validators. Hash-based signatures are considered quantum-safe because they rely only on the security of hash functions, which quantum computers weaken but do not break.
+- **leanVM**: A minimal zkVM (zero-knowledge virtual machine) for SNARK-based signature aggregation. Because hash-based signatures are significantly larger (roughly 3,000 bytes compared to 96 bytes for BLS), switching to leanXMSS would produce significantly more data per slot. To solve this, leanVM acts as an aggregation engine, compressing the data by 250x. This preserves the efficiency benefits of combining many signatures into one, even after switching to quantum-safe schemes.
 
 <ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
@@ -70,7 +70,7 @@ Both approaches are still being researched for efficiency and practicality at Et
 
 **What it does**: Every standard Ethereum account (externally owned account, or [EOA](/glossary/#eoa)) uses ECDSA on the secp256k1 curve to sign transactions. This is what protects your funds.
 
-**Why it is vulnerable**: A quantum computer could derive a private key from a public key. For accounts that have sent at least one transaction, the public key is exposed onchain, making them a potential target.
+**Why it is vulnerable**: For any account that has sent a transaction, the public key is exposed onchain. A quantum computer could derive the private key from this exposed public key data.
 
 **Important nuance**: Accounts that have only received ether and never sent a transaction have not exposed their public key. Only the address (a hash of the public key) is visible, which provides some additional protection.
 
@@ -84,11 +84,11 @@ This is a pragmatic approach. Users and wallets that want post-quantum protectio
 
 **Why it is vulnerable**: Many popular ZK-proof systems (SNARKs using elliptic curve pairings) rely on quantum-vulnerable assumptions.
 
-**The approach**: STARKs, which rely on hash functions rather than elliptic curves, are already quantum-resistant and are used by several rollups. The transition for this layer is partly happening already through natural ecosystem adoption of STARK-based systems.
+**The approach**: STARKs, which rely on hash functions rather than elliptic curves, are already quantum-resistant and are used by several rollups. Natural ecosystem adoption of STARK-based systems is already providing post-quantum security at the application layer.
 
 ## NIST standards {#nist-standards}
 
-In August 2024, the U.S. National Institute of Standards and Technology (NIST) finalized three post-quantum cryptography standards. These matter because they give the entire technology industry, including Ethereum, a shared set of vetted algorithms to build on rather than each project inventing its own.
+In August 2024, the U.S. National Institute of Standards and Technology (NIST) [finalized three post-quantum cryptography standards](https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards). These matter because they give the entire technology industry, including Ethereum, a shared set of vetted algorithms to build on rather than each project inventing its own.
 
 | Standard | Name | Type | Use case |
 |----------|------|------|----------|
@@ -106,8 +106,9 @@ The Ethereum Foundation formed a dedicated Post-Quantum Security team in January
 
 - **Weekly interop devnets**: More than 10 client teams participate in regular post-quantum interoperability testing, including Lighthouse, Grandine, Zeam, Ream Labs, and PierTwo.
 - **Poseidon Prize**: A $1 million research prize targeting improvements in hash-based cryptographic primitives.
-- **Open-source implementations**: leanXMSS, leanVM, leanSpec (Python), leanSig (Rust), and leanMultisig are all available under the leanEthereum GitHub organization.
+- **Open-source implementations**: leanXMSS, leanVM, leanSpec (Python), leanSig (Rust), and leanMultisig are all available under the [leanEthereum GitHub organization](https://github.com/leanEthereum).
 - **2nd Annual PQ Research Retreat**: Planned for 9-Oct-2026 to 12-Oct-2026 in Cambridge, UK.
+- **NIST Alignment**: Ethereum's work builds upon the post-quantum cryptography standards finalized by NIST in August 2024 (such as ML-KEM, ML-DSA, and SLH-DSA).
 
 ### Migration milestones {#migration-milestones}
 
@@ -120,13 +121,13 @@ The team has outlined a series of protocol upgrades to incrementally introduce p
 | L* | PQ attestations and real-time consensus-layer proofs via leanVM. Validators begin using PQ signatures for consensus. |
 | M* | Full PQ signature aggregation and PQ-safe blob commitments. |
 
-**Target**: Core post-quantum infrastructure in place by approximately 2029. Full execution-layer and ecosystem migration extends beyond that.
+**Target**: The structured fork milestones target the completion of core post-quantum infrastructure by approximately 2029. Full execution-layer and ecosystem migration extends beyond that.
 
 ## What do users need to do? {#what-users-need-to-do}
 
 **Right now: nothing.** Your funds are safe. No quantum computer today can threaten Ethereum's cryptography.
 
-**In the future**: Once post-quantum signature schemes are available on Ethereum (expected to begin with EIP-8141), you will want to migrate your account to quantum-safe signatures. Wallet software will guide you through this transition.
+**In the future**: Once post-quantum signature schemes are widely supported on Ethereum (expected following the Hegotá hard fork and implementation of EIP-8141), you will want to migrate your account to quantum-safe signatures. Wallet software will guide you through this transition.
 
 If your account has never sent a transaction (meaning your public key has not been exposed onchain), it has an additional layer of protection. But all accounts should eventually migrate.
 
@@ -160,7 +161,7 @@ Assets on Ethereum are controlled by account signatures. Once your account is mi
 
 <ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
-Ethereum has one of the most structured post-quantum programs of any blockchain: a dedicated team, funded research, weekly devnets, and a published migration roadmap. No blockchain has completed a full post-quantum transition yet. According to Ethereum Foundation estimates, Ethereum's quantum-vulnerable dormant fund exposure is approximately 0.1%.
+No. Ethereum has one of the most structured post-quantum programs of any blockchain: a dedicated team, funded research, weekly devnets, and a published migration roadmap, treating quantum computing as a first-class design constraint. No blockchain has completed a full post-quantum transition yet. According to Ethereum Foundation estimates, Ethereum's quantum-vulnerable dormant fund exposure is approximately 0.1%, drastically lower than other major blockchain networks.
 
 </ExpandableCard>
 
@@ -173,9 +174,16 @@ Ethereum has one of the most structured post-quantum programs of any blockchain:
 ## Further reading {#further-reading}
 
 - [pq.ethereum.org](https://pq.ethereum.org) - _Ethereum Foundation_
+- [Post-Quantum Cryptography Project](https://pse.dev/projects/post-quantum-cryptography) - _Privacy Stewards of Ethereum (PSE)_
 - [NIST Post-Quantum Cryptography standards](https://csrc.nist.gov/projects/post-quantum-cryptography) - _NIST_
 - [Safeguarding cryptocurrency by disclosing quantum vulnerabilities responsibly](https://research.google/blog/safeguarding-cryptocurrency-by-disclosing-quantum-vulnerabilities-responsibly/) - _Google Quantum AI_
 - [Quantum frontiers may be closer than they appear](https://blog.google/innovation-and-ai/technology/safety-security/cryptography-migration-timeline/) - _Google_
 - [KZG and trusted setups](/roadmap/danksharding/#what-is-kzg)
+- [Lean Week Cambridge (2025) leanVM + PQ workshop resources](https://github.com/leanEthereum/pm/blob/main/workshops-and-interops/2025/lean-week-cambridge/index.md) - _Lean Ethereum_
+- [PQ Transaction Signatures ACD Breakout Calls](https://youtube.com/playlist?list=PLJqWcTqh_zKEOum3uR0odkH59fmGUYuZB) - _Ethereum Foundation_
+- [PQ Interop ACD Breakout Calls](https://youtube.com/playlist?list=PLJqWcTqh_zKF_Q9HNXBLW_AtktsjToTIu) - _Ethereum Foundation_
+- [Lean Ethereum & Post-Quantum Security YouTube Playlist](https://youtube.com/playlist?list=PLJqWcTqh_zKGGuO_q1dgYLsfUoX1sNhWM) - _Ethereum Foundation_
+- [Panel interview post-quantum resistance](https://youtu.be/5DRDjeMmOPw) - _Bankless Podcast_
 - [Account abstraction on Ethereum](/roadmap/account-abstraction/)
 - [strawmap.org](https://strawmap.org/) - _EF Architecture_
+- [Superpositioned: Analysis of the Quantum Computing Industry](https://www.superpositioned.co/) - _Saneel Sreeni_

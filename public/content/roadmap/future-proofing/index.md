@@ -89,8 +89,7 @@ No part of this work is finished. Timelines are targets, not guarantees. But the
 **Further reading**
 
 - [Post-quantum cryptography on Ethereum](/roadmap/future-proofing/quantum-resistance/)
-- [Privacy Stewards of Ethereum: Post-Quantum Cryptography and Ethereum](https://pse.dev/projects/post-quantum-cryptography)
-- [lean week: leanVM + PQ workshops, Cambridge 2025](https://github.com/leanEthereum/pm/blob/main/workshops-and-interops/2025/lean-week-cambridge/index.md)
+- [strawmap.org](https://strawmap.org/) - _EF Architecture_
 - [pq.ethereum.org](https://pq.ethereum.org)
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
