@@ -1,7 +1,7 @@
 ---
 title: "سمارٹ کنٹریکٹس بنانا اور تعینات کرنا"
 description: "ایتھیریم نیٹ ورک پر سمارٹ کنٹریکٹس لکھنے، ٹیسٹ کرنے اور تعینات کرنے کے لیے ایک عملی گائیڈ۔"
-image: /images/developers/smart-contracts-hero-v3.png
+image: /images/developers/smart-contracts-hero-v5.png
 alt: "سمارٹ کنٹریکٹ کی تعیناتی کا خاکہ"
 lang: ur
 emoji: ":computer:"
