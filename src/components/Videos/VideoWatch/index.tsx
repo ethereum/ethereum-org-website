@@ -11,11 +11,13 @@ import {
 import { LinkWithArrow } from "@/components/ui/Link"
 import YouTube from "@/components/YouTube"
 
+import { cn } from "@/lib/utils/cn"
 import { getVideoData } from "@/lib/utils/videos"
 
 interface VideoWatchProps {
   slug: string
   startTime?: string
+  className?: string
 }
 
 /**
@@ -25,7 +27,7 @@ interface VideoWatchProps {
  * Registered in [locale]/[...slug]/page.tsx baseComponents (server-only context).
  * NOT imported from MdComponents/index.tsx to avoid polluting the client-safe barrel.
  */
-const VideoWatch = async ({ slug, startTime }: VideoWatchProps) => {
+const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
   let data: VideoData | undefined
   try {
     data = await getVideoData(slug)
@@ -39,7 +41,12 @@ const VideoWatch = async ({ slug, startTime }: VideoWatchProps) => {
   const t = await getTranslations("page-videos")
 
   return (
-    <Card className="my-8 max-w-xl space-y-4 border bg-background-highlight p-4 md:p-6">
+    <Card
+      className={cn(
+        "my-8 max-w-xl space-y-4 border bg-background-highlight p-4 md:p-6",
+        className
+      )}
+    >
       <YouTube
         id={frontmatter.youtubeId}
         title={frontmatter.title}
