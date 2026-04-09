@@ -109,7 +109,7 @@ lang: bn
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless জব বোর্ড](https://pallet.xyz/list/bankless/jobs)
+- [Bankless জব বোর্ড](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

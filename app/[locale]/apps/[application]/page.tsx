@@ -34,6 +34,7 @@ import { Tag } from "@/components/ui/tag"
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { isValidDate } from "@/lib/utils/date"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   formatLanguageNames,
@@ -56,6 +57,7 @@ const Page = async (props: {
 
   // Get translations
   const t = await getTranslations("page-apps")
+  const appDescriptions = await getTranslations("page-app-descriptions")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -324,7 +326,14 @@ const Page = async (props: {
           </div>
 
           <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-10 bg-background-highlight px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
-            <p className="max-w-3xl">{app.description}</p>
+            <p className="max-w-3xl">
+              {getLocalizedDescription(
+                appDescriptions,
+                "app",
+                app.name,
+                app.description
+              )}
+            </p>
             <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
               <h3 className="text-lg">{t("page-apps-info-title")}</h3>
               <div>
@@ -369,7 +378,12 @@ const Page = async (props: {
                     >
                       <AppCard
                         name={relatedApp.name}
-                        description={relatedApp.description}
+                        description={getLocalizedDescription(
+                          appDescriptions,
+                          "app",
+                          relatedApp.name,
+                          relatedApp.description
+                        )}
                         thumbnail={relatedApp.image}
                         category={relatedApp.category}
                         categoryTagStatus={
@@ -424,8 +438,15 @@ export async function generateMetadata(props: {
     notFound()
   }
 
-  const title = `Ethereum Apps - ${app.name}`
-  const description = app.description
+  const appDescriptions = await getTranslations("page-app-descriptions")
+
+  const title = `Ethereum Apps - ${app.name}` // TODO (i18n): Extract "Ethereum Apps" to namespace
+  const description = getLocalizedDescription(
+    appDescriptions,
+    "app",
+    app.name,
+    app.description
+  )
 
   return await getMetadata({
     locale,

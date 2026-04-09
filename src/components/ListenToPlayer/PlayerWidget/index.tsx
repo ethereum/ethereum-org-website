@@ -26,7 +26,9 @@ const PlayerButton = ({
   return isMobile() ? (
     children
   ) : (
-    <Tooltip content={tooltipContent}>{children}</Tooltip>
+    <Tooltip content={tooltipContent} asChild>
+      {children}
+    </Tooltip>
   )
 }
 
@@ -147,7 +149,7 @@ const PlayerWidget = ({
       >
         <div className="flex justify-between">
           <p className="text-sm font-bold leading-base">{title}</p>
-          <Tooltip content={"Collapse"}>
+          <Tooltip content={"Collapse"} asChild>
             <button
               className="cursor-pointer text-body-medium hover:text-body"
               aria-label={"Collapse"}

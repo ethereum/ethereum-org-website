@@ -109,7 +109,7 @@ lang: uk
 - [Вакансії у сфері криптовалют](https://cryptocurrencyjobs.co/ethereum/)
 - [Кар’єра в ConsenSys](https://consensys.net/careers/)
 - [Список вакансій у криптосфері](https://cryptojobslist.com/ethereum-jobs)
-- [Дошка вакансій від Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Дошка вакансій від Bankless](https://www.bankless.com/jobs)
 - [Робота у Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Вакансії Crypto Valley](https://cryptovalley.jobs/)

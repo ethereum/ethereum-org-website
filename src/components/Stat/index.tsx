@@ -43,7 +43,7 @@ const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
       <div className="flex items-center space-x-2 leading-none text-body-medium">
         <span>{label}</span>
         {!!tooltipProps && (
-          <Tooltip {...tooltipProps}>
+          <Tooltip {...tooltipProps} asChild>
             <button className="flex text-inherit">
               <content.tooltipIcon className="h-4 w-4" />
             </button>
