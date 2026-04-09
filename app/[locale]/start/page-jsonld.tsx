@@ -6,7 +6,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
+  ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -30,6 +32,8 @@ export default async function StartPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -38,7 +42,7 @@ export default async function StartPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -62,8 +66,8 @@ export default async function StartPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#start` },
       },
       {
@@ -72,10 +76,10 @@ export default async function StartPageJsonLD({
         headline: t("page-start-title"),
         description: t("page-start-meta-description"),
         image: "https://ethereum.org/images/heroes/developers-hub-hero.jpg",
-        author: [ethereumCommunityOrganization],
-        publisher: ethereumFoundationOrganization,
+        author: [ethereumCommunityReference],
+        publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationReference,
         about: {
           "@type": "Thing",
           name: "Getting Started with Ethereum",
