@@ -1,7 +1,7 @@
 ---
 title: "Создание и развертывание смарт-контрактов"
 description: "Практическое руководство по написанию, тестированию и развертыванию смарт-контрактов в сети Эфириум."
-image: /images/developers/smart-contracts-hero-v3.png
+image: /images/developers/smart-contracts-hero-v5.png
 alt: "Диаграмма развертывания смарт-контракта"
 lang: ru
 emoji: ":computer:"
@@ -104,11 +104,11 @@ def run_coverage(project_path):
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Изучить фреймворки</ButtonLink>
 
-<YouTube id="xyz789abc" />
+<YouTube id="test10final" />
 
 <Divider />
 
-<InfoBanner emoji=":shield:" title="Security reminder">
+<InfoBanner emoji=":lock:" title="Security reminder">
 
 Всегда проводите аудит ваших контрактов перед развертыванием в Мейннете. Используйте такие инструменты, как [ОпенЗеппелин Defender](https://www.openzeppelin.com/defender), и рассмотрите возможность профессионального аудита от таких компаний, как [Trail of Bits](https://www.trailofbits.com/) или [ОпенЗеппелин](https://www.openzeppelin.com/security-audits).
 
