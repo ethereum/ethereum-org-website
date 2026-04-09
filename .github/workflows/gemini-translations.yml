@@ -63,6 +63,9 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.inputs.base_branch || 'dev' }}
+          fetch-depth: 0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v5
