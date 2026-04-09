@@ -50,7 +50,7 @@ Similarly to history expiry, under state expiry responsibility for storing old s
 
 State expiry is still in the research phase and not yet ready to ship. State expiry may well happen later than stateless clients and history expiry because those upgrades make large state sizes easily manageable for the majority of validators.
 
-## Statelessness {#statelessness}
+## Statelessness {#statelessness-2}
 
 Statelessness is a bit of a misnomer because it does not mean the concept of "state" is eliminated, but it does involve changes to how Ethereum nodes handle state data. Statelessness itself comes in two flavors: weak statelessness and strong statelessness. Weak statelessness enables most nodes to go stateless by putting responsibility for state storage onto a few. Strong statelessness completely removes the need for any node to store the full state data. Both weak and strong statelessness offer the following benefits to normal validators:
 

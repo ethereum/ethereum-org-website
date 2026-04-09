@@ -17,8 +17,9 @@ import { getGitHubContributors, getStaticGitHubContributors } from "@/lib/data"
 
 /** Sort team members to the end, preserving relative order within each group. */
 const sortTeamToEnd = (contributors: FileContributor[]): FileContributor[] =>
-  contributors.toSorted((a, b) =>
-    Number(TEAM_LOGINS.has(a.login)) - Number(TEAM_LOGINS.has(b.login))
+  contributors.toSorted(
+    (a, b) =>
+      Number(TEAM_LOGINS.has(a.login)) - Number(TEAM_LOGINS.has(b.login))
   )
 
 export const getMarkdownFileContributorInfo = async (

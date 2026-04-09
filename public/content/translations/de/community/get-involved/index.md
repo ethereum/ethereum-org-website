@@ -109,7 +109,7 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, öffentliche Güter und
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Karriere bei ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless-Stellenbörse](https://pallet.xyz/list/bankless/jobs)
+- [Bankless-Stellenbörse](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

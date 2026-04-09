@@ -13,7 +13,7 @@ The [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) standard allows smart co
 
 In this tutorial, we give an overview of digital signatures, EIP-1271's background, and the specific implementation of EIP-1271 used by [Safe](https://safe.global/) (previously Gnosis Safe). All together, this can serve as a starting point for implementing EIP-1271 in your own contracts.
 
-## What is a signature?
+## What is a signature? {#what-is-a-signature}
 
 In this context, a signature (more precisely, a “digital signature”) is a message plus some sort of proof that the message came from a specific person/sender/address.
 
@@ -29,7 +29,7 @@ Why? For instance, if you gave me a contract to sign, and then I cut off the sig
 
 In the same way, a digital signature doesn’t mean anything without an associated message!
 
-## Why does EIP-1271 exist?
+## Why does EIP-1271 exist? {#why-does-eip-1271-exist}
 
 In order to create a digital signature for use on Ethereum-based blockchains, you generally need a secret private key which no one else knows. This is what makes your signature, yours (no one else can create the same signature without knowledge of the secret key).
 
@@ -43,7 +43,7 @@ While EOA accounts have a private key, smart contract accounts do not have any s
 
 The problem EIP-1271 aims to solve: how can we tell that a smart contract signature is valid if the smart contract has no “secret” it can incorporate into the signature?
 
-## How does EIP-1271 work?
+## How does EIP-1271 work? {#how-does-eip-1271-work}
 
 Smart contracts don’t have private keys that can be used to sign messages. So how can we tell if a signature is authentic?
 
@@ -55,7 +55,7 @@ A contract that implements EIP-1271 must have a function called `isValidSignatur
 
 If `isValidSignature` returns a valid result, that’s pretty much the contract saying “yes, I approve this signature + message!”
 
-### Interface
+### Interface {#interface}
 
 Here’s the exact interface in the EIP-1271 spec (we’ll talk about the `_hash` parameter below, but for now, think of it as the message that is being verified):
 
@@ -85,7 +85,7 @@ contract ERC1271 {
 }
 ```
 
-## Example EIP-1271 Implementation: Safe
+## Example EIP-1271 Implementation: Safe {#example-eip-1271-implementation-safe}
 
 Contracts can implement `isValidSignature` in many ways — the spec only doesn’t say much about the exact implementation.
 
@@ -100,17 +100,17 @@ In Safe’s code, `isValidSignature` [is implemented](https://github.com/safe-gl
    1. Creation: a safe owner creates a message offchain, then gets other safe owners to sign the message each individually until there are enough signatures to overcome the multisig approval threshold.
    2. Verification: call `isValidSignature`. In the message parameter, pass in the message to be verified. In the signature parameter, pass in each safe owner’s individual signatures all concatenated together, back-to-back. The Safe will check that there are enough signatures to meet the threshold **and** that each signature is valid. If so, it will return a value indicating successful signature verification.
 
-## What exactly is the `_hash` parameter? Why not pass the whole message?
+## What exactly is the `_hash` parameter? Why not pass the whole message? {#what-exactly-is-the-hash-parameter-why-not-pass-the-whole-message}
 
 You might have noticed that the `isValidSignature` function in the [EIP-1271 interface](https://eips.ethereum.org/EIPS/eip-1271) doesn’t take in the message itself, but instead a `_hash` parameter. What this means is that instead of passing the full arbitrary-length message to `isValidSignature`, we instead pass a 32-byte hash of the message (generally keccak256).
 
 Each byte of calldata — i.e., function parameter data passed to a smart contract function — [costs 16 gas (4 gas if zero byte)](https://eips.ethereum.org/EIPS/eip-2028), so this can save a lot of gas if a message is long.
 
-### Previous EIP-1271 Specifications
+### Previous EIP-1271 Specifications {#previous-eip-1271-specifications}
 
 There are EIP-1271 specifications in the wild that have an `isValidSignature` function with a first parameter of type `bytes` (arbitrary-length, instead of a fixed-length `bytes32`) and parameter name `message`. This is an [older version](https://github.com/safe-global/safe-contracts/issues/391#issuecomment-1075427206) of the EIP-1271 standard.
 
-## How should EIP-1271 be implemented in my own contracts?
+## How should EIP-1271 be implemented in my own contracts? {#how-should-eip-1271-be-implemented-in-my-own-contracts}
 
 The spec is very open-ended here. The Safe implementation has some good ideas:
 
@@ -119,6 +119,6 @@ The spec is very open-ended here. The Safe implementation has some good ideas:
 
 In the end, it is up to you as the contract developer!
 
-## Conclusion
+## Conclusion {#conclusion}
 
 [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) is a versatile standard that allows smart contracts to verify signatures. It opens the door for smart contracts to act more like EOAs — for instance providing a way for "Log in with Ethereum" to work with smart contracts — and it can be implemented in many ways (Safe having a nontrivial, interesting implementation to consider).

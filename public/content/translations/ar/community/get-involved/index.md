@@ -109,7 +109,7 @@ lang: ar
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [وظائف في ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [لوحة وظائف Bankless](https://pallet.xyz/list/bankless/jobs)
+- [لوحة وظائف Bankless](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
