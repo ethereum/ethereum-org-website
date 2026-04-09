@@ -1,6 +1,6 @@
 ---
-title: 스마트 컨트랙트 구축 및 배포
-description: 이더리움 네트워크에서 스마트 컨트랙트를 작성, 테스트 및 배포하기 위한 실용적인 가이드입니다.
+title: "스마트 컨트랙트 구축 및 배포"
+description: "이더리움 네트워크에서 스마트 컨트랙트를 작성, 테스트 및 배포하기 위한 실용적인 가이드입니다."
 image: /images/developers/smart-contracts-hero-v3.png
 alt: "스마트 컨트랙트 배포 다이어그램"
 lang: ko
@@ -84,8 +84,8 @@ def run_coverage(project_path):
 컨트랙트를 테스트할 때 다음 가이드라인을 염두에 두세요.
 
 1. **모든 공개 함수 테스트** -- 엣지 케이스와 실패 모드를 포함합니다.
-2. 복잡한 수학 연산에는 **퍼징(fuzzing)을 사용**합니다.
-3. [Smock](https://github.com/defi-wonderland/smock)과 같은 도구를 사용하여 **외부 종속성을 모킹(mock)**합니다.
+2. 복잡한 수학 연산에는 <strong>퍼징(fuzzing)을 사용</strong>합니다.
+3. [Smock](https://github.com/defi-wonderland/smock)과 같은 도구를 사용하여 <strong>외부 종속성을 모킹(mock)</strong>합니다.
 
 > "코드가 법이다(Code is law)"라는 말은 코드가 철저하게 테스트되었을 때만 유효합니다. 테스트되지 않은 컨트랙트는 자산이 아니라 부채입니다.
 
