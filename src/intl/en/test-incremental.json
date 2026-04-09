@@ -17,7 +17,7 @@
     }
   },
   "icon-link": "<a href=\"/assets/smart-contracts-icon.svg\"></a>",
-  "multi-link-sentence": "Deploy with <a href=\"https://remix.ethereum.org/\">Remix</a> on <a href=\"https://sepolia.ethpandaops.io/\">Sepolia</a>, verify on <a href=\"https://eth.blockscout.com/\">Blockscout</a>, and audit with <a href=\"https://www.openzeppelin.com/defender\">Defender</a>.",
+  "multi-link-sentence": "Deploy with <a href=\"https://remix.ethereum.org/\">Remix</a> on <a href=\"https://sepolia.io/\">Sepolia</a>, verify on <a href=\"https://eth.blockscout.com/\">Blockscout</a>, and audit with <a href=\"https://www.openzeppelin.com/defender\">Defender</a>.",
   "welcome-user": "Welcome back, {username}!",
   "tool-count": "{count, plural, =0 {No tools found} one {# tool found} other {# tools found}}",
   "deploy-status": "{status, select, pending {Your deployment is pending confirmation} confirmed {Your contract has been deployed at {address}} failed {Deployment failed: {reason}} other {Unknown status}}",

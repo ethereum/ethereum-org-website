@@ -1,7 +1,7 @@
 ---
 title: Building and Deploying Smart Contracts
 description: A practical guide to writing, testing, and deploying smart contracts on the Ethereum network.
-image: /images/developers/smart-contracts-hero-v3.png
+image: /images/developers/smart-contracts-hero-v5.png
 alt: "Smart contract deployment diagram"
 lang: en
 emoji: ":computer:"
@@ -104,11 +104,11 @@ You can deploy contracts using [Remix](https://remix.ethereum.org/) on [Holesky]
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">Explore frameworks</ButtonLink>
 
-<YouTube id="xyz789abc" />
+<YouTube id="test10run2" />
 
 <Divider />
 
-<InfoBanner emoji=":shield:" title="Security reminder">
+<InfoBanner emoji=":lock:" title="Security reminder">
 
 Always audit your contracts before deploying to mainnet. Use tools like [OpenZeppelin Defender](https://www.openzeppelin.com/defender) and consider a professional audit from firms such as [Trail of Bits](https://www.trailofbits.com/) or [OpenZeppelin](https://www.openzeppelin.com/security-audits).
 
