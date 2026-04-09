@@ -107,14 +107,24 @@ export async function detectInertChanges(
 
   const treeChanges = extractFromTree(oldTree, newTree, driftResult)
 
-  return treeChanges.map((c) => ({
-    elementType: c.elementType,
-    key: c.key || "value",
-    oldValue: c.oldValue,
-    newValue: c.newValue,
-    path: c.path,
-    tagName: c.tagName,
-  }))
+  // Deduplicate: the package can return the same change multiple times
+  // (e.g., when a section appears in both inertDrift paths)
+  const seen = new Set<string>()
+  return treeChanges
+    .map((c) => ({
+      elementType: c.elementType,
+      key: c.key || "value",
+      oldValue: c.oldValue,
+      newValue: c.newValue,
+      path: c.path,
+      tagName: c.tagName,
+    }))
+    .filter((c) => {
+      const key = `${c.path}:${c.oldValue}:${c.newValue}`
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
 }
 
 // ---------------------------------------------------------------------------
@@ -302,17 +312,28 @@ function findHeadingRange(
 }
 
 /**
- * Extract the occurrence index from the last element-type segment in a path.
- * E.g., "dev-env/link:1" -> 1, "dev-env/component:4/attr:emoji" -> 0
- * The index is the number after the colon in the LAST matching element segment.
+ * Extract the occurrence index from the path.
+ * E.g., "dev-env/link:1" -> 1
+ *
+ * For most element types, the index is the number in the element's
+ * own segment (link:1 = 2nd link). For component-attribute and
+ * frontmatter-field, return 0 -- the attribute value + key name is
+ * already unique within the section scope, so no occurrence counting
+ * is needed (key="specificValue" matches exactly one element).
  */
 function extractOccurrenceIndex(path: string, elementType: string): number {
+  // Component attributes and frontmatter fields are unique by key+value
+  if (
+    elementType === "component-attribute" ||
+    elementType === "frontmatter-field"
+  ) {
+    return 0
+  }
+
   const segments = path.split("/")
-  // Walk backwards to find the element segment matching our type
   for (let i = segments.length - 1; i >= 0; i--) {
     const match = segments[i].match(/^([^:]+):(\d+)$/)
     if (match) {
-      // Map tree element names to our elementType names
       const segType = match[1]
       if (
         (elementType === "link" && segType === "link") ||
@@ -320,9 +341,7 @@ function extractOccurrenceIndex(path: string, elementType: string): number {
         (elementType === "html-tag" && segType === "html-tag") ||
         (elementType === "inline-code" && segType === "inline-code") ||
         (elementType === "code-body" && segType === "code-body") ||
-        (elementType === "code-fence" && segType === "code-fence") ||
-        (elementType === "component-attribute" && segType === "attr") ||
-        (elementType === "frontmatter-field" && segType === "frontmatter")
+        (elementType === "code-fence" && segType === "code-fence")
       ) {
         return parseInt(match[2])
       }
