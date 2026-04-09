@@ -1,7 +1,7 @@
 ---
 title: "스마트 컨트랙트 구축 및 배포"
 description: "이더리움 네트워크에서 스마트 컨트랙트를 작성, 테스트 및 배포하기 위한 실용적인 가이드입니다."
-image: /images/developers/smart-contracts-hero-v3.png
+image: /images/developers/smart-contracts-hero-v5.png
 alt: "스마트 컨트랙트 배포 다이어그램"
 lang: ko
 emoji: ":computer:"
@@ -104,11 +104,11 @@ def run_coverage(project_path):
 
 <ButtonLink variant="outline-color" href="/developers/docs/frameworks/">프레임워크 탐색하기</ButtonLink>
 
-<YouTube id="xyz789abc" />
+<YouTube id="test10final" />
 
 <Divider />
 
-<InfoBanner emoji=":shield:" title="Security reminder">
+<InfoBanner emoji=":lock:" title="Security reminder">
 
 메인넷에 배포하기 전에 항상 컨트랙트를 감사(audit)하세요. [오픈제플린 Defender](https://www.openzeppelin.com/defender)와 같은 도구를 사용하고, [Trail of Bits](https://www.trailofbits.com/) 또는 [오픈제플린](https://www.openzeppelin.com/security-audits)과 같은 전문 업체의 감사를 고려해 보세요.
 
