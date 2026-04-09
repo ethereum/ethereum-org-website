@@ -1,0 +1,26 @@
+{
+  "title": "Инструменты для смарт-контрактов",
+  "description": "Изучите лучшие инструменты для создания, тестирования и развертывания смарт-контрактов в Эфириуме.",
+  "cta-primary": "Начать",
+  "cta-secondary": "Посмотреть документацию",
+  "stat-label": "Контрактов развернуто в этом месяце",
+  "banner-text": "Впервые работаете со смарт-контрактами? Начните с нашего <a href=\"/developers/docs/smart-contracts/\">введения в смарт-контракты</a>.",
+  "footnote": "Данные о контрактах предоставлены <a href=\"https://eth.blockscout.com/\" target=\"_blank\">Blockscout</a>. Цены на газ от <a href=\"https://www.blocknative.com/gas-estimator\" target=\"_blank\">Blocknative</a>. Инструменты поддерживаются <a href=\"https://www.openzeppelin.com/\" target=\"_blank\">ОпенЗеппелин</a>.",
+  "filter-label": "Фильтровать по фреймворку",
+  "empty-results": "Не найдено инструментов, соответствующих вашим критериям. Попробуйте изменить фильтры.",
+  "nested": {
+    "section-title": "Продвинутые шаблоны",
+    "section-description": "Изучите прокси-контракты, обновляемые шаблоны и методы оптимизации газа.",
+    "subsection": {
+      "label": "Шаблоны прокси",
+      "hint": "Реализации Transparent, UUPS и beacon прокси."
+    }
+  },
+  "icon-link": "<a href=\"/assets/smart-contracts-icon.svg\"></a>",
+  "multi-link-sentence": "Разверните с помощью <a href=\"https://remix.ethereum.org/\">Remix</a> в <a href=\"https://sepolia.ethpandaops.io/\">Sepolia</a>, верифицируйте в <a href=\"https://eth.blockscout.com/\">Blockscout</a> и проведите аудит с помощью <a href=\"https://www.openzeppelin.com/defender\">Defender</a>.",
+  "welcome-user": "С возвращением, {username}!",
+  "tool-count": "{count, plural, =0 {Инструменты не найдены} one {Найден # инструмент} few {Найдено # инструмента} many {Найдено # инструментов} other {Найдено # инструментов}}",
+  "deploy-status": "{status, select, pending {Ваше развертывание ожидает подтверждения} confirmed {Ваш контракт был развернут по адресу {address}} failed {Ошибка развертывания: {reason}} other {Неизвестный статус}}",
+  "html-and-icu": "У вас {count, plural, one {# активный контракт} few {# активных контракта} many {# активных контрактов} other {# активных контрактов}} в <a href=\"https://eth.blockscout.com/\">Blockscout</a>.",
+  "dapp-description": "**Hardhat** — это профессиональная среда разработки для Эфириума.\n\n- **Компиляция**: Встроенный компилятор Solidity с кэшированием.\n- **Тестирование**: Быстрый запуск тестов с интеграцией Mocha.\n- **Развертывание**: Скриптовые конвейеры развертывания.\n\n![Hardhat UI](https://raw.githubusercontent.com/NomicFoundation/hardhat/main/docs/.vuepress/public/hardhat-logo.png)\n\n*Hardhat поддерживает сети Эфириум, Polygon и Arbitrum.*"
+}
