@@ -109,7 +109,7 @@ lang: zh-tw
 - [加密貨幣工作](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys 職涯](https://consensys.net/careers/)
 - [加密工作清單](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless 工作看板](https://pallet.xyz/list/bankless/jobs)
+- [Bankless 工作看板](https://www.bankless.com/jobs)
 - [Web3 工作](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley 工作](https://cryptovalley.jobs/)

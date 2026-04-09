@@ -109,7 +109,7 @@ O objetivo do ecossistema Ethereum é financiar bens públicos e projetos com im
 - [Vagas em Criptomoeda](https://cryptocurrencyjobs.co/ethereum/)
 - [Carreiras na ConsenSys](https://consensys.net/careers/)
 - [Lista de Vagas em Cripto](https://cryptojobslist.com/ethereum-jobs)
-- [Quadro de vagas da Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Quadro de vagas da Bankless](https://www.bankless.com/jobs)
 - [Vagas em Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Vagas na Crypto Valley](https://cryptovalley.jobs/)

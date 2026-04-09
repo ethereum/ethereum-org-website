@@ -109,7 +109,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 - [Kazi za Sarafu za Kidigitali](https://cryptocurrencyjobs.co/ethereum/)
 - [Kazi katika ConsenSys](https://consensys.net/careers/)
 - [Orodha ya Kazi za Kripto](https://cryptojobslist.com/ethereum-jobs)
-- [Ubao wa kazi wa Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Ubao wa kazi wa Bankless](https://www.bankless.com/jobs)
 - [Kazi za Web3](https://web3.career)
 - [Jeshi la Web3](https://web3army.xyz/)
 - [Kazi za Crypto Valley](https://cryptovalley.jobs/)
