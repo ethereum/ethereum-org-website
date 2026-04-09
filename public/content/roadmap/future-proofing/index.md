@@ -45,6 +45,7 @@ Active work includes:
 - **Hash-based signatures (leanXMSS)**: A quantum-safe replacement for validator signatures, built on hash functions that quantum computers cannot efficiently break.
 - **Minimal zkVM (leanVM)**: Because quantum-safe signatures are larger than the signatures currently used, leanXMSS is paired with a minimal zkVM (leanVM). This engine aggregates quantum-safe signatures efficiently, compressing the data by 250x, so the network remains fast after the transition.
 - **Weekly interop testing**: More than 10 client teams participate in regular post-quantum devnets.
+- **Data availability:** Upgrading the underlying cryptography used to handle large amounts of network data will ensure Ethereum stays fast and affordable to use without risking future quantum vulnerabilities.
 - **Poseidon Prize**: A $1 million research prize targeting improvements in hash-based cryptographic primitives.
 - **NIST standards**: The U.S. National Institute of Standards and Technology finalized three post-quantum cryptography standards in August 2024 (ML-KEM, ML-DSA, SLH-DSA). Ethereum's work builds on these foundations.
 
