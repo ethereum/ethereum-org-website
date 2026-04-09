@@ -7,30 +7,30 @@ alt: "Ethereum roadmap"
 template: roadmap
 summaryPoints:
   - Quantum computers will eventually threaten the cryptography Ethereum uses today
-  - The Ethereum Foundation has a dedicated team and a structured plan targeting 2029
+  - The Ethereum Foundation has a dedicated post-quantum research team, and a structured "Lean Ethereum" roadmap targeting 2029 for full post-quantum protection
   - Your funds are safe today and wallet software will guide you through future migration
 ---
 
-Quantum computers will eventually be able to break the cryptographic methods that secure Ethereum and most other digital systems today. This page explains what that means, what is being done about it, and what you need to know.
+Quantum computers will eventually be able to break the cryptographic methods that secure Ethereum and most other digital systems today. This page explains what that means, how the network is proactively developing improvements to mitigate this risk, and what you need to know.
 
-## Why this matters {#why-this-matters}
+## Why post-quantum cryptography matters {#why-post-quantum-matters}
 
 Ethereum relies on several forms of [cryptography](/glossary/#cryptography) to keep the network secure and protect user funds. The most important are:
 
-- **Elliptic curve digital signature algorithm (ECDSA)**: Used to sign transactions. Your Ethereum account's security depends on this.
+- **Elliptic curve digital signature algorithm (ECDSA)**: The cryptography used to sign transactions. Your Ethereum account's security depends on this.
 - **BLS signatures**: Used by [validators](/glossary/#validator) to reach [consensus](/glossary/#consensus) on the state of the network.
 - **KZG polynomial commitments**: Used for [data availability](/glossary/#data-availability) in Ethereum's scaling roadmap.
 - **ZK-proof systems**: Used by rollups and other applications to verify computations offchain.
 
-All of these rely on mathematical problems that are hard for classical computers but could be solved efficiently by a sufficiently powerful quantum computer.
+All of these rely on mathematical structures, such as Abelian groups, that are hard for classical computers but can be solved efficiently by a quantum computer using [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm).
 
-### How close are quantum computers? {#how-close}
+### When will quantum computers threaten Ethereum? {#when-will-quantum-computers-threaten-ethereum}
 
 In March 2026, Google Quantum AI published research estimating that breaking 256-bit elliptic curve cryptography (the type Ethereum uses for account signatures) could require roughly 1,200 logical qubits. Previous estimates put this number much higher. Google has set a 2029 internal deadline for migrating its own systems to post-quantum cryptography.
 
-Current quantum hardware operates with a few thousand noisy physical qubits. Logical qubits (which correct for errors and perform reliable computation) require many physical qubits each. **The gap between current hardware and what is needed to break Ethereum's cryptography remains significant, but it is narrowing faster than many expected.**
+Current quantum hardware is far from this scale, operating with a few thousand noisy physical qubits. Logical qubits (which correct for errors and perform reliable computation) require many physical qubits each. **The gap between current hardware and what is needed to break Ethereum's cryptography remains significant, but it is narrowing faster than many expected.** Notably, the U.S. National Institute of Standards and Technology (NIST) anticipates deprecating ECDSA by 2030 and disallowing it by 2035.
 
-This is not an imminent threat. But cryptographic transitions take years, and Ethereum's security model is designed to last centuries. Preparing now is prudent.
+This is not an imminent threat. But cryptographic transitions take years, and Ethereum's security model is designed to last centuries. Ethereum's response is the **Lean Ethereum** roadmap, a deliberate, multi-year mission to rebuild Ethereum around primitives that will survive any cryptographic threat.
 
 ## The four vulnerable areas {#four-vulnerable-areas}
 

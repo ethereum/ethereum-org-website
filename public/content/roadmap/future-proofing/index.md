@@ -63,14 +63,14 @@ Complexity creates opportunities for bugs and vulnerabilities. Part of the roadm
 
 Several recent upgrades have made Ethereum simpler and more efficient:
 
-- **Pectra (7-May-2025)**: Introduced EIP-7702, which lets externally owned accounts temporarily delegate to smart contract code, a stepping stone toward full [account abstraction](/roadmap/account-abstraction/). Also added the BLS12-381 precompile (EIP-2537), onchain deposit handling (EIP-6110), historical block hash access in the EVM (EIP-2935), and increased the maximum effective balance for validators (EIP-7251).
-- **Fusaka (3-Dec-2025)**: Deployed PeerDAS (EIP-7594), a peer-to-peer data availability sampling system that distributes the data availability workload across the network. Also increased blob parameters, expanding data throughput for [rollups](/glossary/#rollups).
-- **Dencun (March 2024)**: Introduced blob transactions (EIP-4844) for cheaper rollup data and restricted `SELFDESTRUCT` (EIP-6780) to remove a long-standing source of complexity.
-- **London (2021)**: Overhauled [gas](/glossary/#gas) pricing with EIP-1559, introducing a base fee and burn mechanism for more predictable transaction costs.
+- **[Pectra (7-May-2025)](/roadmap/pectra/)**: Introduced EIP-7702, which lets externally owned accounts temporarily delegate to smart contract code, a stepping stone toward full [account abstraction](/roadmap/account-abstraction/). Also added the BLS12-381 precompile (EIP-2537), onchain deposit handling (EIP-6110), historical block hash access in the EVM (EIP-2935), and increased the maximum effective balance for validators (EIP-7251).
+- **[Fusaka (3-Dec-2025)](/roadmap/fusaka/)**: Deployed PeerDAS (EIP-7594), a peer-to-peer data availability sampling system that distributes the data availability workload across the network. Also increased blob parameters, expanding data throughput for [rollups](/glossary/#rollups).
+- **[Dencun (March 2024)](/roadmap/dencun/)**: Introduced blob transactions (EIP-4844) for cheaper rollup data and restricted `SELFDESTRUCT` (EIP-6780) to remove a long-standing source of complexity.
+- **[London (2021)](/ethereum-forks/#london)**: Overhauled [gas](/glossary/#gas) pricing with EIP-1559, introducing a base fee and burn mechanism for more predictable transaction costs.
 
 ### What is in progress {#what-is-in-progress}
 
-- **Glamsterdam (planned first half of 2026)**: Being considered for inclusion: enshrined proposer-builder separation (EIP-7732), block-level access lists (EIP-7928), and gas repricing to better align costs with actual resource usage.
+- **[Glamsterdam (planned first half of 2026)](/roadmap/glamsterdam/)**: Being considered for inclusion: enshrined proposer-builder separation (EIP-7732), block-level access lists (EIP-7928), and gas repricing to better align costs with actual resource usage.
 - **Hegotá (planned second half of 2026)**: Being considered for inclusion: [Verkle Trees](/roadmap/verkle-trees/), replacing the current data structure with a more efficient one that enables stateless clients. Also targeted for EIP-8141 (native account abstraction).
 - **Ongoing**: Efforts to simplify the [EVM](/developers/docs/evm/), harmonize client implementations, and phase out deprecated features continue across the Ethereum development community.
 
@@ -78,9 +78,9 @@ Several recent upgrades have made Ethereum simpler and more efficient:
 
 As of early 2026:
 
-**Simplification and efficiency**: Significant progress. Pectra and Fusaka delivered real improvements in account flexibility, data availability, and validator operations. Glamsterdam and Hegotá are in active development with clear EIP targets.
+**Simplification and efficiency**: Pectra and Fusaka delivered real improvements in account flexibility, data availability, and validator operations. Glamsterdam and Hegotá are in active development with clear targets to make the network more resilient and efficient, while removing external dependencies.
 
-**Post-quantum cryptography**: Active research and early implementation. The Ethereum Foundation has a dedicated team, funded research prizes, and weekly interop devnets running across multiple clients. However, **no post-quantum code is in production on Ethereum Mainnet yet**. The structured fork milestones target 2029 for completion.
+**Post-quantum cryptography**: Active research and early implementation are underway. The ecosystem has funded research prizes and runs weekly interop devnets across multiple clients, in addition to the research done by the Ethereum Foundation's dedicated Post-Quantum team. While the structured fork milestones target approximately 2029 for completion, early research is producing tangible proof points demonstrating that post-quantum execution is viable today.
 
 **Account abstraction and signature agility**: EIP-7702 shipped in Pectra. EIP-8141, being considered for Hegotá, will allow accounts to use any signature scheme, giving users a path to adopt quantum-safe signatures before the full protocol transition is complete.
 
@@ -88,8 +88,10 @@ No part of this work is finished. Timelines are targets, not guarantees. But the
 
 **Further reading**
 
-- [pq.ethereum.org](https://pq.ethereum.org)
 - [Post-quantum cryptography on Ethereum](/roadmap/future-proofing/quantum-resistance/)
+- [Privacy Stewards of Ethereum: Post-Quantum Cryptography and Ethereum](https://pse.dev/projects/post-quantum-cryptography)
+- [lean week: leanVM + PQ workshops, Cambridge 2025](https://github.com/leanEthereum/pm/blob/main/workshops-and-interops/2025/lean-week-cambridge/index.md)
+- [pq.ethereum.org](https://pq.ethereum.org)
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)
 - [Data structures](/developers/docs/data-structures-and-encoding/)
