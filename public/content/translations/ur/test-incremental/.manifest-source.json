@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "public/content/test-incremental/index.md",
-  "generatedAt": "2026-04-09T06:21:02.709Z",
-  "rootHash": "2d87c07cbdb2",
+  "generatedAt": "2026-04-09T06:29:20.690Z",
+  "rootHash": "6daf1f139ddb",
   "tree": {
     "contentHash": "fa3770bba9b6",
-    "anchorHash": "5a057e53a0cc",
+    "anchorHash": "f80ed448bfd6",
     "children": {
       "frontmatter:title": {
         "contentHash": "5e0f4e0d7562",
@@ -17,7 +17,7 @@
       },
       "frontmatter:image": {
         "contentHash": "e3b0c44298fc",
-        "anchorHash": "ed119744652a"
+        "anchorHash": "18d3fe0cb3fe"
       },
       "frontmatter:alt": {
         "contentHash": "c2ea701bd8df",
@@ -342,7 +342,7 @@
       },
       "deployment": {
         "contentHash": "49d447ab5732",
-        "anchorHash": "0ceb450ce434",
+        "anchorHash": "6dbaa6784c71",
         "labelHash": "870a8ffd98f4",
         "children": {
           "_label": {
@@ -351,7 +351,7 @@
           },
           "networks-and-tools": {
             "contentHash": "a23edbc13886",
-            "anchorHash": "4ed1d9b4e73e",
+            "anchorHash": "7d5fdb6a978d",
             "labelHash": "24932fdf5eba",
             "children": {
               "_label": {
@@ -400,11 +400,11 @@
               },
               "component:11": {
                 "contentHash": "4b9f7d802648",
-                "anchorHash": "f60cde9bb524",
+                "anchorHash": "ed1027b38334",
                 "children": {
                   "attr:id": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "7fdb0317189a"
+                    "anchorHash": "47256ec12805"
                   }
                 }
               },
@@ -414,7 +414,7 @@
               },
               "component:13": {
                 "contentHash": "397da318ad9e",
-                "anchorHash": "b67c83ada26c",
+                "anchorHash": "c1363bdbf097",
                 "children": {
                   "attr:title": {
                     "contentHash": "ad77a28ab6fb",
@@ -422,7 +422,7 @@
                   },
                   "attr:emoji": {
                     "contentHash": "e3b0c44298fc",
-                    "anchorHash": "fe4b570e22cc"
+                    "anchorHash": "a4d984cc026b"
                   },
                   "prose:3": {
                     "contentHash": "cdf625a703f8",
@@ -775,5 +775,5 @@
       "further-reading"
     ]
   },
-  "sourceCommitSha": "f3985740320952da8b43559f4d04b5acebfc506e"
+  "sourceCommitSha": "29891954b1ca35dfed77235e675fadefa832ecea"
 }
