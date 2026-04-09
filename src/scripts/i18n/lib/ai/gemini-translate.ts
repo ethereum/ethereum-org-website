@@ -437,11 +437,15 @@ function restoreHeadingIds(translated: string, english: string): string {
 
   if (englishIds.length === 0) return translated
 
-  // Find headings in translated text (without IDs) and append the English ID
+  // Find headings in translated text (without IDs) and append the English ID.
+  // Skip lines inside code fences to avoid matching # comments as headings.
   let idIndex = 0
+  let inFence = false
   const lines = translated.split("\n")
   for (let i = 0; i < lines.length; i++) {
     if (idIndex >= englishIds.length) break
+    if (lines[i].startsWith("```")) inFence = !inFence
+    if (inFence) continue
     HEADING_RE.lastIndex = 0
     if (HEADING_RE.test(lines[i]) && !lines[i].includes("{#")) {
       lines[i] = `${lines[i].trimEnd()} ${englishIds[idIndex]}`
@@ -636,9 +640,7 @@ function reconstructFromPlaceholders(
 /**
  * Collect code comment nodes from the normalizer tree.
  */
-function collectCommentNodes(
-  tree: ContentNode[]
-): Array<{
+function collectCommentNodes(tree: ContentNode[]): Array<{
   text: string
   language: string
   line: string
