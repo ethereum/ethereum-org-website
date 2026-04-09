@@ -6,8 +6,14 @@
  * translatable content, this script updates all translated files
  * deterministically -- no Gemini needed.
  *
- * Uses intl-content-tree's extractInertChanges() for detection,
- * then applies context-aware replacement per element type.
+ * Detection uses intl-content-tree's extractInertChanges() with
+ * git-based old English retrieval (sourceCommitSha in manifest).
+ *
+ * Replacement is section-scoped and occurrence-counted:
+ * 1. Parse the tree path to find the narrowest heading section
+ * 2. Within that section's text range, count to the Nth occurrence
+ *    of the element type (matching the tree's DFS order)
+ * 3. Verify the value, replace only that single occurrence
  *
  * Usage:
  *   npx ts-node -O '{"module":"commonjs"}' propagate-inert.ts \
@@ -37,7 +43,7 @@ import {
 // Types
 // ---------------------------------------------------------------------------
 
-interface InertChange {
+export interface InertChange {
   /** Element type (link, image, inline-code, component-attribute, etc.) */
   elementType: string
   /** The attribute/value key that changed */
@@ -46,6 +52,10 @@ interface InertChange {
   oldValue: string
   /** New value (from current English) */
   newValue: string
+  /** Full tree path (e.g., "dev-env/what-is-gas/component:4/attr:emoji") */
+  path: string
+  /** Component tag name (e.g., "YouTube", "InfoBanner") */
+  tagName?: string
 }
 
 // ---------------------------------------------------------------------------
@@ -55,7 +65,7 @@ interface InertChange {
 /**
  * Compare current English against a stored source manifest. Returns a
  * list of inert values that changed, with full context (element type,
- * attribute name, old/new values).
+ * attribute name, old/new values, tree path).
  *
  * Uses the manifest's sourceCommitSha to fetch the old English content
  * via the GitHub API, giving us a fully parsed old tree with real values.
@@ -102,6 +112,8 @@ export async function detectInertChanges(
     key: c.key || "value",
     oldValue: c.oldValue,
     newValue: c.newValue,
+    path: c.path,
+    tagName: c.tagName,
   }))
 }
 
@@ -110,39 +122,53 @@ export async function detectInertChanges(
 // ---------------------------------------------------------------------------
 
 /**
- * Apply inert changes to a translated file.
+ * Apply inert changes to a translated file. Returns the modified content
+ * and lists of which changes were applied vs skipped (for manifest updates).
  *
- * For markdown: context-aware replacement within structural patterns
- * (link URLs, image paths, component attributes, frontmatter fields).
- * For JSON: parse, walk string values, replace, re-serialize.
+ * For markdown: section-scoped, occurrence-counted, value-verified.
+ * For JSON: key-navigated, occurrence-counted within value string.
  */
 export function applyInertChanges(
   translatedContent: string,
   changes: InertChange[],
   format: "markdown" | "json" = "markdown"
-): { content: string; applied: number; skipped: number } {
+): { content: string; applied: InertChange[]; skipped: InertChange[] } {
   if (format === "json") {
     return applyInertChangesJson(translatedContent, changes)
   }
+  return applyInertChangesMarkdown(translatedContent, changes)
+}
 
-  let content = translatedContent
-  let applied = 0
-  let skipped = 0
+// ---------------------------------------------------------------------------
+// Markdown: section-scoped replacement
+// ---------------------------------------------------------------------------
+
+function applyInertChangesMarkdown(
+  content: string,
+  changes: InertChange[]
+): { content: string; applied: InertChange[]; skipped: InertChange[] } {
+  const applied: InertChange[] = []
+  const skipped: InertChange[] = []
 
   for (const change of changes) {
-    const replaced = contextAwareReplace(
+    const scope = extractSectionScope(content, change.path)
+    const occurrence = extractOccurrenceIndex(change.path, change.elementType)
+
+    const result = replaceNthInScope(
       content,
+      scope,
       change.oldValue,
       change.newValue,
       change.elementType,
-      change.key
+      change.key,
+      occurrence
     )
 
-    if (replaced !== content) {
-      content = replaced
-      applied++
+    if (result.replaced) {
+      content = result.content
+      applied.push(change)
     } else {
-      skipped++
+      skipped.push(change)
     }
   }
 
@@ -150,24 +176,222 @@ export function applyInertChanges(
 }
 
 /**
- * Apply inert changes to a JSON locale file.
- * Parses the JSON, walks all string values, replaces old -> new,
- * then re-serializes. Avoids regex issues with escaped quotes.
+ * Extract the character range of the narrowest section that contains
+ * the target node. Code-fence-aware: headings inside fences are ignored.
  */
+function extractSectionScope(
+  content: string,
+  path: string
+): { start: number; end: number } {
+  // Frontmatter scope
+  if (path.startsWith("frontmatter:")) {
+    const fmMatch = content.match(/^---\n([\s\S]*?)\n---/)
+    if (fmMatch) {
+      return { start: 4, end: 4 + fmMatch[1].length }
+    }
+    return { start: 0, end: 0 }
+  }
+
+  // Preamble scope (content between frontmatter and first heading)
+  if (path.startsWith("prose:0")) {
+    const fmMatch = content.match(/^---\n[\s\S]*?\n---\n/)
+    const fmEnd = fmMatch ? fmMatch[0].length : 0
+    const lines = content.split("\n")
+    let firstHeadingPos = content.length
+    let inFence = false
+    let pos = 0
+    for (const line of lines) {
+      if (pos >= fmEnd) {
+        if (line.startsWith("```")) inFence = !inFence
+        if (!inFence && /^#{1,6}\s/.test(line)) {
+          firstHeadingPos = pos
+          break
+        }
+      }
+      pos += line.length + 1
+    }
+    return { start: fmEnd, end: firstHeadingPos }
+  }
+
+  // Section scope: walk path segments to find innermost heading
+  const segments = path.split("/")
+  const headingIds: string[] = []
+  for (const seg of segments) {
+    // Stop at element-type segments (link:0, component:1, etc.)
+    if (
+      seg.match(
+        /^(link|image|html-tag|component|attr|prose|inline-code|icu|code-fence|code-comment|code-body|table):/
+      )
+    ) {
+      break
+    }
+    // Skip non-heading segments like _label
+    if (!seg.startsWith("_")) {
+      headingIds.push(seg)
+    }
+  }
+
+  // Find the narrowest heading section
+  let scopeStart = 0
+  let scopeEnd = content.length
+
+  for (const headingId of headingIds) {
+    const range = findHeadingRange(content, headingId, scopeStart, scopeEnd)
+    if (range) {
+      scopeStart = range.start
+      scopeEnd = range.end
+    }
+  }
+
+  return { start: scopeStart, end: scopeEnd }
+}
+
+/**
+ * Find a heading's content range within a portion of the document.
+ * Code-fence-aware: skips headings inside fenced code blocks.
+ * Returns the range from the heading line to the next heading of
+ * same-or-higher level (or the end of the search range).
+ */
+function findHeadingRange(
+  content: string,
+  headingId: string,
+  searchStart: number,
+  searchEnd: number
+): { start: number; end: number } | null {
+  const lines = content.substring(searchStart, searchEnd).split("\n")
+  const pattern = new RegExp(`\\{#${escapeRegex(headingId)}\\}`)
+  let inFence = false
+  let headingLine = -1
+  let headingLevel = 0
+  let pos = searchStart
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    if (line.startsWith("```")) inFence = !inFence
+
+    if (!inFence && pattern.test(line)) {
+      const levelMatch = line.match(/^(#{1,6})\s/)
+      if (levelMatch) {
+        headingLine = i
+        headingLevel = levelMatch[1].length
+        pos += line.length + 1
+        break
+      }
+    }
+    pos += line.length + 1
+  }
+
+  if (headingLine === -1) return null
+
+  // Find end: next heading of same-or-higher level
+  const headingStart = pos - lines[headingLine].length - 1
+  inFence = false
+  for (let i = headingLine + 1; i < lines.length; i++) {
+    const line = lines[i]
+    if (line.startsWith("```")) inFence = !inFence
+    if (!inFence) {
+      const levelMatch = line.match(/^(#{1,6})\s/)
+      if (levelMatch && levelMatch[1].length <= headingLevel) {
+        return { start: headingStart, end: pos }
+      }
+    }
+    pos += line.length + 1
+  }
+
+  return { start: headingStart, end: searchEnd }
+}
+
+/**
+ * Extract the occurrence index from the last element-type segment in a path.
+ * E.g., "dev-env/link:1" -> 1, "dev-env/component:4/attr:emoji" -> 0
+ * The index is the number after the colon in the LAST matching element segment.
+ */
+function extractOccurrenceIndex(path: string, elementType: string): number {
+  const segments = path.split("/")
+  // Walk backwards to find the element segment matching our type
+  for (let i = segments.length - 1; i >= 0; i--) {
+    const match = segments[i].match(/^([^:]+):(\d+)$/)
+    if (match) {
+      // Map tree element names to our elementType names
+      const segType = match[1]
+      if (
+        (elementType === "link" && segType === "link") ||
+        (elementType === "image" && segType === "image") ||
+        (elementType === "html-tag" && segType === "html-tag") ||
+        (elementType === "inline-code" && segType === "inline-code") ||
+        (elementType === "code-body" && segType === "code-body") ||
+        (elementType === "code-fence" && segType === "code-fence") ||
+        (elementType === "component-attribute" && segType === "attr") ||
+        (elementType === "frontmatter-field" && segType === "frontmatter")
+      ) {
+        return parseInt(match[2])
+      }
+    }
+  }
+  return 0
+}
+
+// ---------------------------------------------------------------------------
+// JSON: path-navigated replacement
+// ---------------------------------------------------------------------------
+
 function applyInertChangesJson(
-  translatedContent: string,
+  content: string,
   changes: InertChange[]
-): { content: string; applied: number; skipped: number } {
-  const obj = JSON.parse(translatedContent)
-  let applied = 0
-  let skipped = 0
+): { content: string; applied: InertChange[]; skipped: InertChange[] } {
+  const obj = JSON.parse(content)
+  const applied: InertChange[] = []
+  const skipped: InertChange[] = []
 
   for (const change of changes) {
-    const found = jsonWalkReplace(obj, change.oldValue, change.newValue)
-    if (found) {
-      applied++
+    // Split path into key segments and element suffix.
+    // E.g., "nested/subsection/hint/html-tag:0" ->
+    //   keySegments = ["nested", "subsection", "hint"]
+    //   elementSuffix = "html-tag:0"
+    const segments = change.path.split("/")
+    const keySegments: string[] = []
+    let elementSuffix = ""
+    for (const seg of segments) {
+      if (
+        seg.match(
+          /^(html-tag|link|image|icu|prose|inline-code|code-fence|code-body):/
+        )
+      ) {
+        elementSuffix = seg
+        break
+      }
+      keySegments.push(seg)
+    }
+
+    // Navigate to the JSON key
+    const target = navigateJsonPath(obj, keySegments)
+    if (
+      typeof target.value !== "string" ||
+      !target.value.includes(change.oldValue)
+    ) {
+      skipped.push(change)
+      continue
+    }
+
+    // Extract occurrence index from element suffix
+    const occMatch = elementSuffix.match(/:(\d+)$/)
+    const occurrence = occMatch ? parseInt(occMatch[1]) : 0
+
+    // Replace Nth occurrence within this specific string value
+    const updated = replaceNthInStringByType(
+      target.value,
+      change.oldValue,
+      change.newValue,
+      change.elementType,
+      change.key,
+      occurrence
+    )
+
+    if (updated !== target.value) {
+      setJsonValue(obj, keySegments, updated)
+      applied.push(change)
     } else {
-      skipped++
+      skipped.push(change)
     }
   }
 
@@ -178,148 +402,248 @@ function applyInertChangesJson(
   }
 }
 
-/** Recursively replace oldValue with newValue in all string values of a JSON structure. */
-function jsonWalkReplace(
-  o: Record<string, unknown>,
-  oldValue: string,
-  newValue: string
-): boolean {
-  let found = false
-  for (const [k, v] of Object.entries(o)) {
-    if (typeof v === "string" && v.includes(oldValue)) {
-      o[k] = v.split(oldValue).join(newValue)
-      found = true
-    } else if (Array.isArray(v)) {
-      for (let i = 0; i < v.length; i++) {
-        if (typeof v[i] === "string" && (v[i] as string).includes(oldValue)) {
-          v[i] = (v[i] as string).split(oldValue).join(newValue)
-          found = true
-        } else if (typeof v[i] === "object" && v[i] !== null) {
-          if (
-            jsonWalkReplace(v[i] as Record<string, unknown>, oldValue, newValue)
-          ) {
-            found = true
-          }
-        }
-      }
-    } else if (typeof v === "object" && v !== null) {
-      if (jsonWalkReplace(v as Record<string, unknown>, oldValue, newValue)) {
-        found = true
-      }
+/** Navigate a parsed JSON object by key path segments. Returns the value and parent. */
+function navigateJsonPath(
+  obj: Record<string, unknown>,
+  keySegments: string[]
+): { value: unknown; parent: Record<string, unknown>; key: string } {
+  let current: Record<string, unknown> = obj
+  for (let i = 0; i < keySegments.length - 1; i++) {
+    const next = current[keySegments[i]]
+    if (typeof next !== "object" || next === null || Array.isArray(next)) {
+      return { value: undefined, parent: current, key: keySegments[i] }
     }
+    current = next as Record<string, unknown>
   }
-  return found
+  const lastKey = keySegments[keySegments.length - 1]
+  return { value: current[lastKey], parent: current, key: lastKey }
 }
 
+/** Set a value in a parsed JSON object by key path segments. */
+function setJsonValue(
+  obj: Record<string, unknown>,
+  keySegments: string[],
+  value: string
+): void {
+  let current: Record<string, unknown> = obj
+  for (let i = 0; i < keySegments.length - 1; i++) {
+    current = current[keySegments[i]] as Record<string, unknown>
+  }
+  current[keySegments[keySegments.length - 1]] = value
+}
+
+// ---------------------------------------------------------------------------
+// Shared: Nth-occurrence replacement by element type
+// ---------------------------------------------------------------------------
+
 /**
- * Replace an inert value using context-aware matching.
- *
- * Each element type has a specific pattern that scopes the replacement
- * to the correct structural context, preventing false matches.
- * All branches use callback functions to prevent $ injection.
+ * Replace the Nth occurrence of oldValue within a string, scoped by
+ * element-type context. Used by both markdown (within a section slice)
+ * and JSON (within a key's value string).
  */
-function contextAwareReplace(
-  content: string,
+function replaceNthInStringByType(
+  text: string,
   oldValue: string,
   newValue: string,
   elementType: string,
-  key: string
+  key: string,
+  occurrence: number
 ): string {
+  const pattern = buildContextPattern(oldValue, elementType, key)
+  if (!pattern) {
+    // No context pattern available -- fall back to Nth raw substring
+    return replaceNthSubstring(text, oldValue, newValue, occurrence)
+  }
+
+  // Count matches to find the Nth one
+  let matchIndex = 0
+  return text.replace(pattern, (match, ...args) => {
+    if (matchIndex++ === occurrence) {
+      return buildReplacement(newValue, elementType, args)
+    }
+    return match
+  })
+}
+
+/**
+ * Build a context-specific regex for finding an inert value within its
+ * structural context. Always uses the `g` flag for counting.
+ */
+function buildContextPattern(
+  oldValue: string,
+  elementType: string,
+  key: string
+): RegExp | null {
   const escaped = escapeRegex(oldValue)
+  const escapedKey = escapeRegex(key)
 
   switch (elementType) {
-    case "link": {
-      // Match inside markdown link URL: [text](OLD) or href="OLD"
-      const pattern = new RegExp(
-        `(\\]\\()${escaped}(\\))|` + `(href=["'])${escaped}(["'])`,
+    case "link":
+      return new RegExp(
+        `(\\]\\()${escaped}(\\))|(href=["'])${escaped}(["'])`,
         "g"
       )
-      return content.replace(pattern, (_, mdPre, mdPost, hrefPre, hrefPost) => {
-        if (mdPre) return `${mdPre}${newValue}${mdPost}`
-        if (hrefPre) return `${hrefPre}${newValue}${hrefPost}`
-        return newValue
-      })
-    }
-
-    case "image": {
-      // Match inside image path: ![alt](OLD)
-      const pattern = new RegExp(
-        `(!\\[(?:[^\\]]|\\\\\\])*\\]\\()${escaped}(\\))`,
+    case "image":
+      return new RegExp(`(!\\[(?:[^\\]]|\\\\\\])*\\]\\()${escaped}(\\))`, "g")
+    case "html-tag":
+      return new RegExp(`(${escapedKey}=["'])${escaped}(["'])`, "g")
+    case "component-attribute":
+      // Try all JSX syntaxes: key="val", key={val}, key={{val}}
+      return new RegExp(
+        `(${escapedKey}=["'])${escaped}(["'])` +
+          `|(${escapedKey}=\\{)${escaped}(\\})` +
+          `|(${escapedKey}=\\{\\{)${escaped}(\\}\\})`,
         "g"
       )
-      return content.replace(pattern, (_, pre, post) => {
-        return `${pre}${newValue}${post}`
-      })
-    }
-
-    case "inline-code": {
-      // Match inside backticks: `OLD`
-      const pattern = new RegExp(`(\`)${escaped}(\`)`, "g")
-      return content.replace(pattern, (_, pre, post) => {
-        return `${pre}${newValue}${post}`
-      })
-    }
-
-    case "html-tag": {
-      // Match inside attribute: key="OLD" or key='OLD'
-      const pattern = new RegExp(
-        `(${escapeRegex(key)}=["'])${escaped}(["'])`,
-        "g"
-      )
-      return content.replace(pattern, (_, pre, post) => {
-        return `${pre}${newValue}${post}`
-      })
-    }
-
-    case "component-attribute": {
-      // Match component attributes in multiple syntaxes:
-      // key="OLD", key='OLD', key={OLD}, key={{OLD}}
-      const escapedKey = escapeRegex(key)
-      const patterns = [
-        // String: key="OLD" or key='OLD'
-        new RegExp(`(${escapedKey}=["'])${escaped}(["'])`, "g"),
-        // JSX expression: key={OLD}
-        new RegExp(`(${escapedKey}=\\{)${escaped}(\\})`, "g"),
-        // JSX object: key={{OLD}}
-        new RegExp(`(${escapedKey}=\\{\\{)${escaped}(\\}\\})`, "g"),
-      ]
-      for (const pattern of patterns) {
-        const replaced = content.replace(pattern, (_, pre, post) => {
-          return `${pre}${newValue}${post}`
-        })
-        if (replaced !== content) return replaced
-      }
-      return content
-    }
-
-    case "frontmatter-field": {
-      // Match YAML frontmatter: key: OLD (only within --- fences)
-      const fmMatch = content.match(/^---\n([\s\S]*?)\n---/)
-      if (!fmMatch) return content
-      const fmContent = fmMatch[1]
-      const escapedKey = escapeRegex(key)
-      const pattern = new RegExp(`(^${escapedKey}:\\s*)${escaped}(\\s*$)`, "m")
-      const newFm = fmContent.replace(pattern, (_, pre, post) => {
-        return `${pre}${newValue}${post}`
-      })
-      if (newFm === fmContent) return content
-      return content.replace(fmMatch[1], newFm)
-    }
-
-    case "code-body": {
-      // Replace within code fences only, not in prose.
-      return content.replace(
-        /(```[^\n]*\n)([\s\S]*?)(```)/g,
-        (_, open, body, close) => {
-          return `${open}${body.replace(oldValue, () => newValue)}${close}`
-        }
-      )
-    }
-
+    case "frontmatter-field":
+      return new RegExp(`(^${escapedKey}:\\s*)${escaped}(\\s*$)`, "gm")
+    case "inline-code":
+      return new RegExp(`(\`)${escaped}(\`)`, "g")
+    case "icu-variable":
+      // Match within ICU braces: {oldValue} or {oldValue,
+      return new RegExp(`(\\{)${escaped}(\\}|,)`, "g")
+    case "code-body":
+      // For code-body, we need special handling (scope to fences)
+      return null // handled by replaceNthSubstring within fence scope
     default:
-      // Fallback: replace first occurrence only (intentional -- without
-      // structural context we can't safely replace all matches).
-      return content.replace(oldValue, () => newValue)
+      return null
+  }
+}
+
+/**
+ * Build the replacement string from a regex match, preserving the
+ * structural context (capture groups). Uses callback approach to
+ * prevent $ injection.
+ */
+function buildReplacement(
+  newValue: string,
+  elementType: string,
+  groups: unknown[]
+): string {
+  switch (elementType) {
+    case "link": {
+      const [mdPre, mdPost, hrefPre, hrefPost] = groups as (
+        | string
+        | undefined
+      )[]
+      if (mdPre) return `${mdPre}${newValue}${mdPost}`
+      if (hrefPre) return `${hrefPre}${newValue}${hrefPost}`
+      return newValue
+    }
+    case "image":
+    case "html-tag":
+    case "inline-code":
+    case "frontmatter-field": {
+      const [pre, post] = groups as string[]
+      return `${pre}${newValue}${post}`
+    }
+    case "component-attribute": {
+      // 6 groups: (strPre, strPost, exprPre, exprPost, objPre, objPost)
+      const [strPre, strPost, exprPre, exprPost, objPre, objPost] = groups as (
+        | string
+        | undefined
+      )[]
+      if (strPre) return `${strPre}${newValue}${strPost}`
+      if (exprPre) return `${exprPre}${newValue}${exprPost}`
+      if (objPre) return `${objPre}${newValue}${objPost}`
+      return newValue
+    }
+    case "icu-variable": {
+      const [pre, post] = groups as string[]
+      return `${pre}${newValue}${post}`
+    }
+    default:
+      return newValue
+  }
+}
+
+/** Replace the Nth occurrence of a plain substring. */
+function replaceNthSubstring(
+  text: string,
+  oldValue: string,
+  newValue: string,
+  occurrence: number
+): string {
+  let count = 0
+  let pos = 0
+  while (pos < text.length) {
+    const idx = text.indexOf(oldValue, pos)
+    if (idx === -1) break
+    if (count === occurrence) {
+      return (
+        text.substring(0, idx) +
+        newValue +
+        text.substring(idx + oldValue.length)
+      )
+    }
+    count++
+    pos = idx + 1
+  }
+  return text // not found at occurrence index
+}
+
+/**
+ * Replace the Nth occurrence of an inert value within a scoped content range.
+ * Extracts the slice, runs occurrence-counted replacement, reconstructs.
+ */
+function replaceNthInScope(
+  content: string,
+  scope: { start: number; end: number },
+  oldValue: string,
+  newValue: string,
+  elementType: string,
+  key: string,
+  occurrence: number
+): { content: string; replaced: boolean } {
+  if (scope.start >= scope.end) {
+    return { content, replaced: false }
+  }
+
+  const slice = content.substring(scope.start, scope.end)
+
+  // For code-body: special handling -- only replace within fences in the slice
+  let replaced: string
+  if (elementType === "code-body") {
+    let found = false
+    replaced = slice.replace(
+      /(```[^\n]*\n)([\s\S]*?)(```)/g,
+      (match, open, body, close) => {
+        if (found) return match
+        const updated = replaceNthSubstring(
+          body,
+          oldValue,
+          newValue,
+          occurrence
+        )
+        if (updated !== body) {
+          found = true
+          return `${open}${updated}${close}`
+        }
+        return match
+      }
+    )
+    if (!found) return { content, replaced: false }
+  } else {
+    replaced = replaceNthInStringByType(
+      slice,
+      oldValue,
+      newValue,
+      elementType,
+      key,
+      occurrence
+    )
+  }
+
+  if (replaced === slice) {
+    return { content, replaced: false }
+  }
+
+  return {
+    content:
+      content.substring(0, scope.start) +
+      replaced +
+      content.substring(scope.end),
+    replaced: true,
   }
 }
 
@@ -329,11 +653,12 @@ function contextAwareReplace(
 
 /**
  * Update the translation manifest to reflect propagated inert changes.
- * Updates any placeholder entry whose values contain the old value.
+ * Matches placeholder entries by old value and element type (scoped).
+ * Only updates entries for changes that were actually applied.
  */
 export function updateTranslationManifest(
   manifest: LocaleTranslationManifest,
-  changes: InertChange[],
+  appliedChanges: InertChange[],
   newEnglishManifestHash: string
 ): LocaleTranslationManifest {
   const updated = { ...manifest }
@@ -341,18 +666,22 @@ export function updateTranslationManifest(
   updated.translatedAt = new Date().toISOString()
 
   const newMap = { ...updated.placeholderMap }
-  for (const change of changes) {
+  for (const change of appliedChanges) {
+    // Find the placeholder entry by matching old value + element type
     for (const [id, entry] of Object.entries(newMap)) {
+      if (entry.type !== change.elementType) continue
       const newValues = { ...entry.values }
       let changed = false
       for (const [k, v] of Object.entries(newValues)) {
         if (v === change.oldValue) {
           newValues[k] = change.newValue
           changed = true
+          break // only update one match per change
         }
       }
       if (changed) {
         newMap[id] = { ...entry, values: newValues }
+        break // move to next change
       }
     }
   }
@@ -472,33 +801,38 @@ Options:
 
     // Write manifests FIRST so a crash before content write
     // leaves stale manifests (safe: re-run will re-detect and re-apply)
-    const newSourceManifest = buildMarkdownManifest(englishContent, filePath)
+    if (applied.length > 0) {
+      const newSourceManifest = buildMarkdownManifest(englishContent, filePath)
 
-    if (existsSync(translationManifestPath)) {
-      const translationManifest: LocaleTranslationManifest = JSON.parse(
-        readFileSync(translationManifestPath, "utf-8")
-      )
-      const newSourceParsed = JSON.parse(newSourceManifest)
-      const updatedTranslationManifest = updateTranslationManifest(
-        translationManifest,
-        changes,
-        newSourceParsed.rootHash
-      )
-      writeFileSync(
-        translationManifestPath,
-        JSON.stringify(updatedTranslationManifest, null, 2) + "\n"
-      )
-    }
+      if (existsSync(translationManifestPath)) {
+        const translationManifest: LocaleTranslationManifest = JSON.parse(
+          readFileSync(translationManifestPath, "utf-8")
+        )
+        const newSourceParsed = JSON.parse(newSourceManifest)
+        const updatedTranslationManifest = updateTranslationManifest(
+          translationManifest,
+          applied,
+          newSourceParsed.rootHash
+        )
+        writeFileSync(
+          translationManifestPath,
+          JSON.stringify(updatedTranslationManifest, null, 2) + "\n"
+        )
+      }
 
-    writeFileSync(sourceManifestPath, newSourceManifest)
+      // Only stamp source manifest if ALL changes applied
+      if (skipped.length === 0) {
+        writeFileSync(sourceManifestPath, newSourceManifest)
+      }
 
-    if (applied > 0) {
       writeFileSync(join(rootDir, translationPath), content)
     }
 
-    totalApplied += applied
-    totalSkipped += skipped
-    console.log(`  [${locale}] ${applied} applied, ${skipped} skipped`)
+    totalApplied += applied.length
+    totalSkipped += skipped.length
+    console.log(
+      `  [${locale}] ${applied.length} applied, ${skipped.length} skipped`
+    )
   }
 
   console.log(`\nTotal: ${totalApplied} applied, ${totalSkipped} skipped`)

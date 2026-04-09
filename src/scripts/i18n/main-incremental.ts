@@ -46,7 +46,12 @@ import {
   type LocaleTranslationManifest,
   parseEnglishJson,
 } from "./lib/ai/manifest-adapter"
-import { applyInertChanges, detectInertChanges } from "./lib/ai/propagate-inert"
+import {
+  applyInertChanges,
+  detectInertChanges,
+  type InertChange,
+  updateTranslationManifest,
+} from "./lib/ai/propagate-inert"
 import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
@@ -463,6 +468,12 @@ async function main() {
   // Phase 4: Inert Propagation
   logSection("Phase 4: Inert Propagation")
 
+  // Track applied inert changes per task for manifest updates in Phase 6
+  const inertAppliedByTask = new Map<
+    (typeof fileLanguageTasks)[0],
+    InertChange[]
+  >()
+
   for (const task of fileLanguageTasks) {
     if (task.drift.inertDrift.length === 0) continue
 
@@ -480,10 +491,11 @@ async function main() {
       task.file.type
     )
 
-    if (applied > 0) {
+    if (applied.length > 0) {
       task.localeContent = content // Update in-memory for prose phase
+      inertAppliedByTask.set(task, applied)
       console.log(
-        `  [${task.locale}] ${task.file.path}: ${applied} inert changes applied, ${skipped} skipped`
+        `  [${task.locale}] ${task.file.path}: ${applied.length} inert changes applied, ${skipped.length} skipped`
       )
     }
   }
@@ -681,31 +693,43 @@ async function main() {
     await committer.commitFile(destPath, task.localeContent, task.locale)
     console.log(`  [${task.locale}] ${destPath}: committed`)
 
-    // Stamp source manifest (only after ALL operations succeed for this file)
+    // Stamp source manifest only if no inert changes were skipped.
+    // If some were skipped, the source manifest should stay at the old
+    // state so the next run re-detects and retries the skipped changes.
+    const appliedInert = inertAppliedByTask.get(task)
+    const hasSkippedInert =
+      appliedInert !== undefined &&
+      task.drift.inertDrift.length > 0 &&
+      appliedInert.length < task.drift.inertDrift.length
+
     if (task.file.type === "markdown") {
       const sourceManifest = buildMarkdownManifest(
         task.file.content,
         task.file.path,
         baseBranchSha
       )
-      const sourceManifestPath = destPath.replace(
-        /index\.md$/,
-        ".manifest-source.json"
-      )
-      await committer.commitFile(
-        sourceManifestPath,
-        sourceManifest,
-        task.locale
-      )
 
-      // Update translation manifest if we have one
+      if (!hasSkippedInert) {
+        const sourceManifestPath = destPath.replace(
+          /index\.md$/,
+          ".manifest-source.json"
+        )
+        await committer.commitFile(
+          sourceManifestPath,
+          sourceManifest,
+          task.locale
+        )
+      }
+
+      // Update translation manifest with inert changes + new hash
       if (task.translationManifest) {
         const parsed = JSON.parse(sourceManifest)
-        const updatedTM = {
-          ...task.translationManifest,
-          englishManifestHash: parsed.rootHash,
-          translatedAt: new Date().toISOString(),
-        }
+        const appliedInert = inertAppliedByTask.get(task) || []
+        const updatedTM = updateTranslationManifest(
+          task.translationManifest,
+          appliedInert,
+          parsed.rootHash
+        )
         const tmPath = destPath.replace(
           /index\.md$/,
           ".manifest-translation.json"
@@ -722,17 +746,25 @@ async function main() {
         task.file.path,
         baseBranchSha
       )
-      const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
-      await committer.commitFile(jsonManifestPath, sourceManifest, task.locale)
 
-      // Update JSON translation manifest (keeps future drift detection reliable)
+      if (!hasSkippedInert) {
+        const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
+        await committer.commitFile(
+          jsonManifestPath,
+          sourceManifest,
+          task.locale
+        )
+      }
+
+      // Update JSON translation manifest with inert changes + new hash
       if (task.translationManifest) {
         const parsed = JSON.parse(sourceManifest)
-        const updatedTM = {
-          ...task.translationManifest,
-          englishManifestHash: parsed.rootHash,
-          translatedAt: new Date().toISOString(),
-        }
+        const appliedInert = inertAppliedByTask.get(task) || []
+        const updatedTM = updateTranslationManifest(
+          task.translationManifest,
+          appliedInert,
+          parsed.rootHash
+        )
         const jsonTmPath = `src/intl/${task.locale}/.manifest-translation.json`
         await committer.commitFile(
           jsonTmPath,
