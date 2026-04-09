@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "locale": "ru",
+  "translatedAt": "2026-04-09T04:32:11.360Z",
+  "englishManifestHash": "2d87c07cbdb2",
+  "placeholderOrder": [
+    "LINK-e4be84",
+    "LINK-0c5ff7",
+    "LINK-605bdd",
+    "LINK-8a4f66",
+    "CODE-f2e983",
+    "CODE-6f8bdb",
+    "HTMLTAG-83004c",
+    "IMAGE-f89f11",
+    "CODEBLOCK-663181",
+    "LINK-9c1fcb",
+    "COMPONENT-c6524c",
+    "CODE-40f02b",
+    "LINK-894696",
+    "CODEBLOCK-b160db",
+    "LINK-357cc8",
+    "CODEBLOCK-1e4293",
+    "LINK-8a475c",
+    "LINK-255754",
+    "LINK-a4a1d9",
+    "LINK-605bdd",
+    "LINK-8a4f66",
+    "COMPONENT-fcf5e4",
+    "LINK-452955",
+    "LINK-e21583",
+    "LINK-2ecc99",
+    "CODE-f2e983",
+    "LINK-6d02da",
+    "LINK-50a35b",
+    "LINK-255754",
+    "LINK-8a4f66",
+    "LINK-7f5147",
+    "LINK-859653",
+    "LINK-155bf9",
+    "LINK-540b50",
+    "LINK-b79d2e",
+    "LINK-b7f13c",
+    "LINK-a74d69",
+    "LINK-1ee3ea",
+    "LINK-b10c87",
+    "LINK-a8ea70"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-663181": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-b160db": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-1e4293": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "LINK-8a475c": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/frameworks/"
+      }
+    },
+    "COMPONENT-c6524c": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/test-incremental",
+        "eventName": "clicked gas fees"
+      }
+    },
+    "CODE-40f02b": {
+      "type": "inline-code",
+      "values": {
+        "content": "base_fee + priority_fee"
+      }
+    },
+    "LINK-894696": {
+      "type": "link",
+      "values": {
+        "url": "https://www.blocknative.com/gas-estimator"
+      }
+    },
+    "COMPONENT-fcf5e4": {
+      "type": "component",
+      "values": {
+        "componentName": "InfoBanner",
+        "emoji": ":shield:"
+      }
+    },
+    "LINK-452955": {
+      "type": "link",
+      "values": {
+        "url": "https://www.openzeppelin.com/defender"
+      }
+    },
+    "LINK-e21583": {
+      "type": "link",
+      "values": {
+        "url": "https://www.trailofbits.com/"
+      }
+    },
+    "LINK-2ecc99": {
+      "type": "link",
+      "values": {
+        "url": "https://www.openzeppelin.com/security-audits"
+      }
+    },
+    "HTMLTAG-83004c": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://eth.blockscout.com/address/0x5678",
+        "target": "_blank"
+      }
+    },
+    "CODE-f2e983": {
+      "type": "inline-code",
+      "values": {
+        "content": "solc"
+      }
+    },
+    "CODE-6f8bdb": {
+      "type": "inline-code",
+      "values": {
+        "content": "pragma"
+      }
+    },
+    "IMAGE-f89f11": {
+      "type": "image",
+      "values": {
+        "path": "/images/developers/deploy-flow-v2.png"
+      }
+    },
+    "LINK-e4be84": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/"
+      }
+    },
+    "LINK-0c5ff7": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/"
+      }
+    },
+    "LINK-605bdd": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.ethpandaops.io/"
+      }
+    },
+    "LINK-8a4f66": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/"
+      }
+    },
+    "LINK-9c1fcb": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/gas/"
+      }
+    },
+    "LINK-357cc8": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/defi-wonderland/smock"
+      }
+    },
+    "LINK-255754": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org/"
+      }
+    },
+    "LINK-a4a1d9": {
+      "type": "link",
+      "values": {
+        "url": "https://holesky.dev/"
+      }
+    },
+    "LINK-6d02da": {
+      "type": "link",
+      "values": {
+        "url": "https://hardhat.org/docs"
+      }
+    },
+    "LINK-50a35b": {
+      "type": "link",
+      "values": {
+        "url": "https://book.getfoundry.sh/forge/tests"
+      }
+    },
+    "LINK-7f5147": {
+      "type": "link",
+      "values": {
+        "url": "/whitepaper/"
+      }
+    },
+    "LINK-859653": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.soliditylang.org/"
+      }
+    },
+    "LINK-155bf9": {
+      "type": "link",
+      "values": {
+        "url": "https://www.openzeppelin.com/contracts"
+      }
+    },
+    "LINK-540b50": {
+      "type": "link",
+      "values": {
+        "url": "/whitepaper/"
+      }
+    },
+    "LINK-b79d2e": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
+      }
+    },
+    "LINK-b7f13c": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/"
+      }
+    },
+    "LINK-a74d69": {
+      "type": "link",
+      "values": {
+        "url": "#what-is-gas"
+      }
+    },
+    "LINK-1ee3ea": {
+      "type": "link",
+      "values": {
+        "url": "https://consensys.github.io/smart-contract-best-practices/"
+      }
+    },
+    "LINK-b10c87": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/"
+      }
+    },
+    "LINK-a8ea70": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/evm/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-09T04:32:11.360Z",
+      "status": "success"
+    }
+  }
+}
