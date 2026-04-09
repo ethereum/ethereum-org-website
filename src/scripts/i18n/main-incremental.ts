@@ -2,8 +2,7 @@
  * Incremental translation pipeline entry point.
  *
  * Detects what changed in English since the last translation, then:
- * - Inert changes (URLs, code, paths): propagated deterministically
- * - Translatable changes (prose): sent to Gemini section-by-section
+ * - Any section with drift: sent to Gemini for section-level retranslation
  * - Structural changes (added/removed): handled accordingly
  *
  * Environment variables:
@@ -16,6 +15,7 @@
  *   SKIP_PR_CREATION        - Skip PR creation (default: false)
  *   VERBOSE                 - Enable verbose logging (default: false)
  *   DRY_RUN                 - Print drift report only (default: false)
+ *   STAMP_ONLY              - Update manifests only, no translations (default: false)
  */
 
 import * as fs from "fs"
@@ -46,17 +46,48 @@ import {
   type LocaleTranslationManifest,
   parseEnglishJson,
 } from "./lib/ai/manifest-adapter"
-import {
-  applyInertChanges,
-  detectInertChanges,
-  type InertChange,
-  updateTranslationManifest,
-} from "./lib/ai/propagate-inert"
+import { updateTranslationManifest } from "./lib/ai/propagate-inert"
 import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
 import { config } from "./config"
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+/**
+ * Map a tree node ID to its containing heading section ID.
+ * Tree paths like "wallet-security/component:2" -> "wallet-security"
+ * Nested headings: "deployment/networks-and-tools/link:0" -> "networks-and-tools"
+ * Root-level: "prose:0" -> "_preamble"
+ * Frontmatter: "frontmatter:image" -> "frontmatter:image" (unchanged)
+ *
+ * The containing section is the LAST path segment that is a heading ID
+ * (i.e., not an element-type segment like link:0, component:2, etc.)
+ */
+function mapToHeadingSection(treeId: string): string {
+  if (treeId === "prose:0" || treeId.startsWith("prose:0/")) return "_preamble"
+  if (treeId.startsWith("frontmatter:")) return treeId
+
+  const segments = treeId.split("/")
+  // Walk segments, keeping the last one that ISN'T an element-type:N pattern
+  let lastHeading = segments[0]
+  for (const seg of segments) {
+    if (
+      seg.match(
+        /^(link|image|html-tag|component|attr|prose|inline-code|icu|code-fence|code-comment|code-body|table):/
+      )
+    ) {
+      break
+    }
+    if (!seg.startsWith("_")) {
+      lastHeading = seg
+    }
+  }
+  return lastHeading
+}
 
 // ---------------------------------------------------------------------------
 // Types
@@ -95,6 +126,7 @@ async function main() {
 
   const verbose = process.env.VERBOSE === "true"
   const dryRun = process.env.DRY_RUN === "true"
+  const stampOnly = process.env.STAMP_ONLY === "true"
   const targetPath = process.env.TARGET_PATH
   const targetLanguages = process.env.TARGET_LANGUAGES
     ? process.env.TARGET_LANGUAGES.split(",").map((s) => s.trim())
@@ -291,105 +323,159 @@ async function main() {
     process.exit(0)
   }
 
+  // Stamp-only mode: skip all translations, just update manifests
+  if (stampOnly) {
+    logSection("Stamp Only Mode")
+    console.log("Skipping translations. Stamping manifests only.")
+    // Jump directly to Phase 6 (commit manifests)
+    // fileLanguageTasks have the current English + locale content loaded
+    // Phase 6 will stamp fresh manifests from current English state
+  }
+
   const geminiAvailable = isGeminiAvailable()
 
   // Track all Gemini output for sanitization in Phase 7
   const geminiOutputForSanitizer: Array<{ path: string; content: string }> = []
 
-  // Phase 3: Full Translation (for files without manifests)
-  logSection("Phase 3: Full Translation")
+  if (!stampOnly) {
+    // Phase 3: Full Translation (for files without manifests)
+    logSection("Phase 3: Full Translation")
 
-  if (fullTranslationTasks.length === 0) {
-    console.log("  No new files to translate.")
-  }
+    if (fullTranslationTasks.length === 0) {
+      console.log("  No new files to translate.")
+    }
 
-  if (geminiAvailable) {
-    for (const task of fullTranslationTasks) {
-      console.log(`  [${task.locale}] ${task.file.path}: translating (full)...`)
-
-      // Build glossary for this locale
-      let glossaryTerms = new Map<string, string>()
-      try {
-        const glossaryFile = path.join(
-          glossaryDataDir,
-          "glossary-terms-enhanced.json"
-        )
-        if (fs.existsSync(glossaryFile)) {
-          glossaryTerms = filterGlossaryFlat(
-            task.file.content,
-            task.file.type,
-            task.locale,
-            glossaryFile,
-            translationsDir
-          )
-        }
-      } catch {
-        // Glossary unavailable, continue without
-      }
-
-      try {
-        const result = await translateFile({
-          filePath: task.file.path,
-          fileContent: task.file.content,
-          fileType: task.file.type,
-          targetLanguage: task.locale,
-          glossaryTerms,
-          useNormalizer: task.file.type === "markdown",
-        })
-
+    if (geminiAvailable) {
+      for (const task of fullTranslationTasks) {
         console.log(
-          `  [${task.locale}] ${task.file.path}: translated ` +
-            `(${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
+          `  [${task.locale}] ${task.file.path}: translating (full)...`
         )
 
-        // Commit translated file
-        await committer.commitFile(
-          task.destPath,
-          result.translatedContent,
-          task.locale
-        )
-
-        // Collect for Phase 7 sanitizer
-        geminiOutputForSanitizer.push({
-          path: path.resolve(task.destPath),
-          content: result.translatedContent,
-        })
-
-        // Stamp manifests (non-fatal if this fails -- translation is
-        // already committed, manifests can be regenerated on next run)
+        // Build glossary for this locale
+        let glossaryTerms = new Map<string, string>()
         try {
-          const sourceManifest =
-            task.file.type === "markdown"
-              ? buildMarkdownManifest(
-                  task.file.content,
-                  task.file.path,
-                  baseBranchSha
-                )
-              : buildJsonManifest(
-                  task.file.content,
-                  task.file.path,
-                  baseBranchSha
-                )
-
-          if (task.file.type === "markdown") {
-            const sourceManifestPath = task.destPath.replace(
-              /index\.md$/,
-              ".manifest-source.json"
+          const glossaryFile = path.join(
+            glossaryDataDir,
+            "glossary-terms-enhanced.json"
+          )
+          if (fs.existsSync(glossaryFile)) {
+            glossaryTerms = filterGlossaryFlat(
+              task.file.content,
+              task.file.type,
+              task.locale,
+              glossaryFile,
+              translationsDir
             )
-            await committer.commitFile(
-              sourceManifestPath,
-              sourceManifest,
-              task.locale
-            )
+          }
+        } catch {
+          // Glossary unavailable, continue without
+        }
 
-            // Stamp translation manifest (if normalizer produced placeholder data)
-            if (result.placeholderOrder && result.placeholderMap) {
+        try {
+          const result = await translateFile({
+            filePath: task.file.path,
+            fileContent: task.file.content,
+            fileType: task.file.type,
+            targetLanguage: task.locale,
+            glossaryTerms,
+            useNormalizer: task.file.type === "markdown",
+          })
+
+          console.log(
+            `  [${task.locale}] ${task.file.path}: translated ` +
+              `(${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
+          )
+
+          // Commit translated file
+          await committer.commitFile(
+            task.destPath,
+            result.translatedContent,
+            task.locale
+          )
+
+          // Collect for Phase 7 sanitizer
+          geminiOutputForSanitizer.push({
+            path: path.resolve(task.destPath),
+            content: result.translatedContent,
+          })
+
+          // Stamp manifests (non-fatal if this fails -- translation is
+          // already committed, manifests can be regenerated on next run)
+          try {
+            const sourceManifest =
+              task.file.type === "markdown"
+                ? buildMarkdownManifest(
+                    task.file.content,
+                    task.file.path,
+                    baseBranchSha
+                  )
+                : buildJsonManifest(
+                    task.file.content,
+                    task.file.path,
+                    baseBranchSha
+                  )
+
+            if (task.file.type === "markdown") {
+              const sourceManifestPath = task.destPath.replace(
+                /index\.md$/,
+                ".manifest-source.json"
+              )
+              await committer.commitFile(
+                sourceManifestPath,
+                sourceManifest,
+                task.locale
+              )
+
+              // Stamp translation manifest (if normalizer produced placeholder data)
+              if (result.placeholderOrder && result.placeholderMap) {
+                const parsed = JSON.parse(sourceManifest)
+                const translationManifest = buildLocaleTranslationManifest({
+                  locale: task.locale,
+                  englishManifestHash: parsed.rootHash,
+                  placeholderOrder: result.placeholderOrder,
+                  placeholderMap: result.placeholderMap,
+                  sections: {
+                    _all: {
+                      translatedAt: new Date().toISOString(),
+                      status: "success",
+                    },
+                  },
+                })
+                const tmPath = task.destPath.replace(
+                  /index\.md$/,
+                  ".manifest-translation.json"
+                )
+                await committer.commitFile(
+                  tmPath,
+                  translationManifest,
+                  task.locale
+                )
+              }
+            } else {
+              const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
+              await committer.commitFile(
+                jsonManifestPath,
+                sourceManifest,
+                task.locale
+              )
+
+              // Stamp translation manifest for JSON (enables incremental later).
+              // translateFile for JSON doesn't return placeholder data, so we
+              // extract it from the English tree directly.
+              const placeholderData =
+                result.placeholderOrder && result.placeholderMap
+                  ? {
+                      placeholderOrder: result.placeholderOrder,
+                      placeholderMap: result.placeholderMap,
+                    }
+                  : extractPlaceholderData(parseEnglishJson(task.file.content))
+
               const parsed = JSON.parse(sourceManifest)
               const translationManifest = buildLocaleTranslationManifest({
                 locale: task.locale,
                 englishManifestHash: parsed.rootHash,
-                placeholderOrder: result.placeholderOrder,
-                placeholderMap: result.placeholderMap,
+                placeholderOrder: placeholderData.placeholderOrder,
+                placeholderMap: placeholderData.placeholderMap,
                 sections: {
                   _all: {
                     translatedAt: new Date().toISOString(),
@@ -397,337 +483,265 @@ async function main() {
                   },
                 },
               })
-              const tmPath = task.destPath.replace(
-                /index\.md$/,
-                ".manifest-translation.json"
-              )
+              const jsonTmPath = `src/intl/${task.locale}/.manifest-translation.json`
               await committer.commitFile(
-                tmPath,
+                jsonTmPath,
                 translationManifest,
                 task.locale
               )
             }
-          } else {
-            const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
-            await committer.commitFile(
-              jsonManifestPath,
-              sourceManifest,
-              task.locale
-            )
-
-            // Stamp translation manifest for JSON (enables incremental later).
-            // translateFile for JSON doesn't return placeholder data, so we
-            // extract it from the English tree directly.
-            const placeholderData =
-              result.placeholderOrder && result.placeholderMap
-                ? {
-                    placeholderOrder: result.placeholderOrder,
-                    placeholderMap: result.placeholderMap,
-                  }
-                : extractPlaceholderData(parseEnglishJson(task.file.content))
-
-            const parsed = JSON.parse(sourceManifest)
-            const translationManifest = buildLocaleTranslationManifest({
-              locale: task.locale,
-              englishManifestHash: parsed.rootHash,
-              placeholderOrder: placeholderData.placeholderOrder,
-              placeholderMap: placeholderData.placeholderMap,
-              sections: {
-                _all: {
-                  translatedAt: new Date().toISOString(),
-                  status: "success",
-                },
-              },
-            })
-            const jsonTmPath = `src/intl/${task.locale}/.manifest-translation.json`
-            await committer.commitFile(
-              jsonTmPath,
-              translationManifest,
-              task.locale
+          } catch (err) {
+            console.warn(
+              `  [${task.locale}] ${task.file.path}: manifest write failed (non-fatal): ${err instanceof Error ? err.message : String(err)}`
             )
           }
-        } catch (err) {
-          console.warn(
-            `  [${task.locale}] ${task.file.path}: manifest write failed (non-fatal): ${err instanceof Error ? err.message : String(err)}`
+
+          console.log(`  [${task.locale}] ${task.destPath}: committed`)
+        } catch (error) {
+          console.error(
+            `  [${task.locale}] ${task.file.path}: full translation failed: ${error instanceof Error ? error.message : String(error)}`
           )
         }
-
-        console.log(`  [${task.locale}] ${task.destPath}: committed`)
-      } catch (error) {
-        console.error(
-          `  [${task.locale}] ${task.file.path}: full translation failed: ${error instanceof Error ? error.message : String(error)}`
-        )
       }
-    }
-  } else if (fullTranslationTasks.length > 0) {
-    console.warn(
-      "[WARN] GEMINI_API_KEY not set, skipping full translation of new files"
-    )
-  }
-
-  // Phase 4: Inert Propagation
-  logSection("Phase 4: Inert Propagation")
-
-  // Track applied inert changes per task for manifest updates in Phase 6
-  const inertAppliedByTask = new Map<
-    (typeof fileLanguageTasks)[0],
-    InertChange[]
-  >()
-
-  for (const task of fileLanguageTasks) {
-    if (task.drift.inertDrift.length === 0) continue
-
-    const changes = await detectInertChanges(
-      task.file.content,
-      task.sourceManifestJson,
-      task.file.type
-    )
-
-    if (changes.length === 0) continue
-
-    const { content, applied, skipped } = applyInertChanges(
-      task.localeContent,
-      changes,
-      task.file.type
-    )
-
-    if (applied.length > 0) {
-      task.localeContent = content // Update in-memory for prose phase
-      inertAppliedByTask.set(task, applied)
-      console.log(
-        `  [${task.locale}] ${task.file.path}: ${applied.length} inert changes applied, ${skipped.length} skipped`
+    } else if (fullTranslationTasks.length > 0) {
+      console.warn(
+        "[WARN] GEMINI_API_KEY not set, skipping full translation of new files"
       )
     }
-  }
 
-  // Phase 4b: Remove deleted content
-  if (totalRemoved > 0) {
-    logSection("Phase 4b: Remove Deleted Content")
+    // Phase 4: Remove deleted content
+    // Removals use heading IDs for markdown (removeMarkdownSection matches {#id})
+    // and key paths for JSON.
+    if (totalRemoved > 0) {
+      logSection("Phase 4: Remove Deleted Content")
 
-    for (const task of fileLanguageTasks) {
-      if (task.drift.removed.length === 0) continue
-      const removedIds = task.drift.removed.map((e) => e.id)
+      for (const task of fileLanguageTasks) {
+        if (task.drift.removed.length === 0) continue
+        const removedIds = task.drift.removed.map((e) => e.id)
 
-      if (task.file.type === "json") {
-        // Remove keys from JSON
-        try {
-          const obj = JSON.parse(task.localeContent)
-          for (const id of removedIds) {
-            const parts = id.split("/")
-            let target = obj
-            for (let i = 0; i < parts.length - 1; i++) {
-              if (target[parts[i]] && typeof target[parts[i]] === "object") {
-                target = target[parts[i]]
-              } else {
-                target = null as unknown as Record<string, unknown>
-                break
+        if (task.file.type === "json") {
+          try {
+            const obj = JSON.parse(task.localeContent)
+            for (const id of removedIds) {
+              const parts = id.split("/")
+              let target = obj
+              for (let i = 0; i < parts.length - 1; i++) {
+                if (target[parts[i]] && typeof target[parts[i]] === "object") {
+                  target = target[parts[i]]
+                } else {
+                  target = null as unknown as Record<string, unknown>
+                  break
+                }
+              }
+              if (target) {
+                delete target[parts[parts.length - 1]]
               }
             }
-            if (target) {
-              delete target[parts[parts.length - 1]]
-            }
-          }
-          task.localeContent = JSON.stringify(obj, null, 2) + "\n"
-        } catch {
-          console.warn(
-            `  [${task.locale}] ${task.file.path}: failed to parse JSON for removal`
-          )
-        }
-      } else {
-        // Remove sections from markdown by heading ID
-        for (const id of removedIds) {
-          task.localeContent = removeMarkdownSection(task.localeContent, id)
-        }
-      }
-
-      console.log(
-        `  [${task.locale}] ${task.file.path}: removed ${removedIds.length} deleted section(s): ${removedIds.join(", ")}`
-      )
-    }
-  }
-
-  // Phase 5: Prose Retranslation
-  logSection("Phase 5: Prose Retranslation")
-
-  if (!geminiAvailable && totalProse > 0) {
-    console.warn("[WARN] GEMINI_API_KEY not set, skipping prose retranslation")
-  }
-
-  if (geminiAvailable) {
-    for (const task of fileLanguageTasks) {
-      const proseIds = task.drift.translatableDrift.map((e) => e.id)
-      const addedIds = task.drift.added.map((e) => e.id)
-      // Map tree's root-level prose:0 to _preamble (content before first heading)
-      const needsTranslation = [...proseIds, ...addedIds].map((id) =>
-        id === "prose:0" ? "_preamble" : id
-      )
-
-      if (needsTranslation.length === 0) continue
-
-      console.log(
-        `  [${task.locale}] ${task.file.path}: translating ${needsTranslation.length} section(s)`
-      )
-
-      // Build glossary for this locale
-      let glossaryTerms = new Map<string, string>()
-      try {
-        const glossaryFile = path.join(
-          glossaryDataDir,
-          "glossary-terms-enhanced.json"
-        )
-        if (fs.existsSync(glossaryFile)) {
-          glossaryTerms = filterGlossaryFlat(
-            task.file.content,
-            task.file.type,
-            task.locale,
-            glossaryFile,
-            translationsDir
-          )
-        }
-      } catch {
-        // Glossary unavailable, continue without
-      }
-
-      if (verbose) {
-        console.log(
-          `  [${task.locale}] glossary: ${glossaryTerms.size} terms loaded`
-        )
-      }
-
-      // Parse English and locale files into sections (markdown or JSON)
-      const englishSections =
-        task.file.type === "json"
-          ? extractJsonSections(task.file.content)
-          : extractSections(task.file.content)
-      const localeSections =
-        task.file.type === "json"
-          ? extractJsonSections(task.localeContent)
-          : extractSections(task.localeContent)
-
-      // Build TRANSLATE/CONTEXT section list
-      const sectionList = buildSectionList(
-        englishSections,
-        localeSections,
-        needsTranslation
-      )
-
-      const translateCount = sectionList.filter(
-        (s) => s.action === "TRANSLATE"
-      ).length
-      if (translateCount === 0) {
-        console.log(
-          `  [${task.locale}] ${task.file.path}: no sections matched for translation`
-        )
-        continue
-      }
-
-      // Get language name for prompt
-      const langEntry = i18nConfig.find(
-        (l: { code: string }) => l.code === task.locale
-      )
-      const languageName = langEntry
-        ? (langEntry as { code: string; name: string }).name
-        : task.locale
-
-      // Build the batched prompt
-      const prompt = buildIncrementalPrompt({
-        filePath: task.file.path,
-        targetLanguage: task.locale,
-        languageName,
-        sections: sectionList,
-        glossaryTerms,
-      })
-
-      if (verbose) {
-        console.log(
-          `  [${task.locale}] prompt: ${prompt.length} chars, ${translateCount} TRANSLATE sections`
-        )
-      }
-
-      // Call Gemini
-      try {
-        const result = await callGeminiRaw(prompt, {
-          filePath: task.file.path,
-          targetLanguage: task.locale,
-          label: "incremental",
-        })
-
-        // Parse response
-        const translations = parseIncrementalResponse(result.text)
-        const translatedIds = Object.keys(translations)
-
-        console.log(
-          `  [${task.locale}] ${task.file.path}: received ${translatedIds.length} translated section(s) ` +
-            `(${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
-        )
-
-        // Replace sections in locale content
-        task.localeContent =
-          task.file.type === "json"
-            ? replaceJsonValues(task.localeContent, translations)
-            : replaceSections(task.localeContent, translations)
-
-        // Log any sections we requested but didn't get back
-        for (const id of needsTranslation) {
-          if (!translations[id]) {
+            task.localeContent = JSON.stringify(obj, null, 2) + "\n"
+          } catch {
             console.warn(
-              `  [${task.locale}] ${task.file.path}: section "${id}" not returned by Gemini`
+              `  [${task.locale}] ${task.file.path}: failed to parse JSON for removal`
             )
           }
+        } else {
+          for (const id of removedIds) {
+            task.localeContent = removeMarkdownSection(task.localeContent, id)
+          }
         }
-      } catch (error) {
-        console.error(
-          `  [${task.locale}] ${task.file.path}: prose retranslation failed: ${error instanceof Error ? error.message : String(error)}`
+
+        console.log(
+          `  [${task.locale}] ${task.file.path}: removed ${removedIds.length} deleted section(s): ${removedIds.join(", ")}`
         )
       }
     }
-  }
 
-  // Phase 6: Commit (incremental updates only; full translations committed in Phase 3)
-  logSection("Phase 6: Commit")
+    // Phase 5: Prose Retranslation
+    logSection("Phase 5: Prose Retranslation")
+
+    if (!geminiAvailable && totalProse > 0) {
+      console.warn(
+        "[WARN] GEMINI_API_KEY not set, skipping prose retranslation"
+      )
+    }
+
+    if (geminiAvailable && !stampOnly) {
+      for (const task of fileLanguageTasks) {
+        // Collect ALL drift IDs (inert + translatable + added).
+        // In v4, any drift = retranslate the containing heading section.
+        const allDriftIds = [
+          ...task.drift.inertDrift.map((e) => e.id),
+          ...task.drift.translatableDrift.map((e) => e.id),
+          ...task.drift.added.map((e) => e.id),
+        ]
+
+        // Map tree node IDs to their containing heading section.
+        // Tree paths like "wallet-security/component:2" -> "wallet-security"
+        // Root-level prose:0 -> "_preamble"
+        const headingSections = new Set<string>()
+        for (const id of allDriftIds) {
+          const headingId = mapToHeadingSection(id)
+          headingSections.add(headingId)
+        }
+        const needsTranslation = [...headingSections]
+
+        if (needsTranslation.length === 0) continue
+
+        console.log(
+          `  [${task.locale}] ${task.file.path}: translating ${needsTranslation.length} section(s)`
+        )
+
+        // Build glossary for this locale
+        let glossaryTerms = new Map<string, string>()
+        try {
+          const glossaryFile = path.join(
+            glossaryDataDir,
+            "glossary-terms-enhanced.json"
+          )
+          if (fs.existsSync(glossaryFile)) {
+            glossaryTerms = filterGlossaryFlat(
+              task.file.content,
+              task.file.type,
+              task.locale,
+              glossaryFile,
+              translationsDir
+            )
+          }
+        } catch {
+          // Glossary unavailable, continue without
+        }
+
+        if (verbose) {
+          console.log(
+            `  [${task.locale}] glossary: ${glossaryTerms.size} terms loaded`
+          )
+        }
+
+        // Parse English and locale files into sections (markdown or JSON)
+        const englishSections =
+          task.file.type === "json"
+            ? extractJsonSections(task.file.content)
+            : extractSections(task.file.content)
+        const localeSections =
+          task.file.type === "json"
+            ? extractJsonSections(task.localeContent)
+            : extractSections(task.localeContent)
+
+        // Build TRANSLATE/CONTEXT section list
+        const sectionList = buildSectionList(
+          englishSections,
+          localeSections,
+          needsTranslation
+        )
+
+        const translateCount = sectionList.filter(
+          (s) => s.action === "TRANSLATE"
+        ).length
+        if (translateCount === 0) {
+          console.log(
+            `  [${task.locale}] ${task.file.path}: no sections matched for translation`
+          )
+          continue
+        }
+
+        // Get language name for prompt
+        const langEntry = i18nConfig.find(
+          (l: { code: string }) => l.code === task.locale
+        )
+        const languageName = langEntry
+          ? (langEntry as { code: string; name: string }).name
+          : task.locale
+
+        // Build the batched prompt
+        const prompt = buildIncrementalPrompt({
+          filePath: task.file.path,
+          targetLanguage: task.locale,
+          languageName,
+          sections: sectionList,
+          glossaryTerms,
+        })
+
+        if (verbose) {
+          console.log(
+            `  [${task.locale}] prompt: ${prompt.length} chars, ${translateCount} TRANSLATE sections`
+          )
+        }
+
+        // Call Gemini
+        try {
+          const result = await callGeminiRaw(prompt, {
+            filePath: task.file.path,
+            targetLanguage: task.locale,
+            label: "incremental",
+          })
+
+          // Parse response
+          const translations = parseIncrementalResponse(result.text)
+          const translatedIds = Object.keys(translations)
+
+          console.log(
+            `  [${task.locale}] ${task.file.path}: received ${translatedIds.length} translated section(s) ` +
+              `(${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
+          )
+
+          // Replace sections in locale content
+          task.localeContent =
+            task.file.type === "json"
+              ? replaceJsonValues(task.localeContent, translations)
+              : replaceSections(task.localeContent, translations)
+
+          // Log any sections we requested but didn't get back
+          for (const id of needsTranslation) {
+            if (!translations[id]) {
+              console.warn(
+                `  [${task.locale}] ${task.file.path}: section "${id}" not returned by Gemini`
+              )
+            }
+          }
+        } catch (error) {
+          console.error(
+            `  [${task.locale}] ${task.file.path}: prose retranslation failed: ${error instanceof Error ? error.message : String(error)}`
+          )
+        }
+      }
+    }
+  } // end if (!stampOnly)
+
+  // Phase 6: Commit locale files + manifests
+  // In stamp-only mode, this only stamps manifests (locale files unchanged)
+  logSection(stampOnly ? "Phase 6: Stamp Manifests" : "Phase 6: Commit")
 
   for (const task of fileLanguageTasks) {
     const destPath = getDestinationFromPath(task.file.path, task.locale)
 
-    // Commit updated locale file
-    await committer.commitFile(destPath, task.localeContent, task.locale)
-    console.log(`  [${task.locale}] ${destPath}: committed`)
+    // Commit updated locale file (skip in stamp-only mode)
+    if (!stampOnly) {
+      await committer.commitFile(destPath, task.localeContent, task.locale)
+      console.log(`  [${task.locale}] ${destPath}: committed`)
+    }
 
-    // Stamp source manifest only if no inert changes were skipped.
-    // If some were skipped, the source manifest should stay at the old
-    // state so the next run re-detects and retries the skipped changes.
-    const appliedInert = inertAppliedByTask.get(task)
-    const hasSkippedInert =
-      appliedInert !== undefined &&
-      task.drift.inertDrift.length > 0 &&
-      appliedInert.length < task.drift.inertDrift.length
-
+    // Stamp source manifest
     if (task.file.type === "markdown") {
       const sourceManifest = buildMarkdownManifest(
         task.file.content,
         task.file.path,
         baseBranchSha
       )
+      const sourceManifestPath = destPath.replace(
+        /index\.md$/,
+        ".manifest-source.json"
+      )
+      await committer.commitFile(
+        sourceManifestPath,
+        sourceManifest,
+        task.locale
+      )
 
-      if (!hasSkippedInert) {
-        const sourceManifestPath = destPath.replace(
-          /index\.md$/,
-          ".manifest-source.json"
-        )
-        await committer.commitFile(
-          sourceManifestPath,
-          sourceManifest,
-          task.locale
-        )
-      }
-
-      // Update translation manifest with inert changes + new hash
+      // Update translation manifest hash
       if (task.translationManifest) {
         const parsed = JSON.parse(sourceManifest)
-        const appliedInert = inertAppliedByTask.get(task) || []
         const updatedTM = updateTranslationManifest(
           task.translationManifest,
-          appliedInert,
+          [],
           parsed.rootHash
         )
         const tmPath = destPath.replace(
@@ -746,23 +760,15 @@ async function main() {
         task.file.path,
         baseBranchSha
       )
+      const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
+      await committer.commitFile(jsonManifestPath, sourceManifest, task.locale)
 
-      if (!hasSkippedInert) {
-        const jsonManifestPath = `src/intl/${task.locale}/.manifest-source.json`
-        await committer.commitFile(
-          jsonManifestPath,
-          sourceManifest,
-          task.locale
-        )
-      }
-
-      // Update JSON translation manifest with inert changes + new hash
+      // Update JSON translation manifest hash
       if (task.translationManifest) {
         const parsed = JSON.parse(sourceManifest)
-        const appliedInert = inertAppliedByTask.get(task) || []
         const updatedTM = updateTranslationManifest(
           task.translationManifest,
-          appliedInert,
+          [],
           parsed.rootHash
         )
         const jsonTmPath = `src/intl/${task.locale}/.manifest-translation.json`
@@ -775,42 +781,48 @@ async function main() {
     }
   }
 
-  // Phase 7: Sanitize Gemini output
-  // Includes both full translations (Phase 3) and incremental prose
-  // retranslations (Phase 5). Covers markdown AND JSON for BiDi fixes,
-  // code fence alignment, etc.
-  for (const task of fileLanguageTasks) {
-    const destPath = getDestinationFromPath(task.file.path, task.locale)
-    geminiOutputForSanitizer.push({
-      path: path.resolve(destPath),
-      content: task.localeContent,
-    })
-  }
-
-  if (geminiOutputForSanitizer.length > 0) {
-    const englishContentMap = new Map<string, string>(
-      englishFiles.map((f) => [f.path, f.content])
-    )
-    try {
-      await runPostImportSanitization(
-        geminiOutputForSanitizer,
-        branchName,
-        englishContentMap
-      )
-    } catch (error) {
-      console.warn(
-        `[main] Sanitization failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
-      )
+  // Phase 7: Sanitize Gemini output (skip in stamp-only mode)
+  if (!stampOnly) {
+    // Includes both full translations (Phase 3) and incremental prose
+    // retranslations (Phase 5). Covers markdown AND JSON for BiDi fixes,
+    // code fence alignment, etc.
+    for (const task of fileLanguageTasks) {
+      const destPath = getDestinationFromPath(task.file.path, task.locale)
+      geminiOutputForSanitizer.push({
+        path: path.resolve(destPath),
+        content: task.localeContent,
+      })
     }
-  }
+
+    if (geminiOutputForSanitizer.length > 0) {
+      const englishContentMap = new Map<string, string>(
+        englishFiles.map((f) => [f.path, f.content])
+      )
+      try {
+        await runPostImportSanitization(
+          geminiOutputForSanitizer,
+          branchName,
+          englishContentMap
+        )
+      } catch (error) {
+        console.warn(
+          `[main] Sanitization failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+        )
+      }
+    }
+  } // end if (!stampOnly) for Phase 7
 
   // Done
   const duration = ((Date.now() - startTime) / 1000).toFixed(1)
   logSection("Complete")
   console.log(`[main] Pipeline finished in ${duration}s`)
-  console.log(
-    `[main] Full: ${fullTranslationTasks.length}, Inert: ${totalInert}, Prose: ${totalProse}, Added: ${totalAdded}, Removed: ${totalRemoved}`
-  )
+  if (stampOnly) {
+    console.log("[main] Stamp-only mode: manifests updated, no translations.")
+  } else {
+    console.log(
+      `[main] Full: ${fullTranslationTasks.length}, Prose: ${totalProse}, Added: ${totalAdded}, Removed: ${totalRemoved}`
+    )
+  }
 }
 
 main().catch((error) => {
