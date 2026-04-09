@@ -1,7 +1,7 @@
 ---
 title: "Создание и развертывание смарт-контрактов"
 description: "Практическое руководство по написанию, тестированию и развертыванию смарт-контрактов в сети Эфириум."
-image: /images/developers/smart-contracts-hero-v3.png
+image: /images/developers/smart-contracts-hero-v5.png
 alt: "Диаграмма развертывания смарт-контракта"
 lang: ru
 emoji: ":computer:"
