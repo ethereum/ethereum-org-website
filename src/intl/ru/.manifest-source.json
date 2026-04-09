@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/test-incremental.json",
-  "generatedAt": "2026-04-09T06:25:16.709Z",
-  "rootHash": "49f3b6422ea7",
+  "generatedAt": "2026-04-09T06:29:42.192Z",
+  "rootHash": "1adaae172c21",
   "tree": {
     "contentHash": "f55695e64cbb",
-    "anchorHash": "328c62dbbec6",
+    "anchorHash": "f594bb77c3a7",
     "children": {
       "title": {
         "contentHash": "06043d852aa0",
@@ -150,7 +150,7 @@
       },
       "multi-link-sentence": {
         "contentHash": "8efd64df8517",
-        "anchorHash": "5a9136390965",
+        "anchorHash": "3edd3f37ba70",
         "children": {
           "prose:4": {
             "contentHash": "0a5b58de3aca",
@@ -166,7 +166,7 @@
           },
           "html-tag:1": {
             "contentHash": "ab2db303fb7e",
-            "anchorHash": "aaeea0368b1b"
+            "anchorHash": "86cbec0d7d85"
           },
           "prose:6": {
             "contentHash": "9d03151eeb79",
@@ -321,5 +321,5 @@
       "dapp-description"
     ]
   },
-  "sourceCommitSha": "f3985740320952da8b43559f4d04b5acebfc506e"
+  "sourceCommitSha": "29891954b1ca35dfed77235e675fadefa832ecea"
 }
