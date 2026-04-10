@@ -50,7 +50,7 @@ export const TranslatathonCalendar = () => {
       <Flex
         className={cn(
           "w-full flex-col gap-6 px-8 py-16 text-center lg:w-1/2",
-          "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+          "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r"
         )}
       >
         <h3 className="text-2xl font-bold">Translatathon calls</h3>
@@ -68,7 +68,7 @@ export const TranslatathonCalendar = () => {
           Join Discord
         </ButtonLink>
       </Flex>
-      <Flex className="w-full flex-col bg-background-highlight p-8 lg:w-1/2">
+      <Flex className="bg-background-highlight w-full flex-col p-8 lg:w-1/2">
         <p className="mb-2 text-lg font-bold">Translatathon calls</p>
         {events.map((event, index) => (
           <Flex className="mb-4 gap-6" key={index}>

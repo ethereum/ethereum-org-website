@@ -71,12 +71,12 @@ const HomeHero = async ({
           <img {...rest} alt={alt} className="h-full w-full object-cover" />
         </picture>
       </div>
-      <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
+      <div className="border-primary-low-contrast flex flex-col items-center border-t-[3px] px-4 py-10 text-center">
         <div className="flex flex-col items-center">
           <LanguageMorpher />
           <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
             <h1 className="font-black">{t("page-index-title")}</h1>
-            <p className="max-w-96 text-md text-body-medium lg:text-lg">
+            <p className="text-md text-body-medium max-w-96 lg:text-lg">
               {t("page-index-description")}
             </p>
           </div>

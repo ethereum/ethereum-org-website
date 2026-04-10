@@ -33,14 +33,14 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
       <Tag
         status="warning"
         size="small"
-        className="mb-2 mt-4 rounded-[4px] px-1 py-0 font-bold normal-case"
+        className="mt-4 rounded-[4px] px-1 py-0 font-bold normal-case"
       >
         {course.hours}
       </Tag>
-      <h3 className="text-lg font-bold text-body group-hover:underline">
+      <h3 className="text-body text-lg font-bold group-hover:underline">
         {course.title}
       </h3>
-      <p className="mb-4 text-sm text-body-medium">{course.description}</p>
+      <p className="text-body-medium mb-4 text-sm">{course.description}</p>
     </div>
   </Card>
 )

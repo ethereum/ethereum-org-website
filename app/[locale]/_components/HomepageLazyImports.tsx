@@ -11,7 +11,7 @@ export const BentoCardSwiper = dynamic(
     ssr: false,
     loading: () => (
       <div className="flex flex-col items-center gap-4">
-        <Skeleton className="mx-auto mt-4 h-[476px] w-[512px] max-w-128 rounded-2xl border-primary/10 bg-background bg-gradient-to-b from-primary/10 from-20% to-primary/5 to-60% p-4 opacity-50 shadow-card-hover lg:hidden dark:from-primary/20 dark:to-primary/10" />
+        <Skeleton className="border-primary/10 bg-background from-primary/10 to-primary/5 shadow-card-hover dark:from-primary/20 dark:to-primary/10 mx-auto mt-4 h-[476px] w-[512px] max-w-128 rounded-2xl bg-linear-to-b from-20% to-60% p-4 opacity-50 lg:hidden" />
         <Skeleton className="h-6 w-[12rem] rounded-full" />
       </div>
     ),

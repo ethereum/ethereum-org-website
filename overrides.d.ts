@@ -9,7 +9,15 @@ declare module "*.mp4" {
   export default src
 }
 
-declare module "!!raw-loader!*" {
-  const content: string
+declare module "*/.all-contributorsrc" {
+  const content: {
+    contributors: Array<{
+      login: string
+      name: string
+      avatar_url: string
+      profile?: string
+      contributions: Array<string>
+    }>
+  }
   export default content
 }

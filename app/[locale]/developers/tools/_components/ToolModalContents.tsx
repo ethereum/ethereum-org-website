@@ -53,7 +53,7 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
 
   return (
     <div className="bg-background">
-      <div className="h-36 w-full bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20">
+      <div className="from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20 h-36 w-full bg-linear-to-b">
         {tool.banner_url && (
           <Image
             src={tool.banner_url}
@@ -80,10 +80,10 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
             className="lowercase"
           />
         </div>
-        <div className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
+        <div className="-mt-2 max-h-[16lh] overflow-y-auto [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)] pt-2 pb-4">
           {await renderSimpleMarkdown(translatedDescription, mdComponentOverrides)}
         </div>
-        <div className="!mt-8 space-y-2">
+        <div className="mt-4 space-y-2">
           <p>{t("page-developers-tools-modal-links")}</p>
           <div className="flex flex-wrap gap-2">
             {tool.website && (

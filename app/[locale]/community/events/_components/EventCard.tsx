@@ -36,7 +36,7 @@ function EventCardGrid({
     : null
 
   return (
-    <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight">
+    <LinkBox className="group hover:bg-background-highlight rounded-xl p-2">
       <LinkOverlay
         href={event.link}
         className="no-underline"
@@ -44,7 +44,7 @@ function EventCardGrid({
         matomoEvent={customEventOptions}
       >
         <div className="flex gap-3">
-          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-body/5 to-body/10 text-2xl dark:from-body/10 dark:to-body/20">
+          <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-linear-to-b text-2xl">
             {event.logoImage ? (
               <Image
                 src={event.logoImage}
@@ -54,7 +54,7 @@ function EventCardGrid({
                 height={64}
               />
             ) : (
-              <MapPin className="size-8 text-body-medium" />
+              <MapPin className="text-body-medium size-8" />
             )}
           </div>
           <div className="flex flex-1 flex-col gap-1">
@@ -68,11 +68,11 @@ function EventCardGrid({
                 {event.eventTypesLabels?.[0] || primaryType}
               </Tag>
             )}
-            <p className="text-lg font-bold leading-tight text-body group-hover:text-primary">
+            <p className="text-body group-hover:text-primary text-lg leading-tight font-bold">
               {event.title}
             </p>
             {formattedDate && <p className="text-body">{formattedDate}</p>}
-            <p className="text-sm text-body-medium">{event.location}</p>
+            <p className="text-body-medium text-sm">{event.location}</p>
           </div>
         </div>
       </LinkOverlay>
@@ -86,14 +86,14 @@ function EventCardHighlight({
   customEventOptions,
 }: EventCardProps) {
   return (
-    <LinkBox className="group w-full rounded-xl p-3 hover:bg-background-highlight">
+    <LinkBox className="group hover:bg-background-highlight w-full rounded-xl p-3">
       <LinkOverlay
         href={event.link}
-        className="space-y-6 text-body no-underline"
+        className="text-body space-y-6 no-underline"
         hideArrow
         matomoEvent={customEventOptions}
       >
-        <div className="relative h-[200px] w-full overflow-hidden rounded-xl bg-gradient-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20">
+        <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 relative h-[200px] w-full overflow-hidden rounded-xl bg-linear-to-b">
           <Image
             src={event.bannerImage || event.logoImage}
             alt={`${event.title} banner`}
@@ -113,8 +113,8 @@ function EventCardHighlight({
           </div>
           <div className="space-y-1">
             <h3>{event.title}</h3>
-            <p className="text-sm text-body-medium">{event.location}</p>
-            <p className="text-sm text-body-medium">
+            <p className="text-body-medium text-sm">{event.location}</p>
+            <p className="text-body-medium text-sm">
               {formatDateRange(event.startTime, event.endTime, locale)}
             </p>
           </div>

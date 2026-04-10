@@ -49,22 +49,22 @@ const colorOptions: Record<Color, string> = {
 
 const flow: Record<Breakpoint, Record<Direction, string>> = {
   mobile: {
-    down: "flex-col bg-gradient-to-b",
-    up: "flex-col-reverse bg-gradient-to-t",
-    right: "flex-row bg-gradient-to-r",
-    left: "flex-row-reverse bg-gradient-to-l",
+    down: "flex-col bg-linear-to-b",
+    up: "flex-col-reverse bg-linear-to-t",
+    right: "flex-row bg-linear-to-r",
+    left: "flex-row-reverse bg-linear-to-l",
   },
   lg: {
-    down: "lg:flex-col lg:bg-gradient-to-b",
-    up: "lg:flex-col-reverse lg:bg-gradient-to-t",
-    right: "lg:flex-row lg:bg-gradient-to-r",
-    left: "lg:flex-row-reverse lg:bg-gradient-to-l",
+    down: "lg:flex-col lg:bg-linear-to-b",
+    up: "lg:flex-col-reverse lg:bg-linear-to-t",
+    right: "lg:flex-row lg:bg-linear-to-r",
+    left: "lg:flex-row-reverse lg:bg-linear-to-l",
   },
   xl: {
-    down: "xl:flex-col xl:bg-gradient-to-b",
-    up: "xl:flex-col-reverse xl:bg-gradient-to-t",
-    right: "xl:flex-row xl:bg-gradient-to-r",
-    left: "xl:flex-row-reverse xl:bg-gradient-to-l",
+    down: "xl:flex-col xl:bg-linear-to-b",
+    up: "xl:flex-col-reverse xl:bg-linear-to-t",
+    right: "xl:flex-row xl:bg-linear-to-r",
+    left: "xl:flex-row-reverse xl:bg-linear-to-l",
   },
 }
 

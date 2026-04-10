@@ -422,7 +422,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <MainArticle className="flex w-full flex-col items-center" dir={dir}>
         <HomeHero />
         <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
-          <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
+          <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10">
             {subHeroCTAs.map(
               ({ label, description, href, className, Svg }, idx) => {
                 const Link = (
@@ -465,7 +465,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section
             id="what-is-ethereum"
             variant="responsiveFlex"
-            className="md:flex-row-reverse"
+            className="-mt-8 md:flex-row-reverse lg:-mt-12"
           >
             <SectionBanner>
               <HomepageSectionImage sectionId="what-is-ethereum" alt="" />
@@ -476,7 +476,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <SectionHeader>
                 {t("page-index-what-is-ethereum-title")}
               </SectionHeader>
-              <div className="space-y-6 py-8 text-lg text-body">
+              <div className="text-body space-y-6 py-8 text-lg">
                 <p>{t("page-index-what-is-ethereum-description-1")}</p>
                 <p>{t("page-index-what-is-ethereum-description-2")}</p>
               </div>
@@ -517,7 +517,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                           eventName,
                         }}
                       >
-                        <p className="text-start text-xl font-bold text-body group-hover:underline">
+                        <p className="text-body text-start text-xl font-bold group-hover:underline">
                           {label}
                         </p>
                       </SvgButtonLink>
@@ -532,16 +532,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             id="use"
             className={cn(
               "max-lg:-mx-4 max-lg:flex max-lg:w-[100vw] max-lg:flex-col max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
-              "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
+              "lg:grid-cols-bento lg:grid lg:gap-4" // Desktop: BentoBox grid
             )}
           >
             <div
               className={cn("flex flex-col", "lg:col-span-12 xl:col-span-4")}
             >
-              <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+              <div className="bg-primary-low-contrast text-primary w-fit rounded-full px-4 py-0 text-sm uppercase">
                 {t("page-index-use-cases-tag")}
               </div>
-              <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+              <h2 className="me-4 mt-2 mb-4 text-5xl font-black xl:mb-6 xl:text-7xl">
                 {t("page-index-bento-header")}
               </h2>
             </div>
@@ -574,7 +574,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <SectionHeader>
                 {t("page-index-what-is-ether-title")}
               </SectionHeader>
-              <div className="space-y-6 py-8 text-lg text-body">
+              <div className="text-body space-y-6 py-8 text-lg">
                 <p>{t("page-index-what-is-ether-description-1")}</p>
                 <p>{t("page-index-what-is-ether-description-2")}</p>
               </div>
@@ -587,7 +587,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 >
                   {price}
                 </div>
-                <div className="mt-1 flex items-center gap-1 text-sm text-body-medium">
+                <div className="text-body-medium mt-1 flex items-center gap-1 text-sm">
                   {tCommon("eth-current-price")}
                   <Tooltip
                     content={
@@ -707,7 +707,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <SectionContent className="flex flex-col items-center text-center">
               <SectionTag>{t("page-index-values-tag")}</SectionTag>
               <SectionHeader>{t("page-index-values-header")}</SectionHeader>
-              <p className="text-lg text-body-medium">
+              <p className="text-body-medium text-lg">
                 {t("page-index-values-description")}
               </p>
             </SectionContent>
@@ -763,7 +763,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   {t("page-index-builders-action-secondary")}
                 </ButtonLink>
               </div>
-              <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
+              <div className="py-8 md:pt-8 md:pb-16 lg:pt-16 lg:pb-32">
                 {/* CLIENT SIDE */}
                 <CodeExamples
                   title={t("page-index-developers-code-examples")}
@@ -776,7 +776,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           {/* Recent posts */}
           <Section id="recent">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+            <h3 className="mt-2 mb-4 text-4xl font-black lg:text-5xl">
               {t("page-index-posts-header")}
             </h3>
             <p>{t("page-index-posts-subtitle")}</p>
@@ -810,7 +810,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           {/* Events */}
           <Section id="events">
-            <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+            <h3 className="mt-2 mb-4 text-4xl font-black lg:text-5xl">
               {t("page-index-events-header")}
             </h3>
             <p>{t("page-index-events-subtitle")}</p>
@@ -887,12 +887,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section
             id="join"
             className={cn(
-              "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
-              "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
-              "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
+              "before:z-hide before:absolute before:-inset-px before:bottom-0 before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
+              "before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20 before:bg-linear-to-b", // Border/gradient coloring
+              "bg-background relative inset-0 rounded-4xl" // Paint background color over card portion
             )}
           >
-            <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
+            <div className="bg-radial-a mb-12 flex flex-col gap-y-8 rounded-4xl px-8 py-12 lg:mb-32 xl:mb-36">
               <div className="flex flex-col gap-y-4 text-center">
                 <h2>{t("page-index-join-header")}</h2>
                 <p>{t("page-index-join-description")}</p>

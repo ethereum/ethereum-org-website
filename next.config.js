@@ -48,6 +48,12 @@ module.exports = (phase) => {
         "https://ethereum.org",
     },
     webpack: (config) => {
+      // Parse .all-contributorsrc as JSON (no .json extension)
+      config.module.rules.push({
+        test: /\.all-contributorsrc$/,
+        type: "json",
+      })
+
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: "yaml-loader",

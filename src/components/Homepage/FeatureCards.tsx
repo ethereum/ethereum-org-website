@@ -22,28 +22,28 @@ const FeatureCards = ({
   return (
     <Section
       className={cn(
-        "rounded-none bg-background-highlight py-20 lg:py-24",
+        "bg-background-highlight rounded-none py-20 lg:py-24",
         className
       )}
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 flex flex-col items-center gap-4 text-center">
-          <SectionHeader className="mb-0 mt-0">
+          <SectionHeader className="mt-0 mb-0">
             What makes Ethereum <span className="text-body">different</span>
           </SectionHeader>
-          <p className="max-w-xl text-lg text-body-medium">
+          <p className="text-body-medium max-w-xl text-lg">
             Principles set Ethereum apart from traditional systems
           </p>
         </div>
 
         <div className="flex flex-col gap-8">
           <div className="grid gap-8 lg:grid-cols-12">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-purple-700 to-purple-500 p-8 shadow-xl lg:col-span-7">
+            <div className="relative overflow-hidden rounded-3xl bg-linear-to-b from-purple-700 to-purple-500 p-8 shadow-xl lg:col-span-7">
               <Image
                 src={ownershipImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 600px"
-                className="absolute -bottom-16 -right-16 h-2/3 w-auto object-contain opacity-25"
+                className="absolute -right-16 -bottom-16 h-2/3 w-auto object-contain opacity-25"
               />
 
               <div className="relative z-10 flex flex-col gap-6">
@@ -71,19 +71,19 @@ const FeatureCards = ({
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl border bg-background p-8 lg:col-span-5">
+            <div className="bg-background relative overflow-hidden rounded-3xl border p-8 lg:col-span-5">
               <Image
                 src={publicRulesImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 450px"
-                className="absolute -bottom-12 -right-24 h-2/3 w-auto object-contain"
+                className="absolute -right-24 -bottom-12 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
                 <h3 className="mb-4 text-4xl font-black lg:text-5xl">
                   Public rules
                 </h3>
-                <p className="max-w-xs text-body">
+                <p className="text-body max-w-xs">
                   The code is public, agreements execute exactly as written.
                   Think vending machine versus hoping the cashier gives correct
                   change.
@@ -93,12 +93,12 @@ const FeatureCards = ({
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="relative overflow-hidden rounded-3xl border bg-background p-8">
+            <div className="bg-background relative overflow-hidden rounded-3xl border p-8">
               <Image
                 src={globalImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -bottom-6 -right-8 h-2/3 w-auto object-contain"
+                className="absolute -right-8 -bottom-6 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
@@ -109,12 +109,12 @@ const FeatureCards = ({
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl border bg-background p-8">
+            <div className="bg-background relative overflow-hidden rounded-3xl border p-8">
               <Image
                 src={freeAccessImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -bottom-6 -right-8 h-2/3 w-auto object-contain"
+                className="absolute -right-8 -bottom-6 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
@@ -126,7 +126,7 @@ const FeatureCards = ({
               </div>
             </div>
 
-            <div className="rounded-3xl border border-body p-8 md:col-span-2 lg:col-span-1">
+            <div className="border-body rounded-3xl border p-8 md:col-span-2 lg:col-span-1">
               <h3 className="mb-3 text-3xl font-black">Nobody owns Ethereum</h3>
               <p className="text-body">
                 Changes happen through open proposals that anyone can

@@ -35,7 +35,7 @@ const BentoCard = ({
 }: BentoCardProps) => (
   <Card
     className={cn(
-      "bg-gradient-to-right flex items-center justify-evenly gap-4 border p-8 lg:gap-16",
+      "bg-linear-to-right flex items-center justify-evenly gap-4 border p-8 lg:gap-16",
       className
     )}
   >
@@ -46,7 +46,7 @@ const BentoCard = ({
       <CardTitle variant="black" className="mb-2">
         {title}
       </CardTitle>
-      <p className="mb-8 text-md">{children}</p>
+      <p className="text-md mb-8">{children}</p>
       <ButtonLink
         href={href}
         variant="outline"
