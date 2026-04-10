@@ -142,7 +142,7 @@
     "franc-min": "^6.2.0",
     "husky": "^9.0.11",
     "image-size": "^1.0.2",
-    "intl-content-tree": "^0.2.0",
+    "intl-content-tree": "^0.2.1",
     "lint-staged": "^15.2.5",
     "markdownlint-cli2": "^0.22.0",
     "mdast-util-toc": "^7.0.0",
