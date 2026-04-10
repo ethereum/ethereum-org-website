@@ -42,6 +42,18 @@ export const Basic: Story = {
   ),
 }
 
+export const FewItems: Story = {
+  render: () => (
+    <EdgeScrollContainer>
+      {[1, 2, 3].map((i) => (
+        <EdgeScrollItem key={i} className="ms-6">
+          <SampleCard>Card {i}</SampleCard>
+        </EdgeScrollItem>
+      ))}
+    </EdgeScrollContainer>
+  ),
+}
+
 export const WithoutSnap: Story = {
   render: () => (
     <EdgeScrollContainer snap={false}>

@@ -1,6 +1,9 @@
 "use client"
 
-import { Swiper, SwiperSlide } from "@/components/ui/swiper"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 
 import type { VideoCourse } from "../../types"
 import VideoCourseCard from "../VideoCourseCard"
@@ -10,16 +13,16 @@ type VideoCourseSwiperProps = {
 }
 
 const VideoCourseSwiper = ({ courses }: VideoCourseSwiperProps) => (
-  <Swiper spaceBetween={16} slidesPerView={1.25}>
+  <EdgeScrollContainer>
     {courses.map((course, idx) => (
-      <SwiperSlide
+      <EdgeScrollItem
         key={idx}
-        className="max-xl://[&:last-child_div]:pe-16 max-2xl:first:ms-8 max-2xl:last:pe-16"
+        className="ms-4 w-[80%] sm:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)]"
       >
         <VideoCourseCard course={course} />
-      </SwiperSlide>
+      </EdgeScrollItem>
     ))}
-  </Swiper>
+  </EdgeScrollContainer>
 )
 
 export default VideoCourseSwiper

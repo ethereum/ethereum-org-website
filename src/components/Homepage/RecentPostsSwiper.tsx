@@ -3,7 +3,6 @@
 import type { RSSItem } from "@/lib/types"
 
 import { isValidDate } from "@/lib/utils/date"
-import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import CardImage from "../Image/CardImage"
 import {
@@ -14,11 +13,9 @@ import {
   CardTitle,
 } from "../ui/card"
 import {
-  Swiper,
-  SwiperContainer,
-  SwiperNavigation,
-  SwiperSlide,
-} from "../ui/swiper"
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "../ui/edge-scroll-container"
 
 type RecentPostsSwiperProps = {
   rssItems: RSSItem[]
@@ -31,52 +28,39 @@ const RecentPostsSwiper = ({
   eventCategory,
   className,
 }: RecentPostsSwiperProps) => (
-  <SwiperContainer className={className}>
-    <Swiper
-      spaceBetween={32}
-      breakpoints={{
-        [breakpointAsNumber.sm]: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-        },
-        [breakpointAsNumber.lg]: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-        },
-      }}
-      slidesPerView={1}
-      slidesPerGroup={1}
-    >
-      {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
-        <SwiperSlide key={title}>
-          <Card
-            href={link}
-            customEventOptions={{
-              eventCategory,
-              eventAction: "blogs_posts",
-              eventName: source,
-            }}
-          >
-            <CardBanner background="accent-a">
-              <CardImage src={imgSrc} />
-            </CardBanner>
-            <CardContent>
-              <CardTitle>{title}</CardTitle>
-              {isValidDate(pubDate) && (
-                <CardParagraph variant="subtitle" size="sm">
-                  {pubDate}
-                </CardParagraph>
-              )}
-              <CardParagraph variant="uppercase" size="sm">
-                {source}
+  <EdgeScrollContainer className={className}>
+    {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
+      <EdgeScrollItem
+        key={title}
+        asChild
+        className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+      >
+        <Card
+          href={link}
+          customEventOptions={{
+            eventCategory,
+            eventAction: "blogs_posts",
+            eventName: source,
+          }}
+        >
+          <CardBanner background="accent-a">
+            <CardImage src={imgSrc} />
+          </CardBanner>
+          <CardContent>
+            <CardTitle>{title}</CardTitle>
+            {isValidDate(pubDate) && (
+              <CardParagraph variant="subtitle" size="sm">
+                {pubDate}
               </CardParagraph>
-            </CardContent>
-          </Card>
-        </SwiperSlide>
-      ))}
-      <SwiperNavigation />
-    </Swiper>
-  </SwiperContainer>
+            )}
+            <CardParagraph variant="uppercase" size="sm">
+              {source}
+            </CardParagraph>
+          </CardContent>
+        </Card>
+      </EdgeScrollItem>
+    ))}
+  </EdgeScrollContainer>
 )
 
 RecentPostsSwiper.displayName = "RecentPostsSwiper"

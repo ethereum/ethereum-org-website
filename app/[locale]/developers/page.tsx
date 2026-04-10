@@ -598,7 +598,6 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: title,
                       }}
-                      className="min-w-72 max-w-md flex-1"
                     >
                       <CardBanner className="h-36">
                         {bannerImage ? (

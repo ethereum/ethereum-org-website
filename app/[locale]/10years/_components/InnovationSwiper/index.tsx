@@ -2,11 +2,9 @@
 
 import { Image } from "@/components/Image"
 import {
-  Swiper,
-  SwiperContainer,
-  SwiperNavigation,
-  SwiperSlide,
-} from "@/components/ui/swiper"
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 
 import type { InnovationCard } from "../types"
 
@@ -15,17 +13,14 @@ type InnovationSwiperProps = {
 }
 const InnovationSwiper = ({ innovationCards }: InnovationSwiperProps) => (
   <div className="w-[100%]">
-    <SwiperContainer className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">
-      <Swiper
-        className="mx-auto w-full max-w-[550px] xl:max-w-[700px]"
-        spaceBetween={32}
-      >
-        {innovationCards.map(
-          ({ image, title, date, description1, description2 }, index) => (
-            <SwiperSlide
-              key={index}
-              className="mx-auto flex w-full max-w-[550px] flex-col gap-4 rounded-lg bg-card-gradient-secondary p-4 sm:p-6 xl:max-w-[700px]"
-            >
+    <EdgeScrollContainer className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">
+      {innovationCards.map(
+        ({ image, title, date, description1, description2 }, index) => (
+          <EdgeScrollItem
+            key={index}
+            className="ms-6 w-[calc(100%-4rem)] max-w-[550px] xl:max-w-[700px]"
+          >
+            <div className="flex flex-col gap-4 rounded-lg bg-card-gradient-secondary p-4 sm:p-6">
               <Image
                 src={image}
                 alt={title}
@@ -37,12 +32,11 @@ const InnovationSwiper = ({ innovationCards }: InnovationSwiperProps) => (
               </div>
               <p className="mb-4">{description1}</p>
               <p className="mb-4">{description2}</p>
-            </SwiperSlide>
-          )
-        )}
-        <SwiperNavigation />
-      </Swiper>
-    </SwiperContainer>
+            </div>
+          </EdgeScrollItem>
+        )
+      )}
+    </EdgeScrollContainer>
   </div>
 )
 

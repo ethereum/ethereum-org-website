@@ -91,7 +91,6 @@ const Page = async (props: {
             {DEV_TOOL_CATEGORIES.map(({ slug, Icon }) => (
               <EdgeScrollItem
                 key={slug}
-                asChild
                 className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
               >
                 <Card className="h-fit overflow-hidden border">

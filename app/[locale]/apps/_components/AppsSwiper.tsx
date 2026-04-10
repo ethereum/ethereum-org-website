@@ -3,11 +3,9 @@
 import { ReactNode } from "react"
 
 import {
-  Swiper,
-  SwiperContainer,
-  SwiperNavigation,
-  SwiperSlide,
-} from "@/components/ui/swiper"
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 
 interface AppsSwiperProps {
   cards: ReactNode[]
@@ -15,23 +13,16 @@ interface AppsSwiperProps {
 
 const AppsSwiper = ({ cards }: AppsSwiperProps) => {
   return (
-    <SwiperContainer className="md:hidden">
-      <Swiper
-        slidesPerView={1.5}
-        spaceBetween={16}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-        }}
-      >
-        {cards.map((card, index) => (
-          <SwiperSlide key={index}>{card}</SwiperSlide>
-        ))}
-        <SwiperNavigation />
-      </Swiper>
-    </SwiperContainer>
+    <EdgeScrollContainer className="md:hidden">
+      {cards.map((card, index) => (
+        <EdgeScrollItem
+          key={index}
+          className="ms-4 w-[calc(66%-1rem)] sm:w-[calc(50%-1rem)]"
+        >
+          {card}
+        </EdgeScrollItem>
+      ))}
+    </EdgeScrollContainer>
   )
 }
 
