@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/nextjs"
 
-import { EdgeScrollContainer, EdgeScrollItem } from "../edge-scroll-container"
+import { Carousel, CarouselItem } from "../carousel"
 
 const meta = {
-  title: "Molecules / Navigation / EdgeScrollContainer",
-  component: EdgeScrollContainer,
+  title: "Molecules / Navigation / Carousel",
+  component: Carousel,
   decorators: [
     // Simulate page container to demonstrate edge-to-edge effect
     (Story) => (
@@ -16,7 +16,7 @@ const meta = {
   parameters: {
     layout: "fullscreen",
   },
-} satisfies Meta<typeof EdgeScrollContainer>
+} satisfies Meta<typeof Carousel>
 
 export default meta
 
@@ -32,53 +32,53 @@ const cardsArray = Array.from({ length: 10 }).map((_, idx) => idx + 1)
 
 export const Basic: Story = {
   render: () => (
-    <EdgeScrollContainer>
+    <Carousel>
       {cardsArray.map((i) => (
-        <EdgeScrollItem key={i} className="ms-6">
+        <CarouselItem key={i} className="ms-6">
           <SampleCard>Card {i}</SampleCard>
-        </EdgeScrollItem>
+        </CarouselItem>
       ))}
-    </EdgeScrollContainer>
+    </Carousel>
   ),
 }
 
 export const FewItems: Story = {
   render: () => (
-    <EdgeScrollContainer>
+    <Carousel>
       {[1, 2, 3].map((i) => (
-        <EdgeScrollItem key={i} className="ms-6">
+        <CarouselItem key={i} className="ms-6">
           <SampleCard>Card {i}</SampleCard>
-        </EdgeScrollItem>
+        </CarouselItem>
       ))}
-    </EdgeScrollContainer>
+    </Carousel>
   ),
 }
 
 export const WithoutSnap: Story = {
   render: () => (
-    <EdgeScrollContainer snap={false}>
+    <Carousel snap={false}>
       {cardsArray.map((i) => (
-        <EdgeScrollItem key={i} className="ms-6">
+        <CarouselItem key={i} className="ms-6">
           <SampleCard>Card {i}</SampleCard>
-        </EdgeScrollItem>
+        </CarouselItem>
       ))}
-    </EdgeScrollContainer>
+    </Carousel>
   ),
 }
 
 export const AsChildExample: Story = {
   render: () => (
-    <EdgeScrollContainer>
+    <Carousel>
       {cardsArray.map((i) => (
-        <EdgeScrollItem key={i} asChild className="ms-6">
+        <CarouselItem key={i} asChild className="ms-6">
           <a
             href="#"
             className="flex h-48 w-72 items-center justify-center rounded-2xl border border-body-light bg-background-highlight p-6 shadow-md transition-colors hover:bg-primary-low-contrast"
           >
             Clickable Card {i}
           </a>
-        </EdgeScrollItem>
+        </CarouselItem>
       ))}
-    </EdgeScrollContainer>
+    </Carousel>
   ),
 }

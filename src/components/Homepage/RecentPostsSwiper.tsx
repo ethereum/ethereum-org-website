@@ -12,10 +12,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "../ui/card"
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "../ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "../ui/carousel"
 
 type RecentPostsSwiperProps = {
   rssItems: RSSItem[]
@@ -28,9 +25,9 @@ const RecentPostsSwiper = ({
   eventCategory,
   className,
 }: RecentPostsSwiperProps) => (
-  <EdgeScrollContainer className={className}>
+  <Carousel className={className}>
     {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
-      <EdgeScrollItem
+      <CarouselItem
         key={title}
         asChild
         className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
@@ -58,9 +55,9 @@ const RecentPostsSwiper = ({
             </CardParagraph>
           </CardContent>
         </Card>
-      </EdgeScrollItem>
+      </CarouselItem>
     ))}
-  </EdgeScrollContainer>
+  </Carousel>
 )
 
 RecentPostsSwiper.displayName = "RecentPostsSwiper"

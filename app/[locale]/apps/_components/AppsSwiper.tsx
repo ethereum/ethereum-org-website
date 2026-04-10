@@ -2,10 +2,7 @@
 
 import { ReactNode } from "react"
 
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 
 interface AppsSwiperProps {
   cards: ReactNode[]
@@ -13,16 +10,16 @@ interface AppsSwiperProps {
 
 const AppsSwiper = ({ cards }: AppsSwiperProps) => {
   return (
-    <EdgeScrollContainer className="md:hidden">
+    <Carousel className="md:hidden">
       {cards.map((card, index) => (
-        <EdgeScrollItem
+        <CarouselItem
           key={index}
           className="ms-4 w-[calc(66%-1rem)] sm:w-[calc(50%-1rem)]"
         >
           {card}
-        </EdgeScrollItem>
+        </CarouselItem>
       ))}
-    </EdgeScrollContainer>
+    </Carousel>
   )
 }
 

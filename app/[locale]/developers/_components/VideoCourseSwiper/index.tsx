@@ -1,9 +1,6 @@
 "use client"
 
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 
 import type { VideoCourse } from "../../types"
 import VideoCourseCard from "../VideoCourseCard"
@@ -13,16 +10,16 @@ type VideoCourseSwiperProps = {
 }
 
 const VideoCourseSwiper = ({ courses }: VideoCourseSwiperProps) => (
-  <EdgeScrollContainer>
+  <Carousel>
     {courses.map((course, idx) => (
-      <EdgeScrollItem
+      <CarouselItem
         key={idx}
         className="ms-4 w-[80%] sm:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)]"
       >
         <VideoCourseCard course={course} />
-      </EdgeScrollItem>
+      </CarouselItem>
     ))}
-  </EdgeScrollContainer>
+  </Carousel>
 )
 
 export default VideoCourseSwiper

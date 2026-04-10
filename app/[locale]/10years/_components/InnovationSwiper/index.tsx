@@ -1,10 +1,7 @@
 "use client"
 
 import { Image } from "@/components/Image"
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 
 import type { InnovationCard } from "../types"
 
@@ -13,10 +10,10 @@ type InnovationSwiperProps = {
 }
 const InnovationSwiper = ({ innovationCards }: InnovationSwiperProps) => (
   <div className="w-[100%]">
-    <EdgeScrollContainer className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">
+    <Carousel className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">
       {innovationCards.map(
         ({ image, title, date, description1, description2 }, index) => (
-          <EdgeScrollItem
+          <CarouselItem
             key={index}
             className="ms-6 w-[calc(100%-4rem)] max-w-[550px] xl:max-w-[700px]"
           >
@@ -33,10 +30,10 @@ const InnovationSwiper = ({ innovationCards }: InnovationSwiperProps) => (
               <p className="mb-4">{description1}</p>
               <p className="mb-4">{description2}</p>
             </div>
-          </EdgeScrollItem>
+          </CarouselItem>
         )
       )}
-    </EdgeScrollContainer>
+    </Carousel>
   </div>
 )
 

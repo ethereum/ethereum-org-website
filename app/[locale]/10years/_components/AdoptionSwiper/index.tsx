@@ -3,10 +3,7 @@
 import { Image } from "@/components/Image"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -22,9 +19,9 @@ const AdoptionSwiper = ({
   adoptionStyles,
 }: AdoptionCardProps) => (
   <div className="flex flex-1 flex-col gap-6 md:hidden">
-    <EdgeScrollContainer className="mx-auto w-full max-w-[550px]">
+    <Carousel className="mx-auto w-full max-w-[550px]">
       {adoptionCards.map(({ image, linkText, href, title }, index) => (
-        <EdgeScrollItem key={title} className="ms-6 w-[calc(100%-4rem)]">
+        <CarouselItem key={title} className="ms-6 w-[calc(100%-4rem)]">
           <div className={cn("h-full rounded-2xl p-8", adoptionStyles[index])}>
             <Image
               src={image}
@@ -42,9 +39,9 @@ const AdoptionSwiper = ({
               {linkText}
             </ButtonLink>
           </div>
-        </EdgeScrollItem>
+        </CarouselItem>
       ))}
-    </EdgeScrollContainer>
+    </Carousel>
   </div>
 )
 
