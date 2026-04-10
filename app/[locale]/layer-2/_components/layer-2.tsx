@@ -173,7 +173,7 @@ const Layer2Hub = ({
               <div className="border-body-medium absolute inset-0 rounded-full border border-dashed"></div>
               <div className="animate-spin-30 absolute inset-0 rounded-full">
                 {/* Top logo */}
-                <div className="animate-counter-spin-30 bg-primary absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform rounded-full">
+                <div className="animate-counter-spin-30 bg-primary absolute -top-[12px] left-1/2 h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[0].logo}
@@ -183,7 +183,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom right logo */}
-                <div className="animate-counter-spin-30 absolute right-[8%] bottom-[17%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform rounded-full">
+                <div className="animate-counter-spin-30 absolute right-[8%] bottom-[17%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[1].logo}
@@ -193,7 +193,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom left logo */}
-                <div className="animate-counter-spin-30 absolute bottom-[17%] left-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform rounded-full">
+                <div className="animate-counter-spin-30 absolute bottom-[17%] left-[8%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[2].logo}
@@ -208,7 +208,7 @@ const Layer2Hub = ({
               <div className="border-body-medium absolute inset-[30px] rounded-full border border-dashed sm:inset-[54px]"></div>
               <div className="animate-spin-21 absolute inset-[30px] rounded-full sm:inset-[54px]">
                 {/* Top logo */}
-                <div className="animate-counter-spin-21 absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform rounded-full">
+                <div className="animate-counter-spin-21 absolute -top-[12px] left-1/2 h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[3].logo}
@@ -218,7 +218,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom right logo */}
-                <div className="animate-counter-spin-21 absolute right-[5%] bottom-[15%] h-6 w-6 transform rounded-full">
+                <div className="animate-counter-spin-21 absolute right-[5%] bottom-[15%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[4].logo}
@@ -228,7 +228,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom left logo */}
-                <div className="animate-counter-spin-21 absolute bottom-[15%] left-[5%] h-6 w-6 transform rounded-full">
+                <div className="animate-counter-spin-21 absolute bottom-[15%] left-[5%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[5].logo}
@@ -243,7 +243,7 @@ const Layer2Hub = ({
               <div className="border-body-medium absolute inset-[60px] rounded-full border border-dashed sm:inset-[108px]"></div>
               <div className="animate-spin-9 absolute inset-[60px] rounded-full sm:inset-[108px]">
                 {/* Top logo */}
-                <div className="animate-counter-spin-9 absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform rounded-full">
+                <div className="animate-counter-spin-9 absolute -top-[12px] left-1/2 h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[6].logo}
@@ -253,7 +253,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom right logo */}
-                <div className="animate-counter-spin-9 absolute right-[5%] bottom-[15%] h-6 w-6 transform rounded-full">
+                <div className="animate-counter-spin-9 absolute right-[5%] bottom-[15%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[7].logo}
@@ -263,7 +263,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom left logo */}
-                <div className="animate-counter-spin-9 absolute bottom-[15%] left-[5%] h-6 w-6 transform rounded-full">
+                <div className="animate-counter-spin-9 absolute bottom-[15%] left-[5%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[8].logo}
