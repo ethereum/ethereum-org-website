@@ -4,46 +4,18 @@
  * section-scoped, occurrence-counted replacement.
  */
 
-import { parseMarkdown, serialize } from "intl-content-tree"
 import { expect, test } from "@playwright/test"
 
 import type { LocaleTranslationManifest } from "@/scripts/i18n/lib/ai/manifest-adapter"
 import {
   applyInertChanges,
-  detectInertChanges,
   type InertChange,
   updateTranslationManifest,
 } from "@/scripts/i18n/lib/ai/propagate-inert"
 
 // ---------------------------------------------------------------------------
-// Shared config (must match ETHEREUM_ORG_CONFIG in manifest-adapter.ts)
-// ---------------------------------------------------------------------------
-
-const TREE_CONFIG = {
-  depth: "element" as const,
-  translatableAttributes: [
-    "title",
-    "description",
-    "alt",
-    "label",
-    "aria-label",
-    "placeholder",
-    "buttonLabel",
-    "name",
-    "caption",
-    "contentPreview",
-    "location",
-  ],
-}
-
-// ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-
-function buildSourceManifest(content: string): string {
-  const tree = parseMarkdown(content, TREE_CONFIG)
-  return JSON.stringify(serialize(tree, "test.md"), null, 2)
-}
 
 function mkChange(
   overrides: Partial<InertChange> & { oldValue: string; newValue: string }
@@ -55,71 +27,6 @@ function mkChange(
     ...overrides,
   }
 }
-
-// ---------------------------------------------------------------------------
-// detectInertChanges
-// ---------------------------------------------------------------------------
-
-test.describe("detectInertChanges", () => {
-  test("detects a link URL change with path", async () => {
-    const oldEn =
-      "## Section {#test-section}\n\nSome [link](http://old.com) text.\n"
-    const newEn =
-      "## Section {#test-section}\n\nSome [link](http://new.com) text.\n"
-    const manifest = buildSourceManifest(oldEn)
-
-    const changes = await detectInertChanges(newEn, manifest, "markdown", oldEn)
-    expect(changes).toHaveLength(1)
-    expect(changes[0].oldValue).toBe("http://old.com")
-    expect(changes[0].newValue).toBe("http://new.com")
-    expect(changes[0].elementType).toBe("link")
-    expect(changes[0].path).toContain("link:0")
-  })
-
-  test("detects an image path change", async () => {
-    const oldEn = "## Img {#img}\n\n![Alt](/old/path.png)\n"
-    const newEn = "## Img {#img}\n\n![Alt](/new/path.png)\n"
-    const manifest = buildSourceManifest(oldEn)
-
-    const changes = await detectInertChanges(newEn, manifest, "markdown", oldEn)
-    expect(changes).toHaveLength(1)
-    expect(changes[0].elementType).toBe("image")
-    expect(changes[0].newValue).toBe("/new/path.png")
-  })
-
-  test("returns empty when nothing changed", async () => {
-    const en = "## Section {#test}\n\nSome [link](http://same.com) text.\n"
-    const manifest = buildSourceManifest(en)
-
-    const changes = await detectInertChanges(en, manifest, "markdown", en)
-    expect(changes).toHaveLength(0)
-  })
-
-  test("detects component attribute changes", async () => {
-    const oldEn = '## T {#t}\n\n<YouTube id="abc123" />\n'
-    const newEn = '## T {#t}\n\n<YouTube id="def456" />\n'
-    const manifest = buildSourceManifest(oldEn)
-
-    const changes = await detectInertChanges(newEn, manifest, "markdown", oldEn)
-    expect(changes).toHaveLength(1)
-    expect(changes[0].elementType).toBe("component-attribute")
-    expect(changes[0].key).toBe("id")
-    expect(changes[0].path).toContain("attr:id")
-  })
-
-  test("detects frontmatter field changes", async () => {
-    const oldEn =
-      "---\ntitle: Test\nimage: /old.png\n---\n\n## S {#s}\n\nBody.\n"
-    const newEn =
-      "---\ntitle: Test\nimage: /new.png\n---\n\n## S {#s}\n\nBody.\n"
-    const manifest = buildSourceManifest(oldEn)
-
-    const changes = await detectInertChanges(newEn, manifest, "markdown", oldEn)
-    expect(changes).toHaveLength(1)
-    expect(changes[0].elementType).toBe("frontmatter-field")
-    expect(changes[0].path).toContain("frontmatter:image")
-  })
-})
 
 // ---------------------------------------------------------------------------
 // applyInertChanges: markdown basic

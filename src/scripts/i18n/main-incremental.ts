@@ -21,6 +21,12 @@
 import * as fs from "fs"
 import * as path from "path"
 
+import {
+  deserialize,
+  getContainingSection,
+  type TreeNode,
+} from "intl-content-tree"
+
 import i18nConfig from "../../../i18n.config.json"
 
 import { isGeminiAvailable } from "./lib/ai/gemini"
@@ -45,6 +51,7 @@ import {
   hasEnglishChanged,
   type LocaleTranslationManifest,
   parseEnglishJson,
+  type TreeManifest,
 } from "./lib/ai/manifest-adapter"
 import { updateTranslationManifest } from "./lib/ai/propagate-inert"
 import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
@@ -52,42 +59,6 @@ import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
 import { config } from "./config"
-
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
-
-/**
- * Map a tree node ID to its containing heading section ID.
- * Tree paths like "wallet-security/component:2" -> "wallet-security"
- * Nested headings: "deployment/networks-and-tools/link:0" -> "networks-and-tools"
- * Root-level: "prose:0" -> "_preamble"
- * Frontmatter: "frontmatter:image" -> "frontmatter:image" (unchanged)
- *
- * The containing section is the LAST path segment that is a heading ID
- * (i.e., not an element-type segment like link:0, component:2, etc.)
- */
-function mapToHeadingSection(treeId: string): string {
-  if (treeId === "prose:0" || treeId.startsWith("prose:0/")) return "_preamble"
-  if (treeId.startsWith("frontmatter:")) return treeId
-
-  const segments = treeId.split("/")
-  // Walk segments, keeping the last one that ISN'T an element-type:N pattern
-  let lastHeading = segments[0]
-  for (const seg of segments) {
-    if (
-      seg.match(
-        /^(link|image|html-tag|component|attr|prose|inline-code|icu|code-fence|code-comment|code-body|table):/
-      )
-    ) {
-      break
-    }
-    if (!seg.startsWith("_")) {
-      lastHeading = seg
-    }
-  }
-  return lastHeading
-}
 
 // ---------------------------------------------------------------------------
 // Types
@@ -103,6 +74,7 @@ interface DriftReport {
   file: string
   locale: string
   inertCount: number
+  structuralCount: number
   translatableCount: number
   addedCount: number
   removedCount: number
@@ -188,6 +160,7 @@ async function main() {
     file: FileContext
     locale: string
     drift: ReturnType<typeof detectDrift>
+    manifestTree: TreeNode
     sourceManifestJson: string
     translationManifest: LocaleTranslationManifest | null
     localeContent: string
@@ -249,6 +222,7 @@ async function main() {
           file: file.path,
           locale,
           inertCount: 0,
+          structuralCount: 0,
           translatableCount: 0,
           addedCount: 0,
           removedCount: 0,
@@ -261,10 +235,16 @@ async function main() {
       // Full drift detection
       const drift = detectDrift(file.content, sourceManifestJson, file.type)
 
+      // Deserialize the manifest tree for getContainingSection in Phase 5
+      const manifestTree = deserialize(
+        JSON.parse(sourceManifestJson) as TreeManifest
+      )
+
       const report: DriftReport = {
         file: file.path,
         locale,
         inertCount: drift.inertDrift.length,
+        structuralCount: drift.structuralDrift?.length || 0,
         translatableCount: drift.translatableDrift.length,
         addedCount: drift.added.length,
         removedCount: drift.removed.length,
@@ -275,7 +255,8 @@ async function main() {
 
       console.log(
         `  [${locale}] ${file.path}: ` +
-          `inert=${report.inertCount} prose=${report.translatableCount} ` +
+          `inert=${report.inertCount} structural=${report.structuralCount} ` +
+          `prose=${report.translatableCount} ` +
           `added=${report.addedCount} removed=${report.removedCount} ` +
           `reordered=${report.reorderedCount}`
       )
@@ -292,6 +273,7 @@ async function main() {
         file,
         locale,
         drift,
+        manifestTree,
         sourceManifestJson,
         translationManifest,
         localeContent,
@@ -302,13 +284,18 @@ async function main() {
   // Print drift summary
   logSection("Drift Summary")
   const totalInert = driftReports.reduce((s, r) => s + r.inertCount, 0)
+  const totalStructural = driftReports.reduce(
+    (s, r) => s + r.structuralCount,
+    0
+  )
   const totalProse = driftReports.reduce((s, r) => s + r.translatableCount, 0)
   const totalAdded = driftReports.reduce((s, r) => s + r.addedCount, 0)
   const totalRemoved = driftReports.reduce((s, r) => s + r.removedCount, 0)
   const totalUnchanged = driftReports.filter((r) => r.unchanged).length
   console.log(`  Full translation: ${fullTranslationTasks.length} file(s)`)
   console.log(`  Unchanged: ${totalUnchanged}`)
-  console.log(`  Inert drift: ${totalInert} (script-propagated, no Gemini)`)
+  console.log(`  Inert drift: ${totalInert} (no Gemini needed)`)
+  console.log(`  Structural drift: ${totalStructural} (no Gemini needed)`)
   console.log(`  Translatable drift: ${totalProse} (needs Gemini)`)
   console.log(`  Added: ${totalAdded}`)
   console.log(`  Removed: ${totalRemoved}`)
@@ -566,21 +553,28 @@ async function main() {
 
     if (geminiAvailable && !stampOnly) {
       for (const task of fileLanguageTasks) {
-        // Collect ALL drift IDs (inert + translatable + added).
-        // In v4, any drift = retranslate the containing heading section.
-        const allDriftIds = [
-          ...task.drift.inertDrift.map((e) => e.id),
+        // Only translatable drift + added sections need Gemini.
+        // Inert drift and structural drift are handled without LLM:
+        // - Inert: manual propagation + stamp-only (v4 workflow)
+        // - Structural: component add/remove doesn't change prose
+        const translatableDriftIds = [
           ...task.drift.translatableDrift.map((e) => e.id),
           ...task.drift.added.map((e) => e.id),
         ]
 
-        // Map tree node IDs to their containing heading section.
-        // Tree paths like "wallet-security/component:2" -> "wallet-security"
-        // Root-level prose:0 -> "_preamble"
+        // Map tree node IDs to their containing heading section
+        // using the package's getContainingSection (walks the tree)
         const headingSections = new Set<string>()
-        for (const id of allDriftIds) {
-          const headingId = mapToHeadingSection(id)
-          headingSections.add(headingId)
+        for (const id of translatableDriftIds) {
+          if (id === "prose:0" || id.startsWith("prose:0/")) {
+            headingSections.add("_preamble")
+          } else if (id.startsWith("frontmatter:")) {
+            // Frontmatter changes don't need section retranslation
+            continue
+          } else {
+            const section = getContainingSection(task.manifestTree, id)
+            if (section) headingSections.add(section)
+          }
         }
         const needsTranslation = [...headingSections]
 
