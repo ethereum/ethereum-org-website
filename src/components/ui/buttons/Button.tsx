@@ -19,7 +19,7 @@ const buttonVariants = cva(
     // Base default styling is "outline" pattern, primary color for text, border matches, no bg
     "text-primary border-current",
     // Hover: Default hover adds box-shadow, text (border) to --primary-hover
-    "hover:!text-primary-hover hover:shadow-[4px_4px_var(--color-primary-low-contrast)]",
+    "hover:!text-primary-hover hover:shadow-[4px_4px_hsla(var(--primary-low-contrast))]",
     // Focus: Add 4px outline to all buttons, --primary-hover
     "focus-visible:outline focus-visible:outline-primary-hover focus-visible:outline-4 focus-visible:-outline-offset-1",
     // Active: text (border) to --primary-hover instead of primary, hide shadow

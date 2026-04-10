@@ -228,32 +228,12 @@
   --shadow-window-box: var(--shadow-window-box-1), var(--shadow-window-box-2), var(--shadow-window-box-3), var(--shadow-window-box-4), var(--shadow-window-box-5);
   --shadow-widget: var(--shadow-widget);
 
-  /* Animations */
+  /* Animations — tokens */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
-
   --animate-scroll-left: scroll-left 30s linear infinite;
   --animate-scroll-right: scroll-right 30s linear infinite;
   --animate-scroll-left-240: scroll-left 240s linear infinite;
-
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  @keyframes scroll-right {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
   --animate-spin-30: spin 60s linear infinite;
   --animate-counter-spin-30: spin 60s linear infinite reverse;
   --animate-spin-21: spin 42s linear infinite;
@@ -262,65 +242,50 @@
   --animate-counter-spin-18: spin 36s linear infinite reverse;
   --animate-spin-9: spin 18s linear infinite;
   --animate-counter-spin-9: spin 18s linear infinite reverse;
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
   --animate-pulse-light: pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-
-  @keyframes pulse-light {
-    50% {
-      opacity: 0.2;
-    }
-  }
-
   --animate-fade-in: fade-in 150ms ease-in-out;
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   --animate-blink: blink 1.06s step-end infinite;
 
+  @keyframes scroll-left {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes scroll-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes pulse-light {
+    50% { opacity: 0.2; }
+  }
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
   @keyframes blink {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
 }
 
-/* Accordion keyframes must stay outside @theme — they reference
-   the runtime variable var(--radix-accordion-content-height) */
+/* Animations — keyframes
+  Accordion keyframes are outside @theme because they reference the
+  runtime variable var(--radix-accordion-content-height). */
 
 @keyframes accordion-down {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
 }
 
 @keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-  }
-  to {
-    height: 0;
-  }
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
 }
