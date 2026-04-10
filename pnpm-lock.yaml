@@ -338,8 +338,8 @@ importers:
         specifier: ^1.0.2
         version: 1.2.1
       intl-content-tree:
-        specifier: ^0.2.1
-        version: 0.2.1
+        specifier: ^0.2.2
+        version: 0.2.2
       lint-staged:
         specifier: ^15.2.5
         version: 15.5.2
@@ -7535,8 +7535,8 @@ packages:
     resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
     engines: {node: '>=12'}
 
-  intl-content-tree@0.2.1:
-    resolution: {integrity: sha512-uK6jPvZ8vy08QWbr3uskt/snNyfTv49T+zv3daXnphHJP0z0ju/srtmH0eKGNA7uSzl6bBt45SbRhtN+wMb7eA==}
+  intl-content-tree@0.2.2:
+    resolution: {integrity: sha512-UV0M2+8npbRLKa1XkNNmcigW0vE9brOxOUlrudb3I1C7Ub2H+h6vDFpthGTbswg4rp2RUyCSS5yBHEZHMcsEpg==}
 
   intl-messageformat@11.2.0:
     resolution: {integrity: sha512-IhghAA8n4KSlXuWKzYsWyWb82JoYTzShfyvdSF85oJPnNOjvv4kAo7S7Jtkm3/vJ53C7dQNRO+Gpnj3iWgTjBQ==}
@@ -20768,7 +20768,7 @@ snapshots:
 
   internmap@2.0.3: {}
 
-  intl-content-tree@0.2.1: {}
+  intl-content-tree@0.2.2: {}
 
   intl-messageformat@11.2.0:
     dependencies:

@@ -8,6 +8,8 @@
  * - Per-locale translation manifest for Gemini output data
  */
 
+import { execSync } from "child_process"
+
 import {
   type ContentTreeConfig,
   deserialize,
@@ -116,22 +118,42 @@ export function parseEnglishJson(content: string): TreeNode {
 
 /**
  * Detect drift between current English and a stored manifest.
+ *
+ * Re-parses the old English content from git (via sourceCommitSha) to get
+ * a fully-typed tree with correct contentType/elementType/value on all
+ * nodes. Falls back to deserialize() if the sha is missing or git show
+ * fails (e.g., file didn't exist at that commit).
  */
 export function detectDrift(
   currentEnglishContent: string,
   storedManifestJson: string,
-  format: "markdown" | "json"
+  format: "markdown" | "json",
+  filePath: string
 ): DiffResult {
-  const storedManifest: TreeManifest = JSON.parse(storedManifestJson)
-  const oldTree = deserialize(storedManifest)
-  const newTree =
+  const storedManifest: TreeManifest & { sourceCommitSha?: string } =
+    JSON.parse(storedManifestJson)
+
+  const parse = (content: string): TreeNode =>
     format === "markdown"
-      ? parseMarkdown(currentEnglishContent, ETHEREUM_ORG_CONFIG)
-      : parseJson(
-          currentEnglishContent,
-          ETHEREUM_ORG_CONFIG,
-          ETHEREUM_ORG_JSON_CONFIG
-        )
+      ? parseMarkdown(content, ETHEREUM_ORG_CONFIG)
+      : parseJson(content, ETHEREUM_ORG_CONFIG, ETHEREUM_ORG_JSON_CONFIG)
+
+  let oldTree: TreeNode
+  try {
+    if (!storedManifest.sourceCommitSha) throw new Error("no sourceCommitSha")
+    const oldContent = execSync(
+      `git show ${storedManifest.sourceCommitSha}:${filePath}`,
+      { encoding: "utf-8" }
+    )
+    oldTree = parse(oldContent)
+  } catch {
+    console.warn(
+      `[detectDrift] git show failed for ${filePath}, falling back to deserialize`
+    )
+    oldTree = deserialize(storedManifest)
+  }
+
+  const newTree = parse(currentEnglishContent)
   return diff(oldTree, newTree)
 }
 

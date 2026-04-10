@@ -233,7 +233,12 @@ async function main() {
       }
 
       // Full drift detection
-      const drift = detectDrift(file.content, sourceManifestJson, file.type)
+      const drift = detectDrift(
+        file.content,
+        sourceManifestJson,
+        file.type,
+        file.path
+      )
 
       // Deserialize the manifest tree for getContainingSection in Phase 5
       const manifestTree = deserialize(
