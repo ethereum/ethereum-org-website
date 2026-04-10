@@ -58,7 +58,7 @@ import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
-import { config } from "./config"
+import { config, normalizeToEnglishPath } from "./config"
 
 // ---------------------------------------------------------------------------
 // Types
@@ -116,7 +116,9 @@ async function main() {
     process.exit(1)
   }
 
-  const filePaths = targetPath.split(",").map((s) => s.trim())
+  const filePaths = targetPath
+    .split(",")
+    .map((s) => normalizeToEnglishPath(s.trim()))
 
   // Phase 1: Initialize
   logSection("Phase 1: Initialize")

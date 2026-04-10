@@ -63,20 +63,67 @@ const targetLanguages: string[] =
 
 const baseBranch = process.env.BASE_BRANCH || "dev"
 
+/**
+ * Normalize a locale file path back to the English source path.
+ *
+ * Markdown: public/content/translations/<lang>/**  ->  public/content/**
+ * JSON:     src/intl/<lang>/**                     ->  src/intl/en/**
+ *
+ * Returns the path unchanged if it's already an English path.
+ */
+export function normalizeToEnglishPath(filePath: string): string {
+  const normalized = filePath.replace(/^\//, "")
+
+  // Markdown locale path -> English
+  const mdMatch = normalized.match(
+    /^public\/content\/translations\/([^/]+)\/(.+)$/
+  )
+  if (mdMatch) {
+    const lang = mdMatch[1]
+    const rest = mdMatch[2]
+    const englishPath = `public/content/${rest}`
+    console.warn(
+      `[normalizeToEnglishPath] Converted locale path (${lang}) to English: ${englishPath}`
+    )
+    return englishPath
+  }
+
+  // JSON locale path -> English
+  const jsonMatch = normalized.match(/^src\/intl\/(?!en\/)([^/]+)\/(.+)$/)
+  if (jsonMatch) {
+    const lang = jsonMatch[1]
+    const rest = jsonMatch[2]
+    const englishPath = `src/intl/en/${rest}`
+    console.warn(
+      `[normalizeToEnglishPath] Converted locale path (${lang}) to English: ${englishPath}`
+    )
+    return englishPath
+  }
+
+  return normalized
+}
+
 const targetPathRaw = process.env.TARGET_PATH || ""
 // Support comma-separated list of files/directories
+// Normalize locale paths to English source paths automatically
 const targetPath = targetPathRaw
+  ? targetPathRaw
+      .split(",")
+      .map((p) => normalizeToEnglishPath(p.trim()))
+      .filter(Boolean)
+      .join(",")
+  : ""
 const targetPaths = targetPathRaw
   ? targetPathRaw
       .split(",")
-      .map((p) => p.trim())
+      .map((p) => normalizeToEnglishPath(p.trim()))
       .filter(Boolean)
   : []
 const excludePathRaw = process.env.EXCLUDE_PATH?.trim() || ""
 const excludePaths = excludePathRaw
   ? excludePathRaw
       .split(",")
-      .map((p) => p.trim())
+      .map((p) => normalizeToEnglishPath(p.trim()))
       .filter(Boolean)
   : []
 
@@ -120,7 +167,9 @@ if (verbose) {
   console.log(
     `[DEBUG] - Target path: ${targetPath || "none (full translation)"}`
   )
-  console.log(`[DEBUG] - Exclude paths: ${excludePaths.length ? excludePaths.join(", ") : "none"}`)
+  console.log(
+    `[DEBUG] - Exclude paths: ${excludePaths.length ? excludePaths.join(", ") : "none"}`
+  )
   console.log(`[DEBUG] - Skip await: ${skipAwait}`)
   console.log(`[DEBUG] - GitHub repo: ${ghOrganization}/${ghRepo}`)
   if (existingPreTranslationIds.length > 0) {
