@@ -134,6 +134,25 @@ async function main() {
   const committer = new SharedCommitter(branchName)
   await committer.init()
 
+  // Per-language token usage tracking
+  const tokenStats: Record<
+    string,
+    {
+      inputTokens: number
+      outputTokens: number
+      geminiCalls: number
+    }
+  > = {}
+
+  const trackTokens = (locale: string, input: number, output: number): void => {
+    if (!tokenStats[locale]) {
+      tokenStats[locale] = { inputTokens: 0, outputTokens: 0, geminiCalls: 0 }
+    }
+    tokenStats[locale].inputTokens += input
+    tokenStats[locale].outputTokens += output
+    tokenStats[locale].geminiCalls += 1
+  }
+
   // Load English files
   const englishFiles: FileContext[] = []
   for (const fp of filePaths) {
@@ -373,6 +392,11 @@ async function main() {
             useNormalizer: task.file.type === "markdown",
           })
 
+          trackTokens(
+            task.locale,
+            result.tokensUsed.input,
+            result.tokensUsed.output
+          )
           console.log(
             `  [${task.locale}] ${task.file.path}: translated ` +
               `(${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
@@ -677,6 +701,11 @@ async function main() {
           const translations = parseIncrementalResponse(result.text)
           const translatedIds = Object.keys(translations)
 
+          trackTokens(
+            task.locale,
+            result.tokensUsed.input,
+            result.tokensUsed.output
+          )
           console.log(
             `  [${task.locale}] ${task.file.path}: received ${translatedIds.length} translated section(s) ` +
               `(${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
@@ -811,6 +840,9 @@ async function main() {
     }
   } // end if (!stampOnly) for Phase 7
 
+  // Token usage summary
+  printTokenSummary(tokenStats, Date.now() - startTime)
+
   // Done
   const duration = ((Date.now() - startTime) / 1000).toFixed(1)
   logSection("Complete")
@@ -822,6 +854,70 @@ async function main() {
       `[main] Full: ${fullTranslationTasks.length}, Prose: ${totalProse}, Added: ${totalAdded}, Removed: ${totalRemoved}`
     )
   }
+}
+
+/**
+ * Print a formatted token usage summary table with per-language breakdown
+ * and approximate cost estimation.
+ */
+function printTokenSummary(
+  stats: Record<
+    string,
+    { inputTokens: number; outputTokens: number; geminiCalls: number }
+  >,
+  pipelineDurationMs: number
+): void {
+  const entries = Object.entries(stats)
+  if (entries.length === 0) {
+    logSection("Token Usage Summary")
+    console.log("  No Gemini calls made.")
+    return
+  }
+
+  logSection("Token Usage Summary")
+
+  const fmt = (n: number) => n.toLocaleString("en-US")
+  const pad = (s: string, w: number) => s.padStart(w)
+
+  console.log(
+    `${"Language".padEnd(10)}| ${"Calls".padStart(5)} | ${"Input".padStart(10)} | ${"Output".padStart(10)} | ${"Total".padStart(10)}`
+  )
+  const sep = `${"-".repeat(10)}|${"-".repeat(7)}|${"-".repeat(12)}|${"-".repeat(12)}|${"-".repeat(12)}`
+  console.log(sep)
+
+  let grandInput = 0
+  let grandOutput = 0
+  let grandCalls = 0
+
+  for (const [lang, s] of entries) {
+    const total = s.inputTokens + s.outputTokens
+    grandInput += s.inputTokens
+    grandOutput += s.outputTokens
+    grandCalls += s.geminiCalls
+
+    console.log(
+      `${lang.padEnd(10)}| ${pad(String(s.geminiCalls), 5)} | ${pad(fmt(s.inputTokens), 10)} | ${pad(fmt(s.outputTokens), 10)} | ${pad(fmt(total), 10)}`
+    )
+  }
+
+  console.log(sep)
+  const grandTotal = grandInput + grandOutput
+  const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
+  console.log(
+    `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
+  )
+
+  // Approximate cost estimation (Gemini Pro rates)
+  const APPROX_INPUT_RATE = 1.25
+  const APPROX_OUTPUT_RATE = 10.0
+  const estCost =
+    (grandInput / 1_000_000) * APPROX_INPUT_RATE +
+    (grandOutput / 1_000_000) * APPROX_OUTPUT_RATE
+
+  console.log(
+    `\n  Estimated cost: ~$${estCost.toFixed(2)} (Gemini Pro: $${APPROX_INPUT_RATE}/1M input, $${APPROX_OUTPUT_RATE}/1M output)`
+  )
+  console.log(`  Pipeline wall time: ${pipelineSecs}s`)
 }
 
 main().catch((error) => {
