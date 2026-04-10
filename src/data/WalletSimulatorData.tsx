@@ -107,7 +107,7 @@ export const walletOnboardingSimData: SimulatorData = {
           <>
             <Stack>
               <p className="font-bold">Storing small amount of value:</p>
-              <UnorderedList className="leading-1 ms-0 list-none">
+              <UnorderedList className="ms-0 list-none">
                 <ListItem>
                   <Emoji text="✅" className="me-2" /> Consider saving in a
                   password manager
@@ -116,7 +116,7 @@ export const walletOnboardingSimData: SimulatorData = {
             </Stack>
             <Stack>
               <p className="font-bold">Storing any significant value:</p>
-              <UnorderedList className="leading-1 ms-0 list-none">
+              <UnorderedList className="ms-0 list-none">
                 <ListItem>
                   <Emoji text="✅" className="me-2" /> Write your recovery
                   phrase down
@@ -136,7 +136,7 @@ export const walletOnboardingSimData: SimulatorData = {
             </Stack>
             <Stack>
               <p className="font-bold">Unsafe backup methods:</p>
-              <UnorderedList className="leading-1 ms-0 list-none">
+              <UnorderedList className="ms-0 list-none">
                 <ListItem>
                   <Emoji text="❌" className="me-2" />
                   Texting it to a friend (or anyone!)

@@ -107,7 +107,7 @@ const WalletSubComponent = ({
                               <WarningProductGlyph className="size-4" />
                             )}
                           </span>
-                          <p className={cn("leading-1", featureColor)}>
+                          <p className={featureColor}>
                             {filterLabelRoot && `${filterLabelRoot} `}
                             <span className="whitespace-nowrap">
                               {filterLabelLastWord}
