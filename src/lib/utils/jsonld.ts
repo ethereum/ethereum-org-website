@@ -34,7 +34,15 @@ export const ethereumFoundationReference = {
  */
 export const ethereumCommunityOrganization = {
   "@type": "Organization" as const,
+  "@id": "https://ethereum.org/#community-organization",
   name: "Ethereum Community",
   url: "https://github.com/ethereum/ethereum-org-website/graphs/contributors",
   description: "A global collective of open-source contributors.",
+}
+
+/**
+ * Reference to Ethereum Community organization (for use when the full object is already defined elsewhere)
+ */
+export const ethereumCommunityReference = {
+  "@id": "https://ethereum.org/#community-organization",
 }
