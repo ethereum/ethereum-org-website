@@ -1595,19 +1595,20 @@ function lineAt(file: string, index: number): string {
 interface HeaderInfo {
   level: number // Number of # symbols
   text: string // Header text (translated or English)
-  id: string // Custom ID from {#id}
+  id: string // Custom ID from {#id}, empty if none
   fullMatch: string // Full matched string for replacement
 }
 
 function extractHeaderStructure(md: string): HeaderInfo[] {
   const headers: HeaderInfo[] = []
-  const headingRe = /^(#{1,6})\s+(.+?)\s*\{#([^}]+)\}[ \t]*$/gm
+  // Match headings with or without {#id}
+  const headingRe = /^(#{1,6})\s+(.+?)(?:\s*\{#([^}]+)\})?[ \t]*$/gm
   let m: RegExpExecArray | null
   while ((m = headingRe.exec(md))) {
     headers.push({
       level: m[1].length,
       text: m[2].trim(),
-      id: m[3].trim(),
+      id: (m[3] || "").trim(),
       fullMatch: m[0],
     })
   }
