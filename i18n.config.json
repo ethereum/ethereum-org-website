@@ -174,4 +174,13 @@
     "localName": "简体中文",
     "langDir": "ltr"
   }
-]
+  {
+    "code": "th",
+    "crowdinCode": "th",
+    "name": "Thai",
+    "localName": "ไทย",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY",
+    "validISO639_1": true
+  }
+
