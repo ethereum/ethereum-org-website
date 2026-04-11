@@ -42,6 +42,7 @@ import {
 } from "./lib/ai/manifest-adapter"
 import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+import { runPostImportSanitization } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
 import { config } from "./config"
 import type { LlmTranslator } from "./pipeline"
@@ -254,7 +255,8 @@ async function runFullTranslation(
   locale: string,
   destPath: string,
   committer: SharedCommitter,
-  baseBranchSha: string
+  baseBranchSha: string,
+  committedFiles: Array<{ path: string; content: string }>
 ) {
   log(`[${locale}] ${file.path}: full translation...`)
 
@@ -278,6 +280,7 @@ async function runFullTranslation(
 
   // Commit translated file
   await committer.commitFile(destPath, result.translatedContent, locale)
+  committedFiles.push({ path: destPath, content: result.translatedContent })
 
   // Build and commit source manifest
   const sourceManifest =
@@ -347,7 +350,8 @@ async function runIncremental(
   sourceManifestJson: string,
   localeContent: string,
   committer: SharedCommitter,
-  baseBranchSha: string
+  baseBranchSha: string,
+  committedFiles: Array<{ path: string; content: string }>
 ) {
   // Get old English content from git via sourceCommitSha
   const manifest = JSON.parse(sourceManifestJson)
@@ -363,7 +367,14 @@ async function runIncremental(
     log(
       `[${locale}] ${file.path}: cannot retrieve old English (${err instanceof Error ? err.message : String(err)}), falling back to full translation`
     )
-    await runFullTranslation(file, locale, destPath, committer, baseBranchSha)
+    await runFullTranslation(
+      file,
+      locale,
+      destPath,
+      committer,
+      baseBranchSha,
+      committedFiles
+    )
     return
   }
 
@@ -399,6 +410,7 @@ async function runIncremental(
 
   // Commit result
   await committer.commitFile(destPath, result, locale)
+  committedFiles.push({ path: destPath, content: result })
 
   // Update manifests
   const sourceManifest =
@@ -443,6 +455,9 @@ async function main() {
   await ensureStagingBranch(targetBranch, baseBranch)
   const baseBranchSha = (await getBranchObject(baseBranch)).sha
   const committer = new SharedCommitter(targetBranch)
+
+  // Track committed files for post-processing sanitization
+  const committedFiles: Array<{ path: string; content: string }> = []
   await committer.init()
 
   // Load English files from disk
@@ -487,7 +502,8 @@ async function main() {
           locale,
           destPath,
           committer,
-          baseBranchSha
+          baseBranchSha,
+          committedFiles
         )
         continue
       }
@@ -522,7 +538,26 @@ async function main() {
         sourceManifestJson,
         localeContent,
         committer,
-        baseBranchSha
+        baseBranchSha,
+        committedFiles
+      )
+    }
+  }
+
+  // Post-processing: sanitize Gemini output
+  if (committedFiles.length > 0 && !config.stampOnly) {
+    const englishContentMap = new Map<string, string>(
+      englishFiles.map((f) => [f.path, f.content])
+    )
+    try {
+      await runPostImportSanitization(
+        committedFiles,
+        targetBranch,
+        englishContentMap
+      )
+    } catch (error) {
+      console.warn(
+        `[pipeline] Sanitization failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
       )
     }
   }
