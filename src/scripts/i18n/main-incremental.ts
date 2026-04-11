@@ -18,6 +18,7 @@
  *   STAMP_ONLY              - Update manifests only, no translations (default: false)
  */
 
+import { execSync } from "child_process"
 import * as fs from "fs"
 import * as path from "path"
 
@@ -47,13 +48,17 @@ import {
   buildLocaleTranslationManifest,
   buildMarkdownManifest,
   detectDrift,
+  extractInertChangesFromTrees,
   extractPlaceholderData,
   hasEnglishChanged,
   type LocaleTranslationManifest,
   parseEnglishJson,
   type TreeManifest,
 } from "./lib/ai/manifest-adapter"
-import { updateTranslationManifest } from "./lib/ai/propagate-inert"
+import {
+  applyInertChanges,
+  updateTranslationManifest,
+} from "./lib/ai/propagate-inert"
 import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
 import { runPostImportSanitization } from "./lib/workflows/sanitization"
@@ -185,7 +190,11 @@ async function main() {
     sourceManifestJson: string
     translationManifest: LocaleTranslationManifest | null
     localeContent: string
+    oldEnglishContent: string | null
   }> = []
+
+  // Cache old English content per file (same across locales)
+  const oldEnglishCache = new Map<string, string | null>()
 
   for (const file of englishFiles) {
     for (const locale of targetLanguages) {
@@ -295,6 +304,25 @@ async function main() {
         )
       }
 
+      // Fetch old English content for inert propagation (cached per file)
+      if (!oldEnglishCache.has(file.path)) {
+        const manifest: { sourceCommitSha?: string } =
+          JSON.parse(sourceManifestJson)
+        if (manifest.sourceCommitSha) {
+          try {
+            const old = execSync(
+              `git show ${manifest.sourceCommitSha}:${file.path}`,
+              { encoding: "utf-8" }
+            )
+            oldEnglishCache.set(file.path, old)
+          } catch {
+            oldEnglishCache.set(file.path, null)
+          }
+        } else {
+          oldEnglishCache.set(file.path, null)
+        }
+      }
+
       fileLanguageTasks.push({
         file,
         locale,
@@ -303,6 +331,7 @@ async function main() {
         sourceManifestJson,
         translationManifest,
         localeContent,
+        oldEnglishContent: oldEnglishCache.get(file.path) ?? null,
       })
     }
   }
@@ -624,6 +653,64 @@ async function main() {
           console.log(
             `  [${task.locale}] ${task.file.path}: removed ${trueRemovals.length} deleted section(s): ${trueRemovals.join(", ")}`
           )
+        }
+      }
+    }
+
+    // Phase 4b: Inert Propagation
+    // Deterministic replacement of inert values (URLs, attributes, etc.)
+    // in locale files. No LLM needed.
+    if (totalInert > 0) {
+      logSection("Phase 4b: Inert Propagation")
+
+      for (const task of fileLanguageTasks) {
+        if (task.drift.inertDrift.length === 0) continue
+        if (!task.oldEnglishContent) {
+          console.warn(
+            `  [${task.locale}] ${task.file.path}: no old English content, skipping inert propagation`
+          )
+          continue
+        }
+
+        const sectionIds = task.drift.inertDrift.map((e) => e.id)
+        const inertChanges = extractInertChangesFromTrees(
+          task.oldEnglishContent,
+          task.file.content,
+          task.file.type,
+          sectionIds
+        )
+
+        if (inertChanges.length === 0) {
+          if (verbose) {
+            console.log(
+              `  [${task.locale}] ${task.file.path}: no extractable inert changes`
+            )
+          }
+          continue
+        }
+
+        const { content, applied, skipped } = applyInertChanges(
+          task.localeContent,
+          inertChanges,
+          task.file.type
+        )
+
+        task.localeContent = content
+        console.log(
+          `  [${task.locale}] ${task.file.path}: propagated ${applied.length} inert change(s)` +
+            (skipped.length > 0 ? `, skipped ${skipped.length}` : "")
+        )
+        for (const c of applied) {
+          console.log(
+            `    ${c.elementType} ${c.key}: "${c.oldValue}" -> "${c.newValue}"`
+          )
+        }
+        if (skipped.length > 0) {
+          for (const c of skipped) {
+            console.warn(
+              `    SKIPPED ${c.elementType} ${c.key}: "${c.oldValue}" not found in locale`
+            )
+          }
         }
       }
     }

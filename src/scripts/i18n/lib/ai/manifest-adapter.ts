@@ -158,6 +158,135 @@ export function detectDrift(
 }
 
 /**
+ * Extract specific inert value changes from two parsed trees for the given
+ * section IDs. Walks each section in both trees, compares inert nodes by
+ * path, and returns InertChange objects for values that differ.
+ *
+ * Requires both trees to be freshly parsed (not deserialized) for correct
+ * contentType and value data.
+ */
+export function extractInertChangesFromTrees(
+  oldContent: string,
+  newContent: string,
+  format: "markdown" | "json",
+  sectionIds: string[]
+): Array<{
+  elementType: string
+  key: string
+  oldValue: string
+  newValue: string
+  path: string
+  tagName?: string
+}> {
+  const parse = (content: string): TreeNode =>
+    format === "markdown"
+      ? parseMarkdown(content, ETHEREUM_ORG_CONFIG)
+      : parseJson(content, ETHEREUM_ORG_CONFIG, ETHEREUM_ORG_JSON_CONFIG)
+
+  const oldTree = parse(oldContent)
+  const newTree = parse(newContent)
+
+  const findSection = (tree: TreeNode, id: string): TreeNode | undefined => {
+    if (tree.id === id && tree.nodeType === "section") return tree
+    for (const child of tree.children) {
+      const found = findSection(child, id)
+      if (found) return found
+    }
+    return undefined
+  }
+
+  const collectInert = (
+    node: TreeNode,
+    prefix: string
+  ): Map<string, TreeNode> => {
+    const map = new Map<string, TreeNode>()
+    const path = prefix ? `${prefix}/${node.id}` : node.id
+    if (node.contentType === "inert") {
+      map.set(path, node)
+    }
+    for (const child of node.children) {
+      for (const [k, v] of collectInert(child, path)) {
+        map.set(k, v)
+      }
+    }
+    return map
+  }
+
+  const changes: Array<{
+    elementType: string
+    key: string
+    oldValue: string
+    newValue: string
+    path: string
+    tagName?: string
+  }> = []
+  const seen = new Set<string>()
+
+  // Process most specific sections first (deepest in tree) to avoid dupes
+  const sorted = [...sectionIds].sort(
+    (a, b) => b.split("/").length - a.split("/").length
+  )
+
+  for (const sectionId of sorted) {
+    const oldSection = findSection(oldTree, sectionId)
+    const newSection = findSection(newTree, sectionId)
+    if (!oldSection || !newSection) continue
+
+    const oldNodes = collectInert(oldSection, "")
+    const newNodes = collectInert(newSection, "")
+
+    for (const [nodePath, newNode] of newNodes) {
+      const oldNode = oldNodes.get(nodePath)
+      if (!oldNode) continue
+
+      // Compare value
+      if (
+        newNode.value !== undefined &&
+        oldNode.value !== undefined &&
+        newNode.value !== oldNode.value
+      ) {
+        // Dedup by elementType + old + new value
+        const dedupKey = `${newNode.elementType}:${oldNode.value}:${newNode.value}`
+        if (seen.has(dedupKey)) continue
+        seen.add(dedupKey)
+        const key = newNode.meta?.name || newNode.elementType
+        changes.push({
+          elementType: newNode.elementType,
+          key,
+          oldValue: oldNode.value,
+          newValue: newNode.value,
+          path: `${sectionId}/${nodePath}`,
+          tagName: newNode.meta?.tagName,
+        })
+      }
+
+      // Compare meta values (href, src, etc.)
+      if (newNode.meta && oldNode.meta) {
+        for (const [metaKey, newVal] of Object.entries(newNode.meta)) {
+          if (metaKey === "tagName" || metaKey === "name") continue
+          const oldVal = oldNode.meta[metaKey]
+          if (oldVal !== undefined && oldVal !== newVal) {
+            const dedupKey = `${newNode.elementType}:${metaKey}:${oldVal}:${newVal}`
+            if (seen.has(dedupKey)) continue
+            seen.add(dedupKey)
+            changes.push({
+              elementType: newNode.elementType,
+              key: metaKey,
+              oldValue: oldVal,
+              newValue: newVal,
+              path: `${sectionId}/${nodePath}`,
+              tagName: newNode.meta?.tagName,
+            })
+          }
+        }
+      }
+    }
+  }
+
+  return changes
+}
+
+/**
  * Quick check: has the English content changed since the manifest was stamped?
  */
 export function hasEnglishChanged(
