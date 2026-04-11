@@ -20,6 +20,10 @@ on:
         required: false
         default: "dev"
         type: string
+      translation_branch:
+        description: "Override translation branch (default: intl/pending)"
+        required: false
+        type: string
       concurrency:
         description: "Max parallel Gemini requests per language"
         required: false
@@ -43,10 +47,6 @@ on:
         options:
           - auto
           - full
-      translation_branch:
-        description: "Override translation branch (default: intl/pending)"
-        required: false
-        type: string
       stamp_only:
         description: "Update manifests only, no translations"
         required: false
