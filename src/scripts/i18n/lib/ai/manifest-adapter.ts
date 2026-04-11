@@ -158,18 +158,23 @@ export function detectDrift(
 }
 
 /**
- * Extract specific inert value changes from two parsed trees for the given
- * section IDs. Walks each section in both trees, compares inert nodes by
- * path, and returns InertChange objects for values that differ.
+ * Extract specific inert value changes from two parsed trees.
  *
- * Requires both trees to be freshly parsed (not deserialized) for correct
- * contentType and value data.
+ * Handles two cases:
+ * 1. sectionIds: sections with same ID in both trees (inertDrift)
+ *    -> matched by path within section
+ * 2. renamePairs: sections with different IDs (removed+added = rename)
+ *    -> matched by DFS order within section (handles index shifts)
+ *
+ * Requires both trees to be freshly parsed (not deserialized).
  */
 export function extractInertChangesFromTrees(
   oldContent: string,
   newContent: string,
   format: "markdown" | "json",
-  sectionIds: string[]
+  sectionIds: string[],
+  renamePairs: Array<{ oldId: string; newId: string }> = [],
+  structuralSectionIds: string[] = []
 ): Array<{
   elementType: string
   key: string
@@ -177,6 +182,9 @@ export function extractInertChangesFromTrees(
   newValue: string
   path: string
   tagName?: string
+  action?: "update" | "add-attribute" | "remove-node" | "add-node"
+  nodeText?: string
+  insertAfter?: string
 }> {
   const parse = (content: string): TreeNode =>
     format === "markdown"
@@ -195,7 +203,8 @@ export function extractInertChangesFromTrees(
     return undefined
   }
 
-  const collectInert = (
+  /** Collect inert nodes with full path keys */
+  const collectInertByPath = (
     node: TreeNode,
     prefix: string
   ): Map<string, TreeNode> => {
@@ -205,24 +214,212 @@ export function extractInertChangesFromTrees(
       map.set(path, node)
     }
     for (const child of node.children) {
-      for (const [k, v] of collectInert(child, path)) {
+      for (const [k, v] of collectInertByPath(child, path)) {
         map.set(k, v)
       }
     }
     return map
   }
 
-  const changes: Array<{
+  /** Collect inert nodes in DFS order (for position-based matching) */
+  const collectInertOrdered = (node: TreeNode): TreeNode[] => {
+    const result: TreeNode[] = []
+    if (node.contentType === "inert") {
+      result.push(node)
+    }
+    for (const child of node.children) {
+      result.push(...collectInertOrdered(child))
+    }
+    return result
+  }
+
+  type Change = {
     elementType: string
     key: string
     oldValue: string
     newValue: string
     path: string
     tagName?: string
-  }> = []
+    action?: "update" | "add-attribute" | "remove-node" | "add-node"
+    nodeText?: string
+    insertAfter?: string
+  }
+
+  const changes: Change[] = []
   const seen = new Set<string>()
 
-  // Process most specific sections first (deepest in tree) to avoid dupes
+  const addChange = (c: Change): void => {
+    const dedupKey = `${c.elementType}:${c.key}:${c.oldValue}:${c.newValue}`
+    if (seen.has(dedupKey)) return
+    seen.add(dedupKey)
+    changes.push(c)
+  }
+
+  const compareNodes = (
+    oldNode: TreeNode,
+    newNode: TreeNode,
+    path: string
+  ): void => {
+    // Compare value
+    if (
+      newNode.value !== undefined &&
+      oldNode.value !== undefined &&
+      newNode.value !== oldNode.value
+    ) {
+      addChange({
+        elementType: newNode.elementType,
+        key: newNode.meta?.name || newNode.elementType,
+        oldValue: oldNode.value,
+        newValue: newNode.value,
+        path,
+        tagName: newNode.meta?.tagName,
+      })
+    }
+
+    // Compare meta values (href, src, etc.)
+    if (newNode.meta && oldNode.meta) {
+      for (const [metaKey, newVal] of Object.entries(newNode.meta)) {
+        if (metaKey === "tagName" || metaKey === "name") continue
+        const oldVal = oldNode.meta[metaKey]
+        if (oldVal !== undefined && oldVal !== newVal) {
+          // Changed meta value
+          addChange({
+            elementType: newNode.elementType,
+            key: metaKey,
+            oldValue: oldVal,
+            newValue: newVal,
+            path,
+            tagName: newNode.meta?.tagName,
+          })
+        } else if (oldVal === undefined) {
+          // New attribute added
+          addChange({
+            elementType: newNode.elementType,
+            key: metaKey,
+            oldValue: "",
+            newValue: newVal,
+            path,
+            tagName: newNode.meta?.tagName,
+            action: "add-attribute",
+          })
+        }
+      }
+    }
+  }
+
+  /** Collect ALL nodes (not just inert) in DFS order for structural comparison */
+  const collectAllOrdered = (
+    node: TreeNode
+  ): Array<{ node: TreeNode; isLeaf: boolean }> => {
+    const result: Array<{ node: TreeNode; isLeaf: boolean }> = []
+    const isLeaf = node.children.length === 0
+    if (node.nodeType === "element") {
+      result.push({ node, isLeaf })
+    }
+    for (const child of node.children) {
+      result.push(...collectAllOrdered(child))
+    }
+    return result
+  }
+
+  /** Detect removed and added nodes between two sections */
+  const detectStructuralChanges = (
+    oldSection: TreeNode,
+    newSection: TreeNode,
+    sectionPath: string
+  ): void => {
+    const oldElements = collectAllOrdered(oldSection)
+    const newElements = collectAllOrdered(newSection)
+
+    // Build sets of element signatures for comparison
+    const oldSigs = new Map<string, TreeNode>()
+    for (const { node } of oldElements) {
+      const sig = nodeSignature(node)
+      if (sig) oldSigs.set(sig, node)
+    }
+
+    const newSigs = new Map<string, TreeNode>()
+    for (const { node } of newElements) {
+      const sig = nodeSignature(node)
+      if (sig) newSigs.set(sig, node)
+    }
+
+    // Nodes in old but not new = removed
+    for (const [sig, node] of oldSigs) {
+      if (newSigs.has(sig)) continue
+      if (node.elementType === "component" && node.meta?.tagName) {
+        addChange({
+          elementType: node.elementType,
+          key: node.meta.tagName,
+          oldValue: node.meta.tagName,
+          newValue: "",
+          path: sectionPath,
+          tagName: node.meta.tagName,
+          action: "remove-node",
+        })
+      }
+    }
+
+    // Nodes in new but not old = added (only inert ones)
+    for (const [sig, node] of newSigs) {
+      if (oldSigs.has(sig)) continue
+      // Code fences with non-markdown language
+      if (node.elementType === "code-body" && node.value) {
+        const lang = node.meta?.language || ""
+        if (lang && lang !== "markdown" && lang !== "md" && lang !== "mdx") {
+          // Find the preceding element to determine insertion point
+          const idx = newElements.findIndex((e) => e.node === node)
+          let anchor = ""
+          if (idx > 0) {
+            const prev = newElements[idx - 1].node
+            if (prev.meta?.tagName) anchor = `<${prev.meta.tagName}`
+            else if (prev.value) anchor = prev.value.substring(0, 40)
+          }
+          const fenceText = "```" + lang + "\n" + node.value + "\n```"
+          addChange({
+            elementType: node.elementType,
+            key: "code-fence",
+            oldValue: "",
+            newValue: fenceText,
+            path: sectionPath,
+            tagName: lang,
+            action: "add-node",
+            nodeText: fenceText,
+            insertAfter: anchor,
+          })
+        }
+      }
+    }
+  }
+
+  /** Create a signature string for a node for set comparison */
+  /** Find the parent component's tagName for a given child node */
+  const findParentTagName = (
+    root: TreeNode,
+    target: TreeNode
+  ): string | undefined => {
+    for (const child of root.children) {
+      if (child === target) return root.meta?.tagName
+      const found = findParentTagName(child, target)
+      if (found) return found
+    }
+    return undefined
+  }
+
+  const nodeSignature = (node: TreeNode): string | null => {
+    if (node.elementType === "component" && node.meta?.tagName) {
+      // Self-closing components like <Divider />
+      if (node.children.length === 0 && !node.value) {
+        return `component:${node.meta.tagName}`
+      }
+    }
+    if (node.elementType === "code-body" && node.value) {
+      return `code-body:${node.meta?.language}:${node.value.substring(0, 50)}`
+    }
+    return null
+  }
+
+  // Case 1: Same-ID sections (inertDrift) -- match by path
   const sorted = [...sectionIds].sort(
     (a, b) => b.split("/").length - a.split("/").length
   )
@@ -232,55 +429,86 @@ export function extractInertChangesFromTrees(
     const newSection = findSection(newTree, sectionId)
     if (!oldSection || !newSection) continue
 
-    const oldNodes = collectInert(oldSection, "")
-    const newNodes = collectInert(newSection, "")
+    const oldNodes = collectInertByPath(oldSection, "")
+    const newNodes = collectInertByPath(newSection, "")
 
     for (const [nodePath, newNode] of newNodes) {
       const oldNode = oldNodes.get(nodePath)
       if (!oldNode) continue
+      compareNodes(oldNode, newNode, `${sectionId}/${nodePath}`)
+    }
 
-      // Compare value
-      if (
-        newNode.value !== undefined &&
-        oldNode.value !== undefined &&
-        newNode.value !== oldNode.value
-      ) {
-        // Dedup by elementType + old + new value
-        const dedupKey = `${newNode.elementType}:${oldNode.value}:${newNode.value}`
-        if (seen.has(dedupKey)) continue
-        seen.add(dedupKey)
-        const key = newNode.meta?.name || newNode.elementType
-        changes.push({
-          elementType: newNode.elementType,
-          key,
-          oldValue: oldNode.value,
-          newValue: newNode.value,
-          path: `${sectionId}/${nodePath}`,
-          tagName: newNode.meta?.tagName,
-        })
-      }
+    // Structural changes within same-ID sections
+    detectStructuralChanges(oldSection, newSection, sectionId)
+  }
 
-      // Compare meta values (href, src, etc.)
-      if (newNode.meta && oldNode.meta) {
-        for (const [metaKey, newVal] of Object.entries(newNode.meta)) {
-          if (metaKey === "tagName" || metaKey === "name") continue
-          const oldVal = oldNode.meta[metaKey]
-          if (oldVal !== undefined && oldVal !== newVal) {
-            const dedupKey = `${newNode.elementType}:${metaKey}:${oldVal}:${newVal}`
-            if (seen.has(dedupKey)) continue
-            seen.add(dedupKey)
-            changes.push({
-              elementType: newNode.elementType,
-              key: metaKey,
-              oldValue: oldVal,
-              newValue: newVal,
-              path: `${sectionId}/${nodePath}`,
-              tagName: newNode.meta?.tagName,
+  // Case 1b: Structural sections -- only detect added/removed elements
+  for (const sectionId of structuralSectionIds) {
+    if (sectionIds.includes(sectionId)) continue // already processed
+    const oldSection = findSection(oldTree, sectionId)
+    const newSection = findSection(newTree, sectionId)
+    if (!oldSection || !newSection) continue
+    detectStructuralChanges(oldSection, newSection, sectionId)
+  }
+
+  // Case 2: Renamed sections -- match by DFS order + element type
+  for (const { oldId, newId } of renamePairs) {
+    const oldSection = findSection(oldTree, oldId)
+    const newSection = findSection(newTree, newId)
+    if (!oldSection || !newSection) continue
+
+    const oldNodes = collectInertOrdered(oldSection)
+    const newNodes = collectInertOrdered(newSection)
+
+    // Group by elementType + key for ordered matching
+    const oldByTypeKey = new Map<string, TreeNode[]>()
+    for (const node of oldNodes) {
+      const key = `${node.elementType}:${node.meta?.name || ""}`
+      if (!oldByTypeKey.has(key)) oldByTypeKey.set(key, [])
+      oldByTypeKey.get(key)!.push(node)
+    }
+
+    const newByTypeKey = new Map<string, TreeNode[]>()
+    for (const node of newNodes) {
+      const key = `${node.elementType}:${node.meta?.name || ""}`
+      if (!newByTypeKey.has(key)) newByTypeKey.set(key, [])
+      newByTypeKey.get(key)!.push(node)
+    }
+
+    // Match by position within each type+key group
+    for (const [typeKey, newGroup] of newByTypeKey) {
+      const oldGroup = oldByTypeKey.get(typeKey)
+      if (!oldGroup) {
+        // New attribute type -- detect as add-attribute
+        for (const node of newGroup) {
+          if (
+            node.elementType === "component-attribute" &&
+            node.value &&
+            node.meta?.name
+          ) {
+            // Find parent component tag name
+            const parentTag = findParentTagName(newSection, node)
+            addChange({
+              elementType: node.elementType,
+              key: node.meta.name,
+              oldValue: "",
+              newValue: node.value,
+              path: `${newId}/${typeKey}`,
+              tagName: parentTag,
+              action: "add-attribute",
             })
           }
         }
+        continue
+      }
+      const limit = Math.min(oldGroup.length, newGroup.length)
+      for (let i = 0; i < limit; i++) {
+        compareNodes(oldGroup[i], newGroup[i], `${newId}/${typeKey}:${i}`)
       }
     }
+
+    // Structural changes within renamed sections
+    detectStructuralChanges(oldSection, newSection, newId)
   }
 
   return changes

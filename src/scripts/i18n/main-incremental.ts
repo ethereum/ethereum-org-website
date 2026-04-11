@@ -191,6 +191,7 @@ async function main() {
     translationManifest: LocaleTranslationManifest | null
     localeContent: string
     oldEnglishContent: string | null
+    detectedRenames: Array<{ oldId: string; newId: string }>
   }> = []
 
   // Cache old English content per file (same across locales)
@@ -332,6 +333,7 @@ async function main() {
         translationManifest,
         localeContent,
         oldEnglishContent: oldEnglishCache.get(file.path) ?? null,
+        detectedRenames: [],
       })
     }
   }
@@ -591,6 +593,9 @@ async function main() {
           }
         }
 
+        // Store renames for Phase 4b inert propagation
+        task.detectedRenames = renames
+
         // Apply heading ID renames in locale file
         if (renames.length > 0 && task.file.type === "markdown") {
           for (const { oldId, newId } of renames) {
@@ -659,12 +664,26 @@ async function main() {
 
     // Phase 4b: Inert Propagation
     // Deterministic replacement of inert values (URLs, attributes, etc.)
-    // in locale files. No LLM needed.
-    if (totalInert > 0) {
-      logSection("Phase 4b: Inert Propagation")
+    // in locale files. No LLM needed. Also handles inert changes inside
+    // renamed sections (detected in Phase 4).
+    {
+      const hasInert = fileLanguageTasks.some(
+        (t) =>
+          t.drift.inertDrift.length > 0 ||
+          t.detectedRenames.length > 0 ||
+          (t.drift.structuralDrift?.length || 0) > 0
+      )
+      if (hasInert) {
+        logSection("Phase 4b: Inert Propagation")
+      }
 
       for (const task of fileLanguageTasks) {
-        if (task.drift.inertDrift.length === 0) continue
+        if (
+          task.drift.inertDrift.length === 0 &&
+          task.detectedRenames.length === 0 &&
+          (task.drift.structuralDrift?.length || 0) === 0
+        )
+          continue
         if (!task.oldEnglishContent) {
           console.warn(
             `  [${task.locale}] ${task.file.path}: no old English content, skipping inert propagation`
@@ -673,11 +692,16 @@ async function main() {
         }
 
         const sectionIds = task.drift.inertDrift.map((e) => e.id)
+        const structuralIds = (task.drift.structuralDrift || []).map(
+          (e) => e.id
+        )
         const inertChanges = extractInertChangesFromTrees(
           task.oldEnglishContent,
           task.file.content,
           task.file.type,
-          sectionIds
+          sectionIds,
+          task.detectedRenames,
+          structuralIds
         )
 
         if (inertChanges.length === 0) {

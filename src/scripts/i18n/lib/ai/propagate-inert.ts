@@ -39,6 +39,12 @@ export interface InertChange {
   path: string
   /** Component tag name (e.g., "YouTube", "InfoBanner") */
   tagName?: string
+  /** Action type: update (default), add-attribute, remove-node, add-node */
+  action?: "update" | "add-attribute" | "remove-node" | "add-node"
+  /** For add-node: the full text to insert */
+  nodeText?: string
+  /** For add-node: anchor text to insert after (heading, component, etc.) */
+  insertAfter?: string
 }
 
 // ---------------------------------------------------------------------------
@@ -83,6 +89,95 @@ function applyInertChangesMarkdown(
   const skipped: InertChange[] = []
 
   for (const change of changes) {
+    const action = change.action || "update"
+
+    if (action === "remove-node") {
+      // Remove a component/element from the locale file
+      const scope = extractSectionScope(content, change.path)
+      const slice = content.substring(scope.start, scope.end)
+      // Match the full line containing the component (self-closing or standalone)
+      const pattern = new RegExp(
+        `^[ \\t]*<${escapeRegex(change.oldValue)}\\s*\\/?>\\s*\\n?`,
+        "m"
+      )
+      const replaced = slice.replace(pattern, "")
+      if (replaced !== slice) {
+        content =
+          content.substring(0, scope.start) +
+          replaced +
+          content.substring(scope.end)
+        applied.push(change)
+      } else {
+        skipped.push(change)
+      }
+      continue
+    }
+
+    if (action === "add-attribute") {
+      // Add a new attribute to an existing component tag
+      const scope = extractSectionScope(content, change.path)
+      const slice = content.substring(scope.start, scope.end)
+      // Find the component tag and add the attribute before the closing >
+      const tagPattern = new RegExp(
+        `(<${escapeRegex(change.tagName || "")}\\b)([^>]*)(>)`,
+        ""
+      )
+      const replaced = slice.replace(
+        tagPattern,
+        `$1$2 ${change.key}="${change.newValue}"$3`
+      )
+      if (replaced !== slice) {
+        content =
+          content.substring(0, scope.start) +
+          replaced +
+          content.substring(scope.end)
+        applied.push(change)
+      } else {
+        skipped.push(change)
+      }
+      continue
+    }
+
+    if (action === "add-node") {
+      // Insert a new block (code fence, component, etc.) at the right position
+      const scope = extractSectionScope(content, change.path)
+      if (change.insertAfter) {
+        // Insert after the anchor line
+        const slice = content.substring(scope.start, scope.end)
+        const anchorIdx = slice.indexOf(change.insertAfter)
+        if (anchorIdx !== -1) {
+          // Find end of the anchor line
+          const lineEnd = slice.indexOf("\n", anchorIdx)
+          const insertPos =
+            lineEnd !== -1 ? scope.start + lineEnd + 1 : scope.end
+          content =
+            content.substring(0, insertPos) +
+            "\n" +
+            change.nodeText +
+            "\n" +
+            content.substring(insertPos)
+          applied.push(change)
+        } else {
+          skipped.push(change)
+        }
+      } else {
+        // Insert at start of section (after heading)
+        const slice = content.substring(scope.start, scope.end)
+        const firstNewline = slice.indexOf("\n")
+        const insertPos =
+          firstNewline !== -1 ? scope.start + firstNewline + 1 : scope.start
+        content =
+          content.substring(0, insertPos) +
+          "\n" +
+          change.nodeText +
+          "\n" +
+          content.substring(insertPos)
+        applied.push(change)
+      }
+      continue
+    }
+
+    // Default: update existing value
     const scope = extractSectionScope(content, change.path)
     const occurrence = extractOccurrenceIndex(change.path, change.elementType)
 
