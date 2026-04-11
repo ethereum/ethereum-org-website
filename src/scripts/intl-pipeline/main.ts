@@ -24,6 +24,7 @@ import i18nConfig from "../../../i18n.config.json"
 
 import { isGeminiAvailable } from "./lib/ai/gemini"
 import { callGeminiRaw, translateFile } from "./lib/ai/gemini-translate"
+import { filterGlossaryFlat } from "./lib/ai/glossary-lookup"
 import {
   buildIncrementalPrompt,
   buildSectionList,
@@ -77,6 +78,29 @@ function readSourceManifestPath(
     )
   }
   return path.join(process.cwd(), `src/intl/${locale}/.manifest-source.json`)
+}
+
+const GLOSSARY_DIR = path.join(process.cwd(), "src/scripts/i18n/data/glossary")
+const GLOSSARY_FILE = path.join(GLOSSARY_DIR, "glossary-terms-enhanced.json")
+const GLOSSARY_TRANSLATIONS_DIR = path.join(GLOSSARY_DIR, "translations")
+
+function loadGlossary(
+  fileContent: string,
+  fileType: "markdown" | "json",
+  locale: string
+): Map<string, string> {
+  try {
+    if (!fs.existsSync(GLOSSARY_FILE)) return new Map()
+    return filterGlossaryFlat(
+      fileContent,
+      fileType,
+      locale,
+      GLOSSARY_FILE,
+      GLOSSARY_TRANSLATIONS_DIR
+    )
+  } catch {
+    return new Map()
+  }
 }
 
 function readLocalePath(
@@ -140,12 +164,19 @@ async function buildGeminiTranslator(
     ? (langEntry as { code: string; name: string }).name
     : locale
 
+  // Load glossary for this locale
+  const glossaryTerms = loadGlossary(englishContent, fileType, locale)
+  if (config.verbose && glossaryTerms.size > 0) {
+    log(`  Glossary: ${glossaryTerms.size} terms for ${locale}`)
+  }
+
   // Build batched prompt
   const prompt = buildIncrementalPrompt({
     filePath,
     targetLanguage: locale,
     languageName,
     sections: sectionList,
+    glossaryTerms,
   })
 
   log(`  Calling Gemini: ${translateCount} sections, ${prompt.length} chars`)
@@ -227,12 +258,17 @@ async function runFullTranslation(
 ) {
   log(`[${locale}] ${file.path}: full translation...`)
 
+  const glossaryTerms = loadGlossary(file.content, file.type, locale)
+  if (config.verbose && glossaryTerms.size > 0) {
+    log(`[${locale}] Glossary: ${glossaryTerms.size} terms`)
+  }
+
   const result = await translateFile({
     filePath: file.path,
     fileContent: file.content,
     fileType: file.type,
     targetLanguage: locale,
-    glossaryTerms: new Map(),
+    glossaryTerms,
     useNormalizer: file.type === "markdown",
   })
 
