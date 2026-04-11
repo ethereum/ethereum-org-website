@@ -527,49 +527,104 @@ async function main() {
       )
     }
 
-    // Phase 4: Remove deleted content
-    // Removals use heading IDs for markdown (removeMarkdownSection matches {#id})
-    // and key paths for JSON.
+    // Phase 4: Remove deleted content + detect heading ID renames
+    // A heading ID rename (e.g., {#old-id} -> {#new-id} with same content)
+    // shows up as removed + added. We detect this by matching removed/added
+    // entries that share the same parent path and have unchanged content.
+    // Renames update the {#id} in the locale file. True removals delete.
     if (totalRemoved > 0) {
       logSection("Phase 4: Remove Deleted Content")
 
       for (const task of fileLanguageTasks) {
         if (task.drift.removed.length === 0) continue
-        const removedIds = task.drift.removed.map((e) => e.id)
 
-        if (task.file.type === "json") {
-          try {
-            const obj = JSON.parse(task.localeContent)
-            for (const id of removedIds) {
-              const parts = id.split("/")
-              let target = obj
-              for (let i = 0; i < parts.length - 1; i++) {
-                if (target[parts[i]] && typeof target[parts[i]] === "object") {
-                  target = target[parts[i]]
-                } else {
-                  target = null as unknown as Record<string, unknown>
-                  break
-                }
-              }
-              if (target) {
-                delete target[parts[parts.length - 1]]
-              }
-            }
-            task.localeContent = JSON.stringify(obj, null, 2) + "\n"
-          } catch {
-            console.warn(
-              `  [${task.locale}] ${task.file.path}: failed to parse JSON for removal`
-            )
-          }
-        } else {
-          for (const id of removedIds) {
-            task.localeContent = removeMarkdownSection(task.localeContent, id)
+        // Detect heading ID renames: match removed against added by parent path
+        const addedByParent = new Map<string, (typeof task.drift.added)[0]>()
+        for (const entry of task.drift.added) {
+          const parent = entry.path.substring(0, entry.path.lastIndexOf("/"))
+          addedByParent.set(parent, entry)
+        }
+
+        const trueRemovals: string[] = []
+        const renames: Array<{ oldId: string; newId: string }> = []
+
+        for (const removed of task.drift.removed) {
+          const parent = removed.path.substring(
+            0,
+            removed.path.lastIndexOf("/")
+          )
+          const matchingAdded = addedByParent.get(parent)
+          if (matchingAdded && !removed.contentHashChanged) {
+            renames.push({ oldId: removed.id, newId: matchingAdded.id })
+            addedByParent.delete(parent)
+          } else {
+            trueRemovals.push(removed.id)
           }
         }
 
-        console.log(
-          `  [${task.locale}] ${task.file.path}: removed ${removedIds.length} deleted section(s): ${removedIds.join(", ")}`
-        )
+        // Apply heading ID renames in locale file
+        if (renames.length > 0 && task.file.type === "markdown") {
+          for (const { oldId, newId } of renames) {
+            const pattern = new RegExp(
+              `(^#{1,6}\\s+.+?)\\{#${oldId}\\}(\\s*)$`,
+              "m"
+            )
+            const replaced = task.localeContent.replace(
+              pattern,
+              `$1{#${newId}}$2`
+            )
+            if (replaced !== task.localeContent) {
+              task.localeContent = replaced
+              console.log(
+                `  [${task.locale}] ${task.file.path}: renamed heading {#${oldId}} -> {#${newId}}`
+              )
+            } else {
+              console.warn(
+                `  [${task.locale}] ${task.file.path}: heading {#${oldId}} not found in locale file for rename`
+              )
+            }
+          }
+        }
+
+        // Apply true removals
+        if (trueRemovals.length > 0) {
+          if (task.file.type === "json") {
+            try {
+              const obj = JSON.parse(task.localeContent)
+              for (const id of trueRemovals) {
+                const parts = id.split("/")
+                let target = obj
+                for (let i = 0; i < parts.length - 1; i++) {
+                  if (
+                    target[parts[i]] &&
+                    typeof target[parts[i]] === "object"
+                  ) {
+                    target = target[parts[i]]
+                  } else {
+                    target = null as unknown as Record<string, unknown>
+                    break
+                  }
+                }
+                if (target) {
+                  delete target[parts[parts.length - 1]]
+                }
+              }
+              task.localeContent = JSON.stringify(obj, null, 2) + "\n"
+            } catch {
+              console.warn(
+                `  [${task.locale}] ${task.file.path}: failed to parse JSON for removal`
+              )
+            }
+          } else {
+            for (const id of trueRemovals) {
+              task.localeContent = removeMarkdownSection(task.localeContent, id)
+            }
+          }
+
+          console.log(
+            `  [${task.locale}] ${task.file.path}: removed ${trueRemovals.length} deleted section(s): ${trueRemovals.join(", ")}`
+          )
+        }
       }
     }
 
