@@ -43,8 +43,8 @@ on:
         options:
           - auto
           - full
-      translation_branch:
-        description: "Override translation branch (default: intl/pending)"
+      target_branch:
+        description: "Override target branch (default: intl/pending)"
         required: false
         type: string
       stamp_only:
@@ -80,12 +80,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: "Run translation (auto-detect full vs incremental)"
-        if: ${{ github.event.inputs.mode != 'full' }}
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main-incremental.ts
+      - name: Run translation pipeline
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/main.ts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
+          GITHUB_API_TOKEN: ${{ secrets.I18N_GITHUB_TOKEN }}
           TARGET_PATH: ${{ github.event.inputs.target_path }}
           EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}
           TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
@@ -93,23 +92,8 @@ jobs:
           GEMINI_CONCURRENCY: ${{ github.event.inputs.concurrency }}
           SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
           VERBOSE: ${{ github.event.inputs.verbose }}
+          MODE: ${{ github.event.inputs.mode }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          TRANSLATION_BRANCH: ${{ github.event.inputs.translation_branch }}
+          TARGET_BRANCH: ${{ github.event.inputs.target_branch }}
           STAMP_ONLY: ${{ github.event.inputs.stamp_only }}
           DRY_RUN: "false"
-
-      - name: Run Gemini translation (force full retranslation)
-        if: ${{ github.event.inputs.mode == 'full' }}
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/main-gemini.ts
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          I18N_GITHUB_API_KEY: ${{ secrets.I18N_GITHUB_TOKEN }}
-          TARGET_PATH: ${{ github.event.inputs.target_path }}
-          EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}
-          TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
-          BASE_BRANCH: ${{ github.event.inputs.base_branch }}
-          GEMINI_CONCURRENCY: ${{ github.event.inputs.concurrency }}
-          SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
-          VERBOSE: ${{ github.event.inputs.verbose }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          TRANSLATION_PIPELINE: Gemini

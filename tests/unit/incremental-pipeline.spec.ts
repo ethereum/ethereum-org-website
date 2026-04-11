@@ -12,16 +12,18 @@
  * LLM is mocked: returns corresponding sections from locale-B fixtures.
  */
 
-import { expect, test } from "@playwright/test"
-import { readFileSync } from "node:fs"
-import { join } from "node:path"
 import {
-  parseMarkdown,
-  parseJson,
+  type ContentTreeConfig,
   diff,
   extractChanges,
-  type ContentTreeConfig,
+  parseJson,
+  parseMarkdown,
 } from "intl-content-tree"
+import { readFileSync } from "node:fs"
+import { join } from "node:path"
+import { expect, test } from "@playwright/test"
+
+import { pipeline } from "../../src/scripts/intl-pipeline"
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -35,34 +37,33 @@ const EN_B_MD = read("english/fixture-b.md")
 const EN_A_JSON = read("english/fixture-a.json")
 const EN_B_JSON = read("english/fixture-b.json")
 
-const locA = (lang: string, ext: string) => read(`locale-a/${lang}/fixture.${ext}`)
-const locB = (lang: string, ext: string) => read(`locale-b/${lang}/fixture.${ext}`)
+const locA = (lang: string, ext: string) =>
+  read(`locale-a/${lang}/fixture.${ext}`)
+const locB = (lang: string, ext: string) =>
+  read(`locale-b/${lang}/fixture.${ext}`)
 
 const CONFIG: Partial<ContentTreeConfig> = {
   depth: "element",
   translatableAttributes: [
-    "title", "description", "alt", "label", "aria-label",
-    "placeholder", "buttonLabel", "name", "caption",
-    "contentPreview", "location",
+    "title",
+    "description",
+    "alt",
+    "label",
+    "aria-label",
+    "placeholder",
+    "buttonLabel",
+    "name",
+    "caption",
+    "contentPreview",
+    "location",
   ],
 }
 
 const LANGS = ["es", "ko", "ur"] as const
 
 // ---------------------------------------------------------------------------
-// Pipeline function -- replace with real implementation
+// Pipeline: imported from src/scripts/intl-pipeline
 // ---------------------------------------------------------------------------
-
-function pipeline(
-  englishA: string,
-  englishB: string,
-  localeA: string,
-  format: "markdown" | "json",
-  llmMock?: (sectionId: string, englishContent: string) => string
-): string {
-  void englishA; void englishB; void localeA; void format; void llmMock
-  throw new Error("Pipeline not implemented. Wire the real function here.")
-}
 
 // ===================================================================
 // PHASE 1: Change Detection -- passes now (package only)
@@ -98,10 +99,18 @@ test.describe("Phase 1: Markdown change detection", () => {
 
   test("7 translatableDrift entries (includes parent sections)", () => {
     expect(dr.translatableDrift).toHaveLength(7)
-    expect(dr.translatableDrift.some((e) => e.id === "frontmatter:description")).toBe(true)
-    expect(dr.translatableDrift.some((e) => e.id === "copyleft-licenses")).toBe(true)
-    expect(dr.translatableDrift.some((e) => e.id === "permissive-licenses")).toBe(true)
-    expect(dr.translatableDrift.some((e) => e.id === "the-four-freedoms")).toBe(true)
+    expect(
+      dr.translatableDrift.some((e) => e.id === "frontmatter:description")
+    ).toBe(true)
+    expect(dr.translatableDrift.some((e) => e.id === "copyleft-licenses")).toBe(
+      true
+    )
+    expect(
+      dr.translatableDrift.some((e) => e.id === "permissive-licenses")
+    ).toBe(true)
+    expect(dr.translatableDrift.some((e) => e.id === "the-four-freedoms")).toBe(
+      true
+    )
   })
 
   test("2 added entries", () => {
@@ -143,37 +152,54 @@ test.describe("Phase 1: Markdown change detection", () => {
 
   test("specific inert changes detected", () => {
     // M4: OSI href
-    expect(cs.changes.some((c) =>
-      c.oldValue === "https://opensource.org/osd" &&
-      c.newValue === "https://opensource.org/osd/annotated"
-    )).toBe(true)
+    expect(
+      cs.changes.some(
+        (c) =>
+          c.oldValue === "https://opensource.org/osd" &&
+          c.newValue === "https://opensource.org/osd/annotated"
+      )
+    ).toBe(true)
 
     // M5: inline code LICENSE -> LICENSE.md
-    expect(cs.changes.some((c) =>
-      c.elementType === "inline-code" && c.oldValue === "LICENSE" && c.newValue === "LICENSE.md"
-    )).toBe(true)
+    expect(
+      cs.changes.some(
+        (c) =>
+          c.elementType === "inline-code" &&
+          c.oldValue === "LICENSE" &&
+          c.newValue === "LICENSE.md"
+      )
+    ).toBe(true)
 
     // M6: choosealicense href
-    expect(cs.changes.some((c) =>
-      c.oldValue === "https://choosealicense.com/" &&
-      c.newValue === "https://choosealicense.com/?lang=en"
-    )).toBe(true)
+    expect(
+      cs.changes.some(
+        (c) =>
+          c.oldValue === "https://choosealicense.com/" &&
+          c.newValue === "https://choosealicense.com/?lang=en"
+      )
+    ).toBe(true)
   })
 
   test("specific translatable changes detected", () => {
     // M10: solidity code comment
-    expect(cs.changes.some((c) =>
-      c.contentType === "translatable" &&
-      c.elementType === "code-comment" &&
-      c.oldValue?.includes("demonstrates a simple registry")
-    )).toBe(true)
+    expect(
+      cs.changes.some(
+        (c) =>
+          c.contentType === "translatable" &&
+          c.elementType === "code-comment" &&
+          c.oldValue?.includes("demonstrates a simple registry")
+      )
+    ).toBe(true)
 
     // M9: InfoBanner title attr
-    expect(cs.changes.some((c) =>
-      c.key === "title" &&
-      c.oldValue === "Important distinction" &&
-      c.newValue === "Key concept"
-    )).toBe(true)
+    expect(
+      cs.changes.some(
+        (c) =>
+          c.key === "title" &&
+          c.oldValue === "Important distinction" &&
+          c.newValue === "Key concept"
+      )
+    ).toBe(true)
   })
 })
 
@@ -224,24 +250,30 @@ test.describe("Phase 1: JSON change detection", () => {
   })
 
   test("ICU variable renames detected", () => {
-    expect(cs.changes.some((c) =>
-      c.elementType === "icu-variable" && c.path.includes("welcome-user")
-    )).toBe(true)
-    expect(cs.changes.some((c) =>
-      c.elementType === "icu-variable" && c.path.includes("project-count")
-    )).toBe(true)
+    expect(
+      cs.changes.some(
+        (c) =>
+          c.elementType === "icu-variable" && c.path.includes("welcome-user")
+      )
+    ).toBe(true)
+    expect(
+      cs.changes.some(
+        (c) =>
+          c.elementType === "icu-variable" && c.path.includes("project-count")
+      )
+    ).toBe(true)
   })
 
   test("HTML href changes in values detected", () => {
-    expect(cs.changes.some((c) =>
-      c.key === "href" && c.path.includes("banner-text")
-    )).toBe(true)
-    expect(cs.changes.some((c) =>
-      c.key === "href" && c.path.includes("footer-note")
-    )).toBe(true)
-    expect(cs.changes.some((c) =>
-      c.key === "href" && c.path.includes("multi-link")
-    )).toBe(true)
+    expect(
+      cs.changes.some((c) => c.key === "href" && c.path.includes("banner-text"))
+    ).toBe(true)
+    expect(
+      cs.changes.some((c) => c.key === "href" && c.path.includes("footer-note"))
+    ).toBe(true)
+    expect(
+      cs.changes.some((c) => c.key === "href" && c.path.includes("multi-link"))
+    ).toBe(true)
   })
 })
 
@@ -280,12 +312,20 @@ test.describe("Phase 2: Routing", () => {
       (p) => !paths.some((o) => o !== p && o.startsWith(p + "/"))
     )
     // Leaves should include the deepest sections, not their parents
-    expect(leaves).toContain("understanding-open-source-licensing/what-is-open-source/the-four-freedoms")
-    expect(leaves).toContain("understanding-open-source-licensing/choosing-a-license/copyleft-licenses")
-    expect(leaves).toContain("understanding-open-source-licensing/choosing-a-license/permissive-licenses")
+    expect(leaves).toContain(
+      "understanding-open-source-licensing/what-is-open-source/the-four-freedoms"
+    )
+    expect(leaves).toContain(
+      "understanding-open-source-licensing/choosing-a-license/copyleft-licenses"
+    )
+    expect(leaves).toContain(
+      "understanding-open-source-licensing/choosing-a-license/permissive-licenses"
+    )
     // Parents should NOT be leaves
     expect(leaves).not.toContain("understanding-open-source-licensing")
-    expect(leaves).not.toContain("understanding-open-source-licensing/choosing-a-license")
+    expect(leaves).not.toContain(
+      "understanding-open-source-licensing/choosing-a-license"
+    )
   })
 })
 
@@ -295,7 +335,6 @@ test.describe("Phase 2: Routing", () => {
 
 for (const lang of LANGS) {
   test.describe(`Pipeline output [${lang}] Markdown`, () => {
-
     // --- Inert changes (deterministic, no LLM) ---
 
     test("M1: frontmatter image path updated", () => {
@@ -341,8 +380,8 @@ for (const lang of LANGS) {
 
     test("M19: AlertEmoji text :eyes:", () => {
       const result = pipeline(EN_A_MD, EN_B_MD, locA(lang, "md"), "markdown")
-      expect(result).toContain(':eyes:')
-      expect(result).not.toContain(':mag:')
+      expect(result).toContain(":eyes:")
+      expect(result).not.toContain(":mag:")
     })
 
     test("M22: YouTube id spec-fixture-002", () => {
@@ -445,65 +484,86 @@ for (const lang of LANGS) {
   })
 
   test.describe(`Pipeline output [${lang}] JSON`, () => {
-
     test("J3: banner-text href /getting-started/", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       expect(result["banner-text"]).toContain("/contributing/getting-started/")
       expect(result["banner-text"]).not.toContain('"/contributing/"')
     })
 
     test("J4: footer-note href ?sortBy=name", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       expect(result["footer-note"]).toContain("?sortBy=name")
     })
 
     test("J5: ICU {username} -> {displayName}", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       expect(result["welcome-user"]).toContain("{displayName}")
       expect(result["welcome-user"]).not.toContain("{username}")
     })
 
     test("J6: ICU {count} -> {total}", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       expect(result["project-count"]).toContain("{total,")
       expect(result["project-count"]).not.toContain("{count,")
     })
 
     test("J8: multi-link third href spdx.org/licenses/", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       expect(result["multi-link"]).toContain("spdx.org/licenses/")
     })
 
     test("J9: new-key added", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       expect(result["new-key"]).toBeDefined()
     })
 
     test("J10: empty-results removed", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       expect(result["empty-results"]).toBeUndefined()
     })
 
     test("unchanged: page-title preserved from locale-A", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       const orig = JSON.parse(locA(lang, "json"))
       expect(result["page-title"]).toBe(orig["page-title"])
     })
 
     test("unchanged: hero-cta-primary preserved from locale-A", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       const orig = JSON.parse(locA(lang, "json"))
       expect(result["hero-cta-primary"]).toBe(orig["hero-cta-primary"])
     })
 
     test("unchanged: contribution-status preserved from locale-A", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       const orig = JSON.parse(locA(lang, "json"))
       expect(result["contribution-status"]).toBe(orig["contribution-status"])
     })
 
     test("unchanged: filter-label preserved from locale-A", () => {
-      const result = JSON.parse(pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json"))
+      const result = JSON.parse(
+        pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json")
+      )
       const orig = JSON.parse(locA(lang, "json"))
       expect(result["filter-label"]).toBe(orig["filter-label"])
     })
@@ -536,11 +596,18 @@ for (const lang of ["ko", "ur"] as const) {
 for (const lang of LANGS) {
   test(`E2E [${lang}] markdown: output matches locale-B`, () => {
     const expected = locB(lang, "md")
-    const result = pipeline(EN_A_MD, EN_B_MD, locA(lang, "md"), "markdown",
+    const result = pipeline(
+      EN_A_MD,
+      EN_B_MD,
+      locA(lang, "md"),
+      "markdown",
       (sectionId, _englishContent) => {
         // Mock LLM: extract section from locale-B by heading ID
         const lb = locB(lang, "md")
-        const pattern = new RegExp(`(^#{1,6}\\s+[^\\n]*\\{#${sectionId}\\}[^\\n]*$)`, "m")
+        const pattern = new RegExp(
+          `(^#{1,6}\\s+[^\\n]*\\{#${sectionId}\\}[^\\n]*$)`,
+          "m"
+        )
         const match = lb.match(pattern)
         if (!match) return _englishContent
         const start = lb.indexOf(match[0])
@@ -553,7 +620,11 @@ for (const lang of LANGS) {
 
   test(`E2E [${lang}] JSON: output matches locale-B`, () => {
     const expected = locB(lang, "json")
-    const result = pipeline(EN_A_JSON, EN_B_JSON, locA(lang, "json"), "json",
+    const result = pipeline(
+      EN_A_JSON,
+      EN_B_JSON,
+      locA(lang, "json"),
+      "json",
       (key, _englishContent) => {
         const lb = JSON.parse(locB(lang, "json"))
         return lb[key] ?? _englishContent
