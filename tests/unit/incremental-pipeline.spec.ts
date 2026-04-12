@@ -41,6 +41,8 @@ const locA = (lang: string, ext: string) =>
   read(`locale-a/${lang}/fixture.${ext}`)
 const locB = (lang: string, ext: string) =>
   read(`locale-b/${lang}/fixture.${ext}`)
+const locExpected = (lang: string, ext: string) =>
+  read(`locale-expected/${lang}/fixture.${ext}`)
 
 const CONFIG: Partial<ContentTreeConfig> = {
   depth: "element",
@@ -590,12 +592,12 @@ for (const lang of ["ko", "ur"] as const) {
 }
 
 // ===================================================================
-// E2E: full pipeline produces locale-B -- fails until implemented
+// E2E: full pipeline output matches expected fixtures
 // ===================================================================
 
 for (const lang of LANGS) {
-  test(`E2E [${lang}] markdown: output matches locale-B`, () => {
-    const expected = locB(lang, "md")
+  test(`E2E [${lang}] markdown: output matches expected`, () => {
+    const expected = locExpected(lang, "md")
     const result = pipeline(
       EN_A_MD,
       EN_B_MD,
@@ -618,8 +620,8 @@ for (const lang of LANGS) {
     expect(result).toBe(expected)
   })
 
-  test(`E2E [${lang}] JSON: output matches locale-B`, () => {
-    const expected = locB(lang, "json")
+  test(`E2E [${lang}] JSON: output matches expected`, () => {
+    const expected = locExpected(lang, "json")
     const result = pipeline(
       EN_A_JSON,
       EN_B_JSON,
