@@ -7,6 +7,7 @@
  * for separate translation.
  */
 
+import { MAX_CHUNK_BYTES } from "../../constants"
 import { FENCED_BLOCK_RE, FRONTMATTER_RE } from "../shared-patterns"
 
 /** A single extracted code block */
@@ -511,6 +512,152 @@ function splitAtHeadings(text: string, headingPrefix: string): string[] {
   const re = new RegExp(`(?=^${escaped})`, "gm")
   const parts = text.split(re).filter((s) => s.trim())
   return parts
+}
+
+// ---------------------------------------------------------------------------
+// Byte-size-aware markdown chunking (CONCURRENCY-SPEC.md Part 2B)
+// ---------------------------------------------------------------------------
+
+/**
+ * Chunk markdown prose by byte size. Uses heading boundaries first,
+ * then paragraph boundaries for oversized sections. Each chunk of a
+ * split section includes the heading for context.
+ *
+ * Guarantees:
+ * - At least 1 paragraph per chunk (even if it exceeds budget)
+ * - Code fences are not split mid-fence
+ * - Heading context preserved in each chunk of a split section
+ */
+export function chunkMarkdownProse(
+  prose: string,
+  maxBytes: number = MAX_CHUNK_BYTES
+): string[] {
+  if (Buffer.byteLength(prose, "utf-8") <= maxBytes) return [prose]
+
+  // Extract frontmatter if present
+  let frontmatter = ""
+  let body = prose
+  const fmMatch = prose.match(FRONTMATTER_RE)
+  if (fmMatch) {
+    frontmatter = fmMatch[1]
+    body = prose.slice(fmMatch[1].length)
+  }
+
+  const fmBytes = Buffer.byteLength(frontmatter, "utf-8")
+  const chunks = splitByByteSize(body, maxBytes - fmBytes, 2)
+
+  // Prepend frontmatter to the first chunk only
+  if (frontmatter && chunks.length > 0) {
+    chunks[0] = frontmatter + chunks[0]
+  }
+
+  // Filter out empty chunks
+  return chunks.filter((c) => c.trim().length > 0)
+}
+
+/**
+ * Recursively split at heading boundaries, falling back to paragraphs.
+ * Uses byte size instead of character count.
+ */
+function splitByByteSize(
+  text: string,
+  maxBytes: number,
+  headingLevel: number
+): string[] {
+  if (Buffer.byteLength(text, "utf-8") <= maxBytes) return [text]
+
+  // Try splitting at current heading level
+  if (headingLevel <= 6) {
+    const headingPrefix = "#".repeat(headingLevel) + " "
+    const sections = splitAtHeadings(text, headingPrefix)
+
+    if (sections.length > 1) {
+      const result: string[] = []
+      for (const section of sections) {
+        if (Buffer.byteLength(section, "utf-8") <= maxBytes) {
+          result.push(section)
+        } else {
+          result.push(...splitByByteSize(section, maxBytes, headingLevel + 1))
+        }
+      }
+      return result
+    }
+
+    return splitByByteSize(text, maxBytes, headingLevel + 1)
+  }
+
+  // Exhausted heading levels -- split at paragraph boundaries
+  // Ensure code fences stay intact by treating fenced blocks as atomic units
+  const blocks = splitIntoBlocks(text)
+  if (blocks.length > 1) {
+    const result: string[] = []
+    let current = ""
+    // Extract heading from the first line if present (for context in each chunk)
+    const headingMatch = text.match(/^(#{1,6}\s+[^\n]*\{#[^}]+\}[^\n]*)\n/)
+    const headingContext = headingMatch ? headingMatch[1] : ""
+
+    for (const block of blocks) {
+      const candidateBytes = Buffer.byteLength(
+        current ? current + "\n\n" + block : block,
+        "utf-8"
+      )
+      if (candidateBytes > maxBytes && current) {
+        result.push(current)
+        // Prepend heading context to continuation chunks
+        current = headingContext ? headingContext + "\n\n" + block : block
+      } else {
+        current = current ? current + "\n\n" + block : block
+      }
+    }
+    if (current) result.push(current)
+    return result
+  }
+
+  // Last resort: return as single chunk (minimum guarantee)
+  return [text]
+}
+
+/**
+ * Split text into blocks at blank lines, keeping code fences atomic.
+ * A code fence (```...```) is never split across blocks.
+ */
+function splitIntoBlocks(text: string): string[] {
+  const lines = text.split("\n")
+  const blocks: string[] = []
+  let current: string[] = []
+  let inFence = false
+
+  for (const line of lines) {
+    if (line.startsWith("```")) {
+      inFence = !inFence
+      current.push(line)
+      continue
+    }
+
+    if (inFence) {
+      current.push(line)
+      continue
+    }
+
+    if (line.trim() === "" && current.length > 0) {
+      // Blank line outside fence: potential split point
+      const lastNonEmpty = current[current.length - 1]?.trim()
+      if (lastNonEmpty === "") {
+        // Consecutive blank lines -- just add
+        current.push(line)
+      } else {
+        // End of block
+        blocks.push(current.join("\n"))
+        current = []
+      }
+    } else {
+      current.push(line)
+    }
+  }
+  if (current.length > 0) {
+    blocks.push(current.join("\n"))
+  }
+  return blocks
 }
 
 // Re-export getCommentSyntax for restoreComments callers

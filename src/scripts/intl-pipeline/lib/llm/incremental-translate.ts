@@ -537,3 +537,74 @@ export type {
   IncrementalTranslateResult,
   SectionForPrompt,
 }
+
+// ---------------------------------------------------------------------------
+// Byte-size-aware section batching (CONCURRENCY-SPEC.md Part 2C)
+// ---------------------------------------------------------------------------
+
+import { MAX_CHUNK_BYTES } from "../../constants"
+
+/**
+ * Split sections into batches that fit within the byte budget.
+ * CONTEXT sections are replicated into every batch for quality.
+ * Only TRANSLATE sections count toward splitting decisions.
+ *
+ * Returns empty array if there are no TRANSLATE sections.
+ */
+export function batchSections(
+  sections: Array<{
+    id: string
+    content: string
+    action: "TRANSLATE" | "CONTEXT"
+  }>,
+  maxBytes: number = MAX_CHUNK_BYTES
+): Array<
+  Array<{ id: string; content: string; action: "TRANSLATE" | "CONTEXT" }>
+> {
+  const contextSections = sections.filter((s) => s.action === "CONTEXT")
+  const translateSections = sections.filter((s) => s.action === "TRANSLATE")
+
+  if (translateSections.length === 0) return []
+
+  const contextBytes = contextSections.reduce(
+    (sum, s) => sum + Buffer.byteLength(s.content, "utf-8"),
+    0
+  )
+
+  // Budget for TRANSLATE content per batch = total budget - context overhead
+  const translateBudget = Math.max(maxBytes - contextBytes, 1)
+
+  const batches: Array<
+    Array<{ id: string; content: string; action: "TRANSLATE" | "CONTEXT" }>
+  > = []
+  let currentTranslate: Array<{
+    id: string
+    content: string
+    action: "TRANSLATE" | "CONTEXT"
+  }> = []
+  let currentBytes = 0
+
+  for (const section of translateSections) {
+    const sectionBytes = Buffer.byteLength(section.content, "utf-8")
+
+    // If adding this section exceeds budget AND we already have sections, start new batch
+    if (
+      currentTranslate.length > 0 &&
+      currentBytes + sectionBytes > translateBudget
+    ) {
+      batches.push([...contextSections, ...currentTranslate])
+      currentTranslate = []
+      currentBytes = 0
+    }
+
+    currentTranslate.push(section)
+    currentBytes += sectionBytes
+  }
+
+  // Push remaining
+  if (currentTranslate.length > 0) {
+    batches.push([...contextSections, ...currentTranslate])
+  }
+
+  return batches
+}
