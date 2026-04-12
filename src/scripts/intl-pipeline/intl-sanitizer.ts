@@ -1601,16 +1601,22 @@ interface HeaderInfo {
 
 function extractHeaderStructure(md: string): HeaderInfo[] {
   const headers: HeaderInfo[] = []
-  // Match headings with or without {#id}
-  const headingRe = /^(#{1,6})\s+(.+?)(?:\s*\{#([^}]+)\})?[ \t]*$/gm
-  let m: RegExpExecArray | null
-  while ((m = headingRe.exec(md))) {
-    headers.push({
-      level: m[1].length,
-      text: m[2].trim(),
-      id: (m[3] || "").trim(),
-      fullMatch: m[0],
-    })
+  let inFence = false
+  for (const line of md.split("\n")) {
+    if (line.startsWith("```")) {
+      inFence = !inFence
+      continue
+    }
+    if (inFence) continue
+    const m = line.match(/^(#{1,6})\s+(.+?)(?:\s*\{#([^}]+)\})?[ \t]*$/)
+    if (m) {
+      headers.push({
+        level: m[1].length,
+        text: m[2].trim(),
+        id: (m[3] || "").trim(),
+        fullMatch: m[0],
+      })
+    }
   }
   return headers
 }
