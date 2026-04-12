@@ -1,78 +1,78 @@
 ---
-title: Understanding ETH Supply and Issuance
-description: A beginner-friendly guide to ETH supply and issuance, covering key concepts such as EIPs, PoS, and EIP-1559.
-lang: en
+title: ความเข้าใจเกี่ยวกับอุปทานและการออกเหรียญ ETH
+description: คู่มือสำหรับผู้เริ่มต้นเกี่ยวกับอุปทานและการออกเหรียญ ETH ครอบคลุมแนวคิดสำคัญอย่าง EIPs, PoS และ EIP-1559
+lang: th
 ---
 
-# ETH Supply and Issuance {#eth-supply-and-issuance}
+# อุปทานและการออกเหรียญ ETH {#eth-supply-and-issuance}
 
-## Prerequisites {#prerequisites}
+## ความรู้พื้นฐานที่ควรมี {#prerequisites}
 
-This article is written for beginners with no prior knowledge. However, to fully understand the topic, it is helpful to have a basic understanding of concepts such as [Ethereum Improvement Proposals (EIPs)](/eips/#introduction-to-ethereum-improvement-proposals), [Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/), [Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/), and [The London Upgrade](/ethereum-forks/#london).
+บทความนี้เขียนขึ้นสำหรับผู้เริ่มต้นที่ไม่มีความรู้มาก่อน อย่างไรก็ตาม เพื่อความเข้าใจที่ครบถ้วน การมีความรู้พื้นฐานเกี่ยวกับแนวคิดเหล่านี้จะช่วยได้มาก: [ข้อเสนอการปรับปรุง Ethereum (EIPs)](/eips/#introduction-to-ethereum-improvement-proposals), [Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/), [Proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/) และ [การอัปเกรด London](/ethereum-forks/#london)
 
-## How Many ETH Tokens Are There Today? {#current-eth-supply}
+## ปัจจุบันมีเหรียญ ETH อยู่จำนวนเท่าใด? {#current-eth-supply}
 
-The total supply of ETH is dynamic and changes constantly due to two main factors:
+จำนวนอุปทานทั้งหมดของ ETH นั้นมีความยืดหยุ่นและเปลี่ยนแปลงตลอดเวลาเนื่องจากปัจจัยหลักสองประการ:
 
-1. **Proof-of-Stake (PoS) Issuance**: New ETH is created as rewards for validators who secure the network
-2. **EIP-1559 Burning**: A portion of transaction fees are permanently removed from circulation
+1. **การออกเหรียญผ่าน Proof-of-Stake (PoS)**: เหรียญ ETH ใหม่จะถูกสร้างขึ้นเพื่อเป็นรางวัลสำหรับผู้ตรวจสอบความถูกต้อง (Validators) ที่ช่วยดูแลความปลอดภัยของเครือข่าย
+2. **การเผาเหรียญตาม EIP-1559**: ค่าธรรมเนียมธุรกรรมส่วนหนึ่งจะถูกนำออกจากระบบอย่างถาวร (Burning)
 
-You can track the current supply and these changes in real-time on platforms like [Ultrasound Money](https://ultrasound.money).
+คุณสามารถติดตามอุปทานปัจจุบันและการเปลี่ยนแปลงเหล่านี้ได้แบบเรียลไทม์บนแพลตฟอร์มอย่าง [Ultrasound Money](https://ultrasound.money)
 
-Ethereum's supply and issuance are essential metrics for understanding the health and future of the network. But what exactly does ETH issuance mean? Let's break it down.
+อุปทานและการออกเหรียญของ Ethereum เป็นตัวชี้วัดสำคัญในการทำความเข้าใจสุขภาพและอนาคตของเครือข่าย แต่ "การออกเหรียญ ETH" หมายถึงอะไรกันแน่? เรามาลองย่อยข้อมูลกัน
 
-## Why ETH Supply and Issuance Matter {#why-eth-supply-matters}
+## ทำไมอุปทานและการออกเหรียญ ETH ถึงสำคัญ {#why-eth-supply-matters}
 
-In traditional finance, central banks control the supply of money, often printing more to stimulate economies. Ethereum, on the other hand, operates on a transparent and predictable system governed by its code. Knowing how many ETH exist and how quickly new ETH is issued helps:
+ในระบบการเงินแบบดั้งเดิม ธนาคารกลางจะควบคุมอุปทานของเงินและมักจะพิมพ์เงินเพิ่มเพื่อกระตุ้นเศรษฐกิจ ในทางกลับกัน Ethereum ดำเนินการบนระบบที่โปร่งใสและคาดการณ์ได้ซึ่งควบคุมโดยโค้ด การทราบจำนวน ETH ที่มีอยู่และความเร็วในการออกเหรียญใหม่ช่วยในเรื่อง:
 
-- **Build Trust**: The Ethereum community can verify supply and issuance data directly from the blockchain.
-- **Understand Value**: The relationship between issuance and ETH burn rates impacts ETH's inflation or deflation, influencing its value over time.
-- **Track Network Health**: Changes in issuance and burn rates reflect the activity and security of the network.
+- **การสร้างความเชื่อมั่น**: ชุมชน Ethereum สามารถตรวจสอบข้อมูลอุปทานและการออกเหรียญได้โดยตรงจากบล็อกเชน
+- **การทำความเข้าใจมูลค่า**: ความสัมพันธ์ระหว่างการออกเหรียญและอัตราการเผา ETH ส่งผลต่อภาวะเงินเฟ้อหรือเงินฝืดของ ETH ซึ่งมีอิทธิพลต่อมูลค่าของเหรียญเมื่อเวลาผ่านไป
+- **การติดตามสุขภาพของเครือข่าย**: การเปลี่ยนแปลงของการออกเหรียญและอัตราการเผาสะท้อนถึงกิจกรรมและความปลอดภัยของเครือข่าย
 
-## What is ETH Issuance? {#eth-issuance}
+## การออกเหรียญ ETH คืออะไร? {#eth-issuance}
 
-ETH issuance refers to the process of creating new ETH as rewards for validators who secure the Ethereum network. It's separate from total supply, which is the total amount of ETH in circulation.
+การออกเหรียญ ETH (Issuance) หมายถึงกระบวนการสร้าง ETH ใหม่เพื่อเป็นรางวัลแก่ผู้ตรวจสอบความถูกต้อง (Validators) ที่ดูแลเครือข่าย Ethereum ซึ่งเป็นคนละส่วนกับ "อุปทานทั้งหมด" (Total Supply) ที่หมายถึงจำนวน ETH ทั้งหมดที่หมุนเวียนอยู่ในระบบ
 
-### In simple terms:
-- **Issuance** adds new ETH to the network.
-- **Burning** (introduced by EIP-1559) removes ETH from the network by destroying a portion of the transaction fees.
+### อธิบายง่ายๆ:
+- **การออกเหรียญ (Issuance)**: คือการเติม ETH ใหม่เข้าสู่เครือข่าย
+- **การเผาเหรียญ (Burning)**: (เริ่มใช้โดย EIP-1559) คือการนำ ETH ออกจากเครือข่ายโดยการทำลายค่าธรรมเนียมธุรกรรมส่วนหนึ่ง
 
-These two forces determine whether Ethereum's supply grows (inflationary) or shrinks (deflationary) over time.
+แรงขับเคลื่อนทั้งสองนี้จะเป็นตัวกำหนดว่าอุปทานของ Ethereum จะเติบโตขึ้น (เงินเฟ้อ) หรือลดลง (เงินฝืด) เมื่อเวลาผ่านไป
 
-## ETH Supply and Issuance Today {#eth-supply-today}
+## อุปทานและการออกเหรียญ ETH ในปัจจุบัน {#eth-supply-today}
 
-Ethereum's Proof-of-Stake (PoS) system has drastically reduced ETH issuance compared to its earlier Proof-of-Work (PoW) model. Validators—who lock up ETH to secure the network—earn ETH as rewards. You can see the current issuance rate on [Ultrasound Money](https://ultrasound.money).
+ระบบ Proof-of-Stake (PoS) ของ Ethereum ได้ลดการออกเหรียญ ETH ลงอย่างมหาศาลเมื่อเทียบกับรูปแบบ Proof-of-Work (PoW) เดิม โดยผู้ตรวจสอบความถูกต้องที่ทำการล็อก (Staking) เหรียญ ETH เพื่อรักษาความปลอดภัยเครือข่ายจะได้รับรางวัลเป็น ETH คุณสามารถดูอัตราการออกเหรียญปัจจุบันได้ที่ [Ultrasound Money](https://ultrasound.money)
 
-However, this number is dynamic. Thanks to EIP-1559, when network activity is high, ETH burn rates can surpass issuance, creating a deflationary effect. For example, during periods of high demand, like NFT launches or DeFi activity, more ETH may be burned than issued.
+อย่างไรก็ตาม ตัวเลขนี้มีการเปลี่ยนแปลงตลอดเวลา ด้วย EIP-1559 เมื่อเครือข่ายมีกิจกรรมสูง อัตราการเผา ETH อาจสูงกว่าการออกเหรียญใหม่ ทำให้เกิดสภาวะเงินฝืด ตัวอย่างเช่น ในช่วงที่มีความต้องการใช้งานสูง เช่น การเปิดตัว NFT หรือกิจกรรม DeFi อัตราการเผา ETH อาจมากกว่าการออกเหรียญใหม่
 
-### Tools to Track ETH Supply and Issuance:
-- [Ultrasound Money](https://ultrasound.money) - Real-time tracking of ETH supply, issuance, and burn rates
-- [Etherscan](https://etherscan.io) - Block explorer with supply metrics
+### เครื่องมือสำหรับติดตามอุปทานและการออกเหรียญ ETH:
+- [Ultrasound Money](https://ultrasound.money) - ติดตามอุปทาน การออกเหรียญ และอัตราการเผา ETH แบบเรียลไทม์
+- [Etherscan](https://etherscan.io) - บล็อกเอกซ์พลอเรอร์สำหรับดูข้อมูลอุปทาน
 
-## Factors Influencing Future ETH Supply and Issuance {#future-eth-supply}
+## ปัจจัยที่มีผลต่ออุปทานและการออกเหรียญ ETH ในอนาคต {#future-eth-supply}
 
-Ethereum's future supply isn't fixed—it depends on several variables:
+อุปทานในอนาคตของ Ethereum ไม่ได้คงที่ แต่ขึ้นอยู่กับตัวแปรหลายประการ:
 
-1. **Staking Participation**: 
-   - More validators joining the network means more ETH rewards are distributed.
-   - Fewer validators participating may decrease issuance.
-   - Learn more about [staking](/staking/).
+1. **การมีส่วนร่วมในการ Staking**: 
+   - ยิ่งมีผู้ตรวจสอบความถูกต้องเข้าร่วมเครือข่ายมากขึ้น รางวัล ETH ที่ถูกกระจายออกไปก็จะมากขึ้นตามไปด้วย
+   - หากมีผู้เข้าร่วม Staking น้อยลง การออกเหรียญใหม่อาจลดลง
+   - เรียนรู้เพิ่มเติมเกี่ยวกับ [การ Staking](/staking/)
 
-2. **Network Activity**:
-   - High transaction volumes lead to more ETH being burned, potentially offsetting or exceeding issuance.
-   - Read about [gas fees](/developers/docs/gas/) and how they affect burning.
+2. **กิจกรรมบนเครือข่าย**:
+   - ปริมาณธุรกรรมที่สูงนำไปสู่การเผา ETH ที่มากขึ้น ซึ่งอาจช่วยชดเชยหรือสูงกว่าจำนวนการออกเหรียญใหม่
+   - อ่านเกี่ยวกับ [ค่าแก๊ส (Gas fees)](/developers/docs/gas/) และผลกระทบต่อการเผาเหรียญ
 
-3. **Protocol Upgrades**:
-   - Future changes to Ethereum's code could adjust staking rewards or burning mechanisms, further shaping supply dynamics.
-   - Stay updated with the [Ethereum roadmap](/roadmap/).
+3. **การอัปเกรดโปรโตคอล**:
+   - การเปลี่ยนแปลงโค้ดของ Ethereum ในอนาคตอาจมีการปรับปรุงรางวัลการ Staking หรือกลไกการเผาเหรียญ ซึ่งจะส่งผลต่อพลวัตของอุปทานต่อไป
+   - ติดตามข้อมูลล่าสุดได้ที่ [แผนงานของ Ethereum (Roadmap)](/roadmap/)
 
-## Recap: ETH Supply, Issuance, and What's Next {#recap}
+## บทสรุป: อุปทาน ETH, การออกเหรียญ และสิ่งที่จะเกิดขึ้นต่อไป {#recap}
 
-Here's a quick summary of what you need to know about ETH supply and issuance:
+นี่คือสรุปสั้นๆ เกี่ยวกับสิ่งที่คุณต้องรู้:
 
-- **ETH Supply**: Dynamic and constantly changing, trackable in real-time through tools like [Ultrasound Money](https://ultrasound.money)
-- **Issuance Under PoS**: Significantly reduced compared to PoW, with rewards going to validators. See current rates on [Ultrasound Money](https://ultrasound.money)
-- **EIP-1559's Role**: ETH burning can make the network deflationary during periods of high activity
-- **Future Trends**: Staking participation, network demand, and protocol updates will all shape ETH supply
+- **อุปทาน ETH**: มีความยืดหยุ่นและเปลี่ยนแปลงตลอดเวลา ตรวจสอบได้แบบเรียลไทม์ผ่าน [Ultrasound Money](https://ultrasound.money)
+- **การออกเหรียญภายใต้ PoS**: ลดลงอย่างมากเมื่อเทียบกับ PoW โดยรางวัลจะมอบให้แก่ผู้ตรวจสอบความถูกต้อง
+- **บทบาทของ EIP-1559**: การเผา ETH สามารถทำให้เครือข่ายเกิดภาวะเงินฝืดในช่วงที่มีการใช้งานสูง
+- **แนวโน้มในอนาคต**: การมีส่วนร่วมในการ Staking, ความต้องการใช้งานเครือข่าย และการอัปเกรดโปรโตคอล ล้วนเป็นปัจจัยกำหนดอุปทานของ ETH
 
-Understanding ETH issuance helps demystify the value of Ethereum and its potential as a deflationary, decentralized asset. For more detailed information about how The Merge impacted ETH supply, check out our [detailed breakdown](/roadmap/merge/issuance/). Curious about the future of ETH? Dive deeper with tools like [Ultrasound Money](https://ultrasound.money) or explore our [staking guides](/staking/).
+การทำความเข้าใจการออกเหรียญ ETH ช่วยให้เห็นภาพมูลค่าของ Ethereum และศักยภาพในการเป็นสินทรัพย์แบบกระจายศูนย์ที่มีสภาวะเงินฝืด สำหรับข้อมูลเพิ่มเติมเกี่ยวกับผลกระทบของ The Merge ต่ออุปทาน ETH สามารถดูได้ที่ [รายละเอียดเชิงลึก](/roadmap/merge/issuance/) หรือสำรวจคู่มือ [การ Staking](/staking/) ของเรา
