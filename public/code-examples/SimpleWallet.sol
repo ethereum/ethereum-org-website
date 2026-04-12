@@ -1,32 +1,8 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.1;
+### 🛡️ โปรเจกต์ตัวอย่าง: SimpleWallet (Smart Contract)
 
-// This is a smart contract - a program that can be deployed to the Ethereum blockchain.
-contract SimpleWallet {
-    // An 'address' is comparable to an email address - it's used to identify an account on Ethereum.
-    address payable private owner;
+สัญญาอัจฉริยะชุดนี้จำลองการทำงานของกระเป๋าเงินบน Ethereum/Base:
 
-    // Events allow for logging of activity on the blockchain.
-    // Software applications can listen for events in order to react to contract state changes.
-    event LogDeposit(uint amount, address indexed sender);
-    event LogWithdrawal(uint amount, address indexed recipient);
-
-	// When this contract is deployed, set the deploying address as the owner of the contract.
-    constructor() {
-        owner = payable(msg.sender);
-    }
-
-    // Send ETH from the function caller to the SimpleWallet contract
-    function deposit() public payable {
-        require(msg.value > 0, "Must send ETH.");
-        emit LogDeposit(msg.value, msg.sender);
-    }
-
-    // Send ETH from the SimpleWallet contract to a chosen recipient
-    function withdraw(uint amount, address payable recipient) public {
-        require(msg.sender == owner, "Only the owner of this wallet can withdraw.");
-        require(address(this).balance >= amount, "Not enough funds.");
-        emit LogWithdrawal(amount, recipient);
-        recipient.transfer(amount);
-    }
-}
+1. **ระบบเจ้าของคนเดียว:** ใช้กลไก Constructor เพื่อระบุตัวตนเจ้าของกระเป๋าตั้งแต่วันแรกที่เริ่มใช้งาน
+2. **การบันทึกข้อมูล (Logging):** ใช้ Event เพื่อให้แอปพลิเคชันภายนอกสามารถติดตามการเคลื่อนไหวของเงินได้แบบ Real-time
+3. **การป้องกันความปลอดภัย:** - มีการตรวจสอบสิทธิ์การเข้าถึง (Access Control) ก่อนการถอนเงินทุกครั้ง
+   - ตรวจสอบยอดคงเหลือในสัญญาก่อนทำธุรกรรมเพื่อป้องกันข้อผิดพลาดของระบบ
