@@ -9,14 +9,16 @@
 
 import { expect, test } from "@playwright/test"
 
+import { MAX_CHUNK_BYTES } from "../../../src/scripts/intl-pipeline/constants"
+import { chunkMarkdownProse } from "../../../src/scripts/intl-pipeline/lib/llm/code-block-extractor"
+import { batchSections } from "../../../src/scripts/intl-pipeline/lib/llm/incremental-translate"
 // ---------------------------------------------------------------------------
-// TODO: Replace stubs with real imports once implemented
+// Imports -- real for implemented modules, stubs for pending
 // ---------------------------------------------------------------------------
-// import { chunkJson, mergeJsonChunks, MAX_CHUNK_BYTES } from "../../../src/scripts/intl-pipeline/lib/llm/json-batcher"
-// import { chunkMarkdownProse } from "../../../src/scripts/intl-pipeline/lib/llm/code-block-extractor"
-// import { batchSections } from "../../../src/scripts/intl-pipeline/lib/llm/incremental-translate"
-
-const MAX_CHUNK_BYTES = 65_536
+import {
+  chunkJson,
+  mergeJsonBatches as mergeJsonChunks,
+} from "../../../src/scripts/intl-pipeline/lib/llm/json-batcher"
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -44,35 +46,6 @@ function makeMarkdownSections(count: number, sizePerSection: number): string {
 
 function byteSize(s: string): number {
   return Buffer.byteLength(s, "utf-8")
-}
-
-// Stubs -- throw until real implementations are wired in
-function chunkJson(jsonContent: string): string[] {
-  void jsonContent
-  throw new Error("chunkJson not implemented -- wire real import")
-}
-
-function mergeJsonChunks(chunks: string[]): string {
-  void chunks
-  throw new Error("mergeJsonChunks not implemented -- wire real import")
-}
-
-function chunkMarkdownProse(prose: string): string[] {
-  void prose
-  throw new Error("chunkMarkdownProse not implemented -- wire real import")
-}
-
-function batchSections(
-  sections: Array<{
-    id: string
-    content: string
-    action: "TRANSLATE" | "CONTEXT"
-  }>
-): Array<
-  Array<{ id: string; content: string; action: "TRANSLATE" | "CONTEXT" }>
-> {
-  void sections
-  throw new Error("batchSections not implemented -- wire real import")
 }
 
 // ===================================================================
@@ -150,14 +123,16 @@ test.describe("JSON chunking (byte-size-aware)", () => {
 
   test("nested objects measured as one unit", () => {
     const obj: Record<string, unknown> = {
-      simple: "short",
+      simple: "x".repeat(20_000),
       nested: {
-        a: "x".repeat(30_000),
-        b: "y".repeat(30_000),
+        a: "x".repeat(40_000),
+        b: "y".repeat(40_000),
       },
-      another: "also short",
+      another: "y".repeat(20_000),
     }
     const json = JSON.stringify(obj, null, 2)
+    // Total: ~120KB. "nested" alone is ~80KB (one unit, exceeds budget)
+    // Should split into at least 2 chunks
     const chunks = chunkJson(json)
     expect(chunks.length).toBeGreaterThanOrEqual(2)
   })

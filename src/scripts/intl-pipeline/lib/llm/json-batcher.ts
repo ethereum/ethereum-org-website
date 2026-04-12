@@ -161,7 +161,78 @@ export function needsBatching(jsonContent: string): boolean {
 }
 
 // ---------------------------------------------------------------------------
-// Batching
+// Byte-size-aware chunking (CONCURRENCY-SPEC.md Part 2A)
+// ---------------------------------------------------------------------------
+
+import { MAX_CHUNK_BYTES } from "../../constants"
+
+/**
+ * Chunk a JSON string by byte size. Each chunk is a valid JSON object
+ * containing a subset of top-level keys, with total byte size <= MAX_CHUNK_BYTES.
+ *
+ * Guarantees:
+ * - At least 1 key per chunk (even if that key exceeds the budget)
+ * - Key order preserved across chunks
+ * - Nested objects measured as one unit (not split)
+ */
+export function chunkJson(
+  jsonContent: string,
+  maxBytes: number = MAX_CHUNK_BYTES
+): string[] {
+  const parsed = JSON.parse(jsonContent) as Record<string, JsonValue>
+  const keys = Object.keys(parsed)
+
+  if (keys.length === 0) {
+    return [jsonContent]
+  }
+
+  // If total size is under budget, return as-is
+  if (Buffer.byteLength(jsonContent, "utf-8") <= maxBytes) {
+    return [jsonContent]
+  }
+
+  const chunks: string[][] = []
+  let currentChunkKeys: string[] = []
+  let currentBytes = 0
+  // Overhead: opening { + closing } + newline formatting
+  const JSON_OVERHEAD = 4
+
+  for (const key of keys) {
+    const valueJson = JSON.stringify(parsed[key])
+    // Byte cost: "key": value, + formatting (roughly: key + colon + space + value + comma + newline)
+    const entryBytes = Buffer.byteLength(
+      `  ${JSON.stringify(key)}: ${valueJson},\n`,
+      "utf-8"
+    )
+
+    // If adding this key exceeds budget AND we already have keys, start new chunk
+    if (currentChunkKeys.length > 0 && currentBytes + entryBytes > maxBytes) {
+      chunks.push(currentChunkKeys)
+      currentChunkKeys = []
+      currentBytes = JSON_OVERHEAD
+    }
+
+    currentChunkKeys.push(key)
+    currentBytes += entryBytes
+  }
+
+  // Push remaining keys
+  if (currentChunkKeys.length > 0) {
+    chunks.push(currentChunkKeys)
+  }
+
+  // Build JSON strings for each chunk
+  return chunks.map((chunkKeys) => {
+    const obj: Record<string, JsonValue> = {}
+    for (const k of chunkKeys) {
+      obj[k] = parsed[k]
+    }
+    return JSON.stringify(obj, null, 2)
+  })
+}
+
+// ---------------------------------------------------------------------------
+// Batching (legacy key-count approach)
 // ---------------------------------------------------------------------------
 
 function splitIntoBatches(
