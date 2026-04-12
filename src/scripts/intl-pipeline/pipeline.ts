@@ -16,25 +16,15 @@ import {
   parseMarkdown,
 } from "intl-content-tree"
 
+import { TRANSLATABLE_ATTRIBUTES } from "./lib/shared-patterns"
+
 // ---------------------------------------------------------------------------
 // Config
 // ---------------------------------------------------------------------------
 
 export const PIPELINE_CONFIG: Partial<ContentTreeConfig> = {
   depth: "element",
-  translatableAttributes: [
-    "title",
-    "description",
-    "alt",
-    "label",
-    "aria-label",
-    "placeholder",
-    "buttonLabel",
-    "name",
-    "caption",
-    "contentPreview",
-    "location",
-  ],
+  translatableAttributes: [...TRANSLATABLE_ATTRIBUTES],
 }
 
 // ---------------------------------------------------------------------------

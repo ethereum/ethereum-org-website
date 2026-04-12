@@ -4,9 +4,9 @@
 
 import { GoogleGenAI } from "@google/genai"
 
-import i18nConfig from "../../../../../i18n.config.json"
-import { GEMINI_MODELS } from "../../config"
-import { delay } from "../workflows/utils"
+import i18nConfig from "../../../../../../i18n.config.json"
+import { GEMINI_MODELS } from "../../../config"
+import { delay } from "../../workflows/utils"
 
 /** A single extracted attribute from a JSX component */
 export interface ExtractedAttribute {
@@ -24,7 +24,7 @@ export interface TranslatedAttribute extends ExtractedAttribute {
   translatedValue: string
 }
 
-import { createRateLimiter } from "./rate-limiter"
+import { createRateLimiter } from "../../utils/rate-limiter"
 
 /** Use first model from centralized config */
 const GEMINI_MODEL = GEMINI_MODELS[0]

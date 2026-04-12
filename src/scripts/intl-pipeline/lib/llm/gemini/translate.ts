@@ -7,10 +7,9 @@
 
 import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
-import i18nConfig from "../../../../../i18n.config.json"
-import { GEMINI_MODELS } from "../../config"
-import { delay } from "../workflows/utils"
-
+import i18nConfig from "../../../../../../i18n.config.json"
+import { GEMINI_MODELS } from "../../../config"
+import { delay } from "../../workflows/utils"
 import {
   chunkProse,
   type CodeBlock,
@@ -21,19 +20,19 @@ import {
   PROSE_SIZE_THRESHOLD,
   restoreCodeBlocks,
   restoreComments,
-} from "./code-block-extractor"
-import { type ContentNode, normalizeContent } from "./content-normalizer"
-import {
-  validateTranslatedJson,
-  validateTranslatedMarkdown,
-  type ValidationResult,
-} from "./gemini-output-validation"
+} from "../code-block-extractor"
+import { type ContentNode, normalizeContent } from "../content-normalizer"
 import {
   mergeJsonBatches,
   prepareJsonBatches,
   restoreJsonBatch,
-} from "./json-batcher"
-import { buildTranslationPrompt } from "./prompt-builder"
+} from "../json-batcher"
+import {
+  validateTranslatedJson,
+  validateTranslatedMarkdown,
+  type ValidationResult,
+} from "../output-validation"
+import { buildTranslationPrompt } from "../prompt-builder"
 
 // GEMINI_MODELS imported from ../../config
 const MAX_RETRIES = 3
