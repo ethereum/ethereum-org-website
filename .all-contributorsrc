@@ -14128,7 +14128,17 @@
         "tool"
       ]
     }
-  ],
+  ],    {
+      "log³in": "Pum482930",
+      "name": "Phonlawat Lakkasor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/Pum482930",
+      "profile": "https://github.com/Pum482930",
+      "contributions": [
+        "translation",
+        "review"
+      ]
+    }
+
   "contributorsPerLine": 7,
   "projectName": "ethereum-org-website",
   "projectOwner": "ethereum",
