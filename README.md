@@ -34,4 +34,17 @@ If you value my contributions to the Thai Web3 ecosystem, you can support me dir
 
 | Network | Address |
 | :--- | :--- |
-| **ETH
+| **ETH / Base / ARB** | `0x4971c0016ce3eb45a70d50b6627885524ee9961f` |
+
+---
+
+### 📫 Connect with Me
+* **Twitter/X:** [@KhsLak58447](https://x.com/KhsLak58447)
+* **Farcaster:** [@pump482930](https://farcaster.xyz/pump482930)
+* **HackenProof:** [Pum](https://hackenproof.com/hackers/Pum)
+* **GitHub:** [Pum482930](https://github.com/Pum482930)
+
+---
+
+### 🌐 Farcaster Verification
+*Verified via Farcaster: pump482930.eth / @pump482930*
