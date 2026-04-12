@@ -1,4 +1,4 @@
-// Post-import sanitization workflow phase
+// Translation output sanitization workflow phase
 
 import { runSanitizer } from "../../intl-sanitizer"
 import { batchCommitFiles, BatchFile } from "../github/commits"
@@ -7,24 +7,23 @@ import type { CommittedFile } from "./types"
 import { debugLog, logSection } from "./utils"
 
 export interface SanitizationResult {
-  /** Files that were modified by the sanitizer */
   changedFiles: CommittedFile[]
-  /** Total files processed */
   totalProcessed: number
 }
 
 /**
- * Run post-import sanitizer on committed files.
- * Updates committedFiles in-place with sanitized content.
+ * Sanitize translation output and commit fixes.
+ * Syncs heading IDs with English, normalizes formatting,
+ * protects brand names, validates structure.
  */
-export async function runPostImportSanitization(
+export async function sanitizeTranslations(
   committedFiles: CommittedFile[],
   branch: string,
   englishContentMap?: Map<string, string>
 ): Promise<SanitizationResult> {
-  logSection("Running Post-Import Sanitizer")
+  logSection("Sanitizing Translation Output")
 
-  console.log(`[SANITIZE] Processing ${committedFiles.length} committed files`)
+  console.log(`[sanitize] Processing ${committedFiles.length} files`)
 
   const sanitizeResult = await runSanitizer(
     committedFiles,
@@ -34,7 +33,7 @@ export async function runPostImportSanitization(
   const changedFiles = sanitizeResult.changedFiles || []
 
   if (changedFiles.length) {
-    console.log(`Sanitizer modified ${changedFiles.length} files`)
+    console.log(`[sanitize] Modified ${changedFiles.length} files`)
 
     const filesToCommit: BatchFile[] = []
 
@@ -44,7 +43,6 @@ export async function runPostImportSanitization(
       filesToCommit.push({ path: relPath, content: buf })
       debugLog(`Will commit sanitized file: ${relPath}`)
 
-      // Update committedFiles with sanitized content for validation
       const existingFile = committedFiles.find((f) => f.path === relPath)
       if (existingFile) {
         existingFile.content = file.content
@@ -55,14 +53,14 @@ export async function runPostImportSanitization(
       await batchCommitFiles(
         filesToCommit,
         branch,
-        `i18n: post-import sanitization`
+        `i18n: sanitize translation output`
       )
-      console.log(`✓ Committed ${changedFiles.length} sanitized files`)
+      console.log(`[sanitize] Committed ${changedFiles.length} sanitized files`)
     } catch (e) {
-      console.warn(`Failed to commit sanitized files:`, e)
+      console.warn(`[sanitize] Failed to commit:`, e)
     }
   } else {
-    console.log("No sanitization changes needed")
+    console.log("[sanitize] No changes needed")
   }
 
   return {

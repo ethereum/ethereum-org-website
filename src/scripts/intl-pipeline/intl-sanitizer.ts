@@ -16,18 +16,14 @@ async function loadFranc(): Promise<void> {
 }
 
 /**
- * Post-import sanitizer for Crowdin translations.
+ * Translation output sanitizer.
  *
  * - Synchronize custom Markdown header IDs `{#...}` with English source (ASCII-only)
  * - Normalize block HTML tag line breaks (opening and closing tags on their own lines)
  * - Protect known brand/team names from inadvertent translation
  * - Validate JSON files; report issues
  *
- * Usage:
- *   npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/post_import_sanitize.ts
- *
- * Env:
- *   TARGET_LANGUAGES (comma-separated, e.g. "es-EM") optional; defaults to scanning all `translations/*` folders
+ * Wired into the pipeline via lib/workflows/sanitization.ts
  */
 
 const ROOT = process.cwd()
