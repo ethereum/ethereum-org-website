@@ -12,9 +12,9 @@ import { expect, test } from "@playwright/test"
 // ---------------------------------------------------------------------------
 // TODO: Replace stubs with real imports once implemented
 // ---------------------------------------------------------------------------
-// import { chunkJson, mergeJsonChunks, MAX_CHUNK_BYTES } from "../../src/scripts/intl-pipeline/lib/llm/json-batcher"
-// import { chunkMarkdownProse } from "../../src/scripts/intl-pipeline/lib/llm/code-block-extractor"
-// import { batchSections } from "../../src/scripts/intl-pipeline/lib/llm/incremental-translate"
+// import { chunkJson, mergeJsonChunks, MAX_CHUNK_BYTES } from "../../../src/scripts/intl-pipeline/lib/llm/json-batcher"
+// import { chunkMarkdownProse } from "../../../src/scripts/intl-pipeline/lib/llm/code-block-extractor"
+// import { batchSections } from "../../../src/scripts/intl-pipeline/lib/llm/incremental-translate"
 
 const MAX_CHUNK_BYTES = 65_536
 

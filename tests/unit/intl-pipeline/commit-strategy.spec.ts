@@ -6,8 +6,8 @@
 
 import { test } from "@playwright/test"
 
-// TODO: import { generateTempBranchName } from "../../src/scripts/intl-pipeline/main"
-// TODO: import { SharedCommitter } from "../../src/scripts/intl-pipeline/lib/github/commits"
+// TODO: import { generateTempBranchName } from "../../../src/scripts/intl-pipeline/main"
+// TODO: import { SharedCommitter } from "../../../src/scripts/intl-pipeline/lib/github/commits"
 
 // ===================================================================
 // PART 3: Commit Strategy (Spec lines 129-181)

@@ -52,21 +52,25 @@ test.describe("Warning Functions", () => {
 
     test("no warning when only comments differ (JS //)", () => {
       const english = "```js\n// This is a comment\nconst x = 1\n```"
-      const translated = "```js\n// \u06CC\u06C1 \u0627\u06CC\u06A9 \u062A\u0628\u0635\u0631\u06C1 \u06C1\u06D2\nconst x = 1\n```"
+      const translated =
+        "```js\n// \u06CC\u06C1 \u0627\u06CC\u06A9 \u062A\u0628\u0635\u0631\u06C1 \u06C1\u06D2\nconst x = 1\n```"
       const warnings = warnCodeFenceContentDrift(translated, english)
       expect(warnings).toHaveLength(0)
     })
 
     test("no warning when only comments differ (JS /* */)", () => {
-      const english = "```solidity\n/* @dev Returns the balance */\nfunction balanceOf() {}\n```"
-      const translated = "```solidity\n/* @dev \u0628\u06CC\u0644\u0646\u0633 \u0648\u0627\u067E\u0633 \u06A9\u0631\u062A\u0627 \u06C1\u06D2 */\nfunction balanceOf() {}\n```"
+      const english =
+        "```solidity\n/* @dev Returns the balance */\nfunction balanceOf() {}\n```"
+      const translated =
+        "```solidity\n/* @dev \u0628\u06CC\u0644\u0646\u0633 \u0648\u0627\u067E\u0633 \u06A9\u0631\u062A\u0627 \u06C1\u06D2 */\nfunction balanceOf() {}\n```"
       const warnings = warnCodeFenceContentDrift(translated, english)
       expect(warnings).toHaveLength(0)
     })
 
     test("no warning when only comments differ (Python #)", () => {
       const english = "```python\n# This is a helper\ndef foo():\n    pass\n```"
-      const translated = "```python\n# \u06CC\u06C1 \u0627\u06CC\u06A9 \u06C1\u06CC\u0644\u067E\u0631 \u06C1\u06D2\ndef foo():\n    pass\n```"
+      const translated =
+        "```python\n# \u06CC\u06C1 \u0627\u06CC\u06A9 \u06C1\u06CC\u0644\u067E\u0631 \u06C1\u06D2\ndef foo():\n    pass\n```"
       const warnings = warnCodeFenceContentDrift(translated, english)
       expect(warnings).toHaveLength(0)
     })
