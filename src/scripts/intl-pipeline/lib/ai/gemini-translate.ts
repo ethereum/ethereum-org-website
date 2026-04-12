@@ -8,6 +8,7 @@
 import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
+import { GEMINI_MODELS } from "../../config"
 import { delay } from "../workflows/utils"
 
 import {
@@ -34,7 +35,7 @@ import {
 } from "./json-batcher"
 import { buildTranslationPrompt } from "./prompt-builder"
 
-const GEMINI_MODELS = ["gemini-3.1-pro-preview", "gemini-3.1-pro"]
+// GEMINI_MODELS imported from ../../config
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 5000
 
@@ -1007,9 +1008,7 @@ export async function callGeminiRaw(
   const verbose = process.env.VERBOSE === "true"
   const ts = () => new Date().toISOString()
 
-  const modelsToTry = process.env.GEMINI_MODEL
-    ? [process.env.GEMINI_MODEL]
-    : GEMINI_MODELS
+  const modelsToTry = GEMINI_MODELS
 
   // Build context string for log lines
   const ctx = [
@@ -1171,7 +1170,7 @@ export async function callGeminiRaw(
   if (modelNotFound.size === modelsToTry.length) {
     throw new Error(
       `All Gemini models unavailable (${[...modelNotFound].join(", ")}). ` +
-        `Update GEMINI_MODELS in gemini-translate.ts or set GEMINI_MODEL env var.`
+        `Update GEMINI_MODELS in config.ts or set GEMINI_MODEL env var.`
     )
   }
 

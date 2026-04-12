@@ -4,6 +4,12 @@ import i18nConfig from "../../../i18n.config.json"
 
 dotenv.config({ path: ".env.local" })
 
+// Gemini model configuration (single source of truth)
+// GEMINI_MODEL env var overrides; otherwise tries models in order
+export const GEMINI_MODELS: string[] = process.env.GEMINI_MODEL
+  ? [process.env.GEMINI_MODEL]
+  : ["gemini-3.1-pro-preview", "gemini-3.1-pro"]
+
 // GitHub API configuration
 const githubApiToken = process.env.GITHUB_API_TOKEN || ""
 if (!githubApiToken) {

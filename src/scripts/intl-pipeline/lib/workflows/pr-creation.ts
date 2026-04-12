@@ -1,6 +1,6 @@
 // PR creation workflow phase
 
-import { config } from "../../config"
+import { config, GEMINI_MODELS } from "../../config"
 import { postPullRequest } from "../github/pull-requests"
 
 import type { CommittedFile, LanguagePair, PullRequest } from "./types"
@@ -120,7 +120,7 @@ export function generatePRBody(
  * Fetch AI model name for PR metadata.
  */
 async function fetchAIModelName(): Promise<string> {
-  return process.env.GEMINI_MODEL || "gemini-2.0-flash"
+  return GEMINI_MODELS[0]
 }
 
 /**

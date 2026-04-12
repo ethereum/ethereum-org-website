@@ -42,9 +42,9 @@ import {
 } from "./lib/ai/manifest-adapter"
 import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
-import { runPostImportSanitization } from "./lib/workflows/sanitization"
+import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
-import { config } from "./config"
+import { config, GEMINI_MODELS } from "./config"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
 
@@ -58,9 +58,74 @@ interface FileContext {
   type: "markdown" | "json"
 }
 
+interface TokenStats {
+  inputTokens: number
+  outputTokens: number
+  calls: number
+}
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
+
+const tokenStats: Record<string, TokenStats> = {}
+
+function trackTokens(locale: string, input: number, output: number) {
+  if (!tokenStats[locale]) {
+    tokenStats[locale] = { inputTokens: 0, outputTokens: 0, calls: 0 }
+  }
+  tokenStats[locale].inputTokens += input
+  tokenStats[locale].outputTokens += output
+  tokenStats[locale].calls += 1
+}
+
+function printTokenSummary(pipelineDurationMs: number) {
+  logSection("Token Usage Summary")
+
+  const fmt = (n: number) => n.toLocaleString("en-US")
+  const pad = (s: string, w: number) => s.padStart(w)
+
+  console.log(
+    `${"Language".padEnd(10)}| ${"Calls".padStart(5)} | ${"Input".padStart(10)} | ${"Output".padStart(10)} | ${"Total".padStart(10)}`
+  )
+  const sep = `${"-".repeat(10)}|${"-".repeat(7)}|${"-".repeat(12)}|${"-".repeat(12)}|${"-".repeat(12)}`
+  console.log(sep)
+
+  let grandInput = 0
+  let grandOutput = 0
+  let grandCalls = 0
+
+  for (const [lang, s] of Object.entries(tokenStats)) {
+    const total = s.inputTokens + s.outputTokens
+    grandInput += s.inputTokens
+    grandOutput += s.outputTokens
+    grandCalls += s.calls
+
+    console.log(
+      `${lang.padEnd(10)}| ${pad(String(s.calls), 5)} | ${pad(fmt(s.inputTokens), 10)} | ${pad(fmt(s.outputTokens), 10)} | ${pad(fmt(total), 10)}`
+    )
+  }
+
+  console.log(sep)
+  const grandTotal = grandInput + grandOutput
+  console.log(
+    `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
+  )
+
+  // Approximate cost (Gemini 3.1 Pro standard tier, <=200k prompts)
+  // https://ai.google.dev/gemini-api/docs/pricing (as of 11-April-2026)
+  const INPUT_RATE = 2.0 // $/1M tokens
+  const OUTPUT_RATE = 12.0 // $/1M tokens (includes thinking tokens)
+  const estCost =
+    (grandInput / 1_000_000) * INPUT_RATE +
+    (grandOutput / 1_000_000) * OUTPUT_RATE
+
+  const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
+  console.log(
+    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${GEMINI_MODELS[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
+  )
+  console.log(`  Wall time: ${pipelineSecs}s`)
+}
 
 function log(msg: string) {
   console.log(`[pipeline] ${msg}`)
@@ -192,6 +257,7 @@ async function buildGeminiTranslator(
   // Parse response into section map
   const translations = parseIncrementalResponse(result.text)
   const translatedIds = Object.keys(translations)
+  trackTokens(locale, result.tokensUsed.input, result.tokensUsed.output)
   log(
     `  Gemini returned ${translatedIds.length} sections (${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
   )
@@ -274,6 +340,7 @@ async function runFullTranslation(
     useNormalizer: file.type === "markdown",
   })
 
+  trackTokens(locale, result.tokensUsed.input, result.tokensUsed.output)
   log(
     `[${locale}] ${file.path}: translated (${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
   )
@@ -550,7 +617,7 @@ async function main() {
       englishFiles.map((f) => [f.path, f.content])
     )
     try {
-      await runPostImportSanitization(
+      await sanitizeTranslations(
         committedFiles,
         targetBranch,
         englishContentMap
@@ -563,9 +630,11 @@ async function main() {
   }
 
   // Done
-  const duration = ((Date.now() - startTime) / 1000).toFixed(1)
+  if (Object.keys(tokenStats).length > 0) {
+    printTokenSummary(Date.now() - startTime)
+  }
   logSection("Complete")
-  log(`Finished in ${duration}s`)
+  log(`Finished in ${((Date.now() - startTime) / 1000).toFixed(1)}s`)
 }
 
 main().catch((error) => {
