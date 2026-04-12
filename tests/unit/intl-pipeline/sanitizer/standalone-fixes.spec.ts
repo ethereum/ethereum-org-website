@@ -2898,7 +2898,8 @@ author: Ori Pomerantz
     })
 
     test("handles multiple instances", () => {
-      const input = '<span dir="ltr">100</span> Gwei اور <span dir="ltr">32</span> ETH'
+      const input =
+        '<span dir="ltr">100</span> Gwei اور <span dir="ltr">32</span> ETH'
       const { content, fixCount } = fixUnitOutsideSpan(input, "ur")
       expect(content).toContain('<span dir="ltr">100 Gwei</span>')
       expect(content).toContain('<span dir="ltr">32 ETH</span>')
@@ -2910,7 +2911,9 @@ author: Ori Pomerantz
     test("fixes unindented closing fence when opening is indented", () => {
       const input = "1. Step one\n\n    ```sh\n    pnpm install\n```"
       const { content, fixCount } = fixMisalignedCodeFences(input)
-      expect(content).toBe("1. Step one\n\n    ```sh\n    pnpm install\n    ```")
+      expect(content).toBe(
+        "1. Step one\n\n    ```sh\n    pnpm install\n    ```"
+      )
       expect(fixCount).toBe(1)
     })
 
@@ -2939,8 +2942,7 @@ author: Ori Pomerantz
     })
 
     test("handles mixed indented and non-indented fences", () => {
-      const input =
-        "    ```sh\n    cmd\n```\n\n```typescript\nconst x = 1\n```"
+      const input = "    ```sh\n    cmd\n```\n\n```typescript\nconst x = 1\n```"
       const { content, fixCount } = fixMisalignedCodeFences(input)
       expect(content).toBe(
         "    ```sh\n    cmd\n    ```\n\n```typescript\nconst x = 1\n```"

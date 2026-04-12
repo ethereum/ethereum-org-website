@@ -23,13 +23,13 @@ import { readFileSync } from "node:fs"
 import { join } from "node:path"
 import { expect, test } from "@playwright/test"
 
-import { pipeline } from "../../src/scripts/intl-pipeline"
+import { pipeline } from "../../../src/scripts/intl-pipeline"
 
 // ---------------------------------------------------------------------------
 // Fixtures
 // ---------------------------------------------------------------------------
 
-const FIXTURES = join(__dirname, "../fixtures/incremental")
+const FIXTURES = join(__dirname, "../../fixtures/incremental")
 const read = (p: string) => readFileSync(join(FIXTURES, p), "utf-8")
 
 const EN_A_MD = read("english/fixture-a.md")

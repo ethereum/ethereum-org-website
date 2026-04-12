@@ -11,10 +11,7 @@
 
 import { expect, test } from "@playwright/test"
 
-import {
-  normalizeContent,
-  collectLeafHashes,
-} from "@/scripts/i18n/lib/ai/content-normalizer"
+import { normalizeContent } from "@/scripts/i18n/lib/ai/content-normalizer"
 import { generateFileManifest } from "@/scripts/i18n/lib/ai/manifest-generator"
 
 test.describe("Content Normalizer", () => {

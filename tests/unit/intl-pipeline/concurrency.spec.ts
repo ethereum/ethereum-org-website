@@ -6,7 +6,7 @@
 
 import { test } from "@playwright/test"
 
-// TODO: import { createTaskPool } from "../../src/scripts/intl-pipeline/lib/utils/task-pool"
+// TODO: import { createTaskPool } from "../../../src/scripts/intl-pipeline/lib/utils/task-pool"
 
 // ===================================================================
 // PART 1: Concurrency Pool (Spec lines 25-57)
