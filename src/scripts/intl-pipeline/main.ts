@@ -22,16 +22,18 @@ import {
 
 import i18nConfig from "../../../i18n.config.json"
 
-import { isGeminiAvailable } from "./lib/ai/gemini"
-import { callGeminiRaw, translateFile } from "./lib/ai/gemini-translate"
-import { filterGlossaryFlat } from "./lib/ai/glossary-lookup"
+import { filterGlossaryFlat } from "./glossary/glossary-lookup"
+import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
+import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+import { isGeminiAvailable } from "./lib/llm/gemini/gemini"
+import { callGeminiRaw, translateFile } from "./lib/llm/gemini/translate"
 import {
   buildIncrementalPrompt,
   buildSectionList,
   extractJsonSections,
   extractSections,
   parseIncrementalResponse,
-} from "./lib/ai/incremental-translate"
+} from "./lib/llm/incremental-translate"
 import {
   buildJsonManifest,
   buildLocaleTranslationManifest,
@@ -39,9 +41,7 @@ import {
   extractPlaceholderData,
   hasEnglishChanged,
   parseEnglishJson,
-} from "./lib/ai/manifest-adapter"
-import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
-import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
+} from "./lib/llm/manifest-adapter"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
 import { config, GEMINI_MODELS } from "./config"
@@ -146,7 +146,10 @@ function readSourceManifestPath(
   return path.join(process.cwd(), `src/intl/${locale}/.manifest-source.json`)
 }
 
-const GLOSSARY_DIR = path.join(process.cwd(), "src/scripts/i18n/data/glossary")
+const GLOSSARY_DIR = path.join(
+  process.cwd(),
+  "src/scripts/intl-pipeline/glossary/data"
+)
 const GLOSSARY_FILE = path.join(GLOSSARY_DIR, "glossary-terms-enhanced.json")
 const GLOSSARY_TRANSLATIONS_DIR = path.join(GLOSSARY_DIR, "translations")
 

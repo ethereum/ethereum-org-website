@@ -1,0 +1,375 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ethereum.org/glossary/schema/v1",
+  "title": "Ethereum Translation Glossary Schema",
+  "description": "A concept-oriented, multilingual terminology database for Ethereum ecosystem translations. Designed for use by LLM translation pipelines, human translators, and public API consumers.",
+  "type": "object",
+  "required": ["$schema", "version", "generated", "languages", "entries"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Schema URI for validation"
+    },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of this glossary data file",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "generated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of when this file was generated"
+    },
+    "languages": {
+      "type": "array",
+      "description": "BCP-47 language codes covered in this glossary",
+      "items": { "type": "string" }
+    },
+    "entries": {
+      "type": "object",
+      "description": "Term entries keyed by stable slug ID (e.g., 'stake', 'proof-of-stake'). IDs are kebab-case, immutable, and never reused.",
+      "additionalProperties": { "$ref": "#/$defs/Entry" }
+    }
+  },
+
+  "$defs": {
+
+    "Entry": {
+      "type": "object",
+      "description": "A single concept entry. Represents one Ethereum concept with all its forms and translations.",
+      "required": ["id", "category", "en"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable slug identifier. Kebab-case, immutable once assigned. Must match the key in the entries object.",
+          "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$"
+        },
+        "category": {
+          "type": "string",
+          "description": "Primary category for organization",
+          "enum": [
+            "accounts-keys",
+            "consensus",
+            "cryptography",
+            "defi",
+            "development",
+            "ether",
+            "general",
+            "governance",
+            "identity",
+            "mev",
+            "protocol-upgrades",
+            "scaling",
+            "smart-contracts",
+            "tokens",
+            "transactions"
+          ]
+        },
+        "tier": {
+          "type": "integer",
+          "description": "Priority tier for translation. 1=core (translate first), 2=important, 3=specialist",
+          "enum": [1, 2, 3]
+        },
+        "deprecated": {
+          "type": "boolean",
+          "description": "Whether this term is a legacy/retired term in the Ethereum ecosystem. Use alongside 'note' for context (e.g., preferred replacement). Deprecated terms still need translations for historical content.",
+          "default": false
+        },
+        "note": {
+          "type": "string",
+          "description": "Free-text note about this term's usage, caveats, or lifecycle. Use for legacy terms (e.g., 'Legacy Ethereum term. Preferred: consensus layer'), PoW-vs-PoS disambiguation (e.g., 'Applies to proof-of-work systems; do not confuse with validator in PoS'), or any other guidance that doesn't fit elsewhere."
+        },
+        "casing": {
+          "type": "string",
+          "description": "English capitalization rule. standard: lowercase, capitalize at sentence start (gas, block). proper: always capitalized (Ethereum, Solidity). uppercase: always all-caps (EVM, NFT, ETH). fixed: never alter, use exact stored string (zkEVM, DeFi, MetaMask, ethereum.org).",
+          "enum": ["standard", "proper", "uppercase", "fixed"]
+        },
+        "aliases": {
+          "type": "array",
+          "description": "Alternative English forms that resolve to this concept. Each alias can be a plain string or an object with status metadata.",
+          "items": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "object",
+                "required": ["term"],
+                "properties": {
+                  "term": { "type": "string", "description": "The alias form" },
+                  "status": {
+                    "type": "string",
+                    "description": "Whether this alias is preferred, accepted, or deprecated for new English content",
+                    "enum": ["preferred", "accepted", "deprecated"]
+                  },
+                  "note": { "type": "string", "description": "Context for the status (e.g., 'Pending style guide change per content lead')" }
+                }
+              }
+            ]
+          }
+        },
+        "avoid": {
+          "type": "array",
+          "description": "Forms to avoid in new English content. These are recognized but discouraged -- e.g., title-cased forms of non-proper nouns ('Layer 2'), hyphenated forms ('on-chain'), or outdated capitalizations ('DApp'). Useful for content linting and style enforcement.",
+          "items": { "type": "string" }
+        },
+        "related": {
+          "type": "array",
+          "description": "IDs of related entries (e.g., proof-of-stake -> validator, staking)",
+          "items": { "type": "string" }
+        },
+        "term_family": {
+          "type": "string",
+          "description": "ID of the root concept in a morphological family (e.g., 'staking' -> 'stake')"
+        },
+        "script_rule": {
+          "type": "string",
+          "description": "Default script handling for non-Latin languages. Can be overridden per language.",
+          "enum": [
+            "keep_latin",
+            "translate",
+            "transliterate",
+            "hybrid",
+            "context_dependent"
+          ]
+        },
+
+        "en": {
+          "$ref": "#/$defs/EnglishEntry",
+          "description": "English source entry with definitions and morphological forms"
+        },
+
+        "translations": {
+          "type": "object",
+          "description": "Translations keyed by BCP-47 language code (e.g., 'ja', 'ar', 'pt-BR')",
+          "additionalProperties": { "$ref": "#/$defs/TranslationEntry" }
+        }
+      }
+    },
+
+    "EnglishEntry": {
+      "type": "object",
+      "description": "The English source material for this concept",
+      "required": ["term"],
+      "properties": {
+        "term": {
+          "type": "string",
+          "description": "Canonical English term"
+        },
+        "glossary_ref": {
+          "type": "string",
+          "description": "ID of the corresponding entry in the site's /glossary page (src/intl/en/glossary.json). Null if no glossary definition exists yet. Enables linking to user-facing definitions without duplicating them."
+        },
+        "translation_context": {
+          "type": "string",
+          "description": "English-only disambiguation for translators. Not a full definition -- just enough context to translate correctly. E.g., 'financial deposit/collateral, not a wooden stake' or 'computational fuel unit, not chemical gas'. Assumes the translator reads English."
+        },
+        "forms": {
+          "$ref": "#/$defs/Morphology",
+          "description": "English morphological forms (POS-based)"
+        },
+        "usage_note": {
+          "type": "string",
+          "description": "Note on how this term is typically used in Ethereum content. Helps translators understand register and frequency."
+        }
+      }
+    },
+
+    "TranslationEntry": {
+      "type": "object",
+      "description": "Translation of a concept into a specific language",
+      "required": ["term"],
+      "properties": {
+
+        "term": {
+          "type": "string",
+          "description": "Primary/canonical translation of the term"
+        },
+        "aliases": {
+          "type": "array",
+          "description": "Alternative valid translations in this language. E.g., Japanese may have both katakana and kanji forms. First item is preferred if multiple exist.",
+          "items": { "type": "string" }
+        },
+        "transliteration": {
+          "type": "string",
+          "description": "Latin-script phonetic rendering (e.g., 'suteeku' for Japanese). Only for non-Latin scripts."
+        },
+        "script_override": {
+          "type": "string",
+          "description": "Override the entry-level script_rule for this specific language",
+          "enum": [
+            "keep_latin",
+            "translate",
+            "transliterate",
+            "hybrid",
+            "context_dependent"
+          ]
+        },
+
+        "forms": {
+          "$ref": "#/$defs/Morphology",
+          "description": "Translated morphological forms (POS-based)"
+        },
+
+        "contexts": {
+          "$ref": "#/$defs/ContextForms",
+          "description": "Context-dependent display forms"
+        },
+
+        "grammar": {
+          "$ref": "#/$defs/GrammarInfo",
+          "description": "Grammatical metadata for this translation"
+        },
+
+        "plurals": {
+          "$ref": "#/$defs/PluralForms",
+          "description": "Plural forms following CLDR categories"
+        },
+
+        "source": {
+          "type": "string",
+          "description": "How this translation was produced",
+          "enum": ["community", "llm", "expert", "imported"]
+        },
+        "confidence": {
+          "type": "string",
+          "description": "Confidence level in translation quality",
+          "enum": ["high", "medium", "low"]
+        },
+        "reviewed_by": {
+          "type": "string",
+          "description": "Who reviewed this translation (person, team, or 'unreviewed')"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Translation notes, caveats, or guidance for reviewers"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of when this translation was last updated"
+        }
+      }
+    },
+
+    "Morphology": {
+      "type": "object",
+      "description": "POS-based morphological forms. Use null for forms that don't exist for this term in this language. Only include forms that are actually used in Ethereum content.",
+      "properties": {
+        "noun": {
+          "type": "object",
+          "description": "Noun form(s). Singular is the lemma/dictionary form.",
+          "properties": {
+            "singular": { "type": "string", "description": "Lemma / dictionary / citation form" }
+          }
+        },
+        "verb": {
+          "type": "object",
+          "description": "Verb form(s)",
+          "properties": {
+            "infinitive": { "type": "string", "description": "Infinitive form (e.g., 'to stake', 'walidowac')" },
+            "participle": { "type": "string", "description": "Present/active participle (e.g., 'staking', 'walidujacy')" }
+          }
+        },
+        "adjective": {
+          "type": ["string", "null"],
+          "description": "Adjectival form (e.g., 'decentralized', 'walidatorski')"
+        },
+        "agent": {
+          "type": ["string", "null"],
+          "description": "Person/entity performing the action (e.g., 'staker', 'walidator')"
+        },
+        "negation": {
+          "type": ["string", "null"],
+          "description": "Negated/reversed form (e.g., 'unstaking', 'de-peg'). Null if none exists."
+        },
+        "compounds": {
+          "type": "object",
+          "description": "Compound terms built from this root, keyed by the compound entry's slug ID",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+
+    "ContextForm": {
+      "type": "object",
+      "description": "How a term appears in a specific display context. Contains the term form and optionally an example sentence.",
+      "required": ["term"],
+      "properties": {
+        "term": {
+          "type": "string",
+          "description": "The term as it should appear in this context (may be inflected, capitalized, or kept in Latin)"
+        },
+        "example": {
+          "type": "string",
+          "description": "Optional example sentence showing the term in use in this context"
+        }
+      }
+    },
+
+    "ContextForms": {
+      "type": "object",
+      "description": "How the term should appear in 5 display contexts. Each contains a term form and optional example sentence.",
+      "properties": {
+        "prose": {
+          "$ref": "#/$defs/ContextForm",
+          "description": "Inline in flowing text. Often inflected (e.g., genitive/accusative). Example sentence required."
+        },
+        "heading": {
+          "$ref": "#/$defs/ContextForm",
+          "description": "Standalone section heading or title. Usually nominative, capitalized."
+        },
+        "tag": {
+          "$ref": "#/$defs/ContextForm",
+          "description": "Metadata tag, label, or filter chip. Short, identifier-style."
+        },
+        "ui": {
+          "$ref": "#/$defs/ContextForm",
+          "description": "UI elements: buttons, menus, tooltips. Action-oriented."
+        },
+        "code": {
+          "$ref": "#/$defs/ContextForm",
+          "description": "Technical/code reference. Usually Latin/ASCII."
+        }
+      }
+    },
+
+    "GrammarInfo": {
+      "type": "object",
+      "description": "Grammatical properties that affect how the term integrates into sentences",
+      "properties": {
+        "gender": {
+          "type": "string",
+          "description": "Grammatical gender in this language",
+          "enum": ["masculine", "feminine", "neuter", "common", "animate", "inanimate"]
+        },
+        "part_of_speech": {
+          "type": "string",
+          "description": "Primary part of speech",
+          "enum": ["noun", "verb", "adjective", "adverb", "abbreviation", "proper_noun"]
+        },
+        "formality": {
+          "type": "string",
+          "description": "Formality register (relevant for ja, ko, hi, etc.)",
+          "enum": ["formal", "neutral", "casual"]
+        },
+        "animacy": {
+          "type": "string",
+          "description": "For languages with animacy distinction (e.g., Polish, Russian)",
+          "enum": ["animate", "inanimate"]
+        }
+      }
+    },
+
+    "PluralForms": {
+      "type": "object",
+      "description": "Plural forms following Unicode CLDR categories. Not all categories apply to every language.",
+      "properties": {
+        "zero":  { "type": "string", "description": "Form for zero quantity (ar, etc.)" },
+        "one":   { "type": "string", "description": "Singular form" },
+        "two":   { "type": "string", "description": "Dual form (ar, etc.)" },
+        "few":   { "type": "string", "description": "Paucal form (pl, ru, cs, etc.)" },
+        "many":  { "type": "string", "description": "Many form (pl, ru, ar, etc.)" },
+        "other": { "type": "string", "description": "General/default plural form" }
+      }
+    }
+  }
+}
