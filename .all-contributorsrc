@@ -1,4 +1,9 @@
 {
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
   "contributors": [
     {
       "login": "Pum482930",
@@ -13,9 +18,12 @@
       ]
     }
   ],
-  "imageSize": 100,
-  "commit": false,
-  "files": [
-    "README.md"
-  ]
+  "contributorsPerLine": 7,
+  "projectName": "ethereum-org-website",
+  "projectOwner": "ethereum",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
