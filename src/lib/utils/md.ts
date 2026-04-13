@@ -37,6 +37,8 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
       if (stats.isDirectory()) {
         // Skip nested translations directory
         if (fileOrDir === "translations") continue
+        // Skip videos directory — video pages have their own dedicated route
+        if (fileOrDir === "videos") continue
         // If it is a directory, recursively call the `getPostSlugs` function with the
         // directory path and the files array
         const nestedDir = join(dir, fileOrDir)
@@ -145,32 +147,40 @@ export const checkPathValidity = (
   validPaths.some((path) => path.slug.join("/") === slugArray.join("/"))
 
 /**
- * Strips markdown syntax from text, leaving plain text
- * For preview/snippet text where markdown shouldn't be visible
+ * Strips markdown syntax from text, leaving plain text.
+ * For preview/snippet text where markdown shouldn't be visible.
  *
  * @param text - Text with markdown syntax
+ * @param preserveNewlines - When true, collapses runs of 3+ newlines to 2
+ *   instead of collapsing all whitespace to single spaces. Useful for
+ *   structured output like JSON-LD transcripts.
  * @returns Plain text with markdown markers removed
  */
-export function stripMarkdown(text: string): string {
-  return (
-    text
-      // Remove bold/italic (**text** or __text__)
-      .replace(/(\*\*|__)(.*?)\1/g, "$2")
-      // Remove italic (*text* or _text_)
-      .replace(/(\*|_)(.*?)\1/g, "$2")
-      // Remove inline code (`code`)
-      .replace(/`([^`]+)`/g, "$1")
-      // Remove links [text](url) → text
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-      // Remove images ![alt](url) → empty
-      .replace(/!\[([^\]]*)\]\([^)]+\)/g, "")
-      // Remove headings (# text)
-      .replace(/^#{1,6}\s+/gm, "")
-      // Remove list markers (- or * or 1.)
-      .replace(/^[\s]*[-*+]\s+/gm, "")
-      .replace(/^[\s]*\d+\.\s+/gm, "")
-      // Clean up extra whitespace
-      .replace(/\s+/g, " ")
-      .trim()
-  )
+export function stripMarkdown(
+  text: string,
+  preserveNewlines?: boolean
+): string {
+  let result = text
+    // Remove bold/italic (**text** or __text__)
+    .replace(/(\*\*|__)(.*?)\1/g, "$2")
+    // Remove italic (*text* or _text_)
+    .replace(/(\*|_)(.*?)\1/g, "$2")
+    // Remove inline code (`code`)
+    .replace(/`([^`]+)`/g, "$1")
+    // Remove links [text](url) -> text
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    // Remove images ![alt](url) -> empty
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, "")
+    // Remove headings (# text)
+    .replace(/^#{1,6}\s+/gm, "")
+    // Remove list markers (- or * or 1.)
+    .replace(/^[\s]*[-*+]\s+/gm, "")
+    .replace(/^[\s]*\d+\.\s+/gm, "")
+
+  // Clean up whitespace
+  result = preserveNewlines
+    ? result.replace(/\n{3,}/g, "\n\n")
+    : result.replace(/\s+/g, " ")
+
+  return result.trim()
 }
