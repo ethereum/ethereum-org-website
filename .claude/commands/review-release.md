@@ -1,7 +1,7 @@
 ---
 description: Review a release/deploy PR by checking key changes on staging with a browser
 allowed-tools: Bash, Read, Glob, Grep, Agent, Skill, AskUserQuestion
-argument-hints: <pr-number>
+argument-hints: [<pr-number> (auto-detects latest deploy PR)]
 ---
 
 # Review Release
@@ -10,13 +10,17 @@ Review a release/deploy PR by fetching its description, identifying the most imp
 
 ## Arguments
 
-`$ARGUMENTS` should contain the PR number to review.
+`$ARGUMENTS` may contain the PR number to review. If empty, auto-detect the latest deploy PR:
+
+```bash
+gh pr list -B master -H staging -s open -S "Deploy" --json number -q ".[0].number" -L 1
+```
 
 ## Workflow
 
 ### Step 1: Fetch PR Details
 
-Use `gh pr view $ARGUMENTS --repo ethereum/ethereum-org-website --json title,body,labels` to get the PR description and identify the list of changes.
+If `$ARGUMENTS` is empty or blank, auto-detect the PR number using the command above. Then use `gh pr view <PR_NUMBER> --repo ethereum/ethereum-org-website --json title,body,labels` to get the PR description and identify the list of changes.
 
 ### Step 2: Identify Key Changes
 
