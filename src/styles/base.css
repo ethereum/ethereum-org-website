@@ -67,11 +67,20 @@
   }
 
   /* TODO: remove these global styles when the list component migration is complete */
-  ul,
+  ul {
+    margin: 0px 0px 1.45rem 1.45rem;
+    padding: 0;
+    list-style-type: disc;
+
+    & li {
+      padding-inline-start: 0;
+    }
+  }
+
   ol {
     margin: 0px 0px 1.45rem 1.45rem;
     padding: 0;
-    list-style-type: initial;
+    list-style-type: decimal;
 
     & li {
       padding-inline-start: 0;

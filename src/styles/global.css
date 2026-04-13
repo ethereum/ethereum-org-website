@@ -1,4 +1,9 @@
 @import "@docsearch/css/dist/style.css" layer(docsearch);
+@import "swiper/css" layer(swiper);
+@import "swiper/css/navigation" layer(swiper);
+@import "swiper/css/pagination" layer(swiper);
+@import "swiper/css/effect-cards" layer(swiper);
+@import "swiper/css/grid" layer(swiper);
 @import "tailwindcss";
 @import "tw-animate-css";
 
