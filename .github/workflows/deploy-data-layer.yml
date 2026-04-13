@@ -1,0 +1,35 @@
+name: Deploy Data Layer
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "src/data-layer/**"
+      - "trigger.config.ts"
+      - "package.json"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Install deps
+        run: pnpm install
+
+      - name: Deploy to Trigger.dev
+        run: pnpm exec trigger deploy
+        env:
+          TRIGGER_SECRET_KEY: ${{ secrets.TRIGGER_SECRET_KEY }}

@@ -109,7 +109,7 @@ lang: mr
 - [क्रिप्टोकरन्सी नोकऱ्या](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys मधील करिअर](https://consensys.net/careers/)
 - [क्रिप्टो जॉब्स लिस्ट](https://cryptojobslist.com/ethereum-jobs)
-- [बँकलेस जॉब्स बोर्ड](https://pallet.xyz/list/bankless/jobs)
+- [बँकलेस जॉब्स बोर्ड](https://www.bankless.com/jobs)
 - [वेब3 नोकऱ्या](https://web3.career)
 - [वेब3 आर्मी](https://web3army.xyz/)
 - [क्रिप्टो व्हॅली जॉब्स](https://cryptovalley.jobs/)

@@ -109,7 +109,7 @@ Ekosystém Etherea má za cíl financovat veřejné statky a významné projekty
 - [Pracovní pozice v kryptoměnách](https://cryptocurrencyjobs.co/ethereum/)
 - [Kariéra v ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Pracovní nabídky Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Pracovní nabídky Bankless](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

@@ -101,6 +101,8 @@ pnpm build-storybook       # Build Storybook
 pnpm chromatic             # Run Chromatic visual tests
 
 # Content Management
+pnpm lint:md               # Lint English markdown content
+pnpm lint:md:fix           # Auto-fix header IDs and duplicates
 pnpm markdown-checker      # Validate markdown content
 pnpm events-import         # Import community events
 ```
@@ -127,6 +129,7 @@ pnpm events-import         # Import community events
 - Processed with `next-mdx-remote`
 - Custom MDX components for rich content
 - Automatic table of contents generation
+- **All h1-h4 headings require a custom `{#lower-kebab-id}`** -- enforced by markdownlint via pre-commit hook. Run `pnpm lint:md:fix` to auto-add missing IDs. Config: `.markdownlint-cli2.jsonc`, custom rules: `.markdownlint-rules/`
 
 ### Asset Management
 

@@ -48,7 +48,7 @@ const communityHubs: CommunityHub[] = [
     descriptionKey: "page-events-hub-description-london",
     ctaKey: "page-events-hub-cta-default",
     coworkingSignupUrl: "https://hub.encode.club/ethereum",
-    meetupUrl: "https://luma.com/user/ethldn",
+    meetupUrl: "https://luma.com/ethldn",
     banner: LondonHubBanner,
     brandColor:
       "bg-gradient-to-b from-[#667BBC]/5 to-[#667BBC]/10 dark:from-[#667BBC]/20 dark:to-[#667BBC]/10 border-[#667BBC]/20",

@@ -33,7 +33,7 @@ In traditional finance, central banks control the supply of money, often printin
 
 ETH issuance refers to the process of creating new ETH as rewards for validators who secure the Ethereum network. It's separate from total supply, which is the total amount of ETH in circulation.
 
-### In simple terms:
+### In simple terms: {#in-simple-terms}
 - **Issuance** adds new ETH to the network.
 - **Burning** (introduced by EIP-1559) removes ETH from the network by destroying a portion of the transaction fees.
 
@@ -45,7 +45,7 @@ Ethereum's Proof-of-Stake (PoS) system has drastically reduced ETH issuance comp
 
 However, this number is dynamic. Thanks to EIP-1559, when network activity is high, ETH burn rates can surpass issuance, creating a deflationary effect. For example, during periods of high demand, like NFT launches or DeFi activity, more ETH may be burned than issued.
 
-### Tools to Track ETH Supply and Issuance:
+### Tools to Track ETH Supply and Issuance: {#tools-to-track-eth-supply-and-issuance}
 - [Ultrasound Money](https://ultrasound.money) - Real-time tracking of ETH supply, issuance, and burn rates
 - [Etherscan](https://etherscan.io) - Block explorer with supply metrics
 

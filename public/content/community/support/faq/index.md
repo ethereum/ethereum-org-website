@@ -22,15 +22,15 @@ In most cases, there is no way to recover the funds. No central organization, en
 
 Your recovery options depend on the type of wallet you use.
 
-### If you have your seed phrase (recovery phrase)
+### If you have your seed phrase (recovery phrase) {#if-you-have-your-seed-phrase-recovery-phrase}
 
 You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
 
-### If you have lost your seed phrase
+### If you have lost your seed phrase {#if-you-have-lost-your-seed-phrase}
 
 Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
 
-### If your account is on an exchange
+### If your account is on an exchange {#if-your-account-is-on-an-exchange}
 
 If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
 
@@ -56,7 +56,7 @@ Transactions on Ethereum can get stuck when the gas fee you set was lower than w
 - **Speed up:** Resubmit the same transaction with a higher gas fee
 - **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
 
-### Helpful guides
+### Helpful guides {#helpful-guides}
 
 - [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
 - [How to cancel pending Ethereum transactions](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)

@@ -109,7 +109,7 @@ lang: hi
 - [क्रिप्टोकरेंसी जॉब्स](https://cryptocurrencyjobs.co/ethereum/)
 - [कंसेंसिस में करियर](https://consensys.net/careers/)
 - [क्रिप्टो जॉब्स लिस्ट](https://cryptojobslist.com/ethereum-jobs)
-- [बैंकलेस जॉब्स बोर्ड](https://pallet.xyz/list/bankless/jobs)
+- [बैंकलेस जॉब्स बोर्ड](https://www.bankless.com/jobs)
 - [वेब3 जॉब्स](https://web3.career)
 - [वेब3 Army](https://web3army.xyz/)
 - [क्रिप्टो वैली जॉब्स](https://cryptovalley.jobs/)
