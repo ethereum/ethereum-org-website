@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-import { MATOMO_LS_KEY } from "@/lib/utils/matomo"
+import { clearMatomoOptOutCache, MATOMO_LS_KEY } from "@/lib/utils/matomo"
 
 import Checkbox from "./ui/checkbox"
 
@@ -29,6 +29,7 @@ const MatomoOptOut = () => {
     setIsOptedOut(!checked)
     // Save selection to localStorage
     localStorage.setItem(MATOMO_LS_KEY, String(!checked))
+    clearMatomoOptOutCache()
   }
   return (
     <div className="border-body-light bg-background mt-8 mb-4 flex flex-col rounded border p-6">

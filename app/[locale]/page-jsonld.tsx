@@ -6,6 +6,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
   ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
@@ -23,6 +24,8 @@ export default async function IndexPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebSite",
         "@id": "https://ethereum.org/#website",
@@ -39,9 +42,9 @@ export default async function IndexPageJsonLD({
           educationalRole: ["developer", "student"],
           audienceType: "public",
         },
-        publisher: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
         maintainer: ethereumFoundationReference,
-        contributor: ethereumCommunityOrganization,
+        contributor: ethereumCommunityReference,
         about: {
           "@type": "Thing",
           name: "Ethereum",

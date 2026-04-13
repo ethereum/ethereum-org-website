@@ -15,7 +15,6 @@ import ActivityStats from "@/components/ActivityStats"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
-import CodeExamples from "@/components/Homepage/CodeExamples"
 import HomepageSectionImage from "@/components/Homepage/HomepageSectionImage"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import BlockHeap from "@/components/icons/block-heap.svg"
@@ -74,11 +73,12 @@ import {
 } from "@/lib/constants"
 
 import {
+  AppsHighlight,
   BentoCardSwiper,
+  CodeExamples,
   RecentPostsSwiper,
   ValuesMarquee,
 } from "./_components/HomepageLazyImports"
-import AppsHighlight from "./apps/_components/AppsHighlight"
 import IndexPageJsonLD from "./page-jsonld"
 import { getActivity } from "./utils"
 

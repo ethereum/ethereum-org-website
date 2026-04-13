@@ -7,6 +7,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 import { getLocaleYear } from "@/lib/utils/date"
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
   ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
@@ -125,6 +126,8 @@ export default async function EventsJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -133,7 +136,7 @@ export default async function EventsJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -163,8 +166,8 @@ export default async function EventsJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#sections` },
       },
       {
@@ -207,8 +210,8 @@ export default async function EventsJsonLD({
             url: `${url}#for-organizers`,
           },
         ],
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
       },
       ...hubSchemaNodes,
     ],

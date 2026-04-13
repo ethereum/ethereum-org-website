@@ -4,7 +4,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
+  ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -55,6 +57,8 @@ export default async function SlugJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -62,7 +66,7 @@ export default async function SlugJsonLD({
         description: frontmatter.description,
         url: url,
         inLanguage: locale,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         contributor: contributorList,
         isPartOf: {
           "@type": "WebSite",
@@ -74,8 +78,8 @@ export default async function SlugJsonLD({
           "@type": "BreadcrumbList",
           itemListElement: breadcrumbItems,
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#article` },
       },
       {
@@ -86,10 +90,10 @@ export default async function SlugJsonLD({
         image: frontmatter.image
           ? `https://ethereum.org${frontmatter.image}`
           : undefined,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         contributor: contributorList,
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         dateModified: frontmatter.published,
         mainEntityOfPage: url,
         about: {
