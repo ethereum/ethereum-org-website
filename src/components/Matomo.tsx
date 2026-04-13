@@ -15,7 +15,7 @@ export default function Matomo() {
   const [previousPath, setPreviousPath] = useState("")
 
   useEffect(() => {
-    if (!matomoInitialized) {
+    if (!matomoInitialized && !isOptedOut()) {
       init({
         url: process.env.NEXT_PUBLIC_MATOMO_URL!,
         siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID!,
