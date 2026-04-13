@@ -30,6 +30,6 @@ jobs:
         run: pnpm install
 
       - name: Deploy to Trigger.dev
-        run: pnpm exec trigger deploy
+        run: npx trigger.dev@4.3.3 deploy
         env:
           TRIGGER_SECRET_KEY: ${{ secrets.TRIGGER_SECRET_KEY }}
