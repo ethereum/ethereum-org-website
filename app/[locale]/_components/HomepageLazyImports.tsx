@@ -38,3 +38,29 @@ export const ValuesMarquee = dynamic(
     loading: () => <ValuesMarqueeFallback />,
   }
 )
+
+export const CodeExamples = dynamic(
+  () => import("@/components/Homepage/CodeExamples"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
+        <Skeleton className="h-[400px] w-full max-w-screen-md rounded-2xl" />
+      </div>
+    ),
+  }
+)
+
+export const AppsHighlight = dynamic(
+  () => import("../apps/_components/AppsHighlight"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="hidden gap-6 md:grid md:grid-cols-3">
+        {Array.from({ length: 3 }).map((_, i) => (
+          <Skeleton key={i} className="h-64 w-full rounded-xl" />
+        ))}
+      </div>
+    ),
+  }
+)
