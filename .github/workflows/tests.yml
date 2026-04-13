@@ -12,12 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install
