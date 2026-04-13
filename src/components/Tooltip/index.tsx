@@ -21,6 +21,7 @@ export type TooltipProps = ComponentProps<typeof Popover> & {
   children?: ReactNode
   onBeforeOpen?: () => void
   container?: HTMLElement | null
+  asChild?: boolean
   customMatomoEvent?: {
     eventCategory: string
     eventAction: string
@@ -33,6 +34,7 @@ const Tooltip = ({
   children,
   onBeforeOpen,
   container,
+  asChild,
   customMatomoEvent,
   ...props
 }: TooltipProps) => {
@@ -100,7 +102,10 @@ const Tooltip = ({
       delayDuration={200}
       {...props}
     >
-      <Trigger className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover">
+      <Trigger
+        asChild={asChild}
+        className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover"
+      >
         {children}
       </Trigger>
       <Portal container={container}>

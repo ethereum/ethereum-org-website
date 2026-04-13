@@ -6,7 +6,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
+  ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -32,6 +34,8 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -40,7 +44,7 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -70,8 +74,8 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#what-is-the-ethereum-network` },
       },
       {
@@ -80,10 +84,10 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
         headline: t("page-what-is-ethereum-network-title"),
         description: t("page-what-is-ethereum-network-meta-description"),
         image: "https://ethereum.org/images/what-is-ethereum-network.png",
-        author: [ethereumCommunityOrganization],
-        publisher: ethereumFoundationOrganization,
+        author: [ethereumCommunityReference],
+        publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationReference,
         about: {
           "@type": "Thing",
           name: "Ethereum Network",

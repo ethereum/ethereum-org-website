@@ -6,7 +6,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
+  ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -32,6 +34,8 @@ export default async function RoadmapVisionPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -40,7 +44,7 @@ export default async function RoadmapVisionPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -70,8 +74,8 @@ export default async function RoadmapVisionPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#roadmap-vision` },
       },
       {
@@ -80,10 +84,10 @@ export default async function RoadmapVisionPageJsonLD({
         headline: t("page-roadmap-vision-title"),
         description: t("page-roadmap-vision-subtitle"),
         image: "https://ethereum.org/images/upgrades/oldship.png",
-        author: [ethereumCommunityOrganization],
-        publisher: ethereumFoundationOrganization,
+        author: [ethereumCommunityReference],
+        publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationReference,
         about: {
           "@type": "Thing",
           name: "Ethereum Vision",

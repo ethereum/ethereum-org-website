@@ -109,7 +109,7 @@ Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projek
 - [Praca w Kryptowalutach](https://cryptocurrencyjobs.co/ethereum/)
 - [Kariera w ConsenSys](https://consensys.net/careers/)
 - [Lista ofert pracy w krypto](https://cryptojobslist.com/ethereum-jobs)
-- [Tablica ogłoszeń o pracę Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Tablica ogłoszeń o pracę Bankless](https://www.bankless.com/jobs)
 - [Praca w Web3](https://web3.career)
 - [Armia Web3](https://web3army.xyz/)
 - [Praca w Crypto Valley](https://cryptovalley.jobs/)

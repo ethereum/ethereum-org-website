@@ -109,7 +109,7 @@ Ekosistem Ethereum memiliki misi untuk mendanai barang publik dan proyek-proyek 
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Karier di ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Papan lowongan kerja Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Papan lowongan kerja Bankless](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

@@ -109,7 +109,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
+- [Bankless jobs board](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

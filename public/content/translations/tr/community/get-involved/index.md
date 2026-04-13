@@ -109,7 +109,7 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 - [Kripto Para İş İlanları](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys'te Kariyer](https://consensys.net/careers/)
 - [Kripto İşleri Listesi](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless iş ilanı panosu](https://pallet.xyz/list/bankless/jobs)
+- [Bankless iş ilanı panosu](https://www.bankless.com/jobs)
 - [Web3 İş İlanları](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley İşleri](https://cryptovalley.jobs/)

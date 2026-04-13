@@ -235,9 +235,6 @@ importers:
         specifier: ^0.8.0
         version: 0.8.1
     devDependencies:
-      '@chromatic-com/playwright':
-        specifier: ^0.12.4
-        version: 0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@chromatic-com/storybook':
         specifier: 5.1.1
         version: 5.1.1(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10))(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))
@@ -2227,8 +2224,8 @@ packages:
       '@modelcontextprotocol/sdk':
         optional: true
 
-  '@hono/node-server@1.19.12':
-    resolution: {integrity: sha512-txsUW4SQ1iilgE0l9/e9VQWmELXifEFvmdA1j6WFh/aFPj99hIntrSsq/if0UWyGVkmrRPKA1wCeP+UCr1B9Uw==}
+  '@hono/node-server@1.19.14':
+    resolution: {integrity: sha512-GwtvgtXxnWsucXvbQXkRgqksiH2Qed37H9xHZocE5sA3N8O8O8/8FA3uclQXxXVzc9XBZuEOMK7+r02FmSpHtw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -5287,9 +5284,6 @@ packages:
   '@types/retry@0.12.2':
     resolution: {integrity: sha512-XISRgDJ2Tc5q4TRqvgJtzsRkFYNJzZrhTdtMoGVBttwzzQJkPnS3WWTFc7kuDRoPtPakl+T+OfdEUjYJj7Jbow==}
 
-  '@types/semver@7.7.0':
-    resolution: {integrity: sha512-k107IF4+Xr7UHjwDc7Cfd6PRQfbdkiRabXGRjo07b4WyPahFBZCZ1sE+BNxYIJPPg73UkfOsVOLwqVc/6ETrIA==}
-
   '@types/semver@7.7.1':
     resolution: {integrity: sha512-FmgJfu+MOcQ370SD0ev7EI8TlCAfKYU+B4m5T3yXc1CiRN94g/SZPtsCkk506aUDtlMnFZvasDwHHUcZUEaYuA==}
 
@@ -6455,8 +6449,8 @@ packages:
   constants-browserify@1.0.0:
     resolution: {integrity: sha512-xFxOwqIzR/e1k1gLiWEophSCMqXcwVHIH7akf7b/vxcUeGunlj3hvZaaqxwHsTgn+IndtkQJgSztIDWeumWJDQ==}
 
-  content-disposition@1.0.1:
-    resolution: {integrity: sha512-oIXISMynqSqm241k6kcQ5UwttDILMK4BiurCfGEREw6+X9jkkpEe5T9FZaApyLGGOnFuyMWZpdolTXMtvEJ08Q==}
+  content-disposition@1.1.0:
+    resolution: {integrity: sha512-5jRCH9Z/+DRP7rkvY83B+yGIGX96OYdJmzngqnw2SBSxqCFPd0w2km3s5iawpGX8krnwSGmF0FW5Nhr0Hfai3g==}
     engines: {node: '>=18'}
 
   content-type@1.0.5:
@@ -7863,8 +7857,8 @@ packages:
   hoist-non-react-statics@3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
 
-  hono@4.12.11:
-    resolution: {integrity: sha512-r4xbIa3mGGGoH9nN4A14DOg2wx7y2oQyJEb5O57C/xzETG/qx4c7CVDQ5WMeKHZ7ORk2W0hZ/sQKXTav3cmYBA==}
+  hono@4.12.12:
+    resolution: {integrity: sha512-p1JfQMKaceuCbpJKAPKVqyqviZdS0eUxH9v82oWo1kb9xjQ5wA6iP3FNVAPDFlz5/p7d45lO+BpSk1tuSZMF4Q==}
     engines: {node: '>=16.9.0'}
 
   howler@2.2.4:
@@ -9592,8 +9586,8 @@ packages:
   preact@10.26.8:
     resolution: {integrity: sha512-1nMfdFjucm5hKvq0IClqZwK4FJkGXhRrQstOQ3P4vp8HxKrJEMFcY6RdBRVTdfQS/UlnX6gfbPuTvaqx/bDoeQ==}
 
-  preact@10.29.0:
-    resolution: {integrity: sha512-wSAGyk2bYR1c7t3SZ3jHcM6xy0lcBcDel6lODcs9ME6Th++Dx2KU+6D3HD8wMMKGA8Wpw7OMd3/4RGzYRpzwRg==}
+  preact@10.29.1:
+    resolution: {integrity: sha512-gQCLc/vWroE8lIpleXtdJhTFDogTdZG9AjMUpVkDf2iTCNwYNWA+u16dL41TqUDJO4gm2IgrcMv3uTpjd4Pwmg==}
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -9747,8 +9741,8 @@ packages:
     resolution: {integrity: sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==}
     engines: {node: '>=0.6'}
 
-  qs@6.15.0:
-    resolution: {integrity: sha512-mAZTtNCeetKMH+pSjrb76NAM8V9a05I9aBZOHztWy/UqcJdQYNsf59vrRKWnojAT9Y+GbIvoTBC++CPHqpDBhQ==}
+  qs@6.15.1:
+    resolution: {integrity: sha512-6YHEFRL9mfgcAvql/XhwTvf5jKcOiiupt2FiJxHkiX1z4j7WL8J/jRHYLluORvc1XxB5rV20KoeK00gVJamspg==}
     engines: {node: '>=0.6'}
 
   query-string@7.1.3:
@@ -10729,8 +10723,8 @@ packages:
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
 
-  tinyexec@1.0.4:
-    resolution: {integrity: sha512-u9r3uZC0bdpGOXtlxUIdwf9pkmvhqJdrVCH9fapQtgy/OeTTMZ1nqH7agtvEfmGui6e1XxjcdrlxvxJvc3sMqw==}
+  tinyexec@1.1.1:
+    resolution: {integrity: sha512-VKS/ZaQhhkKFMANmAOhhXVoIfBXblQxGX1myCQ2faQrfmobMftXeJPcZGp0gS07ocvGJWDLZGyOZDadDBqYIJg==}
     engines: {node: '>=18'}
 
   tinyglobby@0.2.14:
@@ -14023,6 +14017,7 @@ snapshots:
       - uglify-js
       - utf-8-validate
       - webpack-cli
+    optional: true
 
   '@chromatic-com/storybook@5.1.1(@chromatic-com/playwright@0.12.5(@playwright/test@1.53.1)(@swc/core@1.15.21)(@types/react@19.2.14)(bufferutil@4.0.9)(esbuild@0.25.12)(prettier@3.5.3)(typescript@5.8.3)(utf-8-validate@5.0.10))(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))':
     dependencies:
@@ -14039,6 +14034,7 @@ snapshots:
   '@chromaui/rrweb-snapshot@2.0.0-alpha.18-noAbsolute':
     dependencies:
       postcss: 8.5.4
+    optional: true
 
   '@clack/core@0.5.0':
     dependencies:
@@ -14060,7 +14056,7 @@ snapshots:
       eth-json-rpc-filters: 6.0.1
       eventemitter3: 5.0.4
       keccak: 3.0.4
-      preact: 10.29.0
+      preact: 10.29.1
       sha.js: 2.4.12
     transitivePeerDependencies:
       - supports-color
@@ -14501,9 +14497,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@hono/node-server@1.19.12(hono@4.12.11)':
+  '@hono/node-server@1.19.14(hono@4.12.12)':
     dependencies:
-      hono: 4.12.11
+      hono: 4.12.12
 
   '@hookform/resolvers@3.10.0(react-hook-form@7.57.0(react@19.2.4))':
     dependencies:
@@ -14769,11 +14765,13 @@ snapshots:
     dependencies:
       '@lit-labs/ssr-dom-shim': 1.3.0
 
-  '@lukeed/csprng@1.1.0': {}
+  '@lukeed/csprng@1.1.0':
+    optional: true
 
   '@lukeed/uuid@2.0.1':
     dependencies:
       '@lukeed/csprng': 1.1.0
+    optional: true
 
   '@mdx-js/mdx@3.1.0(acorn@8.16.0)':
     dependencies:
@@ -14971,7 +14969,7 @@ snapshots:
 
   '@modelcontextprotocol/sdk@1.29.0(supports-color@10.2.2)(zod@3.25.76)':
     dependencies:
-      '@hono/node-server': 1.19.12(hono@4.12.11)
+      '@hono/node-server': 1.19.14(hono@4.12.12)
       ajv: 8.17.1
       ajv-formats: 3.0.1(ajv@8.17.1)
       content-type: 1.0.5
@@ -14981,7 +14979,7 @@ snapshots:
       eventsource-parser: 3.0.6
       express: 5.2.1(supports-color@10.2.2)
       express-rate-limit: 8.3.2(express@5.2.1)
-      hono: 4.12.11
+      hono: 4.12.12
       jose: 6.2.2
       json-schema-typed: 8.0.2
       pkce-challenge: 5.0.1
@@ -16626,10 +16624,12 @@ snapshots:
       '@segment/analytics-generic-utils': 1.1.1
       dset: 3.1.4
       tslib: 2.8.1
+    optional: true
 
   '@segment/analytics-generic-utils@1.1.1':
     dependencies:
       tslib: 2.8.1
+    optional: true
 
   '@segment/analytics-node@1.3.0':
     dependencies:
@@ -16641,6 +16641,7 @@ snapshots:
       tslib: 2.8.1
     transitivePeerDependencies:
       - encoding
+    optional: true
 
   '@sentry-internal/browser-utils@10.46.0':
     dependencies:
@@ -17457,6 +17458,7 @@ snapshots:
       polished: 4.3.1
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       uuid: 9.0.1
+    optional: true
 
   '@storybook/addon-backgrounds@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -17464,6 +17466,7 @@ snapshots:
       memoizerific: 1.11.3
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
+    optional: true
 
   '@storybook/addon-controls@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -17471,6 +17474,7 @@ snapshots:
       dequal: 2.0.3
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
+    optional: true
 
   '@storybook/addon-docs@10.3.3(@types/react@19.2.14)(esbuild@0.25.12)(rollup@4.46.2)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12))':
     dependencies:
@@ -17501,6 +17505,7 @@ snapshots:
       ts-dedent: 2.2.0
     transitivePeerDependencies:
       - '@types/react'
+    optional: true
 
   '@storybook/addon-essentials@8.5.8(@types/react@19.2.14)(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -17517,11 +17522,13 @@ snapshots:
       ts-dedent: 2.2.0
     transitivePeerDependencies:
       - '@types/react'
+    optional: true
 
   '@storybook/addon-highlight@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@storybook/global': 5.0.0
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/addon-links@10.3.3(react@19.2.4)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))':
     dependencies:
@@ -17535,12 +17542,14 @@ snapshots:
       '@storybook/global': 5.0.0
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       tiny-invariant: 1.3.3
+    optional: true
 
   '@storybook/addon-outline@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       '@storybook/global': 5.0.0
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
+    optional: true
 
   '@storybook/addon-themes@10.3.3(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))':
     dependencies:
@@ -17550,11 +17559,13 @@ snapshots:
   '@storybook/addon-toolbars@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/addon-viewport@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       memoizerific: 1.11.3
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/blocks@8.5.8(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -17565,6 +17576,7 @@ snapshots:
     optionalDependencies:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
+    optional: true
 
   '@storybook/builder-webpack5@10.3.3(@swc/core@1.15.21)(esbuild@0.25.12)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(typescript@5.8.3)':
     dependencies:
@@ -17596,7 +17608,7 @@ snapshots:
   '@storybook/builder-webpack5@8.5.8(@swc/core@1.15.21)(esbuild@0.25.12)(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))(typescript@5.8.3)':
     dependencies:
       '@storybook/core-webpack': 8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))
-      '@types/semver': 7.7.0
+      '@types/semver': 7.7.1
       browser-assert: 1.2.1
       case-sensitive-paths-webpack-plugin: 2.4.0
       cjs-module-lexer: 1.4.3
@@ -17628,10 +17640,12 @@ snapshots:
       - esbuild
       - uglify-js
       - webpack-cli
+    optional: true
 
   '@storybook/components@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/core-webpack@10.3.3(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))':
     dependencies:
@@ -17642,6 +17656,7 @@ snapshots:
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
+    optional: true
 
   '@storybook/core@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)':
     dependencies:
@@ -17662,6 +17677,7 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+    optional: true
 
   '@storybook/csf-plugin@10.3.3(esbuild@0.25.12)(rollup@4.46.2)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12))':
     dependencies:
@@ -17676,14 +17692,17 @@ snapshots:
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       unplugin: 1.16.1
+    optional: true
 
   '@storybook/csf@0.1.12':
     dependencies:
       type-fest: 2.19.0
+    optional: true
 
   '@storybook/csf@0.1.13':
     dependencies:
       type-fest: 2.19.0
+    optional: true
 
   '@storybook/global@5.0.0': {}
 
@@ -17691,6 +17710,7 @@ snapshots:
     dependencies:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
+    optional: true
 
   '@storybook/icons@2.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
@@ -17700,6 +17720,7 @@ snapshots:
   '@storybook/manager-api@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/nextjs@10.3.3(@swc/core@1.15.21)(babel-plugin-macros@3.1.0)(esbuild@0.25.12)(next@16.2.1(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(@playwright/test@1.53.1)(babel-plugin-macros@3.1.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(type-fest@4.41.0)(typescript@5.8.3)(webpack-hot-middleware@2.26.1)(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12))':
     dependencies:
@@ -17793,10 +17814,12 @@ snapshots:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
       yaml-loader: 0.8.1
+    optional: true
 
   '@storybook/preview-api@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.8.3)(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12))':
     dependencies:
@@ -17823,6 +17846,7 @@ snapshots:
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@storybook/react@10.3.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.3(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.5.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(utf-8-validate@5.0.10))(typescript@5.8.3)':
     dependencies:
@@ -17851,6 +17875,7 @@ snapshots:
       - typescript
       - uglify-js
       - webpack-cli
+    optional: true
 
   '@storybook/server@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
@@ -17863,10 +17888,12 @@ snapshots:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
       ts-dedent: 2.2.0
       yaml: 2.8.0
+    optional: true
 
   '@storybook/theming@8.5.8(storybook@8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10))':
     dependencies:
       storybook: 8.5.8(bufferutil@4.0.9)(prettier@3.5.3)(utf-8-validate@5.0.10)
+    optional: true
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.27.4)':
     dependencies:
@@ -18334,8 +18361,6 @@ snapshots:
 
   '@types/retry@0.12.2': {}
 
-  '@types/semver@7.7.0': {}
-
   '@types/semver@7.7.1': {}
 
   '@types/tedious@4.0.14':
@@ -18352,7 +18377,8 @@ snapshots:
 
   '@types/unist@3.0.3': {}
 
-  '@types/uuid@9.0.8': {}
+  '@types/uuid@9.0.8':
+    optional: true
 
   '@types/xml2js@0.4.14':
     dependencies:
@@ -19655,6 +19681,7 @@ snapshots:
   better-opn@3.0.2:
     dependencies:
       open: 8.4.2
+    optional: true
 
   big.js@5.2.2: {}
 
@@ -19683,7 +19710,7 @@ snapshots:
       http-errors: 2.0.1
       iconv-lite: 0.7.2
       on-finished: 2.4.1
-      qs: 6.15.0
+      qs: 6.15.1
       raw-body: 3.0.2
       type-is: 2.0.1
     transitivePeerDependencies:
@@ -19712,7 +19739,8 @@ snapshots:
 
   brorand@1.1.0: {}
 
-  browser-assert@1.2.1: {}
+  browser-assert@1.2.1:
+    optional: true
 
   browserify-aes@1.2.0:
     dependencies:
@@ -20070,7 +20098,7 @@ snapshots:
 
   constants-browserify@1.0.0: {}
 
-  content-disposition@1.0.1: {}
+  content-disposition@1.1.0: {}
 
   content-type@1.0.5: {}
 
@@ -20433,7 +20461,8 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
-  define-lazy-prop@2.0.0: {}
+  define-lazy-prop@2.0.0:
+    optional: true
 
   define-lazy-prop@3.0.0: {}
 
@@ -20562,7 +20591,8 @@ snapshots:
 
   dotenv@16.6.1: {}
 
-  dset@3.1.4: {}
+  dset@3.1.4:
+    optional: true
 
   dunder-proto@1.0.1:
     dependencies:
@@ -20842,6 +20872,7 @@ snapshots:
       esbuild: 0.25.12
     transitivePeerDependencies:
       - supports-color
+    optional: true
 
   esbuild@0.23.1:
     optionalDependencies:
@@ -21267,7 +21298,7 @@ snapshots:
     dependencies:
       accepts: 2.0.0
       body-parser: 2.2.2(supports-color@10.2.2)
-      content-disposition: 1.0.1
+      content-disposition: 1.1.0
       content-type: 1.0.5
       cookie: 0.7.2
       cookie-signature: 1.2.2
@@ -21306,7 +21337,7 @@ snapshots:
 
   extension-port-stream@3.0.0:
     dependencies:
-      readable-stream: 4.7.0
+      readable-stream: 3.6.2
       webextension-polyfill: 0.10.0
 
   fast-check@3.23.2:
@@ -21454,7 +21485,7 @@ snapshots:
 
   fork-ts-checker-webpack-plugin@8.0.0(typescript@5.8.3)(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12)):
     dependencies:
-      '@babel/code-frame': 7.27.1
+      '@babel/code-frame': 7.29.0
       chalk: 4.1.2
       chokidar: 3.6.0
       cosmiconfig: 7.1.0
@@ -21468,6 +21499,7 @@ snapshots:
       tapable: 2.2.2
       typescript: 5.8.3
       webpack: 5.99.9(@swc/core@1.15.21)(esbuild@0.25.12)
+    optional: true
 
   fork-ts-checker-webpack-plugin@9.1.0(typescript@5.8.3)(webpack@5.99.9(@swc/core@1.15.21)(esbuild@0.25.12)):
     dependencies:
@@ -21846,7 +21878,7 @@ snapshots:
     dependencies:
       react-is: 16.13.1
 
-  hono@4.12.11: {}
+  hono@4.12.12: {}
 
   howler@2.2.4: {}
 
@@ -22103,7 +22135,8 @@ snapshots:
 
   is-decimal@2.0.1: {}
 
-  is-docker@2.2.1: {}
+  is-docker@2.2.1:
+    optional: true
 
   is-docker@3.0.0: {}
 
@@ -22225,6 +22258,7 @@ snapshots:
   is-wsl@2.2.0:
     dependencies:
       is-docker: 2.2.1
+    optional: true
 
   is-wsl@3.1.1:
     dependencies:
@@ -22296,7 +22330,8 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsdoc-type-pratt-parser@4.1.0: {}
+  jsdoc-type-pratt-parser@4.1.0:
+    optional: true
 
   jsesc@3.0.2: {}
 
@@ -22538,7 +22573,8 @@ snapshots:
 
   make-error@1.3.6: {}
 
-  map-or-similar@1.5.0: {}
+  map-or-similar@1.5.0:
+    optional: true
 
   markdown-extensions@2.0.0: {}
 
@@ -22791,6 +22827,7 @@ snapshots:
   memoizerific@1.11.3:
     dependencies:
       map-or-similar: 1.5.0
+    optional: true
 
   merge-descriptors@2.0.0: {}
 
@@ -23361,7 +23398,7 @@ snapshots:
     dependencies:
       citty: 0.2.2
       pathe: 2.0.3
-      tinyexec: 1.0.4
+      tinyexec: 1.1.1
 
   obj-multiplex@1.0.0:
     dependencies:
@@ -23460,6 +23497,7 @@ snapshots:
       define-lazy-prop: 2.0.0
       is-docker: 2.2.1
       is-wsl: 2.2.0
+    optional: true
 
   opener@1.5.2: {}
 
@@ -23873,7 +23911,7 @@ snapshots:
 
   preact@10.26.8: {}
 
-  preact@10.29.0: {}
+  preact@10.29.1: {}
 
   prelude-ls@1.2.1: {}
 
@@ -23986,7 +24024,7 @@ snapshots:
     dependencies:
       side-channel: 1.1.0
 
-  qs@6.15.0:
+  qs@6.15.1:
     dependencies:
       side-channel: 1.1.0
 
@@ -24544,7 +24582,8 @@ snapshots:
 
   safe-buffer@5.2.1: {}
 
-  safe-identifier@0.4.2: {}
+  safe-identifier@0.4.2:
+    optional: true
 
   safe-push-apply@1.0.0:
     dependencies:
@@ -24941,6 +24980,7 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+    optional: true
 
   stream-browserify@3.0.0:
     dependencies:
@@ -25282,7 +25322,7 @@ snapshots:
 
   tinyexec@0.3.2: {}
 
-  tinyexec@1.0.4: {}
+  tinyexec@1.1.1: {}
 
   tinyglobby@0.2.14:
     dependencies:
@@ -25664,6 +25704,7 @@ snapshots:
     dependencies:
       acorn: 8.16.0
       webpack-virtual-modules: 0.6.2
+    optional: true
 
   unplugin@2.3.11:
     dependencies:
