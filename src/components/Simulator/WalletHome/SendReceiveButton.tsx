@@ -34,19 +34,19 @@ export const SendReceiveButton = ({
   >
     <div
       className={cn(
-        "relative grid aspect-square w-10 place-items-center rounded-full bg-primary group-hover:bg-primary-hover md:w-16",
+        "bg-primary group-hover:bg-primary-hover relative grid aspect-square w-10 place-items-center rounded-full md:w-16",
         isHighlighted
           ? "group-disabled:bg-primary"
           : "group-disabled:bg-body-light"
       )}
     >
       {!isDisabled && isAnimated && <PulseAnimation type="circle" />}
-      <Icon className="size-4 text-background md:size-6" />
+      <Icon className="text-background size-4 md:size-6" />
     </div>
     <div className="relative">
       <p
         className={cn(
-          "relative text-center font-bold text-primary group-hover:text-primary-hover",
+          "text-primary group-hover:text-primary-hover relative text-center font-bold",
           isHighlighted
             ? "group-disabled:text-primary"
             : "group-disabled:text-body-medium"

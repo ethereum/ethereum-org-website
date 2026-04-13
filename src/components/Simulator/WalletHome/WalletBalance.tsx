@@ -14,8 +14,8 @@ type WalletBalanceProps = {
 
 export const WalletBalance = ({ usdAmount = 0 }: WalletBalanceProps) => (
   <div className="z-[1]">
-    <p className="mb-2 text-center text-body-medium md:mb-4">Your total</p>
-    <p className="text-center text-3xl font-bold !leading-base md:text-5xl">
+    <p className="text-body-medium mb-2 text-center md:mb-4">Your total</p>
+    <p className="!leading-base text-center text-3xl font-bold md:text-5xl">
       {numberFormat("en-US", {
         style: "currency",
         currency: "USD",

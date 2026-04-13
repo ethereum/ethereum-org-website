@@ -25,7 +25,7 @@ const ValuesMarqueeFallback = () => (
         ))}
       </div>
 
-      <Spinner className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 text-4xl" />
+      <Spinner className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl" />
     </Skeleton>
   </div>
 )

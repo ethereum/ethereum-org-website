@@ -129,7 +129,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                   side="top"
                 >
                   <Flex className="flex-col items-start gap-1 text-start text-xs sm:text-sm">
-                    <p className="mb-auto ms-2 text-md font-bold">Cool art</p>
+                    <p className="text-md ms-2 mb-auto font-bold">Cool art</p>
                     <Button variant="link" disabled>
                       <AuctionLine className="text-xs" />
                       Set a price
@@ -150,7 +150,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                 content="Try out a real Ethereum application when finished here"
                 side="top"
               >
-                <div className="text-sm md:text-md">
+                <div className="md:text-md text-sm">
                   <Button className="block" variant="link" disabled>
                     Browse other artwork
                   </Button>

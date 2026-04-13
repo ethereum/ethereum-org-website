@@ -77,7 +77,7 @@ export const Success = ({
         </motion.div>
       ) : (
         <Flex
-          className="h-full justify-center bg-background-highlight max-md:pt-24 md:items-center"
+          className="bg-background-highlight h-full justify-center max-md:pt-24 md:items-center"
           asChild
         >
           <motion.div

@@ -22,8 +22,8 @@ type SimulatorSectionProps = {
  * Loading skeleton that matches simulator phone dimensions
  */
 const SimulatorSkeleton = () => (
-  <div className="mx-auto min-w-[min(100%,322px)] max-w-[min(100%,322px)]">
-    <div className="h-[480px] w-full animate-pulse rounded-3xl bg-background-highlight md:h-[600px]" />
+  <div className="mx-auto max-w-[min(100%,322px)] min-w-[min(100%,322px)]">
+    <div className="bg-background-highlight h-[480px] w-full animate-pulse rounded-3xl md:h-[600px]" />
   </div>
 )
 
@@ -65,10 +65,10 @@ const SimulatorSection = ({ className }: SimulatorSectionProps) => {
     >
       <div className="flex flex-col items-center gap-4 text-center">
         <SectionTag variant="plain">Free forever</SectionTag>
-        <SectionHeader className="mb-0 mt-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
+        <SectionHeader className="mt-0 mb-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
           Try Ethereum in your browser
         </SectionHeader>
-        <p className="text-lg text-body-medium md:text-xl">
+        <p className="text-body-medium text-lg md:text-xl">
           Experience how Ethereum works. Just click and explore.
         </p>
       </div>

@@ -14,7 +14,7 @@ const BannerNotification = ({
   return (
     <aside
       className={cn(
-        "flex w-full items-center justify-center gap-2 bg-primary-action px-8 py-4 text-white [&_a]:text-white [&_a]:hover:text-white/80",
+        "bg-primary-action flex w-full items-center justify-center gap-2 px-8 py-4 text-white [&_a]:text-white [&_a]:hover:text-white/80",
         className
       )}
       {...props}

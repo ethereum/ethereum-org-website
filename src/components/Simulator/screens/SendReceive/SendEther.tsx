@@ -62,7 +62,7 @@ export const SendEther = ({
         <p className="mb-4 text-xl font-bold md:mb-6 md:text-2xl">Send</p>
         <p className="md:mb-6">How much do you want to send?</p>
       </div>
-      <Flex className="justify-between gap-4 border-y border-background-highlight px-6 py-4 text-xs text-body-medium md:py-6">
+      <Flex className="border-background-highlight text-body-medium justify-between gap-4 border-y px-6 py-4 text-xs md:py-6">
         {/* Left side: Displayed send amount */}
         <NotificationPopover
           title="Example walkthrough"
@@ -88,21 +88,21 @@ export const SendEther = ({
             content="In this walkthrough you can only send ETH, but in real wallet you can send different tokens as well"
           >
             {/* Token selector pill */}
-            <HStack className="mb-4 gap-0 rounded-full bg-body-light px-2 py-1">
+            <HStack className="bg-body-light mb-4 gap-0 rounded-full px-2 py-1">
               {/* TODO: remove flags and `size` class when icon is migrated */}
               <EthTokenIcon className="!me-1.5 !size-[1em] !text-xl" />
-              <p className="m-0 font-bold text-body">ETH</p>
+              <p className="text-body m-0 font-bold">ETH</p>
             </HStack>
           </NotificationPopover>
           {/* Balances */}
-          <p className="font-bold leading-none">Balance: {usdAmount}</p>
+          <p className="leading-none font-bold">Balance: {usdAmount}</p>
           <p>
             <>{ethAmount} ETH</>
           </p>
         </Flex>
       </Flex>
-      <div className="h-full bg-background-highlight">
-        <Flex className="relative flex-nowrap justify-between bg-background-highlight p-6 font-bold">
+      <div className="bg-background-highlight h-full">
+        <Flex className="bg-background-highlight relative flex-nowrap justify-between p-6 font-bold">
           {/* Amount buttons */}
           {AMOUNTS.map((amount, i) => (
             <Button

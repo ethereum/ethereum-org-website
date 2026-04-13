@@ -18,7 +18,7 @@ const List = forwardRef<ElementRef<"ul">, ListProps>(
     return (
       <Comp
         ref={ref}
-        className={cn("mb-6 ms-6 list-disc", className)}
+        className={cn("ms-6 mb-6 list-disc", className)}
         {...props}
       />
     )

@@ -25,7 +25,7 @@ export const TokenBalanceItem = ({ item }: TokenBalanceItemProps) => {
     <Flex className="gap-4">
       <Icon className="text-3xl" />
       <p className="flex-1 font-medium">{name}</p>
-      <div className="text-end text-sm font-bold leading-normal [&_p]:m-0">
+      <div className="text-end text-sm leading-normal font-bold [&_p]:m-0">
         <p>{usdValue}</p>
         <p className="text-body-medium">
           {tokenAmount} {ticker}

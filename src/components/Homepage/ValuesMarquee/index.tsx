@@ -52,7 +52,7 @@ const Item = ({
             {label}
           </h3>
           <div className="flex flex-col gap-4">
-            <div className="flex gap-2 text-body-medium">
+            <div className="text-body-medium flex gap-2">
               <div className="p-1 text-lg">
                 <X />
               </div>
@@ -64,7 +64,7 @@ const Item = ({
                 ))}
               </div>
             </div>
-            <div className="flex gap-2 text-body">
+            <div className="text-body flex gap-2">
               <div className="p-1 text-lg">
                 <EthGlyphSolid />
               </div>
@@ -82,7 +82,7 @@ const Item = ({
     >
       <div
         className={cn(
-          "flex flex-nowrap items-center text-nowrap rounded-full px-4 py-1 font-bold uppercase",
+          "flex flex-nowrap items-center rounded-full px-4 py-1 font-bold text-nowrap uppercase",
           className
         )}
         dir={direction}
@@ -182,7 +182,7 @@ const ValuesMarquee = ({
     <div className="relative mt-19 overflow-hidden max-2xl:-mx-4 2xl:rounded-2xl">
       <Row
         ref={containerFirstRef}
-        className="border-b border-background bg-blue-50 dark:bg-blue-600"
+        className="border-background border-b bg-blue-50 dark:bg-blue-600"
       >
         {pairings.map((pairing) => (
           <Item
@@ -196,7 +196,7 @@ const ValuesMarquee = ({
             direction={direction}
           >
             <Check
-              className="me-1 size-[1em] stroke-[4.5] text-success group-hover/item:text-white"
+              className="text-success me-1 size-[1em] stroke-[4.5] group-hover/item:text-white"
               strokeLinecap="square"
               strokeLinejoin="miter"
             />
@@ -206,7 +206,7 @@ const ValuesMarquee = ({
       </Row>
       <Row
         ref={containerSecondRef}
-        className="border-t border-background bg-gray-50 dark:bg-gray-800"
+        className="border-background border-t bg-gray-50 dark:bg-gray-800"
         toRight
       >
         {pairings.map((pairing) => (
@@ -215,7 +215,7 @@ const ValuesMarquee = ({
             label={pairing.legacy.label}
             container={containerSecond}
             pairing={pairing}
-            className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
+            className="text-body-medium dark:text-body bg-gray-200/20 hover:bg-gray-600 hover:text-white dark:bg-gray-950"
             separatorClass="bg-gray-200 dark:bg-gray-950"
             eventCategory={eventCategory}
             direction={direction}
@@ -230,7 +230,7 @@ const ValuesMarquee = ({
           isRtl ? "translate-x-[50%]" : "-translate-x-[50%]"
         )}
       >
-        <p className="bg-gray-50 px-4 py-1 text-body-medium dark:bg-gray-800 dark:text-gray-200">
+        <p className="text-body-medium bg-gray-50 px-4 py-1 dark:bg-gray-800 dark:text-gray-200">
           {categoryLabels.legacy}
         </p>
         <div
@@ -242,7 +242,7 @@ const ValuesMarquee = ({
             twFlipForRtl
           )}
         />
-        <p className="bg-blue-50 px-4 py-1 text-accent-a dark:bg-blue-600 dark:text-white">
+        <p className="text-accent-a bg-blue-50 px-4 py-1 dark:bg-blue-600 dark:text-white">
           {categoryLabels.ethereum}
         </p>
       </div>

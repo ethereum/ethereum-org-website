@@ -47,12 +47,12 @@ export const SendSummary = ({
             {formatChosenAmount}
           </p>
         </Flex>
-        <p className="text-xs text-body-medium">
+        <p className="text-body-medium text-xs">
           {formatEth(chosenAmount / ethPrice)} ETH
         </p>
       </div>
       {/* Bottom section */}
-      <Flex className="h-full flex-col gap-3 bg-background-highlight px-6 py-4 text-sm md:gap-6 md:py-8 md:text-md">
+      <Flex className="bg-background-highlight md:text-md h-full flex-col gap-3 px-6 py-4 text-sm md:gap-6 md:py-8">
         <div>
           <p>To</p>
           <p className="font-bold">{recipient}</p>
@@ -70,7 +70,7 @@ export const SendSummary = ({
               currency: "USD",
               notation: "compact",
             }).format(usdFee)}
-            <span className="ms-2 text-xs font-normal text-body-medium">
+            <span className="text-body-medium ms-2 text-xs font-normal">
               (
               {numberFormat("en", {
                 maximumFractionDigits: 6,

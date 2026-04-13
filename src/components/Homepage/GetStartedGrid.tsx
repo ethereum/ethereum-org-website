@@ -81,12 +81,12 @@ const GetStartedGrid = ({
 }: GetStartedGridProps) => {
   return (
     <Section id="get-started" className={cn("relative", className)}>
-      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pb-8 pt-20 md:px-8">
+      <div className="bg-radial-a flex flex-col gap-12 rounded-t-4xl px-4 pt-20 pb-8 md:px-8">
         <div className="flex flex-col items-center gap-2 text-center">
-          <SectionHeader className="mb-0 mt-0">
+          <SectionHeader className="mt-0 mb-0">
             Get started on Ethereum
           </SectionHeader>
-          <p className="max-w-[42rem] text-lg text-body-medium lg:text-2xl">
+          <p className="text-body-medium max-w-[42rem] text-lg lg:text-2xl">
             Takes 2 minutes to get started. No credit check, no paperwork, no
             minimum balance.
           </p>
@@ -95,7 +95,7 @@ const GetStartedGrid = ({
         <div className="mx-auto grid w-full max-w-[76rem] gap-8 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((card) => (
             <LinkBox key={card.title} className="h-full">
-              <Card className="flex h-full flex-col overflow-hidden rounded-4xl border bg-background p-8 transition-colors hover:border-primary-hover">
+              <Card className="bg-background hover:border-primary-hover flex h-full flex-col overflow-hidden rounded-4xl border p-8 transition-colors">
                 <div className="mb-7 h-48 overflow-hidden rounded-[10px]">
                   <Image
                     src={card.image}
@@ -116,7 +116,7 @@ const GetStartedGrid = ({
                       >
                         <card.icon className={cn("size-6", card.iconColor)} />
                       </div>
-                      <h3 className="text-2xl font-bold leading-8">
+                      <h3 className="text-2xl leading-8 font-bold">
                         {card.title}
                       </h3>
                     </div>
@@ -135,7 +135,7 @@ const GetStartedGrid = ({
                               card.bulletColor
                             )}
                           />
-                          <span className="text-sm leading-5 text-body-medium">
+                          <span className="text-body-medium text-sm leading-5">
                             {bullet}
                           </span>
                         </li>

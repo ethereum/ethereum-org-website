@@ -32,7 +32,7 @@ export const SendFromContacts = ({
         >
           <Button
             variant="outline"
-            className="w-full cursor-auto border-disabled py-4 text-disabled hover:!text-disabled hover:shadow-none"
+            className="border-disabled text-disabled hover:!text-disabled w-full cursor-auto py-4 hover:shadow-none"
           >
             <Search />
             <span className="me-auto">Address or contacts</span>
@@ -40,7 +40,7 @@ export const SendFromContacts = ({
           </Button>
         </NotificationPopover>
       </div>
-      <div className="h-full bg-background-highlight px-6 py-8">
+      <div className="bg-background-highlight h-full px-6 py-8">
         <CategoryTabs
           categories={["My contacts", "Recent"]}
           activeIndex={1}
@@ -51,13 +51,13 @@ export const SendFromContacts = ({
             <Button
               key={name + i}
               disabled={i > 0}
-              className="group gap-2 disabled:bg-background disabled:text-body hover:[&_path]:fill-primary-hover"
+              className="group disabled:bg-background disabled:text-body hover:[&_path]:fill-primary-hover gap-2"
               onClick={() => handleSelection(name)}
             >
-              <EthTokenIcon className="[&_circle]:fill-white [&_path]:fill-primary-action" />
+              <EthTokenIcon className="[&_path]:fill-primary-action [&_circle]:fill-white" />
               <span className="flex-1">
                 <span className="block text-start font-bold">{name}</span>
-                <span className="block text-start text-sm text-white group-disabled:text-body-medium">
+                <span className="group-disabled:text-body-medium block text-start text-sm text-white">
                   {lastAction}
                 </span>
               </span>

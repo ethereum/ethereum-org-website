@@ -168,7 +168,7 @@ const ComparisonCard = ({
       <FloatingCard variant={variant}>
         <p
           className={cn(
-            "text-xs font-semibold uppercase tracking-wider lg:text-sm",
+            "text-xs font-semibold tracking-wider uppercase lg:text-sm",
             !isPrimary && "text-body-medium"
           )}
         >
@@ -225,12 +225,12 @@ const SlideContent = ({
       <SectionContent className="order-2 flex flex-col gap-6 md:order-1 md:max-w-[660px] md:gap-10">
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{slide.tag}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0 text-4xl sm:text-5xl md:text-6xl">
+          <SectionHeader className="!mt-0 !mb-0 text-4xl sm:text-5xl md:text-6xl">
             {slide.title}
           </SectionHeader>
         </div>
 
-        <div className="flex flex-col gap-4 text-lg leading-relaxed text-body-medium md:gap-6 lg:text-2xl lg:leading-relaxed">
+        <div className="text-body-medium flex flex-col gap-4 text-lg leading-relaxed md:gap-6 lg:text-2xl lg:leading-relaxed">
           <p>{slide.subtitle}</p>
           <p>{slide.description}</p>
         </div>
@@ -296,7 +296,7 @@ const SlideContent = ({
             controls={traditionalControls}
             initial={{ opacity: 0, x: -20, y: 10 }}
             transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-            className="absolute -left-8 bottom-40 z-10 w-[250px] lg:-left-12 lg:bottom-44 lg:w-[269px]"
+            className="absolute bottom-40 -left-8 z-10 w-[250px] lg:bottom-44 lg:-left-12 lg:w-[269px]"
           />
           <ComparisonCard
             item={comparison.ethereum}
@@ -304,7 +304,7 @@ const SlideContent = ({
             controls={ethereumControls}
             initial={{ opacity: 0, x: -30, y: 15 }}
             transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
-            className="absolute -left-12 bottom-10 z-10 w-[280px] lg:-left-16 lg:w-[339px]"
+            className="absolute bottom-10 -left-12 z-10 w-[280px] lg:-left-16 lg:w-[339px]"
           />
         </div>
       </div>

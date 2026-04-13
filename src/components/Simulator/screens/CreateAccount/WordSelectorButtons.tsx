@@ -66,7 +66,7 @@ export const WordSelectorButtons = ({
 
   return (
     <div
-      className="absolute bottom-0 w-full bg-background-highlight p-4"
+      className="bg-background-highlight absolute bottom-0 w-full p-4"
       data-testid="word-selector-buttons"
     >
       <div className="grid h-[90px] w-full grid-cols-4 gap-2 overflow-hidden whitespace-nowrap md:h-[152px]">
@@ -76,12 +76,12 @@ export const WordSelectorButtons = ({
             variant="solid"
             onClick={incrementWordsSelected}
             disabled={index !== wordsSelected}
-            className="group relative rounded-xl bg-primary-hover px-1 text-background disabled:bg-body-light disabled:text-body"
+            className="group bg-primary-hover text-background disabled:bg-body-light disabled:text-body relative rounded-xl px-1"
           >
             <>
               {word}
               {index === wordsSelected && (
-                <Pointer className="absolute start-[65%] top-[65%] z-popover stroke-body transition-opacity duration-200 group-hover:opacity-0 group-hover:transition-opacity group-hover:duration-200" />
+                <Pointer className="z-popover stroke-body absolute start-[65%] top-[65%] transition-opacity duration-200 group-hover:opacity-0 group-hover:transition-opacity group-hover:duration-200" />
               )}
             </>
           </Button>

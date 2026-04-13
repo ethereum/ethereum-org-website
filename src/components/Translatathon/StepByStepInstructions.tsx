@@ -79,11 +79,11 @@ export const StepByStepInstructions = () => {
         return (
           <Flex
             key={index}
-            className="w-full flex-col items-start justify-between gap-4 border-b border-body-light p-4 md:flex-row md:items-center"
+            className="border-body-light w-full flex-col items-start justify-between gap-4 border-b p-4 md:flex-row md:items-center"
           >
             <Flex className="flex-col items-start gap-4 md:flex-row md:items-center">
-              <Center className="h-[46px] min-w-[46px] max-w-[46px] rounded-lg bg-background p-1 shadow">
-                <p className="text-4xl font-bold text-primary">{index + 1}</p>
+              <Center className="bg-background h-[46px] max-w-[46px] min-w-[46px] rounded-lg p-1 shadow">
+                <p className="text-primary text-4xl font-bold">{index + 1}</p>
               </Center>
               <Flex className="flex-col">
                 <p className="text-xl font-bold">{instruction.title}</p>

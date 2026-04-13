@@ -25,7 +25,7 @@ const SimulatorSection = dynamic(
 
 const SectionSkeleton = ({ className }: { className?: string }) => (
   <Section className={className}>
-    <div className="h-[400px] w-full animate-pulse rounded-2xl bg-background-highlight md:h-[500px]" />
+    <div className="bg-background-highlight h-[400px] w-full animate-pulse rounded-2xl md:h-[500px]" />
   </Section>
 )
 

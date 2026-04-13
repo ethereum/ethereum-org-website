@@ -40,14 +40,14 @@ const AccordionCodeBlock = ({
     <Codeblock
       codeLanguage={codeLanguage}
       allowCollapse={false}
-      className="[&>div]:-m-//2 [&>div]:rounded-none [&_*]:!text-xs [&_pre]:p-4"
+      className="[&>div]:-m-//2 [&_*]:!text-xs [&_pre]:p-4 [&>div]:rounded-none"
       fromHomepage
     >
       {code}
     </Codeblock>
     <CopyToClipboard
       text={code ?? ""}
-      className="absolute end-2 top-2 rounded p-2 hover:bg-primary/10 hover:text-primary"
+      className="hover:bg-primary/10 hover:text-primary absolute end-2 top-2 rounded p-2"
     >
       {(hasCopied) => (hasCopied ? <ClipboardCheck /> : <Clipboard />)}
     </CopyToClipboard>
@@ -90,14 +90,14 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
   }
 
   return (
-    <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
+    <div className="py-8 md:pt-8 md:pb-16 lg:pt-16 lg:pb-32">
       <WindowBox title={title} svg={<AngleBrackets />}>
         {/* Desktop */}
         {codeExamples.map(({ title, description, eventName }, idx) => (
           <button
             key={title}
             className={cn(
-              "flex flex-col gap-y-0.5 border-t px-6 py-4 text-start hover:bg-background-highlight max-md:hidden",
+              "hover:bg-background-highlight flex flex-col gap-y-0.5 border-t px-6 py-4 text-start max-md:hidden",
               isModalOpen && idx === activeCode && "bg-background-highlight"
             )}
             onClick={() => {
@@ -111,7 +111,7 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
             }}
           >
             <p className="font-bold">{title}</p>
-            <p className="text-sm text-body-medium">{description}</p>
+            <p className="text-body-medium text-sm">{description}</p>
           </button>
         ))}
         {/* Mobile */}
@@ -119,14 +119,14 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
           {codeExamples.map(({ title, description, codeLanguage }, idx) => (
             <AccordionItem key={title} value={title} className="relative">
               <AccordionTrigger
-                className="flex border-t px-6 py-4 hover:bg-background-highlight"
+                className="hover:bg-background-highlight flex border-t px-6 py-4"
                 onClick={() => handleAccordionOpen(idx)}
               >
                 <div className="flex flex-col items-start gap-y-0.5">
-                  <p className="text-start text-md font-bold text-body">
+                  <p className="text-md text-body text-start font-bold">
                     {title}
                   </p>
-                  <p className="text-start text-sm text-body-medium">
+                  <p className="text-body-medium text-start text-sm">
                     {description}
                   </p>
                 </div>

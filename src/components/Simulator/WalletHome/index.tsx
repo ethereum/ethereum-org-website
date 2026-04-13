@@ -36,12 +36,12 @@ export const WalletHome = ({
     0
   )
   return (
-    <Flex className="absolute inset-0 flex-col items-center bg-background">
-      <Flex className="w-full flex-1 flex-col justify-between px-6 pb-4 pt-8">
+    <Flex className="bg-background absolute inset-0 flex-col items-center">
+      <Flex className="w-full flex-1 flex-col justify-between px-6 pt-8 pb-4">
         <WalletBalance usdAmount={totalAmounts} />
         <SendReceiveButtons nav={nav} isEnabled={isEnabled} />
       </Flex>
-      <Flex className="w-full flex-1 flex-col justify-between gap-6 bg-background-highlight p-6">
+      <Flex className="bg-background-highlight w-full flex-1 flex-col justify-between gap-6 p-6">
         <CategoryTabs
           categories={["Crypto", "NFTs"]}
           activeIndex={activeTabIndex}

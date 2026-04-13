@@ -66,23 +66,23 @@ const TrustLogos = ({
             />
           </div>
 
-          <FloatingCard className="absolute -left-4 top-8 z-10 shadow-lg md:top-12 lg:-left-8">
-            <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
+          <FloatingCard className="absolute top-8 -left-4 z-10 shadow-lg md:top-12 lg:-left-8">
+            <p className="text-body text-lg font-bold md:text-xl lg:text-2xl">
               Never offline
             </p>
             <div className="mt-1 flex items-center gap-1 md:mt-2">
-              <Check className="size-3 text-success md:size-4" />
-              <span className="text-xs font-semibold text-success md:text-sm">
+              <Check className="text-success size-3 md:size-4" />
+              <span className="text-success text-xs font-semibold md:text-sm">
                 100% uptime
               </span>
             </div>
           </FloatingCard>
 
           <FloatingCard className="absolute -right-4 bottom-12 z-10 shadow-lg md:-right-6 lg:-right-12">
-            <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
+            <p className="text-body text-lg font-bold md:text-xl lg:text-2xl">
               10 years
             </p>
-            <p className="mt-1 text-xs text-body-medium md:text-sm">
+            <p className="text-body-medium mt-1 text-xs md:text-sm">
               Since 2015
             </p>
           </FloatingCard>
@@ -94,10 +94,10 @@ const TrustLogos = ({
           <SectionTag variant="plain">
             Trusted by leading institutions
           </SectionTag>
-          <SectionHeader className="!mb-0 !mt-0">Built to last</SectionHeader>
+          <SectionHeader className="!mt-0 !mb-0">Built to last</SectionHeader>
         </div>
 
-        <p className="text-lg leading-relaxed text-body-medium lg:text-2xl lg:leading-relaxed">
+        <p className="text-body-medium text-lg leading-relaxed lg:text-2xl lg:leading-relaxed">
           Major financial institutions choose Ethereum because it&apos;s the
           most battle-tested, low-risk, and dependable blockchain. The code is
           open, the network is always on, and the track record speaks for

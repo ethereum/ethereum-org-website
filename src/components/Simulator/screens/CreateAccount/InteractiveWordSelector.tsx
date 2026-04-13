@@ -20,7 +20,7 @@ export const InteractiveWordSelector = ({
   const [wordsSelected, setWordsSelected] = useState(0)
   return (
     <div className="mt-8">
-      <p className="mb-4 px-4 text-2xl font-bold leading-8 max-md:hidden md:px-8">
+      <p className="mb-4 px-4 text-2xl leading-8 font-bold max-md:hidden md:px-8">
         Repeat the words
       </p>
       <WordList words={words} wordsSelected={wordsSelected} />
