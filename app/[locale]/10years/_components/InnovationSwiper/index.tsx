@@ -9,12 +9,12 @@ type InnovationSwiperProps = {
   innovationCards: InnovationCard[]
 }
 const InnovationSwiper = ({ innovationCards }: InnovationSwiperProps) => (
-  <div className="w-[100%]">
+  <div className="w-full">
     <Carousel className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">
       {innovationCards.map(
-        ({ image, title, date, description1, description2 }, index) => (
+        ({ image, title, date, description1, description2 }) => (
           <CarouselItem
-            key={index}
+            key={title}
             className="ms-6 w-[calc(100%-4rem)] max-w-[550px] xl:max-w-[700px]"
           >
             <div className="flex flex-col gap-4 rounded-lg bg-card-gradient-secondary p-4 sm:p-6">

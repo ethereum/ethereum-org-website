@@ -11,9 +11,9 @@ type VideoCourseSwiperProps = {
 
 const VideoCourseSwiper = ({ courses }: VideoCourseSwiperProps) => (
   <Carousel>
-    {courses.map((course, idx) => (
+    {courses.map((course) => (
       <CarouselItem
-        key={idx}
+        key={course.title}
         className="ms-4 w-[80%] sm:w-[calc(50%-1rem)] lg:w-[calc(33%-1rem)]"
       >
         <VideoCourseCard course={course} />

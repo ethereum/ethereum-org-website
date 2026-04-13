@@ -66,11 +66,11 @@ const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
       snap = true,
       style,
       children,
+      "aria-label": ariaLabel,
       ...props
     },
     ref
   ) => {
-    const outerRef = React.useRef<HTMLDivElement>(null)
     const scrollRef = React.useRef<HTMLDivElement>(null)
     const [canScrollStart, setCanScrollStart] = React.useState(false)
     const [canScrollEnd, setCanScrollEnd] = React.useState(false)
@@ -106,12 +106,17 @@ const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
         return
       }
 
-      // Find the item closest to the scroll container's left edge
-      const containerLeft = el.getBoundingClientRect().left
+      // Find the item closest to the scroll container's start (inline-start)
+      // edge. In RTL, the start edge is on the right.
+      const isRtl = getComputedStyle(el).direction === "rtl"
+      const containerRect = el.getBoundingClientRect()
+      const containerEdge = isRtl ? containerRect.right : containerRect.left
       let closestIdx = 0
       let closestDist = Infinity
       items.forEach((item, i) => {
-        const dist = Math.abs(item.getBoundingClientRect().left - containerLeft)
+        const itemRect = item.getBoundingClientRect()
+        const itemEdge = isRtl ? itemRect.right : itemRect.left
+        const dist = Math.abs(itemEdge - containerEdge)
         if (dist < closestDist) {
           closestDist = dist
           closestIdx = i
@@ -174,13 +179,26 @@ const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
 
     return (
       <div
-        ref={(node) => {
-          ;(outerRef as React.MutableRefObject<HTMLDivElement | null>).current =
-            node
-          if (typeof ref === "function") ref(node)
-          else if (ref) ref.current = node
+        ref={ref}
+        role="region"
+        aria-roledescription="carousel"
+        aria-label={ariaLabel}
+        tabIndex={needsNavigation ? 0 : undefined}
+        onKeyDown={(e) => {
+          if (!needsNavigation) return
+          if (e.key === "ArrowLeft") {
+            e.preventDefault()
+            scrollByPage("start")
+          } else if (e.key === "ArrowRight") {
+            e.preventDefault()
+            scrollByPage("end")
+          }
         }}
-        className={cn("space-y-6", className)}
+        className={cn(
+          "space-y-6",
+          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover",
+          className
+        )}
       >
         <div className={cn(wrapperClasses, varClasses)} style={style}>
           <div
@@ -194,7 +212,9 @@ const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
 
         {needsNavigation && (
           <nav
-            aria-label="Carousel navigation"
+            aria-label={
+              ariaLabel ? `${ariaLabel} navigation` : "Carousel navigation"
+            }
             className="flex items-center justify-center gap-10"
           >
             <button
@@ -213,7 +233,7 @@ const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
                   key={i}
                   type="button"
                   aria-label={`Go to item ${i + 1}`}
-                  aria-current={i === activeIndex ? "true" : undefined}
+                  aria-pressed={i === activeIndex}
                   onClick={() => scrollToItem(i)}
                   className={cn(
                     "size-2 cursor-pointer rounded-full transition-colors",
