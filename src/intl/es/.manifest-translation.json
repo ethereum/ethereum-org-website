@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-04-13T03:58:21.788Z",
+  "englishManifestHash": "7d481dde3f02",
+  "placeholderOrder": [
+    "HTML-TAG-0",
+    "HTML-TAG-1",
+    "HTML-TAG-2",
+    "ICU-VARIABLE-3",
+    "ICU-VARIABLE-4",
+    "ICU-VARIABLE-5",
+    "HTML-TAG-6",
+    "HTML-TAG-7",
+    "HTML-TAG-8",
+    "JSON-VALUE-9",
+    "LINK-10"
+  ],
+  "placeholderMap": {
+    "HTML-TAG-0": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "/contributing/"
+      }
+    },
+    "HTML-TAG-1": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://spdx.org/licenses/",
+        "target": "_blank"
+      }
+    },
+    "HTML-TAG-2": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://fossa.com/",
+        "target": "_blank"
+      }
+    },
+    "ICU-VARIABLE-3": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{username}"
+      }
+    },
+    "ICU-VARIABLE-4": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{count, plural, =0 {No projects found} one {# project found} other {# projects found}}"
+      }
+    },
+    "ICU-VARIABLE-5": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{status, select, pending {Your contribution is pending review} approved {Your contribution has been approved} rejected {Your contribution needs revisions} other {Unknown status}}"
+      }
+    },
+    "HTML-TAG-6": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://opensource.org/osd"
+      }
+    },
+    "HTML-TAG-7": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://choosealicense.com/"
+      }
+    },
+    "HTML-TAG-8": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://spdx.org/"
+      }
+    },
+    "JSON-VALUE-9": {
+      "type": "json-value",
+      "values": {
+        "containsMarkdown": "true"
+      }
+    },
+    "LINK-10": {
+      "type": "link",
+      "values": {
+        "href": "/open-source/#comparison-table"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-13T03:58:21.788Z",
+      "status": "success"
+    }
+  }
+}
