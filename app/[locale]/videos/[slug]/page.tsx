@@ -27,6 +27,8 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getVideoData, getVideoSlugs } from "@/lib/utils/videos"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import VideoPageJsonLD from "./page-jsonld"
 
 import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
@@ -115,7 +117,7 @@ const VideoLandingPage = async (props: {
 
 export async function generateStaticParams() {
   const slugs = await getVideoSlugs()
-  return slugs.map((slug) => ({ slug }))
+  return slugs.map((slug) => ({ locale: DEFAULT_LOCALE, slug }))
 }
 
 export async function generateMetadata(props: {
