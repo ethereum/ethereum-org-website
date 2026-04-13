@@ -37,7 +37,7 @@ const CrawlableNav = async () => {
   )
 
   return (
-    <nav aria-hidden="true" className="sr-only" tabIndex={-1}>
+    <nav inert className="sr-only">
       <ul>
         {allLinks.map(({ label, href }, index) => (
           <li key={`${href}-${index}`}>
