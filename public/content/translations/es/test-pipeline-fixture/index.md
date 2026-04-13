@@ -34,7 +34,8 @@ Puede verificar la licencia de un proyecto en <a href="https://choosealicense.co
 
 ![License comparison chart](/images/open-source/license-comparison-v2.png)
 
-### Las cuatro libertades
+### Las cuatro libertades {#the-four-freedoms}
+
 La [Free Software Foundation](https://www.fsf.org/about/what-is-free-software) define cuatro libertades esenciales:
 
 - **Libertad 0**: La libertad de ejecutar el programa con cualquier propósito
@@ -49,9 +50,11 @@ Estas cuatro libertades son la base filosófica de todo el movimiento del softwa
 La palabra "free" (libre/gratis) en el software libre se refiere a la libertad, no al costo. El software privativo puede ser gratuito y el software libre puede venderse comercialmente. Consulte la [filosofía de GNU](https://www.gnu.org/philosophy/free-sw.html) para obtener una explicación detallada.
 
 </InfoBanner>
+
 ## Elegir una licencia {#choosing-a-license}
 
-### Licencias copyleft
+### Licencias copyleft {#copyleft-licenses}
+
 Las licencias copyleft como `GPL-3.0` exigen que las obras derivadas utilicen la misma licencia. Esto garantiza que el software y todas las modificaciones sigan siendo libres. La `AGPL-3.0` amplía este requisito al software al que se accede a través de una red.
 
 ```solidity
@@ -84,7 +87,9 @@ La desventaja es que algunas empresas evitan las dependencias con licencia copyl
 Consulte las <a href="https://www.gnu.org/licenses/gpl-faq.html#AllCompatibility">preguntas frecuentes sobre GPL</a> para conocer las dudas comunes sobre el cumplimiento del copyleft.
 
 </ExpandableCard>
-### Licencias permisivas
+
+### Licencias permisivas {#permissive-licenses}
+
 Las licencias permisivas como `MIT` y `Apache-2.0` permiten derivados privativos. La `BSD-2-Clause` es otra opción permisiva popular con restricciones mínimas.
 
 ```python
@@ -213,7 +218,8 @@ La revisión de código es esencial para mantener la calidad en proyectos colabo
 <QuizWidget quizKey="oss-licensing-v2" />
 
 
-## Licencia dual
+## Licencia dual {#dual-licensing}
+
 Algunos proyectos ofrecen su código bajo dos licencias simultáneamente. Esto permite a los usuarios comerciales comprar una licencia privativa mientras mantienen la versión de código abierto disponible bajo los términos del copyleft. Proyectos como [Qt](https://www.qt.io/licensing/) y [MySQL](https://www.mysql.com/about/legal/licensing/) utilizan este modelo.
 ## Lecturas adicionales {#further-reading}
 
