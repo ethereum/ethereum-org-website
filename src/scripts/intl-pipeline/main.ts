@@ -247,7 +247,7 @@ async function buildGeminiTranslator(
   const batches = batchSections(
     sectionList.map((s) => ({
       id: s.id,
-      content: s.english || s.locale || "",
+      content: s.content || "",
       action: s.action,
     }))
   )
