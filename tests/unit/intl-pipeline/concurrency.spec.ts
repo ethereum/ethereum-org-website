@@ -1,49 +1,88 @@
 /**
  * Concurrency Pool Tests -- CONCURRENCY-SPEC.md Part 1
- *
- * Tests marked test.fixme() require implementation to be wired in.
  */
 
-import { test } from "@playwright/test"
+import { expect, test } from "@playwright/test"
 
-// TODO: import { createTaskPool } from "../../../src/scripts/intl-pipeline/lib/utils/task-pool"
-
-// ===================================================================
-// PART 1: Concurrency Pool (Spec lines 25-57)
-// ===================================================================
+import { createTaskPool } from "../../../src/scripts/intl-pipeline/lib/utils/task-pool"
 
 test.describe("Concurrency pool", () => {
-  test.fixme(
-    "with concurrency=2 and 4 tasks, at most 2 run simultaneously",
-    async () => {
-      // Needs: createTaskPool(2)
-      // Submit 4 async tasks, track peak active count
-      // Assert maxActive <= 2
-    }
-  )
+  test("with concurrency=2 and 4 tasks, at most 2 run simultaneously", async () => {
+    let activeTasks = 0
+    let maxActive = 0
 
-  test.fixme("all tasks complete regardless of submission order", async () => {
-    // Needs: createTaskPool(3)
-    // Submit 6 tasks with varying delays
-    // Assert all 6 complete
+    const pool = createTaskPool({ concurrency: 2, delayBetweenMs: 0 })
+
+    for (let i = 0; i < 4; i++) {
+      pool.submit("ko", async () => {
+        activeTasks++
+        maxActive = Math.max(maxActive, activeTasks)
+        await new Promise((r) => setTimeout(r, 50))
+        activeTasks--
+      })
+    }
+
+    await pool.drain()
+    expect(maxActive).toBeLessThanOrEqual(2)
+    expect(maxActive).toBeGreaterThan(0)
   })
 
-  test.fixme(
-    "token stats accumulate correctly across concurrent tasks",
-    async () => {
-      // Needs: createTaskPool with token tracking
-      // Submit tasks that report token usage
-      // Assert per-language totals are correct
-    }
-  )
+  test("all tasks complete regardless of submission order", async () => {
+    const completed: number[] = []
+    const pool = createTaskPool({ concurrency: 3, delayBetweenMs: 0 })
 
-  test.fixme(
-    "per-language completion callback fires exactly once per language",
-    async () => {
-      // Needs: createTaskPool with onLanguageComplete callback
-      // Submit tasks for ko and es
-      // Assert callback fires once for ko, once for es
-      // Assert callback fires AFTER all tasks for that language complete
-    }
-  )
+    const delays = [30, 10, 50, 20, 40, 5]
+    delays.forEach((delay, i) => {
+      pool.submit("ko", async () => {
+        await new Promise((r) => setTimeout(r, delay))
+        completed.push(i)
+      })
+    })
+
+    await pool.drain()
+    expect(completed.sort()).toEqual([0, 1, 2, 3, 4, 5])
+  })
+
+  test("token stats accumulate correctly across concurrent tasks", async () => {
+    const pool = createTaskPool({ concurrency: 4, delayBetweenMs: 0 })
+
+    pool.submit("ko", async () => ({ tokens: { input: 100, output: 50 } }))
+    pool.submit("ko", async () => ({ tokens: { input: 200, output: 80 } }))
+    pool.submit("es", async () => ({ tokens: { input: 150, output: 60 } }))
+
+    await pool.drain()
+    const stats = pool.getStats()
+
+    expect(stats["ko"].totalInputTokens).toBe(300)
+    expect(stats["ko"].totalOutputTokens).toBe(130)
+    expect(stats["es"].totalInputTokens).toBe(150)
+    expect(stats["es"].totalOutputTokens).toBe(60)
+  })
+
+  test("per-language completion callback fires exactly once per language", async () => {
+    const completions: string[] = []
+
+    const pool = createTaskPool({
+      concurrency: 4,
+      delayBetweenMs: 0,
+      onLanguageComplete: (lang) => completions.push(lang),
+    })
+
+    pool.submit("ko", async () => {
+      await new Promise((r) => setTimeout(r, 10))
+    })
+    pool.submit("ko", async () => {
+      await new Promise((r) => setTimeout(r, 20))
+    })
+    pool.submit("es", async () => {
+      await new Promise((r) => setTimeout(r, 5))
+    })
+
+    await pool.drain()
+
+    expect(completions).toContain("ko")
+    expect(completions).toContain("es")
+    expect(completions.filter((l) => l === "ko")).toHaveLength(1)
+    expect(completions.filter((l) => l === "es")).toHaveLength(1)
+  })
 })

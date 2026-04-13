@@ -23,11 +23,16 @@ import {
 import i18nConfig from "../../../i18n.config.json"
 
 import { filterGlossaryFlat } from "./glossary/glossary-lookup"
-import { ensureStagingBranch, getBranchObject } from "./lib/github/branches"
+import {
+  ensureStagingBranch,
+  getBranchObject,
+  mergeBranchInto,
+} from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
 import { isGeminiAvailable } from "./lib/llm/gemini/gemini"
 import { callGeminiRaw, translateFile } from "./lib/llm/gemini/translate"
 import {
+  batchSections,
   buildIncrementalPrompt,
   buildSectionList,
   extractJsonSections,
@@ -42,6 +47,9 @@ import {
   hasEnglishChanged,
   parseEnglishJson,
 } from "./lib/llm/manifest-adapter"
+import { generateTempBranchName } from "./lib/utils/branch-naming"
+import type { TaskResult } from "./lib/utils/task-pool"
+import { createTaskPool } from "./lib/utils/task-pool"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
 import { config, GEMINI_MODELS } from "./config"
@@ -58,74 +66,9 @@ interface FileContext {
   type: "markdown" | "json"
 }
 
-interface TokenStats {
-  inputTokens: number
-  outputTokens: number
-  calls: number
-}
-
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-
-const tokenStats: Record<string, TokenStats> = {}
-
-function trackTokens(locale: string, input: number, output: number) {
-  if (!tokenStats[locale]) {
-    tokenStats[locale] = { inputTokens: 0, outputTokens: 0, calls: 0 }
-  }
-  tokenStats[locale].inputTokens += input
-  tokenStats[locale].outputTokens += output
-  tokenStats[locale].calls += 1
-}
-
-function printTokenSummary(pipelineDurationMs: number) {
-  logSection("Token Usage Summary")
-
-  const fmt = (n: number) => n.toLocaleString("en-US")
-  const pad = (s: string, w: number) => s.padStart(w)
-
-  console.log(
-    `${"Language".padEnd(10)}| ${"Calls".padStart(5)} | ${"Input".padStart(10)} | ${"Output".padStart(10)} | ${"Total".padStart(10)}`
-  )
-  const sep = `${"-".repeat(10)}|${"-".repeat(7)}|${"-".repeat(12)}|${"-".repeat(12)}|${"-".repeat(12)}`
-  console.log(sep)
-
-  let grandInput = 0
-  let grandOutput = 0
-  let grandCalls = 0
-
-  for (const [lang, s] of Object.entries(tokenStats)) {
-    const total = s.inputTokens + s.outputTokens
-    grandInput += s.inputTokens
-    grandOutput += s.outputTokens
-    grandCalls += s.calls
-
-    console.log(
-      `${lang.padEnd(10)}| ${pad(String(s.calls), 5)} | ${pad(fmt(s.inputTokens), 10)} | ${pad(fmt(s.outputTokens), 10)} | ${pad(fmt(total), 10)}`
-    )
-  }
-
-  console.log(sep)
-  const grandTotal = grandInput + grandOutput
-  console.log(
-    `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
-  )
-
-  // Approximate cost (Gemini 3.1 Pro standard tier, <=200k prompts)
-  // https://ai.google.dev/gemini-api/docs/pricing (as of 11-April-2026)
-  const INPUT_RATE = 2.0 // $/1M tokens
-  const OUTPUT_RATE = 12.0 // $/1M tokens (includes thinking tokens)
-  const estCost =
-    (grandInput / 1_000_000) * INPUT_RATE +
-    (grandOutput / 1_000_000) * OUTPUT_RATE
-
-  const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
-  console.log(
-    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${GEMINI_MODELS[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
-  )
-  console.log(`  Wall time: ${pipelineSecs}s`)
-}
 
 function log(msg: string) {
   console.log(`[pipeline] ${msg}`)
@@ -184,11 +127,67 @@ function readLocalePath(
   return path.join(process.cwd(), `src/intl/${locale}/${fileName}`)
 }
 
+function printTokenSummary(
+  stats: Record<
+    string,
+    {
+      totalInputTokens: number
+      totalOutputTokens: number
+      tasksCompleted: number
+    }
+  >,
+  pipelineDurationMs: number
+) {
+  logSection("Token Usage Summary")
+
+  const fmt = (n: number) => n.toLocaleString("en-US")
+  const pad = (s: string, w: number) => s.padStart(w)
+
+  console.log(
+    `${"Language".padEnd(10)}| ${"Calls".padStart(5)} | ${"Input".padStart(10)} | ${"Output".padStart(10)} | ${"Total".padStart(10)}`
+  )
+  const sep = `${"-".repeat(10)}|${"-".repeat(7)}|${"-".repeat(12)}|${"-".repeat(12)}|${"-".repeat(12)}`
+  console.log(sep)
+
+  let grandInput = 0
+  let grandOutput = 0
+  let grandCalls = 0
+
+  for (const [lang, s] of Object.entries(stats)) {
+    const total = s.totalInputTokens + s.totalOutputTokens
+    grandInput += s.totalInputTokens
+    grandOutput += s.totalOutputTokens
+    grandCalls += s.tasksCompleted
+
+    console.log(
+      `${lang.padEnd(10)}| ${pad(String(s.tasksCompleted), 5)} | ${pad(fmt(s.totalInputTokens), 10)} | ${pad(fmt(s.totalOutputTokens), 10)} | ${pad(fmt(total), 10)}`
+    )
+  }
+
+  console.log(sep)
+  const grandTotal = grandInput + grandOutput
+  console.log(
+    `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
+  )
+
+  // Approximate cost (Gemini 3.1 Pro standard tier, <=200k prompts)
+  // https://ai.google.dev/gemini-api/docs/pricing (as of 11-April-2026)
+  const INPUT_RATE = 2.0
+  const OUTPUT_RATE = 12.0
+  const estCost =
+    (grandInput / 1_000_000) * INPUT_RATE +
+    (grandOutput / 1_000_000) * OUTPUT_RATE
+
+  const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
+  console.log(
+    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${GEMINI_MODELS[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
+  )
+  console.log(`  Wall time: ${pipelineSecs}s`)
+}
+
 /**
  * Build an LLM translator that batches section translations via Gemini.
- *
- * Instead of calling Gemini per-section, we pre-translate all needed sections
- * in one batch, then return a lookup function.
+ * Uses batchSections for byte-size-aware splitting of large section lists.
  */
 async function buildGeminiTranslator(
   englishContent: string,
@@ -197,12 +196,17 @@ async function buildGeminiTranslator(
   filePath: string,
   locale: string,
   sectionIds: string[]
-): Promise<LlmTranslator> {
+): Promise<{
+  translator: LlmTranslator
+  tokens: { input: number; output: number }
+}> {
   if (sectionIds.length === 0) {
-    return (_, content) => content
+    return {
+      translator: (_, content) => content,
+      tokens: { input: 0, output: 0 },
+    }
   }
 
-  // Extract sections from English and locale files
   const englishSections =
     fileType === "json"
       ? extractJsonSections(englishContent)
@@ -212,7 +216,6 @@ async function buildGeminiTranslator(
       ? extractJsonSections(localeContent)
       : extractSections(localeContent)
 
-  // Build TRANSLATE/CONTEXT section list
   const sectionList = buildSectionList(
     englishSections,
     localeSections,
@@ -224,63 +227,85 @@ async function buildGeminiTranslator(
 
   if (translateCount === 0) {
     log(`  No sections matched for translation`)
-    return (_, content) => content
+    return {
+      translator: (_, content) => content,
+      tokens: { input: 0, output: 0 },
+    }
   }
 
-  // Get language name
   const langEntry = i18nConfig.find((l: { code: string }) => l.code === locale)
   const languageName = langEntry
     ? (langEntry as { code: string; name: string }).name
     : locale
 
-  // Load glossary for this locale
   const glossaryTerms = loadGlossary(englishContent, fileType, locale)
   if (config.verbose && glossaryTerms.size > 0) {
     log(`  Glossary: ${glossaryTerms.size} terms for ${locale}`)
   }
 
-  // Build batched prompt
-  const prompt = buildIncrementalPrompt({
-    filePath,
-    targetLanguage: locale,
-    languageName,
-    sections: sectionList,
-    glossaryTerms,
-  })
-
-  log(`  Calling Gemini: ${translateCount} sections, ${prompt.length} chars`)
-
-  // Call Gemini
-  const result = await callGeminiRaw(prompt, {
-    filePath,
-    targetLanguage: locale,
-    label: "incremental",
-  })
-
-  // Parse response into section map
-  const translations = parseIncrementalResponse(result.text)
-  const translatedIds = Object.keys(translations)
-  trackTokens(locale, result.tokensUsed.input, result.tokensUsed.output)
-  log(
-    `  Gemini returned ${translatedIds.length} sections (${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
+  // Split into batches if needed (byte-size-aware)
+  const batches = batchSections(
+    sectionList.map((s) => ({
+      id: s.id,
+      content: s.english || s.locale || "",
+      action: s.action,
+    }))
   )
 
-  // Log missing sections
+  const allTranslations: Record<string, string> = {}
+  let totalInput = 0
+  let totalOutput = 0
+
+  for (const batch of batches) {
+    const batchSectionList = sectionList.filter((s) =>
+      batch.some((b) => b.id === s.id)
+    )
+
+    const prompt = buildIncrementalPrompt({
+      filePath,
+      targetLanguage: locale,
+      languageName,
+      sections: batchSectionList,
+      glossaryTerms,
+    })
+
+    log(
+      `  Calling Gemini: ${batchSectionList.filter((s) => s.action === "TRANSLATE").length} sections, ${prompt.length} chars`
+    )
+
+    const result = await callGeminiRaw(prompt, {
+      filePath,
+      targetLanguage: locale,
+      label: "incremental",
+    })
+
+    const translations = parseIncrementalResponse(result.text)
+    Object.assign(allTranslations, translations)
+    totalInput += result.tokensUsed.input
+    totalOutput += result.tokensUsed.output
+  }
+
+  const translatedIds = Object.keys(allTranslations)
+  log(
+    `  Gemini returned ${translatedIds.length} sections (${totalInput} in, ${totalOutput} out)`
+  )
+
   for (const id of sectionIds) {
-    if (!translations[id]) {
+    if (!allTranslations[id]) {
       console.warn(`  Section "${id}" not returned by Gemini`)
     }
   }
 
-  // Return lookup function
-  return (sectionId: string, englishFallback: string) => {
-    return translations[sectionId] || englishFallback
+  return {
+    translator: (sectionId: string, englishFallback: string) => {
+      return allTranslations[sectionId] || englishFallback
+    },
+    tokens: { input: totalInput, output: totalOutput },
   }
 }
 
 /**
  * Identify which sections need LLM translation.
- * This mirrors the logic in pipeline.ts but extracts just the section IDs.
  */
 function getLlmSectionIds(
   englishA: string,
@@ -293,7 +318,6 @@ function getLlmSectionIds(
   const dr = diff(treeA, treeB)
   const cs = extractChanges(treeA, treeB)
 
-  // Leaf translatableDrift
   const tdPaths = dr.translatableDrift.map((e: { path: string }) => e.path)
   const leafTdPaths = tdPaths.filter(
     (p: string) =>
@@ -304,7 +328,6 @@ function getLlmSectionIds(
     .map((e: { id: string }) => e.id)
     .filter((id: string) => !id.startsWith("frontmatter:"))
 
-  // Truly added (not renames)
   const renamedNewIds = new Set(
     cs.sectionRenames.map((r: { newId: string }) => r.newId)
   )
@@ -326,7 +349,7 @@ async function runFullTranslation(
   committer: SharedCommitter,
   baseBranchSha: string,
   committedFiles: Array<{ path: string; content: string }>
-) {
+): Promise<TaskResult> {
   log(`[${locale}] ${file.path}: full translation...`)
 
   const glossaryTerms = loadGlossary(file.content, file.type, locale)
@@ -343,12 +366,10 @@ async function runFullTranslation(
     useNormalizer: file.type === "markdown",
   })
 
-  trackTokens(locale, result.tokensUsed.input, result.tokensUsed.output)
   log(
     `[${locale}] ${file.path}: translated (${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
   )
 
-  // Commit translated file
   await committer.commitFile(destPath, result.translatedContent, locale)
   committedFiles.push({ path: destPath, content: result.translatedContent })
 
@@ -362,7 +383,6 @@ async function runFullTranslation(
     const manifestPath = destPath.replace(/index\.md$/, ".manifest-source.json")
     await committer.commitFile(manifestPath, sourceManifest, locale)
 
-    // Translation manifest
     if (result.placeholderOrder && result.placeholderMap) {
       const parsed = JSON.parse(sourceManifest)
       const tm = buildLocaleTranslationManifest({
@@ -407,6 +427,12 @@ async function runFullTranslation(
   }
 
   log(`[${locale}] ${destPath}: committed`)
+  return {
+    tokens: {
+      input: result.tokensUsed.input,
+      output: result.tokensUsed.output,
+    },
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -422,8 +448,7 @@ async function runIncremental(
   committer: SharedCommitter,
   baseBranchSha: string,
   committedFiles: Array<{ path: string; content: string }>
-) {
-  // Get old English content from git via sourceCommitSha
+): Promise<TaskResult> {
   const manifest = JSON.parse(sourceManifestJson)
   let englishA: string
 
@@ -437,7 +462,7 @@ async function runIncremental(
     log(
       `[${locale}] ${file.path}: cannot retrieve old English (${err instanceof Error ? err.message : String(err)}), falling back to full translation`
     )
-    await runFullTranslation(
+    return runFullTranslation(
       file,
       locale,
       destPath,
@@ -445,21 +470,19 @@ async function runIncremental(
       baseBranchSha,
       committedFiles
     )
-    return
   }
 
   const englishB = file.content
 
-  // Identify sections needing Gemini
   const llmSectionIds = getLlmSectionIds(englishA, englishB, file.type)
   log(
     `[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need Gemini`
   )
 
-  // Build Gemini translator (batch all LLM sections in one call)
   let translator: LlmTranslator | undefined
+  let tokens = { input: 0, output: 0 }
   if (llmSectionIds.length > 0 && isGeminiAvailable()) {
-    translator = await buildGeminiTranslator(
+    const geminiResult = await buildGeminiTranslator(
       englishB,
       localeContent,
       file.type,
@@ -467,9 +490,10 @@ async function runIncremental(
       locale,
       llmSectionIds
     )
+    translator = geminiResult.translator
+    tokens = geminiResult.tokens
   }
 
-  // Run the pipeline
   const result = pipeline(
     englishA,
     englishB,
@@ -478,11 +502,9 @@ async function runIncremental(
     translator
   )
 
-  // Commit result
   await committer.commitFile(destPath, result, locale)
   committedFiles.push({ path: destPath, content: result })
 
-  // Update manifests
   const sourceManifest =
     file.type === "markdown"
       ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
@@ -497,6 +519,7 @@ async function runIncremental(
   }
 
   log(`[${locale}] ${destPath}: committed (incremental)`)
+  return { tokens }
 }
 
 // ---------------------------------------------------------------------------
@@ -516,19 +539,21 @@ async function main() {
   const baseBranch = config.baseBranch
   const targetBranch = config.targetBranch
 
-  log(`Branch: ${targetBranch} (base: ${baseBranch})`)
+  log(`Target: ${targetBranch} (base: ${baseBranch})`)
   log(`Files: ${config.targetPaths.join(", ")}`)
   log(`Languages: ${targetLanguages.join(", ")}`)
   log(`Mode: ${config.mode}`)
+  log(`Concurrency: ${config.concurrency}`)
 
-  // Initialize branch and committer
-  await ensureStagingBranch(targetBranch, baseBranch)
+  // Create temp working branch for crash safety
+  const tempBranch = generateTempBranchName()
+  log(`Temp branch: ${tempBranch}`)
+  await ensureStagingBranch(tempBranch, baseBranch)
   const baseBranchSha = (await getBranchObject(baseBranch)).sha
-  const committer = new SharedCommitter(targetBranch)
-
-  // Track committed files for post-processing sanitization
-  const committedFiles: Array<{ path: string; content: string }> = []
+  const committer = new SharedCommitter(tempBranch)
   await committer.init()
+
+  const committedFiles: Array<{ path: string; content: string }> = []
 
   // Load English files from disk
   const englishFiles: FileContext[] = config.targetPaths.map((fp) => ({
@@ -537,7 +562,17 @@ async function main() {
     type: fp.endsWith(".json") ? ("json" as const) : ("markdown" as const),
   }))
 
-  // Process each file x language
+  // Build task pool with per-language completion logging
+  const pool = createTaskPool({
+    concurrency: config.concurrency,
+    onLanguageComplete: (lang, stats) => {
+      log(
+        `[${lang}] Complete: ${stats.tasksCompleted} tasks, ${stats.totalInputTokens} input, ${stats.totalOutputTokens} output tokens`
+      )
+    },
+  })
+
+  // Submit all file x language tasks to the pool
   for (const file of englishFiles) {
     for (const locale of targetLanguages) {
       const destPath = getDestinationFromPath(file.path, locale)
@@ -549,7 +584,6 @@ async function main() {
         path.basename(file.path)
       )
 
-      // Decide: full vs incremental
       const hasLocale = fs.existsSync(localePath)
       const hasManifest = fs.existsSync(smPath)
 
@@ -567,13 +601,15 @@ async function main() {
           continue
         }
 
-        await runFullTranslation(
-          file,
-          locale,
-          destPath,
-          committer,
-          baseBranchSha,
-          committedFiles
+        pool.submit(locale, () =>
+          runFullTranslation(
+            file,
+            locale,
+            destPath,
+            committer,
+            baseBranchSha,
+            committedFiles
+          )
         )
         continue
       }
@@ -589,27 +625,45 @@ async function main() {
 
       if (config.stampOnly) {
         log(`[${locale}] ${file.path}: stamp only`)
-        const sourceManifest =
-          file.type === "markdown"
-            ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
-            : buildJsonManifest(file.content, file.path, baseBranchSha)
-        const manifestDest =
-          file.type === "markdown"
-            ? destPath.replace(/index\.md$/, ".manifest-source.json")
-            : `src/intl/${locale}/.manifest-source.json`
-        await committer.commitFile(manifestDest, sourceManifest, locale)
+        pool.submit(locale, async () => {
+          const sourceManifest =
+            file.type === "markdown"
+              ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
+              : buildJsonManifest(file.content, file.path, baseBranchSha)
+          const manifestDest =
+            file.type === "markdown"
+              ? destPath.replace(/index\.md$/, ".manifest-source.json")
+              : `src/intl/${locale}/.manifest-source.json`
+          await committer.commitFile(manifestDest, sourceManifest, locale)
+        })
         continue
       }
 
-      await runIncremental(
-        file,
-        locale,
-        destPath,
-        sourceManifestJson,
-        localeContent,
-        committer,
-        baseBranchSha,
-        committedFiles
+      pool.submit(locale, () =>
+        runIncremental(
+          file,
+          locale,
+          destPath,
+          sourceManifestJson,
+          localeContent,
+          committer,
+          baseBranchSha,
+          committedFiles
+        )
+      )
+    }
+  }
+
+  // Wait for all tasks to complete
+  await pool.drain()
+
+  // Squash interleaved commits into one per language
+  if (committedFiles.length > 0) {
+    try {
+      await committer.squashByLanguage()
+    } catch (err) {
+      console.warn(
+        `[pipeline] Squash failed: ${err instanceof Error ? err.message : String(err)}`
       )
     }
   }
@@ -620,11 +674,7 @@ async function main() {
       englishFiles.map((f) => [f.path, f.content])
     )
     try {
-      await sanitizeTranslations(
-        committedFiles,
-        targetBranch,
-        englishContentMap
-      )
+      await sanitizeTranslations(committedFiles, tempBranch, englishContentMap)
     } catch (error) {
       console.warn(
         `[pipeline] Sanitization failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
@@ -632,10 +682,22 @@ async function main() {
     }
   }
 
-  // Done
-  if (Object.keys(tokenStats).length > 0) {
-    printTokenSummary(Date.now() - startTime)
+  // Merge temp branch into target branch
+  if (committedFiles.length > 0) {
+    log(`Merging ${tempBranch} -> ${targetBranch}`)
+    await ensureStagingBranch(targetBranch, baseBranch)
+    await mergeBranchInto(tempBranch, targetBranch)
+    log(`Merged successfully`)
+  } else {
+    log(`No changes to merge`)
   }
+
+  // Print token summary from pool stats
+  const poolStats = pool.getStats()
+  if (Object.keys(poolStats).length > 0) {
+    printTokenSummary(poolStats, Date.now() - startTime)
+  }
+
   logSection("Complete")
   log(`Finished in ${((Date.now() - startTime) / 1000).toFixed(1)}s`)
 }

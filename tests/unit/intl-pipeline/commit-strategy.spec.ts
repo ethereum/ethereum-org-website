@@ -1,22 +1,40 @@
 /**
  * Commit Strategy Tests -- CONCURRENCY-SPEC.md Part 3
  *
- * Tests marked test.fixme() require mock GitHub API infrastructure.
+ * Branch naming is unit-testable.
+ * Squash/merge tests require GitHub API mocks (fixme).
  */
 
-import { test } from "@playwright/test"
+import { expect, test } from "@playwright/test"
 
-// TODO: import { generateTempBranchName } from "../../../src/scripts/intl-pipeline/main"
-// TODO: import { SharedCommitter } from "../../../src/scripts/intl-pipeline/lib/github/commits"
+import { generateTempBranchName } from "../../../src/scripts/intl-pipeline/lib/utils/branch-naming"
 
 // ===================================================================
 // PART 3: Commit Strategy (Spec lines 129-181)
 // ===================================================================
 
 test.describe("Commit strategy", () => {
-  test.fixme("temp branch name format: tmp-intl/run-MMDD-HHMM", async () => {
-    // Needs: import generateTempBranchName from main.ts
-    // Assert format matches /^tmp-intl\/run-\d{4}-\d{4}$/
+  test("temp branch name format: tmp-intl/run-MMDD-HHMM", () => {
+    const name = generateTempBranchName()
+    expect(name).toMatch(/^tmp-intl\/run-\d{4}-\d{4}$/)
+  })
+
+  test("temp branch name uses UTC", () => {
+    const name = generateTempBranchName()
+    const match = name.match(/run-(\d{2})(\d{2})-(\d{2})(\d{2})/)
+    expect(match).not.toBeNull()
+    const month = parseInt(match![1])
+    const day = parseInt(match![2])
+    const hour = parseInt(match![3])
+    const minute = parseInt(match![4])
+    expect(month).toBeGreaterThanOrEqual(1)
+    expect(month).toBeLessThanOrEqual(12)
+    expect(day).toBeGreaterThanOrEqual(1)
+    expect(day).toBeLessThanOrEqual(31)
+    expect(hour).toBeGreaterThanOrEqual(0)
+    expect(hour).toBeLessThanOrEqual(23)
+    expect(minute).toBeGreaterThanOrEqual(0)
+    expect(minute).toBeLessThanOrEqual(59)
   })
 
   test.fixme(
