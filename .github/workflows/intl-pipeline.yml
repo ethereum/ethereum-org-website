@@ -1,4 +1,4 @@
-name: Gemini Translations
+name: Intl Pipeline
 
 on:
   workflow_dispatch:
@@ -20,11 +20,20 @@ on:
         required: false
         default: "dev"
         type: string
+      target_branch:
+        description: "Override target branch (default: intl/pending)"
+        required: false
+        type: string
       concurrency:
         description: "Max parallel Gemini requests per language"
         required: false
         default: "16"
         type: string
+      stamp_only:
+        description: "Update manifests only, no translations"
+        required: false
+        default: false
+        type: boolean
       skip_pr:
         description: "Skip PR creation?"
         required: false
@@ -43,15 +52,6 @@ on:
         options:
           - auto
           - full
-      target_branch:
-        description: "Override target branch (default: intl/pending)"
-        required: false
-        type: string
-      stamp_only:
-        description: "Update manifests only, no translations"
-        required: false
-        default: false
-        type: boolean
 
 concurrency:
   group: i18n-translation
