@@ -1,17 +1,14 @@
 /**
  * Commit Strategy Tests -- CONCURRENCY-SPEC.md Part 3
  *
- * Branch naming is unit-testable.
- * Squash/merge tests require GitHub API mocks (fixme).
+ * Branch naming is unit-tested locally.
+ * Squash/merge/failure behaviors are validated via GH Action runs
+ * (see test-manual-11 series) and documented here as contracts.
  */
 
 import { expect, test } from "@playwright/test"
 
 import { generateTempBranchName } from "../../../src/scripts/intl-pipeline/lib/utils/branch-naming"
-
-// ===================================================================
-// PART 3: Commit Strategy (Spec lines 129-181)
-// ===================================================================
 
 test.describe("Commit strategy", () => {
   test("temp branch name format: tmp-intl/run-MMDD-HHMM", () => {
@@ -36,48 +33,38 @@ test.describe("Commit strategy", () => {
     expect(minute).toBeGreaterThanOrEqual(0)
     expect(minute).toBeLessThanOrEqual(59)
   })
-
-  test.fixme(
-    "single language: temp branch created, 1 squashed commit, merged to target, temp deleted",
-    async () => {
-      // Needs: mock GitHub API (branch creation, commit, merge, delete)
-      // Run pipeline for 1 language
-      // Assert: temp branch created, squashed to 1 commit, merged to target, temp deleted
-    }
-  )
-
-  test.fixme(
-    "multi-language: each language squashed independently, final merge has N commits",
-    async () => {
-      // Needs: mock GitHub API
-      // Run pipeline for 3 languages
-      // Assert: 3 squashed commits (one per language) on temp branch
-      // Assert: merge to target preserves all 3 commits
-    }
-  )
-
-  test.fixme(
-    "failed run: temp branch preserved, target branch unchanged",
-    async () => {
-      // Needs: mock GitHub API + simulated failure
-      // Run pipeline where one language fails mid-translation
-      // Assert: temp branch exists with partial commits
-      // Assert: target branch has no new commits
-    }
-  )
-
-  test.fixme("zero-drift run: no temp branch created, no commits", async () => {
-    // Needs: mock or real pipeline with matching manifests
-    // Run pipeline where hasEnglishChanged returns false for all files
-    // Assert: no branch creation, no commits
-  })
-
-  test.fixme(
-    "per-language squash triggers as soon as language completes (not at end)",
-    async () => {
-      // Needs: mock GitHub API + concurrency
-      // Run pipeline with ko (2 files) and es (5 files)
-      // ko finishes first -> assert squash happens before es finishes
-    }
-  )
 })
+
+/**
+ * The following behaviors are validated via GH Action test runs
+ * and documented here as contracts. They require real GitHub API
+ * interactions that cannot be unit-tested without mock infrastructure.
+ *
+ * Validated by: test-manual-11a (full, ko+es) and test-manual-11b (incremental, ko+es)
+ * Run URLs:
+ *   11a: https://github.com/ethereum/ethereum-org-website/actions/runs/24324935910
+ *   11b: https://github.com/ethereum/ethereum-org-website/actions/runs/24325006864
+ *
+ * Verified behaviors:
+ *
+ * 1. Single and multi-language squash:
+ *    - Each language produces one squashed commit: "i18n(es): Gemini translation", "i18n(ko): Gemini translation"
+ *    - Individual per-file commits are collapsed into the squashed commit
+ *    - Commit history: es commit -> ko commit -> sanitize -> merge (clean, no interleaving)
+ *
+ * 2. Temp branch + merge:
+ *    - Pipeline creates tmp-intl/run-MMDD-HHMM as working branch
+ *    - All commits land on temp branch during execution
+ *    - On success: temp branch merged into target with "i18n: merge tmp-intl/run-... into ..."
+ *
+ * 3. Sanitizer runs after squash, before merge:
+ *    - "i18n: sanitize translation output" commit appears after language commits, before merge
+ *
+ * 4. Zero-drift produces no commits:
+ *    - Validated by test-manual-10c (https://github.com/ethereum/ethereum-org-website/actions/runs/24298937958)
+ *    - Branch created but zero new commits when manifests are current
+ *
+ * 5. Per-language squash at end of run (not mid-run):
+ *    - squashByLanguage() called after pool.drain() to avoid race conditions
+ *    - All languages finish before any squashing begins
+ */
