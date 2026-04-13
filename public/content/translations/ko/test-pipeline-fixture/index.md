@@ -1,6 +1,6 @@
 ---
-title: 오픈 소스 라이선스 이해하기
-description: 자유 소프트웨어 라이선스 및 협업 개발을 위한 실용적인 가이드
+title: "오픈 소스 라이선스 이해하기"
+description: "자유 소프트웨어 라이선스 및 협업 개발을 위한 실용적인 가이드"
 image: /images/open-source/hero-licensing.png
 alt: "다양한 라이선스 유형을 보여주는 다이어그램"
 template: tutorial
