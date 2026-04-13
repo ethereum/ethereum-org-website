@@ -8,7 +8,7 @@ export const MATOMO_LS_KEY = "ethereum-org.matomo-opt-out"
 
 let cachedOptOut: boolean | null = null
 
-const isOptedOut = (): boolean => {
+export const isOptedOut = (): boolean => {
   if (cachedOptOut !== null) return cachedOptOut
   try {
     const value = localStorage.getItem(MATOMO_LS_KEY) || "false"
