@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.2.0",
+  "version": "11.3.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -28,8 +28,8 @@
     "test:e2e:ui": "playwright test --project=e2e --ui",
     "test:e2e:debug": "playwright test --project=e2e --debug",
     "test:e2e:report": "playwright show-report tests/__report__",
-    "trigger:dev": "npx trigger.dev@latest dev --env-file src/data-layer/.env.local",
-    "trigger:deploy": "npx trigger.dev@latest deploy --env-file src/data-layer/.env.local"
+    "trigger:dev": "trigger dev --env-file src/data-layer/.env.local",
+    "trigger:deploy": "trigger deploy --env-file src/data-layer/.env.local"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.982.0",
@@ -107,7 +107,6 @@
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
-    "@chromatic-com/playwright": "^0.12.4",
     "@chromatic-com/storybook": "5.1.1",
     "@google/genai": "^1.46.0",
     "@netlify/plugin-nextjs": "^5.15.9",
@@ -157,6 +156,7 @@
     "storybook": "10.3.3",
     "storybook-next-intl": "10.1.1",
     "tailwindcss": "^3.4.4",
+    "trigger.dev": "4.3.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "4.1.0",
     "typescript": "^5.5.2",
