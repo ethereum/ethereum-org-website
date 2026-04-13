@@ -41,11 +41,12 @@ export const trackCustomEvent = ({
 
   if (isOptedOut()) return
 
+  // Capture URL synchronously — client-side navigations can change
+  // window.location before the idle callback fires
+  const currentUrl = window.location.href.split(/[?#]/)[0]
+
   scheduleIdleCallback(() => {
-    // Set custom URL removing any query params or hash fragments
-    if (window) {
-      push([`setCustomUrl`, window.location.href.split(/[?#]/)[0]])
-    }
+    push([`setCustomUrl`, currentUrl])
     push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
   })
 }
