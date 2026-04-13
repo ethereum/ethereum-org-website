@@ -108,12 +108,6 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           description: t("nav-quizzes-description"),
           href: "/quizzes/",
         },
-        {
-          id: "learn/videos",
-          label: t("nav-videos-label"),
-          description: t("nav-videos-description"),
-          href: "/videos/",
-        },
       ],
     },
     use: {

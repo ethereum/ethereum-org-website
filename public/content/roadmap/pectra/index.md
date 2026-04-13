@@ -109,11 +109,11 @@ Yes, Pectra upgrade requires updates to both [execution clients and consensus cl
 
 ## More of a visual learner? {#visual-learner}
 
-<VideoWatch slug="pectra-upgrade-overview" />
+<YouTube id="ufIDBCgdGwY" />
 
 _What’s Going Into the Pectra Upgrade? - Christine Kim_
 
-<VideoWatch slug="pectra-what-stakers-need-to-know" />
+<YouTube id="_UpAFpC7X6Y" />
 
 _Ethereum Pectra Upgrade: What Stakers Need to Know — Blockdaemon_
 

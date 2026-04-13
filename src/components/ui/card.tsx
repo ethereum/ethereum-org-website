@@ -137,7 +137,6 @@ const titleVariants = cva(
   {
     variants: {
       variant: {
-        semibold: "text-lg font-semibold",
         bold: "text-2xl font-bold",
         black: "text-3xl font-black",
       },

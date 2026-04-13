@@ -20,7 +20,9 @@ DeSci aims to create an ecosystem where scientists are incentivized to openly sh
 
 Decentralized science allows for more diverse funding sources (from [DAOs](/glossary/#dao), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible data and methods, and by providing incentives for reproducibility.
 
-<VideoWatch slug="desci-movement-juan-benet" />
+### Juan Benet - The DeSci Movement {#juan-benet-the-desci-movement}
+
+<YouTube id="zkXM9H90g_E" />
 
 ## How DeSci improves science {#desci-improves-science}
 

@@ -264,7 +264,7 @@ A security key is a more advanced and secure type of 2FA. Security keys are phys
 
 Watch more on 2FA:
 
-<VideoWatch slug="crypto-security-passwords" startTime="3479" />
+<YouTube id="m8jlnZuV1i4" start="3479" />
 
 ### Uninstall browser extensions {#uninstall-browser-extensions}
 

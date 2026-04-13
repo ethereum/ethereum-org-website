@@ -190,7 +190,7 @@ Once the transaction has been submitted the following happens:
 
 Watch Austin walk you through transactions, gas, and mining.
 
-<VideoWatch slug="transactions-eth-build" />
+<YouTube id="er-0ihqFQB0" />
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 

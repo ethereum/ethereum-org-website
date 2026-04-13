@@ -19,7 +19,7 @@ NFTs are tokens that are **individually unique**. Each NFT has different propert
 
 The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is publicly verifiable on Ethereum [blockchain](/glossary/#blockchain).
 
-<VideoWatch slug="learn-nfts-and-defi" />
+<YouTube id="Xdkkux6OxfM" />
 
 ## The internet of assets {#internet-of-assets}
 

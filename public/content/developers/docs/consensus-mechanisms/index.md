@@ -62,7 +62,7 @@ More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
 Watch more on the different types of consensus mechanisms used on Ethereum:
 
-<VideoWatch slug="understanding-consensus-mechanisms" />
+<YouTube id="ojxfbN78WFQ" />
 
 ### Sybil resistance & chain selection {#sybil-chain}
 

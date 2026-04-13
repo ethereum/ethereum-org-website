@@ -8,7 +8,6 @@ import type {
   Layout,
   ToCItem,
   TranslationKey,
-  VideoFormat,
 } from "@/lib/types"
 
 export interface DeveloperDocsLink {
@@ -86,18 +85,6 @@ export interface StakingFrontmatter
 export interface DocsFrontmatter extends SharedFrontmatter {
   incomplete?: boolean
   hideEditButton?: boolean
-}
-
-export interface VideoFrontmatter extends SharedFrontmatter {
-  youtubeId: string
-  uploadDate: string
-  duration: string
-  educationLevel: "beginner" | "intermediate" | "advanced"
-  topic: string[]
-  format: VideoFormat
-  author: string
-  customThumbnailUrl?: string
-  breadcrumb?: string
 }
 
 export interface TutorialFrontmatter extends SharedFrontmatter {

@@ -10,12 +10,18 @@ import remarkHeadingId from "remark-heading-id"
 import { CONTENT_DIR, CONTENT_PATH } from "../constants"
 import { Frontmatter, Layout, TocNodeType } from "../types"
 
-import { escapeHeadingIds } from "@/lib/md/escapeHeadingIds"
 import rehypeImg from "@/lib/md/rehypeImg"
 import remarkInferToc from "@/lib/md/remarkInferToc"
 import { remarkPreserveJsx } from "@/lib/md/remarkPreserveJsx"
 
 type SerializeOptions = NonNullable<MDXRemoteProps["options"]>
+
+// Preprocess the markdown content
+function preprocessMarkdown(content: string) {
+  // Replace heading IDs without escaping to escaped version
+  // TODO: move to a separate file and test it more
+  return content.replace(/^(#{1,6}.*?)\{(#[\w-]+)\}/gm, "$1\\{$2\\}")
+}
 
 export const compile = async ({
   markdown,
@@ -49,7 +55,7 @@ export const compile = async ({
     rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
   } satisfies SerializeOptions["mdxOptions"]
 
-  const source = escapeHeadingIds(markdown)
+  const source = preprocessMarkdown(markdown)
 
   const { content, frontmatter } = await compileMDX<Frontmatter>({
     source,
@@ -79,7 +85,7 @@ export const compile = async ({
 export const extractLayoutFromMarkdown = async (
   markdown: string
 ): Promise<Layout | undefined> => {
-  const source = escapeHeadingIds(markdown)
+  const source = preprocessMarkdown(markdown)
 
   const { frontmatter } = await compileMDX<Frontmatter>({
     source,

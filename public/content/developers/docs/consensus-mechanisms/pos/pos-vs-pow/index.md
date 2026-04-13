@@ -58,8 +58,9 @@ Proof-of-stake Ethereum can pay for its security by issuing far fewer coins than
 
 ## More of a visual learner? {#visual-learner}
 
+Watch Justin Drake explain the benefits of proof-of-stake over proof-of-work:
 
-<VideoWatch slug="pow-vs-pos" />
+<YouTube id="1m12zgJ42dI" />
 
 ## Further reading {#further-reading}
 
