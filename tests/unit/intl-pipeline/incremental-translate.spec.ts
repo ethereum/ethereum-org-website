@@ -10,7 +10,7 @@ import {
   extractSections,
   parseIncrementalResponse,
   replaceSections,
-} from "@/scripts/i18n/lib/ai/incremental-translate"
+} from "@/scripts/intl-pipeline/lib/llm/incremental-translate"
 
 test.describe("parseIncrementalResponse", () => {
   test("parses valid JSON response", () => {

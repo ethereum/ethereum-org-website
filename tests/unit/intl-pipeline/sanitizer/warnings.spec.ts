@@ -5,7 +5,7 @@
 
 import { expect, test } from "@playwright/test"
 
-import { _testOnly } from "@/scripts/i18n/post_import_sanitize"
+import { _testOnly } from "@/scripts/intl-pipeline/intl-sanitizer"
 
 const {
   warnPunctuationOnlyHeadings,
