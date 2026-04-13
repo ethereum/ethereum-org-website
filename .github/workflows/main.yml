@@ -1,8 +1,8 @@
-name: CI-Thai-Translation-Check
+Name: CI-Thai-Translation-Check
 
 on:
   push:
-    branches: [ "dev", "พัม482930-แพทช์-1" ]
+    branches: [ "dev", "Pum482930-patch-1" ]
   pull_request:
     branches: [ "dev" ]
 
@@ -20,7 +20,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Check Formatting (Prettier)
         run: npx prettier --check "src/content/translations/th/**/*.{md,json}"
