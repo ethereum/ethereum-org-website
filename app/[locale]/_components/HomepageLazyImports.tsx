@@ -44,9 +44,8 @@ export const CodeExamples = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex flex-col gap-4">
-        <Skeleton className="h-10 w-64 rounded-lg" />
-        <Skeleton className="h-[400px] w-full rounded-2xl" />
+      <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
+        <Skeleton className="h-[400px] w-full max-w-screen-md rounded-2xl" />
       </div>
     ),
   }
