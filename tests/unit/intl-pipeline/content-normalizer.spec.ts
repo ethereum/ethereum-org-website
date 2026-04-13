@@ -11,8 +11,7 @@
 
 import { expect, test } from "@playwright/test"
 
-import { normalizeContent } from "@/scripts/i18n/lib/ai/content-normalizer"
-import { generateFileManifest } from "@/scripts/i18n/lib/ai/manifest-generator"
+import { normalizeContent } from "@/scripts/intl-pipeline/lib/llm/content-normalizer"
 
 test.describe("Content Normalizer", () => {
   test.describe("indented code fences", () => {
@@ -107,52 +106,8 @@ test.describe("Content Normalizer", () => {
     })
   })
 
-  test.describe("hash stability", () => {
-    const base = `---
-title: Test
-lang: en
----
-
-## Section {#section}
-
-Text with [link](/url/) and \`code\`.
-`
-
-    test("URL change does not change hash", () => {
-      const modified = base.replace("/url/", "/url-v2/")
-      const h1 = generateFileManifest(base, "markdown").hash
-      const h2 = generateFileManifest(modified, "markdown").hash
-      expect(h1).toBe(h2)
-    })
-
-    test("inline code change does not change hash", () => {
-      const modified = base.replace("`code`", "`code2`")
-      const h1 = generateFileManifest(base, "markdown").hash
-      const h2 = generateFileManifest(modified, "markdown").hash
-      expect(h1).toBe(h2)
-    })
-
-    test("prose text change DOES change hash", () => {
-      const modified = base.replace("Text with", "Content with")
-      const h1 = generateFileManifest(base, "markdown").hash
-      const h2 = generateFileManifest(modified, "markdown").hash
-      expect(h1).not.toBe(h2)
-    })
-
-    test("link text change DOES change hash", () => {
-      const modified = base.replace("[link]", "[documentation]")
-      const h1 = generateFileManifest(base, "markdown").hash
-      const h2 = generateFileManifest(modified, "markdown").hash
-      expect(h1).not.toBe(h2)
-    })
-
-    test("heading ID change does not change hash", () => {
-      const modified = base.replace("{#section}", "{#renamed}")
-      const h1 = generateFileManifest(base, "markdown").hash
-      const h2 = generateFileManifest(modified, "markdown").hash
-      expect(h1).toBe(h2)
-    })
-  })
+  // Hash stability tests removed -- relied on deleted manifest-generator.
+  // Hash behavior now validated by intl-content-tree package (182 tests).
 
   test.describe("placeholder pre-validation", () => {
     test("rejects content containing reserved placeholder syntax", () => {

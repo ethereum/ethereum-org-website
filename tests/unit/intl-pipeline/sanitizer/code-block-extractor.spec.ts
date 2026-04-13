@@ -12,7 +12,7 @@ import {
   getCommentSyntax,
   restoreCodeBlocks,
   restoreComments,
-} from "@/scripts/i18n/lib/ai/code-block-extractor"
+} from "@/scripts/intl-pipeline/lib/llm/code-block-extractor"
 
 // ---------------------------------------------------------------------------
 // extractCodeBlocks + restoreCodeBlocks

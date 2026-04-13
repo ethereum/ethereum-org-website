@@ -105,7 +105,7 @@ const CASE_SENSITIVE_SPELLING_MISTAKES = ["Metamask", "Github"]
  * Locales that use non-Latin scripts and require transliteration of brand names.
  * For these languages, brand names should be transliterated into the target script,
  * NOT kept in Latin. The sanitizer should NOT revert transliterated brands to English.
- * Must stay in sync with src/scripts/i18n/transliterate.ts SUPPORTED_LANGS.
+ * Locales that use non-Latin scripts for brand name transliteration.
  */
 const TRANSLITERATION_LOCALES = new Set([
   "hi",
