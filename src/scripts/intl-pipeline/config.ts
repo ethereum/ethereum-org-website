@@ -10,6 +10,11 @@ export const GEMINI_MODELS: string[] = process.env.GEMINI_MODEL
   ? [process.env.GEMINI_MODEL]
   : ["gemini-3.1-pro-preview", "gemini-3.1-pro"]
 
+// Glossary API (ETHGlossary)
+export const GLOSSARY_API_URL =
+  process.env.GLOSSARY_API_URL ||
+  "https://ethglossary.visual-20-hoists.workers.dev/api/v1"
+
 // GitHub API configuration
 const githubApiToken = process.env.GITHUB_API_TOKEN || ""
 if (!githubApiToken) {

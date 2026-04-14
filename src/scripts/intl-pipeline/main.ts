@@ -22,7 +22,6 @@ import {
 
 import i18nConfig from "../../../i18n.config.json"
 
-import { filterGlossaryFlat } from "./glossary/glossary-lookup"
 import {
   ensureStagingBranch,
   getBranchObject,
@@ -52,6 +51,7 @@ import type { TaskResult } from "./lib/utils/task-pool"
 import { createTaskPool } from "./lib/utils/task-pool"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
+import { GLOSSARY_API_URL } from "./config"
 import { config, GEMINI_MODELS } from "./config"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
@@ -89,28 +89,47 @@ function readSourceManifestPath(
   return path.join(process.cwd(), `src/intl/${locale}/.manifest-source.json`)
 }
 
-const GLOSSARY_DIR = path.join(
-  process.cwd(),
-  "src/scripts/intl-pipeline/glossary/data"
-)
-const GLOSSARY_FILE = path.join(GLOSSARY_DIR, "glossary-terms-enhanced.json")
-const GLOSSARY_TRANSLATIONS_DIR = path.join(GLOSSARY_DIR, "translations")
-
-function loadGlossary(
+/**
+ * Fetch glossary terms from ETHGlossary API, filtered to terms
+ * that appear in the source content for a given language.
+ * Returns Map<english, translation> for prompt injection.
+ * Includes term notes as parenthetical context when available.
+ */
+async function loadGlossary(
   fileContent: string,
-  fileType: "markdown" | "json",
   locale: string
-): Map<string, string> {
+): Promise<Map<string, string>> {
   try {
-    if (!fs.existsSync(GLOSSARY_FILE)) return new Map()
-    return filterGlossaryFlat(
-      fileContent,
-      fileType,
-      locale,
-      GLOSSARY_FILE,
-      GLOSSARY_TRANSLATIONS_DIR
+    const res = await fetch(`${GLOSSARY_API_URL}/filter`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content: fileContent, language: locale }),
+    })
+    if (!res.ok) {
+      console.warn(
+        `[glossary] API returned ${res.status} for ${locale}, continuing without glossary`
+      )
+      return new Map()
+    }
+    const data = (await res.json()) as {
+      terms: Array<{
+        english: string
+        translation: string
+        note?: string
+      }>
+    }
+    const map = new Map<string, string>()
+    for (const term of data.terms) {
+      const value = term.note
+        ? `${term.translation} (${term.note})`
+        : term.translation
+      map.set(term.english, value)
+    }
+    return map
+  } catch (err) {
+    console.warn(
+      `[glossary] Failed to fetch for ${locale}: ${err instanceof Error ? err.message : String(err)}`
     )
-  } catch {
     return new Map()
   }
 }
@@ -238,7 +257,7 @@ async function buildGeminiTranslator(
     ? (langEntry as { code: string; name: string }).name
     : locale
 
-  const glossaryTerms = loadGlossary(englishContent, fileType, locale)
+  const glossaryTerms = await loadGlossary(englishContent, locale)
   if (config.verbose && glossaryTerms.size > 0) {
     log(`  Glossary: ${glossaryTerms.size} terms for ${locale}`)
   }
@@ -352,7 +371,7 @@ async function runFullTranslation(
 ): Promise<TaskResult> {
   log(`[${locale}] ${file.path}: full translation...`)
 
-  const glossaryTerms = loadGlossary(file.content, file.type, locale)
+  const glossaryTerms = await loadGlossary(file.content, locale)
   if (config.verbose && glossaryTerms.size > 0) {
     log(`[${locale}] Glossary: ${glossaryTerms.size} terms`)
   }
