@@ -71,16 +71,16 @@ const Homepage2026 = ({
           <TrustLogos className="py-12" eventCategory={eventCategory} />
         </TrackedSection>
 
-        <TrackedSection id="feature_cards" eventCategory={eventCategory}>
-          <FeatureCards eventCategory={eventCategory} />
-        </TrackedSection>
-
         <TrackedSection id="simulator" eventCategory={eventCategory}>
           <Suspense fallback={<SectionSkeleton className="py-12" />}>
             <SimulatorI18nWrapper>
               <SimulatorSection className="py-12" />
             </SimulatorI18nWrapper>
           </Suspense>
+        </TrackedSection>
+
+        <TrackedSection id="feature_cards" eventCategory={eventCategory}>
+          <FeatureCards eventCategory={eventCategory} />
         </TrackedSection>
 
         <TrackedSection id="get_started" eventCategory={eventCategory}>

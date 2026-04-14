@@ -125,7 +125,7 @@ const HomeHero2026 = ({
 
           <div className="flex flex-col items-center gap-8">
             <h1 className="max-w-[893px] text-4xl font-black leading-[1.1] md:text-6xl lg:text-7xl lg:leading-[0.9]">
-              The internet that the world can rely on.
+              The internet that belongs to you
             </h1>
 
             <p className="max-w-[741px] text-lg leading-relaxed tracking-[0.07px] text-body-medium md:text-2xl md:leading-[1.625]">

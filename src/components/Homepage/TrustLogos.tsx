@@ -1,5 +1,4 @@
 import { ArrowRight, Check } from "lucide-react"
-import type { StaticImageData } from "next/image"
 
 import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/ui/Link"
@@ -12,32 +11,9 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 
-import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
-
 import FloatingCard from "./FloatingCard"
 
 import builtToLastImage from "@/public/images/homepage/built-to-last.png"
-import blackrockLogo from "@/public/images/homepage/logos/blackrock.webp"
-import jpmorganLogo from "@/public/images/homepage/logos/jpmorgan.png"
-import mastercardLogo from "@/public/images/homepage/logos/mastercard.png"
-import paypalLogo from "@/public/images/homepage/logos/paypal.png"
-import robinhoodLogo from "@/public/images/homepage/logos/robinhood.png"
-import visaLogo from "@/public/images/homepage/logos/visa.png"
-
-type Logo = {
-  src: StaticImageData
-  alt: string
-  className?: string
-}
-
-const logos: Logo[] = [
-  { src: mastercardLogo, alt: "Mastercard", className: "h-10" },
-  { src: visaLogo, alt: "Visa" },
-  { src: jpmorganLogo, alt: "JPMorgan" },
-  { src: robinhoodLogo, alt: "Robinhood" },
-  { src: paypalLogo, alt: "PayPal" },
-  { src: blackrockLogo, alt: "BlackRock" },
-]
 
 type TrustLogosProps = {
   className?: string
@@ -91,48 +67,35 @@ const TrustLogos = ({
 
       <SectionContent className="flex max-w-[660px] flex-1 flex-col gap-6 pt-8 md:gap-8 md:pt-0 lg:gap-10">
         <div className="flex flex-col gap-2">
-          <SectionTag variant="plain">
-            Trusted by leading institutions
-          </SectionTag>
+          <SectionTag variant="plain">Proven track record</SectionTag>
           <SectionHeader className="!mb-0 !mt-0">Built to last</SectionHeader>
         </div>
 
-        <p className="text-lg leading-relaxed text-body-medium lg:text-2xl lg:leading-relaxed">
-          Major financial institutions choose Ethereum because it&apos;s the
-          most battle-tested, low-risk, and dependable blockchain. The code is
-          open, the network is always on, and the track record speaks for
-          itself.
-        </p>
+        <div className="flex flex-col gap-6 text-lg leading-relaxed text-body-medium lg:text-2xl lg:leading-relaxed">
+          <p>
+            Ethereum has run continuously since 2015 without a single second of
+            downtime.
+          </p>
+          <p>
+            The code is open for anyone to verify. No company runs it, no one
+            can shut it down, and thousands of independent operators keep it
+            going worldwide.
+          </p>
+        </div>
 
         <BaseLink
-          href={ENTERPRISE_ETHEREUM_URL}
+          href="/get-eth/"
           className="inline-flex items-center gap-1 no-underline"
           hideArrow
           customEventOptions={{
             eventCategory,
             eventAction: "section_click",
-            eventName: "trust_logos/enterprise",
+            eventName: "trust_logos/get_eth",
           }}
         >
-          See institutional adoption
+          Get ETH
           <ArrowRight className="size-4" />
         </BaseLink>
-
-        <div className="grid grid-cols-2 gap-x-5 gap-y-4">
-          {logos.map((logo) => (
-            <div key={logo.alt} className="flex h-12 w-36 items-center">
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                className={cn(
-                  "h-7 w-auto object-contain grayscale dark:invert",
-                  logo.className
-                )}
-                sizes="144px"
-              />
-            </div>
-          ))}
-        </div>
       </SectionContent>
     </Section>
   )

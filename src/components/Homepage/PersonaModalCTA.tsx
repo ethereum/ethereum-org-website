@@ -1,7 +1,13 @@
 "use client"
 
 import { useRef, useState } from "react"
-import { BookOpen, Building2, Code, ExternalLink } from "lucide-react"
+import {
+  AppWindowMac,
+  BookOpen,
+  Building2,
+  Code,
+  ExternalLink,
+} from "lucide-react"
 
 import { ChevronNext } from "@/components/Chevron"
 import { Button } from "@/components/ui/buttons/Button"
@@ -50,44 +56,116 @@ const categories: PersonaCategory[] = [
         eventName: "learn_ethereum",
       },
       {
-        label: "Get a wallet",
+        label: "Pick a wallet",
         href: "/wallets/find-wallet/",
-        eventName: "get_wallet",
+        eventName: "pick_wallet",
       },
     ],
   },
   {
-    id: "developers",
-    label: "For developers",
+    id: "explorers",
+    label: "For explorers",
+    Icon: AppWindowMac,
+    iconBgClass: "bg-accent-c/20",
+    iconColorClass: "text-accent-c",
+    links: [
+      {
+        label: "Get ETH",
+        href: "/get-eth/",
+        eventName: "get_eth",
+      },
+      { label: "Try apps", href: "/apps/", eventName: "try_apps" },
+    ],
+  },
+  {
+    id: "builders",
+    label: "For builders",
     Icon: Code,
     iconBgClass: "bg-primary-low-contrast",
     iconColorClass: "text-primary",
     links: [
       {
-        label: "Developer Hub",
+        label: "Start building",
         href: "/developers/",
-        eventName: "developer_hub",
+        eventName: "start_building",
       },
       { label: "Docs", href: "/developers/docs/", eventName: "docs" },
     ],
   },
-  {
-    id: "enterprise",
-    label: "For enterprise",
-    Icon: Building2,
-    iconBgClass: "bg-accent-c/20",
-    iconColorClass: "text-accent-c",
-    links: [
-      { label: "Founders", href: "/founders/", eventName: "founders" },
-      {
-        label: "Institutions",
-        href: ENTERPRISE_ETHEREUM_URL,
-        isExternal: true,
-        eventName: "institutions",
-      },
-    ],
-  },
 ]
+
+const enterpriseCategory: PersonaCategory = {
+  id: "enterprise",
+  label: "For enterprise",
+  Icon: Building2,
+  iconBgClass: "bg-accent-c/20",
+  iconColorClass: "text-accent-c",
+  links: [
+    { label: "Founders", href: "/founders/", eventName: "founders" },
+    {
+      label: "Institutions",
+      href: ENTERPRISE_ETHEREUM_URL,
+      isExternal: true,
+      eventName: "institutions",
+    },
+  ],
+}
+
+const CategoryCard = ({
+  category: { id, label, Icon, iconBgClass, iconColorClass, links },
+  onLinkClick,
+  className,
+}: {
+  category: PersonaCategory
+  onLinkClick: (eventName: string) => void
+  className?: string
+}) => (
+  <div
+    key={id}
+    className={cn(
+      "border-border-default flex flex-col rounded-3xl border p-6 md:p-10",
+      className
+    )}
+  >
+    <div className="mb-6 flex flex-col gap-2 md:mb-8 md:gap-4">
+      <div
+        className={cn(
+          "grid size-8 place-items-center rounded-lg md:size-16 md:rounded-2xl",
+          iconBgClass
+        )}
+      >
+        <Icon className={cn("size-4 md:size-8", iconColorClass)} />
+      </div>
+      <p className="text-sm font-bold uppercase tracking-wider">{label}</p>
+    </div>
+
+    <div className="mt-auto flex flex-col gap-2 md:gap-4">
+      {links.map(({ label: linkLabel, href, isExternal, eventName }, idx) => (
+        <div key={linkLabel}>
+          {idx > 0 && <div className="mb-2 border-t md:mb-4" />}
+          <BaseLink
+            href={href}
+            onClick={() => onLinkClick(eventName)}
+            hideArrow
+            className="group flex items-center justify-between text-xl font-bold text-primary no-underline transition-colors hover:text-primary-hover md:text-3xl"
+            {...(isExternal && {
+              target: "_blank",
+              rel: "noopener noreferrer",
+            })}
+          >
+            <span className="flex items-center gap-1">
+              {linkLabel}
+              {isExternal && (
+                <ExternalLink className="size-3 text-body-medium md:size-4" />
+              )}
+            </span>
+            <ChevronNext className="size-5 text-primary transition-transform group-hover:translate-x-1" />
+          </BaseLink>
+        </div>
+      ))}
+    </div>
+  </div>
+)
 
 type PersonaModalCTAProps = {
   eventCategory: string
@@ -152,61 +230,19 @@ const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
           </DialogDescription>
         </DialogHeader>
         <div className="mt-4 grid gap-4 md:mt-6 md:grid-cols-3 md:gap-6">
-          {categories.map(
-            ({ id, label, Icon, iconBgClass, iconColorClass, links }) => (
-              <div
-                key={id}
-                className="border-border-default flex flex-col rounded-3xl border p-6 md:p-10"
-              >
-                {/* Icon and Category Label */}
-                <div className="mb-6 flex flex-col gap-2 md:mb-8 md:gap-4">
-                  <div
-                    className={cn(
-                      "grid size-8 place-items-center rounded-lg md:size-16 md:rounded-2xl",
-                      iconBgClass
-                    )}
-                  >
-                    <Icon className={cn("size-4 md:size-8", iconColorClass)} />
-                  </div>
-                  <p className="text-sm font-bold uppercase tracking-wider">
-                    {label}
-                  </p>
-                </div>
-
-                {/* Links */}
-                <div className="mt-auto flex flex-col gap-2 md:gap-4">
-                  {links.map(
-                    (
-                      { label: linkLabel, href, isExternal, eventName },
-                      idx
-                    ) => (
-                      <div key={linkLabel}>
-                        {idx > 0 && <div className="mb-2 border-t md:mb-4" />}
-                        <BaseLink
-                          href={href}
-                          onClick={() => handleLinkClick(eventName)}
-                          hideArrow
-                          className="group flex items-center justify-between text-xl font-bold text-primary no-underline transition-colors hover:text-primary-hover md:text-3xl"
-                          {...(isExternal && {
-                            target: "_blank",
-                            rel: "noopener noreferrer",
-                          })}
-                        >
-                          <span className="flex items-center gap-1">
-                            {linkLabel}
-                            {isExternal && (
-                              <ExternalLink className="size-3 text-body-medium md:size-4" />
-                            )}
-                          </span>
-                          <ChevronNext className="size-5 text-primary transition-transform group-hover:translate-x-1" />
-                        </BaseLink>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-            )
-          )}
+          {categories.map((category) => (
+            <CategoryCard
+              key={category.id}
+              category={category}
+              onLinkClick={handleLinkClick}
+            />
+          ))}
+          {/* Enterprise card: mobile only */}
+          <CategoryCard
+            category={enterpriseCategory}
+            onLinkClick={handleLinkClick}
+            className="md:hidden"
+          />
         </div>
       </DialogContent>
     </Dialog>

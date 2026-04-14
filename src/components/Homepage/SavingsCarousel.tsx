@@ -27,18 +27,6 @@ import borrowingImage from "@/public/images/homepage/savings/borrowing.png"
 import defiImage from "@/public/images/homepage/savings/defi.png"
 import remittancesImage from "@/public/images/homepage/savings/remittances.png"
 
-const APY_DATA = {
-  traditional: {
-    label: "Traditional Savings",
-    apy: 0.5,
-  },
-  ethereum: {
-    label: "Ethereum Apps",
-    apyMin: 4,
-    apyMax: 8,
-  },
-} as const
-
 type ComparisonItem = {
   label: string
   value: string
@@ -60,21 +48,33 @@ type Slide = {
   cta: string
   href: string
   image: typeof defiImage
-  comparison: ComparisonData | "apy"
+  comparison: ComparisonData
 }
 
 const slides: Slide[] = [
   {
-    id: "defi",
-    tag: "SAVINGS & INTEREST",
-    title: "Ownership has financial benefits too",
-    subtitle: "When there's no broker taking a cut, you gain more.",
+    id: "privacy",
+    tag: "YOUR BUSINESS IS YOURS",
+    title: "Use the internet without being watched",
+    subtitle:
+      "Most apps track what you do, who you talk to, and what you own. They sell that data or hand it over when asked. On Ethereum, your activity can stay private.",
     description:
-      "Earn higher interest on funds using lending apps on Ethereum. You can withdraw your money 24/7.",
-    cta: "See DeFi →",
-    href: "/defi/",
+      "No account tied to your name. No company watching your balance.",
+    cta: "Use privacy preserving apps →",
+    href: "/apps/categories/privacy/",
     image: defiImage,
-    comparison: "apy",
+    comparison: {
+      traditional: {
+        label: "TRADITIONAL APPS",
+        value: "Your data is their product",
+        smallText: true,
+      },
+      ethereum: {
+        label: "ETHEREUM APPS",
+        value: "Private by default",
+        smallText: true,
+      },
+    },
   },
   {
     id: "remittances",
@@ -82,8 +82,8 @@ const slides: Slide[] = [
     title: "Send money home in 12 minutes",
     subtitle: "Skip the $50 wire fee and the 5+ day wait.",
     description:
-      "Send stablecoins for just $0.2, and your family receives the funds almost instantly.",
-    cta: "Send money →",
+      "Send stablecoins to anyone, anywhere in the world, for just $0.02. They receive the funds almost instantly.",
+    cta: "Try it yourself →",
     href: "/payments/",
     image: remittancesImage,
     comparison: {
@@ -98,8 +98,8 @@ const slides: Slide[] = [
     subtitle: "You don't need a credit score to get started.",
     description:
       "Using DeFi apps on Ethereum, you can provide collateral and access credit instantly, no permission required.",
-    cta: "Try it yourself →",
-    href: "/apps/categories/defi/",
+    cta: "Learn more about DeFi →",
+    href: "/defi/",
     image: borrowingImage,
     comparison: {
       traditional: {
@@ -115,24 +115,6 @@ const slides: Slide[] = [
     },
   },
 ]
-
-const getComparison = (slide: Slide): ComparisonData => {
-  if (slide.comparison === "apy") {
-    return {
-      traditional: {
-        label: APY_DATA.traditional.label,
-        value: `${APY_DATA.traditional.apy}%`,
-        suffix: "APY",
-      },
-      ethereum: {
-        label: APY_DATA.ethereum.label,
-        value: `${APY_DATA.ethereum.apyMin}-${APY_DATA.ethereum.apyMax}%`,
-        suffix: "APY",
-      },
-    }
-  }
-  return slide.comparison
-}
 
 type SavingsCarouselProps = {
   className?: string
@@ -203,7 +185,7 @@ const SlideContent = ({
   isActive,
   eventCategory,
 }: SlideContentProps) => {
-  const comparison = getComparison(slide)
+  const comparison = slide.comparison
   const traditionalControls = useAnimationControls()
   const ethereumControls = useAnimationControls()
 
