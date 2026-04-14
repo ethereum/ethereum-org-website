@@ -105,7 +105,7 @@ const LearnCard = ({
 }: LearnCardProps) => (
   <Card
     href={href}
-    className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+    className="flex flex-col gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
   >
     <Image
       src={image}
@@ -113,7 +113,7 @@ const LearnCard = ({
       className="mx-auto h-[200px] w-auto"
       sizes="250px"
     />
-    <div className="space-y-2">
+    <div className="flex-1 space-y-2">
       <h3 className="text-2xl font-bold">{title}</h3>
       <p className="text-body-medium">{description}</p>
     </div>
@@ -213,21 +213,21 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     imageAlt={t("what-is-ethereum-card-image-alt")}
                     title={t("what-is-ethereum-card-title")}
                     description={t("understand-ethereum-card-description")}
-                    ctaLabel={t("what-is-ethereum-card-title")}
+                    ctaLabel={t("understand-ethereum-cta")}
                   />
                   <LearnCard
                     href="/what-is-ether/"
                     image={eth}
                     title={t("what-is-eth-card-title")}
                     description={t("what-is-eth-description")}
-                    ctaLabel={t("what-is-eth-card-title")}
+                    ctaLabel={t("what-is-eth-cta")}
                   />
                   <LearnCard
                     href="/ethereum-vs-bitcoin/"
                     image={financeTransparent}
                     title={t("ethereum-vs-bitcoin-card-title")}
                     description={t("ethereum-vs-bitcoin-card-description")}
-                    ctaLabel={t("ethereum-vs-bitcoin-card-title")}
+                    ctaLabel={t("ethereum-vs-bitcoin-cta")}
                   />
                 </div>
 
@@ -239,28 +239,28 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     image={developersEthBlocks}
                     title={t("ethereum-network-card-title")}
                     description={t("ethereum-network-card-description")}
-                    ctaLabel={t("ethereum-network-card-title")}
+                    ctaLabel={t("ethereum-network-cta")}
                   />
                   <LearnCard
                     href="/ethereum-history-founder-and-ownership/"
                     image={merge}
                     title={t("ethereum-history-card-title")}
                     description={t("ethereum-history-card-description")}
-                    ctaLabel={t("ethereum-history-card-title")}
+                    ctaLabel={t("ethereum-history-cta")}
                   />
                   <LearnCard
                     href="/web3/"
                     image={impact}
                     title={t("what-is-web3-card-title")}
                     description={t("what-is-web3-card-description")}
-                    ctaLabel={t("what-is-web3-card-title")}
+                    ctaLabel={t("what-is-web3-cta")}
                   />
                   <LearnCard
                     href="/smart-contracts/"
                     image={hackathon}
                     title={t("smart-contracts-card-title")}
                     description={t("smart-contracts-card-description")}
-                    ctaLabel={t("smart-contracts-card-title")}
+                    ctaLabel={t("smart-contracts-cta")}
                   />
                 </div>
 
@@ -291,7 +291,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     imageAlt={t("what-is-a-wallet-card-alt")}
                     title={t("what-is-a-wallet-card-title")}
                     description={t("wallets-card-description")}
-                    ctaLabel={t("what-is-a-wallet-card-title")}
+                    ctaLabel={t("wallets-cta")}
                   />
                   <LearnCard
                     href="/wallets/find-wallet/"
@@ -392,7 +392,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     image={dogeComputer}
                     title={t("get-involved-card-title")}
                     description={t("get-involved-card-description")}
-                    ctaLabel={t("get-involved-card-title")}
+                    ctaLabel={t("get-involved-cta")}
                   />
                   <LearnCard
                     href="/community/online/"
