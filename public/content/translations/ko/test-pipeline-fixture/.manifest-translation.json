@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "locale": "ko",
+  "translatedAt": "2026-04-14T17:40:52.019Z",
+  "englishManifestHash": "6cbdb05e7ec6",
+  "placeholderOrder": [
+    "LINK-61909b",
+    "CODE-c69327",
+    "CODE-b33563",
+    "HTMLTAG-111aea",
+    "IMAGE-6363cd",
+    "LINK-2a5b66",
+    "COMPONENT-f80dae",
+    "LINK-c8a731",
+    "CODE-3207cf",
+    "CODE-9c2e9b",
+    "CODEBLOCK-465002",
+    "COMPONENT-8bb0af",
+    "HTMLTAG-10ea9e",
+    "CODE-e5dcff",
+    "CODE-2af715",
+    "CODE-248dd8",
+    "CODEBLOCK-2fc041",
+    "LINK-72f811",
+    "LINK-e5de14",
+    "LINK-b64a91",
+    "LINK-d7c461",
+    "LINK-255754",
+    "LINK-74b3ba",
+    "CODE-eca12c",
+    "CODEBLOCK-11ac38",
+    "LINK-9483ea",
+    "LINK-482b0b",
+    "COMPONENT-9d7ae9",
+    "COMPONENT-57c455",
+    "CODEBLOCK-95f0b8",
+    "HTMLTAG-46c201",
+    "LINK-5d7e57",
+    "LINK-38ba86",
+    "LINK-858fc0",
+    "LINK-f2463e",
+    "LINK-7b5be1",
+    "LINK-110e65",
+    "LINK-9483ea"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-465002": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-2fc041": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-11ac38": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-95f0b8": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "COMPONENT-f80dae": {
+      "type": "component",
+      "values": {
+        "componentName": "InfoBanner"
+      }
+    },
+    "LINK-c8a731": {
+      "type": "link",
+      "values": {
+        "url": "https://www.gnu.org/philosophy/free-sw.html"
+      }
+    },
+    "COMPONENT-8bb0af": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "/open-source/copyleft"
+      }
+    },
+    "HTMLTAG-10ea9e": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://www.gnu.org/licenses/gpl-faq.html"
+      }
+    },
+    "COMPONENT-9d7ae9": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "href": "/tools/audit/"
+      }
+    },
+    "COMPONENT-57c455": {
+      "type": "component",
+      "values": {
+        "componentName": "Card",
+        "href": "/tools/sbom/"
+      }
+    },
+    "HTMLTAG-111aea": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://choosealicense.com/"
+      }
+    },
+    "HTMLTAG-46c201": {
+      "type": "html-tag",
+      "values": {
+        "tagName": "a",
+        "href": "https://docs.github.com/en/code-security/dependabot",
+        "target": "_blank"
+      }
+    },
+    "CODE-c69327": {
+      "type": "inline-code",
+      "values": {
+        "content": "LICENSE"
+      }
+    },
+    "CODE-b33563": {
+      "type": "inline-code",
+      "values": {
+        "content": "README.md"
+      }
+    },
+    "CODE-3207cf": {
+      "type": "inline-code",
+      "values": {
+        "content": "GPL-3.0"
+      }
+    },
+    "CODE-9c2e9b": {
+      "type": "inline-code",
+      "values": {
+        "content": "AGPL-3.0"
+      }
+    },
+    "CODE-e5dcff": {
+      "type": "inline-code",
+      "values": {
+        "content": "MIT"
+      }
+    },
+    "CODE-2af715": {
+      "type": "inline-code",
+      "values": {
+        "content": "Apache-2.0"
+      }
+    },
+    "CODE-248dd8": {
+      "type": "inline-code",
+      "values": {
+        "content": "BSD-2-Clause"
+      }
+    },
+    "CODE-eca12c": {
+      "type": "inline-code",
+      "values": {
+        "content": "CONTRIBUTING.md"
+      }
+    },
+    "IMAGE-6363cd": {
+      "type": "image",
+      "values": {
+        "path": "/images/open-source/license-comparison.png"
+      }
+    },
+    "LINK-61909b": {
+      "type": "link",
+      "values": {
+        "url": "https://opensource.org/osd"
+      }
+    },
+    "LINK-2a5b66": {
+      "type": "link",
+      "values": {
+        "url": "https://www.fsf.org/about/what-is-free-software"
+      }
+    },
+    "LINK-72f811": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/"
+      }
+    },
+    "LINK-e5de14": {
+      "type": "link",
+      "values": {
+        "url": "https://spdx.org/"
+      }
+    },
+    "LINK-255754": {
+      "type": "link",
+      "values": {
+        "url": "https://remix.ethereum.org/"
+      }
+    },
+    "LINK-b64a91": {
+      "type": "link",
+      "values": {
+        "url": "https://sepolia.dev/"
+      }
+    },
+    "LINK-d7c461": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/"
+      }
+    },
+    "LINK-74b3ba": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#smart-contract"
+      }
+    },
+    "LINK-9483ea": {
+      "type": "link",
+      "values": {
+        "url": "https://fossa.com/"
+      }
+    },
+    "LINK-482b0b": {
+      "type": "link",
+      "values": {
+        "url": "https://snyk.io/"
+      }
+    },
+    "LINK-5d7e57": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/"
+      }
+    },
+    "LINK-38ba86": {
+      "type": "link",
+      "values": {
+        "url": "https://opensource.org/"
+      }
+    },
+    "LINK-858fc0": {
+      "type": "link",
+      "values": {
+        "url": "https://www.fsf.org/"
+      }
+    },
+    "LINK-f2463e": {
+      "type": "link",
+      "values": {
+        "url": "https://choosealicense.com/"
+      }
+    },
+    "LINK-7b5be1": {
+      "type": "link",
+      "values": {
+        "url": "https://spdx.org/licenses/"
+      }
+    },
+    "LINK-110e65": {
+      "type": "link",
+      "values": {
+        "url": "https://opensource.guide/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-14T17:40:52.019Z",
+      "status": "success"
+    }
+  }
+}
