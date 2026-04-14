@@ -13,7 +13,6 @@ import { Image, ImageProps } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
-import { buttonVariants } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
@@ -26,7 +25,6 @@ import { Flex, Stack } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
-import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -129,7 +127,7 @@ const LearnCard = ({
     </CardContent>
     <CardFooter className="p-0 pt-2">
       <span
-        className={cn(buttonVariants({ variant: "outline" }), "w-full")}
+        className="inline-flex w-full items-center justify-center gap-2 rounded border border-solid border-current px-4 py-2 text-primary transition hover:text-primary-hover hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]"
         aria-hidden="true"
       >
         {ctaLabel}
@@ -262,10 +260,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                         {t("explore-use-cases-card-description")}
                       </p>
                       <span
-                        className={cn(
-                          buttonVariants({ variant: "outline" }),
-                          "w-fit"
-                        )}
+                        className="inline-flex w-fit items-center justify-center gap-2 rounded border border-solid border-current px-4 py-2 text-primary transition hover:text-primary-hover hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]"
                         aria-hidden="true"
                       >
                         {t("explore-use-cases-cta")}
