@@ -150,7 +150,7 @@ const ComparisonCard = ({
       <FloatingCard variant={variant}>
         <p
           className={cn(
-            "text-xs font-semibold uppercase tracking-wider lg:text-sm",
+            "text-sm font-semibold uppercase tracking-wider",
             !isPrimary && "text-body-medium"
           )}
         >
@@ -160,7 +160,7 @@ const ComparisonCard = ({
           <span
             className={cn(
               "font-bold",
-              item.smallText ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"
+              item.smallText ? "text-2xl" : "text-4xl lg:text-5xl"
             )}
           >
             {item.value}
