@@ -87,13 +87,11 @@ const UseCaseCard = ({
       sizes="250px"
     />
     <div className="space-y-2">
-      <h3 className="text-2xl font-bold group-hover/link:underline group-focus/link:underline">
-        {title}
-      </h3>
+      <h3 className="text-2xl font-bold">{title}</h3>
       <p className="text-body-medium">{description}</p>
     </div>
     <span
-      className="inline-flex w-full items-center justify-center gap-2 rounded border border-solid border-current px-4 py-2 text-primary transition hover:text-primary-hover hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]"
+      className="inline-flex min-h-10.5 w-full items-center justify-center gap-2 rounded border border-solid border-transparent bg-primary-action px-4 py-2 text-white transition hover:bg-primary-action-hover hover:text-white"
       aria-hidden="true"
     >
       {ctaLabel}
