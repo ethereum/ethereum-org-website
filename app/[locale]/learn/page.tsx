@@ -13,17 +13,20 @@ import { Image, ImageProps } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
+import { buttonVariants } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
   CardContent,
+  CardFooter,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import { Flex, Stack } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -38,9 +41,12 @@ import futureTransparent from "@/public/images/future_transparent.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import heroImage from "@/public/images/heroes/learn-hub-hero.png"
 import impact from "@/public/images/impact_transparent.png"
+import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
 import Layer2LearnHero from "@/public/images/layer-2/learn-hero.png"
+import stablecoinsHero from "@/public/images/stablecoins/hero.png"
 import merge from "@/public/images/upgrades/merge.png"
 import newRings from "@/public/images/upgrades/newrings.png"
+import dao from "@/public/images/use-cases/dao-2.png"
 import wallet from "@/public/images/wallet.png"
 import whatIsEth from "@/public/images/what-is-ethereum.png"
 
@@ -99,6 +105,7 @@ type LearnCardProps = {
   imageAlt?: string
   title: string
   description: string
+  ctaLabel: string
 }
 
 const LearnCard = ({
@@ -107,19 +114,27 @@ const LearnCard = ({
   imageAlt = "",
   title,
   description,
+  ctaLabel,
 }: LearnCardProps) => (
   <Card
     href={href}
-    className="row-span-3 grid grid-rows-subgrid gap-y-4 rounded-2xl bg-background-highlight p-6"
+    className="row-span-4 grid grid-rows-subgrid gap-y-4 rounded-2xl bg-background-highlight p-6"
   >
-    <CardBanner background="body" size="full" fit="contain">
+    <CardBanner background="none" size="full" fit="contain">
       <Image src={image} alt={imageAlt} className="h-full w-full" />
     </CardBanner>
     <CardContent className="space-y-2 p-0">
       <CardTitle>{title}</CardTitle>
       <CardParagraph variant="light">{description}</CardParagraph>
     </CardContent>
-    <div />
+    <CardFooter className="p-0 pt-2">
+      <span
+        className={cn(buttonVariants({ variant: "outline" }), "w-full")}
+        aria-hidden="true"
+      >
+        {ctaLabel}
+      </span>
+    </CardFooter>
   </Card>
 )
 
@@ -134,6 +149,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   const tocItems = [
     {
+      id: "what-is-ethereum-used-for",
+      title: t("toc-what-is-ethereum-used-for"),
+    },
+    {
       id: "understand-ethereum",
       title: t("toc-what-is-crypto-ethereum"),
     },
@@ -142,16 +161,12 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       title: t("toc-how-do-i-use-ethereum"),
     },
     {
-      id: "what-is-ethereum-used-for",
-      title: t("toc-what-is-ethereum-used-for"),
-    },
-    {
-      id: "learn-about-the-ethereum-protocol",
-      title: t("toc-learn-about-the-ethereum-protocol"),
-    },
-    {
       id: "learn-about-the-ethereum-community",
       title: t("toc-learn-about-the-ethereum-community"),
+    },
+    {
+      id: "go-deeper",
+      title: t("toc-go-deeper"),
     },
     {
       id: "books-and-podcasts",
@@ -196,12 +211,85 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <TableOfContents items={tocData} variant="left" />
 
             <ContentContainer id="content">
-              {/* Section 1: Understand Ethereum - guided tour */}
+              {/* Section 1: What is Ethereum used for? (motivation-first) */}
               <Section
                 headingId={tocItems[0].id}
                 headingTitle={tocItems[0].title}
+                description={t("what-is-ethereum-used-for-1")}
+              >
+                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
+                  <LearnCard
+                    href="/defi/"
+                    image={financeTransparent}
+                    title={t("defi-card-title")}
+                    description={t("defi-card-description")}
+                    ctaLabel={t("defi-card-button")}
+                  />
+                  <LearnCard
+                    href="/stablecoins/"
+                    image={stablecoinsHero}
+                    title={t("stablecoins-card-title")}
+                    description={t("stablecoins-card-description")}
+                    ctaLabel={t("stablecoins-card-button")}
+                  />
+                  <LearnCard
+                    href="/nft/"
+                    image={infrastructureTransparent}
+                    title={t("nft-card-title")}
+                    description={t("nft-card-description")}
+                    ctaLabel={t("nft-card-button")}
+                  />
+                  <LearnCard
+                    href="/dao/"
+                    image={dao}
+                    title={t("dao-card-title")}
+                    description={t("dao-card-description")}
+                    ctaLabel={t("dao-card-button")}
+                  />
+                </div>
+
+                <BaseLink
+                  href="/use-cases/"
+                  className="no-underline hover:no-underline"
+                  hideArrow
+                >
+                  <Flex className="group/link flex-col overflow-hidden rounded-[10px] bg-gradient-to-r from-accent-a/10 to-accent-c/10 lg:flex-row dark:from-accent-a/20 dark:to-accent-c-hover/20">
+                    <Stack className="flex-1 gap-6 p-12">
+                      <h3 className="text-xl group-hover/link:underline md:text-2xl">
+                        {t("explore-use-cases-card-title")}
+                      </h3>
+                      <p className="text-body-medium">
+                        {t("explore-use-cases-card-description")}
+                      </p>
+                      <span
+                        className={cn(
+                          buttonVariants({ variant: "outline" }),
+                          "w-fit"
+                        )}
+                        aria-hidden="true"
+                      >
+                        {t("explore-use-cases-cta")}
+                      </span>
+                    </Stack>
+                    <div className="self-end pe-8 max-lg:mx-auto">
+                      <Image
+                        src={developersEthBlocks}
+                        alt=""
+                        className="max-w-[265px] object-contain"
+                        sizes="265px"
+                      />
+                    </div>
+                  </Flex>
+                </BaseLink>
+              </Section>
+
+              {/* Section 2: Understand Ethereum - featured + deeper */}
+              <Section
+                headingId={tocItems[1].id}
+                headingTitle={tocItems[1].title}
                 description={t("what-is-crypto-2")}
               >
+                {/* Featured: the 3 essential starting points */}
                 <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
                   <LearnCard
                     href="/what-is-ethereum/"
@@ -209,30 +297,40 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     imageAlt={t("what-is-ethereum-card-image-alt")}
                     title={t("what-is-ethereum-card-title")}
                     description={t("understand-ethereum-card-description")}
-                  />
-                  <LearnCard
-                    href="/what-is-the-ethereum-network/"
-                    image={developersEthBlocks}
-                    title={t("ethereum-network-card-title")}
-                    description={t("ethereum-network-card-description")}
+                    ctaLabel={t("what-is-ethereum-card-title")}
                   />
                   <LearnCard
                     href="/what-is-ether/"
                     image={eth}
                     title={t("what-is-eth-card-title")}
                     description={t("what-is-eth-description")}
+                    ctaLabel={t("what-is-eth-card-title")}
                   />
                   <LearnCard
                     href="/ethereum-vs-bitcoin/"
                     image={financeTransparent}
                     title={t("ethereum-vs-bitcoin-card-title")}
                     description={t("ethereum-vs-bitcoin-card-description")}
+                    ctaLabel={t("ethereum-vs-bitcoin-card-title")}
+                  />
+                </div>
+
+                {/* Deeper: additional context topics */}
+                <H3>{t("keep-learning-title")}</H3>
+                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
+                  <LearnCard
+                    href="/what-is-the-ethereum-network/"
+                    image={developersEthBlocks}
+                    title={t("ethereum-network-card-title")}
+                    description={t("ethereum-network-card-description")}
+                    ctaLabel={t("ethereum-network-card-title")}
                   />
                   <LearnCard
                     href="/ethereum-history-founder-and-ownership/"
                     image={merge}
                     title={t("ethereum-history-card-title")}
                     description={t("ethereum-history-card-description")}
+                    ctaLabel={t("ethereum-history-card-title")}
                   />
                   <LearnCard
                     href="/wallets/"
@@ -240,18 +338,21 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     imageAlt={t("what-is-a-wallet-card-alt")}
                     title={t("what-is-a-wallet-card-title")}
                     description={t("wallets-card-description")}
+                    ctaLabel={t("what-is-a-wallet-card-title")}
                   />
                   <LearnCard
                     href="/web3/"
                     image={impact}
                     title={t("what-is-web3-card-title")}
                     description={t("what-is-web3-card-description")}
+                    ctaLabel={t("what-is-web3-card-title")}
                   />
                   <LearnCard
                     href="/smart-contracts/"
                     image={hackathon}
                     title={t("smart-contracts-card-title")}
                     description={t("smart-contracts-card-description")}
+                    ctaLabel={t("smart-contracts-card-title")}
                   />
                 </div>
 
@@ -269,28 +370,13 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 />
               </Section>
 
-              {/* Section 2: How to use Ethereum */}
+              {/* Section 3: How to use Ethereum */}
               <Section
-                headingId={tocItems[1].id}
-                headingTitle={tocItems[1].title}
+                headingId={tocItems[2].id}
+                headingTitle={tocItems[2].title}
                 description={t("how-do-i-use-ethereum-1")}
               >
-                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
-                  <LearnCard
-                    href="/wallets/find-wallet/"
-                    image={futureTransparent}
-                    title={t("find-a-wallet-card-title")}
-                    description={t("find-a-wallet-card-description")}
-                  />
-                  <LearnCard
-                    href="/layer-2/networks/"
-                    image={Layer2LearnHero}
-                    title={t("ethereum-networks-card-title")}
-                    description={t("ethereum-networks-card-description")}
-                  />
-                </div>
-
-                <Flex className="my-12 flex-col overflow-hidden rounded-[10px] bg-main-gradient lg:flex-row">
+                <Flex className="flex-col overflow-hidden rounded-[10px] bg-main-gradient lg:flex-row">
                   <Stack className="gap-8 p-12">
                     <H3>{t("things-to-consider-banner-title")}</H3>
                     <UnorderedList className="mb-0">
@@ -313,6 +399,23 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     />
                   </div>
                 </Flex>
+
+                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
+                  <LearnCard
+                    href="/wallets/find-wallet/"
+                    image={futureTransparent}
+                    title={t("find-a-wallet-card-title")}
+                    description={t("find-a-wallet-card-description")}
+                    ctaLabel={t("find-a-wallet-button")}
+                  />
+                  <LearnCard
+                    href="/layer-2/networks/"
+                    image={Layer2LearnHero}
+                    title={t("ethereum-networks-card-title")}
+                    description={t("ethereum-networks-card-description")}
+                    ctaLabel={t("ethereum-networks-card-button")}
+                  />
+                </div>
 
                 <AdditionalDocReading
                   headingText={t("additional-reading-more-on-using-ethereum")}
@@ -339,27 +442,43 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 />
               </Section>
 
-              {/* Section 3: What is Ethereum used for - slim, links to /use-cases/ */}
+              {/* Section 4: Community (moved before protocol) */}
               <Section
-                headingId={tocItems[2].id}
-                headingTitle={tocItems[2].title}
-                description={t("what-is-ethereum-used-for-1")}
+                headingId={tocItems[3].id}
+                headingTitle={tocItems[3].title}
+                description={t("ethereum-community-description")}
               >
                 <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
                   <LearnCard
-                    href="/use-cases/"
-                    image={developersEthBlocks}
-                    title={t("explore-use-cases-card-title")}
-                    description={t("explore-use-cases-card-description")}
+                    href="/community/"
+                    image={enterprise}
+                    imageAlt={t("community-hub-card-alt")}
+                    title={t("community-hub-card-title")}
+                    description={t("community-hub-card-description")}
+                    ctaLabel={t("community-hub-card-button")}
+                  />
+                  <LearnCard
+                    href="/community/get-involved/"
+                    image={dogeComputer}
+                    title={t("get-involved-card-title")}
+                    description={t("get-involved-card-description")}
+                    ctaLabel={t("get-involved-card-title")}
+                  />
+                  <LearnCard
+                    href="/community/online/"
+                    image={impact}
+                    title={t("online-communities-card-title")}
+                    description={t("online-communities-card-description")}
+                    ctaLabel={t("online-communities-card-button")}
                   />
                 </div>
               </Section>
 
-              {/* Section 4: Learn about the Ethereum protocol */}
+              {/* Section 5: Go deeper (protocol, renamed) */}
               <Section
-                headingId={tocItems[3].id}
-                headingTitle={tocItems[3].title}
-                description={t("learn-about-ethereum-protocol-description")}
+                headingId={tocItems[4].id}
+                headingTitle={tocItems[4].title}
+                description={t("go-deeper-description")}
               >
                 <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
                   <LearnCard
@@ -367,18 +486,21 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     image={hackathon}
                     title={t("energy-consumption-card-title")}
                     description={t("energy-consumption-card-description")}
+                    ctaLabel={t("energy-consumption-card-button")}
                   />
                   <LearnCard
                     href="/roadmap/"
                     image={merge}
                     title={t("ethereum-upgrades-card-title")}
                     description={t("ethereum-upgrades-card-description")}
+                    ctaLabel={t("ethereum-upgrades-card-button")}
                   />
                   <LearnCard
                     href="/whitepaper/"
                     image={financeTransparent}
                     title={t("ethereum-whitepaper-card-title")}
                     description={t("ethereum-whitepaper-card-description")}
+                    ctaLabel={t("ethereum-whitepaper-card-button")}
                   />
                 </div>
 
@@ -405,35 +527,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     },
                   ]}
                 />
-              </Section>
-
-              {/* Section 5: Community */}
-              <Section
-                headingId={tocItems[4].id}
-                headingTitle={tocItems[4].title}
-                description={t("ethereum-community-description")}
-              >
-                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
-                  <LearnCard
-                    href="/community/"
-                    image={enterprise}
-                    imageAlt={t("community-hub-card-alt")}
-                    title={t("community-hub-card-title")}
-                    description={t("community-hub-card-description")}
-                  />
-                  <LearnCard
-                    href="/community/get-involved/"
-                    image={dogeComputer}
-                    title={t("get-involved-card-title")}
-                    description={t("get-involved-card-description")}
-                  />
-                  <LearnCard
-                    href="/community/online/"
-                    image={impact}
-                    title={t("online-communities-card-title")}
-                    description={t("online-communities-card-description")}
-                  />
-                </div>
               </Section>
 
               {/* Section 6: Books and podcasts */}
