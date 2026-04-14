@@ -435,7 +435,7 @@ export async function generateMetadata(props: {
     .find((app) => slugify(app.name) === application)!
 
   if (!app) {
-    notFound()
+    return {}
   }
 
   const appDescriptions = await getTranslations("page-app-descriptions")
