@@ -78,7 +78,7 @@ const UseCaseCard = ({
 }: UseCaseCardProps) => (
   <Card
     href={href}
-    className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+    className="flex flex-col gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
   >
     <Image
       src={image}
@@ -86,7 +86,7 @@ const UseCaseCard = ({
       className="mx-auto h-[200px] w-auto"
       sizes="250px"
     />
-    <div className="space-y-2">
+    <div className="flex-1 space-y-2">
       <h3 className="text-2xl font-bold">{title}</h3>
       <p className="text-body-medium">{description}</p>
     </div>
