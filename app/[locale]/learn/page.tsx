@@ -13,14 +13,7 @@ import { Image, ImageProps } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
-import {
-  Card,
-  CardBanner,
-  CardContent,
-  CardFooter,
-  CardParagraph,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { Flex, Stack } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -116,23 +109,26 @@ const LearnCard = ({
 }: LearnCardProps) => (
   <Card
     href={href}
-    className="row-span-4 grid grid-rows-subgrid gap-y-4 rounded-2xl bg-background-highlight p-6"
+    className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
   >
-    <CardBanner background="none" size="full" fit="contain">
-      <Image src={image} alt={imageAlt} className="h-full w-full" />
-    </CardBanner>
-    <CardContent className="space-y-2 p-0">
-      <CardTitle>{title}</CardTitle>
-      <CardParagraph variant="light">{description}</CardParagraph>
-    </CardContent>
-    <CardFooter className="p-0 pt-2">
-      <span
-        className="inline-flex w-full items-center justify-center gap-2 rounded border border-solid border-current px-4 py-2 text-primary transition hover:text-primary-hover hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]"
-        aria-hidden="true"
-      >
-        {ctaLabel}
-      </span>
-    </CardFooter>
+    <Image
+      src={image}
+      alt={imageAlt}
+      className="mx-auto h-[200px] w-auto"
+      sizes="250px"
+    />
+    <div className="space-y-2">
+      <h3 className="text-2xl font-bold group-hover/link:underline group-focus/link:underline">
+        {title}
+      </h3>
+      <p className="text-body-medium">{description}</p>
+    </div>
+    <span
+      className="inline-flex w-full items-center justify-center gap-2 rounded border border-solid border-current px-4 py-2 text-primary transition hover:text-primary-hover hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]"
+      aria-hidden="true"
+    >
+      {ctaLabel}
+    </span>
   </Card>
 )
 
