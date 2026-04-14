@@ -1,4 +1,4 @@
-name: Intl Pipeline
+name: Gemini Translations
 
 on:
   workflow_dispatch:
