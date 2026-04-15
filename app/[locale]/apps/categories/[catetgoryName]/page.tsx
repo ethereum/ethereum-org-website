@@ -189,9 +189,7 @@ const Page = async (props: {
                     ...app,
                     subCategory: app.subCategory.map((tag: string) => {
                       const key = `subcategory-${slugify(tag)}`
-                      return tSubcategory.has(key)
-                        ? tSubcategory(key)
-                        : tag
+                      return tSubcategory.has(key) ? tSubcategory(key) : tag
                     }),
                   })) as AppData[]
                 )}

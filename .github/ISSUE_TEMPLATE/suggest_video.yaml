@@ -1,0 +1,110 @@
+name: Suggest a video
+description: Suggest a video to add to the ethereum.org video gallery
+title: Suggest a video
+labels: ["feature ✨", "content 🖋️"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before suggesting a video, please review [our video listing policy](https://ethereum.org/contributing/adding-videos/) to ensure your suggestion meets the criteria.
+  - type: markdown
+    id: video_info
+    attributes:
+      value: "## Video info"
+  - type: input
+    id: video_title
+    attributes:
+      label: Video title
+      description: What is the title of the video?
+    validations:
+      required: true
+  - type: input
+    id: video_url
+    attributes:
+      label: YouTube URL
+      description: Please provide the full YouTube URL (e.g. https://www.youtube.com/watch?v=...)
+    validations:
+      required: true
+  - type: textarea
+    id: video_description
+    attributes:
+      label: Video description
+      description: Provide a brief 1–3 sentence summary of what the video covers
+    validations:
+      required: true
+  - type: input
+    id: video_author
+    attributes:
+      label: Creator / Channel
+      description: Who created the video? (e.g. "Ethereum Foundation", "Finematics")
+    validations:
+      required: true
+  - type: input
+    id: video_duration
+    attributes:
+      label: Duration
+      description: "Video length in H:MM:SS or M:SS format (e.g. 1:08:42 or 12:30)"
+    validations:
+      required: true
+  - type: dropdown
+    id: video_education_level
+    attributes:
+      label: Education level
+      description: What level of Ethereum knowledge does this video assume?
+      options:
+        - "Beginner"
+        - "Intermediate"
+        - "Advanced"
+    validations:
+      required: true
+  - type: dropdown
+    id: video_format
+    attributes:
+      label: Format
+      description: What best describes the format of this video?
+      options:
+        - "Explainer"
+        - "Presentation"
+        - "Interview"
+        - "Tutorial"
+        - "Panel"
+    validations:
+      required: true
+  - type: input
+    id: video_topics
+    attributes:
+      label: Topics
+      description: "Comma-separated topic tags (e.g. scaling, layer-2, rollups). See existing tags at https://ethereum.org/videos/"
+    validations:
+      required: true
+  - type: input
+    id: video_upload_date
+    attributes:
+      label: Original upload date
+      description: "When was the video originally published? (YYYY-MM-DD format)"
+    validations:
+      required: true
+  - type: textarea
+    id: video_transcript
+    attributes:
+      label: Transcript (optional)
+      description: |
+        If you have a transcript, paste it here. Otherwise the team will generate one.
+        Transcripts should use markdown formatting with section headings and timestamps.
+  - type: textarea
+    id: video_justification
+    attributes:
+      label: Why should this video be listed?
+      description: Briefly explain how this video helps ethereum.org users learn about Ethereum
+  - type: checkboxes
+    id: video_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      description: If yes, you can open a PR to add the video yourself following our contributing guide
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true
