@@ -22,19 +22,22 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   setRequestLocale(locale)
 
   const [accountHoldersData, growThePieData] = await Promise.all([
-    getAccountHolders().catch(() => null),
-    getGrowThePieData().catch(() => null),
+    getAccountHolders(),
+    getGrowThePieData(),
   ])
 
+  if (!accountHoldersData) {
+    throw new Error("Failed to fetch account holders data")
+  }
+  if (!growThePieData) {
+    throw new Error("Failed to fetch GrowThePie data")
+  }
+
   const accountHolders =
-    accountHoldersData && "value" in accountHoldersData
-      ? accountHoldersData.value
-      : null
+    "value" in accountHoldersData ? accountHoldersData.value : null
 
   const transactionsToday =
-    growThePieData?.txCount && "value" in growThePieData.txCount
-      ? growThePieData.txCount.value
-      : null
+    "value" in growThePieData.txCount ? growThePieData.txCount.value : null
 
   return (
     <>
