@@ -1,5 +1,7 @@
 import { Suspense } from "react"
+import { pick } from "lodash"
 import dynamic from "next/dynamic"
+import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
@@ -8,9 +10,10 @@ import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
 import { SimulatorI18nWrapper } from "@/components/Homepage/SimulatorSection/SimulatorI18nWrapper"
 import TrustLogos from "@/components/Homepage/TrustLogos"
+import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { TrackedSection } from "@/components/TrackedSection"
-import { Section } from "@/components/ui/section"
+import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { getDirection } from "@/lib/utils/direction"
 
@@ -36,58 +39,81 @@ type Homepage2026Props = {
   ctaVariant?: CTAVariant
 }
 
-const Homepage2026 = ({
+const Homepage2026 = async ({
   locale,
   accountHolders,
   transactionsToday,
   ctaVariant = "modal",
 }: Homepage2026Props) => {
   const { direction: dir } = getDirection(locale)
+  const t = await getTranslations("page-index")
+  const allMessages = await getMessages()
+  const messages = pick(allMessages, "page-index")
 
   const eventCategory = `Homepage - ${locale}`
 
   return (
-    <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <HomeHero2026 ctaVariant={ctaVariant} eventCategory={eventCategory} />
+    <I18nProvider locale={locale} messages={messages}>
+      <MainArticle className="flex w-full flex-col items-center" dir={dir}>
+        <HomeHero2026 ctaVariant={ctaVariant} eventCategory={eventCategory} />
 
-      <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
-        <TrackedSection id="kpi" eventCategory={eventCategory}>
-          <Suspense fallback={<SectionSkeleton className="py-12" />}>
-            <KPISection
-              accountHolders={accountHolders}
-              transactionsToday={transactionsToday}
-              className="py-12"
-            />
-          </Suspense>
-        </TrackedSection>
+        <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
+          <TrackedSection id="kpi" eventCategory={eventCategory}>
+            <Suspense fallback={<SectionSkeleton className="py-12" />}>
+              <KPISection
+                accountHolders={accountHolders}
+                transactionsToday={transactionsToday}
+                className="py-12"
+              />
+            </Suspense>
+          </TrackedSection>
 
-        <TrackedSection id="savings_carousel" eventCategory={eventCategory}>
-          <Suspense fallback={<SectionSkeleton className="py-12" />}>
-            <SavingsCarousel className="py-12" eventCategory={eventCategory} />
-          </Suspense>
-        </TrackedSection>
+          <TrackedSection id="savings_carousel" eventCategory={eventCategory}>
+            <Suspense fallback={<SectionSkeleton className="py-12" />}>
+              <SavingsCarousel
+                className="py-12"
+                eventCategory={eventCategory}
+              />
+            </Suspense>
+          </TrackedSection>
 
-        <TrackedSection id="trust_logos" eventCategory={eventCategory}>
-          <TrustLogos className="py-12" eventCategory={eventCategory} />
-        </TrackedSection>
+          <TrackedSection id="trust_logos" eventCategory={eventCategory}>
+            <TrustLogos className="py-12" eventCategory={eventCategory} />
+          </TrackedSection>
 
-        <TrackedSection id="simulator" eventCategory={eventCategory}>
-          <Suspense fallback={<SectionSkeleton className="py-12" />}>
-            <SimulatorI18nWrapper>
-              <SimulatorSection className="py-12" />
-            </SimulatorI18nWrapper>
-          </Suspense>
-        </TrackedSection>
+          <TrackedSection id="simulator" eventCategory={eventCategory}>
+            <Suspense fallback={<SectionSkeleton className="py-12" />}>
+              <SimulatorI18nWrapper>
+                <SimulatorSection
+                  className="py-12"
+                  header={
+                    <div className="flex flex-col items-center gap-4 text-center">
+                      <SectionTag variant="plain">
+                        {t("page-index-simulator-tag")}
+                      </SectionTag>
+                      <SectionHeader className="mb-0 mt-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
+                        {t("page-index-simulator-title")}
+                      </SectionHeader>
+                      <p className="text-lg text-body-medium md:text-xl">
+                        {t("page-index-simulator-subtitle")}
+                      </p>
+                    </div>
+                  }
+                />
+              </SimulatorI18nWrapper>
+            </Suspense>
+          </TrackedSection>
 
-        <TrackedSection id="feature_cards" eventCategory={eventCategory}>
-          <FeatureCards eventCategory={eventCategory} />
-        </TrackedSection>
+          <TrackedSection id="feature_cards" eventCategory={eventCategory}>
+            <FeatureCards eventCategory={eventCategory} />
+          </TrackedSection>
 
-        <TrackedSection id="get_started" eventCategory={eventCategory}>
-          <GetStartedGrid eventCategory={eventCategory} />
-        </TrackedSection>
-      </div>
-    </MainArticle>
+          <TrackedSection id="get_started" eventCategory={eventCategory}>
+            <GetStartedGrid eventCategory={eventCategory} />
+          </TrackedSection>
+        </div>
+      </MainArticle>
+    </I18nProvider>
   )
 }
 

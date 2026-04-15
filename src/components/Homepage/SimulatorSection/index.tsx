@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useTranslations } from "next-intl"
 import { useIntersectionObserver } from "usehooks-ts"
 
 import { SEND_RECEIVE } from "@/components/Simulator/constants"
@@ -9,7 +8,7 @@ import { Explanation } from "@/components/Simulator/Explanation"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 import { Phone } from "@/components/Simulator/Phone"
 import { Template } from "@/components/Simulator/Template"
-import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
+import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -17,6 +16,7 @@ import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
 
 type SimulatorSectionProps = {
   className?: string
+  header?: React.ReactNode
 }
 
 /**
@@ -30,8 +30,7 @@ const SimulatorSkeleton = () => (
 
 const sendReceiveData = walletOnboardingSimData[SEND_RECEIVE]
 
-const SimulatorSection = ({ className }: SimulatorSectionProps) => {
-  const t = useTranslations("page-index")
+const SimulatorSection = ({ className, header }: SimulatorSectionProps) => {
   const { ref: sectionRef, isIntersecting: isVisible } =
     useIntersectionObserver({
       rootMargin: "200px",
@@ -65,15 +64,7 @@ const SimulatorSection = ({ className }: SimulatorSectionProps) => {
       ref={sectionRef}
       className={cn("flex flex-col items-center gap-8", className)}
     >
-      <div className="flex flex-col items-center gap-4 text-center">
-        <SectionTag variant="plain">{t("page-index-simulator-tag")}</SectionTag>
-        <SectionHeader className="mb-0 mt-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
-          {t("page-index-simulator-title")}
-        </SectionHeader>
-        <p className="text-lg text-body-medium md:text-xl">
-          {t("page-index-simulator-subtitle")}
-        </p>
-      </div>
+      {header}
 
       <div className="w-full max-w-[1000px] px-6 py-12 md:px-16 lg:px-24">
         {!isVisible || !isLoaded ? (
