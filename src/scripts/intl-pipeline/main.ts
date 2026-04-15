@@ -28,8 +28,11 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
-import { isGeminiAvailable } from "./lib/llm/gemini/gemini"
-import { callGeminiRaw, translateFile } from "./lib/llm/gemini/translate"
+import {
+  callGeminiRaw,
+  isGeminiAvailable,
+  translateFile,
+} from "./lib/llm/gemini"
 import {
   batchSections,
   buildIncrementalPrompt,
