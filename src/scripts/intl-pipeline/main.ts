@@ -9,7 +9,7 @@
  * Environment variables: see config.ts
  */
 
-import { execSync } from "child_process"
+import { execFileSync } from "child_process"
 import * as fs from "fs"
 import * as path from "path"
 
@@ -51,8 +51,12 @@ import type { TaskResult } from "./lib/utils/task-pool"
 import { createTaskPool } from "./lib/utils/task-pool"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
-import { GLOSSARY_API_URL } from "./config"
-import { config, GEMINI_MODELS } from "./config"
+import {
+  config,
+  GEMINI_MODELS,
+  GLOSSARY_API_URL,
+  validateTargetPath,
+} from "./config"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
 
@@ -474,9 +478,14 @@ async function runIncremental(
   try {
     if (!manifest.sourceCommitSha)
       throw new Error("no sourceCommitSha in manifest")
-    englishA = execSync(`git show ${manifest.sourceCommitSha}:${file.path}`, {
-      encoding: "utf-8",
-    })
+    if (!/^[0-9a-f]{40}$/i.test(manifest.sourceCommitSha))
+      throw new Error(`invalid SHA: ${manifest.sourceCommitSha}`)
+    validateTargetPath(file.path)
+    englishA = execFileSync(
+      "git",
+      ["show", `${manifest.sourceCommitSha}:${file.path}`],
+      { encoding: "utf-8" }
+    )
   } catch (err) {
     log(
       `[${locale}] ${file.path}: cannot retrieve old English (${err instanceof Error ? err.message : String(err)}), falling back to full translation`
