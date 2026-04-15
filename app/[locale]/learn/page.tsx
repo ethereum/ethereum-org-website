@@ -105,7 +105,7 @@ const LearnCard = ({
 }: LearnCardProps) => (
   <Card
     href={href}
-    className="flex flex-col gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+    className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
   >
     <Image
       src={image}
@@ -113,12 +113,12 @@ const LearnCard = ({
       className="mx-auto h-[200px] w-auto"
       sizes="250px"
     />
-    <div className="flex-1 space-y-2">
+    <div className="space-y-2">
       <h3 className="text-2xl font-bold">{title}</h3>
       <p className="text-body-medium">{description}</p>
     </div>
     <span
-      className="inline-flex min-h-10.5 w-full items-center justify-center gap-2 rounded border border-solid border-transparent bg-primary-action px-4 py-2 text-white transition hover:bg-primary-action-hover hover:text-white"
+      className="inline-flex min-h-10.5 w-full items-center justify-center gap-2 self-end rounded border border-solid border-transparent bg-primary-action px-4 py-2 text-white transition hover:bg-primary-action-hover hover:text-white"
       aria-hidden="true"
     >
       {ctaLabel}
@@ -206,7 +206,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 description={t("what-is-crypto-2")}
               >
                 {/* Featured: the 3 essential starting points */}
-                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
+                <div className="grid grid-cols-fill-4 gap-4">
                   <LearnCard
                     href="/what-is-ethereum/"
                     image={whatIsEth}
@@ -233,7 +233,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
                 {/* Deeper: additional context topics */}
                 <H3>{t("keep-learning-title")}</H3>
-                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
+                <div className="grid grid-cols-fill-4 gap-4">
                   <LearnCard
                     href="/what-is-the-ethereum-network/"
                     image={developersEthBlocks}
@@ -284,7 +284,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 headingTitle={tocItems[1].title}
                 description={t("how-do-i-use-ethereum-1")}
               >
-                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
+                <div className="grid grid-cols-fill-4 gap-4">
                   <LearnCard
                     href="/wallets/"
                     image={wallet}
@@ -378,7 +378,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 headingTitle={tocItems[3].title}
                 description={t("ethereum-community-description")}
               >
-                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
+                <div className="grid grid-cols-fill-4 gap-4">
                   <LearnCard
                     href="/community/"
                     image={enterprise}
@@ -410,7 +410,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 headingTitle={tocItems[4].title}
                 description={t("go-deeper-description")}
               >
-                <div className="grid grid-cols-fill-4 grid-rows-[auto] gap-4">
+                <div className="grid grid-cols-fill-4 gap-4">
                   <LearnCard
                     href="/roadmap/"
                     image={merge}
