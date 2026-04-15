@@ -88,9 +88,6 @@ export type GitHubQueryResponseItem = {
 // Optional: the whole response is an array of items
 export type GitHubQueryResponse = GitHubQueryResponseItem[]
 
-/**
- * getFileMetadata
- */
 export type ContentType =
   | "application/json"
   | "text/markdown"
