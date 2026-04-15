@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useTranslations } from "next-intl"
 import { useIntersectionObserver } from "usehooks-ts"
 
 import { SEND_RECEIVE } from "@/components/Simulator/constants"
@@ -30,6 +31,7 @@ const SimulatorSkeleton = () => (
 const sendReceiveData = walletOnboardingSimData[SEND_RECEIVE]
 
 const SimulatorSection = ({ className }: SimulatorSectionProps) => {
+  const t = useTranslations("page-index")
   const { ref: sectionRef, isIntersecting: isVisible } =
     useIntersectionObserver({
       rootMargin: "200px",
@@ -64,12 +66,12 @@ const SimulatorSection = ({ className }: SimulatorSectionProps) => {
       className={cn("flex flex-col items-center gap-8", className)}
     >
       <div className="flex flex-col items-center gap-4 text-center">
-        <SectionTag variant="plain">Free forever</SectionTag>
+        <SectionTag variant="plain">{t("page-index-simulator-tag")}</SectionTag>
         <SectionHeader className="mb-0 mt-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
-          Try Ethereum in your browser
+          {t("page-index-simulator-title")}
         </SectionHeader>
         <p className="text-lg text-body-medium md:text-xl">
-          Experience how Ethereum works. Just click and explore.
+          {t("page-index-simulator-subtitle")}
         </p>
       </div>
 

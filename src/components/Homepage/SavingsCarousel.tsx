@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion, useAnimationControls } from "motion/react"
+import { useTranslations } from "next-intl"
 import type { Swiper as SwiperType } from "swiper"
 import { SwiperSlide } from "swiper/react"
 
@@ -51,70 +52,75 @@ type Slide = {
   comparison: ComparisonData
 }
 
-const slides: Slide[] = [
-  {
-    id: "privacy",
-    tag: "YOUR BUSINESS IS YOURS",
-    title: "Use the internet without being watched",
-    subtitle:
-      "Most apps track what you do, who you talk to, and what you own. They sell that data or hand it over when asked. On Ethereum, your activity can stay private.",
-    description:
-      "No account tied to your name. No company watching your balance.",
-    cta: "Use privacy preserving apps →",
-    href: "/apps/categories/privacy/",
-    image: defiImage,
-    comparison: {
-      traditional: {
-        label: "TRADITIONAL APPS",
-        value: "Your data is their product",
-        smallText: true,
-      },
-      ethereum: {
-        label: "ETHEREUM APPS",
-        value: "Private by default",
-        smallText: true,
-      },
-    },
-  },
-  {
-    id: "remittances",
-    tag: "CROSS-BORDER PAYMENTS",
-    title: "Send money home in 12 minutes",
-    subtitle: "Skip the $50 wire fee and the 5+ day wait.",
-    description:
-      "Send stablecoins to anyone, anywhere in the world, for just $0.02. They receive the funds almost instantly.",
-    cta: "Try it yourself →",
-    href: "/payments/",
-    image: remittancesImage,
-    comparison: {
-      traditional: { label: "WIRE TRANSFER", value: "3-5 days" },
-      ethereum: { label: "ETHEREUM", value: "12 minutes" },
-    },
-  },
-  {
-    id: "borrowing",
-    tag: "FINANCIAL ACCESS",
-    title: "Borrow without credit history",
-    subtitle: "You don't need a credit score to get started.",
-    description:
-      "Using DeFi apps on Ethereum, you can provide collateral and access credit instantly, no permission required.",
-    cta: "Learn more about DeFi →",
-    href: "/defi/",
-    image: borrowingImage,
-    comparison: {
-      traditional: {
-        label: "TRADITIONAL BANK",
-        value: "Credit checks",
-        smallText: true,
-      },
-      ethereum: {
-        label: "ON ETHEREUM",
-        value: "Based on collateral",
-        smallText: true,
+function useSlides(): Slide[] {
+  const t = useTranslations("page-index")
+  return [
+    {
+      id: "privacy",
+      tag: t("page-index-carousel-privacy-tag"),
+      title: t("page-index-carousel-privacy-title"),
+      subtitle: t("page-index-carousel-privacy-subtitle"),
+      description: t("page-index-carousel-privacy-description"),
+      cta: t("page-index-carousel-privacy-cta"),
+      href: "/apps/categories/privacy/",
+      image: defiImage,
+      comparison: {
+        traditional: {
+          label: t("page-index-carousel-privacy-traditional-label"),
+          value: t("page-index-carousel-privacy-traditional-value"),
+          smallText: true,
+        },
+        ethereum: {
+          label: t("page-index-carousel-privacy-ethereum-label"),
+          value: t("page-index-carousel-privacy-ethereum-value"),
+          smallText: true,
+        },
       },
     },
-  },
-]
+    {
+      id: "remittances",
+      tag: t("page-index-carousel-remittances-tag"),
+      title: t("page-index-carousel-remittances-title"),
+      subtitle: t("page-index-carousel-remittances-subtitle"),
+      description: t("page-index-carousel-remittances-description"),
+      cta: t("page-index-carousel-remittances-cta"),
+      href: "/payments/",
+      image: remittancesImage,
+      comparison: {
+        traditional: {
+          label: t("page-index-carousel-remittances-traditional-label"),
+          value: t("page-index-carousel-remittances-traditional-value"),
+        },
+        ethereum: {
+          label: t("page-index-carousel-remittances-ethereum-label"),
+          value: t("page-index-carousel-remittances-ethereum-value"),
+        },
+      },
+    },
+    {
+      id: "borrowing",
+      tag: t("page-index-carousel-borrowing-tag"),
+      title: t("page-index-carousel-borrowing-title"),
+      subtitle: t("page-index-carousel-borrowing-subtitle"),
+      description: t("page-index-carousel-borrowing-description"),
+      cta: t("page-index-carousel-borrowing-cta"),
+      href: "/defi/",
+      image: borrowingImage,
+      comparison: {
+        traditional: {
+          label: t("page-index-carousel-borrowing-traditional-label"),
+          value: t("page-index-carousel-borrowing-traditional-value"),
+          smallText: true,
+        },
+        ethereum: {
+          label: t("page-index-carousel-borrowing-ethereum-label"),
+          value: t("page-index-carousel-borrowing-ethereum-value"),
+          smallText: true,
+        },
+      },
+    },
+  ]
+}
 
 type SavingsCarouselProps = {
   className?: string
@@ -298,6 +304,7 @@ const SavingsCarousel = ({
   className,
   eventCategory = "Homepage",
 }: SavingsCarouselProps) => {
+  const slides = useSlides()
   const [activeIndex, setActiveIndex] = useState(0)
 
   const handleSlideChange = (swiper: SwiperType) => {

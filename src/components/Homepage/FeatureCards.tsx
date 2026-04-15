@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server"
+
 import { ChevronNext } from "@/components/Chevron"
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -15,10 +17,12 @@ type FeatureCardsProps = {
   eventCategory?: string
 }
 
-const FeatureCards = ({
+const FeatureCards = async ({
   className,
   eventCategory = "Homepage",
 }: FeatureCardsProps) => {
+  const t = await getTranslations("page-index")
+
   return (
     <Section
       className={cn(
@@ -29,10 +33,13 @@ const FeatureCards = ({
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 flex flex-col items-center gap-4 text-center">
           <SectionHeader className="mb-0 mt-0">
-            What makes Ethereum <span className="text-body">different</span>
+            {t("page-index-features-title")}{" "}
+            <span className="text-body">
+              {t("page-index-features-title-highlight")}
+            </span>
           </SectionHeader>
           <p className="max-w-xl text-lg text-body-medium">
-            Principles that set Ethereum apart from traditional systems
+            {t("page-index-features-subtitle")}
           </p>
         </div>
 
@@ -53,20 +60,27 @@ const FeatureCards = ({
                 </div>
 
                 <h3 className="text-4xl font-bold text-white lg:text-5xl">
-                  Direct ownership
+                  {t("page-index-features-ownership-title")}
                 </h3>
 
                 <p className="max-w-lg text-lg text-white/90">
-                  Your bank balance is a{" "}
-                  <span className="opacity-70">custody promise</span>.{" "}
+                  {t("page-index-features-ownership-description-1")}{" "}
+                  <span className="opacity-70">
+                    {t("page-index-features-ownership-description-custody")}
+                  </span>
+                  .{" "}
                   <strong className="font-bold">
-                    Your Ethereum balance is true ownership.
+                    {t("page-index-features-ownership-description-2")}
                   </strong>
                 </p>
 
                 <div className="mt-4">
-                  <p className="text-3xl font-bold text-white">4.6B+</p>
-                  <p className="text-sm text-white/70">Daily trading volume</p>
+                  <p className="text-3xl font-bold text-white">
+                    {t("page-index-features-ownership-stat")}
+                  </p>
+                  <p className="text-sm text-white/70">
+                    {t("page-index-features-ownership-stat-label")}
+                  </p>
                 </div>
               </div>
             </div>
@@ -81,12 +95,10 @@ const FeatureCards = ({
 
               <div className="relative z-10">
                 <h3 className="mb-4 text-4xl font-black lg:text-5xl">
-                  Public rules
+                  {t("page-index-features-public-rules-title")}
                 </h3>
                 <p className="max-w-xs text-body">
-                  The code is public, agreements execute exactly as written.
-                  Think vending machine versus hoping the cashier gives correct
-                  change.
+                  {t("page-index-features-public-rules-description")}
                 </p>
               </div>
             </div>
@@ -102,9 +114,11 @@ const FeatureCards = ({
               />
 
               <div className="relative z-10">
-                <h3 className="mb-4 text-3xl font-black">Global</h3>
+                <h3 className="mb-4 text-3xl font-black">
+                  {t("page-index-features-global-title")}
+                </h3>
                 <p className="text-body">
-                  Anyone, anywhere can use Ethereum. No permission needed.
+                  {t("page-index-features-global-description")}
                 </p>
               </div>
             </div>
@@ -118,19 +132,21 @@ const FeatureCards = ({
               />
 
               <div className="relative z-10">
-                <h3 className="mb-4 text-3xl font-black">Free access</h3>
+                <h3 className="mb-4 text-3xl font-black">
+                  {t("page-index-features-free-access-title")}
+                </h3>
                 <p className="text-body">
-                  No credit check, no minimum balance, no account approval. If
-                  you have internet, you&apos;re in.
+                  {t("page-index-features-free-access-description")}
                 </p>
               </div>
             </div>
 
             <div className="rounded-3xl border border-body p-8 md:col-span-2 lg:col-span-1">
-              <h3 className="mb-3 text-3xl font-black">Nobody owns Ethereum</h3>
+              <h3 className="mb-3 text-3xl font-black">
+                {t("page-index-features-nobody-owns-title")}
+              </h3>
               <p className="text-body">
-                Changes happen through open proposals that anyone can
-                participate in. Think community garden versus corporate farm.
+                {t("page-index-features-nobody-owns-description")}
               </p>
             </div>
           </div>
@@ -146,7 +162,7 @@ const FeatureCards = ({
               eventName: "feature_cards/learn_more",
             }}
           >
-            What is Ethereum? <ChevronNext />
+            {t("page-index-features-cta")} <ChevronNext />
           </ButtonLink>
         </div>
       </div>

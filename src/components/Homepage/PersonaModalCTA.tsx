@@ -8,6 +8,7 @@ import {
   Code,
   ExternalLink,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { ChevronNext } from "@/components/Chevron"
 import { Button } from "@/components/ui/buttons/Button"
@@ -42,73 +43,91 @@ type PersonaCategory = {
   links: PersonaLink[]
 }
 
-const categories: PersonaCategory[] = [
-  {
-    id: "beginners",
-    label: "For beginners",
-    Icon: BookOpen,
-    iconBgClass: "bg-accent-a/20",
-    iconColorClass: "text-accent-a",
-    links: [
-      {
-        label: "What is Ethereum?",
-        href: "/what-is-ethereum/",
-        eventName: "learn_ethereum",
-      },
-      {
-        label: "Pick a wallet",
-        href: "/wallets/find-wallet/",
-        eventName: "pick_wallet",
-      },
-    ],
-  },
-  {
-    id: "explorers",
-    label: "For explorers",
-    Icon: AppWindowMac,
+function useCategories() {
+  const t = useTranslations("page-index")
+
+  const categories: PersonaCategory[] = [
+    {
+      id: "beginners",
+      label: t("page-index-modal-beginners"),
+      Icon: BookOpen,
+      iconBgClass: "bg-accent-a/20",
+      iconColorClass: "text-accent-a",
+      links: [
+        {
+          label: t("page-index-modal-what-is-ethereum"),
+          href: "/what-is-ethereum/",
+          eventName: "learn_ethereum",
+        },
+        {
+          label: t("page-index-modal-pick-wallet"),
+          href: "/wallets/find-wallet/",
+          eventName: "pick_wallet",
+        },
+      ],
+    },
+    {
+      id: "explorers",
+      label: t("page-index-modal-explorers"),
+      Icon: AppWindowMac,
+      iconBgClass: "bg-accent-c/20",
+      iconColorClass: "text-accent-c",
+      links: [
+        {
+          label: t("page-index-modal-get-eth"),
+          href: "/get-eth/",
+          eventName: "get_eth",
+        },
+        {
+          label: t("page-index-modal-try-apps"),
+          href: "/apps/",
+          eventName: "try_apps",
+        },
+      ],
+    },
+    {
+      id: "builders",
+      label: t("page-index-modal-builders"),
+      Icon: Code,
+      iconBgClass: "bg-primary-low-contrast",
+      iconColorClass: "text-primary",
+      links: [
+        {
+          label: t("page-index-modal-start-building"),
+          href: "/developers/",
+          eventName: "start_building",
+        },
+        {
+          label: t("page-index-modal-docs"),
+          href: "/developers/docs/",
+          eventName: "docs",
+        },
+      ],
+    },
+  ]
+
+  const enterpriseCategory: PersonaCategory = {
+    id: "enterprise",
+    label: t("page-index-modal-enterprise"),
+    Icon: Building2,
     iconBgClass: "bg-accent-c/20",
     iconColorClass: "text-accent-c",
     links: [
       {
-        label: "Get ETH",
-        href: "/get-eth/",
-        eventName: "get_eth",
+        label: t("page-index-modal-founders"),
+        href: "/founders/",
+        eventName: "founders",
       },
-      { label: "Try apps", href: "/apps/", eventName: "try_apps" },
-    ],
-  },
-  {
-    id: "builders",
-    label: "For builders",
-    Icon: Code,
-    iconBgClass: "bg-primary-low-contrast",
-    iconColorClass: "text-primary",
-    links: [
       {
-        label: "Start building",
-        href: "/developers/",
-        eventName: "start_building",
+        label: t("page-index-modal-institutions"),
+        href: ENTERPRISE_ETHEREUM_URL,
+        isExternal: true,
+        eventName: "institutions",
       },
-      { label: "Docs", href: "/developers/docs/", eventName: "docs" },
     ],
-  },
-]
+  }
 
-const enterpriseCategory: PersonaCategory = {
-  id: "enterprise",
-  label: "For enterprise",
-  Icon: Building2,
-  iconBgClass: "bg-accent-c/20",
-  iconColorClass: "text-accent-c",
-  links: [
-    { label: "Founders", href: "/founders/", eventName: "founders" },
-    {
-      label: "Institutions",
-      href: ENTERPRISE_ETHEREUM_URL,
-      isExternal: true,
-      eventName: "institutions",
-    },
-  ],
+  return { categories, enterpriseCategory, t }
 }
 
 const CategoryCard = ({
@@ -172,6 +191,7 @@ type PersonaModalCTAProps = {
 }
 
 const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
+  const { categories, enterpriseCategory, t } = useCategories()
   const [isOpen, setIsOpen] = useState(false)
   // Track if modal was closed via link click (not ESC/outside click/X button)
   const closedViaLinkRef = useRef(false)
@@ -215,18 +235,17 @@ const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
     <Dialog open={isOpen} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button variant="solid" size="lg" className="gap-2">
-          Start here
+          {t("page-index-hero-cta")}
           <ChevronNext className="size-5" />
         </Button>
       </DialogTrigger>
       <DialogContent className="max-w-[1440px] p-4 md:rounded-[32px] md:p-8">
         <DialogHeader className="pe-0 pt-8 md:pt-0">
           <DialogTitle className="text-center text-2xl font-bold md:text-4xl">
-            What brings you here?
+            {t("page-index-modal-title")}
           </DialogTitle>
           <DialogDescription className="sr-only">
-            Choose your path: resources for beginners, developers, or
-            enterprise.
+            {t("page-index-modal-description")}
           </DialogDescription>
         </DialogHeader>
         <div className="mt-4 grid gap-4 md:mt-6 md:grid-cols-3 md:gap-6">

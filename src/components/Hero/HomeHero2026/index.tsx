@@ -1,5 +1,6 @@
 import { Fragment } from "react"
 import { getImageProps, type StaticImageData } from "next/image"
+import { getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
@@ -29,42 +30,7 @@ type HomeHero2026Props = ClassNameProp & {
   eventCategory?: string
 }
 
-const directButtonCTAs = [
-  {
-    label: "Learn Ethereum",
-    description: "What is Ethereum?",
-    href: "/what-is-ethereum/",
-    Svg: EthGlyphIcon,
-    className: "text-accent-a hover:text-accent-a-hover",
-    eventName: "learn_ethereum",
-  },
-  {
-    label: "Pick a wallet",
-    description: "Create accounts, manage assets",
-    href: "/wallets/find-wallet/",
-    Svg: EthWalletIcon,
-    className: "text-primary hover:text-primary-hover",
-    eventName: "pick_wallet",
-  },
-  {
-    label: "Get ETH",
-    description: "The currency of Ethereum",
-    href: "/get-eth/",
-    Svg: EthTokenIcon,
-    className: "text-accent-b hover:text-accent-b-hover",
-    eventName: "get_eth",
-  },
-  {
-    label: "Try apps",
-    description: "See what Ethereum can do",
-    href: "/dapps/",
-    Svg: TryAppsIcon,
-    className: "text-accent-c hover:text-accent-c-hover",
-    eventName: "try_apps",
-  },
-]
-
-const HomeHero2026 = ({
+const HomeHero2026 = async ({
   className,
   image,
   image2xl,
@@ -72,9 +38,45 @@ const HomeHero2026 = ({
   ctaVariant = "modal",
   eventCategory = "Homepage",
 }: HomeHero2026Props) => {
+  const t = await getTranslations("page-index")
   const baseImage = image ?? heroBase
   const xlImage = image2xl ?? image ?? hero2xl
-  const alt = altProp ?? "Ethereum illustration"
+  const alt = altProp ?? t("page-index-hero-image-alt")
+
+  const directButtonCTAs = [
+    {
+      label: t("page-index-cta-learn-label"),
+      description: t("page-index-modal-what-is-ethereum"),
+      href: "/what-is-ethereum/",
+      Svg: EthGlyphIcon,
+      className: "text-accent-a hover:text-accent-a-hover",
+      eventName: "learn_ethereum",
+    },
+    {
+      label: t("page-index-cta-wallet-label"),
+      description: t("page-index-cta-wallet-description"),
+      href: "/wallets/find-wallet/",
+      Svg: EthWalletIcon,
+      className: "text-primary hover:text-primary-hover",
+      eventName: "pick_wallet",
+    },
+    {
+      label: t("page-index-cta-get-eth-label"),
+      description: t("page-index-cta-get-eth-description"),
+      href: "/get-eth/",
+      Svg: EthTokenIcon,
+      className: "text-accent-b hover:text-accent-b-hover",
+      eventName: "get_eth",
+    },
+    {
+      label: t("page-index-cta-dapps-label"),
+      description: t("page-index-cta-dapps-description"),
+      href: "/dapps/",
+      Svg: TryAppsIcon,
+      className: "text-accent-c hover:text-accent-c-hover",
+      eventName: "try_apps",
+    },
+  ]
 
   const common = {
     alt,
@@ -125,12 +127,11 @@ const HomeHero2026 = ({
 
           <div className="flex flex-col items-center gap-8">
             <h1 className="max-w-[893px] text-4xl font-black leading-[1.1] md:text-6xl lg:text-7xl lg:leading-[0.9]">
-              The internet that belongs to you
+              {t("page-index-hero-title")}
             </h1>
 
             <p className="max-w-[741px] text-lg leading-relaxed tracking-[0.07px] text-body-medium md:text-2xl md:leading-[1.625]">
-              Ethereum is the global network where you control your assets, your
-              data, and your identity.
+              {t("page-index-hero-subtitle")}
             </p>
 
             {ctaVariant === "modal" ? (
