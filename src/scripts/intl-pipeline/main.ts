@@ -124,8 +124,14 @@ async function loadGlossary(
     }
     const map = new Map<string, string>()
     for (const term of data.terms) {
-      const value = term.note
-        ? `${term.translation} (${term.note})`
+      // Sanitize note to prevent prompt injection (strip control chars, limit length)
+      // eslint-disable-next-line no-control-regex
+      const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
+      const safeNote = term.note
+        ? term.note.replace(controlCharRe, "").slice(0, 200)
+        : ""
+      const value = safeNote
+        ? `${term.translation} (${safeNote})`
         : term.translation
       map.set(term.english, value)
     }
@@ -302,8 +308,14 @@ async function buildGeminiTranslator(
       label: "incremental",
     })
 
-    const translations = parseIncrementalResponse(result.text)
-    Object.assign(allTranslations, translations)
+    try {
+      const translations = parseIncrementalResponse(result.text)
+      Object.assign(allTranslations, translations)
+    } catch (err) {
+      console.warn(
+        `[pipeline] Failed to parse batch response for ${locale} (${err instanceof Error ? err.message : String(err)}). Continuing with partial translations.`
+      )
+    }
     totalInput += result.tokensUsed.input
     totalOutput += result.tokensUsed.output
   }
@@ -685,15 +697,21 @@ async function main() {
   // Wait for all tasks to complete
   await pool.drain()
 
+  // Check for task failures
+  if (pool.hasErrors()) {
+    const errors = pool.getErrors()
+    console.error(`[pipeline] ${errors.length} task(s) failed:`)
+    for (const { language, error } of errors) {
+      console.error(`  [${language}] ${error.message}`)
+    }
+    throw new Error(
+      `Pipeline aborted: ${errors.length} translation task(s) failed. Temp branch ${tempBranch} preserved with partial progress.`
+    )
+  }
+
   // Squash interleaved commits into one per language
   if (committedFiles.length > 0) {
-    try {
-      await committer.squashByLanguage()
-    } catch (err) {
-      console.warn(
-        `[pipeline] Squash failed: ${err instanceof Error ? err.message : String(err)}`
-      )
-    }
+    await committer.squashByLanguage()
   }
 
   // Post-processing: sanitize Gemini output
@@ -714,7 +732,12 @@ async function main() {
   if (committedFiles.length > 0) {
     log(`Merging ${tempBranch} -> ${targetBranch}`)
     await ensureStagingBranch(targetBranch, baseBranch)
-    await mergeBranchInto(tempBranch, targetBranch)
+    const merged = await mergeBranchInto(tempBranch, targetBranch)
+    if (!merged) {
+      throw new Error(
+        `Failed to merge ${tempBranch} into ${targetBranch}. Temp branch preserved for manual resolution.`
+      )
+    }
     log(`Merged successfully`)
   } else {
     log(`No changes to merge`)

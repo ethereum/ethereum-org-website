@@ -202,7 +202,8 @@ export const postCreateBranchFrom = async (
 
     return { branch, sha }
   } catch (error) {
-    console.error(error)
-    process.exit(1)
+    throw error instanceof Error
+      ? error
+      : new Error(`postCreateBranchFrom failed: ${String(error)}`)
   }
 }

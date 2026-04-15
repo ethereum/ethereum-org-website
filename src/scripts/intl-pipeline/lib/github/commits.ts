@@ -698,7 +698,7 @@ export const putCommitFile = async (
         destinationPath,
         branch,
         fileSha,
-        attempt
+        attempt + 1
       )
     }
 
@@ -730,7 +730,8 @@ export const putCommitFile = async (
       throw new Error(`GitHub putCommitFile (${res.status}): ${body}`)
     }
   } catch (error) {
-    console.error(error)
-    process.exit(1)
+    throw error instanceof Error
+      ? error
+      : new Error(`putCommitFile failed: ${String(error)}`)
   }
 }

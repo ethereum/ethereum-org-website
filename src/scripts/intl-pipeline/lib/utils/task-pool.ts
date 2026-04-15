@@ -36,6 +36,8 @@ export interface TaskPool {
   submit(language: string, task: () => Promise<TaskResult | void>): void
   drain(): Promise<void>
   getStats(): Record<string, LanguageStats>
+  hasErrors(): boolean
+  getErrors(): Array<{ language: string; error: Error }>
 }
 
 export function createTaskPool(options: TaskPoolOptions): TaskPool
@@ -54,6 +56,7 @@ export function createTaskPool(
   const pendingByLanguage: Record<string, number> = {}
   const completedByLanguage: Set<string> = new Set()
   const allTasks: Promise<void>[] = []
+  const errors: Array<{ language: string; error: Error }> = []
 
   function ensureLanguage(lang: string) {
     if (!stats[lang]) {
@@ -82,6 +85,11 @@ export function createTaskPool(
           stats[language].totalOutputTokens += result.tokens.output
         }
         stats[language].tasksCompleted++
+      } catch (err) {
+        errors.push({
+          language,
+          error: err instanceof Error ? err : new Error(String(err)),
+        })
       } finally {
         limiter.release()
         pendingByLanguage[language]--
@@ -107,5 +115,11 @@ export function createTaskPool(
     return { ...stats }
   }
 
-  return { submit, drain, getStats }
+  return {
+    submit,
+    drain,
+    getStats,
+    hasErrors: () => errors.length > 0,
+    getErrors: () => [...errors],
+  }
 }

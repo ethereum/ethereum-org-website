@@ -1056,17 +1056,28 @@ export async function callGeminiRaw(
       }
 
       try {
-        const response = await client.models.generateContent({
-          model: modelId,
-          contents: prompt,
-          config: { temperature: 0, safetySettings: SAFETY_SETTINGS },
-        })
+        const GEMINI_TIMEOUT_MS = 5 * 60 * 1000 // 5 minutes
+        const controller = new AbortController()
+        const timeout = setTimeout(() => controller.abort(), GEMINI_TIMEOUT_MS)
+        const response = await client.models
+          .generateContent({
+            model: modelId,
+            contents: prompt,
+            config: { temperature: 0, safetySettings: SAFETY_SETTINGS },
+          })
+          .finally(() => clearTimeout(timeout))
         const usage = response.usageMetadata
         const duration = ((Date.now() - startTime) / 1000).toFixed(1)
 
         // Inspect response for non-obvious failure modes before accessing .text
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const candidate = (response as any).candidates?.[0]
+        const candidate = (
+          response as unknown as {
+            candidates?: Array<{
+              finishReason?: string
+              safetyRatings?: Array<{ category?: string; probability?: string }>
+            }>
+          }
+        ).candidates?.[0]
         const finishReason: string | undefined = candidate?.finishReason
 
         // Log non-STOP finish reasons (these explain silent failures)
