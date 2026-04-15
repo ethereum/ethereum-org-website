@@ -37,21 +37,21 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 **Şimdilik kurulumu bırakıp doğrudan örneklere geçmek ister misiniz?**
 
-- [Playground](http://playground.nethereum.com/) - Tarayıcı üzerinden Ethereum ile etkileşime geçin ve Nethereum'u nasıl kullanacağınızı öğrenin.
-  - Hesap Bakiyesini Sorgulama [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - ERC20 Akıllı Sözleşme Bakiyesini Sorgulama [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Bir Hesaba ether Aktarma [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - Tarayıcı üzerinden Ethereum ile etkileşime geçin ve Nethereum'u nasıl kullanacağınızı öğrenin.
+  - Hesap Bakiyesini Sorgulama [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - ERC20 Akıllı Sözleşme Bakiyesini Sorgulama [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - Bir Hesaba ether Aktarma [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... Ve dahası!
 
 ## Orta seviye makaleler {#intermediate-articles}
 
-- [Nethereum Çalışma Kitabı/Örnek Listesi](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Nethereum Çalışma Kitabı/Örnek Listesi](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Kendi Geliştirme Test Zincirlerinizi Dağıtma](https://github.com/Nethereum/Testchains)
 - [Solidity için VSCode Codegen Eklentisi](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity ve Ethereum: Neden ve Nasıl](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Ethereum merkeziyetsiz uygulamaları için ASP.NET Core Web API Oluşturma](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Bir Tedarik Zinciri Takip Sistemi Uygulamak için Nethereum Web3 Kullanımı](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum Blok İşleme](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [C# Playground örneği](http://playground.nethereum.com/csharp/id/1025) ile
+- [Nethereum Blok İşleme](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [C# Playground örneği](https://playground.nethereum.com/csharp/id/1025) ile
 - [Nethereum Websocket Akışı](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido ve Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum ve Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 ## .NET projeleri, araçları ve diğer eğlenceli şeyler {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _Tarayıcıda Nethereum kod parçacıklarını derleyin, oluşturun ve çalıştırın_
+- [Nethereum Playground](https://playground.nethereum.com/) - _Tarayıcıda Nethereum kod parçacıklarını derleyin, oluşturun ve çalıştırın_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor'da kullanıcı arayüzlü Nethereum kod oluşturma_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _.NET Wasm SPA hafif bir blokzincir gezgini ve basit cüzdan_
 - [Wonka İş Kuralları Motoru](https://docs.nethereum.com/en/latest/wonka/) - _Doğası gereği meta veri odaklı bir iş kuralları motoru (hem .NET platformu hem de Ethereum platformu için)_
@@ -78,7 +78,7 @@ Daha fazla kaynak mı arıyorsunuz? [ethereum.org/developers](/developers/) adre
 
 Nethereum'da çoğunlukla herkesin soru sorup cevaplayabileceği, yardım alabileceği veya sadece rahatlayabileceği [Gitter](https://gitter.im/Nethereum/Nethereum)'da takılırız. [Nethereum GitHub deposunda](https://github.com/Nethereum) bir PR açmaktan veya bir sorun bildirmekten çekinmeyin, ya da sadece sahip olduğumuz birçok yan/örnek projeye göz atın. Bizi [Discord](https://discord.gg/jQPrR58FxX)'da da bulabilirsiniz!
 
-Nethermind'de yeniyseniz ve başlamak için yardıma ihtiyacınız varsa, [Discord](http://discord.gg/PaCMRFdvWT) sunucumuza katılın. Geliştiricilerimiz sorularınızı cevaplamaya hazırdır. [Nethermind GitHub deposunda](https://github.com/NethermindEth/nethermind) bir PR açmaktan veya herhangi bir sorun bildirmekten çekinmeyin.
+Nethermind'de yeniyseniz ve başlamak için yardıma ihtiyacınız varsa, [Discord](https://discord.gg/PaCMRFdvWT) sunucumuza katılın. Geliştiricilerimiz sorularınızı cevaplamaya hazırdır. [Nethermind GitHub deposunda](https://github.com/NethermindEth/nethermind) bir PR açmaktan veya herhangi bir sorun bildirmekten çekinmeyin.
 
 ## Diğer derlenmiş listeler {#other-aggregated-lists}
 

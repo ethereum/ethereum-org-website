@@ -247,7 +247,7 @@ lang: uk
 #### Останні дослідження {#recent-research-10}
 
 - [Багатовимірна відеопрезентація EIP-1559](https://youtu.be/QbR4MTgnCko)
-- [Міждоменний MEV](http://arxiv.org/abs/2112.01472)
+- [Міждоменний MEV](https://arxiv.org/abs/2112.01472)
 - [Аукціони MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Стимули підтвердження частки володіння {#proof-of-stake-incentives}

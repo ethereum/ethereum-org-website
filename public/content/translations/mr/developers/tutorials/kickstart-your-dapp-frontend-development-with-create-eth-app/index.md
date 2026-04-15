@@ -18,7 +18,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-मागील वेळी आपण [Solidity च्या मोठ्या चित्राकडे](https://soliditydeveloper.com/solidity-overview-2020) पाहिले आणि [create-eth-app](https://github.com/PaulRBerg/create-eth-app) चा आधीच उल्लेख केला आहे. आता तुम्हाला ते कसे वापरावे, कोणती वैशिष्ट्ये एकत्रित केली आहेत आणि त्यावर विस्तार कसा करावा याबद्दल अतिरिक्त कल्पना कळतील. [Sablier](http://sablier.com/) चे संस्थापक, पॉल रझवान बर्ग यांनी सुरू केलेले, हे ॲप तुमच्या फ्रंटएंड डेव्हलपमेंटला सुरुवात करेल आणि निवडण्यासाठी अनेक पर्यायी इंटिग्रेशन्ससह येते.
+मागील वेळी आपण [Solidity च्या मोठ्या चित्राकडे](https://soliditydeveloper.com/solidity-overview-2020) पाहिले आणि [create-eth-app](https://github.com/PaulRBerg/create-eth-app) चा आधीच उल्लेख केला आहे. आता तुम्हाला ते कसे वापरावे, कोणती वैशिष्ट्ये एकत्रित केली आहेत आणि त्यावर विस्तार कसा करावा याबद्दल अतिरिक्त कल्पना कळतील. [Sablier](https://sablier.com/) चे संस्थापक, पॉल रझवान बर्ग यांनी सुरू केलेले, हे ॲप तुमच्या फ्रंटएंड डेव्हलपमेंटला सुरुवात करेल आणि निवडण्यासाठी अनेक पर्यायी इंटिग्रेशन्ससह येते.
 
 ## इन्स्टॉलेशन {#installation}
 

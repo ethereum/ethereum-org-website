@@ -159,5 +159,5 @@ Mchoro wa safu ya mtandao kwa wateja wa makubaliano na utekelezaji, kutoka [ethr
 [kademlia hadi discv5](https://vac.dev/kademlia-to-discv5)
 [karatasi ya kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [utangulizi wa Ethereum p2p](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[uhusiano wa eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[uhusiano wa eth1/eth2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [video ya maelezo ya muungano na mteja wa eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

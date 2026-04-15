@@ -247,7 +247,7 @@ lang: zh-tw
 #### 近期研究 {#recent-research-10}
 
 - [多維度 EIP-1559 影片展示](https://youtu.be/QbR4MTgnCko)
-- [跨域最大可提取價值](http://arxiv.org/abs/2112.01472)
+- [跨域最大可提取價值](https://arxiv.org/abs/2112.01472)
 - [最大可提取價值競價](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### 權益證明激勵 {#proof-of-stake-incentives}

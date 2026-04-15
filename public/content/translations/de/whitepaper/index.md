@@ -494,7 +494,7 @@ Das Konzept einer beliebigen Statusübergangsfunktion, wie es im Ethereum-Protok
 4. [B-Money](http://www.weidai.com/bmoney.txt)
 5. [Wiederverwendbare Proofs-of-Work](https://nakamotoinstitute.org/finney/rpow/)
 6. [Sichere Eigentumstitel mit Eigentümerautorität](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Bitcoin-Whitepaper](http://bitcoin.org/bitcoin.pdf)
+7. [Bitcoin-Whitepaper](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Zookos Dreieck](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Colored Coins-Whitepaper](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

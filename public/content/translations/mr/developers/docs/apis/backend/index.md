@@ -111,7 +111,7 @@ lang: mr
 **Nethereum -** **_ब्लॉकचेनसाठी एक ओपन सोर्स .NET इंटिग्रेशन लायब्ररी._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [दस्तऐवजीकरण](http://docs.nethereum.com/en/latest/)
+- [दस्तऐवजीकरण](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python टूलिंग -** **_Python द्वारे इथेरियमशी संवाद साधण्यासाठी विविध लायब्ररीज._**

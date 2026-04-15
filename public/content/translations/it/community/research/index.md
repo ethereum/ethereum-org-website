@@ -247,7 +247,7 @@ I mercati dello spazio dei blocchi governano l'inclusione delle transazioni degl
 #### Ricerca recente {#recent-research-10}
 
 - [Presentazione video sull'EIP-1559 multidimensionale](https://youtu.be/QbR4MTgnCko)
-- [MEV tra domini](http://arxiv.org/abs/2112.01472)
+- [MEV tra domini](https://arxiv.org/abs/2112.01472)
 - [Aste MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Incentivi della prova di stake {#proof-of-stake-incentives}

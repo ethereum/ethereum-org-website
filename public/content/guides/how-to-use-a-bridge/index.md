@@ -49,7 +49,7 @@ This process should not take more than 10 minutes.
 
 ## 7. Add the selected layer 2 network to your wallet (optional) {#7-add-the-selected-layer-2-network-to-your-wallet-optional}
 
-You can use [chainlist.org](http://chainlist.org) to find the network's RPC details. Once the network is added and transaction finished, you should see the tokens in your wallet.
+You can use [chainlist.org](https://chainlist.org) to find the network's RPC details. Once the network is added and transaction finished, you should see the tokens in your wallet.
 <br />
 
 <Alert variant="update">

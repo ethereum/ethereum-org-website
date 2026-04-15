@@ -111,7 +111,7 @@ Maktaba hizi hurahisisha sehemu kubwa ya utata wa kuingiliana moja kwa moja na n
 **Nethereum -** **_Maktaba ya chanzo huria ya .NET ya kuunganisha kwa ajili ya blockchain._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Nyaraka](http://docs.nethereum.com/en/latest/)
+- [Nyaraka](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Zana za Python -** **_Aina mbalimbali za maktaba kwa ajili ya mwingiliano wa Ethereum kupitia Python._**

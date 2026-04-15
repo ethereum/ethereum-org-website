@@ -111,7 +111,7 @@ Knihovny snižují složitost přímé interakce se síťovým uzlem Etherea. Po
 **Nethereum –** **_Open-source .NET integrační knihovna pro blockchain._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Dokumentace](http://docs.nethereum.com/en/latest/)
+- [Dokumentace](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Nástroje pro Python –** **_Různé knihovny pro interakci s Ethereem přes Python._**

@@ -37,21 +37,21 @@ Butuh pengantar yang lebih mendasar terlebih dahulu? Lihat [ethereum.org/learn](
 
 **Ingin melewati penyiapan untuk saat ini, dan langsung menuju ke sampel?**
 
-- [Playground](http://playground.nethereum.com/) - Berinteraksi dengan Ethereum dan pelajari cara menggunakan Nethereum melalui peramban.
-  - Kueri Saldo Akun [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - Kueri Saldo Kontrak Pintar ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transfer ether ke Akun [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - Berinteraksi dengan Ethereum dan pelajari cara menggunakan Nethereum melalui peramban.
+  - Kueri Saldo Akun [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - Kueri Saldo Kontrak Pintar ERC20 [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - Transfer ether ke Akun [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... Dan banyak lagi!
 
 ## Artikel tingkat menengah {#intermediate-articles}
 
-- [Buku Kerja/Daftar Sampel Nethereum](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Buku Kerja/Daftar Sampel Nethereum](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Sebarkan Testchain Pengembangan Anda Sendiri](https://github.com/Nethereum/Testchains)
 - [Plugin Codegen VSCode untuk Solidity](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity dan Ethereum: Mengapa dan Bagaimana](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Buat Web API ASP.NET Core untuk dapps Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Menggunakan Nethereum Web3 untuk Mengimplementasikan Sistem Pelacakan Rantai Pasokan](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Pemrosesan Blok Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), dengan [sampel C# Playground](http://playground.nethereum.com/csharp/id/1025)
+- [Pemrosesan Blok Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), dengan [sampel C# Playground](https://playground.nethereum.com/csharp/id/1025)
 - [Streaming Websocket Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido dan Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum dan Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ Butuh pengantar yang lebih mendasar terlebih dahulu? Lihat [ethereum.org/learn](
 
 ## Proyek, perkakas, dan hal menyenangkan lainnya tentang .NET {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _Kompilasi, buat, dan jalankan cuplikan kode Nethereum di peramban_
+- [Nethereum Playground](https://playground.nethereum.com/) - _Kompilasi, buat, dan jalankan cuplikan kode Nethereum di peramban_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum dengan UI di Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Penjelajah blockchain ringan SPA Wasm .NET dan dompet sederhana_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _Mesin aturan bisnis (baik untuk platform .NET maupun platform Ethereum) yang pada dasarnya digerakkan oleh metadata_
@@ -78,7 +78,7 @@ Mencari lebih banyak sumber daya? Lihat [ethereum.org/developers](/developers/).
 
 Di Nethereum, kami sebagian besar berkumpul di [Gitter](https://gitter.im/Nethereum/Nethereum) di mana semua orang dipersilakan untuk bertanya/menjawab pertanyaan, mendapatkan bantuan, atau sekadar bersantai. Jangan ragu untuk membuat PR atau membuka masalah di [repositori GitHub Nethereum](https://github.com/Nethereum), atau sekadar menelusuri banyak proyek sampingan/sampel yang kami miliki. Anda juga dapat menemukan kami di [Discord](https://discord.gg/jQPrR58FxX)!
 
-Jika Anda baru mengenal Nethermind dan butuh bantuan untuk memulai, bergabunglah dengan [Discord](http://discord.gg/PaCMRFdvWT) kami. Pengembang kami siap menjawab pertanyaan Anda. Jangan ragu untuk membuka PR atau mengajukan masalah apa pun di [repositori GitHub Nethermind](https://github.com/NethermindEth/nethermind).
+Jika Anda baru mengenal Nethermind dan butuh bantuan untuk memulai, bergabunglah dengan [Discord](https://discord.gg/PaCMRFdvWT) kami. Pengembang kami siap menjawab pertanyaan Anda. Jangan ragu untuk membuka PR atau mengajukan masalah apa pun di [repositori GitHub Nethermind](https://github.com/NethermindEth/nethermind).
 
 ## Daftar agregat lainnya {#other-aggregated-lists}
 

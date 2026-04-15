@@ -116,7 +116,7 @@ _Obvykle se používá u lidskoprávních organizací, jako jsou charity a odbor
 
 #### Známý příklad {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO se zaměřuje na financování projektů na Ethereu. Pro získání členství je potřeba předložit návrh, na jehož základě skupina posoudí, má-li zájemce potřebné odborné znalosti a kapitál, aby mohl činit informované úsudky o potenciálních grantech. Přístup k takovému DAO tedy nelze koupit na otevřeném trhu.
+[MolochDAO](https://molochdao.com/) – MolochDAO se zaměřuje na financování projektů na Ethereu. Pro získání členství je potřeba předložit návrh, na jehož základě skupina posoudí, má-li zájemce potřebné odborné znalosti a kapitál, aby mohl činit informované úsudky o potenciálních grantech. Přístup k takovému DAO tedy nelze koupit na otevřeném trhu.
 
 ### Členství na základě reputace {#reputation-based-membership}
 

@@ -501,7 +501,7 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Reusable proofs of work](https://nakamotoinstitute.org/finney/rpow/)
 6. [Secure property titles with owner authority](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Bitcoin whitepaper](http://bitcoin.org/bitcoin.pdf)
+7. [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Zooko's triangle](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Colored coins whitepaper](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
