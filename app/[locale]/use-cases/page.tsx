@@ -12,6 +12,7 @@ import { Image, ImageProps } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
 import { Flex, Stack } from "@/components/ui/flex"
 
@@ -21,11 +22,12 @@ import { getMetadata } from "@/lib/utils/metadata"
 import UseCasesPageJsonLD from "./page-jsonld"
 
 import aiAgentsHero from "@/public/images/ai-agents/hero-image.png"
+import ethImg from "@/public/images/eth.png"
 import ethGifCat from "@/public/images/eth-gif-cat.png"
 import ethereumLearn from "@/public/images/ethereum-learn.png"
+import financeTransparent from "@/public/images/finance_transparent.png"
 import futureTransparent from "@/public/images/future_transparent.png"
-import heroImage from "@/public/images/heroes/learn-hub-hero.png"
-import impact from "@/public/images/impact_transparent.png"
+import heroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
 import manAndDog from "@/public/images/man-and-dog-playing.png"
 import robotHelpBar from "@/public/images/robot-help-bar.png"
@@ -76,26 +78,20 @@ const UseCaseCard = ({
   description,
   ctaLabel,
 }: UseCaseCardProps) => (
-  <Card
-    href={href}
-    className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
-  >
+  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4">
     <Image
       src={image}
       alt={imageAlt}
-      className="mx-auto h-[200px] w-auto"
+      className="mx-auto h-[200px] w-full object-contain"
       sizes="250px"
     />
     <div className="space-y-2">
       <h3 className="text-2xl font-bold">{title}</h3>
       <p className="text-body-medium">{description}</p>
     </div>
-    <span
-      className="inline-flex min-h-10.5 w-full items-center justify-center gap-2 self-end rounded border border-solid border-transparent bg-primary-action px-4 py-2 text-white transition hover:bg-primary-action-hover hover:text-white"
-      aria-hidden="true"
-    >
+    <ButtonLink href={href} variant="solid">
       {ctaLabel}
-    </span>
+    </ButtonLink>
   </Card>
 )
 
@@ -175,7 +171,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   />
                   <UseCaseCard
                     href="/payments/"
-                    image={impact}
+                    image={ethImg}
                     title={t("payments-title")}
                     description={t("payments-description")}
                     ctaLabel={t("payments-cta")}
@@ -261,7 +257,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   />
                   <UseCaseCard
                     href="/refi/"
-                    image={futureTransparent}
+                    image={financeTransparent}
                     title={t("refi-title")}
                     description={t("refi-description")}
                     ctaLabel={t("refi-cta")}
@@ -300,6 +296,22 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </div>
               </Section>
 
+              {/* Ready to start? */}
+              <Stack className="mt-24 gap-6 rounded-2xl bg-main-gradient p-12">
+                <h2 className="text-2xl leading-[1.4] md:text-[2rem]">
+                  {t("ready-to-start-title")}
+                </h2>
+                <p>{t("ready-to-start-description")}</p>
+                <Flex className="gap-4">
+                  <ButtonLink href="/wallets/find-wallet/" variant="solid">
+                    {t("ready-to-start-wallet-cta")}
+                  </ButtonLink>
+                  <ButtonLink href="/get-eth/" variant="outline" isSecondary>
+                    {t("ready-to-start-eth-cta")}
+                  </ButtonLink>
+                </Flex>
+              </Stack>
+
               <FileContributors
                 className="my-10 border-t"
                 contributors={contributors}
@@ -326,6 +338,6 @@ export async function generateMetadata(props: {
     slug: ["use-cases"],
     title: t("meta-title"),
     description: t("hero-description"),
-    image: "/images/heroes/learn-hub-hero.png",
+    image: "/images/heroes/guides-hub-hero.jpg",
   })
 }
