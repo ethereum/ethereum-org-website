@@ -1,11 +1,17 @@
-import { Fragment } from "react"
+import { Fragment, Suspense } from "react"
+import dynamic from "next/dynamic"
 import { getImageProps, type StaticImageData } from "next/image"
 import { getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
+import { ChevronNext } from "@/components/Chevron"
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
-import PersonaModalCTA from "@/components/Homepage/PersonaModalCTA"
+import { Button } from "@/components/ui/buttons/Button"
+
+const PersonaModalCTA = dynamic(
+  () => import("@/components/Homepage/PersonaModalCTA")
+)
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import EthWalletIcon from "@/components/icons/eth-wallet.svg"
@@ -135,7 +141,16 @@ const HomeHero2026 = async ({
             </p>
 
             {ctaVariant === "modal" ? (
-              <PersonaModalCTA eventCategory={eventCategory} />
+              <Suspense
+                fallback={
+                  <Button variant="solid" size="lg" className="gap-2">
+                    {t("page-index-hero-cta")}
+                    <ChevronNext className="size-5" />
+                  </Button>
+                }
+              >
+                <PersonaModalCTA eventCategory={eventCategory} />
+              </Suspense>
             ) : (
               <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
                 {directButtonCTAs.map(
