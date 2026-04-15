@@ -1,0 +1,22 @@
+name: Auto Pull Request to Upstream
+on:
+  push:
+    branches:
+      - Pum482930-patch-1  # อ้างอิงจาก branch ที่คุณกำลังใช้งานอยู่
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Pull Request to Upstream
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_repository: "ethereum/ethereum-org-website"
+          destination_branch: "main"
+          source_branch: "Pum482930-patch-1"
+          pr_title: "Update from Pum482930 (Auto-generated)"
+          pr_body: "Automated update for localization and technical improvements."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
