@@ -13,6 +13,7 @@ import { Image, ImageProps } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
 import { Flex, Stack } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
@@ -24,15 +25,12 @@ import { getMetadata } from "@/lib/utils/metadata"
 import LearnPageJsonLD from "./page-jsonld"
 
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
-import dogeComputer from "@/public/images/doge-computer.png"
-import enterprise from "@/public/images/enterprise-eth.png"
 import eth from "@/public/images/eth.png"
 import financeTransparent from "@/public/images/finance_transparent.png"
 import futureTransparent from "@/public/images/future_transparent.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import heroImage from "@/public/images/heroes/learn-hub-hero.png"
 import impact from "@/public/images/impact_transparent.png"
-import Layer2LearnHero from "@/public/images/layer-2/learn-hero.png"
 import merge from "@/public/images/upgrades/merge.png"
 import wallet from "@/public/images/wallet.png"
 import whatIsEth from "@/public/images/what-is-ethereum.png"
@@ -103,10 +101,7 @@ const LearnCard = ({
   description,
   ctaLabel,
 }: LearnCardProps) => (
-  <Card
-    href={href}
-    className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
-  >
+  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4">
     <Image
       src={image}
       alt={imageAlt}
@@ -117,12 +112,9 @@ const LearnCard = ({
       <h3 className="text-2xl font-bold">{title}</h3>
       <p className="text-body-medium">{description}</p>
     </div>
-    <span
-      className="inline-flex min-h-10.5 w-full items-center justify-center gap-2 self-end rounded border border-solid border-transparent bg-primary-action px-4 py-2 text-white transition hover:bg-primary-action-hover hover:text-white"
-      aria-hidden="true"
-    >
+    <ButtonLink href={href} variant="solid">
       {ctaLabel}
-    </span>
+    </ButtonLink>
   </Card>
 )
 
@@ -147,10 +139,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     {
       id: "what-is-ethereum-used-for",
       title: t("toc-what-is-ethereum-used-for"),
-    },
-    {
-      id: "learn-about-the-ethereum-community",
-      title: t("toc-learn-about-the-ethereum-community"),
     },
     {
       id: "go-deeper",
@@ -242,13 +230,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     ctaLabel={t("ethereum-network-cta")}
                   />
                   <LearnCard
-                    href="/ethereum-history-founder-and-ownership/"
-                    image={merge}
-                    title={t("ethereum-history-card-title")}
-                    description={t("ethereum-history-card-description")}
-                    ctaLabel={t("ethereum-history-cta")}
-                  />
-                  <LearnCard
                     href="/web3/"
                     image={impact}
                     title={t("what-is-web3-card-title")}
@@ -269,6 +250,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   docLinks={[
                     { href: "/guides/", label: t("guides-hub-desc") },
                     { href: "/quizzes/", label: t("quiz-hub-desc") },
+                    {
+                      href: "/ethereum-history-founder-and-ownership/",
+                      label: t("more-on-ethereum-history"),
+                    },
                     {
                       href: "https://www.youtube.com/watch?v=UihMqcj-cqc",
                       label: t("additional-reading-ethereum-in-thirty-minutes"),
@@ -301,11 +286,11 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     ctaLabel={t("find-a-wallet-button")}
                   />
                   <LearnCard
-                    href="/layer-2/networks/"
-                    image={Layer2LearnHero}
-                    title={t("ethereum-networks-card-title")}
-                    description={t("ethereum-networks-card-description")}
-                    ctaLabel={t("ethereum-networks-card-button")}
+                    href="/get-eth/"
+                    image={eth}
+                    title={t("get-eth-card-title")}
+                    description={t("get-eth-card-description")}
+                    ctaLabel={t("get-eth-cta")}
                   />
                 </div>
 
@@ -321,14 +306,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     {
                       href: "/guides/how-to-use-a-wallet/",
                       label: t("additional-reading-how-to-use-a-wallet"),
-                    },
-                    {
-                      href: "/layer-2/",
-                      label: t("additional-reading-layer-2"),
-                    },
-                    {
-                      href: "/get-eth/",
-                      label: t("additional-reading-get-eth"),
                     },
                   ]}
                 />
@@ -346,15 +323,15 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   hideArrow
                 >
                   <Flex className="group/link flex-col overflow-hidden rounded-[10px] bg-gradient-to-r from-accent-a/10 to-accent-c/10 lg:flex-row dark:from-accent-a/20 dark:to-accent-c-hover/20">
-                    <Stack className="flex-1 gap-6 p-12">
-                      <h3 className="text-xl md:text-2xl">
+                    <Stack className="flex-1 gap-3 p-12">
+                      <h3 className="text-xl text-body md:text-2xl">
                         {t("explore-use-cases-card-title")}
                       </h3>
                       <p className="text-body-medium">
                         {t("explore-use-cases-card-description")}
                       </p>
                       <span
-                        className="inline-flex min-h-10.5 w-fit items-center justify-center gap-2 rounded border border-solid border-transparent bg-primary-action px-4 py-2 text-white transition hover:bg-primary-action-hover hover:text-white"
+                        className="mt-3 inline-flex min-h-10.5 w-fit items-center justify-center gap-2 rounded border border-solid border-transparent bg-primary-action px-4 py-2 text-white transition hover:bg-primary-action-hover hover:text-white"
                         aria-hidden="true"
                       >
                         {t("explore-use-cases-cta")}
@@ -372,42 +349,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </BaseLink>
               </Section>
 
-              {/* Section 4: Community (moved before protocol) */}
+              {/* Section 4: Go deeper */}
               <Section
                 headingId={tocItems[3].id}
                 headingTitle={tocItems[3].title}
-                description={t("ethereum-community-description")}
-              >
-                <div className="grid grid-cols-fill-4 gap-4">
-                  <LearnCard
-                    href="/community/"
-                    image={enterprise}
-                    imageAlt={t("community-hub-card-alt")}
-                    title={t("community-hub-card-title")}
-                    description={t("community-hub-card-description")}
-                    ctaLabel={t("community-hub-card-button")}
-                  />
-                  <LearnCard
-                    href="/community/get-involved/"
-                    image={dogeComputer}
-                    title={t("get-involved-card-title")}
-                    description={t("get-involved-card-description")}
-                    ctaLabel={t("get-involved-cta")}
-                  />
-                  <LearnCard
-                    href="/community/online/"
-                    image={impact}
-                    title={t("online-communities-card-title")}
-                    description={t("online-communities-card-description")}
-                    ctaLabel={t("online-communities-card-button")}
-                  />
-                </div>
-              </Section>
-
-              {/* Section 5: Go deeper (protocol, renamed) */}
-              <Section
-                headingId={tocItems[4].id}
-                headingTitle={tocItems[4].title}
                 description={t("go-deeper-description")}
               >
                 <div className="grid grid-cols-fill-4 gap-4">
@@ -463,10 +408,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 />
               </Section>
 
-              {/* Section 6: Books and podcasts */}
+              {/* Section 5: Books and podcasts */}
               <Section
-                headingId={tocItems[5].id}
-                headingTitle={tocItems[5].title}
+                headingId={tocItems[4].id}
+                headingTitle={tocItems[4].title}
               >
                 <Stack className="gap-8">
                   <H3>{t("books-about-ethereum")}</H3>
