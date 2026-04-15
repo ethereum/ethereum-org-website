@@ -1,126 +1,78 @@
-// PR creation workflow phase
+// PR creation and update workflow phase
 
-import { config, GEMINI_MODELS } from "../../config"
-import { postPullRequest } from "../github/pull-requests"
+import { config } from "../../config"
+import {
+  findOpenPR,
+  postPullRequest,
+  updatePRBody,
+} from "../github/pull-requests"
 
-import type { CommittedFile, LanguagePair, PullRequest } from "./types"
+import type { CommittedFile, LanguagePair } from "./types"
 import { logSection } from "./utils"
 
 /**
- * Generate dynamic PR title based on language count
+ * Generate PR title based on language count
  */
 export function generatePRTitle(
   langCodes: string[],
   allPossibleLanguages: string[]
 ): string {
-  const isAllLanguages = langCodes.length === allPossibleLanguages.length
-
-  const source = process.env.TRANSLATION_PIPELINE || "Gemini"
-  let prTitle = `i18n: ${source} translations`
+  let prTitle = "i18n: intl-pipeline translations"
 
   if (langCodes.length <= 3) {
     prTitle += ` (${langCodes.join(", ")})`
-  } else if (isAllLanguages) {
-    prTitle += ` (all languages)`
+  } else if (langCodes.length === allPossibleLanguages.length) {
+    prTitle += " (all languages)"
   } else {
-    prTitle += ` (multiple languages)`
+    prTitle += " (multiple languages)"
   }
 
   return prTitle
 }
 
-/** Options for PR body generation */
-export interface PRBodyOptions {
-  geminiSkipped?: boolean
-  workflowRunUrl?: string
+/**
+ * Generate the initial PR body (used only on first creation)
+ */
+function generateInitialPRBody(): string {
+  return [
+    "## Automated Translations",
+    "",
+    "This PR contains translations managed by the intl pipeline.",
+    "Each run appends a summary below.",
+    "",
+  ].join("\n")
 }
 
 /**
- * Generate PR body with organized file listings
+ * Generate a run summary to append to the PR body
  */
-export function generatePRBody(
-  aiModelName: string,
+export function generateRunSummary(
   langCodes: string[],
   committedFiles: CommittedFile[],
-  sanitizedFiles: CommittedFile[],
-  options: PRBodyOptions = {}
+  mode: string,
+  workflowRunUrl?: string
 ): string {
-  // Include both sanitized files and original committed files
-  const allChangedPathsSet = new Set([
-    ...sanitizedFiles.map(({ path }) => path),
-    ...committedFiles.map(({ path }) => path),
-  ])
-  const allChangedPaths = Array.from(allChangedPathsSet)
+  const now = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC"
 
-  // Separate JSON and Markdown files
-  const jsonFiles = allChangedPaths.filter((path) =>
-    path.toLowerCase().endsWith(".json")
-  )
-  const markdownFiles = allChangedPaths.filter((path) =>
-    path.toLowerCase().endsWith(".md")
-  )
+  const jsonCount = committedFiles.filter((f) =>
+    f.path.endsWith(".json")
+  ).length
+  const mdCount = committedFiles.filter((f) => f.path.endsWith(".md")).length
 
-  // Dedupe paths after stripping locale prefix (same content path across languages)
-  const uniqueJsonPaths = [
-    ...new Set(
-      jsonFiles.map((path) => path.replace(/^src\/intl\/[^/]+\//, ""))
-    ),
-  ].sort()
-  const uniqueMarkdownPaths = [
-    ...new Set(
-      markdownFiles.map((path) =>
-        path.replace(/^public\/content\/translations\/[^/]+\//, "")
-      )
-    ),
-  ].sort()
+  const parts = [
+    "---",
+    `### Run: ${now}`,
+    `- Languages: ${langCodes.join(", ")}`,
+    `- Files: ${committedFiles.length} (${mdCount} MD, ${jsonCount} JSON)`,
+    `- Mode: ${mode}`,
+  ]
 
-  // Build PR body
-  let prBody = `## Description\n\n`
-  const pipeline = process.env.TRANSLATION_PIPELINE || "Gemini"
-  prBody += `This PR contains automated ${aiModelName} translations via ${pipeline}.\n\n`
-
-  if (options.workflowRunUrl) {
-    prBody += `[🔗 View workflow run](${options.workflowRunUrl})\n\n`
+  if (workflowRunUrl) {
+    parts.push(`- [View workflow run](${workflowRunUrl})`)
   }
 
-  // Language section
-  prBody += `### Languages translated\n\n`
-  prBody += `${langCodes.join(", ")}\n\n`
-
-  // Files section - JSON
-  if (uniqueJsonPaths.length > 0) {
-    prBody += `### JSON changes (\`src/intl/{locale}/\`)\n\n`
-    for (const path of uniqueJsonPaths) {
-      prBody += `- ${path}\n`
-    }
-    prBody += `\n`
-  }
-
-  // Files section - Markdown
-  if (uniqueMarkdownPaths.length > 0) {
-    prBody += `### Markdown changes (\`public/content/translations/{locale}/\`)\n\n`
-    for (const path of uniqueMarkdownPaths) {
-      prBody += `- ${path}\n`
-    }
-    prBody += `\n`
-  }
-
-  // Add warning if Gemini was skipped
-  if (options.geminiSkipped) {
-    prBody += `---\n\n`
-    prBody += `> ⚠️ **Note:** GEMINI_API_KEY was not available during this run. `
-    prBody += `JSX component attributes (e.g., \`title="..."\`, \`description="..."\`) `
-    prBody += `may remain untranslated.\n\n`
-  }
-
-  return prBody
-}
-
-/**
- * Fetch AI model name for PR metadata.
- */
-async function fetchAIModelName(): Promise<string> {
-  return GEMINI_MODELS[0]
+  parts.push("")
+  return parts.join("\n")
 }
 
 /**
@@ -138,44 +90,47 @@ function getWorkflowRunUrl(): string | undefined {
 }
 
 /**
- * Create pull request with formatted title and body
+ * Create or update a translation PR.
+ *
+ * - If no open PR exists for targetBranch -> baseBranch: creates one
+ * - If an open PR exists: appends a run summary to the existing body
  */
-export async function createTranslationPR(
+export async function createOrUpdateTranslationPR(
   branch: string,
   committedFiles: CommittedFile[],
-  sanitizedFiles: CommittedFile[],
   languagePairs: LanguagePair[],
-  options: PRBodyOptions = {}
-): Promise<PullRequest> {
-  logSection("Creating Pull Request")
+  mode: string
+): Promise<{ number: number; html_url: string }> {
+  logSection("Pull Request")
 
-  // Fetch AI model name dynamically
-  const aiModelName = await fetchAIModelName()
-
-  // Extract language codes
   const langCodes = languagePairs.map((p) => p.internalLanguageCode)
-
-  // Add workflow metadata to options
-  const fullOptions: PRBodyOptions = {
-    ...options,
-    workflowRunUrl: getWorkflowRunUrl(),
-  }
-
-  // Generate PR title and body
-  const prTitle = generatePRTitle(langCodes, config.allInternalCodes)
-  const prBody = generatePRBody(
-    aiModelName,
+  const workflowRunUrl = getWorkflowRunUrl()
+  const runSummary = generateRunSummary(
     langCodes,
     committedFiles,
-    sanitizedFiles,
-    fullOptions
+    mode,
+    workflowRunUrl
   )
 
-  // Create PR
-  const pr = await postPullRequest(branch, config.baseBranch, prTitle, prBody)
+  // Check for existing open PR
+  const existingPR = await findOpenPR(branch, config.baseBranch)
 
-  console.log(`\n✓ Pull Request created: ${pr.html_url}`)
-  console.log(`PR Number: #${pr.number}`)
+  if (existingPR) {
+    // Append run summary to existing PR body
+    const updatedBody = (existingPR.body || "") + "\n" + runSummary
+    await updatePRBody(existingPR.number, updatedBody)
+    console.log(
+      `[pr] Updated existing PR #${existingPR.number}: ${existingPR.html_url}`
+    )
+    return existingPR
+  }
+
+  // Create new PR
+  const prTitle = generatePRTitle(langCodes, config.allInternalCodes)
+  const prBody = generateInitialPRBody() + "\n" + runSummary
+
+  const pr = await postPullRequest(branch, config.baseBranch, prTitle, prBody)
+  console.log(`[pr] Created PR #${pr.number}: ${pr.html_url}`)
 
   return pr
 }

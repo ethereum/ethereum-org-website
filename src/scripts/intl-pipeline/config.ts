@@ -41,7 +41,9 @@ const allInternalCodes: string[] =
     : i18nConfig.map(({ code }) => code).filter((code) => code !== "en")
 
 const baseBranch = process.env.BASE_BRANCH || "dev"
-const targetBranch = process.env.TARGET_BRANCH || "intl/pending"
+// Default target branch derived from base: intl/pending-{base with / replaced by -}
+const defaultTargetBranch = `intl/pending-${baseBranch.replace(/\//g, "-")}`
+const targetBranch = process.env.TARGET_BRANCH || defaultTargetBranch
 
 const targetPathRaw = process.env.TARGET_PATH || ""
 const targetPaths = targetPathRaw

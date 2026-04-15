@@ -49,6 +49,58 @@ export const postPullRequest = async (
 }
 
 /**
+ * Find an open PR for a given head -> base branch pair.
+ * Returns the PR object if found, null otherwise.
+ */
+export const findOpenPR = async (
+  head: string,
+  base: string = config.baseBranch
+): Promise<{ number: number; html_url: string; body: string } | null> => {
+  const fullHead = `${config.ghOrganization}:${head}`
+  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/pulls?state=open&head=${encodeURIComponent(fullHead)}&base=${encodeURIComponent(base)}`
+
+  const res = await fetchWithRetry(url, {
+    method: "GET",
+    headers: gitHubBearerHeaders,
+  })
+
+  if (!res.ok) return null
+
+  const prs = (await res.json()) as Array<{
+    number: number
+    html_url: string
+    body: string
+  }>
+  return prs.length > 0 ? prs[0] : null
+}
+
+/**
+ * Update the body of an existing PR.
+ */
+export const updatePRBody = async (
+  prNumber: number,
+  body: string
+): Promise<void> => {
+  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/pulls/${prNumber}`
+
+  const res = await fetchWithRetry(url, {
+    method: "PATCH",
+    headers: {
+      ...gitHubBearerHeaders,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ body }),
+  })
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => "")
+    throw new Error(
+      `Failed to update PR #${prNumber} body (${res.status}): ${text}`
+    )
+  }
+}
+
+/**
  * Post a comment on a pull request
  *
  * @param prNumber - The PR number

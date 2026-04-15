@@ -49,6 +49,7 @@ import {
 import { generateTempBranchName } from "./lib/utils/branch-naming"
 import type { TaskResult } from "./lib/utils/task-pool"
 import { createTaskPool } from "./lib/utils/task-pool"
+import { createOrUpdateTranslationPR } from "./lib/workflows/pr-creation"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
 import {
@@ -741,6 +742,31 @@ async function main() {
     log(`Merged successfully`)
   } else {
     log(`No changes to merge`)
+  }
+
+  // Create or update PR unless skipped
+  if (committedFiles.length > 0 && !config.skipPr) {
+    const languagePairs = targetLanguages.map((code) => {
+      const entry = i18nConfig.find((l: { code: string }) => l.code === code)
+      return {
+        internalLanguageCode: code,
+        languageName: entry
+          ? (entry as { code: string; name: string }).name
+          : code,
+      }
+    })
+    try {
+      await createOrUpdateTranslationPR(
+        targetBranch,
+        committedFiles,
+        languagePairs,
+        config.mode
+      )
+    } catch (error) {
+      console.warn(
+        `[pipeline] PR creation failed (non-fatal): ${error instanceof Error ? error.message : String(error)}`
+      )
+    }
   }
 
   // Print token summary from pool stats
