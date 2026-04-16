@@ -26,25 +26,8 @@ import {
 import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
 import type { SimulatorData } from "../components/Simulator/types"
 
-/**
- * The translate function shape shared by both useTranslations (client)
- * and getTranslations (server) from next-intl.
- */
-type TranslateFn = ReturnType<typeof useTranslations<"simulator">>
-
-/**
- * Hook returning translated simulator data for client components.
- */
 export function useWalletOnboardingSimData(): SimulatorData {
   const t = useTranslations("simulator")
-  return buildSimulatorData(t)
-}
-
-/**
- * Build simulator data with the provided translate function.
- * Works with both useTranslations (client) and getTranslations (server).
- */
-export function buildSimulatorData(t: TranslateFn): SimulatorData {
   return {
     [CREATE_ACCOUNT]: {
       title: t("sim-ca-title"),
