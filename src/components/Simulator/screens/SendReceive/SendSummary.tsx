@@ -20,7 +20,7 @@ export const SendSummary = ({
   ethPrice,
   recipient,
 }: SendSummaryProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
 
   const formatEth = (amount: number): string =>
     numberFormat("en", { maximumFractionDigits: 5 }).format(amount)

@@ -27,7 +27,7 @@ export const GeneratingKeys = ({
   ctaLabel,
   generateNewWords,
 }: GeneratingKeysProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const { progressStepper } = nav
   const [loading, setLoading] = useState(true)
   const [complete, setComplete] = useState(false)

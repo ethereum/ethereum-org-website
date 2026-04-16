@@ -25,7 +25,7 @@ export const ProgressCta = ({
   className,
   ...flexProps
 }: ProgressCtaProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   return (
     <MotionFlex
       className={cn("absolute bottom-0 w-full px-6 py-10", className)}

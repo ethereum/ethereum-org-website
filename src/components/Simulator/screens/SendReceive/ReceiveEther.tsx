@@ -12,7 +12,7 @@ import { NotificationPopover } from "../../NotificationPopover"
 import QrImage from "@/public/images/qr-code-ethereum-org.png"
 
 export const ReceiveEther = () => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   return (
     <motion.div
       initial={{ opacity: 0 }}

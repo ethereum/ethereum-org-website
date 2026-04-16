@@ -24,7 +24,7 @@ export const ReceivedEther = ({
   ethPrice,
   sender,
 }: ReceivedEtherProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const [received, setReceived] = useState(false)
   const [hideToast, setHideToast] = useState(false)
   const showToast = received && !hideToast

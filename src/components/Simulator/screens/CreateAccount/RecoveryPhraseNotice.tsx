@@ -2,7 +2,7 @@ import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
 export const RecoveryPhraseNotice = () => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
 
   return (
     <motion.div

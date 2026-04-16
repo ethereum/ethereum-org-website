@@ -27,7 +27,7 @@ import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
 import type { SimulatorData } from "../components/Simulator/types"
 
 export function useWalletOnboardingSimData(): SimulatorData {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   return {
     [CREATE_ACCOUNT]: {
       title: t("sim-ca-title"),

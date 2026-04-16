@@ -8,7 +8,7 @@ import { EthGlyphIcon } from "../../icons"
 const MotionFlex = motion.create(Flex)
 
 export const WelcomeScreen = () => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
 
   return (
     <MotionFlex

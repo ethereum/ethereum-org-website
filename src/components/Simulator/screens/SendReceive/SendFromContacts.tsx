@@ -19,7 +19,7 @@ export const SendFromContacts = ({
   nav,
   setRecipient,
 }: SendFromContactsProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const handleSelection = (name: string) => {
     setRecipient(name)
     nav.progressStepper()

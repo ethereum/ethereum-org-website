@@ -36,7 +36,7 @@ export const Explanation = ({
   openPath,
   logFinalCta,
 }: ExplanationProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const { regressStepper, step, totalSteps } = nav
   const { header, description } = explanation
 
