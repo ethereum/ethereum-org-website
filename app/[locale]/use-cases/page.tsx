@@ -15,6 +15,7 @@ import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
 import { Flex, Stack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -148,6 +149,14 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <TableOfContents items={tocData} variant="left" />
 
             <ContentContainer id="content">
+              <p className="text-lg text-body-medium">
+                {t("page-intro-before-link")}{" "}
+                <InlineLink href="/what-is-ether/">
+                  {t("page-intro-ether-link")}
+                </InlineLink>
+                {t("page-intro-after-link")}
+              </p>
+
               {/* Financial tools */}
               <Section
                 headingId={tocItems[0].id}
@@ -337,7 +346,7 @@ export async function generateMetadata(props: {
     locale,
     slug: ["use-cases"],
     title: t("meta-title"),
-    description: t("hero-description"),
+    description: t("meta-description"),
     image: "/images/heroes/guides-hub-hero.jpg",
   })
 }

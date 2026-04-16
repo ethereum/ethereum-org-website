@@ -30,7 +30,7 @@ export default async function UseCasesPageJsonLD({ locale, contributors }) {
         "@type": "WebPage",
         "@id": url,
         name: t("meta-title"),
-        description: t("hero-description"),
+        description: t("meta-description"),
         url: url,
         inLanguage: locale,
         contributor: contributorList,
