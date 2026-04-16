@@ -1,13 +1,7 @@
 "use client"
 
 import { useRef, useState } from "react"
-import {
-  AppWindowMac,
-  BookOpen,
-  Building2,
-  Code,
-  ExternalLink,
-} from "lucide-react"
+import { AppWindowMac, BookOpen, Code } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { ChevronNext } from "@/components/Chevron"
@@ -25,12 +19,9 @@ import { BaseLink } from "@/components/ui/Link"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
-
 type PersonaLink = {
   label: string
   href: string
-  isExternal?: boolean
   eventName: string
 }
 
@@ -106,28 +97,7 @@ function useCategories() {
     },
   ]
 
-  const enterpriseCategory: PersonaCategory = {
-    id: "enterprise",
-    label: t("page-index-modal-enterprise"),
-    Icon: Building2,
-    iconBgClass: "bg-accent-c/20",
-    iconColorClass: "text-accent-c",
-    links: [
-      {
-        label: t("page-index-modal-founders"),
-        href: "/founders/",
-        eventName: "founders",
-      },
-      {
-        label: t("page-index-modal-institutions"),
-        href: ENTERPRISE_ETHEREUM_URL,
-        isExternal: true,
-        eventName: "institutions",
-      },
-    ],
-  }
-
-  return { categories, enterpriseCategory, t }
+  return { categories, t }
 }
 
 const CategoryCard = ({
@@ -159,7 +129,7 @@ const CategoryCard = ({
     </div>
 
     <div className="mt-auto flex flex-col gap-2 md:gap-4">
-      {links.map(({ label: linkLabel, href, isExternal, eventName }, idx) => (
+      {links.map(({ label: linkLabel, href, eventName }, idx) => (
         <div key={linkLabel}>
           {idx > 0 && <div className="mb-2 border-t md:mb-4" />}
           <BaseLink
@@ -167,17 +137,8 @@ const CategoryCard = ({
             onClick={() => onLinkClick(eventName)}
             hideArrow
             className="group flex items-center justify-between text-xl font-bold text-primary no-underline transition-colors hover:text-primary-hover md:text-3xl"
-            {...(isExternal && {
-              target: "_blank",
-              rel: "noopener noreferrer",
-            })}
           >
-            <span className="flex items-center gap-1">
-              {linkLabel}
-              {isExternal && (
-                <ExternalLink className="size-3 text-body-medium md:size-4" />
-              )}
-            </span>
+            {linkLabel}
             <ChevronNext className="size-5 text-primary transition-transform group-hover:translate-x-1" />
           </BaseLink>
         </div>
@@ -191,7 +152,7 @@ type PersonaModalCTAProps = {
 }
 
 const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
-  const { categories, enterpriseCategory, t } = useCategories()
+  const { categories, t } = useCategories()
   const [isOpen, setIsOpen] = useState(false)
   // Track if modal was closed via link click (not ESC/outside click/X button)
   const closedViaLinkRef = useRef(false)
@@ -256,12 +217,6 @@ const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
               onLinkClick={handleLinkClick}
             />
           ))}
-          {/* Enterprise card: mobile only */}
-          <CategoryCard
-            category={enterpriseCategory}
-            onLinkClick={handleLinkClick}
-            className="md:hidden"
-          />
         </div>
       </DialogContent>
     </Dialog>
