@@ -84,7 +84,7 @@ function log(msg: string) {
 }
 
 /**
- * Get manifest path for a given destination file.
+ * Get manifest path (relative to repo root) for a given destination file.
  * Structure: .manifests/{destPath}/source.json or translation.json
  * Example: .manifests/public/content/translations/ar/about/index.md/source.json
  */
@@ -92,7 +92,7 @@ function getManifestPath(
   destPath: string,
   type: "source" | "translation"
 ): string {
-  return path.join(process.cwd(), MANIFESTS_DIR, destPath, `${type}.json`)
+  return path.join(MANIFESTS_DIR, destPath, `${type}.json`)
 }
 
 /**
@@ -596,7 +596,10 @@ async function main() {
   for (const file of englishFiles) {
     for (const locale of targetLanguages) {
       const destPath = getDestinationFromPath(file.path, locale)
-      const smPath = getManifestPath(destPath, "source")
+      const smPath = path.join(
+        process.cwd(),
+        getManifestPath(destPath, "source")
+      )
       const localePath = readLocalePath(
         destPath,
         file.type,
