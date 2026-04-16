@@ -205,14 +205,17 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     ctaLabel={t("prediction-markets-cta")}
                   />
                   <UseCaseCard
-                    href="/restaking/"
+                    href="https://institutions.ethereum.org/"
                     image={restaking}
-                    title={t("restaking-title")}
-                    description={t("restaking-description")}
-                    ctaLabel={t("restaking-cta")}
+                    title={t("institutions-title")}
+                    description={t("institutions-description")}
+                    ctaLabel={t("institutions-cta")}
                   />
                 </div>
+              </Section>
 
+              {/* AI agents banner */}
+              <section className="mt-24">
                 <BaseLink
                   href="/ai-agents/"
                   className="no-underline hover:no-underline"
@@ -244,7 +247,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     </div>
                   </Flex>
                 </BaseLink>
-              </Section>
+              </section>
 
               {/* Digital ownership and gaming */}
               <Section
