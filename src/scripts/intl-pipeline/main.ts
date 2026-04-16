@@ -2,9 +2,9 @@
  * Incremental Translation Pipeline -- Entry Point
  *
  * Modes:
- *   "full"  -- Translate entire files from scratch via Gemini
+ *   "full"  -- Translate entire files from scratch via LLM
  *   "auto"  -- Detect drift since last run; propagate inert changes by script,
- *              send only changed prose to Gemini (default)
+ *              send only changed prose to LLM (default)
  *
  * Environment variables: see config.ts
  */
@@ -28,11 +28,7 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
-import {
-  callGeminiRaw,
-  isGeminiAvailable,
-  translateFile,
-} from "./lib/llm/gemini"
+import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
 import {
   batchSections,
   buildIncrementalPrompt,
@@ -55,13 +51,8 @@ import { createTaskPool } from "./lib/utils/task-pool"
 import { createOrUpdateTranslationPR } from "./lib/workflows/pr-creation"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
-import {
-  config,
-  GEMINI_MODELS,
-  GLOSSARY_API_URL,
-  validateTargetPath,
-} from "./config"
-import { MANIFESTS_DIR } from "./constants"
+import { config, GLOSSARY_API_URL, validateTargetPath } from "./config"
+import { LLM, MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
 
@@ -201,7 +192,7 @@ function printTokenSummary(
     `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
   )
 
-  // Approximate cost (Gemini 3.1 Pro standard tier, <=200k prompts)
+  // Approximate cost (standard tier, <=200k prompts)
   // https://ai.google.dev/gemini-api/docs/pricing (as of 11-April-2026)
   const INPUT_RATE = 2.0
   const OUTPUT_RATE = 12.0
@@ -211,13 +202,13 @@ function printTokenSummary(
 
   const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
   console.log(
-    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${GEMINI_MODELS[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
+    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${LLM.models[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
   )
   console.log(`  Wall time: ${pipelineSecs}s`)
 }
 
 /**
- * Build an LLM translator that batches section translations via Gemini.
+ * Build an LLM translator that batches section translations.
  * Uses batchSections for byte-size-aware splitting of large section lists.
  */
 async function buildGeminiTranslator(
@@ -301,7 +292,7 @@ async function buildGeminiTranslator(
     })
 
     log(
-      `  Calling Gemini: ${batchSectionList.filter((s) => s.action === "TRANSLATE").length} sections, ${prompt.length} chars`
+      `  Calling LLM: ${batchSectionList.filter((s) => s.action === "TRANSLATE").length} sections, ${prompt.length} chars`
     )
 
     const result = await callGeminiRaw(prompt, {
@@ -324,12 +315,12 @@ async function buildGeminiTranslator(
 
   const translatedIds = Object.keys(allTranslations)
   log(
-    `  Gemini returned ${translatedIds.length} sections (${totalInput} in, ${totalOutput} out)`
+    `  LLM returned ${translatedIds.length} sections (${totalInput} in, ${totalOutput} out)`
   )
 
   for (const id of sectionIds) {
     if (!allTranslations[id]) {
-      console.warn(`  Section "${id}" not returned by Gemini`)
+      console.warn(`  Section "${id}" not returned by LLM`)
     }
   }
 
@@ -500,13 +491,11 @@ async function runIncremental(
   const englishB = file.content
 
   const llmSectionIds = getLlmSectionIds(englishA, englishB, file.type)
-  log(
-    `[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need Gemini`
-  )
+  log(`[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need LLM`)
 
   let translator: LlmTranslator | undefined
   let tokens = { input: 0, output: 0 }
-  if (llmSectionIds.length > 0 && isGeminiAvailable()) {
+  if (llmSectionIds.length > 0 && isLlmAvailable()) {
     const geminiResult = await buildGeminiTranslator(
       englishB,
       localeContent,
@@ -619,8 +608,8 @@ async function main() {
               : "no manifest"
         log(`[${locale}] ${file.path}: ${reason} -> full translation`)
 
-        if (!isGeminiAvailable()) {
-          console.warn(`[${locale}] Skipping: GEMINI_API_KEY not set`)
+        if (!isLlmAvailable()) {
+          console.warn(`[${locale}] Skipping: LLM API key not set`)
           continue
         }
 
@@ -697,7 +686,7 @@ async function main() {
     await committer.squashByLanguage()
   }
 
-  // Post-processing: sanitize Gemini output
+  // Post-processing: sanitize LLM output
   if (committedFiles.length > 0 && !config.stampOnly) {
     const englishContentMap = new Map<string, string>(
       englishFiles.map((f) => [f.path, f.content])
