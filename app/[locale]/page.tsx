@@ -10,7 +10,7 @@ import {
 
 import type { PageParams } from "@/lib/types"
 
-import HomeHero2026 from "@/components/Hero/HomeHero2026"
+import HomeHero from "@/components/Hero/HomeHero"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
 import TrustLogos from "@/components/Homepage/TrustLogos"
@@ -89,7 +89,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <IndexPageJsonLD locale={locale} />
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-          <HomeHero2026 eventCategory={eventCategory} />
+          <HomeHero eventCategory={eventCategory} />
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
             <TrackedSection id="kpi" eventCategory={eventCategory}>
