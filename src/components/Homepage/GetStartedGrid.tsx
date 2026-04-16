@@ -33,7 +33,7 @@ const GetStartedGrid = async ({
     {
       id: "learn",
       icon: Book,
-      iconBg: "bg-[#f7ecff]",
+      iconBg: "bg-[#f7ecff] dark:bg-[#2d1a4e]",
       iconColor: "text-primary",
       title: t("page-index-get-started-learn-title"),
       description: t("page-index-get-started-learn-description"),
@@ -50,7 +50,7 @@ const GetStartedGrid = async ({
     {
       id: "developers",
       icon: Code,
-      iconBg: "bg-[#e9f4ff]",
+      iconBg: "bg-[#e9f4ff] dark:bg-[#1a2a3e]",
       iconColor: "text-accent-a",
       title: t("page-index-get-started-build-title"),
       description: t("page-index-get-started-build-description"),
@@ -67,7 +67,7 @@ const GetStartedGrid = async ({
     {
       id: "enterprise",
       icon: Building2,
-      iconBg: "bg-[#e6f7f6]",
+      iconBg: "bg-[#e6f7f6] dark:bg-[#1a3332]",
       iconColor: "text-accent-c",
       title: t("page-index-get-started-enterprise-title"),
       description: t("page-index-get-started-enterprise-description"),
