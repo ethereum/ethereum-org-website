@@ -32,17 +32,17 @@ import { pipeline } from "../../../src/scripts/intl-pipeline"
 const FIXTURES = join(__dirname, "../../fixtures/incremental")
 const read = (p: string) => readFileSync(join(FIXTURES, p), "utf-8")
 
-const EN_A_MD = read("english/fixture-a.md")
-const EN_B_MD = read("english/fixture-b.md")
-const EN_A_JSON = read("english/fixture-a.json")
-const EN_B_JSON = read("english/fixture-b.json")
+const EN_A_MD = read("english-a/fixture-1.md")
+const EN_B_MD = read("english-b/fixture-1.md")
+const EN_A_JSON = read("english-a/fixture-1.json")
+const EN_B_JSON = read("english-b/fixture-1.json")
 
 const locA = (lang: string, ext: string) =>
-  read(`locale-a/${lang}/fixture.${ext}`)
+  read(`locale-a/${lang}/fixture-1.${ext}`)
 const locB = (lang: string, ext: string) =>
-  read(`locale-b/${lang}/fixture.${ext}`)
+  read(`locale-b/${lang}/fixture-1.${ext}`)
 const locExpected = (lang: string, ext: string) =>
-  read(`locale-expected/${lang}/fixture.${ext}`)
+  read(`locale-expected/${lang}/fixture-1.${ext}`)
 
 const CONFIG: Partial<ContentTreeConfig> = {
   depth: "element",
