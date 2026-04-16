@@ -1,0 +1,1384 @@
+/**
+ * Unit tests for sanitizer functions that compare translated content
+ * against English source content.
+ */
+
+import { expect, test } from "@playwright/test"
+
+import { _testOnly } from "@/scripts/intl-pipeline/intl-sanitizer"
+
+const {
+  syncHeaderIdsWithEnglish,
+  fixBrandTags,
+  fixProtectedBrandNames,
+  syncProtectedFrontmatterFields,
+  syncButtonsFrontmatterFields,
+  restoreBlankLinesFromEnglish,
+  collapseInlineHtmlFromEnglish,
+  fixMergedClosingTags,
+  normalizeInlineComponentsFromEnglish,
+  repairUnclosedBackticks,
+  restoreDroppedBackslashEscapes,
+  fixCollapsedComponentLineBreaks,
+  fixMissingLinkBrackets,
+  restoreStrippedAbbreviations,
+  fixMergedSupDigits,
+  fixCrowdinNumberedTags,
+  removeStaleComponents,
+  fixLeakedAttrNamesInJsxValues,
+  fixDetachedHeadingAnchors,
+  fixCrowdinSplitBackticks,
+  fixLowercasedMdxComponents,
+} = _testOnly
+
+test.describe("English Comparison Fixes", () => {
+  test.describe("syncHeaderIdsWithEnglish", () => {
+    test("replaces translated IDs with ASCII English IDs when counts match", () => {
+      const english = [
+        "## What is Ethereum? {#what-is-ethereum}",
+        "## How does it work? {#how-does-it-work}",
+      ].join("\n")
+      const translated = [
+        "## \u30A4\u30FC\u30B5\u30EA\u30A2\u30E0\u3068\u306F? {#\u30A4\u30FC\u30B5\u30EA\u30A2\u30E0\u3068\u306F}",
+        "## \u3069\u306E\u3088\u3046\u306B\u6A5F\u80FD\u3059\u308B\u304B? {#\u3069\u306E\u3088\u3046\u306B}",
+      ].join("\n")
+      const result = syncHeaderIdsWithEnglish(translated, english)
+      expect(result).toContain("{#what-is-ethereum}")
+      expect(result).toContain("{#how-does-it-work}")
+    })
+
+    test("returns original when header counts mismatch", () => {
+      const english = "## One heading {#one}"
+      const translated = [
+        "## \u898B\u51FA\u30571 {#one}",
+        "## \u898B\u51FA\u30572 {#two}",
+      ].join("\n")
+      const result = syncHeaderIdsWithEnglish(translated, english)
+      expect(result).toBe(translated)
+    })
+
+    test("normalizes accented IDs to ASCII", () => {
+      const english = "## \u00DCber uns {#\u00FCber-uns}"
+      const translated =
+        "## \u79C1\u305F\u3061\u306B\u3064\u3044\u3066 {#\u79C1\u305F\u3061}"
+      const result = syncHeaderIdsWithEnglish(translated, english)
+      expect(result).toContain("{#uber-uns}")
+    })
+
+    test("preserves blank lines after headers with duplicate IDs", () => {
+      // Regression: dao/index.md has multiple headers sharing {#governance-example}.
+      // The regex captured trailing \n in fullMatch, and .replace() with duplicate
+      // fullMatch values double-stripped newlines from the first occurrence,
+      // merging the header with its following paragraph.
+      const english = [
+        "### Delegation {#governance-delegation}",
+        "",
+        "Delegation is like representative democracy.",
+        "",
+        "#### A famous example {#governance-example}",
+        "",
+        "[ENS](https://ens.domains) - ENS holders can delegate.",
+        "",
+        "### Automatic governance {#governance-example}",
+        "",
+        "In many DAOs transactions execute automatically.",
+        "",
+        "#### A famous example {#governance-example}",
+        "",
+        "[Nouns](https://nouns.wtf) - automatic execution.",
+      ].join("\n")
+      const translated = [
+        "### Delegirovanie {#governance-delegation}",
+        "",
+        "Delegirovanie - primer demokratii.",
+        "",
+        "#### Izvestnyj primer {#governance-example}",
+        "",
+        "[ENS](https://ens.domains) - vladeltsy ENS.",
+        "",
+        "### Avtomaticheskoe upravlenie {#governance-example}",
+        "",
+        "Vo mnogih DAO tranzakcii vypolnyayutsya.",
+        "",
+        "#### Izvestnyj primer {#governance-example}",
+        "",
+        "[Nouns](https://nouns.wtf) - avtomaticheskoe.",
+      ].join("\n")
+      const result = syncHeaderIdsWithEnglish(translated, english)
+      // Both h4 headers must retain blank lines after them
+      expect(result).toContain(
+        "#### Izvestnyj primer {#governance-example}\n\n[ENS]"
+      )
+      expect(result).toContain(
+        "#### Izvestnyj primer {#governance-example}\n\n[Nouns]"
+      )
+      // No line merging -- header must not be joined with paragraph
+      expect(result).not.toMatch(
+        /#### Izvestnyj primer \{#governance-example\}\[/
+      )
+    })
+  })
+
+  test.describe("fixBrandTags", () => {
+    test("restores brand tags to canonical casing", () => {
+      const english = [
+        "---",
+        'tags: ["solidity", "ethereum"]',
+        "---",
+        "Content",
+      ].join("\n")
+      const translated = [
+        "---",
+        'tags: ["\u30BD\u30EA\u30C7\u30A3\u30C6\u30A3", "\u30A4\u30FC\u30B5\u30EA\u30A2\u30E0"]',
+        "---",
+        "Content",
+      ].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      expect(content).toContain('"Solidity"')
+      expect(content).toContain('"Ethereum"')
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves non-brand concept tags translated", () => {
+      const english = [
+        "---",
+        'tags: ["zero-knowledge", "solidity"]',
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        'tags: ["\u30BC\u30ED\u77E5\u8B58", "\u30BD\u30EA\u30C7\u30A3\u30C6\u30A3"]',
+        "---",
+      ].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      // "zero-knowledge" is not a brand, so it stays translated
+      expect(content).toContain('"\u30BC\u30ED\u77E5\u8B58"')
+      // "solidity" is a brand, so it becomes "Solidity"
+      expect(content).toContain('"Solidity"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes brand tags even when tag counts differ", () => {
+      const english = [
+        "---",
+        'tags: ["solidity", "smart contracts", "erc-721"]',
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        'tags: ["solidez", "smart contracts"]',
+        "---",
+      ].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      expect(content).toContain('"Solidity"')
+      expect(content).not.toContain('"solidez"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("fixes brand tags when translation has fewer tags", () => {
+      const english = ["---", 'tags: ["solidity", "dapps"]', "---"].join("\n")
+      const translated = ["---", 'tags: ["solidez"]', "---"].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      expect(content).toContain('"Solidity"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("returns unchanged when no frontmatter", () => {
+      const { content, fixCount } = fixBrandTags(
+        "no frontmatter",
+        "no frontmatter"
+      )
+      expect(content).toBe("no frontmatter")
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multi-line YAML tag arrays", () => {
+      const english = [
+        "---",
+        'tags: ["typescript", "react", "vite", "wagmi", "frontend"]',
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "tags:",
+        "  [",
+        '    "TypeScript",',
+        '    "\u0440\u0435\u0430\u0433\u0443\u0432\u0430\u043D\u043D\u044F",',
+        '    "vite",',
+        '    "wagmi",',
+        '    "\u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u043D\u044F"',
+        "  ]",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = fixBrandTags(translated, english)
+      // "react" is a brand -> should be restored to "React"
+      expect(content).toContain('"React"')
+      expect(content).not.toContain(
+        '"\u0440\u0435\u0430\u0433\u0443\u0432\u0430\u043D\u043D\u044F"'
+      )
+      expect(fixCount).toBeGreaterThanOrEqual(1)
+    })
+  })
+
+  test.describe("fixProtectedBrandNames", () => {
+    test("warns when brand count drops in translation", () => {
+      const english = "Ethereum is great. Ethereum rocks. Ethereum forever."
+      const translated = "Ethereum is great. Something else. Something more."
+      const { warnings } = fixProtectedBrandNames(translated, english)
+      const ethereumWarning = warnings.find((w) => w.includes('"Ethereum"'))
+      expect(ethereumWarning).toBeDefined()
+      expect(ethereumWarning).toContain("3x in English")
+      expect(ethereumWarning).toContain("1x in translation")
+    })
+
+    test("delegates tag fixing to fixBrandTags", () => {
+      const english = ["---", 'tags: ["solidity"]', "---", "Content"].join("\n")
+      const translated = [
+        "---",
+        'tags: ["\u30BD\u30EA\u30C7\u30A3\u30C6\u30A3"]',
+        "---",
+        "Content",
+      ].join("\n")
+      const { content, fixCount } = fixProtectedBrandNames(translated, english)
+      expect(content).toContain('"Solidity"')
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("syncProtectedFrontmatterFields", () => {
+    test("restores translated protected fields from English", () => {
+      const english = [
+        "---",
+        "template: tutorial",
+        "sidebar: true",
+        "published: 2024-01-01",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "template: \u30C1\u30E5\u30FC\u30C8\u30EA\u30A2\u30EB",
+        "sidebar: \u306F\u3044",
+        "published: 01-01-2024",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncProtectedFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toContain("template: tutorial")
+      expect(content).toContain("sidebar: true")
+      expect(content).toContain("published: 2024-01-01")
+      expect(fixCount).toBe(3)
+    })
+
+    test("does NOT sync lang field", () => {
+      const english = "---\nlang: en\n---"
+      const translated = "---\nlang: ja\n---"
+      const { content, fixCount } = syncProtectedFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toContain("lang: ja")
+      expect(fixCount).toBe(0)
+    })
+
+    test("leaves already-correct fields unchanged", () => {
+      const english = "---\ntemplate: tutorial\n---"
+      const translated = "---\ntemplate: tutorial\n---"
+      const { content, fixCount } = syncProtectedFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("syncButtonsFrontmatterFields", () => {
+    test("restores translated toId values from English", () => {
+      const english = [
+        "---",
+        "title: Gaming on Ethereum",
+        "buttons:",
+        "  - content: Learn more",
+        "    toId: gaming-on-ethereum",
+        "  - content: Explore games",
+        "    toId: games",
+        "    isSecondary: false",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "title: Jeux sur Ethereum",
+        "buttons:",
+        "  - content: En savoir plus",
+        "    toId: jeux-sur-ethereum",
+        "  - content: Explorer les jeux",
+        "    toId: jeux",
+        "    isSecondary: false",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toContain("toId: gaming-on-ethereum")
+      expect(content).toContain("toId: games")
+      expect(content).toContain("content: En savoir plus")
+      expect(content).toContain("content: Explorer les jeux")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves correct toId values unchanged", () => {
+      const english = [
+        "---",
+        "buttons:",
+        "  - content: Learn more",
+        "    toId: gaming-on-ethereum",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "buttons:",
+        "  - content: Mehr erfahren",
+        "    toId: gaming-on-ethereum",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles files without buttons array", () => {
+      const english = "---\ntitle: Test\n---"
+      const translated = "---\ntitle: Test\n---"
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("syncs isSecondary when translated", () => {
+      const english = [
+        "---",
+        "buttons:",
+        "  - content: Learn more",
+        "    toId: intro",
+        "    isSecondary: false",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "buttons:",
+        "  - content: Apprendre",
+        "    toId: intro",
+        "    isSecondary: vrai",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toContain("isSecondary: false")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles quoted toId values", () => {
+      const english = [
+        "---",
+        "buttons:",
+        "  - content: Learn",
+        "    toId: games",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        "buttons:",
+        '  - content: "\u0456\u0433\u0440\u0438"',
+        '    toId: "\u0456\u0433\u0440\u0438"',
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncButtonsFrontmatterFields(
+        translated,
+        english
+      )
+      expect(content).toContain("toId: games")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("restoreBlankLinesFromEnglish", () => {
+    test("adds blank line after heading when English has it", () => {
+      const english = "## Heading {#id}\n\nParagraph text"
+      const translated = "## \u898B\u51FA\u3057 {#id}\nParagraph text"
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      expect(content).toContain("## \u898B\u51FA\u3057 {#id}\n\nParagraph text")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves unchanged when both already have blank lines", () => {
+      const english = "## Heading {#id}\n\nText"
+      const translated = "## \u898B\u51FA\u3057 {#id}\n\nText"
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("preserves blank lines with multiple same-level headers", () => {
+      // Regression: dao/index.md had multiple h4 headers; the function
+      // must not remove existing blank lines when English also has them
+      const english = [
+        "#### A famous example {#governance-example}",
+        "",
+        "[ENS](https://claim.ens.domains/delegate-ranking) - ENS holders",
+        "",
+        "### Automatic governance {#auto-governance}",
+        "",
+        "In many DAOs transactions execute automatically",
+        "",
+        "#### A famous example {#governance-example-2}",
+        "",
+        "[Nouns](https://nouns.wtf/) - automatic execution",
+      ].join("\n")
+      const translated = [
+        "#### Izvestnyj primer {#governance-example}",
+        "",
+        "[ENS](https://claim.ens.domains/delegate-ranking) - vladeltsy",
+        "",
+        "### Avtomaticheskoe upravlenie {#auto-governance}",
+        "",
+        "Vo mnogih DAO tranzakcii vypolnyayutsya avtomaticheski",
+        "",
+        "#### Izvestnyj primer {#governance-example-2}",
+        "",
+        "[Nouns](https://nouns.wtf/) - avtomaticheskoe vypolnenie",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // All blank lines already present -- nothing should change
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not remove blank lines translation has but English lacks", () => {
+      // Function should only ADD blank lines, never remove them
+      const english = "#### Example {#ex}\nContent without blank line"
+      const translated = "#### Primer {#ex}\n\nContent with blank line"
+      const { content } = restoreBlankLinesFromEnglish(translated, english)
+      // Translation's blank line must be preserved
+      expect(content).toContain("#### Primer {#ex}\n\nContent with blank line")
+    })
+
+    test("skips Python # comments inside code fences", () => {
+      // Python # comments match ^#{1,6}\s+ but must not get blank lines added
+      const english = [
+        "## Heading {#id}",
+        "",
+        "```python",
+        "# Auction params",
+        "# Beneficiary receives money",
+        "beneficiary: public(address)",
+        "```",
+      ].join("\n")
+      const translated = [
+        "## Judul {#id}",
+        "",
+        "```python",
+        "# Auction params # Parameter lelang",
+        "# Beneficiary receives money # Penerima manfaat",
+        "beneficiary: public(address)",
+        "```",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // No blank lines should be inserted inside the code fence
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("resumes header detection after code fence closes", () => {
+      const english = [
+        "```python",
+        "# comment",
+        "```",
+        "",
+        "## After Code {#after}",
+        "",
+        "Text",
+      ].join("\n")
+      const translated = [
+        "```python",
+        "# komentar",
+        "```",
+        "",
+        "## Setelah Kode {#after}",
+        "Teks",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // Should add blank line after the heading outside the fence
+      expect(content).toContain("## Setelah Kode {#after}\n\nTeks")
+      expect(fixCount).toBe(1)
+    })
+
+    test("does not add blank line after AlertContent when English has none", () => {
+      const english = [
+        "</AlertContent>",
+        "</Alert>",
+        "",
+        "## Next {#next}",
+      ].join("\n")
+      const translated = [
+        "</AlertContent>",
+        "</Alert>",
+        "",
+        "## Berikutnya {#next}",
+      ].join("\n")
+      const { content, fixCount } = restoreBlankLinesFromEnglish(
+        translated,
+        english
+      )
+      // Should NOT insert blank line between AlertContent and Alert
+      expect(content).not.toContain("</AlertContent>\n\n</Alert>")
+      expect(fixCount).toBe(0)
+    })
+
+    test("treats whitespace-only lines as blank", () => {
+      const english = "## Heading {#id}\n\nText"
+      const translated = "## Judul {#id}\n  \nTeks"
+      const { fixCount } = restoreBlankLinesFromEnglish(translated, english)
+      // Whitespace-only line counts as blank, so no addition needed
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("collapseInlineHtmlFromEnglish", () => {
+    test("collapses multi-line to single line when English is single-line", () => {
+      const english = "<div>content here</div>"
+      const translated = "<div>content here\n</div>"
+      const { content, fixCount } = collapseInlineHtmlFromEnglish(
+        translated,
+        english
+      )
+      expect(content).toBe("<div>content here</div>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves multi-line when English is multi-line", () => {
+      const english = "<div>\ncontent\n</div>"
+      const translated = "<div>content\n</div>"
+      const { content, fixCount } = collapseInlineHtmlFromEnglish(
+        translated,
+        english
+      )
+      // English is not single-line for this div, so no collapse
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not collapse across blank lines (\\s* crossing newlines)", () => {
+      const english = [
+        "```tsx",
+        "          <div>{status}</div>",
+        "          <div>{error?.message}</div>",
+        "        </div>",
+        "      )}",
+        "```",
+      ].join("\n")
+      const translated = [
+        "```tsx",
+        "          <div>{status}</div>",
+        "          <div>{error?.message}</div>",
+        " ",
+        "</div>",
+        "      )}",
+        "```",
+      ].join("\n")
+      const { content, fixCount } = collapseInlineHtmlFromEnglish(
+        translated,
+        english
+      )
+      // The </div> after the blank line is a separate element -- must not be collapsed
+      expect(content).toContain("<div>{error?.message}</div>\n")
+      expect(content).not.toContain("</div></div>")
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not modify content inside code fences", () => {
+      const english = ["```tsx", "  <div>{status}</div>", "```"].join("\n")
+      const translated = ["```tsx", "  <div>{status}", "  </div>", "```"].join(
+        "\n"
+      )
+      const { content, fixCount } = collapseInlineHtmlFromEnglish(
+        translated,
+        english
+      )
+      // Inside code fence -- should not be touched
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMergedClosingTags", () => {
+    test("splits merged closing tag when English has it on own line", () => {
+      const english = [
+        '<ButtonLink href="/test">',
+        "  Click here",
+        "</ButtonLink>",
+      ].join("\n")
+      const translated = [
+        '<ButtonLink href="/test">',
+        "  \u30AF\u30EA\u30C3\u30AF</ButtonLink>",
+      ].join("\n")
+      const { content, fixCount } = fixMergedClosingTags(translated, english)
+      expect(content).toContain("\u30AF\u30EA\u30C3\u30AF\n")
+      expect(content).toContain("</ButtonLink>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves unchanged when English has single-line format", () => {
+      const english = '<ButtonLink href="/test">Click</ButtonLink>'
+      const translated =
+        '<ButtonLink href="/test">\u30AF\u30EA\u30C3\u30AF</ButtonLink>'
+      const { content, fixCount } = fixMergedClosingTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("normalizeInlineComponentsFromEnglish", () => {
+    test("collapses multi-line ButtonLink to match English single-line", () => {
+      const english = '<ButtonLink href="/docs">Learn more</ButtonLink>'
+      const translated =
+        '<ButtonLink href="/docs">\n  \u8A73\u7D30\u306F\u3053\u3061\u3089\n</ButtonLink>'
+      const { content, fixCount } = normalizeInlineComponentsFromEnglish(
+        translated,
+        english
+      )
+      expect(content).not.toContain("\n")
+      expect(content).toContain("\u8A73\u7D30\u306F\u3053\u3061\u3089")
+      expect(fixCount).toBe(1)
+    })
+
+    test("keys by href attribute for matching", () => {
+      const english = [
+        '<ButtonLink href="/a">Text A</ButtonLink>',
+        '<ButtonLink href="/b">\n  Text B\n</ButtonLink>',
+      ].join("\n")
+      const translated = [
+        '<ButtonLink href="/a">\n  Text A\n</ButtonLink>',
+        '<ButtonLink href="/b">\n  Text B\n</ButtonLink>',
+      ].join("\n")
+      const { content, fixCount } = normalizeInlineComponentsFromEnglish(
+        translated,
+        english
+      )
+      // Only /a should be collapsed (English is single-line)
+      // /b stays multi-line (English is multi-line)
+      expect(fixCount).toBe(1)
+      // The collapsed one should not have newlines around its content
+      expect(content).toMatch(/<ButtonLink href="\/a">Text A<\/ButtonLink>/)
+    })
+  })
+
+  test.describe("repairUnclosedBackticks", () => {
+    test("adds closing backtick when English has balanced pair", () => {
+      const english = "Use the `<Storage[4]>` to store data"
+      const translated = "Use the `<Storage[4]> to store data"
+      const { content, fixCount } = repairUnclosedBackticks(translated, english)
+      expect(content).toContain("`<Storage[4]>`")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves balanced backticks unchanged", () => {
+      const english = "Use the `<Storage[4]>` to store data"
+      const translated = "Use the `<Storage[4]>` to store data"
+      const { content, fixCount } = repairUnclosedBackticks(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("restoreDroppedBackslashEscapes", () => {
+    test("restores backslash before < when English has it", () => {
+      const english = "Values \\<Storage[4]> are mapped"
+      const translated = "Values <Storage[4]> are mapped"
+      const { content, fixCount } = restoreDroppedBackslashEscapes(
+        translated,
+        english
+      )
+      expect(content).toContain("\\<Storage[4]>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("restores backslash for <= comparison", () => {
+      const english = "When x \\<=256"
+      const translated = "When x <=256"
+      const { content, fixCount } = restoreDroppedBackslashEscapes(
+        translated,
+        english
+      )
+      expect(content).toContain("\\<=256")
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips code blocks", () => {
+      const english = "```\n\\<Storage>\n```\nProse \\<tag>"
+      const translated = "```\n<Storage>\n```\nProse <tag>"
+      const { content, fixCount } = restoreDroppedBackslashEscapes(
+        translated,
+        english
+      )
+      // Code block should not be touched
+      expect(content).toContain("```\n<Storage>\n```")
+      // Prose should be fixed
+      expect(content).toContain("Prose \\<tag>")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixCollapsedComponentLineBreaks", () => {
+    test("inserts newline between components when English has it", () => {
+      const english = "</Card>\n<Card>"
+      const translated = "</Card> <Card>"
+      const { content, fixCount } = fixCollapsedComponentLineBreaks(
+        translated,
+        english
+      )
+      expect(content).toBe("</Card>\n<Card>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves already-separated components unchanged", () => {
+      const english = "</Card>\n<Card>"
+      const translated = "</Card>\n<Card>"
+      const { content, fixCount } = fixCollapsedComponentLineBreaks(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixMissingLinkBrackets", () => {
+    test("adds missing brackets when parens are present (ar pattern)", () => {
+      const english = "- [Ethereum roadmap](/roadmap/)"
+      const translated = "- إيثريوم خارطة الطريق(/roadmap/)"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe("- [إيثريوم خارطة الطريق](/roadmap/)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("adds missing brackets and parens when both are missing (ko pattern)", () => {
+      const english = "[More on recognizing and avoiding scams](/security/)"
+      const translated = "사기 인식과 예방에 대해 더 알아보기/security/"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe("[사기 인식과 예방에 대해 더 알아보기](/security/)")
+      expect(fixCount).toBe(1)
+    })
+
+    test("skips already-correct links", () => {
+      const english = "- [Ethereum roadmap](/roadmap/)"
+      const translated = "- [إيثريوم خارطة الطريق](/roadmap/)"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple broken links in same content", () => {
+      const english = [
+        "- [Ethereum roadmap](/roadmap/)",
+        "- [Security tips](/security/)",
+      ].join("\n")
+      const translated = [
+        "- إيثريوم خارطة الطريق(/roadmap/)",
+        "- نصائح الأمان(/security/)",
+      ].join("\n")
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe(
+        [
+          "- [إيثريوم خارطة الطريق](/roadmap/)",
+          "- [نصائح الأمان](/security/)",
+        ].join("\n")
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("does not fix when href is not an English link", () => {
+      const english = "Visit the (/roadmap/) page for details"
+      const translated = "قم بزيارة (/roadmap/) الصفحة"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      // No English markdown link for /roadmap/, so no fix
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const english =
+        "- [Ethereum roadmap](/roadmap/)\n```\ntext(/roadmap/)\n```"
+      const translated = "- [ترجمة](/roadmap/)\n```\ntext(/roadmap/)\n```"
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not corrupt external URLs (regression)", () => {
+      const english = [
+        "**Resources**: [EIP-8037 spec](https://eips.ethereum.org/EIPS/eip-8037)",
+        "- [Ethereum roadmap](/roadmap/)",
+      ].join("\n")
+      const translated = [
+        "**المصادر**: [المواصفات الفنية لـ EIP-8037](https://eips.ethereum.org/EIPS/eip-8037)",
+        "- إيثريوم خارطة الطريق(/roadmap/)",
+      ].join("\n")
+      const { content, fixCount } = fixMissingLinkBrackets(translated, english)
+      expect(content).toBe(
+        [
+          "**المصادر**: [المواصفات الفنية لـ EIP-8037](https://eips.ethereum.org/EIPS/eip-8037)",
+          "- [إيثريوم خارطة الطريق](/roadmap/)",
+        ].join("\n")
+      )
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("restoreStrippedAbbreviations", () => {
+    test("restores RWA abbreviation in title", () => {
+      const translated = '---\ntitle: "الأصول الحقيقية ()"\n---\nContent here.'
+      const english =
+        '---\ntitle: "Real-world assets (RWA)"\n---\nContent here.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain('"الأصول الحقيقية (RWA)"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("restores PoA abbreviation in title", () => {
+      const translated = '---\ntitle: "إثبات السلطة ()"\n---\nContent.'
+      const english = '---\ntitle: "Proof-of-authority (PoA)"\n---\nContent.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain('"إثبات السلطة (PoA)"')
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves content unchanged when no empty parens", () => {
+      const translated = '---\ntitle: "Normal title"\n---\nContent.'
+      const english = '---\ntitle: "Normal title"\n---\nContent.'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not restore non-ASCII abbreviations", () => {
+      const translated = '---\ntitle: "Test ()"\n---'
+      const english = '---\ntitle: "Test (テスト)"\n---'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles multiple empty parens", () => {
+      const translated = '---\ntitle: "() and ()"\n---'
+      const english = '---\ntitle: "(ABC) and (DEF)"\n---'
+      const { content, fixCount } = restoreStrippedAbbreviations(
+        translated,
+        english
+      )
+      expect(content).toContain("(ABC)")
+      expect(content).toContain("(DEF)")
+      expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("fixProtectedBrandNames (locale-aware)", () => {
+    test("skips brand tag reversion for non-Latin locale (ar)", () => {
+      const translated =
+        '---\ntags: ["سوليديتي", "وافل"]\n---\nContent with إيثريوم.'
+      const english =
+        '---\ntags: ["Solidity", "Waffle"]\n---\nContent with Ethereum.'
+      // For Arabic, brand tags should NOT be reverted to English
+      // (transliterated forms are correct for non-Latin UI)
+      // NOTE: fixBrandTags still runs for all locales per current policy
+      // (brand tags stay Latin). This test validates the warning suppression.
+      const result = fixProtectedBrandNames(translated, english, "ar")
+      // Should NOT warn about brand count mismatches for non-Latin locales
+      const brandWarnings = result.warnings.filter((w) =>
+        w.includes("Protected brand")
+      )
+      expect(brandWarnings).toHaveLength(0)
+    })
+
+    test("warns about brand mismatches for Latin locale (de)", () => {
+      const translated =
+        '---\ntags: ["Solidity"]\n---\nInhalt ohne den Markennamen.'
+      const english =
+        '---\ntags: ["Solidity"]\n---\nContent about Ethereum and Ethereum network.'
+      const result = fixProtectedBrandNames(translated, english, "de")
+      const brandWarnings = result.warnings.filter((w) =>
+        w.includes("Protected brand")
+      )
+      expect(brandWarnings.length).toBeGreaterThan(0)
+    })
+  })
+
+  test.describe("syncProtectedFrontmatterFields (locale-aware)", () => {
+    test("preserves transliterated author for non-Latin locale", () => {
+      const translated =
+        '---\ntitle: "Test"\nauthor: "\u0623\u0648\u0631\u064A \u0628\u0648\u0645\u064A\u0631\u0627\u0646\u062A\u0632"\nskill: beginner\n---\nContent.'
+      const english =
+        '---\ntitle: "Test"\nauthor: Ori Pomerantz\nskill: beginner\n---\nContent.'
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ar"
+      )
+      // Author should stay transliterated for Arabic
+      expect(content).toContain(
+        "\u0623\u0648\u0631\u064A \u0628\u0648\u0645\u064A\u0631\u0627\u0646\u062A\u0632"
+      )
+      expect(content).not.toContain("author: Ori Pomerantz")
+    })
+
+    test("reverts author to English for Latin locale", () => {
+      const translated =
+        '---\ntitle: "Test"\nauthor: Ori Translated\nskill: beginner\n---\nContent.'
+      const english =
+        '---\ntitle: "Test"\nauthor: Ori Pomerantz\nskill: beginner\n---\nContent.'
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "de"
+      )
+      expect(content).toContain("author: Ori Pomerantz")
+    })
+  })
+
+  test.describe("fixMergedSupDigits", () => {
+    test("splits merged base digit out of <sup> tag", () => {
+      const translated = "وعلى الأكثر<sup>2256</sup> -1."
+      const english = "and at most 2<sup>256</sup>-1."
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe("وعلى الأكثر2<sup>256</sup> -1.")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple merged sup tags", () => {
+      const translated =
+        "تقريبًا 2<sup>187</sup>. يجب إجراء ~<sup>269</sup> محاولة"
+      const english =
+        "approximately 2<sup>187</sup>. must make ~2<sup>69</sup> attempts"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toContain("2<sup>69</sup>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correctly formatted sup tags unchanged", () => {
+      const translated = "القيمة 2<sup>256</sup> كبيرة"
+      const english = "the value 2<sup>256</sup> is large"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not modify when no English sup to compare", () => {
+      const translated = "<sup>2256</sup> بدون مرجع"
+      const english = "no sup tags here"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("handles sup with footnote link (not a digit merge)", () => {
+      const translated = "أرقام<sup>[fn3](#notes)</sup>"
+      const english = "numbers<sup>[fn3](#notes)</sup>"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const translated = "```\n<sup>2256</sup>\n```"
+      const english = "```\n2<sup>256</sup>\n```"
+      const { content, fixCount } = fixMergedSupDigits(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixCrowdinNumberedTags", () => {
+    test("replaces </0>text<0> with <strong>text</strong>", () => {
+      const translated = "</0>الظهور الأول لونا كضيفة<0>"
+      const english =
+        "<strong>Luna's first appearance as a podcast guest</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>الظهور الأول لونا كضيفة</strong>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles HTML-escaped opening tag &lt;0>", () => {
+      const translated = "</0>من الجيد أن نعلم&lt;0>"
+      const english = "<strong>Good to know</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>من الجيد أن نعلم</strong>")
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles inverted tags inside JSX paragraph", () => {
+      const translated = '<p className="mt-0"></0>من الجيد أن نعلم&lt;0></p>'
+      const english = '<p className="mt-0"><strong>Good to know</strong></p>'
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(
+        '<p className="mt-0"><strong>من الجيد أن نعلم</strong></p>'
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple different numbered tags", () => {
+      const translated = "<0>نص عريض<1>و مائل</1></0>"
+      const english = "<strong>bold text<em>and italic</em></strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe("<strong>نص عريض<em>و مائل</em></strong>")
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves content unchanged when no numbered tags", () => {
+      const translated = "<strong>نص عريض</strong>"
+      const english = "<strong>bold text</strong>"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("no change when no English tags to map from", () => {
+      const translated = "</0>text<0>"
+      const english = "plain text no tags"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const translated = "```\n</0>text<0>\n```"
+      const english = "```\n<strong>text</strong>\n```"
+      const { content, fixCount } = fixCrowdinNumberedTags(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("removeStaleComponents", () => {
+    test("removes self-closing component not in English", () => {
+      const translated =
+        'Some text\n\n<ContributorsQuizBanner className="mt-16 mb-8" />\n\nMore text'
+      const english = "Some text\n\nMore text"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("ContributorsQuizBanner")
+      expect(content).toContain("Some text")
+      expect(content).toContain("More text")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves components that exist in English", () => {
+      const translated = '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const english = '<NetworkUpgradeSummary name="paris" />\n\nText'
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("removes multiple stale components", () => {
+      const translated = '<StaleOne />\nText\n<StaleTwo className="x" />'
+      const english = "Text"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("StaleOne")
+      expect(content).not.toContain("StaleTwo")
+      expect(fixCount).toBe(2)
+    })
+
+    test("does not remove components inside code blocks", () => {
+      const translated = "```\n<ContributorsQuizBanner />\n```"
+      const english = "```\nsome code\n```"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).toContain("ContributorsQuizBanner")
+      expect(fixCount).toBe(0)
+    })
+
+    test("cleans up blank line left behind after removal", () => {
+      const translated = "Before\n\n<StaleComponent />\n\nAfter"
+      const english = "Before\n\nAfter"
+      const { content, fixCount } = removeStaleComponents(translated, english)
+      expect(content).not.toContain("\n\n\n")
+      expect(fixCount).toBe(1)
+    })
+  })
+
+  test.describe("fixLeakedAttrNamesInJsxValues", () => {
+    test("replaces leaked description=N with $NN from English, keeping Telugu text", () => {
+      const english = `  <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average."/>`
+      const translated = `  <Card title="\u0C24\u0C15\u0C4D\u0C15\u0C41\u0C35 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41" emoji=":money_with_wings:" description="\u0C30\u0C46\u0C2E\u0C3F\u0C1F\u0C46\u0C28\u0C4D\u0C38\u0C4D \u0C38\u0C47\u0C35\u0C32\u0C41 \u0C38\u0C17\u0C1F\u0C41\u0C28 description=4 \u0C35\u0C30\u0C15\u0C41 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41 \u0C35\u0C38\u0C42\u0C32\u0C41 \u0C1A\u0C47\u0C38\u0C4D\u0C24\u0C3E\u0C2F\u0C3F."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      // Telugu text preserved, only the leaked "description=4" replaced with "$14"
+      expect(content).toContain("$14")
+      expect(content).not.toContain("description=4")
+      // Still Telugu
+      expect(content).toContain(
+        "\u0C30\u0C46\u0C2E\u0C3F\u0C1F\u0C46\u0C28\u0C4D\u0C38\u0C4D"
+      )
+      expect(content).toContain(
+        "\u0C35\u0C30\u0C15\u0C41 \u0C2B\u0C40\u0C1C\u0C41\u0C32\u0C41"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves clean attributes unchanged", () => {
+      const english = `  <Card title="Test" emoji=":rocket:" description="A clean description."/>`
+      const translated = `  <Card title="\u0C1F\u0C46\u0C38\u0C4D\u0C1F\u0C4D" emoji=":rocket:" description="\u0C12\u0C15 \u0C36\u0C41\u0C2D\u0C4D\u0C30\u0C2E\u0C48\u0C28 \u0C35\u0C3F\u0C35\u0C30\u0C23."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not replace the actual attribute assignment itself", () => {
+      // description=" at the start of a value is the real attribute, not a leak
+      const english = `  <Card title="Test" emoji=":star:" description="Normal text here."/>`
+      const translated = `  <Card title="\u0C1F\u0C46\u0C38\u0C4D\u0C1F\u0C4D" emoji=":star:" description="\u0C38\u0C3E\u0C27\u0C3E\u0C30\u0C23 \u0C1F\u0C46\u0C15\u0C4D\u0C38\u0C4D\u0C1F\u0C4D."/>`
+      const { content, fixCount } = fixLeakedAttrNamesInJsxValues(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixDetachedHeadingAnchors", () => {
+    test("restores heading marker when anchor is on a non-heading line", () => {
+      const english = [
+        "### Availability bonds {#avail-bonds}",
+        "",
+        "In a real implementation there would be some profit motive.",
+      ].join("\n")
+      const translated = [
+        "Guarantees {#avail-bonds} In a real implementation there would be some profit motive.",
+      ].join("\n")
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("### Guarantees {#avail-bonds}")
+      expect(content).toContain(
+        "\n\nIn a real implementation there would be some profit motive."
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles multiple detached anchors", () => {
+      const english = [
+        "### Heading A {#anchor-a}",
+        "",
+        "Para A.",
+        "",
+        "### Heading B {#anchor-b}",
+        "",
+        "Para B.",
+      ].join("\n")
+      const translated = [
+        "Title A {#anchor-a} Para A.",
+        "",
+        "Title B {#anchor-b} Para B.",
+      ].join("\n")
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("### Title A {#anchor-a}")
+      expect(content).toContain("### Title B {#anchor-b}")
+      expect(fixCount).toBe(2)
+    })
+
+    test("uses correct heading level from English (h4)", () => {
+      const english = [
+        "#### Deep heading {#deep-heading}",
+        "",
+        "Content here.",
+      ].join("\n")
+      const translated = "Deep heading translated {#deep-heading} Content here."
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toContain("#### Deep heading translated {#deep-heading}")
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves properly formatted headings unchanged", () => {
+      const english = "### Good heading {#good}\n\nParagraph."
+      const translated = "### Good heading translated {#good}\n\nParagraph."
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const english = "### Heading {#my-id}\n\nParagraph."
+      const translated = "```\nSomething {#my-id} inside code\n```"
+      const { content, fixCount } = fixDetachedHeadingAnchors(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixCrowdinSplitBackticks", () => {
+    test("repairs premature backtick close splitting inline code", () => {
+      const english = "we use an empty component (`<> ... </>`) to combine them"
+      const translated =
+        "u\u017Cywamy pustego komponentu (`<> ...` </>`), aby uczynić"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        "u\u017Cywamy pustego komponentu (`<> ... </>`), aby uczynić"
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves correct backtick pairs unchanged", () => {
+      const english = "we use an empty component (`<> ... </>`) to combine them"
+      const translated =
+        "u\u017Cywamy pustego komponentu (`<> ... </>`), aby uczynić"
+      const { content, fixCount } = fixCrowdinSplitBackticks(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+  })
+
+  test.describe("fixLowercasedMdxComponents", () => {
+    test("restores PascalCase from English source", () => {
+      const english = `#### <Emoji text=":tada:" size={1} className="me-2" /> Fun fact!`
+      const translated = `#### <emoji text=":tada:" size={1} className="me-2" /> Wissenswertes!`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        `#### <Emoji text=":tada:" size={1} className="me-2" /> Wissenswertes!`
+      )
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles self-closing components", () => {
+      const english = `<YouTube id="abc123" />`
+      const translated = `<youtube id="abc123" />`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(`<YouTube id="abc123" />`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("handles opening and closing tag pairs", () => {
+      const english = `<ExpandableCard title="FAQ">\nContent\n</ExpandableCard>`
+      const translated = `<expandablecard title="FAQ">\nInhalt\n</expandablecard>`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        `<ExpandableCard title="FAQ">\nInhalt\n</ExpandableCard>`
+      )
+      expect(fixCount).toBe(2)
+    })
+
+    test("leaves already-correct components unchanged", () => {
+      const english = `<Emoji text=":tada:" size={1} />`
+      const translated = `<Emoji text=":tada:" size={1} />`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("skips code blocks", () => {
+      const english = `<Emoji text=":tada:" />`
+      const translated = '```\n<emoji text=":tada:" />\n```'
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("does not touch standard HTML elements", () => {
+      const english = `<div class="test">content</div>`
+      const translated = `<div class="test">Inhalt</div>`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("fixes multiple different components in one pass", () => {
+      const english = `<Emoji text=":wave:" /> Hello\n<InfoBanner>\nInfo\n</InfoBanner>`
+      const translated = `<emoji text=":wave:" /> Hallo\n<infobanner>\nInfo\n</infobanner>`
+      const { content, fixCount } = fixLowercasedMdxComponents(
+        translated,
+        english
+      )
+      expect(content).toBe(
+        `<Emoji text=":wave:" /> Hallo\n<InfoBanner>\nInfo\n</InfoBanner>`
+      )
+      expect(fixCount).toBe(3)
+    })
+  })
+})
