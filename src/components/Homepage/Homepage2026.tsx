@@ -8,7 +8,6 @@ import type { Lang } from "@/lib/types"
 import HomeHero2026, { type CTAVariant } from "@/components/Hero/HomeHero2026"
 import FeatureCards from "@/components/Homepage/FeatureCards"
 import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
-import { SimulatorI18nWrapper } from "@/components/Homepage/SimulatorSection/SimulatorI18nWrapper"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -48,7 +47,16 @@ const Homepage2026 = async ({
   const { direction: dir } = getDirection(locale)
   const t = await getTranslations("page-index")
   const allMessages = await getMessages()
-  const messages = pick(allMessages, "page-index")
+  const glossary = allMessages["glossary-tooltip"] as Record<string, string>
+  const messages = {
+    ...pick(allMessages, "page-index"),
+    "glossary-tooltip": pick(glossary, [
+      "nft-term",
+      "nft-definition",
+      "web3-term",
+      "web3-definition",
+    ]),
+  }
 
   const eventCategory = `Homepage - ${locale}`
 
@@ -83,24 +91,22 @@ const Homepage2026 = async ({
 
           <TrackedSection id="simulator" eventCategory={eventCategory}>
             <Suspense fallback={<SectionSkeleton className="py-12" />}>
-              <SimulatorI18nWrapper>
-                <SimulatorSection
-                  className="py-12"
-                  header={
-                    <div className="flex flex-col items-center gap-4 text-center">
-                      <SectionTag variant="plain">
-                        {t("page-index-simulator-tag")}
-                      </SectionTag>
-                      <SectionHeader className="mb-0 mt-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
-                        {t("page-index-simulator-title")}
-                      </SectionHeader>
-                      <p className="text-lg text-body-medium md:text-xl">
-                        {t("page-index-simulator-subtitle")}
-                      </p>
-                    </div>
-                  }
-                />
-              </SimulatorI18nWrapper>
+              <SimulatorSection
+                className="py-12"
+                header={
+                  <div className="flex flex-col items-center gap-4 text-center">
+                    <SectionTag variant="plain">
+                      {t("page-index-simulator-tag")}
+                    </SectionTag>
+                    <SectionHeader className="mb-0 mt-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
+                      {t("page-index-simulator-title")}
+                    </SectionHeader>
+                    <p className="text-lg text-body-medium md:text-xl">
+                      {t("page-index-simulator-subtitle")}
+                    </p>
+                  </div>
+                }
+              />
             </Suspense>
           </TrackedSection>
 
