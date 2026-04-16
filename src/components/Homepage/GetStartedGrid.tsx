@@ -1,6 +1,7 @@
 import { Book, Building2, ChevronRight, Code } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
+import ExploreEthereum from "@/components/Homepage/ExploreEthereum"
 import { Image } from "@/components/Image"
 import { Card, CardContent } from "@/components/ui/card"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
@@ -85,7 +86,7 @@ const GetStartedGrid = async ({
 
   return (
     <Section id="get-started" className={cn("relative", className)}>
-      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pb-8 pt-20 md:px-8">
+      <div className="flex flex-col gap-12 rounded-4xl bg-radial-a px-4 pb-16 pt-20 md:px-8 md:pb-20">
         <div className="flex flex-col items-center gap-2 text-center">
           <SectionHeader className="mb-0 mt-0">
             {t("page-index-get-started-title")}
@@ -163,6 +164,8 @@ const GetStartedGrid = async ({
             </LinkBox>
           ))}
         </div>
+
+        <ExploreEthereum eventCategory={eventCategory} />
       </div>
     </Section>
   )

@@ -46,7 +46,7 @@ type Slide = {
   tag: string
   title: string
   subtitle: string
-  description: string
+  description: string | React.ReactNode
   cta: string
   href: string
   image: typeof defiImage
@@ -104,7 +104,22 @@ function useSlides(): Slide[] {
         wireFee,
         days: fmt(5),
       }),
-      description: t("page-index-carousel-remittances-description", { txFee }),
+      description: t.rich("page-index-carousel-remittances-description", {
+        txFee,
+        stablecoinsLink: (chunks) => (
+          <Link
+            href="/stablecoins/"
+            className="text-inherit no-underline decoration-dotted underline-offset-3 hover:text-primary-hover hover:underline hover:decoration-primary-hover"
+            customEventOptions={{
+              eventCategory: "Homepage",
+              eventAction: "section_click",
+              eventName: "savings_carousel/stablecoins_inline",
+            }}
+          >
+            {chunks}
+          </Link>
+        ),
+      }),
       cta: t("page-index-carousel-remittances-cta"),
       href: "/payments/",
       image: remittancesImage,

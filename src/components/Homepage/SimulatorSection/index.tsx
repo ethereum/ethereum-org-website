@@ -17,6 +17,7 @@ import { useWalletOnboardingSimData } from "@/data/WalletSimulatorData"
 type SimulatorSectionProps = {
   className?: string
   header?: React.ReactNode
+  footer?: React.ReactNode
 }
 
 /**
@@ -28,7 +29,11 @@ const SimulatorSkeleton = () => (
   </div>
 )
 
-const SimulatorSection = ({ className, header }: SimulatorSectionProps) => {
+const SimulatorSection = ({
+  className,
+  header,
+  footer,
+}: SimulatorSectionProps) => {
   const walletOnboardingSimData = useWalletOnboardingSimData()
   const sendReceiveData = walletOnboardingSimData[SEND_RECEIVE]
   const { ref: sectionRef, isIntersecting: isVisible } =
@@ -86,6 +91,8 @@ const SimulatorSection = ({ className, header }: SimulatorSectionProps) => {
           </Template>
         )}
       </div>
+
+      {footer}
     </Section>
   )
 }

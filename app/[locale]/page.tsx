@@ -1,5 +1,6 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
+import { ArrowRight } from "lucide-react"
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import {
@@ -17,6 +18,7 @@ import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { TrackedSection } from "@/components/TrackedSection"
+import { BaseLink } from "@/components/ui/Link"
 import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { getDirection } from "@/lib/utils/direction"
@@ -131,6 +133,21 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         {t("page-index-simulator-subtitle")}
                       </p>
                     </div>
+                  }
+                  footer={
+                    <BaseLink
+                      href="/guides/"
+                      hideArrow
+                      className="inline-flex items-center gap-1 no-underline"
+                      customEventOptions={{
+                        eventCategory,
+                        eventAction: "section_click",
+                        eventName: "simulator/explore_guides",
+                      }}
+                    >
+                      {t("page-index-simulator-cta")}
+                      <ArrowRight className="size-4" />
+                    </BaseLink>
                   }
                 />
               </Suspense>
