@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { ChevronNext } from "@/components/Chevron"
 import { Image } from "@/components/Image"
@@ -6,6 +6,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import freeAccessImage from "@/public/images/homepage/features/free-access.png"
 import globalImage from "@/public/images/homepage/features/global.png"
@@ -22,6 +23,12 @@ const FeatureCards = async ({
   eventCategory = "Homepage",
 }: FeatureCardsProps) => {
   const t = await getTranslations("page-index")
+  const locale = await getLocale()
+
+  const volume = numberFormat(locale, {
+    notation: "compact",
+    maximumSignificantDigits: 2,
+  }).format(4_600_000_000)
 
   return (
     <Section
@@ -76,7 +83,7 @@ const FeatureCards = async ({
 
                 <div className="mt-4">
                   <p className="text-3xl font-bold text-white">
-                    {t("page-index-features-ownership-stat")}
+                    {t("page-index-features-ownership-stat", { volume })}
                   </p>
                   <p className="text-sm text-white/70">
                     {t("page-index-features-ownership-stat-label")}

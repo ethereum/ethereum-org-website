@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion, useAnimationControls } from "motion/react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import type { Swiper as SwiperType } from "swiper"
 import { SwiperSlide } from "swiper/react"
 
@@ -21,6 +21,7 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
@@ -54,6 +55,24 @@ type Slide = {
 
 function useSlides(): Slide[] {
   const t = useTranslations("page-index")
+  const locale = useLocale()
+
+  const fmt = (value: number, options?: Intl.NumberFormatOptions) =>
+    numberFormat(locale, options).format(value)
+
+  const wireFee = fmt(50, {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  })
+  const txFee = fmt(0.02, {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })
+  const twelve = fmt(12)
+
   return [
     {
       id: "privacy",
@@ -80,20 +99,28 @@ function useSlides(): Slide[] {
     {
       id: "remittances",
       tag: t("page-index-carousel-remittances-tag"),
-      title: t("page-index-carousel-remittances-title"),
-      subtitle: t("page-index-carousel-remittances-subtitle"),
-      description: t("page-index-carousel-remittances-description"),
+      title: t("page-index-carousel-remittances-title", { minutes: twelve }),
+      subtitle: t("page-index-carousel-remittances-subtitle", {
+        wireFee,
+        days: fmt(5),
+      }),
+      description: t("page-index-carousel-remittances-description", { txFee }),
       cta: t("page-index-carousel-remittances-cta"),
       href: "/payments/",
       image: remittancesImage,
       comparison: {
         traditional: {
           label: t("page-index-carousel-remittances-traditional-label"),
-          value: t("page-index-carousel-remittances-traditional-value"),
+          value: t("page-index-carousel-remittances-traditional-value", {
+            min: fmt(3),
+            max: fmt(5),
+          }),
         },
         ethereum: {
           label: t("page-index-carousel-remittances-ethereum-label"),
-          value: t("page-index-carousel-remittances-ethereum-value"),
+          value: t("page-index-carousel-remittances-ethereum-value", {
+            minutes: twelve,
+          }),
         },
       },
     },

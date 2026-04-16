@@ -1,5 +1,5 @@
 import { ArrowRight, Check } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/ui/Link"
@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
@@ -26,6 +27,14 @@ const TrustLogos = async ({
   eventCategory = "Homepage",
 }: TrustLogosProps) => {
   const t = await getTranslations("page-index")
+  const locale = await getLocale()
+
+  const uptime = numberFormat(locale, {
+    style: "percent",
+    maximumFractionDigits: 0,
+  }).format(1)
+  const count = numberFormat(locale).format(10)
+
   return (
     <Section
       id="trust"
@@ -51,14 +60,14 @@ const TrustLogos = async ({
             <div className="mt-1 flex items-center gap-1 md:mt-2">
               <Check className="size-3 text-success md:size-4" />
               <span className="text-xs font-semibold text-success md:text-sm">
-                {t("page-index-trust-uptime")}
+                {t("page-index-trust-uptime", { uptime })}
               </span>
             </div>
           </FloatingCard>
 
           <FloatingCard className="absolute -right-4 bottom-12 z-10 shadow-lg md:-right-6 lg:-right-12">
             <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
-              {t("page-index-trust-years")}
+              {t("page-index-trust-years", { count })}
             </p>
             <p className="mt-1 text-xs text-body-medium md:text-sm">
               {t("page-index-trust-since")}

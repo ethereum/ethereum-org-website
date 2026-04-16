@@ -1,5 +1,5 @@
 import { Book, Building2, ChevronRight, Code } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
 import { Card, CardContent } from "@/components/ui/card"
@@ -7,6 +7,7 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
@@ -24,6 +25,9 @@ const GetStartedGrid = async ({
   eventCategory = "Homepage",
 }: GetStartedGridProps) => {
   const t = await getTranslations("page-index")
+  const locale = await getLocale()
+
+  const minutes = numberFormat(locale).format(2)
 
   const cards = [
     {
@@ -87,7 +91,7 @@ const GetStartedGrid = async ({
             {t("page-index-get-started-title")}
           </SectionHeader>
           <p className="max-w-[42rem] text-lg text-body-medium lg:text-2xl">
-            {t("page-index-get-started-subtitle")}
+            {t("page-index-get-started-subtitle", { minutes })}
           </p>
         </div>
 
