@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/test-pipeline-fixture-2.json",
+  "generatedAt": "2026-04-16T18:29:19.153Z",
+  "rootHash": "ba44bd2daed6",
+  "tree": {
+    "contentHash": "22b2be3ea79a",
+    "anchorHash": "01e58d9bfef2",
+    "children": {
+      "nav-home": {
+        "contentHash": "3a78695388b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-about": {
+        "contentHash": "4efca0d10c5f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs": {
+        "contentHash": "c205924de0fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-community": {
+        "contentHash": "bb501d7877eb",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "nav-home",
+      "nav-about",
+      "nav-docs",
+      "nav-community"
+    ]
+  },
+  "sourceCommitSha": "f6a92428318ecd79f58f554fb0a1784197c4bb24"
+}
