@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslations } from "next-intl"
 
 import { Flex } from "@/components/ui/flex"
 
@@ -19,6 +20,8 @@ export const SendSummary = ({
   ethPrice,
   recipient,
 }: SendSummaryProps) => {
+  const t = useTranslations("simulator")
+
   const formatEth = (amount: number): string =>
     numberFormat("en", { maximumFractionDigits: 5 }).format(amount)
 
@@ -35,7 +38,7 @@ export const SendSummary = ({
       {/* Top section */}
       <div className="px-6 py-6 md:py-8">
         <p className="mb-4 text-xl font-bold md:mb-8 md:text-2xl">
-          You are sending
+          {t("sim-summary-title")}
         </p>
         <Flex
           className={cn(
@@ -54,15 +57,15 @@ export const SendSummary = ({
       {/* Bottom section */}
       <Flex className="h-full flex-col gap-3 bg-background-highlight px-6 py-4 text-sm md:gap-6 md:py-8 md:text-md">
         <div>
-          <p>To</p>
+          <p>{t("sim-summary-to")}</p>
           <p className="font-bold">{recipient}</p>
         </div>
         <div>
-          <p>Arrival time</p>
-          <p className="font-bold">est. about 12 seconds</p>
+          <p>{t("sim-summary-arrival")}</p>
+          <p className="font-bold">{t("sim-summary-arrival-est")}</p>
         </div>
         <div>
-          <p>Network fees</p>
+          <p>{t("sim-summary-fees")}</p>
           <p className="font-bold">
             {numberFormat("en", {
               maximumFractionDigits: getMaxFractionDigitsUsd(usdFee),

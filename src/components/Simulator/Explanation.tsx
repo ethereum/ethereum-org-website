@@ -1,6 +1,7 @@
 import React from "react"
 import { ArrowLeft } from "lucide-react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
@@ -35,6 +36,7 @@ export const Explanation = ({
   openPath,
   logFinalCta,
 }: ExplanationProps) => {
+  const t = useTranslations("simulator")
   const { regressStepper, step, totalSteps } = nav
   const { header, description } = explanation
 
@@ -62,7 +64,7 @@ export const Explanation = ({
           animate={step === 0 ? "hidden" : "visible"}
         >
           <ArrowLeft className="text-lg" />
-          Back
+          {t("sim-back")}
         </motion.button>
       </Button>
       <Flex className="gap-3 md:flex-col md:gap-2">

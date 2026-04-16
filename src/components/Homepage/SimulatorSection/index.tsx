@@ -12,7 +12,7 @@ import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
 
-import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
+import { useWalletOnboardingSimData } from "@/data/WalletSimulatorData"
 
 type SimulatorSectionProps = {
   className?: string
@@ -28,9 +28,9 @@ const SimulatorSkeleton = () => (
   </div>
 )
 
-const sendReceiveData = walletOnboardingSimData[SEND_RECEIVE]
-
 const SimulatorSection = ({ className, header }: SimulatorSectionProps) => {
+  const walletOnboardingSimData = useWalletOnboardingSimData()
+  const sendReceiveData = walletOnboardingSimData[SEND_RECEIVE]
   const { ref: sectionRef, isIntersecting: isVisible } =
     useIntersectionObserver({
       rootMargin: "200px",

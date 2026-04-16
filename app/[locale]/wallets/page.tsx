@@ -30,7 +30,7 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
+import { buildSimulatorData } from "@/data/WalletSimulatorData"
 
 import WalletsPageJsonLD from "./page-jsonld"
 
@@ -50,6 +50,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
   const t = await getTranslations("page-wallets")
+  const simT = await getTranslations("simulator")
 
   setRequestLocale(locale)
 
@@ -302,7 +303,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         {locale === "en" ? (
           <div className="my-20 w-full px-0 py-4">
             <Suspense>
-              <Simulator data={walletOnboardingSimData}>
+              <Simulator data={buildSimulatorData(simT)}>
                 <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
                   Interactive tutorial
                 </p>

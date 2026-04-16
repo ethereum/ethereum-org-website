@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Check } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { Flex, VStack } from "@/components/ui/flex"
 import { Spinner } from "@/components/ui/spinner"
@@ -26,6 +27,7 @@ export const Success = ({
   ethPrice,
   recipient,
 }: SuccessProps) => {
+  const t = useTranslations("simulator")
   const [txPending, setTxPending] = useState(true)
   const [showWallet, setShowWallet] = useState(false)
   const [categoryIndex, setCategoryIndex] = useState(0)
@@ -113,14 +115,15 @@ export const Success = ({
               )}
               <p className="px-4 text-center md:px-8">
                 {txPending ? (
-                  "Sending transaction"
+                  t("sim-success-sending")
                 ) : (
                   <span>
-                    You sent{" "}
-                    <strong>
-                      <>{sentEthValue} ETH</>
-                    </strong>{" "}
-                    ({usdValue}) to <strong>{recipient}</strong>
+                    {t.rich("sim-success-sent", {
+                      ethAmount: sentEthValue,
+                      usdAmount: usdValue,
+                      recipient,
+                      strong: (chunks) => <strong>{chunks}</strong>,
+                    })}
                   </span>
                 )}
               </p>

@@ -73,7 +73,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
   const messages = {
-    ...pick(allMessages, "page-index"),
+    ...pick(allMessages, "page-index", "simulator"),
     "glossary-tooltip": pick(glossary, [
       "nft-term",
       "nft-definition",
