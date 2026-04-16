@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server"
 import type { PageParams, ToCItem } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 
+import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import { HubHero } from "@/components/Hero"
@@ -212,6 +213,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     ctaLabel={t("institutions-cta")}
                   />
                 </div>
+
+                <Flex className="mt-8 flex-col gap-[0.8rem] xl:mx-36">
+                  <DocLink href="/restaking/">{t("restaking-link")}</DocLink>
+                </Flex>
               </Section>
 
               {/* AI agents banner */}
