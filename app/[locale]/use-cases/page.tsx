@@ -15,7 +15,7 @@ import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
 import { Flex, Stack } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
+import InlineLink, { BaseLink } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -109,7 +109,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     { id: "digital-ownership-and-gaming", title: t("toc-digital-ownership") },
     { id: "organizations-and-identity", title: t("toc-organizations") },
     { id: "science-and-public-goods", title: t("toc-science") },
-    { id: "emerging-use-cases", title: t("toc-emerging") },
   ]
   const tocData: ToCItem[] = tocItems.map(({ id, title }) => ({
     title,
@@ -185,6 +184,12 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     description={t("payments-description")}
                     ctaLabel={t("payments-cta")}
                   />
+                </div>
+
+                <h3 className="mt-8 text-xl md:text-2xl">
+                  {t("novel-uses-title")}
+                </h3>
+                <div className="grid grid-cols-fill-4 gap-4">
                   <UseCaseCard
                     href="/real-world-assets/"
                     image={manAndDog}
@@ -192,7 +197,53 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     description={t("rwa-description")}
                     ctaLabel={t("rwa-cta")}
                   />
+                  <UseCaseCard
+                    href="/prediction-markets/"
+                    image={predictionMarkets}
+                    title={t("prediction-markets-title")}
+                    description={t("prediction-markets-description")}
+                    ctaLabel={t("prediction-markets-cta")}
+                  />
+                  <UseCaseCard
+                    href="/restaking/"
+                    image={restaking}
+                    title={t("restaking-title")}
+                    description={t("restaking-description")}
+                    ctaLabel={t("restaking-cta")}
+                  />
                 </div>
+
+                <BaseLink
+                  href="/ai-agents/"
+                  className="no-underline hover:no-underline"
+                  hideArrow
+                >
+                  <Flex className="group/link flex-col overflow-hidden rounded-[10px] bg-gradient-to-r from-accent-a/10 to-accent-c/10 lg:flex-row dark:from-accent-a/20 dark:to-accent-c-hover/20">
+                    <Stack className="flex-1 gap-3 p-12">
+                      <h3 className="text-xl text-body md:text-2xl">
+                        {t("ai-agents-title")}
+                      </h3>
+                      <p className="text-body-medium">
+                        {t("ai-agents-description")}
+                      </p>
+                      <ButtonLink
+                        href="/ai-agents/"
+                        variant="solid"
+                        className="mt-3 w-fit"
+                      >
+                        {t("ai-agents-cta")}
+                      </ButtonLink>
+                    </Stack>
+                    <div className="self-center pe-8 max-lg:mx-auto">
+                      <Image
+                        src={aiAgentsHero}
+                        alt=""
+                        className="max-w-[265px] object-contain"
+                        sizes="265px"
+                      />
+                    </div>
+                  </Flex>
+                </BaseLink>
               </Section>
 
               {/* Digital ownership and gaming */}
@@ -270,37 +321,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     title={t("refi-title")}
                     description={t("refi-description")}
                     ctaLabel={t("refi-cta")}
-                  />
-                </div>
-              </Section>
-
-              {/* Emerging use cases */}
-              <Section
-                headingId={tocItems[4].id}
-                headingTitle={tocItems[4].title}
-                description={t("emerging-description")}
-              >
-                <div className="grid grid-cols-fill-4 gap-4">
-                  <UseCaseCard
-                    href="/ai-agents/"
-                    image={aiAgentsHero}
-                    title={t("ai-agents-title")}
-                    description={t("ai-agents-description")}
-                    ctaLabel={t("ai-agents-cta")}
-                  />
-                  <UseCaseCard
-                    href="/prediction-markets/"
-                    image={predictionMarkets}
-                    title={t("prediction-markets-title")}
-                    description={t("prediction-markets-description")}
-                    ctaLabel={t("prediction-markets-cta")}
-                  />
-                  <UseCaseCard
-                    href="/restaking/"
-                    image={restaking}
-                    title={t("restaking-title")}
-                    description={t("restaking-description")}
-                    ctaLabel={t("restaking-cta")}
                   />
                 </div>
               </Section>
