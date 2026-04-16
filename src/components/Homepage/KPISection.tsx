@@ -124,24 +124,16 @@ function AnimatedNumber({
   return <p className={className}>{formatter(displayValue)}</p>
 }
 
-/**
- * Format large numbers with M/B suffix
- */
-function formatNumber(value: number, locale: string): string {
-  if (value >= 1_000_000_000) {
-    return `${(value / 1_000_000_000).toFixed(1)}B`
-  }
-  if (value >= 1_000_000) {
-    return `${Math.round(value / 1_000_000)}M`
-  }
-  if (value >= 1_000) {
-    return numberFormat(locale).format(value)
-  }
-  return value.toString()
+function formatCompact(value: number, locale: string): string {
+  return numberFormat(locale, {
+    notation: "compact",
+    maximumSignificantDigits: 3,
+  }).format(value)
 }
 
 /**
- * Format transaction count with spaces (European style: 21 400 433)
+ * Format transaction count with spaces as thousands separator (design choice
+ * to avoid commas/dots that interfere with the animated counter).
  */
 function formatTransactions(value: number): string {
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
@@ -196,7 +188,7 @@ const KPISection = ({
             <div className="flex flex-col gap-1">
               <p className="text-4xl font-bold leading-[1.2]">
                 {accountHolders !== null
-                  ? formatNumber(accountHolders, locale)
+                  ? formatCompact(accountHolders, locale)
                   : "—"}
               </p>
               <p className="text-base leading-[1.6] text-body-medium">

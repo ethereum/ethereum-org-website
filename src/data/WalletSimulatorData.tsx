@@ -47,121 +47,94 @@ export function useWalletOnboardingSimData(): SimulatorData {
 export function buildSimulatorData(t: TranslateFn): SimulatorData {
   return {
     [CREATE_ACCOUNT]: {
-      title: "Create account",
+      title: t("sim-ca-title"),
       Icon: CreateAccountIcon,
       Screen: CreateAccount,
       explanations: [
         {
-          header: "Begin your journey by downloading a wallet",
+          header: t("sim-ca-header-1"),
           description: (
             <>
-              <p>To get started, you&apos;ll need to download a wallet app.</p>
-              <p>
-                Most people use mobile apps, but desktop apps and browser
-                extensions are also available.
-              </p>
-              <p>
-                Let&apos;s set up a mobile wallet. Click &quot;Install a
-                wallet&quot; to get started.
-              </p>
+              <p>{t("sim-ca-desc-1-p1")}</p>
+              <p>{t("sim-ca-desc-1-p2")}</p>
+              <p>{t("sim-ca-desc-1-p3")}</p>
             </>
           ),
         },
         {
-          header: "Wallets are free apps you can download",
+          header: t("sim-ca-header-2"),
           description: (
             <>
-              <p>
-                Mobile wallet apps can be downloaded and installed using any app
-                store.
-              </p>
-              <p>
-                Wallets provide an easy way to create an Ethereum account, and
-                then use Ethereum and its applications.
-              </p>
-              <p>Go ahead and open your new wallet app.</p>
+              <p>{t("sim-ca-desc-2-p1")}</p>
+              <p>{t("sim-ca-desc-2-p2")}</p>
+              <p>{t("sim-ca-desc-2-p3")}</p>
             </>
           ),
         },
         {
-          header: "Creating an account is free, private and easy",
+          header: t("sim-ca-header-3"),
           description: (
             <>
-              <p>
-                Ethereum accounts are created privately and do not require any
-                forms or approval—no personal identifying information required!
-              </p>
-              <p>
-                Click on &quot;Create account&quot; to generate a new account.
-              </p>
+              <p>{t("sim-ca-desc-3-p1")}</p>
+              <p>{t("sim-ca-desc-3-p2")}</p>
             </>
           ),
         },
         {
-          header:
-            "This is YOUR account, and nobody else's—you control it completely",
-          description: (
-            <p>
-              No company, including your wallet provider, has access to your
-              account.
-            </p>
-          ),
+          header: t("sim-ca-header-4"),
+          description: <p>{t("sim-ca-desc-4-p1")}</p>,
         },
         {
-          header: "A recovery phrase is used to keep the account safe",
+          header: t("sim-ca-header-5"),
           description: (
             <>
-              <p>
-                You and only you control this phrase, so it is critical to take
-                steps to backup and secure it.
-              </p>
-              <p>
-                Read carefully and click &quot;I understand&quot; to see and
-                backup your recovery phrase.
-              </p>
+              <p>{t("sim-ca-desc-5-p1")}</p>
+              <p>{t("sim-ca-desc-5-p2")}</p>
             </>
           ),
         },
         {
-          header: "Keep your phrase safe!",
+          header: t("sim-ca-header-6"),
           description: (
             <>
               <Stack>
-                <p className="font-bold">Storing small amount of value:</p>
+                <p className="font-bold">{t("sim-ca-desc-6-small-title")}</p>
                 <UnorderedList className="leading-1 ms-0 list-none">
                   <ListItem>
-                    <Emoji text="✅" className="me-2" /> Consider saving in a
-                    password manager
+                    <Emoji text="✅" className="me-2" />{" "}
+                    {t("sim-ca-desc-6-small-1")}
                   </ListItem>
                 </UnorderedList>
               </Stack>
               <Stack>
-                <p className="font-bold">Storing any significant value:</p>
+                <p className="font-bold">
+                  {t("sim-ca-desc-6-significant-title")}
+                </p>
                 <UnorderedList className="leading-1 ms-0 list-none">
                   <ListItem>
-                    <Emoji text="✅" className="me-2" /> Write your recovery
-                    phrase down
+                    <Emoji text="✅" className="me-2" />{" "}
+                    {t("sim-ca-desc-6-significant-1")}
                   </ListItem>
                   <ListItem>
-                    <Emoji text="✅" className="me-2" /> Store it in a safe
-                    place (consider multiple backups)
+                    <Emoji text="✅" className="me-2" />{" "}
+                    {t("sim-ca-desc-6-significant-2")}
                   </ListItem>
                 </UnorderedList>
               </Stack>
               <Stack>
-                <p className="font-bold">Unsafe backup methods:</p>
+                <p className="font-bold">{t("sim-ca-desc-6-unsafe-title")}</p>
                 <UnorderedList className="leading-1 ms-0 list-none">
                   <ListItem>
                     <Emoji text="❌" className="me-2" />
-                    Texting it to a friend (or anyone!)
+                    {t("sim-ca-desc-6-unsafe-1")}
                   </ListItem>
                   <ListItem>
                     <Emoji text="❌" className="me-2" />
-                    Taking a picture of the phrase
+                    {t("sim-ca-desc-6-unsafe-2")}
                   </ListItem>
                   <ListItem>
                     <Emoji text="❌" className="me-2" />
-                    Saving it in a file on your computer
+                    {t("sim-ca-desc-6-unsafe-3")}
                   </ListItem>
                 </UnorderedList>
               </Stack>
@@ -169,45 +142,40 @@ export function buildSimulatorData(t: TranslateFn): SimulatorData {
           ),
         },
         {
-          header: "Repeat phrase to prove you have saved it",
+          header: t("sim-ca-header-7"),
           description: (
             <>
               <p>
-                This is done on initial setup only, but is <strong>not</strong>{" "}
-                required every time.
+                {t.rich("sim-ca-desc-7-p1", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                })}
               </p>
               <p>
-                <strong>Keep this private!</strong> Nobody from customer service
-                should <em>ever</em> ask you for this.
+                {t.rich("sim-ca-desc-7-p2", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                  em: (chunks) => <em>{chunks}</em>,
+                })}
               </p>
-              <p>
-                Click the words in the correct order to prove you&apos;ve backed
-                up your phrase.
-              </p>
+              <p>{t("sim-ca-desc-7-p3")}</p>
             </>
           ),
         },
         {
-          header: "That's it! Welcome to Ethereum 🎉",
-          description: (
-            <p>
-              In the next lesson we&apos;ll learn how to use your new account to
-              receive and send some funds.
-            </p>
-          ),
+          header: t("sim-ca-header-8"),
+          description: <p>{t("sim-ca-desc-8-p1")}</p>,
         },
       ],
       ctaLabels: [
-        "Install a wallet",
-        "Open wallet",
-        "Create account",
-        "Next",
-        "I understand",
-        "Next",
-        "Start using wallet",
+        t("sim-ca-cta-1"),
+        t("sim-ca-cta-2"),
+        t("sim-ca-cta-3"),
+        t("sim-ca-cta-4"),
+        t("sim-ca-cta-5"),
+        t("sim-ca-cta-6"),
+        t("sim-ca-cta-7"),
       ],
       finalCtaLink: {
-        label: "Download a real wallet",
+        label: t("sim-ca-final-cta"),
         href: "/wallets/find-wallet/",
       },
       nextPathId: SEND_RECEIVE,
@@ -308,112 +276,78 @@ export function buildSimulatorData(t: TranslateFn): SimulatorData {
       nextPathId: CONNECT_WEB3,
     },
     [CONNECT_WEB3]: {
-      title: "Connect to Web3",
+      title: t("sim-cw-title"),
       Icon: ConnectWeb3Icon,
       Screen: ConnectWeb3,
       explanations: [
         {
-          header:
-            "Explore Web3: from NFTs to decentralized finance and identity",
+          header: t("sim-cw-header-1"),
           description: (
             <>
+              <p>{t("sim-cw-desc-1-p1")}</p>
+              <p>{t("sim-cw-desc-1-p2")}</p>
+            </>
+          ),
+        },
+        {
+          header: t("sim-cw-header-2"),
+          description: (
+            <>
+              <p>{t("sim-cw-desc-2-p1")}</p>
+              <p>{t("sim-cw-desc-2-p2")}</p>
+            </>
+          ),
+        },
+        {
+          header: t("sim-cw-header-3"),
+          description: (
+            <>
+              <p>{t("sim-cw-desc-3-p1")}</p>
+              <p>{t("sim-cw-desc-3-p2")}</p>
+            </>
+          ),
+        },
+        {
+          header: t("sim-cw-header-4"),
+          description: (
+            <>
+              <p>{t("sim-cw-desc-4-p1")}</p>
+              <p>{t("sim-cw-desc-4-p2")}</p>
+              <p>{t("sim-cw-desc-4-p3")}</p>
+            </>
+          ),
+        },
+        {
+          header: t("sim-cw-header-5"),
+          description: (
+            <>
+              <p>{t("sim-cw-desc-5-p1")}</p>
               <p>
-                Your wallet can be used to connect to all sorts of applications,
-                allowing you to interact with your onchain assets.
-              </p>
-              <p>
-                Your friend just sent an NFT art piece to your address!
-                Let&apos;s go to a new NFT marketplace website to view it.
+                {t.rich("sim-cw-desc-5-p2", {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                })}
               </p>
             </>
           ),
         },
         {
-          header: "No need to create a new account for each service",
+          header: t("sim-cw-header-6"),
           description: (
             <>
-              <p>
-                Your account is universal across all Ethereum and
-                Ethereum-compatible applications.
-              </p>
-              <p>Assets stored onchain can be accessed from any application.</p>
-            </>
-          ),
-        },
-        {
-          header:
-            "You can have a single login for most Ethereum based projects",
-          description: (
-            <>
-              <p>
-                The same account address will represent your identity on many
-                different Ethereum compatible blockchains such as Arbitrum,
-                Polygon or Optimism.
-              </p>
-              <p>
-                Logins are handled by your wallet—no more creating insecure
-                passwords.
-              </p>
-            </>
-          ),
-        },
-        {
-          header: "Personal identifying information is not shared",
-          description: (
-            <>
-              <p>Your private information stays private.</p>
-              <p>
-                Your personal information, such as email or phone number, is not
-                needed to use Web3 apps—you only need a wallet.
-              </p>
-              <p>
-                Also note there are no associated transaction fees here—signing
-                in using Ethereum is free, fast and easy!
-              </p>
-            </>
-          ),
-        },
-        {
-          header:
-            "No geographical or political discrimination against who can use Ethereum services",
-          description: (
-            <>
-              <p>There&apos;s the NFT you received!</p>
-              <p>
-                Wallets are technically only an interface to show you your
-                balance and to make transactions—
-                <strong>
-                  your assets aren&apos;t stored inside the wallet, but on the
-                  blockchain.
-                </strong>
-              </p>
-            </>
-          ),
-        },
-        {
-          header: "Start your journey now",
-          description: (
-            <>
-              <p>
-                Great job! You&apos;re ready to start using apps on Ethereum.
-              </p>
+              <p>{t("sim-cw-desc-6-p1")}</p>
               <Stack>
-                <p className="font-bold">What to do next:</p>
+                <p className="font-bold">{t("sim-cw-desc-6-next")}</p>
                 <OrderedList>
                   <ListItem>
-                    <Link href="/security/">
-                      Learn about staying safe in Web3
-                    </Link>
+                    <Link href="/security/">{t("sim-cw-desc-6-link-1")}</Link>
                   </ListItem>
                   <ListItem>
                     <Link href="/what-is-ethereum/">
-                      Learn more about Ethereum
+                      {t("sim-cw-desc-6-link-2")}
                     </Link>
                   </ListItem>
                   <ListItem>
-                    <Link href="/apps/">
-                      Check out some beginner friendly apps
-                    </Link>
+                    <Link href="/apps/">{t("sim-cw-desc-6-link-3")}</Link>
                   </ListItem>
                 </OrderedList>
               </Stack>
@@ -422,14 +356,14 @@ export function buildSimulatorData(t: TranslateFn): SimulatorData {
         },
       ],
       ctaLabels: [
-        "Visit NFT market",
-        "Connect wallet",
-        "Connect to app",
-        "Go to account",
-        "Finished",
+        t("sim-cw-cta-1"),
+        t("sim-cw-cta-2"),
+        t("sim-cw-cta-3"),
+        t("sim-cw-cta-4"),
+        t("sim-cw-cta-5"),
       ],
       finalCtaLink: {
-        label: "Get a wallet",
+        label: t("sim-cw-final-cta"),
         href: "/wallets/find-wallet/",
         isPrimary: true,
       },
