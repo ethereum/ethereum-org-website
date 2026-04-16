@@ -5,8 +5,9 @@ import { NextIntlClientProvider } from "next-intl"
 /**
  * Minimal glossary translations for the SimulatorSection.
  *
- * The homepage is English-only, so we hardcode just the required translations
- * instead of loading the full glossary-tooltip namespace.
+ * The Simulator components use glossary-tooltip keys internally.
+ * We hardcode just the required translations instead of loading
+ * the full glossary-tooltip namespace.
  */
 const SIMULATOR_MESSAGES = {
   "glossary-tooltip": {
