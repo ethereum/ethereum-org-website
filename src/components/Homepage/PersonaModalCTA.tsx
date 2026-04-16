@@ -192,34 +192,58 @@ const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
     setIsOpen(false)
   }
 
+  // Collect links that are only reachable via the modal (not duplicated
+  // elsewhere on the page) so crawlers can discover them without JS.
+  const crawlerOnlyLinks = categories.flatMap((cat) =>
+    cat.links.filter(
+      ({ href }) =>
+        !["/what-is-ethereum/", "/wallets/find-wallet/", "/get-eth/"].includes(
+          href
+        )
+    )
+  )
+
   return (
-    <Dialog open={isOpen} onOpenChange={handleOpenChange}>
-      <DialogTrigger asChild>
-        <Button variant="solid" size="lg" className="gap-2">
-          {t("page-index-hero-cta")}
-          <ChevronNext className="size-5" />
-        </Button>
-      </DialogTrigger>
-      <DialogContent className="max-w-[1440px] p-4 md:rounded-[32px] md:p-8">
-        <DialogHeader className="pe-0 pt-8 md:pt-0">
-          <DialogTitle className="text-center text-2xl font-bold md:text-4xl">
-            {t("page-index-modal-title")}
-          </DialogTitle>
-          <DialogDescription className="sr-only">
-            {t("page-index-modal-description")}
-          </DialogDescription>
-        </DialogHeader>
-        <div className="mt-4 grid gap-4 md:mt-6 md:grid-cols-3 md:gap-6">
-          {categories.map((category) => (
-            <CategoryCard
-              key={category.id}
-              category={category}
-              onLinkClick={handleLinkClick}
-            />
-          ))}
-        </div>
-      </DialogContent>
-    </Dialog>
+    <>
+      <Dialog open={isOpen} onOpenChange={handleOpenChange}>
+        <DialogTrigger asChild>
+          <Button variant="solid" size="lg" className="gap-2">
+            {t("page-index-hero-cta")}
+            <ChevronNext className="size-5" />
+          </Button>
+        </DialogTrigger>
+        <DialogContent className="max-w-[1440px] p-4 md:rounded-[32px] md:p-8">
+          <DialogHeader className="pe-0 pt-8 md:pt-0">
+            <DialogTitle className="text-center text-2xl font-bold md:text-4xl">
+              {t("page-index-modal-title")}
+            </DialogTitle>
+            <DialogDescription className="sr-only">
+              {t("page-index-modal-description")}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4 grid gap-4 md:mt-6 md:grid-cols-3 md:gap-6">
+            {categories.map((category) => (
+              <CategoryCard
+                key={category.id}
+                category={category}
+                onLinkClick={handleLinkClick}
+              />
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Static links for SEO — these URLs are only reachable via the JS
+          dialog modal above, so we render them visually-hidden to ensure
+          crawlers can discover them. */}
+      <nav aria-label="Quick links" className="sr-only">
+        {crawlerOnlyLinks.map(({ label, href }) => (
+          <BaseLink key={href} href={href}>
+            {label}
+          </BaseLink>
+        ))}
+      </nav>
+    </>
   )
 }
 
