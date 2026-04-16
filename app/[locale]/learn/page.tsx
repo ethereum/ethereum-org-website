@@ -62,7 +62,7 @@ const Section = ({
 }: {
   headingId: string
   headingTitle: string
-  description?: string
+  description?: ReactNode
   children: ReactNode
 }) => (
   <Stack asChild className="gap-8">
@@ -191,7 +191,13 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               <Section
                 headingId={tocItems[0].id}
                 headingTitle={tocItems[0].title}
-                description={t("what-is-crypto-2")}
+                description={
+                  <>
+                    {t("what-is-crypto-2-before-link")}{" "}
+                    <InlineLink href="/">{tCommon("ethereum")}</InlineLink>{" "}
+                    {t("what-is-crypto-2-after-link")}
+                  </>
+                }
               >
                 {/* Featured: the 3 essential starting points */}
                 <div className="grid grid-cols-fill-4 gap-4">
