@@ -334,6 +334,9 @@ importers:
       image-size:
         specifier: ^1.0.2
         version: 1.2.1
+      intl-content-tree:
+        specifier: ^0.3.0
+        version: 0.3.0
       lint-staged:
         specifier: ^15.2.5
         version: 15.5.2
@@ -8021,6 +8024,9 @@ packages:
   internmap@2.0.3:
     resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
     engines: {node: '>=12'}
+
+  intl-content-tree@0.3.0:
+    resolution: {integrity: sha512-5DSHIdFt7M8kWVBZ9XgXqg3raxGnCNF6qhukfTCcmy00GD+3fBmgUvx4en6yZ76QF4qfUC/yiTzOrxE99+15VQ==}
 
   intl-messageformat@11.2.0:
     resolution: {integrity: sha512-IhghAA8n4KSlXuWKzYsWyWb82JoYTzShfyvdSF85oJPnNOjvv4kAo7S7Jtkm3/vJ53C7dQNRO+Gpnj3iWgTjBQ==}
@@ -22050,6 +22056,8 @@ snapshots:
       side-channel: 1.1.0
 
   internmap@2.0.3: {}
+
+  intl-content-tree@0.3.0: {}
 
   intl-messageformat@11.2.0:
     dependencies:

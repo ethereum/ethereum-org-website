@@ -2,7 +2,7 @@
 
 - [Node.js](https://nodejs.org/)
 - [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
-- [Next.js 14](https://nextjs.org/)
+- [Next.js 16](https://nextjs.org/)
   - React framework with App Router, SSG, SSR, i18n support, Image component, etc.
   - Configurable in `next.config.js`
   - [Next.js Tutorial](https://nextjs.org/learn)

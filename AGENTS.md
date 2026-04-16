@@ -54,6 +54,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
   - **content/** - Markdown content files
   - **images/** - Image assets
 - **docs/** - Development documentation
+  - **solutions/** - Documented solutions to past problems, organized by category with YAML frontmatter (module, tags, problem_type)
 
 ## Code Conventions
 
