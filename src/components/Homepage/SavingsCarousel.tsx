@@ -331,6 +331,7 @@ const SavingsCarousel = ({
   className,
   eventCategory = "Homepage",
 }: SavingsCarouselProps) => {
+  const t = useTranslations("page-index")
   const slides = useSlides()
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -344,7 +345,11 @@ const SavingsCarousel = ({
   }
 
   return (
-    <section className={cn("w-full", className)}>
+    <section
+      className={cn("w-full", className)}
+      aria-roledescription="carousel"
+      aria-label={t("page-index-carousel-label")}
+    >
       <SwiperContainer className="[&_.swiper]:!flex [&_.swiper]:flex-col [&_.swiper]:gap-6">
         <Swiper
           navigationPlacement="bottom"
@@ -360,7 +365,10 @@ const SavingsCarousel = ({
               />
             </SwiperSlide>
           ))}
-          <SwiperNavigation />
+          <SwiperNavigation
+            prevLabel={t("page-index-carousel-previous-slide")}
+            nextLabel={t("page-index-carousel-next-slide")}
+          />
         </Swiper>
       </SwiperContainer>
     </section>
