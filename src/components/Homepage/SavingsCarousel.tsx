@@ -263,7 +263,7 @@ const SlideContent = ({
         </Link>
 
         {/* Mobile comparison cards - stacked below content */}
-        <div className="flex flex-col gap-3 md:hidden">
+        <div className="flex flex-col gap-5 md:hidden">
           <ComparisonCard
             item={comparison.traditional}
             variant="default"
@@ -305,22 +305,24 @@ const SlideContent = ({
             />
           </div>
 
-          <ComparisonCard
-            item={comparison.traditional}
-            variant="default"
-            controls={traditionalControls}
-            initial={{ opacity: 0, x: -20, y: 10 }}
-            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-            className="absolute -left-8 bottom-40 z-10 w-[250px] lg:-left-12 lg:bottom-44 lg:w-[269px]"
-          />
-          <ComparisonCard
-            item={comparison.ethereum}
-            variant="primary"
-            controls={ethereumControls}
-            initial={{ opacity: 0, x: -30, y: 15 }}
-            transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
-            className="absolute -left-12 bottom-10 z-10 w-[280px] lg:-left-16 lg:w-[339px]"
-          />
+          <div className="absolute -left-12 bottom-10 z-10 flex flex-col gap-5 lg:-left-16">
+            <ComparisonCard
+              item={comparison.traditional}
+              variant="default"
+              controls={traditionalControls}
+              initial={{ opacity: 0, x: -20, y: 10 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              className="ms-4 w-[357px]"
+            />
+            <ComparisonCard
+              item={comparison.ethereum}
+              variant="primary"
+              controls={ethereumControls}
+              initial={{ opacity: 0, x: -30, y: 15 }}
+              transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
+              className="w-[339px]"
+            />
+          </div>
         </div>
       </div>
     </div>
