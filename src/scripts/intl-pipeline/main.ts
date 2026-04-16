@@ -115,18 +115,21 @@ async function loadGlossary(
         note?: string
       }>
     }
+    // Sanitize all glossary fields to prevent prompt injection
+    // eslint-disable-next-line no-control-regex
+    const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
+    const sanitize = (s: string, maxLen: number) =>
+      s.replace(controlCharRe, "").replace(/\n/g, " ").slice(0, maxLen)
+
     const map = new Map<string, string>()
     for (const term of data.terms) {
-      // Sanitize note to prevent prompt injection (strip control chars, limit length)
-      // eslint-disable-next-line no-control-regex
-      const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
-      const safeNote = term.note
-        ? term.note.replace(controlCharRe, "").slice(0, 200)
-        : ""
+      const safeEnglish = sanitize(term.english, 200)
+      const safeTranslation = sanitize(term.translation, 500)
+      const safeNote = term.note ? sanitize(term.note, 200) : ""
       const value = safeNote
-        ? `${term.translation} (${safeNote})`
-        : term.translation
-      map.set(term.english, value)
+        ? `${safeTranslation} (${safeNote})`
+        : safeTranslation
+      map.set(safeEnglish, value)
     }
     return map
   } catch (err) {
@@ -563,6 +566,12 @@ async function main() {
   await committer.init()
 
   const committedFiles: Array<{ path: string; content: string }> = []
+  let hasCommits = false
+
+  // Validate target paths before any filesystem reads
+  for (const fp of config.targetPaths) {
+    validateTargetPath(fp)
+  }
 
   // Load English files from disk
   const englishFiles: FileContext[] = config.targetPaths.map((fp) => ({
@@ -647,6 +656,7 @@ async function main() {
             sourceManifest,
             locale
           )
+          hasCommits = true
         })
         continue
       }
@@ -682,7 +692,7 @@ async function main() {
   }
 
   // Squash interleaved commits into one per language
-  if (committedFiles.length > 0) {
+  if (committedFiles.length > 0 || hasCommits) {
     await committer.squashByLanguage()
   }
 
@@ -701,7 +711,7 @@ async function main() {
   }
 
   // Merge temp branch into target branch
-  if (committedFiles.length > 0) {
+  if (committedFiles.length > 0 || hasCommits) {
     log(`Merging ${tempBranch} -> ${targetBranch}`)
     await ensureStagingBranch(targetBranch, baseBranch)
     const merged = await mergeBranchInto(tempBranch, targetBranch)
@@ -716,7 +726,7 @@ async function main() {
   }
 
   // Create or update PR unless skipped
-  if (committedFiles.length > 0 && !config.skipPr) {
+  if ((committedFiles.length > 0 || hasCommits) && !config.skipPr) {
     const languagePairs = targetLanguages.map((code) => {
       const entry = i18nConfig.find((l: { code: string }) => l.code === code)
       return {

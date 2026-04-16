@@ -1070,7 +1070,11 @@ export async function callGeminiRaw(
           .generateContent({
             model: modelId,
             contents: prompt,
-            config: { temperature: 0, safetySettings: SAFETY_SETTINGS },
+            config: {
+              temperature: 0,
+              safetySettings: SAFETY_SETTINGS,
+              abortSignal: controller.signal,
+            },
           })
           .finally(() => clearTimeout(timeout))
         const usage = response.usageMetadata
