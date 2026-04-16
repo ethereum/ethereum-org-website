@@ -1,7 +1,5 @@
-import { Suspense } from "react"
 import { pick } from "lodash"
 import { ArrowRight } from "lucide-react"
-import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import {
   getMessages,
@@ -19,30 +17,21 @@ import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { TrackedSection } from "@/components/TrackedSection"
 import { BaseLink } from "@/components/ui/Link"
-import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
+import { SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import {
+  KPISection,
+  SavingsCarousel,
+  SimulatorSection,
+} from "./_components/HomepageLazy"
 import IndexPageJsonLD from "./page-jsonld"
 
 import { getAccountHolders, getGrowThePieData } from "@/lib/data"
-
-const KPISection = dynamic(() => import("@/components/Homepage/KPISection"))
-const SavingsCarousel = dynamic(
-  () => import("@/components/Homepage/SavingsCarousel")
-)
-const SimulatorSection = dynamic(
-  () => import("@/components/Homepage/SimulatorSection")
-)
-
-const SectionSkeleton = ({ className }: { className?: string }) => (
-  <Section className={className}>
-    <div className="h-[400px] w-full animate-pulse rounded-2xl bg-background-highlight md:h-[500px]" />
-  </Section>
-)
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -75,7 +64,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
   const messages = {
-    ...pick(allMessages, "page-index", "simulator"),
+    ...pick(allMessages, "page-index", "component-wallet-simulator"),
     "glossary-tooltip": pick(glossary, [
       "nft-term",
       "nft-definition",
@@ -95,22 +84,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
             <TrackedSection id="kpi" eventCategory={eventCategory}>
-              <Suspense fallback={<SectionSkeleton className="py-12" />}>
-                <KPISection
-                  accountHolders={accountHolders}
-                  transactionsToday={transactionsToday}
-                  className="py-12"
-                />
-              </Suspense>
+              <KPISection
+                accountHolders={accountHolders}
+                transactionsToday={transactionsToday}
+                className="py-12"
+              />
             </TrackedSection>
 
             <TrackedSection id="savings_carousel" eventCategory={eventCategory}>
-              <Suspense fallback={<SectionSkeleton className="py-12" />}>
-                <SavingsCarousel
-                  className="py-12"
-                  eventCategory={eventCategory}
-                />
-              </Suspense>
+              <SavingsCarousel
+                className="py-12"
+                eventCategory={eventCategory}
+              />
             </TrackedSection>
 
             <TrackedSection id="trust_logos" eventCategory={eventCategory}>
@@ -118,39 +103,37 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </TrackedSection>
 
             <TrackedSection id="simulator" eventCategory={eventCategory}>
-              <Suspense fallback={<SectionSkeleton className="py-12" />}>
-                <SimulatorSection
-                  className="py-12"
-                  header={
-                    <div className="flex flex-col items-center gap-4 text-center">
-                      <SectionTag variant="plain">
-                        {t("page-index-simulator-tag")}
-                      </SectionTag>
-                      <SectionHeader className="mb-0 mt-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
-                        {t("page-index-simulator-title")}
-                      </SectionHeader>
-                      <p className="text-lg text-body-medium md:text-xl">
-                        {t("page-index-simulator-subtitle")}
-                      </p>
-                    </div>
-                  }
-                  footer={
-                    <BaseLink
-                      href="/guides/"
-                      hideArrow
-                      className="inline-flex items-center gap-1 no-underline"
-                      customEventOptions={{
-                        eventCategory,
-                        eventAction: "section_click",
-                        eventName: "simulator/explore_guides",
-                      }}
-                    >
-                      {t("page-index-simulator-cta")}
-                      <ArrowRight className="size-4" />
-                    </BaseLink>
-                  }
-                />
-              </Suspense>
+              <SimulatorSection
+                className="py-12"
+                header={
+                  <div className="flex flex-col items-center gap-4 text-center">
+                    <SectionTag variant="plain">
+                      {t("page-index-simulator-tag")}
+                    </SectionTag>
+                    <SectionHeader className="mb-0 mt-0 text-4xl leading-tight md:text-5xl lg:text-6xl">
+                      {t("page-index-simulator-title")}
+                    </SectionHeader>
+                    <p className="text-lg text-body-medium md:text-xl">
+                      {t("page-index-simulator-subtitle")}
+                    </p>
+                  </div>
+                }
+                footer={
+                  <BaseLink
+                    href="/guides/"
+                    hideArrow
+                    className="inline-flex items-center gap-1 no-underline"
+                    customEventOptions={{
+                      eventCategory,
+                      eventAction: "section_click",
+                      eventName: "simulator/explore_guides",
+                    }}
+                  >
+                    {t("page-index-simulator-cta")}
+                    <ArrowRight className="size-4" />
+                  </BaseLink>
+                }
+              />
             </TrackedSection>
 
             <TrackedSection id="feature_cards" eventCategory={eventCategory}>

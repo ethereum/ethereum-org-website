@@ -14,7 +14,7 @@ type WalletBalanceProps = {
 }
 
 export const WalletBalance = ({ usdAmount = 0 }: WalletBalanceProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   return (
     <div className="z-[1]">
       <p className="mb-2 text-center text-body-medium md:mb-4">

@@ -6,7 +6,7 @@ type InitialWordDisplayProps = {
   words: Array<string>
 }
 export const InitialWordDisplay = ({ words }: InitialWordDisplayProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
 
   return (
     <div className="bg-background-highlight">

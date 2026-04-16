@@ -13,7 +13,7 @@ type NFTListProps = FlexProps & {
   nfts: Array<NFT>
 }
 export const NFTList = ({ nfts, ...flexProps }: NFTListProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const size = useBreakpointValue({
     base: "max-w-20 max-h-20",
     md: "max-w-24 max-h-24",

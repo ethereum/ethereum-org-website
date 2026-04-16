@@ -14,7 +14,7 @@ import { EXAMPLE_APP_URL } from "./constants"
 type BrowserProps = HTMLAttributes<HTMLDivElement>
 
 export const Browser = ({ ...props }: BrowserProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const [typing, setTyping] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => {

@@ -31,7 +31,7 @@ export const WalletHome = ({
   setActiveTabIndex,
   nfts = [],
 }: WalletHomeProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const data: Array<TokenBalance> = tokenBalances ?? defaultTokenBalances
   const totalAmounts = data.reduce(
     (acc, { amount, usdConversion }) => acc + amount * usdConversion,

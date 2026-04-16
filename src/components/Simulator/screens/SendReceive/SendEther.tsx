@@ -22,7 +22,7 @@ export const SendEther = ({
   chosenAmount,
   setChosenAmount,
 }: SendEtherProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
 
   const formatDollars = (amount: number): string =>
     numberFormat("en-US", {

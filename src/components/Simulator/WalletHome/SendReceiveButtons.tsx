@@ -16,7 +16,7 @@ export const SendReceiveButtons = ({
   nav,
   isEnabled = [false, false],
 }: SendReceiveButtonsProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const [isSendEnabled, isReceiveEnabled] = isEnabled
   if (nav && isSendEnabled && isReceiveEnabled)
     throw new Error(

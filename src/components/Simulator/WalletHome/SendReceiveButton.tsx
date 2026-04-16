@@ -26,7 +26,7 @@ export const SendReceiveButton = ({
   onClick,
   isAnimated,
 }: SendReceiveButtonProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   return (
     <Button
       variant="ghost"

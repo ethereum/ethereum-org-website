@@ -17,7 +17,7 @@ export const InteractiveWordSelector = ({
   ctaLabel,
   nav,
 }: InteractiveWordSelectorProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const { progressStepper } = nav
   const [wordsSelected, setWordsSelected] = useState(0)
   return (
