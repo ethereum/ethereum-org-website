@@ -196,10 +196,7 @@ const PersonaModalCTA = ({ eventCategory }: PersonaModalCTAProps) => {
   // elsewhere on the page) so crawlers can discover them without JS.
   const crawlerOnlyLinks = categories.flatMap((cat) =>
     cat.links.filter(
-      ({ href }) =>
-        !["/what-is-ethereum/", "/wallets/find-wallet/", "/get-eth/"].includes(
-          href
-        )
+      ({ href }) => !["/what-is-ethereum/", "/get-eth/"].includes(href)
     )
   )
 
