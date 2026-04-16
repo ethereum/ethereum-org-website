@@ -61,6 +61,7 @@ import {
   GLOSSARY_API_URL,
   validateTargetPath,
 } from "./config"
+import { MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
 
@@ -82,19 +83,16 @@ function log(msg: string) {
   console.log(`[pipeline] ${msg}`)
 }
 
-function readSourceManifestPath(
+/**
+ * Get manifest path for a given destination file.
+ * Structure: .manifests/{destPath}/source.json or translation.json
+ * Example: .manifests/public/content/translations/ar/about/index.md/source.json
+ */
+function getManifestPath(
   destPath: string,
-  fileType: string,
-  locale: string
+  type: "source" | "translation"
 ): string {
-  if (fileType === "markdown") {
-    return path.join(
-      process.cwd(),
-      path.dirname(destPath),
-      ".manifest-source.json"
-    )
-  }
-  return path.join(process.cwd(), `src/intl/${locale}/.manifest-source.json`)
+  return path.join(process.cwd(), MANIFESTS_DIR, destPath, `${type}.json`)
 }
 
 /**
@@ -418,39 +416,22 @@ async function runFullTranslation(
       ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
       : buildJsonManifest(file.content, file.path, baseBranchSha)
 
-  if (file.type === "markdown") {
-    const manifestPath = destPath.replace(/index\.md$/, ".manifest-source.json")
-    await committer.commitFile(manifestPath, sourceManifest, locale)
+  // Commit source manifest
+  const smDest = getManifestPath(destPath, "source")
+  await committer.commitFile(smDest, sourceManifest, locale)
 
-    if (result.placeholderOrder && result.placeholderMap) {
-      const parsed = JSON.parse(sourceManifest)
-      const tm = buildLocaleTranslationManifest({
-        locale,
-        englishManifestHash: parsed.rootHash,
-        placeholderOrder: result.placeholderOrder,
-        placeholderMap: result.placeholderMap,
-        sections: {
-          _all: { translatedAt: new Date().toISOString(), status: "success" },
-        },
-      })
-      const tmPath = destPath.replace(
-        /index\.md$/,
-        ".manifest-translation.json"
-      )
-      await committer.commitFile(tmPath, tm, locale)
-    }
-  } else {
-    const manifestPath = `src/intl/${locale}/.manifest-source.json`
-    await committer.commitFile(manifestPath, sourceManifest, locale)
+  // Commit translation manifest
+  const placeholderData =
+    result.placeholderOrder && result.placeholderMap
+      ? {
+          placeholderOrder: result.placeholderOrder,
+          placeholderMap: result.placeholderMap,
+        }
+      : file.type === "json"
+        ? extractPlaceholderData(parseEnglishJson(file.content))
+        : null
 
-    const placeholderData =
-      result.placeholderOrder && result.placeholderMap
-        ? {
-            placeholderOrder: result.placeholderOrder,
-            placeholderMap: result.placeholderMap,
-          }
-        : extractPlaceholderData(parseEnglishJson(file.content))
-
+  if (placeholderData) {
     const parsed = JSON.parse(sourceManifest)
     const tm = buildLocaleTranslationManifest({
       locale,
@@ -461,8 +442,8 @@ async function runFullTranslation(
         _all: { translatedAt: new Date().toISOString(), status: "success" },
       },
     })
-    const jsonTmPath = `src/intl/${locale}/.manifest-translation.json`
-    await committer.commitFile(jsonTmPath, tm, locale)
+    const tmDest = getManifestPath(destPath, "translation")
+    await committer.commitFile(tmDest, tm, locale)
   }
 
   log(`[${locale}] ${destPath}: committed`)
@@ -554,13 +535,8 @@ async function runIncremental(
       ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
       : buildJsonManifest(englishB, file.path, baseBranchSha)
 
-  if (file.type === "markdown") {
-    const smPath = destPath.replace(/index\.md$/, ".manifest-source.json")
-    await committer.commitFile(smPath, sourceManifest, locale)
-  } else {
-    const smPath = `src/intl/${locale}/.manifest-source.json`
-    await committer.commitFile(smPath, sourceManifest, locale)
-  }
+  const smDest = getManifestPath(destPath, "source")
+  await committer.commitFile(smDest, sourceManifest, locale)
 
   log(`[${locale}] ${destPath}: committed (incremental)`)
   return { tokens }
@@ -620,7 +596,7 @@ async function main() {
   for (const file of englishFiles) {
     for (const locale of targetLanguages) {
       const destPath = getDestinationFromPath(file.path, locale)
-      const smPath = readSourceManifestPath(destPath, file.type, locale)
+      const smPath = getManifestPath(destPath, "source")
       const localePath = readLocalePath(
         destPath,
         file.type,
@@ -674,11 +650,11 @@ async function main() {
             file.type === "markdown"
               ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
               : buildJsonManifest(file.content, file.path, baseBranchSha)
-          const manifestDest =
-            file.type === "markdown"
-              ? destPath.replace(/index\.md$/, ".manifest-source.json")
-              : `src/intl/${locale}/.manifest-source.json`
-          await committer.commitFile(manifestDest, sourceManifest, locale)
+          await committer.commitFile(
+            getManifestPath(destPath, "source"),
+            sourceManifest,
+            locale
+          )
         })
         continue
       }
