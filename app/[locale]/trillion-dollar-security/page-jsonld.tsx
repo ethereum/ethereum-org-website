@@ -6,9 +6,10 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
-  ethereumCommunityReference,
   ethereumFoundationOrganization,
   ethereumFoundationReference,
+  KNOWN_AUTHORS,
+  knownAuthorReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -34,6 +35,8 @@ export default async function TrillionDollarSecurityPageJsonLD({
     "@graph": [
       ethereumFoundationOrganization,
       ethereumCommunityOrganization,
+      KNOWN_AUTHORS["josh-stark"],
+      KNOWN_AUTHORS["fredrik-svantes"],
       {
         "@type": "WebPage",
         "@id": url,
@@ -42,7 +45,10 @@ export default async function TrillionDollarSecurityPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
+        author: [
+          knownAuthorReference("josh-stark"),
+          knownAuthorReference("fredrik-svantes"),
+        ],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -76,7 +82,10 @@ export default async function TrillionDollarSecurityPageJsonLD({
         headline: t("page-trillion-dollar-security-title"),
         description: t("page-trillion-dollar-security-meta-description"),
         image: "https://ethereum.org/images/trillion-dollar-security/hero.png",
-        author: [ethereumCommunityReference],
+        author: [
+          knownAuthorReference("josh-stark"),
+          knownAuthorReference("fredrik-svantes"),
+        ],
         contributor: contributorList,
         publisher: ethereumFoundationReference,
         reviewedBy: ethereumFoundationReference,

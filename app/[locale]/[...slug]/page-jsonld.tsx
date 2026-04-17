@@ -4,9 +4,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
-  ethereumCommunityReference,
   ethereumFoundationOrganization,
   ethereumFoundationReference,
+  resolveAuthorsFromFrontmatter,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -54,11 +54,16 @@ export default async function SlugJsonLD({
     url: contributor.html_url,
   }))
 
+  const { graphNodes, references } = resolveAuthorsFromFrontmatter(
+    frontmatter.authors ?? frontmatter.author
+  )
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ethereumFoundationOrganization,
       ethereumCommunityOrganization,
+      ...graphNodes,
       {
         "@type": "WebPage",
         "@id": url,
@@ -66,7 +71,7 @@ export default async function SlugJsonLD({
         description: frontmatter.description,
         url: url,
         inLanguage: locale,
-        author: [ethereumCommunityReference],
+        author: references,
         contributor: contributorList,
         isPartOf: {
           "@type": "WebSite",
@@ -90,7 +95,7 @@ export default async function SlugJsonLD({
         image: frontmatter.image
           ? `https://ethereum.org${frontmatter.image}`
           : undefined,
-        author: [ethereumCommunityReference],
+        author: references,
         contributor: contributorList,
         publisher: ethereumFoundationReference,
         reviewedBy: ethereumFoundationReference,

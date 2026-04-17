@@ -6,9 +6,10 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
-  ethereumCommunityReference,
   ethereumFoundationOrganization,
   ethereumFoundationReference,
+  KNOWN_AUTHORS,
+  knownAuthorReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -34,6 +35,7 @@ export default async function BugBountyJsonLD({
     "@graph": [
       ethereumFoundationOrganization,
       ethereumCommunityOrganization,
+      KNOWN_AUTHORS["fredrik-svantes"],
       {
         "@type": "WebPage",
         "@id": url,
@@ -42,7 +44,7 @@ export default async function BugBountyJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
+        author: [knownAuthorReference("fredrik-svantes")],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
