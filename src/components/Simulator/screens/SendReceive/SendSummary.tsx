@@ -22,7 +22,7 @@ export const SendSummary = ({
   const t = useTranslations("component-wallet-simulator")
   const locale = useLocale()
 
-  const formatChosenAmount = formatWalletUsd(chosenAmount, locale)
+  const formatChosenAmount = formatWalletUsd(chosenAmount)
 
   const usdFee = ETH_TRANSFER_FEE * ethPrice
   return (
@@ -59,7 +59,7 @@ export const SendSummary = ({
         <div>
           <p>{t("sim-summary-fees")}</p>
           <p className="font-bold">
-            {formatWalletUsd(usdFee, locale)}
+            {formatWalletUsd(usdFee)}
             <span className="ms-2 text-xs font-normal text-body-medium">
               (
               {formatWalletToken(ETH_TRANSFER_FEE, locale, {

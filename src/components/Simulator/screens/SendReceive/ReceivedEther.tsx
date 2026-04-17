@@ -65,7 +65,7 @@ export const ReceivedEther = ({
 
   const displayEth = formatWalletToken(ethReceiveAmount, locale)
   const usdReceiveAmount = ethReceiveAmount * ethPrice
-  const displayUsd = formatWalletUsd(usdReceiveAmount, locale)
+  const displayUsd = formatWalletUsd(usdReceiveAmount)
   return (
     <motion.div
       key="wallet-step-index-2"

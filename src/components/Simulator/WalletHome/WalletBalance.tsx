@@ -1,5 +1,5 @@
 import React from "react"
-import { useLocale, useTranslations } from "next-intl"
+import { useTranslations } from "next-intl"
 
 import { Flex } from "@/components/ui/flex"
 
@@ -13,14 +13,13 @@ type WalletBalanceProps = {
 
 export const WalletBalance = ({ usdAmount = 0 }: WalletBalanceProps) => {
   const t = useTranslations("component-wallet-simulator")
-  const locale = useLocale()
   return (
     <div className="z-[1]">
       <p className="mb-2 text-center text-body-medium md:mb-4">
         {t("sim-your-total")}
       </p>
       <p className="text-center text-3xl font-bold !leading-base md:text-5xl">
-        {formatWalletUsd(usdAmount, locale)}
+        {formatWalletUsd(usdAmount)}
       </p>
       <Flex className="mb-4 justify-center">
         <AddressPill />

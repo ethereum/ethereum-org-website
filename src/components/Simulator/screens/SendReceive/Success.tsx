@@ -33,7 +33,7 @@ export const Success = ({
   const [categoryIndex, setCategoryIndex] = useState(0)
 
   const usdAmount = sentEthAmount * ethPrice
-  const usdValue = formatWalletUsd(usdAmount, locale)
+  const usdValue = formatWalletUsd(usdAmount)
   const sentEthValue = formatWalletToken(sentEthAmount, locale)
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete

@@ -13,7 +13,7 @@ export const TokenBalanceItem = ({ item }: TokenBalanceItemProps) => {
   const { name, ticker, amount, usdConversion, Icon } = item
   const locale = useLocale()
   const usdAmount = amount * usdConversion
-  const usdValue = formatWalletUsd(usdAmount, locale)
+  const usdValue = formatWalletUsd(usdAmount)
   const tokenAmount = formatWalletToken(amount, locale)
   return (
     <Flex className="gap-4">
