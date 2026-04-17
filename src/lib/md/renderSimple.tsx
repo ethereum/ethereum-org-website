@@ -1,8 +1,10 @@
 import { compileMDX, type MDXRemoteProps } from "next-mdx-remote/rsc"
 import remarkGfm from "remark-gfm"
+import remarkHeadingId from "remark-heading-id"
 
 import { htmlElements } from "@/components/MdComponents"
 
+import { escapeHeadingIds } from "@/lib/md/escapeHeadingIds"
 /**
  * Renders markdown to React components using htmlElements.
  *
@@ -15,7 +17,7 @@ export async function renderSimpleMarkdown(
   componentOverrides?: MDXRemoteProps["components"]
 ) {
   const { content } = await compileMDX({
-    source: markdown,
+    source: escapeHeadingIds(markdown),
     components: {
       ...(htmlElements as unknown as MDXRemoteProps["components"]),
       ...componentOverrides,
@@ -23,7 +25,7 @@ export async function renderSimpleMarkdown(
     options: {
       parseFrontmatter: false,
       mdxOptions: {
-        remarkPlugins: [remarkGfm],
+        remarkPlugins: [remarkGfm, remarkHeadingId],
       },
     },
   })

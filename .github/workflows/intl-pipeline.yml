@@ -1,0 +1,99 @@
+name: Intl Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_path:
+        description: "Path(s) to translate (comma-separated files, single directory, or blank for all)"
+        required: false
+        type: string
+      exclude_path:
+        description: "Path(s) to exclude (comma-separated files or directories)"
+        required: false
+        type: string
+      target_languages:
+        description: "Comma-separated language codes (blank for all locales)"
+        required: false
+        type: string
+      base_branch:
+        description: "Base branch to create PR against"
+        required: false
+        default: "dev"
+        type: string
+      target_branch:
+        description: "Override target branch (default: intl/pending)"
+        required: false
+        type: string
+      concurrency:
+        description: "Max parallel Gemini requests per language"
+        required: false
+        default: "16"
+        type: string
+      stamp_only:
+        description: "Update manifests only, no translations"
+        required: false
+        default: false
+        type: boolean
+      skip_pr:
+        description: "Skip PR creation?"
+        required: false
+        default: false
+        type: boolean
+      verbose:
+        description: "Enable verbose logging?"
+        required: false
+        default: "false"
+        type: boolean
+      mode:
+        description: "Translation mode: 'auto' (full for new files, incremental for existing) or 'full' (retranslate everything)"
+        required: false
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - full
+
+concurrency:
+  group: i18n-translation
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 720
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.inputs.base_branch || 'dev' }}
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run translation pipeline
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/main.ts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_API_TOKEN: ${{ secrets.I18N_GITHUB_TOKEN }}
+          TARGET_PATH: ${{ github.event.inputs.target_path }}
+          EXCLUDE_PATH: ${{ github.event.inputs.exclude_path }}
+          TARGET_LANGUAGES: ${{ github.event.inputs.target_languages }}
+          BASE_BRANCH: ${{ github.event.inputs.base_branch }}
+          GEMINI_CONCURRENCY: ${{ github.event.inputs.concurrency }}
+          SKIP_PR_CREATION: ${{ github.event.inputs.skip_pr }}
+          VERBOSE: ${{ github.event.inputs.verbose }}
+          MODE: ${{ github.event.inputs.mode }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          TARGET_BRANCH: ${{ github.event.inputs.target_branch }}
+          STAMP_ONLY: ${{ github.event.inputs.stamp_only }}
+          DRY_RUN: "false"

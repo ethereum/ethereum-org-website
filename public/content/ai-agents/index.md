@@ -97,7 +97,7 @@ We're beginning to explore the full potential of AI agents, and projects are alr
 
 <strong>Luna's first appearance as a podcast guest</strong>
 
-<YouTube id="ZCsOMxnIruA" />
+<VideoWatch slug="ai-agents-interview-luna" />
 
 ## Agent-controlled wallets {#agent-controlled-wallets}
 

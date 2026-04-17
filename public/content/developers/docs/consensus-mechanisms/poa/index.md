@@ -71,7 +71,7 @@ If for example there are 10 authorized signers and each signer is allowed to cre
 
 Watch a visual explanation of proof-of-authority:
 
-<YouTube id="Mj10HSEM5_8" />
+<VideoWatch slug="proof-of-authority-explained" />
 
 ## Related topics {#related-topics}
 
