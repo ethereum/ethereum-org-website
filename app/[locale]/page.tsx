@@ -19,6 +19,7 @@ import { TrackedSection } from "@/components/TrackedSection"
 import { BaseLink } from "@/components/ui/Link"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
+import { cn } from "@/lib/utils/cn"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -59,7 +60,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const transactionsToday =
     "value" in growThePieData.txCount ? growThePieData.txCount.value : null
 
-  const { direction: dir } = getDirection(locale)
+  const { direction: dir, twFlipForRtl } = getDirection(locale)
   const t = await getTranslations("page-index")
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
@@ -130,7 +131,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     }}
                   >
                     {t("page-index-simulator-cta")}
-                    <ArrowRight className="size-4" />
+                    <ArrowRight className={cn("size-4", twFlipForRtl)} />
                   </BaseLink>
                 }
               />
