@@ -227,7 +227,7 @@ cmd_version() {
   fi
 
   # Ensure we're working in the right directory
-  setup_worktree
+  setup_worktree >&2
 
   if [[ "$DRY_RUN" == "true" ]]; then
     # In dry-run, calculate what the new version would be without changing anything
