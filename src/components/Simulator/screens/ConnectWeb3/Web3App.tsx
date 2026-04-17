@@ -21,7 +21,7 @@ export const Web3App = ({
   className,
   ...rest
 }: Web3AppProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   return (
     <div
       className={cn("size-full bg-background-highlight", className)}

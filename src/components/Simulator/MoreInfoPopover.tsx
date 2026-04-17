@@ -38,7 +38,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
         className="relative start-4 w-[calc(100vw-3rem)] max-w-xs bg-background-highlight px-4 py-6 text-sm shadow-none sm:start-8 sm:w-[calc(100vw-5rem)]"
         data-testid="more-info-popover-content"
       >
-        <PopoverClose className="absolute right-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">
+        <PopoverClose className="absolute end-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">
           <X />
         </PopoverClose>
         <div className="px-3 py-2 last-of-type:[&_p]:mb-2">{children}</div>

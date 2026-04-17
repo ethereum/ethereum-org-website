@@ -13,7 +13,7 @@ type SliderProps = {
   children: ReactNode
 }
 export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   return (
     <>
       <motion.div

@@ -8,7 +8,7 @@ import { useIntersectionObserver } from "usehooks-ts"
 import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
+import { formatCompactNumber } from "@/lib/utils/numbers"
 
 type KPISectionProps = {
   accountHolders: number | null
@@ -121,14 +121,11 @@ function AnimatedNumber({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value])
 
-  return <p className={className}>{formatter(displayValue)}</p>
-}
-
-function formatCompact(value: number, locale: string): string {
-  return numberFormat(locale, {
-    notation: "compact",
-    maximumSignificantDigits: 3,
-  }).format(value)
+  return (
+    <p dir="ltr" className={className}>
+      {formatter(displayValue)}
+    </p>
+  )
 }
 
 /**
@@ -188,7 +185,7 @@ const KPISection = ({
             <div className="flex flex-col gap-1">
               <p className="text-4xl font-bold leading-[1.2]">
                 {accountHolders !== null
-                  ? formatCompact(accountHolders, locale)
+                  ? formatCompactNumber(accountHolders, locale)
                   : "—"}
               </p>
               <p className="text-base leading-[1.6] text-body-medium">

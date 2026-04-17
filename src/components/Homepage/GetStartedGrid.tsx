@@ -33,7 +33,7 @@ const GetStartedGrid = async ({
     {
       id: "learn",
       icon: Book,
-      iconBg: "bg-[#f7ecff]",
+      iconBg: "bg-purple-50 dark:bg-purple-900",
       iconColor: "text-primary",
       title: t("page-index-get-started-learn-title"),
       description: t("page-index-get-started-learn-description"),
@@ -50,7 +50,7 @@ const GetStartedGrid = async ({
     {
       id: "developers",
       icon: Code,
-      iconBg: "bg-[#e9f4ff]",
+      iconBg: "bg-blue-100 dark:bg-blue-900",
       iconColor: "text-accent-a",
       title: t("page-index-get-started-build-title"),
       description: t("page-index-get-started-build-description"),
@@ -67,7 +67,7 @@ const GetStartedGrid = async ({
     {
       id: "enterprise",
       icon: Building2,
-      iconBg: "bg-[#e6f7f6]",
+      iconBg: "bg-teal-100 dark:bg-teal-900",
       iconColor: "text-accent-c",
       title: t("page-index-get-started-enterprise-title"),
       description: t("page-index-get-started-enterprise-description"),
@@ -148,6 +148,7 @@ const GetStartedGrid = async ({
 
                   <LinkOverlay
                     href={card.href}
+                    hideArrow
                     className="flex items-center gap-1 font-semibold no-underline"
                     matomoEvent={{
                       eventCategory,

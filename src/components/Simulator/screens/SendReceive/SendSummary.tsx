@@ -1,13 +1,12 @@
 import React from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
 
 import { ETH_TRANSFER_FEE } from "../../constants"
-import { getMaxFractionDigitsUsd } from "../../utils"
+import { formatWalletToken, formatWalletUsd } from "../../utils"
 
 type SendSummaryProps = {
   chosenAmount: number
@@ -20,17 +19,10 @@ export const SendSummary = ({
   ethPrice,
   recipient,
 }: SendSummaryProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
+  const locale = useLocale()
 
-  const formatEth = (amount: number): string =>
-    numberFormat("en", { maximumFractionDigits: 5 }).format(amount)
-
-  const formatChosenAmount = numberFormat("en", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
-    maximumFractionDigits: getMaxFractionDigitsUsd(chosenAmount),
-  }).format(chosenAmount)
+  const formatChosenAmount = formatWalletUsd(chosenAmount)
 
   const usdFee = ETH_TRANSFER_FEE * ethPrice
   return (
@@ -51,7 +43,7 @@ export const SendSummary = ({
           </p>
         </Flex>
         <p className="text-xs text-body-medium">
-          {formatEth(chosenAmount / ethPrice)} ETH
+          {formatWalletToken(chosenAmount / ethPrice, locale)} ETH
         </p>
       </div>
       {/* Bottom section */}
@@ -67,17 +59,12 @@ export const SendSummary = ({
         <div>
           <p>{t("sim-summary-fees")}</p>
           <p className="font-bold">
-            {numberFormat("en", {
-              maximumFractionDigits: getMaxFractionDigitsUsd(usdFee),
-              style: "currency",
-              currency: "USD",
-              notation: "compact",
-            }).format(usdFee)}
+            {formatWalletUsd(usdFee)}
             <span className="ms-2 text-xs font-normal text-body-medium">
               (
-              {numberFormat("en", {
+              {formatWalletToken(ETH_TRANSFER_FEE, locale, {
                 maximumFractionDigits: 6,
-              }).format(ETH_TRANSFER_FEE)}{" "}
+              })}{" "}
               ETH)
             </span>
           </p>

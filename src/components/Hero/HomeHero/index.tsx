@@ -1,4 +1,4 @@
-import { Fragment, Suspense } from "react"
+import { Suspense } from "react"
 import dynamic from "next/dynamic"
 import { getImageProps, type StaticImageData } from "next/image"
 import { getTranslations } from "next-intl/server"
@@ -12,13 +12,6 @@ import { Button } from "@/components/ui/buttons/Button"
 const PersonaModalCTA = dynamic(
   () => import("@/components/Homepage/PersonaModalCTA")
 )
-import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
-import EthTokenIcon from "@/components/icons/eth-token.svg"
-import EthWalletIcon from "@/components/icons/eth-wallet.svg"
-import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
-import SvgButtonLink, {
-  type SvgButtonLinkProps,
-} from "@/components/ui/buttons/SvgButtonLink"
 
 import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber } from "@/lib/utils/screen"
@@ -26,13 +19,10 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 import heroBase from "@/public/images/home/hero.png"
 import hero2xl from "@/public/images/home/hero-2xl.png"
 
-export type CTAVariant = "modal" | "direct-buttons"
-
 type HomeHeroProps = ClassNameProp & {
   image?: StaticImageData
   image2xl?: StaticImageData
   alt?: string
-  ctaVariant?: CTAVariant
   eventCategory?: string
 }
 
@@ -41,48 +31,12 @@ const HomeHero = async ({
   image,
   image2xl,
   alt: altProp,
-  ctaVariant = "modal",
   eventCategory = "Homepage",
 }: HomeHeroProps) => {
   const t = await getTranslations("page-index")
   const baseImage = image ?? heroBase
   const xlImage = image2xl ?? image ?? hero2xl
   const alt = altProp ?? t("page-index-hero-image-alt")
-
-  const directButtonCTAs = [
-    {
-      label: t("page-index-cta-learn-label"),
-      description: t("page-index-modal-what-is-ethereum"),
-      href: "/what-is-ethereum/",
-      Svg: EthGlyphIcon,
-      className: "text-accent-a hover:text-accent-a-hover",
-      eventName: "learn_ethereum",
-    },
-    {
-      label: t("page-index-cta-wallet-label"),
-      description: t("page-index-cta-wallet-description"),
-      href: "/wallets/find-wallet/",
-      Svg: EthWalletIcon,
-      className: "text-primary hover:text-primary-hover",
-      eventName: "pick_wallet",
-    },
-    {
-      label: t("page-index-cta-get-eth-label"),
-      description: t("page-index-cta-get-eth-description"),
-      href: "/get-eth/",
-      Svg: EthTokenIcon,
-      className: "text-accent-b hover:text-accent-b-hover",
-      eventName: "get_eth",
-    },
-    {
-      label: t("page-index-cta-dapps-label"),
-      description: t("page-index-cta-dapps-description"),
-      href: "/dapps/",
-      Svg: TryAppsIcon,
-      className: "text-accent-c hover:text-accent-c-hover",
-      eventName: "try_apps",
-    },
-  ]
 
   const common = {
     alt,
@@ -132,7 +86,7 @@ const HomeHero = async ({
           <LanguageMorpher />
 
           <div className="flex flex-col items-center gap-8">
-            <h1 className="max-w-[893px] text-balance text-4xl font-black leading-[1.1] md:text-6xl lg:text-7xl lg:leading-[0.9]">
+            <h1 className="max-w-[893px] text-balance text-5xl font-black leading-[1.1] md:text-6xl lg:text-7xl lg:leading-[0.9]">
               {t("page-index-hero-title")}
             </h1>
 
@@ -140,64 +94,16 @@ const HomeHero = async ({
               {t("page-index-hero-subtitle")}
             </p>
 
-            {ctaVariant === "modal" ? (
-              <Suspense
-                fallback={
-                  <Button variant="solid" size="lg" className="gap-2">
-                    {t("page-index-hero-cta")}
-                    <ChevronNext className="size-5" />
-                  </Button>
-                }
-              >
-                <PersonaModalCTA eventCategory={eventCategory} />
-              </Suspense>
-            ) : (
-              <div className="-mb-8 grid w-full grid-cols-2 gap-x-4 gap-y-8 border-b py-20 md:grid-cols-4 md:gap-x-10 lg:-mb-12">
-                {directButtonCTAs.map(
-                  ({
-                    label,
-                    description,
-                    href,
-                    className: ctaClass,
-                    Svg,
-                    eventName,
-                  }) => {
-                    const Link = (
-                      props: Omit<
-                        SvgButtonLinkProps,
-                        "Svg" | "href" | "label" | "children"
-                      >
-                    ) => (
-                      <SvgButtonLink
-                        Svg={Svg}
-                        href={href}
-                        label={label}
-                        customEventOptions={{
-                          eventCategory,
-                          eventAction: "cta_click",
-                          eventName,
-                        }}
-                        {...props}
-                      >
-                        <p className="text-body">{description}</p>
-                      </SvgButtonLink>
-                    )
-                    return (
-                      <Fragment key={label}>
-                        <Link
-                          className={cn("xl:hidden", ctaClass)}
-                          variant="col"
-                        />
-                        <Link
-                          className={cn("hidden xl:block", ctaClass)}
-                          variant="row"
-                        />
-                      </Fragment>
-                    )
-                  }
-                )}
-              </div>
-            )}
+            <Suspense
+              fallback={
+                <Button variant="solid" size="lg" className="gap-2">
+                  {t("page-index-hero-cta")}
+                  <ChevronNext className="size-5" />
+                </Button>
+              }
+            >
+              <PersonaModalCTA eventCategory={eventCategory} />
+            </Suspense>
           </div>
         </div>
       </div>

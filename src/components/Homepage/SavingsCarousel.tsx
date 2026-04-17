@@ -21,7 +21,7 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { numberFormat } from "@/lib/utils/numbers"
+import { formatPriceUSD, numberFormat } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
@@ -46,7 +46,7 @@ type Slide = {
   tag: string
   title: string
   subtitle: string
-  description: string
+  description: string | React.ReactNode
   cta: string
   href: string
   image: typeof defiImage
@@ -65,12 +65,7 @@ function useSlides(): Slide[] {
     currency: "USD",
     maximumFractionDigits: 0,
   })
-  const txFee = fmt(0.02, {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })
+  const txFee = formatPriceUSD(0.02, locale)
   const twelve = fmt(12)
 
   return [
@@ -104,7 +99,22 @@ function useSlides(): Slide[] {
         wireFee,
         days: fmt(5),
       }),
-      description: t("page-index-carousel-remittances-description", { txFee }),
+      description: t.rich("page-index-carousel-remittances-description", {
+        txFee,
+        stablecoinsLink: (chunks) => (
+          <Link
+            href="/stablecoins/"
+            className="no-underline"
+            customEventOptions={{
+              eventCategory: "Homepage",
+              eventAction: "section_click",
+              eventName: "savings_carousel/stablecoins_inline",
+            }}
+          >
+            {chunks}
+          </Link>
+        ),
+      }),
       cta: t("page-index-carousel-remittances-cta"),
       href: "/payments/",
       image: remittancesImage,
@@ -263,7 +273,7 @@ const SlideContent = ({
         </Link>
 
         {/* Mobile comparison cards - stacked below content */}
-        <div className="flex flex-col gap-3 md:hidden">
+        <div className="flex flex-col gap-5 md:hidden">
           <ComparisonCard
             item={comparison.traditional}
             variant="default"
@@ -305,22 +315,24 @@ const SlideContent = ({
             />
           </div>
 
-          <ComparisonCard
-            item={comparison.traditional}
-            variant="default"
-            controls={traditionalControls}
-            initial={{ opacity: 0, x: -20, y: 10 }}
-            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-            className="absolute -left-8 bottom-40 z-10 w-[250px] lg:-left-12 lg:bottom-44 lg:w-[269px]"
-          />
-          <ComparisonCard
-            item={comparison.ethereum}
-            variant="primary"
-            controls={ethereumControls}
-            initial={{ opacity: 0, x: -30, y: 15 }}
-            transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
-            className="absolute -left-12 bottom-10 z-10 w-[280px] lg:-left-16 lg:w-[339px]"
-          />
+          <div className="absolute -start-12 bottom-10 z-10 flex flex-col gap-5 lg:-start-16">
+            <ComparisonCard
+              item={comparison.traditional}
+              variant="default"
+              controls={traditionalControls}
+              initial={{ opacity: 0, x: -20, y: 10 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              className="ms-4 w-[357px]"
+            />
+            <ComparisonCard
+              item={comparison.ethereum}
+              variant="primary"
+              controls={ethereumControls}
+              initial={{ opacity: 0, x: -30, y: 15 }}
+              transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
+              className="w-[339px]"
+            />
+          </div>
         </div>
       </div>
     </div>

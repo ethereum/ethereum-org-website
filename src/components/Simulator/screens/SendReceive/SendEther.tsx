@@ -1,14 +1,14 @@
 import React from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex, HStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
 
 import { EthTokenIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
+import { formatWalletToken, formatWalletUsd } from "../../utils"
 
 type SendEtherProps = {
   ethPrice: number
@@ -22,20 +22,11 @@ export const SendEther = ({
   chosenAmount,
   setChosenAmount,
 }: SendEtherProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
+  const locale = useLocale()
 
-  const formatDollars = (amount: number): string =>
-    numberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      notation: "compact",
-    }).format(amount)
-
-  const usdAmount = formatDollars(ethPrice * ethBalance)
-
-  const ethAmount = numberFormat("en", {
-    maximumFractionDigits: 5,
-  }).format(ethBalance)
+  const usdAmount = formatWalletUsd(ethPrice * ethBalance)
+  const ethAmount = formatWalletToken(ethBalance, locale)
 
   const maxUsdAmount = ethPrice * ethBalance
 
@@ -50,14 +41,11 @@ export const SendEther = ({
   const AMOUNTS: Array<number> = [5, 10, 20, maxUsdAmount]
   const formatButtonLabel = (amount: number): string => {
     if (amount === maxUsdAmount) return "Max"
-    return formatDollars(amount)
+    return formatWalletUsd(amount)
   }
-  const formatChosenAmount = numberFormat("en", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
+  const formatChosenAmount = formatWalletUsd(chosenAmount, {
     maximumFractionDigits: 0,
-  }).format(chosenAmount)
+  })
 
   return (
     <div className="h-full">

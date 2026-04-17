@@ -1,13 +1,11 @@
 import { useEffect, useMemo, useState } from "react"
 import { Info, X } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
-import { numberFormat } from "@/lib/utils/numbers"
-
-import { getMaxFractionDigitsUsd } from "../../utils"
+import { formatWalletToken, formatWalletUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
@@ -24,7 +22,8 @@ export const ReceivedEther = ({
   ethPrice,
   sender,
 }: ReceivedEtherProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
+  const locale = useLocale()
   const [received, setReceived] = useState(false)
   const [hideToast, setHideToast] = useState(false)
   const showToast = received && !hideToast
@@ -64,16 +63,9 @@ export const ReceivedEther = ({
 
   const tokenBalances = received ? tokensWithEthBalance : defaultTokenBalances
 
-  const displayEth: string = numberFormat("en", {
-    maximumFractionDigits: 5,
-  }).format(ethReceiveAmount)
+  const displayEth = formatWalletToken(ethReceiveAmount, locale)
   const usdReceiveAmount = ethReceiveAmount * ethPrice
-  const displayUsd: string = numberFormat("en", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
-    maximumFractionDigits: getMaxFractionDigitsUsd(usdReceiveAmount),
-  }).format(usdReceiveAmount)
+  const displayUsd = formatWalletUsd(usdReceiveAmount)
   return (
     <motion.div
       key="wallet-step-index-2"

@@ -19,6 +19,8 @@ import { MoreInfoPopover } from "./MoreInfoPopover"
 import { PathButton } from "./PathButton"
 import type { PathId } from "./types"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 type ExplanationProps = SimulatorNavProps & {
   explanation: SimulatorExplanation
   nextPathSummary: SimulatorPathSummary | null
@@ -36,7 +38,8 @@ export const Explanation = ({
   openPath,
   logFinalCta,
 }: ExplanationProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
+  const { twFlipForRtl } = useRtlFlip()
   const { regressStepper, step, totalSteps } = nav
   const { header, description } = explanation
 
@@ -63,7 +66,7 @@ export const Explanation = ({
           variants={backButtonVariants}
           animate={step === 0 ? "hidden" : "visible"}
         >
-          <ArrowLeft className="text-lg" />
+          <ArrowLeft className={cn("text-lg", twFlipForRtl)} />
           {t("sim-back")}
         </motion.button>
       </Button>

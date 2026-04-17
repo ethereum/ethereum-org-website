@@ -33,7 +33,7 @@ import { Web3App } from "./Web3App"
 import NFTImage from "@/public/images/deep-panic.png"
 
 export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   const { progressStepper, step } = nav
   const NFTs = [
     {

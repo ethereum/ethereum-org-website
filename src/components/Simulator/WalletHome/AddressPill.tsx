@@ -9,7 +9,7 @@ import { NotificationPopover } from "../NotificationPopover"
 type AddressPillProps = Omit<FlexProps, "children">
 
 export const AddressPill = ({ ...btnProps }: AddressPillProps) => {
-  const t = useTranslations("simulator")
+  const t = useTranslations("component-wallet-simulator")
   return (
     <NotificationPopover
       title={t("sim-example-walkthrough")}

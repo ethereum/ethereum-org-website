@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
+import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
@@ -29,10 +29,7 @@ const TrustLogos = async ({
   const t = await getTranslations("page-index")
   const locale = await getLocale()
 
-  const uptime = numberFormat(locale, {
-    style: "percent",
-    maximumFractionDigits: 0,
-  }).format(1)
+  const uptime = numberToPercent(1, locale)
   const count = numberFormat(locale).format(10)
 
   return (
