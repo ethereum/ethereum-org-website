@@ -288,6 +288,7 @@ async function buildGeminiTranslator(
 
     const prompt = buildIncrementalPrompt({
       filePath,
+      fileType,
       targetLanguage: locale,
       languageName,
       sections: batchSectionList,

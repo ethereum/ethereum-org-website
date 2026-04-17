@@ -60,6 +60,7 @@ const {
   fixBareRtlValues,
   fixUnitOutsideSpan,
   fixMisalignedCodeFences,
+  convertSpansToJsonBidi,
 } = _testOnly
 
 test.describe("Standalone Fixes", () => {
@@ -2904,6 +2905,70 @@ author: Ori Pomerantz
       expect(content).toContain('<span dir="ltr">100 Gwei</span>')
       expect(content).toContain('<span dir="ltr">32 ETH</span>')
       expect(fixCount).toBe(2)
+    })
+  })
+
+  test.describe("convertSpansToJsonBidi", () => {
+    // U+2066 LRI (left-to-right isolate, open)
+    // U+2069 PDI (pop directional isolate, close)
+    const LRI = "\u2066"
+    const PDI = "\u2069"
+
+    test("converts a single span to bidi isolates", () => {
+      const input = 'ستحتاج إلى <span dir="ltr">ETH</span> لإرسال الرموز'
+      const { content, fixCount } = convertSpansToJsonBidi(input)
+      expect(content).toBe(`ستحتاج إلى ${LRI}ETH${PDI} لإرسال الرموز`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("converts multiple spans independently", () => {
+      const input =
+        'المبلغ <span dir="ltr">32 ETH</span> على <span dir="ltr">Mainnet</span>'
+      const { content, fixCount } = convertSpansToJsonBidi(input)
+      expect(content).toBe(`المبلغ ${LRI}32 ETH${PDI} على ${LRI}Mainnet${PDI}`)
+      expect(fixCount).toBe(2)
+    })
+
+    test("tolerates single-quoted dir attribute", () => {
+      const input = "تكلفة <span dir='ltr'>$2,500 USD</span> فقط"
+      const { content, fixCount } = convertSpansToJsonBidi(input)
+      expect(content).toBe(`تكلفة ${LRI}$2,500 USD${PDI} فقط`)
+      expect(fixCount).toBe(1)
+    })
+
+    test("leaves content without spans unchanged", () => {
+      const input = "ستحتاج إلى ETH لإرسال الرموز"
+      const { content, fixCount } = convertSpansToJsonBidi(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("is idempotent -- already-converted bidi isolates are untouched", () => {
+      const input = `ستحتاج إلى ${LRI}ETH${PDI} لإرسال الرموز`
+      const { content, fixCount } = convertSpansToJsonBidi(input)
+      expect(content).toBe(input)
+      expect(fixCount).toBe(0)
+    })
+
+    test("converts spans inside a JSON-serialized string", () => {
+      const input = JSON.stringify({
+        description:
+          'ستحتاج إلى كمية بسيطة من <span dir="ltr">ETH</span> لإرسال الرموز.',
+      })
+      const { content, fixCount } = convertSpansToJsonBidi(input)
+      expect(fixCount).toBe(1)
+      // Round-trip through JSON.parse to confirm the structure is still valid
+      const parsed = JSON.parse(content) as { description: string }
+      expect(parsed.description).toBe(
+        `ستحتاج إلى كمية بسيطة من ${LRI}ETH${PDI} لإرسال الرموز.`
+      )
+    })
+
+    test("handles spans with attribute whitespace variations", () => {
+      const input = 'قيمة <span   dir="ltr">100 Gwei</span> تقريباً'
+      const { content, fixCount } = convertSpansToJsonBidi(input)
+      expect(content).toBe(`قيمة ${LRI}100 Gwei${PDI} تقريباً`)
+      expect(fixCount).toBe(1)
     })
   })
 

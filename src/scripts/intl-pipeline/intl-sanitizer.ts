@@ -4977,6 +4977,35 @@ function fixTranslatedJsonPlaceholders(
   return { content, fixCount }
 }
 
+/**
+ * Convert legacy `<span dir="ltr">X</span>` wrappers in JSON string values
+ * to raw Unicode bidi isolates: U+2066 (LRI) + X + U+2069 (PDI).
+ *
+ * JSON values are consumed by next-intl's `t()` as plain text, which does
+ * not support rich markup -- HTML tags inside a value render literally
+ * on screen and break the UI. Bidi isolate control characters achieve
+ * the same LTR isolation semantics at the Unicode level with no markup.
+ *
+ * Gemini output prior to this pipeline change (and any residual drift)
+ * may still contain spans -- this fix is the safety net.
+ */
+function convertSpansToJsonBidi(content: string): {
+  content: string
+  fixCount: number
+} {
+  let fixCount = 0
+  // Non-greedy inner match. The dir attribute tolerates:
+  //   - raw double quotes: dir="ltr"
+  //   - JSON-escaped double quotes: dir=\"ltr\"  (operating on raw JSON text)
+  //   - single quotes: dir='ltr'
+  const re = /<span\s+dir=(?:\\?"ltr\\?"|'ltr')>([\s\S]*?)<\/span>/g
+  const fixed = content.replace(re, (_, inner) => {
+    fixCount++
+    return `\u2066${inner}\u2069`
+  })
+  return { content: fixed, fixCount }
+}
+
 function processJsonFile(
   jsonPath: string,
   providedContent?: string,
@@ -5003,6 +5032,16 @@ function processJsonFile(
     intlIdx !== -1 && intlIdx + 1 < jsonParts.length
       ? jsonParts[intlIdx + 1]
       : ""
+
+  // Convert any legacy <span dir="ltr"> wrappers in JSON string values to
+  // Unicode bidi isolates so next-intl's t() renders them correctly.
+  const bidiResult = convertSpansToJsonBidi(content)
+  if (bidiResult.fixCount > 0) {
+    content = bidiResult.content
+    issues.push(
+      `Converted ${bidiResult.fixCount} <span dir="ltr"> wrapper(s) to Unicode bidi isolates`
+    )
+  }
 
   // Fix known brand garbles in JSON values
   const garbleResult = fixKnownBrandGarbles(content, jsonLocale)
@@ -5542,6 +5581,7 @@ export const _testOnly = {
   fixUnitOutsideSpan,
   fixSpanWrappedBackticks,
   fixBoldWrappedOrderedListNumerals,
+  convertSpansToJsonBidi,
   warnTranslatedTechnicalNumerals,
   warnTranslatedInlineCode,
   warnCodeFenceContentDrift,
