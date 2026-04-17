@@ -104,7 +104,7 @@ function useSlides(): Slide[] {
         stablecoinsLink: (chunks) => (
           <Link
             href="/stablecoins/"
-            className="text-inherit no-underline decoration-dotted underline-offset-3 hover:text-primary-hover hover:underline hover:decoration-primary-hover"
+            className="no-underline"
             customEventOptions={{
               eventCategory: "Homepage",
               eventAction: "section_click",
