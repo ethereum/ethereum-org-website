@@ -121,7 +121,11 @@ function AnimatedNumber({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value])
 
-  return <p className={className}>{formatter(displayValue)}</p>
+  return (
+    <p dir="ltr" className={className}>
+      {formatter(displayValue)}
+    </p>
+  )
 }
 
 /**
