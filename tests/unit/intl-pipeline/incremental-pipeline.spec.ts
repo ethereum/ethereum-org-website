@@ -650,16 +650,3 @@ for (const lang of LANGS) {
     expect(result).toBe(locA2(lang))
   })
 }
-
-// ===================================================================
-// Manifest path: distinct paths for multiple JSON files
-// ===================================================================
-
-test("manifest paths are distinct for different JSON files in same locale", () => {
-  // Import the helper indirectly by testing the path pattern
-  const path1 = `.manifests/src/intl/ko/fixture-1.json/source.json`
-  const path2 = `.manifests/src/intl/ko/fixture-2.json/source.json`
-  expect(path1).not.toBe(path2)
-  expect(path1).toContain("fixture-1.json/source.json")
-  expect(path2).toContain("fixture-2.json/source.json")
-})
