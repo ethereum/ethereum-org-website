@@ -109,21 +109,5 @@
   "page-index-get-started-enterprise-bullet-2": "Private & permissioned networks",
   "page-index-get-started-enterprise-bullet-3": "Institutional resources",
   "page-index-get-started-enterprise-cta": "Explore enterprise",
-  "page-index-simulator-cta": "Try more guides",
-  "page-index-explore-title": "More to discover",
-  "page-index-explore-col-essentials": "Essentials",
-  "page-index-explore-col-vision": "Vision",
-  "page-index-explore-col-community": "Community",
-  "page-index-explore-ether-title": "What is ether (ETH)?",
-  "page-index-explore-ether-description": "The currency that powers Ethereum.",
-  "page-index-explore-wallets-title": "Wallets",
-  "page-index-explore-wallets-description": "How wallets work and why you need one.",
-  "page-index-explore-whitepaper-title": "Whitepaper",
-  "page-index-explore-whitepaper-description": "The original proposal that started Ethereum.",
-  "page-index-explore-roadmap-title": "Roadmap",
-  "page-index-explore-roadmap-description": "How Ethereum is being improved over time.",
-  "page-index-explore-community-title": "Community hub",
-  "page-index-explore-community-description": "Join the global Ethereum community.",
-  "page-index-explore-events-title": "Events",
-  "page-index-explore-events-description": "Conferences, hackathons, and meetups."
+  "page-index-simulator-cta": "Try more guides"
 }
