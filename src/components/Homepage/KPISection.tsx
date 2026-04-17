@@ -8,7 +8,7 @@ import { useIntersectionObserver } from "usehooks-ts"
 import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
+import { formatCompactNumber } from "@/lib/utils/numbers"
 
 type KPISectionProps = {
   accountHolders: number | null
@@ -124,13 +124,6 @@ function AnimatedNumber({
   return <p className={className}>{formatter(displayValue)}</p>
 }
 
-function formatCompact(value: number, locale: string): string {
-  return numberFormat(locale, {
-    notation: "compact",
-    maximumSignificantDigits: 3,
-  }).format(value)
-}
-
 /**
  * Format transaction count with spaces as thousands separator (design choice
  * to avoid commas/dots that interfere with the animated counter).
@@ -188,7 +181,7 @@ const KPISection = ({
             <div className="flex flex-col gap-1">
               <p className="text-4xl font-bold leading-[1.2]">
                 {accountHolders !== null
-                  ? formatCompact(accountHolders, locale)
+                  ? formatCompactNumber(accountHolders, locale)
                   : "—"}
               </p>
               <p className="text-base leading-[1.6] text-body-medium">

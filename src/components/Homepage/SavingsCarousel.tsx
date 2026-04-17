@@ -21,7 +21,7 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { numberFormat } from "@/lib/utils/numbers"
+import { formatPriceUSD, numberFormat } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
@@ -65,12 +65,7 @@ function useSlides(): Slide[] {
     currency: "USD",
     maximumFractionDigits: 0,
   })
-  const txFee = fmt(0.02, {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })
+  const txFee = formatPriceUSD(0.02, locale)
   const twelve = fmt(12)
 
   return [

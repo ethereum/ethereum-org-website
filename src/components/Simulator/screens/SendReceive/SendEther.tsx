@@ -1,5 +1,5 @@
 import React from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex, HStack } from "@/components/ui/flex"
@@ -9,6 +9,7 @@ import { numberFormat } from "@/lib/utils/numbers"
 
 import { EthTokenIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
+import { formatWalletToken } from "../../utils"
 
 type SendEtherProps = {
   ethPrice: number
@@ -23,9 +24,10 @@ export const SendEther = ({
   setChosenAmount,
 }: SendEtherProps) => {
   const t = useTranslations("component-wallet-simulator")
+  const locale = useLocale()
 
   const formatDollars = (amount: number): string =>
-    numberFormat("en-US", {
+    numberFormat(locale, {
       style: "currency",
       currency: "USD",
       notation: "compact",
@@ -33,9 +35,7 @@ export const SendEther = ({
 
   const usdAmount = formatDollars(ethPrice * ethBalance)
 
-  const ethAmount = numberFormat("en", {
-    maximumFractionDigits: 5,
-  }).format(ethBalance)
+  const ethAmount = formatWalletToken(ethBalance, locale)
 
   const maxUsdAmount = ethPrice * ethBalance
 
@@ -52,7 +52,7 @@ export const SendEther = ({
     if (amount === maxUsdAmount) return "Max"
     return formatDollars(amount)
   }
-  const formatChosenAmount = numberFormat("en", {
+  const formatChosenAmount = numberFormat(locale, {
     style: "currency",
     currency: "USD",
     notation: "compact",

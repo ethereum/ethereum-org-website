@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
+import { formatCompactNumber } from "@/lib/utils/numbers"
 
 import freeAccessImage from "@/public/images/homepage/features/free-access.png"
 import globalImage from "@/public/images/homepage/features/global.png"
@@ -25,10 +25,9 @@ const FeatureCards = async ({
   const t = await getTranslations("page-index")
   const locale = await getLocale()
 
-  const volume = numberFormat(locale, {
-    notation: "compact",
+  const volume = formatCompactNumber(4_600_000_000, locale, {
     maximumSignificantDigits: 2,
-  }).format(4_600_000_000)
+  })
 
   return (
     <Section
