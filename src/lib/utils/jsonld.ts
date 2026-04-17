@@ -48,15 +48,15 @@ export const ethereumCommunityReference = {
 }
 
 /**
- * Known author profiles for JSON-LD attribution
+ * Known Person profiles for JSON-LD attribution
  *
  * Each entry is a schema.org Person with verifiable credentials.
  * Use the full object on the "defining" page (e.g., whitepaper for Vitalik),
- * and the reference ({ "@id": ... }) on other pages where the author is relevant.
+ * and the reference ({ "@id": ... }) on other pages where the Person is relevant.
  *
  * Keys should be stable identifiers (kebab-case of the person's name).
  */
-export const KNOWN_AUTHORS = {
+export const KNOWN_PERSONS = {
   // --- Public figures (Wikipedia/Wikidata verified) ---
 
   "vitalik-buterin": {
@@ -317,20 +317,20 @@ export const KNOWN_AUTHORS = {
 } as const
 
 /**
- * Helper to get an @id reference for a known author
+ * Helper to get an @id reference for a known Person
  */
-export const knownAuthorReference = (key: keyof typeof KNOWN_AUTHORS) => ({
-  "@id": KNOWN_AUTHORS[key]["@id"],
+export const personReference = (key: keyof typeof KNOWN_PERSONS) => ({
+  "@id": KNOWN_PERSONS[key]["@id"],
 })
 
 /**
  * Alias map for author lookup by display name or GitHub handle.
- * Auto-generated from KNOWN_AUTHORS -- no manual maintenance needed.
+ * Auto-generated from KNOWN_PERSONS -- no manual maintenance needed.
  * Allows frontmatter to use full name, profile key, or GitHub handle
  */
-const AUTHOR_ALIASES: Record<string, keyof typeof KNOWN_AUTHORS> =
+const AUTHOR_ALIASES: Record<string, keyof typeof KNOWN_PERSONS> =
   Object.fromEntries(
-    Object.entries(KNOWN_AUTHORS).flatMap(([key, profile]) => {
+    Object.entries(KNOWN_PERSONS).flatMap(([key, profile]) => {
       const aliases: [string, string][] = [[profile.name, key]]
       for (const url of profile.sameAs) {
         const match = url.match(/^https?:\/\/github\.com\/([^/]+)\/?$/)
@@ -338,7 +338,7 @@ const AUTHOR_ALIASES: Record<string, keyof typeof KNOWN_AUTHORS> =
       }
       return aliases
     })
-  ) as Record<string, keyof typeof KNOWN_AUTHORS>
+  ) as Record<string, keyof typeof KNOWN_PERSONS>
 
 /**
  * Resolve frontmatter author field(s) into JSON-LD @graph nodes and @id
@@ -347,23 +347,23 @@ const AUTHOR_ALIASES: Record<string, keyof typeof KNOWN_AUTHORS> =
  * Falls back to the community organization reference when nothing resolves.
  */
 export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
-  graphNodes: Array<(typeof KNOWN_AUTHORS)[keyof typeof KNOWN_AUTHORS]>
+  graphNodes: Array<(typeof KNOWN_PERSONS)[keyof typeof KNOWN_PERSONS]>
   references: Array<{ "@id": string }>
 } {
   const values = !authors ? [] : Array.isArray(authors) ? authors : [authors]
   const keys = values
     .map((v) =>
-      v in KNOWN_AUTHORS
-        ? (v as keyof typeof KNOWN_AUTHORS)
+      v in KNOWN_PERSONS
+        ? (v as keyof typeof KNOWN_PERSONS)
         : (AUTHOR_ALIASES[v] ?? null)
     )
-    .filter((k): k is keyof typeof KNOWN_AUTHORS => k !== null)
+    .filter((k): k is keyof typeof KNOWN_PERSONS => k !== null)
 
   return {
-    graphNodes: keys.map((key) => KNOWN_AUTHORS[key]),
+    graphNodes: keys.map((key) => KNOWN_PERSONS[key]),
     references:
       keys.length > 0
-        ? keys.map((key) => ({ "@id": KNOWN_AUTHORS[key]["@id"] }))
+        ? keys.map((key) => ({ "@id": KNOWN_PERSONS[key]["@id"] }))
         : [ethereumCommunityReference],
   }
 }
