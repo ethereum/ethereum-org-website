@@ -149,6 +149,7 @@ const GetStartedGrid = async ({
 
                   <LinkOverlay
                     href={card.href}
+                    hideArrow
                     className="flex items-center gap-1 font-semibold no-underline"
                     matomoEvent={{
                       eventCategory,
