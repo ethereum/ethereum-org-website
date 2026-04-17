@@ -315,7 +315,7 @@ const SlideContent = ({
             />
           </div>
 
-          <div className="absolute -left-12 bottom-10 z-10 flex flex-col gap-5 lg:-left-16">
+          <div className="absolute -start-12 bottom-10 z-10 flex flex-col gap-5 lg:-start-16">
             <ComparisonCard
               item={comparison.traditional}
               variant="default"

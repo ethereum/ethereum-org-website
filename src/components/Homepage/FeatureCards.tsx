@@ -56,7 +56,7 @@ const FeatureCards = async ({
                 src={ownershipImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 600px"
-                className="absolute -bottom-16 -right-16 h-2/3 w-auto object-contain opacity-25"
+                className="absolute -bottom-16 -end-16 h-2/3 w-auto object-contain opacity-25"
               />
 
               <div className="relative z-10 flex flex-col gap-6">
@@ -96,7 +96,7 @@ const FeatureCards = async ({
                 src={publicRulesImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 450px"
-                className="absolute -bottom-12 -right-24 h-2/3 w-auto object-contain"
+                className="absolute -bottom-12 -end-24 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
@@ -116,7 +116,7 @@ const FeatureCards = async ({
                 src={globalImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -bottom-6 -right-8 h-2/3 w-auto object-contain"
+                className="absolute -bottom-6 -end-8 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
@@ -134,7 +134,7 @@ const FeatureCards = async ({
                 src={freeAccessImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -bottom-6 -right-8 h-2/3 w-auto object-contain"
+                className="absolute -bottom-6 -end-8 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
