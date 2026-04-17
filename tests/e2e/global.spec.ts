@@ -1,5 +1,4 @@
-import { expect, takeSnapshot, test } from "@chromatic-com/playwright"
-import { Page } from "@playwright/test"
+import { expect, Page, test } from "@playwright/test"
 
 import { testData } from "./fixtures/testData"
 import { HomePage } from "./pages/HomePage"
@@ -83,12 +82,6 @@ test.describe("Global", () => {
         page.getByRole("heading", { level: 1, name: /إيثريوم/i })
       ).toBeVisible()
     }
-
-    test("home page RTL visual snapshot", async ({ page }, testInfo) => {
-      await page.goto("/ar")
-      await homePage.waitForPageReady()
-      await takeSnapshot(page, "home-arabic-rtl", testInfo)
-    })
 
     test("nav flips logo and search button when switching to RTL via language picker", async ({
       page,

@@ -81,7 +81,10 @@ const ToolModalContents = async ({ tool }: { tool: DeveloperTool }) => {
           />
         </div>
         <div className="-mt-2 max-h-[16lh] overflow-y-auto pb-4 pt-2 [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)]">
-          {await renderSimpleMarkdown(translatedDescription, mdComponentOverrides)}
+          {await renderSimpleMarkdown(
+            translatedDescription,
+            mdComponentOverrides
+          )}
         </div>
         <div className="!mt-8 space-y-2">
           <p>{t("page-developers-tools-modal-links")}</p>

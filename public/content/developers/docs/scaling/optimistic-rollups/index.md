@@ -251,7 +251,7 @@ The introduction of [data sharding](/roadmap/danksharding/) on Ethereum is expec
 
 More of a visual learner? Watch Finematics explain optimistic rollups:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+<VideoWatch slug="rollups-scaling-strategy" startTime="263" />
 
 ## Further reading on optimistic rollups {#further-reading-on-optimistic-rollups}
 

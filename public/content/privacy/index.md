@@ -12,6 +12,8 @@ Ethereum is transparent by design. Every onchain action is visible to anyone who
 
 Building privacy-preserving tools into Ethereum can help people, organizations, and institutions interact securely while limiting unnecessary exposure. This makes the ecosystem safer and more practical for a wider range of use cases.
 
+<VideoWatch slug="privacy-is-existential" />
+
 ## Privacy for writes {#privacy-of-writes}
 
 By default, every transaction written on Ethereum is public and permanent. This includes not only sending ETH, but also registering ENS names, collecting POAPs, or trading NFTs. Everyday actions like payments, voting, or identity verification can reveal your information to unintended parties. There are several tools and techniques that can help make these more private:

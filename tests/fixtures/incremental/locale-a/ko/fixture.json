@@ -1,0 +1,22 @@
+{
+  "page-title": "오픈 소스 라이선스",
+  "page-description": "자유 소프트웨어 라이선스에 대해 알아보고 프로젝트에 <explorer>적합한 라이선스를 선택하는 방법</explorer>을 알아보세요.",
+  "hero-cta-primary": "시작하기",
+  "hero-cta-secondary": "라이선스 비교 보기",
+  "stat-label-projects": "추적된 오픈 소스 프로젝트",
+  "stat-label-contributors": "활성 기여자",
+  "banner-text": "오픈 소스가 처음이신가요? <a href=\"/contributing/\">기여 가이드</a>로 <strong>시작</strong>해 보세요.",
+  "footer-note": "라이선스 데이터는 <a href=\"https://spdx.org/licenses/\" target=\"_blank\">SPDX</a>에서 제공합니다. 컴플라이언스 도구는 <a href=\"https://fossa.com/\" target=\"_blank\">FOSSA</a>에서 제공합니다.",
+  "filter-label": "라이선스 유형별 필터링",
+  "empty-results": "조건에 맞는 라이선스를 찾을 수 없습니다. 필터를 조정해 보세요.",
+  "welcome-user": "다시 오신 것을 환영합니다, {username}님!",
+  "project-count": "{count, plural, =0 {프로젝트를 찾을 수 없습니다} one {#개의 프로젝트를 찾았습니다} other {#개의 프로젝트를 찾았습니다}}",
+  "contribution-status": "{status, select, pending {기여 내역이 검토 대기 중입니다} approved {기여 내역이 승인되었습니다} rejected {기여 내역에 수정이 필요합니다} other {알 수 없는 상태입니다}}",
+  "nested": {
+    "section-title": "추가 리소스",
+    "section-description": "오픈 소스 라이선스 및 컴플라이언스에 대해 더 자세히 알아보세요.",
+    "link-text": "모든 리소스 보기"
+  },
+  "multi-link": "<a href=\"https://opensource.org/osd\">오픈 소스 정의</a>를 읽고, <a href=\"https://choosealicense.com/\">라이선스 선택기</a>를 검토하며, <a href=\"https://spdx.org/\">SPDX 식별자</a>를 확인하세요.",
+  "markdown-description": "## 빠른 참조\n\n- **MIT**: 가장 허용적이며 최소한의 제한\n- **Apache-2.0**: 특허 부여가 포함된 허용적 라이선스\n- **GPL-3.0**: 강력한 카피레프트, 파생물은 GPL이어야 함\n\n자세한 내용은 [전체 비교](/open-source/#comparison-table)를 참조하세요."
+}

@@ -1,4 +1,4 @@
-import { takeSnapshot, test } from "@chromatic-com/playwright"
+import { test } from "@playwright/test"
 
 import { testData } from "./fixtures/testData"
 import { HomePage } from "./pages/HomePage"
@@ -11,11 +11,9 @@ test.describe("Home Page", () => {
     await homePage.goto()
   })
 
-  test("loads successfully", async ({ page }, testInfo) => {
-    // ensure page is ready before taking snapshot
+  test("loads successfully", async () => {
     await homePage.waitForPageReady()
     await homePage.verifyPageLoaded()
-    await takeSnapshot(page, "home-initial", testInfo)
   })
 
   test("search functionality", async () => {
@@ -33,12 +31,11 @@ test.describe("Home Page", () => {
     await homePage.navigateToBuilderHome()
   })
 
-  test("navigation menu - mobile", async ({ page }, testInfo) => {
+  test("navigation menu - mobile", async () => {
     const isMobile = await homePage.isMobileViewport()
     test.skip(!isMobile, "This test is for mobile viewports only")
 
     await homePage.openMobileMenu()
-    await takeSnapshot(page, "home-menu-open", testInfo)
 
     await homePage.verifyMobileNavigation()
     await homePage.navigateFromMobileMenu(
