@@ -7,6 +7,7 @@
 import { expect, test } from "@playwright/test"
 
 import {
+  buildIncrementalPrompt,
   buildSectionList,
   extractJsonSections,
   extractSections,
@@ -67,6 +68,62 @@ test.describe("parseIncrementalResponse", () => {
     const response = '  \n{"my-section": "Content."}\n  '
     const result = parseIncrementalResponse(response)
     expect(result["my-section"]).toBe("Content.")
+  })
+})
+
+test.describe("buildIncrementalPrompt -- per-file-type BiDi rules", () => {
+  const baseOptions = {
+    filePath: "test.md",
+    targetLanguage: "ar",
+    languageName: "Arabic",
+    sections: [
+      {
+        id: "intro",
+        action: "TRANSLATE" as const,
+        content: "Hello world.",
+      },
+    ],
+    glossaryTerms: new Map<string, string>(),
+  }
+
+  test("RTL markdown prompt instructs span dir=ltr wrapping", () => {
+    const prompt = buildIncrementalPrompt({
+      ...baseOptions,
+      fileType: "markdown",
+    })
+    expect(prompt).toContain('<span dir="ltr">')
+    expect(prompt).not.toContain("U+2066")
+  })
+
+  test("RTL json prompt instructs raw Unicode bidi isolates and forbids spans", () => {
+    const prompt = buildIncrementalPrompt({
+      ...baseOptions,
+      fileType: "json",
+      filePath: "test.json",
+    })
+    expect(prompt).toContain("U+2066")
+    expect(prompt).toContain("U+2069")
+    expect(prompt).toContain('Do NOT use <span dir="ltr">')
+  })
+
+  test("non-RTL locale has no BiDi rules regardless of fileType", () => {
+    const spanishMd = buildIncrementalPrompt({
+      ...baseOptions,
+      fileType: "markdown",
+      targetLanguage: "es",
+      languageName: "Spanish",
+    })
+    const spanishJson = buildIncrementalPrompt({
+      ...baseOptions,
+      fileType: "json",
+      filePath: "test.json",
+      targetLanguage: "es",
+      languageName: "Spanish",
+    })
+    expect(spanishMd).not.toContain('<span dir="ltr">')
+    expect(spanishMd).not.toContain("U+2066")
+    expect(spanishJson).not.toContain('<span dir="ltr">')
+    expect(spanishJson).not.toContain("U+2066")
   })
 })
 

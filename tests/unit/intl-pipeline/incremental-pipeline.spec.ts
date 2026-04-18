@@ -32,17 +32,20 @@ import { pipeline } from "../../../src/scripts/intl-pipeline"
 const FIXTURES = join(__dirname, "../../fixtures/incremental")
 const read = (p: string) => readFileSync(join(FIXTURES, p), "utf-8")
 
-const EN_A_MD = read("english/fixture-a.md")
-const EN_B_MD = read("english/fixture-b.md")
-const EN_A_JSON = read("english/fixture-a.json")
-const EN_B_JSON = read("english/fixture-b.json")
+const EN_A_MD = read("english-a/fixture-1.md")
+const EN_B_MD = read("english-b/fixture-1.md")
+const EN_A_JSON = read("english-a/fixture-1.json")
+const EN_B_JSON = read("english-b/fixture-1.json")
+const EN_A_JSON2 = read("english-a/fixture-2.json")
+const EN_B_JSON2 = read("english-b/fixture-2.json")
 
 const locA = (lang: string, ext: string) =>
-  read(`locale-a/${lang}/fixture.${ext}`)
+  read(`locale-a/${lang}/fixture-1.${ext}`)
+const locA2 = (lang: string) => read(`locale-a/${lang}/fixture-2.json`)
 const locB = (lang: string, ext: string) =>
-  read(`locale-b/${lang}/fixture.${ext}`)
+  read(`locale-b/${lang}/fixture-1.${ext}`)
 const locExpected = (lang: string, ext: string) =>
-  read(`locale-expected/${lang}/fixture.${ext}`)
+  read(`locale-expected/${lang}/fixture-1.${ext}`)
 
 const CONFIG: Partial<ContentTreeConfig> = {
   depth: "element",
@@ -633,5 +636,17 @@ for (const lang of LANGS) {
       }
     )
     expect(result).toBe(expected)
+  })
+}
+
+// ===================================================================
+// Fixture-2: No-drift JSON (identical english-a and english-b)
+// ===================================================================
+
+for (const lang of LANGS) {
+  test(`No-drift [${lang}] JSON fixture-2: output matches locale-A exactly`, () => {
+    const result = pipeline(EN_A_JSON2, EN_B_JSON2, locA2(lang), "json")
+    // No drift = output should be byte-for-byte identical to locale-A
+    expect(result).toBe(locA2(lang))
   })
 }

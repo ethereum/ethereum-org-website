@@ -32,4 +32,4 @@ jobs:
       - name: Deploy to Trigger.dev
         run: pnpm exec trigger deploy
         env:
-          TRIGGER_SECRET_KEY: ${{ secrets.TRIGGER_SECRET_KEY }}
+          TRIGGER_ACCESS_TOKEN: ${{ secrets.TRIGGER_ACCESS_TOKEN }}
