@@ -1,4 +1,4 @@
-import { Book, Building2, ChevronRight, Code } from "lucide-react"
+import { Book, Building2, Code } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils/cn"
 import { numberFormat } from "@/lib/utils/numbers"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
+import { ChevronNext } from "../Chevron"
 
 import developersImage from "@/public/images/homepage/get-started/developers.png"
 import enterpriseImage from "@/public/images/homepage/get-started/enterprise.png"
@@ -157,7 +159,7 @@ const GetStartedGrid = async ({
                     }}
                   >
                     {card.cta}
-                    <ChevronRight className="size-5" />
+                    <ChevronNext className="size-5" />
                   </LinkOverlay>
                 </CardContent>
               </Card>

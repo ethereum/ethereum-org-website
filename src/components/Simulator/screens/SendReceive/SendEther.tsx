@@ -40,7 +40,8 @@ export const SendEther = ({
 
   const AMOUNTS: Array<number> = [5, 10, 20, maxUsdAmount]
   const formatButtonLabel = (amount: number): string => {
-    if (amount === maxUsdAmount) return "Max"
+    if (amount === maxUsdAmount) return t("sim-send-max")
+    // if (amount === maxUsdAmount) return "Max"
     return formatWalletUsd(amount)
   }
   const formatChosenAmount = formatWalletUsd(chosenAmount, {
@@ -91,9 +92,7 @@ export const SendEther = ({
           <p className="font-bold leading-none">
             {t("sim-send-balance", { amount: usdAmount })}
           </p>
-          <p>
-            <>{ethAmount} ETH</>
-          </p>
+          <p dir="ltr">{ethAmount} ETH</p>
         </Flex>
       </Flex>
       <div className="h-full bg-background-highlight">

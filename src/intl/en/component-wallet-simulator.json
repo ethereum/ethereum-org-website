@@ -105,6 +105,7 @@
   "sim-send-choose-value": "Choose a value below",
   "sim-send-eth-only-note": "In this walkthrough you can only send ETH, but in real wallet you can send different tokens as well",
   "sim-send-balance": "Balance: {amount}",
+  "sim-send-max": "Max",
   "sim-contacts-title": "Choose recipient",
   "sim-contacts-choose": "Choose {name} from recent contacts",
   "sim-contacts-search": "Address or contacts",

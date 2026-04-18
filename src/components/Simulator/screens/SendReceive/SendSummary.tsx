@@ -42,7 +42,7 @@ export const SendSummary = ({
             {formatChosenAmount}
           </p>
         </Flex>
-        <p className="text-xs text-body-medium">
+        <p dir="ltr" className="text-xs text-body-medium">
           {formatWalletToken(chosenAmount / ethPrice, locale)} ETH
         </p>
       </div>
