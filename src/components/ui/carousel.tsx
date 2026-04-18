@@ -35,8 +35,8 @@ const wrapperClasses = cn(
 const containerClasses = cn(
   // Vertical margin-adjusted padding for overflow (scrollbar/shadows)
   "-my-[var(--edge-overflow-y-pad)] py-[var(--edge-overflow-y-pad)]",
-  // Scroll container
-  "flex overflow-x-auto"
+  // Scroll container with grab cursor for mouse drag support
+  "flex overflow-x-auto cursor-grab"
 )
 
 const snapClasses = cn(
@@ -134,8 +134,43 @@ const Carousel = React.forwardRef<HTMLDivElement, CarouselProps>(
       const ro = new ResizeObserver(update)
       ro.observe(el)
 
+      // Mouse drag-to-scroll for users without a trackpad
+      let isDragging = false
+      let startX = 0
+      let startScroll = 0
+
+      const onMouseDown = (e: MouseEvent) => {
+        // Only primary button, ignore if clicking a link/button
+        if (e.button !== 0) return
+        isDragging = true
+        startX = e.pageX
+        startScroll = el.scrollLeft
+        el.style.cursor = "grabbing"
+        el.style.scrollSnapType = "none"
+        e.preventDefault()
+      }
+
+      const onMouseMove = (e: MouseEvent) => {
+        if (!isDragging) return
+        el.scrollLeft = startScroll - (e.pageX - startX)
+      }
+
+      const onMouseUp = () => {
+        if (!isDragging) return
+        isDragging = false
+        el.style.cursor = ""
+        el.style.scrollSnapType = ""
+      }
+
+      el.addEventListener("mousedown", onMouseDown)
+      window.addEventListener("mousemove", onMouseMove)
+      window.addEventListener("mouseup", onMouseUp)
+
       return () => {
         el.removeEventListener("scroll", update)
+        el.removeEventListener("mousedown", onMouseDown)
+        window.removeEventListener("mousemove", onMouseMove)
+        window.removeEventListener("mouseup", onMouseUp)
         ro.disconnect()
       }
     }, [update])
