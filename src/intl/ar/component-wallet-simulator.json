@@ -105,6 +105,7 @@
   "sim-send-choose-value": "اختر قيمة أدناه",
   "sim-send-eth-only-note": "في هذه الجولة يمكنك فقط إرسال ⁦ETH⁩، ولكن في المحفظة الحقيقية يمكنك إرسال رموز مختلفة أيضًا",
   "sim-send-balance": "الرصيد: ⁦{amount}⁩",
+  "sim-send-max": "الحد الأقصى",
   "sim-contacts-title": "اختر المستلم",
   "sim-contacts-choose": "اختر {name} من جهات الاتصال الحديثة",
   "sim-contacts-search": "العنوان أو جهات الاتصال",
