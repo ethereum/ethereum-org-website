@@ -15,10 +15,7 @@ import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -152,9 +149,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <h2 className="mb-6 font-bold">
               {t("page-events-section-major-conferences")}
             </h2>
-            <EdgeScrollContainer>
+            <Carousel>
               {highlightedConferences.map((event) => (
-                <EdgeScrollItem
+                <CarouselItem
                   key={event.id}
                   asChild
                   className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
@@ -169,9 +166,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       eventName: "highlighted_conf",
                     }}
                   />
-                </EdgeScrollItem>
+                </CarouselItem>
               ))}
-            </EdgeScrollContainer>
+            </Carousel>
           </Section>
 
           {/* Ethereum community hubs */}
@@ -186,7 +183,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-hubs-subtitle")}
               </p>
             </div>
-            <EdgeScrollContainer>
+            <Carousel>
               {communityHubs.map(
                 ({
                   id,
@@ -198,7 +195,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   banner,
                   brandColor: logoBgColor,
                 }) => (
-                  <EdgeScrollItem
+                  <CarouselItem
                     key={id}
                     className={cn(
                       "ms-6 w-[calc(100%-4rem)] max-w-96 md:w-96 lg:max-w-[30%] xl:max-w-[22%]",
@@ -251,10 +248,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         {t("page-events-hub-meetups")}
                       </Link>
                     </div>
-                  </EdgeScrollItem>
+                  </CarouselItem>
                 )
               )}
-            </EdgeScrollContainer>
+            </Carousel>
             <div className="md:px-4">
               <ButtonLink
                 href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"

@@ -2,12 +2,7 @@
 
 import { ReactNode } from "react"
 
-import {
-  Swiper,
-  SwiperContainer,
-  SwiperNavigation,
-  SwiperSlide,
-} from "@/components/ui/swiper"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 
 interface AppsSwiperProps {
   cards: ReactNode[]
@@ -15,23 +10,16 @@ interface AppsSwiperProps {
 
 const AppsSwiper = ({ cards }: AppsSwiperProps) => {
   return (
-    <SwiperContainer className="md:hidden">
-      <Swiper
-        slidesPerView={1.5}
-        spaceBetween={16}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-        }}
-      >
-        {cards.map((card, index) => (
-          <SwiperSlide key={index}>{card}</SwiperSlide>
-        ))}
-        <SwiperNavigation />
-      </Swiper>
-    </SwiperContainer>
+    <Carousel className="md:hidden">
+      {cards.map((card, index) => (
+        <CarouselItem
+          key={index}
+          className="ms-4 w-[calc(66%-1rem)] sm:w-[calc(50%-1rem)]"
+        >
+          {card}
+        </CarouselItem>
+      ))}
+    </Carousel>
   )
 }
 

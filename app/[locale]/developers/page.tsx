@@ -19,10 +19,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
@@ -574,7 +571,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <h2>{t("page-developers-hackathons-title")}</h2>
             <p>{t("page-developers-hackathons-desc")}</p>
 
-            <EdgeScrollContainer>
+            <Carousel>
               {hackathons.map((event) => {
                 const {
                   title,
@@ -586,7 +583,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 } = event
 
                 return (
-                  <EdgeScrollItem
+                  <CarouselItem
                     key={event.id}
                     asChild
                     className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
@@ -598,7 +595,6 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: title,
                       }}
-                      className="min-w-72 max-w-md flex-1"
                     >
                       <CardBanner className="h-36">
                         {bannerImage ? (
@@ -619,10 +615,10 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         </CardParagraph>
                       </CardContent>
                     </Card>
-                  </EdgeScrollItem>
+                  </CarouselItem>
                 )
               })}
-            </EdgeScrollContainer>
+            </Carousel>
 
             <div className="flex justify-center">
               <ButtonLink

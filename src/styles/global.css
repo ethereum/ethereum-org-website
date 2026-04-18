@@ -1,12 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import "@docsearch/css";
 @import "@/styles/colors.css";
 @import "@/styles/semantic-tokens.css";
 @import "@/styles/docsearch.css";
 @import "@rainbow-me/rainbowkit/styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {

@@ -6,10 +6,7 @@ import type { PageParams } from "@/lib/types"
 import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import { Section } from "@/components/ui/section"
 
 import { getLocaleYear } from "@/lib/utils/date"
@@ -81,9 +78,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         {/* Major blockchain conferences */}
         <Section className="space-y-4">
           <h2>{t("page-events-conferences-major-events")}</h2>
-          <EdgeScrollContainer>
+          <Carousel>
             {highlightedConferences.map((event) => (
-              <EdgeScrollItem
+              <CarouselItem
                 key={event.id}
                 asChild
                 className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
@@ -98,9 +95,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     eventName: "highlighted_conf",
                   }}
                 />
-              </EdgeScrollItem>
+              </CarouselItem>
             ))}
-          </EdgeScrollContainer>
+          </Carousel>
         </Section>
 
         {/* All conferences - TABLE/ROW view */}

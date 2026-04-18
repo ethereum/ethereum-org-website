@@ -13,7 +13,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/embla-carousel"
 
 import { cn } from "@/lib/utils/cn"
 import { dateTimeFormat, formatDate } from "@/lib/utils/date"

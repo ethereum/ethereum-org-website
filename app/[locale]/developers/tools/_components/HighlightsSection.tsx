@@ -3,10 +3,7 @@ import { getTranslations } from "next-intl/server"
 import AppCard from "@/components/AppCard"
 import { Image } from "@/components/Image"
 import { CardBanner, CardParagraph } from "@/components/ui/card"
-import {
-  EdgeScrollContainer,
-  EdgeScrollItem,
-} from "@/components/ui/edge-scroll-container"
+import { Carousel, CarouselItem } from "@/components/ui/carousel"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
 
@@ -30,7 +27,7 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
   return (
     <Section id="highlights" className="space-y-4">
       <h2>{t("page-developers-tools-highlights")}</h2>
-      <EdgeScrollContainer>
+      <Carousel>
         {tools.map((tool) => {
           // Safety check - skip tools without required images
           if (!tool.banner_url || !tool.thumbnail_url) return null
@@ -38,7 +35,7 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
           const categorySlug = DEV_TOOL_CATEGORY_SLUGS[tool.category]
 
           return (
-            <EdgeScrollItem
+            <CarouselItem
               key={tool.id}
               asChild
               className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
@@ -90,10 +87,10 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
                   />
                 </LinkOverlay>
               </LinkBox>
-            </EdgeScrollItem>
+            </CarouselItem>
           )
         })}
-      </EdgeScrollContainer>
+      </Carousel>
     </Section>
   )
 }
