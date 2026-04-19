@@ -302,6 +302,72 @@ Same pattern for JSON fixtures (per language).
 
 ---
 
+## Orchestration
+
+The per-file pipeline (Phases 1-6) is a pure function. The orchestration layer wraps it to coordinate multiple pipeline runs over time against a shared base branch (e.g., `dev`).
+
+### Pending branch as durable cursor
+
+Each base branch has a corresponding pending branch: `intl/pending-<base>` (for example, `intl/pending-dev`). The pending branch is the durable accumulator of all translations against that base -- it advances forward across pipeline runs until its contents are merged back into the base.
+
+**Lifecycle:**
+
+1. **First run (pending does not exist):**
+   - Create `intl/pending-<base>` from `<base>` HEAD
+   - Translate, stamp manifests, merge into pending
+   - Open PR: `intl/pending-<base>` → `<base>`
+
+2. **Subsequent run (pending exists):**
+   - Merge `<base>` into pending first. This brings in any new English that landed on base since the previous run. **Fail fast** if the merge conflicts -- do not do any translation work.
+   - Use pending's state as the baseline: the pipeline's local working tree and temp branch both derive from pending (not base). Drift detection compares current English against the manifests on pending (which are stamped to the previous run's commit), not against base.
+   - Translate only what changed since the last stamp.
+   - Merge the run's temp branch back into pending. The existing PR gets updated.
+
+3. **After pending PR is merged:**
+   - The pending branch is deleted (by the normal PR merge flow or manually). The next pipeline run starts fresh, creating a new pending branch.
+
+### Why pending-as-baseline
+
+Without this, a second run against the same base would re-translate English that the first run already handled. Non-deterministic LLM output means Run 2's translations would differ from Run 1's for the same sections, producing merge conflicts on the pending branch after expensive translation work.
+
+With pending-as-baseline:
+- The manifests on pending are authoritative. "What changed" is measured from the last stamp, not from base.
+- Sections already translated in Run 1 are unchanged for Run 2 (same English → same stamped hash → no drift).
+- Run 2 translates only the delta introduced since Run 1 (new PRs merged to base between runs).
+- Merges back into pending are always fast-forward or clean, never conflicting.
+
+### Temp branch lifecycle
+
+Each pipeline run creates an ephemeral temp branch (`tmp-intl/run-<timestamp>`) to accumulate its commits before merging into pending.
+
+- **Created from:** pending's HEAD (if pending exists), otherwise base's HEAD.
+- **Deleted:** after successful merge into pending. Temp branches are not audit artifacts -- once their commits are on pending, they serve no purpose.
+- **Preserved:** only when the pipeline fails partway through translation or when the final merge into pending fails. This is a debug aid for manual recovery.
+
+### Base-branch-moved-during-run
+
+If the base branch advances while the pipeline is running (a new PR merges to `<base>` between `start` and `end` of a run), the run's output is based on a slightly stale English. This is acceptable: the next pipeline run will see the new English state and translate the delta. No special handling required -- the orchestration naturally catches up.
+
+### Non-English file edit policy
+
+Non-English translation files should not be manually edited once the pipeline is in production. The pipeline is the single writer for locale files. Manual edits break the manifest's "source of truth" model and risk conflicts with pipeline output.
+
+**Escape hatch for rare cases:**
+When a manual non-English edit is genuinely needed (fixing a translation error, emergency patch):
+1. Only do this when the pending branch for the relevant base does not exist (i.e., no pending PR against that base). If one exists, merge or close it first.
+2. Make the edit directly to `<base>`.
+3. Run the pipeline in `--stamp-only` mode to update manifests to reflect the current file state without calling the LLM. This tells the next incremental run that the current state is the canonical state.
+
+### Summary: orchestration contract
+
+Given a sequence of pipeline runs against the same base:
+- Each run's output is deterministic given its inputs (current English + pending manifests).
+- The pending branch is the sole accumulator. Each run advances it forward.
+- Merge conflicts (base-into-pending, tmp-into-pending) abort the run with a clear error. They never corrupt existing translations or silently drop work.
+- Successful runs leave the repository in a state where the next run is idempotent: if nothing changed in base, a rerun produces zero drift and zero LLM calls.
+
+---
+
 ## Open questions
 
 - **Structural mismatch handling:** When a locale file has fewer inline elements than English (e.g., Urdu drops 2 of 4 links in a sentence), this is a structural integrity violation. The pipeline should flag this for human review rather than silently skipping. How this flag is surfaced (PR comment, log warning, separate report) is TBD.
