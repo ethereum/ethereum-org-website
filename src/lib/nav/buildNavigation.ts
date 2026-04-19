@@ -228,9 +228,9 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
                   href: "/refi/",
                 },
                 {
-                  label: t("ai-agents"),
-                  description: t("nav-ai-agents-description"),
-                  href: "/ai-agents/",
+                  label: t("decentralized-ai"),
+                  description: t("nav-decentralized-ai-description"),
+                  href: "/decentralized-ai/",
                 },
                 {
                   label: t("onchain-gaming"),
