@@ -57,6 +57,20 @@ The AI agent builder hub covers each of these core building blocks in depth:
 - **Machine payments**: Autonomous agents need to pay for compute and data without human intervention. Stablecoins and open protocols like x402 provide a programmable settlement layer for agent commerce. See [Payments](/ai-agents/payments/).
 - **Agent identity**: When agents interact with humans or other agents, counterparties need a way to verify what an agent is and what its track record is using onchain registries like ERC-8004. See [Identity](/ai-agents/identity/).
 
+## AI agent infrastructure today {#ecosystem-today}
+
+The standards and protocols that power AI agents on Ethereum have crossed from research into production.
+
+| Standard or protocol | Status |
+| :--- | :--- |
+| **EIP-7702** — Smart account delegation for existing EOAs | Live since the Pectra upgrade, May 2025 |
+| **ERC-4337** — Smart account standard | EntryPoint v0.7 live on mainnet |
+| **ERC-8004** — Onchain agent identity registry | Live on 20+ chains since January 2026 |
+| **x402** — Machine-to-machine HTTP payments | Production-ready since Q1 2026 |
+| **L2 transaction cost** | $0.001–$0.003 per operation |
+
+See [Data and stats](/ai-agents/data/) for onchain metrics tracking the growth of the AI agent ecosystem.
+
 ## AI agent builder hub sections {#ai-agent-builder-hub-sections}
 
 ### Foundation {#foundation}

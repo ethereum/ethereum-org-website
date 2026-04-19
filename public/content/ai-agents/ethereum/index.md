@@ -33,7 +33,7 @@ Developers can generate a cryptographic proof demonstrating that a specific mode
 
 ZkML proves correct computation, not factual accuracy. While a model can still produce a wrong answer, zkML provides a tamper-resistant record that the model executed its logic consistently. 
 
-Infrastructure including [EZKL](https://ezkl.xyz/), [Lagrange's DeepProve](https://lagrange.dev/blog/deepprove-zkml), and [Jolt](https://jolt.a16zcrypto.com/) provides zkML tooling for constrained inference tasks. 
+Infrastructure for zkML tooling, ordered by production readiness: [EZKL](https://ezkl.xyz/) (most production-ready; supports ONNX models), [DeepProve by Lagrange](https://lagrange.dev/blog/deepprove-zkml) (GPU-distributed proving; capable of LLM-scale inference as of early 2026), [Risc Zero](https://dev.risczero.com/) (general-purpose ZK proofs via zkVM), [SP1 by Succinct](https://docs.succinct.xyz/) (ZK proving system), and [Jolt](https://jolt.a16zcrypto.com/) (research-stage as of early 2026; native ZK support added March 2026; not yet production-ready). 
 
 **Maturity note:** zkML for small, bounded models (decision trees, compact classifiers, fraud detectors) is production-viable today. Generating and verifying proofs for large language models at the scale most agents use remains computationally prohibitive for the majority of production deployments and is an active area of research. The [Verification](/ai-agents/verification/) page covers the current performance envelope in detail.
 
@@ -57,7 +57,7 @@ See [AI Agents: Verification](/ai-agents/verification/) for implementation detai
 
 A fundamental risk in deploying autonomous agents is that they hold signing authority over funds. Giving an agent an unconstrained private key is equivalent to giving it unlimited spending authority; a hallucination, a prompt injection, or a logic error can drain an account.
 
-Ethereum's [account abstraction](roadmap/account-abstraction/) standards (primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/)) allow developers to replace raw private key control with programmable smart contract wallets, which enforce spending limits, allowlists, and session keys at the contract level. 
+Ethereum's [account abstraction](/roadmap/account-abstraction/) standards—primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/) (live on Ethereum Mainnet since the Pectra upgrade, May 2025)—allow developers to replace raw private key control with programmable smart contract wallets, which enforce spending limits, allowlists, and session keys at the contract level. 
 
 **Session keys** are the primary mechanism for delegating scoped authority under either standard. 
 
@@ -74,7 +74,7 @@ For SDK-level implementation guidance and a detailed technical breakdown of thes
 
 When an agent interacts with a user or with another agent, the counterparty needs a way to verify what the agent is and what authority it holds. Centralized identity registries address this by requiring trust in the registry operator. Onchain identity standards address it by making registrations publicly verifiable and censorship-resistant.
 
-**[The Trustless Agents Standard, ERC-8004](https://eips.ethereum.org/EIPS/eip-8004)** introduces a portable, onchain agent identifier that can be deployed across multiple networks. It provides three registries: an identity registry for agent discovery, a reputation registry for onchain feedback signals, and a validation registry for requesting cryptographic verification of agent outputs via zkML verifiers or TEE oracles. Applications can look up an agent's declared capabilities before interacting with it; the validation registry provides the hooks for requesting cryptographic proof that specific outputs meet defined standards.
+**[The Trustless Agents Standard, ERC-8004](https://eips.ethereum.org/EIPS/eip-8004)** is live on Ethereum Mainnet and 20+ chains since January 29, 2026. It introduces a portable, onchain agent identifier that can be deployed across multiple networks. It provides three registries: an identity registry for agent discovery (`0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), a reputation registry for onchain feedback signals (`0x8004BAa17C55a88189AE136b182e5fdA19dE9b63`), and a validation registry for requesting cryptographic verification of agent outputs via zkML verifiers or TEE oracles. Applications can look up an agent's declared capabilities before interacting with it; the validation registry provides the hooks for requesting cryptographic proof that specific outputs meet defined standards.
 
 Paired with onchain reputation systems and agent attestation mechanisms, agent identity standards on Ethereum form the trust layer that allows agents to participate in more complex multi-agent workflows.
 
@@ -92,9 +92,9 @@ Composability also means that agent logic can build on existing audited infrastr
 
 Autonomous agents need to pay for compute resources, data feeds, and other agent services without human intervention. Standard financial rails require corporate entities and bank accounts&mdash;barriers that autonomous code cannot cross. 
 
-Ethereum provides a native, permissionless financial rail for machines. Agents can hold and spend stablecoins (like USDC) natively. Emerging standards like the **[x402 protocol](https://www.x402.org/)** for machine-to-machine payments build on Ethereum's native stablecoin infrastructure by providing a machine-readable flow: an agent requests a resource, receives an invoice, and instantly signs a micropayment to gain access.
+Ethereum provides a native, permissionless financial rail for machines. Agents can hold and spend stablecoins natively. Emerging standards like the **[x402 protocol](https://www.x402.org/)** for machine-to-machine payments build on Ethereum's native stablecoin infrastructure by providing a machine-readable flow: an agent requests a resource, receives an HTTP 402 invoice, and instantly signs a micropayment using EIP-3009 (which USDC implements natively) to gain access. x402 tooling is currently most mature on Base; builders deploying on other L2s should verify support before committing to x402 as their payment architecture.
 
-Ethereum Layer 2 networks make these machine payments even more economically viable than on Mainnet. Transaction fees on L2s are low enough to support high-frequency, sub-cent agent-to-agent payments at scale, with settlement backed by [Ethereum's security model](/what-is-the-ethereum-network/#staking).
+Ethereum Layer 2 networks make these machine payments economically viable. L2 transaction fees of $0.001–$0.003 per operation are low enough to support high-frequency, sub-cent agent-to-agent payments at scale, with settlement backed by [Ethereum's security model](/what-is-the-ethereum-network/#staking).
 
 Low-friction machine micropayments, combined with onchain agent identity, enable self-sustaining agent architectures on Ethereum. Agents can independently acquire compute, pay for data, and monetize their own outputs.
 
