@@ -367,6 +367,33 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           ],
         },
         {
+          id: "build/ai-agents",
+          label: t("ai-agents"),
+          description: t("nav-build-ai-agents-description"),
+          items: [
+            {
+              label: t("nav-ai-agents-overview"),
+              description: t("nav-ai-agents-overview-description"),
+              href: "/ai-agents/",
+            },
+            {
+              label: t("nav-ai-agents-getting-started"),
+              description: t("nav-ai-agents-getting-started-description"),
+              href: "/ai-agents/getting-started/",
+            },
+            {
+              label: t("nav-ai-agents-frameworks"),
+              description: t("nav-ai-agents-frameworks-description"),
+              href: "/ai-agents/frameworks/",
+            },
+            {
+              label: t("nav-ai-agents-wallets"),
+              description: t("nav-ai-agents-wallets-description"),
+              href: "/ai-agents/wallets/",
+            },
+          ],
+        },
+        {
           id: "build/business",
           label: t("business"),
           description: t("nav-business-description"),

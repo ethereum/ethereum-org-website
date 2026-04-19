@@ -139,12 +139,12 @@ export const UseCasesLayout = ({
         },
       },
       {
-        text: t("template-usecase:template-usecase-dropdown-ai-agents"),
-        href: "/ai-agents/",
+        text: t("template-usecase:template-usecase-dropdown-decentralized-ai"),
+        href: "/decentralized-ai/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
-          eventName: "ai-agents",
+          eventName: "decentralized-ai",
         },
       },
       {
