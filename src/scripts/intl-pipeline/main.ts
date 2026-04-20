@@ -581,6 +581,12 @@ async function main() {
     }
     tempBranchSourceSha = (await getBranchObject(targetBranch)).sha
 
+    // Force-update the local ref and check out pending's versions of the
+    // manifest and content paths. This is destructive to any local edits in
+    // those paths and is intended to run in CI (GitHub Actions) only, where
+    // the working tree is ephemeral. The pipeline requires GEMINI_API_KEY
+    // which is loaded from GH Secrets, so accidental local invocation is
+    // unlikely, but edits in the listed paths will be clobbered if it happens.
     log(`Syncing local working tree from ${targetBranch}...`)
     execFileSync(
       "git",

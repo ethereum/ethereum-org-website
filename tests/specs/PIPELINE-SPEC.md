@@ -28,6 +28,8 @@ Given an English content change (A -> B), update all locale translations with mi
 - **source manifest**: Merkle tree hashes of the English content at the time of last pipeline run (used for quick "did anything change?" check via rootHash comparison; `sourceCommitSha` enables retrieval of english-A)
 - **translation manifest**: Merkle tree of the locale content, mirroring the English tree structure. Tracks per-section hashes so the pipeline knows which sections are up to date in each locale.
 
+> **Note on baseline selection:** across multiple runs against the same base branch, these inputs are drawn from a **pending branch** rather than directly from base. The pending branch accumulates translations and stamped manifests from prior runs, and serves as the baseline for drift detection on subsequent runs. See the [Orchestration](#orchestration) section for details.
+
 ## Output
 
 - **locale-B**: the updated translation reflecting all changes from A -> B
@@ -350,13 +352,16 @@ If the base branch advances while the pipeline is running (a new PR merges to `<
 
 ### Non-English file edit policy
 
-Non-English translation files should not be manually edited once the pipeline is in production. The pipeline is the single writer for locale files. Manual edits break the manifest's "source of truth" model and risk conflicts with pipeline output.
+The pipeline is the single propagator of English changes into non-English files. The rule is not "never hand-edit locales" -- it is "do not hand-propagate English updates." The manifest maps each locale section to a specific English state; edits that preserve that mapping are fine, edits that break it are not.
 
-**Escape hatch for rare cases:**
-When a manual non-English edit is genuinely needed (fixing a translation error, emergency patch):
-1. Only do this when the pending branch for the relevant base does not exist (i.e., no pending PR against that base). If one exists, merge or close it first.
+**Allowed:** Fixing a translation error when the English side has not moved (e.g. a correction made during `/review-translations` on a pipeline-generated PR). The manifest's English -> locale mapping remains accurate, so the next incremental run treats the corrected locale content as canonical.
+
+**Not allowed:** Hand-editing a locale file to reflect an English change. This desynchronises the manifest from reality; the next run will either re-translate over your edit or produce merge conflicts.
+
+**If an English-to-locale sync is genuinely needed** (e.g. a structural change that would break the build if not propagated immediately):
+1. Only do this when the pending branch for the base does not exist. If one exists, merge or close it first.
 2. Make the edit directly to `<base>`.
-3. Run the pipeline in `--stamp-only` mode to update manifests to reflect the current file state without calling the LLM. This tells the next incremental run that the current state is the canonical state.
+3. Trigger `intl-pipeline.yml` with `stamp_only: true`. This updates the manifests to reflect the current file state without calling the LLM, telling the next incremental run that the current state is canonical.
 
 ### Summary: orchestration contract
 
@@ -381,9 +386,7 @@ Given a sequence of pipeline runs against the same base:
 
 - Gemini API integration (mocked in tests)
 - GitHub Actions workflow (tested separately)
-- Git operations (file retrieval via sha, committing results)
 - Multi-file batching (test is per-file)
 - Chunking for large files
 - Post-import sanitization
-- PR creation
 - Image alt text translation (known gap; alt text in markdown images is not currently classified as translatable by the parser)
