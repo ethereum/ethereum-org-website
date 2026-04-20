@@ -1,6 +1,7 @@
 import { type ReactNode, useState } from "react"
 import { Info, X } from "lucide-react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { Button } from "../ui/buttons/Button"
 import {
@@ -20,6 +21,7 @@ type MoreInfoPopover = {
 }
 export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
   const [clicked, setClicked] = useState(false)
+  const t = useTranslations("component-wallet-simulator")
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -29,7 +31,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
           onClick={() => setClicked(true)}
           data-testid="more-info-popover-trigger"
         >
-          More info
+          {t("sim-more-info")}
           <Info className="size-5" />
           {isFirstStep && !clicked && <PulseAnimation type="narrow-button" />}
         </MotionButton>
