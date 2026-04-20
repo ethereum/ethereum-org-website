@@ -105,6 +105,7 @@
   "sim-send-choose-value": "Elige un valor a continuación",
   "sim-send-eth-only-note": "En este tutorial solo puedes enviar ETH, pero en una billetera real también puedes enviar diferentes tokens",
   "sim-send-balance": "Saldo: {amount}",
+  "sim-send-max": "Máx.",
   "sim-contacts-title": "Elegir destinatario",
   "sim-contacts-choose": "Elige a {name} de los contactos recientes",
   "sim-contacts-search": "Dirección o contactos",

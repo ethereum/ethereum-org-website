@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/component-wallet-simulator.json",
-  "generatedAt": "2026-04-18T19:11:21.615Z",
-  "rootHash": "d8c8ef8102c6",
+  "generatedAt": "2026-04-18T20:57:29.293Z",
+  "rootHash": "86f422ca5b5e",
   "tree": {
-    "contentHash": "5cb7d6cc2013",
-    "anchorHash": "0b836b4a8e3e",
+    "contentHash": "cea939fc065a",
+    "anchorHash": "3681c571b02c",
     "children": {
       "sim-back": {
         "contentHash": "76900f1bfd16",
@@ -562,6 +562,10 @@
           "icu:0"
         ]
       },
+      "sim-send-max": {
+        "contentHash": "a1a5936d3b0f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "sim-contacts-title": {
         "contentHash": "7a428ba9fcba",
         "anchorHash": "e3b0c44298fc"
@@ -977,6 +981,7 @@
       "sim-send-choose-value",
       "sim-send-eth-only-note",
       "sim-send-balance",
+      "sim-send-max",
       "sim-contacts-title",
       "sim-contacts-choose",
       "sim-contacts-search",
@@ -1035,5 +1040,5 @@
       "sim-cw-search-website"
     ]
   },
-  "sourceCommitSha": "9d6761fed51a72381a7603315ea3fb2475e8844d"
+  "sourceCommitSha": "b92b89be9b3b7d3827fcee4d562ce76560cf717b"
 }
