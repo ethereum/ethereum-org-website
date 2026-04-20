@@ -6,35 +6,9 @@
 
 ## Pipeline Quality
 
-### 1. Fix Comment Restoration Concatenation Bug
+### 1. Deep JSON Validation
 
-**Problem:** Translated code comments are concatenated with the original instead of replacing them. Example: `// **** REMOVE LIQUIDITY **** // **** ...Arabic... ****`
-
-**Root cause:** `restoreComments()` in `lib/llm/code-block-extractor.ts` appends the translated comment to the existing line content instead of replacing. `translateCodeComments()` should use `strippedCode` (comments removed) as the base for restoration, not the original `block.content`.
-
-**Complexity:** Low. ~5 line change.
-
-### 2. Stronger Glossary Enforcement
-
-**Problem:** High-frequency glossary terms like "mint" are translated inconsistently. The glossary is sent in the prompt but Gemini doesn't always adhere strictly.
-
-**Proposed solution:**
-- Post-translation pass that scans output for known English glossary terms that should have been translated, and flags or auto-corrects them
-- Consider a validation step that compares glossary term frequency in source vs translation
-- May overlap with existing sanitizer `fixKnownBrandGarbles` pattern -- extend to glossary terms
-
-### 3. Transliteration During Translation
-
-**Problem:** Gemini regresses on transliterations (author names, brand names like "Proto-danksharding") that the sanitizer then has to catch.
-
-**Proposed solution:**
-- Include transliteration banks directly in the translation prompt for non-Latin locales
-- Add language-group-specific transliteration rules to `lib/llm/prompt-builder.ts`
-- Ensure the translation prompt and sanitizer are aligned on the same transliteration bank
-
-### 4. Deep JSON Validation
-
-**Problem:** Current validation only checks top-level JSON keys. Nested namespaces can have dropped or renamed keys at depth > 1 without detection.
+**Problem:** Current validation only checks top-level JSON keys (`validateTranslatedJson` in `lib/llm/output-validation.ts`). Nested namespaces can have dropped or renamed keys at depth > 1 without detection.
 
 **Proposed solution:** Recursive key comparison that walks the full object tree, reporting missing/added/renamed keys at any depth.
 
@@ -42,17 +16,17 @@
 
 ## Pipeline Features
 
-### 5. Split PRs (one PR per language)
+### 2. Restore Split PRs (one PR per language) -- nice-to-have
 
-**Problem:** Large multi-language runs produce a single massive PR that's hard to review.
+**Problem:** Large multi-language runs produce a single massive PR that's hard to review. This previously worked via a `SPLIT_PRS` workflow input (commit `a52be9ddd9`) but was removed during the pipeline rewrite.
 
-**Proposed solution:** A workflow input `split_prs` (boolean, default false) that creates a separate branch and PR per language.
+**Nuance:** Today's orchestration assumes one `intl/pending-<base>` per base. Restoring split PRs means applying the full orchestration contract (base-into-pending merge, fail-fast, local-tree sync, temp branch, PR) independently per language -- e.g. `intl/pending-<base>-<lang>`. The old implementation predates this model, so it needs adaptation rather than cherry-pick.
 
 ---
 
 ## Automation
 
-### 6. Auto-trigger Translations on Content Merge
+### 3. Auto-trigger Translations on Content Merge
 
 **Problem:** Content changes merged to dev currently require manual triggering of the translation pipeline.
 
@@ -61,7 +35,7 @@
 - Automatically triggers the translation workflow for changed files
 - Should respect a cooldown/batch window to avoid triggering on every small merge
 
-### 7. Full-language Retroactive Cleanup
+### 4. Full-language Retroactive Cleanup
 
 **Problem:** Many languages were translated before current pipeline improvements. Those translations have the same class of issues found in Arabic (brand garbles, wrong compounds, etc.).
 
@@ -74,7 +48,7 @@
 
 ## Image Translation
 
-### 8. Translate Text in Diagrams and Infographics
+### 5. Translate Text in Diagrams and Infographics
 
 **Problem:** Educational diagrams and infographics contain English text that remains untranslated, creating a jarring experience on otherwise fully translated pages.
 
@@ -89,7 +63,7 @@
 
 ## Package Extraction
 
-### 9. Extract i18n Tooling into Standalone Packages
+### 6. Extract i18n Tooling into Standalone Packages
 
 **Problem:** Glossary, translation pipeline, and (future) image pipeline are embedded in the repo. Creates bloat and prevents reuse.
 
