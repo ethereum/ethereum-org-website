@@ -60,6 +60,17 @@ export const formatLargeNumber = (value: number, locale: string): string => {
   }).format(value)
 }
 
+export const formatCompactNumber = (
+  value: number,
+  locale: string,
+  options?: Intl.NumberFormatOptions
+): string =>
+  numberFormat(locale, {
+    notation: "compact",
+    maximumSignificantDigits: 3,
+    ...options,
+  }).format(value)
+
 export const formatPriceUSD = (value: number, locale: string): string => {
   return numberFormat(locale, {
     style: "currency",

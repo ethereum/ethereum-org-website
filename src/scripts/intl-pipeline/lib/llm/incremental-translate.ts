@@ -28,6 +28,8 @@ interface SectionForPrompt {
 interface IncrementalTranslateOptions {
   /** English file path */
   filePath: string
+  /** Source file type -- controls per-format rules in the prompt (e.g. RTL BiDi syntax) */
+  fileType: "markdown" | "json"
   /** Target language code */
   targetLanguage: string
   /** Language display name */
@@ -62,11 +64,17 @@ interface IncrementalTranslateResult {
 export function buildIncrementalPrompt(
   options: IncrementalTranslateOptions
 ): string {
-  const { filePath, targetLanguage, languageName, sections, glossaryTerms } =
-    options
+  const {
+    filePath,
+    fileType,
+    targetLanguage,
+    languageName,
+    sections,
+    glossaryTerms,
+  } = options
 
   const group = getLanguageGroup(targetLanguage)
-  const siteNotes = getSiteSpecificNotes(group)
+  const siteNotes = getSiteSpecificNotes(group, fileType)
   const glossarySection = formatGlossary(glossaryTerms)
 
   const translateIds = sections

@@ -21,7 +21,7 @@ on:
         default: "dev"
         type: string
       target_branch:
-        description: "Override target branch (default: intl/pending)"
+        description: "Override target branch (default: intl/pending-{base_branch})"
         required: false
         type: string
       concurrency:

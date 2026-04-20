@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion, useAnimationControls } from "motion/react"
+import { useLocale, useTranslations } from "next-intl"
 import type { Swiper as SwiperType } from "swiper"
 import { SwiperSlide } from "swiper/react"
 
@@ -20,24 +21,13 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { formatPriceUSD, numberFormat } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
 import borrowingImage from "@/public/images/homepage/savings/borrowing.png"
 import defiImage from "@/public/images/homepage/savings/defi.png"
 import remittancesImage from "@/public/images/homepage/savings/remittances.png"
-
-const APY_DATA = {
-  traditional: {
-    label: "Traditional Savings",
-    apy: 0.5,
-  },
-  ethereum: {
-    label: "Ethereum Apps",
-    apyMin: 4,
-    apyMax: 8,
-  },
-} as const
 
 type ComparisonItem = {
   label: string
@@ -56,82 +46,117 @@ type Slide = {
   tag: string
   title: string
   subtitle: string
-  description: string
+  description: string | React.ReactNode
   cta: string
   href: string
   image: typeof defiImage
-  comparison: ComparisonData | "apy"
+  comparison: ComparisonData
 }
 
-const slides: Slide[] = [
-  {
-    id: "defi",
-    tag: "SAVINGS & INTEREST",
-    title: "Ownership has financial benefits too",
-    subtitle: "When there's no broker taking a cut, you gain more.",
-    description:
-      "Earn higher interest on funds using lending apps on Ethereum. You can withdraw your money 24/7.",
-    cta: "See DeFi →",
-    href: "/defi/",
-    image: defiImage,
-    comparison: "apy",
-  },
-  {
-    id: "remittances",
-    tag: "CROSS-BORDER PAYMENTS",
-    title: "Send money home in 12 minutes",
-    subtitle: "Skip the $50 wire fee and the 5+ day wait.",
-    description:
-      "Send stablecoins for just $0.2, and your family receives the funds almost instantly.",
-    cta: "Send money →",
-    href: "/payments/",
-    image: remittancesImage,
-    comparison: {
-      traditional: { label: "WIRE TRANSFER", value: "3-5 days" },
-      ethereum: { label: "ETHEREUM", value: "12 minutes" },
-    },
-  },
-  {
-    id: "borrowing",
-    tag: "FINANCIAL ACCESS",
-    title: "Borrow without credit history",
-    subtitle: "You don't need a credit score to get started.",
-    description:
-      "Using DeFi apps on Ethereum, you can provide collateral and access credit instantly, no permission required.",
-    cta: "Try it yourself →",
-    href: "/apps/categories/defi/",
-    image: borrowingImage,
-    comparison: {
-      traditional: {
-        label: "TRADITIONAL BANK",
-        value: "Credit checks",
-        smallText: true,
-      },
-      ethereum: {
-        label: "ON ETHEREUM",
-        value: "Based on collateral",
-        smallText: true,
-      },
-    },
-  },
-]
+function useSlides(): Slide[] {
+  const t = useTranslations("page-index")
+  const locale = useLocale()
 
-const getComparison = (slide: Slide): ComparisonData => {
-  if (slide.comparison === "apy") {
-    return {
-      traditional: {
-        label: APY_DATA.traditional.label,
-        value: `${APY_DATA.traditional.apy}%`,
-        suffix: "APY",
+  const fmt = (value: number, options?: Intl.NumberFormatOptions) =>
+    numberFormat(locale, options).format(value)
+
+  const wireFee = fmt(50, {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  })
+  const txFee = formatPriceUSD(0.02, locale)
+  const twelve = fmt(12)
+
+  return [
+    {
+      id: "privacy",
+      tag: t("page-index-carousel-privacy-tag"),
+      title: t("page-index-carousel-privacy-title"),
+      subtitle: t("page-index-carousel-privacy-subtitle"),
+      description: t("page-index-carousel-privacy-description"),
+      cta: t("page-index-carousel-privacy-cta"),
+      href: "/apps/categories/privacy/",
+      image: defiImage,
+      comparison: {
+        traditional: {
+          label: t("page-index-carousel-privacy-traditional-label"),
+          value: t("page-index-carousel-privacy-traditional-value"),
+          smallText: true,
+        },
+        ethereum: {
+          label: t("page-index-carousel-privacy-ethereum-label"),
+          value: t("page-index-carousel-privacy-ethereum-value"),
+          smallText: true,
+        },
       },
-      ethereum: {
-        label: APY_DATA.ethereum.label,
-        value: `${APY_DATA.ethereum.apyMin}-${APY_DATA.ethereum.apyMax}%`,
-        suffix: "APY",
+    },
+    {
+      id: "remittances",
+      tag: t("page-index-carousel-remittances-tag"),
+      title: t("page-index-carousel-remittances-title", { minutes: twelve }),
+      subtitle: t("page-index-carousel-remittances-subtitle", {
+        wireFee,
+        days: fmt(5),
+      }),
+      description: t.rich("page-index-carousel-remittances-description", {
+        txFee,
+        stablecoinsLink: (chunks) => (
+          <Link
+            href="/stablecoins/"
+            className="no-underline"
+            customEventOptions={{
+              eventCategory: "Homepage",
+              eventAction: "section_click",
+              eventName: "savings_carousel/stablecoins_inline",
+            }}
+          >
+            {chunks}
+          </Link>
+        ),
+      }),
+      cta: t("page-index-carousel-remittances-cta"),
+      href: "/payments/",
+      image: remittancesImage,
+      comparison: {
+        traditional: {
+          label: t("page-index-carousel-remittances-traditional-label"),
+          value: t("page-index-carousel-remittances-traditional-value", {
+            min: fmt(3),
+            max: fmt(5),
+          }),
+        },
+        ethereum: {
+          label: t("page-index-carousel-remittances-ethereum-label"),
+          value: t("page-index-carousel-remittances-ethereum-value", {
+            minutes: twelve,
+          }),
+        },
       },
-    }
-  }
-  return slide.comparison
+    },
+    {
+      id: "borrowing",
+      tag: t("page-index-carousel-borrowing-tag"),
+      title: t("page-index-carousel-borrowing-title"),
+      subtitle: t("page-index-carousel-borrowing-subtitle"),
+      description: t("page-index-carousel-borrowing-description"),
+      cta: t("page-index-carousel-borrowing-cta"),
+      href: "/defi/",
+      image: borrowingImage,
+      comparison: {
+        traditional: {
+          label: t("page-index-carousel-borrowing-traditional-label"),
+          value: t("page-index-carousel-borrowing-traditional-value"),
+          smallText: true,
+        },
+        ethereum: {
+          label: t("page-index-carousel-borrowing-ethereum-label"),
+          value: t("page-index-carousel-borrowing-ethereum-value"),
+          smallText: true,
+        },
+      },
+    },
+  ]
 }
 
 type SavingsCarouselProps = {
@@ -168,7 +193,7 @@ const ComparisonCard = ({
       <FloatingCard variant={variant}>
         <p
           className={cn(
-            "text-xs font-semibold uppercase tracking-wider lg:text-sm",
+            "text-sm font-semibold uppercase tracking-wider",
             !isPrimary && "text-body-medium"
           )}
         >
@@ -178,7 +203,7 @@ const ComparisonCard = ({
           <span
             className={cn(
               "font-bold",
-              item.smallText ? "text-2xl lg:text-3xl" : "text-4xl lg:text-5xl"
+              item.smallText ? "text-2xl" : "text-4xl lg:text-5xl"
             )}
           >
             {item.value}
@@ -203,7 +228,7 @@ const SlideContent = ({
   isActive,
   eventCategory,
 }: SlideContentProps) => {
-  const comparison = getComparison(slide)
+  const comparison = slide.comparison
   const traditionalControls = useAnimationControls()
   const ethereumControls = useAnimationControls()
 
@@ -225,7 +250,7 @@ const SlideContent = ({
       <SectionContent className="order-2 flex flex-col gap-6 md:order-1 md:max-w-[660px] md:gap-10">
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{slide.tag}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0 text-4xl sm:text-5xl md:text-6xl">
+          <SectionHeader className="!mb-0 !mt-0 md:text-6xl">
             {slide.title}
           </SectionHeader>
         </div>
@@ -248,7 +273,7 @@ const SlideContent = ({
         </Link>
 
         {/* Mobile comparison cards - stacked below content */}
-        <div className="flex flex-col gap-3 md:hidden">
+        <div className="flex flex-col gap-5 md:hidden">
           <ComparisonCard
             item={comparison.traditional}
             variant="default"
@@ -285,27 +310,28 @@ const SlideContent = ({
               src={slide.image}
               alt=""
               sizes="(max-width: 768px) 100vw, 1200px"
-              quality={90}
               className="h-full w-full object-cover"
             />
           </div>
 
-          <ComparisonCard
-            item={comparison.traditional}
-            variant="default"
-            controls={traditionalControls}
-            initial={{ opacity: 0, x: -20, y: 10 }}
-            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-            className="absolute -left-8 bottom-40 z-10 w-[250px] lg:-left-12 lg:bottom-44 lg:w-[269px]"
-          />
-          <ComparisonCard
-            item={comparison.ethereum}
-            variant="primary"
-            controls={ethereumControls}
-            initial={{ opacity: 0, x: -30, y: 15 }}
-            transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
-            className="absolute -left-12 bottom-10 z-10 w-[280px] lg:-left-16 lg:w-[339px]"
-          />
+          <div className="absolute -start-12 bottom-10 z-10 flex flex-col gap-5 lg:-start-16">
+            <ComparisonCard
+              item={comparison.traditional}
+              variant="default"
+              controls={traditionalControls}
+              initial={{ opacity: 0, x: -20, y: 10 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+              className="ms-4 w-[357px]"
+            />
+            <ComparisonCard
+              item={comparison.ethereum}
+              variant="primary"
+              controls={ethereumControls}
+              initial={{ opacity: 0, x: -30, y: 15 }}
+              transition={{ duration: 0.6, delay: 0.45, ease: "easeOut" }}
+              className="w-[339px]"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -316,6 +342,8 @@ const SavingsCarousel = ({
   className,
   eventCategory = "Homepage",
 }: SavingsCarouselProps) => {
+  const t = useTranslations("page-index")
+  const slides = useSlides()
   const [activeIndex, setActiveIndex] = useState(0)
 
   const handleSlideChange = (swiper: SwiperType) => {
@@ -328,7 +356,11 @@ const SavingsCarousel = ({
   }
 
   return (
-    <section className={cn("w-full", className)}>
+    <section
+      className={cn("w-full", className)}
+      aria-roledescription="carousel"
+      aria-label={t("page-index-carousel-label")}
+    >
       <SwiperContainer className="[&_.swiper]:!flex [&_.swiper]:flex-col [&_.swiper]:gap-6">
         <Swiper
           navigationPlacement="bottom"
@@ -344,7 +376,10 @@ const SavingsCarousel = ({
               />
             </SwiperSlide>
           ))}
-          <SwiperNavigation />
+          <SwiperNavigation
+            prevLabel={t("page-index-carousel-previous-slide")}
+            nextLabel={t("page-index-carousel-next-slide")}
+          />
         </Swiper>
       </SwiperContainer>
     </section>
