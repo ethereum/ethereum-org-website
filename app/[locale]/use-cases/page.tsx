@@ -14,7 +14,13 @@ import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card } from "@/components/ui/card"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import { Flex, Stack } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 
@@ -66,7 +72,6 @@ const Section = ({
 type UseCaseCardProps = {
   href: string
   image: ImageProps["src"]
-  imageAlt?: string
   title: string
   description: string
   ctaLabel: string
@@ -75,22 +80,18 @@ type UseCaseCardProps = {
 const UseCaseCard = ({
   href,
   image,
-  imageAlt = "",
   title,
   description,
   ctaLabel,
 }: UseCaseCardProps) => (
-  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4">
-    <Image
-      src={image}
-      alt={imageAlt}
-      className="mx-auto h-[200px] w-full object-contain"
-      sizes="250px"
-    />
-    <div className="space-y-2">
-      <h3 className="text-2xl font-bold">{title}</h3>
-      <p className="text-body-medium">{description}</p>
-    </div>
+  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:px-4">
+    <CardBanner background="none" fit="contain">
+      <Image src={image} alt="" sizes="250px" />
+    </CardBanner>
+    <CardContent className="p-0">
+      <CardTitle variant="bold">{title}</CardTitle>
+      <CardParagraph variant="light">{description}</CardParagraph>
+    </CardContent>
     <ButtonLink href={href} variant="solid">
       {ctaLabel}
     </ButtonLink>
