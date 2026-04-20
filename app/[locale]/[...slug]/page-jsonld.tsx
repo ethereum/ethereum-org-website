@@ -29,7 +29,7 @@ export default async function SlugJsonLD({
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: `https://ethereum.org/${locale}/`,
+      item: normalizeUrlForJsonLd(locale, "/"),
     },
   ]
 

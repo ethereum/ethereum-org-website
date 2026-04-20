@@ -34,6 +34,9 @@ import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
+
+import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
 import consensys from "@/public/images/projects/consensys.png"
 import blockscout from "@/public/images/resources/blockscout.webp"
 import ef from "@/public/images/staking/ef-blog-logo.png"
@@ -261,14 +264,19 @@ const DepositContractPage = ({ locale }: { locale: Lang }) => {
     ? ":speaker_high_volume:"
     : ":speaker:"
 
+  const depositContractUrl = normalizeUrlForJsonLd(
+    locale,
+    "/staking/deposit-contract/"
+  )
+
   // JSON-LD structured data for the Deposit Contract page
   const webPageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/staking/deposit-contract/`,
+    "@id": depositContractUrl,
     name: t("page-staking-deposit-contract-title"),
     description: t("page-staking-deposit-contract-subtitle"),
-    url: `https://ethereum.org/${locale}/staking/deposit-contract/`,
+    url: depositContractUrl,
     inLanguage: locale,
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -277,19 +285,19 @@ const DepositContractPage = ({ locale }: { locale: Lang }) => {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: `https://ethereum.org/${locale}/`,
+          item: normalizeUrlForJsonLd(locale, "/"),
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Staking",
-          item: `https://ethereum.org/${locale}/staking/`,
+          item: normalizeUrlForJsonLd(locale, "/staking/"),
         },
         {
           "@type": "ListItem",
           position: 3,
           name: t("page-staking-deposit-contract-title"),
-          item: `https://ethereum.org/${locale}/staking/deposit-contract/`,
+          item: depositContractUrl,
         },
       ],
     },
