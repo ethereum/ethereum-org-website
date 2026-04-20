@@ -98,11 +98,25 @@ export const COUNTRY_TO_CONTINENT: Record<string, Continent> = Object.entries(
 )
 
 /**
+ * Sentinel location strings that indicate a virtual/remote event rather
+ * than a physical location. Matched case-insensitively.
+ */
+const ONLINE_LOCATION_VALUES = new Set(["online", "remote"])
+
+/**
+ * Returns true if the location string represents a virtual event
+ * (e.g., "Online", "Remote") rather than a physical location.
+ */
+export function isOnlineLocation(location: string): boolean {
+  return ONLINE_LOCATION_VALUES.has(location?.trim().toLowerCase() ?? "")
+}
+
+/**
  * Parse a location string (e.g., "Berlin, Germany") to its continent.
  * Returns null for online events or unrecognized locations.
  */
 export function parseLocationToContinent(location: string): Continent | null {
-  if (!location || location.toLowerCase() === "online") return null
+  if (!location || isOnlineLocation(location)) return null
   const parts = location.split(/,\s*/)
   const country = parts[parts.length - 1]?.trim()
   if (!country) return null
@@ -148,7 +162,8 @@ export function getCountryTranslation(country: string, locale: string): string {
  * locale, and reassembles. City names are left in their original script.
  *
  * Returns the original string unchanged if:
- * - The location is "Online" (handled separately by i18n keys)
+ * - The location is a virtual event sentinel (e.g., "Online", "Remote") --
+ *   these are handled separately by i18n keys via the isOnline flag
  * - The country cannot be identified or translated
  * - The locale is "en" (no translation needed)
  *
@@ -159,7 +174,7 @@ export function getCountryTranslation(country: string, locale: string): string {
 export function localizeLocation(location: string, locale: string): string {
   if (!location || locale === "en") return location
 
-  if (location.toLowerCase() === "online") return location
+  if (isOnlineLocation(location)) return location
 
   const parts = location.split(/,\s*/)
   const rawCountry = parts[parts.length - 1].trim()
