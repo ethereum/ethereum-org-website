@@ -45,7 +45,7 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 - **Collective ownership** – you could purchase physical or digital assets and members can vote on how to use them.
 - **Ventures and grants** – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
 
-<YouTube id="zTStDvUtQWc" />
+<VideoWatch slug="dao-build-next-great-city" />
 
 ## How do DAOs work? {#how-daos-work}
 
@@ -74,15 +74,15 @@ Delegation is like the DAO version of representative democracy. Token holders de
 
 [ENS](https://claim.ens.domains/delegate-ranking) – ENS holders can delegate their votes to engaged community members to represent them.
 
-### Automatic transaction governance {#governance-example}
+### Automatic transaction governance {#governance-example-2}
 
 In many DAOs, transactions will be automatically executed if a quorum of members votes affirmative.
 
-#### A famous example {#governance-example}
+#### A famous example {#governance-example-3}
 
 [Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affirmative, as long as it is not vetoed by the founders.
 
-### Multisig governance {#governance-example}
+### Multisig governance {#governance-example-4}
 
 While DAOs may have thousands of voting members, funds can live in a [wallet](/glossary/#wallet) shared by 5-20 active community members who are trusted and usually doxxed (public identities known to the community). After a vote, the [multisig](/glossary/#multisig) signers execute the will of the community.
 

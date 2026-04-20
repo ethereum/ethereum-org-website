@@ -395,7 +395,7 @@ const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 
 ### Update your .env file {#update-your-env-file}
 
-We will be using new environment variables, so we need to define them in the `.env`file that [we created earlier](#step-11-connect-metamask-&-alchemy-to-your-project).
+We will be using new environment variables, so we need to define them in the `.env`file that [we created earlier](#step-11-connect-metamask-alchemy-to-your-project).
 
 We'll need to add a definition for our Alchemy `API_KEY` and the `CONTRACT_ADDRESS` where your smart contract was deployed.
 
@@ -410,7 +410,7 @@ PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
 ```
 
-### Grab your contract ABI {#grab-your-contract-ABI}
+### Grab your contract ABI {#grab-your-contract-abi}
 
 Our contract [ABI (Application Binary Interface)](/glossary/#abi) is the interface to interact with our smart contract. Hardhat automatically generates an ABI and saves it in `HelloWorld.json`. To use the ABI, we'll need to parse out the contents by adding the following lines of code to our `interact.js` file:
 
@@ -652,7 +652,7 @@ Run the `verify` task, passing the contract address, and the network to where it
 npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-Make sure that `DEPLOYED_CONTRACT_ADDRESS` is the address of your deployed smart contract on the Goerli test network. Also, the final argument (`'Hello World!'`) must be the same string value used [during the deploy step in part 1](#write-our-deploy-script).
+Make sure that `DEPLOYED_CONTRACT_ADDRESS` is the address of your deployed smart contract on the Goerli test network. Also, the final argument (`'Hello World!'`) must be the same string value used [during the deploy step in part 1](#step-15-write-our-deploy-script).
 
 If all goes well, you will see the following message in your terminal:
 
@@ -692,7 +692,7 @@ First, go to the [hello-world-part-four GitHub repository](https://github.com/al
 
 Open the cloned repository locally. Notice that it contains two folders: `starter-files` and `completed`.
 
-- `starter-files`- **we will be working in this directory**, we will connect the UI to your Ethereum wallet and the smart contract we published to Etherscan in [Part 3](#part-3).
+- `starter-files`- **we will be working in this directory**, we will connect the UI to your Ethereum wallet and the smart contract we published to Etherscan in [Part 3](#part-3-publish-your-smart-contract-to-etherscan).
 - `completed` contains the entire completed tutorial and should only be used as a reference if you get stuck.
 
 Next, open your copy of `starter-files` to your favorite code editor, and then navigate into the `src` folder.
@@ -993,7 +993,7 @@ export const helloWorldContract = new web3.eth.Contract(
 
 Now that we have our contract loaded, we can implement our `loadCurrentMessage` function!
 
-#### Implementing `loadCurrentMessage` in your `interact.js` file {#implementing-loadCurrentMessage-in-your-interact-js-file}
+#### Implementing `loadCurrentMessage` in your `interact.js` file {#implementing-loadcurrentmessage-in-your-interact-js-file}
 
 This function is super simple. We're going make a simple async web3 call to read from our contract. Our function will return the message stored in the smart contract:
 
@@ -1026,7 +1026,7 @@ Before we dive into our listener, let's check out what we have so far! Save your
 
 You'll notice that the current message no longer says "No connection to the network." Instead it reflects the message stored in the smart contract. Sick!
 
-#### Your UI should now reflect the message stored in the smart contract {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+#### Your UI should now reflect the message stored in the smart contract {#your-ui-should-now-reflect-the-message-stored-in-the-smart-contract}
 
 Now speaking of that listener...
 
@@ -1139,11 +1139,11 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 
 Phew! Our fake money is all there! 🤑
 
-### Step 5: Connect MetaMask to your UI {#step-5-connect-metamask-to-your-UI}
+### Step 5: Connect MetaMask to your UI {#step-5-connect-metamask-to-your-ui}
 
 Now that our MetaMask wallet is set up, let's connect our dapp to it!
 
-#### The `connectWallet` function {#the-connectWallet-function}
+#### The `connectWallet` function {#the-connectwallet-function}
 
 In our `interact.js`file, let's implement the `connectWallet` function, which we can then call in our `HelloWorld.js` component.
 
@@ -1205,7 +1205,7 @@ Using a try/catch loop, we'll try to connect to MetaMask by calling [`window.eth
 
 Now that we've written this `connectWallet` function, the next step is to call it to our `HelloWorld.js`component.
 
-#### Add the `connectWallet` function to your `HelloWorld.js` UI Component {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+#### Add the `connectWallet` function to your `HelloWorld.js` UI Component {#add-the-connectwallet-function-to-your-helloworld-js-ui-component}
 
 Navigate to the `connectWalletPressed` function in `HelloWorld.js`, and update it to the following:
 
@@ -1369,7 +1369,7 @@ useEffect(async () => {
 
 And that's it! We've successfully completed programming all of our wallet functionality! Now onto our last task: updating the message stored in our smart contract!
 
-### Step 6: Implement the `updateMessage` function {#step-6-implement-the-updateMessage-function}
+### Step 6: Implement the `updateMessage` function {#step-6-implement-the-updatemessage-function}
 
 Alrighty fam, we've arrived at the home stretch! In the `updateMessage` of your `interact.js` file, we're going to do the following:
 

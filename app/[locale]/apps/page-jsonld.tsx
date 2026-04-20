@@ -6,7 +6,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
+  ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -32,6 +34,8 @@ export default async function AppsJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -40,7 +44,7 @@ export default async function AppsJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -64,8 +68,8 @@ export default async function AppsJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#apps` },
       },
       {

@@ -9,7 +9,12 @@ interface IntlMessages {
 function getNamespaces(localePath: string): string[] {
   return fs
     .readdirSync(localePath, { withFileTypes: true })
-    .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
+    .filter(
+      (entry) =>
+        entry.isFile() &&
+        entry.name.endsWith(".json") &&
+        !entry.name.startsWith(".")
+    )
     .map((entry) => entry.name.replace(".json", ""))
 }
 

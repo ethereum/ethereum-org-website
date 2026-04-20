@@ -26,7 +26,7 @@ ReFi projects realize these principles using [smart contracts](/glossary/#smart-
 
 ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. DeSci tools could become useful for developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
-<YouTube id="La52dDzBt2k" />
+<VideoWatch slug="regenerative-finance-refi" />
 
 ## Tokenization of carbon credits {#tokenization-of-carbon-credits}
 
@@ -73,7 +73,7 @@ Although there is currently a strong emphasis on carbon markets in general and t
 
 By shifting the direction of capital away from extractive practices toward a regenerative flow, projects and companies that provide social, environmental, or communal benefits—and which might fail to achieve funding in traditional finance—can get off the ground and generate positive externalities for society much more quickly and easily. Transitioning to this model of funding also opens the door to much more inclusive economic systems, where people of all demographics can become active participants rather than merely passive observers. ReFi offers a vision of Ethereum as a mechanism for coordinating action on existential challenges facing our species and all life on our planet—as the base layer of a new economic paradigm, enabling a more inclusive and sustainable future for centuries to come.
 
-## Additional reading on ReFi
+## Additional reading on ReFi {#additional-reading-on-refi}
 
 - [A high-level overview of carbon currencies and their place in the economy](https://www.klimadao.finance/resources/the-vision-of-a-carbon-currency)
 - [The Ministry for the Future, a novel depicting the role of a carbon-backed currency in fighting climate change](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)

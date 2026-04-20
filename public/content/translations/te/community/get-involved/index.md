@@ -109,7 +109,7 @@ Ethereum ఎకోసిస్టమ్ ప్రజా ప్రయోజనా
 - [క్రిప్టోకరెన్సీ ఉద్యోగాలు](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSysలో కెరీర్లు](https://consensys.net/careers/)
 - [క్రిప్టో ఉద్యోగాల జాబితా](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless జాబ్స్ బోర్డ్](https://pallet.xyz/list/bankless/jobs)
+- [Bankless జాబ్స్ బోర్డ్](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [క్రిప్టో వ్యాలీ జాబ్స్](https://cryptovalley.jobs/)

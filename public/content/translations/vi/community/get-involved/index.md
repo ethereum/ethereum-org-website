@@ -109,7 +109,7 @@ Hệ sinh thái Ethereum đang nỗ lực tài trợ cho các sản phẩm công
 - [Việc làm Tiền mã hóa](https://cryptocurrencyjobs.co/ethereum/)
 - [Cơ hội nghề nghiệp tại ConsenSys](https://consensys.net/careers/)
 - [Danh sách Việc làm Crypto](https://cryptojobslist.com/ethereum-jobs)
-- [Bảng tin việc làm Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Bảng tin việc làm Bankless](https://www.bankless.com/jobs)
 - [Việc làm Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Việc làm Crypto Valley](https://cryptovalley.jobs/)

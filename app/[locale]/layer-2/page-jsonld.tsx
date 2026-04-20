@@ -6,7 +6,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
+  ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -30,6 +32,8 @@ export default async function Layer2PageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -38,7 +42,7 @@ export default async function Layer2PageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -62,8 +66,8 @@ export default async function Layer2PageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#layer-2` },
       },
       {
@@ -72,10 +76,10 @@ export default async function Layer2PageJsonLD({
         headline: t("page-layer-2-hero-title"),
         description: t("page-layer-2-meta-description"),
         image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         contributor: contributorList,
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
       },
       {
         "@type": "FAQPage",

@@ -82,7 +82,7 @@ Details:
 - `Password`: `testpassword`
 - `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 {#pbkdf2-sha-256}
 
 Test vector using `AES-128-CTR` and `PBKDF2-SHA-256`:
 
@@ -190,6 +190,6 @@ Changes have been made to the format to give the following file, functionally eq
 }
 ```
 
-## Alterations from Version 2 {#alterations-from-v2}
+## Alterations from Version 2 {#alterations-from-v2-2}
 
 Version 2 was an early C++ implementation with a number of bugs. All essentials remain unchanged from it.

@@ -6,7 +6,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
+  ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -32,6 +34,8 @@ export default async function EthereumVsBitcoinPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -40,7 +44,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -64,8 +68,8 @@ export default async function EthereumVsBitcoinPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#ethereum-vs-bitcoin` },
       },
       {
@@ -75,10 +79,10 @@ export default async function EthereumVsBitcoinPageJsonLD({
         description: t("page-ethereum-vs-bitcoin-meta-description"),
         image:
           "https://ethereum.org/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png",
-        author: [ethereumCommunityOrganization],
-        publisher: ethereumFoundationOrganization,
+        author: [ethereumCommunityReference],
+        publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationOrganization,
+        reviewedBy: ethereumFoundationReference,
         about: [
           {
             "@type": "Thing",

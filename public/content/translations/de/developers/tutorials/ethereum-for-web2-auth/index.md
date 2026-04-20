@@ -9,7 +9,7 @@ lang: de
 published: 2025-04-30
 ---
 
-## Einführung
+## Einführung {#introduction}
 
 [SAML](https://www.onelogin.com/learn/saml) ist ein Standard, der im Web2 verwendet wird, um einem [Identitätsanbieter (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) zu ermöglichen, Benutzerinformationen für [Dienstanbieter (SP)](https://en.wikipedia.org/wiki/Service_provider_(SAML)) bereitzustellen.
 
@@ -22,7 +22,7 @@ Beachten Sie, dass dieses Tutorial für zwei verschiedene Zielgruppen geschriebe
 
 Daher wird es viel Einführungsmaterial enthalten, das Sie vielleicht schon kennen. Sie können dieses gerne überspringen.
 
-### SAML für Ethereum-Nutzer
+### SAML für Ethereum-Nutzer {#saml-for-ethereum-people}
 
 SAML ist ein zentralisiertes Protokoll. Ein Dienstanbieter (SP) akzeptiert Zusicherungen (wie „Dies ist mein Benutzer John, er sollte die Berechtigungen haben, A, B und C zu tun“) von einem Identitätsanbieter (IdP) nur, wenn bereits eine Vertrauensbeziehung zu ihm oder zu der [Zertifizierungsstelle](https://www.ssl.com/article/what-is-a-certificate-authority-ca/) besteht, die das Zertifikat dieses IdP signiert hat.
 
@@ -32,7 +32,7 @@ Zum Beispiel kann der SP ein Reisebüro sein, das Reisedienstleistungen für Unt
 
 Auf diese Weise verhandeln die drei Entitäten – der Browser, der SP und der IdP – über den Zugriff. Der SP muss im Voraus nichts über den Benutzer wissen, der den Browser verwendet, sondern nur dem IdP vertrauen.
 
-### Ethereum für SAML-Nutzer
+### Ethereum für SAML-Nutzer {#ethereum-for-saml-people}
 
 Ethereum ist ein dezentralisiertes System. 
 
@@ -51,7 +51,7 @@ Die Signatur verifiziert nur die Ethereum-Adresse. Um andere Benutzerattribute z
 
 Aufgrund der dezentralisierten Natur von Ethereum kann jeder Benutzer Bestätigungen vornehmen. Die Identität des Bestätigenden ist wichtig, um zu identifizieren, welche Bestätigungen wir als zuverlässig erachten.
 
-## Einrichtung
+## Einrichtung {#setup}
 
 Der erste Schritt besteht darin, dass ein SAML-SP und ein SAML-IdP miteinander kommunizieren.
 
@@ -82,13 +82,13 @@ Der erste Schritt besteht darin, dass ein SAML-SP und ein SAML-IdP miteinander k
 
 5. Geben Sie dem IdP Ihre E-Mail-Adresse an und klicken Sie auf **Login to the service provider**. Sie werden sehen, dass Sie zurück zum Dienstanbieter (Port 3000) weitergeleitet werden und dieser Sie anhand Ihrer E-Mail-Adresse erkennt.
 
-### Detaillierte Erklärung
+### Detaillierte Erklärung {#detailed-explanation}
 
 Das passiert Schritt für Schritt:
 
 ![Normale SAML-Anmeldung ohne Ethereum](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
 Diese Datei enthält die Konfiguration sowohl für den Identitätsanbieter als auch für den Dienstanbieter. Normalerweise wären diese beiden unterschiedliche Entitäten, aber hier können wir den Code der Einfachheit halber teilen.
 
@@ -165,7 +165,7 @@ export const idpPublicData = {
 }
 ```
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 Dies ist der Code, der einen Dienstanbieter implementiert.
 
@@ -355,7 +355,7 @@ app.listen(spPort, () => {
 })
 ```
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
 Dies ist der Identitätsanbieter. Er ist dem Dienstanbieter sehr ähnlich; die folgenden Erklärungen beziehen sich auf die Teile, die unterschiedlich sind.
 
@@ -507,7 +507,7 @@ app.listen(idpPort, () => {
 })
 ```
 
-## Verwendung von Ethereum-Signaturen
+## Verwendung von Ethereum-Signaturen {#using-ethereum-signatures}
 
 Da wir nun eine Benutzeridentität an den Dienstanbieter senden können, besteht der nächste Schritt darin, die Benutzeridentität auf vertrauenswürdige Weise zu erhalten. Viem ermöglicht es uns, einfach das Wallet nach der Benutzeradresse zu fragen, aber das bedeutet, den Browser nach den Informationen zu fragen. Wir kontrollieren den Browser nicht, also können wir der Antwort, die wir von ihm erhalten, nicht automatisch vertrauen.
 
@@ -525,7 +525,7 @@ Rufen Sie dann [den SP](http://localhost:3000) auf und folgen Sie den Anweisunge
 
 Beachten Sie, dass wir zu diesem Zeitpunkt nicht wissen, wie wir die E-Mail-Adresse aus der Ethereum-Adresse erhalten, also melden wir stattdessen `<ethereum address>@bad.email.address` an den SP.
 
-### Detaillierte Erklärung
+### Detaillierte Erklärung {#detailed-explanation-2}
 
 Die Änderungen befinden sich in den Schritten 4-5 im vorherigen Diagramm.
 
@@ -764,7 +764,7 @@ Verwenden Sie nun anstelle von `getLoginPage` `getSignaturePage` im Handler für
 })
 ```
 
-## Abrufen der E-Mail-Adresse
+## Abrufen der E-Mail-Adresse {#getting-the-email-address}
 
 Der nächste Schritt besteht darin, die E-Mail-Adresse zu erhalten, die vom Dienstanbieter angeforderte Kennung. Dazu verwenden wir den [Ethereum Attestation Service (EAS)](https://attest.org/).
 
@@ -814,7 +814,7 @@ Geben Sie dann Ihre E-Mail-Adresse an. Sie haben zwei Möglichkeiten, dies zu tu
 
 So oder so, rufen Sie danach [http://localhost:3000](http://localhost:3000) auf und folgen Sie den Anweisungen. Wenn Sie den Test-Private-Key importiert haben, lautet die E-Mail, die Sie erhalten, `test_addr_0@example.com`. Wenn Sie Ihre eigene Adresse verwendet haben, sollte es das sein, was Sie bestätigt haben.
 
-### Detaillierte Erklärung
+### Detaillierte Erklärung {#detailed-explanation-3}
 
 ![Von der Ethereum-Adresse zur E-Mail gelangen](./fig-06-saml-sig-n-email.png)
 
@@ -961,13 +961,13 @@ Verwenden Sie die neue Funktion, um die E-Mail-Adresse zu erhalten.
   )
 ```
 
-## Was ist mit Dezentralisierung?
+## Was ist mit Dezentralisierung? {#what-about-decentralization}
 
 In dieser Konfiguration können Benutzer nicht vorgeben, jemand zu sein, der sie nicht sind, solange wir uns auf vertrauenswürdige Bestätigende für die Zuordnung von Ethereum- zu E-Mail-Adressen verlassen. Unser Identitätsanbieter ist jedoch immer noch eine zentralisierte Komponente. Wer auch immer den Private-Key des Identitätsanbieters besitzt, kann falsche Informationen an den Dienstanbieter senden.
 
 Es könnte eine Lösung geben, die [Multi-Party Computation (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) verwendet. Ich hoffe, in einem zukünftigen Tutorial darüber zu schreiben.
 
-## Fazit
+## Fazit {#conclusion}
 
 Die Einführung eines Anmeldestandards, wie z. B. Ethereum-Signaturen, steht vor einem Henne-Ei-Problem. Dienstanbieter möchten einen möglichst breiten Markt ansprechen. Benutzer möchten auf Dienste zugreifen können, ohne sich Gedanken über die Unterstützung ihres Anmeldestandards machen zu müssen.
 Die Erstellung von Adaptern, wie z. B. einem Ethereum-IdP, kann uns helfen, diese Hürde zu überwinden.

@@ -9,7 +9,7 @@ lang: ja
 published: 2025-04-30
 ---
 
-## はじめに
+## はじめに {#introduction}
 
 [SAML](https://www.onelogin.com/learn/saml)は、Web2で[IDプロバイダー (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) が[サービスプロバイダー (SP)](https://en.wikipedia.org/wiki/Service_provider_\(SAML\))にユーザー情報を提供するために使用される標準です。
 
@@ -22,7 +22,7 @@ published: 2025-04-30
 
 そのため、すでにご存知の入門的な内容が多く含まれています。 適宜読み飛ばしてください。
 
-### イーサリアム関係者向けのSAML
+### イーサリアム関係者向けのSAML {#saml-for-ethereum-people}
 
 SAMLは中央集権型のプロトコルです。 サービスプロバイダー (SP) は、IDプロバイダー (IdP) との間、またはそのIdPの証明書に署名した[証明書認証局](https://www.ssl.com/article/what-is-a-certificate-authority-ca/)との間に、既存の信頼関係がある場合にのみ、IdPからのアサーション (「これは私のユーザーJohnで、A、B、Cを行う権限を持つべきである」など) を受け入れます。
 
@@ -32,7 +32,7 @@ SAMLは中央集権型のプロトコルです。 サービスプロバイダー
 
 これが、ブラウザ、SP、IdPの3つのエンティティがアクセスを交渉する方法です。 SPは、ブラウザを使用しているユーザーについて事前に何も知る必要はなく、IdPを信頼するだけで済みます。
 
-### SAML関係者向けのイーサリアム
+### SAML関係者向けのイーサリアム {#ethereum-for-saml-people}
 
 イーサリアムは分散型システムです。
 
@@ -51,7 +51,7 @@ SAMLは中央集権型のプロトコルです。 サービスプロバイダー
 
 イーサリアムの分散型の性質により、どのユーザーでもアテステーションを作成できます。 どのアテステーションが信頼できるかを判断するには、証明者のIDが重要です。
 
-## セットアップ
+## セットアップ {#setup}
 
 最初のステップは、SAML SPとSAML IdPが互いに通信できるようにすることです。
 
@@ -83,13 +83,13 @@ SAMLは中央集権型のプロトコルです。 サービスプロバイダー
 
 5. IdPにメールアドレスを入力し、**サービスプロバイダーにログイン**をクリックします。 サービスプロバイダー (ポート3000) にリダイレクトされ、メールアドレスで認識されていることを確認します。
 
-### 詳細な説明
+### 詳細な説明 {#detailed-explanation}
 
 ステップバイステップで起こることは次のとおりです。
 
 ![イーサリアムを使用しない通常のSAMLログオン](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
 このファイルには、IDプロバイダーとサービスプロバイダー両方の設定が含まれています。 通常、これら2つは異なるエンティティですが、ここでは簡潔にするためにコードを共有します。
 
@@ -167,7 +167,7 @@ export const idpPublicData = {
 
 IDプロバイダーの公開データも同様です。 これは、ユーザーをログインさせるには `http://localhost:3001/idp/login` にPOSTし、ユーザーをログアウトさせるには `http://localhost:3001/idp/logout` にPOSTすることを指定しています。
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 これはサービスプロバイダーを実装するコードです。
 
@@ -342,7 +342,7 @@ app.listen(config.spPort, () => {
 
 このExpressアプリケーションで `spPort` をリッスンします。
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
 これはIDプロバイダーです。 これはサービスプロバイダーと非常によく似ており、以下の説明は異なる部分についてです。
 
@@ -472,7 +472,7 @@ idpRouter.post(`/login`,
 
 [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144)を使用して認証リクエストのIDを読み取ることができるはずです。 しかし、動作させることができず、それに多くの時間を費やす価値もなかったので、[汎用XMLパーサー](https://www.npmjs.com/package/fast-xml-parser)を使用します。 必要な情報は、XMLのトップレベルにある `<samlp:AuthnRequest>` タグ内の `ID` 属性です。
 
-## イーサリアム署名の使用
+## イーサリアム署名の使用 {#using-ethereum-signatures}
 
 ユーザーIDをサービスプロバイダーに送信できるようになったので、次のステップは信頼できる方法でユーザーIDを取得することです。 Viemを使用すると、ウォレットにユーザーアドレスを尋ねるだけで済みますが、これはブラウザに情報を要求することを意味します。 私たちはブラウザを制御していないため、そこから得られる応答を自動的に信頼することはできません。
 
@@ -490,7 +490,7 @@ pnpm start
 
 この時点では、イーサリアムアドレスからメールアドレスを取得する方法がわからないため、代わりに `<イーサリアムアドレス>@bad.email.address` をSPに報告します。
 
-### 詳細な説明
+### 詳細な説明 {#detailed-explanation-2}
 
 変更点は、前の図のステップ4-5にあります。
 
@@ -700,7 +700,7 @@ idpRouter.post(`/login`,
 
 ステップ3のハンドラでは、`getLoginPage` の代わりに `getSignaturePage` を使用します。
 
-## メールアドレスの取得
+## メールアドレスの取得 {#getting-the-email-address}
 
 次のステップは、サービスプロバイダーによって要求された識別子であるメールアドレスを取得することです。 そのためには、[Ethereum Attestation Service (EAS)](https://attest.org/) を使用します。
 
@@ -756,7 +756,7 @@ pnpm start
 
 どちらの場合も、これを行った後、[http://localhost:3000](http://localhost:3000) にアクセスして指示に従ってください。 テスト用の秘密鍵をインポートした場合、受け取るメールは `test_addr_0@example.com` です。 独自のアドレスを使用した場合は、証明した内容になります。
 
-### 詳細な説明
+### 詳細な説明 {#detailed-explanation-3}
 
 ![イーサリアムアドレスからメールアドレスへの変換](./fig-06-saml-sig-n-email.png)
 
@@ -873,13 +873,13 @@ const ethereumAddressToEmail = async ethAddr => {
 
 新しい関数を使用してメールアドレスを取得します。
 
-## 分散化については？
+## 分散化については？ {#what-about-decentralization}
 
 この構成では、イーサリアムとメールアドレスのマッピングに信頼できる証明者に依存している限り、ユーザーは他人になりすますことはできません。 しかし、私たちのIDプロバイダーは依然として中央集権的なコンポーネントです。 IDプロバイダーの秘密鍵を持っている人は誰でも、サービスプロバイダーに偽の情報を送信できます。
 
 [マルチパーティ計算 (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) を使用した解決策があるかもしれません。 将来のチュートリアルでそれについて書きたいと思っています。
 
-## まとめ
+## まとめ {#conclusion}
 
 イーサリアム署名のようなログオン標準の採用は、鶏が先か卵が先かの問題に直面します。 サービスプロバイダーは、可能な限り広い市場にアピールしたいと考えています。 ユーザーは、ログオン標準のサポートを心配することなく、サービスにアクセスできることを望んでいます。
 イーサリアムIdPなどのアダプターを作成することは、このハードルを乗り越えるのに役立ちます。

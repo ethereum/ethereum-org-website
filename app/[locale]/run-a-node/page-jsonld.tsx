@@ -6,7 +6,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import {
   ethereumCommunityOrganization,
+  ethereumCommunityReference,
   ethereumFoundationOrganization,
+  ethereumFoundationReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -32,6 +34,8 @@ export default async function RunANodePageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
       {
         "@type": "WebPage",
         "@id": url,
@@ -40,7 +44,7 @@ export default async function RunANodePageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         isPartOf: {
           "@type": "WebSite",
           "@id": "https://ethereum.org/#website",
@@ -64,8 +68,8 @@ export default async function RunANodePageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#run-a-node` },
       },
       {
@@ -74,10 +78,10 @@ export default async function RunANodePageJsonLD({
         headline: t("page-run-a-node-title"),
         description: t("page-run-a-node-hero-subtitle"),
         image: "https://ethereum.org/images/run-a-node/ethereum-inside.png",
-        author: [ethereumCommunityOrganization],
+        author: [ethereumCommunityReference],
         contributor: contributorList,
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         about: {
           "@type": "Thing",
           name: "Running an Ethereum Node",

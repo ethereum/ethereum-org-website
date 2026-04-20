@@ -22,6 +22,8 @@ No one person owns or controls the Ethereum protocol, but decisions still need t
 
 Ethereum governance is the process by which protocol changes are made. It's important to point out that this process isn't related to how people and applications use the protocol - Ethereum is permissionless. Anyone from anywhere in the world can participate in onchain activities. There are no rules set for who can or cannot build an application or send a transaction. However, there is a process to propose changes to the core protocol, which decentralized applications run on top of. Since so many people depend on Ethereum's stability, there is a very high coordination threshold for core changes, including social and technical processes, to ensure any changes to Ethereum are secure and widely supported by the community.
 
+<VideoWatch slug="ethereum-core-governance-explained" />
+
 ### Onchain vs offchain governance {#onchain-vs-offchain}
 
 Blockchain technology allows for new governance capabilities, known as onchain governance. Onchain governance is when proposed protocol changes are decided by a stakeholder vote, usually by holders of a governance token, and voting happens on the blockchain. With some forms of onchain governance, the proposed protocol changes are already written in code and implemented automatically if the stakeholders approve the changes via signing a transaction.
@@ -134,7 +136,7 @@ Today, the Ethereum community has adopted a policy of non-intervention in cases 
 
 Watch more on the DAO hack:
 
-<YouTube id="rNeLuBOVe8A" />
+<VideoWatch slug="dao-hack-ethereum-classic" />
 
 <Divider />
 
