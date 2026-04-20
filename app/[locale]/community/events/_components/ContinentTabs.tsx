@@ -22,7 +22,6 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { formatDateRange } from "@/lib/utils/date"
-import { localizeLocation } from "@/lib/utils/geography"
 
 import { TAG_STATUS_MAPPING } from "../utils"
 
@@ -175,9 +174,7 @@ export default function ContinentTabs({
                         {event.title}
                         <ExternalLink className="size-4 shrink-0" />
                       </p>
-                      <p className="text-body-medium">
-                        {localizeLocation(event.location, locale)}
-                      </p>
+                      <p className="text-body-medium">{event.location}</p>
                     </div>
                   </LinkOverlay>
                 </LinkBox>

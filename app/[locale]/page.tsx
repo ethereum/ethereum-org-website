@@ -161,8 +161,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   // Extract totalEthStaked from beaconchainData
   const { totalEthStaked } = beaconchainData
 
-  // Events - use empty array as fallback
-  const upcomingEvents = (eventsData ?? []).slice(0, 3)
+  // Events - use empty array as fallback; localize location country names
+  const upcomingEvents = (eventsData ?? []).slice(0, 3).map((event) => ({
+    ...event,
+    location: localizeLocation(event.location, locale),
+  }))
 
   const appsOfTheWeek = parseAppsOfTheWeek(appsData)
 
@@ -861,7 +864,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                           })}
                         </CardParagraph>
                         <CardParagraph variant="uppercase">
-                          {localizeLocation(location, locale)}
+                          {location}
                         </CardParagraph>
                       </CardContent>
                     </Card>

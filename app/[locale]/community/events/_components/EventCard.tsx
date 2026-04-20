@@ -8,7 +8,6 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { formatDate, formatDateRange } from "@/lib/utils/date"
-import { localizeLocation } from "@/lib/utils/geography"
 
 import { TAG_STATUS_MAPPING } from "../utils"
 
@@ -73,7 +72,7 @@ function EventCardGrid({
               {event.title}
             </p>
             {formattedDate && <p className="text-body">{formattedDate}</p>}
-            <p className="text-sm text-body-medium">{localizeLocation(event.location, locale)}</p>
+            <p className="text-sm text-body-medium">{event.location}</p>
           </div>
         </div>
       </LinkOverlay>
@@ -114,7 +113,7 @@ function EventCardHighlight({
           </div>
           <div className="space-y-1">
             <h3>{event.title}</h3>
-            <p className="text-sm text-body-medium">{localizeLocation(event.location, locale)}</p>
+            <p className="text-sm text-body-medium">{event.location}</p>
             <p className="text-sm text-body-medium">
               {formatDateRange(event.startTime, event.endTime, locale)}
             </p>

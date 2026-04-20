@@ -128,17 +128,17 @@ const COUNTRY_NAME_ALIASES: Record<string, string> = {
  * @param locale - Target locale code (e.g., "ja", "es", "ar")
  * @returns Localized country name, or the original string if not recognized
  */
-export function getCountryTranslation(
-  country: string,
-  locale: string
-): string {
+export function getCountryTranslation(country: string, locale: string): string {
   if (!country) return country
 
   const normalized = COUNTRY_NAME_ALIASES[country] ?? country
   const code = countries.getAlpha2Code(normalized, "en")
   if (!code) return country
 
-  return countries.getName(code, locale) ?? country
+  // Strip region suffix: "pt-br" -> "pt", "zh-tw" -> "zh"
+  // (i18n-iso-countries uses base language codes)
+  const baseLocale = locale.split("-")[0]
+  return countries.getName(code, baseLocale) ?? country
 }
 
 /**
