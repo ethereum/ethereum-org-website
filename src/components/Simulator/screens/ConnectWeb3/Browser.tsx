@@ -1,6 +1,7 @@
 import React, { type HTMLAttributes, useEffect, useState } from "react"
 import { MoreHorizontal, Search, Triangle } from "lucide-react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { Flex, HStack } from "@/components/ui/flex"
 
@@ -13,6 +14,7 @@ import { EXAMPLE_APP_URL } from "./constants"
 type BrowserProps = HTMLAttributes<HTMLDivElement>
 
 export const Browser = ({ ...props }: BrowserProps) => {
+  const t = useTranslations("component-wallet-simulator")
   const [typing, setTyping] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -37,8 +39,8 @@ export const Browser = ({ ...props }: BrowserProps) => {
     <Flex className="h-full flex-col bg-body-light" {...props}>
       <div className="w-full bg-background-highlight px-3 pb-3 pt-9">
         <NotificationPopover
-          title="Example walkthrough"
-          content="Try logging into a real app with your wallet when finished here"
+          title={t("sim-example-walkthrough")}
+          content={t("sim-try-login-app")}
         >
           <HStack className="cursor-default gap-0 rounded bg-background px-3 py-2 text-disabled">
             <div className="flex-1 border-e border-background-highlight">
@@ -56,7 +58,7 @@ export const Browser = ({ ...props }: BrowserProps) => {
                   ))}
                 </motion.p>
               ) : (
-                <p>Search or enter website</p>
+                <p>{t("sim-cw-search-website")}</p>
               )}
             </div>
             <BrowserGlobe className="ms-3 size-4" />

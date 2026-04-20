@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 import { PhoneScreenProps } from "@/lib/types"
 
@@ -16,12 +17,13 @@ export const InteractiveWordSelector = ({
   ctaLabel,
   nav,
 }: InteractiveWordSelectorProps) => {
+  const t = useTranslations("component-wallet-simulator")
   const { progressStepper } = nav
   const [wordsSelected, setWordsSelected] = useState(0)
   return (
     <div className="mt-8">
       <p className="mb-4 px-4 text-2xl font-bold leading-8 max-md:hidden md:px-8">
-        Repeat the words
+        {t("sim-ca-repeat-words")}
       </p>
       <WordList words={words} wordsSelected={wordsSelected} />
       {wordsSelected < words.length ? (
