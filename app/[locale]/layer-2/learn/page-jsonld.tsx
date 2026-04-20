@@ -5,10 +5,10 @@ import { FileContributor, Lang } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import {
-  ethereumCommunityOrganization,
+  baseGraphNodes,
   ethereumCommunityReference,
-  ethereumFoundationOrganization,
   ethereumFoundationReference,
+  ethereumOrgWebSiteReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -34,8 +34,7 @@ export default async function Layer2LearnPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
+      ...baseGraphNodes,
       {
         "@type": "WebPage",
         "@id": url,
@@ -45,12 +44,7 @@ export default async function Layer2LearnPageJsonLD({
         inLanguage: locale,
         contributor: contributorList,
         author: [ethereumCommunityReference],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        isPartOf: ethereumOrgWebSiteReference,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [

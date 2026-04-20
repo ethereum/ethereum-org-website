@@ -9,6 +9,7 @@ import {
   ethereumCommunityReference,
   ethereumFoundationOrganization,
   ethereumFoundationReference,
+  ethereumOrgWebSite,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -27,10 +28,8 @@ export default async function IndexPageJsonLD({
       ethereumFoundationOrganization,
       ethereumCommunityOrganization,
       {
-        "@type": "WebSite",
-        "@id": "https://ethereum.org/#website",
+        ...ethereumOrgWebSite,
         url: url,
-        name: "ethereum.org",
         description: t("page-index-meta-description"),
         educationalUse: "Self-Paced",
         keywords:

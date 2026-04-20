@@ -46,3 +46,36 @@ export const ethereumCommunityOrganization = {
 export const ethereumCommunityReference = {
   "@id": "https://ethereum.org/#community-organization",
 }
+
+/**
+ * Reference to the ethereum.org WebSite entity (for use when the full
+ * object is already defined elsewhere in the graph)
+ */
+export const ethereumOrgWebSiteReference = {
+  "@id": "https://ethereum.org/#website",
+}
+
+/**
+ * ethereum.org WebSite entity
+ * Anchors the site in the knowledge graph. Every page's JSON-LD graph
+ * should include this as a top-level node and reference it via @id from
+ * the page's `isPartOf`.
+ */
+export const ethereumOrgWebSite = {
+  "@type": "WebSite" as const,
+  name: "ethereum.org",
+  url: "https://ethereum.org",
+  ...ethereumOrgWebSiteReference,
+}
+
+/**
+ * Core entities present in every page's JSON-LD @graph.
+ * Spread at the top of each page's `@graph` array so that `@id`
+ * references (e.g. `ethereumFoundationReference`) resolve within the
+ * same graph.
+ */
+export const baseGraphNodes = [
+  ethereumFoundationOrganization,
+  ethereumCommunityOrganization,
+  ethereumOrgWebSite,
+]

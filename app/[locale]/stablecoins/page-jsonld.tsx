@@ -3,10 +3,10 @@ import { getTranslations } from "next-intl/server"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import {
-  ethereumCommunityOrganization,
+  baseGraphNodes,
   ethereumCommunityReference,
-  ethereumFoundationOrganization,
   ethereumFoundationReference,
+  ethereumOrgWebSiteReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -24,8 +24,7 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
+      ...baseGraphNodes,
       {
         "@type": "WebPage",
         "@id": url,
@@ -35,12 +34,7 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
         inLanguage: locale,
         contributor: contributorList,
         author: [ethereumCommunityReference],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        isPartOf: ethereumOrgWebSiteReference,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [

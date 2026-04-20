@@ -3,9 +3,9 @@ import { getTranslations } from "next-intl/server"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
+  baseGraphNodes,
   ethereumFoundationReference,
+  ethereumOrgWebSiteReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -21,8 +21,7 @@ export default async function DepositContractJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
+      ...baseGraphNodes,
       {
         "@type": "WebPage",
         "@id": url,
@@ -30,12 +29,7 @@ export default async function DepositContractJsonLD({
         description: t("page-staking-deposit-contract-subtitle"),
         url: url,
         inLanguage: locale,
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        isPartOf: ethereumOrgWebSiteReference,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [

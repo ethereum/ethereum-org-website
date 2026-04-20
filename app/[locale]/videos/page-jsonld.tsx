@@ -5,8 +5,10 @@ import type { VideoCardData } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
+  baseGraphNodes,
+  ethereumCommunityReference,
+  ethereumFoundationReference,
+  ethereumOrgWebSiteReference,
 } from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
@@ -24,6 +26,7 @@ export default async function VideosPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...baseGraphNodes,
       {
         "@type": "CollectionPage",
         "@id": url,
@@ -31,13 +34,8 @@ export default async function VideosPageJsonLD({
         description: t("page-videos-meta-description"),
         url: url,
         inLanguage: locale,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [ethereumCommunityReference],
+        isPartOf: ethereumOrgWebSiteReference,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -55,8 +53,8 @@ export default async function VideosPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: ethereumFoundationReference,
+        reviewedBy: ethereumFoundationReference,
         mainEntity: { "@id": `${url}#video-list` },
       },
       {
