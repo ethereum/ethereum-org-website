@@ -2,7 +2,11 @@ import type { VideoFrontmatter } from "@/lib/interfaces"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
+import {
+  ethereumCommunityOrganization,
+  ethereumFoundationOrganization,
+  resolveAuthorsFromFrontmatter,
+} from "@/lib/utils/jsonld"
 import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
@@ -21,8 +25,16 @@ export default function VideoPageJsonLD({
 }) {
   const url = normalizeUrlForJsonLd(locale, `/videos/${slug}/`)
 
-  const jsonLd: Record<string, unknown> = {
-    "@context": "https://schema.org",
+  // Resolve a known Person or Organization if one matches the author
+  // string. Otherwise fall back to an anonymous Person using the raw
+  // value.
+  const { graphNodes } = resolveAuthorsFromFrontmatter(frontmatter.author)
+  const creator =
+    graphNodes.length > 0
+      ? { "@id": graphNodes[0]["@id"] }
+      : { "@type": "Person" as const, name: frontmatter.author }
+
+  const videoNode: Record<string, unknown> = {
     "@type": "VideoObject",
     "@id": `${url}#video`,
     name: frontmatter.title,
@@ -36,11 +48,7 @@ export default function VideoPageJsonLD({
     contentUrl: `https://www.youtube.com/watch?v=${frontmatter.youtubeId}`,
     educationalLevel: frontmatter.educationLevel,
     inLanguage: frontmatter.lang,
-    creator: {
-      "@type": "Person",
-      name: frontmatter.author,
-    },
-    publisher: ethereumFoundationOrganization,
+    creator,
     isAccessibleForFree: true,
     isFamilyFriendly: true,
   }
@@ -48,9 +56,19 @@ export default function VideoPageJsonLD({
   // Add transcript as plain text if available
   if (transcript) {
     // Escape < and / to prevent script injection (XSS protection)
-    jsonLd.transcript = stripMarkdown(transcript, true)
+    videoNode.transcript = stripMarkdown(transcript, true)
       .replace(/</g, "\\u003c")
       .replace(/\//g, "\\u002f")
+  }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      ethereumFoundationOrganization,
+      ethereumCommunityOrganization,
+      ...graphNodes,
+      videoNode,
+    ],
   }
 
   return <PageJsonLD structuredData={jsonLd} />

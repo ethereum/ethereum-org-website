@@ -314,6 +314,138 @@ export const KNOWN_PERSONS = {
       "https://0xstark.com",
     ],
   },
+
+  "austin-griffith": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#austin-griffith",
+    name: "Austin Griffith",
+    jobTitle: "Head of Developer Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    description:
+      "Austin Griffith is the Head of Developer Growth at the Ethereum Foundation and the creator of Scaffold-ETH, BuidlGuidl, and SpeedRunEthereum. He is dedicated to educating builders and simplifying the onboarding process for Web3 developers.",
+    knowsAbout: [
+      "Ethereum Development",
+      "Smart Contract Engineering",
+      "Scaffold-ETH",
+      "Developer Onboarding",
+      "BuidlGuidl",
+      "Solidity",
+    ],
+    alumniOf: [
+      {
+        "@type": "Organization",
+        name: "BuidlGuidl",
+        url: "https://buidlguidl.com/",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "University of Wyoming",
+        url: "https://www.uwyo.edu/index.html",
+      },
+    ],
+    sameAs: [
+      "https://www.wikidata.org/wiki/Q112965396",
+      "https://github.com/austintgriffith",
+      "https://austingriffith.com",
+      "https://x.com/austingriffith",
+      "https://www.linkedin.com/in/austin-griffith-65ba2a2/",
+      "https://www.youtube.com/@austingriffith3550",
+    ],
+  },
+
+  "anders-brownworth": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#anders-brownworth",
+    name: "Anders Brownworth",
+    jobTitle: "Head of Research & Development",
+    worksFor: {
+      "@type": "Organization",
+      name: "Radius",
+      url: "https://radiustech.xyz",
+    },
+    description:
+      "Anders Brownworth is a blockchain educator, engineer, and Senior Research Advisor at MIT's Digital Currency Initiative, best known for creating a widely-used interactive blockchain demonstration that visually explains hashing, blocks, and distributed consensus. He co-taught MIT's first blockchain course and previously helped launch USDC at Circle, and contributed to Project Hamilton at the Federal Reserve Bank of Boston. His open-source educational tools and talks have introduced hundreds of thousands of learners to the mechanics underpinning Ethereum and other blockchains.",
+    knowsAbout: [
+      "Blockchain Education",
+      "Cryptographic Hashing",
+      "Distributed Consensus",
+      "Ethereum Virtual Machine",
+      "Stablecoins",
+      "Central Bank Digital Currencies",
+      "Payment Systems",
+    ],
+    sameAs: [
+      "https://andersbrownworth.com",
+      "https://github.com/anders94",
+      "https://x.com/anders94",
+      "https://anders94.medium.com",
+      "https://www.youtube.com/anders94",
+      "https://www.linkedin.com/in/andersbrownworth",
+    ],
+  },
+} as const
+
+/**
+ * Known Organization profiles for JSON-LD attribution
+ *
+ * Each entry is a schema.org Organization with a stable @id. Use for
+ * entities that are brands/channels/events rather than individuals
+ * (e.g. podcasts, video channels, events).
+ */
+export const KNOWN_ORGANIZATIONS = {
+  bankless: {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#bankless",
+    name: "Bankless",
+    url: "https://www.bankless.com/",
+    sameAs: ["https://x.com/Bankless", "https://www.youtube.com/c/Bankless"],
+  },
+
+  finematics: {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#finematics",
+    name: "Finematics",
+    url: "https://finematics.com/",
+    sameAs: [
+      "https://x.com/finematics",
+      "https://www.youtube.com/c/Finematics",
+    ],
+  },
+
+  ethboulder: {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#ethboulder",
+    name: "EthBoulder",
+    url: "https://ethboulder.xyz/",
+    sameAs: ["https://x.com/ethereumboulder"],
+  },
+
+  ethcc: {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#ethcc",
+    name: "EthCC",
+    url: "https://ethcc.io/",
+    sameAs: [
+      "https://x.com/EthCC",
+      "https://www.youtube.com/channel/UCf7zF8tFOb9T58nBo09BhAw",
+    ],
+  },
+
+  ethdenver: {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#ethdenver",
+    name: "ETHDenver",
+    url: "https://ethdenver.com/",
+    sameAs: ["https://x.com/EthereumDenver"],
+  },
+
+  "web3privacy-now": {
+    "@type": "Organization" as const,
+    "@id": "https://ethereum.org/#web3privacy-now",
+    name: "Web3Privacy Now",
+    url: "https://web3privacy.info/",
+    sameAs: ["https://x.com/web3privacy"],
+  },
 } as const
 
 /**
@@ -324,46 +456,75 @@ export const personReference = (key: keyof typeof KNOWN_PERSONS) => ({
 })
 
 /**
- * Alias map for author lookup by display name or GitHub handle.
- * Auto-generated from KNOWN_PERSONS -- no manual maintenance needed.
- * Allows frontmatter to use full name, profile key, or GitHub handle
+ * Helper to get an @id reference for a known Organization
  */
-const AUTHOR_ALIASES: Record<string, keyof typeof KNOWN_PERSONS> =
-  Object.fromEntries(
-    Object.entries(KNOWN_PERSONS).flatMap(([key, profile]) => {
-      const aliases: [string, string][] = [[profile.name, key]]
-      for (const url of profile.sameAs) {
-        const match = url.match(/^https?:\/\/github\.com\/([^/]+)\/?$/)
-        if (match) aliases.push([match[1], key])
-      }
-      return aliases
-    })
-  ) as Record<string, keyof typeof KNOWN_PERSONS>
+export const organizationReference = (
+  key: keyof typeof KNOWN_ORGANIZATIONS
+) => ({
+  "@id": KNOWN_ORGANIZATIONS[key]["@id"],
+})
+
+type KnownEntity =
+  | (typeof KNOWN_PERSONS)[keyof typeof KNOWN_PERSONS]
+  | (typeof KNOWN_ORGANIZATIONS)[keyof typeof KNOWN_ORGANIZATIONS]
+  | typeof ethereumFoundationOrganization
+  | typeof ethereumCommunityOrganization
+
+/**
+ * Alias map for entity lookup by display name or GitHub handle.
+ * Auto-generated from KNOWN_PERSONS, KNOWN_ORGANIZATIONS, and the core
+ * Ethereum Foundation / Community organizations -- no manual maintenance
+ * needed. Allows frontmatter to use full name, profile key, or GitHub
+ * handle. Keys are lowercased for case-insensitive lookup.
+ */
+const ENTITY_ALIASES: Record<string, KnownEntity> = Object.fromEntries([
+  ...aliasesFor(ethereumFoundationOrganization),
+  ...aliasesFor(ethereumCommunityOrganization),
+  ...Object.values(KNOWN_PERSONS).flatMap((p) => aliasesFor(p)),
+  ...Object.values(KNOWN_ORGANIZATIONS).flatMap((o) => aliasesFor(o)),
+])
+
+function aliasesFor(entity: KnownEntity): Array<[string, KnownEntity]> {
+  const out: Array<[string, KnownEntity]> = [
+    [entity.name.toLowerCase(), entity],
+  ]
+  for (const url of "sameAs" in entity ? (entity.sameAs ?? []) : []) {
+    const match = url.match(/^https?:\/\/github\.com\/([^/]+)\/?$/)
+    if (match) out.push([match[1].toLowerCase(), entity])
+  }
+  return out
+}
 
 /**
  * Resolve frontmatter author field(s) into JSON-LD @graph nodes and @id
- * references. Handles both the new `authors` array and legacy singular
- * `author` string via alias lookup (full name or GitHub handle).
- * Falls back to the community organization reference when nothing resolves.
+ * references. Matches against both KNOWN_PERSONS and KNOWN_ORGANIZATIONS
+ * by profile key, display name, or GitHub handle. Handles both the
+ * `authors` array and legacy singular `author` string.
+ *
+ * Falls back to the community organization reference when nothing
+ * resolves.
  */
 export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
-  graphNodes: Array<(typeof KNOWN_PERSONS)[keyof typeof KNOWN_PERSONS]>
+  graphNodes: KnownEntity[]
   references: Array<{ "@id": string }>
 } {
   const values = !authors ? [] : Array.isArray(authors) ? authors : [authors]
-  const keys = values
-    .map((v) =>
-      v in KNOWN_PERSONS
-        ? (v as keyof typeof KNOWN_PERSONS)
-        : (AUTHOR_ALIASES[v] ?? null)
-    )
-    .filter((k): k is keyof typeof KNOWN_PERSONS => k !== null)
+  const entities = values
+    .map((v): KnownEntity | null => {
+      const lower = v.toLowerCase()
+      if (lower in KNOWN_PERSONS)
+        return KNOWN_PERSONS[lower as keyof typeof KNOWN_PERSONS]
+      if (lower in KNOWN_ORGANIZATIONS)
+        return KNOWN_ORGANIZATIONS[lower as keyof typeof KNOWN_ORGANIZATIONS]
+      return ENTITY_ALIASES[lower] ?? null
+    })
+    .filter((e): e is KnownEntity => e !== null)
 
   return {
-    graphNodes: keys.map((key) => KNOWN_PERSONS[key]),
+    graphNodes: entities,
     references:
-      keys.length > 0
-        ? keys.map((key) => ({ "@id": KNOWN_PERSONS[key]["@id"] }))
+      entities.length > 0
+        ? entities.map((e) => ({ "@id": e["@id"] }))
         : [ethereumCommunityReference],
   }
 }
