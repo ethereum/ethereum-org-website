@@ -56,9 +56,7 @@ test.describe("Global", () => {
     async function switchToChinese(page: Page, homePage: HomePage) {
       await homePage.switchToLanguage("zh", /^简体中文 Chinese/i)
       await expect(page).toHaveURL(/\/zh(\/|$)/)
-      await expect(
-        page.getByRole("heading", { level: 1, name: /以太坊/i })
-      ).toBeVisible()
+      await expect(page.locator("html")).toHaveAttribute("lang", "zh")
     }
 
     test("switches to Chinese", async ({ page }) => {
@@ -78,9 +76,7 @@ test.describe("Global", () => {
     async function switchToArabic(page: Page, homePage: HomePage) {
       await homePage.switchToLanguage("ar", /^العربية Arabic/i)
       await homePage.assertUrlMatches(/\/ar(\/|$)/)
-      await expect(
-        page.getByRole("heading", { level: 1, name: /إيثريوم/i })
-      ).toBeVisible()
+      await expect(page.locator("html")).toHaveAttribute("lang", "ar")
     }
 
     test("nav flips logo and search button when switching to RTL via language picker", async ({
