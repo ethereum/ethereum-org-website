@@ -14,7 +14,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
-import { mapEventTranslations, sanitize } from "../utils"
+import { getMeetupGroups, mapEventTranslations, sanitize } from "../utils"
 
 import { getEventsData } from "@/lib/data"
 
@@ -41,7 +41,9 @@ const Page = async (props: {
   const t = await getTranslations("page-community-events")
   const tCommon = await getTranslations("common")
 
-  const events = mapEventTranslations(_events, t)
+  const apiEvents = mapEventTranslations(_events, t)
+  const meetupGroups = getMeetupGroups()
+  const events = [...apiEvents, ...meetupGroups]
 
   const filteredEvents = ((): EventItem[] => {
     if (!q) return []
