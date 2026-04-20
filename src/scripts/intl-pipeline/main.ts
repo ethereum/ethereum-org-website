@@ -2,9 +2,9 @@
  * Incremental Translation Pipeline -- Entry Point
  *
  * Modes:
- *   "full"  -- Translate entire files from scratch via Gemini
+ *   "full"  -- Translate entire files from scratch via LLM
  *   "auto"  -- Detect drift since last run; propagate inert changes by script,
- *              send only changed prose to Gemini (default)
+ *              send only changed prose to LLM (default)
  *
  * Environment variables: see config.ts
  */
@@ -28,11 +28,7 @@ import {
   mergeBranchInto,
 } from "./lib/github/branches"
 import { getDestinationFromPath, SharedCommitter } from "./lib/github/commits"
-import {
-  callGeminiRaw,
-  isGeminiAvailable,
-  translateFile,
-} from "./lib/llm/gemini"
+import { callGeminiRaw, isLlmAvailable, translateFile } from "./lib/llm/gemini"
 import {
   batchSections,
   buildIncrementalPrompt,
@@ -55,12 +51,8 @@ import { createTaskPool } from "./lib/utils/task-pool"
 import { createOrUpdateTranslationPR } from "./lib/workflows/pr-creation"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
-import {
-  config,
-  GEMINI_MODELS,
-  GLOSSARY_API_URL,
-  validateTargetPath,
-} from "./config"
+import { config, GLOSSARY_API_URL, validateTargetPath } from "./config"
+import { LLM, MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
 
@@ -82,19 +74,16 @@ function log(msg: string) {
   console.log(`[pipeline] ${msg}`)
 }
 
-function readSourceManifestPath(
+/**
+ * Get manifest path (relative to repo root) for a given destination file.
+ * Structure: .manifests/{destPath}/source.json or translation.json
+ * Example: .manifests/public/content/translations/ar/about/index.md/source.json
+ */
+function getManifestPath(
   destPath: string,
-  fileType: string,
-  locale: string
+  type: "source" | "translation"
 ): string {
-  if (fileType === "markdown") {
-    return path.join(
-      process.cwd(),
-      path.dirname(destPath),
-      ".manifest-source.json"
-    )
-  }
-  return path.join(process.cwd(), `src/intl/${locale}/.manifest-source.json`)
+  return path.join(MANIFESTS_DIR, destPath, `${type}.json`)
 }
 
 /**
@@ -126,18 +115,21 @@ async function loadGlossary(
         note?: string
       }>
     }
+    // Sanitize all glossary fields to prevent prompt injection
+    // eslint-disable-next-line no-control-regex
+    const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
+    const sanitize = (s: string, maxLen: number) =>
+      s.replace(controlCharRe, "").replace(/\n/g, " ").slice(0, maxLen)
+
     const map = new Map<string, string>()
     for (const term of data.terms) {
-      // Sanitize note to prevent prompt injection (strip control chars, limit length)
-      // eslint-disable-next-line no-control-regex
-      const controlCharRe = new RegExp("[\\u0000-\\u001f]", "g")
-      const safeNote = term.note
-        ? term.note.replace(controlCharRe, "").slice(0, 200)
-        : ""
+      const safeEnglish = sanitize(term.english, 200)
+      const safeTranslation = sanitize(term.translation, 500)
+      const safeNote = term.note ? sanitize(term.note, 200) : ""
       const value = safeNote
-        ? `${term.translation} (${safeNote})`
-        : term.translation
-      map.set(term.english, value)
+        ? `${safeTranslation} (${safeNote})`
+        : safeTranslation
+      map.set(safeEnglish, value)
     }
     return map
   } catch (err) {
@@ -203,7 +195,7 @@ function printTokenSummary(
     `${"TOTAL".padEnd(10)}| ${pad(String(grandCalls), 5)} | ${pad(fmt(grandInput), 10)} | ${pad(fmt(grandOutput), 10)} | ${pad(fmt(grandTotal), 10)}`
   )
 
-  // Approximate cost (Gemini 3.1 Pro standard tier, <=200k prompts)
+  // Approximate cost (standard tier, <=200k prompts)
   // https://ai.google.dev/gemini-api/docs/pricing (as of 11-April-2026)
   const INPUT_RATE = 2.0
   const OUTPUT_RATE = 12.0
@@ -213,13 +205,13 @@ function printTokenSummary(
 
   const pipelineSecs = (pipelineDurationMs / 1000).toFixed(1)
   console.log(
-    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${GEMINI_MODELS[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
+    `\n  Estimated cost: ~$${estCost.toFixed(4)} (${LLM.models[0]}: $${INPUT_RATE}/1M input, $${OUTPUT_RATE}/1M output)`
   )
   console.log(`  Wall time: ${pipelineSecs}s`)
 }
 
 /**
- * Build an LLM translator that batches section translations via Gemini.
+ * Build an LLM translator that batches section translations.
  * Uses batchSections for byte-size-aware splitting of large section lists.
  */
 async function buildGeminiTranslator(
@@ -296,6 +288,7 @@ async function buildGeminiTranslator(
 
     const prompt = buildIncrementalPrompt({
       filePath,
+      fileType,
       targetLanguage: locale,
       languageName,
       sections: batchSectionList,
@@ -303,7 +296,7 @@ async function buildGeminiTranslator(
     })
 
     log(
-      `  Calling Gemini: ${batchSectionList.filter((s) => s.action === "TRANSLATE").length} sections, ${prompt.length} chars`
+      `  Calling LLM: ${batchSectionList.filter((s) => s.action === "TRANSLATE").length} sections, ${prompt.length} chars`
     )
 
     const result = await callGeminiRaw(prompt, {
@@ -326,12 +319,12 @@ async function buildGeminiTranslator(
 
   const translatedIds = Object.keys(allTranslations)
   log(
-    `  Gemini returned ${translatedIds.length} sections (${totalInput} in, ${totalOutput} out)`
+    `  LLM returned ${translatedIds.length} sections (${totalInput} in, ${totalOutput} out)`
   )
 
   for (const id of sectionIds) {
     if (!allTranslations[id]) {
-      console.warn(`  Section "${id}" not returned by Gemini`)
+      console.warn(`  Section "${id}" not returned by LLM`)
     }
   }
 
@@ -418,39 +411,22 @@ async function runFullTranslation(
       ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
       : buildJsonManifest(file.content, file.path, baseBranchSha)
 
-  if (file.type === "markdown") {
-    const manifestPath = destPath.replace(/index\.md$/, ".manifest-source.json")
-    await committer.commitFile(manifestPath, sourceManifest, locale)
+  // Commit source manifest
+  const smDest = getManifestPath(destPath, "source")
+  await committer.commitFile(smDest, sourceManifest, locale)
 
-    if (result.placeholderOrder && result.placeholderMap) {
-      const parsed = JSON.parse(sourceManifest)
-      const tm = buildLocaleTranslationManifest({
-        locale,
-        englishManifestHash: parsed.rootHash,
-        placeholderOrder: result.placeholderOrder,
-        placeholderMap: result.placeholderMap,
-        sections: {
-          _all: { translatedAt: new Date().toISOString(), status: "success" },
-        },
-      })
-      const tmPath = destPath.replace(
-        /index\.md$/,
-        ".manifest-translation.json"
-      )
-      await committer.commitFile(tmPath, tm, locale)
-    }
-  } else {
-    const manifestPath = `src/intl/${locale}/.manifest-source.json`
-    await committer.commitFile(manifestPath, sourceManifest, locale)
+  // Commit translation manifest
+  const placeholderData =
+    result.placeholderOrder && result.placeholderMap
+      ? {
+          placeholderOrder: result.placeholderOrder,
+          placeholderMap: result.placeholderMap,
+        }
+      : file.type === "json"
+        ? extractPlaceholderData(parseEnglishJson(file.content))
+        : null
 
-    const placeholderData =
-      result.placeholderOrder && result.placeholderMap
-        ? {
-            placeholderOrder: result.placeholderOrder,
-            placeholderMap: result.placeholderMap,
-          }
-        : extractPlaceholderData(parseEnglishJson(file.content))
-
+  if (placeholderData) {
     const parsed = JSON.parse(sourceManifest)
     const tm = buildLocaleTranslationManifest({
       locale,
@@ -461,8 +437,8 @@ async function runFullTranslation(
         _all: { translatedAt: new Date().toISOString(), status: "success" },
       },
     })
-    const jsonTmPath = `src/intl/${locale}/.manifest-translation.json`
-    await committer.commitFile(jsonTmPath, tm, locale)
+    const tmDest = getManifestPath(destPath, "translation")
+    await committer.commitFile(tmDest, tm, locale)
   }
 
   log(`[${locale}] ${destPath}: committed`)
@@ -519,13 +495,11 @@ async function runIncremental(
   const englishB = file.content
 
   const llmSectionIds = getLlmSectionIds(englishA, englishB, file.type)
-  log(
-    `[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need Gemini`
-  )
+  log(`[${locale}] ${file.path}: ${llmSectionIds.length} section(s) need LLM`)
 
   let translator: LlmTranslator | undefined
   let tokens = { input: 0, output: 0 }
-  if (llmSectionIds.length > 0 && isGeminiAvailable()) {
+  if (llmSectionIds.length > 0 && isLlmAvailable()) {
     const geminiResult = await buildGeminiTranslator(
       englishB,
       localeContent,
@@ -554,13 +528,8 @@ async function runIncremental(
       ? buildMarkdownManifest(englishB, file.path, baseBranchSha)
       : buildJsonManifest(englishB, file.path, baseBranchSha)
 
-  if (file.type === "markdown") {
-    const smPath = destPath.replace(/index\.md$/, ".manifest-source.json")
-    await committer.commitFile(smPath, sourceManifest, locale)
-  } else {
-    const smPath = `src/intl/${locale}/.manifest-source.json`
-    await committer.commitFile(smPath, sourceManifest, locale)
-  }
+  const smDest = getManifestPath(destPath, "source")
+  await committer.commitFile(smDest, sourceManifest, locale)
 
   log(`[${locale}] ${destPath}: committed (incremental)`)
   return { tokens }
@@ -598,6 +567,12 @@ async function main() {
   await committer.init()
 
   const committedFiles: Array<{ path: string; content: string }> = []
+  let hasCommits = false
+
+  // Validate target paths before any filesystem reads
+  for (const fp of config.targetPaths) {
+    validateTargetPath(fp)
+  }
 
   // Load English files from disk
   const englishFiles: FileContext[] = config.targetPaths.map((fp) => ({
@@ -620,7 +595,10 @@ async function main() {
   for (const file of englishFiles) {
     for (const locale of targetLanguages) {
       const destPath = getDestinationFromPath(file.path, locale)
-      const smPath = readSourceManifestPath(destPath, file.type, locale)
+      const smPath = path.join(
+        process.cwd(),
+        getManifestPath(destPath, "source")
+      )
       const localePath = readLocalePath(
         destPath,
         file.type,
@@ -640,8 +618,8 @@ async function main() {
               : "no manifest"
         log(`[${locale}] ${file.path}: ${reason} -> full translation`)
 
-        if (!isGeminiAvailable()) {
-          console.warn(`[${locale}] Skipping: GEMINI_API_KEY not set`)
+        if (!isLlmAvailable()) {
+          console.warn(`[${locale}] Skipping: LLM API key not set`)
           continue
         }
 
@@ -674,11 +652,12 @@ async function main() {
             file.type === "markdown"
               ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
               : buildJsonManifest(file.content, file.path, baseBranchSha)
-          const manifestDest =
-            file.type === "markdown"
-              ? destPath.replace(/index\.md$/, ".manifest-source.json")
-              : `src/intl/${locale}/.manifest-source.json`
-          await committer.commitFile(manifestDest, sourceManifest, locale)
+          await committer.commitFile(
+            getManifestPath(destPath, "source"),
+            sourceManifest,
+            locale
+          )
+          hasCommits = true
         })
         continue
       }
@@ -714,11 +693,11 @@ async function main() {
   }
 
   // Squash interleaved commits into one per language
-  if (committedFiles.length > 0) {
+  if (committedFiles.length > 0 || hasCommits) {
     await committer.squashByLanguage()
   }
 
-  // Post-processing: sanitize Gemini output
+  // Post-processing: sanitize LLM output
   if (committedFiles.length > 0 && !config.stampOnly) {
     const englishContentMap = new Map<string, string>(
       englishFiles.map((f) => [f.path, f.content])
@@ -733,7 +712,7 @@ async function main() {
   }
 
   // Merge temp branch into target branch
-  if (committedFiles.length > 0) {
+  if (committedFiles.length > 0 || hasCommits) {
     log(`Merging ${tempBranch} -> ${targetBranch}`)
     await ensureStagingBranch(targetBranch, baseBranch)
     const merged = await mergeBranchInto(tempBranch, targetBranch)
@@ -748,7 +727,7 @@ async function main() {
   }
 
   // Create or update PR unless skipped
-  if (committedFiles.length > 0 && !config.skipPr) {
+  if ((committedFiles.length > 0 || hasCommits) && !config.skipPr) {
     const languagePairs = targetLanguages.map((code) => {
       const entry = i18nConfig.find((l: { code: string }) => l.code === code)
       return {
