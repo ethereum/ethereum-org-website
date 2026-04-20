@@ -1,18 +1,13 @@
-import { ReactNode } from "react"
 import { getTranslations } from "next-intl/server"
 
 import type { PageParams, ToCItem } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 
+import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DocLink from "@/components/DocLink"
-import FeedbackCard from "@/components/FeedbackCard"
-import FileContributors from "@/components/FileContributors"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, ImageProps } from "@/components/Image"
-import MainArticle from "@/components/MainArticle"
-import { ContentContainer } from "@/components/MdComponents"
-import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
@@ -21,14 +16,15 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import { Flex, Stack } from "@/components/ui/flex"
-import InlineLink, { BaseLink } from "@/components/ui/Link"
+import InlineLink from "@/components/ui/Link"
+import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import UseCasesPageJsonLD from "./page-jsonld"
 
+import { ContentLayout } from "@/layouts/ContentLayout"
 import aiAgentsHero from "@/public/images/ai-agents/hero-image.png"
 import ethImg from "@/public/images/eth.png"
 import ethGifCat from "@/public/images/eth-gif-cat.png"
@@ -45,45 +41,19 @@ import defi from "@/public/images/use-cases/defi.png"
 import predictionMarkets from "@/public/images/use-cases/prediction-markets.png"
 import restaking from "@/public/images/use-cases/restaking.png"
 
-const Section = ({
-  headingId,
-  headingTitle,
-  description,
-  children,
-}: {
-  headingId: string
-  headingTitle: string
-  description?: string
-  children: ReactNode
-}) => (
-  <Stack asChild className="gap-8">
-    <section className="mt-24 first:mt-0">
-      <Stack className="gap-8">
-        <h2 id={headingId} className="text-2xl leading-[1.4] md:text-[2rem]">
-          {headingTitle}
-        </h2>
-        {description && <p>{description}</p>}
-      </Stack>
-      {children}
-    </section>
-  </Stack>
-)
-
-type UseCaseCardProps = {
-  href: string
-  image: ImageProps["src"]
-  title: string
-  description: string
-  ctaLabel: string
-}
-
 const UseCaseCard = ({
   href,
   image,
   title,
   description,
   ctaLabel,
-}: UseCaseCardProps) => (
+}: {
+  href: string
+  image: ImageProps["src"]
+  title: string
+  description: string
+  ctaLabel: string
+}) => (
   <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:px-4">
     <CardBanner background="none" fit="contain">
       <Image src={image} alt="" sizes="250px" />
@@ -139,227 +109,193 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     <>
       <UseCasesPageJsonLD locale={locale} contributors={contributors} />
 
-      <div className="relative w-full">
-        <HubHero {...heroContent} />
+      <ContentLayout
+        tocItems={tocData}
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        heroSection={<HubHero {...heroContent} />}
+        showDropdown={false}
+      >
+        <div className="space-y-24 max-lg:pt-10">
+          <p className="text-lg text-body-medium">
+            {t("page-intro-before-link")}{" "}
+            <InlineLink href="/what-is-ether/">
+              {t("page-intro-ether-link")}
+            </InlineLink>
+            {t("page-intro-after-link")}
+          </p>
 
-        <Flex
-          className="mx-auto mb-16 w-full flex-col justify-between pt-10 lg:flex-row lg:pt-16"
-          asChild
-        >
-          <MainArticle>
-            <TableOfContents items={tocData} variant="left" />
+          {/* Financial tools */}
+          <Section id={tocItems[0].id} className="space-y-16">
+            <div className="space-y-8">
+              <h2>{tocItems[0].title}</h2>
+              <p>{t("financial-tools-description")}</p>
 
-            <ContentContainer id="content">
-              <p className="text-lg text-body-medium">
-                {t("page-intro-before-link")}{" "}
-                <InlineLink href="/what-is-ether/">
-                  {t("page-intro-ether-link")}
-                </InlineLink>
-                {t("page-intro-after-link")}
-              </p>
+              <div className="grid grid-cols-fill-4 gap-4">
+                <UseCaseCard
+                  href="/defi/"
+                  image={defi}
+                  title={t("defi-title")}
+                  description={t("defi-description")}
+                  ctaLabel={t("defi-cta")}
+                />
+                <UseCaseCard
+                  href="/stablecoins/"
+                  image={stablecoinsHero}
+                  title={t("stablecoins-title")}
+                  description={t("stablecoins-description")}
+                  ctaLabel={t("stablecoins-cta")}
+                />
+                <UseCaseCard
+                  href="/payments/"
+                  image={ethImg}
+                  title={t("payments-title")}
+                  description={t("payments-description")}
+                  ctaLabel={t("payments-cta")}
+                />
+              </div>
+            </div>
 
-              {/* Financial tools */}
-              <Section
-                headingId={tocItems[0].id}
-                headingTitle={tocItems[0].title}
-                description={t("financial-tools-description")}
-              >
-                <div className="grid grid-cols-fill-4 gap-4">
-                  <UseCaseCard
-                    href="/defi/"
-                    image={defi}
-                    title={t("defi-title")}
-                    description={t("defi-description")}
-                    ctaLabel={t("defi-cta")}
-                  />
-                  <UseCaseCard
-                    href="/stablecoins/"
-                    image={stablecoinsHero}
-                    title={t("stablecoins-title")}
-                    description={t("stablecoins-description")}
-                    ctaLabel={t("stablecoins-cta")}
-                  />
-                  <UseCaseCard
-                    href="/payments/"
-                    image={ethImg}
-                    title={t("payments-title")}
-                    description={t("payments-description")}
-                    ctaLabel={t("payments-cta")}
-                  />
-                </div>
+            <div className="space-y-8">
+              <h3>{t("novel-uses-title")}</h3>
 
-                <h3 className="mt-8 text-xl md:text-2xl">
-                  {t("novel-uses-title")}
-                </h3>
-                <div className="grid grid-cols-fill-4 gap-4">
-                  <UseCaseCard
-                    href="/real-world-assets/"
-                    image={manAndDog}
-                    title={t("rwa-title")}
-                    description={t("rwa-description")}
-                    ctaLabel={t("rwa-cta")}
-                  />
-                  <UseCaseCard
-                    href="/prediction-markets/"
-                    image={predictionMarkets}
-                    title={t("prediction-markets-title")}
-                    description={t("prediction-markets-description")}
-                    ctaLabel={t("prediction-markets-cta")}
-                  />
-                  <UseCaseCard
-                    href="https://institutions.ethereum.org/"
-                    image={restaking}
-                    title={t("institutions-title")}
-                    description={t("institutions-description")}
-                    ctaLabel={t("institutions-cta")}
-                  />
-                </div>
+              <div className="grid grid-cols-fill-4 gap-4">
+                <UseCaseCard
+                  href="/real-world-assets/"
+                  image={manAndDog}
+                  title={t("rwa-title")}
+                  description={t("rwa-description")}
+                  ctaLabel={t("rwa-cta")}
+                />
+                <UseCaseCard
+                  href="/prediction-markets/"
+                  image={predictionMarkets}
+                  title={t("prediction-markets-title")}
+                  description={t("prediction-markets-description")}
+                  ctaLabel={t("prediction-markets-cta")}
+                />
+                <UseCaseCard
+                  href="https://institutions.ethereum.org/"
+                  image={restaking}
+                  title={t("institutions-title")}
+                  description={t("institutions-description")}
+                  ctaLabel={t("institutions-cta")}
+                />
+              </div>
+            </div>
 
-                <Flex className="mt-8 flex-col gap-[0.8rem] xl:mx-36">
-                  <DocLink href="/restaking/">{t("restaking-link")}</DocLink>
-                </Flex>
-              </Section>
+            <div className="flex xl:mx-36">
+              <DocLink href="/restaking/">{t("restaking-link")}</DocLink>
+            </div>
+          </Section>
 
-              {/* AI agents banner */}
-              <section className="mt-24">
-                <BaseLink
-                  href="/ai-agents/"
-                  className="no-underline hover:no-underline"
-                  hideArrow
-                >
-                  <Flex className="group/link flex-col overflow-hidden rounded-[10px] bg-gradient-to-r from-accent-a/10 to-accent-c/10 lg:flex-row dark:from-accent-a/20 dark:to-accent-c-hover/20">
-                    <Stack className="flex-1 gap-3 p-12">
-                      <h3 className="text-xl text-body md:text-2xl">
-                        {t("ai-agents-title")}
-                      </h3>
-                      <p className="text-body-medium">
-                        {t("ai-agents-description")}
-                      </p>
-                      <ButtonLink
-                        href="/ai-agents/"
-                        variant="solid"
-                        className="mt-3 w-fit"
-                      >
-                        {t("ai-agents-cta")}
-                      </ButtonLink>
-                    </Stack>
-                    <div className="self-center pe-8 max-lg:mx-auto">
-                      <Image
-                        src={aiAgentsHero}
-                        alt=""
-                        className="max-w-[265px] object-contain"
-                        sizes="265px"
-                      />
-                    </div>
-                  </Flex>
-                </BaseLink>
-              </section>
+          {/* AI agents banner */}
+          <CalloutBannerSSR
+            id="ai-agents"
+            title={t("ai-agents-title")}
+            image={aiAgentsHero}
+            description={t("ai-agents-description")}
+            variant="small"
+          >
+            <ButtonLink href="/ai-agents/" className="w-fit">
+              {t("ai-agents-cta")}
+            </ButtonLink>
+          </CalloutBannerSSR>
 
-              {/* Digital ownership and gaming */}
-              <Section
-                headingId={tocItems[1].id}
-                headingTitle={tocItems[1].title}
-                description={t("digital-ownership-description")}
-              >
-                <div className="grid grid-cols-fill-4 gap-4">
-                  <UseCaseCard
-                    href="/nft/"
-                    image={infrastructureTransparent}
-                    title={t("nft-title")}
-                    description={t("nft-description")}
-                    ctaLabel={t("nft-cta")}
-                  />
-                  <UseCaseCard
-                    href="/gaming/"
-                    image={robotHelpBar}
-                    title={t("gaming-title")}
-                    description={t("gaming-description")}
-                    ctaLabel={t("gaming-cta")}
-                  />
-                </div>
-              </Section>
+          {/* Digital ownership and gaming */}
+          <Section id={tocItems[1].id} className="space-y-8">
+            <h2>{tocItems[1].title}</h2>
+            <p>{t("digital-ownership-description")}</p>
 
-              {/* Organizations and identity */}
-              <Section
-                headingId={tocItems[2].id}
-                headingTitle={tocItems[2].title}
-                description={t("organizations-description")}
-              >
-                <div className="grid grid-cols-fill-4 gap-4">
-                  <UseCaseCard
-                    href="/dao/"
-                    image={daoImg}
-                    title={t("dao-title")}
-                    description={t("dao-description")}
-                    ctaLabel={t("dao-cta")}
-                  />
-                  <UseCaseCard
-                    href="/decentralized-identity/"
-                    image={ethGifCat}
-                    title={t("identity-title")}
-                    description={t("identity-description")}
-                    ctaLabel={t("identity-cta")}
-                  />
-                  <UseCaseCard
-                    href="/social-networks/"
-                    image={ethereumLearn}
-                    title={t("social-title")}
-                    description={t("social-description")}
-                    ctaLabel={t("social-cta")}
-                  />
-                </div>
-              </Section>
-
-              {/* Science and public goods */}
-              <Section
-                headingId={tocItems[3].id}
-                headingTitle={tocItems[3].title}
-                description={t("science-description")}
-              >
-                <div className="grid grid-cols-fill-4 gap-4">
-                  <UseCaseCard
-                    href="/desci/"
-                    image={futureTransparent}
-                    title={t("desci-title")}
-                    description={t("desci-description")}
-                    ctaLabel={t("desci-cta")}
-                  />
-                  <UseCaseCard
-                    href="/refi/"
-                    image={financeTransparent}
-                    title={t("refi-title")}
-                    description={t("refi-description")}
-                    ctaLabel={t("refi-cta")}
-                  />
-                </div>
-              </Section>
-
-              {/* Ready to start? */}
-              <Stack className="mt-24 gap-6 rounded-2xl bg-main-gradient p-12">
-                <h2 className="text-2xl leading-[1.4] md:text-[2rem]">
-                  {t("ready-to-start-title")}
-                </h2>
-                <p>{t("ready-to-start-description")}</p>
-                <Flex className="gap-4">
-                  <ButtonLink href="/wallets/find-wallet/" variant="solid">
-                    {t("ready-to-start-wallet-cta")}
-                  </ButtonLink>
-                  <ButtonLink href="/get-eth/" variant="outline" isSecondary>
-                    {t("ready-to-start-eth-cta")}
-                  </ButtonLink>
-                </Flex>
-              </Stack>
-
-              <FileContributors
-                className="my-10 border-t"
-                contributors={contributors}
-                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            <div className="grid grid-cols-fill-4 gap-4">
+              <UseCaseCard
+                href="/nft/"
+                image={infrastructureTransparent}
+                title={t("nft-title")}
+                description={t("nft-description")}
+                ctaLabel={t("nft-cta")}
               />
-              <FeedbackCard />
-            </ContentContainer>
-          </MainArticle>
-        </Flex>
-      </div>
+              <UseCaseCard
+                href="/gaming/"
+                image={robotHelpBar}
+                title={t("gaming-title")}
+                description={t("gaming-description")}
+                ctaLabel={t("gaming-cta")}
+              />
+            </div>
+          </Section>
+
+          {/* Organizations and identity */}
+          <Section id={tocItems[2].id} className="space-y-8">
+            <h2>{tocItems[2].title}</h2>
+            <p>{t("organizations-description")}</p>
+
+            <div className="grid grid-cols-fill-4 gap-4">
+              <UseCaseCard
+                href="/dao/"
+                image={daoImg}
+                title={t("dao-title")}
+                description={t("dao-description")}
+                ctaLabel={t("dao-cta")}
+              />
+              <UseCaseCard
+                href="/decentralized-identity/"
+                image={ethGifCat}
+                title={t("identity-title")}
+                description={t("identity-description")}
+                ctaLabel={t("identity-cta")}
+              />
+              <UseCaseCard
+                href="/social-networks/"
+                image={ethereumLearn}
+                title={t("social-title")}
+                description={t("social-description")}
+                ctaLabel={t("social-cta")}
+              />
+            </div>
+          </Section>
+
+          {/* Science and public goods */}
+          <Section id={tocItems[3].id} className="space-y-8">
+            <h2>{tocItems[3].title}</h2>
+            <p>{t("science-description")}</p>
+
+            <div className="grid grid-cols-fill-4 gap-4">
+              <UseCaseCard
+                href="/desci/"
+                image={futureTransparent}
+                title={t("desci-title")}
+                description={t("desci-description")}
+                ctaLabel={t("desci-cta")}
+              />
+              <UseCaseCard
+                href="/refi/"
+                image={financeTransparent}
+                title={t("refi-title")}
+                description={t("refi-description")}
+                ctaLabel={t("refi-cta")}
+              />
+            </div>
+          </Section>
+
+          {/* Ready to start? */}
+          <CalloutBannerSSR
+            id="ready-to-start"
+            title={t("ready-to-start-title")}
+            description={t("ready-to-start-description")}
+            variant="medium"
+          >
+            <div className="flex flex-wrap gap-4 max-sm:flex-col [&>a]:max-sm:flex-1">
+              <ButtonLink href="/wallets/find-wallet/" variant="solid">
+                {t("ready-to-start-wallet-cta")}
+              </ButtonLink>
+              <ButtonLink href="/get-eth/" variant="outline" isSecondary>
+                {t("ready-to-start-eth-cta")}
+              </ButtonLink>
+            </div>
+          </CalloutBannerSSR>
+        </div>
+      </ContentLayout>
     </>
   )
 }
