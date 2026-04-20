@@ -34,9 +34,6 @@ import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
-
-import { normalizeUrlForJsonLd } from "@/lib/utils/url"
-
 import consensys from "@/public/images/projects/consensys.png"
 import blockscout from "@/public/images/resources/blockscout.webp"
 import ef from "@/public/images/staking/ef-blog-logo.png"
@@ -264,92 +261,8 @@ const DepositContractPage = ({ locale }: { locale: Lang }) => {
     ? ":speaker_high_volume:"
     : ":speaker:"
 
-  const depositContractUrl = normalizeUrlForJsonLd(
-    locale,
-    "/staking/deposit-contract/"
-  )
-
-  // JSON-LD structured data for the Deposit Contract page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": depositContractUrl,
-    name: t("page-staking-deposit-contract-title"),
-    description: t("page-staking-deposit-contract-subtitle"),
-    url: depositContractUrl,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: normalizeUrlForJsonLd(locale, "/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Staking",
-          item: normalizeUrlForJsonLd(locale, "/staking/"),
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-staking-deposit-contract-title"),
-          item: depositContractUrl,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the deposit contract article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-staking-deposit-contract-title"),
-    description: t("page-staking-deposit-contract-subtitle"),
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Deposit Contract",
-      description:
-        "Official Ethereum 2.0 deposit contract address for staking validators",
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-deposit-contract"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-deposit-contract"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
       <MainArticle className="w-full">
         <FlexBox>
           <LeftColumn>
