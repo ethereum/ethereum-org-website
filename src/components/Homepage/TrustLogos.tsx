@@ -45,7 +45,6 @@ const TrustLogos = async ({
               src={builtToLastImage}
               alt={t("page-index-trust-image-alt")}
               sizes="(max-width: 768px) 100vw, 1024px"
-              quality={90}
               className="h-full w-full object-cover"
             />
           </div>

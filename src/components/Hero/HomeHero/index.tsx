@@ -77,7 +77,13 @@ const HomeHero = async ({
             media={`(max-width: ${breakpointAsNumber["md"] - 1}px)`}
             srcSet={srcSetBase}
           />
-          <img {...rest} alt={alt} className="h-full w-full object-cover" />
+          <img
+            {...rest}
+            alt={alt}
+            fetchPriority="high"
+            loading="eager"
+            className="h-full w-full object-cover"
+          />
         </picture>
       </div>
 
