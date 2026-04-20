@@ -250,7 +250,7 @@ const SlideContent = ({
       <SectionContent className="order-2 flex flex-col gap-6 md:order-1 md:max-w-[660px] md:gap-10">
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{slide.tag}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0 text-4xl sm:text-5xl md:text-6xl">
+          <SectionHeader className="!mb-0 !mt-0 md:text-6xl">
             {slide.title}
           </SectionHeader>
         </div>
