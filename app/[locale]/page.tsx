@@ -887,7 +887,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <Section
             id="join"
             className={cn(
-              "before:z-hide before:absolute before:-inset-px before:bottom-0 before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
+              "before:z-hide before:absolute before:-inset-px before:bottom-0 before:rounded-[calc(var(--radius-4xl)+1px)] before:content-['']", // Border/gradient positioning
               "before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20 before:bg-linear-to-b", // Border/gradient coloring
               "bg-background relative inset-0 rounded-4xl" // Paint background color over card portion
             )}

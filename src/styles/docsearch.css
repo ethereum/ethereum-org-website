@@ -1,8 +1,4 @@
-/* DOCSEARCH OVERRIDES
-   Custom styles for the Algolia DocSearch widget.
-   These are intentionally unlayered so they override both the docsearch
-   layer (imported via @import layer(docsearch)) and base layer styles
-   that leak into the modal. */
+/* Algolia DocSearch overrides. Unlayered to beat vendor CSS + utilities. */
 
 /**
  * DocSearch Button

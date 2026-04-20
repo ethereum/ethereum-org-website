@@ -1,9 +1,10 @@
-@import "@docsearch/css/dist/style.css" layer(docsearch);
-@import "swiper/css" layer(swiper);
-@import "swiper/css/navigation" layer(swiper);
-@import "swiper/css/pagination" layer(swiper);
-@import "swiper/css/effect-cards" layer(swiper);
-@import "swiper/css/grid" layer(swiper);
+/* Vendor CSS → layer(components). Our overrides → unlayered. */
+@import "@docsearch/css/dist/style.css" layer(components);
+@import "swiper/css" layer(components);
+@import "swiper/css/navigation" layer(components);
+@import "swiper/css/pagination" layer(components);
+@import "swiper/css/effect-cards" layer(components);
+@import "swiper/css/grid" layer(components);
 @import "tailwindcss";
 @import "tw-animate-css";
 
