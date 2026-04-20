@@ -15,7 +15,7 @@ interface EventCardProps {
   event: EventItem
   variant?: "grid" | "highlight"
   className?: string
-  locale?: string
+  locale: string
   showTypeTag?: boolean
   customEventOptions?: MatomoEventOptions
 }
@@ -128,7 +128,7 @@ export default function EventCard({
   event,
   variant,
   className,
-  locale = "en",
+  locale,
   showTypeTag,
   customEventOptions,
 }: EventCardProps) {
