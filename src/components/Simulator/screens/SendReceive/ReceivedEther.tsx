@@ -82,7 +82,7 @@ export const ReceivedEther = ({
         {showToast && !hidden && (
           <motion.div
             key="toast"
-            className="absolute inset-4 bottom-32 top-auto flex h-fit items-center gap-3 rounded bg-primary-high-contrast p-4 text-md text-background"
+            className="bg-primary-high-contrast text-md text-background absolute inset-4 top-auto bottom-32 flex h-fit items-center gap-3 rounded p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

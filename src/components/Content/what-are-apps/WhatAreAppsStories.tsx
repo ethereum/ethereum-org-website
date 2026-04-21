@@ -58,7 +58,7 @@ const WhatAreAppsStories = () => {
       {stories.map((story, index) => (
         <div
           key={story.name}
-          className="flex flex-col gap-4 rounded-2xl border bg-background p-6"
+          className="bg-background flex flex-col gap-4 rounded-2xl border p-6"
         >
           <div className="flex flex-row items-center justify-between gap-2">
             <div className="flex flex-row items-center gap-2">
@@ -73,7 +73,7 @@ const WhatAreAppsStories = () => {
                   />
                 )}
                 {!story.twitter && (
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-c">
+                  <div className="bg-accent-c flex h-10 w-10 items-center justify-center rounded-full">
                     <p className="text-lg font-bold text-white">
                       {story.name?.slice(0, 1).toUpperCase()}
                     </p>
@@ -82,7 +82,7 @@ const WhatAreAppsStories = () => {
               </div>
               <div>
                 <p className="text-md font-bold">{story.name}</p>
-                <p className="text-sm text-body-medium">
+                <p className="text-body-medium text-sm">
                   {story.twitter
                     ? `@${story.twitter.split("/").pop()}`
                     : story.country}
@@ -94,7 +94,7 @@ const WhatAreAppsStories = () => {
                 <ButtonLink
                   href={story.twitter}
                   variant="ghost"
-                  className="justify-start px-0 text-body"
+                  className="text-body justify-start px-0"
                   hideArrow
                 >
                   <Twitter />
@@ -119,7 +119,7 @@ const WhatAreAppsStories = () => {
               {expandedStories[index] ? "Read less" : "Read more"}
             </Button>
           </div>
-          <p className="text-sm text-body-medium">
+          <p className="text-body-medium text-sm">
             {dateTimeFormat("en-US", {
               year: "numeric",
               month: "long",

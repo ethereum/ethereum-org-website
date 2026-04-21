@@ -15,7 +15,7 @@ export default async function OrganizerCTA({ className }: OrganizerCTAProps) {
   return (
     <Section
       className={cn(
-        "border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20",
+        "border-accent-a/20 from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20 bg-linear-to-b",
         "space-y-8 rounded-4xl px-4 py-12 text-center md:px-8 md:py-20",
         className
       )}

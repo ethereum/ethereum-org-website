@@ -58,7 +58,7 @@ type CardProps = {
 }
 
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="flex flex-col rounded-sm border">
+  <Card className="flex flex-col rounded-xs border">
     <CardHeader className="space-y-4">
       <Emoji text={emoji} className="text-5xl leading-none" />
       <CardTitle>{title}</CardTitle>
@@ -134,11 +134,11 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 alt={t("page-get-eth-hero-image-alt")}
                 priority
               />
-              <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
+              <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mt-24 lg:mb-0">
                 <h1 className="my-8 text-4xl md:text-5xl">
                   {t("page-get-eth-where-to-buy-title")}
                 </h1>
-                <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">
+                <p className="text-body-medium mb-0 max-w-[45ch] text-center text-xl leading-snug">
                   {t("page-get-eth-where-to-buy-desc")}
                 </p>
                 <br />
@@ -239,7 +239,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               id="country-picker"
               className={cn(
                 "-mx-8 my-0 flex flex-col items-center px-8 py-16 sm:p-16 md:my-16 lg:mx-0",
-                "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+                "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r"
               )}
             >
               <div className="flex flex-col items-center">
@@ -343,11 +343,11 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                       {t("page-get-eth-your-address")}
                     </h3>
                     <p>{t("page-get-eth-your-address-desc")}</p>
-                    <div className="mb-6 flex select-none flex-col-reverse justify-between rounded bg-[#191919] p-2 lg:flex-row">
-                      <p className="mb-0 font-monospace text-xs text-white">
+                    <div className="mb-6 flex flex-col-reverse justify-between rounded bg-[#191919] p-2 select-none lg:flex-row">
+                      <p className="font-monospace mb-0 text-xs text-white">
                         0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
                       </p>
-                      <p className="mx-4 mb-0 text-sm uppercase text-error">
+                      <p className="text-error mx-4 mb-0 text-sm uppercase">
                         {t("page-get-eth-do-not-copy")}
                       </p>
                     </div>
@@ -366,7 +366,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <Divider className="mx-auto my-16 md:my-32" />
 
             <CalloutBanner
-              className="mx-4 mb-40 mt-24"
+              className="mx-4 mt-24 mb-40"
               titleKey="page-get-eth:page-get-eth-use-your-eth"
               descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
               image={dapps}

@@ -39,7 +39,7 @@ import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    className="m-4 min-w-[280px] max-w-full flex-1 bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
+    className="bg-background m-4 max-w-full min-w-[280px] flex-1 p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
   />
 )
@@ -205,36 +205,36 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <MainArticle className="mx-auto flex w-full flex-col items-center">
         <PageHero content={heroContent} isReverse />
 
-        <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
+        <div className="bg-background-highlight mt-4 w-full border-t px-0 py-16 lg:mt-8">
           <div className="-mb-8 w-full px-8 py-4 pb-0">
             <ListenToPlayer slug="/wallets/" />
           </div>
           <div className="w-full px-8 py-4 pb-0">
-            <h2 className="mb-0 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-0 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-whats-a-wallet")}
             </h2>
           </div>
           <div className="mb-0 flex flex-col justify-between p-8 lg:flex-row">
             <div className="me-0 flex-[0_1_50%] lg:me-8 lg:mt-0 lg:max-w-full">
-              <p className="mb-[1.45rem] text-md leading-base">
+              <p className="text-md leading-base mb-[1.45rem]">
                 <Translation id="page-wallets:page-wallets-description" />
               </p>
-              <p className="mb-[1.45rem] text-md leading-base">
+              <p className="text-md leading-base mb-[1.45rem]">
                 {t("page-wallets-desc-2")}
               </p>
               <CardList items={guides} className="mb-6 lg:mb-0" />
             </div>
             <div className="max-w-full flex-[0_1_50%] lg:ms-8">
-              <p className="mb-[1.45rem] text-md leading-base">
+              <p className="text-md leading-base mb-[1.45rem]">
                 {t("page-wallets-desc-3")}
               </p>
-              <p className="mb-[1.45rem] text-md leading-base">
+              <p className="text-md leading-base mb-[1.45rem]">
                 {t("page-wallets-desc-4")}
               </p>
             </div>
           </div>
           <div className="w-full px-8 py-4">
-            <div className="-me-4 -ms-4 flex flex-wrap">
+            <div className="-ms-4 -me-4 flex flex-wrap">
               {cards.map((card, idx) => (
                 <StyledCard
                   key={idx}
@@ -247,40 +247,40 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div className="-mb-8 mt-8 flex flex-col justify-between p-8 lg:flex-row">
+        <div className="mt-8 -mb-8 flex flex-col justify-between p-8 lg:flex-row">
           <div className="max-w-full flex-[0_1_50%] lg:me-8">
-            <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-accounts-addresses")}
             </h2>
-            <p className="mb-[1.45rem] text-md leading-base">
+            <p className="text-md leading-base mb-[1.45rem]">
               {t("page-wallets-accounts-addresses-desc")}
             </p>
             <ul>
               <li>
-                <p className="mb-[1.45rem] text-md leading-base">
+                <p className="text-md leading-base mb-[1.45rem]">
                   <Translation id="page-wallets:page-wallets-ethereum-account" />
                 </p>
               </li>
               <li>
-                <p className="mb-[1.45rem] text-md leading-base">
+                <p className="text-md leading-base mb-[1.45rem]">
                   <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
                 </p>
               </li>
               <li>
-                <p className="mb-[1.45rem] text-md leading-base">
+                <p className="text-md leading-base mb-[1.45rem]">
                   <Translation id="page-wallets:page-wallets-ethereum-wallet" />
                 </p>
               </li>
             </ul>
-            <p className="mb-[1.45rem] text-md leading-base">
+            <p className="text-md leading-base mb-[1.45rem]">
               {t("page-wallets-most-wallets")}
             </p>
           </div>
           <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
-            <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-types")}
             </h2>
-            <p className="mb-[1.45rem] text-md leading-base">
+            <p className="text-md leading-base mb-[1.45rem]">
               {t("page-wallets-types-desc")}
             </p>
             <div className="flex flex-col gap-2">
@@ -301,23 +301,23 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <div className="my-20 w-full px-0 py-4">
             <Suspense>
               <WalletSimulator>
-                <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
+                <p className="leading-base text-body-medium mb-2 text-lg italic md:text-xl lg:text-2xl">
                   Interactive tutorial
                 </p>
-                <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
+                <h2 className="m-0 text-3xl leading-[115%] font-bold lg:text-5xl">
                   How to use a wallet
                 </h2>
               </WalletSimulator>
             </Suspense>
           </div>
         ) : (
-          <div className="my-12 mt-4 w-full border-t bg-gradient-main px-0 py-16 lg:mt-8">
+          <div className="bg-gradient-main my-12 mt-4 w-full border-t px-0 py-16 lg:mt-8">
             <div className="w-full px-8 py-4">
               <div className="mb-8 flex flex-col items-center">
-                <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+                <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
                   {t("page-wallets-features-title")}
                 </h2>
-                <div className="mb-6 text-center text-xl leading-base">
+                <div className="leading-base mb-6 text-center text-xl">
                   {t("page-wallets-features-desc")}
                 </div>
                 <ButtonLink
@@ -342,10 +342,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div className="mb-12 flex flex-col justify-between p-8 lg:flex-row">
           <div className="max-w-full flex-[0_1_50%] lg:me-8">
-            <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-stay-safe")}
             </h2>
-            <p className="mb-6 leading-xs">
+            <p className="leading-xs mb-6">
               <Translation id="page-wallets:page-wallets-stay-safe-desc" />
             </p>
             <div className="flex flex-col gap-4">
@@ -367,7 +367,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 emojiClassName="text-2xl"
                 className="items-start"
               >
-                <p className="mb-[1.45rem] text-md leading-base">
+                <p className="text-md leading-base mb-[1.45rem]">
                   {t("page-wallets-seed-phrase-example")}
                 </p>
                 <div className="rounded-base mb-4 bg-black p-2">
@@ -375,7 +375,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     {t("page-wallets-seed-phrase-snippet")}
                   </p>
                 </div>
-                <p className="mb-[1.45rem] text-md leading-base">
+                <p className="text-md leading-base mb-[1.45rem]">
                   {t("page-wallets-seed-phrase-write-down")}
                 </p>
               </HorizontalCard>
@@ -398,10 +398,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
           </div>
           <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
-            <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-tips")}
             </h2>
-            <p className="mb-6 leading-xs">
+            <p className="leading-xs mb-6">
               {t("page-wallets-tips-community")}
             </p>
             <CardList items={articles} />
@@ -411,10 +411,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <div className="w-full px-8 py-4">
           <Divider />
 
-          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+          <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-explore")}
           </h2>
-          <div className="-me-4 -ms-4 mt-16 flex flex-wrap">
+          <div className="-ms-4 -me-4 mt-16 flex flex-wrap">
             <Callout
               image={ETHImage}
               titleKey="page-wallets:page-wallets-get-some"

@@ -10,7 +10,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div className="my-8 w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 p-8">
+      <div className="from-accent-a/10 to-accent-c/10 my-8 w-full bg-linear-to-r p-8">
         <Story />
       </div>
     ),

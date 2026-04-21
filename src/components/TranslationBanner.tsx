@@ -45,7 +45,7 @@ const TranslationBanner = ({
   return (
     <aside
       className={cn(
-        "fixed bottom-0 end-0 z-popover rounded bg-background-highlight md:bottom-8 md:end-8",
+        "z-popover bg-background-highlight fixed end-0 bottom-0 rounded md:end-8 md:bottom-8",
         isOpen ? "block" : "hidden"
       )}
       dir={dir}
@@ -56,7 +56,7 @@ const TranslationBanner = ({
             <h3 className="leading-none md:text-2xl">{t(headerTextId)}</h3>
             <Emoji
               text=":globe_showing_asia_australia:"
-              className="mb-4 ms-2 text-2xl sm:mb-auto"
+              className="ms-2 mb-4 text-2xl sm:mb-auto"
             />
           </Flex>
           <p>{t(bodyTextId)}</p>
@@ -86,7 +86,7 @@ const TranslationBanner = ({
         <Button
           variant="ghost"
           size="sm"
-          className="absolute end-0 top-0 m-2 hover:text-primary"
+          className="hover:text-primary absolute end-0 top-0 m-2"
           onClick={() => setIsOpen(false)}
         >
           <X className="h-4 w-4" />

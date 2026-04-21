@@ -48,7 +48,7 @@ const PageContainer = (props: ChildOnlyProp) => (
 )
 
 const HeroStatsWrapper = (props: ChildOnlyProp) => (
-  <VStack className="w-full gap-0 bg-main-gradient" {...props} />
+  <VStack className="bg-main-gradient w-full gap-0" {...props} />
 )
 
 const ComparisonGrid = (props: ChildOnlyProp) => {
@@ -61,7 +61,7 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
 }
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className="mb-8 mt-0 text-2xl leading-xs md:text-[2rem]" {...props} />
+  <h2 className="leading-xs mt-0 mb-8 text-2xl md:text-[2rem]" {...props} />
 )
 
 const ColorH3 = ({
@@ -99,7 +99,7 @@ const StyledCard = (props: {
     emoji={props.emoji}
     key={props.key}
     description={props.description}
-    className="justify-start [&_h3]:mb-1 [&_h3]:mt-0 [&_h3]:font-bold"
+    className="justify-start [&_h3]:mt-0 [&_h3]:mb-1 [&_h3]:font-bold"
   >
     {props.children}
   </Card>

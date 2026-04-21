@@ -102,8 +102,8 @@ const BugBountyCards = () => {
           key={`bug-bounty-card-${idx}`}
           className={cn(
             "row-span-6 m-4 grid grid-rows-subgrid",
-            "overflow-hidden rounded border bg-background shadow-table-box",
-            "hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:transition-transform hover:duration-100"
+            "bg-background shadow-table-box overflow-hidden rounded border",
+            "hover:bg-background-highlight hover:shadow-table-box-hover hover:scale-[1.02] hover:rounded hover:transition-transform hover:duration-100"
           )}
         >
           <Banner card={card} />
@@ -118,7 +118,7 @@ const BugBountyCards = () => {
               </p>
             </div>
 
-            <p className="mb-2 mt-4 text-sm uppercase opacity-60">
+            <p className="mt-4 mb-2 text-sm uppercase opacity-60">
               {t(card.subDescriptionTranslationId)}
             </p>
 
