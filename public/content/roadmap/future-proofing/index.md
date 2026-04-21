@@ -63,10 +63,10 @@ Complexity creates opportunities for bugs and vulnerabilities. Part of the roadm
 
 Several recent upgrades have made Ethereum simpler and more efficient:
 
-- **[Pectra (7-May-2025)](/roadmap/pectra/)**: Introduced EIP-7702, which lets externally owned accounts temporarily delegate to smart contract code, a stepping stone toward full [account abstraction](/roadmap/account-abstraction/). Also added the BLS12-381 precompile (EIP-2537), onchain deposit handling (EIP-6110), historical block hash access in the EVM (EIP-2935), and increased the maximum effective balance for validators (EIP-7251).
-- **[Fusaka (3-Dec-2025)](/roadmap/fusaka/)**: Deployed PeerDAS (EIP-7594), a peer-to-peer data availability sampling system that distributes the data availability workload across the network. Also increased blob parameters, expanding data throughput for [rollups](/glossary/#rollups).
+- **[Pectra (May 2025)](/roadmap/pectra/)**: Introduced EIP-7702, which lets externally owned accounts temporarily delegate to smart contract code, a stepping stone toward full [account abstraction](/roadmap/account-abstraction/). Also added the BLS12-381 precompile (EIP-2537), onchain deposit handling (EIP-6110), historical block hash access in the EVM (EIP-2935), and increased the maximum effective balance for validators (EIP-7251).
+- **[Fusaka (December 2025)](/roadmap/fusaka/)**: Deployed PeerDAS (EIP-7594), a peer-to-peer data availability sampling system that distributes the data availability workload across the network. Also increased blob parameters, expanding data throughput for [rollups](/glossary/#rollups).
 - **[Dencun (March 2024)](/roadmap/dencun/)**: Introduced blob transactions (EIP-4844) for cheaper rollup data and restricted `SELFDESTRUCT` (EIP-6780) to remove a long-standing source of complexity.
-- **[London (2021)](/ethereum-forks/#london)**: Overhauled [gas](/glossary/#gas) pricing with EIP-1559, introducing a base fee and burn mechanism for more predictable transaction costs.
+- **[London (August 2021)](/ethereum-forks/#london)**: Overhauled [gas](/glossary/#gas) pricing with EIP-1559, introducing a base fee and burn mechanism for more predictable transaction costs.
 
 ### What is in progress {#what-is-in-progress}
 
