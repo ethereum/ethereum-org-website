@@ -1,14 +1,11 @@
 import path from "path"
 
 import dotenv from "dotenv"
-import type { ChromaticConfig } from "@chromatic-com/playwright"
 import { defineConfig, devices } from "@playwright/test"
 
 dotenv.config({ path: path.resolve(__dirname, ".env.local") })
 
-const needsWebServer = process.argv.some((arg) => arg.includes("chromatic"))
-
-export default defineConfig<ChromaticConfig>({
+export default defineConfig({
   testDir: "./tests",
   outputDir: "./tests/__results__",
   fullyParallel: true,
@@ -71,52 +68,5 @@ export default defineConfig<ChromaticConfig>({
       testDir: "./tests/unit",
       use: {},
     },
-
-    // ─────────────────────────────────────────────────────────────────────────
-    // Chromatic visual tests - Full-page snapshots at 3 viewport sizes
-    // ─────────────────────────────────────────────────────────────────────────
-    {
-      name: "chromatic-desktop",
-      testDir: "./tests/visual",
-      outputDir: "./test-results",
-      use: {
-        ...devices["Desktop Chrome"],
-        // 1024 (Tailwind `lg`) keeps full-page snapshots under Chromatic's
-        // 25M pixel limit on our longest pages.
-        viewport: { width: 1024, height: 720 },
-        disableAutoSnapshot: true,
-        assetDomains: ["s3-dcl1.ethquokkaops.io"],
-      },
-    },
-    {
-      name: "chromatic-tablet",
-      testDir: "./tests/visual",
-      outputDir: "./test-results",
-      use: {
-        ...devices["Desktop Chrome"],
-        viewport: { width: 768, height: 1024 },
-        disableAutoSnapshot: true,
-        assetDomains: ["s3-dcl1.ethquokkaops.io"],
-      },
-    },
-    {
-      name: "chromatic-mobile",
-      testDir: "./tests/visual",
-      outputDir: "./test-results",
-      use: {
-        ...devices["Desktop Chrome"],
-        viewport: { width: 375, height: 812 },
-        disableAutoSnapshot: true,
-        assetDomains: ["s3-dcl1.ethquokkaops.io"],
-      },
-    },
   ],
-
-  webServer: needsWebServer
-    ? {
-        command: "pnpm start",
-        port: 3000,
-        reuseExistingServer: true,
-      }
-    : undefined,
 })
