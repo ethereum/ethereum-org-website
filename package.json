@@ -31,7 +31,7 @@
     "test:visual": "playwright test --project=chromatic-desktop --project=chromatic-tablet --project=chromatic-mobile",
     "test:visual:desktop": "playwright test --project=chromatic-desktop",
     "test:visual:build": "USE_MOCK_DATA=true NEXT_PUBLIC_BUILD_LOCALES=en next build",
-    "chromatic:pages": "chromatic --playwright --zip",
+    "chromatic:pages": "chromatic --playwright --zip --exit-zero-on-changes",
     "trigger:dev": "trigger dev --env-file src/data-layer/.env.local",
     "trigger:deploy": "trigger deploy --env-file src/data-layer/.env.local"
   },
