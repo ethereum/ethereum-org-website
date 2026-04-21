@@ -54,6 +54,7 @@ export const Grid: Story = {
     event: baseEvent,
     variant: "grid",
     showTypeTag: true,
+    locale: "en",
   },
 }
 
@@ -62,6 +63,7 @@ export const GridBrokenImageFallback: Story = {
     event: brokenEvent,
     variant: "grid",
     showTypeTag: true,
+    locale: "en",
   },
 }
 
@@ -69,6 +71,7 @@ export const Highlight: Story = {
   args: {
     event: baseEvent,
     variant: "highlight",
+    locale: "en",
   },
 }
 
@@ -76,6 +79,7 @@ export const HighlightBrokenImageFallback: Story = {
   args: {
     event: brokenEvent,
     variant: "highlight",
+    locale: "en",
   },
 }
 
@@ -84,13 +88,14 @@ export const FallbackComparison: Story = {
     event: brokenEvent,
     variant: "grid",
     showTypeTag: true,
+    locale: "en",
   },
   render: () => (
     <VStack className="gap-6">
-      <EventCard event={baseEvent} variant="grid" showTypeTag />
-      <EventCard event={brokenEvent} variant="grid" showTypeTag />
-      <EventCard event={baseEvent} variant="highlight" />
-      <EventCard event={brokenEvent} variant="highlight" />
+      <EventCard event={baseEvent} variant="grid" showTypeTag locale="en" />
+      <EventCard event={brokenEvent} variant="grid" showTypeTag locale="en" />
+      <EventCard event={baseEvent} variant="highlight" locale="en" />
+      <EventCard event={brokenEvent} variant="highlight" locale="en" />
     </VStack>
   ),
 }
