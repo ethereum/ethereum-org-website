@@ -66,7 +66,7 @@ Rather than sharing a master private key with an agent, a developer or user gene
 - An allowlist of contracts the agent may interact with
 - A validity window after which the session key automatically expires
 
-Major smart wallet SDKs including ZeroDev (Kernel), Safe (Allowance Module), and Biconomy (Nexus / Smart Sessions) have built production-grade session key infrastructure for autonomous agent deployments.
+Major smart wallet SDKs including ZeroDev (Kernel) and Safe (Allowance Module) have built production-grade session key infrastructure for autonomous agent deployments.
 
 For SDK-level implementation guidance and a detailed technical breakdown of these standards for programmable guardrails, see the [AI agent wallets](/ai-agents/wallets/) page.
 
