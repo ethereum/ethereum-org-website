@@ -36,6 +36,8 @@ import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import AppsHighlight from "../../_components/AppsHighlight"
 import AppsTable from "../../_components/AppsTable"
 import SuggestAnApp from "../../_components/SuggestAnApp"
@@ -223,35 +225,48 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale, catetgoryName } = params
-  const t = await getTranslations("page-apps")
 
-  // Normalize slug to lowercase
-  const normalizedSlug = catetgoryName.toLowerCase()
+  try {
+    const t = await getTranslations("page-apps")
 
-  // Find category by matching the slug
-  const categoryEntry = Object.entries(appsCategories).find(
-    ([, categoryData]) => categoryData.slug === normalizedSlug
-  )
+    // Normalize slug to lowercase
+    const normalizedSlug = catetgoryName.toLowerCase()
 
-  if (!categoryEntry) {
-    notFound()
+    // Find category by matching the slug
+    const categoryEntry = Object.entries(appsCategories).find(
+      ([, categoryData]) => categoryData.slug === normalizedSlug
+    )
+
+    if (!categoryEntry) {
+      throw new Error(`App category not found: ${catetgoryName}`)
+    }
+
+    const [categoryEnum, category] = categoryEntry
+
+    if (!isValidCategory(categoryEnum)) {
+      throw new Error(`Invalid app category enum: ${categoryEnum}`)
+    }
+
+    const title = t(category.metaTitle)
+    const description = t(category.metaDescription)
+
+    return await getMetadata({
+      locale,
+      slug: ["apps", "categories", normalizedSlug],
+      title,
+      description,
+    })
+  } catch {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
+
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const [categoryEnum, category] = categoryEntry
-
-  if (!isValidCategory(categoryEnum)) {
-    notFound()
-  }
-
-  const title = t(category.metaTitle)
-  const description = t(category.metaDescription)
-
-  return await getMetadata({
-    locale,
-    slug: ["apps", "categories", normalizedSlug],
-    title,
-    description,
-  })
 }
 
 export default Page
