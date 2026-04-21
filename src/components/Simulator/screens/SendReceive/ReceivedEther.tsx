@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState } from "react"
 import { Info, X } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
+import { useLocale, useTranslations } from "next-intl"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
-import { numberFormat } from "@/lib/utils/numbers"
-
-import { getMaxFractionDigitsUsd } from "../../utils"
+import { formatWalletToken, formatWalletUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
@@ -23,6 +22,8 @@ export const ReceivedEther = ({
   ethPrice,
   sender,
 }: ReceivedEtherProps) => {
+  const t = useTranslations("component-wallet-simulator")
+  const locale = useLocale()
   const [received, setReceived] = useState(false)
   const [hideToast, setHideToast] = useState(false)
   const showToast = received && !hideToast
@@ -62,16 +63,9 @@ export const ReceivedEther = ({
 
   const tokenBalances = received ? tokensWithEthBalance : defaultTokenBalances
 
-  const displayEth: string = numberFormat("en", {
-    maximumFractionDigits: 5,
-  }).format(ethReceiveAmount)
+  const displayEth = formatWalletToken(ethReceiveAmount, locale)
   const usdReceiveAmount = ethReceiveAmount * ethPrice
-  const displayUsd: string = numberFormat("en", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
-    maximumFractionDigits: getMaxFractionDigitsUsd(usdReceiveAmount),
-  }).format(usdReceiveAmount)
+  const displayUsd = formatWalletUsd(usdReceiveAmount)
   return (
     <motion.div
       key="wallet-step-index-2"
@@ -88,7 +82,7 @@ export const ReceivedEther = ({
         {showToast && !hidden && (
           <motion.div
             key="toast"
-            className="absolute inset-4 bottom-32 top-auto flex h-fit items-center gap-3 rounded bg-primary-high-contrast p-4 text-md text-background"
+            className="bg-primary-high-contrast text-md text-background absolute inset-4 top-auto bottom-32 flex h-fit items-center gap-3 rounded p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -96,8 +90,16 @@ export const ReceivedEther = ({
           >
             <Info className="text-xl" />
             <p className="m-0 text-xs font-bold">
-              You received {displayEth} ETH ({displayUsd})
-              {sender ? ` from ${sender}` : ""}!
+              {sender
+                ? t("sim-received-toast", {
+                    ethAmount: displayEth,
+                    usdAmount: displayUsd,
+                    sender,
+                  })
+                : t("sim-received-toast-no-sender", {
+                    ethAmount: displayEth,
+                    usdAmount: displayUsd,
+                  })}
             </p>
             <X className="text-xl" onClick={() => setHidden(true)} />
           </motion.div>

@@ -35,7 +35,7 @@ const TranslationBannerLegal = ({
   return (
     <aside
       className={cn(
-        "fixed z-popover bg-background-highlight",
+        "z-popover bg-background-highlight fixed",
         "bottom-0 md:bottom-8",
         "right-0 md:right-8",
         isOpen ? "block" : "hidden"
@@ -45,7 +45,7 @@ const TranslationBannerLegal = ({
         className={cn(
           "relative flex justify-between",
           "w-full md:max-w-[600px]",
-          "rounded-sm p-4",
+          "rounded-xs p-4",
           "shadow-md"
         )}
       >
@@ -76,7 +76,7 @@ const TranslationBannerLegal = ({
         <Button
           variant="ghost"
           className={cn(
-            "absolute right-0 top-0 m-4 p-2",
+            "absolute top-0 right-0 m-4 p-2",
             "text-secondary hover:text-primary"
           )}
           onClick={() => setIsOpen(false)}

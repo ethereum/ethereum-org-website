@@ -65,12 +65,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="relative flex flex-col">
-          <div className="flex w-full flex-col gap-8 px-4 pb-4 pt-11 md:w-1/2">
+          <div className="flex w-full flex-col gap-8 px-4 pt-11 pb-4 md:w-1/2">
             <Breadcrumbs slug="wallets/find-wallet" />
             <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">
               {t("page-find-wallet-title")}
             </h1>
-            <p className="mb-6 text-xl leading-[1.4] text-body-medium last:mb-8">
+            <p className="text-body-medium mb-6 text-xl leading-[1.4] last:mb-8">
               {t("page-find-wallet-description")}
             </p>
           </div>

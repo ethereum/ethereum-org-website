@@ -8,7 +8,7 @@ const Divider = forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("my-16 h-1 w-[10%] bg-primary-high-contrast", className)}
+    className={cn("bg-primary-high-contrast my-16 h-1 w-[10%]", className)}
     {...props}
   />
 ))

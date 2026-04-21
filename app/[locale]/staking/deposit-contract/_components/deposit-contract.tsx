@@ -43,22 +43,22 @@ const FlexBox = (props: ChildOnlyProp) => (
 )
 
 const LeftColumn = (props: ChildOnlyProp) => (
-  <div className="flex-shrink flex-grow basis-1/2 p-8 pt-20" {...props} />
+  <div className="shrink grow basis-1/2 p-8 pt-20" {...props} />
 )
 
 const RightColumn = (props: ChildOnlyProp) => (
   <Flex
-    className="flex-shrink flex-grow basis-1/2 flex-col items-center p-8 pt-4 lg:pt-36"
+    className="shrink grow basis-1/2 flex-col items-center p-8 pt-4 lg:pt-36"
     {...props}
   />
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <h1 className="py-8 leading-xs" {...props} />
+  <h1 className="leading-xs py-8" {...props} />
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <p className="mb-14 leading-xs text-body-medium" {...props} />
+  <p className="leading-xs text-body-medium mb-14" {...props} />
 )
 
 const ButtonRow = (props: ChildOnlyProp) => (
@@ -69,21 +69,21 @@ const ButtonRow = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <h2 className="mb-8 mt-12 leading-xs" {...props} />
+  <h2 className="leading-xs mt-12 mb-8" {...props} />
 )
 
 const StyledButton = ({
   href,
   children,
 }: Pick<ButtonLinkProps, "href" | "children">) => (
-  <ButtonLink className="mb-12 mt-0" href={href}>
+  <ButtonLink className="mt-0 mb-12" href={href}>
     {children}
   </ButtonLink>
 )
 
 const CardTag = (props: ChildOnlyProp) => (
   <Flex
-    className="items-center justify-center rounded-t-sm border-b-white bg-primary p-2 text-sm uppercase text-white dark:text-background-medium"
+    className="bg-primary dark:text-background-medium items-center justify-center rounded-t-sm border-b-white p-2 text-sm text-white uppercase"
     {...props}
   />
 )
@@ -91,7 +91,7 @@ const CardTag = (props: ChildOnlyProp) => (
 const AddressCard = (props: ChildOnlyProp) => {
   return (
     <div
-      className="mb-8 max-w-full rounded-sm border border-border shadow-table lg:sticky lg:top-28 lg:max-w-[560px]"
+      className="border-border shadow-table mb-8 max-w-full rounded-xs border lg:sticky lg:top-28 lg:max-w-[560px]"
       {...props}
     />
   )
@@ -99,14 +99,14 @@ const AddressCard = (props: ChildOnlyProp) => {
 
 const Address = (props: ChildOnlyProp) => (
   <div
-    className="mb-4 flex-wrap rounded-sm font-monospace text-[2rem] uppercase leading-xs"
+    className="font-monospace leading-xs mb-4 flex-wrap rounded-xs text-[2rem] uppercase"
     {...props}
   />
 )
 
 const CopyButton = (props: ButtonProps) => (
   <Button
-    className="mb-4 me-0 mt-4 md:me-6 md:mt-0"
+    className="me-0 mt-4 mb-4 md:me-6 md:mt-0"
     variant="outline"
     {...props}
   />
@@ -120,16 +120,16 @@ const Row = (props: ChildOnlyProp) => (
 )
 
 const CardTitle = (props: ChildOnlyProp) => (
-  <h2 className="mb-4 text-[2rem] font-semibold leading-[1.4]" {...props} />
+  <h2 className="mb-4 text-[2rem] leading-[1.4] font-semibold" {...props} />
 )
 
 const Caption = (props: ChildOnlyProp) => (
-  <p className="mb-8 text-body-medium md:mb-8 lg:mb-0" {...props} />
+  <p className="text-body-medium mb-8 md:mb-8 lg:mb-0" {...props} />
 )
 
 const Blockie = (props: { src: string }) => (
   <Image
-    className="rounded-sm"
+    className="rounded-xs"
     src={props.src}
     alt={""}
     height={64}
@@ -139,7 +139,7 @@ const Blockie = (props: { src: string }) => (
 
 const StyledFakeLink = (props: ButtonProps) => (
   <Button
-    className="me-2 cursor-pointer px-0 text-primary"
+    className="text-primary me-2 cursor-pointer px-0"
     variant="ghost"
     {...props}
   />

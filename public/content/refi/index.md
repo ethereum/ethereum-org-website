@@ -26,7 +26,7 @@ ReFi projects realize these principles using [smart contracts](/glossary/#smart-
 
 ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. DeSci tools could become useful for developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
-<YouTube id="La52dDzBt2k" />
+<VideoWatch slug="regenerative-finance-refi" />
 
 ## Tokenization of carbon credits {#tokenization-of-carbon-credits}
 

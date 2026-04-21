@@ -58,13 +58,13 @@ const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
 )
 
 const CardContent = (props: ChildOnlyProp) => (
-  <Flex className="my-auto w-full flex-1 flex-col rounded border border-body-light px-8 pb-8 lg:m-0">
+  <Flex className="border-body-light my-auto w-full flex-1 flex-col rounded border px-8 pb-8 lg:m-0">
     {props.children}
   </Flex>
 )
 
 const CardContainer = (props: ChildOnlyProp) => (
-  <div className="mb-20 mt-8 grid grid-cols-fill-4 gap-8 lg:mt-0">
+  <div className="grid-cols-fill-4 mt-8 mb-20 grid gap-8 lg:mt-0">
     {props.children}
   </div>
 )

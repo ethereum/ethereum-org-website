@@ -1,6 +1,7 @@
 import React, { type HTMLAttributes, useEffect, useState } from "react"
 import { MoreHorizontal, Search, Triangle } from "lucide-react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import { Flex, HStack } from "@/components/ui/flex"
 
@@ -13,6 +14,7 @@ import { EXAMPLE_APP_URL } from "./constants"
 type BrowserProps = HTMLAttributes<HTMLDivElement>
 
 export const Browser = ({ ...props }: BrowserProps) => {
+  const t = useTranslations("component-wallet-simulator")
   const [typing, setTyping] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -34,14 +36,14 @@ export const Browser = ({ ...props }: BrowserProps) => {
   }
 
   return (
-    <Flex className="h-full flex-col bg-body-light" {...props}>
-      <div className="w-full bg-background-highlight px-3 pb-3 pt-9">
+    <Flex className="bg-body-light h-full flex-col" {...props}>
+      <div className="bg-background-highlight w-full px-3 pt-9 pb-3">
         <NotificationPopover
-          title="Example walkthrough"
-          content="Try logging into a real app with your wallet when finished here"
+          title={t("sim-example-walkthrough")}
+          content={t("sim-try-login-app")}
         >
-          <HStack className="cursor-default gap-0 rounded bg-background px-3 py-2 text-disabled">
-            <div className="flex-1 border-e border-background-highlight">
+          <HStack className="bg-background text-disabled cursor-default gap-0 rounded px-3 py-2">
+            <div className="border-background-highlight flex-1 border-e">
               {typing ? (
                 <motion.p
                   className="text-body-medium"
@@ -56,7 +58,7 @@ export const Browser = ({ ...props }: BrowserProps) => {
                   ))}
                 </motion.p>
               ) : (
-                <p>Search or enter website</p>
+                <p>{t("sim-cw-search-website")}</p>
               )}
             </div>
             <BrowserGlobe className="ms-3 size-4" />
@@ -65,10 +67,10 @@ export const Browser = ({ ...props }: BrowserProps) => {
       </div>
 
       <Flex className="flex-1 justify-center pt-20 md:pt-24">
-        <BrowserGlobe className="size-24 stroke-1 text-disabled" />
+        <BrowserGlobe className="text-disabled size-24 stroke-1" />
       </Flex>
 
-      <Flex className="w-full justify-around bg-background-highlight px-3 pb-9 pt-4 text-xl text-disabled">
+      <Flex className="bg-background-highlight text-disabled w-full justify-around px-3 pt-4 pb-9 text-xl">
         <Triangle className="-rotate-90" />
         <Triangle className="rotate-90" />
         <Search />

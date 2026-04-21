@@ -83,7 +83,7 @@ const CollectiblesContent = ({ badges }: CollectiblesPageProps) => {
   return (
     <div className="flex flex-col gap-8 xl:flex-row">
       {/* Already a contributor? section */}
-      <div className="flex h-fit w-full flex-col gap-y-4 rounded-2xl border border-accent-a/5 bg-gradient-to-b from-accent-a/5 to-accent-a/10 px-6 py-6 xl:sticky xl:top-28 xl:max-w-xs dark:from-accent-a/10 dark:to-accent-a/20">
+      <div className="border-accent-a/5 from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20 flex h-fit w-full flex-col gap-y-4 rounded-2xl border bg-linear-to-b px-6 py-6 xl:sticky xl:top-28 xl:max-w-xs">
         <Image
           src={alreadyContributorImg}
           alt={t("page-collectibles-contributor-img-alt")}

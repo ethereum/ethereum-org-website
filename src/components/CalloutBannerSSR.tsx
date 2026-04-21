@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils/cn"
 const variants = cva(
   cn(
     "flex flex-col rounded-xl p-8 sm:p-12 lg:flex-row-reverse",
-    "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+    "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r",
     "[&_[data-label='description']]:text-body-medium"
   ),
   {
@@ -63,7 +63,7 @@ const CalloutBannerSSR = ({
           src={image}
           alt={alt}
           width={imageWidth}
-          className="-my-24 mx-auto object-contain max-lg:mb-0"
+          className="mx-auto -my-24 object-contain max-lg:mb-0"
         />
       </div>
     )}

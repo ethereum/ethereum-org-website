@@ -37,7 +37,7 @@ const H2 = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className={cn("mb-8 mt-12 leading-xs", className)} {...props} />
+  <h2 className={cn("leading-xs mt-12 mb-8", className)} {...props} />
 )
 
 const Text = ({
@@ -62,14 +62,14 @@ const TranslatorAcknowledgements = () => {
     <Flex className="w-full flex-col items-center">
       <Content>
         <Breadcrumbs slug={pathname} className="mt-12" />
-        <h1 className="my-8 leading-xs">
+        <h1 className="leading-xs my-8">
           {t(
             "page-contributing-translation-program-acknowledgements-acknowledgement-page-title"
           )}
         </h1>
-        <Flex className="me-0 ms-0 w-full flex-col items-start lg:me-8 lg:flex-row">
+        <Flex className="ms-0 me-0 w-full flex-col items-start lg:me-8 lg:flex-row">
           {/* LEFT COLUMN */}
-          <div className="m-auto w-full lg:mb-0 lg:ml-0 lg:mr-8 lg:mt-0 lg:w-1/2">
+          <div className="m-auto w-full lg:mt-0 lg:mr-8 lg:mb-0 lg:ml-0 lg:w-1/2">
             <Text>
               {t(
                 "page-contributing-translation-program-acknowledgements-acknowledgement-page-1"
@@ -102,7 +102,7 @@ const TranslatorAcknowledgements = () => {
             </p> */}
           </div>
           {/* RIGHT COLUMN */}
-          <div className="m-auto w-full lg:mb-0 lg:ml-8 lg:mr-0 lg:mt-0 lg:w-1/2">
+          <div className="m-auto w-full lg:mt-0 lg:mr-0 lg:mb-0 lg:ml-8 lg:w-1/2">
             <Image
               width={500}
               src={dogeComputerImg}
@@ -192,7 +192,7 @@ const TranslatorAcknowledgements = () => {
         <Text>
           {t("page-contributing-translation-program-acknowledgements-3")}
         </Text>
-        <h3 className="mb-8 mt-10 leading-xs">
+        <h3 className="leading-xs mt-10 mb-8">
           {t(
             "page-contributing-translation-program-acknowledgements-how-to-claim-title"
           )}

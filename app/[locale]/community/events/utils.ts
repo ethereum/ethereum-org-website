@@ -4,7 +4,10 @@ import type { EventItem, EventType } from "@/lib/types"
 
 import { TagProps } from "@/components/ui/tag"
 
-import { parseLocationToContinent } from "@/lib/utils/geography"
+import {
+  localizeLocation,
+  parseLocationToContinent,
+} from "@/lib/utils/geography"
 import { slugify } from "@/lib/utils/url"
 
 import communityMeetups from "@/data/community-meetups.json"
@@ -25,7 +28,8 @@ export const sanitize = (s: string) =>
 
 export const mapEventTranslations = (
   events: EventItem[],
-  t: ReturnType<typeof useTranslations>
+  t: ReturnType<typeof useTranslations>,
+  locale: string
 ): EventItem[] =>
   events.map((event) => {
     // Use existing eventTypes if they have values, otherwise compute from tags
@@ -38,6 +42,7 @@ export const mapEventTranslations = (
       ...event,
       eventTypes,
       eventTypesLabels: eventTypes.map((type) => t(`page-events-tag-${type}`)),
+      location: localizeLocation(event.location, locale),
     }
   })
 
@@ -50,14 +55,14 @@ interface MeetupGroup {
   bannerImage?: string
 }
 
-function transformMeetupGroup(group: MeetupGroup): EventItem {
+function transformMeetupGroup(group: MeetupGroup, locale: string): EventItem {
   return {
     title: group.title,
     logoImage: group.logoImage || "",
     bannerImage: group.bannerImage || "",
     startTime: "",
     endTime: null,
-    location: group.location,
+    location: localizeLocation(group.location, locale),
     link: group.link,
     tags: ["meetup"],
     id: slugify(`${group.title}-${group.location}`),
@@ -71,8 +76,8 @@ function transformMeetupGroup(group: MeetupGroup): EventItem {
  * Get meetup groups from community-meetups.json
  * These are ongoing community groups (not individual events with dates)
  */
-export function getMeetupGroups(): EventItem[] {
+export function getMeetupGroups(locale: string): EventItem[] {
   return (communityMeetups as MeetupGroup[])
-    .map(transformMeetupGroup)
+    .map((group) => transformMeetupGroup(group, locale))
     .sort((a, b) => a.title.localeCompare(b.title))
 }

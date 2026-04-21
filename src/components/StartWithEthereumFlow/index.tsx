@@ -20,14 +20,14 @@ import { Skeleton, SkeletonLines } from "../ui/skeleton"
 const WalletProviders = dynamic(() => import("@/components/WalletProviders"), {
   ssr: false,
   loading: () => (
-    <Skeleton className="grid h-[32rem] grid-cols-1 rounded-2xl bg-primary/20 p-12 md:grid-cols-2">
+    <Skeleton className="bg-primary/20 grid h-[32rem] grid-cols-1 rounded-2xl p-12 md:grid-cols-2">
       <div className="">
         <SkeletonLines
           noOfLines={5}
           className="flex h-full flex-col justify-center opacity-20"
         />
       </div>
-      <Skeleton className="h-full rounded-2xl bg-background" />
+      <Skeleton className="bg-background h-full rounded-2xl" />
     </Skeleton>
   ),
 })
@@ -129,7 +129,7 @@ const StartWithEthereumFlow = ({
             <SwiperSlide
               className={cn(
                 "from-[#f4effe] to-[#faf6fe] dark:from-[#0f0a19] dark:to-[#0a0811]",
-                "border border-[#ebe0fd] bg-gradient-to-r p-4 sm:p-12 dark:border-[#1c112f]"
+                "border border-[#ebe0fd] bg-linear-to-r p-4 sm:p-12 dark:border-[#1c112f]"
               )}
             >
               <div style={getStyleFromIndex(0)}>
@@ -144,7 +144,7 @@ const StartWithEthereumFlow = ({
             <SwiperSlide
               className={cn(
                 "from-[#f4fbfa] to-[#e8f6f5] dark:from-[#02100f] dark:to-[#000908]",
-                "border border-[#b2e2de] bg-gradient-to-b p-4 sm:p-12 dark:border-[#083935] dark:bg-gradient-to-t"
+                "border border-[#b2e2de] bg-linear-to-b p-4 sm:p-12 dark:border-[#083935] dark:bg-linear-to-t"
               )}
             >
               <div style={getStyleFromIndex(1)}>
@@ -158,7 +158,7 @@ const StartWithEthereumFlow = ({
             <SwiperSlide
               className={cn(
                 "from-[#ecf1fd] to-[#f6f8fe] dark:from-[#070c18] dark:to-[#02060f]",
-                "border border-[#d7e1fc] bg-gradient-to-b p-4 sm:p-12 dark:border-[#192853] dark:bg-gradient-to-t"
+                "border border-[#d7e1fc] bg-linear-to-b p-4 sm:p-12 dark:border-[#192853] dark:bg-linear-to-t"
               )}
             >
               <div style={getStyleFromIndex(2)}>
