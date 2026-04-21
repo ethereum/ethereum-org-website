@@ -72,7 +72,6 @@ export default defineConfig<ChromaticConfig>({
 
     // ─────────────────────────────────────────────────────────────────────────
     // Chromatic visual tests - Full-page snapshots at 3 viewport sizes
-    // Uses @chromatic-com/playwright to capture DOM archives for Chromatic
     // ─────────────────────────────────────────────────────────────────────────
     {
       name: "chromatic-desktop",
