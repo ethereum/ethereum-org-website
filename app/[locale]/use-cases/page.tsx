@@ -197,7 +197,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             description={t("ai-agents-description")}
             variant="small"
           >
-            <ButtonLink href="/ai-agents/" className="w-fit">
+            <ButtonLink href="/ai-agents/" className="w-fit max-sm:w-full">
               {t("ai-agents-cta")}
             </ButtonLink>
           </CalloutBannerSSR>
