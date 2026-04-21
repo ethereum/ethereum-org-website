@@ -74,16 +74,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return <a {...props} />
   }
 
-  // Normalize http:// → https:// for ethereum.org domain links (SEO fix)
-  // External data sources sometimes provide http:// URLs for ethereum.org
-  // subdomains (e.g., fund.ethereum.org, guide.ethereum.org). Upgrading to
-  // https:// prevents Ahrefs "HTTPS page has internal links to HTTP" flags.
-  if (
-    href.startsWith("http://") &&
-    /^http:\/\/([^/]*\.)?ethereum\.org(\/|$)/.test(href)
-  ) {
-    href = href.replace("http://", "https://")
-  }
+  href = url.normalizeHref(href)
 
   const isActive = url.isHrefActive(href, pathname || "", isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
