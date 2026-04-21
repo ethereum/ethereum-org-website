@@ -135,8 +135,6 @@ module.exports = [
     false, // Selectively applying temporary for possible future route usage
   ],
   ["/developers/docs/rollups", "/developers/docs/scaling/#rollups"],
-  // Removed: ["/roadmap/future-proofing/:path+", "/roadmap/future-proofing/"],
-  // This blanket redirect prevented subpages (e.g. /quantum-resistance/) from rendering
   ["/eth2/what-is-eth2", "/roadmap/"],
   [
     "/developers/docs/accounts/account-abstraction",
