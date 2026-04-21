@@ -6,6 +6,8 @@ import { defineConfig, devices } from "@playwright/test"
 
 dotenv.config({ path: path.resolve(__dirname, ".env.local") })
 
+const needsWebServer = process.argv.some((arg) => arg.includes("chromatic"))
+
 export default defineConfig<ChromaticConfig>({
   testDir: "./tests",
   outputDir: "./tests/__results__",
@@ -110,9 +112,11 @@ export default defineConfig<ChromaticConfig>({
     },
   ],
 
-  webServer: {
-    command: "pnpm start",
-    port: 3000,
-    reuseExistingServer: true,
-  },
+  webServer: needsWebServer
+    ? {
+        command: "pnpm start",
+        port: 3000,
+        reuseExistingServer: true,
+      }
+    : undefined,
 })
