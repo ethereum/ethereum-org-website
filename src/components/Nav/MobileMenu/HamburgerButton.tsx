@@ -35,13 +35,13 @@ const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
         id={HAMBURGER_BUTTON_ID}
         data-testid="mobile-menu-hamburger"
         aria-label={t("aria-toggle-menu-button")}
-        className={cn("px-2 py-0 text-body", className)}
+        className={cn("text-body px-2 py-0", className)}
         variant="ghost"
         {...props}
       >
         <svg
           viewBox="0 0 24 40"
-          className="relative !h-10 !w-6 stroke-body stroke-2 hover:stroke-primary-hover hover:text-primary-hover [&>path]:fill-none hover:[&>path]:stroke-primary-hover"
+          className="stroke-body hover:stroke-primary-hover hover:text-primary-hover hover:[&>path]:stroke-primary-hover relative !h-10 !w-6 stroke-2 [&>path]:fill-none"
           strokeLinecap="round"
           strokeLinejoin="round"
         >

@@ -24,7 +24,7 @@ export const Web3App = ({
   const t = useTranslations("component-wallet-simulator")
   return (
     <div
-      className={cn("size-full bg-background-highlight", className)}
+      className={cn("bg-background-highlight size-full", className)}
       {...rest}
     >
       <div className="bg-[#e8e8e8] p-1 dark:bg-[#171717]">
@@ -45,7 +45,7 @@ export const Web3App = ({
               </>
             )}
           </div>
-          <Menu className="size-[1em] [&>path]:stroke-body" />
+          <Menu className="[&>path]:stroke-body size-[1em]" />
         </HStack>
       </NotificationPopover>
       {children}

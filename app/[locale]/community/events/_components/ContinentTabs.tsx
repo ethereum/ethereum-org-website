@@ -127,7 +127,7 @@ export default function ContinentTabs({
       />
 
       {filteredEvents.length === 0 ? (
-        <p className="py-8 text-center text-body-medium">{noEventsMessage}</p>
+        <p className="text-body-medium py-8 text-center">{noEventsMessage}</p>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-[auto_3fr_2fr_auto]">
           {displayedEvents.map((event) => {
@@ -149,7 +149,7 @@ export default function ContinentTabs({
                 </div>
 
                 {/* Logo + Title + Location */}
-                <LinkBox className="group rounded-xl p-2 hover:bg-background-highlight max-lg:-m-2">
+                <LinkBox className="group hover:bg-background-highlight rounded-xl p-2 max-lg:-m-2">
                   <LinkOverlay
                     href={event.link}
                     className="flex min-w-0 items-center gap-4 no-underline"
@@ -170,7 +170,7 @@ export default function ContinentTabs({
                       />
                     </div>
                     <div className="min-w-0">
-                      <p className="flex items-center gap-1 font-bold text-body group-hover:text-primary">
+                      <p className="text-body group-hover:text-primary flex items-center gap-1 font-bold">
                         {event.title}
                         <ExternalLink className="size-4 shrink-0" />
                       </p>

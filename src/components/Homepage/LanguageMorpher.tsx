@@ -45,7 +45,7 @@ const LanguageMorpher = () => {
 
   return (
     <Button
-      className="mx-auto w-fit text-md text-primary no-underline"
+      className="text-md text-primary mx-auto w-fit no-underline"
       onClick={isLargeScreen ? handleDesktopClick : handleMobileClick}
       variant="ghost"
     >

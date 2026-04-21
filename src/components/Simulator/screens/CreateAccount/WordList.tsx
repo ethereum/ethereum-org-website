@@ -91,7 +91,7 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-x-7 whitespace-nowrap bg-background px-4 md:px-8">
+    <div className="bg-background grid grid-cols-2 gap-x-7 px-4 whitespace-nowrap md:px-8">
       <OrderedList className={styles} start={1}>
         {words.map(wordMapping).slice(0, splitIndex)}
       </OrderedList>

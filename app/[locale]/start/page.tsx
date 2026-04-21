@@ -71,7 +71,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <StartWithEthereumFlow newToCryptoWallets={wallets} />
             </div>
 
-            <div className="flex w-full flex-col gap-12 rounded-2xl border border-accent-c/10 bg-gradient-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">
+            <div className="border-accent-c/10 from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 flex w-full flex-col gap-12 rounded-2xl border bg-linear-to-t from-20% to-60% px-12 py-16 md:flex-row">
               <div className="flex flex-1 flex-col gap-8">
                 <h2 className="">{t("page-start-share-section-title")}</h2>
                 <p>{t("page-start-share-section-description")}</p>

@@ -111,13 +111,13 @@ const EthPriceCard = ({
       className={cn(
         "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border p-6",
         isNegativeChange
-          ? "bg-gradient-to-b from-error/10 dark:border-error/50"
-          : "bg-gradient-to-t from-success/20 dark:border-success/50",
+          ? "from-error/10 dark:border-error/50 bg-linear-to-b"
+          : "from-success/20 dark:border-success/50 bg-linear-to-t",
         className
       )}
       {...props}
     >
-      <h4 className="m-0 flex items-center text-sm font-medium uppercase leading-xs tracking-wider">
+      <h4 className="leading-xs m-0 flex items-center text-sm font-medium tracking-wider uppercase">
         {t("eth-current-price")}&nbsp;
         <Tooltip content={tooltipContent}>
           <Info className="size-[0.875em] text-sm" />
@@ -126,8 +126,8 @@ const EthPriceCard = ({
 
       <div
         className={cn(
-          "text-5xl leading-xs",
-          hasError && "my-4 text-md text-error"
+          "leading-xs text-5xl",
+          hasError && "text-md text-error my-4"
         )}
       >
         {price}
@@ -137,7 +137,7 @@ const EthPriceCard = ({
       <Flex className="mt-2 min-h-[33px] w-full flex-col-reverse items-center justify-center sm:flex-row">
         <div
           className={cn(
-            "me-4 text-2xl leading-xs",
+            "leading-xs me-4 text-2xl",
             isNegativeChange ? "text-error" : "text-success"
           )}
         >
@@ -148,7 +148,7 @@ const EthPriceCard = ({
             <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
           )}
         </div>
-        <div className="text-sm uppercase leading-xs tracking-wider text-body-medium">
+        <div className="leading-xs text-body-medium text-sm tracking-wider uppercase">
           ({t("last-24-hrs")})
         </div>
       </Flex>
