@@ -1,5 +1,6 @@
 import React, { type HTMLAttributes } from "react"
 import { Menu } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { HStack } from "@/components/ui/flex"
 
@@ -20,17 +21,18 @@ export const Web3App = ({
   className,
   ...rest
 }: Web3AppProps) => {
+  const t = useTranslations("component-wallet-simulator")
   return (
     <div
-      className={cn("size-full bg-background-highlight", className)}
+      className={cn("bg-background-highlight size-full", className)}
       {...rest}
     >
       <div className="bg-[#e8e8e8] p-1 dark:bg-[#171717]">
         <p className="text-center text-xs">{displayUrl}</p>
       </div>
       <NotificationPopover
-        title="Example walkthrough"
-        content="Try out a real Ethereum application when finished here"
+        title={t("sim-example-walkthrough")}
+        content={t("sim-try-real-app")}
       >
         <HStack className="gap-3 p-6 text-4xl">
           {/* TODO: Remove 'size' class when icon is migrated */}
@@ -43,7 +45,7 @@ export const Web3App = ({
               </>
             )}
           </div>
-          <Menu className="size-[1em] [&>path]:stroke-body" />
+          <Menu className="[&>path]:stroke-body size-[1em]" />
         </HStack>
       </NotificationPopover>
       {children}

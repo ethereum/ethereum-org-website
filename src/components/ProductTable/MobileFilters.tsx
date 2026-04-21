@@ -56,7 +56,7 @@ const MobileFilters = ({
   }
 
   return (
-    <div className="border-b border-b-background-highlight">
+    <div className="border-b-background-highlight border-b">
       <Sheet open={mobileFiltersOpen} onOpenChange={handleOpenChange}>
         <SheetTrigger className="px-4" asChild>
           <Button
@@ -69,7 +69,7 @@ const MobileFilters = ({
               <p>{t("table-filters")}</p>
               <p className="text-body-medium">{` ${activeFiltersCount} ${t("table-active")}`}</p>
             </div>
-            <div className="grid size-8 place-items-center rounded-full border border-primary text-primary">
+            <div className="border-primary text-primary grid size-8 place-items-center rounded-full border">
               <ListFilter className="-mb-0.5 size-6 stroke-1" />
             </div>
           </Button>

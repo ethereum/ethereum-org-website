@@ -301,7 +301,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Section
               id={getId(tocItems[2].url)}
-              className="space-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 lg:p-12"
+              className="border-accent-a/20 from-accent-a/5 to-accent-a/15 space-y-8 rounded-4xl border bg-linear-to-b px-4 py-6 lg:p-12"
             >
               <div className="flex flex-col items-center justify-center gap-4 xl:flex-row">
                 <Image
@@ -347,7 +347,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Section
               id={getId(tocItems[3].url)}
-              className="space-y-8 rounded-4xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 lg:p-12"
+              className="border-accent-c/20 from-accent-c/5 to-accent-c/15 space-y-8 rounded-4xl border bg-linear-to-b px-4 py-6 lg:p-12"
             >
               <div className="flex flex-col items-center gap-4 xl:flex-row-reverse">
                 <Image
@@ -636,8 +636,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </div>
 
               <Card className="overflow-hidden rounded-2xl border">
-                <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
-                  <User className="size-8 text-accent-a" />
+                <CardTitle className="bg-background-highlight flex items-center gap-4 border-b p-4">
+                  <User className="text-accent-a size-8" />
                   {t("page-what-is-ethereum-start-individuals-title")}
                 </CardTitle>
                 <CardContent className="space-y-12 p-8">
@@ -712,8 +712,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </Card>
 
               <Card className="overflow-hidden rounded-2xl border">
-                <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
-                  <SquareCode className="size-8 text-accent-b" />
+                <CardTitle className="bg-background-highlight flex items-center gap-4 border-b p-4">
+                  <SquareCode className="text-accent-b size-8" />
                   {t("page-what-is-ethereum-start-developers-title")}
                 </CardTitle>
                 <CardContent className="space-y-12 p-8">
@@ -754,8 +754,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </Card>
 
               <Card className="overflow-hidden rounded-2xl border">
-                <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
-                  <Landmark className="size-8 text-accent-c" />
+                <CardTitle className="bg-background-highlight flex items-center gap-4 border-b p-4">
+                  <Landmark className="text-accent-c size-8" />
                   {t("page-what-is-ethereum-start-business-title")}
                 </CardTitle>
                 <CardContent className="space-y-12 p-8">
@@ -806,21 +806,21 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </p>
 
                 <div>
-                  <h3 className="mb-1 mt-12 text-xl">
+                  <h3 className="mt-12 mb-1 text-xl">
                     {t("page-what-is-ethereum-bitcoin-comparison-1-title")}
                   </h3>
                   <p>{t("page-what-is-ethereum-bitcoin-comparison-1-desc")}</p>
                 </div>
 
                 <div>
-                  <h3 className="mb-1 mt-12 text-xl">
+                  <h3 className="mt-12 mb-1 text-xl">
                     {t("page-what-is-ethereum-bitcoin-comparison-2-title")}
                   </h3>
                   <p>{t("page-what-is-ethereum-bitcoin-comparison-2-desc")}</p>
                 </div>
 
                 <div>
-                  <h3 className="mb-1 mt-12 text-xl">
+                  <h3 className="mt-12 mb-1 text-xl">
                     {t("page-what-is-ethereum-bitcoin-comparison-3-title")}
                   </h3>
                   <div className="space-y-6">
@@ -834,7 +834,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </div>
 
                 <div>
-                  <h3 className="mb-1 mt-12 text-xl">
+                  <h3 className="mt-12 mb-1 text-xl">
                     {t("page-what-is-ethereum-bitcoin-comparison-4-title")}
                   </h3>
                   <div className="space-y-6">
@@ -884,19 +884,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </h3>
                     <OrderedList className="m-0 list-none [&>li]:mb-0">
                       <ListItem>
-                        <span className="font-bold text-body-medium">
+                        <span className="text-body-medium font-bold">
                           2013:
                         </span>{" "}
                         {t("page-what-is-ethereum-when-who-history-2013")}
                       </ListItem>
                       <ListItem>
-                        <span className="font-bold text-body-medium">
+                        <span className="text-body-medium font-bold">
                           2014:
                         </span>{" "}
                         {t("page-what-is-ethereum-when-who-history-2014")}
                       </ListItem>
                       <ListItem>
-                        <span className="font-bold text-body-medium">
+                        <span className="text-body-medium font-bold">
                           2015:
                         </span>{" "}
                         {t.rich("page-what-is-ethereum-when-who-history-2015", {
@@ -904,19 +904,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         })}
                       </ListItem>
                       <ListItem>
-                        <span className="font-bold text-body-medium">
+                        <span className="text-body-medium font-bold">
                           2016:
                         </span>{" "}
                         {t("page-what-is-ethereum-when-who-history-2016")}{" "}
                       </ListItem>
                       <ListItem>
-                        <span className="font-bold text-body-medium">
+                        <span className="text-body-medium font-bold">
                           2020:
                         </span>{" "}
                         {t("page-what-is-ethereum-when-who-history-2020")}{" "}
                       </ListItem>
                       <ListItem>
-                        <span className="font-bold text-body-medium">
+                        <span className="text-body-medium font-bold">
                           2021:
                         </span>{" "}
                         {t.rich("page-what-is-ethereum-when-who-history-2021", {
@@ -924,7 +924,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         })}{" "}
                       </ListItem>
                       <ListItem>
-                        <span className="font-bold text-body-medium">
+                        <span className="text-body-medium font-bold">
                           2022:
                         </span>{" "}
                         {t.rich("page-what-is-ethereum-when-who-history-2022", {
@@ -932,7 +932,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         })}{" "}
                       </ListItem>
                       <ListItem>
-                        <span className="font-bold text-body-medium">
+                        <span className="text-body-medium font-bold">
                           2025:
                         </span>{" "}
                         {t.rich("page-what-is-ethereum-when-who-history-2025", {

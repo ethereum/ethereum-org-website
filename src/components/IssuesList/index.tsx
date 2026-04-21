@@ -21,7 +21,7 @@ const IssuesList = ({ issues, className }: IssuesListProps) => {
     >
       {issues.map((issue) => (
         <Stack
-          className="gap-4 rounded-md border border-border p-4"
+          className="border-border gap-4 rounded-md border p-4"
           key={issue.title}
         >
           <Stack className="gap-2">

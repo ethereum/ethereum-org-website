@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import type { PhoneScreenProps } from "@/lib/types"
 
@@ -32,10 +33,11 @@ import { Web3App } from "./Web3App"
 import NFTImage from "@/public/images/deep-panic.png"
 
 export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
+  const t = useTranslations("component-wallet-simulator")
   const { progressStepper, step } = nav
   const NFTs = [
     {
-      title: "Cool art",
+      title: t("sim-cw-nft-title"),
       image: NFTImage,
     },
   ]
@@ -57,7 +59,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const [activeTabIndex, setActiveTabIndex] = useState(1)
   const nfts = [
     {
-      title: "Cool art",
+      title: t("sim-cw-nft-title"),
       image: NFTImage,
     },
   ]
@@ -86,11 +88,13 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
               className="text-xl leading-[1.4] duration-700 md:text-2xl"
               {...fadeInProps}
             >
-              Welcome to Web3
-              <span className="mt-2 block font-bold">NFT Marketplace</span>
+              {t("sim-cw-welcome-web3")}
+              <span className="mt-2 block font-bold">
+                {t("sim-cw-nft-marketplace")}
+              </span>
             </motion.p>
             <motion.p className="delay-500 duration-700" {...fadeInProps}>
-              Connect your wallet to view your collection
+              {t("sim-cw-connect-wallet-prompt")}
             </motion.p>
           </Flex>
         </Web3App>
@@ -98,8 +102,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
       <AnimatePresence>
         {[2, 3].includes(step) && (
           <Slider isConnected={step === 3} displayUrl={EXAMPLE_APP_URL}>
-            Connecting to the website will not share any personal or secure
-            information with the site owners.
+            {t("sim-cw-connect-disclaimer")}
           </Slider>
         )}
       </AnimatePresence>
@@ -111,11 +114,13 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
         >
           <Web3App
             className="bg-background"
-            appName="NFT Marketplace"
+            appName={t("sim-cw-nft-marketplace")}
             displayUrl={EXAMPLE_APP_URL}
           >
             <div className="px-6 py-2 text-lg md:py-6 [&_button]:no-underline">
-              <p className="mb-4 font-bold">Your collection (1)</p>
+              <p className="mb-4 font-bold">
+                {t("sim-cw-your-collection", { count: 1 })}
+              </p>
               <Flex className="mb-6 gap-2">
                 <Image
                   src={NFTs[0].image}
@@ -124,38 +129,40 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                   alt="NFT Image"
                 />
                 <NotificationPopover
-                  title="Example walkthrough"
-                  content="These are some things you could do as the owner of your NFTs"
+                  title={t("sim-example-walkthrough")}
+                  content={t("sim-cw-nft-actions-tooltip")}
                   side="top"
                 >
                   <Flex className="flex-col items-start gap-1 text-start text-xs sm:text-sm">
-                    <p className="mb-auto ms-2 text-md font-bold">Cool art</p>
+                    <p className="mb-auto ms-2 text-md font-bold">
+                      {t("sim-cw-nft-title")}
+                    </p>
                     <Button variant="link" disabled>
                       <AuctionLine className="text-xs" />
-                      Set a price
+                      {t("sim-cw-set-price")}
                     </Button>
                     <Button variant="link" disabled>
                       <PriceTagLine className="text-xs" />
-                      Auction item
+                      {t("sim-cw-auction-item")}
                     </Button>
                     <Button variant="link" disabled>
                       <FileTransferLine className="text-xs" />
-                      Transfer item
+                      {t("sim-cw-transfer-item")}
                     </Button>
                   </Flex>
                 </NotificationPopover>
               </Flex>
               <NotificationPopover
-                title="Example walkthrough"
-                content="Try out a real Ethereum application when finished here"
+                title={t("sim-example-walkthrough")}
+                content={t("sim-try-real-app")}
                 side="top"
               >
                 <div className="text-sm md:text-md">
                   <Button className="block" variant="link" disabled>
-                    Browse other artwork
+                    {t("sim-cw-browse-artwork")}
                   </Button>
                   <Button variant="link" disabled>
-                    Mint new NFT
+                    {t("sim-cw-mint-nft")}
                   </Button>
                 </div>
               </NotificationPopover>

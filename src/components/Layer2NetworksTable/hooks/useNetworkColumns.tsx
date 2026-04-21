@@ -75,7 +75,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
             <div className="flex flex-row gap-4 lg:hidden">
               <div className="w-[24px]" />
               <div>
-                <p className="text-xs text-body-medium">
+                <p className="text-body-medium text-xs">
                   <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />
                 </p>
                 <p>
@@ -93,7 +93,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
                 </p>
               </div>
               <div>
-                <p className="text-xs text-body-medium">
+                <p className="text-body-medium text-xs">
                   <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />
                 </p>
                 <p>
@@ -129,7 +129,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
     id: "average_transaction_fee",
     header: () => (
       <TableHead className="hidden w-[145px] px-0 text-end lg:table-cell">
-        <p className="leading-1 text-xs">
+        <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip
@@ -186,7 +186,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
     id: "market_share",
     header: () => (
       <TableHead className="hidden w-[120px] px-0 text-end lg:table-cell">
-        <p className="leading-1 text-xs">
+        <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip
@@ -238,7 +238,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
     id: "network_maturity",
     header: () => (
       <TableHead className="hidden w-[145px] px-0 text-end lg:table-cell">
-        <p className="leading-1 text-xs">
+        <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-network-maturity" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip

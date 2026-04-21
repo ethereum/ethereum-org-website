@@ -70,7 +70,7 @@ const AlertDescription = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "[&_p]:mb-4 [&_p]:mt-0 [&_p]:leading-relaxed last:[&_p]:mb-0",
+      "[&_p]:mt-0 [&_p]:mb-4 [&_p]:leading-relaxed [&_p:last-child]:mb-0",
       className
     )}
     {...props}
@@ -85,7 +85,7 @@ const AlertCloseButton = React.forwardRef<
   <Button
     ref={ref}
     variant="ghost"
-    className={cn("-me-4 rounded-full text-body", className)}
+    className={cn("text-body -me-4 rounded-full", className)}
     {...props}
   >
     <X className="h-6 w-6" />
@@ -97,7 +97,7 @@ AlertCloseButton.displayName = "AlertCloseButton"
 const AlertEmoji = ({ className, ...props }: EmojiProps) => (
   <Emoji
     className={cn(
-      "flex-shrink-0 flex-grow-0 self-start text-4xl sm:self-auto",
+      "shrink-0 grow-0 self-start text-4xl sm:self-auto",
       className
     )}
     {...props}

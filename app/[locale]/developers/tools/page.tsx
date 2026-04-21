@@ -95,7 +95,7 @@ const Page = async (props: {
                 className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
               >
                 <Card className="h-fit overflow-hidden border">
-                  <LinkBox className="p-4 hover:bg-background-highlight">
+                  <LinkBox className="hover:bg-background-highlight p-4">
                     <LinkOverlay
                       href={`/developers/tools/${slug}`}
                       className="text-body no-underline"
@@ -104,7 +104,7 @@ const Page = async (props: {
                         <div className="rounded-lg border p-2">
                           <Icon className="size-6" />
                         </div>
-                        <h3 className="flex-1 text-md">
+                        <h3 className="text-md flex-1">
                           {t(`page-developers-tools-category-${slug}-title`)}
                         </h3>
                         <Button
@@ -141,7 +141,7 @@ const Page = async (props: {
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title")}</h2>
-          <div className="grid grid-cols-fill-4 gap-8">
+          <div className="grid-cols-fill-4 grid gap-8">
             {DEV_TOOL_CATEGORIES.map(({ slug, Icon }) => (
               <SubpageCard
                 key={slug}
