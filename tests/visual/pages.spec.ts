@@ -14,31 +14,23 @@ import { takeSnapshot, test } from "@chromatic-com/playwright"
 
 // Each entry covers either a distinct app route or one layout from src/layouts/.
 // App-route pages all share BaseLayout; md-slug pages additionally exercise
-// their template's layout component.
-const pages = [
+// their template's layout component. stableSelector defaults to "h1".
+const pages: Array<{ name: string; path: string; stableSelector?: string }> = [
   // App routes
-  { name: "Homepage", path: "/en/", stableSelector: "h1" },
-  { name: "Wallets", path: "/en/wallets/", stableSelector: "h1" },
-  { name: "Staking", path: "/en/staking/", stableSelector: "h1" },
-  { name: "Developers", path: "/en/developers/", stableSelector: "h1" },
-  { name: "Apps", path: "/en/apps/", stableSelector: "h1" },
-  {
-    name: "Community Events",
-    path: "/en/community/events/",
-    stableSelector: "h1",
-  },
-  { name: "Run a Node", path: "/en/run-a-node/", stableSelector: "h1" },
-  { name: "History", path: "/en/history/", stableSelector: "h1" },
-  { name: "Get ETH", path: "/en/get-eth/", stableSelector: "h1" },
-  {
-    name: "Find Wallet",
-    path: "/en/wallets/find-wallet/",
-    stableSelector: "h1",
-  },
+  { name: "Homepage", path: "/en/" },
+  { name: "Wallets", path: "/en/wallets/" },
+  { name: "Staking", path: "/en/staking/" },
+  { name: "Developers", path: "/en/developers/" },
+  { name: "Apps", path: "/en/apps/" },
+  { name: "Community Events", path: "/en/community/events/" },
+  { name: "Run a Node", path: "/en/run-a-node/" },
+  { name: "History", path: "/en/history/" },
+  { name: "Get ETH", path: "/en/get-eth/" },
+  { name: "Find Wallet", path: "/en/wallets/find-wallet/" },
 
   // src/layouts/ coverage (one representative per layout)
   // StaticLayout
-  { name: "Bridges", path: "/en/bridges/", stableSelector: "h1" },
+  { name: "Bridges", path: "/en/bridges/" },
   // DocsLayout
   {
     name: "Docs - Smart Contracts",
@@ -49,26 +41,21 @@ const pages = [
   {
     name: "Tutorial - Hello World",
     path: "/en/developers/tutorials/hello-world-smart-contract/",
-    stableSelector: "h1",
   },
   // md/StakingLayout
-  { name: "Staking - Solo", path: "/en/staking/solo/", stableSelector: "h1" },
+  { name: "Staking - Solo", path: "/en/staking/solo/" },
   // md/RoadmapLayout
-  {
-    name: "Roadmap - Security",
-    path: "/en/roadmap/security/",
-    stableSelector: "h1",
-  },
+  { name: "Roadmap - Security", path: "/en/roadmap/security/" },
   // md/UpgradeLayout
-  { name: "Roadmap - Merge", path: "/en/roadmap/merge/", stableSelector: "h1" },
+  { name: "Roadmap - Merge", path: "/en/roadmap/merge/" },
   // md/UseCasesLayout (ContentLayout is covered transitively by any md layout)
-  { name: "DeFi", path: "/en/defi/", stableSelector: "h1" },
+  { name: "DeFi", path: "/en/defi/" },
 ]
 
 test.describe("Page Visual Tests", () => {
-  for (const { name, path, stableSelector } of pages) {
+  for (const { name, path, stableSelector = "h1" } of pages) {
     test(name, async ({ page }, testInfo) => {
-      await page.goto(path, { waitUntil: "networkidle" })
+      await page.goto(path, { waitUntil: "domcontentloaded" })
       await page.locator(stableSelector).first().waitFor({ state: "visible" })
       await page
         .locator('nav[aria-label="Primary"] .animate-pulse-light')
