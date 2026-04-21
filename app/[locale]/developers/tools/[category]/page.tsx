@@ -11,6 +11,8 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import CategoryToolsGrid from "../_components/CategoryToolsGrid"
 import HighlightsSection from "../_components/HighlightsSection"
 import ToolModalContents from "../_components/ToolModalContents"
@@ -152,20 +154,32 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, category } = params
 
-  if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
-    notFound()
+  try {
+    if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
+      throw new Error(`Invalid developer tools category: ${category}`)
+    }
+
+    const t = await getTranslations("page-developers-tools")
+
+    return await getMetadata({
+      locale,
+      slug: ["developers", "tools", category],
+      title: t(`page-developers-tools-category-${category}-title`),
+      description: t(
+        `page-developers-tools-category-${category}-meta-description`
+      ),
+    })
+  } catch {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
+
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const t = await getTranslations("page-developers-tools")
-
-  return await getMetadata({
-    locale,
-    slug: ["developers", "tools", category],
-    title: t(`page-developers-tools-category-${category}-title`),
-    description: t(
-      `page-developers-tools-category-${category}-meta-description`
-    ),
-  })
 }
 
 export default Page
