@@ -122,7 +122,7 @@ const Layer2Learn = ({
 
       <div
         id="what-is-layer-1"
-        className="flex w-full flex-col gap-4 bg-body-light px-8 py-9"
+        className="bg-body-light flex w-full flex-col gap-4 px-8 py-9"
       >
         <h2>{t("page-layer-2-learn-what-is-layer-1-title")}</h2>
         <div className="flex flex-col justify-between gap-16 md:flex-row">
@@ -140,25 +140,25 @@ const Layer2Learn = ({
             </p>
             <ol className="list-none space-y-2 pl-0 [counter-reset:item]">
               <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span className="bg-body-inverse flex h-8 w-8 flex-none items-center justify-center rounded-full text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
                 <span>
                   <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-1" />
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span className="bg-body-inverse flex h-8 w-8 flex-none items-center justify-center rounded-full text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
                 <span>
                   <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-2" />
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span className="bg-body-inverse flex h-8 w-8 flex-none items-center justify-center rounded-full text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
                 <span>
                   <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-3" />
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span className="bg-body-inverse flex h-8 w-8 flex-none items-center justify-center rounded-full text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
                 <span>
                   <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-4" />
                 </span>
@@ -230,7 +230,7 @@ const Layer2Learn = ({
           return (
             <div
               key={idx}
-              className="flex w-full flex-col gap-4 rounded-sm border border-solid border-body-light bg-background-highlight p-6 md:w-[50%]"
+              className="border-body-light bg-background-highlight flex w-full flex-col gap-4 rounded-xs border border-solid p-6 md:w-[50%]"
             >
               <Image src={card.image} alt={""} />
               <h3>{card.title}</h3>

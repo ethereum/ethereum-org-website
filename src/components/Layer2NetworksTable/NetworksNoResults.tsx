@@ -24,7 +24,7 @@ const FindWalletsNoResults = ({ resetFilters }) => {
   }
 
   return (
-    <div className="m-24 border-2 border-dashed border-body-light">
+    <div className="border-body-light m-24 border-2 border-dashed">
       <div className="p-12">
         <h3 className="mb-6 text-3xl font-normal">
           {t("page-layer-2-networks-no-results-title")}

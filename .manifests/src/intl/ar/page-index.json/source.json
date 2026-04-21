@@ -1,0 +1,736 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-index.json",
+  "generatedAt": "2026-04-18T19:11:00.430Z",
+  "rootHash": "577b3c18f5a4",
+  "tree": {
+    "contentHash": "fad842cea33e",
+    "anchorHash": "c70fa7ea2b59",
+    "children": {
+      "page-index-meta-title": {
+        "contentHash": "3b2d6d66edd3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-meta-description": {
+        "contentHash": "46f3905db4dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-description": {
+        "contentHash": "f1a8914174d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-title": {
+        "contentHash": "915766dffb34",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-hero-image-alt": {
+        "contentHash": "416f29500939",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-hero-title": {
+        "contentHash": "58e1949df1fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-hero-subtitle": {
+        "contentHash": "3d418fd43b84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-hero-cta": {
+        "contentHash": "2adc964c0847",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-cta-build-apps-label": {
+        "contentHash": "c5d0453e23e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-cta-build-apps-description": {
+        "contentHash": "1377df536c62",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-title": {
+        "contentHash": "7cdf02f8996b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-description": {
+        "contentHash": "858affba050f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-beginners": {
+        "contentHash": "016b45aee2f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-explorers": {
+        "contentHash": "9373b56cab72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-builders": {
+        "contentHash": "d7b363071b1f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-enterprise": {
+        "contentHash": "c1c1f07a451b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-what-is-ethereum": {
+        "contentHash": "ac6e184ddd15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-pick-wallet": {
+        "contentHash": "9de1ae0bff3f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-get-eth": {
+        "contentHash": "8c677f2fb12b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-try-apps": {
+        "contentHash": "bf8e710b4f24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-start-building": {
+        "contentHash": "c5d0453e23e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-docs": {
+        "contentHash": "7af023c43013",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-founders": {
+        "contentHash": "75f977702daa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-modal-institutions": {
+        "contentHash": "52afccc9bd18",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-kpi-tag": {
+        "contentHash": "dbf834aa6a93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-kpi-title": {
+        "contentHash": "29ecf1652d03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-kpi-description": {
+        "contentHash": "1a5865b537fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-kpi-holders": {
+        "contentHash": "276b20c05e5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-kpi-transactions": {
+        "contentHash": "2157d506632d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-label": {
+        "contentHash": "8e73b55b136b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-previous-slide": {
+        "contentHash": "bfb549220c60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-next-slide": {
+        "contentHash": "cdc93d1c8fe9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-tag": {
+        "contentHash": "2d7442ee2810",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-title": {
+        "contentHash": "a52dc760b0c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-subtitle": {
+        "contentHash": "ec35d5789940",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-description": {
+        "contentHash": "1ccb0373322f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-cta": {
+        "contentHash": "384bb43cb117",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-traditional-label": {
+        "contentHash": "6f4f798f83e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-traditional-value": {
+        "contentHash": "d3f227621c10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-ethereum-label": {
+        "contentHash": "c513cdafbc13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-privacy-ethereum-value": {
+        "contentHash": "f52e06762e6a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-remittances-tag": {
+        "contentHash": "fd2ce93245d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-remittances-title": {
+        "contentHash": "b8c0db3cc233",
+        "anchorHash": "87b801e9f31d",
+        "children": {
+          "prose:1": {
+            "contentHash": "155a8841c388",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "15fe0a36aa0c"
+          },
+          "prose:2": {
+            "contentHash": "90e63d85fa1a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-index-carousel-remittances-subtitle": {
+        "contentHash": "053e8baa49e4",
+        "anchorHash": "86fdec68413b",
+        "children": {
+          "prose:2": {
+            "contentHash": "198b3af3fcbd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "409228ad7eb9"
+          },
+          "prose:3": {
+            "contentHash": "7b64a0777f2c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "fe0b96c2ffb2"
+          },
+          "prose:4": {
+            "contentHash": "a7d825e8a23e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "icu:0",
+          "prose:3",
+          "icu:1",
+          "prose:4"
+        ]
+      },
+      "page-index-carousel-remittances-description": {
+        "contentHash": "148bdf85cb9e",
+        "anchorHash": "e8343ffa19b8",
+        "children": {
+          "prose:1": {
+            "contentHash": "6453f3ff69ab",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d9a202efa1dc"
+          },
+          "prose:2": {
+            "contentHash": "c15f50cdadc9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-index-carousel-remittances-cta": {
+        "contentHash": "aba5c11010f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-remittances-traditional-label": {
+        "contentHash": "26efb2040bd4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-remittances-traditional-value": {
+        "contentHash": "ea94ebed9b57",
+        "anchorHash": "15550c574265",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "3295bc4ac8e6"
+          },
+          "prose:2": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "165bb764e3b4"
+          },
+          "prose:3": {
+            "contentHash": "ab51004e9d71",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:2",
+          "icu:1",
+          "prose:3"
+        ]
+      },
+      "page-index-carousel-remittances-ethereum-label": {
+        "contentHash": "2c292ef45e34",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-remittances-ethereum-value": {
+        "contentHash": "2b80243c9be3",
+        "anchorHash": "b109f5f09c65",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "15fe0a36aa0c"
+          },
+          "prose:1": {
+            "contentHash": "90e63d85fa1a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-index-carousel-borrowing-tag": {
+        "contentHash": "0bf128635647",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-borrowing-title": {
+        "contentHash": "515f450b6ff8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-borrowing-subtitle": {
+        "contentHash": "745f57a40dca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-borrowing-description": {
+        "contentHash": "218e4ba068c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-borrowing-cta": {
+        "contentHash": "7b46bcef27e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-borrowing-traditional-label": {
+        "contentHash": "c30c35cc2c69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-borrowing-traditional-value": {
+        "contentHash": "7dbd82fca053",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-borrowing-ethereum-label": {
+        "contentHash": "bc7f181e9476",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-carousel-borrowing-ethereum-value": {
+        "contentHash": "7f47f270667c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-trust-image-alt": {
+        "contentHash": "d36e659d3715",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-trust-never-offline": {
+        "contentHash": "181e6d831d8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-trust-uptime": {
+        "contentHash": "563c868b67ff",
+        "anchorHash": "73da0321c20a",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ed425c6fdf4d"
+          },
+          "prose:1": {
+            "contentHash": "dd291cd6294b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-index-trust-years": {
+        "contentHash": "5c222afd0b30",
+        "anchorHash": "7d651101a50c",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "9307b2fa1323"
+          },
+          "prose:1": {
+            "contentHash": "1c50993b009c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-index-trust-since": {
+        "contentHash": "380eaa5b3d8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-trust-tag": {
+        "contentHash": "c0db9d0d2c6a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-trust-title": {
+        "contentHash": "44bedfb64bd4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-trust-description-1": {
+        "contentHash": "d6bf4357a14a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-trust-description-2": {
+        "contentHash": "81f64b3107f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-trust-cta": {
+        "contentHash": "8c677f2fb12b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-simulator-tag": {
+        "contentHash": "56f9c1ca9d9a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-simulator-title": {
+        "contentHash": "bb216a8b3b33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-simulator-subtitle": {
+        "contentHash": "8892939755d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-title": {
+        "contentHash": "ef232f9bcfa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-title-highlight": {
+        "contentHash": "9d6f965ac832",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-subtitle": {
+        "contentHash": "26ee825d4d72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-ownership-title": {
+        "contentHash": "8ea6a76869e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-ownership-description-1": {
+        "contentHash": "612fe11386e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-ownership-description-custody": {
+        "contentHash": "19edb4703874",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-ownership-description-2": {
+        "contentHash": "fb6b837d024e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-ownership-stat": {
+        "contentHash": "d863150c0f18",
+        "anchorHash": "84717de7ab18",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d3ce713d9c0a"
+          },
+          "prose:1": {
+            "contentHash": "a318c24216de",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      },
+      "page-index-features-ownership-stat-label": {
+        "contentHash": "0f96ec697889",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-public-rules-title": {
+        "contentHash": "0b9e6e4fe1f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-public-rules-description": {
+        "contentHash": "b5412f6fb925",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-global-title": {
+        "contentHash": "a258b30f88c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-global-description": {
+        "contentHash": "3e07ea597ad8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-free-access-title": {
+        "contentHash": "9f752b4638b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-free-access-description": {
+        "contentHash": "80da29a2e6c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-nobody-owns-title": {
+        "contentHash": "84105e9733db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-nobody-owns-description": {
+        "contentHash": "c5173fa5024f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-features-cta": {
+        "contentHash": "ac6e184ddd15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-title": {
+        "contentHash": "fcf78b02b035",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-subtitle": {
+        "contentHash": "070356b3c85a",
+        "anchorHash": "87b801e9f31d",
+        "children": {
+          "prose:1": {
+            "contentHash": "2652ba301836",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "15fe0a36aa0c"
+          },
+          "prose:2": {
+            "contentHash": "6919fe220202",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0",
+          "prose:2"
+        ]
+      },
+      "page-index-get-started-learn-title": {
+        "contentHash": "2167089867da",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-learn-description": {
+        "contentHash": "606299668298",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-learn-bullet-1": {
+        "contentHash": "ac6e184ddd15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-learn-bullet-2": {
+        "contentHash": "edaa35f07ec6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-learn-bullet-3": {
+        "contentHash": "81bf4bc80997",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-learn-cta": {
+        "contentHash": "ac1796280ca0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-build-title": {
+        "contentHash": "c5d0453e23e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-build-description": {
+        "contentHash": "73426696c9f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-build-bullet-1": {
+        "contentHash": "b985db6433c8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-build-bullet-2": {
+        "contentHash": "40400156dcec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-build-bullet-3": {
+        "contentHash": "96e53d5e4de1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-build-cta": {
+        "contentHash": "f6747761ac03",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-enterprise-title": {
+        "contentHash": "c1c1f07a451b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-enterprise-description": {
+        "contentHash": "7c98f6649aba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-enterprise-bullet-1": {
+        "contentHash": "df04395f9ead",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-enterprise-bullet-2": {
+        "contentHash": "e067ee1d9b3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-enterprise-bullet-3": {
+        "contentHash": "70beac149c44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-get-started-enterprise-cta": {
+        "contentHash": "a67e688a8a4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-index-simulator-cta": {
+        "contentHash": "3e58b342d3c8",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-index-meta-title",
+      "page-index-meta-description",
+      "page-index-description",
+      "page-index-title",
+      "page-index-hero-image-alt",
+      "page-index-hero-title",
+      "page-index-hero-subtitle",
+      "page-index-hero-cta",
+      "page-index-cta-build-apps-label",
+      "page-index-cta-build-apps-description",
+      "page-index-modal-title",
+      "page-index-modal-description",
+      "page-index-modal-beginners",
+      "page-index-modal-explorers",
+      "page-index-modal-builders",
+      "page-index-modal-enterprise",
+      "page-index-modal-what-is-ethereum",
+      "page-index-modal-pick-wallet",
+      "page-index-modal-get-eth",
+      "page-index-modal-try-apps",
+      "page-index-modal-start-building",
+      "page-index-modal-docs",
+      "page-index-modal-founders",
+      "page-index-modal-institutions",
+      "page-index-kpi-tag",
+      "page-index-kpi-title",
+      "page-index-kpi-description",
+      "page-index-kpi-holders",
+      "page-index-kpi-transactions",
+      "page-index-carousel-label",
+      "page-index-carousel-previous-slide",
+      "page-index-carousel-next-slide",
+      "page-index-carousel-privacy-tag",
+      "page-index-carousel-privacy-title",
+      "page-index-carousel-privacy-subtitle",
+      "page-index-carousel-privacy-description",
+      "page-index-carousel-privacy-cta",
+      "page-index-carousel-privacy-traditional-label",
+      "page-index-carousel-privacy-traditional-value",
+      "page-index-carousel-privacy-ethereum-label",
+      "page-index-carousel-privacy-ethereum-value",
+      "page-index-carousel-remittances-tag",
+      "page-index-carousel-remittances-title",
+      "page-index-carousel-remittances-subtitle",
+      "page-index-carousel-remittances-description",
+      "page-index-carousel-remittances-cta",
+      "page-index-carousel-remittances-traditional-label",
+      "page-index-carousel-remittances-traditional-value",
+      "page-index-carousel-remittances-ethereum-label",
+      "page-index-carousel-remittances-ethereum-value",
+      "page-index-carousel-borrowing-tag",
+      "page-index-carousel-borrowing-title",
+      "page-index-carousel-borrowing-subtitle",
+      "page-index-carousel-borrowing-description",
+      "page-index-carousel-borrowing-cta",
+      "page-index-carousel-borrowing-traditional-label",
+      "page-index-carousel-borrowing-traditional-value",
+      "page-index-carousel-borrowing-ethereum-label",
+      "page-index-carousel-borrowing-ethereum-value",
+      "page-index-trust-image-alt",
+      "page-index-trust-never-offline",
+      "page-index-trust-uptime",
+      "page-index-trust-years",
+      "page-index-trust-since",
+      "page-index-trust-tag",
+      "page-index-trust-title",
+      "page-index-trust-description-1",
+      "page-index-trust-description-2",
+      "page-index-trust-cta",
+      "page-index-simulator-tag",
+      "page-index-simulator-title",
+      "page-index-simulator-subtitle",
+      "page-index-features-title",
+      "page-index-features-title-highlight",
+      "page-index-features-subtitle",
+      "page-index-features-ownership-title",
+      "page-index-features-ownership-description-1",
+      "page-index-features-ownership-description-custody",
+      "page-index-features-ownership-description-2",
+      "page-index-features-ownership-stat",
+      "page-index-features-ownership-stat-label",
+      "page-index-features-public-rules-title",
+      "page-index-features-public-rules-description",
+      "page-index-features-global-title",
+      "page-index-features-global-description",
+      "page-index-features-free-access-title",
+      "page-index-features-free-access-description",
+      "page-index-features-nobody-owns-title",
+      "page-index-features-nobody-owns-description",
+      "page-index-features-cta",
+      "page-index-get-started-title",
+      "page-index-get-started-subtitle",
+      "page-index-get-started-learn-title",
+      "page-index-get-started-learn-description",
+      "page-index-get-started-learn-bullet-1",
+      "page-index-get-started-learn-bullet-2",
+      "page-index-get-started-learn-bullet-3",
+      "page-index-get-started-learn-cta",
+      "page-index-get-started-build-title",
+      "page-index-get-started-build-description",
+      "page-index-get-started-build-bullet-1",
+      "page-index-get-started-build-bullet-2",
+      "page-index-get-started-build-bullet-3",
+      "page-index-get-started-build-cta",
+      "page-index-get-started-enterprise-title",
+      "page-index-get-started-enterprise-description",
+      "page-index-get-started-enterprise-bullet-1",
+      "page-index-get-started-enterprise-bullet-2",
+      "page-index-get-started-enterprise-bullet-3",
+      "page-index-get-started-enterprise-cta",
+      "page-index-simulator-cta"
+    ]
+  },
+  "sourceCommitSha": "9d6761fed51a72381a7603315ea3fb2475e8844d"
+}

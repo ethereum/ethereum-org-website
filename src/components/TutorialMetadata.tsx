@@ -41,7 +41,7 @@ const TutorialMetadata = ({
   const address = frontmatter.address
 
   return (
-    <Flex className="flex-col justify-between border-b-0 border-border pb-2 lg:border-b">
+    <Flex className="border-border flex-col justify-between border-b-0 pb-2 lg:border-b">
       <Flex className="mb-8 w-full items-center justify-between">
         <Flex className="w-full flex-wrap">
           <TutorialTags tags={frontmatter.tags} />
@@ -50,7 +50,7 @@ const TutorialMetadata = ({
           {t(getSkillTranslationId(frontmatter.skill as Skill))}
         </Tag>
       </Flex>
-      <Flex className="text-text300 mb-6 mt-[-1rem] flex-wrap gap-4 text-sm">
+      <Flex className="text-text300 mt-[-1rem] mb-6 flex-wrap gap-4 text-sm">
         {author && (
           <div>
             <Emoji className="me-2 text-sm" text=":writing_hand:" />
@@ -80,7 +80,7 @@ const TutorialMetadata = ({
         <Flex className="text-text300 -mt-4 mb-6 flex-wrap text-sm">
           <CopyToClipboard text={address}>
             {(isCopied) => (
-              <div className="cursor-pointer overflow-hidden text-ellipsis bg-background-highlight px-1 font-mono text-sm text-primary hover:bg-primary-hover hover:text-body-inverse">
+              <div className="bg-background-highlight text-primary hover:bg-primary-hover hover:text-body-inverse cursor-pointer overflow-hidden px-1 font-mono text-sm text-ellipsis">
                 <span className="uppercase">
                   <Translation id="page-developers-tutorials:comp-tutorial-metadata-tip-author" />
                 </span>{" "}

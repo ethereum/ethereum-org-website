@@ -95,7 +95,7 @@ const TopApps = ({ appsData }: TopAppsProps) => {
         {Object.keys(appsData).map((category) => (
           <SwiperSlide key={category}>
             <div className="flex flex-col rounded-xl border">
-              <LinkBox className="rounded-t-xl border-b p-4 hover:bg-background-highlight">
+              <LinkBox className="hover:bg-background-highlight rounded-t-xl border-b p-4">
                 <LinkOverlay
                   href={`/apps/categories/${slugify(category)}`}
                   className="text-body no-underline"
@@ -121,7 +121,7 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                           )
                         })()}
                       </div>
-                      <p className="text-lg font-bold text-body no-underline group-hover:text-primary">
+                      <p className="text-body group-hover:text-primary text-lg font-bold no-underline">
                         {t(appsCategories[category].name)}
                       </p>
                     </div>

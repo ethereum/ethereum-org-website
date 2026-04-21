@@ -20,7 +20,7 @@ If you would like to see how blockchain data is hashed and subsequently appended
 
 Watch Anders explain hashes in blockchains:
 
-<YouTube id="_160oMzblY8" />
+<VideoWatch slug="blockchain-101-visual-demo" />
 
 ## What is Ethereum? {#what-is-ethereum}
 
@@ -113,7 +113,7 @@ A reusable snippet of code (a program) which a developer publishes into EVM stat
 
 This video series offers a thorough exploration of foundational topics:
 
-<YouTube id="j78ZcIIpi0Q"/>
+<VideoWatch slug="ethereum-basics-intro" />
 
 [Ethereum Basics Playlist](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 

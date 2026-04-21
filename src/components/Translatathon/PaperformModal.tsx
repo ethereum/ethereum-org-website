@@ -30,7 +30,7 @@ export const PaperformModal = ({
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="flex h-[90vh] max-w-4xl flex-col p-0">
-        <DialogHeader className="flex-shrink-0 border-b px-6 py-4">
+        <DialogHeader className="shrink-0 border-b px-6 py-4">
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
         <div className="min-h-0 flex-1">

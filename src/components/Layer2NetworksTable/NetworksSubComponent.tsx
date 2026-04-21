@@ -33,11 +33,11 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
   return (
     <div className="flex w-full flex-col gap-4 px-6 pb-4">
       <div className="flex flex-col gap-8 md:flex-row">
-        <div className="flex h-fit flex-1 flex-col gap-4 bg-background p-4">
+        <div className="bg-background flex h-fit flex-1 flex-col gap-4 p-4">
           <div className="flex flex-row gap-4">
             <div className="flex-1">
               <div>
-                <p className="text-xs font-bold text-body-medium">
+                <p className="text-body-medium text-xs font-bold">
                   {t("page-layer-2-networks-age")}&nbsp;
                   <Tooltip
                     content={
@@ -83,7 +83,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             </div>
             <div className="flex-1">
               <div>
-                <p className="text-xs font-bold text-body-medium">
+                <p className="text-body-medium text-xs font-bold">
                   {t("page-layer-2-networks-wallet-support")}&nbsp;
                   <Tooltip
                     content={
@@ -118,7 +118,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
           <div className="flex flex-row gap-4">
             <div className="flex-1">
               <div>
-                <p className="text-xs font-bold text-body-medium">
+                <p className="text-body-medium text-xs font-bold">
                   {t("page-layer-2-networks-active-address")}&nbsp;
                   <Tooltip
                     content={
@@ -156,7 +156,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             </div>
             <div className="flex-1">
               <div>
-                <p className="text-xs font-bold text-body-medium">
+                <p className="text-body-medium text-xs font-bold">
                   {t("page-layer-2-networks-fee-token")}&nbsp;
                   <Tooltip
                     content={
@@ -181,7 +181,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
         </div>
         <div className="flex-1 gap-2">
           <div>
-            <p className="text-xs font-bold text-body-medium">
+            <p className="text-body-medium text-xs font-bold">
               {t("page-layer-2-networks-network-usage")}&nbsp;
               <Tooltip
                 content={
@@ -218,7 +218,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
       </div>
       <div className="flex flex-col gap-6 p-4">
         <div className="flex flex-col gap-1">
-          <p className="text-xs text-body-medium">
+          <p className="text-body-medium text-xs">
             {t("page-layer-2-networks-links")}
           </p>
           <div className="flex flex-col gap-4">
@@ -247,7 +247,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   {t("page-layer-2-networks-risk-analysis")}
                 </InlineLink>
               </div>
-              <p className="text-xs text-body-medium">
+              <p className="text-body-medium text-xs">
                 {t("page-layer-2-networks-assessment-by-l2beat")}
               </p>
             </div>
@@ -264,14 +264,14 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   {t("page-layer-2-networks-detailed-analytics")}
                 </InlineLink>
               </div>
-              <p className="text-xs text-body-medium">
+              <p className="text-body-medium text-xs">
                 {t("page-layer-2-networks-assessment-by-growthepie")}
               </p>
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-1">
-          <p className="text-xs text-body-medium">Actions</p>
+          <p className="text-body-medium text-xs">Actions</p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <ButtonLink
               href={network.bridgeLink}

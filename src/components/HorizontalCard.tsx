@@ -25,7 +25,7 @@ const HorizontalCard = ({
   return (
     <div className={cn("flex items-center gap-8", className)} {...props}>
       <Emoji text={emoji} className={cn("text-5xl", emojiClassName)} />
-      <div className="flex-shrink flex-grow-0 basis-3/4 space-y-2">
+      <div className="shrink grow-0 basis-3/4 space-y-2">
         <p className="text-lg">{title}</p>
         <p>{description}</p>
         {children}

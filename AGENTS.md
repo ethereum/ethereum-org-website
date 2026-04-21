@@ -11,7 +11,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 - **Next.js 14.2+** - React framework with App Router
 - **React 18** - UI library
 - **TypeScript 5.5+** - Type safety and development experience
-- **Tailwind CSS 3.4+** - Utility-first CSS framework
+- **Tailwind CSS 4+** - Utility-first CSS framework (CSS-first config in `src/styles/global.css`)
 
 ### Key Dependencies
 
@@ -54,6 +54,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
   - **content/** - Markdown content files
   - **images/** - Image assets
 - **docs/** - Development documentation
+  - **solutions/** - Documented solutions to past problems, organized by category with YAML frontmatter (module, tags, problem_type)
 
 ## Code Conventions
 

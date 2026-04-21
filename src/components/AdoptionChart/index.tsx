@@ -22,7 +22,7 @@ const Column = ({ children }: ChildOnlyProp) => (
 const Cell = ({ children, color, className, ...props }: CellProps) => (
   <div
     className={cn(
-      "border border-solid px-2 py-[0.8rem] text-center text-[0.9rem] font-bold leading-none last:rounded-t-2xl md:px-[1.2rem] [&:nth-child(-n+2)]:rounded-bl-2xl [&:nth-child(-n+2)]:rounded-br-2xl",
+      "border border-solid px-2 py-[0.8rem] text-center text-[0.9rem] leading-none font-bold last:rounded-t-2xl md:px-[1.2rem] [&:nth-child(-n+2)]:rounded-br-2xl [&:nth-child(-n+2)]:rounded-bl-2xl",
       className
     )}
     style={{

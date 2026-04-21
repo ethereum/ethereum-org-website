@@ -19,7 +19,7 @@ Decentralized social networks are [blockchain-based](/glossary/#blockchain) plat
 
 Many decentralized social networks exist as alternatives to established social media services, such as Facebook, LinkedIn, Twitter, and Medium. But blockchain-powered social networks have a number of features that put them ahead of traditional social platforms.
 
-<YouTube id="UdT2lpcGvcQ" />
+<VideoWatch slug="decentralized-social-media" />
 
 ### How do decentralized social networks work? {#decentralized-social-networks-overview}
 
@@ -52,6 +52,8 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 ## Decentralized social networks on Ethereum {#ethereum-social-networks}
 
 The Ethereum network has become the preferred tool for developers creating decentralized social media owing to the popularity of its tokens and its massive user base. Here are some examples of Ethereum-based social networks:
+
+<VideoWatch slug="crypto-apps-desocial-linda-xie" />
 
 ### Mirror {#mirror}
 

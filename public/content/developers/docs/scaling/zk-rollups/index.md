@@ -220,7 +220,7 @@ Recursive proofs, however, make it possible to finalize several blocks with one 
 
 Watch Finematics explain ZK-rollups:
 
-<YouTube id="7pWxCklcNsU" start="406" />
+<VideoWatch slug="rollups-scaling-strategy" startTime="406" />
 
 
 ## Who is working on a zkEVM? {#zkevm-projects}

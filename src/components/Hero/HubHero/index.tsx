@@ -54,7 +54,7 @@ const HubHero = ({
         {title ? (
           <h1
             data-label="breadcrumb"
-            className="text-md font-normal uppercase text-body-medium"
+            className="text-md text-body-medium font-normal uppercase"
           >
             {title}
           </h1>
