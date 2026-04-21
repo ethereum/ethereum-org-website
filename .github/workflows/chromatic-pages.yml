@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [master, staging, "test/**"]
     types: [opened, synchronize, ready_for_review]
+  workflow_dispatch:
 
 jobs:
   playwright-visual:
