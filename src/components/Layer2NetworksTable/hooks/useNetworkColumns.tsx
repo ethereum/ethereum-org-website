@@ -79,17 +79,12 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
                   <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />
                 </p>
                 <p>
-                  {row.original.txCosts ? (
-                    <>
-                      $
-                      {numberFormat(meta.locale as Lang, {
+                  {row.original.txCosts
+                    ? `$${numberFormat(meta.locale as Lang, {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 3,
-                      }).format(row.original.txCosts || 0)}
-                    </>
-                  ) : (
-                    <p>-</p>
-                  )}
+                      }).format(row.original.txCosts || 0)}`
+                    : "-"}
                 </p>
               </div>
               <div>
