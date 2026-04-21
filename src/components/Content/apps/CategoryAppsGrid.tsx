@@ -91,7 +91,7 @@ const CategoryAppsGrid = async ({
 
   if (hideFilter) {
     return (
-      <div className={cn("grid grid-cols-fill-4 gap-6 md:gap-12", className)}>
+      <div className={cn("grid-cols-fill-4 grid gap-6 md:gap-12", className)}>
         {sortedApps.slice(0, +limit).map((app) => (
           <AppCard
             key={app.name}

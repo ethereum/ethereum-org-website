@@ -38,7 +38,7 @@ const TenYearHero = async () => {
         <ParallaxImage
           src={TenYearGraphicImage}
           alt={t("page-10-year-anniversary-meta-title")}
-          className="absolute left-0 top-0 max-h-[350px] object-contain transition-transform duration-200 ease-out"
+          className="absolute top-0 left-0 max-h-[350px] object-contain transition-transform duration-200 ease-out"
           priority
         />
       </div>
@@ -46,12 +46,12 @@ const TenYearHero = async () => {
         {t("page-10-year-celebrating")}{" "}
         <span className="relative max-md:block md:w-fit">
           <span
-            className="select-none opacity-0 max-md:hidden"
+            className="opacity-0 select-none max-md:hidden"
             data-label="space-holder"
           >
             {WORDS[0]}
           </span>
-          <span className="text-3xl font-bold text-accent-b md:absolute md:start-0 md:text-nowrap">
+          <span className="text-accent-b text-3xl font-bold md:absolute md:start-0 md:text-nowrap">
             {/* CLIENT SIDE, lazy loaded */}
             <Morpher words={WORDS} charSet="abcdfgijklnopqsvwxyz" />
           </span>

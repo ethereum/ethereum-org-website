@@ -96,7 +96,7 @@ export const Heading4 = ({
 
 export const Pre = (props: ChildOnlyProp) => (
   <pre
-    className="max-w-full overflow-x-scroll whitespace-pre-wrap rounded border bg-background-highlight p-4"
+    className="bg-background-highlight max-w-full overflow-x-scroll rounded border p-4 whitespace-pre-wrap"
     {...props}
   />
 )
@@ -104,18 +104,18 @@ export const Pre = (props: ChildOnlyProp) => (
 type ParagraphProps = ChildOnlyProp & { className?: string }
 
 export const Paragraph = ({ className, ...props }: ParagraphProps) => (
-  <p className={cn("mb-4 mt-8", className)} {...props} />
+  <p className={cn("mt-8 mb-4", className)} {...props} />
 )
 
 export const Blockquote = (props: ChildOnlyProp) => (
   <blockquote
-    className="mb-4 mt-8 border-s-2 border-accent-a bg-accent-a/10 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
+    className="border-accent-a bg-accent-a/10 mt-8 mb-4 border-s-2 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
     {...props}
   />
 )
 
 export const HR = () => (
-  <hr className="mb-4 mt-8 inline-block w-full border-body-medium opacity-60" />
+  <hr className="border-body-medium mt-8 mb-4 inline-block w-full opacity-60" />
 )
 
 // All base html element components
@@ -146,7 +146,7 @@ export const Page = ({
 }: HTMLAttributes<HTMLDivElement>) => (
   <Flex
     className={cn(
-      "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16 lg:first-of-type:[&_h2]:mt-0",
+      "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16",
       className
     )}
     {...props}
@@ -159,7 +159,10 @@ export const Title = (props: ChildOnlyProp) => (
 
 export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
-    <MainArticle className="relative flex-[1_1_992px] px-8 pb-8" {...props} />
+    <MainArticle
+      className="relative flex-[1_1_992px] px-8 pb-8 [&>h2:first-child]:mt-0"
+      {...props}
+    />
   )
 }
 

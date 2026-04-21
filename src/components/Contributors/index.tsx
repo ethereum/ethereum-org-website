@@ -8,7 +8,7 @@ import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
-import data from "!!raw-loader!@/../.all-contributorsrc"
+import allContributors from "../../../.all-contributorsrc"
 
 export interface Contributor {
   login: string
@@ -17,8 +17,6 @@ export interface Contributor {
   profile?: string
   contributions: Array<string>
 }
-
-const allContributors = JSON.parse(data)
 
 interface ContributorsProps {
   contributors?: Contributor[]
@@ -36,7 +34,7 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
         sizes="132px"
       />
       <div className="p-4">
-        <h3 className="mb-4 mt-2 text-md text-body">
+        <h3 className="text-md text-body mt-2 mb-4">
           {contributor.profile ? (
             <LinkOverlay asChild>
               <InlineLink
@@ -57,7 +55,7 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
 
   if (contributor.profile) {
     return (
-      <LinkBox className="m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-highlight focus:scale-[1.02] focus:rounded">
+      <LinkBox className="hover:bg-background-highlight m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded focus:scale-[1.02] focus:rounded">
         {content}
       </LinkBox>
     )

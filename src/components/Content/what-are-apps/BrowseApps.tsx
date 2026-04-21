@@ -29,7 +29,7 @@ const apps = [
 
 const BrowseApps = () => {
   return (
-    <div className="mt-16 flex flex-col items-center justify-center rounded-3xl bg-radial-b p-8 md:p-20">
+    <div className="bg-radial-b mt-16 flex flex-col items-center justify-center rounded-3xl p-8 md:p-20">
       <div className="flex max-w-2xl flex-col items-center justify-center gap-2 text-center">
         <h2>Browse apps</h2>
         <p className="text-body-medium">
@@ -48,11 +48,11 @@ const BrowseApps = () => {
               <div
                 key={idx}
                 className={`flex flex-1 flex-col items-start gap-4 p-4 md:flex-row md:items-center ${
-                  idx < apps.length - 1 ? "border-b border-background" : ""
+                  idx < apps.length - 1 ? "border-background border-b" : ""
                 }`}
               >
                 <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-drop">
+                  <div className="bg-background shadow-drop flex h-14 w-14 items-center justify-center rounded-md">
                     <Image
                       src={app.logo}
                       alt={app.name}
@@ -82,7 +82,7 @@ const BrowseApps = () => {
         </div>
       </div>
       <div className="mt-6 flex justify-center">
-        <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-step-1 px-4 py-2 text-sm font-bold">
+        <div className="bg-gradient-step-1 mx-auto inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-bold">
           <Image
             src={EthereumLogo}
             alt="Ethereum"

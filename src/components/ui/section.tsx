@@ -35,7 +35,7 @@ const SectionBanner = React.forwardRef<
     ref={ref}
     className={cn(
       "w-full overflow-hidden rounded-4xl md:max-w-96 lg:max-w-128",
-      "bg-gradient-to-b from-accent-a/10 to-accent-a/0 dark:from-accent-a/15 dark:to-accent-a/5",
+      "from-accent-a/10 to-accent-a/0 dark:from-accent-a/15 dark:to-accent-a/5 bg-linear-to-b",
       "[&_img]:min-h-full [&_img]:object-cover [&_img]:object-center",
       className
     )}
@@ -51,7 +51,7 @@ const SectionHeader = React.forwardRef<
   <h2
     ref={ref}
     className={cn(
-      "mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-6xl",
+      "mt-2 mb-4 text-5xl font-black lg:mb-6 lg:text-6xl",
       className
     )}
     {...props}
