@@ -29,7 +29,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build Next.js with mock data (English only)
         run: pnpm build
@@ -54,7 +54,6 @@ jobs:
   chromatic-upload:
     name: Upload to Chromatic
     needs: playwright-visual
-    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -72,7 +71,7 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Download test results
         uses: actions/download-artifact@v4
