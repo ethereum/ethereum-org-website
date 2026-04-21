@@ -2,12 +2,7 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  baseGraphNodes,
-  ethereumCommunityReference,
-  ethereumFoundationReference,
-  ethereumOrgWebSiteReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function TranslatathonLeaderboardJsonLD({
@@ -31,7 +26,7 @@ export default async function TranslatathonLeaderboardJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ...baseGraphNodes,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -41,8 +36,8 @@ export default async function TranslatathonLeaderboardJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
-        isPartOf: ethereumOrgWebSiteReference,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -84,8 +79,8 @@ export default async function TranslatathonLeaderboardJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

@@ -2,11 +2,7 @@ import { getTranslations } from "next-intl/server"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  baseGraphNodes,
-  ethereumFoundationReference,
-  ethereumOrgWebSiteReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function DepositContractJsonLD({
@@ -21,7 +17,7 @@ export default async function DepositContractJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ...baseGraphNodes,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -29,7 +25,7 @@ export default async function DepositContractJsonLD({
         description: t("page-staking-deposit-contract-subtitle"),
         url: url,
         inLanguage: locale,
-        isPartOf: ethereumOrgWebSiteReference,
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -53,8 +49,8 @@ export default async function DepositContractJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Ethereum Deposit Contract",

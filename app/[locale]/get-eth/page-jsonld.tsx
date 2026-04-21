@@ -4,12 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  baseGraphNodes,
-  ethereumCommunityReference,
-  ethereumFoundationReference,
-  ethereumOrgWebSiteReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function GetEthPageJsonLD({
@@ -34,7 +29,7 @@ export default async function GetEthPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ...baseGraphNodes,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -43,8 +38,8 @@ export default async function GetEthPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
-        isPartOf: ethereumOrgWebSiteReference,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -62,8 +57,8 @@ export default async function GetEthPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#get-eth` },
       },
       {
@@ -73,9 +68,9 @@ export default async function GetEthPageJsonLD({
         description: t("page-get-eth-meta-description"),
         image: "https://ethereum.org/images/get-eth.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
         contributor: contributorList,
-        author: [ethereumCommunityReference],
-        publisher: ethereumFoundationReference,
-        editor: ethereumFoundationReference,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        editor: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: lastEditLocaleTimestamp,
       },
     ],

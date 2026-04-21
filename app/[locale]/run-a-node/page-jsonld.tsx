@@ -4,12 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  baseGraphNodes,
-  ethereumCommunityReference,
-  ethereumFoundationReference,
-  ethereumOrgWebSiteReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function RunANodePageJsonLD({
@@ -34,7 +29,7 @@ export default async function RunANodePageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ...baseGraphNodes,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -43,8 +38,8 @@ export default async function RunANodePageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
-        isPartOf: ethereumOrgWebSiteReference,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -62,8 +57,8 @@ export default async function RunANodePageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#run-a-node` },
       },
       {
@@ -72,10 +67,10 @@ export default async function RunANodePageJsonLD({
         headline: t("page-run-a-node-title"),
         description: t("page-run-a-node-hero-subtitle"),
         image: "https://ethereum.org/images/run-a-node/ethereum-inside.png",
-        author: [ethereumCommunityReference],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        publisher: ethereumFoundationReference,
-        editor: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        editor: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Running an Ethereum Node",

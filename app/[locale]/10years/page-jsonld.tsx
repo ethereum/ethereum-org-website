@@ -4,12 +4,7 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  baseGraphNodes,
-  ethereumCommunityReference,
-  ethereumFoundationReference,
-  ethereumOrgWebSiteReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function TenYearJsonLD({
@@ -32,7 +27,7 @@ export default async function TenYearJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ...baseGraphNodes,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -40,9 +35,9 @@ export default async function TenYearJsonLD({
         description: t("page-10-year-anniversary-meta-description"),
         url: url,
         inLanguage: locale,
-        author: [ethereumCommunityReference],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        isPartOf: ethereumOrgWebSiteReference,
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -60,8 +55,8 @@ export default async function TenYearJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#video` },
       },
       {
@@ -72,8 +67,8 @@ export default async function TenYearJsonLD({
         uploadDate: "2024-07-30T00:00:00Z",
         duration: "PT5M30S",
         embedUrl: "https://www.youtube.com/embed/gjwr-7PgpTC",
-        publisher: ethereumFoundationReference,
-        editor: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        editor: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

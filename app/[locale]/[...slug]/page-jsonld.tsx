@@ -2,12 +2,7 @@ import { FileContributor, Frontmatter } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  baseGraphNodes,
-  ethereumCommunityReference,
-  ethereumFoundationReference,
-  ethereumOrgWebSiteReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function SlugJsonLD({
@@ -57,7 +52,7 @@ export default async function SlugJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ...baseGraphNodes,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -65,15 +60,15 @@ export default async function SlugJsonLD({
         description: frontmatter.description,
         url: url,
         inLanguage: locale,
-        author: [ethereumCommunityReference],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        isPartOf: ethereumOrgWebSiteReference,
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: breadcrumbItems,
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#article` },
       },
       {
@@ -84,10 +79,10 @@ export default async function SlugJsonLD({
         image: frontmatter.image
           ? `https://ethereum.org${frontmatter.image}`
           : undefined,
-        author: [ethereumCommunityReference],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        publisher: ethereumFoundationReference,
-        editor: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        editor: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: frontmatter.published,
         mainEntityOfPage: url,
         about: {

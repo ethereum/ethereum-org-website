@@ -4,12 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  baseGraphNodes,
-  ethereumCommunityReference,
-  ethereumFoundationReference,
-  ethereumOrgWebSiteReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
@@ -37,7 +32,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ...baseGraphNodes,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -48,8 +43,8 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
-        isPartOf: ethereumOrgWebSiteReference,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -67,8 +62,8 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#ethereum-history-founder-and-ownership` },
       },
       {
@@ -80,10 +75,10 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
         ),
         image:
           "https://ethereum.org/images/ethereum-history-founder-and-ownership/ethereum-history-founder-and-ownership-hero.png",
-        author: [ethereumCommunityReference],
-        publisher: ethereumFoundationReference,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
-        editor: ethereumFoundationReference,
+        editor: REFERENCE.ETHEREUM_FOUNDATION,
         about: [
           {
             "@type": "Thing",
