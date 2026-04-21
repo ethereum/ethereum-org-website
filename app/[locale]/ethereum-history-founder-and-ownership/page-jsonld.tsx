@@ -83,7 +83,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
         author: [ethereumCommunityReference],
         publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         about: [
           {
             "@type": "Thing",

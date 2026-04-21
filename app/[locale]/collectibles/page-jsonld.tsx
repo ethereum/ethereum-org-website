@@ -87,7 +87,6 @@ export default async function CollectiblesJsonLD({
           image: badge.image,
         })),
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
         additionalProperty: [
           {
             "@type": "PropertyValue",

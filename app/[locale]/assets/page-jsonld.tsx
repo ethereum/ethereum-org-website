@@ -96,7 +96,6 @@ export default async function AssetsJsonLD({
           },
         ],
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
       },
     ],
   }

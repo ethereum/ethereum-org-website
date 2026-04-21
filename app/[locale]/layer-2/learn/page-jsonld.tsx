@@ -81,7 +81,7 @@ export default async function Layer2LearnPageJsonLD({
         author: [ethereumCommunityReference],
         publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         dateModified: lastEditLocaleTimestamp,
       },
     ],

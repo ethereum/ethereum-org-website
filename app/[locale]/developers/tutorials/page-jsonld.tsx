@@ -108,7 +108,6 @@ export default async function TutorialsPageJsonLD({
             },
           })),
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
       },
     ],
   }

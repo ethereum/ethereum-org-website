@@ -75,7 +75,7 @@ export default async function GetEthPageJsonLD({
         contributor: contributorList,
         author: [ethereumCommunityReference],
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         dateModified: lastEditLocaleTimestamp,
       },
     ],

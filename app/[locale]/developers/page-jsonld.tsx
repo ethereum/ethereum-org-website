@@ -103,7 +103,6 @@ export default async function DevelopersPageJsonLD({
           })),
         ],
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
       },
     ],
   }

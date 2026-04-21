@@ -76,7 +76,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
         author: [ethereumCommunityReference],
         publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         about: [
           {
             "@type": "Thing",

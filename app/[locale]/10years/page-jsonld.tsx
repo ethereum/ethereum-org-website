@@ -73,7 +73,7 @@ export default async function TenYearJsonLD({
         duration: "PT5M30S",
         embedUrl: "https://www.youtube.com/embed/gjwr-7PgpTC",
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
       },
     ],
   }

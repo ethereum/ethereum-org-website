@@ -102,7 +102,6 @@ export default async function CommunityJsonLD({
           },
         ],
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
       },
     ],
   }

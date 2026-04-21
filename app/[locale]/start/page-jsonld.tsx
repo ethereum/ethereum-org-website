@@ -73,7 +73,7 @@ export default async function StartPageJsonLD({
         author: [ethereumCommunityReference],
         publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         about: {
           "@type": "Thing",
           name: "Getting Started with Ethereum",

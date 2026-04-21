@@ -75,7 +75,7 @@ export default async function WhatIsEtherPageJsonLD({
         author: [ethereumCommunityReference],
         publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         about: [
           {
             "@type": "Thing",

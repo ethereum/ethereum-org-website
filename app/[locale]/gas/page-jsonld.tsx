@@ -74,7 +74,7 @@ export default async function GasPageJsonLD({
         contributor: contributorList,
         author: [ethereumCommunityReference],
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         dateModified: lastEditLocaleTimestamp,
       },
     ],

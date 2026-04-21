@@ -205,7 +205,6 @@ export default async function EventsJsonLD({
           },
         ],
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
       },
       ...hubSchemaNodes,
     ],

@@ -75,7 +75,7 @@ export default async function StakingPageJsonLD({
         author: [ethereumCommunityReference],
         contributor: contributorList,
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         about: {
           "@type": "Thing",
           name: "Ethereum Staking",

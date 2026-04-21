@@ -87,7 +87,7 @@ export default async function SlugJsonLD({
         author: [ethereumCommunityReference],
         contributor: contributorList,
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         dateModified: frontmatter.published,
         mainEntityOfPage: url,
         about: {

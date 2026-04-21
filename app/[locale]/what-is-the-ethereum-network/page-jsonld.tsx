@@ -81,7 +81,7 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
         author: [ethereumCommunityReference],
         publisher: ethereumFoundationReference,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
         about: {
           "@type": "Thing",
           name: "Ethereum Network",

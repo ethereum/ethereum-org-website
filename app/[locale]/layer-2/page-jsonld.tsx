@@ -73,7 +73,7 @@ export default async function Layer2PageJsonLD({
         author: [ethereumCommunityReference],
         contributor: contributorList,
         publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        editor: ethereumFoundationReference,
       },
       {
         "@type": "FAQPage",
