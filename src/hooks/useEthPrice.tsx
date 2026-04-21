@@ -5,14 +5,11 @@ export const useEthPrice = (): number => {
   useEffect(() => {
     ;(async () => {
       try {
-        const data: { ethereum: { usd: number } } = await fetch(
-          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
-        ).then((res) => res.json())
-        const {
-          ethereum: { usd },
-        } = data
-        if (!usd) throw new Error("Unable to fetch ETH price from CoinGecko")
-        setEthPrice(usd)
+        const res = await fetch("/api/gas-eth-price")
+        if (!res.ok) throw new Error("Failed to fetch ETH price")
+        const data: { ethPriceUSD: number } = await res.json()
+        if (!data.ethPriceUSD) throw new Error("Unable to fetch ETH price")
+        setEthPrice(data.ethPriceUSD)
       } catch (error) {
         console.error(error)
       }

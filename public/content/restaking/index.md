@@ -25,7 +25,7 @@ Restaking is a technology built for [stakers](/staking/) to extend this security
 
 **Restaking explained in 18 minutes**
 
-<YouTube id="rOJo7VwPh7I" />
+<VideoWatch slug="restaking-explained" />
 
 ## What is restaking? {#what-is-restaking}
 
@@ -171,7 +171,7 @@ While AVSs offer different rates, Liquid Restaking Tokens (LRTs) like eETH give 
 
 ## Advanced {#advanced}
 
-<YouTube id="-V-fG4J1N_M" />
+<VideoWatch slug="eigenlayer-permissionless-features" />
 
 ## Further reading {#further-reading}
 

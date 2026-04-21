@@ -2,12 +2,13 @@
 
 import { useEffect, useRef, useState } from "react"
 import { ArrowLeftRight, User } from "lucide-react"
+import { useLocale, useTranslations } from "next-intl"
 import { useIntersectionObserver } from "usehooks-ts"
 
 import { Section, SectionHeader, SectionTag } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
+import { formatCompactNumber } from "@/lib/utils/numbers"
 
 type KPISectionProps = {
   accountHolders: number | null
@@ -120,27 +121,16 @@ function AnimatedNumber({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value])
 
-  return <p className={className}>{formatter(displayValue)}</p>
+  return (
+    <p dir="ltr" className={className}>
+      {formatter(displayValue)}
+    </p>
+  )
 }
 
 /**
- * Format large numbers with M/B suffix
- */
-function formatNumber(value: number): string {
-  if (value >= 1_000_000_000) {
-    return `${(value / 1_000_000_000).toFixed(1)}B`
-  }
-  if (value >= 1_000_000) {
-    return `${Math.round(value / 1_000_000)}M`
-  }
-  if (value >= 1_000) {
-    return numberFormat("en-US").format(value)
-  }
-  return value.toString()
-}
-
-/**
- * Format transaction count with spaces (European style: 21 400 433)
+ * Format transaction count with spaces as thousands separator (design choice
+ * to avoid commas/dots that interfere with the animated counter).
  */
 function formatTransactions(value: number): string {
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
@@ -151,6 +141,8 @@ const KPISection = ({
   transactionsToday,
   className,
 }: KPISectionProps) => {
+  const t = useTranslations("page-index")
+  const locale = useLocale()
   const { ref: intersectionRef, isIntersecting: isVisible } =
     useIntersectionObserver({
       threshold: 0.3,
@@ -169,17 +161,15 @@ const KPISection = ({
     >
       <div className="flex w-full flex-col gap-10 lg:max-w-[823px]">
         <div className="flex flex-col gap-2">
-          <SectionTag variant="plain">The user-owned internet</SectionTag>
+          <SectionTag variant="plain">{t("page-index-kpi-tag")}</SectionTag>
 
           <SectionHeader className="!mb-0 !mt-0">
-            Ethereum gives back control of your assets
+            {t("page-index-kpi-title")}
           </SectionHeader>
         </div>
 
         <p className="text-lg leading-relaxed text-body-medium lg:text-2xl lg:leading-[39px]">
-          Your bank account is an entry in someone else&apos;s database. Your
-          application is a file in someone else&apos;s server. Ethereum is an
-          alternative network where you hold your assets directly.
+          {t("page-index-kpi-description")}
         </p>
       </div>
 
@@ -194,10 +184,12 @@ const KPISection = ({
             />
             <div className="flex flex-col gap-1">
               <p className="text-4xl font-bold leading-[1.2]">
-                {accountHolders !== null ? formatNumber(accountHolders) : "—"}
+                {accountHolders !== null
+                  ? formatCompactNumber(accountHolders, locale)
+                  : "—"}
               </p>
               <p className="text-base leading-[1.6] text-body-medium">
-                ETH holders
+                {t("page-index-kpi-holders")}
               </p>
             </div>
           </div>
@@ -218,7 +210,7 @@ const KPISection = ({
                 <p className="text-4xl font-bold leading-[1.2]">—</p>
               )}
               <p className="text-base leading-[1.6] text-body-medium">
-                Transactions today
+                {t("page-index-kpi-transactions")}
               </p>
             </div>
           </div>

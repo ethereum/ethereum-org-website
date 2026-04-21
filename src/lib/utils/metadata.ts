@@ -95,6 +95,7 @@ export const getMetadata = async ({
   const base: Metadata = {
     title,
     description,
+    formatDetection: { telephone: false },
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: url,

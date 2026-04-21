@@ -5,13 +5,6 @@
     "link": "https://dc-onchain.com/"
   },
   {
-    "title": "Web3 Family",
-    "location": "Barcelona, Spain",
-    "link": "https://www.meetup.com/web3family/",
-    "logoImage": "https://secure.meetupstatic.com/photos/event/9/d/5/c/600_523840284.jpeg",
-    "bannerImage": "https://secure.meetupstatic.com/photos/event/9/d/5/c/600_523840284.jpeg"
-  },
-  {
     "title": "CryptoCanal",
     "location": "Amsterdam, Rotterdam, Netherlands",
     "link": "https://www.cryptocanal.org/agenda",
@@ -249,8 +242,8 @@
     "title": "Ethereum Malaysia",
     "location": "Kuala Lumpur, Malaysia",
     "link": "https://www.meetup.com/ETHMALAYSIA/",
-    "logoImage": "https://secure.meetupstatic.com/photos/event/b/4/2/600_472382882.jpeg",
-    "bannerImage": "https://secure.meetupstatic.com/photos/event/b/4/2/600_472382882.jpeg"
+    "logoImage": "https://secure.meetupstatic.com/next/images/fallbacks/redesign/group-cover-1-wide.webp",
+    "bannerImage": "https://secure.meetupstatic.com/next/images/fallbacks/redesign/group-cover-1-wide.webp"
   },
   {
     "title": "Ethereum DEV NL",
@@ -286,13 +279,6 @@
     "link": "https://www.meetup.com/Ethereum-Jeju",
     "logoImage": "https://secure.meetupstatic.com/photos/event/c/9/0/c/600_525291468.jpeg",
     "bannerImage": "https://secure.meetupstatic.com/photos/event/c/9/0/c/600_525291468.jpeg"
-  },
-  {
-    "title": "Seoul Ethereum Meetup",
-    "location": "Seoul, South Korea",
-    "link": "https://www.meetup.com/Seoul-Ethereum-Meetup/",
-    "logoImage": "https://secure.meetupstatic.com/photos/event/c/1/0/3/600_470509411.jpeg",
-    "bannerImage": "https://secure.meetupstatic.com/photos/event/c/1/0/3/600_470509411.jpeg"
   },
   {
     "title": "BCN Ethereum Dev",

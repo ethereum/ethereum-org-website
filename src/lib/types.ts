@@ -13,6 +13,7 @@ import type {
   TutorialFrontmatter,
   UpgradeFrontmatter,
   UseCasesFrontmatter,
+  VideoFrontmatter,
 } from "@/lib/interfaces"
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
@@ -579,6 +580,36 @@ export type MetricReturnData = ValueOrError<number>
 export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
+
+/**
+ * Full video data parsed from a video's index.md file.
+ * Includes frontmatter metadata and the markdown body (transcript).
+ */
+export type VideoData = {
+  slug: string
+  content: string
+  frontmatter: VideoFrontmatter
+}
+
+export type VideoFormat =
+  | "presentation"
+  | "explainer"
+  | "interview"
+  | "tutorial"
+  | "panel"
+/**
+ * Flat, serializable video data for client components (e.g. VideoGalleryFilter).
+ * thumbnailUrl is pre-resolved server-side from customThumbnailUrl or youtubeId.
+ */
+export type VideoCardData = {
+  slug: string
+  title: string
+  description: string
+  uploadDate: string
+  duration: string
+  topic: string[]
+  thumbnailUrl: string
+}
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
