@@ -364,6 +364,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 eventName: "regular_conf",
               }}
             />
+            <p className="!mt-8 text-body-medium">
+              {t.rich("page-events-data-source-callout", {
+                a: (chunks) => (
+                  <Link href="https://ethstars.xyz/">{chunks}</Link>
+                ),
+              })}
+            </p>
             <div className="flex justify-center">
               <ButtonLink
                 href="/community/events/conferences/"
