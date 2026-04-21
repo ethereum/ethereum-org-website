@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -6,11 +5,12 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { Lang, PageParams } from "@/lib/types"
+import type { ExtendedRollup, Lang, PageParams } from "@/lib/types"
 
 import CalloutSSR from "@/components/CalloutSSR"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
+import Layer2NetworksTable from "@/components/Layer2NetworksTable/lazy"
 import MainArticle from "@/components/MainArticle"
 import NetworkMaturity from "@/components/NetworkMaturity"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -23,7 +23,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { walletsData } from "@/data/wallets/wallet-data"
 
-import Layer2Networks from "./_components/networks"
 import Layer2NetworksPageJsonLD from "./page-jsonld"
 
 import {
@@ -137,7 +136,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           wallet.supported_chains.includes("Ethereum Mainnet")
         )
         .map((wallet) => wallet.name),
-    },
+    } as ExtendedRollup,
   }
 
   const { contributors } = await getAppPageContributorInfo(
@@ -165,9 +164,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <MainArticle className="relative flex flex-col">
         <ContentHero {...heroProps} />
 
-        <Suspense>
-          <Layer2Networks {...layer2NetworksProps} />
-        </Suspense>
+        <Layer2NetworksTable {...layer2NetworksProps} />
 
         <div id="more-advanced-cta" className="w-full px-8 py-9">
           <div className="flex flex-col gap-8 bg-main-gradient px-12 py-14">
