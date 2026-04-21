@@ -6,7 +6,7 @@ export const IconBox = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "grid size-20 place-items-center rounded-2xl border p-6 shadow-window-box [&_svg]:size-8",
+      "shadow-window-box grid size-20 place-items-center rounded-2xl border p-6 [&_svg]:size-8",
       className
     )}
     {...props}
@@ -19,7 +19,7 @@ export const HighlightStack = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "divide-y [&>div:first-child]:pt-0 [&>div:last-child]:pb-0 [&>div]:py-8",
+      "divide-y [&>div]:py-8 [&>div:first-child]:pt-0 [&>div:last-child]:pb-0",
       className
     )}
     {...props}
@@ -40,5 +40,5 @@ export const HighlightCardContent = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("space-y-6 text-body-medium", className)} {...props} />
+  <div className={cn("text-body-medium space-y-6", className)} {...props} />
 )

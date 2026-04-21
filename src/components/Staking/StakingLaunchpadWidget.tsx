@@ -57,10 +57,10 @@ const StakingLaunchpadWidget = () => {
     <Flex
       className={cn(
         "flex-col rounded p-6 md:p-8",
-        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+        "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r"
       )}
     >
-      <span className="leading-6 text-body-medium">
+      <span className="text-body-medium leading-6">
         <Translation id="page-staking:page-staking-launchpad-widget-span" />
       </span>
       <div className="my-4 md:max-w-[50%]">

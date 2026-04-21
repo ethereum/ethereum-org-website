@@ -69,6 +69,12 @@ const config: StorybookConfig = {
       use: ["@svgr/webpack"],
     })
 
+    // .all-contributorsrc is JSON without a .json extension
+    config.module.rules.push({
+      test: /\.all-contributorsrc$/,
+      type: "json",
+    })
+
     return config
   },
 

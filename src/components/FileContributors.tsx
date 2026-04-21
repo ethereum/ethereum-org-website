@@ -91,7 +91,7 @@ const ContributorAvatarGroup = ({
         </div>
       ))}
       {remainingCount > 0 && (
-        <Center className="-me-2 size-10 rounded-full bg-primary ps-1 text-sm text-body-inverse">
+        <Center className="bg-primary text-body-inverse -me-2 size-10 rounded-full ps-1 text-sm">
           +{remainingCount}
         </Center>
       )}
@@ -109,7 +109,7 @@ const Contributor = ({ contributor }: ContributorProps) => {
         label={hasProfile ? "@" + contributor.login : contributor.login}
       />
       {contributor.html_url.includes("crowdin.com") && (
-        <p className="ms-5 text-body-medium">
+        <p className="text-body-medium ms-5">
           <Translation id="translator" />
         </p>
       )}
@@ -159,7 +159,7 @@ const FileContributors = ({
       >
         <Flex className="my-4 me-4 flex-1 flex-col items-start lg:mb-0">
           {lastEditLocaleTimestamp && (
-            <p className="mb-2 text-body-medium">
+            <p className="text-body-medium mb-2">
               <Translation id="page-last-update" /> {lastEditLocaleTimestamp}
             </p>
           )}

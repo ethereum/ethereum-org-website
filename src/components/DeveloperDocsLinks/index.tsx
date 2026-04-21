@@ -16,7 +16,7 @@ const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
     {docLinks
       .filter(({ id }) => id.includes(headerId))
       .map(({ items, id }) => (
-        <UnorderedList className="ms-6 space-y-3" key={id}>
+        <UnorderedList className="ms-6" key={id}>
           {items &&
             items.map(({ id, href, path, description, items }) => (
               <ListItem key={id}>
@@ -31,16 +31,17 @@ const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
                   {" – "}
                   <Translation id={`page-developers-docs:${description}`} />
                 </i>
-                <UnorderedList className="ms-6 mt-3 list-[circle] space-y-3">
-                  {items &&
-                    items.map(({ id, href, path }) => (
+                {items && items.length > 0 && (
+                  <UnorderedList className="ms-6 mt-3 mb-0 list-[circle]">
+                    {items.map(({ id, href, path }) => (
                       <ListItem key={id}>
                         <InlineLink href={href || path}>
                           <Translation id={`page-developers-docs:${id}`} />
                         </InlineLink>
                       </ListItem>
                     ))}
-                </UnorderedList>
+                  </UnorderedList>
+                )}
               </ListItem>
             ))}
         </UnorderedList>

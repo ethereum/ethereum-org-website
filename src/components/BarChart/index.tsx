@@ -106,7 +106,7 @@ export function BarChart({
           <div className="flex w-full items-start gap-2 text-sm">
             <div className="grid gap-2">
               {footerText && (
-                <div className="flex items-center gap-2 font-medium leading-none">
+                <div className="flex items-center gap-2 leading-none font-medium">
                   {footerText} <TrendingUp className="h-4 w-4 text-base" />
                 </div>
               )}

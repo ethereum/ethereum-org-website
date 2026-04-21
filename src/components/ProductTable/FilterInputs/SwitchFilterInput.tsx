@@ -43,7 +43,7 @@ const SwitchFilterInput = ({
           }}
         />
       </div>
-      <p className="ms-8 text-body-medium">{description}</p>
+      <p className="text-body-medium ms-8">{description}</p>
     </>
   )
 }

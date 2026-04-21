@@ -150,13 +150,13 @@ const Page = async (props: {
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                   /
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                   /
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
@@ -189,13 +189,13 @@ const Page = async (props: {
                           chains={app.networks as ChainName[]}
                           className="mt-2"
                         />
-                        <p className="text-sm text-body-medium">
+                        <p className="text-body-medium text-sm">
                           by {app.parentCompany}
                         </p>
                       </div>
                       <div className="flex flex-row items-center">
                         <LanguagesIcon className="size-6" />
-                        <p className="text-sm text-body-medium">
+                        <p className="text-body-medium text-sm">
                           {formatStringList(
                             formatLanguageNames(app.languages),
                             5
@@ -275,7 +275,7 @@ const Page = async (props: {
                         )}
                       </div>
                       {nextApp && (
-                        <LinkBox className="group flex flex-row items-center rounded-lg hover:bg-background-highlight sm:hidden">
+                        <LinkBox className="group hover:bg-background-highlight flex flex-row items-center rounded-lg sm:hidden">
                           <div className="mr-2 flex flex-col text-right">
                             <p className="text-sm text-gray-500">
                               {t("page-apps-see-next")}
@@ -293,7 +293,7 @@ const Page = async (props: {
                             />
                           </div>
                           <div className="flex gap-2">
-                            <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
+                            <ChevronNext className="group-hover:text-primary h-8 w-8 text-gray-400" />
                           </div>
                         </LinkBox>
                       )}
@@ -302,9 +302,9 @@ const Page = async (props: {
                 </div>
               </div>
               {nextApp && (
-                <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
+                <LinkBox className="group hover:bg-background-highlight hidden flex-row items-center rounded-lg p-3 sm:flex">
                   <div className="mr-2 flex flex-col text-right">
-                    <p className="text-nowrap text-sm text-gray-500">
+                    <p className="text-sm text-nowrap text-gray-500">
                       {t("page-apps-see-next")}
                     </p>
                     <p className="text-primary group-hover:text-primary-hover">
@@ -320,14 +320,14 @@ const Page = async (props: {
                     />
                   </div>
                   <div className="flex gap-2">
-                    <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
+                    <ChevronNext className="group-hover:text-primary h-8 w-8 text-gray-400" />
                   </div>
                 </LinkBox>
               )}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-10 bg-background-highlight px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
+          <div className="bg-background-highlight grid grid-cols-1 grid-rows-[auto_1fr] gap-10 px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
             <p className="max-w-3xl">
               {getLocalizedDescription(
                 appDescriptions,
@@ -336,22 +336,22 @@ const Page = async (props: {
                 app.description
               )}
             </p>
-            <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
+            <div className="bg-background flex h-fit w-full flex-col gap-4 rounded-2xl border p-8 md:row-span-2 md:w-44">
               <h3 className="text-lg">{t("page-apps-info-title")}</h3>
               <div>
-                <p className="text-sm text-body-medium">
+                <p className="text-body-medium text-sm">
                   {t("page-apps-info-founded")}
                 </p>
                 <p className="text-sm">{getDisplayYear(app.dateOfLaunch)}</p>
               </div>
               <div>
-                <p className="text-sm text-body-medium">
+                <p className="text-body-medium text-sm">
                   {t("page-apps-info-creator")}
                 </p>
                 <p className="text-sm">{app.parentCompany}</p>
               </div>
               <div>
-                <p className="text-sm text-body-medium">
+                <p className="text-body-medium text-sm">
                   {t("page-apps-info-last-updated")}
                 </p>
                 <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
@@ -370,7 +370,7 @@ const Page = async (props: {
 
           {relatedApps.length > 0 && (
             <div className="flex flex-col px-4 py-10 md:px-8">
-              <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
+              <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-linear-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
                 <h2>{t("page-apps-more-apps-like-this")}</h2>
                 <div className="flex w-full flex-col gap-4 lg:flex-row">
                   {relatedApps.map((relatedApp) => (

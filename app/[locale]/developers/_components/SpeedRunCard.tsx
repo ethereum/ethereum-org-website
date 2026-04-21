@@ -27,12 +27,12 @@ const SpeedRunCard = ({
       alt="SpeedRunEthereum banner"
       sizes="(max-width: 768px) 100vw, 50vw"
     />
-    <div className="z-[1] flex flex-col space-y-4 break-words px-6 py-10 md:space-y-6 lg:p-6">
+    <div className="z-[1] flex flex-col space-y-4 px-6 py-10 break-words md:space-y-6 lg:p-6">
       <h3>{title}</h3>
       <p>{description}</p>
       <ButtonLink
         href="https://speedrunethereum.com/"
-        className="mt-4 sm:w-fit"
+        className="sm:w-fit"
         customEventOptions={{
           eventCategory: "top_boxes",
           eventAction: "click",

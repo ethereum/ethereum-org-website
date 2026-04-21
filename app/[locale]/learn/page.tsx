@@ -101,7 +101,7 @@ const Section = ({
 )
 
 const CardGrid = ({ children }: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-4 gap-8">{children}</div>
+  <div className="grid-cols-fill-4 grid gap-8">{children}</div>
 )
 
 const H3 = ({ children, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
@@ -309,7 +309,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   </Card>
                 </CardGrid>
 
-                <Flex className="my-12 flex-col overflow-hidden rounded-[10px] bg-main-gradient lg:flex-row">
+                <Flex className="bg-main-gradient my-12 flex-col overflow-hidden rounded-[10px] lg:flex-row">
                   <Stack className="gap-8 p-12">
                     <H3>{t("things-to-consider-banner-title")}</H3>
                     <UnorderedList className="mb-0">
@@ -433,7 +433,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     </>
                   </Card>
                   <Card
-                    className="justify-start bg-gradient-main"
+                    className="bg-gradient-main justify-start"
                     title={t("emerging-use-cases-title")}
                     description={t("emerging-use-cases-description")}
                   >

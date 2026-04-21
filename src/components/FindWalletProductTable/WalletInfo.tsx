@@ -115,7 +115,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
           <div className="flex flex-row gap-4">
             <div className="relative hidden w-14 lg:block">
               <div
-                className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
+                className={`absolute -top-0 -bottom-9 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
               />
             </div>
             <div
@@ -151,7 +151,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
       <div className="flex flex-row gap-4">
         <div className="relative hidden w-14 lg:block">
           <div
-            className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
+            className={`absolute -top-0 -bottom-9 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
           />
         </div>
         <div className="flex flex-1">

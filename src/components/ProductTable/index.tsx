@@ -140,7 +140,7 @@ const ProductTable = <T extends { id: string }>({
         <></>
       )}
       <div className="px-4">
-        <div className="flex flex-col gap-4 pb-6 pt-4 lg:flex-row lg:gap-6 2xl:px-0">
+        <div className="flex flex-col gap-4 pt-4 pb-6 lg:flex-row lg:gap-6 2xl:px-0">
           <div className="block lg:hidden">
             <MobileFilters
               filters={filters}

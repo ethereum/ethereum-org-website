@@ -142,7 +142,7 @@ const RoadmapPage = () => {
                       {item.icon}
                     </div>
                   </div>
-                  <p className="flex-grow">{item.description}</p>
+                  <p className="grow">{item.description}</p>
                   <ButtonLink href={item.button.href} variant="outline">
                     {item.button.label}
                   </ButtonLink>
@@ -171,7 +171,7 @@ const RoadmapPage = () => {
                 {t("page-roadmap-governance-button")}
               </ButtonLink>
             </div>
-            <div className="relative min-h-[272px] w-full flex-shrink-0 overflow-hidden rounded-3xl md:w-1/2 xl:w-1/3">
+            <div className="relative min-h-[272px] w-full shrink-0 overflow-hidden rounded-3xl md:w-1/2 xl:w-1/3">
               <Image
                 src={communityHeroImg}
                 alt={t("page-roadmap-hero-alt")}
