@@ -28,7 +28,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-community-events")
 
   // Apply translations and compute eventTypes from tags if missing
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   // Combine API meetup events with legacy meetup groups
   // Exclude conferences and hackathons - they have their own section
@@ -37,7 +37,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups()
+  const meetupGroups = getMeetupGroups(locale)
   // Show API meetups first (sorted by date), then groups (sorted alphabetically)
   const meetups = [...apiMeetups, ...meetupGroups]
 

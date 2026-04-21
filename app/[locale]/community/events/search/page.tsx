@@ -41,7 +41,7 @@ const Page = async (props: {
   const t = await getTranslations("page-community-events")
   const tCommon = await getTranslations("common")
 
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   const filteredEvents = ((): EventItem[] => {
     if (!q) return []

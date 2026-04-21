@@ -1,6 +1,7 @@
 import React from "react"
 import { ArrowLeft } from "lucide-react"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
@@ -17,6 +18,8 @@ import type {
 import { MoreInfoPopover } from "./MoreInfoPopover"
 import { PathButton } from "./PathButton"
 import type { PathId } from "./types"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type ExplanationProps = SimulatorNavProps & {
   explanation: SimulatorExplanation
@@ -35,6 +38,8 @@ export const Explanation = ({
   openPath,
   logFinalCta,
 }: ExplanationProps) => {
+  const t = useTranslations("component-wallet-simulator")
+  const { twFlipForRtl } = useRtlFlip()
   const { regressStepper, step, totalSteps } = nav
   const { header, description } = explanation
 
@@ -61,8 +66,8 @@ export const Explanation = ({
           variants={backButtonVariants}
           animate={step === 0 ? "hidden" : "visible"}
         >
-          <ArrowLeft className="text-lg" />
-          Back
+          <ArrowLeft className={cn("text-lg", twFlipForRtl)} />
+          {t("sim-back")}
         </motion.button>
       </Button>
       <Flex className="gap-3 md:flex-col md:gap-2">

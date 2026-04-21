@@ -19,7 +19,7 @@ Szabo envisioned a digital marketplace where automatic, [cryptographically-secur
 
 Watch Finematics explain smart contracts:
 
-<YouTube id="pWGLtjG-F5c" />
+<VideoWatch slug="smart-contracts-code-is-law" />
 
 ## Trust in conventional contracts {#trust-and-contracts}
 

@@ -32,7 +32,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-community-events")
 
   // Apply translations and compute eventTypes from tags if missing
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   // Filter to conferences only (includes hackathons as they're often conference-adjacent)
   const conferences = events.filter(

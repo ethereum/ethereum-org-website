@@ -1,9 +1,12 @@
+import { getLocale, getTranslations } from "next-intl/server"
+
 import { ChevronNext } from "@/components/Chevron"
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { formatCompactNumber } from "@/lib/utils/numbers"
 
 import freeAccessImage from "@/public/images/homepage/features/free-access.png"
 import globalImage from "@/public/images/homepage/features/global.png"
@@ -15,35 +18,45 @@ type FeatureCardsProps = {
   eventCategory?: string
 }
 
-const FeatureCards = ({
+const FeatureCards = async ({
   className,
   eventCategory = "Homepage",
 }: FeatureCardsProps) => {
+  const t = await getTranslations("page-index")
+  const locale = await getLocale()
+
+  const volume = formatCompactNumber(4_600_000_000, locale, {
+    maximumSignificantDigits: 2,
+  })
+
   return (
     <Section
       className={cn(
-        "bg-background-highlight rounded-none py-20 lg:py-24",
+        "rounded-none bg-background-highlight py-20 lg:py-24",
         className
       )}
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 flex flex-col items-center gap-4 text-center">
-          <SectionHeader className="mt-0 mb-0">
-            What makes Ethereum <span className="text-body">different</span>
+          <SectionHeader className="mb-0 mt-0">
+            {t("page-index-features-title")}{" "}
+            <span className="text-body">
+              {t("page-index-features-title-highlight")}
+            </span>
           </SectionHeader>
-          <p className="text-body-medium max-w-xl text-lg">
-            Principles set Ethereum apart from traditional systems
+          <p className="max-w-xl text-lg text-body-medium">
+            {t("page-index-features-subtitle")}
           </p>
         </div>
 
         <div className="flex flex-col gap-8">
           <div className="grid gap-8 lg:grid-cols-12">
-            <div className="relative overflow-hidden rounded-3xl bg-linear-to-b from-purple-700 to-purple-500 p-8 shadow-xl lg:col-span-7">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-purple-700 to-purple-500 p-8 shadow-xl lg:col-span-7">
               <Image
                 src={ownershipImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 600px"
-                className="absolute -right-16 -bottom-16 h-2/3 w-auto object-contain opacity-25"
+                className="absolute -bottom-16 -end-16 h-2/3 w-auto object-contain opacity-25"
               />
 
               <div className="relative z-10 flex flex-col gap-6">
@@ -53,84 +66,93 @@ const FeatureCards = ({
                 </div>
 
                 <h3 className="text-4xl font-bold text-white lg:text-5xl">
-                  Direct ownership
+                  {t("page-index-features-ownership-title")}
                 </h3>
 
                 <p className="max-w-lg text-lg text-white/90">
-                  Your bank balance is a{" "}
-                  <span className="opacity-70">custody promise</span>.{" "}
+                  {t("page-index-features-ownership-description-1")}{" "}
+                  <span className="opacity-70">
+                    {t("page-index-features-ownership-description-custody")}
+                  </span>
+                  .{" "}
                   <strong className="font-bold">
-                    Your Ethereum balance is true ownership.
+                    {t("page-index-features-ownership-description-2")}
                   </strong>
                 </p>
 
                 <div className="mt-4">
-                  <p className="text-3xl font-bold text-white">4.6B+</p>
-                  <p className="text-sm text-white/70">Daily trading volume</p>
+                  <p className="text-3xl font-bold text-white">
+                    {t("page-index-features-ownership-stat", { volume })}
+                  </p>
+                  <p className="text-sm text-white/70">
+                    {t("page-index-features-ownership-stat-label")}
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-background relative overflow-hidden rounded-3xl border p-8 lg:col-span-5">
+            <div className="relative overflow-hidden rounded-3xl border bg-background p-8 lg:col-span-5">
               <Image
                 src={publicRulesImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 450px"
-                className="absolute -right-24 -bottom-12 h-2/3 w-auto object-contain"
+                className="absolute -bottom-12 -end-24 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
                 <h3 className="mb-4 text-4xl font-black lg:text-5xl">
-                  Public rules
+                  {t("page-index-features-public-rules-title")}
                 </h3>
-                <p className="text-body max-w-xs">
-                  The code is public, agreements execute exactly as written.
-                  Think vending machine versus hoping the cashier gives correct
-                  change.
+                <p className="max-w-xs text-body">
+                  {t("page-index-features-public-rules-description")}
                 </p>
               </div>
             </div>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-background relative overflow-hidden rounded-3xl border p-8">
+            <div className="relative overflow-hidden rounded-3xl border bg-background p-8">
               <Image
                 src={globalImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -right-8 -bottom-6 h-2/3 w-auto object-contain"
+                className="absolute -bottom-6 -end-8 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
-                <h3 className="mb-4 text-3xl font-black">Global</h3>
+                <h3 className="mb-4 text-3xl font-black">
+                  {t("page-index-features-global-title")}
+                </h3>
                 <p className="text-body">
-                  Anyone, anywhere can use Ethereum. No permission needed.
+                  {t("page-index-features-global-description")}
                 </p>
               </div>
             </div>
 
-            <div className="bg-background relative overflow-hidden rounded-3xl border p-8">
+            <div className="relative overflow-hidden rounded-3xl border bg-background p-8">
               <Image
                 src={freeAccessImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -right-8 -bottom-6 h-2/3 w-auto object-contain"
+                className="absolute -bottom-6 -end-8 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
-                <h3 className="mb-4 text-3xl font-black">Free access</h3>
+                <h3 className="mb-4 text-3xl font-black">
+                  {t("page-index-features-free-access-title")}
+                </h3>
                 <p className="text-body">
-                  No credit check, no minimum balance, no account approval. If
-                  you have internet, you&apos;re in.
+                  {t("page-index-features-free-access-description")}
                 </p>
               </div>
             </div>
 
-            <div className="border-body rounded-3xl border p-8 md:col-span-2 lg:col-span-1">
-              <h3 className="mb-3 text-3xl font-black">Nobody owns Ethereum</h3>
+            <div className="rounded-3xl border border-body p-8 md:col-span-2 lg:col-span-1">
+              <h3 className="mb-3 text-3xl font-black">
+                {t("page-index-features-nobody-owns-title")}
+              </h3>
               <p className="text-body">
-                Changes happen through open proposals that anyone can
-                participate in. Think community garden versus corporate farm.
+                {t("page-index-features-nobody-owns-description")}
               </p>
             </div>
           </div>
@@ -146,7 +168,7 @@ const FeatureCards = ({
               eventName: "feature_cards/learn_more",
             }}
           >
-            What is Ethereum? <ChevronNext />
+            {t("page-index-features-cta")} <ChevronNext />
           </ButtonLink>
         </div>
       </div>

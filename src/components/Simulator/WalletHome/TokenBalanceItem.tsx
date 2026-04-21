@@ -1,8 +1,8 @@
+import { useLocale } from "next-intl"
+
 import { Flex } from "@/components/ui/flex"
 
-import { numberFormat } from "@/lib/utils/numbers"
-
-import { getMaxFractionDigitsUsd } from "../utils"
+import { formatWalletToken, formatWalletUsd } from "../utils"
 
 import { TokenBalance } from "./interfaces"
 
@@ -11,16 +11,10 @@ type TokenBalanceItemProps = {
 }
 export const TokenBalanceItem = ({ item }: TokenBalanceItemProps) => {
   const { name, ticker, amount, usdConversion, Icon } = item
+  const locale = useLocale()
   const usdAmount = amount * usdConversion
-  const usdValue = numberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
-    maximumFractionDigits: getMaxFractionDigitsUsd(usdAmount),
-  }).format(usdAmount)
-  const tokenAmount = numberFormat("en", {
-    maximumFractionDigits: 5,
-  }).format(amount)
+  const usdValue = formatWalletUsd(usdAmount)
+  const tokenAmount = formatWalletToken(amount, locale)
   return (
     <Flex className="gap-4">
       <Icon className="text-3xl" />

@@ -20,7 +20,6 @@ import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
-import { Simulator } from "@/components/Simulator"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -30,9 +29,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
-
 import WalletsPageJsonLD from "./page-jsonld"
+import { WalletSimulator } from "./WalletSimulator"
 
 import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
@@ -302,14 +300,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         {locale === "en" ? (
           <div className="my-20 w-full px-0 py-4">
             <Suspense>
-              <Simulator data={walletOnboardingSimData}>
+              <WalletSimulator>
                 <p className="leading-base text-body-medium mb-2 text-lg italic md:text-xl lg:text-2xl">
                   Interactive tutorial
                 </p>
                 <h2 className="m-0 text-3xl leading-[115%] font-bold lg:text-5xl">
                   How to use a wallet
                 </h2>
-              </Simulator>
+              </WalletSimulator>
             </Suspense>
           </div>
         ) : (

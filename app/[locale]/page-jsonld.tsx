@@ -32,14 +32,13 @@ export default async function IndexPageJsonLD({
         url: url,
         name: "ethereum.org",
         description: t("page-index-meta-description"),
-        educationalUse: "Independent Study",
+        educationalUse: "Self-Paced",
         keywords:
-          "Ethereum, Blockchain, Smart Contracts, Web3, Open Source, Protocol, Documentation, Education",
+          "Ethereum, ETH, Crypto, Digital Ownership, DeFi, Decentralized Finance, Privacy, Stablecoins, Web3, Blockchain, Smart Contracts, Open Source",
         inLanguage: locale,
         license: "https://opensource.org/licenses/MIT",
         audience: {
           "@type": "EducationalAudience",
-          educationalRole: ["developer", "student"],
           audienceType: "public",
         },
         publisher: ethereumFoundationReference,
@@ -49,7 +48,7 @@ export default async function IndexPageJsonLD({
           "@type": "Thing",
           name: "Ethereum",
           description:
-            "A decentralized, open-source blockchain with smart contract functionality.",
+            "Ethereum is a global, open-source blockchain network with smart contract functionality, and a platform that powers digital ownership, decentralized finance (DeFi), and privacy-preserving applications.",
           image: "https://ethereum.org/images/assets/eth-diamond-glyph.png",
           sameAs: [
             "https://www.wikidata.org/wiki/Q16783523",
