@@ -4,7 +4,7 @@ name: "Chromatic: Page Visual Tests"
 
 on:
   pull_request:
-    branches: [master, staging, "test/**"]
+    branches: [master, staging, dev, "test/**"]
     types: [opened, synchronize, ready_for_review]
   workflow_dispatch:
 
