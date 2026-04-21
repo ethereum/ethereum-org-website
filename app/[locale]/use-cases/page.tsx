@@ -54,7 +54,7 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:px-4">
+  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:p-4">
     <CardBanner background="none" fit="contain">
       <Image src={image} alt="" sizes="250px" />
     </CardBanner>
