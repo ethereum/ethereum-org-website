@@ -182,7 +182,7 @@ export function PieChart({
     const percentage = ((data.value / total) * 100).toFixed(1)
 
     return (
-      <div className="rounded-lg border bg-background p-2 shadow-lg">
+      <div className="bg-background rounded-lg border p-2 shadow-lg">
         <p className="font-medium">{data.name}</p>
         <p className="text-muted-foreground text-sm">
           {showPercentage ? `${percentage}%` : data.value}
@@ -209,14 +209,14 @@ export function PieChart({
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
           <ResponsiveContainer width="100%" height={dimensions.height}>
-            <RechartsPieChart className="-me-12 ms-4">
+            <RechartsPieChart className="ms-4 -me-12">
               <ChartTooltip cursor={false} content={customTooltipContent} />
 
               <Legend
                 layout="vertical"
                 verticalAlign="middle"
                 align="right"
-                className="max-w-1/2 break-all text-sm/snug"
+                className="max-w-1/2 text-sm/snug break-all"
                 formatter={legendFormatter}
               />
 
@@ -245,7 +245,7 @@ export function PieChart({
           <div className="flex w-full items-start gap-2 text-sm">
             <div className="grid gap-2">
               {footerText && (
-                <div className="flex items-center gap-2 font-medium leading-none">
+                <div className="flex items-center gap-2 leading-none font-medium">
                   {footerText} <TrendingUp className="h-4 w-4" />
                 </div>
               )}

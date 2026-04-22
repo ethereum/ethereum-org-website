@@ -65,7 +65,7 @@ Có một làn sóng mới gồm các dự án đổi mới đang được xây 
 
 Một số dự án như [Klima Infinity](https://www.klimadao.finance/infinity) và [Senken](https://senken.io/) cung cấp nhiều dự án do bên thứ ba phát triển và được ban hành theo các tiêu chuẩn đã được thiết lập như Verra; những dự án khác như [Nori](https://nori.com/) chỉ cung cấp các dự án cụ thể được phát triển theo tiêu chuẩn tín dụng carbon của riêng họ, do họ ban hành và họ có thị trường chuyên dụng riêng cho các dự án đó.
 
-4. Những yếu tố điều kiện và cơ sở hạ tầng cơ bản tạo điều kiện thuận lợi cho việc mở rộng quy mô tác động và hiệu quả của toàn bộ chuỗi cung ứng của thị trường carbon. [KlimaDAO](http://klimadao.finance/) cung cấp thanh khoản như một hàng hóa công (cho phép bất kỳ ai mua hoặc bán tín dụng carbon với giá minh bạch), khuyến khích tăng thông lượng của thị trường carbon và việc loại bỏ tín dụng bằng phần thưởng, đồng thời cung cấp bộ công cụ thân thiện với người dùng và có khả năng tương tác để truy cập dữ liệu, cũng như mua và loại bỏ nhiều loại tín dụng carbon được mã hóa token.
+4. Những yếu tố điều kiện và cơ sở hạ tầng cơ bản tạo điều kiện thuận lợi cho việc mở rộng quy mô tác động và hiệu quả của toàn bộ chuỗi cung ứng của thị trường carbon. [KlimaDAO](https://klimadao.finance/) cung cấp thanh khoản như một hàng hóa công (cho phép bất kỳ ai mua hoặc bán tín dụng carbon với giá minh bạch), khuyến khích tăng thông lượng của thị trường carbon và việc loại bỏ tín dụng bằng phần thưởng, đồng thời cung cấp bộ công cụ thân thiện với người dùng và có khả năng tương tác để truy cập dữ liệu, cũng như mua và loại bỏ nhiều loại tín dụng carbon được mã hóa token.
 
 ## ReFi ngoài thị trường carbon {#refi-beyond}
 

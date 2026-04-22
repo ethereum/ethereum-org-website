@@ -50,7 +50,7 @@ const HighlightCard = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <Card
     className={cn(
-      "space-between flex flex-col overflow-hidden border border-background-highlight",
+      "space-between border-background-highlight flex flex-col overflow-hidden border",
       className
     )}
     {...props}
@@ -97,12 +97,12 @@ const HighlightCardFooter = ({
 }: HighlightCardFooterProps) => (
   <div
     className={cn(
-      "flex items-center gap-1 bg-background-highlight px-6 py-2",
+      "bg-background-highlight flex items-center gap-1 px-6 py-2",
       className
     )}
     {...props}
   >
-    <Zap className="size-4 fill-primary text-primary" />
+    <Zap className="fill-primary text-primary size-4" />
     <Link href={href} className="text-sm font-bold no-underline">
       {children}
     </Link>
@@ -112,7 +112,7 @@ const HighlightCardFooter = ({
 const CheckList = ({ className, ...props }: ListProps) => (
   <UnorderedList
     className={cn(
-      "m-0 my-2 list-none space-y-2 text-xs text-body-medium",
+      "text-body-medium m-0 my-2 list-none space-y-2 text-xs",
       className
     )}
     {...props}
@@ -126,7 +126,7 @@ type CheckItemProps = ChildOnlyProp & {
 const CheckItem = ({ children, owned }: CheckItemProps) => (
   <ListItem className="mb-0 flex items-center gap-2">
     <CircleCheckIcon
-      className={cn("size-4 text-body-medium", owned && "text-success")}
+      className={cn("text-body-medium size-4", owned && "text-success")}
     />
     {children}
   </ListItem>
@@ -253,7 +253,7 @@ const CollectiblesCurrentYear = ({
               {t("page-collectibles-instructions-label")}
             </AccordionTrigger>
             <AccordionContent className="text-base">
-              <OrderedList className="mb-0 ms-3">
+              <OrderedList className="ms-3 mb-0">
                 <ListItem>
                   <Translation
                     id="page-collectibles-code-content-instructions-1"
@@ -413,7 +413,7 @@ const CollectiblesCurrentYear = ({
                 {t("page-collectibles-instructions-label")}
               </AccordionTrigger>
               <AccordionContent className="text-base">
-                <OrderedList className="mb-0 ms-3">
+                <OrderedList className="ms-3 mb-0">
                   <ListItem>
                     <Translation
                       id="page-collectibles-translations-instructions-1"
@@ -489,7 +489,7 @@ const CollectiblesCurrentYear = ({
               {t("page-collectibles-instructions-label")}
             </AccordionTrigger>
             <AccordionContent className="text-base">
-              <OrderedList className="mb-0 ms-3">
+              <OrderedList className="ms-3 mb-0">
                 <ListItem>
                   <Translation
                     id="page-collectibles-social-instructions-1"
@@ -507,7 +507,7 @@ const CollectiblesCurrentYear = ({
           </AccordionItem>
         </Accordion>
 
-        <div className="mt-4 grid grid-cols-fill-8 gap-2">
+        <div className="grid-cols-fill-8 mt-4 grid gap-2">
           {socialBadges.map((badge) => (
             <Link
               key={badge.id}

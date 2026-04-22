@@ -15,10 +15,10 @@ const GhostCard: React.FC<GhostCardProps> = ({
 }) => {
   return (
     <div className={cn("relative self-stretch", className)}>
-      <div className="absolute bottom-2 left-2 z-hide h-full w-full rounded-sm border-border-high-contrast bg-background-medium" />
+      <div className="z-hide border-border-high-contrast bg-background-medium absolute bottom-2 left-2 h-full w-full rounded-xs" />
       <Card
         className={cn(
-          "text-card-foreground z-10 h-full w-full rounded-sm border bg-background-highlight p-6 text-left"
+          "text-card-foreground bg-background-highlight z-10 h-full w-full rounded-xs border p-6 text-left"
         )}
         {...props}
       >

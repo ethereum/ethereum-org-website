@@ -207,7 +207,7 @@ Peristiwa (events) memungkinkan kontrak pintar Anda untuk berkomunikasi dengan f
 
 ## Contoh beranotasi {#annotated-examples}
 
-Berikut adalah beberapa contoh yang ditulis dalam Solidity. Jika Anda ingin bermain dengan kodenya, Anda dapat berinteraksi dengannya di [Remix](http://remix.ethereum.org).
+Berikut adalah beberapa contoh yang ditulis dalam Solidity. Jika Anda ingin bermain dengan kodenya, Anda dapat berinteraksi dengannya di [Remix](https://remix.ethereum.org).
 
 ### Halo dunia {#hello-world}
 

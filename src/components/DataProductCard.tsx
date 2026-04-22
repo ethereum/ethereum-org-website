@@ -39,7 +39,7 @@ const DataProductCard = ({
   return (
     <LinkBox
       className={cn(
-        "flex flex-col overflow-hidden rounded border shadow-table-box transition-transform duration-100 ease-linear hover:scale-[1.02] hover:bg-background-highlight focus:scale-[1.02] focus:bg-background-highlight",
+        "shadow-table-box hover:bg-background-highlight focus:bg-background-highlight flex flex-col overflow-hidden rounded border transition-transform duration-100 ease-linear hover:scale-[1.02] focus:scale-[1.02]",
         className
       )}
     >

@@ -159,5 +159,5 @@ SSZ 代表简单序列化。 它使用固定偏移量，可以轻松解码编码
 [从 kademlia 到 discv5](https://vac.dev/kademlia-to-discv5)
 [kademlia 论文](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [以太坊点对点 (p2p) 简介](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[eth1/eth2 关系](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[eth1/eth2 关系](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [合并与 eth2 客户端详情视频](https://www.youtube.com/watch?v=zNIrIninMgg)

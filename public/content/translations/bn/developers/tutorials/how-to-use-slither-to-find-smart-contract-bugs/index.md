@@ -70,7 +70,7 @@ slither project_paths
 
 স্লিদার স্ট্যাটিক অ্যানালাইসিস ফ্রেমওয়ার্কের ক্ষমতা এবং ডিজাইন ব্লগ পোস্টে ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) এবং একটি [একাডেমিক পেপারে](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) বর্ণনা করা হয়েছে।
 
-স্ট্যাটিক অ্যানালাইসিস বিভিন্ন ধরনের হয়ে থাকে। আপনি সম্ভবত বুঝতে পেরেছেন যে [clang](https://clang-analyzer.llvm.org/) এবং [gcc](https://lwn.net/Articles/806099/)-এর মতো কম্পাইলারগুলো এই গবেষণার কৌশলগুলোর উপর নির্ভর করে, তবে এটি ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/)-এর মতো টুল এবং [Frama-C](https://frama-c.com/) ও [Polyspace](https://www.mathworks.com/products/polyspace.html)-এর মতো ফরমাল মেথডের উপর ভিত্তি করে তৈরি টুলগুলোরও ভিত্তি।
+স্ট্যাটিক অ্যানালাইসিস বিভিন্ন ধরনের হয়ে থাকে। আপনি সম্ভবত বুঝতে পেরেছেন যে [clang](https://clang-analyzer.llvm.org/) এবং [gcc](https://lwn.net/Articles/806099/)-এর মতো কম্পাইলারগুলো এই গবেষণার কৌশলগুলোর উপর নির্ভর করে, তবে এটি ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/)-এর মতো টুল এবং [Frama-C](https://frama-c.com/) ও [Polyspace](https://www.mathworks.com/products/polyspace.html)-এর মতো ফরমাল মেথডের উপর ভিত্তি করে তৈরি টুলগুলোরও ভিত্তি।
 
 আমরা এখানে স্ট্যাটিক অ্যানালাইসিস কৌশল এবং গবেষকদের নিয়ে বিস্তারিত আলোচনা করব না। এর পরিবর্তে, স্লিদার কীভাবে কাজ করে তা বোঝার জন্য যা প্রয়োজন আমরা তার উপর ফোকাস করব, যাতে আপনি বাগ খুঁজতে এবং কোড বুঝতে এটি আরও কার্যকরভাবে ব্যবহার করতে পারেন।
 

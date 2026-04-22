@@ -207,7 +207,7 @@ Olaylar, akıllı sözleşmelerinizin ön yüzünüz ya da diğer abonelik uygul
 
 ## Açıklamalı örnekler {#annotated-examples}
 
-Bunlar Solidity ile yazılmış bazı örneklerdir. Kodla oynamak isterseniz, [Remix](http://remix.ethereum.org) üzerinde onlarla etkileşime girebilirsiniz.
+Bunlar Solidity ile yazılmış bazı örneklerdir. Kodla oynamak isterseniz, [Remix](https://remix.ethereum.org) üzerinde onlarla etkileşime girebilirsiniz.
 
 ### Merhaba dünya {#hello-world}
 

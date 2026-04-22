@@ -49,7 +49,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### 'SHA3' کا استعمال {#sha3}
 
-ایتھیریم کی ڈیولپمنٹ SHA3 معیار کی ڈیولپمنٹ کے ساتھ ہی ہوئی، اور معیارات کے عمل نے حتمی ہیش الگورتھم کی پیڈنگ میں تاخیر سے تبدیلی کی، تاکہ ایتھیریم کے "sha3_256" اور "sha3_512" ہیشز معیاری sha3 ہیشز نہ ہوں، بلکہ ایک قسم جسے اکثر دیگر سیاق و سباق میں "Keccak-256" اور "Keccak-512" کہا جاتا ہے۔ بحث دیکھیں، مثال کے طور پر، [یہاں](https://eips.ethereum.org/EIPS/eip-1803)، [یہاں](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)، یا [یہاں](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)۔
+ایتھیریم کی ڈیولپمنٹ SHA3 معیار کی ڈیولپمنٹ کے ساتھ ہی ہوئی، اور معیارات کے عمل نے حتمی ہیش الگورتھم کی پیڈنگ میں تاخیر سے تبدیلی کی، تاکہ ایتھیریم کے "sha3_256" اور "sha3_512" ہیشز معیاری sha3 ہیشز نہ ہوں، بلکہ ایک قسم جسے اکثر دیگر سیاق و سباق میں "Keccak-256" اور "Keccak-512" کہا جاتا ہے۔ بحث دیکھیں، مثال کے طور پر، [یہاں](https://eips.ethereum.org/EIPS/eip-1803)، [یہاں](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)، یا [یہاں](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)۔
 
 براہ کرم اسے ذہن میں رکھیں کیونکہ ذیل میں الگورتھم کی تفصیل میں "sha3" ہیشز کا حوالہ دیا گیا ہے۔
 

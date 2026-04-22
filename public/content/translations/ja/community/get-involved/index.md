@@ -13,7 +13,7 @@ lang: ja
 ## デベロッパー <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/)でイーサリアムについて学び、試す
-- お近くの[ETHGlobal](http://ethglobal.co/)ハッカソンに参加する！
+- お近くの[ETHGlobal](https://ethglobal.co/)ハッカソンに参加する！
 - あなたの専門分野や好みのプログラミング言語に関連する[プロジェクトをチェックする](/developers/docs/programming-languages/)
 - [コンセンサスレイヤーと実行レイヤーのコール](https://www.youtube.com/@EthereumProtocol/streams)を視聴または参加する
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアム・エコシステム・サポート・プログラムが助成金の申請を積極的に募集しているツール、ドキュメンテーション、インフラストラクチャ分野

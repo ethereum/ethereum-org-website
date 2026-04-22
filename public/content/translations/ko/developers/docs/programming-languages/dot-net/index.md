@@ -37,21 +37,21 @@ incomplete: true
 
 **설정을 건너뛰고 곧바로 샘플을 확인하고 싶으세요?**
 
-- [Playground](http://playground.nethereum.com/) - 브라우저를 통해 이더리움과 상호작용하고 Nethereum 사용법을 알아보세요.
-  - 계정 잔액 조회하기 [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - ERC20 스마트 계약 잔액 조회하기 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - 계정으로 이더 전송하기 [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - 브라우저를 통해 이더리움과 상호작용하고 Nethereum 사용법을 알아보세요.
+  - 계정 잔액 조회하기 [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - ERC20 스마트 계약 잔액 조회하기 [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - 계정으로 이더 전송하기 [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... 기타
 
 ## 중급자용 아티클 {#intermediate-articles}
 
-- [Nethereum 워크북/샘플 목록](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Nethereum 워크북/샘플 목록](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [자체 개발 테스트 체인 배포하기](https://github.com/Nethereum/Testchains)
 - [솔리디티용 VSCode Codegen 플러그인](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity와 이더리움: 왜, 그리고 어떻게](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [이더리움 탈중앙화앱용 ASP.NET Core 웹 API 만들기](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Nethereum Web3를 사용하여 공급망 추적 시스템 구현하기](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum 블록 처리](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [C# Playground 샘플](http://playground.nethereum.com/csharp/id/1025) 포함
+- [Nethereum 블록 처리](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [C# Playground 샘플](https://playground.nethereum.com/csharp/id/1025) 포함
 - [Nethereum 웹소켓 스트리밍](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido와 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum과 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ incomplete: true
 
 ## .NET 프로젝트, 도구 및 기타 흥미로운 자료 {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _브라우저에서 Nethereum 코드 스니펫 컴파일, 생성 및 실행_
+- [Nethereum Playground](https://playground.nethereum.com/) - _브라우저에서 Nethereum 코드 스니펫 컴파일, 생성 및 실행_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor의 UI를 사용한 Nethereum codegen_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _.NET Wasm SPA 라이트 블록체인 익스플로러 및 간단한 지갑_
 - [Wonka 비즈니스 규칙 엔진](https://docs.nethereum.com/en/latest/wonka/) - _근본적으로 메타데이터 기반인 비즈니스 규칙 엔진(.NET 및 이더리움 플랫폼 모두 지원)_
@@ -78,7 +78,7 @@ incomplete: true
 
 Nethereum에서는 주로 [Gitter](https://gitter.im/Nethereum/Nethereum)에서 활동하며, 누구나 자유롭게 질문과 답변을 하고, 도움을 받거나 편안하게 시간을 보낼 수 있습니다. [Nethereum GitHub 리포지토리](https://github.com/Nethereum)에서 자유롭게 PR을 보내거나 이슈를 열거나, 저희가 보유한 다양한 사이드/샘플 프로젝트를 둘러보세요. [Discord](https://discord.gg/jQPrR58FxX)에서도 저희를 만나보실 수 있습니다!
 
-Nethermind가 처음이고 시작하는 데 도움이 필요하시면, 저희 [Discord](http://discord.gg/PaCMRFdvWT)에 참여하세요. 저희 개발자들이 질문에 답변해 드립니다. [Nethermind GitHub 리포지토리](https://github.com/NethermindEth/nethermind)에서 주저하지 말고 PR을 열거나 이슈를 제기하세요.
+Nethermind가 처음이고 시작하는 데 도움이 필요하시면, 저희 [Discord](https://discord.gg/PaCMRFdvWT)에 참여하세요. 저희 개발자들이 질문에 답변해 드립니다. [Nethermind GitHub 리포지토리](https://github.com/NethermindEth/nethermind)에서 주저하지 말고 PR을 열거나 이슈를 제기하세요.
 
 ## 기타 수집된 목록 {#other-aggregated-lists}
 

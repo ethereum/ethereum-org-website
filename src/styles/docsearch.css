@@ -1,7 +1,9 @@
+/* Algolia DocSearch overrides. Unlayered to beat vendor CSS + utilities. */
+
 /**
-  * Custom styles for the DocSearch Button
-  * https://docsearch.algolia.com/docs/styling
-  */
+ * DocSearch Button
+ * https://docsearch.algolia.com/docs/styling
+ */
 .DocSearch-Button-Container {
   @apply hidden lg:flex;
 }
@@ -16,6 +18,7 @@
 }
 
 .DocSearch-Button-Placeholder {
+  padding: 0 12px 0 6px;
   @apply font-normal lowercase;
 }
 
@@ -28,25 +31,76 @@
 }
 
 /**
-  * Custom styles for the DocSearch Modal
-  */
+ * DocSearch Modal
+ */
 
 :root {
-  --docsearch-modal-background: theme(backgroundColor.background.DEFAULT);
+  --docsearch-modal-background: hsla(var(--background));
   --docsearch-searchbox-height: fit-content;
-  --docsearch-highlight-color: theme(colors.primary.hover);
+  --docsearch-highlight-color: hsla(var(--primary-hover));
   --docsearch-modal-width: 650px;
   --docsearch-hit-height: fit-content;
 }
 
 .dark {
-  --docsearch-modal-background: theme(backgroundColor.background.DEFAULT);
-  --docsearch-highlight-color: theme(colors.primary.hover);
+  --docsearch-modal-background: hsla(var(--background));
+  --docsearch-highlight-color: hsla(var(--primary-hover));
 }
 
-/* .DocSearch-Modal {
-  @apply bg-background;
-} */
+/* Restore library padding/margin stripped by TW preflight (* {margin:0; padding:0})
+   which sits in the higher-priority base layer vs the docsearch layer */
+.DocSearch-Modal {
+  margin: 60px auto auto;
+}
+
+.DocSearch-Form {
+  padding: 0 var(--docsearch-spacing);
+}
+
+.DocSearch-Hit a {
+  padding-left: var(--docsearch-spacing);
+}
+
+.DocSearch-Hit-Container {
+  padding: 0 var(--docsearch-spacing) 0 0;
+}
+
+.DocSearch-Hit-content-wrapper {
+  margin: 0 8px;
+}
+
+/* Reset global base styles (a, ul, li) leaking into DocSearch */
+.DocSearch-Container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.DocSearch-Container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.DocSearch-Container li {
+  margin: 0;
+}
+
+.DocSearch-Commands li:not(:last-of-type) {
+  margin-right: 0.8em;
+}
+
+.DocSearch-Input::placeholder {
+  color: var(--docsearch-muted-color);
+  opacity: 1;
+}
+
+.DocSearch-StartScreen,
+.DocSearch-ErrorScreen,
+.DocSearch-NoResults {
+  padding: 36px 0;
+  margin: 0 auto;
+  width: 80%;
+}
 
 .DocSearch.DocSearch-Container {
   @apply fixed inset-0;
@@ -57,7 +111,7 @@
 }
 .DocSearch-SearchBar form {
   --docsearch-searchbox-shadow: inset 0 0 0 1px
-    theme(colors.primary.high-contrast);
+    hsla(var(--primary-high-contrast));
   @apply bg-body-inverse py-3;
 }
 .DocSearch-SearchBar label,
@@ -100,7 +154,7 @@
   @apply rounded-none border-b border-solid border-disabled bg-transparent py-3;
 }
 .DocSearch-Hit[aria-selected="true"] a {
-  --docsearch-hit-active-color: theme(backgroundColor.background.DEFAULT);
+  --docsearch-hit-active-color: hsla(var(--background));
   @apply border-transparent bg-primary-hover shadow-[4px_4px_0_0_var(--primary-visited)];
 }
 
@@ -113,10 +167,15 @@
 }
 
 .DocSearch-Footer {
-  --docsearch-footer-height: theme(spacing.10);
-  --docsearch-logo-color: theme(textColor.body.light);
+  --docsearch-logo-color: hsla(var(--body-light));
   --docsearch-footer-shadow: none;
+  height: 40px;
+  padding: 0 var(--docsearch-spacing);
   @apply border-t-2 border-primary bg-primary-low-contrast;
+}
+
+.DocSearch-Logo a {
+  color: var(--docsearch-logo-color);
 }
 
 .DocSearch-Commands {
@@ -143,7 +202,8 @@
 }
 
 svg[aria-label="Algolia"] {
-  @apply ml-0 ms-2;
+  margin-left: 0;
+  margin-inline-start: 8px;
 }
 
 svg[aria-label="Algolia"] * {
@@ -152,7 +212,7 @@ svg[aria-label="Algolia"] * {
 
 @media (max-width: 768px) {
   .DocSearch-Modal {
-    --inset: theme(space.4);
+    --inset: var(--spacing-4);
     @apply fixed inset-[var(--inset)] max-h-[calc(100vh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
   }
 }

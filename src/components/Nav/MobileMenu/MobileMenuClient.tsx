@@ -33,7 +33,7 @@ function MobileMenuContentSkeleton() {
         {Array.from({ length: 5 }).map((_, i) => (
           <div
             key={i}
-            className="flex items-center gap-2 border-b border-body-light px-4 py-4 first:border-t"
+            className="border-body-light flex items-center gap-2 border-b px-4 py-4 first:border-t"
           >
             <Skeleton className="h-4 w-4" />
             <Skeleton className="h-5 w-36" />
@@ -42,7 +42,7 @@ function MobileMenuContentSkeleton() {
       </div>
 
       {/* Footer (3-column grid) */}
-      <div className="grid h-[108px] shrink-0 grid-cols-3 border-t border-body-light px-4">
+      <div className="border-body-light grid h-[108px] shrink-0 grid-cols-3 border-t px-4">
         {Array.from({ length: 3 }).map((_, i) => (
           <div
             key={i}
@@ -112,13 +112,13 @@ const MobileMenuClient = ({ className, side }: MobileMenuClientProps) => {
                 <p className="text-body-medium">{t("loading-error")}</p>
                 <div className="flex gap-3">
                   <button
-                    className="rounded-md bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover"
+                    className="bg-primary hover:bg-primary-hover rounded-md px-4 py-2 text-sm text-white"
                     onClick={() => window.location.reload()}
                   >
                     {t("refresh")}
                   </button>
                   <button
-                    className="rounded-md border border-body-light px-4 py-2 text-sm text-body hover:bg-background-highlight"
+                    className="border-body-light text-body hover:bg-background-highlight rounded-md border px-4 py-2 text-sm"
                     onClick={() => handleOpenChange(false)}
                   >
                     {t("close")}

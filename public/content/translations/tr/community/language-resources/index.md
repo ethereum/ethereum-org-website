@@ -52,7 +52,6 @@ Ethereum.org, her sayfanın üst kısmında bulunan dil seçimi menüsü ile eri
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - Ethereum, DeFi, NFT, Web3 ile ilgili bilgileri kapsayan, topluluk tarafından yönetilen içerik
 - [123ETH](https://123eth.org/) - Ethereum ekosistemine açılan bir Portal
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - kripto para ve uygulamaları hakkında ücretsiz çevrimiçi kurslar
-- [Ethereum Teknik Raporu](/zh/whitepaper/) - Ethereum Teknik Raporu'nun Çince versiyonu
 
 **Ethereum ekosistemi**
 

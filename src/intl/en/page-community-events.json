@@ -75,6 +75,7 @@
   "page-events-view-all-conferences": "View all conferences",
   "page-events-view-all-meetups": "View all meetups",
   "page-events-no-upcoming": "No upcoming events at this time",
+  "page-events-data-source-callout": "Ethereum event listings curated by <a>ETHStars</a>",
   "page-events-tag-online": "Online",
   "page-events-tag-conference": "Conference",
   "page-events-tag-hackathon": "Hackathon",

@@ -49,7 +49,7 @@ lang: zh
 
 ## 7. 将选定的二层网络添加到你的钱包（可选）
 
-你可以使用 [chainlist.org](http://chainlist.org) 来查找该网络的 RPC 详细信息。 一旦你把这个网络添加到你的钱包，并且交易完成，你应该就可看到代币出现在你的钱包中了。 <br />
+你可以使用 [chainlist.org](https://chainlist.org) 来查找该网络的 RPC 详细信息。 一旦你把这个网络添加到你的钱包，并且交易完成，你应该就可看到代币出现在你的钱包中了。 <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

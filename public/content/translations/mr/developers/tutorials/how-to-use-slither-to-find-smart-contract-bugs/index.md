@@ -70,7 +70,7 @@ slither project_paths
 
 Slither स्टॅटिक अ‍ॅनालिसिस फ्रेमवर्कची क्षमता आणि डिझाइन ब्लॉग पोस्ट्समध्ये ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) आणि एका [अकॅडमिक पेपरमध्ये](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) वर्णन केले आहे.
 
-स्टॅटिक विश्लेषण विविध प्रकारांमध्ये अस्तित्वात आहे. तुम्हाला कदाचित याची जाणीव असेल की [clang](https://clang-analyzer.llvm.org/) आणि [gcc](https://lwn.net/Articles/806099/) सारखे कंपाइलर या संशोधन तंत्रांवर अवलंबून असतात, परंतु ते [Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) आणि [Frama-C](https://frama-c.com/) आणि [Polyspace](https://www.mathworks.com/products/polyspace.html) सारख्या औपचारिक पद्धतींवर आधारित टूल्सला देखील आधार देते.
+स्टॅटिक विश्लेषण विविध प्रकारांमध्ये अस्तित्वात आहे. तुम्हाला कदाचित याची जाणीव असेल की [clang](https://clang-analyzer.llvm.org/) आणि [gcc](https://lwn.net/Articles/806099/) सारखे कंपाइलर या संशोधन तंत्रांवर अवलंबून असतात, परंतु ते [Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) आणि [Frama-C](https://frama-c.com/) आणि [Polyspace](https://www.mathworks.com/products/polyspace.html) सारख्या औपचारिक पद्धतींवर आधारित टूल्सला देखील आधार देते.
 
 आम्ही येथे स्टॅटिक विश्लेषण तंत्र आणि संशोधकाचे संपूर्ण पुनरावलोकन करणार नाही. त्याऐवजी, Slither कसे कार्य करते हे समजून घेण्यासाठी काय आवश्यक आहे यावर आम्ही लक्ष केंद्रित करू जेणेकरून आपण बग शोधण्यासाठी आणि कोड समजून घेण्यासाठी अधिक प्रभावीपणे त्याचा वापर करू शकाल.
 
