@@ -13,7 +13,7 @@ Mulailah dengan membaca tentang misi dan nilai-nilai ethereum.org dalam [kode et
 ## Pengembang <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Pelajari dan coba Ethereum di [ethereum.org/developers/](/developers/)
-- Hadiri hackathon [ETHGlobal](http://ethglobal.co/) di dekat Anda!
+- Hadiri hackathon [ETHGlobal](https://ethglobal.co/) di dekat Anda!
 - Lihat [proyek-proyek yang terkait dengan bidang keahlian atau bahasa pemrograman pilihan Anda](/developers/docs/programming-languages/)
 - Tonton atau berpartisipasi dalam [panggilan Lapisan Konsensus dan Eksekusi](https://www.youtube.com/@EthereumProtocol/streams)
 - [Daftar keinginan Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/) - area peralatan, dokumentasi, dan infrastruktur di mana Ecosystem Support Program Ethereum secara aktif mencari aplikasi hibah

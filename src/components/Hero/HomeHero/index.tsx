@@ -96,7 +96,7 @@ const HomeHero = async ({
               {t("page-index-hero-title")}
             </h1>
 
-            <p className="max-w-[741px] text-lg leading-relaxed tracking-[0.07px] text-body-medium md:text-2xl md:leading-[1.625]">
+            <p className="text-body-medium max-w-[741px] text-lg leading-relaxed tracking-[0.07px] md:text-2xl md:leading-[1.625]">
               {t("page-index-hero-subtitle")}
             </p>
 

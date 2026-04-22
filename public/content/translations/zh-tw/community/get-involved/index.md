@@ -13,7 +13,7 @@ lang: zh-tw
 ## 開發者 <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - 到 [ethereum.org/developers/](/developers/) 了解並試用以太坊
-- 參加您附近的 [ETHGlobal](http://ethglobal.co/) 黑客松！
+- 參加您附近的 [ETHGlobal](https://ethglobal.co/) 黑客松！
 - 查看[與您的專業領域或偏好的程式語言相關的專案](/developers/docs/programming-languages/)
 - 觀看或參與 [共識層和執行層會議](https://www.youtube.com/@EthereumProtocol/streams)
 - [生態系統支援計畫願望清單](https://esp.ethereum.foundation/wishlist/) - 以太坊生態系統支援計畫正積極尋求工具、文件和基礎設施領域的資助申請

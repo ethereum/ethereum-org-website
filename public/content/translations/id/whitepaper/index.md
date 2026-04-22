@@ -496,7 +496,7 @@ Konsep fungsi transisi status arbitrer seperti yang diimplementasikan oleh proto
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Proof-of-work yang dapat digunakan kembali](https://nakamotoinstitute.org/finney/rpow/)
 6. [Sertifikat properti yang aman dengan otoritas pemilik](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Whitepaper Bitcoin](http://bitcoin.org/bitcoin.pdf)
+7. [Whitepaper Bitcoin](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Segitiga Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Whitepaper Colored coins](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

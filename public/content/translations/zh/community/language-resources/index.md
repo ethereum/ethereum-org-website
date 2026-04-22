@@ -52,7 +52,6 @@ Ethereum.org 已由母语者翻译成 40 多种语言，你可以使用每个页
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - 社区维护的内容，涵盖以太坊、DeFi、NFT、Web3 相关知识
 - [123ETH](https://123eth.org/) - 以太坊生态系统的门户
 - [肖臻](http://zhenxiao.com/blockchain/) - 关于加密货币及其应用的免费在线课程
-- [以太坊白皮书](/zh/whitepaper/) - 以太坊白皮书中文版
 
 **以太坊生态系统**
 

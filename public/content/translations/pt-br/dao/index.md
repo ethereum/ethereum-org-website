@@ -114,7 +114,7 @@ _Normalmente utilizado em organizações mais coesas e com abordagem humanitári
 
 #### Um exemplo famoso {#share-example}
 
-[MolochDAO](http://molochdao.com/) – A MolochDAO é focada no financiamento de projetos Ethereum. Exigem uma proposta de adesão para que o grupo possa avaliar se você dispõe dos conhecimentos especializados e do capital necessários para fazer considerações fundamentadas sobre potenciais donatários. Você não pode simplesmente comprar acesso à DAO no mercado aberto.
+[MolochDAO](https://molochdao.com/) – A MolochDAO é focada no financiamento de projetos Ethereum. Exigem uma proposta de adesão para que o grupo possa avaliar se você dispõe dos conhecimentos especializados e do capital necessários para fazer considerações fundamentadas sobre potenciais donatários. Você não pode simplesmente comprar acesso à DAO no mercado aberto.
 
 ### Adesão baseada em reputação {#reputation-based-membership}
 

@@ -57,11 +57,11 @@ export const LayoutComparison = {
   render: () => (
     <VStack className="items-stretch gap-8">
       <div>
-        <p className="mb-2 text-sm text-body-medium">Vertical (default)</p>
+        <p className="text-body-medium mb-2 text-sm">Vertical (default)</p>
         <AppCard {...sampleApp} layout="vertical" href="/apps/uniswap" />
       </div>
       <div>
-        <p className="mb-2 text-sm text-body-medium">Horizontal</p>
+        <p className="text-body-medium mb-2 text-sm">Horizontal</p>
         <AppCard {...sampleApp} layout="horizontal" href="/apps/uniswap" />
       </div>
     </VStack>
@@ -75,7 +75,7 @@ export const ImageSizes = {
       {(["xs", "small", "thumbnail", "medium", "large"] as const).map(
         (size) => (
           <div key={size}>
-            <p className="mb-2 text-sm text-body-medium">Size: {size}</p>
+            <p className="text-body-medium mb-2 text-sm">Size: {size}</p>
             <AppCard
               {...sampleApp}
               layout="horizontal"
@@ -209,7 +209,7 @@ export const CategoryTagStatuses = {
 export const AppsPageStyle = {
   render: () => (
     <VStack className="items-stretch gap-4">
-      <p className="text-sm text-body-medium">
+      <p className="text-body-medium text-sm">
         As used on /apps page (vertical with description)
       </p>
       <AppCard
@@ -235,7 +235,7 @@ export const AppsPageStyle = {
 export const DeveloperAppsPageStyle = {
   render: () => (
     <VStack className="items-stretch gap-4">
-      <p className="text-sm text-body-medium">
+      <p className="text-body-medium text-sm">
         As used on /developers/tools page (horizontal, no category, no tracking)
       </p>
       <AppCard
@@ -262,7 +262,7 @@ export const DeveloperAppsPageStyle = {
 export const CategoryListStyle = {
   render: () => (
     <VStack className="items-stretch gap-4">
-      <p className="text-sm text-body-medium">
+      <p className="text-body-medium text-sm">
         Apps listed by category (bordered container, no card-level hover)
       </p>
       <div className="flex flex-col rounded-xl border">
@@ -302,10 +302,10 @@ export const CategoryListStyle = {
 export const HighlightCardCover = {
   render: () => (
     <VStack className="items-stretch gap-4">
-      <p className="text-sm text-body-medium">
+      <p className="text-body-medium text-sm">
         Banner with fit=&quot;cover&quot; - image fills and may crop
       </p>
-      <LinkBox className="group w-full rounded-xl p-3 hover:bg-background-highlight">
+      <LinkBox className="group hover:bg-background-highlight w-full rounded-xl p-3">
         <LinkOverlay href="/apps/uniswap" className="no-underline">
           {/* Banner image - cover crops to fill */}
           <CardBanner fit="cover" background="accent-a" className="mb-2">
@@ -343,11 +343,11 @@ export const HighlightCardCover = {
 export const HighlightCardContain = {
   render: () => (
     <VStack className="items-stretch gap-4">
-      <p className="text-sm text-body-medium">
+      <p className="text-body-medium text-sm">
         Banner with fit=&quot;contain&quot; - image fully visible with blur
         background
       </p>
-      <LinkBox className="group w-full rounded-xl p-3 hover:bg-background-highlight">
+      <LinkBox className="group hover:bg-background-highlight w-full rounded-xl p-3">
         <LinkOverlay href="/apps/uniswap" className="no-underline">
           {/* Banner image - contain shows full image with blur bg */}
           <CardBanner fit="contain" background="accent-a" className="mb-2">

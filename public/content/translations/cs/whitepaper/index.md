@@ -503,7 +503,7 @@ Koncept funkce libovolného přechodu stavu, jak je implementován protokolem Et
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Opakovaně použitelné důkazy prací](https://nakamotoinstitute.org/finney/rpow/)
 6. [Bezpečné vlastnické tituly s autoritou vlastníka](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Bílá kniha Bitcoinu](http://bitcoin.org/bitcoin.pdf)
+7. [Bílá kniha Bitcoinu](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Zookův trojúhelník](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Bílá kniha Colored coins](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

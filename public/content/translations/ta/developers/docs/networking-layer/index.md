@@ -159,5 +159,5 @@ SSZ என்பது எளிய சீரியலைசேஷனைக் (
 [kademlia முதல் discv5 வரை](https://vac.dev/kademlia-to-discv5)
 [kademlia கட்டுரை](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [எத்தேரியம் p2p அறிமுகம்](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[eth1/eth2 உறவு](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[eth1/eth2 உறவு](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [மெர்ஜ் மற்றும் eth2 கிளையண்ட் விவரங்கள் வீடியோ](https://www.youtube.com/watch?v=zNIrIninMgg)

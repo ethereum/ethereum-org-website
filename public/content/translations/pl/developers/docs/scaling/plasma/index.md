@@ -16,7 +16,7 @@ Wymagane jest dobre zrozumienie wszystkich podstawowych tematów i ogólna wiedz
 
 ## Czym jest Plasma?
 
-Plasma jest platformą do ulepszania skalowania publicznych blockchainów takich jak Ethereum. Zgodnie z opisem w oryginalnej [dokumentacji Plasma](http://plasma.io/plasma.pdf) łańcuchy Plasma są zbudowane na innym blockchainie (nazywanym „łańcuchem głównym”). Każdy "łańcuch dziecko" wywodzi się z łańcucha głównego i jest zasadniczo zarządzany poprzez inteligentny kontrakt wdrożony na sieci rodzica.
+Plasma jest platformą do ulepszania skalowania publicznych blockchainów takich jak Ethereum. Zgodnie z opisem w oryginalnej [dokumentacji Plasma](https://plasma.io/plasma.pdf) łańcuchy Plasma są zbudowane na innym blockchainie (nazywanym „łańcuchem głównym”). Każdy "łańcuch dziecko" wywodzi się z łańcucha głównego i jest zasadniczo zarządzany poprzez inteligentny kontrakt wdrożony na sieci rodzica.
 
 Kontrakt Plasma funkcjonuje między innymi jako [most](/developers/docs/bridges/), umożliwiając użytkownikom przenoszenie aktywów między siecią główną Ethereum a łańcuchem Plasma. Chociaż czyni je to podobnymi do [łańcuchów pobocznych](/developers/docs/scaling/sidechains/), łańcuchy Plasma korzystają — przynajmniej do pewnego stopnia — z bezpieczeństwa sieci głównej Ethereum. W tym aspekcie różnią się od łańcuchów pobocznych, które w całości są odpowiedzialne za własne bezpieczeństwo.
 

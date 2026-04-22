@@ -247,7 +247,7 @@ lang: ur
 #### حالیہ ریسرچ {#recent-research-10}
 
 - [کثیر جہتی EIP-1559 ویڈیو پریزنٹیشن](https://youtu.be/QbR4MTgnCko)
-- [کراس ڈومین MEV](http://arxiv.org/abs/2112.01472)
+- [کراس ڈومین MEV](https://arxiv.org/abs/2112.01472)
 - [MEV نیلامیاں](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### پروف آف اسٹیک کی مراعات {#proof-of-stake-incentives}

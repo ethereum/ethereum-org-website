@@ -248,7 +248,7 @@ Los mercados de espacio en bloque rigen la inclusión de las transacciones de lo
 #### Investigación reciente {#recent-research-10}
 
 - [Presentación en video de EIP-1559 multidimensional](https://youtu.be/QbR4MTgnCko)
-- [MEV de dominio cruzado](http://arxiv.org/abs/2112.01472)
+- [MEV de dominio cruzado](https://arxiv.org/abs/2112.01472)
 - [Subastas de MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Incentivos de prueba de participación {#proof-of-stake-incentives}

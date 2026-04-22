@@ -76,7 +76,7 @@ slither project_paths
 
 Возможности и дизайн фреймворка статического анализа Slither были описаны в постах в блоге ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) и [научной статье](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-Статический анализ существует в разных вариантах. Вы, скорее всего, понимаете, что компиляторы, такие как [clang](https://clang-analyzer.llvm.org/) и [gcc](https://lwn.net/Articles/806099/), зависят от этих исследовательских техник, но они также лежат в основе ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) и инструментов, основанных на формальных методах, таких как [Frama-C](https://frama-c.com/) и [Polyspace](https://www.mathworks.com/products/polyspace.html)).
+Статический анализ существует в разных вариантах. Вы, скорее всего, понимаете, что компиляторы, такие как [clang](https://clang-analyzer.llvm.org/) и [gcc](https://lwn.net/Articles/806099/), зависят от этих исследовательских техник, но они также лежат в основе ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) и инструментов, основанных на формальных методах, таких как [Frama-C](https://frama-c.com/) и [Polyspace](https://www.mathworks.com/products/polyspace.html)).
 
 Мы не будем здесь исчерпывающе рассматривать техники статического анализа и исследования. Вместо этого мы сосредоточимся на том, что необходимо для понимания работы Slither, чтобы вы могли более эффективно использовать его для поиска ошибок и понимания кода.
 

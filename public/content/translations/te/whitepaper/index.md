@@ -491,7 +491,7 @@ Bitcoin మైనింగ్ అల్గోరిథం మైనింగ్ 
 4. [B-మనీ](http://www.weidai.com/bmoney.txt)
 5. [పునర్వినియోగ ప్రూఫ్స్ ఆఫ్ వర్క్](https://nakamotoinstitute.org/finney/rpow/)
 6. [యజమాని అధికారంతో సురక్షితమైన ఆస్తి టైటిల్స్](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [బిట్‌కాయిన్ శ్వేతపత్రం](http://bitcoin.org/bitcoin.pdf)
+7. [బిట్‌కాయిన్ శ్వేతపత్రం](https://bitcoin.org/bitcoin.pdf)
 8. [నేమ్‌కాయిన్](https://namecoin.org/)
 9. [జూకో యొక్క త్రిభుజం](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [కలర్డ్ కాయిన్స్ శ్వేతపత్రం](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

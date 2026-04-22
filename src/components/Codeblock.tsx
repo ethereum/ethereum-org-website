@@ -91,7 +91,7 @@ const Codeblock = ({
     /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
     <div className={cn("relative", className)} dir="ltr">
       <div
-        className="overflow-auto rounded bg-background-highlight text-primary"
+        className="bg-background-highlight text-primary overflow-auto rounded"
         style={{
           maxHeight: isCollapsed
             ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
@@ -115,7 +115,7 @@ const Codeblock = ({
                     {...getLineProps({ line })}
                   >
                     {shouldShowLineNumbers && (
-                      <span className="table-cell select-none pe-8 text-end opacity-40">
+                      <span className="table-cell pe-8 text-end opacity-40 select-none">
                         {i + 1}
                       </span>
                     )}

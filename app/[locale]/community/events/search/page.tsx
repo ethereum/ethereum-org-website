@@ -41,7 +41,7 @@ const Page = async (props: {
   const t = await getTranslations("page-community-events")
   const tCommon = await getTranslations("common")
 
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   const filteredEvents = ((): EventItem[] => {
     if (!q) return []
@@ -79,7 +79,7 @@ const Page = async (props: {
 
     return (
       <>
-        <div className="grid grid-cols-fill-4 gap-8">
+        <div className="grid-cols-fill-4 grid gap-8">
           {filteredEvents.map((event) => (
             <EventCard
               key={event.id}

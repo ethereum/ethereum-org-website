@@ -85,7 +85,7 @@ const ColorGroupWrapper = ({
 }) => (
   <div
     key={color}
-    className="bg-gradient-to-t from-[#1b1b1b] from-65% to-white to-35% p-8 text-white"
+    className="bg-linear-to-t from-[#1b1b1b] from-65% to-white to-35% p-8 text-white"
   >
     {children}
   </div>

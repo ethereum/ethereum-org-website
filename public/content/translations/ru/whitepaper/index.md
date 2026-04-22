@@ -496,7 +496,7 @@ Ethereum как протокол изначально рассчитан на т
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Многоразовые доказательства выполнения работы](https://nakamotoinstitute.org/finney/rpow/)
 6. [Безопасные права на имущество с полномочиями владельца](https://nakamotoinstitute.org/secure-property-titles/)
-7. [Проектный документ биткоина](http://bitcoin.org/bitcoin.pdf)
+7. [Проектный документ биткоина](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Треугольник Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Проектный документ цветных монет](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

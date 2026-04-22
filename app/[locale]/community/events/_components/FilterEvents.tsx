@@ -67,7 +67,7 @@ export default function FilterEvents({ events }: FilterProps) {
 
     return (
       <>
-        <div className="grid grid-cols-fill-4 gap-8">
+        <div className="grid-cols-fill-4 grid gap-8">
           {filteredEvents.slice(0, MAX_RESULTS).map((event) => (
             <EventCard
               key={event.id}

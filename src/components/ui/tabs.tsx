@@ -12,7 +12,7 @@ const TabsList = React.forwardRef<
   <TabsPrimitive.List
     ref={ref}
     className={cn(
-      "flex w-full max-w-fit gap-1 overflow-x-auto rounded-2xl bg-background !p-0.5 shadow md:border md:shadow-lg lg:w-auto",
+      "bg-background flex w-full max-w-fit gap-1 overflow-x-auto rounded-2xl !p-0.5 shadow md:border md:shadow-lg lg:w-auto",
       className
     )}
     {...props}
@@ -27,11 +27,11 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "relative isolate inline-flex flex-shrink-0 items-center justify-center gap-2.5",
-      "text-nowrap rounded-[14px] px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
+      "relative isolate inline-flex shrink-0 items-center justify-center gap-2.5",
+      "rounded-[14px] px-4 py-2 text-sm text-nowrap [&_svg]:shrink-0 [&_svg]:text-sm",
       "before:absolute before:inset-0 before:-z-10 before:rounded-[14px]",
       "data-[state=active]:!text-primary data-[state=active]:before:bg-primary-low-contrast",
-      "ring-offset-background focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-2 focus-visible:outline-primary-hover disabled:pointer-events-none disabled:opacity-50",
+      "ring-offset-background focus-visible:outline-primary-hover focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-2 disabled:pointer-events-none disabled:opacity-50",
       className
     )}
     {...props}
@@ -46,7 +46,7 @@ const TabsContent = React.forwardRef<
   <TabsPrimitive.Content
     ref={ref}
     className={cn(
-      "mt-4 rounded-lg border p-6 ring-offset-background focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover",
+      "ring-offset-background focus-visible:outline-primary-hover mt-4 rounded-lg border p-6 focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1",
       className
     )}
     {...props}

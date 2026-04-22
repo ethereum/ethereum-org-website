@@ -135,7 +135,6 @@ module.exports = [
     false, // Selectively applying temporary for possible future route usage
   ],
   ["/developers/docs/rollups", "/developers/docs/scaling/#rollups"],
-  ["/roadmap/future-proofing/:path+", "/roadmap/future-proofing/"],
   ["/eth2/what-is-eth2", "/roadmap/"],
   [
     "/developers/docs/accounts/account-abstraction",

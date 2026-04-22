@@ -26,7 +26,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 **Introducing the Nethereum library and VS Code Solidity**
 
-- [Nethereum, Getting Started](https://docs.nethereum.com/en/latest/getting-started/)
+- [Nethereum, Getting Started](https://docs.nethereum.com/docs/getting-started/welcome/)
 - [Installing VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [A .NET Developer’s Workflow for Creating and Calling Ethereum Smart Contracts](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [Smart contracts integration with Nethereum](https://kauri.io/#collections/Getting%20Started/smart-contracts-integration-with-nethereum/#smart-contracts-integration-with-nethereumm)
@@ -37,21 +37,21 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 **Want to skip setup for now, and jump straight to the samples?**
 
-- [Playground](http://playground.nethereum.com/) - Interact with Ethereum and learn how to use Nethereum through the browser.
-  - Query Account Balance [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - Query ERC20 Smart Contract Balance [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transfer ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - Interact with Ethereum and learn how to use Nethereum through the browser.
+  - [Query Account Balance](https://docs.nethereum.com/docs/core-foundation/guide-query-balance)
+  - [Query ERC20 Smart Contract Balance](https://docs.nethereum.com/docs/smart-contracts/erc20)
+  - [Transfer ether to an Account](https://docs.nethereum.com/docs/core-foundation/guide-send-eth)
   - ... And more!
 
 ## Intermediate articles {#intermediate-articles}
 
-- [Nethereum Workbook/Sample List](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Nethereum Getting Started & First Project](https://docs.nethereum.com/docs/getting-started/first-project)
 - [Deploy Your Own Development Testchains](https://github.com/Nethereum/Testchains)
-- [VSCode Codegen Plugin for Solidity](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
+- [VSCode Codegen Plugin for Solidity](https://docs.nethereum.com/docs/aspire-templates/guide-codegen)
 - [Unity and Ethereum: Why and How](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Create ASP.NET Core Web API for Ethereum dapps](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Using Nethereum Web3 to Implement a Supply Chain Tracking System](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum Block Processing](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), with [C# Playground sample](http://playground.nethereum.com/csharp/id/1025)
+- [Nethereum Blockchain Processing](https://docs.nethereum.com/docs/data-and-indexing/guide-blockchain-processing)
 - [Nethereum Websocket Streaming](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido and Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum and Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -60,14 +60,12 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 - [Azure Key Vault And Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
-- [Ujo Nethereum backend reference architecture](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
 ## .NET projects, tools and other fun stuff {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _Compile, create, and run Nethereum code snippets in browser_
+- [Nethereum Playground](https://playground.nethereum.com/) - _Compile, create, and run Nethereum code snippets in browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen with UI in Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _A .NET Wasm SPA light blockchain explorer and simple wallet_
-- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _A business rules engine (for both the .NET platform and the Ethereum platform) that is inherently metadata-driven_
 - [Nethermind](https://github.com/NethermindEth/nethermind) - _A .NET Core Ethereum client for Linux, Windows, MacOS_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Pre-configured .NET devchains for fast response (PoA)_
@@ -78,7 +76,7 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
 At Nethereum, we mostly hang out on [Gitter](https://gitter.im/Nethereum/Nethereum) where everyone is welcome to ask/answer questions, get help, or just chill. Feel free to do a PR or open an issue on the [Nethereum GitHub repository](https://github.com/Nethereum), or just browse through the many side/sample projects we have. You can also find us on [Discord](https://discord.gg/jQPrR58FxX)!
 
-If you are new to Nethermind and need help getting started, join our [Discord](http://discord.gg/PaCMRFdvWT). Our developers are on hand to answer your questions. Don't hesitate to open a PR or raise any issues on the [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
+If you are new to Nethermind and need help getting started, join our [Discord](https://discord.gg/PaCMRFdvWT). Our developers are on hand to answer your questions. Don't hesitate to open a PR or raise any issues on the [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 
 ## Other aggregated lists {#other-aggregated-lists}
 

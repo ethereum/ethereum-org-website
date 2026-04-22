@@ -22,12 +22,6 @@ import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "./buttons/Button"
 
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "swiper/css/effect-cards"
-import "swiper/css/grid"
-
 import { useTranslation } from "@/hooks/useTranslation"
 
 const SwiperContainer = React.forwardRef<
@@ -85,7 +79,7 @@ const SwiperPaginationDots = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "ui-swiper-pagination flex w-fit flex-row",
+      "ui-swiper-pagination flex w-fit flex-row gap-2",
       "[&_.swiper-pagination-bullet]:bg-primary-high-contrast",
       "[&_.swiper-pagination-bullet-active]:bg-primary-hover",
       className
@@ -102,7 +96,7 @@ const SwiperNavContainer = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "mx-auto flex h-6 w-fit items-center gap-4 rounded-full bg-background-highlight",
+      "bg-background-highlight mx-auto flex h-6 w-fit items-center gap-4 rounded-full",
       className
     )}
     {...props}

@@ -18,7 +18,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Mara ya mwisho tuliangalia [picha kubwa ya Solidity](https://soliditydeveloper.com/solidity-overview-2020) na tayari tulitaja [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sasa utagundua jinsi ya kuitumia, ni vipengele vipi vimeunganishwa na mawazo ya ziada kuhusu jinsi ya kuipanua. Ilianzishwa na Paul Razvan Berg, mwanzilishi wa [Sablier](http://sablier.com/), programu hii itaanzisha uundaji wako wa mwonekano wa mbele na inakuja na miunganisho kadhaa ya hiari ya kuchagua.
+Mara ya mwisho tuliangalia [picha kubwa ya Solidity](https://soliditydeveloper.com/solidity-overview-2020) na tayari tulitaja [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sasa utagundua jinsi ya kuitumia, ni vipengele vipi vimeunganishwa na mawazo ya ziada kuhusu jinsi ya kuipanua. Ilianzishwa na Paul Razvan Berg, mwanzilishi wa [Sablier](https://sablier.com/), programu hii itaanzisha uundaji wako wa mwonekano wa mbele na inakuja na miunganisho kadhaa ya hiari ya kuchagua.
 
 ## Usakinishaji {#installation}
 

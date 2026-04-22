@@ -65,7 +65,7 @@ C'è una nuova ondata di progetti innovativi in fase di costruzione sulle blockc
 
 Alcuni come [Klima Infinity](https://www.klimadao.finance/infinity) e [Senken](https://senken.io/) offrono un'ampia varietà di progetti sviluppati da terze parti ed emessi secondo standard consolidati come Verra; altri come [Nori](https://nori.com/) offrono solo progetti specifici sviluppati secondo il proprio standard di crediti di carbonio, che emettono e per i quali hanno il proprio mercato dedicato.
 
-4. I binari e l'infrastruttura sottostanti che facilitano l'aumento dell'impatto e dell'efficienza dell'intera catena di approvvigionamento del mercato del carbonio. [KlimaDAO](http://klimadao.finance/) fornisce liquidità come bene pubblico (consentendo a chiunque di acquistare o vendere crediti di carbonio a un prezzo trasparente), incentiva l'aumento del volume dei mercati del carbonio e dei ritiri con ricompense, e fornisce strumenti interoperabili di facile utilizzo per accedere ai dati, nonché acquisire e ritirare, un'ampia varietà di crediti di carbonio tokenizzati.
+4. I binari e l'infrastruttura sottostanti che facilitano l'aumento dell'impatto e dell'efficienza dell'intera catena di approvvigionamento del mercato del carbonio. [KlimaDAO](https://klimadao.finance/) fornisce liquidità come bene pubblico (consentendo a chiunque di acquistare o vendere crediti di carbonio a un prezzo trasparente), incentiva l'aumento del volume dei mercati del carbonio e dei ritiri con ricompense, e fornisce strumenti interoperabili di facile utilizzo per accedere ai dati, nonché acquisire e ritirare, un'ampia varietà di crediti di carbonio tokenizzati.
 
 ## La ReFi oltre i mercati del carbonio {#refi-beyond}
 
