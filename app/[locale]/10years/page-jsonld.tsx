@@ -4,12 +4,7 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumCommunityReference,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function TenYearJsonLD({
@@ -32,8 +27,7 @@ export default async function TenYearJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -41,13 +35,9 @@ export default async function TenYearJsonLD({
         description: t("page-10-year-anniversary-meta-description"),
         url: url,
         inLanguage: locale,
-        author: [ethereumCommunityReference],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        isPartOf: {
-          "@type": "WebSite",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -65,8 +55,8 @@ export default async function TenYearJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#video` },
       },
       {
@@ -77,8 +67,7 @@ export default async function TenYearJsonLD({
         uploadDate: "2024-07-30T00:00:00Z",
         duration: "PT5M30S",
         embedUrl: "https://www.youtube.com/embed/gjwr-7PgpTC",
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

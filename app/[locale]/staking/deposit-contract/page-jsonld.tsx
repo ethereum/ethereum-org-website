@@ -1,28 +1,18 @@
 import { getTranslations } from "next-intl/server"
 
-import { FileContributor, Lang } from "@/lib/types"
-
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-export default async function ResourcesPageJsonLD({
+export default async function DepositContractJsonLD({
   locale,
-  contributors,
 }: {
-  locale: Lang | undefined
-  contributors: FileContributor[]
+  locale: string
 }) {
-  const t = await getTranslations("page-resources")
+  const t = await getTranslations("page-staking-deposit-contract")
 
-  const url = normalizeUrlForJsonLd(locale, `/resources/`)
-
-  const contributorList = contributors.map((contributor) => ({
-    "@type": "Person",
-    name: contributor.login,
-    url: contributor.html_url,
-  }))
+  const url = normalizeUrlForJsonLd(locale, `/staking/deposit-contract/`)
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -31,12 +21,10 @@ export default async function ResourcesPageJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: t("page-resources-meta-title"),
-        description: t("page-resources-meta-description"),
+        name: t("page-staking-deposit-contract-title"),
+        description: t("page-staking-deposit-contract-subtitle"),
         url: url,
         inLanguage: locale,
-        contributor: contributorList,
-        author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
@@ -50,13 +38,25 @@ export default async function ResourcesPageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
-              name: t("page-resources-meta-title"),
+              name: "Staking",
+              item: normalizeUrlForJsonLd(locale, "/staking/"),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: t("page-staking-deposit-contract-title"),
               item: url,
             },
           ],
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        about: {
+          "@type": "Thing",
+          name: "Ethereum Deposit Contract",
+          description:
+            "Official Ethereum deposit contract address for staking validators",
+        },
       },
     ],
   }

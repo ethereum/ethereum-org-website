@@ -4,14 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-  KNOWN_PERSONS,
-  personReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import { KNOWN_PERSONS } from "@/lib/jsonld/persons"
+import { personReference } from "@/lib/jsonld/utils"
 
 export default async function TrillionDollarSecurityPageJsonLD({
   locale,
@@ -33,10 +29,9 @@ export default async function TrillionDollarSecurityPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
       KNOWN_PERSONS["josh-stark"],
       KNOWN_PERSONS["fredrik-svantes"],
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -49,12 +44,7 @@ export default async function TrillionDollarSecurityPageJsonLD({
           personReference("josh-stark"),
           personReference("fredrik-svantes"),
         ],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -72,8 +62,8 @@ export default async function TrillionDollarSecurityPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#trillion-dollar-security` },
       },
       {
@@ -87,8 +77,7 @@ export default async function TrillionDollarSecurityPageJsonLD({
           personReference("fredrik-svantes"),
         ],
         contributor: contributorList,
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Ethereum Security",

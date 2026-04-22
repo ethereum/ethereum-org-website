@@ -2,13 +2,9 @@ import { FileContributor, Frontmatter } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-  resolveAuthorsFromFrontmatter,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 
 export default async function SlugJsonLD({
   locale,
@@ -29,7 +25,7 @@ export default async function SlugJsonLD({
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: `https://ethereum.org/${locale}/`,
+      item: normalizeUrlForJsonLd(locale, "/"),
     },
   ]
 
@@ -54,16 +50,15 @@ export default async function SlugJsonLD({
     url: contributor.html_url,
   }))
 
-  const { graphNodes, references } = resolveAuthorsFromFrontmatter(
+  const { authorGraphNodes, authorIds } = resolveAuthorsFromFrontmatter(
     frontmatter.authors ?? frontmatter.author
   )
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
-      ...graphNodes,
+      ...BASE_GRAPH_NODES,
+      ...authorGraphNodes,
       {
         "@type": "WebPage",
         "@id": url,
@@ -71,20 +66,15 @@ export default async function SlugJsonLD({
         description: frontmatter.description,
         url: url,
         inLanguage: locale,
-        author: references,
+        author: authorIds,
         contributor: contributorList,
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: breadcrumbItems,
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#article` },
       },
       {
@@ -95,10 +85,9 @@ export default async function SlugJsonLD({
         image: frontmatter.image
           ? `https://ethereum.org${frontmatter.image}`
           : undefined,
-        author: references,
+        author: authorIds,
         contributor: contributorList,
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: frontmatter.published,
         mainEntityOfPage: url,
         about: {

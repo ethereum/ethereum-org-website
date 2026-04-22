@@ -2,15 +2,12 @@ import type { VideoFrontmatter } from "@/lib/interfaces"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-  resolveAuthorsFromFrontmatter,
-} from "@/lib/utils/jsonld"
 import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
+import { BASE_GRAPH_NODES, ORGANIZATION } from "@/lib/jsonld/constants"
+import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 
 export default function VideoPageJsonLD({
   locale,
@@ -28,10 +25,10 @@ export default function VideoPageJsonLD({
   // Resolve a known Person or Organization if one matches the author
   // string. Otherwise fall back to an anonymous Person using the raw
   // value.
-  const { graphNodes } = resolveAuthorsFromFrontmatter(frontmatter.author)
+  const { authorGraphNodes } = resolveAuthorsFromFrontmatter(frontmatter.author)
   const creator =
-    graphNodes.length > 0
-      ? { "@id": graphNodes[0]["@id"] }
+    authorGraphNodes.length > 0
+      ? { "@id": authorGraphNodes[0]["@id"] }
       : { "@type": "Person" as const, name: frontmatter.author }
 
   const videoNode: Record<string, unknown> = {
@@ -49,6 +46,7 @@ export default function VideoPageJsonLD({
     educationalLevel: frontmatter.educationLevel,
     inLanguage: frontmatter.lang,
     creator,
+    publisher: ORGANIZATION.ETHEREUM_FOUNDATION,
     isAccessibleForFree: true,
     isFamilyFriendly: true,
   }
@@ -63,12 +61,7 @@ export default function VideoPageJsonLD({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
-      ...graphNodes,
-      videoNode,
-    ],
+    "@graph": [...BASE_GRAPH_NODES, ...authorGraphNodes, videoNode],
   }
 
   return <PageJsonLD structuredData={jsonLd} />

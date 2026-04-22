@@ -13,7 +13,7 @@ import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
-import { useEthPrice } from "../../../../hooks/useEthPrice"
+import { useGasEthPrice } from "../../../../hooks/useGasEthPrice"
 import {
   BASE_ANIMATION_DELAY_SEC,
   defaultTokenBalances,
@@ -41,7 +41,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
       image: NFTImage,
     },
   ]
-  const fetchedPrice = useEthPrice()
+  const { ethPrice: fetchedPrice } = useGasEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
     () =>
