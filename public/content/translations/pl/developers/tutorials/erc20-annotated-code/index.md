@@ -454,7 +454,7 @@ Funkcja `transfer` jest wywoływana w celu przesłania tokenów z konta nadawcy 
 
 Funkcja `_transfer` wykonuje właściwą pracę. Jest to funkcja prywatna, która może być wywoływana tylko przez inne funkcje kontraktu. Zgodnie z konwencją funkcje prywatne są nazywane `_<coś>`, tak samo jak zmienne stanu.
 
-Zazwyczaj w Solidity używamy `msg.sender` dla nadawcy wiadomości. Jednakże psuje to [OpenGSN](http://opengsn.org/). Jeśli chcemy zezwolić na transakcje bez etheru za pomocą naszego tokena, musimy użyć `_msgSender()`. Zwraca `msg.sender` dla normalnych transakcji, ale dla transakcji bez etheru zwraca oryginalnego sygnatariusza, a nie kontrakt, który przekazał wiadomość.
+Zazwyczaj w Solidity używamy `msg.sender` dla nadawcy wiadomości. Jednakże psuje to [OpenGSN](https://opengsn.org/). Jeśli chcemy zezwolić na transakcje bez etheru za pomocą naszego tokena, musimy użyć `_msgSender()`. Zwraca `msg.sender` dla normalnych transakcji, ale dla transakcji bez etheru zwraca oryginalnego sygnatariusza, a nie kontrakt, który przekazał wiadomość.
 
 ### Funkcje przydziału {#allowance-functions}
 

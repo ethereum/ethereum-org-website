@@ -74,6 +74,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return <a {...props} />
   }
 
+  href = url.normalizeHref(href)
+
   const isActive = url.isHrefActive(href, pathname || "", isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
   const isFile = url.isFile(href)

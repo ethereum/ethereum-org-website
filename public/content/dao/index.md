@@ -116,7 +116,7 @@ _Typically used for more closer-knit, human-centric organizations like charities
 
 #### A famous example {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
+[MolochDAO](https://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. They require a proposal for membership so the group can assess whether you have the necessary expertise and capital to make informed judgments about potential grantees. You can't just buy access to the DAO on the open market.
 
 ### Reputation-based membership {#reputation-based-membership}
 

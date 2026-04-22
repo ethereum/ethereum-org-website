@@ -58,15 +58,15 @@ Ugavi wa siku zijazo wa Ethereum haujarekebishwa-inategemea tofauti kadhaa:
 1. **Kushiriki kwa kushikilia**:
    - Waidhinishaji zaidi wanaojiunga na mtandao inamaanisha zawadi zaidi za ETH zinasambazwa.
    - Wathibitishaji wachache wanaoshiriki wanaweza kupunguza utoaji.
-   - Pata maelezo zaidi kuhusu [staking](/roadmap/).
+   - Pata maelezo zaidi kuhusu [staking](/staking/).
 
 2. **Shughuli ya Mtandao**:
    - Kiasi kikubwa cha miamala husababisha ETH zaidi kuchomwa, uwezekano wa kukomesha au kuzidi utoaji.
-   - Soma kuhusu [ada za muamala](/watengenezaji/hati/ada/) na jinsi zinavyoathiri upotezaji.
+   - Soma kuhusu [ada za muamala](/developers/docs/gas/) na jinsi zinavyoathiri upotezaji.
 
 3. **Maboresho ya Itifaki**:
    - Mabadiliko yajayo kwa msimbo wa Ethereum yanaweza kurekebisha zawadi kubwa au mifumo ya upotezaji, na kuchagiza zaidi mienendo ya usambazaji.
-   - Endelea kusasishwa na [mpango wa maendeleo wa Ethereum](/map/map/).
+   - Endelea kusasishwa na [mpango wa maendeleo wa Ethereum](/roadmap/).
 
 ## Muhtasari: Ugavi wa ETH, Utoaji, na Nini Kinachofuata {#recap}
 

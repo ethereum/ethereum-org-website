@@ -17,7 +17,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-في المرة الأخيرة، ألقينا نظرة على [الصورة الكبيرة للغة سوليديتي](https://soliditydeveloper.com/solidity-overview-2020) وذكرنا بالفعل [create-eth-app](https://github.com/PaulRBerg/create-eth-app). ستكتشف الآن كيفية استخدامه، وما هي الميزات المدمجة والأفكار الإضافية حول كيفية التوسع فيه. بدأه Paul Razvan Berg، مؤسس [سابليه](http://sablier.com/)، وهذا التطبيق سيعطي دفعة قوية لتطوير واجهة التطبيق لديك ويأتي مع العديد من عمليات التكامل الاختيارية للاختيار من بينها.
+في المرة الأخيرة، ألقينا نظرة على [الصورة الكبيرة للغة سوليديتي](https://soliditydeveloper.com/solidity-overview-2020) وذكرنا بالفعل [create-eth-app](https://github.com/PaulRBerg/create-eth-app). ستكتشف الآن كيفية استخدامه، وما هي الميزات المدمجة والأفكار الإضافية حول كيفية التوسع فيه. بدأه Paul Razvan Berg، مؤسس [سابليه](https://sablier.com/)، وهذا التطبيق سيعطي دفعة قوية لتطوير واجهة التطبيق لديك ويأتي مع العديد من عمليات التكامل الاختيارية للاختيار من بينها.
 
 ## التثبيت {#installation}
 

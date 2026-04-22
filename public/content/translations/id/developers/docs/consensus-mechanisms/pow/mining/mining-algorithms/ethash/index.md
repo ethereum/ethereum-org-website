@@ -49,7 +49,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### Penggunaan 'SHA3' {#sha3}
 
-Pengembangan Ethereum bertepatan dengan pengembangan standar SHA3, dan proses standar membuat perubahan terlambat pada padding dari algoritma hash yang difinalisasi, sehingga hash "sha3_256" dan "sha3_512" Ethereum bukanlah hash sha3 standar, melainkan varian yang sering disebut sebagai "Keccak-256" dan "Keccak-512" dalam konteks lain. Lihat diskusi, mis., [di sini](https://eips.ethereum.org/EIPS/eip-1803), [di sini](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), atau [di sini](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Pengembangan Ethereum bertepatan dengan pengembangan standar SHA3, dan proses standar membuat perubahan terlambat pada padding dari algoritma hash yang difinalisasi, sehingga hash "sha3_256" dan "sha3_512" Ethereum bukanlah hash sha3 standar, melainkan varian yang sering disebut sebagai "Keccak-256" dan "Keccak-512" dalam konteks lain. Lihat diskusi, mis., [di sini](https://eips.ethereum.org/EIPS/eip-1803), [di sini](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), atau [di sini](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Harap diingat hal tersebut karena hash "sha3" dirujuk dalam deskripsi algoritma di bawah ini.
 

@@ -504,7 +504,7 @@ _通貨発行は線形であるにもかかわらず、Bitcoinと同様に、時
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [再利用可能なプルーフ・オブ・ワーク](https://nakamotoinstitute.org/finney/rpow/)
 6. [所有者権限付きの安全な財産権](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [ビットコインホワイトペーパー](http://bitcoin.org/bitcoin.pdf)
+7. [ビットコインホワイトペーパー](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Zookoの三角形](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [カラードコインホワイトペーパー](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

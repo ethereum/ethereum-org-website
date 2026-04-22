@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## 附註範例 {#annotated-examples}
 
-以下是一些用 Solidity 編寫的範例。 如果你想試用這些程式碼，可以在 [Remix](http://remix.ethereum.org) 中與其互動。
+以下是一些用 Solidity 編寫的範例。 如果你想試用這些程式碼，可以在 [Remix](https://remix.ethereum.org) 中與其互動。
 
 ### Hello world {#hello-world}
 

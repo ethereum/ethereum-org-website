@@ -37,21 +37,21 @@ incomplete: true
 
 **ప్రస్తుతానికి సెటప్‌ను దాటవేసి, నేరుగా నమూనాలకు వెళ్లాలనుకుంటున్నారా?**
 
-- [Playground](http://playground.nethereum.com/) - బ్రౌజర్ ద్వారా ఇతీరియముతో ఇంటరాక్ట్ అవ్వండి మరియు Nethereum ఎలా ఉపయోగించాలో తెలుసుకోండి.
-  - ఖాతా నిల్వను క్వెరీ చేయండి [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - ERC20 స్మార్ట్ కాంట్రాక్ట్ నిల్వను క్వెరీ చేయండి [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - ఒక ఖాతాకు ఈథర్‌ను బదిలీ చేయండి [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - బ్రౌజర్ ద్వారా ఇతీరియముతో ఇంటరాక్ట్ అవ్వండి మరియు Nethereum ఎలా ఉపయోగించాలో తెలుసుకోండి.
+  - ఖాతా నిల్వను క్వెరీ చేయండి [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - ERC20 స్మార్ట్ కాంట్రాక్ట్ నిల్వను క్వెరీ చేయండి [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - ఒక ఖాతాకు ఈథర్‌ను బదిలీ చేయండి [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... మరిన్ని!
 
 ## మధ్యస్థ వ్యాసాలు {#intermediate-articles}
 
-- [Nethereum వర్క్‌బుక్/నమూనా జాబితా](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Nethereum వర్క్‌బుక్/నమూనా జాబితా](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [మీ స్వంత డెవలప్‌మెంట్ టెస్ట్‌చైన్‌లను డిప్లాయ్ చేయండి](https://github.com/Nethereum/Testchains)
 - [సాలిడిటీ కోసం VSCode కోడ్‌జెన్ ప్లగిన్](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [యూనిటీ మరియు ఇతీరియము: ఎందుకు మరియు ఎలా](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [ఇతీరియము డాప్స్ కోసం ASP.NET కోర్ వెబ్ APIని సృష్టించండి](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [సప్లై చైన్ ట్రాకింగ్ సిస్టమ్‌ను అమలు చేయడానికి Nethereum Web3ని ఉపయోగించడం](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum బ్లాక్ ప్రాసెసింగ్](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [C# ప్లేగ్రౌండ్ నమూనా](http://playground.nethereum.com/csharp/id/1025)తో
+- [Nethereum బ్లాక్ ప్రాసెసింగ్](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [C# ప్లేగ్రౌండ్ నమూనా](https://playground.nethereum.com/csharp/id/1025)తో
 - [Nethereum వెబ్‌సాకెట్ స్ట్రీమింగ్](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido మరియు Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum మరియు Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ incomplete: true
 
 ## .NET ప్రాజెక్ట్‌లు, టూల్స్ మరియు ఇతర సరదా విషయాలు {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _బ్రౌజర్‌లో Nethereum కోడ్ స్నిప్పెట్‌లను కంపైల్ చేయండి, సృష్టించండి మరియు రన్ చేయండి_
+- [Nethereum Playground](https://playground.nethereum.com/) - _బ్రౌజర్‌లో Nethereum కోడ్ స్నిప్పెట్‌లను కంపైల్ చేయండి, సృష్టించండి మరియు రన్ చేయండి_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazorలో UIతో Nethereum కోడ్‌జెన్_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _ఒక .NET Wasm SPA లైట్ బ్లాక్‌చైన్ ఎక్స్‌ప్లోరర్ మరియు సాధారణ వాలెట్_
 - [Wonka బిజినెస్ రూల్స్ ఇంజిన్](https://docs.nethereum.com/en/latest/wonka/) - _ఒక బిజినెస్ రూల్స్ ఇంజిన్ (.NET ప్లాట్‌ఫారమ్ మరియు ఇతీరియము ప్లాట్‌ఫారమ్ రెండింటికీ) ఇది అంతర్లీనంగా మెటాడేటా-ఆధారితమైనది_
@@ -78,7 +78,7 @@ incomplete: true
 
 Nethereumలో, మేము ఎక్కువగా [Gitter](https://gitter.im/Nethereum/Nethereum)లో సమయం గడుపుతాము, ఇక్కడ ప్రతిఒక్కరూ ప్రశ్నలు అడగడానికి/సమాధానం ఇవ్వడానికి, సహాయం పొందడానికి లేదా కేవలం సేద తీరడానికి స్వాగతం. [Nethereum GitHub రిపోజిటరీ](https://github.com/Nethereum)లో ఒక PR చేయడానికి లేదా ఒక సమస్యను తెరవడానికి సంకోచించకండి, లేదా మా వద్ద ఉన్న అనేక సైడ్/నమూనా ప్రాజెక్ట్‌లను బ్రౌజ్ చేయండి. మీరు మమ్మల్ని [Discord](https://discord.gg/jQPrR58FxX)లో కూడా కనుగొనవచ్చు!
 
-మీరు Nethermindకు కొత్తవారై, ప్రారంభించడానికి సహాయం అవసరమైతే, మా [Discord](http://discord.gg/PaCMRFdvWT)లో చేరండి. మీ ప్రశ్నలకు సమాధానం ఇవ్వడానికి మా డెవలపర్లు అందుబాటులో ఉన్నారు. [Nethermind GitHub రిపోజిటరీ](https://github.com/NethermindEth/nethermind)లో ఒక PR తెరవడానికి లేదా ఏవైనా సమస్యలను లేవనెత్తడానికి సంకోచించకండి.
+మీరు Nethermindకు కొత్తవారై, ప్రారంభించడానికి సహాయం అవసరమైతే, మా [Discord](https://discord.gg/PaCMRFdvWT)లో చేరండి. మీ ప్రశ్నలకు సమాధానం ఇవ్వడానికి మా డెవలపర్లు అందుబాటులో ఉన్నారు. [Nethermind GitHub రిపోజిటరీ](https://github.com/NethermindEth/nethermind)లో ఒక PR తెరవడానికి లేదా ఏవైనా సమస్యలను లేవనెత్తడానికి సంకోచించకండి.
 
 ## ఇతర సమగ్ర జాబితాలు {#other-aggregated-lists}
 

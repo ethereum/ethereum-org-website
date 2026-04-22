@@ -207,7 +207,7 @@ Wydarzenia umożliwiają inteligentnemu kontraktowi komunikację z frontendem or
 
 ## Przykłady z adnotacjami {#annotated-examples}
 
-Są to niektóre przykłady napisane w Solidity. Jeśli chcesz pobawić się kodem, możesz wejść z nimi w interakcję w [Remix](http://remix.ethereum.org).
+Są to niektóre przykłady napisane w Solidity. Jeśli chcesz pobawić się kodem, możesz wejść z nimi w interakcję w [Remix](https://remix.ethereum.org).
 
 ### Witaj, świecie {#hello-world}
 

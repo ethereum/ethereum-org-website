@@ -49,7 +49,7 @@ Quá trình này sẽ không quá 10 phút.
 
 ## 7. Thêm một mạng lớp 2 vào ví của bạn (không bắt buộc)
 
-Bạn có thể sử dụng [chainlist.org](http://chainlist.org) để tìm chi tiết RPC của mạng. Một khi mạng lưới đã được thêm vào và giao dịch hoạt tất bạn sẽ thấy Token trong ví của bạn. <br />
+Bạn có thể sử dụng [chainlist.org](https://chainlist.org) để tìm chi tiết RPC của mạng. Một khi mạng lưới đã được thêm vào và giao dịch hoạt tất bạn sẽ thấy Token trong ví của bạn. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

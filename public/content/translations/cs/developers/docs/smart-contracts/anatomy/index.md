@@ -207,7 +207,7 @@ Události umožňují vašemu chytrému kontraktu komunikovat s vaším frontend
 
 ## Příklady s poznámkami {#annotated-examples}
 
-Zde jsou příklady napsané v Solidity. Pokud si chcete s kódem pohrát, můžete s ním interagovat v [Remixu](http://remix.ethereum.org).
+Zde jsou příklady napsané v Solidity. Pokud si chcete s kódem pohrát, můžete s ním interagovat v [Remixu](https://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 

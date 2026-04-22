@@ -37,21 +37,21 @@ incomplete: true
 
 **هل تريد تخطي الإعداد الآن والانتقال مباشرة إلى النماذج؟**
 
-- [Playground](http://playground.nethereum.com/) - تفاعل مع إيثريوم وتعلم كيفية استخدام نيثيريوم من خلال المتصفح.
-  - الاستعلام عن رصيد الحساب [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - الاستعلام عن رصيد العقد الذكي ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - تحويل إيثر إلى حساب [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - تفاعل مع إيثريوم وتعلم كيفية استخدام نيثيريوم من خلال المتصفح.
+  - الاستعلام عن رصيد الحساب [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - الاستعلام عن رصيد العقد الذكي ERC20 [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - تحويل إيثر إلى حساب [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... والمزيد!
 
 ## المقالات الوسيطة {#intermediate-articles}
 
-- [كُتيِّب عمل/قائمة عينات نيثيريوم](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [كُتيِّب عمل/قائمة عينات نيثيريوم](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [انشر سلاسل اختبار التطوير الخاصة بك](https://github.com/Nethereum/Testchains)
 - [المكون الإضافي لتوليد التعليمات البرمجية لـ سوليديتي في في إس كود](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity وإيثريوم: لماذا وكيف](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [إنشاء واجهة برمجة تطبيقات الويب ASP.NET Core للتطبيقات اللامركزية على إيثريوم](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [استخدام نيثيريوم ويب3 لتنفيذ نظام تتبع سلسلة التوريد](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [معالجة كتل نيثيريوم](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/)، مع [عينة C# Playground](http://playground.nethereum.com/csharp/id/1025)
+- [معالجة كتل نيثيريوم](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/)، مع [عينة C# Playground](https://playground.nethereum.com/csharp/id/1025)
 - [بث نيثيريوم عبر Websocket](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [كاليدو ونيثيريوم](https://kaleido.io/kaleido-and-nethereum/)
 - [كوروم ونيثيريوم](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ incomplete: true
 
 ## مشاريع وأدوات دوت نت وأشياء أخرى ممتعة {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [نيثيريوم Playground](http://playground.nethereum.com/) - _تجميع وإنشاء وتشغيل قصاصات أكواد نيثيريوم في المتصفح_
+- [نيثيريوم Playground](https://playground.nethereum.com/) - _تجميع وإنشاء وتشغيل قصاصات أكواد نيثيريوم في المتصفح_
 - [نيثيريوم Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _مولد أكواد نيثيريوم مع واجهة مستخدم في Blazor_
 - [نيثيريوم Blazor](https://github.com/Nethereum/NethereumBlazor) - _مستكشف بلوكتشين خفيف ومحفظة بسيطة دوت نت Wasm SPA_
 - [محرك قواعد الأعمال Wonka](https://docs.nethereum.com/en/latest/wonka/) - _محرك قواعد أعمال (لكل من منصة دوت نت ومنصة إيثريوم) يعتمد بطبيعته على البيانات الوصفية_
@@ -78,7 +78,7 @@ incomplete: true
 
 في نيثيريوم، نتواجد في الغالب على [جيتر](https://gitter.im/Nethereum/Nethereum) حيث نرحب بالجميع لطرح الأسئلة والإجابة عليها، أو الحصول على المساعدة، أو مجرد الاسترخاء. لا تتردد في تقديم طلب سحب أو فتح مشكلة على [مستودع نيثيريوم على غيت هاب](https://github.com/Nethereum)، أو يمكنك فقط تصفح العديد من المشاريع الجانبية/العينات التي لدينا. يمكنك أيضًا أن تجدنا على [ديسكورد](https://discord.gg/jQPrR58FxX)!
 
-إذا كنت جديدًا في نيذرمايند وتحتاج إلى مساعدة للبدء، انضم إلى [ديسكورد](http://discord.gg/PaCMRFdvWT) الخاص بنا. مطورونا على استعداد للإجابة على أسئلتك. لا تتردد في فتح طلب سحب أو طرح أي مشكلات على [مستودع نيذرمايند على غيت هاب](https://github.com/NethermindEth/nethermind).
+إذا كنت جديدًا في نيذرمايند وتحتاج إلى مساعدة للبدء، انضم إلى [ديسكورد](https://discord.gg/PaCMRFdvWT) الخاص بنا. مطورونا على استعداد للإجابة على أسئلتك. لا تتردد في فتح طلب سحب أو طرح أي مشكلات على [مستودع نيذرمايند على غيت هاب](https://github.com/NethermindEth/nethermind).
 
 ## قوائم مجمعة أخرى {#other-aggregated-lists}
 

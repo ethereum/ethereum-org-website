@@ -49,7 +49,7 @@ Tento proces by neměl trvat déle než 10 minut.
 
 ## 7. Přidejte vybranou síť 2. vrstvy do své peněženky (volitelné)
 
-Podrobnosti o síti RPC můžete zjistit pomocí [chainlist.org](http://chainlist.org). Po přidání sítě a dokončení transakce byste měli tokeny vidět ve své peněžence. <br />
+Podrobnosti o síti RPC můžete zjistit pomocí [chainlist.org](https://chainlist.org). Po přidání sítě a dokončení transakce byste měli tokeny vidět ve své peněžence. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

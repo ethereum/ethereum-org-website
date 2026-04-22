@@ -111,7 +111,7 @@ lang: hi
 **नैथेरियम -** **_ब्लॉकचेन के लिए एक ओपन सोर्स डॉट नेट इंटीग्रेशन लाइब्रेरी।_**
 
 - [गिटहब](https://github.com/Nethereum/Nethereum)
-- [प्रलेखन](http://docs.nethereum.com/en/latest/)
+- [प्रलेखन](https://docs.nethereum.com/en/latest/)
 - [डिस्कॉर्ड](https://discord.com/invite/jQPrR58FxX)
 
 **पाइथन टूलिंग -** **_पाइथन के माध्यम से एथेरियम इंटरेक्शन के लिए विभिन्न प्रकार की लाइब्रेरी।_**

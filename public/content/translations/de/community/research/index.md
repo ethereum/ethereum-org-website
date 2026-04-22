@@ -247,7 +247,7 @@ Blockspace-Märkte regeln die Aufnahme von Endbenutzer-Transaktionen, entweder d
 #### Aktuelle Forschung {#recent-research-10}
 
 - [Videopräsentation zu multidimensionalem EIP-1559](https://youtu.be/QbR4MTgnCko)
-- [Domänenübergreifender MEV](http://arxiv.org/abs/2112.01472)
+- [Domänenübergreifender MEV](https://arxiv.org/abs/2112.01472)
 - [MEV-Auktionen](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Proof-of-Stake-Anreize {#proof-of-stake-incentives}

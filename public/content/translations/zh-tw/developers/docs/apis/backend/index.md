@@ -105,7 +105,7 @@ lang: zh-tw
 **Nethereum -** **_區塊鏈的開源 .NET 整合程式庫。_**
 
 - [Github](https://github.com/Nethereum/Nethereum)
-- [文檔](http://docs.nethereum.com/en/latest/)
+- [文檔](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_透過 Python 進行以太坊互動的各種程式庫。_**

@@ -501,7 +501,7 @@ _연속적인 통화 발행에도 불구하고, 공급 증가율은 비트코인
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [재사용 가능한 작업 증명](https://nakamotoinstitute.org/finney/rpow/)
 6. [소유자 권한이 있는 안전한 자산 소유권](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [비트코인 백서](http://bitcoin.org/bitcoin.pdf)
+7. [비트코인 백서](https://bitcoin.org/bitcoin.pdf)
 8. [네임코인](https://namecoin.org/)
 9. [주코의 삼각형(Zooko's triangle)](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [컬러 코인 백서](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

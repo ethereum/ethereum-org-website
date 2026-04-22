@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## تشریح شدہ مثالیں {#annotated-examples}
 
-یہ Solidity میں لکھی گئی کچھ مثالیں ہیں۔ اگر آپ کوڈ کے ساتھ تجربہ کرنا چاہتے ہیں، تو آپ [Remix](http://remix.ethereum.org) میں ان کے ساتھ تعامل کر سکتے ہیں۔
+یہ Solidity میں لکھی گئی کچھ مثالیں ہیں۔ اگر آپ کوڈ کے ساتھ تجربہ کرنا چاہتے ہیں، تو آپ [Remix](https://remix.ethereum.org) میں ان کے ساتھ تعامل کر سکتے ہیں۔
 
 ### Hello world {#hello-world}
 

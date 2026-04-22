@@ -80,7 +80,7 @@ def to_binary(x):
 - बाइट '\\x00' = `[ 0x00 ]`
 - बाइट '\\x0f' = `[ 0x0f ]`
 - बाइट्स '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- तीनचे [संच सैद्धांतिक प्रतिनिधित्व](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- तीनचे [संच सैद्धांतिक प्रतिनिधित्व](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - "Lorem ipsum dolor sit amet, consectetur adipisicing elit" ही स्ट्रिंग = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## RLP डीकोडिंग {#rlp-decoding}

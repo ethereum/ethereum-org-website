@@ -94,7 +94,7 @@ def to_binary(x):
 - byte '\\x00' = `[ 0x00 ]`
 - byte '\\x0f' = `[ 0x0f ]`
 - byte '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- [representasi teori himpunan](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) dari tiga, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- [representasi teori himpunan](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) dari tiga, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
 ## Dekode RLP {#rlp-decoding}

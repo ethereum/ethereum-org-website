@@ -247,7 +247,7 @@ Blok alanı piyasaları, son kullanıcı işlemlerinin doğrudan Ethereum (Katma
 #### Yakın geçmişteki araştırmalar {#recent-research-10}
 
 - [Çok boyutlu EIP-1559 video sunumu](https://youtu.be/QbR4MTgnCko)
-- [Alanlar arası MEV](http://arxiv.org/abs/2112.01472)
+- [Alanlar arası MEV](https://arxiv.org/abs/2112.01472)
 - [MEV mezatları](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Hisse ispatı teşvikleri {#proof-of-stake-incentives}
