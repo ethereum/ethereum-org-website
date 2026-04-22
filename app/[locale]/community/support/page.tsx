@@ -1,7 +1,7 @@
 import { Shield } from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -19,7 +19,12 @@ import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import WindowBox from "@/components/WindowBox"
 
+import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+
+import { sections } from "./data"
+import SupportJsonLD from "./page-jsonld"
 
 const EVENT_CATEGORY = "Support"
 
@@ -31,8 +36,14 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   const t = await getTranslations("page-community-support")
 
+  const { contributors } = await getAppPageContributorInfo(
+    "community/support",
+    locale as Lang
+  )
+
   return (
     <div>
+      <SupportJsonLD locale={locale} contributors={contributors} />
       {/* Hero */}
       <SimpleHero
         breadcrumbs={<Breadcrumbs slug="community/support" startDepth={1} />}
@@ -82,33 +93,33 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 eventAction,
                 items,
               }) => (
-            <WindowBox
-key={titleKey}
-              title={<h3>{t(titleKey)}</h3>}
-              svg={<Svg className={cn(colorClass, "size-8")} />}
-              className="h-fit"
-            >
-              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                <p className="text-body-medium text-sm leading-relaxed">
-                  {t(descriptionKey)}
-                </p>
-{items.map(({ labelKey, href, eventName }) => (
-                <Link
-key={href}
-                  className="hover:bg-background-highlight"
-                  href={href}
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction,
-                    eventName,
-                  }}
+                <WindowBox
+                  key={titleKey}
+                  title={<h3>{t(titleKey)}</h3>}
+                  svg={<Svg className={cn(colorClass, "size-8")} />}
+                  className="h-fit"
                 >
-                  {t(labelKey)}
-                </Link>
-                ))}
-              </div>
-            </WindowBox>
-)
+                  <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
+                    <p className="text-body-medium text-sm leading-relaxed">
+                      {t(descriptionKey)}
+                    </p>
+                    {items.map(({ labelKey, href, eventName }) => (
+                      <Link
+                        key={href}
+                        className="hover:bg-background-highlight"
+                        href={href}
+                        customEventOptions={{
+                          eventCategory: EVENT_CATEGORY,
+                          eventAction,
+                          eventName,
+                        }}
+                      >
+                        {t(labelKey)}
+                      </Link>
+                    ))}
+                  </div>
+                </WindowBox>
+              )
             )}
           </div>
         </Section>
@@ -128,33 +139,33 @@ key={href}
                 eventAction,
                 items,
               }) => (
-            <WindowBox
-key={titleKey}
-              title={<h3>{t(titleKey)}</h3>}
-              svg={<Svg className={cn(colorClass, "size-8")} />}
-              className="h-fit"
-            >
-              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                <p className="text-body-medium text-sm leading-relaxed">
-                  {t(descriptionKey)}
-                </p>
-{items.map(({ labelKey, href, eventName }) => (
-                <Link
-key={href}
-                  className="hover:bg-background-highlight"
-                  href={href}
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction,
-                    eventName,
-                  }}
+                <WindowBox
+                  key={titleKey}
+                  title={<h3>{t(titleKey)}</h3>}
+                  svg={<Svg className={cn(colorClass, "size-8")} />}
+                  className="h-fit"
                 >
-                  {t(labelKey)}
-                </Link>
-                ))}
-              </div>
-            </WindowBox>
-)
+                  <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
+                    <p className="text-body-medium text-sm leading-relaxed">
+                      {t(descriptionKey)}
+                    </p>
+                    {items.map(({ labelKey, href, eventName }) => (
+                      <Link
+                        key={href}
+                        className="hover:bg-background-highlight"
+                        href={href}
+                        customEventOptions={{
+                          eventCategory: EVENT_CATEGORY,
+                          eventAction,
+                          eventName,
+                        }}
+                      >
+                        {t(labelKey)}
+                      </Link>
+                    ))}
+                  </div>
+                </WindowBox>
+              )
             )}
           </div>
         </Section>
