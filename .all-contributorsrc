@@ -14149,6 +14149,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Ale-Bv-Dev",
+      "name": "Ale-Bv-Dev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214505223?v=4",
+      "profile": "https://github.com/Ale-Bv-Dev",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
