@@ -5,18 +5,19 @@ import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 
-import { ETH_TRANSFER_FEE } from "../../constants"
 import { formatWalletToken, formatWalletUsd } from "../../utils"
 
 type SendSummaryProps = {
   chosenAmount: number
   ethPrice: number
+  ethTransferFee: number
   recipient: string
   ethAvailable: number
 }
 export const SendSummary = ({
   chosenAmount,
   ethPrice,
+  ethTransferFee,
   recipient,
 }: SendSummaryProps) => {
   const t = useTranslations("component-wallet-simulator")
@@ -24,7 +25,7 @@ export const SendSummary = ({
 
   const formatChosenAmount = formatWalletUsd(chosenAmount)
 
-  const usdFee = ETH_TRANSFER_FEE * ethPrice
+  const usdFee = ethTransferFee * ethPrice
   return (
     <>
       {/* Top section */}
@@ -62,7 +63,7 @@ export const SendSummary = ({
             {formatWalletUsd(usdFee)}
             <span className="ms-2 text-xs font-normal text-body-medium">
               (
-              {formatWalletToken(ETH_TRANSFER_FEE, locale, {
+              {formatWalletToken(ethTransferFee, locale, {
                 maximumFractionDigits: 6,
               })}{" "}
               ETH)
