@@ -14158,6 +14158,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "rayjun",
+      "name": "rayoo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7517993?v=4",
+      "profile": "https://github.com/rayjun",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
