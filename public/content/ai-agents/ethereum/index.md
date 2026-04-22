@@ -102,8 +102,7 @@ See [AI agents: Payments](/ai-agents/payments/) and [AI agents: Layer 2s](/ai-ag
 
 ## The L2 ecosystem {#the-l2-ecosystem}
 
-Ethereum Mainnet provides the canonical security and settlement layer. Ethereum Layer 2 networks extend this by offering specialized execution environments, with performance and cost profiles tailored to different agent workflows:
-
+Ethereum Mainnet provides the canonical security and settlement layer. Ethereum Layer 2 networks extend this by offering specialized execution environments, with performance and cost profiles tailored to different agent workflows, like:
 - **High-frequency agents**, like those executing many small DeFi operations, benefit from L2s with low per-transaction fees and high throughput.
 - **Privacy-sensitive agents**, like those handling user data or confidential model inputs, may prefer L2s with built-in confidential compute options.
 - **Cross-chain agents**, like those coordinating across multiple protocols, can use L2 bridging infrastructure and cross-chain messaging.
