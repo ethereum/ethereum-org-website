@@ -39,7 +39,7 @@ Popular options with native Ethereum support include:
 - **[ElizaOS](https://elizaos.github.io/eliza/)** — Plugin-based, TypeScript, EVM plugin for smart account support.
 - **[GOAT](https://ohmygoat.dev/)** — TypeScript, 200+ protocol plugins, compatible with all major EVM wallet SDKs.
 - **[Rig](https://rig.rs/)** — Rust, high-performance, suited to agents with latency constraints.
-- **[GAME](https://docs.game.virtuals.io/)** — Modular reasoning engine with structured tool registration.
+- **[GAME](https://docs.game.virtuals.io/)** — Hook-based agent commerce framework (ACP v2.0) for the Virtuals Protocol ecosystem on Base. Not a general-purpose EVM framework.
 
 If you are undecided, ElizaOS and GOAT are generally considered the most beginner-friendly for developers coming from a web3 background.
 
@@ -196,7 +196,7 @@ The framework's reasoning loop decides when to call them. Your smart account's s
 Two setup patterns are most common:
 
 - **Wallet adapter pattern** — used by GOAT and ElizaOS. You wrap your `kernelClient` in a wallet adapter, generate a `tools` object from it, and pass that object directly to the LLM call.
-- **Plugin pattern** — used by ElizaOS and GAME. Ethereum functionality is registered as a named plugin on the agent instance, and the framework handles tool routing internally.
+- **Plugin pattern** — used by ElizaOS. Ethereum functionality is registered as a named plugin on the agent instance, and the framework handles tool routing internally.
 
 ### GOAT: recommended starting point {#goat-quickstart}
 
