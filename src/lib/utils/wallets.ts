@@ -21,15 +21,21 @@ import type {
   WalletRow,
 } from "../types"
 
+// Visual test builds set IS_VISUAL_TEST=true to keep wallet order deterministic
+// across runs. Not tied to USE_MOCK_DATA, which is also used by unit tests and
+// local dev with mocked storage.
+const maybeShuffle = <T>(list: T[]): T[] =>
+  process.env.IS_VISUAL_TEST === "true" ? list : shuffle(list)
+
 export const getSupportedLocaleWallets = (locale: string) =>
-  shuffle(
+  maybeShuffle(
     walletsData.filter((wallet) =>
       wallet.languages_supported.includes(locale as WalletLanguage)
     )
   )
 
 export const getNonSupportedLocaleWallets = (locale: string) =>
-  shuffle(
+  maybeShuffle(
     walletsData.filter(
       (wallet) => !wallet.languages_supported.includes(locale as WalletLanguage)
     )

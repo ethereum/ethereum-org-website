@@ -36,6 +36,7 @@ jobs:
         run: pnpm build
         env:
           USE_MOCK_DATA: "true"
+          IS_VISUAL_TEST: "true"
           NEXT_PUBLIC_BUILD_LOCALES: "en"
 
       - name: Run visual tests
@@ -43,6 +44,7 @@ jobs:
         env:
           HOME: /root
           USE_MOCK_DATA: "true"
+          IS_VISUAL_TEST: "true"
 
       - name: Upload test results
         if: always()
