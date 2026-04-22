@@ -68,7 +68,6 @@ export default async function Layer2PageJsonLD({
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
-        editor: REFERENCE.ETHEREUM_FOUNDATION,
       },
       {
         "@type": "FAQPage",

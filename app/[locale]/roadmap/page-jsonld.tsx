@@ -68,7 +68,6 @@ export default async function RoadmapPageJsonLD({
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
-        editor: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Ethereum Roadmap",

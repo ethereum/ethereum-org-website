@@ -70,7 +70,6 @@ export default async function GetEthPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
-        editor: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: lastEditLocaleTimestamp,
       },
     ],

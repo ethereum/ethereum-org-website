@@ -68,7 +68,6 @@ export default async function TrillionDollarSecurityPageJsonLD({
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
-        editor: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Ethereum Security",

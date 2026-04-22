@@ -68,7 +68,6 @@ export default async function TenYearJsonLD({
         duration: "PT5M30S",
         embedUrl: "https://www.youtube.com/embed/gjwr-7PgpTC",
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
-        editor: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

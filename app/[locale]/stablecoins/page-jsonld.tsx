@@ -60,7 +60,6 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
-        editor: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Stablecoins",

@@ -76,7 +76,6 @@ export default async function Layer2LearnPageJsonLD({
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
-        editor: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: lastEditLocaleTimestamp,
       },
     ],
