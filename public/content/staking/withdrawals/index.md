@@ -77,7 +77,7 @@ Whether a given validator is eligible for a withdrawal or not is determined by t
 
 Check out this explanation of Ethereum staking withdrawals by Finematics:
 
-<YouTube id="RwwU3P9n3uo" />
+<VideoWatch slug="ethereum-staking-withdrawals" />
 
 ### Validator "sweeping" {#validator-sweeping}
 

@@ -13,7 +13,7 @@ ethereum.org'un [davranış kurallarında](/community/code-of-conduct) yer alan 
 ## Geliştiriciler <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) adresinde Ethereum hakkında bilgi edinin ve deneyin
-- Yakınınızdaki bir [ETHGlobal](http://ethglobal.co/) hackathon'una katılın!
+- Yakınınızdaki bir [ETHGlobal](https://ethglobal.co/) hackathon'una katılın!
 - [Uzmanlık alanınız veya tercih ettiğiniz programlama diliyle ilgili projeleri](/developers/docs/programming-languages/) inceleyin
 - [Mutabakat ve Yürütme Katmanı çağrılarını](https://www.youtube.com/@EthereumProtocol/streams) izleyin veya bunlara katılın
 - [Ekosistem Destek Programı'nın istek listesi](https://esp.ethereum.foundation/wishlist/) - Ethereum Ekosistem Destek Programı'nın aktif olarak hibe başvuruları aradığı araçlar, dokümantasyon ve altyapı alanları
@@ -109,7 +109,7 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 - [Kripto Para İş İlanları](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys'te Kariyer](https://consensys.net/careers/)
 - [Kripto İşleri Listesi](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless iş ilanı panosu](https://pallet.xyz/list/bankless/jobs)
+- [Bankless iş ilanı panosu](https://www.bankless.com/jobs)
 - [Web3 İş İlanları](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley İşleri](https://cryptovalley.jobs/)

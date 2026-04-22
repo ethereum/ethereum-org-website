@@ -49,7 +49,7 @@ Proces ten nie powinien zająć więcej niż 10 minut.
 
 ## 7. Dodaj wybraną sieć warstwy 2 do swojego portfela (opcjonalne)
 
-Możesz użyć [chainlist.org](http://chainlist.org), aby znaleźć szczegóły RPC sieci. Po dodaniu sieci i zakończeniu transakcji powinieneś zobaczyć tokeny w swoim portfelu. <br />
+Możesz użyć [chainlist.org](https://chainlist.org), aby znaleźć szczegóły RPC sieci. Po dodaniu sieci i zakończeniu transakcji powinieneś zobaczyć tokeny w swoim portfelu. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

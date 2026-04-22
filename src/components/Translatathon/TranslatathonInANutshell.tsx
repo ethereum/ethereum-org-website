@@ -9,7 +9,7 @@ import settlementImage from "@/public/images/translatathon/settlement.png"
 
 export const TranslatathonInANutshell = () => {
   return (
-    <Flex className="flex-col bg-gradient-to-r from-[#7f7fd5]/20 via-[#86a8e7]/20 to-[#91eae4]/20 px-8 py-16">
+    <Flex className="flex-col bg-linear-to-r from-[#7f7fd5]/20 via-[#86a8e7]/20 to-[#91eae4]/20 px-8 py-16">
       <Flex className="m-auto">
         <h2 className="mb-8 text-3xl">Translatathon essentials</h2>
       </Flex>

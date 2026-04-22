@@ -80,7 +80,7 @@ def to_binary(x):
 - 바이트 '\\x00' = `[ 0x00 ]`
 - 바이트 '\\x0f' = `[ 0x0f ]`
 - 바이트 '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- 3의 [집합론적 표현](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- 3의 [집합론적 표현](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - 문자열 "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ...` , 'e', 'l', 'i', 't' ]`
 
 ## RLP 디코딩 {#rlp-decoding}

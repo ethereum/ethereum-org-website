@@ -149,7 +149,7 @@ const Page = async (props: {
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
@@ -157,7 +157,7 @@ const Page = async (props: {
                       {t("page-apps-all-apps")}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
@@ -189,9 +189,7 @@ const Page = async (props: {
                     ...app,
                     subCategory: app.subCategory.map((tag: string) => {
                       const key = `subcategory-${slugify(tag)}`
-                      return tSubcategory.has(key)
-                        ? tSubcategory(key)
-                        : tag
+                      return tSubcategory.has(key) ? tSubcategory(key) : tag
                     }),
                   })) as AppData[]
                 )}

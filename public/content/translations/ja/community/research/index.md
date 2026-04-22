@@ -247,7 +247,7 @@ lang: ja
 #### 最近の研究 {#recent-research-10}
 
 - [多次元EIP-1559のビデオプレゼンテーション](https://youtu.be/QbR4MTgnCko)
-- [クロスドメインMEV](http://arxiv.org/abs/2112.01472)
+- [クロスドメインMEV](https://arxiv.org/abs/2112.01472)
 - [MEVオークション](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### プルーフ・オブ・ステークのインセンティブ {#proof-of-stake-incentives}

@@ -247,7 +247,7 @@ Blockspace markets govern the inclusion of end-user transactions, either directl
 #### Recent research {#recent-research-10}
 
 - [Multidimensional EIP-1559 video presentation](https://youtu.be/QbR4MTgnCko)
-- [Cross domain MEV](http://arxiv.org/abs/2112.01472)
+- [Cross domain MEV](https://arxiv.org/abs/2112.01472)
 - [MEV auctions](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Proof-of-stake incentives {#proof-of-stake-incentives}

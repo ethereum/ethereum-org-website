@@ -2060,7 +2060,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vibhorkashyap"><img src="https://avatars.githubusercontent.com/u/1714110?v=4?s=100" width="100px;" alt="Vibhor Kashyap"/><br /><sub><b>Vibhor Kashyap</b></sub></a><br /><a href="#maintenance-vibhorkashyap" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/meetrick"><img src="https://avatars.githubusercontent.com/u/19239345?v=4?s=100" width="100px;" alt="Hwangjae Lee"/><br /><sub><b>Hwangjae Lee</b></sub></a><br /><a href="#translation-meetrick" title="Translation">🌍</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://shynur.fun"><img src="https://avatars.githubusercontent.com/u/98227472?v=4?s=100" width="100px;" alt="shynur"/><br /><sub><b>shynur</b></sub></a><br /><a href="#translation-shynur" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://shynur.fun"><img src="https://avatars.githubusercontent.com/u/98227472?v=4?s=100" width="100px;" alt="shynur"/><br /><sub><b>shynur</b></sub></a><br /><a href="#translation-shynur" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ashynur" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/David7877"><img src="https://avatars.githubusercontent.com/u/203911861?v=4?s=100" width="100px;" alt="David7877"/><br /><sub><b>David7877</b></sub></a><br /><a href="#tool-David7877" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://eneskeremaydin.com.tr"><img src="https://avatars.githubusercontent.com/u/46195766?v=4?s=100" width="100px;" alt="Enes Kerem AYDIN"/><br /><sub><b>Enes Kerem AYDIN</b></sub></a><br /><a href="#maintenance-EnesKeremAYDIN" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hexcow"><img src="https://avatars.githubusercontent.com/u/200669683?v=4?s=100" width="100px;" alt="hexcow"/><br /><sub><b>hexcow</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahexcow" title="Bug reports">🐛</a></td>
@@ -2199,6 +2199,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nxxck"><img src="https://avatars.githubusercontent.com/u/48026464?v=4?s=100" width="100px;" alt="nxxck"/><br /><sub><b>nxxck</b></sub></a><br /><a href="#content-nxxck" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Nexonik2"><img src="https://avatars.githubusercontent.com/u/262324427?v=4?s=100" width="100px;" alt="Nexonik"/><br /><sub><b>Nexonik</b></sub></a><br /><a href="#content-nexonik2" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lo996"><img src="https://avatars.githubusercontent.com/u/136587632?v=4?s=100" width="100px;" alt="lo996"/><br /><sub><b>lo996</b></sub></a><br /><a href="#maintenance-lo996" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://didier.krux.co"><img src="https://avatars.githubusercontent.com/u/9531862?v=4?s=100" width="100px;" alt="Didier Krux"/><br /><sub><b>Didier Krux</b></sub></a><br /><a href="#maintenance-didierkrux" title="Maintenance">🚧</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/jadijadi"><img src="https://avatars.githubusercontent.com/u/1290639?v=4?s=100" width="100px;" alt="Jadi"/><br /><sub><b>Jadi</b></sub></a><br /><a href="#maintenance-jadijadi" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>

@@ -13,7 +13,7 @@ Anza kwa kusoma kuhusu dhamira na maadili ya ethereum.org katika [kanuni zetu za
 ## Wasanidi Programu <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Jifunze kuhusu Ethereum na uijaribu katika [ethereum.org/developers/](/developers/)
-- Hudhuria hackathon ya [ETHGlobal](http://ethglobal.co/) karibu nawe!
+- Hudhuria hackathon ya [ETHGlobal](https://ethglobal.co/) karibu nawe!
 - Angalia [miradi inayohusiana na eneo lako la utaalamu au lugha ya programu unayoipenda](/developers/docs/programming-languages/)
 - Tazama au shiriki katika [simu za Safu ya Makubaliano na Utekelezaji](https://www.youtube.com/@EthereumProtocol/streams)
 - [Orodha ya matamanio ya Mpango wa Usaidizi wa Mfumo-ikolojia](https://esp.ethereum.foundation/wishlist/) - maeneo ya zana, nyaraka, na miundombinu ambapo Mpango wa Usaidizi wa Mfumo-ikolojia wa Ethereum unatafuta kikamilifu maombi ya ruzuku
@@ -109,7 +109,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 - [Kazi za Sarafu za Kidigitali](https://cryptocurrencyjobs.co/ethereum/)
 - [Kazi katika ConsenSys](https://consensys.net/careers/)
 - [Orodha ya Kazi za Kripto](https://cryptojobslist.com/ethereum-jobs)
-- [Ubao wa kazi wa Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Ubao wa kazi wa Bankless](https://www.bankless.com/jobs)
 - [Kazi za Web3](https://web3.career)
 - [Jeshi la Web3](https://web3army.xyz/)
 - [Kazi za Crypto Valley](https://cryptovalley.jobs/)

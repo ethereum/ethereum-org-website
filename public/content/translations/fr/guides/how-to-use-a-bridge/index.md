@@ -49,7 +49,7 @@ Cette opération ne devrait pas prendre plus de 10 minutes.
 
 ## 7. Ajoutez le réseau de la seconde couche sélectionnée sur votre portefeuille (facultatif)
 
-Vous pouvez utiliser [chainlist.org](http://chainlist.org) pour trouver les détails RPC du réseau. Une fois le réseau ajouté et la transaction terminée, vous devriez voir les jetons dans votre portefeuille. <br />
+Vous pouvez utiliser [chainlist.org](https://chainlist.org) pour trouver les détails RPC du réseau. Une fois le réseau ajouté et la transaction terminée, vous devriez voir les jetons dans votre portefeuille. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

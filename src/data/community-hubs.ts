@@ -29,7 +29,7 @@ const communityHubs: CommunityHub[] = [
     meetupUrl: "https://luma.com/user/usr-ut3JGCXXuokkPdK",
     banner: HongKongHubBanner,
     brandColor:
-      "bg-gradient-to-b from-[#A4FCF5]/5 to-[#A4FCF5]/10 dark:from-[#A4FCF5]/20 dark:to-[#A4FCF5]/10 border-[#A4FCF5]/20",
+      "bg-linear-to-b from-[#A4FCF5]/5 to-[#A4FCF5]/10 dark:from-[#A4FCF5]/20 dark:to-[#A4FCF5]/10 border-[#A4FCF5]/20",
   },
   {
     id: "rome",
@@ -40,7 +40,7 @@ const communityHubs: CommunityHub[] = [
     meetupUrl: "https://luma.com/user/UrbeHub",
     banner: RomeHubBanner,
     brandColor:
-      "bg-gradient-to-b from-[#AF4796]/5 to-[#AF4796]/10 dark:from-[#AF4796]/20 dark:to-[#AF4796]/10 border-[#AF4796]/20",
+      "bg-linear-to-b from-[#AF4796]/5 to-[#AF4796]/10 dark:from-[#AF4796]/20 dark:to-[#AF4796]/10 border-[#AF4796]/20",
   },
   {
     id: "london",
@@ -48,10 +48,10 @@ const communityHubs: CommunityHub[] = [
     descriptionKey: "page-events-hub-description-london",
     ctaKey: "page-events-hub-cta-default",
     coworkingSignupUrl: "https://hub.encode.club/ethereum",
-    meetupUrl: "https://luma.com/user/ethldn",
+    meetupUrl: "https://luma.com/ethldn",
     banner: LondonHubBanner,
     brandColor:
-      "bg-gradient-to-b from-[#667BBC]/5 to-[#667BBC]/10 dark:from-[#667BBC]/20 dark:to-[#667BBC]/10 border-[#667BBC]/20",
+      "bg-linear-to-b from-[#667BBC]/5 to-[#667BBC]/10 dark:from-[#667BBC]/20 dark:to-[#667BBC]/10 border-[#667BBC]/20",
   },
   {
     id: "berlin",
@@ -63,7 +63,7 @@ const communityHubs: CommunityHub[] = [
     meetupUrl: "https://www.meetup.com/berlin-ethereum-meetup/",
     banner: BerlinHubBanner,
     brandColor:
-      "bg-gradient-to-b from-[#673076]/5 to-[#673076]/10 dark:from-[#673076]/20 dark:to-[#673076]/10 border-[#673076]/20",
+      "bg-linear-to-b from-[#673076]/5 to-[#673076]/10 dark:from-[#673076]/20 dark:to-[#673076]/10 border-[#673076]/20",
   },
   {
     id: "dubai",
@@ -74,7 +74,7 @@ const communityHubs: CommunityHub[] = [
     meetupUrl: "https://luma.com/HadronFC?k=c",
     banner: DubaiHubBanner,
     brandColor:
-      "bg-gradient-to-b from-[#B47E18]/5 to-[#B47E18]/10 dark:from-[#B47E18]/20 dark:to-[#B47E18]/10 border-[#B47E18]/20",
+      "bg-linear-to-b from-[#B47E18]/5 to-[#B47E18]/10 dark:from-[#B47E18]/20 dark:to-[#B47E18]/10 border-[#B47E18]/20",
   },
   {
     id: "lagos",
@@ -85,7 +85,7 @@ const communityHubs: CommunityHub[] = [
     meetupUrl: "https://t.me/+LGAiPevzRNk1ZTM0",
     banner: LagosHubBanner,
     brandColor:
-      "bg-gradient-to-b from-[#0C5681]/5 to-[#0C5681]/10 dark:from-[#0C5681]/20 dark:to-[#0C5681]/10 border-[#0C5681]/20",
+      "bg-linear-to-b from-[#0C5681]/5 to-[#0C5681]/10 dark:from-[#0C5681]/20 dark:to-[#0C5681]/10 border-[#0C5681]/20",
   },
   {
     id: "sf",
@@ -96,7 +96,7 @@ const communityHubs: CommunityHub[] = [
     meetupUrl: "https://luma.com/user/ethereumhouseSF",
     banner: SFHubBanner,
     brandColor:
-      "bg-gradient-to-b from-[#673A32]/5 to-[#673A32]/10 dark:from-[#673A32]/20 dark:to-[#673A32]/10 border-[#673A32]/20",
+      "bg-linear-to-b from-[#673A32]/5 to-[#673A32]/10 dark:from-[#673A32]/20 dark:to-[#673A32]/10 border-[#673A32]/20",
   },
 ]
 

@@ -114,7 +114,7 @@ _Zwykle używane w przypadku organizacji bardziej zwartych i zorientowanych na l
 
 #### Znany przykład {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO koncentruje się na finansowaniu projektów Ethereum. Wymagają one wniosku o członkostwo, tak aby grupa mogła ocenić, czy posiadasz kapitał i wiedzę specjalistyczną niezbędną do dokonania świadomych ocen dotyczących potencjalnych odbiorców grantów. Nie można po prostu kupić dostępu do DAO na otwartym rynku.
+[MolochDAO](https://molochdao.com/) – MolochDAO koncentruje się na finansowaniu projektów Ethereum. Wymagają one wniosku o członkostwo, tak aby grupa mogła ocenić, czy posiadasz kapitał i wiedzę specjalistyczną niezbędną do dokonania świadomych ocen dotyczących potencjalnych odbiorców grantów. Nie można po prostu kupić dostępu do DAO na otwartym rynku.
 
 ### Członkostwo oparte na reputacji {#reputation-based-membership}
 

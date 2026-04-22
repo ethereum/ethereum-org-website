@@ -44,13 +44,13 @@ const SimpleHero = ({
   return (
     <div
       className={cn(
-        "flex w-full flex-col gap-8 px-4 pb-4 pt-11 md:w-1/2 md:px-8",
+        "flex w-full flex-col gap-8 px-4 pt-11 pb-4 md:w-1/2 md:px-8",
         className
       )}
     >
       {breadcrumbs}
       <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">{title}</h1>
-      <div className="text-xl leading-[1.4] text-body-medium">{subtitle}</div>
+      <div className="text-body-medium text-xl leading-[1.4]">{subtitle}</div>
       {buttons && buttons.length > 0 && (
         <div className="flex flex-wrap gap-4">
           {buttons.map((button, index) => (

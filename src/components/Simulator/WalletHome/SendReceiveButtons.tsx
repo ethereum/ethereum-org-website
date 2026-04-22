@@ -1,4 +1,5 @@
 import { QrCode, SendHorizontal } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 import { Flex } from "@/components/ui/flex"
 
@@ -15,6 +16,7 @@ export const SendReceiveButtons = ({
   nav,
   isEnabled = [false, false],
 }: SendReceiveButtonsProps) => {
+  const t = useTranslations("component-wallet-simulator")
   const [isSendEnabled, isReceiveEnabled] = isEnabled
   if (nav && isSendEnabled && isReceiveEnabled)
     throw new Error(
@@ -32,7 +34,7 @@ export const SendReceiveButtons = ({
         isHighlighted={highlightSend}
         icon={SendHorizontal}
       >
-        Send
+        {t("sim-send")}
       </SendReceiveButton>
       <SendReceiveButton
         onClick={nav?.progressStepper}
@@ -41,7 +43,7 @@ export const SendReceiveButtons = ({
         icon={QrCode}
         isAnimated
       >
-        Receive
+        {t("sim-receive")}
       </SendReceiveButton>
     </Flex>
   )

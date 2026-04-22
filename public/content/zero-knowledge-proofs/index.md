@@ -14,7 +14,7 @@ Zero-knowledge proofs first appeared in a 1985 paper, “[The knowledge complexi
 
 Zero-knowledge proofs have improved over the years and they are now being used in several real-world applications.
 
-<YouTube id="fOGdb1CTu5c" />
+<VideoWatch slug="zero-knowledge-proofs-5-levels" />
 
 ## Why do we need zero-knowledge proofs? {#why-zero-knowledge-proofs-are-important}
 

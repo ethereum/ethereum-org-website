@@ -116,7 +116,7 @@ _Tipicamente utilizzata per organizzazioni più unite e incentrate sull'uomo, co
 
 #### Un esempio famoso {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO si concentra sul finanziamento di progetti Ethereum. Richiedono una proposta di adesione in modo che il gruppo possa valutare se si possiedono le competenze e il capitale necessari per esprimere giudizi informati sui potenziali beneficiari. Non è possibile acquistare semplicemente l'accesso alla DAO sul mercato aperto.
+[MolochDAO](https://molochdao.com/) – MolochDAO si concentra sul finanziamento di progetti Ethereum. Richiedono una proposta di adesione in modo che il gruppo possa valutare se si possiedono le competenze e il capitale necessari per esprimere giudizi informati sui potenziali beneficiari. Non è possibile acquistare semplicemente l'accesso alla DAO sul mercato aperto.
 
 ### Appartenenza basata sulla reputazione {#reputation-based-membership}
 

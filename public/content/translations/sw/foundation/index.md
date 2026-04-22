@@ -9,7 +9,7 @@ lang: sw
 
 <Logo/>
 
-[Msingi wa Ethereum](http://ethereum.foundation/) (EF) ni shirika lisilo la faida linalosaidia mfumo ikolojia wa Ethereum. Hufadhili uendelezaji wa itifaki, hukuza mfumo ikolojia, na kutetea Ethereum.
+[Msingi wa Ethereum](https://ethereum.foundation/) (EF) ni shirika lisilo la faida linalosaidia mfumo ikolojia wa Ethereum. Hufadhili uendelezaji wa itifaki, hukuza mfumo ikolojia, na kutetea Ethereum.
 
 EF si kampuni, wala hata shirika lisilo la faida la kawaida. Haidhibiti au kuongoza Ethereum, wala sio shirika pekee linalofadhili maendeleo muhimu ya teknolojia zinazohusiana na Ethereum. EF ni sehemu moja ya [mfumo ikolojia](/community/) mkubwa zaidi.
 

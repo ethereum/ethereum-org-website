@@ -247,7 +247,7 @@ lang: ta
 #### சமீபத்திய ஆராய்ச்சி {#recent-research-10}
 
 - [பரிமாண EIP-1559 காணொளி விளக்கக்காட்சி](https://youtu.be/QbR4MTgnCko)
-- [கிராஸ் டொமைன் MEV](http://arxiv.org/abs/2112.01472)
+- [கிராஸ் டொமைன் MEV](https://arxiv.org/abs/2112.01472)
 - [MEV ஏலங்கள்](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### ப்ரூஃப்-ஆஃப்-ஸ்டேக் ஊக்கத்தொகைகள் {#proof-of-stake-incentives}

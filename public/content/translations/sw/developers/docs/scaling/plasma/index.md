@@ -16,7 +16,7 @@ Unapaswa kuwa na ufahamu mzuri wa mada zote za msingi na uelewa wa hali ya juu w
 
 ## Njozi ni nini?
 
-Njozi ni mfumo wa kuboresha uwezo wa kuongezeka kwa minyororo ya bloku ya umma kama Ethereum. Kama ilivyoelezwa katika [karatasi nyeupe ya Njozi](http://plasma.io/plasma.pdf) ya awali, minyororo ya Njozi hujengwa juu ya mnyororo mwingine wa bloku (unaoitwa "mnyororo mkuu"). Kila "mnyororo wa mtoto" hupanuka kutoka kwa mnyororo mkuu na kwa ujumla hudhibitiwa na mkataba-erevu uliotumwa kwenye mnyororo wa mzazi.
+Njozi ni mfumo wa kuboresha uwezo wa kuongezeka kwa minyororo ya bloku ya umma kama Ethereum. Kama ilivyoelezwa katika [karatasi nyeupe ya Njozi](https://plasma.io/plasma.pdf) ya awali, minyororo ya Njozi hujengwa juu ya mnyororo mwingine wa bloku (unaoitwa "mnyororo mkuu"). Kila "mnyororo wa mtoto" hupanuka kutoka kwa mnyororo mkuu na kwa ujumla hudhibitiwa na mkataba-erevu uliotumwa kwenye mnyororo wa mzazi.
 
 Mkataba wa Njozi hufanya kazi, miongoni mwa mambo mengine, kama [daraja](/developers/docs/bridges/) linalowaruhusu watumiaji kuhamisha mali kati ya Mtandao Mkuu wa Ethereum na mnyororo wa njozi. Ingawa hii inazifanya kuwa sawa na [sidechains](/developers/docs/scaling/sidechains/), minyororo ya njozi hunufaika—angalau, kwa kiasi fulani—kutokana na usalama wa Mtandao Mkuu wa Ethereum. Hii ni tofauti na sidechains ambazo zinawajibika kikamilifu kwa usalama wao.
 

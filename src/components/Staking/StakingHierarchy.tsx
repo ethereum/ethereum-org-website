@@ -72,7 +72,7 @@ const Pill = ({
 }: HTMLAttributes<HTMLParagraphElement>) => (
   <p
     className={cn(
-      "relative m-0 whitespace-nowrap rounded-sm px-1 py-[0.125rem]",
+      "relative m-0 rounded-xs px-1 py-[0.125rem] whitespace-nowrap",
       className
     )}
   >
@@ -96,7 +96,7 @@ const Glyph = ({ glyphIcon: GlyphIcon, className }: GlyphProps) => (
 )
 
 const Content = ({ children }: ChildOnlyProp) => (
-  <Flex className="area-content flex-col gap-4 md:mb-12 md:mt-4">
+  <Flex className="area-content flex-col gap-4 md:mt-4 md:mb-12">
     {children}
   </Flex>
 )
@@ -105,9 +105,9 @@ const StakingHierarchy = () => {
   const { t } = useTranslation("page-staking")
 
   return (
-    <VStack className="gap-16 bg-gradient-staking p-8 md:gap-0 md:rounded-lg">
+    <VStack className="bg-gradient-staking gap-16 p-8 md:gap-0 md:rounded-lg">
       <SectionGrid>
-        <StyledEtherSvg className="size-[100%] text-staking-gold" />
+        <StyledEtherSvg className="text-staking-gold size-[100%]" />
         <Line />
         <Header className="text-staking-gold">
           <HeadingEl>{t("page-staking-hierarchy-solo-h2")}</HeadingEl>
@@ -145,7 +145,7 @@ const StakingHierarchy = () => {
         </Content>
       </SectionGrid>
       <SectionGrid>
-        <StyledEtherSvg className="size-[90%] text-staking-green" />
+        <StyledEtherSvg className="text-staking-green size-[90%]" />
         <Line />
         <Header className="text-staking-green">
           <HeadingEl>{t("page-staking-dropdown-saas")}</HeadingEl>
@@ -181,7 +181,7 @@ const StakingHierarchy = () => {
         </Content>
       </SectionGrid>
       <SectionGrid>
-        <StyledEtherSvg className="size-[80%] text-staking-blue" />
+        <StyledEtherSvg className="text-staking-blue size-[80%]" />
         <Line />
         <Header className="text-staking-blue">
           <HeadingEl>{t("page-staking-dropdown-pools")}</HeadingEl>
@@ -229,7 +229,7 @@ const StakingHierarchy = () => {
         </Content>
       </SectionGrid>
       <SectionGrid>
-        <StyledEtherSvg className="size-[70%] text-staking-red" />
+        <StyledEtherSvg className="text-staking-red size-[70%]" />
         <Line />
         <Header className="text-staking-red">
           <HeadingEl>{t("page-staking-hierarchy-cex-h2")}</HeadingEl>

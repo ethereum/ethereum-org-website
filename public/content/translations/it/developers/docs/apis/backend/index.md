@@ -109,7 +109,7 @@ Queste librerie astraggono gran parte della complessità dell'interazione dirett
 **Nethereum -** **_Una libreria di integrazione .NET open source per la blockchain._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Documentazione](http://docs.nethereum.com/en/latest/)
+- [Documentazione](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Strumenti Python -** **_Varietà di librerie per l'interazione con Ethereum tramite Python._**

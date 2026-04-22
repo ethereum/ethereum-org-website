@@ -207,7 +207,7 @@ Ereignisse (Events) ermöglichen es Ihrem Smart Contract, mit Ihrem Frontend ode
 
 ## Kommentierte Beispiele {#annotated-examples}
 
-Dies sind einige in Solidity geschriebene Beispiele. Wenn Sie mit dem Code spielen möchten, können Sie in [Remix](http://remix.ethereum.org) mit ihnen interagieren.
+Dies sind einige in Solidity geschriebene Beispiele. Wenn Sie mit dem Code spielen möchten, können Sie in [Remix](https://remix.ethereum.org) mit ihnen interagieren.
 
 ### Hello World {#hello-world}
 

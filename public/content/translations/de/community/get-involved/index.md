@@ -13,7 +13,7 @@ Lesen Sie zunächst über die Mission und die Werte von ethereum.org in unserem 
 ## Entwickler <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Erfahren Sie mehr über Ethereum und probieren Sie es aus unter [ethereum.org/developers/](/developers/)
-- Nehmen Sie an einem [ETHGlobal](http://ethglobal.co/)-Hackathon in Ihrer Nähe teil!
+- Nehmen Sie an einem [ETHGlobal](https://ethglobal.co/)-Hackathon in Ihrer Nähe teil!
 - Sehen Sie sich [Projekte an, die mit Ihrem Fachgebiet oder Ihrer bevorzugten Programmiersprache zu tun haben](/developers/docs/programming-languages/)
 - Verfolgen Sie die [Calls der Konsens- und Ausführungsebene](https://www.youtube.com/@EthereumProtocol/streams) oder nehmen Sie daran teil
 - [Wunschliste des Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/) – Bereiche für Tools, Dokumentation und Infrastruktur, in denen das Ethereum Ecosystem Support Program aktiv nach Förderanträgen sucht
@@ -109,7 +109,7 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, öffentliche Güter und
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Karriere bei ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless-Stellenbörse](https://pallet.xyz/list/bankless/jobs)
+- [Bankless-Stellenbörse](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

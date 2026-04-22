@@ -52,7 +52,6 @@ Ethereum.org चे ४० हून अधिक भाषांमध्ये
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - समुदायाद्वारे सांभाळलेली सामग्री, ज्यामध्ये Ethereum, DeFi, NFT, Web3-संबंधित ज्ञानाचा समावेश आहे
 - [123ETH](https://123eth.org/) - Ethereum इकोसिस्टमचे एक पोर्टल
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - क्रिप्टोकरन्सी आणि तिच्या अनुप्रयोगांबद्दल विनामूल्य ऑनलाइन अभ्यासक्रम
-- [Ethereum श्वेतपत्रिका](/zh/whitepaper/) - Ethereum श्वेतपत्रिकेची चीनी आवृत्ती
 
 **Ethereum इकोसिस्टम**
 

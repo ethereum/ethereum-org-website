@@ -52,7 +52,7 @@ ACCESSES = 64                     # liczba dostępów w pętli hashimoto
 Rozwój Ethereum zbiegł się w czasie z rozwojem standardu SHA3, a
 proces standaryzacji wprowadził późną zmianę w dopełnianiu sfinalizowanego algorytmu haszującego, tak że hasze Ethereum
 "sha3_256" i "sha3_512" nie są standardowymi haszami sha3, ale wariantem często określanym
-jako "Keccak-256" i "Keccak-512" w innych kontekstach. Zobacz dyskusję, np. [tutaj](https://eips.ethereum.org/EIPS/eip-1803), [tutaj](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) lub [tutaj](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+jako "Keccak-256" i "Keccak-512" w innych kontekstach. Zobacz dyskusję, np. [tutaj](https://eips.ethereum.org/EIPS/eip-1803), [tutaj](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) lub [tutaj](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Proszę o tym pamiętać, ponieważ hasze „sha3” są przywoływane w poniższym opisie algorytmu.
 

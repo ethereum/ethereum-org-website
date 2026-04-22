@@ -62,7 +62,7 @@ const Page = ({ className, ...props }: FlexProps) => (
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    className="min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%]"
+    className="max-w-full min-w-[280px] flex-[1_0_30%] p-6 md:max-w-[46%]"
     {...props}
   />
 )
@@ -71,14 +71,14 @@ const H2 = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className={cn("mb-8 mt-12 text-2xl md:text-3xl", className)} {...props} />
+  <h2 className={cn("mt-12 mb-8 text-2xl md:text-3xl", className)} {...props} />
 )
 
 const H3 = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h3 className={cn("mb-8 mt-10 text-xl md:text-2xl", className)} {...props} />
+  <h3 className={cn("mt-10 mb-8 text-xl md:text-2xl", className)} {...props} />
 )
 
 const GasPage = ({
@@ -124,7 +124,7 @@ const GasPage = ({
 
   return (
     <Page>
-      <div className="w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20">
+      <div className="from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 w-full bg-linear-to-r">
         <div className="pb-8">
           <PageHero
             content={{
@@ -140,7 +140,7 @@ const GasPage = ({
           />
         </div>
       </div>
-      <Content className="mb-16 mt-16 lg:mb-32">
+      <Content className="mt-16 mb-16 lg:mb-32">
         <Flex className="w-full flex-col items-center lg:flex-row lg:items-start">
           <div className="me-auto w-full flex-[60%] lg:me-2">
             <Alert variant="update" className="mb-8">
@@ -208,7 +208,7 @@ const GasPage = ({
       </Content>
       <Content className="mb-16 lg:mb-32">
         <Flex className="w-full flex-col items-start lg:flex-row">
-          <div className="me-auto ms-auto w-full flex-[60%] lg:me-16 lg:ms-0">
+          <div className="ms-auto me-auto w-full flex-[60%] lg:ms-0 lg:me-16">
             <H3 className="mt-0">
               {t("page-gas-what-causes-high-gas-fees-header")}
             </H3>
@@ -284,7 +284,7 @@ const GasPage = ({
               <ListItem>
                 <Translation id="page-gas:page-gas-how-is-gas-calculated-item-3" />
                 <UnorderedList className="ms-6 list-none gap-3">
-                  <ListItem className="text-sm text-body-medium">
+                  <ListItem className="text-body-medium text-sm">
                     <Translation id="page-gas:page-gas-how-is-gas-calculated-list-item-1" />
                   </ListItem>
                 </UnorderedList>
@@ -294,7 +294,7 @@ const GasPage = ({
               <Translation id="page-gas:page-gas-how-is-gas-calculated-text-2" />
             </p>
           </div>
-          <Table className="min-w-[auto] max-w-full">
+          <Table className="max-w-full min-w-[auto]">
             <TableCaption className="caption-bottom">
               <Translation id="page-gas:page-gas-table-figure" />
             </TableCaption>

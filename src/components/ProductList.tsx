@@ -32,7 +32,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
       {category && (
         <h3
           id={CATEGORY_NAME}
-          className="mb-0 mt-10 border-b-2 border-border pb-4 text-2xl"
+          className="border-border mt-10 mb-0 border-b-2 pb-4 text-2xl"
         >
           {category}
         </h3>
@@ -56,7 +56,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
               key={id || idx}
               color="text"
               className={cn(
-                "mb-0 mt-8 flex pb-4",
+                "mt-8 mb-0 flex pb-4",
                 idx !== content.length - 1 && "border-b",
                 className
               )}
@@ -68,7 +68,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
                     alt={alt}
                     width={66}
                     height={66}
-                    className="rounded-xl shadow-lg dark:shadow-body-light"
+                    className="dark:shadow-body-light rounded-xl shadow-lg"
                   />
                 )}
               </div>
@@ -86,7 +86,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
                   <ButtonLink
                     variant="outline"
                     href={link}
-                    className="ms-0 mt-4 min-h-fit gap-0 self-center rounded-sm px-6 py-1 sm:ms-8 sm:mt-0"
+                    className="ms-0 mt-4 min-h-fit gap-0 self-center rounded-xs px-6 py-1 sm:ms-8 sm:mt-0"
                   >
                     {actionLabel}
                     <span className="sr-only">to {title} website</span>
