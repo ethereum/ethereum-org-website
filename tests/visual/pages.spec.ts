@@ -36,10 +36,9 @@ test.describe("Page Visual Tests", () => {
     test(name, async ({ page }, testInfo) => {
       await page.goto(path, { waitUntil: "domcontentloaded" })
       await page.locator(stableSelector).first().waitFor({ state: "visible" })
-      await page
-        .locator('nav[aria-label="Primary"] .animate-pulse-light')
-        .first()
-        .waitFor({ state: "detached" })
+      await page.waitForFunction(
+        () => document.querySelectorAll('[data-slot="loading"]').length === 0
+      )
       await takeSnapshot(page, testInfo)
     })
   }
