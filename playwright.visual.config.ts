@@ -1,7 +1,12 @@
 import type { ChromaticConfig } from "@chromatic-com/playwright"
-import { defineConfig, devices } from "@playwright/test"
+import { defineConfig } from "@playwright/test"
 
 import baseConfig from "./playwright.config"
+
+const visualUse: ChromaticConfig = {
+  disableAutoSnapshot: true,
+  assetDomains: ["s3-dcl1.ethquokkaops.io"],
+}
 
 export default defineConfig<ChromaticConfig>({
   ...baseConfig,
@@ -11,35 +16,20 @@ export default defineConfig<ChromaticConfig>({
       name: "chromatic-desktop",
       testDir: "./tests/visual",
       outputDir: "./test-results",
-      use: {
-        ...devices["Desktop Chrome"],
-        // 1024 (Tailwind `lg`) keeps full-page snapshots under Chromatic's 25M pixel limit on our longest pages.
-        viewport: { width: 1024, height: 720 },
-        disableAutoSnapshot: true,
-        assetDomains: ["s3-dcl1.ethquokkaops.io"],
-      },
+      // 1024 (Tailwind `lg`) keeps full-page snapshots under Chromatic's 25M pixel limit on our longest pages.
+      use: { ...visualUse, viewport: { width: 1024, height: 720 } },
     },
     {
       name: "chromatic-tablet",
       testDir: "./tests/visual",
       outputDir: "./test-results",
-      use: {
-        ...devices["Desktop Chrome"],
-        viewport: { width: 768, height: 1024 },
-        disableAutoSnapshot: true,
-        assetDomains: ["s3-dcl1.ethquokkaops.io"],
-      },
+      use: { ...visualUse, viewport: { width: 768, height: 1024 } },
     },
     {
       name: "chromatic-mobile",
       testDir: "./tests/visual",
       outputDir: "./test-results",
-      use: {
-        ...devices["Desktop Chrome"],
-        viewport: { width: 375, height: 812 },
-        disableAutoSnapshot: true,
-        assetDomains: ["s3-dcl1.ethquokkaops.io"],
-      },
+      use: { ...visualUse, viewport: { width: 375, height: 812 } },
     },
   ],
 

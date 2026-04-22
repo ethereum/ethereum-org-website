@@ -28,7 +28,7 @@ The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chro
 
 **Imports come from `@chromatic-com/playwright`, not `@playwright/test`.** The two packages re-export `expect` with skewed types, so `expect(...).toHaveCount(0)` misbehaves — prefer `page.waitForFunction` for the loading wait.
 
-**Environment.** `USE_MOCK_DATA=true` and `NEXT_PUBLIC_BUILD_LOCALES=en` are required at build and test time. All paths are `/en/...`.
+**Environment.** `USE_MOCK_DATA=true` and `NEXT_PUBLIC_BUILD_LOCALES=en` are required at build and test time. Paths in the spec are unprefixed (`/wallets/`, not `/en/wallets/`) because `localePrefix: "as-needed"` serves English at the root — adding `/en` would just trigger a redirect.
 
 **Use `domcontentloaded`, not `networkidle`.** Analytics and background fetches keep the network perpetually busy.
 
@@ -37,21 +37,16 @@ The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chro
 ```ts
 import { takeSnapshot, test } from "@chromatic-com/playwright"
 
-const pages: Array<{ name: string; path: string; stableSelector?: string }> = [
-  { name: "Homepage", path: "/en/" },
-  {
-    name: "Docs - Smart Contracts",
-    path: "/en/developers/docs/smart-contracts/",
-    stableSelector: "article#main-content", // DocsLayout renders no <main> wrapper
-  },
+const pages: Array<{ name: string; path: string }> = [
+  { name: "Homepage", path: "/" },
+  { name: "Docs - Smart Contracts", path: "/developers/docs/smart-contracts/" },
   // ...
 ]
 
 test.describe("Page Visual Tests", () => {
-  for (const { name, path, stableSelector = "h1" } of pages) {
+  for (const { name, path } of pages) {
     test(name, async ({ page }, testInfo) => {
       await page.goto(path, { waitUntil: "domcontentloaded" })
-      await page.locator(stableSelector).first().waitFor({ state: "visible" })
       await page.waitForFunction(
         () => document.querySelectorAll('[data-slot="loading"]').length === 0
       )
@@ -60,8 +55,6 @@ test.describe("Page Visual Tests", () => {
   }
 })
 ```
-
-Override `stableSelector` when there's no visible `h1` above the fold or the layout wraps content unusually.
 
 ## Common situations
 
