@@ -2,7 +2,7 @@
 title: Fulu-Osaka (Fusaka)
 description: Learn about the Fusaka protocol upgrade
 lang: en
-authors: ["nixo", "mario-havel"]
+authors: ["Nixo", "Mario Havel"]
 ---
 
 # Fusaka <Emoji text="🦓" /> {#fusaka}

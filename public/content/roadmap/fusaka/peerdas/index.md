@@ -2,7 +2,7 @@
 title: PeerDAS
 description: Learn about PeerDAS as part of the Fusaka Ethereum protocol upgrade
 lang: en
-authors: ["nixo", "mario-havel"]
+authors: ["Nixo", "Mario Havel"]
 ---
 
 # PeerDAS {#peer-das}

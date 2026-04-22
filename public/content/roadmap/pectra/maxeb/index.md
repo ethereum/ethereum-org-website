@@ -2,7 +2,7 @@
 title: Pectra MaxEB
 description: Learn more about MaxEB in the Pectra release
 lang: en
-authors: ["nixo"]
+authors: ["Nixo"]
 ---
 
 # MaxEB {#maxeb}

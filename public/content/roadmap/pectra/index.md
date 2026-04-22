@@ -2,7 +2,7 @@
 title: Prague-Electra (Pectra)
 description: Learn about the Pectra protocol upgrade
 lang: en
-authors: ["nixo", "mario-havel"]
+authors: ["Nixo", "Mario Havel"]
 ---
 
 # Pectra {#pectra}
