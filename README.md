@@ -2203,6 +2203,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/jadijadi"><img src="https://avatars.githubusercontent.com/u/1290639?v=4?s=100" width="100px;" alt="Jadi"/><br /><sub><b>Jadi</b></sub></a><br /><a href="#maintenance-jadijadi" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ale-Bv-Dev"><img src="https://avatars.githubusercontent.com/u/214505223?v=4?s=100" width="100px;" alt="Ale-Bv-Dev"/><br /><sub><b>Ale-Bv-Dev</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAle-Bv-Dev" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
