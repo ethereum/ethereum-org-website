@@ -10,6 +10,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getLocaleYear } from "@/lib/utils/date"
@@ -123,6 +124,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               eventCategory: "Events_conferences",
             }}
           />
+          <p className="text-body-medium mt-8">
+            {t.rich("page-events-data-source-callout", {
+              a: (chunks) => <Link href="https://ethstars.xyz/">{chunks}</Link>,
+            })}
+          </p>
         </Section>
 
         {/* Footer CTA */}

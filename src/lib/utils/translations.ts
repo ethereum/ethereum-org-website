@@ -69,6 +69,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
 
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
   "/": ["page-10-year-anniversary", "page-app-descriptions"],
+  "/wallets/": ["component-wallet-simulator"],
 }
 
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
