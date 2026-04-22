@@ -2,11 +2,11 @@ import type { VideoFrontmatter } from "@/lib/interfaces"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ethereumFoundationOrganization } from "@/lib/utils/jsonld"
 import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
+import { ORGANIZATION } from "@/lib/jsonld/constants"
 
 export default function VideoPageJsonLD({
   locale,
@@ -40,7 +40,7 @@ export default function VideoPageJsonLD({
       "@type": "Person",
       name: frontmatter.author,
     },
-    publisher: ethereumFoundationOrganization,
+    publisher: ORGANIZATION.ETHEREUM_FOUNDATION,
     isAccessibleForFree: true,
     isFamilyFriendly: true,
   }

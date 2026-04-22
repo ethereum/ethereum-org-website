@@ -4,12 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumCommunityReference,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function WhatIsEtherPageJsonLD({
@@ -34,8 +29,7 @@ export default async function WhatIsEtherPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -44,13 +38,8 @@ export default async function WhatIsEtherPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -68,8 +57,8 @@ export default async function WhatIsEtherPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#what-is-ether` },
       },
       {
@@ -78,10 +67,9 @@ export default async function WhatIsEtherPageJsonLD({
         headline: t("page-what-is-ether-title"),
         description: t("page-what-is-ether-meta-description"),
         image: "https://ethereum.org/images/eth.png",
-        author: [ethereumCommunityReference],
-        publisher: ethereumFoundationReference,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationReference,
         about: [
           {
             "@type": "Thing",

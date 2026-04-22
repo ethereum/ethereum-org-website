@@ -5,11 +5,10 @@ import { Lang } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import {
-  ethereumCommunityOrganization,
-  ethereumCommunityReference,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-} from "@/lib/utils/jsonld"
+  ORGANIZATION,
+  ETHEREUM_ORG_WEBSITE,
+  REFERENCE,
+} from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function IndexPageJsonLD({
@@ -24,13 +23,11 @@ export default async function IndexPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
+      ORGANIZATION.ETHEREUM_FOUNDATION,
+      ORGANIZATION.ETHEREUM_COMMUNITY,
       {
-        "@type": "WebSite",
-        "@id": "https://ethereum.org/#website",
+        ...ETHEREUM_ORG_WEBSITE,
         url: url,
-        name: "ethereum.org",
         description: t("page-index-meta-description"),
         educationalUse: "Self-Paced",
         keywords:
@@ -41,9 +38,9 @@ export default async function IndexPageJsonLD({
           "@type": "EducationalAudience",
           audienceType: "public",
         },
-        publisher: ethereumFoundationReference,
-        maintainer: ethereumFoundationReference,
-        contributor: ethereumCommunityReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        maintainer: REFERENCE.ETHEREUM_FOUNDATION,
+        contributor: REFERENCE.ETHEREUM_COMMUNITY,
         about: {
           "@type": "Thing",
           name: "Ethereum",

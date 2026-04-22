@@ -4,12 +4,7 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumCommunityReference,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function TrillionDollarSecurityPageJsonLD({
@@ -32,8 +27,7 @@ export default async function TrillionDollarSecurityPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -42,13 +36,8 @@ export default async function TrillionDollarSecurityPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -66,8 +55,8 @@ export default async function TrillionDollarSecurityPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#trillion-dollar-security` },
       },
       {
@@ -76,10 +65,9 @@ export default async function TrillionDollarSecurityPageJsonLD({
         headline: t("page-trillion-dollar-security-title"),
         description: t("page-trillion-dollar-security-meta-description"),
         image: "https://ethereum.org/images/trillion-dollar-security/hero.png",
-        author: [ethereumCommunityReference],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Ethereum Security",
