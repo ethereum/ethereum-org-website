@@ -3,6 +3,8 @@
  * These can be imported and reused across page-jsonld.tsx files
  */
 
+import * as Sentry from "@sentry/nextjs"
+
 /**
  * Ethereum Foundation organization definition
  * Can be used as publisher, maintainer, author, etc.
@@ -471,28 +473,49 @@ type KnownEntity =
   | typeof ethereumCommunityOrganization
 
 /**
- * Alias map for entity lookup by display name or GitHub handle.
+ * Alias map for entity lookup.
  * Auto-generated from KNOWN_PERSONS, KNOWN_ORGANIZATIONS, and the core
  * Ethereum Foundation / Community organizations -- no manual maintenance
- * needed. Allows frontmatter to use full name, profile key, or GitHub
- * handle. Keys are lowercased for case-insensitive lookup.
+ * needed. Allows frontmatter to use profile key (for KNOWN_* entries),
+ * display name, or GitHub handle. Keys are lowercased for
+ * case-insensitive lookup.
+ *
+ * Warns (console + Sentry) if two entities claim the same alias.
  */
-const ENTITY_ALIASES: Record<string, KnownEntity> = Object.fromEntries([
-  ...aliasesFor(ethereumFoundationOrganization),
-  ...aliasesFor(ethereumCommunityOrganization),
-  ...Object.values(KNOWN_PERSONS).flatMap((p) => aliasesFor(p)),
-  ...Object.values(KNOWN_ORGANIZATIONS).flatMap((o) => aliasesFor(o)),
-])
+const ENTITY_ALIASES: Record<string, KnownEntity> = buildEntityAliases()
 
-function aliasesFor(entity: KnownEntity): Array<[string, KnownEntity]> {
-  const out: Array<[string, KnownEntity]> = [
-    [entity.name.toLowerCase(), entity],
-  ]
-  for (const url of "sameAs" in entity ? (entity.sameAs ?? []) : []) {
-    const match = url.match(/^https?:\/\/github\.com\/([^/]+)\/?$/)
-    if (match) out.push([match[1].toLowerCase(), entity])
+function buildEntityAliases(): Record<string, KnownEntity> {
+  const aliases: Record<string, KnownEntity> = {}
+
+  const addAlias = (alias: string, entity: KnownEntity) => {
+    const lower = alias.toLowerCase()
+    const existing = aliases[lower]
+    if (existing && existing !== entity) {
+      const message = `JSON-LD alias collision: "${alias}" maps to both ${existing["@id"]} and ${entity["@id"]}. Keeping the first.`
+      console.warn(message)
+      Sentry.captureMessage(message, "warning")
+      return
+    }
+    aliases[lower] = entity
   }
-  return out
+
+  const entries: Array<[string | null, KnownEntity]> = [
+    [null, ethereumFoundationOrganization],
+    [null, ethereumCommunityOrganization],
+    ...Object.entries(KNOWN_PERSONS),
+    ...Object.entries(KNOWN_ORGANIZATIONS),
+  ]
+
+  for (const [key, entity] of entries) {
+    if (key) addAlias(key, entity)
+    addAlias(entity.name, entity)
+    for (const url of "sameAs" in entity ? (entity.sameAs ?? []) : []) {
+      const match = url.match(/^https?:\/\/github\.com\/([^/]+)\/?$/)
+      if (match) addAlias(match[1], entity)
+    }
+  }
+
+  return aliases
 }
 
 /**
@@ -510,14 +533,7 @@ export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
 } {
   const values = !authors ? [] : Array.isArray(authors) ? authors : [authors]
   const entities = values
-    .map((v): KnownEntity | null => {
-      const lower = v.toLowerCase()
-      if (lower in KNOWN_PERSONS)
-        return KNOWN_PERSONS[lower as keyof typeof KNOWN_PERSONS]
-      if (lower in KNOWN_ORGANIZATIONS)
-        return KNOWN_ORGANIZATIONS[lower as keyof typeof KNOWN_ORGANIZATIONS]
-      return ENTITY_ALIASES[lower] ?? null
-    })
+    .map((v): KnownEntity | null => ENTITY_ALIASES[v.toLowerCase()] ?? null)
     .filter((e): e is KnownEntity => e !== null)
 
   return {
