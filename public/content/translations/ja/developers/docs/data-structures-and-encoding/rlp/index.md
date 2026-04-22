@@ -80,7 +80,7 @@ def to_binary(x):
 - バイト `\\x00` = `[ 0x00 ]`
 - バイト `\\x0f` = `[ 0x0f ]`
 - バイト `\\x04\\x00` = `[ 0x82, 0x04, 0x00 ]`
-- 3の[集合論的表現](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers)、`[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- 3の[集合論的表現](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers)、`[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - 文字列 \ `, 'e', 'l', 'i', 't' ]`
 
 ## RLPデコーディング {#rlp-decoding}

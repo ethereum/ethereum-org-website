@@ -114,7 +114,7 @@ _Genellikle hayır kurumları, işçi kolektifleri ve yatırım kulüpleri gibi 
 
 #### Ünlü bir örnek {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO, Ethereum projelerini finanse etmeye odaklanmıştır. Üyelik için teklifi şart koştuğundan grup, potansiyel imtiyaz sahipleri hakkında bilinçli kararlar vermek için yeterli deneyim ve sermayeye sahip olup olmadığınızı değerlendirebilir. Serbest piyasada bir DAO'ya erişim satın alamazsınız.
+[MolochDAO](https://molochdao.com/) – MolochDAO, Ethereum projelerini finanse etmeye odaklanmıştır. Üyelik için teklifi şart koştuğundan grup, potansiyel imtiyaz sahipleri hakkında bilinçli kararlar vermek için yeterli deneyim ve sermayeye sahip olup olmadığınızı değerlendirebilir. Serbest piyasada bir DAO'ya erişim satın alamazsınız.
 
 ### İtibar tabanlı üyelik {#reputation-based-membership}
 

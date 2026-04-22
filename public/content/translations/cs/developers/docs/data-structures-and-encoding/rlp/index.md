@@ -80,7 +80,7 @@ def to_binary(x):
 - bajt '\\x00' = `[ 0x00 ]`
 - bajt '\\x0f' = `[ 0x0f ]`
 - bajty '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- [teoreticko-množinová reprezentace](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) trojky, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- [teoreticko-množinová reprezentace](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) trojky, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - řetězec "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
 ## Dekódování RLP {#rlp-decoding}

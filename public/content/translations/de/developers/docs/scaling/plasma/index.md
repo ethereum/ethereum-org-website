@@ -16,7 +16,7 @@ Sie sollten ein gutes Verständnis aller grundlegenden Themen und ein allgemeine
 
 ## Was ist Plasma?
 
-Plasma ist ein Framework zur Verbesserung der Skalierbarkeit in öffentlichen Blockchains wie Ethereum. Wie im ursprünglichen [Plasma-Whitepaper](http://plasma.io/plasma.pdf) beschrieben, werden Plasma-Chains auf einer anderen Blockchain (einer sogenannten „Root-Chain“) aufgebaut. Jede „Child-Chain“ geht von der Root-Chain aus und wird im Allgemeinen durch einen Smart Contract verwaltet, der auf der Parent-Chain bereitgestellt wird.
+Plasma ist ein Framework zur Verbesserung der Skalierbarkeit in öffentlichen Blockchains wie Ethereum. Wie im ursprünglichen [Plasma-Whitepaper](https://plasma.io/plasma.pdf) beschrieben, werden Plasma-Chains auf einer anderen Blockchain (einer sogenannten „Root-Chain“) aufgebaut. Jede „Child-Chain“ geht von der Root-Chain aus und wird im Allgemeinen durch einen Smart Contract verwaltet, der auf der Parent-Chain bereitgestellt wird.
 
 Der Plasma-Contract fungiert unter anderem als [kettenübergreifende Brücke](/developers/docs/bridges/), die es Benutzern ermöglicht, Vermögenswerte zwischen dem Ethereum Mainnet und der Plasma-Chain zu verschieben. Obwohl sie dadurch [Sidechains](/developers/docs/scaling/sidechains/) ähneln, profitieren Plasma-Chains – zumindest bis zu einem gewissen Grad – von der Sicherheit des Ethereum Mainnets. Dies steht im Gegensatz zu Sidechains, die allein für ihre Sicherheit verantwortlich sind.
 

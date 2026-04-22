@@ -43,6 +43,8 @@ import {
 import { slugify } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
 
@@ -422,38 +424,51 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, application } = params
 
-  // Fetch apps data using the new data-layer function (already cached)
-  const appsData = await getAppsData()
+  try {
+    // Fetch apps data using the new data-layer function (already cached)
+    const appsData = await getAppsData()
 
-  // Handle null case - throw error if required data is missing
-  if (!appsData) {
-    throw new Error("Failed to fetch apps data")
+    // Handle null case - throw error if required data is missing
+    if (!appsData) {
+      throw new Error("Failed to fetch apps data")
+    }
+
+    const app = Object.values(appsData)
+      .flat()
+      .find((app) => slugify(app.name) === application)
+
+    if (!app) {
+      throw new Error(`App not found: ${application}`)
+    }
+
+    const appDescriptions = await getTranslations("page-app-descriptions")
+
+    const title = `Ethereum Apps - ${app.name}` // TODO (i18n): Extract "Ethereum Apps" to namespace
+    const description = getLocalizedDescription(
+      appDescriptions,
+      "app",
+      app.name,
+      app.description
+    )
+
+    return await getMetadata({
+      locale,
+      slug: ["apps", application],
+      title,
+      description,
+    })
+  } catch (error) {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
+
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const app = Object.values(appsData)
-    .flat()
-    .find((app) => slugify(app.name) === application)!
-
-  if (!app) {
-    notFound()
-  }
-
-  const appDescriptions = await getTranslations("page-app-descriptions")
-
-  const title = `Ethereum Apps - ${app.name}` // TODO (i18n): Extract "Ethereum Apps" to namespace
-  const description = getLocalizedDescription(
-    appDescriptions,
-    "app",
-    app.name,
-    app.description
-  )
-
-  return await getMetadata({
-    locale,
-    slug: ["apps", application],
-    title,
-    description,
-  })
 }
 
 export default Page

@@ -202,7 +202,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     key={id}
                     className={cn(
                       "ms-6 w-[calc(100%-4rem)] max-w-96 md:w-96 lg:max-w-[30%] xl:max-w-[22%]",
-                      "flex flex-col justify-between gap-4 rounded-4xl border p-8 shadow-lg",
+                      "rounded-4xl flex flex-col justify-between gap-4 border p-8 shadow-lg",
                       logoBgColor
                     )}
                   >
@@ -259,7 +259,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <ButtonLink
                 href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
                 variant="outline"
-                className="group border-body-light w-full gap-2 rounded-4xl p-5"
+                className="border-body-light rounded-4xl group w-full gap-2 p-5"
                 customEventOptions={{
                   eventCategory: "Events",
                   eventAction: "hubs",
@@ -364,7 +364,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 eventName: "regular_conf",
               }}
             />
-            <p className="!mt-8 text-body-medium">
+            <p className="text-body-medium !mt-8">
               {t.rich("page-events-data-source-callout", {
                 a: (chunks) => (
                   <Link href="https://ethstars.xyz/">{chunks}</Link>
@@ -435,7 +435,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="grid gap-8 md:grid-cols-2">
               {/* Ethereum Everywhere Card */}
-              <div className="from-accent-a/5 to-accent-a/15 dark:from-accent-a/10 dark:to-accent-a/20 flex flex-col gap-y-8 rounded-4xl bg-linear-to-b px-4 py-6 md:p-12">
+              <div className="from-accent-a/5 to-accent-a/15 dark:from-accent-a/10 dark:to-accent-a/20 rounded-4xl bg-linear-to-b flex flex-col gap-y-8 px-4 py-6 md:p-12">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
@@ -499,7 +499,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </div>
 
               {/* Geode Labs Card */}
-              <div className="from-accent-c/5 to-accent-c/15 dark:from-accent-c/10 dark:to-accent-c/20 flex flex-col gap-y-8 rounded-4xl bg-linear-to-b px-4 py-6 md:p-12">
+              <div className="from-accent-c/5 to-accent-c/15 dark:from-accent-c/10 dark:to-accent-c/20 rounded-4xl bg-linear-to-b flex flex-col gap-y-8 px-4 py-6 md:p-12">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={geodeLabsLogo} alt="" sizes="4rem" />

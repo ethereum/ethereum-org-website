@@ -37,21 +37,21 @@ Je, unahitaji primer ya msingi zaidi kwanza? Angalia [ethereum.org/learn](/learn
 
 **Je, unataka kuruka usanidi kwa sasa, na urukie moja kwa moja kwenye sampuli?**
 
-- [Playground](http://playground.nethereum.com/) - Ingiliana na Ethereum na jifunze jinsi ya kutumia Nethereum kupitia kivinjari.
-  - Hoja Salio la Akaunti [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - Hoja Salio la Mkataba-erevu wa ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Hamisha ether kwenye Akaunti [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - Ingiliana na Ethereum na jifunze jinsi ya kutumia Nethereum kupitia kivinjari.
+  - Hoja Salio la Akaunti [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - Hoja Salio la Mkataba-erevu wa ERC20 [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - Hamisha ether kwenye Akaunti [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... Na zaidi!
 
 ## Makala za wastani {#intermediate-articles}
 
-- [Kitabu cha Kazi/Orodha ya Sampuli ya Nethereum](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Kitabu cha Kazi/Orodha ya Sampuli ya Nethereum](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Sambaza Testchains zako za Maendeleo](https://github.com/Nethereum/Testchains)
 - [Programu-jalizi ya Codegen ya VSCode kwa ajili ya Solidity](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity na Ethereum: Kwa nini na Jinsi gani](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Unda API ya Wavuti ya ASP.NET Core kwa ajili ya mfumo mtawanyo wa kimamlaka ya Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Kutumia Nethereum Web3 kutekeleza Mfumo wa Ufuatiliaji wa Mnyororo wa Ugavi](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Uchakataji wa Bloku za Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), na [sampuli ya Playground ya C#](http://playground.nethereum.com/csharp/id/1025)
+- [Uchakataji wa Bloku za Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), na [sampuli ya Playground ya C#](https://playground.nethereum.com/csharp/id/1025)
 - [Utiririshaji wa Websocket wa Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido na Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum na Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ Je, unahitaji primer ya msingi zaidi kwanza? Angalia [ethereum.org/learn](/learn
 
 ## Miradi ya .NET, zana na mambo mengine ya kufurahisha {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _Kusanya, unda, na endesha vijisehemu vya msimbo vya Nethereum kwenye kivinjari_
+- [Nethereum Playground](https://playground.nethereum.com/) - _Kusanya, unda, na endesha vijisehemu vya msimbo vya Nethereum kwenye kivinjari_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen na UI katika Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Kichunguzi chepesi cha mnyororo wa bloku cha .NET Wasm SPA na mkoba rahisi_
 - [Injini ya Kanuni za Biashara ya Wonka](https://docs.nethereum.com/en/latest/wonka/) - _Injini ya kanuni za biashara (kwa jukwaa la .NET na jukwaa la Ethereum) ambayo inaendeshwa na metadata_
@@ -78,7 +78,7 @@ Je, unatafuta rasilimali zaidi? Angalia [ethereum.org/developers](/developers/).
 
 Katika Nethereum, mara nyingi huwa tunabarizi kwenye [Gitter](https://gitter.im/Nethereum/Nethereum) ambapo kila mtu anakaribishwa kuuliza/kujibu maswali, kupata usaidizi, au kupumzika tu. Jisikie huru kufanya PR au kufungua suala kwenye [hazina ya GitHub ya Nethereum](https://github.com/Nethereum), au vinjari tu miradi mingi ya kando/sampuli tuliyo nayo. Unaweza pia kutupata kwenye [Discord](https://discord.gg/jQPrR58FxX)!
 
-Ikiwa wewe ni mgeni kwenye Nethermind na unahitaji usaidizi ili kuanza, jiunge na [Discord](http://discord.gg/PaCMRFdvWT) yetu. Wasanidi wetu wako tayari kujibu maswali yako. Usisite kufungua PR au kuibua masuala yoyote kwenye [hazina ya GitHub ya Nethermind](https://github.com/NethermindEth/nethermind).
+Ikiwa wewe ni mgeni kwenye Nethermind na unahitaji usaidizi ili kuanza, jiunge na [Discord](https://discord.gg/PaCMRFdvWT) yetu. Wasanidi wetu wako tayari kujibu maswali yako. Usisite kufungua PR au kuibua masuala yoyote kwenye [hazina ya GitHub ya Nethermind](https://github.com/NethermindEth/nethermind).
 
 ## Orodha zingine zilizokusanywa {#other-aggregated-lists}
 

@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import { MapPin } from "lucide-react"
 
 import type { EventItem, MatomoEventOptions } from "@/lib/types"
@@ -26,6 +29,8 @@ function EventCardGrid({
   locale,
   customEventOptions,
 }: EventCardProps) {
+  const [logoError, setLogoError] = useState(false)
+
   const primaryType = event.eventTypes?.[0]
 
   const hasDate = Boolean(event.startTime)
@@ -36,7 +41,7 @@ function EventCardGrid({
     : null
 
   return (
-    <LinkBox className="group hover:bg-background-highlight rounded-xl p-2">
+    <LinkBox className="hover:bg-background-highlight group rounded-xl p-2">
       <LinkOverlay
         href={event.link}
         className="no-underline"
@@ -44,14 +49,15 @@ function EventCardGrid({
         matomoEvent={customEventOptions}
       >
         <div className="flex gap-3">
-          <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-linear-to-b text-2xl">
-            {event.logoImage ? (
+          <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 bg-linear-to-b flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl text-2xl">
+            {event.logoImage && !logoError ? (
               <Image
                 src={event.logoImage}
                 alt={event.title}
                 className="size-full object-cover"
                 width={64}
                 height={64}
+                onError={() => setLogoError(true)}
               />
             ) : (
               <MapPin className="text-body-medium size-8" />
@@ -68,7 +74,7 @@ function EventCardGrid({
                 {event.eventTypesLabels?.[0] || primaryType}
               </Tag>
             )}
-            <p className="text-body group-hover:text-primary text-lg leading-tight font-bold">
+            <p className="text-body group-hover:text-primary text-lg font-bold leading-tight">
               {event.title}
             </p>
             {formattedDate && <p className="text-body">{formattedDate}</p>}
@@ -85,31 +91,48 @@ function EventCardHighlight({
   locale,
   customEventOptions,
 }: EventCardProps) {
+  const [logoError, setLogoError] = useState(false)
+  const [bannerError, setBannerError] = useState(false)
+
+  const bannerSrc = event.bannerImage || event.logoImage
+
   return (
-    <LinkBox className="group hover:bg-background-highlight w-full rounded-xl p-3">
+    <LinkBox className="hover:bg-background-highlight group w-full rounded-xl p-3">
       <LinkOverlay
         href={event.link}
         className="text-body space-y-6 no-underline"
         hideArrow
         matomoEvent={customEventOptions}
       >
-        <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 relative h-[200px] w-full overflow-hidden rounded-xl bg-linear-to-b">
-          <Image
-            src={event.bannerImage || event.logoImage}
-            alt={`${event.title} banner`}
-            fill
-            className="object-cover"
-          />
+        <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 bg-linear-to-b relative h-[200px] w-full overflow-hidden rounded-xl">
+          {bannerSrc && !bannerError ? (
+            <Image
+              src={bannerSrc}
+              alt={`${event.title} banner`}
+              fill
+              className="object-cover"
+              onError={() => setBannerError(true)}
+            />
+          ) : (
+            <div className="text-body-medium flex size-full items-center justify-center">
+              <MapPin className="size-16" />
+            </div>
+          )}
         </div>
         <div className="flex gap-3">
-          <div className="flex size-16 shrink-0 overflow-hidden rounded-lg">
-            <Image
-              src={event.logoImage}
-              alt={event.title}
-              className="size-full object-contain"
-              width={64}
-              height={64}
-            />
+          <div className="bg-body/5 dark:bg-body/10 flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-lg">
+            {event.logoImage && !logoError ? (
+              <Image
+                src={event.logoImage}
+                alt={event.title}
+                className="size-full object-contain"
+                width={64}
+                height={64}
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <MapPin className="text-body-medium size-8" />
+            )}
           </div>
           <div className="space-y-1">
             <h3>{event.title}</h3>

@@ -13,7 +13,7 @@ Inizia leggendo la missione e i valori di ethereum.org nel nostro [codice di con
 ## Sviluppatori <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Scopri e prova Ethereum su [ethereum.org/developers/](/developers/)
-- Partecipa a un hackathon di [ETHGlobal](http://ethglobal.co/) vicino a te!
+- Partecipa a un hackathon di [ETHGlobal](https://ethglobal.co/) vicino a te!
 - Dai un'occhiata ai [progetti relativi alla tua area di competenza o al tuo linguaggio di programmazione preferito](/developers/docs/programming-languages/)
 - Guarda o partecipa alle [chiamate del livello di consenso e di esecuzione](https://www.youtube.com/@EthereumProtocol/streams)
 - [Lista dei desideri dell'Ecosystem Support Program](https://esp.ethereum.foundation/wishlist/): aree di strumenti, documentazione e infrastruttura in cui l'Ecosystem Support Program di Ethereum è attivamente alla ricerca di candidature per sovvenzioni

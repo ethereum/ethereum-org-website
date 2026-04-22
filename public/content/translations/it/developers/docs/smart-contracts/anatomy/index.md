@@ -189,7 +189,7 @@ Gli eventi consentono al tuo contratto intelligente di comunicare con il tuo fro
 
 ## Esempi annotati {#annotated-examples}
 
-Questi sono alcuni esempi scritti in Solidity. Se desideri giocare con il codice, puoi interagirvi in [Remix](http://remix.ethereum.org).
+Questi sono alcuni esempi scritti in Solidity. Se desideri giocare con il codice, puoi interagirvi in [Remix](https://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 

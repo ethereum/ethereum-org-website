@@ -505,7 +505,7 @@ El concepto de una función de transición de estado arbitraria implementada por
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Pruebas de trabajo reutilizables](https://nakamotoinstitute.org/finney/rpow/)
 6. [Títulos de propiedad seguros con autoridad del propietario](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Libro blanco de Bitcoin](http://bitcoin.org/bitcoin.pdf)
+7. [Libro blanco de Bitcoin](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Triángulo de Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Informe de monedas coloreadas](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

@@ -13,7 +13,7 @@ lang: ko
 ## 개발자 <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/)에서 이더리움에 대해 알아보고 직접 사용해 보세요.
-- 가까운 곳에서 열리는 [ETHGlobal](http://ethglobal.co/) 해커톤에 참여하세요!
+- 가까운 곳에서 열리는 [ETHGlobal](https://ethglobal.co/) 해커톤에 참여하세요!
 - [자신의 전문 분야 또는 선호하는 프로그래밍 언어와 관련된 프로젝트](/developers/docs/programming-languages/)를 확인해 보세요.
 - [합의 및 실행 레이어 콜](https://www.youtube.com/@EthereumProtocol/streams)을 시청하거나 참여하세요.
 - [생태계 지원 프로그램의 위시리스트](https://esp.ethereum.foundation/wishlist/) - 이더리움 생태계 지원 프로그램에서 보조금 신청을 적극적으로 받고 있는 툴링, 문서, 인프라 분야

@@ -63,7 +63,7 @@ const CalloutBannerSSR = ({
           src={image}
           alt={alt}
           width={imageWidth}
-          className="mx-auto -my-24 object-contain max-lg:mb-0"
+          className="-my-24 mx-auto object-contain max-lg:mb-0"
         />
       </div>
     )}

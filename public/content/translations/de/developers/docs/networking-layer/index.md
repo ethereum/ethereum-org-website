@@ -159,5 +159,5 @@ Schema der Netzwerkschicht für Konsens- und Ausführungs-Clients, von [ethresea
 [Kademlia zu discv5](https://vac.dev/kademlia-to-discv5)
 [Kademlia-Paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Einführung in Ethereum P2P](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[Beziehung zwischen eth1 und eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[Beziehung zwischen eth1 und eth2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [Video zu Details über den Merge und eth2-Clients](https://www.youtube.com/watch?v=zNIrIninMgg)

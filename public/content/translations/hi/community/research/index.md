@@ -247,7 +247,7 @@ lang: hi
 #### हाल ही में हुए शोध {#recent-research-10}
 
 - [बहुआयामी EIP-1559 वीडियो प्रस्तुति](https://youtu.be/QbR4MTgnCko)
-- [क्रॉस डोमेन MEV](http://arxiv.org/abs/2112.01472)
+- [क्रॉस डोमेन MEV](https://arxiv.org/abs/2112.01472)
 - [MEV नीलामियां](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### हिस्सेदारी के सबूत के प्रोत्साहन {#proof-of-stake-incentives}

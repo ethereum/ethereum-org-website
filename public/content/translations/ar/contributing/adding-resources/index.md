@@ -40,7 +40,7 @@ lang: ar
 - تأكد من أن جمي الموارد المدرجة لا تزال تلبي معاييرنا
 - التحقق من عدم وجود منتجات تم اقتراحها تلبي معاييرنا أكثر من تلك المدرجة حاليًا
 
-يمكنك المساعدة في ذلك من خلال التحقق وإعلامنا. [أنشئ مشكلة](https://github.com/ethereum/ethereum-org-/issues/new?template=bug_report.yaml) أو أرسل بريدًا إلكترونيًا إلى [@ethereum.org](:@ethereum.org).
+يمكنك المساعدة في ذلك من خلال التحقق وإعلامنا. [أنشئ مشكلة](https://github.com/ethereum/ethereum-org-website/issues/new?template=bug_report.yaml) أو أرسل بريدًا إلكترونيًا إلى [website@ethereum.org](mailto:website@ethereum.org).
 
 ---
 

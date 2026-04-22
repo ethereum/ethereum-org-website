@@ -109,7 +109,7 @@ lang: ur
 **Nethereum -** **_بلاک چین کے لیے ایک اوپن سورس .NET انٹیگریشن لائبریری۔_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [دستاویزات](http://docs.nethereum.com/en/latest/)
+- [دستاویزات](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_Python کے ذریعے ایتھیریم کے ساتھ تعامل کے لیے مختلف لائبریریاں۔_**

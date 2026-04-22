@@ -159,5 +159,5 @@ Network layer schematic for consensus and execution clients, from [ethresear.ch]
 [kademlia to discv5](https://vac.dev/kademlia-to-discv5)
 [kademlia paper](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [intro to Ethereum p2p](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[eth1/eth2 relationship](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[eth1/eth2 relationship](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [merge and eth2 client details video](https://www.youtube.com/watch?v=zNIrIninMgg)
