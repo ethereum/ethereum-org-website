@@ -70,7 +70,7 @@ slither project_paths
 
 Slither 靜態分析框架的功能與設計，已在部落格文章 ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/)、[2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) 與一篇 [學術論文](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) 中有所說明。
 
-靜態分析存在多種類型。 您很可能知道，像 [clang](https://clang-analyzer.llvm.org/) 和 [gcc](https://lwn.net/Articles/806099/) 這類的編譯器都依賴這些研究技術，但它同時也是 ([Infer](https://fbinfer.com/)、[CodeClimate](https://codeclimate.com/)、[FindBugs](http://findbugs.sourceforge.net/) 以及像 [Frama-C](https://frama-c.com/) 和 [Polyspace](https://www.mathworks.com/products/polyspace.html) 這類基於形式化方法的工具的基礎。
+靜態分析存在多種類型。 您很可能知道，像 [clang](https://clang-analyzer.llvm.org/) 和 [gcc](https://lwn.net/Articles/806099/) 這類的編譯器都依賴這些研究技術，但它同時也是 ([Infer](https://fbinfer.com/)、[CodeClimate](https://codeclimate.com/)、[FindBugs](https://findbugs.sourceforge.net/) 以及像 [Frama-C](https://frama-c.com/) 和 [Polyspace](https://www.mathworks.com/products/polyspace.html) 這類基於形式化方法的工具的基礎。
 
 在此我們不會詳盡地探討靜態分析技術與研究者。 反之，我們將著重於了解 Slither 的運作原理，以便您能更有效地利用它來尋找漏洞並理解程式碼。
 

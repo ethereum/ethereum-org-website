@@ -9,7 +9,7 @@ lang: ru
 
 <Logo/>
 
-[Ethereum Foundation](http://ethereum.foundation/) (EF) — это некоммерческая организация, занимающаяся поддержкой [Ethereum](/what-is-ethereum/) и связанных с ним технологий.
+[Ethereum Foundation](https://ethereum.foundation/) (EF) — это некоммерческая организация, занимающаяся поддержкой [Ethereum](/what-is-ethereum/) и связанных с ним технологий.
 
 EF — это не компания и даже не традиционная некоммерческая организация. Ее роль не заключается в управлении Ethereum, и она не единственная организация, которая финансирует критически важную разработку технологий, связанных с Ethereum. EF — это лишь одна из частей гораздо более крупной [экосистемы](/community/).
 
@@ -37,4 +37,4 @@ EF — это не компания и даже не традиционная н
 
 <br/>
 
-Чтобы узнать больше о Фонде и его работе, посетите сайт [ethereum.foundation](http://ethereum.foundation/) или читайте [блог Ethereum Foundation](https://blog.ethereum.org/), чтобы быть в курсе последних новостей и объявлений EF.
+Чтобы узнать больше о Фонде и его работе, посетите сайт [ethereum.foundation](https://ethereum.foundation/) или читайте [блог Ethereum Foundation](https://blog.ethereum.org/), чтобы быть в курсе последних новостей и объявлений EF.

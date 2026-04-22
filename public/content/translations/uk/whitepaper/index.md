@@ -498,7 +498,7 @@ _Незважаючи на лінійну емісію валюти, так са
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Докази виконаної роботи багаторазового використання](https://nakamotoinstitute.org/finney/rpow/)
 6. [Захищені титули власності з повноваженнями власника](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Біла книга Bitcoin](http://bitcoin.org/bitcoin.pdf)
+7. [Біла книга Bitcoin](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Трикутник Зуко](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Біла книга кольорових монет](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

@@ -247,7 +247,7 @@ DelphiDigital이 2022년 5월에 발행한 [이 보고서](https://members.delph
 #### 최근 연구 {#recent-research-10}
 
 - [다차원 EIP-1559 비디오 프레젠테이션](https://youtu.be/QbR4MTgnCko)
-- [교차 도메인 MEV](http://arxiv.org/abs/2112.01472)
+- [교차 도메인 MEV](https://arxiv.org/abs/2112.01472)
 - [MEV 경매](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### 지분 증명 인센티브 {#proof-of-stake-incentives}

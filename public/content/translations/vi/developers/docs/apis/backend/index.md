@@ -111,7 +111,7 @@ Những thư viện này giúp đơn giản hóa nhiều phần phức tạp khi
 **Nethereum -** **_Một thư viện tích hợp .NET mã nguồn mở cho chuỗi khối._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Tài liệu](http://docs.nethereum.com/en/latest/)
+- [Tài liệu](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Bộ công cụ Python -** **_Nhiều thư viện để tương tác với Ethereum qua Python._**

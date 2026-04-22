@@ -52,7 +52,7 @@ ACCESSES = 64                     # 해시모토 루프의 액세스 수
 이더리움 개발은 SHA3 표준 개발과 동시에 이루어졌으며,
 표준화 과정에서 최종 해시 알고리즘의 패딩이 늦게 변경되어 이더리움의
 'sha3_256' 및 'sha3_512' 해시는 표준 sha3 해시가 아니라 다른 맥락에서 흔히
-'Keccak-256' 및 'Keccak-512'라고 불리는 변형입니다. 예를 들어 [여기](https://eips.ethereum.org/EIPS/eip-1803), [여기](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), 또는 [여기](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)의 논의를 참조하세요.
+'Keccak-256' 및 'Keccak-512'라고 불리는 변형입니다. 예를 들어 [여기](https://eips.ethereum.org/EIPS/eip-1803), [여기](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), 또는 [여기](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)의 논의를 참조하세요.
 
 아래 알고리즘 설명에서 'sha3' 해시가 언급되므로 이 점을 유념해 주시기 바랍니다.
 

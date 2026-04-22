@@ -116,7 +116,7 @@ _Wird typischerweise für enger verbundene, menschenzentrierte Organisationen wi
 
 #### Ein bekanntes Beispiel {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO konzentriert sich auf die Finanzierung von Ethereum-Projekten. Sie erfordern einen Vorschlag für die Mitgliedschaft, damit die Gruppe beurteilen kann, ob Sie über das erforderliche Fachwissen und Kapital verfügen, um fundierte Urteile über potenzielle Stipendiaten zu fällen. Man kann sich den Zugang zur DAO nicht einfach auf dem freien Markt kaufen.
+[MolochDAO](https://molochdao.com/) – MolochDAO konzentriert sich auf die Finanzierung von Ethereum-Projekten. Sie erfordern einen Vorschlag für die Mitgliedschaft, damit die Gruppe beurteilen kann, ob Sie über das erforderliche Fachwissen und Kapital verfügen, um fundierte Urteile über potenzielle Stipendiaten zu fällen. Man kann sich den Zugang zur DAO nicht einfach auf dem freien Markt kaufen.
 
 ### Reputationsbasierte Mitgliedschaft {#reputation-based-membership}
 

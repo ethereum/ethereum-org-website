@@ -69,7 +69,7 @@ slither project_paths
 
 تم وصف إمكانيات وتصميم إطار عمل التحليل الثابت سليذر في منشورات المدونة ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/)، [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) و[ورقة أكاديمية](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-يوجد التحليل الثابت في أنواع مختلفة. من المرجح أنك تدرك أن المترجمات مثل [clang](https://clang-analyzer.llvm.org/) و[gcc](https://lwn.net/Articles/806099/) تعتمد على تقنيات البحث هذه، ولكنها تدعم أيضًا ([Infer](https://fbinfer.com/)، [CodeClimate](https://codeclimate.com/)، [FindBugs](http://findbugs.sourceforge.net/) والأدوات القائمة على الأساليب الرسمية مثل [Frama-C](https://frama-c.com/) و[Polyspace](https://www.mathworks.com/products/polyspace.html).
+يوجد التحليل الثابت في أنواع مختلفة. من المرجح أنك تدرك أن المترجمات مثل [clang](https://clang-analyzer.llvm.org/) و[gcc](https://lwn.net/Articles/806099/) تعتمد على تقنيات البحث هذه، ولكنها تدعم أيضًا ([Infer](https://fbinfer.com/)، [CodeClimate](https://codeclimate.com/)، [FindBugs](https://findbugs.sourceforge.net/) والأدوات القائمة على الأساليب الرسمية مثل [Frama-C](https://frama-c.com/) و[Polyspace](https://www.mathworks.com/products/polyspace.html).
 
 لن نقوم بمراجعة شاملة لتقنيات التحليل الثابت والباحثين هنا. بدلاً من ذلك، سنركز على ما هو مطلوب لفهم كيفية عمل سليذر حتى تتمكن من استخدامه بشكل أكثر فاعلية للعثور على الأخطاء وفهم النص البرمجي.
 

@@ -16,7 +16,7 @@ Dovresti avere una buona comprensione di tutti gli argomenti fondamentali e una 
 
 ## Cos'è Plasma?
 
-Plasma è un framework per migliorare la scalabilità nelle blockchain pubbliche come Ethereum. Come descritto nel [whitepaper originale di Plasma](http://plasma.io/plasma.pdf), le catene Plasma sono costruite sopra un'altra blockchain (chiamata "catena radice"). Ogni "catena figlia" si estende dalla catena radice ed è generalmente gestita da un contratto intelligente distribuito sulla catena madre.
+Plasma è un framework per migliorare la scalabilità nelle blockchain pubbliche come Ethereum. Come descritto nel [whitepaper originale di Plasma](https://plasma.io/plasma.pdf), le catene Plasma sono costruite sopra un'altra blockchain (chiamata "catena radice"). Ogni "catena figlia" si estende dalla catena radice ed è generalmente gestita da un contratto intelligente distribuito sulla catena madre.
 
 Il contratto Plasma funziona, tra le altre cose, come un [ponte](/developers/docs/bridges/) che consente agli utenti di spostare risorse tra la rete principale di Ethereum e la catena Plasma. Sebbene questo le renda simili alle [catene laterali](/developers/docs/scaling/sidechains/), le catene Plasma beneficiano, almeno in una certa misura, della sicurezza della rete principale di Ethereum. Questo a differenza delle catene laterali che sono le uniche responsabili della propria sicurezza.
 

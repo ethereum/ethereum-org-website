@@ -65,7 +65,7 @@ Kuna wimbi jipya la miradi ya kibunifu inayojengwa kwenye minyororo ya bloku amb
 
 Baadhi kama [Klima Infinity](https://www.klimadao.finance/infinity) na [Senken](https://senken.io/) hutoa miradi mbalimbali iliyotengenezwa na wahusika wengine na kutolewa chini ya viwango vilivyoimarishwa kama Verra; wengine kama [Nori](https://nori.com/) hutoa tu miradi maalum iliyotengenezwa chini ya kiwango chao cha salio la kaboni, ambacho wanakitoa na ambacho wana soko lao maalum.
 
-4. Misingi na miundombinu ya msingi inayowezesha kuongezeka kwa athari na ufanisi wa mnyororo mzima wa ugavi wa soko la kaboni. [KlimaDAO](http://klimadao.finance/) hutoa ukwasi kama manufaa ya umma (kuruhusu yeyote kununua au kuuza salio za kaboni kwa bei ya wazi), huhimiza ongezeko la uwezo wa masoko ya kaboni na ustaafishaji kwa zawadi, na hutoa zana zinazofaa kwa mtumiaji na zinazoweza kushirikiana ili kupata data kuhusu, pamoja na kupata na kustaafisha, aina mbalimbali za salio za kaboni zilizowekewa tokeni.
+4. Misingi na miundombinu ya msingi inayowezesha kuongezeka kwa athari na ufanisi wa mnyororo mzima wa ugavi wa soko la kaboni. [KlimaDAO](https://klimadao.finance/) hutoa ukwasi kama manufaa ya umma (kuruhusu yeyote kununua au kuuza salio za kaboni kwa bei ya wazi), huhimiza ongezeko la uwezo wa masoko ya kaboni na ustaafishaji kwa zawadi, na hutoa zana zinazofaa kwa mtumiaji na zinazoweza kushirikiana ili kupata data kuhusu, pamoja na kupata na kustaafisha, aina mbalimbali za salio za kaboni zilizowekewa tokeni.
 
 ## ReFi zaidi ya masoko ya kaboni {#refi-beyond}
 

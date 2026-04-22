@@ -207,7 +207,7 @@ Matukio huwezesha mkataba wako mahiri kuwasiliana na eneo lako la mbele au progr
 
 ## Mifano yenye maelezo {#annotated-examples}
 
-Hii ni baadhi ya mifano iliyoandikwa katika Solidity. Ikiwa ungependa kucheza na msimbo, unaweza kuingiliana nao katika [Remix](http://remix.ethereum.org).
+Hii ni baadhi ya mifano iliyoandikwa katika Solidity. Ikiwa ungependa kucheza na msimbo, unaweza kuingiliana nao katika [Remix](https://remix.ethereum.org).
 
 ### Habari dunia {#hello-world}
 

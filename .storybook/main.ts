@@ -13,6 +13,7 @@ const config: StorybookConfig = {
     "../src/components/**/*.stories.{ts,tsx}",
     "../src/layouts/stories/*.stories.tsx",
     "../src/styles/*.stories.tsx",
+    "../app/**/*.stories.{ts,tsx}",
   ],
 
   addons: [
