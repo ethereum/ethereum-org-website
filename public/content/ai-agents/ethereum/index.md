@@ -33,9 +33,7 @@ Developers can generate a **cryptographic proof demonstrating that a specific mo
 
 ZkML proves **correct computation, not factual accuracy**. While a model can still produce a wrong answer, zkML provides a **tamper-resistant record that the model executed its logic consistently**. 
 
-Infrastructure for zkML tooling, ordered by production readiness: [EZKL](https://ezkl.xyz/) (most production-ready; supports ONNX models), [DeepProve by Lagrange](https://lagrange.dev/blog/deepprove-zkml) (GPU-distributed proving; capable of LLM-scale inference as of early 2026), [Risc Zero](https://dev.risczero.com/) (general-purpose ZK proofs via zkVM), [SP1 by Succinct](https://docs.succinct.xyz/) (ZK proving system), and [Jolt](https://jolt.a16zcrypto.com/) (research-stage as of early 2026; native ZK support added March 2026; not yet production-ready). 
-
-**Maturity note:** zkML for small, bounded models (decision trees, compact classifiers, fraud detectors) is production-viable today. Generating and verifying proofs for large language models at the scale most agents use remains computationally prohibitive for the majority of production deployments and is an active area of research. The [Verification](/ai-agents/verification/) page covers the current performance envelope in detail.
+Production-ready zkML tooling exists today for bounded models (decision trees, compact classifiers, fraud detectors). Generating and verifying proofs for large language models remains computationally prohibitive for most production deployments and is an active area of research. The [AI agents: Verification](/ai-agents/verification/) page covers available tools, maturity levels, and implementation guidance.
 
 ### Trusted Execution Environments (TEEs) {#tees}
 
