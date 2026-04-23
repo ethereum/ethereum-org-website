@@ -75,7 +75,7 @@ const ImageContainer = ({ children }: ChildOnlyProp) => {
 }
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
-  return <p className="mb-8 text-md sm:text-xl">{children}</p>
+  return <p className="text-md mb-8 sm:text-xl">{children}</p>
 }
 
 const FeatureContent = ({ children }: ChildOnlyProp) => {
@@ -92,7 +92,7 @@ const H2 = ({
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => {
   return (
-    <h2 className={cn("mb-8 mt-0 text-2xl md:text-3xl", className)} {...props}>
+    <h2 className={cn("mt-0 mb-8 text-2xl md:text-3xl", className)} {...props}>
       {children}
     </h2>
   )
@@ -161,7 +161,7 @@ const CommunityPage = () => {
     <Page>
       <HubHero {...heroContent} />
       <Divider />
-      <Flex className="-mt-px w-full flex-row-reverse items-center border-b border-b-border-high-contrast py-8 ps-0 lg:py-0 lg:ps-8">
+      <Flex className="border-b-border-high-contrast -mt-px w-full flex-row-reverse items-center border-b py-8 ps-0 lg:py-0 lg:ps-8">
         <div className="mb-12 w-full px-8 py-4">
           <Flex className="flex-col items-center">
             <H2 className="lg:text-4xl">
@@ -171,7 +171,7 @@ const CommunityPage = () => {
           <CardContainer>
             {whyGetInvolvedCards.map((card, idx) => (
               <Card
-                className="m-4 min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%] lg:max-w-[31%]"
+                className="m-4 max-w-full min-w-[280px] flex-[1_0_30%] p-6 md:max-w-[46%] lg:max-w-[31%]"
                 key={idx}
                 emoji={card.emoji}
                 title={card.title}
@@ -181,9 +181,9 @@ const CommunityPage = () => {
           </CardContainer>
         </div>
       </Flex>
-      <div className="w-full bg-background-highlight pb-16 shadow-table-item-box">
+      <div className="bg-background-highlight shadow-table-item-box w-full pb-16">
         <div className="w-full px-4 py-4 lg:px-8">
-          <Flex className="mb-0 mt-0 flex-col-reverse items-center md:m-12 md:mt-4 md:flex-row">
+          <Flex className="mt-0 mb-0 flex-col-reverse items-center md:m-12 md:mt-4 md:flex-row">
             <div className="h-full w-full p-0 sm:p-8 lg:p-24">
               <H2 id="get-involved">
                 {t("page-community-get-involved-title")}
@@ -203,7 +203,7 @@ const CommunityPage = () => {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">
             {cards.map((card, idx) => (
               <ActionCard
-                className="m-0 flex-col rounded-sm border lg:m-4"
+                className="m-0 flex-col rounded-xs border lg:m-4"
                 key={idx}
                 title={card.title}
                 description={card.description}
@@ -216,7 +216,7 @@ const CommunityPage = () => {
           </div>
         </div>
       </div>
-      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#293233]">
+      <Flex className="border-y-border-high-contrast -mt-px h-full w-full flex-col-reverse items-center border-y bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#293233]">
         <RowReverse>
           <FeatureContent>
             <H2>{t("page-community-open-source")}</H2>
@@ -243,7 +243,7 @@ const CommunityPage = () => {
           </ImageContainer>
         </RowReverse>
       </Flex>
-      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ffe5f9] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#332027]">
+      <Flex className="border-y-border-high-contrast -mt-px h-full w-full flex-col-reverse items-center border-y bg-[#ffe5f9] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#332027]">
         <Flex className="flex-col-reverse items-center lg:flex-row">
           <FeatureContent>
             <Flex className="flex-col justify-center">
@@ -272,7 +272,7 @@ const CommunityPage = () => {
           </ImageContainer>
         </Flex>
       </Flex>
-      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#e8e8ff] lg:h-[720px] lg:flex-row dark:bg-[#212131]">
+      <Flex className="border-y-border-high-contrast -mt-px h-full w-full flex-col-reverse items-center border-y bg-[#e8e8ff] lg:h-[720px] lg:flex-row dark:bg-[#212131]">
         <RowReverse>
           <FeatureContent>
             <H2>{t("page-community-support")}</H2>
@@ -295,7 +295,7 @@ const CommunityPage = () => {
       <Divider />
       <Flex className="w-full flex-col items-start px-8 py-4 lg:flex-row lg:items-center">
         <div className="mb-6 max-w-full flex-[0_0_50%] md:max-w-[75%]">
-          <h2 className="mb-8 mt-12 text-2xl md:text-3xl">
+          <h2 className="mt-12 mb-8 text-2xl md:text-3xl">
             {t("page-community-try-ethereum")}
           </h2>
         </div>

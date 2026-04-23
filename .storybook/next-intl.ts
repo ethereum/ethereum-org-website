@@ -9,6 +9,7 @@ export const baseLocales = {
 // Only i18n files named in this array are being exposed to Storybook. Add filenames as necessary.
 export const ns = [
   "common",
+  "component-wallet-simulator",
   "glossary",
   "glossary-tooltip",
   "learn-quizzes",

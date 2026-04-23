@@ -69,7 +69,7 @@ slither project_paths
 
 Slither سٹیٹک اینالیسس فریم ورک کی صلاحیتوں اور ڈیزائن کو بلاگ پوسٹس ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) اور ایک [اکیڈمک پیپر](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) میں بیان کیا گیا ہے۔
 
-سٹیٹک اینالیسس مختلف اقسام میں موجود ہے۔ آپ کو غالباً اندازہ ہوگا کہ [clang](https://clang-analyzer.llvm.org/) اور [gcc](https://lwn.net/Articles/806099/) جیسے کمپائلرز ان تحقیقی تکنیکوں پر انحصار کرتے ہیں، لیکن یہ ([Infer](https://fbinfer.com/)، [CodeClimate](https://codeclimate.com/)، [FindBugs](http://findbugs.sourceforge.net/) اور رسمی طریقوں پر مبنی ٹولز جیسے [Frama-C](https://frama-c.com/) اور [Polyspace](https://www.mathworks.com/products/polyspace.html) کی بھی بنیاد ہے۔
+سٹیٹک اینالیسس مختلف اقسام میں موجود ہے۔ آپ کو غالباً اندازہ ہوگا کہ [clang](https://clang-analyzer.llvm.org/) اور [gcc](https://lwn.net/Articles/806099/) جیسے کمپائلرز ان تحقیقی تکنیکوں پر انحصار کرتے ہیں، لیکن یہ ([Infer](https://fbinfer.com/)، [CodeClimate](https://codeclimate.com/)، [FindBugs](https://findbugs.sourceforge.net/) اور رسمی طریقوں پر مبنی ٹولز جیسے [Frama-C](https://frama-c.com/) اور [Polyspace](https://www.mathworks.com/products/polyspace.html) کی بھی بنیاد ہے۔
 
 ہم یہاں سٹیٹک اینالیسس کی تکنیکوں اور محققین کا تفصیلی جائزہ نہیں لیں گے۔ اس کے بجائے، ہم اس بات پر توجہ مرکوز کریں گے کہ Slither کے کام کرنے کے طریقے کو سمجھنے کے لیے کیا ضروری ہے تاکہ آپ اسے بگز تلاش کرنے اور کوڈ کو سمجھنے کے لیے زیادہ مؤثر طریقے سے استعمال کر سکیں۔
 

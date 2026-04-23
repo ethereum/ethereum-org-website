@@ -12,7 +12,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-پچھلی بار ہم نے [Solidity کی بڑی تصویر](https://soliditydeveloper.com/solidity-overview-2020) پر نظر ڈالی تھی اور پہلے ہی [create-eth-app](https://github.com/PaulRBerg/create-eth-app) کا ذکر کیا تھا۔ اب آپ جانیں گے کہ اسے کیسے استعمال کرنا ہے، اس میں کون سی خصوصیات شامل ہیں اور اسے مزید وسعت دینے کے اضافی آئیڈیاز کیا ہیں۔ [Sablier](http://sablier.com/) کے بانی Paul Razvan Berg کی طرف سے شروع کی گئی، یہ ایپ آپ کی فرنٹ اینڈ ڈیولپمنٹ کا آغاز کرے گی اور اس میں منتخب کرنے کے لیے کئی اختیاری انضمام (integrations) شامل ہیں۔
+پچھلی بار ہم نے [Solidity کی بڑی تصویر](https://soliditydeveloper.com/solidity-overview-2020) پر نظر ڈالی تھی اور پہلے ہی [create-eth-app](https://github.com/PaulRBerg/create-eth-app) کا ذکر کیا تھا۔ اب آپ جانیں گے کہ اسے کیسے استعمال کرنا ہے، اس میں کون سی خصوصیات شامل ہیں اور اسے مزید وسعت دینے کے اضافی آئیڈیاز کیا ہیں۔ [Sablier](https://sablier.com/) کے بانی Paul Razvan Berg کی طرف سے شروع کی گئی، یہ ایپ آپ کی فرنٹ اینڈ ڈیولپمنٹ کا آغاز کرے گی اور اس میں منتخب کرنے کے لیے کئی اختیاری انضمام (integrations) شامل ہیں۔
 
 ## انسٹالیشن {#installation}
 

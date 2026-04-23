@@ -18,7 +18,7 @@ const CommentCard = ({
   return (
     <Card
       className={cn(
-        "mx-auto h-fit max-w-[400px] space-y-1 rounded-2xl border bg-background-highlight p-6 [&_[data-label='avatar']]:bg-accent-c",
+        "bg-background-highlight [&_[data-label='avatar']]:bg-accent-c mx-auto h-fit max-w-[400px] space-y-1 rounded-2xl border p-6",
         className
       )}
     >
@@ -28,13 +28,13 @@ const CommentCard = ({
       <div className="flex items-center gap-x-2">
         <div
           data-label="avatar"
-          className="grid size-8 place-items-center rounded-full text-body-inverse"
+          className="text-body-inverse grid size-8 place-items-center rounded-full"
         >
           {name.charAt(0)}
         </div>
         <div>
           <p className="font-bold">{name}</p>
-          <p className="text-sm text-body-medium">{title}</p>
+          <p className="text-body-medium text-sm">{title}</p>
         </div>
       </div>
     </Card>

@@ -52,7 +52,6 @@ Ikiwa unajua lugha mbili na unataka kutusaidia kufikia watu wengi zaidi, unaweza
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - maudhui yanayotunzwa na jamii, yanayohusu maarifa yanayohusiana na Ethereum, DeFi, NFT, Web3
 - [123ETH](https://123eth.org/) - Lango la mfumo ikolojia wa Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - kozi za bure za mtandaoni kuhusu sarafu ya kidigitali na matumizi yake
-- [Waraka Rasmi wa Ethereum](/zh/whitepaper/) - toleo la Kichina la Waraka Rasmi wa Ethereum
 
 **Ikolojia ya Ethereum**
 

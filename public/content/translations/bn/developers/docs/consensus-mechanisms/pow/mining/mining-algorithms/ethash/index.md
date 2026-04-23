@@ -49,7 +49,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### 'SHA3' এর ব্যবহার {#sha3}
 
-ইথিরিয়ামের ডেভেলপমেন্ট SHA3 স্ট্যান্ডার্ডের ডেভেলপমেন্টের সাথে মিলে যায়, এবং স্ট্যান্ডার্ড প্রক্রিয়াটি চূড়ান্ত হ্যাস এ্যালগরিদমের প্যাডিংয়ে একটি বিলম্বিত পরিবর্তন করে, যার ফলে ইথিরিয়ামের "sha3_256" এবং "sha3_512" হ্যাসগুলো স্ট্যান্ডার্ড sha3 হ্যাস নয়, বরং একটি ভ্যারিয়েন্ট যা অন্যান্য ক্ষেত্রে প্রায়শই "Keccak-256" এবং "Keccak-512" হিসেবে উল্লেখ করা হয়। আলোচনা দেখুন, যেমন, [এখানে](https://eips.ethereum.org/EIPS/eip-1803), [এখানে](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), অথবা [এখানে](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)।
+ইথিরিয়ামের ডেভেলপমেন্ট SHA3 স্ট্যান্ডার্ডের ডেভেলপমেন্টের সাথে মিলে যায়, এবং স্ট্যান্ডার্ড প্রক্রিয়াটি চূড়ান্ত হ্যাস এ্যালগরিদমের প্যাডিংয়ে একটি বিলম্বিত পরিবর্তন করে, যার ফলে ইথিরিয়ামের "sha3_256" এবং "sha3_512" হ্যাসগুলো স্ট্যান্ডার্ড sha3 হ্যাস নয়, বরং একটি ভ্যারিয়েন্ট যা অন্যান্য ক্ষেত্রে প্রায়শই "Keccak-256" এবং "Keccak-512" হিসেবে উল্লেখ করা হয়। আলোচনা দেখুন, যেমন, [এখানে](https://eips.ethereum.org/EIPS/eip-1803), [এখানে](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), অথবা [এখানে](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)।
 
 অনুগ্রহ করে এটি মনে রাখবেন কারণ নিচের এ্যালগরিদমের বর্ণনায় "sha3" হ্যাসগুলো উল্লেখ করা হয়েছে।
 

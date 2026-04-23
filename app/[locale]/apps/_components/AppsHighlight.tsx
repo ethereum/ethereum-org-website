@@ -19,7 +19,7 @@ const AppsHighlight = ({ apps, matomoCategory }: AppsHighlightProps) => {
   const cards = apps.slice(0, 3).map((app, index) => (
     <LinkBox
       key={index}
-      className="group w-full rounded-xl p-3 hover:bg-background-highlight"
+      className="group hover:bg-background-highlight w-full rounded-xl p-3"
     >
       <LinkOverlay
         href={`/apps/${slugify(app.name)}`}

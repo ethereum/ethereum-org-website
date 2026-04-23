@@ -503,7 +503,7 @@ outras funções do contrato. Por convenção, as funções privadas são nomead
 de estado.
 
 Normalmente no Solidity, usamos `msg.sender` para o remetente da mensagem. No entanto, isso quebra o
-[OpenGSN](http://opengsn.org/). Se quisermos permitir transações sem ether com nosso token, precisamos
+[OpenGSN](https://opengsn.org/). Se quisermos permitir transações sem ether com nosso token, precisamos
 usar `_msgSender()`. Ele retorna `msg.sender` para transações normais, mas para as sem ether
 retorna o assinante original e não o contrato que retransmitiu a mensagem.
 

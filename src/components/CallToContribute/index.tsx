@@ -13,20 +13,20 @@ export type CallToContributeProps = {
 
 const ContentColumn = (props: ChildOnlyProp) => (
   <Flex
-    className="flex-1 basis-1/2 flex-col p-4 text-body lg:text-start"
+    className="text-body flex-1 basis-1/2 flex-col p-4 lg:text-start"
     {...props}
   />
 )
 
 const DescriptionParagraph = ({ children }: ChildOnlyProp) => (
-  <p className="mb-6 font-monospace leading-xs text-body">{children}</p>
+  <p className="font-monospace leading-xs text-body mb-6">{children}</p>
 )
 
 const CallToContribute = ({ editPath }: CallToContributeProps) => {
   return (
-    <aside className="mt-8 items-center rounded-md border border-b-4 border-primary bg-background-highlight">
+    <aside className="border-primary bg-background-highlight mt-8 items-center rounded-md border border-b-4">
       <ContentColumn>
-        <h2 className="mb-8 mt-0 p-1 font-monospace uppercase leading-xs">
+        <h2 className="font-monospace leading-xs mt-0 mb-8 p-1 uppercase">
           <Translation id="page-developers-docs:page-calltocontribute-title" />
         </h2>
         <DescriptionParagraph>

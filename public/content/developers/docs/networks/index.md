@@ -96,7 +96,7 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 ##### Resources
 
 - [Website](https://ephemery.dev/)
-- [Github](https://github.com/ephemery-testnet/ephemery-resources)
+- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
 - [Community chat](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)

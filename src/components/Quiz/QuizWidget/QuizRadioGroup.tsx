@@ -126,8 +126,8 @@ const CustomRadio = ({
       data-answer-visible={isAnswerVisible || undefined}
       data-selected-correct={isSelectedCorrect || undefined}
       className={cn(
-        "w-full cursor-pointer gap-2 rounded bg-background-highlight p-2 text-start text-body data-[answer-visible]:cursor-default",
-        "hover:outline hover:outline-1 hover:outline-primary hover:data-[answer-visible]:outline-none",
+        "bg-background-highlight text-body w-full cursor-pointer gap-2 rounded p-2 text-start data-[answer-visible]:cursor-default",
+        "hover:outline-primary hover:outline hover:outline-1 hover:data-[answer-visible]:outline-hidden",
         "data-[state='checked']:data-[answer-visible]:bg-error",
         "data-[state='checked']:data-[answer-visible]:data-[selected-correct]:bg-success",
         "data-[state='checked']:text-white",
@@ -138,7 +138,7 @@ const CustomRadio = ({
       <RadioGroup.Item {...itemProps}>
         <Center
           className={cn(
-            "size-6 flex-shrink-0 flex-grow-0 rounded-full bg-disabled text-white",
+            "bg-disabled size-6 shrink-0 grow-0 rounded-full text-white",
             "[:is([data-state='checked'],:hover)_>_&]:text-white",
             "[:is([data-state='checked'],:hover)_>_&]:bg-primary-action",
             "[:is([data-state='checked'],:hover)[data-answer-visible]_>_&]:bg-white",
@@ -146,7 +146,7 @@ const CustomRadio = ({
             "[:is([data-state='checked'],:hover)[data-answer-visible][data-selected-correct]_>_&]:text-success"
           )}
         >
-          <p className="text-lg font-bold leading-none">
+          <p className="text-lg leading-none font-bold">
             {String.fromCharCode(97 + index).toUpperCase()}
           </p>
         </Center>

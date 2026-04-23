@@ -11,7 +11,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 - **Next.js 14.2+** - React framework with App Router
 - **React 18** - UI library
 - **TypeScript 5.5+** - Type safety and development experience
-- **Tailwind CSS 3.4+** - Utility-first CSS framework
+- **Tailwind CSS 4+** - Utility-first CSS framework (CSS-first config in `src/styles/global.css`)
 
 ### Key Dependencies
 
@@ -119,10 +119,10 @@ pnpm events-import         # Import community events
 
 ### Internationalization
 
-- **25 languages** supported via Crowdin (canonical list: `i18n.config.json`)
-- **RTL support** for Arabic, Urdu
-- Translation files (JSON format) in `src/intl/[locale]/`
-- Content translations managed through Crowdin platform
+- **25 languages** supported (canonical list: `i18n.config.json`); **RTL support** for Arabic, Urdu
+- JSON UI strings in `src/intl/[locale]/`; translated markdown content in `public/content/translations/[locale]/`
+- Non-English markdown is propagated by the **intl-pipeline** (`src/scripts/intl-pipeline/`, entry `main.ts`). **Do not hand-propagate English changes into non-English files** -- let the pipeline run, or trigger `intl-pipeline.yml` with `stamp_only: true` if manifests must catch up urgently (e.g. unblocking a build). Hand-fixing a translation error is fine when the English side hasn't moved, since the manifest mapping stays valid. Spec: `tests/specs/PIPELINE-SPEC.md`.
+- Glossary: base URL from `GLOSSARY_API_URL` env var; default in `src/scripts/intl-pipeline/config.ts`. ETHGlossary is authoritative for Ethereum term translations.
 
 ### Markdown Content
 

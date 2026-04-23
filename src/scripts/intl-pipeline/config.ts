@@ -4,12 +4,6 @@ import i18nConfig from "../../../i18n.config.json"
 
 dotenv.config({ path: ".env.local" })
 
-// Gemini model configuration (single source of truth)
-// GEMINI_MODEL env var overrides; otherwise tries models in order
-export const GEMINI_MODELS: string[] = process.env.GEMINI_MODEL
-  ? [process.env.GEMINI_MODEL]
-  : ["gemini-3.1-pro-preview", "gemini-3.1-pro"]
-
 // Glossary API (ETHGlossary)
 export const GLOSSARY_API_URL =
   process.env.GLOSSARY_API_URL ||

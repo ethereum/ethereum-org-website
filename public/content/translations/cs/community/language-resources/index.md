@@ -52,7 +52,6 @@ Pokud jste bilingvní a chcete nám pomoci oslovit více lidí, můžete se zapo
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) – komunitou udržovaný obsah týkající se Etherea, DeFi, NFT a znalostí souvisejících s Web3
 - [123ETH](https://123eth.org/) – portál do ekosystému Etherea
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) – bezplatné online kurzy o kryptoměnách a jejich aplikacích
-- [Ethereum Whitepaper](/zh/whitepaper/) – čínská verze whitepaperu Etherea
 
 **Ekosystém Etherea**
 

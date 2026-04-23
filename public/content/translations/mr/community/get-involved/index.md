@@ -13,7 +13,7 @@ lang: mr
 ## डेव्हलपर <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) येथे इथेरियमबद्दल जाणून घ्या आणि प्रयत्न करा
-- तुमच्या जवळच्या [ETHGlobal](http://ethglobal.co/) हॅकेथॉनमध्ये सहभागी व्हा!
+- तुमच्या जवळच्या [ETHGlobal](https://ethglobal.co/) हॅकेथॉनमध्ये सहभागी व्हा!
 - [तुमच्या कौशल्य क्षेत्राशी किंवा आवडीच्या प्रोग्रामिंग भाषेशी संबंधित प्रकल्प पहा](/developers/docs/programming-languages/)
 - [कन्सेन्सस आणि एक्झिक्युशन लेयर कॉल्स](https://www.youtube.com/@EthereumProtocol/streams) पहा किंवा त्यात सहभागी व्हा
 - [इकोसिस्टम सपोर्ट प्रोग्रामची विशलिस्ट](https://esp.ethereum.foundation/wishlist/) - टूलिंग, डॉक्युमेंटेशन आणि इन्फ्रास्ट्रक्चरची क्षेत्रे जिथे इथेरियम इकोसिस्टम सपोर्ट प्रोग्राम अनुदानाच्या अर्जांसाठी सक्रियपणे शोध घेत आहे

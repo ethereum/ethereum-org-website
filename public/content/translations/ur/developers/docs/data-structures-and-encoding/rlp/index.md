@@ -94,7 +94,7 @@ def to_binary(x):
 - بائٹ '\\x00' = `[ 0x00 ]`
 - بائٹ '\\x0f' = `[ 0x0f ]`
 - بائٹس '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- تین کی [سیٹ تھیوریٹیکل نمائندگی](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers)، `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- تین کی [سیٹ تھیوریٹیکل نمائندگی](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers)، `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - اسٹرنگ "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
 ## RLP ڈی کوڈنگ {#rlp-decoding}

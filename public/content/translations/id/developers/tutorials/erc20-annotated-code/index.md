@@ -500,7 +500,7 @@ fungsi kontrak lainnya. Berdasarkan konvensi, fungsi privat diberi nama `_<sesua
 status.
 
 Biasanya di Solidity kita menggunakan `msg.sender` untuk pengirim pesan. Namun, hal itu merusak
-[OpenGSN](http://opengsn.org/). Jika kita ingin mengizinkan transaksi tanpa ether dengan token kita, kita
+[OpenGSN](https://opengsn.org/). Jika kita ingin mengizinkan transaksi tanpa ether dengan token kita, kita
 perlu menggunakan `_msgSender()`. Ini mengembalikan `msg.sender` untuk transaksi normal, tetapi untuk transaksi tanpa ether
 mengembalikan penandatangan asli dan bukan kontrak yang meneruskan pesan tersebut.
 

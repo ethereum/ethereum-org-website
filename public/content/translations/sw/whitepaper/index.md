@@ -502,7 +502,7 @@ Dhana ya kazi ya mabadiliko ya hali kama ilivyoletwa na itifaki ya Ethereum inat
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Uthibitisho wa kazi unaoweza kutumika tena](https://nakamotoinstitute.org/finney/rpow/)
 6. [Hati miliki salama za mali zenye mamlaka ya mmiliki](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Karatasi Nyeupe ya Bitcoin](http://bitcoin.org/bitcoin.pdf)
+7. [Karatasi Nyeupe ya Bitcoin](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Pembetatu ya Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Karatasi Nyeupe ya Sarafu za Rangi](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

@@ -8,7 +8,7 @@
 import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
-import { GEMINI_MODELS } from "../../config"
+import { LLM } from "../../constants"
 import { delay } from "../workflows/utils"
 
 import {
@@ -36,13 +36,12 @@ import {
 import { buildTranslationPrompt } from "./prompt-builder"
 
 /**
- * Check if Gemini API is available (API key present)
+ * Check if the active LLM is available (API key present)
  */
-export function isGeminiAvailable(): boolean {
-  return Boolean(process.env.GEMINI_API_KEY)
+export function isLlmAvailable(): boolean {
+  return LLM.isAvailable()
 }
 
-// GEMINI_MODELS imported from ../../config
 const MAX_RETRIES = 3
 const RETRY_DELAY_MS = 5000
 
@@ -1015,7 +1014,7 @@ export async function callGeminiRaw(
   const verbose = process.env.VERBOSE === "true"
   const ts = () => new Date().toISOString()
 
-  const modelsToTry = GEMINI_MODELS
+  const modelsToTry = LLM.models
 
   // Build context string for log lines
   const ctx = [
@@ -1071,7 +1070,11 @@ export async function callGeminiRaw(
           .generateContent({
             model: modelId,
             contents: prompt,
-            config: { temperature: 0, safetySettings: SAFETY_SETTINGS },
+            config: {
+              temperature: 0,
+              safetySettings: SAFETY_SETTINGS,
+              abortSignal: controller.signal,
+            },
           })
           .finally(() => clearTimeout(timeout))
         const usage = response.usageMetadata
@@ -1187,8 +1190,8 @@ export async function callGeminiRaw(
 
   if (modelNotFound.size === modelsToTry.length) {
     throw new Error(
-      `All Gemini models unavailable (${[...modelNotFound].join(", ")}). ` +
-        `Update GEMINI_MODELS in config.ts or set GEMINI_MODEL env var.`
+      `All ${LLM.name} models unavailable (${[...modelNotFound].join(", ")}). ` +
+        `Update models in lib/llm/adapters.ts.`
     )
   }
 

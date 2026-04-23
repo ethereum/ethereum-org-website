@@ -45,7 +45,7 @@ export function buildTranslationPrompt(options: PromptOptions): string {
   } = options
 
   const group = getLanguageGroup(targetLanguage)
-  const siteNotes = getSiteSpecificNotes(group)
+  const siteNotes = getSiteSpecificNotes(group, fileType)
   const glossarySection = formatGlossary(glossaryTerms)
   const formatRules = normalized
     ? getNormalizedFormatRules(fileType, group, targetLanguage)

@@ -13,7 +13,7 @@ lang: ar
 ## المطورون <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - تعرف على إيثريوم وجربه على [ethereum.org/developers/](/developers/)
-- احضر هاكاثون [ETHGlobal](http://ethglobal.co/) بالقرب منك!
+- احضر هاكاثون [ETHGlobal](https://ethglobal.co/) بالقرب منك!
 - تحقق من [المشاريع المتعلقة بمجال خبرتك أو لغة البرمجة المفضلة لديك](/developers/docs/programming-languages/)
 - شاهد أو شارك في [مكالمات طبقة الإجماع وطبقة التنفيذ](https://www.youtube.com/@EthereumProtocol/streams)
 - [قائمة أمنيات برنامج دعم النظام البيئي](https://esp.ethereum.foundation/wishlist/) - مجالات الأدوات، والتوثيق، والبنية التحتية التي يسعى فيها برنامج دعم النظام البيئي لإيثريوم بنشاط للحصول على طلبات المنح

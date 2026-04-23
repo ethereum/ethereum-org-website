@@ -109,7 +109,7 @@ Pustaka-pustaka ini mengabstraksi banyak kompleksitas dalam berinteraksi secara 
 **Nethereum -** **_Pustaka integrasi .NET sumber terbuka untuk blockchain._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Dokumentasi](http://docs.nethereum.com/en/latest/)
+- [Dokumentasi](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Perkakas Python -** **_Berbagai pustaka untuk interaksi Ethereum melalui Python._**

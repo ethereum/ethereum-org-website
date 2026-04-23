@@ -65,7 +65,7 @@ Ada gelombang baru proyek inovatif yang dibangun di atas blockchain yang mencoba
 
 Beberapa seperti [Klima Infinity](https://www.klimadao.finance/infinity) dan [Senken](https://senken.io/) menawarkan berbagai macam proyek yang dikembangkan oleh pihak ketiga dan diterbitkan di bawah standar yang mapan seperti Verra; yang lain seperti [Nori](https://nori.com/) hanya menawarkan proyek spesifik yang dikembangkan di bawah standar kredit karbon mereka sendiri, yang mereka terbitkan dan untuk itu mereka memiliki pasar khusus mereka sendiri.
 
-4. Rel dan infrastruktur yang mendasari yang memfasilitasi peningkatan skala dampak dan efisiensi seluruh rantai pasokan pasar karbon. [KlimaDAO](http://klimadao.finance/) memasok likuiditas sebagai barang publik (memungkinkan siapa saja untuk membeli atau menjual kredit karbon dengan harga transparan), memberikan insentif untuk peningkatan throughput pasar karbon dan pensiun dengan hadiah, dan menyediakan alat yang dapat dioperasikan dan ramah pengguna untuk mengakses data tentang, serta memperoleh dan memensiunkan, berbagai macam kredit karbon yang ditokenisasi.
+4. Rel dan infrastruktur yang mendasari yang memfasilitasi peningkatan skala dampak dan efisiensi seluruh rantai pasokan pasar karbon. [KlimaDAO](https://klimadao.finance/) memasok likuiditas sebagai barang publik (memungkinkan siapa saja untuk membeli atau menjual kredit karbon dengan harga transparan), memberikan insentif untuk peningkatan throughput pasar karbon dan pensiun dengan hadiah, dan menyediakan alat yang dapat dioperasikan dan ramah pengguna untuk mengakses data tentang, serta memperoleh dan memensiunkan, berbagai macam kredit karbon yang ditokenisasi.
 
 ## ReFi di luar pasar karbon {#refi-beyond}
 

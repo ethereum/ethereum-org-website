@@ -505,7 +505,7 @@ Ethereum protokolü tarafından uygulanan keyfi bir durum geçiş fonksiyonu kav
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Tekrar kullanılabilir iş ispatları](https://nakamotoinstitute.org/finney/rpow/)
 6. [Sahip yetkisi ile güvenli mülkiyet unvanları](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Bitcoin tanıtım belgesi](http://bitcoin.org/bitcoin.pdf)
+7. [Bitcoin tanıtım belgesi](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Zooko üçgeni](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Renkli paralar tanıtım belgesi](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

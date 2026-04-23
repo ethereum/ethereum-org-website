@@ -167,9 +167,13 @@ export const StakingProductCard = ({
           <h4 className="text-xl">{name}</h4>
           {typeof minEth !== "undefined" && (
             <p className="text-sm font-normal text-body-medium">
-              {minEth > 0
-                ? `${t("common:from")} ${minEth} ETH`
-                : t("page-staking-any-amount")}
+              {minEth > 0 ? (
+                <>
+                  {t("common:from")} <span dir="ltr">{minEth} ETH</span>
+                </>
+              ) : (
+                t("page-staking-any-amount")
+              )}
             </p>
           )}
         </div>

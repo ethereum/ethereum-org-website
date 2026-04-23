@@ -49,7 +49,7 @@ Questo processo non dovrebbe richiedere più di 10 minuti.
 
 ## 7. Aggiungi la rete di livello 2 selezionata al tuo portafoglio (opzionale)
 
-Puoi usare [chainlist.org](http://chainlist.org) per trovare i dettagli RPC della rete. Una volta aggiunta la rete e terminata la transazione, dovresti vedere i token nel tuo portafoglio.
+Puoi usare [chainlist.org](https://chainlist.org) per trovare i dettagli RPC della rete. Una volta aggiunta la rete e terminata la transazione, dovresti vedere i token nel tuo portafoglio.
 <br />
 
 <Alert variant="update">

@@ -31,7 +31,7 @@ export default meta
 export const ContentLayout: StoryObj<typeof meta> = {
   args: {
     children: (
-      <Center className="h-[497px] border-2 border-dashed border-primary">
+      <Center className="border-primary h-[497px] border-2 border-dashed">
         Content Here
       </Center>
     ),
@@ -77,7 +77,7 @@ export const ContentLayout: StoryObj<typeof meta> = {
     ],
     lastEditLocaleTimestamp: "MM DD, YY",
     heroSection: (
-      <Center className="h-[400px] border-2 border-dashed border-primary">
+      <Center className="border-primary h-[400px] border-2 border-dashed">
         Hero section
       </Center>
     ),

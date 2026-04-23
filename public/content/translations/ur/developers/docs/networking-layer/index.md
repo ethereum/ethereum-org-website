@@ -159,5 +159,5 @@ SSZ کا مطلب سادہ سیریلائزیشن (simple serialization) ہے۔ 
 [kademlia سے discv5 تک](https://vac.dev/kademlia-to-discv5)
 [kademlia پیپر](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [ایتھیریم p2p کا تعارف](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[eth1/eth2 کا رشتہ](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[eth1/eth2 کا رشتہ](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [مرج اور eth2 کلائنٹ کی تفصیلات کی ویڈیو](https://www.youtube.com/watch?v=zNIrIninMgg)

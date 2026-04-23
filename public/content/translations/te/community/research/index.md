@@ -247,7 +247,7 @@ lang: te
 #### ఇటీవలి పరిశోధన {#recent-research-10}
 
 - [బహుమితీయ EIP-1559 వీడియో ప్రదర్శన](https://youtu.be/QbR4MTgnCko)
-- [క్రాస్ డొమైన్ MEV](http://arxiv.org/abs/2112.01472)
+- [క్రాస్ డొమైన్ MEV](https://arxiv.org/abs/2112.01472)
 - [MEV వేలంపాటలు](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### ప్రూఫ్-ఆఫ్-స్టేక్ ప్రోత్సాహకాలు {#proof-of-stake-incentives}

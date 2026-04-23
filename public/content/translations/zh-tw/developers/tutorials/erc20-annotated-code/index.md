@@ -427,7 +427,7 @@ contract ERC20 is Context, IERC20 {
 
 `_transfer` 函式執行實際的工作。 它是一個私有函式，只能由其他合約函式呼叫。 按照慣例，私有函式的命名方式與狀態變數相同，都是 `_<something>`。
 
-通常在 Solidity 中，我們使用 `msg.sender` 來表示訊息發送者。 然而，這會破壞 [OpenGSN](http://opengsn.org/)。 如果我們想讓我們的代幣允許無以太幣的交易，我們需要使用 `_msgSender()`。 對於正常交易，它傳回 `msg.sender`，但對於無以太幣的交易，它傳回原始簽署者，而不是轉發訊息的合約。
+通常在 Solidity 中，我們使用 `msg.sender` 來表示訊息發送者。 然而，這會破壞 [OpenGSN](https://opengsn.org/)。 如果我們想讓我們的代幣允許無以太幣的交易，我們需要使用 `_msgSender()`。 對於正常交易，它傳回 `msg.sender`，但對於無以太幣的交易，它傳回原始簽署者，而不是轉發訊息的合約。
 
 ### 授權額度函式 {#allowance-functions}
 

@@ -41,14 +41,14 @@ const ActionCard = ({
   return (
     <LinkBox
       className={cn(
-        "flex flex-col shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100 md:flex-row",
+        "shadow-table hover:bg-background-highlight hover:shadow-table-box-hover focus:shadow-table-box-hover flex flex-col hover:scale-[1.02] hover:rounded hover:duration-100 focus:scale-[1.02] focus:rounded focus:duration-100 md:flex-row",
         className
       )}
       {...props}
     >
       <Flex
         className={cn(
-          "flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
+          "from-accent-a/10 to-accent-c/10 flex h-[260px] flex-row bg-linear-to-r",
           isBottom ? "items-end" : "items-center",
           isRight ? "justify-end" : "justify-center"
         )}
@@ -61,7 +61,7 @@ const ActionCard = ({
         />
       </Flex>
       <div className="flex flex-col justify-center p-6">
-        <h3 className="mb-4 mt-2 text-2xl font-semibold leading-snug">
+        <h3 className="mt-2 mb-4 text-2xl leading-snug font-semibold">
           <LinkOverlay asChild>
             <InlineLink
               href={href}
@@ -72,7 +72,7 @@ const ActionCard = ({
             </InlineLink>
           </LinkOverlay>
         </h3>
-        <p className={"mb-0 text-body/65"}>{description}</p>
+        <p className={"text-body/65 mb-0"}>{description}</p>
         {children && <div className="mt-8">{children}</div>}
       </div>
     </LinkBox>

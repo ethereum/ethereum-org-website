@@ -136,6 +136,8 @@ const Avatar = React.forwardRef<
     dataTest,
   } = props
 
+  const [hasError, setHasError] = React.useState(false)
+
   const commonLinkProps = {
     href,
     className: "not-[:hover]:no-underline",
@@ -164,7 +166,7 @@ const Avatar = React.forwardRef<
             <BaseLink {...commonLinkProps}>{label}</BaseLink>
           </LinkOverlay>
           <AvatarBase size={size}>
-            {src ? (
+            {src && !hasError ? (
               <Image
                 className="object-fill"
                 width={128}
@@ -173,6 +175,7 @@ const Avatar = React.forwardRef<
                 src={src}
                 alt={name}
                 quality={100}
+                onError={() => setHasError(true)}
               />
             ) : (
               <AvatarImage />
@@ -187,7 +190,7 @@ const Avatar = React.forwardRef<
   return (
     <AvatarBase ref={ref} size={size} className={className} asChild>
       <BaseLink title={dataTest} {...commonLinkProps}>
-        {src ? (
+        {src && !hasError ? (
           <Image
             className="object-fill"
             width={128}
@@ -196,6 +199,7 @@ const Avatar = React.forwardRef<
             src={src}
             alt={name}
             quality={100}
+            onError={() => setHasError(true)}
           />
         ) : (
           <AvatarImage />

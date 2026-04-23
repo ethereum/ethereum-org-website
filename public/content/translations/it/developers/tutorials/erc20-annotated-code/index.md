@@ -534,7 +534,7 @@ La funzione `transfer` viene chiamata per trasferire token dall'account del mitt
 
 La funzione `_transfer` fa il lavoro effettivo. È una funzione privata che può essere chiamata solo da altre funzioni del contratto. Per convenzione le funzioni private sono chiamate `_<qualcosa>`, come le variabili di stato.
 
-Normalmente in Solidity usiamo `msg.sender` per il mittente del messaggio. Tuttavia, questo rompe [OpenGSN](http://opengsn.org/). Se vogliamo consentire transazioni senza ether con il nostro token, dobbiamo usare `_msgSender()`. Restituisce `msg.sender` per le transazioni normali, ma per quelle senza ether restituisce il firmatario originale e non il contratto che ha inoltrato il messaggio.
+Normalmente in Solidity usiamo `msg.sender` per il mittente del messaggio. Tuttavia, questo rompe [OpenGSN](https://opengsn.org/). Se vogliamo consentire transazioni senza ether con il nostro token, dobbiamo usare `_msgSender()`. Restituisce `msg.sender` per le transazioni normali, ma per quelle senza ether restituisce il firmatario originale e non il contratto che ha inoltrato il messaggio.
 
 ### Funzioni di Autorizzazione {#allowance-functions}
 

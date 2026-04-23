@@ -67,7 +67,7 @@ const QuizzesStats = ({
     <div>
       <Stack className="gap-4 lg:mt-12 lg:gap-2">
         {/* user stats */}
-        <div className="grid columns-1 gap-6 rounded-none border-none bg-background-highlight p-8 lg:columns-2 lg:gap-4 lg:rounded-lg">
+        <div className="bg-background-highlight grid columns-1 gap-6 rounded-none border-none p-8 lg:columns-2 lg:gap-4 lg:rounded-lg">
           <div className="order-1 self-center">
             <span className="text-xl font-bold max-lg:text-center">
               {t("your-total")}
@@ -93,10 +93,10 @@ const QuizzesStats = ({
           <div className="order-2 lg:order-3 lg:col-span-2">
             <Stack className="gap-2">
               <HStack className="gap-4 max-lg:justify-center">
-                <Center className="size-16 rounded-full bg-primary">
-                  <TrophyIcon className="text-[35.62px] text-background" />
+                <Center className="bg-primary size-16 rounded-full">
+                  <TrophyIcon className="text-background text-[35.62px]" />
                 </Center>
-                <span className="text-5xl font-bold leading-base">
+                <span className="leading-base text-5xl font-bold">
                   {totalCorrectAnswers}
                   <span className="text-body-medium">
                     /{totalQuizzesPoints}
@@ -106,7 +106,7 @@ const QuizzesStats = ({
 
               <Progress
                 value={(totalCorrectAnswers / totalQuizzesPoints) * 100}
-                className="h-2.5 bg-primary-low-contrast [&>div]:bg-primary"
+                className="bg-primary-low-contrast [&>div]:bg-primary h-2.5"
               />
 
               <Flex className="gap-x-10 max-lg:flex-col">
@@ -124,7 +124,7 @@ const QuizzesStats = ({
         </div>
 
         {/* community stats */}
-        <Stack className="gap-6 border-none bg-background-highlight p-8 lg:rounded-lg">
+        <Stack className="bg-background-highlight gap-6 border-none p-8 lg:rounded-lg">
           <span className="text-xl font-bold">{t("community-stats")}</span>
 
           <Flex className="m-0 gap-x-20 gap-y-6 max-md:flex-col" asChild>

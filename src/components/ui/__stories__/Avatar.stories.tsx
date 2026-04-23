@@ -47,6 +47,21 @@ export const Group: Story = {
   ),
 }
 
+export const BrokenImageFallback: Story = {
+  args: {
+    name: "Sam Richards",
+    src: "https://placehold.co/404error",
+    href: "#",
+  },
+  render: (args) => (
+    <VStack className="gap-4">
+      {(["lg", "md", "sm", "xs"] as const).map((size) => (
+        <Avatar key={size} size={size} {...args} />
+      ))}
+    </VStack>
+  ),
+}
+
 export const WithUsername: Story = {
   args: {
     name: "Sam Richards",

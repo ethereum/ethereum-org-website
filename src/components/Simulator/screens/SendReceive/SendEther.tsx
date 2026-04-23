@@ -1,13 +1,14 @@
 import React from "react"
+import { useLocale, useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex, HStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
 
 import { EthTokenIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
+import { formatWalletToken, formatWalletUsd } from "../../utils"
 
 type SendEtherProps = {
   ethPrice: number
@@ -21,18 +22,11 @@ export const SendEther = ({
   chosenAmount,
   setChosenAmount,
 }: SendEtherProps) => {
-  const formatDollars = (amount: number): string =>
-    numberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      notation: "compact",
-    }).format(amount)
+  const t = useTranslations("component-wallet-simulator")
+  const locale = useLocale()
 
-  const usdAmount = formatDollars(ethPrice * ethBalance)
-
-  const ethAmount = numberFormat("en", {
-    maximumFractionDigits: 5,
-  }).format(ethBalance)
+  const usdAmount = formatWalletUsd(ethPrice * ethBalance)
+  const ethAmount = formatWalletToken(ethBalance, locale)
 
   const maxUsdAmount = ethPrice * ethBalance
 
@@ -46,27 +40,27 @@ export const SendEther = ({
 
   const AMOUNTS: Array<number> = [5, 10, 20, maxUsdAmount]
   const formatButtonLabel = (amount: number): string => {
-    if (amount === maxUsdAmount) return "Max"
-    return formatDollars(amount)
+    if (amount === maxUsdAmount) return t("sim-send-max")
+    // if (amount === maxUsdAmount) return "Max"
+    return formatWalletUsd(amount)
   }
-  const formatChosenAmount = numberFormat("en", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
+  const formatChosenAmount = formatWalletUsd(chosenAmount, {
     maximumFractionDigits: 0,
-  }).format(chosenAmount)
+  })
 
   return (
     <div className="h-full">
       <div className="px-6 py-8">
-        <p className="mb-4 text-xl font-bold md:mb-6 md:text-2xl">Send</p>
-        <p className="md:mb-6">How much do you want to send?</p>
+        <p className="mb-4 text-xl font-bold md:mb-6 md:text-2xl">
+          {t("sim-send-title")}
+        </p>
+        <p className="md:mb-6">{t("sim-send-how-much")}</p>
       </div>
       <Flex className="justify-between gap-4 border-y border-background-highlight px-6 py-4 text-xs text-body-medium md:py-6">
         {/* Left side: Displayed send amount */}
         <NotificationPopover
-          title="Example walkthrough"
-          content="Choose a value below"
+          title={t("sim-example-walkthrough")}
+          content={t("sim-send-choose-value")}
           side="top"
         >
           <Flex
@@ -84,8 +78,8 @@ export const SendEther = ({
         <Flex className="flex-col items-end">
           <NotificationPopover
             side="top"
-            title="Example walkthrough"
-            content="In this walkthrough you can only send ETH, but in real wallet you can send different tokens as well"
+            title={t("sim-example-walkthrough")}
+            content={t("sim-send-eth-only-note")}
           >
             {/* Token selector pill */}
             <HStack className="mb-4 gap-0 rounded-full bg-body-light px-2 py-1">
@@ -95,10 +89,10 @@ export const SendEther = ({
             </HStack>
           </NotificationPopover>
           {/* Balances */}
-          <p className="font-bold leading-none">Balance: {usdAmount}</p>
-          <p>
-            <>{ethAmount} ETH</>
+          <p className="font-bold leading-none">
+            {t("sim-send-balance", { amount: usdAmount })}
           </p>
+          <p dir="ltr">{ethAmount} ETH</p>
         </Flex>
       </Flex>
       <div className="h-full bg-background-highlight">

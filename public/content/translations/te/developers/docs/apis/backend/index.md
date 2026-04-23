@@ -111,7 +111,7 @@ lang: te
 **నెథెరియమ్ -** **_బ్లాక్ చైను కోసం ఒక ఓపెన్ సోర్స్ .NET ఇంటిగ్రేషన్ లైబ్రరీ._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [డాక్యుమెంటేషన్](http://docs.nethereum.com/en/latest/)
+- [డాక్యుమెంటేషన్](https://docs.nethereum.com/en/latest/)
 - [డిస్కార్డ్](https://discord.com/invite/jQPrR58FxX)
 
 **పైథాన్ టూలింగ్ -** **_పైథాన్ ద్వారా ఇతీరియము సంభాషణ కోసం వివిధ లైబ్రరీలు._**

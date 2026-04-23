@@ -25,7 +25,7 @@ export const CategoryTabs = ({
           variant="ghost"
           className={cn(
             fontWeightClass,
-            "p-0 pb-2 text-body",
+            "text-body p-0 pb-2",
             isActiveIndex && "!text-[initial]"
           )}
           disabled={isActiveIndex}

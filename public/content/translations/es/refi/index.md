@@ -66,7 +66,7 @@ Hay una nueva ola de proyectos innovadores basados en cadenas de bloques que bus
 
 Algunos, como [Klima Infinity](https://www.klimadao.finance/infinity) y [Senken](https://senken.io/), ofrecen una amplia variedad de proyectos desarrollados por terceros y emitidos bajo estándares establecidos como Verra; otros, como [Nori](https://nori.com/), solo ofrecen proyectos específicos desarrollados bajo su propio estándar de crédito de carbono, que ellos mismos emiten y para los cuales disponen de su propio mercado dedicado.
 
-4. La infraestructura y los cauces subyacentes que facilitan la escalabilidad del impacto y la eficiencia de toda la cadena de suministros del mercado de carbono. [KlimaDAO](http://klimadao.finance/) provee liquidez como un bien público (permitiendo que cualquier persona compre o venda créditos de carbono a un precio transparente), incentiva un mayor volumen del mercado de carbono y de retiros con recompensas, y ofrece herramientas interoperables y fáciles de usar para acceder a datos, así como para adquirir y retirar una gran variedad de créditos de carbono tokenizados.
+4. La infraestructura y los cauces subyacentes que facilitan la escalabilidad del impacto y la eficiencia de toda la cadena de suministros del mercado de carbono. [KlimaDAO](https://klimadao.finance/) provee liquidez como un bien público (permitiendo que cualquier persona compre o venda créditos de carbono a un precio transparente), incentiva un mayor volumen del mercado de carbono y de retiros con recompensas, y ofrece herramientas interoperables y fáciles de usar para acceder a datos, así como para adquirir y retirar una gran variedad de créditos de carbono tokenizados.
 
 ## ReFi más allá de los mercados de carbono {#refi-beyond}
 
