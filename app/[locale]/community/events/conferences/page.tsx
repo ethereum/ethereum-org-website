@@ -1,7 +1,7 @@
 import { pick } from "lodash"
 import { getMessages, getTranslations } from "next-intl/server"
 
-import type { PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -13,6 +13,7 @@ import {
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -21,6 +22,8 @@ import ContinentTabs from "../_components/ContinentTabs"
 import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
 import { mapEventTranslations } from "../utils"
+
+import ConferencesJsonLD from "./page-jsonld"
 
 import { getEventsData } from "@/lib/data"
 
@@ -53,6 +56,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const { contributors } = await getAppPageContributorInfo(
+    "community/events/conferences",
+    locale as Lang
+  )
+
   // Continent labels for tabs
   const continentLabels = {
     all: t("page-events-filter-all"),
@@ -67,6 +75,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      <ConferencesJsonLD
+        locale={locale}
+        contributors={contributors}
+        conferences={conferences}
+      />
       <ContentHero
         breadcrumbs={{ slug: "/community/events/conferences" }}
         title={t("page-events-conferences-hero-title", {
