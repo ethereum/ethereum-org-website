@@ -29,21 +29,21 @@ There is a solution that lets you use the EOA address via [EIP-7702](https://eip
 
 2. Clone the application and install the necessary software.
 
-    ```sh
-    git clone https://github.com/qbzzt/260315-gasless-tokens.git
-    cd 260315-gasless-tokens
-    forge build
-    cd server
-    npm install
-    ```
+   ```sh
+   git clone https://github.com/qbzzt/260315-gasless-tokens.git
+   cd 260315-gasless-tokens
+   forge build
+   cd server
+   npm install
+   ```
 
 3. Edit `.env` to set `SEPOLIA_PRIVATE_KEY` to a wallet that has ETH on Sepolia. If you need Sepolia ETH, [use a faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) to get it. Ideally, this private key should be different from the one you have in your browser wallet.
 
 4. Start the server.
 
-    ```sh
-    npm run dev
-    ```
+   ```sh
+   npm run dev
+   ```
 
 5. Browse to the application at URL [`http://localhost:5173`](http://localhost:5173).
 
@@ -51,17 +51,17 @@ There is a solution that lets you use the EOA address via [EIP-7702](https://eip
 
 7. Scroll down and click **Deploy UserProxy (slow process)**.
 
-8. You can see when the user proxy is deployed because there is an address next to **UserProxy access**. If you waited 24 seconds (2 blocks) and it still hasn't happened, there might be a problem with detecting changes. 
+8. You can see when the user proxy is deployed because there is an address next to **UserProxy access**. If you waited 24 seconds (2 blocks) and it still hasn't happened, there might be a problem with detecting changes.
 
-    If that is the case, go to the [Sepolia Explorer](https://eth-sepolia.blockscout.com/) and enter the deployment transaction hash you see in the server output at `npm run dev`. Click the created contract to view its address, then copy it. Click the contract that was created to see its address and copy it. Paste the address in the *Or enter existing proxy address* field, then click **Set proxy address**.
+   If that is the case, go to the [Sepolia Explorer](https://eth-sepolia.blockscout.com/) and enter the deployment transaction hash you see in the server output at `npm run dev`. Click the created contract to view its address, then copy it. Click the contract that was created to see its address and copy it. Paste the address in the _Or enter existing proxy address_ field, then click **Set proxy address**.
 
 9. Click **Request more tokens for proxy** to submit a call to the ERC-20 contract's [`faucet`](https://eth-sepolia.blockscout.com/address/0x4cBedDEDA88fDd9e116618a5cD71BB0E440C2A78?tab=read_write_contract#0xde5f72fd) function to get tokens. **Confirm** the signature in the wallet. Of course, the tokens reach the proxy's address, not the user's.
 
-10. Scroll down and click the link under *Last transaction:*. This will open the browser to show you the `faucet` transaction.
+10. Scroll down and click the link under _Last transaction:_. This will open the browser to show you the `faucet` transaction.
 
-11. In the *amount to transfer*, enter a number between one and one thousand. Click **Transfer** to transfer the tokens to your own address. Before you click **Confirm** for the request, see that the data being signed is opaque. Users would have a hard time understanding what they are signing. Remember that we will discuss it [below](#vulnerabilities).
+11. In the _amount to transfer_, enter a number between one and one thousand. Click **Transfer** to transfer the tokens to your own address. Before you click **Confirm** for the request, see that the data being signed is opaque. Users would have a hard time understanding what they are signing. Remember that we will discuss it [below](#vulnerabilities).
 
-12. After the transaction is confirmed, wait to see the change in both *your balance* and *proxy balance*. Note that this will also take some time, because Sepolia has a block time of 12 seconds.
+12. After the transaction is confirmed, wait to see the change in both _your balance_ and _proxy balance_. Note that this will also take some time, because Sepolia has a block time of 12 seconds.
 
 ## How it works {#how-work}
 
@@ -89,10 +89,10 @@ The owner's identity and a [nonce](https://en.wikipedia.org/wiki/Cryptographic_n
     bytes32 private constant SIGNED_ACCESS_PAYABLE_TYPEHASH =
         keccak256("SignedAccessPayable(address target,bytes data,uint256 nonce,uint256 value)");
 
-    bytes32 immutable DOMAIN_SEPARATOR;      
+    bytes32 immutable DOMAIN_SEPARATOR;
 ```
 
-The information required to verify [ERC-712 signatures](https://eips.ethereum.org/EIPS/eip-712). 
+The information required to verify [ERC-712 signatures](https://eips.ethereum.org/EIPS/eip-712).
 
 ```solidity
     constructor(address owner_) {
@@ -112,7 +112,7 @@ A `UserProxy` is tied to a single owner address. This is necessary because it ca
                 block.chainid,
                 address(this)
             )
-        );        
+        );
     }
 ```
 
@@ -125,7 +125,7 @@ The [domain separator](https://eips.ethereum.org/EIPS/eip-712#definition-of-doma
 Log the results of a call.
 
 ```solidity
-    function directAccess(address target, bytes calldata data) 
+    function directAccess(address target, bytes calldata data)
             external returns (bytes memory) {
 ```
 
@@ -140,17 +140,17 @@ This function can be called directly by the owner. If no relays are available, t
 
         return returnData;
     }
-```    
+```
 
-If we are called *directly* by the owner, call the target with the provided calldata.
+If we are called _directly_ by the owner, call the target with the provided calldata.
 
 ```solidity
     function signedAccess(
-        address target, 
+        address target,
         bytes calldata data,
-        uint8 v, 
-        bytes32 r, 
-        bytes32 s) 
+        uint8 v,
+        bytes32 r,
+        bytes32 s)
 ```
 
 This is `UserProxy`'s main function. It gets `target` and `data`, as well as a signature.
@@ -204,7 +204,7 @@ Call the contract the user told us to call, and revert if not successful.
 If successful, emit a log event and increment the nonce.
 
 ```solidity
-    function directAccessPayable(address target, uint value, bytes calldata data) 
+    function directAccessPayable(address target, uint value, bytes calldata data)
             external payable returns (bytes memory) {
         .
         .
@@ -291,7 +291,7 @@ This is the code that handles requests to deploy the proxy. Note that we are vul
       const ownerAddress = req.body.ownerAddress
 ```
 
-Get the owner's address from the request. 
+Get the owner's address from the request.
 
 ```javascript
       const txHash = await sepoliaClient.deployContract({
@@ -299,7 +299,7 @@ Get the owner's address from the request.
         bytecode: UserProxy.bytecode.object,
         args: [ownerAddress],
         account: sepoliaAccount,
-      })      
+      })
 
       console.log("Deployment transaction hash:", txHash)
 
@@ -322,7 +322,7 @@ If everything is fine, return the proxy address to the user interface.
       res.status(500).json({ error: err.message })
     }
   })
-```  
+```
 
 If there's a problem, report it.
 
@@ -391,7 +391,7 @@ Parts of [`Token.jsx`](https://github.com/qbzzt/260315-gasless-tokens/blob/main/
 
 ```js
 import {
-   encodeFunctionData 
+   encodeFunctionData
        } from 'viem'
 ```
 
@@ -430,11 +430,11 @@ const Address = ({ address }) => {
 This component outputs an address with a link to the contract on a block explorer.
 
 ```js
-const Token = () => {  
+const Token = () => {
     ...
 ```
 
-This is the main component that does most of the work. 
+This is the main component that does most of the work.
 
 ```js
   const [ balanceAmount, setBalanceAmount ] = useState("Loading...")
@@ -446,7 +446,7 @@ The token balance of the user address.
   const [ proxyAddr, setProxyAddr ] = useState(null)
 ```
 
-The address of a proxy owned by the user. 
+The address of a proxy owned by the user.
 
 ```js
   const [ proxyBalanceAmount, setProxyBalanceAmount ] = useState("Loading...")
@@ -494,7 +494,7 @@ Read the two token balances we are interested in, how much the user owns, and ho
       functionName: 'nonce',
       args: [],
   })
-```  
+```
 
 To prevent replay attacks (for example, a seller replaying a transaction that gives them money), we use a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). We need to know the current value to add it to the data we sign.
 
@@ -503,14 +503,14 @@ To prevent replay attacks (for example, a seller replaying a transaction that gi
     if (balance?.status === "success")
       setBalanceAmount(balance.data / 10n**18n)
     else
-      setBalanceAmount("Loading...")  
+      setBalanceAmount("Loading...")
   }, [balance])
 
   useEffect(() => {
     if (proxyBalance?.status === "success")
       setProxyBalanceAmount(proxyBalance.data / 10n**18n)
     else
-      setProxyBalanceAmount("Loading...")  
+      setProxyBalanceAmount("Loading...")
   }, [proxyBalance])
 ```
 
@@ -530,12 +530,12 @@ The default is to transfer `FaucetToken` tokens to the user's own account. Here 
 
 ```js
   const proxyAddressChange = (evt) => setNewProxyAddr(evt.target.value)
-  const transferTokenChange = (evt) => setTransferToken(evt.target.value)  
-  const transferToChange = (evt) => setTransferTo(evt.target.value)  
+  const transferTokenChange = (evt) => setTransferToken(evt.target.value)
+  const transferToChange = (evt) => setTransferTo(evt.target.value)
   const transferAmountChange = (evt) => setTransferAmount(evt.target.value)
 ```
 
-Event handlers for when the text fields change. 
+Event handlers for when the text fields change.
 
 ```js
   const deployUserProxy = async () => {
@@ -554,7 +554,7 @@ Event handlers for when the text fields change.
   }
 ```
 
-Ask the server to deploy a proxy for this user. 
+Ask the server to deploy a proxy for this user.
 
 ```js
   const signMessage = async(proxyAddr, calldata) => {
@@ -639,7 +639,6 @@ To call a function through the server and `UserProxy`, we follow three steps:
 
 3. Send the message to the server.
 
-
 ```js
   return (
     <>
@@ -675,7 +674,7 @@ Let the user deploy a new `UserProxy`.
          <br /><br />
          <input type="text" placeholder="Or enter existing proxy address" value={newProxyAddr} onChange={proxyAddressChange} />
          <br /><br />
-         <button 
+         <button
             onClick={() => setProxyAddr(newProxyAddr)}
             disabled={newProxyAddr.match(/^0x[a-fA-F0-9]{40}$/) === null}
          >
@@ -690,7 +689,7 @@ Only let users click **Set proxy address** when they enter a legitimate address.
          { proxyAddr && (
 ```
 
-Show the rest *only* if there is a legitimate proxy address.
+Show the rest _only_ if there is a legitimate proxy address.
 
 ```js
             <>
@@ -703,7 +702,7 @@ The user does not need to know the nonce; this is just for debugging purposes.
 
 ```js
                <br />
-               <button disabled={!proxyAddr || proxyAddr === "Loading..." || nonce?.status !== 'success'} 
+               <button disabled={!proxyAddr || proxyAddr === "Loading..." || nonce?.status !== 'success'}
                   onClick={proxyFaucet}
                >
                   Request more tokens for proxy
@@ -720,13 +719,13 @@ We can't simulate a call to `faucet()` through the proxy. However, we can at lea
                   <li> Recipient address: <input type="text" placeholder="Recipient address" value={transferTo} onChange={transferToChange} /> </li>
                   <li> Amount to transfer: <input type="number" placeholder="Amount to transfer" value={transferAmount} onChange={transferAmountChange} /> </li>
                </ul>
-               <button disabled={!proxyAddr || proxyAddr === "Loading..." || nonce?.status !== 'success'} 
+               <button disabled={!proxyAddr || proxyAddr === "Loading..." || nonce?.status !== 'success'}
                   onClick={proxyTransfer}
                >
                   Transfer
-               </button>               
+               </button>
             </>
-         )}   
+         )}
 ```
 
 Let the user issue ERC-20 transfer transactions.
@@ -764,10 +763,10 @@ Additionally, we are encouraging bad user behavior. This is what we ask the user
 
 ![Screen capture with opaque calldata](./fig-1-opaque-calldata.png)
 
-*We* know this is a legitimate ERC-20 transfer for the token, amount, and destination address the user wants to transfer. But most users don't know how to interpret calldata, and have no idea what they are signing. That is bad design, for two reasons:
+_We_ know this is a legitimate ERC-20 transfer for the token, amount, and destination address the user wants to transfer. But most users don't know how to interpret calldata, and have no idea what they are signing. That is bad design, for two reasons:
 
 - Some users will not use us because they don't trust the data we tell them to sign.
-- Other users *will* trust us and learn that they should just sign calldata without understanding what it is. This means that if Adam Attacker manages to redirect them to his website, he can have them sign a transaction that grants him all the USDC (or DAI, or any other ERC-20) the user owns.
+- Other users _will_ trust us and learn that they should just sign calldata without understanding what it is. This means that if Adam Attacker manages to redirect them to his website, he can have them sign a transaction that grants him all the USDC (or DAI, or any other ERC-20) the user owns.
 
 The solution is to have separate functions in `UserProxy` for commonly used functions, such as transfer. Then users can sign something they understand.
 
@@ -781,10 +780,9 @@ The solution is to have separate functions in `UserProxy` for commonly used func
 
 In addition to the vulnerabilities above, the solution in this tutorial has several drawbacks that Ethereum can help us address.
 
-- *Censorship resistance*. Currently, users can use your server, a competing server set up by someone else, or connect to Ethereum directly, which incurs gas costs. Using [ERC-4337](https://docs.erc4337.io/#what-is-erc-4337) lets users offer their transaction to a large pool of servers, reducing the likelihood that their transactions will be censored.
-- *EOA owned assets*. As noted above, [EIP-7702](https://eip7702.io/) can be used to manage assets already owned by an EOA address. This has its difficulties, but sometimes it is necessary.
+- _Censorship resistance_. Currently, users can use your server, a competing server set up by someone else, or connect to Ethereum directly, which incurs gas costs. Using [ERC-4337](https://docs.erc4337.io/#what-is-erc-4337) lets users offer their transaction to a large pool of servers, reducing the likelihood that their transactions will be censored.
+- _EOA owned assets_. As noted above, [EIP-7702](https://eip7702.io/) can be used to manage assets already owned by an EOA address. This has its difficulties, but sometimes it is necessary.
 
 I hope to publish tutorials about adding these features in the near future.
 
 [See here for more of my work](https://cryptodocguy.pro/).
-
