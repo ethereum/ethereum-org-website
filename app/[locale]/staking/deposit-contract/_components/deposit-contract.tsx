@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { Clipboard, ClipboardCheck } from "lucide-react"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CardList from "@/components/CardList"
@@ -150,7 +150,7 @@ const CHUNKED_ADDRESS =
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
-const DepositContractPage = ({ locale }: { locale: Lang }) => {
+const DepositContractPage = () => {
   const pathname = usePathname()
 
   const { t } = useTranslation("page-staking-deposit-contract")

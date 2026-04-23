@@ -3,6 +3,7 @@ import { FileContributor, Frontmatter } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
 import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 

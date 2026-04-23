@@ -6,6 +6,7 @@ import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
+
 import { BASE_GRAPH_NODES, ORGANIZATION } from "@/lib/jsonld/constants"
 import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 

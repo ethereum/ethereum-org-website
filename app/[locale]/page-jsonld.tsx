@@ -4,12 +4,13 @@ import { Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
+import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
 import {
-  ORGANIZATION,
   ETHEREUM_ORG_WEBSITE,
+  ORGANIZATION,
   REFERENCE,
 } from "@/lib/jsonld/constants"
-import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 export default async function IndexPageJsonLD({
   locale,
