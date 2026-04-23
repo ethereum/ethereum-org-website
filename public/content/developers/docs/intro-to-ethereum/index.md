@@ -104,6 +104,14 @@ A reusable snippet of code (a program) which a developer publishes into EVM stat
 
 [More on smart contracts](/developers/docs/smart-contracts/)
 
+## Where to go next {#where-to-go-next}
+
+Most readers follow the docs in order, but the shortest path depends on what you're trying to build:
+
+- **Dapps that interact with Ethereum:** [accounts](/developers/docs/accounts/) and [transactions](/developers/docs/transactions/), then pick a [framework](/developers/docs/frameworks/).
+- **Smart contract development:** [smart contracts](/developers/docs/smart-contracts/) and [programming languages](/developers/docs/programming-languages/).
+- **Nodes and staking:** [nodes and clients](/developers/docs/nodes-and-clients/), then [consensus mechanisms](/developers/docs/consensus-mechanisms/).
+
 ## Further reading {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)

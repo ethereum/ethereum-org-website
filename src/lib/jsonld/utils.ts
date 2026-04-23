@@ -87,9 +87,9 @@ export function resolveAuthorsFromFrontmatter(authors?: string | string[]): {
 
   return {
     authorGraphNodes: entities,
-    authorIds:
-      entities.length > 0
-        ? entities.map((e) => ({ "@id": e["@id"] }))
-        : [REFERENCE.ETHEREUM_COMMUNITY],
+    authorIds: [
+      ...entities.map((e) => ({ "@id": e["@id"] })),
+      REFERENCE.ETHEREUM_COMMUNITY,
+    ],
   }
 }

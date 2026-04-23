@@ -4,8 +4,9 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { KNOWN_PERSONS } from "@/lib/jsonld/persons"
 import { personReference } from "@/lib/jsonld/utils"
 

@@ -8,21 +8,17 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 
-export default async function AcknowledgementsJsonLD({
+export default async function EventsSearchJsonLD({
   locale,
   contributors,
 }: {
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations(
-    "page-contributing-translation-program-acknowledgements"
-  )
+  const t = await getTranslations("page-community-events")
+  const common = await getTranslations("common")
 
-  const url = normalizeUrlForJsonLd(
-    locale,
-    `/contributing/translation-program/acknowledgements/`
-  )
+  const url = normalizeUrlForJsonLd(locale, `/community/events/search/`)
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -37,12 +33,8 @@ export default async function AcknowledgementsJsonLD({
       {
         "@type": "WebPage",
         "@id": url,
-        name: t(
-          "page-contributing-translation-program-acknowledgements-meta-title"
-        ),
-        description: t(
-          "page-contributing-translation-program-acknowledgements-meta-description"
-        ),
+        name: t("page-events-search-hero-title"),
+        description: t("page-events-search-metadata-description"),
         url: url,
         inLanguage: locale,
         contributor: contributorList,
@@ -60,30 +52,33 @@ export default async function AcknowledgementsJsonLD({
             {
               "@type": "ListItem",
               position: 2,
-              name: "Contributing",
-              item: normalizeUrlForJsonLd(locale, "/contributing/"),
+              name: "Community",
+              item: normalizeUrlForJsonLd(locale, "/community/"),
             },
             {
               "@type": "ListItem",
               position: 3,
-              name: "Translation Program",
-              item: normalizeUrlForJsonLd(
-                locale,
-                "/contributing/translation-program/"
-              ),
+              name: common("events"),
+              item: normalizeUrlForJsonLd(locale, "/community/events/"),
             },
             {
               "@type": "ListItem",
               position: 4,
-              name: t(
-                "page-contributing-translation-program-acknowledgements-meta-title"
-              ),
+              name: common("search"),
               item: url,
             },
           ],
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${url}?q={search_term_string}`,
+          },
+          "query-input": "required name=search_term_string",
+        },
       },
     ],
   }

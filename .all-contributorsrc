@@ -1501,7 +1501,8 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/44020788?v=4",
       "profile": "https://twitter.com/AnettRolikova",
       "contributions": [
-        "content"
+        "content",
+        "tool"
       ]
     },
     {
@@ -14148,6 +14149,51 @@
       "profile": "https://linktr.ee/jadijadi",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "Ale-Bv-Dev",
+      "name": "Ale-Bv-Dev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214505223?v=4",
+      "profile": "https://github.com/Ale-Bv-Dev",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "rayjun",
+      "name": "rayoo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7517993?v=4",
+      "profile": "https://github.com/rayjun",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "kangbaek324",
+      "name": "BaekHo Kang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162931494?v=4",
+      "profile": "https://github.com/kangbaek324",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "franrob-projects",
+      "name": "Fran Roberts",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111994975?v=4",
+      "profile": "https://franrob-projects.github.io/portfolio/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jzhishu",
+      "name": "JH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39545185?v=4",
+      "profile": "https://github.com/jzhishu",
+      "contributions": [
+        "bug"
       ]
     }
   ],

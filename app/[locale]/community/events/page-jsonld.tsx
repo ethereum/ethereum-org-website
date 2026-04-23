@@ -5,11 +5,12 @@ import { FileContributor } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { getLocaleYear } from "@/lib/utils/date"
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { communityHubSchemas } from "@/data/community-hub-schemas"
 import communityHubs from "@/data/community-hubs"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 
 function buildHubSchemaNodes(
   hub: (typeof communityHubs)[number],

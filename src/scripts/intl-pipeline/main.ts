@@ -23,7 +23,10 @@ import {
 import i18nConfig from "../../../i18n.config.json"
 
 import {
-  ensureStagingBranch,
+  branchExists,
+  createBranchFromSha,
+  deleteBranch,
+  ensurePendingBranch,
   getBranchObject,
   mergeBranchInto,
 } from "./lib/github/branches"
@@ -541,7 +544,7 @@ async function runIncremental(
 
 async function main() {
   const startTime = Date.now()
-  logSection("Incremental Translation Pipeline v5")
+  logSection("Incremental Translation Pipeline")
 
   if (!config.targetPaths.length) {
     console.error("[ERROR] TARGET_PATH is required")
@@ -558,10 +561,58 @@ async function main() {
   log(`Mode: ${config.mode}`)
   log(`Concurrency: ${config.concurrency}`)
 
-  // Create temp working branch for crash safety
+  // If the pending branch already exists (prior run against the same base),
+  // use it as the baseline: merge current base into it first (fail-fast on
+  // conflict), sync local working tree from it so drift detection reads the
+  // latest stamped manifests, and branch the temp branch off of it.
+  const pendingExists = await branchExists(targetBranch)
+  let tempBranchSourceSha: string
+
+  if (pendingExists) {
+    log(`Pending branch exists: ${targetBranch}`)
+    log(`Merging ${baseBranch} into ${targetBranch}...`)
+    const merged = await mergeBranchInto(baseBranch, targetBranch)
+    if (!merged) {
+      throw new Error(
+        `Cannot merge ${baseBranch} into ${targetBranch}. ` +
+          `Either resolve conflicts on ${targetBranch} manually, or delete the branch and retry. ` +
+          `Aborting before any translation work.`
+      )
+    }
+    tempBranchSourceSha = (await getBranchObject(targetBranch)).sha
+
+    // Force-update the local ref and check out pending's versions of the
+    // manifest and content paths. This is destructive to any local edits in
+    // those paths and is intended to run in CI (GitHub Actions) only, where
+    // the working tree is ephemeral. The pipeline requires GEMINI_API_KEY
+    // which is loaded from GH Secrets, so accidental local invocation is
+    // unlikely, but edits in the listed paths will be clobbered if it happens.
+    log(`Syncing local working tree from ${targetBranch}...`)
+    execFileSync(
+      "git",
+      ["fetch", "origin", `+${targetBranch}:${targetBranch}`],
+      { stdio: "inherit" }
+    )
+    execFileSync(
+      "git",
+      [
+        "checkout",
+        targetBranch,
+        "--",
+        ".manifests",
+        "public/content",
+        "src/intl",
+      ],
+      { stdio: "inherit" }
+    )
+  } else {
+    tempBranchSourceSha = (await getBranchObject(baseBranch)).sha
+  }
+
+  // Create temp working branch for crash safety (from pending if it exists, otherwise base)
   const tempBranch = generateTempBranchName()
   log(`Temp branch: ${tempBranch}`)
-  await ensureStagingBranch(tempBranch, baseBranch)
+  await createBranchFromSha(tempBranch, tempBranchSourceSha)
   const baseBranchSha = (await getBranchObject(baseBranch)).sha
   const committer = new SharedCommitter(tempBranch)
   await committer.init()
@@ -711,10 +762,13 @@ async function main() {
     }
   }
 
-  // Merge temp branch into target branch
+  // Merge temp branch into pending, then clean up the temp.
+  // If pending didn't exist at the start, create it from base now.
   if (committedFiles.length > 0 || hasCommits) {
     log(`Merging ${tempBranch} -> ${targetBranch}`)
-    await ensureStagingBranch(targetBranch, baseBranch)
+    if (!pendingExists) {
+      await ensurePendingBranch(targetBranch, baseBranch)
+    }
     const merged = await mergeBranchInto(tempBranch, targetBranch)
     if (!merged) {
       throw new Error(
@@ -722,8 +776,13 @@ async function main() {
       )
     }
     log(`Merged successfully`)
+
+    // Clean up temp branch -- its work is now on pending
+    await deleteBranch(tempBranch)
   } else {
     log(`No changes to merge`)
+    // Nothing landed on the temp branch -- clean it up
+    await deleteBranch(tempBranch)
   }
 
   // Create or update PR unless skipped

@@ -4,11 +4,12 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { COLLECTIBLES_BASE_URL } from "./constants"
 import type { Badge, Stats } from "./types"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 
 export default async function CollectiblesJsonLD({
   locale,
