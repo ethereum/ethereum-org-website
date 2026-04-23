@@ -54,7 +54,7 @@ export const KNOWN_PERSONS = {
   "andreas-antonopoulos": {
     "@type": "Person" as const,
     "@id": "https://ethereum.org/#andreas-antonopoulos",
-    name: "Andreas M. Antonopoulos",
+    name: "Andreas Antonopoulos",
     description:
       "Andreas M. Antonopoulos is an acclaimed author, speaker, and educator known for making complex blockchain and cryptocurrency topics accessible and easy to understand. He is the author of the widely-read essay collection 'The Internet of Money' and the standard-setting technical books 'Mastering Ethereum' and 'Mastering Bitcoin', and his work serves as a bridge between complex cryptographic concepts and mainstream understanding.",
     knowsAbout: [
