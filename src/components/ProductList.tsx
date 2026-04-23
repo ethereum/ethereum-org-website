@@ -13,7 +13,7 @@ type Content = {
   contentItems?: React.ReactNode[]
   link?: string
   image?: ImageProps["src"]
-  alt: string
+  alt?: string
   id?: string
   className?: string
 }
@@ -65,7 +65,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
                 {image && (
                   <Image
                     src={image}
-                    alt={alt}
+                    alt={alt || ""}
                     width={66}
                     height={66}
                     className="dark:shadow-body-light rounded-xl shadow-lg"
