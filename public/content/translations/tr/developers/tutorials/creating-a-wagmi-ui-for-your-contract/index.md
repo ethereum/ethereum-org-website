@@ -4,6 +4,7 @@ description: "TypeScript, React, Vite ve Wagmi gibi modern bileşenleri kullanar
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "ön uç" ]
 skill: beginner
+breadcrumb: "WAGMI ile UI"
 published: 2023-11-01
 lang: tr
 sidebarDepth: 3
@@ -25,7 +26,7 @@ Modern bir kullanıcı arayüzünün nasıl çalıştığının arkasında pek �
 
 1. Gerekirse, [Holesky blokzincirini](https://chainlist.org/?search=holesky&testnets=true) cüzdanınıza ekleyin ve [test ETH'si alın](https://www.holeskyfaucet.io/).
 
-2. GitHub deposunu klonlayın.
+2. Github deposunu klonlayın.
 
    ```sh
    git clone https://github.com/qbzzt/20230801-modern-ui.git

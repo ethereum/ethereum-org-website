@@ -1,6 +1,6 @@
 ---
-title: 後端應用程式介面程式庫
-description: 讓你能夠從應用程式與區塊鏈互動的以太坊用戶端應用程式介面簡介。
+title: "後端應用程式介面程式庫"
+description: "讓你能夠從應用程式與區塊鏈互動的以太坊用戶端應用程式介面簡介。"
 lang: zh-tw
 ---
 
@@ -26,7 +26,7 @@ lang: zh-tw
 
 - [alchemy.com](https://www.alchemy.com/)
 - [文件](https://docs.alchemy.com/)
-- [GitHub](https://github.com/alchemyplatform)
+- [Github](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
 **All That Node -** **_節點即服務。_**
@@ -45,7 +45,7 @@ lang: zh-tw
 
 - [blockpi.io](https://blockpi.io/)
 - [文檔](https://docs.blockpi.io/)
-- [GitHub](https://github.com/BlockPILabs)
+- [Github](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
 **Cloudflare 以太坊閘道。**
@@ -64,7 +64,7 @@ lang: zh-tw
 
 - [infura.io](https://infura.io)
 - [文件](https://docs.infura.io/api)
-- [GitHub](https://github.com/INFURA)
+- [Github](https://github.com/INFURA)
 
 **Node RPC - _有成本效益的以太坊虛擬機 JSON-RPC 提供者_**
 
@@ -74,7 +74,6 @@ lang: zh-tw
 **NOWNodes - _全節點和區塊瀏覽器。_**
 
 - [NOWNodes.io](https://nownodes.io/)
-- [文件](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 **QuickNode -** **_區塊鏈基礎設施即服務。_**
 
@@ -86,12 +85,12 @@ lang: zh-tw
 
 - [rivet.cloud](https://rivet.cloud)
 - [文件](https://rivet.cloud/docs/)
-- [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+- [Github](https://github.com/openrelayxyz/ethercattle-deployment)
 
 **Zmok -** **_速度導向的以太坊節點即 JSON-RPC/WebSockets 應用程式介面。_**
 
 - [zmok.io](https://zmok.io/)
-- [GitHub](https://github.com/zmok-io)
+- [Github](https://github.com/zmok-io)
 - [文檔](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
@@ -99,19 +98,19 @@ lang: zh-tw
 
 **ethers-kt -** **_適用基於以太坊虛擬機區塊鏈的非同步、高效能 Kotlin/Java/Android 程式庫。_**
 
-- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Github](https://github.com/Kr1ptal/ethers-kt)
 - [範例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
 - [Discord](https://discord.gg/rx35NzQGSb)
 
 **Nethereum -** **_區塊鏈的開源 .NET 整合程式庫。_**
 
-- [GitHub](https://github.com/Nethereum/Nethereum)
-- [文檔](http://docs.nethereum.com/en/latest/)
+- [Github](https://github.com/Nethereum/Nethereum)
+- [文檔](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_透過 Python 進行以太坊互動的各種程式庫。_**
 
-- [py.ethereum.org](https://python.ethereum.org/)
+- [py.ethereum.org](https://snakecharmers.ethereum.org)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py 聊天室](https://gitter.im/ethereum/web3.py)
 
@@ -124,7 +123,7 @@ lang: zh-tw
 
 **web3j -** **_以太坊的 Java/Android/Kotlin/Scala 整合程式庫。 _**
 
-- [GitHub](https://github.com/web3j/web3j)
+- [Github](https://github.com/web3j/web3j)
 - [文件](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 

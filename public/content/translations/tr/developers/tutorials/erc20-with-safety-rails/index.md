@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: tr
 tags: [ "erc-20" ]
 skill: beginner
+breadcrumb: "ERC-20 güvenliği"
 published: 2022-08-15
 ---
 
@@ -17,7 +18,7 @@ Bu makalede [OpenZeppelin ERC-20 jeton sözleşmesini](https://github.com/OpenZe
 Bütün kaynak kodunu görmek isterseniz:
 
 1. [Remix IDE](https://remix.ethereum.org/)'yi açın.
-2. GitHub klonlama simgesine tıklayın (![github klonlama simgesi](icon-clone.png)).
+2. Github klonlama simgesine tıklayın (![github klonlama simgesi](icon-clone.png)).
 3. `https://github.com/qbzzt/20220815-erc20-safety-rails` github deposunu klonlayın.
 4. **contracts > erc20-safety-rails.sol** dosyasını açın.
 

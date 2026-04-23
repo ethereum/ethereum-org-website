@@ -96,7 +96,7 @@ Ephemery je jedinečný druh testnetu, který se každý měsíc plně resetuje.
 ##### Zdroje
 
 - [Webové stránky](https://ephemery.dev/)
-- [GitHub](https://github.com/ephemery-testnet/ephemery-resources)
+- [Github](https://github.com/ephemery-testnet/ephemery-resources)
 - [Komunitní chat](https://matrix.to/#/#staker-testnet:matrix.org)
 - [Blockscout](https://explorer.ephemery.dev/)
 - [Otterscan](https://otter.bordel.wtf/)
@@ -114,7 +114,7 @@ Ephemery je jedinečný druh testnetu, který se každý měsíc plně resetuje.
 Testnet Holesky je od září 2025 zastaralý. Provozovatelé stakingu a poskytovatelé infrastruktury by místo toho měli pro testování validátorů používat Hoodi.
 
 - [Oznámení o ukončení provozu testnetu Holesky](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) – _Blog EF, 1. září 2025_
-- [Aktualizace testnetů Holesky a Hoodi](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) – _Blog EF, 18. března 2025_
+- [Aktualizace testnetů Holesky a Hoodi](https://blog.ethereum.org/2025/03/18/hoodi-holesky) – _Blog EF, 18. března 2025_
 
 ### Testnety druhé vrstvy {#layer-2-testnets}
 
@@ -158,7 +158,7 @@ Testnet pro [Starknet](https://www.starknet.io).
 
 ##### Zdroje
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Faucety
 
