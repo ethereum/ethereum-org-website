@@ -48,7 +48,7 @@ import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-s
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
-import EventFallback from "@/public/images/events/event-placeholder.png"
+import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
 const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
@@ -604,7 +604,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         {bannerImage ? (
                           <CardImage src={bannerImage} />
                         ) : (
-                          <Image src={EventFallback} alt="" sizes="276px" />
+                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
                         )}
                       </CardBanner>
                       <CardContent>
