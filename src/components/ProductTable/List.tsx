@@ -1,4 +1,10 @@
-import { useCallback, useLayoutEffect, useRef, useState } from "react"
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react"
 import { useWindowVirtualizer } from "@tanstack/react-virtual"
 
 import type { FilterOption, Wallet } from "@/lib/types"
@@ -11,6 +17,11 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "../ui/collapsible"
+
+// Number of rows rendered unvirtualized on the server + first client render.
+// Enough real DOM content for search-engine indexing of a YMYL page without
+// blowing up initial HTML/hydration cost; the virtualizer takes over on mount.
+const SSR_ROW_COUNT = 30
 
 type ListProps<T extends { id: string }> = {
   data: T[]
@@ -31,6 +42,7 @@ const List = <T extends { id: string }>({
   ...rest
 }: ListProps<T>) => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
+  const [isMounted, setIsMounted] = useState(false)
 
   const parentRef = useRef<HTMLDivElement>(null)
   const parentOffsetRef = useRef(0)
@@ -41,6 +53,10 @@ const List = <T extends { id: string }>({
     overscan: 5,
     scrollMargin: parentOffsetRef.current,
   })
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   useLayoutEffect(() => {
     parentOffsetRef.current = parentRef.current?.offsetTop ?? 0
@@ -82,6 +98,35 @@ const List = <T extends { id: string }>({
     },
     [matomoEventCategory, virtualizer]
   )
+
+  // Server + first client render: emit real DOM rows in natural flow so
+  // crawlers see wallet names/descriptions/links and server+client first
+  // renders stay identical (no hydration mismatch). Virtualizer takes over
+  // after mount.
+  if (!isMounted) {
+    return (
+      <div ref={parentRef} {...rest}>
+        {data.slice(0, SSR_ROW_COUNT).map((item, index) => (
+          <Collapsible
+            key={item.id}
+            data-index={index}
+            open={!!expanded[item.id]}
+            onOpenChange={(open) => handleExpandedChange(open, item)}
+            className="group/collapsible hover:bg-background-highlight data-[state=open]:bg-background-highlight flex w-full cursor-pointer flex-col border-b"
+          >
+            <CollapsibleTrigger asChild>
+              <div className="p-4">
+                <WalletInfo wallet={item as unknown as Wallet} />
+              </div>
+            </CollapsibleTrigger>
+            <CollapsibleContent className="p-4">
+              {subComponent?.(item, filters, index)}
+            </CollapsibleContent>
+          </Collapsible>
+        ))}
+      </div>
+    )
+  }
 
   return (
     <div

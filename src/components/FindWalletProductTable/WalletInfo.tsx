@@ -8,12 +8,10 @@ import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 
-import { breakpointAsNumber } from "@/lib/utils/screen"
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
 import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
 
-import MediaQuery from "../MediaQuery"
 import { ButtonLink } from "../ui/buttons/Button"
 import { TagsInlineText } from "../ui/tag"
 
@@ -62,55 +60,53 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
     <div className="flex flex-col gap-4">
       <div className="flex flex-row items-center justify-between gap-4">
         <div className="flex flex-col gap-4">
-          {/* Desktop layout */}
-          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.lg}px)`]}>
-            <div className="hidden flex-row gap-4 lg:flex">
+          {/* Desktop layout — visibility toggled by Tailwind breakpoints so
+              the wallet name, personas, and chains are present in SSR HTML
+              regardless of viewport (critical for crawlers). */}
+          <div className="hidden flex-row gap-4 lg:flex">
+            <Image
+              src={wallet.image}
+              alt=""
+              style={{ objectFit: "contain", width: "56px", height: "56px" }}
+            />
+            <div className="flex flex-col gap-2">
+              <p className="text-xl font-bold">{wallet.name}</p>
+
+              <PersonaTags walletPersonas={walletPersonas} />
+
+              <div
+                className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""} mt-1`}
+              >
+                <ChainImages
+                  chains={wallet.supported_chains as ChainName[]}
+                  className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile layout */}
+          <div className="flex flex-col gap-4 lg:hidden">
+            <div className="flex flex-row items-center gap-4">
               <Image
                 src={wallet.image}
                 alt=""
-                style={{ objectFit: "contain", width: "56px", height: "56px" }}
+                style={{
+                  objectFit: "contain",
+                  width: "24px",
+                  height: "24px",
+                }}
               />
-              <div className="flex flex-col gap-2">
-                <p className="text-xl font-bold">{wallet.name}</p>
-
-                <PersonaTags walletPersonas={walletPersonas} />
-
-                <div
-                  className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""} mt-1`}
-                >
-                  <ChainImages
-                    chains={wallet.supported_chains as ChainName[]}
-                    className={`ms-2 ${walletPersonas.length === 0 ? "mb-4" : ""}`}
-                  />
-                </div>
-              </div>
+              <p className="text-xl font-bold">{wallet.name}</p>
             </div>
-          </MediaQuery>
-
-          {/* Mobile layout */}
-          <MediaQuery queries={[`(max-width: ${breakpointAsNumber.lg - 1}px)`]}>
-            <div className="flex flex-col gap-4 lg:hidden">
-              <div className="flex flex-row items-center gap-4">
-                <Image
-                  src={wallet.image}
-                  alt=""
-                  style={{
-                    objectFit: "contain",
-                    width: "24px",
-                    height: "24px",
-                  }}
-                />
-                <p className="text-xl font-bold">{wallet.name}</p>
-              </div>
-              <div>
-                <PersonaTags walletPersonas={walletPersonas} />
-              </div>
-              <ChainImages
-                chains={wallet.supported_chains as ChainName[]}
-                className={walletPersonas.length === 0 ? "mb-4" : ""}
-              />
+            <div>
+              <PersonaTags walletPersonas={walletPersonas} />
             </div>
-          </MediaQuery>
+            <ChainImages
+              chains={wallet.supported_chains as ChainName[]}
+              className={walletPersonas.length === 0 ? "mb-4" : ""}
+            />
+          </div>
 
           <div className="flex flex-row gap-4">
             <div className="relative hidden w-14 lg:block">
