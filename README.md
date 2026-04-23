@@ -2206,6 +2206,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ale-Bv-Dev"><img src="https://avatars.githubusercontent.com/u/214505223?v=4?s=100" width="100px;" alt="Ale-Bv-Dev"/><br /><sub><b>Ale-Bv-Dev</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAle-Bv-Dev" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/rayjun"><img src="https://avatars.githubusercontent.com/u/7517993?v=4?s=100" width="100px;" alt="rayoo"/><br /><sub><b>rayoo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arayjun" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kangbaek324"><img src="https://avatars.githubusercontent.com/u/162931494?v=4?s=100" width="100px;" alt="BaekHo Kang"/><br /><sub><b>BaekHo Kang</b></sub></a><br /><a href="#translation-kangbaek324" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://franrob-projects.github.io/portfolio/"><img src="https://avatars.githubusercontent.com/u/111994975?v=4?s=100" width="100px;" alt="Fran Roberts"/><br /><sub><b>Fran Roberts</b></sub></a><br /><a href="#content-franrob-projects" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
