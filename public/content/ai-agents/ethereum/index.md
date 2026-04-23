@@ -113,12 +113,13 @@ See [Layer 2s](/ai-agents/l2s/) for a breakdown of L2 characteristics relevant t
 
 ## Further reading {#further-reading}
 
-- [Account abstraction (ERC-4337)](https://ethereum.org/en/roadmap/account-abstraction/) — ethereum.org
-- [EIP-7702: Smart account delegation for existing wallets](https://ethereum.org/roadmap/pectra/7702/) — ethereum.org
-- [ERC-8004: Trustless agent identity standard](https://eips.ethereum.org/EIPS/eip-8004) — Ethereum Improvement Proposals
-- [x402: Machine-to-machine payment protocol](https://docs.x402.org/)
 - [The promise and challenges of crypto + AI applications](https://vitalik.eth.limo/general/2024/01/30/cryptoai.html) — Vitalik Buterin
 - [Autonomous agents on blockchains: standards, execution models, and trust boundaries](https://arxiv.org/abs/2601.04583) — arXiv
+- [5 Ways Blockchains Help AI Agents](https://a16zcrypto.com/posts/article/5-ways-blockchains-help-ai-agents/) — a16z
+- [Account abstraction (ERC-4337)](https://ethereum.org/en/roadmap/account-abstraction/) — ethereum.org
+- [EIP-7702: Smart account delegation for existing wallets](https://ethereum.org/en/roadmap/pectra/7702/) — ethereum.org
+- [ERC-8004: Trustless agent identity standard](https://eips.ethereum.org/EIPS/eip-8004) — Ethereum Improvement Proposals
+- [x402: Machine-to-machine payment protocol](https://docs.x402.org/)
 
 ## Continue exploring the AI agents builder hub {#continue-exploring}
 
