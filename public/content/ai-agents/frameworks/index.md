@@ -6,7 +6,7 @@ lang: en
 
 # AI agent frameworks {#ai-agent-frameworks}
 
-An agent framework handles three responsibilities: the language model interface, tool orchestration, and the reasoning loop that drives your agent between steps. The framework you choose shapes which wallet SDK integrates most naturally, what deployment patterns are available to you, and how your agent manages state across calls.
+An agent framework handles three responsibilities: **the language model interface, tool orchestration, and the reasoning loop** that drives your agent between steps. The framework you choose shapes which wallet SDK integrates most naturally, what deployment patterns are available to you, and how your agent manages state across calls.
 
 This page covers a selection of commonly-used frameworks with active Ethereum integration, with a decision guide and integration notes for each.
 
@@ -58,7 +58,7 @@ CoordinatorAgent
 └── ExecutorAgent   (holds session key, HITL approval above threshold)
 ```
 
-In this pattern, only the Executor holds signing authority. Stateless specialists can be restarted or replaced without key rotation. For how to implement the human-in-the-loop (HITL) escalation logic, including the `onStepFinish` hook and durable pause patterns. See [Human-in-the-loop escalation](/ai-agents/wallets/#hitl) in the agent wallets guide.
+In this pattern, **only the Executor holds signing authority**. Stateless specialists can be restarted or replaced without key rotation. For how to implement the human-in-the-loop (HITL) escalation logic, including the `onStepFinish` hook and durable pause patterns. See [Human-in-the-loop escalation](/ai-agents/wallets/#hitl) in the agent wallets guide.
 
 ### Shared-state coordination (onchain) {#shared-state-onchain}
 

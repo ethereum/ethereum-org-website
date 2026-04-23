@@ -8,9 +8,9 @@ lang: en
 
 When an autonomous agent interacts with another agent or a human counterparty, the counterparty needs to answer three questions: Is this agent who it says it is? What can it do? Has it behaved reliably in the past?
 
-Centralized identity directories answer these questions by asking all parties to trust the directory operator. That trust assumption is fragile: the operator can be captured, shut down, or selectively deny access. 
+Centralized identity directories answer these questions by asking all parties to trust the directory operator. That trust assumption is fragile: **the operator can be captured, shut down, or selectively deny access**. 
 
-Onchain identity standards on Ethereum address the same problem by making registrations publicly verifiable and censorship-resistant. Any application can query the registry, and no single party controls who can register or who gets responses.
+Onchain identity standards on Ethereum address the same problem by making registrations publicly verifiable and censorship-resistant. Any application can query the registry, and **no single party controls who can register or who gets responses**.
 
 **ERC-8004** is the Trustless Agents Standard, deployed on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides the identity infrastructure for the emerging agent economy.
 

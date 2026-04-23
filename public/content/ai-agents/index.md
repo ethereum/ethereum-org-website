@@ -22,7 +22,7 @@ buttons:
 
 AI agents are software programs that observe their environment, make decisions, and take actions, including sending transactions, paying for services, and interacting with smart contracts, without requiring human input on every step.
 
-Ethereum provides the infrastructure these agents need: programmable wallets that enforce spending limits, verifiable computation that proves an agent followed its rules, open payment rails for machine-to-machine commerce, and a permissionless identity layer that any application can verify. These are not properties that a centralized server can replicate, because they depend on a network that no single party controls.
+Ethereum provides the infrastructure these agents need: programmable wallets that enforce spending limits, verifiable computation that proves an agent followed its rules, open payment rails for machine-to-machine commerce, and a permissionless identity layer that any application can verify. These are **not properties that a centralized server can replicate**, because they depend on a network that no single party controls.
 
 This builder hub is the starting point for developers building production AI agents on Ethereum.
 

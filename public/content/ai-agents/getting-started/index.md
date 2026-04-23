@@ -10,7 +10,7 @@ This guide walks through the four steps required to deploy your first autonomous
 
 Before going further, it is worth understanding why this stack differs from standard Ethereum development. When a human signs a transaction, they act as a natural safety checkpoint. An autonomous agent does not. 
 
-Giving an agent an unconstrained private key is equivalent to giving it unlimited spending authority—a single hallucination, a logic error, or a prompt injection can drain an account. The patterns below are designed to prevent that.
+**Giving an agent an unconstrained private key is equivalent to giving it unlimited spending authority**—a single hallucination, a logic error, or a prompt injection can drain an account. The patterns below are designed to prevent that.
 
 ## Prerequisites {#prerequisites}
 
@@ -52,7 +52,7 @@ If you are undecided, ElizaOS and GOAT are generally considered the most beginne
 
 ## Step 1: Create an agent wallet {#create-wallet}
 
-Do not give your agent a raw externally owned account (EOA) private key. 
+**Do not give your agent a raw externally owned account (EOA) private key.** 
 
 EOAs have no native concept of spending limits or allowlists. Under account abstraction standards (primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/)), you can instead deploy a **smart account** that enforces your agent's operational policy at the contract level.
 

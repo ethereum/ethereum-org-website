@@ -6,7 +6,7 @@ lang: en
 
 # AI agent use cases on Ethereum {#use-cases}
 
-The following use cases represent what autonomous AI agents are doing on Ethereum today. Each is grounded in capabilities covered in depth elsewhere in this builder hub: programmable wallets, machine payments, onchain identity, and verifiable inference. The links below connect each use case to the infrastructure that makes it possible.
+The following use cases represent what autonomous AI agents are doing on Ethereum today. **Each is grounded in capabilities covered in depth elsewhere in this builder hub**: programmable wallets, machine payments, onchain identity, and verifiable inference. The links below connect each use case to the infrastructure that makes it possible.
 
 ---
 
@@ -25,7 +25,7 @@ DeFi automation is the most mature AI agent use case on Ethereum. The infrastruc
 
 ## Agent-to-agent commerce {#agent-commerce}
 
-Agents can hire other agents for specialized tasks, paying per output using x402 machine payments. This enables a division of labor that mirrors human organizational structures, where a coordinator agent delegates specialized subtasks to specialist agents and aggregates the results.
+Agents can hire other agents for specialized tasks, paying per output using x402 machine payments. This enables a **division of labor that mirrors human organizational structures, where a coordinator agent delegates specialized subtasks** to specialist agents and aggregates the results.
 
 **Example pattern:**
 1. A research coordinator agent identifies a data requirement.
@@ -34,7 +34,7 @@ Agents can hire other agents for specialized tasks, paying per output using x402
 4. It pays the selected specialist agent via x402 (USDC, per result).
 5. It posts feedback to the ERC-8004 Reputation Registry after delivery.
 
-No human is required at any step once the coordinator's strategy is initialized.
+**No human is required at any step** once the coordinator's strategy is initialized.
 
 <Alert variant="warning" className="my-8">
 <AlertContent>

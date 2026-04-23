@@ -12,7 +12,7 @@ For personal wallets (human-managed Ethereum accounts, wallet apps, self-custody
 
 ---
 
-An autonomous agent requires a wallet with enforced operational boundaries. A raw externally owned account (EOA) has no native concept of spending limits, so a single hallucination, prompt injection, or logic error can drain it. 
+An autonomous agent requires a wallet with enforced operational boundaries. A raw externally owned account (EOA) **has no native concept of spending limits**, so a single hallucination, prompt injection, or logic error can drain it. 
 
 Smart account standards, primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/), prevent these unauthorized drains by moving policy enforcement into the contract itself.
 
@@ -58,7 +58,7 @@ The following patterns describe where to store the agent's signing key, scaling 
 
 ## Session keys {#session-keys}
 
-A **session key** is a time-bounded, policy-bounded signing credential. It authorizes the agent to act within a defined scope without exposing the master private key. If the session key is compromised, the blast radius is limited to the policy parameters you set. The smart contract rejects any UserOperation that violates them, regardless of what the language model instructs.
+A **session key** is a time-bounded, policy-bounded signing credential. It authorizes the agent to act within a defined scope without exposing the master private key. If the session key is compromised, **the blast radius is limited to the policy parameters you set**. The smart contract rejects any UserOperation that violates them, regardless of what the language model instructs.
 
 A well-structured session key policy specifies:
 
@@ -67,7 +67,7 @@ A well-structured session key policy specifies:
 - **Contract allowlist** — restricts the agent to specific verified contracts.
 - **Validity window** — a `validAfter` / `validUntil` timestamp after which the key automatically expires.
 
-The **owner-agent key separation** pattern is essential. The agent generates a local key pair and sends only its public address to the account owner. The owner configures the session key policy and hands the bounded credential back to the agent. The agent never sees the master private key.
+The **owner-agent key separation** pattern is essential. The agent generates a local key pair and sends only its public address to the account owner. The owner configures the session key policy and hands the bounded credential back to the agent. **The agent never sees the master private key.**
 
 Session keys are enabled by the custom validation logic built into ERC-4337 smart accounts and EIP-7702 delegation modules (they are not a core Ethereum protocol primitive). Because each SDK implementor built session key support independently, there is no unified interface for requesting them yet. 
 
