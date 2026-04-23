@@ -27,7 +27,7 @@ export default async function VideoPageJsonLD({
 
   const t = await getTranslations("page-videos")
 
-  const mainEntityId = { "@id": `${url}#video` }
+  const videoObjectId = { "@id": `${url}#video` }
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -69,11 +69,11 @@ export default async function VideoPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: mainEntityId,
+        mainEntity: videoObjectId,
       },
       {
         "@type": "VideoObject",
-        ...mainEntityId,
+        ...videoObjectId,
         name: frontmatter.title,
         description: frontmatter.description,
         uploadDate: `${frontmatter.uploadDate}T00:00:00+00:00`,
