@@ -99,7 +99,7 @@ Another example is [Wayfinder](https://wayfinder.ai), a multi-agent system that 
 Explore autonomous agents and AI assistants built on Ethereum:
 <AiAgentProductLists list="chat" />
 
-<Alert variant="info">
+<Alert variant="info" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Good to know</strong></p>
 <p className="mt-2">Artificial intelligence agents and related execution tools are still in early development. The applications listed above vary in maturity and audit status. Always verify the source and permissions of any tool before connecting your wallet.</p>

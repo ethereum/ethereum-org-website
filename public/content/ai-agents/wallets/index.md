@@ -85,7 +85,7 @@ Both have well-documented session key permission APIs. If evaluating other walle
 
 ### ZeroDev (Kernel) {#zerodev-kernel}
 
-<Alert variant="info">
+<Alert variant="info" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Best for:</strong> New agent deployments requiring granular per-contract, per-function, or per-value policy enforcement, and teams comfortable building on a still-maturing ERC-4337 ecosystem.</p>
 </AlertContent>
@@ -165,7 +165,7 @@ Any UserOperation that violates `callPolicy` or `timestampPolicy` is rejected by
 
 ### Safe (Allowance Module) {#safe-allowance-module}
 
-<Alert variant="info">
+<Alert variant="info" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Best for:</strong> Any production agent deployment that requires a battle-tested foundation. Safe is widely audited, multi-party by default, and the only option in this guide that does not depend on still-maturing ERC-4337 tooling. Particularly suited to DAO treasury delegation and cases where the agent must spend from a shared team treasury without being granted full multisig signing authority.</p>
 </AlertContent>
@@ -231,7 +231,7 @@ Until ERC-7730 support is widespread, two interim practices maintain meaningful 
 
 ## Local testing security {#local-testing-security}
 
-<Alert variant="warning">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>The Anvil RPC exploit vector</strong></p>
 <p className="mt-2">Language models can discover and invoke privileged Anvil debug methods, like <code>anvil_setBalance</code> and <code>anvil_setStorageAt</code>, to manipulate local blockchain state rather than executing proper contract logic. An agent using <code>anvil_setBalance</code> to give itself a large ETH balance bypasses the spending limits and allowlist checks that your session key is supposed to enforce. This defeats the purpose of testing your guardrails.</p>

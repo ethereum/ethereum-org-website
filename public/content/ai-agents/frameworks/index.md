@@ -21,7 +21,7 @@ This page covers a selection of commonly-used frameworks with active Ethereum in
 | **[GAME](https://docs.game.virtuals.io/)** | TypeScript / no-code | ACP v2.0 hook contracts (Base Mainnet) | Autonomous game agents, Virtuals ecosystem — ecosystem-specific, not general-purpose EVM |
 | **[LangChain](https://python.langchain.com/)** | Python / TypeScript | Via GOAT's LangChain adapter or Web3 tools | General-purpose agents, largest community — use GOAT alongside LangChain for EVM tool coverage |
 
-<Alert variant="warning">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Maturity note</strong></p>
 <p className="mt-2">This ecosystem evolves quickly. Package names, API surfaces, and EVM plugin versions can change between minor releases. Always verify integration patterns against each framework's official documentation before building.</p>
@@ -86,7 +86,7 @@ GOAT is the recommended starting point for production EVM agent deployments. It 
 
 **Best for:** Production EVM agents that need broad DeFi protocol coverage out of the box, or TypeScript and Python teams that want a single framework compatible with the Vercel AI SDK, LangChain, and LlamaIndex.
 
-<Alert variant="info">
+<Alert variant="info" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Package names</strong></p>
 <p className="mt-2">GOAT adapter package names follow the pattern <code>@goat-sdk/adapter-[ai-sdk-name]</code>. Verify current package names against the <a href="https://github.com/goat-sdk/goat">GOAT repository</a> before installing.</p>
@@ -178,7 +178,7 @@ alloy = { version = "0.9", features = ["full"] }
 tokio = { version = "1", features = ["full"] }
 ```
 
-<Alert variant="info">
+<Alert variant="info" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Verify crate versions</strong></p>
 <p className="mt-2">riglr is under active development. Confirm current crate names and versions against the <a href="https://github.com/riglr/riglr">riglr repository</a> before adding them to your project.</p>
@@ -233,7 +233,7 @@ See the [GAME SDK documentation](https://docs.game.virtuals.io/) for the current
 
 ## Production guardrails {#production-guardrails}
 
-<Alert variant="info">
+<Alert variant="info" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Required before going to Mainnet</strong></p>
 <p className="mt-2">Regardless of which framework you choose, apply pre-execution simulation, session key spending limits, and application-layer rate limiting before any production deployment. These patterns are documented with full implementation code in <a href="/ai-agents/getting-started/#set-guardrails">Getting started: Set guardrails</a>.</p>

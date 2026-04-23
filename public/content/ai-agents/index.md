@@ -103,7 +103,7 @@ See [Data and stats](/ai-agents/data/) for onchain metrics tracking the growth o
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
 - [FAQ](/ai-agents/faq/) — Answers to the most common technical questions about building AI agents on Ethereum.
 
-<Alert variant="warning">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Maturity note</strong></p>
 <p className="mt-2">AI agent infrastructure on Ethereum ranges from production-ready standards (ERC-4337, stablecoin payments) to actively experimental technology (zkML at scale, agent-to-agent commerce). Each sub-page in this hub flags the maturity level of the patterns it covers.</p>
