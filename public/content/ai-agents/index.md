@@ -26,7 +26,7 @@ Ethereum provides the infrastructure these agents need: programmable wallets tha
 
 This builder hub is the starting point for developers building production AI agents on Ethereum.
 
-<Alert variant="info">
+<Alert variant="info" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>New to AI on Ethereum?</strong></p>
 <p className="mt-2">If you want to learn how AI and Ethereum work together as a use case, visit the <a href="/decentralized-ai/">Decentralized AI</a> overview page.</p>
