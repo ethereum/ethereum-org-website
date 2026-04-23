@@ -317,6 +317,11 @@ With a funded smart account, a connected framework, and active spending guardrai
 **Choose the right execution environment:**
 [AI Agents: Layer 2s](/ai-agents/l2s/) breaks down how to select an L2 for your agent based on cost, throughput, privacy requirements, and the protocols your agent needs to access.
 
+## Further reading {#further-reading}
+
+- [AI Agents in Cryptocurrency: Architecture, Integration, and Best Practices](https://medium.com/@gwrx2005/ai-agents-in-cryptocurrency-architecture-integration-and-best-practices-a107429bf780) - A comprehensive overview of AI agents in cryptocurrency, covering their architecture, integration with blockchain, and best practices. 
+- [Video: AI Agents & Ethereum with Vito Rivabella: Identity, Reputation and the Agentic Economy](https://www.youtube.com/watch?v=N8yAixLP-8E) — Exploring the emerging agentic economy, and how AI agents are evolving from simple tools into autonomous economic participants supported by onchain identity, reputation, and validation standards like ERC-8004.
+
 ## Continue exploring the AI agents builder hub {#continue-exploring} 
 
 ### Foundation {#foundation}
