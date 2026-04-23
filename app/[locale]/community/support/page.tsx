@@ -1,7 +1,7 @@
-import { BookOpen, HelpCircle, Shield, ShieldAlert } from "lucide-react"
+import { Shield } from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -19,7 +19,12 @@ import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import WindowBox from "@/components/WindowBox"
 
+import { cn } from "@/lib/utils/cn"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+
+import { sections } from "./data"
+import SupportJsonLD from "./page-jsonld"
 
 const EVENT_CATEGORY = "Support"
 
@@ -31,8 +36,14 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
   const t = await getTranslations("page-community-support")
 
+  const { contributors } = await getAppPageContributorInfo(
+    "community/support",
+    locale as Lang
+  )
+
   return (
     <div>
+      <SupportJsonLD locale={locale} contributors={contributors} />
       {/* Hero */}
       <SimpleHero
         breadcrumbs={<Breadcrumbs slug="community/support" startDepth={1} />}
@@ -73,165 +84,43 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             {t("page-community-support-get-help")}
           </h2>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* Card 1: Something went wrong */}
-            <WindowBox
-              title={
-                <h3>{t("page-community-support-something-went-wrong")}</h3>
-              }
-              svg={<ShieldAlert className="text-accent-b size-8" />}
-              className="h-fit"
-            >
-              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                <p className="text-body-medium text-sm leading-relaxed">
-                  {t("page-community-support-something-went-wrong-description")}
-                </p>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/scams/"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Something went wrong",
-                    eventName: "I lost funds to a scam or fraud",
-                  }}
+            {sections.getHelp.map(
+              ({
+                titleKey,
+                Svg,
+                colorClass,
+                descriptionKey,
+                eventAction,
+                items,
+              }) => (
+                <WindowBox
+                  key={titleKey}
+                  title={<h3>{t(titleKey)}</h3>}
+                  svg={<Svg className={cn(colorClass, "size-8")} />}
+                  className="h-fit"
                 >
-                  {t("page-community-support-lost-funds-scam")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/scams/#secure-assets"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Something went wrong",
-                    eventName: "Secure remaining funds and revoke permissions",
-                  }}
-                >
-                  {t("page-community-support-secure-remaining-funds")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/scams/#report"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Something went wrong",
-                    eventName: "Report a scam address or website",
-                  }}
-                >
-                  {t("page-community-support-report-scam")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/scams/#analyze"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Something went wrong",
-                    eventName: "Trace where funds were sent",
-                  }}
-                >
-                  {t("page-community-support-trace-funds")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/faq/#wrong-wallet"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Something went wrong",
-                    eventName: "I sent to the wrong address",
-                  }}
-                >
-                  {t("page-community-support-sent-wrong-address")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/faq/#lost-wallet-access"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Something went wrong",
-                    eventName: "I lost access to my wallet",
-                  }}
-                >
-                  {t("page-community-support-lost-wallet-access")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/faq/#stuck-transaction"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Something went wrong",
-                    eventName: "My transaction is stuck",
-                  }}
-                >
-                  {t("page-community-support-stuck-transaction")}
-                </Link>
-              </div>
-            </WindowBox>
-
-            {/* Card 2: Protect yourself */}
-            <WindowBox
-              title={<h3>{t("page-community-support-protect-yourself")}</h3>}
-              svg={<Shield className="text-accent-a size-8" />}
-              className="h-fit"
-            >
-              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                <p className="text-body-medium text-sm leading-relaxed">
-                  {t("page-community-support-protect-yourself-description")}
-                </p>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/security/#common-scams"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Protect yourself",
-                    eventName: "Common scam tactics and how to spot them",
-                  }}
-                >
-                  {t("page-community-support-common-scam-tactics")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/scams/#recovery-scams"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Protect yourself",
-                    eventName: "Why recovery experts are always scams",
-                  }}
-                >
-                  {t("page-community-support-recovery-experts-scams")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/guides/how-to-id-scam-tokens/"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Protect yourself",
-                    eventName: "How to identify scam tokens",
-                  }}
-                >
-                  {t("page-community-support-identify-scam-tokens")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/security/"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Protect yourself",
-                    eventName: "Full security and scam prevention guide",
-                  }}
-                >
-                  {t("page-community-support-full-security-guide")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/scams/#revoke-approvals"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Protect yourself",
-                    eventName: "Revoke unnecessary token approvals",
-                  }}
-                >
-                  {t("page-community-support-revoke-approvals")}
-                </Link>
-              </div>
-            </WindowBox>
+                  <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
+                    <p className="text-body-medium text-sm leading-relaxed">
+                      {t(descriptionKey)}
+                    </p>
+                    {items.map(({ labelKey, href, eventName }) => (
+                      <Link
+                        key={href}
+                        className="hover:bg-background-highlight"
+                        href={href}
+                        customEventOptions={{
+                          eventCategory: EVENT_CATEGORY,
+                          eventAction,
+                          eventName,
+                        }}
+                      >
+                        {t(labelKey)}
+                      </Link>
+                    ))}
+                  </div>
+                </WindowBox>
+              )
+            )}
           </div>
         </Section>
 
@@ -241,134 +130,43 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             {t("page-community-support-learn")}
           </h2>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            {/* Card 3: Using Ethereum */}
-            <WindowBox
-              title={<h3>{t("page-community-support-using-ethereum")}</h3>}
-              svg={<BookOpen className="text-primary size-8" />}
-              className="h-fit"
-            >
-              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                <p className="text-body-medium text-sm leading-relaxed">
-                  {t("page-community-support-using-ethereum-description")}
-                </p>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/guides/how-to-create-an-ethereum-account/"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Using Ethereum",
-                    eventName: "How to create an Ethereum account",
-                  }}
+            {sections.learn.map(
+              ({
+                titleKey,
+                Svg,
+                colorClass,
+                descriptionKey,
+                eventAction,
+                items,
+              }) => (
+                <WindowBox
+                  key={titleKey}
+                  title={<h3>{t(titleKey)}</h3>}
+                  svg={<Svg className={cn(colorClass, "size-8")} />}
+                  className="h-fit"
                 >
-                  {t("page-community-support-create-account")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/guides/how-to-use-a-wallet/"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Using Ethereum",
-                    eventName: "How to use a wallet",
-                  }}
-                >
-                  {t("page-community-support-use-wallet")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/guides/how-to-swap-tokens/"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Using Ethereum",
-                    eventName: "How to swap tokens",
-                  }}
-                >
-                  {t("page-community-support-swap-tokens")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/guides/how-to-use-a-bridge/"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Using Ethereum",
-                    eventName: "How to bridge tokens to layer 2",
-                  }}
-                >
-                  {t("page-community-support-bridge-tokens")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/guides/how-to-revoke-token-access/"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Using Ethereum",
-                    eventName: "How to revoke token access",
-                  }}
-                >
-                  {t("page-community-support-revoke-token-access")}
-                </Link>
-              </div>
-            </WindowBox>
-
-            {/* Card 4: Common misconceptions */}
-            <WindowBox
-              title={
-                <h3>{t("page-community-support-common-misconceptions")}</h3>
-              }
-              svg={<HelpCircle className="text-accent-c size-8" />}
-              className="h-fit"
-            >
-              <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                <p className="text-body-medium text-sm leading-relaxed">
-                  {t(
-                    "page-community-support-common-misconceptions-description"
-                  )}
-                </p>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/misconceptions/#not-a-company"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Common misconceptions",
-                    eventName: "Is Ethereum a company?",
-                  }}
-                >
-                  {t("page-community-support-is-ethereum-company")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/misconceptions/#no-fund-access"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Common misconceptions",
-                    eventName: "Can someone recover or freeze my funds?",
-                  }}
-                >
-                  {t("page-community-support-recover-freeze-funds")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/misconceptions/#no-mining"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Common misconceptions",
-                    eventName: "Can I still mine Ethereum?",
-                  }}
-                >
-                  {t("page-community-support-mine-ethereum")}
-                </Link>
-                <Link
-                  className="hover:bg-background-highlight"
-                  href="/community/support/misconceptions/#no-support-team"
-                  customEventOptions={{
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "Common misconceptions",
-                    eventName: "Is there an Ethereum support team?",
-                  }}
-                >
-                  {t("page-community-support-is-support-team")}
-                </Link>
-              </div>
-            </WindowBox>
+                  <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
+                    <p className="text-body-medium text-sm leading-relaxed">
+                      {t(descriptionKey)}
+                    </p>
+                    {items.map(({ labelKey, href, eventName }) => (
+                      <Link
+                        key={href}
+                        className="hover:bg-background-highlight"
+                        href={href}
+                        customEventOptions={{
+                          eventCategory: EVENT_CATEGORY,
+                          eventAction,
+                          eventName,
+                        }}
+                      >
+                        {t(labelKey)}
+                      </Link>
+                    ))}
+                  </div>
+                </WindowBox>
+              )
+            )}
           </div>
         </Section>
 

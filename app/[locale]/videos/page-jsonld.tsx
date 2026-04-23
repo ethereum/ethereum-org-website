@@ -24,7 +24,7 @@ export default async function VideosPageJsonLD({
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
-        "@type": "CollectionPage",
+        "@type": "VideoGallery",
         "@id": url,
         name: t("page-videos-meta-title"),
         description: t("page-videos-meta-description"),
@@ -67,7 +67,6 @@ export default async function VideosPageJsonLD({
                 ? -1
                 : 0
           )
-          .slice(0, 10)
           .map((video, index) => ({
             "@type": "ListItem",
             position: index + 1,
