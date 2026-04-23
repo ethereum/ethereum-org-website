@@ -13,13 +13,13 @@ published: 2026-04-01
 A [previous article](/developers/tutorials/gasless) discussed using gasless access to your own application using EIP-712 signatures, but it is limited to your own smart contracts. Using [account abstraction](/roadmap/account-abstraction), we can create smart contract wallets that accept two types of transactions and relay them to a requested destination:
 
 - Transactions sent by a specific EOA (which require that EOA to have ETH)
-- Transactions sent from anywhere, but signed by the same EOA. This way, we can provide a gasless way for an account to hold assets (tokens, etc.) and perform all the functions an EOA with gas can.
+- Transactions sent from anywhere, but signed by the same EOA.
 
 This way, we can provide a gasless way for an account to hold assets (tokens, etc.) and perform all the functions an EOA with gas can.
 
 ### Why can't we just relay the request? {#why-no-tx-origin}
 
-In ERC-20 and related standards, the account owner is [`msg.sender`](https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties), the address that called the token contract, which is not necessarily the originator of the transaction, (`tx.sender`)[https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties]. This is required for [security reasons](https://docs.soliditylang.org/en/v0.8.35-pre.1/security-considerations.html#tx-origin). This means that if we relay token transfer requests, they'll attempt to transfer tokens from the relayer's address rather than an address controlled by the user.
+In ERC-20 and related standards, the account owner is [`msg.sender`](https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties), the address that called the token contract, which is not necessarily the originator of the transaction, [`tx.origin`](https://docs.soliditylang.org/en/latest/cheatsheet.html#block-and-transaction-properties). This is required for [security reasons](https://docs.soliditylang.org/en/v0.8.35-pre.1/security-considerations.html#tx-origin). This means that if we relay token transfer requests, they'll attempt to transfer tokens from the relayer's address rather than an address controlled by the user.
 
 There is a solution that lets you use the EOA address via [EIP-7702](https://eip7702.io/), but it requires signing a potentially dangerous delegation, so you can only use it to delegate to a smart contract of which the wallet provider approves. For this tutorial I prefer the much simpler method of creating a smart contract as a proxy to the user.
 
@@ -53,7 +53,7 @@ There is a solution that lets you use the EOA address via [EIP-7702](https://eip
 
 8. You can see when the user proxy is deployed because there is an address next to **UserProxy access**. If you waited 24 seconds (2 blocks) and it still hasn't happened, there might be a problem with detecting changes.
 
-   If that is the case, go to the [Sepolia Explorer](https://eth-sepolia.blockscout.com/) and enter the deployment transaction hash you see in the server output at `npm run dev`. Click the created contract to view its address, then copy it. Click the contract that was created to see its address and copy it. Paste the address in the _Or enter existing proxy address_ field, then click **Set proxy address**.
+   If that is the case, go to the [Sepolia Explorer](https://eth-sepolia.blockscout.com/) and enter the deployment transaction hash you see in the server output at `npm run dev`. Click the created contract to view its address, then copy it. Paste the address in the _Or enter existing proxy address_ field, then click **Set proxy address**.
 
 9. Click **Request more tokens for proxy** to submit a call to the ERC-20 contract's [`faucet`](https://eth-sepolia.blockscout.com/address/0x4cBedDEDA88fDd9e116618a5cD71BB0E440C2A78?tab=read_write_contract#0xde5f72fd) function to get tokens. **Confirm** the signature in the wallet. Of course, the tokens reach the proxy's address, not the user's.
 
@@ -92,7 +92,7 @@ The owner's identity and a [nonce](https://en.wikipedia.org/wiki/Cryptographic_n
     bytes32 immutable DOMAIN_SEPARATOR;
 ```
 
-The information required to verify [ERC-712 signatures](https://eips.ethereum.org/EIPS/eip-712).
+The information required to verify [EIP-712 signatures](https://eips.ethereum.org/EIPS/eip-712).
 
 ```solidity
     constructor(address owner_) {
@@ -223,9 +223,9 @@ These are nearly identical variants that let you also transfer ETH out of the co
 
 ### The relayer {#relayer}
 
-The relayer is a [server component](https://ethereum.org/developers/tutorials/server-components/). It is written in JavaScript; you can see the source code [here](https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/index.js)
+The relayer is a [server component](/developers/tutorials/server-components/). It is written in JavaScript; you can see the source code [here](https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/index.js).
 
-```javascript
+```js
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import { createWalletClient, createPublicClient, http } from 'viem'
@@ -236,7 +236,7 @@ import dotenv from 'dotenv'
 
 The libraries we need. This is an [Express](https://expressjs.com/) server, which uses [Vite](https://vite.dev/) to serve the user interface code. We use [Viem](https://viem.sh/) to communicate with the blockchain, and [dotenv](https://www.dotenv.org/) to read the private key for the address that sends the transaction.
 
-```javascript
+```js
 import { createRequire } from 'module'
 const require = createRequire(import.meta.url)
 const UserProxy = require('../contracts/out/UserProxy.sol/UserProxy.json')
@@ -244,7 +244,7 @@ const UserProxy = require('../contracts/out/UserProxy.sol/UserProxy.json')
 
 This is a simple way to read the compiled `UserProxy`. We need the ABI to be able to call `UserProxy`, and the compiled code to be able to deploy it for a user.
 
-```javascript
+```js
 dotenv.config()
 const sepoliaAccount = privateKeyToAccount(process.env.SEPOLIA_PRIVATE_KEY)
 console.log("Using account:", sepoliaAccount.address)
@@ -252,7 +252,7 @@ console.log("Using account:", sepoliaAccount.address)
 
 Read the `.env` file, extract the address, and print it to the console.
 
-```javascript
+```js
 const sepoliaClient = createWalletClient({
   account: sepoliaAccount,
   chain: sepolia,
@@ -267,33 +267,33 @@ const publicClient = createPublicClient({
 
 The Viem clients that talk to the blockchain.
 
-```javascript
+```js
 const start = async () => {
   const app = express()
 ```
 
 Run an Express server.
 
-```javascript
+```js
   app.use(express.json())
 ```
 
 Tell Express to read the request body, and if it's JSON to parse it.
 
-```javascript
+```js
   app.post("/server/deploy", async (req, res) => {
 ```
 
 This is the code that handles requests to deploy the proxy. Note that we are vulnerable to [denial-of-service](https://en.wikipedia.org/wiki/Denial-of-service_attack) attacks here because an attacker can spam us with requests to deploy the proxy until our ETH is exhausted. On a production system, we'd probably require that the request to deploy the proxy be signed and that the signer be an existing customer.
 
-```javascript
+```js
     try {
       const ownerAddress = req.body.ownerAddress
 ```
 
 Get the owner's address from the request.
 
-```javascript
+```js
       const txHash = await sepoliaClient.deployContract({
         abi: UserProxy.abi,
         bytecode: UserProxy.bytecode.object,
@@ -347,7 +347,7 @@ This is the code that processes user messages for the `UserProxy` contract. This
 
 Get the request data and use it to call `signedAccess` on the proxy.
 
-```
+```js
       console.log("Message transaction hash:", txHash)
 
       res.json({ txHash })
@@ -395,7 +395,7 @@ import {
        } from 'viem'
 ```
 
-[This function](https://viem.sh/docs/contract/encodeFunctionResult) creates the calldata for an EVM function call. This is necessary so the user can sign the calldata.
+[This function](https://viem.sh/docs/contract/encodeFunctionData) creates the calldata for an EVM function call. This is necessary so the user can sign the calldata.
 
 ```js
 import UserProxy from '../../contracts/out/UserProxy.sol/UserProxy.json'
@@ -472,7 +472,7 @@ The hash of the last transaction, used to show a link to the explorer so the use
   const [ transferTo, setTransferTo ] = useState("")
 ```
 
-These fields are all used to send token transfer commands to an ERC-20 contract. This may be `FaucetToken`, but it does not have to be. The [`transfer`](https://ethereum.org/developers/tutorials/erc20-annotated-code/#transfer-tokens) function is part of the ERC-20 standard.
+These fields are all used to send token transfer commands to an ERC-20 contract. This may be `FaucetToken`, but it does not have to be. The [`transfer`](/developers/tutorials/erc20-annotated-code/#transfer-tokens) function is part of the ERC-20 standard.
 
 ```js
   const balance = useReadContract({
@@ -633,7 +633,7 @@ Simulate calling the `faucet` function. We only enable the faucet button if this
 
 To call a function through the server and `UserProxy`, we follow three steps:
 
-1. Create the calldata to sign and send using [`encodeFunctionData`](https://v1.viem.sh/docs/contract/encodeFunctionData.html).
+1. Create the calldata to sign and send using [`encodeFunctionData`](https://viem.sh/docs/contract/encodeFunctionData).
 
 2. Sign the message (target, calldata, and nonce).
 
