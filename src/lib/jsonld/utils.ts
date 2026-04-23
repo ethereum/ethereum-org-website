@@ -1,6 +1,6 @@
 import * as Sentry from "@sentry/nextjs"
 
-import { ORGANIZATION, REFERENCE } from "./constants"
+import { REFERENCE } from "./constants"
 import { KNOWN_ORGANIZATIONS } from "./organizations"
 import { KNOWN_PERSONS } from "./persons"
 import type { KnownEntity } from "./types"
@@ -49,8 +49,8 @@ function buildEntityAliases(): Record<string, KnownEntity> {
   }
 
   const entries: Array<[string | null, KnownEntity]> = [
-    [null, ORGANIZATION.ETHEREUM_FOUNDATION],
-    [null, ORGANIZATION.ETHEREUM_COMMUNITY],
+    [null, KNOWN_ORGANIZATIONS["ethereum-foundation"]],
+    [null, KNOWN_ORGANIZATIONS["ethereum-community"]],
     ...Object.entries(KNOWN_PERSONS),
     ...Object.entries(KNOWN_ORGANIZATIONS),
   ]

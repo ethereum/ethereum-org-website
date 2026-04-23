@@ -6,7 +6,9 @@ import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
-import { BASE_GRAPH_NODES, ORGANIZATION } from "@/lib/jsonld/constants"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { KNOWN_ORGANIZATIONS } from "@/lib/jsonld/organizations"
 import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 
 export default function VideoPageJsonLD({
@@ -46,7 +48,7 @@ export default function VideoPageJsonLD({
     educationalLevel: frontmatter.educationLevel,
     inLanguage: frontmatter.lang,
     creator,
-    publisher: ORGANIZATION.ETHEREUM_FOUNDATION,
+    publisher: KNOWN_ORGANIZATIONS["ethereum-foundation"],
     isAccessibleForFree: true,
     isFamilyFriendly: true,
   }
