@@ -23,7 +23,6 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         title: t("luna-title"),
         description: "",
         image: luna,
-        alt: "",
         contentItems: [
           <p key="luna-description-1">
             {t.rich("luna-description-1", {
@@ -39,7 +38,6 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
           <div key="luna-button">
             <ButtonLink
               href="https://app.virtuals.io/virtuals/68"
-              target="_blank"
               variant="outline"
             >
               {t("chat-with-brand", { brand: t("luna-brand") })}
@@ -51,16 +49,11 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         title: t("aixbt-title"),
         description: "",
         image: aixbt,
-        alt: "",
         contentItems: [
           <p key="aixbt-description-1">{t("aixbt-description-1")}</p>,
           <p key="aixbt-description-2">{t("aixbt-description-2")}</p>,
           <div key="aixbt-button">
-            <ButtonLink
-              href="https://x.com/aixbt_agent"
-              target="_blank"
-              variant="outline"
-            >
+            <ButtonLink href="https://x.com/aixbt_agent" variant="outline">
               {t("visit-brand", { brand: t("aixbt-brand") })}
             </ButtonLink>
           </div>,
@@ -70,15 +63,10 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         title: t("botto-title"),
         description: "",
         image: botto,
-        alt: "",
         contentItems: [
           <p key="botto-description">{t("botto-description")}</p>,
           <div key="botto-button">
-            <ButtonLink
-              href="https://botto.com/"
-              target="_blank"
-              variant="outline"
-            >
+            <ButtonLink href="https://botto.com/" variant="outline">
               {t("visit-brand", { brand: t("botto-brand") })}
             </ButtonLink>
           </div>,
@@ -90,15 +78,10 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         title: t("bankr-title"),
         description: "",
         image: bankr,
-        alt: "",
         contentItems: [
           <p key="bankr-description">{t("bankr-description")}</p>,
           <div key="bankr-button">
-            <ButtonLink
-              href="https://bankr.bot/"
-              target="_blank"
-              variant="outline"
-            >
+            <ButtonLink href="https://bankr.bot/" variant="outline">
               {t("bankr-button")}
             </ButtonLink>
           </div>,
@@ -108,15 +91,10 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         title: t("heyanon-title"),
         description: "",
         image: heyanon,
-        alt: "",
         contentItems: [
           <p key="heyanon-description">{t("heyanon-description")}</p>,
           <div key="heyanon-button">
-            <ButtonLink
-              href="https://heyanon.ai/"
-              target="_blank"
-              variant="outline"
-            >
+            <ButtonLink href="https://heyanon.ai/" variant="outline">
               {t("visit-brand", { brand: t("heyanon-brand") })}
             </ButtonLink>
           </div>,
@@ -128,21 +106,18 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         title: t("aiagenttoolkit-title"),
         description: t("aiagenttoolkit-description"),
         image: aiagenttoolkit,
-        alt: "",
         link: "https://www.aiagenttoolkit.xyz/t/frameworks",
       },
       {
         title: t("cookiefun-title"),
         description: t("cookiefun-description"),
         image: cookiefun,
-        alt: "",
         link: "https://cookie.fun/",
       },
       {
         title: t("clanker-title"),
         description: t("clanker-description"),
         image: clanker,
-        alt: "",
         link: "https://farcaster.xyz/clanker",
       },
     ],
