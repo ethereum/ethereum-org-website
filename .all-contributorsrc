@@ -14186,6 +14186,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jzhishu",
+      "name": "JH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39545185?v=4",
+      "profile": "https://github.com/jzhishu",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
