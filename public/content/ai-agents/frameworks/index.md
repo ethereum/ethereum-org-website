@@ -242,6 +242,7 @@ See the [GAME SDK documentation](https://docs.game.virtuals.io/) for the current
 
 ## Further reading {#further-reading}
 
+- - [Aiagenttoolkit.xyz](https://www.aiagenttoolkit.xyz/t/frameworks) — A curated directory of AI agent frameworks, launchpads, and ecosystem resources for builders exploring what tooling exists beyond this hub.
 - [GOAT quickstarts](https://github.com/goat-sdk/goat/tree/main/typescript/examples) — Full end-to-end examples wiring GOAT to different frameworks and wallet types
 - [ElizaOS documentation](https://elizaos.github.io/eliza/) — Framework reference, character configuration API, and plugin lifecycle guides
 - [Olas developer documentation](https://docs.autonolas.network/open-autonomy/) — Full service development workflow for FSM-based autonomous services
