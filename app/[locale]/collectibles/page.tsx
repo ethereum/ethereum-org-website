@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -15,6 +15,7 @@ import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CollectiblesPage from "./_components/Collectibles/lazy"
@@ -30,19 +31,20 @@ const STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats`
 
 // Data fetching
 async function fetchBadges() {
-  const res = await fetch(BADGES_API)
+  const res = await fetch(BADGES_API, { cache: "force-cache" })
   if (!res.ok) throw new Error("Failed to fetch badges")
   return res.json()
 }
 async function fetchStats() {
-  const res = await fetch(STATS_API)
+  const res = await fetch(STATS_API, { cache: "force-cache" })
   if (!res.ok) throw new Error("Failed to fetch stats")
   return res.json()
 }
 
-export default async function Page({ params }: { params: PageParams }) {
+export default async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-collectibles" })
+  const t = await getTranslations("page-collectibles")
   setRequestLocale(locale)
 
   // Fetch data
@@ -56,11 +58,9 @@ export default async function Page({ params }: { params: PageParams }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/collectibles/")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "collectibles",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -83,7 +83,7 @@ export default async function Page({ params }: { params: PageParams }) {
             id="stats"
             className="flex flex-col gap-x-6 gap-y-4 px-4 xl:flex-row xl:px-12"
           >
-            <div className="flex-[2] space-y-4 rounded-2xl border border-primary/10 bg-gradient-to-r from-primary/10 to-primary/5 px-8 py-12 text-lg dark:from-primary/20 dark:to-primary/10">
+            <div className="border-primary/10 from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 flex-[2] space-y-4 rounded-2xl border bg-linear-to-r px-8 py-12 text-lg">
               <h2 className="text-3xl md:text-4xl">
                 {t("page-collectibles-improve-title")}
               </h2>
@@ -110,27 +110,33 @@ export default async function Page({ params }: { params: PageParams }) {
 
             <div className="grid min-w-fit grid-cols-2 place-items-center gap-4 md:grid-cols-3 md:justify-start xl:grid-cols-2">
               {/* Minted */}
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-8 text-accent-a max-md:col-span-2 xl:col-span-2 xl:p-6">
+              <div className="border-accent-a/20 from-accent-a/5 to-accent-a/15 text-accent-a flex h-full w-full flex-col items-center justify-center rounded-xl border bg-linear-to-b px-4 py-8 max-md:col-span-2 xl:col-span-2 xl:p-6">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.collectorsCount?.toLocaleString(locale) ?? "-"}
+                  {stats.collectorsCount
+                    ? numberFormat(locale).format(stats.collectorsCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-minted")}
                 </div>
               </div>
               {/* Collectors */}
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-b/20 bg-gradient-to-b from-accent-b/5 to-accent-b/15 p-6 text-accent-b">
+              <div className="border-accent-b/20 from-accent-b/5 to-accent-b/15 text-accent-b flex h-full w-full flex-col items-center justify-center rounded-xl border bg-linear-to-b p-6">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.uniqueAddressesCount?.toLocaleString(locale) ?? "-"}
+                  {stats.uniqueAddressesCount
+                    ? numberFormat(locale).format(stats.uniqueAddressesCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-collectors")}
                 </div>
               </div>
               {/* Unique Badges */}
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 p-6 text-accent-c">
+              <div className="border-accent-c/20 from-accent-c/5 to-accent-c/15 text-accent-c flex h-full w-full flex-col items-center justify-center rounded-xl border bg-linear-to-b p-6">
                 <div className="text-4xl font-bold md:text-6xl">
-                  {stats.collectiblesCount?.toLocaleString(locale) ?? "-"}
+                  {stats.collectiblesCount
+                    ? numberFormat(locale).format(stats.collectiblesCount)
+                    : "-"}
                 </div>
                 <div className="text-center font-bold">
                   {t("page-collectibles-stats-unique-badges")}
@@ -148,13 +154,12 @@ export default async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-collectibles" })
+  const t = await getTranslations("page-collectibles")
   return await getMetadata({
     locale,
     slug: ["collectibles"],

@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
@@ -44,7 +44,8 @@ import Curved10YearsText from "@/public/images/10-year-anniversary/10y-torch-hea
 
 const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
@@ -56,26 +57,21 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/10years")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "10years",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
     <>
       <TenYearJsonLD locale={locale} contributors={contributors} />
       <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <TenYearHero locale={locale} />
+        <TenYearHero />
 
         <div
           className={cn(
@@ -100,7 +96,7 @@ const Page = async ({ params }: { params: PageParams }) => {
         </div>
 
         <div className="w-full px-4 py-8 md:px-8">
-          <div className="flex flex-col items-center gap-4 rounded-4xl bg-radial-a px-4 pt-8 lg:px-14 lg:pt-14">
+          <div className="bg-radial-a flex flex-col items-center gap-4 rounded-4xl px-4 pt-8 lg:px-14 lg:pt-14">
             <div className="flex flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">
                 {t("page-10-year-livestream-title")}
@@ -121,12 +117,12 @@ const Page = async ({ params }: { params: PageParams }) => {
               defaultValue={Object.keys(tenYearEventRegions)[0]}
               className="w-full"
             >
-              <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
+              <TabsList className="border-b-primary w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 p-0">
                 {Object.entries(tenYearEventRegions).map(([key, data]) => (
                   <TabsTrigger
                     key={key}
                     value={key}
-                    className="whitespace-nowrap border-0 text-primary"
+                    className="text-primary border-0 whitespace-nowrap"
                   >
                     {data.label}&nbsp;
                     <span className="text-sm">({data.events.length})</span>
@@ -161,8 +157,8 @@ const Page = async ({ params }: { params: PageParams }) => {
                             key={country}
                             className={cn("flex flex-col border-b px-4 py-6")}
                           >
-                            <h3 className="mb-2 flex items-center gap-2 text-2xl font-bold text-body-medium">
-                              <span className="flex min-h-6 min-w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
+                            <h3 className="text-body-medium mb-2 flex items-center gap-2 text-2xl font-bold">
+                              <span className="bg-primary-low-contrast flex min-h-6 min-w-6 items-center justify-center overflow-hidden rounded-full">
                                 <Emoji
                                   text={countryEvents[0].countryFlag}
                                   className="scale-[1.75]"
@@ -174,7 +170,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                               {countryEvents.map((event, index) => (
                                 <LinkBox
                                   key={index}
-                                  className="flex flex-col justify-between gap-2 rounded-lg p-2 hover:bg-background-highlight md:flex-row"
+                                  className="hover:bg-background-highlight flex flex-col justify-between gap-2 rounded-lg p-2 md:flex-row"
                                 >
                                   <div className="flex flex-col gap-2 md:flex-row md:items-center">
                                     <div>
@@ -210,7 +206,7 @@ const Page = async ({ params }: { params: PageParams }) => {
 
         <div
           id="torch-history"
-          className="my-32 flex w-full scroll-mt-32 flex-col bg-gradient-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
+          className="my-32 flex w-full scroll-mt-32 flex-col bg-linear-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
         >
           <div className="p-8">
             <div className="relative">
@@ -228,13 +224,13 @@ const Page = async ({ params }: { params: PageParams }) => {
                     disablePictureInPicture
                     playsInline
                   />
-                  <div className="pointer-events-none absolute top-0 h-full w-full select-none bg-[url('/images/10-year-anniversary/torch-overlay.png')] bg-contain bg-center bg-no-repeat" />
+                  <div className="pointer-events-none absolute top-0 h-full w-full bg-[url('/images/10-year-anniversary/torch-overlay.png')] bg-contain bg-center bg-no-repeat select-none" />
                 </div>
               </div>
               {/* Curved text */}
               <Curved10YearsText
                 viewBox="0 0 356 186"
-                className="absolute left-1/2 top-0 h-min w-full max-w-[600px] -translate-x-1/2"
+                className="absolute top-0 left-1/2 h-min w-full max-w-[600px] -translate-x-1/2"
                 width="100%"
                 height="auto"
               />
@@ -243,7 +239,7 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           <TorchHistorySwiper holders={torchHolders} />
 
-          <div className="flex flex-col gap-12 px-8 pb-24 pt-12 text-body-inverse sm:px-16 md:flex-row dark:text-body">
+          <div className="text-body-inverse dark:text-body flex flex-col gap-12 px-8 pt-12 pb-24 sm:px-16 md:flex-row">
             <div className="flex flex-1 flex-col gap-8">
               <p>
                 <Translation
@@ -275,10 +271,10 @@ const Page = async ({ params }: { params: PageParams }) => {
         <div className="flex w-full flex-col items-center gap-8 px-8 py-8 lg:flex-row">
           <div className="flex flex-1 flex-col gap-6">
             <h2 className="flex flex-col gap-2 font-black">
-              <span className="text-4xl text-accent-a">
+              <span className="text-accent-a text-4xl">
                 {t("page-10-year-innovation-title")}
               </span>
-              <span className="text-5xl text-body md:text-7xl">
+              <span className="text-body text-5xl md:text-7xl">
                 {t("page-10-year-innovation-subtitle")}
               </span>
             </h2>
@@ -296,10 +292,10 @@ const Page = async ({ params }: { params: PageParams }) => {
           <div className="relative flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
               <h2 className="flex flex-col gap-2 font-black">
-                <span className="text-4xl text-accent-a">
+                <span className="text-accent-a text-4xl">
                   {t("page-10-year-adoption-title")}
                 </span>
-                <span className="text-5xl text-body md:text-7xl">
+                <span className="text-body text-5xl md:text-7xl">
                   {t("page-10-year-adoption-subtitle")}
                 </span>
               </h2>
@@ -352,10 +348,10 @@ const Page = async ({ params }: { params: PageParams }) => {
           <div className="flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
               <h2 className="flex flex-col gap-2 font-black">
-                <span className="text-4xl text-accent-a">
+                <span className="text-accent-a text-4xl">
                   {t("page-10-year-stories-title")}
                 </span>
-                <span className="text-5xl text-body md:text-7xl">
+                <span className="text-body text-5xl md:text-7xl">
                   {t("page-10-year-stories-subtitle")}
                 </span>
               </h2>
@@ -377,17 +373,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   return await getMetadata({
     locale,

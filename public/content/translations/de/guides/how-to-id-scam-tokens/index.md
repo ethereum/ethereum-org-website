@@ -1,97 +1,97 @@
 ---
-title: So erkennen Sie betrügerische Token
-description: Erkennen von betrügerischen Token, wie sie sich legitim erscheinen lassen und wie sie sich vermeiden lassen.
+title: Wie man Betrugs-Token erkennt
+description: Betrugs-Token verstehen, wie sie sich als legitim ausgeben und wie man sie vermeidet.
 lang: de
 ---
 
-# So erkennen Sie betrügerische Token {#identify-scam-tokens}
+# Wie man Betrugs-Token erkennt {#identify-scam-tokens}
 
-Eine der häufigsten Anwendungen von Ethereum ist die Schaffung eines handelbaren Tokens durch eine Gruppe, der gewissermaßen ihre eigene Währung darstellt. Diese Token folgen in der Regel dem Standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). Jedoch gibt es überall, wo es legitime wertschöpfende Anwendungsmöglichkeiten gibt, auch Kriminelle, die diese Werte stehlen möchten.
+Eine der häufigsten Anwendungen für Ethereum ist die Erstellung eines handelbaren Tokens durch eine Gruppe, gewissermaßen ihre eigene Währung. Diese Token folgen typischerweise einem Standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). Wo es jedoch legitime Anwendungsfälle gibt, die Wert schaffen, gibt es auch Kriminelle, die versuchen, diesen Wert für sich selbst zu stehlen.
 
-Die beiden folgenden Täuschungsversuche sind dabei gängig:
+Es gibt zwei Möglichkeiten, wie sie Sie wahrscheinlich täuschen werden:
 
-- **Verkaufen eines betrügerischen Tokens**, der im Aussehen einem legitimen Token ähnelt und den Sie kaufen möchten, jedoch von einem Betrüger erstellt wurde und keinen Wert hat.
-- **Sie werden dazu verleitet, unzulässige Transaktionen zu unterzeichnen**, indem Sie für gewöhnlich auf die Benutzeroberfläche der Betrüger geleitet wird. Sie könnten versuchen, Sie dazu zu bringen, ihren Verträgen einen Freibetrag für Ihre ERC-20-Token zu gewähren, sensible Informationen preiszugeben, über die sie Zugang zu Ihren Vermögenswerten erhalten usw. Solche Benutzeroberflächen können nahezu perfekte Klone von legitimen Websites sein, jedoch mit versteckten Tricks.
+- **Verkauf eines Betrugs-Tokens**, der wie der legitime Token aussehen mag, den Sie kaufen möchten, aber von den Betrügern ausgegeben wird und nichts wert ist.
+- **Sie dazu verleiten, schädliche Transaktionen zu signieren**, normalerweise indem sie Sie auf ihre eigene Benutzeroberfläche leiten. Sie könnten versuchen, Sie dazu zu bringen, ihren Verträgen eine Freigabe (Allowance) für Ihre ERC-20-Token zu erteilen, sensible Informationen preiszugeben, die ihnen Zugang zu Ihren Vermögenswerten verschaffen, usw. Diese Benutzeroberflächen können nahezu perfekte Klone ehrlicher Websites sein, jedoch mit versteckten Tricks.
 
-Um zu veranschaulichen, was Betrugs-Token sind und wie man sie erkennt, sehen wir uns ein Beispiel an: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Dieser Token immitiert das Aussehen eines legitimen [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) -Tokens.
+Um zu veranschaulichen, was Betrugs-Token sind und wie man sie erkennt, sehen wir uns ein Beispiel an: [`wARB`](https://eth.blockscout.com/token/0xB047c8032b99841713b8E3872F06cF32beb27b82). Dieser Token versucht, wie der legitime [`ARB`](https://eth.blockscout.com/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1)-Token auszusehen.
 
 <ExpandableCard
 title="Was ist ARB?"
 contentPreview=''>
 
-Arbitrum ist eine Organisation zur Entwicklung und Verwaltung von [optimistischen Rollups](/developers/docs/scaling/optimistic-rollups/). Ursprünglich war Arbitrum als gewinnorientiertes Unternehmen organisiert, unternahm dann aber Schritte zur Dezentralisierung. Im Rahmen dieses Prozesses wurde ein handelbarer [Governance-Token](/dao/#token-based-membership) ausgegeben.
+Arbitrum ist eine Organisation, die [Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/) entwickelt und verwaltet. Ursprünglich war Arbitrum als gewinnorientiertes Unternehmen organisiert, unternahm dann aber Schritte, um sich zu dezentralisieren. Als Teil dieses Prozesses gaben sie einen handelbaren [Governance-Token](/dao/#token-based-membership) heraus.
 
 </ExpandableCard>
 
 <ExpandableCard
-title="Warum wird der betrügerische Token wARB genannt?"
+title="Warum heißt der Betrugs-Token wARB?"
 contentPreview=''>
 
-In Ethereum gibt es eine Konvention: Wird ein Asset erstellt, das nicht ERC-20-kompatibel ist, wird eine " Wrapped"-Version erstellt wird, deren Name mit "w" beginnt. So gibt es beispielsweise wBTC für Bitcoin und <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH für Ether</a>.
+Es gibt eine Konvention bei Ethereum, dass wir, wenn ein Vermögenswert nicht ERC-20-konform ist, eine "Wrapped"-Version (eingepackte Version) davon erstellen, deren Name mit "w" beginnt. So haben wir zum Beispiel wBTC für Bitcoin und <a href="https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work">wETH für Ether</a>.
 
-Es ergibt keinen Sinn, eine Wrapped-Version eines ERC-20-Tokens zu erstellen, der bereits auf Ethereum vorhanden ist, aber Betrüger verlassen sich eher auf den Anschein von Legitimität als auf die zugrunde liegende Realität.
+Es macht keinen Sinn, eine Wrapped-Version eines ERC-20-Tokens zu erstellen, der sich bereits auf Ethereum befindet, aber Betrüger verlassen sich eher auf den Anschein von Legitimität als auf die zugrunde liegende Realität.
 
 </ExpandableCard>
 
-## Wie funktionieren betrügerische Token? {#how-do-scam-tokens-work}
+## Wie funktionieren Betrugs-Token? {#how-do-scam-tokens-work}
 
-Dezentralisierung ist das zentrale Element von Ethereum. Das bedeutet, dass es keine zentrale Autorität gibt, die Ihre Anlagen konfiszieren oder Sie daran hindern könnte, einen Smart Contract bereitzustellen. Doch das bedeutet auch, dass Betrüger jeden beliebigen Smart Contract bereitstellen können.
+Der ganze Sinn von Ethereum ist die Dezentralisierung. Das bedeutet, dass es keine zentrale Autorität gibt, die Ihre Vermögenswerte beschlagnahmen oder Sie daran hindern kann, einen Smart Contract bereitzustellen. Es bedeutet aber auch, dass Betrüger jeden beliebigen Smart Contract bereitstellen können, den sie möchten.
 
 <ExpandableCard
 title="Was sind Smart Contracts?"
 contentPreview=''>
 
-[Smart Contracts](/developers/docs/smart-contracts/) sind die Programme, die auf der Ethereum-Blockchain laufen. Jeder ERC-20 Token ist beispielsweise als Smart Contract implementiert.
+[Smart Contracts](/developers/docs/smart-contracts/) sind die Programme, die auf der Ethereum-Blockchain ausgeführt werden. Jeder ERC-20-Token ist beispielsweise als Smart Contract implementiert.
 
 </ExpandableCard>
 
-Insbesondere Arbitrum setzt so einen Contract ein, der das Symbol `ARB` nutzt. Doch das hält andere Menschen nicht davon ab, ebenfalls einen Contract einzusetzen, der dasselbe oder ein ähnliches Symbol nutzt. Wer den Contract schreibt, kann bestimmen, wofür er verwendet wird.
+Konkret hat Arbitrum einen Vertrag bereitgestellt, der das Symbol `ARB` verwendet. Das hindert andere jedoch nicht daran, ebenfalls einen Vertrag bereitzustellen, der genau dasselbe oder ein ähnliches Symbol verwendet. Wer den Vertrag schreibt, darf festlegen, was der Vertrag tun wird.
 
-## Legitimes Erscheinungsbild {#appearing-legitimate}
+## Legitim erscheinen {#appearing-legitimate}
 
-Es gibt einige Tricks, die die Ersteller von betrügerischen Tokens nutzen, um ein legitimes Erscheinungsbild zu imitieren.
+Es gibt verschiedene Tricks, die Ersteller von Betrugs-Token anwenden, um legitim zu erscheinen.
 
-- **Legitimer Name und legitimes Symbol**. Wie bereits beschrieben, können ERC-20-Contracts dasselbe Symbol und denselben Namen wie andere ERC-20-Contracts aufweisen. Es ist nicht möglich, darüber auf die Sicherheit der Token zu schließen.
+- **Legitimer Name und Symbol**. Wie bereits erwähnt, können ERC-20-Verträge dasselbe Symbol und denselben Namen wie andere ERC-20-Verträge haben. Sie können sich bei der Sicherheit nicht auf diese Felder verlassen.
 
-- **Legitime Besitzer**. Betrügerische Token senden oft signifikante Beträge an Adressen, die als legitime Besitzer des echten Tokens angenommen werden.
+- **Legitime Eigentümer**. Betrugs-Token führen oft Airdrops mit erheblichen Guthaben an Adressen durch, von denen erwartet werden kann, dass sie legitime Inhaber des echten Tokens sind.
 
-  Kommen wir nochmals auf `wARB` zurück. [Ungefähr 16 % der Token](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) werden von einer Adresse verwaltet, deren öffentlicher Tag ["Arbitrum Foundation: Deployer"](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) ist. Das ist _keine_ falsche Adresse, es ist vielmehr die Adresse, die [den echten ARB-Contract auf dem Ethereum-Mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670) eingesetzt hat.
+  Schauen wir uns zum Beispiel noch einmal `wARB` an. [Etwa 16 % der Token](https://eth.blockscout.com/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?tab=holders) werden von einer Adresse gehalten, deren öffentliches Tag [Arbitrum Foundation: Deployer](https://eth.blockscout.com/address/0x1C8db745ABe3C8162119b9Ef2c13864Cd1FDD72F) lautet. Dies ist _keine_ gefälschte Adresse, es ist tatsächlich die Adresse, die [den echten ARB-Vertrag im Ethereum-Mainnet bereitgestellt hat](https://eth.blockscout.com/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
 
-  Da das ERC-20-Guthaben einer Adresse Teil des ERC-20-Vertragsspeichers ist, kann dafür festgelegt werden, was sich der Entwickler wünscht. Es ist für einen Contract auch möglich, Transfers zu verbieten, sodass der legitime Nutzer keine Chance hat, die betrügerischen Token zu entfernen.
+  Da das ERC-20-Guthaben einer Adresse Teil des Speichers des ERC-20-Vertrags ist, kann es vom Vertrag so festgelegt werden, wie es der Vertragsentwickler wünscht. Es ist auch möglich, dass ein Vertrag Übertragungen verbietet, sodass die legitimen Benutzer diese Betrugs-Token nicht loswerden können.
 
-- **Legitime Transfers**. _Legitime Besitzer würden nicht dafür bezahlen, einen betrügerischen Token auf andere zu übertragen. Daher muss der Token, sofern er Transfers ausführt, legitim sein, oder?_ **Falsch**. `Transfer`-Ereignisse werden auch durch den ERC-20-Contract produziert. Ein Betrüger kann einfach den Contract so schreiben, dass er diese Aktionen produziert.
+- **Legitime Übertragungen**. _Legitime Eigentümer würden nicht dafür bezahlen, einen Betrugs-Token an andere zu übertragen. Wenn es also Übertragungen gibt, muss er legitim sein, oder?_ **Falsch**. `Transfer`-Ereignisse werden vom ERC-20-Vertrag erzeugt. Ein Betrüger kann den Vertrag leicht so schreiben, dass er diese Aktionen erzeugt.
 
 ## Betrügerische Websites {#websites}
 
-Betrüger können auch sehr überzeugende Websites produzieren, manchmal sogar präzise Klone von authentischen Seiten mit einer identischen Benutzeroberfläche, aber mit subtilen Tricks. Beispiele könnten externe links sein, die legitim aussehen, jedoch den Nutzer zu einer externen betrügerischen Seite senden. Es könnten auch falsche Anweisungen sein, die den Nutzer dazu bringen, seine Schlüssel freizugeben oder dem Angreifer Gelder zu senden.
+Betrüger können auch sehr überzeugende Websites erstellen, manchmal sogar exakte Klone authentischer Websites mit identischen Benutzeroberflächen, aber mit subtilen Tricks. Beispiele hierfür könnten externe Links sein, die legitim erscheinen, den Benutzer aber tatsächlich auf eine externe Betrugsseite leiten, oder falsche Anweisungen, die den Benutzer dazu verleiten, seine Schlüssel preiszugeben oder Gelder an die Adresse eines Angreifers zu senden.
 
-Die beste Art das zu vermeiden, ist es, die URL vorsichtig auf von Ihnen besuchte Seiten zu überprüfen. Dafür können Sie authentische Seiten in ihren Lesezeichen speichern. Dann können Sie die Seiten über Ihre Lesezeichen aufrufen, ohne versehentlich Rechtschreibfehler zu machen oder sich auf externe Links verlassen zu müssen.
+Die beste Methode, um dies zu vermeiden, besteht darin, die URL der von Ihnen besuchten Websites sorgfältig zu überprüfen und Adressen bekannter authentischer Websites in Ihren Lesezeichen zu speichern. Dann können Sie über Ihre Lesezeichen auf die echte Website zugreifen, ohne versehentlich Tippfehler zu machen oder sich auf externe Links zu verlassen.
 
 ## Wie können Sie sich schützen? {#protect-yourself}
 
-1. **Überprüfen der Contract-Adresse**. Legitime Token stammen von legitimen Organisationen und Sie können die Contract-Adressen auf der Website dieser Organisation nachschauen. Zum Beispiel können Sie[ die legitimen Adressen für `ARB` hier nachsehen](https://docs.arbitrum.foundation/deployment-addresses#token).
+1. **Überprüfen Sie die Vertragsadresse**. Legitime Token stammen von legitimen Organisationen, und Sie können die Vertragsadressen auf der Website der Organisation einsehen. Zum Beispiel [können Sie für `ARB` die legitimen Adressen hier sehen](https://docs.arbitrum.foundation/deployment-addresses#token).
 
-2. **Echte Token weisen Liquidität auf**. Eine weitere Option ist, sich die Liquidität-Poolgröße auf [Uniswap](https://uniswap.org/) anzuschauen – eines der gängigsten Token-Tauschprotokolle. Dieses Protokoll funktioniert, indem es Liquiditätspools nutzt, in die ihre Token investieren, in der Hoffnung, mit Handelsgebühren Gewinne zu machen.
+2. **Echte Token haben Liquidität**. Eine weitere Möglichkeit besteht darin, sich die Größe des Liquiditätspools auf [Uniswap](https://uniswap.org/) anzusehen, einem der gängigsten Protokolle zum Tauschen von Token. Dieses Protokoll arbeitet mit Liquiditätspools, in die Investoren ihre Token in der Hoffnung auf eine Rendite aus Handelsgebühren einzahlen.
 
-Betrügerische Tokens habe, wenn überhaupt, klassischerweise kleine Liquiditätspools, da die Betrüger keine echten Anlagen riskieren wollen. Der `ARB`/`ETH` Uniswap Pool hält beispielsweise ungefähr eine halbe Millionen Dollar ([schlagen Sie hier den aktuellen Wert nach](https://info.uniswap.org/#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) und das Kaufen oder Verkaufen einer kleinen Menge wird den Preis nicht beeinflussen:
+Betrugs-Token haben in der Regel winzige Liquiditätspools, wenn überhaupt, da die Betrüger keine echten Vermögenswerte riskieren wollen. Zum Beispiel hält der `ARB`/`ETH`-Uniswap-Pool etwa eine Million Dollar ([siehe hier für den aktuellen Wert](https://app.uniswap.org/explore#/pools/0x755e5a186f0469583bd2e80d1216e02ab88ec6ca)) und der Kauf oder Verkauf einer kleinen Menge wird den Preis nicht verändern:
 
-![Einen legitimen Token kaufen](./uniswap-real.png)
+![Kauf eines legitimen Tokens](./uniswap-real.png)
 
-Doch wenn Sie versuchen würden, den betrügerischen `wARB`-Token zu kaufen, könnte sogar eine kleine Investition den Preis um über 90 % steigern:
+Wenn Sie jedoch versuchen, den Betrugs-Token `wARB` zu kaufen, würde selbst ein winziger Kauf den Preis um über 90 % verändern:
 
-![Einen betrügerischen Token kaufen](./uniswap-scam.png)
+![Kauf eines Betrugs-Tokens](./uniswap-scam.png)
 
-Das ist ein weiterer Beweis, der uns zeigt, dass `wARB` wahrscheinlich kein legitimer Token ist.
+Dies ist ein weiterer Beweis dafür, dass `wARB` wahrscheinlich kein legitimer Token ist.
 
-3. **Sehen Sie auf Etherscan nach**. Viele betrügerische Token wurden bereits identifiziert und von der Community gemeldet. Solche Token werden in [Etherscan gekennzeichnet](https://info.etherscan.com/etherscan-token-reputation/). Während Etherscan keine unfehlbare Quelle ist (es ist normal für dezentralisierte Netzwerke, dass es so etwas nicht gibt), sind Token, die von Etherscan als Betrug gekennzeichnet wurden, wahrscheinlich betrügerisch.
+3. **Suchen Sie in Etherscan**. Viele Betrugs-Token wurden bereits von der Community identifiziert und gemeldet. Solche Token sind [in Etherscan markiert](https://info.etherscan.com/etherscan-token-reputation/). Obwohl Etherscan keine maßgebliche Quelle der Wahrheit ist (es liegt in der Natur dezentralisierter Netzwerke, dass es keine maßgebliche Quelle für Legitimität geben kann), sind Token, die von Etherscan als Betrug identifiziert werden, wahrscheinlich auch Betrug.
 
-   ![Betrügerische Token in Etherscan](./etherscan-scam.png)
+   ![Betrugs-Token in Etherscan](./etherscan-scam.png)
 
 ## Fazit {#conclusion}
 
-Solange es Werte in der Welt gibt, wird es immer Betrüger geben, die diese stehlen wollen. In einer dezentralisierten Welt gibt es niemanden, der Sie beschützt, außer Sie selbst. Hoffentlich helfen Ihnen diese Informationen dabei, betrügerische und legitime Token auseinanderzuhalten:
+Solange es Werte auf der Welt gibt, wird es Betrüger geben, die versuchen, sie für sich selbst zu stehlen, und in einer dezentralisierten Welt gibt es niemanden, der Sie schützt, außer Ihnen selbst. Hoffentlich erinnern Sie sich an diese Punkte, um legitime Token von Betrug zu unterscheiden:
 
-- Betrügerische Token kopieren legitime Token, sie können denselben Namen, dasselbe Symbol etc. verwenden.
-- Betrügerische Token _können nicht_ dieselbe Contract-Adresse verwenden.
-- Die beste Quelle für die Adresse des legitimen Tokens ist die Organisation, um deren Token es sich handelt.
-- Sie können zudem sichere Anwendungen wie [Uniswap](https://app.uniswap.org/#/swap) und [Etherscan](https://etherscan.io/) nutzen.
+- Betrugs-Token geben sich als legitime Token aus, sie können denselben Namen, dasselbe Symbol usw. verwenden.
+- Betrugs-Token _können nicht_ dieselbe Vertragsadresse verwenden.
+- Die beste Quelle für die Adresse des legitimen Tokens ist die Organisation, deren Token es ist.
+- Andernfalls können Sie beliebte, vertrauenswürdige Anwendungen wie [Uniswap](https://app.uniswap.org/#/swap) und [Blockscout](https://eth.blockscout.com/) verwenden.

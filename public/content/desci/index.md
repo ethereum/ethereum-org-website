@@ -20,9 +20,7 @@ DeSci aims to create an ecosystem where scientists are incentivized to openly sh
 
 Decentralized science allows for more diverse funding sources (from [DAOs](/glossary/#dao), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible data and methods, and by providing incentives for reproducibility.
 
-### Juan Benet - The DeSci Movement
-
-<YouTube id="5ORvbCIW39o" />
+<VideoWatch slug="desci-movement-juan-benet" />
 
 ## How DeSci improves science {#desci-improves-science}
 
@@ -102,7 +100,6 @@ Explore projects and join the DeSci community.
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
 - [Bio.xyz: get funded for your biotech DAO or desci project](https://www.bio.xyz/)
-- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)

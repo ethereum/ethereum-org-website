@@ -68,7 +68,7 @@ const Card = ({
           <div>{title}</div>
         )}
 
-        <div className="mb-0 text-sm text-body-medium">{description}</div>
+        <div className="text-body-medium mb-0 text-sm">{description}</div>
       </div>
       {caption && (
         <div className="me-4 flex flex-[1_0_25%] flex-wrap items-center">
@@ -97,7 +97,7 @@ const CardList = ({
   customEventOptions,
   className,
 }: CardListProps) => (
-  <div className={cn("w-full bg-background", className)}>
+  <div className={cn("bg-background w-full", className)}>
     {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link

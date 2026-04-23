@@ -262,5 +262,5 @@ More information on this can be found in the [EIP 2718](https://eips.ethereum.or
 ## Further Reading {#further-reading}
 
 - [Modified Merkle Patricia Trie — How Ethereum saves a state](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Merkling in Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [Merkling in Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [Understanding the Ethereum trie](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

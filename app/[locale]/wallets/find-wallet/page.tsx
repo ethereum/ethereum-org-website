@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
@@ -23,12 +23,10 @@ import {
 
 import FindWalletPageJsonLD from "./page-jsonld"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-wallets-find-wallet",
-  })
+  const t = await getTranslations("page-wallets-find-wallet")
 
   setRequestLocale(locale)
 
@@ -52,25 +50,27 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "wallets/find-wallet",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
     <>
-      <FindWalletPageJsonLD locale={locale} contributors={contributors} />
+      <FindWalletPageJsonLD
+        locale={locale}
+        contributors={contributors}
+        wallets={walletsData}
+      />
 
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="relative flex flex-col">
-          <div className="flex w-full flex-col gap-8 px-4 pb-4 pt-11 md:w-1/2">
+          <div className="flex w-full flex-col gap-8 px-4 pt-11 pb-4 md:w-1/2">
             <Breadcrumbs slug="wallets/find-wallet" />
             <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">
               {t("page-find-wallet-title")}
             </h1>
-            <p className="mb-6 text-xl leading-[1.4] text-body-medium last:mb-8">
+            <p className="text-body-medium mb-6 text-xl leading-[1.4] last:mb-8">
               {t("page-find-wallet-description")}
             </p>
           </div>
@@ -82,17 +82,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-wallets-find-wallet",
-  })
+  const t = await getTranslations("page-wallets-find-wallet")
 
   return await getMetadata({
     locale,

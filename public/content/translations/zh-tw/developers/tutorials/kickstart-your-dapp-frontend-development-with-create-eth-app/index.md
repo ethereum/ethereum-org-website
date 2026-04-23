@@ -4,13 +4,14 @@ description: "create-eth-app 使用方法及其功能概覽"
 author: "Markus Waas"
 tags: [ "frontend", "javascript", "ethers.js", "the graph", "defi" ]
 skill: beginner
+breadcrumb: "create-eth-app"
 lang: zh-tw
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-上次我們看過了 [Solidity 的整體概況](https://soliditydeveloper.com/solidity-overview-2020)，並且已經提到了 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)。 現在您將了解如何使用它、整合了哪些功能，以及關於如何擴展它的額外想法。 此應用程式由 [Sablier](http://sablier.com/) 的創辦人 Paul Razvan Berg 發起，它能快速啟動您的前端開發，並提供數個可選的整合選項。
+上次我們看過了 [Solidity 的整體概況](https://soliditydeveloper.com/solidity-overview-2020)，並且已經提到了 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)。 現在您將了解如何使用它、整合了哪些功能，以及關於如何擴展它的額外想法。 此應用程式由 [Sablier](https://sablier.com/) 的創辦人 Paul Razvan Berg 發起，它能快速啟動您的前端開發，並提供數個可選的整合選項。
 
 ## 安裝 {#installation}
 

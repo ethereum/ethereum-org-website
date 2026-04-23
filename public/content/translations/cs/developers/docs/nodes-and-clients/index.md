@@ -294,7 +294,7 @@ Režim lehkého klienta stahuje všechny hlavičky bloků, data bloků a náhodn
 
 Optimistická synchronizace je strategie synchronizace po sloučení, navržená tak, aby byla volitelná a zpětně kompatibilní, což umožňuje exekučním uzlům synchronizovat se zavedenými metodami. Exekuční engine může _optimisticky_ importovat beacon bloky, aniž by je plně ověřoval, najít nejnovější čelo a poté začít synchronizovat řetězec výše uvedenými metodami. Poté, co se exekuční klient dostane do synchronizace, bude informovat konsensuálního klienta o platnosti transakcí v Beacon Chainu.
 
-[Více o optimistické synchronizaci](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[Více o optimistické synchronizaci](https://github.com/ethereum/consensus-specs/blob/master/sync/optimistic.md)
 
 #### Synchronizace z checkpointu {#checkpoint-sync}
 

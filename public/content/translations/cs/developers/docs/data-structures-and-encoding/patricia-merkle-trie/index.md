@@ -262,5 +262,5 @@ Více informací o tomto naleznete v dokumentaci k [EIP 2718](https://eips.ether
 ## Další čtení {#further-reading}
 
 - [Modifikovaný Merkle Patricia Trie – jak Ethereum ukládá stav](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Merkling v Ethereu](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [Merkling v Ethereu](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum)
 - [Pochopení Ethereum trie](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

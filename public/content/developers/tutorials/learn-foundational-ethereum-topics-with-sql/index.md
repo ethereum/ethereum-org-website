@@ -4,6 +4,7 @@ description: This tutorial helps readers understand fundamental Ethereum concept
 author: "Paul Apivat"
 tags: ["SQL", "Querying", "Transactions", "data-and-analytics"]
 skill: beginner
+breadcrumb: Ethereum with SQL
 lang: en
 published: 2021-05-11
 source: paulapivat.com
@@ -62,17 +63,17 @@ This will yield the same information as provided on Etherscan's transaction page
 
 #### Etherscan {#etherscan}
 
-![](./etherscan_view.png)
+![Screenshot of Etherscan transaction explorer view](./etherscan_view.png)
 
 [EF's contract page on Blockscout.](https://eth.blockscout.com/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
 #### Dune Analytics {#dune-analytics}
 
-![](./dune_view.png)
+![Screenshot of a Dune Analytics query dashboard](./dune_view.png)
 
 You can find dashboard [here](https://dune.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
 
-### Breaking Down Transactions {#breaking_down_transactions}
+### Breaking Down Transactions {#breaking-down-transactions}
 
 A submitted transaction includes several pieces of information including ([source](/developers/docs/transactions/)):
 
@@ -146,7 +147,7 @@ ORDER BY block_time DESC`
 
 Here's the SQL output on Dune:
 
-![](./list_of_txn.png)
+![Screenshot of a list of Ethereum transactions](./list_of_txn.png)
 
 This single block being added to the chain changes the state of the Ethereum virtual machine ([EVM](/developers/docs/evm/)). Dozens sometimes, hundreds of transactions are verified at once. In this specific case, 222 transactions were included.
 
@@ -165,7 +166,7 @@ FROM temp_table
 
 For block 12396854, out of 222 total transactions, 204 were successfully verified:
 
-![](./successful_txn.png)
+![Screenshot of a successful Ethereum transaction](./successful_txn.png)
 
 Transactions requests occur dozens of times per second, but blocks are committed approximately once every 15 seconds ([source](/developers/docs/blocks/)).
 
@@ -173,11 +174,11 @@ To see that there is one block produced approximately every 15 seconds, we could
 
 The chart for Ethereum blocks produced per day (2016 - present) is:
 
-![](./daily_blocks.png)
+![Chart showing daily Ethereum block production](./daily_blocks.png)
 
 The average number of blocks produced daily over this time period is ~5,874:
 
-![](./avg_daily_blocks.png)
+![Chart showing daily Ethereum block production](./avg_daily_blocks.png)
 
 The queries are:
 
@@ -214,7 +215,7 @@ Blocks are bounded in size. The maximum block size is dynamic and varies accordi
 
 One way to conceptualize block gas limit is to think of it as the **supply** of available block space in which to batch transactions. The block gas limit can be queried and visualized from 2016 to present day:
 
-![](./avg_gas_limit.png)
+![Chart showing average Ethereum gas limit over time](./avg_gas_limit.png)
 
 ```sql
 SELECT
@@ -227,7 +228,7 @@ OFFSET 1
 
 Then there is the actual gas used daily to pay for computing done on the Ethereum chain (i.e., sending transaction, calling a smart contract, minting an NFT). This is the **demand** for available Ethereum block space:
 
-![](./daily_gas_used.png)
+![Chart showing daily Ethereum gas used](./daily_gas_used.png)
 
 ```sql
 SELECT
@@ -246,7 +247,7 @@ Therefore we can understand gas prices as a function of demand for Ethereum bloc
 
 Finally, we may want to query average daily gas prices for the Ethereum chain, however, doing so will result in an especially long query time, so we’ll filter our query to the average amount of gas paid per transaction by the Ethereum Foundation.
 
-![](./ef_daily_gas.png)
+![Chart showing Ethereum Foundation daily gas usage](./ef_daily_gas.png)
 
 We can see gas prices paid for all transactions made to the Ethereum Foundation address over the years. Here is the query:
 

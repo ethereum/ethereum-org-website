@@ -35,7 +35,7 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 ## Orta seviye makaleler {#intermediate-articles}
 
 - [web3.py Dostları: Ape'e Giriş](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [Python Programcıları için Merkeziyetsiz Uygulama Geliştirme](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [Python Programcıları için Merkeziyetsiz Uygulama Geliştirme](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [Python Ethereum Arayüzü Oluşturma: Bölüm 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Python'da Ethereum Akıllı Sözleşmeleri: kapsamlı(msı) bir rehber](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ Aşağıdaki Ethereum tabanlı projeler bu sayfada bahsedilen araçları kullan�
 - [Curve](https://www.curve.finance/) ve [Curve akıllı sözleşmeler deposu](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) ve [Brownie araç zincirini kullanan akıllı sözleşmeler](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/), [hak ediş sözleşmelerini yönetmek ve dağıtmak için Python kullanır](https://github.com/sushiswap/sushi-vesting-protocols)
-- Alpha Homora ile tanınan [Alpha Finance](https://alphafinance.io/), [akıllı sözleşmeleri test etmek ve dağıtmak için Brownie kullanır](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- Alpha Homora ile tanınan [Alpha Venture DAO](https://alphaventuredao.io/), [akıllı sözleşmeleri test etmek ve dağıtmak için Brownie kullanır](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Python Topluluğu tartışması {#python-community-contributors}
 

@@ -146,7 +146,7 @@ There were also similar response times for tragedies that happened in India and 
 
 </div>
 
-## Ethereum vs fiat {#ethereum-vs-fiat}
+## Crypto payments on Ethereum vs. fiat payments {#ethereum-vs-fiat}
 
 To truly appreciate the impact of Ethereum payments, it's worth comparing them to traditional fiat currencies:
 

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -32,7 +32,7 @@ type Story = StoryObj<typeof meta>
 const ContentContainer = (props: ChildOnlyProp) => {
   return (
     <div
-      className="flex w-full justify-between bg-background-highlight py-0 ps-0 lg:pe-8"
+      className="bg-background-highlight flex w-full justify-between py-0 ps-0 lg:pe-8"
       {...props}
     />
   )
@@ -41,7 +41,7 @@ const ContentContainer = (props: ChildOnlyProp) => {
 const Content = (props: ChildOnlyProp) => {
   return (
     <div
-      className="mx-auto w-full flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12 lg:w-0"
+      className="mx-auto w-full flex-1 px-8 pt-8 pb-8 md:px-16 md:pt-12 md:pb-16 lg:w-0"
       {...props}
     />
   )

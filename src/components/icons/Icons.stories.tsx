@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Center, Flex } from "../ui/flex"
 
@@ -192,7 +192,7 @@ const items = iconsDefinitions.map(({ Icon, label }, idx) => {
   return (
     <Flex
       key={idx}
-      className="flex-col gap-4 border border-background-highlight p-4"
+      className="border-background-highlight flex-col gap-4 border p-4"
     >
       <Center>
         <Icon className="size-[50px]" />

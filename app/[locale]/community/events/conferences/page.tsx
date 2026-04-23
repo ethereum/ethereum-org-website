@@ -10,6 +10,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { getLocaleYear } from "@/lib/utils/date"
@@ -23,18 +24,16 @@ import { mapEventTranslations } from "../utils"
 
 import { getEventsData } from "@/lib/data"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   // Apply translations and compute eventTypes from tags if missing
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   // Filter to conferences only (includes hackathons as they're often conference-adjacent)
   const conferences = events.filter(
@@ -125,6 +124,11 @@ const Page = async ({ params }: { params: PageParams }) => {
               eventCategory: "Events_conferences",
             }}
           />
+          <p className="text-body-medium mt-8">
+            {t.rich("page-events-data-source-callout", {
+              a: (chunks) => <Link href="https://ethstars.xyz/">{chunks}</Link>,
+            })}
+          </p>
         </Section>
 
         {/* Footer CTA */}
@@ -134,16 +138,12 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)
 

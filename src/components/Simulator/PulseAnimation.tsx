@@ -1,5 +1,5 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -23,7 +23,7 @@ export const PulseAnimation = ({ type = CIRCLE }: PulseAnimationProps) => {
   return (
     <motion.div
       className={cn(
-        "absolute border-2 border-primary",
+        "border-primary absolute border-2",
         insetClass,
         borderRadiusClass
       )}

@@ -6,11 +6,11 @@ lang: en
 
 An Ethereum node is composed of two clients: an [execution client](/developers/docs/nodes-and-clients/#execution-clients) and a [consensus client](/developers/docs/nodes-and-clients/#consensus-clients). For a node to propose a new block, it must also run a [validator client](#validators).
 
-When Ethereum was using [proof-of-work](/developers/docs/consensus-mechanisms/pow/), an execution client was enough to run a full Ethereum node. However, since implementing [proof-of-stake](/developers/docs/consensus-mechanisms/pow/), the execution client must be used alongside another piece of software called a [consensus client](/developers/docs/nodes-and-clients/#consensus-clients).
+When Ethereum was using [proof-of-work](/developers/docs/consensus-mechanisms/pow/), an execution client was enough to run a full Ethereum node. However, since implementing [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), the execution client must be used alongside another piece of software called a [consensus client](/developers/docs/nodes-and-clients/#consensus-clients).
 
 The diagram below shows the relationship between the two Ethereum clients. The two clients connect to their own respective peer-to-peer (P2P) networks. Separate P2P networks are needed as the execution clients gossip transactions over their P2P network, enabling them to manage their local transaction pool, whilst the consensus clients gossip blocks over their P2P network, enabling consensus and chain growth.
 
-![](node-architecture-text-background.png)
+![Diagram of Ethereum node architecture showing execution and consensus layers](node-architecture-text-background.png)
 
 _There are several options for the execution client including Erigon, Nethermind, and Besu_.
 

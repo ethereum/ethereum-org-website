@@ -53,7 +53,7 @@ const ShareModal = () => {
           <Button
             onClick={() => onCopy(window.location.href)}
             variant="ghost"
-            className="flex flex-col hover:bg-background-highlight"
+            className="hover:bg-background-highlight flex flex-col"
           >
             {hasCopied ? (
               <>
@@ -69,7 +69,7 @@ const ShareModal = () => {
           </Button>
           <Button
             variant="ghost"
-            className="flex flex-col hover:bg-background-highlight"
+            className="hover:bg-background-highlight flex flex-col"
             onClick={handleTwitterShare}
           >
             <Twitter />

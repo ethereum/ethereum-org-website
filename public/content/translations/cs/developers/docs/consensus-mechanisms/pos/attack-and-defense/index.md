@@ -92,7 +92,7 @@ Existuje několik dalších potenciálních budoucích vylepšení pravidla volb
 
 #### Útoky na velkou vzdálenost {#long-range-attacks}
 
-Existuje také třída útoků specifických pro blockchainy s důkazem podílem, která zahrnuje validátora, jenž se podílel na genesis bloku, udržujícího oddělenou větev blockchainu vedle té poctivé a nakonec přesvědčujícího poctivou sadu validátorů, aby na ni přešla v nějakém vhodném okamžiku mnohem později. Tento typ útoku není na Ethereu možný kvůli finalizačnímu zařízení, které zajišťuje, že se všichni validátoři shodnou na stavu poctivého řetězce v pravidelných intervalech („kontrolních bodech“). Tento jednoduchý mechanismus neutralizuje útočníky na velkou vzdálenost, protože klienti Etherea jednoduše nebudou reorganizovat finalizované bloky. Nové uzly se připojují k síti tak, že najdou důvěryhodný nedávný haš stavu (kontrolní bod „[slabé subjektivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)“) a použijí jej jako pseudo-genesis blok, na kterém staví. To vytváří „důvěryhodnou bránu“ pro nový uzel vstupující do sítě, než si může začít ověřovat informace sám.
+Existuje také třída útoků specifických pro blockchainy s důkazem podílem, která zahrnuje validátora, jenž se podílel na genesis bloku, udržujícího oddělenou větev blockchainu vedle té poctivé a nakonec přesvědčujícího poctivou sadu validátorů, aby na ni přešla v nějakém vhodném okamžiku mnohem později. Tento typ útoku není na Ethereu možný kvůli finalizačnímu zařízení, které zajišťuje, že se všichni validátoři shodnou na stavu poctivého řetězce v pravidelných intervalech („kontrolních bodech“). Tento jednoduchý mechanismus neutralizuje útočníky na velkou vzdálenost, protože klienti Etherea jednoduše nebudou reorganizovat finalizované bloky. Nové uzly se připojují k síti tak, že najdou důvěryhodný nedávný haš stavu (kontrolní bod „[slabé subjektivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)“) a použijí jej jako pseudo-genesis blok, na kterém staví. To vytváří „důvěryhodnou bránu“ pro nový uzel vstupující do sítě, než si může začít ověřovat informace sám.
 
 #### Odepření služby {#denial-of-service}
 
@@ -157,7 +157,7 @@ Celkově je navzdory těmto potenciálním vektorům útoku riziko úspěšného
 ## Další čtení {#further-reading}
 
 - [Podrobnější verze této stránky](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik o finalitě vypořádání](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik o finalitě vypořádání](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [Studie o LMD GHOST](https://arxiv.org/abs/2003.03052)
 - [Práce na Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Práce na Casper](https://arxiv.org/pdf/2003.03052.pdf)

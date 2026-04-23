@@ -37,21 +37,21 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 **Chcete přeskočit nastavení a přejít přímo na ukázky?**
 
-- [Playground](http://playground.nethereum.com/) – interagujte s Ethereem a naučte se, jak používat Nethereum v prohlížeči.
-  - Dotaz na zůstatek na účtu [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - Dotaz na zůstatek na ERC20 chytrém kontraktu [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Převod etherů na účet [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) – interagujte s Ethereem a naučte se, jak používat Nethereum v prohlížeči.
+  - Dotaz na zůstatek na účtu [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - Dotaz na zůstatek na ERC20 chytrém kontraktu [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - Převod etherů na účet [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... A více!
 
 ## Články pro pokročilé {#intermediate-articles}
 
-- [Nethereum pracovní sešit / Seznam ukázek](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Nethereum pracovní sešit / Seznam ukázek](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Nasaďte si vlastní vývojové testnety](https://github.com/Nethereum/Testchains)
 - [Plugin VSCode Codegen pro Solidity](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity a Ethereum: Proč a jak](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Vytvoření webového API ASP.NET Core pro Ethereum dapps](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Použití Nethereum Web3 k implementaci systému pro sledování dodavatelského řetězce](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Zpracování bloků v Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/) s [ukázkou pro C# Playground](http://playground.nethereum.com/csharp/id/1025)
+- [Zpracování bloků v Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/) s [ukázkou pro C# Playground](https://playground.nethereum.com/csharp/id/1025)
 - [Streamování přes websocket v Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido a Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum a Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 
 ## .NET projekty, nástroje a další zajímavosti {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) – _kompilujte, vytvářejte a spouštějte úryvky kódu Nethereum v prohlížeči_
+- [Nethereum Playground](https://playground.nethereum.com/) – _kompilujte, vytvářejte a spouštějte úryvky kódu Nethereum v prohlížeči_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) – _Nethereum codegen s UI v Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) – _lehký .NET Wasm SPA prohlížeč blockchainu a jednoduchá peněženka_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) – _engine pro obchodní pravidla (pro platformy .NET i Ethereum), který je ze své podstaty řízen metadaty_
@@ -78,7 +78,7 @@ Hledáte další informační zdroje? Podívejte se na [ethereum.org/developers]
 
 My v Nethereum se většinou scházíme na [Gitteru](https://gitter.im/Nethereum/Nethereum), kde se každý může ptát a odpovídat na otázky, získat pomoc nebo prostě jen tak relaxovat. Neváhejte vytvořit PR nebo otevřít issue v [repozitáři Nethereum na GitHubu](https://github.com/Nethereum), nebo si jen projděte mnoho vedlejších a ukázkových projektů, které máme. Najdete nás také na [Discordu](https://discord.gg/jQPrR58FxX)!
 
-Pokud s Nethermindem začínáte a potřebujete pomoc, připojte se na náš [Discord](http://discord.gg/PaCMRFdvWT). Naši vývojáři jsou připraveni zodpovědět vaše otázky. Neváhejte otevřít PR nebo nahlásit jakékoliv problémy v [repozitáři Nethermind na GitHubu](https://github.com/NethermindEth/nethermind).
+Pokud s Nethermindem začínáte a potřebujete pomoc, připojte se na náš [Discord](https://discord.gg/PaCMRFdvWT). Naši vývojáři jsou připraveni zodpovědět vaše otázky. Neváhejte otevřít PR nebo nahlásit jakékoliv problémy v [repozitáři Nethermind na GitHubu](https://github.com/NethermindEth/nethermind).
 
 ## Další souhrnné seznamy {#other-aggregated-lists}
 

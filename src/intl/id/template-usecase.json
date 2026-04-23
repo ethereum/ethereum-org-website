@@ -1,16 +1,20 @@
 {
   "template-usecase-dropdown-ai-agents": "Agen AI",
   "template-usecase-dropdown-defi": "Keuangan terdesentralisasi (DeFi)",
-  "template-usecase-dropdown-nft": "Token yang tidak dapat dipertukarkan (NFT)",
+  "template-usecase-dropdown-nft": "Non-fungible token (NFT)",
   "template-usecase-dropdown-dao": "Organisasi otonom terdesentralisasi (DAO)",
+  "template-usecase-dropdown-apps": "Aplikasi Ethereum",
   "template-usecase-dropdown-payments": "Pembayaran Ethereum",
   "template-usecase-dropdown-prediction-markets": "Pasar Prediksi",
-  "template-usecase-dropdown-social-networks": "Jaringan sosial terdesentralisasi",
+  "template-usecase-dropdown-social-networks": "Jejaring sosial terdesentralisasi",
+  "template-usecase-dropdown-restaking": "Restaking",
   "template-usecase-dropdown-identity": "Identitas terdesentralisasi",
-  "template-usecase-dropdown-desci": "Ilmu Pengetahuan Terdesentralisasi (DeSci)",
+  "template-usecase-dropdown-desci": "Sains terdesentralisasi (DeSci)",
   "template-usecase-dropdown-refi": "Keuangan regeneratif (ReFi)",
   "template-usecase-dropdown": "Kasus penggunaan Ethereum",
-  "template-usecase-banner": "Penggunaan Ethereum selalu berkembang dan berubah. Tambahkan info apa pun yang Anda rasa akan membuat berbagai hal menjadi lebih jelas atau lebih terkini.",
+  "template-usecase-banner": "Penggunaan Ethereum selalu berkembang dan berevolusi. Tambahkan info apa pun yang menurut Anda akan membuat segalanya lebih jelas atau lebih mutakhir.",
   "template-usecase-edit-link": "Edit halaman",
-  "template-usecase-dropdown-aria": "Menu dropdown kasus penggunaan"
+  "template-usecase-dropdown-aria": "Menu tarik-turun kasus penggunaan",
+  "template-usecase-dropdown-onchain-gaming": "Game Onchain",
+  "template-usecase-dropdown-rwa": "Aset dunia nyata (RWA)"
 }

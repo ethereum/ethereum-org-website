@@ -1,6 +1,6 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
@@ -27,6 +27,7 @@ import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import { TerminalTypewriter } from "@/components/ui/terminal-typewriter"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -49,15 +50,15 @@ import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.
 import dogeImage from "@/public/images/doge-computer.png"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
-const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
+const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
 
 const Column = (props: ChildOnlyProp) => (
-  <div className="mb-6 me-8 w-full flex-1 basis-1/3" {...props} />
+  <div className="me-8 mb-6 w-full flex-1 basis-1/3" {...props} />
 )
 const RightColumn = (props: ChildOnlyProp) => (
-  <div className="mb-6 me-0 w-full flex-1 basis-1/3" {...props} />
+  <div className="me-0 mb-6 w-full flex-1 basis-1/3" {...props} />
 )
 
 const Scroller = ({
@@ -102,9 +103,9 @@ const WhyGrid = () => {
   return (
     <div
       className={cn(
-        "rounded-4xl border border-accent-c/20",
+        "border-accent-c/20 rounded-4xl border",
         "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
-        "bg-gradient-to-b from-accent-c/5 from-[60%] to-accent-c/15"
+        "from-accent-c/5 to-accent-c/15 bg-linear-to-b from-[60%]"
       )}
     >
       {items.map(({ heading, description }) => (
@@ -119,16 +120,12 @@ const WhyGrid = () => {
     </div>
   )
 }
-const DevelopersPage = async ({ params }: { params: PageParams }) => {
+const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
-  const tCommon = await getTranslations({
-    locale,
-    namespace: "common",
-  })
+  setRequestLocale(locale)
+  const t = await getTranslations("page-developers-index")
+  const tCommon = await getTranslations("common")
 
   const paths = await getBuilderPaths()
   const speedRunDetails = {
@@ -141,11 +138,9 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
 
   const hackathons = (await getHackathons()).slice(0, 5)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "developers",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -191,7 +186,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             id="why"
             className={cn(
               "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
-              "-mx-8 w-screen max-w-screen-2xl items-center bg-background-highlight px-8 py-10 md:py-20"
+              "bg-background-highlight -mx-8 w-screen max-w-screen-2xl items-center px-8 py-10 md:py-20"
             )}
           >
             <div className="space-y-4">
@@ -222,10 +217,51 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
           </Section>
 
           <Section
+            id="ethskills"
+            className="flex flex-col gap-8 py-10 sm:items-center md:py-16"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/developers/ethskills.svg"
+              alt="ETHSKILLS"
+              className="h-auto max-h-24 w-full max-w-2xl object-contain"
+            />
+
+            <div className="max-w-xl space-y-2 md:text-center">
+              <h2>{t("page-developers-ethskills-title")}</h2>
+              <p className="text-body-medium">
+                {t("page-developers-ethskills-desc")}
+              </p>
+            </div>
+
+            <TerminalTypewriter
+              messages={[
+                t("page-developers-ethskills-msg-1"),
+                t("page-developers-ethskills-msg-2"),
+                t("page-developers-ethskills-msg-3"),
+                t("page-developers-ethskills-msg-4"),
+                t("page-developers-ethskills-msg-5"),
+              ]}
+            />
+
+            <ButtonLink
+              href="https://ethskills.com/"
+              size="lg"
+              customEventOptions={{
+                eventCategory: "ethskills",
+                eventAction: "click",
+                eventName: "ethskills-section-cta",
+              }}
+            >
+              {t("page-developers-ethskills-cta", { ethskills: "ethskills" })}
+            </ButtonLink>
+          </Section>
+
+          <Section
             id="resources"
             className={cn(
               "grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8",
-              "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
+              "bg-background-highlight -mx-8 w-screen max-w-screen-2xl px-8 py-10 md:py-20"
             )}
           >
             <h2 className="sr-only">
@@ -233,7 +269,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             </h2>
 
             {/* Quickstart your idea */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="bg-background !space-y-8 px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={scaffoldDebugScreenshot}
                 alt="Scaffold-ETH 2 debug screenshot"
@@ -242,7 +278,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
               />
               <div>
                 <h3>{t("page-developers-jump-right-in-title")}</h3>
-                <p className="text-sm text-body-medium">
+                <p className="text-body-medium text-sm">
                   {t("page-developers-quickstart-scaffold-subtext")}{" "}
                   <Link
                     href="https://docs.scaffoldeth.io/"
@@ -257,7 +293,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                   </Link>
                 </p>
               </div>
-              <div className="flex items-center rounded-lg border bg-background px-3 py-1">
+              <div className="bg-background flex items-center rounded-lg border px-3 py-1">
                 <span className="flex-1 font-mono text-sm">
                   npx create-eth@latest
                 </span>
@@ -284,22 +320,11 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                 >
                   Scaffold-ETH 2 <code>llms-full.txt</code>
                 </Link>
-                <Link
-                  href="https://ethskills.com/"
-                  className="block"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "ethskills",
-                  }}
-                >
-                  ethskills.com - {t("page-developers-ethskills-label")}
-                </Link>
               </div>
             </Card>
 
             {/* Get help */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="bg-background !space-y-8 px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={stackExchangeScreenshot}
                 alt="Ethereum Stack Exchange screenshot"
@@ -308,7 +333,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
               />
               <div>
                 <h3>{t("page-developers-get-help-title")}</h3>
-                <p className="text-sm text-body-medium">
+                <p className="text-body-medium text-sm">
                   {t("page-developers-get-help-desc")}
                 </p>
               </div>
@@ -337,7 +362,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             </Card>
 
             {/* Resources */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="bg-background !space-y-8 px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={resourcesBanner}
                 alt="Banner showing four resource app icons"
@@ -346,7 +371,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
               />
               <div>
                 <h3>{t("page-developers-resources-title")}</h3>
-                <p className="text-sm text-body-medium">
+                <p className="text-body-medium text-sm">
                   {t("page-developers-resources-desc")}
                 </p>
               </div>
@@ -368,7 +393,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             </Card>
 
             {/* Tutorials */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="bg-background !space-y-8 px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={tutorialTagsBanner}
                 alt="Banner displaying multiple learning topics in a tag cloud"
@@ -377,7 +402,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
               />
               <div>
                 <h3>{t("page-developers-tutorials-title")}</h3>
-                <p className="text-sm text-body-medium">
+                <p className="text-body-medium text-sm">
                   {t("page-developers-tutorials-desc")}
                 </p>
               </div>
@@ -424,7 +449,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             id="docs"
             className={cn(
               "shadow-table-item-box",
-              "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
+              "bg-background-highlight -mx-8 w-screen max-w-screen-2xl px-8 py-10 md:py-20"
             )}
           >
             <div className="w-full scroll-mt-24 px-8 py-4">
@@ -573,7 +598,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
                         eventAction: "click",
                         eventName: title,
                       }}
-                      className="min-w-72 max-w-md flex-1"
+                      className="max-w-md min-w-72 flex-1"
                     >
                       <CardBanner className="h-36">
                         {bannerImage ? (
@@ -617,12 +642,12 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <div
               className={cn(
                 "mx-auto max-w-screen-lg",
-                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
-                "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
-                "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
+                "before:z-hide before:absolute before:-inset-px before:bottom-0 before:rounded-[calc(var(--radius-4xl)+1px)] before:content-['']", // Border/gradient positioning
+                "before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20 before:bg-linear-to-b", // Border/gradient coloring
+                "bg-background relative inset-0 rounded-4xl" // Paint background color over card portion
               )}
             >
-              <div className="mb-12 flex flex-col items-center gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
+              <div className="bg-radial-a mb-12 flex flex-col items-center gap-y-8 rounded-4xl px-8 py-12 lg:mb-32 xl:mb-36">
                 <div className="flex flex-col gap-y-4 text-center">
                   <h2>{t("page-developers-founders-title")}</h2>
                   <p>{t("page-developers-founders-desc")}</p>
@@ -662,17 +687,13 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   return await getMetadata({
     locale,

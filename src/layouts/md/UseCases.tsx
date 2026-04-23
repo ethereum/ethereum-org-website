@@ -5,7 +5,7 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
-import OnchainGamingProductList from "@/components/Content/gaming/OnchainGamingProductList"
+import CategoryAppsGrid from "@/components/Content/apps/CategoryAppsGrid"
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import TabbedSection from "@/components/Content/restaking/RestakingTab"
@@ -22,7 +22,7 @@ import { ContentLayout } from "../ContentLayout"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-4 gap-8" {...props} />
+  <div className="grid-cols-fill-4 grid gap-8" {...props} />
 )
 
 // UseCases layout components
@@ -30,9 +30,9 @@ export const useCasesComponents = {
   CardGrid,
   AiAgentProductLists,
   BuildYourOwnAIAgent,
+  CategoryAppsGrid,
   RestakingList,
   TabbedSection,
-  OnchainGamingProductList,
   PredictionMarketLists,
 }
 
@@ -66,6 +66,15 @@ export const UseCasesLayout = ({
     text: t("template-usecase:template-usecase-dropdown"),
     ariaLabel: t("template-usecase:template-usecase-dropdown-aria"),
     items: [
+      {
+        text: t("template-usecase:template-usecase-dropdown-all-use-cases"),
+        href: "/use-cases/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "all-use-cases",
+        },
+      },
       {
         text: t("template-usecase:template-usecase-dropdown-defi"),
         href: "/defi/",

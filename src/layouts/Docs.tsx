@@ -49,7 +49,7 @@ const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading2
     className={cn(
       baseHeadingClasses,
-      "mt-12 border-b border-[#e5e5e5] pb-2 text-2xl max-md:leading-4xs dark:border-[#333]"
+      "max-md:leading-4xs mt-12 border-b border-[#e5e5e5] pb-2 text-2xl dark:border-[#333]"
     )}
     {...props}
   />
@@ -105,7 +105,6 @@ type DocsLayoutProps = Pick<
   | "contributors"
   | "contentNotTranslated"
 > &
-  Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> &
   ChildOnlyProp & {
     frontmatter: DocsFrontmatter
   }
@@ -131,16 +130,18 @@ export const DocsLayout = ({
         </BannerNotification>
       )}
       <div
-        className="flex justify-between bg-background-highlight lg:pe-8"
+        className="bg-background-highlight flex justify-between lg:pe-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <SideNav path={addSlashes(slug)} />
-        <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
+        <MainArticle className="min-w-0 flex-1 px-8 pt-8 pb-8 md:px-16 md:pt-12 md:pb-16">
           <H1 id="top">{frontmatter.title}</H1>
-          <FileContributors
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          )}
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}

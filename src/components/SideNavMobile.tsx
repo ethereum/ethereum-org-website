@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
 import { ChevronRight } from "lucide-react"
+import { AnimatePresence, motion } from "motion/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -50,7 +50,7 @@ const innerLinksVariants = {
 
 const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
-    <HStack className="w-full justify-between py-2 pe-8 ps-2 hover:bg-[ednBackground]">
+    <HStack className="w-full justify-between py-2 ps-2 pe-8 hover:bg-[ednBackground]">
       {children}
     </HStack>
   )
@@ -59,7 +59,7 @@ const LinkContainer = ({ children }: ChildOnlyProp) => {
 const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
-      className="w-full text-body no-underline hover:text-primary"
+      className="text-body hover:text-primary w-full no-underline"
       {...props}
     >
       {children}
@@ -98,11 +98,11 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <ChevronRight className="h-6 w-6 text-body-medium" />
+            <ChevronRight className="text-body-medium h-6 w-6" />
           </motion.div>
         </LinkContainer>
         <motion.div
-          className="ps-4 text-sm font-normal leading-relaxed"
+          className="ps-4 text-sm leading-relaxed font-normal"
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -141,10 +141,10 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
     getPageTitleId(path + "/", docLinks) || ("Change page" as TranslationKey)
 
   return (
-    <div className="sticky top-[75px] z-sticky h-auto w-full bg-background-highlight lg:hidden">
+    <div className="z-sticky bg-background-highlight sticky top-[75px] h-auto w-full lg:hidden">
       <motion.div>
         <Center
-          className="box-border cursor-pointer border-b bg-background-highlight px-8 py-4 font-medium text-primary"
+          className="bg-background-highlight text-primary box-border cursor-pointer border-b px-8 py-4 font-medium"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div>{t(pageTitleId)}</div>
@@ -153,7 +153,7 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <ChevronRight className="h-6 w-6 text-body-medium" />
+            <ChevronRight className="text-body-medium h-6 w-6" />
           </motion.div>
         </Center>
       </motion.div>

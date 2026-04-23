@@ -51,7 +51,7 @@ Pokud si myslíte, že by na základě těchto pokynů měla být komunita přid
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> – komunitou spravované poradenství, vzdělávání, podpora a zdroje pro stávající i potenciální stakery</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">tým webu Ethereum.org</Link> – zastavte se a popovídejte si s týmem a lidmi z komunity o vývoji a designu webu ethereum.org</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> – komunita tvůrců web3, kde se scházejí tvůrci, osobnosti z oboru a nadšenci Etherea. Jsme nadšení do vývoje, designu a kultury web3. Pojďte s námi budovat.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> – chat o vývoji v Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.element.io/#/room/#solidity:matrix.org">Solidity Matrix</Link> – chat o vývoji v Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> – chat o vývoji v Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>– fórum otázek a odpovědí</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>– decentralizované fórum otázek a odpovědí</i></SocialListItem>

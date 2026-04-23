@@ -35,7 +35,7 @@ export const NotificationPopover = ({
           <header className="mb-2 mt-0.5 flex-1 p-0 font-bold">
             {title || ""}
           </header>
-          <PopoverClose className="absolute right-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">
+          <PopoverClose className="absolute end-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">
             <X />
           </PopoverClose>
         </Flex>

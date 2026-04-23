@@ -1,6 +1,7 @@
 import React from "react"
-import { motion } from "framer-motion"
 import { ArrowLeft } from "lucide-react"
+import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
@@ -17,6 +18,8 @@ import type {
 import { MoreInfoPopover } from "./MoreInfoPopover"
 import { PathButton } from "./PathButton"
 import type { PathId } from "./types"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type ExplanationProps = SimulatorNavProps & {
   explanation: SimulatorExplanation
@@ -35,6 +38,8 @@ export const Explanation = ({
   openPath,
   logFinalCta,
 }: ExplanationProps) => {
+  const t = useTranslations("component-wallet-simulator")
+  const { twFlipForRtl } = useRtlFlip()
   const { regressStepper, step, totalSteps } = nav
   const { header, description } = explanation
 
@@ -50,7 +55,7 @@ export const Explanation = ({
       <Button
         variant="ghost"
         className={cn(
-          "-mt-6 mb-2 w-fit ps-0 [transition-duration:10ms] md:mb-8 md:mt-0",
+          "-mt-6 mb-2 w-fit ps-0 [transition-duration:10ms] md:mt-0 md:mb-8",
           step === 0 ? "pointer-events-none" : "pointer-events-auto"
         )}
         onClick={regressStepper}
@@ -61,20 +66,20 @@ export const Explanation = ({
           variants={backButtonVariants}
           animate={step === 0 ? "hidden" : "visible"}
         >
-          <ArrowLeft className="text-lg" />
-          Back
+          <ArrowLeft className={cn("text-lg", twFlipForRtl)} />
+          {t("sim-back")}
         </motion.button>
       </Button>
       <Flex className="gap-3 md:flex-col md:gap-2">
         {/* Step counter */}
-        <div className="grid h-8 w-9 place-items-center rounded-lg bg-body-light p-2 text-xs">
-          <span className="font-bold leading-none">
+        <div className="bg-body-light grid h-8 w-9 place-items-center rounded-lg p-2 text-xs">
+          <span className="leading-none font-bold">
             {step + 1}/{totalSteps}
           </span>
         </div>
         {/* Header and description */}
         <div>
-          <h3 className="mb-4 mt-0 text-xl leading-8 sm:text-2xl md:mb-8 md:text-3xl md:leading-10 lg:text-4xl">
+          <h3 className="mt-0 mb-4 text-xl leading-8 sm:text-2xl md:mb-8 md:text-3xl md:leading-10 lg:text-4xl">
             {header}
           </h3>
           {description && (

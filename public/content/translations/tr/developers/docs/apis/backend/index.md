@@ -111,7 +111,7 @@ Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın ka
 **Nethereum -** **_Blok zinciri için açık kaynaklı bir .NET entegrasyon kütüphanesi._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Dökümanlar](http://docs.nethereum.com/en/latest/)
+- [Dökümanlar](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Araçları -** **_Python aracılığıyla Ethereum etkileşimi için çeşitli kütüphaneler._**

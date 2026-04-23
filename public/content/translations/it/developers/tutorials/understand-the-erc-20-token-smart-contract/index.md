@@ -1,13 +1,10 @@
 ---
 title: Comprendere il contratto intelligente del token ERC-20
-description: Un'introduzione alla distribuzione del tuo primo contratto intelligente su una rete di prova di Ethereum
+description: Scopri come implementare lo standard del token ERC-20 con un esempio completo di contratto intelligente in Solidity e la relativa spiegazione.
 author: "jdourlens"
-tags:
-  - "contratti intelligenti"
-  - "token"
-  - "Solidity"
-  - "erc-20"
+tags: ["contratti intelligenti", "token", "Solidity", "erc-20"]
 skill: beginner
+breadcrumb: Basi del token ERC-20
 lang: it
 published: 2020-04-05
 source: EthereumDev
@@ -15,11 +12,11 @@ sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-Uno dei più importanti [standard dei contratti intelligenti](/developers/docs/standards/) su Ethereum è noto come [ERC-20](/developers/docs/standards/tokens/erc-20/); è emerso come lo standard tecnico usato per tutti i contratti intelligenti sulla blockchain di Ethereum per le implementazioni di token fungibili.
+Uno dei più significativi [standard per i contratti intelligenti](/developers/docs/standards/) su Ethereum è noto come [ERC-20](/developers/docs/standards/tokens/erc-20/), che è emerso come lo standard tecnico utilizzato per tutti i contratti intelligenti sulla blockchain di Ethereum per le implementazioni di token fungibili.
 
-ERC-20 definisce una serie comune di regole che tutti i token fruibili di Ethereum devono seguire. Di conseguenza, consente a sviluppatori di ogni tipologia di prevedere con precisione come funzioneranno i nuovi token nell'ecosistema Ethereum. Questo semplifica lo sviluppo, in quanto si può lavorare con la sicurezza che ogni nuovo progetto non dovrà essere rifatto in seguito al rilascio di un nuovo token, se questo segue le regole.
+L'ERC-20 definisce un elenco comune di regole a cui tutti i token fungibili di Ethereum dovrebbero aderire. Di conseguenza, questo standard per i token consente agli sviluppatori di tutti i tipi di prevedere accuratamente come funzioneranno i nuovi token all'interno del più ampio sistema di Ethereum. Questo semplifica e agevola i compiti degli sviluppatori, perché possono procedere con il loro lavoro, sapendo che ogni nuovo progetto non dovrà essere rifatto ogni volta che viene rilasciato un nuovo token, a patto che il token segua le regole.
 
-Ecco qui di seguito, rappresentate da un'interfaccia, le funzioni che un token ERC-20 deve implementare. Se non sai cos'è un'interfaccia, leggi il nostro articolo sulla [programmazione OOP in Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
+Ecco, presentate come un'interfaccia, le funzioni che un ERC-20 deve implementare. Se non sei sicuro di cosa sia un'interfaccia: dai un'occhiata al nostro articolo sulla [programmazione OOP in Solidity](https://ethereumdev.io/inheritance-in-solidity-contracts-are-classes/).
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -40,7 +37,7 @@ interface IERC20 {
 }
 ```
 
-Ecco una spiegazione riga per riga di ciascuna funzione. In seguito presenteremo una semplice implementazione di un token ERC-20.
+Ecco una spiegazione riga per riga a cosa serve ogni funzione. Dopodiché presenteremo una semplice implementazione del token ERC-20.
 
 ## Getter {#getters}
 
@@ -48,19 +45,19 @@ Ecco una spiegazione riga per riga di ciascuna funzione. In seguito presenteremo
 function totalSupply() external view returns (uint256);
 ```
 
-Restituisce la quantità di token esistenti. Questa è una cosiddetta funzione getter e non altera lo stato del contratto. Tieni a mente che in Solidity non è prevista la virgola mobile. Perciò gran parte dei token adottano 18 decimali e restituiscono la disponibilità totale e altri risultati come 1000000000000000000 per 1 token. Non tutti i token hanno 18 decimali e questo è un aspetto a cui devi prestare molta attenzione quando interagisci con i token.
+Restituisce la quantità di token esistenti. Questa funzione è un getter e non modifica lo stato del contratto. Tieni presente che non ci sono numeri in virgola mobile (float) in Solidity. Pertanto, la maggior parte dei token adotta 18 decimali e restituirà l'offerta totale e altri risultati come segue: 1000000000000000000 per 1 token. Non tutti i token hanno 18 decimali e questo è un aspetto a cui devi prestare molta attenzione quando hai a che fare con i token.
 
 ```solidity
 function balanceOf(address account) external view returns (uint256);
 ```
 
-Restituisce la quantità di token posseduti da un indirizzo (`account`). Questa è una funzione getter e non altera lo stato del contratto.
+Restituisce la quantità di token posseduti da un indirizzo (`account`). Questa funzione è un getter e non modifica lo stato del contratto.
 
 ```solidity
 function allowance(address owner, address spender) external view returns (uint256);
 ```
 
-Lo standard ERC-20 consente ad un indirizzo di trasferire una somma a un altro indirizzo in modo da potervi recuperare token. Questa funzione getter restituisce il numero rimanente di token che lo `spender` potrà spendere per conto dell'`owner`. Questa funzione è un getter e non altera lo stato del contratto; per default dovrebbe restituire 0.
+Lo standard ERC-20 consente a un indirizzo di concedere un'indennità (allowance) a un altro indirizzo per poterne prelevare i token. Questo getter restituisce il numero rimanente di token che lo `spender` (spenditore) sarà autorizzato a spendere per conto dell'`owner` (proprietario). Questa funzione è un getter, non modifica lo stato del contratto e dovrebbe restituire 0 per impostazione predefinita.
 
 ## Funzioni {#functions}
 
@@ -68,19 +65,19 @@ Lo standard ERC-20 consente ad un indirizzo di trasferire una somma a un altro i
 function transfer(address recipient, uint256 amount) external returns (bool);
 ```
 
-Sposta la quantità (`amount`) di token dall'indirizzo di chiama la funzione (`msg.sender`) a quello del destinatario. Questa funzione emette l'evento `Transfer` definito in seguito. Restituisce true se il trasferimento è stato effettuato.
+Sposta l'`amount` (quantità) di token dall'indirizzo del chiamante della funzione (`msg.sender`) all'indirizzo del destinatario. Questa funzione emette l'evento `Transfer` definito in seguito. Restituisce true se il trasferimento è stato possibile.
 
 ```solidity
 function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-Aggiorna l'importo di `allowance` che lo `spender` può trasferire dal saldo di chi chiama la funzione (`msg.sender`). Questa funzione emette l'evento Approval. La funzione restituisce un valore che indica se la somma è stata impostata.
+Imposta la quantità di `allowance` (indennità) che lo `spender` è autorizzato a trasferire dal saldo del chiamante della funzione (`msg.sender`). Questa funzione emette l'evento Approval. La funzione restituisce se l'indennità è stata impostata con successo.
 
 ```solidity
 function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
 
-Trasferisce l'importo (`amount`) di token da `sender` a `recipient` usando il meccanismo della disponibilità. L'importo viene poi sottratto dalla disponibilità del chiamante. Questa funzione emette l'evento `Transfer`.
+Sposta l'`amount` di token dal `sender` (mittente) al `recipient` (destinatario) utilizzando il meccanismo di indennità. L'importo viene quindi detratto dall'indennità del chiamante. Questa funzione emette l'evento `Transfer`.
 
 ## Eventi {#events}
 
@@ -88,19 +85,19 @@ Trasferisce l'importo (`amount`) di token da `sender` a `recipient` usando il me
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
-Questo evento viene emesso quando la quantità di token (value) è inviata dall'indirizzo `from` all'indirizzo `to`.
+Questo evento viene emesso quando la quantità di token (valore) viene inviata dall'indirizzo `from` (da) all'indirizzo `to` (a).
 
-Nel caso del conio di nuovi token, il trasferimento è solitamente `from` l'indirizzo 0x00..0000, mentre nel caso in cui i token sono bruciati, il trasferimento è `to` 0x00..0000.
+Nel caso in cui si debbano coniare nuovi token, il trasferimento è solitamente `from` (dall') indirizzo 0x00..0000, mentre nel caso in cui si brucino token il trasferimento è `to` (all') indirizzo 0x00..0000.
 
 ```solidity
 event Approval(address indexed owner, address indexed spender, uint256 value);
 ```
 
-Questo evento vien trasmesso ogni volta che la quantità di token (`value`) è approvata da `owner` per essere utilizzata da `spender`.
+Questo evento viene emesso quando la quantità di token (`value`) viene approvata dall'`owner` per essere utilizzata dallo `spender`.
 
-## Implementazione di base dei token ERC-20 {#a-basic-implementation-of-erc-20-tokens}
+## Un'implementazione di base dei token ERC-20 {#a-basic-implementation-of-erc-20-tokens}
 
-Ecco il codice più semplice su cui basare un token ERC-20:
+Ecco il codice più semplice su cui basare il tuo token ERC-20:
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -136,11 +133,11 @@ contract ERC20Basic is IERC20 {
 
 
    constructor() {
-    balances[msg.sender] = totalSupply_;
+	balances[msg.sender] = totalSupply_;
     }
 
     function totalSupply() public override view returns (uint256) {
-    return totalSupply_;
+	return totalSupply_;
     }
 
     function balanceOf(address tokenOwner) public override view returns (uint256) {
@@ -178,4 +175,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-Un'altra eccellente implementazione dello standard token ERC-20 è l'[implementazione ERC-20 OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
+Un'altra eccellente implementazione dello standard del token ERC-20 è l'[implementazione ERC-20 di OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).

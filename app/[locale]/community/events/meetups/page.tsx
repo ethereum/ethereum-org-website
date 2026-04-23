@@ -19,18 +19,16 @@ import FilterMeetups from "./_components/FilterMeetups"
 
 import { getEventsData } from "@/lib/data"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   // Apply translations and compute eventTypes from tags if missing
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   // Combine API meetup events with legacy meetup groups
   // Exclude conferences and hackathons - they have their own section
@@ -39,7 +37,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups()
+  const meetupGroups = getMeetupGroups(locale)
   // Show API meetups first (sorted by date), then groups (sorted alphabetically)
   const meetups = [...apiMeetups, ...meetupGroups]
 
@@ -76,16 +74,12 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)
 

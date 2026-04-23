@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/carousel"
 
 import { cn } from "@/lib/utils/cn"
-import { formatDate } from "@/lib/utils/date"
+import { dateTimeFormat, formatDate } from "@/lib/utils/date"
 
 import { getReleasesData, Release } from "@/data/roadmap/releases"
 
@@ -41,17 +41,30 @@ const ReleaseCarousel = () => {
       return releaseDate <= now
     })
 
-    // Upcoming: has a releaseDate, but is in the future
+    // Case 1: A release with a future releaseDate exists — show it
     const hasUpcomingRelease = releasesData.some((release) => {
       if (!("releaseDate" in release) || !release.releaseDate) return false
       const releaseDate = new Date(release.releaseDate)
       return releaseDate > now
     })
-
-    // If upcoming releases exist, start index after production releases
     if (hasUpcomingRelease) return productionReleases.length
 
-    // If no upcoming releases, start at the last production release
+    // Case 2: Last production release is within 2-month grace period — still show it
+    const lastProd = productionReleases[productionReleases.length - 1]
+    if (lastProd && "releaseDate" in lastProd && lastProd.releaseDate) {
+      const gracePeriodEnd = new Date(lastProd.releaseDate)
+      gracePeriodEnd.setMonth(gracePeriodEnd.getMonth() + 2)
+      if (now <= gracePeriodEnd) {
+        return productionReleases.length - 1
+      }
+    }
+
+    // Case 3: Grace period expired — show first planned/unscheduled release
+    if (productionReleases.length < releasesData.length) {
+      return productionReleases.length
+    }
+
+    // Fallback: last production release
     return productionReleases.length - 1
   }, [releasesData])
 
@@ -80,16 +93,19 @@ const ReleaseCarousel = () => {
   }, [])
 
   const getDisplayDate = (release: Release): string => {
+    if ("displayDate" in release && release.displayDate)
+      return release.displayDate
+
     if (!("releaseDate" in release || "plannedReleaseYear" in release))
       return ""
 
     if ("plannedReleaseYear" in release && release.plannedReleaseYear)
-      return new Intl.DateTimeFormat(locale, {
+      return dateTimeFormat(locale, {
         year: "numeric",
       }).format(new Date(Number(release.plannedReleaseYear), 0, 1))
 
     if ("releaseDate" in release && release.releaseDate)
-      return formatDate(release.releaseDate)
+      return formatDate(release.releaseDate, locale, { timeZone: "UTC" })
 
     return ""
   }
@@ -97,7 +113,7 @@ const ReleaseCarousel = () => {
   return (
     <div className="w-full max-w-[100vw] overflow-hidden" dir="ltr">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
-        <div className="w-full rounded-2xl bg-background-highlight py-6">
+        <div className="bg-background-highlight w-full rounded-2xl py-6">
           <div className="flex flex-col gap-6">
             {/* First Carousel */}
             <Carousel
@@ -125,7 +141,7 @@ const ReleaseCarousel = () => {
                           {status === "prod" && (
                             <div
                               className={cn(
-                                "w-fit rounded-lg bg-primary-low-contrast px-2 py-1",
+                                "bg-primary-low-contrast w-fit rounded-lg px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -137,7 +153,7 @@ const ReleaseCarousel = () => {
                           {status === "soon" && (
                             <div
                               className={cn(
-                                "w-fit rounded-lg bg-warning-light px-2 py-1",
+                                "bg-warning-light w-fit rounded-lg px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -149,7 +165,7 @@ const ReleaseCarousel = () => {
                           {status === "dev" && (
                             <div
                               className={cn(
-                                "w-fit rounded-lg bg-card-gradient-secondary-hover px-2 py-1",
+                                "bg-card-gradient-secondary-hover w-fit rounded-lg px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -166,7 +182,7 @@ const ReleaseCarousel = () => {
                               "flex h-1 flex-1",
                               index !== 0
                                 ? status === "soon"
-                                  ? "bg-gradient-to-r from-primary to-primary-low-contrast"
+                                  ? "from-primary to-primary-low-contrast bg-linear-to-r"
                                   : status === "prod"
                                     ? "bg-primary"
                                     : "bg-primary-low-contrast"
@@ -180,7 +196,7 @@ const ReleaseCarousel = () => {
                                 ? "bg-primary"
                                 : "bg-primary-low-contrast",
                               status === "soon" &&
-                                "border-2 border-primary bg-background"
+                                "border-primary bg-background border-2"
                             )}
                           />
                           <div
@@ -198,7 +214,7 @@ const ReleaseCarousel = () => {
                           <p className="text-md font-bold">
                             {release.releaseName}
                           </p>
-                          <p className="font-mono text-sm text-body-medium">
+                          <p className="text-body-medium font-mono text-sm">
                             {displayDate}
                           </p>
                         </div>

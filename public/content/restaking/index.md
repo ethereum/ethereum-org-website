@@ -19,13 +19,13 @@ buttons:
 
 The Ethereum network secures billions of dollars of value 24/7, 365. How?
 
-People all over the world lock away (or “stake”) [ether (ETH)](/eth/) in smart contracts to run the software that processes Ethereum transactions and secures the Ethereum network. In return, they get rewarded with more ETH.
+People all over the world lock away (or “stake”) [ether (ETH)](/what-is-ether/) in smart contracts to run the software that processes Ethereum transactions and secures the Ethereum network. In return, they get rewarded with more ETH.
 
 Restaking is a technology built for [stakers](/staking/) to extend this security to other services, applications, or networks. In return, they earn additional restaking rewards. However, they also put their staked ETH at more risk.
 
 **Restaking explained in 18 minutes**
 
-<YouTube id="rOJo7VwPh7I" />
+<VideoWatch slug="restaking-explained" />
 
 ## What is restaking? {#what-is-restaking}
 
@@ -171,11 +171,11 @@ While AVSs offer different rates, Liquid Restaking Tokens (LRTs) like eETH give 
 
 ## Advanced {#advanced}
 
-<YouTube id="-V-fG4J1N_M" />
+<VideoWatch slug="eigenlayer-permissionless-features" />
 
 ## Further reading {#further-reading}
 
-1. [ethereum.org - ETH staking guide](https://ethereum.org/en/staking/)
+1. [ethereum.org - ETH staking guide](/staking/)
 2. [Ledger Academy - What Is Ethereum Restaking?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: Decentralized Ethereum Restaking Protocol Explained](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - Don't overload Ethereum's consensus](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

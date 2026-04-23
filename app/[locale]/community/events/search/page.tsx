@@ -1,5 +1,5 @@
 import { Info } from "lucide-react"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { EventItem, PageParams } from "@/lib/types"
 
@@ -18,25 +18,30 @@ import { mapEventTranslations, sanitize } from "../utils"
 
 import { getEventsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-  searchParams,
-}: {
-  params: PageParams
-  searchParams: { q?: string }
+const safeDecodeURIComponent = (str: string) => {
+  try {
+    return decodeURIComponent(str)
+  } catch {
+    return str
+  }
+}
+
+const Page = async (props: {
+  params: Promise<PageParams>
+  searchParams: Promise<{ q?: string }>
 }) => {
+  const searchParams = await props.searchParams
+  const params = await props.params
   const { locale } = params
+  setRequestLocale(locale)
   const { q } = searchParams
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-community-events")
+  const tCommon = await getTranslations("common")
 
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   const filteredEvents = ((): EventItem[] => {
     if (!q) return []
@@ -56,7 +61,7 @@ const Page = async ({
   })()
 
   const title = q
-    ? t("page-events-search-hero-title-q", { q: decodeURIComponent(q) })
+    ? t("page-events-search-hero-title-q", { q: safeDecodeURIComponent(q) })
     : t("page-events-search-hero-title")
 
   const Results = () => {
@@ -74,7 +79,7 @@ const Page = async ({
 
     return (
       <>
-        <div className="grid grid-cols-fill-4 gap-8">
+        <div className="grid-cols-fill-4 grid gap-8">
           {filteredEvents.map((event) => (
             <EventCard
               key={event.id}
@@ -117,7 +122,7 @@ const Page = async ({
             <Input
               type="search"
               name="q"
-              defaultValue={q ? decodeURIComponent(q) : ""}
+              defaultValue={q ? safeDecodeURIComponent(q) : ""}
               placeholder={t("page-events-search-placeholder")}
               aria-describedby="input-instruction"
               className="w-full"
@@ -138,16 +143,12 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   return await getMetadata({
     locale,

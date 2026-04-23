@@ -1,5 +1,4 @@
 import { pick } from "lodash"
-import dynamic from "next/dynamic"
 import {
   getMessages,
   getTranslations,
@@ -7,12 +6,7 @@ import {
 } from "next-intl/server"
 import type { ReactNode } from "react"
 
-import type {
-  ChildOnlyProp,
-  CommitHistory,
-  Lang,
-  PageParams,
-} from "@/lib/types"
+import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -38,15 +32,16 @@ import {
 import { Divider } from "@/components/ui/divider"
 import { Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
-import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getLastGitCommitDateByPath } from "@/lib/utils/gh"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { exchangesByCountryLastUpdated } from "@/data/exchangesByCountry"
+
+import CentralizedExchanges from "./_components/CentralizedExchangesLazy"
 import GetEthPageJsonLD from "./page-jsonld"
 
 import uniswap from "@/public/images/dapps/uni.png"
@@ -54,26 +49,6 @@ import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
 import hero from "@/public/images/get-eth.png"
 import wallet from "@/public/images/wallet.png"
-
-const CentralizedExchanges = dynamic(
-  () => import("@/components/CentralizedExchanges").then((mod) => mod.default),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="mb-6 flex w-full max-w-screen-sm flex-col items-center gap-y-10">
-        <div className="flex w-full justify-between rounded border p-3">
-          <Skeleton className="h-5 w-60" />
-          <Skeleton className="aspect-square" />
-        </div>
-        <Skeleton className="mt-6 size-20 rounded-3xl" />
-        <div className="flex w-full max-w-screen-sm flex-col items-center gap-2">
-          <Skeleton className="h-5 w-full" />
-          <Skeleton className="h-5 w-1/2" />
-        </div>
-      </div>
-    ),
-  }
-)
 
 type CardProps = {
   children: ReactNode
@@ -83,7 +58,7 @@ type CardProps = {
 }
 
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="flex flex-col rounded-sm border">
+  <Card className="flex flex-col rounded-xs border">
     <CardHeader className="space-y-4">
       <Emoji text={emoji} className="text-5xl leading-none" />
       <CardTitle>{title}</CardTitle>
@@ -98,10 +73,10 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   <div className="grid grid-cols-1 gap-16 lg:grid-cols-2" {...props} />
 )
 
-export default async function Page({ params }: { params: PageParams }) {
+export default async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-get-eth" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-get-eth")
 
   const tokenSwaps: CardListCardProps[] = [
     {
@@ -131,10 +106,6 @@ export default async function Page({ params }: { params: PageParams }) {
     },
   ]
 
-  const lastDataUpdateDate = getLastGitCommitDateByPath(
-    "src/data/exchangesByCountry.ts"
-  )
-
   setRequestLocale(locale)
 
   // Get i18n messages
@@ -142,13 +113,8 @@ export default async function Page({ params }: { params: PageParams }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/get-eth")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "get-eth",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("get-eth", locale as Lang)
 
   return (
     <>
@@ -168,11 +134,11 @@ export default async function Page({ params }: { params: PageParams }) {
                 alt={t("page-get-eth-hero-image-alt")}
                 priority
               />
-              <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
+              <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mt-24 lg:mb-0">
                 <h1 className="my-8 text-4xl md:text-5xl">
                   {t("page-get-eth-where-to-buy-title")}
                 </h1>
-                <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">
+                <p className="text-body-medium mb-0 max-w-[45ch] text-center text-xl leading-snug">
                   {t("page-get-eth-where-to-buy-desc")}
                 </p>
                 <br />
@@ -250,7 +216,7 @@ export default async function Page({ params }: { params: PageParams }) {
             <Stack className="gap-16">
               <p>
                 <em>
-                  {tCommon("listing-policy-disclaimer")}{" "}
+                  {t("listing-policy-disclaimer")}{" "}
                   <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                     {t("listing-policy-raise-issue-link")}
                   </InlineLink>
@@ -273,7 +239,7 @@ export default async function Page({ params }: { params: PageParams }) {
               id="country-picker"
               className={cn(
                 "-mx-8 my-0 flex flex-col items-center px-8 py-16 sm:p-16 md:my-16 lg:mx-0",
-                "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+                "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r"
               )}
             >
               <div className="flex flex-col items-center">
@@ -283,7 +249,9 @@ export default async function Page({ params }: { params: PageParams }) {
                 </p>
 
                 {/* CLIENT SIDE */}
-                <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
+                <CentralizedExchanges
+                  lastDataUpdateDate={exchangesByCountryLastUpdated}
+                />
               </div>
             </div>
 
@@ -375,11 +343,11 @@ export default async function Page({ params }: { params: PageParams }) {
                       {t("page-get-eth-your-address")}
                     </h3>
                     <p>{t("page-get-eth-your-address-desc")}</p>
-                    <div className="mb-6 flex select-none flex-col-reverse justify-between rounded bg-[#191919] p-2 lg:flex-row">
-                      <p className="mb-0 font-monospace text-xs text-white">
+                    <div className="mb-6 flex flex-col-reverse justify-between rounded bg-[#191919] p-2 select-none lg:flex-row">
+                      <p className="font-monospace mb-0 text-xs text-white">
                         0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
                       </p>
-                      <p className="mx-4 mb-0 text-sm uppercase text-error">
+                      <p className="text-error mx-4 mb-0 text-sm uppercase">
                         {t("page-get-eth-do-not-copy")}
                       </p>
                     </div>
@@ -398,7 +366,7 @@ export default async function Page({ params }: { params: PageParams }) {
             <Divider className="mx-auto my-16 md:my-32" />
 
             <CalloutBanner
-              className="mx-4 mb-40 mt-24"
+              className="mx-4 mt-24 mb-40"
               titleKey="page-get-eth:page-get-eth-use-your-eth"
               descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
               image={dapps}
@@ -426,14 +394,13 @@ export default async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-get-eth" })
+  const t = await getTranslations("page-get-eth")
 
   return await getMetadata({
     locale,

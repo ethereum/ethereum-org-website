@@ -255,7 +255,7 @@ sidebarDepth: 3
 
 - [Огляд рішень для масштабування шару 2 в Ethereum: канали стану, Plasma та Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _— Джош Старк, 12 лютого 2018 року_
 - [Канали стану — пояснення](https://www.jeffcoleman.ca/state-channels/) _6 листопада 2015 року — Джефф Коулман_
-- [Основи каналів стану](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [Основи каналів стану](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [Канали стану блокчейну: сучасний стан](https://ieeexplore.ieee.org/document/9627997)
 
 _Знайшли ресурс, який допоміг з цією темою? Відредагуйте цю сторінку і додайте його!_

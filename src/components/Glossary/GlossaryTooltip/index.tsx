@@ -9,7 +9,7 @@ import InlineLink from "@/components/ui/Link"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 type GlossaryTooltipProps = Omit<TooltipProps, "content"> & {
   children: ReactNode
@@ -63,7 +63,7 @@ const GlossaryTooltip = ({
           })
         }}
       >
-        <u className="cursor-help decoration-dotted underline-offset-3 hover:text-primary-hover hover:decoration-primary-hover">
+        <u className="hover:text-primary-hover hover:decoration-primary-hover cursor-help decoration-dotted underline-offset-3">
           {children}
         </u>
       </Tooltip>

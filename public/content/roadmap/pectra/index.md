@@ -109,11 +109,11 @@ Yes, Pectra upgrade requires updates to both [execution clients and consensus cl
 
 ## More of a visual learner? {#visual-learner}
 
-<YouTube id="ufIDBCgdGwY" />
+<VideoWatch slug="pectra-upgrade-overview" />
 
 _What’s Going Into the Pectra Upgrade? - Christine Kim_
 
-<YouTube id="_UpAFpC7X6Y" />
+<VideoWatch slug="pectra-what-stakers-need-to-know" />
 
 _Ethereum Pectra Upgrade: What Stakers Need to Know — Blockdaemon_
 
@@ -124,4 +124,4 @@ _Ethereum Pectra Upgrade: What Stakers Need to Know — Blockdaemon_
 - [Pectra.wtf info page](https://pectra.wtf)
 - [How Pectra enhances staker experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 info page](https://eip7702.io/)
-- [Pectra devnets](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)
+- [Pectra devnets](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

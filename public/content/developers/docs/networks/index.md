@@ -32,7 +32,7 @@ Most testnets started by using a permissioned proof-of-authority consensus mecha
 
 ETH on testnets is supposed to have no real value; however, there have been markets created for certain types of testnet ETH that have become scarce or hard to obtain. Since you need ETH to actually interact with Ethereum (even on testnets), most people get testnet ETH for free from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
-#### Which Testnet should I use?
+#### Which Testnet should I use? {#which-testnet-should-i-use}
 
 The two public testnets that client developers are currently maintaining are Sepolia and Hoodi. Sepolia is a network for contract and application developers to test their applications. The Hoodi network lets protocol developers test network upgrades, and lets stakers test running validators.
 
@@ -104,7 +104,7 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 - [Checkpoint Sync](https://checkpoint-sync.ephemery.ethpandaops.io)
 - [Launchpad](https://launchpad.ephemery.dev/)
 
-#### Faucets
+#### Faucets {#faucets}
 
 - [Bordel Faucet](https://faucet.bordel.wtf/)
 - [Pk910 PoW Faucet](https://ephemery-faucet.pk910.de/)
@@ -114,7 +114,7 @@ Ephemery is a unique kind of testnet that fully resets every month. The executio
 The Holesky testnet is deprecated as of September 2025. Staking operators and infrastructure providers should use Hoodi for validator testing instead.
 
 - [Holesky Testnet Shutdown Announcement](https://blog.ethereum.org/2025/09/01/holesky-shutdown-announcement) - _EF Blog, 1-September-2025_
-- [Holesky and Hoodi Testnet Updates](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky) - _EF Blog, 18-March-2025_
+- [Holesky and Hoodi Testnet Updates](https://blog.ethereum.org/2025/03/18/hoodi-holesky) - _EF Blog, 18-March-2025_
 
 ### Layer 2 testnets {#layer-2-testnets}
 
@@ -158,7 +158,7 @@ A testnet for [Starknet](https://www.starknet.io).
 
 ##### Resources
 
-- [Starkscan](https://sepolia.starkscan.co/)
+- [Voyager Sepolia Scan](https://sepolia.voyager.online/)
 
 ##### Faucets
 

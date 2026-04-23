@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -16,7 +16,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import Acknowledgements from "./_components/acknowledgements"
 import AcknowledgementsJsonLD from "./page-jsonld"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
@@ -28,11 +29,9 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "contributing/translation-program/acknowledgements",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -45,17 +44,15 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-contributing-translation-program-acknowledgements",
-  })
+  const t = await getTranslations(
+    "page-contributing-translation-program-acknowledgements"
+  )
 
   return await getMetadata({
     locale,

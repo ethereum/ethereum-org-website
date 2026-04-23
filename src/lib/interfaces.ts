@@ -8,6 +8,7 @@ import type {
   Layout,
   ToCItem,
   TranslationKey,
+  VideoFormat,
 } from "@/lib/types"
 
 export interface DeveloperDocsLink {
@@ -87,6 +88,18 @@ export interface DocsFrontmatter extends SharedFrontmatter {
   hideEditButton?: boolean
 }
 
+export interface VideoFrontmatter extends SharedFrontmatter {
+  youtubeId: string
+  uploadDate: string
+  duration: string
+  educationLevel: "beginner" | "intermediate" | "advanced"
+  topic: string[]
+  format: VideoFormat
+  author: string
+  customThumbnailUrl?: string
+  breadcrumb?: string
+}
+
 export interface TutorialFrontmatter extends SharedFrontmatter {
   tags: string[]
   author: string
@@ -96,6 +109,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   published: string
   address?: string
   hideEditButton?: boolean
+  breadcrumb?: string
 }
 
 export interface MdPageContent {
@@ -103,7 +117,7 @@ export interface MdPageContent {
   content: string
   frontmatter: Frontmatter
   tocItems: ToCItem[]
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp?: string
   lastDeployLocaleTimestamp: string
   contentNotTranslated: boolean
   contributors: FileContributor[]

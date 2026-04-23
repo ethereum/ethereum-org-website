@@ -7,7 +7,7 @@ import Switch from "@/components/ui/switch"
 interface SwitchFilterInputProps {
   Icon?: React.FC<React.SVGProps<SVGElement>>
   label: string
-  description?: string | ReactElement
+  description?: string | ReactElement<unknown>
   filterIndex: number
   itemIndex: number
   inputState: FilterInputState
@@ -43,7 +43,7 @@ const SwitchFilterInput = ({
           }}
         />
       </div>
-      <p className="ms-8 text-body-medium">{description}</p>
+      <p className="text-body-medium ms-8">{description}</p>
     </>
   )
 }

@@ -79,6 +79,8 @@ Los proponentes de bloques utilizan los datos del estado para crear «testigos»
 
 El sin estado débil se encuentra en un estado avanzado de investigación, pero depende de la separación proponente-constructor y de que se hayan implementado los árboles de Verkle para que se puedan pasar pequeños testigos entre pares. Esto significa que el sin estado débil todavía tardará probablemente unos años en integrarse en la red principal de Ethereum.
 
+El zkEVM para la verificación de L1 es una tecnología complementaria que podría mejorar aún más la verificación sin estado. En lugar de solo comprobar testigos, los validadores podrían verificar una prueba de conocimiento cero de que todo el bloque se ejecutó correctamente -- proporcionando certeza criptográfica sin volver a ejecutar transacciones.
+
 ### Sin estado fuerte {#strong-statelessness}
 
 La fuerte falta de estado elimina la necesidad de que cualquier nodo almacene datos de estado. En su lugar, las transacciones se envían con testigos que pueden añadir los productores de bloques. Los productores de bloques son entonces responsables de almacenar solo ese estado que se necesita para generar testigos para las cuentas pertinentes. La responsabilidad del estado se traslada casi en su totalidad a los usuarios, ya que envían testigos y «listas de acceso» para declarar con qué cuentas y claves de almacenamiento están interactuando. Esto permitiría nodos extremadamente ligeros, no obstante acarrea contrapartidas que pueden dificultar las transacciones con contratos inteligentes.

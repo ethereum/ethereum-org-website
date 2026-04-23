@@ -12,6 +12,7 @@ tags:
     "Pinata"
   ]
 skill: intermediate
+breadcrumb: "Dapp NFT minter"
 lang: uk
 published: 2021-10-06
 ---

@@ -1,0 +1,12 @@
+{
+  "before-you-read": "阅读前须知",
+  "heading": "想要了解以太坊？",
+  "description": "本白皮书发布于 <strong>2014</strong> 年，在以太坊正式发布之前。经过 10 多年的发展、重大升级和生态系统的增长，<strong>最初的白皮书已不再反映以太坊今天的面貌</strong>。",
+  "cta-learn": "了解今天的以太坊",
+  "cta-download-pdf": "下载原始 PDF (2014)",
+  "whats-changed": "自 2014 年以来发生了什么变化？",
+  "evolution-pos": "以太坊从工作量证明过渡到了权益证明（合并，2022 年）",
+  "evolution-l2": "二层网络扩容解决方案现在处理着数以百万计的交易",
+  "evolution-usecases": "DeFi、NFT 和 DAO 已成为主要用例",
+  "evolution-standards": "智能合约标准（ERC-20、ERC-721）成为了行业基础"
+}

@@ -14,8 +14,8 @@ import * as url from "@/lib/utils/url"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
-import { Link as I18nLink } from "@/i18n/routing"
-import { usePathname } from "@/i18n/routing"
+import { Link as I18nLink } from "@/i18n/navigation"
+import { usePathname } from "@/i18n/navigation"
 
 export const ExternalLinkIcon = () => {
   const { twFlipForRtl } = useRtlFlip()
@@ -23,7 +23,7 @@ export const ExternalLinkIcon = () => {
     <ExternalLink
       data-label="arrow"
       className={cn(
-        "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
+        "ms-1 !mb-0.5 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
         twFlipForRtl
       )}
     />
@@ -73,6 +73,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
+
+  href = url.normalizeHref(href)
 
   const isActive = url.isHrefActive(href, pathname || "", isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
@@ -126,15 +128,16 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {isMailto ? (
           <span className="text-nowrap">
             {!hideArrow && (
-              <Mail className="!mb-0.5 me-1 inline-block size-[1em] shrink-0" />
+              <Mail className="me-1 !mb-0.5 inline-block size-[1em] shrink-0" />
             )}
             {children}
           </span>
         ) : (
           children
         )}
-        <span className="sr-only">
-          {isMailto ? "opens email client" : "opens in a new tab"}
+        <span className="sr-only select-none">
+          &nbsp;
+          {isMailto ? "(opens email client)" : "(opens in a new tab)"}
         </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
@@ -189,7 +192,7 @@ export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
     return (
       <BaseLink
         className={cn(
-          "group block w-fit no-underline visited:text-primary-visited",
+          "group visited:text-primary-visited block w-fit no-underline",
           className
         )}
         ref={ref}

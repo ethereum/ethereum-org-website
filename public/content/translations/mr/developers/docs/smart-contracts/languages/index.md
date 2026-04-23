@@ -37,7 +37,7 @@ Remix IDE हे Solidity आणि Vyper या दोन्हीमधील 
 - [Solidity लँग्वेज पोर्टल](https://soliditylang.org/)
 - [उदाहरणांसह Solidity](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter चॅटरूम](https://gitter.im/ethereum/solidity) जे [Solidity Matrix चॅटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) शी जोडलेले आहे
+- [Solidity Matrix चॅटरूम](https://gitter.im/ethereum/solidity) जे [Solidity Matrix चॅटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) शी जोडलेले आहे
 - [चीट शीट](https://reference.auditless.com/cheatsheet)
 - [Solidity ब्लॉग](https://blog.soliditylang.org/)
 - [Solidity ट्विटर](https://twitter.com/solidity_lang)

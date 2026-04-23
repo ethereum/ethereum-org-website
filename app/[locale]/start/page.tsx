@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
@@ -23,9 +23,10 @@ import StartPageJsonLD from "./page-jsonld"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-start" })
+  const t = await getTranslations("page-start")
 
   setRequestLocale(locale)
 
@@ -40,11 +41,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     supportedLanguages: [],
   }))
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "start",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -72,7 +71,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <StartWithEthereumFlow newToCryptoWallets={wallets} />
             </div>
 
-            <div className="flex w-full flex-col gap-12 rounded-2xl border border-accent-c/10 bg-gradient-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">
+            <div className="border-accent-c/10 from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 flex w-full flex-col gap-12 rounded-2xl border bg-linear-to-t from-20% to-60% px-12 py-16 md:flex-row">
               <div className="flex flex-1 flex-col gap-8">
                 <h2 className="">{t("page-start-share-section-title")}</h2>
                 <p>{t("page-start-share-section-description")}</p>
@@ -91,14 +90,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-start" })
+  const t = await getTranslations("page-start")
 
   return await getMetadata({
     locale,

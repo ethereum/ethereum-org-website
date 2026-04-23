@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useRef, useState } from "react"
+import React, { Fragment, useEffect, useRef, useState } from "react"
 import {
   ColumnDef,
   flexRender,
@@ -21,8 +21,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 type DataTableProps<TData, TValue> = TableProps & {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  subComponent?: FC<TData>
-  noResultsComponent?: FC
+  subComponent?: (props: TData, idx: number) => React.ReactNode
+  noResultsComponent?: (props: Record<string, never>) => React.ReactNode
   allDataLength: number
   setMobileFiltersOpen?: (open: boolean) => void
   activeFiltersCount: number
@@ -115,7 +115,7 @@ const DataTable = <TData, TValue>({
 
   return (
     <div className="relative">
-      <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
+      <div className="border-b-background-highlight bg-background sticky top-[76px] z-10 w-full lg:border-b">
         <Table {...props}>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -146,7 +146,7 @@ const DataTable = <TData, TValue>({
               <Fragment key={row.id}>
                 <TableRow
                   data-state={row.getIsSelected() && "selected"}
-                  className={`${row.getIsExpanded() ? "cursor-pointer border-b-background-highlight bg-background-highlight" : "cursor-pointer"} hover:bg-background-highlight`}
+                  className={`${row.getIsExpanded() ? "border-b-background-highlight bg-background-highlight cursor-pointer" : "cursor-pointer"} hover:bg-background-highlight`}
                   onClick={(e) => {
                     // Prevent expanding the wallet more info section when clicking on the "Visit website" button
                     if (!(e.target as Element).matches("a, a svg")) {

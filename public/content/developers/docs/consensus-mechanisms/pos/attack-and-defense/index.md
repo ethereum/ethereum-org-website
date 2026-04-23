@@ -65,7 +65,7 @@ A more sophisticated attack can split the honest validator set into discrete gro
 
 **Bouncing attacks** are similar. Votes are again withheld by the attacking validators. Instead of releasing the votes to keep an even split between two forks, they use their votes at opportune moments to justify checkpoints that alternate between fork A and fork B. This flip-flopping of justification between two forks prevents there from being pairs of justified source and target checkpoints that can be finalized on either chain, halting finality.
 
-<YouTube id="xcPxwhrg3Ao"/>
+<VideoWatch slug="pos-reorgs-attack-defense" />
 
 Both bouncing and balancing attacks rely upon the attacker having very fine control over message timing across the network, which is unlikely. Nevertheless, defenses are built into the protocol in the form of additional weighting given to prompt messages compared to slow ones. This is known as [proposer-weight boosting](https://github.com/ethereum/consensus-specs/pull/2730). To defend against bouncing attacks the fork-choice algorithm was updated so that the latest justified checkpoint can only switch to that of an alternative chain during the [first 1/3 of the slots in each epoch](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114). This condition prevents the attacker from saving up votes to deploy later - the fork choice algorithm simply stays loyal to the checkpoint it chose in the first 1/3 of the epoch during which time most honest validators would have voted.
 
@@ -89,7 +89,7 @@ There are several other potential future upgrades to the fork choice rule that c
 
 #### Long range attacks {#long-range-attacks}
 
-There is also a class of attack specific to proof-of-stake blockchains that involves a validator that participated in the genesis block maintaining a separate fork of the blockchain alongside the honest one, eventually convincing the honest validator set to switch over to it at some opportune time much later. This type of attack is not possible on Ethereum because of the finality gadget that ensures all validators agree on the state of the honest chain at regular intervals (“checkpoints”). This simple mechanism neutralizes long range attackers because Ethereum clients simply will not reorg finalized blocks. New nodes joining the network do so by finding a trusted recent state hash (a “[weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) checkpoint”) and using it as a pseudo-genesis block to build on top of. This creates a ‘trust gateway’ for a new node entering the network before it can start to verify information for itself.
+There is also a class of attack specific to proof-of-stake blockchains that involves a validator that participated in the genesis block maintaining a separate fork of the blockchain alongside the honest one, eventually convincing the honest validator set to switch over to it at some opportune time much later. This type of attack is not possible on Ethereum because of the finality gadget that ensures all validators agree on the state of the honest chain at regular intervals (“checkpoints”). This simple mechanism neutralizes long range attackers because Ethereum clients simply will not reorg finalized blocks. New nodes joining the network do so by finding a trusted recent state hash (a “[weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity) checkpoint”) and using it as a pseudo-genesis block to build on top of. This creates a ‘trust gateway’ for a new node entering the network before it can start to verify information for itself.
 
 #### Denial of Service {#denial-of-service}
 
@@ -154,7 +154,7 @@ Overall, despite these potential attack vectors the risk of a successful attack 
 ## Further Reading {#further-reading}
 
 - [More detailed version of this page](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik on settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik on settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [LMD GHOST paper](https://arxiv.org/abs/2003.03052)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
 - [Gasper paper](https://arxiv.org/pdf/2003.03052.pdf)

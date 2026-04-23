@@ -35,7 +35,7 @@ Potřebujete nejdříve úplně základní informace? Podívejte se na [ethereum
 ## Články pro pokročilé {#intermediate-articles}
 
 - [Přátelé web3.py: Úvod do Ape](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [Vývoj dapp pro programátory v Pythonu](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [Vývoj dapp pro programátory v Pythonu](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [Vytvoření rozhraní Ethereum v Pythonu: Část 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Chytré kontrakty na Ethereum v Pythonu: komplexní průvodce (tak trochu)](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ Následující projekty založené na Ethereu používají nástroje uvedené na
 - [Curve](https://www.curve.finance/) a [repozitář chytrých kontraktů Curve](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) a [chytré kontrakty využívající sadu nástrojů Brownie](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) používá [Python při správě a nasazování svých vestingových kontraktů](https://github.com/sushiswap/sushi-vesting-protocols)
-- [Alpha Finance](https://alphafinance.io/), známá díky Alpha Homora, používá [Brownie k testování a nasazení chytrých kontraktů](https://github.com/AlphaFinanceLab/alpha-staking-contract)
+- [Alpha Venture DAO](https://alphaventuredao.io/), známá díky Alpha Homora, používá [Brownie k testování a nasazení chytrých kontraktů](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
 ## Diskuse komunity Pythonu {#python-community-contributors}
 

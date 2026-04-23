@@ -15,7 +15,7 @@ import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 type FeedbackCardProps = {
   prompt?: string
@@ -64,7 +64,7 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
 
   return (
     <div
-      className="mb-4 mt-8 flex w-full flex-col rounded border border-body-light bg-feedback-gradient p-6"
+      className="border-body-light bg-feedback-gradient mt-8 mb-4 flex w-full flex-col rounded border p-6"
       {...props}
       dir={dir}
     >

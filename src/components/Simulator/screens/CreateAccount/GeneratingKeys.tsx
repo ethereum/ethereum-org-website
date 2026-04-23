@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
-import { motion } from "framer-motion"
 import { Check } from "lucide-react"
+import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 import type { PhoneScreenProps } from "@/lib/types"
 
@@ -26,6 +27,7 @@ export const GeneratingKeys = ({
   ctaLabel,
   generateNewWords,
 }: GeneratingKeysProps) => {
+  const t = useTranslations("component-wallet-simulator")
   const { progressStepper } = nav
   const [loading, setLoading] = useState(true)
   const [complete, setComplete] = useState(false)
@@ -52,7 +54,7 @@ export const GeneratingKeys = ({
   }, [loading])
 
   return (
-    <div className="grid h-full place-items-center bg-background-highlight">
+    <div className="bg-background-highlight grid h-full place-items-center">
       <Flex className="flex-col items-center gap-4">
         {/* eslint-disable-next-line no-constant-condition */}
         {loading ? (
@@ -81,9 +83,7 @@ export const GeneratingKeys = ({
           </motion.div>
         )}
         <p className="px-4 text-center md:px-8">
-          {loading
-            ? "Generating example recovery phrase"
-            : "Example account created"}
+          {loading ? t("sim-ca-generating") : t("sim-ca-account-created")}
         </p>
         {complete && (
           <motion.div

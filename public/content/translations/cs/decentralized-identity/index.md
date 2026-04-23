@@ -83,23 +83,11 @@ Tento model umožňuje selektivní zveřejňování, zejména v kombinaci s tech
 
 #### 💡Případová studie: Bhútánské národní digitální ID (NDI) na Ethereu {#case-study-bhutan-ndi}
 
-- Poskytuje přístup k ověřitelným pověřením totožnosti pro téměř 800 000 občanů Bhútánu
+- Poskytuje přístup k ověřitelným pověřením pro téměř 800 000 občanů Bhútánu
 - Migrováno ze sítě Polygon [na mainnet Etherea](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) v říjnu 2025
 - K březnu 2025 vydáno přes [234 000 digitálních ID](https://www.blockchain-council.org/blockchain/bhutan-uses-blockchain-in-digital-id-project/)
 
-Bhútánské království [migrovalo svůj systém národní digitální identity (NDI)](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) na Ethereum v říjnu 2025. Bhútánský systém NDI, postavený na principech decentralizované a sebe-suverénní identity, používá decentralizované identifikátory a ověřitelná pověření k vydávání digitálně podepsaných pověření přímo do osobní peněženky občana. Ukotvením kryptografických důkazů těchto pověření na Ethereu systém zajišťuje, že jsou autentická, odolná proti neoprávněné manipulaci a mohou být ověřena jakoukoli stranou bez dotazování se na centrální autoritu.
-
-Architektura systému klade důraz na soukromí prostřednictvím technologie [důkazů s nulovou znalostí (ZKP)](/zero-knowledge-proofs/). Tato implementace „selektivního zveřejňování“ umožňuje občanům prokazovat konkrétní skutečnosti (např. „Je mi více než 18 let“ nebo „Jsem občan“) pro přístup ke službám, aniž by odhalili podkladové osobní údaje, jako je celé číslo jejich průkazu totožnosti nebo přesné datum narození. To demonstruje silné využití Etherea v reálném světě pro bezpečný, na uživatele zaměřený a soukromí zachovávající systém národních průkazů totožnosti.
-
-#### 💡Případová studie: QuarkID města Buenos Aires na [vrstvě 2](/layer-2/) Etherea ZKSync Era {#case-study-buenos-aires-quarkid}
-
-- Při spuštění vydány decentralizované identifikační údaje pro více než [3,6 milionu uživatelů](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)
-- QuarkID je protokol s otevřeným zdrojovým kódem uznaný jako [digitální veřejný statek](https://www.digitalpublicgoods.net/r/quarkid) v rámci Cílů udržitelného rozvoje OSN
-- Zdůrazňuje model „[vláda jako uživatel](https://buenosaires.gob.ar/innovacionytransformaciondigital/miba-con-tecnologia-quarkid-la-ciudad-de-buenos-aires-incorporo)“, kdy město nevlastní protokol, což dává občanům plné vlastnictví údajů a soukromí
-
-V roce 2024 vláda města Buenos Aires (GCBA) integrovala QuarkID, „rámec digitální důvěry“ s otevřeným zdrojovým kódem vytvořený Sekretariátem pro inovace a digitální transformaci GCBA, do miBA, oficiální městské aplikace pro obyvatele pro přístup k vládním službám a oficiálním dokumentům. Při spuštění bylo všem více než 3,6 milionům uživatelů miBA vydáno decentralizované digitální identity, které jim umožňují spravovat a sdílet ověřitelné digitální dokumenty a certifikáty na blockchainu, včetně pověření o občanství, rodných, oddacích a úmrtních listů, daňových záznamů, záznamů o očkování a dalších.
-
-Systém QuarkID, postavený na síti [vrstvy 2](/layer-2/) Etherea ZKSync Era, využívá technologii ZKP, která občanům umožňuje ověřovat osobní pověření peer-to-peer prostřednictvím jejich mobilních zařízení – aniž by odhalovali zbytečné osobní údaje. Program zdůrazňuje model „vláda jako uživatel“, ve kterém GCBA funguje jako jeden z uživatelů interoperabilního protokolu QuarkID s otevřeným zdrojovým kódem, spíše než jako centralizovaný vlastník. Tato architektura s podporou ZKP poskytuje klíčovou funkci ochrany soukromí: žádná třetí strana, dokonce ani GCBA, nemůže sledovat, jak, kdy nebo proč občan používá svá pověření. Tento úspěšný program poskytuje občanům plnou sebe-suverénní identitu a kontrolu nad jejich citlivými údaji, vše zabezpečené globálně distribuovanou sítí Etherea.
+Bhútánské království [migrovalo svůj systém národní digitální identity (NDI)](https://www.bhutanndi.com/article/bhutan-adopts-ethereum-for-national-identity-a-new-chapter-in-digital-sovereignty_2d0c7ec2-5605-4c42-b258-bd9361ae8878) na Ethereum v říjnu 2025. Bhútánský systém NDI, postavený na principech decentralizované a sebe-suverénní identity, používá decentralizované identifikátory a ověřitelná pověření k vydávání digitálně podepsaných pověření přímo do osobní peněženky občana. Ukotvením schémat vydavatelů těchto pověření na Ethereu systém zajišťuje, že jsou autentická, odolná proti neoprávněné manipulaci a mohou být ověřena jakoukoli stranou bez dotazování se na centrální autoritu.
 
 ## Co jsou atestace? {#what-are-attestations}
 
@@ -188,8 +176,6 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 - **[SpruceID](https://www.spruceid.com/)** – _Projekt decentralizované identity, který uživatelům umožňuje ovládat digitální identitu pomocí účtů na Ethereu a profilů ENS, aniž by se museli spoléhat na služby třetích stran._
 - **[Ethereum Attestation Service (EAS)](https://attest.org/)** – _Decentralizovaná účetní kniha / protokol pro vytváření atestací na blockchainu nebo mimo něj o čemkoli._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** – _Proof of Humanity (neboli PoH) je systém pro ověřování sociální identity postavený na Ethereu._
-- **[BrightID](https://www.brightid.org/)** – _Decentralizovaná síť sociální identity s otevřeným zdrojovým kódem, která se snaží o reformu ověřování identity prostřednictvím vytváření a analýzy sociálního grafu._
-- **[walt.id](https://walt.id)** — _Infrastruktura peněženky a decentralizované identity s otevřeným zdrojovým kódem, která vývojářům a organizacím umožňuje využívat sebe-suverénní identitu a NFT/SBT._
 - **[Veramo](https://veramo.io/)** – _JavaScriptový framework, který každému usnadňuje používání kryptograficky ověřitelných dat v aplikacích._
 
 ## Další čtení {#further-reading}

@@ -311,6 +311,6 @@ The major difference is that bug bounty programs are open to the wider developer
 
 ## Tutorials: Smart contract testing on Ethereum {#tutorials}
 
-- [Waffle: Dynamic mocking and testing contract calls](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/) _– Advanced Waffle tutorial covering dynamic mocking and inter-contract call testing._
-- [Waffle: Hello world with Hardhat and ethers.js](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/) _– Set up your first Waffle project with Hardhat and ethers.js._
-- [Testing a simple smart contract with Waffle](/developers/tutorials/waffle-test-simple-smart-contract/) _– A beginner's guide to testing smart contract balance changes and events with Waffle._
+- [How to develop and test a dApp on a local, multi-client testnet](/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/) _– Walkthrough of deploying a smart contract to a local testnet and performing tests._
+- [How to mock Solidity smart contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/) _– Intermediate tutorial on how to use mock data and implement unit testing._
+- [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/) _– Advanced approached to fuzzing and smart contract testing._

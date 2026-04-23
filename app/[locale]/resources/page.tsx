@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
@@ -17,6 +17,7 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
@@ -29,10 +30,11 @@ import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const EVENT_CATEGORY = "dashboard"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
   const [growThePieData, blobscanOverallStats] = await Promise.all([
@@ -55,7 +57,7 @@ const Page = async ({ params }: { params: PageParams }) => {
   // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
   const blobStats = {
     avgBlobFee: blobscanOverallStats.avgBlobFee,
-    totalBlobs: new Intl.NumberFormat(undefined, {
+    totalBlobs: numberFormat(locale, {
       notation: "compact",
       maximumFractionDigits: 1,
     }).format(blobscanOverallStats.totalBlobs),
@@ -66,11 +68,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     ...blobStats,
   })
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "resources",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -105,7 +105,7 @@ const Page = async ({ params }: { params: PageParams }) => {
 
         <Stack className="gap-4 px-2 py-6 md:gap-8 md:px-4 lg:px-8 xl:gap-11">
           <StickyContainer className="top-[26px] space-y-5">
-            <div className="my-2 text-center text-body-medium">
+            <div className="text-body-medium my-2 text-center">
               {t("page-resources-whats-on-this-page")}
             </div>
             <TabNav
@@ -122,7 +122,7 @@ const Page = async ({ params }: { params: PageParams }) => {
               <Stack key={key} asChild>
                 <section id={key} className="!scroll-mt-40 gap-8 md:gap-6">
                   <div className="group flex w-full items-center gap-4 border-b bg-transparent px-2 py-4">
-                    <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast text-2xl [&_svg]:shrink-0">
+                    <div className="border-border-low-contrast grid size-12 place-items-center rounded-lg border text-2xl [&_svg]:shrink-0">
                       {icon || <StackIcon />}
                     </div>
                     <h2 className="flex-1 text-start font-black">{label}</h2>
@@ -139,7 +139,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                         <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
                           {title}
                         </div>
-                        <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                        <div className="bg-background to-primary/10 dark:to-primary/10 h-full bg-linear-to-br from-white px-2 py-6 dark:from-transparent">
                           {metric && metric}
                           <ResourcesContainer>
                             {items.map(({ className, ...item }) => (
@@ -178,9 +178,9 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           <Section
             id="contribute"
-            className="relative rounded-4xl border border-body/5 bg-background"
+            className="border-body/5 bg-background relative rounded-4xl border"
           >
-            <VStack className="rounded-4xl bg-radial-a px-4 py-6 md:py-12">
+            <VStack className="bg-radial-a rounded-4xl px-4 py-6 md:py-12">
               <Stack className="max-w-xl gap-y-10 py-6 lg:max-w-[700px]">
                 <div className="flex flex-col gap-y-4 text-center">
                   <h2>{t("page-resources-contribute-title")}</h2>
@@ -230,14 +230,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   return await getMetadata({
     locale,

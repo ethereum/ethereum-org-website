@@ -4,6 +4,7 @@ description: "オフチェーンに大部分が保存されているデータに
 author: Ori Pomerantz
 tags: [ "ストレージ" ]
 skill: advanced
+breadcrumb: "Merkle証明"
 lang: ja
 published: 2021-12-30
 ---

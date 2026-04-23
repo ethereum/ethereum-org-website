@@ -1,69 +1,69 @@
 ---
-title: Design-Ressourcen hinzufügen
-description: Richtlinien und Anforderungen zur Gewährleistung der Qualität von Designmaterialien auf ethereum.org
+title: "Design-Ressourcen hinzufügen"
+description: "Richtlinien und Anforderungen zur Sicherstellung der Qualität von Design-Materialien auf ethereum.org"
 lang: de
 ---
 
 # Design-Ressourcen hinzufügen {#adding-design-resources}
 
-Jeder kann neue Designmaterialien für die Seite [Design und UX in web3](/developers/docs/design-and-ux/) vorschlagen.
+Jeder kann neue Design-Materialien für die Seite [Design und UX im Web3](/developers/docs/design-and-ux/) vorschlagen.
 
-Seien Sie sich bewusst, dass der Schwerpunkt dieser Seite darauf liegt, angehenden web3-Designern einen Mehrwert zu bieten. Der Designbereich ist nicht dazu da, um für Ihre Dienstleistungen, Produkte oder Plattformen zu werben.
+Bitte beachte, dass der Fokus dieser Seite darauf liegt, angehenden Web3-Designern einen Mehrwert zu bieten. Der Design-Bereich ist nicht dazu da, für deine Dienstleistungen, Produkte oder Plattformen zu werben.
 
-Um sicherzustellen, dass wir einen hohen Informationsstandard aufrechterhalten und wertvolle Einblicke fördern, haben wir eine Listing-Policy eingeführt:
+Um sicherzustellen, dass wir einen hohen Informationsstandard aufrechterhalten und wertvolle Erkenntnisse fördern, haben wir eine Auflistungsrichtlinie festgelegt:
 
-## Research-Studien und Dashboards {#Research-studies}
+## Forschungsstudien und Dashboards {#Research-studies}
 
 1. Solide Methodik
 
-a. Aus der Methodik sollte klar hervorgehen, wie die Daten erhoben wurden.
+a. Die Methodik sollte klar definieren, wie die Daten erhoben wurden.
 
-b. Die Anzahl der an der Untersuchung beteiligten Personen sollte angegeben werden.
+b. Die Anzahl der an der Forschung beteiligten Teilnehmer sollte angegeben werden.
 
-c. Die verwendeten Forschungsmethoden sollten beschrieben werden.
+c. Die angewandten Forschungsmethoden sollten beschrieben werden.
 
-2. Relevanz für Web3-Designer und allgemeine Designanwendungsfälle
+2. Relevanz für Web3-Designer und gängige Design-Anwendungsfälle
 
-a. Das Forschungsthema sollte für Web3-Designer relevant sein und gängige Designanwendungsfälle behandeln.
+a. Das Thema der Forschung sollte für Web3-Designer relevant sein und gängige Design-Anwendungsfälle behandeln.
 
-3. Fokus auf Erkenntnisgewinn
+3. Fokus auf die Vermittlung von Erkenntnissen
 
-a. Das primäre Ziel des Textes sollte die Vermittlung von Erkenntnissen sein und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen.
+a. Das Hauptziel des Textes sollte der Austausch von Erkenntnissen sein und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen.
 
 ## Artikel {#Articles}
 
-1. Relevanz für Web3-Designer/-Forscher und bekannte Web3-Designanwendungsfälle
+1. Relevanz für Web3-Designer/-Forscher und gängige Web3-Design-Anwendungsfälle
 
-a. Das Thema des Artikels sollte für Web3-Designer und -Forscher relevant sein und sich auf gängige Anwendungsfälle von Web3-Design konzentrieren.
+a. Das Thema des Artikels sollte für Web3-Designer und -Forscher relevant sein und sich auf gängige Web3-Design-Anwendungsfälle konzentrieren.
 
-2. Qualität der Beiträge
+2. Grundlegende Schreibqualität
 
 a. Der Artikel sollte frei von Grammatik- und Rechtschreibfehlern sein.
 
-b. Der Schwerpunkt sollte auf der Vermittlung der wichtigsten Erkenntnisse und Erfahrungen liegen.
+b. Der Schwerpunkt sollte auf der Vermittlung von wichtigen Erkenntnissen und Lernerfahrungen liegen.
 
-c. Der Text sollte prägnant und auf den Punkt gebracht sein.
+c. Der Schreibstil sollte prägnant und auf den Punkt gebracht sein.
 
 3. Ziel des Textes
 
-a. Das Hauptziel des Artikels sollte die Vermittlung von Erkenntnissen und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen sein.
+a. Das Hauptziel des Artikels sollte der Austausch von Erkenntnissen sein und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen.
 
-## Communities/DAOs {#Communities-and-DAOs}
+## Communitys / DAOs {#Communities-and-DAOs}
 
 1. Die Website muss klar angeben, wie man der DAO/Community beitreten kann
 
 2. Klare Vorteile der Mitgliedschaft
 
-a. Die Vorteile einer Mitgliedschaft sollten an prominenter Stelle stehen.
+a. Die Vorteile einer Mitgliedschaft sollten gut sichtbar dargestellt werden.
 
 **Beispiele**: Feedback zur Arbeit erhalten, Zugang zu Jobangeboten oder Bounties, Austausch von Design- und Forschungserkenntnissen.
 
 3. Aktive und lebendige Kommunikation auf Discord
 
-a. Die Discord-Community sollte sich durch eine lebendige und engagierte Kommunikation auszeichnen.
+a. Die Discord-Community sollte eine lebendige und engagierte Kommunikation aufweisen.
 
-b. Die Moderatoren sollten sich aktiv an der Pflege der Gemeinschaft beteiligen und Diskussionen leiten.
+b. Moderatoren sollten aktiv an der Pflege der Community und der Moderation von Diskussionen beteiligt sein.
 
-c. Die Community sollte in den letzten zwei Wochen wertvolle und produktive Unterhaltungen geführt haben.
+c. Die Community sollte in den letzten zwei Wochen eine Erfolgsbilanz wertvoller und produktiver Gespräche vorweisen können.
 
-Durch die Einhaltung dieser Kriterien wollen wir ein lebendiges und lehrreiches Umfeld innerhalb unserer Gemeinschaft fördern. Wir sind davon überzeugt, dass diese Zulassungsrichtlinie unseren Nutzern den Zugang zu zuverlässigen, relevanten und aufschlussreichen Ressourcen ermöglicht. Wir danken Ihnen für Ihr Verständnis und Ihre Mitarbeit bei der Aufrechterhaltung der Qualität der Inhalte auf unserer Plattform.
+Durch die Einhaltung dieser Kriterien möchten wir ein florierendes und wissensaustauschendes Umfeld innerhalb unserer Community fördern. Wir glauben, dass diese Whitelisting-Richtlinie sicherstellt, dass unsere Nutzer Zugang zu zuverlässigen, relevanten und aufschlussreichen Ressourcen haben. Vielen Dank für dein Verständnis und deine Kooperation bei der Aufrechterhaltung der Inhaltsqualität auf unserer Plattform.

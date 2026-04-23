@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import * as Sentry from "@sentry/nextjs"
 
 import RefreshCW from "@/components/icons/refresh-cw.svg"
 import MainArticle from "@/components/MainArticle"
@@ -23,12 +24,11 @@ export default function Error({ error }: { error: Error; reset: () => void }) {
   }, [])
 
   useEffect(() => {
-    // TODO: log the error to an error reporting service
-    console.error(error)
+    Sentry.captureException(error)
   }, [error])
 
   return (
-    <MainArticle className="mb-32 mt-24 w-full space-y-8 px-8 py-4 md:mb-48 md:mt-32">
+    <MainArticle className="mt-24 mb-32 w-full space-y-8 px-8 py-4 md:mt-32 md:mb-48">
       <h1>
         <Translation id="error-page-title" />
       </h1>

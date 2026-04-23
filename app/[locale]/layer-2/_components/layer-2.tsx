@@ -12,6 +12,8 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
+import { numberFormat } from "@/lib/utils/numbers"
+
 import { Rollups } from "@/data/networks/networks"
 
 import useTranslation from "@/hooks/useTranslation"
@@ -121,32 +123,32 @@ const Layer2Hub = ({
 
         <div id="layer-2-stats-box" className="w-full px-8 py-9">
           <div className="m-auto max-w-[992px] py-9">
-            <div className="flex flex-col gap-8 border border-body-light p-8 md:flex-row md:gap-14">
+            <div className="border-body-light flex flex-col gap-8 border p-8 md:flex-row md:gap-14">
               <div className="flex-1">
                 <div className="max-w-[224px]">
                   <p className="text-5xl">
                     $
-                    {(
-                      growThePieData.dailyTxCosts["ethereum"] || 0
-                    ).toLocaleString(locale as Lang, {
+                    {numberFormat(locale, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
-                    })}
+                    }).format(growThePieData.dailyTxCosts["ethereum"] || 0)}
                   </p>
                   <p className="text-body-medium">
                     {t("page-layer-2-blockchain-transaction-cost")}
                   </p>
                 </div>
               </div>
-              <div className="h-auto w-auto self-stretch border-b border-body-light md:border-r" />
+              <div className="border-body-light h-auto w-auto self-stretch border-b md:border-r" />
               <div className="flex-1">
                 <div className="max-w-[224px]">
                   <p className="text-5xl">
                     $
-                    {medianTxCost.toLocaleString(locale as Lang, {
+                    {numberFormat(locale, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 3,
-                    })}
+                    }).format(
+                      typeof medianTxCost === "number" ? medianTxCost : 0
+                    )}
                   </p>
                   <p className="text-body-medium">
                     {t("page-layer-2-networks-transaction-cost")}
@@ -161,17 +163,17 @@ const Layer2Hub = ({
           id="layer-2-the-network-of-networks"
           className="w-full py-9 sm:px-8"
         >
-          <div className="flex flex-col gap-8 overflow-hidden bg-[#B9B9F1] bg-opacity-20 px-4 py-10 text-center">
+          <div className="flex flex-col gap-8 overflow-hidden bg-[#B9B9F1]/20 px-4 py-10 text-center">
             <h2>{t("page-layer-2-network-of-networks-title")}</h2>
             <p className="font-md">
               {t("page-layer-2-network-of-networks-description")}
             </p>
             <div className="relative m-auto h-[275px] w-[275px] sm:h-[375px] sm:w-[375px]">
               {/* Outer ring */}
-              <div className="absolute inset-0 rounded-full border border-dashed border-body-medium"></div>
-              <div className="absolute inset-0 animate-spin-30 rounded-full">
+              <div className="border-body-medium absolute inset-0 rounded-full border border-dashed"></div>
+              <div className="animate-spin-30 absolute inset-0 rounded-full">
                 {/* Top logo */}
-                <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full bg-primary">
+                <div className="animate-counter-spin-30 bg-primary absolute -top-[12px] left-1/2 h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[0].logo}
@@ -181,7 +183,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom right logo */}
-                <div className="absolute bottom-[17%] right-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full">
+                <div className="animate-counter-spin-30 absolute right-[8%] bottom-[17%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[1].logo}
@@ -191,7 +193,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom left logo */}
-                <div className="absolute bottom-[17%] left-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full">
+                <div className="animate-counter-spin-30 absolute bottom-[17%] left-[8%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[2].logo}
@@ -203,10 +205,10 @@ const Layer2Hub = ({
               </div>
 
               {/* Middle ring */}
-              <div className="absolute inset-[30px] rounded-full border border-dashed border-body-medium sm:inset-[54px]"></div>
-              <div className="absolute inset-[30px] animate-spin-21 rounded-full sm:inset-[54px]">
+              <div className="border-body-medium absolute inset-[30px] rounded-full border border-dashed sm:inset-[54px]"></div>
+              <div className="animate-spin-21 absolute inset-[30px] rounded-full sm:inset-[54px]">
                 {/* Top logo */}
-                <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-21 rounded-full">
+                <div className="animate-counter-spin-21 absolute -top-[12px] left-1/2 h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[3].logo}
@@ -216,7 +218,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom right logo */}
-                <div className="absolute bottom-[15%] right-[5%] h-6 w-6 transform animate-counter-spin-21 rounded-full">
+                <div className="animate-counter-spin-21 absolute right-[5%] bottom-[15%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[4].logo}
@@ -226,7 +228,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom left logo */}
-                <div className="absolute bottom-[15%] left-[5%] h-6 w-6 transform animate-counter-spin-21 rounded-full">
+                <div className="animate-counter-spin-21 absolute bottom-[15%] left-[5%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[5].logo}
@@ -238,10 +240,10 @@ const Layer2Hub = ({
               </div>
 
               {/* Inner ring */}
-              <div className="absolute inset-[60px] rounded-full border border-dashed border-body-medium sm:inset-[108px]"></div>
-              <div className="absolute inset-[60px] animate-spin-9 rounded-full sm:inset-[108px]">
+              <div className="border-body-medium absolute inset-[60px] rounded-full border border-dashed sm:inset-[108px]"></div>
+              <div className="animate-spin-9 absolute inset-[60px] rounded-full sm:inset-[108px]">
                 {/* Top logo */}
-                <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-9 rounded-full">
+                <div className="animate-counter-spin-9 absolute -top-[12px] left-1/2 h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[6].logo}
@@ -251,7 +253,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom right logo */}
-                <div className="absolute bottom-[15%] right-[5%] h-6 w-6 transform animate-counter-spin-9 rounded-full">
+                <div className="animate-counter-spin-9 absolute right-[5%] bottom-[15%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[7].logo}
@@ -261,7 +263,7 @@ const Layer2Hub = ({
                   />
                 </div>
                 {/* Bottom left logo */}
-                <div className="absolute bottom-[15%] left-[5%] h-6 w-6 transform animate-counter-spin-9 rounded-full">
+                <div className="animate-counter-spin-9 absolute bottom-[15%] left-[5%] h-6 w-6 rounded-full">
                   <Image
                     className="rounded-full"
                     src={randomL2s[8].logo}
@@ -273,7 +275,7 @@ const Layer2Hub = ({
               </div>
 
               {/* Center Ethereum Logo */}
-              <div className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform">
+              <div className="absolute top-1/2 left-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform">
                 <Image
                   src={EthereumLogo}
                   alt="Ethereum"
@@ -322,7 +324,7 @@ const Layer2Hub = ({
         </div>
 
         <div id="layer-2-cta" className="w-full px-8 py-9">
-          <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
+          <div className="bg-main-gradient mx-auto flex max-w-[640px] flex-col gap-6 rounded p-8">
             <div className="flex flex-col gap-6">
               {userRandomL2s.map((l2, idx) => {
                 return (
@@ -330,12 +332,12 @@ const Layer2Hub = ({
                     key={idx}
                     className={`flex flex-1 flex-col items-start gap-4 p-4 md:flex-row md:items-center ${
                       idx < randomL2s.slice(0, 3).length - 1
-                        ? "border-b border-background"
+                        ? "border-background border-b"
                         : ""
                     }`}
                   >
                     <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-drop">
+                      <div className="bg-background shadow-drop flex h-14 w-14 items-center justify-center rounded-md">
                         <Image
                           src={l2.logo}
                           alt={l2.name}
@@ -370,7 +372,7 @@ const Layer2Hub = ({
             </div>
 
             <div className="flex justify-center">
-              <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
+              <div className="bg-background mx-auto inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-bold">
                 <Image
                   src={EthereumLogo}
                   alt={t("page-layer-2-ethereum-logo-alt")}
@@ -389,7 +391,7 @@ const Layer2Hub = ({
           id="layer-2-why-do-we-need-multiple-networks"
           className="w-full px-8 py-9"
         >
-          <div className="flex flex-col gap-8 bg-background-highlight px-12 py-12 md:flex-row">
+          <div className="bg-background-highlight flex flex-col gap-8 px-12 py-12 md:flex-row">
             <div className="flex flex-1 items-center justify-center">
               <Image
                 src={WalkingImage}

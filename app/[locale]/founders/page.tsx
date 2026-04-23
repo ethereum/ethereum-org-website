@@ -2,12 +2,7 @@ import React from "react"
 import { Banknote, ChartNoAxesCombined, Handshake } from "lucide-react"
 import { getTranslations } from "next-intl/server"
 
-import type {
-  CommitHistory,
-  Lang,
-  PageParams,
-  SectionNavDetails,
-} from "@/lib/types"
+import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
@@ -40,9 +35,10 @@ import FoundersPageJsonLD from "./page-jsonld"
 
 import heroImg from "@/public/images/upgrades/merge.png"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-founders" })
+  const t = await getTranslations("page-founders")
 
   const supportTags = {
     active: {
@@ -342,11 +338,9 @@ const Page = async ({ params }: { params: PageParams }) => {
     },
   ]
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "founders",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -389,7 +383,7 @@ const Page = async ({ params }: { params: PageParams }) => {
                   value={key}
                   className="mt-12 border-0 p-0"
                 >
-                  <div className="grid grid-cols-fill-4 gap-4">
+                  <div className="grid-cols-fill-4 grid gap-4">
                     {entities.map(
                       ({
                         name,
@@ -403,10 +397,10 @@ const Page = async ({ params }: { params: PageParams }) => {
                       }) => (
                         <Card
                           key={name}
-                          className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+                          className="bg-background-highlight row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl p-8 max-md:px-4"
                         >
                           <h3 className="sr-only">{name}</h3>
-                          <Logo className="my-auto max-h-9 max-w-full [&_*]:!fill-body" />
+                          <Logo className="[&_*]:!fill-body my-auto max-h-9 max-w-full" />
                           <div className="space-y-4">
                             {!!tags.length && (
                               <div className="flex flex-wrap gap-x-1 gap-y-2">
@@ -454,17 +448,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-founders",
-  })
+  const t = await getTranslations("page-founders")
 
   return await getMetadata({
     locale,

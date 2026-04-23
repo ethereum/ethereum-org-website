@@ -3,7 +3,7 @@ import { useLocale } from "next-intl"
 import { HStack, VStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-import { numberToPercent } from "@/lib/utils/numberToPercent"
+import { numberToPercent } from "@/lib/utils/numbers"
 import { screens } from "@/lib/utils/screen"
 
 import { useMediaQuery } from "@/hooks/useMediaQuery"
@@ -42,7 +42,7 @@ export const QuizSummary = ({
         {isPassingScore ? t("passed") : t("your-results")}
       </h3>
       <HStack
-        className="mx-auto justify-center gap-4 overflow-x-hidden bg-background px-8 py-4 shadow-drop [&_>_div]:py-4"
+        className="bg-background shadow-drop mx-auto justify-center gap-4 overflow-x-hidden px-8 py-4 [&_>_div]:py-4"
         separator={<div className="border-disabled" />}
       >
         <VStack>

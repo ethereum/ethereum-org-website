@@ -255,7 +255,7 @@ sidebarDepth: 3
 
 - [इथेरियमच्या लेयर २ स्केलिंग सोल्यूशन्सचा अर्थ लावणे: स्टेट चॅनेल्स, प्लाझ्मा आणि ट्रूबीट](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– जोश स्टार्क, १२ फेब्रुवारी २०१८_
 - [स्टेट चॅनेल्स - एक स्पष्टीकरण](https://www.jeffcoleman.ca/state-channels/) _६ नोव्हेंबर २०१५ - जेफ कोलमन_
-- [स्टेट चॅनेल्सची मूलभूत माहिती](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
+- [स्टेट चॅनेल्सची मूलभूत माहिती](https://unlock-protocol.github.io/ethhub/ethereum-roadmap/layer-2-scaling/state-channels/) _District0x_
 - [ब्लॉकचेन स्टेट चॅनेल्स: एक अद्ययावत स्थिती](https://ieeexplore.ieee.org/document/9627997)
 
 _तुम्हाला मदत केलेल्या सामुदायिक संसाधनाबद्दल माहिती आहे का?_ हे पृष्ठ संपादित करा आणि ते जोडा!_

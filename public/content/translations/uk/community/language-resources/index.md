@@ -52,7 +52,6 @@ lang: uk
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) — контент, що підтримується спільнотою та охоплює знання, пов'язані з Ethereum, DeFi, NFT, Web3
 - [123ETH](https://123eth.org/) — портал до екосистеми Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) — безкоштовні онлайн-курси про криптовалюту та її застосування
-- [Ethereum Whitepaper](/zh/whitepaper/) — китайська версія офіційного документа Ethereum
 
 **Екосистема Ethereum**
 

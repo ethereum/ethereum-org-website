@@ -11,6 +11,7 @@ tags:
     "тестування"
   ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -75,7 +76,7 @@ slither project_paths
 
 Можливості та дизайн фреймворку статичного аналізу Slither були описані в публікаціях у блозі ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) та в [науковій статті](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-Статичний аналіз існує в різних формах. Ви, найімовірніше, розумієте, що компілятори, як-от [clang](https://clang-analyzer.llvm.org/) та [gcc](https://lwn.net/Articles/806099/), залежать від цих методів дослідження, але вони також лежать в основі ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) та інструментів, що базуються на формальних методах, як-от [Frama-C](https://frama-c.com/) і [Polyspace](https://www.mathworks.com/products/polyspace.html)).
+Статичний аналіз існує в різних формах. Ви, найімовірніше, розумієте, що компілятори, як-от [clang](https://clang-analyzer.llvm.org/) та [gcc](https://lwn.net/Articles/806099/), залежать від цих методів дослідження, але вони також лежать в основі ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) та інструментів, що базуються на формальних методах, як-от [Frama-C](https://frama-c.com/) і [Polyspace](https://www.mathworks.com/products/polyspace.html)).
 
 Тут ми не будемо вичерпно розглядати методи статичного аналізу та дослідників. Натомість ми зосередимося на тому, що необхідно для розуміння роботи Slither, щоб ви могли ефективніше використовувати його для пошуку помилок та розуміння коду.
 

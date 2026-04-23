@@ -11,6 +11,7 @@ tags:
   ]
 lang: cs
 skill: intermediate
+breadcrumb: "Raspberry Pi uzel"
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
@@ -70,7 +71,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 # Haš by měl mít výstup: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Upozorňujeme, že obrazy pro desky Rock 5B a Odroid M1 jsou k dispozici na [stránce pro stažení](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) Ethereum-on-Arm.
+Upozorňujeme, že obrazy pro desky Rock 5B a Odroid M1 jsou k dispozici na [stránce pro stažení](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) Ethereum-on-Arm.
 
 ## Flashování MicroSD {#flashing-the-microsd}
 
@@ -164,7 +165,7 @@ Gratulujeme, nyní máte na Raspberry Pi spuštěný plnohodnotný uzel Etherea 
 
 ## Další podrobnosti {#more-details}
 
-Tato stránka poskytla přehled o tom, jak nastavit uzel a validátor Geth-Lighthouse pomocí Raspberry Pi. Podrobnější pokyny jsou k dispozici na [webu Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
+Tato stránka poskytla přehled o tom, jak nastavit uzel a validátor Geth-Lighthouse pomocí Raspberry Pi. Podrobnější pokyny jsou k dispozici na [webu Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/).
 
 ## Zpětná vazba je vítána {#feedback-appreciated}
 
@@ -183,7 +184,7 @@ Projděte si prosím podrobnosti v tomto návodu, vyzkoušejte spuštění na te
 8. https://www.hyperledger.org/projects/besu
 9. https://github.com/prysmaticlabs/prysm
 10. https://lighthouse.sigmaprime.io
-11. https://ethersphere.github.io/swarm-home
+11. https://docs.ethswarm.org/
 12. https://raiden.network
 13. https://ipfs.io
 14. https://status.im

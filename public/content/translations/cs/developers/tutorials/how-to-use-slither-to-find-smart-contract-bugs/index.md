@@ -11,6 +11,7 @@ tags:
     "testování"
   ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -75,7 +76,7 @@ Použijte [crytic.io](https://github.com/crytic) pro získání přístupu k sou
 
 Schopnosti a design frameworku pro statickou analýzu Slither byly popsány v blogových příspěvcích ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) a v [akademickém článku](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-Statická analýza existuje v různých variantách. S největší pravděpodobností si uvědomujete, že kompilátory jako [clang](https://clang-analyzer.llvm.org/) a [gcc](https://lwn.net/Articles/806099/) závisí na těchto výzkumných technikách, ale jsou také základem pro ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) a nástroje založené na formálních metodách, jako jsou [Frama-C](https://frama-c.com/) a [Polyspace](https://www.mathworks.com/products/polyspace.html).
+Statická analýza existuje v různých variantách. S největší pravděpodobností si uvědomujete, že kompilátory jako [clang](https://clang-analyzer.llvm.org/) a [gcc](https://lwn.net/Articles/806099/) závisí na těchto výzkumných technikách, ale jsou také základem pro ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) a nástroje založené na formálních metodách, jako jsou [Frama-C](https://frama-c.com/) a [Polyspace](https://www.mathworks.com/products/polyspace.html).
 
 Nebudeme zde vyčerpávajícím způsobem procházet techniky statické analýzy a výzkum. Místo toho se zaměříme na to, co je potřeba k pochopení fungování Slitheru, abyste jej mohli efektivněji používat k hledání chyb a porozumění kódu.
 

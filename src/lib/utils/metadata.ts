@@ -1,14 +1,18 @@
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 
-import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
+import {
+  DEFAULT_OG_IMAGE,
+  IS_PRODUCTION_DEPLOY,
+  SITE_URL,
+} from "@/lib/constants"
 
 import { getTranslatedLocales } from "../i18n/translationRegistry"
 
-import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
+
 /**
  * List of default og images for different sections
  */
@@ -58,7 +62,7 @@ export const getMetadata = async ({
   translatedLocales?: string[]
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
-  const t = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("common")
 
   const description = descriptionProp || t("site-description")
   const siteTitle = t("site-title")
@@ -85,15 +89,13 @@ export const getMetadata = async ({
   // Only include hreflang alternates if the current page is translated
   // Untranslated pages should not have hreflang tags
   const localesForHreflang = isCurrentPageTranslated
-    ? routing.locales.filter(
-        (loc) =>
-          finalTranslatedLocales.includes(loc) && isLocaleValidISO639_1(loc)
-      )
+    ? routing.locales.filter((loc) => finalTranslatedLocales.includes(loc))
     : []
 
   const base: Metadata = {
     title,
     description,
+    formatDetection: { telephone: false },
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: url,
@@ -136,7 +138,7 @@ export const getMetadata = async ({
     },
   }
 
-  if (SITE_URL !== "https://ethereum.org") {
+  if (!IS_PRODUCTION_DEPLOY) {
     return { ...base, robots: { index: false, follow: false } }
   }
 
@@ -145,7 +147,7 @@ export const getMetadata = async ({
   }
 
   if (!isCurrentPageTranslated) {
-    return { ...base, robots: { index: true, follow: true } }
+    return { ...base, robots: { index: false, follow: true } }
   }
 
   return base

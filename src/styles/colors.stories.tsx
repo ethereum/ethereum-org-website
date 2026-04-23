@@ -1,6 +1,6 @@
 import { type ReactNode } from "react"
 import { capitalize } from "lodash"
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { HStack, Stack, VStack } from "@/components/ui/flex"
 
@@ -85,7 +85,7 @@ const ColorGroupWrapper = ({
 }) => (
   <div
     key={color}
-    className="bg-gradient-to-t from-[#1b1b1b] from-65% to-white to-35% p-8 text-white"
+    className="bg-linear-to-t from-[#1b1b1b] from-65% to-white to-35% p-8 text-white"
   >
     {children}
   </div>

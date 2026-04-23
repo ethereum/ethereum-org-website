@@ -1,11 +1,11 @@
 import { type ReactNode, useEffect, useState } from "react"
-import { motion, type Transition } from "framer-motion"
+import { motion, type Transition } from "motion/react"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Flex } from "../ui/flex"
 
-const MotionFlex = motion(Flex)
+const MotionFlex = motion.create(Flex)
 
 type ClickAnimationProps = {
   children: ReactNode
@@ -35,7 +35,7 @@ export const ClickAnimation = ({
   return visible ? (
     <MotionFlex
       className={cn(
-        "absolute inset-x-0 justify-center text-primary",
+        "text-primary absolute inset-x-0 justify-center",
         topClass,
         bottomClass
       )}

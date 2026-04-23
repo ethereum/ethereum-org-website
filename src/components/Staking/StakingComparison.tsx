@@ -1,4 +1,5 @@
 "use client"
+import type { JSX } from "react"
 
 import type {
   MatomoEventOptions,
@@ -48,7 +49,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
     },
     colorClassName: "text-staking-gold",
     glyph: (
-      <StakingGlyphCPUIcon className="h-[50px] w-[50px] text-staking-gold" />
+      <StakingGlyphCPUIcon className="text-staking-gold h-[50px] w-[50px]" />
     ),
   }
   const saas: DataType = {
@@ -62,7 +63,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
     },
     colorClassName: "text-staking-green",
     glyph: (
-      <StakingGlyphCloudIcon className="h-[28px] w-[50px] text-staking-green" />
+      <StakingGlyphCloudIcon className="text-staking-green h-[28px] w-[50px]" />
     ),
   }
   const pools: DataType = {
@@ -76,7 +77,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
     },
     colorClassName: "text-staking-blue",
     glyph: (
-      <StakingGlyphTokenWalletIcon className="h-[39px] w-[50px] text-staking-blue" />
+      <StakingGlyphTokenWalletIcon className="text-staking-blue h-[39px] w-[50px]" />
     ),
   }
   const data: {
@@ -122,7 +123,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
     <Flex
       className={cn(
         "mt-16 flex-col gap-8 px-6 py-8 md:px-8",
-        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+        "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r",
         className
       )}
     >

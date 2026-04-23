@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 
-import type { CommitHistory, Lang, ToCItem } from "@/lib/types"
+import type { Lang, ToCItem } from "@/lib/types"
 
 import CommentCard from "@/components/CommentCard"
 import DocLink from "@/components/DocLink"
@@ -30,16 +30,12 @@ import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-n
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
-  const t = await getTranslations({
-    namespace: "page-what-is-the-ethereum-network",
-  })
+  const t = await getTranslations("page-what-is-the-ethereum-network")
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo(
       "what-is-the-ethereum-network",
-      locale as Lang,
-      commitHistoryCache
+      locale as Lang
     )
 
   const heroProps: ContentHeroProps = {
@@ -710,10 +706,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-the-ethereum-network",
-  })
+  const t = await getTranslations("page-what-is-the-ethereum-network")
 
   return await getMetadata({
     locale,

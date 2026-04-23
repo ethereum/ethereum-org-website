@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
 import { ContentHero } from "@/components/Hero"
@@ -28,21 +28,17 @@ import type { DeveloperToolsByCategory } from "./types"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-  searchParams,
-}: {
-  params: PageParams
-  searchParams: { toolId?: string }
+const Page = async (props: {
+  params: Promise<PageParams>
+  searchParams: Promise<{ toolId?: string }>
 }) => {
+  const searchParams = await props.searchParams
+  const params = await props.params
   const { locale } = params
   const { toolId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer apps data available")
@@ -72,11 +68,9 @@ const Page = async ({
   ) as DeveloperToolsByCategory
 
   // Get contributor info for JSON-LD
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "developers/tools",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -101,7 +95,7 @@ const Page = async ({
                 className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
               >
                 <Card className="h-fit overflow-hidden border">
-                  <LinkBox className="p-4 hover:bg-background-highlight">
+                  <LinkBox className="hover:bg-background-highlight p-4">
                     <LinkOverlay
                       href={`/developers/tools/${slug}`}
                       className="text-body no-underline"
@@ -110,7 +104,7 @@ const Page = async ({
                         <div className="rounded-lg border p-2">
                           <Icon className="size-6" />
                         </div>
-                        <h3 className="flex-1 text-md">
+                        <h3 className="text-md flex-1">
                           {t(`page-developers-tools-category-${slug}-title`)}
                         </h3>
                         <Button
@@ -147,7 +141,7 @@ const Page = async ({
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title")}</h2>
-          <div className="grid grid-cols-fill-4 gap-8">
+          <div className="grid-cols-fill-4 grid gap-8">
             {DEV_TOOL_CATEGORIES.map(({ slug, Icon }) => (
               <SubpageCard
                 key={slug}
@@ -170,16 +164,12 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   return await getMetadata({
     locale,

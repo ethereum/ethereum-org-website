@@ -20,6 +20,7 @@ This list is curated by our community. If there's something missing or incorrect
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Funding open source projects that benefit Ethereum, with a particular focus on universal tools, infrastructure, research and public goods_
+- [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) - _Searchable directory of 1,000+ projects supported by the Ecosystem Support Program_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Grants to support Ethereum-related academic work_
 
 ## Grant list aggregators and platforms {#grant-list-aggregators}
@@ -30,8 +31,6 @@ These resources compile and organize various grant opportunities across the Ethe
 
 These general platforms offer broad coverage of grants across the entire Web3 space and are useful starting points for anyone looking for funding:
 
-- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
-- [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Directory of all the web3 grant programs, updated on weekly basis
 
 ### For developers and builders {#for-developers-and-builders}
@@ -42,7 +41,6 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 
 ### For DeFi projects and financial applications {#for-defi-projects}
 
-- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama's grant program directory_
 - [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Comprehensive list of crypto and Web3 grants_
 - [Uniswap Foundation Grants](https://www.uniswapfoundation.org/build) - _Unichain and Uniswap v4 grants and support for DeFi builders_
 

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import { tv } from "tailwind-variants"
 import { Content } from "@radix-ui/react-navigation-menu"
 
@@ -62,7 +62,7 @@ const MenuContent = ({ items, isOpen, sections }: MenuContentProps) => {
     <Content asChild>
       <motion.div
         className={cn(
-          "absolute inset-x-0 top-19 border border-body-light bg-background shadow-md",
+          "border-body-light bg-background absolute inset-x-0 top-19 border shadow-md",
           base()
         )}
         variants={containerVariants}

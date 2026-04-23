@@ -30,16 +30,30 @@ const experimental = LIMIT_CPUS
   : {}
 
 /** @type {import('next').NextConfig} */
-module.exports = (phase, { defaultConfig }) => {
+module.exports = (phase) => {
   let nextConfig = {
-    ...defaultConfig,
     reactStrictMode: true,
     env: {
-      // Context is used to determine the environment for Sentry
+      // Netlify build-time vars inlined so they're available at SSR runtime.
       // ref. https://docs.netlify.com/configure-builds/environment-variables/#build-metadata
       NEXT_PUBLIC_CONTEXT: process.env.CONTEXT,
+      // Resolve site URL once at build time. NEXT_PUBLIC_SITE_URL (set in
+      // netlify.toml for dev/staging) takes precedence, then Netlify's
+      // deploy-specific URLs, falling back to the production domain.
+      NEXT_PUBLIC_SITE_URL:
+        process.env.NEXT_PUBLIC_SITE_URL ||
+        process.env.DEPLOY_PRIME_URL ||
+        process.env.DEPLOY_URL ||
+        process.env.URL ||
+        "https://ethereum.org",
     },
     webpack: (config) => {
+      // Parse .all-contributorsrc as JSON (no .json extension)
+      config.module.rules.push({
+        test: /\.all-contributorsrc$/,
+        type: "json",
+      })
+
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: "yaml-loader",
@@ -88,8 +102,21 @@ module.exports = (phase, { defaultConfig }) => {
 
       return config
     },
+    // Turbopack loader equivalents for the webpack() config above
+    turbopack: {
+      rules: {
+        "*.yaml": { loaders: ["yaml-loader"], as: "*.js" },
+        "*.yml": { loaders: ["yaml-loader"], as: "*.js" },
+        "*.svg": { loaders: ["@svgr/webpack"], as: "*.js" },
+        "*.md": { loaders: ["raw-loader"], as: "*.js" },
+        "*.mp3": { as: "*.static" },
+      },
+    },
+    // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
+    serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
     images: {
+      qualities: [5, 10, 20, 35, 40, 75, 90, 100],
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
       remotePatterns: [
         {
@@ -98,6 +125,11 @@ module.exports = (phase, { defaultConfig }) => {
         },
         { protocol: "https", hostname: "pvvrtckedmrkyzfxubkk.supabase.co" },
         { protocol: "https", hostname: "avatars.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars0.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars1.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars2.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars3.githubusercontent.com" },
+        { protocol: "https", hostname: "avatars4.githubusercontent.com" },
         { protocol: "https", hostname: "opengraph.githubassets.com" },
         { protocol: "https", hostname: "github.com" },
         { protocol: "https", hostname: "coin-images.coingecko.com" },
@@ -115,6 +147,7 @@ module.exports = (phase, { defaultConfig }) => {
         { protocol: "https", hostname: "cdn.charmverse.io" },
         { protocol: "https", hostname: "ethwingman.com" },
         { protocol: "https", hostname: "eth-mcp.dev" },
+        { protocol: "https", hostname: "img.youtube.com", pathname: "/vi/**" },
       ],
     },
     async headers() {
@@ -153,6 +186,14 @@ module.exports = (phase, { defaultConfig }) => {
       }
 
       return [
+        // Whitepaper PDF redirect (no locale prefix)
+        {
+          source:
+            "/669c9e2e2027310b6b3cdce6e1c52962/Ethereum_Whitepaper_-_Buterin_2014.pdf",
+          destination:
+            "/content/whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf",
+          permanent: true,
+        },
         // All primary redirects
         ...redirects.flatMap(([source, destination, permanent]) =>
           createRedirect(source, destination, permanent)
@@ -165,49 +206,49 @@ module.exports = (phase, { defaultConfig }) => {
     ...nextConfig,
     experimental: {
       ...experimental,
-      instrumentationHook: true,
+      // Restore client-side Router Cache durations to Next 14 defaults
+      staleTimes: { dynamic: 30, static: 300 },
     },
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
     nextConfig = {
       ...nextConfig,
-      experimental: {
-        ...nextConfig.experimental,
-        outputFileTracingExcludes: {
-          "*": [
-            /**
-             * Exclude these paths from the trace output to avoid bloating the
-             * Netlify functions bundle.
-             *
-             * @see https://github.com/orgs/vercel/discussions/103#discussioncomment-5427097
-             * @see https://nextjs.org/docs/app/api-reference/next-config-js/output#automatically-copying-traced-files
-             */
-            "node_modules/@swc/core-linux-x64-gnu",
-            "node_modules/@swc/core-linux-x64-musl",
-            "node_modules/@esbuild/linux-x64",
-            "node_modules/@sentry/cli/**/*",
-            "node_modules/canvas/**/*",
-            "node_modules/@playwright/**/*",
-            "src/data",
-            "public/**/*.jpg",
-            "public/**/*.png",
-            "public/**/*.webp",
-            "public/**/*.svg",
-            "public/**/*.gif",
-            "public/**/*.json",
-            "public/**/*.txt",
-            "public/**/*.xml",
-            "public/**/*.pdf",
-            "public/**/*.mp3",
-            "public/audio/**",
-            "public/fonts",
-            "public/images",
-            "public/content",
-            // Exclude source maps generated by Sentry to reduce function bundle size
-            ".next/server/**/*.map",
-          ],
-        },
+      outputFileTracingExcludes: {
+        "*": [
+          /**
+           * Exclude these paths from the trace output to avoid bloating the
+           * Netlify functions bundle.
+           *
+           * @see https://github.com/orgs/vercel/discussions/103#discussioncomment-5427097
+           * @see https://nextjs.org/docs/app/api-reference/next-config-js/output#automatically-copying-traced-files
+           */
+          "node_modules/@swc/core-linux-x64-gnu",
+          "node_modules/@swc/core-linux-x64-musl",
+          "node_modules/@esbuild/linux-x64",
+          "node_modules/@sentry/cli/**/*",
+          "node_modules/canvas/**/*",
+          "node_modules/@playwright/**/*",
+          "src/data",
+          "public/**/*.jpg",
+          "public/**/*.png",
+          "public/**/*.webp",
+          "public/**/*.svg",
+          "public/**/*.gif",
+          "public/**/*.json",
+          "public/**/*.txt",
+          "public/**/*.xml",
+          "public/**/*.pdf",
+          "public/**/*.mp3",
+          "public/audio/**",
+          "public/fonts",
+          "public/images",
+          "public/content",
+          // Exclude source maps generated by Sentry to reduce function bundle size
+          ".next/server/**/*.map",
+          // Translation manifests (canonical name in src/scripts/intl-pipeline/constants.ts)
+          ".manifests",
+        ],
       },
     }
   }
@@ -220,6 +261,9 @@ module.exports = withSentryConfig(module.exports, {
   project: "ethorg",
   silent: true,
   widenClientFileUpload: true,
-  disableLogger: true,
-  automaticVercelMonitors: true,
+  webpack: {
+    treeshake: {
+      removeDebugLogging: true,
+    },
+  },
 })

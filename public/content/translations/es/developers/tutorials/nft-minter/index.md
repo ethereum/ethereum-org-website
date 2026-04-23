@@ -12,6 +12,7 @@ tags:
     "Pinata"
   ]
 skill: intermediate
+breadcrumb: "Dapp acunador de NFT"
 lang: es
 published: 2021-10-06
 ---

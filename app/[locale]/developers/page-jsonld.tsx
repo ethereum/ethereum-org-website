@@ -4,10 +4,7 @@ import { EventItem, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { DevelopersPath, VideoCourse } from "./types"
@@ -25,7 +22,7 @@ export default async function DevelopersPageJsonLD({
   hackathons: EventItem[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-index" })
+  const t = await getTranslations("page-developers-index")
 
   const url = normalizeUrlForJsonLd(locale, `/developers/`)
 
@@ -38,6 +35,7 @@ export default async function DevelopersPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -46,13 +44,8 @@ export default async function DevelopersPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -70,8 +63,8 @@ export default async function DevelopersPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#developers` },
       },
       {
@@ -104,8 +97,7 @@ export default async function DevelopersPageJsonLD({
             url: hackathon.link,
           })),
         ],
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

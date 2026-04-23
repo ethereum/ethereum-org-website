@@ -1,90 +1,80 @@
 ---
-title: Smart Contract "Hello World" per principianti
-description: Tutorial introduttivo su come scrivere e distribuire un semplice smart contract su Ethereum.
+title: Contratto intelligente Hello World per principianti
+description: Tutorial introduttivo sulla scrittura e la distribuzione di un semplice contratto intelligente su Ethereum.
 author: "elanh"
-tags:
-  - "solidity"
-  - "hardhat"
-  - "alchemy"
-  - "smart contract"
-  - "distribuzione"
+tags: ["Solidity", "Hardhat", "Alchemy", "contratti intelligenti", "distribuzione"]
 skill: beginner
+breadcrumb: Contratto Hello World
 lang: it
 published: 2021-03-31
 ---
 
-Se hai appena iniziato con lo sviluppo blockchain e non sai da dove cominciare, oppure se sei solo interessato a capire come distribuire e interagire con gli smart contract, questa è la guida che fa al caso tuo. Esamineremo la creazione e la distribuzione di un semplice contratto intelligente sulla rete di prova di Goerli, utilizzando un portafoglio virtuale di [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) e [Alchemy](https://alchemyapi.io/eth) (non preoccuparti se non capisci cosa significhi, lo spiegheremo).
+Se sei nuovo nello sviluppo su blockchain e non sai da dove iniziare, o se vuoi semplicemente capire come distribuire e interagire con i contratti intelligenti, questa guida fa per te. Ti guideremo attraverso la creazione e la distribuzione di un semplice contratto intelligente sulla rete di test Sepolia utilizzando un portafoglio virtuale [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) e [Alchemy](https://www.alchemy.com/eth) (non preoccuparti se non capisci ancora cosa significhi tutto questo, lo spiegheremo).
 
-> **Attenzione**
->
-> 🚧 Avviso di obsolescenza
->
-> Per l'intera guida, la rete di test Goerli viene utilizzata per creare e distribuire un contratto intelligente. Tuttavia, tieni presente che la Ethereum Foundation ha annunciato che [Goerli sarà presto abbandonata](https://www.alchemy.com/blog/goerli-faucet-deprecation).
->
-> Ti consigliamo di utilizzare [Sepolia](https://sepoliafaucet.com/) e il [faucet di Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) per questo tutorial.
+Nella [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) di questo tutorial vedremo come interagire con il nostro contratto intelligente una volta distribuito qui, e nella [parte 3](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) spiegheremo come pubblicarlo su Etherscan.
 
-Nella [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) di questo tutorial, esamineremo come possiamo interagire con il nostro contratto intelligente una volta distribuito e, nella [parte 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), copriremo come pubblicarlo su Etherscan.
+Se hai domande in qualsiasi momento, sentiti libero di contattarci nel [Discord di Alchemy](https://discord.gg/gWuC7zB)!
 
-Se in qualsiasi momento hai domande, non esitare a contattarci nel [Discord di Alchemy](https://discord.gg/gWuC7zB)!
+## Passaggio 1: Connettiti alla rete Ethereum {#step-1}
 
-## Fase 1: connettersi alla rete di Ethereum {#step-1}
+Ci sono molti modi per fare richieste alla catena di Ethereum. Per semplicità, useremo un account gratuito su Alchemy, una piattaforma per sviluppatori blockchain e API che ci consente di comunicare con la catena di Ethereum senza dover eseguire i nostri nodi. La piattaforma dispone anche di strumenti per sviluppatori per il monitoraggio e l'analisi che sfrutteremo in questo tutorial per capire cosa succede dietro le quinte nella distribuzione del nostro contratto intelligente. Se non hai già un account Alchemy, [puoi registrarti gratuitamente qui](https://dashboard.alchemy.com/signup).
 
-Esistono molti modi per effettuare richieste alla catena di Ethereum. Per semplicità, ci serviremo di un conto gratuito su Alchemy, una piattaforma per sviluppatori di blockchain e API che ci consentirà di comunicare con la catena di Ethereum senza dover operare i nostri nodi. La piattaforma offre anche strumenti di analisi e monitoraggio di cui ci serviremo in questo tutorial per comprendere al meglio l'andamento della distribuzione del nostro smart contract. Se non possiedi già un conto di Alchemy, [puoi iscriverti gratuitamente qui](https://dashboard.alchemyapi.io/signup).
+## Passaggio 2: Crea la tua app (e la chiave API) {#step-2}
 
-## Fase 2: crea la tua app (e chiave API) {#step-2}
+Una volta creato un account Alchemy, puoi generare una chiave API creando un'app. Questo ci consentirà di fare richieste alla rete di test Sepolia. Se non hai familiarità con le reti di test, dai un'occhiata a [questa pagina](/developers/docs/networks/).
 
-Una volta creato un conto di Alchemy, puoi generare una chiave API creando un'app. Questo ci permetterà di effettuare delle richieste alla rete di prova di Goerli. Se non hai familiarità con le reti di prova, dai un'occhiata a [questa pagina](/developers/docs/networks/).
+1.  Naviga alla pagina "Create new app" (Crea nuova app) nella tua Dashboard di Alchemy selezionando "Select an app" (Seleziona un'app) nella barra di navigazione e cliccando su "Create new app"
 
-1.  Vai alla pagina “Crea App” nella tua dashboard di Alchemy passando su “App” nella barra di navigazione e cliccando “Crea App”
+![Hello world create app](./hello-world-create-app.png)
 
-![Creare l'app Hello world](./hello-world-create-app.png)
+2. Dai un nome alla tua app "Hello World", offri una breve descrizione e scegli un caso d'uso, ad es. "Infra & Tooling". Successivamente, cerca "Ethereum" e seleziona la rete.
 
-2. Denomina la tua app "Ciao Mondo", offri una breve descrizione, seleziona "Staging" per l'Ambiente (utilizzato per la contabilità della tua app) e scegli "Goerli" per la tua rete.
+![create app view hello world](./create-app-view-hello-world.png)
 
-![Vista della creazione dell'app Hello world](./create-app-view-hello-world.png)
+3. Clicca su "Next" (Avanti) per procedere, poi su "Create app" (Crea app) e il gioco è fatto! La tua app dovrebbe apparire nel menu a discesa della barra di navigazione, con una chiave API disponibile per essere copiata.
 
-3. Clicca “Create app” ed è tutto! La tua app dovrebbe apparire nella tabella sottostante.
+## Passaggio 3: Crea un account Ethereum (indirizzo) {#step-3}
 
-## Fase 3: Crea un conto di Ethereum (indirizzo) {#step-3}
+Abbiamo bisogno di un account Ethereum per inviare e ricevere transazioni. Per questo tutorial, useremo MetaMask, un portafoglio virtuale nel browser utilizzato per gestire l'indirizzo del tuo account Ethereum. Maggiori informazioni sulle [transazioni](/developers/docs/transactions/).
 
-Per inviare e ricevere le transazioni, necessitiamo di un conto di Ethereum. Per questo tutorial, useremo MetaMask, un portafoglio virtuale nel browser per gestire l'indirizzo del tuo conto di Ethereum. Maggiori informazioni sulle [transazioni](/developers/docs/transactions/).
+Puoi scaricare MetaMask e creare un account Ethereum gratuitamente [qui](https://metamask.io/download). Quando crei un account, o se ne hai già uno, assicurati di passare alla rete di test "Sepolia" utilizzando il menu a discesa della rete (in modo da non avere a che fare con denaro reale).
 
-Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download). Quando crei un account, o se ne possiedi già uno, assicurati di passare alla "rete di prova di Goerli" in alto a destra (così da non avere a che fare con denaro reale).
+Se non vedi Sepolia nell'elenco, vai nel menu, poi su Advanced (Avanzate) e scorri verso il basso per attivare "Show test networks" (Mostra reti di test). Nel menu di selezione della rete, scegli la scheda "Custom" (Personalizzata) per trovare un elenco di reti di test e seleziona "Sepolia".
 
-![esempio ropsten metamask](./metamask-ropsten-example.png)
+![metamask sepolia example](./metamask-sepolia-example.png)
 
-## Fase 4: aggiungi ether da un Faucet {#step-4}
+## Passaggio 4: Aggiungi ether da un rubinetto {#step-4}
 
-Per poter distribuire il nostro contratto intelligente alla rete di prova, avremo bisogno di degli ETH finti. Per ottenere degli ETH, puoi andare al [faucet di Goerli](https://goerlifaucet.com/), accedere al tuo conto di Alchemy e inserire l'indirizzo del tuo portafoglio, cliccando poi su "Inviami gli ETH". Potrebbe volerci del tempo per ricevere i tuoi ETH finti, a causa del traffico della rete. (Al momento della scrittura di questo tutorial, ci sono voluti circa 30 minuti.) Dovresti vedere i tuoi ETH nel tuo conto di Metamask dopo qualche minuto!
+Per distribuire il nostro contratto intelligente sulla rete di test, avremo bisogno di alcuni finti ETH. Per ottenere ETH di Sepolia puoi andare ai [dettagli della rete Sepolia](/developers/docs/networks/#sepolia) per visualizzare un elenco di vari rubinetti. Se uno non funziona, provane un altro poiché a volte possono esaurirsi. Potrebbe volerci del tempo per ricevere i tuoi finti ETH a causa del traffico di rete. Dovresti vedere gli ETH nel tuo account MetaMask subito dopo!
 
-## Fase 5: controlla il saldo {#step-5}
+## Passaggio 5: Controlla il tuo saldo {#step-5}
 
-Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando lo [strumento compositore di Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Questo restituirà l'importo di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo conto di MetaMask e aver cliccato su “Invia Richiesta”, dovresti vedere una risposta come questa:
+Per verificare che il nostro saldo sia presente, facciamo una richiesta [eth_getBalance](/developers/docs/apis/json-rpc/#eth_getbalance) utilizzando lo [strumento composer di Alchemy](https://sandbox.alchemy.com/?network=ETH_SEPOLIA&method=eth_getBalance&body.id=1&body.jsonrpc=2.0&body.method=eth_getBalance&body.params%5B0%5D=&body.params%5B1%5D=latest). Questo restituirà la quantità di ETH nel nostro portafoglio. Dopo aver inserito l'indirizzo del tuo account MetaMask e cliccato su "Send Request" (Invia richiesta), dovresti vedere una risposta come questa:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> **NOTA:** questo risultato è in wei non in ETH. Wei è usato come taglio più piccolo dell'ether. La conversione da wei a ETH è: 1 eth = 10<sup>18</sup> wei. Quindi se convertiamo 0x2B5E3AF16B1880000 in decimali, otteniamo 5\*10¹⁸, pari a 5 ETH.
+> **NOTA:** Questo risultato è in wei, non in ETH. Il wei è utilizzato come la più piccola denominazione di ether. La conversione da wei a ETH è: 1 eth = 10<sup>18</sup> wei. Quindi, se convertiamo 0x2B5E3AF16B1880000 in decimale otteniamo 5\*10¹⁸ che equivale a 5 ETH.
 >
-> Meno male! I nostri soldi finti ci sono tutti <Emoji text=":money_mouth_face:" size={1} />.
+> Fiuu! I nostri soldi finti ci sono tutti <Emoji text=":money_mouth_face:" size={1} />.
 
-## Fase 6: inizializza il progetto {#step-6}
+## Passaggio 6: Inizializza il nostro progetto {#step-6}
 
-Prima, dovremo creare una cartella per il nostro progetto. Vai alla riga di comando e digita:
+Per prima cosa, dovremo creare una cartella per il nostro progetto. Naviga nella tua riga di comando e digita:
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-Ora che siamo nella cartella del nostro progetto, useremo `npm init` per inizializzare il progetto. Se non hai già installato npm, segui [queste istruzioni](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (avremo bisogno anche di Node.js, quindi scarica anche questo!).
+Ora che siamo all'interno della cartella del nostro progetto, useremo `npm init` per inizializzare il progetto. Se non hai già installato npm, segui [queste istruzioni](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (avremo bisogno anche di Node.js, quindi scarica anche quello!).
 
 ```
 npm init
 ```
 
-Non è rilevante come rispondi alle domande d'installazione, ecco le nostre risposte come esempio:
+Non importa molto come rispondi alle domande di installazione, ecco come abbiamo fatto noi come riferimento:
 
 ```
 package name: (hello-world)
@@ -111,29 +101,29 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Approva il package.json e siamo pronti!
+Approva il package.json e siamo pronti a partire!
 
-## Fase 7: Scarica [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
+## Passaggio 7: Scarica [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
-Hardhat è un ambiente di sviluppo per compilare, distribuire, testare ed effettuare il debug del tuo software di Ethereum. Aiuta gli sviluppatori nella costruzione di contratti intelligenti e dapp localmente, prima di distribuirli alla catena.
+Hardhat è un ambiente di sviluppo per compilare, distribuire, testare ed eseguire il debug del tuo software Ethereum. Aiuta gli sviluppatori nella creazione di contratti intelligenti e dApp localmente prima della distribuzione sulla catena live.
 
-Nel nostro progetto `hello-world` esegui:
+All'interno del nostro progetto `hello-world` esegui:
 
 ```
 npm install --save-dev hardhat
 ```
 
-Dai un'occhiata a questa pagina per ulteriori dettagli sulle [istruzioni d'installazione](https://hardhat.org/getting-started/#overview).
+Dai un'occhiata a questa pagina per maggiori dettagli sulle [istruzioni di installazione](https://hardhat.org/getting-started/#overview).
 
-## Fase 8: crea un progetto Hardhat {#step-8}
+## Passaggio 8: Crea il progetto Hardhat {#step-8}
 
-Nella cartella del nostro progetto esegui:
+All'interno della cartella del nostro progetto esegui:
 
 ```
 npx hardhat
 ```
 
-Dovresti poi vedere un messaggio di benvenuto e l'opzione per selezionare cosa desideri fare. Seleziona “crea un hardhat.config.js vuoto”:
+Dovresti quindi vedere un messaggio di benvenuto e l'opzione per selezionare cosa vuoi fare. Seleziona "create an empty hardhat.config.js":
 
 ```
 888    888                      888 888               888
@@ -153,118 +143,118 @@ Create a sample project
 Quit
 ```
 
-Questo genererà un file `hardhat.config.js`, in cui specificheremo tutta la configurazione per il nostro progetto (alla fase 13).
+Questo genererà un file `hardhat.config.js` per noi, che è dove specificheremo tutta la configurazione per il nostro progetto (nel passaggio 13).
 
-## Fase 9: aggiungi le cartelle del progetto {#step-9}
+## Passaggio 9: Aggiungi le cartelle del progetto {#step-9}
 
-Per mantenere organizzato il nostro progetto creeremo due nuove cartelle. Vai alla cartella di root del tuo progetto nella tua riga di comando e digita:
+Per mantenere organizzato il nostro progetto creeremo due nuove cartelle. Naviga nella directory principale del tuo progetto nella riga di comando e digita:
 
 ```
 mkdir contracts
 mkdir scripts
 ```
 
-- `contracts/` è dove manterremo il file del codice del nostro smart contract hello world
-- `scripts/` è dove manterremo gli script per distribuire e interagire con il nostro contratto
+- `contracts/` è dove conserveremo il file di codice del nostro contratto intelligente hello world
+- `scripts/` è dove conserveremo gli script per distribuire e interagire con il nostro contratto
 
-## Fase 10: compila il nostro contratto {#step-10}
+## Passaggio 10: Scrivi il nostro contratto {#step-10}
 
-Potresti chiederti, quando diavolo scriviamo il codice? Beh, eccoci qui, alla fase 10.
+Ti starai chiedendo, quando diavolo scriveremo il codice?? Bene, eccoci qui, al passaggio 10.
 
-Apri il progetto hello-world nel tuo editor preferito (a noi piace [VSCode](https://code.visualstudio.com/)). Gli smart contract sono scritti in un linguaggio detto Solidity, che useremo per scrivere il nostro smart contract HelloWorld.sol.
+Apri il progetto hello-world nel tuo editor preferito (a noi piace [VSCode](https://code.visualstudio.com/)). I contratti intelligenti sono scritti in un linguaggio chiamato Solidity, che è quello che useremo per scrivere il nostro contratto intelligente HelloWorld.sol.‌
 
-1.  Vai alla cartella "contracts" e crea un nuovo file chiamato HelloWorld.sol
-2.  Di seguito, un esempio dello smart contract Hello World dalla Ethereum Foundation che useremo per questo tutorial. Copia e incolla i contenuti seguenti nel tuo file HelloWorld.sol e assicurati di leggere i commenti per comprendere cosa fa il contratto:
+1.  Naviga nella cartella "contracts" e crea un nuovo file chiamato HelloWorld.sol
+2.  Di seguito è riportato un esempio di contratto intelligente Hello World della Ethereum Foundation che useremo per questo tutorial. Copia e incolla i contenuti sottostanti nel tuo file HelloWorld.sol e assicurati di leggere i commenti per capire cosa fa questo contratto:
 
 ```solidity
-// Specifica la versione di Solidity, utilizzando il controllo delle versioni semantico.
-// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+// Specifica la versione di Solidity, utilizzando il versionamento semantico.
+// Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.7.0;
 
-// Defines a contract named `HelloWorld`.
-// Un contratto è una raccolta di funzioni e dati (il suo stato). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Definisce un contratto chiamato `HelloWorld`.
+// Un contratto è una raccolta di funzioni e dati (il suo stato). Una volta distribuito, un contratto risiede a un indirizzo specifico sulla blockchain di Ethereum. Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-   // Declares a state variable `message` of type `string`.
-   // Le variabili di stato sono variabili con valori memorizzati in modo permanente nello spazio di archiviazione (storage) del contratto. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
+   // Dichiara una variabile di stato `message` di tipo `string`.
+   // Le variabili di stato sono variabili i cui valori sono memorizzati in modo permanente nell'archiviazione del contratto. La parola chiave `public` rende le variabili accessibili dall'esterno di un contratto e crea una funzione che altri contratti o client possono chiamare per accedere al valore.
    string public message;
 
-   // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
-   // I costruttori sono utilizzati per inizializzare i dati del contratto. Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   // Similmente a molti linguaggi orientati agli oggetti basati su classi, un costruttore è una funzione speciale che viene eseguita solo alla creazione del contratto.
+   // I costruttori sono usati per inizializzare i dati del contratto. Scopri di più:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
    constructor(string memory initMessage) {
 
-      // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
+      // Accetta un argomento stringa `initMessage` e imposta il valore nella variabile di archiviazione `message` del contratto).
       message = initMessage;
    }
 
-   // A public function that accepts a string argument and updates the `message` storage variable.
+   // Una funzione pubblica che accetta un argomento stringa e aggiorna la variabile di archiviazione `message`.
    function update(string memory newMessage) public {
       message = newMessage;
    }
 }
 ```
 
-Questo è uno smart contract semplicissimo che memorizza un messaggio alla creazione ed è aggiornabile chiamando la funzione `update`.
+Questo è un contratto intelligente semplicissimo che memorizza un messaggio al momento della creazione e può essere aggiornato chiamando la funzione `update`.
 
-## Fase 11: connetti MetaMask e Alchemy al tuo progetto {#step-11}
+## Passaggio 11: Connetti MetaMask e Alchemy al tuo progetto {#step-11}
 
-Abbiamo creato un portafoglio di MetaMask, un conto di Alchemy e scritto il nostro contratto intelligente; è arrivato il momento di collegarli.
+Abbiamo creato un portafoglio MetaMask, un account Alchemy e scritto il nostro contratto intelligente, ora è il momento di connettere i tre.
 
-Ogni transazione inviata dal tuo portafoglio virtuale richiede una firma tramite la tua chiave privata unica. Per fornire al nostro programma quest'autorizzazione, possiamo memorizzare in sicurezza la nostra chiave privata (e la chiave API di Alchemy) in un file ambientale.
+Ogni transazione inviata dal tuo portafoglio virtuale richiede una firma utilizzando la tua chiave privata univoca. Per fornire al nostro programma questa autorizzazione, possiamo archiviare in modo sicuro la nostra chiave privata (e la chiave API di Alchemy) in un file di ambiente.
 
-> Per saperne di più sull'invio delle transazioni, dai un'occhiata a [questo tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) sull'invio di transazioni usando web3.
+> Per saperne di più sull'invio di transazioni, dai un'occhiata a [questo tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) sull'invio di transazioni utilizzando web3.
 
-Prima, installa il pacchetto dotenv nella cartella del tuo progetto:
+Per prima cosa, installa il pacchetto dotenv nella directory del tuo progetto:
 
 ```
 npm install dotenv --save
 ```
 
-Poi, crea un file `.env` nella cartella di root del nostro progetto e aggiungi la tua chiave privata di MetaMask e l'URL API di Alchemy HTTP.
+Quindi, crea un file `.env` nella directory principale del nostro progetto e aggiungi la tua chiave privata MetaMask e l'URL dell'API HTTP di Alchemy.
 
-- Segui [queste istruzioni](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) per esportare la tua chiave privata
-- Vedi sotto per ottenere l'URL dell'API di Alchemy HTTP
+- Segui [queste istruzioni](https://support.metamask.io/configure/accounts/how-to-export-an-accounts-private-key/) per esportare la tua chiave privata
+- Vedi sotto per ottenere l'URL dell'API HTTP di Alchemy
 
-![ottieni la chiave api di alchemy](./get-alchemy-api-key.gif)
+![get alchemy api key](./get-alchemy-api-key.png)
 
 Copia l'URL dell'API di Alchemy
 
-Il tuo `.env` dovrebbe somigliare a questo:
+Il tuo `.env` dovrebbe apparire così:
 
 ```
-API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
-Per connetterli realmente al nostro codice, faremo riferimento a queste variabili nel nostro file `hardhat.config.js` nella fase 13.
+Per connetterli effettivamente al nostro codice, faremo riferimento a queste variabili nel nostro file `hardhat.config.js` nel passaggio 13.
 
 <Alert variant="warning">
 <AlertContent>
 <AlertDescription>
-Non eseguire il commit di <code>.env</code>! Assicurati di non condividere o esporre mai il tuo file <code>.env</code> con nessuno, poiché così facendo comprometteresti i tuoi segreti. Se stai usando il controllo di versione, aggiungi il tuo <code>.env</code> a un file <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+Non committare <code>.env</code>! Assicurati di non condividere o esporre mai il tuo file <code>.env</code> a nessuno, poiché così facendo comprometti i tuoi segreti. Se stai utilizzando il controllo di versione, aggiungi il tuo <code>.env</code> a un file <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Fase 12: installa Ethers.js {#step-12-install-ethersjs}
+## Passaggio 12: Installa Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js è una libreria che rende più facile interagire ed effettuare richieste a Ethereum tramite wrapping dei [metodi JSON-RPC standard](/developers/docs/apis/json-rpc/) con altri metodi più facili da usare.
+Ethers.js è una libreria che semplifica l'interazione e l'esecuzione di richieste a Ethereum avvolgendo i [metodi JSON-RPC standard](/developers/docs/apis/json-rpc/) con metodi più intuitivi.
 
-Hardhat rende davvero facile integrare [Plugin](https://hardhat.org/plugins/) per strumenti e funzionalità aggiuntive. Sfrutteremo il [plugin di Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) per la distribuzione del contratto ([Ethers.js](https://github.com/ethers-io/ethers.js/) ha dei metodi di distribuzione del contratto molto puliti).
+Hardhat rende facilissimo integrare i [Plugin](https://hardhat.org/plugins/) per strumenti aggiuntivi e funzionalità estese. Sfrutteremo il [plugin Ethers](https://hardhat.org/docs/plugins/official-plugins#hardhat-ethers) per la distribuzione dei contratti ([Ethers.js](https://github.com/ethers-io/ethers.js/) ha alcuni metodi di distribuzione dei contratti estremamente puliti).
 
-Nella cartella del tuo progetto digita:
+Nella directory del tuo progetto digita:
 
 ```
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-Avremo bisogno di ethers anche nel nostro `hardhat.config.js` nella prossima fase.
+Richiederemo anche ethers nel nostro `hardhat.config.js` nel passaggio successivo.
 
-## Fase 13: aggiorna hardhat.config.js {#step-13-update-hardhatconfigjs}
+## Passaggio 13: Aggiorna hardhat.config.js {#step-13-update-hardhatconfigjs}
 
-Finora abbiamo aggiunto diverse dipendenze e plugin, ora dobbiamo aggiornare `hardhat.config.js` in modo che il nostro progetto li riconosca tutti.
+Finora abbiamo aggiunto diverse dipendenze e plugin, ora dobbiamo aggiornare `hardhat.config.js` in modo che il nostro progetto li conosca tutti.
 
-Aggiorna il tuo `hardhat.config.js` affinché somigli a questo:
+Aggiorna il tuo `hardhat.config.js` in modo che appaia così:
 
 ```
 require('dotenv').config();
@@ -277,10 +267,10 @@ const { API_URL, PRIVATE_KEY } = process.env;
 */
 module.exports = {
    solidity: "0.7.3",
-   defaultNetwork: "goerli",
+   defaultNetwork: "sepolia",
    networks: {
       hardhat: {},
-      goerli: {
+      sepolia: {
          url: API_URL,
          accounts: [`0x${PRIVATE_KEY}`]
       }
@@ -288,9 +278,9 @@ module.exports = {
 }
 ```
 
-## Fase 14: compila il contratto {#step-14-compile-our-contracts}
+## Passaggio 14: Compila il nostro contratto {#step-14-compile-our-contracts}
 
-Per assicurarti che tutto funzioni fino a questo punto, compila il contratto. L'attività di `compilazione` è una delle attività integrate di hardhat.
+Per assicurarci che tutto funzioni finora, compiliamo il nostro contratto. L'attività `compile` è una delle attività integrate di hardhat.
 
 Dalla riga di comando esegui:
 
@@ -298,13 +288,13 @@ Dalla riga di comando esegui:
 npx hardhat compile
 ```
 
-Potresti ottenere un avviso sull'assenza `nel file sorgente dell'identificativo della licenza SPDX`, ma non preoccupartene, si spera che tutto il resto funzioni! Altrimenti, puoi sempre inviare un messaggio nel [Discord di Alchemy](https://discord.gg/u72VCg3).
+Potresti ricevere un avviso su `SPDX license identifier not provided in source file`, ma non c'è bisogno di preoccuparsi: si spera che tutto il resto vada bene! In caso contrario, puoi sempre inviare un messaggio nel [Discord di Alchemy](https://discord.gg/u72VCg3).
 
-## Fase 15: scrivi lo script di distribuzione {#step-15-write-our-deploy-scripts}
+## Passaggio 15: Scrivi il nostro script di distribuzione {#step-15-write-our-deploy-scripts}
 
-Ora che il nostro contratto è scritto e il nostro file di configurazione è pronto, è il momento di scrivere lo script di distribuzione del contratto.
+Ora che il nostro contratto è scritto e il nostro file di configurazione è pronto, è il momento di scrivere il nostro script di distribuzione del contratto.
 
-Vai alla cartella `script/` e crea un nuovo file chiamato `deploy.js`, aggiungendo i seguenti contenuti:
+Naviga nella cartella `scripts/` e crea un nuovo file chiamato `deploy.js`, aggiungendovi i seguenti contenuti:
 
 ```
 async function main() {
@@ -322,48 +312,49 @@ main()
   });
 ```
 
-Nel suo [tutorial sui Contratti](https://hardhat.org/tutorial/testing-contracts.html#writing-tests) hardhat spiega in modo eccellente cosa fa ognuna di queste righe di codice nel loro, quindi riportiamo qui le loro spiegazioni.
+Hardhat fa un lavoro straordinario nello spiegare cosa fa ciascuna di queste righe di codice nel loro [tutorial sui Contratti](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), abbiamo adottato le loro spiegazioni qui.
 
 ```
 const HelloWorld = await ethers.getContractFactory("HelloWorld");
 ```
 
-Un `ContractFactory` su ethers.js è un'astrazione usata per distribuire nuovi smart contract, quindi `HelloWorld` qui è una fabbrica di istanze del nostro contratto hello world. Usando il plugin `hardhat-ethers`, le istanze `ContractFactory` e `Contract` sono connesse di default al primo firmatario.
+Una `ContractFactory` in ethers.js è un'astrazione utilizzata per distribuire nuovi contratti intelligenti, quindi `HelloWorld` qui è una fabbrica per le istanze del nostro contratto hello world. Quando si utilizza il plugin `hardhat-ethers`, le istanze `ContractFactory` e `Contract` sono connesse al primo firmatario per impostazione predefinita.
 
 ```
 const hello_world = await HelloWorld.deploy();
 ```
 
-Chiamare `deploy()` su un `ContractFactory` avvierà la distribuzione e restituirà un `Promise` che si risolve in un `Contract`. Questo è l'oggetto che ha un metodo per ciascuna delle funzioni del nostro smart contract.
+Chiamare `deploy()` su una `ContractFactory` avvierà la distribuzione e restituirà una `Promise` che si risolve in un `Contract`. Questo è l'oggetto che ha un metodo per ciascuna delle funzioni del nostro contratto intelligente.
 
-## Fase 16: distribuisci il contratto {#step-16-deploy-our-contract}
+## Passaggio 16: Distribuisci il nostro contratto {#step-16-deploy-our-contract}
 
-Siamo finalmente pronti a distribuire il nostro smart contract! Vai alla riga di comando ed esegui:
+Siamo finalmente pronti per distribuire il nostro contratto intelligente! Naviga nella riga di comando ed esegui:
 
 ```
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
 
-Vorrai poi vedere qualcosa del genere:
+Dovresti quindi vedere qualcosa del genere:
 
 ```
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-Se andiamo all'[Etherscan di Goerli](https://goerli.etherscan.io/) e cerchiamo l'indirizzo del nostro contratto, dovremmo poter vedere che è stato distribuito correttamente. La transazione somiglierà a questa:
+Se andiamo su [Sepolia etherscan](https://sepolia.etherscan.io/) e cerchiamo l'indirizzo del nostro contratto, dovremmo essere in grado di vedere che è stato distribuito con successo. La transazione apparirà più o meno così:
 
-![contratto etherscan](./etherscan-contract.png)
+![etherscan contract](./etherscan-contract.png)
 
-L'indirizzo `From` dovrebbe corrispondere all'indirizzo del tuo conto di MetaMask e, l'indirizzo To indicherà la "Creazione del Contratto"; ma cliccando sulla transazione, vedremo l'indirizzo del nostro contratto nel campo `To`:
+L'indirizzo `From` dovrebbe corrispondere all'indirizzo del tuo account MetaMask e l'indirizzo To dirà "Contract Creation" (Creazione del contratto), ma se clicchiamo sulla transazione vedremo l'indirizzo del nostro contratto nel campo `To`:
 
-![transazione etherscan](./etherscan-transaction.png)
+![etherscan transaction](./etherscan-transaction.png)
 
-Congratulazioni! Hai appena distribuito uno smart contract nella chain di Ethereum
+Congratulazioni! Hai appena distribuito un contratto intelligente sulla catena di Ethereum 🎉
 
-Per capire cosa sta succedendo, andiamo alla scheda Explorer nel nostro [dashboard di Alchemy](https://dashboard.alchemyapi.io/explorer). Se hai diverse app di Alchemy, assicurati di filtrare per app e selezionare "Hello World". ![explorer hello world](./hello-world-explorer.png)
+Per capire cosa succede dietro le quinte, navighiamo nella scheda Explorer nella nostra [dashboard di Alchemy](https://dashboard.alchemyapi.io/explorer). Se hai più app Alchemy, assicurati di filtrare per app e seleziona "Hello World".
+![hello world explorer](./hello-world-explorer.png)
 
-Qui vedrai numerose chiamate a JSON-RPC che Hardhat/Ethers ha effettuato per noi quando abbiamo chiamato la funzione `.deploy()`. Due funzioni importanti da chiamare qui sono [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), che è la richiesta per scrivere effettivamente il nostro contratto sulla catena di Goerli, e [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), che è una richiesta di leggere le informazioni sulla nostra transazione, dato l'hash (uno schema tipico nelle transazioni). Per saperne di più sull'invio delle transazioni, dai un'occhiata a questo tutorial [ sull'invio di transazioni usando web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+Qui vedrai una manciata di chiamate JSON-RPC che Hardhat/Ethers ha effettuato dietro le quinte per noi quando abbiamo chiamato la funzione `.deploy()`. Due importanti da segnalare qui sono [`eth_sendRawTransaction`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-send-raw-transaction), che è la richiesta per scrivere effettivamente il nostro contratto sulla catena Sepolia, e [`eth_getTransactionByHash`](https://www.alchemy.com/docs/node/abstract/abstract-api-endpoints/eth-get-transaction-by-hash) che è una richiesta per leggere informazioni sulla nostra transazione dato l'hash (un modello tipico quando si effettuano transazioni). Per saperne di più sull'invio di transazioni, dai un'occhiata a questo tutorial sull'[invio di transazioni utilizzando Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
-Questo è tutto per la parte 1 di questo tutorial, nella parte 2, [interagiremo realmente con il nostro smart contract](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract) aggiornando il nostro messaggio iniziale e nella parte 3 [pubblicheremo il nostro smart contract su Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan), così che tutti sapranno come interagire con esso.
+Questo è tutto per la parte 1 di questo tutorial, nella parte 2 [interagiremo effettivamente con il nostro contratto intelligente](https://www.alchemy.com/docs/interacting-with-a-smart-contract) aggiornando il nostro messaggio iniziale, e nella parte 3 [pubblicheremo il nostro contratto intelligente su Etherscan](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) in modo che tutti sappiano come interagire con esso.
 
-**Vuoi saperne di più su Alchemy? Dai un'occhiata al nostro [sito web](https://alchemyapi.io/eth). Non vuoi mai perderti un aggiornamento? Iscriviti alla nostra newsletter [qui](https://www.alchemyapi.io/newsletter)! Assicurati anche di seguire il nostro [Twitter](https://twitter.com/alchemyplatform) e di unirti al nostro [Discord](https://discord.com/invite/u72VCg3)**.
+**Vuoi saperne di più su Alchemy? Dai un'occhiata al nostro [sito web](https://www.alchemy.com/eth). Non vuoi mai perderti un aggiornamento? Iscriviti alla nostra newsletter [qui](https://www.alchemy.com/newsletter)! Assicurati anche di unirti al nostro [Discord](https://discord.gg/u72VCg3).**

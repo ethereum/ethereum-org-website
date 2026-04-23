@@ -35,7 +35,7 @@ incomplete: true
 ## మధ్యస్థ వ్యాసాలు {#intermediate-articles}
 
 - [web3.py యొక్క మిత్రులు: Apeకి పరిచయం](https://snakecharmers.ethereum.org/intro-to-ape/)
-- [పైథాన్ ప్రోగ్రామర్‌ల కోసం డాప్ అభివృద్ధి](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [పైథాన్ ప్రోగ్రామర్‌ల కోసం డాప్ అభివృద్ధి](https://www.youtube.com/watch?v=tE-8bG35VNw)
 - [ఒక పైథాన్ ఇతీరియము ఇంటర్‌ఫేస్‌ను సృష్టించడం: భాగం 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [పైథాన్‌లో ఇతీరియము స్మార్ట్ కాంట్రాక్టులు: ఒక సమగ్ర(మైన) గైడ్](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 
@@ -87,7 +87,7 @@ incomplete: true
 - [Curve](https://www.curve.finance/) మరియు [Curve స్మార్ట్ కాంట్రాక్ట్స్ రిపోజిటరీ](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) మరియు [బ్రౌనీ టూల్‌చెయిన్‌ను ఉపయోగించే స్మార్ట్ కాంట్రాక్టులు](https://github.com/Badger-Finance/badger-system)
 - [Sushi](https://sushi.com/) [వారి వెస్టింగ్ కాంట్రాక్టులను నిర్వహించడం మరియు డిప్లాయ్ చేయడంలో పైథాన్](https://github.com/sushiswap/sushi-vesting-protocols) ను ఉపయోగిస్తుంది.
-- ఆల్ఫా హోమోరా కీర్తికి చెందిన [ఆల్ఫా ఫైనాన్స్](https://alphafinance.io/), [స్మార్ట్ కాంట్రాక్టులను పరీక్షించడానికి మరియు డిప్లాయ్ చేయడానికి బ్రౌనీని](https://github.com/AlphaFinanceLab/alpha-staking-contract) ఉపయోగిస్తుంది.
+- ఆల్ఫా హోమోరా కీర్తికి చెందిన [ఆల్ఫా ఫైనాన్స్](https://alphaventuredao.io/), [స్మార్ట్ కాంట్రాక్టులను పరీక్షించడానికి మరియు డిప్లాయ్ చేయడానికి బ్రౌనీని](https://github.com/AlphaFinanceLab/alpha-staking-contract) ఉపయోగిస్తుంది.
 
 ## పైథాన్ కమ్యూనిటీ చర్చ {#python-community-contributors}
 

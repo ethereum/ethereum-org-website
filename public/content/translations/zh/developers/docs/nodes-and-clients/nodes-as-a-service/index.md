@@ -272,7 +272,6 @@ sidebarDepth: 2
     - 免费试用
 
 - [**NOWNodes**](https://nownodes.io/)
-  - [文档](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - 功能
     - 访问超过 50 个区块链节点
     - 免费应用程序接口密钥
@@ -283,11 +282,10 @@ sidebarDepth: 2
     - 共享、归档、备份和专用节点
 
 - [**Pocket Network**](https://www.pokt.network/)
-  - [文档](https://docs.pokt.network/home/)
+  - [文档](https://docs.pokt.network/)
   - 功能
     - 去中心化的远程过程调用协议和市场
     - 每天 100 万个请求的免费套餐（每个端点，最多 2 个）
-    - [公共端点](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ 计划（如果你每天需要超过 100 万个请求）
     - 支持超过 15 条区块链
     - 6400 多个节点为应用程序服务并赚取 POKT

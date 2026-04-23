@@ -74,7 +74,7 @@ Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake cons
   Shard chains
 </ButtonLink>
 
-## Further Reading
+## Further reading {#further-reading}
 
 - [More on node architecture](/developers/docs/nodes-and-clients/node-architecture)
 - [More of proof-of-stake](/developers/docs/consensus-mechanisms/pos)

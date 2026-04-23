@@ -111,7 +111,7 @@ lang: ja
 **Nethereum -** **_ブロックチェーン向けのオープンソース.NET統合ライブラリ。_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [ドキュメント](http://docs.nethereum.com/en/latest/)
+- [ドキュメント](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_Pythonでイーサリアムと対話するための各種ライブラリ。_**

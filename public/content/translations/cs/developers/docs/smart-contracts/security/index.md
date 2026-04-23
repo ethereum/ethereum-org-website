@@ -354,7 +354,7 @@ contract MutexPattern {
 }
 ```
 
-Můžete také použít systém [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/security#PullPayment), který vyžaduje, aby si uživatelé vybírali prostředky z chytrých kontraktů, namísto systému „push payments“, který prostředky na účty odesílá. Tím se eliminuje možnost neúmyslného spuštění kódu na neznámých adresách (a může také zabránit určitým útokům typu denial-of-service).
+Můžete také použít systém [pull payments](https://docs.openzeppelin.com/contracts/5.x/api/utils#security#PullPayment), který vyžaduje, aby si uživatelé vybírali prostředky z chytrých kontraktů, namísto systému „push payments“, který prostředky na účty odesílá. Tím se eliminuje možnost neúmyslného spuštění kódu na neznámých adresách (a může také zabránit určitým útokům typu denial-of-service).
 
 #### Celočíselné podtečení a přetečení {#integer-underflows-and-overflows}
 

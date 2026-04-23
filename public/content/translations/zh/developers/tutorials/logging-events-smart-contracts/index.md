@@ -4,6 +4,7 @@ description: "智能合约事件的简介，以及如何利用事件来记录数
 author: "jdourlens"
 tags: [ "智能合同", "remix", "Solidity", "事件" ]
 skill: intermediate
+breadcrumb: "事件日志"
 lang: zh
 published: 2020-04-03
 source: EthereumDev

@@ -4,6 +4,7 @@ description: Jifunze jinsi ya kutekeleza kiwango cha tokeni cha ERC-20 kwa mfano
 author: "jdourlens"
 tags: [ "mikataba erevu", "tokeni", "uimara", "erc-20" ]
 skill: beginner
+breadcrumb: "Misingi ya tokeni ERC-20"
 lang: sw
 published: 2020-04-05
 source: EthereumDev

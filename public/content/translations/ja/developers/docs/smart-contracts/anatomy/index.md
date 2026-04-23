@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## 注釈付きの例 {#annotated-examples}
 
-Solidityで書かれた例を以下に示します。 コードを試したい場合は、[Remix](http://remix.ethereum.org)で操作できます。
+Solidityで書かれた例を以下に示します。 コードを試したい場合は、[Remix](https://remix.ethereum.org)で操作できます。
 
 ### Hello world {#hello-world}
 

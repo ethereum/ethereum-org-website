@@ -1,4 +1,5 @@
-import { Book, Building2, ChevronRight, Code } from "lucide-react"
+import { Book, Building2, Code } from "lucide-react"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
 import { Card, CardContent } from "@/components/ui/card"
@@ -6,89 +7,93 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
+
+import { ChevronNext } from "../Chevron"
 
 import developersImage from "@/public/images/homepage/get-started/developers.png"
 import enterpriseImage from "@/public/images/homepage/get-started/enterprise.png"
 import learnImage from "@/public/images/homepage/get-started/learn.png"
-
-const cards = [
-  {
-    id: "learn",
-    icon: Book,
-    iconBg: "bg-[#f7ecff]",
-    iconColor: "text-primary",
-    title: "Understand Ethereum",
-    description:
-      "Start here. Learn what it is, why it matters, and how it works in plain language.",
-    bullets: [
-      "What is Ethereum?",
-      "How do wallets work?",
-      "DeFi, stablecoins, and NFTs explained",
-    ],
-    bulletColor: "bg-primary",
-    cta: "Start learning",
-    href: "/learn/",
-    image: learnImage,
-  },
-  {
-    id: "developers",
-    icon: Code,
-    iconBg: "bg-[#e9f4ff]",
-    iconColor: "text-accent-a",
-    title: "Start building",
-    description:
-      "For developers. Access documentation, tools, and tutorials to build on Ethereum.",
-    bullets: [
-      "Developer documentation",
-      "Smart contract tutorials",
-      "Development tools & frameworks",
-    ],
-    bulletColor: "bg-accent-a",
-    cta: "View materials",
-    href: "/developers/",
-    image: developersImage,
-  },
-  {
-    id: "enterprise",
-    icon: Building2,
-    iconBg: "bg-[#e6f7f6]",
-    iconColor: "text-accent-c",
-    title: "For enterprise",
-    description:
-      "Business use cases, institutional resources, and how Ethereum can serve your organization.",
-    bullets: [
-      "Enterprise use cases",
-      "Private & permissioned networks",
-      "Institutional resources",
-    ],
-    bulletColor: "bg-accent-c",
-    cta: "Explore enterprise",
-    href: ENTERPRISE_ETHEREUM_URL,
-    image: enterpriseImage,
-  },
-]
 
 type GetStartedGridProps = {
   className?: string
   eventCategory?: string
 }
 
-const GetStartedGrid = ({
+const GetStartedGrid = async ({
   className,
   eventCategory = "Homepage",
 }: GetStartedGridProps) => {
+  const t = await getTranslations("page-index")
+  const locale = await getLocale()
+
+  const minutes = numberFormat(locale).format(2)
+
+  const cards = [
+    {
+      id: "learn",
+      icon: Book,
+      iconBg: "bg-purple-50 dark:bg-purple-900",
+      iconColor: "text-primary",
+      title: t("page-index-get-started-learn-title"),
+      description: t("page-index-get-started-learn-description"),
+      bullets: [
+        t("page-index-get-started-learn-bullet-1"),
+        t("page-index-get-started-learn-bullet-2"),
+        t("page-index-get-started-learn-bullet-3"),
+      ],
+      bulletColor: "bg-primary",
+      cta: t("page-index-get-started-learn-cta"),
+      href: "/learn/",
+      image: learnImage,
+    },
+    {
+      id: "developers",
+      icon: Code,
+      iconBg: "bg-blue-100 dark:bg-blue-900",
+      iconColor: "text-accent-a",
+      title: t("page-index-get-started-build-title"),
+      description: t("page-index-get-started-build-description"),
+      bullets: [
+        t("page-index-get-started-build-bullet-1"),
+        t("page-index-get-started-build-bullet-2"),
+        t("page-index-get-started-build-bullet-3"),
+      ],
+      bulletColor: "bg-accent-a",
+      cta: t("page-index-get-started-build-cta"),
+      href: "/developers/",
+      image: developersImage,
+    },
+    {
+      id: "enterprise",
+      icon: Building2,
+      iconBg: "bg-teal-100 dark:bg-teal-900",
+      iconColor: "text-accent-c",
+      title: t("page-index-get-started-enterprise-title"),
+      description: t("page-index-get-started-enterprise-description"),
+      bullets: [
+        t("page-index-get-started-enterprise-bullet-1"),
+        t("page-index-get-started-enterprise-bullet-2"),
+        t("page-index-get-started-enterprise-bullet-3"),
+      ],
+      bulletColor: "bg-accent-c",
+      cta: t("page-index-get-started-enterprise-cta"),
+      href: ENTERPRISE_ETHEREUM_URL,
+      image: enterpriseImage,
+    },
+  ]
+
   return (
     <Section id="get-started" className={cn("relative", className)}>
       <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pb-8 pt-20 md:px-8">
         <div className="flex flex-col items-center gap-2 text-center">
           <SectionHeader className="mb-0 mt-0">
-            Get started on Ethereum
+            {t("page-index-get-started-title")}
           </SectionHeader>
           <p className="max-w-[42rem] text-lg text-body-medium lg:text-2xl">
-            Takes 2 minutes to get started. No credit check, no paperwork, no
-            minimum balance.
+            {t("page-index-get-started-subtitle", { minutes })}
           </p>
         </div>
 
@@ -145,6 +150,7 @@ const GetStartedGrid = ({
 
                   <LinkOverlay
                     href={card.href}
+                    hideArrow
                     className="flex items-center gap-1 font-semibold no-underline"
                     matomoEvent={{
                       eventCategory,
@@ -153,7 +159,7 @@ const GetStartedGrid = ({
                     }}
                   >
                     {card.cta}
-                    <ChevronRight className="size-5" />
+                    <ChevronNext className="size-5" />
                   </LinkOverlay>
                 </CardContent>
               </Card>

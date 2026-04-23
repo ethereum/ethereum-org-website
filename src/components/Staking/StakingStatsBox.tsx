@@ -1,12 +1,12 @@
 import { Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
-import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
+import type { ChildOnlyProp, StakingStatsData } from "@/lib/types"
 
 import Tooltip from "@/components/Tooltip"
 import { Flex, VStack } from "@/components/ui/flex"
 
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import InlineLink from "../ui/Link"
 
@@ -17,7 +17,7 @@ const Cell = ({ children }: ChildOnlyProp) => (
 )
 
 const Value = ({ children }: ChildOnlyProp) => (
-  <code className="inline-block bg-none p-0 pe-1 font-monospace text-3xl font-bold text-primary">
+  <code className="font-monospace text-primary inline-block bg-none p-0 pe-1 text-3xl font-bold">
     {children}
   </code>
 )
@@ -31,7 +31,7 @@ const Label = ({ children }: ChildOnlyProp) => (
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
-    <Info className="active:primary focus:primary size-[1em] text-md hover:text-primary" />
+    <Info className="active:primary focus:primary text-md hover:text-primary size-[1em]" />
   </Tooltip>
 )
 
@@ -43,16 +43,12 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
   const locale = useLocale()
   const { t } = useTranslation("page-staking")
 
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)
-
   // Helper functions
   const formatInteger = (amount: number): string =>
-    amount
-      ? new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
-      : "—"
+    amount ? numberFormat(locale).format(amount) : "—"
 
   const formatPercentage = (amount: number): string =>
-    new Intl.NumberFormat(localeForStatsBoxNumbers, {
+    numberFormat(locale, {
       style: "percent",
       minimumSignificantDigits: 2,
       maximumSignificantDigits: 2,

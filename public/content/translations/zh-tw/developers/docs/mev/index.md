@@ -164,7 +164,7 @@ MEV榨取暴增於2021年初期, 而其導長時間之高額Gas費. 快閃機器
 
 儘管提交者-構建者分離有望減少最大可提取價值的影響，但實現它需要對共識協議進行更改。 具體來說，信標鏈上的 [分叉選擇](/developers/docs/consensus-mechanisms/pos/#fork-choice) 規則需要更新。 [建構者 API](https://github.com/ethereum/builder-specs) 是一個臨時解決方案，旨在提供一個可行的提議者-建構者分離實作，儘管它帶有更高的信任假設。
 
-建構者 API 是 [引擎 API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的修改版本，共識層用戶端用它來向執行層用戶端請求執行負載。 如 [誠實驗證者規範](https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/validator.md) 所述，被選中負責提議區塊的驗證者會向一個已連接的執行用戶端請求交易捆綁包，並將其包含在提議的信標鏈區塊中。
+建構者 API 是 [引擎 API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 的修改版本，共識層用戶端用它來向執行層用戶端請求執行負載。 如 [誠實驗證者規範](https://github.com/ethereum/consensus-specs/blob/master/specs/bellatrix/validator.md) 所述，被選中負責提議區塊的驗證者會向一個已連接的執行用戶端請求交易捆綁包，並將其包含在提議的信標鏈區塊中。
 
 建置者應用程式介面還充當驗證者和執行層用戶端之間的中介軟體；不同之處是它允許信標鏈上的驗證者從外部實體獲取區塊（而不是使用執行用戶端在本地構建區塊）。
 
@@ -180,7 +180,7 @@ MEV榨取暴增於2021年初期, 而其導長時間之高額Gas費. 快閃機器
 
 5. 如果區塊構建者未能及時響應，使用構建者應用程式介面的驗證者仍有可能在本地構建區塊，因此他們不會錯過區塊提交獎勵。 然而，驗證者不能使用已揭示的交易或另一組交易來創建另一個區塊，因為這將構成 _雙重簽署_ (在同一個時槽內簽署兩個區塊) 的行為，這是一種可罰沒的違規行為。
 
-建構者 API 的一個實作範例是 [MEV Boost](https://github.com/flashbots/mev-boost)，這是對 [Flashbots 拍賣機制](https://docs.flashbots.net/Flashbots-auction/overview) 的改進，旨在抑制 MEV 對以太坊的負面外部性。 Flashbots 拍賣允許權益證明中的驗證者將建構有利可圖區塊的工作外包給稱為 **搜尋者** 的專業參與方。
+建構者 API 的一個實作範例是 [MEV Boost](https://github.com/flashbots/mev-boost)，這是對 [Flashbots 拍賣機制](https://docs.flashbots.net/flashbots-auction/overview) 的改進，旨在抑制 MEV 對以太坊的負面外部性。 Flashbots 拍賣允許權益證明中的驗證者將建構有利可圖區塊的工作外包給稱為 **搜尋者** 的專業參與方。
 ![詳細展示 MEV 流程的圖表](./mev.png)
 
 搜尋者尋找有利可圖的 MEV 機會，並將交易捆綁包連同 [密封價格投標](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) 一起發送給區塊提議者，以便將其納入區塊。 運行 mev-geth，即 go-ethereum (Geth) 用戶端的分叉版本的驗證者只需要選擇利潤最高的交易包，並將其新增到新區塊的一部分。 為了保護區塊提議者 (驗證者) 免受垃圾郵件和無效交易的影響，交易捆綁包在到達提議者之前會經過 **中繼者** 進行驗證。

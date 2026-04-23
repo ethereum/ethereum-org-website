@@ -124,4 +124,4 @@ _Ethereum Pectra Yükseltmesi: Paydaşların Bilmesi Gerekenler — Blockdaemon_
 - [Pectra.wtf bilgi sayfası](https://pectra.wtf)
 - [Pectra paydaş deneyimini nasıl geliştiriyor](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 bilgi sayfası](https://eip7702.io/)
-- [Pectra devnet'leri](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)
+- [Pectra devnet'leri](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

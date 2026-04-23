@@ -13,6 +13,7 @@ import type {
   TutorialFrontmatter,
   UpgradeFrontmatter,
   UseCasesFrontmatter,
+  VideoFrontmatter,
 } from "@/lib/interfaces"
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
@@ -166,7 +167,6 @@ export type I18nLocale = {
   name: string
   localName: string
   langDir: Direction
-  dateFormat: string
   /**
    * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
    *   Fallback used when locale language name matches English name.
@@ -305,24 +305,11 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
-// Crowdin translation progress
-export type ProjectProgressData = {
-  languageId: string
-  words: {
-    total: number
-    approved: number
-  }
-}
-
 export type LocaleDisplayInfo = {
   localeOption: string
   sourceName: string
   targetName: string
   englishName: string
-  approvalProgress: number
-  wordsApproved: number
-  progress: string
-  words: string
   isBrowserDefault?: boolean
 }
 
@@ -402,6 +389,7 @@ export type Commit = {
       email: string
       date: string
     }
+    message: string
   }
   author: {
     avatar_url: string
@@ -427,8 +415,18 @@ export type FileContributor = {
   date: string
 }
 
-type FilePath = string
-export type CommitHistory = Record<FilePath, FileContributor[]>
+/**
+ * GitHub contributors data stored in the data-layer.
+ * Keyed by file path, contains list of contributors for each file.
+ */
+export type GitHubContributorsData = {
+  /** Content files: slug (e.g., "eth", "wallets/find-wallet") → contributors */
+  content: Record<string, FileContributor[]>
+  /** App pages: pagePath (e.g., "staking", "developers") → contributors */
+  appPages: Record<string, FileContributor[]>
+  /** ISO timestamp when data was generated */
+  generatedAt: string
+}
 
 /**
  * Table of contents
@@ -493,7 +491,10 @@ export type CommonHeroProps<
    * The hero can render no buttons or up to and no more than two.
    * Can accept either button prop objects or React elements directly.
    */
-  buttons?: [HeroButtonProps | ReactElement, (HeroButtonProps | ReactElement)?]
+  buttons?: [
+    HeroButtonProps | ReactElement<unknown>,
+    (HeroButtonProps | ReactElement<unknown>)?,
+  ]
   /**
    * The primary title of the page
    */
@@ -510,24 +511,6 @@ export type CommonHeroProps<
    * Optional CSS class name(s) to apply to the hero component root for styling and layout customization.
    */
   className?: string
-}
-
-// Learning Tools
-
-export interface LearningTool {
-  name: string
-  description: string
-  url: string
-  image: StaticImageData
-  alt: string
-  background: string
-  subjects: Array<string>
-  locales?: Array<Lang>
-  priceType?: string
-}
-
-export interface LearningToolsCardGridProps {
-  products: Array<LearningTool>
 }
 
 // Staking stats data fetching
@@ -597,6 +580,36 @@ export type MetricReturnData = ValueOrError<number>
 export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
+
+/**
+ * Full video data parsed from a video's index.md file.
+ * Includes frontmatter metadata and the markdown body (transcript).
+ */
+export type VideoData = {
+  slug: string
+  content: string
+  frontmatter: VideoFrontmatter
+}
+
+export type VideoFormat =
+  | "presentation"
+  | "explainer"
+  | "interview"
+  | "tutorial"
+  | "panel"
+/**
+ * Flat, serializable video data for client components (e.g. VideoGalleryFilter).
+ * thumbnailUrl is pre-resolved server-side from customThumbnailUrl or youtubeId.
+ */
+export type VideoCardData = {
+  slug: string
+  title: string
+  description: string
+  uploadDate: string
+  duration: string
+  topic: string[]
+  thumbnailUrl: string
+}
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
@@ -768,7 +781,7 @@ export type ExtendedRollup = Rollup & {
   walletsSupported: string[]
   activeAddresses: number | undefined
   launchDate: string | null
-  walletsSupportedCount: number
+  walletsSupportedCount: string
   blockspaceData: {
     nft: number
     defi: number
@@ -865,7 +878,7 @@ type FilterInput = (
   itemIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type FilterOptionItem = {
   filterKey: string
@@ -882,7 +895,7 @@ type FilterOptionInput = (
   optionIndex: number,
   state: FilterInputState,
   updateFilterState: UpdateFilterState
-) => ReactElement
+) => ReactElement<unknown>
 
 type UpdateFilterState = (
   filterIndex: number,
@@ -1112,7 +1125,7 @@ export type EventCardProps = {
 
 export type PageWithContributorsProps = {
   contributors: FileContributor[]
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp?: string
   locale?: Lang
 }
 

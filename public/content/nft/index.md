@@ -19,7 +19,7 @@ NFTs are tokens that are **individually unique**. Each NFT has different propert
 
 The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is publicly verifiable on Ethereum [blockchain](/glossary/#blockchain).
 
-<YouTube id="Xdkkux6OxfM" />
+<VideoWatch slug="learn-nfts-and-defi" />
 
 ## The internet of assets {#internet-of-assets}
 
@@ -109,6 +109,7 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 - [ERC-721 token standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
 - [Popular NFT Apps and Tools](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+- [NFT Standards wiki](https://nft-standards.gitbook.io/nft-standards-wiki)
 
 ## Other resources {#other-resources}
 

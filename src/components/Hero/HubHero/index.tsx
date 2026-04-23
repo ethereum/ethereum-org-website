@@ -54,7 +54,7 @@ const HubHero = ({
         {title ? (
           <h1
             data-label="breadcrumb"
-            className="text-md font-normal uppercase text-body-medium"
+            className="text-md text-body-medium font-normal uppercase"
           >
             {title}
           </h1>
@@ -79,7 +79,7 @@ const HubHero = ({
 
             // If it's a React element, render it directly
             if (typeof button === "object" && "type" in button) {
-              return <div key={idx}>{button as ReactElement}</div>
+              return <div key={idx}>{button as ReactElement<unknown>}</div>
             }
 
             // Otherwise, render as button props

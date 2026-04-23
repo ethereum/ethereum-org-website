@@ -92,7 +92,7 @@ Istnieje kilka innych potencjalnych przyszłych ulepszeń reguły wyboru forka, 
 
 #### Ataki dalekiego zasięgu {#long-range-attacks}
 
-Istnieje również klasa ataków specyficzna dla blockchainów proof-of-stake, która polega na tym, że walidator, który uczestniczył w bloku genezy, utrzymuje oddzielny fork blockchaina obok uczciwego, ostatecznie przekonując uczciwy zestaw walidatorów do przejścia na niego w dogodnym momencie znacznie później. Ten typ ataku nie jest możliwy w Ethereum ze względu na gadżet nieodwołalności, który zapewnia, że wszyscy walidatorzy zgadzają się co do stanu uczciwego łańcucha w regularnych odstępach czasu („checkpointy”). Ten prosty mechanizm neutralizuje atakujących z dalekiego zasięgu, ponieważ klienci Ethereum po prostu nie zreorganizują sfinalizowanych bloków. Nowe węzły dołączające do sieci robią to poprzez znalezienie zaufanego, niedawnego hasza stanu (checkpointu „[słabej subiektywności](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)”) i użycie go jako pseudo-bloku genezy do budowania na nim. Tworzy to „bramę zaufania” dla nowego węzła wchodzącego do sieci, zanim będzie on mógł samodzielnie rozpocząć weryfikację informacji.
+Istnieje również klasa ataków specyficzna dla blockchainów proof-of-stake, która polega na tym, że walidator, który uczestniczył w bloku genezy, utrzymuje oddzielny fork blockchaina obok uczciwego, ostatecznie przekonując uczciwy zestaw walidatorów do przejścia na niego w dogodnym momencie znacznie później. Ten typ ataku nie jest możliwy w Ethereum ze względu na gadżet nieodwołalności, który zapewnia, że wszyscy walidatorzy zgadzają się co do stanu uczciwego łańcucha w regularnych odstępach czasu („checkpointy”). Ten prosty mechanizm neutralizuje atakujących z dalekiego zasięgu, ponieważ klienci Ethereum po prostu nie zreorganizują sfinalizowanych bloków. Nowe węzły dołączające do sieci robią to poprzez znalezienie zaufanego, niedawnego hasza stanu (checkpointu „[słabej subiektywności](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity)”) i użycie go jako pseudo-bloku genezy do budowania na nim. Tworzy to „bramę zaufania” dla nowego węzła wchodzącego do sieci, zanim będzie on mógł samodzielnie rozpocząć weryfikację informacji.
 
 #### Odmowa usługi {#denial-of-service}
 
@@ -157,7 +157,7 @@ Ataki 34%, 51% lub 66% prawdopodobnie wymagałyby pozapasmowej koordynacji społ
 ## Dalsza lektura {#further-reading}
 
 - [Bardziej szczegółowa wersja tej strony](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
-- [Vitalik o nieodwołalności rozliczeń](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
+- [Vitalik o nieodwołalności rozliczeń](https://blog.ethereum.org/2016/05/09/on-settlement-finality)
 - [Artykuł o LMD GHOST](https://arxiv.org/abs/2003.03052)
 - [Dokument Casper-FPG](https://arxiv.org/abs/1710.09437)
 - [Dokument Gasper](https://arxiv.org/pdf/2003.03052.pdf)

@@ -7,6 +7,8 @@ import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
 import * as Portal from "@radix-ui/react-portal"
 import { Slot } from "@radix-ui/react-slot"
 
+import { ErrorBoundary } from "@/components/ui/error-boundary"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { sanitizeHitUrl } from "@/lib/utils/url"
@@ -21,7 +23,7 @@ const SearchModal = dynamic(() => import("./SearchModal"))
 
 interface SearchProps {
   asChild?: boolean
-  children?: React.ReactElement
+  children?: React.ReactElement<unknown>
 }
 
 const Search = ({ asChild = false, children }: SearchProps) => {
@@ -134,7 +136,33 @@ const Search = ({ asChild = false, children }: SearchProps) => {
         </>
       )}
       <Portal.Root>
-        {isOpen && <SearchModal {...searchModalProps} />}
+        {isOpen && (
+          <ErrorBoundary
+            fallback={() => (
+              <div className="z-modal fixed inset-0 flex items-center justify-center bg-black/50">
+                <div className="bg-background mx-4 flex flex-col items-center gap-4 rounded-lg p-8 text-center shadow-lg">
+                  <p className="text-body-medium">{t("loading-error")}</p>
+                  <div className="flex gap-3">
+                    <button
+                      className="bg-primary hover:bg-primary-hover rounded-md px-4 py-2 text-sm text-white"
+                      onClick={() => window.location.reload()}
+                    >
+                      {t("refresh")}
+                    </button>
+                    <button
+                      className="border-body-light text-body hover:bg-background-highlight rounded-md border px-4 py-2 text-sm"
+                      onClick={onClose}
+                    >
+                      {t("close")}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          >
+            <SearchModal {...searchModalProps} />
+          </ErrorBoundary>
+        )}
       </Portal.Root>
     </>
   )

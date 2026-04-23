@@ -5,6 +5,7 @@ author: Markus Waas
 lang: cs
 tags: [ "solidity", "smart kontrakt účty", "úložiště" ]
 skill: intermediate
+breadcrumb: "Zmenšení kontraktu"
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size
@@ -12,7 +13,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## Proč existuje limit? {#why-is-there-a-limit}
 
-Dne [22. listopadu 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/) hard fork Spurious Dragon představil [EIP-170](https://eips.ethereum.org/EIPS/eip-170), který přidal limit velikosti chytrého kontraktu 24,576 kb. Pro vás jako pro vývojáře v jazyce Solidity to znamená, že když budete do svého kontraktu přidávat další a další funkce, v určitém okamžiku narazíte na limit a při nasazování se vám zobrazí chyba:
+Dne [22. listopadu 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon) hard fork Spurious Dragon představil [EIP-170](https://eips.ethereum.org/EIPS/eip-170), který přidal limit velikosti chytrého kontraktu 24,576 kb. Pro vás jako pro vývojáře v jazyce Solidity to znamená, že když budete do svého kontraktu přidávat další a další funkce, v určitém okamžiku narazíte na limit a při nasazování se vám zobrazí chyba:
 
 `Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 

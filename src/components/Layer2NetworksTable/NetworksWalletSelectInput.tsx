@@ -60,7 +60,7 @@ const NetworksWalletSelectInput = ({
           avoidCollisions={true}
         >
           <div
-            className="sticky top-0 z-10 bg-background p-2"
+            className="bg-background sticky top-0 z-10 p-2"
             onKeyDown={(e) => e.stopPropagation()}
             onClick={(e) => e.stopPropagation()}
           >
@@ -79,7 +79,7 @@ const NetworksWalletSelectInput = ({
               </SelectItem>
             ))
           ) : (
-            <div className="p-2 text-center text-body-medium">
+            <div className="text-body-medium p-2 text-center">
               {t("page-layer-2-networks-no-wallet-found")}
             </div>
           )}

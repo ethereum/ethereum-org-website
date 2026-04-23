@@ -1,93 +1,93 @@
 ---
-title: Designgrundsätze
+title: Designprinzipien
 lang: de
-description: Die Grundsätze hinter den Entscheidungen über Design und Inhalt von ethereum.org
+description: Die Prinzipien hinter den Design- und Inhaltsentscheidungen von ethereum.org
 ---
 
-# Unsere Designgrundsätze {#contributing-to-ethereumorg-}
+# Unsere Designprinzipien {#contributing-to-ethereumorg-}
 
-<Emoji text=":wave:" size={1} /> Hallo und herzlich willkommen bei den Designgrundsätzen für ethereum.org. Die Informationen sind Teil eines laufenden Prozesses zur Weiterentwicklung und Verbesserung von ethereum.org.
+<Emoji text=":wave:" size={1} /> Hallo und willkommen bei den Designprinzipien für ethereum.org. Dies ist Teil eines fortlaufenden Prozesses zur Weiterentwicklung und Verbesserung von ethereum.org.
 
-Unsere Grundsätze prägen das Erscheinungsbild der Website und den Inhalt.
+Unsere Prinzipien prägen das Erscheinungsbild der Website und die darauf enthaltenen Inhalte.
 
-Machen Sie sich mit den Informationen vertraut, bevor Sie einen [Beitrag zu ethereum.org](/contributing/) leisten.
+Du solltest diese lesen, bevor du [zu ethereum.org beiträgst](/contributing/).
 
-## Was sind Designgrundsätze? {#ways-to-contribute}
+## Was sind Designprinzipien? {#ways-to-contribute}
 
-Keine Sorge, das ist ziemlich einfach. **Designgrundsätze** sind eine Reihe von Richtlinien, auf die wir uns beziehen, wenn wir etwas entwerfen (d. h. erstellen, pflegen oder aktualisieren).
+Keine Sorge, sie sind ziemlich einfach! **Designprinzipien** sind eine Reihe von Richtlinien, auf die wir uns beim Designen (d. h. beim Erstellen, Pflegen oder Aktualisieren) von etwas beziehen.
 
-In Zusammenhang mit ethereum.org bilden diese Designgrundsätze die Basis für das, was wir mit der Website darstellen und der Welt zeigen wollen. Sie sind ambitioniert **und** funktional. Es geht nicht nur darum, wie die Website _aussieht_, sondern auch darum, wie sie _funktioniert_, und sogar darum, welche _Gefühle_ sie bei jemanden auslöst. Alles, von den Farben über die Seitenlayouts bis hin zur Art und Weise, wie wir auf der Website über Ethereum sprechen, sollte von diesen Grundsätzen geprägt sein.
+Im Kontext von ethereum.org bilden diese Designprinzipien die Grundlage dafür, was die Website repräsentieren und der Welt vermitteln soll. Sie sind sowohl erstrebenswert **als auch** funktional. Es geht nicht nur darum, wie die Website _aussieht_, sondern auch darum, wie sie _funktioniert_ und sogar, welches _Gefühl_ sie bei jemandem auslöst. Alles, von den Farben über die Seitenlayouts bis hin zur Art und Weise, wie wir auf der Website über Ethereum sprechen, sollte von diesen Prinzipien geleitet sein.
 
-## Die Grundsätze in der Praxis {#how-decisions-about-the-site-are-made}
+## Die Prinzipien in der Praxis {#how-decisions-about-the-site-are-made}
 
-Sehen wir uns ein Beispiel an. Einer der Grundsätze ist "Glaubwürdig". Das bedeutet, dass Besucher der Site von der Vertrauenswürdigkeit _überzeugt_ _sind_ – genau wie vom breiteren Ethereum-Ökosystem. Dieser Grundsätz gliedert sich in drei funktionale "Unterprinzipien", die wir als umsetzbar erachten, um die Glaubwürdigkeit der Website zu verbessern:
+Schauen wir uns ein Beispiel an. Eines der Prinzipien ist „Glaubwürdig“, was bedeutet, dass wir möchten, dass Besucher der Website _fühlen_ und _wissen_, dass die Website vertrauenswürdig ist – genau wie das breitere Ethereum-Ökosystem. Innerhalb dieses Prinzips haben wir 3 funktionale „Unterprinzipien“, von denen wir glauben, dass sie umsetzbare Schritte sind, die wir ergreifen können, um die Website glaubwürdig zu machen:
 
-- _"Frisch"_ d. h. Inhalte auf aktuellem Stand
-- _"Sozial durchdacht"_ d. h. Darstellung der Größe, Vielfalt und Aktivität des Ökosystems (also Ethereum-Upgrade-Fortschritt, DeFi, Gaming, alle Hackathons usw.)
-- _"Einheitlich"_ d. h. Konsistenz im Seitendesign und der Wortwahl sowie präzise Inhalte
+- _„Aktuell“_ d. h., die Inhalte auf dem neuesten Stand halten.
+- _„Social Proof“_ d. h., die Größe, Vielfalt und Aktivität des Ökosystems zeigen (du weißt schon: Fortschritt bei Ethereum-Upgrades, DeFi, Gaming, all die Hackathons usw.).
+- _„Konsistent“_ d. h., Konsistenz im Design der Website sowie im Ton und in der Genauigkeit der Texte.
 
-Wenn wir Entscheidungen in puncto Design oder Werbetexte tätigen, ziehen wir den Grundsatz "Glaubwürdigkeit" heran und stellen folgende Fragen:
+Wenn wir also Design- oder Textentscheidungen treffen, können wir uns auf das Prinzip „Glaubwürdig“ beziehen und fragen:
 
-- _"Gibt die Seite aktuelle Informationen wieder?"_
-- _"Wie und wo zeigen wir die Größe und Aktivität des Ökösystems?"_
-- _"Sind die vorgeschlagenen Beiträge eines Mitglieds der Community, die ich überprüfe, konsistent mit dem aktuellen Design und Inhalten auf der Seite?"_
+- _„Spiegelt die Website aktuelle Informationen wider?“_
+- _„Wie und wo zeigen wir die Größe und Aktivität des Ökosystems?“_
+- _„Sind die neu vorgeschlagenen Beiträge eines Community-Mitglieds, die ich überprüfe, konsistent mit dem aktuellen Design und den Texten auf der Website?“_
 
-## Designgrundsätze von ethereum.org {#contributors}
+## Die Designprinzipien von ethereum.org {#contributors}
 
 ### 1. Inspirierend {#1-inspirational}
 
-Die Seite sollte Nutzer dazu anregen, sich vorzustellen, welche Veränderungen Ethereum für die Welt brignen könnte. Menschen sollen sich motiviert fühlen, die Tools des Ethereum-Ökösystems zu erkunden, damit zu experimentieren und zu basteln.
+Die Website sollte Nutzer dazu inspirieren, davon zu träumen, wie Ethereum die Welt verändern kann. Sie sollte Menschen motivieren, die Tools und Apps des Ethereum-Ökosystems zu erkunden, damit zu spielen und zu basteln.
 
-- **Fundamental:** Die Seite sollte vermitteln, wie Ethereum ambitioniert versucht, die Welt zu verändern. Es sollte klar werden, dass Ethereum nicht nur eine weitere technische Errungenschaft ist, sondern eine transformative Technologie.
-- **Fördern durch Bildung:** Die Informationen sollten so gestaltet sein, dass Besucher das Potenzial von Ethereum verstehen, einen Platz im Ökösystem finden und sich befähigt fühlen, sich zu beteiligen.
+- **Radikal:** Die Website sollte die ehrgeizigen Ziele von Ethereum kommunizieren, die Welt bedeutsam zu verändern. Es sollte klar sein, dass Ethereum nicht nur ein neuer Tech-Stack ist – es ist eine transformative Technologie.
+- **Befähigung durch Bildung:** Die Website sollte Menschen aufklären, damit sie das Potenzial von Ethereum verstehen, ihren Platz im Ökosystem finden und sich befähigt fühlen, daran teilzunehmen.
 
 Visuelle Ausrichtung • Inhalt
 
-### 2. Allgemein {#2-universal}
+### 2. Universell {#2-universal}
 
-Ethereum ist ein globales, dezentralisiertes Projekt und das zeigt sich auch in unserer Zielgruppe. Ziel ist es, die Site jedem zugänglich zu machen und die Kulturen der Welt zu begrüßen.
+Ethereum ist ein globales, dezentralisiertes Projekt und unser Publikum spiegelt dies wider. Die Website sollte den Anspruch haben, für jeden zugänglich zu sein und sensibel für die vielen Kulturen der Welt zu sein.
 
-- **Barrierefrei:** Die Site sollte Richtlinien zur Barrierefreiheit berücsichtigen, auch Anforderungen für Verbindungen mit geringer Bandbreite.
-- **Einfach:** Die Site sollte einfach und unmissverständlich sein. Texte sollten so formuliert sein, dass sie nicht falsch interpretiert werden oder die Beteudung in der Übersetzung verloren gehen könnte.
-- **Ethereum ist facettenreich:** Ethereum ist ein Projekt, eine Codebasis, eine Community und eine Vision. Ethereum ist für unterschiedliche Menschen aus verschiedenen Gründen wertvoll. Es gibt viele Möglichkeiten zur Beteiligung.
+- **Zugänglich:** Die Website sollte den Richtlinien für Barrierefreiheit folgen – auch für Menschen mit langsamen Internetverbindungen.
+- **Einfach:** Die Website sollte einfach und unmissverständlich sein. Texte sollten keine Sprache verwenden, die falsch interpretiert werden könnte oder bei der Übersetzung verloren geht.
+- **Ethereum ist facettenreich:** Ethereum ist ein Projekt, eine Codebasis, eine Community und eine Vision. Ethereum ist für verschiedene Menschen aus unterschiedlichen Gründen wertvoll, und es gibt viele Möglichkeiten, sich zu beteiligen.
 
-Schriftsystem • Benutzung der Farben • Optische Ausrichtung • Inhalt
+Schriftsysteme • Farbverwendung • Visuelle Ausrichtung • Inhalt
 
 ### 3. Eine gute Geschichte {#3-a-good-story}
 
-Die Website sollte eine gute Geschichte erzählen. Besucher sind auf einer Reise und der Inhalt, den Sie beitragen, ist ein Teil davon. Ihre Beiträge sollten sich mit einer klaren Erzählung einfügen: mit einem Anfang (Einleitung/Einstiegspunkt), Mittelteil (eine Reihe von Erkenntnissen und Einsichten) und ein Schlussteil (ein Link zu relevanten Ressourcen oder nächsten Schritten).
+Die Website sollte wie eine gute Geschichte funktionieren. Besucher befinden sich auf einer Reise, und die Inhalte, die du beisteuerst, sind ein Teil davon. Deine Beiträge sollten in eine klare Erzählung passen: eine mit einem Anfang (Einführung/Einstiegspunkt), einer Mitte (Reihe von Erkenntnissen und Einblicken) und einem Ende (ein Link/Links zu relevanten Ressourcen oder nächsten Schritten).
 
-- **Hierarchisch**: Eine klare hierarchische strukturierte Informationsarchitektur hilft den Besuchern von ethereum.org bei der Navigation durch die "Geschichte", die die Website erzählt, um ihre Ziele zu erreichen.
-- **Ein Sprungbrett:** Wir sind ein Sprungbrett für alle, die nach Antworten suchen. Wir möchten die vielen, bereits vorhandenen Ressourcen nicht ersetzen. Wir geben eine Antwort und zeigen zuverlässige nächste Schritte auf.
+- **Hierarchisch**: Eine klare, hierarchisch strukturierte Informationsarchitektur hilft Besuchern von ethereum.org, auf der Website „wie in einer Geschichte“ zu navigieren, während sie versuchen, ihre Ziele zu erreichen.
+- **Ein Sprungbrett:** Wir sind ein Sprungbrett für jeden, der nach Antworten sucht. Wir wollen die vielen bereits existierenden Ressourcen nicht ersetzen oder ein Ersatz dafür werden. Wir geben eine Antwort und bieten zuverlässige nächste Schritte.
 
-Benutzererfahrung • Inhalt
+Nutzerreisen • Inhalt
 
 ### 4. Glaubwürdig {#4-credible}
 
-Besucher sind entweder auf der Suche nach einem Einstieg in das Ethereum-Ökosystem oder sie stehen der Sache skeptisch gegenüber. Seien Sie sich dieser Verantwortung bewusst und kommunizieren Sie in einer entsprechenden Art und Weise. Stellen Sie sicher, dass die Inhalte das Vertrauen der Besucher in das Ethereum-Ökosystem stärken.
+Menschen suchen vielleicht nach ihrem Einstieg in das Ethereum-Ökosystem oder sie sind Skeptiker. Erkenne diese Verantwortung in deiner Kommunikation an. Stelle sicher, dass beide mit größerem Vertrauen in das Ethereum-Ökosystem gehen.
 
-- **Neu:** immer auf aktuellem Stand.
-- **Soziale durchdacht:** Stellen Sie die Größe, Vielfalt und Aktivität des Ökösystems dar.
-- **Konsistenz:** einheitlich im Desing und glaubwürdige Inhalte.
+- **Aktuell:** Immer auf dem neuesten Stand.
+- **Social Proof:** Zeige die Größe, Vielfalt und Aktivität des Ökosystems.
+- **Konsistent:** Konsistenz in Design und Inhalt vermittelt Glaubwürdigkeit.
 
-Gestaltung • Inhalt
+Visuelle Ausrichtung • Inhalt
 
-### 5. Gemeinsame Verbesserung {#5-collaborative-improvement}
+### 5. Kollaborative Verbesserung {#5-collaborative-improvement}
 
-Die Website ist ein Produkt von vielen Mitwirkenden, genau wie das ganze Ökösystem.
+Die Website ist das Produkt vieler Mitwirkender, genau wie das Ökosystem als Ganzes.
 
-- **Offen:** Stellen sie die Transparenz in den Vordergrund, die den Source Code, die Prozesse und Projekte kennzeichnet und sich durch das ganze Ökösystem zieht.
-- **Erweiterbar:** Das Baukastensystem ist ein zentraler Aspekt, der alles prägt, as wir tun. Mitwirkende sollen diesen Anspruch ebenfalls berücksichtigen. Das Kerndesign, Codekomponenten und Implementatierungen der Site sollten für die Zukunft möglichst austauschbar sein.
-- **Experimentell:** Wir experiementieren, testen und iterieren fortlaufend.
-- **Gemeinschaftlich:** Das Projekt bringt uns alle zusammen.
-- **Nachhaltig:** Treffen Sie Vorbereitungen für die langfristige Verwaltung durch die Community.
+- **Offen:** Feiere die Transparenz von Quellcode, Prozessen und Projekten im gesamten Ökosystem.
+- **Erweiterbar:** Modularität ist ein Hauptfokus bei allem, was wir tun, und daher sollten auch Beiträge modular sein. Das Kerndesign, der Komponentencode und die Implementierung der Website sollten es ermöglichen, sie in Zukunft leicht zu erweitern.
+- **Experimentell:** Wir experimentieren, testen und iterieren ständig.
+- **Kollaborativ:** Dieses Projekt bringt uns alle zusammen.
+- **Nachhaltig:** Vorbereitung auf eine langfristige Pflege durch die Community.
 
-Sie können unsere Designgrundsätze in Aktion sehen, und zwar [überall auf unserer Site](/).
+Du kannst unsere Designprinzipien [auf unserer gesamten Website](/) in Aktion sehen.
 
-## Wir sind an Feedback interessiert {#give-feedback}
+## Gib Feedback {#give-feedback}
 
-**Teilen Sie uns Ihr Feedback zu diesem Dokument mit.** Einer unserer Grundsätze ist "**Gemeinsame Verbesserung**" und das bedeutet, dass die Website ein Produkt aus der Beteiligung vieler Mitwirkenden ist. Daher möchen wir diese Designgrundsätze mit der Ethereum-Community teilen.
+**Teile dein Feedback zu diesem Dokument!** Eines unserer vorgeschlagenen Prinzipien ist „**Kollaborative Verbesserung**“, was bedeutet, dass wir möchten, dass die Website das Produkt vieler Mitwirkender ist. Im Sinne dieses Prinzips möchten wir diese Designprinzipien mit der Ethereum-Community teilen.
 
-Obwohl diese Grundsätze auf die ethereum.org-Website ausgerichtet sind, hoffen wir, dass große Teile davon repräsentativ für die Werte des Ethereum-Ökosystems insgesamt stehen. Vielleicht möchten Sie sogar einige davon für Ihr eigenes Projekt berücksichtigen.
+Obwohl sich diese Prinzipien auf die Website ethereum.org konzentrieren, hoffen wir, dass viele von ihnen repräsentativ für die Werte des gesamten Ethereum-Ökosystems sind. Vielleicht möchtest du sogar einige davon in dein eigenes Projekt integrieren!
 
-Teilen Sie uns Ihre Gedanken mit auf unserem [Discord-Server](https://discord.gg/ethereum-org) oder indem Sie [ein Thema erstellen](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Lass uns deine Gedanken auf unserem [Discord-Server](https://discord.gg/ethereum-org) wissen oder indem du [ein Issue erstellst](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

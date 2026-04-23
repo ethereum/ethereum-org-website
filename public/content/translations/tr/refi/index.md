@@ -65,7 +65,7 @@ Blokzincirler üzerine inşa edilen ve bu sektördeki yerleşik yapıları deği
 
 [Klima Infinity](https://www.klimadao.finance/infinity) ve [Senken](https://senken.io/) gibi bazıları, Verra gibi yerleşik standartlar kapsamında üçüncü taraflarca geliştirilen çok çeşitli projeler sunarken; [Nori](https://nori.com/) gibi diğerleri ise yalnızca kendi karbon kredisi standartları altında geliştirilen, kendilerinin yayınladığı ve kendilerine ait özel bir pazar yeri bulunan belirli projeler sunar.
 
-4. Karbon piyasasının tüm tedarik zinciri etkisinin ve verimliliğinin ölçeklendirilmesini kolaylaştıran temeldeki raylar ve altyapı. [KlimaDAO](http://klimadao.finance/), likiditeyi bir kamu malı olarak sağlar (herkesin şeffaf bir fiyattan karbon kredisi alıp satmasına olanak tanır), ödüllerle karbon piyasalarının işlem hacmini ve kredilerin emekliye ayrılmasını teşvik eder ve çok çeşitli tokenleştirilmiş karbon kredileri hakkında verilere erişmek, bunları edinmek ve emekliye ayırmak için kullanıcı dostu, birlikte çalışabilir araçlar sunar.
+4. Karbon piyasasının tüm tedarik zinciri etkisinin ve verimliliğinin ölçeklendirilmesini kolaylaştıran temeldeki raylar ve altyapı. [KlimaDAO](https://klimadao.finance/), likiditeyi bir kamu malı olarak sağlar (herkesin şeffaf bir fiyattan karbon kredisi alıp satmasına olanak tanır), ödüllerle karbon piyasalarının işlem hacmini ve kredilerin emekliye ayrılmasını teşvik eder ve çok çeşitli tokenleştirilmiş karbon kredileri hakkında verilere erişmek, bunları edinmek ve emekliye ayırmak için kullanıcı dostu, birlikte çalışabilir araçlar sunar.
 
 ## Karbon Piyasalarının Ötesinde ReFi {#refi-beyond}
 

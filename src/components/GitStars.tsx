@@ -4,6 +4,8 @@ import Github from "@/components/icons/github.svg"
 import { Center, Flex } from "@/components/ui/flex"
 import { BaseLink, LinkProps } from "@/components/ui/Link"
 
+import { numberFormat } from "@/lib/utils/numbers"
+
 import Emoji from "./Emoji"
 
 type GitHubRepo = {
@@ -18,19 +20,19 @@ type GitStarsProps = Omit<LinkProps, "href" | "href"> & {
 
 const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
   const locale = useLocale()
-  // Use Intl.NumberFormat to format the number for locale
-  const starsString = Intl.NumberFormat(locale, {
+  // Use numberFormat to format the number for locale
+  const starsString = numberFormat(locale, {
     compactDisplay: "short",
   }).format(gitHubRepo.stargazerCount)
 
   return (
     <BaseLink
-      className="ms-auto text-body no-underline hover:underline"
+      className="text-body ms-auto no-underline hover:underline"
       href={gitHubRepo.url}
       hideArrow
       {...props}
     >
-      <Flex className="items-stretch overflow-hidden rounded bg-background-medium">
+      <Flex className="bg-background-medium items-stretch overflow-hidden rounded">
         {hideStars ? (
           <Github className="m-1 text-2xl" />
         ) : (
@@ -39,8 +41,8 @@ const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
               <Github />
               <Emoji text=":star:" />
             </Center>
-            <Flex className="items-center bg-background-highlight px-1.5">
-              <p className="my-0 text-xs text-body">{starsString}</p>
+            <Flex className="bg-background-highlight items-center px-1.5">
+              <p className="text-body my-0 text-xs">{starsString}</p>
             </Flex>
           </>
         )}

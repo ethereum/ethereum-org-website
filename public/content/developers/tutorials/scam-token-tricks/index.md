@@ -4,6 +4,7 @@ description: In this tutorial we dissect a scam token to see some of the tricks 
 author: Ori Pomerantz
 tags: ["scam", "solidity", "erc-20", "javascript", "typescript"]
 skill: intermediate
+breadcrumb: Scam token tricks
 published: 2023-09-15
 lang: en
 ---
@@ -161,7 +162,7 @@ There are two potential red flags in this function.
 
 - The same issue we saw in `_transfer`, which is when `contract_owner` sends tokens they appear to come from `deployer`.
 
-### The fake events function `dropNewTokens` {#the-fake-events-function-dropNewTokens}
+### The fake events function `dropNewTokens` {#the-fake-events-function-dropnewtokens}
 
 Now we come to something that looks like an actual scam. I edited the function a bit for readability, but it's functionally equivalent.
 
@@ -234,7 +235,7 @@ These code quality issues don't _prove_ that this code is a scam, but they make 
 
 #### The `mount` function {#the-mount-function}
 
-While it is not specified in [the standard](https://eips.ethereum.org/EIPS/eip-20), generally speaking the function that creates new tokens is called [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
+While it is not specified in [the standard](https://eips.ethereum.org/EIPS/eip-20), generally speaking the function that creates new tokens is called [`mint`](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
 If we look in the `wARB` constructor, we see the time mint function has been renamed to `mount` for some reason, and is called five times with a fifth of the initial supply, instead of once for the entire amount for efficiency.
 

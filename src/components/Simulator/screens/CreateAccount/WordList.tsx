@@ -1,5 +1,5 @@
 import React from "react"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 import { OrderedList } from "@/components/ui/list"
 
@@ -33,7 +33,10 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
 
   const splitIndex = Math.floor(words.length / 2)
 
-  const wordMapping = (word: string, index: number): React.ReactElement => {
+  const wordMapping = (
+    word: string,
+    index: number
+  ): React.ReactElement<unknown> => {
     const initialWordDisplay = typeof wordsSelected === "undefined"
     const variant: WordStyleVariantProps["variant"] = initialWordDisplay
       ? "initial"
@@ -88,7 +91,7 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-x-7 whitespace-nowrap bg-background px-4 md:px-8">
+    <div className="bg-background grid grid-cols-2 gap-x-7 px-4 whitespace-nowrap md:px-8">
       <OrderedList className={styles} start={1}>
         {words.map(wordMapping).slice(0, splitIndex)}
       </OrderedList>

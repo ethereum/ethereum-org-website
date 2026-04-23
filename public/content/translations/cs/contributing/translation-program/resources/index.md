@@ -34,10 +34,10 @@ Níže najdete několik užitečných průvodců a nástrojů pro překladatele 
 
 Chcete-li mít přehled o nejnovějším pokroku v překladatelském programu, můžete sledovat [blog Nadace Ethereum](https://blog.ethereum.org/):
 
-- [Aktualizace milníků z října 2021](https://blog.ethereum.org/2021/10/04/translation-program-update/)
-- [Aktualizace milníků z prosince 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20/)
-- [Aktualizace milníků z července 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
-- [Spuštění překladatelského programu v srpnu 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
+- [Aktualizace milníků z října 2021](https://blog.ethereum.org/2021/10/04/translation-program-update)
+- [Aktualizace milníků z prosince 2020](https://blog.ethereum.org/2020/12/21/translation-program-milestones-updates-20)
+- [Aktualizace milníků z července 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone)
+- [Spuštění překladatelského programu v srpnu 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community)
 
 ## Konzultační hodiny pro překladatele {#office-hours}
 

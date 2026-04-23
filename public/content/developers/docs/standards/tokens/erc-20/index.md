@@ -76,7 +76,7 @@ Let's see how a Standard is so important to make things simple for us to inspect
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-20 Token. As you can
 see below we will use a simplified ABI, to make it a low friction example.
 
-#### Web3.py Example {#web3py-example}
+#### Web3.py Example {#web3py-example-2}
 
 First, make sure you have installed [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 
@@ -195,4 +195,3 @@ Some alternative standards have come out of this issue such as [ERC-223](/develo
 - [ERC-20 with Safety Rails](/developers/tutorials/erc20-with-safety-rails/) _– How to add safeguards to ERC-20 tokens to help users avoid common mistakes._
 - [Sending Tokens Using ethers.js](/developers/tutorials/send-token-ethersjs/) _– A beginner-friendly guide to transferring ERC-20 tokens using ethers.js._
 - [Some tricks used by scam tokens and how to detect them](/developers/tutorials/scam-token-tricks/) _– A deep-dive into scam ERC-20 token patterns and how to identify them._
-- [Testing ERC-20 tokens with Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/) _– How to write and run tests for ERC-20 smart contracts using Waffle._

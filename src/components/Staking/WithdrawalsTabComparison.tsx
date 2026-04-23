@@ -7,7 +7,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { Strong } from "../IntlStringElements"
 import { ButtonLink } from "../ui/buttons/Button"
+import InlineLink from "../ui/Link"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -40,7 +42,7 @@ const WithdrawalsTabComparison = () => {
 
       <TabsContent
         value="current"
-        className="space-y-4 bg-background-highlight"
+        className="bg-background-highlight space-y-4"
       >
         <h3>{t("comp-withdrawal-comparison-current-title")}</h3>
         <UnorderedList>
@@ -51,14 +53,27 @@ const WithdrawalsTabComparison = () => {
             <Translation id="page-staking:comp-withdrawal-comparison-current-li-2" />
           </ListItem>
         </UnorderedList>
-        <p className="font-bold">
-          <Translation id="page-staking:comp-withdrawal-comparison-current-p" />
+        <p>
+          {t.rich("page-staking.comp-withdrawal-comparison-current-p", {
+            strong: Strong,
+            // Intentionally kept in English to match Beaconcha.in destination
+            depositsTab: '"Deposits"',
+            withdrawalAddressLabel: '"Withdrawal Address"',
+            beaconchain: (chunks) => (
+              <InlineLink href="https://beaconcha.in">{chunks}</InlineLink>
+            ),
+            prefix: (chunks) => (
+              <span className="text-warning-border dark:text-warning font-mono font-bold">
+                {chunks}
+              </span>
+            ),
+          })}
         </p>
 
         <WithdrawalCredentials />
       </TabsContent>
 
-      <TabsContent value="new" className="space-y-4 bg-background-highlight">
+      <TabsContent value="new" className="bg-background-highlight space-y-4">
         <h3>{t("comp-withdrawal-comparison-new-title")}</h3>
         <UnorderedList>
           <ListItem>{t("comp-withdrawal-comparison-new-li-1")}</ListItem>
