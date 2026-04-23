@@ -9,6 +9,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
+import WalletListingMethodology from "@/components/FindWalletProductTable/WalletListingMethodology"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
@@ -43,6 +44,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     ),
   }))
 
+  const mostRecentWalletUpdate = walletsData
+    .map((w) => w.last_updated)
+    .filter((d): d is string => typeof d === "string" && d.length > 0)
+    .sort()
+    .at(-1)
+  const lastUpdatedDisplay = mostRecentWalletUpdate
+    ? new Date(mostRecentWalletUpdate).toLocaleDateString(locale || "en", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : ""
+
   // Get i18n messages
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage(
@@ -76,6 +90,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
 
           <FindWalletProductTable wallets={wallets} />
+
+          <WalletListingMethodology lastUpdated={lastUpdatedDisplay} />
         </MainArticle>
       </I18nProvider>
     </>
