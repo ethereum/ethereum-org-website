@@ -10,6 +10,7 @@ import clanker from "@/public/images/ai-agents/clanker.png"
 import cookiefun from "@/public/images/ai-agents/cookiefun.png"
 import heyanon from "@/public/images/ai-agents/heyanon.png"
 import luna from "@/public/images/ai-agents/luna.png"
+import subframe from "@/public/images/ai-agents/subframe.png"
 
 const AiAgentProductLists = ({ list }: { list: string }) => {
   // TODO: LOGOS, extract intl strings
@@ -103,6 +104,29 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
       },
     ],
     chat: [
+      {
+        title: "Subframe Protocol",
+        description: "",
+        image: subframe,
+        alt: "Subframe Protocol logo",
+        contentItems: [
+          <p key="subframe-description">
+            Subframe Protocol lets AI agents and users claim a verified
+            onchain identity via ENS subdomains on subframe.eth. Each
+            identity gets a public profile with wallet data, transaction
+            history, and an AI-powered wallet analyzer built in.
+          </p>,
+          <div key="subframe-button">
+            <ButtonLink
+              href="https://subframe.network"
+              target="_blank"
+              variant="outline"
+            >
+              Claim your identity
+            </ButtonLink>
+          </div>,
+        ],
+      },
       {
         title: "Bankr",
         description: "",
