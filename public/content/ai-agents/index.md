@@ -52,10 +52,20 @@ Ethereum provides a unique set of technical foundations for deploying production
 
 The AI agent builder hub covers each of these core building blocks in depth:
 
-- **Programmable wallets**: Agents can hold and transfer digital assets directly. A [smart account](/account-abstraction/) functions as the agent's onchain identity and treasury, with spending limits, allowlists, and session keys enforced at the contract level. See [Agent wallets](/ai-agents/wallets/).
-- **Verifiable inference**: An agent running offchain is a black box. By anchoring key decisions to onchain proofs via zkML or TEEs, developers can give counterparties a way to confirm that the agent followed its stated logic. See [Verification](/ai-agents/verification/).
-- **Machine payments**: Autonomous agents need to pay for compute and data without human intervention. Stablecoins and open protocols like x402 provide a programmable settlement layer for agent commerce. See [Payments](/ai-agents/payments/).
-- **Agent identity**: When agents interact with humans or other agents, counterparties need a way to verify what an agent is and what its track record is using onchain registries like ERC-8004. See [Identity](/ai-agents/identity/).
+<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8 my-8">
+  <Card emoji=":closed_lock_with_key:" title="Programmable wallets" description="Agents can hold and transfer digital assets directly. A smart account functions as the agent's onchain identity and treasury, with spending limits, allowlists, and session keys enforced at the contract level.">
+    <a href="/ai-agents/wallets/">See Agent wallets</a>
+  </Card>
+  <Card emoji=":mag:" title="Verifiable inference" description="An agent running offchain is a black box. By anchoring key decisions to onchain proofs via zkML or TEEs, developers can give counterparties a way to confirm that the agent followed its stated logic.">
+    <a href="/ai-agents/verification/">See Verification</a>
+  </Card>
+  <Card emoji=":money_with_wings:" title="Machine payments" description="Autonomous agents need to pay for compute and data without human intervention. Stablecoins and open protocols like x402 provide a programmable settlement layer for agent commerce.">
+    <a href="/ai-agents/payments/">See Payments</a>
+  </Card>
+  <Card emoji=":bust_in_silhouette:" title="Agent identity" description="When agents interact with humans or other agents, counterparties need a way to verify what an agent is and what its track record is using onchain registries like ERC-8004.">
+    <a href="/ai-agents/identity/">See Identity</a>
+  </Card>
+</CardGrid>
 
 ## AI agent infrastructure today {#ecosystem-today}
 
