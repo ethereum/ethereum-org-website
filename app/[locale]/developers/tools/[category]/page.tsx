@@ -11,8 +11,6 @@ import { Section } from "@/components/ui/section"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
 import CategoryToolsGrid from "../_components/CategoryToolsGrid"
 import HighlightsSection from "../_components/HighlightsSection"
 import ToolModalContents from "../_components/ToolModalContents"
@@ -119,7 +117,7 @@ const Page = async (props: {
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title-other")}</h2>
-          <div className="grid grid-cols-fill-4 gap-8">
+          <div className="grid-cols-fill-4 grid gap-8">
             {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
               ({ slug, Icon }) => (
                 <SubpageCard
@@ -170,10 +168,7 @@ export async function generateMetadata(props: {
       ),
     })
   } catch {
-    const t = await getTranslations({
-      locale: DEFAULT_LOCALE,
-      namespace: "common",
-    })
+    const t = await getTranslations("common")
 
     return {
       title: t("page-not-found"),

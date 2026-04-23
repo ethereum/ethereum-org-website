@@ -36,8 +36,6 @@ import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
 import AppsHighlight from "../../_components/AppsHighlight"
 import AppsTable from "../../_components/AppsTable"
 import SuggestAnApp from "../../_components/SuggestAnApp"
@@ -151,7 +149,7 @@ const Page = async (props: {
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
@@ -159,7 +157,7 @@ const Page = async (props: {
                       {t("page-apps-all-apps")}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
@@ -257,10 +255,7 @@ export async function generateMetadata(props: {
       description,
     })
   } catch {
-    const t = await getTranslations({
-      locale: DEFAULT_LOCALE,
-      namespace: "common",
-    })
+    const t = await getTranslations("common")
 
     return {
       title: t("page-not-found"),
