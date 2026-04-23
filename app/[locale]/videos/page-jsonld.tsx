@@ -4,8 +4,9 @@ import type { VideoCardData } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 
 export default async function VideosPageJsonLD({
   locale,
@@ -23,7 +24,7 @@ export default async function VideosPageJsonLD({
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
-        "@type": "CollectionPage",
+        "@type": "VideoGallery",
         "@id": url,
         name: t("page-videos-meta-title"),
         description: t("page-videos-meta-description"),
@@ -66,7 +67,6 @@ export default async function VideosPageJsonLD({
                 ? -1
                 : 0
           )
-          .slice(0, 10)
           .map((video, index) => ({
             "@type": "ListItem",
             position: index + 1,
