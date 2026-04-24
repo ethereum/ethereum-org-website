@@ -29,12 +29,16 @@ Building bridges between Ethereum and the Thai community 🇹🇭. Focused on **
 
 ---
 
-### ☕ Support My Work
-If you value my contributions to the Thai Web3 ecosystem, you can support me directly:
+### ☕ Support My Work (Base Network 🔵)
+หากคุณต้องการสนับสนุนการทำงานของผมเพื่อสร้าง Ecosystem ในไทยให้แข็งแกร่งขึ้น:
 
-| Network | Address |
+| [ ![Support via Base](https://img.shields.io/badge/Support-Base_Network-0052FF?style=for-the-badge&logo=base&logoColor=white) ](https://blockscan.com/address/0x4971c0016ce3eb45a70d50b6627885524ee9961f) | [ ![Copy Address](https://img.shields.io/badge/Copy-Wallet_Address-gray?style=for-the-badge) ](#) |
 | :--- | :--- |
-| **ETH / Base / ARB** | `0x4971c0016ce3eb45a70d50b6627885524ee9961f` |
+
+**EVM Address (ETH / Base / ARB):**
+`0x4971c0016ce3eb45a70d50b6627885524ee9961f`
+
+> 💡 **Tip:** การสนับสนุนผ่าน **Base Network** จะช่วยลดค่าธรรมเนียม (Gas) และรวดเร็วที่สุดครับ
 
 ---
 
