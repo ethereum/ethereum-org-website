@@ -247,7 +247,7 @@ Pasar ruang blok mengatur penyertaan transaksi pengguna akhir, baik secara langs
 #### Penelitian terbaru {#recent-research-10}
 
 - [Presentasi video EIP-1559 Multidimensi](https://youtu.be/QbR4MTgnCko)
-- [MEV lintas domain](http://arxiv.org/abs/2112.01472)
+- [MEV lintas domain](https://arxiv.org/abs/2112.01472)
 - [Lelang MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Insentif proof-of-stake {#proof-of-stake-incentives}

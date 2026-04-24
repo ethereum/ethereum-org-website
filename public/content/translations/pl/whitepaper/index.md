@@ -517,7 +517,7 @@ Koncepcja dowolnej funkcji przejścia stanu, zaimplementowana w protokole Ethere
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Dowody pracy wielokrotnego użytku](https://nakamotoinstitute.org/finney/rpow/)
 6. [Bezpieczne tytuły własności z upoważnieniem właściciela](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Biała księga Bitcoina](http://bitcoin.org/bitcoin.pdf)
+7. [Biała księga Bitcoina](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Trójkąt Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Biała księga kolorowych monet](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

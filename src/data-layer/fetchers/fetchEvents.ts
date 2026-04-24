@@ -1,6 +1,9 @@
 import type { EventItem, EventType, GeodeApiEventItem } from "@/lib/types"
 
-import { parseLocationToContinent } from "@/lib/utils/geography"
+import {
+  isOnlineLocation,
+  parseLocationToContinent,
+} from "@/lib/utils/geography"
 import { slugify } from "@/lib/utils/url"
 
 import { uploadToS3 } from "../s3"
@@ -46,7 +49,7 @@ function transformEvent(event: GeodeApiEventItem): EventItem {
     ...event,
     id: slugify(event.title),
     eventTypes: getEventTypes(event.tags),
-    isOnline: event.location.toLowerCase() === "online",
+    isOnline: isOnlineLocation(event.location),
     continent: parseLocationToContinent(event.location),
   }
 }

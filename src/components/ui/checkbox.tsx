@@ -20,7 +20,7 @@ const Checkbox = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
-    className={cn(commonControlClasses, "rounded-sm", className)}
+    className={cn(commonControlClasses, "rounded-xs", className)}
     {...props}
   >
     <CheckboxPrimitive.Indicator className="grid place-items-center">

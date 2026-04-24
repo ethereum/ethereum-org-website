@@ -94,7 +94,7 @@ def to_binary(x):
 - il byte '\\x00' = `[ 0x00 ]`
 - il byte '\\x0f' = `[ 0x0f ]`
 - i byte '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- la [rappresentazione teorica degli insiemi](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) di tre, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- la [rappresentazione teorica degli insiemi](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) di tre, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - la stringa "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
 ## Decodifica RLP {#rlp-decoding}

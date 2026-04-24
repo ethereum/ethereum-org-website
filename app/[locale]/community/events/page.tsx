@@ -61,7 +61,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   // Get highlighted conferences (with highlight flag or first 3)
   const conferences = events.filter(
@@ -82,7 +82,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups()
+  const meetupGroups = getMeetupGroups(locale)
   const meetups = [...apiMeetups, ...meetupGroups]
 
   // Continent labels for tabs
@@ -259,14 +259,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <ButtonLink
                 href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
                 variant="outline"
-                className="group w-full gap-2 rounded-4xl border-body-light p-5"
+                className="border-body-light group w-full gap-2 rounded-4xl p-5"
                 customEventOptions={{
                   eventCategory: "Events",
                   eventAction: "hubs",
                   eventName: "apply",
                 }}
               >
-                <div className="rounded-full border border-dashed border-primary p-3">
+                <div className="border-primary rounded-full border border-dashed p-3">
                   <Plus className="size-4 transition-transform group-hover:scale-150 group-hover:transition-transform" />
                 </div>
                 {t("page-events-hub-apply-cta")}
@@ -277,7 +277,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           {/* Find events near you */}
           <Section
             id="search"
-            className="rounded-t-[4rem] bg-gradient-banner px-6 py-12 md:px-12 md:py-16 dark:bg-radial-b"
+            className="bg-gradient-banner dark:bg-radial-b rounded-t-[4rem] px-6 py-12 md:px-12 md:py-16"
           >
             <div className="space-y-6">
               <div className="space-y-2 text-center">
@@ -364,6 +364,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 eventName: "regular_conf",
               }}
             />
+            <p className="text-body-medium !mt-8">
+              {t.rich("page-events-data-source-callout", {
+                a: (chunks) => (
+                  <Link href="https://ethstars.xyz/">{chunks}</Link>
+                ),
+              })}
+            </p>
             <div className="flex justify-center">
               <ButtonLink
                 href="/community/events/conferences/"
@@ -428,7 +435,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="grid gap-8 md:grid-cols-2">
               {/* Ethereum Everywhere Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
+              <div className="from-accent-a/5 to-accent-a/15 dark:from-accent-a/10 dark:to-accent-a/20 flex flex-col gap-y-8 rounded-4xl bg-linear-to-b px-4 py-6 md:p-12">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
@@ -492,7 +499,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </div>
 
               {/* Geode Labs Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
+              <div className="from-accent-c/5 to-accent-c/15 dark:from-accent-c/10 dark:to-accent-c/20 flex flex-col gap-y-8 rounded-4xl bg-linear-to-b px-4 py-6 md:p-12">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={geodeLabsLogo} alt="" sizes="4rem" />

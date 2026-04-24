@@ -159,5 +159,5 @@ Schema del livello di rete per i client di consenso e di esecuzione, da [ethrese
 [Da kademlia a discv5](https://vac.dev/kademlia-to-discv5)
 [Documento su kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Introduzione al p2p di Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[Relazione eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[Relazione eth1/eth2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [Video sui dettagli del client eth2 e della fusione (merge)](https://www.youtube.com/watch?v=zNIrIninMgg)

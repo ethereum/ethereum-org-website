@@ -1,0 +1,22 @@
+{
+  "page-title": "Open Source Licensing",
+  "page-description": "Learn about free software licenses and how to <explorer>choose the right one</explorer> for your project.",
+  "hero-cta-primary": "Get started",
+  "hero-cta-secondary": "View license comparison",
+  "stat-label-projects": "Open source projects tracked",
+  "stat-label-contributors": "Active contributors",
+  "banner-text": "New to open source? <strong>Start</strong> with our <a href=\"/contributing/\">contribution guide</a>.",
+  "footer-note": "License data sourced from <a href=\"https://spdx.org/licenses/\" target=\"_blank\">SPDX</a>. Compliance tools provided by <a href=\"https://fossa.com/\" target=\"_blank\">FOSSA</a>.",
+  "filter-label": "Filter by license type",
+  "empty-results": "No licenses found matching your criteria. Try adjusting your filters.",
+  "welcome-user": "Welcome back, {username}!",
+  "project-count": "{count, plural, =0 {No projects found} one {# project found} other {# projects found}}",
+  "contribution-status": "{status, select, pending {Your contribution is pending review} approved {Your contribution has been approved} rejected {Your contribution needs revisions} other {Unknown status}}",
+  "nested": {
+    "section-title": "Additional Resources",
+    "section-description": "Explore more about open source licensing and compliance.",
+    "link-text": "View all resources"
+  },
+  "multi-link": "Read the <a href=\"https://opensource.org/osd\">Open Source Definition</a>, review the <a href=\"https://choosealicense.com/\">license chooser</a>, and check <a href=\"https://spdx.org/\">SPDX identifiers</a>.",
+  "markdown-description": "## Quick Reference\n\n- **MIT**: Most permissive, minimal restrictions\n- **Apache-2.0**: Permissive with patent grant\n- **GPL-3.0**: Strong copyleft, derivatives must be GPL\n\nFor more details, see the [full comparison](/open-source/#comparison-table)."
+}

@@ -500,7 +500,7 @@ kazi zingine za mkataba. Kwa kimapokeo kazi za faragha zinaitwa `_<something>`, 
 hali.
 
 Kawaida katika Solidity tunatumia `msg.sender` kwa mtumaji wa ujumbe. Hata hivyo, hiyo inavunja
-[OpenGSN](http://opengsn.org/). Ikiwa tunataka kuruhusu miamala isiyo na ether na tokeni yetu, tunahitaji
+[OpenGSN](https://opengsn.org/). Ikiwa tunataka kuruhusu miamala isiyo na ether na tokeni yetu, tunahitaji
 kutumia `_msgSender()`. Inarudisha `msg.sender` kwa miamala ya kawaida, lakini kwa isiyo na ether
 hurudisha mtia saini asilia na sio mkataba uliopitisha ujumbe.
 

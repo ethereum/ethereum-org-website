@@ -67,7 +67,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       const url = getFullUrl(locale, videoSlug)
       if (seenUrls.has(url)) continue
       seenUrls.add(url)
-      entries.push({ url, alternates, changeFrequency: "monthly", priority: 0.6 })
+      entries.push({
+        url,
+        alternates,
+        changeFrequency: "monthly",
+        priority: 0.6,
+      })
     }
   }
 

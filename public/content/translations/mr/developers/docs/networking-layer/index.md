@@ -159,5 +159,5 @@ SSZ म्हणजे सिंपल सीरियलायझेशन. ह
 [kademlia to discv5](https://vac.dev/kademlia-to-discv5)
 [kademlia पेपर](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Ethereum p2p चा परिचय](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[eth1/eth2 संबंध](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[eth1/eth2 संबंध](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [मर्ज आणि eth2 क्लायंट तपशील व्हिडिओ](https://www.youtube.com/watch?v=zNIrIninMgg)

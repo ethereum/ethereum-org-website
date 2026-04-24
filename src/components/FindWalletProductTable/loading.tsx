@@ -32,7 +32,7 @@ const Loading = () => (
       {Array.from({ length: 5 }).map((_, idx) => (
         <Skeleton
           key={"personas" + idx}
-          className="h-40 min-w-48 rounded-2xl shadow-svg-button-link xl:h-32"
+          className="shadow-svg-button-link h-40 min-w-48 rounded-2xl xl:h-32"
         />
       ))}
     </div>

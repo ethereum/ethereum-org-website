@@ -26,7 +26,7 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
         {step === 1 ? (
           <motion.button
             className={cn(
-              "hover:outline-primary-hover, grid border-body bg-body shadow-md duration-300 hover:outline hover:outline-2 hover:outline-offset-2",
+              "hover:outline-primary-hover, border-body bg-body grid shadow-md duration-300 hover:outline hover:outline-2 hover:outline-offset-2",
               sharedIconClasses
             )}
             initial={{ opacity: 0 }}
@@ -34,18 +34,18 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
             exit={{ opacity: 0 }}
             onClick={nav.progressStepper}
           >
-            <EthGlyphIcon className="size-[1em] text-2xl text-background sm:text-3xl" />
+            <EthGlyphIcon className="text-background size-[1em] text-2xl sm:text-3xl" />
           </motion.button>
         ) : (
           <motion.div
             className={cn(
               sharedIconClasses,
-              "grid border-dashed border-disabled bg-background duration-200"
+              "border-disabled bg-background grid border-dashed duration-200"
             )}
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <ArrowDown className="!size-[1em] !text-2xl !text-disabled sm:!text-3xl" />
+            <ArrowDown className="!text-disabled !size-[1em] !text-2xl sm:!text-3xl" />
           </motion.div>
         )}
       </AnimatePresence>

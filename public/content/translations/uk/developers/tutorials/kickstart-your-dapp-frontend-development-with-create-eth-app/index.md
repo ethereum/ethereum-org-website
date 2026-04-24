@@ -18,7 +18,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Минулого разу ми розглядали [загальну картину Solidity](https://soliditydeveloper.com/solidity-overview-2020) і вже згадували про [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Тепер ви дізнаєтеся, як його використовувати, які функції інтегровано та додаткові ідеї щодо його розширення. Цей застосунок, створений Полом Разваном Бергом, засновником [Sablier](http://sablier.com/), допоможе вам швидко розпочати розробку фронтенду та пропонує кілька додаткових інтеграцій на вибір.
+Минулого разу ми розглядали [загальну картину Solidity](https://soliditydeveloper.com/solidity-overview-2020) і вже згадували про [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Тепер ви дізнаєтеся, як його використовувати, які функції інтегровано та додаткові ідеї щодо його розширення. Цей застосунок, створений Полом Разваном Бергом, засновником [Sablier](https://sablier.com/), допоможе вам швидко розпочати розробку фронтенду та пропонує кілька додаткових інтеграцій на вибір.
 
 ## Встановлення {#installation}
 

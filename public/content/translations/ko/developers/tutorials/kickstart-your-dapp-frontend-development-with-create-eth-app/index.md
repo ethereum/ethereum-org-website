@@ -11,7 +11,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-지난번에 우리는 [솔리디티의 큰 그림](https://soliditydeveloper.com/solidity-overview-2020)을 살펴보고 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)에 대해 이미 언급했습니다. 이제부터 사용 방법, 통합된 기능, 그리고 이를 확장하기 위한 추가적인 아이디어에 대해 알아보겠습니다. [Sablier](http://sablier.com/)의 창립자인 Paul Razvan Berg가 시작한 이 앱은 프론트엔드 개발을 시작하는 데 도움을 주며, 선택할 수 있는 몇 가지 선택적 통합 기능을 제공합니다.
+지난번에 우리는 [솔리디티의 큰 그림](https://soliditydeveloper.com/solidity-overview-2020)을 살펴보고 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)에 대해 이미 언급했습니다. 이제부터 사용 방법, 통합된 기능, 그리고 이를 확장하기 위한 추가적인 아이디어에 대해 알아보겠습니다. [Sablier](https://sablier.com/)의 창립자인 Paul Razvan Berg가 시작한 이 앱은 프론트엔드 개발을 시작하는 데 도움을 주며, 선택할 수 있는 몇 가지 선택적 통합 기능을 제공합니다.
 
 ## 설치 {#installation}
 

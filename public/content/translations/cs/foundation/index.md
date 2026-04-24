@@ -9,7 +9,7 @@ lang: cs
 
 <Logo/>
 
-[Nadace Ethereum](http://ethereum.foundation/) (EF) je nezisková organizace, která podporuje ekosystém Etherea. Financuje vývoj protokolu, rozvíjí ekosystém a zasazuje se o Ethereum.
+[Nadace Ethereum](https://ethereum.foundation/) (EF) je nezisková organizace, která podporuje ekosystém Etherea. Financuje vývoj protokolu, rozvíjí ekosystém a zasazuje se o Ethereum.
 
 Nadace EF není společnost ani tradiční neziskovka. Neovládá ani nevede Ethereum, ani není jedinou organizací, která financuje kritický vývoj technologií souvisejících s Ethereem. EF je jednou z částí mnohem většího [ekosystému](/community/).
 

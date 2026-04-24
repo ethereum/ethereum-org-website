@@ -236,7 +236,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                     strong: Strong,
                   })}
                 </p>
-                <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
+                <UnorderedList className="mt-2 mb-0 [&>li]:mb-0.5">
                   <ListItem>
                     {t.rich("page-what-is-ether-how-to-buy-eth-description-5", {
                       strong: Strong,

@@ -17,7 +17,7 @@ published: 2021-03-31
 
 जर तुम्ही ब्लॉकचेन डेव्हलपमेंटमध्ये नवीन असाल आणि कुठून सुरुवात करावी हे माहित नसेल, किंवा जर तुम्हाला फक्त स्मार्ट कॉन्ट्रॅक्ट कसे उपयोजित करायचे आणि त्यांच्याशी संवाद कसा साधायचा हे समजून घ्यायचे असेल, तर हा मार्गदर्शक तुमच्यासाठी आहे. आपण व्हर्च्युअल वॉलेट [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), आणि [Alchemy](https://www.alchemy.com/eth) वापरून सेपोलिया टेस्ट नेटवर्कवर एक साधे स्मार्ट कॉन्ट्रॅक्ट तयार करण्याची आणि उपयोजित करण्याची प्रक्रिया पाहू (यापैकी कशाचाही अर्थ तुम्हाला अजून समजत नसेल, तर काळजी करू नका, आम्ही ते स्पष्ट करू).
 
-या ट्युटोरियलच्या [भाग २](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) मध्ये, एकदा आपले स्मार्ट कॉन्ट्रॅक्ट येथे उपयोजित झाल्यावर आपण त्याच्याशी संवाद कसा साधू शकतो हे पाहू, आणि [भाग ३](https.www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) मध्ये आपण ते Etherscan वर कसे प्रकाशित करायचे हे पाहू.
+या ट्युटोरियलच्या [भाग २](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) मध्ये, एकदा आपले स्मार्ट कॉन्ट्रॅक्ट येथे उपयोजित झाल्यावर आपण त्याच्याशी संवाद कसा साधू शकतो हे पाहू, आणि [भाग ३](https://www.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) मध्ये आपण ते Etherscan वर कसे प्रकाशित करायचे हे पाहू.
 
 तुम्हाला कोणत्याही वेळी प्रश्न पडल्यास [Alchemy Discord](https://discord.gg/gWuC7zB) मध्ये मोकळेपणाने संपर्क साधा!
 

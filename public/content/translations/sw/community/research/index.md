@@ -247,7 +247,7 @@ Masoko ya nafasi ya kitalu yanasimamia ujumuishaji wa miamala ya watumiaji wa mw
 #### Utafiti wa hivi karibuni {#recent-research-10}
 
 - [Uwasilishaji wa video wa EIP-1559 wa pande nyingi](https://youtu.be/QbR4MTgnCko)
-- [MEV ya kikoa mtambuka](http://arxiv.org/abs/2112.01472)
+- [MEV ya kikoa mtambuka](https://arxiv.org/abs/2112.01472)
 - [Minada ya MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Motisha za uthibitishaji wa dhamana {#proof-of-stake-incentives}

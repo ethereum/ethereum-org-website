@@ -80,7 +80,7 @@ const VideoLandingPage = async (props: {
         <div className="space-y-4">
           <h1>{frontmatter.title}</h1>
 
-          <p className="text-lg text-body-medium">{frontmatter.description}</p>
+          <p className="text-body-medium text-lg">{frontmatter.description}</p>
 
           <p className="text-body-medium">
             {t("page-videos-date-published")}:{" "}

@@ -4,11 +4,9 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 
 export default async function WhatIsTheEthereumNetworkPageJsonLD({
   locale,
@@ -32,6 +30,7 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -40,13 +39,8 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -70,8 +64,8 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#what-is-the-ethereum-network` },
       },
       {
@@ -80,10 +74,9 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
         headline: t("page-what-is-ethereum-network-title"),
         description: t("page-what-is-ethereum-network-meta-description"),
         image: "https://ethereum.org/images/what-is-ethereum-network.png",
-        author: [ethereumCommunityOrganization],
-        publisher: ethereumFoundationOrganization,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationOrganization,
         about: {
           "@type": "Thing",
           name: "Ethereum Network",

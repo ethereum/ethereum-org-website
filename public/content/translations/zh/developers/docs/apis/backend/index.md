@@ -111,7 +111,7 @@ lang: zh
 **Nethereum -** **_一个面向区块链的开源 .NET 集成库。_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [相关文档](http://docs.nethereum.com/en/latest/)
+- [相关文档](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python 工具 -** **_通过 Python 与以太坊交互的各种程序库。_**

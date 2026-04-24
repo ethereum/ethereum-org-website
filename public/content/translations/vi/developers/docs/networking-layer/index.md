@@ -159,5 +159,5 @@ Sơ đồ lớp mạng cho các máy khách đồng thuận và thực thi, từ
 [kademlia sang discv5](https://vac.dev/kademlia-to-discv5)
 [Bài báo Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Giới thiệu về mạng p2p của Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[Mối quan hệ eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[Mối quan hệ eth1/eth2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [Video chi tiết về việc hợp nhất và máy khách eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

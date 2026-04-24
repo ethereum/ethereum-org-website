@@ -45,7 +45,7 @@ const BoxGrid = ({ items }: BoxGridProps) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (
-    <div className="my-16 grid grid-cols-1 rounded-sm lg:grid-cols-4">
+    <div className="my-16 grid grid-cols-1 rounded-xs lg:grid-cols-4">
       {items.map((item, idx: number) => {
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
@@ -54,10 +54,10 @@ const BoxGrid = ({ items }: BoxGridProps) => {
         return (
           <Flex
             className={cn(
-              "cursor-pointer items-center justify-between border border-body p-6 transition-transform duration-500 hover:-skew-x-6 hover:shadow-table-box-hover lg:items-stretch",
+              "border-body hover:shadow-table-box-hover cursor-pointer items-center justify-between border p-6 transition-transform duration-500 hover:-skew-x-6 lg:items-stretch",
               isOpen
                 ? `flex-col text-gray-600 sm:flex-col lg:row-start-1 lg:row-end-3 lg:flex-col ${color}`
-                : "flex-col-reverse bg-background text-body hover:bg-background-highlight sm:flex-row-reverse lg:flex-col-reverse"
+                : "bg-background text-body hover:bg-background-highlight flex-col-reverse sm:flex-row-reverse lg:flex-col-reverse"
             )}
             onClick={() => {
               setOpenIndex(idx)
@@ -79,11 +79,11 @@ const BoxGrid = ({ items }: BoxGridProps) => {
               text={item.emoji}
             />
             <div>
-              <h3 className="mb-8 mt-0 text-[2.5rem] font-normal leading-xs">
+              <h3 className="leading-xs mt-0 mb-8 text-[2.5rem] font-normal">
                 {item.title}
               </h3>
               {isOpen && (
-                <p className="mb-6 text-xl leading-xs text-gray-600">
+                <p className="leading-xs mb-6 text-xl text-gray-600">
                   {item.description}
                 </p>
               )}

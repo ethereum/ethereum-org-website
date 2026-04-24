@@ -22,7 +22,7 @@ import { ContentLayout } from "../ContentLayout"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-4 gap-8" {...props} />
+  <div className="grid-cols-fill-4 grid gap-8" {...props} />
 )
 
 // UseCases layout components
@@ -66,6 +66,15 @@ export const UseCasesLayout = ({
     text: t("template-usecase:template-usecase-dropdown"),
     ariaLabel: t("template-usecase:template-usecase-dropdown-aria"),
     items: [
+      {
+        text: t("template-usecase:template-usecase-dropdown-all-use-cases"),
+        href: "/use-cases/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "all-use-cases",
+        },
+      },
       {
         text: t("template-usecase:template-usecase-dropdown-defi"),
         href: "/defi/",
