@@ -117,7 +117,7 @@ const Page = async (props: {
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title-other")}</h2>
-          <div className="grid grid-cols-fill-4 gap-8">
+          <div className="grid-cols-fill-4 grid gap-8">
             {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
               ({ slug, Icon }) => (
                 <SubpageCard

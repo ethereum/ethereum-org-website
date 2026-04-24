@@ -49,7 +49,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         breadcrumbs={<Breadcrumbs slug="community/support" startDepth={1} />}
         title={t("page-community-support-hero-title")}
         subtitle={
-          <div className="space-y-[1lh] text-base text-body-medium">
+          <div className="text-body-medium space-y-[1lh] text-base">
             <p className="text-lg">
               {t("page-community-support-hero-subtitle-1")}
             </p>
@@ -64,7 +64,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
       <MainArticle className="space-y-16 px-4 py-16 md:px-10 md:py-20">
         {/* Decentralization alert */}
-        <Alert className="max-w-3xl text-body-medium">
+        <Alert className="text-body-medium max-w-3xl">
           <AlertIcon>
             <Shield />
           </AlertIcon>
@@ -100,7 +100,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   className="h-fit"
                 >
                   <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                    <p className="text-sm leading-relaxed text-body-medium">
+                    <p className="text-body-medium text-sm leading-relaxed">
                       {t(descriptionKey)}
                     </p>
                     {items.map(({ labelKey, href, eventName }) => (
@@ -146,7 +146,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   className="h-fit"
                 >
                   <div className="[&>*]:px-6 [&>*]:py-4 [&>a]:block [&>a]:border-t [&>a]:no-underline">
-                    <p className="text-sm leading-relaxed text-body-medium">
+                    <p className="text-body-medium text-sm leading-relaxed">
                       {t(descriptionKey)}
                     </p>
                     {items.map(({ labelKey, href, eventName }) => (
@@ -173,13 +173,13 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         {/* Still need help? */}
         <Section
           id="still-need-help"
-          className="space-y-8 rounded-4xl border border-accent-a/20 bg-linear-to-b from-accent-a/5 to-accent-a/10 px-8 py-16 lg:px-16 dark:from-accent-a/10 dark:to-accent-a/20"
+          className="border-accent-a/20 from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20 space-y-8 rounded-4xl border bg-linear-to-b px-8 py-16 lg:px-16"
         >
           <div className="flex flex-col items-center gap-6 text-center">
             <h2 className="text-3xl font-bold lg:text-4xl">
               {t("page-community-support-still-need-help")}
             </h2>
-            <p className="max-w-lg text-body-medium">
+            <p className="text-body-medium max-w-lg">
               {t("page-community-support-still-need-help-description")}
             </p>
             <ButtonLink
