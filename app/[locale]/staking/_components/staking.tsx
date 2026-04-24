@@ -1,6 +1,5 @@
-"use client"
-
 import { type HTMLAttributes, ReactNode } from "react"
+import { getTranslations } from "next-intl/server"
 
 import type {
   ChildOnlyProp,
@@ -32,7 +31,6 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
 
-import useTranslation from "@/hooks/useTranslation"
 import rhino from "@/public/images/upgrades/upgrade_rhino.png"
 
 type BenefitsType = {
@@ -109,12 +107,12 @@ type Props = PageWithContributorsProps & {
   data: StakingStatsData
 }
 
-const StakingPage = ({
+const StakingPage = async ({
   data,
   contributors,
   lastEditLocaleTimestamp,
 }: Props) => {
-  const { t } = useTranslation("page-staking")
+  const t = await getTranslations("page-staking")
 
   const heroContent = {
     title: t("page-staking-hero-title"),

@@ -1,79 +1,82 @@
-"use client"
+import { readFileSync } from "fs"
+import { join } from "path"
 
-import { useEffect, useState } from "react"
 import { shuffle } from "lodash"
 
-import { Image } from "@/components/Image"
 import { Flex } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
-import allContributors from "../../../all-contributors.json"
+import "server-only"
 
 export interface Contributor {
   login: string
   name: string
   avatar_url: string
   profile?: string
-  contributions: Array<string>
 }
 
 interface ContributorsProps {
   contributors?: Contributor[]
 }
 
+type AllContributorsRc = {
+  contributors: (Contributor & { contributions?: string[] })[]
+}
+
+// Read `.all-contributorsrc` (bot-maintained) once at module load.
+// `server-only` ensures this module never ends up in a client bundle.
+const raw = readFileSync(join(process.cwd(), ".all-contributorsrc"), "utf-8")
+const { contributors: rawContributors } = JSON.parse(raw) as AllContributorsRc
+
+// Trim to the fields the card actually renders and shuffle once per SSG worker.
+const shuffledContributors: Contributor[] = shuffle(
+  rawContributors.map(({ login, name, avatar_url, profile }) => ({
+    login,
+    name,
+    avatar_url,
+    profile,
+  }))
+)
+
+const cardClassName =
+  "hover:bg-background-highlight m-2 block max-w-[132px] shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded focus:scale-[1.02] focus:rounded"
+
 const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
-  const content = (
+  const body = (
     <>
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         className="h-[132px] w-[132px]"
         src={contributor.avatar_url}
         alt=""
         width={132}
         height={132}
-        sizes="132px"
+        loading="lazy"
+        decoding="async"
       />
       <div className="p-4">
-        <h3 className="text-md text-body mt-2 mb-4">
-          {contributor.profile ? (
-            <LinkOverlay asChild>
-              <InlineLink
-                className="text-body no-underline hover:no-underline"
-                href={contributor.profile}
-                hideArrow
-              >
-                {contributor.name}
-              </InlineLink>
-            </LinkOverlay>
-          ) : (
-            contributor.name
-          )}
-        </h3>
+        <h3 className="text-md text-body mt-2 mb-4">{contributor.name}</h3>
       </div>
     </>
   )
 
   if (contributor.profile) {
     return (
-      <LinkBox className="hover:bg-background-highlight m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded focus:scale-[1.02] focus:rounded">
-        {content}
-      </LinkBox>
+      <a
+        href={contributor.profile}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${cardClassName} text-body no-underline hover:no-underline`}
+      >
+        {body}
+      </a>
     )
   }
 
-  return <div className="m-2 max-w-[132px] shadow">{content}</div>
+  return <div className={cardClassName}>{body}</div>
 }
 
-const Contributors = ({ contributors }: ContributorsProps) => {
-  const [contributorsList, setContributorsList] = useState<Contributor[]>([])
-
-  useEffect(() => {
-    if (contributors) {
-      setContributorsList(contributors)
-    } else {
-      setContributorsList(shuffle(allContributors.contributors))
-    }
-  }, [contributors])
+const Contributors = ({ contributors }: ContributorsProps = {}) => {
+  const contributorsList = contributors ?? shuffledContributors
 
   return (
     <>
