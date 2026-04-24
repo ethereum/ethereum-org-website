@@ -37,7 +37,7 @@ There is a solution that lets you use the EOA address via [EIP-7702](https://eip
    npm install
    ```
 
-3. Edit `.env` to set `SEPOLIA_PRIVATE_KEY` to a wallet that has ETH on Sepolia. If you need Sepolia ETH, [use a faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) to get it. Ideally, this private key should be different from the one you have in your browser wallet.
+3. Edit `.env` to set `SEPOLIA_PRIVATE_KEY` to a wallet that has ETH on Sepolia. If you need Sepolia ETH, [use a faucet](/developers/docs/networks/#sepolia) to get it. Ideally, this private key should be different from the one you have in your browser wallet.
 
 4. Start the server.
 
