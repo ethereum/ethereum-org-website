@@ -383,7 +383,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   value={key}
                   className="mt-12 border-0 p-0"
                 >
-                  <div className="grid grid-cols-fill-4 gap-4">
+                  <div className="grid-cols-fill-4 grid gap-4">
                     {entities.map(
                       ({
                         name,
@@ -397,10 +397,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       }) => (
                         <Card
                           key={name}
-                          className="row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl bg-background-highlight p-8 max-md:px-4"
+                          className="bg-background-highlight row-span-3 grid grid-rows-subgrid gap-y-8 rounded-2xl p-8 max-md:px-4"
                         >
                           <h3 className="sr-only">{name}</h3>
-                          <Logo className="my-auto max-h-9 max-w-full [&_*]:!fill-body" />
+                          <Logo className="[&_*]:!fill-body my-auto max-h-9 max-w-full" />
                           <div className="space-y-4">
                             {!!tags.length && (
                               <div className="flex flex-wrap gap-x-1 gap-y-2">

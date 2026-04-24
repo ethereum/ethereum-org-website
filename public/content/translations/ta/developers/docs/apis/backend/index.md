@@ -109,7 +109,7 @@ lang: ta
 **Nethereum -** **_பிளாக்செயினுக்கான ஓப்பன் சோர்ஸ் .NET ஒருங்கிணைப்பு நூலகம்._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [ஆவணங்கள்](http://docs.nethereum.com/en/latest/)
+- [ஆவணங்கள்](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_பைதான் வழியாக எத்தேரியம் தொடர்புகொள்வதற்கான பல்வேறு நூலகங்கள்._**

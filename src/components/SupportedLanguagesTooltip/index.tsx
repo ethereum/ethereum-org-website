@@ -25,7 +25,7 @@ export const SupportedLanguagesTooltip = ({
 
   return (
     <Tooltip content={tooltipContent}>
-      <span className="text-md font-normal text-primary">+ {rest}</span>
+      <span className="text-md text-primary font-normal">+ {rest}</span>
     </Tooltip>
   )
 }

@@ -247,7 +247,7 @@ lang: ru
 #### Недавние исследования {#recent-research-10}
 
 - [Видеопрезентация многомерного протокола EIP-1559](https://youtu.be/QbR4MTgnCko)
-- [Кроссдоменная MEV](http://arxiv.org/abs/2112.01472)
+- [Кроссдоменная MEV](https://arxiv.org/abs/2112.01472)
 - [Аукционы MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Поощрения при использовании доказательства доли владения {#proof-of-stake-incentives}

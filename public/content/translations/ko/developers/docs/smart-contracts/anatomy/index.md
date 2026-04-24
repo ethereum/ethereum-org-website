@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## 주석이 달린 예시 {#annotated-examples}
 
-이것들은 Solidity로 작성된 몇 가지 예시입니다. 코드를 사용해보고 싶다면 [Remix](http://remix.ethereum.org)에서 상호작용할 수 있습니다.
+이것들은 Solidity로 작성된 몇 가지 예시입니다. 코드를 사용해보고 싶다면 [Remix](https://remix.ethereum.org)에서 상호작용할 수 있습니다.
 
 ### Hello world {#hello-world}
 

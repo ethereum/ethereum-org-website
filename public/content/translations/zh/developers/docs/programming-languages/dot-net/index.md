@@ -37,21 +37,21 @@ incomplete: true
 
 **想要立即跳过设置，直接查看示例吗？**
 
-- [演练场](http://playground.nethereum.com/) - 在浏览器中与以太坊交互并学习如何使用 Nethereum。
-  - 查询帐户余额 [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - 查询 ERC20 智能合约余额 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - 向帐户转账以太币 [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [演练场](https://playground.nethereum.com/) - 在浏览器中与以太坊交互并学习如何使用 Nethereum。
+  - 查询帐户余额 [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - 查询 ERC20 智能合约余额 [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - 向帐户转账以太币 [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... 以及更多！
 
 ## 中级文章 {#intermediate-articles}
 
-- [Nethereum 工作簿/示例列表](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Nethereum 工作簿/示例列表](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [部署你自己的开发测试链](https://github.com/Nethereum/Testchains)
 - [适用于 Solidity 的 VSCode 代码生成插件](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity 和以太坊：缘由与方法](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [为以太坊去中心化应用程序创建 ASP.NET Core Web 应用程序接口](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [使用 Nethereum Web3 实现供应链追踪系统](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum 区块处理](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/)，附 [C# 演练场示例](http://playground.nethereum.com/csharp/id/1025)
+- [Nethereum 区块处理](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/)，附 [C# 演练场示例](https://playground.nethereum.com/csharp/id/1025)
 - [Nethereum Websocket 流式传输](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido 和 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum 和 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ incomplete: true
 
 ## .NET 项目、工具及其他有趣内容 {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum 演练场](http://playground.nethereum.com/) - _在浏览器中编译、创建并运行 Nethereum 代码片段_
+- [Nethereum 演练场](https://playground.nethereum.com/) - _在浏览器中编译、创建并运行 Nethereum 代码片段_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _带 Blazor 用户界面的 Nethereum 代码生成器_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _一个 .NET Wasm SPA 轻量级区块链浏览器和简易钱包_
 - [Wonka 业务规则引擎](https://docs.nethereum.com/en/latest/wonka/) - _一种业务规则引擎（适用于 .NET 平台和以太坊平台），本质上是由元数据驱动的_
@@ -78,7 +78,7 @@ incomplete: true
 
 在 Nethereum，我们主要在 [Gitter](https://gitter.im/Nethereum/Nethereum) 上交流，欢迎大家来提问、回答问题、获取帮助或者随便聊聊。 欢迎在 [Nethereum GitHub 代码库](https://github.com/Nethereum)提交 PR 或问题，或者浏览我们众多的附属/示例项目。 你也可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
 
-如果你是 Nethermind 新手，需要入门帮助，请加入我们的 [Discord](http://discord.gg/PaCMRFdvWT)。 我们的开发人员随时准备回答你的问题。 欢迎在 [Nethermind GitHub 代码库](https://github.com/NethermindEth/nethermind)提交 PR 或问题。
+如果你是 Nethermind 新手，需要入门帮助，请加入我们的 [Discord](https://discord.gg/PaCMRFdvWT)。 我们的开发人员随时准备回答你的问题。 欢迎在 [Nethermind GitHub 代码库](https://github.com/NethermindEth/nethermind)提交 PR 或问题。
 
 ## 其他汇总列表 {#other-aggregated-lists}
 

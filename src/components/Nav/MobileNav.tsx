@@ -8,7 +8,7 @@ const MobileNav = ({ className }: { className?: string }) => {
   return (
     <div className={cn("flex items-center", className)}>
       <Search />
-      <MobileMenu className="flex animate-fade-in md:hidden" />
+      <MobileMenu className="animate-fade-in flex md:hidden" />
     </div>
   )
 }

@@ -2,9 +2,9 @@ import { Minus, Plus } from "lucide-react"
 
 const ExpandIcon = () => (
   <>
-    <Minus className="hidden size-6 stroke-[3] p-1 group-hover/menu:text-primary-hover group-data-[state=open]/menu:block" />
+    <Minus className="group-hover/menu:text-primary-hover hidden size-6 stroke-[3] p-1 group-data-[state=open]/menu:block" />
 
-    <Plus className="block size-6 stroke-[3] p-1 group-hover/menu:text-primary-hover group-data-[state=open]/menu:hidden" />
+    <Plus className="group-hover/menu:text-primary-hover block size-6 stroke-[3] p-1 group-data-[state=open]/menu:hidden" />
   </>
 )
 

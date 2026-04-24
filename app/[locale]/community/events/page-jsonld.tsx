@@ -5,16 +5,12 @@ import { FileContributor } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { getLocaleYear } from "@/lib/utils/date"
-import {
-  ethereumCommunityOrganization,
-  ethereumCommunityReference,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { communityHubSchemas } from "@/data/community-hub-schemas"
 import communityHubs from "@/data/community-hubs"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 
 function buildHubSchemaNodes(
   hub: (typeof communityHubs)[number],
@@ -30,7 +26,7 @@ function buildHubSchemaNodes(
     "@type": "Service" as const,
     name: "Ethereum Community Coworking and Events",
     description,
-    provider: ethereumFoundationReference,
+    provider: REFERENCE.ETHEREUM_FOUNDATION,
     areaServed: {
       "@type": "City" as const,
       name: hub.location,
@@ -78,7 +74,7 @@ function buildHubSchemaNodes(
     url: hub.coworkingSignupUrl,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    organizer: ethereumFoundationReference,
+    organizer: REFERENCE.ETHEREUM_FOUNDATION,
     location: { "@id": placeId },
     eventSchedule: {
       "@type": "Schedule" as const,
@@ -126,8 +122,7 @@ export default async function EventsJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ethereumFoundationOrganization,
-      ethereumCommunityOrganization,
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -136,13 +131,8 @@ export default async function EventsJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityReference],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -166,8 +156,8 @@ export default async function EventsJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#sections` },
       },
       {
@@ -210,8 +200,7 @@ export default async function EventsJsonLD({
             url: `${url}#for-organizers`,
           },
         ],
-        publisher: ethereumFoundationReference,
-        reviewedBy: ethereumFoundationReference,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
       },
       ...hubSchemaNodes,
     ],

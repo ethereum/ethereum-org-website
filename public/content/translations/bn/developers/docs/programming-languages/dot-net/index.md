@@ -37,21 +37,21 @@ incomplete: true
 
 **আপাতত সেটআপ এড়িয়ে সরাসরি স্যাম্পলে যেতে চান?**
 
-- [Playground](http://playground.nethereum.com/) - ইথিরিয়ামের সাথে ইন্টারঅ্যাক্ট করুন এবং ব্রাউজারের মাধ্যমে কীভাবে Nethereum ব্যবহার করতে হয় তা শিখুন।
-  - একাউন্ট ব্যালেন্স কোয়েরি করুন [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - ERC20 স্মার্ট কন্ট্রাক্ট ব্যালেন্স কোয়েরি করুন [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - একটি একাউন্টে ইথার ট্রান্সফার করুন [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - ইথিরিয়ামের সাথে ইন্টারঅ্যাক্ট করুন এবং ব্রাউজারের মাধ্যমে কীভাবে Nethereum ব্যবহার করতে হয় তা শিখুন।
+  - একাউন্ট ব্যালেন্স কোয়েরি করুন [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - ERC20 স্মার্ট কন্ট্রাক্ট ব্যালেন্স কোয়েরি করুন [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - একটি একাউন্টে ইথার ট্রান্সফার করুন [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... এবং আরও অনেক কিছু!
 
 ## ইন্টারমিডিয়েট আর্টিকেল {#intermediate-articles}
 
-- [Nethereum ওয়ার্কবুক/স্যাম্পল লিস্ট](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Nethereum ওয়ার্কবুক/স্যাম্পল লিস্ট](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [আপনার নিজস্ব ডেভেলপমেন্ট টেস্টচেইন ডেপ্লয় করুন](https://github.com/Nethereum/Testchains)
 - [সলিডিটির জন্য VSCode Codegen প্লাগইন](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity এবং ইথিরিয়াম: কেন এবং কীভাবে](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [ইথিরিয়াম ডিএ্যাপস-এর জন্য ASP.NET Core Web API তৈরি করুন](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [সাপ্লাই চেইন ট্র্যাকিং সিস্টেম বাস্তবায়নের জন্য Nethereum Web3 ব্যবহার করা](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum ব্লক প্রসেসিং](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), সাথে [C# Playground স্যাম্পল](http://playground.nethereum.com/csharp/id/1025)
+- [Nethereum ব্লক প্রসেসিং](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), সাথে [C# Playground স্যাম্পল](https://playground.nethereum.com/csharp/id/1025)
 - [Nethereum Websocket স্ট্রিমিং](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido এবং Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum এবং Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ incomplete: true
 
 ## .NET প্রজেক্ট, টুল এবং অন্যান্য মজার বিষয় {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _ব্রাউজারে Nethereum কোড স্নিপেট কম্পাইল, তৈরি এবং রান করুন_
+- [Nethereum Playground](https://playground.nethereum.com/) - _ব্রাউজারে Nethereum কোড স্নিপেট কম্পাইল, তৈরি এবং রান করুন_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor-এ UI সহ Nethereum codegen_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _একটি .NET Wasm SPA লাইট ব্লকচেইন এক্সপ্লোরার এবং সাধারণ ওয়ালেট_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _একটি বিজনেস রুলস ইঞ্জিন (.NET প্ল্যাটফর্ম এবং ইথিরিয়াম প্ল্যাটফর্ম উভয়ের জন্য) যা মূলত মেটাডাটা-চালিত_
@@ -78,7 +78,7 @@ incomplete: true
 
 Nethereum-এ, আমরা বেশিরভাগ সময় [Gitter](https://gitter.im/Nethereum/Nethereum)-এ আড্ডা দিই যেখানে যে কেউ প্রশ্ন করতে/উত্তর দিতে, সাহায্য পেতে বা শুধু সময় কাটাতে আসতে পারেন। নির্দ্বিধায় একটি PR করুন বা [Nethereum GitHub রিপোজিটরিতে](https://github.com/Nethereum) একটি ইস্যু খুলুন, অথবা আমাদের অনেক সাইড/স্যাম্পল প্রজেক্টগুলো ব্রাউজ করুন। আপনি আমাদের [Discord](https://discord.gg/jQPrR58FxX)-এও খুঁজে পেতে পারেন!
 
-আপনি যদি Nethermind-এ নতুন হয়ে থাকেন এবং শুরু করার জন্য সাহায্যের প্রয়োজন হয়, তাহলে আমাদের [Discord](http://discord.gg/PaCMRFdvWT)-এ যোগ দিন। আপনার প্রশ্নের উত্তর দেওয়ার জন্য আমাদের ডেভেলপাররা প্রস্তুত আছেন। [Nethermind GitHub রিপোজিটরিতে](https://github.com/NethermindEth/nethermind) একটি PR খুলতে বা কোনো ইস্যু উত্থাপন করতে দ্বিধা করবেন না।
+আপনি যদি Nethermind-এ নতুন হয়ে থাকেন এবং শুরু করার জন্য সাহায্যের প্রয়োজন হয়, তাহলে আমাদের [Discord](https://discord.gg/PaCMRFdvWT)-এ যোগ দিন। আপনার প্রশ্নের উত্তর দেওয়ার জন্য আমাদের ডেভেলপাররা প্রস্তুত আছেন। [Nethermind GitHub রিপোজিটরিতে](https://github.com/NethermindEth/nethermind) একটি PR খুলতে বা কোনো ইস্যু উত্থাপন করতে দ্বিধা করবেন না।
 
 ## অন্যান্য অ্যাগ্রিগেটেড লিস্ট {#other-aggregated-lists}
 

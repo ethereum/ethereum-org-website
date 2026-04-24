@@ -148,8 +148,8 @@ const PresetFilters = ({
             >
               <button
                 className={cn(
-                  "duration-50 group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all hover:bg-background-highlight lg:h-full lg:p-6",
-                  "focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover",
+                  "group shadow-svg-button-link hover:bg-background-highlight flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 transition-all duration-50 lg:h-full lg:p-6",
+                  "focus-visible:outline-primary-hover focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4",
                   activePresets.includes(idx)
                     ? "border-primary"
                     : "border-primary-low-contrast",
@@ -166,12 +166,12 @@ const PresetFilters = ({
                     )}
                   >
                     {activePresets.includes(idx) && (
-                      <Check className="size-4 stroke-[3] text-background" />
+                      <Check className="text-background size-4 stroke-[3]" />
                     )}
                   </div>
                   <h3
                     className={cn(
-                      "duration-50 hyphens-auto text-left text-xl transition-all",
+                      "text-left text-xl hyphens-auto transition-all duration-50",
                       colors.text[colorIdx]
                     )}
                   >
@@ -184,7 +184,7 @@ const PresetFilters = ({
                   </h3>
                 </div>
                 {!showMobileSidebar && (
-                  <p className="p-2 text-left text-sm text-body transition-colors duration-500">
+                  <p className="text-body p-2 text-left text-sm transition-colors duration-500">
                     {preset.description}
                   </p>
                 )}

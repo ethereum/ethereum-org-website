@@ -116,7 +116,7 @@ _Biasanya digunakan untuk organisasi yang lebih erat dan berpusat pada manusia s
 
 #### Contoh terkenal {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO difokuskan pada pendanaan proyek Ethereum. Mereka memerlukan proposal untuk keanggotaan sehingga kelompok dapat menilai apakah Anda memiliki keahlian dan modal yang diperlukan untuk membuat penilaian yang tepat tentang calon penerima hibah. Anda tidak bisa begitu saja membeli akses ke DAO di pasar terbuka.
+[MolochDAO](https://molochdao.com/) – MolochDAO difokuskan pada pendanaan proyek Ethereum. Mereka memerlukan proposal untuk keanggotaan sehingga kelompok dapat menilai apakah Anda memiliki keahlian dan modal yang diperlukan untuk membuat penilaian yang tepat tentang calon penerima hibah. Anda tidak bisa begitu saja membeli akses ke DAO di pasar terbuka.
 
 ### Keanggotaan berbasis reputasi {#reputation-based-membership}
 

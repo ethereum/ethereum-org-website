@@ -781,7 +781,7 @@ export type ExtendedRollup = Rollup & {
   walletsSupported: string[]
   activeAddresses: number | undefined
   launchDate: string | null
-  walletsSupportedCount: number
+  walletsSupportedCount: string
   blockspaceData: {
     nft: number
     defi: number

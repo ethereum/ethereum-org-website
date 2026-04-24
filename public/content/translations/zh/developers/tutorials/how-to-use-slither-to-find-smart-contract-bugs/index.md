@@ -70,7 +70,7 @@ slither project_paths
 
 Slither 静态分析框架的功能和设计已在博客文章（[1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/)、[2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)）和一篇[学术论文](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf)中进行了描述。
 
-静态分析有多种形式。 您很可能意识到，像 [clang](https://clang-analyzer.llvm.org/) 和 [gcc](https://lwn.net/Articles/806099/) 这样的编译器依赖于这些研究技术，但它也是（[Infer](https://fbinfer.com/)、[CodeClimate](https://codeclimate.com/)、[FindBugs](http://findbugs.sourceforge.net/)）以及像 [Frama-C](https://frama-c.com/) 和 [Polyspace](https://www.mathworks.com/products/polyspace.html) 这类基于形式化方法的工具的基础。
+静态分析有多种形式。 您很可能意识到，像 [clang](https://clang-analyzer.llvm.org/) 和 [gcc](https://lwn.net/Articles/806099/) 这样的编译器依赖于这些研究技术，但它也是（[Infer](https://fbinfer.com/)、[CodeClimate](https://codeclimate.com/)、[FindBugs](https://findbugs.sourceforge.net/)）以及像 [Frama-C](https://frama-c.com/) 和 [Polyspace](https://www.mathworks.com/products/polyspace.html) 这类基于形式化方法的工具的基础。
 
 我们不会在这里详尽地回顾静态分析技术和研究人员。 相反，我们将专注于了解 Slither 是如何工作的，以便你能更有效地利用它来发现漏洞和理解代码。
 

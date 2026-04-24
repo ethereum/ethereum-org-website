@@ -13,7 +13,7 @@ const Switch = React.forwardRef<
     <SwitchPrimitives.Root
       className={cn(
         commonControlClasses,
-        "w-[26px] rounded-full bg-body-medium p-px data-[state=unchecked]:disabled:bg-transparent",
+        "bg-body-medium w-[26px] rounded-full p-px data-[state=unchecked]:disabled:bg-transparent",
         "hover:[@media(hover:hover)_and_(pointer:fine)]:border-primary-hover hover:[@media(hover:hover)_and_(pointer:fine)]:bg-primary-hover",
         className
       )}
@@ -22,7 +22,7 @@ const Switch = React.forwardRef<
     >
       <SwitchPrimitives.Thumb
         className={cn(
-          "pointer-events-none block size-3 rounded-full bg-background transition-transform data-[state=checked]:translate-x-2.5 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:data-[disabled]:border data-[state=unchecked]:data-[disabled]:border-disabled"
+          "bg-background data-[state=unchecked]:data-[disabled]:border-disabled pointer-events-none block size-3 rounded-full transition-transform data-[state=checked]:translate-x-2.5 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:data-[disabled]:border"
         )}
       />
     </SwitchPrimitives.Root>

@@ -108,7 +108,7 @@ const LetUseSomeApps = ({
           {dappsList.map((dapp) => (
             <LinkBox
               key={dapp.name}
-              className="group flex cursor-pointer flex-col items-center justify-between gap-4 rounded-xl border-b border-background p-4 last:border-b-0 hover:bg-background-highlight sm:flex-row"
+              className="group border-background hover:bg-background-highlight flex cursor-pointer flex-col items-center justify-between gap-4 rounded-xl border-b p-4 last:border-b-0 sm:flex-row"
               onClick={() => {
                 window.open(dapp.url, "_blank")
                 trackCustomEvent({
@@ -131,7 +131,7 @@ const LetUseSomeApps = ({
                     <p className="text-xl font-bold">{dapp.name}</p>
                     {dapp.tag}
                   </div>
-                  <p className="text-sm text-body-medium">{dapp.description}</p>
+                  <p className="text-body-medium text-sm">{dapp.description}</p>
                 </div>
               </div>
               <div className="w-full sm:w-auto">
@@ -139,7 +139,7 @@ const LetUseSomeApps = ({
                   href={dapp.url}
                   variant="outline"
                   size="sm"
-                  className="w-full group-hover:!text-primary-hover group-hover:shadow-[4px_4px_theme('colors.primary.low-contrast')] sm:w-auto"
+                  className="group-hover:!text-primary-hover w-full group-hover:shadow-[4px_4px_hsla(var(--primary-low-contrast))] sm:w-auto"
                 >
                   {t("page-start-apps-go")}
                 </ButtonLink>

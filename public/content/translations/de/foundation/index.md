@@ -9,7 +9,7 @@ lang: de
 
 <Logo/>
 
-Die [Ethereum Foundation](http://ethereum.foundation/) (EF) ist eine gemeinnützige Organisation, die das [Ethereum](/)-Ökosystem unterstützt. Sie finanziert die Protokollentwicklung, fördert das Wachstum des Ökosystems und setzt sich für Ethereum ein.
+Die [Ethereum Foundation](https://ethereum.foundation/) (EF) ist eine gemeinnützige Organisation, die das [Ethereum](/)-Ökosystem unterstützt. Sie finanziert die Protokollentwicklung, fördert das Wachstum des Ökosystems und setzt sich für Ethereum ein.
 
 Die EF ist weder ein Unternehmen noch eine traditionelle gemeinnützige Organisation. Sie kontrolliert oder leitet Ethereum nicht und ist auch nicht die einzige Organisation, die die kritische Entwicklung von Ethereum-bezogenen Technologien finanziert. Die EF ist ein Teil eines viel größeren [Ökosystems](/community/).
 

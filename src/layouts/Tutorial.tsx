@@ -38,25 +38,25 @@ const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 
 const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading3
-    className="scroll-mt-40 font-semibold max-md:text-md"
+    className="max-md:text-md scroll-mt-40 font-semibold"
     {...props}
   />
 )
 
 const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4
-    className="scroll-mt-40 font-semibold max-md:text-md"
+    className="max-md:text-md scroll-mt-40 font-semibold"
     {...props}
   />
 )
 
 const Paragraph = (props: HTMLAttributes<HTMLParagraphElement>) => (
-  <p className="mx-0 mb-4 mt-8 break-words" {...props} />
+  <p className="mx-0 mt-8 mb-4 break-words" {...props} />
 )
 
 const KBD = (props: HTMLAttributes<HTMLElement>) => (
   <kbd
-    className="rounded-sm border-2 border-primary px-2 py-0.5 align-middle"
+    className="border-primary rounded-xs border-2 px-2 py-0.5 align-middle"
     {...props}
   />
 )
@@ -113,7 +113,7 @@ export const TutorialLayout = ({
   return (
     <div className="flex w-full gap-8">
       <MainArticle
-        className="min-w-0 max-w-screen-lg px-8 lg:py-8"
+        className="max-w-screen-lg min-w-0 px-8 lg:py-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <Breadcrumbs

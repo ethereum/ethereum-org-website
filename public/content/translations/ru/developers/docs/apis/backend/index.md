@@ -111,7 +111,7 @@ lang: ru
 **Nethereum -** **_Библиотека интеграции .NET с открытым исходным кодом для блокчейна._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Документация](http://docs.nethereum.com/en/latest/)
+- [Документация](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_Разнообразные библиотеки для взаимодействия с Ethereum через Python._**

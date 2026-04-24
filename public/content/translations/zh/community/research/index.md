@@ -247,7 +247,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 #### 近期的研究 {#recent-research-10}
 
 - [多维 EIP-1559 的视频演示](https://youtu.be/QbR4MTgnCko)
-- [跨域最大可提取价值](http://arxiv.org/abs/2112.01472)
+- [跨域最大可提取价值](https://arxiv.org/abs/2112.01472)
 - [最大可提取价值拍卖](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### 权益证明激励 {#proof-of-stake-incentives}

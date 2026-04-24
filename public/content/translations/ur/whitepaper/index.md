@@ -500,7 +500,7 @@ Ethereum کے بارے میں ایک عام تشویش اسکیل ایبلٹی (
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [دوبارہ قابل استعمال پروفز آف ورک (Reusable proofs of work)](https://nakamotoinstitute.org/finney/rpow/)
 6. [مالک کے اختیار کے ساتھ محفوظ پراپرٹی ٹائٹلز](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Bitcoin وائٹ پیپر](http://bitcoin.org/bitcoin.pdf)
+7. [Bitcoin وائٹ پیپر](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Zooko's triangle](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Colored coins وائٹ پیپر](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

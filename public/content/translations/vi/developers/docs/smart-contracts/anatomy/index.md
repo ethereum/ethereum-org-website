@@ -207,7 +207,7 @@ Sự kiện cho phép hợp đồng thông minh của bạn giao tiếp với gi
 
 ## Các ví dụ có chú thích {#annotated-examples}
 
-Dưới đây là một vài ví dụ được viết bằng Solidity. Nếu bạn muốn thử nghiệm với mã, bạn có thể tương tác với chúng trong [Remix](http://remix.ethereum.org).
+Dưới đây là một vài ví dụ được viết bằng Solidity. Nếu bạn muốn thử nghiệm với mã, bạn có thể tương tác với chúng trong [Remix](https://remix.ethereum.org).
 
 ### Xin chào thế giới {#hello-world}
 

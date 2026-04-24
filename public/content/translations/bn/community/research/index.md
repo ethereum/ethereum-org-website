@@ -247,7 +247,7 @@ lang: bn
 #### সাম্প্রতিক গবেষণা {#recent-research-10}
 
 - [মাল্টিডাইমেনশনাল EIP-1559 ভিডিও প্রেজেন্টেশন](https://youtu.be/QbR4MTgnCko)
-- [ক্রস ডোমেইন MEV](http://arxiv.org/abs/2112.01472)
+- [ক্রস ডোমেইন MEV](https://arxiv.org/abs/2112.01472)
 - [MEV অকশনস](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### প্রুফ-অফ-স্টেক ইনসেন্টিভস {#proof-of-stake-incentives}

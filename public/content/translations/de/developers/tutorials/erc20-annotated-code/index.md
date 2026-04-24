@@ -528,7 +528,7 @@ Die Funktion `transfer` wird aufgerufen, um Token vom Konto des Senders auf ein 
 Die Funktion `_transfer` erledigt die eigentliche Arbeit. Es ist eine private Funktion, die nur von anderen Vertragsfunktionen aufgerufen werden kann. Konventionsgemäß werden private Funktionen `_<etwas>` genannt, genau wie Zustandsvariablen.
 
 Normalerweise verwenden wir in Solidity `msg.sender` für den Absender der Nachricht. Das bricht jedoch
-[OpenGSN](http://opengsn.org/). Wenn wir etherlose Transaktionen mit unserem Token zulassen wollen, müssen wir `_msgSender()` verwenden. Es gibt `msg.sender` für normale Transaktionen zurück, aber für etherlose gibt es den ursprünglichen Unterzeichner zurück und nicht den Vertrag, der die Nachricht weitergeleitet hat.
+[OpenGSN](https://opengsn.org/). Wenn wir etherlose Transaktionen mit unserem Token zulassen wollen, müssen wir `_msgSender()` verwenden. Es gibt `msg.sender` für normale Transaktionen zurück, aber für etherlose gibt es den ursprünglichen Unterzeichner zurück und nicht den Vertrag, der die Nachricht weitergeleitet hat.
 
 ### Freigabefunktionen {#allowance-functions}
 

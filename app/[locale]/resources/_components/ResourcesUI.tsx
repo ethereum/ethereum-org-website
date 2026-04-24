@@ -27,7 +27,7 @@ export const ResourceItem = ({
   <Link
     href={href}
     className={cn(
-      "flex gap-2 border-b p-3 text-body no-underline last-of-type:border-0 hover:bg-background-highlight hover:text-body",
+      "text-body hover:bg-background-highlight hover:text-body flex gap-2 border-b p-3 no-underline last-of-type:border-0",
       className
     )}
     customEventOptions={{
@@ -43,7 +43,7 @@ export const ResourceItem = ({
     <div className="w-full">
       <h3 className="text-md text-inherit">{title}</h3>
       <p className="text-inherit">{description}</p>
-      <Tag className="mt-1 rounded-full normal-case text-inherit">{href}</Tag>
+      <Tag className="mt-1 rounded-full text-inherit normal-case">{href}</Tag>
     </div>
   </Link>
 )

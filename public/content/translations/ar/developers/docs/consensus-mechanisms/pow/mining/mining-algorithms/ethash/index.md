@@ -51,7 +51,7 @@ ACCESSES = 64                     # عدد مرات الوصول في حلقة h
 
 ### استخدام 'SHA3' {#sha3}
 
-تزامن تطوير الإيثريوم مع تطوير معيار SHA3، وقد أدخلت عملية المعايير تغييرًا متأخرًا في حشو خوارزمية التجزئة النهائية، بحيث لا تُعتبر تجزئتا الإيثريوم "sha3_256" و"sha3_512" تجزئات sha3 قياسية، بل مُتغير يُشار إليه غالبًا باسم "Keccak-256" و"Keccak-512" في سياقات أخرى. انظر النقاش، على سبيل المثال، [هنا](https://eips.ethereum.org/EIPS/eip-1803)، و[هنا](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)، أو [هنا](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+تزامن تطوير الإيثريوم مع تطوير معيار SHA3، وقد أدخلت عملية المعايير تغييرًا متأخرًا في حشو خوارزمية التجزئة النهائية، بحيث لا تُعتبر تجزئتا الإيثريوم "sha3_256" و"sha3_512" تجزئات sha3 قياسية، بل مُتغير يُشار إليه غالبًا باسم "Keccak-256" و"Keccak-512" في سياقات أخرى. انظر النقاش، على سبيل المثال، [هنا](https://eips.ethereum.org/EIPS/eip-1803)، و[هنا](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)، أو [هنا](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 يرجى أخذ ذلك في الاعتبار حيث تتم الإشارة إلى تجزئات "sha3" في وصف الخوارزمية أدناه.
 

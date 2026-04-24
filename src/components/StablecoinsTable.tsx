@@ -184,7 +184,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
       <DropdownMenuTrigger className="ms-auto flex items-center gap-2 text-end">
         {t("page-stablecoins-stablecoins-table-header-column-3")}
         {activeTypeCount !== totalTypeCount && (
-          <span className="self-baseline text-sm text-body-medium">
+          <span className="text-body-medium self-baseline text-sm">
             ({activeTypeCount})
           </span>
         )}
@@ -205,7 +205,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
             <Button
               variant="link"
               size="sm"
-              className="h-auto px-1 py-0 text-xs text-body-medium no-underline hover:underline"
+              className="text-body-medium h-auto px-1 py-0 text-xs no-underline hover:underline"
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
@@ -221,7 +221,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
             <Button
               variant="link"
               size="sm"
-              className="text-xs text-body-medium no-underline hover:underline"
+              className="text-body-medium text-xs no-underline hover:underline"
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
@@ -238,7 +238,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
       <DropdownMenuTrigger className="ms-auto flex items-center gap-2 text-end">
         {t("page-stablecoins-stablecoins-table-header-column-4")}
         {activePegCount !== totalPegCount && (
-          <span className="text-xs text-body-medium">({activePegCount})</span>
+          <span className="text-body-medium text-xs">({activePegCount})</span>
         )}
         <ListFilter className="size-[1em]" />
       </DropdownMenuTrigger>
@@ -257,7 +257,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
             <Button
               variant="link"
               size="sm"
-              className="h-auto px-1 py-0 text-xs text-body-medium no-underline hover:underline"
+              className="text-body-medium h-auto px-1 py-0 text-xs no-underline hover:underline"
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
@@ -273,7 +273,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
             <Button
               variant="link"
               size="sm"
-              className="text-xs text-body-medium no-underline hover:underline"
+              className="text-body-medium text-xs no-underline hover:underline"
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
@@ -290,7 +290,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
 
   return (
     <div className="mx-auto w-full max-w-screen-xl overflow-x-auto px-8 py-4">
-      <Table className="my-8 min-w-[720px] bg-background">
+      <Table className="bg-background my-8 min-w-[720px]">
         <TableHeader>
           <Suspense fallback={<Skeleton className="h-8 w-full" />}>
             <TableRow>
@@ -342,7 +342,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
                       )}
                       <span>
                         {name}{" "}
-                        <span className="text-sm uppercase text-body-medium">
+                        <span className="text-body-medium text-sm uppercase">
                           {symbol}
                         </span>
                       </span>
@@ -384,7 +384,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
       </div>
       {displayedContent.length === 0 && !noFiltersActive && (
         <div className="flex flex-col items-center justify-center py-12">
-          <p className="mb-4 text-lg text-body-medium">
+          <p className="text-body-medium mb-4 text-lg">
             {t("page-stablecoins-no-results")}
           </p>
           <Button variant="outline" onClick={resetFilters}>
