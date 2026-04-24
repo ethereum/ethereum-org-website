@@ -2,6 +2,11 @@
 title: AI agent use cases on Ethereum
 description: Real applications of autonomous AI agents on Ethereum, including DeFi automation, agent-to-agent commerce, onchain governance, risk management, and more
 lang: en
+faqItems:
+  - question: "What is the most production-ready AI agent use case on Ethereum?"
+    answer: "DeFi automation is the most mature use case. The infrastructure it depends on, including ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment."
+  - question: "How do I choose which use case to build first?"
+    answer: "Evaluate the infrastructure each use case requires. DeFi automation needs wallets and session keys (production-ready). Agent-to-agent commerce adds payments (x402, production-ready) and identity (ERC-8004, live but Draft status). Autonomous governance adds human-in-the-loop escalation for high-stakes votes. Start with the use case whose infrastructure dependencies are closest to production-ready for your deployment timeline, and use the Getting started guide to build your first agent."
 ---
 
 # AI agent use cases on Ethereum {#use-cases}
@@ -134,6 +139,20 @@ Luna's wallet and the reasoning behind each transaction are publicly verifiable 
 ### Clanker {#clanker}
 
 [Clanker](https://farcaster.xyz/clanker) is an autonomous agent on Farcaster that creates ERC-20 tokens on request. Tag the agent in a Farcaster cast and Clanker autonomously deploys a new token contract, names it, and configures it, all without human intervention. Clanker illustrates the programmatic use case: an AI agent operating as a permissionless, on-demand protocol service rather than a social or financial actor.
+
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="What is the most production-ready AI agent use case on Ethereum?">
+
+DeFi automation is the most mature use case. The infrastructure it depends on, including **ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions**, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment. See [Getting started](/ai-agents/getting-started/) to begin building.
+
+</ExpandableCard>
+
+<ExpandableCard title="How do I choose which use case to build first?">
+
+Evaluate the infrastructure each use case requires. **DeFi automation** needs [wallets and session keys](/ai-agents/wallets/) (production-ready). **Agent-to-agent commerce** adds [payments](/ai-agents/payments/) (x402, production-ready) and [identity](/ai-agents/identity/) (ERC-8004, live but Draft status). **Autonomous governance** adds human-in-the-loop escalation for high-stakes votes. Start with the use case whose infrastructure dependencies are closest to production-ready for your deployment timeline.
+
+</ExpandableCard>
 
 ## Further reading {#further-reading}
 

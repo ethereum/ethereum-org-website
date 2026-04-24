@@ -4,7 +4,7 @@ description: A developer on-ramp for building AI agents on Ethereum, from wallet
 lang: en
 faqItems:
   - question: "How do I build my first AI agent on Ethereum?"
-    answer: "Start with four steps: (1) Create a smart account wallet using an SDK like ZeroDev or Safe, (2) fund it with testnet ETH from a Sepolia faucet, (3) connect an agent framework like GOAT or ElizaOS that provides the LLM interface and tool orchestration, and (4) configure session key spending policies as guardrails. The Getting started guide walks through each step with working code."
+    answer: "Start with four steps: (1) Create a smart account wallet using an SDK like ZeroDev, Safe, or another ERC-4337 compatible provider, (2) fund it with testnet ETH from a Sepolia faucet, (3) connect an agent framework like GOAT or ElizaOS that provides the LLM interface and tool orchestration, and (4) configure session key spending policies as guardrails. The Getting started guide walks through each step with working code."
   - question: "Should I deploy on testnet or mainnet?"
     answer: "Start on Sepolia testnet. Testnet ETH has no real value, so experimentation carries no financial risk. Move to mainnet only after your session key policies, spending limits, and human-in-the-loop escalation logic are tested and verified. When you do move to mainnet, consider deploying on a Layer 2 network for lower transaction costs."
 ---
@@ -99,6 +99,8 @@ export const publicClient = createPublicClient({
 })
 
 const ENTRY_POINT_ADDRESS = ENTRYPOINT_ADDRESS_V07
+// This example targets EntryPoint v0.7 — v0.8 and v0.9 are also live.
+// Verify the version your SDK and bundler target before production use.
 
 // Agent generates its own key — the public address goes to the owner
 export const agentPrivateKey = generatePrivateKey()
@@ -310,7 +312,7 @@ At this point you have a smart account deployed on Sepolia, a funded agent addre
 
 <ExpandableCard title="How do I build my first AI agent on Ethereum?">
 
-Start with four steps: (1) Create a smart account wallet using an SDK like ZeroDev or Safe, (2) fund it with testnet ETH from a Sepolia faucet, (3) connect an agent framework like GOAT or ElizaOS that provides the LLM interface and tool orchestration, and (4) configure session key spending policies as guardrails. This guide walks through each step with working code.
+Start with four steps: (1) Create a smart account wallet using an SDK like ZeroDev, Safe, or another ERC-4337 compatible provider, (2) fund it with testnet ETH from a Sepolia faucet, (3) connect an agent framework like GOAT or ElizaOS that provides the LLM interface and tool orchestration, and (4) configure session key spending policies as guardrails. This guide walks through each step with working code.
 
 </ExpandableCard>
 

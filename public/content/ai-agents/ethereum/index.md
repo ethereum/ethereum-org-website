@@ -5,8 +5,8 @@ lang: en
 faqItems:
   - question: "Why would an AI agent use Ethereum instead of a centralized API?"
     answer: "Centralized APIs require accounts, API keys, rate limits set by the provider, and trust that the provider will not change terms, throttle access, or shut down. Ethereum provides a global, permissionless API that any agent can call without registration. The same DeFi protocols, payment infrastructure, and identity registries are accessible to any address, human or machine, without gatekeeping."
-  - question: "What makes Ethereum better than other blockchains for AI agents?"
-    answer: "Three reasons: the deepest ecosystem of production smart contracts (most DeFi, most stablecoins, most tooling), the most mature smart account infrastructure (ERC-4337 with EntryPoint v0.7, EIP-7702 live since May 2025), and the only ecosystem with a production-deployed onchain agent identity standard (ERC-8004, live January 29, 2026). No other blockchain has all three simultaneously."
+  - question: "What does Ethereum provide for AI agents that other blockchains may not?"
+    answer: "Three capabilities in combination: the deepest ecosystem of production smart contracts (most DeFi, most stablecoins, most tooling), the most mature smart account infrastructure (ERC-4337 with production EntryPoint deployments on all major networks, EIP-7702 live since May 2025), and a production-deployed onchain agent identity standard (ERC-8004, live January 29, 2026 — Draft status, in active adoption). Evaluate whether your agent requires all three before choosing a settlement layer."
 ---
 # Ethereum for AI agents {#ethereum-for-ai-agents}
 
@@ -122,9 +122,9 @@ Centralized APIs require accounts, API keys, rate limits set by the provider, an
 
 </ExpandableCard>
 
-<ExpandableCard title="What makes Ethereum better than other blockchains for AI agents?">
+<ExpandableCard title="What does Ethereum provide for AI agents that other blockchains may not?">
 
-Three reasons: the deepest ecosystem of production smart contracts (most DeFi, most stablecoins, most tooling), the most mature smart account infrastructure (ERC-4337 with EntryPoint v0.7, EIP-7702 live since May 2025), and the only ecosystem with a production-deployed onchain agent identity standard (ERC-8004, live January 29, 2026). No other blockchain has all three simultaneously.
+Three capabilities in combination: the deepest ecosystem of production smart contracts (most DeFi, most stablecoins, most tooling), the most mature smart account infrastructure (ERC-4337 with production EntryPoint deployments on all major networks, EIP-7702 live since May 2025), and a production-deployed onchain agent identity standard (ERC-8004, live January 29, 2026 — Draft status, in active adoption). Evaluate whether your agent requires all three before choosing a settlement layer.
 
 </ExpandableCard>
 

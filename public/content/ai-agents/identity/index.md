@@ -5,6 +5,8 @@ lang: en
 faqItems:
   - question: "What is ERC-8004?"
     answer: "ERC-8004 is the Trustless Agents Standard, live on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides three onchain registries: an Identity Registry (agent discovery), a Reputation Registry (onchain feedback signals), and a Validation Registry (hooks for cryptographic verification of agent outputs, not yet deployed). The standard uses the same contract addresses across all supported chains via deterministic deployment."
+  - question: "Is ERC-8004 finalized?"
+    answer: "No. ERC-8004 carries an official EIP status of Draft. The contracts are deployed and live in production on 20+ chains, but the interface specification may change as the standard progresses toward Final. Until it is finalized, pin your integration to a specific contract address and ABI version rather than assuming forward compatibility. Monitor the Ethereum Magicians discussion thread for interface changes."
 ---
 
 # Agent identity with ERC-8004 {#agent-identity}
@@ -175,6 +177,12 @@ const agentURI = await client.readContract({
 <ExpandableCard title="What is ERC-8004?">
 
 ERC-8004 is the Trustless Agents Standard, live on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides three onchain registries: an **Identity Registry** (agent discovery, `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), a **Reputation Registry** (onchain feedback signals, `0x8004BAa17C55a88189AE136b182e5fdA19dE9b63`), and a **Validation Registry** (hooks for cryptographic verification of agent outputs — not yet deployed). The standard uses the same contract addresses across all supported chains via deterministic deployment.
+
+</ExpandableCard>
+
+<ExpandableCard title="Is ERC-8004 finalized?">
+
+No. ERC-8004 carries an official EIP status of **Draft**. The contracts are deployed and live in production on 20+ chains, but the interface specification may change as the standard progresses toward Final. Until it is finalized, **pin your integration to a specific contract address and ABI version** rather than assuming forward compatibility. Monitor the [Ethereum Magicians discussion thread](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098) for interface changes.
 
 </ExpandableCard>
 

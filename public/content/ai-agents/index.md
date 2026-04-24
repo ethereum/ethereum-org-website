@@ -79,8 +79,8 @@ The standards and protocols that power AI agents on Ethereum have crossed from r
 | Standard or protocol | Status |
 | :--- | :--- |
 | **EIP-7702** — Smart account delegation for existing EOAs | Live since the Pectra upgrade, May 2025 |
-| **ERC-4337** — Smart account standard | EntryPoint v0.7 live on mainnet |
-| **ERC-8004** — Onchain agent identity registry | Live on 20+ chains since January 2026 |
+| **ERC-4337** — Smart account standard | Production EntryPoint deployments on all major networks (v0.7 widely adopted; v0.8, v0.9 also live) |
+| **ERC-8004** — Onchain agent identity registry | Draft — in active adoption; live on 20+ chains since January 2026 |
 | **x402** — Machine-to-machine HTTP payments | Production-ready since Q1 2026 |
 | **L2 transaction cost** | $0.001–$0.003 per operation |
 
