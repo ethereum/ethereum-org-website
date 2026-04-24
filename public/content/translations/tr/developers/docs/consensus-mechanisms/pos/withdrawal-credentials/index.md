@@ -1,6 +1,6 @@
 ---
-title: Çekim kimlik bilgileri
-description: Doğrulayıcı çekim kimlik bilgisi türlerinin (0x00, 0x01, 0x02) ve bunların Ethereum staker'ları için etkilerinin bir açıklaması.
+title: "Çekim kimlik bilgileri"
+description: "Doğrulayıcı çekim kimlik bilgisi türlerinin (0x00, 0x01, 0x02) ve bunların Ethereum staker'ları için etkilerinin bir açıklaması."
 lang: tr
 ---
 

@@ -2,7 +2,7 @@
 title: "Kufadhili ada za gesi: Jinsi ya kulipia gharama za miamala kwa watumiaji wako"
 description: Ni rahisi kuunda ufunguo wa siri na anwani; ni suala tu la kuendesha programu sahihi. Lakini kuna maeneo mengi duniani ambapo kupata ETH kutuma miamala ni ngumu zaidi. Katika mafunzo haya unajifunza jinsi ya kulipia gharama za gesi kwenye mnyororo kwa ajili ya kutekeleza data iliyopangwa nje ya mnyororo, iliyotiwa saini na mtumiaji katika mkataba mahiri wako. Unamfanya mtumiaji atie saini muundo ulio na maelezo ya muamala, ambayo kisha msimbo wako wa nje ya mnyororo unawasilisha kwenye mnyororo wa vitalu kama muamala.
 author: Ori Pomerantz
-tags: ["bila gesi", "solidity", "eip-712", "miamala-meta"]
+tags: ["bila gesi", "Solidity", "eip-712", "miamala-meta"]
 skill: intermediate
 breadcrumb: Ufadhili wa gesi
 lang: sw

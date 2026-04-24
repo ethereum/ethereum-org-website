@@ -1,10 +1,10 @@
 ---
 title: "Gaz ücretlerine sponsor olmak: Kullanıcılarınızın işlem maliyetlerini nasıl karşılayabilirsiniz"
-description: Bir özel anahtar ve adres oluşturmak kolaydır; bu sadece doğru yazılımı çalıştırma meselesidir. Ancak dünyada işlem göndermek için ETH almanın çok daha zor olduğu birçok yer var. Bu eğitimde, akıllı sözleşmenizde kullanıcı tarafından imzalanmış, zincirdışı yapılandırılmış verileri yürütmek için zinciriçi gaz maliyetlerini nasıl karşılayacağınızı öğreneceksiniz. Kullanıcıya işlem bilgilerini içeren bir yapıyı imzalatırsınız ve ardından zincirdışı kodunuz bunu blokzincire bir işlem olarak gönderir.
+description: "Bir özel anahtar ve adres oluşturmak kolaydır; bu sadece doğru yazılımı çalıştırma meselesidir. Ancak dünyada işlem göndermek için ETH almanın çok daha zor olduğu birçok yer var. Bu eğitimde, akıllı sözleşmenizde kullanıcı tarafından imzalanmış, zincirdışı yapılandırılmış verileri yürütmek için zinciriçi gaz maliyetlerini nasıl karşılayacağınızı öğreneceksiniz. Kullanıcıya işlem bilgilerini içeren bir yapıyı imzalatırsınız ve ardından zincirdışı kodunuz bunu blokzincire bir işlem olarak gönderir."
 author: Ori Pomerantz
 tags: ["gazsız", "Solidity", "EIP-712", "meta işlemler"]
 skill: intermediate
-breadcrumb: Gaz sponsorluğu
+breadcrumb: "Gaz sponsorluğu"
 lang: tr
 published: 2026-02-27
 ---

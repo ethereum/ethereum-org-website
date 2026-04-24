@@ -1,6 +1,6 @@
 ---
-title: Dane uwierzytelniające wypłaty
-description: Wyjaśnienie typów danych uwierzytelniających wypłaty walidatora (0x00, 0x01, 0x02) i ich konsekwencji dla stakujących w Ethereum.
+title: "Dane uwierzytelniające wypłaty"
+description: "Wyjaśnienie typów danych uwierzytelniających wypłaty walidatora (0x00, 0x01, 0x02) i ich konsekwencji dla stakujących w Ethereum."
 lang: pl
 ---
 

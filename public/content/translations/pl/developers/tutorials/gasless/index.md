@@ -1,6 +1,6 @@
 ---
 title: "Sponsorowanie opłat za gaz: Jak pokryć koszty transakcji dla swoich użytkowników"
-description: Łatwo jest utworzyć klucz prywatny i adres; to tylko kwestia uruchomienia odpowiedniego oprogramowania. Jednak w wielu miejscach na świecie zdobycie ETH do wysyłania transakcji jest znacznie trudniejsze. W tym samouczku dowiesz się, jak pokryć koszty gazu onchain za wykonanie podpisanych przez użytkownika, ustrukturyzowanych danych offchain w Twoim inteligentnym kontrakcie. Użytkownik podpisuje strukturę zawierającą informacje o transakcji, którą Twój kod offchain następnie przesyła do blockchaina jako transakcję.
+description: "Łatwo jest utworzyć klucz prywatny i adres; to tylko kwestia uruchomienia odpowiedniego oprogramowania. Jednak w wielu miejscach na świecie zdobycie ETH do wysyłania transakcji jest znacznie trudniejsze. W tym samouczku dowiesz się, jak pokryć koszty gazu onchain za wykonanie podpisanych przez użytkownika, ustrukturyzowanych danych offchain w Twoim inteligentnym kontrakcie. Użytkownik podpisuje strukturę zawierającą informacje o transakcji, którą Twój kod offchain następnie przesyła do blockchaina jako transakcję."
 author: Ori Pomerantz
 tags: ["bez gazu", "Solidity", "EIP-712", "metatransakcje"]
 skill: intermediate

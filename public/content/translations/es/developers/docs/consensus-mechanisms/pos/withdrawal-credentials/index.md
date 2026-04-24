@@ -1,6 +1,6 @@
 ---
 title: Credenciales de retiro
-description: Una explicación de los tipos de credenciales de retiro de los validadores (0x00, 0x01, 0x02) y sus implicaciones para quienes hacen staking en Ethereum.
+description: "Una explicación de los tipos de credenciales de retiro de los validadores (0x00, 0x01, 0x02) y sus implicaciones para quienes hacen staking en Ethereum."
 lang: es
 ---
 

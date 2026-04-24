@@ -1,10 +1,10 @@
 ---
 title: "Tài trợ phí Gas: Cách chi trả chi phí giao dịch cho người dùng của bạn"
-description: Việc tạo một khóa riêng tư và một địa chỉ rất dễ dàng; đó chỉ là vấn đề chạy đúng phần mềm. Nhưng có nhiều nơi trên thế giới mà việc có được ETH để gửi giao dịch lại khó khăn hơn nhiều. Trong hướng dẫn này, bạn sẽ học cách chi trả chi phí Gas trên chuỗi (onchain) để thực thi dữ liệu có cấu trúc ngoài chuỗi (offchain) được người dùng ký trong hợp đồng thông minh của bạn. Bạn yêu cầu người dùng ký một cấu trúc chứa thông tin giao dịch, sau đó mã ngoài chuỗi của bạn sẽ gửi nó lên chuỗi khối dưới dạng một giao dịch.
+description: "Việc tạo một khóa riêng tư và một địa chỉ rất dễ dàng; đó chỉ là vấn đề chạy đúng phần mềm. Nhưng có nhiều nơi trên thế giới mà việc có được ETH để gửi giao dịch lại khó khăn hơn nhiều. Trong hướng dẫn này, bạn sẽ học cách chi trả chi phí Gas trên chuỗi (onchain) để thực thi dữ liệu có cấu trúc ngoài chuỗi (offchain) được người dùng ký trong hợp đồng thông minh của bạn. Bạn yêu cầu người dùng ký một cấu trúc chứa thông tin giao dịch, sau đó mã ngoài chuỗi của bạn sẽ gửi nó lên chuỗi khối dưới dạng một giao dịch."
 author: Ori Pomerantz
 tags: ["không cần gas", "Solidity", "eip-712", "giao dịch meta"]
 skill: intermediate
-breadcrumb: Tài trợ Gas
+breadcrumb: "Tài trợ Gas"
 lang: vi
 published: 2026-02-27
 ---

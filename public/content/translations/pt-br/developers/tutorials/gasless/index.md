@@ -1,10 +1,10 @@
 ---
 title: "Patrocinando taxas de gás: Como cobrir os custos de transação para seus usuários"
-description: É fácil criar uma chave privada e um endereço; é apenas uma questão de executar o software certo. Mas há muitos lugares no mundo onde obter ETH para enviar transações é muito mais difícil. Neste tutorial, você aprende como cobrir os custos de gás onchain para executar dados estruturados offchain assinados pelo usuário em seu contrato inteligente. Você faz com que o usuário assine uma estrutura contendo as informações da transação, que seu código offchain então envia para a blockchain como uma transação.
+description: "É fácil criar uma chave privada e um endereço; é apenas uma questão de executar o software certo. Mas há muitos lugares no mundo onde obter ETH para enviar transações é muito mais difícil. Neste tutorial, você aprende como cobrir os custos de gás onchain para executar dados estruturados offchain assinados pelo usuário em seu contrato inteligente. Você faz com que o usuário assine uma estrutura contendo as informações da transação, que seu código offchain então envia para a blockchain como uma transação."
 author: Ori Pomerantz
-tags: ["sem gás", "solidity", "eip-712", "meta-transações"]
+tags: ["sem gás", "Solidity", "eip-712", "meta-transações"]
 skill: intermediate
-breadcrumb: Patrocínio de gás
+breadcrumb: "Patrocínio de gás"
 lang: pt-br
 published: 2026-02-27
 ---

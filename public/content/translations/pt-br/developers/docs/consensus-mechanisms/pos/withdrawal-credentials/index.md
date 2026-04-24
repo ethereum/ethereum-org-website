@@ -1,6 +1,6 @@
 ---
 title: Credenciais de saque
-description: Uma explicação sobre os tipos de credenciais de saque de validador (0x00, 0x01, 0x02) e suas implicações para os stakers do Ethereum.
+description: "Uma explicação sobre os tipos de credenciais de saque de validador (0x00, 0x01, 0x02) e suas implicações para os stakers do Ethereum."
 lang: pt-br
 ---
 

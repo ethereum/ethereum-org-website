@@ -1,10 +1,10 @@
 ---
 title: "Sponzorování poplatků za gas: Jak pokrýt transakční náklady vašich uživatelů"
-description: Vytvořit soukromý klíč a adresu je snadné; stačí jen spustit ten správný software. Na světě je ale mnoho míst, kde je získání ETH pro odesílání transakcí mnohem těžší. V tomto tutoriálu se naučíte, jak pokrýt onchain náklady na gas za spuštění offchain strukturovaných dat podepsaných uživatelem ve vašem chytrém kontraktu. Necháte uživatele podepsat strukturu obsahující informace o transakci, kterou pak váš offchain kód odešle na blockchain jako transakci.
+description: "Vytvořit soukromý klíč a adresu je snadné; stačí jen spustit ten správný software. Na světě je ale mnoho míst, kde je získání ETH pro odesílání transakcí mnohem těžší. V tomto tutoriálu se naučíte, jak pokrýt onchain náklady na gas za spuštění offchain strukturovaných dat podepsaných uživatelem ve vašem chytrém kontraktu. Necháte uživatele podepsat strukturu obsahující informace o transakci, kterou pak váš offchain kód odešle na blockchain jako transakci."
 author: Ori Pomerantz
 tags: ["bez gasu", "Solidity", "EIP-712", "meta-transakce"]
 skill: intermediate
-breadcrumb: Sponzorování gasu
+breadcrumb: "Sponzorování gasu"
 lang: cs
 published: 2026-02-27
 ---

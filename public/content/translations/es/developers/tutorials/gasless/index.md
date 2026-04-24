@@ -1,8 +1,8 @@
 ---
 title: "Patrocinio de tarifas de gas: Cómo cubrir los costos de transacción para sus usuarios"
-description: Es fácil crear una clave privada y una dirección; es solo cuestión de ejecutar el software adecuado. Pero hay muchos lugares en el mundo donde conseguir el ETH para enviar transacciones es mucho más difícil. En este tutorial aprenderá cómo cubrir los costos de gas en cadena para ejecutar datos estructurados fuera de la cadena firmados por el usuario en su contrato inteligente. Usted hace que el usuario firme una estructura que contiene la información de la transacción, que luego su código fuera de la cadena envía a la cadena de bloques como una transacción.
+description: "Es fácil crear una clave privada y una dirección; es solo cuestión de ejecutar el software adecuado. Pero hay muchos lugares en el mundo donde conseguir el ETH para enviar transacciones es mucho más difícil. En este tutorial aprenderá cómo cubrir los costos de gas en cadena para ejecutar datos estructurados fuera de la cadena firmados por el usuario en su contrato inteligente. Usted hace que el usuario firme una estructura que contiene la información de la transacción, que luego su código fuera de la cadena envía a la cadena de bloques como una transacción."
 author: Ori Pomerantz
-tags: ["sin gas", "solidity", "eip-712", "metatransacciones"]
+tags: ["sin gas", "Solidity", "eip-712", "metatransacciones"]
 skill: intermediate
 breadcrumb: Patrocinio de gas
 lang: es
