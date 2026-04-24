@@ -3,16 +3,11 @@ import { join } from "path"
 
 import { shuffle } from "lodash"
 
-import { Flex } from "@/components/ui/flex"
+import ContributorsView, { type Contributor } from "./ContributorsView"
 
 import "server-only"
 
-export interface Contributor {
-  login: string
-  name: string
-  avatar_url: string
-  profile?: string
-}
+export type { Contributor }
 
 interface ContributorsProps {
   contributors?: Contributor[]
@@ -37,61 +32,8 @@ const shuffledContributors: Contributor[] = shuffle(
   }))
 )
 
-const cardClassName =
-  "hover:bg-background-highlight m-2 block max-w-[132px] shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded focus:scale-[1.02] focus:rounded"
-
-const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
-  const body = (
-    <>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        className="h-[132px] w-[132px]"
-        src={contributor.avatar_url}
-        alt=""
-        width={132}
-        height={132}
-        loading="lazy"
-        decoding="async"
-      />
-      <div className="p-4">
-        <h3 className="text-md text-body mt-2 mb-4">{contributor.name}</h3>
-      </div>
-    </>
-  )
-
-  if (contributor.profile) {
-    return (
-      <a
-        href={contributor.profile}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${cardClassName} text-body no-underline hover:no-underline`}
-      >
-        {body}
-      </a>
-    )
-  }
-
-  return <div className={cardClassName}>{body}</div>
-}
-
-const Contributors = ({ contributors }: ContributorsProps = {}) => {
-  const contributorsList = contributors ?? shuffledContributors
-
-  return (
-    <>
-      <p>
-        Thanks to our {contributorsList.length} Ethereum community members who
-        have contributed so far!
-      </p>
-
-      <Flex className="flex-wrap">
-        {contributorsList.map((contributor) => (
-          <ContributorCard key={contributor.login} contributor={contributor} />
-        ))}
-      </Flex>
-    </>
-  )
-}
+const Contributors = ({ contributors }: ContributorsProps = {}) => (
+  <ContributorsView contributors={contributors ?? shuffledContributors} />
+)
 
 export default Contributors

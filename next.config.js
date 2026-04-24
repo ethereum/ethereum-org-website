@@ -110,7 +110,7 @@ module.exports = (phase) => {
           description: /Overly broad patterns/,
         },
         {
-          path: "**",
+          path: "**/src/lib/**",
           title: /Encountered unexpected file/,
         },
       ],
