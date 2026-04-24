@@ -19,7 +19,7 @@ const Nav = async () => {
   return (
     <>
       <nav
-        className="z-sticky bg-background h-19 sticky top-0 flex w-full max-w-screen-2xl items-center justify-between border-b p-4 md:items-stretch md:justify-normal xl:px-8"
+        className="z-sticky bg-background sticky top-0 flex h-19 w-full max-w-screen-2xl items-center justify-between border-b p-4 md:items-stretch md:justify-normal xl:px-8"
         aria-label={t("nav-primary")}
       >
         <BaseLink
