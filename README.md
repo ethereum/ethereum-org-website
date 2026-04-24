@@ -5,6 +5,14 @@ Building bridges between Ethereum and the Thai community 🇹🇭. Focused on **
 
 ---
 
+### 📊 GitHub Stats & Skills
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=Pum482930&show_icons=true&theme=radical&hide_border=true" alt="Pum's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pum482930&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
+</p>
+
+---
+
 ### 🏆 Key Achievements
 * 🥇 **Ranked #1 Thailand** - Ethereum.org Translatathon 2025.
 * 🛡️ **Validated Security Researcher** - HackerOne & HackenProof.
@@ -17,36 +25,28 @@ Building bridges between Ethereum and the Thai community 🇹🇭. Focused on **
 * **[Ethereum.org](https://ethereum.org/th/)**: Lead Maintainer for Thai Localization (L10n).
 * **[Zaxion](https://github.com/Pum482930/Zaxion)**: Award-winning GitHub automation for Web3 builders.
 * **[ENB Token](https://mint.club/token/base/ENB)**: Managing the ENB Bounty ecosystem on Base.
-* **Arbitrum & Base Ecosystems**: Active developer and contributor.
+* **World ID Integration**: Implementing Sybil-resistant wealth protocols.
 
 ---
 
-### 💻 Tech Stack & Tools
-* **Languages:** Solidity, Python, JavaScript.
-* **Security:** Smart Contract Auditing, Vulnerability Reporting (Bug Bounty).
-* **AI Stack:** Cursor AI, GitHub Copilot, Gemini.
-* **Web3:** Ethers.js, Hardhat, Farcaster Frames.
+### ☕ Support My Work & Join Base 🔵
+ร่วมสนับสนุนการสร้าง Web3 Ecosystem ในไทย หรือสมัครใช้งาน Base ผ่านลิงก์ของผม:
 
----
-
-### ☕ Support My Work (Base Network 🔵)
-หากคุณต้องการสนับสนุนการทำงานของผมเพื่อสร้าง Ecosystem ในไทยให้แข็งแกร่งขึ้น:
-
-| [ ![Support via Base](https://img.shields.io/badge/Support-Base_Network-0052FF?style=for-the-badge&logo=base&logoColor=white) ](https://blockscan.com/address/0x4971c0016ce3eb45a70d50b6627885524ee9961f) | [ ![Copy Address](https://img.shields.io/badge/Copy-Wallet_Address-gray?style=for-the-badge) ](#) |
+| Support via Base (EVM) | Join Base Ecosystem |
 | :--- | :--- |
+| [![Support via Base](https://img.shields.io/badge/Donate-0x4971...961f-0052FF?style=for-the-badge&logo=base&logoColor=white)](https://blockscan.com/address/0x4971c0016ce3eb45a70d50b6627885524ee9961f) | [![Join Base](https://img.shields.io/badge/Join-Base_Invite-blueviolet?style=for-the-badge&logo=base&logoColor=white)](https://base.app/invite/pump482930/DYWZQP2Z) |
 
-**EVM Address (ETH / Base / ARB):**
-`0x4971c0016ce3eb45a70d50b6627885524ee9961f`
-
-> 💡 **Tip:** การสนับสนุนผ่าน **Base Network** จะช่วยลดค่าธรรมเนียม (Gas) และรวดเร็วที่สุดครับ
+**EVM Wallet:** `0x4971c0016ce3eb45a70d50b6627885524ee9961f`
+> *Supporting via **Base Network** is fast and has the lowest gas fees!* 🛡️
 
 ---
 
 ### 📫 Connect with Me
-* **Twitter/X:** [@KhsLak58447](https://x.com/KhsLak58447)
-* **Farcaster:** [@pump482930](https://farcaster.xyz/pump482930)
-* **HackenProof:** [Pum](https://hackenproof.com/hackers/Pum)
-* **GitHub:** [Pum482930](https://github.com/Pum482930)
+<p align="left">
+<a href="https://x.com/KhsLak58447" target="blank"><img src="https://img.shields.io/badge/twitter-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white" alt="KhsLak58447" /></a>
+<a href="https://farcaster.xyz/pump482930" target="blank"><img src="https://img.shields.io/badge/farcaster-8a63d2?style=for-the-badge&logo=farcaster&logoColor=white" alt="pump482930" /></a>
+<a href="https://hackenproof.com/hackers/Pum" target="blank"><img src="https://img.shields.io/badge/HackenProof-yellow?style=for-the-badge&logo=hackerone&logoColor=black" alt="Pum" /></a>
+</p>
 
 ---
 
