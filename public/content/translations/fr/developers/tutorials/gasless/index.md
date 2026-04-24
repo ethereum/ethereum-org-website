@@ -1,6 +1,6 @@
 ---
 title: "Sponsoriser les frais de gaz : Comment couvrir les coûts de transaction pour vos utilisateurs"
-description: "Il est facile de créer une clé privée et une adresse ; il suffit d'exécuter le bon logiciel. Mais il y a de nombreux endroits dans le monde où obtenir de l'ETH pour envoyer des transactions est beaucoup plus difficile. Dans ce tutoriel, vous apprendrez comment couvrir les coûts de gaz sur chaîne pour l'exécution de données structurées hors chaîne signées par l'utilisateur dans votre contrat intelligent. Vous demandez à l'utilisateur de signer une structure contenant les informations de la transaction, que votre code hors chaîne soumet ensuite à la chaîne de blocs en tant que transaction."
+description: "Il est facile de créer une clé privée et une adresse ; il suffit d'exécuter le bon logiciel. Mais il y a de nombreux endroits dans le monde où obtenir de l'ETH pour envoyer des transactions est beaucoup plus difficile. Dans ce tutoriel, vous apprendrez comment couvrir les coûts de gaz onchain pour l'exécution de données structurées offchain signées par l'utilisateur dans votre contrat intelligent. Vous demandez à l'utilisateur de signer une structure contenant les informations de la transaction, que votre code offchain soumet ensuite à la chaîne de blocs en tant que transaction."
 author: Ori Pomerantz
 tags: ["sans gaz", "Solidity", "eip-712", "méta-transactions"]
 skill: intermediate
