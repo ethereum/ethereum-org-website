@@ -4,6 +4,7 @@ description: Explore the official Ethereum Foundation Mandate, defining the Foun
 hideEditButton: true
 sidebarDepth: 1
 lang: en
+authors: ["Ethereum Foundation"]
 ---
 
 # The Ethereum Foundation Mandate {#mandate}

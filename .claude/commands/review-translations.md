@@ -224,38 +224,39 @@ Read `.claude/translation-review/known-patterns.md` — this contains all issue 
 
 ### Translation Glossary (AUTHORITATIVE SOURCE)
 
-The EthGlossary API (`https://ethereum.org/api/glossary`) is the **authoritative source** for all Ethereum term translations across the entire pipeline. Community-voted glossary terms are not suggestions — they are the required translations.
+**ETHGlossary** is the authoritative source for Ethereum term translations. Deviations are critical issues, not warnings.
 
-**Fetch live from the API first, fall back to cache only if the API is unreachable:**
+Resolve the base URL from the pipeline config (env var wins; default lives in `src/scripts/intl-pipeline/config.ts` under `GLOSSARY_API_URL`):
 
 ```bash
-# Fetch live glossary
-GLOSSARY_CACHE="$HOME/.claude/translation-review/fetch-translation-glossary.json"
-GLOSSARY_URL="https://ethereum.org/api/glossary"
-
-# Try live fetch first
-if curl -sf "$GLOSSARY_URL" -o "$TMPDIR/glossary-live.json" 2>/dev/null; then
-  # Update cache with fresh data
-  cp "$TMPDIR/glossary-live.json" "$GLOSSARY_CACHE"
-  echo "Glossary fetched live from API and cache updated."
-else
-  echo "WARNING: API unreachable, using cached glossary."
-fi
+GLOSSARY_API_URL="${GLOSSARY_API_URL:-$(grep -oE 'https://[^"]+/api/v[0-9]+' "$WORKTREE_PATH/src/scripts/intl-pipeline/config.ts" | head -1)}"
+GLOSSARY_HOST="${GLOSSARY_API_URL%/api/*}"
 ```
 
-Schema: `Array<{ string_term, translation_text, language_code, total_votes }>`.
+Fetch `llms.txt` first as the canonical reference for endpoints and languages; if examples below disagree, llms.txt wins:
 
-For each language being reviewed, extract relevant glossary terms:
-```
-Filter entries where language_code matches the target locale.
-Sort by total_votes descending.
-Include ALL terms for the language (not just top 50) — these are authoritative.
+```bash
+curl -sf "$GLOSSARY_HOST/llms.txt" \
+  -o "$TMPDIR/ethglossary-llms.txt" \
+  && cp "$TMPDIR/ethglossary-llms.txt" "$HOME/.claude/translation-review/ethglossary-llms.txt"
 ```
 
-**The glossary is used in every subsequent phase:**
-- **Phase 3 (Review):** Agents treat glossary deviations as CRITICAL, not warnings
-- **Phase 5 (Auto-Fix):** Glossary deviations are auto-corrected to the top-voted translation
-- **Phase 8 (Knowledge Base):** New deviations discovered are logged for future reviews
+**Preferred — per-file filter** (`POST /filter`): returns only the glossary terms that appear in the English source, with translations sorted by occurrence. Avoids pulling hundreds of irrelevant terms into agent context.
+
+```bash
+ENGLISH_SOURCE=$(cat "$WORKTREE_PATH/public/content/{path}.md")
+curl -sf -X POST "$GLOSSARY_API_URL/filter" \
+  -H "Content-Type: application/json" \
+  -d "$(jq -n --arg text "$ENGLISH_SOURCE" --arg lang "{LANGUAGE_CODE}" '{text: $text, language: $lang}')"
+```
+
+**Fallback — full language** when filtering per file is impractical or the endpoint is unreachable:
+
+```bash
+curl -sf "$GLOSSARY_API_URL/translations/{LANGUAGE_CODE}"
+```
+
+Used in Phase 3 (review — deviations are CRITICAL), Phase 5 (auto-fix corrects to ETHGlossary translation), Phase 8 (new deviations logged).
 
 ### Per-Language Prior Findings
 Check if `.claude/translation-review/per-language/{LANGUAGE_CODE}.md` exists. If so, read it and inject relevant prior findings into the agent prompt.
@@ -331,22 +332,11 @@ The community has voted on these translations for key Ethereum terms. Use these 
 - Review the entire current content of each file
 - Compare against English source files from the worktree
 
-## MANDATORY: Fetch Ethereum Glossary FIRST
+## MANDATORY: Use ETHGlossary for the target language
 
-**Before reviewing ANY translation, you MUST fetch the official Ethereum glossary for the language(s) being reviewed.** This is non-negotiable. The glossary contains community-approved translations for key terms.
+Use the ETHGlossary terms fetched in Phase 2 as the authority for technical term translations. Report deviations as **critical** issues (not warnings), with the current (wrong) translation and the expected (ETHGlossary) translation so Phase 5 can auto-fix them.
 
-```bash
-# Fetch full glossary (all languages):
-curl -s "https://ethereum.org/api/glossary/"
-
-# Fetch glossary for a specific language (optional lang param, one at a time):
-curl -s "https://ethereum.org/api/glossary/?lang=fr"
-curl -s "https://ethereum.org/api/glossary/?lang=ja"
-```
-
-The glossary returns approved translations per language. Use these as the authority for how technical terms SHOULD be translated. Flag any deviations as warnings with "Glossary mismatch" in the issue column.
-
-**If you skip the glossary, the entire review is invalid.**
+**If you skip ETHGlossary, the entire review is invalid.**
 
 ## Review Checklist
 
@@ -733,6 +723,6 @@ ETH, Wei, Gwei, Gas
 - Use `--model=sonnet` or `--model=haiku` for faster reviews
 - Build verification is opt-in: `--build-local` for local scoped builds, `--netlify-check` for Netlify deploy preview checks
 - If an agent exceeds context limits with Opus, fall back to Sonnet with Grep-based file inspection
-- **EthGlossary API** (`https://ethereum.org/api/glossary`) is fetched live in Phase 2 and is the authoritative source for term translations across the entire pipeline — review (Phase 3), auto-fix (Phase 5), and knowledge base (Phase 8). The local cache at `~/.claude/translation-review/fetch-translation-glossary.json` is a fallback only.
+- **ETHGlossary** is the authoritative source for term translations across review (Phase 3), auto-fix (Phase 5), and knowledge base (Phase 8). See Phase 2 for usage; `llms.txt` is the canonical endpoint reference.
 - Knowledge base at `.claude/translation-review/` accumulates findings across reviews (committed to repo)
 - `gh` CLI commands require `dangerouslyDisableSandbox: true` due to TLS certificate verification issues in sandbox mode

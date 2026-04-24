@@ -117,7 +117,7 @@ const Page = async (props: {
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title-other")}</h2>
-          <div className="grid-cols-fill-4 grid gap-8">
+          <div className="grid grid-cols-fill-4 gap-8">
             {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
               ({ slug, Icon }) => (
                 <SubpageCard
@@ -152,20 +152,29 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, category } = params
 
-  if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
-    notFound()
+  try {
+    if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
+      throw new Error(`Invalid developer tools category: ${category}`)
+    }
+
+    const t = await getTranslations("page-developers-tools")
+
+    return await getMetadata({
+      locale,
+      slug: ["developers", "tools", category],
+      title: t(`page-developers-tools-category-${category}-title`),
+      description: t(
+        `page-developers-tools-category-${category}-meta-description`
+      ),
+    })
+  } catch {
+    const t = await getTranslations("common")
+
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const t = await getTranslations("page-developers-tools")
-
-  return await getMetadata({
-    locale,
-    slug: ["developers", "tools", category],
-    title: t(`page-developers-tools-category-${category}-title`),
-    description: t(
-      `page-developers-tools-category-${category}-meta-description`
-    ),
-  })
 }
 
 export default Page
