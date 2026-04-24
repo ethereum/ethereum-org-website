@@ -31,14 +31,6 @@ function videoPath(slug: string, locale: string): string {
 }
 
 /**
- * Default YouTube thumbnail URL derived from a video ID.
- * Returns hqdefault (480x360) which is guaranteed to exist.
- */
-export function getDefaultThumbnailUrl(youtubeId: string): string {
-  return `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
-}
-
-/**
  * Read and parse a video's index.md file for a given slug and locale.
  * Returns the full frontmatter and markdown body content.
  *
@@ -101,7 +93,8 @@ export async function getVideoData(
 
 /**
  * Convert VideoData to a flat VideoCardData suitable for client components.
- * Prefers S3-hosted thumbnail when available, falls back to YouTube URL.
+ * Thumbnails are served from S3 (populated by the fetchVideoThumbnails task,
+ * which handles both YouTube and customThumbnailUrl sources).
  */
 function toVideoCardData(
   data: VideoData,
@@ -115,10 +108,7 @@ function toVideoCardData(
     uploadDate: fm.uploadDate,
     duration: fm.duration,
     topic: fm.topic,
-    thumbnailUrl:
-      thumbnailMap?.[slug] ||
-      fm.customThumbnailUrl ||
-      getDefaultThumbnailUrl(fm.youtubeId),
+    thumbnailUrl: thumbnailMap?.[slug] || "",
   }
 }
 
