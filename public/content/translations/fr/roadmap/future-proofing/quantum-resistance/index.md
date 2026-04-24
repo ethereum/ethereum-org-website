@@ -1,6 +1,6 @@
 ---
 title: Cryptographie post-quantique sur Ethereum
-description: Comment Ethereum se prépare à l'ère post-quantique, ce qui est vulnérable et ce qui est construit pour le protéger.
+description: "Comment Ethereum se prépare à l'ère post-quantique, ce qui est vulnérable et ce qui est construit pour le protéger."
 lang: fr
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum roadmap"

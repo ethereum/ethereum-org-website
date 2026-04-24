@@ -1,6 +1,6 @@
 ---
-title: व्हिडिओ जोडणे
-description: ethereum.org वर व्हिडिओ जोडण्याचे धोरण
+title: "व्हिडिओ जोडणे"
+description: "ethereum.org वर व्हिडिओ जोडण्याचे धोरण"
 lang: mr
 ---
 

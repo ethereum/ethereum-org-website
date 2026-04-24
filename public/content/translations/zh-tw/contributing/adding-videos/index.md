@@ -1,6 +1,6 @@
 ---
-title: 新增影片
-description: 在 ethereum.org 新增影片的政策
+title: "新增影片"
+description: "在 ethereum.org 新增影片的政策"
 lang: zh-tw
 ---
 
@@ -12,8 +12,8 @@ lang: zh-tw
 
 Ethereum.org 是一個中立的教育資源。影片庫的策展目的是：
 
-- **教育**使用者了解以太坊技術、生態系與社群
-- **保持準確**的技術內容
+- <strong>教育</strong>使用者了解以太坊技術、生態系與社群
+- <strong>保持準確</strong>的技術內容
 - **保持相關性**，與以太坊社群緊密連結
 
 本網站不會上架主要用於推廣特定產品、代幣或商業服務的影片。

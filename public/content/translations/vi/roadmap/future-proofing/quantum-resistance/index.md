@@ -1,6 +1,6 @@
 ---
-title: Mật mã học hậu lượng tử trên Ethereum
-description: Cách Ethereum chuẩn bị cho kỷ nguyên hậu lượng tử, những gì dễ bị tổn thương và những gì đang được xây dựng để bảo vệ nó.
+title: "Mật mã học hậu lượng tử trên Ethereum"
+description: "Cách Ethereum chuẩn bị cho kỷ nguyên hậu lượng tử, những gì dễ bị tổn thương và những gì đang được xây dựng để bảo vệ nó."
 lang: vi
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum roadmap"

@@ -1,6 +1,6 @@
 ---
 title: Crittografia post-quantistica su Ethereum
-description: Come Ethereum si sta preparando per l'era post-quantistica, cosa è vulnerabile e cosa si sta costruendo per proteggerlo.
+description: "Come Ethereum si sta preparando per l'era post-quantistica, cosa è vulnerabile e cosa si sta costruendo per proteggerlo."
 lang: it
 image: /images/roadmap/roadmap-future.png
 alt: "Roadmap di Ethereum"

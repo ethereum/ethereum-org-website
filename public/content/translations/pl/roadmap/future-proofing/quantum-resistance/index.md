@@ -1,6 +1,6 @@
 ---
 title: Kryptografia postkwantowa w Ethereum
-description: Jak Ethereum przygotowuje się na erę postkwantową, co jest podatne na ataki i co jest budowane, aby to chronić.
+description: "Jak Ethereum przygotowuje się na erę postkwantową, co jest podatne na ataki i co jest budowane, aby to chronić."
 lang: pl
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum roadmap"

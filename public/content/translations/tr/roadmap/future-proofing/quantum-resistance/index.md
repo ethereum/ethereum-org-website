@@ -1,6 +1,6 @@
 ---
-title: Ethereum'da kuantum sonrası kriptografi
-description: Ethereum'un kuantum sonrası çağa nasıl hazırlandığı, nelerin savunmasız olduğu ve onu korumak için nelerin inşa edildiği.
+title: "Ethereum'da kuantum sonrası kriptografi"
+description: "Ethereum'un kuantum sonrası çağa nasıl hazırlandığı, nelerin savunmasız olduğu ve onu korumak için nelerin inşa edildiği."
 lang: tr
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum roadmap"

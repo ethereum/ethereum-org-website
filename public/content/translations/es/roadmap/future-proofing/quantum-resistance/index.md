@@ -1,6 +1,6 @@
 ---
-title: Criptografía poscuántica en Ethereum
-description: Cómo se está preparando Ethereum para la era poscuántica, qué es vulnerable y qué se está construyendo para protegerlo.
+title: "Criptografía poscuántica en Ethereum"
+description: "Cómo se está preparando Ethereum para la era poscuántica, qué es vulnerable y qué se está construyendo para protegerlo."
 lang: es
 image: /images/roadmap/roadmap-future.png
 alt: "Hoja de ruta de Ethereum"

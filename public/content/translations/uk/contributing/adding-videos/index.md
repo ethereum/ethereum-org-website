@@ -1,6 +1,6 @@
 ---
-title: Додавання відео
-description: Політика додавання відео на ethereum.org
+title: "Додавання відео"
+description: "Політика додавання відео на ethereum.org"
 lang: uk
 ---
 

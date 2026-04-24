@@ -1,6 +1,6 @@
 ---
-title: إضافة مقاطع فيديو
-description: سياسة إضافة مقاطع الفيديو إلى ethereum.org
+title: "إضافة مقاطع فيديو"
+description: "سياسة إضافة مقاطع الفيديو إلى ethereum.org"
 lang: ar
 ---
 

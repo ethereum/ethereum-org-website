@@ -1,6 +1,6 @@
 ---
-title: వీడియోలను జోడించడం
-description: ethereum.orgకి వీడియోలను జోడించడానికి విధానం
+title: "వీడియోలను జోడించడం"
+description: "ethereum.orgకి వీడియోలను జోడించడానికి విధానం"
 lang: te
 ---
 

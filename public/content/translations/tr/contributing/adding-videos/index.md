@@ -1,6 +1,6 @@
 ---
 title: Video Ekleme
-description: ethereum.org'a video ekleme politikası
+description: "ethereum.org'a video ekleme politikası"
 lang: tr
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 以太坊上的後量子密碼學
-description: 以太坊如何為後量子時代做準備、哪些部分容易受到攻擊，以及正在建立哪些保護措施。
+title: "以太坊上的後量子密碼學"
+description: "以太坊如何為後量子時代做準備、哪些部分容易受到攻擊，以及正在建立哪些保護措施。"
 lang: zh-tw
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum roadmap"

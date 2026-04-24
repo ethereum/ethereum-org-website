@@ -1,6 +1,6 @@
 ---
-title: Добавление видео
-description: Правила добавления видео на ethereum.org
+title: "Добавление видео"
+description: "Правила добавления видео на ethereum.org"
 lang: ru
 ---
 

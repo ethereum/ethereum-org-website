@@ -1,6 +1,6 @@
 ---
-title: Přidávání videí
-description: Zásady pro přidávání videí na ethereum.org
+title: "Přidávání videí"
+description: "Zásady pro přidávání videí na ethereum.org"
 lang: cs
 ---
 

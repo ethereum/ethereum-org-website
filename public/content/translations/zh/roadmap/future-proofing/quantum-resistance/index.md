@@ -1,6 +1,6 @@
 ---
-title: 以太坊上的后量子密码学
-description: 以太坊如何为后量子时代做准备，哪些方面存在漏洞，以及正在构建哪些保护措施。
+title: "以太坊上的后量子密码学"
+description: "以太坊如何为后量子时代做准备，哪些方面存在漏洞，以及正在构建哪些保护措施。"
 lang: zh
 image: /images/roadmap/roadmap-future.png
 alt: "以太坊路线图"

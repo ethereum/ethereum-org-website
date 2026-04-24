@@ -1,6 +1,6 @@
 ---
-title: イーサリアムにおけるポスト量子暗号技術
-description: イーサリアムがポスト量子時代に向けてどのように準備しているか、何が脆弱か、そしてそれを保護するために何が構築されているか。
+title: "イーサリアムにおけるポスト量子暗号技術"
+description: "イーサリアムがポスト量子時代に向けてどのように準備しているか、何が脆弱か、そしてそれを保護するために何が構築されているか。"
 lang: ja
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum roadmap"

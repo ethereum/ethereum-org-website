@@ -1,6 +1,6 @@
 ---
-title: Criptografia pós-quântica no Ethereum
-description: Como o Ethereum está se preparando para a era pós-quântica, o que é vulnerável e o que está sendo construído para protegê-lo.
+title: "Criptografia pós-quântica no Ethereum"
+description: "Como o Ethereum está se preparando para a era pós-quântica, o que é vulnerável e o que está sendo construído para protegê-lo."
 lang: pt-br
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum roadmap"

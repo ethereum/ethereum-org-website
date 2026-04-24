@@ -1,6 +1,6 @@
 ---
 title: Post-Quanten-Kryptographie auf Ethereum
-description: Wie sich Ethereum auf die Post-Quanten-Ära vorbereitet, was anfällig ist und was zu seinem Schutz entwickelt wird.
+description: "Wie sich Ethereum auf die Post-Quanten-Ära vorbereitet, was anfällig ist und was zu seinem Schutz entwickelt wird."
 lang: de
 image: /images/roadmap/roadmap-future.png
 alt: "Ethereum-Roadmap"

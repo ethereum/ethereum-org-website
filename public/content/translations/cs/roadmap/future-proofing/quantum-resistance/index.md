@@ -1,6 +1,6 @@
 ---
-title: Postkvantová kryptografie na Ethereu
-description: Jak se Ethereum připravuje na postkvantovou éru, co je zranitelné a co se buduje pro jeho ochranu.
+title: "Postkvantová kryptografie na Ethereu"
+description: "Jak se Ethereum připravuje na postkvantovou éru, co je zranitelné a co se buduje pro jeho ochranu."
 lang: cs
 image: /images/roadmap/roadmap-future.png
 alt: "Plán vývoje Etherea"
