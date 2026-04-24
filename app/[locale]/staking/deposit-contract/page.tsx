@@ -31,7 +31,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   return (
     <I18nProvider locale={locale} messages={messages}>
       <DepositContractJsonLD locale={locale} />
-      <DepositContractPage locale={locale} />
+      <DepositContractPage />
     </I18nProvider>
   )
 }

@@ -2,8 +2,10 @@ import { FileContributor, Frontmatter } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 
 export default async function SlugJsonLD({
   locale,
@@ -49,10 +51,15 @@ export default async function SlugJsonLD({
     url: contributor.html_url,
   }))
 
+  const { authorGraphNodes, authorIds } = resolveAuthorsFromFrontmatter(
+    frontmatter.authors ?? frontmatter.author
+  )
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
+      ...authorGraphNodes,
       {
         "@type": "WebPage",
         "@id": url,
@@ -60,7 +67,7 @@ export default async function SlugJsonLD({
         description: frontmatter.description,
         url: url,
         inLanguage: locale,
-        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        author: authorIds,
         contributor: contributorList,
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
@@ -79,7 +86,7 @@ export default async function SlugJsonLD({
         image: frontmatter.image
           ? `https://ethereum.org${frontmatter.image}`
           : undefined,
-        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        author: authorIds,
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         dateModified: frontmatter.published,

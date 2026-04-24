@@ -10,6 +10,7 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
 
 import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 
 export default async function VideoPageJsonLD({
   locale,
@@ -25,6 +26,15 @@ export default async function VideoPageJsonLD({
   const url = normalizeUrlForJsonLd(locale, `/videos/${slug}/`)
   const videoGalleryUrl = normalizeUrlForJsonLd(locale, "/videos/")
 
+  // Resolve a known Person or Organization if one matches the author
+  // string. Otherwise fall back to an anonymous Person using the raw
+  // value.
+  const { authorGraphNodes } = resolveAuthorsFromFrontmatter(frontmatter.author)
+  const creator =
+    authorGraphNodes.length > 0
+      ? { "@id": authorGraphNodes[0]["@id"] }
+      : { "@type": "Person" as const, name: frontmatter.author }
+
   const t = await getTranslations("page-videos")
 
   const videoObjectId = { "@id": `${url}#video` }
@@ -33,6 +43,7 @@ export default async function VideoPageJsonLD({
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
+      ...authorGraphNodes,
       // Type-assertion node for "isPartOf" references
       { "@type": "VideoGallery", "@id": videoGalleryUrl },
       {
@@ -86,10 +97,7 @@ export default async function VideoPageJsonLD({
         contentUrl: `https://www.youtube.com/watch?v=${frontmatter.youtubeId}`,
         educationalLevel: frontmatter.educationLevel,
         inLanguage: frontmatter.lang,
-        creator: {
-          "@type": "Person",
-          name: frontmatter.author,
-        },
+        creator,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         isAccessibleForFree: true,
         isFamilyFriendly: true,
