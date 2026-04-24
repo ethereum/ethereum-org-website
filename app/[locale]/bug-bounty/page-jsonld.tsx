@@ -40,7 +40,10 @@ export default async function BugBountyJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [personReference("fredrik-svantes")],
+        author: [
+          personReference("fredrik-svantes"),
+          REFERENCE.ETHEREUM_COMMUNITY,
+        ],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
