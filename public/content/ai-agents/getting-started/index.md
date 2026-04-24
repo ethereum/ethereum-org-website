@@ -342,6 +342,7 @@ With a funded smart account, a connected framework, and active spending guardrai
 
 - [AI Agents in Cryptocurrency: Architecture, Integration, and Best Practices](https://medium.com/@gwrx2005/ai-agents-in-cryptocurrency-architecture-integration-and-best-practices-a107429bf780) - A comprehensive overview of AI agents in cryptocurrency, covering their architecture, integration with blockchain, and best practices. 
 - [Video: AI Agents & Ethereum with Vito Rivabella: Identity, Reputation and the Agentic Economy](https://www.youtube.com/watch?v=N8yAixLP-8E) — Exploring the emerging agentic economy, and how AI agents are evolving from simple tools into autonomous economic participants supported by onchain identity, reputation, and validation standards like ERC-8004.
+- [When AI Meets Blockchain: A Guide to Securing the Next Frontier](https://quantstamp.com/blog/when-ai-meets-blockchain-a-guide-to-securing-the-next-frontier) - Exploring the security vulnerabilities introduced by integrating autonomous AI agents into blockchain ecosystems, and outlining mitigation strategies developers can use to safeguard. 
 
 ## Continue exploring the AI agents builder hub {#continue-exploring} 
 

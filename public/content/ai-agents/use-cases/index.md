@@ -160,6 +160,7 @@ Evaluate the infrastructure each use case requires. **DeFi automation** needs [w
 - [The Block - Research: AI Agent Sector Overview](https://www.theblock.co/post/344635/research-ai-agent-sector-overview) — An overview of the onchain AI agent ecosystem, evaluating early and second-wave projects and how they collectively contribute to the sector’s future.
 - [Video - AI agents reshaping crypto development, trading and risk](https://www.youtube.com/watch?v=E6FkjoM2qrE) — Discussion on how AI agents are already building smart contracts, managing capital, and interacting with onchain systems.
 - [Trustless AI-Powered Crypto Trading Agents with ERC-8004 and Moltbot](https://medium.com/@gwrx2005/trustless-ai-powered-crypto-trading-agents-with-erc-8004-and-moltbot-58d8789be837) — Research into the design, implementation, frameworks, limitations, and more, for ERC-8004 enabled AI crypto trading agents. 
+- [Make your own AI trading agent on Ethereum](/developers/tutorials/ai-trading-agent/) — A tutorial on how to build an AI trading agent on Ethereum.
 
 ## Continue exploring the AI agents builder hub {#continue-exploring}
 

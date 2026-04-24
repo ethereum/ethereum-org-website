@@ -261,12 +261,10 @@ GOAT is a protocol-first framework: it provides 200+ pre-built EVM protocol plug
 
 ## Further reading {#further-reading}
 
-- - [Aiagenttoolkit.xyz](https://www.aiagenttoolkit.xyz/t/frameworks) — A curated directory of AI agent frameworks, launchpads, and ecosystem resources for builders exploring what tooling exists beyond this hub.
 - [GOAT quickstarts](https://github.com/goat-sdk/goat/tree/main/typescript/examples) — Full end-to-end examples wiring GOAT to different frameworks and wallet types
-- [ElizaOS documentation](https://elizaos.github.io/eliza/) — Framework reference, character configuration API, and plugin lifecycle guides
-- [Olas developer documentation](https://docs.autonolas.network/open-autonomy/) — Full service development workflow for FSM-based autonomous services
-- [Vercel AI SDK](https://sdk.vercel.ai/docs) — Reference for `generateText`, `onStepFinish`, and the tool-call primitives used in the GOAT examples above
 - [LangGraph](https://langchain-ai.github.io/langgraph/) — Durable agent state and `interrupt_before` / `interrupt_after` patterns for human-in-the-loop workflows
+- [Create an AI agent that can transfer and swap tokens using ElizaOS](https://metamask.io/news/create-an-ai-agent-that-can-transfer-and-swap-tokens-using-elizaos) — MetaMask guide covering how to create an AI agent that can transfer and swap tokens. 
+- [AI Agent Framework Security: LangChain, LangGraph, CrewAI & More](https://blog.securelayer7.net/ai-agent-frameworks/) — Common vulnerability patterns in agent frameworks, with real-world exploit examples and mitigation strategies for production deployments.
 
 ## Continue exploring the AI agents builder hub {#continue-exploring} 
 
