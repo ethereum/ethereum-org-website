@@ -161,4 +161,3 @@ Luna's wallet and the reasoning behind each transaction are publicly verifiable 
 - [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
-- [FAQ](/ai-agents/faq/) — Answers to the most common technical questions about building AI agents on Ethereum.

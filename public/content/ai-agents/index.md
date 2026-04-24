@@ -18,6 +18,11 @@ buttons:
   - content: Browse the hub
     toId: ai-agent-builder-hub-sections
     isSecondary: true
+faqItems:
+  - question: "What is an AI agent on Ethereum?"
+    answer: "An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant."
+  - question: "How is an AI agent different from a bot?"
+    answer: "A bot follows fixed rules. Given input X, it always does Y. An AI agent uses a language model to reason about novel situations, form a plan, and take sequences of actions that may differ depending on context. Agents are capable of multi-step reasoning, adapting to unexpected conditions, and handling tasks they were not explicitly programmed for. The trade-off is that agent behavior is less predictable, which is why spending limits and session keys are essential."
 ---
 
 AI agents are software programs that observe their environment, make decisions, and take actions, including sending transactions, paying for services, and interacting with smart contracts, without requiring human input on every step.
@@ -101,7 +106,6 @@ See [Data and stats](/ai-agents/data/) for onchain metrics tracking the growth o
 - [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
-- [FAQ](/ai-agents/faq/) — Answers to the most common technical questions about building AI agents on Ethereum.
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
@@ -109,4 +113,19 @@ See [Data and stats](/ai-agents/data/) for onchain metrics tracking the growth o
 <p className="mt-2">AI agent infrastructure on Ethereum ranges from production-ready standards (ERC-4337, stablecoin payments) to actively experimental technology (zkML at scale, agent-to-agent commerce). Each sub-page in this hub flags the maturity level of the patterns it covers.</p>
 </AlertContent>
 </Alert>
+
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="What is an AI agent on Ethereum?">
+
+An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant. See [Why Ethereum for AI agents](/ai-agents/ethereum/) for the technical case for AI agents, or, to learn the basics of what people can do on Ethereum with AI, see [Decentralized AI](/decentralized-ai/).
+
+</ExpandableCard>
+
+<ExpandableCard title="How is an AI agent different from a bot?">
+
+A bot follows fixed rules. Given input X, it always does Y. An AI agent uses a language model to reason about novel situations, form a plan, and take sequences of actions that may differ depending on context. Agents are capable of multi-step reasoning, adapting to unexpected conditions, and handling tasks they were not explicitly programmed for. The trade-off is that agent behavior is less predictable, which is why spending limits and session keys are essential. See the [AI agents: Getting started](/ai-agents/getting-started/) guide.
+
+</ExpandableCard>
+
 

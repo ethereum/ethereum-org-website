@@ -2,6 +2,9 @@
 title: Agent identity with ERC-8004
 description: Onchain agent identity, reputation, and validation registries using ERC-8004 on Ethereum, including how agents discover, verify, and trust each other without a centralized directory
 lang: en
+faqItems:
+  - question: "What is ERC-8004?"
+    answer: "ERC-8004 is the Trustless Agents Standard, live on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides three onchain registries: an Identity Registry (agent discovery), a Reputation Registry (onchain feedback signals), and a Validation Registry (hooks for cryptographic verification of agent outputs, not yet deployed). The standard uses the same contract addresses across all supported chains via deterministic deployment."
 ---
 
 # Agent identity with ERC-8004 {#agent-identity}
@@ -167,6 +170,14 @@ const agentURI = await client.readContract({
 })
 ```
 
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="What is ERC-8004?">
+
+ERC-8004 is the Trustless Agents Standard, live on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides three onchain registries: an **Identity Registry** (agent discovery, `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), a **Reputation Registry** (onchain feedback signals, `0x8004BAa17C55a88189AE136b182e5fdA19dE9b63`), and a **Validation Registry** (hooks for cryptographic verification of agent outputs — not yet deployed). The standard uses the same contract addresses across all supported chains via deterministic deployment.
+
+</ExpandableCard>
+
 ## Further reading {#further-reading}
 
 - [ERC-8004 Ethereum Magicians thread](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098) — The active discussion thread where interface changes are proposed and debated. Monitor this for breaking changes before each release.
@@ -199,4 +210,3 @@ const agentURI = await client.readContract({
 - [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
-- [FAQ](/ai-agents/faq/) — Answers to the most common technical questions about building AI agents on Ethereum.

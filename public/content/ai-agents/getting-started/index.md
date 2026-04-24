@@ -2,6 +2,11 @@
 title: Getting started with AI agents
 description: A developer on-ramp for building AI agents on Ethereum, from wallet creation to framework connection
 lang: en
+faqItems:
+  - question: "How do I build my first AI agent on Ethereum?"
+    answer: "Start with four steps: (1) Create a smart account wallet using an SDK like ZeroDev or Safe, (2) fund it with testnet ETH from a Sepolia faucet, (3) connect an agent framework like GOAT or ElizaOS that provides the LLM interface and tool orchestration, and (4) configure session key spending policies as guardrails. The Getting started guide walks through each step with working code."
+  - question: "Should I deploy on testnet or mainnet?"
+    answer: "Start on Sepolia testnet. Testnet ETH has no real value, so experimentation carries no financial risk. Move to mainnet only after your session key policies, spending limits, and human-in-the-loop escalation logic are tested and verified. When you do move to mainnet, consider deploying on a Layer 2 network for lower transaction costs."
 ---
 
 # Getting started with AI agents {#getting-started}
@@ -301,6 +306,20 @@ For SDK-level implementation, including full session key code for ZeroDev, Safe,
 
 At this point you have a smart account deployed on Sepolia, a funded agent address, a framework connected to that account through GOAT, and a session key policy enforcing hard spending limits. That combination, including controlled identity, scoped authority, and a structured reasoning loop, is the minimum foundation for a production-ready autonomous agent on Ethereum.
 
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="How do I build my first AI agent on Ethereum?">
+
+Start with four steps: (1) Create a smart account wallet using an SDK like ZeroDev or Safe, (2) fund it with testnet ETH from a Sepolia faucet, (3) connect an agent framework like GOAT or ElizaOS that provides the LLM interface and tool orchestration, and (4) configure session key spending policies as guardrails. This guide walks through each step with working code.
+
+</ExpandableCard>
+
+<ExpandableCard title="Should I deploy on testnet or mainnet?">
+
+Start on Sepolia testnet. Testnet ETH has no real value, so experimentation carries no financial risk. Move to mainnet only after your session key policies, spending limits, and human-in-the-loop escalation logic are tested and verified. When you do move to mainnet, consider deploying on a [Layer 2](/ai-agents/l2s/) network for lower transaction costs.
+
+</ExpandableCard>
+
 ## What to do next {#next-steps}
 
 With a funded smart account, a connected framework, and active spending guardrails, your agent is ready for its first onchain operations.
@@ -341,4 +360,3 @@ With a funded smart account, a connected framework, and active spending guardrai
 - [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
-- [FAQ](/ai-agents/faq/) — Answers to the most common technical questions about building AI agents on Ethereum.

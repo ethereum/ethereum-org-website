@@ -2,6 +2,11 @@
 title: Ethereum for AI agents
 description: How Ethereum's core properties enable AI agent infrastructure, from onchain ownership and verifiable execution to programmable guardrails and machine payments
 lang: en
+faqItems:
+  - question: "Why would an AI agent use Ethereum instead of a centralized API?"
+    answer: "Centralized APIs require accounts, API keys, rate limits set by the provider, and trust that the provider will not change terms, throttle access, or shut down. Ethereum provides a global, permissionless API that any agent can call without registration. The same DeFi protocols, payment infrastructure, and identity registries are accessible to any address, human or machine, without gatekeeping."
+  - question: "What makes Ethereum better than other blockchains for AI agents?"
+    answer: "Three reasons: the deepest ecosystem of production smart contracts (most DeFi, most stablecoins, most tooling), the most mature smart account infrastructure (ERC-4337 with EntryPoint v0.7, EIP-7702 live since May 2025), and the only ecosystem with a production-deployed onchain agent identity standard (ERC-8004, live January 29, 2026). No other blockchain has all three simultaneously."
 ---
 # Ethereum for AI agents {#ethereum-for-ai-agents}
 
@@ -109,6 +114,20 @@ Because all Ethereum L2s ultimately settle to Mainnet, an agent's **onchain asse
 
 See [Layer 2s](/ai-agents/l2s/) for a breakdown of L2 characteristics relevant to agent deployments.
 
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="Why would an AI agent use Ethereum instead of a centralized API?">
+
+Centralized APIs require accounts, API keys, rate limits set by the provider, and trust that the provider will not change terms, throttle access, or shut down. Ethereum provides a global, permissionless API that any agent can call without registration. The same DeFi protocols, payment infrastructure, and identity registries are accessible to any address (human or machine) without gatekeeping.
+
+</ExpandableCard>
+
+<ExpandableCard title="What makes Ethereum better than other blockchains for AI agents?">
+
+Three reasons: the deepest ecosystem of production smart contracts (most DeFi, most stablecoins, most tooling), the most mature smart account infrastructure (ERC-4337 with EntryPoint v0.7, EIP-7702 live since May 2025), and the only ecosystem with a production-deployed onchain agent identity standard (ERC-8004, live January 29, 2026). No other blockchain has all three simultaneously.
+
+</ExpandableCard>
+
 ## Further reading {#further-reading}
 
 - [The promise and challenges of crypto + AI applications](https://vitalik.eth.limo/general/2024/01/30/cryptoai.html) — Vitalik Buterin
@@ -138,4 +157,3 @@ See [Layer 2s](/ai-agents/l2s/) for a breakdown of L2 characteristics relevant t
 - [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
-- [FAQ](/ai-agents/faq/) — Answers to the most common technical questions about building AI agents on Ethereum.

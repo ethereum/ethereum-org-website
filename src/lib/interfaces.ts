@@ -34,6 +34,7 @@ export interface SharedFrontmatter {
 
 export interface StaticFrontmatter extends SharedFrontmatter {
   hideEditButton?: boolean
+  faqItems?: { question: string; answer: string }[]
 }
 
 /**

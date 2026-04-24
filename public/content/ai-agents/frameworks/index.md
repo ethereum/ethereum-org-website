@@ -2,6 +2,11 @@
 title: AI agent frameworks
 description: A directory of agent frameworks with Ethereum integration, including GOAT, ElizaOS, Rig, Olas, GAME, and LangChain, with a decision guide for choosing between them
 lang: en
+faqItems:
+  - question: "Which agent framework should I use?"
+    answer: "For maximum EVM protocol coverage (200+ plugins), use GOAT. For multi-platform social agents (Discord, Twitter, Telegram), use ElizaOS. For Rust and latency-sensitive agents, use Rig. For autonomous services with onchain coordination, use Olas. For game-native or no-code deployments in the Virtuals ecosystem, use GAME. For the widest Python ecosystem and LLM community, use LangChain paired with GOAT's LangChain adapter."
+  - question: "What is the difference between GOAT and ElizaOS?"
+    answer: "GOAT is a protocol-first framework: it provides 200+ pre-built EVM protocol plugins (Uniswap, Aave, Compound, and more) and is directly compatible with the Vercel AI SDK. ElizaOS is a character-first framework: it excels at persistent identity and memory across social platforms (Discord, Twitter, Telegram, Farcaster) while also supporting onchain operations through its EVM plugin. Use GOAT when your agent is primarily a DeFi or protocol operator. Use ElizaOS when your agent needs to maintain a social presence."
 ---
 
 # AI agent frameworks {#ai-agent-frameworks}
@@ -240,6 +245,20 @@ See the [GAME SDK documentation](https://docs.game.virtuals.io/) for the current
 </AlertContent>
 </Alert>
 
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="Which agent framework should I use?">
+
+For maximum EVM protocol coverage (200+ plugins), use **GOAT**. For multi-platform social agents (Discord, Twitter, Telegram), use **ElizaOS**. For Rust and latency-sensitive agents, use **Rig**. For autonomous services with onchain coordination, use **Olas**. For game-native or no-code deployments in the Virtuals ecosystem, use **GAME**. For the widest Python ecosystem and LLM community, use **LangChain** paired with GOAT's LangChain adapter. See the [decision guide](#choosing-a-framework) for details.
+
+</ExpandableCard>
+
+<ExpandableCard title="What is the difference between GOAT and ElizaOS?">
+
+GOAT is a protocol-first framework: it provides 200+ pre-built EVM protocol plugins (Uniswap, Aave, Compound, and more) and is directly compatible with the Vercel AI SDK. ElizaOS is a character-first framework: it excels at persistent identity and memory across social platforms (Discord, Twitter, Telegram, Farcaster) while also supporting onchain operations through its EVM plugin. Use GOAT when your agent is primarily a DeFi or protocol operator. Use ElizaOS when your agent needs to maintain a social presence.
+
+</ExpandableCard>
+
 ## Further reading {#further-reading}
 
 - - [Aiagenttoolkit.xyz](https://www.aiagenttoolkit.xyz/t/frameworks) — A curated directory of AI agent frameworks, launchpads, and ecosystem resources for builders exploring what tooling exists beyond this hub.
@@ -268,4 +287,3 @@ See the [GAME SDK documentation](https://docs.game.virtuals.io/) for the current
 
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
-- [FAQ](/ai-agents/faq/) — Answers to the most common technical questions about building AI agents on Ethereum.

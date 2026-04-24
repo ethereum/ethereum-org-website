@@ -2,6 +2,19 @@
 title: AI Agent wallets
 description: Smart account and wallet infrastructure for Ethereum AI agents, including ERC-4337, EIP-7702, session keys, key management security patterns, and SDK guidance for ZeroDev and Safe
 lang: en
+faqItems:
+  - question: "Do AI agents need a wallet?"
+    answer: "Yes. Any agent that needs to send, receive, or interact with onchain protocols needs a wallet. For production agents, a smart account (ERC-4337 or EIP-7702) is the recommended approach. It allows you to set spending limits, allowlists, and time-bounded session keys at the contract level. A raw EOA with no spending policy is not appropriate for autonomous operation."
+  - question: "Can AI agents own cryptocurrency?"
+    answer: "Yes. An Ethereum smart account is not tied to a legal entity. An agent can hold ETH, stablecoins, and any ERC-20 or ERC-721 token. The agent controls these assets through its signing key. This is different from a human controlling an agent's wallet; the agent itself holds the key and signs transactions directly (with guardrails in place)."
+  - question: "What is ERC-4337 and how do agents use it?"
+    answer: "ERC-4337 is the smart account standard for Ethereum. Instead of a raw externally owned account (EOA) controlled by a private key with no spending constraints, ERC-4337 deploys a smart contract wallet that enforces spending limits, allowlists, and session key policies at the contract level. For agents, this means a compromised session key cannot drain the wallet beyond the policy it is scoped to."
+  - question: "What is EIP-7702?"
+    answer: "EIP-7702 is live on Ethereum Mainnet since the Pectra upgrade (May 7, 2025). It allows an existing EOA to temporarily delegate execution to a smart contract module, gaining smart account capabilities (spending limits, session keys, gas abstraction) without migrating assets to a new address. Use EIP-7702 when you need to upgrade an existing wallet without changing its address. Use ERC-4337 when deploying a new agent from scratch."
+  - question: "How do I limit what my AI agent can spend?"
+    answer: "Use an ERC-4337 smart account with a session key policy. A session key is a time-bounded, policy-bounded signing credential that authorizes the agent to act within a defined scope. For example, maximum 0.01 ETH per transaction, 100 USDC per day, only allowed to call Uniswap and Aave. The smart contract enforces these limits and rejects any UserOperation that violates them regardless of what the language model instructs."
+  - question: "Can an AI agent drain my wallet?"
+    answer: "A raw EOA with no spending constraints can be drained if the agent is compromised, hallucinating, or subject to a prompt injection attack. A smart account with a session key policy limits the blast radius to the policy parameters. If the session key is compromised, the attacker can only spend up to the daily limit and only call the allowlisted contracts. For production deployments with significant value at risk, use a Safe 2-of-3 (agent key, human hot wallet, human cold wallet) so no single key can authorize large treasury movements."
 ---
 
 # AI Agent wallets {#agent-wallets}
@@ -254,6 +267,44 @@ Point your agent's RPC to `http://localhost:8546` (the Veto proxy) instead of `h
 - Test that your HITL escalation logic correctly intercepts operations that should require human approval.
 - Use `publicClient.simulateContract()` before every `writeContract` call, even in local tests.
 
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="Do AI agents need a wallet?">
+
+Yes. Any agent that needs to send, receive, or interact with onchain protocols needs a wallet. For production agents, a **smart account** (ERC-4337 or EIP-7702) is the recommended approach. It allows you to set spending limits, allowlists, and time-bounded session keys at the contract level. A raw EOA with no spending policy is not appropriate for autonomous operation.
+
+</ExpandableCard>
+
+<ExpandableCard title="Can AI agents own cryptocurrency?">
+
+Yes. An Ethereum smart account is not tied to a legal entity. An agent can hold ETH, stablecoins, and any ERC-20 or ERC-721 token. The agent controls these assets through its signing key. This is different from a human controlling an agent's wallet; the agent itself holds the key and signs transactions directly (with guardrails in place).
+
+</ExpandableCard>
+
+<ExpandableCard title="What is ERC-4337 and how do agents use it?">
+
+ERC-4337 is the smart account standard for Ethereum. Instead of a raw externally owned account (EOA) controlled by a private key with no spending constraints, ERC-4337 deploys a smart contract wallet that enforces spending limits, allowlists, and session key policies at the contract level. For agents, this means a compromised session key cannot drain the wallet beyond the policy it is scoped to. EntryPoint v0.7 is deployed at `0x0000000071727De22E5E9d8BAf0edAc6f37da032` on all major networks.
+
+</ExpandableCard>
+
+<ExpandableCard title="What is EIP-7702?">
+
+EIP-7702 is live on Ethereum Mainnet since the Pectra upgrade (May 7, 2025). It allows an existing EOA to temporarily delegate execution to a smart contract module, gaining smart account capabilities (spending limits, session keys, gas abstraction) without migrating assets to a new address. Use EIP-7702 when you need to upgrade an existing wallet without changing its address. Use ERC-4337 when deploying a new agent from scratch.
+
+</ExpandableCard>
+
+<ExpandableCard title="How do I limit what my AI agent can spend?">
+
+Use an ERC-4337 smart account with a session key policy. A session key is a time-bounded, policy-bounded signing credential that authorizes the agent to act within a defined scope. For example, maximum 0.01 ETH per transaction, 100 USDC per day, only allowed to call Uniswap and Aave. The smart contract enforces these limits and rejects any UserOperation that violates them regardless of what the language model instructs. ZeroDev (Kernel), Safe (Allowance Module), and Biconomy (Nexus) all provide session key support.
+
+</ExpandableCard>
+
+<ExpandableCard title="Can an AI agent drain my wallet?">
+
+A raw EOA with no spending constraints can be drained if the agent is compromised, hallucinating, or subject to a prompt injection attack. A smart account with a session key policy limits the blast radius to the policy parameters. If the session key is compromised, the attacker can only spend up to the daily limit and only call the allowlisted contracts. For production deployments with significant value at risk, use a Safe 2-of-3 (agent key, human hot wallet, human cold wallet) so no single key can authorize large treasury movements.
+
+</ExpandableCard>
+
 ## Further reading {#further-reading}
 
 - [ERC-7715: Wallet permissions](https://eips.ethereum.org/EIPS/eip-7715) — Ethereum Improvement Proposals
@@ -271,7 +322,6 @@ Point your agent's RPC to `http://localhost:8546` (the Veto proxy) instead of `h
 
 ### Core infrastructure {#core-infrastructure}
 
-- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
 - [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
 - [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
 - [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
@@ -281,4 +331,3 @@ Point your agent's RPC to `http://localhost:8546` (the Veto proxy) instead of `h
 - [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
-- [FAQ](/ai-agents/faq/) — Answers to the most common technical questions about building AI agents on Ethereum.
