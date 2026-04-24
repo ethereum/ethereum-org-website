@@ -69,7 +69,7 @@ export default async function ConferencesJsonLD({
         "@id": url,
         name: t("page-events-conferences-hero-title", { year }),
         description: t("page-events-meta-description", { year }),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

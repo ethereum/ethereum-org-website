@@ -41,7 +41,7 @@ export default async function CollectiblesJsonLD({
         "@id": url,
         name: t("page-collectibles-hero-header"),
         description: t("page-collectibles-hero-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -72,7 +72,7 @@ export default async function CollectiblesJsonLD({
         "@id": `${url}#collectibles`,
         name: t("page-collectibles-hero-header"),
         description: t("page-collectibles-hero-description"),
-        url: url,
+        url,
         numberOfItems: stats.collectiblesCount || badges.length,
         itemListElement: badges.slice(0, 10).map((badge, index) => ({
           "@type": "ListItem",

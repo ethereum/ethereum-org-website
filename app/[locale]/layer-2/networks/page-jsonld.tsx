@@ -30,7 +30,7 @@ export default async function Layer2NetworksPageJsonLD({
         "@id": url,
         name: t("page-layer-2-networks-meta-title"),
         description: t("page-layer-2-networks-hero-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

@@ -42,7 +42,7 @@ export default async function DevelopersToolsCategoryJsonLD({
         description: t(
           `page-developers-tools-category-${category}-meta-description`
         ),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -87,7 +87,7 @@ export default async function DevelopersToolsCategoryJsonLD({
         description: t(
           `page-developers-tools-category-${category}-description`
         ),
-        url: url,
+        url,
         numberOfItems: categoryTools.length,
         itemListElement: categoryTools.slice(0, 10).map((tool, index) => ({
           "@type": "ListItem",

@@ -36,7 +36,7 @@ export default async function DevelopersToolsJsonLD({
         "@id": url,
         name: t("page-developers-tools-meta-title"),
         description: t("page-developers-tools-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -73,7 +73,7 @@ export default async function DevelopersToolsJsonLD({
         "@id": `${url}#developer-tools`,
         name: t("page-developers-tools-categories-title"),
         description: t("page-developers-tools-meta-description"),
-        url: url,
+        url,
         numberOfItems: DEV_TOOL_CATEGORIES.length,
         itemListElement: DEV_TOOL_CATEGORIES.map((category, index) => ({
           "@type": "ListItem",

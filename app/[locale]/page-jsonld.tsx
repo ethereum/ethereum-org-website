@@ -28,7 +28,7 @@ export default async function IndexPageJsonLD({
       ORGANIZATION.ETHEREUM_COMMUNITY,
       {
         ...ETHEREUM_ORG_WEBSITE,
-        url: url,
+        url,
         description: t("page-index-meta-description"),
         educationalUse: "Self-Paced",
         keywords:

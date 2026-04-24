@@ -26,7 +26,7 @@ export default async function UseCasesPageJsonLD({ locale, contributors }) {
         "@id": url,
         name: t("meta-title"),
         description: t("meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

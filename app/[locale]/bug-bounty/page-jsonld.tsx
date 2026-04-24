@@ -37,7 +37,7 @@ export default async function BugBountyJsonLD({
         "@id": url,
         name: t("page-upgrades-bug-bounty-meta-title"),
         description: t("page-upgrades-bug-bounty-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [

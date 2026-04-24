@@ -28,7 +28,7 @@ export default async function VideosPageJsonLD({
         "@id": url,
         name: t("page-videos-meta-title"),
         description: t("page-videos-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,

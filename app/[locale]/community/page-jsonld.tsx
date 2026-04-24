@@ -34,7 +34,7 @@ export default async function CommunityJsonLD({
         "@id": url,
         name: t("page-community-meta-title"),
         description: t("page-community-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -65,7 +65,7 @@ export default async function CommunityJsonLD({
         "@id": `${url}#resources`,
         name: t("page-community-meta-title"),
         description: t("page-community-meta-description"),
-        url: url,
+        url,
         numberOfItems: 4,
         itemListElement: [
           {

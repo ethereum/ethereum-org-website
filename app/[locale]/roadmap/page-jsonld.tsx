@@ -25,16 +25,19 @@ export default async function RoadmapPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#roadmap` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-roadmap-meta-title"),
         description: t("page-roadmap-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -58,11 +61,12 @@ export default async function RoadmapPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#roadmap` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#roadmap`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-roadmap-title"),
         description: t("page-roadmap-meta-description"),
         image: "https://ethereum.org/images/heroes/roadmap-hub-hero.jpg",

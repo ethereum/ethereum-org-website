@@ -24,7 +24,7 @@ export default async function DepositContractJsonLD({
         "@id": url,
         name: t("page-staking-deposit-contract-title"),
         description: t("page-staking-deposit-contract-subtitle"),
-        url: url,
+        url,
         inLanguage: locale,
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {

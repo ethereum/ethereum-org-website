@@ -36,7 +36,7 @@ export default async function AppsJsonLD({
         "@id": url,
         name: t("page-apps-meta-title"),
         description: t("page-apps-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -67,7 +67,7 @@ export default async function AppsJsonLD({
         "@id": `${url}#apps`,
         name: t("page-apps-categories-title"),
         description: t("page-apps-meta-description"),
-        url: url,
+        url,
         numberOfItems: Object.keys(appsCategories).length,
         itemListElement: Object.values(appsCategories).map(
           (category, index) => ({

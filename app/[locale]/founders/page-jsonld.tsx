@@ -34,7 +34,7 @@ export default async function FoundersPageJsonLD({
         "@id": url,
         name: t("page-founders-metadata-title"),
         description: t("page-founders-metadata-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

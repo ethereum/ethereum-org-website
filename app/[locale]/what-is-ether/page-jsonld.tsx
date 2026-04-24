@@ -27,16 +27,19 @@ export default async function WhatIsEtherPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#what-is-ether` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-what-is-ether-meta-title"),
         description: t("page-what-is-ether-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -60,11 +63,12 @@ export default async function WhatIsEtherPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#what-is-ether` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#what-is-ether`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-what-is-ether-title"),
         description: t("page-what-is-ether-meta-description"),
         image: "https://ethereum.org/images/eth.png",

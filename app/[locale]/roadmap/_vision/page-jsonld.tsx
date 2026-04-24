@@ -27,16 +27,19 @@ export default async function RoadmapVisionPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#roadmap-vision` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-roadmap-vision-title"),
         description: t("page-roadmap-vision-subtitle"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -66,11 +69,12 @@ export default async function RoadmapVisionPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#roadmap-vision` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#roadmap-vision`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-roadmap-vision-title"),
         description: t("page-roadmap-vision-subtitle"),
         image: "https://ethereum.org/images/upgrades/oldship.png",
