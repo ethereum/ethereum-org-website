@@ -312,6 +312,7 @@ A raw EOA with no spending constraints can be drained if the agent is compromise
 - [Safe documentation](https://docs.safe.global/) — safe.global
 - [ZeroDev documentation](https://docs.zerodev.app/) — zerodev.app
 - [Veto JSON-RPC proxy](https://github.com/pimlicolabs/veto) — GitHub
+- [Flashbots Protect documentation](https://docs.flashbots.net/flashbots-protect/overview) — How private mempool routing works and when to use it for MEV-sensitive agent transactions
 
 ## Continue exploring the AI agents builder hub {#continue-exploring}
 
