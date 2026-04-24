@@ -109,10 +109,12 @@ export const config = {
 
 // Paths that should never be translated
 export const doNotTranslatePaths = [
+  // Legal pages
   "/cookie-policy/",
   "/privacy-policy/",
   "/terms-of-use/",
   "/terms-and-conditions/",
+  // Contributing pages
   "/style-guide/",
 ]
 
