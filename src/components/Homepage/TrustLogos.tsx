@@ -49,23 +49,23 @@ const TrustLogos = async ({
             />
           </div>
 
-          <FloatingCard className="absolute -left-4 top-8 z-10 shadow-lg md:top-12 lg:-left-8">
-            <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
+          <FloatingCard className="absolute top-8 -left-4 z-10 shadow-lg md:top-12 lg:-left-8">
+            <p className="text-body text-lg font-bold md:text-xl lg:text-2xl">
               {t("page-index-trust-never-offline")}
             </p>
             <div className="mt-1 flex items-center gap-1 md:mt-2">
-              <Check className="size-3 text-success md:size-4" />
-              <span className="text-xs font-semibold text-success md:text-sm">
+              <Check className="text-success size-3 md:size-4" />
+              <span className="text-success text-xs font-semibold md:text-sm">
                 {t("page-index-trust-uptime", { uptime })}
               </span>
             </div>
           </FloatingCard>
 
           <FloatingCard className="absolute -right-4 bottom-12 z-10 shadow-lg md:-right-6 lg:-right-12">
-            <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
+            <p className="text-body text-lg font-bold md:text-xl lg:text-2xl">
               {t("page-index-trust-years", { count })}
             </p>
-            <p className="mt-1 text-xs text-body-medium md:text-sm">
+            <p className="text-body-medium mt-1 text-xs md:text-sm">
               {t("page-index-trust-since")}
             </p>
           </FloatingCard>
@@ -75,12 +75,12 @@ const TrustLogos = async ({
       <SectionContent className="flex max-w-[660px] flex-1 flex-col gap-6 pt-8 md:gap-8 md:pt-0 lg:gap-10">
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{t("page-index-trust-tag")}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0">
+          <SectionHeader className="!mt-0 !mb-0">
             {t("page-index-trust-title")}
           </SectionHeader>
         </div>
 
-        <div className="flex flex-col gap-6 text-lg leading-relaxed text-body-medium lg:text-2xl lg:leading-relaxed">
+        <div className="text-body-medium flex flex-col gap-6 text-lg leading-relaxed lg:text-2xl lg:leading-relaxed">
           <p>{t("page-index-trust-description-1")}</p>
           <p>{t("page-index-trust-description-2")}</p>
         </div>

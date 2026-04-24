@@ -16,7 +16,7 @@ export const AddressPill = ({ ...btnProps }: AddressPillProps) => {
       content={t("sim-address-tooltip")}
     >
       <Flex
-        className="gap-2 self-center rounded-full border border-border bg-background-highlight px-2 py-1 text-center text-xs text-disabled"
+        className="border-border bg-background-highlight text-disabled gap-2 self-center rounded-full border px-2 py-1 text-center text-xs"
         {...btnProps}
       >
         <p>{FAKE_DEMO_ADDRESS}</p>
