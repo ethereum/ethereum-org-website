@@ -8,6 +8,8 @@ import type { VideoFrontmatter } from "@/lib/interfaces"
 
 import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
 
+import { getVideoThumbnails } from "@/lib/data"
+
 // Build-time caches to avoid redundant filesystem reads during static generation.
 // These are module-scoped Maps that persist for the duration of the build process.
 const videoDataCache = new Map<string, VideoData>()
@@ -99,8 +101,12 @@ export async function getVideoData(
 
 /**
  * Convert VideoData to a flat VideoCardData suitable for client components.
+ * Prefers S3-hosted thumbnail when available, falls back to YouTube URL.
  */
-function toVideoCardData(data: VideoData): VideoCardData {
+function toVideoCardData(
+  data: VideoData,
+  thumbnailMap: Record<string, string> | null
+): VideoCardData {
   const { slug, frontmatter: fm } = data
   return {
     slug,
@@ -109,7 +115,10 @@ function toVideoCardData(data: VideoData): VideoCardData {
     uploadDate: fm.uploadDate,
     duration: fm.duration,
     topic: fm.topic,
-    thumbnailUrl: fm.customThumbnailUrl || getDefaultThumbnailUrl(fm.youtubeId),
+    thumbnailUrl:
+      thumbnailMap?.[slug] ||
+      fm.customThumbnailUrl ||
+      getDefaultThumbnailUrl(fm.youtubeId),
   }
 }
 
@@ -137,13 +146,16 @@ export async function getVideos(
   const cached = videosCache.get(locale)
   if (cached) return cached
 
-  const slugs = await getVideoSlugs()
+  const [slugs, thumbnailMap] = await Promise.all([
+    getVideoSlugs(),
+    getVideoThumbnails().catch(() => null),
+  ])
 
   const results = await Promise.all(
     slugs.map(async (slug) => {
       try {
         const data = await getVideoData(slug, locale)
-        return toVideoCardData(data)
+        return toVideoCardData(data, thumbnailMap)
       } catch {
         console.warn(`Skipping video ${slug}: missing index.md`)
         return null
