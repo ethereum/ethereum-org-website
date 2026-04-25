@@ -1,7 +1,5 @@
 "use client"
 
-import { join } from "path"
-
 import { useEffect, useMemo, useState } from "react"
 import { X } from "lucide-react"
 import { useLocale } from "next-intl"
@@ -9,7 +7,6 @@ import { useLocale } from "next-intl"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
-import { toPosixPath } from "@/lib/utils/relativePath"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -17,7 +14,7 @@ import Emoji from "./Emoji"
 
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
-import { doNotTranslatePaths } from "@/scripts/intl-pipeline/config"
+import { DO_NOT_TRANSLATE_PATHS } from "@/scripts/intl-pipeline/constants"
 
 const TranslationBanner = () => {
   const locale = useLocale()
@@ -28,14 +25,9 @@ const TranslationBanner = () => {
   // Default to isOpen being false, and let the useEffect set this.
   const [isOpen, setIsOpen] = useState(false)
 
-  const originalPagePath = useMemo(
-    () => toPosixPath(join(DEFAULT_LOCALE, pathname)),
-    [pathname]
-  )
-
   const lsKey = useMemo(
-    () => `dont-show-translation-legal-banner-${originalPagePath}`,
-    []
+    () => `dont-show-translation-banner-${pathname}`,
+    [pathname]
   )
 
   useEffect(() => {
@@ -44,21 +36,17 @@ const TranslationBanner = () => {
     } else {
       setIsOpen(true)
     }
-  }, [originalPagePath])
+  }, [lsKey])
+
+  const isDNTPath = DO_NOT_TRANSLATE_PATHS.reduce(
+    (acc, curr) => acc || pathname.includes(curr),
+    false
+  )
 
   /**
    * If English page, not a Do Not Translate page, or closed: return early
    */
-  if (
-    !isOpen ||
-    locale === DEFAULT_LOCALE ||
-    doNotTranslatePaths.reduce(
-      (acc, curr) => acc && !pathname.includes(curr),
-      false
-    )
-  ) {
-    return null
-  }
+  if (!isOpen || locale === DEFAULT_LOCALE || !isDNTPath) return
 
   const handleDontShow = () => {
     localStorage.setItem(lsKey, "true")

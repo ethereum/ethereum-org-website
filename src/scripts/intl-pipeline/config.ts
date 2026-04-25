@@ -2,6 +2,8 @@ import * as dotenv from "dotenv"
 
 import i18nConfig from "../../../i18n.config.json"
 
+import { DO_NOT_TRANSLATE_PATHS } from "./constants"
+
 dotenv.config({ path: ".env.local" })
 
 // Glossary API (ETHGlossary)
@@ -107,17 +109,6 @@ export const config = {
   concurrency,
 }
 
-// Paths that should never be translated
-export const doNotTranslatePaths = [
-  // Legal pages
-  "/cookie-policy/",
-  "/privacy-policy/",
-  "/terms-of-use/",
-  "/terms-and-conditions/",
-  // Contributing pages
-  "/style-guide/",
-]
-
 export function validateTargetPath(targetPath: string): void {
   if (!targetPath) return
 
@@ -199,7 +190,7 @@ export function normalizeTargetPath(
 // should filter excluded paths out and continue with whatever remains.
 export function getExcludedReason(targetPath: string): string | null {
   if (!targetPath) return null
-  for (const excluded of doNotTranslatePaths) {
+  for (const excluded of DO_NOT_TRANSLATE_PATHS) {
     if (targetPath.includes(excluded)) return excluded
   }
   return null
