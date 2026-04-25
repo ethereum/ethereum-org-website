@@ -54,7 +54,12 @@ import { createTaskPool } from "./lib/utils/task-pool"
 import { createOrUpdateTranslationPR } from "./lib/workflows/pr-creation"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
-import { config, GLOSSARY_API_URL, validateTargetPath } from "./config"
+import {
+  config,
+  GLOSSARY_API_URL,
+  getExcludedReason,
+  validateTargetPath,
+} from "./config"
 import { LLM, MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
@@ -620,13 +625,31 @@ async function main() {
   const committedFiles: Array<{ path: string; content: string }> = []
   let hasCommits = false
 
-  // Validate target paths before any filesystem reads
+  // Validate target paths before any filesystem reads. Hard errors still throw;
+  // excluded-list matches are logged and filtered out so a mixed batch continues
+  // instead of aborting.
   for (const fp of config.targetPaths) {
     validateTargetPath(fp)
   }
 
+  const activeTargetPaths: string[] = []
+  for (const fp of config.targetPaths) {
+    const excludedBy = getExcludedReason(fp)
+    if (excludedBy) {
+      log(`[pipeline] Skipping "${fp}" -- in excluded list (${excludedBy})`)
+      continue
+    }
+    activeTargetPaths.push(fp)
+  }
+
+  if (activeTargetPaths.length === 0) {
+    throw new Error(
+      "All target paths are in the excluded list; nothing to translate."
+    )
+  }
+
   // Load English files from disk
-  const englishFiles: FileContext[] = config.targetPaths.map((fp) => ({
+  const englishFiles: FileContext[] = activeTargetPaths.map((fp) => ({
     path: fp,
     content: fs.readFileSync(path.resolve(fp), "utf-8"),
     type: fp.endsWith(".json") ? ("json" as const) : ("markdown" as const),

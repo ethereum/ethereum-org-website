@@ -136,11 +136,15 @@ export function validateTargetPath(targetPath: string): void {
     )
   }
 
+}
+
+// Returns the matching excluded fragment if the path is in the do-not-translate
+// list, or null otherwise. Unlike validateTargetPath, this is non-fatal: callers
+// should filter excluded paths out and continue with whatever remains.
+export function getExcludedReason(targetPath: string): string | null {
+  if (!targetPath) return null
   for (const excluded of doNotTranslatePaths) {
-    if (targetPath.includes(excluded)) {
-      throw new Error(
-        `Invalid target path: "${targetPath}" -- in excluded list (${excluded})`
-      )
-    }
+    if (targetPath.includes(excluded)) return excluded
   }
+  return null
 }
