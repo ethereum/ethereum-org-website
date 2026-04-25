@@ -135,7 +135,63 @@ export function validateTargetPath(targetPath: string): void {
       `Invalid target path: "${targetPath}" -- only src/intl/en is allowed`
     )
   }
+}
 
+// All locale codes from i18n.config.json (including "en"). Used by
+// normalizeTargetPath to strip accidental locale-prefixed paths.
+const allLocaleCodes: string[] = i18nConfig.map(({ code }) => code)
+
+/**
+ * Repo-specific path normalization for user-supplied target paths.
+ *
+ * Adjustments (each logged at info level when applied):
+ *   - public/content/translations/<locale>/X        -> public/content/X
+ *   - src/intl/<non-en-locale>/X                    -> src/intl/en/X
+ *   - X.json (without src/intl/en/ prefix)          -> src/intl/en/X.json
+ *   - X (markdown, without public/content/ prefix)  -> public/content/X
+ *
+ * Returns the normalized path. Logging is the caller's responsibility (the
+ * caller passes a logger so this stays free of side-effect coupling).
+ */
+export function normalizeTargetPath(
+  raw: string,
+  onAdjust?: (from: string, to: string) => void
+): string {
+  let p = raw.trim()
+  if (!p) return p
+  const original = p
+
+  // Strip leading "./" if present
+  if (p.startsWith("./")) p = p.slice(2)
+  // Strip leading "/" so prefixes match consistently
+  if (p.startsWith("/")) p = p.slice(1)
+
+  // 1. Strip accidental translations/<locale>/ prefix
+  const trMatch = p.match(/^public\/content\/translations\/([^/]+)\/(.+)$/)
+  if (trMatch && allLocaleCodes.includes(trMatch[1])) {
+    p = `public/content/${trMatch[2]}`
+  }
+
+  // 2. Strip accidental non-en src/intl/<locale>/ prefix
+  const intlMatch = p.match(/^src\/intl\/([^/]+)\/(.+)$/)
+  if (
+    intlMatch &&
+    intlMatch[1] !== "en" &&
+    allLocaleCodes.includes(intlMatch[1])
+  ) {
+    p = `src/intl/en/${intlMatch[2]}`
+  }
+
+  // 3. Auto-prefix by file type
+  const isJson = p.endsWith(".json")
+  if (isJson && !p.startsWith("src/intl/en/")) {
+    p = `src/intl/en/${p}`
+  } else if (!isJson && !p.startsWith("public/content/")) {
+    p = `public/content/${p}`
+  }
+
+  if (p !== original && onAdjust) onAdjust(original, p)
+  return p
 }
 
 // Returns the matching excluded fragment if the path is in the do-not-translate

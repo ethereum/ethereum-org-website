@@ -56,8 +56,9 @@ import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
 import {
   config,
-  GLOSSARY_API_URL,
   getExcludedReason,
+  GLOSSARY_API_URL,
+  normalizeTargetPath,
   validateTargetPath,
 } from "./config"
 import { LLM, MANIFESTS_DIR } from "./constants"
@@ -78,8 +79,10 @@ interface FileContext {
 // Helpers
 // ---------------------------------------------------------------------------
 
-function log(msg: string) {
-  console.log(`[pipeline] ${msg}`)
+function log(msg: string, level: "log" | "warn" | "error" = "log") {
+  const prefix =
+    level === "log" ? "[pipeline]" : `[pipeline] [${level.toUpperCase()}]`
+  console[level](`${prefix} ${msg}`)
 }
 
 /**
@@ -625,27 +628,45 @@ async function main() {
   const committedFiles: Array<{ path: string; content: string }> = []
   let hasCommits = false
 
-  // Validate target paths before any filesystem reads. Hard errors still throw;
-  // excluded-list matches are logged and filtered out so a mixed batch continues
-  // instead of aborting.
-  for (const fp of config.targetPaths) {
+  // Resolve target paths in three passes:
+  //   1. Normalize  (log-level: auto-prefix and strip accidental locale paths)
+  //   2. Exist?     (error-level: fail early if any path is missing on disk)
+  //   3. Validate   (hard errors still throw)
+  //   4. Excluded?  (warn-level: skip and continue; throw only if all excluded)
+  const normalizedPaths = config.targetPaths.map((fp) =>
+    normalizeTargetPath(fp, (from, to) =>
+      log(`Normalizing "${from}" -> "${to}"`)
+    )
+  )
+
+  const missing = normalizedPaths.filter(
+    (fp) => !fs.existsSync(path.resolve(fp))
+  )
+  if (missing.length > 0) {
+    log(`${missing.length} target path(s) do not exist on disk:`, "error")
+    for (const m of missing) log(`  - ${m}`, "error")
+    throw new Error(`Target path(s) not found on disk: ${missing.join(", ")}`)
+  }
+
+  for (const fp of normalizedPaths) {
     validateTargetPath(fp)
   }
 
   const activeTargetPaths: string[] = []
-  for (const fp of config.targetPaths) {
+  for (const fp of normalizedPaths) {
     const excludedBy = getExcludedReason(fp)
     if (excludedBy) {
-      log(`[pipeline] Skipping "${fp}" -- in excluded list (${excludedBy})`)
+      log(`Skipping "${fp}" -- in excluded list (${excludedBy})`, "warn")
       continue
     }
     activeTargetPaths.push(fp)
   }
 
   if (activeTargetPaths.length === 0) {
-    throw new Error(
+    const msg =
       "All target paths are in the excluded list; nothing to translate."
-    )
+    log(msg, "error")
+    throw new Error(msg)
   }
 
   // Load English files from disk
