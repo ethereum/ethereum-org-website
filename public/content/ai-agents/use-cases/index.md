@@ -39,7 +39,7 @@ Agents can hire other agents for specialized tasks, paying per output using x402
 </AlertContent>
 </Alert>
 
-**Infrastructure required:** [AI agents: Payments](/ai-agents/payments/) for machine-to-machine settlement, [AI agents: Identity](/ai-agents/identity/) for agent discovery and reputation.
+**Infrastructure required:** [Payments (x402)](/ai-agents/payments/) for machine-to-machine settlement, [Identity (ERC-8004)](/ai-agents/identity/) for agent discovery and reputation.
 
 Autonomous governance participation, covered next, follows a similar coordinator-delegate pattern but replaces specialist agents with onchain voting contracts.
 
@@ -59,7 +59,7 @@ DAO governance requires ongoing attention: reading proposals, evaluating their a
 </AlertContent>
 </Alert>
 
-**Infrastructure required:** [AI agents: Wallets](/ai-agents/wallets/) with session keys scoped to governance contracts, [AI agents: Frameworks](/ai-agents/frameworks/) for proposal parsing and strategy execution.
+**Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to governance contracts, [frameworks](/ai-agents/frameworks/) for proposal parsing and strategy execution.
 
 Governance agents are primarily reactive, responding to events. Risk management agents, covered next, extend this pattern by running continuously to detect and flag anomalous conditions before they become urgent.
 
@@ -72,7 +72,7 @@ Agents are well suited to continuous monitoring tasks that are tedious for human
 - **MEV protection** — agents route transactions through private mempools (Flashbots Protect) or MEV-resistant L2s (Unichain) to avoid sandwich attacks on swaps.
 - **Position monitoring** — agents watch protocol health metrics (utilization rates, oracle price deviations) and alert operators when conditions move outside safe parameters.
 
-**Infrastructure required:** [AI agents: Frameworks](/ai-agents/frameworks/) for monitoring loops, [AI agents: Layer 2s](/ai-agents/l2s/) with appropriate finality guarantees for alert latency requirements.
+**Infrastructure required:** [Frameworks](/ai-agents/frameworks/) for monitoring loops, [L2s](/ai-agents/l2s/) with appropriate finality guarantees for alert latency requirements.
 
 Monitoring agents act on existing protocol data. The next use case applies a different capability, onchain provenance, to a domain where data authenticity is itself the product: AI-generated creative work.
 
@@ -92,7 +92,7 @@ AI-generated creative work has a provenance problem: anyone can claim that a spe
 
 **Broader pattern:** Artists and builders are using Ethereum to anchor AI-generated content to a specific model, timestamp, and generation parameters, creating a verifiable chain of custody for work that would otherwise be trivially forgeable.
 
-**Infrastructure required:** [AI agents: Verification](/ai-agents/verification/) for provenance proofs, [AI agents: Identity](/ai-agents/identity/) for linking outputs to a verifiable agent identity.
+**Infrastructure required:** [Verification](/ai-agents/verification/) for provenance proofs, [Agent identity (ERC-8004)](/ai-agents/identity/) for linking outputs to a verifiable agent identity.
 
 Provenance depends on being able to verify which agent produced a given output. The identity and reputation layer that makes that possible is covered in the final use case below.
 
@@ -107,7 +107,7 @@ When agents interact with each other or with humans, counterparties need to veri
 
 The ERC-8004 identity and reputation layer is still early, with 20,000+ feedback entries as of early 2026, but it provides the foundation for agent interactions that do not require trusting a centralized directory operator.
 
-**Infrastructure required:** [AI agents: Identity](/ai-agents/identity/), [AI agents: Payments](/ai-agents/payments/).
+**Infrastructure required:** [Identity (ERC-8004)](/ai-agents/identity/), [Payments (x402)](/ai-agents/payments/).
 
 Builders starting today should read the [AI agents: Identity](/ai-agents/identity/) page for interim integration guidance while ERC-8004 adoption continues to develop across chains.
 
@@ -135,13 +135,13 @@ Luna's wallet and the reasoning behind each transaction are publicly verifiable 
 
 <ExpandableCard title="What is the most production-ready AI agent use case on Ethereum?">
 
-DeFi automation is the most mature use case. The infrastructure it depends on, including **ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions**, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment. See [AI agents: Getting started](/ai-agents/getting-started/) to begin building.
+DeFi automation is the most mature use case. The infrastructure it depends on, including **ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions**, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment.
 
 </ExpandableCard>
 
 <ExpandableCard title="How do I choose which use case to build first?">
 
-Evaluate the infrastructure each use case requires. **DeFi automation** needs [wallets and session keys](/ai-agents/wallets/) (production-ready). **Agent-to-agent commerce** adds [payments](/ai-agents/payments/) (x402, production-ready) and [identity](/ai-agents/identity/) (ERC-8004, live but Draft status). **Autonomous governance** adds human-in-the-loop escalation for high-stakes votes. Start with the use case whose infrastructure dependencies are closest to production-ready for your deployment timeline.
+Evaluate the infrastructure each use case requires. **DeFi automation** needs [wallets and session keys](/ai-agents/wallets/) (production-ready). **Agent-to-agent commerce** adds [payments](/ai-agents/payments/) (x402, production-ready) and [identity](/ai-agents/identity/) (ERC-8004, live but Draft status). **Autonomous governance** adds human-in-the-loop escalation for high-stakes votes. Start with the use case whose infrastructure dependencies are closest to production-ready for your deployment timeline, and use the [Getting started guide](/ai-agents/getting-started/) to build your first agent.
 
 </ExpandableCard>
 

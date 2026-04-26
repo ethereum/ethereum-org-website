@@ -176,7 +176,7 @@ const agentURI = await client.readContract({
 
 <ExpandableCard title="What is ERC-8004?">
 
-ERC-8004 is the Trustless Agents Standard, live on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides three onchain registries: an **Identity Registry** (agent discovery, `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432`), a **Reputation Registry** (onchain feedback signals, `0x8004BAa17C55a88189AE136b182e5fdA19dE9b63`), and a **Validation Registry** (hooks for cryptographic verification of agent outputs — not yet deployed). The standard uses the same contract addresses across all supported chains via deterministic deployment.
+ERC-8004 is the Trustless Agents Standard, live on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides three onchain registries: an **Identity Registry** (agent discovery), a **Reputation Registry** (onchain feedback signals), and a **Validation Registry** (hooks for cryptographic verification of agent outputs, not yet deployed). The standard uses the same contract addresses across all supported chains via deterministic deployment.
 
 </ExpandableCard>
 

@@ -4,7 +4,7 @@ description: A directory of agent frameworks with Ethereum integration, includin
 lang: en
 faqItems:
   - question: "Which agent framework should I use?"
-    answer: "For maximum EVM protocol coverage (200+ plugins), evaluate GOAT. For multi-platform social agents (Discord, Twitter, Telegram), evaluate ElizaOS. For Rust and latency-sensitive agents, evaluate Rig. For autonomous services with onchain coordination, evaluate Olas. For game-native or no-code deployments in the Virtuals ecosystem, evaluate GAME. For the widest Python ecosystem and LLM community, evaluate LangChain paired with GOAT's LangChain adapter. See the decision guide on this page for a full comparison."
+    answer: "For maximum EVM protocol coverage (200+ plugins), evaluate GOAT. For multi-platform social agents (Discord, Twitter, Telegram), evaluate ElizaOS. For Rust and latency-sensitive agents, evaluate Rig. For autonomous services with onchain coordination, evaluate Olas. For game-native or no-code deployments in the Virtuals ecosystem, evaluate GAME. For the widest Python ecosystem and LLM community, evaluate LangChain paired with GOAT's LangChain adapter. See the Frameworks decision guide for a full comparison."
   - question: "What is the difference between GOAT and ElizaOS?"
     answer: "GOAT is a protocol-first framework: it provides 200+ pre-built EVM protocol plugins (Uniswap, Aave, Compound, and more) and is directly compatible with the Vercel AI SDK. ElizaOS is a character-first framework: it excels at persistent identity and memory across social platforms (Discord, Twitter, Telegram, Farcaster) while also supporting onchain operations through its EVM plugin. Use GOAT when your agent is primarily a DeFi or protocol operator. Use ElizaOS when your agent needs to maintain a social presence."
 ---
@@ -249,7 +249,7 @@ See the [GAME SDK documentation](https://docs.game.virtuals.io/) for the current
 
 <ExpandableCard title="Which agent framework should I use?">
 
-For maximum EVM protocol coverage (200+ plugins), evaluate **GOAT**. For multi-platform social agents (Discord, Twitter, Telegram), evaluate **ElizaOS**. For Rust and latency-sensitive agents, evaluate **Rig**. For autonomous services with onchain coordination, evaluate **Olas**. For game-native or no-code deployments in the Virtuals ecosystem, evaluate **GAME**. For the widest Python ecosystem and LLM community, evaluate **LangChain** paired with GOAT's LangChain adapter. See the [decision guide](#choosing-a-framework) for a full comparison.
+For maximum EVM protocol coverage (200+ plugins), evaluate **GOAT**. For multi-platform social agents (Discord, Twitter, Telegram), evaluate **ElizaOS**. For Rust and latency-sensitive agents, evaluate **Rig**. For autonomous services with onchain coordination, evaluate **Olas**. For game-native or no-code deployments in the Virtuals ecosystem, evaluate **GAME**. For the widest Python ecosystem and LLM community, evaluate **LangChain** paired with GOAT's LangChain adapter. See the [Frameworks decision guide](#choosing-a-framework) for a full comparison.
 
 </ExpandableCard>
 

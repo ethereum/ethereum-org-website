@@ -20,9 +20,9 @@ buttons:
     isSecondary: true
 faqItems:
   - question: "What is an AI agent on Ethereum?"
-    answer: "An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant."
+    answer: "An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant. See Ethereum for AI agents for the technical case for AI agents, or, to learn the basics of what people can do on Ethereum with AI, see Decentralized AI."
   - question: "How is an AI agent different from a bot?"
-    answer: "A bot follows fixed rules. Given input X, it always does Y. An AI agent uses a language model to reason about novel situations, form a plan, and take sequences of actions that may differ depending on context. Agents are capable of multi-step reasoning, adapting to unexpected conditions, and handling tasks they were not explicitly programmed for. The trade-off is that agent behavior is less predictable, which is why spending limits and session keys are essential."
+    answer: "A bot follows fixed rules. Given input X, it always does Y. An AI agent uses a language model to reason about novel situations, form a plan, and take sequences of actions that may differ depending on context. Agents are capable of multi-step reasoning, adapting to unexpected conditions, and handling tasks they were not explicitly programmed for. The trade-off is that agent behavior is less predictable, which is why spending limits and session keys are essential. See the Getting started with AI agents guide."
 ---
 
 AI agents are software programs that observe their environment, make decisions, and take actions, including sending transactions, paying for services, and interacting with smart contracts, without requiring human input on every step.

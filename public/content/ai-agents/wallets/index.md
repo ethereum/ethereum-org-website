@@ -284,7 +284,7 @@ Yes. An Ethereum smart account is not tied to a legal entity. An agent can hold 
 
 <ExpandableCard title="What is ERC-4337 and how do agents use it?">
 
-ERC-4337 is the smart account standard for Ethereum. Instead of a raw externally owned account (EOA) controlled by a private key with no spending constraints, ERC-4337 deploys a smart contract wallet that enforces spending limits, allowlists, and session key policies at the contract level. For agents, this means a compromised session key cannot drain the wallet beyond the policy it is scoped to. EntryPoint v0.7 (`0x0000000071727De22E5E9d8BAf0edAc6f37da032`) remains widely deployed; newer versions (v0.8, v0.9) are also live — verify the version your SDK targets against the [official repository](https://github.com/eth-infinitism/account-abstraction).
+ERC-4337 is the smart account standard for Ethereum. Instead of a raw externally owned account (EOA) controlled by a private key with no spending constraints, ERC-4337 deploys a smart contract wallet that enforces spending limits, allowlists, and session key policies at the contract level. For agents, this means a compromised session key cannot drain the wallet beyond the policy it is scoped to.
 
 </ExpandableCard>
 
@@ -296,7 +296,7 @@ EIP-7702 is live on Ethereum Mainnet since the Pectra upgrade (May 7, 2025). It 
 
 <ExpandableCard title="How do I limit what my AI agent can spend?">
 
-Use an ERC-4337 smart account with a session key policy. A session key is a time-bounded, policy-bounded signing credential that authorizes the agent to act within a defined scope. For example, maximum 0.01 ETH per transaction, 100 USDC per day, only allowed to call Uniswap and Aave. The smart contract enforces these limits and rejects any UserOperation that violates them regardless of what the language model instructs. ZeroDev (Kernel), Safe (Allowance Module), and Biconomy (Nexus), among others, provide session key support.
+Use an ERC-4337 smart account with a session key policy. A session key is a time-bounded, policy-bounded signing credential that authorizes the agent to act within a defined scope. For example, maximum 0.01 ETH per transaction, 100 USDC per day, only allowed to call Uniswap and Aave. The smart contract enforces these limits and rejects any UserOperation that violates them regardless of what the language model instructs.
 
 </ExpandableCard>
 

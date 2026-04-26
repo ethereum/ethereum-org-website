@@ -114,35 +114,19 @@ Yes. All Ethereum L2s are compatible with standard EVM tooling. An agent that wo
 
 <ExpandableCard title="Why would an AI agent deploy on an L2 instead of Mainnet?">
 
-**L2s offer specialized execution environments that Mainnet does not provide.** Some L2s use TEE-based transaction ordering to eliminate frontrunning. Others support Rust smart contracts alongside Solidity. Many have concentrated agent infrastructure, like identity registries and machine-to-machine payment tooling, that agents can use out of the box.
-
-L2s also offer faster block times and lower transaction costs, which matter for agents executing high-frequency workloads. But the choice of L2 is primarily about which capabilities your agent needs, not just about cost. 
-
-See the [evaluation framework](#how-to-evaluate) and [workload type guide](#workload-types) on this page to match your agent's requirements to the right environment.
+L2s offer specialized execution environments that Mainnet does not provide. Some L2s use TEE-based transaction ordering to eliminate frontrunning. Others support Rust smart contracts alongside Solidity. Many have concentrated agent infrastructure, like identity registries and machine-to-machine payment tooling, that agents can use out of the box. L2s also offer faster block times and lower transaction costs, which matter for agents executing high-frequency workloads. The choice depends on which capabilities your agent needs, not just on cost.
 
 </ExpandableCard>
 
 <ExpandableCard title="What should a developer consider when choosing an L2 for an AI agent?">
 
-Four factors drive the decision:
-
-- **Transaction cost** — determines whether your agent's workload is economically viable. An agent running many small operations on Mainnet can spend thousands of dollars per year on gas; the same workload on an L2 typically costs a fraction of that.
-- **Finality speed** — affects how quickly an agent can act on confirmed state. Most L2s confirm transactions in one to five seconds, versus 12 seconds on Mainnet.
-- **Ecosystem support** — the availability of SDKs, agent identity integrations, and payment protocol tooling varies by chain. More mature ecosystems reduce what you need to build from scratch.
-- **Rollup type** — optimistic rollups are broadly EVM-compatible and require no special compiler tooling. ZK rollups reach cryptographic finality faster but may have minor EVM compatibility differences and require specific compilers.
-
-Use the [evaluation framework](#how-to-evaluate) and [workload type guide](#workload-types) on this page to match your agent's requirements to the appropriate L2 properties.
+The key factors include **transaction cost**, **finality speed**, **ecosystem support** for agent-specific standards, and **rollup type**. Transaction cost determines whether your agent's workload is economically viable. Finality speed affects how quickly an agent can act on confirmed state. Ecosystem support (available SDKs, identity and payment protocol integrations) affects how much you build from scratch. Rollup type, like optimistic versus ZK, affects smart contract compatibility and tooling requirements.
 
 </ExpandableCard>
 
 <ExpandableCard title="How does rollup finality affect AI agent design?">
 
-**For most agent operations running within a single L2, rollup finality does not affect day-to-day execution.** Transactions confirm in seconds on every major L2. The finality model becomes relevant in two specific situations:
-
-- **Cross-chain asset movement** — optimistic rollups have a challenge window (typically seven days) before withdrawals to Mainnet are considered final at the protocol level. Agents that need to move assets across chains must either wait out this window or use a fast bridge protocol, which adds its own trust assumptions.
-- **Rollup type and tooling** — ZK rollups reach cryptographic finality faster than optimistic rollups, but some require a specific compiler (for example, `zksolc` for zkSync Era) and have minor opcode differences. Agents targeting ZK rollups should verify EVM compatibility before deployment.
-
-Agents that bridge frequently should design for finality delay or evaluate the trust model of the fast bridge protocols available on their chosen L2.
+Optimistic rollups have a challenge window (typically seven days) before withdrawals to Mainnet are final. For most agent operations that remain within a single L2, this does not affect day-to-day execution: transactions confirm in seconds. It becomes relevant when an agent needs to move assets across chains. ZK rollups reach cryptographic finality faster but may require specific compiler tooling and have minor EVM compatibility differences. Agents that bridge frequently should account for finality delay or use fast bridge protocols that accept the additional trust assumptions that come with speed.
 
 </ExpandableCard>
 

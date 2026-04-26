@@ -97,6 +97,24 @@ export default async function SlugJsonLD({
           description: frontmatter.description,
         },
       },
+      ...(frontmatter.faqItems?.length
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${url}#faq`,
+              mainEntity: frontmatter.faqItems.map(
+                (item: { question: string; answer: string }) => ({
+                  "@type": "Question",
+                  name: item.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.answer,
+                  },
+                })
+              ),
+            },
+          ]
+        : []),
     ],
   }
 
