@@ -1,5 +1,5 @@
 ---
-title: AI Agent wallets
+title: AI agent wallets
 description: Smart account and wallet infrastructure for Ethereum AI agents, including ERC-4337, EIP-7702, session keys, key management security patterns, and SDK guidance for ZeroDev and Safe
 lang: en
 faqItems:
@@ -187,7 +187,7 @@ Any UserOperation that violates `callPolicy` or `timestampPolicy` is rejected by
 
 Safe provides widely audited smart account infrastructure on Ethereum. For agent deployments, the [Safe Allowance Module](https://github.com/safe-global/safe-modules/tree/main/modules/allowances) is the primary mechanism for delegating scoped spending to an agent key without exposing the multisig threshold.
 
-Because the agent key is a hot key operating autonomously, placing the Safe under multisig ownership ensures no single compromised credential—whether the agent key, a human hot wallet, or a prompt injection—can unilaterally drain the treasury.
+Because the agent key is a hot key operating autonomously, placing the Safe under multisig ownership ensures no single compromised credential (whether the agent key, a human hot wallet, or a prompt injection) can unilaterally drain the treasury.
 
 **Recommended production pattern:** 
 - A 2-of-3 Safe with an agent wallet (hot), a human hot wallet, and a human cold wallet

@@ -30,16 +30,25 @@ export default async function SlugJsonLD({
     },
   ]
 
+  // Acronym overrides for slug-derived breadcrumb labels.
+  // Slugs like "ai-agents" are naively title-cased to "Ai agents";
+  // this map ensures known acronyms render correctly in JSON-LD.
+  const BREADCRUMB_LABEL_OVERRIDES: Record<string, string> = {
+    "ai-agents": "AI agents",
+  }
+
   // Add breadcrumb items for each part of the slug path
   const slugParts = slug.split("/").filter(Boolean)
   let currentPath = ""
 
   slugParts.forEach((part, index) => {
     currentPath += "/" + part
+    const defaultName =
+      part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " ")
     breadcrumbItems.push({
       "@type": "ListItem",
       position: index + 2,
-      name: part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " "),
+      name: BREADCRUMB_LABEL_OVERRIDES[part] ?? defaultName,
       item: normalizeUrlForJsonLd(locale, currentPath),
     })
   })

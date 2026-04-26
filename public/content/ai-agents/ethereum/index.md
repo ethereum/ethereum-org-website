@@ -38,7 +38,7 @@ Each path carries different tradeoffs in latency, trust assumptions, and model s
 
 A fundamental risk in deploying autonomous agents is that they hold signing authority over funds. **Giving an agent an unconstrained private key is equivalent to giving it unlimited spending authority**; a **hallucination, a prompt injection, or a logic error** can drain an account.
 
-Ethereum's [account abstraction](/roadmap/account-abstraction/) standards, primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/) (live on Ethereum Mainnet since the Pectra upgrade, May 2025), allow developers to **replace raw private key control with programmable smart contract wallets**. These wallets enforce spending limits, contract allowlists, and time-bounded **session keys** at the contract level, so a compromised credential cannot drain the account beyond its scoped policy.
+Ethereum's [account abstraction](/roadmap/account-abstraction/) standards (primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/), live on Ethereum Mainnet since the Pectra upgrade, May 2025) allow developers to **replace raw private key control with programmable smart contract wallets**. These wallets enforce spending limits, contract allowlists, and time-bounded **session keys** at the contract level, so a compromised credential cannot drain the account beyond its scoped policy.
 
 For a full comparison of ERC-4337 vs. EIP-7702, session key policy design, SDK implementation examples, and production key management patterns, see the [AI agents: Wallets](/ai-agents/wallets/) page.
 
@@ -60,7 +60,7 @@ Composability also means that **agent logic can build on existing audited infras
 
 ## Scalable payments {#scalable-payments}
 
-Autonomous agents need to pay for compute resources, data feeds, and other agent services without human intervention. Standard financial rails require corporate entities and bank accounts, barriers that autonomous code cannot cross.
+Autonomous agents need to pay for compute resources, data feeds, and other agent services without human intervention. Standard financial rails require corporate entities and bank accounts. These are barriers that autonomous code cannot cross.
 
 Ethereum provides a **native, permissionless financial rail for machines**. Agents can hold and spend stablecoins without a bank account, and open protocols like **[x402](https://www.x402.org/)** give any API endpoint a machine-readable way to request and receive payment in a single HTTP exchange. Combined with low-cost [Layer 2](/ai-agents/l2s/) settlement, these primitives enable agents to **independently acquire compute, pay for data, and monetize their own outputs**.
 
