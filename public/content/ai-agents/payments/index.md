@@ -67,7 +67,7 @@ The agent pays for **exactly what it uses, per request**, with no subscription, 
 | **Protocol version** | Production-ready |
 | **Enterprise integrations** | Google Cloud, Stripe, Cloudflare |
 | **SDKs** | TypeScript (`@x402/fetch`), Python (`x402`), Go (`github.com/coinbase/x402/go`), Java |
-| **ERC-8004 integration** | x402 payment receipts can be logged to the ERC-8004 AI agent reputation registry (Learn about ERC-8004 and onchain agent identity on the [AI agents: Identity page](/ai-agents/identity/)) |
+| **ERC-8004 integration** | x402 payment receipts can be logged to the ERC-8004 AI agent reputation registry (Learn about ERC-8004 and onchain agent identity on the [AI agents: Identity](/ai-agents/identity/) page) |
 
 ## Integration guide {#integration-guide}
 
@@ -129,20 +129,9 @@ See the [x402 documentation](https://docs.x402.org/) for middleware implementati
 
 ## The autonomous economic loop {#autonomous-loop}
 
-x402 and [ERC-8004: Trustless agents standard](https://eips.ethereum.org/EIPS/eip-8004) together enable a fully autonomous agent-to-agent economy:
+x402 and [ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) together enable a fully autonomous agent-to-agent economy: an agent discovers a service provider via the Identity Registry, checks its reputation, pays via x402, receives the output, and posts feedback, **all without human involvement** after initial wallet funding. The reputation system creates accountability without a central authority: agents that deliver poor outputs accumulate negative feedback signals that other agents can query before deciding to pay.
 
-```
-1. Agent discovers a service provider (ERC-8004 Identity Registry)
-2. Agent checks the provider's reputation (ERC-8004 Reputation Registry)
-3. Agent requests the service endpoint → receives HTTP 402
-4. Agent pays via x402 (ERC-3009 signed authorization, USDC on Base)
-5. Agent receives the service output
-6. Agent posts feedback to the ERC-8004 Reputation Registry
-```
-
-No humans are required at any step after initial wallet funding. **The reputation system creates accountability without a central authority:** agents that deliver poor outputs accumulate negative feedback signals that other agents can query before deciding to pay.
-
-To implement ERC-8004 identity and reputation registries for your agent, see [AI agents: Identity](/ai-agents/identity/).
+For the full protocol stack diagram and step-by-step loop, see [AI agents: Identity — The protocol stack](/ai-agents/identity/#protocol-stack).
 
 Agent deployments do not need to use USDC specifically; it is a straightforward example for this guide. The stablecoin rail selection section below explains which assets are compatible with the x402 flow and why.
 

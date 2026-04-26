@@ -209,7 +209,7 @@ Olas provides a framework for autonomous agent services with onchain coordinatio
 
 **Best for:** Long-running autonomous services that need onchain coordination, particularly in prediction markets, DAO tooling, and data pipelines. Note that Olas is a purpose-built ecosystem, not a general-purpose EVM development framework.
 
-**Ethereum integration:** Native. Olas agents coordinate through onchain state and hold assets directly. The protocol provides built-in mechanisms for funding, registering, and managing autonomous services. For agents that participate in autonomous economic loops, like discovering services, paying for data, and posting reputation feedback, see the [machine payment patterns on the payments guide](/ai-agents/payments/).
+**Ethereum integration:** Native. Olas agents coordinate through onchain state and hold assets directly. The protocol provides built-in mechanisms for funding, registering, and managing autonomous services. For agents that participate in autonomous economic loops, like discovering services, paying for data, and posting reputation feedback, see [AI agents: Payments](/ai-agents/payments/).
 
 Install the required packages and scaffold a new service:
 

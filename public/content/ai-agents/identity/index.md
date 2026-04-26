@@ -67,7 +67,7 @@ The ERC-8004 contributors and community are actively working on the specificatio
 
 The Validation Registry is not yet deployed. The interface specification is still being finalized through community discussion, and the contracts will go live once the technical approach reaches broad stakeholder consensus. Monitor the [ERC-8004 Ethereum Magicians thread](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098) for updates.
 
-For output verification options that are available today, see [AI Agents: Verification](/ai-agents/verification/).
+For output verification options that are available today, see [AI agents: Verification](/ai-agents/verification/).
 
 ## Ecosystem status {#ecosystem-status}
 
@@ -103,12 +103,12 @@ The full autonomous economic loop:
 1. Agent A discovers Agent B's service (ERC-8004 Identity Registry)
 2. Agent A checks Agent B's reputation (ERC-8004 Reputation Registry)
 3. Agent A requests Agent B's endpoint → receives HTTP 402
-4. Agent A pays via x402 (EIP-3009 signed USDC authorization)
+4. Agent A pays via x402 (ERC-3009 signed USDC authorization)
 5. Agent B delivers the service output
 6. Agent A posts feedback to the ERC-8004 Reputation Registry
 ```
 
-No central operator is required at any step. Accountability emerges from the reputation layer rather than from trust in a platform. See [Payments (x402)](/ai-agents/payments/) for the full payment flow that pairs with the identity and reputation layers shown here.
+No central operator is required at any step. Accountability emerges from the reputation layer rather than from trust in a platform. See [AI agents: Payments](/ai-agents/payments/) for the full payment flow that pairs with the identity and reputation layers shown here.
 
 ## Onchain reputation patterns {#reputation-patterns}
 

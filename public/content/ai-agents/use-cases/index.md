@@ -30,16 +30,7 @@ DeFi automation is the most mature AI agent use case on Ethereum. The infrastruc
 
 ## Agent-to-agent commerce {#agent-commerce}
 
-Agents can hire other agents for specialized tasks, paying per output using x402 machine payments. This enables a **division of labor that mirrors human organizational structures, where a coordinator agent delegates specialized subtasks** to specialist agents and aggregates the results.
-
-**Example pattern:**
-1. A research coordinator agent identifies a data requirement.
-2. It queries the ERC-8004 Identity Registry for agents declaring data retrieval capabilities.
-3. It checks the Reputation Registry for agents with high task-completion scores.
-4. It pays the selected specialist agent via x402 (USDC, per result).
-5. It posts feedback to the ERC-8004 Reputation Registry after delivery.
-
-**No human is required at any step** once the coordinator's strategy is initialized.
+Agents can hire other agents for specialized tasks, paying per output using x402 machine payments. This enables a **division of labor that mirrors human organizational structures, where a coordinator agent delegates specialized subtasks** to specialist agents and aggregates the results. The coordinator discovers providers via the [ERC-8004 Identity Registry](/ai-agents/identity/), checks reputation scores, pays per result via [x402](/ai-agents/payments/), and posts feedback after delivery. **No human is required at any step** once the coordinator's strategy is initialized. See [AI agents: Identity — The protocol stack](/ai-agents/identity/#protocol-stack) for the full step-by-step loop.
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
@@ -48,7 +39,7 @@ Agents can hire other agents for specialized tasks, paying per output using x402
 </AlertContent>
 </Alert>
 
-**Infrastructure required:** [Payments (x402)](/ai-agents/payments/) for machine-to-machine settlement, [Identity (ERC-8004)](/ai-agents/identity/) for agent discovery and reputation.
+**Infrastructure required:** [AI agents: Payments](/ai-agents/payments/) for machine-to-machine settlement, [AI agents: Identity](/ai-agents/identity/) for agent discovery and reputation.
 
 Autonomous governance participation, covered next, follows a similar coordinator-delegate pattern but replaces specialist agents with onchain voting contracts.
 
@@ -68,7 +59,7 @@ DAO governance requires ongoing attention: reading proposals, evaluating their a
 </AlertContent>
 </Alert>
 
-**Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to governance contracts, [frameworks](/ai-agents/frameworks/) for proposal parsing and strategy execution.
+**Infrastructure required:** [AI agents: Wallets](/ai-agents/wallets/) with session keys scoped to governance contracts, [AI agents: Frameworks](/ai-agents/frameworks/) for proposal parsing and strategy execution.
 
 Governance agents are primarily reactive, responding to events. Risk management agents, covered next, extend this pattern by running continuously to detect and flag anomalous conditions before they become urgent.
 
@@ -81,7 +72,7 @@ Agents are well suited to continuous monitoring tasks that are tedious for human
 - **MEV protection** — agents route transactions through private mempools (Flashbots Protect) or MEV-resistant L2s (Unichain) to avoid sandwich attacks on swaps.
 - **Position monitoring** — agents watch protocol health metrics (utilization rates, oracle price deviations) and alert operators when conditions move outside safe parameters.
 
-**Infrastructure required:** [Frameworks](/ai-agents/frameworks/) for monitoring loops, [L2s](/ai-agents/l2s/) with appropriate finality guarantees for alert latency requirements.
+**Infrastructure required:** [AI agents: Frameworks](/ai-agents/frameworks/) for monitoring loops, [AI agents: Layer 2s](/ai-agents/l2s/) with appropriate finality guarantees for alert latency requirements.
 
 Monitoring agents act on existing protocol data. The next use case applies a different capability, onchain provenance, to a domain where data authenticity is itself the product: AI-generated creative work.
 
@@ -101,7 +92,7 @@ AI-generated creative work has a provenance problem: anyone can claim that a spe
 
 **Broader pattern:** Artists and builders are using Ethereum to anchor AI-generated content to a specific model, timestamp, and generation parameters, creating a verifiable chain of custody for work that would otherwise be trivially forgeable.
 
-**Infrastructure required:** [Verification](/ai-agents/verification/) for provenance proofs, [Agent identity (ERC-8004)](/ai-agents/identity/) for linking outputs to a verifiable agent identity.
+**Infrastructure required:** [AI agents: Verification](/ai-agents/verification/) for provenance proofs, [AI agents: Identity](/ai-agents/identity/) for linking outputs to a verifiable agent identity.
 
 Provenance depends on being able to verify which agent produced a given output. The identity and reputation layer that makes that possible is covered in the final use case below.
 
@@ -116,9 +107,9 @@ When agents interact with each other or with humans, counterparties need to veri
 
 The ERC-8004 identity and reputation layer is still early, with 20,000+ feedback entries as of early 2026, but it provides the foundation for agent interactions that do not require trusting a centralized directory operator.
 
-**Infrastructure required:** [Identity (ERC-8004)](/ai-agents/identity/), [Payments (x402)](/ai-agents/payments/).
+**Infrastructure required:** [AI agents: Identity](/ai-agents/identity/), [AI agents: Payments](/ai-agents/payments/).
 
-Builders starting today should read the [Identity](/ai-agents/identity/) page for interim integration guidance while ERC-8004 adoption continues to develop across chains.
+Builders starting today should read the [AI agents: Identity](/ai-agents/identity/) page for interim integration guidance while ERC-8004 adoption continues to develop across chains.
 
 ## Real-world examples {#real-world-examples}
 
@@ -144,7 +135,7 @@ Luna's wallet and the reasoning behind each transaction are publicly verifiable 
 
 <ExpandableCard title="What is the most production-ready AI agent use case on Ethereum?">
 
-DeFi automation is the most mature use case. The infrastructure it depends on, including **ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions**, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment. See [Getting started](/ai-agents/getting-started/) to begin building.
+DeFi automation is the most mature use case. The infrastructure it depends on, including **ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions**, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment. See [AI agents: Getting started](/ai-agents/getting-started/) to begin building.
 
 </ExpandableCard>
 

@@ -21,7 +21,7 @@ Before going further, it is worth understanding why this stack differs from stan
 
 Before you start, have the following ready.
 
-**A funded development environment.** You need [Node.js (v18+)](https://nodejs.org) and a package manager (npm, yarn, or pnpm). If you are new to Ethereum development, read the resources in [the Developers hub](/developers/) for context and resources about building on the network, and the [Ethereum for AI agents](/ai-agents/ethereum/) hub page for the specific capabilities your agent will use.
+**A funded development environment.** You need [Node.js (v18+)](https://nodejs.org) and a package manager (npm, yarn, or pnpm). If you are new to Ethereum development, read the resources in [the Developers hub](/developers/) for context and resources about building on the network, and the [AI agents: Ethereum](/ai-agents/ethereum/) hub page for the specific capabilities your agent will use.
 
 **An LLM API key.** Your agent framework needs access to a language model to drive its reasoning loop. The examples on this page use the OpenAI API, but any provider supported by the Vercel AI SDK (Anthropic, Google, Mistral, and others) works the same way. Set your key in your environment before running any code.
 
@@ -38,7 +38,7 @@ PAYMASTER_RPC=https://rpc.zerodev.app/api/v2/paymaster/<your-project-id>
 ```
 
 **A framework decision.** An agent framework handles the language model interface, tool orchestration, and the logic loop that drives your agent. The choice you make here shapes which wallet SDK integrates most naturally. 
-*See [AI agent frameworks](/ai-agents/frameworks/) for a full comparison.* 
+*See [AI agents: Frameworks](/ai-agents/frameworks/) for a full comparison.* 
 
 Popular options with native Ethereum support include:
 - **[ElizaOS](https://elizaos.github.io/eliza/)** — Plugin-based, TypeScript, EVM plugin for smart account support.
@@ -59,22 +59,13 @@ If you are undecided, ElizaOS and GOAT are generally considered the most beginne
 
 **Do not give your agent a raw externally owned account (EOA) private key.** 
 
-EOAs have no native concept of spending limits or allowlists. Under account abstraction standards (primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/)), you can instead deploy a **smart account** that enforces your agent's operational policy at the contract level.
-
-The two approaches differ architecturally:
-
-| | ERC-4337 smart account | EIP-7702 delegation |
-| :--- | :--- | :--- |
-| **Address** | New contract address | Preserves your existing EOA address |
-| **Gas** | Native abstraction via Paymaster contracts | Possible via delegated contract logic |
-| **Revocability** | Module upgrade or removal | Delegate to a null address |
-| **Best for** | New deployments, maximum flexibility | Upgrading an existing EOA without migration |
+EOAs have no native concept of spending limits or allowlists. Under account abstraction standards (primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/)), you can instead deploy a **smart account** that enforces your agent's operational policy at the contract level. Use ERC-4337 when deploying a new agent from scratch (new contract address, maximum flexibility). Use EIP-7702 when upgrading an existing EOA without migrating assets. For a full comparison of both standards, session key policies, and production key management, see [AI agents: Wallets](/ai-agents/wallets/).
 
 For a new agent deployment, an ERC-4337 smart account is the standard starting point.
 
 ### Deploying a smart account with ZeroDev {#zerodev-setup}
 
-Deploying a smart account means creating a contract on Ethereum that your agent uses as its signing and spending address. Unlike a standard private key wallet, this contract enforces the policies you configure at the protocol level. This example uses ZeroDev because its Kernel account natively supports composable permission plugins well-suited to agent deployments. For a complete technical reference on smart account options and production key management, see [AI agent wallets](/ai-agents/wallets/).
+Deploying a smart account means creating a contract on Ethereum that your agent uses as its signing and spending address. Unlike a standard private key wallet, this contract enforces the policies you configure at the protocol level. This example uses ZeroDev because its Kernel account natively supports composable permission plugins well-suited to agent deployments. For a complete technical reference on smart account options and production key management, see [AI agents: Wallets](/ai-agents/wallets/).
 
 [ZeroDev](https://zerodev.app/) provides the Kernel smart account, which uses composable permission plugins suited to agent deployments.
 
@@ -122,7 +113,7 @@ export const account = await createKernelAccount(publicClient, {
 console.log("Smart account deployed at:", account.address)
 ```
 
-For a complete walkthrough of the production owner/agent key handoff pattern, see [AI agent wallets](/ai-agents/wallets/).
+For a complete walkthrough of the production owner/agent key handoff pattern, see [AI agents: Wallets](/ai-agents/wallets/).
 
 ### Alternatives {#wallet-alternatives}
 
@@ -143,7 +134,7 @@ The addresses in this section refer to your **agent's smart account address** (t
 <Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Local testing with Anvil/Hardhat</strong></p>
-<p className="mt-2">If you test your agent against a local blockchain node (like Anvil), be aware that LLMs can discover and use privileged debug methods (for example, `anvil_setBalance`) to "cheat" simulations rather than executing proper contract logic. To prevent this, route your agent's RPC calls through a restrictive proxy (like Veto) that blocks non-standard JSON-RPC methods. See the [agent wallets guide](/ai-agents/wallets/) for more on local testing security.</p>
+<p className="mt-2">If you test your agent against a local blockchain node (like Anvil), be aware that LLMs can discover and use privileged debug methods (for example, `anvil_setBalance`) to "cheat" simulations rather than executing proper contract logic. To prevent this, route your agent's RPC calls through a restrictive proxy (like Veto) that blocks non-standard JSON-RPC methods. See the [AI agents: Wallets](/ai-agents/wallets/) for more on local testing security.</p>
 </AlertContent>
 </Alert>
 
@@ -164,7 +155,7 @@ Request funds to your **smart account address** (printed by the Step 1 `console.
 
 Rather than requiring your agent to hold ETH for gas, you can use a **Paymaster**,a contract that sponsors gas fees on behalf of the smart account. This simplifies agent operations significantly: the agent does not need to monitor its ETH balance or manage top-ups.
 
-For step-by-step guidance on configuring a Paymaster alongside your smart account, including production-key management and testnet setup, see the [AI agent wallets](/ai-agents/wallets/#paymasters) page.
+For step-by-step guidance on configuring a Paymaster alongside your smart account, including production-key management and testnet setup, see the [AI agents: Wallets](/ai-agents/wallets/#paymasters) page.
 
 ```typescript
 import { createZeroDevPaymasterClient } from "@zerodev/sdk"
@@ -211,7 +202,7 @@ Two setup patterns are most common:
 
 GOAT is used in the examples on this page because it requires the least configuration for developers who are new to agent deployments on EVM networks.
 
-If you have already chosen a different framework, the pattern is the same. See [AI agent frameworks](/ai-agents/frameworks/) for setup guides specific to ElizaOS, Rig, and GAME.
+If you have already chosen a different framework, the pattern is the same. See [AI agents: Frameworks](/ai-agents/frameworks/) for setup guides specific to ElizaOS, Rig, and GAME.
 
 ```bash
 npm install @goat-sdk/adapter-vercel-ai @goat-sdk/wallet-evm @goat-sdk/wallet-viem @goat-sdk/plugin-erc20
@@ -242,7 +233,7 @@ const result = await generateText({
 
 The `tools` object exposes every plugin operation as a typed function the language model can invoke. Your session key policy (set in Step 4) governs which of those operations can actually execute onchain.
 
-For installation, adapter wiring, and working integration guides for ElizaOS, Rig, and GAME, see [AI agent frameworks](/ai-agents/frameworks/).
+For installation, adapter wiring, and working integration guides for ElizaOS, Rig, and GAME, see [AI agents: Frameworks](/ai-agents/frameworks/).
 
 ## Step 4: Set guardrails {#set-guardrails}
 
@@ -300,11 +291,9 @@ class AgentRateLimiter {
 }
 ```
 
-**Human-in-the-loop escalation** handles the cases session key policies cannot. Operations directed at unknown addresses, amounts approaching the daily budget ceiling, or any policy change itself should pause execution and require a human decision before submitting. 
+**Human-in-the-loop escalation** handles the cases session key policies cannot. Operations directed at unknown addresses, amounts approaching the daily budget ceiling, or any policy change itself should pause execution and require a human decision before submitting. See [AI agents: Wallets — Human-in-the-loop escalation](/ai-agents/wallets/#hitl) for implementation patterns, including framework-specific hooks for the Vercel AI SDK and LangGraph.
 
-The Vercel AI SDK's `onStepFinish` callback gives you a hook to inspect and halt each tool invocation before the next reasoning step. For multi-step workflows that need durable state across pauses, orchestration tools like [LangGraph](https://www.langchain.com/langgraph) provide `interrupt_before` / `interrupt_after` hooks that fully serialize agent state and resume only on an external signal.
-
-For SDK-level implementation, including full session key code for ZeroDev, Safe, and Biconomy, multi-chain authorization payloads, and production key management patterns, see [AI agent wallets](/ai-agents/wallets/).
+For SDK-level implementation, including full session key code for ZeroDev, Safe, and Biconomy, multi-chain authorization payloads, and production key management patterns, see [AI agents: Wallets](/ai-agents/wallets/).
 
 At this point you have a smart account deployed on Sepolia, a funded agent address, a framework connected to that account through GOAT, and a session key policy enforcing hard spending limits. That combination, including controlled identity, scoped authority, and a structured reasoning loop, is the minimum foundation for a production-ready autonomous agent on Ethereum.
 
@@ -330,13 +319,13 @@ With a funded smart account, a connected framework, and active spending guardrai
 [AI agents: Frameworks](/ai-agents/frameworks/) covers installation, wallet adapter wiring, and working integration guides for GOAT, ElizaOS, Rig, and GAME—including which framework fits which deployment pattern.
 
 **Explore what agents are building:**
-[AI Agents: Use cases](/ai-agents/use-cases/) documents what autonomous agents are doing on Ethereum today: DeFi automation, data markets, onchain governance participation, and machine-to-machine payments.
+[AI agents: Use cases](/ai-agents/use-cases/) documents what autonomous agents are doing on Ethereum today: DeFi automation, data markets, onchain governance participation, and machine-to-machine payments.
 
 **Add verifiable behavior:**
-[AI Agents: Verification](/ai-agents/verification/) covers how to make your agent's outputs cryptographically verifiable onchain using zero-knowledge machine learning (zkML) proofs and Trusted Execution Environment (TEE) attestations.
+[AI agents: Verification](/ai-agents/verification/) covers how to make your agent's outputs cryptographically verifiable onchain using zero-knowledge machine learning (zkML) proofs and Trusted Execution Environment (TEE) attestations.
 
 **Choose the right execution environment:**
-[AI Agents: Layer 2s](/ai-agents/l2s/) breaks down how to select an L2 for your agent based on cost, throughput, privacy requirements, and the protocols your agent needs to access.
+[AI agents: Layer 2s](/ai-agents/l2s/) breaks down how to select an L2 for your agent based on cost, throughput, privacy requirements, and the protocols your agent needs to access.
 
 ## Further reading {#further-reading}
 

@@ -110,7 +110,7 @@ Both zkML proofs and TEE attestations can be posted onchain, creating a **perman
 - **Dispute resolution** — if an agent's behavior is later disputed, the onchain record provides evidence that the behavior was consistent with the declared model.
 - **Composability** — other smart contracts can read the proof record and condition their own behavior on whether an agent has a current valid proof.
 
-The [ERC-8004 Validation Registry](/ai-agents/identity/#validation-registry) is designed to formalize this pattern by routing verification requests to delegated verifier contracts and recording results onchain. The Validation Registry specification is **not yet finalized**; see the [AI agents: Identity page](/ai-agents/identity/) for current status. The audit trail patterns described above can be implemented independently of ERC-8004 using custom verifier contracts.
+The [ERC-8004 Validation Registry](/ai-agents/identity/#validation-registry) is designed to formalize this pattern by routing verification requests to delegated verifier contracts and recording results onchain. The Validation Registry specification is **not yet finalized**; see the [AI agents: Identity](/ai-agents/identity/) page for current status. The audit trail patterns described above can be implemented independently of ERC-8004 using custom verifier contracts.
 
 The sections above describe how zkML proofs, TEE attestations, and onchain audit trails make agent behavior verifiable. The guidance below covers when to use each approach based on your agent's model size, latency requirements, and threat model.
 

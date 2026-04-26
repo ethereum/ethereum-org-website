@@ -92,7 +92,7 @@ ZK rollups may require **specific compiler tooling** and have minor EVM compatib
 
 - Check whether the L2 requires a custom Solidity compiler (for example, `zksolc`)
 - Verify that any opcodes your contracts use are supported — some ZK rollups do not implement `EXTCODECOPY` or have different gas schedules for certain operations
-- Note that some ZK rollups have **native account abstraction** built into the protocol, which means standard ERC-4337 patterns may differ slightly. See [agent wallets and account abstraction](/ai-agents/wallets/) for how these differences affect key management and session key design.
+- Note that some ZK rollups have **native account abstraction** built into the protocol, which means standard ERC-4337 patterns may differ slightly. See [AI agents: Wallets](/ai-agents/wallets/) for how these differences affect key management and session key design.
 
 ### Finding RPC endpoints and chain IDs {#rpc-endpoints}
 
