@@ -295,7 +295,7 @@ class AgentRateLimiter {
 
 For SDK-level implementation, including full session key code for ZeroDev, Safe, and Biconomy, multi-chain authorization payloads, and production key management patterns, see [AI agents: Wallets](/ai-agents/wallets/).
 
-At this point you have a smart account deployed on Sepolia, a funded agent address, a framework connected to that account through GOAT, and a session key policy enforcing hard spending limits. That combination, including controlled identity, scoped authority, and a structured reasoning loop, is the minimum foundation for a production-ready autonomous agent on Ethereum.
+At this point you have a smart account deployed on Sepolia, a funded agent address, a framework connected to that account through GOAT, and a session key policy enforcing hard spending limits. That combination, including controlled identity, scoped authority, and a structured reasoning loop, is the minimum foundation for a production-ready autonomous agent on Ethereum. From here, head to [AI agents: Frameworks](/ai-agents/frameworks/) for deeper integration guides, or browse the sections below to explore wallets, verification, payments, and the wider ecosystem.
 
 ## Frequently asked questions {#faq}
 
@@ -310,22 +310,6 @@ Start with four steps: (1) Create a smart account wallet using an SDK like ZeroD
 Start on Sepolia testnet. Testnet ETH has no real value, so experimentation carries no financial risk. Move to mainnet only after your session key policies, spending limits, and human-in-the-loop escalation logic are tested and verified. When you do move to mainnet, consider deploying on a [Layer 2](/ai-agents/l2s/) network for lower transaction costs.
 
 </ExpandableCard>
-
-## What to do next {#next-steps}
-
-With a funded smart account, a connected framework, and active spending guardrails, your agent is ready for its first onchain operations.
-
-**Go deeper on frameworks:**
-[AI agents: Frameworks](/ai-agents/frameworks/) covers installation, wallet adapter wiring, and working integration guides for GOAT, ElizaOS, Rig, and GAME—including which framework fits which deployment pattern.
-
-**Explore what agents are building:**
-[AI agents: Use cases](/ai-agents/use-cases/) documents what autonomous agents are doing on Ethereum today: DeFi automation, data markets, onchain governance participation, and machine-to-machine payments.
-
-**Add verifiable behavior:**
-[AI agents: Verification](/ai-agents/verification/) covers how to make your agent's outputs cryptographically verifiable onchain using zero-knowledge machine learning (zkML) proofs and Trusted Execution Environment (TEE) attestations.
-
-**Choose the right execution environment:**
-[AI agents: Layer 2s](/ai-agents/l2s/) breaks down how to select an L2 for your agent based on cost, throughput, privacy requirements, and the protocols your agent needs to access.
 
 ## Further reading {#further-reading}
 
