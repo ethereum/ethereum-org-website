@@ -5,6 +5,7 @@ import PageJsonLD from "@/components/PageJsonLD"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 
 export default async function SlugJsonLD({
   locale,
@@ -50,68 +51,53 @@ export default async function SlugJsonLD({
     url: contributor.html_url,
   }))
 
-  // Build the @graph array with base nodes, WebPage, and Article
-  const graphNodes: Record<string, unknown>[] = [
-    ...BASE_GRAPH_NODES,
-    {
-      "@type": "WebPage",
-      "@id": url,
-      name: frontmatter.title,
-      description: frontmatter.description,
-      url: url,
-      inLanguage: locale,
-      author: [REFERENCE.ETHEREUM_COMMUNITY],
-      contributor: contributorList,
-      isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: breadcrumbItems,
-      },
-      publisher: REFERENCE.ETHEREUM_FOUNDATION,
-      reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-      mainEntity: { "@id": `${url}#article` },
-    },
-    {
-      "@type": "Article",
-      "@id": `${url}#article`,
-      headline: frontmatter.title,
-      description: frontmatter.description,
-      image: frontmatter.image
-        ? `https://ethereum.org${frontmatter.image}`
-        : undefined,
-      author: [REFERENCE.ETHEREUM_COMMUNITY],
-      contributor: contributorList,
-      publisher: REFERENCE.ETHEREUM_FOUNDATION,
-      dateModified: frontmatter.published,
-      mainEntityOfPage: url,
-      about: {
-        "@type": "Thing",
-        name: frontmatter.title,
-        description: frontmatter.description,
-      },
-    },
-  ]
-
-  // Append FAQPage schema when frontmatter includes faqItems
-  const { faqItems } = frontmatter
-  if (faqItems && faqItems.length > 0) {
-    graphNodes.push({
-      "@type": "FAQPage",
-      "@id": `${url}#faq`,
-      mainEntity: faqItems.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.answer,
-        },
-      })),
-    })
-  }
+  const { authorGraphNodes, authorIds } = resolveAuthorsFromFrontmatter(
+    frontmatter.authors ?? frontmatter.author
+  )
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": graphNodes,
+    "@graph": [
+      ...BASE_GRAPH_NODES,
+      ...authorGraphNodes,
+      {
+        "@type": "WebPage",
+        "@id": url,
+        name: frontmatter.title,
+        description: frontmatter.description,
+        url: url,
+        inLanguage: locale,
+        author: authorIds,
+        contributor: contributorList,
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: breadcrumbItems,
+        },
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        mainEntity: { "@id": `${url}#article` },
+      },
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: frontmatter.title,
+        description: frontmatter.description,
+        image: frontmatter.image
+          ? `https://ethereum.org${frontmatter.image}`
+          : undefined,
+        author: authorIds,
+        contributor: contributorList,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        dateModified: frontmatter.published,
+        mainEntityOfPage: url,
+        about: {
+          "@type": "Thing",
+          name: frontmatter.title,
+          description: frontmatter.description,
+        },
+      },
+    ],
   }
 
   return <PageJsonLD structuredData={jsonLd} />

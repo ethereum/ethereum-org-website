@@ -32,19 +32,19 @@ const FeatureCards = async ({
   return (
     <Section
       className={cn(
-        "rounded-none bg-background-highlight py-20 lg:py-24",
+        "bg-background-highlight rounded-none py-20 lg:py-24",
         className
       )}
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 flex flex-col items-center gap-4 text-center">
-          <SectionHeader className="mb-0 mt-0">
+          <SectionHeader className="mt-0 mb-0">
             {t("page-index-features-title")}{" "}
             <span className="text-body">
               {t("page-index-features-title-highlight")}
             </span>
           </SectionHeader>
-          <p className="max-w-xl text-lg text-body-medium">
+          <p className="text-body-medium max-w-xl text-lg">
             {t("page-index-features-subtitle")}
           </p>
         </div>
@@ -56,7 +56,7 @@ const FeatureCards = async ({
                 src={ownershipImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 600px"
-                className="absolute -bottom-16 -end-16 h-2/3 w-auto object-contain opacity-25"
+                className="absolute -end-16 -bottom-16 h-2/3 w-auto object-contain opacity-25"
               />
 
               <div className="relative z-10 flex flex-col gap-6">
@@ -91,19 +91,19 @@ const FeatureCards = async ({
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl border bg-background p-8 lg:col-span-5">
+            <div className="bg-background relative overflow-hidden rounded-3xl border p-8 lg:col-span-5">
               <Image
                 src={publicRulesImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 450px"
-                className="absolute -bottom-12 -end-24 h-2/3 w-auto object-contain"
+                className="absolute -end-24 -bottom-12 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
                 <h3 className="mb-4 text-4xl font-black lg:text-5xl">
                   {t("page-index-features-public-rules-title")}
                 </h3>
-                <p className="max-w-xs text-body">
+                <p className="text-body max-w-xs">
                   {t("page-index-features-public-rules-description")}
                 </p>
               </div>
@@ -111,12 +111,12 @@ const FeatureCards = async ({
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="relative overflow-hidden rounded-3xl border bg-background p-8">
+            <div className="bg-background relative overflow-hidden rounded-3xl border p-8">
               <Image
                 src={globalImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -bottom-6 -end-8 h-2/3 w-auto object-contain"
+                className="absolute -end-8 -bottom-6 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
@@ -129,12 +129,12 @@ const FeatureCards = async ({
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-3xl border bg-background p-8">
+            <div className="bg-background relative overflow-hidden rounded-3xl border p-8">
               <Image
                 src={freeAccessImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -bottom-6 -end-8 h-2/3 w-auto object-contain"
+                className="absolute -end-8 -bottom-6 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
@@ -147,7 +147,7 @@ const FeatureCards = async ({
               </div>
             </div>
 
-            <div className="rounded-3xl border border-body p-8 md:col-span-2 lg:col-span-1">
+            <div className="border-body rounded-3xl border p-8 md:col-span-2 lg:col-span-1">
               <h3 className="mb-3 text-3xl font-black">
                 {t("page-index-features-nobody-owns-title")}
               </h3>

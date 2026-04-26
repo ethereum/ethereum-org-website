@@ -163,32 +163,32 @@ const KPISection = ({
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{t("page-index-kpi-tag")}</SectionTag>
 
-          <SectionHeader className="!mb-0 !mt-0">
+          <SectionHeader className="!mt-0 !mb-0">
             {t("page-index-kpi-title")}
           </SectionHeader>
         </div>
 
-        <p className="text-lg leading-relaxed text-body-medium lg:text-2xl lg:leading-[39px]">
+        <p className="text-body-medium text-lg leading-relaxed lg:text-2xl lg:leading-[39px]">
           {t("page-index-kpi-description")}
         </p>
       </div>
 
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-20">
-        <div className="hidden h-[267px] w-px bg-border lg:block" />
+        <div className="bg-border hidden h-[267px] w-px lg:block" />
 
         <div className="flex w-[300px] flex-col gap-8">
           <div className="flex items-start gap-3">
             <User
-              className="mt-[5.5px] size-8 text-body-medium"
+              className="text-body-medium mt-[5.5px] size-8"
               strokeWidth={1.5}
             />
             <div className="flex flex-col gap-1">
-              <p className="text-4xl font-bold leading-[1.2]">
+              <p className="text-4xl leading-[1.2] font-bold">
                 {accountHolders !== null
                   ? formatCompactNumber(accountHolders, locale)
                   : "—"}
               </p>
-              <p className="text-base leading-[1.6] text-body-medium">
+              <p className="text-body-medium text-base leading-[1.6]">
                 {t("page-index-kpi-holders")}
               </p>
             </div>
@@ -196,7 +196,7 @@ const KPISection = ({
 
           <div className="flex items-start gap-3">
             <ArrowLeftRight
-              className="mt-[5.5px] size-8 text-body-medium"
+              className="text-body-medium mt-[5.5px] size-8"
               strokeWidth={1.5}
             />
             <div className="flex flex-col gap-1">
@@ -204,12 +204,12 @@ const KPISection = ({
                 <AnimatedNumber
                   value={liveTransactions}
                   formatter={formatTransactions}
-                  className="text-4xl font-bold leading-[1.2]"
+                  className="text-4xl leading-[1.2] font-bold"
                 />
               ) : (
-                <p className="text-4xl font-bold leading-[1.2]">—</p>
+                <p className="text-4xl leading-[1.2] font-bold">—</p>
               )}
-              <p className="text-base leading-[1.6] text-body-medium">
+              <p className="text-body-medium text-base leading-[1.6]">
                 {t("page-index-kpi-transactions")}
               </p>
             </div>

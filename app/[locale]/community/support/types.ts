@@ -1,5 +1,5 @@
-import type { ForwardRefExoticComponent, RefAttributes } from "react"
 import { type LucideProps } from "lucide-react"
+import type { ForwardRefExoticComponent, RefAttributes } from "react"
 
 export type ItemSection = {
   titleKey: string
