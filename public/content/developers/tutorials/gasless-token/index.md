@@ -557,10 +557,10 @@ Event handlers for when the text fields change.
 Ask the server to deploy a proxy for this user.
 
 ```js
-  const signMessage = async(proxyAddr, calldata) => {
+  const signMessage = async(proxyAddr, target, calldata) => {
 ```
 
-Sign a message before sending it to the server to send to `UserProxy` onchain. This is explained [here](/developers/tutorials/gasless/#ui-changes).
+Sign a message before sending it to the server to send to `UserProxy` onchain. This is explained [here](/developers/tutorials/gasless/#ui-changes). We need to sign a message with both the target address (the address of the token we're calling and) and the calldata to send.
 
 ```js
     const domain = {
@@ -626,8 +626,8 @@ Simulate calling the `faucet` function. We only enable the faucet button if this
       args: [transferTo, BigInt(transferAmount) * 10n**18n],
     })
 
-    const {v, r, s} = await signMessage(proxyAddr, calldata)
-    messageUserProxy(proxyAddr, faucetAddr, calldata, v, r, s)
+    const {v, r, s} = await signMessage(proxyAddr, transferToken, calldata)
+    messageUserProxy(proxyAddr, transferToken, calldata, v, r, s)
   }
 ```
 
@@ -635,7 +635,7 @@ To call a function through the server and `UserProxy`, we follow three steps:
 
 1. Create the calldata to sign and send using [`encodeFunctionData`](https://viem.sh/docs/contract/encodeFunctionData).
 
-2. Sign the message (target, calldata, and nonce).
+2. Sign the message (target address, calldata, and nonce).
 
 3. Send the message to the server.
 
