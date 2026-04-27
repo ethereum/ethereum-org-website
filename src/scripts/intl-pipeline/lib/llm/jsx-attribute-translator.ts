@@ -193,16 +193,34 @@ export function applyAttributeTranslations(
       continue
     }
 
-    const pattern = new RegExp(
+    // Try double-quoted attr first, then single-quoted. Use HTML entity
+    // escaping for any inner quotes that match the surrounding quote style
+    // -- otherwise translations that contain quote marks (e.g. quoting an
+    // English phrase) break JSX attribute syntax: title="ما هو "X"؟" is
+    // invalid; title="ما هو &quot;X&quot;؟" is valid.
+    const dqPattern = new RegExp(
       `(${escapeRegex(leaf.attributeName)}=")${escapeRegex(leaf.englishValue)}"`,
       "g"
     )
-    if (pattern.test(result)) {
-      result = result.replace(pattern, `$1${newValue}"`)
+    if (dqPattern.test(result)) {
+      const escaped = newValue.replace(/"/g, "&quot;")
+      result = result.replace(dqPattern, `$1${escaped}"`)
       applied++
-    } else {
-      skipped++
+      continue
     }
+
+    const sqPattern = new RegExp(
+      `(${escapeRegex(leaf.attributeName)}=')${escapeRegex(leaf.englishValue)}'`,
+      "g"
+    )
+    if (sqPattern.test(result)) {
+      const escaped = newValue.replace(/'/g, "&apos;")
+      result = result.replace(sqPattern, `$1${escaped}'`)
+      applied++
+      continue
+    }
+
+    skipped++
   }
 
   return { content: result, appliedCount: applied, skippedCount: skipped }
@@ -247,10 +265,14 @@ export async function translateJsxAttributes(opts: {
   // This is the self-healing mechanism that makes the pass idempotent: it
   // translates first-time and skips subsequent runs without needing a flag.
   const untranslated = leaves.filter((l) => {
-    const pattern = new RegExp(
+    const dq = new RegExp(
       `${escapeRegex(l.attributeName)}="${escapeRegex(l.englishValue)}"`
     )
-    return pattern.test(localeContent)
+    if (dq.test(localeContent)) return true
+    const sq = new RegExp(
+      `${escapeRegex(l.attributeName)}='${escapeRegex(l.englishValue)}'`
+    )
+    return sq.test(localeContent)
   })
 
   if (untranslated.length === 0) {

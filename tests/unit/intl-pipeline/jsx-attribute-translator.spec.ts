@@ -244,6 +244,71 @@ body
       expect(appliedCount).toBe(0)
     })
 
+    test("escapes inner double-quotes when surrounding quote is double", () => {
+      const locale = `<ExpandableCard title="What is harvest now decrypt later?" />`
+      const leaves: AttributeLeaf[] = [
+        {
+          id: "x",
+          componentName: "ExpandableCard",
+          attributeName: "title",
+          englishValue: "What is harvest now decrypt later?",
+        },
+      ]
+      // Translation contains inner double-quotes (e.g. quoting an English
+      // phrase). Without escaping, this would produce invalid JSX:
+      // title="ما هو "harvest now"؟"
+      const { content, appliedCount } = applyAttributeTranslations(
+        locale,
+        leaves,
+        [`ما هو "harvest now, decrypt later"؟`]
+      )
+      expect(appliedCount).toBe(1)
+      expect(content).toBe(
+        `<ExpandableCard title="ما هو &quot;harvest now, decrypt later&quot;؟" />`
+      )
+      // Sanity: the surrounding double quotes are still the outer attr quotes
+      expect(content).not.toContain(`"ما هو "`)
+    })
+
+    test("supports single-quoted attributes and escapes inner single-quotes", () => {
+      const locale = `<Card title='Hello world' />`
+      const leaves: AttributeLeaf[] = [
+        {
+          id: "x",
+          componentName: "Card",
+          attributeName: "title",
+          englishValue: "Hello world",
+        },
+      ]
+      const { content, appliedCount } = applyAttributeTranslations(
+        locale,
+        leaves,
+        [`Don't forget`]
+      )
+      expect(appliedCount).toBe(1)
+      expect(content).toBe(`<Card title='Don&apos;t forget' />`)
+    })
+
+    test("translation with the OPPOSITE quote style passes through unescaped", () => {
+      // Single quote in a double-quoted attr is fine; no escape needed.
+      const locale = `<Card title="Hello" />`
+      const leaves: AttributeLeaf[] = [
+        {
+          id: "x",
+          componentName: "Card",
+          attributeName: "title",
+          englishValue: "Hello",
+        },
+      ]
+      const { content, appliedCount } = applyAttributeTranslations(
+        locale,
+        leaves,
+        [`Don't worry`]
+      )
+      expect(appliedCount).toBe(1)
+      expect(content).toBe(`<Card title="Don't worry" />`)
+    })
+
     test("escapes regex metacharacters in attribute values", () => {
       const locale = `<Card title="Why can't (this) work?" />`
       const leaves: AttributeLeaf[] = [
