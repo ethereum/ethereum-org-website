@@ -21,7 +21,7 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
     <CommandItem
       value={localeOption}
       className={cn(
-        "group text-body hover:bg-primary-low-contrast mb-1 flex-col items-start rounded pt-2",
+        "group mb-1 flex-col items-start rounded pt-2 text-body hover:bg-primary-low-contrast",
         isCurrent
           ? "bg-background hover:bg-primary-low-contrast"
           : "bg-transparent"
@@ -33,19 +33,19 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
           <div className="flex items-center gap-2">
             <p
               className={cn(
-                "language-name group-aria-selected:text-primary text-lg",
+                "language-name text-lg group-aria-selected:text-primary",
                 isCurrent ? "text-primary-high-contrast" : "text-body"
               )}
             >
               {targetName}
             </p>
           </div>
-          <p className="text-body text-xs uppercase">{sourceName}</p>
+          <p className="text-xs text-body uppercase">{sourceName}</p>
         </div>
         {isCurrent && (
           <Check
             aria-hidden={true}
-            className="text-primary-high-contrast text-2xl"
+            className="text-2xl text-primary-high-contrast"
           />
         )}
       </div>

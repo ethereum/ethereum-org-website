@@ -36,7 +36,7 @@ const innerLinksVariants = {
 
 const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
-    <HStack className="hover:bg-background-highlight w-full justify-between py-2 ps-8 pe-4">
+    <HStack className="w-full justify-between py-2 ps-8 pe-4 hover:bg-background-highlight">
       {children}
     </HStack>
   )
@@ -45,7 +45,7 @@ const LinkContainer = ({ children }: ChildOnlyProp) => {
 const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
-      className="text-body hover:text-primary w-full font-normal no-underline"
+      className="w-full font-normal text-body no-underline hover:text-primary"
       {...props}
     >
       {children}
@@ -97,7 +97,7 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <ChevronRight className="text-body-medium h-6 w-6" />
+            <ChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </LinkContainer>
         <motion.div
@@ -137,7 +137,7 @@ const SideNav = ({ path }: SideNavProps) => {
 
   return (
     <nav
-      className="bg-background sticky top-[4.75rem] hidden h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-[256px] overflow-y-auto border-e pt-8 pb-16 shadow-[1px_0px_0px_rgba(0,0,0,0.1)] transition-transform duration-200 lg:block"
+      className="sticky top-[4.75rem] hidden h-[calc(100vh-80px)] w-[calc((100%-1448px)/2+256px)] min-w-[256px] overflow-y-auto border-e bg-background pt-8 pb-16 shadow-[1px_0px_0px_rgba(0,0,0,0.1)] transition-transform duration-200 lg:block"
       aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (

@@ -160,13 +160,13 @@ export const StakingProductCard = ({
   ].filter(({ status }) => !!status)
 
   return (
-    <div className="rounded-base bg-background-highlight flex flex-col transition-transform hover:scale-101">
+    <div className="rounded-base flex flex-col bg-background-highlight transition-transform hover:scale-101">
       <div className="flex max-h-24 space-x-3 p-6">
         {!!Svg && <Svg className="size-12" />}
         <div className="flex flex-col justify-center">
           <h4 className="text-xl">{name}</h4>
           {typeof minEth !== "undefined" && (
-            <p className="text-body-medium text-sm font-normal">
+            <p className="text-sm font-normal text-body-medium">
               {minEth > 0 ? (
                 <>
                   {t("common:from")} <span dir="ltr">{minEth} ETH</span>
@@ -215,7 +215,7 @@ export const StakingProductCard = ({
         </ButtonLink>
         <div className="flex h-7.5 items-center justify-center">
           {validSocials.length > 0 && (
-            <p className="text-body-medium me-2">
+            <p className="me-2 text-body-medium">
               {t("page-staking-products-follow")}
             </p>
           )}
@@ -223,7 +223,7 @@ export const StakingProductCard = ({
           {validSocials.map(([platform, url], idx) => (
             <Link key={idx} href={url} hideArrow>
               <SocialListItem
-                className="text-body [&>svg]:text-body size-8"
+                className="size-8 text-body [&>svg]:text-body"
                 socialIcon={
                   platform as
                     | "twitter"

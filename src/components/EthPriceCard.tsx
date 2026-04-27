@@ -45,19 +45,19 @@ const EthPriceCard = ({
   return (
     <Flex
       className={cn(
-        "from-success/20 dark:border-success/50 max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border bg-linear-to-t p-6",
+        "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border bg-linear-to-t from-success/20 p-6 dark:border-success/50",
         className
       )}
       {...props}
     >
-      <h4 className="leading-xs m-0 flex items-center text-sm font-medium tracking-wider uppercase">
+      <h4 className="m-0 flex items-center text-sm leading-xs font-medium tracking-wider uppercase">
         {t("eth-current-price")}&nbsp;
         <Tooltip content={tooltipContent}>
           <Info className="size-[0.875em] text-sm" />
         </Tooltip>
       </h4>
 
-      <div className="leading-xs text-5xl">
+      <div className="text-5xl leading-xs">
         {isLoading ? (
           <Skeleton className="my-4 h-12 w-48" />
         ) : (

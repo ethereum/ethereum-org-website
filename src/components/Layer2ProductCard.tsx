@@ -38,7 +38,7 @@ const Layer2ProductCard = ({
   const { t } = useTranslation("page-layer-2")
 
   return (
-    <Card className="bg-background-highlight flex flex-col justify-between rounded-md border-0 p-2 shadow-lg transition-transform duration-100 hover:scale-[1.02]">
+    <Card className="flex flex-col justify-between rounded-md border-0 bg-background-highlight p-2 shadow-lg transition-transform duration-100 hover:scale-[1.02]">
       <div
         className="mb-4 flex min-h-[200px] items-center justify-center border-b"
         style={{ backgroundColor: background }}
@@ -73,7 +73,7 @@ const Layer2ProductCard = ({
           {bridge && (
             <InlineLink
               href={bridge}
-              className="text-primary hover:text-primary/80 block underline"
+              className="block text-primary underline hover:text-primary/80"
             >
               {name} {t("layer-2-bridge")}
             </InlineLink>
@@ -82,7 +82,7 @@ const Layer2ProductCard = ({
           {ecosystemPortal && (
             <InlineLink
               href={ecosystemPortal}
-              className="text-primary hover:text-primary/80 block underline"
+              className="block text-primary underline hover:text-primary/80"
             >
               {name} {t("layer-2-ecosystem-portal")}
             </InlineLink>
@@ -91,7 +91,7 @@ const Layer2ProductCard = ({
           {tokenLists && (
             <InlineLink
               href={tokenLists}
-              className="text-primary hover:text-primary/80 block underline"
+              className="block text-primary underline hover:text-primary/80"
             >
               {name} {t("layer-2-token-lists")}
             </InlineLink>

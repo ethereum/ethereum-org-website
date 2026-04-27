@@ -43,10 +43,10 @@ const Contributors = () => {
     <Flex className="w-full flex-col items-center">
       <Content>
         <Breadcrumbs slug={pathname} className="mt-12" />
-        <h1 className="leading-xs my-8">
+        <h1 className="my-8 leading-xs">
           {t("page-contributing-translation-program-contributors-title")}
         </h1>
-        <h4 className="leading-xs my-8">
+        <h4 className="my-8 leading-xs">
           {t(
             "page-contributing-translation-program-contributors-number-of-contributors"
           )}{" "}
@@ -74,7 +74,7 @@ const Contributors = () => {
           </InlineLink>
           .
         </Text>
-        <h2 className="leading-xs mt-12 mb-8">
+        <h2 className="mt-12 mb-8 leading-xs">
           {t("page-contributing-translation-program-contributors-thank-you")}
         </h2>
         <List className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">

@@ -72,7 +72,7 @@ export const Explanation = ({
       </Button>
       <Flex className="gap-3 md:flex-col md:gap-2">
         {/* Step counter */}
-        <div className="bg-body-light grid h-8 w-9 place-items-center rounded-lg p-2 text-xs">
+        <div className="grid h-8 w-9 place-items-center rounded-lg bg-body-light p-2 text-xs">
           <span className="leading-none font-bold">
             {step + 1}/{totalSteps}
           </span>

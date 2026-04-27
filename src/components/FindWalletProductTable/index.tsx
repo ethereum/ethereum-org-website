@@ -35,7 +35,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
     >
       {({ filteredData, filters, resetFilters }) => (
         <>
-          <div className="border-b-background-highlight bg-background sticky top-[76px] z-10 w-full lg:border-b">
+          <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
             <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
               <p className="text-body-medium">
                 {t("page-find-wallet-showing-all-wallets")}{" "}

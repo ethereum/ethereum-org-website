@@ -136,10 +136,10 @@ const CategoryCard = ({
             href={href}
             onClick={() => onLinkClick(eventName)}
             hideArrow
-            className="group text-primary hover:text-primary-hover flex items-center justify-between text-xl font-bold no-underline transition-colors md:text-3xl"
+            className="group flex items-center justify-between text-xl font-bold text-primary no-underline transition-colors hover:text-primary-hover md:text-3xl"
           >
             {linkLabel}
-            <ChevronNext className="text-primary size-5 transition-transform group-hover:translate-x-1" />
+            <ChevronNext className="size-5 text-primary transition-transform group-hover:translate-x-1" />
           </BaseLink>
         </div>
       ))}

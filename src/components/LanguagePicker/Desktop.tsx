@@ -43,7 +43,7 @@ const DesktopLanguagePicker = ({
         <Button
           name={DESKTOP_LANGUAGE_BUTTON_NAME}
           variant="ghost"
-          className="animate-fade-in text-body active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover gap-0 px-2 transition-transform duration-500 max-md:hidden xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
+          className="animate-fade-in gap-0 px-2 text-body transition-transform duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover max-md:hidden xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
         >
           <Languages className="align-middle text-2xl" />
           &nbsp;
@@ -54,7 +54,7 @@ const DesktopLanguagePicker = ({
       <PopoverContent
         align="end"
         className={cn(
-          "bg-background-highlight flex w-[320px] flex-col p-0",
+          "flex w-[320px] flex-col bg-background-highlight p-0",
           className
         )}
       >

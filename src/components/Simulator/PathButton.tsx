@@ -25,7 +25,7 @@ export const PathButton = ({ pathSummary, handleClick }: PathButtonProps) => {
             {primaryText}
           </span>
           {secondaryText && (
-            <span className="text-body-medium m-0 text-xs leading-5">
+            <span className="m-0 text-xs leading-5 text-body-medium">
               {secondaryText}
             </span>
           )}

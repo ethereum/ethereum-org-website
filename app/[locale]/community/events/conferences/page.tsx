@@ -137,7 +137,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               eventCategory: "Events_conferences",
             }}
           />
-          <p className="text-body-medium mt-8">
+          <p className="mt-8 text-body-medium">
             {t.rich("page-events-data-source-callout", {
               a: (chunks) => <Link href="https://ethstars.xyz/">{chunks}</Link>,
             })}

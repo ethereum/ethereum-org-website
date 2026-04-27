@@ -55,7 +55,7 @@ const Menu = ({ ...props }: NavMenuProps) => {
                     {isActive && (
                       <motion.div
                         layoutId="active-section-highlight"
-                        className="bg-primary-low-contrast absolute inset-0 z-0 rounded"
+                        className="absolute inset-0 z-0 rounded bg-primary-low-contrast"
                       />
                     )}
                     <span className="relative z-10">{label}</span>
