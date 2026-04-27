@@ -20,14 +20,14 @@ import { Skeleton, SkeletonLines } from "../ui/skeleton"
 const WalletProviders = dynamic(() => import("@/components/WalletProviders"), {
   ssr: false,
   loading: () => (
-    <Skeleton className="bg-primary/20 grid h-[32rem] grid-cols-1 rounded-2xl p-12 md:grid-cols-2">
+    <Skeleton className="grid h-[32rem] grid-cols-1 rounded-2xl bg-primary/20 p-12 md:grid-cols-2">
       <div className="">
         <SkeletonLines
           noOfLines={5}
           className="flex h-full flex-col justify-center opacity-20"
         />
       </div>
-      <Skeleton className="bg-background h-full rounded-2xl" />
+      <Skeleton className="h-full rounded-2xl bg-background" />
     </Skeleton>
   ),
 })

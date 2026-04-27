@@ -23,7 +23,7 @@ export const PulseAnimation = ({ type = CIRCLE }: PulseAnimationProps) => {
   return (
     <motion.div
       className={cn(
-        "border-primary absolute border-2",
+        "absolute border-2 border-primary",
         insetClass,
         borderRadiusClass
       )}

@@ -22,7 +22,7 @@ const TableOfContentsLink = ({
     <BaseLink
       href={url}
       className={cn(
-        "hover:text-primary relative !mb-4 inline-block text-xl font-normal text-gray-500 no-underline hover:no-underline dark:text-gray-400",
+        "relative !mb-4 inline-block text-xl font-normal text-gray-500 no-underline hover:text-primary hover:no-underline dark:text-gray-400",
         isActive && "text-primary"
       )}
     >

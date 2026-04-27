@@ -83,7 +83,7 @@ const RadioCard = ({ value, children, checked, onChange }) => {
         checked && "border-primary text-primary shadow-md"
       )}
     >
-      <span className="text-md text-center leading-none font-semibold md:text-lg md:font-normal">
+      <span className="text-center text-md leading-none font-semibold md:text-lg md:font-normal">
         {children}
       </span>
     </Button>
@@ -156,7 +156,7 @@ const TranslationLeaderboard = ({
           )}
         </RadioCard>
       </Flex>
-      <div className="bg-background-highlight mb-8 w-full shadow-md">
+      <div className="mb-8 w-full bg-background-highlight shadow-md">
         <Flex className="bg-muted text-foreground mb-[1px] w-full items-center justify-between p-4">
           <Flex>
             <div className="w-10 opacity-40">#</div>
@@ -235,7 +235,7 @@ const TranslationLeaderboard = ({
           onClick={filterAmount === 10 ? showMore : showLess}
           className="m-2 mx-0 flex h-full w-full items-center justify-center rounded-full px-6 py-4 lg:mx-2 lg:w-auto"
         >
-          <span className="text-md text-center leading-none font-semibold md:text-lg md:font-normal">
+          <span className="text-center text-md leading-none font-semibold md:text-lg md:font-normal">
             {t(
               filterAmount === 10
                 ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"

@@ -50,7 +50,7 @@ const HighlightCard = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <Card
     className={cn(
-      "space-between border-background-highlight flex flex-col overflow-hidden border",
+      "space-between flex flex-col overflow-hidden border border-background-highlight",
       className
     )}
     {...props}
@@ -97,12 +97,12 @@ const HighlightCardFooter = ({
 }: HighlightCardFooterProps) => (
   <div
     className={cn(
-      "bg-background-highlight flex items-center gap-1 px-6 py-2",
+      "flex items-center gap-1 bg-background-highlight px-6 py-2",
       className
     )}
     {...props}
   >
-    <Zap className="fill-primary text-primary size-4" />
+    <Zap className="size-4 fill-primary text-primary" />
     <Link href={href} className="text-sm font-bold no-underline">
       {children}
     </Link>
@@ -112,7 +112,7 @@ const HighlightCardFooter = ({
 const CheckList = ({ className, ...props }: ListProps) => (
   <UnorderedList
     className={cn(
-      "text-body-medium m-0 my-2 list-none space-y-2 text-xs",
+      "m-0 my-2 list-none space-y-2 text-xs text-body-medium",
       className
     )}
     {...props}
@@ -126,7 +126,7 @@ type CheckItemProps = ChildOnlyProp & {
 const CheckItem = ({ children, owned }: CheckItemProps) => (
   <ListItem className="mb-0 flex items-center gap-2">
     <CircleCheckIcon
-      className={cn("text-body-medium size-4", owned && "text-success")}
+      className={cn("size-4 text-body-medium", owned && "text-success")}
     />
     {children}
   </ListItem>
@@ -507,7 +507,7 @@ const CollectiblesCurrentYear = ({
           </AccordionItem>
         </Accordion>
 
-        <div className="grid-cols-fill-8 mt-4 grid gap-2">
+        <div className="mt-4 grid grid-cols-fill-8 gap-2">
           {socialBadges.map((badge) => (
             <Link
               key={badge.id}

@@ -85,7 +85,7 @@ const AlertCloseButton = React.forwardRef<
   <Button
     ref={ref}
     variant="ghost"
-    className={cn("text-body -me-4 rounded-full", className)}
+    className={cn("-me-4 rounded-full text-body", className)}
     {...props}
   >
     <X className="h-6 w-6" />

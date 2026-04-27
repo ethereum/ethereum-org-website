@@ -57,11 +57,11 @@ const LvlAccordion = ({
           return (
             <div
               key={label}
-              className="border-body-light border-t last:border-b"
+              className="border-t border-body-light last:border-b"
             >
               <Button
                 className={cn(
-                  "text-body flex h-full justify-start px-4 py-4 text-start whitespace-normal no-underline",
+                  "flex h-full justify-start px-4 py-4 text-start whitespace-normal text-body no-underline",
                   nestedAccordionSpacingMap[lvl + 2]
                 )}
                 variant="ghost"
@@ -104,7 +104,7 @@ const LvlAccordion = ({
         return (
           <CollapsibleTracked
             key={label}
-            className="border-body-light border-t last:border-b"
+            className="border-t border-body-light last:border-b"
             eventCategory="Mobile navigation menu"
             eventAction={`Level ${lvl - 1} section changed`}
             openEventName={`Open section: ${label} - ${description.slice(0, 16)}...`}
@@ -113,15 +113,15 @@ const LvlAccordion = ({
             <CollapsibleTrigger
               data-testid={`mobile-menu-collapsible-${slugify(label)}`}
               className={cn(
-                "group/menu hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all focus-visible:outline-1 focus-visible:-outline-offset-1 md:px-4 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
-                "text-body flex h-full justify-start px-4 py-4 text-start whitespace-normal no-underline",
+                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
+                "flex h-full justify-start px-4 py-4 text-start whitespace-normal text-body no-underline",
                 "text-body",
                 nestedAccordionSpacingMap[lvl]
               )}
             >
               <ExpandIcon />
               <div>
-                <p className="text-md text-body flex-1 leading-tight font-bold">
+                <p className="flex-1 text-md leading-tight font-bold text-body">
                   {label}
                 </p>
                 <p
@@ -137,7 +137,7 @@ const LvlAccordion = ({
 
             <CollapsibleContent
               className={cn(
-                "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm transition-all",
+                "overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
                 "mt-0 p-0",
                 backgroundColorPerLevel[lvl]
               )}

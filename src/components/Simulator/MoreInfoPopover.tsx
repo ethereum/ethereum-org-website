@@ -27,7 +27,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
       <PopoverTrigger asChild>
         <MotionButton
           variant="ghost"
-          className="text-body-medium relative min-h-0 p-0 text-sm"
+          className="relative min-h-0 p-0 text-sm text-body-medium"
           onClick={() => setClicked(true)}
           data-testid="more-info-popover-trigger"
         >
@@ -37,7 +37,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
         </MotionButton>
       </PopoverTrigger>
       <PopoverContent
-        className="bg-background-highlight relative start-4 w-[calc(100vw-3rem)] max-w-xs px-4 py-6 text-sm shadow-none sm:start-8 sm:w-[calc(100vw-5rem)]"
+        className="relative start-4 w-[calc(100vw-3rem)] max-w-xs bg-background-highlight px-4 py-6 text-sm shadow-none sm:start-8 sm:w-[calc(100vw-5rem)]"
         data-testid="more-info-popover-content"
       >
         <PopoverClose className="absolute end-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">

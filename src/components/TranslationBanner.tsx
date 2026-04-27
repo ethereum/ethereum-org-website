@@ -45,7 +45,7 @@ const TranslationBanner = ({
   return (
     <aside
       className={cn(
-        "z-popover bg-background-highlight fixed end-0 bottom-0 rounded md:end-8 md:bottom-8",
+        "fixed end-0 bottom-0 z-popover rounded bg-background-highlight md:end-8 md:bottom-8",
         isOpen ? "block" : "hidden"
       )}
       dir={dir}
@@ -86,7 +86,7 @@ const TranslationBanner = ({
         <Button
           variant="ghost"
           size="sm"
-          className="hover:text-primary absolute end-0 top-0 m-2"
+          className="absolute end-0 top-0 m-2 hover:text-primary"
           onClick={() => setIsOpen(false)}
         >
           <X className="h-4 w-4" />

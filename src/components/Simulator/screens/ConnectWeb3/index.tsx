@@ -134,7 +134,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                   side="top"
                 >
                   <Flex className="flex-col items-start gap-1 text-start text-xs sm:text-sm">
-                    <p className="text-md ms-2 mb-auto font-bold">
+                    <p className="ms-2 mb-auto text-md font-bold">
                       {t("sim-cw-nft-title")}
                     </p>
                     <Button variant="link" disabled>
@@ -157,7 +157,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                 content={t("sim-try-real-app")}
                 side="top"
               >
-                <div className="md:text-md text-sm">
+                <div className="text-sm md:text-md">
                   <Button className="block" variant="link" disabled>
                     {t("sim-cw-browse-artwork")}
                   </Button>

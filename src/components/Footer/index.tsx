@@ -314,8 +314,8 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
 
   return (
     <footer className="px-4 py-4">
-      <div className="border-body-light flex flex-wrap items-center justify-center gap-8 border-t px-4 py-4 md:justify-between">
-        <p className="text-body-medium text-sm italic">
+      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
+        <p className="text-sm text-body-medium italic">
           {t("website-last-updated")}: {lastDeployLocaleTimestamp}
         </p>
 
@@ -325,7 +325,7 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
       <div className="px-4 py-4">
         <BaseLink
           href="/"
-          className="hover:text-primary text-lg font-bold no-underline"
+          className="text-lg font-bold no-underline hover:text-primary"
         >
           ethereum.org
         </BaseLink>
@@ -351,7 +351,7 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
           </div>
         ))}
       </div>
-      <div className="bg-background-highlight flex flex-col items-center justify-center p-6 text-sm">
+      <div className="flex flex-col items-center justify-center bg-background-highlight p-6 text-sm">
         <div className="flex gap-4">
           {socialLinks.map(({ href, ariaLabel, icon: Icon }) => (
             <BaseLink

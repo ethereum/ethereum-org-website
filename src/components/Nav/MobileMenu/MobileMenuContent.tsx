@@ -65,7 +65,7 @@ export default function MobileMenuContent() {
           <LanguageContent className="flex min-h-0 flex-1 flex-col" />
         </TabsPrimitive.Content>
 
-        <SheetFooter className="border-body-light h-[108px] shrink-0 justify-center border-t px-4 py-0">
+        <SheetFooter className="h-[108px] shrink-0 justify-center border-t border-body-light px-4 py-0">
           <TabsPrimitive.List className="grid h-auto w-full grid-cols-3">
             <div className="flex flex-col items-center gap-1 py-2">
               <TabsPrimitive.Trigger value="languages" asChild>
@@ -110,12 +110,12 @@ function NavigationContent({ className }: { className?: string }) {
         return (
           <Collapsible
             key={key}
-            className="border-body-light border-b first:border-t"
+            className="border-b border-body-light first:border-t"
           >
             <CollapsibleTrigger
               data-testid={`mobile-menu-collapsible-${slugify(label)}`}
               className={cn(
-                "group/menu hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all focus-visible:outline-1 focus-visible:-outline-offset-1 md:px-4 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
+                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
                 "text-body"
               )}
             >
@@ -127,8 +127,8 @@ function NavigationContent({ className }: { className?: string }) {
 
             <CollapsibleContent
               className={cn(
-                "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm transition-all",
-                "bg-background-low mt-0 p-0"
+                "overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+                "mt-0 bg-background-low p-0"
               )}
             >
               <LvlAccordion

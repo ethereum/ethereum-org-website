@@ -32,7 +32,7 @@ type Story = StoryObj<typeof meta>
 const ContentContainer = (props: ChildOnlyProp) => {
   return (
     <div
-      className="bg-background-highlight flex w-full justify-between py-0 ps-0 lg:pe-8"
+      className="flex w-full justify-between bg-background-highlight py-0 ps-0 lg:pe-8"
       {...props}
     />
   )
