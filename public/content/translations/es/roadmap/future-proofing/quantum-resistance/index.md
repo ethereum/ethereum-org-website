@@ -46,7 +46,7 @@ En febrero de 2026, Vitalik Buterin [publicó una hoja de ruta](https://x.com/Vi
 - **leanXMSS**: Ethereum reemplazará las firmas BLS con leanXMSS, un esquema de firma basado en hash para validadores. Las firmas basadas en hash se consideran seguras contra ataques cuánticos porque dependen únicamente de la seguridad de las funciones hash, que las computadoras cuánticas debilitan pero no rompen.
 - **leanVM**: Una zkVM (máquina virtual de conocimiento cero) mínima para la agregación de firmas basada en SNARK. Debido a que las firmas basadas en hash son significativamente más grandes (aproximadamente 3.000 bytes en comparación con los 96 bytes de BLS), cambiar a leanXMSS produciría significativamente más datos por slot. Para resolver esto, leanVM actúa como un motor de agregación, comprimiendo los datos 250 veces. Esto preserva los beneficios de eficiencia de combinar muchas firmas en una sola, incluso después de cambiar a esquemas seguros contra ataques cuánticos.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="¿Por qué Ethereum no puede simplemente reemplazar BLS por un esquema resistente a la computación cuántica?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 La propiedad de agregación que hace que BLS sea eficiente (combinar cientos de miles de firmas en una sola) no tiene un equivalente obvio seguro contra ataques cuánticos. Las firmas poscuánticas también son mucho más grandes que las firmas BLS. Simplemente cambiar una por otra haría que la capa de consenso de Ethereum fuera significativamente más lenta y costosa. Es por eso que el equipo está construyendo leanVM, una herramienta que utiliza pruebas de conocimiento cero para agregar firmas seguras contra ataques cuánticos de manera eficiente.
 
@@ -135,37 +135,37 @@ La cuestión de cómo manejar las billeteras inactivas (cuentas cuyos propietari
 
 ## Preguntas frecuentes {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="¿Pueden las computadoras cuánticas robar mi ETH hoy?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **No.** Ninguna computadora cuántica actual puede romper la criptografía de Ethereum. El hardware cuántico actual está lejos de la escala necesaria. El trabajo descrito en esta página es una preparación para el futuro, no una respuesta a una amenaza activa.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="¿Cuándo podrían las computadoras cuánticas convertirse en una amenaza?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Las estimaciones varían. La investigación de Google de marzo de 2026 sugiere que el hardware necesario para romper la criptografía de curva elíptica de 256 bits podría llegar en algún momento alrededor del final de esta década como muy pronto, pero aún quedan importantes desafíos de ingeniería. La mayoría de los investigadores consideran que una amenaza realista está a varios años de distancia como mínimo. La respuesta honesta es que nadie conoce el cronograma exacto, que es precisamente por lo que prepararse ahora es importante.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="¿Necesitaré hacer algo para proteger mi billetera?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 Eventualmente, sí. Una vez que los esquemas de firma poscuántica estén disponibles en Ethereum, los usuarios querrán migrar sus cuentas. Es probable que el software de la billetera maneje esta transición por ti. Por ahora, no hay nada que debas hacer. Cuando sea necesario actuar, la comunidad de Ethereum y los desarrolladores de billeteras proporcionarán orientación y herramientas claras.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="¿Qué pasa con mis tokens, NFT y posiciones DeFi?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Los activos en Ethereum están controlados por firmas de cuentas. Una vez que tu cuenta se migra a un esquema de firma seguro contra ataques cuánticos, todo en esa cuenta está protegido. No necesitas migrar cada activo individualmente. Los contratos inteligentes que mantienen fondos (como los protocolos de finanzas descentralizadas (DeFi)) pueden necesitar sus propias actualizaciones dependiendo de las primitivas criptográficas que utilicen internamente.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="¿Está Ethereum por detrás de otras cadenas de bloques en esto?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 No. Ethereum tiene uno de los programas poscuánticos más estructurados de cualquier cadena de bloques: un equipo dedicado, investigación financiada, devnets semanales y una hoja de ruta de migración publicada, tratando la computación cuántica como una restricción de diseño de primera clase. Ninguna cadena de bloques ha completado una transición poscuántica completa todavía. Según estimaciones de la Fundación Ethereum, la exposición de fondos inactivos vulnerables a ataques cuánticos de Ethereum es de aproximadamente el 0,1%, drásticamente menor que la de otras redes importantes de cadenas de bloques.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="¿Qué es 'recolectar ahora, descifrar más tarde'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "Cosechar ahora, descifrar después" es un ataque en el que alguien registra datos cifrados o claves públicas expuestas hoy, y luego rompe el cifrado más tarde una vez que existe una computadora cuántica lo suficientemente potente. Para Ethereum, esto es más relevante para las cuentas cuyas claves públicas ya están expuestas en cadena (cualquier cuenta que haya enviado una transacción). Esta es una de las razones por las que la comunidad trata la migración poscuántica como algo urgente, aunque la amenaza cuántica aún no sea inmediata.
 
