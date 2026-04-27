@@ -46,7 +46,7 @@ summaryPoints:
 - **leanXMSS**: Эфириум заменит подписи BLS на leanXMSS, схему подписи на основе хешей для валидаторов. Подписи на основе хешей считаются квантово-безопасными, поскольку они полагаются только на безопасность хеш-функций, которые квантовые компьютеры ослабляют, но не взламывают.
 - **leanVM**: минимальная zkVM (виртуальная машина с нулевым разглашением) для агрегации подписей на основе SNARK. Поскольку подписи на основе хешей значительно больше (около 3000 байт по сравнению с 96 байтами для BLS), переход на leanXMSS приведет к созданию значительно большего объема данных на слот. Чтобы решить эту проблему, leanVM действует как механизм агрегации, сжимая данные в 250 раз. Это сохраняет преимущества эффективности объединения множества подписей в одну даже после перехода на квантово-безопасные схемы.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Почему Эфириум не может просто заменить BLS на квантово-устойчивую схему?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 Свойство агрегации, которое делает BLS эффективным (объединение сотен тысяч подписей в одну), не имеет очевидного квантово-безопасного эквивалента. Постквантовые подписи также намного больше подписей BLS. Простая замена одного на другое сделала бы уровень консенсуса Эфириума значительно медленнее и дороже. Вот почему команда создает leanVM — инструмент, который использует доказательства с нулевым разглашением для эффективной агрегации квантово-безопасных подписей.
 
@@ -135,37 +135,37 @@ summaryPoints:
 
 ## Часто задаваемые вопросы {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Могут ли квантовые компьютеры украсть мой ETH уже сегодня?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Нет.** Ни один квантовый компьютер сегодня не может взломать криптографию Эфириума. Современное квантовое оборудование далеко от необходимого масштаба. Работа, описанная на этой странице, — это подготовка к будущему, а не ответ на активную угрозу.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Когда квантовые компьютеры могут стать угрозой?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Оценки разнятся. Исследование Google, проведенное в марте 2026 года, предполагает, что оборудование, необходимое для взлома 256-битной криптографии на эллиптических кривых, может появиться не раньше конца этого десятилетия, но остаются значительные инженерные проблемы. Большинство исследователей считают, что до реальной угрозы остается как минимум несколько лет. Честный ответ заключается в том, что никто не знает точных сроков, и именно поэтому так важно готовиться уже сейчас.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Нужно ли мне будет что-то делать для защиты своего кошелька?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 В конечном итоге, да. Как только постквантовые схемы подписи станут доступны в Эфириуме, пользователи захотят перевести свои аккаунты. Программное обеспечение кошелька, скорее всего, выполнит этот переход за вас. На данный момент вам ничего не нужно делать. Когда потребуются действия, сообщество Эфириума и разработчики кошельков предоставят четкие инструкции и инструменты.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="А как насчет моих токенов, NFT и позиций в DeFi?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Активы в Эфириуме контролируются подписями аккаунтов. Как только ваш аккаунт будет переведен на квантово-безопасную схему подписи, все в этом аккаунте будет защищено. Вам не нужно переносить каждый актив по отдельности. Смарт-контрактам, в которых хранятся средства (например, протоколам децентрализованных финансов (DeFi)), могут потребоваться собственные обновления в зависимости от того, какие криптографические примитивы они используют внутри.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="Отстает ли Эфириум от других блокчейнов в этом вопросе?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Нет. Эфириум имеет одну из самых структурированных постквантовых программ среди всех блокчейнов: специальная команда, финансируемые исследования, еженедельные девнеты и опубликованная дорожная карта миграции, рассматривающая квантовые вычисления как первоклассное ограничение при проектировании. Ни один блокчейн еще не завершил полный постквантовый переход. По оценкам Фонда Ethereum, доля неактивных средств Эфириума, уязвимых для квантовых атак, составляет примерно 0,1%, что значительно ниже, чем в других крупных блокчейн-сетях.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Что такое «собирай сейчас, расшифровывай потом»?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 «Собери сейчас, расшифруй потом» — это атака, при которой кто-то записывает зашифрованные данные или раскрытые открытые ключи сегодня, а затем взламывает шифрование позже, когда появится достаточно мощный квантовый компьютер. Для Эфириума это наиболее актуально для аккаунтов, чьи открытые ключи уже раскрыты ончейн (любой аккаунт, отправивший транзакцию). Это одна из причин, по которой сообщество считает постквантовую миграцию чувствительной ко времени, даже несмотря на то, что квантовая угроза еще не является неминуемой.
 
