@@ -11,7 +11,7 @@ export const RecoveryPhraseNotice = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.25 }}
     >
-      <p className="text-xl font-bold leading-8 md:text-2xl">
+      <p className="text-xl leading-8 font-bold md:text-2xl">
         {t("sim-ca-recovery-title")}
       </p>
       <p>

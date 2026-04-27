@@ -15,7 +15,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import useTranslation from "@/hooks/useTranslation"
 
 const H3 = (props: ChildOnlyProp) => (
-  <h3 className="leading-xs text-xl font-semibold md:text-2xl" {...props} />
+  <h3 className="text-xl leading-xs font-semibold md:text-2xl" {...props} />
 )
 
 const WhySwiper = () => {
@@ -29,7 +29,7 @@ const WhySwiper = () => {
   ]
 
   return (
-    <SwiperContainer className="bg-background rounded border p-8">
+    <SwiperContainer className="rounded border bg-background p-8">
       <Swiper
         onSlideChange={({ activeIndex }) => {
           trackCustomEvent({

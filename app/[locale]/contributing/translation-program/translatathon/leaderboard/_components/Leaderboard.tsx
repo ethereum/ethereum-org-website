@@ -57,7 +57,7 @@ export const Leaderboard = () => {
   }
 
   return (
-    <div className="bg-background-highlight mb-8 w-full shadow-md">
+    <div className="mb-8 w-full bg-background-highlight shadow-md">
       <div className="bg-muted text-foreground mb-[1px] flex w-full items-center justify-between p-4">
         <div className="flex">
           <div className="w-10 opacity-40">#</div>
@@ -112,7 +112,7 @@ export const Leaderboard = () => {
             onClick={showMore}
             className="m-2 mx-0 flex h-full w-full items-center justify-center rounded-full px-6 py-4 lg:mx-2 lg:w-auto"
           >
-            <span className="text-md text-center leading-none font-semibold md:text-lg md:font-normal">
+            <span className="text-center text-md leading-none font-semibold md:text-lg md:font-normal">
               Show more
             </span>
           </Button>

@@ -38,7 +38,7 @@ const FeatureCards = async ({
     >
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 flex flex-col items-center gap-4 text-center">
-          <SectionHeader className="mb-0 mt-0">
+          <SectionHeader className="mt-0 mb-0">
             {t("page-index-features-title")}{" "}
             <span className="text-body">
               {t("page-index-features-title-highlight")}
@@ -56,7 +56,7 @@ const FeatureCards = async ({
                 src={ownershipImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 600px"
-                className="absolute -bottom-16 -end-16 h-2/3 w-auto object-contain opacity-25"
+                className="absolute -end-16 -bottom-16 h-2/3 w-auto object-contain opacity-25"
               />
 
               <div className="relative z-10 flex flex-col gap-6">
@@ -96,7 +96,7 @@ const FeatureCards = async ({
                 src={publicRulesImage}
                 alt=""
                 sizes="(max-width: 1024px) 50vw, 450px"
-                className="absolute -bottom-12 -end-24 h-2/3 w-auto object-contain"
+                className="absolute -end-24 -bottom-12 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
@@ -116,7 +116,7 @@ const FeatureCards = async ({
                 src={globalImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -bottom-6 -end-8 h-2/3 w-auto object-contain"
+                className="absolute -end-8 -bottom-6 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">
@@ -134,7 +134,7 @@ const FeatureCards = async ({
                 src={freeAccessImage}
                 alt=""
                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 300px"
-                className="absolute -bottom-6 -end-8 h-2/3 w-auto object-contain"
+                className="absolute -end-8 -bottom-6 h-2/3 w-auto object-contain"
               />
 
               <div className="relative z-10">

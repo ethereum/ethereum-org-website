@@ -462,8 +462,8 @@ async function Page(props: { params: Promise<PageParams> }) {
           <div
             className={cn(
               "my-8 w-full py-16 shadow-inner",
-              "from-accent-a/10 to-accent-c/10 bg-linear-to-r",
-              "dark:from-primary/20 dark:via-accent-a/20 dark:to-accent-c/20 dark:bg-linear-to-tr dark:from-20% dark:via-60% dark:to-95%"
+              "bg-linear-to-r from-accent-a/10 to-accent-c/10",
+              "dark:bg-linear-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
             )}
           >
             <div className="-mb-8 w-full px-8 py-4">
@@ -496,7 +496,7 @@ async function Page(props: { params: Promise<PageParams> }) {
               <div className="mb-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
                 {editorsChoices.map((choice, idx) => (
                   <Flex
-                    className="border-border-high-contrast bg-background text-body w-full flex-col-reverse justify-between gap-x-8 rounded-xs border p-8 sm:flex-row"
+                    className="w-full flex-col-reverse justify-between gap-x-8 rounded-xs border border-border-high-contrast bg-background p-8 text-body sm:flex-row"
                     key={idx}
                     style={{
                       boxShadow: `0.75rem 0.75rem 0 hsla(var(--${choice.shadowColor}-500), 0.25)`,
@@ -505,7 +505,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                     <Flex className="flex-col">
                       <div>
                         <h4 className="mb-2 text-3xl">{choice.title}</h4>
-                        <p className="text-body-medium mb-6">{choice.body}</p>
+                        <p className="mb-6 text-body-medium">{choice.body}</p>
                       </div>
                       <div className="mt-auto">
                         <Flex className="flex-col">
@@ -547,10 +547,10 @@ async function Page(props: { params: Promise<PageParams> }) {
                               {choice.marketCap}
                             </span>
                           ) : (
-                            <span className="text-body-medium text-lg">-</span>
+                            <span className="text-lg text-body-medium">-</span>
                           )}
                         </div>
-                        <div className="text-body-medium text-center text-sm">
+                        <div className="text-center text-sm text-body-medium">
                           {t(
                             "page-stablecoins-stablecoins-table-header-column-2"
                           )}
@@ -626,7 +626,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                 <p className="mb-6">{t("page-stablecoins-saving")}</p>
               </div>
             </Flex>
-            <div className="grid-cols-fill-4 mb-16 grid gap-8">
+            <div className="mb-16 grid grid-cols-fill-4 gap-8">
               {dapps.map((dapp, idx) => (
                 <DataProductCard
                   key={idx}
@@ -676,7 +676,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                       <div className="my-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                         {feature.pros && (
                           <div>
-                            <h4 className="bg-success/25 mb-2 rounded p-2 text-xl font-semibold">
+                            <h4 className="mb-2 rounded bg-success/25 p-2 text-xl font-semibold">
                               {t("pros")}
                             </h4>
                             <ul className="list-inside list-disc">
@@ -688,7 +688,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                         )}
                         {feature.cons && (
                           <div>
-                            <h4 className="bg-error/25 mb-2 rounded p-2 text-xl font-semibold">
+                            <h4 className="mb-2 rounded bg-error/25 p-2 text-xl font-semibold">
                               {t("cons")}
                             </h4>
                             <ul className="list-inside list-disc">

@@ -71,7 +71,7 @@ const FilterableCategoryAppsGrid = ({
           eventName: "",
         }}
       />
-      <div className="grid-cols-fill-4 grid gap-6 md:gap-12">
+      <div className="grid grid-cols-fill-4 gap-6 md:gap-12">
         {displayApps.map((app) => (
           <AppCard
             key={app.name}

@@ -189,13 +189,13 @@ const Page = async (props: {
                           chains={app.networks as ChainName[]}
                           className="mt-2"
                         />
-                        <p className="text-body-medium text-sm">
+                        <p className="text-sm text-body-medium">
                           by {app.parentCompany}
                         </p>
                       </div>
                       <div className="flex flex-row items-center">
                         <LanguagesIcon className="size-6" />
-                        <p className="text-body-medium text-sm">
+                        <p className="text-sm text-body-medium">
                           {formatStringList(
                             formatLanguageNames(app.languages),
                             5
@@ -275,7 +275,7 @@ const Page = async (props: {
                         )}
                       </div>
                       {nextApp && (
-                        <LinkBox className="group hover:bg-background-highlight flex flex-row items-center rounded-lg sm:hidden">
+                        <LinkBox className="group flex flex-row items-center rounded-lg hover:bg-background-highlight sm:hidden">
                           <div className="mr-2 flex flex-col text-right">
                             <p className="text-sm text-gray-500">
                               {t("page-apps-see-next")}
@@ -293,7 +293,7 @@ const Page = async (props: {
                             />
                           </div>
                           <div className="flex gap-2">
-                            <ChevronNext className="group-hover:text-primary h-8 w-8 text-gray-400" />
+                            <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
                           </div>
                         </LinkBox>
                       )}
@@ -302,7 +302,7 @@ const Page = async (props: {
                 </div>
               </div>
               {nextApp && (
-                <LinkBox className="group hover:bg-background-highlight hidden flex-row items-center rounded-lg p-3 sm:flex">
+                <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
                   <div className="mr-2 flex flex-col text-right">
                     <p className="text-sm text-nowrap text-gray-500">
                       {t("page-apps-see-next")}
@@ -320,14 +320,14 @@ const Page = async (props: {
                     />
                   </div>
                   <div className="flex gap-2">
-                    <ChevronNext className="group-hover:text-primary h-8 w-8 text-gray-400" />
+                    <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
                   </div>
                 </LinkBox>
               )}
             </div>
           </div>
 
-          <div className="bg-background-highlight grid grid-cols-1 grid-rows-[auto_1fr] gap-10 px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
+          <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-10 bg-background-highlight px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
             <p className="max-w-3xl">
               {getLocalizedDescription(
                 appDescriptions,
@@ -336,22 +336,22 @@ const Page = async (props: {
                 app.description
               )}
             </p>
-            <div className="bg-background flex h-fit w-full flex-col gap-4 rounded-2xl border p-8 md:row-span-2 md:w-44">
+            <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
               <h3 className="text-lg">{t("page-apps-info-title")}</h3>
               <div>
-                <p className="text-body-medium text-sm">
+                <p className="text-sm text-body-medium">
                   {t("page-apps-info-founded")}
                 </p>
                 <p className="text-sm">{getDisplayYear(app.dateOfLaunch)}</p>
               </div>
               <div>
-                <p className="text-body-medium text-sm">
+                <p className="text-sm text-body-medium">
                   {t("page-apps-info-creator")}
                 </p>
                 <p className="text-sm">{app.parentCompany}</p>
               </div>
               <div>
-                <p className="text-body-medium text-sm">
+                <p className="text-sm text-body-medium">
                   {t("page-apps-info-last-updated")}
                 </p>
                 <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>

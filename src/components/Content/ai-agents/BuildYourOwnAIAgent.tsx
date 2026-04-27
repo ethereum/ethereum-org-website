@@ -12,7 +12,7 @@ const BuildYourOwnAIAgent = () => {
           src={ai16z}
           alt="AI16Z"
           width={128}
-          className="dark:shadow-body-light rounded-xl shadow-lg"
+          className="rounded-xl shadow-lg dark:shadow-body-light"
         />
         <p className="text-2xl font-semibold">Build your own AI agent</p>
         <p>Developer first framework</p>
@@ -31,7 +31,7 @@ const BuildYourOwnAIAgent = () => {
           src={game}
           alt="GAME"
           width={128}
-          className="dark:shadow-body-light rounded-xl shadow-lg"
+          className="rounded-xl shadow-lg dark:shadow-body-light"
         />
         <p className="text-2xl font-semibold">GAME framework</p>
         <p>No-code AI agent platform</p>

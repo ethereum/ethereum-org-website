@@ -125,7 +125,7 @@ const CategoryCard = ({
       >
         <Icon className={cn("size-4 md:size-8", iconColorClass)} />
       </div>
-      <p className="text-sm font-bold uppercase tracking-wider">{label}</p>
+      <p className="text-sm font-bold tracking-wider uppercase">{label}</p>
     </div>
 
     <div className="mt-auto flex flex-col gap-2 md:gap-4">

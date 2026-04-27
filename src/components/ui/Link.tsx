@@ -192,7 +192,7 @@ export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
     return (
       <BaseLink
         className={cn(
-          "group visited:text-primary-visited block w-fit no-underline",
+          "group block w-fit no-underline visited:text-primary-visited",
           className
         )}
         ref={ref}

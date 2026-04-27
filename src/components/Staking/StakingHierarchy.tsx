@@ -24,7 +24,7 @@ type SectionGridProps = ChildOnlyProp
 
 const SectionGrid = ({ children }: SectionGridProps) => {
   return (
-    <div className="staking-grid-stacked md:staking-grid relative grid grid-cols-1 gap-4 md:grid-cols-[5rem_1fr_5rem] md:gap-x-8 md:gap-y-0">
+    <div className="relative grid grid-cols-1 gap-4 staking-grid-stacked md:grid-cols-[5rem_1fr_5rem] md:gap-x-8 md:gap-y-0 md:staking-grid">
       {children}
     </div>
   )
@@ -32,7 +32,7 @@ const SectionGrid = ({ children }: SectionGridProps) => {
 
 const StyledEtherSvg = ({ className = "size-full" }: { className: string }) => {
   return (
-    <Center className="area-ether z-[2] mx-auto w-full max-w-20">
+    <Center className="z-[2] mx-auto w-full max-w-20 area-ether">
       <StakingGlyphEtherCircleIcon className={className} />
     </Center>
   )
@@ -45,7 +45,7 @@ const Line = () => {
 const Header = ({ children, className }: HTMLAttributes<HTMLDivElement>) => (
   <Flex
     className={cn(
-      "area-header flex-col items-center justify-center gap-2 md:items-start",
+      "flex-col items-center justify-center gap-2 area-header md:items-start",
       className
     )}
   >
@@ -98,7 +98,7 @@ const Glyph = ({ glyphIcon: GlyphIcon, className }: GlyphProps) => (
 )
 
 const Content = ({ children }: ChildOnlyProp) => (
-  <Flex className="area-content flex-col gap-4 md:mt-4 md:mb-12">
+  <Flex className="flex-col gap-4 area-content md:mt-4 md:mb-12">
     {children}
   </Flex>
 )
@@ -107,9 +107,9 @@ const StakingHierarchy = () => {
   const { t } = useTranslation("page-staking")
 
   return (
-    <VStack className="bg-gradient-staking gap-16 p-8 md:gap-0 md:rounded-lg">
+    <VStack className="gap-16 bg-gradient-staking p-8 md:gap-0 md:rounded-lg">
       <SectionGrid>
-        <StyledEtherSvg className="text-staking-gold size-[100%]" />
+        <StyledEtherSvg className="size-[100%] text-staking-gold" />
         <Line />
         <Header className="text-staking-gold">
           <HeadingEl>{t("page-staking-hierarchy-solo-h2")}</HeadingEl>
@@ -147,7 +147,7 @@ const StakingHierarchy = () => {
         </Content>
       </SectionGrid>
       <SectionGrid>
-        <StyledEtherSvg className="text-staking-green size-[90%]" />
+        <StyledEtherSvg className="size-[90%] text-staking-green" />
         <Line />
         <Header className="text-staking-green">
           <HeadingEl>{t("page-staking-dropdown-saas")}</HeadingEl>
@@ -183,7 +183,7 @@ const StakingHierarchy = () => {
         </Content>
       </SectionGrid>
       <SectionGrid>
-        <StyledEtherSvg className="text-staking-blue size-[80%]" />
+        <StyledEtherSvg className="size-[80%] text-staking-blue" />
         <Line />
         <Header className="text-staking-blue">
           <HeadingEl>{t("page-staking-dropdown-pools")}</HeadingEl>
@@ -231,7 +231,7 @@ const StakingHierarchy = () => {
         </Content>
       </SectionGrid>
       <SectionGrid>
-        <StyledEtherSvg className="text-staking-red size-[70%]" />
+        <StyledEtherSvg className="size-[70%] text-staking-red" />
         <Line />
         <Header className="text-staking-red">
           <HeadingEl>{t("page-staking-hierarchy-cex-h2")}</HeadingEl>
