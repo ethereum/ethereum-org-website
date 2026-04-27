@@ -31,7 +31,7 @@ const BuilderCard = ({ path, className }: BuildCardProps) => (
         </Tag>
       )}
       <h3 className="text-lg font-bold">{path.title}</h3>
-      <p className="text-body-medium text-sm">{path.description}</p>
+      <p className="text-sm text-body-medium">{path.description}</p>
     </div>
     <ButtonLink
       href={path.href}

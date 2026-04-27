@@ -75,7 +75,7 @@ const ImageContainer = ({ children }: ChildOnlyProp) => {
 }
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
-  return <p className="text-md mb-8 sm:text-xl">{children}</p>
+  return <p className="mb-8 text-md sm:text-xl">{children}</p>
 }
 
 const FeatureContent = ({ children }: ChildOnlyProp) => {
@@ -161,7 +161,7 @@ const CommunityPage = () => {
     <Page>
       <HubHero {...heroContent} />
       <Divider />
-      <Flex className="border-b-border-high-contrast -mt-px w-full flex-row-reverse items-center border-b py-8 ps-0 lg:py-0 lg:ps-8">
+      <Flex className="-mt-px w-full flex-row-reverse items-center border-b border-b-border-high-contrast py-8 ps-0 lg:py-0 lg:ps-8">
         <div className="mb-12 w-full px-8 py-4">
           <Flex className="flex-col items-center">
             <H2 className="lg:text-4xl">
@@ -181,7 +181,7 @@ const CommunityPage = () => {
           </CardContainer>
         </div>
       </Flex>
-      <div className="bg-background-highlight shadow-table-item-box w-full pb-16">
+      <div className="w-full bg-background-highlight pb-16 shadow-table-item-box">
         <div className="w-full px-4 py-4 lg:px-8">
           <Flex className="mt-0 mb-0 flex-col-reverse items-center md:m-12 md:mt-4 md:flex-row">
             <div className="h-full w-full p-0 sm:p-8 lg:p-24">
@@ -216,7 +216,7 @@ const CommunityPage = () => {
           </div>
         </div>
       </div>
-      <Flex className="border-y-border-high-contrast -mt-px h-full w-full flex-col-reverse items-center border-y bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#293233]">
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#293233]">
         <RowReverse>
           <FeatureContent>
             <H2>{t("page-community-open-source")}</H2>
@@ -243,7 +243,7 @@ const CommunityPage = () => {
           </ImageContainer>
         </RowReverse>
       </Flex>
-      <Flex className="border-y-border-high-contrast -mt-px h-full w-full flex-col-reverse items-center border-y bg-[#ffe5f9] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#332027]">
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ffe5f9] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#332027]">
         <Flex className="flex-col-reverse items-center lg:flex-row">
           <FeatureContent>
             <Flex className="flex-col justify-center">
@@ -272,7 +272,7 @@ const CommunityPage = () => {
           </ImageContainer>
         </Flex>
       </Flex>
-      <Flex className="border-y-border-high-contrast -mt-px h-full w-full flex-col-reverse items-center border-y bg-[#e8e8ff] lg:h-[720px] lg:flex-row dark:bg-[#212131]">
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#e8e8ff] lg:h-[720px] lg:flex-row dark:bg-[#212131]">
         <RowReverse>
           <FeatureContent>
             <H2>{t("page-community-support")}</H2>

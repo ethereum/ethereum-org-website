@@ -82,7 +82,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                   trackCustomEvent(matomo)
                 }}
                 className={cn(
-                  "transition-background hover:bg-background-highlight hover:text-body relative mb-0 table h-8 w-full cursor-pointer p-3 duration-500",
+                  "transition-background relative mb-0 table h-8 w-full cursor-pointer p-3 duration-500 hover:bg-background-highlight hover:text-body",
                   idx === activeIndex
                     ? "bg-background-highlight text-body"
                     : "text-primary"
@@ -94,7 +94,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
           </List>
         )}
       </div>
-      <Flex className="bg-background-highlight min-h-[410px] flex-[2] flex-col items-center p-6">
+      <Flex className="min-h-[410px] flex-[2] flex-col items-center bg-background-highlight p-6">
         <StyledSvg />
         <h3 className="mt-10 text-2xl leading-[1.4] font-bold">{title}</h3>
         <p>{description}</p>

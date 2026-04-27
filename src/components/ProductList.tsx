@@ -32,7 +32,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
       {category && (
         <h3
           id={CATEGORY_NAME}
-          className="border-border mt-10 mb-0 border-b-2 pb-4 text-2xl"
+          className="mt-10 mb-0 border-b-2 border-border pb-4 text-2xl"
         >
           {category}
         </h3>
@@ -68,7 +68,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
                     alt={alt}
                     width={66}
                     height={66}
-                    className="dark:shadow-body-light rounded-xl shadow-lg"
+                    className="rounded-xl shadow-lg dark:shadow-body-light"
                   />
                 )}
               </div>

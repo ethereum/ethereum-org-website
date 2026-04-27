@@ -43,7 +43,7 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
   return (
     <Card
       className={cn(
-        "bg-background-highlight my-8 max-w-xl space-y-4 border p-4 md:p-6",
+        "my-8 max-w-xl space-y-4 border bg-background-highlight p-4 md:p-6",
         className
       )}
     >

@@ -73,7 +73,7 @@ const TranslatathonPrizes = () => {
         <div className="flex flex-col">
           <p className="text-body-base text-lg">+ Participation prizes</p>
         </div>
-        <div className="text-body-medium flex flex-col text-sm">
+        <div className="flex flex-col text-sm text-body-medium">
           <Link href="/contributing/translation-program/translatathon/terms-and-conditions/">
             See full Terms & Conditions here
           </Link>

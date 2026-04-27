@@ -57,7 +57,7 @@ const BreadcrumbLink = React.forwardRef<
     <Comp
       ref={ref}
       className={cn(
-        "!text-body-medium hover:!text-primary uppercase no-underline transition-colors",
+        "!text-body-medium uppercase no-underline transition-colors hover:!text-primary",
         className
       )}
       {...props}
@@ -107,7 +107,7 @@ const BreadcrumbEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
-    <MoreHorizontal className="text-md size-4" />
+    <MoreHorizontal className="size-4 text-md" />
     <span className="sr-only">More</span>
   </span>
 )

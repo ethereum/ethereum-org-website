@@ -28,7 +28,7 @@ const Skeleton = ({ className, ...props }: SkeletonProps) => {
   return (
     <div
       className={cn(
-        "animate-pulse-light bg-disabled h-4 rounded opacity-5 dark:opacity-60",
+        "h-4 animate-pulse-light rounded bg-disabled opacity-5 dark:opacity-60",
         className
       )}
       {...props}

@@ -70,7 +70,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">
               {t("page-find-wallet-title")}
             </h1>
-            <p className="text-body-medium mb-6 text-xl leading-[1.4] last:mb-8">
+            <p className="mb-6 text-xl leading-[1.4] text-body-medium last:mb-8">
               {t("page-find-wallet-description")}
             </p>
           </div>

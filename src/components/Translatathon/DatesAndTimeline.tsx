@@ -112,7 +112,7 @@ export const DatesAndTimeline = () => {
                         <Button
                           className={cn(
                             "mt-2",
-                            !isLive ? "text-disabled pointer-events-none" : ""
+                            !isLive ? "pointer-events-none text-disabled" : ""
                           )}
                           variant="outline"
                           disabled={!isLive}

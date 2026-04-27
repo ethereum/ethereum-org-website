@@ -32,11 +32,11 @@ const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading4 className="max-md:text-md font-semibold" {...props} />
+  <MdHeading4 className="font-semibold max-md:text-md" {...props} />
 )
 
 export const InfoGrid = (props: ChildOnlyProp) => (
-  <div className="grid-cols-fill-3 grid gap-8" {...props} />
+  <div className="grid grid-cols-fill-3 gap-8" {...props} />
 )
 
 const CardGrid = (props: ChildOnlyProp) => (
