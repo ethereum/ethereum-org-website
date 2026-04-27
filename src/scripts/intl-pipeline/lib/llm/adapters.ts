@@ -24,7 +24,7 @@ export const adapters: Record<string, LlmAdapter> = {
   gemini: {
     name: "Gemini",
     models: ["gemini-3.1-pro-preview", "gemini-3.1-pro"],
-    coAuthor: "Gemini <noreply@google.com>",
+    coAuthor: "Gemini <gemini@google.com>",
     isAvailable: () => Boolean(process.env.GEMINI_API_KEY),
   },
 }

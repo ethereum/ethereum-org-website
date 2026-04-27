@@ -1,96 +1,95 @@
-import { useEffect, useState } from "react"
+"use client"
+
+import { useEffect, useMemo, useState } from "react"
 import { X } from "lucide-react"
 import { useLocale } from "next-intl"
 
-import type { Lang } from "@/lib/types"
-
-import { Button, ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex } from "@/components/ui/flex"
+import { Button } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
-import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import Emoji from "./Emoji"
 
-import { useTranslation } from "@/hooks/useTranslation"
+import useTranslation from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/navigation"
+import { DO_NOT_TRANSLATE_PATHS } from "@/scripts/intl-pipeline/constants"
 
-export type TranslationBannerProps = {
-  shouldShow: boolean
-  originalPagePath: string
-  isPageContentEnglish: boolean
-}
-
-const TranslationBanner = ({
-  shouldShow,
-  originalPagePath,
-  isPageContentEnglish,
-}: TranslationBannerProps) => {
-  const [isOpen, setIsOpen] = useState(shouldShow)
-  const { t } = useTranslation("common")
+const TranslationBanner = () => {
   const locale = useLocale()
-  const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
+  const pathname = usePathname()
+
+  const { t } = useTranslation()
+
+  // Default to isOpen being false, and let the useEffect set this.
+  const [isOpen, setIsOpen] = useState(false)
+
+  const lsKey = useMemo(
+    () => `dont-show-translation-banner-${pathname}`,
+    [pathname]
+  )
 
   useEffect(() => {
-    setIsOpen(shouldShow)
-  }, [originalPagePath, shouldShow])
+    if (localStorage.getItem(lsKey) === "true") {
+      setIsOpen(false)
+    } else {
+      setIsOpen(true)
+    }
+  }, [lsKey])
 
-  const headerTextId = isPageContentEnglish
-    ? "translation-banner-title-new"
-    : "translation-banner-title-update"
+  const isDNTPath = DO_NOT_TRANSLATE_PATHS.reduce(
+    (acc, curr) => acc || pathname.includes(curr),
+    false
+  )
 
-  const bodyTextId = isPageContentEnglish
-    ? "translation-banner-body-new"
-    : "translation-banner-body-update"
+  /**
+   * If English page, not a Do Not Translate page, or closed: return early
+   */
+  if (!isOpen || locale === DEFAULT_LOCALE || !isDNTPath) return
+
+  const handleDontShow = () => {
+    localStorage.setItem(lsKey, "true")
+    setIsOpen(false)
+  }
 
   return (
     <aside
       className={cn(
-        "fixed end-0 bottom-0 z-popover rounded bg-background-highlight md:end-8 md:bottom-8",
-        isOpen ? "block" : "hidden"
+        "fixed z-popover bg-background-highlight",
+        "bottom-0 md:bottom-8",
+        "end-0 md:end-8"
       )}
-      dir={dir}
     >
-      <div className="relative max-h-full max-w-full p-4 shadow-md md:max-w-[600px]">
-        <Flex className="m-4 mt-10 flex-col gap-4 sm:mt-4">
-          <Flex className="flex-col-reverse items-start sm:flex-row sm:items-center">
-            <h3 className="leading-none md:text-2xl">{t(headerTextId)}</h3>
-            <Emoji
-              text=":globe_showing_asia_australia:"
-              className="ms-2 mb-4 text-2xl sm:mb-auto"
-            />
-          </Flex>
-          <p>{t(bodyTextId)}</p>
-          <Flex className="flex-col items-start sm:flex-row sm:items-center">
-            <div>
-              <ButtonLink href="/contributing/translation-program/">
-                {t("translation-banner-button-translate-page")}
-              </ButtonLink>
-            </div>
-            {/* Todo: Reimplement once fixed */}
-            {/* Issue: https://github.com/ethereum/ethereum-org-website/issues/12292 */}
-            {/* {!isPageContentEnglish && (
-              <div>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="ms-0 sm:ms-2 mt-2 sm:mt-0 border-neutral-900 text-neutral-900"
-                >
-                  <a href={originalPagePath} lang={DEFAULT_LOCALE}>
-                    {t("translation-banner-button-see-english")}
-                  </a>
-                </Button>
-              </div>
-            )} */}
-          </Flex>
-        </Flex>
+      <div
+        className={cn(
+          "relative flex justify-between",
+          "w-full md:max-w-[600px]",
+          "rounded-xs p-4",
+          "shadow-md"
+        )}
+      >
+        <div className="m-4 mt-10 flex flex-col gap-4 sm:mt-4">
+          <div className="flex flex-col-reverse items-start sm:flex-row sm:items-center">
+            <h3 className="leading-none md:text-2xl">
+              {t("translation-banner-no-bugs-title")}
+              <Emoji text=":bug:" className="ms-2 text-3xl sm:mb-auto" />
+            </h3>
+          </div>
+          <p>{t("translation-banner-no-bugs-content")}</p>
+          <div className="flex flex-col items-start sm:flex-row sm:items-center">
+            <Button onClick={handleDontShow}>
+              {t("translation-banner-no-bugs-dont-show-again")}
+            </Button>
+          </div>
+        </div>
         <Button
           variant="ghost"
           size="sm"
           className="absolute end-0 top-0 m-2 hover:text-primary"
           onClick={() => setIsOpen(false)}
         >
-          <X className="h-4 w-4" />
-          <span className="sr-only">Close</span>
+          <X className="size-4" />
         </Button>
       </div>
     </aside>

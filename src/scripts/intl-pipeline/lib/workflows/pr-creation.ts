@@ -17,7 +17,7 @@ export function generatePRTitle(
   langCodes: string[],
   allPossibleLanguages: string[]
 ): string {
-  let prTitle = "i18n: intl-pipeline translations"
+  let prTitle = "i18n: translation pipeline"
 
   if (langCodes.length <= 3) {
     prTitle += ` (${langCodes.join(", ")})`
