@@ -41,6 +41,10 @@ import {
   parseIncrementalResponse,
 } from "./lib/llm/incremental-translate"
 import {
+  extractAttributeLeaves,
+  translateJsxAttributes,
+} from "./lib/llm/jsx-attribute-translator"
+import {
   buildJsonManifest,
   buildLocaleTranslationManifest,
   buildMarkdownManifest,
@@ -413,8 +417,37 @@ async function runFullTranslation(
     `[${locale}] ${file.path}: translated (${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
   )
 
-  await committer.commitFile(destPath, result.translatedContent, locale)
-  committedFiles.push({ path: destPath, content: result.translatedContent })
+  // Phase 4b: JSX attribute translation pass (markdown only)
+  let finalContent = result.translatedContent
+  if (file.type === "markdown") {
+    const leaves = extractAttributeLeaves(file.content)
+    if (leaves.length > 0) {
+      const attrResult = await translateJsxAttributes({
+        leaves,
+        localeContent: finalContent,
+        targetLanguage: locale,
+        glossary: glossaryTerms,
+        filePath: file.path,
+      })
+      finalContent = attrResult.content
+      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+        log(
+          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+        )
+      }
+      // Per PIPELINE-SPEC.md "On partial failure": skip manifest stamping if
+      // any attr leaf failed to translate. Throwing here forces the pool to
+      // mark this task failed; the next run will re-detect and retry.
+      if (attrResult.failedCount > 0) {
+        throw new Error(
+          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+        )
+      }
+    }
+  }
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
 
   // Build and commit source manifest
   const sourceManifest =
@@ -531,8 +564,35 @@ async function runIncremental(
     translator
   )
 
-  await committer.commitFile(destPath, result, locale)
-  committedFiles.push({ path: destPath, content: result })
+  // Phase 4b: JSX attribute translation pass (markdown only)
+  let finalContent = result
+  if (file.type === "markdown") {
+    const leaves = extractAttributeLeaves(file.content)
+    if (leaves.length > 0) {
+      const glossaryTerms = await loadGlossary(file.content, locale)
+      const attrResult = await translateJsxAttributes({
+        leaves,
+        localeContent: finalContent,
+        targetLanguage: locale,
+        glossary: glossaryTerms,
+        filePath: file.path,
+      })
+      finalContent = attrResult.content
+      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+        log(
+          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+        )
+      }
+      if (attrResult.failedCount > 0) {
+        throw new Error(
+          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+        )
+      }
+    }
+  }
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
 
   const sourceManifest =
     file.type === "markdown"
@@ -734,6 +794,41 @@ async function main() {
       // Incremental: check if English changed
       const sourceManifestJson = fs.readFileSync(smPath, "utf-8")
       if (!hasEnglishChanged(file.content, sourceManifestJson, file.type)) {
+        // --force-attrs: when set, run the JSX attr pass on the existing
+        // locale file even though no English drift was detected. The pass
+        // is self-healing -- it only translates attrs whose English value
+        // still appears in the locale file -- so this is safe to run on
+        // files where attrs are already correctly translated.
+        if (config.forceAttrs && file.type === "markdown") {
+          const localeContent = fs.readFileSync(localePath, "utf-8")
+          pool.submit(locale, async () => {
+            const leaves = extractAttributeLeaves(file.content)
+            if (leaves.length === 0) return { tokens: { input: 0, output: 0 } }
+            const glossaryTerms = await loadGlossary(file.content, locale)
+            const attrResult = await translateJsxAttributes({
+              leaves,
+              localeContent,
+              targetLanguage: locale,
+              glossary: glossaryTerms,
+              filePath: file.path,
+            })
+            if (attrResult.failedCount > 0) {
+              throw new Error(
+                `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate during backfill`
+              )
+            }
+            if (attrResult.appliedCount === 0) {
+              return { tokens: { input: 0, output: 0 } }
+            }
+            log(
+              `[${locale}] ${file.path}: jsx-attrs backfill translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+            )
+            await committer.commitFile(destPath, attrResult.content, locale)
+            committedFiles.push({ path: destPath, content: attrResult.content })
+            return { tokens: { input: 0, output: 0 } }
+          })
+          continue
+        }
         if (config.verbose) log(`[${locale}] ${file.path}: no changes`)
         continue
       }
