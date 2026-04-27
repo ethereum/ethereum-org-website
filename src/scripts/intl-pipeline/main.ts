@@ -794,41 +794,6 @@ async function main() {
       // Incremental: check if English changed
       const sourceManifestJson = fs.readFileSync(smPath, "utf-8")
       if (!hasEnglishChanged(file.content, sourceManifestJson, file.type)) {
-        // --force-attrs: when set, run the JSX attr pass on the existing
-        // locale file even though no English drift was detected. The pass
-        // is self-healing -- it only translates attrs whose English value
-        // still appears in the locale file -- so this is safe to run on
-        // files where attrs are already correctly translated.
-        if (config.forceAttrs && file.type === "markdown") {
-          const localeContent = fs.readFileSync(localePath, "utf-8")
-          pool.submit(locale, async () => {
-            const leaves = extractAttributeLeaves(file.content)
-            if (leaves.length === 0) return { tokens: { input: 0, output: 0 } }
-            const glossaryTerms = await loadGlossary(file.content, locale)
-            const attrResult = await translateJsxAttributes({
-              leaves,
-              localeContent,
-              targetLanguage: locale,
-              glossary: glossaryTerms,
-              filePath: file.path,
-            })
-            if (attrResult.failedCount > 0) {
-              throw new Error(
-                `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate during backfill`
-              )
-            }
-            if (attrResult.appliedCount === 0) {
-              return { tokens: { input: 0, output: 0 } }
-            }
-            log(
-              `[${locale}] ${file.path}: jsx-attrs backfill translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
-            )
-            await committer.commitFile(destPath, attrResult.content, locale)
-            committedFiles.push({ path: destPath, content: attrResult.content })
-            return { tokens: { input: 0, output: 0 } }
-          })
-          continue
-        }
         if (config.verbose) log(`[${locale}] ${file.path}: no changes`)
         continue
       }

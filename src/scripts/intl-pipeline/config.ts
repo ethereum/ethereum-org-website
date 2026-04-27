@@ -68,9 +68,6 @@ const dryRun = ["1", "true", "yes", "on"].includes(
   (process.env.DRY_RUN || "").toLowerCase()
 )
 const mode = (process.env.MODE || "auto") as "auto" | "full"
-const forceAttrs = ["1", "true", "yes", "on"].includes(
-  (process.env.FORCE_ATTRS || "").toLowerCase()
-)
 const concurrency = parseInt(process.env.GEMINI_CONCURRENCY || "16", 10)
 
 // Parse GitHub repository from env (format: "owner/repo")
@@ -110,7 +107,6 @@ export const config = {
   dryRun,
   mode,
   concurrency,
-  forceAttrs,
 }
 
 export function validateTargetPath(targetPath: string): void {

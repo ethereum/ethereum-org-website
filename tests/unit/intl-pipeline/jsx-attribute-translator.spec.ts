@@ -358,7 +358,8 @@ body
     test("backfill scenario: locale has English-valued attrs, pass translates them", async () => {
       // Simulates a file that was translated before Phase 4b existed: the
       // prose is in the target language but the JSX `title` attrs are still
-      // English. This is exactly the case --force-attrs is built for.
+      // English. The self-healing filter sends only the still-English attrs
+      // to the LLM and leaves already-translated content alone.
       const localeContent = `## Preguntas frecuentes {#faq}
 
 <ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">

@@ -254,18 +254,12 @@ For frontmatter translatable fields:
 - Source manifest: unchanged (the source content didn't change; we just translated previously-untranslated leaves).
 - Translation manifest: updated to reflect the now-translated values. Subsequent runs will see no drift on these leaves.
 
-**The `--force-attrs` flag (`FORCE_ATTRS=true`) -- TEMPORARY:**
-- Workflow input + env var, kept only as long as we have files in `intl/pending-dev` that pre-date this pass and need a one-shot backfill.
-- When set, runs the JSX attribute pass on files whose English source has not drifted (i.e., files the pipeline would normally skip). The main translation is not re-run; only the attribute pass.
-- Once the existing pending files have been backfilled, this flag becomes useless (the self-healing filter ensures every other file is already correct after a normal run) and should be removed in a follow-up cleanup.
-
 **Test assertions:**
 - Translatable attrs (`title`, `description`, etc.) on JSX components in the output are translated.
 - Non-translatable attrs (`eventCategory`, `eventName`, `href`, `src`) in the output are byte-for-byte identical to english-B.
 - Values that look like URLs, paths, or identifiers (per the heuristic) are not translated even if they appear under a translatable attribute name.
-- Without `--force-attrs`: a file with no English drift is skipped entirely (existing behavior).
-- With `--force-attrs`: a file with no English drift still has its JSX attributes processed; if any English attr value still appears in the locale file, it gets translated.
-- Idempotency: running the pipeline twice on the same file (with translation already applied) does not re-call the LLM for the attribute pass.
+- A file with no English drift is skipped entirely (existing behavior).
+- Idempotency: running the pipeline twice on the same file (with translation already applied) does not re-call the LLM for the attribute pass (the self-healing filter drops leaves whose English value no longer appears in the locale).
 - LLM batch with malformed output: affected leaves are skipped, file is left valid, warning is logged.
 
 ---

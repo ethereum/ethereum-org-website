@@ -34,11 +34,6 @@ on:
         required: false
         default: false
         type: boolean
-      force_attrs:
-        description: "Force JSX attribute translations even when no English drift (temporary recovery mechanism during migration)"
-        required: false
-        default: false
-        type: boolean
       skip_pr:
         description: "Skip PR creation?"
         required: false
@@ -101,5 +96,4 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           TARGET_BRANCH: ${{ github.event.inputs.target_branch }}
           STAMP_ONLY: ${{ github.event.inputs.stamp_only }}
-          FORCE_ATTRS: ${{ github.event.inputs.force_attrs }}
           DRY_RUN: "false"
