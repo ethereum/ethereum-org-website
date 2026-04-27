@@ -35,7 +35,7 @@ const TranslationBannerLegal = ({
   return (
     <aside
       className={cn(
-        "z-popover bg-background-highlight fixed",
+        "fixed z-popover bg-background-highlight",
         "bottom-0 md:bottom-8",
         "right-0 md:right-8",
         isOpen ? "block" : "hidden"

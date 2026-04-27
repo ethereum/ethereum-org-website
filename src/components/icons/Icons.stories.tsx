@@ -192,7 +192,7 @@ const items = iconsDefinitions.map(({ Icon, label }, idx) => {
   return (
     <Flex
       key={idx}
-      className="border-background-highlight flex-col gap-4 border p-4"
+      className="flex-col gap-4 border border-background-highlight p-4"
     >
       <Center>
         <Icon className="size-[50px]" />

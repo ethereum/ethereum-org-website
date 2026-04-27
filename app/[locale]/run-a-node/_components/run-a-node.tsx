@@ -82,7 +82,7 @@ const SoftwareHighlight = ({
 }: HTMLAttributes<HTMLHeadingElement>) => (
   <Center
     className={cn(
-      "border-border-high-contrast text-body relative isolate !ml-0 w-full flex-col-reverse gap-8 rounded-xs border p-8 ps-16 pe-16 after:absolute after:inset-0 after:-z-10 after:bg-inherit after:blur-xl after:content-[''] md:mx-24 md:flex-row",
+      "relative isolate !ml-0 w-full flex-col-reverse gap-8 rounded-xs border border-border-high-contrast p-8 ps-16 pe-16 text-body after:absolute after:inset-0 after:-z-10 after:bg-inherit after:blur-xl after:content-[''] md:mx-24 md:flex-row",
       className
     )}
     {...props}
@@ -121,7 +121,7 @@ const Container = ({
 }: HTMLAttributes<HTMLHeadingElement>) => (
   <Flex
     className={cn(
-      "border-border-high-contrast bg-background-highlight text-body rounded-md border px-8 py-0",
+      "rounded-md border border-border-high-contrast bg-background-highlight px-8 py-0 text-body",
       className
     )}
     {...props}
@@ -133,7 +133,7 @@ const BuildBox = ({
   ...props
 }: HTMLAttributes<HTMLHeadingElement>) => (
   <Container
-    className={cn("bg-background-highlight flex-1 flex-col p-8", className)}
+    className={cn("flex-1 flex-col bg-background-highlight p-8", className)}
     {...props}
   />
 )
@@ -172,15 +172,15 @@ const StakingCalloutContainer = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <h2 className="leading-xs mt-12 mb-8" {...props} />
+  <h2 className="mt-12 mb-8 leading-xs" {...props} />
 )
 
 const H3 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-  <h3 className={cn("leading-xs mt-10 mb-8", className)} {...props} />
+  <h3 className={cn("mt-10 mb-8 leading-xs", className)} {...props} />
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <h4 className="leading-xs my-8" {...props} />
+  <h4 className="my-8 leading-xs" {...props} />
 )
 
 const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
@@ -296,7 +296,7 @@ const RunANodePage = ({
   return (
     <>
       <GappedPage>
-        <div className="from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20 w-full bg-linear-to-br">
+        <div className="w-full bg-linear-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
           <div className="pb-8">
             <PageHero content={heroContent} isReverse />
           </div>
@@ -368,7 +368,7 @@ const RunANodePage = ({
           <H2>
             <Translation id="page-run-a-node:page-run-a-node-why-title" />
           </H2>
-          <div className="grid-cols-fill-3 grid gap-8">
+          <div className="grid grid-cols-fill-3 gap-8">
             {whyRunANodeCards.map(({ Svg, title, preview, body }) => (
               <ExpandableCard
                 contentPreview={preview}
@@ -402,7 +402,7 @@ const RunANodePage = ({
                 </Text>
                 <Text>
                   <code>
-                    <Emoji text=":warning:" className="text-md me-4" />
+                    <Emoji text=":warning:" className="me-4 text-md" />
                     {t(
                       "page-run-a-node-getting-started-software-section-1-alert"
                     )}

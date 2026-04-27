@@ -76,15 +76,15 @@ import wallet from "@/public/images/wallet.png"
 import whatIsEthereum from "@/public/images/what-is-ethereum.png"
 
 const Row = (props: ChildOnlyProp) => (
-  <div className="grid-cols-fit-4 -mx-4 mb-8 grid" {...props} />
+  <div className="-mx-4 mb-8 grid grid-cols-fit-4" {...props} />
 )
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className="leading-xs mt-16 mb-6 scroll-mt-24" {...props} />
+  <h2 className="mt-16 mb-6 scroll-mt-24 leading-xs" {...props} />
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <h3 className="leading-xs mt-10 mb-0" {...props} />
+  <h3 className="mt-10 mb-0 leading-xs" {...props} />
 )
 
 const AssetsPage = () => {

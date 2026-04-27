@@ -51,7 +51,7 @@ const TenYearHero = async () => {
           >
             {WORDS[0]}
           </span>
-          <span className="text-accent-b text-3xl font-bold md:absolute md:start-0 md:text-nowrap">
+          <span className="text-3xl font-bold text-accent-b md:absolute md:start-0 md:text-nowrap">
             {/* CLIENT SIDE, lazy loaded */}
             <Morpher words={WORDS} charSet="abcdfgijklnopqsvwxyz" />
           </span>

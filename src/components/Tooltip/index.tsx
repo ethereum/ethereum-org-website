@@ -104,7 +104,7 @@ const Tooltip = ({
     >
       <Trigger
         asChild={asChild}
-        className="focus-visible:outline-primary-hover focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+        className="focus-visible:rounded-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover"
       >
         {children}
       </Trigger>

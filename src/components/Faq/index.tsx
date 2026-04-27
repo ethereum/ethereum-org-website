@@ -20,8 +20,8 @@ const FaqTrigger = React.forwardRef<
       "w-full p-4 md:px-8 md:py-6",
       "text-start font-medium",
       "hover:text-body hover:[&_h2]:!text-body [&_svg]:rotate-90 [&[data-state=open]_h2]:text-current [&[data-state=open]_svg]:-rotate-90",
-      "[&_[data-label='icon-container']]:border-body [&_[data-label='icon-container']]:ms-8 [&_[data-label='icon-container']]:rounded-full [&_[data-label='icon-container']]:border [&_[data-label='icon-container']]:p-2 [&_svg]:text-lg",
-      "[&_[data-label='icon-container']:hover_svg]:text-primary-hover hover:[&_[data-label='icon-container']]:!border-primary-hover hover:[&_[data-label='icon-container']]:shadow-[4px_4px_0_hsla(var(--primary-low-contrast),1)]",
+      "[&_[data-label='icon-container']]:ms-8 [&_[data-label='icon-container']]:rounded-full [&_[data-label='icon-container']]:border [&_[data-label='icon-container']]:border-body [&_[data-label='icon-container']]:p-2 [&_svg]:text-lg",
+      "hover:[&_[data-label='icon-container']]:!border-primary-hover hover:[&_[data-label='icon-container']]:shadow-[4px_4px_0_hsla(var(--primary-low-contrast),1)] [&_[data-label='icon-container']:hover_svg]:text-primary-hover",
       "[&[data-state=open]]:text-current",
       className
     )}
@@ -43,7 +43,7 @@ const Faq = ({
       collapsible
       className={cn(
         "overflow-hidden rounded border",
-        "bg-background w-full",
+        "w-full bg-background",
         props?.className
       )}
       {...props}
@@ -60,7 +60,7 @@ const FaqItem = React.forwardRef<
   <AccordionItem
     ref={ref}
     className={cn(
-      "hover:bg-background-highlight [&[data-state=open]]:bg-background-highlight w-full border-b last:border-b-0",
+      "w-full border-b last:border-b-0 hover:bg-background-highlight [&[data-state=open]]:bg-background-highlight",
       className
     )}
     {...props}
@@ -76,11 +76,11 @@ const FaqContent = React.forwardRef<
     ref={ref}
     className={cn(
       "w-full overflow-hidden px-4 text-sm md:px-8",
-      "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down transition-all"
+      "transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     )}
     {...props}
   >
-    <div className={cn("border-body-light border-t py-3 md:py-6", className)}>
+    <div className={cn("border-t border-body-light py-3 md:py-6", className)}>
       {children}
     </div>
   </AccordionContent>

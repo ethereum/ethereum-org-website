@@ -12,11 +12,11 @@ type WindowBoxProps = {
 const WindowBox = ({ title, svg, children, className }: WindowBoxProps) => (
   <div
     className={cn(
-      "shadow-window-box flex max-w-screen-md flex-col overflow-hidden rounded-2xl border",
+      "flex max-w-screen-md flex-col overflow-hidden rounded-2xl border shadow-window-box",
       className
     )}
   >
-    <div className="from-primary-hover/5 dark:from-primary-hover/20 flex items-center gap-4 bg-linear-to-b p-4">
+    <div className="flex items-center gap-4 bg-linear-to-b from-primary-hover/5 p-4 dark:from-primary-hover/20">
       <div className="grid size-10 place-items-center rounded-lg border">
         {svg}
       </div>

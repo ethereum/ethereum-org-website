@@ -39,11 +39,11 @@ export const ABTestDebugPanel = ({
   const panelContent = (
     <div
       ref={panelRef}
-      className="z-modal bg-background-low fixed right-5 bottom-5 rounded-lg border-2 p-2.5 font-mono text-xs"
+      className="fixed right-5 bottom-5 z-modal rounded-lg border-2 bg-background-low p-2.5 font-mono text-xs"
     >
       <Button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-accent-a hover:bg-accent-a-hover w-full cursor-pointer rounded border-none px-2.5 py-1 font-semibold text-white"
+        className="w-full cursor-pointer rounded border-none bg-accent-a px-2.5 py-1 font-semibold text-white hover:bg-accent-a-hover"
       >
         🧪 AB Test Switcher
       </Button>
@@ -65,7 +65,7 @@ export const ABTestDebugPanel = ({
               className={cn(
                 "my-0.5 block w-full rounded border border-gray-300 px-2 py-1",
                 selectedVariant === index &&
-                  "bg-success hover:bg-success-dark text-white"
+                  "bg-success text-white hover:bg-success-dark"
               )}
             >
               {variant}

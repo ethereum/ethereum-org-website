@@ -36,14 +36,14 @@ export const Browser = ({ ...props }: BrowserProps) => {
   }
 
   return (
-    <Flex className="bg-body-light h-full flex-col" {...props}>
-      <div className="bg-background-highlight w-full px-3 pt-9 pb-3">
+    <Flex className="h-full flex-col bg-body-light" {...props}>
+      <div className="w-full bg-background-highlight px-3 pt-9 pb-3">
         <NotificationPopover
           title={t("sim-example-walkthrough")}
           content={t("sim-try-login-app")}
         >
-          <HStack className="bg-background text-disabled cursor-default gap-0 rounded px-3 py-2">
-            <div className="border-background-highlight flex-1 border-e">
+          <HStack className="cursor-default gap-0 rounded bg-background px-3 py-2 text-disabled">
+            <div className="flex-1 border-e border-background-highlight">
               {typing ? (
                 <motion.p
                   className="text-body-medium"
@@ -67,10 +67,10 @@ export const Browser = ({ ...props }: BrowserProps) => {
       </div>
 
       <Flex className="flex-1 justify-center pt-20 md:pt-24">
-        <BrowserGlobe className="text-disabled size-24 stroke-1" />
+        <BrowserGlobe className="size-24 stroke-1 text-disabled" />
       </Flex>
 
-      <Flex className="bg-background-highlight text-disabled w-full justify-around px-3 pt-4 pb-9 text-xl">
+      <Flex className="w-full justify-around bg-background-highlight px-3 pt-4 pb-9 text-xl text-disabled">
         <Triangle className="-rotate-90" />
         <Triangle className="rotate-90" />
         <Search />

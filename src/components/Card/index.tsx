@@ -23,7 +23,7 @@ const Card = ({
   <div
     className={cn(
       "flex flex-col justify-between space-y-4",
-      "bg-background-highlight rounded-xs",
+      "rounded-xs bg-background-highlight",
       "border border-solid",
       "p-6",
       className

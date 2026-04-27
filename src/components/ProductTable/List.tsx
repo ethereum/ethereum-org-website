@@ -104,7 +104,7 @@ const List = <T extends { id: string }>({
             // so we need to preserve the open state when the item is unmounted
             open={!!expanded[item.id]}
             onOpenChange={(open) => handleExpandedChange(open, item)}
-            className="group/collapsible hover:bg-background-highlight data-[state=open]:bg-background-highlight absolute top-0 left-0 flex w-full cursor-pointer flex-col border-b"
+            className="group/collapsible absolute top-0 left-0 flex w-full cursor-pointer flex-col border-b hover:bg-background-highlight data-[state=open]:bg-background-highlight"
             style={{
               transform: `translateY(${virtualItem.start - virtualizer.options.scrollMargin}px)`,
             }}

@@ -24,7 +24,7 @@ import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
 const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => {
   return (
-    <Card className="bg-card-gradient rounded-2xl border p-8 shadow dark:bg-linear-to-br dark:from-white/0 dark:to-purple-500/10">
+    <Card className="rounded-2xl border bg-card-gradient p-8 shadow dark:bg-linear-to-br dark:from-white/0 dark:to-purple-500/10">
       <CardContent className="p-0 pb-4">
         <CardParagraph variant="light" size="sm">
           <Image
@@ -73,7 +73,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
             className="max-h-[480px] w-full object-cover"
           />
           <div className="px-6 md:px-8">
-            <p className="text-body-medium mt-6 mb-2 text-center">
+            <p className="mt-6 mb-2 text-center text-body-medium">
               {t("page-trillion-dollar-security-subtitle")}
             </p>
             <h1 className="mb-20 text-center">
@@ -124,12 +124,12 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                 </p>
                 <p>{t("page-trillion-dollar-security-hero-paragraph-6")}</p>
 
-                <ol className="text-primary list-decimal font-bold">
+                <ol className="list-decimal font-bold text-primary">
                   <li>
                     <Link href="#ux" className="no-underline">
                       {t("page-trillion-dollar-security-user-experience-title")}
                     </Link>
-                    <p className="text-body font-normal">
+                    <p className="font-normal text-body">
                       {t(
                         "page-trillion-dollar-security-user-experience-description"
                       )}
@@ -139,7 +139,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     <Link href="#smart-contracts" className="no-underline">
                       {t("page-trillion-dollar-security-smart-contract-title")}
                     </Link>
-                    <p className="text-body font-normal">
+                    <p className="font-normal text-body">
                       {t(
                         "page-trillion-dollar-security-smart-contract-description"
                       )}
@@ -149,7 +149,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     <Link href="#infrastructure" className="no-underline">
                       {t("page-trillion-dollar-security-infrastructure-title")}
                     </Link>
-                    <p className="text-body font-normal">
+                    <p className="font-normal text-body">
                       {t(
                         "page-trillion-dollar-security-infrastructure-description"
                       )}
@@ -159,7 +159,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     <Link href="#consensus" className="no-underline">
                       {t("page-trillion-dollar-security-consensus-title")}
                     </Link>
-                    <p className="text-body font-normal">
+                    <p className="font-normal text-body">
                       {t("page-trillion-dollar-security-consensus-description")}
                     </p>
                   </li>
@@ -167,7 +167,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     <Link href="#incident" className="no-underline">
                       {t("page-trillion-dollar-security-incident-title")}
                     </Link>
-                    <p className="text-body font-normal">
+                    <p className="font-normal text-body">
                       {t("page-trillion-dollar-security-incident-description")}
                     </p>
                   </li>
@@ -175,7 +175,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     <Link href="#social" className="no-underline">
                       {t("page-trillion-dollar-security-social-title")}
                     </Link>
-                    <p className="text-body font-normal">
+                    <p className="font-normal text-body">
                       {t("page-trillion-dollar-security-social-description")}
                     </p>
                   </li>

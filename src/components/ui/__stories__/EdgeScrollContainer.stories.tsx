@@ -23,7 +23,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 const SampleCard = ({ children }: { children: React.ReactNode }) => (
-  <div className="border-body-light bg-background-highlight flex h-48 w-72 items-center justify-center rounded-2xl border p-6 shadow-md">
+  <div className="flex h-48 w-72 items-center justify-center rounded-2xl border border-body-light bg-background-highlight p-6 shadow-md">
     {children}
   </div>
 )
@@ -61,7 +61,7 @@ export const AsChildExample: Story = {
         <EdgeScrollItem key={i} asChild className="ms-6">
           <a
             href="#"
-            className="border-body-light bg-background-highlight hover:bg-primary-low-contrast flex h-48 w-72 items-center justify-center rounded-2xl border p-6 shadow-md transition-colors"
+            className="flex h-48 w-72 items-center justify-center rounded-2xl border border-body-light bg-background-highlight p-6 shadow-md transition-colors hover:bg-primary-low-contrast"
           >
             Clickable Card {i}
           </a>

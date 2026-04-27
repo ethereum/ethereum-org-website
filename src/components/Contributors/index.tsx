@@ -34,7 +34,7 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
         sizes="132px"
       />
       <div className="p-4">
-        <h3 className="text-md text-body mt-2 mb-4">
+        <h3 className="mt-2 mb-4 text-md text-body">
           {contributor.profile ? (
             <LinkOverlay asChild>
               <InlineLink
@@ -55,7 +55,7 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
 
   if (contributor.profile) {
     return (
-      <LinkBox className="hover:bg-background-highlight m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded focus:scale-[1.02] focus:rounded">
+      <LinkBox className="m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-highlight focus:scale-[1.02] focus:rounded">
         {content}
       </LinkBox>
     )
