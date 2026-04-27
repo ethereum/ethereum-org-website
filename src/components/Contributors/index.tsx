@@ -18,7 +18,6 @@ type AllContributorsRc = {
 }
 
 // Read `.all-contributorsrc` (bot-maintained) once at module load.
-// `server-only` ensures this module never ends up in a client bundle.
 const raw = readFileSync(join(process.cwd(), ".all-contributorsrc"), "utf-8")
 const { contributors: rawContributors } = JSON.parse(raw) as AllContributorsRc
 

@@ -1,8 +1,5 @@
 import { Meta, StoryObj } from "@storybook/nextjs"
 
-// The default export of `./` reads `.all-contributorsrc` at module load and
-// is marked `server-only` — can't be imported in Storybook. The story uses
-// the pure view component instead.
 import ContributorsView, { type Contributor } from "./ContributorsView"
 
 const meta = {
