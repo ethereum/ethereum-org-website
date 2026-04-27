@@ -1,6 +1,7 @@
-import { shuffle, union } from "lodash"
+import { union } from "lodash"
 
 import { getLanguageCodeName } from "@/lib/utils/intl"
+import { maybeShuffle } from "@/lib/utils/random"
 import { capitalize } from "@/lib/utils/string"
 
 import { newToCrypto } from "@/data/wallets/new-to-crypto"
@@ -20,12 +21,6 @@ import type {
   WalletLanguage,
   WalletRow,
 } from "../types"
-
-// Visual test builds set IS_VISUAL_TEST=true to keep wallet order deterministic
-// across runs. Not tied to USE_MOCK_DATA, which is also used by unit tests and
-// local dev with mocked storage.
-const maybeShuffle = <T>(list: T[]): T[] =>
-  process.env.IS_VISUAL_TEST === "true" ? list : shuffle(list)
 
 export const getSupportedLocaleWallets = (locale: string) =>
   maybeShuffle(

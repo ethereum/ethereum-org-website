@@ -46,6 +46,10 @@ module.exports = (phase) => {
         process.env.DEPLOY_URL ||
         process.env.URL ||
         "https://ethereum.org",
+      // Inline IS_VISUAL_TEST into the client bundle so client-side shuffles
+      // (e.g. useStakingProductsCardGrid) can opt out of randomization during
+      // visual test builds. Server code reads it from process.env directly.
+      IS_VISUAL_TEST: process.env.IS_VISUAL_TEST,
     },
     webpack: (config) => {
       // Parse .all-contributorsrc as JSON (no .json extension)

@@ -30,6 +30,8 @@ The Playwright suite captures DOM archives (not PNGs) per page × viewport; Chro
 
 **Environment.** `USE_MOCK_DATA=true` and `NEXT_PUBLIC_BUILD_LOCALES=en` are required at build and test time. Paths in the spec are unprefixed (`/wallets/`, not `/en/wallets/`) because `localePrefix: "as-needed"` serves English at the root — adding `/en` would just trigger a redirect.
 
+**Random ordering: `maybeShuffle`.** Lodash `shuffle` and `.sort(() => Math.random() - 0.5)` flake snapshots independently of loaders. Wrap them with `maybeShuffle` from `src/lib/utils/random.ts` — it returns the list unchanged when `IS_VISUAL_TEST=true`. Current call sites: `wallets.ts`, `apps.ts` (Highlights/Discover/AppOfTheWeek), `useStakingProductsCardGrid.ts`. The env var is exposed to the client bundle via `next.config.js`'s `env` block; without that, `process.env.IS_VISUAL_TEST` evaluates to `undefined` in client components and the shuffle still runs.
+
 **Use `domcontentloaded`, not `networkidle`.** Analytics and background fetches keep the network perpetually busy.
 
 ## Canonical test
@@ -60,7 +62,7 @@ test.describe("Page Visual Tests", () => {
 
 **Adding a page.** Each entry costs three snapshots (one per viewport) against Chromatic's budget, so check whether the page's layout (under `src/layouts/`) is already covered before adding. Scan the page subtree for bespoke loaders — they're the single biggest flake cause — and confirm full-page height stays under the 25M-pixel budget. Local loop: `pnpm test:visual:build` once, then `pnpm test:visual:desktop` for iteration, `pnpm test:visual` for the full sweep.
 
-**Flaky snapshot.** The culprit is almost always a loader without `data-slot="loading"`. Run with `--trace=on` and inspect the `waitForFunction` step in the trace — if its duration is ~0 ms, the loader isn't being waited on. If dynamic content is drifting, double-check `USE_MOCK_DATA=true` is set in both build and test steps.
+**Flaky snapshot.** Two main causes. (1) A loader without `data-slot="loading"` — run with `--trace=on` and inspect the `waitForFunction` step; ~0 ms duration means it isn't being waited on. (2) Random ordering — grep the page subtree for `shuffle(`, `Math.random()`, or `.sort(() =>` and route through `maybeShuffle`. If dynamic content is drifting, double-check `USE_MOCK_DATA=true` is set in both build and test steps.
 
 **Pixel-limit error.** Measure the page's full-page height at 1024 px; if it exceeds ~24,400 px, the page needs shortening or removal from the suite. Cropping to viewport was considered and rejected — it defeats the below-the-fold regression coverage that justifies using Playwright over Storybook here.
 
