@@ -46,7 +46,7 @@ V únoru 2026 Vitalik Buterin [zveřejnil plán](https://x.com/VitalikButerin/st
 - **leanXMSS**: Ethereum nahradí podpisy BLS pomocí leanXMSS, což je schéma podpisů založené na hashi pro validátory. Podpisy založené na hashi jsou považovány za kvantově bezpečné, protože spoléhají pouze na bezpečnost hashovacích funkcí, které kvantové počítače sice oslabují, ale neprolomí.
 - **leanVM**: Minimální zkVM (virtuální stroj s nulovým vědomím) pro agregaci podpisů založenou na SNARK. Protože podpisy založené na hashi jsou výrazně větší (zhruba 3 000 bajtů ve srovnání s 96 bajty u BLS), přechod na leanXMSS by produkoval podstatně více dat na slot. K vyřešení tohoto problému funguje leanVM jako agregační engine, který komprimuje data 250krát. Tím se zachovávají výhody efektivity spojení mnoha podpisů do jednoho, a to i po přechodu na kvantově bezpečná schémata.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Proč nemůže Ethereum jednoduše nahradit BLS kvantově bezpečným schématem?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 Vlastnost agregace, díky které je BLS efektivní (spojení stovek tisíc podpisů do jednoho), nemá zřejmý kvantově bezpečný ekvivalent. Postkvantové podpisy jsou také mnohem větší než podpisy BLS. Pouhá výměna jednoho za druhý by způsobila, že by vrstva konsensu Etherea byla výrazně pomalejší a dražší. Proto tým buduje leanVM, nástroj, který využívá důkazy s nulovou znalostí k efektivní agregaci kvantově bezpečných podpisů.
 
@@ -135,37 +135,37 @@ Otázka, jak naložit s neaktivními peněženkami (účty, jejichž majitelé s
 
 ## Často kladené otázky {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Mohou mi kvantové počítače ukrást mé ETH už dnes?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Ne.** Žádný dnešní kvantový počítač nedokáže prolomit kryptografii Etherea. Současný kvantový hardware má k potřebnému měřítku daleko. Práce popsaná na této stránce je přípravou na budoucnost, nikoli reakcí na aktivní hrozbu.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Kdy by se kvantové počítače mohly stát hrozbou?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Odhady se liší. Výzkum společnosti Google z března 2026 naznačuje, že hardware potřebný k prolomení 256bitové kryptografie eliptických křivek by mohl dorazit nejdříve někdy kolem konce tohoto desetiletí, ale stále zbývají značné inženýrské výzvy. Většina výzkumníků považuje realistickou hrozbu za vzdálenou minimálně několik let. Upřímná odpověď zní, že nikdo nezná přesnou časovou osu, což je přesně ten důvod, proč je důležité se připravit již nyní.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Budu muset udělat něco pro ochranu své peněženky?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 Nakonec ano. Jakmile budou na Ethereu k dispozici postkvantová schémata podpisů, uživatelé budou chtít migrovat své účty. Software peněženky tento přechod pravděpodobně zvládne za vás. Prozatím nemusíte dělat nic. Až bude potřeba jednat, komunita Etherea a vývojáři peněženek poskytnou jasné pokyny a nástroje.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="A co mé tokeny, NFT a DeFi pozice?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Aktiva na Ethereu jsou řízena podpisy účtů. Jakmile je váš účet migrován na kvantově bezpečné schéma podpisů, vše na tomto účtu je chráněno. Nemusíte migrovat každé aktivum zvlášť. Chytré kontrakty, které drží prostředky (jako protokoly decentralizovaných financí (DeFi)), mohou potřebovat vlastní upgrady v závislosti na tom, jaká kryptografická primitiva interně používají.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="Je Ethereum v tomto ohledu pozadu za ostatními blockchainy?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Ne. Ethereum má jeden z nejstrukturovanějších postkvantových programů ze všech blockchainů: specializovaný tým, financovaný výzkum, týdenní devnety a zveřejněný plán migrace, přičemž s kvantovými výpočty zachází jako s prvořadým omezením návrhu. Žádný blockchain zatím nedokončil plný postkvantový přechod. Podle odhadů Nadace Ethereum je expozice neaktivních prostředků Etherea zranitelných vůči kvantovým počítačům přibližně 0,1 %, což je drasticky méně než u jiných velkých blockchainových sítí.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Co je „posbírej teď, dešifruj později“?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 „Sklízej teď, dešifruj později“ (Harvest now, decrypt later) je útok, při kterém někdo dnes zaznamená zašifrovaná data nebo odhalené veřejné klíče a později šifrování prolomí, jakmile bude existovat dostatečně výkonný kvantový počítač. Pro Ethereum je to nejrelevantnější u účtů, jejichž veřejné klíče jsou již odhaleny onchain (jakýkoli účet, který odeslal transakci). To je jeden z důvodů, proč komunita považuje postkvantovou migraci za časově citlivou, i když kvantová hrozba ještě není bezprostřední.
 
