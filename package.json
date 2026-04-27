@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.4.0",
+  "version": "11.5.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -35,7 +35,7 @@
     "trigger:deploy": "trigger deploy --env-file src/data-layer/.env.local"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.982.0",
+    "@aws-sdk/client-s3": "^3.1035.0",
     "@aws-sdk/client-ses": "^3.859.0",
     "@docsearch/css": "3.9.0",
     "@docsearch/react": "^3.5.2",

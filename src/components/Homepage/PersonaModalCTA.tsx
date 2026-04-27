@@ -125,7 +125,7 @@ const CategoryCard = ({
       >
         <Icon className={cn("size-4 md:size-8", iconColorClass)} />
       </div>
-      <p className="text-sm font-bold uppercase tracking-wider">{label}</p>
+      <p className="text-sm font-bold tracking-wider uppercase">{label}</p>
     </div>
 
     <div className="mt-auto flex flex-col gap-2 md:gap-4">
@@ -136,10 +136,10 @@ const CategoryCard = ({
             href={href}
             onClick={() => onLinkClick(eventName)}
             hideArrow
-            className="group flex items-center justify-between text-xl font-bold text-primary no-underline transition-colors hover:text-primary-hover md:text-3xl"
+            className="group text-primary hover:text-primary-hover flex items-center justify-between text-xl font-bold no-underline transition-colors md:text-3xl"
           >
             {linkLabel}
-            <ChevronNext className="size-5 text-primary transition-transform group-hover:translate-x-1" />
+            <ChevronNext className="text-primary size-5 transition-transform group-hover:translate-x-1" />
           </BaseLink>
         </div>
       ))}

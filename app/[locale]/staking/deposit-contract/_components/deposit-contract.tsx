@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { Clipboard, ClipboardCheck } from "lucide-react"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CardList from "@/components/CardList"
@@ -150,7 +150,7 @@ const CHUNKED_ADDRESS =
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
-const DepositContractPage = ({ locale }: { locale: Lang }) => {
+const DepositContractPage = () => {
   const pathname = usePathname()
 
   const { t } = useTranslation("page-staking-deposit-contract")
@@ -261,87 +261,8 @@ const DepositContractPage = ({ locale }: { locale: Lang }) => {
     ? ":speaker_high_volume:"
     : ":speaker:"
 
-  // JSON-LD structured data for the Deposit Contract page
-  const webPageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `https://ethereum.org/${locale}/staking/deposit-contract/`,
-    name: t("page-staking-deposit-contract-title"),
-    description: t("page-staking-deposit-contract-subtitle"),
-    url: `https://ethereum.org/${locale}/staking/deposit-contract/`,
-    inLanguage: locale,
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: `https://ethereum.org/${locale}/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Staking",
-          item: `https://ethereum.org/${locale}/staking/`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: t("page-staking-deposit-contract-title"),
-          item: `https://ethereum.org/${locale}/staking/deposit-contract/`,
-        },
-      ],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-  }
-
-  // JSON-LD for the deposit contract article content
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: t("page-staking-deposit-contract-title"),
-    description: t("page-staking-deposit-contract-subtitle"),
-    author: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ethereum.org",
-      url: "https://ethereum.org",
-    },
-    about: {
-      "@type": "Thing",
-      name: "Ethereum Deposit Contract",
-      description:
-        "Official Ethereum 2.0 deposit contract address for staking validators",
-    },
-  }
-
   return (
     <>
-      <script
-        id="jsonld-webpage-deposit-contract"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
-
-      <script
-        id="jsonld-article-deposit-contract"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(articleJsonLd),
-        }}
-      />
-
       <MainArticle className="w-full">
         <FlexBox>
           <LeftColumn>

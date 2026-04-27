@@ -86,8 +86,25 @@ export const branchExists = async (branchName: string): Promise<boolean> => {
 }
 
 /**
+ * Delete a branch on GitHub. Returns true if deleted or already absent.
+ * Returns false with a warning on API failure. Never throws.
+ */
+export const deleteBranch = async (branchName: string): Promise<boolean> => {
+  const url = `https://api.github.com/repos/${config.ghOrganization}/${config.ghRepo}/git/refs/heads/${branchName}`
+  const res = await fetchWithRetry(url, {
+    method: "DELETE",
+    headers: gitHubBearerHeaders,
+  })
+  // 204: deleted, 422: ref does not exist
+  if (res.ok || res.status === 422) return true
+  const body = await res.text().catch(() => "")
+  console.warn(`[branch] Delete ${branchName} failed (${res.status}): ${body}`)
+  return false
+}
+
+/**
  * Merge a base branch into a head branch via the GitHub API.
- * Used to keep the staging branch up-to-date with dev.
+ * Used to keep the pending branch up-to-date with dev.
  * Returns true if merge succeeded (or was already up-to-date).
  */
 export const mergeBranchInto = async (
@@ -131,11 +148,11 @@ export const mergeBranchInto = async (
 }
 
 /**
- * Ensure a staging branch exists and is up-to-date with its base.
+ * Ensure a pending branch exists and is up-to-date with its base.
  * Creates the branch if it doesn't exist; merges base into it if it does.
  * Returns the branch name.
  */
-export const ensureStagingBranch = async (
+export const ensurePendingBranch = async (
   branchName: string,
   baseBranch: string
 ): Promise<string> => {

@@ -19,7 +19,7 @@ const NetworkRow = ({ idx }: { idx: number }) => (
 
 const Loading = () => (
   <div className="px-4">
-    <div className="flex flex-col gap-4 pb-6 pt-4 lg:flex-row lg:gap-6 2xl:px-0">
+    <div className="flex flex-col gap-4 pt-4 pb-6 lg:flex-row lg:gap-6 2xl:px-0">
       <div className="hidden w-80 flex-col gap-2 lg:flex">
         <div className="flex items-center justify-between border-b px-2 py-1.5">
           <Skeleton className="h-5 w-24" />

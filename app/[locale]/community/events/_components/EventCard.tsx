@@ -49,7 +49,7 @@ function EventCardGrid({
         matomoEvent={customEventOptions}
       >
         <div className="flex gap-3">
-          <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 bg-linear-to-b flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl text-2xl">
+          <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-linear-to-b text-2xl">
             {event.logoImage && !logoError ? (
               <Image
                 src={event.logoImage}
@@ -74,7 +74,7 @@ function EventCardGrid({
                 {event.eventTypesLabels?.[0] || primaryType}
               </Tag>
             )}
-            <p className="text-body group-hover:text-primary text-lg font-bold leading-tight">
+            <p className="text-body group-hover:text-primary text-lg leading-tight font-bold">
               {event.title}
             </p>
             {formattedDate && <p className="text-body">{formattedDate}</p>}
@@ -104,7 +104,7 @@ function EventCardHighlight({
         hideArrow
         matomoEvent={customEventOptions}
       >
-        <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 bg-linear-to-b relative h-[200px] w-full overflow-hidden rounded-xl">
+        <div className="from-body/5 to-body/10 dark:from-body/10 dark:to-body/20 relative h-[200px] w-full overflow-hidden rounded-xl bg-linear-to-b">
           {bannerSrc && !bannerError ? (
             <Image
               src={bannerSrc}

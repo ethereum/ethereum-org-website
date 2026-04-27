@@ -193,7 +193,7 @@ const ComparisonCard = ({
       <FloatingCard variant={variant}>
         <p
           className={cn(
-            "text-sm font-semibold uppercase tracking-wider",
+            "text-sm font-semibold tracking-wider uppercase",
             !isPrimary && "text-body-medium"
           )}
         >
@@ -250,12 +250,12 @@ const SlideContent = ({
       <SectionContent className="order-2 flex flex-col gap-6 md:order-1 md:max-w-[660px] md:gap-10">
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{slide.tag}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0 md:text-6xl">
+          <SectionHeader className="!mt-0 !mb-0 md:text-6xl">
             {slide.title}
           </SectionHeader>
         </div>
 
-        <div className="flex flex-col gap-4 text-lg leading-relaxed text-body-medium md:gap-6 lg:text-2xl lg:leading-relaxed">
+        <div className="text-body-medium flex flex-col gap-4 text-lg leading-relaxed md:gap-6 lg:text-2xl lg:leading-relaxed">
           <p>{slide.subtitle}</p>
           <p>{slide.description}</p>
         </div>
