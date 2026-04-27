@@ -46,11 +46,15 @@ test.describe("Page Visual Tests", () => {
           if (img.loading === "lazy") img.loading = "eager"
         }
       })
-      // Next.js Image's blur placeholder is removed only after the underlying
-      // <img> finishes loading. Snapshotting earlier captures the inline
-      // background-image and shows pixelated blur in the diff.
+      // Next.js Image's blur placeholder is rendered as an inline
+      // background-image style and removed only after React's onLoad handler
+      // re-renders post-load. img.complete flips a tick earlier, so checking
+      // it alone races the unmount and snapshots the green pixelated blur.
       await page.waitForFunction(() =>
-        Array.from(document.images).every((img) => img.complete)
+        Array.from(document.images).every(
+          (img) =>
+            img.complete && img.naturalWidth > 0 && !img.style.backgroundImage
+        )
       )
       await takeSnapshot(page, testInfo)
     })
