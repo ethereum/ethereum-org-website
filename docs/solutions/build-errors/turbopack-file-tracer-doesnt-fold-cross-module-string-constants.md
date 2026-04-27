@@ -69,7 +69,10 @@ Two changes, both in PR #17906, commit `5f1aae57`:
    turbopack: {
      ignoreIssue: [
        { path: "**/src/lib/**", description: /Overly broad patterns/ },
-       { path: "**/src/lib/**", title: /Encountered unexpected file/ },
+       // "Encountered unexpected file in NFT list" attaches to the project
+       // root (e.g. `./next.config.js`) — not to the src/lib file that
+       // contains the dynamic fs call — so this rule must match anywhere.
+       { path: "**", title: /Encountered unexpected file/ },
      ],
    }
    ```

@@ -109,8 +109,11 @@ module.exports = (phase) => {
           path: "**/src/lib/**",
           description: /Overly broad patterns/,
         },
+        // "Encountered unexpected file in NFT list" surfaces on the project
+        // root (e.g. `./next.config.js`) even though the underlying fs.*
+        // calls live in src/lib/md/*. Match anywhere so it's suppressed.
         {
-          path: "**/src/lib/**",
+          path: "**",
           title: /Encountered unexpected file/,
         },
       ],
