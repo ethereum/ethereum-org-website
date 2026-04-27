@@ -46,7 +46,7 @@ summaryPoints:
 - **leanXMSS**: ইথেরিয়াম BLS স্বাক্ষরগুলোকে leanXMSS দিয়ে প্রতিস্থাপন করবে, যা ভ্যালিডেটরদের জন্য একটি হ্যাশ-ভিত্তিক স্বাক্ষর স্কিম। হ্যাশ-ভিত্তিক স্বাক্ষরগুলোকে কোয়ান্টাম-নিরাপদ বলে মনে করা হয় কারণ এগুলো শুধুমাত্র হ্যাশ ফাংশনের নিরাপত্তার ওপর নির্ভর করে, যা কোয়ান্টাম কম্পিউটারগুলো দুর্বল করতে পারে কিন্তু ভাঙতে পারে না।
 - **leanVM**: SNARK-ভিত্তিক স্বাক্ষর একত্রিতকরণের জন্য একটি ন্যূনতম zkVM (জিরো-নলেজ ভার্চুয়াল মেশিন)। যেহেতু হ্যাশ-ভিত্তিক স্বাক্ষরগুলো উল্লেখযোগ্যভাবে বড় (BLS-এর 96 বাইটের তুলনায় প্রায় 3,000 বাইট), তাই leanXMSS-এ স্যুইচ করলে প্রতি স্লট-এ উল্লেখযোগ্যভাবে বেশি ডেটা তৈরি হবে। এর সমাধানে, leanVM একটি অ্যাগ্রিগেশন ইঞ্জিন হিসেবে কাজ করে, যা ডেটাকে 250 গুণ সংকুচিত করে। এটি কোয়ান্টাম-নিরাপদ স্কিমগুলোতে স্যুইচ করার পরেও অনেকগুলো স্বাক্ষরকে একটিতে একত্রিত করার দক্ষতার সুবিধাগুলো বজায় রাখে।
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="ইথেরিয়াম কেন শুধু BLS-কে একটি কোয়ান্টাম-নিরাপদ স্কিম দিয়ে প্রতিস্থাপন করতে পারে না?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 যে অ্যাগ্রিগেশন বৈশিষ্ট্যটি BLS-কে দক্ষ করে তোলে (কয়েক লাখ স্বাক্ষরকে একটিতে একত্রিত করা) তার কোনো সুস্পষ্ট কোয়ান্টাম-নিরাপদ সমতুল্য নেই। পোস্ট-কোয়ান্টাম স্বাক্ষরগুলোও BLS স্বাক্ষরের চেয়ে অনেক বড়। কেবল একটির বদলে অন্যটি ব্যবহার করলে ইথেরিয়ামের কনসেনসাস লেয়ার উল্লেখযোগ্যভাবে ধীর এবং আরও ব্যয়বহুল হয়ে উঠবে। এই কারণেই দলটি leanVM তৈরি করছে, এটি এমন একটি টুল যা কোয়ান্টাম-নিরাপদ স্বাক্ষরগুলোকে দক্ষতার সাথে একত্রিত করতে শূন্য-জ্ঞান প্রমাণ ব্যবহার করে।
 
@@ -135,37 +135,37 @@ summaryPoints:
 
 ## সচরাচর জিজ্ঞাসিত প্রশ্নাবলী {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="কোয়ান্টাম কম্পিউটার কি আজই আমার ETH চুরি করতে পারে?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **না।** বর্তমানের কোনো কোয়ান্টাম কম্পিউটার ইথেরিয়ামের ক্রিপ্টোগ্রাফি ভাঙতে পারে না। বর্তমান কোয়ান্টাম হার্ডওয়্যার প্রয়োজনীয় স্কেল থেকে অনেক দূরে। এই পেজে বর্ণিত কাজটি ভবিষ্যতের জন্য প্রস্তুতি, কোনো সক্রিয় হুমকির প্রতিক্রিয়া নয়।
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="কোয়ান্টাম কম্পিউটার কখন একটি হুমকি হয়ে উঠতে পারে?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 অনুমানগুলো ভিন্ন ভিন্ন হয়। Google-এর ২০২৬ সালের মার্চের গবেষণা থেকে জানা যায় যে 256-বিট উপবৃত্তাকার বক্ররেখা ক্রিপ্টোগ্রাফি ভাঙার জন্য প্রয়োজনীয় হার্ডওয়্যার খুব তাড়াতাড়ি এই দশকের শেষের দিকে আসতে পারে, তবে উল্লেখযোগ্য ইঞ্জিনিয়ারিং চ্যালেঞ্জ রয়ে গেছে। বেশিরভাগ গবেষক মনে করেন যে একটি বাস্তবসম্মত হুমকি আসতে অন্তত কয়েক বছর সময় লাগবে। সৎ উত্তর হলো সঠিক সময়রেখা কেউ জানে না, আর ঠিক এই কারণেই এখন থেকে প্রস্তুতি নেওয়া গুরুত্বপূর্ণ।
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="আমার ওয়ালেট সুরক্ষিত রাখতে আমাকে কি কিছু করতে হবে?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 শেষ পর্যন্ত, হ্যাঁ। ইথেরিয়ামে পোস্ট-কোয়ান্টাম স্বাক্ষর স্কিমগুলো উপলব্ধ হওয়ার পর, ব্যবহারকারীরা তাদের অ্যাকাউন্টগুলো মাইগ্রেট করতে চাইবেন। ওয়ালেট সফটওয়্যার সম্ভবত আপনার জন্য এই ট্রানজিশনটি পরিচালনা করবে। আপাতত, আপনার কিছুই করার দরকার নেই। যখন পদক্ষেপ নেওয়ার প্রয়োজন হবে, তখন ইথেরিয়াম সম্প্রদায় এবং ওয়ালেট ডেভেলপাররা স্পষ্ট নির্দেশিকা এবং টুল প্রদান করবে।
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="আমার টোকেন, NFT এবং DeFi পজিশনগুলোর কী হবে?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 ইথেরিয়ামের সম্পদগুলো অ্যাকাউন্ট স্বাক্ষর দ্বারা নিয়ন্ত্রিত হয়। একবার আপনার অ্যাকাউন্ট একটি কোয়ান্টাম-নিরাপদ স্বাক্ষর স্কিমে মাইগ্রেট হয়ে গেলে, সেই অ্যাকাউন্টের সবকিছু সুরক্ষিত হয়ে যায়। আপনাকে প্রতিটি সম্পদ আলাদাভাবে মাইগ্রেট করতে হবে না। যেসব স্মার্ট কন্ট্রাক্ট ফান্ড ধারণ করে (যেমন বিকেন্দ্রীভূত অর্থব্যবস্থা (DeFi) প্রোটোকল) সেগুলোর অভ্যন্তরীণভাবে ব্যবহৃত ক্রিপ্টোগ্রাফিক প্রিমিটিভের ওপর নির্ভর করে নিজস্ব আপগ্রেডের প্রয়োজন হতে পারে।
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="ইথেরিয়াম কি এই বিষয়ে অন্যান্য ব্লকচেইন থেকে পিছিয়ে আছে?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 না। যেকোনো ব্লকচেইন-এর তুলনায় ইথেরিয়ামের সবচেয়ে সুগঠিত পোস্ট-কোয়ান্টাম প্রোগ্রামগুলোর মধ্যে একটি রয়েছে: একটি নিবেদিত দল, অর্থায়িত গবেষণা, সাপ্তাহিক ডেভনেট এবং একটি প্রকাশিত মাইগ্রেশন রোডম্যাপ, যা কোয়ান্টাম কম্পিউটিংকে একটি প্রথম-শ্রেণীর ডিজাইন সীমাবদ্ধতা হিসেবে বিবেচনা করে। কোনো ব্লকচেইন এখনও সম্পূর্ণ পোস্ট-কোয়ান্টাম ট্রানজিশন সম্পন্ন করেনি। ইথেরিয়াম ফাউন্ডেশনের অনুমান অনুযায়ী, ইথেরিয়ামের কোয়ান্টাম-ঝুঁকিপূর্ণ সুপ্ত ফান্ডের এক্সপোজার প্রায় 0.1%, যা অন্যান্য প্রধান ব্লকচেইন নেটওয়ার্কগুলোর তুলনায় অনেক কম।
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="'এখন সংগ্রহ করুন, পরে ডিক্রিপ্ট করুন' কী?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "এখন সংগ্রহ করুন, পরে ডিক্রিপ্ট করুন" (Harvest now, decrypt later) হলো এমন একটি আক্রমণ যেখানে কেউ আজ এনক্রিপ্ট করা ডেটা বা উন্মুক্ত পাবলিক কী রেকর্ড করে রাখে, তারপর যথেষ্ট শক্তিশালী কোয়ান্টাম কম্পিউটার তৈরি হলে পরে এনক্রিপশন ভেঙে ফেলে। ইথেরিয়ামের ক্ষেত্রে, এটি সেই অ্যাকাউন্টগুলোর জন্য সবচেয়ে বেশি প্রাসঙ্গিক যাদের পাবলিক কী ইতিমধ্যেই অনচেইন-এ উন্মুক্ত (যে কোনো অ্যাকাউন্ট যা একটি ট্রানজ্যাকশন পাঠিয়েছে)। এটি একটি কারণ যে সম্প্রদায় পোস্ট-কোয়ান্টাম মাইগ্রেশনকে সময়-সংবেদনশীল হিসেবে বিবেচনা করে, যদিও কোয়ান্টাম হুমকি এখনও তাৎক্ষণিক নয়।
 

@@ -46,7 +46,7 @@ summaryPoints:
 - **leanXMSS**: इथेरियम BLS हस्ताक्षरों को leanXMSS से बदल देगा, जो वैलिडेटर्स के लिए एक हैश-आधारित हस्ताक्षर योजना है। हैश-आधारित हस्ताक्षरों को क्वांटम-सुरक्षित माना जाता है क्योंकि वे केवल हैश फ़ंक्शंस की सुरक्षा पर निर्भर करते हैं, जिन्हें क्वांटम कंप्यूटर कमज़ोर तो करते हैं लेकिन तोड़ते नहीं हैं।
 - **leanVM**: SNARK-आधारित हस्ताक्षर एकत्रीकरण के लिए एक न्यूनतम zkVM (शून्य-ज्ञान वर्चुअल मशीन)। क्योंकि हैश-आधारित हस्ताक्षर काफी बड़े होते हैं (BLS के लिए 96 बाइट्स की तुलना में लगभग 3,000 बाइट्स), leanXMSS पर स्विच करने से प्रति स्लॉट काफी अधिक डेटा उत्पन्न होगा। इसे हल करने के लिए, leanVM एक एकत्रीकरण इंजन के रूप में कार्य करता है, जो डेटा को 250x तक संपीड़ित करता है। यह क्वांटम-सुरक्षित योजनाओं पर स्विच करने के बाद भी कई हस्ताक्षरों को एक में संयोजित करने के दक्षता लाभों को संरक्षित करता है।
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="इथेरियम बस BLS को क्वांटम-सुरक्षित योजना से क्यों नहीं बदल सकता?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 एकत्रीकरण गुण जो BLS को कुशल बनाता है (सैकड़ों हज़ारों हस्ताक्षरों को एक में संयोजित करना) का कोई स्पष्ट क्वांटम-सुरक्षित समकक्ष नहीं है। पोस्ट-क्वांटम हस्ताक्षर भी BLS हस्ताक्षरों की तुलना में बहुत बड़े होते हैं। बस एक को दूसरे के लिए स्वैप करने से इथेरियम की सर्वसम्मति परत काफी धीमी और अधिक महंगी हो जाएगी। यही कारण है कि टीम leanVM बना रही है, एक ऐसा उपकरण जो क्वांटम-सुरक्षित हस्ताक्षरों को कुशलतापूर्वक एकत्रित करने के लिए शून्य-ज्ञान प्रमाणों का उपयोग करता है।
 
@@ -135,37 +135,37 @@ summaryPoints:
 
 ## अक्सर पूछे जाने वाले प्रश्न {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="क्या क्वांटम कंप्यूटर आज मेरा ETH चुरा सकते हैं?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **नहीं।** आज कोई भी क्वांटम कंप्यूटर इथेरियम की क्रिप्टोग्राफी को नहीं तोड़ सकता है। वर्तमान क्वांटम हार्डवेयर आवश्यक पैमाने से बहुत दूर है। इस पृष्ठ पर वर्णित कार्य भविष्य की तैयारी है, न कि किसी सक्रिय खतरे की प्रतिक्रिया।
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="क्वांटम कंप्यूटर कब एक खतरा बन सकते हैं?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 अनुमान अलग-अलग हैं। Google का मार्च 2026 का शोध बताता है कि 256-बिट दीर्घवृत्तीय वक्र क्रिप्टोग्राफी को तोड़ने के लिए आवश्यक हार्डवेयर जल्द से जल्द इस दशक के अंत के आसपास आ सकता है, लेकिन महत्वपूर्ण इंजीनियरिंग चुनौतियां बनी हुई हैं। अधिकांश शोधकर्ता मानते हैं कि एक यथार्थवादी खतरा कम से कम कई साल दूर है। ईमानदार जवाब यह है कि कोई भी सटीक समयरेखा नहीं जानता है, यही कारण है कि अभी तैयारी करना महत्वपूर्ण है।
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="क्या मुझे अपने वॉलेट को सुरक्षित करने के लिए कुछ करना होगा?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 अंततः, हाँ। एक बार जब इथेरियम पर पोस्ट-क्वांटम हस्ताक्षर योजनाएं उपलब्ध हो जाती हैं, तो उपयोगकर्ता अपने खातों को माइग्रेट करना चाहेंगे। वॉलेट सॉफ़्टवेयर संभवतः आपके लिए इस संक्रमण को संभालेगा। अभी के लिए, आपको कुछ भी करने की आवश्यकता नहीं है। जब कार्रवाई की आवश्यकता होगी, तो इथेरियम समुदाय और वॉलेट डेवलपर्स स्पष्ट मार्गदर्शन और उपकरण प्रदान करेंगे।
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="मेरे टोकन, NFTs और DeFi पोजीशन का क्या होगा?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 इथेरियम पर संपत्तियां खाता हस्ताक्षरों द्वारा नियंत्रित होती हैं। एक बार जब आपका खाता क्वांटम-सुरक्षित हस्ताक्षर योजना में माइग्रेट हो जाता है, तो उस खाते में सब कुछ सुरक्षित हो जाता है। आपको प्रत्येक संपत्ति को व्यक्तिगत रूप से माइग्रेट करने की आवश्यकता नहीं है। स्मार्ट कॉन्ट्रैक्ट जो फंड रखते हैं (जैसे विकेंद्रीकृत वित्त (DeFi) प्रोटोकॉल) को अपने स्वयं के अपग्रेड की आवश्यकता हो सकती है, यह इस बात पर निर्भर करता है कि वे आंतरिक रूप से किन क्रिप्टोग्राफ़िक प्रिमिटिव्स का उपयोग करते हैं।
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="क्या इथेरियम इस मामले में अन्य ब्लॉकचेन से पीछे है?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 नहीं। इथेरियम के पास किसी भी ब्लॉकचेन के सबसे संरचित पोस्ट-क्वांटम कार्यक्रमों में से एक है: एक समर्पित टीम, वित्त पोषित अनुसंधान, साप्ताहिक डेवनेट्स, और एक प्रकाशित माइग्रेशन रोडमैप, जो क्वांटम कंप्यूटिंग को प्रथम श्रेणी के डिज़ाइन बाधा के रूप में मानता है। किसी भी ब्लॉकचेन ने अभी तक पूर्ण पोस्ट-क्वांटम संक्रमण पूरा नहीं किया है। एथेरियम फाउंडेशन के अनुमानों के अनुसार, इथेरियम का क्वांटम-असुरक्षित निष्क्रिय फंड एक्सपोज़र लगभग 0.1% है, जो अन्य प्रमुख ब्लॉकचेन नेटवर्क की तुलना में काफी कम है।
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="'अभी एकत्र करें, बाद में डिक्रिप्ट करें' क्या है?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "अभी हार्वेस्ट करें, बाद में डिक्रिप्ट करें" (Harvest now, decrypt later) एक ऐसा हमला है जहां कोई आज एन्क्रिप्टेड डेटा या उजागर सार्वजनिक कुंजियों को रिकॉर्ड करता है, फिर बाद में एक शक्तिशाली क्वांटम कंप्यूटर मौजूद होने पर एन्क्रिप्शन को तोड़ देता है। इथेरियम के लिए, यह उन खातों के लिए सबसे अधिक प्रासंगिक है जिनकी सार्वजनिक कुंजियां पहले से ही ऑनचेन उजागर हैं (कोई भी खाता जिसने लेन-देन भेजा है)। यह एक कारण है कि समुदाय पोस्ट-क्वांटम माइग्रेशन को समय-संवेदनशील मानता है, भले ही क्वांटम खतरा अभी तत्काल नहीं है।
 

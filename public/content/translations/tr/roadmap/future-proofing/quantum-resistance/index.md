@@ -46,7 +46,7 @@ Bu yakın bir tehdit değildir. Ancak kriptografik geçişler yıllar alır ve E
 - **leanXMSS**: Ethereum, BLS imzalarını doğrulayıcılar için hash tabanlı bir imza şeması olan leanXMSS ile değiştirecektir. Hash tabanlı imzalar, yalnızca kuantum bilgisayarların zayıflattığı ancak kıramadığı hash işlevlerinin güvenliğine dayandıkları için kuantum güvenli olarak kabul edilir.
 - **leanVM**: SNARK tabanlı imza toplama için minimal bir zkVM (sıfır bilgi sanal makinesi). Hash tabanlı imzalar önemli ölçüde daha büyük olduğundan (BLS için 96 bayta kıyasla kabaca 3.000 bayt), leanXMSS'e geçmek slot başına önemli ölçüde daha fazla veri üretecektir. Bunu çözmek için leanVM, verileri 250 kat sıkıştıran bir toplama motoru görevi görür. Bu, kuantum güvenli şemalara geçtikten sonra bile birçok imzayı tek bir imzada birleştirmenin verimlilik faydalarını korur.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Ethereum neden BLS'yi kuantum güvenli bir şemayla değiştiremiyor?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 BLS'yi verimli kılan toplama özelliğinin (yüz binlerce imzayı tek bir imzada birleştirmek) bariz bir kuantum güvenli eşdeğeri yoktur. Kuantum sonrası imzalar da BLS imzalarından çok daha büyüktür. Sadece birini diğeriyle değiştirmek, Ethereum'un mutabakat katmanını önemli ölçüde daha yavaş ve daha pahalı hale getirecektir. Bu nedenle ekip, kuantum güvenli imzaları verimli bir şekilde bir araya getirmek için sıfır bilgi ispatlarını kullanan bir araç olan leanVM'yi inşa etmektedir.
 
@@ -135,37 +135,37 @@ Hareketsiz cüzdanların (sahipleri geçiş yapma ihtiyacının farkında olmaya
 
 ## Sıkça sorulan sorular {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Kuantum bilgisayarlar bugün ETH'mi çalabilir mi?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Hayır.** Bugün hiçbir kuantum bilgisayar Ethereum'un kriptografisini kıramaz. Mevcut kuantum donanımı gereken ölçekten çok uzaktır. Bu sayfada açıklanan çalışmalar aktif bir tehdide yanıt değil, geleceğe yönelik bir hazırlıktır.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Kuantum bilgisayarlar ne zaman bir tehdit haline gelebilir?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Tahminler değişmektedir. Google'ın Mart 2026 araştırması, 256 bitlik eliptik eğri kriptografisini kırmak için gereken donanımın en erken bu on yılın sonlarına doğru gelebileceğini öne sürmektedir, ancak önemli mühendislik zorlukları devam etmektedir. Çoğu araştırmacı gerçekçi bir tehdidin en az birkaç yıl uzakta olduğunu düşünmektedir. Dürüst cevap, kesin zaman çizelgesini kimsenin bilmediğidir, ki bu da tam olarak şimdi hazırlanmanın neden önemli olduğudur.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Cüzdanımı korumak için bir şey yapmam gerekecek mi?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 Eninde sonunda, evet. Kuantum sonrası imza şemaları Ethereum'da kullanıma sunulduğunda, kullanıcılar hesaplarını taşımak isteyeceklerdir. Cüzdan yazılımları muhtemelen bu geçişi sizin için halledecektir. Şimdilik yapmanız gereken hiçbir şey yoktur. Eylem gerektiğinde, Ethereum topluluğu ve cüzdan geliştiricileri net rehberlik ve araçlar sağlayacaktır.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="Peki ya token'larım, NFT'lerim ve DeFi pozisyonlarım ne olacak?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Ethereum'daki varlıklar hesap imzaları tarafından kontrol edilir. Hesabınız kuantum güvenli bir imza şemasına geçirildiğinde, o hesaptaki her şey korunur. Her bir varlığı ayrı ayrı taşımanıza gerek yoktur. Fon tutan akıllı sözleşmeler (merkeziyetsiz finans (DeFi) protokolleri gibi), dahili olarak hangi kriptografik ilkelleri kullandıklarına bağlı olarak kendi yükseltmelerine ihtiyaç duyabilir.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="Ethereum bu konuda diğer blokzincirlerin gerisinde mi?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Hayır. Ethereum, herhangi bir Blokzincir arasındaki en yapılandırılmış kuantum sonrası programlardan birine sahiptir: özel bir ekip, finanse edilen araştırmalar, haftalık geliştirici ağları ve kuantum hesaplamayı birinci sınıf bir tasarım kısıtlaması olarak ele alan yayınlanmış bir geçiş yol haritası. Henüz hiçbir Blokzincir tam bir kuantum sonrası geçişi tamamlamamıştır. Ethereum Vakfı tahminlerine göre, Ethereum'un kuantum savunmasız hareketsiz fon riski yaklaşık %0,1'dir ve bu diğer büyük Blokzincir ağlarından çok daha düşüktür.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="'Şimdi topla, sonra şifresini çöz' nedir?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "Şimdi topla, sonra şifresini çöz" (Harvest now, decrypt later), birisinin bugün şifrelenmiş verileri veya ifşa edilmiş açık anahtarları kaydettiği, ardından yeterince güçlü bir kuantum bilgisayar var olduğunda şifrelemeyi kırdığı bir saldırıdır. Ethereum için bu, en çok açık anahtarları halihazırda zincir içi olarak ifşa edilmiş hesaplarla (işlem göndermiş herhangi bir hesap) ilgilidir. Kuantum tehdidi henüz acil olmasa da topluluğun kuantum sonrası geçişi zamana duyarlı olarak ele almasının bir nedeni budur.
 

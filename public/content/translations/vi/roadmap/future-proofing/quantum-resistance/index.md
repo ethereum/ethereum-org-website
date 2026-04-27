@@ -46,7 +46,7 @@ Vào tháng 2 năm 2026, Vitalik Buterin đã [công bố một lộ trình](htt
 - **leanXMSS**: Ethereum sẽ thay thế chữ ký BLS bằng leanXMSS, một sơ đồ chữ ký dựa trên mã băm cho các trình xác thực. Chữ ký dựa trên mã băm được coi là an toàn lượng tử vì chúng chỉ dựa vào tính bảo mật của các hàm băm, thứ mà máy tính lượng tử làm suy yếu nhưng không phá vỡ được.
 - **leanVM**: Một zkVM (máy ảo không tri thức) tối giản để tổng hợp chữ ký dựa trên SNARK. Bởi vì chữ ký dựa trên mã băm lớn hơn đáng kể (khoảng 3.000 byte so với 96 byte của BLS), việc chuyển sang leanXMSS sẽ tạo ra nhiều dữ liệu hơn đáng kể cho mỗi khe. Để giải quyết vấn đề này, leanVM hoạt động như một công cụ tổng hợp, nén dữ liệu gấp 250 lần. Điều này bảo tồn các lợi ích về hiệu quả của việc kết hợp nhiều chữ ký thành một, ngay cả sau khi chuyển sang các sơ đồ an toàn lượng tử.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Tại sao Ethereum không thể chỉ thay thế BLS bằng một cơ chế an toàn lượng tử?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 Thuộc tính tổng hợp làm cho BLS hiệu quả (kết hợp hàng trăm nghìn chữ ký thành một) không có một giải pháp tương đương an toàn lượng tử rõ ràng. Chữ ký hậu lượng tử cũng lớn hơn nhiều so với chữ ký BLS. Việc chỉ đơn giản là hoán đổi cái này cho cái kia sẽ làm cho lớp đồng thuận của Ethereum chậm hơn và đắt đỏ hơn đáng kể. Đó là lý do tại sao nhóm đang xây dựng leanVM, một công cụ sử dụng bằng chứng không kiến thức để tổng hợp các chữ ký an toàn lượng tử một cách hiệu quả.
 
@@ -135,37 +135,37 @@ Câu hỏi về cách xử lý các ví không hoạt động (các tài khoản
 
 ## Các câu hỏi thường gặp {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Máy tính lượng tử có thể đánh cắp ETH của tôi ngay hôm nay không?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Không.** Không có máy tính lượng tử nào hiện nay có thể phá vỡ mật mã học của Ethereum. Phần cứng lượng tử hiện tại còn lâu mới đạt được quy mô cần thiết. Công việc được mô tả trên trang này là sự chuẩn bị cho tương lai, không phải là phản ứng trước một mối đe dọa đang hiện hữu.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Khi nào máy tính lượng tử có thể trở thành một mối đe dọa?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Các ước tính rất khác nhau. Nghiên cứu vào tháng 3 năm 2026 của Google cho thấy phần cứng cần thiết để phá vỡ mật mã học đường cong elliptic 256-bit có thể xuất hiện sớm nhất vào khoảng cuối thập kỷ này, nhưng vẫn còn những thách thức kỹ thuật đáng kể. Hầu hết các nhà nghiên cứu coi một mối đe dọa thực tế sẽ còn cách ít nhất vài năm nữa. Câu trả lời trung thực là không ai biết chính xác mốc thời gian, đó chính xác là lý do tại sao việc chuẩn bị ngay từ bây giờ là rất quan trọng.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Tôi có cần phải làm gì để bảo vệ ví của mình không?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 Cuối cùng thì có. Khi các sơ đồ chữ ký hậu lượng tử có sẵn trên Ethereum, người dùng sẽ muốn di chuyển tài khoản của họ. Phần mềm ví có thể sẽ xử lý quá trình chuyển đổi này cho bạn. Hiện tại, bạn không cần phải làm gì cả. Khi cần hành động, cộng đồng Ethereum và các nhà phát triển ví sẽ cung cấp hướng dẫn và công cụ rõ ràng.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="Còn token, NFT và các vị thế DeFi của tôi thì sao?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Tài sản trên Ethereum được kiểm soát bởi chữ ký tài khoản. Khi tài khoản của bạn được di chuyển sang một sơ đồ chữ ký an toàn lượng tử, mọi thứ trong tài khoản đó đều được bảo vệ. Bạn không cần phải di chuyển từng tài sản riêng lẻ. Các hợp đồng thông minh nắm giữ tiền (như các giao thức DeFi) có thể cần các bản nâng cấp riêng tùy thuộc vào các nguyên thủy mật mã học mà chúng sử dụng nội bộ.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="Ethereum có đi sau các chuỗi khối khác về vấn đề này không?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Không. Ethereum có một trong những chương trình hậu lượng tử có cấu trúc nhất so với bất kỳ chuỗi khối nào: một nhóm chuyên trách, nghiên cứu được tài trợ, devnet hàng tuần và một lộ trình di chuyển được công bố, coi điện toán lượng tử là một ràng buộc thiết kế hạng nhất. Chưa có chuỗi khối nào hoàn thành quá trình chuyển đổi hậu lượng tử toàn diện. Theo ước tính của Tổ chức Ethereum, mức độ rủi ro của các quỹ không hoạt động dễ bị tổn thương bởi lượng tử của Ethereum là khoảng 0,1%, thấp hơn đáng kể so với các mạng lưới chuỗi khối lớn khác.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="'Thu thập bây giờ, giải mã sau' là gì?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "Thu thập bây giờ, giải mã sau" là một cuộc tấn công trong đó ai đó ghi lại dữ liệu được mã hóa hoặc các khóa công khai bị lộ ngày hôm nay, sau đó phá vỡ mã hóa sau này khi có một máy tính lượng tử đủ mạnh. Đối với Ethereum, điều này phù hợp nhất với các tài khoản có khóa công khai đã bị lộ trên chuỗi (bất kỳ tài khoản nào đã gửi giao dịch). Đây là một lý do khiến cộng đồng coi việc di chuyển hậu lượng tử là nhạy cảm về thời gian mặc dù mối đe dọa lượng tử chưa phải là ngay lập tức.
 

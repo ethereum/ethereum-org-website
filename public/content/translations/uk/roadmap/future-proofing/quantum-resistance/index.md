@@ -46,7 +46,7 @@ summaryPoints:
 - **leanXMSS**: Етеріум замінить підписи BLS на leanXMSS — схему підписів на основі хешів для валідаторів. Підписи на основі хешів вважаються квантово-безпечними, оскільки вони покладаються лише на безпеку хеш-функцій, які квантові комп'ютери послаблюють, але не ламають.
 - **leanVM**: мінімальна zkVM (віртуальна машина з нульовим розголошенням) для агрегації підписів на основі SNARK. Оскільки підписи на основі хешів значно більші (приблизно 3000 байтів порівняно з 96 байтами для BLS), перехід на leanXMSS призведе до створення значно більшого обсягу даних на слот. Щоб вирішити цю проблему, leanVM діє як механізм агрегації, стискаючи дані у 250 разів. Це зберігає переваги ефективності від об'єднання багатьох підписів в один, навіть після переходу на квантово-безпечні схеми.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Чому Етеріум не може просто замінити BLS на квантово-стійку схему?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 Властивість агрегації, яка робить BLS ефективним (об'єднання сотень тисяч підписів в один), не має очевидного квантово-безпечного еквівалента. Постквантові підписи також набагато більші за підписи BLS. Проста заміна одного на інше зробила б рівень консенсусу Етеріуму значно повільнішим і дорожчим. Саме тому команда створює leanVM — інструмент, який використовує доведення з нульовим розголошенням для ефективної агрегації квантово-безпечних підписів.
 
@@ -135,37 +135,38 @@ summaryPoints:
 
 ## Поширені запитання {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Чи можуть квантові комп'ютери вкрасти мої ETH сьогодні?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Ні.** Жоден сучасний квантовий комп'ютер не може зламати криптографію Етеріуму. Сучасне квантове обладнання далеке від необхідних масштабів. Робота, описана на цій сторінці, є підготовкою до майбутнього, а не відповіддю на активну загрозу.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Коли квантові комп'ютери можуть стати загрозою?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Оцінки різняться. Дослідження Google від березня 2026 року свідчить про те, що обладнання, необхідне для зламу 256-бітної криптографії на еліптичних кривих, може з'явитися щонайраніше наприкінці цього десятиліття, але залишаються значні інженерні виклики. Більшість дослідників вважають, що до реальної загрози залишається щонайменше кілька років. Чесна відповідь полягає в тому, що ніхто не знає точних термінів, і саме тому важливо готуватися вже зараз.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Чи потрібно мені буде щось робити, щоб захистити свій гаманець?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 З часом — так. Коли постквантові схеми підписів стануть доступними в Етеріумі, користувачам потрібно буде мігрувати свої акаунти. Програмне забезпечення гаманця, ймовірно, виконає цей перехід за вас. Наразі вам нічого не потрібно робити. Коли виникне потреба в діях, спільнота Етеріуму та розробники гаманців нададуть чіткі вказівки та інструменти.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="А як щодо моїх токенів, NFT та DeFi-позицій?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Активи в Етеріумі контролюються підписами акаунтів. Щойно ваш акаунт буде переведено на квантово-безпечну схему підпису, усе в цьому акаунті буде захищено. Вам не потрібно мігрувати кожен актив окремо. Смартконтракти, які зберігають кошти (наприклад, протоколи децентралізованих фінансів (DeFi)), можуть потребувати власних оновлень залежно від того, які криптографічні примітиви вони використовують внутрішньо.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="Чи відстає Етеріум від інших блокчейнів у цьому?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Ні. Етеріум має одну з найбільш структурованих постквантових програм серед усіх блокчейнів: спеціальна команда, фінансовані дослідження, щотижневі devnet-мережі та опублікована дорожня карта міграції, яка розглядає квантові обчислення як першочергове обмеження при проєктуванні. Жоден блокчейн ще не завершив повний постквантовий перехід. За оцінками Фундації Ethereum, частка квантово-вразливих неактивних коштів в Етеріумі становить приблизно 0,1%, що значно нижче, ніж в інших великих блокчейн-мережах.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Що таке «збирай зараз, розшифровуй потім>
+?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 «Збери зараз, розшифруй пізніше» (Harvest now, decrypt later) — це атака, під час якої хтось записує зашифровані дані або розкриті відкриті ключі сьогодні, а потім зламує шифрування пізніше, коли з'явиться достатньо потужний квантовий комп'ютер. Для Етеріуму це найбільш актуально для акаунтів, чиї відкриті ключі вже розкриті ончейн (будь-який акаунт, який надіслав транзакцію). Це одна з причин, чому спільнота розглядає постквантову міграцію як термінову, навіть якщо квантова загроза ще не є безпосередньою.
 

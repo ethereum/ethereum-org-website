@@ -46,7 +46,7 @@ Mnamo Februari 2026, Vitalik Buterin [alichapisha ramani ya njia](https://x.com/
 - **leanXMSS**: Ethereum itabadilisha sahihi za BLS na leanXMSS, mpango wa sahihi unaotegemea heshi kwa wathibitishaji. Sahihi zinazotegemea heshi zinachukuliwa kuwa salama kwa kwanta kwa sababu zinategemea tu usalama wa vitendaji vya heshi, ambavyo kompyuta za kwanta hudhoofisha lakini hazivunji.
 - **leanVM**: zkVM (mashine pepe ya sifuri-maarifa) ndogo kwa ajili ya mkusanyiko wa sahihi unaotegemea SNARK. Kwa sababu sahihi zinazotegemea heshi ni kubwa zaidi (takriban baiti 3,000 ikilinganishwa na baiti 96 kwa BLS), kubadili kwenda leanXMSS kutazalisha data nyingi zaidi kwa kila sloti. Ili kutatua hili, leanVM inafanya kazi kama injini ya mkusanyiko, ikikandamiza data kwa mara 250. Hii inahifadhi faida za ufanisi za kuunganisha sahihi nyingi kuwa moja, hata baada ya kubadili kwenda kwenye mipango salama kwa kwanta.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Kwa nini Ethereum haiwezi tu kubadilisha BLS na mfumo salama dhidi ya kwanta?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 Sifa ya mkusanyiko inayofanya BLS iwe na ufanisi (kuunganisha mamia ya maelfu ya sahihi kuwa moja) haina mbadala wa wazi ulio salama kwa kwanta. Sahihi za baada ya kwanta pia ni kubwa zaidi kuliko sahihi za BLS. Kubadilisha tu moja kwa nyingine kungefanya tabaka la mwafaka la Ethereum kuwa polepole zaidi na ghali zaidi. Ndiyo maana timu inajenga leanVM, zana inayotumia uthibitisho wa maarifa-sifuri kukusanya sahihi salama kwa kwanta kwa ufanisi.
 
@@ -135,37 +135,37 @@ Swali la jinsi ya kushughulikia mikoba iliyolala (akaunti ambazo wamiliki wake w
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Je, kompyuta za kwanta zinaweza kuiba ETH yangu leo?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Hapana.** Hakuna kompyuta ya kwanta leo inayoweza kuvunja kriptografia ya Ethereum. Vifaa vya sasa vya kwanta viko mbali na kiwango kinachohitajika. Kazi iliyoelezwa kwenye ukurasa huu ni maandalizi kwa ajili ya siku zijazo, si jibu kwa tishio linaloendelea.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Lini kompyuta za kwanta zinaweza kuwa tishio?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Makadirio yanatofautiana. Utafiti wa Google wa Machi 2026 unapendekeza vifaa vinavyohitajika kuvunja kriptografia ya tao la duaradufu ya biti 256 vinaweza kufika wakati fulani karibu na mwisho wa muongo huu mapema zaidi, lakini changamoto kubwa za uhandisi zimesalia. Watafiti wengi wanaona tishio la kweli kuwa miaka kadhaa mbali kwa kiwango cha chini. Jibu la kweli ni kwamba hakuna anayejua ratiba kamili, ambayo ndiyo sababu hasa kujiandaa sasa ni muhimu.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Je, nitahitaji kufanya chochote ili kulinda mkoba wangu?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 Hatimaye, ndiyo. Pindi mipango ya sahihi ya baada ya kwanta itakapopatikana kwenye Ethereum, watumiaji watataka kuhamisha akaunti zao. Programu ya mkoba huenda itashughulikia mpito huu kwa ajili yako. Kwa sasa, hakuna unachohitaji kufanya. Wakati hatua inahitajika, jumuiya ya Ethereum na wasanidi wa mkoba watatoa mwongozo wazi na zana.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="Vipi kuhusu tokeni zangu, NFT, na nafasi za DeFi?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Mali kwenye Ethereum zinadhibitiwa na sahihi za akaunti. Pindi akaunti yako itakapohamishiwa kwenye mpango wa sahihi ulio salama kwa kwanta, kila kitu katika akaunti hiyo kinalindwa. Huhitaji kuhamisha kila mali moja moja. Mikataba mahiri inayoshikilia fedha (kama itifaki za fedha zilizogatuliwa (DeFi)) inaweza kuhitaji uboreshaji wao wenyewe kulingana na misingi gani ya kriptografia wanayotumia ndani.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="Je, Ethereum iko nyuma ya minyororo mingine ya vitalu kwenye hili?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Hapana. Ethereum ina mojawapo ya programu zilizopangwa zaidi za baada ya kwanta za mnyororo wa vitalu wowote: timu maalum, utafiti unaofadhiliwa, mitandao ya wasanidi ya kila wiki, na ramani ya njia ya uhamiaji iliyochapishwa, ikichukulia kompyuta ya kwanta kama kizuizi cha muundo wa daraja la kwanza. Hakuna mnyororo wa vitalu ambao umekamilisha mpito kamili wa baada ya kwanta bado. Kulingana na makadirio ya Taasisi ya Ethereum, mfiduo wa fedha zilizolala zilizo hatarini kwa kwanta za Ethereum ni takriban 0.1%, chini sana kuliko mitandao mingine mikubwa ya mnyororo wa vitalu.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Je, 'vuna sasa, fumbua fiche baadaye' ni nini?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "Vuna sasa, simbusa baadaye" ni shambulio ambapo mtu hurekodi data iliyosimbwa fiche au funguo za umma zilizofichuliwa leo, kisha huvunja usimbaji fiche baadaye pindi kompyuta ya kwanta yenye nguvu ya kutosha itakapokuwepo. Kwa Ethereum, hii inafaa zaidi kwa akaunti ambazo funguo zake za umma tayari zimefichuliwa mnyororoni (akaunti yoyote ambayo imetuma muamala). Hii ni sababu moja inayofanya jumuiya ichukulie uhamiaji wa baada ya kwanta kama unaozingatia wakati ingawa tishio la kwanta bado si la mara moja.
 

@@ -46,7 +46,7 @@ Em fevereiro de 2026, Vitalik Buterin [publicou um roteiro](https://x.com/Vitali
 - **leanXMSS**: O Ethereum substituirá as assinaturas BLS pelo leanXMSS, um esquema de assinatura baseado em hash para validadores. As assinaturas baseadas em hash são consideradas seguras contra computadores quânticos porque dependem apenas da segurança das funções de hash, que os computadores quânticos enfraquecem, mas não quebram.
 - **leanVM**: Uma zkVM (máquina virtual de conhecimento zero) mínima para agregação de assinaturas baseada em SNARK. Como as assinaturas baseadas em hash são significativamente maiores (cerca de 3.000 bytes em comparação com 96 bytes para BLS), mudar para o leanXMSS produziria significativamente mais dados por slot. Para resolver isso, a leanVM atua como um mecanismo de agregação, comprimindo os dados em 250x. Isso preserva os benefícios de eficiência de combinar muitas assinaturas em uma só, mesmo após a mudança para esquemas seguros contra computadores quânticos.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Por que o Ethereum não pode simplesmente substituir o BLS por um esquema seguro contra computadores quânticos?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 A propriedade de agregação que torna o BLS eficiente (combinando centenas de milhares de assinaturas em uma só) não tem um equivalente óbvio seguro contra computadores quânticos. As assinaturas pós-quânticas também são muito maiores que as assinaturas BLS. Simplesmente trocar uma pela outra tornaria a camada de consenso do Ethereum significativamente mais lenta e mais cara. É por isso que a equipe está construindo a leanVM, uma ferramenta que usa provas de conhecimento zero para agregar assinaturas seguras contra computadores quânticos de forma eficiente.
 
@@ -135,37 +135,37 @@ A questão de como lidar com carteiras inativas (contas cujos proprietários pod
 
 ## Perguntas frequentes {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Os computadores quânticos podem roubar meu ETH hoje?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Não.** Nenhum computador quântico hoje pode quebrar a criptografia do Ethereum. O hardware quântico atual está longe da escala necessária. O trabalho descrito nesta página é uma preparação para o futuro, não uma resposta a uma ameaça ativa.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Quando os computadores quânticos poderiam se tornar uma ameaça?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 As estimativas variam. A pesquisa do Google de março de 2026 sugere que o hardware necessário para quebrar a criptografia de curva elíptica de 256 bits pode chegar por volta do final desta década, no mínimo, mas desafios significativos de engenharia permanecem. A maioria dos pesquisadores considera que uma ameaça realista está a vários anos de distância, no mínimo. A resposta honesta é que ninguém sabe o cronograma exato, e é exatamente por isso que se preparar agora é importante.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Precisarei fazer algo para proteger minha carteira?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 Eventualmente, sim. Assim que os esquemas de assinatura pós-quântica estiverem disponíveis no Ethereum, os usuários vão querer migrar suas contas. O software da carteira provavelmente lidará com essa transição para você. Por enquanto, não há nada que você precise fazer. Quando for necessária alguma ação, a comunidade Ethereum e os desenvolvedores de carteiras fornecerão orientações e ferramentas claras.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="E quanto aos meus tokens, NFTs e posições DeFi?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Os ativos no Ethereum são controlados por assinaturas de conta. Assim que sua conta for migrada para um esquema de assinatura seguro contra computadores quânticos, tudo nessa conta estará protegido. Você não precisa migrar cada ativo individualmente. Contratos inteligentes que mantêm fundos (como protocolos de finanças descentralizadas (DeFi)) podem precisar de suas próprias atualizações, dependendo de quais primitivas criptográficas eles usam internamente.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="O Ethereum está atrás de outras blockchains nesse aspecto?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Não. O Ethereum tem um dos programas pós-quânticos mais estruturados de qualquer blockchain: uma equipe dedicada, pesquisa financiada, devnets semanais e um roteiro de migração publicado, tratando a computação quântica como uma restrição de design de primeira classe. Nenhuma blockchain concluiu uma transição pós-quântica completa ainda. De acordo com as estimativas da Fundação Ethereum, a exposição de fundos inativos vulneráveis a computadores quânticos do Ethereum é de aproximadamente 0,1%, drasticamente menor do que outras grandes redes blockchain.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="O que é "coletar agora, descriptografar depois"?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "Colha agora, descriptografe depois" é um ataque em que alguém registra dados criptografados ou chaves públicas expostas hoje e, em seguida, quebra a criptografia mais tarde, quando existir um computador quântico poderoso o suficiente. Para o Ethereum, isso é mais relevante para contas cujas chaves públicas já estão expostas onchain (qualquer conta que tenha enviado uma transação). Esta é uma das razões pelas quais a comunidade trata a migração pós-quântica como sensível ao tempo, embora a ameaça quântica ainda não seja imediata.
 
