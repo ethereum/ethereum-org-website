@@ -1,7 +1,7 @@
 ---
 description: Review translation imports for quality issues (full pipeline)
 allowed-tools: Bash(git *), Bash(pnpm *), Bash(npx tsx *), Bash(gh *), Bash(cp *), Bash(pwd), Bash(ls *), Bash(test *), Read, Glob, Grep, Task, Edit, Write, AskUserQuestion
-argument-hint: [--pr=NUMBER (auto)] [--scope=pr|full (pr)] [--language=CODE] [--model=opus|sonnet|haiku (opus)] [--no-fix] [--build-local] [--netlify-check]
+argument-hint: [--pr=NUMBER] [--language=CODE] [--model=opus|sonnet|haiku (opus)] [--full] [--no-fix] [--build-local] [--netlify-check]
 ---
 
 # Translation Review Command
@@ -14,20 +14,18 @@ Full pipeline for reviewing translation imports: worktree setup, sanitizer, AI r
 
 ## Modes of Operation
 
-### Mode 1: PR Review (Default)
-Reviews files changed in a specific PR.
+### Mode 1: Pending Translations (Default)
+Reviews the open PR for the canonical pending-translations branch (`intl/pending-dev`).
 ```
-/review-translations                    # Auto-detect PR, review all languages
-/review-translations --pr=16979         # Review specific PR's changed files
-/review-translations --scope=full       # Review ALL files for languages in PR
+/review-translations                    # Open PR for intl/pending-dev, all languages
+/review-translations --language=hi      # Same, filtered to Hindi only
 ```
 
-### Mode 2: Filtered PR Review
-Reviews only specific language(s) from a PR.
+### Mode 2: Specific PR
+Reviews a specific PR (e.g., a feature-branch translation PR like `intl/pending-feat-foo`).
 ```
-/review-translations --language=hi              # Filter auto-detected PR to Hindi only
-/review-translations --pr=16979 --language=hi   # Review only Hindi files from PR #16979
-/review-translations --pr=16979 --language=hi,bn --scope=full  # All Hindi+Bengali files
+/review-translations --pr=18040                 # Specific PR
+/review-translations --pr=18040 --language=hi   # Specific PR, Hindi only
 ```
 
 ### Mode 3: Standalone Language Review
@@ -36,14 +34,18 @@ Reviews all files for a language when no PR context is available.
 /review-translations --language=es      # On dev branch: review all Spanish files
 ```
 
+## Scope behavior
+
+By default, the command reviews **only files changed since the last LLM review** of this PR (incremental). The prior-review SHA is read from the most recent submitted PR Review on the PR (`commit_id` field, see Phase 0). If no prior review exists, the full PR diff is reviewed. Pass `--full` to override and re-review the entire PR diff even when a prior review exists.
+
 ## Flags
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `--pr=NUMBER` | Specific PR to review | auto-detect from `i18n*` branch |
-| `--scope=pr\|full` | `pr` = only PR changed files, `full` = all files for languages | `pr` |
+| `--pr=NUMBER` | Specific PR to review | open PR for `intl/pending-dev` |
 | `--language=CODES` | Filter to specific language(s), comma-separated | all languages in PR |
 | `--model=MODEL` | Model for analysis: `opus` (deep), `sonnet` (balanced), `haiku` (fast) | `opus` |
+| `--full` | Re-review the entire PR diff, ignoring any prior review SHA | absent (incremental) |
 | `--no-fix` | Skip auto-fixing critical issues; only present findings | absent (fixes applied by default) |
 | `--build-local` | Run a local scoped build to verify no MDX compilation errors | absent (skipped by default) |
 | `--netlify-check` | Check Netlify deploy preview for build failures | absent (skipped by default) |
@@ -53,9 +55,9 @@ Reviews all files for a language when no PR context is available.
 ### Parse Flags
 
 Extract from $ARGUMENTS:
-- `PR_NUMBER`: from `--pr=NUMBER` or auto-detect
+- `PR_NUMBER`: from `--pr=NUMBER` or auto-detect (see below)
 - `LANGUAGE_FILTER`: from `--language=CODES` (comma-separated) or empty
-- `SCOPE`: from `--scope=pr|full` (default: `pr`)
+- `FULL_REVIEW`: `true` if `--full` is present, `false` otherwise
 - `NO_FIX`: `true` if `--no-fix` is present, `false` otherwise
 - `BUILD_LOCAL`: `true` if `--build-local` is present, `false` otherwise
 - `NETLIFY_CHECK`: `true` if `--netlify-check` is present, `false` otherwise
@@ -64,25 +66,22 @@ Extract from $ARGUMENTS:
 
 1. **Attempt PR Detection**
    - If `--pr=NUMBER` provided → use that PR
-   - Otherwise, check if branch starts with `i18n`:
+   - Otherwise, look up the open PR for the canonical pending-translations branch:
      ```bash
-     BRANCH=$(git branch --show-current)
-     if [[ "$BRANCH" == i18n* ]]; then
-       PR_NUMBER=$(gh pr view --json number -q .number 2>/dev/null)
-     fi
+     PR_NUMBER=$(gh pr list --head intl/pending-dev --state open --json number -q '.[0].number' 2>/dev/null)
      ```
 
 2. **Route to Mode**
    - If `PR_NUMBER` found → continue to **PR Mode Setup**
    - If no `PR_NUMBER`:
      - If `--language` provided → continue to **Standalone Mode Setup**
-     - Otherwise → error: "No PR detected. Use --pr=NUMBER or --language=CODE"
+     - Otherwise → error: "No open PR found for intl/pending-dev. Use --pr=NUMBER or --language=CODE."
 
 ### PR Mode Setup (Mode 1 & 2)
 
 3. **Determine Languages**
-   - If `--language=CODES` provided: Use those as filter (Mode 2)
-   - Otherwise: Extract all languages from PR (Mode 1)
+   - If `--language=CODES` provided: Use those as filter
+   - Otherwise: Extract all languages from PR
 
    To extract languages from PR:
    ```bash
@@ -91,26 +90,44 @@ Extract from $ARGUMENTS:
      sed 's|.*translations/||;s|.*intl/||' | cut -d'/' -f1 | sort -u
    ```
 
-4. **Determine File Scope**
-   - If `--scope=full`: Review ALL files for the determined languages
-   - If `--scope=pr` (default): Review ONLY files changed in the PR
+4. **Determine Scope: Incremental vs. Full PR Diff**
 
-   For `--scope=pr`, get the specific file list:
+   The default behavior is **incremental** — review only files changed since the last LLM review of this PR. The prior-review SHA comes from the PR's submitted reviews. If `FULL_REVIEW` is true (i.e., `--full` was passed), skip the prior-review lookup entirely and use the full PR diff.
+
    ```bash
-   gh api repos/{owner}/{repo}/pulls/{PR}/files --paginate -q '.[].filename' | \
-     grep -E "(translations/|intl/)" | \
-     grep -E "/(${LANGUAGES_REGEX})/"  # If language filter applied
+   # Fetch all submitted reviews for this PR, sorted oldest -> newest
+   # Skip this fetch entirely when FULL_REVIEW is true.
+   REVIEWS_JSON=$(gh api "repos/{owner}/{repo}/pulls/${PR_NUMBER}/reviews" --paginate)
    ```
 
-5. **Report**:
-   - Mode 1: "Reviewing {N} files in PR #{NUMBER} ({LANGUAGES})"
-   - Mode 2: "Reviewing {N} {LANGUAGE} files in PR #{NUMBER}"
+   **Identify the prior intl-pipeline review** (most recent first). If `FULL_REVIEW` is true, skip this step and proceed directly to the full-PR-diff branch below; report `"Override (--full): reviewing full PR diff ({N} files)."` This command may be invoked locally, in which case the review may have been posted under the user's GitHub identity rather than Claude's — so do **not** filter by `user.login`. Instead, scan review bodies and pick the most recent one whose body looks like a translation-quality review (heuristics: contains the heading `Translation Quality Review`, mentions multiple language codes, contains a scoring table, mentions glossary/ETHGlossary, or is signed by Claude). Bodies like "LGTM", "approved", or unrelated technical reviews must NOT match.
+
+   - If a matching review is found:
+     - Set `LAST_REVIEWED_SHA = <commit_id>` from that review object (GitHub-attached, authoritative).
+     - Compute the file list as the diff from `LAST_REVIEWED_SHA` to PR HEAD:
+       ```bash
+       PR_HEAD_SHA=$(gh pr view ${PR_NUMBER} --json headRefOid -q .headRefOid)
+       gh api "repos/{owner}/{repo}/compare/${LAST_REVIEWED_SHA}...${PR_HEAD_SHA}" \
+         --jq '.files[].filename' | \
+         grep -E "(translations/|intl/)" | \
+         grep -E "/(${LANGUAGES_REGEX})/"   # If language filter applied
+       ```
+     - If the compare API errors (e.g., `LAST_REVIEWED_SHA` is unreachable from current HEAD due to a force-push or rebase): log a warning and fall back to the full PR diff below.
+     - Report: "Incremental review since prior review at `${LAST_REVIEWED_SHA:0:10}` -- {N} files changed."
+
+   - If no matching prior review is found: review the full PR diff.
+     ```bash
+     gh api repos/{owner}/{repo}/pulls/{PR}/files --paginate -q '.[].filename' | \
+       grep -E "(translations/|intl/)" | \
+       grep -E "/(${LANGUAGES_REGEX})/"   # If language filter applied
+     ```
+     Report: "No prior LLM review found -- reviewing full PR diff ({N} files)."
 
 ### Standalone Mode Setup (Mode 3)
 
 3. **Set Languages** from `--language=CODES`
 
-4. **Set Scope** to `full` (review all files for those languages on `dev` branch)
+4. **Scope:** Review all files for those languages on the `dev` branch.
 
 5. **Report**: "Reviewing all {LANGUAGE} files on dev branch"
 
@@ -323,12 +340,12 @@ The community has voted on these translations for key Ethereum terms. Use these 
 
 ## Review Methodology
 
-**For PR scope (`--scope=pr`):**
-- Focus on NEW or CHANGED content in the PR (not pre-existing content)
+**For PR-mode reviews (Modes 1 & 2):**
+- Focus on NEW or CHANGED content within the scope determined in Phase 0 (incremental since last review, or full PR diff)
 - Issues in unchanged lines are out of scope for this review
 - Read both translation AND English source files from the worktree
 
-**For full scope (`--scope=full` or `--language`):**
+**For standalone language review (Mode 3):**
 - Review the entire current content of each file
 - Compare against English source files from the worktree
 
@@ -597,27 +614,38 @@ Use AskUserQuestion to present options:
 **Question:** "Review complete. Found X critical issues (auto-fixed), Y warnings across N languages."
 
 **Options:**
-1. **Post scores to PR** — Post quality scores as a comment on the PR
+1. **Submit review to PR** — Submit quality scores as a proper PR Review (not an issue comment)
 2. **Review warnings** — Show detailed warning list for manual review
 3. **Prepare commit message** — Generate commit message for all staged changes (sanitizer + review fixes)
 4. **Done** — End review session
 
-### If "Post scores to PR" selected:
+### If "Submit review to PR" selected:
 
-Write the comment body to a temp file (to avoid heredoc backtick issues), then post:
+**This MUST be submitted as a proper PR Review, not an issue comment.** The next invocation of `/review-translations` reads each PR Review's GitHub-attached `commit_id` to determine the incremental scope. An issue comment (`gh pr comment`) does not carry a `commit_id` and would break the incremental flow.
+
+Write the review body to a temp file (to avoid heredoc backtick issues), then submit it via `gh pr review`, which auto-attaches the current PR HEAD SHA as `commit_id`:
 
 ```bash
-gh pr comment {PR_NUMBER} --body-file "$TMPDIR/pr-comment-{PR_NUMBER}.md"
+gh pr review ${PR_NUMBER} --comment --body-file "$TMPDIR/pr-review-${PR_NUMBER}.md"
 ```
 
-Comment format:
+Use `--approve` instead of `--comment` only when the review turned up **zero critical issues** (whether because none were found, or because all were auto-fixed in this same run). Otherwise use `--comment`. Never use `--request-changes`.
+
+Review body format:
 ```markdown
 ## Translation Quality Review
 
 **PR:** #{PR_NUMBER}
+**Branch HEAD:** `{PR_HEAD_SHA_FIRST_10}` (capture inline: `gh pr view ${PR_NUMBER} --json headRefOid -q .headRefOid`)
 **Languages:** {LANG_LIST}
 **Files reviewed:** {TOTAL_FILES}
 **Date:** {TODAY}
+**Fixes:** {FIXES_LINE}
+
+Where `{FIXES_LINE}` is one of:
+- `Critical fixes applied: {N}` -- when running locally with auto-fix enabled and fixes were committed to this branch
+- `No fixes applied (review-only)` -- when running in GitHub Actions without `--fix`, or when `--no-fix` was passed locally
+- `No critical issues found` -- when there were no critical issues to fix in the first place
 
 | Language | Files | Quality Score | Issues |
 |----------|-------|---------------|--------|
