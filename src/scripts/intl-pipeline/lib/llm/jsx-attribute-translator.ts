@@ -123,6 +123,7 @@ These are JSX component attributes that contain human-readable text. Translate e
 - Preserving brand names (Ethereum, Vitalik, etc.) and product names per the glossary
 - Keeping technical identifiers (variable names, code references) untranslated when they appear
 - Matching the register/tone of UI copy (concise, user-facing)
+- Using Western Arabic numerals (0-9) for any digits. Exception: Urdu (ur) uses Urdu numerals (۰-۹).
 - Returning ONE translation per input line, in the same order
 
 Attributes to translate:
