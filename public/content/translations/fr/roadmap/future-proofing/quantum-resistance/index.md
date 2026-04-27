@@ -165,7 +165,8 @@ Non. Ethereum possède l'un des programmes post-quantiques les plus structurés 
 
 </ExpandableCard>
 
-<ExpandableCard title="Qu'est-ce que « récolter maintenant, déchiffrer plus tard » ?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Qu'est-ce que « récolter maintenant, déchiffrer plus tard >
+ ?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 « Récolter maintenant, déchiffrer plus tard » (Harvest now, decrypt later) est une attaque où quelqu'un enregistre des données chiffrées ou des clés publiques exposées aujourd'hui, puis casse le chiffrement plus tard lorsqu'un ordinateur quantique suffisamment puissant existera. Pour Ethereum, cela concerne principalement les comptes dont les clés publiques sont déjà exposées onchain (tout compte ayant envoyé une transaction). C'est l'une des raisons pour lesquelles la communauté considère la migration post-quantique comme urgente, même si la menace quantique n'est pas encore immédiate.
 

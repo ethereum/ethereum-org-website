@@ -165,7 +165,7 @@ Ne. Ethereum má jeden z nejstrukturovanějších postkvantových programů ze v
 
 </ExpandableCard>
 
-<ExpandableCard title="Co je „posbírej teď, dešifruj později“?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Co je "posbírej teď, dešifruj později"?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 „Sklízej teď, dešifruj později“ (Harvest now, decrypt later) je útok, při kterém někdo dnes zaznamená zašifrovaná data nebo odhalené veřejné klíče a později šifrování prolomí, jakmile bude existovat dostatečně výkonný kvantový počítač. Pro Ethereum je to nejrelevantnější u účtů, jejichž veřejné klíče jsou již odhaleny onchain (jakýkoli účet, který odeslal transakci). To je jeden z důvodů, proč komunita považuje postkvantovou migraci za časově citlivou, i když kvantová hrozba ještě není bezprostřední.
 

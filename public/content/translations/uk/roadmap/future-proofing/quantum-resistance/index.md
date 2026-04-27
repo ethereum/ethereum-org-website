@@ -165,7 +165,8 @@ summaryPoints:
 
 </ExpandableCard>
 
-<ExpandableCard title="Що таке «збирай зараз, розшифровуй потім»?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Що таке «збирай зараз, розшифровуй потім>
+?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 «Збери зараз, розшифруй пізніше» (Harvest now, decrypt later) — це атака, під час якої хтось записує зашифровані дані або розкриті відкриті ключі сьогодні, а потім зламує шифрування пізніше, коли з'явиться достатньо потужний квантовий комп'ютер. Для Етеріуму це найбільш актуально для акаунтів, чиї відкриті ключі вже розкриті ончейн (будь-який акаунт, який надіслав транзакцію). Це одна з причин, чому спільнота розглядає постквантову міграцію як термінову, навіть якщо квантова загроза ще не є безпосередньою.
 

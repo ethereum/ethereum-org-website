@@ -165,7 +165,7 @@ Nie. Ethereum ma jeden z najbardziej ustrukturyzowanych programów postkwantowyc
 
 </ExpandableCard>
 
-<ExpandableCard title="Czym jest „zbieraj teraz, odszyfruj później”?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Czym jest "zbieraj teraz, odszyfruj później"?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 „Zbierz teraz, odszyfruj później” (ang. Harvest now, decrypt later) to atak, w którym ktoś rejestruje zaszyfrowane dane lub ujawnione klucze publiczne dzisiaj, a następnie łamie szyfrowanie później, gdy powstanie wystarczająco potężny komputer kwantowy. W przypadku Ethereum jest to najbardziej istotne dla kont, których klucze publiczne są już ujawnione onchain (każde konto, które wysłało transakcję). Jest to jeden z powodów, dla których społeczność traktuje migrację postkwantową jako wrażliwą na czas, mimo że zagrożenie kwantowe nie jest jeszcze bezpośrednie.
 
