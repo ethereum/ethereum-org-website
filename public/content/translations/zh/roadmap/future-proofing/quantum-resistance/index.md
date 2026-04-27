@@ -46,7 +46,7 @@ summaryPoints:
 - **leanXMSS**：以太坊将用 leanXMSS（一种用于验证者的基于哈希的签名方案）取代 BLS 签名。基于哈希的签名被认为是量子安全的，因为它们仅依赖于哈希函数的安全性，量子计算机会削弱但不会破解哈希函数。
 - **leanVM**：一个用于基于 SNARK 的签名聚合的最小 zkVM（零知识虚拟机）。由于基于哈希的签名要大得多（大约 3,000 字节，而 BLS 为 96 字节），因此切换到 leanXMSS 将在每个时隙产生更多的数据。为了解决这个问题，leanVM 充当聚合引擎，将数据压缩 250 倍。这保留了将许多签名组合成一个的效率优势，即使在切换到量子安全方案之后也是如此。
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="为什么以太坊不能直接用量子安全方案替换 BLS？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 使 BLS 高效的聚合属性（将数十万个签名组合成一个）没有明显的量子安全等效物。后量子签名也比 BLS 签名大得多。简单地将一个换成另一个会使以太坊的共识层变得明显更慢且更昂贵。这就是为什么团队正在构建 leanVM，这是一个使用零知识证明来高效聚合量子安全签名的工具。
 
@@ -135,37 +135,37 @@ summaryPoints:
 
 ## 常见问题解答 {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="量子计算机现在能窃取我的 ETH 吗？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **不。** 当今没有任何量子计算机能够破解以太坊的密码学。目前的量子硬件远未达到所需的规模。本页面描述的工作是为未来做准备，而不是对活跃威胁的响应。
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="量子计算机何时会构成威胁？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 估计各不相同。谷歌 2026 年 3 月的研究表明，破解 256 位椭圆曲线密码学所需的硬件最早可能在本十年末左右出现，但仍存在重大的工程挑战。大多数研究人员认为，现实的威胁至少还有几年的时间。诚实的回答是，没有人知道确切的时间表，这正是为什么现在做准备很重要的原因。
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="我需要做些什么来保护我的钱包吗？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 最终是的。一旦以太坊上提供了后量子签名方案，用户将需要迁移他们的账户。钱包软件可能会为您处理这种过渡。目前，您不需要做任何事情。当需要采取行动时，以太坊社区和钱包开发者将提供清晰的指导和工具。
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="我的代币、NFT 和 DeFi 头寸怎么办？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 以太坊上的资产由账户签名控制。一旦您的账户迁移到量子安全签名方案，该账户中的所有内容都会受到保护。您不需要单独迁移每项资产。持有资金的智能合约（如去中心化金融 (DeFi) 协议）可能需要根据其内部使用的密码学原语进行自身的升级。
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="在这方面，以太坊落后于其他区块链吗？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 不。以太坊拥有所有区块链中最结构化的后量子计划之一：专门的团队、受资助的研究、每周的开发者网络以及已发布的迁移路线图，将量子计算视为一等设计约束。目前还没有任何区块链完成全面的后量子过渡。根据以太坊基金会的估计，以太坊易受量子攻击的休眠资金风险敞口约为 0.1%，远低于其他主要区块链网络。
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="什么是"现在收集，以后解密"？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 “现在收集，以后解密 (Harvest now, decrypt later)”是一种攻击方式，即有人今天记录加密数据或暴露的公钥，然后在以后存在足够强大的量子计算机时破解加密。对于以太坊来说，这与公钥已经暴露在链上的账户（任何发送过交易的账户）最相关。这也是为什么社区将后量子迁移视为时间敏感的原因之一，即使量子威胁尚未迫在眉睫。
 

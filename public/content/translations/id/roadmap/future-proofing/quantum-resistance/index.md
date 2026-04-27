@@ -46,7 +46,7 @@ Pada bulan Februari 2026, Vitalik Buterin [menerbitkan peta jalan](https://x.com
 - **leanXMSS**: Ethereum akan mengganti tanda tangan BLS dengan leanXMSS, sebuah skema tanda tangan berbasis hash untuk validator. Tanda tangan berbasis hash dianggap aman dari kuantum karena hanya bergantung pada keamanan fungsi hash, yang dilemahkan oleh komputer kuantum tetapi tidak ditembus.
 - **leanVM**: Sebuah zkVM (mesin virtual zero-knowledge) minimal untuk agregasi tanda tangan berbasis SNARK. Karena tanda tangan berbasis hash berukuran jauh lebih besar (sekitar 3.000 byte dibandingkan dengan 96 byte untuk BLS), beralih ke leanXMSS akan menghasilkan lebih banyak data per slot secara signifikan. Untuk mengatasi hal ini, leanVM bertindak sebagai mesin agregasi, mengompresi data hingga 250x. Ini mempertahankan manfaat efisiensi dari menggabungkan banyak tanda tangan menjadi satu, bahkan setelah beralih ke skema yang aman dari kuantum.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Mengapa Ethereum tidak bisa mengganti BLS dengan skema yang aman dari kuantum?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 Sifat agregasi yang membuat BLS efisien (menggabungkan ratusan ribu tanda tangan menjadi satu) tidak memiliki padanan aman-kuantum yang jelas. Tanda tangan pasca-kuantum juga jauh lebih besar daripada tanda tangan BLS. Sekadar menukar satu dengan yang lain akan membuat lapisan konsensus Ethereum menjadi jauh lebih lambat dan lebih mahal. Itulah sebabnya tim sedang membangun leanVM, sebuah alat yang menggunakan bukti tanpa pengetahuan (ZKP) untuk mengagregasi tanda tangan aman-kuantum secara efisien.
 
@@ -135,37 +135,37 @@ Pertanyaan tentang bagaimana menangani dompet yang tidak aktif (akun yang pemili
 
 ## Pertanyaan yang sering diajukan {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Bisakah komputer kuantum mencuri ETH saya saat ini?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Tidak.** Tidak ada komputer kuantum saat ini yang dapat menembus kriptografi Ethereum. Perangkat keras kuantum saat ini masih jauh dari skala yang dibutuhkan. Pekerjaan yang dijelaskan di halaman ini adalah persiapan untuk masa depan, bukan respons terhadap ancaman aktif.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Kapan komputer kuantum bisa menjadi ancaman?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Perkiraannya bervariasi. Riset Google pada bulan Maret 2026 menunjukkan bahwa perangkat keras yang dibutuhkan untuk menembus kriptografi kurva eliptik 256-bit paling cepat dapat hadir sekitar akhir dekade ini, tetapi tantangan rekayasa yang signifikan masih ada. Sebagian besar peneliti menganggap ancaman yang realistis setidaknya masih beberapa tahun lagi. Jawaban jujurnya adalah tidak ada yang tahu garis waktu pastinya, dan itulah sebabnya persiapan dari sekarang sangatlah penting.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Apakah saya perlu melakukan sesuatu untuk melindungi dompet saya?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 Pada akhirnya, ya. Setelah skema tanda tangan pasca-kuantum tersedia di Ethereum, pengguna akan ingin memigrasikan akun mereka. Perangkat lunak dompet kemungkinan akan menangani transisi ini untuk Anda. Untuk saat ini, tidak ada yang perlu Anda lakukan. Ketika tindakan diperlukan, komunitas Ethereum dan pengembang dompet akan memberikan panduan dan alat yang jelas.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="Bagaimana dengan token, NFT, dan posisi DeFi saya?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Aset di Ethereum dikendalikan oleh tanda tangan akun. Setelah akun Anda dimigrasikan ke skema tanda tangan aman-kuantum, semua yang ada di akun tersebut akan terlindungi. Anda tidak perlu memigrasikan setiap aset secara individual. Kontrak pintar yang menyimpan dana (seperti protokol keuangan terdesentralisasi (DeFi)) mungkin memerlukan peningkatannya sendiri tergantung pada primitif kriptografi apa yang mereka gunakan secara internal.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="Apakah Ethereum tertinggal dari rantai blok lain dalam hal ini?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Tidak. Ethereum memiliki salah satu program pasca-kuantum paling terstruktur dari rantai blok mana pun: tim khusus, riset yang didanai, devnet mingguan, dan peta jalan migrasi yang dipublikasikan, yang memperlakukan komputasi kuantum sebagai batasan desain kelas satu. Belum ada rantai blok yang menyelesaikan transisi pasca-kuantum secara penuh. Menurut perkiraan Yayasan Ethereum, eksposur dana tidak aktif Ethereum yang rentan terhadap kuantum adalah sekitar 0,1%, secara drastis lebih rendah daripada jaringan rantai blok utama lainnya.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Apa itu 'panen sekarang, dekripsi nanti'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "Panen sekarang, dekripsi nanti" (Harvest now, decrypt later) adalah serangan di mana seseorang merekam data terenkripsi atau kunci publik yang terekspos saat ini, lalu menembus enkripsinya nanti setelah komputer kuantum yang cukup kuat tersedia. Untuk Ethereum, ini paling relevan dengan akun yang kunci publiknya sudah terekspos onchain (akun mana pun yang telah mengirim transaksi). Ini adalah salah satu alasan komunitas memperlakukan migrasi pasca-kuantum sebagai hal yang sensitif terhadap waktu meskipun ancaman kuantum belum terjadi dalam waktu dekat.
 

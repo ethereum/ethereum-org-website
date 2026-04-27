@@ -46,7 +46,7 @@ W lutym 2026 r. Vitalik Buterin [opublikował mapę drogową](https://x.com/Vita
 - **leanXMSS**: Ethereum zastąpi podpisy BLS za pomocą leanXMSS, schematu podpisów opartego na hashach dla walidatorów. Podpisy oparte na hashach są uważane za bezpieczne kwantowo, ponieważ opierają się wyłącznie na bezpieczeństwie funkcji hashujących, które komputery kwantowe osłabiają, ale nie łamią.
 - **leanVM**: Minimalna maszyna wirtualna z wiedzą zerową (zkVM) do agregacji podpisów opartej na SNARK. Ponieważ podpisy oparte na hashach są znacznie większe (około 3000 bajtów w porównaniu do 96 bajtów dla BLS), przejście na leanXMSS wygenerowałoby znacznie więcej danych na slot. Aby temu zaradzić, leanVM działa jako silnik agregacji, kompresując dane 250-krotnie. Pozwala to zachować korzyści wydajnościowe wynikające z łączenia wielu podpisów w jeden, nawet po przejściu na schematy bezpieczne kwantowo.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="Dlaczego Ethereum nie może po prostu zastąpić BLS schematem odpornym na ataki kwantowe?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 Właściwość agregacji, która sprawia, że BLS jest wydajny (łączenie setek tysięcy podpisów w jeden), nie ma oczywistego odpowiednika bezpiecznego kwantowo. Podpisy postkwantowe są również znacznie większe niż podpisy BLS. Zwykła zamiana jednego na drugie sprawiłaby, że warstwa konsensusu Ethereum stałaby się znacznie wolniejsza i droższa. Dlatego zespół buduje leanVM, narzędzie, które wykorzystuje dowody z wiedzą zerową do wydajnej agregacji podpisów bezpiecznych kwantowo.
 
@@ -135,37 +135,37 @@ Kwestia tego, jak postępować z uśpionymi portfelami (kontami, których właś
 
 ## Często zadawane pytania {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="Czy komputery kwantowe mogą dziś ukraść moje ETH?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **Nie.** Żaden dzisiejszy komputer kwantowy nie jest w stanie złamać kryptografii Ethereum. Obecny sprzęt kwantowy jest daleki od wymaganej skali. Prace opisane na tej stronie są przygotowaniem na przyszłość, a nie odpowiedzią na aktywne zagrożenie.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="Kiedy komputery kwantowe mogą stać się zagrożeniem?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 Szacunki są różne. Badania Google z marca 2026 r. sugerują, że sprzęt potrzebny do złamania 256-bitowej kryptografii opartej na krzywych eliptycznych może pojawić się najwcześniej pod koniec tej dekady, ale nadal pozostają poważne wyzwania inżynieryjne. Większość badaczy uważa, że realne zagrożenie to kwestia co najmniej kilku lat. Szczera odpowiedź brzmi: nikt nie zna dokładnego harmonogramu, i właśnie dlatego przygotowanie się już teraz jest tak ważne.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="Czy będę musiał coś zrobić, aby chronić swój portfel?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 Ostatecznie tak. Gdy schematy podpisów postkwantowych będą dostępne w Ethereum, użytkownicy będą chcieli zmigrować swoje konta. Oprogramowanie portfela prawdopodobnie zajmie się tym przejściem za Ciebie. Na razie nie musisz nic robić. Kiedy konieczne będzie podjęcie działań, społeczność Ethereum i twórcy portfeli zapewnią jasne wskazówki i narzędzia.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="A co z moimi tokenami, NFT i pozycjami DeFi?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 Aktywa w Ethereum są kontrolowane przez podpisy kont. Po zmigrowaniu konta do schematu podpisów bezpiecznego kwantowo, wszystko na tym koncie jest chronione. Nie musisz migrować każdego zasobu z osobna. Inteligentne kontrakty przechowujące środki (takie jak protokoły zdecentralizowanych finansów (DeFi)) mogą wymagać własnych aktualizacji w zależności od tego, jakich prymitywów kryptograficznych używają wewnętrznie.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="Czy Ethereum jest w tej kwestii w tyle za innymi blockchainami?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 Nie. Ethereum ma jeden z najbardziej ustrukturyzowanych programów postkwantowych ze wszystkich blockchainów: dedykowany zespół, finansowane badania, cotygodniowe devnety i opublikowaną mapę drogową migracji, traktując obliczenia kwantowe jako pierwszorzędne ograniczenie projektowe. Żaden blockchain nie zakończył jeszcze pełnego przejścia na technologie postkwantowe. Według szacunków Fundacji Ethereum, ekspozycja uśpionych funduszy Ethereum podatnych na ataki kwantowe wynosi około 0,1%, co jest drastycznie niższą wartością niż w przypadku innych głównych sieci blockchain.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="Czym jest "zbieraj teraz, odszyfruj później"?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 „Zbierz teraz, odszyfruj później” (ang. Harvest now, decrypt later) to atak, w którym ktoś rejestruje zaszyfrowane dane lub ujawnione klucze publiczne dzisiaj, a następnie łamie szyfrowanie później, gdy powstanie wystarczająco potężny komputer kwantowy. W przypadku Ethereum jest to najbardziej istotne dla kont, których klucze publiczne są już ujawnione onchain (każde konto, które wysłało transakcję). Jest to jeden z powodów, dla których społeczność traktuje migrację postkwantową jako wrażliwą na czas, mimo że zagrożenie kwantowe nie jest jeszcze bezpośrednie.
 

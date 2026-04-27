@@ -46,7 +46,7 @@ summaryPoints:
 - **leanXMSS**：以太坊將用 leanXMSS（一種為驗證者設計的基於雜湊的簽章方案）取代 BLS 簽章。基於雜湊的簽章被認為是量子安全的，因為它們僅依賴於雜湊函數的安全性，量子電腦會削弱但不會破解雜湊函數。
 - **leanVM**：一個用於基於 SNARK 的簽章聚合的極簡 zkVM（零知識虛擬機）。因為基於雜湊的簽章要大得多（大約 3,000 位元組，而 BLS 為 96 位元組），切換到 leanXMSS 將在每個時槽產生多得多的資料。為了解決這個問題，leanVM 充當聚合引擎，將資料壓縮 250 倍。這保留了將許多簽章組合成一個的效率優勢，即使在切換到量子安全方案之後也是如此。
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="為什麼以太坊不能直接用量子安全方案取代 BLS？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 使 BLS 高效的聚合特性（將數十萬個簽章組合成一個）並沒有明顯的量子安全等效方案。後量子簽章也比 BLS 簽章大得多。簡單地將一個替換為另一個會使以太坊的共識層變得明顯更慢且更昂貴。這就是為什麼團隊正在構建 leanVM，這是一個使用零知識證明來高效聚合量子安全簽章的工具。
 
@@ -135,37 +135,37 @@ summaryPoints:
 
 ## 常見問題 {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="量子電腦現在能竊取我的 ETH 嗎？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **不。** 當今沒有任何量子電腦可以破解以太坊的密碼學。目前的量子硬體遠未達到所需的規模。本頁面描述的工作是為未來做準備，而不是對活躍威脅的反應。
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="量子電腦何時會成為威脅？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 估計各不相同。Google 2026 年 3 月的研究表明，破解 256 位元橢圓曲線密碼學所需的硬體最早可能在本世紀末左右出現，但仍存在重大的工程挑戰。大多數研究人員認為，現實的威脅至少還有幾年的時間。誠實的答案是沒有人知道確切的時間表，這正是為什麼現在做準備很重要的原因。
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="我需要做些什麼來保護我的錢包嗎？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 最終是的。一旦以太坊上提供了後量子簽章方案，使用者將需要遷移他們的帳戶。錢包軟體可能會為您處理此過渡。目前，您不需要做任何事情。當需要採取行動時，以太坊社群和錢包開發者將提供明確的指導和工具。
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="那我的代幣、NFT 和 DeFi 部位呢？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 以太坊上的資產由帳戶簽章控制。一旦您的帳戶遷移到量子安全簽章方案，該帳戶中的所有內容都會受到保護。您不需要單獨遷移每項資產。持有資金的智慧合約（如去中心化金融 (DeFi) 協定）可能需要根據其內部使用的密碼學原語進行自身的升級。
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="在這方面，以太坊落後於其他區塊鏈嗎？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 不是。以太坊擁有所有區塊鏈中最結構化的後量子計劃之一：專門的團隊、受資助的研究、每週的開發者網路以及已發布的遷移路線圖，將量子計算視為一等設計約束。目前還沒有任何區塊鏈完成全面的後量子過渡。根據以太坊基金會的估計，以太坊易受量子攻擊的休眠資金風險約為 0.1%，遠低於其他主要區塊鏈網路。
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="什麼是「現在收集，日後解密」？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 「現在收集，以後解密 (Harvest now, decrypt later)」是一種攻擊方式，即有人現在記錄加密資料或暴露的公鑰，然後在未來存在足夠強大的量子電腦時破解加密。對於以太坊來說，這與公鑰已經暴露在鏈上的帳戶（任何發送過交易的帳戶）最為相關。這也是為什麼社群將後量子遷移視為具有時間敏感性的原因之一，即使量子威脅尚未迫在眉睫。
 

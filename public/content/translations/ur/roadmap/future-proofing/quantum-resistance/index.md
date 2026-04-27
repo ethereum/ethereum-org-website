@@ -46,7 +46,7 @@ summaryPoints:
 - **leanXMSS**: ایتھیریم BLS دستخطوں کو leanXMSS سے بدل دے گا، جو توثیق کاروں کے لیے ہیش پر مبنی دستخطی اسکیم ہے۔ ہیش پر مبنی دستخطوں کو کوانٹم کے لحاظ سے محفوظ سمجھا جاتا ہے کیونکہ وہ صرف ہیش فنکشنز کی سیکیورٹی پر انحصار کرتے ہیں، جنہیں کوانٹم کمپیوٹرز کمزور تو کرتے ہیں لیکن توڑتے نہیں ہیں۔
 - **leanVM**: SNARK پر مبنی دستخط جمع کرنے کے لیے ایک کم از کم zkVM (صفر علم ورچوئل مشین)۔ چونکہ ہیش پر مبنی دستخط نمایاں طور پر بڑے ہوتے ہیں (BLS کے لیے <span dir="ltr">96 bytes</span> کے مقابلے میں تقریباً <span dir="ltr">3,000 bytes</span>)، اس لیے leanXMSS پر جانے سے فی سلاٹ نمایاں طور پر زیادہ ڈیٹا پیدا ہوگا۔ اسے حل کرنے کے لیے، leanVM ایک ایگریگیشن انجن کے طور پر کام کرتا ہے، جو ڈیٹا کو <span dir="ltr">250x</span> تک سکیڑتا ہے۔ یہ کوانٹم کے لحاظ سے محفوظ اسکیموں پر جانے کے بعد بھی، بہت سے دستخطوں کو ایک میں ملانے کے کارکردگی کے فوائد کو محفوظ رکھتا ہے۔
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="ایتھیریم صرف BLS کو کوانٹم سے محفوظ اسکیم سے کیوں نہیں بدل سکتا؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 وہ ایگریگیشن خصوصیت جو BLS کو موثر بناتی ہے (لاکھوں دستخطوں کو ایک میں ملانا) اس کا کوئی واضح کوانٹم محفوظ متبادل نہیں ہے۔ پوسٹ کوانٹم دستخط بھی BLS دستخطوں سے بہت بڑے ہوتے ہیں۔ محض ایک کو دوسرے سے بدلنے سے ایتھیریم کی اتفاق رائے کی تہہ نمایاں طور پر سست اور زیادہ مہنگی ہو جائے گی۔ یہی وجہ ہے کہ ٹیم leanVM بنا رہی ہے، ایک ایسا ٹول جو کوانٹم کے لحاظ سے محفوظ دستخطوں کو مؤثر طریقے سے جمع کرنے کے لیے صفر علم ثبوت کا استعمال کرتا ہے۔
 
@@ -135,37 +135,37 @@ summaryPoints:
 
 ## اکثر پوچھے گئے سوالات {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="کیا کوانٹم کمپیوٹرز آج میرا ETH چرا سکتے ہیں؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **نہیں۔** آج کوئی بھی کوانٹم کمپیوٹر ایتھیریم کے علمِ تشفیر کو نہیں توڑ سکتا۔ موجودہ کوانٹم ہارڈویئر مطلوبہ پیمانے سے بہت دور ہے۔ اس صفحے پر بیان کردہ کام مستقبل کی تیاری ہے، نہ کہ کسی فعال خطرے کا ردعمل۔
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="کوانٹم کمپیوٹرز کب ایک خطرہ بن سکتے ہیں؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 تخمینے مختلف ہیں۔ گوگل کی <span dir="ltr">March 2026</span> کی تحقیق بتاتی ہے کہ <span dir="ltr">256-bit</span> بیضوی منحنی علمِ تشفیر کو توڑنے کے لیے درکار ہارڈویئر جلد از جلد اس دہائی کے آخر تک آ سکتا ہے، لیکن انجینئرنگ کے اہم چیلنجز باقی ہیں۔ زیادہ تر محققین ایک حقیقت پسندانہ خطرے کو کم از کم کئی سال دور سمجھتے ہیں۔ ایماندارانہ جواب یہ ہے کہ کوئی بھی صحیح ٹائم لائن نہیں جانتا، اور یہی وجہ ہے کہ ابھی سے تیاری کرنا اہم ہے۔
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="کیا مجھے اپنے والیٹ کو محفوظ رکھنے کے لیے کچھ کرنے کی ضرورت ہوگی؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 بالآخر، ہاں۔ ایک بار جب ایتھیریم پر پوسٹ کوانٹم دستخطی اسکیمیں دستیاب ہو جائیں گی، تو صارفین اپنے اکاؤنٹس کو منتقل کرنا چاہیں گے۔ والیٹ سافٹ ویئر ممکنہ طور پر آپ کے لیے اس منتقلی کو سنبھالے گا۔ فی الحال، آپ کو کچھ کرنے کی ضرورت نہیں ہے۔ جب کارروائی کی ضرورت ہوگی، تو ایتھیریم کمیونٹی اور والیٹ ڈویلپرز واضح رہنمائی اور ٹولز فراہم کریں گے۔
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="میرے ٹوکنز، NFTs، اور DeFi پوزیشنز کا کیا ہوگا؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 ایتھیریم پر اثاثے اکاؤنٹ کے دستخطوں کے ذریعے کنٹرول کیے جاتے ہیں۔ ایک بار جب آپ کا اکاؤنٹ کوانٹم کے لحاظ سے محفوظ دستخطی اسکیم میں منتقل ہو جاتا ہے، تو اس اکاؤنٹ میں موجود ہر چیز محفوظ ہو جاتی ہے۔ آپ کو ہر اثاثے کو انفرادی طور پر منتقل کرنے کی ضرورت نہیں ہے۔ فنڈز رکھنے والے اسمارٹ کانٹریکٹس (جیسے غیر مرکزی مالیات (DeFi) پروٹوکولز) کو اپنے اپ گریڈز کی ضرورت پڑ سکتی ہے، اس بات پر منحصر ہے کہ وہ اندرونی طور پر کون سے علمِ تشفیر کے بنیادی اصول استعمال کرتے ہیں۔
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="کیا ایتھیریم اس معاملے میں دیگر بلاک چینز سے پیچھے ہے؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 نہیں۔ ایتھیریم کے پاس کسی بھی بلاک چین کے سب سے منظم پوسٹ کوانٹم پروگرامز میں سے ایک ہے: ایک مخصوص ٹیم، فنڈڈ ریسرچ، ہفتہ وار ڈیونیٹس، اور ایک شائع شدہ مائیگریشن روڈ میپ، جو کوانٹم کمپیوٹنگ کو فرسٹ کلاس ڈیزائن کی رکاوٹ کے طور پر مانتا ہے۔ ابھی تک کسی بھی بلاک چین نے مکمل پوسٹ کوانٹم منتقلی مکمل نہیں کی ہے۔ ایتھیریم فاؤنڈیشن کے تخمینے کے مطابق، ایتھیریم کا کوانٹم کے خطرے سے دوچار غیر فعال فنڈ کا خطرہ تقریباً <span dir="ltr">0.1%</span> ہے، جو دیگر بڑے بلاک چین نیٹ ورکس کے مقابلے میں بہت کم ہے۔
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="'ابھی جمع کریں، بعد میں ڈکرپٹ کریں' کیا ہے؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "ابھی جمع کریں، بعد میں ڈکرپٹ کریں (Harvest now, decrypt later)" ایک ایسا حملہ ہے جہاں کوئی آج انکرپٹڈ ڈیٹا یا ظاہر شدہ عوامی کلیدوں کو ریکارڈ کرتا ہے، اور پھر بعد میں جب ایک کافی طاقتور کوانٹم کمپیوٹر موجود ہو تو خفیہ کاری کو توڑ دیتا ہے۔ ایتھیریم کے لیے، یہ ان اکاؤنٹس سے سب سے زیادہ متعلقہ ہے جن کی عوامی کلیدیں پہلے ہی آن چین ظاہر ہو چکی ہیں (کوئی بھی اکاؤنٹ جس نے ٹرانزیکشن بھیجی ہو)۔ یہ ایک وجہ ہے کہ کمیونٹی پوسٹ کوانٹم منتقلی کو وقت کے لحاظ سے حساس سمجھتی ہے حالانکہ کوانٹم کا خطرہ ابھی فوری نہیں ہے۔
 

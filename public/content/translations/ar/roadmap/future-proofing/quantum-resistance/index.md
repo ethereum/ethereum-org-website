@@ -46,7 +46,7 @@ summaryPoints:
 - **<span dir="ltr">leanXMSS</span>**: ستستبدل إيثيريوم توقيعات <span dir="ltr">BLS</span> بـ <span dir="ltr">leanXMSS</span>، وهو مخطط توقيع قائم على التجزئة للمدققين. تعتبر التوقيعات القائمة على التجزئة آمنة كميًا لأنها تعتمد فقط على أمان وظائف التجزئة، والتي تضعفها أجهزة الكمبيوتر الكمية ولكن لا تكسرها.
 - **<span dir="ltr">leanVM</span>**: آلة افتراضية للمعرفة الصفرية (<span dir="ltr">zkVM</span>) مصغرة لتجميع التوقيعات القائمة على <span dir="ltr">SNARK</span>. نظرًا لأن التوقيعات القائمة على التجزئة أكبر بكثير (حوالي <span dir="ltr">3,000 bytes</span> مقارنة بـ <span dir="ltr">96 bytes</span> لـ <span dir="ltr">BLS</span>)، فإن التبديل إلى <span dir="ltr">leanXMSS</span> سينتج بيانات أكثر بكثير لكل خانة. لحل هذه المشكلة، تعمل <span dir="ltr">leanVM</span> كمحرك تجميع، حيث تضغط البيانات بمقدار <span dir="ltr">250x</span>. يحافظ هذا على فوائد الكفاءة المتمثلة في دمج العديد من التوقيعات في توقيع واحد، حتى بعد التبديل إلى المخططات الآمنة كميًا.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="لماذا لا يمكن لإيثيريوم ببساطة استبدال BLS بمخطط آمن كميًا؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 خاصية التجميع التي تجعل <span dir="ltr">BLS</span> فعالاً (دمج مئات الآلاف من التوقيعات في توقيع واحد) ليس لها مكافئ واضح آمن كميًا. كما أن توقيعات ما بعد الكم أكبر بكثير من توقيعات <span dir="ltr">BLS</span>. مجرد استبدال أحدهما بالآخر سيجعل طبقة الإجماع في إيثيريوم أبطأ وأكثر تكلفة بشكل ملحوظ. لهذا السبب يقوم الفريق ببناء <span dir="ltr">leanVM</span>، وهي أداة تستخدم إثباتات المعرفة الصفرية لتجميع التوقيعات الآمنة كميًا بكفاءة.
 
@@ -135,37 +135,37 @@ summaryPoints:
 
 ## الأسئلة الشائعة {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="هل يمكن للحواسيب الكمية سرقة ETH الخاص بي اليوم؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **لا.** لا يوجد كمبيوتر كمي اليوم يمكنه كسر علم التشفير الخاص بإيثيريوم. الأجهزة الكمية الحالية بعيدة كل البعد عن النطاق المطلوب. العمل الموصوف في هذه الصفحة هو تحضير للمستقبل، وليس استجابة لتهديد نشط.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="متى يمكن أن تصبح الحواسيب الكمية تهديدًا؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 التقديرات تختلف. يشير بحث جوجل في <span dir="ltr">March 2026</span> إلى أن الأجهزة اللازمة لكسر علم التشفير للمنحنى الإهليلجي بحجم <span dir="ltr">256-bit</span> قد تصل في وقت ما قرب نهاية هذا العقد على أقرب تقدير، ولكن لا تزال هناك تحديات هندسية كبيرة. يعتبر معظم الباحثين أن التهديد الواقعي يبعد عدة سنوات على الأقل. الإجابة الصادقة هي أنه لا أحد يعرف الجدول الزمني الدقيق، وهذا هو بالضبط سبب أهمية التحضير الآن.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="هل سأحتاج إلى القيام بأي شيء لحماية محفظتي؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 في النهاية، نعم. بمجرد توفر مخططات توقيع ما بعد الكم على إيثيريوم، سيرغب المستخدمون في ترحيل حساباتهم. من المحتمل أن تتعامل برامج المحفظة مع هذا الانتقال نيابة عنك. في الوقت الحالي، لا يوجد شيء تحتاج إلى القيام به. عندما تكون هناك حاجة لاتخاذ إجراء، سيقدم مجتمع إيثيريوم ومطورو المحافظ إرشادات وأدوات واضحة.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="ماذا عن الرموز المميزة وNFTs ومراكز التمويل اللامركزي (DeFi) الخاصة بي؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 يتم التحكم في الأصول على إيثيريوم بواسطة توقيعات الحساب. بمجرد ترحيل حسابك إلى مخطط توقيع آمن كميًا، تتم حماية كل شيء في هذا الحساب. لا تحتاج إلى ترحيل كل أصل على حدة. قد تحتاج العقود الذكية التي تحتفظ بالأموال (مثل بروتوكولات التمويل اللامركزي (<span dir="ltr">DeFi</span>)) إلى ترقياتها الخاصة اعتمادًا على أساسيات التشفير التي تستخدمها داخليًا.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="هل إيثيريوم متأخرة عن سلاسل الكتل الأخرى في هذا الشأن؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 لا. تمتلك إيثيريوم أحد أكثر برامج ما بعد الكم تنظيمًا مقارنة بأي سلسلة كتل أخرى: فريق مخصص، وأبحاث ممولة، وشبكات تطوير أسبوعية، وخارطة طريق ترحيل منشورة، حيث تتعامل مع الحوسبة الكمية كقيد تصميم من الدرجة الأولى. لم تكمل أي سلسلة كتل انتقالًا كاملاً إلى ما بعد الكم حتى الآن. وفقًا لتقديرات مؤسسة إيثيريوم، فإن تعرض الأموال الخاملة في إيثيريوم للخطر الكمي يبلغ حوالي <span dir="ltr">0.1%</span>، وهو أقل بكثير من شبكات سلسلة الكتل الرئيسية الأخرى.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="ما هو "احصد الآن، وفك التشفير لاحقًا"؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "احصد الآن، وفك التشفير لاحقًا" هو هجوم يقوم فيه شخص ما بتسجيل بيانات مشفرة أو مفاتيح عامة مكشوفة اليوم، ثم يكسر التشفير لاحقًا بمجرد وجود كمبيوتر كمي قوي بما يكفي. بالنسبة لإيثيريوم، هذا هو الأكثر صلة بالحسابات التي تم كشف مفاتيحها العامة بالفعل على السلسلة (أي حساب أرسل معاملة). هذا هو أحد الأسباب التي تجعل المجتمع يتعامل مع ترحيل ما بعد الكم على أنه حساس للوقت على الرغم من أن التهديد الكمي ليس فوريًا بعد.
 
