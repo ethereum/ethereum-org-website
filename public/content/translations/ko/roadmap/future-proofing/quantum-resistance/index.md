@@ -46,7 +46,7 @@ summaryPoints:
 - **leanXMSS**: 이더리움은 BLS 서명을 검증자를 위한 해시 기반 서명 체계인 leanXMSS로 대체할 것입니다. 해시 기반 서명은 해시 함수의 보안에만 의존하기 때문에 양자 내성이 있는 것으로 간주됩니다. 양자 컴퓨터는 해시 함수를 약화시킬 수는 있지만 해독하지는 못합니다.
 - **leanVM**: SNARK 기반 서명 집계를 위한 최소한의 zkVM(영지식 가상 머신)입니다. 해시 기반 서명은 크기가 훨씬 크기 때문에(BLS의 96바이트에 비해 약 3,000바이트), leanXMSS로 전환하면 슬롯당 훨씬 더 많은 데이터가 생성됩니다. 이를 해결하기 위해 leanVM은 집계 엔진 역할을 하여 데이터를 250배 압축합니다. 이를 통해 양자 내성 체계로 전환한 후에도 많은 서명을 하나로 결합하는 효율성 이점을 유지할 수 있습니다.
 
-<ExpandableCard title="Why can't Ethereum just replace BLS with a quantum-safe scheme?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
+<ExpandableCard title="왜 이더리움은 BLS를 양자 내성 체계로 바로 교체할 수 없나요?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked why cant ethereum just replace BLS?">
 
 BLS를 효율적으로 만드는 집계 속성(수십만 개의 서명을 하나로 결합)은 명확한 양자 내성 대안이 없습니다. 또한 포스트 양자 서명은 BLS 서명보다 훨씬 큽니다. 단순히 하나를 다른 것으로 교체하면 이더리움의 합의 레이어가 훨씬 느려지고 비용이 많이 들게 됩니다. 이것이 바로 팀이 영지식 증명을 사용하여 양자 내성 서명을 효율적으로 집계하는 도구인 leanVM을 구축하는 이유입니다.
 
@@ -135,37 +135,37 @@ BLS를 효율적으로 만드는 집계 속성(수십만 개의 서명을 하나
 
 ## 자주 묻는 질문 {#faq}
 
-<ExpandableCard title="Can quantum computers steal my ETH today?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
+<ExpandableCard title="지금 당장 양자 컴퓨터가 내 ETH를 훔칠 수 있나요?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked can quantum computers steal my ETH today?">
 
 **아니요.** 오늘날 어떤 양자 컴퓨터도 이더리움의 암호학을 해독할 수 없습니다. 현재의 양자 하드웨어는 필요한 규모에 크게 미치지 못합니다. 이 페이지에 설명된 작업은 미래를 위한 준비이며, 현재 진행 중인 위협에 대한 대응이 아닙니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="When could quantum computers become a threat?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
+<ExpandableCard title="언제쯤 양자 컴퓨터가 위협이 될 수 있나요?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
 추정치는 다양합니다. 2026년 3월 구글의 연구에 따르면 256비트 타원 곡선 암호학을 해독하는 데 필요한 하드웨어는 빠르면 이번 10년 말쯤에 등장할 수 있지만, 여전히 중대한 엔지니어링 과제가 남아 있습니다. 대부분의 연구자들은 현실적인 위협이 최소 몇 년은 더 걸릴 것으로 보고 있습니다. 솔직한 답변은 아무도 정확한 일정을 모른다는 것이며, 이것이 바로 지금 준비하는 것이 중요한 이유입니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="Will I need to do anything to protect my wallet?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
+<ExpandableCard title="지갑을 보호하기 위해 무언가를 해야 하나요?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked will I need to do anything?">
 
 결국에는 그렇습니다. 이더리움에서 포스트 양자 서명 체계를 사용할 수 있게 되면 사용자는 계정을 마이그레이션해야 할 것입니다. 지갑 소프트웨어가 이 전환을 대신 처리해 줄 가능성이 높습니다. 지금 당장은 아무것도 할 필요가 없습니다. 조치가 필요할 때 이더리움 커뮤니티와 지갑 개발자가 명확한 지침과 도구를 제공할 것입니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="What about my tokens, NFTs, and DeFi positions?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
+<ExpandableCard title="내 토큰, NFT, DeFi 포지션은 어떻게 되나요?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what about tokens NFTs DeFi?">
 
 이더리움의 자산은 계정 서명에 의해 제어됩니다. 계정이 양자 내성 서명 체계로 마이그레이션되면 해당 계정의 모든 것이 보호됩니다. 각 자산을 개별적으로 마이그레이션할 필요는 없습니다. 자금을 보유한 스마트 컨트랙트(예: 탈중앙화 금융 (DeFi) 프로토콜)는 내부적으로 사용하는 암호학 기본 요소에 따라 자체 업그레이드가 필요할 수 있습니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is Ethereum behind other blockchains on this?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
+<ExpandableCard title="이더리움은 이 문제에 대해 다른 블록체인보다 뒤처져 있나요?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked is Ethereum behind?">
 
 아니요. 이더리움은 전담 팀, 자금 지원을 받는 연구, 주간 데브넷, 공개된 마이그레이션 로드맵 등 모든 블록체인 중 가장 체계적인 포스트 양자 프로그램을 갖추고 있으며, 양자 컴퓨팅을 일급 설계 제약 조건으로 취급합니다. 아직 완전한 포스트 양자 전환을 완료한 블록체인은 없습니다. 이더리움 재단의 추정에 따르면, 이더리움의 양자 취약 휴면 자금 노출은 약 0.1%로 다른 주요 블록체인 네트워크보다 현저히 낮습니다.
 
 </ExpandableCard>
 
-<ExpandableCard title="What is 'harvest now, decrypt later'?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="'지금 수집하고 나중에 해독하기'란 무엇인가요?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "지금 수집하고 나중에 해독(Harvest now, decrypt later)"은 누군가 오늘 암호화된 데이터나 노출된 공개키를 기록해 두었다가 나중에 충분히 강력한 양자 컴퓨터가 존재할 때 암호화를 해독하는 공격입니다. 이더리움의 경우, 이는 공개키가 이미 온체인에 노출된 계정(트랜잭션을 보낸 적이 있는 모든 계정)과 가장 관련이 있습니다. 이것이 양자 위협이 아직 임박하지 않았음에도 불구하고 커뮤니티가 포스트 양자 마이그레이션을 시간에 민감한 문제로 취급하는 한 가지 이유입니다.
 
