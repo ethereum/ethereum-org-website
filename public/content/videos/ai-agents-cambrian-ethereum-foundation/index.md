@@ -13,7 +13,7 @@ topic:
   - "use-cases"
 format: interview
 author: The Block
-breadcrumb: "AI Agents: Cambrian and EF"
+breadcrumb: "AI agents reshaping crypto"
 ---
 
 **Sam Green**, founder of Cambrian Network and author of the AgentFi Landscape Report, and **Austin Griffith**, head of builder growth at the Ethereum Foundation, join **Tim Copeland** and **Kelvin Sparks** on The Block's Crypto Beat podcast to discuss how AI agents are reshaping crypto development, trading, and risk management — from vibe-coded smart contract games to institutional adoption of agentic finance.

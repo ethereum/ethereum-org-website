@@ -13,7 +13,7 @@ topic:
   - "use-cases"
 format: interview
 author: 21Shares
-breadcrumb: "AI Agents: Vito Rivabella"
+breadcrumb: "AI agent identity and reputation"
 ---
 
 **Vito Rivabella**, AI coordinator at the Ethereum Foundation, joins **Darius** and **Max Mikkelsen** on the 21Shares Off the Block podcast to discuss AI agent identity, reputation infrastructure, ERC-8004, and why Ethereum is well positioned as the settlement layer for the emerging agentic economy.
