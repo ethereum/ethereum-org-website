@@ -133,6 +133,8 @@ x402 and [ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) together enable a f
 
 For the full protocol stack diagram and step-by-step loop, see [AI agents: Identity — The protocol stack](/ai-agents/identity/#protocol-stack).
 
+<VideoWatch slug="ai-ethereum-erc8004-x402-botconomy" />
+
 Agent deployments do not need to use USDC specifically; it is a straightforward example for this guide. The stablecoin rail selection section below explains which assets are compatible with the x402 flow and why.
 
 ## Stablecoin rail selection {#stablecoin-rail}
@@ -189,7 +191,6 @@ x402 is a machine-to-machine payment protocol built on the HTTP 402 status code.
 - [ERC-3009: Transfer with authorization](https://eips.ethereum.org/EIPS/eip-3009) — Full specification for the signature-based token transfer primitive that makes gasless, single-round-trip payments possible in x402
 - [x402 vs. Stripe MPP: choosing payment infrastructure for AI agents](https://workos.com/blog/x402-vs-stripe-mpp-how-to-choose-payment-infrastructure-for-ai-agents-and-mcp-tools-in-2026) — Architectural comparison of discrete vs. session-based payment models for high-frequency and streaming agent workloads
 - [x402 documentation](https://docs.x402.org/) — x402.org
-- [Video - AI on Ethereum: ERC-8004, x402, OpenClaw and the Botconomy](https://www.youtube.com/watch?v=h7zj0SDWmkw) — Exploring ERC-8004 as a decentralized identity + reputation layer, x402 as payment rails for agent-to-agent commerce, and the real-world “Clawdbot” experiments on Ethereum.
 - [Agentic Payments and Crypto’s Emerging Role in the AI Economy](https://www.galaxy.com/insights/research/x402-ai-agents-crypto-payments) — How standards like x402 aim to make AI agents full-fledged economic actors, and the potential to power non-crypto applications.
 
 ## Continue exploring the AI agents builder hub {#continue-exploring}

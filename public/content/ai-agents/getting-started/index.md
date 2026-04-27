@@ -13,6 +13,8 @@ faqItems:
 
 This guide walks through the four steps required to deploy your first autonomous agent on Ethereum: creating a smart account wallet, funding it, connecting an agent framework, and configuring spending guardrails. Each step links to dedicated pages for deeper implementation guidance.
 
+<VideoWatch slug="ai-agents-ethereum-vito-rivabella" />
+
 Before going further, it is worth understanding why this stack differs from standard Ethereum development. When a human signs a transaction, they act as a natural safety checkpoint. An autonomous agent does not. 
 
 **Giving an agent an unconstrained private key is equivalent to giving it unlimited spending authority**—a single hallucination, a logic error, or a prompt injection can drain an account. The patterns below are designed to prevent that.
@@ -314,7 +316,6 @@ Start on Sepolia testnet. Testnet ETH has no real value, so experimentation carr
 ## Further reading {#further-reading}
 
 - [AI Agents in Cryptocurrency: Architecture, Integration, and Best Practices](https://medium.com/@gwrx2005/ai-agents-in-cryptocurrency-architecture-integration-and-best-practices-a107429bf780) - A comprehensive overview of AI agents in cryptocurrency, covering their architecture, integration with blockchain, and best practices. 
-- [Video: AI Agents & Ethereum with Vito Rivabella: Identity, Reputation and the Agentic Economy](https://www.youtube.com/watch?v=N8yAixLP-8E) — Exploring the emerging agentic economy, and how AI agents are evolving from simple tools into autonomous economic participants supported by onchain identity, reputation, and validation standards like ERC-8004.
 - [When AI Meets Blockchain: A Guide to Securing the Next Frontier](https://quantstamp.com/blog/when-ai-meets-blockchain-a-guide-to-securing-the-next-frontier) - Exploring the security vulnerabilities introduced by integrating autonomous AI agents into blockchain ecosystems, and outlining mitigation strategies developers can use to safeguard. 
 
 ## Continue exploring the AI agents builder hub {#continue-exploring} 
