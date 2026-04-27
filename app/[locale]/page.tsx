@@ -15,7 +15,6 @@ import GetStartedGrid from "@/components/Homepage/GetStartedGrid"
 import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import { TrackedSection } from "@/components/TrackedSection"
 import { BaseLink } from "@/components/ui/Link"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
@@ -84,66 +83,51 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <HomeHero eventCategory={eventCategory} />
 
           <div className="my-24 w-full space-y-24 px-4 md:mx-6 lg:my-32 lg:space-y-32">
-            <TrackedSection id="kpi" eventCategory={eventCategory}>
-              <KPISection
-                accountHolders={accountHolders}
-                transactionsToday={transactionsToday}
-                className="py-12"
-              />
-            </TrackedSection>
+            <KPISection
+              accountHolders={accountHolders}
+              transactionsToday={transactionsToday}
+              className="py-12"
+            />
 
-            <TrackedSection id="savings_carousel" eventCategory={eventCategory}>
-              <SavingsCarousel
-                className="py-12"
-                eventCategory={eventCategory}
-              />
-            </TrackedSection>
+            <SavingsCarousel className="py-12" eventCategory={eventCategory} />
 
-            <TrackedSection id="trust_logos" eventCategory={eventCategory}>
-              <TrustLogos className="py-12" eventCategory={eventCategory} />
-            </TrackedSection>
+            <TrustLogos className="py-12" eventCategory={eventCategory} />
 
-            <TrackedSection id="simulator" eventCategory={eventCategory}>
-              <SimulatorSection
-                className="py-12"
-                header={
-                  <div className="flex flex-col items-center gap-4 text-center">
-                    <SectionTag variant="plain">
-                      {t("page-index-simulator-tag")}
-                    </SectionTag>
-                    <SectionHeader className="mt-0 mb-0 leading-tight lg:text-6xl">
-                      {t("page-index-simulator-title")}
-                    </SectionHeader>
-                    <p className="text-lg text-body-medium md:text-xl">
-                      {t("page-index-simulator-subtitle")}
-                    </p>
-                  </div>
-                }
-                footer={
-                  <BaseLink
-                    href="/guides/"
-                    hideArrow
-                    className="inline-flex items-center gap-1 no-underline"
-                    customEventOptions={{
-                      eventCategory,
-                      eventAction: "section_click",
-                      eventName: "simulator/explore_guides",
-                    }}
-                  >
-                    {t("page-index-simulator-cta")}
-                    <ArrowRight className={cn("size-4", twFlipForRtl)} />
-                  </BaseLink>
-                }
-              />
-            </TrackedSection>
+            <SimulatorSection
+              className="py-12"
+              header={
+                <div className="flex flex-col items-center gap-4 text-center">
+                  <SectionTag variant="plain">
+                    {t("page-index-simulator-tag")}
+                  </SectionTag>
+                  <SectionHeader className="mt-0 mb-0 leading-tight lg:text-6xl">
+                    {t("page-index-simulator-title")}
+                  </SectionHeader>
+                  <p className="text-lg text-body-medium md:text-xl">
+                    {t("page-index-simulator-subtitle")}
+                  </p>
+                </div>
+              }
+              footer={
+                <BaseLink
+                  href="/guides/"
+                  hideArrow
+                  className="inline-flex items-center gap-1 no-underline"
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "section_click",
+                    eventName: "simulator/explore_guides",
+                  }}
+                >
+                  {t("page-index-simulator-cta")}
+                  <ArrowRight className={cn("size-4", twFlipForRtl)} />
+                </BaseLink>
+              }
+            />
 
-            <TrackedSection id="feature_cards" eventCategory={eventCategory}>
-              <FeatureCards eventCategory={eventCategory} />
-            </TrackedSection>
+            <FeatureCards eventCategory={eventCategory} />
 
-            <TrackedSection id="get_started" eventCategory={eventCategory}>
-              <GetStartedGrid eventCategory={eventCategory} />
-            </TrackedSection>
+            <GetStartedGrid eventCategory={eventCategory} />
           </div>
         </MainArticle>
       </I18nProvider>
