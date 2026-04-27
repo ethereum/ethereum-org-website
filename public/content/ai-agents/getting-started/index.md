@@ -21,7 +21,7 @@ Before going further, it is worth understanding why this stack differs from stan
 
 Before you start, have the following ready.
 
-**A funded development environment.** You need [Node.js (v18+)](https://nodejs.org) and a package manager (npm, yarn, or pnpm). If you are new to Ethereum development, read the resources in [the Developers hub](/developers/) for context and resources about building on the network, and the [AI agents: Ethereum](/ai-agents/ethereum/) hub page for the specific capabilities your agent will use.
+**A funded development environment.** You need [Node.js (v18+)](https://nodejs.org) and a package manager (npm, yarn, or pnpm). If you are new to Ethereum development, read the resources in [the Developers hub](/developers/) for context and resources about building on the network, and the [AI agents: Why Ethereum](/ai-agents/ethereum/) hub page for the specific capabilities your agent will use.
 
 **An LLM API key.** Your agent framework needs access to a language model to drive its reasoning loop. The examples on this page use the OpenAI API, but any provider supported by the Vercel AI SDK (Anthropic, Google, Mistral, and others) works the same way. Set your key in your environment before running any code.
 
@@ -319,20 +319,20 @@ Start on Sepolia testnet. Testnet ETH has no real value, so experimentation carr
 
 ## Continue exploring the AI agents builder hub {#continue-exploring} 
 
-### Foundation {#foundation}
+### Start here {#start-here}
 
 - [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
 
-### Core infrastructure {#core-infrastructure}
+### Core building blocks {#core-building-blocks}
 
 - [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
+- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
 - [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
 - [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
 
-### Ecosystem {#ecosystem}
+### Ecosystem and tooling {#ecosystem-and-tooling}
 
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
+- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.

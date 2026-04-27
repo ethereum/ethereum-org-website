@@ -1,6 +1,6 @@
 ---
 title: Build AI agents on Ethereum
-metaTitle: AI agents on Ethereum | Builder hub
+metaTitle: AI agent builder hub | ethereum.org
 description: A developer hub for building AI agents on Ethereum. Covers wallets, verifiable computation, machine payments, agent identity, and the L2 ecosystem.
 lang: en
 template: use-cases
@@ -20,7 +20,7 @@ buttons:
     isSecondary: true
 faqItems:
   - question: "What is an AI agent on Ethereum?"
-    answer: "An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant. See Ethereum for AI agents for the technical case for AI agents, or, to learn the basics of what people can do on Ethereum with AI, see Decentralized AI."
+    answer: "An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant. See Why Ethereum for AI agents for the technical case for AI agents, or, to learn the basics of what people can do on Ethereum with AI, see Decentralized AI."
   - question: "How is an AI agent different from a bot?"
     answer: "A bot follows fixed rules. Given input X, it always does Y. An AI agent uses a language model to reason about novel situations, form a plan, and take sequences of actions that may differ depending on context. Agents are capable of multi-step reasoning, adapting to unexpected conditions, and handling tasks they were not explicitly programmed for. The trade-off is that agent behavior is less predictable, which is why spending limits and session keys are essential. See the Getting started with AI agents guide."
 ---
@@ -49,7 +49,7 @@ This builder hub is the starting point for developers building production AI age
 | **Guardrails**       | Enforced by smart contract logic (spending limits, session keys, allowlists)   | Enforced by the operator's server configuration  |
 | **Verification**     | Behavior can be proven onchain via zkML or TEE attestations                    | Behavior is attested only by the operator        |
 
-See [AI agents: Ethereum](/ai-agents/ethereum/) to learn more about the technical case for using Ethereum as the settlement and coordination layer for AI agents.
+See [AI agents: Why Ethereum](/ai-agents/ethereum/) to learn more about the technical case for using Ethereum as the settlement and coordination layer for AI agents.
 
 ## What the AI agent builder hub covers {#what-the-ai-agent-hub-covers}
 
@@ -88,22 +88,22 @@ See [AI agents: Data and stats](/ai-agents/data/) for onchain metrics tracking t
 
 ## AI agent builder hub sections {#ai-agent-builder-hub-sections}
 
-### Foundation {#foundation}
+### Start here {#start-here}
 
 - [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
 - [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
 
-### Core infrastructure {#core-infrastructure}
+### Core building blocks {#core-building-blocks}
 
 - [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
+- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
 - [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
 - [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
 
-### Ecosystem {#ecosystem}
+### Ecosystem and tooling {#ecosystem-and-tooling}
 
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
+- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
 
@@ -118,7 +118,7 @@ See [AI agents: Data and stats](/ai-agents/data/) for onchain metrics tracking t
 
 <ExpandableCard title="What is an AI agent on Ethereum?">
 
-An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant. See [AI agents: Ethereum](/ai-agents/ethereum/) for the technical case for AI agents, or, to learn the basics of what people can do on Ethereum with AI, see [Decentralized AI](/decentralized-ai/).
+An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant. See [AI agents: Why Ethereum](/ai-agents/ethereum/) for the technical case for AI agents, or, to learn the basics of what people can do on Ethereum with AI, see [Decentralized AI](/decentralized-ai/).
 
 </ExpandableCard>
 

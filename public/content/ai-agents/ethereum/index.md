@@ -1,6 +1,6 @@
 ---
-title: Ethereum for AI agents
-description: How Ethereum's core properties enable AI agent infrastructure, from onchain ownership and verifiable execution to programmable guardrails and machine payments
+title: Why Ethereum for AI agents
+description: Why Ethereum is used as the settlement and coordination layer for AI agents: onchain ownership, verifiable execution, programmable guardrails, and permissionless payments
 lang: en
 faqItems:
   - question: "Why would an AI agent use Ethereum instead of a centralized API?"
@@ -8,7 +8,7 @@ faqItems:
   - question: "What does Ethereum provide for AI agents that other blockchains may not?"
     answer: "Three capabilities in combination: the deepest ecosystem of production smart contracts (most DeFi, most stablecoins, most tooling), the most mature smart account infrastructure (ERC-4337 with production EntryPoint deployments on all major networks, EIP-7702 live since May 2025), and a production-deployed onchain agent identity standard (ERC-8004, live January 29, 2026 — Draft status, in active adoption). Evaluate whether your agent requires all three before choosing a settlement layer."
 ---
-# Ethereum for AI agents {#ethereum-for-ai-agents}
+# Why Ethereum for AI agents {#why-ethereum-for-ai-agents}
 
 AI agents operate across many platforms and networks. This page covers what builders need to understand about building on [Ethereum](/): the specific **technical capabilities** the network provides for autonomous agents, and the **architectural tradeoffs** to weigh before committing to that stack.
 
@@ -98,20 +98,20 @@ Three capabilities in combination: the deepest ecosystem of production smart con
 
 ## Continue exploring the AI agents builder hub {#continue-exploring}
 
-### Foundation {#foundation}
+### Start here {#start-here}
 
 - [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
 
-### Core infrastructure {#core-infrastructure}
+### Core building blocks {#core-building-blocks}
 
 - [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
+- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
 - [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
 - [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
 - [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
 
-### Ecosystem {#ecosystem}
+### Ecosystem and tooling {#ecosystem-and-tooling}
 
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
+- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 - [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
