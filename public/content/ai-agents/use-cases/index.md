@@ -26,7 +26,24 @@ DeFi protocols operate 24 hours a day, seven days a week. Human traders cannot. 
 
 **Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to specific protocols, [L2 deployment](/ai-agents/l2s/) for cost-effective high-frequency operations (Base or Arbitrum for deepest DeFi liquidity).
 
-DeFi automation is the most mature AI agent use case on Ethereum. The infrastructure it depends on, like session keys, ERC-4337 smart accounts, and L2 transaction costs, is production-ready. Agent-to-agent commerce, covered next, is earlier in its maturity curve.
+DeFi automation is the most mature AI agent use case on Ethereum. The infrastructure it depends on, like session keys, ERC-4337 smart accounts, and L2 transaction costs, is production-ready. Prediction markets, covered next, apply these same capabilities to a different use case.
+
+<VideoWatch slug="ai-agents-cambrian-ethereum-foundation" />
+
+## Prediction markets {#prediction-markets}
+
+Prediction markets let participants trade on the outcome of real-world events. AI agents are well suited to this domain because they can continuously monitor information sources, update probability estimates, and execute trades faster than human participants.
+
+**What agents are doing today:**
+- **Market making** — agents provide liquidity on prediction market platforms by quoting bid and ask prices on event outcomes, earning the spread while keeping markets efficient.
+- **Information aggregation** — agents ingest data from news feeds, social media sentiment, and onchain signals to update their probability models and trade when they detect mispricing.
+- **Automated position management** — agents monitor open positions across multiple markets, hedge correlated risks, and exit positions as new information arrives.
+
+[Olas](https://olas.network/) operates one of the most active agent networks in this category. Its "Trader" agent type is built for prediction market participation. During the 2024 US election cycle, AI agents were widely reported as active participants on [Polymarket](https://polymarket.com/), serving as both market makers and position-takers. Ethereum-native prediction markets like [Gnosis](https://www.gnosis.io/) provide additional infrastructure for onchain agent participation.
+
+**Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to prediction market contracts, [frameworks](/ai-agents/frameworks/) for data ingestion and strategy execution, [L2 deployment](/ai-agents/l2s/) for cost-effective high-frequency trading.
+
+Prediction market agents act on external information to take financial positions. Agent-to-agent commerce, covered next, extends the economic model further: agents hiring and paying other agents for specialized work.
 
 ## Agent-to-agent commerce {#agent-commerce}
 
@@ -114,8 +131,6 @@ Builders starting today should read the [AI agents: Identity](/ai-agents/identit
 ## Real-world examples {#real-world-examples}
 
 The use cases above are grounded in agents that are already operating on Ethereum today. Three examples illustrate what this looks like in practice.
-
-<VideoWatch slug="ai-agents-cambrian-ethereum-foundation" />
 
 ### Luna {#luna}
 
