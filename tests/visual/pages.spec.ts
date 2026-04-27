@@ -34,6 +34,24 @@ test.describe("Page Visual Tests", () => {
       await page.waitForFunction(
         () => document.querySelectorAll('[data-slot="loading"]').length === 0
       )
+      // FeedbackWidget is dynamic({ ssr: false }); waiting for its button proves
+      // hydration finished and dynamic chunks landed — same pattern other
+      // ssr:false components (Emoji/Twemoji) rely on to render.
+      await page.waitForSelector('[data-testid="feedback-widget-button"]')
+      // Force every <img loading="lazy"> to load now so below-the-fold images
+      // are present in the full-page snapshot (Chromatic captures the entire
+      // scroll height, not just the viewport).
+      await page.evaluate(() => {
+        for (const img of Array.from(document.images)) {
+          if (img.loading === "lazy") img.loading = "eager"
+        }
+      })
+      // Next.js Image's blur placeholder is removed only after the underlying
+      // <img> finishes loading. Snapshotting earlier captures the inline
+      // background-image and shows pixelated blur in the diff.
+      await page.waitForFunction(() =>
+        Array.from(document.images).every((img) => img.complete)
+      )
       await takeSnapshot(page, testInfo)
     })
   }
