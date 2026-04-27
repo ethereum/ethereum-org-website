@@ -208,30 +208,6 @@ cp .env.example .env.local
 pnpm install
 ```
 
-### 1d. Run Sanitizer
-
-Run the PR-scoped sanitizer to fix deterministic issues before the AI review:
-
-```bash
-cd "$WORKTREE_PATH"
-npx tsx src/scripts/i18n/sanitize-pr.ts --pr={PR_NUMBER}
-```
-
-The sanitizer handles:
-- Brand name auto-fix in frontmatter tags
-- Ticker symbol corrections
-- MDX angle bracket escaping (`<` → `&lt;`)
-- Orphaned HTML tag removal
-- Cross-script contamination detection
-- Untranslated content detection (franc-min)
-
-**Review the sanitizer output.** Stage the fixes it makes:
-```bash
-git add -A public/content/translations/ src/intl/
-```
-
-Report to user: "Sanitizer complete. {N} files modified. Changes staged."
-
 ## Phase 2: Load Knowledge Base and Glossary
 
 Before deploying agents, load accumulated knowledge from prior reviews:
@@ -354,6 +330,10 @@ The community has voted on these translations for key Ethereum terms. Use these 
 Use the ETHGlossary terms fetched in Phase 2 as the authority for technical term translations. Report deviations as **critical** issues (not warnings), with the current (wrong) translation and the expected (ETHGlossary) translation so Phase 5 can auto-fix them.
 
 **If you skip ETHGlossary, the entire review is invalid.**
+
+## On finding zero issues
+
+**Reporting zero critical issues is a fully acceptable outcome.** Do not invent issues to "show your work." If you genuinely cannot find a critical problem after a thorough check, report `0 critical, N warnings` (or `0/0`) and that is a valid result. Fabricated criticals cost more reviewer time than missed minor issues.
 
 ## Review Checklist
 
