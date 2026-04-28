@@ -8,7 +8,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
-import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
+import FindWalletProductTable from "@/components/FindWalletProductTable"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
