@@ -14195,6 +14195,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "shalom-ezekiel",
+      "name": "shalom ezekiel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107555717?v=4",
+      "profile": "https://github.com/shalom-ezekiel",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
