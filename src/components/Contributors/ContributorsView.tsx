@@ -25,11 +25,9 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
        */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        className="h-[132px] w-[132px]"
+        className="size-[132px]"
         src={contributor.avatar_url}
         alt=""
-        width={132}
-        height={132}
         loading="lazy"
         decoding="async"
       />
