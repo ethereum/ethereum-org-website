@@ -2210,6 +2210,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jzhishu"><img src="https://avatars.githubusercontent.com/u/39545185?v=4?s=100" width="100px;" alt="JH"/><br /><sub><b>JH</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajzhishu" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shalom-ezekiel"><img src="https://avatars.githubusercontent.com/u/107555717?v=4?s=100" width="100px;" alt="shalom ezekiel"/><br /><sub><b>shalom ezekiel</b></sub></a><br /><a href="#maintenance-shalom-ezekiel" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/bshastry"><img src="https://avatars.githubusercontent.com/u/2388185?v=4?s=100" width="100px;" alt="Bhargava Shastry"/><br /><sub><b>Bhargava Shastry</b></sub></a><br /><a href="#maintenance-bshastry" title="Maintenance">🚧</a></td>
+    </tr>
   </tbody>
 </table>
 
