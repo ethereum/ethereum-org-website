@@ -11,7 +11,7 @@ published: 2026-04-01
 
 ## Introduction {#introduction}
 
-A [previous article](/developers/tutorials/gasless) discussed using gasless access to your own application using EIP-712 signatures, but it is limited to your own smart contracts. Using [account abstraction](/roadmap/account-abstraction), we can create smart contract wallets that accept two types of transactions and relay them to a requested destination:
+A [previous article](/developers/tutorials/gasless/) discussed using gasless access to your own application using EIP-712 signatures, but it is limited to your own smart contracts. Using [account abstraction](/roadmap/account-abstraction/), we can create smart contract wallets that accept two types of transactions and relay them to a requested destination:
 
 - Transactions sent by a specific EOA (which require that EOA to have ETH)
 - Transactions sent from anywhere, but signed by the same EOA.
@@ -388,7 +388,7 @@ For everything else, use Vite, which handles serving the user interface for us.
 
 [This is the user interface code](https://github.com/qbzzt/260315-gasless-tokens/tree/main/server/src). Most of the code is nearly identical to that documented in [this article](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/#file-walk-through), with the exception of [`Token.jsx`](https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/src/Token.jsx).
 
-Parts of [`Token.jsx`](https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/src/Token.jsx) are similar to [`Greeter.jsx`](https://github.com/qbzzt/260301-gasless/blob/main/server/src/Greeter.jsx) in [this article](/developers/tutorials/gasless#ui-changes). Here are the new parts.
+Parts of [`Token.jsx`](https://github.com/qbzzt/260315-gasless-tokens/blob/main/server/src/Token.jsx) are similar to [`Greeter.jsx`](https://github.com/qbzzt/260301-gasless/blob/main/server/src/Greeter.jsx) in [this article](/developers/tutorials/gasless/#ui-changes). Here are the new parts.
 
 ```js
 import {
