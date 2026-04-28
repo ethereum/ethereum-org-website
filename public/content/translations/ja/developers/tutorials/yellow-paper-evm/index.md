@@ -4,6 +4,7 @@ description: "イーサリアムの正式な仕様であるイエローペーパ
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: ja
 published: 2022-05-15
 ---

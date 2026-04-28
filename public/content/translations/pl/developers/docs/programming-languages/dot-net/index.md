@@ -37,21 +37,21 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź [ethereum.org/learn](/le
 
 **Czy chcesz teraz pominąć konfigurację i przejść od razu do przykładów?**
 
-- [Playground](http://playground.nethereum.com/) – wchodź w interakcję z Ethereum i dowiedz się, jak używać Nethereum przez przeglądarkę.
-  - Zapytanie o saldo konta [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - Zapytanie o saldo inteligentnego kontraktu ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Przelew etheru na konto [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) – wchodź w interakcję z Ethereum i dowiedz się, jak używać Nethereum przez przeglądarkę.
+  - Zapytanie o saldo konta [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - Zapytanie o saldo inteligentnego kontraktu ERC20 [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - Przelew etheru na konto [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... I nIe tylko!
 
 ## Artykuły dla średniozaawansowanych {#intermediate-articles}
 
-- [Skoroszyt Nethereum/Lista przykładów](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Skoroszyt Nethereum/Lista przykładów](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Wdróż własne deweloperskie łańcuchy testowe](https://github.com/Nethereum/Testchains)
 - [Wtyczka VSCode Codegen dla Solidity](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity i Ethereum: dlaczego i jak](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Tworzenie internetowego interfejsu API ASP.NET Core dla dapek Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Użycie Nethereum Web3 do wdrożenia systemu śledzenia łańcucha dostaw](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Przetwarzanie bloków Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), z [przykładem w C# Playground](http://playground.nethereum.com/csharp/id/1025)
+- [Przetwarzanie bloków Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), z [przykładem w C# Playground](https://playground.nethereum.com/csharp/id/1025)
 - [Przesyłanie strumieniowe Nethereum przez Websocket](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido i Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum i Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź [ethereum.org/learn](/le
 
 ## Projekty, narzędzia i inne ciekawostki .NET {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _Kompiluj, twórz i uruchamiaj fragmenty kodu Nethereum w przeglądarce_
+- [Nethereum Playground](https://playground.nethereum.com/) - _Kompiluj, twórz i uruchamiaj fragmenty kodu Nethereum w przeglądarce_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen z interfejsem użytkownika w Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Lekki eksplorator blockchain i prosty portfel .NET Wasm SPA_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _Silnik reguł biznesowych (zarówno dla platformy .NET, jak i platformy Ethereum), który jest z natury oparty na metadanych_
@@ -78,7 +78,7 @@ Szukasz więcej materiałów? Sprawdź [ethereum.org/developers](/developers/).
 
 W Nethereum spędzamy czas głównie na [Gitterze](https://gitter.im/Nethereum/Nethereum), gdzie każdy może zadawać pytania i odpowiadać na nie, uzyskać pomoc lub po prostu odpocząć. Zachęcamy do tworzenia PR-ów lub otwierania zgłoszeń w [repozytorium Nethereum na GitHubie](https://github.com/Nethereum) lub po prostu przejrzenia wielu projektów pobocznych/przykładowych, które mamy. Znajdziesz nas również na [Discordzie](https://discord.gg/jQPrR58FxX)!
 
-Jeśli jesteś nowy w Nethermind i potrzebujesz pomocy, aby zacząć, dołącz do naszego [Discorda](http://discord.gg/PaCMRFdvWT). Nasi deweloperzy chętnie odpowiedzą na Twoje pytania. Nie wahaj się otworzyć PR lub zgłosić problemów w [repozytorium Nethermind na GitHubie](https://github.com/NethermindEth/nethermind).
+Jeśli jesteś nowy w Nethermind i potrzebujesz pomocy, aby zacząć, dołącz do naszego [Discorda](https://discord.gg/PaCMRFdvWT). Nasi deweloperzy chętnie odpowiedzą na Twoje pytania. Nie wahaj się otworzyć PR lub zgłosić problemów w [repozytorium Nethermind na GitHubie](https://github.com/NethermindEth/nethermind).
 
 ## Inne zagregowane listy {#other-aggregated-lists}
 

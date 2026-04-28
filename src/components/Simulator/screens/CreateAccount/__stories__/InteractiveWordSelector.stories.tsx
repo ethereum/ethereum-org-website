@@ -1,4 +1,3 @@
-import type { Meta, StoryObj } from "@storybook/react/*"
 import {
   expect,
   fireEvent,
@@ -6,7 +5,8 @@ import {
   waitFor,
   waitForElementToBeRemoved,
   within,
-} from "@storybook/test"
+} from "storybook/test"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { PhoneDecorator } from "@/components/Simulator/__stories__/PhoneDecorator"
 

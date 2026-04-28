@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: fr
 tags: [ "evm", "opcodes" ]
 skill: advanced
+breadcrumb: "Retro-ingenierie"
 published: 2021-12-30
 ---
 

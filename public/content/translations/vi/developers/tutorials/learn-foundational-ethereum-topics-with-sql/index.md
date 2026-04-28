@@ -4,6 +4,7 @@ description: "Hướng dẫn này giúp người đọc hiểu các khái niệm
 author: "Paul Apivat"
 tags: [ "SQL", "Truy vấn", "Các giao dịch" ]
 skill: beginner
+breadcrumb: "Ethereum với SQL"
 lang: vi
 published: 2021-05-11
 source: paulapivat.com

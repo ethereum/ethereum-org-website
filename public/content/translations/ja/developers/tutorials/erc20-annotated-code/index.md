@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ja
 tags: [ "Solidity", "ERC-20" ]
 skill: beginner
+breadcrumb: "ERC-20解説"
 published: 2021-03-09
 ---
 
@@ -418,7 +419,7 @@ contract ERC20 is Context, IERC20 {
 
 `_transfer`関数が実際の作業を行います。 これはprivate関数であり、他のコントラクト関数からのみ呼び出せます。 慣例として、private関数は状態変数と同様に`_<something>`と命名されます。
 
-通常、Solidityでは、メッセージ送信者に`msg.sender`を使用します。 しかし、それでは[OpenGSN](http://opengsn.org/)が機能しません。 トークンでetherレスのトランザクションを許可したい場合は、`_msgSender()`を使用する必要があります。 通常のトランザクションでは`msg.sender`を返しますが、etherレスのトランザクションの場合は、メッセージを中継したコントラクトではなく、元の署名者を返します。
+通常、Solidityでは、メッセージ送信者に`msg.sender`を使用します。 しかし、それでは[OpenGSN](https://opengsn.org/)が機能しません。 トークンでetherレスのトランザクションを許可したい場合は、`_msgSender()`を使用する必要があります。 通常のトランザクションでは`msg.sender`を返しますが、etherレスのトランザクションの場合は、メッセージを中継したコントラクトではなく、元の署名者を返します。
 
 ### 割当量関数 {#allowance-functions}
 

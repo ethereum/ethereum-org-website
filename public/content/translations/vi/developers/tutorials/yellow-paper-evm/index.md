@@ -4,6 +4,7 @@ description: "Tìm hiểu một phần của Sách Vàng, đặc tả kỹ thu�
 author: "qbzzt"
 tags: [ "evm" ]
 skill: intermediate
+breadcrumb: "Yellow Paper EVM"
 lang: vi
 published: 2022-05-15
 ---

@@ -5,6 +5,7 @@ author: Trailofbits
 lang: en
 tags: ["solidity", "smart contracts", "security", "testing"]
 skill: advanced
+breadcrumb: Slither
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -69,7 +70,7 @@ Use [crytic.io](https://github.com/crytic) to get access to private detectors an
 
 The capabilities and design of the Slither static analysis framework has been described in blog posts ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) and an [academic paper](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-Static analysis exists in different flavors. You most likely realize that compilers like [clang](https://clang-analyzer.llvm.org/) and [gcc](https://lwn.net/Articles/806099/) depend on these research techniques, but it also underpins ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) and tools based on formal methods like [Frama-C](https://frama-c.com/) and [Polyspace](https://www.mathworks.com/products/polyspace.html).
+Static analysis exists in different flavors. You most likely realize that compilers like [clang](https://clang-analyzer.llvm.org/) and [gcc](https://lwn.net/Articles/806099/) depend on these research techniques, but it also underpins ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) and tools based on formal methods like [Frama-C](https://frama-c.com/) and [Polyspace](https://www.mathworks.com/products/polyspace.html).
 
 We won't be exhaustively reviewing static analysis techniques and researcher here. Instead, we'll focus on what is needed to understand how Slither works so you can more effectively use it to find bugs and understand code.
 
@@ -168,7 +169,7 @@ Slither comes with built-in [data dependency](https://github.com/crytic/slither/
 
 An example of data dependency usage can be found in the [dangerous strict equality detector](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). Here Slither will look for strict equality comparison to a dangerous value ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)), and will inform the user that it should use `>=` or `<=` rather than `==`, to prevent an attacker to trap the contract. Among other, the detector will consider as dangerous the return value of a call to `balanceOf(address)` ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)), and will use the data dependency engine to track its usage.
 
-#### Fixed-point computation {#fixed-point-computation}
+#### Fixed-point computation {#fixed-point-computation-2}
 
 If your analysis navigates through the CFG and follows the edges, you are likely to see already visited nodes. For example, if a loop is presented as shown below:
 

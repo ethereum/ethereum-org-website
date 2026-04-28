@@ -17,7 +17,7 @@ The solution to this is using [smart contract](/glossary/#smart-contract) wallet
 
 <ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">More on account abstraction</ButtonLink>
 
-## Nodes for everyone
+## Nodes for everyone {#nodes-for-everyone}
 
 Users running [nodes](/glossary/#node) do not have to trust third parties to provide them with data, and they can interact quickly, privately, and permissionlessly with the Ethereum [blockchain](/glossary/#blockchain). However, running a node right now requires technical knowledge and substantial disk space, meaning many people must trust intermediaries instead.
 

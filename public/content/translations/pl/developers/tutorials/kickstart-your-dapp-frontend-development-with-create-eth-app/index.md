@@ -11,13 +11,14 @@ tags:
     "defi"
   ]
 skill: beginner
+breadcrumb: "create-eth-app"
 lang: pl
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Ostatnim razem przyjrzeliśmy się [ogólnemu obrazowi Solidity](https://soliditydeveloper.com/solidity-overview-2020) i wspomnieliśmy już o [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Teraz dowiesz się, jak go używać, jakie funkcje są zintegrowane oraz poznasz dodatkowe pomysły na jego rozbudowę. Stworzona przez Paula Razvana Berga, założyciela [Sablier](http://sablier.com/), ta aplikacja przyspieszy rozwój Twojego frontendu i oferuje kilka opcjonalnych integracji do wyboru.
+Ostatnim razem przyjrzeliśmy się [ogólnemu obrazowi Solidity](https://soliditydeveloper.com/solidity-overview-2020) i wspomnieliśmy już o [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Teraz dowiesz się, jak go używać, jakie funkcje są zintegrowane oraz poznasz dodatkowe pomysły na jego rozbudowę. Stworzona przez Paula Razvana Berga, założyciela [Sablier](https://sablier.com/), ta aplikacja przyspieszy rozwój Twojego frontendu i oferuje kilka opcjonalnych integracji do wyboru.
 
 ## Instalacja {#installation}
 

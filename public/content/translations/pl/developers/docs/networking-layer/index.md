@@ -159,5 +159,5 @@ Schemat warstwy sieciowej dla klientów konsensusu i wykonawczych, z [ethresear.
 [kademlia do discv5](https://vac.dev/kademlia-to-discv5)
 [Artykuł o kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Wprowadzenie do p2p Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[Relacja eth1/eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[Relacja eth1/eth2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [Wideo ze szczegółami dotyczącymi The Merge i klienta eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

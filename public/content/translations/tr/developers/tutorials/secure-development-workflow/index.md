@@ -4,6 +4,7 @@ description: "Güvenli akıllı sözleşmeler yazmak için önerilen bir iş ak�
 author: "Trailofbits"
 tags: [ "akıllı kontratlar", "güvenlik", "solidity" ]
 skill: intermediate
+breadcrumb: "Güvenlik kontrol listesi"
 lang: tr
 published: 2020-09-07
 source: Building secure contracts

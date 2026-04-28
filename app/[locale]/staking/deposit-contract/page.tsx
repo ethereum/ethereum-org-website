@@ -13,6 +13,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import DepositContractPage from "./_components/deposit-contract"
+import DepositContractJsonLD from "./page-jsonld"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -29,7 +30,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <DepositContractPage locale={locale} />
+      <DepositContractJsonLD locale={locale} />
+      <DepositContractPage />
     </I18nProvider>
   )
 }
@@ -40,10 +42,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-staking-deposit-contract",
-  })
+  const t = await getTranslations("page-staking-deposit-contract")
 
   return await getMetadata({
     locale,

@@ -92,7 +92,7 @@ const H2 = ({
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => {
   return (
-    <h2 className={cn("mb-8 mt-0 text-2xl md:text-3xl", className)} {...props}>
+    <h2 className={cn("mt-0 mb-8 text-2xl md:text-3xl", className)} {...props}>
       {children}
     </h2>
   )
@@ -171,7 +171,7 @@ const CommunityPage = () => {
           <CardContainer>
             {whyGetInvolvedCards.map((card, idx) => (
               <Card
-                className="m-4 min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%] lg:max-w-[31%]"
+                className="m-4 max-w-full min-w-[280px] flex-[1_0_30%] p-6 md:max-w-[46%] lg:max-w-[31%]"
                 key={idx}
                 emoji={card.emoji}
                 title={card.title}
@@ -183,7 +183,7 @@ const CommunityPage = () => {
       </Flex>
       <div className="w-full bg-background-highlight pb-16 shadow-table-item-box">
         <div className="w-full px-4 py-4 lg:px-8">
-          <Flex className="mb-0 mt-0 flex-col-reverse items-center md:m-12 md:mt-4 md:flex-row">
+          <Flex className="mt-0 mb-0 flex-col-reverse items-center md:m-12 md:mt-4 md:flex-row">
             <div className="h-full w-full p-0 sm:p-8 lg:p-24">
               <H2 id="get-involved">
                 {t("page-community-get-involved-title")}
@@ -203,7 +203,7 @@ const CommunityPage = () => {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">
             {cards.map((card, idx) => (
               <ActionCard
-                className="m-0 flex-col rounded-sm border lg:m-4"
+                className="m-0 flex-col rounded-xs border lg:m-4"
                 key={idx}
                 title={card.title}
                 description={card.description}
@@ -295,7 +295,7 @@ const CommunityPage = () => {
       <Divider />
       <Flex className="w-full flex-col items-start px-8 py-4 lg:flex-row lg:items-center">
         <div className="mb-6 max-w-full flex-[0_0_50%] md:max-w-[75%]">
-          <h2 className="mb-8 mt-12 text-2xl md:text-3xl">
+          <h2 className="mt-12 mb-8 text-2xl md:text-3xl">
             {t("page-community-try-ethereum")}
           </h2>
         </div>

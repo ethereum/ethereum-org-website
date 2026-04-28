@@ -1,6 +1,6 @@
 ---
-title: 後端應用程式介面程式庫
-description: 讓你能夠從應用程式與區塊鏈互動的以太坊用戶端應用程式介面簡介。
+title: "後端應用程式介面程式庫"
+description: "讓你能夠從應用程式與區塊鏈互動的以太坊用戶端應用程式介面簡介。"
 lang: zh-tw
 ---
 
@@ -105,7 +105,7 @@ lang: zh-tw
 **Nethereum -** **_區塊鏈的開源 .NET 整合程式庫。_**
 
 - [Github](https://github.com/Nethereum/Nethereum)
-- [文檔](http://docs.nethereum.com/en/latest/)
+- [文檔](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_透過 Python 進行以太坊互動的各種程式庫。_**

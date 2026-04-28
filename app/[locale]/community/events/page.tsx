@@ -50,10 +50,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
@@ -64,7 +61,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   // Get highlighted conferences (with highlight flag or first 3)
   const conferences = events.filter(
@@ -85,7 +82,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups()
+  const meetupGroups = getMeetupGroups(locale)
   const meetups = [...apiMeetups, ...meetupGroups]
 
   // Continent labels for tabs
@@ -367,6 +364,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 eventName: "regular_conf",
               }}
             />
+            <p className="!mt-8 text-body-medium">
+              {t.rich("page-events-data-source-callout", {
+                a: (chunks) => (
+                  <Link href="https://ethstars.xyz/">{chunks}</Link>
+                ),
+              })}
+            </p>
             <div className="flex justify-center">
               <ButtonLink
                 href="/community/events/conferences/"
@@ -431,7 +435,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="grid gap-8 md:grid-cols-2">
               {/* Ethereum Everywhere Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
+              <div className="flex flex-col gap-y-8 rounded-4xl bg-linear-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
@@ -495,7 +499,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </div>
 
               {/* Geode Labs Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
+              <div className="flex flex-col gap-y-8 rounded-4xl bg-linear-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={geodeLabsLogo} alt="" sizes="4rem" />
@@ -585,10 +589,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)
 

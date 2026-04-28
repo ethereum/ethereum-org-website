@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ja
 tags: [ "evm", "オペコード" ]
 skill: advanced
+breadcrumb: "リバースエンジニアリング"
 published: 2021-12-30
 ---
 

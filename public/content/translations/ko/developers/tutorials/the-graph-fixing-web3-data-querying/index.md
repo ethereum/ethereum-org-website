@@ -5,6 +5,7 @@ author: Markus Waas
 lang: ko
 tags: [ "Solidity", "스마트 계약", "요청", "the graph", "react" ]
 skill: intermediate
+breadcrumb: "The Graph"
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph

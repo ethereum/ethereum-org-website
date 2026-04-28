@@ -4,6 +4,7 @@ description: Jifunze jinsi ya kuweka na kusanidi maktaba ya web3.js ili kuingili
 author: "jdourlens"
 tags: [ "web3.js", "javascript" ]
 skill: beginner
+breadcrumb: "Sanidi web3.js"
 lang: sw
 published: 2020-04-11
 source: EthereumDev

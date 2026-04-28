@@ -4,6 +4,7 @@ description: "Pomocí moderních komponent, jako jsou TypeScript, React, Vite a 
 author: Ori Pomerantz
 tags: [ "typescript", "react", "vite", "wagmi", "frontend" ]
 skill: beginner
+breadcrumb: "UI s WAGMI"
 published: 2023-11-01
 lang: cs
 sidebarDepth: 3

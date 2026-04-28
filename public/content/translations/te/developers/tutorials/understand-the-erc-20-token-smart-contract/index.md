@@ -10,6 +10,7 @@ tags:
     "erc-20"
   ]
 skill: beginner
+breadcrumb: "ERC-20 టోకెన్ మూలాలు"
 lang: te
 published: 2020-04-05
 source: EthereumDev

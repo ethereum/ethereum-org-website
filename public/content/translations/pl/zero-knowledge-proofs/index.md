@@ -99,6 +99,8 @@ W tym miejscu wkraczają weryfikowalne obliczenia. Kiedy węzeł wykona transakc
 
 [Rollupy zerowej wiedzy](/developers/docs/scaling/zk-rollups) i [validiumy](/developers/docs/scaling/validium/) to dwa rozwiązania skalowania poza łańcuchem, które wykorzystują dowody ważności, aby zapewnić bezpieczną skalowalność. Protokoły te wykonują tysiące transakcji poza łańcuchem i przesyłają dowody do weryfikacji na Ethereum. Wyniki te mogą być zastosowane natychmiast po zweryfikowaniu dowodu, pozwalając Ethereum na przetworzenie większej ilości transakcji bez zwiększania ilości obliczeń w warstwie bazowej.
 
+Poza skalowaniem warstwy 2, dowody z wiedzą zerową mogą również weryfikować samo wykonanie bloku Ethereum L1. zkEVM do weryfikacji L1 pozwoliłoby walidatorom weryfikować bloki poprzez sprawdzanie dowodu, a nie ponowne wykonywanie wszystkich transakcji -- umożliwiając wyższe limity gazu bez zwiększania wymagań sprzętowych walidatora.
+
 ### Ograniczenie łapówkarstwa i zmowy w głosowaniu w łańcuchu {#secure-blockchain-voting}
 
 Schematy głosowania na blockchainie mają wiele korzystnych cech: są w pełni kontrolowane, zabezpieczone przed atakami, odporne na cenzurę i wolne od ograniczeń geograficznych. Ale nawet systemy głosowania w łańcuchu nie są odporne na problem **zmowy**.

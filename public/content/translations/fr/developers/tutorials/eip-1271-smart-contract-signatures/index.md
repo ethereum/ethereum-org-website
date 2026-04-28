@@ -11,6 +11,7 @@ tags:
     "Signature"
   ]
 skill: intermediate
+breadcrumb: "Signatures EIP-1271"
 published: 2023-01-12
 ---
 

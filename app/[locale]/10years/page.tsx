@@ -57,10 +57,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/10years")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
@@ -74,7 +71,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <TenYearJsonLD locale={locale} contributors={contributors} />
       <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <TenYearHero locale={locale} />
+        <TenYearHero />
 
         <div
           className={cn(
@@ -125,7 +122,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <TabsTrigger
                     key={key}
                     value={key}
-                    className="whitespace-nowrap border-0 text-primary"
+                    className="border-0 whitespace-nowrap text-primary"
                   >
                     {data.label}&nbsp;
                     <span className="text-sm">({data.events.length})</span>
@@ -209,7 +206,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div
           id="torch-history"
-          className="my-32 flex w-full scroll-mt-32 flex-col bg-gradient-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
+          className="my-32 flex w-full scroll-mt-32 flex-col bg-linear-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
         >
           <div className="p-8">
             <div className="relative">
@@ -227,13 +224,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     disablePictureInPicture
                     playsInline
                   />
-                  <div className="pointer-events-none absolute top-0 h-full w-full select-none bg-[url('/images/10-year-anniversary/torch-overlay.png')] bg-contain bg-center bg-no-repeat" />
+                  <div className="pointer-events-none absolute top-0 h-full w-full bg-[url('/images/10-year-anniversary/torch-overlay.png')] bg-contain bg-center bg-no-repeat select-none" />
                 </div>
               </div>
               {/* Curved text */}
               <Curved10YearsText
                 viewBox="0 0 356 186"
-                className="absolute left-1/2 top-0 h-min w-full max-w-[600px] -translate-x-1/2"
+                className="absolute top-0 left-1/2 h-min w-full max-w-[600px] -translate-x-1/2"
                 width="100%"
                 height="auto"
               />
@@ -242,7 +239,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <TorchHistorySwiper holders={torchHolders} />
 
-          <div className="flex flex-col gap-12 px-8 pb-24 pt-12 text-body-inverse sm:px-16 md:flex-row dark:text-body">
+          <div className="flex flex-col gap-12 px-8 pt-12 pb-24 text-body-inverse sm:px-16 md:flex-row dark:text-body">
             <div className="flex flex-1 flex-col gap-8">
               <p>
                 <Translation
@@ -382,10 +379,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
 
   return await getMetadata({
     locale,

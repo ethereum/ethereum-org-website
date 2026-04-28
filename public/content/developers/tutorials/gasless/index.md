@@ -4,6 +4,7 @@ description: It is easy to create a private key and an address; it's just a matt
 author: Ori Pomerantz
 tags: ["gasless", "solidity", "eip-712", "meta-transactions"]
 skill: intermediate
+breadcrumb: Gas sponsoring
 lang: en
 published: 2026-02-27
 ---

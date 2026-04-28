@@ -2,6 +2,8 @@ import type { EthStakedResponse, MetricReturnData } from "@/lib/types"
 
 import { DUNE_API_URL } from "@/lib/constants"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_TOTAL_ETH_STAKED_TASK_ID = "fetch-total-eth-staked"
 
 /**
@@ -19,7 +21,7 @@ export async function fetchTotalEthStaked(): Promise<MetricReturnData> {
 
   console.log("Starting total ETH staked data fetch from Dune Analytics")
 
-  const response = await fetch(url, {
+  const response = await fetchRetry(url, {
     headers: { "X-Dune-API-Key": duneApiKey },
   })
 

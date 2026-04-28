@@ -64,7 +64,7 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
 
   return (
     <div
-      className="mb-4 mt-8 flex w-full flex-col rounded border border-body-light bg-feedback-gradient p-6"
+      className="mt-8 mb-4 flex w-full flex-col rounded border border-body-light bg-feedback-gradient p-6"
       {...props}
       dir={dir}
     >

@@ -42,7 +42,7 @@
     {
     "username": "revofusion",
     "name": "Revofusion",
-    "score": 20000
+    "score": 25000
   },
   {
     "username": "peckshield",
@@ -57,6 +57,11 @@
   {
     "username": "catageek",
     "name": "Bertrand Masius",
+    "score": 15000
+  },
+  {
+    "username": "VulSight",
+    "name": "VulSight",
     "score": 15000
   },
   {
@@ -92,7 +97,7 @@
   {
     "username": "iam-ned",
     "name": "David Matosse",
-    "score": 10000
+    "score": 16250
   },
   {
     "username": "jtoman",
@@ -102,11 +107,6 @@
   {
     "username": "ehdgks0627",
     "name": "DongHan Kim",
-    "score": 10000
-  },
-  {
-    "username": "VulSight",
-    "name": "VulSight",
     "score": 10000
   },
   {

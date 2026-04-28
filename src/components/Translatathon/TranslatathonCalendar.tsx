@@ -50,7 +50,7 @@ export const TranslatathonCalendar = () => {
       <Flex
         className={cn(
           "w-full flex-col gap-6 px-8 py-16 text-center lg:w-1/2",
-          "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+          "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
         )}
       >
         <h3 className="text-2xl font-bold">Translatathon calls</h3>

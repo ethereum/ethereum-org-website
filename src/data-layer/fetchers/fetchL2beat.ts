@@ -1,3 +1,5 @@
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_L2BEAT_TASK_ID = "fetch-l2beat"
 
 /**
@@ -11,7 +13,7 @@ export async function fetchL2beat(): Promise<unknown> {
 
   console.log("Starting L2BEAT data fetch")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

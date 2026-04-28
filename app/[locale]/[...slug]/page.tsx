@@ -10,6 +10,7 @@ import type { GHIssue, SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
+import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
@@ -57,7 +58,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   } = await getPageData({
     locale,
     slug,
-    baseComponents: mdComponents,
+    baseComponents: { ...mdComponents, VideoWatch },
     componentsMapping,
     scope: {
       gfissues,
@@ -133,7 +134,7 @@ export async function generateMetadata(props: {
       slug,
     })
   } catch (error) {
-    const t = await getTranslations({ locale, namespace: "common" })
+    const t = await getTranslations("common")
 
     // Return basic metadata for invalid paths
     return {

@@ -69,7 +69,7 @@ const ExpandableCard = ({
       >
         <AccordionItem
           value="item-1"
-          className="rounded-sm border hover:bg-background-highlight"
+          className="rounded-xs border hover:bg-background-highlight"
         >
           <AccordionTrigger
             hideIcon
@@ -78,7 +78,7 @@ const ExpandableCard = ({
           >
             <Flex className="w-full flex-col items-center text-left sm:flex-row">
               <VStack className="items-center md:items-start">
-                <HStack className="mb-2 mt-4">
+                <HStack className="mt-4 mb-2">
                   {Svg && <Svg className="mr-6" />}
                   <h3 className="text-xl font-semibold">{title}</h3>
                 </HStack>

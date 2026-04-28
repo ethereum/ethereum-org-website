@@ -22,7 +22,7 @@ Decentralizovaná věda umožňuje rozmanitější zdroje financování (od [DAO
 
 ### Juan Benet – Hnutí DeSci
 
-<YouTube id="5ORvbCIW39o" />
+<YouTube id="zkXM9H90g_E" />
 
 ## Jak DeSci vylepšuje vědu {#desci-improves-science}
 

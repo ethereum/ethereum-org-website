@@ -4,6 +4,7 @@ description: "构建你的dapp时要考虑的安全准则清单"
 author: "Trailofbits"
 tags: [ "Solidity", "智能合同", "安全性。" ]
 skill: intermediate
+breadcrumb: "安全指南"
 lang: zh
 published: 2020-09-06
 source: "构建安全的合约"

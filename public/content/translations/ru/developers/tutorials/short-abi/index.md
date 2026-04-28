@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: ru
 tags: [ "уровень 2" ]
 skill: intermediate
+breadcrumb: "Короткие ABIs"
 published: 2022-04-01
 ---
 

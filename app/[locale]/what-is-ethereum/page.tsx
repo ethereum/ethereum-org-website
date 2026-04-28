@@ -51,10 +51,7 @@ import heroImg from "@/public/images/what-is-ethereum.png"
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ethereum",
-  })
+  const t = await getTranslations("page-what-is-ethereum")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("what-is-ethereum", locale as Lang)
@@ -304,7 +301,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Section
               id={getId(tocItems[2].url)}
-              className="space-y-8 rounded-4xl border border-accent-a/20 bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 lg:p-12"
+              className="space-y-8 rounded-4xl border border-accent-a/20 bg-linear-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 lg:p-12"
             >
               <div className="flex flex-col items-center justify-center gap-4 xl:flex-row">
                 <Image
@@ -350,7 +347,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <Section
               id={getId(tocItems[3].url)}
-              className="space-y-8 rounded-4xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 lg:p-12"
+              className="space-y-8 rounded-4xl border border-accent-c/20 bg-linear-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 lg:p-12"
             >
               <div className="flex flex-col items-center gap-4 xl:flex-row-reverse">
                 <Image
@@ -809,21 +806,21 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </p>
 
                 <div>
-                  <h3 className="mb-1 mt-12 text-xl">
+                  <h3 className="mt-12 mb-1 text-xl">
                     {t("page-what-is-ethereum-bitcoin-comparison-1-title")}
                   </h3>
                   <p>{t("page-what-is-ethereum-bitcoin-comparison-1-desc")}</p>
                 </div>
 
                 <div>
-                  <h3 className="mb-1 mt-12 text-xl">
+                  <h3 className="mt-12 mb-1 text-xl">
                     {t("page-what-is-ethereum-bitcoin-comparison-2-title")}
                   </h3>
                   <p>{t("page-what-is-ethereum-bitcoin-comparison-2-desc")}</p>
                 </div>
 
                 <div>
-                  <h3 className="mb-1 mt-12 text-xl">
+                  <h3 className="mt-12 mb-1 text-xl">
                     {t("page-what-is-ethereum-bitcoin-comparison-3-title")}
                   </h3>
                   <div className="space-y-6">
@@ -837,7 +834,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </div>
 
                 <div>
-                  <h3 className="mb-1 mt-12 text-xl">
+                  <h3 className="mt-12 mb-1 text-xl">
                     {t("page-what-is-ethereum-bitcoin-comparison-4-title")}
                   </h3>
                   <div className="space-y-6">
@@ -1096,10 +1093,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ethereum",
-  })
+  const t = await getTranslations("page-what-is-ethereum")
 
   return await getMetadata({
     locale,

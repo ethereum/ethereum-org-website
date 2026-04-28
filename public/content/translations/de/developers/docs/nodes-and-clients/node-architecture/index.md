@@ -1,59 +1,59 @@
 ---
-title: Knotenarchitektur
-description: Einleitung zum Aufbau von Ethereum-Knoten.
+title: Architektur von Blockchain-Knoten
+description: "Einführung in die Organisation von Ethereum-Blockchain-Knoten."
 lang: de
 ---
 
-Ein Ethereum-Knoten besteht aus zwei Clients: einem [Ausführungs-Client](/developers/docs/nodes-and-clients/#execution-clients) und einem [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients). Damit ein Knoten einen neuen Block vorschlagen kann, muss er auch einen [Validator-Client](#validators) betreiben.
+Ein Ethereum-Blockchain-Knoten besteht aus zwei Anwendungen: einem [Ausführungs-Client](/developers/docs/nodes-and-clients/#execution-clients) und einem [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients). Damit ein Blockchain-Knoten einen neuen Block vorschlagen kann, muss er auch einen [Validator-Client](#validators) ausführen.
 
-Als Ethereum noch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) verwendete, reichte ein Ausführungs-Client aus, um einen vollständigen Ethereum-Knoten zu betreiben. Seit der Implementierung von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pow/) muss der Ausführungs-Client jedoch zusammen mit einer anderen Software, einem sogenannten [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients), verwendet werden.
+Als Ethereum noch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) verwendete, reichte ein Ausführungs-Client aus, um einen vollständigen Ethereum-Blockchain-Knoten zu betreiben. Seit der Implementierung von [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) muss der Ausführungs-Client jedoch zusammen mit einer weiteren Software, dem sogenannten [Konsens-Client](/developers/docs/nodes-and-clients/#consensus-clients), verwendet werden.
 
-Das folgende Diagramm zeigt die Verbindung zwischen zwei Ethereum-Clients. Die beiden Clients verbinden sich mit ihren eigenen Peer-to-Peer(P2P)-Netzwerken. Es werden separate P2P-Netzwerke benötigt, da der Ausführungsclient Transaktionen über ihr P2P Netzwerk kommuniziert, wodurch sie ihren lokalen Transaktionspool verwalten können. Konsensclients können dabei Blöcke über ihr eigenes P2P-Netzwerk kommunizieren, was Konsens und Wachstum der Blockchain ermöglicht.
+Das folgende Diagramm zeigt die Beziehung zwischen den beiden Ethereum-Anwendungen. Die beiden Anwendungen verbinden sich mit ihren jeweiligen Peer-to-Peer-Netzwerken (P2P). Separate P2P-Netzwerke sind erforderlich, da die Ausführungs-Clients Transaktionen über ihr P2P-Netzwerk verbreiten (Gossip), was es ihnen ermöglicht, ihren lokalen Transaktionspool zu verwalten, während die Konsens-Clients Blöcke über ihr P2P-Netzwerk verbreiten, was den Konsens und das Wachstum der Chain ermöglicht.
 
-![Diagramm der Ethereum-Knotenarchitektur mit Darstellung der Ausführungs- und Konsensebenen](node-architecture-text-background.png)
+![Diagramm der Architektur eines Ethereum-Blockchain-Knotens, das die Ausführungs- und Konsensebenen zeigt](node-architecture-text-background.png)
 
-_Für den Execution Client stehen verschiedene Optionen zur Wahl, einschließlich Erigon, Nethermind und Besu_.
+_Es gibt mehrere Optionen für den Ausführungs-Client, darunter Erigon, Nethermind und Besu_.
 
-Für die Funktionsfähigkeit dieser Zwei-Client-Architektur müssen Consensus Clients Transaktionsbündel an den Execution Client übermitteln. Der Execution Client führt Transaktionen lokal aus, um sicherzustellen, dass sie nicht gegen Ethereum-Regeln verstoßen und das vorgeschlagene Update des Zustands korrekt ist. Sobald eine Node zum Block Producer gewählt wird, fragt der Consensus Client beim Execution Client Transaktionsbündel an. Diese werden in den neuen Block integriert und ausgeführt, um den Global State zu aktualisieren. Der Konsens-Client steuert den Ausführungs-Client über eine lokale RPC-Verbindung unter Verwendung der [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Damit diese Zwei-Anwendungen-Struktur funktioniert, müssen Konsens-Clients Bündel von Transaktionen an den Ausführungs-Client weitergeben. Der Ausführungs-Client führt die Transaktionen lokal aus, um zu validieren, dass die Transaktionen nicht gegen Ethereum-Regeln verstoßen und dass die vorgeschlagene Aktualisierung des Ethereum-Zustands korrekt ist. Wenn ein Blockchain-Knoten als Blockproduzent ausgewählt wird, fordert seine Konsens-Client-Instanz Transaktionsbündel vom Ausführungs-Client an, um sie in den neuen Block aufzunehmen und auszuführen, um den globalen Zustand zu aktualisieren. Der Konsens-Client steuert den Ausführungs-Client über eine lokale RPC-Verbindung unter Verwendung der [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
-## Was macht der Ausführungsclient? {#execution-client}
+## Was macht der Ausführungs-Client? {#execution-client}
 
-Der Ausführungs-Client ist für die Validierung, die Abwicklung und das Gossip von Transaktionen sowie für die Zustandsverwaltung und die Unterstützung der Ethereum Virtual Machine ([EVM](/developers/docs/evm/)) verantwortlich. Er ist **nicht** für das Block-Building, das Block-Gossiping oder die Handhabung der Konsens-Logik verantwortlich. Dies sind die Aufgaben des Konsensclients.
+Der Ausführungs-Client ist verantwortlich für die Validierung, Handhabung und Verbreitung (Gossip) von Transaktionen sowie für die Zustandsverwaltung und die Unterstützung der [Ethereum Virtual Machine](/developers/docs/evm/) (EVM). Er ist **nicht** verantwortlich für die Blockbildung, die Verbreitung von Blöcken oder die Handhabung der Konsenslogik. Diese fallen in den Aufgabenbereich des Konsens-Clients.
 
-Der Ausführungsclient erstellt Ausführungsnutzlasten – die Liste der Transaktionen, die aktualisierten Zustandsbäume, und andere ausführungsbezogene Daten. Konsensclients beinhalten die Ausführungsnutzlast in jedem Block. Der Ausführungsclient ist außerdem zuständig für das Wiederausführen von Transaktionen in einem neuen Block, um sicherzugehen, dass diese gültig sind. Die Ausführung von Transaktionen erfolgt auf dem eingebetteten Computer des Ausführungs-Clients, der als [Ethereum Virtual Machine (EVM)](/developers/docs/evm) bekannt ist.
+Der Ausführungs-Client erstellt Ausführungs-Payloads – die Liste der Transaktionen, den aktualisierten Zustands-Trie und andere ausführungsbezogene Daten. Konsens-Clients fügen den Ausführungs-Payload in jeden Block ein. Der Ausführungs-Client ist auch dafür verantwortlich, Transaktionen in neuen Blöcken erneut auszuführen, um sicherzustellen, dass sie gültig sind. Die Ausführung von Transaktionen erfolgt auf dem eingebetteten Computer des Ausführungs-Clients, bekannt als die [Ethereum Virtual Machine (EVM)](/developers/docs/evm).
 
-Der Ausführungs-Client bietet auch eine Benutzeroberfläche für Ethereum über [RPC-Methoden](/developers/docs/apis/json-rpc), die es Benutzern ermöglichen, die Ethereum-Blockchain abzufragen, Transaktionen zu übermitteln und Smart Contracts bereitzustellen. Üblicherweise werden RPC-Aufrufe von einer Bibliothek wie [Web3js](https://docs.web3js.org/), [Web3py](https://web3py.readthedocs.io/en/v5/) oder von einer Benutzeroberfläche wie einer Browser-Wallet verarbeitet.
+Der Ausführungs-Client bietet auch eine Benutzeroberfläche für Ethereum durch [RPC-Methoden](/developers/docs/apis/json-rpc), die es Benutzern ermöglichen, die Ethereum-Blockchain abzufragen, Transaktionen einzureichen und Smart Contracts bereitzustellen. Es ist üblich, dass RPC-Aufrufe von einer Bibliothek wie [Web3js](https://docs.web3js.org/), [Web3py](https://web3py.readthedocs.io/en/v5/) oder von einer Benutzeroberfläche wie einem Browser-Wallet verarbeitet werden.
 
-Zusammengefasst ist der Ausführungsclient:
+Zusammenfassend ist der Ausführungs-Client:
 
-- Ein Nutzergateway zu Ethereum
-- Das Zuhause der Virtuellen Ethereum-Maschine, des Zustands von Ethereums und des Transaktionspools.
+- ein Benutzer-Gateway zu Ethereum
+- das Zuhause der Ethereum Virtual Machine, des Ethereum-Zustands und des Transaktionspools.
 
-## Was macht der Konsensclient? {#consensus-client}
+## Was macht der Konsens-Client? {#consensus-client}
 
-Der Konsensclient befasst sich mit der gesamten Logik, die ein Knoten braucht, um mit dem Ethereum-Netzwerk synchronisiert zu bleiben. Das beinhaltet das Empfangen von Blöcken von Peers und das Betreiben eines Abspaltungsalgorithmus, um sicherzugehen, dass der Knoten immer der Blockchain mit den meisten Attestierungen (gewichtet nach effektiven Guthaben von Validatoren) folgt. Ähnlich zum Ausführungsclient haben Konsensclients ihr eigenes P2P-Netzwerk, über das sie Blöcke und Attestierungen teilen können.
+Der Konsens-Client befasst sich mit der gesamten Logik, die es einem Blockchain-Knoten ermöglicht, mit dem Ethereum-Netzwerk synchron zu bleiben. Dies umfasst den Empfang von Blöcken von Peers und die Ausführung eines Fork-Choice-Algorithmus, um sicherzustellen, dass der Blockchain-Knoten immer der Chain mit der größten Ansammlung von Bestätigungen (gewichtet nach den effektiven Guthaben der Validatoren) folgt. Ähnlich wie der Ausführungs-Client haben Konsens-Clients ihr eigenes P2P-Netzwerk, über das sie Blöcke und Bestätigungen teilen.
 
-Der Konsensclient nimmt nicht an Attestierungen oder dem Vorschlagen von Blöcken teil. Das wird von einem Validator übernommen, eine optionale Erweiterung zu einem Konsensclient. Ein Konsensclient ohne Validator hält nur mit der Spitze der Blockchain mit, was dem Knoten ermöglicht, synchronisiert zu bleiben. Das ermöglicht dem Nutzer, Dinge mit Ethereum über ihren Ausführungsclient abzuwickeln, mit der Sicherheit, dass diese sich auf der richtigen Blockchain befinden.
+Der Konsens-Client beteiligt sich nicht an der Bestätigung oder dem Vorschlagen von Blöcken – dies wird von einem Validator durchgeführt, einem optionalen Add-on für einen Konsens-Client. Ein Konsens-Client ohne Validator hält nur mit der Spitze der Chain Schritt, sodass der Blockchain-Knoten synchronisiert bleibt. Dies ermöglicht es einem Benutzer, mit Ethereum über seinen Ausführungs-Client zu interagieren, in der Gewissheit, dass er sich auf der richtigen Chain befindet.
 
 ## Validatoren {#validators}
 
-Staking und der Betrieb der Validator-Software machen eine Node berechtigt, als Block-Proposer ausgewählt zu werden. Knotenbetreiber können Validatoren zu ihren Konsensclients hinzufügen, indem sie 32 ETH in den Einzahlungsvertrag einzahlen. Der Validatorclient kommt gebündelt mit dem Konsensclient und kann zu jeder Zeit einem Knoten hinzugefügt werden. Der Validator bearbeitet Attestierungen und Blockvorschläge. Außerdem versetzt es eine Node in die Lage, Belohnungen zu erzielen, aber auch ETH durch Strafen oder Slashing einzubüßen.
+Durch Staking und das Ausführen der Validator-Software wird ein Blockchain-Knoten berechtigt, ausgewählt zu werden, um einen neuen Block vorzuschlagen. Betreiber von Blockchain-Knoten können ihren Konsens-Clients einen Validator hinzufügen, indem sie 32 ETH in den Einzahlungsvertrag einzahlen. Der Validator-Client wird mit dem Konsens-Client gebündelt geliefert und kann einem Blockchain-Knoten jederzeit hinzugefügt werden. Der Validator kümmert sich um Bestätigungen und Blockvorschläge. Er ermöglicht es einem Blockchain-Knoten auch, Belohnungen anzusammeln oder ETH durch Strafen oder Slashing zu verlieren.
 
-[Mehr zum Staking](/staking/).
+[Mehr über Staking](/staking/).
 
-## Vergleich der Knotenkomponenten {#node-comparison}
+## Vergleich der Komponenten eines Blockchain-Knotens {#node-comparison}
 
-| Ausführungsclient                                              | Konsensclient                                                                                                                                                                      | Validator                                                 |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| Verbreitet Transaktionen mittels Gossip über sein P2P-Netzwerk | Verbreitet Blöcke und Attestations über das eigene P2P-Netzwerk                                                                                                                    | Schlägt Blöcke vor                                        |
-| Führt Transaktionen (erneut) aus            | Betreibt den Abspaltungsalgorithmus                                                                                                                                                | Sammelt Prämien/Strafen                                   |
-| Verifiziert eingehende Zustandsänderungen                      | Verfolgt die Spitze der Blockchain                                                                                                                                                 | Stellt Attestierungen aus                                 |
-| Verwaltet Zustands- und Belegsbäume                            | Verwaltet den Beacon-Zustand (beinhaltet Konsens- und Ausführungsinformationen)                                                                                 | Benötigt 32 ETH, um gestaked zu werden                    |
-| Erzeugt Ausführungsnutzlast                                    | Überwacht den angesammelten Zufall in RANDAO (ein Algorithmus, der verifizierbaren Zufall für die Auswahl von Validatoren und weitere Konsens-Vorgänge liefert) | Kann „abgeschlagen“ (geslashed) werden |
-| Deckt JSON-RPC API auf, um mit Ethereum zu interagieren        | Behält den Überblick über Begründung und Finalisierung                                                                                                                             |                                                           |
+| Ausführungs-Client                                 | Konsens-Client                                                                                                                                            | Validator                    |
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| Verbreitet Transaktionen über sein P2P-Netzwerk    | Verbreitet Blöcke und Bestätigungen über sein P2P-Netzwerk                                                                                                | Schlägt Blöcke vor           |
+| Führt Transaktionen aus/erneut aus                 | Führt den Fork-Choice-Algorithmus aus                                                                                                                     | Sammelt Belohnungen/Strafen an |
+| Verifiziert eingehende Zustandsänderungen          | Verfolgt die Spitze der Chain                                                                                                                             | Nimmt Bestätigungen vor      |
+| Verwaltet Zustands- und Quittungs-Tries            | Verwaltet den Beacon-Zustand (enthält Konsens- und Ausführungsinformationen)                                                                              | Erfordert das Staking von 32 ETH |
+| Erstellt Ausführungs-Payload                       | Verfolgt die angesammelte Zufälligkeit in RANDAO (ein Algorithmus, der überprüfbare Zufälligkeit für die Validator-Auswahl und andere Konsensoperationen bietet) | Kann von Slashing betroffen sein |
+| Stellt JSON-RPC-API für die Interaktion mit Ethereum bereit | Verfolgt Rechtfertigung und Finalität                                                                                                                     |                              |
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
 - [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)
-- [Block-Vorschlag](/developers/docs/consensus-mechanisms/pos/block-proposal)
+- [Blockvorschlag](/developers/docs/consensus-mechanisms/pos/block-proposal)
 - [Belohnungen und Strafen für Validatoren](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)

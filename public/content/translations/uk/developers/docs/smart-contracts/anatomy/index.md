@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## Приклади з коментарями {#annotated-examples}
 
-Деякі приклади написані в Solidity. Якщо ви хочете поекспериментувати з кодом, ви можете взаємодіяти з ним у [Remix](http://remix.ethereum.org).
+Деякі приклади написані в Solidity. Якщо ви хочете поекспериментувати з кодом, ви можете взаємодіяти з ним у [Remix](https://remix.ethereum.org).
 
 ### Привіт, світе {#hello-world}
 

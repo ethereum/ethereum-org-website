@@ -9,7 +9,7 @@ lang: tr
 
 <Logo/>
 
-[Ethereum Foundation](http://ethereum.foundation/) (EF), Ethereum ekosistemini destekleyen kâr amacı gütmeyen bir kuruluştur. Protokol gelişimini finanse eder, ekosistemi büyütür ve Ethereum'u savunur.
+[Ethereum Foundation](https://ethereum.foundation/) (EF), Ethereum ekosistemini destekleyen kâr amacı gütmeyen bir kuruluştur. Protokol gelişimini finanse eder, ekosistemi büyütür ve Ethereum'u savunur.
 
 Ethereum Vakfı, bir şirket veya kâr amacı gütmeyen geleneksel bir kuruluş değildir. Ethereum'u kontrol etmez veya yönetmez ve Ethereum ile ilgili teknolojilerin kritik gelişimini finanse eden tek kuruluş da değildir. EF, çok daha büyük bir [ekosistemin](/community/) bir parçasıdır.
 

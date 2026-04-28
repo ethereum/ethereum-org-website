@@ -2,16 +2,12 @@ import { getTranslations } from "next-intl/server"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+
 export default async function StablecoinsPageJsonLD({ locale, contributors }) {
-  const t = await getTranslations({
-    namespace: "page-stablecoins",
-  })
+  const t = await getTranslations("page-stablecoins")
 
   const url = normalizeUrlForJsonLd(locale, `/stablecoins/`)
 
@@ -24,6 +20,7 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -32,13 +29,8 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -56,8 +48,8 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#stablecoins` },
       },
       {
@@ -66,10 +58,9 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
         headline: t("page-stablecoins-title"),
         description: t("page-stablecoins-meta-description"),
         image: "https://ethereum.org/images/stablecoins/hero.png",
-        author: [ethereumCommunityOrganization],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Stablecoins",

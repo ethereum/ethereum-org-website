@@ -99,6 +99,8 @@ A cadeia precisa de uma maneira de validar transações offchain sem executá-la
 
 [Rollups de conhecimento zero](/developers/docs/scaling/zk-rollups) e [validiums](/developers/docs/scaling/validium/) são duas soluções de escalabilidade off-chain que usam provas de validade para fornecer escalabilidade segura. Esses protocolos executam milhares de transações offchain e enviam provas para verificação no Ethereum. Esses resultados podem ser aplicados imediatamente após a verificação da prova, permitindo que o Ethereum processe mais transações sem aumentar a computação na camada base.
 
+Alem do escalonamento da camada 2, as provas de conhecimento zero tambem podem verificar a propria execucao do bloco L1 da Ethereum. O zkEVM para verificacao de L1 permitiria que os validadores verifiquem blocos verificando uma prova em vez de reexecutar todas as transacoes -- permitindo limites de gas mais altos sem aumentar os requisitos de hardware do validador.
+
 ### Redução de suborno e conluio em votação on-chain {#secure-blockchain-voting}
 
 Os esquemas de votação em blockchain têm muitas características favoráveis: eles são totalmente auditáveis, protegidos contra ataques, resistentes à censura e livres de restrições geográficas. Mas mesmo os esquemas de votação on-chain não são imunes ao problema de **conluio**.

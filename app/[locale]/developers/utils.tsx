@@ -1,4 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { EventItem } from "@/lib/types"
 
@@ -15,11 +15,7 @@ import speedrunStablecoins from "@/public/images/developers/speedrun-stablecoins
 import speedrunNFT from "@/public/images/developers/speedrun-tokenization.png"
 
 export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   return [
     {
@@ -53,11 +49,7 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
 }
 
 export const getVideoCourses = async (): Promise<VideoCourse[]> => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   const getDuration = (hours: number) =>
     t.rich("page-developers-course-duration", {

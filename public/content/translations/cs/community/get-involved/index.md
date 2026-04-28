@@ -13,7 +13,7 @@ Začněte tím, že si v našem [kodexu chování](/community/code-of-conduct) p
 ## Vývojáři <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Učte se o Ethereu a experimentujte s ním na [ethereum.org/developers/](/developers/)
-- Zúčastněte se hackathonu [ETHGlobal](http://ethglobal.co/) ve vašem okolí!
+- Zúčastněte se hackathonu [ETHGlobal](https://ethglobal.co/) ve vašem okolí!
 - Podívejte se na [projekty související s vaší odborností nebo programovacím jazykem](/developers/docs/programming-languages/)
 - Sledujte nebo se účastněte [hovorů o konsensuální a exekuční vrstvě](https://www.youtube.com/@EthereumProtocol/streams)
 - [Seznam přání Programu na podporu ekosystému](https://esp.ethereum.foundation/wishlist/) – nástroje, dokumentace a oblasti infrastruktury, ve kterých Program na podporu ekosystému Ethereum aktivně hledá žádosti o granty
@@ -109,7 +109,7 @@ Ekosystém Etherea má za cíl financovat veřejné statky a významné projekty
 - [Pracovní pozice v kryptoměnách](https://cryptocurrencyjobs.co/ethereum/)
 - [Kariéra v ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Pracovní nabídky Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Pracovní nabídky Bankless](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

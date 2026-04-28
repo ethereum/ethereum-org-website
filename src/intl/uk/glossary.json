@@ -156,7 +156,7 @@
   "evm-term": "Віртуальна машина Ethereum (EVM)",
   "evm-definition": "Стекова віртуальна машина, яка виконує <a href=\"/glossary/#bytecode\">байт-код</a>. У Ethereum модель виконання визначає, як змінюється стан системи з урахуванням серії інструкцій байт-коду та невеликого набору даних середовища. Це визначається через формальну модель віртуальної машини стану. <a href=\"/developers/docs/evm/\">Більше про віртуальну машину Ethereum</a>.",
   "evm-assembly-language-term": "EVM assembly language",
-  "evm-assembly-language-definition": "Форма придатна для читання EVM <a href=\"/glossary/#bytecode\">байт-коду.",
+  "evm-assembly-language-definition": "Форма придатна для читання EVM <a href=\"/glossary/#bytecode\">байт-коду</a>.",
   "fallback-function-term": "Резервна функція",
   "fallback-function-definition": "Функція за замовчуванням, яка викликається за відсутності даних або оголошеної назви функції.",
   "faucet-term": "Кран",

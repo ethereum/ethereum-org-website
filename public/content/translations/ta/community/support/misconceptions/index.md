@@ -1,73 +1,73 @@
 ---
-title: Common misconceptions about Ethereum
-description: Clearing up the most common misunderstandings about how Ethereum works.
+title: "Ethereum பற்றிய பொதுவான தவறான கருத்துகள்"
+description: "Ethereum எவ்வாறு செயல்படுகிறது என்பது பற்றிய பொதுவான தவறான புரிதல்களைத் தெளிவுபடுத்துதல்."
 lang: ta
 ---
 
-# Common misconceptions about Ethereum {#misconceptions}
+# Ethereum பற்றிய பொதுவான தவறான கருத்துகள் {#misconceptions}
 
-## எத்தேரியம் ஒரு நிறுவனமா? {#not-a-company}
+## Ethereum ஒரு நிறுவனமா? {#not-a-company}
 
-Ethereum is open-source, decentralized technology maintained by thousands of contributors worldwide. There is no company called "Ethereum" that manages accounts, holds funds, or provides customer support.
+Ethereum என்பது உலகெங்கிலும் உள்ள ஆயிரக்கணக்கான பங்களிப்பாளர்களால் பராமரிக்கப்படும் ஒரு ஓப்பன் சோர்ஸ், பரவலாக்கப்பட்ட தொழில்நுட்பமாகும். கணக்குகளை நிர்வகிக்க, நிதியை வைத்திருக்க அல்லது வாடிக்கையாளர் ஆதரவை வழங்க "Ethereum" என்ற பெயரில் எந்த நிறுவனமும் இல்லை.
 
-The [Ethereum Foundation](https://ethereum.foundation/) is a non-profit organization that supports Ethereum's development, but it does not own or control the network. No single entity does.
+[Ethereum Foundation](https://ethereum.foundation/) என்பது Ethereum இன் மேம்பாட்டை ஆதரிக்கும் ஒரு இலாப நோக்கற்ற அமைப்பாகும், ஆனால் அது நெட்வொர்க்கை சொந்தமாக வைத்திருக்கவோ அல்லது கட்டுப்படுத்தவோ இல்லை. எந்தவொரு தனிப்பட்ட நிறுவனமும் அவ்வாறு செய்வதில்லை.
 
-**[ethereum.org](/)** is a community-run educational resource. It is not an exchange, wallet, or financial institution. It does not hold any user funds and cannot access any accounts.
+**[ethereum.org](/)** என்பது சமூகத்தால் நடத்தப்படும் ஒரு கல்வி வளமாகும். இது ஒரு பரிமாற்றமோ, வாலட்டோ அல்லது நிதி நிறுவனமோ அல்ல. இது எந்தவொரு பயனர் நிதியையும் வைத்திருக்காது மற்றும் எந்த கணக்குகளையும் அணுக முடியாது.
 
 <DocLink href="/what-is-ethereum/">
-  எத்தேரியம் என்றால் என்ன?
+  Ethereum என்றால் என்ன?
 </DocLink>
 
 ## யாராவது எனது நிதியை மீட்டெடுக்கவோ அல்லது முடக்கவோ முடியுமா? {#no-fund-access}
 
-Unlike a bank, there is no central authority on Ethereum that can freeze, seize, or recover funds. The person holding the private keys (or seed phrase) has full and sole control over a wallet.
+ஒரு வங்கியைப் போலன்றி, நிதியை முடக்க, பறிமுதல் செய்ய அல்லது மீட்டெடுக்கக்கூடிய எந்தவொரு மைய அதிகாரமும் Ethereum இல் இல்லை. பிரைவேட் கீகளை (அல்லது சீட் சொற்றொடரை) வைத்திருக்கும் நபர் மட்டுமே வாலட்டின் மீது முழுமையான மற்றும் தனிப்பட்ட கட்டுப்பாட்டைக் கொண்டுள்ளார்.
 
-This means:
+இதன் பொருள்:
 
-- **No one can recover funds** you sent to the wrong address
-- **No one can reverse** a transaction after it is confirmed
-- **No one can freeze** your wallet or block your transactions
-- **No one can reset your password** if you lose your seed phrase
+- தவறான முகவரிக்கு நீங்கள் அனுப்பிய **நிதியை யாராலும் மீட்டெடுக்க முடியாது**
+- ஒரு பரிவர்த்தனை உறுதிசெய்யப்பட்ட பிறகு **யாராலும் அதைத் திரும்பப் பெற முடியாது**
+- **யாராலும் உங்கள் வாலட்டை முடக்கவோ** அல்லது உங்கள் பரிவர்த்தனைகளைத் தடுக்கவோ முடியாது
+- உங்கள் சீட் சொற்றொடரை நீங்கள் இழந்தால் **யாராலும் உங்கள் கடவுச்சொல்லை மீட்டமைக்க முடியாது**
 
-This is why protecting your seed phrase is critical. It is the only way to access your wallet. If it is lost or stolen, there is no recovery option.
+இதனால்தான் உங்கள் சீட் சொற்றொடரைப் பாதுகாப்பது மிகவும் முக்கியமானது. உங்கள் வாலட்டை அணுக இதுவே ஒரே வழி. அது தொலைந்துவிட்டாலோ அல்லது திருடப்பட்டாலோ, அதை மீட்டெடுக்க எந்த வழியும் இல்லை.
 
 <DocLink href="/security/">
-  எத்தேரியம் பாதுகாப்பு மற்றும் மோசடித் தடுப்பு
+  Ethereum பாதுகாப்பு மற்றும் மோசடி தடுப்பு
 </DocLink>
 
-## நான் இன்னும் எத்தேரியத்தை மைன் செய்யலாமா? {#no-mining}
+## நான் இன்னும் Ethereum ஐ மைனிங் செய்ய முடியுமா? {#no-mining}
 
-Ethereum switched from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. Mining is no longer possible on Ethereum.
+செப்டம்பர் 2022 இல் [The Merge](/roadmap/merge/) இன் போது Ethereum [proof-of-work](/glossary/#pow) இலிருந்து [proof-of-stake](/glossary/#pos) க்கு மாறியது. இனி Ethereum இல் மைனிங் செய்ய முடியாது.
 
-The network is now secured by validators who [stake](/glossary/#staking) ETH. Anyone can participate:
+நெட்வொர்க் இப்போது ETH ஐ [ஸ்டேக்](/glossary/#staking) செய்யும் வேலிடேட்டர்களால் பாதுகாக்கப்படுகிறது. இதில் யார் வேண்டுமானாலும் பங்கேற்கலாம்:
 
-- **Solo staking:** Run your own validator with 32 ETH—[learn more](/staking/solo/)
-- **Staking as a service:** Delegate node operation while keeping your keys—[learn more](/staking/saas/)
-- **Pooled staking:** Stake with less than 32 ETH by joining a pool—[learn more](/staking/pools/)
+- **சோலோ ஸ்டேக்கிங்:** 32 ETH உடன் உங்கள் சொந்த வேலிடேட்டரை இயக்கவும்—[மேலும் அறிக](/staking/solo/)
+- **ஒரு சேவையாக ஸ்டேக்கிங்:** உங்கள் கீகளை வைத்துக்கொண்டே நோடு செயல்பாட்டைப் பிரதிநிதித்துவப்படுத்துங்கள்—[மேலும் அறிக](/staking/saas/)
+- **பூல்டு ஸ்டேக்கிங்:** ஒரு பூலில் சேர்வதன் மூலம் 32 ETH க்கும் குறைவாக ஸ்டேக் செய்யுங்கள்—[மேலும் அறிக](/staking/pools/)
 
 <DocLink href="/staking/">
-  Learn more about staking
+  ஸ்டேக்கிங் பற்றி மேலும் அறிக
 </DocLink>
 
-## எத்தேரியம் ஆதரவுக் குழு உள்ளதா? {#no-support-team}
+## Ethereum ஆதரவுக் குழு உள்ளதா? {#no-support-team}
 
-Looking for "official Ethereum support" is similar to looking for "official internet support." This of course doesn't exist, but depending on your issue you may be able to seek out support from your internet service provider, your router hardware manufacturer, or one of the companies behind the device, app or website you're using.
+"அதிகாரப்பூர்வ Ethereum ஆதரவை" தேடுவது "அதிகாரப்பூர்வ இணைய ஆதரவை" தேடுவதற்குச் சமம். இது நிச்சயமாக இல்லை, ஆனால் உங்கள் சிக்கலைப் பொறுத்து உங்கள் இணைய சேவை வழங்குநர், உங்கள் ரவுட்டர் வன்பொருள் உற்பத்தியாளர் அல்லது நீங்கள் பயன்படுத்தும் சாதனம், ஆப்ஸ் அல்லது இணையதளத்தின் பின்னணியில் உள்ள நிறுவனங்களில் ஒன்றிலிருந்து நீங்கள் ஆதரவைப் பெறலாம்.
 
-Ethereum is similar. There is no company, support team, or help desk behind Ethereum as a whole, but depending on the issue you may find help by reaching out to your _wallet provider_, _staking service_, _exchange_, _financial institution_ or the _team maintaining an app_ you're using.
+Ethereum-ம் இதே போன்றதுதான். ஒட்டுமொத்தமாக Ethereum-க்குப் பின்னால் எந்தவொரு நிறுவனமோ, ஆதரவுக் குழுவோ அல்லது உதவி மையமோ இல்லை, ஆனால் சிக்கலைப் பொறுத்து உங்கள் _வாலட் வழங்குநர்_, _ஸ்டேக்கிங் சேவை_, _பரிமாற்றம்_, _நிதி நிறுவனம்_ அல்லது நீங்கள் பயன்படுத்தும் _ஆப்ஸைப் பராமரிக்கும் குழுவை_ தொடர்புகொள்வதன் மூலம் நீங்கள் உதவியைப் பெறலாம்.
 
-Since Ethereum is publicly transparent by default, you may also find [block explorers](/developers/docs/data-and-analytics/block-explorers/), [analytics tools](/developers/tools/analytics/), and other [online investigation resources](/community/support/scams/#analyze) useful in looking into a problem directly.
+Ethereum இயல்பாகவே பொதுவில் வெளிப்படையானது என்பதால், ஒரு சிக்கலை நேரடியாக ஆராய்வதற்கு [பிளாக் எக்ஸ்ப்ளோரர்கள்](/developers/docs/data-and-analytics/block-explorers/), [பகுப்பாய்வுக் கருவிகள்](/developers/tools/analytics/) மற்றும் பிற [ஆன்லைன் விசாரணை வளங்கள்](/community/support/scams/#analyze) பயனுள்ளதாக இருப்பதை நீங்கள் காணலாம்.
 
-That said, no one from Ethereum or ethereum.org will ever:
+அப்படி இருந்தாலும், Ethereum அல்லது ethereum.org இலிருந்து யாரும் ஒருபோதும்:
 
-- Contact you via direct message
-- Ask for your seed phrase or private keys
-- Ask you to send ETH to verify your wallet
-- Offer to help you recover funds for a fee
+- நேரடி செய்தி மூலம் உங்களைத் தொடர்புகொள்ள மாட்டார்கள்
+- உங்கள் சீட் சொற்றொடர் அல்லது பிரைவேட் கீகளைக் கேட்க மாட்டார்கள்
+- உங்கள் வாலட்டைச் சரிபார்க்க ETH ஐ அனுப்புமாறு கேட்க மாட்டார்கள்
+- கட்டணத்திற்காக நிதியை மீட்டெடுக்க உதவுவதாகக் கூற மாட்டார்கள்
 
-**Anyone doing any of the above is trying to scam you.**
+**மேற்கூறியவற்றில் எதையாவது செய்யும் எவரும் உங்களை ஏமாற்ற முயற்சிக்கிறார்கள்.**
 
-If you need help, the real communities that can assist are listed on the [support page](/community/support/). These are volunteer-run, open communities—not official support channels.
+உங்களுக்கு உதவி தேவைப்பட்டால், உதவக்கூடிய உண்மையான சமூகங்கள் [ஆதரவுப் பக்கத்தில்](/community/support/) பட்டியலிடப்பட்டுள்ளன. இவை தன்னார்வலர்களால் நடத்தப்படும், திறந்த சமூகங்கள்—அதிகாரப்பூர்வ ஆதரவு சேனல்கள் அல்ல.
 
 <DocLink href="/security/">
-  எத்தேரியம் பாதுகாப்பு மற்றும் மோசடித் தடுப்பு
+  Ethereum பாதுகாப்பு மற்றும் மோசடி தடுப்பு
 </DocLink>

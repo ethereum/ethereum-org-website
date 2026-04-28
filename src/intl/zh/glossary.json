@@ -238,7 +238,7 @@
   "merkle-root-term": "默克尔根",
   "merkle-root-definition": "默克尔根是默克尔树的单个顶部哈希。它验证块内的所有交易。",
   "message-term": "信息",
-  "message-definition": "一种<a href=\"/glossary/#internal-transaction\">内部交易</a>，永不会被序列化，且仅在<a href=\"/glossary/#evm\">以太坊虚拟机</evm>内部发送。",
+  "message-definition": "一种<a href=\"/glossary/#internal-transaction\">内部交易</a>，永不会被序列化，且仅在<a href=\"/glossary/#evm\">以太坊虚拟机</a>内部发送。",
   "message-call-term": "消息调用",
   "message-call-definition": "将<a href=\"/glossary/#message\">信息</a>从一个帐户传递到另一个帐户的行为。如果目标帐户与<a href=\"/glossary/#evm\">以太坊虚拟机</a>代码关联，则以太坊虚拟机将以该对象的状态和所执行的信息启动。",
   "mev-term": "最大可提取价值 (MEV)",

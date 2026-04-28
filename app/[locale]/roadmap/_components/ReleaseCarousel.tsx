@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/carousel"
 
 import { cn } from "@/lib/utils/cn"
-import { formatDate } from "@/lib/utils/date"
+import { dateTimeFormat, formatDate } from "@/lib/utils/date"
 
 import { getReleasesData, Release } from "@/data/roadmap/releases"
 
@@ -100,7 +100,7 @@ const ReleaseCarousel = () => {
       return ""
 
     if ("plannedReleaseYear" in release && release.plannedReleaseYear)
-      return new Intl.DateTimeFormat(locale, {
+      return dateTimeFormat(locale, {
         year: "numeric",
       }).format(new Date(Number(release.plannedReleaseYear), 0, 1))
 
@@ -182,7 +182,7 @@ const ReleaseCarousel = () => {
                               "flex h-1 flex-1",
                               index !== 0
                                 ? status === "soon"
-                                  ? "bg-gradient-to-r from-primary to-primary-low-contrast"
+                                  ? "bg-linear-to-r from-primary to-primary-low-contrast"
                                   : status === "prod"
                                     ? "bg-primary"
                                     : "bg-primary-low-contrast"

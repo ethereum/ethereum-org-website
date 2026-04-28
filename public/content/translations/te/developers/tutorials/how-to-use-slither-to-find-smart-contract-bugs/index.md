@@ -11,6 +11,7 @@ tags:
     "పరీక్షించడం"
   ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -75,7 +76,7 @@ slither project_paths
 
 స్లిథర్ స్టాటిక్ అనాలిసిస్ ఫ్రేమ్‌వర్క్ యొక్క సామర్థ్యాలు మరియు డిజైన్ బ్లాగ్ పోస్టులలో ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) మరియు ఒక [అకాడెమిక్ పేపర్](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf)లో వివరించబడింది.
 
-స్టాటిక్ విశ్లేషణ వివిధ రకాలుగా ఉంటుంది. [clang](https://clang-analyzer.llvm.org/) మరియు [gcc](https://lwn.net/Articles/806099/) వంటి కంపైలర్లు ఈ పరిశోధన పద్ధతులపై ఆధారపడతాయని మీరు బహుశా గ్రహించి ఉంటారు, కానీ ఇది ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) మరియు [Frama-C](https://frama-c.com/) మరియు [Polyspace](https://www.mathworks.com/products/polyspace.html) వంటి ఫార్మల్ మెథడ్స్ ఆధారిత టూల్స్‌కు) కూడా ఆధారం.
+స్టాటిక్ విశ్లేషణ వివిధ రకాలుగా ఉంటుంది. [clang](https://clang-analyzer.llvm.org/) మరియు [gcc](https://lwn.net/Articles/806099/) వంటి కంపైలర్లు ఈ పరిశోధన పద్ధతులపై ఆధారపడతాయని మీరు బహుశా గ్రహించి ఉంటారు, కానీ ఇది ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) మరియు [Frama-C](https://frama-c.com/) మరియు [Polyspace](https://www.mathworks.com/products/polyspace.html) వంటి ఫార్మల్ మెథడ్స్ ఆధారిత టూల్స్‌కు) కూడా ఆధారం.
 
 మేము ఇక్కడ స్టాటిక్ విశ్లేషణ పద్ధతులు మరియు పరిశోధకులను సమగ్రంగా సమీక్షించము. దానికి బదులుగా, స్లిథర్ ఎలా పనిచేస్తుందో అర్థం చేసుకోవడానికి ఏమి అవసరమో దానిపై మేము దృష్టి పెడతాము, తద్వారా మీరు బగ్‌లను కనుగొనడానికి మరియు కోడ్‌ను అర్థం చేసుకోవడానికి దాన్ని మరింత సమర్థవంతంగా ఉపయోగించవచ్చు.
 

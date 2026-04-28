@@ -14,6 +14,7 @@ tags:
     "transakce"
   ]
 skill: beginner
+breadcrumb: "Hello World fullstack"
 lang: cs
 published: 2021-10-25
 ---

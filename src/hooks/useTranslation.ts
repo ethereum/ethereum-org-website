@@ -19,7 +19,10 @@ const DEFAULT_NAMESPACE = "common"
 export function useTranslation(namespaces?: string[] | string) {
   const t = useTranslations()
 
-  const customT: typeof t = (fullKey, values) => {
+  const customT = (
+    fullKey: string,
+    values?: Record<string, string | number | Date>
+  ) => {
     try {
       if (fullKey.includes(":")) {
         const [namespace, key] = fullKey.split(":")

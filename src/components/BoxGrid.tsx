@@ -45,7 +45,7 @@ const BoxGrid = ({ items }: BoxGridProps) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (
-    <div className="my-16 grid grid-cols-1 rounded-sm lg:grid-cols-4">
+    <div className="my-16 grid grid-cols-1 rounded-xs lg:grid-cols-4">
       {items.map((item, idx: number) => {
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
@@ -79,7 +79,7 @@ const BoxGrid = ({ items }: BoxGridProps) => {
               text={item.emoji}
             />
             <div>
-              <h3 className="mb-8 mt-0 text-[2.5rem] font-normal leading-xs">
+              <h3 className="mt-0 mb-8 text-[2.5rem] leading-xs font-normal">
                 {item.title}
               </h3>
               {isOpen && (

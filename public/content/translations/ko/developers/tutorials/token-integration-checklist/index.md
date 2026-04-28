@@ -5,6 +5,7 @@ author: "Trailofbits"
 lang: ko
 tags: [ "Solidity", "스마트 계약", "보안", "토큰" ]
 skill: intermediate
+breadcrumb: "토큰 통합"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

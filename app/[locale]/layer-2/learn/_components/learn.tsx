@@ -230,7 +230,7 @@ const Layer2Learn = ({
           return (
             <div
               key={idx}
-              className="flex w-full flex-col gap-4 rounded-sm border border-solid border-body-light bg-background-highlight p-6 md:w-[50%]"
+              className="flex w-full flex-col gap-4 rounded-xs border border-solid border-body-light bg-background-highlight p-6 md:w-[50%]"
             >
               <Image src={card.image} alt={""} />
               <h3>{card.title}</h3>

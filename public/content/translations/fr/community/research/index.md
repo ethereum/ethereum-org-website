@@ -247,7 +247,7 @@ Les marchés de blocs régissent la prise en compte des transactions des utilisa
 #### Recherche récente {#recent-research-10}
 
 - [Présentation vidéo de l'EIP-1559 multidimensionnel](https://youtu.be/QbR4MTgnCko)
-- [MEV interdomaines](http://arxiv.org/abs/2112.01472)
+- [MEV interdomaines](https://arxiv.org/abs/2112.01472)
 - [Enchères MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Incitations à la preuve d'enjeu {#proof-of-stake-incentives}

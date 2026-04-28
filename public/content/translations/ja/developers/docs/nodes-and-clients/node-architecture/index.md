@@ -6,7 +6,7 @@ lang: ja
 
 イーサリアムのノードは、[実行クライアント](/developers/docs/nodes-and-clients/#execution-clients)と[コンセンサスクライアント](/developers/docs/nodes-and-clients/#consensus-clients)の2つのクライアントで構成されています。 新しいブロックを提案するノードでは、[バリデータクライアント](#validators)も実行する必要があります。
 
-イーサリアムが[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)を採用していた頃は、実行クライアントだけで完全なイーサリアムノードを稼働させることができました。 しかし、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pow/)の実装以降、実行クライアントは[コンセンサスクライアント](/developers/docs/nodes-and-clients/#consensus-clients)と呼ばれる別のソフトウェアと併用しなければならなくなりました。
+イーサリアムが[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)を採用していた頃は、実行クライアントだけで完全なイーサリアムノードを稼働させることができました。 しかし、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)の実装以降、実行クライアントは[コンセンサスクライアント](/developers/docs/nodes-and-clients/#consensus-clients)と呼ばれる別のソフトウェアと併用しなければならなくなりました。
 
 以下の図は、2つのイーサリアムクライアント間の関係を示しています。 それぞれのクライアントは、独自のピアツーピア(P2P)・ネットワークに接続しています。 実行クライアントは、ピアツーピア・ネットワークでトランザクションをゴシップし、ローカルのトランザクションプールを管理することができます。一方、コンセンサスクライアントは、ピアツーピア・ネットワークでブロックをゴシップし、コンセンサスを確立し、チェーンの成長を促進します。そのため、別々のピアツーピア・ネットワークが必要になります。
 

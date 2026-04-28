@@ -224,6 +224,17 @@ ZK-rollups هي "حلول التوسع الهجينة" - بروتوكولات خ
 
 ## من يعمل على zkEVM؟ مشاريع آلات إيثريوم الافتراضية ذات المعرفة الصفرية (zkEVM) {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>zkEVM لـ L2 مقابل L1</AlertTitle>
+<AlertDescription>
+تستخدم المشاريع أدناه تقنية zkEVM لبناء الرول أب في الطبقة الثانية. هناك أيضًا أبحاث حول استخدام zkEVM للتحقق من بلوك L1، والتي من شأنها تمكين المُدقِّقين من التحقق من بلوكات إيثيريوم دون إعادة تنفيذ المعاملات.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 تتضمن المشاريع التي تعمل على zkEVMs ما يلي:
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM هو مشروع تموله مؤسسة إيثريوم لتطوير تجميع معرفة صفرية متوافق مع آلة إيثريوم الافتراضية وآلية لتوليد إثباتات الصلاحية لكتل إيثريوم._

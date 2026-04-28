@@ -11,6 +11,7 @@ tags:
     "tokeny"
   ]
 skill: intermediate
+breadcrumb: "Integrace tokenů"
 published: 2020-08-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

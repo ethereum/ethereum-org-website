@@ -20,7 +20,6 @@ import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
-import { Simulator } from "@/components/Simulator"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -30,9 +29,8 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
-
 import WalletsPageJsonLD from "./page-jsonld"
+import { WalletSimulator } from "./WalletSimulator"
 
 import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
@@ -41,7 +39,7 @@ import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    className="m-4 min-w-[280px] max-w-full flex-1 bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
+    className="m-4 max-w-full min-w-[280px] flex-1 bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
   />
 )
@@ -49,7 +47,7 @@ const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-wallets" })
+  const t = await getTranslations("page-wallets")
 
   setRequestLocale(locale)
 
@@ -212,7 +210,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <ListenToPlayer slug="/wallets/" />
           </div>
           <div className="w-full px-8 py-4 pb-0">
-            <h2 className="mb-0 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-0 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-whats-a-wallet")}
             </h2>
           </div>
@@ -236,7 +234,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
           </div>
           <div className="w-full px-8 py-4">
-            <div className="-me-4 -ms-4 flex flex-wrap">
+            <div className="-ms-4 -me-4 flex flex-wrap">
               {cards.map((card, idx) => (
                 <StyledCard
                   key={idx}
@@ -249,9 +247,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div className="-mb-8 mt-8 flex flex-col justify-between p-8 lg:flex-row">
+        <div className="mt-8 -mb-8 flex flex-col justify-between p-8 lg:flex-row">
           <div className="max-w-full flex-[0_1_50%] lg:me-8">
-            <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-accounts-addresses")}
             </h2>
             <p className="mb-[1.45rem] text-md leading-base">
@@ -279,7 +277,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </p>
           </div>
           <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
-            <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-types")}
             </h2>
             <p className="mb-[1.45rem] text-md leading-base">
@@ -302,21 +300,21 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         {locale === "en" ? (
           <div className="my-20 w-full px-0 py-4">
             <Suspense>
-              <Simulator data={walletOnboardingSimData}>
-                <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
+              <WalletSimulator>
+                <p className="mb-2 text-lg leading-base text-body-medium italic md:text-xl lg:text-2xl">
                   Interactive tutorial
                 </p>
-                <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
+                <h2 className="m-0 text-3xl leading-[115%] font-bold lg:text-5xl">
                   How to use a wallet
                 </h2>
-              </Simulator>
+              </WalletSimulator>
             </Suspense>
           </div>
         ) : (
           <div className="my-12 mt-4 w-full border-t bg-gradient-main px-0 py-16 lg:mt-8">
             <div className="w-full px-8 py-4">
               <div className="mb-8 flex flex-col items-center">
-                <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+                <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
                   {t("page-wallets-features-title")}
                 </h2>
                 <div className="mb-6 text-center text-xl leading-base">
@@ -344,7 +342,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div className="mb-12 flex flex-col justify-between p-8 lg:flex-row">
           <div className="max-w-full flex-[0_1_50%] lg:me-8">
-            <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-stay-safe")}
             </h2>
             <p className="mb-6 leading-xs">
@@ -400,7 +398,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
           </div>
           <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
-            <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
               {t("page-wallets-tips")}
             </h2>
             <p className="mb-6 leading-xs">
@@ -413,10 +411,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <div className="w-full px-8 py-4">
           <Divider />
 
-          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+          <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-explore")}
           </h2>
-          <div className="-me-4 -ms-4 mt-16 flex flex-wrap">
+          <div className="-ms-4 -me-4 mt-16 flex flex-wrap">
             <Callout
               image={ETHImage}
               titleKey="page-wallets:page-wallets-get-some"
@@ -469,7 +467,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-wallets" })
+  const t = await getTranslations("page-wallets")
 
   return await getMetadata({
     locale,

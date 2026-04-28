@@ -58,7 +58,7 @@ const Layer2ProductCard = ({
         </div>
       </CardHeader>
 
-      <CardContent className="flex flex-grow flex-col gap-0 space-y-1 px-6 py-4">
+      <CardContent className="flex grow flex-col gap-0 space-y-1 px-6 py-4">
         <div className="space-y-2">
           <p className="text-sm leading-snug">{description}</p>
 

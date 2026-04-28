@@ -50,7 +50,7 @@ Similarly to history expiry, under state expiry responsibility for storing old s
 
 State expiry is still in the research phase and not yet ready to ship. State expiry may well happen later than stateless clients and history expiry because those upgrades make large state sizes easily manageable for the majority of validators.
 
-## Statelessness {#statelessness}
+## Statelessness {#statelessness-2}
 
 Statelessness is a bit of a misnomer because it does not mean the concept of "state" is eliminated, but it does involve changes to how Ethereum nodes handle state data. Statelessness itself comes in two flavors: weak statelessness and strong statelessness. Weak statelessness enables most nodes to go stateless by putting responsibility for state storage onto a few. Strong statelessness completely removes the need for any node to store the full state data. Both weak and strong statelessness offer the following benefits to normal validators:
 
@@ -78,6 +78,8 @@ Statelessness relies on block builders maintaining a copy of the full state data
 Block proposers use the state data to create "witnesses" - the minimal set of data that prove the values of the state that are being changed by the transactions in a block. Other validators do not hold the state, they only store the state root (a hash of the entire state). They receive a block and a witness and use them to update their state root. This makes a validating node extremely lightweight.
 
 Weak statelessness is in an advanced state of research, but it relies upon proposer-builder separation and Verkle Trees to have been implemented so that small witnesses can be passed between peers. This means weak statelessness is probably a few years away from Ethereum Mainnet.
+
+[zkEVM for L1 verification](/roadmap/zkevm/) is a complementary technology that could further enhance stateless verification. Instead of just checking witnesses, validators could verify a zero-knowledge proof that the entire block was executed correctly—providing cryptographic certainty without re-executing transactions.
 
 ### Strong statelessness {#strong-statelessness}
 

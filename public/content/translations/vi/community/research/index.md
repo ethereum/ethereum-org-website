@@ -247,7 +247,7 @@ Thị trường không gian khối quản lý việc cung cấp thông tin của
 #### Những nghiên cứu gần đây {#recent-research-10}
 
 - [Video thuyết trình về EIP-1559 đa chiều](https://youtu.be/QbR4MTgnCko)
-- [Giá trị khai thác tối đa xuyên miền](http://arxiv.org/abs/2112.01472)
+- [Giá trị khai thác tối đa xuyên miền](https://arxiv.org/abs/2112.01472)
 - [Đấu giá giá trị khai thác tối đa](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Phần thưởng của cơ chế bảo chứng bằng cổ phần {#proof-of-stake-incentives}

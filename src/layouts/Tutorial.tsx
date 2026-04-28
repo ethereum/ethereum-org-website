@@ -4,6 +4,7 @@ import type { HTMLAttributes } from "react"
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
+import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
@@ -50,12 +51,12 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const Paragraph = (props: HTMLAttributes<HTMLParagraphElement>) => (
-  <p className="mx-0 mb-4 mt-8 break-words" {...props} />
+  <p className="mx-0 mt-8 mb-4 break-words" {...props} />
 )
 
 const KBD = (props: HTMLAttributes<HTMLElement>) => (
   <kbd
-    className="rounded-sm border-2 border-primary px-2 py-0.5 align-middle"
+    className="rounded-xs border-2 border-primary px-2 py-0.5 align-middle"
     {...props}
   />
 )
@@ -112,9 +113,16 @@ export const TutorialLayout = ({
   return (
     <div className="flex w-full gap-8">
       <MainArticle
-        className="min-w-0 max-w-screen-lg px-8 lg:py-8"
+        className="max-w-screen-lg min-w-0 px-8 lg:py-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
+        <Breadcrumbs
+          slug={[
+            ...slug.split("/").slice(0, -1),
+            frontmatter.breadcrumb || slug.split("/").slice(-1),
+          ].join("/")}
+          startDepth={1}
+        />
         <Heading1>{frontmatter.title}</Heading1>
         <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
         <TableOfContents
@@ -125,11 +133,13 @@ export const TutorialLayout = ({
           isMobile
         />
         {children}
-        <FileContributors
-          className="my-10 border-t"
-          contributors={contributors}
-          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        />
+        {!frontmatter.hideEditButton && (
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
+        )}
         <FeedbackCard />
       </MainArticle>
       {tocItems && (

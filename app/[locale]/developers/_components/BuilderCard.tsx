@@ -25,13 +25,13 @@ const BuilderCard = ({ path, className }: BuildCardProps) => (
         <Tag
           status="warning"
           size="small"
-          className="mb-0 rounded-[4px] px-1 py-px font-bold normal-case"
+          className="rounded-[4px] px-1 py-px font-bold normal-case"
         >
           {path.tag}
         </Tag>
       )}
       <h3 className="text-lg font-bold">{path.title}</h3>
-      <p className="mb-4 text-sm text-body-medium">{path.description}</p>
+      <p className="text-sm text-body-medium">{path.description}</p>
     </div>
     <ButtonLink
       href={path.href}

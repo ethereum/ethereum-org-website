@@ -4,6 +4,7 @@ description: "У цьому посібнику пояснюється, як ви
 author: Ori Pomerantz
 tags: [ "ipfs" ]
 skill: beginner
+breadcrumb: "IPFS для dapp UI"
 lang: uk
 published: 2024-06-29
 ---

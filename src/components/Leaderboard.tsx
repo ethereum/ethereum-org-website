@@ -32,7 +32,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
 
   return (
     <List
-      className="mb-8 ms-0 w-full list-none bg-background shadow-table-box"
+      className="ms-0 mb-8 w-full list-none bg-background shadow-table-box"
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content

@@ -11,13 +11,14 @@ tags:
     "defi"
   ]
 skill: beginner
+breadcrumb: "create-eth-app"
 lang: tr
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Geçen sefer [Solidity'nin genel resmine](https://soliditydeveloper.com/solidity-overview-2020) göz atmış ve [create-eth-app]'ten (https://github.com/PaulRBerg/create-eth-app) zaten bahsetmiştik. Şimdi onu nasıl kullanacağınızı, hangi özelliklerin entegre olduğunu ve nasıl genişleteceğinize dair ek fikirleri öğreneceksiniz. [Sablier](http://sablier.com/)'in kurucusu Paul Razvan Berg tarafından başlatılan bu uygulama, ön uç geliştirmenizi başlatacak ve aralarından seçim yapabileceğiniz çeşitli isteğe bağlı entegrasyonlarla birlikte gelir.
+Geçen sefer [Solidity'nin genel resmine](https://soliditydeveloper.com/solidity-overview-2020) göz atmış ve [create-eth-app]'ten (https://github.com/PaulRBerg/create-eth-app) zaten bahsetmiştik. Şimdi onu nasıl kullanacağınızı, hangi özelliklerin entegre olduğunu ve nasıl genişleteceğinize dair ek fikirleri öğreneceksiniz. [Sablier](https://sablier.com/)'in kurucusu Paul Razvan Berg tarafından başlatılan bu uygulama, ön uç geliştirmenizi başlatacak ve aralarından seçim yapabileceğiniz çeşitli isteğe bağlı entegrasyonlarla birlikte gelir.
 
 ## Kurulum {#installation}
 

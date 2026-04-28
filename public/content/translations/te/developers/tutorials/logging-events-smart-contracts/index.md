@@ -10,6 +10,7 @@ tags:
     "ఈవెంట్‌లు"
   ]
 skill: intermediate
+breadcrumb: "ఈవెంట్ లాగింగ్"
 lang: te
 published: 2020-04-03
 source: EthereumDev

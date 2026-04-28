@@ -4,6 +4,7 @@ description: "이더리움 테스트넷에 첫 스마트 계약 배포하기 소
 author: "jdourlens"
 tags: [ "스마트 계약", "Remix", "Solidity", "배포하기" ]
 skill: beginner
+breadcrumb: "첨 컨트랙트 배포"
 lang: ko
 published: 2020-04-03
 source: EthereumDev

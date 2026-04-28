@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: fr
 tags: [ "Solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "ERC-20 pas a pas"
 published: 2021-03-09
 ---
 
@@ -498,7 +499,7 @@ d'autres fonctions du contrat. Par convention, les fonctions privées sont nomm�
 d'état.
 
 Normalement, dans Solidity, nous utilisons `msg.sender` pour l'expéditeur du message. Cependant, cela casse
-[OpenGSN](http://opengsn.org/). Si nous voulons autoriser les transactions sans ether avec notre jeton, nous
+[OpenGSN](https://opengsn.org/). Si nous voulons autoriser les transactions sans ether avec notre jeton, nous
 devons utiliser `_msgSender()`. Elle renvoie `msg.sender` pour les transactions normales, mais pour celles sans ether,
 elle renvoie le signataire original et non le contrat qui a relayé le message.
 

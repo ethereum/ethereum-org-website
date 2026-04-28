@@ -1,96 +1,38 @@
-"use client"
+import { readFileSync } from "fs"
+import { join } from "path"
 
-import { useEffect, useState } from "react"
 import { shuffle } from "lodash"
 
-import { Image } from "@/components/Image"
-import { Flex } from "@/components/ui/flex"
-import InlineLink from "@/components/ui/Link"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import ContributorsView, { type Contributor } from "./ContributorsView"
 
-import data from "!!raw-loader!@/../.all-contributorsrc"
+import "server-only"
 
-export interface Contributor {
-  login: string
-  name: string
-  avatar_url: string
-  profile?: string
-  contributions: Array<string>
-}
-
-const allContributors = JSON.parse(data)
+export type { Contributor }
 
 interface ContributorsProps {
   contributors?: Contributor[]
 }
 
-const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
-  const content = (
-    <>
-      <Image
-        className="h-[132px] w-[132px]"
-        src={contributor.avatar_url}
-        alt=""
-        width={132}
-        height={132}
-        sizes="132px"
-      />
-      <div className="p-4">
-        <h3 className="mb-4 mt-2 text-md text-body">
-          {contributor.profile ? (
-            <LinkOverlay asChild>
-              <InlineLink
-                className="text-body no-underline hover:no-underline"
-                href={contributor.profile}
-                hideArrow
-              >
-                {contributor.name}
-              </InlineLink>
-            </LinkOverlay>
-          ) : (
-            contributor.name
-          )}
-        </h3>
-      </div>
-    </>
-  )
-
-  if (contributor.profile) {
-    return (
-      <LinkBox className="m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-highlight focus:scale-[1.02] focus:rounded">
-        {content}
-      </LinkBox>
-    )
-  }
-
-  return <div className="m-2 max-w-[132px] shadow">{content}</div>
+type AllContributorsRc = {
+  contributors: (Contributor & { contributions?: string[] })[]
 }
 
-const Contributors = ({ contributors }: ContributorsProps) => {
-  const [contributorsList, setContributorsList] = useState<Contributor[]>([])
+// Read `.all-contributorsrc` (bot-maintained) once at module load.
+const raw = readFileSync(join(process.cwd(), ".all-contributorsrc"), "utf-8")
+const { contributors: rawContributors } = JSON.parse(raw) as AllContributorsRc
 
-  useEffect(() => {
-    if (contributors) {
-      setContributorsList(contributors)
-    } else {
-      setContributorsList(shuffle(allContributors.contributors))
-    }
-  }, [contributors])
+// Trim to the fields the card actually renders and shuffle once per SSG worker.
+const shuffledContributors: Contributor[] = shuffle(
+  rawContributors.map(({ login, name, avatar_url, profile }) => ({
+    login,
+    name,
+    avatar_url,
+    profile,
+  }))
+)
 
-  return (
-    <>
-      <p>
-        Thanks to our {contributorsList.length} Ethereum community members who
-        have contributed so far!
-      </p>
-
-      <Flex className="flex-wrap">
-        {contributorsList.map((contributor) => (
-          <ContributorCard key={contributor.login} contributor={contributor} />
-        ))}
-      </Flex>
-    </>
-  )
-}
+const Contributors = ({ contributors }: ContributorsProps = {}) => (
+  <ContributorsView contributors={contributors ?? shuffledContributors} />
+)
 
 export default Contributors

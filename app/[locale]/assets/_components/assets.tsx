@@ -80,11 +80,11 @@ const Row = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className="mb-6 mt-16 scroll-mt-24 leading-xs" {...props} />
+  <h2 className="mt-16 mb-6 scroll-mt-24 leading-xs" {...props} />
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <h3 className="mb-0 mt-10 leading-xs" {...props} />
+  <h3 className="mt-10 mb-0 leading-xs" {...props} />
 )
 
 const AssetsPage = () => {

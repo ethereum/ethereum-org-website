@@ -238,7 +238,7 @@
   "merkle-root-term": "マークルルート",
   "merkle-root-definition": "マークルルートは、マークルツリーで唯一の最上位ハッシュです。これで、ブロック内のトランザクションのすべてを検証します。",
   "message-term": "メッセージ",
-  "message-definition": "<a href=\"/glossary/#evm\">EVM</a>の内部でだけ送信され、シリアライズされることのない<a href=\"/glossary/#internal-transaction\">内部取引</evm>。",
+  "message-definition": "<a href=\"/glossary/#evm\">EVM</a>の内部でだけ送信され、シリアライズされることのない<a href=\"/glossary/#internal-transaction\">内部取引</a>。",
   "message-call-term": "メッセージ呼び出し",
   "message-call-definition": "あるアカウントから別のアカウントへ<a href=\"/glossary/#message\">メッセージ</a>を渡す動作。行先のアカウントが<a href=\"/glossary/#evm\">EVM</a>のコードに関連付けられている場合、VMはそのオブジェクトの状態で起動され、メッセージが処理されます。",
   "mev-term": "最大抽出可能価値 (MEV)",

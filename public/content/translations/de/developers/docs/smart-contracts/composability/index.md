@@ -1,76 +1,76 @@
 ---
-title: Smart-Contract-Kombinierbarkeit
-description: "Erfahren Sie, wie Smart Contracts wie Legosteine ​​kombiniert werden können, um durch die Wiederverwendung vorhandener Komponenten komplexe Dapps zu erstellen."
+title: Zusammensetzbarkeit von Smart Contracts
+description: "Erfahren Sie, wie Smart Contracts wie Legosteine kombiniert werden können, um komplexe Dapps durch die Wiederverwendung bestehender Komponenten zu erstellen."
 lang: de
 incomplete: true
 ---
 
 ## Eine kurze Einführung {#a-brief-introduction}
 
-Smart Contracts sind auf Ethereum öffentlich. Sie können sie sich als offene APIs vorstellen. Sie müssen nicht unbedingt Ihren eigenen Smart Contract schreiben, um ein dApp-Entwickler zu werden, sondern nur wissen, wie Sie mit Smart Contracts interagieren können. Zum Beispiel können Sie die bestehenden Smart Contracts von [Uniswap](https://uniswap.exchange/swap), einer dezentralen Börse, verwenden, um die gesamte Token-Tausch-Logik in Ihrer App zu handhaben – Sie müssen nicht bei Null anfangen. Sehen Sie sich einige ihrer [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts)- und [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts)-Contracts an.
+Smart Contracts sind auf Ethereum öffentlich und können als offene APIs betrachtet werden. Sie müssen keinen eigenen Smart Contract schreiben, um ein Dapp-Entwickler zu werden, Sie müssen nur wissen, wie man mit ihnen interagiert. Zum Beispiel können Sie die bestehenden Smart Contracts von [Uniswap](https://uniswap.exchange/swap), einer dezentralisierten Börse, verwenden, um die gesamte Token-Tausch-Logik in Ihrer Anwendung zu handhaben – Sie müssen nicht bei null anfangen. Sehen Sie sich einige ihrer [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts)- und [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts)-Verträge an.
 
 ## Was ist Zusammensetzbarkeit? {#what-is-composability}
 
-Zusammensetzbarkeit ist die Kombination verschiedener Komponenten zur Schaffung neuer Systeme oder Ergebnisse. In der Softwareentwicklung bedeutet Zusammensetzbarkeit, dass Entwickler vorhandene Softwarekomponenten wiederverwenden können, um neue Anwendungen zu erstellen. Um die Zusammensetzbarkeit zu verstehen, stellen Sie sich einfach zusammensetzbare Elemente als Legosteine vor. Jeder Legostein kann mit einem anderen kombiniert werden, sodass Sie durch die Verbindung verschiedener Legosteine komplexe Strukturen errichten können.
+Zusammensetzbarkeit (Composability) ist die Kombination verschiedener Komponenten, um neue Systeme oder Ergebnisse zu schaffen. In der Softwareentwicklung bedeutet Zusammensetzbarkeit, dass Entwickler bestehende Softwarekomponenten wiederverwenden können, um neue Anwendungen zu erstellen. Ein guter Weg, um Zusammensetzbarkeit zu verstehen, ist, sich zusammensetzbare Elemente als Legosteine vorzustellen. Jeder Legostein kann mit einem anderen kombiniert werden, was es Ihnen ermöglicht, komplexe Strukturen durch die Kombination verschiedener Legosteine zu bauen.
 
-Auf Ethereum ist jeder Smart Contract eine Art Legostein – Sie können Smart Contracts aus anderen Projekten als Bausteine für Ihr Projekt verwenden. Das bedeutet, dass Sie keine Zeit damit verschwenden müssen, das Rad neu zu erfinden oder von Grund auf neu zu entwickeln.
+In Ethereum ist jeder Smart Contract eine Art Legostein – Sie können Smart Contracts aus anderen Projekten als Bausteine für Ihr Projekt verwenden. Das bedeutet, dass Sie keine Zeit damit verbringen müssen, das Rad neu zu erfinden oder von Grund auf neu zu bauen.
 
 ## Wie funktioniert Zusammensetzbarkeit? {#how-does-composability-work}
 
-Ethereum-Smart-Contracts sind wie öffentliche APIs, d. h. jeder kann mit dem Vertrag interagieren oder sie in DApps integrieren, um zusätzliche Funktionen zu erhalten. Die Zusammensetzbarkeit von Smart Contracts beruht im Allgemeinen auf drei Prinzipien: Modularität, Autonomie und Auffindbarkeit:
+Ethereum-Smart-Contracts sind wie öffentliche APIs, sodass jeder mit dem Vertrag interagieren oder ihn in Dapps für zusätzliche Funktionalität integrieren kann. Die Zusammensetzbarkeit von Smart Contracts basiert im Allgemeinen auf drei Prinzipien: Modularität, Autonomie und Auffindbarkeit:
 
-\*\*1. **Modularität**: Dies ist die Fähigkeit einzelner Komponenten, eine bestimmte Aufgabe zu erfüllen. Auf Ethereum verfügt jeder Smart Contract über einen bestimmten Anwendungsfall (wie im Beispiel von Uniswap gezeigt).
+**1. Modularität**: Dies ist die Fähigkeit einzelner Komponenten, eine bestimmte Aufgabe auszuführen. In Ethereum hat jeder Smart Contract einen spezifischen Anwendungsfall (wie im Uniswap-Beispiel gezeigt).
 
-\*\*2. **Autonomie**: Zusammensetzbare Komponenten müssen in der Lage sein, unabhängig voneinander zu arbeiten. Jeder Smart Contract in Ethereum ist selbstausführend und kann betrieben werden, ohne auf andere Teile des Systems angewiesen zu sein.
+**2. Autonomie**: Zusammensetzbare Komponenten müssen in der Lage sein, unabhängig zu arbeiten. Jeder Smart Contract in Ethereum ist selbstausführend und kann funktionieren, ohne sich auf andere Teile des Systems zu verlassen.
 
-\*\*3. **Auffindbarkeit**: Entwickler können keine externen Verträge aufrufen oder Softwarebibliotheken in Anwendungen integrieren, wenn Erstere nicht öffentlich zugänglich sind. Smart Contracts sind bewusst als Open-Source-Software konzipiert, d. h. jeder kann einen Smart Contract aufrufen oder eine Codebasis abspalten.
+**3. Auffindbarkeit**: Entwickler können keine externen Verträge aufrufen oder Softwarebibliotheken in Anwendungen integrieren, wenn erstere nicht öffentlich verfügbar sind. Smart Contracts sind von Natur aus Open-Source; jeder kann einen Smart Contract aufrufen oder eine Codebasis forken.
 
 ## Vorteile der Zusammensetzbarkeit {#benefits-of-composability}
 
 ### Kürzerer Entwicklungszyklus {#shorter-development-cycle}
 
-Zusammensetzbarkeit reduziert den Arbeitsaufwand, den Entwickler bei der Erstellung von [Dapps](/apps/#what-are-dapps) haben. [Wie Naval Ravikant es ausdrückt:](https://twitter.com/naval/status/1444366754650656770) „Open-Source bedeutet, dass jedes Problem nur einmal gelöst werden muss.“
+Zusammensetzbarkeit reduziert die Arbeit, die Entwickler bei der Erstellung von [Dapps](/apps/#what-are-dapps) leisten müssen. [Wie Naval Ravikant es ausdrückt:](https://twitter.com/naval/status/1444366754650656770) „Open Source bedeutet, dass jedes Problem nur einmal gelöst werden muss.“
 
-Wenn es einen Smart Contract gibt, der ein Problem löst, können andere Entwickler ihn wiederverwenden, damit sie nicht das gleiche Problem lösen müssen. Auf diese Weise können Entwickler bestehenden Softwarebibliotheken zusätzliche Funktionen hinzufügen, um neue DApps zu erstellen.
+Wenn es einen Smart Contract gibt, der ein Problem löst, können andere Entwickler ihn wiederverwenden, sodass sie nicht dasselbe Problem lösen müssen. Auf diese Weise können Entwickler bestehende Softwarebibliotheken nehmen und zusätzliche Funktionalität hinzufügen, um neue Dapps zu erstellen.
 
 ### Größere Innovation {#greater-innovation}
 
-Die Zusammensetzbarkeit fördert Innovationen und Experimentierfreude, da es den Entwicklern freisteht, Open-Source-Code wiederzuverwenden, abzuändern, zu vervielfältigen oder zu integrieren, um die gewünschten Ergebnisse zu erzielen. Infolgedessen verbringen die Entwicklungsteams weniger Zeit mit der grundlegenden Funktionalität und können mehr Zeit für das Experimentieren mit neuen Funktionen aufwenden.
+Zusammensetzbarkeit fördert Innovation und Experimentierfreudigkeit, da Entwickler frei sind, Open-Source-Code wiederzuverwenden, zu modifizieren, zu duplizieren oder zu integrieren, um die gewünschten Ergebnisse zu erzielen. Infolgedessen verbringen Entwicklungsteams weniger Zeit mit grundlegenden Funktionen und können mehr Zeit für das Experimentieren mit neuen Funktionen aufwenden.
 
 ### Bessere Benutzererfahrung {#better-user-experience}
 
-Die Interoperabilität zwischen den Komponenten des Ethereum-Ökosystems verbessert das Benutzererlebnis. Wenn DApps externe Smart Contracts integrieren, können die Benutzer auf mehr Funktionen zugreifen als in einem fragmentierten Ökosystem, in dem Anwendungen nicht miteinander kommunizieren können.
+Die Interoperabilität zwischen den Komponenten des Ethereum-Ökosystems verbessert die Benutzererfahrung. Benutzer können auf eine größere Funktionalität zugreifen, wenn Dapps externe Smart Contracts integrieren, als in einem fragmentierten Ökosystem, in dem Anwendungen nicht kommunizieren können.
 
-Anhand eines Beispiels aus dem Arbitrage-Handel wollen wir die Vorteile der Interoperabilität verdeutlichen:
+Wir verwenden ein Beispiel aus dem Arbitrage-Handel, um die Vorteile der Interoperabilität zu veranschaulichen:
 
-Wenn ein Token auf `Börse A` höher gehandelt wird als auf `Börse B`, können Sie sich den Preisunterschied zunutze machen, um einen Gewinn zu erzielen. Allerdings können Sie das nur tun, wenn Sie über genügend Kapital verfügen, um die Transaktion zu finanzieren (d. h. den Token von `Börse B` zu kaufen und auf `Börse A` zu verkaufen).
+Wenn ein Token an `Börse A` höher gehandelt wird als an `Börse B`, können Sie den Preisunterschied nutzen, um Gewinn zu erzielen. Sie können dies jedoch nur tun, wenn Sie über genügend Kapital verfügen, um die Transaktion zu finanzieren (d. h. den Token an `Börse B` zu kaufen und an `Börse A` zu verkaufen).
 
-In einem Szenario, in dem Sie nicht über genügend Geldmittel verfügen, um den Handel zu decken, könnte sich ein Flash Loan ideal eignen. [Flash-Loans](/defi/#flash-loans) sind sehr technisch, aber die Grundidee ist, dass Sie Assets (ohne Sicherheiten) leihen und sie innerhalb _einer einzigen_ Transaktion zurückgeben können.
+In einem Szenario, in dem Sie nicht über genügend Mittel verfügen, um den Handel abzudecken, könnte ein Flash-Kredit ideal sein. [Flash-Kredite](/defi/#flash-loans) sind hochtechnisch, aber die Grundidee ist, dass Sie Vermögenswerte (ohne Sicherheiten) leihen und diese innerhalb _einer_ Transaktion zurückgeben können.
 
-Zurück zu unserem anfänglichen Beispiel: Ein Arbitrage-Händler kann einen großen Flash-Loan aufnehmen, Tokens von `Börse B` kaufen, sie auf `Börse A` verkaufen, das Kapital + Zinsen zurückzahlen und den Gewinn innerhalb derselben Transaktion behalten. Diese komplexe Logik erfordert die Kombination von Aufrufen für mehrere Verträge, was nicht möglich wäre, wenn Smart Contracts nicht über Interoperabilität verfügen würden.
+Um auf unser anfängliches Beispiel zurückzukommen: Ein Arbitrage-Händler kann einen großen Flash-Kredit aufnehmen, Token an `Börse B` kaufen, sie an `Börse A` verkaufen, das Kapital plus Zinsen zurückzahlen und den Gewinn behalten – alles innerhalb derselben Transaktion. Diese komplexe Logik erfordert die Kombination von Aufrufen an mehrere Verträge, was nicht möglich wäre, wenn es Smart Contracts an Interoperabilität mangeln würde.
 
 ## Beispiele für Zusammensetzbarkeit in Ethereum {#composability-in-ethereum}
 
-### Token-Swaps {#token-swaps}
+### Token-Tausch {#token-swaps}
 
-Wenn Sie eine DApp erstellen, für die Transaktionen in ETH bezahlt werden müssen, können Sie den Benutzern die Zahlung in anderen ERC-20-Token erlauben, indem Sie eine Token-Tausch-Logik integrieren. Der Code wandelt den Token des Benutzers automatisch in ETH um, bevor der Vertrag die aufgerufene Funktion ausführt.
+Wenn Sie eine Dapp erstellen, die erfordert, dass Transaktionen in ETH bezahlt werden, können Sie Benutzern erlauben, in anderen ERC-20-Token zu bezahlen, indem Sie eine Token-Tausch-Logik integrieren. Der Code wird den Token des Benutzers automatisch in ETH umwandeln, bevor der Vertrag die aufgerufene Funktion ausführt.
 
 ### Governance {#governance}
 
-Die Entwicklung maßgeschneiderter Governance-Systeme für eine [DAO](/dao/) kann teuer und zeitaufwendig sein. Stattdessen könnten Sie ein Open-Source-Governance-Toolkit wie [Aragon Client](https://client.aragon.org/) verwenden, um Ihre DAO zu bootstrappen und schnell ein Governance-Framework zu erstellen.
+Der Aufbau maßgeschneiderter Governance-Systeme für eine [DAO](/dao/) kann teuer und zeitaufwändig sein. Stattdessen könnten Sie ein Open-Source-Governance-Toolkit wie den [Aragon Client](https://client.aragon.org/) verwenden, um Ihre DAO zu bootstrappen und schnell ein Governance-Framework zu erstellen.
 
 ### Identitätsmanagement {#identity-management}
 
-Anstatt ein benutzerdefiniertes Authentifizierungssystem zu entwickeln oder sich auf zentrale Anbieter zu verlassen, können Sie zur Verwaltung der Benutzerauthentifizierung Werkzeuge für dezentrale Identität (DID) integrieren. Ein Beispiel ist [SpruceID](https://www.spruceid.com/), ein Open-Source-Toolkit, das eine „Mit Ethereum anmelden“-Funktionalität anbietet, mit der Benutzer ihre Identität mithilfe einer Ethereum-Wallet authentifizieren können.
+Anstatt ein benutzerdefiniertes Authentifizierungssystem zu erstellen oder sich auf zentralisierte Anbieter zu verlassen, können Sie dezentralisierte Identitätswerkzeuge (DID) integrieren, um die Authentifizierung für Benutzer zu verwalten. Ein Beispiel ist [SpruceID](https://www.spruceid.com/), ein Open-Source-Toolkit, das eine „Sign in with Ethereum“-Funktionalität bietet, mit der Benutzer Identitäten mit einem Ethereum-Wallet authentifizieren können.
 
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Starten Sie die Entwicklung Ihres Dapp-Frontends mit create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Ein Überblick über die Verwendung von create-eth-app, um sofort einsatzbereite Apps mit beliebten Smart Contracts zu erstellen._
+- [Starten Sie Ihre Dapp-Frontend-Entwicklung mit create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Ein Überblick darüber, wie man create-eth-app verwendet, um sofort einsatzbereite Anwendungen mit beliebten Smart Contracts zu erstellen._
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
+_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
-- [Zusammensetzbarkeit ist Innovation](https://a16zcrypto.com/posts/article/how-composability-unlocks-crypto-and-everything-else/)
-- [Warum Zusammensetzbarkeit für Web3 wichtig ist](https://hackernoon.com/why-composability-matters-for-web3)
-- [Was ist Zusammensetzbarkeit?](https://blog.aragon.org/what-is-composability/#:~:text=Aragon,connect%20to%20every%20other%20piece.)
+- [Composability is Innovation](https://a16zcrypto.com/posts/article/how-composability-unlocks-crypto-and-everything-else/)
+- [Why Composability Matters For Web3](https://hackernoon.com/why-composability-matters-for-web3)
+- [What is Composability?](https://blog.aragon.org/what-is-composability/#:~:text=Aragon,connect%20to%20every%20other%20piece.)

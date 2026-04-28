@@ -4,6 +4,7 @@ description: "本教程介绍如何使用我们的智能合约和 Web3 在以太
 author: "苏米-穆德吉尔"
 tags: [ "ERC-721", "Alchemy", "Solidity", "智能合同" ]
 skill: beginner
+breadcrumb: "铸造NFT"
 lang: zh
 published: 2021-04-22
 ---

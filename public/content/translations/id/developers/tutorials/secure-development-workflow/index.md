@@ -1,55 +1,53 @@
 ---
 title: Daftar periksa keamanan kontrak pintar
-description: Sebuah alur kerja yang disarankan untuk penulisan kontrak pintar yang aman
+description: Alur kerja yang disarankan untuk menulis kontrak pintar yang aman
 author: "Trailofbits"
-tags:
-  - "kontrak pintar"
-  - "keamanan"
-  - "solidity"
+tags: ["kontrak pintar", "keamanan", "Solidity"]
 skill: intermediate
+breadcrumb: "Daftar keamanan"
 lang: id
 published: 2020-09-07
-source: Membuat kontrak yang aman
+source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
 ## Daftar periksa pengembangan kontrak pintar {#smart-contract-development-checklist}
 
-Berikut adalah proses tingkat tinggi yang kami sarankan untuk diikuti sementara Anda menulis kontrak pintar Anda.
+Berikut adalah proses tingkat tinggi yang kami sarankan untuk diikuti saat Anda menulis kontrak pintar Anda.
 
-Periksa masalah keamanan yang dikenal:
+Periksa masalah keamanan yang diketahui:
 
-- Tinjau ulang kontrak Anda dengan [Slither](https://github.com/crytic/slither). Slither memiliki lebih dari 40 detektor bawaan untuk mencari kerentanan umum. Jalankan Slither pada setiap pemeriksaan dengan kode baru dan pastikan kontrak mendapatkan laporan yang bersih (atau gunakan mode triase untuk mendiamkan beberapa masalah).
-- Tinjau ulang kontrak Anda dengan [Crytic](https://crytic.io/). Crytic memeriksa 50 masalah yang tidak dapat dilakukan Slither. Crytic dapat menolong tim Anda mengetahui perkembangan anggota lain juga, dengan memunculkan masalah keamanan di Permintaan Penarikan di GitHub dengan mudah.
+- Tinjau kontrak Anda dengan [Slither](https://github.com/crytic/slither). Alat ini memiliki lebih dari 40 detektor bawaan untuk kerentanan umum. Jalankan pada setiap check-in dengan kode baru dan pastikan mendapatkan laporan yang bersih (atau gunakan mode triase untuk membungkam masalah tertentu).
+- Tinjau kontrak Anda dengan [Crytic](https://crytic.io/). Alat ini memeriksa 50 masalah yang tidak diperiksa oleh Slither. Crytic juga dapat membantu tim Anda untuk saling memantau, dengan memunculkan masalah keamanan secara mudah di Pull Request pada GitHub.
 
-Pertimbangkan fitur spesial kontrak Anda:
+Pertimbangkan fitur khusus dari kontrak Anda:
 
-- Apakah kontrak Anda dapat ditingkatkan? Tinjau kode yang dapat ditingkatkan untuk mencari kelemahannya dengan [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) atau [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/). Kami telah mendokumentasikan 17 alur dari peningkatan yang bermasalah.
-- Apakah kontrak Anda mengklaim telah sesuai dengan ERC? Periksa dengan [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance). Peralatan ini dengan segera mengidentifikasi deviasi dari enam spesifikasi umum.
-- Apakah Anda berintegrasi dengan token pihak ketiga? Tinjau [daftar periksa integrasi token](/developers/tutorials/token-integration-checklist/) kami sebelum menggunakan kontrak eksternal.
+- Apakah kontrak Anda dapat ditingkatkan (upgradeable)? Tinjau kode peningkatan Anda untuk mencari kelemahan dengan [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) atau [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/). Kami telah mendokumentasikan 17 cara peningkatan bisa menjadi kacau.
+- Apakah kontrak Anda dimaksudkan untuk mematuhi ERC? Periksa dengan [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance). Alat ini secara instan mengidentifikasi penyimpangan dari enam spesifikasi umum.
+- Apakah Anda berintegrasi dengan token pihak ketiga? Tinjau [daftar periksa integrasi token](/developers/tutorials/token-integration-checklist/) kami sebelum mengandalkan kontrak eksternal.
 
-Secara visual periksa fitur keamanan kritikal kode Anda:
+Periksa secara visual fitur keamanan penting dari kode Anda:
 
-- Tinjau printer [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) Slither. Hindari pembayangan yang tak disengaja dan masalah linearisasi C3.
-- Tinjau printer [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) Slither. Tinjauan ini melaporkan visibilitas fungsi dan kontrol akses.
-- Tinjau printer [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) Slither. Tinjauan ini melaporkan kontrol akses terhadap variabel state.
+- Tinjau pencetak [inheritance-graph](https://github.com/trailofbits/slither/wiki/Printer-documentation#inheritance-graph) dari Slither. Hindari masalah shadowing yang tidak disengaja dan masalah linierisasi C3.
+- Tinjau pencetak [function-summary](https://github.com/trailofbits/slither/wiki/Printer-documentation#function-summary) dari Slither. Ini melaporkan visibilitas fungsi dan kontrol akses.
+- Tinjau pencetak [vars-and-auth](https://github.com/trailofbits/slither/wiki/Printer-documentation#variables-written-and-authorization) dari Slither. Ini melaporkan kontrol akses pada variabel status.
 
-Dokumentasikan properti keamanan kritikal dan gunakan pembuat tes otomatis untuk mengevaluasinya:
+Dokumentasikan properti keamanan penting dan gunakan pembuat pengujian otomatis untuk mengevaluasinya:
 
-- Pelajari cara [mendokumentasikan properti keamanan untuk kode Anda](/developers/tutorials/guide-to-smart-contract-security-tools/). Pada awalnya ini sulit, tapi inilah satu-satunya aktivitas yang paling penting untuk mencapai hasil yang baik. Aktivitas ini juga merupakan persyaratan untuk menggunakan teknik tingkat lanjut dalam tutorial ini.
-- Tentukan properti keamanan di Solidity, untuk penggunaan dengan [Echidna](https://github.com/crytic/echidna) dan [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html). Fokuskan pada mesin state, kontrol akses, operasi aritmetik, interaksi eksternal, dan kesesuaian dengan standar.
-- Tentukan properti keamanan dengan [API Python Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). Fokuskan pada warisan, dependensi variabel, kontrol akses, dan masalah struktur lainnya.
-- Jalankan tes properti Anda pada setiap commit dengan [Crytic](https://crytic.io). Crytic dapat mengkonsumsi dan mengevaluasi tes properti keamanan sehingga semua orang di dalam tim Anda dapat dengan mudah melihat bahwa tes lolos uji di GitHub. Tes yang gagal dapat menghalangi commit.
+- Pelajari cara [mendokumentasikan properti keamanan untuk kode Anda](/developers/tutorials/guide-to-smart-contract-security-tools/). Awalnya memang sulit, tetapi ini adalah aktivitas tunggal yang paling penting untuk mencapai hasil yang baik. Ini juga merupakan prasyarat untuk menggunakan teknik lanjutan apa pun dalam tutorial ini.
+- Tentukan properti keamanan di Solidity, untuk digunakan dengan [Echidna](https://github.com/crytic/echidna) dan [Manticore](https://manticore.readthedocs.io/en/latest/verifier.html). Fokus pada mesin status Anda, kontrol akses, operasi aritmatika, interaksi eksternal, dan kesesuaian standar.
+- Tentukan properti keamanan dengan [API Python Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/). Fokus pada pewarisan, dependensi variabel, kontrol akses, dan masalah struktural lainnya.
+- Jalankan pengujian properti Anda pada setiap komit dengan [Crytic](https://crytic.io). Crytic dapat mengonsumsi dan mengevaluasi pengujian properti keamanan sehingga semua orang di tim Anda dapat dengan mudah melihat bahwa pengujian tersebut lulus di GitHub. Pengujian yang gagal dapat memblokir komit.
 
-Akhirnya, waspadalah terhadap masalah yang tidak dapat dengan mudah ditemukan oleh peralatan otomatis:
+Terakhir, perhatikan masalah yang tidak dapat ditemukan dengan mudah oleh alat otomatis:
 
-- Kurangnya privasi: setiap orang bisa melihat transaksi Anda sementara diantrikan dalam pool
+- Kurangnya privasi: orang lain dapat melihat transaksi Anda saat sedang mengantre di kolam
 - Transaksi front running
-- Operasi kriptografis
-- Interaksi berisiko dengan komponon DeFi eksternal
+- Operasi kriptografi
+- Interaksi berisiko dengan komponen DeFi eksternal
 
 ## Minta bantuan {#ask-for-help}
 
-[Jam kerja Ethereum](https://calendly.com/dan-trailofbits/office-hours) dimulai setiap Selasa sore. Sesi berdurasi 1 jam dan 1 lawan 1 ini adalah kesempatan untuk mengajukan pertanyaan apa pun kepada kami tentang keamanan, penyelesaian masalah menggunakan peralatan kami, dan mendapatkan umpan balik dari para ahli tentang pendekatan yang Anda pakai saat ini. Kami akan menolong Anda memahami panduan ini.
+[Jam kerja Ethereum](https://calendly.com/dan-trailofbits/office-hours) diadakan setiap Selasa sore. Sesi 1 lawan 1 selama 1 jam ini adalah kesempatan untuk menanyakan pertanyaan apa pun yang Anda miliki tentang keamanan, memecahkan masalah menggunakan alat kami, dan mendapatkan umpan balik dari para ahli tentang pendekatan Anda saat ini. Kami akan membantu Anda menyelesaikan panduan ini.
 
-Bergabunglah dengan Slack kami: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Kami selalu dapat dihubungi di kanal #crytic dan #ethereum jika Anda memiliki pertanyaan apa pun.
+Bergabunglah dengan Slack kami: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Kami selalu tersedia di saluran #crytic dan #ethereum jika Anda memiliki pertanyaan.

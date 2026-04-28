@@ -138,11 +138,13 @@ export const StaticLayout = ({
             />
             {children}
 
-            <FileContributors
-              className="my-10 border-t"
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
+            {!frontmatter.hideEditButton && (
+              <FileContributors
+                className="my-10 border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+              />
+            )}
             <FeedbackCard isArticle />
           </MainArticle>
         </div>

@@ -4,6 +4,7 @@ description: "Dai jetonu örneğini kullanarak JavaScript'ten bir akıllı sözl
 author: jdourlens
 tags: [ "işlemler", "ön uç", "JavaScript", "web3.js" ]
 skill: beginner
+breadcrumb: "JS ile sözleşme çağrısı"
 lang: tr
 published: 2020-04-19
 source: EthereumDev

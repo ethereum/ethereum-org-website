@@ -11,6 +11,7 @@ tags:
     "pruebas"
   ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -75,7 +76,7 @@ Utilice [crytic.io](https://github.com/crytic) para obtener acceso a detectores 
 
 Las capacidades y el diseño del marco de análisis estático de Slither se han descrito en publicaciones de blog ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) y en un [artículo académico](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-El análisis estático existe en distintas formas. Lo más probable es que se dé cuenta de que los compiladores como [clang](https://clang-analyzer.llvm.org/) y [gcc](https://lwn.net/Articles/806099/) dependen de estas técnicas de investigación, pero también sustentan ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) y herramientas basadas en métodos formales como [Frama-C](https://frama-c.com/) y [Polyspace](https://www.mathworks.com/products/polyspace.html).
+El análisis estático existe en distintas formas. Lo más probable es que se dé cuenta de que los compiladores como [clang](https://clang-analyzer.llvm.org/) y [gcc](https://lwn.net/Articles/806099/) dependen de estas técnicas de investigación, pero también sustentan ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) y herramientas basadas en métodos formales como [Frama-C](https://frama-c.com/) y [Polyspace](https://www.mathworks.com/products/polyspace.html).
 
 No vamos a revisar aquí exhaustivamente las técnicas de análisis estático y de investigación. En cambio, nos centraremos en lo necesario para entender cómo funciona Slither y así poder utilizarlo de forma más eficaz para encontrar errores y entender el código.
 

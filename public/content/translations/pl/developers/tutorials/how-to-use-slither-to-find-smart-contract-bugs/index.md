@@ -11,6 +11,7 @@ tags:
     "testowanie"
   ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -75,7 +76,7 @@ Użyj [crytic.io](https://github.com/crytic), aby uzyskać dostęp do prywatnych
 
 Możliwości i projekt frameworka do analizy statycznej Slither zostały opisane w postach na blogu ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) i w [pracy naukowej](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-Istnieją różne rodzaje analizy statycznej. Najprawdopodobniej zdajesz sobie sprawę, że kompilatory takie jak [clang](https://clang-analyzer.llvm.org/) i [gcc](https://lwn.net/Articles/806099/) opierają się na tych technikach badawczych, ale stanowią one również podstawę ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/)) i narzędzi opartych na metodach formalnych, takich jak [Frama-C](https://frama-c.com/) i [Polyspace](https://www.mathworks.com/products/polyspace.html).
+Istnieją różne rodzaje analizy statycznej. Najprawdopodobniej zdajesz sobie sprawę, że kompilatory takie jak [clang](https://clang-analyzer.llvm.org/) i [gcc](https://lwn.net/Articles/806099/) opierają się na tych technikach badawczych, ale stanowią one również podstawę ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/)) i narzędzi opartych na metodach formalnych, takich jak [Frama-C](https://frama-c.com/) i [Polyspace](https://www.mathworks.com/products/polyspace.html).
 
 Nie będziemy tutaj wyczerpująco omawiać technik analizy statycznej ani badań w tej dziedzinie. Zamiast tego skoncentrujemy się na tym, co jest potrzebne, aby zrozumieć, jak działa Slither tak, abyś mógł go skuteczniej używać, aby znaleźć błędy i zrozumieć kod.
 
