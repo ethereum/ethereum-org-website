@@ -49,7 +49,7 @@ lang: ko
 
 ## 7. 선택한 레이어 2 네트워크를 지갑에 추가하세요(선택 사항)
 
-[chainlist.org](http://chainlist.org)를 사용하여 네트워크의 RPC 세부 정보를 찾을 수 있습니다. 네트워크가 추가되고 거래가 완료되면 지갑에서 토큰을 확인할 수 있습니다. <br />
+[chainlist.org](https://chainlist.org)를 사용하여 네트워크의 RPC 세부 정보를 찾을 수 있습니다. 네트워크가 추가되고 거래가 완료되면 지갑에서 토큰을 확인할 수 있습니다. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

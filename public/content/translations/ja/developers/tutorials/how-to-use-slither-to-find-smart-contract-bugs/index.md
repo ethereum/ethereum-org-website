@@ -5,6 +5,7 @@ author: Trailofbits
 lang: ja
 tags: [ "Solidity", "スマートコントラクト", "セキュリティ", "テスト" ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -69,7 +70,7 @@ slither project_paths
 
 Slither静的解析フレームワークの機能と設計については、ブログ投稿 ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) や [学術論文](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf)で説明されています。
 
-静的解析には、さまざまな種類があります。 おそらくご存じのように、[clang](https://clang-analyzer.llvm.org/)や[gcc](https://lwn.net/Articles/806099/)などのコンパイラはこれらの研究技術に依存していますが、それはまた、([Infer](https://fbinfer.com/)、[CodeClimate](https://codeclimate.com/)、[FindBugs](http://findbugs.sourceforge.net/)、そして[Frama-C](https://frama-c.com/)や[Polyspace](https://www.mathworks.com/products/polyspace.html)のような形式的手法に基づくツール) の基礎ともなっています。
+静的解析には、さまざまな種類があります。 おそらくご存じのように、[clang](https://clang-analyzer.llvm.org/)や[gcc](https://lwn.net/Articles/806099/)などのコンパイラはこれらの研究技術に依存していますが、それはまた、([Infer](https://fbinfer.com/)、[CodeClimate](https://codeclimate.com/)、[FindBugs](https://findbugs.sourceforge.net/)、そして[Frama-C](https://frama-c.com/)や[Polyspace](https://www.mathworks.com/products/polyspace.html)のような形式的手法に基づくツール) の基礎ともなっています。
 
 ここでは、静的解析の技術と研究者を網羅的に検討するわけではありません。 その代わり、皆さんがバグを発見しコードを理解するためにSlitherをより効果的に使えるよう、Slitherがどのように機能するかを理解するために必要なことに焦点を当てます。
 

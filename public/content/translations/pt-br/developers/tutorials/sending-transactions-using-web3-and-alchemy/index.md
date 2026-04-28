@@ -4,6 +4,7 @@ description: "Este é um guia amigável para iniciantes para enviar transações
 author: "Elan Halpern"
 tags: [ "transações", "web3.js", "Alchemy" ]
 skill: beginner
+breadcrumb: "Enviar transacoes"
 lang: pt-br
 published: 2020-11-04
 source: Alchemy docs

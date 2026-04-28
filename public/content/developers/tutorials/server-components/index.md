@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: en
 tags: ["agent", "server", "offchain", "dapps"]
 skill: beginner
+breadcrumb: Server components
 published: 2024-07-15
 ---
 

@@ -315,7 +315,7 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
   return (
     <footer className="px-4 py-4">
       <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
-        <p className="text-sm italic text-body-medium">
+        <p className="text-sm text-body-medium italic">
           {t("website-last-updated")}: {lastDeployLocaleTimestamp}
         </p>
 

@@ -48,17 +48,17 @@ import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-s
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
-import EventFallback from "@/public/images/events/event-placeholder.png"
+import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
-const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
+const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
 
 const Column = (props: ChildOnlyProp) => (
-  <div className="mb-6 me-8 w-full flex-1 basis-1/3" {...props} />
+  <div className="me-8 mb-6 w-full flex-1 basis-1/3" {...props} />
 )
 const RightColumn = (props: ChildOnlyProp) => (
-  <div className="mb-6 me-0 w-full flex-1 basis-1/3" {...props} />
+  <div className="me-0 mb-6 w-full flex-1 basis-1/3" {...props} />
 )
 
 const Scroller = ({
@@ -105,7 +105,7 @@ const WhyGrid = () => {
       className={cn(
         "rounded-4xl border border-accent-c/20",
         "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
-        "bg-gradient-to-b from-accent-c/5 from-[60%] to-accent-c/15"
+        "bg-linear-to-b from-accent-c/5 from-[60%] to-accent-c/15"
       )}
     >
       {items.map(({ heading, description }) => (
@@ -124,14 +124,8 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
   setRequestLocale(locale)
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
-  const tCommon = await getTranslations({
-    locale,
-    namespace: "common",
-  })
+  const t = await getTranslations("page-developers-index")
+  const tCommon = await getTranslations("common")
 
   const paths = await getBuilderPaths()
   const speedRunDetails = {
@@ -275,7 +269,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </h2>
 
             {/* Quickstart your idea */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={scaffoldDebugScreenshot}
                 alt="Scaffold-ETH 2 debug screenshot"
@@ -330,7 +324,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Get help */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={stackExchangeScreenshot}
                 alt="Ethereum Stack Exchange screenshot"
@@ -368,7 +362,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Resources */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={resourcesBanner}
                 alt="Banner showing four resource app icons"
@@ -399,7 +393,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Tutorials */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={tutorialTagsBanner}
                 alt="Banner displaying multiple learning topics in a tag cloud"
@@ -604,13 +598,13 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: title,
                       }}
-                      className="min-w-72 max-w-md flex-1"
+                      className="max-w-md min-w-72 flex-1"
                     >
                       <CardBanner className="h-36">
                         {bannerImage ? (
                           <CardImage src={bannerImage} />
                         ) : (
-                          <Image src={EventFallback} alt="" sizes="276px" />
+                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
                         )}
                       </CardBanner>
                       <CardContent>
@@ -648,8 +642,8 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <div
               className={cn(
                 "mx-auto max-w-screen-lg",
-                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
-                "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
+                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(var(--radius-4xl)+1px)] before:content-['']", // Border/gradient positioning
+                "before:bg-linear-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
                 "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
               )}
             >
@@ -699,10 +693,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   return await getMetadata({
     locale,

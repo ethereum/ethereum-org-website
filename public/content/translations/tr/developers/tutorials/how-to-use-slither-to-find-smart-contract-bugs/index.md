@@ -11,6 +11,7 @@ tags:
     "test etmek"
   ]
 skill: advanced
+breadcrumb: "Slither"
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -75,7 +76,7 @@ Dedektörlere ek olarak Slither, [yazıcıları](https://github.com/crytic/slith
 
 Slither statik analiz çatısının yetenekleri ve tasarımı, blog gönderilerinde ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) ve bir [akademik makalede](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) açıklanmıştır.
 
-Statik analizin farklı türleri mevcuttur. [clang](https://clang-analyzer.llvm.org/) ve [gcc](https://lwn.net/Articles/806099/) gibi derleyicilerin bu araştırma tekniklerine dayandığını büyük olasılıkla fark etmişsinizdir, ancak bu aynı zamanda [Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) ve [Frama-C](https://frama-c.com/) ile [Polyspace](https://www.mathworks.com/products/polyspace.html) gibi resmi yöntemlere dayalı araçların da temelini oluşturur.
+Statik analizin farklı türleri mevcuttur. [clang](https://clang-analyzer.llvm.org/) ve [gcc](https://lwn.net/Articles/806099/) gibi derleyicilerin bu araştırma tekniklerine dayandığını büyük olasılıkla fark etmişsinizdir, ancak bu aynı zamanda [Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) ve [Frama-C](https://frama-c.com/) ile [Polyspace](https://www.mathworks.com/products/polyspace.html) gibi resmi yöntemlere dayalı araçların da temelini oluşturur.
 
 Burada statik analiz tekniklerini ve araştırmalarını kapsamlı bir şekilde incelemeyeceğiz. Bunun yerine, hataları bulmak ve kodu anlamak amacıyla onu daha etkili bir şekilde kullanabilmeniz için Slither'ın nasıl çalıştığını anlamak için gerekenlere odaklanacağız.
 

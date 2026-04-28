@@ -111,7 +111,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Nethereum —** **_інтеграційна .NET-бібліотека з відкритим кодом для блокчейну._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Документація](http://docs.nethereum.com/en/latest/)
+- [Документація](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Інструменти для Python —** **_різноманітні бібліотеки для взаємодії з Ethereum за допомогою Python._**

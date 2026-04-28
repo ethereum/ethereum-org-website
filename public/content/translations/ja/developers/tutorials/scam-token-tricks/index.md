@@ -11,6 +11,7 @@ tags:
     "TypeScript"
   ]
 skill: intermediate
+breadcrumb: "詐欺トークン"
 published: 2023-09-15
 lang: ja
 ---

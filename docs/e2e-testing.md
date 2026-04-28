@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project uses [Playwright](https://playwright.dev/) for end-to-end testing with [Chromatic](https://www.chromatic.com/) integration for visual regression testing.
+This project uses [Playwright](https://playwright.dev/) for end-to-end testing.
 
 ## Quick Start
 
@@ -140,13 +140,4 @@ test("search functionality", async ({ page }) => {
 
 #### 4. Visual Testing
 
-Use Chromatic snapshots for visual regression testing:
-
-```typescript
-import { takeSnapshot } from "@chromatic-com/playwright"
-
-test("visual regression", async ({ page }, testInfo) => {
-  await page.goto("/")
-  await takeSnapshot(page, "homepage-initial", testInfo)
-})
-```
+Visual regression testing is handled separately via Storybook + Chromatic. E2E tests focus on functional assertions rather than visual snapshots.

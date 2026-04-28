@@ -253,7 +253,7 @@ const CollectiblesCurrentYear = ({
               {t("page-collectibles-instructions-label")}
             </AccordionTrigger>
             <AccordionContent className="text-base">
-              <OrderedList className="mb-0 ms-3">
+              <OrderedList className="ms-3 mb-0">
                 <ListItem>
                   <Translation
                     id="page-collectibles-code-content-instructions-1"
@@ -413,7 +413,7 @@ const CollectiblesCurrentYear = ({
                 {t("page-collectibles-instructions-label")}
               </AccordionTrigger>
               <AccordionContent className="text-base">
-                <OrderedList className="mb-0 ms-3">
+                <OrderedList className="ms-3 mb-0">
                   <ListItem>
                     <Translation
                       id="page-collectibles-translations-instructions-1"
@@ -489,7 +489,7 @@ const CollectiblesCurrentYear = ({
               {t("page-collectibles-instructions-label")}
             </AccordionTrigger>
             <AccordionContent className="text-base">
-              <OrderedList className="mb-0 ms-3">
+              <OrderedList className="ms-3 mb-0">
                 <ListItem>
                   <Translation
                     id="page-collectibles-social-instructions-1"

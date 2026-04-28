@@ -2,20 +2,16 @@ import { getTranslations } from "next-intl/server"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 
 export default async function WalletsPageJsonLD({
   locale,
   lastEditLocaleTimestamp,
   contributors,
 }) {
-  const t = await getTranslations({
-    namespace: "page-find-wallet",
-  })
+  const t = await getTranslations("page-find-wallet")
 
   const url = normalizeUrlForJsonLd(locale, `/wallets/`)
 
@@ -28,6 +24,7 @@ export default async function WalletsPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -36,13 +33,8 @@ export default async function WalletsPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -60,8 +52,8 @@ export default async function WalletsPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#wallets` },
       },
       {
@@ -70,10 +62,9 @@ export default async function WalletsPageJsonLD({
         headline: t("page-wallets-title"),
         description: t("page-wallets-meta-description"),
         image: "https://ethereum.org/images/wallets/wallet-hero.png",
-        author: [ethereumCommunityOrganization],
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         about: {
           "@type": "Thing",
           name: "Ethereum Wallets",

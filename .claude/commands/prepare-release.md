@@ -101,6 +101,7 @@ These accounts should be filtered from the contributors list:
 - `github-actions`
 - `github-actions[bot]`
 - `actions-user`
+- `myelinated-wackerow`
 
 **Keep the structure intact**:
 - Keep section headers (⚡️ Changes, 🌐 Translations, 🐛 Bug Fix, etc.)

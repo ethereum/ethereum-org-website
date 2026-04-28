@@ -2,6 +2,8 @@ import type { MetricReturnData } from "@/lib/types"
 
 import { DUNE_API_URL } from "@/lib/constants"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_ACCOUNT_HOLDERS_TASK_ID = "fetch-account-holders"
 
 // Dune query: https://dune.com/queries/6676254
@@ -30,7 +32,7 @@ export async function fetchAccountHolders(): Promise<MetricReturnData> {
 
   console.log("Starting account holders data fetch from Dune Analytics")
 
-  const response = await fetch(url, {
+  const response = await fetchRetry(url, {
     headers: { "X-Dune-API-Key": duneApiKey },
   })
 

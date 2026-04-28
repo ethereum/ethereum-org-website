@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Antes de leer",
+  "heading": "¿Buscas entender Ethereum?",
+  "description": "Este documento técnico se publicó en <strong>2014</strong>, antes del lanzamiento de Ethereum. Después de más de 10 años de desarrollo, actualizaciones importantes y crecimiento del ecosistema, <strong>el documento técnico original ya no refleja lo que Ethereum es hoy en día</strong>.",
+  "cta-learn": "Aprende sobre Ethereum hoy",
+  "cta-download-pdf": "Descargar PDF original (2014)",
+  "whats-changed": "¿Qué ha cambiado desde 2014?",
+  "evolution-pos": "Ethereum pasó de prueba de trabajo a prueba de participación (La Fusión, 2022)",
+  "evolution-l2": "Las soluciones de escalabilidad de capa 2 ahora procesan millones de transacciones",
+  "evolution-usecases": "DeFi, los NFT y las DAO surgieron como casos de uso principales",
+  "evolution-standards": "Los estándares de contrato inteligente (ERC-20, ERC-721) se convirtieron en los cimientos de la industria"
+}

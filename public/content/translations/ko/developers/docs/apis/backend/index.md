@@ -111,7 +111,7 @@ lang: ko
 **Nethereum -** **_블록체인을 위한 오픈소스 .NET 통합 라이브러리._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [개발문서](http://docs.nethereum.com/en/latest/)
+- [개발문서](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_Python을 통해 이더리움과 상호작용하기 위한 다양한 라이브러리._**

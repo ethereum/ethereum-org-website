@@ -118,7 +118,7 @@ const BugBountyCards = () => {
               </p>
             </div>
 
-            <p className="mb-2 mt-4 text-sm uppercase opacity-60">
+            <p className="mt-4 mb-2 text-sm uppercase opacity-60">
               {t(card.subDescriptionTranslationId)}
             </p>
 

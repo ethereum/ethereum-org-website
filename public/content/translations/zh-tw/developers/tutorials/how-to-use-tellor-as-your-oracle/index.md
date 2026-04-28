@@ -5,6 +5,7 @@ author: "Tellor"
 lang: zh-tw
 tags: [ "solidity", "smart contracts", "oracles" ]
 skill: beginner
+breadcrumb: "Tellor預言機"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

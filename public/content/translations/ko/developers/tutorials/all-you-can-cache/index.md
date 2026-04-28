@@ -4,6 +4,7 @@ description: "더 저렴한 롤업 트랜잭션을 위해 캐싱 계약을 생�
 author: Ori Pomerantz
 tags: [ "레이어 2", "캐싱", "저장 공간" ]
 skill: intermediate
+breadcrumb: "롤업 캐싱"
 published: 2022-09-15
 lang: ko
 ---

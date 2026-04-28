@@ -49,7 +49,7 @@ lang: ja
 
 ## 7. 選択したレイヤー2ネットワークをウォレットに追加する (オプション)
 
-ネットワークのRPC詳細は、[chainlist.org](http://chainlist.org)で確認できます。 ネットワークの追加およびトランザクションの完了により、トークンがウォレットに表示されるはずです。 <br />
+ネットワークのRPC詳細は、[chainlist.org](https://chainlist.org)で確認できます。 ネットワークの追加およびトランザクションの完了により、トークンがウォレットに表示されるはずです。 <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

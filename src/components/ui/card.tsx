@@ -59,14 +59,14 @@ const cardBannerVariants = cva(
     variants: {
       background: {
         "accent-a":
-          "bg-gradient-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20",
+          "bg-linear-to-b from-accent-a/5 to-accent-a/10 dark:from-accent-a/10 dark:to-accent-a/20",
         "accent-b":
-          "bg-gradient-to-b from-accent-b/5 to-accent-b/10 dark:from-accent-b/10 dark:to-accent-b/20",
+          "bg-linear-to-b from-accent-b/5 to-accent-b/10 dark:from-accent-b/10 dark:to-accent-b/20",
         "accent-c":
-          "bg-gradient-to-b from-accent-c/5 to-accent-c/10 dark:from-accent-c/10 dark:to-accent-c/20",
+          "bg-linear-to-b from-accent-c/5 to-accent-c/10 dark:from-accent-c/10 dark:to-accent-c/20",
         primary:
-          "bg-gradient-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20",
-        body: "bg-gradient-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20",
+          "bg-linear-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20",
+        body: "bg-linear-to-b from-body/5 to-body/10 dark:from-body/10 dark:to-body/20",
         none: "",
       },
       size: {
@@ -137,6 +137,7 @@ const titleVariants = cva(
   {
     variants: {
       variant: {
+        semibold: "text-lg font-semibold",
         bold: "text-2xl font-bold",
         black: "text-3xl font-black",
       },

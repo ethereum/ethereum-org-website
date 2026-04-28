@@ -9,6 +9,7 @@ import { Image } from "@/components/Image"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
+import { dateTimeFormat } from "@/lib/utils/date"
 
 const stories: Story[] = [
   {
@@ -119,11 +120,11 @@ const WhatAreAppsStories = () => {
             </Button>
           </div>
           <p className="text-sm text-body-medium">
-            {new Date(story.date).toLocaleDateString("en-US", {
+            {dateTimeFormat("en-US", {
               year: "numeric",
               month: "long",
               day: "numeric",
-            })}
+            }).format(new Date(story.date))}
           </p>
         </div>
       ))}

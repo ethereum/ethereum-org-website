@@ -8,7 +8,7 @@ Utility functions (utils) should be defined in standalone files inside `src/lib/
 
 ## Scripts
 
-Scripts we use on build time and are not directly related to the source code (eg: Crowdin imports, GitHub tasks) should be defined in standalone files inside `src/scripts` dir.
+Scripts we use at build time and are not directly related to the source code (eg: Crowdin imports, GitHub tasks) should be defined in standalone files inside `src/scripts` dir.
 
 ## Constants
 
@@ -63,7 +63,7 @@ For the props type signature use the naming convention `<ComponentName>Props` to
 
 **Do not use `React.FC`** and instead annotate the props object directly. `React.FC` implies the `children` prop, but this is not always desired when there is a component that should not accept this prop. `React.FC` also does not allow for use of Generic types, or use of Generic type when doing type guarding like function overloading. It is also not generally recommended to use and [was removed from the create-react-app template](https://github.com/facebook/create-react-app/pull/8177).
 
-A positive side-effect to directly annotating the props object is for IDE intellisense where you can view the props when hovering over the component name to see it's signature.
+A positive side-effect to directly annotating the props object is for IDE intellisense where you can view the props when hovering over the component name to see its signature.
 
 i.e., `const Component: ({ label, title, ...props }: ComponentProps) => React.JSX.Element`
 

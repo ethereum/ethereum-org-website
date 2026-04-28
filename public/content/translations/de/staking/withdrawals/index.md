@@ -96,7 +96,7 @@ Die Auszahlungsfunktion wurde ursprünglich als Teil des Shanghai/Capella-Upgrad
 
 Das Shanghai/Capella-Upgrade ermöglichte es, zuvor gestaktes ETH auf reguläre Ethereum-Konten zurückzufordern. Dies schloss den Kreis der Staking-Liquidität und brachte Ethereum einen Schritt weiter auf seinem Weg zum Aufbau eines nachhaltigen, skalierbaren und sicheren dezentralisierten Ökosystems.
 
-- [Mehr zur Geschichte von Ethereum](/ethereum-forks/)
+- [Mehr zur Ethereum-Geschichte](/ethereum-forks/)
 - [Mehr zur Ethereum-Roadmap](/roadmap/)
 
 ## Wie funktionieren Auszahlungszahlungen? {#how-do-withdrawals-work}
@@ -126,7 +126,7 @@ Der Zeiger der Uhr zeigt auf den nächsten Validator, der auf berechtigte Auszah
 </AlertContent>
 </Alert>
 
-#### Überprüfung eines Kontos auf Auszahlungen {#checking-an-account-for-withdrawals}
+#### Überprüfung eines Kontos auf Abhebungen {#checking-an-account-for-withdrawals}
 
 Während ein Block-Vorschlagender die Validatoren auf mögliche Auszahlungen überprüft (sweept), wird jeder überprüfte Validator anhand einer kurzen Reihe von Fragen bewertet, um festzustellen, ob eine Auszahlung ausgelöst werden soll und wenn ja, wie viel ETH ausgezahlt werden soll.
 
@@ -176,7 +176,7 @@ Nein, der Prozess zur Angabe von Auszahlungsberechtigungen ist ein einmaliger Vo
 </ExpandableCard>
 
 <ExpandableCard
-title="Warum kann eine Auszahlungsadresse nur einmal festgelegt werden?"
+title="Warum kann eine Abhebungsadresse nur einmal festgelegt werden?"
 eventCategory="FAQ"
 eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
@@ -210,7 +210,7 @@ Bei **Compounding-Validatoren (Typ 2)** fließen die Belohnungen in das effektiv
 </ExpandableCard>
 
 <ExpandableCard
-title="Erfolgen vollständige Auszahlungen automatisch?"
+title="Erfolgen vollständige Abhebungen automatisch?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">

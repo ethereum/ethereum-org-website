@@ -5,6 +5,7 @@ author: Markus Waas
 lang: ko
 tags: [ "Solidity", "스마트 계약", "테스트", "모킹" ]
 skill: intermediate
+breadcrumb: "모의 컨트랙트"
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

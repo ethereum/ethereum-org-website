@@ -74,7 +74,7 @@ const Contributors = () => {
           </InlineLink>
           .
         </Text>
-        <h2 className="mb-8 mt-12 leading-xs">
+        <h2 className="mt-12 mb-8 leading-xs">
           {t("page-contributing-translation-program-contributors-thank-you")}
         </h2>
         <List className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">

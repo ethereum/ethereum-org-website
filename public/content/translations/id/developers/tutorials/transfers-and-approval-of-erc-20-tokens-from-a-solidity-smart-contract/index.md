@@ -4,6 +4,7 @@ description: Bangun kontrak pintar DEX yang menangani transfer dan persetujuan t
 author: "jdourlens"
 tags: ["kontrak pintar", "token", "Solidity", "erc-20"]
 skill: intermediate
+breadcrumb: "Transfer ERC-20"
 lang: id
 published: 2020-04-07
 source: EthereumDev

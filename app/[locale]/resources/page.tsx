@@ -17,6 +17,7 @@ import TabNav, { StickyContainer } from "@/components/ui/TabNav"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
@@ -33,7 +34,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
   const [growThePieData, blobscanOverallStats] = await Promise.all([
@@ -56,7 +57,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   // Extract blob stats directly (getBlobscanStats returns BlobscanStats, not wrapped in MetricReturnData)
   const blobStats = {
     avgBlobFee: blobscanOverallStats.avgBlobFee,
-    totalBlobs: new Intl.NumberFormat(undefined, {
+    totalBlobs: numberFormat(locale, {
       notation: "compact",
       maximumFractionDigits: 1,
     }).format(blobscanOverallStats.totalBlobs),
@@ -138,7 +139,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
                           {title}
                         </div>
-                        <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                        <div className="h-full bg-background bg-linear-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
                           {metric && metric}
                           <ResourcesContainer>
                             {items.map(({ className, ...item }) => (
@@ -235,7 +236,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   return await getMetadata({
     locale,

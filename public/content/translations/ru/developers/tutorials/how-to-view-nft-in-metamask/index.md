@@ -4,6 +4,7 @@ description: "В этом руководстве описывается, как 
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity" ]
 skill: beginner
+breadcrumb: "NFT в кошельке"
 lang: ru
 published: 2021-04-22
 ---

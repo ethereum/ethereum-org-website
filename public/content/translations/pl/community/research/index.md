@@ -247,7 +247,7 @@ Rynki przestrzeni blokowej regulują uwzględnianie transakcji użytkowników ko
 #### Ostatnie badania {#recent-research-10}
 
 - [Wielowymiarowa prezentacja wideo EIP-1559](https://youtu.be/QbR4MTgnCko)
-- [Międzydomenowa MEV](http://arxiv.org/abs/2112.01472)
+- [Międzydomenowa MEV](https://arxiv.org/abs/2112.01472)
 - [Aukcje MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Zachęty proof-of-stake {#proof-of-stake-incentives}

@@ -11,13 +11,14 @@ tags:
     "tài chính phi tập trung"
   ]
 skill: beginner
+breadcrumb: "create-eth-app"
 lang: vi
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Lần trước chúng ta đã xem xét [bức tranh toàn cảnh về Solidity](https://soliditydeveloper.com/solidity-overview-2020) và đã đề cập đến [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Bây giờ bạn sẽ tìm hiểu cách sử dụng nó, những tính năng được tích hợp và các ý tưởng bổ sung về cách mở rộng nó. Được khởi tạo bởi Paul Razvan Berg, người sáng lập [Sablier](http://sablier.com/), ứng dụng này sẽ giúp bạn bắt đầu phát triển giao diện người dùng và đi kèm với một số tích hợp tùy chọn để bạn lựa chọn.
+Lần trước chúng ta đã xem xét [bức tranh toàn cảnh về Solidity](https://soliditydeveloper.com/solidity-overview-2020) và đã đề cập đến [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Bây giờ bạn sẽ tìm hiểu cách sử dụng nó, những tính năng được tích hợp và các ý tưởng bổ sung về cách mở rộng nó. Được khởi tạo bởi Paul Razvan Berg, người sáng lập [Sablier](https://sablier.com/), ứng dụng này sẽ giúp bạn bắt đầu phát triển giao diện người dùng và đi kèm với một số tích hợp tùy chọn để bạn lựa chọn.
 
 ## Cài đặt {#installation}
 

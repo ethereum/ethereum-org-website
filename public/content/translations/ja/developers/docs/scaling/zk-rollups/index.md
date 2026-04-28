@@ -224,6 +224,17 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 
 ## zkEVMプロジェクト {#zkevm-projects}
 
+<Alert variant="info">
+<AlertEmoji text="💡" />
+<AlertContent>
+<AlertTitle>L2用zkEVM対L1用zkEVM</AlertTitle>
+<AlertDescription>
+以下のプロジェクトは、zkEVMテクノロジーを使用してレイヤー2のロールアップを構築しています。また、L1ブロック検証にzkEVMを使用する研究も進んでおり、これによりバリデータはトランザクションを再実行せずにEthereumのブロックを検証できるようになります。
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+
 現在、zkEVMの開発に取り組んでいるプロジェクトとしては、以下が挙げられます：
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVMは、イーサリアム・ファウンデーションから資金提供を受けているプロジェクトで、EVM互換のZKロールアップとイーサリアムブロックの有効性証明を生成するメカニズムを開発しています。_

@@ -62,20 +62,20 @@ const PageHero = ({
       <div
         className={cn(
           "max-w-full lg:max-w-[640px]",
-          isReverse ? "pb-8 pt-0" : "pb-0 pt-8",
-          "lg:pb-32 lg:pt-16",
+          isReverse ? "pt-0 pb-8" : "pt-8 pb-0",
+          "lg:pt-16 lg:pb-32",
           "ps-0 lg:ps-8",
           "me-0 lg:me-4"
         )}
       >
-        <h1 className="mb-4 mt-0 text-md font-normal uppercase !leading-xs lg:mt-8">
+        <h1 className="mt-0 mb-4 text-md !leading-xs font-normal uppercase lg:mt-8">
           {title}
         </h1>
 
-        <h2 className="mb-0 mt-8 max-w-full text-[2.5rem] font-bold !leading-xs lg:mt-12 lg:text-5xl">
+        <h2 className="mt-8 mb-0 max-w-full text-[2.5rem] !leading-xs font-bold lg:mt-12 lg:text-5xl">
           {header}
         </h2>
-        <p className="mb-8 mt-4 text-xl !leading-xs lg:text-2xl">{subtitle}</p>
+        <p className="mt-4 mb-8 text-xl !leading-xs lg:text-2xl">{subtitle}</p>
 
         {buttons && (
           <Flex className="gap-2 overflow-visible [&_ul]:m-0">

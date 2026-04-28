@@ -39,9 +39,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = params
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    namespace: "page-what-is-ether",
-  })
+  const t = await getTranslations("page-what-is-ether")
 
   const [
     { contributors, lastEditLocaleTimestamp },
@@ -238,7 +236,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                     strong: Strong,
                   })}
                 </p>
-                <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
+                <UnorderedList className="mt-2 mb-0 [&>li]:mb-0.5">
                   <ListItem>
                     {t.rich("page-what-is-ether-how-to-buy-eth-description-5", {
                       strong: Strong,
@@ -711,10 +709,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ether",
-  })
+  const t = await getTranslations("page-what-is-ether")
 
   return await getMetadata({
     locale,

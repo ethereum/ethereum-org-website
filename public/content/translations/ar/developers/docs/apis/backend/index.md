@@ -111,7 +111,7 @@ lang: ar
 **نيثيريوم -** **_مكتبة تكامل دوت نت مفتوحة المصدر لسلسلة الكتل._**
 
 - [غيت هاب](https://github.com/Nethereum/Nethereum)
-- [التوثيق](http://docs.nethereum.com/en/latest/)
+- [التوثيق](https://docs.nethereum.com/en/latest/)
 - [ديسكورد](https://discord.com/invite/jQPrR58FxX)
 
 **أدوات بايثون -** **_مجموعة متنوعة من المكتبات للتفاعل مع إيثريوم عبر بايثون._**

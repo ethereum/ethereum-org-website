@@ -4,6 +4,7 @@ description: "链上游戏受到限制，因为它们无法保留任何隐藏信
 author: Ori Pomerantz
 tags: [ "服务器", "链下", "中心化", "零知识", "zokrates", "mud" ]
 skill: advanced
+breadcrumb: "ZK秘密状态"
 lang: zh
 published: 2025-03-15
 ---

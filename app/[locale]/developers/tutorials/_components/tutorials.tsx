@@ -73,7 +73,7 @@ const published = (locale: string, published: string) => {
 
   return localeTimestamp !== "Invalid Date" ? (
     <span>
-      <Emoji text=":calendar:" className="me-2 ms-2 text-sm" />
+      <Emoji text=":calendar:" className="ms-2 me-2 text-sm" />
       {localeTimestamp}
     </span>
   ) : null
@@ -295,10 +295,10 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
         </div>
 
         {/* Filter controls */}
-        <div className="border-b border-border px-8 pb-6 pt-5">
+        <div className="border-b border-border px-8 pt-5 pb-6">
           {/* Row 2: Topic tags */}
           <div className="mt-5">
-            <p className="mb-3 text-xs uppercase tracking-wider text-body-medium">
+            <p className="mb-3 text-xs tracking-wider text-body-medium uppercase">
               <Translation id="page-developers-tutorials:page-tutorial-topics" />
             </p>
             <div className="flex flex-wrap gap-2">
@@ -318,7 +318,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
               {nicheTags.length > 0 && (
                 <button
                   onClick={() => setShowAllTags(!showAllTags)}
-                  className="inline-flex items-center gap-1 rounded-full border border-dashed border-body-medium px-3 py-0.5 text-xs uppercase text-body-medium transition-colors hover:border-primary hover:text-primary"
+                  className="inline-flex items-center gap-1 rounded-full border border-dashed border-body-medium px-3 py-0.5 text-xs text-body-medium uppercase transition-colors hover:border-primary hover:text-primary"
                 >
                   {showAllTags ? (
                     <>
@@ -399,7 +399,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
         {filteredTutorials.length === 0 ? (
           <div className="mt-0 p-12 text-center">
             <Emoji text=":crying_face:" className="my-8 text-5xl" />
-            <h2 className="mb-8 mt-12 leading-xs">
+            <h2 className="mt-12 mb-8 leading-xs">
               <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
             </h2>
             <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
@@ -420,7 +420,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
               <h3 className="relative me-0 text-2xl font-semibold text-body md:me-24">
                 {tutorial.title}
                 {tutorial.isExternal && (
-                  <ExternalLink className="mb-[0.25em] ms-[0.25em] inline-block size-[0.875em]" />
+                  <ExternalLink className="ms-[0.25em] mb-[0.25em] inline-block size-[0.875em]" />
                 )}
               </h3>
               {tutorial.skill && (
@@ -440,7 +440,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                 </Tag>
               )}
             </Flex>
-            <p className="uppercase text-body-medium">
+            <p className="text-body-medium uppercase">
               <Emoji text=":writing_hand:" className="me-2 text-sm" />
               {tutorial.author}
               {tutorial.published ? (

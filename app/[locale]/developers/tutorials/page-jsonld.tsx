@@ -4,11 +4,9 @@ import { FileContributor, ITutorial } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 
 export default async function TutorialsPageJsonLD({
   locale,
@@ -19,7 +17,7 @@ export default async function TutorialsPageJsonLD({
   internalTutorials: ITutorial[]
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-developers-tutorials" })
+  const t = await getTranslations("page-developers-tutorials")
 
   const url = normalizeUrlForJsonLd(locale, `/developers/tutorials/`)
 
@@ -32,6 +30,7 @@ export default async function TutorialsPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -40,13 +39,8 @@ export default async function TutorialsPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -70,8 +64,8 @@ export default async function TutorialsPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#tutorials` },
       },
       {
@@ -87,13 +81,16 @@ export default async function TutorialsPageJsonLD({
             "@type": "ListItem",
             position: index + 1,
             name: tutorial.title,
-            url: tutorial.href,
+            url: normalizeUrlForJsonLd(locale, tutorial.href),
             item: {
               "@type": "Course",
               name: tutorial.title,
-              description: tutorial.description,
-              url: tutorial.href,
-              provider: ethereumFoundationOrganization,
+              description:
+                tutorial.description.length > 60
+                  ? tutorial.description.slice(0, 57) + "..."
+                  : tutorial.description,
+              url: normalizeUrlForJsonLd(locale, tutorial.href),
+              provider: REFERENCE.ETHEREUM_FOUNDATION,
               courseMode: "online",
               educationalLevel: tutorial.skill ?? "beginner",
               inLanguage: locale,
@@ -106,8 +103,7 @@ export default async function TutorialsPageJsonLD({
               ],
             },
           })),
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

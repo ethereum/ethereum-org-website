@@ -1,119 +1,119 @@
 ---
-title: Häufig gestellte Fragen zum Übersetzungsprogramm (FAQ)
+title: "Häufig gestellte Fragen (FAQ) zum Übersetzungsprogramm"
 lang: de
-description: Häufig gestellte Fragen zum Übersetzungprogramm von ethereum.org
+description: "Häufig gestellte Fragen zum Übersetzungsprogramm von ethereum.org"
 ---
 
-# Übersetzungsanleitung für ethereum.org {#translating-ethereum-guide}
+# Leitfaden zur Übersetzung von ethereum.org {#translating-ethereum-guide}
 
-Wenn Sie neu im Übersetzungsprogramm sind und zögern, sich einzubringen, finden Sie hier einige FAQs, die Ihnen den Einstieg erleichtern können. Sie finden in diesem Leitfaden Antworten auf häufig gestellte Fragen.
+Wenn du neu im Übersetzungsprogramm bist und zögerst, direkt einzusteigen, findest du hier einige FAQs, die dir den Einstieg erleichtern können. Nutze diesen Leitfaden, um Antworten auf die häufigsten Fragen zu finden.
 
-## Werde ich dafür bezahlt, wenn ich für ethereum.org übersetze? {#compensation}
+## Kann ich für die Übersetzung von ethereum.org vergütet werden? {#compensation}
 
-Ethereum.org ist eine Open-Source-Website. Das bedeutet das jeder mitmachen und einen Beitrag dazu leisten kann.
+Ethereum.org ist eine Open-Source-Website, was bedeutet, dass sich jeder beteiligen und einen Beitrag leisten kann.
 
-Das Übersetzungprogramm von ethereum.org ist eine Ergänzung dazu. Dahinter steht eine ähnliche Philosophie.
+Das Übersetzungsprogramm von ethereum.org ist eine Erweiterung davon und wird mit einer ähnlichen Philosophie organisiert.
 
-Ziel des Übersetzungsprogramms ist es, Ethereum für jeden zugänglich zu machen, unabhängig davon welche Sprache man spricht. Zudem haben Personen, die mehrere Sprachen sprechen, damit die Möglichkeit, sich in das Ethereum-Ökosystem einzubringen und einen Beitrag zur Barrierefreiheit zu leisten.
+Das Ziel des Übersetzungsprogramms ist es, Ethereum-Inhalte für jeden zugänglich zu machen, unabhängig davon, welche Sprachen er spricht. Es ermöglicht auch jeder zweisprachigen Person, sich im Ethereum-Ökosystem zu engagieren und auf zugängliche Weise einen Beitrag zu leisten.
 
-Daher ist das Übersetzungsprogramm offen zugänglich. Die Mitarbeit erfolgt auf freiwilliger Basis und unbezahlt. Würden Übersetzer für die von ihnen übersetzten Wörter bezahlt, könnten wir nur Übersetzer mit ausreichend Erfahrung (also professionelle Übersetzer) dazu einladen, an dem Übersetzungsprogramm teilzunehmen. Damit würde das Übersetzungsprogramm Personen ausschließen und das steht der allgemeinen Zielsetzung entgegen: Jeder soll die Möglichkeit haben, teilzunehmen und sich am Ökosystem zu beteiligen.
+Aus diesem Grund ist das Übersetzungsprogramm offen und freiwillig, und die Teilnahme wird nicht vergütet. Wenn wir Übersetzer für die Anzahl der übersetzten Wörter vergüten würden, könnten wir nur diejenigen mit ausreichender Übersetzungserfahrung (professionelle Übersetzer) einladen, dem Übersetzungsprogramm beizutreten. Dies würde das Übersetzungsprogramm exklusiv machen und uns daran hindern, die skizzierten Ziele zu erreichen, insbesondere: jedem die Teilnahme und das Engagement im Ökosystem zu ermöglichen.
 
-Wir setzen alles daran, unseren Mitwirkenden eine erfolgreiche Teilnahme am Ethereum-Ökosystem zu ermöglichen. Es gibt viele nicht-monetäre Anreize wie: [angebotene POAPs](/contributing/translation-program/acknowledgements/#poap) und ein [Übersetzungszertifikat](/contributing/translation-program/acknowledgements/#certificate) sowie [Übersetzungsranglisten](/contributing/translation-program/acknowledgements/) und [die Nennung all unserer Übersetzer auf der Site](/contributing/translation-program/contributors/).
+Wir unternehmen alle Anstrengungen, um unseren Mitwirkenden den Erfolg im Ethereum-Ökosystem zu ermöglichen; es gibt viele nicht-monetäre Anreize, wie zum Beispiel: [das Anbieten von POAPs](/contributing/translation-program/acknowledgements/#poap) und einem [Übersetzerzertifikat](/contributing/translation-program/acknowledgements/#certificate), sowie die Organisation der [Übersetzungs-Bestenlisten](/contributing/translation-program/acknowledgements/) und [die Auflistung all unserer Übersetzer auf der Website](/contributing/translation-program/contributors/).
 
-## Wie kann ich Strings mit `<HTML-Tags>` übersetzen? {#tags}
+## Wie übersetze ich Zeichenfolgen mit `<HTML-Tags>`? {#tags}
 
-Nicht jeder String wird in reiner Textform geschrieben. Einige Strings bestehen aus gemischten Skripten wie HTML-Tags (`<0>`, `</0>`). Diese werden in der Regel für Hyperlinks oder alternative Formatierungen in der Mitte eines Satzes verwendet.
+Nicht jede Zeichenfolge ist in reiner Textform geschrieben. Es gibt einige Zeichenfolgen, die aus gemischten Skripten wie HTML-Tags (`<0>`, `</0>`) bestehen. Dies ist normalerweise für Hyperlinks oder alternative Formatierungen in der Mitte eines Satzes der Fall.
 
-- Übersetzen Sie den Text innerhalb der Tags, aber nicht die Tags selbst. Alles, was zwischen `<` und `>` steht, darf nicht übersetzt oder entfernt werden.
-- Um die Strings zu schützen, empfehlen wir, unten links auf die Schaltfläche "Copy Source" (Quelle kopieren) zu klicken. Damit wird der ursprüngliche String kopiert und in das Textfeld zur Übersetzung eingefügt. Auf diese Weise können Sie die Tags sehen. Das hilft dabei, Fehler zu vermeiden.
+- Übersetze den Text innerhalb der Tags, aber nicht die Tags selbst. Alles in den `<` und `>` darf nicht übersetzt oder entfernt werden.
+- Um die Zeichenfolge sicher zu halten, empfehlen wir dir, unten links auf die Schaltfläche „Copy Source“ (Quelle kopieren) zu klicken. Dadurch wird die ursprüngliche Zeichenfolge kopiert und in das Textfeld eingefügt. So kannst du klären, wo sich die Tags befinden, und Fehler vermeiden.
 
-![Crowdin-Oberfläche mit hervorgehobener Schaltfläche "Copy Source" (Quelle kopieren)](./html-tag-strings.png)
+![Crowdin-Benutzeroberfläche mit hervorgehobener Schaltfläche zum Kopieren der Quelle](./html-tag-strings.png)
 
-Sie können die Position der Tags innerhalb der Zeichenkette verschieben, um sie an die richtige Position für Ihre Sprache zu bringen. Achten Sie dabei aber darauf, dass das ganze Tag an andere Stelle gebracht wird.
+Du kannst die Position der Tags innerhalb der Zeichenfolge verschieben, damit es in deiner Sprache natürlicher klingt – achte nur darauf, das gesamte Tag zu verschieben.
 
-Ausführlichere Informationen zum Umgang mit Tags und Code-Ausschnitten finden Sie im [Übersetzungsleitfaden von ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
+Weitere detaillierte Informationen zum Umgang mit Tags und Code-Snippets findest du im [Übersetzungs-Styleguide von ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
-## Woher kommen die Strings? {#strings}
+## Wo befinden sich die Zeichenfolgen? {#strings}
 
-Oft reichen die Quelltexte allein nicht aus, um eine genaue Übersetzung zu erstellen.
+Oft reichen die Quellzeichenfolgen allein möglicherweise nicht aus, um eine genaue Übersetzung zu liefern.
 
-- Weitere Informationen finden Sie unter "Screenshots" und "Context". Im Quelltext-Abschnitt sehen Sie einen Screenshot. Darauf können Sie sehen, in welchem Kontext der String verwendet wird.
-- Wenn Sie immer noch unsicher sind, setzen Sie eine Kennzeichnung im Bereich "Comment Section". [Sind Sie unsicher, wie Sie einen Kommentar hinterlassen?](#comment)
+- Sieh dir „Screenshots“ und „Context“ (Kontext) für weitere Informationen an. Im Abschnitt der Quellzeichenfolge siehst du das angehängte Screenshot-Bild, das dir zeigt, wie wir die Zeichenfolge im Kontext verwenden.
+- Wenn du dir immer noch unsicher bist, melde dies im „Comment section“ (Kommentarbereich). [Du bist dir nicht sicher, wie man einen Kommentar hinterlässt?](#comment)
 
-![Zeigt, wie Kontext per Screenshot für einen String bereitgestellt werden kann](./source-string.png)
+![Zeigt, wie Kontext für eine Zeichenfolge mit einem Screenshot bereitgestellt werden kann](./source-string.png)
 
-![Ein Beispiel-Screenshot, der zu Kontextzwecken hinzugefügt wurde](./source-string-2.png)
+![Ein Beispiel-Screenshot, der als Kontext hinzugefügt wurde](./source-string-2.png)
 
-## Wie kann ich Kommentare hinterlassen oder Fragen stellen? Ich möchte ein Problem oder einen Tippfehler melden... {#comment}
+## Wie kann ich Kommentare hinterlassen oder Fragen stellen? Ich möchte ein Problem oder Tippfehler melden... {#comment}
 
-Wenn Sie eine bestimmte Zeichenfolge markieren möchten, die Aufmerksamkeit erfordert, können Sie einen Kommentar dazu verfassen.
+Wenn du auf eine bestimmte Zeichenfolge aufmerksam machen möchtest, die Beachtung erfordert, kannst du gerne einen Kommentar abgeben.
 
-- Klicken Sie oben rechts auf die zweite Schaltfläche. Die versteckte Registerkarte erscheint auf der rechten Seite. Hinterlassen Sie einen neuen Kommentar und aktivieren Sie unten das Kontrollkästchen "Issue" (Probleme). Sie können die Art des Problems angeben, indem Sie eine der Optionen aus dem Dropdown-Menü auswählen.
-- Wenn Sie das Problem übermittelt haben, wird es unserem Team gemeldet. Wir werden das Problem beheben und Sie darüber informieren, indem wir auf Ihren Kommentar antworten und das Problem schließen.
-- Wenn Sie eine fehlerhafte Übersetzung melden, werden die Übersetzung und die von Ihnen vorgeschlagene Alternative bei der nächsten Prüfung von einem Muttersprachler überprüft.
+- Klicke auf die zweite Schaltfläche in der oberen rechten Leiste. Die versteckte Registerkarte wird auf der rechten Seite angezeigt. Hinterlasse einen neuen Kommentar und aktiviere unten das Kontrollkästchen „Issue“ (Problem). Du kannst die Art des Problems angeben, indem du eine der Optionen aus dem Dropdown-Menü auswählst.
+- Sobald es eingereicht wurde, wird es unserem Team gemeldet. Wir werden das Problem beheben und dich informieren, indem wir auf deinen Kommentar antworten und das Problem schließen.
+- Wenn du eine falsche Übersetzung meldest, werden die Übersetzung und deine vorgeschlagene Alternative bei der nächsten Überprüfung von einem Muttersprachler überprüft.
 
-![Zeigt, wie Kommentare geschrieben und Probleme gemeldet werden können](./comment-issue.png)
+![Zeigt, wie man Kommentare und Probleme erstellt](./comment-issue.png)
 
-## Was ist Translation Memory (TM)? {#translation-memory}
+## Was ist ein Translation Memory (TM)? {#translation-memory}
 
-Translation Memory (TM) ist eine Funktion von Crowdin, die alle zuvor übersetzten Zeichenketten in [ethereum.org](https://ethereum.org/) speichert. Wenn eine Zeichenkette übersetzt wird, wird sie automatisch in unserem Projekt-TM gespeichert. Das ist ein nützliches Werkzeug, mit dem sich beim Übersetzen Zeit sparen lässt.
+Das Translation Memory (TM) ist eine Funktion von Crowdin, die alle zuvor übersetzten Zeichenfolgen auf ethereum.org speichert. Wenn eine Zeichenfolge übersetzt wird, wird sie automatisch in unserem Projekt-TM gespeichert. Dies kann ein nützliches Werkzeug sein, um dir Zeit zu sparen!
 
-- Im Abschnitt "TM and MT Suggestions" (TM und maschinell übersetzte Vorschläge) können Sie sehen, wie andere Übersetzer den gleichen oder einen ähnlichen Satz übersetzt haben. Wenn Sie einen Vorschlag mit einer hohen Übereinstimmungsrate finden, können Sie diese Übersetzung verwenden, indem Sie darauf klicken.
-- Wenn die Liste keine Einträge zeigt, können Sie den Übersetzungsspeicher nach bereits erstellten Übersetzungen durchsuchen und sie wiederverwenden, um Einheitlichkeit zu gewährleisten.
+- Schau dir den Abschnitt „TM and MT Suggestions“ (TM- und MT-Vorschläge) an und du wirst sehen, wie andere Übersetzer dieselbe oder eine ähnliche Zeichenfolge übersetzt haben. Wenn du einen Vorschlag mit einer hohen Übereinstimmungsrate findest, kannst du die Übersetzung gerne übernehmen, indem du darauf klickst.
+- Wenn nichts auf der Liste steht, kannst du das TM nach zuvor erstellten Übersetzungen durchsuchen und diese aus Gründen der Konsistenz wiederverwenden.
 
-![Ein Screenshot des Übersetzungsspeichers](./translation-memory.png)
+![Ein Screenshot des Translation Memory](./translation-memory.png)
 
-## Wie benutze ich das Crowdin-Glossar? {#glossary}
+## Wie verwende ich das Crowdin-Glossar? {#glossary}
 
-Die Terminologie von Ethereum ist ein weiterer entscheidender Bestandteil unserer Übersetzungsarbeit, da neue technologische Begriffe in anderen Sprachen häufig noch nicht lokalisiert sind. Außerdem gibt es Begriffe, die in verschiedenen Kontexten unterschiedliche Bedeutungen haben. [Weitere Informationen zur Übersetzung der Ethereum-Terminologie](#terminology).
+Die Ethereum-Terminologie ist ein weiterer entscheidender Teil unserer Übersetzungsarbeit, da neue technische Begriffe oft noch nicht in viele Sprachen lokalisiert sind. Außerdem gibt es Begriffe, die in verschiedenen Kontexten unterschiedliche Bedeutungen haben. [Mehr zur Übersetzung der Ethereum-Terminologie](#terminology)
 
-Das Crowding-Glossar ist der beste Ort, um Begriffe und Definitionen besser zu verstehen. Es gibt zwei Wege, um das Glossar zu nutzen.
+Das Crowdin-Glossar ist der beste Ort zur Klärung von Begriffen und Definitionen. Es gibt zwei Möglichkeiten, auf das Glossar zuzugreifen.
 
-- Erste Möglichkeit: Wenn ein Begriff im Quelltext unterstrichen ist, können Sie mit der Maus darüberfahren. Daraufhin wird eine kurze Definition angezeigt.
+- Erstens: Wenn du in der Quellzeichenfolge einen unterstrichenen Begriff findest, kannst du mit der Maus darüber fahren und eine kurze Definition davon sehen.
 
-![Beispiel einer Glossardefinition](./glossary-definition.png)
+![Eine beispielhafte Glossardefinition](./glossary-definition.png)
 
-- Zweite Möglichkeit: Wenn Sie einen Begriff sehen, der nicht unterstrichen und der Ihnen nicht geläufig ist, können Sie ihn über die Registerkarte "Glossary" (Glossar) (die dritte Schaltfläche in der rechten Spalte) suchen. Dort finden Sie Erklärungen zu bestimmten Begriffen, die im Rahmen des Projekts häufig verwendet werden.
+- Zweitens: Wenn du einen Begriff siehst, der dir nicht vertraut ist, aber nicht unterstrichen ist, kannst du in der Registerkarte „Glossary“ (die dritte Schaltfläche in der rechten Spalte) danach suchen. Dort findest du Erklärungen zu bestimmten Begriffen und solchen, die im Projekt häufig verwendet werden.
 
-![Ein Screenshot, der zeigt, wo die Registerkarte "Glossary" (Glossar) in Crowdin zu finden ist](./glossary-tab.png)
+![Ein Screenshot, der zeigt, wo die Registerkarte Glossar in Crowdin zu finden ist](./glossary-tab.png)
 
-- Wenn Sie jedoch nichts finden können, dann ist das die Chance, einen neuen Begriff hinzuzufügen. Wir möchten Sie dazu ermuntern, den Begriff in einer Suchmaschine nachzuschlagen und die Beschreibung im Glossar hinzuzufügen. Das ist anderen Übersetzern eine große Hilfe, den Begriff besser zu verstehen.
+- Wenn du ihn immer noch nicht finden kannst, ist das deine Chance, einen neuen Begriff hinzuzufügen! Wir ermutigen dich, ihn in einer Suchmaschine nachzuschlagen und die Beschreibung zum Glossar hinzuzufügen. Es wird anderen Übersetzern eine große Hilfe sein, den Begriff besser zu verstehen.
 
-![Ein Screenshot, der zeigt, wie Glossarbegriffe zu Crowdin hinzugefügt werden](./add-glossary-term.png)
+![Ein Screenshot, der zeigt, wie man einen Glossarbegriff zu Crowdin hinzufügt](./add-glossary-term.png)
 
-### Übersetzungsrichtlinie für Eigennamen und Fachbegriffe {#terminology}
+### Richtlinie zur Übersetzung von Terminologie {#terminology}
 
-_Für Namen (Marken, Unternehmen, Personen) und neue technische Begriffe (Beacon Chain, Shard Chains etc.)_
+_Für Namen (Marken, Unternehmen, Personen) und neue technische Begriffe (Beacon Chain, Shard-Ketten usw.)_
 
-Ethereum nutzt viele neue Begriffe, die erst in jüngster Zeit geprägt wurden. Einige Begriffe variieren von Übersetzer zu Übersetzer, da sich in ihrer jeweiligen Sprache noch keine offizielle Übersetzung etabliert hat. Diese Uneinheitlichkeit kann zu Missverständnissen führen und die Lesbarkeit beeinträchtigen.
+Ethereum präsentiert viele neue Begriffe, die erst kürzlich geprägt wurden. Einige Begriffe variieren von Übersetzer zu Übersetzer, da es in ihrer jeweiligen Sprache keine offizielle Übersetzung gibt. Solche Inkonsistenzen können zu Missverständnissen führen und die Lesbarkeit verringern.
 
-Aufgrund der sprachlichen Vielfalt und unterschiedlichen Standardisierungen in jeder Sprache, ist es nahezu unmöglich eine einheitliche Übersetzungsrichtlinie für Terminologie zu entwickeln, die für alle unterstützten Sprachen angewendet werden kann.
+Aufgrund der sprachlichen Vielfalt und der unterschiedlichen Standardisierungen in jeder Sprache war es nahezu unmöglich, eine einheitliche Richtlinie zur Übersetzung von Terminologie zu entwickeln, die in allen unterstützten Sprachen angepasst werden kann.
 
-Nach sorgfältiger Überlegung haben wir die Entscheidung getroffen, die am häufigsten verwendete Begriffe den Übersetzern zu überlassen.
+Nach reiflicher Überlegung sind wir zu dem Entschluss gekommen, die am häufigsten verwendete Terminologie euch, den Übersetzern, zu überlassen.
 
-Im Folgenden finden Sie die von uns vorgeschlagene Vorgehensweise, wenn Sie auf einen Begriff stoßen, der Ihnen nicht geläufig ist:
+Hier ist unser Vorschlag, wenn du einen Begriff findest, der dir unbekannt ist:
 
-- Sehen Sie im [Glossar der Begriffe](#glossary) nach, wie andere Übersetzer den Begriff bereits übersetzt haben. Wenn Sie der Meinung sind, dass die Übersetzung des Begriffes nicht zutreffend ist, können Sie Ihre Übersetzung für den Begriff zum Crowdin-Glossar hinzufügen.
-- Falls im Glossar noch keine Übersetzung vorhanden ist, empfehlen wir, den Begriff über eine Suchmaschine in öffentlichen Artikeln zu recherchieren, um herauszufinden, wie der Begriff in der Community tatsächlich verwendet wird.
-- Wenn Sie keine Referenzen finden, vertrauen Sie auf Ihre Intuition und schlagen Sie eine neue Übersetzung in Ihrer Sprache vor.
-- Wenn Sie sich das nicht zutrauen, dann belassen Sie den Begriff unübersetzt. Manchmal sind die englischen Begriffe für eine genaue Definition am passendsten.
+- Konsultiere das [Glossar der Begriffe](#glossary), dort findest du möglicherweise, wie andere Übersetzer ihn zuvor übersetzt haben. Wenn du der Meinung bist, dass der zuvor übersetzte Begriff nicht angemessen ist, kannst du gerne deine Übersetzung wiederherstellen, indem du einen neuen Begriff zum Crowdin-Glossar hinzufügst.
+- Wenn eine solche vorherige Übersetzung im Glossar nicht existiert, ermutigen wir dich, in einer Suchmaschine oder einem Medienartikel nachzuschlagen, der zeigt, wie der Begriff in deiner Community tatsächlich verwendet wird.
+- Wenn du überhaupt keine Referenzen findest, vertraue ruhig deiner Intuition und schlage eine neue Übersetzung für deine Sprache vor!
+- Wenn du dich dabei weniger sicher fühlst, lass den Begriff unübersetzt. Manchmal sind englische Begriffe mehr als ausreichend, um genaue Definitionen zu liefern.
 
-Wir empfehlen, Namen von Marken, Unternehmen und Personen nicht zu übersetzen, da eine Übersetzung unnötige Verwirrung stiften und zu SEO-Schwierigkeiten führen kann.
+Wir empfehlen dir, Namen von Marken, Unternehmen und Personen unübersetzt zu lassen, da eine Übersetzung unnötige Verwirrung und SEO-Schwierigkeiten verursachen könnte.
 
 ## Wie funktioniert der Überprüfungsprozess? {#review-process}
 
-Um ein bestimmtes Niveau und Konsistenz in unseren Überstzungen zu gewährleisten, arbeiten wir mit [Acolad](https://www.acolad.com/), einem der weltweit größten Übersetzungsdienstleister, zusammen. Acolad arbeitet mit mehr als 20.000 professionellen Sprachexperten zusammen. Das bedeutet, dass sie für jede Sprache und jede Art von Inhalten, die wir benötigen, professionelle Prüfer bereitstellen können.
+Um ein gewisses Maß an Qualität und Konsistenz in unseren Übersetzungen zu gewährleisten, arbeiten wir mit [Acolad](https://www.acolad.com/) zusammen, einem der weltweit größten Sprachdienstleister. Acolad verfügt über 20.000 professionelle Linguisten, was bedeutet, dass sie für jede Sprache und Art von Inhalten, die wir benötigen, professionelle Prüfer bereitstellen können.
 
-Der Überprüfungsprozess ist unkompliziert. Sobald ein bestimmtes [Inhaltsgebiet](/contributing/translation-program/) vollständig übersetzt ist, beauftragen wir die eine die Überprüfung dieser Inhalte. Der Überprüfungsprozess erfolgt direkt in Crowdin. Sobald die Überprüfung abgeschlossen ist aktualisieren wir die Website mit dem übersezten Inhalt.
+Der Überprüfungsprozess ist unkompliziert; sobald eine Reihe von Inhalten zu 100 % übersetzt ist, geben wir eine Überprüfung für diesen Inhaltsbereich in Auftrag. Der Überprüfungsprozess findet direkt in Crowdin statt. Sobald die Überprüfung abgeschlossen ist, aktualisieren wir die Website mit den übersetzten Inhalten.
 
-## Wie kann ich Inhalte in meiner Sprache hinzufügen? {#adding-foreign-language-content}
+## Wie füge ich Inhalte in meiner Sprache hinzu? {#adding-foreign-language-content}
 
-Derzeit werden alle nicht-englischen Inhalte direkt vom englischen Quelltext übersetzt. Inhalte, die es nicht auf Englisch gibt, können nicht zu anderen Sprachen hinzugefügt werden.
+Derzeit werden alle nicht-englischen Inhalte direkt aus den englischen Quellinhalten übersetzt, und Inhalte, die nicht auf Englisch existieren, können nicht in anderen Sprachen hinzugefügt werden.
 
-Wenn Sie neue Inhalte für ethereum.org vorschlagen möchten, [erstellen Sie ein Thema](https://github.com/ethereum/ethereum-org-website/issues) auf GitHub. Wenn Sie hinzugefügt werden, dann wird der Inhalt auf Englisch geschrieben und über Crowdin in andere Sprachen übersetzt.
+Um neue Inhalte für ethereum.org vorzuschlagen, kannst du ein [Issue auf GitHub erstellen](https://github.com/ethereum/ethereum-org-website/issues). Wenn der Inhalt hinzugefügt wird, wird er auf Englisch verfasst und über Crowdin in andere Sprachen übersetzt.
 
-Wir planen, in naher Zukunft Unterstützung für nicht-englische Inhalte hinzuzufügen.
+Wir planen, in naher Zukunft Unterstützung für das Hinzufügen nicht-englischer Inhalte anzubieten.
 
-## Kontakt {#contact}
+## Nimm Kontakt auf {#contact}
 
-Vielen Dank, dass Sie sich die Inhalte oben angesehen haben. Wir hoffen, dass das hilfreich war, damit Sie sich an unserem Programm beteiligen können. Sie können unserem [Discord-Übersetzungskanal](https://discord.gg/ethereum-org) beitreten, um Fragen zu stellen und mit anderen Übersetzern zusammenzuarbeiten. Sie können sich aber auch unter translations@ethereum.org an uns wenden.
+Vielen Dank, dass du dir das alles durchgelesen hast. Wir hoffen, dass dir dies den Einstieg in unser Programm erleichtert. Tritt gerne unserem [Discord-Übersetzungskanal](https://discord.gg/ethereum-org) bei, um Fragen zu stellen und mit anderen Übersetzern zusammenzuarbeiten, oder kontaktiere uns unter translations@ethereum.org!

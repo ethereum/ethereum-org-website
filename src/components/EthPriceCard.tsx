@@ -10,6 +10,7 @@ import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import { Flex } from "./ui/flex"
 
@@ -70,7 +71,7 @@ const EthPriceCard = ({
   const hasData = "data" in state
 
   const formatPrice = (price: string) =>
-    new Intl.NumberFormat(locale, {
+    numberFormat(locale, {
       style: "currency",
       currency: "USD",
       minimumFractionDigits: 2,
@@ -78,7 +79,7 @@ const EthPriceCard = ({
     }).format(+price)
 
   const formatPercentage = (amount: number): string =>
-    new Intl.NumberFormat(locale, {
+    numberFormat(locale, {
       style: "percent",
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
@@ -110,13 +111,13 @@ const EthPriceCard = ({
       className={cn(
         "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border p-6",
         isNegativeChange
-          ? "bg-gradient-to-b from-error/10 dark:border-error/50"
-          : "bg-gradient-to-t from-success/20 dark:border-success/50",
+          ? "bg-linear-to-b from-error/10 dark:border-error/50"
+          : "bg-linear-to-t from-success/20 dark:border-success/50",
         className
       )}
       {...props}
     >
-      <h4 className="m-0 flex items-center text-sm font-medium uppercase leading-xs tracking-wider">
+      <h4 className="m-0 flex items-center text-sm leading-xs font-medium tracking-wider uppercase">
         {t("eth-current-price")}&nbsp;
         <Tooltip content={tooltipContent}>
           <Info className="size-[0.875em] text-sm" />
@@ -147,7 +148,7 @@ const EthPriceCard = ({
             <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
           )}
         </div>
-        <div className="text-sm uppercase leading-xs tracking-wider text-body-medium">
+        <div className="text-sm leading-xs tracking-wider text-body-medium uppercase">
           ({t("last-24-hrs")})
         </div>
       </Flex>

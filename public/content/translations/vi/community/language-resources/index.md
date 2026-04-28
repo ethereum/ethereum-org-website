@@ -52,7 +52,6 @@ Nếu bạn là người song ngữ và muốn giúp chúng tôi tiếp cận nh
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - nội dung do cộng đồng duy trì, bao gồm kiến thức liên quan đến Ethereum, DeFi, NFT, Web3
 - [123ETH](https://123eth.org/) - một Cổng thông tin đến hệ sinh thái Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - các khóa học trực tuyến miễn phí về tiền mã hóa và các ứng dụng của nó
-- [Sách trắng Ethereum](/zh/whitepaper/) - phiên bản tiếng Trung của Sách trắng Ethereum
 
 **Hệ sinh thái Ethereum**
 

@@ -4,6 +4,7 @@ description: Build a DEX smart contract that handles ERC-20 token transfers and 
 author: "jdourlens"
 tags: ["smart contracts", "tokens", "solidity", "erc-20"]
 skill: intermediate
+breadcrumb: ERC-20 transfers
 lang: en
 published: 2020-04-07
 source: EthereumDev

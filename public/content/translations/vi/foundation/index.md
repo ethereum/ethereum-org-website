@@ -9,7 +9,7 @@ lang: vi
 
 <Logo/>
 
-[Ethereum Foundation](http://ethereum.foundation/) (EF) là một tổ chức phi lợi nhuận hỗ trợ hệ sinh thái Ethereum. Tổ chức này tài trợ cho việc phát triển giao thức, phát triển hệ sinh thái và ủng hộ Ethereum.
+[Ethereum Foundation](https://ethereum.foundation/) (EF) là một tổ chức phi lợi nhuận hỗ trợ hệ sinh thái Ethereum. Tổ chức này tài trợ cho việc phát triển giao thức, phát triển hệ sinh thái và ủng hộ Ethereum.
 
 EF không phải là một công ty hay doanh nghiệp nào cả. Tổ chức này không kiểm soát hay lãnh đạo Ethereum, và cũng không phải là tổ chức duy nhất tài trợ cho sự phát triển quan trọng của các công nghệ liên quan đến Ethereum. EF là một phần của [hệ sinh thái](/community/) lớn hơn nhiều.
 

@@ -33,7 +33,7 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
       <Tag
         status="warning"
         size="small"
-        className="mb-2 mt-4 rounded-[4px] px-1 py-0 font-bold normal-case"
+        className="mt-4 rounded-[4px] px-1 py-0 font-bold normal-case"
       >
         {course.hours}
       </Tag>

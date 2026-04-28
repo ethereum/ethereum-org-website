@@ -26,7 +26,7 @@ import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.p
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-start" })
+  const t = await getTranslations("page-start")
 
   setRequestLocale(locale)
 
@@ -71,7 +71,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <StartWithEthereumFlow newToCryptoWallets={wallets} />
             </div>
 
-            <div className="flex w-full flex-col gap-12 rounded-2xl border border-accent-c/10 bg-gradient-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">
+            <div className="flex w-full flex-col gap-12 rounded-2xl border border-accent-c/10 bg-linear-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">
               <div className="flex flex-1 flex-col gap-8">
                 <h2 className="">{t("page-start-share-section-title")}</h2>
                 <p>{t("page-start-share-section-description")}</p>
@@ -96,7 +96,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-start" })
+  const t = await getTranslations("page-start")
 
   return await getMetadata({
     locale,

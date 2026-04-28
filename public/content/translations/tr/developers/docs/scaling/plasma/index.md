@@ -16,7 +16,7 @@ Tüm temel konuları iyi anlamalı ve [Ethereum ölçeklendirmesi](/developers/d
 
 ## Plazma nedir?
 
-Plazma, Ethereum gibi halka açık blokzincirlerdeki ölçeklendirmeyi geliştirmek için oluşturulan bir yapıdır. Orijinal [Plazma tanıtım belgesinde](http://plasma.io/plasma.pdf) belirtildiği gibi, Plazma zincirleri ("kök zincir" adı verilen) başka bir blokzincirinin üzerine inşa edilmiştir. Her "alt zincir" kök zincirden büyür ve genelde üst zincirde dağıtılmış bir akıllı sözleşme tarafından yönetilir.
+Plazma, Ethereum gibi halka açık blokzincirlerdeki ölçeklendirmeyi geliştirmek için oluşturulan bir yapıdır. Orijinal [Plazma tanıtım belgesinde](https://plasma.io/plasma.pdf) belirtildiği gibi, Plazma zincirleri ("kök zincir" adı verilen) başka bir blokzincirinin üzerine inşa edilmiştir. Her "alt zincir" kök zincirden büyür ve genelde üst zincirde dağıtılmış bir akıllı sözleşme tarafından yönetilir.
 
 Plazma sözleşmesi, diğer şeylerin yanı sıra, kullanıcıların varlıklarını Ethereum Ana Ağı ile plazma zinciri arasında taşımasına olanak tanıyan bir [köprü](/developers/docs/bridges/) işlevi görür. Bu onları [yan zincirlere](/developers/docs/scaling/sidechains/) benzer kılsa da plazma zincirleri en azından bir ölçüde Ethereum Ana Ağı'nın güvenliğinden yararlanır. Bu, kendi güvenliğinden tamamen kendi sorumlu olan yan zincirlerden farklıdır.
 

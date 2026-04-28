@@ -11,6 +11,7 @@ tags:
     "подписание"
   ]
 skill: intermediate
+breadcrumb: "Подписи EIP-1271"
 published: 2023-01-12
 ---
 

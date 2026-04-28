@@ -115,12 +115,12 @@ function NavigationContent({ className }: { className?: string }) {
             <CollapsibleTrigger
               data-testid={`mobile-menu-collapsible-${slugify(label)}`}
               className={cn(
-                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast md:px-4 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90",
+                "group/menu flex w-full flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all group-data-[state=open]/menu:bg-background-highlight group-data-[state=open]/menu:text-primary-high-contrast hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]_[data-label=icon-container]>svg]:-rotate-90 [&[data-state=open]:dir(rtl)_[data-label=icon-container]>svg]:rotate-90",
                 "text-body"
               )}
             >
               <ExpandIcon />
-              <span className="flex-1 text-start text-lg font-bold leading-none">
+              <span className="flex-1 text-start text-lg leading-none font-bold">
                 {label}
               </span>
             </CollapsibleTrigger>

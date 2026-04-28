@@ -94,7 +94,7 @@ def to_binary(x):
 - బైట్ '\\x00' = `[ 0x00 ]`
 - బైట్ '\\x0f' = `[ 0x0f ]`
 - బైట్లు '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- మూడింటి [సెట్ సైద్ధాంతిక ప్రాతినిధ్యం](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- మూడింటి [సెట్ సైద్ధాంతిక ప్రాతినిధ్యం](https://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - స్ట్రింగ్ "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
 ## RLP డీకోడింగ్ {#rlp-decoding}

@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: tr
 tags: [ "solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "ERC-20 rehberi"
 published: 2021-03-09
 ---
 
@@ -434,7 +435,7 @@ Bir hesabın bakiyesini okuyun. Herkesin başka birinin hesap bakiyesini alması
 
 `_transfer` fonksiyonu asıl işi yapar. Yalnızca diğer sözleşme fonksiyonları tarafından çağrılabilen özel bir fonksiyondur. Kural olarak özel fonksiyonlar, durum değişkenleriyle aynı şekilde `_<bir şey>` olarak adlandırılır.
 
-Normalde Solidity'de mesajı gönderen için `msg.sender` kullanırız. Ancak bu, [OpenGSN](http://opengsn.org/)'yi bozar. Jetonumuzla ether'sız işlemlere izin vermek istiyorsak, `_msgSender()` kullanmalıyız. Normal işlemler için `msg.sender` döndürür, ancak ether'sız işlemler için mesajı ileten sözleşmeyi değil, orijinal imzalayanı döndürür.
+Normalde Solidity'de mesajı gönderen için `msg.sender` kullanırız. Ancak bu, [OpenGSN](https://opengsn.org/)'yi bozar. Jetonumuzla ether'sız işlemlere izin vermek istiyorsak, `_msgSender()` kullanmalıyız. Normal işlemler için `msg.sender` döndürür, ancak ether'sız işlemler için mesajı ileten sözleşmeyi değil, orijinal imzalayanı döndürür.
 
 ### Ödenek Fonksiyonları {#allowance-functions}
 

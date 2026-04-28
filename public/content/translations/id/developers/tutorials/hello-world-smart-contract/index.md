@@ -4,6 +4,7 @@ description: Tutorial pengantar tentang penulisan dan penerapan kontrak pintar s
 author: "elanh"
 tags: ["Solidity", "Hardhat", "Alchemy", "kontrak pintar", "menerapkan"]
 skill: beginner
+breadcrumb: "Kontrak Hello World"
 lang: id
 published: 2021-03-31
 ---

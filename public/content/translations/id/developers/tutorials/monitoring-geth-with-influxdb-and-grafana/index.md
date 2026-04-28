@@ -4,6 +4,7 @@ description: Siapkan pemantauan untuk node Geth Anda menggunakan InfluxDB dan Gr
 author: "Mario Havel"
 tags: ["klien", "node"]
 skill: intermediate
+breadcrumb: "Monitoring Geth"
 lang: id
 published: 2021-01-13
 ---

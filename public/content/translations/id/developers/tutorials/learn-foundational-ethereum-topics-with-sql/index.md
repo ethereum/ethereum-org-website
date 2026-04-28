@@ -4,6 +4,7 @@ description: Tutorial ini membantu pembaca memahami konsep dasar Ethereum termas
 author: "Paul Apivat"
 tags: ["SQL", "Kueri", "Transaksi", "data-dan-analitik"]
 skill: beginner
+breadcrumb: "Ethereum dengan SQL"
 lang: id
 published: 2021-05-11
 source: paulapivat.com

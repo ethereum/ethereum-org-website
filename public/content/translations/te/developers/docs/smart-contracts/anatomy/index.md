@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## వివరణాత్మక ఉదాహరణలు {#annotated-examples}
 
-ఇవి Solidity లో వ్రాసిన కొన్ని ఉదాహరణలు. మీరు కోడ్‌తో ఆడాలనుకుంటే, మీరు [Remix](http://remix.ethereum.org)లో వాటితో ఇంటరాక్ట్ అవ్వవచ్చు.
+ఇవి Solidity లో వ్రాసిన కొన్ని ఉదాహరణలు. మీరు కోడ్‌తో ఆడాలనుకుంటే, మీరు [Remix](https://remix.ethereum.org)లో వాటితో ఇంటరాక్ట్ అవ్వవచ్చు.
 
 ### హలో వరల్డ్ {#hello-world}
 

@@ -265,7 +265,7 @@ const chains = [
   },
   {
     name: "Defi Oracle Meta Mainnet",
-    infoURL: "https://info.defi-oracle.io/",
+    infoURL: "https://d-bis.org",
     chainId: 138,
     nativeCurrency: {
       name: "Ether",
@@ -1012,6 +1012,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Tempo Mainnet Presto",
+    infoURL: "https://tempo.xyz",
+    chainId: 4217,
+    nativeCurrency: {
+      name: "No native currency",
+      symbol: "USD",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "MegaETH Mainnet",
     infoURL: "https://megaeth.com",
     chainId: 4326,
@@ -1342,6 +1353,17 @@ const chains = [
     chain: "Everclear Mainnet",
   },
   {
+    name: "Fluent",
+    infoURL: "https://www.fluent.xyz/",
+    chainId: 25363,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "FLUENT",
+  },
+  {
     name: "Horizen Mainnet",
     infoURL: "https://horizen.hub.caldera.xyz",
     chainId: 26514,
@@ -1571,6 +1593,17 @@ const chains = [
       decimals: 18,
     },
     chain: "Superposition",
+  },
+  {
+    name: "DUST Mainnet",
+    infoURL: "https://dustproject.org",
+    chainId: 55378,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "Lambda Chain Mainnet",
@@ -2045,6 +2078,17 @@ const chains = [
       decimals: 18,
     },
     chain: "DUSTBOY",
+  },
+  {
+    name: "Gensyn Mainnet",
+    infoURL: "https://gensyn.network/",
+    chainId: 685689,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "Gensyn",
   },
   {
     name: "Zether Mainnet",

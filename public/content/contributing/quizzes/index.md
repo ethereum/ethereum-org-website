@@ -17,7 +17,7 @@ Some examples of current quizzes can be found here:
 - [What is Ethereum?](/what-is-ethereum/)
 - [What is ETH?](/what-is-ether/)
 
-## Adding a learn quiz
+## Adding a learn quiz {#adding-a-learn-quiz}
 
 If there is a page that hasn't had a learn quiz created for it, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) for it.
 
@@ -30,7 +30,7 @@ Please provide the following information:
   - 1 correct answer with an explanation for why it is correct
   - 3 incorrect answers, each with an explanation for why they are incorrect
 
-## Adding a quiz question
+## Adding a quiz question {#adding-a-quiz-question}
 
 If there is a question you want to add to the question bank for a quiz, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) and provide the following information:
 
@@ -41,7 +41,7 @@ If there is a question you want to add to the question bank for a quiz, please [
   - 1 correct answer with an explanation for why it is correct
   - 3 incorrect answers, each with an explanation for why they are incorrect
 
-## Updating a quiz question
+## Updating a quiz question {#updating-a-quiz-question}
 
 If there is a question you want to update in a question bank for a quiz, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) and provide the following information:
 
@@ -53,7 +53,7 @@ If there is a question you want to update in a question bank for a quiz, please 
   - 1 correct answer with an explanation for why it is correct
   - 3 incorrect answers, each with an explanation for why they are incorrect
 
-## Removing a quiz question
+## Removing a quiz question {#removing-a-quiz-question}
 
 If the content no longer exists on the page for a question and it needs to be removed, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) to remove the question and provide the following information:
 

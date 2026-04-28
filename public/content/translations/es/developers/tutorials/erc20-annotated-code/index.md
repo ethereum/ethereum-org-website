@@ -7,6 +7,7 @@ tags:
   - "solidity"
   - "erc-20"
 skill: beginner
+breadcrumb: "ERC-20 paso a paso"
 published: 2021-03-09
 ---
 
@@ -426,7 +427,7 @@ La función `transfer` se invoca para transferir tókenes desde la cuenta del re
 
 La función `_transfer` hace el trabajo actual. Es una función privada que solo pueden activar otras funciones del contrato. Convencionalmente, a las funciones privadas se les llama `_<something>`, al igual que las variables de estado.
 
-Normalmente, en Sodity usamos `msg.sender` para el remitente del mensaje. Sin embargo, eso rompe [OpenGSN](http://opengsn.org/). Si queremos permitir transacciones sin etherless con nuestro token, necesitamos usar `_msgSender()`. Devuelve `msg.sender` para transacciones normales, pero para las transacciones si ether devuelve el firmante original y no el contrato que reenvió el mensaje.
+Normalmente, en Sodity usamos `msg.sender` para el remitente del mensaje. Sin embargo, eso rompe [OpenGSN](https://opengsn.org/). Si queremos permitir transacciones sin etherless con nuestro token, necesitamos usar `_msgSender()`. Devuelve `msg.sender` para transacciones normales, pero para las transacciones si ether devuelve el firmante original y no el contrato que reenvió el mensaje.
 
 ### Funciones de asignación {#allowance-functions}
 

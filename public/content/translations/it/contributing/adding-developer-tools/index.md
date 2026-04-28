@@ -1,38 +1,38 @@
 ---
-title: Aggiunta di strumenti per sviluppatori
+title: Aggiungere strumenti per sviluppatori
 lang: it
 description: I nostri criteri per elencare gli strumenti per sviluppatori su ethereum.org
 ---
 
-# Aggiunta di strumenti per sviluppatori {#contributing-to-ethereumorg-}
+# Aggiungere strumenti per sviluppatori {#contributing-to-ethereumorg-}
 
-Vogliamo assicurarci di elencare le migliori risorse possibili per sviluppatori, in modo tale che gli utenti possano lavorare con fiducia e ottenere il supporto necessario.
+Vogliamo assicurarci di elencare le migliori risorse per sviluppatori possibili, in modo che le persone possano sviluppare con fiducia e avere il supporto di cui hanno bisogno.
 
-Se c'è uno strumento utile per gli sviluppatori che ci è sfuggito, sentiti libero di suggerirlo nel luogo appropriato.
+Se c'è uno strumento utile per sviluppatori che ci è sfuggito, sentiti libero di suggerirlo in una sezione appropriata.
 
-Attualmente elenchiamo gli strumenti per gli sviluppatori in tutto il nostro [portale per sviluppatori](/developers/).
+Attualmente elenchiamo gli strumenti per sviluppatori in tutto il nostro [portale per sviluppatori](/developers/).
 
-**Sentiti libero di suggerire nuove risorse nelle pagine appropriate.**
+**Sentiti libero di suggerire nuove aggiunte alle pagine appropriate.**
 
 ## Come decidiamo {#ways-to-contribute}
 
-Le nuove proposte di strumenti per sviluppatori saranno valutate secondo i seguenti criteri:
+Le proposte di strumenti per sviluppatori saranno valutate in base ai seguenti criteri:
 
-**Lo strumento proposto si differenzia significativamente da quelli già elencati?**
+**Si differenzia in modo significativo dagli strumenti già elencati?**
 
 - Nuove categorie o tipi di strumenti
-- Nuove funzionalità rispetto a strumenti esistenti simili
-- Destinato a un caso d'uso distinto e non coperto da strumenti esistenti simili
+- Nuove funzionalità rispetto a strumenti simili esistenti
+- Mirato a un caso d'uso distinto non coperto da strumenti simili esistenti
 
 **Lo strumento è ben documentato?**
 
-- Esiste una documentazione adeguata?
-- È sufficiente per usare lo strumento?
+- Esiste una documentazione?
+- È sufficiente per utilizzare lo strumento?
 - È stata aggiornata di recente?
 
-**Lo strumento è ampiamente usato?**
+**Lo strumento è ampiamente utilizzato?**
 
-- Prenderemo in considerazione parametri come le stelle di GitHub, le statistiche di download e se è usato da aziende o progetti noti
+- Prenderemo in considerazione metriche come le stelle su GitHub, le statistiche di download e se viene utilizzato da aziende o progetti noti
 
 **Lo strumento è di qualità sufficiente?**
 
@@ -42,20 +42,20 @@ Le nuove proposte di strumenti per sviluppatori saranno valutate secondo i segue
 
 **Lo strumento è open source?**
 
-Molti progetti nel mondo di Ethereum sono di tipo open source. Siamo maggiormente propensi a elencare progetti open source che consentono agli sviluppatori della community di ispezionare il codice e contribuire a esso.
+Molti progetti nello spazio di Ethereum sono open source. È più probabile che elenchiamo progetti open source che consentono agli sviluppatori della community di ispezionare il codice e contribuirvi.
 
 ---
 
-## Ordine dei prodotti {#product-ordering}
+## Ordinamento dei prodotti {#product-ordering}
 
-A meno che i prodotti non siano specificamente ordinati in modo diverso, ad esempio alfabeticamente, i prodotti saranno mostrati per data crescente di aggiunta alla pagina. In altre parole, i prodotti più nuovi sono aggiunti in fondo all'elenco.
+A meno che i prodotti non siano specificamente ordinati in altro modo, ad esempio in ordine alfabetico, verranno visualizzati dal meno recente al più recente aggiunto alla pagina. In altre parole, i prodotti più recenti vengono aggiunti in fondo all'elenco.
 
 ---
 
 ## Aggiungi il tuo strumento per sviluppatori {#how-decisions-about-the-site-are-made}
 
-Se vuoi aggiungere a ethereum.org uno strumento per sviluppatori che soddisfa i criteri, crea un ticket su GitHub.
+Se desideri aggiungere uno strumento per sviluppatori a ethereum.org e soddisfa i criteri, crea una issue su GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
-  Crea un ticket
+  Crea una issue
 </ButtonLink>

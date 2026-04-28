@@ -13,7 +13,7 @@ lang: ar
 ## المطورون <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - تعرف على إيثريوم وجربه على [ethereum.org/developers/](/developers/)
-- احضر هاكاثون [ETHGlobal](http://ethglobal.co/) بالقرب منك!
+- احضر هاكاثون [ETHGlobal](https://ethglobal.co/) بالقرب منك!
 - تحقق من [المشاريع المتعلقة بمجال خبرتك أو لغة البرمجة المفضلة لديك](/developers/docs/programming-languages/)
 - شاهد أو شارك في [مكالمات طبقة الإجماع وطبقة التنفيذ](https://www.youtube.com/@EthereumProtocol/streams)
 - [قائمة أمنيات برنامج دعم النظام البيئي](https://esp.ethereum.foundation/wishlist/) - مجالات الأدوات، والتوثيق، والبنية التحتية التي يسعى فيها برنامج دعم النظام البيئي لإيثريوم بنشاط للحصول على طلبات المنح
@@ -109,7 +109,7 @@ lang: ar
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [وظائف في ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [لوحة وظائف Bankless](https://pallet.xyz/list/bankless/jobs)
+- [لوحة وظائف Bankless](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

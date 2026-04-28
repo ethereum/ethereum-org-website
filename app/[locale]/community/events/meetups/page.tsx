@@ -1,13 +1,14 @@
 import { pick } from "lodash"
 import { getMessages, getTranslations } from "next-intl/server"
 
-import type { PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -16,6 +17,7 @@ import OrganizerCTA from "../_components/OrganizerCTA"
 import { getMeetupGroups, mapEventTranslations } from "../utils"
 
 import FilterMeetups from "./_components/FilterMeetups"
+import MeetupsJsonLD from "./page-jsonld"
 
 import { getEventsData } from "@/lib/data"
 
@@ -25,13 +27,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   // Apply translations and compute eventTypes from tags if missing
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   // Combine API meetup events with legacy meetup groups
   // Exclude conferences and hackathons - they have their own section
@@ -40,7 +39,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups()
+  const meetupGroups = getMeetupGroups(locale)
   // Show API meetups first (sorted by date), then groups (sorted alphabetically)
   const meetups = [...apiMeetups, ...meetupGroups]
 
@@ -48,8 +47,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const { contributors } = await getAppPageContributorInfo(
+    "community/events/meetups",
+    locale as Lang
+  )
+
   return (
     <>
+      <MeetupsJsonLD
+        locale={locale}
+        contributors={contributors}
+        meetups={meetups}
+      />
       <ContentHero
         breadcrumbs={{ slug: "/community/events/meetups" }}
         title={t("page-events-meetups-hero-title", {
@@ -82,10 +91,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)
 

@@ -1,7 +1,7 @@
 import { Info } from "lucide-react"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { EventItem, PageParams } from "@/lib/types"
+import type { EventItem, Lang, PageParams } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import MainArticle from "@/components/MainArticle"
@@ -10,11 +10,14 @@ import { Button } from "@/components/ui/buttons/Button"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/section"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import EventCard from "../_components/EventCard"
 import OrganizerCTA from "../_components/OrganizerCTA"
 import { mapEventTranslations, sanitize } from "../utils"
+
+import EventsSearchJsonLD from "./page-jsonld"
 
 import { getEventsData } from "@/lib/data"
 
@@ -38,13 +41,10 @@ const Page = async (props: {
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-community-events")
+  const tCommon = await getTranslations("common")
 
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   const filteredEvents = ((): EventItem[] => {
     if (!q) return []
@@ -102,8 +102,14 @@ const Page = async (props: {
     )
   }
 
+  const { contributors } = await getAppPageContributorInfo(
+    "community/events/search",
+    locale as Lang
+  )
+
   return (
     <>
+      <EventsSearchJsonLD locale={locale} contributors={contributors} />
       <ContentHero
         breadcrumbs={{ slug: "/community/events/search" }}
         title={title}
@@ -151,10 +157,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   return await getMetadata({
     locale,

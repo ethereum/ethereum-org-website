@@ -1,6 +1,6 @@
 ---
-title: ERC-721 Nicht-fungibler Token-Standard
-description: "Erfahren Sie mehr über ERC-721, den Standard für nicht fungible Token (NFTs), die einzigartige digitale Assets auf Ethereum darstellen."
+title: "ERC-721 Standard für nicht-fungible Token"
+description: "Erfahren Sie mehr über ERC-721, den Standard für nicht-fungible Token (NFTs), die einzigartige digitale Vermögenswerte auf Ethereum repräsentieren."
 lang: de
 ---
 
@@ -8,20 +8,13 @@ lang: de
 
 **Was ist ein nicht-fungibler Token?**
 
-Ein nicht-fungibler Token (NFT) wird verwendet, um etwas oder jemanden auf eine einzigartige Weise zu identifizieren. Diese Art von Token ist perfekt, um
-auf Plattformen verwendet zu werden, die Sammelartikel anbieten, Zugang zu Schlüsseln, Lotteriekarten, nummerierten Plätzen für Konzerte und
-Sportspiele, etc. Diese spezielle Art von Token hat erstaunliche Möglichkeiten, so dass er einen angemessenen Standard verdient. Der ERC-721
-hat dies gelöst!
+Ein nicht-fungibler Token (NFT) wird verwendet, um etwas oder jemanden auf einzigartige Weise zu identifizieren. Diese Art von Token eignet sich perfekt für Plattformen, die Sammlerstücke, Zugangsschlüssel, Lotterielose, nummerierte Sitzplätze für Konzerte und Sportveranstaltungen usw. anbieten. Diese spezielle Art von Token bietet erstaunliche Möglichkeiten und verdient daher einen eigenen Standard. Der ERC-721 wurde entwickelt, um genau das zu lösen!
 
 **Was ist ERC-721?**
 
-Der ERC-721 führt eine Norm für NFT ein, mit anderen Worten, diese Art von Token ist einzigartig und kann einen anderen Wert haben
-als ein anderer Token des gleichen Smart Contract, vielleicht wegen seines Alters, seiner Seltenheit oder auch so etwas wie sein visuelles Bild.
-Moment mal, visuell?
+Der ERC-721 führt einen Standard für NFTs ein. Mit anderen Worten: Diese Art von Token ist einzigartig und kann einen anderen Wert haben als ein anderer Token aus demselben Smart Contract, vielleicht aufgrund seines Alters, seiner Seltenheit oder sogar aufgrund von etwas anderem wie seinem Aussehen. Moment, Aussehen?
 
-Ja! Alle NFTs haben eine `uint256`-Variable namens `tokenId`. Daher muss für jeden ERC-721-Vertrag das Paar
-`Vertragsadresse, uint256 tokenId` global einzigartig sein. Eine Dapp kann jedoch einen "Konverter" haben, der
-die `tokenId` als Eingabe verwendet und ein Bild von etwas Coolem ausgibt, wie Zombies, Waffen, Fähigkeiten oder fantastischen Kätzchen!
+Ja! Alle NFTs haben eine `uint256`-Variable namens `tokenId`. Für jeden ERC-721-Vertrag muss das Paar `contract address, uint256 tokenId` (Vertragsadresse, uint256 tokenId) also global einzigartig sein. Das bedeutet, dass eine Dapp einen „Konverter“ haben kann, der die `tokenId` als Eingabe verwendet und ein Bild von etwas Coolem ausgibt, wie Zombies, Waffen, Fähigkeiten oder fantastische Kätzchen!
 
 ## Voraussetzungen {#prerequisites}
 
@@ -31,15 +24,11 @@ die `tokenId` als Eingabe verwendet und ein Bild von etwas Coolem ausgibt, wie Z
 
 ## Hauptteil {#body}
 
-Der ERC-721 (Ethereum Request for Comments 721), im Januar 2018 von William Entriken, Dieter Shirley, Jacob Evans und
-Nastassia Sachs vorgeschlagen, ist ein nicht-fungibler Token-Standard, der eine API für Tokens innerhalb von Smart Contracts implementiert.
+Der ERC-721 ([Ethereum](/) Request for Comments 721), der im Januar 2018 von William Entriken, Dieter Shirley, Jacob Evans und Nastassia Sachs vorgeschlagen wurde, ist ein Standard für nicht-fungible Token, der eine API für Token innerhalb von Smart Contracts implementiert.
 
-Er bietet Funktionen wie die Übertragung von Token von einem Konto auf ein anderes, um den aktuellen Token-Saldo eines Kontos, den Eigentümer eines spezifischen Tokens sowie den Gesamtbestand der im Netzwerk verfügbaren Token abzurufen.
-Daneben gibt es auch einige andere Funktionalitäten wie zum Beispiel zu genehmigen, dass eine gewisse Menge an Token von einem Konto
-von einem Drittkonto verschoben werden kann.
+Er bietet Funktionen wie die Übertragung von Token von einem Konto auf ein anderes, die Abfrage des aktuellen Token-Guthabens eines Kontos, die Ermittlung des Eigentümers eines bestimmten Tokens sowie des Gesamtangebots des im Netzwerk verfügbaren Tokens. Darüber hinaus verfügt er über einige weitere Funktionen, wie z. B. die Genehmigung, dass eine bestimmte Menge an Token von einem Konto durch ein Drittkonto verschoben werden kann.
 
-Wenn ein Smart Contract folgende Methoden und Ereignisse implementiert, kann er als ERC-721 nicht-fungibler Token-Vertrag
-bezeichnet werden. Einmal implementiert, werden mit ihm die erstellten Token auf Ethereum verfolgt.
+Wenn ein Smart Contract die folgenden Methoden und Ereignisse implementiert, kann er als ERC-721-Vertrag für nicht-fungible Token bezeichnet werden und ist nach seiner Bereitstellung dafür verantwortlich, die auf Ethereum erstellten Token zu verfolgen.
 
 Aus [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
@@ -67,9 +56,7 @@ Aus [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
 ### Beispiele {#web3py-example}
 
-Lassen Sie uns sehen, wie wichtig ein Standard ist, um es uns einfach zu machen, jeden ERC-721 Token-Vertrag auf Ethereum zu inspizieren.
-Wir benötigen nur das Application Binary Interface (ABI) des Vertrags, um eine Schnittstelle zu jedem ERC-721 Token zu erstellen. Wie Sie
-unten sehen können, werden wir ein vereinfachtes ABI verwenden, um es zu einem Beispiel mit geringer Reibung zu machen.
+Schauen wir uns an, warum ein Standard so wichtig ist, um es uns einfach zu machen, jeden ERC-721-Token-Vertrag auf Ethereum zu überprüfen. Wir benötigen lediglich das Contract Application Binary Interface (ABI), um eine Schnittstelle zu einem beliebigen ERC-721-Token zu erstellen. Wie Sie unten sehen können, werden wir ein vereinfachtes ABI verwenden, um es zu einem reibungslosen Beispiel zu machen.
 
 #### Web3.py-Beispiel {#web3py-example}
 
@@ -86,12 +73,12 @@ from web3._utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties-Vertrag
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d" # CryptoKitties-Contract
 
-acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties-Verkaufsauktion
+acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C" # CryptoKitties-Verkaufsauktion
 
-# Dies ist eine vereinfachte Contract Application Binary Interface (ABI) eines ERC-721-NFT-Vertrags.
-# Es werden nur die folgenden Methoden offengelegt: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
+# Dies ist ein vereinfachtes Contract Application Binary Interface (ABI) eines ERC-721 NFT-Contracts.
+# Es stellt nur die folgenden Methoden bereit: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -149,7 +136,7 @@ print(f"{name} [{symbol}] NFTs in Auctions: {kitties_auctions}")
 pregnant_kitties = ck_contract.functions.pregnantKitties().call()
 print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
-# Die Transfer-Event-ABI verwenden, um Informationen über übertragene Kitties zu erhalten.
+# Verwendung der Transfer-Event-ABI, um Informationen über übertragene Kitties zu erhalten.
 tx_event_abi = {
     'anonymous': False,
     'inputs': [
@@ -160,7 +147,7 @@ tx_event_abi = {
     'type': 'event'
 }
 
-# Wir benötigen die Signatur des Ereignisses, um die Protokolle zu filtern
+# Wir benötigen die Signatur des Events, um die Logs zu filtern
 event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
 logs = w3.eth.get_logs({
@@ -170,24 +157,24 @@ logs = w3.eth.get_logs({
 })
 
 # Hinweise:
-#   - Erhöhen Sie die Anzahl der Blöcke von 120, wenn kein Transfer-Ereignis zurückgegeben wird.
-#   - Wenn Sie kein Transfer-Ereignis gefunden haben, können Sie auch versuchen, eine tokenId unter folgendem Link zu erhalten:
-#       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       Klicken Sie, um die Protokolle des Ereignisses zu erweitern, und kopieren Sie das Argument „tokenId“
+# - Erhöhen Sie die Anzahl der Blöcke über 120 hinaus, wenn kein Transfer-Event zurückgegeben wird.
+# - Wenn Sie kein Transfer-Event gefunden haben, können Sie auch versuchen, eine tokenId hier zu erhalten:
+# https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
+# Klicken Sie, um die Logs des Events zu erweitern, und kopieren Sie das Argument "tokenId"
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
 if recent_tx:
-    kitty_id = recent_tx[0]['tokenId'] # Fügen Sie die „tokenId“ von dem obigen Link hier ein
+    kitty_id = recent_tx[0]['tokenId'] # Fügen Sie die "tokenId" aus dem obigen Link hier ein
     is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
     print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
-Der Krypto-Kitties-Vertrag hat neben den Standard-Events noch einige weitere interessante Events.
+Der CryptoKitties-Vertrag hat neben den Standardereignissen noch einige andere interessante Ereignisse.
 
-Sehen wir uns zwei von ihnen an, `Pregnant` und `Birth`.
+Schauen wir uns zwei davon an: `Pregnant` und `Birth`.
 
 ```python
-# Verwendung der ABIs der Ereignisse „Pregnant“ und „Birth“, um Informationen über neue Kitties zu erhalten.
+# Verwendung der Pregnant- und Birth-Event-ABI, um Informationen über neue Kitties zu erhalten.
 ck_extra_events_abi = [
     {
         'anonymous': False,
@@ -211,13 +198,13 @@ ck_extra_events_abi = [
         'type': 'event'
     }]
 
-# Wir benötigen die Signatur des Ereignisses, um die Protokolle zu filtern
+# Wir benötigen die Signatur des Events, um die Logs zu filtern
 ck_event_signatures = [
     w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
     w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-# Hier ist ein „Pregnant“-Ereignis:
+# Hier ist ein Pregnant-Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
 pregnant_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -227,7 +214,7 @@ pregnant_logs = w3.eth.get_logs({
 
 recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
 
-# Hier ist ein „Birth“-Ereignis:
+# Hier ist ein Birth-Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
 birth_logs = w3.eth.get_logs({
     "fromBlock": w3.eth.block_number - 120,
@@ -240,24 +227,26 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 ## Beliebte NFTs {#popular-nfts}
 
-- Der [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts) listet die Top-NFTs auf Ethereum nach Übertragungsvolumen auf.
-- [CryptoKitties](https://www.cryptokitties.co/) ist ein Spiel, das sich um züchtbare, sammelbare und überaus entzückende
-  Kreaturen dreht, die wir CryptoKitties nennen.
-- [Sorare](https://sorare.com/) ist ein globales Fantasy-Football-Spiel, bei dem Sie Sammlerstücke in limitierter Auflage sammeln,
-  Ihre Teams verwalten und um Preise wetteifern können.
-- [Der Ethereum Name Service (ENS)](https://ens.domains/) bietet eine sichere und dezentralisierte Möglichkeit, Ressourcen sowohl
-  on-chain als auch off-chain mithilfe einfacher, für Menschen lesbarer Namen zu adressieren.
-- [POAP](https://poap.xyz) verteilt kostenlose NFTs an Personen, die an Veranstaltungen teilnehmen oder bestimmte Aktionen durchführen. POAPs können kostenlos erstellt und verteilt werden.
-- [Unstoppable Domains](https://unstoppabledomains.com/) ist ein in San Francisco ansässiges Unternehmen, das Domains auf
-  Blockchains erstellt. Blockchain-Domains ersetzen Kryptowährungsadressen durch für Menschen lesbare Namen und können verwendet werden, um
-  zensurresistente Websites zu ermöglichen.
-- [Gods Unchained Cards](https://godsunchained.com/) ist ein TCG auf der Ethereum-Blockchain, das NFTs verwendet, um echtes Eigentum
-  an In-Game-Assets zu ermöglichen.
-- [Bored Ape Yacht Club](https://boredapeyachtclub.com) ist eine Sammlung von 10.000 einzigartigen NFTs. Diese sind nicht nur nachweislich seltene Kunstwerke, sondern fungieren auch als Mitgliedschafts-Token für den Club, der seinen Mitgliedern Vergünstigungen und Vorteile bietet, die im Laufe der Zeit durch die Bemühungen der Community zunehmen.
+- [Etherscan NFT Tracker](https://etherscan.io/nft-top-contracts) listet die Top-NFTs auf Ethereum nach Transfervolumen auf.
+- [CryptoKitties](https://www.cryptokitties.co/) ist ein Spiel, das sich um züchtbare, sammelbare und ach so entzückende Kreaturen dreht, die wir CryptoKitties nennen.
+- [Sorare](https://sorare.com/) ist ein globales Fantasy-Fußballspiel, bei dem Sie Sammlerstücke in limitierter Auflage sammeln, Ihre Teams verwalten und antreten können, um Preise zu gewinnen.
+- [Der Ethereum Name Service (ENS)](https://ens.domains/) bietet eine sichere und dezentralisierte Möglichkeit, Ressourcen sowohl auf der Blockchain als auch Off-Chain mit einfachen, für Menschen lesbaren Namen zu adressieren.
+- [POAP](https://poap.xyz) liefert kostenlose NFTs an Personen, die an Veranstaltungen teilnehmen oder bestimmte Aktionen abschließen. POAPs können kostenlos erstellt und verteilt werden.
+- [Unstoppable Domains](https://unstoppabledomains.com/) ist ein in San Francisco ansässiges Unternehmen, das Domains auf Blockchains aufbaut. Blockchain-Domains ersetzen Kryptowährungsadressen durch für Menschen lesbare Namen und können verwendet werden, um zensurresistente Websites zu ermöglichen.
+- [Gods Unchained Cards](https://godsunchained.com/) ist ein TCG auf der Ethereum-Blockchain, das NFTs verwendet, um echtes Eigentum an In-Game-Assets zu ermöglichen.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) ist eine Sammlung von 10.000 einzigartigen NFTs, die nicht nur ein nachweislich seltenes Kunstwerk sind, sondern auch als Mitgliedschafts-Token für den Club fungieren und Mitgliedervorteile und Vergünstigungen bieten, die im Laufe der Zeit durch die Bemühungen der Community zunehmen.
 
-## Weiterführende Lektüre {#further-reading}
+## Weiterführende Literatur {#further-reading}
 
-- [EIP-721: ERC-721-Standard für nicht-fungible Token](https://eips.ethereum.org/EIPS/eip-721)
-- [OpenZeppelin – ERC-721-Dokumentation](https://docs.openzeppelin.com/contracts/3.x/erc721)
-- [OpenZeppelin – ERC-721-Implementierung](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
+- [EIP-721: ERC-721 Standard für nicht-fungible Token](https://eips.ethereum.org/EIPS/eip-721)
+- [OpenZeppelin - ERC-721-Dokumentation](https://docs.openzeppelin.com/contracts/3.x/erc721)
+- [OpenZeppelin - ERC-721-Implementierung](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 - [Alchemy NFT-API](https://www.alchemy.com/docs/reference/nft-api-quickstart)
+
+## Tutorials: Bauen mit nicht-fungiblen Token (ERC-721) auf Ethereum {#tutorials}
+
+- [Vyper ERC-721 Contract Walkthrough](/developers/tutorials/erc-721-vyper-annotated-code/) _– Ein kommentierter Durchgang durch einen vollständigen ERC-721-NFT-Vertrag, der in Vyper geschrieben wurde._
+- [Wie man einen NFT schreibt und bereitstellt (Teil 1/3)](/developers/tutorials/how-to-write-and-deploy-an-nft/) _– Schritt-für-Schritt-Anleitung zum Schreiben und Bereitstellen Ihres ersten ERC-721 Smart Contracts._
+- [Wie man einen NFT prägt (Teil 2/3)](/developers/tutorials/how-to-mint-an-nft/) _– Wie man einen ERC-721-NFT mit Ihrem bereitgestellten Smart Contract und Web3 prägt._
+- [Wie Sie Ihren NFT in Ihrer Wallet anzeigen (Teil 3/3)](/developers/tutorials/how-to-view-nft-in-metamask/) _– Wie Sie Ihren geprägten NFT nach der Bereitstellung in MetaMask anzeigen._
+- [NFT-Minter-Tutorial](/developers/tutorials/nft-minter/) _– Erstellen Sie eine Full-Stack-Dapp zum Prägen von NFTs mit einem React-Frontend, MetaMask und Alchemy._

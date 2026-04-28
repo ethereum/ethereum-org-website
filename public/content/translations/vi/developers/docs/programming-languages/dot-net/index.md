@@ -37,21 +37,21 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/lea
 
 **Bạn muốn bỏ qua thiết lập bây giờ và tiến thẳng đến các mẫu?**
 
-- [Playground](http://playground.nethereum.com/) - Tương tác với Ethereum và tìm hiểu cách sử dụng Nethereum thông qua trình duyệt.
-  - Truy vấn Số dư Tài khoản [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - Truy vấn Số dư Hợp đồng thông minh ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Chuyển ether đến một Tài khoản [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) - Tương tác với Ethereum và tìm hiểu cách sử dụng Nethereum thông qua trình duyệt.
+  - Truy vấn Số dư Tài khoản [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - Truy vấn Số dư Hợp đồng thông minh ERC20 [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - Chuyển ether đến một Tài khoản [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... Và nhiều hơn thế!
 
 ## Các bài viết trình độ trung cấp {#intermediate-articles}
 
-- [Sổ làm việc/Danh sách mẫu Nethereum](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Sổ làm việc/Danh sách mẫu Nethereum](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Triển khai Chuỗi thử nghiệm Phát triển của riêng bạn](https://github.com/Nethereum/Testchains)
 - [Plugin Codegen của VSCode cho Solidity](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity và Ethereum: Tại sao và như thế nào](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Tạo API Web ASP.NET Core cho các ứng dụng phi tập trung của Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Sử dụng Nethereum Web3 để triển khai Hệ thống Theo dõi Chuỗi Cung ứng](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Xử lý khối Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), với [mẫu C# Playground](http://playground.nethereum.com/csharp/id/1025)
+- [Xử lý khối Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), với [mẫu C# Playground](https://playground.nethereum.com/csharp/id/1025)
 - [Phát trực tuyến Websocket của Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido và Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum và Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/lea
 
 ## Các dự án, công cụ .NET và những thứ thú vị khác {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Sân chơi Nethereum](http://playground.nethereum.com/) - _Biên dịch, tạo và chạy các đoạn mã Nethereum trong trình duyệt_
+- [Sân chơi Nethereum](https://playground.nethereum.com/) - _Biên dịch, tạo và chạy các đoạn mã Nethereum trong trình duyệt_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Trình tạo mã Nethereum với giao diện người dùng trong Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Một trình khám phá chuỗi khối nhẹ .NET Wasm SPA và ví đơn giản_
 - [Công cụ Quy tắc Nghiệp vụ Wonka](https://docs.nethereum.com/en/latest/wonka/) - _Một công cụ quy tắc nghiệp vụ (cho cả nền tảng .NET và nền tảng Ethereum) vốn được định hướng bởi siêu dữ liệu_
@@ -78,7 +78,7 @@ Tìm kiếm thêm tài nguyên? Tham khảo [ethereum.org/developers](/developer
 
 Tại Nethereum, chúng tôi chủ yếu sinh hoạt trên [Gitter](https://gitter.im/Nethereum/Nethereum) nơi mọi người đều có thể hỏi/trả lời câu hỏi, nhận trợ giúp hoặc chỉ thư giãn. Hãy thoải mái tạo một PR hoặc mở một vấn đề trên [kho lưu trữ GitHub của Nethereum](https://github.com/Nethereum), hoặc chỉ cần duyệt qua nhiều dự án phụ/mẫu mà chúng tôi có. Bạn cũng có thể tìm thấy chúng tôi trên [Discord](https://discord.gg/jQPrR58FxX)!
 
-Nếu bạn mới sử dụng Nethermind và cần trợ giúp để bắt đầu, hãy tham gia [Discord](http://discord.gg/PaCMRFdvWT) của chúng tôi. Những nhà phát triển của chúng tôi luôn sãn sàng để trả lời câu hỏi của bạn. Đừng ngần ngại mở một PR hoặc nêu bất kỳ vấn đề nào trên [kho lưu trữ GitHub của Nethermind](https://github.com/NethermindEth/nethermind).
+Nếu bạn mới sử dụng Nethermind và cần trợ giúp để bắt đầu, hãy tham gia [Discord](https://discord.gg/PaCMRFdvWT) của chúng tôi. Những nhà phát triển của chúng tôi luôn sãn sàng để trả lời câu hỏi của bạn. Đừng ngần ngại mở một PR hoặc nêu bất kỳ vấn đề nào trên [kho lưu trữ GitHub của Nethermind](https://github.com/NethermindEth/nethermind).
 
 ## Các danh sách tổng hợp khác {#other-aggregated-lists}
 

@@ -4,6 +4,7 @@ description: Pelajari cara menyiapkan dan mengonfigurasi pustaka web3.js untuk b
 author: "jdourlens"
 tags: ["web3.js", "JavaScript"]
 skill: beginner
+breadcrumb: "Setup web3.js"
 lang: id
 published: 2020-04-11
 source: EthereumDev

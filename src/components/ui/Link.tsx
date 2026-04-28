@@ -23,7 +23,7 @@ export const ExternalLinkIcon = () => {
     <ExternalLink
       data-label="arrow"
       className={cn(
-        "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
+        "ms-1 !mb-0.5 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
         twFlipForRtl
       )}
     />
@@ -73,6 +73,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
+
+  href = url.normalizeHref(href)
 
   const isActive = url.isHrefActive(href, pathname || "", isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
@@ -126,7 +128,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {isMailto ? (
           <span className="text-nowrap">
             {!hideArrow && (
-              <Mail className="!mb-0.5 me-1 inline-block size-[1em] shrink-0" />
+              <Mail className="me-1 !mb-0.5 inline-block size-[1em] shrink-0" />
             )}
             {children}
           </span>

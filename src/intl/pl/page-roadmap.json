@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "Mapuje zależności z góry, co przyspiesza synchronizację, równoległe wykonywanie i równoległy odczyt z dysku.",
   "page-roadmap-glamsterdam-bal-item-3": "Obniża zużycie gazu w aplikacjach intensywnie korzystających ze stanu i poprawia przewidywalność kosztów gazu.",
   "page-roadmap-hegota-discussed-title": "Zaplanowano dla Hegotá",
-  "page-roadmap-hegota-discussed-item-1": "Propozycje są obecnie przedmiotem dyskusji."
+  "page-roadmap-hegota-discussed-item-1": "Propozycje są obecnie przedmiotem dyskusji.",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "Dowody z wiedzą zerową mogą pozwolić walidatorom na weryfikowanie bloków Ethereum bez ponownego wykonywania transakcji, umożliwiając wyższe limity gazu bez zwiększania wymagań sprzętowych."
 }

@@ -6,6 +6,7 @@ author: Ori Pomerantz
 lang: te
 tags: [ "ఏజెంట్", "సర్వర్", "ఆఫ్‌చైన్" ]
 skill: beginner
+breadcrumb: "సర్వర్ కాంపోనెంట్లు"
 published: 2024-07-15
 ---
 

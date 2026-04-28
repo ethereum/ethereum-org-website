@@ -11,6 +11,7 @@ tags:
     "композиционность"
   ]
 skill: advanced
+breadcrumb: "Взаимодействие контрактов"
 lang: ru
 published: 2020-04-05
 source: EthereumDev

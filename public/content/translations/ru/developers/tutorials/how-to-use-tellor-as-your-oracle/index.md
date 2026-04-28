@@ -5,6 +5,7 @@ author: "Tellor"
 lang: ru
 tags: [ "Solidity", "Умные контракты", "оракулы" ]
 skill: beginner
+breadcrumb: "Оракул Tellor"
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

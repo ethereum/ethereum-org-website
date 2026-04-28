@@ -4,6 +4,7 @@ description: "Toto je průvodce pro začátečníky, jak odesílat transakce v s
 author: "Elan Halpern"
 tags: [ "transakce", "web3.js", "alchemy" ]
 skill: beginner
+breadcrumb: "Odeslání transakcí"
 lang: cs
 published: 2020-11-04
 source: Alchemy docs

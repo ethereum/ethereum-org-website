@@ -13,6 +13,7 @@ import type {
   TutorialFrontmatter,
   UpgradeFrontmatter,
   UseCasesFrontmatter,
+  VideoFrontmatter,
 } from "@/lib/interfaces"
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
@@ -166,7 +167,6 @@ export type I18nLocale = {
   name: string
   localName: string
   langDir: Direction
-  dateFormat: string
   /**
    * @property forceLocalName - Optional flag to indicate that the local name should be used instead of the fallback from `Intl.DisplayName`.
    *   Fallback used when locale language name matches English name.
@@ -305,24 +305,11 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
-// Crowdin translation progress
-export type ProjectProgressData = {
-  languageId: string
-  words: {
-    total: number
-    approved: number
-  }
-}
-
 export type LocaleDisplayInfo = {
   localeOption: string
   sourceName: string
   targetName: string
   englishName: string
-  approvalProgress: number
-  wordsApproved: number
-  progress: string
-  words: string
   isBrowserDefault?: boolean
 }
 
@@ -594,6 +581,36 @@ export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
+/**
+ * Full video data parsed from a video's index.md file.
+ * Includes frontmatter metadata and the markdown body (transcript).
+ */
+export type VideoData = {
+  slug: string
+  content: string
+  frontmatter: VideoFrontmatter
+}
+
+export type VideoFormat =
+  | "presentation"
+  | "explainer"
+  | "interview"
+  | "tutorial"
+  | "panel"
+/**
+ * Flat, serializable video data for client components (e.g. VideoGalleryFilter).
+ * thumbnailUrl is pre-resolved server-side from customThumbnailUrl or youtubeId.
+ */
+export type VideoCardData = {
+  slug: string
+  title: string
+  description: string
+  uploadDate: string
+  duration: string
+  topic: string[]
+  thumbnailUrl: string
+}
+
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
   activeAddresses: Record<string, number | undefined>
@@ -764,7 +781,7 @@ export type ExtendedRollup = Rollup & {
   walletsSupported: string[]
   activeAddresses: number | undefined
   launchDate: string | null
-  walletsSupportedCount: number
+  walletsSupportedCount: string
   blockspaceData: {
     nft: number
     defi: number

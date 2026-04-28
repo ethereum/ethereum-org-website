@@ -52,7 +52,6 @@ ethereum.orgは、40言語以上のネイティブに翻訳されており、各
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - イーサリアム、DeFi、NFT、Web3関連の知識を網羅した、コミュニティによって維持されているコンテンツ
 - [123ETH](https://123eth.org/) - イーサリアムエコシステムへのポータル
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - 暗号通貨とその応用に関する無料オンラインコース
-- [イーサリアムホワイトペーパー](/zh/whitepaper/) - 中国語版のイーサリアムホワイトペーパー
 
 **イーサリアムエコシステム**
 

@@ -51,7 +51,7 @@ const Content = (props: ChildOnlyProp) => (
 )
 
 const H2 = ({ className, ...props }: ComponentProps<"h2">) => (
-  <h2 className={cn("mb-8 mt-12", className)} {...props} />
+  <h2 className={cn("mt-12 mb-8", className)} {...props} />
 )
 
 const H4 = (props: ChildOnlyProp) => (
@@ -71,7 +71,7 @@ const ClientRow = (props: ChildOnlyProp) => (
 )
 
 const Client = (props: ChildOnlyProp) => (
-  <div className="m-16 mb-12 mt-4 w-[60px]" {...props} />
+  <div className="m-16 mt-4 mb-12 w-[60px]" {...props} />
 )
 
 const Row = (props: ChildOnlyProp) => (
@@ -113,8 +113,8 @@ export default async function Page(props: { params: Promise<Params> }) {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ namespace: "page-bug-bounty" })
-  const tCommon = await getTranslations({ namespace: "common" })
+  const t = await getTranslations("page-bug-bounty")
+  const tCommon = await getTranslations("common")
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("bug-bounty", locale as Lang)
@@ -256,11 +256,11 @@ export default async function Page(props: { params: Promise<Params> }) {
         {/* <BugBountyBanner /> */}
         <Content>
           <VStack className="-mt-8 justify-between lg:mt-0 lg:flex-row lg:ps-0">
-            <div className="flex-1 basis-1/2 pb-16 pl-0 pr-0 pt-24 lg:-mt-32 lg:pb-32 lg:pl-8 lg:pr-8 lg:pt-32">
+            <div className="flex-1 basis-1/2 pt-24 pr-0 pb-16 pl-0 lg:-mt-32 lg:pt-32 lg:pr-8 lg:pb-32 lg:pl-8">
               <Breadcrumbs slug="bug-bounty" className="mb-8" />
               <Row>
                 <div className="h-2 w-2 rounded-full bg-success" />{" "}
-                <Text className="mb-0 ms-2 text-sm uppercase text-body">
+                <Text className="ms-2 mb-0 text-sm text-body uppercase">
                   {t("page-upgrades-bug-bounty-title")}
                 </Text>
               </Row>
@@ -288,7 +288,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 </ButtonLink>
               </Flex>
             </div>
-            <VStack className="flex-1 basis-1/2 p-0 lg:pb-32 lg:pl-0 lg:pr-8 lg:pt-24">
+            <VStack className="flex-1 basis-1/2 p-0 lg:pt-24 lg:pr-8 lg:pb-32 lg:pl-0">
               <Leaderboard content={allBounterHunters.slice(0, 5)} />
               <ButtonLink variant="outline" href="#leaderboard">
                 {t("page-upgrades-bug-bounty-leaderboard")}
@@ -380,7 +380,7 @@ export default async function Page(props: { params: Promise<Params> }) {
             />
           </Client>
         </ClientRow>
-        <div className="mb-12 mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
+        <div className="mt-8 mb-12 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
           <Content>
             <div className="flex-1">
               <H2 id="in-scope">{t("page-upgrades-bug-bounty-validity")}</H2>
@@ -394,7 +394,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 })}
               </Text>
             </div>
-            <Flex className="-ml-4 -mr-4 mb-12 mt-8 flex-wrap">
+            <Flex className="mt-8 -mr-4 mb-12 -ml-4 flex-wrap">
               <StyledCard
                 emoji=":ledger:"
                 title={t("page-upgrades-bug-bounty-ledger-title")}
@@ -514,7 +514,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               {/* Out of Scope */}
               <div
                 id="out-of-scope"
-                className="m-4 flex-[1_1_100%] overflow-hidden rounded-sm border border-solid bg-background-highlight p-6"
+                className="m-4 flex-[1_1_100%] overflow-hidden rounded-xs border border-solid bg-background-highlight p-6"
               >
                 <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
                 <p className="mb-6 text-body-medium">
@@ -579,9 +579,9 @@ export default async function Page(props: { params: Promise<Params> }) {
               </div>
 
               {/* Bug Hunting Rules */}
-              <div className="m-4 flex-[1_1_100%] overflow-hidden rounded-sm border border-solid bg-background-highlight p-6">
+              <div className="m-4 flex-[1_1_100%] overflow-hidden rounded-xs border border-solid bg-background-highlight p-6">
                 <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
-                <Text className="italic text-body-medium">
+                <Text className="text-body-medium italic">
                   {t("page-upgrades-bug-bounty-hunting-desc")}
                 </Text>
                 <ol className="mt-6 space-y-3">
@@ -595,7 +595,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   ).map((key, idx) => (
                     <li
                       key={key}
-                      className="flex items-start gap-4 rounded-sm border border-border bg-background p-4"
+                      className="flex items-start gap-4 rounded-xs border border-border bg-background p-4"
                     >
                       <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
                         {idx + 1}
@@ -617,7 +617,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               </p>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {/* Low */}
-                <div className="flex flex-col rounded-sm border border-border bg-background p-6">
+                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-green-500/10 px-3 py-1 text-sm font-semibold text-green-600 dark:text-green-400">
                     {t("page-upgrades-bug-bounty-severity-low-title")}
                   </span>
@@ -640,7 +640,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   </ul>
                 </div>
                 {/* Medium */}
-                <div className="flex flex-col rounded-sm border border-border bg-background p-6">
+                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-yellow-500/10 px-3 py-1 text-sm font-semibold text-yellow-600 dark:text-yellow-400">
                     {t("page-upgrades-bug-bounty-severity-medium-title")}
                   </span>
@@ -663,7 +663,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   </ul>
                 </div>
                 {/* High */}
-                <div className="flex flex-col rounded-sm border border-border bg-background p-6">
+                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
                     {t("page-upgrades-bug-bounty-severity-high-title")}
                   </span>
@@ -686,7 +686,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   </ul>
                 </div>
                 {/* Critical */}
-                <div className="flex flex-col rounded-sm border border-border bg-background p-6">
+                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-red-500/10 px-3 py-1 text-sm font-semibold text-red-600 dark:text-red-400">
                     {t("page-upgrades-bug-bounty-severity-critical-title")}
                   </span>
@@ -840,7 +840,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-bug-bounty" })
+  const t = await getTranslations("page-bug-bounty")
 
   return await getMetadata({
     locale,

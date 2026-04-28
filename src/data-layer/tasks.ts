@@ -35,6 +35,7 @@ import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
 import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
+import { fetchVideoThumbnails } from "./fetchers/fetchVideoThumbnails"
 import { set } from "./storage"
 
 export const KEYS = {
@@ -64,6 +65,7 @@ export const KEYS = {
   STABLECOINS_DATA: "fetch-stablecoins-data",
   ACCOUNT_HOLDERS: "fetch-account-holders",
   TRANSLATION_GLOSSARY: "fetch-translation-glossary",
+  VIDEO_THUMBNAILS: "fetch-video-thumbnails",
 } as const
 
 // Task definition: storage key + fetch function
@@ -88,10 +90,11 @@ const DAILY: TaskDef[] = [
   [KEYS.EVENTS, fetchEvents],
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
+  [KEYS.BEACONCHAIN, fetchBeaconChain],
+  [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
 ]
 
 const HOURLY: TaskDef[] = [
-  [KEYS.BEACONCHAIN, fetchBeaconChain],
   [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
@@ -107,11 +110,7 @@ function createDataTask([key, fetchFn]: TaskDef) {
   return task({
     id: key,
     retry: {
-      maxAttempts: 3,
-      factor: 2,
-      minTimeoutInMs: 2000,
-      maxTimeoutInMs: 30000,
-      randomize: true,
+      maxAttempts: 2,
     },
     catchError: async ({ error }) => {
       logger.error(`[${key}] failed`, { error })

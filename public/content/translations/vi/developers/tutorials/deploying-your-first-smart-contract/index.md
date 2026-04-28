@@ -10,6 +10,7 @@ tags:
     "triển khai"
   ]
 skill: beginner
+breadcrumb: "Triển khai hợp đồng đầu tiên"
 lang: vi
 published: 2020-04-03
 source: EthereumDev

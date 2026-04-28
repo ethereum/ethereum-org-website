@@ -114,7 +114,7 @@ _Hua inatumika kwa ajili ya muunganiko wa karibu, mashirika yanayozingatia binad
 
 #### Mfano maarufu {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO imejikita katika kufadhili miradi ya Ethereum. Inahitaji pendekezo kwenye chama ili kundi lifanye tathmini kama unavigezo vinavyokidhi mahitaji na mtaji kufanya maamuzi sahihi kuhusu wafadhili watarajiwa. Huwezi kununua ufikiaji wa DAO kwenye soko la wazi.
+[MolochDAO](https://molochdao.com/) – MolochDAO imejikita katika kufadhili miradi ya Ethereum. Inahitaji pendekezo kwenye chama ili kundi lifanye tathmini kama unavigezo vinavyokidhi mahitaji na mtaji kufanya maamuzi sahihi kuhusu wafadhili watarajiwa. Huwezi kununua ufikiaji wa DAO kwenye soko la wazi.
 
 ### Uanachama unaotegemea sifa {#reputation-based-membership}
 

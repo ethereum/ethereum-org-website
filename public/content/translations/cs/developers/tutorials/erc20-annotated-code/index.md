@@ -5,6 +5,7 @@ author: Ori Pomerantz
 lang: cs
 tags: [ "solidity", "erc-20" ]
 skill: beginner
+breadcrumb: "ERC-20 průvodce"
 published: 2021-03-09
 ---
 
@@ -496,7 +497,7 @@ jiné funkce kontraktu. Podle konvence jsou soukromé funkce pojmenovány `_<ně
 proměnné.
 
 Normálně v Solidity používáme `msg.sender` pro odesílatele zprávy. To však narušuje
-[OpenGSN](http://opengsn.org/). Chceme-li s naším tokenem povolit transakce bez etheru, musíme
+[OpenGSN](https://opengsn.org/). Chceme-li s naším tokenem povolit transakce bez etheru, musíme
 použít `_msgSender()`. Pro běžné transakce vrací `msg.sender`, ale pro transakce bez etheru
 vrací původního podepisujícího a ne kontrakt, který zprávu předal.
 

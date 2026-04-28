@@ -159,5 +159,5 @@ Esquema da camada de rede para clientes de consenso e de execução, de [ethrese
 [De Kademlia para discv5](https://vac.dev/kademlia-to-discv5)
 [Artigo sobre o Kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [Introdução à rede P2P do Ethereum](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[Relação ETH1/ETH2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[Relação ETH1/ETH2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [Vídeo com detalhes sobre a The Merge e clientes ETH2](https://www.youtube.com/watch?v=zNIrIninMgg)

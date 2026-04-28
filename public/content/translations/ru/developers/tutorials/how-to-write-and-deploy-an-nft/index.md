@@ -4,6 +4,7 @@ description: "Это руководство является Первой час
 author: "Sumi Mudgil"
 tags: [ "ERC-721", "Alchemy", "Solidity", "смарт-контракты" ]
 skill: beginner
+breadcrumb: "Создание и деплой NFT"
 lang: ru
 published: 2021-04-22
 ---

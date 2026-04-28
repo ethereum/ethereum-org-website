@@ -5,13 +5,14 @@ author: "Markus Waas"
 tags:
   ["frontend", "JavaScript", "ethers.js", "the graph", "defi"]
 skill: beginner
+breadcrumb: "create-eth-app"
 lang: id
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Terakhir kali kita melihat [gambaran besar Solidity](https://soliditydeveloper.com/solidity-overview-2020) dan telah menyebutkan [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sekarang Anda akan mengetahui cara menggunakannya, fitur apa saja yang terintegrasi, dan ide tambahan tentang cara mengembangkannya. Dimulai oleh Paul Razvan Berg, pendiri [Sablier](http://sablier.com/), aplikasi ini akan memulai pengembangan frontend Anda dan dilengkapi dengan beberapa integrasi opsional untuk dipilih.
+Terakhir kali kita melihat [gambaran besar Solidity](https://soliditydeveloper.com/solidity-overview-2020) dan telah menyebutkan [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Sekarang Anda akan mengetahui cara menggunakannya, fitur apa saja yang terintegrasi, dan ide tambahan tentang cara mengembangkannya. Dimulai oleh Paul Razvan Berg, pendiri [Sablier](https://sablier.com/), aplikasi ini akan memulai pengembangan frontend Anda dan dilengkapi dengan beberapa integrasi opsional untuk dipilih.
 
 ## Instalasi {#installation}
 

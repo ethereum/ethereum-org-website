@@ -96,7 +96,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
       </div>
       <Flex className="min-h-[410px] flex-[2] flex-col items-center bg-background-highlight p-6">
         <StyledSvg />
-        <h3 className="mt-10 text-2xl font-bold leading-[1.4]">{title}</h3>
+        <h3 className="mt-10 text-2xl leading-[1.4] font-bold">{title}</h3>
         <p>{description}</p>
         <Flex className="mt-auto justify-center gap-8">
           {!!valid && (

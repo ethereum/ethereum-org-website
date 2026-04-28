@@ -52,7 +52,6 @@ Ethereum.org 已翻譯為 40 多種語言，你可以透過我們的語言選擇
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - 由社群維護的內容，涵蓋以太坊、DeFi、NFT 及 Web3 相關知識
 - [123ETH](https://123eth.org/) - 以太坊生態系的入口網站
 - [Zhen Xiao（肖臻）](http://zhenxiao.com/blockchain/) - 關於加密貨幣及其應用的免費線上課程
-- [以太坊白皮書](/zh/whitepaper/) - 以太坊白皮書中文版
 
 **以太坊生態系統**
 

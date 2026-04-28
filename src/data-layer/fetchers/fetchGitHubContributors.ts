@@ -2,6 +2,8 @@ import type { FileContributor, GitHubContributorsData } from "@/lib/types"
 
 import { CONTENT_DIR, OLD_CONTENT_DIR } from "@/lib/constants"
 
+import { fetchRetry } from "./fetchRetry"
+
 const GITHUB_API_BASE =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 
@@ -26,7 +28,7 @@ type NameLookup = Map<string, AllContributorsEntry>
 async function fetchNameLookup(): Promise<NameLookup> {
   const url =
     "https://raw.githubusercontent.com/ethereum/ethereum-org-website/master/.all-contributorsrc"
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     console.warn("Failed to fetch .all-contributorsrc:", response.status)
@@ -52,6 +54,7 @@ const EXCLUDED_EMAILS = [
   "actions@github.com",
   "github-actions[bot]@users.noreply.github.com",
   "noreply@github.com",
+  "gemini@google.com",
 ]
 
 /** GitHub logins (exact match) that should be excluded */
@@ -64,6 +67,7 @@ const EXCLUDED_LOGINS = [
   "eth-bot",
   "ethereumoptimism-bot",
   "coderabbitai[bot]",
+  "myelinated-wackerow",
 ]
 
 /** Name patterns (case-insensitive substring match) for AI agent co-authors */
@@ -250,14 +254,14 @@ async function fetchCommitsForPath(
   url.searchParams.set("path", filepath)
   url.searchParams.set("sha", "master")
 
-  const response = await fetch(url.href, {
+  const response = await fetchRetry(url.href, {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/vnd.github.v3+json",
     },
   })
 
-  // Handle rate limiting
+  // Handle GitHub-specific rate limiting (403, not 429)
   if (
     response.status === 403 &&
     response.headers.get("X-RateLimit-Remaining") === "0"
@@ -368,7 +372,7 @@ async function discoverPathsFromTree(token: string): Promise<{
 }> {
   const url = `${GITHUB_API_BASE}/git/trees/master?recursive=1`
 
-  const response = await fetch(url, {
+  const response = await fetchRetry(url, {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/vnd.github.v3+json",

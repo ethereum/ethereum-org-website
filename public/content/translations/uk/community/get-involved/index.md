@@ -13,7 +13,7 @@ lang: uk
 ## Розробники <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Дізнайтеся про Ethereum і спробуйте його на [ethereum.org/developers/](/developers/)
-- Відвідайте хакатон [ETHGlobal](http://ethglobal.co/) поблизу вас!
+- Відвідайте хакатон [ETHGlobal](https://ethglobal.co/) поблизу вас!
 - Ознайомтеся з [проєктами, що стосуються вашої галузі знань або обраної мови програмування](/developers/docs/programming-languages/)
 - Дивіться або беріть участь у [дзвінках щодо рівнів консенсусу та виконання](https://www.youtube.com/@EthereumProtocol/streams)
 - [Список побажань Програми підтримки екосистеми](https://esp.ethereum.foundation/wishlist/) – інструменти, документація та напрями інфраструктури, у яких Програма підтримки екосистеми Ethereum активно шукає заявки на гранти
@@ -109,7 +109,7 @@ lang: uk
 - [Вакансії у сфері криптовалют](https://cryptocurrencyjobs.co/ethereum/)
 - [Кар’єра в ConsenSys](https://consensys.net/careers/)
 - [Список вакансій у криптосфері](https://cryptojobslist.com/ethereum-jobs)
-- [Дошка вакансій від Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Дошка вакансій від Bankless](https://www.bankless.com/jobs)
 - [Робота у Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Вакансії Crypto Valley](https://cryptovalley.jobs/)

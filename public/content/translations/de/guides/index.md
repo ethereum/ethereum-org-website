@@ -1,27 +1,27 @@
 ---
-title: Ethereum Leitfäden
-description: Eine Sammlung an praktischen Leitfäden, welche Anfängern die Grundlagen von Ethereum erklärt.
+title: "Ethereum-Leitfäden"
+description: "Eine Sammlung praktischer Leitfäden, die Anfängern die Grundlagen der Nutzung von Ethereum erklären."
 lang: de
 ---
 
-# Ethereum Leitfäden
+# Ethereum-Leitfäden
 
-Möchten Sie Ihre Ethereum Reise starten? Unsere praktischen Leitfäden führen Sie Schritt für Schritt durch den Einstieg und erleichtern Ihnen den Umgang mit dieser neuen Technologie.
+Möchten Sie Ihre Ethereum-Reise beginnen? Unsere praktischen Leitfäden führen Sie Schritt für Schritt durch den Einstieg und erleichtern Ihnen die Navigation in dieser neuen Technologie.
 
 ## Erste Schritte
 
-1. [Wie „erstellen" Sie ein Ethereum-Konto](/guides/how-to-create-an-ethereum-account/) - Jeder kann eine Wallet gratis erstellen. Dieser Leitfaden zeigt Ihnen, wo Sie anfangen sollen.
+1. [Wie man ein Ethereum-Konto „erstellt“](/guides/how-to-create-an-ethereum-account/) – Jeder kann kostenlos ein Wallet erstellen. Dieser Leitfaden zeigt Ihnen, wo Sie anfangen können.
 
-2. [Wie man eine Wallet benutzt](/guides/how-to-use-a-wallet/) - Eine Einführung in die grundlegenden Funktionen einer Wallet, und wie man diese benutzt.
+2. [Wie man ein Wallet verwendet](/guides/how-to-use-a-wallet/) – Erfahren Sie, wie Sie Token in Ihrem Wallet senden und empfangen und wie Sie Ihr Wallet mit Projekten verbinden.
 
-## Grundlagen zur Sicherheit
+## Sicherheitsgrundlagen
 
-1. [Wie man einen Smart-Contract-Zugriff widerrufen kann](/guides/how-to-revoke-token-access/) – Falls Sie plötzlich eine Transaktion in Ihrer Wallet sehen, die Sie nicht initiiert haben, finden Sie in diesem Leitfaden eine Anleitung, wie sich das in Zukunft verhinden lässt.
+1. [Wie man den Zugriff von Smart Contracts auf sein Krypto-Guthaben widerruft](/guides/how-to-revoke-token-access/) – Wenn Sie plötzlich eine Transaktion in Ihrem Wallet sehen, die Sie nicht initiiert haben, erfahren Sie in diesem Leitfaden, wie Sie verhindern können, dass dies erneut passiert.
 
-2. [Wie man betrügerische Token (Scam-Token) erkennt](/guides/how-to-id-scam-tokens/) – Was scams sind, welche Taktiken dabei eingesetzt werden und wie man sie erkennen kann, um sich zu schützen und nicht betrogen zu werden.
+2. [Wie man Betrugs-Token erkennt](/guides/how-to-id-scam-tokens/) – Was sind Betrugs-Token? Wie lassen sie sich legitim erscheinen und wie erkennen Sie sie, um sich zu schützen und nicht betrogen zu werden?
 
-## Ethereum verwenden
+## Ethereum nutzen
 
-1. [Wie man Token in Layer 2 überführt](/guides/how-to-use-a-bridge/) - Sind Ethereum-Transaktionen zu teuer? Betrachten Sie den Wechsel auf sogenannte Layer-2 Skalierungslösungen.
+1. [Wie man Token über eine kettenübergreifende Brücke auf Ebene 2 überträgt](/guides/how-to-use-a-bridge/) – Sind Ethereum-Transaktionen zu teuer? Erwägen Sie den Wechsel zu Ethereum-Skalierungslösungen, die als Ebene 2 bezeichnet werden.
 
-2. [Wie man Token tauscht](/guides/how-to-swap-tokens/) - Wollen Sie Ihre Token gegen andere austauschen? Dieser simple Leitfaden zeigt Ihnen, wie Sie das machen.
+2. [Wie man Token tauscht](/guides/how-to-swap-tokens/) – Möchten Sie Ihre Token gegen andere eintauschen? Dieser einfache Leitfaden zeigt Ihnen, wie das geht.

@@ -104,5 +104,7 @@
   "page-roadmap-glamsterdam-bal-item-2": "더 빠른 동기화, 병렬 실행, 병렬 디스크 읽기를 위해 종속성을 미리 매핑합니다.",
   "page-roadmap-glamsterdam-bal-item-3": "상태 집약적인 앱의 가스비를 낮추고 가스 비용 예측 가능성을 향상시킵니다.",
   "page-roadmap-hegota-discussed-title": "헤고타에서 계획됨",
-  "page-roadmap-hegota-discussed-item-1": "현재 제안들이 논의 중입니다."
+  "page-roadmap-hegota-discussed-item-1": "현재 제안들이 논의 중입니다.",
+  "page-roadmap-zkevm-title": "zkEVM",
+  "page-roadmap-zkevm-description": "영지식 증명을 통해 검증자는 트랜잭션을 재실행하지 않고도 이더리움 블록을 검증할 수 있으며, 하드웨어 요구 사항을 높이지 않고도 더 높은 가스 한도를 설정할 수 있습니다."
 }

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { HStack, VStack } from "../flex"
 import { Tag, TagButton } from "../tag"

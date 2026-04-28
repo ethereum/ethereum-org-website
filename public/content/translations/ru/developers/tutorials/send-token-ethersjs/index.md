@@ -4,6 +4,7 @@ description: "Руководство для начинающих по отпра
 author: Kim YongJun
 tags: [ "ETHERS.JS", "ERC-20", "ТОКЕНЫ" ]
 skill: beginner
+breadcrumb: "Отправка токенов"
 lang: ru
 published: 2021-04-06
 ---

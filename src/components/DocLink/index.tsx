@@ -21,7 +21,7 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
   return (
     <LinkBox
       className={cn(
-        "flex rounded-sm border p-4 text-current no-underline",
+        "flex rounded-xs border p-4 text-current no-underline",
         "hover:rounded hover:bg-background-highlight hover:no-underline",
         "group hover:shadow-[0_0_1px] hover:shadow-primary"
       )}

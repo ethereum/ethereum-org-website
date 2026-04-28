@@ -197,6 +197,7 @@ Se fai parte di un [pool di staking](/staking/pools/) o detieni token di staking
 
 In generale, gli utenti dovrebbero essere liberi di recuperare i propri ETH sottostanti in staking o di cambiare il fornitore di staking che utilizzano. Se un particolare pool sta diventando troppo grande, i fondi possono essere ritirati, riscattati e rimessi in staking con un [fornitore più piccolo](https://rated.network/). Oppure, se hai accumulato abbastanza ETH, potresti fare [staking da casa](/staking/solo/).
 
+In generale, gli utenti dovrebbero essere liberi di reclamare i propri ETH sottostanti in staking o di cambiare il fornitore di staking che utilizzano. Se un particolare pool sta diventando troppo grande, i fondi possono essere ritirati, riscattati e rimessi in staking con un <a href="https://rated.network/">fornitore più piccolo</a>. Oppure, se hai accumulato abbastanza ETH potresti fare [staking da casa](/staking/solo/).
 </ExpandableCard>
 
 <ExpandableCard
@@ -219,6 +220,7 @@ No, se il tuo validatore è ancora attivo sulla rete, un prelievo completo non a
 
 Una volta che un validatore ha completato il processo di uscita, e supponendo che l'account abbia le credenziali di prelievo, il saldo rimanente verrà _quindi_ prelevato durante il prossimo <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "FAQ happen automatically (sweep)", eventName: "click" }}>controllo del validatore</a>.
 
+Una volta che un validatore ha completato il processo di uscita, e supponendo che l'account abbia le credenziali di prelievo, il saldo rimanente verrà <em>quindi</em> prelevato durante il prossimo <a href="#validator-sweeping">sweep del validatore</a>.
 </ExpandableCard>
 
 <ExpandableCard title="Posso prelevare un importo personalizzato?"
@@ -240,6 +242,7 @@ Si consiglia agli operatori dei validatori di visitare la pagina [Prelievi dello
 
 Per provare prima la tua configurazione su una rete di test, visita l'[Hoodi Testnet Staking Launchpad](https://hoodi.launchpad.ethereum.org) per iniziare.
 
+Per provare prima la tua configurazione su una rete di test, visita l'<a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> per iniziare.
 </ExpandableCard>
 
 <ExpandableCard

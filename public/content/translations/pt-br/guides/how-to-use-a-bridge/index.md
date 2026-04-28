@@ -49,7 +49,7 @@ Esse processo não deve demorar mais do que 10 minutos.
 
 ## 7. Adicione a rede selecionada da camada 2 à sua carteira (opcional)
 
-Você pode usar o [chainlist.org](http://chainlist.org) para encontrar os detalhes de RPC da rede. Quando a rede for adicionada e a transação terminada, você deverá ver os tokens na sua carteira. <br />
+Você pode usar o [chainlist.org](https://chainlist.org) para encontrar os detalhes de RPC da rede. Quando a rede for adicionada e a transação terminada, você deverá ver os tokens na sua carteira. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

@@ -13,6 +13,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import Providers from "./providers"
 
+import "@rainbow-me/rainbowkit/styles.css"
 import "@/styles/global.css"
 
 import { routing } from "@/i18n/routing"

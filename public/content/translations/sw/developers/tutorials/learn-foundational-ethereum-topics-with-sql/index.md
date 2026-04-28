@@ -4,6 +4,7 @@ description: Mafunzo haya yanawasaidia wasomaji kuelewa dhana za msingi za Ether
 author: "Paul Apivat"
 tags: ["SQL", "Querying", "Transactions"]
 skill: beginner
+breadcrumb: "Ethereum na SQL"
 lang: sw
 published: 2021-05-11
 source: paulapivat.com

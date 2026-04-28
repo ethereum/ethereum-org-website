@@ -4,6 +4,7 @@ description: Weka ufuatiliaji kwa nodi yako ya Geth kwa kutumia InfluxDB na Graf
 author: "Mario Havel"
 tags: ["clients", "nodes"]
 skill: intermediate
+breadcrumb: "Kufuatilia Geth"
 lang: sw
 published: 2021-01-13
 ---
