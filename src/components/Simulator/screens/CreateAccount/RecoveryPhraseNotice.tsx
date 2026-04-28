@@ -6,7 +6,7 @@ export const RecoveryPhraseNotice = () => {
 
   return (
     <motion.div
-      className="bg-background-highlight md:text-md h-full px-4 py-8 text-sm md:px-8 [&_p]:mb-4 [&_p]:md:mb-6"
+      className="h-full bg-background-highlight px-4 py-8 text-sm md:px-8 md:text-md [&_p]:mb-4 [&_p]:md:mb-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.25 }}

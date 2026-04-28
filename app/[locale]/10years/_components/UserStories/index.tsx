@@ -52,7 +52,7 @@ const Stories = ({ stories }: StoriesProps) => {
           <div
             key={story.name}
             className={cn(
-              "bg-background relative w-full rounded-2xl border p-6 transition-all duration-500",
+              "relative w-full rounded-2xl border bg-background p-6 transition-all duration-500",
               story.storyOriginal && "cursor-pointer"
             )}
           >
@@ -69,14 +69,14 @@ const Stories = ({ stories }: StoriesProps) => {
                   <div className="flex flex-col gap-2">
                     <div className="mb-4 flex flex-row items-center justify-between">
                       <div className="flex flex-row items-center gap-2">
-                        <div className="bg-primary-hover flex h-8 w-8 items-center justify-center rounded-full">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-hover">
                           <p aria-hidden className="font-bold">
                             {story.name?.slice(0, 1) || "?"}
                           </p>
                         </div>
                         <div className="">
                           <p className="text-md font-bold">{story.name}</p>
-                          <p className="text-body-medium text-sm">
+                          <p className="text-sm text-body-medium">
                             {story.country}
                           </p>
                         </div>
@@ -89,7 +89,7 @@ const Stories = ({ stories }: StoriesProps) => {
                             hideArrow
                             className="text-sm"
                           >
-                            <Twitter className="text-body text-xl" />
+                            <Twitter className="text-xl text-body" />
                           </ButtonLink>
                         </div>
                       )}
@@ -122,7 +122,7 @@ const Stories = ({ stories }: StoriesProps) => {
                     </div>
                     {story.storyOriginal && (
                       <div>
-                        <p className="text-body-medium text-xs">
+                        <p className="text-xs text-body-medium">
                           {t("page-10-year-stories-english-translation")}
                         </p>
                         <Button
@@ -139,7 +139,7 @@ const Stories = ({ stories }: StoriesProps) => {
                         </Button>
                       </div>
                     )}
-                    <p className="text-body-medium mt-2 text-sm">
+                    <p className="mt-2 text-sm text-body-medium">
                       {story.date}
                     </p>
                   </div>
@@ -148,14 +148,14 @@ const Stories = ({ stories }: StoriesProps) => {
                   <div className="flex flex-col gap-2">
                     <div className="mb-4 flex flex-row items-center justify-between">
                       <div className="flex flex-row items-center gap-2">
-                        <div className="bg-primary-hover flex h-8 w-8 items-center justify-center rounded-full">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-hover">
                           <p aria-hidden className="font-bold">
                             {story.name?.slice(0, 1) || "?"}
                           </p>
                         </div>
                         <div className="">
                           <p className="text-md font-bold">{story.name}</p>
-                          <p className="text-body-medium text-sm">
+                          <p className="text-sm text-body-medium">
                             {story.country}
                           </p>
                         </div>
@@ -168,7 +168,7 @@ const Stories = ({ stories }: StoriesProps) => {
                             hideArrow
                             className="text-sm"
                           >
-                            <Twitter className="text-body h-5 w-5" />
+                            <Twitter className="h-5 w-5 text-body" />
                           </ButtonLink>
                         </div>
                       )}
@@ -200,7 +200,7 @@ const Stories = ({ stories }: StoriesProps) => {
                       )}
                     </div>
                     <div>
-                      <p className="text-body-medium text-xs">
+                      <p className="text-xs text-body-medium">
                         {t("page-10-year-stories-original-language")}
                       </p>
                       <Button
@@ -216,7 +216,7 @@ const Stories = ({ stories }: StoriesProps) => {
                         {t("page-10-year-stories-show-english")}
                       </Button>
                     </div>
-                    <p className="text-body-medium mt-2 text-sm">
+                    <p className="mt-2 text-sm text-body-medium">
                       {story.date}
                     </p>
                   </div>

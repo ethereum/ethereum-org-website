@@ -30,7 +30,7 @@ const CalloutBanner = ({
     <aside
       className={cn(
         "flex flex-col rounded p-8 sm:p-12 lg:flex-row-reverse",
-        "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r",
+        "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
         className
       )}
       {...props}
@@ -45,10 +45,10 @@ const CalloutBanner = ({
       </div>
 
       <div className="flex w-full shrink-0 grow basis-1/2 flex-col justify-center sm:ps-4 lg:w-[inherit] lg:ps-8">
-        <h2 className="leading-xs mb-8 text-2xl sm:text-[2rem]">
+        <h2 className="mb-8 text-2xl leading-xs sm:text-[2rem]">
           {t(titleKey)}
         </h2>
-        <p className="text-body-medium mb-8 w-[90%] text-xl">
+        <p className="mb-8 w-[90%] text-xl text-body-medium">
           {t(descriptionKey)}
         </p>
         {children}

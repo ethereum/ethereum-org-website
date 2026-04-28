@@ -255,7 +255,7 @@ const SlideContent = ({
           </SectionHeader>
         </div>
 
-        <div className="text-body-medium flex flex-col gap-4 text-lg leading-relaxed md:gap-6 lg:text-2xl lg:leading-relaxed">
+        <div className="flex flex-col gap-4 text-lg leading-relaxed text-body-medium md:gap-6 lg:text-2xl lg:leading-relaxed">
           <p>{slide.subtitle}</p>
           <p>{slide.description}</p>
         </div>

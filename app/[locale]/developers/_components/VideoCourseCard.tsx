@@ -37,10 +37,10 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
       >
         {course.hours}
       </Tag>
-      <h3 className="text-body text-lg font-bold group-hover:underline">
+      <h3 className="text-lg font-bold text-body group-hover:underline">
         {course.title}
       </h3>
-      <p className="text-body-medium mb-4 text-sm">{course.description}</p>
+      <p className="mb-4 text-sm text-body-medium">{course.description}</p>
     </div>
   </Card>
 )

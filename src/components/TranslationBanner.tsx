@@ -54,13 +54,7 @@ const TranslationBanner = () => {
   }
 
   return (
-    <aside
-      className={cn(
-        "fixed z-popover bg-background-highlight",
-        "bottom-0 md:bottom-8",
-        "right-0 md:right-8"
-      )}
-    >
+    <aside className="fixed end-0 bottom-0 z-popover rounded bg-background-highlight md:end-8 md:bottom-8">
       <div
         className={cn(
           "relative flex justify-between",
@@ -85,10 +79,8 @@ const TranslationBanner = () => {
         </div>
         <Button
           variant="ghost"
-          className={cn(
-            "absolute top-0 right-0 m-4 p-2",
-            "text-secondary hover:text-primary"
-          )}
+          size="sm"
+          className="absolute end-0 top-0 m-2 hover:text-primary"
           onClick={() => setIsOpen(false)}
         >
           <X className="size-4" />

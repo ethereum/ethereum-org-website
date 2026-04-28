@@ -35,7 +35,7 @@ export const ClickAnimation = ({
   return visible ? (
     <MotionFlex
       className={cn(
-        "text-primary absolute inset-x-0 justify-center",
+        "absolute inset-x-0 justify-center text-primary",
         topClass,
         bottomClass
       )}

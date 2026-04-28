@@ -79,7 +79,7 @@ const WalletSubComponent = ({
             )!
             return (
               <div key={idx} className="mx-2">
-                <h4 className="text-md mb-2 font-bold">{filterItem.title}</h4>
+                <h4 className="mb-2 text-md font-bold">{filterItem.title}</h4>
                 <ul className="m-0 list-none">
                   {filterItem.items
                     .sort((a, b) =>
@@ -131,7 +131,7 @@ const WalletSubComponent = ({
           })}
         </div>
         <div className="ml-3">
-          <h4 className="text-md mb-2 font-bold">
+          <h4 className="mb-2 text-md font-bold">
             {t("page-find-wallet-social-links")}
           </h4>
           <div className="flex flex-row gap-4">
@@ -145,7 +145,7 @@ const WalletSubComponent = ({
                 eventValue: JSON.stringify(filters),
               }}
             >
-              <Globe className="text-primary text-2xl" />
+              <Globe className="text-2xl text-primary" />
             </SocialLink>
             {wallet.discord && (
               <SocialLink

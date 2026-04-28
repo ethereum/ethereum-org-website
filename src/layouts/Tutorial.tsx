@@ -38,14 +38,14 @@ const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 
 const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading3
-    className="max-md:text-md scroll-mt-40 font-semibold"
+    className="scroll-mt-40 font-semibold max-md:text-md"
     {...props}
   />
 )
 
 const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4
-    className="max-md:text-md scroll-mt-40 font-semibold"
+    className="scroll-mt-40 font-semibold max-md:text-md"
     {...props}
   />
 )
@@ -56,7 +56,7 @@ const Paragraph = (props: HTMLAttributes<HTMLParagraphElement>) => (
 
 const KBD = (props: HTMLAttributes<HTMLElement>) => (
   <kbd
-    className="border-primary rounded-xs border-2 px-2 py-0.5 align-middle"
+    className="rounded-xs border-2 border-primary px-2 py-0.5 align-middle"
     {...props}
   />
 )

@@ -22,13 +22,13 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
     <LinkBox
       className={cn(
         "flex rounded-xs border p-4 text-current no-underline",
-        "hover:bg-background-highlight hover:rounded hover:no-underline",
-        "group hover:shadow-primary hover:shadow-[0_0_1px]"
+        "hover:rounded hover:bg-background-highlight hover:no-underline",
+        "group hover:shadow-[0_0_1px] hover:shadow-primary"
       )}
     >
       <Flex className="flex-1 justify-between">
         <Center>
-          <Emoji className="text-md me-4" text=":page_with_curl:" />
+          <Emoji className="me-4 text-md" text=":page_with_curl:" />
         </Center>
         <Stack className="flex-1">
           <LinkOverlay asChild>
@@ -43,7 +43,7 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
         <ArrowRight
           className={cn(
             "mx-6 h-6 w-6 self-center",
-            "group-hover:text-primary transition-transform duration-100 group-hover:scale-[1.2]",
+            "transition-transform duration-100 group-hover:scale-[1.2] group-hover:text-primary",
             isExternal ? "-rotate-45" : "rotate-0",
             isRtl && isExternal ? "-rotate-[135deg]" : "",
             isRtl && !isExternal ? "-rotate-[180deg]" : ""

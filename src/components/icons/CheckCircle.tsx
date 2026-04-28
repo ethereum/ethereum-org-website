@@ -8,13 +8,13 @@ export const CheckCircle = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "bg-success/20 my-1 grid h-fit place-items-center rounded-full p-1",
+      "my-1 grid h-fit place-items-center rounded-full bg-success/20 p-1",
       className
     )}
     {...props}
   >
     <Check
-      className="text-success size-3 stroke-[4]"
+      className="size-3 stroke-[4] text-success"
       strokeLinecap="square"
       strokeLinejoin="miter"
     />

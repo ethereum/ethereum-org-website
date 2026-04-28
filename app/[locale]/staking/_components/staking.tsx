@@ -48,7 +48,7 @@ const PageContainer = (props: ChildOnlyProp) => (
 )
 
 const HeroStatsWrapper = (props: ChildOnlyProp) => (
-  <VStack className="bg-main-gradient w-full gap-0" {...props} />
+  <VStack className="w-full gap-0 bg-main-gradient" {...props} />
 )
 
 const ComparisonGrid = (props: ChildOnlyProp) => {
@@ -61,7 +61,7 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
 }
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className="leading-xs mt-0 mb-8 text-2xl md:text-[2rem]" {...props} />
+  <h2 className="mt-0 mb-8 text-2xl leading-xs md:text-[2rem]" {...props} />
 )
 
 const ColorH3 = ({
