@@ -1012,6 +1012,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Tempo Mainnet Presto",
+    infoURL: "https://tempo.xyz",
+    chainId: 4217,
+    nativeCurrency: {
+      name: "No native currency",
+      symbol: "USD",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "MegaETH Mainnet",
     infoURL: "https://megaeth.com",
     chainId: 4326,
@@ -2070,7 +2081,7 @@ const chains = [
   },
   {
     name: "Gensyn Mainnet",
-    infoURL: "https://www.gensyn.ai/",
+    infoURL: "https://gensyn.network/",
     chainId: 685689,
     nativeCurrency: {
       name: "Ether",
