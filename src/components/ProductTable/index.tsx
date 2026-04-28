@@ -6,7 +6,6 @@ import {
   useMemo,
   useState,
 } from "react"
-import { useSearchParams } from "next/navigation"
 
 import type { FilterOption, TPresetFilters } from "@/lib/types"
 
@@ -47,14 +46,15 @@ const ProductTable = <T extends { id: string }>({
   mobileFiltersLabel,
   children,
 }: ProductTableProps<T>) => {
-  const searchParams = useSearchParams()
-
   const [filters, setFilters] = useState<FilterOption[]>(initialFilters)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
-  // Update filters based on router query
+  // Update filters based on router query. Reads window.location.search instead
+  // of useSearchParams() to avoid CSR-bailout in this statically generated page.
   useEffect(() => {
-    const query = Object.fromEntries(searchParams?.entries() ?? [])
+    const query = Object.fromEntries(
+      new URLSearchParams(window.location.search).entries()
+    )
 
     if (Object.keys(query).length > 0) {
       const updatedFilters = filters.map((filter) => ({
@@ -71,12 +71,9 @@ const ProductTable = <T extends { id: string }>({
         })),
       }))
       setFilters(updatedFilters)
-
-      // TODO: Fix this, removed to avoid infinite re-renders
-      // router.replace(pathname, undefined, { shallow: true })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams])
+  }, [])
 
   const updateFilters = useCallback(
     (filters: FilterOption | FilterOption[]) => {
