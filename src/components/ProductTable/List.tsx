@@ -18,9 +18,6 @@ import {
   CollapsibleTrigger,
 } from "../ui/collapsible"
 
-// Number of rows rendered unvirtualized on the server + first client render.
-// Enough real DOM content for search-engine indexing of a YMYL page without
-// blowing up initial HTML/hydration cost; the virtualizer takes over on mount.
 const SSR_ROW_COUNT = 30
 
 type ListProps<T extends { id: string }> = {
@@ -99,10 +96,6 @@ const List = <T extends { id: string }>({
     [matomoEventCategory, virtualizer]
   )
 
-  // Server + first client render: emit real DOM rows in natural flow so
-  // crawlers see wallet names/descriptions/links and server+client first
-  // renders stay identical (no hydration mismatch). Virtualizer takes over
-  // after mount.
   if (!isMounted) {
     return (
       <div ref={parentRef} {...rest}>
@@ -112,7 +105,7 @@ const List = <T extends { id: string }>({
             data-index={index}
             open={!!expanded[item.id]}
             onOpenChange={(open) => handleExpandedChange(open, item)}
-            className="group/collapsible hover:bg-background-highlight data-[state=open]:bg-background-highlight flex w-full cursor-pointer flex-col border-b"
+            className="group/collapsible flex w-full cursor-pointer flex-col border-b hover:bg-background-highlight data-[state=open]:bg-background-highlight"
           >
             <CollapsibleTrigger asChild>
               <div className="p-4">

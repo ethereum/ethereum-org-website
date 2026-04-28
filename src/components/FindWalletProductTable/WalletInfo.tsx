@@ -60,9 +60,6 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
     <div className="flex flex-col gap-4">
       <div className="flex flex-row items-center justify-between gap-4">
         <div className="flex flex-col gap-4">
-          {/* Desktop layout — visibility toggled by Tailwind breakpoints so
-              the wallet name, personas, and chains are present in SSR HTML
-              regardless of viewport (critical for crawlers). */}
           <div className="hidden flex-row gap-4 lg:flex">
             <Image
               src={wallet.image}
@@ -85,7 +82,6 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
             </div>
           </div>
 
-          {/* Mobile layout */}
           <div className="flex flex-col gap-4 lg:hidden">
             <div className="flex flex-row items-center gap-4">
               <Image

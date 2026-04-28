@@ -14,10 +14,6 @@ import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
-import { breakpointAsNumber } from "@/lib/utils/screen"
-
-import MediaQuery from "../MediaQuery"
-
 import { getActiveFiltersCount, parseQueryParams } from "@/lib/product-table"
 
 interface ProductTableProps<T extends { id: string }> {
@@ -155,16 +151,14 @@ const ProductTable = <T extends { id: string }>({
               mobileFiltersLabel={mobileFiltersLabel}
             />
           </div>
-          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.lg}px)`]}>
-            <div className="hidden lg:block">
-              <Filters
-                filters={filters}
-                setFilters={updateFilters}
-                resetFilters={resetFilters}
-                activeFiltersCount={activeFiltersCount}
-              />
-            </div>
-          </MediaQuery>
+          <div className="hidden lg:block">
+            <Filters
+              filters={filters}
+              setFilters={updateFilters}
+              resetFilters={resetFilters}
+              activeFiltersCount={activeFiltersCount}
+            />
+          </div>
           <div className="flex-1">
             {children({
               filteredData,
