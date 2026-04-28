@@ -43,6 +43,8 @@ Prediction markets let participants trade on the outcome of real-world events. A
 
 **Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to prediction market contracts, [frameworks](/ai-agents/frameworks/) for data ingestion and strategy execution, [L2 deployment](/ai-agents/l2s/) for cost-effective high-frequency trading.
 
+<VideoWatch slug="ai-agents-prediction-markets-devcon" />
+
 Prediction market agents act on external information to take financial positions. Agent-to-agent commerce, covered next, extends the economic model further: agents hiring and paying other agents for specialized work.
 
 ## Agent-to-agent commerce {#agent-commerce}

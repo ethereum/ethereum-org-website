@@ -58,6 +58,8 @@ Permissionless access to any deployed smart contract means an agent can execute 
 
 Composability also means that **agent logic can build on existing audited infrastructure rather than re-implementing it**. **Security properties inherited from established Ethereum protocols carry over to the agent's operations**.
 
+<VideoWatch slug="ai-agents-replace-dapps" />
+
 ## Scalable payments {#scalable-payments}
 
 Autonomous agents need to pay for compute resources, data feeds, and other agent services without human intervention. Standard financial rails require corporate entities and bank accounts. These are barriers that autonomous code cannot cross.
@@ -71,6 +73,8 @@ For the full x402 payment flow, stablecoin rail selection, integration code, and
 Ethereum Mainnet provides the **canonical security and settlement layer**. [Layer 2 networks](/ai-agents/l2s/) extend it by offering **specialized execution environments** with lower fees, faster finality, and capabilities like TEE-based transaction ordering and concentrated agent tooling ecosystems. Because all L2s ultimately settle to Mainnet, an agent's assets and identity remain **anchored to Ethereum's security guarantees** regardless of which L2 it operates on.
 
 See [AI agents: Layer 2s](/ai-agents/l2s/) for an evaluation framework, workload-type guidance, and deployment notes by rollup type.
+
+<VideoWatch slug="decentralized-ai-ethereum-ethdenver" />
 
 ## Frequently asked questions {#faq}
 

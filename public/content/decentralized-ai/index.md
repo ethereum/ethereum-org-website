@@ -36,6 +36,8 @@ As a blockchain that can provide structural guarantees, Ethereum allows these AI
 - **Privacy:** Cryptographic techniques like [zero-knowledge proofs](/zero-knowledge-proofs/) allow applications on Ethereum to process user data without exposing it to third parties. AI implementations can use secure hardware enclaves or zero-knowledge proofs to keep user inputs confidential, even from the infrastructure running the AI. These privacy approaches are not automatic for all Ethereum applications and depend on the specific design choices made by developers.
 - **Secure:** Records of agent actions are stored onchain, creating a tamper-resistant audit trail of every authorized transaction.
 
+<VideoWatch slug="dacc-decentralized-ai-devcon" />
+
 ## Digital authenticity {#digital-authenticity}
 
 Generative AI can now produce **photorealistic images, video, and voice that are difficult to distinguish from authentic media**. **Proving that a piece of content is genuine is a growing challenge**. 
@@ -120,6 +122,8 @@ Projects are actively building the infrastructure to make this verification poss
 - In production, **[Worldcoin (World ID)](https://world.org/)** uses zero-knowledge machine learning to allow users to verify their biometric data locally on their device. This proves their unique human identity without exposing the underlying biometric data to the network or protocol.
 
 Beyond cryptographic verification, the Ethereum ecosystem also supports **decentralized platforms focused on private AI inference**. For example, **[Venice AI](https://venice.ai/)** is a generative AI assistant that uses an Ethereum Layer 2 network for access control and settlement. By **routing encrypted prompts to a distributed network of independent GPU providers**, it offers a **censorship-resistant alternative to centralized AI platforms** and utilizes a **local-first approach** to keep user data private.
+
+<VideoWatch slug="human-aligned-ai-ethereum" />
 
 ## Standardizing the agent economy {#standardizing-the-agent-economy}
 

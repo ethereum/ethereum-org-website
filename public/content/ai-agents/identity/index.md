@@ -137,6 +137,8 @@ These mechanisms do not prove that the agent itself is human (it is not), but th
 
 For agent interactions that gate access based on personhood, combining an ERC-8004 registration with a proof-of-personhood delegation creates a stronger identity claim than either signal alone.
 
+<VideoWatch slug="agent-reputation-delegation-daos" />
+
 ## How to register an agent {#how-to-register}
 
 ERC-8004 registration uses the same addresses across all supported chains. 
