@@ -1,13 +1,10 @@
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
-import { CommunityConference } from "@/lib/types"
-
-import events from "@/data/community-events.json"
-
-import { getUpcomingEvents } from "../utils"
+import type { EventItem } from "@/lib/types"
 
 import type { DevelopersPath, VideoCourse } from "./types"
 
+import { getEventsData } from "@/lib/data"
 import cyfrinBasicBanner from "@/public/images/developers/cyfrin-basic-banner.webp"
 import cyfrinFoundryAdvancedBanner from "@/public/images/developers/cyfrin-foundry-advanced-banner.webp"
 import cyfrinFoundryFundamentalsBanner from "@/public/images/developers/cyfrin-foundry-fundamentals-banner.webp"
@@ -18,11 +15,7 @@ import speedrunStablecoins from "@/public/images/developers/speedrun-stablecoins
 import speedrunNFT from "@/public/images/developers/speedrun-tokenization.png"
 
 export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   return [
     {
@@ -56,11 +49,7 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
 }
 
 export const getVideoCourses = async (): Promise<VideoCourse[]> => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   const getDuration = (hours: number) =>
     t.rich("page-developers-course-duration", {
@@ -111,8 +100,12 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
   ]
 }
 
-export const getHackathons = async (): Promise<CommunityConference[]> => {
-  const locale = await getLocale()
-  const allUpcomingEvents = getUpcomingEvents(events, locale)
-  return allUpcomingEvents.filter((e) => e.hackathon) as CommunityConference[]
+export const getHackathons = async (): Promise<EventItem[]> => {
+  const events = await getEventsData()
+  if (!events) return []
+  return events.filter(
+    (e) =>
+      e.eventTypes?.includes("hackathon") ||
+      e.tags?.some((tag) => tag.toLowerCase() === "hackathon")
+  )
 }

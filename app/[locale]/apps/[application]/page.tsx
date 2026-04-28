@@ -6,8 +6,9 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { ChainName, CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { ChainName, Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import ChainImages from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import I18nProvider from "@/components/I18nProvider"
@@ -33,6 +34,7 @@ import { Tag } from "@/components/ui/tag"
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { isValidDate } from "@/lib/utils/date"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   formatLanguageNames,
@@ -41,23 +43,23 @@ import {
 import { slugify } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
 
-import AppCard from "../_components/AppCard"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 import AppsAppJsonLD from "./page-jsonld"
 
 import { getAppsData } from "@/lib/data"
 
-const Page = async ({
-  params,
-}: {
-  params: PageParams & { application: string }
+const Page = async (props: {
+  params: Promise<PageParams & { application: string }>
 }) => {
+  const params = await props.params
   const { locale, application } = params
   setRequestLocale(locale)
 
   // Get translations
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
+  const appDescriptions = await getTranslations("page-app-descriptions")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -132,11 +134,9 @@ const Page = async ({
     return new Date(app.dateOfLaunch).getFullYear()
   }
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps/[application]",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -148,9 +148,15 @@ const Page = async ({
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+                  /
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
                   <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
                 </BreadcrumbItem>
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                   /
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
@@ -298,7 +304,7 @@ const Page = async ({
               {nextApp && (
                 <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
                   <div className="mr-2 flex flex-col text-right">
-                    <p className="text-nowrap text-sm text-gray-500">
+                    <p className="text-sm text-nowrap text-gray-500">
                       {t("page-apps-see-next")}
                     </p>
                     <p className="text-primary group-hover:text-primary-hover">
@@ -322,7 +328,14 @@ const Page = async ({
           </div>
 
           <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-10 bg-background-highlight px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
-            <p className="max-w-3xl">{app.description}</p>
+            <p className="max-w-3xl">
+              {getLocalizedDescription(
+                appDescriptions,
+                "app",
+                app.name,
+                app.description
+              )}
+            </p>
             <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
               <h3 className="text-lg">{t("page-apps-info-title")}</h3>
               <div>
@@ -357,7 +370,7 @@ const Page = async ({
 
           {relatedApps.length > 0 && (
             <div className="flex flex-col px-4 py-10 md:px-8">
-              <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
+              <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-linear-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
                 <h2>{t("page-apps-more-apps-like-this")}</h2>
                 <div className="flex w-full flex-col gap-4 lg:flex-row">
                   {relatedApps.map((relatedApp) => (
@@ -366,12 +379,32 @@ const Page = async ({
                       className="flex-1 lg:w-1/3 lg:flex-none"
                     >
                       <AppCard
-                        app={relatedApp}
-                        imageSize={24}
-                        showDescription={true}
-                        hoverClassName="hover:bg-background-highlight/50"
-                        matomoCategory="detail"
-                        matomoAction="more_apps"
+                        name={relatedApp.name}
+                        description={getLocalizedDescription(
+                          appDescriptions,
+                          "app",
+                          relatedApp.name,
+                          relatedApp.description
+                        )}
+                        thumbnail={relatedApp.image}
+                        category={relatedApp.category}
+                        categoryTagStatus={
+                          APP_TAG_VARIANTS[relatedApp.category]
+                        }
+                        tags={relatedApp.subCategory}
+                        href={`/apps/${slugify(relatedApp.name)}`}
+                        imageSize="large"
+                        className="hover:bg-background-highlight/50"
+                        customEventOptions={{
+                          eventCategory: "detail",
+                          eventAction: "more_apps",
+                          eventName: `app name ${relatedApp.name}`,
+                        }}
+                        descriptionTracking={{
+                          eventCategory: "detail",
+                          eventAction: "more_apps_show_more",
+                          eventName: `app description ${relatedApp.name}`,
+                        }}
                       />
                     </div>
                   ))}
@@ -385,38 +418,57 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; application: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; application: string }>
 }) {
+  const params = await props.params
   const { locale, application } = params
 
-  // Fetch apps data using the new data-layer function (already cached)
-  const appsData = await getAppsData()
+  try {
+    // Fetch apps data using the new data-layer function (already cached)
+    const appsData = await getAppsData()
 
-  // Handle null case - throw error if required data is missing
-  if (!appsData) {
-    throw new Error("Failed to fetch apps data")
+    // Handle null case - throw error if required data is missing
+    if (!appsData) {
+      throw new Error("Failed to fetch apps data")
+    }
+
+    const app = Object.values(appsData)
+      .flat()
+      .find((app) => slugify(app.name) === application)
+
+    if (!app) {
+      throw new Error(`App not found: ${application}`)
+    }
+
+    const appDescriptions = await getTranslations("page-app-descriptions")
+
+    const title = `Ethereum Apps - ${app.name}` // TODO (i18n): Extract "Ethereum Apps" to namespace
+    const description = getLocalizedDescription(
+      appDescriptions,
+      "app",
+      app.name,
+      app.description
+    )
+
+    return await getMetadata({
+      locale,
+      slug: ["apps", application],
+      title,
+      description,
+    })
+  } catch (error) {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
+
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const app = Object.values(appsData)
-    .flat()
-    .find((app) => slugify(app.name) === application)!
-
-  if (!app) {
-    notFound()
-  }
-
-  const title = `Ethereum Apps - ${app.name}`
-  const description = app.description
-
-  return await getMetadata({
-    locale,
-    slug: ["apps", application],
-    title,
-    description,
-  })
 }
 
 export default Page

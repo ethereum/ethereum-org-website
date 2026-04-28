@@ -13,10 +13,16 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import Providers from "./providers"
 
+import "@rainbow-me/rainbowkit/styles.css"
 import "@/styles/global.css"
 
 import { routing } from "@/i18n/routing"
 import { BaseLayout } from "@/layouts/BaseLayout"
+
+// Generate static params for all supported locales
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,13 +38,16 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-mono",
 })
 
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: {
+export default async function LocaleLayout(props: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
+
+  const { locale } = params
+
+  const { children } = props
+
   if (!routing.locales.includes(locale)) {
     notFound()
   }

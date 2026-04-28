@@ -1,0 +1,12 @@
+{
+  "before-you-read": "閱讀前須知",
+  "heading": "想了解以太坊嗎？",
+  "description": "本白皮書發布於 <strong>2014</strong> 年，當時以太坊尚未推出。經過 10 多年的開發、重大升級和生態系統的發展，<strong>原始白皮書已無法反映以太坊的現況</strong>。",
+  "cta-learn": "了解今日的以太坊",
+  "cta-download-pdf": "下載原始 PDF (2014)",
+  "whats-changed": "自 2014 年以來發生了什麼變化？",
+  "evolution-pos": "以太坊從工作量證明轉向權益證明（2022 年合併）",
+  "evolution-l2": "二層網路擴容解決方案現在可處理數百萬筆交易",
+  "evolution-usecases": "DeFi、NFT 和 DAO 成為主要的使用案例",
+  "evolution-standards": "智能合約標準（ERC-20、ERC-721）成為產業基礎"
+}

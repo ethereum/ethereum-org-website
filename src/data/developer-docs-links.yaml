@@ -78,6 +78,8 @@
               href: /developers/docs/consensus-mechanisms/pos/attack-and-defense/
             - id: docs-nav-keys
               href: /developers/docs/consensus-mechanisms/pos/keys/
+            - id: docs-nav-withdrawal-credentials
+              href: /developers/docs/consensus-mechanisms/pos/withdrawal-credentials/
             - id: docs-nav-pos-vs-pow
               href: /developers/docs/consensus-mechanisms/pos/pos-vs-pow/
             - id: docs-nav-block-proposal

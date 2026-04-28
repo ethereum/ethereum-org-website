@@ -15,6 +15,7 @@ import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
 
 import MediaQuery from "../MediaQuery"
 import { ButtonLink } from "../ui/buttons/Button"
+import { TagsInlineText } from "../ui/tag"
 
 import PersonaTags from "./PersonaTags"
 
@@ -43,10 +44,6 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
     if (wallet.hardware) labels.push(t("page-find-wallet-hardware"))
     return labels
   }, [wallet, t])
-
-  const deviceLabelsText = useMemo(() => {
-    return deviceLabels.join(" · ")
-  }, [deviceLabels])
 
   const formattedLanguages = useMemo(() => {
     return formatStringList(
@@ -118,7 +115,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
           <div className="flex flex-row gap-4">
             <div className="relative hidden w-14 lg:block">
               <div
-                className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
+                className={`absolute -top-0 -bottom-9 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
               />
             </div>
             <div
@@ -127,7 +124,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
               {deviceLabels.length > 0 && (
                 <div className="flex flex-row gap-2">
                   <DevicesIcon className="size-6" />
-                  <p className="text-md">{deviceLabelsText}</p>
+                  <TagsInlineText list={deviceLabels} />
                 </div>
               )}
               <div className="flex flex-row gap-2">
@@ -154,7 +151,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
       <div className="flex flex-row gap-4">
         <div className="relative hidden w-14 lg:block">
           <div
-            className={`absolute -bottom-9 -top-0 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
+            className={`absolute -top-0 -bottom-9 left-1/2 hidden w-1 -translate-x-1/2 transform group-data-[state=open]/collapsible:block ${wallet.twBackgroundColor}`}
           />
         </div>
         <div className="flex flex-1">

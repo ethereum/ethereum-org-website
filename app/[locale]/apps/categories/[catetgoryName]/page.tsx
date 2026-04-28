@@ -8,7 +8,7 @@ import {
 
 import {
   AppCategoryEnum,
-  type CommitHistory,
+  type AppData,
   type Lang,
   type PageParams,
   type SectionNavDetails,
@@ -29,8 +29,10 @@ import TabNav from "@/components/ui/TabNav"
 
 import { getHighlightedApps } from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
@@ -47,11 +49,10 @@ const VALID_CATEGORIES = Object.values(AppCategoryEnum)
 const isValidCategory = (category: string): category is AppCategoryEnum =>
   VALID_CATEGORIES.includes(category as AppCategoryEnum)
 
-const Page = async ({
-  params,
-}: {
-  params: PageParams & { catetgoryName: string }
+const Page = async (props: {
+  params: Promise<PageParams & { catetgoryName: string }>
 }) => {
+  const params = await props.params
   const { locale, catetgoryName } = params
   setRequestLocale(locale)
 
@@ -63,7 +64,22 @@ const Page = async ({
     throw new Error("Failed to fetch apps data")
   }
 
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
+  const appDescriptions = await getTranslations("page-app-descriptions")
+  const tSubcategory = await getTranslations("app-subcategories")
+
+  const localizeApps = <T extends { name: string; description: string }>(
+    apps: T[]
+  ): T[] =>
+    apps.map((app) => ({
+      ...app,
+      description: getLocalizedDescription(
+        appDescriptions,
+        "app",
+        app.name,
+        app.description
+      ),
+    }))
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -88,6 +104,12 @@ const Page = async ({
     notFound()
   }
 
+  // Translate subcategory tags, falling back to the raw string
+  const translateSubcategories = (tag: string) => {
+    const key = `subcategory-${slugify(tag)}`
+    return tSubcategory.has(key) ? tSubcategory(key) : tag
+  }
+
   // Get highlighted apps (apps with highlight=true)
   const highlightedApps = getHighlightedApps(
     appsData,
@@ -104,11 +126,9 @@ const Page = async ({
     })
   )
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "apps/categories/[catetgoryName]",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -127,11 +147,17 @@ const Page = async ({
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
+                    <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+                    /
+                  </BreadcrumbSeparator>
+                  <BreadcrumbItem>
                     <BreadcrumbLink href="/apps" className="uppercase">
                       {t("page-apps-all-apps")}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
@@ -158,13 +184,28 @@ const Page = async ({
             <div className="flex flex-col px-4 md:px-8">
               <h2>{t("page-apps-highlights-title")}</h2>
               <AppsHighlight
-                apps={highlightedApps}
+                apps={localizeApps(
+                  highlightedApps.map((app) => ({
+                    ...app,
+                    subCategory: app.subCategory.map((tag: string) => {
+                      const key = `subcategory-${slugify(tag)}`
+                      return tSubcategory.has(key) ? tSubcategory(key) : tag
+                    }),
+                  })) as AppData[]
+                )}
                 matomoCategory={`category_page`}
               />
             </div>
 
             <div className="flex flex-col px-4 md:px-8">
-              <AppsTable apps={appsData[categoryEnum]} />
+              <AppsTable
+                apps={
+                  appsData[categoryEnum].map((app) => ({
+                    ...app,
+                    subCategory: app.subCategory.map(translateSubcategories),
+                  })) as AppData[]
+                }
+              />
             </div>
 
             <div className="flex flex-col px-4 md:px-8">
@@ -177,41 +218,50 @@ const Page = async ({
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string; catetgoryName: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string; catetgoryName: string }>
 }) {
+  const params = await props.params
   const { locale, catetgoryName } = params
-  const t = await getTranslations({ locale, namespace: "page-apps" })
 
-  // Normalize slug to lowercase
-  const normalizedSlug = catetgoryName.toLowerCase()
+  try {
+    const t = await getTranslations("page-apps")
 
-  // Find category by matching the slug
-  const categoryEntry = Object.entries(appsCategories).find(
-    ([, categoryData]) => categoryData.slug === normalizedSlug
-  )
+    // Normalize slug to lowercase
+    const normalizedSlug = catetgoryName.toLowerCase()
 
-  if (!categoryEntry) {
-    notFound()
+    // Find category by matching the slug
+    const categoryEntry = Object.entries(appsCategories).find(
+      ([, categoryData]) => categoryData.slug === normalizedSlug
+    )
+
+    if (!categoryEntry) {
+      throw new Error(`App category not found: ${catetgoryName}`)
+    }
+
+    const [categoryEnum, category] = categoryEntry
+
+    if (!isValidCategory(categoryEnum)) {
+      throw new Error(`Invalid app category enum: ${categoryEnum}`)
+    }
+
+    const title = t(category.metaTitle)
+    const description = t(category.metaDescription)
+
+    return await getMetadata({
+      locale,
+      slug: ["apps", "categories", normalizedSlug],
+      title,
+      description,
+    })
+  } catch {
+    const t = await getTranslations("common")
+
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const [categoryEnum, category] = categoryEntry
-
-  if (!isValidCategory(categoryEnum)) {
-    notFound()
-  }
-
-  const title = t(category.metaTitle)
-  const description = t(category.metaDescription)
-
-  return await getMetadata({
-    locale,
-    slug: ["apps", "categories", normalizedSlug],
-    title,
-    description,
-  })
 }
 
 export default Page

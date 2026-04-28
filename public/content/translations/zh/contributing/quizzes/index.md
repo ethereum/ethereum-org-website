@@ -1,10 +1,10 @@
 ---
-title: 添加测验
-description: 向 ethereum.org 添加测验时采用的政策
+title: "添加测验"
+description: "向 ethereum.org 添加测验时采用的政策"
 lang: zh
 ---
 
-# 测试 {#quizzes}
+# 测验 {#quizzes}
 
 测验让用户有机会自我检测，看看自己是否理解刚刚读过的页面内容。 问题应仅基于页面上提供的内容并且不应询问页面上未提及的信息。
 
@@ -13,13 +13,13 @@ lang: zh
 一些现有测验的示例可以在下面找到：
 
 - [二层网络](/layer-2)
-- [非同质化代币](/nft/)
+- [NFT](/nft/)
 - [什么是以太坊？](/what-is-ethereum/)
-- [以太币是什么？](/what-is-ether/)
+- [什么是 ETH？](/what-is-ether/)
 
 ## 添加学习测验
 
-如果一个页面尚未创建学习测验，请为其[创建问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)。
+如果某个页面还没有为其创建学习测验，请为此 [创建议题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)。
 
 请提供以下信息：
 
@@ -32,7 +32,7 @@ lang: zh
 
 ## 添加测验问题
 
-如果你想将一个问题添加到测验的问题库中，请[创建问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)并提供以下信息：
+如果您想向测验题库中添加问题，请 [创建议题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) 并提供以下信息：
 
 - 你想要添加测验问题的页面
 - 对于每个问题，提供以下信息：
@@ -43,7 +43,7 @@ lang: zh
 
 ## 更新测验问题
 
-如果你想在测验的问题库中更新一个问题，请[创建问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)并提供以下信息：
+如果您想更新测验题库中的问题，请 [创建议题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) 并提供以下信息：
 
 - 你想要更新测验问题的页面
 - 对于每个被更新的问题，提供以下信息：
@@ -55,7 +55,7 @@ lang: zh
 
 ## 删除测验问题
 
-如果页面上和问题相关的内容不再存在并且需要删除问题，请[创建问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml)以删除测验问题并提供以下信息：
+如果页面上已不存在某个问题的内容，且该问题需要被删除，请 [创建议题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) 以删除该问题，并提供以下信息：
 
 - 你想要删除测验问题的页面
 - 你想要删除的问题

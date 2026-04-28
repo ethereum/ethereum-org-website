@@ -17,7 +17,7 @@ import { ButtonLink } from "../ui/buttons/Button"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 const variants = cva(
   "sticky flex h-fit max-lg:hidden flex-col items-start overflow-y-auto",

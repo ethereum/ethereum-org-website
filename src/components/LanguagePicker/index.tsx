@@ -8,18 +8,16 @@ import type { LocaleDisplayInfo } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import LanguagePickerFooter from "./LanguagePickerFooter"
 import LanguagePickerMenu from "./LanguagePickerMenu"
 import { useLanguagePicker } from "./useLanguagePicker"
 
-import { usePathname, useRouter } from "@/i18n/routing"
+import { usePathname, useRouter } from "@/i18n/navigation"
 
 type LanguagePickerProps = {
   className?: string
   languages: LocaleDisplayInfo[]
   onSelect?: (value: string) => void
   onNoResultsClose?: () => void
-  onTranslationProgramClick?: () => void
 }
 
 const LanguagePicker = ({
@@ -27,13 +25,11 @@ const LanguagePicker = ({
   className,
   onSelect,
   onNoResultsClose,
-  onTranslationProgramClick,
 }: LanguagePickerProps) => {
   const pathname = usePathname()
   const { push } = useRouter()
   const params = useParams()
-  const { languages: sortedLanguages, intlLanguagePreference } =
-    useLanguagePicker(languages)
+  const { languages: sortedLanguages } = useLanguagePicker(languages)
 
   useEffect(() => {
     trackCustomEvent({
@@ -81,16 +77,6 @@ const LanguagePicker = ({
     })
   }
 
-  const handleTranslationProgramClick = () => {
-    onTranslationProgramClick?.()
-
-    trackCustomEvent({
-      eventCategory: `Language picker`,
-      eventAction: "Translation program link (menu footer)",
-      eventName: "/contributing/translation-program",
-    })
-  }
-
   return (
     <div className={cn("flex flex-col", className)}>
       <LanguagePickerMenu
@@ -98,11 +84,6 @@ const LanguagePicker = ({
         languages={sortedLanguages}
         onSelect={handleMenuItemSelect}
         onClose={handleNoResultsClose}
-      />
-
-      <LanguagePickerFooter
-        intlLanguagePreference={intlLanguagePreference}
-        onTranslationProgramClick={handleTranslationProgramClick}
       />
     </div>
   )

@@ -9,16 +9,19 @@ const variants = cva("w-full scroll-mt-24 lg:scroll-mt-28", {
     variant: {
       responsiveFlex: "flex flex-col gap-8 md:flex-row lg:gap-16",
     },
+    scrollMargin: {
+      tabNav: "!scroll-mt-36 lg:!scroll-mt-40",
+    },
   },
 })
 
 const Section = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
->(({ className, variant, ...props }, ref) => (
+>(({ className, variant, scrollMargin, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn(variants({ variant, className }))}
+    className={cn(variants({ variant, scrollMargin, className }))}
     {...props}
   />
 ))
@@ -32,7 +35,7 @@ const SectionBanner = React.forwardRef<
     ref={ref}
     className={cn(
       "w-full overflow-hidden rounded-4xl md:max-w-96 lg:max-w-128",
-      "bg-gradient-to-b from-accent-a/10 to-accent-a/0 dark:from-accent-a/15 dark:to-accent-a/5",
+      "bg-linear-to-b from-accent-a/10 to-accent-a/0 dark:from-accent-a/15 dark:to-accent-a/5",
       "[&_img]:min-h-full [&_img]:object-cover [&_img]:object-center",
       className
     )}
@@ -48,7 +51,7 @@ const SectionHeader = React.forwardRef<
   <h2
     ref={ref}
     className={cn(
-      "mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-6xl",
+      "mt-2 mb-4 text-5xl font-black lg:mb-6 lg:text-6xl",
       className
     )}
     {...props}
@@ -56,16 +59,23 @@ const SectionHeader = React.forwardRef<
 ))
 SectionHeader.displayName = "SectionHeader"
 
+const tagVariants = cva("w-fit text-sm uppercase", {
+  variants: {
+    variant: {
+      pill: "rounded-full bg-primary-low-contrast px-4 py-0.5 text-primary",
+      plain: "font-semibold tracking-wider text-primary-high-contrast",
+    },
+  },
+  defaultVariants: { variant: "pill" },
+})
+
 const SectionTag = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof tagVariants>
+>(({ className, variant, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(
-      "w-fit rounded-full bg-primary-low-contrast px-4 py-0.5 text-sm uppercase text-primary",
-      className
-    )}
+    className={cn(tagVariants({ variant, className }))}
     {...props}
   />
 ))

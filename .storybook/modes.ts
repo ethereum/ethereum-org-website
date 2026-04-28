@@ -14,7 +14,7 @@ export const viewportModes = breakpointSet.reduce<{
   }
 }, {})
 
-const localesToTest = ["en", "fa"]
+const localesToTest = ["en", "ar"]
 const locales = pickBy(baseLocales, (_, key) => localesToTest.includes(key))
 export const langModes = Object.keys(locales).reduce<{
   [locale: string]: { locale: string }

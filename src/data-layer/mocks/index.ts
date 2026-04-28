@@ -5,13 +5,14 @@
  * for local development without needing to connect to Netlify Blobs.
  *
  * Generated: 2025-12-16T18:32:05.983Z
- * Total files: 21
+ * Total files: 22
  */
 
 export const mockTaskIds = [
+  "fetch-account-holders",
   "fetch-apps",
-  "fetch-beaconchain-epoch",
-  "fetch-beaconchain-ethstore",
+  "fetch-beaconchain",
+  "fetch-events",
   "fetch-blobscan-stats",
   "fetch-calendar-events",
   "fetch-community-picks",
@@ -30,6 +31,7 @@ export const mockTaskIds = [
   "fetch-stablecoins-data",
   "fetch-total-eth-staked",
   "fetch-total-value-locked",
+  "fetch-translation-glossary",
 ] as const
 
 export type MockTaskId = (typeof mockTaskIds)[number]

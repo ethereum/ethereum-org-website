@@ -1,11 +1,10 @@
 import type {
   CompletedQuizzes,
-  Lang,
   QuizShareStats,
   QuizzesSection,
 } from "@/lib/types"
 
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+import { numberFormat } from "@/lib/utils/numbers"
 
 import allQuizzesData, {
   ethereumBasicsQuizzes,
@@ -57,23 +56,21 @@ export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {
 const mean = (values: number[]) =>
   values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0
 
-export const getFormattedStats = (language, average) => {
-  const localeForNumbers = getLocaleForNumberFormat(language as Lang)
-
+export const getFormattedStats = (locale: string, valueSet: number[]) => {
   // Initialize number and percent formatters
-  const numberFormatter = new Intl.NumberFormat(localeForNumbers, {
+  const numberFormatter = numberFormat(locale, {
     style: "decimal",
     minimumSignificantDigits: 1,
     maximumSignificantDigits: 3,
   })
 
-  const percentFormatter = new Intl.NumberFormat(localeForNumbers, {
+  const percentFormatter = numberFormat(locale, {
     style: "percent",
     minimumSignificantDigits: 1,
     maximumSignificantDigits: 3,
   })
 
-  const computedAverage = average.length > 0 ? mean(average) : 0
+  const computedAverage = valueSet.length > 0 ? mean(valueSet) : 0
 
   // Convert collective stats to fraction for percentage format
   const normalizedCollectiveAverageScore = TOTAL_QUIZ_AVERAGE_SCORE / 100

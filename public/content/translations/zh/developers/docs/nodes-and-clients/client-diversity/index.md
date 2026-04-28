@@ -1,6 +1,6 @@
 ---
-title: 客户端多样性
-description: 概括解释以太坊客户端多样性的重要性。
+title: "客户端多样性"
+description: "概括解释以太坊客户端多样性的重要性。"
 lang: zh
 sidebarDepth: 2
 ---
@@ -9,7 +9,7 @@ sidebarDepth: 2
 
 ## 前提条件 {#prerequisites}
 
-如果你还不了解什么是节点和客户端，请查看[节点和客户端](/developers/docs/nodes-and-clients/)。 [执行层](/glossary/#execution-layer)和[共识层](/glossary/#consensus-layer)的定义见词汇表。
+如果您还不了解什么是节点和客户端，请查阅[节点和客户端](/developers/docs/nodes-and-clients/)。 术语表中对[执行层](/glossary/#execution-layer)和[共识层](/glossary/#consensus-layer)进行了定义。
 
 ## 为什么会有多种客户端？ {#why-multiple-clients}
 
@@ -23,11 +23,11 @@ sidebarDepth: 2
 
 当代表少数以太坊节点时，一种客户端中的漏洞对网络的风险较小。 由于许多客户端的节点分布大致均匀，大多数客户端出现同一问题的可能性很小，因此网络更加稳健。
 
-### 抵御攻击 {#resilience}
+### 抗攻击能力 {#resilience}
 
-客户端多样性还提供了抵御攻击的能力。 例如，要[欺骗特定客户端](https://twitter.com/vdWijden/status/1437712249926393858)让其接受链的某条分支，这种攻击不太可能成功，因为不大可能以相同方式利用其他客户端，并且规范链未损坏。 客户端多样性程度低增加了主要客户端受到黑客攻击的风险。 已经证实，客户端多样性是抵御网络受到恶意攻击的重要防御手段，例如，由于攻击者能够欺骗主要客户端 (Geth) 对每个区块执行数万次慢速磁盘输入/输出操作，2016 年的上海拒绝服务攻击得以实施。 由于有其他客户端在线且没有同样的漏洞，因此以太坊能够抵抗那次攻击并继续运行，同时修复了 Geth 中的漏洞。
+客户端多样性还提供了抵御攻击的能力。 例如，一种[欺骗特定客户端](https://twitter.com/vdWijden/status/1437712249926393858)使其接受链的特定分叉的攻击不太可能成功，因为其他客户端不太可能以同样的方式被利用，并且规范链仍未损坏。 客户端多样性程度低增加了主要客户端受到黑客攻击的风险。 已经证实，客户端多样性是抵御网络受到恶意攻击的重要防御手段，例如，由于攻击者能够欺骗主要客户端 (Geth) 对每个区块执行数万次慢速磁盘输入/输出操作，2016 年的上海拒绝服务攻击得以实施。 由于有其他客户端在线且没有同样的漏洞，因此以太坊能够抵抗那次攻击并继续运行，同时修复了 Geth 中的漏洞。
 
-### 权益证明的最终确定性 {#finality}
+### 权益证明的确定性 {#finality}
 
 超过 33% 的以太坊节点的共识客户端中有一个漏洞，它可能会阻止共识层的最终确定，这意味着用户无法相信交易不会在某些时候被回滚或更改。 对于许多建立在以太坊之上的应用程序，尤其是去中心化金融，这将是一个很大的问题。
 
@@ -35,19 +35,45 @@ sidebarDepth: 2
 
 尽管这些情况不太可能发生，但为了降低这类风险，以太坊生态系统可以使客户端均衡分布在活跃节点上。 理想情况下，任何共识客户端任何时候都不会达到总节点数的 33%。
 
-### 共担责任 {#responsibility}
+### 共同责任 {#responsibility}
 
 采用主流客户端也需要人力成本。 这给小型开发团队带来了过多的压力和责任。 客户端多样性程度越低，维护主流客户端的开发者的责任负担就越大。 将这一责任分摊到多个团队，既有利于以太坊节点网络的健康，也有益于相关人员的健康。
 
-## 客户端多样性现状 {#current-client-diversity}
+## 当前客户端多样性 {#current-client-diversity}
 
-![显示客户端多样性的饼状图](./client-diversity.png) _图表数据来自 [ethernodes.org](https://ethernodes.org) 和 [ clientdiversity.org](https://clientdiversity.org/)_
+### 执行客户端 {#execution-clients-breakdown}
 
-上面的两个饼图显示了执行层和共识层客户端多样性现状的快照（在 2022 年 1 月撰写本文时）。 在执行层，[Geth](https://geth.ethereum.org/) 占据绝对主导地位，[Open Ethereum ](https://openethereum.github.io/) 以极大的差距位居第二，[Erigon](https://github.com/ledgerwatch/erigon) 和 [Nethermind](https://nethermind.io/) 分别占据第三和第四，其他客户端加起来占网络的比例不到 1%。 共识层最常用的客户端 [Prysm](https://prysmaticlabs.com/#projects) 不像 Geth 那样占据绝对主导地位，但仍占有网络的 60% 以上。 [Lighthouse](https://lighthouse.sigmaprime.io/) 和 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) 分别占据约 20% 和约 14%，其他客户端很少使用。
+<PieChart
+data={[
+{ name: "Geth", value: 41 },
+{ name: "Nethermind", value: 38 },
+{ name: "Besu", value: 16 },
+{ name: "Erigon", value: 3 },
+{ name: "Reth", value: 2 }
+]}
+/>
 
-2022 年 1 月 23 日，从 [Ethernodes](https://ethernodes.org) 获得执行层数据。 共识客户端的数据来自 [Michael Sproul](https://github.com/sigp/blockprint)。 共识客户端数据更难获取，因为共识层客户端并不总是具有可以用来识别它们的明确痕迹。 这些数据是使用分类算法生成的，该算法有时会混淆一些非主流客户端（点击[此处](https://twitter.com/sproulM_/status/1440512518242197516)了解更多详细信息）。 在上图中，这些含糊的分类使用了“/”符号进行处理（例如 Nimbus/Teku）。 尽管如此，很明显大部分网络都在运行 Prysm。 这些数据是一组固定区块的快照（在本例中为时隙 2048001 与 2164916 之间的信标区块），Prysm 的主导地位曾经一度更高，超过 68%。 尽管只是快照，但上图中的数值可以让你清晰地了解客户端多样性现状的全局。
+### 共识客户端 {#consensus-clients-breakdown}
 
-现在，可以在 [clientdiversity.org](https://clientdiversity.org/) 查阅最新的共识层客户端多样性数据。
+<PieChart
+data={[
+{ name: "Lighthouse", value: 42.71 },
+{ name: "Prysm", value: 30.91},
+{ name: "Teku", value: 13.86},
+{ name: "Nimbus", value: 8.74},
+{ name: "Lodestar", value: 2.67 },
+{ name: "Grandine", value: 1.04 },
+{ name: "其他", value: 0.07 }
+]}
+/>
+
+此图表可能已过时 — 请访问 [ethernodes.org](https://ethernodes.org) 和 [clientdiversity.org](https://clientdiversity.org) 获取最新信息。
+
+以上两个饼图显示了执行层和共识层当前客户端多样性的快照（撰文时为 2025 年 10 月）。 多年来，客户端多样性已得到改善，执行层中 [Geth](https://geth.ethereum.org/) 的主导地位有所下降，[Nethermind](https://www.nethermind.io/nethermind-client) 紧随其后，[Besu](https://besu.hyperledger.org/) 位列第三，[Erigon](https://github.com/ledgerwatch/erigon) 位列第四，其他客户端占网络的不到 3%。 共识层最常用的客户端 —[Lighthouse](https://lighthouse.sigmaprime.io/)— 的使用率与第二常用的客户端非常接近。 [Prysm](https://prysmaticlabs.com/#projects) 和 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) 分别约占 31% 和 14%，而其他客户端则很少被使用。
+
+执行层数据于 2025 年 10 月 26 日获取自 [supermajority.info](https://supermajority.info/)。 共识客户端的数据来自 [Michael Sproul](https://github.com/sigp/blockprint)。 共识客户端数据更难获取，因为共识层客户端并不总是具有可以用来识别它们的明确痕迹。 这些数据是使用分类算法生成的，该算法有时会混淆一些非主流客户端（更多详细信息请见[此处](https://twitter.com/sproulM_/status/1440512518242197516)）。 在上图中，这些含糊的分类使用了“/”符号进行处理（例如 Nimbus/Teku）。 尽管如此，很明显大部分网络都在运行 Prysm。 尽管只是快照，但上图中的数值可以让你清晰地了解客户端多样性现状的全局。
+
+有关共识层客户端多样性的最新数据现在可在 [clientdiversity.org](https://clientdiversity.org/) 上获取。
 
 ## 执行层 {#execution-layer}
 
@@ -55,33 +81,26 @@ sidebarDepth: 2
 
 ## 使用非主流客户端 {#use-minority-client}
 
-解决客户端多样性问题不仅需要个人用户选择非主流客户端，还需要矿池/验证者池以及主要去中心应用程序和交易所等机构改用客户端。 然而，所有用户都可以尽一份力量，纠正目前的失衡状况并且实现所有可用以太坊软件的使用正常化。 合并后，所有节点运营商都需要运行执行客户端和共识客户端。 选择下面建议的客户端组合将有助于提高客户端多样性。
+解决客户端多样性问题，不仅需要个人用户选择非主流客户端——还需要验证者池以及大型去中心化应用程序和交易所这样的机构也一同切换客户端。 然而，所有用户都可以尽一份力量，纠正目前的失衡状况并且实现所有可用以太坊软件的使用正常化。 合并后，所有节点运营商都需要运行执行客户端和共识客户端。 选择下面建议的客户端组合将有助于提高客户端多样性。
 
 ### 执行客户端 {#execution-clients}
 
-[Besu](https://www.hyperledger.org/use/besu)
-
-[Nethermind](https://downloads.nethermind.io/)
-
-[Erigon](https://github.com/ledgerwatch/erigon)
-
-[Go-Ethereum](https://geth.ethereum.org/)
+- [Besu](https://www.hyperledger.org/use/besu)
+- [Nethermind](https://downloads.nethermind.io/)
+- [Erigon](https://github.com/ledgerwatch/erigon)
+- [Go-Ethereum](https://geth.ethereum.org/)
+- [Reth](https://reth.rs/)
 
 ### 共识客户端 {#consensus-clients}
 
-[Nimbus](https://nimbus.team/)
+- [Nimbus](https://nimbus.team/)
+- [Lighthouse](https://github.com/sigp/lighthouse)
+- [Teku](https://consensys.io/teku)
+- [Lodestar](https://github.com/ChainSafe/lodestar)
+- [Prysm](https://prysm.offchainlabs.com/docs/)
+- [Grandine](https://docs.grandine.io/)
 
-[Lighthouse](https://github.com/sigp/lighthouse)
-
-[Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
-
-[Lodestar](https://github.com/ChainSafe/lodestar)
-
-[Prysm](https://prysm.offchainlabs.com/docs/)
-
-[Grandine](https://docs.grandine.io/)
-
-技术用户可以为非主流客户端编写更多教程和相关文档，并鼓励他们运营节点的对等体从主流客户端迁离，帮助加快这一进程。 [clientdiversity.org](https://clientdiversity.org/) 提供了改用非主流共识客户端的指南。
+技术用户可以为非主流客户端编写更多教程和相关文档，并鼓励他们运营节点的对等体从主流客户端迁离，帮助加快这一进程。 有关切换到非主流共识客户端的指南，请访问 [clientdiversity.org](https://clientdiversity.org/)。
 
 ## 客户端多样性仪表板 {#client-diversity-dashboards}
 
@@ -90,22 +109,24 @@ sidebarDepth: 2
 **共识层：**
 
 - [Rated.network](https://www.rated.network/)
-- [clientdiversity.org](https://clientdiversity.org/) **执行层：**
+- [clientdiversity.org](https://clientdiversity.org/)
+
+**执行层：**
 
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
 - [以太坊共识层的客户端多样性](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
-- [以太坊合并：运行主流客户端须自担风险！](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest，2022 年 3 月 24 日_
+- [以太坊合并：运行多数客户端，风险自负！](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest，2022 年 3 月 24 日_
 - [客户端多样性的重要性](https://our.status.im/the-importance-of-client-diversity/)
 - [以太坊节点服务列表](https://ethereumnodes.com/)
-- [客户端多样性问题的“五个原因”](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
+- [客户端多样性问题的“五个为什么”](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
 - [以太坊多样性及其解决方法 (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
-## 相关主题 {#related-topics}
+## 相关话题 {#related-topics}
 
 - [运行以太坊节点](/run-a-node/)
 - [节点和客户端](/developers/docs/nodes-and-clients/)

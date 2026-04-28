@@ -29,37 +29,116 @@ function findClosestElementId(
 
 Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
-  tracesSampleRate: 0.01,
+  tracesSampler(samplingContext) {
+    // 10% of pageloads for reliable Web Vitals data
+    if (samplingContext.attributes?.["sentry.op"] === "pageload") {
+      return 0.1
+    }
+    // 1% for everything else
+    return 0.01
+  },
   debug: environment === "development",
   environment,
   enabled: environment === "production",
-  // Normalize transaction names for parameterized routes to enable per-page analysis
-  // Sentry uses formats like "/:locale/:slug*" for catch-all routes
+  initialScope: { tags: { module: "app" } },
+
+  // Filter errors from browser extensions and third-party scripts
+  denyUrls: [
+    // Browser extension protocols
+    /chrome-extension:\/\//,
+    /moz-extension:\/\//,
+    /safari-extension:\/\//,
+    // Netlify RUM analytics (blocked by ad blockers, not actionable)
+    /\.netlify\/scripts\/rum/,
+    /ingesteer\.services-prod\.nsvcs\.net/,
+  ],
+
+  // Filter common extension error messages and non-actionable errors
+  ignoreErrors: [
+    // Wallet extension proxy/property conflicts (ETHORG-Z1, ETHORG-115)
+    /on proxy: trap returned falsish/i,
+    /Cannot set property ethereum of #<Window>/,
+    /Cannot set property isMetaMask of #<.+> which has only a getter/,
+    // Extension messaging errors (ETHORG-7E)
+    /Could not establish connection\. Receiving end does not exist/,
+    /Attempting to use a disconnected port object/,
+    /Invalid call to runtime\.sendMessage\(\)/,
+    // Resource loading errors - network/ad blocker issues, not actionable (ETHORG-A8, ETHORG-8N)
+    /Event `Event` \(type=error\) captured as promise rejection/,
+    /NetworkError when attempting to fetch resource/,
+    // WebView circular reference serialization failures - wallet app injections (ETHORG-72)
+    /JSON\.stringify cannot serialize cyclic structures/,
+    // Extension IPC / DApp bridge errors (ETHORG-FN, ETHORG-AT)
+    /Object Not Found Matching Id:\d+/,
+    /DApp request timeout/,
+    // Cross-origin postMessage from extensions/embedded frames (ETHORG-87)
+    /^Error: invalid origin$/,
+    // Injected scripts from WebViews, adware, and OEM bloatware (ETHORG-14R, ETHORG-13N, ETHORG-JK, ETHORG-14B)
+    /LIDNotify is not defined/,
+    /tgetT is not defined/,
+    /zaloJSV2 is not defined/,
+    /onPagePause is not defined/,
+  ],
+
+  beforeSend(event) {
+    // Filter wallet extension JSON-RPC errors that have no stacktrace (ETHORG-7Q)
+    const values = event.exception?.values ?? []
+    const hasNoStacktrace = values.every((v) => !v.stacktrace?.frames?.length)
+    if (hasNoStacktrace) {
+      const message = values[0]?.value ?? ""
+      if (/Internal JSON-RPC error/i.test(message)) return null
+    }
+
+    // Filter extension injection script errors not caught by denyUrls
+    const frames = values.flatMap((v) => v.stacktrace?.frames ?? [])
+    const isExtensionScript = frames.some((f) => {
+      const filename = f.filename || ""
+      const absPath = f.abs_path || ""
+      return (
+        // Extension preload scripts
+        filename.includes("preload/document.js") ||
+        absPath.includes("preload/document.js") ||
+        // Wallet extension injection scripts (ETHORG-Z1: TronLink, ETHORG-115: wallet bridges)
+        /injected\/injected\.js/.test(filename) ||
+        /bridge\/inject\.js/.test(filename) ||
+        /content[-_]?script\.js/i.test(filename) ||
+        /inpage\.js/.test(filename) ||
+        // Generic app:// protocol used by extension injected scripts (ETHORG-117: BitVisionWeb wallet)
+        filename.startsWith("app:///") ||
+        absPath.startsWith("app:///") ||
+        // Extension code injected via about:blank contexts (ETHORG-96)
+        filename === "about:blank" ||
+        absPath === "about:blank"
+      )
+    })
+    return isExtensionScript ? null : event
+  },
+  // Normalize transaction names to strip locale prefixes so all locales
+  // group under one page (e.g., "/en/staking/", "/ko/staking/" → "/staking/")
   beforeSendTransaction(event) {
     const op = event.contexts?.trace?.op
-    const transaction = event.transaction
+    if (op !== "pageload" && op !== "navigation") return event
 
-    // Matches patterns like ":locale", ":slug*", ":id", ":post", etc.
-    const isParameterizedRoute = transaction && /:\w+/.test(transaction)
-    const isPageTransaction = op === "pageload" || op === "navigation"
+    const localePrefix = /^\/[a-z]{2,3}(-[a-z]{2})?(?=\/|$)/
 
-    if (isParameterizedRoute && isPageTransaction) {
-      const url = event.request?.url || (event.tags?.url as string | undefined)
-      if (url) {
-        try {
-          const pathname = new URL(url).pathname
-          // Remove locale prefix (e.g., "/en/", "/fil/", "/zh-tw/", "/pt-br/"), keeping just the page path
-          // e.g., "/en/developers/docs" -> "/developers/docs"
-          // Only match complete path segments (must be followed by "/" or end of string)
-          const normalizedPath = pathname.replace(
-            /^\/[a-z]{2,3}(-[a-z]{2})?(?=\/|$)/,
-            ""
-          )
-          event.transaction = normalizedPath || "/"
-        } catch {
-          // Keep original transaction name if URL parsing fails
-        }
+    // Try to resolve from the actual URL first (most reliable)
+    const url = event.request?.url || (event.tags?.url as string | undefined)
+    if (url) {
+      try {
+        const pathname = new URL(url).pathname
+        event.transaction = pathname.replace(localePrefix, "") || "/"
+        return event
+      } catch {
+        // Fall through to transaction name normalization
       }
+    }
+
+    // Fallback: normalize the transaction name directly
+    // Handles parameterized names like "/:locale/:slug*" → "/:slug*"
+    if (event.transaction) {
+      event.transaction =
+        event.transaction.replace(localePrefix, "").replace(/^\/:locale/, "") ||
+        "/"
     }
     return event
   },

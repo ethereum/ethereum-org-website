@@ -49,7 +49,7 @@ jobs:
           PREVIEW_COUNT=$(echo "$PREVIEW_DEPLOYS" | jq 'length')
           echo "Found $PREVIEW_COUNT preview/branch deploys"
 
-          OPEN_PRS=$(gh pr list --state open --json number --jq '.[].number')
+          OPEN_PRS=$(gh pr list --state open --limit 1000 --json number --jq '.[].number')
           REMOTE_BRANCHES=$(git branch -r | sed 's/origin\///' | tr -d ' ')
 
           echo ""

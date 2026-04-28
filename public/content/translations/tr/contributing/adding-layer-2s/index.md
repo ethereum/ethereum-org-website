@@ -1,19 +1,19 @@
 ---
 title: Katman 2'leri Ekleme
-description: Ethereum.org'a katman 2 eklerken kullandığımız politika
+description: "Ethereum.org'a katman 2 eklerken kullandığımız politika"
 lang: tr
 ---
 
-# Katman 2'leri Ekleme {#adding-layer-2}
+# Katman 2'leri ekleme {#adding-layer-2}
 
 Kullanıcıların katman 2 alanında güvenli ve kendinden emin bir şekilde gezinebilmeleri için mümkün olan en iyi kaynakları listelediğimizden emin olmak istiyoruz.
 
-Herkes ethereum.org'da bir katman 2 eklemeyi önermekte özgürdür. Gözden kaçırdığımız bir katman 2 varsa, **[lütfen belirtin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
+Herkes ethereum.org'da bir katman 2 eklemeyi önermekte özgürdür. Gözden kaçırdığımız bir katman 2 varsa, **[lütfen onu önerin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 Şu anda aşağıdaki sayfalarda Katman 2'leri listeliyoruz:
 
 - [İyimser toplamalar](/developers/docs/scaling/optimistic-rollups/)
-- [Sıfır-bilgi toplamalar](/developers/docs/scaling/zk-rollups/)
+- [Sıfır bilgili toplamalar](/developers/docs/scaling/zk-rollups/)
 - [Katman 2](/layer-2/)
 
 Katman 2, Ethereum için nispeten yeni ve heyecan verici bir paradigmadır. Ethereum.org'da değerlendirilmek üzere adil bir çerçeve oluşturmaya çalıştık, ancak listeleme kriterleri zamanla değişecek ve gelişecektir.
@@ -24,8 +24,8 @@ Katman 2, Ethereum için nispeten yeni ve heyecan verici bir paradigmadır. Ethe
 
 **L2BEAT'te listeleme**
 
-- Bu projenin dikkate alınabilmesi için [L2BEAT](https://l2beat.com)'te listelenmesi gerekir. L2BEAT, katman 2 projelerini değerlendirmek için kullandığımız sağlam bir katman 2 risk değerlendirmesi sunar. **Proje L2BEAT'te yer almıyorsa, onu ethereum.org'da Katman 2 olarak listelemeyeceğiz.**
-- [Katman 2 projenizi L2BEAT'e nasıl ekleyeceğinizi öğrenin](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
+- Değerlendirmeye alınması için bu projenin [L2BEAT](https://l2beat.com) üzerinde listelenmesi gerekir. L2BEAT, katman 2 projelerini değerlendirmek için kullandığımız sağlam bir katman 2 risk değerlendirmesi sunar. **Proje L2BEAT'te yer almıyorsa, onu ethereum.org'da Katman 2 olarak listelemeyeceğiz.**
+- [L2 projenizi L2BEAT'e nasıl ekleyeceğinizi öğrenin](https://github.com/l2beat/l2beat/blob/master/CONTRIBUTING.md).
 
 **Açık kaynak**
 
@@ -42,7 +42,7 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum kullanmayan diğer öl�
 
 **Veri kullanılabilirliği için Ethereum**
 
-- Veri kullanılabilirliği, diğer ölçeklendirme çözümleri ile katman 2 arasında önemli bir ayırt edici faktördür. Bir proje, listeleme için dikkate alınması gereken veri kullanılabilirliği için Ethereum Mainnet'i **kullanmalıdır**.
+- Veri kullanılabilirliği, diğer ölçeklendirme çözümleri ile katman 2 arasında önemli bir ayırt edici faktördür. Listelenmek için değerlendirilebilmesi için bir projenin veri kullanılabilirliği amacıyla Ethereum Ana Ağını kullanması **zorunludur**.
 
 **Köprüler**
 
@@ -78,7 +78,7 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum kullanmayan diğer öl�
 
 **Katman 2 ekosistemindeki dapp'lere bağlantılar**
 
-- Kullanıcıların bu katman 2'de neler yapabilecekleri hakkında bilgi sağlayabilmek istiyoruz. (örn. https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Kullanıcıların bu katman 2'de neler yapabilecekleri hakkında bilgi sağlayabilmek istiyoruz. (ör., https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Token sözleşme listeleri**
 
@@ -93,5 +93,5 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum kullanmayan diğer öl�
 Ethereum.org'a bir katman 2 eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
-  Bir konu oluştur
+  Bir konu oluşturun
 </ButtonLink>

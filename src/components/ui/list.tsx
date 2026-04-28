@@ -15,13 +15,7 @@ export type ListProps<T = HTMLAttributes<HTMLUListElement>> = T & {
 const List = forwardRef<ElementRef<"ul">, ListProps>(
   ({ className, asChild, ...props }, ref) => {
     const Comp = asChild ? Slot : "ul"
-    return (
-      <Comp
-        ref={ref}
-        className={cn("mb-6 ms-6 list-disc", className)}
-        {...props}
-      />
-    )
+    return <Comp ref={ref} className={cn("ms-6 mb-6", className)} {...props} />
   }
 )
 
@@ -34,7 +28,7 @@ const OrderedList = forwardRef<
   ElementRef<"ol">,
   ListProps<OlHTMLAttributes<HTMLOListElement>>
 >(({ className, children, ...props }, ref) => (
-  <List className={cn("list-decimal", className)} asChild>
+  <List className={className} asChild>
     <ol ref={ref} {...props}>
       {children}
     </ol>

@@ -48,7 +48,7 @@ const ActionCard = ({
     >
       <Flex
         className={cn(
-          "flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
+          "flex h-[260px] flex-row bg-linear-to-r from-accent-a/10 to-accent-c/10",
           isBottom ? "items-end" : "items-center",
           isRight ? "justify-end" : "justify-center"
         )}
@@ -61,7 +61,7 @@ const ActionCard = ({
         />
       </Flex>
       <div className="flex flex-col justify-center p-6">
-        <h3 className="mb-4 mt-2 text-2xl font-semibold leading-snug">
+        <h3 className="mt-2 mb-4 text-2xl leading-snug font-semibold">
           <LinkOverlay asChild>
             <InlineLink
               href={href}

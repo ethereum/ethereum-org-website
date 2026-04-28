@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang, PageParams, StakingStatsData } from "@/lib/types"
+import { Lang, PageParams, StakingStatsData } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -16,29 +16,24 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import StakingPage from "./_components/staking"
 import StakingPageJsonLD from "./page-jsonld"
 
-import { getBeaconchainEpochData, getBeaconchainEthstoreData } from "@/lib/data"
+import { getBeaconchainData } from "@/lib/data"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
 
   // Fetch data using the new data-layer functions (already cached)
-  const [beaconchainEpochData, apr] = await Promise.all([
-    getBeaconchainEpochData(),
-    getBeaconchainEthstoreData(),
-  ])
+  const beaconchainData = await getBeaconchainData()
 
   // Handle null cases - throw error if required data is missing
-  if (!beaconchainEpochData) {
-    throw new Error("Failed to fetch Beaconchain epoch data")
-  }
-  if (!apr) {
-    throw new Error("Failed to fetch Beaconchain APR data")
+  if (!beaconchainData) {
+    throw new Error("Failed to fetch Beaconchain data")
   }
 
   // Extract values from data structures
-  const { totalEthStaked, validatorscount } = beaconchainEpochData
+  const { totalEthStaked, validatorscount, apr } = beaconchainData
 
   const data: StakingStatsData = {
     totalEthStaked: "value" in totalEthStaked ? totalEthStaked.value : 0,
@@ -51,13 +46,8 @@ const Page = async ({ params }: { params: PageParams }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getAppPageContributorInfo(
-      "staking",
-      locale as Lang,
-      commitHistoryCache
-    )
+    await getAppPageContributorInfo("staking", locale as Lang)
 
   return (
     <I18nProvider locale={locale} messages={messages}>
@@ -76,14 +66,13 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-staking" })
+  const t = await getTranslations("page-staking")
 
   return await getMetadata({
     locale,

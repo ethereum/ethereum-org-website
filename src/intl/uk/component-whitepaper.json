@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Перш ніж читати",
+  "heading": "Хочете зрозуміти Ethereum?",
+  "description": "Цей whitepaper був опублікований у <strong>2014</strong> році, до запуску Ethereum. Після понад 10 років розробки, масштабних оновлень та зростання екосистеми <strong>оригінальний whitepaper більше не відображає того, чим Ethereum є сьогодні</strong>.",
+  "cta-learn": "Дізнайтеся про Ethereum сьогодні",
+  "cta-download-pdf": "Завантажити оригінальний PDF (2014)",
+  "whats-changed": "Що змінилося з 2014 року?",
+  "evolution-pos": "Ethereum перейшов з proof-of-work на proof-of-stake (Злиття, 2022)",
+  "evolution-l2": "Рішення для масштабування 2-го рівня тепер обробляють мільйони транзакцій",
+  "evolution-usecases": "DeFi, NFT та DAO стали основними варіантами використання",
+  "evolution-standards": "Стандарти смарт-контрактів (ERC-20, ERC-721) стали основою індустрії"
+}

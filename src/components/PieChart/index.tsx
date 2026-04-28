@@ -14,9 +14,9 @@ import type { Formatter } from "recharts/types/component/DefaultLegendContent"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import {
@@ -119,7 +119,11 @@ export function PieChart({
         {(title || description) && (
           <CardHeader className="!pt-0">
             {title && <CardTitle>{title}</CardTitle>}
-            {description && <CardDescription>{description}</CardDescription>}
+            {description && (
+              <CardParagraph variant="light" size="sm">
+                {description}
+              </CardParagraph>
+            )}
           </CardHeader>
         )}
         <CardContent className="flex h-64 items-center justify-center">
@@ -195,20 +199,24 @@ export function PieChart({
     >
       <CardHeader className="!pt-0">
         {title && <CardTitle>{title}</CardTitle>}
-        {description && <CardDescription>{description}</CardDescription>}
+        {description && (
+          <CardParagraph variant="light" size="sm">
+            {description}
+          </CardParagraph>
+        )}
       </CardHeader>
 
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
           <ResponsiveContainer width="100%" height={dimensions.height}>
-            <RechartsPieChart className="-me-12 ms-4">
+            <RechartsPieChart className="ms-4 -me-12">
               <ChartTooltip cursor={false} content={customTooltipContent} />
 
               <Legend
                 layout="vertical"
                 verticalAlign="middle"
                 align="right"
-                className="max-w-1/2 break-all text-sm/snug"
+                className="max-w-1/2 text-sm/snug break-all"
                 formatter={legendFormatter}
               />
 
@@ -237,7 +245,7 @@ export function PieChart({
           <div className="flex w-full items-start gap-2 text-sm">
             <div className="grid gap-2">
               {footerText && (
-                <div className="flex items-center gap-2 font-medium leading-none">
+                <div className="flex items-center gap-2 leading-none font-medium">
                   {footerText} <TrendingUp className="h-4 w-4" />
                 </div>
               )}

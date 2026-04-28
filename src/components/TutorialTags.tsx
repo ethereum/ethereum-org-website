@@ -11,7 +11,7 @@ const TutorialTags = ({ tags }: TutorialTagsProps) => {
     <>
       {tags.map((tag, idx) => {
         return (
-          <Tag key={idx} className="mb-2 me-2" status="tag">
+          <Tag key={idx} className="me-2 mb-2" status="tag">
             {tag}
           </Tag>
         )

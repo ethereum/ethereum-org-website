@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { expect, fireEvent, fn, within } from "@storybook/test"
+import { expect, fireEvent, fn, within } from "storybook/test"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizRadioGroup } from "../QuizWidget/QuizRadioGroup"

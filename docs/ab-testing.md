@@ -7,7 +7,7 @@ This guide explains how to implement server-side A/B tests on ethereum.org using
 Our A/B testing system provides:
 
 - **Server-side rendering** - Users see consistent variants on first page load with no layout shifts
-- **Matomo API integration** - Tests configured entirely in Matomo dashboard, no code deployments needed
+- **Matomo API integration** - Tests are configured entirely in the Matomo dashboard; no code deployments are needed
 - **GDPR compliance** - Cookie-less tracking using deterministic fingerprinting (IP + User-Agent)
 - **Multi-variant support** - Test 2+ variations with configurable weights / traffic splits
 - **Real-time updates** - Adjust experiment weights instantly via Matomo dashboard
@@ -35,7 +35,7 @@ This step is important for measuring experiment effectiveness and should be done
    - **Hypothesis**: Explain what you predict to happen when you run the A/B test, what the outcome will be and why it will happen.
    - **Description**: Provide details about the test and its purpose
    - **Variations**: Add your variants (e.g., "NewDesign", "AlternativeLayout")
-4. Define remainder of config:
+4. Define the remainder of the config:
    - **Success metrics**: Goals you want to track (select from previously created goals)
    - **Success conditions**: Statistical thresholds
    - **Target pages**: Specify the pages where this test will run (e.g., `/`, `/wallet`, etc.)
@@ -86,7 +86,7 @@ The experiment will automatically start running when:
 
 ## Multi-Variant Testing
 
-Support for 3+ variants:
+Supports 3+ variants:
 
 ```tsx
 // Matomo experiment configured with variations in this exact order:
@@ -117,7 +117,7 @@ Support for 3+ variants:
 ### Cookie-less Tracking
 
 - Uses deterministic assignment based on IP address + User-Agent fingerprint
-- Same user always gets same variant (consistent experience)
+- The same user always gets the same variant (consistent experience)
 - GDPR compliant - no cookies or personal data storage required
 - Users can't manually switch variants (prevents data pollution)
 
@@ -134,19 +134,19 @@ Support for 3+ variants:
 
 1. Create your experiment in Matomo (set to "running")
 2. Implement `ABTestWrapper` in your component
-3. Test locally - the debug panel shows current assignment
+3. Test locally - the debug panel shows the current assignment
 4. Adjust weights in Matomo dashboard to test different scenarios
 
 ### Preview Mode
 
-- Preview deployments show debug panel with variant selector
+- Preview deployments show a debug panel with a variant selector
 - No tracking occurs in preview mode
 - Allows manual testing of all variants
 
 ### Production
 
 1. Deploy your component with `ABTestWrapper`
-2. Monitor experiment in Matomo dashboard
+2. Monitor the experiment in the Matomo dashboard
 3. Adjust traffic allocation as needed
 4. Analyze results and implement winning variant
 
@@ -224,7 +224,7 @@ NEXT_PUBLIC_IS_PREVIEW_DEPLOY=false
 
 1. **Check environment variables**: Ensure all Matomo config is set
 2. **Verify API token**: Must have "experiments" permission in Matomo
-3. **Check cache**: API responses cached for 1 hour, use dev mode for real-time updates
+3. **Check cache**: API responses are cached for 1 hour, use dev mode for real-time updates
 4. **Fallback behavior**: When API fails, all tests show original variant (safe default)
 
 ## Debug Panel

@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "ERC-20トークンをインポートし、ウォレットで使用",
   "page-find-wallet-buy-crypto": "暗号資産の購入",
   "page-find-wallet-buy-crypto-desc": "ウォレット内で法定通貨を使って暗号資産を直接購入できます。\n *注: 購入の可否は地域によって異なる場合があります。",
-  "page-find-wallet-sell-for-fiat": "法定通貨への換金",
+  "page-find-wallet-sell-for-fiat": "現金で売却",
   "page-find-wallet-sell-for-fiat-desc": "ウォレット内で暗号資産を法定通貨に換金（売却）できます。\n *注: 引き出しや売却は地域によって制限される場合があります。",
   "page-find-wallet-multisig": "マルチシグ",
   "page-find-wallet-multisig-desc": "トランザクションの承認に複数の署名が必要なウォレット",
@@ -48,7 +48,7 @@
   "page-find-wallet-features": "機能",
   "page-find-wallet-security": "セキュリティ",
   "page-find-wallet-smart-contract": "スマートコントラクト",
-  "page-find-wallet-advanced": "上級者向け",
+  "page-find-wallet-advanced": "上級",
   "page-find-wallet-check-out": "確認する",
   "page-find-wallet-info-updated-on": "更新日時",
   "page-find-wallet-showing-all-wallets": "すべてのウォレットを表示",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "リンク",
   "page-find-wallet-empty-results-title": "検索結果はありません",
   "page-find-wallet-empty-results-desc": "条件を満たすウォレットはありません。いくつかのフィルターを削除して試してください。",
-  "page-find-wallet-see-wallets": "ウォレットを表示する"
+  "page-find-wallet-privacy": "プライバシー",
+  "page-find-wallet-privacy-desc": "プライベートトランザクション機能が組み込まれたウォレット",
+  "page-find-wallet-see-wallets": "ウォレットを表示する",
+  "page-find-wallet-search-languages": "言語を検索..."
 }

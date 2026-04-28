@@ -1,6 +1,6 @@
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import BigNumber from "@/components/BigNumber"
@@ -9,23 +9,34 @@ import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { Image } from "@/components/Image"
+import CardImage from "@/components/Image/CardImage"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card } from "@/components/ui/card"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import { TerminalTypewriter } from "@/components/ui/terminal-typewriter"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { formatDateRange } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
-import HackathonCard from "./_components/HackathonCard"
-import HackathonSwiper from "./_components/HackathonSwiper/lazy"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
@@ -37,17 +48,17 @@ import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-s
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
+import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
-
-const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
+const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
 
 const Column = (props: ChildOnlyProp) => (
-  <div className="mb-6 me-8 w-full flex-1 basis-1/3" {...props} />
+  <div className="me-8 mb-6 w-full flex-1 basis-1/3" {...props} />
 )
 const RightColumn = (props: ChildOnlyProp) => (
-  <div className="mb-6 me-0 w-full flex-1 basis-1/3" {...props} />
+  <div className="me-0 mb-6 w-full flex-1 basis-1/3" {...props} />
 )
 
 const Scroller = ({
@@ -94,7 +105,7 @@ const WhyGrid = () => {
       className={cn(
         "rounded-4xl border border-accent-c/20",
         "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
-        "bg-gradient-to-b from-accent-c/5 from-[60%] to-accent-c/15"
+        "bg-linear-to-b from-accent-c/5 from-[60%] to-accent-c/15"
       )}
     >
       {items.map(({ heading, description }) => (
@@ -109,16 +120,12 @@ const WhyGrid = () => {
     </div>
   )
 }
-const DevelopersPage = async ({ params }: { params: PageParams }) => {
+const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
-  const tCommon = await getTranslations({
-    locale,
-    namespace: "common",
-  })
+  setRequestLocale(locale)
+  const t = await getTranslations("page-developers-index")
+  const tCommon = await getTranslations("common")
 
   const paths = await getBuilderPaths()
   const speedRunDetails = {
@@ -131,11 +138,9 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
 
   const hackathons = (await getHackathons()).slice(0, 5)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "developers",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -212,6 +217,47 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
           </Section>
 
           <Section
+            id="ethskills"
+            className="flex flex-col gap-8 py-10 sm:items-center md:py-16"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/developers/ethskills.svg"
+              alt="ETHSKILLS"
+              className="h-auto max-h-24 w-full max-w-2xl object-contain"
+            />
+
+            <div className="max-w-xl space-y-2 md:text-center">
+              <h2>{t("page-developers-ethskills-title")}</h2>
+              <p className="text-body-medium">
+                {t("page-developers-ethskills-desc")}
+              </p>
+            </div>
+
+            <TerminalTypewriter
+              messages={[
+                t("page-developers-ethskills-msg-1"),
+                t("page-developers-ethskills-msg-2"),
+                t("page-developers-ethskills-msg-3"),
+                t("page-developers-ethskills-msg-4"),
+                t("page-developers-ethskills-msg-5"),
+              ]}
+            />
+
+            <ButtonLink
+              href="https://ethskills.com/"
+              size="lg"
+              customEventOptions={{
+                eventCategory: "ethskills",
+                eventAction: "click",
+                eventName: "ethskills-section-cta",
+              }}
+            >
+              {t("page-developers-ethskills-cta", { ethskills: "ethskills" })}
+            </ButtonLink>
+          </Section>
+
+          <Section
             id="resources"
             className={cn(
               "grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8",
@@ -223,7 +269,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             </h2>
 
             {/* Quickstart your idea */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={scaffoldDebugScreenshot}
                 alt="Scaffold-ETH 2 debug screenshot"
@@ -265,6 +311,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
               <div>
                 <Link
                   href="https://docs.scaffoldeth.io/llms-full.txt"
+                  className="block"
                   customEventOptions={{
                     eventCategory: "mid_boxes",
                     eventAction: "click",
@@ -277,7 +324,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             </Card>
 
             {/* Get help */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={stackExchangeScreenshot}
                 alt="Ethereum Stack Exchange screenshot"
@@ -315,7 +362,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             </Card>
 
             {/* Resources */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={resourcesBanner}
                 alt="Banner showing four resource app icons"
@@ -346,7 +393,7 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             </Card>
 
             {/* Tutorials */}
-            <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={tutorialTagsBanner}
                 alt="Banner displaying multiple learning topics in a tag cloud"
@@ -527,20 +574,55 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <h2>{t("page-developers-hackathons-title")}</h2>
             <p>{t("page-developers-hackathons-desc")}</p>
 
-            {/* DESKTOP */}
-            <Scroller>
-              {hackathons.map((event, idx) => (
-                <HackathonCard
-                  key={idx}
-                  event={event}
-                  className="min-w-72 max-w-md flex-1"
-                />
-              ))}
-            </Scroller>
-            {/* MOBILE */}
-            <div className="-mx-8 sm:hidden">
-              <HackathonSwiper events={hackathons} />
-            </div>
+            <EdgeScrollContainer>
+              {hackathons.map((event) => {
+                const {
+                  title,
+                  link,
+                  bannerImage,
+                  location,
+                  startTime,
+                  endTime,
+                } = event
+
+                return (
+                  <EdgeScrollItem
+                    key={event.id}
+                    asChild
+                    className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+                  >
+                    <Card
+                      href={link}
+                      customEventOptions={{
+                        eventCategory: "hackathons",
+                        eventAction: "click",
+                        eventName: title,
+                      }}
+                      className="max-w-md min-w-72 flex-1"
+                    >
+                      <CardBanner className="h-36">
+                        {bannerImage ? (
+                          <CardImage src={bannerImage} />
+                        ) : (
+                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
+                        )}
+                      </CardBanner>
+                      <CardContent>
+                        <CardTitle>{title}</CardTitle>
+                        <CardParagraph variant="subtitle" size="sm">
+                          {formatDateRange(startTime, endTime, locale, {
+                            year: "numeric",
+                          })}
+                        </CardParagraph>
+                        <CardParagraph variant="subtitle" size="sm">
+                          {location}
+                        </CardParagraph>
+                      </CardContent>
+                    </Card>
+                  </EdgeScrollItem>
+                )
+              })}
+            </EdgeScrollContainer>
 
             <div className="flex justify-center">
               <ButtonLink
@@ -560,8 +642,8 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
             <div
               className={cn(
                 "mx-auto max-w-screen-lg",
-                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
-                "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
+                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(var(--radius-4xl)+1px)] before:content-['']", // Border/gradient positioning
+                "before:bg-linear-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
                 "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
               )}
             >
@@ -605,17 +687,13 @@ const DevelopersPage = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-index",
-  })
+  const t = await getTranslations("page-developers-index")
 
   return await getMetadata({
     locale,

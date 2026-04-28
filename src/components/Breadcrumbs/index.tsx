@@ -59,7 +59,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
       ? [
           {
             fullPath: "/",
-            text: t("page-index-meta-title"),
+            text: "ethereum.org",
           },
         ]
       : []),
@@ -86,7 +86,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
                 )}
               </BreadcrumbItem>
               {!isCurrentPage && (
-                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
                   /
                 </BreadcrumbSeparator>
               )}

@@ -1,27 +1,26 @@
 ---
-title: Cómo "crear" una cuenta de Ethereum
-description: Guía paso a paso sobre la creación de una cuenta de Ethereum utilizando una billetera.
+title: "Cómo «crear» una cuenta de Ethereum"
+description: "Guía paso a paso sobre la creación de una cuenta de Ethereum utilizando una billetera."
 lang: es
 ---
 
 # Cómo crear una cuenta de Ethereum
 
-**Cualquiera puede crear una cuenta de Ethereum de forma gratuita. ** Solo tiene que instalar una aplicación de billetera cripto. Las billeteras digitales crean y administran su cuenta de Ethereum. Permiten enviar transacciones, comprobar sus saldos y conectarlo a otras aplicaciones creadas en Ethereum.
+**Cualquiera puede crear una cuenta de Ethereum de forma gratuita.** Solo tiene que instalar una aplicación de billetera de criptomonedas. Las billeteras digitales crean y administran su cuenta de Ethereum. Permiten enviar transacciones, comprobar sus saldos y conectarlo a otras aplicaciones creadas en Ethereum.
 
-Con una billetera también puede instantáneamente iniciar sesión en cualquier plataforma de intercambio de tokens, juegos o mercados de [NFT](/glossary/#nft). No hay necesidad de registro individual; se comparte una cuenta para todas las aplicaciones construidas en Ethereum.
+Con una billetera, también puede iniciar sesión al instante en cualquier plataforma de intercambio de tokens, juegos y mercados de [NFT](/glossary/#nft). No hay necesidad de registro individual; se comparte una cuenta para todas las aplicaciones construidas en Ethereum.
 
 ## Paso 1: Elija una billetera
 
 Una cartera es una aplicación que te ayuda a gestionar tu cuenta de Ethereum. Hay docenas de billeteras diferentes para elegir: móviles, de escritorio o incluso extensiones de navegador.
 
-
 <ButtonLink href="/wallets/find-wallet/">
-  Lista de carteras
+  Lista de billeteras
 </ButtonLink>
 
 Si es nuevo, puede seleccionar el filtro «Nuevo en cripto» en la página «encontrar una cartera» para identificar las carteras que deben incluir todas las características necesarias adecuadas para principiantes.
 
-![Selección de filtros en la página «encontrar una cartera»](./wallet-box.png)
+![Selección de filtros en la página «Encontrar una billetera»](./wallet-box.png)
 
 También hay otros filtros de perfil para satisfacer sus necesidades. Estos son ejemplos de carteras de uso común: debería de hacer su propia investigación antes de confiar en cualquier software.
 
@@ -31,7 +30,7 @@ Una vez que haya decidido una cartera específica, visite su sitio web oficial o
 
 ## Paso 3: Abra la aplicación y cree su cuenta de Ethereum
 
-La primera vez que abra su nueva cartera, es posible que se le pida que elija entre crear una nueva cuenta o importar una existente. Haga clic en «crear una nueva cuenta». **Este es el paso durante el cual el software de la billetera genera su cuenta de Ethereum. **
+La primera vez que abra su nueva cartera, es posible que se le pida que elija entre crear una nueva cuenta o importar una existente. Haga clic en «crear una nueva cuenta». **Este es el paso durante el cual el software de la billetera genera su cuenta de Ethereum.**
 
 ## Paso 4: Guarde su frase de recuperación
 
@@ -43,15 +42,15 @@ Algunas aplicaciones le pedirán que guarde una "frase de recuperación" secreta
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>¿Billetera instalada?</b><br/> Aprenda a usarla.</div>
+  <div><b>¿Billetera instalada?</b><br/>Aprenda a usarla.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
-    Cómo utilizar una cartera
+    Cómo usar una billetera
   </ButtonLink>
- </AlertContent>
+</AlertContent>
 </Alert>
 </div>
 
-¿Interesado en otras guías? Eche un vistazo a nuestras [Guías paso a paso](/guides/).
+¿Interesado en otras guías? Consulte nuestras: [Guías paso a paso](/guides/)
 
 ## Preguntas más frecuentes
 
@@ -61,11 +60,11 @@ No. La cartera es una herramienta de gestión que le ayuda a gestionar cuentas. 
 
 ### ¿Puedo enviar bitcoin a una dirección de Ethereum o ether a una dirección de bitcoin?
 
-No, no puede. Bitcoin y ether existen en dos redes separadas (es decir, cadenas de bloques diferentes), cada una con sus propios formatos de contabilidad y dirección. Ha habido varios intentos de unir las dos redes diferentes, de las cuales la más activa actualmente es [Wrapped Bitcoin o WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Esto no es un aval, ya que WBTC es una solución de custodia (es decir, un solo grupo de personas controla ciertas funciones críticas) y se proporciona aquí sólo para propósitos informativos.
+No, no puede. Bitcoin y ether existen en dos redes separadas (es decir, cadenas de bloques diferentes), cada una con sus propios formatos de contabilidad y dirección. Ha habido varios intentos de unir las dos redes diferentes, de los cuales el más activo actualmente es [Wrapped Bitcoin o WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Esto no es un aval, ya que WBTC es una solución de custodia (es decir, un solo grupo de personas controla ciertas funciones críticas) y se proporciona aquí sólo para propósitos informativos.
 
 ### Si tengo una dirección de ETH, ¿tengo la misma dirección en otras cadenas de bloques?
 
-Puede usar la misma [dirección](/glossary/#address) en todas las cadenas de bloques que utilicen software subyacente similar a Ethereum (conocido como "compatible con EVM"). Esta [lista](https://chainlist.org/) le mostrará qué csdenas de bloques puede usar con la misma dirección. Algunas cadenas de bloques, como Bitcoin, implementan un conjunto de reglas de red completamente por separado y necesitará una dirección diferente con un formato diferente. Si tiene una billetera de contrato inteligente, debe consultar el sitio web de su producto para obtener más información sobre qué cadenas de bloques son compatibles, ya que generalmente estas tienen un alcance limitado pero más seguro.
+Puede usar la misma [dirección](/glossary/#address) en todas las cadenas de bloques que utilizan un software subyacente similar al de Ethereum (conocido como «compatible con EVM»). Esta [lista](https://chainlist.org/) te mostrará qué cadenas de bloques puedes usar con la misma dirección. Algunas cadenas de bloques, como Bitcoin, implementan un conjunto de reglas de red completamente por separado y necesitará una dirección diferente con un formato diferente. Si tiene una billetera de contrato inteligente, debe consultar el sitio web de su producto para obtener más información sobre qué cadenas de bloques son compatibles, ya que generalmente estas tienen un alcance limitado pero más seguro.
 
 ### ¿Tener mi propia cartera es más seguro que mantener mis fondos en una casa de cambio?
 

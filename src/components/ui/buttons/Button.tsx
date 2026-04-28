@@ -15,11 +15,11 @@ import { BaseLink, type LinkProps } from "../Link"
 const buttonVariants = cva(
   cn(
     // Sizing and positioning classes:
-    "inline-flex gap-2 items-center justify-center rounded border border-solid transition [&>svg]:flex-shrink-0",
+    "inline-flex gap-2 items-center justify-center rounded border border-solid transition [&>svg]:shrink-0",
     // Base default styling is "outline" pattern, primary color for text, border matches, no bg
     "text-primary border-current",
     // Hover: Default hover adds box-shadow, text (border) to --primary-hover
-    "hover:!text-primary-hover hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]",
+    "hover:!text-primary-hover hover:shadow-[4px_4px_hsla(var(--primary-low-contrast))]",
     // Focus: Add 4px outline to all buttons, --primary-hover
     "focus-visible:outline focus-visible:outline-primary-hover focus-visible:outline-4 focus-visible:-outline-offset-1",
     // Active: text (border) to --primary-hover instead of primary, hide shadow
@@ -152,12 +152,6 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
     },
     ref
   ) => {
-    const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (
-      ...args
-    ) => {
-      customEventOptions && trackCustomEvent(customEventOptions)
-      onClick?.(...args)
-    }
     return (
       <Button
         asChild
@@ -173,8 +167,9 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
             className
           )}
           activeClassName=""
+          customEventOptions={customEventOptions}
+          onClick={onClick}
           {...linkProps}
-          onClick={handleClick}
         >
           {children}
         </BaseLink>

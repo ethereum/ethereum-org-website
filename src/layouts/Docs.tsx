@@ -21,6 +21,7 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
+import { PieChart } from "@/components/PieChart"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
@@ -92,6 +93,7 @@ export const docsComponents = {
   Divider,
   Emoji,
   GlossaryTooltip,
+  PieChart,
   YouTube,
 } as MDXRemoteProps["components"]
 
@@ -103,7 +105,6 @@ type DocsLayoutProps = Pick<
   | "contributors"
   | "contentNotTranslated"
 > &
-  Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> &
   ChildOnlyProp & {
     frontmatter: DocsFrontmatter
   }
@@ -133,12 +134,14 @@ export const DocsLayout = ({
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <SideNav path={addSlashes(slug)} />
-        <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
+        <MainArticle className="min-w-0 flex-1 px-8 pt-8 pb-8 md:px-16 md:pt-12 md:pb-16">
           <H1 id="top">{frontmatter.title}</H1>
-          <FileContributors
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          )}
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}

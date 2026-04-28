@@ -1,12 +1,12 @@
 ---
-title: Cancun-Deneb（坎昆）升级常见问题
-description: 有关 Cancun-Deneb（坎昆）网络升级的常见问题
+title: "Cancun-Deneb（坎昆）升级常见问题"
+description: "有关 Cancun-Deneb（坎昆）网络升级的常见问题"
 lang: zh
 ---
 
 # Cancun-Deneb（坎昆）升级 {#dencun}
 
-Cancun-Deneb（坎昆）是对以太坊网络的一次升级，其激活了 **Proto-Danksharding (EIP-4844)**，引入了临时**二进制大对象**数据以实现更便宜的[二层网络 (L2)](/glossory/#layer-2) 卷叠存储。
+Cancun-Deneb（坎昆）是对以太坊网络的一次升级，其激活了 **Proto-Danksharding (EIP-4844)**，引入了临时**二进制大对象**数据以实现更便宜的[二层网络 (L2)](/glossary/#layer-2) 卷叠存储。
 
 一种新的交易类型使卷叠供应商能以更具成本效益的方式，在所谓的“二进制大对象”中储存数据。 二进制大对象保证可供网络使用约 18 天（准确来说，4096 个[时段](/glossary/#epoch)）。 在这段时间之后，二进制大对象将从网络中删除，但应用程序仍可以使用证明来验证其数据的有效性。
 
@@ -68,9 +68,9 @@ Proto-Danksharding 为 [Danksharding](/roadmap/danksharding/) 的完全实现奠
 
 共识客户端处理验证者软件，该软件已全部更新为支持升级的版本。
 
-## Cancun-Deneb (坎昆) 升级如何影响 Goerli 或其他以太坊测试网？ {#testnet-impact}
+## Cancun-Deneb（Dencun）如何影响以太坊测试网络？ {#testnet-impact}
 
-- Devnets、Goerli、Sepolia 和 Holesky 已经全部经历坎昆升级，并且 Proto-Danksharding 完全正常运行
+- Devnets、Sepolia 和 Holesky 网络都已经完成了 Dencun 升级，同时 Proto-Danksharding 已经完全启用。
 - 卷叠开发者可以使用这些网络来测试 EIP-4844
 - 大多数用户完全不会受到这些测试网改变的影响
 

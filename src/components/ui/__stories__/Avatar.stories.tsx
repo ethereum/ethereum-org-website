@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Avatar, AvatarGroup } from "../avatar"
 import { HStack, VStack } from "../flex"
@@ -42,6 +42,21 @@ export const Group: Story = {
           <Avatar dataTest="three" {...args} />
           <Avatar {...args} />
         </AvatarGroup>
+      ))}
+    </VStack>
+  ),
+}
+
+export const BrokenImageFallback: Story = {
+  args: {
+    name: "Sam Richards",
+    src: "https://placehold.co/404error",
+    href: "#",
+  },
+  render: (args) => (
+    <VStack className="gap-4">
+      {(["lg", "md", "sm", "xs"] as const).map((size) => (
+        <Avatar key={size} size={size} {...args} />
       ))}
     </VStack>
   ),

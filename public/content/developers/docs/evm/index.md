@@ -4,7 +4,7 @@ description: An introduction to the Ethereum virtual machine and how it relates 
 lang: en
 ---
 
-The Ethereum Virtual Machine (EVM) is a decentralized virtual environment that executes code consistently and securely across all Ethereum nodes. Nodes run the EVM to execute smart contracts, using "[gas](/developers/docs/gas/)" to measure the computational effort required for [operations](/developers/docs/evm/opcodes/), ensuring efficient resource allocation and network security.
+The Ethereum Virtual Machine (EVM) is a decentralized virtual environment that executes code consistently and securely across all [Ethereum](/) nodes. Nodes run the EVM to execute smart contracts, using "[gas](/developers/docs/gas/)" to measure the computational effort required for [operations](/developers/docs/evm/opcodes/), ensuring efficient resource allocation and network security.
 
 ## Prerequisites {#prerequisites}
 
@@ -45,15 +45,15 @@ The EVM executes as a [stack machine](https://wikipedia.org/wiki/Stack_machine) 
 
 During execution, the EVM maintains a transient _memory_ (as a word-addressed byte array), which does not persist between transactions.
 
-### Transient storage
+### Transient storage {#transient-storage}
 
 Transient storage is a per-transaction key–value store accessed through the `TSTORE` and `TLOAD` opcodes. It persists across all internal calls during the same transaction but is cleared at the end of the transaction. Unlike memory, transient storage is modeled as part of the EVM state rather than the execution frame, yet it is not committed to the global state. Transient storage enables gas-efficient temporary state sharing across internal calls during a transaction.
 
-### Storage
+### Storage {#storage}
 
 Contracts contain a Merkle Patricia _storage_ trie (as a word-addressable word array), associated with the account in question and part of the global state. This persistent storage differs from transient storage, which is available only for the duration of a single transaction and does not form part of the account's persistent storage trie.
 
-### Opcodes
+### Opcodes {#opcodes}
 
 Compiled smart contract bytecode executes as a number of EVM [opcodes](/developers/docs/evm/opcodes), which perform standard stack operations like `XOR`, `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `BLOCKHASH`, etc. The opcode set also includes `TSTORE` and `TLOAD`, which provide access to transient storage.
 
@@ -86,3 +86,8 @@ Over Ethereum's ten year history, the EVM has undergone several revisions, and t
 ## Related Topics {#related-topics}
 
 - [Gas](/developers/docs/gas/)
+
+## Tutorials: Ethereum Virtual Machine (EVM) / Opcodes on Ethereum {#tutorials}
+
+- [Understanding the Yellow Paper's EVM Specifications](/developers/tutorials/yellow-paper-evm/) _– A guided walkthrough of the formal EVM spec from the Ethereum Yellow Paper._
+- [Reverse Engineering a Contract](/developers/tutorials/reverse-engineering-a-contract/) _– How to reverse-engineer a compiled smart contract using EVM opcodes._

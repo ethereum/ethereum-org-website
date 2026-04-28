@@ -1,6 +1,6 @@
 ---
-title: Cómo "crear" una cuenta de Ethereum
-description: Guía paso a paso sobre la creación de una cuenta de Ethereum utilizando una billetera.
+title: "Cómo \"crear\" una cuenta de Ethereum"
+description: "Guía paso a paso sobre la creación de una cuenta de Ethereum utilizando una billetera."
 lang: es
 ---
 
@@ -43,7 +43,8 @@ Algunas aplicaciones le pedirán que guarde una "frase de recuperación" secreta
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
-  <div><b>¿Billetera instalada?</b><br/> Aprenda a usarla.</div>
+  <div><b>¿Billetera instalada?</b><br/> Aprenda a usarla.
+</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Cómo utilizar una cartera
   </ButtonLink>

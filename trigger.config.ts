@@ -6,7 +6,7 @@ import { defineConfig } from "@trigger.dev/sdk/v3"
  * See https://trigger.dev/docs for documentation.
  */
 export default defineConfig({
-  project: process.env.TRIGGER_PROJECT_ID || "",
+  project: process.env.TRIGGER_PROJECT_REF!,
   runtime: "node",
   logLevel: "log",
   // Maximum duration for all tasks (5 minutes)
@@ -16,17 +16,14 @@ export default defineConfig({
     enabledInDev: true,
     default: {
       maxAttempts: 1,
-      minTimeoutInMs: 1000,
-      maxTimeoutInMs: 10000,
+      minTimeoutInMs: 1_000,
+      maxTimeoutInMs: 30_000,
       factor: 2,
       randomize: true,
     },
   },
-  // Directories containing Trigger.dev task definitions
-  dirs: [
-    "./src/data-layer/trigger/tasks",
-    "./src/data-layer/trigger/old-tasks",
-  ],
+  // Task definitions file
+  dirs: ["./src/data-layer"],
   // Initialize Sentry for error tracking in Trigger.dev tasks
   // Uses the same Sentry configuration as the Next.js app
   // Note: Trigger.dev already initializes OpenTelemetry, so we skip Sentry's OpenTelemetry setup
@@ -39,18 +36,10 @@ export default defineConfig({
       debug: environment === "development",
       environment,
       enabled: environment === "production",
+      initialScope: { tags: { module: "data-layer" } },
       // Skip OpenTelemetry setup since Trigger.dev already initializes it
       // This prevents "Attempted duplicate registration of API" errors
       skipOpenTelemetrySetup: true,
     } as Parameters<typeof Sentry.init>[0])
-  },
-  // Automatically capture and report task failures to Sentry
-  onFailure: async ({ payload, error, ctx }) => {
-    Sentry.captureException(error, {
-      extra: {
-        payload,
-        ctx,
-      },
-    })
   },
 })

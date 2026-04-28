@@ -1,6 +1,6 @@
 ---
 title: Comece a desenvolver o front-end do seu dapp usando create-eth-app
-description: Uma visão geral de como criar um aplicativo eth-app e seus recursos
+description: "Uma visão geral de como criar um aplicativo eth-app e seus recursos"
 author: "Markus Waas"
 tags:
   - "create-eth-app"
@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-Da última vez, olhamos [para a grande imagem de Solidity](https://soliditydeveloper.com/solidity-overview-2020) e já mencionamos o app [create-eth-](https://github.com/PaulRBerg/create-eth-app). Agora você vai descobrir como usá-lo, quais recursos são integrados e ideias adicionais sobre como expandir sobre isso. Iniciado por Paul Razvan Berg, o fundador do [Sablier](http://sablier.com/), este aplicativo irá iniciar seu desenvolvimento de frontend e vem com várias integrações opcionais para escolher.
+Da última vez, olhamos [para a grande imagem de Solidity](https://soliditydeveloper.com/solidity-overview-2020) e já mencionamos o app [create-eth-](https://github.com/PaulRBerg/create-eth-app). Agora você vai descobrir como usá-lo, quais recursos são integrados e ideias adicionais sobre como expandir sobre isso. Iniciado por Paul Razvan Berg, o fundador do [Sablier](https://sablier.com/), este aplicativo irá iniciar seu desenvolvimento de frontend e vem com várias integrações opcionais para escolher.
 
 ## Instalação {#installation}
 

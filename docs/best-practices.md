@@ -26,7 +26,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
       ```
         JSON `"page-warning": "BE VERY CAREFUL"`
       ```
-  - This minimizes issues during translation, and allows consistent styling to all languages
+  - This minimizes issues during translation, and allows consistent styling across all languages
 - _Please avoid_ embedding links within a sentence. For a word/phrase to be a link, it requires a key/string in the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
 
   - This results in significant challenges during the translation process, as written syntax for each language will vary in terms of ordering subjects/verbs/etc.
@@ -39,7 +39,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   </p>
   ```
 
-  Once, you've added your English content to the appropriate JSON file, the above code should look something more like:
+  Once you've added your English content to the appropriate JSON file, the above code should look something more like:
 
   ```tsx
   <p>
@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `@/hooks/useTranslation`
+- This is done using the `Translation` component. However, there is an alternative method for regular JS: using the `t` function from `@/hooks/useTranslation`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -213,7 +213,7 @@ Use tailwind classes to size icons:
 
 ### Background Circles
 
-Wrap icon in a div for circular backgrounds, and color using background:
+Wrap an icon in a div for circular backgrounds, and color using background:
 
 ```tsx
 <div className="bg-primary/10 grid size-10 place-items-center rounded-full">
@@ -223,7 +223,7 @@ Wrap icon in a div for circular backgrounds, and color using background:
 
 ### Repository Preferences
 
-1. **Preferred**: Lucide out-of-box with color styling
+1. **Preferred**: Lucide out-of-the-box with color styling
 2. **Acceptable**: Lucide with stroke property adjustments
 3. **Last resort**: Custom `.svg` imports
 

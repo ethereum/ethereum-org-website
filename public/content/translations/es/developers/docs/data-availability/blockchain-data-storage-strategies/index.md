@@ -1,6 +1,6 @@
 ---
 title: Estrategias para el almacenamiento de datos en la cadena de bloques
-description: Existen varias formas de guardar datos utilizando la cadena de bloques. En este artículo compararemos las distintas estrategias, sus costos y desventajas, como también los requerimientos para el uso de forma segura.
+description: "Existen varias formas de guardar datos utilizando la cadena de bloques. En este artículo compararemos las distintas estrategias, sus costos y desventajas, como también los requerimientos para el uso de forma segura."
 lang: es
 ---
 
@@ -16,7 +16,7 @@ Existen varias formas para guardar información ya sea directamente en la cadena
 La elección de qué mecanismos usar está basada en diversos criterios:
 
 - La fuente de la información. La información en calldata no puede provenir directamente de la cadena de bloques.
-- El destino de la información. El Calldata solo está disponible en la transacción que inicia. Los eventos no son accesibles en la cadena.
+- El destino de la información. El Calldata solo está disponible en la transacción que lo incluye. Los eventos no son accesibles en la cadena.
 - ¿Cuánto inconveniente es aceptable? Las computadoras que ejecuta un nodo de plena escala tienen la capacidad de procesar más que un cliente ligero en una aplicación que está siendo ejecutada desde un navegador.
 - ¿Es necesario que todos los nodos puedan fácilmente acceder a la información?
 - Requerimientos de seguridad.
@@ -39,7 +39,7 @@ Para continuar leyendo, debería tener un buen entendimiento de [los fundamentos
 
 ## Blobs EIP-4844 {#eip-4844-blobs}
 
-Comenzando con la [bifuración dura de Dencun](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md), la cadena de bloques de Ethereum incluye [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), que agrega blobs de datos en Ethereum con un tiempo de vida limitado (de incialmente unos [18 días](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). Los precios de estos blobs de datos se calculan aparte del [gas de ejecución](/developers/docs/gas), aunque utilizando un mecanismo similar. Son una forma más económica de publicar datos temporales.
+Comenzando con la [bifuración dura de Dencun](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/beacon-chain.md), la cadena de bloques de Ethereum incluye [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), que agrega blobs de datos en Ethereum con un tiempo de vida limitado (de incialmente unos [18 días](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration)). Los precios de estos blobs de datos se calculan aparte del [gas de ejecución](/developers/docs/gas), aunque utilizando un mecanismo similar. Son una forma más económica de publicar datos temporales.
 
 El caso de uso principal para los blobs EIP-4844 es la publicación de las transacciones por parte de los rollups. Los [rollups optimistas](/developers/docs/scaling/optimistic-rollups) nenecesitan publicar las transacciones en sus cadenas de bloques. Esas transacciones deben estar disponibles para que cualquier persona pueda desafiarlas (cuestionarlas) durante el [período de desafío](https://docs.optimism.io/connect/resources/glossary#challenge-period) para permitir que los [validadores](https://docs.optimism.io/connect/resources/glossary#validator)
 puedan resolver errores en caso de que el [secuenciador](https://docs.optimism.io/connect/resources/glossary#sequencer) de los rollups publique incorrectamente la raíz de estado.
@@ -64,7 +64,7 @@ Calldata se refiere a los bytes enviados como parte de las transacciones. Se gua
 
 Este es el método más económico para lograr almacenar datos en la cadena de bloques de forma permanente. El costo per byte es 4 gas de ejecución (en caso de que el byte sea 0) o 16 gas (para cualquier otro valor). Si los datos están comprimidos, práctica estándar, entonces cada byte tiene igual probabilidad, por lo que el costo promedio es de aproximadamente 15,95 gas por byte.
 
-Al momento de la escritura de este artículo, los precios son 12 gwei/gas y 2300 $/ETH, esto es, un costo aproximado de 45 centavos por kilobyte. Dado que esta era la forma más económica previo a la implementación de EIP-4844, este es el método que los rollups utilizaban para guardan información de las transacciones, que debe estar disponible para los [desafíos de falla](https://docs.optimism.io/stack/protocol/overview#fault-proofs), pero no necesita ser directamente accesible en la cadena.
+En el momento de escribir esto, los precios son 12 gwei/gas y 2300 $/ETH, lo que significa que el coste es aproximadamente de 45 centavos por kilobyte. Dado que esta era la forma más económica previo a la implementación de EIP-4844, este es el método que los rollups utilizaban para guardan información de las transacciones, que debe estar disponible para los [desafíos de falla](https://docs.optimism.io/stack/protocol/overview#fault-proofs), pero no necesita ser directamente accesible en la cadena.
 
 Estas son las direcciones para ver las transacciones publicadas por algunos rollups reconocidos.
 
@@ -111,7 +111,7 @@ Esta tabla resume las diferentes opciones, sus ventajas y desventajas.
 
 | Tipos de almacenamiento              | Fuente de datos           | Garantía de disponibilidad                                                                                                                            | Disponibilidad en la cadena                                        | Limitaciones adicionales                                                          |
 | ------------------------------------ | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
-| Blobs EIP-4844                       | Fuera de la cadena        | Garantiza de Ethereum por [~18 días](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Solo el hash está disponible                                       |                                                                                   |
+| Blobs EIP-4844                       | Fuera de la cadena        | Garantiza de Ethereum por [~18 días](https://github.com/ethereum/consensus-specs/blob/master/specs/deneb/p2p-interface.md#configuration) | Solo el hash está disponible                                       |                                                                                   |
 | Calldata                             | Fuera de la cadena        | Garantía de Ethereum para siempre (parte de la cadena de bloques)                                                                  | Solo disponible si se escribe en un contrato, y en esa transacción |                                                                                   |
 | Fuera de la cadena con mecanismos L1 | Fuera de la cadena        | Garantía de "un verificador honesto" durante el período de desafío                                                                                    | Hash solamente                                                     | Garantizado por el mecanismo de desafío, únicamente durante el período de desafío |
 | Código de contrato                   | En cadena o fuera de ella | Garantía de Ethereum para siempre (parte de la cadena de bloques)                                                                  | Sí                                                                 | Escrito en una dirección aleatoria, no puede comenzar con `0xEF`                  |

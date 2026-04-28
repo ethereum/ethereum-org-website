@@ -16,22 +16,22 @@ import {
 import type {
   ChainName,
   FilterOption,
-  Lang,
   WalletData,
+  WalletLanguage,
   WalletRow,
 } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(
     walletsData.filter((wallet) =>
-      wallet.languages_supported.includes(locale as Lang)
+      wallet.languages_supported.includes(locale as WalletLanguage)
     )
   )
 
 export const getNonSupportedLocaleWallets = (locale: string) =>
   shuffle(
     walletsData.filter(
-      (wallet) => !wallet.languages_supported.includes(locale as Lang)
+      (wallet) => !wallet.languages_supported.includes(locale as WalletLanguage)
     )
   )
 
@@ -113,7 +113,7 @@ export const formatStringList = (strings: string[], sliceSize?: number) => {
 const getLanguageTotalCount = (languageCode: string) => {
   return walletsData.reduce(
     (total, currentWallet) =>
-      currentWallet.languages_supported.includes(languageCode as Lang)
+      currentWallet.languages_supported.includes(languageCode as WalletLanguage)
         ? (total = total + 1)
         : total,
     0
@@ -209,7 +209,7 @@ export const filterFn = (data: WalletRow[], filters: FilterOption[]) => {
   return data.filter((wallet) => {
     // Check language support
     const matchesLanguage = wallet.languages_supported.includes(
-      selectedLanguage as Lang
+      selectedLanguage as WalletLanguage
     )
 
     // Check layer 2 support (empty array means no filter applied)

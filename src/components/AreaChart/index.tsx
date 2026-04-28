@@ -11,9 +11,9 @@ import {
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import {
@@ -66,7 +66,11 @@ export function AreaChart({
     <Card>
       <CardHeader>
         {title && <CardTitle>{title}</CardTitle>}
-        {description && <CardDescription>{description}</CardDescription>}
+        {description && (
+          <CardParagraph variant="light" size="sm">
+            {description}
+          </CardParagraph>
+        )}
       </CardHeader>
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
@@ -120,7 +124,7 @@ export function AreaChart({
           <div className="flex w-full items-start gap-2 text-sm">
             <div className="grid gap-2">
               {footerText && (
-                <div className="flex items-center gap-2 font-medium leading-none">
+                <div className="flex items-center gap-2 leading-none font-medium">
                   {footerText} <TrendingUp className="h-4 w-4 text-base" />
                 </div>
               )}

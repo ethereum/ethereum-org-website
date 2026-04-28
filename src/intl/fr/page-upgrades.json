@@ -7,9 +7,9 @@
   "page-upgrades-pbs": "Pas imminent - attendez 2024/25",
   "page-upgrades-post-merge-banner-tutorial-ood": "Ce tutoriel est obsolète depuis la fusion et peut ne pas fonctionner. Veuillez éditer un PR sur GitHub si vous souhaitez contribuer.",
   "page-upgrades-upgrades-guide": "Guide des mises à niveau d'Ethereum",
-  "page-upgrades-upgrades-docking": "La Fusion",
+  "page-upgrades-upgrades-docking": "La fusion",
   "page-upgrades-shard-title": "Fragmentation",
-  "page-upgrades-upgrades-beacon-chain": "La Chaîne phare",
+  "page-upgrades-upgrades-beacon-chain": "La chaîne phare",
   "consensus-beaconscan-title": "beaconscan",
   "consensus-beaconscan-in-title": "beaconcha.in",
   "consensus-beaconcha-in-desc": "Explorateur open source de la chaîne phare",
@@ -19,5 +19,5 @@
   "consensus-explore": "Explorer les données",
   "consensus-run-beacon-chain": "Exécuter un client de consensus",
   "consensus-run-beacon-chain-desc": "Ethereum a besoin qu'un maximum de clients s'exécutent. Aidez ce bien public Ethereum !",
-  "read-more": "En savoir plus"
+  "read-more": "Voir plus"
 }

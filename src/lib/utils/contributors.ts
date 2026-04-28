@@ -1,37 +1,38 @@
 import { join } from "path"
 
-import type { CommitHistory, FileContributor, Lang } from "@/lib/types"
+import type { FileContributor, Lang } from "@/lib/types"
 
-import { CONTENT_DIR, CONTENT_PATH, DEFAULT_LOCALE } from "@/lib/constants"
+import { TEAM_LOGINS } from "@/data/team"
+
+import { CONTENT_PATH, DEFAULT_LOCALE } from "@/lib/constants"
 
 import {
   convertToFileContributorFromCrowdin,
   getCrowdinContributors,
 } from "./crowdin"
-import {
-  fetchAndCacheGitHubContributors,
-  getAppPageLastCommitDate,
-  getMarkdownLastCommitDate,
-} from "./gh"
+import { getAppPageLastCommitDate } from "./gh"
 import { getLocaleTimestamp } from "./time"
+
+import { getGitHubContributors, getStaticGitHubContributors } from "@/lib/data"
+
+/** Sort team members to the end, preserving relative order within each group. */
+const sortTeamToEnd = (contributors: FileContributor[]): FileContributor[] =>
+  contributors.toSorted(
+    (a, b) =>
+      Number(TEAM_LOGINS.has(a.login)) - Number(TEAM_LOGINS.has(b.login))
+  )
 
 export const getMarkdownFileContributorInfo = async (
   slug: string,
   locale: string,
-  fileLang: string,
-  cache: CommitHistory
+  fileLang: string
 ) => {
   const mdPath = join(CONTENT_PATH, slug)
-  const mdDir = join(CONTENT_DIR, slug)
 
-  const gitHubContributors = await fetchAndCacheGitHubContributors(
-    join("/", mdDir, "index.md"),
-    cache
-  )
+  const contributorsData = await getStaticGitHubContributors()
+  const gitHubContributors = contributorsData?.content[slug] ?? []
 
-  const latestCommitDate = getMarkdownLastCommitDate(slug, locale!)
-  const gitHubLastEdit = gitHubContributors[0]?.date
-  const lastUpdatedDate = gitHubLastEdit || latestCommitDate
+  const lastUpdatedDate = gitHubContributors[0]?.date
 
   const crowdinContributors = convertToFileContributorFromCrowdin(
     getCrowdinContributors(mdPath, locale as Lang)
@@ -41,50 +42,20 @@ export const getMarkdownFileContributorInfo = async (
     fileLang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   const contributors: FileContributor[] = englishOnly
-    ? gitHubContributors
-    : [...crowdinContributors, ...gitHubContributors]
+    ? sortTeamToEnd(gitHubContributors)
+    : [...crowdinContributors, ...sortTeamToEnd(gitHubContributors)]
 
   return { contributors, lastUpdatedDate }
 }
 
-/**
- * Returns an array of possible historical file paths for a given page,
- * accounting for different directory structures and migrations over time.
- *
- * @param pagePath - The relative path of the page (without extension).
- * @returns An array of strings representing all historical file paths for the page.
- *
- * @remarks
- * This function is used to track all possible locations a page may have existed in the repository,
- * which is useful for aggregating git history and contributor information.
- *
- * @note
- * If a page is migrated or its location changes, ensure the new path is added to this list.
- * This maintains a complete historical record for accurate git history tracking.
- */
-const getAllHistoricalPaths = (pagePath: string): string[] => [
-  join("src/pages", `${pagePath}.tsx`),
-  join("src/pages", pagePath, "index.tsx"),
-  join("src/pages/[locale]", `${pagePath}.tsx`),
-  join("src/pages/[locale]", pagePath, "index.tsx"),
-  join("app/[locale]", pagePath, "page.tsx"),
-  join("app/[locale]", pagePath, "_components", `${pagePath}.tsx`),
-]
-
 export const getAppPageContributorInfo = async (
   pagePath: string,
-  locale: Lang,
-  cache: CommitHistory
+  locale: Lang
 ) => {
   // TODO: Incorporate Crowdin contributor information
 
-  const gitHubContributors = await getAllHistoricalPaths(pagePath).reduce(
-    async (acc, path) => {
-      const contributors = await fetchAndCacheGitHubContributors(path, cache)
-      return [...(await acc), ...contributors]
-    },
-    Promise.resolve([] as FileContributor[])
-  )
+  const contributorsData = await getGitHubContributors()
+  const gitHubContributors = contributorsData?.appPages[pagePath] ?? []
 
   const uniqueGitHubContributors = gitHubContributors.filter(
     (contributor, index, self) =>
@@ -103,5 +74,8 @@ export const getAppPageContributorInfo = async (
   //   )
   // }
 
-  return { contributors: uniqueGitHubContributors, lastEditLocaleTimestamp }
+  return {
+    contributors: sortTeamToEnd(uniqueGitHubContributors),
+    lastEditLocaleTimestamp,
+  }
 }

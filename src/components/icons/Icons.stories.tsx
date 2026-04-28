@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { Center, Flex } from "../ui/flex"
 
@@ -29,6 +29,7 @@ import {
   AvadoGlyphIcon,
   BattleTestedIcon,
   BedrockGlyphIcon,
+  BitwiseGlyphIcon,
   BugBountyIcon,
   CautionProductGlyph,
   ChainLaboGlyphIcon,
@@ -106,6 +107,7 @@ const iconsDefinitions = [
   { label: "AuditedIcon", Icon: AuditedIcon },
   { label: "AvadoGlyphIcon", Icon: AvadoGlyphIcon },
   { label: "BattleTestedIcon", Icon: BattleTestedIcon },
+  { label: "BitwiseGlyphIcon", Icon: BitwiseGlyphIcon },
   { label: "BedrockGlyphIcon", Icon: BedrockGlyphIcon },
   { label: "BrowserIcon", Icon: BrowserIcon },
   { label: "BugBountyIcon", Icon: BugBountyIcon },

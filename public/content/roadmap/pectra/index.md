@@ -2,11 +2,12 @@
 title: Prague-Electra (Pectra)
 description: Learn about the Pectra protocol upgrade
 lang: en
+authors: ["Nixo", "Mario Havel"]
 ---
 
 # Pectra {#pectra}
 
-The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought changes to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague and Electra, which are the respective names for the execution and consensus layer specification changes. Together, these changes bring a number of improvements to Ethereum users, developers and validators.
+The Pectra network upgrade followed [Dencun](/roadmap/dencun/) and brought changes to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague and Electra, which are the respective names for the execution and consensus layer specification changes. Together, these changes bring a number of improvements to [Ethereum](/) users, developers and validators.
 
 This upgrade was successfully activated on Ethereum mainnet at epoch `364032`, on **07-May-2025 at 10:05 (UTC)**.
 
@@ -109,11 +110,11 @@ Yes, Pectra upgrade requires updates to both [execution clients and consensus cl
 
 ## More of a visual learner? {#visual-learner}
 
-<YouTube id="ufIDBCgdGwY" />
+<VideoWatch slug="pectra-upgrade-overview" />
 
 _What’s Going Into the Pectra Upgrade? - Christine Kim_
 
-<YouTube id="_UpAFpC7X6Y" />
+<VideoWatch slug="pectra-what-stakers-need-to-know" />
 
 _Ethereum Pectra Upgrade: What Stakers Need to Know — Blockdaemon_
 
@@ -124,4 +125,4 @@ _Ethereum Pectra Upgrade: What Stakers Need to Know — Blockdaemon_
 - [Pectra.wtf info page](https://pectra.wtf)
 - [How Pectra enhances staker experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [EIP7702 info page](https://eip7702.io/)
-- [Pectra devnets](https://github.com/ethereum/pm/blob/master/Pectra/pectra-pm.md)
+- [Pectra devnets](https://github.com/ethereum/pm/blob/master/Network-Upgrade-Archive/Pectra/pectra-pm.md)

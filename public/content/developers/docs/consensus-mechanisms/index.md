@@ -2,6 +2,7 @@
 title: Consensus mechanisms
 description: An explanation of consensus protocols in distributed systems and the role they play in Ethereum.
 lang: en
+authors: ["Patrick Collins"]
 ---
 
 The term 'consensus mechanism' is often used colloquially to refer to 'proof-of-stake', 'proof-of-work' or 'proof-of-authority' protocols. However, these are just components in consensus mechanisms that protect against [Sybil attacks](/glossary/#sybil-attack). Consensus mechanisms are the complete stack of ideas, protocols and incentives that enable a distributed set of nodes to agree on the state of a blockchain.
@@ -14,7 +15,7 @@ To better understand this page, we recommend you first read our [introduction to
 
 By consensus, we mean that a general agreement has been reached. Consider a group of people going to the cinema. If there is no disagreement on a proposed choice of film, then a consensus is achieved. If there is disagreement, the group must have the means to decide which film to see. In extreme cases, the group will eventually split.
 
-In regard to the Ethereum blockchain, the process is formalized, and reaching consensus means that at least 66% of the nodes on the network agree on the global state of the network.
+In regard to the [Ethereum](/) blockchain, the process is formalized, and reaching consensus means that at least 66% of the nodes on the network agree on the global state of the network.
 
 ## What is a consensus mechanism? {#what-is-a-consensus-mechanism}
 
@@ -62,7 +63,7 @@ More on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
 Watch more on the different types of consensus mechanisms used on Ethereum:
 
-<YouTube id="ojxfbN78WFQ" />
+<VideoWatch slug="understanding-consensus-mechanisms" />
 
 ### Sybil resistance & chain selection {#sybil-chain}
 

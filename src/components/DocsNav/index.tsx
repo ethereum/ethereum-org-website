@@ -14,12 +14,12 @@ import docLinks from "@/data/developer-docs-links.yaml"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 const TextDiv = ({ children, className, ...props }) => (
   <div
     className={cn(
-      "flex h-full w-full flex-col justify-center break-words p-4",
+      "flex h-full w-full flex-col justify-center p-4 break-words",
       className
     )}
     {...props}
@@ -47,7 +47,7 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
     <BaseLink
       href={docData.href}
       className={cn(
-        "group flex w-full items-center rounded-sm border border-primary bg-background !no-underline",
+        "group flex w-full items-center rounded-xs border border-primary bg-background !no-underline",
         isPrev ? "justify-start" : "justify-end",
         "hover:border-primary-hover"
       )}
@@ -142,7 +142,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
           isPrev
         />
       ) : (
-        <div className="hidden flex-grow xl:block" />
+        <div className="hidden grow xl:block" />
       )}
       {nextDoc ? (
         <CardLink
@@ -150,7 +150,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
           contentNotTranslated={contentNotTranslated}
         />
       ) : (
-        <div className="hidden flex-grow xl:block" />
+        <div className="hidden grow xl:block" />
       )}
     </nav>
   )

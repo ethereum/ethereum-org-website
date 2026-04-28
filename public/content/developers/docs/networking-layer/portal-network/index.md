@@ -4,7 +4,7 @@ description: An overview of the Portal Network - an in-development network desig
 lang: en
 ---
 
-Ethereum is a network made up of computers that run Ethereum client software. Each of these computers is called a 'node'. The client software allows a node to send and receive data on the Ethereum network, and verifies data against the Ethereum protocol rules. Nodes keep a lot of historical data in their disk storage and add to it when they receive new packets of information, known as blocks, from other nodes on the network. This is necessary for always checking that a node has information consistent with the rest of the network. This means running a node can require a lot of disk space. Some node operations can require a lot of RAM too.
+[Ethereum](/) is a network made up of computers that run Ethereum client software. Each of these computers is called a 'node'. The client software allows a node to send and receive data on the Ethereum network, and verifies data against the Ethereum protocol rules. Nodes keep a lot of historical data in their disk storage and add to it when they receive new packets of information, known as blocks, from other nodes on the network. This is necessary for always checking that a node has information consistent with the rest of the network. This means running a node can require a lot of disk space. Some node operations can require a lot of RAM too.
 
 To get around this disk storage problem, 'light' nodes have been developed that request information from full nodes instead of storing it all themselves. However, this means the light node is not independently verifying the information and is trusting another node instead. It also means that full nodes are required to take on extra work to serve those light nodes.
 
@@ -59,13 +59,13 @@ The benefits of this network design are:
 
 The table below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
-### The Portal Networks
+### The Portal Networks {#the-portal-networks}
 
-| Beacon light client | State network                | Transaction gossip  | History network |
-| ------------------- | ---------------------------- | ------------------- | --------------- |
-| Beacon chain light  | Account and contract storage | Lightweight mempool | Headers         |
-| Protocol data       |                              |                     | Block bodies    |
-|                     |                              |                     | Receipts        |
+| Beacon light client | State network                | Transaction gossip  | History network | Canonical Txn Index  |
+| ------------------- | ---------------------------- | ------------------- | --------------- | -------------------  |
+| Beacon chain light  | Account and contract storage | Lightweight mempool | Headers         | TxHash > Hash, Index |
+| Protocol data       |                              |                     | Block bodies    |                      |
+|                     |                              |                     | Receipts        |                      |
 
 ## Client diversity by default {#client-diversity-as-default}
 

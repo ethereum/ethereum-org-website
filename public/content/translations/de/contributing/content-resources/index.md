@@ -1,32 +1,32 @@
 ---
-title: Inhaltsressourcen hinzufügen
+title: "Hinzufügen von Inhaltsressourcen"
 lang: de
-description: Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org
+description: "Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org"
 ---
 
-# Inhaltsressourcen hinzufügen {#adding-content-resources}
+# Hinzufügen von Inhaltsressourcen {#adding-content-resources}
 
-Ethereum vollständig abzubilden, ist wegen des Umfangs nicht möglich. Daher versuchen wir, einige der großartigen Artikel, Tutorials, Newsletter, Jobbörsen und verschiedene Inhaltsressourcen vorzustellen, die die Community erstellt. Sie bieten oft tiefergreifende Informationen zu Themen, die für die Nutzer von Interesse sind.
+Wir können unmöglich alles rund um Ethereum abdecken, daher versuchen wir, einige der brillanten Artikel, Tutorials, Newsletter, Jobbörsen und verschiedenen Inhaltsressourcen zu präsentieren, die die Community erstellt. Diese bieten oft tiefergehende Informationen zu Themen, an denen Benutzer interessiert sein könnten.
 
-Wenn Sie eine Ressource kennen, die Ihrer Meinung nach nützlich ist, können Sie sie an geeigneter Stelle zur Hinzufügung vorschlagen.
+Wenn es eine Inhaltsressource gibt, von der Sie der Meinung sind, dass sie zu einer Seite hinzugefügt werden sollte, können Sie diese gerne an einer geeigneten Stelle vorschlagen.
 
-## Die Entscheidungsfindung {#how-we-decide}
+## Wie wir entscheiden {#how-we-decide}
 
-Die Lernressourcen werden anhand der folgenden Kriterien bewertet:
+Lernressourcen werden nach den folgenden Kriterien bewertet:
 
-- Ist der Inhalt auf dem neuesten Stand?
-- Befindet sich der Inhalt hinter einer Bezahlschranke?
-- Sind die Informationen korrekt? Werden Tatsachen oder Meinungen präsentiert?
-- Ist der Autor glaubwürdig? Werden Quellen angegeben?
-- Bietet dieser Inhalt einen eindeutigen Mehrwert, der von bestehenden Ressourcen/Links nicht abgedeckt wird?
-- Ist der Inhalt für eine unserer [Nutzergruppen](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) nützlich?
+- Ist der Inhalt aktuell?
+- Befindet sich der Inhalt hinter einer Paywall?
+- Sind die Informationen korrekt? Sind sie sachlich oder meinungsbasiert?
+- Ist der Autor glaubwürdig? Verweist er auf seine Quellen?
+- Bietet dieser Inhalt einen deutlichen Mehrwert, der von bestehenden Ressourcen/Links nicht abgedeckt wird?
+- Bedient dieser Inhalt eine unserer [Benutzer-Personas](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)?
 
 ---
 
-## Ihre Inhaltsressource hinzufügen {#add-your-content-resource}
+## Fügen Sie Ihre Inhaltsressource hinzu {#add-your-content-resource}
 
-Wenn Sie eine Inhaltsressource zu ethereum.org hinzufügen möchten und diese die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
+Wenn Sie eine Inhaltsressource zu ethereum.org hinzufügen möchten und diese die Kriterien erfüllt, erstellen Sie ein Issue auf GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
-  Eintrag erstellen
+  Issue erstellen
 </ButtonLink>

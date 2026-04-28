@@ -43,7 +43,7 @@ export const ResourceItem = ({
     <div className="w-full">
       <h3 className="text-md text-inherit">{title}</h3>
       <p className="text-inherit">{description}</p>
-      <Tag className="mt-1 rounded-full normal-case text-inherit">{href}</Tag>
+      <Tag className="mt-1 rounded-full text-inherit normal-case">{href}</Tag>
     </div>
   </Link>
 )

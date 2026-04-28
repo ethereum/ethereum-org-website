@@ -5,20 +5,12 @@
 
 import { getTranslations } from "next-intl/server"
 
-import type {
-  AllHomepageActivityData,
-  CommunityConference,
-  Lang,
-  StatsBoxMetric,
-} from "@/lib/types"
+import type { AllHomepageActivityData, Lang, StatsBoxMetric } from "@/lib/types"
 
-import { isValidDate } from "@/lib/utils/date"
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
+import { numberFormat } from "@/lib/utils/numbers"
 
 const formatLargeUSD = (value: number, locale: string): string => {
-  return new Intl.NumberFormat(locale, {
+  return numberFormat(locale, {
     style: "currency",
     currency: "USD",
     notation: "compact",
@@ -28,7 +20,7 @@ const formatLargeUSD = (value: number, locale: string): string => {
 }
 
 const formatSmallUSD = (value: number, locale: string): string => {
-  return new Intl.NumberFormat(locale, {
+  return numberFormat(locale, {
     style: "currency",
     currency: "USD",
     notation: "compact",
@@ -38,7 +30,7 @@ const formatSmallUSD = (value: number, locale: string): string => {
 }
 
 const formatLargeNumber = (value: number, locale: string): string => {
-  return new Intl.NumberFormat(locale, {
+  return numberFormat(locale, {
     notation: "compact",
     minimumSignificantDigits: 3,
     maximumSignificantDigits: 4,
@@ -57,8 +49,6 @@ export const getActivity = async (
 ): Promise<StatsBoxMetric[]> => {
   const t = await getTranslations("page-index")
 
-  const localeForNumberFormat = getLocaleForNumberFormat(locale)
-
   const hasEthStakerAndPriceData =
     "value" in totalEthStaked && "value" in ethPrice
   const totalStakedInUsd = hasEthStakerAndPriceData
@@ -76,7 +66,7 @@ export const getActivity = async (
       }
     : {
         ...totalEthStaked,
-        value: formatLargeUSD(totalStakedInUsd, localeForNumberFormat),
+        value: formatLargeUSD(totalStakedInUsd, locale),
       }
 
   const valueLocked =
@@ -84,7 +74,7 @@ export const getActivity = async (
       ? { error: totalValueLocked.error }
       : {
           ...totalValueLocked,
-          value: formatLargeUSD(totalValueLocked.value, localeForNumberFormat),
+          value: formatLargeUSD(totalValueLocked.value, locale),
         }
 
   const txs =
@@ -92,7 +82,7 @@ export const getActivity = async (
       ? { error: txCount.error }
       : {
           ...txCount,
-          value: formatLargeNumber(txCount.value, localeForNumberFormat),
+          value: formatLargeNumber(txCount.value, locale),
         }
 
   const medianTxCost =
@@ -100,7 +90,7 @@ export const getActivity = async (
       ? { error: txCostsMedianUsd.error }
       : {
           ...txCostsMedianUsd,
-          value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
+          value: formatSmallUSD(txCostsMedianUsd.value, locale),
         }
 
   const metrics: StatsBoxMetric[] = [
@@ -132,38 +122,3 @@ export const getActivity = async (
 
   return metrics
 }
-
-export const getUpcomingEvents = (
-  events: CommunityConference[],
-  locale = DEFAULT_LOCALE
-): CommunityConference[] =>
-  events
-    .filter((event) => {
-      const isValid = isValidDate(event.endDate)
-      const beginningOfEndDate = new Date(event.endDate).getTime()
-      const endOfEndDate = beginningOfEndDate + 24 * 60 * 60 * 1000
-      const isUpcoming = endOfEndDate >= new Date().getTime()
-      return isValid && isUpcoming
-    })
-    .sort(
-      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
-    )
-    .map(({ startDate, endDate, ...event }) => {
-      const formattedDate =
-        isValidDate(startDate) || isValidDate(endDate)
-          ? new Intl.DateTimeFormat(locale, {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            }).formatRange(
-              new Date(isValidDate(startDate) ? startDate : endDate),
-              new Date(isValidDate(endDate) ? endDate : startDate)
-            )
-          : ""
-      return {
-        ...event,
-        startDate,
-        endDate,
-        formattedDate,
-      }
-    })

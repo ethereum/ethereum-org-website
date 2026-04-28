@@ -1,6 +1,6 @@
 ---
 title: Tasdikler
-description: Hisse ispatı Ethereum'da tasdikler üzerine bir açıklama.
+description: "Hisse ispatı Ethereum'da tasdikler üzerine bir açıklama."
 lang: tr
 ---
 
@@ -8,31 +8,31 @@ Bir doğrulayıcının her dönemde bir tasdik oluşturması, imzalaması ve yay
 
 ## Tasdik nedir? {#what-is-an-attestation}
 
-Her [dönemde](/glossary/#epoch) (6,4 dakika) bir doğrulayıcı ağa bir tasdik önerir. Bu tasdik, dönemdeki spesifik bir yuva içindir. Tasdikin amacı doğrulayıcının zincir görüşü yani spesifik olarak en son haklı görülen blok ile mevcut dönemdeki ilk blok (`source` ve `target` kontrol noktaları olarak bilinir) için oy vermektir. Bu bilgi tüm katılım sağlayan doğrulayıcılar için birleştirilir ve ağın blok zincirin mevcut durumu üzerinde mutabakata varmasını sağlar.
+Her [dönemde](/glossary/#epoch) (6,4 dakika) bir doğrulayıcı ağa bir tasdik önerir. Bu tasdik, dönemdeki spesifik bir yuva içindir. Tasdikin amacı, doğrulayıcının zincir görüşü, özellikle de en son gerekçelendirilmiş blok ve mevcut dönemdeki ilk blok (`kaynak` ve `hedef` kontrol noktaları olarak bilinir) lehine oy kullanmaktır. Bu bilgi tüm katılım sağlayan doğrulayıcılar için birleştirilir ve ağın blok zincirin mevcut durumu üzerinde mutabakata varmasını sağlar.
 
 Bu tasdik şu bileşenleri içerir:
 
-- `aggregation_bits`: komitelerindeki doğrulayıcı endeksi ile eşleşen pozisyonun bulunduğu bir doğrulayıcı bit listesi; değer (0/1) doğrulayıcının `data` imzalayıp imzalamadığını gösterir (yani aktif olup olmadıklarını ve blok önericisi ile anlaşıp anlaşmadığını)
-- `data`: aşağıda tanımlandığı gibi, tasdik ile alakalı ayrıntılar
-- `signature`: tekil doğrulayıcıların imzalarını toplayan bir BLS imzası
+- `aggregation_bits`: konumun, komitelerindeki doğrulayıcı diziniyle eşleştiği bir doğrulayıcı bit listesi; değer (0/1), doğrulayıcının `veri`yi imzalayıp imzalamadığını gösterir (yani, aktif olup olmadıklarını ve blok önericisiyle aynı fikirde olup olmadıklarını)
+- `veri`: aşağıda tanımlandığı gibi, tasdikle ilgili ayrıntılar
+- `imza`: bireysel doğrulayıcıların imzalarını bir araya getiren bir BLS imzası
 
-Tasdikleyici bir doğrulayıcı için ilk görev `data` inşasıdır. Bu `data` aşağıdaki bilgileri içerir:
+Tasdik eden bir doğrulayıcının ilk görevi `veri`yi oluşturmaktır. `veri` aşağıdaki bilgileri içerir:
 
-- `slot`: Tasdikin değindiği yuva numarası
-- `index`: Verilen bir yuvadaki doğrulayıcının hangi kurula ait olduğunu belirten bir sayı
-- `beacon_block_root`: Doğrulayıcının zincirin başında gördüğü blokun kök şifresi (çatal seçim algoritmasının uygulanmasının sonucu)
-- `source`: Doğrulayıcıların neyi en güncel kabul edilebilir blok olarak gördüğünü belirten kesinlik oyunun bir kısmı
-- `target`: Doğrulayıcıların neyi mevcut dönemin ilk bloku olarak gördüğünü belirten kesinlik oyunun bir kısmı
+- `yuva`: Tasdikin atıfta bulunduğu yuva numarası
+- `indeks`: Belirli bir yuvada doğrulayıcının hangi komiteye ait olduğunu tanımlayan bir sayı
+- `beacon_block_root`: Doğrulayıcının zincirin başında gördüğü bloğun kök karması (çatal seçim algoritmasını uygulamanın sonucu)
+- `kaynak`: Doğrulayıcıların en son gerekçelendirilmiş blok olarak neyi gördüğünü belirten kesinlik oyunun bir parçası
+- `hedef`: Doğrulayıcıların mevcut dönemdeki ilk blok olarak neyi gördüğünü belirten kesinlik oyunun bir parçası
 
-`data` inşa edildiğinde, doğrulayıcı `aggregation_bits` içinde kendi doğrulayıcı endeksine denk gelen biti 0'dan 1'e ters çevirerek katılım sağladığını gösterebilir.
+`veri` oluşturulduktan sonra, doğrulayıcı katıldığını göstermek için `aggregation_bits` içinde kendi doğrulayıcı indeksine karşılık gelen biti 0'dan 1'e çevirebilir.
 
 Son olarak, doğrulayıcı tasdiki imzalar ve ağa yayınlar.
 
 ### Toplanmış tasdik {#aggregated-attestation}
 
-Bu veriyi ağ üzerinde her bir doğrulayıcı için dolaştırmanın önemli bir ek masrafı vardır. Sonuç olarak, tekil doğrulayıcılardan gelen tasdikler daha geniş olarak yayınlanmadan önce alt ağlar içerisinde toplanır. Bu, imzaların birlikte toplanmalarını içerir; bu sayede, yayınlanan bir tasdik, mutabakat `data`'sını ve tüm doğrulayıcıların `data` ile mutabakatta olduğu tüm imzaları birleştiren tek bir imzadan oluşur. Bu `aggregation_bits` kullanılarak kontrol edilebilir çünkü bu kendi komitesindeki (kimliği `data` içinde bulunur) her bir doğrulayıcının endeksini sağlar, bu da tekil imzaları sorgulamak için kullanılabilir.
+Bu veriyi ağ üzerinde her bir doğrulayıcı için dolaştırmanın önemli bir ek masrafı vardır. Sonuç olarak, tekil doğrulayıcılardan gelen tasdikler daha geniş olarak yayınlanmadan önce alt ağlar içerisinde toplanır. Bu, imzaların bir araya getirilmesini içerir, böylece yayınlanan bir tasdik, mutabakat `verisi`ni ve bu `veri` ile aynı fikirde olan tüm doğrulayıcıların imzalarının birleştirilmesiyle oluşturulan tek bir imzayı içerir. Bu, `aggregation_bits` kullanılarak kontrol edilebilir çünkü bu, (kimliği `veri`de sağlanan) komitelerindeki her doğrulayıcının indeksini sağlar ve bu da bireysel imzaları sorgulamak için kullanılabilir.
 
-Her dönemde her bir alt ağdaki 16 doğrulayıcı, `toplayıcı` olarak seçilir. Toplayıcılar dedikodu ağından duydukları ve kendi `verilerine` eşdeğer olan tüm tasdikleri toplar. Her uyumlu tasdikin göndericisi `aggregation_bits` içerisinde kaydedilir. Toplayıcılar sonrasında topladıkları tasdikleri daha geniş bir ağa yayımlar.
+Her dönemde, her bir alt ağdaki 16 doğrulayıcı `toplayıcı` olarak seçilir. Toplayıcılar, dedikodu ağı üzerinden duydukları ve kendilerininkiyle eşdeğer `veri`ye sahip olan tüm tasdikleri toplar. Eşleşen her tasdikin göndericisi `aggregation_bits`e kaydedilir. Toplayıcılar sonrasında topladıkları tasdikleri daha geniş bir ağa yayımlar.
 
 Bir doğrulayıcı blok önericisi olmak için seçildiğinde yeni bloktaki en son yuvaya kadar alt ağlardaki tasdik toplamlarını paketler.
 
@@ -60,33 +60,33 @@ En iyi senaryo, üç etiketin de doğru olduğu senaryodur; bu durumda da doğru
 
 Etiket tasdikleme oranı, belirlenmiş etiketi tasdikleyen tüm doğrulayıcıların toplam bakiyesinin toplam aktif bakiyeyle karşılaştırılmasıyla elde edilir.
 
-### Ana ödül {#base-reward}
+### Temel ödül {#base-reward}
 
 Ana ödül tasdik veren doğrulayıcıların ve onların etkili hisselenmiş ether bakiyelerine göre hesaplanır:
 
-`base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)`
+`temel ödül = doğrulayıcı etkin bakiyesi x 2^6 / KAREKÖK(Tüm aktif doğrulayıcıların etkin bakiyesi)`
 
 #### Dahil etme gecikmesi {#inclusion-delay}
 
-Doğrulayıcıların zincirin başı üzerine oylama yaptığı zamanda (`block n`), `block n+1` henüz önerilmemişti. Sonuç olarak tasdikler doğal olarak **bir blok sonra** dahil edilmektedir yani zincirin başı olan `block n` üzerinde oylayan tüm tasdikler `block n+1` içinde dahil edilmiştir ve **dahil etme gecikmesi** 1'dir. Eğer dahil etme gecikmesi iki yuvaya katlanırsa, tasdik ödülü yarılanır çünkü tasdik ödülünü hesaplamak için ana ödül dahil etme gecikmesinin tersi ile çarpılır.
+Doğrulayıcılar zincirin başı (`blok n`) için oy kullandığı sırada, `blok n+1` henüz önerilmemişti. Bu nedenle, tasdikler doğal olarak **bir blok sonra** dahil edilir, bu yüzden zincirin başı olarak `blok n`'ye oy veren tüm tasdikler `blok n+1`'e dahil edilir ve **dahil etme gecikmesi** 1 olur. Eğer dahil etme gecikmesi iki yuvaya katlanırsa, tasdik ödülü yarılanır çünkü tasdik ödülünü hesaplamak için ana ödül dahil etme gecikmesinin tersi ile çarpılır.
 
 ### Tasdik senaryoları {#attestation-scenarios}
 
-#### Kayıp Oylayan Doğrulayıcı {#missing-voting-validator}
+#### Eksik Oy Kullanan Doğrulayıcı {#missing-voting-validator}
 
 Doğrulayıcıların tasdiklerini bildirmeleri için maksimum 1 dönemleri vardır. Eğer dönem 0'da tasdik kaçırıldıysa, dönem 1'de dahil etme gecikmesi ile bildirebilirler.
 
-#### Kayıp Toplayıcı {#missing-aggregator}
+#### Eksik Toplayıcı {#missing-aggregator}
 
-Dönem başına toplam 16 Toplayıcı bulunmaktadır. Ek olarak, rastgele doğrulayıcılar **256 dönem için 2 alt ağa** abone olurlar ve toplayıcıların kayıp olduğu bir duruma karşı yedek olarak davranırlar.
+Dönem başına toplam 16 Toplayıcı bulunmaktadır. Ayrıca, rastgele doğrulayıcılar **256 dönem boyunca iki alt ağa** abone olur ve toplayıcıların eksik olması durumunda yedek olarak görev yapar.
 
-#### Kayıp blok önericisi {#missing-block-proposer}
+#### Eksik blok önericisi {#missing-block-proposer}
 
-Bazı durumlarda şanslı bir toplayıcının aynı zamanda blok önericisi olabileceğini unutmayın. Eğer tasdik blok önericisi kaybolduğu için dahil edilmeseydi, sıradaki blok önericisi toplanmış tasdiki alıp sıradaki bloka dahil edebilirdi. Ancak, **dahil etme gecikmesi** bir artardı.
+Bazı durumlarda şanslı bir toplayıcının aynı zamanda blok önericisi olabileceğini unutmayın. Eğer tasdik blok önericisi kaybolduğu için dahil edilmeseydi, sıradaki blok önericisi toplanmış tasdiki alıp sıradaki bloka dahil edebilirdi. Ancak, **dahil etme gecikmesi** bir artacaktır.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla kaynak {#further-reading}
 
-- [Vitalik'in açıklamalı mutabakat özelliklerindeki tasdikler](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Eth2book.info içindeki tasdikler](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
+- [Vitalik'in açıklamalı mutabakat spesifikasyonundaki Tasdikler](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
+- [eth2book.info'daki Tasdikler](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_

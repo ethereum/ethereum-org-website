@@ -3,14 +3,18 @@
   "template-usecase-dropdown-defi": "Finanzas descentralizadas (DeFi)",
   "template-usecase-dropdown-nft": "Tókenes No Fungibles (NFT)",
   "template-usecase-dropdown-dao": "Organizaciones Autónomas Descentralizadas (DAO)",
+  "template-usecase-dropdown-apps": "Aplicaciones de Ethereum",
   "template-usecase-dropdown-payments": "Pagos con Ethereum",
   "template-usecase-dropdown-prediction-markets": "Mercados de predicción",
   "template-usecase-dropdown-social-networks": "Redes sociales descentralizadas",
+  "template-usecase-dropdown-restaking": "Restaking",
   "template-usecase-dropdown-identity": "Identidad descentralizada",
   "template-usecase-dropdown-desci": "Ciencia descentralizada (DeSci)",
   "template-usecase-dropdown-refi": "Finanzas regerenativas (ReFi)",
   "template-usecase-dropdown": "Casos de uso de Ethereum",
   "template-usecase-banner": "Los usos de Ethereum siempre se están desarrollando y evolucionando. Añada cualquier información que considere que aclare o aporte datos actuales.",
   "template-usecase-edit-link": "Editar página",
-  "template-usecase-dropdown-aria": "Menú desplegable de casos de uso"
+  "template-usecase-dropdown-aria": "Menú desplegable de casos de uso",
+  "template-usecase-dropdown-onchain-gaming": "Juegos en cadena (Onchain Gaming)",
+  "template-usecase-dropdown-rwa": "Activos del mundo real (RWA)"
 }

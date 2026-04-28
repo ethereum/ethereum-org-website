@@ -44,7 +44,7 @@ const SimpleHero = ({
   return (
     <div
       className={cn(
-        "flex w-full flex-col gap-8 px-4 pb-4 pt-11 md:w-1/2 md:px-8",
+        "flex w-full flex-col gap-8 px-4 pt-11 pb-4 md:w-1/2 md:px-8",
         className
       )}
     >

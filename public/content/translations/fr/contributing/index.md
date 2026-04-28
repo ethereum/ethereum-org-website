@@ -67,8 +67,6 @@ Avant de contribuer, assurez-vous que vous connaissez bien :
 - notre [guide de style](/contributing/style-guide/).
 - notre [code de conduite](/community/code-of-conduct)
 
-<ContributorsQuizBanner className="mt-16 mb-8" />
-
 ## Comment sont prises les décisions concernant le site {#how-decisions-about-the-site-are-made}
 
 Les décisions concernant les RP individuelles, l'évolution de la conception et les mises à jour majeures sont prises par une équipe issue de l'ensemble de l'écosystème Ethereum. Cette équipe comprend des chefs de projet, des développeurs, des designers, des spécialistes du marketing et de la communication, ainsi que des experts thématiques. Chaque décision tient compte de l'avis de la communauté : n'hésitez donc pas à poser des questions via les tickets GitHub issue, à soumettre des pulls request ou à contacter l'équipe :

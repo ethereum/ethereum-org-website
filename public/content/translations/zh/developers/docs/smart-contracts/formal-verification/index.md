@@ -1,6 +1,6 @@
 ---
-title: 智能合约的形式化验证
-description: 以太坊智能合约的形式化验证概述
+title: "智能合约的形式化验证"
+description: "以太坊智能合约的形式化验证概述"
 lang: zh
 ---
 
@@ -26,7 +26,7 @@ lang: zh
 
 高级模型侧重于智能合约和外部代理之间的关系，例如外部帐户 (EOA)、合约帐户和区块链环境。 这些模型有助于定义属性，这些属性规定了合约应该如何响应某些用户的交互行为。
 
-相反，其他一些形式化模型侧重于智能合约的低级行为。 虽然高级模型有助于论证合约的功能，但它们可能无法捕捉到实现的内部运作细节。 低级模型对程序分析应用了白盒视图并依赖于智能合约应用程序的低级表示，例如程序跟踪和[控制流程图](https://en.wikipedia.org/wiki/Control-flow_graph)，来推理与合约执行相关的属性。
+相反，其他一些形式化模型侧重于智能合约的低级行为。 虽然高级模型有助于论证合约的功能，但它们可能无法捕捉到实现的内部运作细节。 低级模型对程序分析应用了白盒视图并依赖于智能合约应用程序的低级表示（例如程序跟踪和[控制流程图](https://en.wikipedia.org/wiki/Control-flow_graph)），来推理与合约执行相关的属性。
 
 低级模型被视为理想模型，因为它们体现着智能合约在以太坊执行环境（即[以太坊虚拟机](/developers/docs/evm/)）中的实际执行。 低级建模技术在确立智能合约的重要安全属性和检测潜在漏洞方面特别有用。
 
@@ -40,11 +40,11 @@ lang: zh
 
 在开发安全的智能合约实现时，形式化规范非常重要。 无法实现不变量或者在执行过程中属性被违反的合约容易出现漏洞，可能会损害功能或者受到恶意的利用。
 
-## 智能合约形式化规范的类型 {#formal-specifications-for-smart-contracts}
+## 智能合约的形式化规范类型 {#formal-specifications-for-smart-contracts}
 
 形式化规范支持对程序执行的正确性进行数学推理。 与形式化模型一样，形式化规范能够详尽描述合约实现的高级属性或低级行为。
 
-形式化规范从[程序逻辑](https://en.wikipedia.org/wiki/Logic_programming)的元素中推导出来，可对程序的属性进行形式化推理。 程序逻辑具有形式化规则，它们使用数学语言表示程序的预期行为。 可以使用各种程序逻辑制定形式化规范，包括[可达性逻辑](https://en.wikipedia.org/wiki/Reachability_problem)、[时间逻辑](https://en.wikipedia.org/wiki/Temporal_logic)以及[霍尔逻辑](https://en.wikipedia.org/wiki/Hoare_logic)。
+形式化规范从[程序逻辑](https://en.wikipedia.org/wiki/Logic_programming)的元素中推导出来，可对程序的属性进行形式化推理。 程序逻辑具有形式化规则，它们使用数学语言表示程序的预期行为。 创建形式化规范时会使用各种程序逻辑，包括[可达性逻辑](https://en.wikipedia.org/wiki/Reachability_problem)、[时间逻辑](https://en.wikipedia.org/wiki/Temporal_logic)和[霍尔逻辑](https://en.wikipedia.org/wiki/Hoare_logic)。
 
 智能合约的形式化规范可以大致分类为**高级**或**低级**规范。 无论属于哪一类，规范都必须充分明确地描述被分析系统的属性。
 
@@ -54,11 +54,11 @@ lang: zh
 
 [时间逻辑](https://en.wikipedia.org/wiki/Temporal_logic)是“用时间限定的命题的推理规则（例如，“我_总是_饿”或者“我_最终_会饿”）。” 当应用于形式化验证时，时间逻辑用来声明建模成状态机的系统的正确行为的断言。 具体而言，时间逻辑描述智能合约可以进入的未来状态以及它如何在不同状态之间转换。
 
-高级规范一般详述智能合约的两个关键时间属性：**安全性**和**活性**。 安全属性代表“任何坏事始终都不会发生”的想法，通常用来表示不变性。 安全属性可以定义常规软件要求（例如不发生[死锁](https://www.techtarget.com/whatis/definition/deadlock)），或者表达合约领域特定的属性（例如，函数访问控制的不变量、状态变量的容许值或代币转账的条件）。
+高级规范一般详述智能合约的两个关键时间属性：**安全**性和**活性**。 安全属性代表“任何坏事始终都不会发生”的想法，通常用来表示不变性。 安全属性可以定义常规软件要求（例如不发生[死锁](https://www.techtarget.com/whatis/definition/deadlock)），或者表达合约领域特定的属性（例如，函数访问控制的不变量、状态变量的容许值或代币转账的条件）。
 
 以下面的安全要求为例，它描述了在 ERC-20 代币合约中使用 `transfer()` 或 `transferFrom()` 的条件：_“发送人的余额始终不能少于请求发送的代币金额。”_。 这种合约不变量的自然语言描述可以转化为形式化（数学）规范，以便随后能够进行严格的有效性检查。
 
-活性属性断言“好事终究会发生”，并涉及到合约通过不同状态的能力。 活性属性的一个例子是“流动性”，指的是合约在收到请求把余额转账给用户的能力。 如果违反了该属性，用户将不能提取存入合约的资产，就像在 [Parity 钱包事件](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html)中发生的情况一样。
+活性属性断言“好事终究会发生”，并涉及到合约通过不同状态的能力。 活性属性的一个例子是“流动性”，指的是合约在收到请求把余额转账给用户的能力。 如果该属性被违反，用户将无法提取存储在合约中的资产，就像在 [Parity 钱包事件](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html)中发生的那样。
 
 ### 低级规范 {#low-level-specifications}
 
@@ -70,7 +70,7 @@ lang: zh
 
 ### 霍尔式属性 {#hoare-style-properties}
 
-[霍尔逻辑](https://en.wikipedia.org/wiki/Hoare_logic)提供了一套形式化规则来推理程序（包括智能合约）的正确性。 霍尔式属性使用霍尔三元组 \{_P_}_c_\{_Q_} 表示，其中 _c_ 代表程序，_P_ 和 _Q_ 是 _c_（即程序）状态的谓词，它们正式描述成_前置条件_和_后置条件_。
+[霍尔逻辑](https://en.wikipedia.org/wiki/Hoare_logic)提供了一套形式化规则来推理程序（包括智能合约）的正确性。 霍尔式属性使用霍尔三元组 `{P}c{Q}` 表示，其中 `c` 代表程序，`P` 和 `Q` 是 `c`（即程序）状态的谓词，二者分别正式描述成_前置条件_和_后置条件_。
 
 前置条件是描述函数正确执行所需条件的谓词；用户调用合约必须满足该要求。 后置条件是描述函数在正确执行时所达成条件的谓词；用户在调用函数后可以期待该条件为真。 在霍尔逻辑中，_不变量_是一个在函数执行时保留的谓词（即它不改变）。
 
@@ -100,7 +100,7 @@ lang: zh
 
 - 如果用户未给提案投票，可以要求退款
 
-执行轨迹级属性的示例可以是_“没有存入资金的用户无法对提案投票”_或_“未对提案投票的用户始终应该可以要求退款”_。 这两个属性断言优先执行次序（在存入资金_之前_无法投票和给提案投票_之后_无法要求退款）。
+执行轨迹级属性的示例可以是_“没有存入资金的用户无法对提案投票”_或_“未对提案投票的用户始终应该可以要求退款”_。 这两个属性断言优先执行次序（在存入资金之前无法投票和给提案投票之后无法要求退款）。
 
 ## 智能合约的形式化验证技术 {#formal-verification-techniques}
 
@@ -110,7 +110,7 @@ lang: zh
 
 模型检查要求创建系统（即合约）的抽象数学表示并使用根植于[命题逻辑](https://www.baeldung.com/cs/propositional-logic)的公式表示该系统的属性。 这简化了模型检查算法的任务，即证明一个数学模型满足给定的逻辑公式。
 
-形式化验证的模型检查主要用来评估时间属性，后者描述合约在一段时间内的行为。 如前所述，智能合约的时间属性包括_安全_和_活性_。
+形式化验证的模型检查主要用来评估时间属性，后者描述合约在一段时间内的行为。 如前所述，智能合约的时间属性包括安全性和活性。
 
 例如，与访问控制有关的安全属性（例如，_只有合约的所有者才能调用 `selfdestruct`_）可以用形式化逻辑来编写。 此后，模型检查算法能验证合约是否满足此形式化规范。
 
@@ -120,7 +120,7 @@ lang: zh
 
 定理证明是一种程序（包括智能合约）正确性的数学推理方法。 它涉及将合约系统的模型以及其规范转换成数学公式（逻辑语句）。
 
-定理证明的目的是验证这些语句之间的逻辑等价性。 “逻辑等价性”（又称为“逻辑双向蕴含”）是指两个语句之间的一种关系类型，即_当且仅当_语句二为真时，语句一才能为真。
+定理证明的目的是验证这些语句之间的逻辑等价性。 “逻辑等价性”（又称为“逻辑双向蕴含”）是指两个语句之间的一种关系类型，即当且仅当语句二为真时，语句一才能为真。
 
 关于合约模型及其属性的语句之间的必要关系（逻辑等价性）被表述为一个可证明的语句（称为定理）。 使用形式化推理系统，自动化定理证明器可以验证该定理的有效性。 也就是说，定理证明器可以确证智能合约模型与其规范完全相符。
 
@@ -134,7 +134,7 @@ lang: zh
 
 符号执行把执行轨迹表示成针对符号输入值的数学公式，也称为_路径谓词_。 [SMT 求解器](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories)用来检查路径谓词是否“可满足”（即存在一个满足公式的值）。 如果可以满足脆弱路径，SMT 求解器将产生一个具体值，将执行引向该路径。
 
-假设智能合约的函数把 `uint` 值 (`x`) 作为输入，并且当 `x` 大于 `5` 且小于 `10` 时回滚。 使用正常测试程序寻找一个触发错误的 `x` 值需要运行数十个测试用例（或者更多），而且不保证能实际找到一个触发错误的输入。
+假设智能合约的函数把 uint 值 (`x`) 作为输入，并且当 `x` 大于 `5` 且小于 `10` 时回滚。 使用正常测试程序寻找一个触发错误的 `x` 值需要运行数十个测试用例（或者更多），而且不保证能实际找到一个触发错误的输入。
 
 相反，符号执行工具使用符号值来执行函数：`X > 5 ∧ X < 10`（即，`x` 大于 5 同时 `x` 小于 10）。 相关的路径谓词 `x = X > 5 ∧ X < 10` 将提供给 SMT 求解器来求解。 如果一个特定值满足公式 `x = X > 5 ∧ X < 10`，SMT 求解器将计算它 — 例如，求解器可能生成 `7` 作为 `x` 的值。
 
@@ -152,15 +152,16 @@ function safe_add(uint x, uint y) returns(uint z){
   require(z>=y);
 
   return z;
+}
 ```
 
-导致整数溢出的执行轨迹需要满足公式：`z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)`，不太可能对该公式求解，因此，它作为函数 `safe_add` 永远不会溢出的数学证明。
+导致整数溢出的执行轨迹需要满足公式：`z = x + y AND (z >= x) AND (z >= y) AND (z < x OR z < y)`。该公式不太可能被求解，因此，它可作为函数 `safe_add` 永远不会溢出的数学证明。
 
-### 为什么对智能合约进行形式化验证？ {#benefits-of-formal-verification}
+### 为什么对智能合约进行形式化验证？ 形式化验证的好处 {#benefits-of-formal-verification}
 
-#### 可靠性需要 {#need-for-reliability}
+#### 对可靠性的需求 {#need-for-reliability}
 
-形式化验证用来评估安全至上的系统的正确性，这类系统如果失败，将产生灾难性后果，例如死亡、受伤或者经济损失。 智能合约是具有高价值的应用程序，控制着大量价值，设计上的小错误将导致[用户蒙受难以挽回的损失](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/)。 然而，在部署前形式化验证合约，可以增加一些保障，确保合约在区块链上运行后表现如同预期一样。
+形式化验证用来评估安全至上的系统的正确性，这类系统如果失败，将产生灾难性后果，例如死亡、受伤或者经济损失。 智能合约是控制巨额价值的高价值应用程序，设计中的简单错误可能导致[用户的损失无法挽回](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/)。 然而，在部署前形式化验证合约，可以增加一些保障，确保合约在区块链上运行后表现如同预期一样。
 
 可靠性是所有智能合约渴求的一种品质，尤其是因为部署在以太坊虚拟机 (EVM) 上的代码通常是不可更改的。 由于发布后的升级不容易获得，并且合约可靠性是需要保证的，因此形式化验证必不可少。 形式化验证能够发现棘手的问题，例如整数下溢和溢出、重入攻击和糟糕的燃料优化，审计人员和测试人员可能会漏掉这些问题。
 
@@ -170,7 +171,7 @@ function safe_add(uint x, uint y) returns(uint z){
 
 然而，这种方法无法证明不在样本里的输入值的正确执行。 因此，测试合约可能有助于检测到漏洞（即是否一些代码路径在执行过程中未能返回预期结果），但是**它无法确证没有漏洞存在**。
 
-相反，形式化验证可以形式化证明智能合约在无限执行范围内满足要求，而_无需_运行合约。 这需要制定精确描述正确合约行为的形式化规范并开发合约系统的形式化（数学）模型。 然后，我们可以按照形式化证明程序来检查合约模型与其规范是否一致。
+相反，形式化验证可以形式化证明智能合约在无限执行范围内满足要求，而无需运行合约。 这需要制定精确描述正确合约行为的形式化规范并开发合约系统的形式化（数学）模型。 然后，我们可以按照形式化证明程序来检查合约模型与其规范是否一致。
 
 通过形式化验证，验证合约的业务逻辑是否满足要求的问题就变成一个能被证明或否定的数学命题。 通过形式化证明一个命题，我们可以使用有限的步骤验证无数个测试用例。 通过这种方式，形式化验证有更好的前景，可以证明依据规划合约的功能正确。
 
@@ -190,7 +191,7 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ## 形式化验证的缺点 {#drawbacks-of-formal-verification}
 
-### 人工成本 {#cost-of-manual-labor}
+### 手动劳动成本 {#cost-of-manual-labor}
 
 形式化验证，尤其是需要人为引导证明器来推导出正确性证明的半自动化验证，需要大量人力。 此外，制定形式化规范是一项复杂的活动，需要高水平技能。
 
@@ -208,39 +209,39 @@ function safe_add(uint x, uint y) returns(uint z){
 
 而且，程序验证器并不是总能确定一个属性（描述成一个逻辑公式）是否能被满足（“[可判定性问题](https://en.wikipedia.org/wiki/Decision_problem)”），因为一个程序也许永远不会终止。 因此，即便合约的规范合理，也可能无法证明合约的一些属性。
 
-## 以太坊智能合约的形式化验证工具 {#formal-verification-tools}
+## 用于以太坊智能合约的形式化验证工具 {#formal-verification-tools}
 
 ### 用于制定形式化规范的规范语言 {#specification-languages}
 
-**Act**：_*Act 允许存储更新、前置条件/后置条件、合约不变量的规范。 其工具套件也具有证明后端，可通过 Coq、SMT 求解器或 hevm 证明许多属性。**
+**Act**：__Act 允许指定存储更新、前置/后置条件和合约不变量。__ 其工具套件也具有证明后端，可通过 Coq、SMT 求解器或 hevm 证明许多属性。\*_
 
 - [GitHub](https://github.com/ethereum/act)
-- [相关文档](https://ethereum.github.io/act/)
+- [相关文档](https://github.com/argotorg/act)
 
-**Scribble** - _*Scribble 把 Scribble 规范语言中的代码注释转换为检查规范的具体断言。**
+**Scribble** - __Scribble 把 Scribble 规范语言中的代码注释转换为检查规范的具体断言。__
 
 - [相关文档](https://docs.scribble.codes/)
 
-**Dafny** - _*Dafny 是一种可直接验证的编程语言，依赖于高层次注释来推理和验证代码的正确性。**
+**Dafny** - __Dafny 是一种可直接验证的编程语言，依赖于高层次注释来推理和验证代码的正确性。__
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
 ### 用于检查正确性的程序验证器 {#program-verifiers}
 
-**Certora Prover** - _ Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。_
+**Certora Prover** - _Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。_
 
 - [网站](https://www.certora.com/)
 - [相关文档](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - _*Solidity 的SMTChecker 是一个基于 SMT（可满足性模理论）和 Horn 求解的内置模型检查器。 它在编译期间确认合约源代码是否符合规范并静态检查是否违反了安全属性。**
+**Solidity SMTChecker** - __Solidity 的 SMTChecker 是一个基于 SMT（可满足性模理论）和 Horn 求解的内置模型检查器。 它在编译期间确认合约源代码是否符合规范并静态检查是否违反了安全属性。__
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - _*solc-verify 是 Solidity 编译器的扩展版本，它可以使用注释和模块化程序验证对 Solidity 代码执行自动形式化验证。**
+**solc-verify** - __solc-verify 是 Solidity 编译器的扩展版本，它可以使用注释和模块化程序验证对 Solidity 代码执行自动形式化验证。__
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - _*KEVM 是以太坊虚拟机 (EVM) 的形式化语义，用 K 框架编写。 KEVM 是可执行的，并且能够使用可达性逻辑证明某些与属性相关的断言。**
+**KEVM** - __KEVM 是以太坊虚拟机 (EVM) 的形式化语义，用 K 框架编写。 KEVM 是可执行的，并且能够使用可达性逻辑证明某些与属性相关的断言。__
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [相关文档](https://jellopaper.org/)
@@ -252,19 +253,19 @@ function safe_add(uint x, uint y) returns(uint z){
 - [GitHub](https://github.com/isabelle-prover)
 - [相关文档](https://isabelle.in.tum.de/documentation.html)
 
-**Coq** - _Coq 是一种交互式定理证明器，让你可以使用定理来定义程序并以交互方式产生经机器检查的正确性证明。_
+**Rocq** - _Rocq 是一个交互式定理证明器，可用于使用定理定义程序，并以交互方式生成机器检查的正确性证明。_
 
-- [GitHub](https://github.com/coq/coq)
-- [相关文档](https://coq.github.io/doc/v8.13/refman/index.html)
+- [GitHub](https://github.com/rocq-prover/rocq)
+- [相关文档](https://rocq-prover.org/docs)
 
 ### 用于检测智能合约中易受攻击模式的基于符号执行的工具 {#symbolic-execution-tools}
 
-**Manticore** - _*一种基于符号执行的工具，用于分析以太坊虚拟机的字节码分析工具*。*
+**Manticore** - __一个基于符号执行的以太坊虚拟机字节码分析工具。__
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [相关文档](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - _*hevm 是一种面向以太坊虚拟机字节码的符号执行引擎和等价性检查器。**
+**hevm** - __hevm 是一种面向以太坊虚拟机字节码的符号执行引擎和等价性检查器。__
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
@@ -273,11 +274,11 @@ function safe_add(uint x, uint y) returns(uint z){
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [相关文档](https://mythril-classic.readthedocs.io/en/develop/)
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
-- [智能合约的形式化验证是如何运作的](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
-- [形式化验证如何确保智能合约无懈可击](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
-- [以太坊生态系统中的形式化验证项目概览](https://github.com/leonardoalt/ethereum_formal_verification_overview)
-- [以太坊 2.0 存款智能合约的端对端形式化验证](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
-- [形式化验证世界上最热门的智能合约](https://www.zellic.io/blog/formal-verification-weth)
+- [智能合约形式化验证的工作原理](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
+- [形式化验证如何确保智能合约完美无瑕](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
+- [以太坊生态系统中的形式化验证项目概述](https://github.com/leonardoalt/ethereum_formal_verification_overview)
+- [以太坊 2.0 存款智能合约的端到端形式化验证](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
+- [对全球最流行的智能合约进行形式化验证](https://www.zellic.io/blog/formal-verification-weth)
 - [SMTChecker 和形式化验证](https://docs.soliditylang.org/en/v0.8.15/smtchecker.html)

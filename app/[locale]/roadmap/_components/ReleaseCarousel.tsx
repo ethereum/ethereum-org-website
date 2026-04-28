@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/carousel"
 
 import { cn } from "@/lib/utils/cn"
-import { formatDate } from "@/lib/utils/date"
+import { dateTimeFormat, formatDate } from "@/lib/utils/date"
 
 import { getReleasesData, Release } from "@/data/roadmap/releases"
 
@@ -41,17 +41,30 @@ const ReleaseCarousel = () => {
       return releaseDate <= now
     })
 
-    // Upcoming: has a releaseDate, but is in the future
+    // Case 1: A release with a future releaseDate exists — show it
     const hasUpcomingRelease = releasesData.some((release) => {
       if (!("releaseDate" in release) || !release.releaseDate) return false
       const releaseDate = new Date(release.releaseDate)
       return releaseDate > now
     })
-
-    // If upcoming releases exist, start index after production releases
     if (hasUpcomingRelease) return productionReleases.length
 
-    // If no upcoming releases, start at the last production release
+    // Case 2: Last production release is within 2-month grace period — still show it
+    const lastProd = productionReleases[productionReleases.length - 1]
+    if (lastProd && "releaseDate" in lastProd && lastProd.releaseDate) {
+      const gracePeriodEnd = new Date(lastProd.releaseDate)
+      gracePeriodEnd.setMonth(gracePeriodEnd.getMonth() + 2)
+      if (now <= gracePeriodEnd) {
+        return productionReleases.length - 1
+      }
+    }
+
+    // Case 3: Grace period expired — show first planned/unscheduled release
+    if (productionReleases.length < releasesData.length) {
+      return productionReleases.length
+    }
+
+    // Fallback: last production release
     return productionReleases.length - 1
   }, [releasesData])
 
@@ -80,16 +93,19 @@ const ReleaseCarousel = () => {
   }, [])
 
   const getDisplayDate = (release: Release): string => {
+    if ("displayDate" in release && release.displayDate)
+      return release.displayDate
+
     if (!("releaseDate" in release || "plannedReleaseYear" in release))
       return ""
 
     if ("plannedReleaseYear" in release && release.plannedReleaseYear)
-      return new Intl.DateTimeFormat(locale, {
+      return dateTimeFormat(locale, {
         year: "numeric",
       }).format(new Date(Number(release.plannedReleaseYear), 0, 1))
 
     if ("releaseDate" in release && release.releaseDate)
-      return formatDate(release.releaseDate)
+      return formatDate(release.releaseDate, locale, { timeZone: "UTC" })
 
     return ""
   }
@@ -166,7 +182,7 @@ const ReleaseCarousel = () => {
                               "flex h-1 flex-1",
                               index !== 0
                                 ? status === "soon"
-                                  ? "bg-gradient-to-r from-primary to-primary-low-contrast"
+                                  ? "bg-linear-to-r from-primary to-primary-low-contrast"
                                   : status === "prod"
                                     ? "bg-primary"
                                     : "bg-primary-low-contrast"
@@ -226,7 +242,7 @@ const ReleaseCarousel = () => {
               }}
             >
               <CarouselContent>
-                {releasesData.map((release) => (
+                {releasesData.map((release: Release) => (
                   <CarouselItem
                     key={release.releaseName}
                     className="w-full pl-4"
@@ -257,12 +273,25 @@ const ReleaseCarousel = () => {
                               : release.content}
                           </div>
                         </div>
-                        <ButtonLink
-                          href={release.href}
-                          className="w-full lg:w-fit"
-                        >
-                          {t("page-roadmap-release-learn-more")}
-                        </ButtonLink>
+                        <div className="flex flex-row gap-4">
+                          {release.href && (
+                            <ButtonLink
+                              href={release.href}
+                              className="w-full lg:w-fit"
+                            >
+                              {t("page-roadmap-release-learn-more")}
+                            </ButtonLink>
+                          )}
+                          {release.forkcast_href && (
+                            <ButtonLink
+                              href={release.forkcast_href}
+                              className="w-full lg:w-fit"
+                              variant={release.href ? "outline" : "solid"}
+                            >
+                              {t("page-roadmap-release-forkcast")}
+                            </ButtonLink>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </CarouselItem>

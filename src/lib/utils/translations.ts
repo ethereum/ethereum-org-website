@@ -2,7 +2,7 @@ import { Lang, Languages } from "@/lib/types"
 
 import * as url from "@/lib/utils/url"
 
-import { DEFAULT_LOCALE, FAKE_LOCALE } from "@/lib/constants"
+import { FAKE_LOCALE } from "@/lib/constants"
 
 import i18nConfig from "../../../i18n.config.json"
 
@@ -44,8 +44,11 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/developers/local-environment/", "page-developers-local-environment"],
   ["/developers/learning-tools/", "page-developers-learning-tools"],
   ["/developers/tutorials/", "page-developers-tutorials"],
+  ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
   ["/contributing/translation-program/translatathon/", "page-translatathon"],
+  ["/community/events/", "page-community-events"],
+  ["/community/support/", "page-community-support"],
   ["/community/", "page-community"],
   ["/apps/", "page-apps"],
   ["/energy-consumption/", "page-energy-consumption"],
@@ -53,6 +56,9 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/ethereum-forks/", "page-history"],
   ["/resources/", "page-resources"],
   ["/stablecoins/", "page-stablecoins"],
+  // Ordering matters: /videos/ MUST be before /learn/ to prevent false positive matching
+  // (because /videos/ paths are prefixed with /learn/ in some contexts or just to avoid overly greedy matches)
+  ["/videos/", "page-videos"],
   ["/learn/", "page-learn"],
   ["/gas/", "page-gas"],
   ["/what-is-ethereum/", "page-what-is-ethereum"],
@@ -62,17 +68,20 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
 ]
 
 const EXACT_PATH_ADDITIONAL_NAMESPACES: Record<string, string[]> = {
-  "/": ["page-10-year-anniversary"],
+  "/": ["page-10-year-anniversary", "page-app-descriptions"],
+  "/wallets/": ["component-wallet-simulator"],
 }
 
 const PREFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
   ["/developers/docs/scaling/", ["page-layer-2"]],
+  ["/developers/tools/", ["page-developers-tools-descriptions"]],
   ["/roadmap/vision/", ["page-upgrades-index", "page-roadmap-vision"]],
   ["/gas/", ["page-gas", "page-community"]],
   ["/layer-2/networks/", ["table"]],
   ["/energy-consumption/", ["page-about"]],
   ["/glossary/", ["glossary"]],
   ["/10years/", ["page-10-year-anniversary"]],
+  ["/apps/", ["page-app-descriptions"]],
 ]
 
 const SUFFIX_PATH_ADDITIONAL_NAMESPACES: Array<[string, string[]]> = [
@@ -91,6 +100,7 @@ const GLOSSARY_TOOLTIP_PREFIXES: string[] = [
   "/eth/",
   "/wallets/",
   "/gas/",
+  "/roadmap/",
 ]
 
 const QUIZZES_PREFIXES: string[] = [
@@ -133,15 +143,6 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 export const filterRealLocales = (locales: string[] | undefined) => {
   return locales?.filter((locale) => locale !== FAKE_LOCALE) || []
 }
-
-export const isLocaleValidISO639_1 = (locale: string) => {
-  return i18nConfig.find((language) => language.code === locale)?.validISO639_1
-}
-
-// Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
-// Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
-export const getLocaleForNumberFormat = (locale: Lang): Lang =>
-  locale === "fa" ? DEFAULT_LOCALE : locale
 
 export const isLang = (lang: string) => {
   return i18nConfig.map((language) => language.code).includes(lang)

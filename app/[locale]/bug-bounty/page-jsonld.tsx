@@ -4,11 +4,11 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { KNOWN_PERSONS } from "@/lib/jsonld/persons"
+import { personReference } from "@/lib/jsonld/utils"
 
 export default async function BugBountyJsonLD({
   locale,
@@ -17,7 +17,7 @@ export default async function BugBountyJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-bug-bounty" })
+  const t = await getTranslations("page-bug-bounty")
 
   const url = normalizeUrlForJsonLd(locale, `/bug-bounty/`)
 
@@ -30,6 +30,8 @@ export default async function BugBountyJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      KNOWN_PERSONS["fredrik-svantes"],
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
@@ -38,13 +40,11 @@ export default async function BugBountyJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [
+          personReference("fredrik-svantes"),
+          REFERENCE.ETHEREUM_COMMUNITY,
+        ],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -62,8 +62,8 @@ export default async function BugBountyJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
       },
     ],
   }

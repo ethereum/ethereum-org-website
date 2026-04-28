@@ -4,6 +4,7 @@ description: Ensuring data integrity onchain for data that is stored, mostly, of
 author: Ori Pomerantz
 tags: ["storage"]
 skill: advanced
+breadcrumb: Merkle proofs
 lang: en
 published: 2021-12-30
 ---
@@ -183,7 +184,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 ```
 
-I wrote this using the [Hardhat development environment](https://hardhat.org/), which allows us to have [console output from Solidity](https://hardhat.org/tutorial/debugging-with-hardhat-network.html) while developing.
+I wrote this using the [Hardhat development environment](https://hardhat.org/), which allows us to have [console output from Solidity](https://hardhat.org/docs/cookbook/debug-logs) while developing.
 
 ```solidity
 

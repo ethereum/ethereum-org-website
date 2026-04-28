@@ -31,7 +31,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Intermediate articles and docs {#intermediate-articles-and-docs}
 
-- [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _The documentation for the official Ethereum Golang_
+- [Go Ethereum Documentation](https://geth.ethereum.org/docs) - _The documentation for the official Ethereum Golang_
 - [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Illustrated guide including the state tree, multi-proofs, and transaction processing_
 - [Erigon and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Community Conference (EthCC 3)_
 - [Erigon: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
@@ -81,4 +81,4 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/)
 ## Other aggregated lists {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub source](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: A Definitive List of Ethereum Developer Tools](https://web.archive.org/web/2023/https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub source](https://github.com/ConsenSys/ethereum-developer-tools-list)

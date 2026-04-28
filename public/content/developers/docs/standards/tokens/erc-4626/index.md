@@ -184,13 +184,13 @@ function balanceOf(address owner) public view returns (uint256)
 
 Returns the total amount of vault shares the `owner` currently has.
 
-### Map of the interface {#mapOfTheInterface}
+### Map of the interface {#mapoftheinterface}
 
 ![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### Events {#events}
 
-#### Deposit Event
+#### Deposit Event {#deposit-event}
 
 **MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods.
 
@@ -205,7 +205,7 @@ event Deposit(
 
 Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
-#### Withdraw Event
+#### Withdraw Event {#withdraw-event}
 
 **MUST** be emitted when shares are withdrawn from the vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 

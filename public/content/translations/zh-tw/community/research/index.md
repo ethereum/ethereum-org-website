@@ -1,6 +1,6 @@
 ---
-title: 以太坊研究的活躍領域
-description: 探索不同領域的開放研究，並瞭解如何參與。
+title: "以太坊研究的活躍領域"
+description: "探索不同領域的開放研究，並瞭解如何參與。"
 lang: zh-tw
 ---
 
@@ -57,7 +57,7 @@ lang: zh-tw
 
 - 發展輕量用戶端支援；
 - 研究燃料限制；
-- 以及與新資料結構的相容性（如沃克爾樹）。
+- 並納入新的資料結構（例如沃克爾樹）。
 
 #### 背景介紹讀物 {#background-reading-1}
 
@@ -247,7 +247,7 @@ lang: zh-tw
 #### 近期研究 {#recent-research-10}
 
 - [多維度 EIP-1559 影片展示](https://youtu.be/QbR4MTgnCko)
-- [跨域最大可提取價值](http://arxiv.org/abs/2112.01472)
+- [跨域最大可提取價值](https://arxiv.org/abs/2112.01472)
 - [最大可提取價值競價](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### 權益證明激勵 {#proof-of-stake-incentives}
@@ -377,7 +377,7 @@ lang: zh-tw
 
 - [Wormhole 漏洞報告](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [遭駭以太坊合約事後分析列表](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt 新聞](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt 新聞](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 近期研究 {#recent-research-19}
 

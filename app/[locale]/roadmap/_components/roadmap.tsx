@@ -103,6 +103,12 @@ const RoadmapPage = () => {
       description: t("page-roadmap-statelessness-description"),
       href: "/roadmap/statelessness",
     },
+    {
+      icon: <ExtraSecurityIcon className="size-7" />,
+      title: t("page-roadmap-zkevm-title"),
+      description: t("page-roadmap-zkevm-description"),
+      href: "/roadmap/zkevm",
+    },
   ]
 
   // TODO: MATOMO EVENTS
@@ -122,7 +128,7 @@ const RoadmapPage = () => {
           <div className="flex w-full flex-col gap-8 px-8 py-4">
             <h2 className="m-0">{t("page-roadmap-changes-coming-title")}</h2>
             <p className="max-w-screen-md text-lg">
-              {t("page-roadmap-changes-coming-description")}
+              <Translation id="page-roadmap:page-roadmap-changes-coming-description" />
             </p>
             <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
               {changesComingItems.map((item) => (
@@ -136,7 +142,7 @@ const RoadmapPage = () => {
                       {item.icon}
                     </div>
                   </div>
-                  <p className="flex-grow">{item.description}</p>
+                  <p className="grow">{item.description}</p>
                   <ButtonLink href={item.button.href} variant="outline">
                     {item.button.label}
                   </ButtonLink>
@@ -165,7 +171,7 @@ const RoadmapPage = () => {
                 {t("page-roadmap-governance-button")}
               </ButtonLink>
             </div>
-            <div className="relative min-h-[272px] w-full flex-shrink-0 overflow-hidden rounded-3xl md:w-1/2 xl:w-1/3">
+            <div className="relative min-h-[272px] w-full shrink-0 overflow-hidden rounded-3xl md:w-1/2 xl:w-1/3">
               <Image
                 src={communityHeroImg}
                 alt={t("page-roadmap-hero-alt")}

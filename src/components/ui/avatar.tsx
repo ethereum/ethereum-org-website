@@ -136,6 +136,8 @@ const Avatar = React.forwardRef<
     dataTest,
   } = props
 
+  const [hasError, setHasError] = React.useState(false)
+
   const commonLinkProps = {
     href,
     className: "not-[:hover]:no-underline",
@@ -164,7 +166,7 @@ const Avatar = React.forwardRef<
             <BaseLink {...commonLinkProps}>{label}</BaseLink>
           </LinkOverlay>
           <AvatarBase size={size}>
-            {src ? (
+            {src && !hasError ? (
               <Image
                 className="object-fill"
                 width={128}
@@ -173,6 +175,7 @@ const Avatar = React.forwardRef<
                 src={src}
                 alt={name}
                 quality={100}
+                onError={() => setHasError(true)}
               />
             ) : (
               <AvatarImage />
@@ -187,7 +190,7 @@ const Avatar = React.forwardRef<
   return (
     <AvatarBase ref={ref} size={size} className={className} asChild>
       <BaseLink title={dataTest} {...commonLinkProps}>
-        {src ? (
+        {src && !hasError ? (
           <Image
             className="object-fill"
             width={128}
@@ -196,6 +199,7 @@ const Avatar = React.forwardRef<
             src={src}
             alt={name}
             quality={100}
+            onError={() => setHasError(true)}
           />
         ) : (
           <AvatarImage />
@@ -221,7 +225,7 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
 
     const validChildren = React.Children.toArray(children).filter((child) =>
       React.isValidElement(child)
-    ) as React.ReactElement[]
+    ) as React.ReactElement<unknown>[]
 
     /**
      * The visible avatars from max
@@ -240,10 +244,13 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
 
     const clonedChildren = reversedChildren.map((child, idx) => {
       const isFirst = idx === 0
-      return React.cloneElement(child, {
-        className: cn(isFirst ? "me-0" : "-me-2"),
-        size,
-      })
+      return React.cloneElement(
+        child as React.ReactElement<{ className?: string; size?: string }>,
+        {
+          className: cn(isFirst ? "me-0" : "-me-2"),
+          size,
+        }
+      )
     })
 
     const { container, fallback } = avatarStyles({ size })

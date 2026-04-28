@@ -22,27 +22,26 @@ Vous devrez vous connecter à votre compte Crowdin ou vous inscrire si vous n'av
   Rejoindre le projet
 </ButtonLink>
 
-### Accédez à votre langue {#open-language}
+### Ouvrez votre langue {#open-language}
 
-Après vous être connecté à Crowdin, vous verrez une description du projet et une liste de toutes les langues disponibles. Chaque langue contient également des informations sur le nombre total de mots traduisibles et une vue d'ensemble de la quantité de contenu qui a été traduite et approuvée dans une langue spécifique.
+Après vous être connecté à Crowdin, vous verrez une description du projet et une liste de toutes les langues disponibles.
+Chaque langue contient également des informations sur le nombre total de mots traduisibles et une vue d'ensemble de la quantité de contenu qui a été traduite et approuvée dans une langue spécifique.
 
 Ouvrez la langue dans laquelle vous souhaitez traduire pour voir la liste des fichiers disponibles pour la traduction.
 
-![Liste des langues sur Crowdin](./list-of-languages.png)
+![Liste des langues dans Crowdin](./list-of-languages.png)
 
 ### Trouvez un document sur lequel travailler {#find-document}
 
 Le contenu du site web est divisé en un certain nombre de documents et d'ensembles de contenus. Vous pouvez vérifier la progression de chaque document sur la droite. Si la progression de la traduction est inférieure à 100 %, n'hésitez pas à y contribuer !
 
-Votre langage n'est pas répertorié ici ? [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou demandez de l'aide sur notre [Discord](https://discord.gg/ethereum-org)
+Votre langage n'est pas répertorié ici ? [Ouvrez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ou demandez sur notre [Discord](https://discord.gg/ethereum-org)
 
-![Fichiers traduits et non traduits sur Crowdin](./crowdin-files.png)
+![Fichiers traduits et non traduits dans Crowdin](./crowdin-files.png)
 
-Une remarque sur les ensembles de contenu : nous utilisons des « ensembles de contenu » dans Crowdin pour que le contenu le plus prioritaire soit publié en premier. Lorsque vous parcourez une langue, comme le [philippin](https://crowdin.com/project/ethereum-org/fil#) par exemple, vous verrez des dossiers pour chaque ensemble de contenu (« 1. Homepage », « 2. Essentials », « 3. Exploring », etc.).
+Une remarque sur les ensembles de contenu : nous utilisons des « ensembles de contenu » dans Crowdin pour que le contenu le plus prioritaire soit publié en premier. Lorsque vous consultez une langue, par exemple, le [philippin](https://crowdin.com/project/ethereum-org/fil#) vous verrez des dossiers pour l'ensemble de contenu ("1. Homepage », « 2. Essentials », « 3. Exploring », etc.).
 
 Nous vous encourageons à traduire dans cet ordre numérique (1 → 2 → 3 → ⋯) afin de garantir que les pages ayant le plus fort impact soient traduites en premier.
-
-[En savoir plus sur les compartiments de contenu ethereum.org](/contributing/translation-program/content-buckets/)
 
 ### Traduire {#translate}
 
@@ -60,7 +59,8 @@ Vous pouvez également utiliser les boutons situés en haut pour rechercher des 
 
 **_2 – Zone éditeur_**
 
-Il s'agit de la zone de traduction principale. Le texte source est affiché en haut, avec du contexte et des captures d'écran supplémentaires, si disponibles. Pour proposer une nouvelle traduction, tapez votre traduction dans le champ « Enter translation here » (Entrez la traduction ici), puis cliquez sur « Save » (Enregistrer).
+Il s'agit de la zone de traduction principale. Le texte source est affiché en haut, avec du contexte et des captures d'écran supplémentaires, si disponibles.
+Pour proposer une nouvelle traduction, tapez votre traduction dans le champ « Enter translation here » (Entrez la traduction ici), puis cliquez sur « Save » (Enregistrer).
 
 Dans cette section, vous pouvez également trouver des traductions existantes de la phrase dans d'autres langues, ainsi que des correspondances issues de la mémoire de traduction et des suggestions de traduction automatique.
 
@@ -70,7 +70,7 @@ C'est ici que vous pouvez trouver des commentaires, des entrées de mémoire de 
 
 En utilisant les boutons situés en haut, vous pouvez également accéder à la mémoire de traduction, où vous pouvez rechercher des traductions existantes, ou au glossaire, qui contient des descriptions et traductions de termes clés.
 
-Vous voulez en savoir plus ? N'hésitez pas à consulter la [documentation sur l'utilisation de l'éditeur en ligne Crowdin](https://support.crowdin.com/online-editor/)
+Vous voulez en savoir plus ? N'hésitez pas à consulter la [documentation sur l'utilisation de l'éditeur en ligne de Crowdin](https://support.crowdin.com/online-editor/)
 
 ### Processus de révision {#review-process}
 
@@ -83,9 +83,9 @@ Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichie
 </AlertContent>
 </Alert>
 
-### Nous contacter {#get-in-touch}
+### Contactez-nous {#get-in-touch}
 
-Avez-vous d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](https://discord.gg/ethereum-org)
+Avez-vous d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Veuillez publier un message dans le canal #translations de notre [serveur Discord ethereum.org](https://discord.gg/ethereum-org)
 
 Vous pouvez également nous contacter à l'adresse translations@ethereum.org
 

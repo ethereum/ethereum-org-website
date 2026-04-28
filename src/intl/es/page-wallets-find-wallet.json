@@ -36,7 +36,7 @@
   "page-find-wallet-token-importing-desc": "Importar cualquier token de ERC para usar en la cartera",
   "page-find-wallet-buy-crypto": "Comprar cripto",
   "page-find-wallet-buy-crypto-desc": "Comprar criptomonedas con dinero fiduciario directamente en la cartera\n *Nota: comprar criptomonedas puede ser específico para cada región",
-  "page-find-wallet-sell-for-fiat": "Vender por fiat",
+  "page-find-wallet-sell-for-fiat": "Vender por efectivo",
   "page-find-wallet-sell-for-fiat-desc": "Vender criptomonedas con dinero fiduciario directamente en la cartera\n *Nota: comprar criptomonedas puede ser específico para cada región",
   "page-find-wallet-multisig": "Multifirma",
   "page-find-wallet-multisig-desc": "Carteras que requieren múltiples firmas para autorizar una transacción",
@@ -48,7 +48,7 @@
   "page-find-wallet-features": "Funciones",
   "page-find-wallet-security": "Seguridad",
   "page-find-wallet-smart-contract": "Contrato inteligente",
-  "page-find-wallet-advanced": "Recursos avanzados",
+  "page-find-wallet-advanced": "Avanzado",
   "page-find-wallet-check-out": "Eche un vistazo",
   "page-find-wallet-info-updated-on": "información actualizada sobre",
   "page-find-wallet-showing-all-wallets": "Mostrar todas las carteras",
@@ -84,5 +84,8 @@
   "page-find-wallet-social-links": "Enlaces",
   "page-find-wallet-empty-results-title": "Sin resultados",
   "page-find-wallet-empty-results-desc": "No hay carteras que coincidan con sus criterios, intente eliminar algunos filtros.",
-  "page-find-wallet-see-wallets": "Ver carteras"
+  "page-find-wallet-privacy": "Privacidad",
+  "page-find-wallet-privacy-desc": "Carteras que admiten transacciones privadas integradas",
+  "page-find-wallet-see-wallets": "Ver carteras",
+  "page-find-wallet-search-languages": "Buscar idiomas..."
 }

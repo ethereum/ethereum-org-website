@@ -1,6 +1,4 @@
-import { getLocale, getTranslations } from "next-intl/server"
-
-import { TimeLeftLabels } from "@/lib/types"
+import { getTranslations } from "next-intl/server"
 
 import { formatDate, isValidDate } from "@/lib/utils/date"
 
@@ -47,39 +45,8 @@ export const parseStoryDates = (
     date: parseDate(date, locale),
   }))
 
-export const getTimeUnitTranslations = async () => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
-  const timeLeftLabels: TimeLeftLabels = {
-    days: {
-      singular: t("page-10-year-countdown-day"),
-      plural: t("page-10-year-countdown-days"),
-    },
-    hours: {
-      singular: t("page-10-year-countdown-hour"),
-      plural: t("page-10-year-countdown-hours"),
-    },
-    minutes: {
-      singular: t("page-10-year-countdown-minute"),
-      plural: t("page-10-year-countdown-minutes"),
-    },
-    seconds: {
-      singular: t("page-10-year-countdown-second"),
-      plural: t("page-10-year-countdown-seconds"),
-    },
-  }
-  return timeLeftLabels
-}
-
 export const getInnovationCards = async (): Promise<InnovationCard[]> => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
   return [
     {
       image: EthereumLaunchImage,
@@ -109,11 +76,7 @@ export const getInnovationCards = async (): Promise<InnovationCard[]> => {
 }
 
 export const getAdoptionCards = async (): Promise<AdoptionCard[]> => {
-  const locale = await getLocale()
-  const t = await getTranslations({
-    locale,
-    namespace: "page-10-year-anniversary",
-  })
+  const t = await getTranslations("page-10-year-anniversary")
   return [
     {
       image: Adoption1Image,

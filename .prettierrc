@@ -4,7 +4,14 @@
   "singleQuote": false,
   "tabWidth": 2,
   "trailingComma": "es5",
-  "plugins": [
-    "prettier-plugin-tailwindcss"
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./src/styles/global.css",
+  "overrides": [
+    {
+      "files": "src/data-layer/index.ts",
+      "options": {
+        "printWidth": 120
+      }
+    }
   ]
 }
