@@ -1,6 +1,6 @@
 ---
 title: Why Ethereum for AI agents
-description: Why Ethereum is used as the settlement and coordination layer for AI agents: onchain ownership, verifiable execution, programmable guardrails, and permissionless payments
+description: "Why Ethereum is used as the settlement and coordination layer for AI agents: onchain ownership, verifiable execution, programmable guardrails, and permissionless payments"
 lang: en
 faqItems:
   - question: "Why would an AI agent use Ethereum instead of a centralized API?"
