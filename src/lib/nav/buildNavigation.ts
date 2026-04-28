@@ -17,9 +17,9 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           href: "/learn/",
         },
         {
-          id: "learn/basics",
-          label: t("nav-basics-label"),
-          description: t("nav-basics-description"),
+          id: "learn/ethereum-explained",
+          label: t("nav-ethereum-explained-label"),
+          description: t("nav-ethereum-explained-description"),
           items: [
             {
               label: t("what-is-ethereum"),
@@ -37,16 +37,26 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/what-is-ether/",
             },
             {
+              label: t("nav-what-is-web3-label"),
+              description: t("nav-what-is-web3-description"),
+              href: "/web3/",
+            },
+            {
               label: t("ethereum-vs-bitcoin"),
               description: t("nav-ethereum-vs-bitcoin-description"),
               href: "/ethereum-vs-bitcoin/",
             },
+          ],
+        },
+        {
+          id: "learn/how-ethereum-works",
+          label: t("nav-how-ethereum-works-label"),
+          description: t("nav-how-ethereum-works-description"),
+          items: [
             {
-              label: t("ethereum-history-founder-and-ownership"),
-              description: t(
-                "nav-ethereum-history-founder-and-ownership-description"
-              ),
-              href: "/ethereum-history-founder-and-ownership/",
+              label: t("smart-contracts"),
+              description: t("nav-smart-contracts-description"),
+              href: "/smart-contracts/",
             },
             {
               label: t("ethereum-wallets"),
@@ -54,41 +64,31 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/wallets/",
             },
             {
-              label: t("nav-what-is-web3-label"),
-              description: t("nav-what-is-web3-description"),
-              href: "/web3/",
-            },
-            {
-              label: t("smart-contracts"),
-              description: t("nav-smart-contracts-description"),
-              href: "/smart-contracts/",
-            },
-          ],
-        },
-        {
-          id: "learn/advanced",
-          label: t("nav-advanced-label"),
-          description: t("nav-advanced-description"),
-          items: [
-            {
               label: t("nav-gas-fees-label"),
               description: t("nav-gas-fees-description"),
               href: "/gas/",
             },
             {
-              label: t("bridges"),
-              description: t("nav-bridges-description"),
-              href: "/bridges/",
+              label: t("nav-networks-learn-label"),
+              description: t("nav-networks-learn-description"),
+              href: "/layer-2/learn/",
             },
             {
-              label: t("zero-knowledge-proofs"),
-              description: t("nav-zkp-description"),
-              href: "/zero-knowledge-proofs/",
+              label: t("staking"),
+              description: t("nav-stake-description"),
+              href: "/staking/",
             },
+          ],
+        },
+        {
+          id: "learn/staying-safe",
+          label: t("nav-staying-safe-label"),
+          description: t("nav-staying-safe-description"),
+          items: [
             {
-              label: t("run-a-node"),
-              description: t("nav-run-a-node-description"),
-              href: "/run-a-node/",
+              label: t("ethereum-privacy"),
+              description: t("nav-privacy-description"),
+              href: "/privacy/",
             },
             {
               label: t("ethereum-security"),
@@ -96,9 +96,9 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/security/",
             },
             {
-              label: t("ethereum-privacy"),
-              description: t("nav-privacy-description"),
-              href: "/privacy/",
+              label: t("support"),
+              description: t("nav-support-description"),
+              href: "/community/support/",
             },
           ],
         },
@@ -121,9 +121,9 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
       ariaLabel: t("use-menu"),
       items: [
         {
-          id: "use/get-started",
-          label: t("get-started"),
-          description: t("nav-get-started-description"),
+          id: "use/start-with-ethereum",
+          label: t("nav-start-with-ethereum-label"),
+          description: t("nav-start-with-ethereum-description"),
           items: [
             {
               label: t("nav-start-with-crypto-title"),
@@ -141,35 +141,14 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/get-eth/",
             },
             {
-              label: t("application-explorer"),
-              description: t("nav-apps-description"),
+              label: t("nav-explore-apps-label"),
+              description: t("nav-explore-apps-description"),
               href: "/apps/",
             },
             {
-              label: t("nav-guides-label"),
-              description: t("nav-guides-description"),
-              items: [
-                {
-                  label: t("nav-overview-label"),
-                  description: t("nav-guide-overview-description"),
-                  href: "/guides/",
-                },
-                {
-                  label: t("nav-guide-create-account-label"),
-                  description: t("nav-guide-create-account-description"),
-                  href: "/guides/how-to-create-an-ethereum-account/",
-                },
-                {
-                  label: t("nav-guide-use-wallet-label"),
-                  description: t("nav-guide-use-wallet-description"),
-                  href: "/guides/how-to-use-a-wallet/",
-                },
-                {
-                  label: t("nav-guide-revoke-access-label"),
-                  description: t("nav-guide-revoke-access-description"),
-                  href: "/guides/how-to-revoke-token-access/",
-                },
-              ],
+              label: t("nav-see-all-guides-label"),
+              description: t("nav-see-all-guides-description"),
+              href: "/guides/",
             },
           ],
         },
@@ -179,124 +158,73 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           description: t("nav-use-cases-description"),
           items: [
             {
-              label: t("stablecoins"),
-              description: t("nav-stablecoins-description"),
-              href: "/stablecoins/",
-            },
-            {
-              label: t("nft-page"),
-              description: t("nav-nft-description"),
-              href: "/nft/",
-            },
-            {
-              label: t("defi-page"),
-              description: t("nav-defi-description"),
-              href: "/defi/",
-            },
-            {
               label: t("payments-page"),
               description: t("nav-payments-description"),
               href: "/payments/",
             },
             {
-              label: t("dao-page"),
-              description: t("nav-dao-description"),
-              href: "/dao/",
+              label: t("stablecoins"),
+              description: t("nav-stablecoins-description"),
+              href: "/stablecoins/",
             },
             {
-              label: t("decentralized-social-networks"),
-              description: t("nav-desoc-description"),
-              href: "/social-networks/",
+              label: t("prediction-markets"),
+              description: t("nav-prediction-markets-description"),
+              href: "/prediction-markets/",
             },
             {
-              label: t("nav-emerging-label"),
-              description: t("nav-emerging-description"),
-              items: [
-                {
-                  label: t("decentralized-identity"),
-                  description: t("nav-did-description"),
-                  href: "/decentralized-identity/",
-                },
-                {
-                  label: t("decentralized-science"),
-                  description: t("nav-desci-description"),
-                  href: "/desci/",
-                },
-                {
-                  label: t("regenerative-finance"),
-                  description: t("nav-refi-description"),
-                  href: "/refi/",
-                },
-                {
-                  label: t("ai-agents"),
-                  description: t("nav-ai-agents-description"),
-                  href: "/ai-agents/",
-                },
-                {
-                  label: t("onchain-gaming"),
-                  description: t("nav-gaming-description"),
-                  href: "/gaming/",
-                },
-                {
-                  label: t("prediction-markets"),
-                  description: t("nav-prediction-markets-description"),
-                  href: "/prediction-markets/",
-                },
-                {
-                  label: t("real-world-assets"),
-                  description: t("nav-rwa-description"),
-                  href: "/real-world-assets/",
-                },
-              ],
+              label: t("nav-see-all-use-cases-label"),
+              description: t("nav-see-all-use-cases-description"),
+              href: "/use-cases/",
             },
           ],
         },
         {
-          id: "use/stake",
-          label: t("nav-stake-label"),
-          description: t("nav-stake-description"),
+          id: "use/staking-nodes",
+          label: t("nav-staking-nodes-label"),
+          description: t("nav-staking-nodes-description"),
           items: [
-            {
-              label: t("nav-staking-home-label"),
-              description: t("nav-staking-home-description"),
-              href: "/staking/",
-            },
             {
               label: t("nav-staking-solo-label"),
               description: t("nav-staking-solo-description"),
               href: "/staking/solo/",
             },
             {
-              label: t("nav-staking-saas-label"),
-              description: t("nav-staking-saas-description"),
-              href: "/staking/saas/",
+              label: t("run-a-node"),
+              description: t("nav-run-a-node-description"),
+              href: "/run-a-node/",
             },
             {
               label: t("nav-staking-pool-label"),
               description: t("nav-staking-pool-description"),
               href: "/staking/pools/",
             },
+            {
+              label: t("nav-staking-saas-label"),
+              description: t("nav-staking-saas-description"),
+              href: "/staking/saas/",
+            },
           ],
         },
         {
-          id: "use/networks",
-          label: t("nav-ethereum-networks"),
-          description: t("nav-ethereum-networks-description"),
+          id: "use/explore-networks",
+          label: t("nav-explore-networks-label"),
+          description: t("nav-explore-networks-description"),
           items: [
             {
-              label: t("nav-networks-introduction-label"),
-              description: t("nav-networks-introduction-description"),
+              label: t("nav-l2-networks-label"),
+              description: t("nav-l2-networks-description"),
               href: "/layer-2/",
             },
             {
-              label: t("nav-networks-explore-networks-label"),
-              description: t("nav-networks-explore-networks-description"),
+              label: t("nav-find-l2-label"),
+              description: t("nav-find-l2-description"),
               href: "/layer-2/networks/",
             },
             {
-              label: t("nav-networks-learn-label"),
-              description: t("nav-networks-learn-description"),
-              href: "/layer-2/learn/",
+              label: t("bridges"),
+              description: t("nav-bridges-description"),
+              href: "/bridges/",
             },
           ],
         },
@@ -313,29 +241,24 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           href: "/developers/",
         },
         {
-          id: "build/get-started",
-          label: t("get-started"),
-          description: t("nav-start-get-started-description"),
+          id: "build/start-building",
+          label: t("start-building"),
+          description: t("nav-start-building-description"),
           items: [
             {
-              label: t("start-building"),
-              description: t("nav-start-building-description"),
+              label: t("nav-builder-tools-label"),
+              description: t("nav-builder-tools-description"),
               href: "/developers/tools/",
             },
             {
-              label: t("learn-ethereum-development"),
-              description: t("nav-learn-ethereum-development-description"),
-              href: "/developers/tools/education/",
-            },
-            {
-              label: t("tutorials"),
-              description: t("nav-tutorials-description"),
+              label: t("nav-code-tutorials-label"),
+              description: t("nav-code-tutorials-description"),
               href: "/developers/tutorials/",
             },
             {
-              label: t("grants"),
-              description: t("nav-grants-description"),
-              href: "/community/grants/",
+              label: t("nav-learn-by-coding-label"),
+              description: t("nav-learn-by-coding-description"),
+              href: "/developers/tools/education/",
             },
           ],
         },
@@ -372,14 +295,14 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           description: t("nav-business-description"),
           items: [
             {
-              label: t("enterprise"),
-              description: t("nav-enterprise-description"),
-              href: ENTERPRISE_ETHEREUM_URL,
-            },
-            {
               label: t("founders"),
               description: t("nav-founders-description"),
               href: "/founders/",
+            },
+            {
+              label: t("nav-institution-enterprise-label"),
+              description: t("nav-institution-enterprise-description"),
+              href: ENTERPRISE_ETHEREUM_URL,
             },
           ],
         },
@@ -396,27 +319,54 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           href: "/community/",
         },
         {
-          id: "participate/events",
-          label: t("nav-events-label"),
-          description: t("nav-events-description"),
+          id: "participate/connect",
+          label: t("nav-connect-label"),
+          description: t("nav-connect-description"),
           items: [
             {
-              label: t("ethereum-online"),
-              description: t("nav-events-online-description"),
+              label: t("nav-events-calendar-label"),
+              description: t("nav-events-calendar-description"),
+              href: "/community/events/",
+            },
+            {
+              label: t("nav-online-communities-label"),
+              description: t("nav-online-communities-description"),
               href: "/community/online/",
             },
             {
-              label: t("ethereum-events"),
-              description: t("nav-events-irl-description"),
-              href: "/community/events/",
+              label: t("nav-devcon-label"),
+              description: t("nav-devcon-description"),
+              href: "https://devcon.org/",
             },
           ],
         },
         {
-          id: "participate/ethereum-org",
-          label: t("site-title"),
-          description: t("nav-ethereum-org-description"),
+          id: "participate/get-involved",
+          label: t("nav-get-involved-label"),
+          description: t("nav-get-involved-description"),
           items: [
+            {
+              label: t("nav-where-to-start-label"),
+              description: t("nav-where-to-start-description"),
+              href: "/community/get-involved/",
+            },
+            {
+              label: t("grants"),
+              description: t("nav-grants-description"),
+              href: "/community/grants/",
+            },
+          ],
+        },
+        {
+          id: "participate/join-ethereum-org",
+          label: t("nav-join-ethereum-org-label"),
+          description: t("nav-join-ethereum-org-description"),
+          items: [
+            {
+              label: t("about-ethereum-org"),
+              description: t("nav-about-description"),
+              href: "/about/",
+            },
             {
               label: t("nav-contribute-label"),
               description: t("nav-contribute-description"),
@@ -433,9 +383,9 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/collectibles/",
             },
             {
-              label: t("about-ethereum-org"),
-              description: t("nav-about-description"),
-              href: "/about/",
+              label: t("nav-brand-assets-label"),
+              description: t("nav-brand-assets-description"),
+              href: "/assets/",
             },
           ],
         },
@@ -450,6 +400,12 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           label: t("ethereum-whitepaper"),
           description: t("nav-whitepaper-description"),
           href: "/whitepaper/",
+        },
+        {
+          id: "research/governance",
+          label: t("nav-governance-label"),
+          description: t("nav-governance-description"),
+          href: "/governance/",
         },
         {
           id: "research/roadmap",
@@ -484,13 +440,50 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           ],
         },
         {
-          id: "research/research",
-          label: t("nav-research-label"),
-          description: t("nav-research-description"),
+          id: "research/development",
+          label: t("nav-development-label"),
+          description: t("nav-development-description"),
           items: [
             {
-              label: t("nav-history-label"),
-              description: t("nav-history-description"),
+              label: t("nav-eip-label"),
+              description: t("nav-eip-description"),
+              href: "/eips/",
+            },
+            {
+              label: t("nav-ercs-label"),
+              description: t("nav-ercs-description"),
+              href: "https://github.com/ethereum/ERCs",
+            },
+            {
+              label: t("nav-bug-bounty-label"),
+              description: t("nav-bug-bounty-description"),
+              href: "/bug-bounty/",
+            },
+            {
+              label: t("nav-trillion-dollar-security-label"),
+              description: t("nav-trillion-dollar-security-description"),
+              href: "/trillion-dollar-security/",
+            },
+          ],
+        },
+        {
+          id: "research/context",
+          label: t("nav-context-label"),
+          description: t("nav-context-description"),
+          items: [
+            {
+              label: t("nav-energy-consumption-label"),
+              description: t("nav-energy-consumption-description"),
+              href: "/energy-consumption/",
+            },
+            {
+              label: t("nav-history-founders-label"),
+              description: t("nav-history-founders-description"),
+              href: "/ethereum-history-founder-and-ownership/",
+            },
+            {
+              label: t("nav-technical-history-label"),
+              description: t("nav-technical-history-description"),
               href: "/ethereum-forks/",
             },
             {
@@ -499,14 +492,14 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               href: "/community/research/",
             },
             {
-              label: t("nav-eip-label"),
-              description: t("nav-eip-description"),
-              href: "/eips/",
+              label: t("nav-data-analytics-label"),
+              description: t("nav-data-analytics-description"),
+              href: "/developers/tools/analytics/",
             },
             {
-              label: t("nav-governance-label"),
-              description: t("nav-governance-description"),
-              href: "/governance/",
+              label: t("nav-ethereum-foundation-label"),
+              description: t("nav-ethereum-foundation-description"),
+              href: "/foundation/",
             },
           ],
         },
