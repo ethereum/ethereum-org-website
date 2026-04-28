@@ -7,7 +7,6 @@ import PageJsonLD from "@/components/PageJsonLD"
 import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
-import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
 
 import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
@@ -92,7 +91,7 @@ export default async function VideoPageJsonLD({
         isPartOf: { "@id": videoGalleryUrl },
         thumbnailUrl:
           frontmatter.customThumbnailUrl ||
-          getDefaultThumbnailUrl(frontmatter.youtubeId),
+          `https://img.youtube.com/vi/${frontmatter.youtubeId}/hqdefault.jpg`,
         embedUrl: `https://www.youtube.com/embed/${frontmatter.youtubeId}`,
         contentUrl: `https://www.youtube.com/watch?v=${frontmatter.youtubeId}`,
         educationalLevel: frontmatter.educationLevel,
