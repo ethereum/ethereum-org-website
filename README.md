@@ -2208,6 +2208,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kangbaek324"><img src="https://avatars.githubusercontent.com/u/162931494?v=4?s=100" width="100px;" alt="BaekHo Kang"/><br /><sub><b>BaekHo Kang</b></sub></a><br /><a href="#translation-kangbaek324" title="Translation">🌍</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://franrob-projects.github.io/portfolio/"><img src="https://avatars.githubusercontent.com/u/111994975?v=4?s=100" width="100px;" alt="Fran Roberts"/><br /><sub><b>Fran Roberts</b></sub></a><br /><a href="#content-franrob-projects" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jzhishu"><img src="https://avatars.githubusercontent.com/u/39545185?v=4?s=100" width="100px;" alt="JH"/><br /><sub><b>JH</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajzhishu" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/shalom-ezekiel"><img src="https://avatars.githubusercontent.com/u/107555717?v=4?s=100" width="100px;" alt="shalom ezekiel"/><br /><sub><b>shalom ezekiel</b></sub></a><br /><a href="#maintenance-shalom-ezekiel" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
