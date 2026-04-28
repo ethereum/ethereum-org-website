@@ -36,7 +36,7 @@ export const SendFromContacts = ({
         >
           <Button
             variant="outline"
-            className="border-disabled text-disabled hover:!text-disabled w-full cursor-auto py-4 hover:shadow-none"
+            className="w-full cursor-auto border-disabled py-4 text-disabled hover:!text-disabled hover:shadow-none"
           >
             <Search />
             <span className="me-auto">{t("sim-contacts-search")}</span>
@@ -44,7 +44,7 @@ export const SendFromContacts = ({
           </Button>
         </NotificationPopover>
       </div>
-      <div className="bg-background-highlight h-full px-6 py-8">
+      <div className="h-full bg-background-highlight px-6 py-8">
         <CategoryTabs
           categories={[t("sim-contacts-my-contacts"), t("sim-contacts-recent")]}
           activeIndex={1}
@@ -55,13 +55,13 @@ export const SendFromContacts = ({
             <Button
               key={name + i}
               disabled={i > 0}
-              className="group disabled:bg-background disabled:text-body hover:[&_path]:fill-primary-hover gap-2"
+              className="group gap-2 disabled:bg-background disabled:text-body hover:[&_path]:fill-primary-hover"
               onClick={() => handleSelection(name)}
             >
-              <EthTokenIcon className="[&_path]:fill-primary-action [&_circle]:fill-white" />
+              <EthTokenIcon className="[&_circle]:fill-white [&_path]:fill-primary-action" />
               <span className="flex-1">
                 <span className="block text-start font-bold">{name}</span>
-                <span className="group-disabled:text-body-medium block text-start text-sm text-white">
+                <span className="block text-start text-sm text-white group-disabled:text-body-medium">
                   {t("sim-contact-last-action")}
                 </span>
               </span>

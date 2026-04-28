@@ -54,6 +54,7 @@ const EXCLUDED_EMAILS = [
   "actions@github.com",
   "github-actions[bot]@users.noreply.github.com",
   "noreply@github.com",
+  "gemini@google.com",
 ]
 
 /** GitHub logins (exact match) that should be excluded */

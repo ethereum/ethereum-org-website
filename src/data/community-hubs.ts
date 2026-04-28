@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image"
 
 import BerlinHubBanner from "@/public/images/community/hubs/berlin-hub-banner.png"
+import BuenosAiresHubBanner from "@/public/images/community/hubs/buenos-aires-hub-banner.png"
 import DubaiHubBanner from "@/public/images/community/hubs/dubai-hub-banner.png"
 import HongKongHubBanner from "@/public/images/community/hubs/hong-kong-hub-banner.png"
 import LagosHubBanner from "@/public/images/community/hubs/lagos-hub-banner.png"
@@ -20,6 +21,18 @@ export type CommunityHub = {
 }
 
 const communityHubs: CommunityHub[] = [
+  {
+    id: "buenos-aires",
+    location: "Buenos Aires",
+    descriptionKey: "page-events-hub-description-buenos-aires",
+    ctaKey: "page-events-hub-cta-buenos-aires",
+    coworkingSignupUrl:
+      "https://airtable.com/appENuebGSKMB5sia/pagWfsW9hrLZUqBAf/form",
+    meetupUrl: "https://luma.com/user/crecimientoar",
+    banner: BuenosAiresHubBanner,
+    brandColor:
+      "bg-gradient-to-b from-[#74ACDF]/5 to-[#74ACDF]/10 dark:from-[#74ACDF]/20 dark:to-[#74ACDF]/10 border-[#74ACDF]/20",
+  },
   {
     id: "hong-kong",
     location: "Hong Kong",

@@ -88,7 +88,7 @@ const QuizzesPage = () => {
                   {...commonQuizListProps}
                 />
               </div>
-              <Flex className="bg-background-highlight items-center justify-between p-8 max-xl:flex-col max-xl:gap-4 lg:rounded-lg">
+              <Flex className="items-center justify-between bg-background-highlight p-8 max-xl:flex-col max-xl:gap-4 lg:rounded-lg">
                 <div className="max-xl:text-center">
                   <p className="font-bold">{t("want-more-quizzes")}</p>
                   <p>{t("contribute")}</p>
@@ -100,7 +100,7 @@ const QuizzesPage = () => {
                   onClick={handleGHAdd}
                 >
                   <HStack className="gap-0">
-                    <Github className="text-body me-2 text-2xl" />
+                    <Github className="me-2 text-2xl text-body" />
                     {t("add-quiz")}
                   </HStack>
                 </ButtonLink>

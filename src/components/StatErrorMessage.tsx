@@ -8,7 +8,7 @@ const StatErrorMessage = ({
   className,
   ...props
 }: HTMLAttributes<HTMLSpanElement>) => (
-  <span className={cn("leading-xs text-3xl", className)} {...props}>
+  <span className={cn("text-3xl leading-xs", className)} {...props}>
     <Translation id="loading-error-refresh" />
   </span>
 )

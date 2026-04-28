@@ -98,15 +98,15 @@ const UpgradeCountdown = () => {
     <>
       <BaseLink
         href={`/roadmap/${upgrade}/`}
-        className="text-body hover:text-primary text-5xl font-bold no-underline"
+        className="text-5xl font-bold text-body no-underline hover:text-primary"
       >
         {upgrade.slice(0, 1).toUpperCase() + upgrade.slice(1)}
       </BaseLink>
-      <div className="text-body-medium text-xl font-bold">
+      <div className="text-xl font-bold text-body-medium">
         {scalingUpgradeCountdown ? (
           scalingUpgradeCountdown
         ) : (
-          <div className="bg-success text-success-light rounded-full px-2 py-1 text-xs font-normal uppercase">
+          <div className="rounded-full bg-success px-2 py-1 text-xs font-normal text-success-light uppercase">
             Live Since{" "}
             {dateTimeFormat(locale, { timeZone: "UTC" }).format(
               new Date(upgradeDate)

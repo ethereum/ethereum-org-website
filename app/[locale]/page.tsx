@@ -114,7 +114,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <SectionHeader className="mt-0 mb-0 leading-tight lg:text-6xl">
                       {t("page-index-simulator-title")}
                     </SectionHeader>
-                    <p className="text-body-medium text-lg md:text-xl">
+                    <p className="text-lg text-body-medium md:text-xl">
                       {t("page-index-simulator-subtitle")}
                     </p>
                   </div>

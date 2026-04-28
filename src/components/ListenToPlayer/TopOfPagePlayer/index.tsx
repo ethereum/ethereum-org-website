@@ -22,7 +22,7 @@ const TopOfPagePlayer = ({
   return (
     <Button
       variant="ghost"
-      className="bg-background-low hover:bg-background-medium inline-block w-full rounded-lg p-2 lg:w-auto"
+      className="inline-block w-full rounded-lg bg-background-low p-2 hover:bg-background-medium lg:w-auto"
       onClick={() => {
         if (startedPlaying) {
           trackCustomEvent({
@@ -34,7 +34,7 @@ const TopOfPagePlayer = ({
         handlePlayPause()
       }}
     >
-      <div className="text-primary hover:text-primary-hover flex flex-row items-center gap-2">
+      <div className="flex flex-row items-center gap-2 text-primary hover:text-primary-hover">
         {startedPlaying ? (
           isPlaying ? (
             <CirclePause />
@@ -44,7 +44,7 @@ const TopOfPagePlayer = ({
         ) : (
           <CirclePlay />
         )}
-        <div className="text-body-medium text-sm">
+        <div className="text-sm text-body-medium">
           {startedPlaying ? (
             `${Math.floor(timeRemaining / 60)}:${String(Math.floor(timeRemaining % 60)).padStart(2, "0")}`
           ) : (

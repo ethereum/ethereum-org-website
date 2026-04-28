@@ -42,7 +42,7 @@ const DownloadAWallet = ({
         </div>
         <div className="hidden flex-col gap-8 lg:flex">
           <div
-            className="group hover:text-primary-hover flex cursor-pointer flex-row items-center gap-2"
+            className="group flex cursor-pointer flex-row items-center gap-2 hover:text-primary-hover"
             onClick={() => {
               setHasWallet(!hasWallet)
               trackCustomEvent({
@@ -72,11 +72,11 @@ const DownloadAWallet = ({
         </div>
       </div>
       <div className="flex w-full flex-1 flex-col gap-8">
-        <div className="shadow-window-box flex flex-col overflow-hidden rounded-2xl border">
+        <div className="flex flex-col overflow-hidden rounded-2xl border shadow-window-box">
           {newToCryptoWallets.map((wallet) => (
             <LinkBox
               key={wallet.name}
-              className="border-body-light bg-background hover:bg-background-highlight flex flex-col gap-4 border-b p-4 last:border-b-0 sm:p-6"
+              className="flex flex-col gap-4 border-b border-body-light bg-background p-4 last:border-b-0 hover:bg-background-highlight sm:p-6"
             >
               <div className="flex flex-row items-center justify-between gap-2">
                 <div className="flex w-full max-w-[200px] flex-row items-center gap-4">
@@ -90,7 +90,7 @@ const DownloadAWallet = ({
                   </div>
                   <p>
                     <LinkOverlay
-                      className="text-body hover:text-body no-underline"
+                      className="text-body no-underline hover:text-body"
                       asChild
                     >
                       <InlineLink
@@ -119,7 +119,7 @@ const DownloadAWallet = ({
         </div>
         <div className="flex flex-col gap-8 lg:hidden">
           <div
-            className="group hover:text-primary-hover flex cursor-pointer flex-row items-center gap-2"
+            className="group flex cursor-pointer flex-row items-center gap-2 hover:text-primary-hover"
             onClick={() => {
               setHasWallet(!hasWallet)
               trackCustomEvent({

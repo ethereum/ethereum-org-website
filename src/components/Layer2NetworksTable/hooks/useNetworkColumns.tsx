@@ -75,7 +75,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
             <div className="flex flex-row gap-4 lg:hidden">
               <div className="w-[24px]" />
               <div>
-                <p className="text-body-medium text-xs">
+                <p className="text-xs text-body-medium">
                   <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />
                 </p>
                 <p>
@@ -88,7 +88,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
                 </p>
               </div>
               <div>
-                <p className="text-body-medium text-xs">
+                <p className="text-xs text-body-medium">
                   <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />
                 </p>
                 <p>

@@ -91,7 +91,7 @@ export default function FilterBar({
               aria-expanded={open}
               aria-controls={COMBOBOX_ID}
               variant="ghost"
-              className="text-body hover:bg-background-highlight w-full items-center justify-between gap-2 p-2 transition-colors sm:w-64"
+              className="w-full items-center justify-between gap-2 p-2 text-body transition-colors hover:bg-background-highlight sm:w-64"
             >
               <span className="truncate">
                 {selectedLabel ?? t("filter-bar-placeholder")}
@@ -137,7 +137,7 @@ export default function FilterBar({
         )}
       </div>
 
-      <p className="text-body-medium p-2">
+      <p className="p-2 text-body-medium">
         {t("filter-bar-showing")}{" "}
         <span className="text-body">({countDisplay})</span>
       </p>
