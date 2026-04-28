@@ -4,6 +4,7 @@ description: Using account abstraction, we can create smart contract wallets tha
 author: Ori Pomerantz
 tags: ["gasless", "erc-20", "account abstraction"]
 skill: intermediate
+breadcrumb: Gasless token
 lang: en
 published: 2026-04-01
 ---
