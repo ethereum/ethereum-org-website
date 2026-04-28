@@ -1,10 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-})
-
 const createNextIntlPlugin = require("next-intl/plugin")
 
 const { withSentryConfig } = require("@sentry/nextjs")
@@ -52,12 +48,6 @@ module.exports = (phase) => {
       IS_VISUAL_TEST: process.env.IS_VISUAL_TEST,
     },
     webpack: (config) => {
-      // Parse .all-contributorsrc as JSON (no .json extension)
-      config.module.rules.push({
-        test: /\.all-contributorsrc$/,
-        type: "json",
-      })
-
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: "yaml-loader",
@@ -115,6 +105,22 @@ module.exports = (phase) => {
         "*.md": { loaders: ["raw-loader"], as: "*.js" },
         "*.mp3": { as: "*.static" },
       },
+      // Suppress file-tracing warnings from the MDX pipeline. These files
+      // use dynamic path.join/readFile to read markdown content at runtime.
+      // outputFileTracingExcludes already prevents over-bundling.
+      ignoreIssue: [
+        {
+          path: "**/src/lib/**",
+          description: /Overly broad patterns/,
+        },
+        // "Encountered unexpected file in NFT list" surfaces on the project
+        // root (e.g. `./next.config.js`) even though the underlying fs.*
+        // calls live in src/lib/md/*. Match anywhere so it's suppressed.
+        {
+          path: "**",
+          title: /Encountered unexpected file/,
+        },
+      ],
     },
     // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
     serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
@@ -257,7 +263,7 @@ module.exports = (phase) => {
     }
   }
 
-  return withBundleAnalyzer(withNextIntl(nextConfig))
+  return withNextIntl(nextConfig)
 }
 
 module.exports = withSentryConfig(module.exports, {
@@ -265,9 +271,4 @@ module.exports = withSentryConfig(module.exports, {
   project: "ethorg",
   silent: true,
   widenClientFileUpload: true,
-  webpack: {
-    treeshake: {
-      removeDebugLogging: true,
-    },
-  },
 })

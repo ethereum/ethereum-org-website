@@ -14195,6 +14195,33 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "shalom-ezekiel",
+      "name": "shalom ezekiel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107555717?v=4",
+      "profile": "https://github.com/shalom-ezekiel",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "bshastry",
+      "name": "Bhargava Shastry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2388185?v=4",
+      "profile": "https://github.com/bshastry",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "naftalimurgor",
+      "name": "Naftali Murgor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37052032?v=4",
+      "profile": "https://blog.naftalimurgor.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
