@@ -155,6 +155,25 @@ async function loadGlossary(
   }
 }
 
+/**
+ * Recursively collect files under `dir` whose name ends with `ext`.
+ * Used to expand directory entries in TARGET_PATH (e.g. "public/content/videos/")
+ * into their constituent files, restoring the pipeline's historical behavior
+ * where directories were valid target paths.
+ */
+function walkForExt(dir: string, ext: string): string[] {
+  const out: string[] = []
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name)
+    if (entry.isDirectory()) {
+      out.push(...walkForExt(full, ext))
+    } else if (entry.isFile() && full.endsWith(ext)) {
+      out.push(full)
+    }
+  }
+  return out
+}
+
 function readLocalePath(
   destPath: string,
   fileType: string,
@@ -688,11 +707,12 @@ async function main() {
   const committedFiles: Array<{ path: string; content: string }> = []
   let hasCommits = false
 
-  // Resolve target paths in three passes:
+  // Resolve target paths in five passes:
   //   1. Normalize  (log-level: auto-prefix and strip accidental locale paths)
   //   2. Exist?     (error-level: fail early if any path is missing on disk)
-  //   3. Validate   (hard errors still throw)
-  //   4. Excluded?  (warn-level: skip and continue; throw only if all excluded)
+  //   3. Expand     (directory entries -> their constituent files)
+  //   4. Validate   (hard errors still throw)
+  //   5. Excluded?  (warn-level: skip and continue; throw only if all excluded)
   const normalizedPaths = config.targetPaths.map((fp) =>
     normalizeTargetPath(fp, (from, to) =>
       log(`Normalizing "${from}" -> "${to}"`)
@@ -708,12 +728,29 @@ async function main() {
     throw new Error(`Target path(s) not found on disk: ${missing.join(", ")}`)
   }
 
+  // Expand directories to their constituent files. Markdown roots get every
+  // .md file under the dir; JSON roots get every .json file under the dir.
+  const expandedPaths: string[] = []
   for (const fp of normalizedPaths) {
+    const abs = path.resolve(fp)
+    if (fs.statSync(abs).isDirectory()) {
+      const ext = fp.startsWith("src/intl/en") ? ".json" : ".md"
+      const files = walkForExt(abs, ext).map((f) =>
+        path.relative(process.cwd(), f)
+      )
+      log(`Expanded "${fp}" -> ${files.length} ${ext} file(s)`)
+      expandedPaths.push(...files)
+    } else {
+      expandedPaths.push(fp)
+    }
+  }
+
+  for (const fp of expandedPaths) {
     validateTargetPath(fp)
   }
 
   const activeTargetPaths: string[] = []
-  for (const fp of normalizedPaths) {
+  for (const fp of expandedPaths) {
     const excludedBy = getExcludedReason(fp)
     if (excludedBy) {
       log(`Skipping "${fp}" -- in excluded list (${excludedBy})`, "warn")
