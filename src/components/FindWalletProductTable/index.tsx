@@ -1,6 +1,6 @@
 "use client"
 
-import type { WalletRow } from "@/lib/types"
+import type { FilterOption, WalletRow } from "@/lib/types"
 
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
 import { useWalletPersonaPresets } from "@/components/FindWalletProductTable/hooks/useWalletPersonaPresets"
@@ -15,6 +15,12 @@ import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
 
 import { useTranslation } from "@/hooks/useTranslation"
+
+const renderWalletSubComponent = (
+  wallet: WalletRow,
+  filters: FilterOption[],
+  listIdx: number
+) => <WalletSubComponent wallet={wallet} filters={filters} listIdx={listIdx} />
 
 const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
   const { t } = useTranslation("page-wallets-find-wallet")
@@ -59,13 +65,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
 
           <List
             data={filteredData}
-            subComponent={(wallet, filters, listIdx) => (
-              <WalletSubComponent
-                wallet={wallet}
-                filters={filters}
-                listIdx={listIdx}
-              />
-            )}
+            subComponent={renderWalletSubComponent}
             filters={filters}
             matomoEventCategory="find-wallet"
             data-testid="wallet-list"

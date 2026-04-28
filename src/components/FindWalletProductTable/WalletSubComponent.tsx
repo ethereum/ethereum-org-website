@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { Globe, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
@@ -55,11 +56,13 @@ const WalletSubComponent = ({
     wallet.last_updated
   )
 
-  trackCustomEvent({
-    eventCategory: "WalletMoreInfo",
-    eventAction: "More info wallet",
-    eventName: `More info ${wallet.name}`,
-  })
+  useEffect(() => {
+    trackCustomEvent({
+      eventCategory: "WalletMoreInfo",
+      eventAction: "More info wallet",
+      eventName: `More info ${wallet.name}`,
+    })
+  }, [wallet.name])
 
   return (
     <div className="flex flex-row gap-2">

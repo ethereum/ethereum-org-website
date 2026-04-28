@@ -1,5 +1,3 @@
-import Tooltip from "@/components/Tooltip"
-
 import { formatStringList } from "@/lib/utils/wallets"
 
 import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
@@ -8,7 +6,8 @@ type SupportedLanguagesTooltipProps = {
   supportedLanguages: string[]
 }
 
-// Tooltip to show other supported languages on a wallet
+// Shows the count of additional supported languages with the full list
+// available via the native browser tooltip on hover.
 export const SupportedLanguagesTooltip = ({
   supportedLanguages,
 }: SupportedLanguagesTooltipProps) => {
@@ -24,8 +23,8 @@ export const SupportedLanguagesTooltip = ({
   )
 
   return (
-    <Tooltip content={tooltipContent}>
-      <span className="text-md font-normal text-primary">+ {rest}</span>
-    </Tooltip>
+    <span className="text-md font-normal text-primary" title={tooltipContent}>
+      + {rest}
+    </span>
   )
 }
