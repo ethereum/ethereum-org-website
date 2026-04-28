@@ -165,7 +165,7 @@ summaryPoints:
 
 </ExpandableCard>
 
-<ExpandableCard title="ما هو "احصد الآن، وفك التشفير لاحقًا"؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="ما هو &quot;احصد الآن، وفك التشفير لاحقًا&quot;؟" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "احصد الآن، وفك التشفير لاحقًا" هو هجوم يقوم فيه شخص ما بتسجيل بيانات مشفرة أو مفاتيح عامة مكشوفة اليوم، ثم يكسر التشفير لاحقًا بمجرد وجود كمبيوتر كمي قوي بما يكفي. بالنسبة لإيثيريوم، هذا هو الأكثر صلة بالحسابات التي تم كشف مفاتيحها العامة بالفعل على السلسلة (أي حساب أرسل معاملة). هذا هو أحد الأسباب التي تجعل المجتمع يتعامل مع ترحيل ما بعد الكم على أنه حساس للوقت على الرغم من أن التهديد الكمي ليس فوريًا بعد.
 

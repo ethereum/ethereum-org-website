@@ -165,7 +165,7 @@ Não. O Ethereum tem um dos programas pós-quânticos mais estruturados de qualq
 
 </ExpandableCard>
 
-<ExpandableCard title="O que é "coletar agora, descriptografar depois"?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="O que é &quot;coletar agora, descriptografar depois&quot;?" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 "Colha agora, descriptografe depois" é um ataque em que alguém registra dados criptografados ou chaves públicas expostas hoje e, em seguida, quebra a criptografia mais tarde, quando existir um computador quântico poderoso o suficiente. Para o Ethereum, isso é mais relevante para contas cujas chaves públicas já estão expostas onchain (qualquer conta que tenha enviado uma transação). Esta é uma das razões pelas quais a comunidade trata a migração pós-quântica como sensível ao tempo, embora a ameaça quântica ainda não seja imediata.
 

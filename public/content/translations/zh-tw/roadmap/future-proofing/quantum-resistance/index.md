@@ -143,7 +143,7 @@ summaryPoints:
 
 <ExpandableCard title="量子電腦何時會成為威脅？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked when could quantum computers become a threat?">
 
-估計各不相同。Google 2026 年 3 月的研究表明，破解 256 位元橢圓曲線密碼學所需的硬體最早可能在本世紀末左右出現，但仍存在重大的工程挑戰。大多數研究人員認為，現實的威脅至少還有幾年的時間。誠實的答案是沒有人知道確切的時間表，這正是為什麼現在做準備很重要的原因。
+估計各不相同。Google 2026 年 3 月的研究表明，破解 256 位元橢圓曲線密碼學所需的硬體最早可能在本十年末左右出現，但仍存在重大的工程挑戰。大多數研究人員認為，現實的威脅至少還有幾年的時間。誠實的答案是沒有人知道確切的時間表，這正是為什麼現在做準備很重要的原因。
 
 </ExpandableCard>
 

@@ -165,7 +165,7 @@ summaryPoints:
 
 </ExpandableCard>
 
-<ExpandableCard title="什么是"现在收集，以后解密"？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
+<ExpandableCard title="什么是「现在收集，以后解密」？" eventCategory="/roadmap/future-proofing/quantum-resistance" eventName="clicked what is harvest now decrypt later?">
 
 “现在收集，以后解密 (Harvest now, decrypt later)”是一种攻击方式，即有人今天记录加密数据或暴露的公钥，然后在以后存在足够强大的量子计算机时破解加密。对于以太坊来说，这与公钥已经暴露在链上的账户（任何发送过交易的账户）最相关。这也是为什么社区将后量子迁移视为时间敏感的原因之一，即使量子威胁尚未迫在眉睫。
 
