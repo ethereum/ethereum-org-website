@@ -41,6 +41,10 @@ import {
   parseIncrementalResponse,
 } from "./lib/llm/incremental-translate"
 import {
+  extractAttributeLeaves,
+  translateJsxAttributes,
+} from "./lib/llm/jsx-attribute-translator"
+import {
   buildJsonManifest,
   buildLocaleTranslationManifest,
   buildMarkdownManifest,
@@ -54,7 +58,13 @@ import { createTaskPool } from "./lib/utils/task-pool"
 import { createOrUpdateTranslationPR } from "./lib/workflows/pr-creation"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
-import { config, GLOSSARY_API_URL, validateTargetPath } from "./config"
+import {
+  config,
+  getExcludedReason,
+  GLOSSARY_API_URL,
+  normalizeTargetPath,
+  validateTargetPath,
+} from "./config"
 import { LLM, MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
@@ -73,8 +83,10 @@ interface FileContext {
 // Helpers
 // ---------------------------------------------------------------------------
 
-function log(msg: string) {
-  console.log(`[pipeline] ${msg}`)
+function log(msg: string, level: "log" | "warn" | "error" = "log") {
+  const prefix =
+    level === "log" ? "[pipeline]" : `[pipeline] [${level.toUpperCase()}]`
+  console[level](`${prefix} ${msg}`)
 }
 
 /**
@@ -405,8 +417,37 @@ async function runFullTranslation(
     `[${locale}] ${file.path}: translated (${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
   )
 
-  await committer.commitFile(destPath, result.translatedContent, locale)
-  committedFiles.push({ path: destPath, content: result.translatedContent })
+  // Phase 4b: JSX attribute translation pass (markdown only)
+  let finalContent = result.translatedContent
+  if (file.type === "markdown") {
+    const leaves = extractAttributeLeaves(file.content)
+    if (leaves.length > 0) {
+      const attrResult = await translateJsxAttributes({
+        leaves,
+        localeContent: finalContent,
+        targetLanguage: locale,
+        glossary: glossaryTerms,
+        filePath: file.path,
+      })
+      finalContent = attrResult.content
+      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+        log(
+          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+        )
+      }
+      // Per PIPELINE-SPEC.md "On partial failure": skip manifest stamping if
+      // any attr leaf failed to translate. Throwing here forces the pool to
+      // mark this task failed; the next run will re-detect and retry.
+      if (attrResult.failedCount > 0) {
+        throw new Error(
+          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+        )
+      }
+    }
+  }
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
 
   // Build and commit source manifest
   const sourceManifest =
@@ -523,8 +564,35 @@ async function runIncremental(
     translator
   )
 
-  await committer.commitFile(destPath, result, locale)
-  committedFiles.push({ path: destPath, content: result })
+  // Phase 4b: JSX attribute translation pass (markdown only)
+  let finalContent = result
+  if (file.type === "markdown") {
+    const leaves = extractAttributeLeaves(file.content)
+    if (leaves.length > 0) {
+      const glossaryTerms = await loadGlossary(file.content, locale)
+      const attrResult = await translateJsxAttributes({
+        leaves,
+        localeContent: finalContent,
+        targetLanguage: locale,
+        glossary: glossaryTerms,
+        filePath: file.path,
+      })
+      finalContent = attrResult.content
+      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+        log(
+          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+        )
+      }
+      if (attrResult.failedCount > 0) {
+        throw new Error(
+          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+        )
+      }
+    }
+  }
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
 
   const sourceManifest =
     file.type === "markdown"
@@ -620,13 +688,49 @@ async function main() {
   const committedFiles: Array<{ path: string; content: string }> = []
   let hasCommits = false
 
-  // Validate target paths before any filesystem reads
-  for (const fp of config.targetPaths) {
+  // Resolve target paths in three passes:
+  //   1. Normalize  (log-level: auto-prefix and strip accidental locale paths)
+  //   2. Exist?     (error-level: fail early if any path is missing on disk)
+  //   3. Validate   (hard errors still throw)
+  //   4. Excluded?  (warn-level: skip and continue; throw only if all excluded)
+  const normalizedPaths = config.targetPaths.map((fp) =>
+    normalizeTargetPath(fp, (from, to) =>
+      log(`Normalizing "${from}" -> "${to}"`)
+    )
+  )
+
+  const missing = normalizedPaths.filter(
+    (fp) => !fs.existsSync(path.resolve(fp))
+  )
+  if (missing.length > 0) {
+    log(`${missing.length} target path(s) do not exist on disk:`, "error")
+    for (const m of missing) log(`  - ${m}`, "error")
+    throw new Error(`Target path(s) not found on disk: ${missing.join(", ")}`)
+  }
+
+  for (const fp of normalizedPaths) {
     validateTargetPath(fp)
   }
 
+  const activeTargetPaths: string[] = []
+  for (const fp of normalizedPaths) {
+    const excludedBy = getExcludedReason(fp)
+    if (excludedBy) {
+      log(`Skipping "${fp}" -- in excluded list (${excludedBy})`, "warn")
+      continue
+    }
+    activeTargetPaths.push(fp)
+  }
+
+  if (activeTargetPaths.length === 0) {
+    const msg =
+      "All target paths are in the excluded list; nothing to translate."
+    log(msg, "error")
+    throw new Error(msg)
+  }
+
   // Load English files from disk
-  const englishFiles: FileContext[] = config.targetPaths.map((fp) => ({
+  const englishFiles: FileContext[] = activeTargetPaths.map((fp) => ({
     path: fp,
     content: fs.readFileSync(path.resolve(fp), "utf-8"),
     type: fp.endsWith(".json") ? ("json" as const) : ("markdown" as const),
