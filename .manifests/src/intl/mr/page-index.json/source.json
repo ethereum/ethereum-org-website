@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-index.json",
-  "generatedAt": "2026-04-18T20:56:41.616Z",
-  "rootHash": "577b3c18f5a4",
+  "generatedAt": "2026-04-28T18:36:18.502Z",
+  "rootHash": "afb03918c701",
   "tree": {
-    "contentHash": "fad842cea33e",
+    "contentHash": "059d0ec9b44d",
     "anchorHash": "c70fa7ea2b59",
     "children": {
       "page-index-meta-title": {
@@ -152,7 +152,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-privacy-cta": {
-        "contentHash": "384bb43cb117",
+        "contentHash": "5d1a362a585c",
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-privacy-traditional-label": {
@@ -255,7 +255,7 @@
         ]
       },
       "page-index-carousel-remittances-cta": {
-        "contentHash": "aba5c11010f7",
+        "contentHash": "4ddaece08b73",
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-remittances-traditional-label": {
@@ -329,7 +329,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-borrowing-cta": {
-        "contentHash": "7b46bcef27e2",
+        "contentHash": "ee5e772a122a",
         "anchorHash": "e3b0c44298fc"
       },
       "page-index-carousel-borrowing-traditional-label": {
@@ -732,5 +732,5 @@
       "page-index-simulator-cta"
     ]
   },
-  "sourceCommitSha": "b92b89be9b3b7d3827fcee4d562ce76560cf717b"
+  "sourceCommitSha": "db69df12d59669da6ec42c134c4eb4d09f7b1037"
 }
