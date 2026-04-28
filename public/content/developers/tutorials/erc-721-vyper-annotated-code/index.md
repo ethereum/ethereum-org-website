@@ -97,7 +97,7 @@ This function is a `view`, which means it can read the state of the blockchain, 
 
 ### Events {#events}
 
-[Events](https://ethereum.org/en/developers/docs/smart-contracts/anatomy/#events-and-logs)
+[Events](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 are emitted to inform users and servers outside of the blockchain of events. Note that the content of events
 is not available to contracts on the blockchain.
 
