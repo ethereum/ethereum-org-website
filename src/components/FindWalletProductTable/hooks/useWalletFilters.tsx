@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import { Brain, LayersPlus } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import { FilterOption } from "@/lib/types"
@@ -6,30 +7,7 @@ import { FilterOption } from "@/lib/types"
 import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/FindWalletLanguageSelectInput"
 import Layer2SelectInput from "@/components/FindWalletProductTable/Layer2SelectInput"
 import PrivacyIcon from "@/components/icons/privacy.svg"
-import {
-  AccountUpgradesIcon,
-  BrowserIcon,
-  BuyCryptoIcon,
-  ConnectDappsIcon,
-  DesktopIcon,
-  ENSSupportIcon,
-  ERC20SupportIcon,
-  GasFeeCustomizationIcon,
-  HardwareIcon,
-  HardwareSupportIcon,
-  Layer2Icon,
-  MobileIcon,
-  MultisigIcon,
-  NFTSupportIcon,
-  NonCustodialIcon,
-  OpenSourceWalletIcon,
-  RPCImportingIcon,
-  SmartAccountsIcon,
-  SocialRecoverIcon,
-  StakingIcon,
-  SwapIcon,
-  WithdrawCryptoIcon,
-} from "@/components/icons/wallets"
+import * as icon from "@/components/icons/wallets"
 import CheckboxFilterInput from "@/components/ProductTable/FilterInputs/CheckboxFilterInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
@@ -56,7 +34,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={MobileIcon}
+                Icon={icon.MobileIcon}
                 label={t("page-find-wallet-mobile")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -165,7 +143,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={DesktopIcon}
+                Icon={icon.DesktopIcon}
                 label={t("page-find-wallet-desktop")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -315,7 +293,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={BrowserIcon}
+                Icon={icon.BrowserIcon}
                 label={t("page-find-wallet-browser")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -424,7 +402,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={HardwareIcon}
+                Icon={icon.HardwareIcon}
                 label={t("page-find-wallet-hardware")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -518,7 +496,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={BuyCryptoIcon}
+                Icon={icon.BuyCryptoIcon}
                 label={t("page-find-wallet-buy-crypto")}
                 description={t("page-find-wallet-buy-crypto-desc")}
                 filterIndex={filterIndex}
@@ -545,7 +523,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={WithdrawCryptoIcon}
+                Icon={icon.WithdrawCryptoIcon}
                 label={t("page-find-wallet-sell-for-fiat")}
                 description={t("page-find-wallet-sell-for-fiat-desc")}
                 filterIndex={filterIndex}
@@ -578,7 +556,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={ConnectDappsIcon}
+                Icon={icon.ConnectDappsIcon}
                 label={t("page-find-wallet-connect-to-dapps")}
                 description={t("page-find-wallet-connect-to-dapps-desc")}
                 filterIndex={filterIndex}
@@ -605,7 +583,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={NFTSupportIcon}
+                Icon={icon.NFTSupportIcon}
                 label={t("page-find-wallet-nft-support")}
                 description={t("page-find-wallet-nft-support-desc")}
                 filterIndex={filterIndex}
@@ -632,7 +610,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={StakingIcon}
+                Icon={icon.StakingIcon}
                 label={t("page-find-wallet-staking")}
                 description={t("page-find-wallet-staking-desc")}
                 filterIndex={filterIndex}
@@ -659,7 +637,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={Layer2Icon}
+                Icon={icon.Layer2Icon}
                 label={t("page-find-wallet-layer-2")}
                 description={t("page-find-wallet-layer-2-desc")}
                 filterIndex={filterIndex}
@@ -686,7 +664,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={SwapIcon}
+                Icon={icon.SwapIcon}
                 label={t("page-find-wallet-swaps")}
                 description={t("page-find-wallet-swaps-desc")}
                 filterIndex={filterIndex}
@@ -713,7 +691,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={HardwareSupportIcon}
+                Icon={icon.HardwareSupportIcon}
                 label={t("page-find-wallet-hardware-wallet-support")}
                 description={t("page-find-wallet-hardware-wallet-support-desc")}
                 filterIndex={filterIndex}
@@ -740,7 +718,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={ENSSupportIcon}
+                Icon={icon.ENSSupportIcon}
                 label={t("page-find-wallet-ens-support")}
                 description={t("page-find-wallet-ens-support-desc")}
                 filterIndex={filterIndex}
@@ -773,7 +751,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={OpenSourceWalletIcon}
+                Icon={icon.OpenSourceWalletIcon}
                 label={t("page-find-wallet-open-source")}
                 description={t("page-find-wallet-open-source-desc")}
                 filterIndex={filterIndex}
@@ -800,7 +778,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={NonCustodialIcon}
+                Icon={icon.NonCustodialIcon}
                 label={t("page-find-wallet-non-custodial")}
                 description={t("page-find-wallet-non-custodial-desc")}
                 filterIndex={filterIndex}
@@ -833,7 +811,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={MultisigIcon}
+                Icon={icon.MultisigIcon}
                 label={t("page-find-wallet-multisig")}
                 description={t("page-find-wallet-multisig-desc")}
                 filterIndex={filterIndex}
@@ -860,7 +838,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={SocialRecoverIcon}
+                Icon={icon.SocialRecoverIcon}
                 label={t("page-find-wallet-social-recovery")}
                 description={t("page-find-wallet-social-recovery-desc")}
                 filterIndex={filterIndex}
@@ -914,7 +892,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={SmartAccountsIcon}
+                Icon={Brain}
                 label={t("page-find-wallet-smart-accounts")}
                 description={t("page-find-wallet-smart-accounts-desc")}
                 filterIndex={filterIndex}
@@ -941,7 +919,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={AccountUpgradesIcon}
+                Icon={LayersPlus}
                 label={t("page-find-wallet-account-upgrades")}
                 description={t("page-find-wallet-account-upgrades-desc")}
                 filterIndex={filterIndex}
@@ -974,7 +952,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={RPCImportingIcon}
+                Icon={icon.RPCImportingIcon}
                 label={t("page-find-wallet-rpc-importing")}
                 description={t("page-find-wallet-rpc-importing-desc")}
                 filterIndex={filterIndex}
@@ -1001,7 +979,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={ERC20SupportIcon}
+                Icon={icon.ERC20SupportIcon}
                 label={t("page-find-wallet-token-importing")}
                 description={t("page-find-wallet-token-importing-desc")}
                 filterIndex={filterIndex}
@@ -1028,7 +1006,7 @@ export const useWalletFilters = (): FilterOption[] => {
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
-                Icon={GasFeeCustomizationIcon}
+                Icon={icon.GasFeeCustomizationIcon}
                 label={t("page-find-wallet-gas-fee-customization")}
                 description={t("page-find-wallet-gas-fee-customization-desc")}
                 filterIndex={filterIndex}
