@@ -5,11 +5,6 @@ import type { FilterOption, Wallet } from "@/lib/types"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import WalletInfo from "../FindWalletProductTable/WalletInfo"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "../ui/collapsible"
 
 type RowProps<T extends { id: string }> = {
   item: T
@@ -32,26 +27,24 @@ const RowImpl = <T extends { id: string }>({
   subComponent,
   filters,
 }: RowProps<T>) => {
-  const handleOpen = useCallback(
-    (next: boolean) => onOpenChange(next, item),
+  const handleToggle = useCallback(
+    (e: React.SyntheticEvent<HTMLDetailsElement>) => {
+      onOpenChange(e.currentTarget.open, item)
+    },
     [onOpenChange, item]
   )
   return (
-    <Collapsible
+    <details
       data-index={index}
       open={open}
-      onOpenChange={handleOpen}
-      className="group/collapsible flex w-full cursor-pointer flex-col border-b hover:bg-background-highlight data-[state=open]:bg-background-highlight"
+      onToggle={handleToggle}
+      className="group/collapsible flex w-full flex-col border-b open:bg-background-highlight hover:bg-background-highlight"
     >
-      <CollapsibleTrigger asChild>
-        <div className="p-4">
-          <WalletInfo wallet={item as unknown as Wallet} />
-        </div>
-      </CollapsibleTrigger>
-      <CollapsibleContent className="p-4">
-        {open && subComponent?.(item, filters, index)}
-      </CollapsibleContent>
-    </Collapsible>
+      <summary className="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
+        <WalletInfo wallet={item as unknown as Wallet} />
+      </summary>
+      <div className="p-4">{open && subComponent?.(item, filters, index)}</div>
+    </details>
   )
 }
 
