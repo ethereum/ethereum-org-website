@@ -1,6 +1,6 @@
 "use client"
 
-import type { FilterOption, WalletRow } from "@/lib/types"
+import type { WalletRow } from "@/lib/types"
 
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
 import { useWalletPersonaPresets } from "@/components/FindWalletProductTable/hooks/useWalletPersonaPresets"
@@ -15,12 +15,6 @@ import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
 
 import { useTranslation } from "@/hooks/useTranslation"
-
-const renderWalletSubComponent = (
-  wallet: WalletRow,
-  filters: FilterOption[],
-  listIdx: number
-) => <WalletSubComponent wallet={wallet} filters={filters} listIdx={listIdx} />
 
 const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
   const { t } = useTranslation("page-wallets-find-wallet")
@@ -63,14 +57,16 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
             />
           )}
 
-          {/* Render every wallet always; toggle visibility via matchedIds.
-              Filter changes become re-renders that flip a class — no
-              mount/unmount of WalletInfo/Row subtrees. */}
           <List
             data={data}
             matchedIds={matchedIds}
-            subComponent={renderWalletSubComponent}
-            filters={filters}
+            renderSubComponent={(wallet, listIdx) => (
+              <WalletSubComponent
+                wallet={wallet}
+                filters={filters}
+                listIdx={listIdx}
+              />
+            )}
             matomoEventCategory="find-wallet"
             data-testid="wallet-list"
           />

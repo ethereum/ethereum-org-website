@@ -58,9 +58,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
 
   return (
     <div className="relative flex flex-col gap-4">
-      {/* Open-state stripe — desktop only, sits in the image-column gutter.
-          Single absolute element replaces the two stripe wrappers in the old
-          dual-tree layout. */}
+      {/* Open-state stripe (desktop only), sits in the image-column gutter. */}
       <div
         aria-hidden
         className={`pointer-events-none absolute top-14 -bottom-9 left-7 hidden w-1 -translate-x-1/2 lg:group-[&[open]]/collapsible:block ${wallet.twBackgroundColor}`}

@@ -62,7 +62,8 @@ const WalletSubComponent = ({
       eventAction: "More info wallet",
       eventName: `More info ${wallet.name}`,
     })
-  }, [wallet.name])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="flex flex-row gap-2">

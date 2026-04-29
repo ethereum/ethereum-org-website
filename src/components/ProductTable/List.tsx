@@ -1,40 +1,34 @@
 import { memo, useCallback, useRef, useState } from "react"
 
-import type { FilterOption, Wallet } from "@/lib/types"
+import type { WalletRow } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import WalletInfo from "../FindWalletProductTable/WalletInfo"
 
-type RowProps<T extends { id: string }> = {
-  item: T
+type RowProps = {
+  wallet: WalletRow
   index: number
   open: boolean
   visible: boolean
-  onOpenChange: (open: boolean, item: T) => void
-  subComponent?: (
-    item: T,
-    filters: FilterOption[],
-    listIdx: number
-  ) => React.ReactNode
-  filters: FilterOption[]
+  onOpenChange: (open: boolean, wallet: WalletRow) => void
+  children?: React.ReactNode
 }
 
-const RowImpl = <T extends { id: string }>({
-  item,
+const Row = memo(function Row({
+  wallet,
   index,
   open,
   visible,
   onOpenChange,
-  subComponent,
-  filters,
-}: RowProps<T>) => {
+  children,
+}: RowProps) {
   const handleToggle = useCallback(
     (e: React.SyntheticEvent<HTMLDetailsElement>) => {
-      onOpenChange(e.currentTarget.open, item)
+      onOpenChange(e.currentTarget.open, wallet)
     },
-    [onOpenChange, item]
+    [onOpenChange, wallet]
   )
   return (
     <details
@@ -47,58 +41,49 @@ const RowImpl = <T extends { id: string }>({
       )}
     >
       <summary className="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
-        <WalletInfo wallet={item as unknown as Wallet} />
+        <WalletInfo wallet={wallet} />
       </summary>
-      <div className="p-4">{open && subComponent?.(item, filters, index)}</div>
+      <div className="p-4">{children}</div>
     </details>
   )
-}
+})
 
-const Row = memo(RowImpl) as typeof RowImpl
-
-type ListProps<T extends { id: string }> = {
-  data: T[]
-  // When provided, every row in `data` is rendered, but rows whose id is
-  // not in `matchedIds` are display:none. Avoids mount/unmount churn on
-  // filter changes. When omitted, all rows are visible (legacy behavior).
-  matchedIds?: Set<string>
-  subComponent?: (
-    item: T,
-    filters: FilterOption[],
-    listIdx: number
-  ) => React.ReactNode
+type ListProps = {
+  data: WalletRow[]
+  // Rows whose id is not in `matchedIds` are display:none. Avoids
+  // mount/unmount churn on filter changes.
+  matchedIds: Set<string>
+  renderSubComponent: (wallet: WalletRow, listIdx: number) => React.ReactNode
   matomoEventCategory: string
-  filters: FilterOption[]
 }
 
-const List = <T extends { id: string }>({
+const List = ({
   data,
   matchedIds,
-  subComponent,
+  renderSubComponent,
   matomoEventCategory,
-  filters,
   ...rest
-}: ListProps<T>) => {
+}: ListProps) => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
   const previousExpandedRef = useRef<Record<string, boolean>>({})
 
   const handleOpenChange = useCallback(
-    (open: boolean, item: T) => {
-      setExpanded((prev) => ({ ...prev, [item.id]: open }))
+    (open: boolean, wallet: WalletRow) => {
+      setExpanded((prev) => ({ ...prev, [wallet.id]: open }))
 
       if (!open) return
 
-      const expandedOnce = previousExpandedRef.current[item.id]
+      const expandedOnce = previousExpandedRef.current[wallet.id]
       if (!expandedOnce) {
         trackCustomEvent({
           eventCategory: matomoEventCategory,
           eventAction: "expanded",
-          eventName: item.id,
+          eventName: wallet.id,
         })
       }
       previousExpandedRef.current = {
         ...previousExpandedRef.current,
-        [item.id]: true,
+        [wallet.id]: true,
       }
     },
     [matomoEventCategory]
@@ -106,18 +91,21 @@ const List = <T extends { id: string }>({
 
   return (
     <div {...rest}>
-      {data.map((item, index) => (
-        <Row<T>
-          key={item.id}
-          item={item}
-          index={index}
-          open={!!expanded[item.id]}
-          visible={!matchedIds || matchedIds.has(item.id)}
-          onOpenChange={handleOpenChange}
-          subComponent={subComponent}
-          filters={filters}
-        />
-      ))}
+      {data.map((wallet, index) => {
+        const open = !!expanded[wallet.id]
+        return (
+          <Row
+            key={wallet.id}
+            wallet={wallet}
+            index={index}
+            open={open}
+            visible={matchedIds.has(wallet.id)}
+            onOpenChange={handleOpenChange}
+          >
+            {open && renderSubComponent(wallet, index)}
+          </Row>
+        )
+      })}
     </div>
   )
 }

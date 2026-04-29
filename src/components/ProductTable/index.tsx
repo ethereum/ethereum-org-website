@@ -53,8 +53,10 @@ const ProductTable = <T extends { id: string }>({
   const [filters, setFilters] = useState<FilterOption[]>(initialFilters)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
-  // Update filters based on router query. Reads window.location.search instead
-  // of useSearchParams() to avoid CSR-bailout in this statically generated page.
+  // Hydrate filters from URL params once on mount. Reads window.location.search
+  // directly (not useSearchParams) to avoid Next's CSR bailout on this SSG page.
+  // Re-evaluate this when the page leaves SSG or gains a "share filtered URL"
+  // flow that pushes new params client-side.
   useEffect(() => {
     const query = Object.fromEntries(
       new URLSearchParams(window.location.search).entries()
