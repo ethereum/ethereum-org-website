@@ -12,7 +12,7 @@ topic:
   - "乐观 Rollup"
   - "ZK Rollup"
 format: explainer
-author: 菲内马蒂克斯
+author: "菲内马蒂克斯"
 breadcrumb: "汇总"
 ---
 

@@ -13,7 +13,7 @@ topic:
   - "dencun"
   - "обновления"
 format: explainer
-author: Файнматикс
+author: "Файнматикс"
 breadcrumb: "Объяснение EIP-4844"
 ---
 

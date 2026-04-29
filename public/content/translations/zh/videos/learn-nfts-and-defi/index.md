@@ -13,7 +13,7 @@ topic:
   - "erc-1155"
   - "借贷"
 format: explainer
-author: 芬内马蒂克斯
+author: "芬内马蒂克斯"
 breadcrumb: "NFT 与 DeFi"
 ---
 

@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "смарт-контракти"
 format: explainer
-author: Файнматікс
+author: "Файнматікс"
 breadcrumb: "Смарт-контракти"
 ---
 

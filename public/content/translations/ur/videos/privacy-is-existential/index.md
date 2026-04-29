@@ -10,7 +10,7 @@ topic:
   - "رازداری"
   - "سیکیورٹی"
 format: presentation
-author: ڈیوکنیکٹ
+author: "ڈیوکنیکٹ"
 breadcrumb: "رازداری"
 ---
 

@@ -11,7 +11,7 @@ topic:
   - "حصہ داری کا ثبوت (PoS)"
   - "دی مرج"
 format: interview
-author: ایتھیریم فاؤنڈیشن
+author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "ڈینی ریان کا انٹرویو"
 ---
 

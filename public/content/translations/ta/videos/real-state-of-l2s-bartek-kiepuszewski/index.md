@@ -11,7 +11,7 @@ topic:
   - "ரோலப்கள்"
   - "அடுக்கு-2"
 format: presentation
-author: எத்தீரியம் அறக்கட்டளை
+author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "L2-களின் நிலை"
 ---
 

@@ -11,7 +11,7 @@ topic:
   - "隱私"
   - "身分驗證"
 format: presentation
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "微縮點安全"
 ---
 

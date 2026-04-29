@@ -10,7 +10,7 @@ topic:
   - "再質押"
   - "安全性"
 format: explainer
-author: CBER 論壇
+author: "CBER 論壇"
 breadcrumb: "再質押"
 ---
 

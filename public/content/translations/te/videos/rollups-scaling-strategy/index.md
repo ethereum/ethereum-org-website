@@ -12,7 +12,7 @@ topic:
   - "ఆశావాద-రోల్అప్‌లు"
   - "zk-రోల్అప్‌లు"
 format: explainer
-author: ఫైన్‌మాటిక్స్
+author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "రోల్అప్‌లు"
 ---
 

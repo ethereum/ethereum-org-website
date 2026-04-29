@@ -10,7 +10,7 @@ topic:
   - "డిసై"
   - "నిధులు"
 format: presentation
-author: ఎథ్సీసీ
+author: "ఎథ్సీసీ"
 breadcrumb: "డిసై ఉద్యమం"
 ---
 

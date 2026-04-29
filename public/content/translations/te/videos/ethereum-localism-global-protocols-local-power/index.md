@@ -12,7 +12,7 @@ topic:
   - "వికేంద్రీకరణ"
   - "సామాజిక"
 format: interview
-author: ఎత్‌బోల్డర్
+author: "ఎత్‌బోల్డర్"
 breadcrumb: "ఎథీరియం స్థానికత"
 ---
 

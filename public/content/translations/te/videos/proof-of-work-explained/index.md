@@ -10,7 +10,7 @@ topic:
   - "ఏకాభిప్రాయం"
   - "pow"
 format: explainer
-author: బైనాన్స్ అకాడమీ
+author: "బైనాన్స్ అకాడమీ"
 breadcrumb: "ప్రూఫ్-ఆఫ్-వర్క్"
 ---
 

@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "交易"
 format: tutorial
-author: 奥斯汀·格里菲斯
+author: "奥斯汀·格里菲斯"
 breadcrumb: "交易 (ETH.BUILD)"
 ---
 

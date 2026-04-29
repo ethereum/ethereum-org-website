@@ -10,7 +10,7 @@ topic:
   - "defi"
   - "ఫైనాన్స్"
 format: explainer
-author: ఫైన్‌మ్యాటిక్స్
+author: "ఫైన్‌మ్యాటిక్స్"
 breadcrumb: "DeFi: ఫైనాన్స్ భవిష్యత్తు"
 ---
 

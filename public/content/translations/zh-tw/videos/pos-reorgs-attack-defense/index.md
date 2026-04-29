@@ -11,7 +11,7 @@ topic:
   - "權益證明 (PoS)"
   - "安全性"
 format: presentation
-author: 里斯康
+author: "里斯康"
 breadcrumb: "PoS 區塊鏈重組"
 ---
 

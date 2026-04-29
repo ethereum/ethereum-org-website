@@ -10,7 +10,7 @@ topic:
   - "defi"
   - "வரலாறு"
 format: explainer
-author: ஃபைன்மேட்டிக்ஸ்
+author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "DeFi வரலாறு"
 ---
 

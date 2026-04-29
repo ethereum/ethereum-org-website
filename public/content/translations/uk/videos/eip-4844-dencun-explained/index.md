@@ -13,7 +13,7 @@ topic:
   - "dencun"
   - "оновлення"
 format: explainer
-author: Файнматікс
+author: "Файнматікс"
 breadcrumb: "Пояснення EIP-4844"
 ---
 

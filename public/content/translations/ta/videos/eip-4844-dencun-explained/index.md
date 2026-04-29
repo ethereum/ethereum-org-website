@@ -13,7 +13,7 @@ topic:
   - "dencun"
   - "மேம்பாடுகள்"
 format: explainer
-author: ஃபைன்மேட்டிக்ஸ்
+author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "EIP-4844 விளக்கம்"
 ---
 

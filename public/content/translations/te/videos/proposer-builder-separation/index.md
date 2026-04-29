@@ -11,7 +11,7 @@ topic:
   - "pbs"
   - "mev"
 format: presentation
-author: సిబిఇఆర్ ఫోరమ్ (CBER Forum)
+author: "సిబిఇఆర్ ఫోరమ్ (CBER Forum)"
 breadcrumb: "PBS వివరణ"
 ---
 

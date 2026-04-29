@@ -10,7 +10,7 @@ topic:
   - "சமூக-கதைகள்"
   - "சமூகம்"
 format: presentation
-author: வெப்3பிரைவசி நவ்
+author: "வெப்3பிரைவசி நவ்"
 breadcrumb: "சைபர்பங்க் ஆவது எப்படி"
 ---
 

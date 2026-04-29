@@ -10,7 +10,7 @@ topic:
   - "етеріум"
   - "вступ"
 format: presentation
-author: Квезар
+author: "Квезар"
 breadcrumb: "Основи Етеріуму"
 ---
 

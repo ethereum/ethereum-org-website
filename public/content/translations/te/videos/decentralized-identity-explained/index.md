@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "గుర్తింపు"
 format: explainer
-author: మైక్రోసాఫ్ట్ సెక్యూరిటీ
+author: "మైక్రోసాఫ్ట్ సెక్యూరిటీ"
 breadcrumb: "వికేంద్రీకృత గుర్తింపు"
 ---
 

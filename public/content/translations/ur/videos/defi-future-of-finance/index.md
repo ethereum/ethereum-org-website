@@ -10,7 +10,7 @@ topic:
   - "defi"
   - "مالیات"
 format: explainer
-author: فائنمیٹکس
+author: "فائنمیٹکس"
 breadcrumb: "غیر مرکزی مالیات (DeFi): مالیات کا مستقبل"
 ---
 

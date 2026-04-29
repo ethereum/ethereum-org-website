@@ -11,7 +11,7 @@ topic:
   - "佩克特拉"
   - "升級"
 format: presentation
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "佩克特拉概覽"
 ---
 

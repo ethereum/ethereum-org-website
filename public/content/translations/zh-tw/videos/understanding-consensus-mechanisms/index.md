@@ -10,7 +10,7 @@ topic:
   - "共識"
   - "區塊鏈"
 format: explainer
-author: 泰克·因·艾西亞
+author: "泰克·因·艾西亞"
 breadcrumb: "共識機制"
 ---
 

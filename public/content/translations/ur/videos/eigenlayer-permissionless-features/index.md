@@ -11,7 +11,7 @@ topic:
   - "eigenlayer"
   - "سیکیورٹی"
 format: presentation
-author: اے ۱۶ زیڈ کرپٹو
+author: "اے ۱۶ زیڈ کرپٹو"
 breadcrumb: "EigenLayer"
 ---
 

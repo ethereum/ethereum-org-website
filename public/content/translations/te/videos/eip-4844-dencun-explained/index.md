@@ -13,7 +13,7 @@ topic:
   - "dencun"
   - "నవీకరణలు"
 format: explainer
-author: ఫైన్‌మాటిక్స్
+author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "EIP-4844 వివరణ"
 ---
 

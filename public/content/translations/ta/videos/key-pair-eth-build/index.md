@@ -10,7 +10,7 @@ topic:
   - "கணக்குகள்"
   - "குறியாக்கவியல்"
 format: tutorial
-author: ஆஸ்டின் கிரிஃபித்
+author: "ஆஸ்டின் கிரிஃபித்"
 breadcrumb: "திறவுகோல் இணைகள் (ETH.BUILD)"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "истории-сообщества"
   - "сообщество"
 format: explainer
-author: Эфириум Фаундейшн
+author: "Эфириум Фаундейшн"
 breadcrumb: "Devcon в Мумбаи"
 ---
 

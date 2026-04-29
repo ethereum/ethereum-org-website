@@ -10,7 +10,7 @@ topic:
   - "приватность"
   - "безопасность"
 format: presentation
-author: Девконнект
+author: "Девконнект"
 breadcrumb: "Приватность"
 ---
 

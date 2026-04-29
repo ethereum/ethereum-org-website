@@ -10,7 +10,7 @@ topic:
   - "dao"
   - "治理"
 format: presentation
-author: 泰德
+author: "泰德"
 breadcrumb: "DAO 与城市"
 ---
 

@@ -11,7 +11,7 @@ topic:
   - "去中心化"
   - "去中心化應用程式 (dapps)"
 format: presentation
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "加密貨幣應用程式與去中心化社群"
 ---
 

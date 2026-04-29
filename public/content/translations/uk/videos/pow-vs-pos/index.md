@@ -11,7 +11,7 @@ topic:
   - "безпека"
   - "консенсус"
 format: interview
-author: Бенклесс
+author: "Бенклесс"
 breadcrumb: "Дебати щодо PoW та PoS"
 ---
 

@@ -12,7 +12,7 @@ topic:
   - "பரவலாக்கம்"
   - "சமூகம்"
 format: interview
-author: எத்போல்டர்
+author: "எத்போல்டர்"
 breadcrumb: "எத்திரியம் உள்ளூர்வாதம்"
 ---
 

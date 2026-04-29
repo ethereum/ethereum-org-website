@@ -9,7 +9,7 @@ educationLevel: advanced
 topic:
   - "дорожня-карта-та-пріоритети"
 format: presentation
-author: ЕТХБоулдер
+author: "ЕТХБоулдер"
 breadcrumb: "Постквантова дорожня карта"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "defi"
   - "история"
 format: explainer
-author: Финематикс
+author: "Финематикс"
 breadcrumb: "История DeFi"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "історії-спільноти"
   - "спільнота"
 format: interview
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Створення Aave"
 ---
 

@@ -12,7 +12,7 @@ topic:
   - "代理"
   - "dapp"
 format: interview
-author: 温·希夫特·哈彭斯
+author: "温·希夫特·哈彭斯"
 breadcrumb: "AI 代理：Luna"
 ---
 

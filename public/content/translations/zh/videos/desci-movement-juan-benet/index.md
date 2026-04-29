@@ -10,7 +10,7 @@ topic:
   - "去中心化科学"
   - "资金"
 format: presentation
-author: 埃斯西西
+author: "埃斯西西"
 breadcrumb: "去中心化科学 (DeSci) 运动"
 ---
 

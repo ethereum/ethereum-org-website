@@ -12,7 +12,7 @@ topic:
   - "弗萨卡"
   - "路线图"
 format: explainer
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "弗萨卡升级"
 ---
 

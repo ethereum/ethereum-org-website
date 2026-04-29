@@ -11,7 +11,7 @@ topic:
   - "بلاک چین"
   - "ایتھیریم"
 format: presentation
-author: ایتھ گلوبل (ETHGlobal)
+author: "ایتھ گلوبل (ETHGlobal)"
 breadcrumb: "ایٹم، ادارے، بلاک چینز"
 ---
 

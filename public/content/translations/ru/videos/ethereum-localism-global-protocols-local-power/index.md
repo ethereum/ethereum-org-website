@@ -12,7 +12,7 @@ topic:
   - "децентрализация"
   - "социальные"
 format: interview
-author: ЭтБоулдер
+author: "ЭтБоулдер"
 breadcrumb: "Локализм Эфириума"
 ---
 

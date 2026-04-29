@@ -10,7 +10,7 @@ topic:
   - "గోప్యత"
   - "భద్రత"
 format: presentation
-author: డెవ్‌కనెక్ట్
+author: "డెవ్‌కనెక్ట్"
 breadcrumb: "గోప్యత"
 ---
 

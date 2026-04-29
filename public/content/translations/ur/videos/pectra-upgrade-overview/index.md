@@ -11,7 +11,7 @@ topic:
   - "پیکٹرا"
   - "اپ گریڈز"
 format: presentation
-author: ایتھیریم فاؤنڈیشن
+author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "پیکٹرا کا جائزہ"
 ---
 

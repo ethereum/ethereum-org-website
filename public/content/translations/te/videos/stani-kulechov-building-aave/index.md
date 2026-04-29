@@ -10,7 +10,7 @@ topic:
   - "కమ్యూనిటీ-కథలు"
   - "కమ్యూనిటీ"
 format: interview
-author: ఎథీరియం ఫౌండేషన్
+author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "Aaveని నిర్మించడం"
 ---
 

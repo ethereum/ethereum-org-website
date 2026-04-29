@@ -11,7 +11,7 @@ topic:
   - "конфіденційність"
   - "автентифікація"
 format: presentation
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Безпека мікроточок"
 ---
 

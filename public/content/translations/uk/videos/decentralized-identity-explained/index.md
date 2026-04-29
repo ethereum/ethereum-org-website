@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "ідентифікація"
 format: explainer
-author: Майкрософт Сек'юріті
+author: "Майкрософт Сек'юріті"
 breadcrumb: "Децентралізована ідентифікація"
 ---
 

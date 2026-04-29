@@ -10,11 +10,11 @@ topic:
   - "去中心化應用程式 (dapp)"
   - "智能合約"
 format: explainer
-author: district0x 網路
+author: "district0x 網路"
 breadcrumb: "什麼是 Dapp？"
 ---
 
-這是一部由 **district0x 網路**製作的解說影片，介紹去中心化應用程式 (dapp)，涵蓋它們與傳統應用程式的不同之處、它們如何在區塊鏈基礎設施上運行，以及其安全性優勢。
+這是一部由 <strong>district0x 網路</strong>製作的解說影片，介紹去中心化應用程式 (dapp)，涵蓋它們與傳統應用程式的不同之處、它們如何在區塊鏈基礎設施上運行，以及其安全性優勢。
 
 *本逐字稿是 district0x 網路發布之[原始影片逐字稿](https://www.youtube.com/watch?v=F50OrwV6Uk8)的無障礙副本。為提高可讀性，已進行了輕微編輯。*
 

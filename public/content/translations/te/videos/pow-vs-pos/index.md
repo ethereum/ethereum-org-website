@@ -11,7 +11,7 @@ topic:
   - "భద్రత"
   - "ఏకాభిప్రాయం"
 format: interview
-author: బ్యాంక్‌లెస్
+author: "బ్యాంక్‌లెస్"
 breadcrumb: "PoW వర్సెస్ PoS చర్చ"
 ---
 

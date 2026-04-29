@@ -10,7 +10,7 @@ topic:
   - "账户"
   - "密码学"
 format: tutorial
-author: 奥斯汀·格里菲斯
+author: "奥斯汀·格里菲斯"
 breadcrumb: "密钥对 (ETH.BUILD)"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "ڈی سائی"
   - "فنڈنگ"
 format: presentation
-author: ایتھ سی سی
+author: "ایتھ سی سی"
 breadcrumb: "ڈی سائی کی تحریک"
 ---
 

@@ -11,7 +11,7 @@ topic:
   - "пектра"
   - "стейкінг"
 format: explainer
-author: Блокдемон
+author: "Блокдемон"
 breadcrumb: "Пектра для стейкерів"
 ---
 

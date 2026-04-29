@@ -13,7 +13,7 @@ topic:
   - "登昆升级"
   - "升级"
 format: explainer
-author: 菲内马蒂克斯
+author: "菲内马蒂克斯"
 breadcrumb: "EIP-4844 详解"
 ---
 

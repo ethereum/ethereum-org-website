@@ -12,7 +12,7 @@ topic:
   - "агенты"
   - "dapps"
 format: interview
-author: Уэн Шифт Хэппенс
+author: "Уэн Шифт Хэппенс"
 breadcrumb: "ИИ-агенты: Луна"
 ---
 

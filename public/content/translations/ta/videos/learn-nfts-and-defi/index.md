@@ -13,7 +13,7 @@ topic:
   - "erc-1155"
   - "கடனளிப்பு"
 format: explainer
-author: ஃபைன்மேட்டிக்ஸ்
+author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "NFT-கள் மற்றும் DeFi"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "去中心化金融"
   - "金融"
 format: explainer
-author: 菲内马蒂克斯
+author: "菲内马蒂克斯"
 breadcrumb: "DeFi：未来金融"
 ---
 

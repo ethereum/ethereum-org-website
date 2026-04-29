@@ -11,7 +11,7 @@ topic:
   - "రోల్అప్‌లు"
   - "లేయర్-2"
 format: presentation
-author: ఎథీరియం ఫౌండేషన్
+author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "L2ల స్థితి"
 ---
 

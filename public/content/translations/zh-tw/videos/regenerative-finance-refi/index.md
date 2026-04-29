@@ -10,11 +10,11 @@ topic:
   - "再生金融"
   - "永續性"
 format: explainer
-author: CNBC 電視台
+author: "CNBC 電視台"
 breadcrumb: "再生金融"
 ---
 
-**CNBC 電視台**的解說影片，探討再生金融 (ReFi) 運動、加密貨幣與氣候的交集、如何利用區塊鏈為環境專案提供資金，以及 ReFi 能否洗刷加密貨幣高耗能的聲譽。
+<strong>CNBC 電視台</strong>的解說影片，探討再生金融 (ReFi) 運動、加密貨幣與氣候的交集、如何利用區塊鏈為環境專案提供資金，以及 ReFi 能否洗刷加密貨幣高耗能的聲譽。
 
 *本逐字稿是 CNBC 電視台發布的[原始影片逐字稿](https://www.youtube.com/watch?v=La52dDzBt2k)的無障礙副本。為提高可讀性，已進行了輕微編輯。*
 

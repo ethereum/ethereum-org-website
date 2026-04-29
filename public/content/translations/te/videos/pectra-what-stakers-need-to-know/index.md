@@ -11,7 +11,7 @@ topic:
   - "పెక్ట్రా"
   - "స్టేకింగ్"
 format: explainer
-author: బ్లాక్‌డీమన్
+author: "బ్లాక్‌డీమన్"
 breadcrumb: "స్టేకర్ల కోసం పెక్ట్రా"
 ---
 

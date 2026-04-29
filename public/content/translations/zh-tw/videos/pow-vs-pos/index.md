@@ -11,7 +11,7 @@ topic:
   - "安全性"
   - "共識"
 format: interview
-author: 班克萊斯
+author: "班克萊斯"
 breadcrumb: "PoW 與 PoS 辯論"
 ---
 

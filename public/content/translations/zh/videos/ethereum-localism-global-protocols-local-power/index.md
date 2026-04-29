@@ -12,7 +12,7 @@ topic:
   - "去中心化"
   - "社交"
 format: interview
-author: 伊斯博尔德
+author: "伊斯博尔德"
 breadcrumb: "以太坊地方主义"
 ---
 

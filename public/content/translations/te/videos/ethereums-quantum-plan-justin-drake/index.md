@@ -9,7 +9,7 @@ educationLevel: advanced
 topic:
   - "roadmap-and-priorities"
 format: interview
-author: బ్యాంక్‌లెస్
+author: "బ్యాంక్‌లెస్"
 breadcrumb: "జస్టిన్ డ్రేక్"
 ---
 

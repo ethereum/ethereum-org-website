@@ -10,7 +10,7 @@ topic:
   - "社区故事"
   - "社区"
 format: explainer
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "Devconnect 回顾"
 ---
 

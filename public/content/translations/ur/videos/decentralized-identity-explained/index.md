@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "شناخت"
 format: explainer
-author: مائیکروسافٹ سیکیورٹی
+author: "مائیکروسافٹ سیکیورٹی"
 breadcrumb: "غیر مرکزی شناخت"
 ---
 

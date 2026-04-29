@@ -12,7 +12,7 @@ topic:
   - "樂觀-rollup"
   - "zk-匯總"
 format: explainer
-author: 芬尼馬蒂克斯
+author: "芬尼馬蒂克斯"
 breadcrumb: "匯總"
 ---
 

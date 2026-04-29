@@ -10,7 +10,7 @@ topic:
   - "блокчейн"
   - "криптография"
 format: presentation
-author: Андерс Браунворт
+author: "Андерс Браунворт"
 breadcrumb: "Блокчейн 101"
 ---
 

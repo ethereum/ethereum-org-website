@@ -11,7 +11,7 @@ topic:
   - "дорожня-карта"
   - "оновлення"
 format: presentation
-author: ЕТХДенвер
+author: "ЕТХДенвер"
 breadcrumb: "Еволюція Етеріуму"
 ---
 

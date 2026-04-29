@@ -11,7 +11,7 @@ topic:
   - "доказ частки"
   - "злиття"
 format: interview
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Інтерв'ю з Денні Раяном"
 ---
 

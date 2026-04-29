@@ -9,7 +9,7 @@ educationLevel: intermediate
 topic:
   - "дорожня-карта-та-пріоритети"
 format: presentation
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Наступні 10 років"
 ---
 

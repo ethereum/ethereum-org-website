@@ -11,7 +11,7 @@ topic:
   - "رول-اپس"
   - "لیئر-۲"
 format: presentation
-author: ایتھیریم فاؤنڈیشن
+author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "L2s کی حالت"
 ---
 

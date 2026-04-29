@@ -10,7 +10,7 @@ topic:
   - "挖矿"
   - "区块链"
 format: tutorial
-author: 奥斯汀·格里菲斯
+author: "奥斯汀·格里菲斯"
 breadcrumb: "区块链 (ETH.BUILD)"
 ---
 

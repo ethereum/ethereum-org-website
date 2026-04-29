@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "ٹرانزیکشنز"
 format: tutorial
-author: آسٹن گریفتھ
+author: "آسٹن گریفتھ"
 breadcrumb: "ٹرانزیکشنز (ETH.BUILD)"
 ---
 

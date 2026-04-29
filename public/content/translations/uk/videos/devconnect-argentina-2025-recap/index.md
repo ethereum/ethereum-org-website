@@ -10,7 +10,7 @@ topic:
   - "історії-спільноти"
   - "спільнота"
 format: explainer
-author: Етеріум Фаундейшн
+author: "Етеріум Фаундейшн"
 breadcrumb: "Підсумки Devconnect"
 ---
 

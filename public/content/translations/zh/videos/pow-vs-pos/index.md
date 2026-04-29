@@ -11,7 +11,7 @@ topic:
   - "安全性"
   - "共识"
 format: interview
-author: 班克莱斯 (Bankless)
+author: "班克莱斯 (Bankless)"
 breadcrumb: "PoW 与 PoS 的辩论"
 ---
 

@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "سمارٹ کنٹریکٹس"
 format: explainer
-author: فائنمیٹکس
+author: "فائنمیٹکس"
 breadcrumb: "سمارٹ کنٹریکٹس"
 ---
 

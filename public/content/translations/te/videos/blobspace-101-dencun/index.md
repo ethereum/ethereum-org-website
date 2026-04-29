@@ -12,7 +12,7 @@ topic:
   - "dencun"
   - "అప్‌గ్రేడ్‌లు"
 format: interview
-author: బ్యాంక్‌లెస్
+author: "బ్యాంక్‌లెస్"
 breadcrumb: "బ్లాబ్‌స్పేస్ 101"
 ---
 

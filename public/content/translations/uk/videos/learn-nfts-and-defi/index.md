@@ -13,7 +13,7 @@ topic:
   - "erc-1155"
   - "кредитування"
 format: explainer
-author: Фінематікс
+author: "Фінематікс"
 breadcrumb: "NFT та DeFi"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "ఎథీరియం"
   - "పరిచయం"
 format: presentation
-author: క్వెజార్
+author: "క్వెజార్"
 breadcrumb: "ఎథీరియం బేసిక్స్"
 ---
 

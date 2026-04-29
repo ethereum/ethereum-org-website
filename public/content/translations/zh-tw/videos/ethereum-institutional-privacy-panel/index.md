@@ -10,7 +10,7 @@ topic:
   - "隱私與安全"
   - "隱私"
 format: panel
-author: Web3 普萊維西納烏
+author: "Web3 普萊維西納烏"
 breadcrumb: "機構隱私"
 ---
 

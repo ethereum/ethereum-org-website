@@ -10,7 +10,7 @@ topic:
   - "رازداری-اور-سیکیورٹی"
   - "رازداری"
 format: presentation
-author: ایتھ بولڈر
+author: "ایتھ بولڈر"
 breadcrumb: "رازداری کی بحالی"
 ---
 

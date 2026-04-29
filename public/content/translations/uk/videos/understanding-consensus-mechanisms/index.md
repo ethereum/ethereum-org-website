@@ -10,7 +10,7 @@ topic:
   - "консенсус"
   - "блокчейн"
 format: explainer
-author: Тек ін Азія
+author: "Тек ін Азія"
 breadcrumb: "Механізми консенсусу"
 ---
 

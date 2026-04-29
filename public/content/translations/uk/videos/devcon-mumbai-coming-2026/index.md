@@ -10,7 +10,7 @@ topic:
   - "історії спільноти"
   - "спільнота"
 format: explainer
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Devcon у Мумбаї"
 ---
 

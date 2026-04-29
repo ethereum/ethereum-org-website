@@ -11,7 +11,7 @@ topic:
   - "اسٹیکنگ"
   - "انخلا"
 format: explainer
-author: فائنمیٹکس
+author: "فائنمیٹکس"
 breadcrumb: "اسٹیکنگ کے انخلا"
 ---
 

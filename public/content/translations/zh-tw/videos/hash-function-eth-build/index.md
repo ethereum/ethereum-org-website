@@ -10,7 +10,7 @@ topic:
   - "帳戶"
   - "密碼學"
 format: tutorial
-author: 奧斯汀·格里菲斯
+author: "奧斯汀·格里菲斯"
 breadcrumb: "雜湊函數 (ETH.BUILD)"
 ---
 

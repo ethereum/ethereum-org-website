@@ -10,7 +10,7 @@ topic:
   - "اتفاق رائے"
   - "ثبوتِ کار"
 format: explainer
-author: بائنانس اکیڈمی
+author: "بائنانس اکیڈمی"
 breadcrumb: "ثبوتِ کار"
 ---
 

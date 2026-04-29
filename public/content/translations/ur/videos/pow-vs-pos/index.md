@@ -11,7 +11,7 @@ topic:
   - "تحفظ"
   - "اتفاق رائے"
 format: interview
-author: بینک لیس
+author: "بینک لیس"
 breadcrumb: "PoW بمقابلہ PoS کی بحث"
 ---
 

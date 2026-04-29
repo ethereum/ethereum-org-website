@@ -10,7 +10,7 @@ topic:
   - "how-ethereum-works"
   - "ethereum"
 format: presentation
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "30 分钟以太坊"
 ---
 

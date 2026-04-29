@@ -11,7 +11,7 @@ topic:
   - "صفر-علم-ثبوت"
   - "علمِ-تشفیر"
 format: explainer
-author: وائرڈ
+author: "وائرڈ"
 breadcrumb: "صفر علم ثبوت"
 ---
 

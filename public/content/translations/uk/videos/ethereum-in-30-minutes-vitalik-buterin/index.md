@@ -10,7 +10,7 @@ topic:
   - "як-працює-етеріум"
   - "етеріум"
 format: presentation
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Етеріум за 30 хвилин"
 ---
 

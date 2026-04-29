@@ -10,7 +10,7 @@ topic:
   - "隱私"
   - "安全性"
 format: presentation
-author: 德夫康內克特
+author: "德夫康內克特"
 breadcrumb: "隱私"
 ---
 

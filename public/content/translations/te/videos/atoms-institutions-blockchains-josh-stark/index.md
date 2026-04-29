@@ -11,7 +11,7 @@ topic:
   - "బ్లాక్‌చైన్"
   - "ethereum"
 format: presentation
-author: ఇటిహెచ్‌గ్లోబల్
+author: "ఇటిహెచ్‌గ్లోబల్"
 breadcrumb: "అణువులు, సంస్థలు, బ్లాక్‌చైన్‌లు"
 ---
 

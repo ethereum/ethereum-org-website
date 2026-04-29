@@ -10,7 +10,7 @@ topic:
   - "дао"
   - "управление"
 format: presentation
-author: ТЕД
+author: "ТЕД"
 breadcrumb: "ДАО и города"
 ---
 

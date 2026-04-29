@@ -10,7 +10,7 @@ topic:
   - "بلاک چین"
   - "کرپٹوگرافی"
 format: presentation
-author: اینڈرس براؤن ورتھ
+author: "اینڈرس براؤن ورتھ"
 breadcrumb: "بلاک چین 101"
 ---
 

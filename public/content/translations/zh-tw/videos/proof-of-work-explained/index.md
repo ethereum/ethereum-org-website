@@ -10,7 +10,7 @@ topic:
   - "共識"
   - "pow"
 format: explainer
-author: 幣安學院
+author: "幣安學院"
 breadcrumb: "工作量證明"
 ---
 

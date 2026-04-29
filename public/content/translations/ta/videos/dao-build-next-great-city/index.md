@@ -10,7 +10,7 @@ topic:
   - "dao"
   - "ஆளுகை"
 format: presentation
-author: டெட் (TED)
+author: "டெட் (TED)"
 breadcrumb: "DAO-களும் நகரங்களும்"
 ---
 

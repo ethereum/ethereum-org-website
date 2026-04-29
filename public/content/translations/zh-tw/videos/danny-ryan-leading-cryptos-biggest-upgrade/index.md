@@ -11,7 +11,7 @@ topic:
   - "權益證明 (PoS)"
   - "合併"
 format: interview
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "Danny Ryan 訪談"
 ---
 

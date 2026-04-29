@@ -10,7 +10,7 @@ topic:
   - "社群故事"
   - "社群"
 format: interview
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "打造 Aave"
 ---
 

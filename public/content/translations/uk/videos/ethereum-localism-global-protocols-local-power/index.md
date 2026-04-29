@@ -12,7 +12,7 @@ topic:
   - "децентралізація"
   - "соціальні"
 format: interview
-author: ЕтБоулдер
+author: "ЕтБоулдер"
 breadcrumb: "Локалізм Етеріуму"
 ---
 

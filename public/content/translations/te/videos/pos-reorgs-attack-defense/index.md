@@ -11,7 +11,7 @@ topic:
   - "pos"
   - "భద్రత"
 format: presentation
-author: లిస్కాన్
+author: "లిస్కాన్"
 breadcrumb: "PoS పునర్వ్యవస్థీకరణలు"
 ---
 

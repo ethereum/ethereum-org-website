@@ -11,7 +11,7 @@ topic:
   - "стейкинг"
   - "выводы"
 format: explainer
-author: Финематикс
+author: "Финематикс"
 breadcrumb: "Выводы из стейкинга"
 ---
 

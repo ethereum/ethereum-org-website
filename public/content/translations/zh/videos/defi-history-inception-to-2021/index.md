@@ -10,7 +10,7 @@ topic:
   - "defi"
   - "历史"
 format: explainer
-author: 芬内马蒂克斯
+author: "芬内马蒂克斯"
 breadcrumb: "DeFi 历史"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "区块链"
   - "密码学"
 format: presentation
-author: 安德斯·布朗沃思
+author: "安德斯·布朗沃思"
 breadcrumb: "区块链基础知识"
 ---
 

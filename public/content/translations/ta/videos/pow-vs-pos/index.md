@@ -11,7 +11,7 @@ topic:
   - "பாதுகாப்பு"
   - "ஒருமித்த-கருத்து"
 format: interview
-author: பேங்க்லெஸ்
+author: "பேங்க்லெஸ்"
 breadcrumb: "PoW மற்றும் PoS விவாதம்"
 ---
 

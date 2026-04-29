@@ -12,7 +12,7 @@ topic:
   - "управління"
   - "оновлення"
 format: presentation
-author: ЕтБоулдер
+author: "ЕтБоулдер"
 breadcrumb: "Управління базовим протоколом"
 ---
 

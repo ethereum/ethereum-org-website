@@ -10,7 +10,7 @@ topic:
   - "کمیونٹی کی کہانیاں"
   - "کمیونٹی"
 format: interview
-author: ایتھیریم فاؤنڈیشن
+author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "Aave کی تعمیر"
 ---
 

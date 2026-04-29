@@ -10,7 +10,7 @@ topic:
   - "స్కేలింగ్"
   - "లేయర్-2"
 format: explainer
-author: ఫైన్‌మాటిక్స్
+author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "లేయర్ 2 స్కేలింగ్"
 ---
 

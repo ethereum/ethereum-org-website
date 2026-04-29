@@ -10,7 +10,7 @@ topic:
   - "共识"
   - "区块链"
 format: explainer
-author: 泰克因艾西亚
+author: "泰克因艾西亚"
 breadcrumb: "共识机制"
 ---
 

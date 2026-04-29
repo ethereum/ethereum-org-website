@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "స్మార్ట్ కాంట్రాక్ట్‌లు"
 format: explainer
-author: ఫైన్‌మాటిక్స్
+author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "స్మార్ట్ కాంట్రాక్ట్‌లు"
 ---
 

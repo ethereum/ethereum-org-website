@@ -10,7 +10,7 @@ topic:
   - "консенсус"
   - "pow"
 format: explainer
-author: Бінанс Академі
+author: "Бінанс Академі"
 breadcrumb: "Доказ виконання роботи"
 ---
 

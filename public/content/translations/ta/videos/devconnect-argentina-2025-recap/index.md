@@ -10,7 +10,7 @@ topic:
   - "சமூக-கதைகள்"
   - "சமூகம்"
 format: explainer
-author: எத்திரியம் ஃபவுண்டேஷன்
+author: "எத்திரியம் ஃபவுண்டேஷன்"
 breadcrumb: "Devconnect சுருக்கம்"
 ---
 

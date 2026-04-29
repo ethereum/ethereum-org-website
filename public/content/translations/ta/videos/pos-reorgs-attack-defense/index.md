@@ -11,7 +11,7 @@ topic:
   - "உரிமைச் சான்று (pos)"
   - "பாதுகாப்பு"
 format: presentation
-author: லிஸ்கான்
+author: "லிஸ்கான்"
 breadcrumb: "PoS மறுசீரமைப்புகள்"
 ---
 

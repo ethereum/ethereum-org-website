@@ -10,7 +10,7 @@ topic:
   - "去中心化应用 (dapp)"
   - "智能合约"
 format: explainer
-author: 迪斯特里克特零克斯网络
+author: "迪斯特里克特零克斯网络"
 breadcrumb: "什么是 Dapp？"
 ---
 

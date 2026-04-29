@@ -11,7 +11,7 @@ topic:
   - "стейкінг"
   - "виведення"
 format: explainer
-author: Фінематікс
+author: "Фінематікс"
 breadcrumb: "Виведення зі стейкінгу"
 ---
 

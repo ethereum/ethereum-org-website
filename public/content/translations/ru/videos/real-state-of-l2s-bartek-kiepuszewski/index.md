@@ -11,7 +11,7 @@ topic:
   - "роллапы"
   - "уровень-2"
 format: presentation
-author: Эфириум Фаундейшн
+author: "Эфириум Фаундейшн"
 breadcrumb: "Состояние l2"
 ---
 

@@ -11,7 +11,7 @@ topic:
   - "隐私"
   - "身份验证"
 format: presentation
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "微点安全"
 ---
 

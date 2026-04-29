@@ -11,7 +11,7 @@ topic:
   - "pos"
   - "безпека"
 format: presentation
-author: ЛісКон
+author: "ЛісКон"
 breadcrumb: "Реорганізації в PoS"
 ---
 

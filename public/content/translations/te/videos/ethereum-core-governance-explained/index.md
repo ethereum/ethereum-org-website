@@ -12,7 +12,7 @@ topic:
   - "పరిపాలన"
   - "నవీకరణలు"
 format: presentation
-author: ఎథ్‌బోల్డర్
+author: "ఎథ్‌బోల్డర్"
 breadcrumb: "కోర్ పరిపాలన"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "మైనింగ్"
   - "బ్లాక్‌చైన్"
 format: tutorial
-author: ఆస్టిన్ గ్రిఫిత్
+author: "ఆస్టిన్ గ్రిఫిత్"
 breadcrumb: "బ్లాక్‌చైన్ (ETH.BUILD)"
 ---
 

@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "身分"
 format: explainer
-author: 邁克羅索夫特·西庫里提
+author: "邁克羅索夫特·西庫里提"
 breadcrumb: "去中心化身分"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "去中心化金融"
   - "金融"
 format: explainer
-author: 芬尼馬蒂克斯
+author: "芬尼馬蒂克斯"
 breadcrumb: "DeFi：金融的未來"
 ---
 

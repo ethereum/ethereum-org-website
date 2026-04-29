@@ -11,7 +11,7 @@ topic:
   - "佩克特拉"
   - "質押"
 format: explainer
-author: 布洛克戴蒙
+author: "布洛克戴蒙"
 breadcrumb: "質押者的佩克特拉"
 ---
 

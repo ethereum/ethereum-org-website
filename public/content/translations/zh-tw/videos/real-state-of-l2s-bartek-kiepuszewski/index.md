@@ -11,7 +11,7 @@ topic:
   - "匯總"
   - "第二層 (L2)"
 format: presentation
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "L2 的狀態"
 ---
 

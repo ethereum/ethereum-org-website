@@ -10,7 +10,7 @@ topic:
   - "рестейкінг"
   - "безпека"
 format: explainer
-author: CBER Форум
+author: "CBER Форум"
 breadcrumb: "Рестейкінг"
 ---
 

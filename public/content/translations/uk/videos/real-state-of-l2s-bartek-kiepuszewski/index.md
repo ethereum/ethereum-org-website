@@ -11,7 +11,7 @@ topic:
   - "ролапи"
   - "рівень-2"
 format: presentation
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Стан l2"
 ---
 

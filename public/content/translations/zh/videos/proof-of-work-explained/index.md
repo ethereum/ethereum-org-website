@@ -10,7 +10,7 @@ topic:
   - "共识"
   - "pow"
 format: explainer
-author: 币安学院
+author: "币安学院"
 breadcrumb: "工作量证明"
 ---
 

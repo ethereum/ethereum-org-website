@@ -10,7 +10,7 @@ topic:
   - "کان کنی"
   - "بلاک چین"
 format: tutorial
-author: آسٹن گریفتھ
+author: "آسٹن گریفتھ"
 breadcrumb: "بلاک چین (ETH.BUILD)"
 ---
 

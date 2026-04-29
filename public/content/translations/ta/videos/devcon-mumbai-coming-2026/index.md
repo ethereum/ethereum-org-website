@@ -10,7 +10,7 @@ topic:
   - "community-stories"
   - "community"
 format: explainer
-author: எத்தீரியம் பவுண்டேஷன்
+author: "எத்தீரியம் பவுண்டேஷன்"
 breadcrumb: "Devcon மும்பை"
 ---
 

@@ -12,7 +12,7 @@ topic:
   - "آپٹمسٹک رول اپس"
   - "زیڈ کے رول اپس"
 format: explainer
-author: فائن میٹکس
+author: "فائن میٹکس"
 breadcrumb: "رول اپس"
 ---
 

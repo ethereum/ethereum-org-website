@@ -11,7 +11,7 @@ topic:
   - "权益证明"
   - "合并"
 format: interview
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "Danny Ryan 采访"
 ---
 

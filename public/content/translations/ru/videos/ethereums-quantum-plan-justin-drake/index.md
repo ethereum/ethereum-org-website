@@ -9,7 +9,7 @@ educationLevel: advanced
 topic:
   - "дорожная-карта-и-приоритеты"
 format: interview
-author: Бэнклесс
+author: "Бэнклесс"
 breadcrumb: "Джастин Дрейк"
 ---
 

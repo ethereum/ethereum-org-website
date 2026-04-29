@@ -10,7 +10,7 @@ topic:
   - "defi"
   - "фінанси"
 format: explainer
-author: Фінематікс
+author: "Фінематікс"
 breadcrumb: "DeFi: майбутнє фінансів"
 ---
 

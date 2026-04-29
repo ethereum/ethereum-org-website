@@ -11,7 +11,7 @@ topic:
   - "дорожная карта"
   - "обновления"
 format: presentation
-author: ЭТХДенвер
+author: "ЭТХДенвер"
 breadcrumb: "Эволюция Эфириума"
 ---
 

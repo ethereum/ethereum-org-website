@@ -11,7 +11,7 @@ topic:
   - "汇总"
   - "二层网络"
 format: presentation
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "二层网络 (l2) 的状态"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "как работает Эфириум"
   - "Ethereum"
 format: presentation
-author: Фонд Ethereum
+author: "Фонд Ethereum"
 breadcrumb: "Эфириум за 30 минут"
 ---
 

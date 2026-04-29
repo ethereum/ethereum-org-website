@@ -9,7 +9,7 @@ educationLevel: advanced
 topic:
   - "roadmap-and-priorities"
 format: interview
-author: Бенклесс
+author: "Бенклесс"
 breadcrumb: "Джастін Дрейк"
 ---
 

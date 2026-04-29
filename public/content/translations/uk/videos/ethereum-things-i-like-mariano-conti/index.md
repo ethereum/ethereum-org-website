@@ -10,7 +10,7 @@ topic:
   - "історії-спільноти"
   - "спільнота"
 format: presentation
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Що мені подобається"
 ---
 

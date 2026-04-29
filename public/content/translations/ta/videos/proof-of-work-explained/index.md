@@ -10,7 +10,7 @@ topic:
   - "ஒருமித்த கருத்து"
   - "pow"
 format: explainer
-author: பைனான்ஸ் அகாடமி (Binance Academy)
+author: "பைனான்ஸ் அகாடமி (Binance Academy)"
 breadcrumb: "பணிச் சான்று"
 ---
 

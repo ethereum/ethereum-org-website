@@ -9,7 +9,7 @@ educationLevel: intermediate
 topic:
   - "روڈ میپ اور ترجیحات"
 format: presentation
-author: ایتھیریم فاؤنڈیشن
+author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "اگلے 10 سال"
 ---
 

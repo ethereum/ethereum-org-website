@@ -11,7 +11,7 @@ topic:
   - "佩克特拉"
   - "质押"
 format: explainer
-author: 布洛克迪蒙
+author: "布洛克迪蒙"
 breadcrumb: "面向质押者的佩克特拉"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "community-stories"
   - "community"
 format: explainer
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "Devconnect 回顧"
 ---
 

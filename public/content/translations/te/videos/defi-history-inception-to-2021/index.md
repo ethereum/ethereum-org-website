@@ -10,7 +10,7 @@ topic:
   - "defi"
   - "చరిత్ర"
 format: explainer
-author: ఫైన్‌మాటిక్స్
+author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "DeFi చరిత్ర"
 ---
 

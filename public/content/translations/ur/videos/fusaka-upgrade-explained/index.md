@@ -12,7 +12,7 @@ topic:
   - "فوساکا"
   - "روڈ میپ"
 format: explainer
-author: ایتھیریم فاؤنڈیشن
+author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "فوساکا اپ گریڈ"
 ---
 

@@ -12,7 +12,7 @@ topic:
   - "dencun"
   - "оновлення"
 format: interview
-author: Банклесс
+author: "Банклесс"
 breadcrumb: "Простір блобів 101"
 ---
 

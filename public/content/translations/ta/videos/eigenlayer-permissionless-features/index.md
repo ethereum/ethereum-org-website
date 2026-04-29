@@ -11,7 +11,7 @@ topic:
   - "eigenlayer"
   - "பாதுகாப்பு"
 format: presentation
-author: ஏ16இசட் கிரிப்டோ
+author: "ஏ16இசட் கிரிப்டோ"
 breadcrumb: "EigenLayer"
 ---
 

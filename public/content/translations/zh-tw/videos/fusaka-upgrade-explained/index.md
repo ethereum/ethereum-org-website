@@ -12,7 +12,7 @@ topic:
   - "富薩卡"
   - "路線圖"
 format: explainer
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "富薩卡升級"
 ---
 

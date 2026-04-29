@@ -10,7 +10,7 @@ topic:
   - "اسکیلنگ"
   - "لیئر-2"
 format: explainer
-author: فائنمیٹکس
+author: "فائنمیٹکس"
 breadcrumb: "لیئر ۲ (l2) اسکیلنگ"
 ---
 

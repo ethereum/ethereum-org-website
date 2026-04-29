@@ -12,7 +12,7 @@ topic:
   - "агенти"
   - "dapps"
 format: interview
-author: Вен Шифт Хеппенс
+author: "Вен Шифт Хеппенс"
 breadcrumb: "ШІ-агенти: Luna"
 ---
 

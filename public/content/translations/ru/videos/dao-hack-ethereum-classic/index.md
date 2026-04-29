@@ -11,7 +11,7 @@ topic:
   - "история"
   - "dao"
 format: explainer
-author: Джунион
+author: "Джунион"
 breadcrumb: "Взлом The DAO"
 ---
 

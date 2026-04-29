@@ -10,7 +10,7 @@ topic:
   - "майнінг"
   - "блокчейн"
 format: tutorial
-author: Остін Гріффіт
+author: "Остін Гріффіт"
 breadcrumb: "Блокчейн (ETH.BUILD)"
 ---
 

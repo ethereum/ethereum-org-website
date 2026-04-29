@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "திறன் ஒப்பந்தங்கள்"
 format: explainer
-author: ஃபைன்மேட்டிக்ஸ்
+author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "திறன் ஒப்பந்தங்கள்"
 ---
 

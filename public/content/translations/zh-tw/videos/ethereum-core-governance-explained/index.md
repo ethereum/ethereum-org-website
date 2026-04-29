@@ -12,7 +12,7 @@ topic:
   - "治理"
   - "升級"
 format: presentation
-author: 伊斯波德
+author: "伊斯波德"
 breadcrumb: "核心治理"
 ---
 

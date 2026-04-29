@@ -12,7 +12,7 @@ topic:
   - "приватність"
   - "рівень-2"
 format: interview
-author: Веб3Прайвасі Нау
+author: "Веб3Прайвасі Нау"
 breadcrumb: "Партизанський l2"
 ---
 

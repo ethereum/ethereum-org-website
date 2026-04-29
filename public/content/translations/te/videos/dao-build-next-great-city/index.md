@@ -10,7 +10,7 @@ topic:
   - "dao"
   - "పరిపాలన"
 format: presentation
-author: టెడ్
+author: "టెడ్"
 breadcrumb: "DAOలు & నగరాలు"
 ---
 

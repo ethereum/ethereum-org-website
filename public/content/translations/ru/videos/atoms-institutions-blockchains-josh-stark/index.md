@@ -11,7 +11,7 @@ topic:
   - "блокчейн"
   - "ethereum"
 format: presentation
-author: ЭТХГлобал
+author: "ЭТХГлобал"
 breadcrumb: "Атомы, институты, блокчейны"
 ---
 

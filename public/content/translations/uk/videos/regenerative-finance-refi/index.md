@@ -10,7 +10,7 @@ topic:
   - "refi"
   - "сталий розвиток"
 format: explainer
-author: Сі-Ен-Бі-Сі Телевіжн
+author: "Сі-Ен-Бі-Сі Телевіжн"
 breadcrumb: "Регенеративні фінанси"
 ---
 

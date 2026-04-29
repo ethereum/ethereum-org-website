@@ -12,7 +12,7 @@ topic:
   - "оптимістичні-ролапи"
   - "zk-ролапи"
 format: explainer
-author: Файнматікс
+author: "Файнматікс"
 breadcrumb: "Ролапи"
 ---
 

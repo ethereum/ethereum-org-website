@@ -10,7 +10,7 @@ topic:
   - "ری اسٹیکنگ"
   - "سیکیورٹی"
 format: explainer
-author: سی بی ای آر فورم
+author: "سی بی ای آر فورم"
 breadcrumb: "ری اسٹیکنگ"
 ---
 

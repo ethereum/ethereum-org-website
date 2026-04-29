@@ -11,7 +11,7 @@ topic:
   - "pbs"
   - "mev"
 format: presentation
-author: سی بی ای آر فورم
+author: "سی بی ای آر فورم"
 breadcrumb: "پی بی ایس کی وضاحت"
 ---
 

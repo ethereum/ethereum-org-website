@@ -9,7 +9,7 @@ educationLevel: intermediate
 topic:
   - "路线图与优先级"
 format: presentation
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "未来十年"
 ---
 

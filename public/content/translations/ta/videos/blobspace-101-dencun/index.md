@@ -12,7 +12,7 @@ topic:
   - "dencun"
   - "மேம்படுத்தல்கள்"
 format: interview
-author: பேங்க்லெஸ்
+author: "பேங்க்லெஸ்"
 breadcrumb: "தரவுத் திரளை வெளி 101"
 ---
 

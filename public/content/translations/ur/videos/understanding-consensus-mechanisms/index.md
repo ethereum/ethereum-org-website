@@ -10,7 +10,7 @@ topic:
   - "اتفاق رائے"
   - "بلاک چین"
 format: explainer
-author: ٹیک ان ایشیا
+author: "ٹیک ان ایشیا"
 breadcrumb: "اتفاق رائے کا طریقہ کار"
 ---
 

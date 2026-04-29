@@ -11,7 +11,7 @@ topic:
   - "доказательство-доли-владения"
   - "слияние"
 format: interview
-author: Фонд Ethereum
+author: "Фонд Ethereum"
 breadcrumb: "Интервью с Дэнни Райаном"
 ---
 

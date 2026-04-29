@@ -11,7 +11,7 @@ topic:
   - "пектра"
   - "обновления"
 format: presentation
-author: Фонд Ethereum
+author: "Фонд Ethereum"
 breadcrumb: "Обзор Пектра"
 ---
 

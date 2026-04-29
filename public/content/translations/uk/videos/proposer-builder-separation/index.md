@@ -11,7 +11,7 @@ topic:
   - "pbs"
   - "mev"
 format: presentation
-author: CBER Форум
+author: "CBER Форум"
 breadcrumb: "Пояснення PBS"
 ---
 

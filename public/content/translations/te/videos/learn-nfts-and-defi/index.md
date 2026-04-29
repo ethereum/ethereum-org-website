@@ -13,7 +13,7 @@ topic:
   - "erc-1155"
   - "రుణం ఇవ్వడం"
 format: explainer
-author: ఫైన్‌మాటిక్స్
+author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "NFTలు మరియు DeFi"
 ---
 

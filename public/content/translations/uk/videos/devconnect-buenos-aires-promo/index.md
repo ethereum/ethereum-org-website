@@ -10,7 +10,7 @@ topic:
   - "community-stories"
   - "community"
 format: explainer
-author: Етеріум Фаундейшн
+author: "Етеріум Фаундейшн"
 breadcrumb: "Devconnect Buenos Aires"
 ---
 

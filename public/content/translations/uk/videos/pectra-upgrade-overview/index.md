@@ -11,7 +11,7 @@ topic:
   - "пектра"
   - "оновлення"
 format: presentation
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Огляд Пектра"
 ---
 

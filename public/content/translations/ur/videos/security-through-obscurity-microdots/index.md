@@ -11,7 +11,7 @@ topic:
   - "پرائیویسی"
   - "تصدیق"
 format: presentation
-author: ایتھیریم فاؤنڈیشن
+author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "مائیکرو ڈاٹ سیکیورٹی"
 ---
 

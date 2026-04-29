@@ -10,7 +10,7 @@ topic:
   - "社群故事"
   - "社群"
 format: presentation
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "我喜歡的事物"
 ---
 

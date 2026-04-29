@@ -10,7 +10,7 @@ topic:
   - "சுரங்கப்பணி"
   - "தொகுதிச்சங்கிலி"
 format: tutorial
-author: ஆஸ்டின் கிரிஃபித்
+author: "ஆஸ்டின் கிரிஃபித்"
 breadcrumb: "தொகுதிச்சங்கிலி (ETH.BUILD)"
 ---
 

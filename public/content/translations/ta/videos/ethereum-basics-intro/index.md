@@ -10,7 +10,7 @@ topic:
   - "எத்திரியம்"
   - "அறிமுகம்"
 format: presentation
-author: குவேசார்
+author: "குவேசார்"
 breadcrumb: "எத்திரியம் அடிப்படைகள்"
 ---
 

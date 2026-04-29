@@ -10,7 +10,7 @@ topic:
   - "以太坊運作原理"
   - "以太坊"
 format: presentation
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "30 分鐘了解以太坊"
 ---
 

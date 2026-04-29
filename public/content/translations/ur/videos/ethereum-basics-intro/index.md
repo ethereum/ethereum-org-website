@@ -10,7 +10,7 @@ topic:
   - "ایتھیریم"
   - "تعارف"
 format: presentation
-author: کیزار
+author: "کیزار"
 breadcrumb: "ایتھیریم کی بنیادی باتیں"
 ---
 

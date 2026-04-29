@@ -11,7 +11,7 @@ topic:
   - "децентралізація"
   - "децентралізовані застосунки"
 format: presentation
-author: Фундація Ethereum
+author: "Фундація Ethereum"
 breadcrumb: "Криптозастосунки та децентралізовані соцмережі"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "истории-сообщества"
   - "сообщество"
 format: explainer
-author: Этериум Фаундейшн
+author: "Этериум Фаундейшн"
 breadcrumb: "Devconnect Буэнос-Айрес"
 ---
 

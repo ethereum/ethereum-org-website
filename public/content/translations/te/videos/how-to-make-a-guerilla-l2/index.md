@@ -12,7 +12,7 @@ topic:
   - "గోప్యత"
   - "లేయర్-2"
 format: interview
-author: వెబ్3ప్రైవసీ నౌ
+author: "వెబ్3ప్రైవసీ నౌ"
 breadcrumb: "గెరిల్లా l2"
 ---
 

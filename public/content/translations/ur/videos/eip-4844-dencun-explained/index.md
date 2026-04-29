@@ -13,7 +13,7 @@ topic:
   - "dencun"
   - "اپ-گریڈز"
 format: explainer
-author: فائنی میٹکس
+author: "فائنی میٹکس"
 breadcrumb: "EIP-4844 کی وضاحت"
 ---
 

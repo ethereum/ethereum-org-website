@@ -10,7 +10,7 @@ topic:
   - "اکاؤنٹس"
   - "علمِ تشفیر"
 format: tutorial
-author: آسٹن گریفتھ
+author: "آسٹن گریفتھ"
 breadcrumb: "کلیدی جوڑے (ETH.BUILD)"
 ---
 

@@ -11,7 +11,7 @@ topic:
   - "చరిత్ర"
   - "dao"
 format: explainer
-author: జూనియన్
+author: "జూనియన్"
 breadcrumb: "DAO హ్యాక్"
 ---
 

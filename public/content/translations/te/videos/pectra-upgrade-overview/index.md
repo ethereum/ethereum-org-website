@@ -11,7 +11,7 @@ topic:
   - "పెక్ట్రా"
   - "అప్‌గ్రేడ్‌లు"
 format: presentation
-author: ఎథీరియం ఫౌండేషన్
+author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "పెక్ట్రా అవలోకనం"
 ---
 

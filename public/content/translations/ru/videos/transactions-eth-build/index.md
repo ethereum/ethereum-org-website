@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "транзакции"
 format: tutorial
-author: Остин Гриффит
+author: "Остин Гриффит"
 breadcrumb: "Транзакции (ETH.BUILD)"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "defi"
   - "історія"
 format: explainer
-author: Файнматікс
+author: "Файнматікс"
 breadcrumb: "Історія DeFi"
 ---
 

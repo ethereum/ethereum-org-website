@@ -11,7 +11,7 @@ topic:
   - "پیکٹرا"
   - "اسٹیکنگ"
 format: explainer
-author: بلاک ڈیمن
+author: "بلاک ڈیمن"
 breadcrumb: "اسٹیکرز کے لیے پیکٹرا"
 ---
 

@@ -11,7 +11,7 @@ topic:
   - "конфиденциальность"
   - "аутентификация"
 format: presentation
-author: Фонд Ethereum
+author: "Фонд Ethereum"
 breadcrumb: "Безопасность с помощью микроточек"
 ---
 

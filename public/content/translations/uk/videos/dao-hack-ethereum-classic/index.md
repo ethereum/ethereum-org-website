@@ -11,7 +11,7 @@ topic:
   - "історія"
   - "dao"
 format: explainer
-author: Джуніон
+author: "Джуніон"
 breadcrumb: "Злам DAO"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "акаунти"
   - "криптографія"
 format: tutorial
-author: Остін Гріффіт
+author: "Остін Гріффіт"
 breadcrumb: "Пари ключів (ETH.BUILD)"
 ---
 

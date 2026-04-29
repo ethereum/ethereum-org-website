@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "идентичность"
 format: explainer
-author: Майкрософт Секьюрити
+author: "Майкрософт Секьюрити"
 breadcrumb: "Децентрализованная идентичность"
 ---
 

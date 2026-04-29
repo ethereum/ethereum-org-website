@@ -10,7 +10,7 @@ topic:
   - "истории сообщества"
   - "сообщество"
 format: interview
-author: Фонд Ethereum
+author: "Фонд Ethereum"
 breadcrumb: "Создание Aave"
 ---
 

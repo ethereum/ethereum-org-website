@@ -11,7 +11,7 @@ topic:
   - "حصہ داری کا ثبوت"
   - "سیکیورٹی"
 format: presentation
-author: لس کون
+author: "لس کون"
 breadcrumb: "PoS کی تنظیم نو"
 ---
 

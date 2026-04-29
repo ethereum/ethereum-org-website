@@ -11,7 +11,7 @@ topic:
   - "质押"
   - "提款"
 format: explainer
-author: 芬尼马蒂克斯
+author: "芬尼马蒂克斯"
 breadcrumb: "质押提款"
 ---
 

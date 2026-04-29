@@ -11,7 +11,7 @@ topic:
   - "لامرکزیت"
   - "ڈی ایپس"
 format: presentation
-author: ایتھیریم فاؤنڈیشن
+author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "کرپٹو ایپس اور ڈی سوشل"
 ---
 

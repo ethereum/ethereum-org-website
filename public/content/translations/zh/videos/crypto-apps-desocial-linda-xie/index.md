@@ -11,7 +11,7 @@ topic:
   - "去中心化"
   - "去中心化应用 (dapp)"
 format: presentation
-author: 以太坊基金会
+author: "以太坊基金会"
 breadcrumb: "加密应用与去中心化社交"
 ---
 

@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "లావాదేవీలు"
 format: tutorial
-author: ఆస్టిన్ గ్రిఫిత్
+author: "ఆస్టిన్ గ్రిఫిత్"
 breadcrumb: "లావాదేవీలు (ETH.BUILD)"
 ---
 

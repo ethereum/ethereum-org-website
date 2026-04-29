@@ -9,7 +9,7 @@ educationLevel: advanced
 topic:
   - "வழிகாட்டி-வரைபடம்-மற்றும்-முன்னுரிமைகள்"
 format: presentation
-author: ஈடிஎச்போல்டர்
+author: "ஈடிஎச்போல்டர்"
 breadcrumb: "குவாண்டம்-பிந்தைய வழிகாட்டி வரைபடம்"
 ---
 

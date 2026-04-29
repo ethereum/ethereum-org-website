@@ -10,7 +10,7 @@ topic:
   - "சமூக-கதைகள்"
   - "சமூகம்"
 format: interview
-author: எத்தீரியம் அறக்கட்டளை
+author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "Aave-ஐ உருவாக்குதல்"
 ---
 

@@ -10,7 +10,7 @@ topic:
   - "சமூகக் கதைகள்"
   - "சமூகம்"
 format: explainer
-author: எத்திரியம் ஃபவுண்டேஷன்
+author: "எத்திரியம் ஃபவுண்டேஷன்"
 breadcrumb: "Devconnect Buenos Aires"
 ---
 

@@ -12,7 +12,7 @@ topic:
   - "оптимистичные-роллапы"
   - "zk-роллапы"
 format: explainer
-author: Файнматикс
+author: "Файнматикс"
 breadcrumb: "Роллапы"
 ---
 

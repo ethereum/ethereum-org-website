@@ -10,7 +10,7 @@ topic:
   - "اتفاق رائے"
   - "ثبوتِ اختیار"
 format: presentation
-author: کرپٹو اکنامکس اسٹڈی
+author: "کرپٹو اکنامکس اسٹڈی"
 breadcrumb: "ثبوتِ اختیار"
 ---
 

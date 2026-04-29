@@ -11,7 +11,7 @@ topic:
   - "eigenlayer"
   - "భద్రత"
 format: presentation
-author: ఎ16జెడ్ క్రిప్టో
+author: "ఎ16జెడ్ క్రిప్టో"
 breadcrumb: "EigenLayer"
 ---
 

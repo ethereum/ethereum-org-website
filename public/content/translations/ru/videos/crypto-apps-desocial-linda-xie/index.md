@@ -11,7 +11,7 @@ topic:
   - "децентрализация"
   - "dapps"
 format: presentation
-author: Этериум Фаундейшн
+author: "Этериум Фаундейшн"
 breadcrumb: "Криптоприложения и DeSocial"
 ---
 

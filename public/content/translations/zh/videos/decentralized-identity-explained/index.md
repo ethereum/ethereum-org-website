@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "身份"
 format: explainer
-author: 微软安全
+author: "微软安全"
 breadcrumb: "去中心化身份"
 ---
 

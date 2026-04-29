@@ -11,7 +11,7 @@ topic:
   - "零知識證明"
   - "密碼學"
 format: explainer
-author: 威爾德
+author: "威爾德"
 breadcrumb: "零知識證明"
 ---
 

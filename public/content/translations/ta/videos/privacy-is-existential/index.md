@@ -10,7 +10,7 @@ topic:
   - "தனியுரிமை"
   - "பாதுகாப்பு"
 format: presentation
-author: டெவ்கனெக்ட்
+author: "டெவ்கனெக்ட்"
 breadcrumb: "தனியுரிமை"
 ---
 

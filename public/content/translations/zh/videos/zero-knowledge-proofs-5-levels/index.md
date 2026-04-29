@@ -11,7 +11,7 @@ topic:
   - "零知识证明"
   - "密码学"
 format: explainer
-author: 怀尔德
+author: "怀尔德"
 breadcrumb: "零知识证明"
 ---
 

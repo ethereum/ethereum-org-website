@@ -12,7 +12,7 @@ topic:
   - "ڈینکن"
   - "اپ گریڈز"
 format: interview
-author: بینک لیس
+author: "بینک لیس"
 breadcrumb: "بلاب اسپیس 101"
 ---
 

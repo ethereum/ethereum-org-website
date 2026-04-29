@@ -9,7 +9,7 @@ educationLevel: intermediate
 topic:
   - "రోడ్‌మ్యాప్-మరియు-ప్రాధాన్యతలు"
 format: presentation
-author: ఎథీరియం ఫౌండేషన్
+author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "తదుపరి 10 సంవత్సరాలు"
 ---
 

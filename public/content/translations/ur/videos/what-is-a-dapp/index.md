@@ -10,7 +10,7 @@ topic:
   - "dapps"
   - "اسمارٹ کانٹریکٹس"
 format: explainer
-author: ڈسٹرکٹ زیرو ایکس نیٹ ورک
+author: "ڈسٹرکٹ زیرو ایکس نیٹ ورک"
 breadcrumb: "Dapp کیا ہے؟"
 ---
 

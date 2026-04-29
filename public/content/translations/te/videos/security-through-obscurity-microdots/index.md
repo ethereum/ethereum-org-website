@@ -11,7 +11,7 @@ topic:
   - "గోప్యత"
   - "ప్రామాణీకరణ"
 format: presentation
-author: ఎథీరియం ఫౌండేషన్
+author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "మైక్రోడాట్ భద్రత"
 ---
 

@@ -9,7 +9,7 @@ educationLevel: advanced
 topic:
   - "روڈ میپ اور ترجیحات"
 format: interview
-author: بینک لیس
+author: "بینک لیس"
 breadcrumb: "جسٹن ڈریک"
 ---
 

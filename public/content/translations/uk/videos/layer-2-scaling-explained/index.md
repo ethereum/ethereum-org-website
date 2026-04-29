@@ -10,7 +10,7 @@ topic:
   - "масштабування"
   - "рівень-2"
 format: explainer
-author: Файнматікс
+author: "Файнматікс"
 breadcrumb: "Масштабування рівня 2"
 ---
 

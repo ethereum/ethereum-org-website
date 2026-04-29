@@ -10,7 +10,7 @@ topic:
   - "консенсус"
   - "pow"
 format: explainer
-author: Бинанс Академи
+author: "Бинанс Академи"
 breadcrumb: "Доказательство выполнения работы (PoW)"
 ---
 

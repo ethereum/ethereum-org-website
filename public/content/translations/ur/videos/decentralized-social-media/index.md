@@ -10,7 +10,7 @@ topic:
   - "سماجی"
   - "لامرکزیت"
 format: explainer
-author: کوائن مارکیٹ کیپ
+author: "کوائن مارکیٹ کیپ"
 breadcrumb: "لامركزی سوشل"
 ---
 

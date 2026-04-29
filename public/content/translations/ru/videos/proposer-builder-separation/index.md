@@ -11,7 +11,7 @@ topic:
   - "pbs"
   - "mev"
 format: presentation
-author: Сибер Форум
+author: "Сибер Форум"
 breadcrumb: "Объяснение PBS"
 ---
 

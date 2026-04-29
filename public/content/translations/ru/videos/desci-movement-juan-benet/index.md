@@ -10,7 +10,7 @@ topic:
   - "desci"
   - "финансирование"
 format: presentation
-author: ЭтСиСи
+author: "ЭтСиСи"
 breadcrumb: "Движение DeSci"
 ---
 

@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "交易"
 format: tutorial
-author: 奧斯汀·格里菲斯 (Austin Griffith)
+author: "奧斯汀·格里菲斯 (Austin Griffith)"
 breadcrumb: "交易 (ETH.BUILD)"
 ---
 

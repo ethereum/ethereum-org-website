@@ -10,7 +10,7 @@ topic:
   - "గోప్యత-మరియు-భద్రత"
   - "గోప్యత"
 format: presentation
-author: ఎత్‌బౌల్డర్
+author: "ఎత్‌బౌల్డర్"
 breadcrumb: "గోప్యతను తిరిగి పొందడం"
 ---
 

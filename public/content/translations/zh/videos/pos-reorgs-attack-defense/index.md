@@ -11,7 +11,7 @@ topic:
   - "权益证明 (PoS)"
   - "安全"
 format: presentation
-author: 里斯康
+author: "里斯康"
 breadcrumb: "PoS 重组"
 ---
 

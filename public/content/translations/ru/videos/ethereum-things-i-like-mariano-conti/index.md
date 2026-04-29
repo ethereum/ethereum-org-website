@@ -10,7 +10,7 @@ topic:
   - "истории-сообщества"
   - "сообщество"
 format: presentation
-author: Фонд Ethereum
+author: "Фонд Ethereum"
 breadcrumb: "Что мне нравится"
 ---
 

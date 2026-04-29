@@ -10,7 +10,7 @@ topic:
   - "учетные записи"
   - "криптография"
 format: tutorial
-author: Остин Гриффит
+author: "Остин Гриффит"
 breadcrumb: "Хеш-функции (ETH.BUILD)"
 ---
 

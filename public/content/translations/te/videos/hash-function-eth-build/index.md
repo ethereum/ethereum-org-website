@@ -10,7 +10,7 @@ topic:
   - "ఖాతాలు"
   - "గూఢలిపి శాస్త్రం"
 format: tutorial
-author: ఆస్టిన్ గ్రిఫిత్
+author: "ఆస్టిన్ గ్రిఫిత్"
 breadcrumb: "హాష్ ఫంక్షన్లు (ETH.BUILD)"
 ---
 

@@ -9,7 +9,7 @@ educationLevel: intermediate
 topic:
   - "roadmap-and-priorities"
 format: presentation
-author: 以太坊基金會
+author: "以太坊基金會"
 breadcrumb: "未來 10 年"
 ---
 

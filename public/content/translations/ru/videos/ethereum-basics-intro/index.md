@@ -10,7 +10,7 @@ topic:
   - "эфириум"
   - "введение"
 format: presentation
-author: Квезар
+author: "Квезар"
 breadcrumb: "Основы Эфириума"
 ---
 

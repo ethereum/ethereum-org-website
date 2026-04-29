@@ -10,7 +10,7 @@ topic:
   - "共识"
   - "权威证明"
 format: presentation
-author: 克里普托伊科诺米克斯·斯塔迪
+author: "克里普托伊科诺米克斯·斯塔迪"
 breadcrumb: "权威证明"
 ---
 

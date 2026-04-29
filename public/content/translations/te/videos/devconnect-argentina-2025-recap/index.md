@@ -10,7 +10,7 @@ topic:
   - "కమ్యూనిటీ కథలు"
   - "కమ్యూనిటీ"
 format: explainer
-author: ఎథీరియం ఫౌండేషన్
+author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "Devconnect రీక్యాప్"
 ---
 

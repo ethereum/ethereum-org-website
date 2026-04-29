@@ -10,7 +10,7 @@ topic:
   - "區塊鏈"
   - "密碼學"
 format: presentation
-author: 安德斯·布朗沃思
+author: "安德斯·布朗沃思"
 breadcrumb: "區塊鏈 101"
 ---
 

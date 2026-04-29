@@ -10,7 +10,7 @@ topic:
   - "டெஸ்சி"
   - "நிதியளிப்பு"
 format: presentation
-author: எத்-சிசி (EthCC)
+author: "எத்-சிசி (EthCC)"
 breadcrumb: "டெஸ்சி இயக்கம்"
 ---
 

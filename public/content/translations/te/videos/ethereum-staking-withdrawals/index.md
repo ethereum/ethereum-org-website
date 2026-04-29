@@ -11,7 +11,7 @@ topic:
   - "స్టేకింగ్"
   - "ఉపసంహరణలు"
 format: explainer
-author: ఫైన్‌మాటిక్స్
+author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "స్టేకింగ్ ఉపసంహరణలు"
 ---
 

@@ -11,7 +11,7 @@ topic:
   - "வரலாறு"
   - "dao"
 format: explainer
-author: ஜூனியன்
+author: "ஜூனியன்"
 breadcrumb: "DAO ஊடுருவல்"
 ---
 
