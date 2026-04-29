@@ -2,6 +2,14 @@
 title: AI agent wallets
 description: Smart account and wallet infrastructure for Ethereum AI agents, including ERC-4337, EIP-7702, session keys, key management security patterns, and SDK guidance for ZeroDev and Safe
 lang: en
+template: ai-agents
+emoji: ":purse:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: AI agent wallets on Ethereum
+summaryPoint1: Deploy smart account wallets with session keys, spending limits, and contract allowlists for safe agent autonomy
+summaryPoint2: Choose between ERC-4337 for new deployments and EIP-7702 for upgrading existing wallets
+summaryPoint3: Production key management patterns with human-in-the-loop escalation and spending policy enforcement
 faqItems:
   - question: "Do AI agents need a wallet?"
     answer: "Yes. Any agent that needs to send, receive, or interact with onchain protocols needs a wallet. For production agents, a smart account (ERC-4337 or EIP-7702) is the recommended approach. It allows you to set spending limits, allowlists, and time-bounded session keys at the contract level. A raw EOA with no spending policy is not appropriate for autonomous operation."
@@ -314,21 +322,3 @@ A raw EOA with no spending constraints can be drained if the agent is compromise
 - [Veto JSON-RPC proxy](https://github.com/pimlicolabs/veto) — GitHub
 - [Flashbots Protect documentation](https://docs.flashbots.net/flashbots-protect/overview) — How private mempool routing works and when to use it for MEV-sensitive agent transactions
 
-## Continue exploring the AI agents builder hub {#continue-exploring}
-
-### Start here {#start-here}
-
-- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-- [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-
-### Core building blocks {#core-building-blocks}
-
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
-- [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
-- [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
-- [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
-
-### Ecosystem and tooling {#ecosystem-and-tooling}
-
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
-- [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.

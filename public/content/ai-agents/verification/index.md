@@ -2,6 +2,14 @@
 title: Verifiable AI agents
 description: How zero-knowledge machine learning, trusted execution environments, and onchain audit trails enable verifiable AI agent behavior on Ethereum
 lang: en
+template: ai-agents
+emoji: ":shield:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: Verifiable AI agents on Ethereum
+summaryPoint1: zkML proofs and TEE attestations make agent behavior verifiable without trusting the agent or its operator
+summaryPoint2: Smart contracts can verify proof of correct model execution before releasing funds or taking consequential actions
+summaryPoint3: Onchain audit trails create permanent, tamper-resistant records of verified agent behavior
 faqItems:
   - question: "What is zkML and why does it matter for AI agents?"
     answer: "Zero-knowledge machine learning (zkML) generates a cryptographic proof that a specific model ran a specific computation and produced a specific output. A smart contract can verify this proof before releasing funds or executing a consequential action, allowing the contract to condition behavior on the agent's reasoning, not just its assertion. Today zkML is production-viable for bounded models (decision trees, classifiers). Large language model inference remains too slow for real-time use but is improving rapidly."
@@ -155,21 +163,3 @@ Three mechanisms: (1) **Onchain transaction history** — every transaction sign
 - [The Definitive Guide to ZKML (2025)](https://blog.icme.io/the-definitive-guide-to-zkml-2025/) — Comprehensive technical overview of the zkML landscape, covering proving infrastructure evolution, tool comparisons, and performance benchmarks from 2023 to 2025.
 - [Agent identity (ERC-8004)](/ai-agents/identity/) — The onchain agent identity standard, including the Validation Registry design that will route verification requests to delegated verifier contracts once finalized.
 
-## Continue exploring the AI agents builder hub {#continue-exploring}
-
-### Start here {#start-here}
-
-- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-- [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-
-### Core building blocks {#core-building-blocks}
-
-- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
-- [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
-- [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
-
-### Ecosystem and tooling {#ecosystem-and-tooling}
-
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
-- [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.

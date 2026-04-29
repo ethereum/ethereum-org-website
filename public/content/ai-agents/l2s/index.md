@@ -2,6 +2,14 @@
 title: Layer 2 networks for AI agents
 description: Choosing the right Ethereum layer 2 for AI agent workloads, comparing specialized execution environments, ecosystem tooling, finality, and agent infrastructure availability
 lang: en
+template: ai-agents
+emoji: ":chains:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: Layer 2 networks for AI agents on Ethereum
+summaryPoint1: Evaluate L2s by execution environment, agent tooling ecosystem, finality, and trust assumptions
+summaryPoint2: Match your agent workload type to the right L2 architecture for high-frequency, privacy-sensitive, or cross-chain operations
+summaryPoint3: Deploy on optimistic or ZK rollups with the same smart account and session key patterns used on Mainnet
 faqItems:
   - question: "Can AI agents use Ethereum L2s?"
     answer: "Yes. All Ethereum L2s are compatible with standard EVM tooling. An agent that works on Mainnet will work on any Ethereum L2 with only an RPC URL and chain ID change. L2s are the recommended deployment environment for most agents due to lower transaction costs and specialized use case environments."
@@ -138,21 +146,3 @@ Optimistic rollups have a challenge window (typically seven days) before withdra
 - [Scaling Ethereum](/developers/docs/scaling/) — Technical overview of rollups, sidechains, and data availability solutions that underpin L2 architecture.
 - [Layer 2 overview](/layer-2/) — ethereum.org introduction to how Ethereum scaling works, covering optimistic and ZK rollup mechanisms.
 
-## Continue exploring the AI agents builder hub {#continue-exploring} 
-
-### Start here {#start-here}
-
-- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-- [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-
-### Core building blocks {#core-building-blocks}
-
-- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
-- [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
-- [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
-- [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
-
-### Ecosystem and tooling {#ecosystem-and-tooling}
-
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.

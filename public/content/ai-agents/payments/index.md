@@ -2,6 +2,14 @@
 title: Machine payments with x402
 description: How AI agents pay for compute, data, and API calls using the x402 protocol on Ethereum and layer 2 networks
 lang: en
+template: ai-agents
+emoji: ":money_with_wings:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: Machine payments with x402 on Ethereum
+summaryPoint1: x402 enables per-request machine-to-machine payments using the HTTP 402 status code with stablecoin settlement
+summaryPoint2: Agents pay for exactly what they use with no subscription, no account, and no human involvement after initial funding
+summaryPoint3: Production-ready with growing enterprise adoption across cloud, payments, and infrastructure providers
 faqItems:
   - question: "What is x402?"
     answer: "x402 is a machine-to-machine payment protocol built on the HTTP 402 status code. An agent requests a resource, the server returns a 402 with payment terms (stablecoin, amount, address), the agent signs an 'ERC-3009: Transfer With Authorization' payment authorization, and retries the request with the payment header. The server verifies the signature and delivers the resource. No account, no subscription, no human approval. Production-ready since Q1 2026."
@@ -193,21 +201,3 @@ x402 is a machine-to-machine payment protocol built on the HTTP 402 status code.
 - [x402 documentation](https://docs.x402.org/) — x402.org
 - [Agentic Payments and Crypto’s Emerging Role in the AI Economy](https://www.galaxy.com/insights/research/x402-ai-agents-crypto-payments) — How standards like x402 aim to make AI agents full-fledged economic actors, and the potential to power non-crypto applications.
 
-## Continue exploring the AI agents builder hub {#continue-exploring}
-
-### Start here {#start-here}
-
-- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-- [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-
-### Core building blocks {#core-building-blocks}
-
-- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
-- [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
-- [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
-
-### Ecosystem and tooling {#ecosystem-and-tooling}
-
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
-- [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.

@@ -8,7 +8,7 @@ sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent frameworks on Ethereum
 summaryPoint1: Choose an agent framework based on your language, protocol needs, and deployment target
-summaryPoint2: Compare GOAT, ElizaOS, Rig, Olas, GAME, and LangChain for Ethereum integration
+summaryPoint2: Compare popular agent frameworks for Ethereum integration, with a decision guide and code samples
 summaryPoint3: Integration guides with code samples for each framework
 faqItems:
   - question: "Which agent framework should I use?"
@@ -274,21 +274,3 @@ GOAT is a protocol-first framework: it provides 200+ pre-built EVM protocol plug
 - [Create an AI agent that can transfer and swap tokens using ElizaOS](https://metamask.io/news/create-an-ai-agent-that-can-transfer-and-swap-tokens-using-elizaos) — MetaMask guide covering how to create an AI agent that can transfer and swap tokens. 
 - [AI Agent Framework Security: LangChain, LangGraph, CrewAI & More](https://blog.securelayer7.net/ai-agent-frameworks/) — Common vulnerability patterns in agent frameworks, with real-world exploit examples and mitigation strategies for production deployments.
 
-## Continue exploring the AI agents builder hub {#continue-exploring} 
-
-### Start here {#start-here}
-
-- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-- [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-
-### Core building blocks {#core-building-blocks}
-
-- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
-- [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
-- [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
-- [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
-
-### Ecosystem and tooling {#ecosystem-and-tooling}
-
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
-- [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.

@@ -2,6 +2,14 @@
 title: AI agent use cases on Ethereum
 description: Real applications of autonomous AI agents on Ethereum, including DeFi automation, agent-to-agent commerce, onchain governance, risk management, and more
 lang: en
+template: ai-agents
+emoji: ":gear:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: AI agent use cases on Ethereum
+summaryPoint1: DeFi automation, prediction markets, and agent-to-agent commerce are the most active use cases today
+summaryPoint2: Each use case maps to specific infrastructure from the builder hub, including wallets, payments, identity, and verification
+summaryPoint3: Live agents are already trading, deploying tokens, and coordinating autonomously onchain
 faqItems:
   - question: "What is the most production-ready AI agent use case on Ethereum?"
     answer: "DeFi automation is the most mature use case. The infrastructure it depends on, including ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment."
@@ -171,21 +179,3 @@ Evaluate the infrastructure each use case requires. **DeFi automation** needs [w
 - [Trustless AI-Powered Crypto Trading Agents with ERC-8004 and Moltbot](https://medium.com/@gwrx2005/trustless-ai-powered-crypto-trading-agents-with-erc-8004-and-moltbot-58d8789be837) — Research into the design, implementation, frameworks, limitations, and more, for ERC-8004 enabled AI crypto trading agents. 
 - [Make your own AI trading agent on Ethereum](/developers/tutorials/ai-trading-agent/) — A tutorial on how to build an AI trading agent on Ethereum.
 
-## Continue exploring the AI agents builder hub {#continue-exploring}
-
-### Start here {#start-here}
-
-- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-- [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-
-### Core building blocks {#core-building-blocks}
-
-- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
-- [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
-- [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
-- [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
-
-### Ecosystem and tooling {#ecosystem-and-tooling}
-
-- [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.

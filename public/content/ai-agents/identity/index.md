@@ -2,6 +2,14 @@
 title: Agent identity with ERC-8004
 description: Onchain agent identity, reputation, and validation registries using ERC-8004 on Ethereum, including how agents discover, verify, and trust each other without a centralized directory
 lang: en
+template: ai-agents
+emoji: ":id:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: Agent identity with ERC-8004 on Ethereum
+summaryPoint1: ERC-8004 provides onchain identity, reputation, and validation registries for autonomous agents across 20+ chains
+summaryPoint2: Agents discover and verify each other without a centralized directory using censorship-resistant registry infrastructure
+summaryPoint3: The protocol stack combines ERC-8004 identity with x402 payments for fully autonomous agent-to-agent commerce
 faqItems:
   - question: "What is ERC-8004?"
     answer: "ERC-8004 is the Trustless Agents Standard, live on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides three onchain registries: an Identity Registry (agent discovery), a Reputation Registry (onchain feedback signals), and a Validation Registry (hooks for cryptographic verification of agent outputs, not yet deployed). The standard uses the same contract addresses across all supported chains via deterministic deployment."
@@ -201,21 +209,3 @@ No. ERC-8004 carries an official EIP status of **Draft**. The contracts are depl
 - [8004agents.ai](https://8004agents.ai/) — Multi-chain agent directory with reputation scores, validation status, and ecosystem news.
 - [trust8004](https://www.trust8004.xyz/) — Agent scanner focused on comparing combined identity and reputation trust signals, with endpoint verification, across chains.
 
-## Continue exploring the AI agents builder hub {#continue-exploring}  
-
-### Start here {#start-here}
-
-- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-- [Getting started](/ai-agents/getting-started/) — Fund an agent wallet, pick a framework, and deploy your first autonomous transaction.
-
-### Core building blocks {#core-building-blocks}
-
-- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
-- [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
-- [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
-
-### Ecosystem and tooling {#ecosystem-and-tooling}
-
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
-- [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.

@@ -2,6 +2,14 @@
 title: Getting started with AI agents
 description: A developer on-ramp for building AI agents on Ethereum, from wallet creation to framework connection
 lang: en
+template: ai-agents
+emoji: ":rocket:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: Getting started with AI agents on Ethereum
+summaryPoint1: Deploy a smart account wallet, fund it, and connect an agent framework in four steps
+summaryPoint2: Configure session key spending policies to give your agent safe, bounded autonomy
+summaryPoint3: Working code examples for smart account setup, framework connection, and spending guardrails
 faqItems:
   - question: "How do I build my first AI agent on Ethereum?"
     answer: "Start with four steps: (1) Create a smart account wallet using an SDK like ZeroDev, Safe, or another ERC-4337 compatible provider, (2) fund it with testnet ETH from a Sepolia faucet, (3) connect an agent framework like GOAT or ElizaOS that provides the LLM interface and tool orchestration, and (4) configure session key spending policies as guardrails. The Getting started guide walks through each step with working code."
@@ -318,21 +326,3 @@ Start on Sepolia testnet. Testnet ETH has no real value, so experimentation carr
 - [AI Agents in Cryptocurrency: Architecture, Integration, and Best Practices](https://medium.com/@gwrx2005/ai-agents-in-cryptocurrency-architecture-integration-and-best-practices-a107429bf780) - A comprehensive overview of AI agents in cryptocurrency, covering their architecture, integration with blockchain, and best practices. 
 - [When AI Meets Blockchain: A Guide to Securing the Next Frontier](https://quantstamp.com/blog/when-ai-meets-blockchain-a-guide-to-securing-the-next-frontier) - Exploring the security vulnerabilities introduced by integrating autonomous AI agents into blockchain ecosystems, and outlining mitigation strategies developers can use to safeguard. 
 
-## Continue exploring the AI agents builder hub {#continue-exploring} 
-
-### Start here {#start-here}
-
-- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
-
-### Core building blocks {#core-building-blocks}
-
-- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
-- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
-- [Verification](/ai-agents/verification/) — zkML, TEEs, and onchain attestations: how to prove an agent behaved as claimed.
-- [Payments](/ai-agents/payments/) — Machine-to-machine micropayments, streaming payments, and stablecoin rails for autonomous agent commerce.
-- [Identity](/ai-agents/identity/) — Agent identity standards (ERC-8004), reputation systems, and proof-of-personhood mechanisms.
-
-### Ecosystem and tooling {#ecosystem-and-tooling}
-
-- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
-- [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
