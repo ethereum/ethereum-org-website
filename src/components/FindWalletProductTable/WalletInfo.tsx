@@ -61,7 +61,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
       {/* Open-state stripe (desktop only), sits in the image-column gutter. */}
       <div
         aria-hidden
-        className={`pointer-events-none absolute top-14 -bottom-9 left-7 hidden w-1 -translate-x-1/2 lg:group-[&[open]]/collapsible:block ${wallet.twBackgroundColor}`}
+        className={`pointer-events-none absolute top-14 -bottom-9 left-7 hidden w-1 -translate-x-1/2 lg:group-[[open]]/collapsible:block ${wallet.twBackgroundColor}`}
       />
 
       <div className="flex flex-row items-center justify-between gap-4">
@@ -108,11 +108,11 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
 
         <span className="text-primary">
           <ChevronUp className="text-2xl group-[&:not([open])]/collapsible:hidden" />
-          <ChevronDown className="text-2xl group-[&[open]]/collapsible:hidden" />
+          <ChevronDown className="text-2xl group-[[open]]/collapsible:hidden" />
         </span>
       </div>
 
-      <div className="lg:ps-[72px]">
+      <div className="lg:ps-18">
         <ButtonLink
           href={wallet.url}
           variant="outline"

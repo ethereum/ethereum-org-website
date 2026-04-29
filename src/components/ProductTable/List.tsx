@@ -40,7 +40,7 @@ const Row = memo(function Row({
         !visible && "hidden"
       )}
     >
-      <summary className="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
+      <summary className="cursor-pointer list-none p-4 focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover [&::-webkit-details-marker]:hidden">
         <WalletInfo wallet={wallet} />
       </summary>
       <div className="p-4">{children}</div>
