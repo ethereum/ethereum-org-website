@@ -43,6 +43,12 @@ function generateInitialPRBody(): string {
   ].join("\n")
 }
 
+export interface RunFailure {
+  locale: string
+  file: string
+  message: string
+}
+
 /**
  * Generate a run summary to append to the PR body
  */
@@ -50,7 +56,8 @@ export function generateRunSummary(
   langCodes: string[],
   committedFiles: CommittedFile[],
   mode: string,
-  workflowRunUrl?: string
+  workflowRunUrl?: string,
+  failures: RunFailure[] = []
 ): string {
   const now = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC"
 
@@ -69,6 +76,20 @@ export function generateRunSummary(
 
   if (workflowRunUrl) {
     parts.push(`- [View workflow run](${workflowRunUrl})`)
+  }
+
+  if (failures.length > 0) {
+    parts.push("", `**${failures.length} task(s) failed:**`, "")
+    for (const f of failures) {
+      parts.push(`- \`${f.file}\` (${f.locale}): ${f.message}`)
+    }
+    parts.push("", "Rerun the failed combinations:", "", "```")
+    for (const f of failures) {
+      parts.push(
+        `gh workflow run "Intl Pipeline" -f target_path="${f.file}" -f target_languages="${f.locale}"`
+      )
+    }
+    parts.push("```")
   }
 
   parts.push("")
@@ -99,7 +120,8 @@ export async function createOrUpdateTranslationPR(
   branch: string,
   committedFiles: CommittedFile[],
   languagePairs: LanguagePair[],
-  mode: string
+  mode: string,
+  failures: RunFailure[] = []
 ): Promise<{ number: number; html_url: string }> {
   logSection("Pull Request")
 
@@ -109,7 +131,8 @@ export async function createOrUpdateTranslationPR(
     langCodes,
     committedFiles,
     mode,
-    workflowRunUrl
+    workflowRunUrl,
+    failures
   )
 
   // Check for existing open PR
