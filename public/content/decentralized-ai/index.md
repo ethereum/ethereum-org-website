@@ -7,8 +7,8 @@ emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Decentralized AI on Ethereum
-summaryPoint1: Verifiable AI using zero-knowledge cryptography and onchain attestations
-summaryPoint2: AI-assisted wallets and agents that execute onchain transactions on your behalf
+summaryPoint1: Verifiable AI systems that operate without centralized control
+summaryPoint2: AI-assisted wallets and agents that carry out complex tasks on your behalf
 summaryPoint3: A foundation for new approaches to proving whether digital media is real or AI-generated
 ---
 
