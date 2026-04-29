@@ -8,7 +8,7 @@ duration: "0:11:14"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "introducción"
+  - "intro"
 format: presentation
 author: Quezar
 breadcrumb: "Conceptos básicos de Ethereum"

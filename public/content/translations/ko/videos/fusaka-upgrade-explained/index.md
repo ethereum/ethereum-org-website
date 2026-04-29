@@ -7,16 +7,16 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "로드맵과 우선순위"
-  - "업그레이드"
-  - "푸사카"
-  - "로드맵"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
-author: 이더리움 재단
+author: "이더리움 재단"
 breadcrumb: "푸사카 업그레이드"
 ---
 
-**이더리움 재단**의 여러 기여자가 참여한 짧은 설명 영상으로, 푸사카 하드 포크에 포함된 주요 개선 사항, 롤업을 위한 데이터 가용성 확장, 지갑을 위한 패스키 인증, 그리고 레이어 1 (l1) 가스 한도 증가에 대해 간략히 설명합니다.
+<strong>이더리움 재단</strong>의 여러 기여자가 참여한 짧은 설명 영상으로, 푸사카 하드 포크에 포함된 주요 개선 사항, 롤업을 위한 데이터 가용성 확장, 지갑을 위한 패스키 인증, 그리고 레이어 1 (l1) 가스 한도 증가에 대해 간략히 설명합니다.
 
 *이 대본은 이더리움 재단이 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=eCRZOuY2khM)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

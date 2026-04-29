@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "konten"
-  - "kryptographie"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Schlüsselpaare (ETH.BUILD)"

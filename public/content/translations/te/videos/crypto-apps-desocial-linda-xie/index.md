@@ -7,8 +7,8 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "సోషల్"
-  - "వికేంద్రీకరణ"
+  - "social"
+  - "decentralization"
   - "dapps"
 format: presentation
 author: "ఎథీరియం ఫౌండేషన్"

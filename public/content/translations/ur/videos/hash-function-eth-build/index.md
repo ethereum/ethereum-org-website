@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:39"
 educationLevel: beginner
 topic:
-  - "اکاؤنٹس"
-  - "علمِ تشفیر"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: "آسٹن گریفتھ"
 breadcrumb: "ہیش فنکشنز (ETH.BUILD)"

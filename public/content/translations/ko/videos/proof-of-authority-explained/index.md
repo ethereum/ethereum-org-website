@@ -7,14 +7,14 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "합의"
-  - "권위 증명(PoA)"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
-author: 크립토이코노믹스 스터디
+author: "크립토이코노믹스 스터디"
 breadcrumb: "권위 증명(PoA)"
 ---
 
-**크립토이코노믹스 스터디(Cryptoeconomics Study)**가 진행하는 암호경제학 강의로, 중앙 권위자가 트랜잭션 순서를 결정하는 방법, 이로 인해 발생하는 이중 지불 및 검열 문제, 그리고 다중 서명 완화 접근법을 포함하여 권위 증명(PoA) 합의 메커니즘을 설명합니다.
+<strong>크립토이코노믹스 스터디(Cryptoeconomics Study)</strong>가 진행하는 암호경제학 강의로, 중앙 권위자가 트랜잭션 순서를 결정하는 방법, 이로 인해 발생하는 이중 지불 및 검열 문제, 그리고 다중 서명 완화 접근법을 포함하여 권위 증명(PoA) 합의 메커니즘을 설명합니다.
 
 *이 대본은 크립토이코노믹스 스터디가 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=Mj10HSEM5_8)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

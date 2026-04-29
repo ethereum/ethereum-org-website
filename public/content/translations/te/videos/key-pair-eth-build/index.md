@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "ఖాతాలు"
-  - "గూఢలిపి శాస్త్రం"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: "ఆస్టిన్ గ్రిఫిత్"
 breadcrumb: "కీ పెయిర్‌లు (ETH.BUILD)"

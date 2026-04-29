@@ -7,11 +7,11 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "الإجماع"
-  - "إثبات الحصة"
-  - "الأمان"
+  - "consensus"
+  - "pos"
+  - "security"
 format: presentation
-author: ليسكون
+author: "ليسكون"
 breadcrumb: "إعادة التنظيم في إثبات الحصة"
 ---
 

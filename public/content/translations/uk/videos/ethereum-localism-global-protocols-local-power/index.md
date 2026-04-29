@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "сценарії-використання"
+  - "use-cases"
   - "dao"
-  - "децентралізація"
-  - "соціальні"
+  - "decentralization"
+  - "social"
 format: interview
 author: "ЕтБоулдер"
 breadcrumb: "Локалізм Етеріуму"

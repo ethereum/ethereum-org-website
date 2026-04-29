@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "quyền riêng tư và bảo mật"
-  - "quyền riêng tư"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
 author: Web3Privacy Now
 breadcrumb: "Quyền riêng tư của tổ chức"

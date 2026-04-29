@@ -7,9 +7,9 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "社交"
-  - "去中心化"
-  - "去中心化应用 (dapp)"
+  - "social"
+  - "decentralization"
+  - "dapps"
 format: presentation
 author: "以太坊基金会"
 breadcrumb: "加密应用与去中心化社交"

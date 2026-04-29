@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "路线图与优先级"
-  - "升级"
-  - "弗萨卡"
-  - "路线图"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
 author: "以太坊基金会"
 breadcrumb: "弗萨卡升级"

@@ -7,8 +7,8 @@ uploadDate: 2024-04-06
 duration: "0:29:13"
 educationLevel: beginner
 topic:
-  - "ఎథీరియం-ఎలా-పనిచేస్తుంది"
-  - "బ్లాక్‌చైన్"
+  - "how-ethereum-works"
+  - "blockchain"
   - "ethereum"
 format: presentation
 author: "ఇటిహెచ్‌గ్లోబల్"

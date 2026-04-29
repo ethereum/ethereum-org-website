@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "扩容"
-  - "斑点"
-  - "Dencun"
-  - "升级"
+  - "scaling"
+  - "blobs"
+  - "dencun"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "斑点空间 101"

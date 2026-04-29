@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "przypadki użycia"
+  - "use-cases"
   - "dao"
-  - "decentralizacja"
-  - "społecznościowe"
+  - "decentralization"
+  - "social"
 format: interview
 author: EthBoulder
 breadcrumb: "Lokalizm Ethereum"

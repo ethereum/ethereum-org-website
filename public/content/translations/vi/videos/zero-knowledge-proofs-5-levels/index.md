@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "quyền riêng tư và bảo mật"
-  - "bằng chứng không kiến thức"
-  - "mật mã học"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: WIRED
 breadcrumb: "Bằng chứng không kiến thức"

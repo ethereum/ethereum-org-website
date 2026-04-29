@@ -7,11 +7,11 @@ uploadDate: 2020-09-29
 duration: "0:11:13"
 educationLevel: beginner
 topic:
-  - "nft"
+  - "nfts"
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "půjčování"
+  - "lending"
 format: explainer
 author: Finematics
 breadcrumb: "NFT a DeFi"

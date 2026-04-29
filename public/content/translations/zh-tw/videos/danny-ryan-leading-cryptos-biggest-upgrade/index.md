@@ -7,9 +7,9 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "以太坊"
-  - "權益證明 (PoS)"
-  - "合併"
+  - "ethereum"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: "以太坊基金會"
 breadcrumb: "Danny Ryan 訪談"

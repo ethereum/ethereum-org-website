@@ -7,9 +7,9 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "எத்திரியம்"
-  - "உரிமைச் சான்று"
-  - "ஒருங்கிணைப்பு"
+  - "ethereum"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "டேனி ரையன் நேர்காணல்"

@@ -7,10 +7,10 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "分散型科学"
-  - "資金調達"
+  - "desci"
+  - "funding"
 format: presentation
-author: イーサシーシー
+author: "イーサシーシー"
 breadcrumb: "分散型科学 (DeSci) ムーブメント"
 ---
 

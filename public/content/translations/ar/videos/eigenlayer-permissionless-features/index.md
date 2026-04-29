@@ -7,11 +7,11 @@ uploadDate: 2023-02-10
 duration: "0:24:11"
 educationLevel: advanced
 topic:
-  - "إعادة التخزين"
+  - "restaking"
   - "eigenlayer"
-  - "الأمان"
+  - "security"
 format: presentation
-author: إيه 16 زد كريبتو
+author: "إيه 16 زد كريبتو"
 breadcrumb: "EigenLayer"
 ---
 

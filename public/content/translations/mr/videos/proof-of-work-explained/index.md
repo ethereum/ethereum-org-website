@@ -7,10 +7,10 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "एकमत"
+  - "consensus"
   - "pow"
 format: explainer
-author: बायनॅन्स अकॅडमी
+author: "बायनॅन्स अकॅडमी"
 breadcrumb: "प्रूफ-ऑफ-वर्क"
 ---
 

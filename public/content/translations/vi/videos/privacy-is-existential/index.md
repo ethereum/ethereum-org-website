@@ -7,8 +7,8 @@ uploadDate: 2025-03-10
 duration: "0:22:45"
 educationLevel: intermediate
 topic:
-  - "quyền riêng tư"
-  - "bảo mật"
+  - "privacy"
+  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Quyền riêng tư"

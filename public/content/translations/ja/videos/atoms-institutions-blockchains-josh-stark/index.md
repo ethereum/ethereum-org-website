@@ -7,9 +7,9 @@ uploadDate: 2024-04-06
 duration: "0:29:13"
 educationLevel: beginner
 topic:
-  - "イーサリアムの仕組み"
-  - "ブロックチェーン"
-  - "イーサリアム"
+  - "how-ethereum-works"
+  - "blockchain"
+  - "ethereum"
 format: presentation
 author: ETHGlobal
 breadcrumb: "原子、制度、ブロックチェーン"

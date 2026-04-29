@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "comment-fonctionne-ethereum"
-  - "feuille-de-route-et-priorites"
-  - "gouvernance"
-  - "mises-a-jour"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "Gouvernance du cœur"

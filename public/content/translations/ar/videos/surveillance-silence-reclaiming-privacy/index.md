@@ -7,10 +7,10 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "الخصوصية-والأمان"
-  - "الخصوصية"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
-author: إيث بولدر
+author: "إيث بولدر"
 breadcrumb: "استعادة الخصوصية"
 ---
 

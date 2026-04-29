@@ -7,8 +7,8 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "mutabakat"
-  - "yetki-kaniti"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
 author: Cryptoeconomics Study
 breadcrumb: "Yetki Kanıtı"

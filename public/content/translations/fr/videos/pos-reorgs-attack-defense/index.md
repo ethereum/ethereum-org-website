@@ -9,7 +9,7 @@ educationLevel: advanced
 topic:
   - "consensus"
   - "pos"
-  - "sécurité"
+  - "security"
 format: presentation
 author: LisCon
 breadcrumb: "Réorgs PoS"

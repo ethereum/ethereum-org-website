@@ -7,9 +7,9 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "соціальні мережі"
-  - "децентралізація"
-  - "децентралізовані застосунки"
+  - "social"
+  - "decentralization"
+  - "dapps"
 format: presentation
 author: "Фундація Ethereum"
 breadcrumb: "Криптозастосунки та децентралізовані соцмережі"

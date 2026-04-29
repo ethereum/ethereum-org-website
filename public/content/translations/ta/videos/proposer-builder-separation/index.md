@@ -7,7 +7,7 @@ uploadDate: 2024-02-05
 duration: "0:22:47"
 educationLevel: advanced
 topic:
-  - "வழிகாட்டி வரைபடம்"
+  - "roadmap"
   - "pbs"
   - "mev"
 format: presentation

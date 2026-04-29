@@ -7,14 +7,14 @@ uploadDate: 2022-10-04
 duration: "0:09:56"
 educationLevel: beginner
 topic:
-  - "DAO"
-  - "거버넌스"
+  - "dao"
+  - "governance"
 format: presentation
-author: 테드
+author: "테드"
 breadcrumb: "DAO와 도시"
 ---
 
-실험적 도시계획가 **스콧 핏시몬스(Scott Fitsimones)**의 TED 프레젠테이션으로, 암호화폐를 모아 토지를 구매하는 것부터 블록체인 기반 투표를 통해 공유 자원을 관리하는 것에 이르기까지 탈중앙화 자율 조직(DAO)이 어떻게 커뮤니티 주도 개발을 조율할 수 있는지 다룹니다.
+실험적 도시계획가 <strong>스콧 핏시몬스(Scott Fitsimones)</strong>의 TED 프레젠테이션으로, 암호화폐를 모아 토지를 구매하는 것부터 블록체인 기반 투표를 통해 공유 자원을 관리하는 것에 이르기까지 탈중앙화 자율 조직(DAO)이 어떻게 커뮤니티 주도 개발을 조율할 수 있는지 다룹니다.
 
 *이 대본은 TED에서 발행한 [원본 동영상 대본](https://www.youtube.com/watch?v=zTStDvUtQWc)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

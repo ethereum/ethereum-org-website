@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "транзакції"
+  - "transactions"
 format: tutorial
 author: "Остін Гріффіт"
 breadcrumb: "Транзакції (ETH.BUILD)"

@@ -7,11 +7,11 @@ uploadDate: 2023-02-10
 duration: "0:24:11"
 educationLevel: advanced
 topic:
-  - "रीस्टेकिंग"
+  - "restaking"
   - "eigenlayer"
-  - "सुरक्षा"
+  - "security"
 format: presentation
-author: a16z क्रिप्टो
+author: "a16z क्रिप्टो"
 breadcrumb: "EigenLayer"
 ---
 

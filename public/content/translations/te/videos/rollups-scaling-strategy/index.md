@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "స్కేలింగ్"
-  - "రోల్అప్‌లు"
-  - "ఆశావాద-రోల్అప్‌లు"
-  - "zk-రోల్అప్‌లు"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "రోల్అప్‌లు"

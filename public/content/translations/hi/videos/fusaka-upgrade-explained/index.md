@@ -7,12 +7,12 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "रोडमैप-और-प्राथमिकताएं"
-  - "अपग्रेड"
-  - "फुसाका"
-  - "रोडमैप"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
-author: एथेरियम फाउंडेशन
+author: "एथेरियम फाउंडेशन"
 breadcrumb: "फुसाका अपग्रेड"
 ---
 

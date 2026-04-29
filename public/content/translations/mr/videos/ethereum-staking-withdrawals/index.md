@@ -7,11 +7,11 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "इथेरियम-कसे-काम-करते"
-  - "स्टेकिंग"
-  - "रक्कम-काढणे"
+  - "how-ethereum-works"
+  - "staking"
+  - "withdrawals"
 format: explainer
-author: फायनेमॅटिक्स
+author: "फायनेमॅटिक्स"
 breadcrumb: "स्टेकिंगची रक्कम काढणे"
 ---
 

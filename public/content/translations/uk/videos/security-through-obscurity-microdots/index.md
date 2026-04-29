@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "конфіденційність та безпека"
-  - "конфіденційність"
-  - "автентифікація"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: "Фундація Ethereum"
 breadcrumb: "Безпека мікроточок"

@@ -7,7 +7,7 @@ uploadDate: 2022-04-12
 duration: "0:05:22"
 educationLevel: beginner
 topic:
-  - "身分"
+  - "identity"
 format: explainer
 author: "邁克羅索夫特·西庫里提"
 breadcrumb: "去中心化身分"

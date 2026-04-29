@@ -7,8 +7,8 @@ uploadDate: 2025-03-10
 duration: "0:22:45"
 educationLevel: intermediate
 topic:
-  - "தனியுரிமை"
-  - "பாதுகாப்பு"
+  - "privacy"
+  - "security"
 format: presentation
 author: "டெவ்கனெக்ட்"
 breadcrumb: "தனியுரிமை"

@@ -7,9 +7,9 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "রোডম্যাপ-এবং-অগ্রাধিকার"
+  - "roadmap-and-priorities"
 format: presentation
-author: ইটিএইচবোল্ডার
+author: "ইটিএইচবোল্ডার"
 breadcrumb: "পোস্ট-কোয়ান্টাম রোডম্যাপ"
 ---
 

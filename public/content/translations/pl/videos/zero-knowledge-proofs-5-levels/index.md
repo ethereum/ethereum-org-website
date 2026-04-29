@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "prywatność-i-bezpieczeństwo"
-  - "dowody-z-wiedzą-zerową"
-  - "kryptografia"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: WIRED
 breadcrumb: "Dowody z wiedzą zerową"

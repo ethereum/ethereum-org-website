@@ -7,11 +7,11 @@ uploadDate: 2024-04-06
 duration: "0:29:13"
 educationLevel: beginner
 topic:
-  - "इथेरियम कैसे काम करता है"
-  - "ब्लॉकचेन"
-  - "इथेरियम"
+  - "how-ethereum-works"
+  - "blockchain"
+  - "ethereum"
 format: presentation
-author: ईटीएचग्लोबल
+author: "ईटीएचग्लोबल"
 breadcrumb: "परमाणु, संस्थाएं, ब्लॉकचेन"
 ---
 

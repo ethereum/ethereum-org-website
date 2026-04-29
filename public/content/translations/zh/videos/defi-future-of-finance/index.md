@@ -7,8 +7,8 @@ uploadDate: 2020-09-24
 duration: "0:14:48"
 educationLevel: beginner
 topic:
-  - "去中心化金融"
-  - "金融"
+  - "defi"
+  - "finance"
 format: explainer
 author: "菲内马蒂克斯"
 breadcrumb: "DeFi：未来金融"

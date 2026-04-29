@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "சுரங்கப்பணி"
-  - "தொகுதிச்சங்கிலி"
+  - "mining"
+  - "blockchain"
 format: tutorial
 author: "ஆஸ்டின் கிரிஃபித்"
 breadcrumb: "தொகுதிச்சங்கிலி (ETH.BUILD)"

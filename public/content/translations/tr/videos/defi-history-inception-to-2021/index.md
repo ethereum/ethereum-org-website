@@ -8,7 +8,7 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "tarih"
+  - "history"
 format: explainer
 author: Finematics
 breadcrumb: "DeFi Tarihi"

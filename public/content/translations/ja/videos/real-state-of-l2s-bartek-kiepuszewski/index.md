@@ -7,11 +7,11 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "スケーリングとレイヤー2"
-  - "ロールアップ"
-  - "レイヤー2"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "L2の現状"
 ---
 

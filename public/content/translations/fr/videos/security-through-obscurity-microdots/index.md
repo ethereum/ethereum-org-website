@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "confidentialité et sécurité"
-  - "confidentialité"
-  - "authentification"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Sécurité par micropoints"

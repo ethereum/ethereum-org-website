@@ -7,11 +7,11 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "ইথেরিয়াম কীভাবে কাজ করে"
-  - "স্টেকিং"
-  - "উত্তোলন"
+  - "how-ethereum-works"
+  - "staking"
+  - "withdrawals"
 format: explainer
-author: ফাইনেম্যাটিক্স
+author: "ফাইনেম্যাটিক্স"
 breadcrumb: "স্টেকিং উত্তোলন"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "用例"
+  - "use-cases"
   - "ai"
-  - "代理"
-  - "dapp"
+  - "agents"
+  - "dapps"
 format: interview
 author: "温·希夫特·哈彭斯"
 breadcrumb: "AI 代理：Luna"

@@ -7,8 +7,8 @@ uploadDate: 2025-11-23
 duration: "0:18:00"
 educationLevel: beginner
 topic:
-  - "社区故事"
-  - "社区"
+  - "community-stories"
+  - "community"
 format: presentation
 author: Web3Privacy Now
 breadcrumb: "如何成为密码朋克"

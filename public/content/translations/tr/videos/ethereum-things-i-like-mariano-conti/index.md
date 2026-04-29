@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "topluluk-hikayeleri"
-  - "topluluk"
+  - "community-stories"
+  - "community"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Sevdiğim Şeyler"

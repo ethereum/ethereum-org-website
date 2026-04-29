@@ -7,8 +7,8 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "தொகுதிச்சங்கிலி"
-  - "குறியாக்கவியல்"
+  - "blockchain"
+  - "cryptography"
 format: presentation
 author: "ஆண்டர்ஸ் பிரவுன்வொர்த்"
 breadcrumb: "தொகுதிச்சங்கிலி 101"

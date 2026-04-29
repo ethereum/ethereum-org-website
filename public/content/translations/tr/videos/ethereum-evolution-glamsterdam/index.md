@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "yol-haritasi-ve-oncelikler"
-  - "yol-haritasi"
-  - "yukseltmeler"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: ETHDenver
 breadcrumb: "Ethereum Evrimi"

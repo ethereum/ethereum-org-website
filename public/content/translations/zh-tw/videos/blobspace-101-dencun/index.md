@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "擴容"
-  - "資料塊"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "升級"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "資料塊空間 101"

@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "plán-a-priority"
-  - "upgrady"
+  - "roadmap-and-priorities"
+  - "upgrades"
   - "fusaka"
-  - "plán"
+  - "roadmap"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Upgrade Fusaka"

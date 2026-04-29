@@ -7,8 +7,8 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "topluluk-hikayeleri"
-  - "topluluk"
+  - "community-stories"
+  - "community"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Devconnect Özeti"

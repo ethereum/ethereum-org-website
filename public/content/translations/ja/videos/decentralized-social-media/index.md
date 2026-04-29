@@ -7,14 +7,14 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "ソーシャル"
-  - "分散化"
+  - "social"
+  - "decentralization"
 format: explainer
-author: コインマーケットキャップ
+author: "コインマーケットキャップ"
 breadcrumb: "分散型ソーシャル"
 ---
 
-**コインマーケットキャップ**による解説。分散型ソーシャルメディアプラットフォーム、中央集権型ネットワークとの違い、言論の自由のトレードオフ、インターオペラビリティの利点、そしてMastodon、Minds、Steem、DTube、Audius、Subsocialなどの主要プラットフォームの紹介をカバーしています。
+<strong>コインマーケットキャップ</strong>による解説。分散型ソーシャルメディアプラットフォーム、中央集権型ネットワークとの違い、言論の自由のトレードオフ、インターオペラビリティの利点、そしてMastodon、Minds、Steem、DTube、Audius、Subsocialなどの主要プラットフォームの紹介をカバーしています。
 
 *このトランスクリプトは、コインマーケットキャップが公開した[元のビデオトランスクリプト](https://www.youtube.com/watch?v=UdT2lpcGvcQ)のアクセシブルなコピーです。読みやすさのために軽く編集されています。*
 

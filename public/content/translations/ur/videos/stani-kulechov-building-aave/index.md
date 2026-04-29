@@ -7,8 +7,8 @@ uploadDate: 2024-08-20
 duration: "0:36:34"
 educationLevel: beginner
 topic:
-  - "کمیونٹی کی کہانیاں"
-  - "کمیونٹی"
+  - "community-stories"
+  - "community"
 format: interview
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "Aave کی تعمیر"

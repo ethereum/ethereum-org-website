@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:39"
 educationLevel: beginner
 topic:
-  - "contas"
-  - "criptografia"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Funções de hash (ETH.BUILD)"

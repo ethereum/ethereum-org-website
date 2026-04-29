@@ -7,7 +7,7 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "roadmap-und-prioritaeten"
+  - "roadmap-and-priorities"
   - "upgrades"
   - "fusaka"
   - "roadmap"

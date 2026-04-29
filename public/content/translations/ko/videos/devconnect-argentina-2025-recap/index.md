@@ -7,10 +7,10 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "커뮤니티 스토리"
-  - "커뮤니티"
+  - "community-stories"
+  - "community"
 format: explainer
-author: 이더리움 파운데이션
+author: "이더리움 파운데이션"
 breadcrumb: "데브커넥트 요약"
 ---
 

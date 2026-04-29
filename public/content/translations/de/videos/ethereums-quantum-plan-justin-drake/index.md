@@ -7,7 +7,7 @@ uploadDate: 2025-07-15
 duration: "1:12:30"
 educationLevel: advanced
 topic:
-  - "roadmap-und-prioritaeten"
+  - "roadmap-and-priorities"
 format: interview
 author: Bankless
 breadcrumb: "Justin Drake"

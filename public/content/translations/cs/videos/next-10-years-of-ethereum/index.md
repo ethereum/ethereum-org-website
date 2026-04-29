@@ -7,7 +7,7 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "plán-a-priority"
+  - "roadmap-and-priorities"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Dalších 10 let"

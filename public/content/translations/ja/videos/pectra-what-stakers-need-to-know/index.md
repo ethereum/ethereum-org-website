@@ -7,15 +7,15 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "ロードマップ"
-  - "ペクトラ"
-  - "ステーキング"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
-author: ブロックデーモン
+author: "ブロックデーモン"
 breadcrumb: "ステーカーのためのペクトラ"
 ---
 
-**Blockdaemon**が主催し、ブロックチェーンエンジニアのJulia Schmidt氏（Alluvial）とFreddy Tänzer氏（Blockdaemon）を迎えたウェビナーでは、ペクトラ・アップグレードがETHステーキングに与える影響について議論しています。このウェビナーでは、実行レイヤーからトリガー可能な引き出し、最大エフェクティブ・バランスの増加、バリデータの統合、およびリキッド・ステーキングへの影響について取り上げています。
+<strong>Blockdaemon</strong>が主催し、ブロックチェーンエンジニアのJulia Schmidt氏（Alluvial）とFreddy Tänzer氏（Blockdaemon）を迎えたウェビナーでは、ペクトラ・アップグレードがETHステーキングに与える影響について議論しています。このウェビナーでは、実行レイヤーからトリガー可能な引き出し、最大エフェクティブ・バランスの増加、バリデータの統合、およびリキッド・ステーキングへの影響について取り上げています。
 
 *このトランスクリプトは、Blockdaemonが公開した[元の動画のトランスクリプト](https://www.youtube.com/watch?v=_UpAFpC7X6Y)のアクセシブルなコピーです。読みやすさを考慮して軽く編集されています。*
 

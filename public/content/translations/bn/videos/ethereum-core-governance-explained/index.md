@@ -7,12 +7,12 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "কীভাবে ইথেরিয়াম কাজ করে"
-  - "রোডম্যাপ এবং অগ্রাধিকার"
-  - "গভর্ন্যান্স"
-  - "আপগ্রেড"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
-author: ইথবোল্ডার
+author: "ইথবোল্ডার"
 breadcrumb: "কোর গভর্ন্যান্স"
 ---
 

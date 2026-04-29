@@ -7,10 +7,10 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "सर्वसम्मति"
+  - "consensus"
   - "pow"
 format: explainer
-author: बाइनेंस अकादमी
+author: "बाइनेंस अकादमी"
 breadcrumb: "प्रूफ-ऑफ-वर्क"
 ---
 

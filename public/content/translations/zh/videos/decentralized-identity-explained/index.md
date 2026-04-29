@@ -7,7 +7,7 @@ uploadDate: 2022-04-12
 duration: "0:05:22"
 educationLevel: beginner
 topic:
-  - "身份"
+  - "identity"
 format: explainer
 author: "微软安全"
 breadcrumb: "去中心化身份"

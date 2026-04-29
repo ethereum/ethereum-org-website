@@ -7,9 +7,9 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "扩容与二层网络"
-  - "汇总"
-  - "二层网络"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
 author: "以太坊基金会"
 breadcrumb: "二层网络 (l2) 的状态"

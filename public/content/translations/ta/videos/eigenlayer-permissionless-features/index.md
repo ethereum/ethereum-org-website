@@ -7,9 +7,9 @@ uploadDate: 2023-02-10
 duration: "0:24:11"
 educationLevel: advanced
 topic:
-  - "மறுபங்குவைப்பு"
+  - "restaking"
   - "eigenlayer"
-  - "பாதுகாப்பு"
+  - "security"
 format: presentation
 author: "ஏ16இசட் கிரிப்டோ"
 breadcrumb: "EigenLayer"

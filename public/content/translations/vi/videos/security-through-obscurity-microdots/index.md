@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "quyền riêng tư và bảo mật"
-  - "quyền riêng tư"
-  - "xác thực"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Bảo mật bằng vi điểm"

@@ -7,8 +7,8 @@ uploadDate: 2022-03-01
 duration: "0:11:14"
 educationLevel: beginner
 topic:
-  - "ইথেরিয়াম"
-  - "ভূমিকা"
+  - "ethereum"
+  - "intro"
 format: presentation
 author: Quezar
 breadcrumb: "ইথেরিয়াম বেসিকস"

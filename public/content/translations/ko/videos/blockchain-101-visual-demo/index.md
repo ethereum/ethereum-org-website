@@ -7,10 +7,10 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "블록체인"
-  - "암호학"
+  - "blockchain"
+  - "cryptography"
 format: presentation
-author: 앤더스 브라운워스
+author: "앤더스 브라운워스"
 breadcrumb: "블록체인 101"
 ---
 

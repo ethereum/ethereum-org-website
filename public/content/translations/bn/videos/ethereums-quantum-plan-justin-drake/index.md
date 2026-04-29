@@ -7,9 +7,9 @@ uploadDate: 2025-07-15
 duration: "1:12:30"
 educationLevel: advanced
 topic:
-  - "রোডম্যাপ-এবং-অগ্রাধিকার"
+  - "roadmap-and-priorities"
 format: interview
-author: ব্যাংকলেস
+author: "ব্যাংকলেস"
 breadcrumb: "জাস্টিন ড্রেক"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "mise à l'échelle"
+  - "scaling"
   - "rollups"
-  - "rollups-optimistes"
-  - "rollups-zk"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: Finematics
 breadcrumb: "Rollups"

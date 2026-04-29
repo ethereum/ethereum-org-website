@@ -10,7 +10,7 @@ topic:
   - "community-stories"
   - "community"
 format: explainer
-author: एथेरियम फाउंडेशन
+author: "एथेरियम फाउंडेशन"
 breadcrumb: "डेवकॉन मुंबई"
 ---
 

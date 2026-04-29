@@ -1,5 +1,5 @@
 ---
-title: "بیونس آئرس میں ایتھیریم کے اجتماع میں شامل ہوں! <span dir=\"ltr\">Nov 17-22</span>"
+title: "بیونس آئرس میں ایتھیریم کے اجتماع میں شامل ہوں! ⁦Nov 17-22⁩"
 description: "ڈی کنیکٹ بیونس آئرس (Devconnect Buenos Aires) اور ایتھیریم ورلڈز فیئر کا آفیشل پرومو ٹریلر، جو عالمی کمیونٹی کو ارجنٹائن میں روابط، ایپلی کیشنز، اور آن چین ایکشن کے ایک ہفتے کے لیے مدعو کرتا ہے۔"
 lang: ur
 youtubeId: "Wgxj_4y2F0Q"
@@ -7,8 +7,8 @@ uploadDate: 2025-09-15
 duration: "0:00:25"
 educationLevel: beginner
 topic:
-  - "کمیونٹی کی کہانیاں"
-  - "کمیونٹی"
+  - "community-stories"
+  - "community"
 format: explainer
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "ڈی کنیکٹ بیونس آئرس"

@@ -7,8 +7,8 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "консенсус"
-  - "блокчейн"
+  - "consensus"
+  - "blockchain"
 format: explainer
 author: "Тек ин Азия"
 breadcrumb: "Механизмы консенсуса"

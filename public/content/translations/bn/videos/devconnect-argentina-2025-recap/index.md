@@ -7,10 +7,10 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "কমিউনিটির গল্প"
-  - "কমিউনিটি"
+  - "community-stories"
+  - "community"
 format: explainer
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "Devconnect রিক্যাপ"
 ---
 

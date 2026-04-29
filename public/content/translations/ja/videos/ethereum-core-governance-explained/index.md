@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "イーサリアムの仕組み"
-  - "ロードマップと優先事項"
-  - "ガバナンス"
-  - "アップグレード"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "コア・ガバナンス"

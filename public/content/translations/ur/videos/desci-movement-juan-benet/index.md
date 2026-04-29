@@ -7,8 +7,8 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "ڈی سائی"
-  - "فنڈنگ"
+  - "desci"
+  - "funding"
 format: presentation
 author: "ایتھ سی سی"
 breadcrumb: "ڈی سائی کی تحریک"

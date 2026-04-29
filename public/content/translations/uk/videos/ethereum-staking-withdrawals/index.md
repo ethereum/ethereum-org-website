@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "як-працює-етеріум"
-  - "стейкінг"
-  - "виведення"
+  - "how-ethereum-works"
+  - "staking"
+  - "withdrawals"
 format: explainer
 author: "Фінематікс"
 breadcrumb: "Виведення зі стейкінгу"

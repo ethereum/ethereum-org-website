@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "jak-dziala-ethereum"
-  - "mapa-drogowa-i-priorytety"
-  - "zarzadzanie"
-  - "aktualizacje"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "Zarządzanie głównym protokołem"

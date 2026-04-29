@@ -7,10 +7,10 @@ uploadDate: 2020-09-24
 duration: "0:14:48"
 educationLevel: beginner
 topic:
-  - "التمويل اللامركزي (DeFi)"
-  - "التمويل"
+  - "defi"
+  - "finance"
 format: explainer
-author: فاينماتيكس
+author: "فاينماتيكس"
 breadcrumb: "التمويل اللامركزي (DeFi): مستقبل التمويل"
 ---
 

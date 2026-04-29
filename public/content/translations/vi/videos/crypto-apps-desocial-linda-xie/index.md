@@ -7,9 +7,9 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "mạng xã hội"
-  - "phi tập trung"
-  - "dapp"
+  - "social"
+  - "decentralization"
+  - "dapps"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Ứng dụng tiền mã hóa & Mạng xã hội phi tập trung"

@@ -7,8 +7,8 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "истории-сообщества"
-  - "сообщество"
+  - "community-stories"
+  - "community"
 format: explainer
 author: "Эфириум Фаундейшн"
 breadcrumb: "Devcon в Мумбаи"

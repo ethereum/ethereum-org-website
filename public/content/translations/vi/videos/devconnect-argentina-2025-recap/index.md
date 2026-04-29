@@ -7,8 +7,8 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "câu chuyện cộng đồng"
-  - "cộng đồng"
+  - "community-stories"
+  - "community"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Tóm tắt Devconnect"

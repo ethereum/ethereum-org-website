@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "గోప్యత-మరియు-భద్రత"
-  - "గోప్యత"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
 author: "వెబ్3ప్రైవసీ నౌ"
 breadcrumb: "సంస్థాగత గోప్యత"

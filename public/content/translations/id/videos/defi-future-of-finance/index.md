@@ -8,7 +8,7 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "keuangan"
+  - "finance"
 format: explainer
 author: Finematics
 breadcrumb: "DeFi: Masa Depan Keuangan"

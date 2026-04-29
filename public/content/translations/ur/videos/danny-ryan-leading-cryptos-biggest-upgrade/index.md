@@ -7,9 +7,9 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "ایتھیریم"
-  - "حصہ داری کا ثبوت (PoS)"
-  - "دی مرج"
+  - "ethereum"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "ڈینی ریان کا انٹرویو"

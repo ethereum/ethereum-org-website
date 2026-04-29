@@ -8,8 +8,8 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "preuve-d-enjeu"
-  - "la-fusion"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Interview de Danny Ryan"

@@ -7,10 +7,10 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "தனியுரிமை-மற்றும்-பாதுகாப்பு"
-  - "ஸ்கேலிங்-மற்றும்-அடுக்கு-2"
-  - "தனியுரிமை"
-  - "அடுக்கு-2"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
 author: "வெப்3பிரைவசி நவ்"
 breadcrumb: "கொரில்லா அடுக்கு 2 (l2)"

@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "路線圖與優先事項"
-  - "升級"
-  - "富薩卡"
-  - "路線圖"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
 author: "以太坊基金會"
 breadcrumb: "富薩卡升級"

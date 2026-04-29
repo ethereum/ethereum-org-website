@@ -7,11 +7,11 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "コンセンサス"
-  - "プルーフ・オブ・ステーク (PoS)"
-  - "セキュリティ"
+  - "consensus"
+  - "pos"
+  - "security"
 format: presentation
-author: リスコン
+author: "リスコン"
 breadcrumb: "PoSのリオーグ"
 ---
 

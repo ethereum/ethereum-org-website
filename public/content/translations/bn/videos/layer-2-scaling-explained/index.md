@@ -7,8 +7,8 @@ uploadDate: 2021-02-03
 duration: "0:14:28"
 educationLevel: intermediate
 topic:
-  - "স্কেলিং"
-  - "লেয়ার-২"
+  - "scaling"
+  - "layer-2"
 format: explainer
 author: Finematics
 breadcrumb: "লেয়ার ২ (l2) স্কেলিং"

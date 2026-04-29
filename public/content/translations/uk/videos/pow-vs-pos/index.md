@@ -7,9 +7,9 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "механізми-консенсусу"
-  - "безпека"
-  - "консенсус"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
 author: "Бенклесс"
 breadcrumb: "Дебати щодо PoW та PoS"

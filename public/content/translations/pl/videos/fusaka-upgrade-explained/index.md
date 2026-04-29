@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "mapa-drogowa-i-priorytety"
-  - "aktualizacje"
+  - "roadmap-and-priorities"
+  - "upgrades"
   - "fusaka"
-  - "mapa-drogowa"
+  - "roadmap"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Aktualizacja Fusaka"

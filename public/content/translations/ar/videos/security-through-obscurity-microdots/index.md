@@ -7,11 +7,11 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "الخصوصية والأمان"
-  - "الخصوصية"
-  - "المصادقة"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "أمان النقاط الدقيقة"
 ---
 

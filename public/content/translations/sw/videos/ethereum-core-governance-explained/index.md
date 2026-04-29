@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "jinsi-ethereum-inavyofanya-kazi"
-  - "ramani-ya-njia-na-vipaumbele"
-  - "utawala"
-  - "maboresho"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "Utawala wa Msingi"

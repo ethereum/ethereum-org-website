@@ -8,7 +8,7 @@ duration: "0:09:48"
 educationLevel: beginner
 topic:
   - "governance"
-  - "geschichte"
+  - "history"
   - "dao"
 format: explainer
 author: Junion

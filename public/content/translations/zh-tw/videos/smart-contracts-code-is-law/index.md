@@ -7,7 +7,7 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "智能合約"
+  - "smart-contracts"
 format: explainer
 author: Finematics
 breadcrumb: "智能合約"

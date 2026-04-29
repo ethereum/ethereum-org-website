@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "peta-jalan-dan-prioritas"
-  - "pembaruan"
+  - "roadmap-and-priorities"
+  - "upgrades"
   - "fusaka"
-  - "peta-jalan"
+  - "roadmap"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Pembaruan Fusaka"

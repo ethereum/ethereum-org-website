@@ -8,7 +8,7 @@ duration: "0:09:56"
 educationLevel: beginner
 topic:
   - "dao"
-  - "gobernanza"
+  - "governance"
 format: presentation
 author: TED
 breadcrumb: "Las DAO y las ciudades"

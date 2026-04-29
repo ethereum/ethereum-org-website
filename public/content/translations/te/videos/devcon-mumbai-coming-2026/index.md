@@ -7,8 +7,8 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "కమ్యూనిటీ కథనాలు"
-  - "కమ్యూనిటీ"
+  - "community-stories"
+  - "community"
 format: explainer
 author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "డెవ్‌కాన్ ముంబై"

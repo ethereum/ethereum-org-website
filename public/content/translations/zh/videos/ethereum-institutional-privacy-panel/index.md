@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "隐私与安全"
-  - "隐私"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
 author: Web3Privacy Now
 breadcrumb: "机构隐私"

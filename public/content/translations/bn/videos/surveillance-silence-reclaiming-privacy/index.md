@@ -7,10 +7,10 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "গোপনীয়তা-এবং-নিরাপত্তা"
-  - "গোপনীয়তা"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
-author: ইথবোল্ডার
+author: "ইথবোল্ডার"
 breadcrumb: "গোপনীয়তা পুনরুদ্ধার"
 ---
 

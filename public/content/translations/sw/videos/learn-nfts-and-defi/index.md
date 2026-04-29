@@ -11,7 +11,7 @@ topic:
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "ukopeshaji"
+  - "lending"
 format: explainer
 author: Finematics
 breadcrumb: "NFTs na DeFi"

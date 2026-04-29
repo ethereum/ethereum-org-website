@@ -7,11 +7,11 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "गोपनीयता-और-सुरक्षा"
-  - "शून्य-ज्ञान-प्रमाण"
-  - "क्रिप्टोग्राफी"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
-author: वायर्ड
+author: "वायर्ड"
 breadcrumb: "शून्य-ज्ञान प्रमाण"
 ---
 

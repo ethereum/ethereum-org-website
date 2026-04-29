@@ -7,11 +7,11 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "इथेरियम"
-  - "प्रूफ-ऑफ़-स्टेक (PoS)"
-  - "द मर्ज"
+  - "ethereum"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
-author: एथेरियम फाउंडेशन
+author: "एथेरियम फाउंडेशन"
 breadcrumb: "डैनी रयान का साक्षात्कार"
 ---
 

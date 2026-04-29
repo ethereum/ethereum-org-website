@@ -7,10 +7,10 @@ uploadDate: 2024-08-20
 duration: "0:36:34"
 educationLevel: beginner
 topic:
-  - "قصص المجتمع"
-  - "المجتمع"
+  - "community-stories"
+  - "community"
 format: interview
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "بناء Aave"
 ---
 

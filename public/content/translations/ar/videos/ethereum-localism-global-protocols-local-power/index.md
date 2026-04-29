@@ -7,12 +7,12 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "حالات الاستخدام"
-  - "المنظمات المستقلة اللامركزية (DAO)"
-  - "اللامركزية"
-  - "اجتماعي"
+  - "use-cases"
+  - "dao"
+  - "decentralization"
+  - "social"
 format: interview
-author: إيث بولدر
+author: "إيث بولدر"
 breadcrumb: "المحلية في إيثيريوم"
 ---
 

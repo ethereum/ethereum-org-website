@@ -7,12 +7,12 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "স্কেলিং"
-  - "ব্লব"
-  - "ডেনকুন"
-  - "আপগ্রেড"
+  - "scaling"
+  - "blobs"
+  - "dencun"
+  - "upgrades"
 format: interview
-author: ব্যাংকলেস
+author: "ব্যাংকলেস"
 breadcrumb: "ব্লবস্পেস 101"
 ---
 

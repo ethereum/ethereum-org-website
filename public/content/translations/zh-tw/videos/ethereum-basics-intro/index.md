@@ -7,8 +7,8 @@ uploadDate: 2022-03-01
 duration: "0:11:14"
 educationLevel: beginner
 topic:
-  - "以太坊"
-  - "簡介"
+  - "ethereum"
+  - "intro"
 format: presentation
 author: Quezar
 breadcrumb: "以太坊基礎"

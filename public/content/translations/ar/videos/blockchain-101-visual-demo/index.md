@@ -7,10 +7,10 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "سلسلة الكتل"
-  - "التشفير"
+  - "blockchain"
+  - "cryptography"
 format: presentation
-author: أندرس براونوورث
+author: "أندرس براونوورث"
 breadcrumb: "أساسيات سلسلة الكتل"
 ---
 

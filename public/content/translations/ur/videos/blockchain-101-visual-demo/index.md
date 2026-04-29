@@ -7,8 +7,8 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "بلاک چین"
-  - "کرپٹوگرافی"
+  - "blockchain"
+  - "cryptography"
 format: presentation
 author: "اینڈرس براؤن ورتھ"
 breadcrumb: "بلاک چین 101"

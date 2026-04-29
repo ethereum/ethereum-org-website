@@ -7,10 +7,10 @@ uploadDate: 2025-09-15
 duration: "0:00:25"
 educationLevel: beginner
 topic:
-  - "قصص-المجتمع"
-  - "المجتمع"
+  - "community-stories"
+  - "community"
 format: explainer
-author: إيثيريوم فاونديشن
+author: "إيثيريوم فاونديشن"
 breadcrumb: "Devconnect بوينس آيرس"
 ---
 

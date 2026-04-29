@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "soukromi-a-bezpecnost"
-  - "dukazy-s-nulovou-znalosti"
-  - "kryptografie"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: WIRED
 breadcrumb: "Důkazy s nulovou znalostí"

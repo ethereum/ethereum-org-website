@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "těžba"
+  - "mining"
   - "blockchain"
 format: tutorial
 author: Austin Griffith

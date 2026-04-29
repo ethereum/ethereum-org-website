@@ -7,8 +7,8 @@ uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "రీస్టేకింగ్"
-  - "భద్రత"
+  - "restaking"
+  - "security"
 format: explainer
 author: "CBER ఫోరమ్"
 breadcrumb: "రీస్టేకింగ్"

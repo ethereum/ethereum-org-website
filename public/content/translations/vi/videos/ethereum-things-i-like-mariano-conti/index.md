@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "câu chuyện cộng đồng"
-  - "cộng đồng"
+  - "community-stories"
+  - "community"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Những điều tôi thích"

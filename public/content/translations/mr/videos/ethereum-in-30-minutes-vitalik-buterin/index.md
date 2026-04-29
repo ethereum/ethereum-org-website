@@ -7,10 +7,10 @@ uploadDate: 2024-11-12
 duration: "0:31:05"
 educationLevel: intermediate
 topic:
-  - "इथेरियम कसे कार्य करते"
-  - "इथेरियम"
+  - "how-ethereum-works"
+  - "ethereum"
 format: presentation
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "30 मिनिटांत इथेरियम"
 ---
 

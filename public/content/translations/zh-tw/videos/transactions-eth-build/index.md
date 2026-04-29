@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "交易"
+  - "transactions"
 format: tutorial
 author: "奧斯汀·格里菲斯 (Austin Griffith)"
 breadcrumb: "交易 (ETH.BUILD)"

@@ -7,10 +7,10 @@ uploadDate: 2025-03-10
 duration: "0:22:45"
 educationLevel: intermediate
 topic:
-  - "गोपनीयता"
-  - "सुरक्षा"
+  - "privacy"
+  - "security"
 format: presentation
-author: डेवकनेक्ट
+author: "डेवकनेक्ट"
 breadcrumb: "गोपनीयता"
 ---
 

@@ -7,11 +7,11 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "خارطة-الطريق-والأولويات"
-  - "خارطة-الطريق"
-  - "الترقيات"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
-author: إيث دنفر
+author: "إيث دنفر"
 breadcrumb: "تطور إيثيريوم"
 ---
 

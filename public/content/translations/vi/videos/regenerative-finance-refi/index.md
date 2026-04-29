@@ -8,7 +8,7 @@ duration: "0:06:01"
 educationLevel: beginner
 topic:
   - "refi"
-  - "bền vững"
+  - "sustainability"
 format: explainer
 author: CNBC Television
 breadcrumb: "Tài chính tái tạo"

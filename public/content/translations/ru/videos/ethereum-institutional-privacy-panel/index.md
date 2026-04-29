@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "приватность-и-безопасность"
-  - "приватность"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
 author: "Веб3Прайваси Нау"
 breadcrumb: "Институциональная приватность"

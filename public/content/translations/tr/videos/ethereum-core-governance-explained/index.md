@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "ethereum-nasıl-çalışır"
-  - "yol-haritası-ve-öncelikler"
-  - "yönetişim"
-  - "yükseltmeler"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "Çekirdek Yönetişim"

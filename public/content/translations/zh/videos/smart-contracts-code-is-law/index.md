@@ -7,7 +7,7 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "智能合约"
+  - "smart-contracts"
 format: explainer
 author: "芬尼马蒂克斯"
 breadcrumb: "智能合约"

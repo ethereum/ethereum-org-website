@@ -7,8 +7,8 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "再生金融"
-  - "永續性"
+  - "refi"
+  - "sustainability"
 format: explainer
 author: "CNBC 電視台"
 breadcrumb: "再生金融"

@@ -7,8 +7,8 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "блокчейн"
-  - "криптография"
+  - "blockchain"
+  - "cryptography"
 format: presentation
 author: "Андерс Браунворт"
 breadcrumb: "Блокчейн 101"

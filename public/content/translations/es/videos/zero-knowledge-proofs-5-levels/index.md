@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "privacidad-y-seguridad"
-  - "pruebas-de-conocimiento-cero"
-  - "criptografia"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: WIRED
 breadcrumb: "Pruebas de conocimiento cero"

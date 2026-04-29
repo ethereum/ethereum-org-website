@@ -7,10 +7,10 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "faragha-na-usalama"
-  - "kuongeza-wigo-na-tabaka-la-2"
-  - "faragha"
-  - "tabaka-la-2"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
 author: Web3Privacy Now
 breadcrumb: "L2 ya Gerila"

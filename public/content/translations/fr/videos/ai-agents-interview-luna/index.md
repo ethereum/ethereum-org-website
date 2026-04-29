@@ -7,8 +7,8 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "cas-d-utilisation"
-  - "ia"
+  - "use-cases"
+  - "ai"
   - "agents"
   - "dapps"
 format: interview

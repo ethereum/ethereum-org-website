@@ -7,12 +7,12 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "スケーリング"
-  - "ブロブ"
-  - "Dencun"
-  - "アップグレード"
+  - "scaling"
+  - "blobs"
+  - "dencun"
+  - "upgrades"
 format: interview
-author: バンクレス
+author: "バンクレス"
 breadcrumb: "ブロブスペースの基礎"
 ---
 

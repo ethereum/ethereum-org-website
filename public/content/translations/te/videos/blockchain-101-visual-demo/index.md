@@ -7,8 +7,8 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "బ్లాక్‌చైన్"
-  - "క్రిప్టోగ్రఫీ"
+  - "blockchain"
+  - "cryptography"
 format: presentation
 author: "ఆండర్స్ బ్రౌన్‌వర్త్"
 breadcrumb: "బ్లాక్‌చైన్ 101"

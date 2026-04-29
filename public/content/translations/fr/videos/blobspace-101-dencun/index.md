@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "mise à l'échelle"
+  - "scaling"
   - "blobs"
   - "dencun"
-  - "mises à jour"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "Espace de blobs 101"

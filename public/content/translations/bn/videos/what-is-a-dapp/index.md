@@ -8,9 +8,9 @@ duration: "0:05:11"
 educationLevel: beginner
 topic:
   - "dapps"
-  - "স্মার্ট-কন্ট্রাক্ট"
+  - "smart-contracts"
 format: explainer
-author: ডিস্ট্রিক্টজিরোএক্স নেটওয়ার্ক
+author: "ডিস্ট্রিক্টজিরোএক্স নেটওয়ার্ক"
 breadcrumb: "Dapp কী?"
 ---
 

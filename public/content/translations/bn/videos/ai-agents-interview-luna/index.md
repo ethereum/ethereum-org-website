@@ -7,12 +7,12 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "ব্যবহারের ক্ষেত্র"
-  - "এআই"
-  - "এজেন্ট"
-  - "ড্যাপস"
+  - "use-cases"
+  - "ai"
+  - "agents"
+  - "dapps"
 format: interview
-author: হোয়েন শিফট হ্যাপেনস
+author: "হোয়েন শিফট হ্যাপেনস"
 breadcrumb: "এআই এজেন্ট: লুনা"
 ---
 

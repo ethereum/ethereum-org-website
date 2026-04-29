@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "用例"
-  - "去中心化自治组织"
-  - "去中心化"
-  - "社交"
+  - "use-cases"
+  - "dao"
+  - "decentralization"
+  - "social"
 format: interview
 author: "伊斯博尔德"
 breadcrumb: "以太坊地方主义"

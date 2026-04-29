@@ -7,8 +7,8 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "quyền riêng tư và bảo mật"
-  - "quyền riêng tư"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
 author: EthBoulder
 breadcrumb: "Giành lại quyền riêng tư"

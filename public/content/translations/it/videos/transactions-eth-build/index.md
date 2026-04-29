@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "transazioni"
+  - "transactions"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Transazioni (ETH.BUILD)"

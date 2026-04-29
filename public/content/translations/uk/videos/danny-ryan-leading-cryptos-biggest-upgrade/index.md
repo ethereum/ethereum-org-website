@@ -8,8 +8,8 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "доказ частки"
-  - "злиття"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: "Фундація Ethereum"
 breadcrumb: "Інтерв'ю з Денні Раяном"

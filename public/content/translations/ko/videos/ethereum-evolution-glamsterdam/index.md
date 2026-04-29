@@ -7,15 +7,15 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "로드맵 및 우선순위"
-  - "로드맵"
-  - "업그레이드"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
-author: 이더덴버
+author: "이더덴버"
 breadcrumb: "이더리움의 진화"
 ---
 
-오프체인 랩스(Offchain Labs)와 프리즘(Prysm)의 **프레스턴 반 룬(Preston Van Loon)**이 이더덴버(ETHDenver)에서 진행한 발표입니다. 프레스턴은 이더리움의 최근 업그레이드 속도와 펙트라(Pectra), 푸사카(Fusaka), PeerDAS, 글램스테르담(Glamsterdam), FOCIL, 더 짧은 슬롯(slot) 시간, 더 빠른 완결성(finality) 등 네트워크의 미래에 대해 다룹니다.
+오프체인 랩스(Offchain Labs)와 프리즘(Prysm)의 <strong>프레스턴 반 룬(Preston Van Loon)</strong>이 이더덴버(ETHDenver)에서 진행한 발표입니다. 프레스턴은 이더리움의 최근 업그레이드 속도와 펙트라(Pectra), 푸사카(Fusaka), PeerDAS, 글램스테르담(Glamsterdam), FOCIL, 더 짧은 슬롯(slot) 시간, 더 빠른 완결성(finality) 등 네트워크의 미래에 대해 다룹니다.
 
 *이 스크립트는 이더덴버가 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=GgKveVMLnoo)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 
@@ -35,7 +35,7 @@ breadcrumb: "이더리움의 진화"
 
 하지만 불과 7개월 후, 우리는 EIP 측면에서 훨씬 더 큰 업그레이드인 푸사카를 배포했습니다. 여기에는 13개의 EIP가 포함되었으며, 정말 흥미로운 PeerDAS라는 혁신이 있었습니다. 그리고 불과 6일 후, 우리는 BPO1 포크(fork)로 다시 업그레이드했고, 그 직후 BPO2가 이어지며 이더리움의 블롭(blob) 용량을 늘렸습니다.
 
-이것은 이더리움의 배포 능력을 증명하는 것입니다. 이는 5~6개의 합의 클라이언트, 5개의 실행 클라이언트, 수많은 연구자들 등 이더리움 코어 개발에 참여하는 100명 이상의 사람들이 협력한 결과이며, 이들 모두가 동시에 조율하여 배포를 진행하고 있습니다.
+이것은 이더리움의 배포 능력을 증명하는 것입니다. 이는 5\~6개의 합의 클라이언트, 5개의 실행 클라이언트, 수많은 연구자들 등 이더리움 코어 개발에 참여하는 100명 이상의 사람들이 협력한 결과이며, 이들 모두가 동시에 조율하여 배포를 진행하고 있습니다.
 
 #### PeerDAS 스케일링 (2:22) {#peerdas-scaling-222}
 

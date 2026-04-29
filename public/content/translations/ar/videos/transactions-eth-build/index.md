@@ -7,9 +7,9 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "المعاملات"
+  - "transactions"
 format: tutorial
-author: أوستن غريفيث
+author: "أوستن غريفيث"
 breadcrumb: "المعاملات (ETH.BUILD)"
 ---
 

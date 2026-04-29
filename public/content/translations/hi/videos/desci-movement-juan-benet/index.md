@@ -8,9 +8,9 @@ duration: "0:50:14"
 educationLevel: intermediate
 topic:
   - "desci"
-  - "फंडिंग"
+  - "funding"
 format: presentation
-author: एथसीसी
+author: "एथसीसी"
 breadcrumb: "DeSci आंदोलन"
 ---
 

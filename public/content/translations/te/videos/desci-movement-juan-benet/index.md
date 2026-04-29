@@ -7,8 +7,8 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "డిసై"
-  - "నిధులు"
+  - "desci"
+  - "funding"
 format: presentation
 author: "ఎథ్సీసీ"
 breadcrumb: "డిసై ఉద్యమం"

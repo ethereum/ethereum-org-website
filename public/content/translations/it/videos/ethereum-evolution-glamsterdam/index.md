@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "roadmap-e-priorita"
+  - "roadmap-and-priorities"
   - "roadmap"
-  - "aggiornamenti"
+  - "upgrades"
 format: presentation
 author: ETHDenver
 breadcrumb: "Evoluzione di Ethereum"

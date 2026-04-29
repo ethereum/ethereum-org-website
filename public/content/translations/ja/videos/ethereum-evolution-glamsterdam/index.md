@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "ロードマップと優先事項"
-  - "ロードマップ"
-  - "アップグレード"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: ETHDenver
 breadcrumb: "イーサリアムの進化"

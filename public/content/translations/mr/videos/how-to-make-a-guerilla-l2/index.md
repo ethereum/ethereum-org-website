@@ -7,12 +7,12 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "गोपनीयता-आणि-सुरक्षा"
-  - "स्केलिंग-आणि-स्तर-२"
-  - "गोपनीयता"
-  - "स्तर-२"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
-author: वेब3प्रायव्हसी नाऊ
+author: "वेब3प्रायव्हसी नाऊ"
 breadcrumb: "गनिमी स्तर २ (l2)"
 ---
 

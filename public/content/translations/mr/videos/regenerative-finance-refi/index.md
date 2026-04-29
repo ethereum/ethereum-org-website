@@ -7,10 +7,10 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "रेफाय"
-  - "शाश्वतता"
+  - "refi"
+  - "sustainability"
 format: explainer
-author: सीएनबीसी टेलिव्हिजन
+author: "सीएनबीसी टेलिव्हिजन"
 breadcrumb: "पुनरुत्पादक वित्त (रेफाय)"
 ---
 

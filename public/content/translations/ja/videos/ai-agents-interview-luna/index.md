@@ -7,12 +7,12 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "ユースケース"
-  - "AI"
-  - "エージェント"
+  - "use-cases"
+  - "ai"
+  - "agents"
   - "dapps"
 format: interview
-author: ウェン・シフト・ハプンズ
+author: "ウェン・シフト・ハプンズ"
 breadcrumb: "AI・エージェント：Luna"
 ---
 

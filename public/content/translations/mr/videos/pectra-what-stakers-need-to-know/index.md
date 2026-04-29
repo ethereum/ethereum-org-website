@@ -7,11 +7,11 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "रोडमॅप"
-  - "पेक्ट्रा"
-  - "स्टेकिंग"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
-author: ब्लॉकडेमन
+author: "ब्लॉकडेमन"
 breadcrumb: "स्टेकर्ससाठी पेक्ट्रा"
 ---
 

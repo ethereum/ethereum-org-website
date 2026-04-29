@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "cách-ethereum-hoạt-động"
-  - "lộ-trình-và-ưu-tiên"
-  - "quản-trị"
-  - "nâng-cấp"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "Quản trị cốt lõi"

@@ -7,8 +7,8 @@ uploadDate: 2020-09-24
 duration: "0:14:48"
 educationLevel: beginner
 topic:
-  - "பரவலாக்கப்பட்ட நிதி (defi)"
-  - "நிதி"
+  - "defi"
+  - "finance"
 format: explainer
 author: Finematics
 breadcrumb: "DeFi: நிதியின் எதிர்காலம்"

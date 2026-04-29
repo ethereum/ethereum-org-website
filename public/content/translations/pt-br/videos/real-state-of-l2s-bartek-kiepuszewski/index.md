@@ -7,9 +7,9 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "escalabilidade-e-camada-2"
+  - "scaling-and-layer-2"
   - "rollups"
-  - "camada-2"
+  - "layer-2"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Estado das L2s"

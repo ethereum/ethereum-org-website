@@ -10,7 +10,7 @@ topic:
   - "community-stories"
   - "community"
 format: explainer
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "Devconnect रीकैप"
 ---
 

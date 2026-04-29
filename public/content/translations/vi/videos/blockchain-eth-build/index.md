@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "khai thác"
-  - "chuỗi khối"
+  - "mining"
+  - "blockchain"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Chuỗi khối (ETH.BUILD)"

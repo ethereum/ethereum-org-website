@@ -7,8 +7,8 @@ uploadDate: 2022-10-04
 duration: "0:09:56"
 educationLevel: beginner
 topic:
-  - "дао"
-  - "управление"
+  - "dao"
+  - "governance"
 format: presentation
 author: "ТЕД"
 breadcrumb: "ДАО и города"

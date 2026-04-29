@@ -7,8 +7,8 @@ uploadDate: 2025-09-15
 duration: "0:00:25"
 educationLevel: beginner
 topic:
-  - "社群故事"
-  - "社群"
+  - "community-stories"
+  - "community"
 format: explainer
 author: "以太坊基金會"
 breadcrumb: "Devconnect 布宜諾斯艾利斯"

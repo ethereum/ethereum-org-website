@@ -7,15 +7,15 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "프라이버시 및 보안"
-  - "프라이버시"
-  - "인증"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
-author: 이더리움 재단
+author: "이더리움 재단"
 breadcrumb: "마이크로닷 보안"
 ---
 
-Devcon SEA에서 **jseam**이 진행한 라이트닝 토크로, 역사적으로 첩보 활동에서 육안으로는 거의 보이지 않는 인쇄된 이미지에 시드 구문을 난독화하는 데 사용되었던 물리적 마이크로닷 기술을 활용한 색다른 키 보관 접근 방식을 탐구합니다.
+Devcon SEA에서 <strong>jseam</strong>이 진행한 라이트닝 토크로, 역사적으로 첩보 활동에서 육안으로는 거의 보이지 않는 인쇄된 이미지에 시드 구문을 난독화하는 데 사용되었던 물리적 마이크로닷 기술을 활용한 색다른 키 보관 접근 방식을 탐구합니다.
 
 *이 스크립트는 이더리움 재단이 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=k9Dfg19JPEw)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

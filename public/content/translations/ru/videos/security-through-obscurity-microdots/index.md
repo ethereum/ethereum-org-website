@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "конфиденциальность-и-безопасность"
-  - "конфиденциальность"
-  - "аутентификация"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: "Фонд Ethereum"
 breadcrumb: "Безопасность с помощью микроточек"

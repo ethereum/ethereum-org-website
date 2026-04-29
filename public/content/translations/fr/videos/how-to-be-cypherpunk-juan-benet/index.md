@@ -7,8 +7,8 @@ uploadDate: 2025-11-23
 duration: "0:18:00"
 educationLevel: beginner
 topic:
-  - "histoires-de-la-communauté"
-  - "communauté"
+  - "community-stories"
+  - "community"
 format: presentation
 author: Web3Privacy Now
 breadcrumb: "Comment être un cypherpunk"

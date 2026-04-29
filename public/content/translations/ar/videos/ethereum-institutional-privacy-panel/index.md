@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "الخصوصية والأمان"
-  - "الخصوصية"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
-author: ويب 3 برايفسي ناو
+author: "ويب 3 برايفسي ناو"
 breadcrumb: "الخصوصية المؤسسية"
 ---
 

@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "wie-ethereum-funktioniert"
+  - "how-ethereum-works"
   - "staking"
-  - "abhebungen"
+  - "withdrawals"
 format: explainer
 author: Finematics
 breadcrumb: "Staking-Abhebungen"

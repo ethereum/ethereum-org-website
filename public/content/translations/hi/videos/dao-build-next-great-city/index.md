@@ -8,9 +8,9 @@ duration: "0:09:56"
 educationLevel: beginner
 topic:
   - "dao"
-  - "शासन"
+  - "governance"
 format: presentation
-author: टेड
+author: "टेड"
 breadcrumb: "DAO और शहर"
 ---
 

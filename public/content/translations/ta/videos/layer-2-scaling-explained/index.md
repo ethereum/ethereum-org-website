@@ -7,8 +7,8 @@ uploadDate: 2021-02-03
 duration: "0:14:28"
 educationLevel: intermediate
 topic:
-  - "அளவிடுதல்"
-  - "அடுக்கு-2"
+  - "scaling"
+  - "layer-2"
 format: explainer
 author: Finematics
 breadcrumb: "அடுக்கு 2 (l2) அளவிடுதல்"

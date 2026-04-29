@@ -7,9 +7,9 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "эфириум"
-  - "доказательство-доли-владения"
-  - "слияние"
+  - "ethereum"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: "Фонд Ethereum"
 breadcrumb: "Интервью с Дэнни Райаном"

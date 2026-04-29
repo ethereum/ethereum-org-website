@@ -7,11 +7,11 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "اجتماعي"
-  - "اللامركزية"
-  - "التطبيقات اللامركزية (dapps)"
+  - "social"
+  - "decentralization"
+  - "dapps"
 format: presentation
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "تطبيقات الكريبتو والشبكات الاجتماعية اللامركزية"
 ---
 

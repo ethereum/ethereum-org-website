@@ -7,8 +7,8 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "டெஸ்சி"
-  - "நிதியளிப்பு"
+  - "desci"
+  - "funding"
 format: presentation
 author: "எத்-சிசி (EthCC)"
 breadcrumb: "டெஸ்சி இயக்கம்"

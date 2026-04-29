@@ -8,9 +8,9 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "ইতিহাস"
+  - "history"
 format: explainer
-author: ফাইনেম্যাটিক্স
+author: "ফাইনেম্যাটিক্স"
 breadcrumb: "DeFi ইতিহাস"
 ---
 

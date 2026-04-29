@@ -7,8 +7,8 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "சமூகம்"
-  - "பரவலாக்கம்"
+  - "social"
+  - "decentralization"
 format: explainer
 author: "காயின்மார்க்கெட்கேப்"
 breadcrumb: "பரவலாக்கப்பட்ட சமூகம்"

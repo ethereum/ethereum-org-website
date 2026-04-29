@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "ethereum-nasil-calisir"
-  - "olceklendirme"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "guncellemeler"
+  - "upgrades"
 format: explainer
 author: Finematics
 breadcrumb: "EIP-4844 Açıklandı"

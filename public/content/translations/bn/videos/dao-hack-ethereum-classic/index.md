@@ -7,11 +7,11 @@ uploadDate: 2021-12-15
 duration: "0:09:48"
 educationLevel: beginner
 topic:
-  - "গভর্ন্যান্স"
-  - "ইতিহাস"
+  - "governance"
+  - "history"
   - "dao"
 format: explainer
-author: জুনিয়ন
+author: "জুনিয়ন"
 breadcrumb: "DAO হ্যাক"
 ---
 

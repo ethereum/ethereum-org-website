@@ -7,14 +7,14 @@ uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "리스테이킹"
-  - "보안"
+  - "restaking"
+  - "security"
 format: explainer
-author: CBER 포럼
+author: "CBER 포럼"
 breadcrumb: "리스테이킹"
 ---
 
-CBER 포럼 행사에서 **마이크 노이더(Mike Neuder)**가 리스테이킹의 작동 방식에 대해 발표한 내용입니다. 이 발표에서는 셀프 스테이킹, 위임 스테이킹, 네이티브 및 비네이티브 리스테이킹, 유동성 스테이킹 및 유동성 리스테이킹 토큰의 메커니즘, 그리고 슬래싱이 리스테이킹된 포지션과 어떻게 상호작용하는지 정의합니다.
+CBER 포럼 행사에서 <strong>마이크 노이더(Mike Neuder)</strong>가 리스테이킹의 작동 방식에 대해 발표한 내용입니다. 이 발표에서는 셀프 스테이킹, 위임 스테이킹, 네이티브 및 비네이티브 리스테이킹, 유동성 스테이킹 및 유동성 리스테이킹 토큰의 메커니즘, 그리고 슬래싱이 리스테이킹된 포지션과 어떻게 상호작용하는지 정의합니다.
 
 *이 스크립트는 CBER 포럼에서 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=rOJo7VwPh7I)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

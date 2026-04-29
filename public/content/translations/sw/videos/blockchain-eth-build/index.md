@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "uchimbaji"
-  - "mnyororo wa vitalu"
+  - "mining"
+  - "blockchain"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Mnyororo wa vitalu (ETH.BUILD)"

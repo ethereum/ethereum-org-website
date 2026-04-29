@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "ramani-ya-njia-na-vipaumbele"
-  - "maboresho"
+  - "roadmap-and-priorities"
+  - "upgrades"
   - "fusaka"
-  - "ramani-ya-njia"
+  - "roadmap"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Maboresho ya Fusaka"

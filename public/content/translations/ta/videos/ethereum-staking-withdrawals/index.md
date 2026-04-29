@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "எத்திரியம்-எவ்வாறு-செயல்படுகிறது"
-  - "பங்குவைத்தல்"
-  - "திரும்பப்-பெறுதல்கள்"
+  - "how-ethereum-works"
+  - "staking"
+  - "withdrawals"
 format: explainer
 author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "பங்குவைப்பு திரும்பப் பெறுதல்கள்"

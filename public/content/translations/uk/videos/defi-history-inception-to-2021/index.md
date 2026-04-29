@@ -8,7 +8,7 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "історія"
+  - "history"
 format: explainer
 author: "Файнматікс"
 breadcrumb: "Історія DeFi"

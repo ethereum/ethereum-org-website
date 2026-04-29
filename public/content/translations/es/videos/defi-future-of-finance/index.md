@@ -8,7 +8,7 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "finanzas"
+  - "finance"
 format: explainer
 author: Finematics
 breadcrumb: "DeFi: El futuro de las finanzas"

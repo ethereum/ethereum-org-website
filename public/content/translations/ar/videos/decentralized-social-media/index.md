@@ -7,10 +7,10 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "اجتماعي"
-  - "اللامركزية"
+  - "social"
+  - "decentralization"
 format: explainer
-author: كوين ماركت كاب
+author: "كوين ماركت كاب"
 breadcrumb: "التواصل الاجتماعي اللامركزي"
 ---
 

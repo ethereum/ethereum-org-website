@@ -7,9 +7,9 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "العقود الذكية"
+  - "smart-contracts"
 format: explainer
-author: فاينماتيكس
+author: "فاينماتيكس"
 breadcrumb: "العقود الذكية"
 ---
 

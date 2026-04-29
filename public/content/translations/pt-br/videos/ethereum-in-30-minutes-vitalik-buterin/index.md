@@ -7,7 +7,7 @@ uploadDate: 2024-11-12
 duration: "0:31:05"
 educationLevel: intermediate
 topic:
-  - "como-o-ethereum-funciona"
+  - "how-ethereum-works"
   - "ethereum"
 format: presentation
 author: Ethereum Foundation

@@ -7,15 +7,15 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "소셜"
-  - "탈중앙화"
+  - "social"
+  - "decentralization"
   - "dapps"
 format: presentation
-author: 이더리움 재단
+author: "이더리움 재단"
 breadcrumb: "암호화폐 앱 및 탈중앙화 소셜"
 ---
 
-데브커넥트(Devconnect)에서 **린다 시에(Linda Xie)**가 탈중앙화된 소셜 미디어에 대해 발표한 내용입니다. 린다는 사용자와 창작자가 개방형 소셜 그래프를 통해 얻는 이점, 내장형 지갑과 미니 앱이 파캐스터(Farcaster)에서 어떻게 새로운 경험을 창출하는지, 도입 과정에서 직면한 현실적인 과제, 그리고 청중과의 Q&A를 다룹니다.
+데브커넥트(Devconnect)에서 <strong>린다 시에(Linda Xie)</strong>가 탈중앙화된 소셜 미디어에 대해 발표한 내용입니다. 린다는 사용자와 창작자가 개방형 소셜 그래프를 통해 얻는 이점, 내장형 지갑과 미니 앱이 파캐스터(Farcaster)에서 어떻게 새로운 경험을 창출하는지, 도입 과정에서 직면한 현실적인 과제, 그리고 청중과의 Q&A를 다룹니다.
 
 *이 스크립트는 이더리움 재단이 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=4vl8eZEOwqk)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

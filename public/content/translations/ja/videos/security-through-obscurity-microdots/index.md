@@ -7,11 +7,11 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "プライバシーとセキュリティ"
-  - "プライバシー"
-  - "認証"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "マイクロドット・セキュリティ"
 ---
 

@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "дорожня-карта-та-пріоритети"
-  - "дорожня-карта"
-  - "оновлення"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: "ЕТХДенвер"
 breadcrumb: "Еволюція Етеріуму"

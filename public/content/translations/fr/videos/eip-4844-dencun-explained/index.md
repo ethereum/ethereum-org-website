@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "comment-fonctionne-ethereum"
-  - "mise-a-l-echelle"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "mises-a-jour"
+  - "upgrades"
 format: explainer
 author: Finematics
 breadcrumb: "L'EIP-4844 expliqué"

@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "ایتھیریم-کیسے-کام-کرتا-ہے"
-  - "روڈ-میپ-اور-ترجیحات"
-  - "گورننس"
-  - "اپ-گریڈز"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: "ایتھ بولڈر"
 breadcrumb: "بنیادی گورننس"

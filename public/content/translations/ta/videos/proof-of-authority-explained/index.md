@@ -7,8 +7,8 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "ஒருமித்த கருத்து"
-  - "அதிகாரச் சான்று"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
 author: "கிரிப்டோஎகனாமிக்ஸ் ஸ்டடி"
 breadcrumb: "அதிகாரச் சான்று"

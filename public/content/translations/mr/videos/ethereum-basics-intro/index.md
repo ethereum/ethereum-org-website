@@ -7,10 +7,10 @@ uploadDate: 2022-03-01
 duration: "0:11:14"
 educationLevel: beginner
 topic:
-  - "इथेरियम"
-  - "परिचय"
+  - "ethereum"
+  - "intro"
 format: presentation
-author: क्वेझार
+author: "क्वेझार"
 breadcrumb: "इथेरियम बेसिक्स"
 ---
 

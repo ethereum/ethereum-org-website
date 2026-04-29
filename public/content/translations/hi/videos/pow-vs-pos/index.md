@@ -7,11 +7,11 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "सर्वसम्मति-तंत्र"
-  - "सुरक्षा"
-  - "सर्वसम्मति"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
-author: बैंकलेस
+author: "बैंकलेस"
 breadcrumb: "PoW बनाम PoS बहस"
 ---
 

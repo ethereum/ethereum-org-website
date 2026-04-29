@@ -7,11 +7,11 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "इथेरियम"
-  - "प्रूफ-ऑफ-स्टेक"
-  - "द-मर्ज"
+  - "ethereum"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "डॅनी रायन यांची मुलाखत"
 ---
 

@@ -7,12 +7,12 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "इथेरियम-कसे-काम-करते"
-  - "रोडमॅप-आणि-प्राधान्यक्रम"
-  - "प्रशासन"
-  - "अपग्रेड्स"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
-author: एथबोल्डर
+author: "एथबोल्डर"
 breadcrumb: "कोअर प्रशासन"
 ---
 

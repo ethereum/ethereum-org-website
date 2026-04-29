@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "以太坊运作方式"
-  - "质押"
-  - "提款"
+  - "how-ethereum-works"
+  - "staking"
+  - "withdrawals"
 format: explainer
 author: "芬尼马蒂克斯"
 breadcrumb: "质押提款"

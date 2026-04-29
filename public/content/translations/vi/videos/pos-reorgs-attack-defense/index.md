@@ -7,9 +7,9 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "đồng thuận"
-  - "bằng chứng cổ phần (pos)"
-  - "bảo mật"
+  - "consensus"
+  - "pos"
+  - "security"
 format: presentation
 author: LisCon
 breadcrumb: "Tái tổ chức PoS"

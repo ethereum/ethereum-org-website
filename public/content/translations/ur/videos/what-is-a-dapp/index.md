@@ -8,7 +8,7 @@ duration: "0:05:11"
 educationLevel: beginner
 topic:
   - "dapps"
-  - "اسمارٹ کانٹریکٹس"
+  - "smart-contracts"
 format: explainer
 author: "ڈسٹرکٹ زیرو ایکس نیٹ ورک"
 breadcrumb: "Dapp کیا ہے؟"

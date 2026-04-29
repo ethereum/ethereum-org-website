@@ -7,13 +7,13 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "इथेरियम कैसे काम करता है"
-  - "स्केलिंग"
-  - "EIP-4844"
-  - "डेंकन"
-  - "अपग्रेड"
+  - "how-ethereum-works"
+  - "scaling"
+  - "eip-4844"
+  - "dencun"
+  - "upgrades"
 format: explainer
-author: फाइनेमैटिक्स
+author: "फाइनेमैटिक्स"
 breadcrumb: "EIP-4844 की व्याख्या"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "kasus-penggunaan"
+  - "use-cases"
   - "dao"
-  - "desentralisasi"
-  - "sosial"
+  - "decentralization"
+  - "social"
 format: interview
 author: EthBoulder
 breadcrumb: "Lokalisme Ethereum"

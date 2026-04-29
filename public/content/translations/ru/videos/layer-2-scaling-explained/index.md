@@ -7,8 +7,8 @@ uploadDate: 2021-02-03
 duration: "0:14:28"
 educationLevel: intermediate
 topic:
-  - "масштабирование"
-  - "уровень-2"
+  - "scaling"
+  - "layer-2"
 format: explainer
 author: Finematics
 breadcrumb: "Масштабирование уровня 2"

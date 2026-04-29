@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "дорожная карта и приоритеты"
-  - "дорожная карта"
-  - "обновления"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: "ЭТХДенвер"
 breadcrumb: "Эволюция Эфириума"

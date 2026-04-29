@@ -8,7 +8,7 @@ duration: "0:09:56"
 educationLevel: beginner
 topic:
   - "dao"
-  - "ஆளுகை"
+  - "governance"
 format: presentation
 author: "டெட் (TED)"
 breadcrumb: "DAO-களும் நகரங்களும்"

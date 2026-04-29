@@ -7,7 +7,7 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "privacy e sicurezza"
+  - "privacy-and-security"
   - "privacy"
 format: panel
 author: Web3Privacy Now

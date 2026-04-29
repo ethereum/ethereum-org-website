@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "சமூக-கதைகள்"
-  - "சமூகம்"
+  - "community-stories"
+  - "community"
 format: presentation
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "எனக்குப் பிடித்த விஷயங்கள்"

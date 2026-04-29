@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "gizlilik-ve-güvenlik"
-  - "gizlilik"
-  - "kimlik-doğrulama"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Mikro Nokta Güvenliği"

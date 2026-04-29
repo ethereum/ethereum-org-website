@@ -8,9 +8,9 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "অর্থব্যবস্থা"
+  - "finance"
 format: explainer
-author: ফাইনম্যাটিক্স
+author: "ফাইনম্যাটিক্স"
 breadcrumb: "DeFi: ভবিষ্যতের অর্থব্যবস্থা"
 ---
 

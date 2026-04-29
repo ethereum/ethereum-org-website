@@ -7,9 +7,9 @@ uploadDate: 2023-02-10
 duration: "0:24:11"
 educationLevel: advanced
 topic:
-  - "uwekaji dhamana upya"
+  - "restaking"
   - "eigenlayer"
-  - "usalama"
+  - "security"
 format: presentation
 author: a16z crypto
 breadcrumb: "EigenLayer"

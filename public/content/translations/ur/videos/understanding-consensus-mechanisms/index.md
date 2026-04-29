@@ -7,8 +7,8 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "اتفاق رائے"
-  - "بلاک چین"
+  - "consensus"
+  - "blockchain"
 format: explainer
 author: "ٹیک ان ایشیا"
 breadcrumb: "اتفاق رائے کا طریقہ کار"

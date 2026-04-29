@@ -7,7 +7,7 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "yol-haritası-ve-öncelikler"
+  - "roadmap-and-priorities"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Önümüzdeki 10 Yıl"

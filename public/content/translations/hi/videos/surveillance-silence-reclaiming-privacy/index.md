@@ -7,10 +7,10 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "गोपनीयता-और-सुरक्षा"
-  - "गोपनीयता"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
-author: एथबोल्डर
+author: "एथबोल्डर"
 breadcrumb: "गोपनीयता वापस पाना"
 ---
 

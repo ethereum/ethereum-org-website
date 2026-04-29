@@ -7,8 +7,8 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "социальные сети"
-  - "децентрализация"
+  - "social"
+  - "decentralization"
 format: explainer
 author: "КоинМаркетКап"
 breadcrumb: "Децентрализованные социальные сети"

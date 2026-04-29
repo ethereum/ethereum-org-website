@@ -7,9 +7,9 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "స్కేలింగ్-మరియు-లేయర్-2"
-  - "రోల్అప్‌లు"
-  - "లేయర్-2"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
 author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "L2ల స్థితి"

@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "minage"
-  - "chaîne de blocs"
+  - "mining"
+  - "blockchain"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Chaîne de blocs (ETH.BUILD)"

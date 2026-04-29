@@ -7,10 +7,10 @@ uploadDate: 2024-08-20
 duration: "0:36:34"
 educationLevel: beginner
 topic:
-  - "समुदाय की कहानियाँ"
-  - "समुदाय"
+  - "community-stories"
+  - "community"
 format: interview
-author: एथेरियम फाउंडेशन
+author: "एथेरियम फाउंडेशन"
 breadcrumb: "Aave का निर्माण"
 ---
 

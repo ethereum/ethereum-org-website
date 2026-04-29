@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "社群故事"
-  - "社群"
+  - "community-stories"
+  - "community"
 format: presentation
 author: "以太坊基金會"
 breadcrumb: "我喜歡的事物"

@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "варианты использования"
+  - "use-cases"
   - "dao"
-  - "децентрализация"
-  - "социальные"
+  - "decentralization"
+  - "social"
 format: interview
 author: "ЭтБоулдер"
 breadcrumb: "Локализм Эфириума"

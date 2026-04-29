@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "trường hợp sử dụng"
+  - "use-cases"
   - "dao"
-  - "phi tập trung"
-  - "xã hội"
+  - "decentralization"
+  - "social"
 format: interview
 author: EthBoulder
 breadcrumb: "Chủ nghĩa địa phương Ethereum"

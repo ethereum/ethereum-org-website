@@ -7,10 +7,10 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "ডিসাই"
-  - "অর্থায়ন"
+  - "desci"
+  - "funding"
 format: presentation
-author: ইথসিসি (EthCC)
+author: "ইথসিসি (EthCC)"
 breadcrumb: "ডিসাই আন্দোলন"
 ---
 

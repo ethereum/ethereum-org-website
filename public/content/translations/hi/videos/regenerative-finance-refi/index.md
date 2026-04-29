@@ -7,10 +7,10 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "रीफाई"
-  - "स्थिरता"
+  - "refi"
+  - "sustainability"
 format: explainer
-author: सीएनबीसी टेलीविज़न
+author: "सीएनबीसी टेलीविज़न"
 breadcrumb: "पुनर्योजी वित्त"
 ---
 

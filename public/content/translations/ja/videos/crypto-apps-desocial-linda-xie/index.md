@@ -7,11 +7,11 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "ソーシャル"
-  - "分散化"
+  - "social"
+  - "decentralization"
   - "dapps"
 format: presentation
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "暗号資産アプリと分散型ソーシャル"
 ---
 

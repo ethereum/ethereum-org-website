@@ -7,9 +7,9 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "रोडमैप-और-प्राथमिकताएं"
+  - "roadmap-and-priorities"
 format: presentation
-author: एथेरियम फाउंडेशन
+author: "एथेरियम फाउंडेशन"
 breadcrumb: "अगले 10 साल"
 ---
 

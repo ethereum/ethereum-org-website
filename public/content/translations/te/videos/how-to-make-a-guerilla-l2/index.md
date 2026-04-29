@@ -7,10 +7,10 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "గోప్యత-మరియు-భద్రత"
-  - "స్కేలింగ్-మరియు-లేయర్-2"
-  - "గోప్యత"
-  - "లేయర్-2"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
 author: "వెబ్3ప్రైవసీ నౌ"
 breadcrumb: "గెరిల్లా l2"

@@ -7,7 +7,7 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "roteiro-e-prioridades"
+  - "roadmap-and-priorities"
 format: presentation
 author: ETHBoulder
 breadcrumb: "Roteiro Pós-Quântico"

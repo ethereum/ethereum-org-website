@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "prywatność-i-bezpieczeństwo"
-  - "prywatność"
-  - "uwierzytelnianie"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Bezpieczeństwo mikrokropek"

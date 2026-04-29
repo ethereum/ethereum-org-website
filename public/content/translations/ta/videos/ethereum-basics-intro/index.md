@@ -7,8 +7,8 @@ uploadDate: 2022-03-01
 duration: "0:11:14"
 educationLevel: beginner
 topic:
-  - "எத்திரியம்"
-  - "அறிமுகம்"
+  - "ethereum"
+  - "intro"
 format: presentation
 author: "குவேசார்"
 breadcrumb: "எத்திரியம் அடிப்படைகள்"

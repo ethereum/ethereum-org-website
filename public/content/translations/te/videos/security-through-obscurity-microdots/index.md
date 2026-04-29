@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "గోప్యత-మరియు-భద్రత"
-  - "గోప్యత"
-  - "ప్రామాణీకరణ"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "మైక్రోడాట్ భద్రత"

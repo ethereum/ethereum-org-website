@@ -7,8 +7,8 @@ uploadDate: 2024-11-12
 duration: "0:31:05"
 educationLevel: intermediate
 topic:
-  - "ایتھیریم-کیسے-کام-کرتا-ہے"
-  - "ایتھیریم"
+  - "how-ethereum-works"
+  - "ethereum"
 format: presentation
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "30 منٹ میں ایتھیریم"

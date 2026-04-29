@@ -7,8 +7,8 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "wie-ethereum-funktioniert"
-  - "skalierung"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
   - "upgrades"

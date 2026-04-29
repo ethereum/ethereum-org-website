@@ -7,10 +7,10 @@ uploadDate: 2024-08-20
 duration: "0:36:34"
 educationLevel: beginner
 topic:
-  - "コミュニティストーリー"
-  - "コミュニティ"
+  - "community-stories"
+  - "community"
 format: interview
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "Aaveの構築"
 ---
 

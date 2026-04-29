@@ -7,17 +7,17 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "이더리움-작동-방식"
-  - "확장성"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
-  - "덴쿤"
-  - "업그레이드"
+  - "dencun"
+  - "upgrades"
 format: explainer
-author: 파이네매틱스
+author: "파이네매틱스"
 breadcrumb: "EIP-4844 설명"
 ---
 
-이더리움의 레이어 2(l2) 롤업 비용을 획기적으로 줄이기 위해 블롭 트랜잭션을 도입하는 덴쿤 하드 포크의 핵심 업그레이드인 EIP-4844(프로토 댕크샤딩)에 대한 **파이네매틱스**의 설명입니다.
+이더리움의 레이어 2(l2) 롤업 비용을 획기적으로 줄이기 위해 블롭 트랜잭션을 도입하는 덴쿤 하드 포크의 핵심 업그레이드인 EIP-4844(프로토 댕크샤딩)에 대한 <strong>파이네매틱스</strong>의 설명입니다.
 
 *이 스크립트는 파이네매틱스가 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=HT9PHWloIiU)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

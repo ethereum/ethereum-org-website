@@ -8,7 +8,7 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "歷史"
+  - "history"
 format: explainer
 author: "芬尼馬蒂克斯"
 breadcrumb: "DeFi 歷史"

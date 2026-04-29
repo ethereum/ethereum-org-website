@@ -7,9 +7,9 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "共識"
-  - "權益證明 (PoS)"
-  - "安全性"
+  - "consensus"
+  - "pos"
+  - "security"
 format: presentation
 author: "里斯康"
 breadcrumb: "PoS 區塊鏈重組"

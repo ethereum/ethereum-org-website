@@ -7,9 +7,9 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "வழிகாட்டி வரைபடம்"
-  - "பெக்ட்ரா"
-  - "பங்குவைத்தல்"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
 author: "பிளாக்டீமன்"
 breadcrumb: "பங்குவைப்பவர்களுக்கான பெக்ட்ரா"

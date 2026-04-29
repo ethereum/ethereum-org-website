@@ -7,11 +7,11 @@ uploadDate: 2020-09-29
 duration: "0:11:13"
 educationLevel: beginner
 topic:
-  - "NFT"
-  - "DeFi"
+  - "nfts"
+  - "defi"
   - "erc-721"
   - "erc-1155"
-  - "借貸"
+  - "lending"
 format: explainer
 author: Finematics
 breadcrumb: "NFT 與 DeFi"

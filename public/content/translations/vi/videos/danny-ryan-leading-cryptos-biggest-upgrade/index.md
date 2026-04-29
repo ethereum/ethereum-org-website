@@ -8,8 +8,8 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "bằng chứng cổ phần"
-  - "the merge"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Phỏng vấn Danny Ryan"

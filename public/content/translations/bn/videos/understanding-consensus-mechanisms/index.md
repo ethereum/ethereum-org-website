@@ -7,10 +7,10 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "ঐক্যমত"
-  - "ব্লকচেইন"
+  - "consensus"
+  - "blockchain"
 format: explainer
-author: টেক ইন এশিয়া
+author: "টেক ইন এশিয়া"
 breadcrumb: "কনসেনসাস মেকানিজম"
 ---
 

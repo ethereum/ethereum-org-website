@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "రోడ్‌మ్యాప్-మరియు-ప్రాధాన్యతలు"
-  - "అప్‌గ్రేడ్‌లు"
-  - "ఫుసాకా"
-  - "రోడ్‌మ్యాప్"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
 author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "ఫుసాకా అప్‌గ్రేడ్"

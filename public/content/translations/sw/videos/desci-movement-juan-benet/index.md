@@ -8,7 +8,7 @@ duration: "0:50:14"
 educationLevel: intermediate
 topic:
   - "desci"
-  - "ufadhili"
+  - "funding"
 format: presentation
 author: EthCC
 breadcrumb: "Vuguvugu la Sayansi Iliyogatuliwa (desci)"

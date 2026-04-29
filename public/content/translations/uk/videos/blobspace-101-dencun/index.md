@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "масштабування"
-  - "блоби"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "оновлення"
+  - "upgrades"
 format: interview
 author: "Банклесс"
 breadcrumb: "Простір блобів 101"

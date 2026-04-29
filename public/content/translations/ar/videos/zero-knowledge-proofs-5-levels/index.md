@@ -7,11 +7,11 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "الخصوصية والأمان"
-  - "إثباتات المعرفة الصفرية"
-  - "علم التشفير"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
-author: وايرد
+author: "وايرد"
 breadcrumb: "إثباتات المعرفة الصفرية"
 ---
 

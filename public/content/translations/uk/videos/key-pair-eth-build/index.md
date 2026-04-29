@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "акаунти"
-  - "криптографія"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: "Остін Гріффіт"
 breadcrumb: "Пари ключів (ETH.BUILD)"

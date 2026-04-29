@@ -8,13 +8,13 @@ duration: "0:05:11"
 educationLevel: beginner
 topic:
   - "dapps"
-  - "スマートコントラクト"
+  - "smart-contracts"
 format: explainer
-author: ディストリクト・ゼロエックス・ネットワーク
+author: "ディストリクト・ゼロエックス・ネットワーク"
 breadcrumb: "dappとは？"
 ---
 
-**district0x Network**による分散型アプリケーション (dapp) の解説です。従来のアプリとの違い、ブロックチェーンインフラストラクチャ上での実行方法、およびそのセキュリティ上の利点について説明します。
+<strong>district0x Network</strong>による分散型アプリケーション (dapp) の解説です。従来のアプリとの違い、ブロックチェーンインフラストラクチャ上での実行方法、およびそのセキュリティ上の利点について説明します。
 
 *このトランスクリプトは、district0x Networkが公開した[元のビデオトランスクリプト](https://www.youtube.com/watch?v=F50OrwV6Uk8)のアクセシブルなコピーです。読みやすさを考慮して軽く編集されています。*
 

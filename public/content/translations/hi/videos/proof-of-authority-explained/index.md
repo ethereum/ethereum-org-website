@@ -7,10 +7,10 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "सर्वसम्मति"
-  - "प्राधिकरण का प्रमाण"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
-author: क्रिप्टोइकोनॉमिक्स स्टडी
+author: "क्रिप्टोइकोनॉमिक्स स्टडी"
 breadcrumb: "प्राधिकरण का प्रमाण"
 ---
 

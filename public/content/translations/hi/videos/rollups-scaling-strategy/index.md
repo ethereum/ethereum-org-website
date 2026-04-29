@@ -7,12 +7,12 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "स्केलिंग"
-  - "रोलअप्स"
-  - "ऑप्टिमिस्टिक-रोलअप्स"
-  - "zk-रोलअप्स"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
-author: फाइनमैटिक्स
+author: "फाइनमैटिक्स"
 breadcrumb: "रोलअप्स"
 ---
 

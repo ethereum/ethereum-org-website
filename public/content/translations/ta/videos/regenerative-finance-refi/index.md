@@ -7,8 +7,8 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "ரெஃபை"
-  - "நிலைத்தன்மை"
+  - "refi"
+  - "sustainability"
 format: explainer
 author: "சிஎன்பிசி டெலிவிஷன்"
 breadcrumb: "புத்துருவாக்க நிதி"

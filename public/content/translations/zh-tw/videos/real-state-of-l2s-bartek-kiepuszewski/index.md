@@ -7,9 +7,9 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "擴容與第二層 (L2)"
-  - "匯總"
-  - "第二層 (L2)"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
 author: "以太坊基金會"
 breadcrumb: "L2 的狀態"

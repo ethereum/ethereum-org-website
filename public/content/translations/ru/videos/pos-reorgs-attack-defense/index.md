@@ -7,9 +7,9 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "консенсус"
+  - "consensus"
   - "pos"
-  - "безопасность"
+  - "security"
 format: presentation
 author: "ЛисКон"
 breadcrumb: "Реорганизации в PoS"

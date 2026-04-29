@@ -7,7 +7,7 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "peta-jalan-dan-prioritas"
+  - "roadmap-and-priorities"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "10 Tahun ke Depan"

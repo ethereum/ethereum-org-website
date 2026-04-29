@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "tài khoản"
-  - "mật mã học"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Cặp khóa (ETH.BUILD)"

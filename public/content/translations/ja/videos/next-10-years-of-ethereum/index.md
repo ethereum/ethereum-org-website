@@ -7,9 +7,9 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "ロードマップと優先事項"
+  - "roadmap-and-priorities"
 format: presentation
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "次の10年"
 ---
 

@@ -7,9 +7,9 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "cas-d-utilisation"
+  - "use-cases"
   - "dao"
-  - "decentralisation"
+  - "decentralization"
   - "social"
 format: interview
 author: EthBoulder

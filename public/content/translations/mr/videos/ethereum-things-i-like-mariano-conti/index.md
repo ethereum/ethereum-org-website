@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "समुदायाच्या-कथा"
-  - "समुदाय"
+  - "community-stories"
+  - "community"
 format: presentation
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "मला आवडणाऱ्या गोष्टी"
 ---
 

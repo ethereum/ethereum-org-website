@@ -7,8 +7,8 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "mạng xã hội"
-  - "phi tập trung"
+  - "social"
+  - "decentralization"
 format: explainer
 author: CoinMarketCap
 breadcrumb: "Mạng xã hội phi tập trung"

@@ -7,10 +7,10 @@ uploadDate: 2021-01-14
 duration: "0:04:39"
 educationLevel: beginner
 topic:
-  - "खाते"
-  - "क्रिप्टोग्राफी"
+  - "accounts"
+  - "cryptography"
 format: tutorial
-author: ऑस्टिन ग्रिफिथ
+author: "ऑस्टिन ग्रिफिथ"
 breadcrumb: "हैश फ़ंक्शंस (ETH.BUILD)"
 ---
 

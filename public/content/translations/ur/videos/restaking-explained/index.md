@@ -7,8 +7,8 @@ uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "ری اسٹیکنگ"
-  - "سیکیورٹی"
+  - "restaking"
+  - "security"
 format: explainer
 author: "سی بی ای آر فورم"
 breadcrumb: "ری اسٹیکنگ"

@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "استعمال کے کیسز"
+  - "use-cases"
   - "dao"
-  - "لامركزی نظام"
-  - "سماجی"
+  - "decentralization"
+  - "social"
 format: interview
 author: "ایتھ بولڈر"
 breadcrumb: "ایتھیریم لوکلزم"

@@ -7,8 +7,8 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "истории сообщества"
-  - "сообщество"
+  - "community-stories"
+  - "community"
 format: explainer
 author: "Этериум Фаундейшн"
 breadcrumb: "Обзор Devconnect"

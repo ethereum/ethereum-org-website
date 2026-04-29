@@ -7,8 +7,8 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "ஒருமித்த கருத்து"
-  - "தொகுதிச்சங்கிலி"
+  - "consensus"
+  - "blockchain"
 format: explainer
 author: "டெக் இன் ஏசியா"
 breadcrumb: "ஒருமித்த வழிமுறைகள்"

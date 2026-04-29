@@ -7,8 +7,8 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "共識"
-  - "權威證明"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
 author: Cryptoeconomics Study
 breadcrumb: "權威證明"

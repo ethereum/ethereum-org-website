@@ -7,8 +7,8 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "共识"
-  - "权威证明"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
 author: "克里普托伊科诺米克斯·斯塔迪"
 breadcrumb: "权威证明"

@@ -7,10 +7,10 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "قصص المجتمع"
-  - "المجتمع"
+  - "community-stories"
+  - "community"
 format: explainer
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "ديفكون مومباي"
 ---
 

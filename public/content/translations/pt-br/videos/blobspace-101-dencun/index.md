@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "escalabilidade"
+  - "scaling"
   - "blobs"
   - "dencun"
-  - "atualizações"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "Espaço de blob 101"

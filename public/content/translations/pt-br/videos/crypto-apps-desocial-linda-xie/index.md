@@ -8,7 +8,7 @@ duration: "0:29:14"
 educationLevel: beginner
 topic:
   - "social"
-  - "descentralização"
+  - "decentralization"
   - "dapps"
 format: presentation
 author: Ethereum Foundation

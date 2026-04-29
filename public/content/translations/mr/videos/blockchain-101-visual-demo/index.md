@@ -7,10 +7,10 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "ब्लॉकचेन"
-  - "क्रिप्टोग्राफी"
+  - "blockchain"
+  - "cryptography"
 format: presentation
-author: अँडर्स ब्राउनवर्थ
+author: "अँडर्स ब्राउनवर्थ"
 breadcrumb: "ब्लॉकचेन 101"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "মাইনিং"
-  - "ব্লকচেইন"
+  - "mining"
+  - "blockchain"
 format: tutorial
-author: অস্টিন গ্রিফিথ
+author: "অস্টিন গ্রিফিথ"
 breadcrumb: "ব্লকচেইন (ETH.BUILD)"
 ---
 

@@ -7,7 +7,7 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "共识"
+  - "consensus"
   - "pow"
 format: explainer
 author: "币安学院"

@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "قصص-المجتمع"
-  - "المجتمع"
+  - "community-stories"
+  - "community"
 format: presentation
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "أشياء تعجبني"
 ---
 

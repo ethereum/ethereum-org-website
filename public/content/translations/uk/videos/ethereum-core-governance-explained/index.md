@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "як-працює-етеріум"
-  - "дорожня-карта-та-пріоритети"
-  - "управління"
-  - "оновлення"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: "ЕтБоулдер"
 breadcrumb: "Управління базовим протоколом"

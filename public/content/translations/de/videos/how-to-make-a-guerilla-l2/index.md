@@ -7,10 +7,10 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "Privatsphäre und Sicherheit"
-  - "Skalierung und Layer 2"
-  - "Privatsphäre"
-  - "Layer 2"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
 author: Web3Privacy Now
 breadcrumb: "Guerilla-L2"

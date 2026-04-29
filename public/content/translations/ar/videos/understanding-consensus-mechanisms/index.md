@@ -7,10 +7,10 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "إجماع"
-  - "سلسلة الكتل"
+  - "consensus"
+  - "blockchain"
 format: explainer
-author: تيك إن آسيا
+author: "تيك إن آسيا"
 breadcrumb: "آليات الإجماع"
 ---
 

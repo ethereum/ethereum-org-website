@@ -8,7 +8,7 @@ duration: "0:13:10"
 educationLevel: beginner
 topic:
   - "social"
-  - "descentralización"
+  - "decentralization"
 format: explainer
 author: CoinMarketCap
 breadcrumb: "Redes sociales descentralizadas"

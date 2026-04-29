@@ -7,9 +7,9 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "casos-de-uso"
-  - "ia"
-  - "agentes"
+  - "use-cases"
+  - "ai"
+  - "agents"
   - "dapps"
 format: interview
 author: When Shift Happens

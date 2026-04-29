@@ -7,10 +7,10 @@ uploadDate: 2025-11-23
 duration: "0:18:00"
 educationLevel: beginner
 topic:
-  - "समुदाय-कथा"
-  - "समुदाय"
+  - "community-stories"
+  - "community"
 format: presentation
-author: वेब3प्रायव्हसी नाऊ
+author: "वेब3प्रायव्हसी नाऊ"
 breadcrumb: "सायफरपंक कसे बनावे"
 ---
 

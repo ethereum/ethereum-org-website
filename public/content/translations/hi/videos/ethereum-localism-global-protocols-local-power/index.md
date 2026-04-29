@@ -7,12 +7,12 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "उपयोग के मामले"
+  - "use-cases"
   - "dao"
-  - "विकेंद्रीकरण"
-  - "सामाजिक"
+  - "decentralization"
+  - "social"
 format: interview
-author: एथबोल्डर
+author: "एथबोल्डर"
 breadcrumb: "इथेरियम स्थानीयवाद"
 ---
 

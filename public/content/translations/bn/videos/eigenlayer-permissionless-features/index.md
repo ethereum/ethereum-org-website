@@ -7,11 +7,11 @@ uploadDate: 2023-02-10
 duration: "0:24:11"
 educationLevel: advanced
 topic:
-  - "রিস্টেকিং"
+  - "restaking"
   - "eigenlayer"
-  - "নিরাপত্তা"
+  - "security"
 format: presentation
-author: এ১৬জেড ক্রিপ্টো
+author: "এ১৬জেড ক্রিপ্টো"
 breadcrumb: "EigenLayer"
 ---
 

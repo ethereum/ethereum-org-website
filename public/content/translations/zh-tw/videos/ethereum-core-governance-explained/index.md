@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "以太坊運作原理"
-  - "路線圖與優先事項"
-  - "治理"
-  - "升級"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: "伊斯波德"
 breadcrumb: "核心治理"

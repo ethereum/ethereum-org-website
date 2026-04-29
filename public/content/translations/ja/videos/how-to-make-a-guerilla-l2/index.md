@@ -7,16 +7,16 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "プライバシーとセキュリティ"
-  - "スケーリングとレイヤー2"
-  - "プライバシー"
-  - "レイヤー2"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
 author: Web3Privacy Now
 breadcrumb: "ゲリラL2"
 ---
 
-**Fatemeh Fannizadeh**と**Melanie Premsyl**は、ブエノスアイレスで開催されたイーサリアム・サイファーパンク会議（ECC#2）に登壇し、プライバシー、自由、抵抗のためのツールとしてのレイヤー2（L2）ネットワークの構築について発表しました。サイファーパンクと活動家の視点からブロックチェーンインフラを再構築し、アナキスト哲学とブロックチェーンアーキテクチャの交差点について深く掘り下げています。
+<strong>Fatemeh Fannizadeh</strong>と**Melanie Premsyl**は、ブエノスアイレスで開催されたイーサリアム・サイファーパンク会議（ECC#2）に登壇し、プライバシー、自由、抵抗のためのツールとしてのレイヤー2（L2）ネットワークの構築について発表しました。サイファーパンクと活動家の視点からブロックチェーンインフラを再構築し、アナキスト哲学とブロックチェーンアーキテクチャの交差点について深く掘り下げています。
 
 *このトランスクリプトは、Web3Privacy Nowが公開した[元のビデオトランスクリプト](https://www.youtube.com/watch?v=WlsICV2OPAE)のアクセシブルなコピーです。読みやすさのために軽く編集されています。*
 

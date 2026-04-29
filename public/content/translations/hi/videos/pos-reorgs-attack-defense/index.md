@@ -7,11 +7,11 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "आम सहमति"
-  - "प्रूफ-ऑफ़-स्टेक"
-  - "सुरक्षा"
+  - "consensus"
+  - "pos"
+  - "security"
 format: presentation
-author: लिसकॉन
+author: "लिसकॉन"
 breadcrumb: "PoS पुनर्गठन"
 ---
 

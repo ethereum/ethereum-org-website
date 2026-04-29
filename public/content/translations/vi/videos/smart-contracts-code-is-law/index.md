@@ -7,7 +7,7 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "hợp đồng thông minh"
+  - "smart-contracts"
 format: explainer
 author: Finematics
 breadcrumb: "Hợp đồng thông minh"

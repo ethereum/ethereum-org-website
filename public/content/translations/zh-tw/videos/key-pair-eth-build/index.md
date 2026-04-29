@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "帳戶"
-  - "密碼學"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: "奧斯汀·格里菲斯"
 breadcrumb: "金鑰對 (ETH.BUILD)"

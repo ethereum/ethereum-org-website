@@ -7,8 +7,8 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "scalabilità-e-layer-2"
-  - "rollup"
+  - "scaling-and-layer-2"
+  - "rollups"
   - "layer-2"
 format: presentation
 author: Ethereum Foundation

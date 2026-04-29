@@ -7,14 +7,14 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "계정"
-  - "암호학"
+  - "accounts"
+  - "cryptography"
 format: tutorial
-author: 오스틴 그리피스
+author: "오스틴 그리피스"
 breadcrumb: "키 쌍 (ETH.BUILD)"
 ---
 
-**오스틴 그리피스**의 튜토리얼로, ETH.BUILD 시각적 프로그래밍 도구를 사용하여 공개키-개인 키 쌍이 어떻게 작동하는지 보여주며, 개인 키 생성, 공개키 파생, 메시지 서명하기 및 서명 복구를 다룹니다.
+<strong>오스틴 그리피스</strong>의 튜토리얼로, ETH.BUILD 시각적 프로그래밍 도구를 사용하여 공개키-개인 키 쌍이 어떻게 작동하는지 보여주며, 개인 키 생성, 공개키 파생, 메시지 서명하기 및 서명 복구를 다룹니다.
 
 *이 스크립트는 오스틴 그리피스가 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=9LtBDy67Tho)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

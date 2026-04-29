@@ -7,16 +7,16 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "사용 사례"
+  - "use-cases"
   - "dao"
-  - "탈중앙화"
-  - "소셜"
+  - "decentralization"
+  - "social"
 format: interview
-author: 이더볼더
+author: "이더볼더"
 breadcrumb: "이더리움 로컬리즘"
 ---
 
-이더볼더(EthBoulder) 2026에서 **벤자민 라이프(Benjamin Life)**와 **사라 존스톤(Sarah Johnstone)**이 함께한 패널 토론으로, 커뮤니티 통화, 지역 거버넌스, 생물 지역적 시민권 및 보충성의 원칙을 통해 이더리움의 글로벌 인프라가 어떻게 초국지적 커뮤니티에 기여할 수 있는지 등 이더리움 로컬리즘 운동에 대해 탐구합니다.
+이더볼더(EthBoulder) 2026에서 <strong>벤자민 라이프(Benjamin Life)</strong>와 <strong>사라 존스톤(Sarah Johnstone)</strong>이 함께한 패널 토론으로, 커뮤니티 통화, 지역 거버넌스, 생물 지역적 시민권 및 보충성의 원칙을 통해 이더리움의 글로벌 인프라가 어떻게 초국지적 커뮤니티에 기여할 수 있는지 등 이더리움 로컬리즘 운동에 대해 탐구합니다.
 
 *이 스크립트는 이더볼더가 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=I4xb0rst6SQ)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

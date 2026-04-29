@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "jak działa Ethereum"
+  - "how-ethereum-works"
   - "staking"
-  - "wypłaty"
+  - "withdrawals"
 format: explainer
 author: Finematics
 breadcrumb: "Wypłaty ze stakingu"

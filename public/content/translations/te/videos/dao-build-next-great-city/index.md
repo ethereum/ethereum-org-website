@@ -8,7 +8,7 @@ duration: "0:09:56"
 educationLevel: beginner
 topic:
   - "dao"
-  - "పరిపాలన"
+  - "governance"
 format: presentation
 author: "టెడ్"
 breadcrumb: "DAOలు & నగరాలు"

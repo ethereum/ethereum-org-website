@@ -7,8 +7,8 @@ uploadDate: 2021-02-03
 duration: "0:14:28"
 educationLevel: intermediate
 topic:
-  - "擴容"
-  - "第二層 (L2)"
+  - "scaling"
+  - "layer-2"
 format: explainer
 author: Finematics
 breadcrumb: "第二層 (L2) 擴容"

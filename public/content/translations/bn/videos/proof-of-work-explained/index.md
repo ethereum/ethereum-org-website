@@ -7,10 +7,10 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "ঐক্যমত"
+  - "consensus"
   - "pow"
 format: explainer
-author: বাইনান্স একাডেমি
+author: "বাইনান্স একাডেমি"
 breadcrumb: "প্রুফ-অফ-ওয়ার্ক"
 ---
 

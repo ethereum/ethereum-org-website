@@ -7,8 +7,8 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "ఏకాభిప్రాయం"
-  - "బ్లాక్‌చైన్"
+  - "consensus"
+  - "blockchain"
 format: explainer
 author: "టెక్ ఇన్ ఆసియా"
 breadcrumb: "ఏకాభిప్రాయ యంత్రాంగాలు"

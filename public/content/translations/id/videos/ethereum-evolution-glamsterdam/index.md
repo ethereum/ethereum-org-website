@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "peta-jalan-dan-prioritas"
-  - "peta-jalan"
-  - "peningkatan"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: ETHDenver
 breadcrumb: "Evolusi Ethereum"

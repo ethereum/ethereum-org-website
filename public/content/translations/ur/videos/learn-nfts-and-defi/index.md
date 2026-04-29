@@ -11,7 +11,7 @@ topic:
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "قرض دینا"
+  - "lending"
 format: explainer
 author: "فائنمیٹکس"
 breadcrumb: "NFTs اور DeFi"

@@ -8,7 +8,7 @@ duration: "0:09:33"
 educationLevel: beginner
 topic:
   - "consensus"
-  - "chaîne de blocs"
+  - "blockchain"
 format: explainer
 author: Tech in Asia
 breadcrumb: "Mécanismes de consensus"

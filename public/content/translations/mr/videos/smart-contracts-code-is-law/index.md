@@ -7,9 +7,9 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "स्मार्ट कॉन्ट्रॅक्ट्स"
+  - "smart-contracts"
 format: explainer
-author: फायनमॅटिक्स
+author: "फायनमॅटिक्स"
 breadcrumb: "स्मार्ट कॉन्ट्रॅक्ट्स"
 ---
 

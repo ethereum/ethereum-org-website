@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "గోప్యత-మరియు-భద్రత"
-  - "శూన్య-జ్ఞాన-నిరూపణలు"
-  - "గూఢలిపి-శాస్త్రం"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: "వైర్డ్"
 breadcrumb: "శూన్య-జ్ఞాన నిరూపణలు"

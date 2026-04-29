@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "தனியுரிமை-மற்றும்-பாதுகாப்பு"
-  - "தனியுரிமை"
-  - "அங்கீகாரம்"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "மைக்ரோடாட் பாதுகாப்பு"

@@ -7,9 +7,9 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "共识机制"
-  - "安全性"
-  - "共识"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
 author: "班克莱斯 (Bankless)"
 breadcrumb: "PoW 与 PoS 的辩论"

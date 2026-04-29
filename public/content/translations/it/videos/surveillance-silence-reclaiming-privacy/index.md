@@ -7,7 +7,7 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "privacy-e-sicurezza"
+  - "privacy-and-security"
   - "privacy"
 format: presentation
 author: EthBoulder

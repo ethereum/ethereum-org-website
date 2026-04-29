@@ -7,12 +7,12 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "الخصوصية-والأمان"
-  - "التوسع-والطبقة-2"
-  - "الخصوصية"
-  - "الطبقة-2"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
-author: ويب 3 برايفسي ناو
+author: "ويب 3 برايفسي ناو"
 breadcrumb: "طبقة 2 (L2) بأسلوب حرب العصابات"
 ---
 

@@ -7,14 +7,14 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "합의"
+  - "consensus"
   - "pow"
 format: explainer
-author: 바이낸스 아카데미
+author: "바이낸스 아카데미"
 breadcrumb: "작업증명 (PoW)"
 ---
 
-**바이낸스 아카데미**가 작업증명(PoW) 합의 메커니즘의 기원, 채굴자가 암호화 퍼즐을 풀기 위해 경쟁하는 방법, 그리고 블록체인 네트워크를 보호하는 방법을 다루는 설명입니다.
+<strong>바이낸스 아카데미</strong>가 작업증명(PoW) 합의 메커니즘의 기원, 채굴자가 암호화 퍼즐을 풀기 위해 경쟁하는 방법, 그리고 블록체인 네트워크를 보호하는 방법을 다루는 설명입니다.
 
 *이 대본은 바이낸스 아카데미에서 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=3EUAcxhuoU4)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

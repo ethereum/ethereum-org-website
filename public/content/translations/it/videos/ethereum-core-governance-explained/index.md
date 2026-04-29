@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "come-funziona-ethereum"
-  - "roadmap-e-priorita"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
   - "governance"
-  - "aggiornamenti"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "Governance di base"

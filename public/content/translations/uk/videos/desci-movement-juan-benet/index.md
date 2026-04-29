@@ -8,7 +8,7 @@ duration: "0:50:14"
 educationLevel: intermediate
 topic:
   - "desci"
-  - "фінансування"
+  - "funding"
 format: presentation
 author: "ЕтСіСі"
 breadcrumb: "Рух DeSci"

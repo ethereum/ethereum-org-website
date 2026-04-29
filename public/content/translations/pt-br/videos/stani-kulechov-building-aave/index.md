@@ -7,8 +7,8 @@ uploadDate: 2024-08-20
 duration: "0:36:34"
 educationLevel: beginner
 topic:
-  - "histórias da comunidade"
-  - "comunidade"
+  - "community-stories"
+  - "community"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Construindo a Aave"

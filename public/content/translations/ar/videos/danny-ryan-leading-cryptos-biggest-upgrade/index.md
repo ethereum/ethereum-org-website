@@ -8,10 +8,10 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "إثبات الحصة"
-  - "الدمج"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "مقابلة داني رايان"
 ---
 

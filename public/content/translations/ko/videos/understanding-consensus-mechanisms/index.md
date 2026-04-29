@@ -7,14 +7,14 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "합의"
-  - "블록체인"
+  - "consensus"
+  - "blockchain"
 format: explainer
-author: 테크 인 아시아
+author: "테크 인 아시아"
 breadcrumb: "합의 메커니즘"
 ---
 
-**테크 인 아시아(Tech in Asia)**가 블록체인 시스템에서 사용되는 세 가지 주요 합의 메커니즘인 작업증명 (PoW), 지분 증명 (PoS), 권위 증명(PoA)을 다루며, 탈중앙화된 네트워크가 트랜잭션 상태에 합의할 수 있도록 하는 방법을 설명합니다.
+<strong>테크 인 아시아(Tech in Asia)</strong>가 블록체인 시스템에서 사용되는 세 가지 주요 합의 메커니즘인 작업증명 (PoW), 지분 증명 (PoS), 권위 증명(PoA)을 다루며, 탈중앙화된 네트워크가 트랜잭션 상태에 합의할 수 있도록 하는 방법을 설명합니다.
 
 *이 대본은 테크 인 아시아가 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=ojxfbN78WFQ)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

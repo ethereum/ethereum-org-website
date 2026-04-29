@@ -7,11 +7,11 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "コンセンサス・メカニズム"
-  - "セキュリティ"
-  - "コンセンサス"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
-author: バンクレス
+author: "バンクレス"
 breadcrumb: "PoW対PoSのディベート"
 ---
 

@@ -7,9 +7,9 @@ uploadDate: 2024-04-06
 duration: "0:29:13"
 educationLevel: beginner
 topic:
-  - "எத்திரியம்-எப்படி-செயல்படுகிறது"
-  - "தொகுதிச்சங்கிலி"
-  - "எத்திரியம்"
+  - "how-ethereum-works"
+  - "blockchain"
+  - "ethereum"
 format: presentation
 author: "ஈடிஎச்குளோபல்"
 breadcrumb: "அணுக்கள், நிறுவனங்கள், தொகுதிச்சங்கிலிகள்"

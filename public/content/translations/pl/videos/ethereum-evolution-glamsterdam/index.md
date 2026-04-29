@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "mapa-drogowa-i-priorytety"
-  - "mapa-drogowa"
-  - "aktualizacje"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: ETHDenver
 breadcrumb: "Ewolucja Ethereum"

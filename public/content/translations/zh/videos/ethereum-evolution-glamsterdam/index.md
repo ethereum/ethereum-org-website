@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "路线图与优先级"
-  - "路线图"
-  - "升级"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: ETHDenver
 breadcrumb: "以太坊演进"

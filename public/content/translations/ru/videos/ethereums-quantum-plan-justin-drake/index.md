@@ -7,7 +7,7 @@ uploadDate: 2025-07-15
 duration: "1:12:30"
 educationLevel: advanced
 topic:
-  - "дорожная-карта-и-приоритеты"
+  - "roadmap-and-priorities"
 format: interview
 author: "Бэнклесс"
 breadcrumb: "Джастин Дрейк"

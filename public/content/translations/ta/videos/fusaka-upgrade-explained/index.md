@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "வழிகாட்டி-மற்றும்-முன்னுரிமைகள்"
-  - "மேம்படுத்தல்கள்"
-  - "ஃபுசாகா"
-  - "வழிகாட்டி"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "ஃபுசாகா மேம்படுத்தல்"

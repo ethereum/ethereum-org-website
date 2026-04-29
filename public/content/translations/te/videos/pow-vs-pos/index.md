@@ -7,9 +7,9 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "ఏకాభిప్రాయ-యంత్రాంగాలు"
-  - "భద్రత"
-  - "ఏకాభిప్రాయం"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
 author: "బ్యాంక్‌లెస్"
 breadcrumb: "PoW వర్సెస్ PoS చర్చ"

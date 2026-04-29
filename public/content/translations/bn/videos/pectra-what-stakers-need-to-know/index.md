@@ -7,11 +7,11 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "রোডম্যাপ"
-  - "পেকট্রা"
-  - "স্টেকিং"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
-author: ব্লকডেমন
+author: "ব্লকডেমন"
 breadcrumb: "স্টেকারদের জন্য পেকট্রা"
 ---
 

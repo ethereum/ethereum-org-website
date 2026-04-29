@@ -7,8 +7,8 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "gizlilik-ve-güvenlik"
-  - "gizlilik"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
 author: EthBoulder
 breadcrumb: "Gizliliği Geri Kazanmak"

@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:39"
 educationLevel: beginner
 topic:
-  - "účty"
-  - "kryptografie"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Hashovací funkce (ETH.BUILD)"

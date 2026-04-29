@@ -7,7 +7,7 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "yol-haritasi-ve-oncelikler"
+  - "roadmap-and-priorities"
 format: presentation
 author: ETHBoulder
 breadcrumb: "Kuantum Sonrası Yol Haritası"

@@ -8,8 +8,8 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "uthibitisho-wa-dau"
-  - "unganisho"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Mahojiano ya Danny Ryan"

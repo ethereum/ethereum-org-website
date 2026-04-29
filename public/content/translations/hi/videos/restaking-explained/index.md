@@ -7,10 +7,10 @@ uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "रीस्टेकिंग"
-  - "सुरक्षा"
+  - "restaking"
+  - "security"
 format: explainer
-author: सीबीईआर फोरम
+author: "सीबीईआर फोरम"
 breadcrumb: "रीस्टेकिंग"
 ---
 

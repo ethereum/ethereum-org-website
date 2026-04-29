@@ -7,13 +7,13 @@ uploadDate: 2022-04-12
 duration: "0:05:22"
 educationLevel: beginner
 topic:
-  - "신원"
+  - "identity"
 format: explainer
-author: 마이크로소프트 시큐리티
+author: "마이크로소프트 시큐리티"
 breadcrumb: "탈중앙화 신원증명"
 ---
 
-**마이크로소프트 시큐리티(Microsoft Security)**가 탈중앙화 신원증명(DID)이 어떻게 사용자에게 디지털 자격 증명에 대한 더 많은 통제권을 부여하는지 설명합니다. 현재 디지털 식별자의 문제점, 검증 가능한 자격 증명(Verifiable Credentials) 및 탈중앙화 식별자(Decentralized Identifiers)의 작동 방식, 그리고 이것이 온라인 프라이버시에 미치는 영향을 다룹니다.
+<strong>마이크로소프트 시큐리티(Microsoft Security)</strong>가 탈중앙화 신원증명(DID)이 어떻게 사용자에게 디지털 자격 증명에 대한 더 많은 통제권을 부여하는지 설명합니다. 현재 디지털 식별자의 문제점, 검증 가능한 자격 증명(Verifiable Credentials) 및 탈중앙화 식별자(Decentralized Identifiers)의 작동 방식, 그리고 이것이 온라인 프라이버시에 미치는 영향을 다룹니다.
 
 *이 대본은 마이크로소프트 시큐리티가 게시한 [원본 동영상 대본](https://www.youtube.com/watch?v=Ew-_F-OtDFI)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

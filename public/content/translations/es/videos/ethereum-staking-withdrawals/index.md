@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "cómo-funciona-ethereum"
+  - "how-ethereum-works"
   - "staking"
-  - "retiros"
+  - "withdrawals"
 format: explainer
 author: Finematics
 breadcrumb: "Retiros de staking"

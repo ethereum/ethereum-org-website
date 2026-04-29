@@ -7,9 +7,9 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "trường hợp sử dụng"
+  - "use-cases"
   - "ai"
-  - "tác nhân"
+  - "agents"
   - "dapps"
 format: interview
 author: When Shift Happens

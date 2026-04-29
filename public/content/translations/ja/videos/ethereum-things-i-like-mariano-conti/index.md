@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "コミュニティ・ストーリー"
-  - "コミュニティ"
+  - "community-stories"
+  - "community"
 format: presentation
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "私の好きなところ"
 ---
 

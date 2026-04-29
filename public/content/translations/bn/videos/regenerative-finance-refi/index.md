@@ -7,10 +7,10 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "রিফাই"
-  - "টেকসইতা"
+  - "refi"
+  - "sustainability"
 format: explainer
-author: সিএনবিসি টেলিভিশন
+author: "সিএনবিসি টেলিভিশন"
 breadcrumb: "পুনরুৎপাদনশীল অর্থব্যবস্থা"
 ---
 

@@ -7,12 +7,12 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "ব্যবহারের ক্ষেত্র"
+  - "use-cases"
   - "dao"
-  - "বিকেন্দ্রীকরণ"
-  - "সামাজিক"
+  - "decentralization"
+  - "social"
 format: interview
-author: ইথবোল্ডার
+author: "ইথবোল্ডার"
 breadcrumb: "ইথেরিয়াম লোকালিজম"
 ---
 

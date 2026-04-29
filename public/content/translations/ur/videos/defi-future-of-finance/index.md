@@ -8,7 +8,7 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "مالیات"
+  - "finance"
 format: explainer
 author: "فائنمیٹکس"
 breadcrumb: "غیر مرکزی مالیات (DeFi): مالیات کا مستقبل"

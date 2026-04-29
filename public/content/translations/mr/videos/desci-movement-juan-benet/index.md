@@ -7,10 +7,10 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "डीसाय"
-  - "निधी"
+  - "desci"
+  - "funding"
 format: presentation
-author: इथसीसी (EthCC)
+author: "इथसीसी (EthCC)"
 breadcrumb: "डीसाय चळवळ"
 ---
 

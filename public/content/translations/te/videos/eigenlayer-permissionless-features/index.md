@@ -7,9 +7,9 @@ uploadDate: 2023-02-10
 duration: "0:24:11"
 educationLevel: advanced
 topic:
-  - "రీస్టేకింగ్"
+  - "restaking"
   - "eigenlayer"
-  - "భద్రత"
+  - "security"
 format: presentation
 author: "ఎ16జెడ్ క్రిప్టో"
 breadcrumb: "EigenLayer"

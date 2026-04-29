@@ -7,10 +7,10 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "コミュニティストーリー"
-  - "コミュニティ"
+  - "community-stories"
+  - "community"
 format: explainer
-author: イーサリアム・ファウンデーション
+author: "イーサリアム・ファウンデーション"
 breadcrumb: "Devconnectの振り返り"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "खनन"
-  - "ब्लॉकचेन"
+  - "mining"
+  - "blockchain"
 format: tutorial
-author: ऑस्टिन ग्रिफिथ
+author: "ऑस्टिन ग्रिफिथ"
 breadcrumb: "ब्लॉकचेन (ETH.BUILD)"
 ---
 

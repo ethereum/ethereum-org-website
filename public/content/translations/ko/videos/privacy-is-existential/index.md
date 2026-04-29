@@ -7,14 +7,14 @@ uploadDate: 2025-03-10
 duration: "0:22:45"
 educationLevel: intermediate
 topic:
-  - "프라이버시"
-  - "보안"
+  - "privacy"
+  - "security"
 format: presentation
-author: 데브커넥트
+author: "데브커넥트"
 breadcrumb: "프라이버시"
 ---
 
-코인 센터(Coin Center)의 전무 이사인 **피터 반 발켄버그(Peter Van Valkenburgh)**가 이더리움 데이(데브커넥트 아르헨티나 2025)에서 프라이버시가 이더리움의 생존에 필수적인 이유에 대해 발표한 내용입니다. 피터는 ICO 경고부터 토네이도 캐시 제재, MEV 및 검증자 책임에 이르는 법적 역사를 되짚어보며, 진정으로 중립적인 인프라를 위해서는 베이스 레이어 프라이버시가 필요하다고 주장합니다.
+코인 센터(Coin Center)의 전무 이사인 <strong>피터 반 발켄버그(Peter Van Valkenburgh)</strong>가 이더리움 데이(데브커넥트 아르헨티나 2025)에서 프라이버시가 이더리움의 생존에 필수적인 이유에 대해 발표한 내용입니다. 피터는 ICO 경고부터 토네이도 캐시 제재, MEV 및 검증자 책임에 이르는 법적 역사를 되짚어보며, 진정으로 중립적인 인프라를 위해서는 베이스 레이어 프라이버시가 필요하다고 주장합니다.
 
 *이 대본은 이더리움 재단이 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=GQML0c1_4Gs)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

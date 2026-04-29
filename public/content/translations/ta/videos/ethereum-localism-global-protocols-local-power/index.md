@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "பயன்பாட்டு-வழக்குகள்"
+  - "use-cases"
   - "dao"
-  - "பரவலாக்கம்"
-  - "சமூகம்"
+  - "decentralization"
+  - "social"
 format: interview
 author: "எத்போல்டர்"
 breadcrumb: "எத்திரியம் உள்ளூர்வாதம்"

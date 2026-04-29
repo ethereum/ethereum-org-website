@@ -11,7 +11,7 @@ topic:
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "préstamos"
+  - "lending"
 format: explainer
 author: Finematics
 breadcrumb: "NFT y DeFi"

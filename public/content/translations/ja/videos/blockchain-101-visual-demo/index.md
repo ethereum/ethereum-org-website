@@ -7,10 +7,10 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "ブロックチェーン"
-  - "暗号技術"
+  - "blockchain"
+  - "cryptography"
 format: presentation
-author: アンダース・ブラウンワース
+author: "アンダース・ブラウンワース"
 breadcrumb: "ブロックチェーン101"
 ---
 

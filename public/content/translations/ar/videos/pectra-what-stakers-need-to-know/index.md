@@ -7,11 +7,11 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "خارطة الطريق"
-  - "بيكترا"
-  - "التخزين"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
-author: بلوك ديمون
+author: "بلوك ديمون"
 breadcrumb: "بيكترا للقائمين على التخزين"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "kuongeza uwezo"
-  - "mablobu"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "maboresho"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "Nafasi ya blobu 101"

@@ -7,9 +7,9 @@ uploadDate: 2023-02-10
 duration: "0:24:11"
 educationLevel: advanced
 topic:
-  - "ری اسٹیکنگ"
+  - "restaking"
   - "eigenlayer"
-  - "سیکیورٹی"
+  - "security"
 format: presentation
 author: "اے ۱۶ زیڈ کرپٹو"
 breadcrumb: "EigenLayer"

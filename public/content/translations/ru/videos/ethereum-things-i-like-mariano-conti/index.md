@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "истории-сообщества"
-  - "сообщество"
+  - "community-stories"
+  - "community"
 format: presentation
 author: "Фонд Ethereum"
 breadcrumb: "Что мне нравится"

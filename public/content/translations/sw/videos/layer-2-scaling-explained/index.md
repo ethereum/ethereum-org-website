@@ -7,8 +7,8 @@ uploadDate: 2021-02-03
 duration: "0:14:28"
 educationLevel: intermediate
 topic:
-  - "kuongeza-viwango"
-  - "tabaka-la-2"
+  - "scaling"
+  - "layer-2"
 format: explainer
 author: Finematics
 breadcrumb: "Kuongeza Viwango vya Tabaka la 2"

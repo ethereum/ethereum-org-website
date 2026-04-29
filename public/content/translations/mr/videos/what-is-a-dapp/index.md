@@ -8,9 +8,9 @@ duration: "0:05:11"
 educationLevel: beginner
 topic:
   - "dapps"
-  - "स्मार्ट-कॉन्ट्रॅक्ट्स"
+  - "smart-contracts"
 format: explainer
-author: डिस्ट्रिक्ट0x नेटवर्क
+author: "डिस्ट्रिक्ट0x नेटवर्क"
 breadcrumb: "Dapp म्हणजे काय?"
 ---
 

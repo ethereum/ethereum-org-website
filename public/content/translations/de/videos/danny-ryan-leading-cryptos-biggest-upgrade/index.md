@@ -9,7 +9,7 @@ educationLevel: beginner
 topic:
   - "ethereum"
   - "proof-of-stake"
-  - "der-merge"
+  - "the-merge"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Danny Ryan Interview"

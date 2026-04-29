@@ -7,11 +7,11 @@ uploadDate: 2024-04-06
 duration: "0:29:13"
 educationLevel: beginner
 topic:
-  - "কীভাবে ইথেরিয়াম কাজ করে"
-  - "ব্লকচেইন"
-  - "ইথেরিয়াম"
+  - "how-ethereum-works"
+  - "blockchain"
+  - "ethereum"
 format: presentation
-author: ইটিএইচগ্লোবাল
+author: "ইটিএইচগ্লোবাল"
 breadcrumb: "অ্যাটম, প্রতিষ্ঠান, ব্লকচেইন"
 ---
 

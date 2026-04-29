@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "లావాదేవీలు"
+  - "transactions"
 format: tutorial
 author: "ఆస్టిన్ గ్రిఫిత్"
 breadcrumb: "లావాదేవీలు (ETH.BUILD)"

@@ -8,7 +8,7 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "финансы"
+  - "finance"
 format: explainer
 author: "Файнматикс"
 breadcrumb: "DeFi: будущее финансов"

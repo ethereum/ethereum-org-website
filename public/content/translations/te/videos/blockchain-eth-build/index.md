@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "మైనింగ్"
-  - "బ్లాక్‌చైన్"
+  - "mining"
+  - "blockchain"
 format: tutorial
 author: "ఆస్టిన్ గ్రిఫిత్"
 breadcrumb: "బ్లాక్‌చైన్ (ETH.BUILD)"

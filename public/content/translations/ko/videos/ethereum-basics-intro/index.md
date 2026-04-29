@@ -7,14 +7,14 @@ uploadDate: 2022-03-01
 duration: "0:11:14"
 educationLevel: beginner
 topic:
-  - "이더리움"
-  - "소개"
+  - "ethereum"
+  - "intro"
 format: presentation
-author: 퀘자르
+author: "퀘자르"
 breadcrumb: "이더리움 기초"
 ---
 
-**퀘자르**가 진행하는 소개 강의로, 블록체인이 무엇인지, 내부적으로 어떻게 작동하는지, 그리고 이더리움 네트워크를 구성하는 주요 구성 요소 등 이더리움의 기초를 다룹니다.
+<strong>퀘자르</strong>가 진행하는 소개 강의로, 블록체인이 무엇인지, 내부적으로 어떻게 작동하는지, 그리고 이더리움 네트워크를 구성하는 주요 구성 요소 등 이더리움의 기초를 다룹니다.
 
 *이 대본은 퀘자르가 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=j78ZcIIpi0Q)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

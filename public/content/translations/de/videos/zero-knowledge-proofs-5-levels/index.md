@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "datenschutz-und-sicherheit"
-  - "zero-knowledge-beweise"
-  - "kryptographie"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: WIRED
 breadcrumb: "Zero-Knowledge-Beweise"

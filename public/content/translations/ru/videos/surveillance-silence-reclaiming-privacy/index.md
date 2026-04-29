@@ -7,8 +7,8 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "приватность-и-безопасность"
-  - "приватность"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
 author: "ЭтБоулдер"
 breadcrumb: "Возвращение приватности"

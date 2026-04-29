@@ -7,7 +7,7 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "路线图与优先级"
+  - "roadmap-and-priorities"
 format: presentation
 author: "以太坊基金会"
 breadcrumb: "未来十年"

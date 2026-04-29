@@ -8,7 +8,7 @@ duration: "0:50:14"
 educationLevel: intermediate
 topic:
   - "desci"
-  - "financement"
+  - "funding"
 format: presentation
 author: EthCC
 breadcrumb: "Mouvement DeSci"

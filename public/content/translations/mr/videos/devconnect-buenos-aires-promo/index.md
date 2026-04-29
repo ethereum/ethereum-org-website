@@ -7,10 +7,10 @@ uploadDate: 2025-09-15
 duration: "0:00:25"
 educationLevel: beginner
 topic:
-  - "समुदायाच्या कथा"
-  - "समुदाय"
+  - "community-stories"
+  - "community"
 format: explainer
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "Devconnect Buenos Aires"
 ---
 

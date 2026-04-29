@@ -8,7 +8,7 @@ duration: "0:05:11"
 educationLevel: beginner
 topic:
   - "dapps"
-  - "ஸ்மார்ட்-ஒப்பந்தங்கள்"
+  - "smart-contracts"
 format: explainer
 author: "டிஸ்ட்ரிக்ட்0எக்ஸ் நெட்வொர்க்"
 breadcrumb: "Dapp என்றால் என்ன?"

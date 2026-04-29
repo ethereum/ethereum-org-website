@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "கணக்குகள்"
-  - "குறியாக்கவியல்"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: "ஆஸ்டின் கிரிஃபித்"
 breadcrumb: "திறவுகோல் இணைகள் (ETH.BUILD)"

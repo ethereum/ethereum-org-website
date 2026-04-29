@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "隱私與安全"
-  - "隱私"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
 author: "Web3 普萊維西納烏"
 breadcrumb: "機構隱私"

@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "cara-kerja-ethereum"
-  - "peta-jalan-dan-prioritas"
-  - "tata-kelola"
-  - "pembaruan"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "Tata Kelola Inti"

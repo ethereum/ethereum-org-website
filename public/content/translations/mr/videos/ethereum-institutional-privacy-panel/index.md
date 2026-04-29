@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "गोपनीयता-आणि-सुरक्षा"
-  - "गोपनीयता"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
-author: वेब3प्रायव्हसी नाऊ
+author: "वेब3प्रायव्हसी नाऊ"
 breadcrumb: "संस्थात्मक गोपनीयता"
 ---
 

@@ -7,7 +7,7 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "дорожная-карта-и-приоритеты"
+  - "roadmap-and-priorities"
 format: presentation
 author: "ЭТХБоулдер"
 breadcrumb: "Постквантовая дорожная карта"

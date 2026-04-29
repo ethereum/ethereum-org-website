@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "ఉపయోగ-కేసులు"
+  - "use-cases"
   - "dao"
-  - "వికేంద్రీకరణ"
-  - "సామాజిక"
+  - "decentralization"
+  - "social"
 format: interview
 author: "ఎత్‌బోల్డర్"
 breadcrumb: "ఎథీరియం స్థానికత"

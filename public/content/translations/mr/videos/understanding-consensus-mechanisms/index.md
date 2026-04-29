@@ -7,10 +7,10 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "एकमत"
-  - "ब्लॉकचेन"
+  - "consensus"
+  - "blockchain"
 format: explainer
-author: टेक इन आशिया
+author: "टेक इन आशिया"
 breadcrumb: "सहमती यंत्रणा"
 ---
 

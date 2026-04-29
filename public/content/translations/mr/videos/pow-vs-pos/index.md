@@ -7,11 +7,11 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "सहमती-यंत्रणा"
-  - "सुरक्षा"
-  - "एकमत"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
-author: बँकलेस
+author: "बँकलेस"
 breadcrumb: "PoW विरुद्ध PoS वादविवाद"
 ---
 

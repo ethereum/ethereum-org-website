@@ -7,10 +7,10 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "الحسابات"
-  - "علم التشفير"
+  - "accounts"
+  - "cryptography"
 format: tutorial
-author: أوستن غريفيث
+author: "أوستن غريفيث"
 breadcrumb: "أزواج المفاتيح (ETH.BUILD)"
 ---
 

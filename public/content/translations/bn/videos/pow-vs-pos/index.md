@@ -11,7 +11,7 @@ topic:
   - "security"
   - "consensus"
 format: interview
-author: ব্যাংকলেস
+author: "ব্যাংকলেস"
 breadcrumb: "PoW বনাম PoS বিতর্ক"
 ---
 

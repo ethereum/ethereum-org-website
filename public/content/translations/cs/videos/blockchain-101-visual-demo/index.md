@@ -8,7 +8,7 @@ duration: "0:17:49"
 educationLevel: beginner
 topic:
   - "blockchain"
-  - "kryptografie"
+  - "cryptography"
 format: presentation
 author: Anders Brownworth
 breadcrumb: "Blockchain 101"

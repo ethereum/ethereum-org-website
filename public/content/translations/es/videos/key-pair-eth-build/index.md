@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "cuentas"
-  - "criptografía"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: Austin Griffith
 breadcrumb: "Pares de claves (ETH.BUILD)"

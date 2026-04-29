@@ -7,8 +7,8 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "کمیونٹی کی کہانیاں"
-  - "کمیونٹی"
+  - "community-stories"
+  - "community"
 format: explainer
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "ڈیوکون ممبئی"

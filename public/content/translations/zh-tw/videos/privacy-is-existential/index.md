@@ -7,8 +7,8 @@ uploadDate: 2025-03-10
 duration: "0:22:45"
 educationLevel: intermediate
 topic:
-  - "隱私"
-  - "安全性"
+  - "privacy"
+  - "security"
 format: presentation
 author: "德夫康內克特"
 breadcrumb: "隱私"

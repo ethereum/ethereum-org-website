@@ -8,7 +8,7 @@ duration: "0:09:56"
 educationLevel: beginner
 topic:
   - "dao"
-  - "گورننس"
+  - "governance"
 format: presentation
 author: "ٹیڈ"
 breadcrumb: "DAOs اور شہر"

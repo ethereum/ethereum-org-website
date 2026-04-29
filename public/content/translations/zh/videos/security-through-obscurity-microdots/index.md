@@ -7,9 +7,9 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "隐私与安全"
-  - "隐私"
-  - "身份验证"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
 author: "以太坊基金会"
 breadcrumb: "微点安全"

@@ -7,9 +7,9 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "路线图"
-  - "佩克特拉"
-  - "质押"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
 author: "布洛克迪蒙"
 breadcrumb: "面向质押者的佩克特拉"

@@ -7,13 +7,13 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "스마트 컨트랙트"
+  - "smart-contracts"
 format: explainer
-author: 파인매틱스
+author: "파인매틱스"
 breadcrumb: "스마트 컨트랙트"
 ---
 
-**파인매틱스(Finematics)**가 이더리움의 스마트 컨트랙트를 통해 "코드가 법이다"라는 개념을 탐구하는 설명 영상으로, 스마트 컨트랙트가 무엇인지, 어떻게 작동하는지, 전통적인 컨트랙트 대비 어떤 장점이 있는지, 그리고 왜 탈중앙화 금융 (DeFi)의 구성 요소인지 다룹니다.
+<strong>파인매틱스(Finematics)</strong>가 이더리움의 스마트 컨트랙트를 통해 "코드가 법이다"라는 개념을 탐구하는 설명 영상으로, 스마트 컨트랙트가 무엇인지, 어떻게 작동하는지, 전통적인 컨트랙트 대비 어떤 장점이 있는지, 그리고 왜 탈중앙화 금융 (DeFi)의 구성 요소인지 다룹니다.
 
 *이 대본은 파인매틱스가 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=pWGLtjG-F5c)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

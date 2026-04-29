@@ -11,7 +11,7 @@ topic:
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "кредитування"
+  - "lending"
 format: explainer
 author: "Фінематікс"
 breadcrumb: "NFT та DeFi"

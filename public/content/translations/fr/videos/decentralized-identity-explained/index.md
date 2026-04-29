@@ -7,7 +7,7 @@ uploadDate: 2022-04-12
 duration: "0:05:22"
 educationLevel: beginner
 topic:
-  - "identité"
+  - "identity"
 format: explainer
 author: Microsoft Security
 breadcrumb: "Identité décentralisée"

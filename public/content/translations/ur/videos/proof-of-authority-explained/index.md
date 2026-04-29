@@ -7,8 +7,8 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "اتفاق رائے"
-  - "ثبوتِ اختیار"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
 author: "کرپٹو اکنامکس اسٹڈی"
 breadcrumb: "ثبوتِ اختیار"

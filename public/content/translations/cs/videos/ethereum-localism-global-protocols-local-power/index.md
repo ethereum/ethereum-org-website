@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "případy užití"
+  - "use-cases"
   - "dao"
-  - "decentralizace"
-  - "sociální"
+  - "decentralization"
+  - "social"
 format: interview
 author: EthBoulder
 breadcrumb: "Ethereum lokalismus"

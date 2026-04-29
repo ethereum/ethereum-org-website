@@ -7,10 +7,10 @@ uploadDate: 2019-04-01
 duration: "0:05:11"
 educationLevel: beginner
 topic:
-  - "التطبيقات اللامركزية"
-  - "العقود الذكية"
+  - "dapps"
+  - "smart-contracts"
 format: explainer
-author: ديستريكت زيرو إكس نيتورك
+author: "ديستريكت زيرو إكس نيتورك"
 breadcrumb: "ما هو التطبيق اللامركزي (dapp)؟"
 ---
 

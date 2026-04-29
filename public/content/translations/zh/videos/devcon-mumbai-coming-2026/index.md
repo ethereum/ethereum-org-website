@@ -7,8 +7,8 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "社区故事"
-  - "社区"
+  - "community-stories"
+  - "community"
 format: explainer
 author: "以太坊基金会"
 breadcrumb: "Devcon 孟买"

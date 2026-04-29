@@ -7,10 +7,10 @@ uploadDate: 2022-10-04
 duration: "0:09:56"
 educationLevel: beginner
 topic:
-  - "ড্যাও"
-  - "গভর্ন্যান্স"
+  - "dao"
+  - "governance"
 format: presentation
-author: টেড
+author: "টেড"
 breadcrumb: "ড্যাও এবং শহর"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "kullanım-senaryoları"
+  - "use-cases"
   - "dao"
-  - "merkeziyetsizlik"
-  - "sosyal"
+  - "decentralization"
+  - "social"
 format: interview
 author: EthBoulder
 breadcrumb: "Ethereum Yerelliği"

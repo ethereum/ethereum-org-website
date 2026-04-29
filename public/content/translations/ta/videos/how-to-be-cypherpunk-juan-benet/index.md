@@ -7,8 +7,8 @@ uploadDate: 2025-11-23
 duration: "0:18:00"
 educationLevel: beginner
 topic:
-  - "சமூக-கதைகள்"
-  - "சமூகம்"
+  - "community-stories"
+  - "community"
 format: presentation
 author: "வெப்3பிரைவசி நவ்"
 breadcrumb: "சைபர்பங்க் ஆவது எப்படி"

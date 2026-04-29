@@ -7,8 +7,8 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "去中心化科学"
-  - "资金"
+  - "desci"
+  - "funding"
 format: presentation
 author: "埃斯西西"
 breadcrumb: "去中心化科学 (DeSci) 运动"

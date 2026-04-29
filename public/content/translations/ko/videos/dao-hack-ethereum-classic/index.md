@@ -7,15 +7,15 @@ uploadDate: 2021-12-15
 duration: "0:09:48"
 educationLevel: beginner
 topic:
-  - "거버넌스"
-  - "역사"
+  - "governance"
+  - "history"
   - "dao"
 format: explainer
 author: Junion
 breadcrumb: "DAO 해킹"
 ---
 
-**Junion**이 설명하는 2016년 DAO 해킹 사건은 암호화폐 역사상 가장 큰 디지털 탈취 사건 중 하나이며, 블록체인을 포크하기로 한 이더리움 커뮤니티의 논란이 된 결정이 어떻게 이더리움 클래식의 탄생으로 이어졌는지에 대한 이야기입니다.
+<strong>Junion</strong>이 설명하는 2016년 DAO 해킹 사건은 암호화폐 역사상 가장 큰 디지털 탈취 사건 중 하나이며, 블록체인을 포크하기로 한 이더리움 커뮤니티의 논란이 된 결정이 어떻게 이더리움 클래식의 탄생으로 이어졌는지에 대한 이야기입니다.
 
 *이 대본은 Junion이 게시한 [원본 동영상 대본](https://www.youtube.com/watch?v=rNeLuBOVe8A)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집을 거쳤습니다.*
 

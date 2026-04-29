@@ -7,12 +7,12 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "वापर प्रकरणे"
+  - "use-cases"
   - "dao"
-  - "विकेंद्रीकरण"
-  - "सामाजिक"
+  - "decentralization"
+  - "social"
 format: interview
-author: इथबोल्डर
+author: "इथबोल्डर"
 breadcrumb: "इथेरियम लोकलिझम"
 ---
 

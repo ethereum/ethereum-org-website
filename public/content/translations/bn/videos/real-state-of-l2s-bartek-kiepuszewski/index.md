@@ -7,11 +7,11 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "স্কেলিং-এবং-লেয়ার-২"
-  - "রোলআপ"
-  - "লেয়ার-২"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "l2-এর স্টেট"
 ---
 

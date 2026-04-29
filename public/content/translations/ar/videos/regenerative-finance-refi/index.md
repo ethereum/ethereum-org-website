@@ -7,10 +7,10 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "التمويل المتجدد"
-  - "الاستدامة"
+  - "refi"
+  - "sustainability"
 format: explainer
-author: سي إن بي سي تليفيجن
+author: "سي إن بي سي تليفيجن"
 breadcrumb: "التمويل المتجدد"
 ---
 

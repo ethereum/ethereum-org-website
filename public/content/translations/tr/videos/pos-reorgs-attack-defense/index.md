@@ -7,9 +7,9 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "fikir birliği"
+  - "consensus"
   - "pos"
-  - "güvenlik"
+  - "security"
 format: presentation
 author: LisCon
 breadcrumb: "PoS Yeniden Düzenlemeleri"

@@ -8,8 +8,8 @@ duration: "0:24:11"
 educationLevel: advanced
 topic:
   - "restaking"
-  - "EigenLayer"
-  - "bezpečnost"
+  - "eigenlayer"
+  - "security"
 format: presentation
 author: a16z crypto
 breadcrumb: "EigenLayer"

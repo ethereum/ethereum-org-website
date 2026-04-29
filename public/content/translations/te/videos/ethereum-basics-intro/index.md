@@ -7,8 +7,8 @@ uploadDate: 2022-03-01
 duration: "0:11:14"
 educationLevel: beginner
 topic:
-  - "ఎథీరియం"
-  - "పరిచయం"
+  - "ethereum"
+  - "intro"
 format: presentation
 author: "క్వెజార్"
 breadcrumb: "ఎథీరియం బేసిక్స్"

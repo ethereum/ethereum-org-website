@@ -7,9 +7,9 @@ uploadDate: 2025-07-15
 duration: "1:12:30"
 educationLevel: advanced
 topic:
-  - "रोडमॅप-आणि-प्राधान्यक्रम"
+  - "roadmap-and-priorities"
 format: interview
-author: बँकलेस
+author: "बँकलेस"
 breadcrumb: "जस्टिन ड्रेक"
 ---
 

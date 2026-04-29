@@ -7,14 +7,14 @@ uploadDate: 2021-01-14
 duration: "0:04:39"
 educationLevel: beginner
 topic:
-  - "계정"
-  - "암호학"
+  - "accounts"
+  - "cryptography"
 format: tutorial
-author: 오스틴 그리피스
+author: "오스틴 그리피스"
 breadcrumb: "해시 함수 (ETH.BUILD)"
 ---
 
-**오스틴 그리피스(Austin Griffith)**가 ETH.BUILD 시각적 프로그래밍 도구를 사용하여 암호학적 해시 함수가 어떻게 작동하는지 시연하는 튜토리얼로, 결정론, 고정 길이 출력, 단방향 속성 및 머클 트리를 다룹니다.
+<strong>오스틴 그리피스(Austin Griffith)</strong>가 ETH.BUILD 시각적 프로그래밍 도구를 사용하여 암호학적 해시 함수가 어떻게 작동하는지 시연하는 튜토리얼로, 결정론, 고정 길이 출력, 단방향 속성 및 머클 트리를 다룹니다.
 
 *이 대본은 오스틴 그리피스가 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=QJ010l-pBpE)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

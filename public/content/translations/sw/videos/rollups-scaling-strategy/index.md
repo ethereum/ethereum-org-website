@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "kuongeza uwezo"
-  - "mikusanyiko"
-  - "rollup-za-optimistic"
-  - "rollup-za-zk"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: Finematics
 breadcrumb: "Mikusanyiko"

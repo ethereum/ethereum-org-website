@@ -8,9 +8,9 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "वित्त"
+  - "finance"
 format: explainer
-author: फायनेमॅटिक्स
+author: "फायनेमॅटिक्स"
 breadcrumb: "DeFi: वित्ताचे भविष्य"
 ---
 

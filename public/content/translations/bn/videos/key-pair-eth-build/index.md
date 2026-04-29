@@ -7,10 +7,10 @@ uploadDate: 2021-01-14
 duration: "0:04:05"
 educationLevel: beginner
 topic:
-  - "অ্যাকাউন্ট"
-  - "ক্রিপ্টোগ্রাফি"
+  - "accounts"
+  - "cryptography"
 format: tutorial
-author: অস্টিন গ্রিফিথ
+author: "অস্টিন গ্রিফিথ"
 breadcrumb: "কী পেয়ার (ETH.BUILD)"
 ---
 

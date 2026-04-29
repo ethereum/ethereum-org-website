@@ -7,14 +7,14 @@ uploadDate: 2019-04-01
 duration: "0:05:11"
 educationLevel: beginner
 topic:
-  - "탈중앙화 애플리케이션"
-  - "스마트 컨트랙트"
+  - "dapps"
+  - "smart-contracts"
 format: explainer
-author: 디스트릭트제로엑스 네트워크
+author: "디스트릭트제로엑스 네트워크"
 breadcrumb: "Dapp이란 무엇인가요?"
 ---
 
-**디스트릭트제로엑스 네트워크(district0x Network)**가 탈중앙화 애플리케이션(dapp)을 소개하는 설명 자료로, 기존 앱과의 차이점, 블록체인 인프라에서 실행되는 방식, 그리고 보안상의 이점을 다룹니다.
+<strong>디스트릭트제로엑스 네트워크(district0x Network)</strong>가 탈중앙화 애플리케이션(dapp)을 소개하는 설명 자료로, 기존 앱과의 차이점, 블록체인 인프라에서 실행되는 방식, 그리고 보안상의 이점을 다룹니다.
 
 *이 대본은 디스트릭트제로엑스 네트워크가 게시한 [원본 비디오 대본](https://www.youtube.com/watch?v=F50OrwV6Uk8)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

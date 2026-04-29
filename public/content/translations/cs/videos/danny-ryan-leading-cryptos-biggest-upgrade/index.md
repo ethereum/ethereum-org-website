@@ -8,8 +8,8 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "důkaz podílem (PoS)"
-  - "merge"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Rozhovor s Dannym Ryanem"

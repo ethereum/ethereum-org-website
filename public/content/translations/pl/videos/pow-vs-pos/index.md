@@ -7,9 +7,9 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "mechanizmy-konsensusu"
-  - "bezpieczeństwo"
-  - "konsensus"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
 author: Bankless
 breadcrumb: "Debata PoW kontra PoS"

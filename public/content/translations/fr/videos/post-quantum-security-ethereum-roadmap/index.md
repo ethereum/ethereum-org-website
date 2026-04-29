@@ -7,7 +7,7 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "feuille-de-route-et-priorites"
+  - "roadmap-and-priorities"
 format: presentation
 author: ETHBoulder
 breadcrumb: "Feuille de route post-quantique"

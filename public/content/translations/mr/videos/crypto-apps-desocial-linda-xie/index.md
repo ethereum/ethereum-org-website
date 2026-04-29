@@ -7,11 +7,11 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "सोशल"
-  - "विकेंद्रीकरण"
-  - "डॅप्स (dapps)"
+  - "social"
+  - "decentralization"
+  - "dapps"
 format: presentation
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "क्रिप्टो ॲप्स आणि डीसोशल (DeSocial)"
 ---
 

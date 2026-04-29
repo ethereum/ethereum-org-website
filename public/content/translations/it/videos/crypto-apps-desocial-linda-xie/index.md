@@ -8,8 +8,8 @@ duration: "0:29:14"
 educationLevel: beginner
 topic:
   - "social"
-  - "decentralizzazione"
-  - "dapp"
+  - "decentralization"
+  - "dapps"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "App Cripto e DeSocial"

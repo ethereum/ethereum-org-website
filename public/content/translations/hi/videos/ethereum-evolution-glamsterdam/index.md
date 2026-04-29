@@ -7,11 +7,11 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "रोडमैप-और-प्राथमिकताएं"
-  - "रोडमैप"
-  - "अपग्रेड"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
-author: ईटीएचडेनवर
+author: "ईटीएचडेनवर"
 breadcrumb: "इथेरियम का विकास"
 ---
 

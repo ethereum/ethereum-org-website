@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "プライバシーとセキュリティ"
-  - "プライバシー"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
-author: ウェブスリー・プライバシー・ナウ
+author: "ウェブスリー・プライバシー・ナウ"
 breadcrumb: "機関レベルのプライバシー"
 ---
 

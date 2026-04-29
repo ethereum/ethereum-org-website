@@ -7,9 +7,9 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "cơ-chế-đồng-thuận"
-  - "bảo-mật"
-  - "đồng-thuận"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
 author: Bankless
 breadcrumb: "Cuộc tranh luận giữa PoW và PoS"

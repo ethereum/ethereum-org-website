@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "స్కేలింగ్"
-  - "బ్లాబ్‌లు"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "అప్‌గ్రేడ్‌లు"
+  - "upgrades"
 format: interview
 author: "బ్యాంక్‌లెస్"
 breadcrumb: "బ్లాబ్‌స్పేస్ 101"

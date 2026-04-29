@@ -7,8 +7,8 @@ uploadDate: 2022-10-06
 duration: "0:06:01"
 educationLevel: beginner
 topic:
-  - "احیائی مالیات"
-  - "پائیداری"
+  - "refi"
+  - "sustainability"
 format: explainer
 author: "سی این بی سی ٹیلی ویژن"
 breadcrumb: "احیائی مالیات"

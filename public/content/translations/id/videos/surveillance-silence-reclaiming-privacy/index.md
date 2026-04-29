@@ -7,8 +7,8 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "privasi-dan-keamanan"
-  - "privasi"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
 author: EthBoulder
 breadcrumb: "Merebut Kembali Privasi"

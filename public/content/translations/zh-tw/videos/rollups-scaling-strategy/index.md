@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "擴容"
-  - "匯總"
-  - "樂觀-rollup"
-  - "zk-匯總"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: "芬尼馬蒂克斯"
 breadcrumb: "匯總"

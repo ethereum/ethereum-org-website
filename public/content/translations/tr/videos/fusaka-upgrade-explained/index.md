@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "yol-haritasi-ve-oncelikler"
-  - "yukseltmeler"
+  - "roadmap-and-priorities"
+  - "upgrades"
   - "fusaka"
-  - "yol-haritasi"
+  - "roadmap"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Fusaka Yükseltmesi"

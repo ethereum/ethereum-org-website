@@ -11,7 +11,7 @@ topic:
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "రుణం ఇవ్వడం"
+  - "lending"
 format: explainer
 author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "NFTలు మరియు DeFi"

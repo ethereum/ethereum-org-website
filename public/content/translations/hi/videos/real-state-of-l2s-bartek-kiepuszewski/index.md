@@ -11,7 +11,7 @@ topic:
   - "rollups"
   - "layer-2"
 format: presentation
-author: एथेरियम फाउंडेशन
+author: "एथेरियम फाउंडेशन"
 breadcrumb: "L2s की स्थिति"
 ---
 

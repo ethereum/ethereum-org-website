@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "कम्युनिटी-स्टोरीज़"
-  - "कम्युनिटी"
+  - "community-stories"
+  - "community"
 format: presentation
-author: एथेरियम फाउंडेशन
+author: "एथेरियम फाउंडेशन"
 breadcrumb: "चीज़ें जो मुझे पसंद हैं"
 ---
 

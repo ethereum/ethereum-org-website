@@ -7,8 +7,8 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "соціальні мережі"
-  - "децентралізація"
+  - "social"
+  - "decentralization"
 format: explainer
 author: "КоїнМаркетКап"
 breadcrumb: "Децентралізовані соціальні мережі"

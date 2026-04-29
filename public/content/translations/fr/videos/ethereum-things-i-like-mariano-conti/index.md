@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "histoires-de-la-communaute"
-  - "communaute"
+  - "community-stories"
+  - "community"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Ce que j'aime"

@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "গোপনীয়তা-এবং-নিরাপত্তা"
-  - "গোপনীয়তা"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
-author: ওয়েবথ্রিপ্রাইভেসি নাউ
+author: "ওয়েবথ্রিপ্রাইভেসি নাউ"
 breadcrumb: "প্রাতিষ্ঠানিক গোপনীয়তা"
 ---
 

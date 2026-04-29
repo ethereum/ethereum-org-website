@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "mở rộng quy mô"
-  - "khối dữ liệu"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "nâng cấp"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "Không gian khối dữ liệu 101"

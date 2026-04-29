@@ -7,11 +7,11 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "ইথেরিয়াম"
-  - "প্রুফ-অফ-স্টেক (PoS)"
-  - "দ্য মার্জ"
+  - "ethereum"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "ড্যানি রায়ানের সাক্ষাৎকার"
 ---
 

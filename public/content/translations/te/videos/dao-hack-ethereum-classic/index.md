@@ -7,8 +7,8 @@ uploadDate: 2021-12-15
 duration: "0:09:48"
 educationLevel: beginner
 topic:
-  - "పరిపాలన"
-  - "చరిత్ర"
+  - "governance"
+  - "history"
   - "dao"
 format: explainer
 author: "జూనియన్"

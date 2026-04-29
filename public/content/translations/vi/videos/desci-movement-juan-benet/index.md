@@ -7,8 +7,8 @@ uploadDate: 2022-06-30
 duration: "0:50:14"
 educationLevel: intermediate
 topic:
-  - "khoa học phi tập trung"
-  - "tài trợ"
+  - "desci"
+  - "funding"
 format: presentation
 author: EthCC
 breadcrumb: "Phong trào DeSci"

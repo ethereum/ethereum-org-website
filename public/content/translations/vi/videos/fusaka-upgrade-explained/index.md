@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "lộ trình và ưu tiên"
-  - "nâng cấp"
+  - "roadmap-and-priorities"
+  - "upgrades"
   - "fusaka"
-  - "lộ trình"
+  - "roadmap"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Bản nâng cấp Fusaka"

@@ -7,8 +7,8 @@ uploadDate: 2024-04-06
 duration: "0:29:13"
 educationLevel: beginner
 topic:
-  - "以太坊工作原理"
-  - "区块链"
+  - "how-ethereum-works"
+  - "blockchain"
   - "ethereum"
 format: presentation
 author: ETHGlobal

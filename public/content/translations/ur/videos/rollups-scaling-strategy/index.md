@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "اسکیلنگ"
-  - "رول اپس"
-  - "آپٹمسٹک رول اپس"
-  - "زیڈ کے رول اپس"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: "فائن میٹکس"
 breadcrumb: "رول اپس"

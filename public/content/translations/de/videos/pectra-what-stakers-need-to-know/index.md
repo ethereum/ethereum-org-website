@@ -7,9 +7,9 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "Roadmap"
-  - "Pectra"
-  - "Staking"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
 author: Blockdaemon
 breadcrumb: "Pectra für Staker"

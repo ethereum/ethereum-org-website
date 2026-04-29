@@ -7,8 +7,8 @@ uploadDate: 2019-04-01
 duration: "0:05:11"
 educationLevel: beginner
 topic:
-  - "去中心化應用程式 (dapp)"
-  - "智能合約"
+  - "dapps"
+  - "smart-contracts"
 format: explainer
 author: "district0x 網路"
 breadcrumb: "什麼是 Dapp？"

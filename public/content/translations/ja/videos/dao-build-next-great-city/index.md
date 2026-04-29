@@ -7,10 +7,10 @@ uploadDate: 2022-10-04
 duration: "0:09:56"
 educationLevel: beginner
 topic:
-  - "DAO"
-  - "ガバナンス"
+  - "dao"
+  - "governance"
 format: presentation
-author: テッド
+author: "テッド"
 breadcrumb: "DAOと都市"
 ---
 

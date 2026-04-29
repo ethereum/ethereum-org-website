@@ -7,11 +7,11 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "সোশ্যাল"
-  - "বিকেন্দ্রীকরণ"
+  - "social"
+  - "decentralization"
   - "dapps"
 format: presentation
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "ক্রিপ্টো অ্যাপ এবং ডি-সোশ্যাল"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "дорожня-карта-та-пріоритети"
-  - "оновлення"
-  - "фусака"
-  - "дорожня-карта"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
 author: "Етеріум Фаундейшн"
 breadcrumb: "Оновлення Фусака"

@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "jinsi-ethereum-inavyofanya-kazi"
-  - "kuongeza-ukubwa"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "masasisho"
+  - "upgrades"
 format: explainer
 author: Finematics
 breadcrumb: "EIP-4844 Imefafanuliwa"

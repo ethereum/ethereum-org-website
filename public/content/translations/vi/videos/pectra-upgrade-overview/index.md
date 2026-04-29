@@ -7,9 +7,9 @@ uploadDate: 2024-11-14
 duration: "0:20:46"
 educationLevel: intermediate
 topic:
-  - "lộ trình"
+  - "roadmap"
   - "pectra"
-  - "nâng cấp"
+  - "upgrades"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Tổng quan về Pectra"

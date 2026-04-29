@@ -7,7 +7,7 @@ uploadDate: 2025-07-15
 duration: "1:12:30"
 educationLevel: advanced
 topic:
-  - "வழிகாட்டி-வரைபடம்-மற்றும்-முன்னுரிமைகள்"
+  - "roadmap-and-priorities"
 format: interview
 author: "பேங்க்லெஸ்"
 breadcrumb: "ஜஸ்டின் டிரேக்"

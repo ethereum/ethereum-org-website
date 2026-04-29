@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "اسکیلنگ"
-  - "بلابس"
-  - "ڈینکن"
-  - "اپ گریڈز"
+  - "scaling"
+  - "blobs"
+  - "dencun"
+  - "upgrades"
 format: interview
 author: "بینک لیس"
 breadcrumb: "بلاب اسپیس 101"

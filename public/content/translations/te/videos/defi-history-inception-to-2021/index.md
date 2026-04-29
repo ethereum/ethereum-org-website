@@ -8,7 +8,7 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "చరిత్ర"
+  - "history"
 format: explainer
 author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "DeFi చరిత్ర"

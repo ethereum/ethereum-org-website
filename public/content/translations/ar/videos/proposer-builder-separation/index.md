@@ -7,11 +7,11 @@ uploadDate: 2024-02-05
 duration: "0:22:47"
 educationLevel: advanced
 topic:
-  - "خارطة الطريق"
-  - "فصل المقترح عن الباني"
-  - "القيمة القصوى القابلة للاستخراج"
+  - "roadmap"
+  - "pbs"
+  - "mev"
 format: presentation
-author: سي بي إي آر فوروم
+author: "سي بي إي آر فوروم"
 breadcrumb: "شرح فصل المقترح عن الباني (PBS)"
 ---
 

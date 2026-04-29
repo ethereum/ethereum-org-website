@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "privasi-dan-keamanan"
-  - "bukti-tanpa-pengetahuan"
-  - "kriptografi"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: WIRED
 breadcrumb: "Bukti Tanpa Pengetahuan"

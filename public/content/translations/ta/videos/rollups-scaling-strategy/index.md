@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "அளவிடுதல்"
-  - "ரோலப்கள்"
-  - "ஆப்டிமிஸ்டிக்-ரோல்அப்கள்"
-  - "zk-ரோலப்கள்"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "ரோலப்கள்"

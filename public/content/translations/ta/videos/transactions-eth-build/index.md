@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "பரிவர்த்தனைகள்"
+  - "transactions"
 format: tutorial
 author: "ஆஸ்டின் கிரிஃபித்"
 breadcrumb: "பரிவர்த்தனைகள் (ETH.BUILD)"

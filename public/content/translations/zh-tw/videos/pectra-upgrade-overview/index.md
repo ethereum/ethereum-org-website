@@ -7,9 +7,9 @@ uploadDate: 2024-11-14
 duration: "0:20:46"
 educationLevel: intermediate
 topic:
-  - "路線圖"
-  - "佩克特拉"
-  - "升級"
+  - "roadmap"
+  - "pectra"
+  - "upgrades"
 format: presentation
 author: "以太坊基金會"
 breadcrumb: "佩克特拉概覽"

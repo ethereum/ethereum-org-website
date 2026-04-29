@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "ethereum-nasıl-çalışır"
+  - "how-ethereum-works"
   - "staking"
-  - "çekim-işlemleri"
+  - "withdrawals"
 format: explainer
 author: Finematics
 breadcrumb: "Staking Çekim İşlemleri"

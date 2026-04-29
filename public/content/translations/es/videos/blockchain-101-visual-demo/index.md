@@ -7,8 +7,8 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "cadena de bloques"
-  - "criptografía"
+  - "blockchain"
+  - "cryptography"
 format: presentation
 author: Anders Brownworth
 breadcrumb: "Cadena de bloques 101"

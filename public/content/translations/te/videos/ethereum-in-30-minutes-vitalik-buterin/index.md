@@ -7,8 +7,8 @@ uploadDate: 2024-11-12
 duration: "0:31:05"
 educationLevel: intermediate
 topic:
-  - "ఎథీరియం-ఎలా-పనిచేస్తుంది"
-  - "ఎథీరియం"
+  - "how-ethereum-works"
+  - "ethereum"
 format: presentation
 author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "30 నిమిషాల్లో ఎథీరియం"

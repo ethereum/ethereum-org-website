@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "come-funziona-ethereum"
+  - "how-ethereum-works"
   - "staking"
-  - "prelievi"
+  - "withdrawals"
 format: explainer
 author: Finematics
 breadcrumb: "Prelievi dallo staking"

@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "hoja-de-ruta-y-prioridades"
-  - "actualizaciones"
+  - "roadmap-and-priorities"
+  - "upgrades"
   - "fusaka"
-  - "hoja-de-ruta"
+  - "roadmap"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Actualización Fusaka"

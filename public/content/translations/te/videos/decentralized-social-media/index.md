@@ -7,8 +7,8 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "సామాజిక"
-  - "వికేంద్రీకరణ"
+  - "social"
+  - "decentralization"
 format: explainer
 author: "కాయిన్ మార్కెట్ క్యాప్"
 breadcrumb: "వికేంద్రీకృత సోషల్"

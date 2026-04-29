@@ -7,7 +7,7 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "రోడ్‌మ్యాప్ మరియు ప్రాధాన్యతలు"
+  - "roadmap-and-priorities"
 format: presentation
 author: "ఈటీహెచ్‌బౌల్డర్"
 breadcrumb: "పోస్ట్-క్వాంటం రోడ్‌మ్యాప్"

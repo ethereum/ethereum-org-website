@@ -7,8 +7,8 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "சமூக ஊடகம்"
-  - "பரவலாக்கம்"
+  - "social"
+  - "decentralization"
   - "dapps"
 format: presentation
 author: "எத்தீரியம் அறக்கட்டளை"

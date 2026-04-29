@@ -7,8 +7,8 @@ uploadDate: 2024-11-12
 duration: "0:31:05"
 educationLevel: intermediate
 topic:
-  - "як-працює-етеріум"
-  - "етеріум"
+  - "how-ethereum-works"
+  - "ethereum"
 format: presentation
 author: "Фундація Ethereum"
 breadcrumb: "Етеріум за 30 хвилин"

@@ -8,7 +8,7 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "வரலாறு"
+  - "history"
 format: explainer
 author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "DeFi வரலாறு"

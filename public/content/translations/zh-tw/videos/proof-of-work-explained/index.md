@@ -7,7 +7,7 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "共識"
+  - "consensus"
   - "pow"
 format: explainer
 author: "幣安學院"

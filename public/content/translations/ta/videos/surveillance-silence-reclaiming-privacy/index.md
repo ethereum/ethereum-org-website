@@ -7,8 +7,8 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "தனியுரிமை-மற்றும்-பாதுகாப்பு"
-  - "தனியுரிமை"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
 author: "எத்போல்டர்"
 breadcrumb: "தனியுரிமையை மீட்டெடுத்தல்"

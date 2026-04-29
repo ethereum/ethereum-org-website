@@ -7,10 +7,10 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "एकमत"
-  - "अधिकाराचा पुरावा"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
-author: क्रिप्टोइकॉनॉमिक्स स्टडी
+author: "क्रिप्टोइकॉनॉमिक्स स्टडी"
 breadcrumb: "अधिकाराचा पुरावा"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "ölçeklendirme"
-  - "toplamalar"
-  - "iyimser-rolluplar"
-  - "zk-rollupları"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: Finematics
 breadcrumb: "Toplamalar"

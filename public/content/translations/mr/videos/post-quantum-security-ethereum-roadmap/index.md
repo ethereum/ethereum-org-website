@@ -7,9 +7,9 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "रोडमॅप-आणि-प्राधान्यक्रम"
+  - "roadmap-and-priorities"
 format: presentation
-author: ईटीएचबोल्डर
+author: "ईटीएचबोल्डर"
 breadcrumb: "पोस्ट-क्वांटम रोडमॅप"
 ---
 

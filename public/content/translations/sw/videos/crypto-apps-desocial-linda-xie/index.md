@@ -7,8 +7,8 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "kijamii"
-  - "ugatuzi"
+  - "social"
+  - "decentralization"
   - "dapps"
 format: presentation
 author: Ethereum Foundation

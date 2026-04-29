@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "کمیونٹی کی کہانیاں"
-  - "کمیونٹی"
+  - "community-stories"
+  - "community"
 format: presentation
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "چیزیں جو مجھے پسند ہیں"

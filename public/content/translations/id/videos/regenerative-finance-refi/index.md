@@ -8,7 +8,7 @@ duration: "0:06:01"
 educationLevel: beginner
 topic:
   - "refi"
-  - "keberlanjutan"
+  - "sustainability"
 format: explainer
 author: CNBC Television
 breadcrumb: "Keuangan Regeneratif"

@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "skalowanie"
-  - "bloby"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "aktualizacje"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "Blobspace 101"

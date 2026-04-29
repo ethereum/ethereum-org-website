@@ -7,8 +7,8 @@ uploadDate: 2019-05-19
 duration: "1:09:55"
 educationLevel: beginner
 topic:
-  - "安全"
-  - "身分驗證"
+  - "security"
+  - "authentication"
 format: presentation
 author: aantonop
 breadcrumb: "加密貨幣安全"

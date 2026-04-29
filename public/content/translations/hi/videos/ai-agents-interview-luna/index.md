@@ -7,12 +7,12 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "उपयोग के मामले"
-  - "एआई"
-  - "एजेंट"
-  - "डैप्स"
+  - "use-cases"
+  - "ai"
+  - "agents"
+  - "dapps"
 format: interview
-author: वेन शिफ्ट हैपन्स
+author: "वेन शिफ्ट हैपन्स"
 breadcrumb: "एआई एजेंट: लूना"
 ---
 

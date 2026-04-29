@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "రోడ్‌మ్యాప్-మరియు-ప్రాధాన్యతలు"
-  - "రోడ్‌మ్యాప్"
-  - "అప్‌గ్రేడ్‌లు"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: ETHDenver
 breadcrumb: "ఎథీరియం పరిణామం"

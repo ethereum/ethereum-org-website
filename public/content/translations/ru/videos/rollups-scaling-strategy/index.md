@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "масштабирование"
-  - "роллапы"
-  - "оптимистичные-роллапы"
-  - "zk-роллапы"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: "Файнматикс"
 breadcrumb: "Роллапы"

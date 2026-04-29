@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "ölçeklendirme"
-  - "blob'lar"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "güncellemeler"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "Blob Alanı 101"

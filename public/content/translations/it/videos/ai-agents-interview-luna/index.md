@@ -7,10 +7,10 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "casi d'uso"
-  - "ia"
-  - "agenti"
-  - "dapp"
+  - "use-cases"
+  - "ai"
+  - "agents"
+  - "dapps"
 format: interview
 author: When Shift Happens
 breadcrumb: "Agenti IA: Luna"

@@ -7,9 +7,9 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "ஒருமித்த-வழிமுறைகள்"
-  - "பாதுகாப்பு"
-  - "ஒருமித்த-கருத்து"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
 author: "பேங்க்லெஸ்"
 breadcrumb: "PoW மற்றும் PoS விவாதம்"

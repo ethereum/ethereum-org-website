@@ -8,7 +8,7 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "ఫైనాన్స్"
+  - "finance"
 format: explainer
 author: "ఫైన్‌మ్యాటిక్స్"
 breadcrumb: "DeFi: ఫైనాన్స్ భవిష్యత్తు"

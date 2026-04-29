@@ -7,11 +7,11 @@ uploadDate: 2024-11-14
 duration: "0:20:46"
 educationLevel: intermediate
 topic:
-  - "خارطة الطريق"
-  - "بيكترا"
-  - "الترقيات"
+  - "roadmap"
+  - "pectra"
+  - "upgrades"
 format: presentation
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "نظرة عامة على بيكترا"
 ---
 

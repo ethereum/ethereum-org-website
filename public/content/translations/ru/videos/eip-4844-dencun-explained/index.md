@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "как-работает-эфириум"
-  - "масштабирование"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "обновления"
+  - "upgrades"
 format: explainer
 author: "Файнматикс"
 breadcrumb: "Объяснение EIP-4844"

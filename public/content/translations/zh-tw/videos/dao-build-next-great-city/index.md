@@ -8,7 +8,7 @@ duration: "0:09:56"
 educationLevel: beginner
 topic:
   - "dao"
-  - "治理"
+  - "governance"
 format: presentation
 author: "泰德"
 breadcrumb: "DAO 與城市"

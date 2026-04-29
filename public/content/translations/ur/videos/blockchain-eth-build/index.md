@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "کان کنی"
-  - "بلاک چین"
+  - "mining"
+  - "blockchain"
 format: tutorial
 author: "آسٹن گریفتھ"
 breadcrumb: "بلاک چین (ETH.BUILD)"

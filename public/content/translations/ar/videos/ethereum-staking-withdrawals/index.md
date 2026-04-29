@@ -7,11 +7,11 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "كيف-تعمل-إيثيريوم"
-  - "التخزين"
-  - "عمليات السحب"
+  - "how-ethereum-works"
+  - "staking"
+  - "withdrawals"
 format: explainer
-author: فاينماتيكس
+author: "فاينماتيكس"
 breadcrumb: "سحب التخزين"
 ---
 

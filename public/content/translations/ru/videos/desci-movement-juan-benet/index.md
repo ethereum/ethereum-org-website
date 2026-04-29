@@ -8,7 +8,7 @@ duration: "0:50:14"
 educationLevel: intermediate
 topic:
   - "desci"
-  - "финансирование"
+  - "funding"
 format: presentation
 author: "ЭтСиСи"
 breadcrumb: "Движение DeSci"

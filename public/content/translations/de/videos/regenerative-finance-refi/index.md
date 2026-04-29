@@ -8,7 +8,7 @@ duration: "0:06:01"
 educationLevel: beginner
 topic:
   - "refi"
-  - "nachhaltigkeit"
+  - "sustainability"
 format: explainer
 author: CNBC Television
 breadcrumb: "Regeneratives Finanzwesen"

@@ -7,7 +7,7 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "ஒருமித்த கருத்து"
+  - "consensus"
   - "pow"
 format: explainer
 author: "பைனான்ஸ் அகாடமி (Binance Academy)"

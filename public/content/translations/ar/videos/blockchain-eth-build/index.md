@@ -7,10 +7,10 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "التعدين"
-  - "سلسلة الكتل"
+  - "mining"
+  - "blockchain"
 format: tutorial
-author: أوستن غريفيث
+author: "أوستن غريفيث"
 breadcrumb: "سلسلة الكتل (ETH.BUILD)"
 ---
 

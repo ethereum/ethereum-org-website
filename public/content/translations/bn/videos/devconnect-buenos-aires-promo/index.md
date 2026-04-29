@@ -7,10 +7,10 @@ uploadDate: 2025-09-15
 duration: "0:00:25"
 educationLevel: beginner
 topic:
-  - "সম্প্রদায়ের গল্প"
-  - "সম্প্রদায়"
+  - "community-stories"
+  - "community"
 format: explainer
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "Devconnect Buenos Aires"
 ---
 

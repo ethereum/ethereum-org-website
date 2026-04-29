@@ -7,8 +7,8 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "консенсус"
-  - "доказательство полномочий"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
 author: "Криптоэкономикс Стади"
 breadcrumb: "Доказательство полномочий"

@@ -10,7 +10,7 @@ topic:
   - "community-stories"
   - "community"
 format: explainer
-author: إيثيريوم فاونديشن
+author: "إيثيريوم فاونديشن"
 breadcrumb: "ملخص Devconnect"
 ---
 

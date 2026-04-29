@@ -8,8 +8,8 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "ప్రూఫ్-ఆఫ్-స్టేక్"
-  - "ది మెర్జ్"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "డానీ ర్యాన్ ఇంటర్వ్యూ"

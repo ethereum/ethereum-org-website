@@ -7,11 +7,11 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "プライバシーとセキュリティ"
-  - "ゼロ知識証明"
-  - "暗号技術"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
-author: ワイヤード
+author: "ワイヤード"
 breadcrumb: "ゼロ知識証明"
 ---
 

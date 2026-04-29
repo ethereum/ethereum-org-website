@@ -7,9 +7,9 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "lộ trình"
+  - "roadmap"
   - "pectra"
-  - "đặt cọc"
+  - "staking"
 format: explainer
 author: Blockdaemon
 breadcrumb: "Pectra cho người đặt cọc"

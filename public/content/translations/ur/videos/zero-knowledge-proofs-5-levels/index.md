@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "رازداری-اور-سیکیورٹی"
-  - "صفر-علم-ثبوت"
-  - "علمِ-تشفیر"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: "وائرڈ"
 breadcrumb: "صفر علم ثبوت"

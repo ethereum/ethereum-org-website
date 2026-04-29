@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "அளவிடுதல்"
-  - "தரவுத் திரளைகள்"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "மேம்படுத்தல்கள்"
+  - "upgrades"
 format: interview
 author: "பேங்க்லெஸ்"
 breadcrumb: "தரவுத் திரளை வெளி 101"

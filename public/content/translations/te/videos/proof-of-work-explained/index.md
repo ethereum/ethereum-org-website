@@ -7,7 +7,7 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "ఏకాభిప్రాయం"
+  - "consensus"
   - "pow"
 format: explainer
 author: "బైనాన్స్ అకాడమీ"

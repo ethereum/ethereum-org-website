@@ -7,8 +7,8 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "sociální sítě"
-  - "decentralizace"
+  - "social"
+  - "decentralization"
 format: explainer
 author: CoinMarketCap
 breadcrumb: "Decentralizované sociální sítě"

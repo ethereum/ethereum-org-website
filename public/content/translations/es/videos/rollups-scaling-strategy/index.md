@@ -7,9 +7,9 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "escalabilidad"
+  - "scaling"
   - "rollups"
-  - "rollups-optimistas"
+  - "optimistic-rollups"
   - "zk-rollups"
 format: explainer
 author: Finematics

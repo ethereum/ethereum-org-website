@@ -7,9 +7,9 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "ট্রানজ্যাকশন"
+  - "transactions"
 format: tutorial
-author: অস্টিন গ্রিফিথ
+author: "অস্টিন গ্রিফিথ"
 breadcrumb: "ট্রানজ্যাকশন (ETH.BUILD)"
 ---
 

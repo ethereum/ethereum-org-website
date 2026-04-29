@@ -7,9 +7,9 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "রোডম্যাপ-এবং-অগ্রাধিকার"
+  - "roadmap-and-priorities"
 format: presentation
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "পরবর্তী 10 বছর"
 ---
 

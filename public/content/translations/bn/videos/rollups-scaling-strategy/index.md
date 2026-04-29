@@ -7,12 +7,12 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "স্কেলিং"
-  - "রোলআপ"
-  - "অপটিমিস্টিক রোলআপ"
-  - "zk-রোলআপ"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
-author: ফাইনম্যাটিক্স
+author: "ফাইনম্যাটিক্স"
 breadcrumb: "রোলআপ"
 ---
 

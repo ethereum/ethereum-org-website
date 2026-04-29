@@ -7,9 +7,9 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "ஸ்கேலிங்-மற்றும்-அடுக்கு-2"
-  - "ரோலப்கள்"
-  - "அடுக்கு-2"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
 author: "எத்தீரியம் அறக்கட்டளை"
 breadcrumb: "L2-களின் நிலை"

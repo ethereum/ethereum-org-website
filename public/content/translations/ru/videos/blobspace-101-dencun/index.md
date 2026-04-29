@@ -7,10 +7,10 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "масштабирование"
-  - "блобы"
+  - "scaling"
+  - "blobs"
   - "dencun"
-  - "обновления"
+  - "upgrades"
 format: interview
 author: Bankless
 breadcrumb: "Пространство блобов 101"

@@ -7,10 +7,10 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "সামাজিক"
-  - "বিকেন্দ্রীকরণ"
+  - "social"
+  - "decentralization"
 format: explainer
-author: কয়েনমার্কেটক্যাপ
+author: "কয়েনমার্কেটক্যাপ"
 breadcrumb: "বিকেন্দ্রীকৃত সোশ্যাল"
 ---
 

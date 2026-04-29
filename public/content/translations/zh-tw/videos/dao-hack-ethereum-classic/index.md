@@ -7,8 +7,8 @@ uploadDate: 2021-12-15
 duration: "0:09:48"
 educationLevel: beginner
 topic:
-  - "治理"
-  - "歷史"
+  - "governance"
+  - "history"
   - "dao"
 format: explainer
 author: Junion

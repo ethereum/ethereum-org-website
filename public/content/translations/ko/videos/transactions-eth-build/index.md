@@ -7,13 +7,13 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "트랜잭션"
+  - "transactions"
 format: tutorial
-author: 오스틴 그리피스
+author: "오스틴 그리피스"
 breadcrumb: "트랜잭션 (ETH.BUILD)"
 ---
 
-**오스틴 그리피스(Austin Griffith)**가 ETH.BUILD 시각적 프로그래밍 도구를 사용하여 이더리움 트랜잭션이 어떻게 작동하는지 보여주는 튜토리얼입니다. 트랜잭션 구조, 가스 가격, 서명하기, 브로드캐스팅 및 트랜잭션 풀을 다룹니다.
+<strong>오스틴 그리피스(Austin Griffith)</strong>가 ETH.BUILD 시각적 프로그래밍 도구를 사용하여 이더리움 트랜잭션이 어떻게 작동하는지 보여주는 튜토리얼입니다. 트랜잭션 구조, 가스 가격, 서명하기, 브로드캐스팅 및 트랜잭션 풀을 다룹니다.
 
 *이 대본은 오스틴 그리피스가 게시한 [원본 동영상 대본](https://www.youtube.com/watch?v=er-0ihqFQB0)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

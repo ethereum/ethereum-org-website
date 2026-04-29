@@ -7,7 +7,7 @@ uploadDate: 2025-07-15
 duration: "1:12:30"
 educationLevel: advanced
 topic:
-  - "路线图与优先级"
+  - "roadmap-and-priorities"
 format: interview
 author: "班克莱斯"
 breadcrumb: "Justin Drake"

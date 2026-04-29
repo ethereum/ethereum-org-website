@@ -7,7 +7,7 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "дорожная-карта-и-приоритеты"
+  - "roadmap-and-priorities"
 format: presentation
 author: "Фонд Ethereum"
 breadcrumb: "Следующие 10 лет"

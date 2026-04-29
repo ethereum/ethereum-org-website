@@ -7,14 +7,14 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "소셜"
-  - "탈중앙화"
+  - "social"
+  - "decentralization"
 format: explainer
-author: 코인마켓캡
+author: "코인마켓캡"
 breadcrumb: "탈중앙화된 소셜"
 ---
 
-**코인마켓캡(CoinMarketCap)**이 탈중앙화된 소셜 미디어 플랫폼, 중앙화된 네트워크와의 차이점, 표현의 자유에 따른 장단점, 상호운용성의 이점, 그리고 마스토돈(Mastodon), 마인즈(Minds), 스팀(Steem), 디튜브(DTube), 오디우스(Audius), 서브소셜(Subsocial) 등 주요 플랫폼에 대해 설명합니다.
+<strong>코인마켓캡(CoinMarketCap)</strong>이 탈중앙화된 소셜 미디어 플랫폼, 중앙화된 네트워크와의 차이점, 표현의 자유에 따른 장단점, 상호운용성의 이점, 그리고 마스토돈(Mastodon), 마인즈(Minds), 스팀(Steem), 디튜브(DTube), 오디우스(Audius), 서브소셜(Subsocial) 등 주요 플랫폼에 대해 설명합니다.
 
 *이 스크립트는 코인마켓캡이 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=UdT2lpcGvcQ)의 접근성 향상 버전입니다. 가독성을 위해 약간 편집되었습니다.*
 

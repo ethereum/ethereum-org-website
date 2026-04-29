@@ -7,9 +7,9 @@ uploadDate: 2024-11-14
 duration: "0:20:46"
 educationLevel: intermediate
 topic:
-  - "дорожная карта"
-  - "пектра"
-  - "обновления"
+  - "roadmap"
+  - "pectra"
+  - "upgrades"
 format: presentation
 author: "Фонд Ethereum"
 breadcrumb: "Обзор Пектра"

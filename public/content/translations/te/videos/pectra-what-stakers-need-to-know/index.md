@@ -7,9 +7,9 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "రోడ్‌మ్యాప్"
-  - "పెక్ట్రా"
-  - "స్టేకింగ్"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
 author: "బ్లాక్‌డీమన్"
 breadcrumb: "స్టేకర్ల కోసం పెక్ట్రా"

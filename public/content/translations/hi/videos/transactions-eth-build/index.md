@@ -7,9 +7,9 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "लेन-देन"
+  - "transactions"
 format: tutorial
-author: ऑस्टिन ग्रिफिथ
+author: "ऑस्टिन ग्रिफिथ"
 breadcrumb: "लेन-देन (ETH.BUILD)"
 ---
 

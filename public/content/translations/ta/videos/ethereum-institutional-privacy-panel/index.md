@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "தனியுரிமை-மற்றும்-பாதுகாப்பு"
-  - "தனியுரிமை"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
 author: "வெப்3பிரைவசி நவ்"
 breadcrumb: "நிறுவன தனியுரிமை"

@@ -7,12 +7,12 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "خارطة الطريق والأولويات"
-  - "ترقيات"
-  - "فوساكا"
-  - "خارطة الطريق"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
-author: إيثيريوم فاونديشن
+author: "إيثيريوم فاونديشن"
 breadcrumb: "ترقية فوساكا"
 ---
 

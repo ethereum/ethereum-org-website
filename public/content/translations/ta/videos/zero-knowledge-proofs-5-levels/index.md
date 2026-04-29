@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "தனியுரிமை-மற்றும்-பாதுகாப்பு"
-  - "பூஜ்ஜிய-அறிவுச்-சான்றுகள்"
-  - "குறியாக்கவியல்"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: "வயர்டு"
 breadcrumb: "பூஜ்ஜிய-அறிவுச் சான்றுகள்"

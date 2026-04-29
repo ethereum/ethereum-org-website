@@ -7,9 +7,9 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "taratibu-za-makubaliano"
-  - "usalama"
-  - "mwafaka"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
 author: Bankless
 breadcrumb: "Mjadala wa PoW dhidi ya PoS"

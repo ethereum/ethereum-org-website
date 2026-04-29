@@ -7,9 +7,9 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "mise-a-l-echelle-et-couche-2"
+  - "scaling-and-layer-2"
   - "rollups"
-  - "couche-2"
+  - "layer-2"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "État des l2"

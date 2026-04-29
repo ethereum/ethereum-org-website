@@ -12,7 +12,7 @@ topic:
   - "fusaka"
   - "roadmap"
 format: explainer
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "ফুসাকা আপগ্রেড"
 ---
 

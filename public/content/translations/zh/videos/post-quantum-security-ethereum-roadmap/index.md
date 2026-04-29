@@ -7,7 +7,7 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "路线图与优先级"
+  - "roadmap-and-priorities"
 format: presentation
 author: ETHBoulder
 breadcrumb: "后量子路线图"

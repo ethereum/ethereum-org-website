@@ -7,10 +7,10 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "隱私與安全"
-  - "擴容與第二層 (L2)"
-  - "隱私"
-  - "第二層 (L2)"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
 author: Web3Privacy Now
 breadcrumb: "游擊式第二層 (L2)"

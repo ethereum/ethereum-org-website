@@ -7,10 +7,10 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "समुदाय-कथा"
-  - "समुदाय"
+  - "community-stories"
+  - "community"
 format: explainer
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "Devconnect आढावा"
 ---
 

@@ -7,8 +7,8 @@ uploadDate: 2019-05-19
 duration: "1:09:55"
 educationLevel: beginner
 topic:
-  - "सुरक्षा"
-  - "प्रमाणीकरण"
+  - "security"
+  - "authentication"
 format: presentation
 author: aantonop
 breadcrumb: "क्रिप्टो सुरक्षा"

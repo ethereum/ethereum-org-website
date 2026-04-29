@@ -7,8 +7,8 @@ uploadDate: 2025-11-23
 duration: "0:18:00"
 educationLevel: beginner
 topic:
-  - "истории сообщества"
-  - "сообщество"
+  - "community-stories"
+  - "community"
 format: presentation
 author: "Веб3Прайваси Нау"
 breadcrumb: "Как быть шифропанком"

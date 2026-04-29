@@ -7,11 +7,11 @@ uploadDate: 2024-11-14
 duration: "0:20:46"
 educationLevel: intermediate
 topic:
-  - "रोडमॅप"
-  - "पेक्ट्रा"
-  - "अपग्रेड्स"
+  - "roadmap"
+  - "pectra"
+  - "upgrades"
 format: presentation
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "पेक्ट्रा विहंगावलोकन"
 ---
 

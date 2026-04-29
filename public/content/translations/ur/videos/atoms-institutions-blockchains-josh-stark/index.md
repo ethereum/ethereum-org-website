@@ -7,9 +7,9 @@ uploadDate: 2024-04-06
 duration: "0:29:13"
 educationLevel: beginner
 topic:
-  - "ایتھیریم کیسے کام کرتا ہے"
-  - "بلاک چین"
-  - "ایتھیریم"
+  - "how-ethereum-works"
+  - "blockchain"
+  - "ethereum"
 format: presentation
 author: "ایتھ گلوبل (ETHGlobal)"
 breadcrumb: "ایٹم، ادارے، بلاک چینز"

@@ -7,8 +7,8 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "區塊鏈"
-  - "密碼學"
+  - "blockchain"
+  - "cryptography"
 format: presentation
 author: "安德斯·布朗沃思"
 breadcrumb: "區塊鏈 101"

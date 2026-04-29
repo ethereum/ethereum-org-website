@@ -7,10 +7,10 @@ uploadDate: 2025-11-22
 duration: "0:16:30"
 educationLevel: beginner
 topic:
-  - "কমিউনিটির-গল্প"
-  - "কমিউনিটি"
+  - "community-stories"
+  - "community"
 format: presentation
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "আমার পছন্দের বিষয়গুলো"
 ---
 

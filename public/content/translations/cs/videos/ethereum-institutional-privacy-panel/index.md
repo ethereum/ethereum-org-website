@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "soukromí a bezpečnost"
-  - "soukromí"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
 author: Web3Privacy Now
 breadcrumb: "Institucionální soukromí"

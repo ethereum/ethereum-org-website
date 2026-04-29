@@ -7,9 +7,9 @@ uploadDate: 2025-03-10
 duration: "0:29:14"
 educationLevel: beginner
 topic:
-  - "سوشل"
-  - "لامرکزیت"
-  - "ڈی ایپس"
+  - "social"
+  - "decentralization"
+  - "dapps"
 format: presentation
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "کرپٹو ایپس اور ڈی سوشل"

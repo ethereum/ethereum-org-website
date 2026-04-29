@@ -7,10 +7,10 @@ uploadDate: 2021-02-03
 duration: "0:14:28"
 educationLevel: intermediate
 topic:
-  - "स्केलिंग"
-  - "लेयर-2"
+  - "scaling"
+  - "layer-2"
 format: explainer
-author: फाइनेमैटिक्स
+author: "फाइनेमैटिक्स"
 breadcrumb: "लेयर 2 स्केलिंग"
 ---
 

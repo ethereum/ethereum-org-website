@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "以太坊運作原理"
-  - "擴容"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "升級"
+  - "upgrades"
 format: explainer
 author: Finematics
 breadcrumb: "EIP-4844 解析"

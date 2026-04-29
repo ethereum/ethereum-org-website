@@ -7,8 +7,8 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "konsensus"
-  - "rantai blok"
+  - "consensus"
+  - "blockchain"
 format: explainer
 author: Tech in Asia
 breadcrumb: "Mekanisme Konsensus"

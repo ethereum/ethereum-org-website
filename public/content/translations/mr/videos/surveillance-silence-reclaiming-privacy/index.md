@@ -7,10 +7,10 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "गोपनीयता-आणि-सुरक्षा"
-  - "गोपनीयता"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
-author: इथबोल्डर
+author: "इथबोल्डर"
 breadcrumb: "गोपनीयता परत मिळवणे"
 ---
 

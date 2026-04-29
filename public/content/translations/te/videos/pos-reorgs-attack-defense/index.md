@@ -7,9 +7,9 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "ఏకాభిప్రాయం"
+  - "consensus"
   - "pos"
-  - "భద్రత"
+  - "security"
 format: presentation
 author: "లిస్కాన్"
 breadcrumb: "PoS పునర్వ్యవస్థీకరణలు"

@@ -9,7 +9,7 @@ educationLevel: intermediate
 topic:
   - "roadmap"
   - "pectra"
-  - "aggiornamenti"
+  - "upgrades"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Panoramica su Pectra"

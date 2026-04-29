@@ -8,7 +8,7 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "fedha"
+  - "finance"
 format: explainer
 author: Finematics
 breadcrumb: "DeFi: Mustakabali wa Fedha"

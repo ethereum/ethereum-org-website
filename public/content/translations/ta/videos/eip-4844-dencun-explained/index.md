@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "எத்திரியம்-செயல்படும்-விதம்"
-  - "அளவிடுதல்"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "மேம்பாடுகள்"
+  - "upgrades"
 format: explainer
 author: "ஃபைன்மேட்டிக்ஸ்"
 breadcrumb: "EIP-4844 விளக்கம்"

@@ -8,7 +8,7 @@ duration: "0:05:11"
 educationLevel: beginner
 topic:
   - "dapps"
-  - "inteligentne-kontrakty"
+  - "smart-contracts"
 format: explainer
 author: district0x Network
 breadcrumb: "Czym jest dapp?"

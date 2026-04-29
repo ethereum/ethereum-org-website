@@ -7,10 +7,10 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "ঐক্যমত"
-  - "প্রুফ-অফ-অথরিটি"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
-author: ক্রিপ্টোইকোনমিক্স স্টাডি
+author: "ক্রিপ্টোইকোনমিক্স স্টাডি"
 breadcrumb: "প্রুফ-অফ-অথরিটি"
 ---
 

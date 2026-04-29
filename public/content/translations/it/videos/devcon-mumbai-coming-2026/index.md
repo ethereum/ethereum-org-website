@@ -7,7 +7,7 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "storie-della-community"
+  - "community-stories"
   - "community"
 format: explainer
 author: Ethereum Foundation

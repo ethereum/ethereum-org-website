@@ -7,8 +7,8 @@ uploadDate: 2025-03-10
 duration: "0:22:45"
 educationLevel: intermediate
 topic:
-  - "privacidade"
-  - "segurança"
+  - "privacy"
+  - "security"
 format: presentation
 author: Devconnect
 breadcrumb: "Privacidade"

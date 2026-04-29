@@ -7,8 +7,8 @@ uploadDate: 2024-11-12
 duration: "0:31:05"
 educationLevel: intermediate
 topic:
-  - "как работает Эфириум"
-  - "Ethereum"
+  - "how-ethereum-works"
+  - "ethereum"
 format: presentation
 author: "Фонд Ethereum"
 breadcrumb: "Эфириум за 30 минут"

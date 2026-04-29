@@ -7,7 +7,7 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "ramani-ya-njia-na-vipaumbele"
+  - "roadmap-and-priorities"
 format: presentation
 author: Ethereum Foundation
 breadcrumb: "Miaka 10 Ijayo"

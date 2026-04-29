@@ -11,7 +11,7 @@ topic:
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "借贷"
+  - "lending"
 format: explainer
 author: "芬内马蒂克斯"
 breadcrumb: "NFT 与 DeFi"

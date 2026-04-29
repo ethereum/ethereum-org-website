@@ -7,14 +7,14 @@ uploadDate: 2024-08-20
 duration: "0:36:34"
 educationLevel: beginner
 topic:
-  - "커뮤니티 스토리"
-  - "커뮤니티"
+  - "community-stories"
+  - "community"
 format: interview
-author: 이더리움 파운데이션
+author: "이더리움 파운데이션"
 breadcrumb: "에이브(Aave) 구축하기"
 ---
 
-데브커넥트(Devconnect)에서 진행된 오프스테이지(Offstage) 인터뷰로, 진행자 빈지(Binji)와 에이브(Aave) 창립자 **스타니 쿨레초프(Stani Kulechov)**가 젠가 게임을 하며 핀란드의 아이스하키 소년에서 탈중앙화 금융(DeFi)의 가장 중요한 프로토콜 중 하나를 구축하기까지의 여정에 대해 이야기합니다.
+데브커넥트(Devconnect)에서 진행된 오프스테이지(Offstage) 인터뷰로, 진행자 빈지(Binji)와 에이브(Aave) 창립자 <strong>스타니 쿨레초프(Stani Kulechov)</strong>가 젠가 게임을 하며 핀란드의 아이스하키 소년에서 탈중앙화 금융(DeFi)의 가장 중요한 프로토콜 중 하나를 구축하기까지의 여정에 대해 이야기합니다.
 
 *이 스크립트는 이더리움 재단이 게시한 [원본 비디오 스크립트](https://www.youtube.com/watch?v=EWe-cjT9IQs)의 접근성 향상 버전입니다. 가독성을 위해 약간의 편집이 이루어졌습니다.*
 

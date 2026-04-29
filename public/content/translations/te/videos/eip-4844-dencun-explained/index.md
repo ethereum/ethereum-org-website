@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "ఎథీరియం-ఎలా-పనిచేస్తుంది"
-  - "స్కేలింగ్"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "నవీకరణలు"
+  - "upgrades"
 format: explainer
 author: "ఫైన్‌మాటిక్స్"
 breadcrumb: "EIP-4844 వివరణ"

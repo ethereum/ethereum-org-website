@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "ఎథీరియం-ఎలా-పనిచేస్తుంది"
-  - "రోడ్‌మ్యాప్-మరియు-ప్రాధాన్యతలు"
-  - "పరిపాలన"
-  - "నవీకరణలు"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: "ఎథ్‌బోల్డర్"
 breadcrumb: "కోర్ పరిపాలన"

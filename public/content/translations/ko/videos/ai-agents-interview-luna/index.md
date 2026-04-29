@@ -7,12 +7,12 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "사용 사례"
-  - "AI"
-  - "에이전트"
+  - "use-cases"
+  - "ai"
+  - "agents"
   - "dapps"
 format: interview
-author: 웬 시프트 해픈스
+author: "웬 시프트 해픈스"
 breadcrumb: "AI 에이전트: 루나"
 ---
 

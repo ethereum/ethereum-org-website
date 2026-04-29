@@ -7,9 +7,9 @@ uploadDate: 2025-03-01
 duration: "0:21:34"
 educationLevel: intermediate
 topic:
-  - "வழிகாட்டி-வரைபடம்-மற்றும்-முன்னுரிமைகள்"
-  - "வழிகாட்டி-வரைபடம்"
-  - "மேம்படுத்தல்கள்"
+  - "roadmap-and-priorities"
+  - "roadmap"
+  - "upgrades"
 format: presentation
 author: "ஈடிஎச்டென்வர்"
 breadcrumb: "எத்திரியத்தின் பரிணாமம்"

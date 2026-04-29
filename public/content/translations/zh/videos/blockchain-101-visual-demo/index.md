@@ -7,8 +7,8 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "区块链"
-  - "密码学"
+  - "blockchain"
+  - "cryptography"
 format: presentation
 author: "安德斯·布朗沃思"
 breadcrumb: "区块链基础知识"

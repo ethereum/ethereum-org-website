@@ -7,10 +7,10 @@ uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "রিস্টেকিং"
-  - "নিরাপত্তা"
+  - "restaking"
+  - "security"
 format: explainer
-author: সিবিইআর ফোরাম
+author: "সিবিইআর ফোরাম"
 breadcrumb: "রিস্টেকিং"
 ---
 

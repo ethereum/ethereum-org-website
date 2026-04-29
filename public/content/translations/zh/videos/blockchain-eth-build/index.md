@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:22:44"
 educationLevel: beginner
 topic:
-  - "挖矿"
-  - "区块链"
+  - "mining"
+  - "blockchain"
 format: tutorial
 author: "奥斯汀·格里菲斯"
 breadcrumb: "区块链 (ETH.BUILD)"

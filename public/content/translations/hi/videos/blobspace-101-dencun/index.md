@@ -7,12 +7,12 @@ uploadDate: 2024-02-27
 duration: "1:02:31"
 educationLevel: intermediate
 topic:
-  - "स्केलिंग"
-  - "ब्लॉब्स"
-  - "Dencun"
-  - "अपग्रेड"
+  - "scaling"
+  - "blobs"
+  - "dencun"
+  - "upgrades"
 format: interview
-author: बैंकलेस
+author: "बैंकलेस"
 breadcrumb: "ब्लॉबस्पेस 101"
 ---
 

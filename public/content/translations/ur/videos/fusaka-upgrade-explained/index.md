@@ -7,10 +7,10 @@ uploadDate: 2025-12-05
 duration: "0:02:40"
 educationLevel: beginner
 topic:
-  - "روڈ میپ اور ترجیحات"
-  - "اپ گریڈز"
-  - "فوساکا"
-  - "روڈ میپ"
+  - "roadmap-and-priorities"
+  - "upgrades"
+  - "fusaka"
+  - "roadmap"
 format: explainer
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "فوساکا اپ گریڈ"

@@ -7,11 +7,11 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "स्केलिंग-आणि-स्तर-२"
-  - "रोलअप्स"
-  - "स्तर-२"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "L2s ची स्थिती"
 ---
 

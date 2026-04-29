@@ -7,8 +7,8 @@ uploadDate: 2022-03-01
 duration: "0:11:14"
 educationLevel: beginner
 topic:
-  - "эфириум"
-  - "введение"
+  - "ethereum"
+  - "intro"
 format: presentation
 author: "Квезар"
 breadcrumb: "Основы Эфириума"

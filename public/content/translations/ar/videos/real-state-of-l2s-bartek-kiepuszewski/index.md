@@ -7,11 +7,11 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "التوسع والطبقة 2"
-  - "التجميعات"
-  - "الطبقة 2"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "حالة شبكات الطبقة 2 (L2)"
 ---
 

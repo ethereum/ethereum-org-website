@@ -7,8 +7,8 @@ uploadDate: 2024-11-15
 duration: "0:44:45"
 educationLevel: beginner
 topic:
-  - "隱私與安全"
-  - "隱私"
+  - "privacy-and-security"
+  - "privacy"
 format: presentation
 author: "伊斯波德"
 breadcrumb: "重拾隱私"

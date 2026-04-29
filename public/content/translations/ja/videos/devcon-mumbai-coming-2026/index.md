@@ -7,10 +7,10 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "コミュニティストーリー"
-  - "コミュニティ"
+  - "community-stories"
+  - "community"
 format: explainer
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "Devconムンバイ"
 ---
 

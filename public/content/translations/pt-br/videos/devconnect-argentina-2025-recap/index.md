@@ -7,8 +7,8 @@ uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "historias-da-comunidade"
-  - "comunidade"
+  - "community-stories"
+  - "community"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Resumo da Devconnect"

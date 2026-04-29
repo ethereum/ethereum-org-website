@@ -7,9 +7,9 @@ uploadDate: 2022-11-29
 duration: "0:18:41"
 educationLevel: advanced
 topic:
-  - "கருத்தொற்றுமை"
-  - "உரிமைச் சான்று (pos)"
-  - "பாதுகாப்பு"
+  - "consensus"
+  - "pos"
+  - "security"
 format: presentation
 author: "லிஸ்கான்"
 breadcrumb: "PoS மறுசீரமைப்புகள்"

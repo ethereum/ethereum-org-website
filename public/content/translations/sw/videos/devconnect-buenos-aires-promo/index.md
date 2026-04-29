@@ -7,8 +7,8 @@ uploadDate: 2025-09-15
 duration: "0:00:25"
 educationLevel: beginner
 topic:
-  - "hadithi-za-jamii"
-  - "jamii"
+  - "community-stories"
+  - "community"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Devconnect Buenos Aires"

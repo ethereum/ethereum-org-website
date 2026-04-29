@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "以太坊工作原理"
-  - "扩容"
-  - "EIP-4844"
-  - "登昆升级"
-  - "升级"
+  - "how-ethereum-works"
+  - "scaling"
+  - "eip-4844"
+  - "dencun"
+  - "upgrades"
 format: explainer
 author: "菲内马蒂克斯"
 breadcrumb: "EIP-4844 详解"

@@ -7,8 +7,8 @@ uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "再質押"
-  - "安全性"
+  - "restaking"
+  - "security"
 format: explainer
 author: "CBER 論壇"
 breadcrumb: "再質押"

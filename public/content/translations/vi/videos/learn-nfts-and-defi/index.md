@@ -11,7 +11,7 @@ topic:
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "cho vay"
+  - "lending"
 format: explainer
 author: Finematics
 breadcrumb: "NFT và DeFi"

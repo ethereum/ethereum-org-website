@@ -7,9 +7,9 @@ uploadDate: 2025-01-15
 duration: "1:08:42"
 educationLevel: intermediate
 topic:
-  - "使用案例"
+  - "use-cases"
   - "ai"
-  - "代理"
+  - "agents"
   - "dapps"
 format: interview
 author: "溫·希夫特·哈彭斯"

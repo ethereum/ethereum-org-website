@@ -7,12 +7,12 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "गोपनीयता और सुरक्षा"
-  - "स्केलिंग और लेयर 2"
-  - "गोपनीयता"
-  - "लेयर 2"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
-author: वेब3प्राइवेसी नाउ
+author: "वेब3प्राइवेसी नाउ"
 breadcrumb: "गुरिल्ला लेयर 2 (l2)"
 ---
 

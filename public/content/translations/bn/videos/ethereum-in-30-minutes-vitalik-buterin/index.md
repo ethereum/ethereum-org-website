@@ -7,10 +7,10 @@ uploadDate: 2024-11-12
 duration: "0:31:05"
 educationLevel: intermediate
 topic:
-  - "কীভাবে ইথেরিয়াম কাজ করে"
-  - "ইথেরিয়াম"
+  - "how-ethereum-works"
+  - "ethereum"
 format: presentation
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "৩০ মিনিটে ইথেরিয়াম"
 ---
 

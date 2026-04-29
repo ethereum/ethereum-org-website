@@ -7,10 +7,10 @@ uploadDate: 2019-02-22
 duration: "0:05:31"
 educationLevel: beginner
 topic:
-  - "الإجماع"
-  - "إثبات العمل"
+  - "consensus"
+  - "pow"
 format: explainer
-author: باينانس أكاديمي
+author: "باينانس أكاديمي"
 breadcrumb: "إثبات العمل"
 ---
 

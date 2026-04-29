@@ -7,12 +7,12 @@ uploadDate: 2025-11-20
 duration: "0:50:15"
 educationLevel: intermediate
 topic:
-  - "ユースケース"
-  - "DAO"
-  - "分散化"
-  - "ソーシャル"
+  - "use-cases"
+  - "dao"
+  - "decentralization"
+  - "social"
 format: interview
-author: イーサボルダー
+author: "イーサボルダー"
 breadcrumb: "イーサリアムのローカリズム"
 ---
 

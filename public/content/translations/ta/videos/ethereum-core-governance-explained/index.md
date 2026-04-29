@@ -7,10 +7,10 @@ uploadDate: 2024-09-15
 duration: "0:42:18"
 educationLevel: intermediate
 topic:
-  - "எத்திரியம் எவ்வாறு செயல்படுகிறது"
-  - "வழிகாட்டி மற்றும் முன்னுரிமைகள்"
-  - "ஆளுகை"
-  - "மேம்படுத்தல்கள்"
+  - "how-ethereum-works"
+  - "roadmap-and-priorities"
+  - "governance"
+  - "upgrades"
 format: presentation
 author: EthBoulder
 breadcrumb: "மைய ஆளுகை"

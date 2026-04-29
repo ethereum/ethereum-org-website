@@ -8,9 +8,9 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "इतिहास"
+  - "history"
 format: explainer
-author: फाइनमैटिक्स
+author: "फाइनमैटिक्स"
 breadcrumb: "DeFi का इतिहास"
 ---
 

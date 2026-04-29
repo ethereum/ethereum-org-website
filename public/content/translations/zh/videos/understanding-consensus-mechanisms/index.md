@@ -7,8 +7,8 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "共识"
-  - "区块链"
+  - "consensus"
+  - "blockchain"
 format: explainer
 author: "泰克因艾西亚"
 breadcrumb: "共识机制"

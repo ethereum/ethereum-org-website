@@ -7,10 +7,10 @@ uploadDate: 2024-08-20
 duration: "0:36:34"
 educationLevel: beginner
 topic:
-  - "समुदायाच्या-कथा"
-  - "समुदाय"
+  - "community-stories"
+  - "community"
 format: interview
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "Aave तयार करणे"
 ---
 

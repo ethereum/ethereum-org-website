@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "隐私与安全"
-  - "零知识证明"
-  - "密码学"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: "怀尔德"
 breadcrumb: "零知识证明"

@@ -7,8 +7,8 @@ uploadDate: 2024-08-20
 duration: "0:36:34"
 educationLevel: beginner
 topic:
-  - "社区故事"
-  - "社区"
+  - "community-stories"
+  - "community"
 format: interview
 author: "以太坊基金会"
 breadcrumb: "构建 Aave"

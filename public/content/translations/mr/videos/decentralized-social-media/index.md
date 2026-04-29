@@ -7,10 +7,10 @@ uploadDate: 2022-03-09
 duration: "0:13:10"
 educationLevel: beginner
 topic:
-  - "सामाजिक"
-  - "विकेंद्रीकरण"
+  - "social"
+  - "decentralization"
 format: explainer
-author: कॉइनमार्केटकॅप
+author: "कॉइनमार्केटकॅप"
 breadcrumb: "विकेंद्रित सोशल"
 ---
 

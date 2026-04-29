@@ -7,11 +7,11 @@ uploadDate: 2024-02-05
 duration: "0:22:47"
 educationLevel: advanced
 topic:
-  - "ロードマップ"
+  - "roadmap"
   - "pbs"
   - "mev"
 format: presentation
-author: CBERフォーラム
+author: "CBERフォーラム"
 breadcrumb: "PBSの解説"
 ---
 

@@ -7,11 +7,11 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "গোপনীয়তা-ও-নিরাপত্তা"
-  - "গোপনীয়তা"
-  - "অথেনটিকেশন"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
-author: ইথেরিয়াম ফাউন্ডেশন
+author: "ইথেরিয়াম ফাউন্ডেশন"
 breadcrumb: "মাইক্রোডট সিকিউরিটি"
 ---
 

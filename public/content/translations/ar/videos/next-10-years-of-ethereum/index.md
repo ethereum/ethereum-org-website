@@ -7,9 +7,9 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "خارطة الطريق والأولويات"
+  - "roadmap-and-priorities"
 format: presentation
-author: مؤسسة إيثيريوم
+author: "مؤسسة إيثيريوم"
 breadcrumb: "السنوات العشر القادمة"
 ---
 

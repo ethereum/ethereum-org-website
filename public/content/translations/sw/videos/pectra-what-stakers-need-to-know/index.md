@@ -7,9 +7,9 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "ramani ya njia"
+  - "roadmap"
   - "pectra"
-  - "uwekaji dhamana"
+  - "staking"
 format: explainer
 author: Blockdaemon
 breadcrumb: "Pectra kwa Waweka Dhamana"

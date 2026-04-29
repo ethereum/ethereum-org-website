@@ -7,10 +7,10 @@ uploadDate: 2021-02-03
 duration: "0:14:28"
 educationLevel: intermediate
 topic:
-  - "التوسيع"
-  - "طبقة-2"
+  - "scaling"
+  - "layer-2"
 format: explainer
-author: فاينماتيكس
+author: "فاينماتيكس"
 breadcrumb: "توسيع طبقة 2 (L2)"
 ---
 

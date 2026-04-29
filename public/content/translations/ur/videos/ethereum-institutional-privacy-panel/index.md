@@ -7,8 +7,8 @@ uploadDate: 2025-11-22
 duration: "0:30:50"
 educationLevel: advanced
 topic:
-  - "رازداری-اور-سیکیورٹی"
-  - "رازداری"
+  - "privacy-and-security"
+  - "privacy"
 format: panel
 author: "ویب 3 پرائیویسی ناؤ"
 breadcrumb: "ادارہ جاتی رازداری"

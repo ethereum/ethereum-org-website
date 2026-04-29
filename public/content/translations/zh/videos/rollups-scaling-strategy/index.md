@@ -7,10 +7,10 @@ uploadDate: 2021-04-14
 duration: "0:16:37"
 educationLevel: intermediate
 topic:
-  - "扩容"
-  - "汇总"
-  - "乐观 Rollup"
-  - "ZK Rollup"
+  - "scaling"
+  - "rollups"
+  - "optimistic-rollups"
+  - "zk-rollups"
 format: explainer
 author: "菲内马蒂克斯"
 breadcrumb: "汇总"

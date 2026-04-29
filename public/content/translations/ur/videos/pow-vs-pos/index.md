@@ -7,9 +7,9 @@ uploadDate: 2022-03-25
 duration: "1:42:00"
 educationLevel: intermediate
 topic:
-  - "اتفاق رائے کا طریقہ کار"
-  - "تحفظ"
-  - "اتفاق رائے"
+  - "consensus-mechanisms"
+  - "security"
+  - "consensus"
 format: interview
 author: "بینک لیس"
 breadcrumb: "PoW بمقابلہ PoS کی بحث"

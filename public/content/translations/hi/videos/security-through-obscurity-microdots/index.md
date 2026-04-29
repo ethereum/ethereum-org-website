@@ -7,11 +7,11 @@ uploadDate: 2024-11-15
 duration: "0:09:55"
 educationLevel: intermediate
 topic:
-  - "गोपनीयता-और-सुरक्षा"
-  - "गोपनीयता"
-  - "प्रमाणीकरण"
+  - "privacy-and-security"
+  - "privacy"
+  - "authentication"
 format: presentation
-author: एथेरियम फाउंडेशन
+author: "एथेरियम फाउंडेशन"
 breadcrumb: "माइक्रोडॉट सुरक्षा"
 ---
 

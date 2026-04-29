@@ -7,7 +7,7 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "смарт-контракты"
+  - "smart-contracts"
 format: explainer
 author: "Файнматикс"
 breadcrumb: "Смарт-контракты"

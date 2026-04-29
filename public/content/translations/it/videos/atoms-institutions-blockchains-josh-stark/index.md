@@ -7,7 +7,7 @@ uploadDate: 2024-04-06
 duration: "0:29:13"
 educationLevel: beginner
 topic:
-  - "come-funziona-ethereum"
+  - "how-ethereum-works"
   - "blockchain"
   - "ethereum"
 format: presentation

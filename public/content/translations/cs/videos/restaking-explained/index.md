@@ -8,7 +8,7 @@ duration: "0:12:33"
 educationLevel: intermediate
 topic:
   - "restaking"
-  - "bezpečnost"
+  - "security"
 format: explainer
 author: CBER Forum
 breadcrumb: "Restaking"

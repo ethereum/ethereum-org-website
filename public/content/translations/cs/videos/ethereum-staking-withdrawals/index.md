@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "jak-funguje-ethereum"
+  - "how-ethereum-works"
   - "staking"
-  - "vybery"
+  - "withdrawals"
 format: explainer
 author: Finematics
 breadcrumb: "Výběry ze stakingu"

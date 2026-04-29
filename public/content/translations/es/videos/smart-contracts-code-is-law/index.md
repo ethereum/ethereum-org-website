@@ -7,7 +7,7 @@ uploadDate: 2020-11-18
 duration: "0:15:25"
 educationLevel: beginner
 topic:
-  - "contratos-inteligentes"
+  - "smart-contracts"
 format: explainer
 author: Finematics
 breadcrumb: "Contratos inteligentes"

@@ -7,11 +7,11 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "গোপনীয়তা-এবং-নিরাপত্তা"
-  - "শূন্য-জ্ঞান-প্রমাণ"
-  - "ক্রিপ্টোগ্রাফি"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
-author: ওয়্যার্ড
+author: "ওয়্যার্ড"
 breadcrumb: "শূন্য-জ্ঞান প্রমাণ"
 ---
 

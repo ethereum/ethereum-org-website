@@ -7,7 +7,7 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "روڈ میپ اور ترجیحات"
+  - "roadmap-and-priorities"
 format: presentation
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "اگلے 10 سال"

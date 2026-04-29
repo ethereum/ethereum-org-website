@@ -7,11 +7,11 @@ uploadDate: 2025-03-11
 duration: "1:01:47"
 educationLevel: beginner
 topic:
-  - "イーサリアム"
-  - "プルーフ・オブ・ステーク"
-  - "マージ"
+  - "ethereum"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
-author: イーサリアム財団
+author: "イーサリアム財団"
 breadcrumb: "ダニー・ライアン インタビュー"
 ---
 

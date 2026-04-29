@@ -7,10 +7,10 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "सर्वसम्मति"
-  - "ब्लॉकचेन"
+  - "consensus"
+  - "blockchain"
 format: explainer
-author: टेक इन एशिया
+author: "टेक इन एशिया"
 breadcrumb: "सर्वसम्मति तंत्र"
 ---
 

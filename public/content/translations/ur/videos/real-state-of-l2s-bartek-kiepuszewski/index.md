@@ -7,9 +7,9 @@ uploadDate: 2024-11-13
 duration: "0:26:15"
 educationLevel: advanced
 topic:
-  - "اسکیلنگ-اور-لیئر-۲"
-  - "رول-اپس"
-  - "لیئر-۲"
+  - "scaling-and-layer-2"
+  - "rollups"
+  - "layer-2"
 format: presentation
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "L2s کی حالت"

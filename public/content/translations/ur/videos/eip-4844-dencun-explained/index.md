@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "ایتھیریم-کیسے-کام-کرتا-ہے"
-  - "اسکیلنگ"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "اپ-گریڈز"
+  - "upgrades"
 format: explainer
 author: "فائنی میٹکس"
 breadcrumb: "EIP-4844 کی وضاحت"

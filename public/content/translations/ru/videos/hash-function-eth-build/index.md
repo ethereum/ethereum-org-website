@@ -7,8 +7,8 @@ uploadDate: 2021-01-14
 duration: "0:04:39"
 educationLevel: beginner
 topic:
-  - "учетные записи"
-  - "криптография"
+  - "accounts"
+  - "cryptography"
 format: tutorial
 author: "Остин Гриффит"
 breadcrumb: "Хеш-функции (ETH.BUILD)"

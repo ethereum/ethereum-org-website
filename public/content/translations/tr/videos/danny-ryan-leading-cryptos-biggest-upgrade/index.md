@@ -8,8 +8,8 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "hisse-kaniti"
-  - "birlesme"
+  - "proof-of-stake"
+  - "the-merge"
 format: interview
 author: Ethereum Foundation
 breadcrumb: "Danny Ryan Röportajı"

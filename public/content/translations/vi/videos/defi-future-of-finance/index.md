@@ -8,7 +8,7 @@ duration: "0:14:48"
 educationLevel: beginner
 topic:
   - "defi"
-  - "tài chính"
+  - "finance"
 format: explainer
 author: Finematics
 breadcrumb: "DeFi: Tương lai của tài chính"

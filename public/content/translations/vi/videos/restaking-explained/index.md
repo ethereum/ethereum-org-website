@@ -7,8 +7,8 @@ uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "đặt cọc lại"
-  - "bảo mật"
+  - "restaking"
+  - "security"
 format: explainer
 author: CBER Forum
 breadcrumb: "Đặt cọc lại"

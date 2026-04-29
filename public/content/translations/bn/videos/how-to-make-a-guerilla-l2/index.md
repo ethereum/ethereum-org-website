@@ -7,12 +7,12 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "গোপনীয়তা-এবং-নিরাপত্তা"
-  - "স্কেলিং-এবং-লেয়ার-২"
-  - "গোপনীয়তা"
-  - "লেয়ার-২"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
-author: ওয়েব3প্রাইভেসি নাউ
+author: "ওয়েব3প্রাইভেসি নাউ"
 breadcrumb: "গেরিলা L2"
 ---
 

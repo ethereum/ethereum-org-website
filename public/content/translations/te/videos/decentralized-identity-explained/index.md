@@ -7,7 +7,7 @@ uploadDate: 2022-04-12
 duration: "0:05:22"
 educationLevel: beginner
 topic:
-  - "గుర్తింపు"
+  - "identity"
 format: explainer
 author: "మైక్రోసాఫ్ట్ సెక్యూరిటీ"
 breadcrumb: "వికేంద్రీకృత గుర్తింపు"

@@ -8,7 +8,7 @@ duration: "0:09:18"
 educationLevel: intermediate
 topic:
   - "consensus"
-  - "preuve d'autorité"
+  - "proof-of-authority"
 format: presentation
 author: Cryptoeconomics Study
 breadcrumb: "Preuve d'autorité"

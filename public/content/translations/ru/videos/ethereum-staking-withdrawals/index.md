@@ -7,9 +7,9 @@ uploadDate: 2023-03-30
 duration: "0:11:39"
 educationLevel: intermediate
 topic:
-  - "как-работает-эфириум"
-  - "стейкинг"
-  - "выводы"
+  - "how-ethereum-works"
+  - "staking"
+  - "withdrawals"
 format: explainer
 author: "Финематикс"
 breadcrumb: "Выводы из стейкинга"

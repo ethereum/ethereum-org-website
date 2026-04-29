@@ -7,8 +7,8 @@ uploadDate: 2025-11-23
 duration: "0:18:00"
 educationLevel: beginner
 topic:
-  - "కమ్యూనిటీ-కథలు"
-  - "కమ్యూనిటీ"
+  - "community-stories"
+  - "community"
 format: presentation
 author: "వెబ్3ప్రైవసీ నౌ"
 breadcrumb: "సైఫర్‌పంక్ ఎలా అవ్వాలి"

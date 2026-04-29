@@ -7,8 +7,8 @@ uploadDate: 2018-10-19
 duration: "0:09:18"
 educationLevel: intermediate
 topic:
-  - "ఏకాభిప్రాయం"
-  - "ప్రూఫ్-ఆఫ్-అథారిటీ"
+  - "consensus"
+  - "proof-of-authority"
 format: presentation
 author: "క్రిప్టోఎకనామిక్స్ స్టడీ"
 breadcrumb: "ప్రూఫ్-ఆఫ్-అథారిటీ"

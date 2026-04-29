@@ -7,7 +7,7 @@ uploadDate: 2021-01-14
 duration: "0:06:12"
 educationLevel: beginner
 topic:
-  - "ٹرانزیکشنز"
+  - "transactions"
 format: tutorial
 author: "آسٹن گریفتھ"
 breadcrumb: "ٹرانزیکشنز (ETH.BUILD)"

@@ -7,7 +7,7 @@ uploadDate: 2025-09-05
 duration: "0:28:30"
 educationLevel: advanced
 topic:
-  - "lộ trình và ưu tiên"
+  - "roadmap-and-priorities"
 format: presentation
 author: ETHBoulder
 breadcrumb: "Lộ trình hậu lượng tử"

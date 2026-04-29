@@ -7,9 +7,9 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "дорожная карта"
-  - "пектра"
-  - "стейкинг"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
 author: "Блокдемон"
 breadcrumb: "Пектра для стейкеров"

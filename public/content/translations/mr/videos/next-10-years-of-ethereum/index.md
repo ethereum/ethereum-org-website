@@ -9,7 +9,7 @@ educationLevel: intermediate
 topic:
   - "roadmap-and-priorities"
 format: presentation
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "पुढील 10 वर्षे"
 ---
 

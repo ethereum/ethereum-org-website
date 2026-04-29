@@ -9,7 +9,7 @@ educationLevel: advanced
 topic:
   - "restaking"
   - "eigenlayer"
-  - "sécurité"
+  - "security"
 format: presentation
 author: a16z crypto
 breadcrumb: "EigenLayer"

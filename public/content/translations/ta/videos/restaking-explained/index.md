@@ -7,8 +7,8 @@ uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "மறுபங்குவைப்பு"
-  - "பாதுகாப்பு"
+  - "restaking"
+  - "security"
 format: explainer
 author: "சிபிஇஆர் ஃபோரம்"
 breadcrumb: "மறுபங்குவைப்பு"

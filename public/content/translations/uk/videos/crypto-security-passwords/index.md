@@ -7,8 +7,8 @@ uploadDate: 2019-05-19
 duration: "1:09:55"
 educationLevel: beginner
 topic:
-  - "безпека"
-  - "автентифікація"
+  - "security"
+  - "authentication"
 format: presentation
 author: aantonop
 breadcrumb: "Криптобезпека"

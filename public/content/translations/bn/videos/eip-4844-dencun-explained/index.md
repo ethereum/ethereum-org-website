@@ -7,13 +7,13 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "কীভাবে-ইথেরিয়াম-কাজ-করে"
-  - "স্কেলিং"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "আপগ্রেড"
+  - "upgrades"
 format: explainer
-author: ফাইনেম্যাটিক্স
+author: "ফাইনেম্যাটিক্স"
 breadcrumb: "EIP-4844 এর ব্যাখ্যা"
 ---
 

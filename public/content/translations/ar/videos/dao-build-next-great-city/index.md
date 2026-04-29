@@ -8,9 +8,9 @@ duration: "0:09:56"
 educationLevel: beginner
 topic:
   - "dao"
-  - "حوكمة"
+  - "governance"
 format: presentation
-author: تيد
+author: "تيد"
 breadcrumb: "المنظمات المستقلة اللامركزية (DAOs) والمدن"
 ---
 

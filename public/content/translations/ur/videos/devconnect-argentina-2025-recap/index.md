@@ -1,14 +1,14 @@
 ---
-title: "Devconnect Argentina <span dir="ltr">2025</span> کا خلاصہ — پہلا ایتھیریم ورلڈز فیئر"
-description: "Devconnect Buenos Aires سے ایک ہائی لائٹ ریل، پہلا ایتھیریم ورلڈز فیئر، جس میں ارجنٹائن کی متحرک کرپٹو کمیونٹی میں <span dir="ltr">14,000+</span> شرکاء اور <span dir="ltr">80+</span> ایونٹس شامل ہیں۔"
+title: "Devconnect Argentina ⁦2025⁩ کا خلاصہ — پہلا ایتھیریم ورلڈز فیئر"
+description: "Devconnect Buenos Aires سے ایک ہائی لائٹ ریل، پہلا ایتھیریم ورلڈز فیئر، جس میں ارجنٹائن کی متحرک کرپٹو کمیونٹی میں ⁦14,000+⁩ شرکاء اور ⁦80+⁩ ایونٹس شامل ہیں۔"
 lang: ur
 youtubeId: "ABB2B4FcsF0"
 uploadDate: 2025-12-04
 duration: "0:02:45"
 educationLevel: beginner
 topic:
-  - "کمیونٹی کی کہانیاں"
-  - "کمیونٹی"
+  - "community-stories"
+  - "community"
 format: explainer
 author: "ایتھیریم فاؤنڈیشن"
 breadcrumb: "Devconnect کا خلاصہ"

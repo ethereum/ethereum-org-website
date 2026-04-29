@@ -11,9 +11,9 @@ topic:
   - "defi"
   - "erc-721"
   - "erc-1155"
-  - "ঋণ প্রদান"
+  - "lending"
 format: explainer
-author: ফাইনেম্যাটিক্স
+author: "ফাইনেম্যাটিক্স"
 breadcrumb: "NFT এবং DeFi"
 ---
 

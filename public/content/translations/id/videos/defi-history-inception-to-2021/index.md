@@ -8,7 +8,7 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "sejarah"
+  - "history"
 format: explainer
 author: Finematics
 breadcrumb: "Sejarah DeFi"

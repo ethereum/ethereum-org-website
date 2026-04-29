@@ -7,8 +7,8 @@ uploadDate: 2018-11-29
 duration: "0:09:33"
 educationLevel: beginner
 topic:
-  - "共識"
-  - "區塊鏈"
+  - "consensus"
+  - "blockchain"
 format: explainer
 author: "泰克·因·艾西亞"
 breadcrumb: "共識機制"

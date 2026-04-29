@@ -8,7 +8,7 @@ duration: "0:17:47"
 educationLevel: beginner
 topic:
   - "defi"
-  - "تاریخ"
+  - "history"
 format: explainer
 author: "فائن میٹکس"
 breadcrumb: "DeFi کی تاریخ"

@@ -7,8 +7,8 @@ uploadDate: 2025-03-10
 duration: "0:22:45"
 educationLevel: intermediate
 topic:
-  - "గోప్యత"
-  - "భద్రత"
+  - "privacy"
+  - "security"
 format: presentation
 author: "డెవ్‌కనెక్ట్"
 breadcrumb: "గోప్యత"

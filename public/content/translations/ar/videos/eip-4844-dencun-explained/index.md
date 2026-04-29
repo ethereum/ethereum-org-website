@@ -7,13 +7,13 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "كيفية عمل إيثيريوم"
-  - "التوسيع"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
-  - "دينكون"
-  - "الترقيات"
+  - "dencun"
+  - "upgrades"
 format: explainer
-author: فاينماتيكس
+author: "فاينماتيكس"
 breadcrumb: "شرح EIP-4844"
 ---
 

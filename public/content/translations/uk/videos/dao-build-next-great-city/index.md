@@ -8,7 +8,7 @@ duration: "0:09:56"
 educationLevel: beginner
 topic:
   - "dao"
-  - "управління"
+  - "governance"
 format: presentation
 author: "ТЕД"
 breadcrumb: "DAO та міста"

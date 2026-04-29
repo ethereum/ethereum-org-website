@@ -8,7 +8,7 @@ duration: "1:01:47"
 educationLevel: beginner
 topic:
   - "ethereum"
-  - "prova-de-participacao"
+  - "proof-of-stake"
   - "the-merge"
 format: interview
 author: Ethereum Foundation

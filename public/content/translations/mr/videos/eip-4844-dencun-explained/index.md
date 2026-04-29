@@ -13,7 +13,7 @@ topic:
   - "dencun"
   - "upgrades"
 format: explainer
-author: फायनेमॅटिक्स
+author: "फायनेमॅटिक्स"
 breadcrumb: "EIP-4844 स्पष्ट केले"
 ---
 

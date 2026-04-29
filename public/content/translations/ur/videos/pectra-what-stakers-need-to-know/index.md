@@ -7,9 +7,9 @@ uploadDate: 2025-01-22
 duration: "0:09:14"
 educationLevel: intermediate
 topic:
-  - "روڈ میپ"
-  - "پیکٹرا"
-  - "اسٹیکنگ"
+  - "roadmap"
+  - "pectra"
+  - "staking"
 format: explainer
 author: "بلاک ڈیمن"
 breadcrumb: "اسٹیکرز کے لیے پیکٹرا"

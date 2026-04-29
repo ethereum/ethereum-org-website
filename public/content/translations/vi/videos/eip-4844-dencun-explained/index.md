@@ -7,11 +7,11 @@ uploadDate: 2024-03-11
 duration: "0:10:56"
 educationLevel: intermediate
 topic:
-  - "cách ethereum hoạt động"
-  - "mở rộng"
+  - "how-ethereum-works"
+  - "scaling"
   - "eip-4844"
   - "dencun"
-  - "nâng cấp"
+  - "upgrades"
 format: explainer
 author: Finematics
 breadcrumb: "Giải thích về EIP-4844"

@@ -7,9 +7,9 @@ uploadDate: 2021-12-13
 duration: "0:18:19"
 educationLevel: beginner
 topic:
-  - "конфиденциальность-и-безопасность"
-  - "доказательства-с-нулевым-разглашением"
-  - "криптография"
+  - "privacy-and-security"
+  - "zero-knowledge-proofs"
+  - "cryptography"
 format: explainer
 author: "Уайрд"
 breadcrumb: "Доказательства с нулевым разглашением"

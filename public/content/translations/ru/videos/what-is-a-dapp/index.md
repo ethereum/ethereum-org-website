@@ -7,8 +7,8 @@ uploadDate: 2019-04-01
 duration: "0:05:11"
 educationLevel: beginner
 topic:
-  - "децентрализованные приложения"
-  - "смарт-контракты"
+  - "dapps"
+  - "smart-contracts"
 format: explainer
 author: "Дистрикт0x Нетворк"
 breadcrumb: "Что такое Dapp?"

@@ -7,8 +7,8 @@ uploadDate: 2019-04-01
 duration: "0:05:11"
 educationLevel: beginner
 topic:
-  - "dapp"
-  - "kontrak pintar"
+  - "dapps"
+  - "smart-contracts"
 format: explainer
 author: district0x Network
 breadcrumb: "Apa itu Dapp?"

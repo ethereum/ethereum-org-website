@@ -7,10 +7,10 @@ uploadDate: 2025-11-23
 duration: "0:15:55"
 educationLevel: intermediate
 topic:
-  - "quyền-riêng-tư-và-bảo-mật"
-  - "mở-rộng-và-lớp-2"
-  - "quyền-riêng-tư"
-  - "lớp-2"
+  - "privacy-and-security"
+  - "scaling-and-layer-2"
+  - "privacy"
+  - "layer-2"
 format: interview
 author: Web3Privacy Now
 breadcrumb: "l2 du kích"

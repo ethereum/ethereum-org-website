@@ -1,16 +1,16 @@
 ---
 title: "شرح إعادة التخزين"
-description: "شرح حول إعادة التخزين، والذي يستخدم <span dir="ltr">ETH</span> المخزن بالفعل لتوفير الأمان لبروتوكولات وخدمات إضافية تتجاوز الطبقة الأساسية لإيثيريوم."
+description: "شرح حول إعادة التخزين، والذي يستخدم ⁦ETH⁩ المخزن بالفعل لتوفير الأمان لبروتوكولات وخدمات إضافية تتجاوز الطبقة الأساسية لإيثيريوم."
 lang: ar
 youtubeId: "rOJo7VwPh7I"
 uploadDate: 2024-02-05
 duration: "0:12:33"
 educationLevel: intermediate
 topic:
-  - "إعادة التخزين"
-  - "الأمان"
+  - "restaking"
+  - "security"
 format: explainer
-author: سي بي إي آر فوروم
+author: "سي بي إي آر فوروم"
 breadcrumb: "إعادة التخزين"
 ---
 

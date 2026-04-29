@@ -7,10 +7,10 @@ uploadDate: 2025-11-21
 duration: "0:00:45"
 educationLevel: beginner
 topic:
-  - "कम्युनिटीच्या-कथा"
-  - "कम्युनिटी"
+  - "community-stories"
+  - "community"
 format: explainer
-author: इथेरियम फाउंडेशन
+author: "इथेरियम फाउंडेशन"
 breadcrumb: "Devcon मुंबई"
 ---
 

@@ -7,10 +7,10 @@ uploadDate: 2016-11-13
 duration: "0:17:49"
 educationLevel: beginner
 topic:
-  - "ব্লকচেইন"
-  - "ক্রিপ্টোগ্রাফি"
+  - "blockchain"
+  - "cryptography"
 format: presentation
-author: অ্যান্ডার্স ব্রাউনওয়ার্থ
+author: "অ্যান্ডার্স ব্রাউনওয়ার্থ"
 breadcrumb: "ব্লকচেইন 101"
 ---
 

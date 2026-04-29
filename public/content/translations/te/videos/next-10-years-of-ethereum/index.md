@@ -7,7 +7,7 @@ uploadDate: 2025-11-20
 duration: "0:36:15"
 educationLevel: intermediate
 topic:
-  - "రోడ్‌మ్యాప్-మరియు-ప్రాధాన్యతలు"
+  - "roadmap-and-priorities"
 format: presentation
 author: "ఎథీరియం ఫౌండేషన్"
 breadcrumb: "తదుపరి 10 సంవత్సరాలు"

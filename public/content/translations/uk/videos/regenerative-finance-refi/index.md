@@ -8,7 +8,7 @@ duration: "0:06:01"
 educationLevel: beginner
 topic:
   - "refi"
-  - "сталий розвиток"
+  - "sustainability"
 format: explainer
 author: "Сі-Ен-Бі-Сі Телевіжн"
 breadcrumb: "Регенеративні фінанси"
