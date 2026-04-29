@@ -6,6 +6,7 @@ import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
+  AiAgentsFrontmatter,
   DocsFrontmatter,
   RoadmapFrontmatter,
   StakingFrontmatter,
@@ -68,6 +69,7 @@ export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &
   StaticFrontmatter &
   UseCasesFrontmatter &
+  AiAgentsFrontmatter &
   StakingFrontmatter &
   DocsFrontmatter &
   TutorialFrontmatter

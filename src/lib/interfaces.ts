@@ -78,6 +78,16 @@ export interface UseCasesFrontmatter
   showDropdown?: boolean
 }
 
+export interface AiAgentsFrontmatter
+  extends SharedFrontmatter,
+    SummaryPointsNumbered,
+    ImageInfo {
+  emoji: string
+  showDropdown?: boolean
+  buttons?: CommonHeroProps["buttons"]
+  faqItems?: { question: string; answer: string }[]
+}
+
 export interface StakingFrontmatter
   extends SharedFrontmatter,
     SummaryPoints,

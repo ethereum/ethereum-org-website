@@ -2,6 +2,14 @@
 title: AI agent frameworks
 description: A directory of agent frameworks with Ethereum integration, including GOAT, ElizaOS, Rig, Olas, GAME, and LangChain, with a decision guide for choosing between them
 lang: en
+template: ai-agents
+emoji: ":robot:"
+sidebarDepth: 2
+image: /images/ai-agents/hero-image.png
+alt: AI agent frameworks on Ethereum
+summaryPoint1: Choose an agent framework based on your language, protocol needs, and deployment target
+summaryPoint2: Compare GOAT, ElizaOS, Rig, Olas, GAME, and LangChain for Ethereum integration
+summaryPoint3: Integration guides with code samples for each framework
 faqItems:
   - question: "Which agent framework should I use?"
     answer: "For maximum EVM protocol coverage (200+ plugins), evaluate GOAT. For multi-platform social agents (Discord, Twitter, Telegram), evaluate ElizaOS. For Rust and latency-sensitive agents, evaluate Rig. For autonomous services with onchain coordination, evaluate Olas. For game-native or no-code deployments in the Virtuals ecosystem, evaluate GAME. For the widest Python ecosystem and LLM community, evaluate LangChain paired with GOAT's LangChain adapter. See the Frameworks decision guide for a full comparison."

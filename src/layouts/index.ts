@@ -16,6 +16,7 @@ export * from "./Tutorial"
 export const layoutMapping = {
   static: StaticLayout,
   "use-cases": mdLayouts.UseCasesLayout,
+  "ai-agents": mdLayouts.AiAgentsLayout,
   staking: mdLayouts.StakingLayout,
   roadmap: mdLayouts.RoadmapLayout,
   upgrade: mdLayouts.UpgradeLayout,
@@ -27,6 +28,7 @@ export const layoutMapping = {
 export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
   static: staticComponents,
   "use-cases": mdLayouts.useCasesComponents,
+  "ai-agents": mdLayouts.aiAgentsComponents,
   staking: mdLayouts.stakingComponents,
   roadmap: mdLayouts.roadmapComponents,
   upgrade: mdLayouts.upgradeComponents,

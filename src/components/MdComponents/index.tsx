@@ -96,7 +96,7 @@ export const Heading4 = ({
 
 export const Pre = (props: ChildOnlyProp) => (
   <pre
-    className="bg-background-highlight max-w-full overflow-x-scroll rounded border p-4 whitespace-pre-wrap"
+    className="max-w-full overflow-x-scroll rounded border bg-background-highlight p-4 whitespace-pre-wrap"
     {...props}
   />
 )
@@ -109,13 +109,13 @@ export const Paragraph = ({ className, ...props }: ParagraphProps) => (
 
 export const Blockquote = (props: ChildOnlyProp) => (
   <blockquote
-    className="border-accent-a bg-accent-a/10 mt-8 mb-4 border-s-2 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
+    className="mt-8 mb-4 border-s-2 border-accent-a bg-accent-a/10 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
     {...props}
   />
 )
 
 export const HR = () => (
-  <hr className="border-body-medium mt-8 mb-4 inline-block w-full opacity-60" />
+  <hr className="mt-8 mb-4 inline-block w-full border-body-medium opacity-60" />
 )
 
 // All base html element components
@@ -160,7 +160,7 @@ export const Title = (props: ChildOnlyProp) => (
 export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
     <MainArticle
-      className="relative flex-[1_1_992px] px-8 pb-8 [&>h2:first-child]:mt-0"
+      className="relative min-w-0 flex-[1_1_992px] px-8 pb-8 [&>h2:first-child]:mt-0"
       {...props}
     />
   )

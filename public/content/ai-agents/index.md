@@ -3,10 +3,9 @@ title: Build AI agents on Ethereum
 metaTitle: AI agent builder hub | ethereum.org
 description: A developer hub for building AI agents on Ethereum. Covers wallets, verifiable computation, machine payments, agent identity, and the L2 ecosystem.
 lang: en
-template: use-cases
+template: ai-agents
 emoji: ":robot:"
 sidebarDepth: 2
-showDropdown: false
 image: /images/ai-agents/hero-image.png
 alt: Developer working with AI agent architecture on Ethereum
 summaryPoint1: Deploy autonomous agents with programmable wallets, spending limits, and session keys
