@@ -1,5 +1,5 @@
 import {
-  ElementRef,
+  ComponentRef,
   forwardRef,
   type HTMLAttributes,
   type OlHTMLAttributes,
@@ -12,7 +12,7 @@ export type ListProps<T = HTMLAttributes<HTMLUListElement>> = T & {
   asChild?: boolean
 }
 
-const List = forwardRef<ElementRef<"ul">, ListProps>(
+const List = forwardRef<ComponentRef<"ul">, ListProps>(
   ({ className, asChild, ...props }, ref) => {
     const Comp = asChild ? Slot : "ul"
     return <Comp ref={ref} className={cn("ms-6 mb-6", className)} {...props} />
@@ -25,7 +25,7 @@ List.displayName = "List"
 const UnorderedList = List
 
 const OrderedList = forwardRef<
-  ElementRef<"ol">,
+  ComponentRef<"ol">,
   ListProps<OlHTMLAttributes<HTMLOListElement>>
 >(({ className, children, ...props }, ref) => (
   <List className={className} asChild>
@@ -37,7 +37,7 @@ const OrderedList = forwardRef<
 
 OrderedList.displayName = "OrderedList"
 
-const ListItem = forwardRef<ElementRef<"li">, HTMLAttributes<HTMLLIElement>>(
+const ListItem = forwardRef<ComponentRef<"li">, HTMLAttributes<HTMLLIElement>>(
   ({ className, ...props }, ref) => (
     <li
       ref={ref}
