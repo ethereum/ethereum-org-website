@@ -14,7 +14,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp: string | null
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-ethereum-vs-bitcoin")
@@ -86,7 +86,9 @@ export default async function EthereumVsBitcoinPageJsonLD({
               "A peer-to-peer digital currency system and the first decentralized cryptocurrency",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        ...(lastEditLocaleTimestamp && {
+          dateModified: lastEditLocaleTimestamp,
+        }),
       },
     ],
   }

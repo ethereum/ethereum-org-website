@@ -14,7 +14,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp: string | null
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-ethereum-history-founder-and-ownership")
@@ -99,7 +99,9 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
               "The historical development and launch of the Ethereum blockchain network",
           },
         ],
-        dateModified: lastEditLocaleTimestamp,
+        ...(lastEditLocaleTimestamp && {
+          dateModified: lastEditLocaleTimestamp,
+        }),
       },
     ],
   }

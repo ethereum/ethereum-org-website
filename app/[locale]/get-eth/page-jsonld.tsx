@@ -14,7 +14,7 @@ export default async function GetEthPageJsonLD({
   contributors,
 }: {
   locale: Lang | undefined
-  lastEditLocaleTimestamp: string
+  lastEditLocaleTimestamp: string | null
   contributors: FileContributor[]
 }) {
   const t = await getTranslations("page-get-eth")
@@ -71,7 +71,9 @@ export default async function GetEthPageJsonLD({
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
-        dateModified: lastEditLocaleTimestamp,
+        ...(lastEditLocaleTimestamp && {
+          dateModified: lastEditLocaleTimestamp,
+        }),
       },
     ],
   }
