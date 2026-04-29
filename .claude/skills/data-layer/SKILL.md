@@ -160,6 +160,14 @@ return { ...event, logoImage: logoUrl ?? "" }
 
 Always handle `null` returns (upload failures) with fallback/empty string.
 
+### 5. Keep fetchers isolated from the app
+
+Fetchers run on Trigger.dev — a separate runtime, deployment, and bundle from the Next.js app. They cannot assume the app's filesystem, environment, or modules are available.
+
+Any import or runtime dependency reaching outside `src/data-layer/` is a warning sign. Allowed: types (`@/lib/types`, `@/lib/interfaces`), pure constants (`@/lib/constants`), and pure utility functions with no app-runtime dependencies. Not allowed: anything that reads `process.cwd()`, anything from `app/`, anything from `src/components/`, or `src/lib/data/` (which wraps the data layer and would create a cycle).
+
+If a fetcher needs data that lives in the app — content files, frontmatter, etc. — fetch it over the network via the GitHub API and treat the repo as an external system. See `fetchGitHubContributors.ts` for the pattern. Don't work around this with `additionalFiles` in `trigger.config.ts`; bundling app files into the data-layer deployment re-creates the coupling.
+
 ## Adding a New Data Source
 
 1. **Create fetcher** in `src/data-layer/fetchers/fetchNewData.ts`:
