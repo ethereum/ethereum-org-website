@@ -156,4 +156,3 @@ Optimistic rollups have a challenge window (typically seven days) before withdra
 ### Ecosystem and tooling {#ecosystem-and-tooling}
 
 - [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
-- [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.

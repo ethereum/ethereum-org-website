@@ -189,4 +189,3 @@ Evaluate the infrastructure each use case requires. **DeFi automation** needs [w
 ### Ecosystem and tooling {#ecosystem-and-tooling}
 
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
-- [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.

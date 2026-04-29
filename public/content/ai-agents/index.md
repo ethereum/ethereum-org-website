@@ -84,8 +84,6 @@ The standards and protocols that power AI agents on Ethereum have crossed from r
 | **x402** — Machine-to-machine HTTP payments | Production-ready since Q1 2026 |
 | **L2 transaction cost** | $0.001–$0.003 per operation |
 
-See [AI agents: Data and stats](/ai-agents/data/) for onchain metrics tracking the growth of the AI agent ecosystem.
-
 ## AI agent builder hub sections {#ai-agent-builder-hub-sections}
 
 ### Start here {#start-here}
@@ -105,7 +103,6 @@ See [AI agents: Data and stats](/ai-agents/data/) for onchain metrics tracking t
 
 - [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
-- [Data and stats](/ai-agents/data/) — Onchain data tracking the growth of the AI agent ecosystem on Ethereum.
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
@@ -127,5 +124,4 @@ An AI agent is an autonomous software program that uses a language model to reas
 A bot follows fixed rules. Given input X, it always does Y. An AI agent uses a language model to reason about novel situations, form a plan, and take sequences of actions that may differ depending on context. Agents are capable of multi-step reasoning, adapting to unexpected conditions, and handling tasks they were not explicitly programmed for. The trade-off is that agent behavior is less predictable, which is why spending limits and session keys are essential. See the [AI agents: Getting started](/ai-agents/getting-started/) guide.
 
 </ExpandableCard>
-
 
