@@ -43,9 +43,6 @@ const RowImpl = <T extends { id: string }>({
       onToggle={handleToggle}
       className={cn(
         "group/collapsible flex w-full flex-col border-b open:bg-background-highlight hover:bg-background-highlight",
-        // tailwind-merge keeps only the last display utility, so `hidden`
-        // wins over `flex` when filtered out — the row stays mounted but
-        // is removed from layout.
         !visible && "hidden"
       )}
     >
