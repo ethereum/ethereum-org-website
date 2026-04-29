@@ -64,7 +64,7 @@ function rtlBidiRules(fileType: "markdown" | "json"): string {
   const isMd = fileType === "markdown"
 
   const opener = isMd
-    ? `BiDi rules for RTL -- wrap LTR content in <span dir="ltr">...</span> to prevent layout flipping:`
+    ? `BiDi rules for RTL -- wrap LTR content in <span dir="ltr">...</span> to prevent layout flipping. NEVER use this wrapper inside YAML frontmatter values: the inner double-quote on the dir attribute terminates the outer YAML string and breaks the build. For LTR fragments inside frontmatter values (title, description, breadcrumb), use raw Unicode bidi isolates U+2066 (LRI, open) and U+2069 (PDI, close) instead -- e.g. \`title: "Devconnect Argentina ⁦2025⁩ recap"\`.`
     : `BiDi rules for RTL in JSON values -- isolate LTR content using raw Unicode characters U+2066 (LRI, open) and U+2069 (PDI, close). Do NOT use <span dir="ltr"> tags -- they break next-intl's t() which renders JSON values as plain text, not rich markup.`
 
   const keepUnitsExample = isMd
