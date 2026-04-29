@@ -46,7 +46,7 @@ const AdditionalDocReading = ({
   docLinks: DocLinkProps[]
 }) => (
   <div className="mt-24 space-y-8">
-    <h3 className="text-md text-center lg:text-xl">{heading}</h3>
+    <h3 className="text-center text-md lg:text-xl">{heading}</h3>
     <div className="flex flex-col gap-2 xl:mx-36">
       {docLinks.map(({ children, ...rest }) => (
         <DocLink key={rest.href} {...rest}>
@@ -70,7 +70,7 @@ const LearnCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card className="bg-background-highlight row-span-3 grid grid-rows-subgrid gap-y-8 p-8 max-md:p-4">
+  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:p-4">
     <CardBanner background="none" fit="contain">
       <Image src={image} alt="" sizes="250px" />
     </CardBanner>
@@ -145,77 +145,77 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       description: string
     }[]
   }[] = [
-      {
-        heading: t("books-about-ethereum"),
-        items: [
-          {
-            label: t("cryptopians-title"),
-            href: "https://www.goodreads.com/book/show/57356067-the-cryptopians",
-            description: t("cryptopians-description"),
-          },
-          {
-            label: t("out-of-the-ether-title"),
-            href: "https://www.goodreads.com/book/show/55360267-out-of-the-ether",
-            description: t("out-of-the-ether-description"),
-          },
-          {
-            label: t("the-infinite-machine-title"),
-            href: "https://www.goodreads.com/en/book/show/50175330-the-infinite-machine",
-            description: t("the-infinite-machine-description"),
-          },
-          {
-            label: t("mastering-ethereum-title"),
-            href: "https://github.com/ethereumbook/ethereumbook",
-            description: t("mastering-ethereum-description"),
-          },
-          {
-            label: t("proof-of-stake-title"),
-            href: "https://www.goodreads.com/en/book/show/59892281-proof-of-stake",
-            description: t("proof-of-stake-description"),
-          },
-        ],
-      },
-      {
-        heading: t("podcasts-about-ethereum"),
-        items: [
-          {
-            label: t("green-pill-title"),
-            href: "https://www.youtube.com/@Green_Pill_Podcast",
-            description: t("green-pill-description"),
-          },
-          {
-            label: t("zeroknowledge-title"),
-            href: "https://www.zeroknowledge.fm/",
-            description: t("zeroknowledge-description"),
-          },
-          {
-            label: t("unchained-title"),
-            href: "https://unchainedpodcast.com/",
-            description: t("unchained-description"),
-          },
-          {
-            label: t("the-daily-gwei-title"),
-            href: "https://www.youtube.com/@TheDailyGwei/",
-            description: t("the-daily-gwei-description"),
-          },
-          {
-            label: t("bankless-title"),
-            href: "https://podcast.banklesshq.com/",
-            description: t("bankless-description"),
-          },
-        ],
-      },
-      {
-        heading: t("about-ethereum-video-series"),
-        items: [
-          {
-            label: t("ethereum-basics-title"),
-            href: "https://www.youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5",
-            description: t("ethereum-basics-description"),
-          },
-        ],
-      },
-    ]
+    {
+      heading: t("books-about-ethereum"),
+      items: [
+        {
+          label: t("cryptopians-title"),
+          href: "https://www.goodreads.com/book/show/57356067-the-cryptopians",
+          description: t("cryptopians-description"),
+        },
+        {
+          label: t("out-of-the-ether-title"),
+          href: "https://www.goodreads.com/book/show/55360267-out-of-the-ether",
+          description: t("out-of-the-ether-description"),
+        },
+        {
+          label: t("the-infinite-machine-title"),
+          href: "https://www.goodreads.com/en/book/show/50175330-the-infinite-machine",
+          description: t("the-infinite-machine-description"),
+        },
+        {
+          label: t("mastering-ethereum-title"),
+          href: "https://github.com/ethereumbook/ethereumbook",
+          description: t("mastering-ethereum-description"),
+        },
+        {
+          label: t("proof-of-stake-title"),
+          href: "https://www.goodreads.com/en/book/show/59892281-proof-of-stake",
+          description: t("proof-of-stake-description"),
+        },
+      ],
+    },
+    {
+      heading: t("podcasts-about-ethereum"),
+      items: [
+        {
+          label: t("green-pill-title"),
+          href: "https://www.youtube.com/@Green_Pill_Podcast",
+          description: t("green-pill-description"),
+        },
+        {
+          label: t("zeroknowledge-title"),
+          href: "https://www.zeroknowledge.fm/",
+          description: t("zeroknowledge-description"),
+        },
+        {
+          label: t("unchained-title"),
+          href: "https://unchainedpodcast.com/",
+          description: t("unchained-description"),
+        },
+        {
+          label: t("the-daily-gwei-title"),
+          href: "https://www.youtube.com/@TheDailyGwei/",
+          description: t("the-daily-gwei-description"),
+        },
+        {
+          label: t("bankless-title"),
+          href: "https://podcast.banklesshq.com/",
+          description: t("bankless-description"),
+        },
+      ],
+    },
+    {
+      heading: t("about-ethereum-video-series"),
+      items: [
+        {
+          label: t("ethereum-basics-title"),
+          href: "https://www.youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5",
+          description: t("ethereum-basics-description"),
+        },
+      ],
+    },
+  ]
 
   return (
     <>
@@ -239,7 +239,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 {t("what-is-crypto-2-after-link")}
               </p>
 
-              <div className="grid-cols-fill-4 grid gap-4">
+              <div className="grid grid-cols-fill-4 gap-4">
                 <LearnCard
                   href="/what-is-ethereum/"
                   image={whatIsEth}
@@ -264,7 +264,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               </div>
 
               <h3>{t("keep-learning-title")}</h3>
-              <div className="grid-cols-fill-4 grid gap-4">
+              <div className="grid grid-cols-fill-4 gap-4">
                 <LearnCard
                   href="/what-is-the-ethereum-network/"
                   image={developersEthBlocks}
@@ -315,7 +315,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               <h2>{tocItems[1].title}</h2>
               <p>{t("how-do-i-use-ethereum-1")}</p>
 
-              <div className="grid-cols-fill-4 grid gap-4">
+              <div className="grid grid-cols-fill-4 gap-4">
                 <LearnCard
                   href="/wallets/"
                   image={wallet}
@@ -385,7 +385,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               <p>{t("go-deeper-description")}</p>
             </div>
 
-            <div className="grid-cols-fill-4 grid gap-4">
+            <div className="grid grid-cols-fill-4 gap-4">
               <LearnCard
                 href="/roadmap/"
                 image={merge}

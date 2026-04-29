@@ -182,7 +182,7 @@ export function PieChart({
     const percentage = ((data.value / total) * 100).toFixed(1)
 
     return (
-      <div className="bg-background rounded-lg border p-2 shadow-lg">
+      <div className="rounded-lg border bg-background p-2 shadow-lg">
         <p className="font-medium">{data.name}</p>
         <p className="text-muted-foreground text-sm">
           {showPercentage ? `${percentage}%` : data.value}

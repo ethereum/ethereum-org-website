@@ -138,11 +138,11 @@ ${rtlBidiRules(fileType)}`
 
     case "indic":
       return `${common}
-- Use Western Arabic numerals (1, 2, 3) -- not native numeral scripts.`
+- ALWAYS use Western Arabic numerals (0-9) for ALL digits -- including in headings, numbered lists, dates, statistics, and prose. Never use native numeral scripts (e.g., never ১২৩, never १२३). This applies to the entire site, not just code.`
 
     case "cyrillic":
       return `${common}
-- Use Western Arabic numerals (1, 2, 3) -- not native numeral scripts.
+- ALWAYS use Western Arabic numerals (0-9) for ALL digits -- including in headings, numbered lists, dates, statistics, and prose. Never use native numeral scripts.
 - Use correct grammatical plural categories (one/few/many/other) as appropriate for the target language.`
 
     case "latin":

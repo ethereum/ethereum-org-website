@@ -4,8 +4,11 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { KNOWN_PERSONS } from "@/lib/jsonld/persons"
+import { personReference } from "@/lib/jsonld/utils"
 
 export default async function BugBountyJsonLD({
   locale,
@@ -27,6 +30,7 @@ export default async function BugBountyJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      KNOWN_PERSONS["fredrik-svantes"],
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
@@ -36,7 +40,10 @@ export default async function BugBountyJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        author: [
+          personReference("fredrik-svantes"),
+          REFERENCE.ETHEREUM_COMMUNITY,
+        ],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",

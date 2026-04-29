@@ -48,7 +48,7 @@ import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-s
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
-import EventFallback from "@/public/images/events/event-placeholder.png"
+import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
 const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
@@ -103,9 +103,9 @@ const WhyGrid = () => {
   return (
     <div
       className={cn(
-        "border-accent-c/20 rounded-4xl border",
+        "rounded-4xl border border-accent-c/20",
         "grid grid-cols-1 gap-6 p-8 md:grid-cols-2 md:p-14",
-        "from-accent-c/5 to-accent-c/15 bg-linear-to-b from-[60%]"
+        "bg-linear-to-b from-accent-c/5 from-[60%] to-accent-c/15"
       )}
     >
       {items.map(({ heading, description }) => (
@@ -186,7 +186,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             id="why"
             className={cn(
               "grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2",
-              "bg-background-highlight -mx-8 w-screen max-w-screen-2xl items-center px-8 py-10 md:py-20"
+              "-mx-8 w-screen max-w-screen-2xl items-center bg-background-highlight px-8 py-10 md:py-20"
             )}
           >
             <div className="space-y-4">
@@ -261,7 +261,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             id="resources"
             className={cn(
               "grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8",
-              "bg-background-highlight -mx-8 w-screen max-w-screen-2xl px-8 py-10 md:py-20"
+              "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
             )}
           >
             <h2 className="sr-only">
@@ -269,7 +269,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </h2>
 
             {/* Quickstart your idea */}
-            <Card className="bg-background !space-y-8 px-6 py-8 break-words md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={scaffoldDebugScreenshot}
                 alt="Scaffold-ETH 2 debug screenshot"
@@ -278,7 +278,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               />
               <div>
                 <h3>{t("page-developers-jump-right-in-title")}</h3>
-                <p className="text-body-medium text-sm">
+                <p className="text-sm text-body-medium">
                   {t("page-developers-quickstart-scaffold-subtext")}{" "}
                   <Link
                     href="https://docs.scaffoldeth.io/"
@@ -293,7 +293,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   </Link>
                 </p>
               </div>
-              <div className="bg-background flex items-center rounded-lg border px-3 py-1">
+              <div className="flex items-center rounded-lg border bg-background px-3 py-1">
                 <span className="flex-1 font-mono text-sm">
                   npx create-eth@latest
                 </span>
@@ -324,7 +324,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Get help */}
-            <Card className="bg-background !space-y-8 px-6 py-8 break-words md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={stackExchangeScreenshot}
                 alt="Ethereum Stack Exchange screenshot"
@@ -333,7 +333,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               />
               <div>
                 <h3>{t("page-developers-get-help-title")}</h3>
-                <p className="text-body-medium text-sm">
+                <p className="text-sm text-body-medium">
                   {t("page-developers-get-help-desc")}
                 </p>
               </div>
@@ -362,7 +362,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Resources */}
-            <Card className="bg-background !space-y-8 px-6 py-8 break-words md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={resourcesBanner}
                 alt="Banner showing four resource app icons"
@@ -371,7 +371,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               />
               <div>
                 <h3>{t("page-developers-resources-title")}</h3>
-                <p className="text-body-medium text-sm">
+                <p className="text-sm text-body-medium">
                   {t("page-developers-resources-desc")}
                 </p>
               </div>
@@ -393,7 +393,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Tutorials */}
-            <Card className="bg-background !space-y-8 px-6 py-8 break-words md:space-y-6 lg:p-8">
+            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
               <Image
                 src={tutorialTagsBanner}
                 alt="Banner displaying multiple learning topics in a tag cloud"
@@ -402,7 +402,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               />
               <div>
                 <h3>{t("page-developers-tutorials-title")}</h3>
-                <p className="text-body-medium text-sm">
+                <p className="text-sm text-body-medium">
                   {t("page-developers-tutorials-desc")}
                 </p>
               </div>
@@ -449,7 +449,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             id="docs"
             className={cn(
               "shadow-table-item-box",
-              "bg-background-highlight -mx-8 w-screen max-w-screen-2xl px-8 py-10 md:py-20"
+              "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
             )}
           >
             <div className="w-full scroll-mt-24 px-8 py-4">
@@ -604,7 +604,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         {bannerImage ? (
                           <CardImage src={bannerImage} />
                         ) : (
-                          <Image src={EventFallback} alt="" sizes="276px" />
+                          <Image src={fallbackThumbnail} alt="" sizes="276px" />
                         )}
                       </CardBanner>
                       <CardContent>
@@ -642,12 +642,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <div
               className={cn(
                 "mx-auto max-w-screen-lg",
-                "before:z-hide before:absolute before:-inset-px before:bottom-0 before:rounded-[calc(var(--radius-4xl)+1px)] before:content-['']", // Border/gradient positioning
-                "before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20 before:bg-linear-to-b", // Border/gradient coloring
-                "bg-background relative inset-0 rounded-4xl" // Paint background color over card portion
+                "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(var(--radius-4xl)+1px)] before:content-['']", // Border/gradient positioning
+                "before:bg-linear-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
+                "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
               )}
             >
-              <div className="bg-radial-a mb-12 flex flex-col items-center gap-y-8 rounded-4xl px-8 py-12 lg:mb-32 xl:mb-36">
+              <div className="mb-12 flex flex-col items-center gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
                 <div className="flex flex-col gap-y-4 text-center">
                   <h2>{t("page-developers-founders-title")}</h2>
                   <p>{t("page-developers-founders-desc")}</p>

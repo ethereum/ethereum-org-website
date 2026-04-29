@@ -4,6 +4,7 @@ description: An introductory paper to Ethereum, published in 2013 before its lau
 lang: en
 sidebarDepth: 2
 hideEditButton: true
+authors: ["Vitalik Buterin"]
 ---
 
 <WhitepaperBridge />

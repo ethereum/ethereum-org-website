@@ -28,6 +28,8 @@ Given an English content change (A -> B), update all locale translations with mi
 - **source manifest**: Merkle tree hashes of the English content at the time of last pipeline run (used for quick "did anything change?" check via rootHash comparison; `sourceCommitSha` enables retrieval of english-A)
 - **translation manifest**: Merkle tree of the locale content, mirroring the English tree structure. Tracks per-section hashes so the pipeline knows which sections are up to date in each locale.
 
+> **Note on baseline selection:** across multiple runs against the same base branch, these inputs are drawn from a **pending branch** rather than directly from base. The pending branch accumulates translations and stamped manifests from prior runs, and serves as the baseline for drift detection on subsequent runs. See the [Orchestration](#orchestration) section for details.
+
 ## Output
 
 - **locale-B**: the updated translation reflecting all changes from A -> B
@@ -199,8 +201,10 @@ For each section in the llm-required list:
 3. Send to LLM with instructions:
    - Translate only the provided section
    - Preserve all markdown formatting, components, links, code fences
-   - Do NOT translate component attributes, code bodies, URLs, or heading IDs
+   - Do NOT translate code bodies, URLs, or heading IDs
    - Return ONLY the translated section content
+
+   JSX components are not directly visible to the LLM in the normalized path -- the content normalizer replaces components with `<HTML-PLACEHOLDER-COMPONENT-* />` placeholders before the prompt is built, and translatable attribute *values* are extracted as separate leaves. The dedicated JSX Attribute Translation Pass (Phase 4b) handles those leaves after this phase. The non-normalized fallback path (used for e.g. JSON files) does see raw component tags; in that case the prompt rule is "preserve components and their attributes exactly" because attribute translation in the same call is unreliable.
 4. Receive translated section
 
 The LLM receives english-B content, which already contains all inert values (new URLs, new attributes, etc.). The LLM is expected to preserve these as-is. This is the same behavior as a full translation -- the LLM never sees old inert values.
@@ -221,6 +225,42 @@ For frontmatter translatable fields:
 - The mock does NOT receive unchanged or inert-only sections
 - The mock does NOT receive structural-only sections
 - Frontmatter translatable fields are sent individually, not as part of a section
+
+---
+
+## Phase 4b: JSX Attribute Translation Pass
+
+**Input:** english-B (source) + the post-Phase-4 locale file
+**Output:** locale file with translatable JSX attribute values translated
+
+**Why this is a separate pass:** JSX components like `<ExpandableCard title="..." eventCategory="..." />` have a mix of translatable (`title`) and non-translatable (`eventCategory`, `href`, `src`) attributes. The Phase 4 LLM prompt instructs the model to preserve component tags and attribute names exactly to avoid breaking JSX. Doing the same prompt-based translation on attribute values is unreliable -- the LLM either over-translates (breaks `eventName` analytics tags) or under-translates (the bug that motivated this pass). A dedicated, narrowly-scoped pass with an allow-list is safer.
+
+**What it does:**
+1. Parse english-B into a content tree (already done in Phase 1; reuse).
+2. Walk the tree for nodes where `elementType === "component-attribute"`.
+3. For each such node, check:
+   - Attribute name is in the allow-list (`TRANSLATABLE_ATTRIBUTES` in `lib/shared-patterns.ts`: title, description, alt, label, aria-label, placeholder, buttonLabel, name, caption, contentPreview, location).
+   - Value passes the translatability heuristic in `shared-patterns.ts` (rejects URLs, paths, identifiers, code).
+4. The pass is **idempotent and self-healing**: it filters leaves to only those whose English value still appears verbatim in the locale file. If a leaf's English value isn't found in the locale, it's already been translated -- skip. This means re-running the pipeline on a file with already-translated attrs is a no-op for that file (no LLM call, no commit).
+5. Batch the leaves per language. Send a focused prompt to the LLM with:
+   - The component name + attribute name + English value
+   - Glossary terms for the language (same loader as Phase 4)
+   - Instructions: translate the value naturally; preserve product names per glossary; do not translate identifiers
+6. Receive translations. Map back to leaves.
+7. Apply to the locale file using the same regex-based replacement the deterministic-apply path uses for component-attribute changes (`pipeline.ts:340`-style: `attr="oldValue"` → `attr="newValue"`).
+8. Failure isolation: if the LLM returns a malformed batch (wrong count, missing fields), skip those leaves and continue. The locale file is left untouched for those attrs; a warning is logged.
+
+**Manifest impact:**
+- Source manifest: unchanged (the source content didn't change; we just translated previously-untranslated leaves).
+- Translation manifest: updated to reflect the now-translated values. Subsequent runs will see no drift on these leaves.
+
+**Test assertions:**
+- Translatable attrs (`title`, `description`, etc.) on JSX components in the output are translated.
+- Non-translatable attrs (`eventCategory`, `eventName`, `href`, `src`) in the output are byte-for-byte identical to english-B.
+- Values that look like URLs, paths, or identifiers (per the heuristic) are not translated even if they appear under a translatable attribute name.
+- A file with no English drift is skipped entirely (existing behavior).
+- Idempotency: running the pipeline twice on the same file (with translation already applied) does not re-call the LLM for the attribute pass (the self-healing filter drops leaves whose English value no longer appears in the locale).
+- LLM batch with malformed output: affected leaves are skipped, file is left valid, warning is logged.
 
 ---
 
@@ -302,6 +342,75 @@ Same pattern for JSON fixtures (per language).
 
 ---
 
+## Orchestration
+
+The per-file pipeline (Phases 1-6) is a pure function. The orchestration layer wraps it to coordinate multiple pipeline runs over time against a shared base branch (e.g., `dev`).
+
+### Pending branch as durable cursor
+
+Each base branch has a corresponding pending branch: `intl/pending-<base>` (for example, `intl/pending-dev`). The pending branch is the durable accumulator of all translations against that base -- it advances forward across pipeline runs until its contents are merged back into the base.
+
+**Lifecycle:**
+
+1. **First run (pending does not exist):**
+   - Create `intl/pending-<base>` from `<base>` HEAD
+   - Translate, stamp manifests, merge into pending
+   - Open PR: `intl/pending-<base>` → `<base>`
+
+2. **Subsequent run (pending exists):**
+   - Merge `<base>` into pending first. This brings in any new English that landed on base since the previous run. **Fail fast** if the merge conflicts -- do not do any translation work.
+   - Use pending's state as the baseline: the pipeline's local working tree and temp branch both derive from pending (not base). Drift detection compares current English against the manifests on pending (which are stamped to the previous run's commit), not against base.
+   - Translate only what changed since the last stamp.
+   - Merge the run's temp branch back into pending. The existing PR gets updated.
+
+3. **After pending PR is merged:**
+   - The pending branch is deleted (by the normal PR merge flow or manually). The next pipeline run starts fresh, creating a new pending branch.
+
+### Why pending-as-baseline
+
+Without this, a second run against the same base would re-translate English that the first run already handled. Non-deterministic LLM output means Run 2's translations would differ from Run 1's for the same sections, producing merge conflicts on the pending branch after expensive translation work.
+
+With pending-as-baseline:
+- The manifests on pending are authoritative. "What changed" is measured from the last stamp, not from base.
+- Sections already translated in Run 1 are unchanged for Run 2 (same English → same stamped hash → no drift).
+- Run 2 translates only the delta introduced since Run 1 (new PRs merged to base between runs).
+- Merges back into pending are always fast-forward or clean, never conflicting.
+
+### Temp branch lifecycle
+
+Each pipeline run creates an ephemeral temp branch (`tmp-intl/run-<timestamp>`) to accumulate its commits before merging into pending.
+
+- **Created from:** pending's HEAD (if pending exists), otherwise base's HEAD.
+- **Deleted:** after successful merge into pending. Temp branches are not audit artifacts -- once their commits are on pending, they serve no purpose.
+- **Preserved:** only when the pipeline fails partway through translation or when the final merge into pending fails. This is a debug aid for manual recovery.
+
+### Base-branch-moved-during-run
+
+If the base branch advances while the pipeline is running (a new PR merges to `<base>` between `start` and `end` of a run), the run's output is based on a slightly stale English. This is acceptable: the next pipeline run will see the new English state and translate the delta. No special handling required -- the orchestration naturally catches up.
+
+### Non-English file edit policy
+
+The pipeline is the single propagator of English changes into non-English files. The rule is not "never hand-edit locales" -- it is "do not hand-propagate English updates." The manifest maps each locale section to a specific English state; edits that preserve that mapping are fine, edits that break it are not.
+
+**Allowed:** Fixing a translation error when the English side has not moved (e.g. a correction made during `/review-translations` on a pipeline-generated PR). The manifest's English -> locale mapping remains accurate, so the next incremental run treats the corrected locale content as canonical.
+
+**Not allowed:** Hand-editing a locale file to reflect an English change. This desynchronises the manifest from reality; the next run will either re-translate over your edit or produce merge conflicts.
+
+**If an English-to-locale sync is genuinely needed** (e.g. a structural change that would break the build if not propagated immediately):
+1. Only do this when the pending branch for the base does not exist. If one exists, merge or close it first.
+2. Make the edit directly to `<base>`.
+3. Trigger `intl-pipeline.yml` with `stamp_only: true`. This updates the manifests to reflect the current file state without calling the LLM, telling the next incremental run that the current state is canonical.
+
+### Summary: orchestration contract
+
+Given a sequence of pipeline runs against the same base:
+- Each run's output is deterministic given its inputs (current English + pending manifests).
+- The pending branch is the sole accumulator. Each run advances it forward.
+- Merge conflicts (base-into-pending, tmp-into-pending) abort the run with a clear error. They never corrupt existing translations or silently drop work.
+- Successful runs leave the repository in a state where the next run is idempotent: if nothing changed in base, a rerun produces zero drift and zero LLM calls.
+
+---
+
 ## Open questions
 
 - **Structural mismatch handling:** When a locale file has fewer inline elements than English (e.g., Urdu drops 2 of 4 links in a sentence), this is a structural integrity violation. The pipeline should flag this for human review rather than silently skipping. How this flag is surfaced (PR comment, log warning, separate report) is TBD.
@@ -315,9 +424,7 @@ Same pattern for JSON fixtures (per language).
 
 - Gemini API integration (mocked in tests)
 - GitHub Actions workflow (tested separately)
-- Git operations (file retrieval via sha, committing results)
 - Multi-file batching (test is per-file)
 - Chunking for large files
 - Post-import sanitization
-- PR creation
 - Image alt text translation (known gap; alt text in markdown images is not currently classified as translatable by the parser)

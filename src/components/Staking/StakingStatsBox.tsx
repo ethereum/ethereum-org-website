@@ -17,7 +17,7 @@ const Cell = ({ children }: ChildOnlyProp) => (
 )
 
 const Value = ({ children }: ChildOnlyProp) => (
-  <code className="font-monospace text-primary inline-block bg-none p-0 pe-1 text-3xl font-bold">
+  <code className="inline-block bg-none p-0 pe-1 font-monospace text-3xl font-bold text-primary">
     {children}
   </code>
 )
@@ -31,7 +31,7 @@ const Label = ({ children }: ChildOnlyProp) => (
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
-    <Info className="active:primary focus:primary text-md hover:text-primary size-[1em]" />
+    <Info className="active:primary focus:primary size-[1em] text-md hover:text-primary" />
   </Tooltip>
 )
 

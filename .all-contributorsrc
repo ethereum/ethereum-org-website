@@ -14177,6 +14177,51 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "franrob-projects",
+      "name": "Fran Roberts",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111994975?v=4",
+      "profile": "https://franrob-projects.github.io/portfolio/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jzhishu",
+      "name": "JH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39545185?v=4",
+      "profile": "https://github.com/jzhishu",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "shalom-ezekiel",
+      "name": "shalom ezekiel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107555717?v=4",
+      "profile": "https://github.com/shalom-ezekiel",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "bshastry",
+      "name": "Bhargava Shastry",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2388185?v=4",
+      "profile": "https://github.com/bshastry",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "naftalimurgor",
+      "name": "Naftali Murgor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37052032?v=4",
+      "profile": "https://blog.naftalimurgor.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

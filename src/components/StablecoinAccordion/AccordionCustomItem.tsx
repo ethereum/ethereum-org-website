@@ -54,7 +54,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
   return (
     <AccordionItem value={contentObj.title} className="border">
       <AccordionTrigger
-        className="text-body-medium hover:text-body-medium items-center justify-between py-0 ps-0"
+        className="items-center justify-between py-0 ps-0 text-body-medium hover:text-body-medium"
         onClick={handleOpen}
       >
         <Flex
@@ -67,7 +67,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
           />
           <div>
             <Flex className="mb-2 items-center">
-              <h3 className="text-body hover:text-body text-xl md:text-2xl">
+              <h3 className="text-xl text-body hover:text-body md:text-2xl">
                 {t(contentObj.title)}
               </h3>
               {!!contentObj.tag && (
@@ -79,13 +79,13 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                 </Tag>
               )}
             </Flex>
-            <p className="text-md text-body-medium text-start">
+            <p className="text-start text-md text-body-medium">
               {t(contentObj.textPreview)}
             </p>
           </div>
         </Flex>
       </AccordionTrigger>
-      <AccordionContent className="border-border bg-background text-md -mx-px mt-0 -mb-px border p-0 md:p-0">
+      <AccordionContent className="-mx-px mt-0 -mb-px border border-border bg-background p-0 text-md md:p-0">
         <Flex className="flex-col justify-between p-8 lg:flex-row">
           {children}
         </Flex>

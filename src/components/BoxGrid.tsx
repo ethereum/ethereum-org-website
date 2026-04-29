@@ -54,10 +54,10 @@ const BoxGrid = ({ items }: BoxGridProps) => {
         return (
           <Flex
             className={cn(
-              "border-body hover:shadow-table-box-hover cursor-pointer items-center justify-between border p-6 transition-transform duration-500 hover:-skew-x-6 lg:items-stretch",
+              "cursor-pointer items-center justify-between border border-body p-6 transition-transform duration-500 hover:-skew-x-6 hover:shadow-table-box-hover lg:items-stretch",
               isOpen
                 ? `flex-col text-gray-600 sm:flex-col lg:row-start-1 lg:row-end-3 lg:flex-col ${color}`
-                : "bg-background text-body hover:bg-background-highlight flex-col-reverse sm:flex-row-reverse lg:flex-col-reverse"
+                : "flex-col-reverse bg-background text-body hover:bg-background-highlight sm:flex-row-reverse lg:flex-col-reverse"
             )}
             onClick={() => {
               setOpenIndex(idx)
@@ -79,11 +79,11 @@ const BoxGrid = ({ items }: BoxGridProps) => {
               text={item.emoji}
             />
             <div>
-              <h3 className="leading-xs mt-0 mb-8 text-[2.5rem] font-normal">
+              <h3 className="mt-0 mb-8 text-[2.5rem] leading-xs font-normal">
                 {item.title}
               </h3>
               {isOpen && (
-                <p className="leading-xs mb-6 text-xl text-gray-600">
+                <p className="mb-6 text-xl leading-xs text-gray-600">
                   {item.description}
                 </p>
               )}

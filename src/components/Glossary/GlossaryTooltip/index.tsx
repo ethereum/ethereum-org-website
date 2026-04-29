@@ -63,7 +63,7 @@ const GlossaryTooltip = ({
           })
         }}
       >
-        <u className="hover:text-primary-hover hover:decoration-primary-hover cursor-help decoration-dotted underline-offset-3">
+        <u className="cursor-help decoration-dotted underline-offset-3 hover:text-primary-hover hover:decoration-primary-hover">
           {children}
         </u>
       </Tooltip>

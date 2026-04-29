@@ -30,6 +30,7 @@ export interface SharedFrontmatter {
   sidebarDepth?: number
   isOutdated?: boolean
   template?: Layout
+  authors?: string | string[]
 }
 
 export interface StaticFrontmatter extends SharedFrontmatter {

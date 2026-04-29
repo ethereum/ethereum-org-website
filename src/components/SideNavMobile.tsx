@@ -59,7 +59,7 @@ const LinkContainer = ({ children }: ChildOnlyProp) => {
 const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
-      className="text-body hover:text-primary w-full no-underline"
+      className="w-full text-body no-underline hover:text-primary"
       {...props}
     >
       {children}
@@ -98,7 +98,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <ChevronRight className="text-body-medium h-6 w-6" />
+            <ChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </LinkContainer>
         <motion.div
@@ -141,10 +141,10 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
     getPageTitleId(path + "/", docLinks) || ("Change page" as TranslationKey)
 
   return (
-    <div className="z-sticky bg-background-highlight sticky top-[75px] h-auto w-full lg:hidden">
+    <div className="sticky top-[75px] z-sticky h-auto w-full bg-background-highlight lg:hidden">
       <motion.div>
         <Center
-          className="bg-background-highlight text-primary box-border cursor-pointer border-b px-8 py-4 font-medium"
+          className="box-border cursor-pointer border-b bg-background-highlight px-8 py-4 font-medium text-primary"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div>{t(pageTitleId)}</div>
@@ -153,7 +153,7 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <ChevronRight className="text-body-medium h-6 w-6" />
+            <ChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </Center>
       </motion.div>

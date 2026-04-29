@@ -49,7 +49,7 @@ const LanguagePickerMenu = ({
         return 0
       }}
     >
-      <div className="text-body-medium text-xs">
+      <div className="text-xs text-body-medium">
         {t("page-languages-filter-label")}{" "}
         <span className="lowercase">
           ({languages.length} {t("common:languages")})

@@ -55,7 +55,7 @@ const H2 = ({ className, ...props }: ComponentProps<"h2">) => (
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <h4 className="leading-xs my-8" {...props} />
+  <h4 className="my-8 leading-xs" {...props} />
 )
 
 const Text = ({ className, ...props }: ComponentProps<"p">) => (
@@ -259,13 +259,13 @@ export default async function Page(props: { params: Promise<Params> }) {
             <div className="flex-1 basis-1/2 pt-24 pr-0 pb-16 pl-0 lg:-mt-32 lg:pt-32 lg:pr-8 lg:pb-32 lg:pl-8">
               <Breadcrumbs slug="bug-bounty" className="mb-8" />
               <Row>
-                <div className="bg-success h-2 w-2 rounded-full" />{" "}
-                <Text className="text-body ms-2 mb-0 text-sm uppercase">
+                <div className="h-2 w-2 rounded-full bg-success" />{" "}
+                <Text className="ms-2 mb-0 text-sm text-body uppercase">
                   {t("page-upgrades-bug-bounty-title")}
                 </Text>
               </Row>
               <div
-                className="bg-linear-bug-bounty-title mt-4 max-w-[720px] overflow-auto bg-clip-text"
+                className="mt-4 max-w-[720px] overflow-auto bg-linear-bug-bounty-title bg-clip-text"
                 style={{
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
@@ -276,7 +276,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   <Emoji text=":bug:" />
                 </h1>
               </div>
-              <Text className="leading-xs text-body-medium mt-4 max-w-[480px]">
+              <Text className="mt-4 max-w-[480px] leading-xs text-body-medium">
                 {t("page-upgrades-bug-bounty-subtitle")}
               </Text>
               <Flex className="mt-4 flex-wrap items-center gap-4">
@@ -380,7 +380,7 @@ export default async function Page(props: { params: Promise<Params> }) {
             />
           </Client>
         </ClientRow>
-        <div className="bg-background-highlight shadow-table-item-box mt-8 mb-12 w-full border-t px-0 py-16">
+        <div className="mt-8 mb-12 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
           <Content>
             <div className="flex-1">
               <H2 id="in-scope">{t("page-upgrades-bug-bounty-validity")}</H2>
@@ -514,10 +514,10 @@ export default async function Page(props: { params: Promise<Params> }) {
               {/* Out of Scope */}
               <div
                 id="out-of-scope"
-                className="bg-background-highlight m-4 flex-[1_1_100%] overflow-hidden rounded-xs border border-solid p-6"
+                className="m-4 flex-[1_1_100%] overflow-hidden rounded-xs border border-solid bg-background-highlight p-6"
               >
                 <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
-                <p className="text-body-medium mb-6">
+                <p className="mb-6 text-body-medium">
                   {t.rich("page-upgrades-bug-bounty-not-included-desc", {
                     a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
                   })}
@@ -564,7 +564,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                     ] as const
                   ).map(({ key, footnote }) => (
                     <li key={key} className="flex items-start gap-3 text-sm">
-                      <span className="text-error mt-0.5 shrink-0">✕</span>
+                      <span className="mt-0.5 shrink-0 text-error">✕</span>
                       <span>
                         {t(key)}
                         {footnote && <sup>*</sup>}
@@ -572,14 +572,14 @@ export default async function Page(props: { params: Promise<Params> }) {
                     </li>
                   ))}
                 </ul>
-                <p className="text-body-medium mt-4 text-xs">
+                <p className="mt-4 text-xs text-body-medium">
                   <sup>*</sup>
                   {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
                 </p>
               </div>
 
               {/* Bug Hunting Rules */}
-              <div className="bg-background-highlight m-4 flex-[1_1_100%] overflow-hidden rounded-xs border border-solid p-6">
+              <div className="m-4 flex-[1_1_100%] overflow-hidden rounded-xs border border-solid bg-background-highlight p-6">
                 <H2 id="rules">{t("page-upgrades-bug-bounty-hunting")}</H2>
                 <Text className="text-body-medium italic">
                   {t("page-upgrades-bug-bounty-hunting-desc")}
@@ -595,9 +595,9 @@ export default async function Page(props: { params: Promise<Params> }) {
                   ).map((key, idx) => (
                     <li
                       key={key}
-                      className="border-border bg-background flex items-start gap-4 rounded-xs border p-4"
+                      className="flex items-start gap-4 rounded-xs border border-border bg-background p-4"
                     >
-                      <span className="bg-primary/10 text-primary flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm font-bold">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
                         {idx + 1}
                       </span>
                       <span className="text-sm leading-relaxed">{t(key)}</span>
@@ -612,12 +612,12 @@ export default async function Page(props: { params: Promise<Params> }) {
               <H2 id="qualifications" className="max-w-[100ch]">
                 {t("page-upgrades-bug-bounty-severity-qualifications-title")}
               </H2>
-              <p className="text-body-medium mb-8 max-w-[100ch]">
+              <p className="mb-8 max-w-[100ch] text-body-medium">
                 {t("page-upgrades-bug-bounty-severity-qualifications-desc")}
               </p>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {/* Low */}
-                <div className="border-border bg-background flex flex-col rounded-xs border p-6">
+                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-green-500/10 px-3 py-1 text-sm font-semibold text-green-600 dark:text-green-400">
                     {t("page-upgrades-bug-bounty-severity-low-title")}
                   </span>
@@ -640,7 +640,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   </ul>
                 </div>
                 {/* Medium */}
-                <div className="border-border bg-background flex flex-col rounded-xs border p-6">
+                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-yellow-500/10 px-3 py-1 text-sm font-semibold text-yellow-600 dark:text-yellow-400">
                     {t("page-upgrades-bug-bounty-severity-medium-title")}
                   </span>
@@ -663,7 +663,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   </ul>
                 </div>
                 {/* High */}
-                <div className="border-border bg-background flex flex-col rounded-xs border p-6">
+                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-orange-500/10 px-3 py-1 text-sm font-semibold text-orange-600 dark:text-orange-400">
                     {t("page-upgrades-bug-bounty-severity-high-title")}
                   </span>
@@ -686,7 +686,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   </ul>
                 </div>
                 {/* Critical */}
-                <div className="border-border bg-background flex flex-col rounded-xs border p-6">
+                <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-red-500/10 px-3 py-1 text-sm font-semibold text-red-600 dark:text-red-400">
                     {t("page-upgrades-bug-bounty-severity-critical-title")}
                   </span>
@@ -737,7 +737,7 @@ export default async function Page(props: { params: Promise<Params> }) {
         <BugBountyCards />
         <div
           id="leaderboard"
-          className="bg-banner-grid-gradient shadow-table-item-box mt-8 w-full border-t px-0 py-16"
+          className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box"
         >
           <Flex className="flex-col items-start justify-center lg:flex-row">
             <FullLeaderboardContainer>

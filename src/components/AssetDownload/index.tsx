@@ -49,7 +49,7 @@ const AssetDownload = ({
       className={cn("m-4 justify-between gap-0 p-0", className)}
       {...props}
     >
-      <h4 className="text-md my-8 font-medium md:text-xl">{title}</h4>
+      <h4 className="my-8 text-md font-medium md:text-xl">{title}</h4>
       <div>
         <AssetDownloadImage image={image} alt={alt} />
         {artistName && (

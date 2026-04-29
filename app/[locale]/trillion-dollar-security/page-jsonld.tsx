@@ -4,8 +4,11 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { KNOWN_PERSONS } from "@/lib/jsonld/persons"
+import { personReference } from "@/lib/jsonld/utils"
 
 export default async function TrillionDollarSecurityPageJsonLD({
   locale,
@@ -27,6 +30,8 @@ export default async function TrillionDollarSecurityPageJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      KNOWN_PERSONS["josh-stark"],
+      KNOWN_PERSONS["fredrik-svantes"],
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
@@ -36,7 +41,10 @@ export default async function TrillionDollarSecurityPageJsonLD({
         url: url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        author: [
+          personReference("josh-stark"),
+          personReference("fredrik-svantes"),
+        ],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
@@ -65,7 +73,10 @@ export default async function TrillionDollarSecurityPageJsonLD({
         headline: t("page-trillion-dollar-security-title"),
         description: t("page-trillion-dollar-security-meta-description"),
         image: "https://ethereum.org/images/trillion-dollar-security/hero.png",
-        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        author: [
+          personReference("josh-stark"),
+          personReference("fredrik-svantes"),
+        ],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         about: {

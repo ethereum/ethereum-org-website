@@ -62,7 +62,7 @@ const MenuContent = ({ items, isOpen, sections }: MenuContentProps) => {
     <Content asChild>
       <motion.div
         className={cn(
-          "border-body-light bg-background absolute inset-x-0 top-19 border shadow-md",
+          "absolute inset-x-0 top-19 border border-body-light bg-background shadow-md",
           base()
         )}
         variants={containerVariants}

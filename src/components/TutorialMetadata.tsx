@@ -41,7 +41,7 @@ const TutorialMetadata = ({
   const address = frontmatter.address
 
   return (
-    <Flex className="border-border flex-col justify-between border-b-0 pb-2 lg:border-b">
+    <Flex className="flex-col justify-between border-b-0 border-border pb-2 lg:border-b">
       <Flex className="mb-8 w-full items-center justify-between">
         <Flex className="w-full flex-wrap">
           <TutorialTags tags={frontmatter.tags} />
@@ -80,7 +80,7 @@ const TutorialMetadata = ({
         <Flex className="text-text300 -mt-4 mb-6 flex-wrap text-sm">
           <CopyToClipboard text={address}>
             {(isCopied) => (
-              <div className="bg-background-highlight text-primary hover:bg-primary-hover hover:text-body-inverse cursor-pointer overflow-hidden px-1 font-mono text-sm text-ellipsis">
+              <div className="cursor-pointer overflow-hidden bg-background-highlight px-1 font-mono text-sm text-ellipsis text-primary hover:bg-primary-hover hover:text-body-inverse">
                 <span className="uppercase">
                   <Translation id="page-developers-tutorials:comp-tutorial-metadata-tip-author" />
                 </span>{" "}

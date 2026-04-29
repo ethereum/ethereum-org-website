@@ -21,7 +21,7 @@ const UpgradeStatus = ({
     <aside
       className={cn(
         "my-8 flex w-full flex-col gap-6 rounded p-6 shadow-2xl lg:mt-0",
-        "from-accent-c/10 bg-black/80 bg-linear-to-b",
+        "bg-black/80 bg-linear-to-b from-accent-c/10",
         "dark:border-2 dark:bg-gray-700 dark:from-transparent",
         isShipped
           ? "bg-success-light dark:border-success"

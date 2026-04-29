@@ -1,13 +1,14 @@
 import { pick } from "lodash"
 import { getMessages, getTranslations } from "next-intl/server"
 
-import type { PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleYear } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -16,6 +17,7 @@ import OrganizerCTA from "../_components/OrganizerCTA"
 import { getMeetupGroups, mapEventTranslations } from "../utils"
 
 import FilterMeetups from "./_components/FilterMeetups"
+import MeetupsJsonLD from "./page-jsonld"
 
 import { getEventsData } from "@/lib/data"
 
@@ -45,8 +47,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const { contributors } = await getAppPageContributorInfo(
+    "community/events/meetups",
+    locale as Lang
+  )
+
   return (
     <>
+      <MeetupsJsonLD
+        locale={locale}
+        contributors={contributors}
+        meetups={meetups}
+      />
       <ContentHero
         breadcrumbs={{ slug: "/community/events/meetups" }}
         title={t("page-events-meetups-hero-title", {

@@ -82,7 +82,7 @@ export function useWalletOnboardingSimData(): SimulatorData {
             <>
               <Stack>
                 <p className="font-bold">{t("sim-ca-desc-6-small-title")}</p>
-                <UnorderedList className="leading-1 ms-0 list-none">
+                <UnorderedList className="ms-0 list-none leading-1">
                   <ListItem>
                     <Emoji text="✅" className="me-2" />{" "}
                     {t("sim-ca-desc-6-small-1")}
@@ -93,7 +93,7 @@ export function useWalletOnboardingSimData(): SimulatorData {
                 <p className="font-bold">
                   {t("sim-ca-desc-6-significant-title")}
                 </p>
-                <UnorderedList className="leading-1 ms-0 list-none">
+                <UnorderedList className="ms-0 list-none leading-1">
                   <ListItem>
                     <Emoji text="✅" className="me-2" />{" "}
                     {t("sim-ca-desc-6-significant-1")}
@@ -106,7 +106,7 @@ export function useWalletOnboardingSimData(): SimulatorData {
               </Stack>
               <Stack>
                 <p className="font-bold">{t("sim-ca-desc-6-unsafe-title")}</p>
-                <UnorderedList className="leading-1 ms-0 list-none">
+                <UnorderedList className="ms-0 list-none leading-1">
                   <ListItem>
                     <Emoji text="❌" className="me-2" />
                     {t("sim-ca-desc-6-unsafe-1")}

@@ -14,7 +14,7 @@ const StakingProductsCardGrid = ({
   const { rankedProducts } = useStakingProductsCardGrid({ category })
 
   return (
-    <div className={"grid-cols-fill-4 mx-0 my-12 grid gap-6"}>
+    <div className={"mx-0 my-12 grid grid-cols-fill-4 gap-6"}>
       {rankedProducts.map((product) => (
         <StakingProductCard key={product.name} product={product} />
       ))}

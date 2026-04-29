@@ -49,7 +49,7 @@ const TrustLogos = async ({
             />
           </div>
 
-          <FloatingCard className="absolute -left-4 top-8 z-10 shadow-lg md:top-12 lg:-left-8">
+          <FloatingCard className="absolute top-8 -left-4 z-10 shadow-lg md:top-12 lg:-left-8">
             <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
               {t("page-index-trust-never-offline")}
             </p>
@@ -75,7 +75,7 @@ const TrustLogos = async ({
       <SectionContent className="flex max-w-[660px] flex-1 flex-col gap-6 pt-8 md:gap-8 md:pt-0 lg:gap-10">
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{t("page-index-trust-tag")}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0">
+          <SectionHeader className="!mt-0 !mb-0">
             {t("page-index-trust-title")}
           </SectionHeader>
         </div>
