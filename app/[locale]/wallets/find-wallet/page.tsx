@@ -9,9 +9,10 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
-import WalletListingMethodology from "@/components/FindWalletProductTable/WalletListingMethodology"
 import I18nProvider from "@/components/I18nProvider"
+import ListingMethodology from "@/components/ListingMethodology"
 import MainArticle from "@/components/MainArticle"
+import { UnorderedList } from "@/components/ui/list"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -91,7 +92,39 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <FindWalletProductTable wallets={wallets} />
 
-          <WalletListingMethodology lastUpdated={lastUpdatedDisplay} />
+          <ListingMethodology
+            heading={t("page-find-wallet-methodology-title")}
+            description={t("page-find-wallet-methodology-intro")}
+            lastUpdated={lastUpdatedDisplay}
+            href="/contributing/adding-wallets/"
+            footers={[
+              t("page-find-wallet-footnote-1"),
+              t("page-find-wallet-footnote-2"),
+            ]}
+          >
+            <p>{t("page-find-wallet-methodology-must-haves-label")}</p>
+
+            <UnorderedList className="space-y-2">
+              {[
+                "security",
+                "track-record",
+                "maintenance",
+                "honest-info",
+                "contact",
+                "eip1559",
+                "ux",
+                "ethereum-focused",
+              ].map((key) => (
+                <li key={key}>
+                  {t(`page-find-wallet-methodology-criterion-${key}`)}
+                </li>
+              ))}
+            </UnorderedList>
+
+            <p>{t("page-find-wallet-methodology-verification")}</p>
+
+            <p>{t("page-find-wallet-methodology-filters")}</p>
+          </ListingMethodology>
         </MainArticle>
       </I18nProvider>
     </>
