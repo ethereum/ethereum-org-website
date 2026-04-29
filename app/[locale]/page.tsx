@@ -1,5 +1,4 @@
 import { pick } from "lodash"
-import { ArrowRight } from "lucide-react"
 import { notFound } from "next/navigation"
 import {
   getMessages,
@@ -16,10 +15,9 @@ import TrustLogos from "@/components/Homepage/TrustLogos"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { TrackedSection } from "@/components/TrackedSection"
-import { BaseLink } from "@/components/ui/Link"
+import { LinkWithArrow } from "@/components/ui/Link"
 import { SectionHeader, SectionTag } from "@/components/ui/section"
 
-import { cn } from "@/lib/utils/cn"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -60,7 +58,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const transactionsToday =
     "value" in growThePieData.txCount ? growThePieData.txCount.value : null
 
-  const { direction: dir, twFlipForRtl } = getDirection(locale)
+  const { direction: dir } = getDirection(locale)
   const t = await getTranslations("page-index")
   const allMessages = await getMessages()
   const glossary = allMessages["glossary-tooltip"] as Record<string, string>
@@ -120,10 +118,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </div>
                 }
                 footer={
-                  <BaseLink
+                  <LinkWithArrow
                     href="/guides/"
-                    hideArrow
-                    className="inline-flex items-center gap-1 no-underline"
                     customEventOptions={{
                       eventCategory,
                       eventAction: "section_click",
@@ -131,8 +127,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     }}
                   >
                     {t("page-index-simulator-cta")}
-                    <ArrowRight className={cn("size-4", twFlipForRtl)} />
-                  </BaseLink>
+                  </LinkWithArrow>
                 }
               />
             </TrackedSection>

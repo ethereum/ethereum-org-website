@@ -1,8 +1,8 @@
-import { ArrowRight, Check } from "lucide-react"
+import { Check } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import { BaseLink } from "@/components/ui/Link"
+import { LinkWithArrow } from "@/components/ui/Link"
 import {
   Section,
   SectionContent,
@@ -85,10 +85,8 @@ const TrustLogos = async ({
           <p>{t("page-index-trust-description-2")}</p>
         </div>
 
-        <BaseLink
+        <LinkWithArrow
           href="/get-eth/"
-          className="inline-flex items-center gap-1 no-underline"
-          hideArrow
           customEventOptions={{
             eventCategory,
             eventAction: "section_click",
@@ -96,8 +94,7 @@ const TrustLogos = async ({
           }}
         >
           {t("page-index-trust-cta")}
-          <ArrowRight className="size-4" />
-        </BaseLink>
+        </LinkWithArrow>
       </SectionContent>
     </Section>
   )
