@@ -706,6 +706,11 @@ async function main() {
 
   const committedFiles: Array<{ path: string; content: string }> = []
   let hasCommits = false
+  // Per-task failures captured with file context. Populated by submitWithContext
+  // wrapper so we can report rich failure info in the PR body and surface
+  // copy-pasteable rerun commands. Pool's own error tracking still runs in
+  // parallel for the orchestration-level "did anything fail" check.
+  const failures: Array<{ locale: string; file: string; message: string }> = []
 
   // Resolve target paths in five passes:
   //   1. Normalize  (log-level: auto-prefix and strip accidental locale paths)
@@ -783,6 +788,24 @@ async function main() {
     },
   })
 
+  // Wraps pool.submit to attach file context to any thrown error -- the pool
+  // only knows the locale; we want (locale, file, reason) for PR reporting.
+  const submitWithContext = (
+    locale: string,
+    filePath: string,
+    fn: () => Promise<TaskResult | void>
+  ) => {
+    pool.submit(locale, async () => {
+      try {
+        return await fn()
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err)
+        failures.push({ locale, file: filePath, message })
+        throw err
+      }
+    })
+  }
+
   // Submit all file x language tasks to the pool
   for (const file of englishFiles) {
     for (const locale of targetLanguages) {
@@ -815,7 +838,7 @@ async function main() {
           continue
         }
 
-        pool.submit(locale, () =>
+        submitWithContext(locale, file.path, () =>
           runFullTranslation(
             file,
             locale,
@@ -839,7 +862,7 @@ async function main() {
 
       if (config.stampOnly) {
         log(`[${locale}] ${file.path}: stamp only`)
-        pool.submit(locale, async () => {
+        submitWithContext(locale, file.path, async () => {
           const sourceManifest =
             file.type === "markdown"
               ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
@@ -854,7 +877,7 @@ async function main() {
         continue
       }
 
-      pool.submit(locale, () =>
+      submitWithContext(locale, file.path, () =>
         runIncremental(
           file,
           locale,
@@ -872,15 +895,24 @@ async function main() {
   // Wait for all tasks to complete
   await pool.drain()
 
-  // Check for task failures
-  if (pool.hasErrors()) {
-    const errors = pool.getErrors()
-    console.error(`[pipeline] ${errors.length} task(s) failed:`)
-    for (const { language, error } of errors) {
-      console.error(`  [${language}] ${error.message}`)
+  // Log task failures but don't abort -- partial successes ship. Failures are
+  // recorded with file context (via submitWithContext) and surfaced in the PR
+  // body with rerun commands. Per-file manifests are only stamped on success,
+  // so a rerun of just the failed combinations naturally retries them without
+  // touching the work that landed this run.
+  if (failures.length > 0) {
+    log(`${failures.length} task(s) failed (continuing with successes):`, "warn")
+    for (const f of failures) {
+      log(`  [${f.locale}] ${f.file}: ${f.message}`, "warn")
     }
+  }
+
+  // Hard abort only if literally nothing succeeded -- a fully-failed run
+  // shouldn't produce an empty PR. (committedFiles excludes manifest-only stamp
+  // commits, so we also check hasCommits for the stamp-only path.)
+  if (failures.length > 0 && committedFiles.length === 0 && !hasCommits) {
     throw new Error(
-      `Pipeline aborted: ${errors.length} translation task(s) failed. Temp branch ${tempBranch} preserved with partial progress.`
+      `Pipeline aborted: all ${failures.length} translation task(s) failed. Temp branch ${tempBranch} preserved.`
     )
   }
 
@@ -942,7 +974,8 @@ async function main() {
         targetBranch,
         committedFiles,
         languagePairs,
-        config.mode
+        config.mode,
+        failures
       )
     } catch (error) {
       console.warn(
