@@ -2,6 +2,7 @@ import { memo, useCallback, useRef, useState } from "react"
 
 import type { FilterOption, Wallet } from "@/lib/types"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import WalletInfo from "../FindWalletProductTable/WalletInfo"
@@ -10,6 +11,7 @@ type RowProps<T extends { id: string }> = {
   item: T
   index: number
   open: boolean
+  visible: boolean
   onOpenChange: (open: boolean, item: T) => void
   subComponent?: (
     item: T,
@@ -23,6 +25,7 @@ const RowImpl = <T extends { id: string }>({
   item,
   index,
   open,
+  visible,
   onOpenChange,
   subComponent,
   filters,
@@ -38,7 +41,13 @@ const RowImpl = <T extends { id: string }>({
       data-index={index}
       open={open}
       onToggle={handleToggle}
-      className="group/collapsible flex w-full flex-col border-b open:bg-background-highlight hover:bg-background-highlight"
+      className={cn(
+        "group/collapsible flex w-full flex-col border-b open:bg-background-highlight hover:bg-background-highlight",
+        // tailwind-merge keeps only the last display utility, so `hidden`
+        // wins over `flex` when filtered out — the row stays mounted but
+        // is removed from layout.
+        !visible && "hidden"
+      )}
     >
       <summary className="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
         <WalletInfo wallet={item as unknown as Wallet} />
@@ -52,6 +61,10 @@ const Row = memo(RowImpl) as typeof RowImpl
 
 type ListProps<T extends { id: string }> = {
   data: T[]
+  // When provided, every row in `data` is rendered, but rows whose id is
+  // not in `matchedIds` are display:none. Avoids mount/unmount churn on
+  // filter changes. When omitted, all rows are visible (legacy behavior).
+  matchedIds?: Set<string>
   subComponent?: (
     item: T,
     filters: FilterOption[],
@@ -63,6 +76,7 @@ type ListProps<T extends { id: string }> = {
 
 const List = <T extends { id: string }>({
   data,
+  matchedIds,
   subComponent,
   matomoEventCategory,
   filters,
@@ -101,6 +115,7 @@ const List = <T extends { id: string }>({
           item={item}
           index={index}
           open={!!expanded[item.id]}
+          visible={!matchedIds || matchedIds.has(item.id)}
           onOpenChange={handleOpenChange}
           subComponent={subComponent}
           filters={filters}

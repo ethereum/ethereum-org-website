@@ -23,13 +23,17 @@ interface ProductTableProps<T extends { id: string }> {
   onResetFilters?: () => void
   mobileFiltersLabel: string
   children: ({
+    data,
     filteredData,
+    matchedIds,
     filters,
     setMobileFiltersOpen,
     resetFilters,
     activeFiltersCount,
   }: {
+    data: T[]
     filteredData: T[]
+    matchedIds: Set<string>
     filters: FilterOption[]
     setMobileFiltersOpen: (open: boolean) => void
     resetFilters: () => void
@@ -106,6 +110,13 @@ const ProductTable = <T extends { id: string }>({
     return filterFn(data, filters)
   }, [data, filters, filterFn])
 
+  // Stable Set of currently-matching IDs. Consumers can render every row
+  // unconditionally and toggle visibility via this Set instead of mounting
+  // and unmounting subtrees on every filter change.
+  const matchedIds = useMemo(() => {
+    return new Set(filteredData.map((item) => item.id))
+  }, [filteredData])
+
   const presetFiltersCounts = useMemo(() => {
     return presetFilters.map((persona) => {
       const activeFilters = Object.entries(persona.presetFilters).filter(
@@ -158,7 +169,9 @@ const ProductTable = <T extends { id: string }>({
           </div>
           <div className="flex-1">
             {children({
+              data,
               filteredData,
+              matchedIds,
               filters,
               setMobileFiltersOpen,
               resetFilters,

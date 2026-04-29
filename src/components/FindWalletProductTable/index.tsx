@@ -39,18 +39,18 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
       presetFilters={walletPersonas}
       mobileFiltersLabel={t("page-find-wallet-see-wallets")}
     >
-      {({ filteredData, filters, resetFilters }) => (
+      {({ data, matchedIds, filters, resetFilters }) => (
         <>
           <div className="sticky top-[76px] z-10 w-full border-b-background-highlight bg-background lg:border-b">
             <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
               <p className="text-body-medium">
                 {t("page-find-wallet-showing-all-wallets")}{" "}
-                <span className="text-body">({filteredData.length})</span>
+                <span className="text-body">({matchedIds.size})</span>
               </p>
             </div>
           </div>
 
-          {filteredData.length === 0 && (
+          {matchedIds.size === 0 && (
             <FindWalletsNoResults
               resetFilters={() => {
                 resetFilters()
@@ -63,8 +63,12 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
             />
           )}
 
+          {/* Render every wallet always; toggle visibility via matchedIds.
+              Filter changes become re-renders that flip a class — no
+              mount/unmount of WalletInfo/Row subtrees. */}
           <List
-            data={filteredData}
+            data={data}
+            matchedIds={matchedIds}
             subComponent={renderWalletSubComponent}
             filters={filters}
             matomoEventCategory="find-wallet"
