@@ -1,9 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
-
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-})
 
 const createNextIntlPlugin = require("next-intl/plugin")
 
@@ -253,7 +248,7 @@ module.exports = (phase) => {
     }
   }
 
-  return withBundleAnalyzer(withNextIntl(nextConfig))
+  return withNextIntl(nextConfig)
 }
 
 module.exports = withSentryConfig(module.exports, {
@@ -261,9 +256,4 @@ module.exports = withSentryConfig(module.exports, {
   project: "ethorg",
   silent: true,
   widenClientFileUpload: true,
-  webpack: {
-    treeshake: {
-      removeDebugLogging: true,
-    },
-  },
 })

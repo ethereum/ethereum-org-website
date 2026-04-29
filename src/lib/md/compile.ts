@@ -1,6 +1,7 @@
 import fs from "fs"
 import { join } from "path"
 
+import matter from "gray-matter"
 import { compileMDX, MDXRemoteProps } from "next-mdx-remote/rsc"
 import { getPlaiceholder } from "plaiceholder"
 import remarkSlug from "rehype-slug"
@@ -16,6 +17,10 @@ import remarkInferToc from "@/lib/md/remarkInferToc"
 import { remarkPreserveJsx } from "@/lib/md/remarkPreserveJsx"
 
 type SerializeOptions = NonNullable<MDXRemoteProps["options"]>
+
+// Cache plaiceholder base64 results to avoid re-processing the same hero
+// image across locale renders (e.g. all 25 locales sharing one hero.png).
+const plaiceholderCache = new Map<string, string>()
 
 export const compile = async ({
   markdown,
@@ -64,9 +69,15 @@ export const compile = async ({
   // If the page has a hero image, generate a blurDataURL for it
   if ("image" in frontmatter) {
     const heroImagePath = join(process.cwd(), "public", frontmatter.image)
-    const imageBuffer = fs.readFileSync(heroImagePath)
-    const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
-    frontmatter.blurDataURL = base64
+    const cached = plaiceholderCache.get(heroImagePath)
+    if (cached) {
+      frontmatter.blurDataURL = cached
+    } else {
+      const imageBuffer = fs.readFileSync(heroImagePath)
+      const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
+      plaiceholderCache.set(heroImagePath, base64)
+      frontmatter.blurDataURL = base64
+    }
   }
 
   return {
@@ -76,14 +87,9 @@ export const compile = async ({
   }
 }
 
-export const extractLayoutFromMarkdown = async (
+export const extractLayoutFromMarkdown = (
   markdown: string
-): Promise<Layout | undefined> => {
-  const source = escapeHeadingIds(markdown)
-
-  const { frontmatter } = await compileMDX<Frontmatter>({
-    source,
-    options: { parseFrontmatter: true },
-  })
-  return frontmatter.template
+): Layout | undefined => {
+  const { data } = matter(markdown)
+  return data.template as Layout | undefined
 }

@@ -46,7 +46,7 @@ export async function getPageData({
   // Determine layout first to finalize list of components
   const layout =
     layoutFromProps ||
-    (await extractLayoutFromMarkdown(markdown)) ||
+    extractLayoutFromMarkdown(markdown) ||
     getLayoutFromSlug(slug)
 
   const components: MDXRemoteProps["components"] = {
