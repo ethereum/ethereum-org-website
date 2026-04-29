@@ -29,14 +29,14 @@ const ListingMethodology = async ({
     <Section
       id="listing-methodology"
       aria-labelledby="methodology-heading"
-      className="border-body-light mt-12 border-t pt-12 md:mt-16 md:pt-16"
+      className="mt-12 border-t border-body-light pt-12 md:mt-16 md:pt-16"
     >
       <div className="flex w-full flex-col gap-6 px-4 pb-16 md:w-2/3 lg:w-3/5">
         <h2 id="methodology-heading" className="text-3xl font-bold md:text-4xl">
           {heading}
         </h2>
 
-        <p className="text-body-medium text-lg leading-relaxed">
+        <p className="text-lg leading-relaxed text-body-medium">
           {description}
         </p>
 
@@ -44,8 +44,10 @@ const ListingMethodology = async ({
           <BaseLink href={href}>{t("full-criteria-link-label")}</BaseLink>
         )}
 
-        <div className="text-body-medium flex flex-col gap-1 text-base">
-          <p className="font-bold">{t("attribution")}</p>
+        <div className="flex flex-col gap-1 text-base text-body-medium">
+          <p>
+            <strong>{t("attribution")}</strong>
+          </p>
           <p>
             {t("last-update")} {lastUpdated}
           </p>
@@ -60,7 +62,7 @@ const ListingMethodology = async ({
             {children}
 
             {footers && (
-              <div className="text-body-medium border-body-light mt-6 space-y-2 border-t pt-6 text-sm">
+              <div className="mt-6 space-y-2 border-t border-body-light pt-6 text-sm text-body-medium">
                 {footers.map((footer) => (
                   <p key={footer}>{footer}</p>
                 ))}
