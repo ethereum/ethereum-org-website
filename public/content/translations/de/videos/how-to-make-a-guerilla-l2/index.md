@@ -1,0 +1,73 @@
+---
+title: "Wie man ein Guerilla-L2 aufbaut"
+description: "Fatemeh Fannizadeh und Melanie Premsyl über den Aufbau von Layer-2-Netzwerken als Werkzeuge für Privatsphäre, Freiheit und Widerstand, und die Neugestaltung der Blockchain-Infrastruktur aus einer Cypherpunk- und Aktivisten-Perspektive."
+lang: de
+youtubeId: "WlsICV2OPAE"
+uploadDate: 2025-11-23
+duration: "0:15:55"
+educationLevel: intermediate
+topic:
+  - "Privatsphäre und Sicherheit"
+  - "Skalierung und Layer 2"
+  - "Privatsphäre"
+  - "Layer 2"
+format: interview
+author: Web3Privacy Now
+breadcrumb: "Guerilla-L2"
+---
+
+**Fatemeh Fannizadeh** und **Melanie Premsyl** präsentieren auf dem Ethereum Cypherpunk Congress (ECC#2) in Buenos Aires über den Aufbau von Layer-2-Netzwerken als Werkzeuge für Privatsphäre, Freiheit und Widerstand. Sie gestalten die Blockchain-Infrastruktur aus einer Cypherpunk- und Aktivisten-Perspektive neu, mit einem detaillierten Einblick in die Schnittstelle von anarchistischer Philosophie und Blockchain-Architektur.
+
+*Dieses Transkript ist eine barrierefreie Kopie des [ursprünglichen Video-Transkripts](https://www.youtube.com/watch?v=WlsICV2OPAE), das von Web3Privacy Now veröffentlicht wurde. Es wurde zur besseren Lesbarkeit leicht bearbeitet.*
+
+#### Einführung und anarchistische Philosophie (0:05) {#introduction-and-anarchist-philosophy-005}
+
+**Fatemeh Fannizadeh:** [Applaus] Nun, danke, dass ihr hier seid. Ich weiß, dass Vitalik gerade spricht. Es ist wirklich eine Ehre, ein paar von euch hier zu haben und nicht drüben in der Matcha-Schlange. Wir werden heute ein Gespräch über Guerilla-L2s führen, und ich denke, wir werden gleich darauf eingehen, aber ich präsentiere euch Melanie Premsyl, eine französische Philosophin und Anarchistin, die uns die Ehre erweist, hier bei uns zu sein. Möchtest du dich kurz vorstellen?
+
+**Melanie Premsyl:** Ja. Hallo zusammen. Ich bin eine französische Philosophin. Ich studiere Anarchie und Technologie, und anfangs war ich eher auf der territorialen Seite. Wie zum Beispiel im Zentrum von Frankreich, ich weiß nicht, ob ihr Tarnac kennt, oder all diese Gruppen, die eher gewaltbereit sind. Das Hauptproblem, auf das ich stieß, war, dass wir mit anderen Menschen auf der Welt vernetzt sein müssen, und viele anarchistische Gruppen sind sehr eingeschränkt. Wir brauchen einen Weg, um mit mehr Menschen aus Amerika oder Südamerika kommunizieren zu können. Und deshalb versuchen wir jetzt, eine Brücke zu Krypto und zu allen zu schlagen, die versuchen, neue Wege zu finden, um gegen den Mangel an Privatsphäre, den Mangel an Freiheit und die Gewalt des Staates zu kämpfen.
+
+#### Der Prozess gegen die MEV-Brüder (1:52) {#the-mev-brothers-trial-152}
+
+**Fatemeh Fannizadeh:** Großartig. Also im Grunde haben wir uns vor ein paar Wochen in New York getroffen. Wir haben beide an einem Prozess in Manhattan teilgenommen, bei dem diese beiden Brüder, bekannt als die MEV-Brüder, angeklagt wurden, weil sie einige Sandwich-Bots gesandwicht haben. Ich ging zum Gericht, um mir den Prozess anzusehen, und sah diese Person hier, die Spinoza auf Französisch las, und ich war wirklich neugierig, was da vor sich ging. Es war niemand im Publikum außer uns beiden! Ich war also wirklich neugierig, was dich, in erster Linie eine Anarchistin und Philosophin und keine Technologin, dazu gebracht hat, an diesem speziellen Prozess teilzunehmen, aber auch über die Governance von Ethereum und das gesamte Validierungssystem sowie den Prozess in New York nachzudenken. 
+
+**Melanie Premsyl:** Ich glaube, ich wollte einfach nur verstehen, ob die Vereinigten Staaten auf irgendeine Weise versuchen, Ethereum zu kontrollieren. Denn in Europa sind wir bei Krypto ziemlich außen vor, da wir keine Gesetzgebung haben, und ich wollte das einfach mal überprüfen. 
+
+**Fatemeh Fannizadeh:** Denkst du also, dass die Vereinigten Staaten versuchen, Ethereum zu kontrollieren? 
+
+**Melanie Premsyl:** Ich denke, das ist eine große Frage. Ich glaube, die Vereinigten Staaten versuchen, jeden zu kontrollieren. 
+
+**Fatemeh Fannizadeh:** Okay. Ja, das ist ein fairer Punkt. Für diejenigen, die den Prozess nicht verfolgt haben: Nach etwa drei oder vier Wochen wurde er ergebnislos abgebrochen (Mistrial). Die Geschworenen konnten zu keinem einstimmigen Urteil kommen und nicht entscheiden, ob diese beiden Brüder schuldig waren, die Regeln der Blockchain verletzt zu haben oder nicht – was meiner Meinung nach ein ziemlich positives Ergebnis für Krypto ist, dass ein Gericht oder eine Jury nicht darüber entscheidet, was Onchain richtig und was falsch ist. 
+
+#### Die Blockchain mit anderen Gemeinschaften verbinden (4:06) {#bridging-blockchain-with-other-communities-406}
+
+**Fatemeh Fannizadeh:** Aber okay, wenn wir noch einmal einen Schritt zurückgehen zu dem, was du darüber gesagt hast, dass Anarchisten sich diese Technologie ansehen, um im Grunde eine Brücke zwischen verschiedenen Gruppen zu schlagen. 
+
+**Melanie Premsyl:** Ja. Ich denke, ich bin nur aus einem einzigen Grund hier. Ich bin kein Tech-Girl und auch nicht Teil des Krypto-Spiels, aber was ich aus einem anderen Blickwinkel beobachtet habe, ist, dass die Blockchain eine wirklich disruptive Kraft hat, aber nicht in der Lage ist, andere Gemeinschaften zu erreichen, die stärker territorialisiert sind. Ich denke, eines der Ziele ist es, eine vielfältige Blockchain zu schaffen – weshalb wir auch über L2s sprechen wollen –, um neue Gemeinschaften mit anderen Hintergründen, anderen Vorstellungen und Vorstellungswelten zu gründen.
+
+**Fatemeh Fannizadeh:** Ich meine, es ist wirklich großartig für mich, dich hier auf der Devconnect zu haben, um ehrlich zu sein, weil du diese frische Perspektive auf diese Gemeinschaft, auf das, was wir tun, und auf unsere Veranstaltungen mitbringst. Gestern haben wir viel Zeit damit verbracht, von Event zu Event zu hüpfen, und ich habe dein Feedback bekommen – etwas, das ich gar nicht mehr in der Lage bin zu sehen, weil wir uns seit vielen Jahren im Grunde mit diesem Theater beschäftigen. Wir sind alle Freunde, also sind wir alle sehr nett zueinander. Aber diese kritische Perspektive ist fantastisch. Ich denke, wir können davon profitieren, besonders weil ich wirklich begeistert war zu sehen, dass Anarchisten oder vielleicht eher linksgerichtete Menschen tatsächlich noch an unserer Technologie interessiert sind. Obwohl, ungeachtet der ganzen Krypto-Twitter-Streitereien, ist es vielleicht besser, dass dir diese ganze Seite der Community nicht bewusst ist. Aber die Streitereien darüber, dass Ethereum eine kommunistische Technologie sei – klingt das für dich wahr? Denkst du, es ist in Ordnung zu sagen, dass Ethereum eine kommunistische Technologie ist? 
+
+**Melanie Premsyl:** Ja, das würde ich gerne sagen, aber ich bin mir nicht sicher, denn du weißt, dass es viele Leute gibt, die Geld verdienen müssen, also ist das auch der Hauptzweck davon. Aber ich denke, wir könnten es einfach wie ein kommunistisches Netz nutzen, sodass zumindest ein Teil davon dieser Traum sein könnte. Ich denke, es ist ein Traum, der verwirklicht werden kann, aber wir brauchen Werkzeuge und ein Design, die den Menschen helfen, aus diesem technischen, sehr ingenieurmäßigen Denken herauszukommen, um zu verstehen, wie es wirklich ist.
+
+#### Dezentralisierung und Layer 2s (6:55) {#decentralization-and-layer-2s-655}
+
+**Fatemeh Fannizadeh:** Das erinnert mich sehr an DAOs vor ein paar Jahren. Ich weiß nicht, wie es euch allen geht, aber ich war wirklich begeistert. Ich dachte, dass DAOs die Art und Weise revolutionieren, wie wir uns als Gruppen und Gemeinschaften Onchain organisieren, und die Freiheit, die wir haben. Und am Ende ist all das einfach im Sande verlaufen. Ich glaube nicht, dass es sich überhaupt manifestiert hat. Es ging nur noch um das Abstimmungssystem, es ist nicht wirklich demokratisch, es geht nur darum, Profit zu machen. Diese ganze Idee, die wir von DAOs als soziales Werkzeug hatten, hat sich nicht wirklich verwirklicht. 
+
+**Fatemeh Fannizadeh:** Aber ich denke, wir haben in letzter Zeit viel über diese Werkzeuge gesprochen, die uns die Blockchain gibt, und wie wir uns die Entwicklung der Blockchain in fünf bis zehn Jahren vorstellen können, und es gibt viele Gespräche darüber, dass Ethereum privat wird. Ich denke, das ist definitiv der Weg in die Zukunft: dass Layer 1 (L1) ein auf Privatsphäre ausgerichtetes L1 wird. Und dann gibt es noch die Rollup-zentrierte Roadmap. Also wie Layer 2 (L2) und Rollups quasi die Hauptnutzer von Ethereum werden, anstelle von Endnutzern. Endnutzer werden dann dazu übergehen, anstatt Teil von DAOs auf dem L1 zu sein, Teil verschiedener Rollups oder L2s zu werden. Wie können wir also im Grunde unsere Vorstellungskraft in diese Art von Zukunft von Ethereum projizieren, um das aufzubauen, was du gesagt hast, diesen subkommunistischen, anarchistischen Raum der Freiheit? 
+
+**Melanie Premsyl:** Also, ich bin Französin. Das ist ein großes Problem. Als Franzosen sind wir eine sehr staatszentrierte Nation. Deshalb denke ich immer auf eine pädagogische und sehr Top-down-orientierte Weise. Und ich denke, das L2 schafft eine Möglichkeit, dass jeder Mini-Blockchains erstellen kann, und diese werden durch den Layer 1 gesichert. Ich würde gerne sehen, ob Menschen pädagogische Hilfen für alle für etwas Kostenloses erstellen können. Ich denke, viele Gruppen, wie Vereine, könnten ihre eigene Blockchain erstellen, und es wäre ein Weg – wie du weißt, ist Föderalismus das große Hauptthema des Anarchismus. Wie Menschen es schaffen können, sich vielleicht zu hassen, aber trotzdem miteinander zu sprechen. Wir brauchen also diese Art von Föderalismus in der Blockchain. Jeder hat ein Layer 2 mit seinem eigenen Wert, und so sprechen wir über dieselbe Infrastruktur. 
+
+#### Anarchie, Freiheit und die Entwicklung von Werkzeugen (9:53) {#anarchy-freedom-and-building-tooling-953}
+
+**Fatemeh Fannizadeh:** Ja, mir gefällt wirklich, was du darüber gesagt hast, sich im Grunde zu hassen, aber trotzdem zu kommunizieren, also trotz unserer Unterschiede nicht toxisch zu sein. Und die Tatsache, dass es in diesem Szenario quasi ein Layer 1 (L1) gibt, was Ethereum wäre, wird auch oft als faschistisch bezeichnet, weil wir uns alle auf dieses eine Regelwerk einigen müssen. Es ist also dieses eine System, das für alle gleich ist, und man muss sich diesem L1 im Grunde unterwerfen oder man kann abwandern, das ist eine ganz andere Frage. Aber wenn wir das in ein Ökosystem aus verschiedenen winzigen Rollup-L2s dezentralisieren können, dann können wir Dissonanz und Meinungsverschiedenheiten innerhalb dieser gemeinsamen Infrastruktur zurückbringen. 
+
+**Melanie Premsyl:** Ja, sicher. Ich finde euch großartig. Ich denke, es gibt eine große Verantwortung für Tech-Leute, die eine aufrichtige Denkweise haben. Ihr seid heutzutage die Einzigen, die versuchen, etwas Gutes zu tun, und deshalb könnt ihr nicht einfach nur in eurer eigenen Vorstellungswelt bleiben. Und wie du sagst, vielleicht das Problem des Faschismus – da wir nur eins sind, habt ihr eine große Verantwortung. Es geht nicht nur darum, Ethereum zu nutzen oder nur um Privatsphäre, es ist so, als würden wir die neue technologische Welt erschaffen und wir müssen uns entscheiden, ob es nur Tech-Leute geben wird, oder ob die Tech-Leute mit allen verbunden sein werden, die mehr Freiheit wollen.
+
+**Fatemeh Fannizadeh:** Wir haben also viel Kommunismus und Anarchismus erwähnt, und das sind fast schon Schimpfwörter in Krypto, habe ich das Gefühl. Weißt du, es ist so vorbelastet und man bekommt sofort Kritik, wenn man dieses Konzept erwähnt. Und ich weiß nicht, vielleicht irre ich mich, aber als ich zu Krypto kam, gab es mehr Hacker und die anarchistische Ästhetik war präsenter. Die Stimmung war eher – es war cool, so zu sein, also haben sich viele Leute damit identifiziert. Heutzutage habe ich das Gefühl, dass es immer noch viele gibt, aber vielleicht eher im Verborgenen. Gibt es zum Beispiel heimliche Anarchisten im Raum? Ich weiß es nicht! Ich glaube schon. Ich würde also sagen, lass uns vielleicht einen Schritt zurückgehen, ob du eigentlich definieren kannst, was Kommunismus oder Anarchismus ist.
+
+**Melanie Premsyl:** Ja. Nein, ich denke, Anarchismus ist nicht gut bekannt, dabei ist er sehr einfach. Es ist einfach, wenn wir es schaffen, eine Selbstorganisation zu haben. Also wenn es Inseln der Freiheit gibt, Inseln der Anarchie, wie wenn Leute einfach mit Freunden sprechen, in einem Verein, auch bei der Arbeit, und sie niemanden brauchen, der der Chef ist, der Kopf, um zu verstehen und zu entscheiden. Denn am Ende ist das menschliche Problem, dass die Leute einen Chef haben wollen. Anarchismus versucht einfach, gegen dieses tiefe Verlangen anzukämpfen, von anderen kontrolliert zu werden. Wollen wir wirklich frei sein? Das ist die Frage, und wie können wir es schaffen, das gemeinsam zu tun? 
+
+**Fatemeh Fannizadeh:** Etwas, das du gestern auch gesagt hast und das meiner Meinung nach sehr relevant war, ist, dass jeder Anarchie in seinem Leben lebt. Manche Leute sagen: „Oh, Anarchie, davon sind wir so weit entfernt. Ihr seid einfach nur reaktionär, gegen das Establishment, gegen den Staat.“ Aber eigentlich navigiert jeder, sei es in der Familie, in Freundschaften, in irgendeiner Form von Beziehung, durch einen Bereich von einer Art Gesetzlosigkeit, von Anarchie, in dem Regeln durch die zwischenmenschliche Dynamik entstehen. Jeder hat also ein gewisses Maß an Anarchie in seinem Leben, und ich denke, wenn man davon ausgeht, wird es vielleicht auch greifbarer, darüber zu sprechen.
+
+**Melanie Premsyl:** Ja. Ja. Deshalb denke ich, dass die Blockchain in dieser Denkweise wirklich anarchistisch ist. 
+
+**Fatemeh Fannizadeh:** Okay. Großartig. Ich denke, das ist vielleicht der perfekte Satz, um zu enden. Die Blockchain ist anarchistisch. Und um das Ganze abzuschließen: Ich denke, was wirklich wichtig ist oder was ich wirklich gerne in der Blockchain sehen würde, wären mehr Werkzeuge. Denn es fällt mir schwer vorzustellen, dass anarchistische Gruppen oder eher autonome, souveräne Gruppen kommen und einfach nur Nutzer eines Produkts sind. In diesem Sinne gibt es nicht unbedingt einen Product-Market-Fit. Es ist sehr unwahrscheinlich, dass sie einfach ein fertiges Produkt übernehmen würden. Eher, wenn man ihnen das Rohmaterial gibt, um ihr eigenes zu bauen. Es ist also mehr wie DIY, baut eure eigenen Werkzeuge, euer eigenes L2-Rollup, wie auch immer ihr es nennen wollt. Ich denke, das würde Krypto noch mehr mit uns in Einklang bringen. Merci beaucoup. [Applaus]
