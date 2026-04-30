@@ -41,7 +41,7 @@
   "page-find-wallet-multisig": "다중서명",
   "page-find-wallet-multisig-desc": "트랜잭션을 승인하기 위해 여러 서명이 필요한 지갑",
   "page-find-wallet-social-recovery": "소셜 복구",
-  "page-find-wallet-social-recovery-desc": "보호자가 스마트 컨트랙 지갑의 서명 키를 변경할 수 있는 지갑",
+  "page-find-wallet-social-recovery-desc": "보호자가 스마트 컨트랙트 지갑의 서명 키를 변경할 수 있는 지갑",
   "page-find-wallet-languages-supported": "언어 지원",
   "page-find-wallet-languages-search-language": "언어 검색",
   "page-find-wallet-popular-languages": "인기 언어",
