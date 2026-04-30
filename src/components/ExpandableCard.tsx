@@ -48,13 +48,13 @@ const ExpandableCard = ({
     eventCategory: `ExpandableCard${eventCategory}`,
     eventName,
   }
-  const onClick = () => {
+  const onClick = (e: React.MouseEvent<HTMLElement>) => {
     // Card will not collapse if clicking on a link or selecting text
     if (
       window.getSelection()?.toString().length === 0 &&
-      !(window.event?.target as HTMLDivElement)?.className.includes(
-        "ExternalLink"
-      )
+      !(
+        (e.target as Element).closest(".ExternalLink") as HTMLDivElement
+      )?.className.includes("ExternalLink")
     ) {
       !isVisible && trackCustomEvent(matomo)
       setIsVisible(!isVisible)
@@ -80,8 +80,8 @@ const ExpandableCard = ({
           >
             <Flex className="w-full flex-col items-center text-left sm:flex-row">
               <VStack className="items-center md:items-start">
-                <HStack className="mt-4 mb-2">
-                  {Svg && <Svg className="mr-6" />}
+                <HStack className="mb-2">
+                  {Svg && <Svg className="me-6" />}
                   <h3 className="text-xl font-semibold">{title}</h3>
                 </HStack>
                 <p className="w-fit text-sm text-body-medium">
