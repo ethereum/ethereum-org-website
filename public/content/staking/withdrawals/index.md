@@ -178,7 +178,7 @@ No, the process to provide withdrawal credentials is a one-time process, and can
 <ExpandableCard
 title="Why can a validator's withdrawal address only be set once?"
 eventCategory="FAQ"
-eventAction="Why can a withdrawal address only be set once?"
+eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
 Setting a validator's execution layer withdrawal address is permanent change to the validator's credentials on the consensus layer. There is no way to update the consensus layer credentials once they are registered. 
 
@@ -190,7 +190,7 @@ Users seeking flexible withdrawal management can set a smart contract wallet cap
 <ExpandableCard
 title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventCategory="FAQ"
-eventAction="What if I participate in staking tokens or pooled staking"
+eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
 
 If you are part of a [staking pool](/staking/pools/) or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
@@ -202,7 +202,7 @@ In general, when staking through a provider or pool, you should be free to recla
 <ExpandableCard
 title="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventCategory="FAQ"
-eventAction="Do reward payments (partial withdrawals) happen automatically?"
+eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
 For **legacy (Type 1) validators**, yes—as long as your validator has provided a withdrawal address. This must be provided once to enable any withdrawals, then network reward distribution to the withdrawal address will be automatically triggered every few days with each validator sweep.
 
@@ -233,7 +233,7 @@ For **legacy (Type 1) validators**, any ETH network rewards that have accrued ov
 <ExpandableCard
 title="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventCategory="FAQ"
-eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
+eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
 
 Validator operators are recommended to visit the [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals/) page where you'll find more details about how to prepare your validator for withdrawals, timing of events, and more details about how withdrawals function.
