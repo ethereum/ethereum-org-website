@@ -901,7 +901,10 @@ async function main() {
   // so a rerun of just the failed combinations naturally retries them without
   // touching the work that landed this run.
   if (failures.length > 0) {
-    log(`${failures.length} task(s) failed (continuing with successes):`, "warn")
+    log(
+      `${failures.length} task(s) failed (continuing with successes):`,
+      "warn"
+    )
     for (const f of failures) {
       log(`  [${f.locale}] ${f.file}: ${f.message}`, "warn")
     }
