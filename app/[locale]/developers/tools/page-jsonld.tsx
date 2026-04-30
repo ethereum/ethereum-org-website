@@ -8,7 +8,8 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { DEV_TOOL_CATEGORIES } from "./constants"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function DevelopersToolsJsonLD({
   locale,
