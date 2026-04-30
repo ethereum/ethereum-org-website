@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams, WalletData } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
@@ -15,6 +15,7 @@ import MainArticle from "@/components/MainArticle"
 import { UnorderedList } from "@/components/ui/list"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
@@ -46,16 +47,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   }))
 
   const mostRecentWalletUpdate = walletsData
-    .map((w) => w.last_updated)
-    .filter((d): d is string => typeof d === "string" && d.length > 0)
+    .map((wallet: WalletData) => wallet.last_updated)
+    .filter((d) => d.length > 0)
     .sort()
     .at(-1)
+
   const lastUpdatedDisplay = mostRecentWalletUpdate
-    ? new Date(mostRecentWalletUpdate).toLocaleDateString(locale || "en", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })
+    ? formatDate(mostRecentWalletUpdate, locale)
     : ""
 
   // Get i18n messages
