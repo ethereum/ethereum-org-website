@@ -3,7 +3,7 @@
 import React, { type ReactNode, useState } from "react"
 import type { AccordionContentProps } from "@radix-ui/react-accordion"
 
-import { Flex, HStack, VStack } from "@/components/ui/flex"
+import { HStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -76,22 +76,22 @@ const ExpandableCard = ({
           <AccordionTrigger
             hideIcon
             onClick={onClick}
-            className="w-full p-6 transition-colors hover:bg-background-highlight hover:text-black md:p-6 dark:hover:text-white [&[data-state=open]]:bg-transparent [&[data-state=open]]:text-black dark:[&[data-state=open]]:text-white"
+            className="transition-color hover:transition-color w-full cursor-pointer bg-transparent! p-6 text-body! data-[state=open]:text-body! md:p-6"
           >
-            <Flex className="w-full flex-col items-center text-left sm:flex-row">
-              <VStack className="items-center md:items-start">
-                <HStack className="mb-2">
-                  {Svg && <Svg className="me-6" />}
+            <div className="flex w-full flex-col items-center gap-4 text-left sm:flex-row">
+              <div className="flex-1 space-y-4">
+                <HStack className="gap-6">
+                  {Svg && <Svg />}
                   <h3 className="text-xl font-semibold">{title}</h3>
                 </HStack>
-                <p className="w-fit text-sm text-body-medium">
+                <p className="w-fit text-sm text-pretty text-body-medium">
                   {contentPreview}
                 </p>
-              </VStack>
-              <span className="my-auto text-md text-primary sm:ml-auto">
+              </div>
+              <span className="my-auto text-primary">
                 {t(isVisible ? "less" : "more")}
               </span>
-            </Flex>
+            </div>
           </AccordionTrigger>
           <AccordionContent
             forceMount={forceMount}
