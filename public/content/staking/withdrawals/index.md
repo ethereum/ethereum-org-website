@@ -132,7 +132,7 @@ While a proposer is sweeping through validators for possible withdrawals, each v
 
 1. **Has a withdrawal address been provided?** If no withdrawal address has been provided, the account is skipped and no withdrawal initiated.
 2. **Is the validator exited and withdrawable?** If the validator has fully exited, and we have reached the epoch where their account is considered to be "withdrawable", then a full withdrawal will be processed. This will transfer the entire remaining balance to the withdrawal address.
-3. **Does the balance exceed the maximum effective balance?** For legacy (Type 1) validators, this threshold is 32 ETH. For compounding (Type 2) validators, this threshold is 2048 ETH. If the account has withdrawal credentials, is not fully exited, and has balance above its threshold, a partial withdrawal will be processed which transfers only the excess to the user's withdrawal address.
+3. **Does the balance exceed its maxed-out effective balance?** For legacy (Type 1) validators, this threshold is 32 ETH. For compounding (Type 2) validators, this threshold is 2048 ETH. If the account has withdrawal credentials, is not fully exited, has an effective balance at the maximum, and has balance above this threshold, then a partial withdrawal will be processed which transfers only the excess to the user's withdrawal address.
 
 There are only two actions that are taken by validator operators during the course of a validator's life cycle that influence this flow directly:
 
@@ -200,11 +200,11 @@ In general, when staking through a provider or pool, you should be free to recla
 </ExpandableCard>
 
 <ExpandableCard
-title="Do reward payments (partial withdrawals) happen automatically?"
+title="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-For **legacy (Type 1) validators**, yes — as long as your validator has provided a withdrawal address. This must be provided once to initially enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.
+For **legacy (Type 1) validators**, yes—as long as your validator has provided a withdrawal address. This must be provided once to enable any withdrawals, then network reward distribution to the withdrawal address will be automatically triggered every few days with each validator sweep.
 
 For **compounding (Type 2) validators**, rewards compound into the validator's effective balance (up to 2048 ETH) rather than being swept to the withdrawal address. Automatic sweeps only occur for balances exceeding 2048 ETH. To withdraw rewards below this threshold, you must manually trigger a partial withdrawal from the execution layer.
 </ExpandableCard>
