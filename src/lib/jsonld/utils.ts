@@ -1,8 +1,8 @@
 import * as Sentry from "@sentry/nextjs"
 
-import { REFERENCE } from "./constants"
 import { KNOWN_ORGANIZATIONS } from "./organizations"
 import { KNOWN_PERSONS } from "./persons"
+import { REFERENCE } from "./references"
 import type { KnownEntity } from "./types"
 
 /**

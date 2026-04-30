@@ -4,8 +4,9 @@ import { Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { ETHEREUM_ORG_WEBSITE, REFERENCE } from "@/lib/jsonld/constants"
+import { ETHEREUM_ORG_WEBSITE } from "@/lib/jsonld/constants"
 import { KNOWN_ORGANIZATIONS } from "@/lib/jsonld/organizations"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function IndexPageJsonLD({
   locale,
