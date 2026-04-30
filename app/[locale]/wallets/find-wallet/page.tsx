@@ -5,14 +5,17 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams, WalletData } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
-import FindWalletProductTable from "@/components/FindWalletProductTable/lazy"
+import FindWalletProductTable from "@/components/FindWalletProductTable"
 import I18nProvider from "@/components/I18nProvider"
+import ListingMethodology from "@/components/ListingMethodology"
 import MainArticle from "@/components/MainArticle"
+import { UnorderedList } from "@/components/ui/list"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
@@ -42,6 +45,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       locale!
     ),
   }))
+
+  const mostRecentWalletUpdate = walletsData
+    .map((wallet: WalletData) => wallet.last_updated)
+    .filter((d) => d.length > 0)
+    .sort()
+    .at(-1)
+
+  const lastUpdatedDisplay = mostRecentWalletUpdate
+    ? formatDate(mostRecentWalletUpdate, locale)
+    : ""
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -76,6 +89,40 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
 
           <FindWalletProductTable wallets={wallets} />
+
+          <ListingMethodology
+            heading={t("page-find-wallet-methodology-title")}
+            description={t("page-find-wallet-methodology-intro")}
+            lastUpdated={lastUpdatedDisplay}
+            href="/contributing/adding-wallets/"
+            footers={[
+              t("page-find-wallet-footnote-1"),
+              t("page-find-wallet-footnote-2"),
+            ]}
+          >
+            <p>{t("page-find-wallet-methodology-must-haves-label")}</p>
+
+            <UnorderedList className="space-y-2">
+              {[
+                "security",
+                "track-record",
+                "maintenance",
+                "honest-info",
+                "contact",
+                "eip1559",
+                "ux",
+                "ethereum-focused",
+              ].map((key) => (
+                <li key={key}>
+                  {t(`page-find-wallet-methodology-criterion-${key}`)}
+                </li>
+              ))}
+            </UnorderedList>
+
+            <p>{t("page-find-wallet-methodology-verification")}</p>
+
+            <p>{t("page-find-wallet-methodology-filters")}</p>
+          </ListingMethodology>
         </MainArticle>
       </I18nProvider>
     </>

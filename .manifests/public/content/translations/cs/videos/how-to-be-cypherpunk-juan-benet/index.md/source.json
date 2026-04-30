@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/how-to-be-cypherpunk-juan-benet/index.md",
+  "generatedAt": "2026-04-28T23:38:52.163Z",
+  "rootHash": "538309234b49",
+  "tree": {
+    "contentHash": "1743758f21ab",
+    "anchorHash": "064538372d9c",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e8c1aba84d8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "d60baed327f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "59b2248973f1"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "50c75570eee6"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f5b232470f46"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "75a4a556e1f3"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "9bea78fbc21f"
+      },
+      "prose:1": {
+        "contentHash": "963afbd055cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "13a7a1da7715"
+      },
+      "prose:2": {
+        "contentHash": "e73c1247f2ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-005": {
+        "contentHash": "047f88eaeb90",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ec6f44d63737",
+        "children": {
+          "_label": {
+            "contentHash": "ec6f44d63737",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6dd311de65d6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "cypherpunks-write-code-220": {
+        "contentHash": "9a2a0965f737",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "33194a8dd043",
+        "children": {
+          "_label": {
+            "contentHash": "33194a8dd043",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "090c41efeeb4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "secure-communications-and-funding-526": {
+        "contentHash": "a0b761f20c00",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "04191e88fa8a",
+        "children": {
+          "_label": {
+            "contentHash": "04191e88fa8a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f4e8a5667504",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "legal-battles-and-building-together-1017": {
+        "contentHash": "c548b719d48d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "34d6770a1e5f",
+        "children": {
+          "_label": {
+            "contentHash": "34d6770a1e5f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "889a97caaa67",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "three-open-problems-1527": {
+        "contentHash": "bc17f2f2744b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "341ec35942af",
+        "children": {
+          "_label": {
+            "contentHash": "341ec35942af",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5afd168094e2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-005",
+      "cypherpunks-write-code-220",
+      "secure-communications-and-funding-526",
+      "legal-battles-and-building-together-1017",
+      "three-open-problems-1527"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

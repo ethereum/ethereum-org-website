@@ -15,7 +15,6 @@ import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { getLocaleFormattedDate } from "@/lib/utils/date"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -54,12 +53,6 @@ const WalletSubComponent = ({
     locale as Lang,
     wallet.last_updated
   )
-
-  trackCustomEvent({
-    eventCategory: "WalletMoreInfo",
-    eventAction: "More info wallet",
-    eventName: `More info ${wallet.name}`,
-  })
 
   return (
     <div className="flex flex-row gap-2">

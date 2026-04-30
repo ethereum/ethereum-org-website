@@ -4,13 +4,8 @@ import { Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { normalizeUrlForJsonLd } from "@/lib/utils/url"
-
-import {
-  ETHEREUM_ORG_WEBSITE,
-  ORGANIZATION,
-  REFERENCE,
-} from "@/lib/jsonld/constants"
+import { ETHEREUM_ORG_WEBSITE, REFERENCE } from "@/lib/jsonld/constants"
+import { KNOWN_ORGANIZATIONS } from "@/lib/jsonld/organizations"
 
 export default async function IndexPageJsonLD({
   locale,
@@ -19,16 +14,13 @@ export default async function IndexPageJsonLD({
 }) {
   const t = await getTranslations("page-index")
 
-  const url = normalizeUrlForJsonLd(locale, `/`)
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      ORGANIZATION.ETHEREUM_FOUNDATION,
-      ORGANIZATION.ETHEREUM_COMMUNITY,
+      KNOWN_ORGANIZATIONS["ethereum-foundation"],
+      KNOWN_ORGANIZATIONS["ethereum-community"],
       {
         ...ETHEREUM_ORG_WEBSITE,
-        url: url,
         description: t("page-index-meta-description"),
         educationalUse: "Self-Paced",
         keywords:
