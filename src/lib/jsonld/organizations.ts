@@ -1,4 +1,4 @@
-import { REFERENCE } from "./constants"
+import { REFERENCE } from "./references"
 
 /**
  * Known Organization profiles for JSON-LD attribution
