@@ -15,6 +15,8 @@ summaryPoints:
 
 **Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
 
+> If you are part of a [staking pool](/staking/pools/) or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
+
 How withdrawals work depends on your validator's withdrawal credential type:
 
 - **Legacy validators (Type 1)**: Excess balance over 32 ETH is automatically and regularly sent to the withdrawal address linked to the validator. Rewards above 32 ETH do not contribute to the validator's weight on the network.
@@ -90,16 +92,7 @@ The process of a validator exiting from staking takes variable amounts of time, 
 
 Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>sweep</a>.
 
-## When were staking withdrawals enabled? {#when}
-
-Withdrawal functionality was originally enabled as part of the Shanghai/Capella upgrade on **April 12, 2023**. The [Pectra upgrade](/roadmap/pectra/) (May 2025) later introduced compounding validators with a higher maximum effective balance of 2048 ETH, as well as execution layer triggered exits and partial withdrawals.
-
-The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
-
-- [More on Ethereum history](/ethereum-forks/)
-- [More on the Ethereum roadmap](/roadmap/)
-
-## How do withdrawal payments work? {#how-do-withdrawals-work}
+## How do automatic rewards work (Type 1 validator)? {#how-do-withdrawals-work}
 
 Whether a given validator is eligible for a withdrawal or not is determined by the state of the validator account itself. No user input is needed at any given time to determine whether an account should have a withdrawal initiated or not—the entire process is done automatically by the consensus layer on a continuous loop.
 
@@ -180,7 +173,7 @@ title="Why can a validator's withdrawal address only be set once?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
-Setting a validator's execution layer withdrawal address is permanent change to the validator's credentials on the consensus layer. There is no way to update the consensus layer credentials once they are registered. 
+Setting a validator's execution layer withdrawal address is permanent change to the validator's credentials on the consensus layer. There is no way to update the consensus layer credentials once they are registered.
 
 A validator's withdrawal address credentials can be set to point to either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently, these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
 
@@ -192,8 +185,7 @@ title="How do I withdraw from staking if I stake through a provider, staking poo
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
-
-If you are part of a [staking pool](/staking/pools/) or hold staking tokens, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
+If you use a staking pool or hold staking tokens, contact your provider to learn how they handle withdrawals, as processes vary by service. 
 
 In general, when staking through a provider or pool, you should be free to reclaim your underlying staked ETH, or to withdraw and change which staking provider you utilize. If a particular pool is getting too large, staked ETH can be exited, redeemed, and staked again with a [smaller provider](https://rated.network/). Or, if you've accumulated enough ETH, you could [stake from home](/staking/solo/).
 
@@ -209,23 +201,11 @@ For **legacy (Type 1) validators**, yes—as long as your validator has provided
 For **compounding (Type 2) validators**, rewards compound into the validator's effective balance (up to 2048 ETH) rather than being swept to the withdrawal address. Automatic sweeps only occur for balances exceeding 2048 ETH. To withdraw rewards below this threshold, you must manually trigger a partial withdrawal from the execution layer.
 </ExpandableCard>
 
-<ExpandableCard
-title="Do full withdrawals happen automatically?"
-eventCategory="FAQ"
-eventAction="Do full withdrawals happen automatically?"
-eventName="read more">
-
-No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.
-
-Once a validator has completed the exit process, and assuming the validator account has registered its withdrawal credentials, the remaining staked balance will _then_ be withdrawn during the next <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "FAQ happen automatically (sweep)", eventName: "click" }}>validator sweep</a>.
-
-</ExpandableCard>
-
 <ExpandableCard title="Can I withdraw a custom amount?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
-For **legacy (Type 1) validators**, any ETH network rewards that have accrued over the validator's 32 ETH effective balance are automatically pushed to the withdrawal address. Type 1 validators that have submitted a full withdrawal transaction and completed the staking exit process have their full ETH balance withdrawn to their withdrawal address. It is not possible for a Type 1 validator to manually request specific amounts of ETH to be withdrawn. 
+For **legacy (Type 1) validators**, any ETH network rewards that have accrued over the validator's 32 ETH effective balance are automatically pushed to the withdrawal address. Type 1 validators that have submitted a full withdrawal transaction and completed the staking exit process have their full ETH balance withdrawn to their withdrawal address. It is not possible for a Type 1 validator to manually request specific amounts of ETH to be withdrawn.
 
 **Compounding (Type 2) validators** can trigger partial withdrawals of a specific amount from the execution layer, as long as the validator's remaining balance stays at or above 32 ETH. This requires submitting a partial withdrawal transaction and costs gas.
 </ExpandableCard>
@@ -247,7 +227,7 @@ title="Can I re-activate my validator after exiting by depositing more ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-No. Once a validator has exited and its full balance has been withdrawn, any additional ETH deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To begin staking again using that ETH, you must activate a new validator. 
+No. Once a validator has exited and its full balance has been withdrawn, any additional ETH deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To begin staking again using that ETH, you must activate a new validator.
 </ExpandableCard>
 
 <ExpandableCard
@@ -271,6 +251,19 @@ You can convert from Type 1 to Type 2 withdrawal credentials using the [Staking 
 
 After converting, you can also **consolidate** multiple validators into one, combining their balances into a single compounding validator. For a full walkthrough of the conversion process, risks, and consolidation tooling, see the [MaxEB deep-dive](/roadmap/pectra/maxeb/).
 </ExpandableCard>
+
+<ExpandableCard
+title="When were staking withdrawals enabled?"
+eventCategory="FAQ"
+eventAction="When were staking withdrawals enabled?"
+eventName="read more">
+Withdrawal functionality was originally enabled as part of the Shanghai/Capella upgrade on **April 12, 2023**. The [Pectra upgrade](/roadmap/pectra/) (May 2025) later introduced compounding validators with a higher maximum effective balance of 2048 ETH, as well as execution layer triggered exits and partial withdrawals.
+
+The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
+
+- [More on Ethereum history](/ethereum-forks/)
+- [More on the Ethereum roadmap](/roadmap/)
+  </ExpandableCard>
 
 ## Further reading {#further-reading}
 
