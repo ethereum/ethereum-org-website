@@ -124,7 +124,7 @@ const GasPage = ({
 
   return (
     <Page>
-      <div className="from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 w-full bg-linear-to-r">
+      <div className="w-full bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20">
         <div className="pb-8">
           <PageHero
             content={{
@@ -284,7 +284,7 @@ const GasPage = ({
               <ListItem>
                 <Translation id="page-gas:page-gas-how-is-gas-calculated-item-3" />
                 <UnorderedList className="ms-6 list-none gap-3">
-                  <ListItem className="text-body-medium text-sm">
+                  <ListItem className="text-sm text-body-medium">
                     <Translation id="page-gas:page-gas-how-is-gas-calculated-list-item-1" />
                   </ListItem>
                 </UnorderedList>

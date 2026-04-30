@@ -54,7 +54,7 @@ export const GeneratingKeys = ({
   }, [loading])
 
   return (
-    <div className="bg-background-highlight grid h-full place-items-center">
+    <div className="grid h-full place-items-center bg-background-highlight">
       <Flex className="flex-col items-center gap-4">
         {/* eslint-disable-next-line no-constant-condition */}
         {loading ? (

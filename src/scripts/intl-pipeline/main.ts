@@ -41,6 +41,10 @@ import {
   parseIncrementalResponse,
 } from "./lib/llm/incremental-translate"
 import {
+  extractAttributeLeaves,
+  translateJsxAttributes,
+} from "./lib/llm/jsx-attribute-translator"
+import {
   buildJsonManifest,
   buildLocaleTranslationManifest,
   buildMarkdownManifest,
@@ -54,7 +58,13 @@ import { createTaskPool } from "./lib/utils/task-pool"
 import { createOrUpdateTranslationPR } from "./lib/workflows/pr-creation"
 import { sanitizeTranslations } from "./lib/workflows/sanitization"
 import { logSection } from "./lib/workflows/utils"
-import { config, GLOSSARY_API_URL, validateTargetPath } from "./config"
+import {
+  config,
+  getExcludedReason,
+  GLOSSARY_API_URL,
+  normalizeTargetPath,
+  validateTargetPath,
+} from "./config"
 import { LLM, MANIFESTS_DIR } from "./constants"
 import type { LlmTranslator } from "./pipeline"
 import { pipeline, PIPELINE_CONFIG } from "./pipeline"
@@ -73,8 +83,10 @@ interface FileContext {
 // Helpers
 // ---------------------------------------------------------------------------
 
-function log(msg: string) {
-  console.log(`[pipeline] ${msg}`)
+function log(msg: string, level: "log" | "warn" | "error" = "log") {
+  const prefix =
+    level === "log" ? "[pipeline]" : `[pipeline] [${level.toUpperCase()}]`
+  console[level](`${prefix} ${msg}`)
 }
 
 /**
@@ -141,6 +153,25 @@ async function loadGlossary(
     )
     return new Map()
   }
+}
+
+/**
+ * Recursively collect files under `dir` whose name ends with `ext`.
+ * Used to expand directory entries in TARGET_PATH (e.g. "public/content/videos/")
+ * into their constituent files, restoring the pipeline's historical behavior
+ * where directories were valid target paths.
+ */
+function walkForExt(dir: string, ext: string): string[] {
+  const out: string[] = []
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name)
+    if (entry.isDirectory()) {
+      out.push(...walkForExt(full, ext))
+    } else if (entry.isFile() && full.endsWith(ext)) {
+      out.push(full)
+    }
+  }
+  return out
 }
 
 function readLocalePath(
@@ -405,8 +436,37 @@ async function runFullTranslation(
     `[${locale}] ${file.path}: translated (${result.tokensUsed.input} in, ${result.tokensUsed.output} out)`
   )
 
-  await committer.commitFile(destPath, result.translatedContent, locale)
-  committedFiles.push({ path: destPath, content: result.translatedContent })
+  // Phase 4b: JSX attribute translation pass (markdown only)
+  let finalContent = result.translatedContent
+  if (file.type === "markdown") {
+    const leaves = extractAttributeLeaves(file.content)
+    if (leaves.length > 0) {
+      const attrResult = await translateJsxAttributes({
+        leaves,
+        localeContent: finalContent,
+        targetLanguage: locale,
+        glossary: glossaryTerms,
+        filePath: file.path,
+      })
+      finalContent = attrResult.content
+      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+        log(
+          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+        )
+      }
+      // Per PIPELINE-SPEC.md "On partial failure": skip manifest stamping if
+      // any attr leaf failed to translate. Throwing here forces the pool to
+      // mark this task failed; the next run will re-detect and retry.
+      if (attrResult.failedCount > 0) {
+        throw new Error(
+          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+        )
+      }
+    }
+  }
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
 
   // Build and commit source manifest
   const sourceManifest =
@@ -523,8 +583,35 @@ async function runIncremental(
     translator
   )
 
-  await committer.commitFile(destPath, result, locale)
-  committedFiles.push({ path: destPath, content: result })
+  // Phase 4b: JSX attribute translation pass (markdown only)
+  let finalContent = result
+  if (file.type === "markdown") {
+    const leaves = extractAttributeLeaves(file.content)
+    if (leaves.length > 0) {
+      const glossaryTerms = await loadGlossary(file.content, locale)
+      const attrResult = await translateJsxAttributes({
+        leaves,
+        localeContent: finalContent,
+        targetLanguage: locale,
+        glossary: glossaryTerms,
+        filePath: file.path,
+      })
+      finalContent = attrResult.content
+      if (attrResult.appliedCount > 0 || attrResult.failedCount > 0) {
+        log(
+          `[${locale}] ${file.path}: jsx-attrs translated=${attrResult.appliedCount} skipped=${attrResult.skippedCount} failed=${attrResult.failedCount}`
+        )
+      }
+      if (attrResult.failedCount > 0) {
+        throw new Error(
+          `[${locale}] ${file.path}: ${attrResult.failedCount} jsx-attr leaf(s) failed to translate; aborting before manifest stamp`
+        )
+      }
+    }
+  }
+
+  await committer.commitFile(destPath, finalContent, locale)
+  committedFiles.push({ path: destPath, content: finalContent })
 
   const sourceManifest =
     file.type === "markdown"
@@ -619,14 +706,73 @@ async function main() {
 
   const committedFiles: Array<{ path: string; content: string }> = []
   let hasCommits = false
+  // Per-task failures captured with file context. Populated by submitWithContext
+  // wrapper so we can report rich failure info in the PR body and surface
+  // copy-pasteable rerun commands. Pool's own error tracking still runs in
+  // parallel for the orchestration-level "did anything fail" check.
+  const failures: Array<{ locale: string; file: string; message: string }> = []
 
-  // Validate target paths before any filesystem reads
-  for (const fp of config.targetPaths) {
+  // Resolve target paths in five passes:
+  //   1. Normalize  (log-level: auto-prefix and strip accidental locale paths)
+  //   2. Exist?     (error-level: fail early if any path is missing on disk)
+  //   3. Expand     (directory entries -> their constituent files)
+  //   4. Validate   (hard errors still throw)
+  //   5. Excluded?  (warn-level: skip and continue; throw only if all excluded)
+  const normalizedPaths = config.targetPaths.map((fp) =>
+    normalizeTargetPath(fp, (from, to) =>
+      log(`Normalizing "${from}" -> "${to}"`)
+    )
+  )
+
+  const missing = normalizedPaths.filter(
+    (fp) => !fs.existsSync(path.resolve(fp))
+  )
+  if (missing.length > 0) {
+    log(`${missing.length} target path(s) do not exist on disk:`, "error")
+    for (const m of missing) log(`  - ${m}`, "error")
+    throw new Error(`Target path(s) not found on disk: ${missing.join(", ")}`)
+  }
+
+  // Expand directories to their constituent files. Markdown roots get every
+  // .md file under the dir; JSON roots get every .json file under the dir.
+  const expandedPaths: string[] = []
+  for (const fp of normalizedPaths) {
+    const abs = path.resolve(fp)
+    if (fs.statSync(abs).isDirectory()) {
+      const ext = fp.startsWith("src/intl/en") ? ".json" : ".md"
+      const files = walkForExt(abs, ext).map((f) =>
+        path.relative(process.cwd(), f)
+      )
+      log(`Expanded "${fp}" -> ${files.length} ${ext} file(s)`)
+      expandedPaths.push(...files)
+    } else {
+      expandedPaths.push(fp)
+    }
+  }
+
+  for (const fp of expandedPaths) {
     validateTargetPath(fp)
   }
 
+  const activeTargetPaths: string[] = []
+  for (const fp of expandedPaths) {
+    const excludedBy = getExcludedReason(fp)
+    if (excludedBy) {
+      log(`Skipping "${fp}" -- in excluded list (${excludedBy})`, "warn")
+      continue
+    }
+    activeTargetPaths.push(fp)
+  }
+
+  if (activeTargetPaths.length === 0) {
+    const msg =
+      "All target paths are in the excluded list; nothing to translate."
+    log(msg, "error")
+    throw new Error(msg)
+  }
+
   // Load English files from disk
-  const englishFiles: FileContext[] = config.targetPaths.map((fp) => ({
+  const englishFiles: FileContext[] = activeTargetPaths.map((fp) => ({
     path: fp,
     content: fs.readFileSync(path.resolve(fp), "utf-8"),
     type: fp.endsWith(".json") ? ("json" as const) : ("markdown" as const),
@@ -641,6 +787,24 @@ async function main() {
       )
     },
   })
+
+  // Wraps pool.submit to attach file context to any thrown error -- the pool
+  // only knows the locale; we want (locale, file, reason) for PR reporting.
+  const submitWithContext = (
+    locale: string,
+    filePath: string,
+    fn: () => Promise<TaskResult | void>
+  ) => {
+    pool.submit(locale, async () => {
+      try {
+        return await fn()
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err)
+        failures.push({ locale, file: filePath, message })
+        throw err
+      }
+    })
+  }
 
   // Submit all file x language tasks to the pool
   for (const file of englishFiles) {
@@ -674,7 +838,7 @@ async function main() {
           continue
         }
 
-        pool.submit(locale, () =>
+        submitWithContext(locale, file.path, () =>
           runFullTranslation(
             file,
             locale,
@@ -698,7 +862,7 @@ async function main() {
 
       if (config.stampOnly) {
         log(`[${locale}] ${file.path}: stamp only`)
-        pool.submit(locale, async () => {
+        submitWithContext(locale, file.path, async () => {
           const sourceManifest =
             file.type === "markdown"
               ? buildMarkdownManifest(file.content, file.path, baseBranchSha)
@@ -713,7 +877,7 @@ async function main() {
         continue
       }
 
-      pool.submit(locale, () =>
+      submitWithContext(locale, file.path, () =>
         runIncremental(
           file,
           locale,
@@ -731,15 +895,27 @@ async function main() {
   // Wait for all tasks to complete
   await pool.drain()
 
-  // Check for task failures
-  if (pool.hasErrors()) {
-    const errors = pool.getErrors()
-    console.error(`[pipeline] ${errors.length} task(s) failed:`)
-    for (const { language, error } of errors) {
-      console.error(`  [${language}] ${error.message}`)
+  // Log task failures but don't abort -- partial successes ship. Failures are
+  // recorded with file context (via submitWithContext) and surfaced in the PR
+  // body with rerun commands. Per-file manifests are only stamped on success,
+  // so a rerun of just the failed combinations naturally retries them without
+  // touching the work that landed this run.
+  if (failures.length > 0) {
+    log(
+      `${failures.length} task(s) failed (continuing with successes):`,
+      "warn"
+    )
+    for (const f of failures) {
+      log(`  [${f.locale}] ${f.file}: ${f.message}`, "warn")
     }
+  }
+
+  // Hard abort only if literally nothing succeeded -- a fully-failed run
+  // shouldn't produce an empty PR. (committedFiles excludes manifest-only stamp
+  // commits, so we also check hasCommits for the stamp-only path.)
+  if (failures.length > 0 && committedFiles.length === 0 && !hasCommits) {
     throw new Error(
-      `Pipeline aborted: ${errors.length} translation task(s) failed. Temp branch ${tempBranch} preserved with partial progress.`
+      `Pipeline aborted: all ${failures.length} translation task(s) failed. Temp branch ${tempBranch} preserved.`
     )
   }
 
@@ -801,7 +977,8 @@ async function main() {
         targetBranch,
         committedFiles,
         languagePairs,
-        config.mode
+        config.mode,
+        failures
       )
     } catch (error) {
       console.warn(

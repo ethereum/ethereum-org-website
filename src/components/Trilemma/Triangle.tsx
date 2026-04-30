@@ -117,7 +117,7 @@ export const TriangleSVG = ({
       xmlns="http://www.w3.org/2000/svg"
       height="620"
       viewBox="-100 100 850 915"
-      className="fill-background w-full lg:mt-32 lg:mr-32 lg:w-auto"
+      className="w-full fill-background lg:mt-32 lg:mr-32 lg:w-auto"
     >
       <Path />
       <Path />

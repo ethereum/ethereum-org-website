@@ -38,7 +38,7 @@ const WhitepaperBridge = async () => {
   ] as const
 
   return (
-    <Section className="border-primary-low-contrast bg-radial-a my-8 space-y-6 rounded-2xl border p-6 md:p-8">
+    <Section className="my-8 space-y-6 rounded-2xl border border-primary-low-contrast bg-radial-a p-6 md:p-8">
       {/* Eyebrow tag - uses warning status for attention */}
       <Tag status="warning" variant="outline" size="small" className="gap-1.5">
         <Info className="size-3.5" />
@@ -47,10 +47,10 @@ const WhitepaperBridge = async () => {
 
       {/* Main heading */}
       <div className="space-y-3">
-        <h2 className="text-body text-2xl font-bold md:text-3xl">
+        <h2 className="text-2xl font-bold text-body md:text-3xl">
           {t("heading")}
         </h2>
-        <p className="text-body-medium max-w-2xl">
+        <p className="max-w-2xl text-body-medium">
           {t.rich("description", {
             strong: (chunks) => <strong className="text-body">{chunks}</strong>,
           })}
@@ -73,16 +73,16 @@ const WhitepaperBridge = async () => {
       </Flex>
 
       {/* What's changed card - uses card-gradient-secondary */}
-      <Card className="border-primary-low-contrast bg-card-gradient-secondary border">
+      <Card className="border border-primary-low-contrast bg-card-gradient-secondary">
         <CardContent className="p-4 md:p-6">
-          <p className="text-body-medium mb-4 text-sm font-semibold tracking-wide uppercase">
+          <p className="mb-4 text-sm font-semibold tracking-wide text-body-medium uppercase">
             {t("whats-changed")}
           </p>
           <UnorderedList className="ms-0 space-y-3">
             {evolutionKeys.map((key) => (
               <Flex key={key} className="gap-3">
-                <CheckCircle2 className="text-success mt-0.5 size-5 shrink-0" />
-                <span className="text-body-medium flex-1">{t(key)}</span>
+                <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-success" />
+                <span className="flex-1 text-body-medium">{t(key)}</span>
               </Flex>
             ))}
           </UnorderedList>

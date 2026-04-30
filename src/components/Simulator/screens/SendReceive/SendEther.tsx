@@ -89,7 +89,7 @@ export const SendEther = ({
             </HStack>
           </NotificationPopover>
           {/* Balances */}
-          <p className="font-bold leading-none">
+          <p className="leading-none font-bold">
             {t("sim-send-balance", { amount: usdAmount })}
           </p>
           <p dir="ltr">{ethAmount} ETH</p>

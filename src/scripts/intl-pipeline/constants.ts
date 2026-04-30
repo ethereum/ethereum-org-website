@@ -16,3 +16,14 @@ export const MAX_CHUNK_BYTES = 65_536
 // Root directory for translation manifests (relative to repo root)
 // Structure: {MANIFESTS_DIR}/{dest-file-path}/source.json | translation.json
 export const MANIFESTS_DIR = ".manifests"
+
+// Paths that should never be translated
+export const DO_NOT_TRANSLATE_PATHS = [
+  // Legal pages
+  "/cookie-policy/",
+  "/privacy-policy/",
+  "/terms-of-use/",
+  "/terms-and-conditions/",
+  // Contributing pages
+  "/style-guide/",
+]

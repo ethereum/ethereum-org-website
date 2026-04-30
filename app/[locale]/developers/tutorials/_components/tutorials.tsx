@@ -258,7 +258,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
 
   return (
     <>
-      <div className="shadow-table-box my-8 w-full max-w-screen-lg">
+      <div className="my-8 w-full max-w-screen-lg shadow-table-box">
         {/* Skill level TabNav + Search */}
         <div className="flex flex-col gap-6 px-8 pt-6 md:max-lg:w-fit lg:flex-row lg:items-center">
           <TabNav
@@ -274,7 +274,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
             }}
           />
           <div className="relative w-full lg:ms-auto lg:w-44">
-            <Search className="text-body-medium pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2" />
+            <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-body-medium" />
             <Input
               type="text"
               placeholder={t("page-tutorial-search-placeholder")}
@@ -286,7 +286,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="text-body-medium hover:text-body absolute end-3 top-1/2 -translate-y-1/2"
+                className="absolute end-3 top-1/2 -translate-y-1/2 text-body-medium hover:text-body"
               >
                 <X className="size-4" />
               </button>
@@ -295,10 +295,10 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
         </div>
 
         {/* Filter controls */}
-        <div className="border-border border-b px-8 pt-5 pb-6">
+        <div className="border-b border-border px-8 pt-5 pb-6">
           {/* Row 2: Topic tags */}
           <div className="mt-5">
-            <p className="text-body-medium mb-3 text-xs tracking-wider uppercase">
+            <p className="mb-3 text-xs tracking-wider text-body-medium uppercase">
               <Translation id="page-developers-tutorials:page-tutorial-topics" />
             </p>
             <div className="flex flex-wrap gap-2">
@@ -318,7 +318,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
               {nicheTags.length > 0 && (
                 <button
                   onClick={() => setShowAllTags(!showAllTags)}
-                  className="border-body-medium text-body-medium hover:border-primary hover:text-primary inline-flex items-center gap-1 rounded-full border border-dashed px-3 py-0.5 text-xs uppercase transition-colors"
+                  className="inline-flex items-center gap-1 rounded-full border border-dashed border-body-medium px-3 py-0.5 text-xs text-body-medium uppercase transition-colors hover:border-primary hover:text-primary"
                 >
                   {showAllTags ? (
                     <>
@@ -341,8 +341,8 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
 
           {/* Row 3: Active filters summary (only when filters active) */}
           {hasActiveFilters && (
-            <div className="border-border mt-4 flex flex-wrap items-center gap-2 border-t pt-4">
-              <span className="text-body-medium text-xs">
+            <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-border pt-4">
+              <span className="text-xs text-body-medium">
                 <Translation id="page-developers-tutorials:page-tutorial-filtering-by" />
               </span>
 
@@ -384,7 +384,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
               )}
 
               <Button
-                className="text-primary cursor-pointer p-0 text-xs underline"
+                className="cursor-pointer p-0 text-xs text-primary underline"
                 variant="ghost"
                 size="sm"
                 onClick={handleClearAll}
@@ -399,7 +399,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
         {filteredTutorials.length === 0 ? (
           <div className="mt-0 p-12 text-center">
             <Emoji text=":crying_face:" className="my-8 text-5xl" />
-            <h2 className="leading-xs mt-12 mb-8">
+            <h2 className="mt-12 mb-8 leading-xs">
               <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
             </h2>
             <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
@@ -413,11 +413,11 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
           <BaseLink
             key={tutorial.href}
             href={tutorial.href ?? undefined}
-            className="hover:bg-background-highlight block w-full space-y-6 border-b p-8 no-underline duration-100"
+            className="block w-full space-y-6 border-b p-8 no-underline duration-100 hover:bg-background-highlight"
             hideArrow
           >
             <Flex className="flex-col items-start justify-between gap-y-4 md:flex-row">
-              <h3 className="text-body relative me-0 text-2xl font-semibold md:me-24">
+              <h3 className="relative me-0 text-2xl font-semibold text-body md:me-24">
                 {tutorial.title}
                 {tutorial.isExternal && (
                   <ExternalLink className="ms-[0.25em] mb-[0.25em] inline-block size-[0.875em]" />
@@ -459,7 +459,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
                 <>
                   {" "}
                   •<Emoji text=":link:" className="mx-2 text-sm" />
-                  <span className="text-primary cursor-pointer">
+                  <span className="cursor-pointer text-primary">
                     <Translation id="page-developers-tutorials:page-tutorial-external-link" />
                   </span>
                 </>

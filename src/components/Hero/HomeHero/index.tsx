@@ -92,11 +92,11 @@ const HomeHero = async ({
           <LanguageMorpher />
 
           <div className="flex flex-col items-center gap-8">
-            <h1 className="max-w-[893px] text-balance text-5xl font-black leading-[1.1] md:text-6xl lg:text-7xl lg:leading-[0.9]">
+            <h1 className="max-w-[893px] text-5xl leading-[1.1] font-black text-balance md:text-6xl lg:text-7xl lg:leading-[0.9]">
               {t("page-index-hero-title")}
             </h1>
 
-            <p className="text-body-medium max-w-[741px] text-lg leading-relaxed tracking-[0.07px] md:text-2xl md:leading-[1.625]">
+            <p className="max-w-[741px] text-lg leading-relaxed tracking-[0.07px] text-body-medium md:text-2xl md:leading-[1.625]">
               {t("page-index-hero-subtitle")}
             </p>
 

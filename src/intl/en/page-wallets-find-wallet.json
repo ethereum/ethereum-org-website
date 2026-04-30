@@ -87,5 +87,18 @@
   "page-find-wallet-privacy": "Privacy",
   "page-find-wallet-privacy-desc": "Wallets that support built-in private transactions",
   "page-find-wallet-see-wallets": "See wallets",
-  "page-find-wallet-search-languages": "Search languages..."
+  "page-find-wallet-search-languages": "Search languages...",
+  "page-find-wallet-methodology-title": "How we evaluate wallets",
+  "page-find-wallet-methodology-intro": "Every wallet on this page is reviewed by the ethereum.org team before being listed. We apply a published set of criteria focused on security, self-custody, and Ethereum-native support so users can navigate the ecosystem with greater confidence.",
+  "page-find-wallet-methodology-must-haves-label": "To be listed, a wallet must meet the following requirements:",
+  "page-find-wallet-methodology-criterion-security": "Security-tested through audit, an internal security team, or open-source code review.",
+  "page-find-wallet-methodology-criterion-track-record": "Been live for at least six months, or built by a team with an established track record.",
+  "page-find-wallet-methodology-criterion-maintenance": "Actively maintained, with support available for users.",
+  "page-find-wallet-methodology-criterion-honest-info": "Provides honest, accurate listing information. Products that falsify details are removed.",
+  "page-find-wallet-methodology-criterion-contact": "Has a named point of contact so we can verify information when it changes.",
+  "page-find-wallet-methodology-criterion-eip1559": "Supports EIP-1559 (type 2) transactions on Ethereum Mainnet.",
+  "page-find-wallet-methodology-criterion-ux": "Offers a reviewable user experience. If our team finds a product difficult to use, we may request improvements before listing it.",
+  "page-find-wallet-methodology-criterion-ethereum-focused": "Is Ethereum-focused, with Ethereum or a Layer 2 set as the default network.",
+  "page-find-wallet-methodology-verification": "Listings are not static. Wallet providers are required to resubmit information every six months. If a team does not respond, we remove the wallet. This keeps the directory accurate as products evolve.",
+  "page-find-wallet-methodology-filters": "Filter toggles on this page (open source, self-custody, hardware wallet support, and others) reflect attributes tracked per wallet. Each listing also shows the date its information was last verified."
 }

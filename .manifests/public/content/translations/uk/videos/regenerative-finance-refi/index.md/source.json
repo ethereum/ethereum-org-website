@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/regenerative-finance-refi/index.md",
+  "generatedAt": "2026-04-29T06:11:27.107Z",
+  "rootHash": "591c3bd3ccab",
+  "tree": {
+    "contentHash": "ceaaafdbb809",
+    "anchorHash": "8bf92d526f46",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "9a51b9a57e9a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "3a3fd8c4c9d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8ae09eae9666"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a52fb01d08f4"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "41c2a6b1fb9e"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5e953584d588"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "fac0d12f4316"
+      },
+      "prose:1": {
+        "contentHash": "78ab4da29739",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "b720de05f09c"
+      },
+      "prose:2": {
+        "contentHash": "3c08cb69304e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-regenerative-finance-000": {
+        "contentHash": "5a697d8e6a9a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5775a7fcbc5c",
+        "children": {
+          "_label": {
+            "contentHash": "5775a7fcbc5c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4794257e9559",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "cryptos-energy-problem-048": {
+        "contentHash": "fe39c30a80b4",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "76d0bc93ad4f",
+        "children": {
+          "_label": {
+            "contentHash": "76d0bc93ad4f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "bf4ba1152bf5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "carbon-negative-blockchains-131": {
+        "contentHash": "93df024eb630",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "fa754864a27b",
+        "children": {
+          "_label": {
+            "contentHash": "fa754864a27b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e5f5cf23d75b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "refi-projects-in-action-216": {
+        "contentHash": "94ccb9c57f8d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "1590b6ecb4b1",
+        "children": {
+          "_label": {
+            "contentHash": "1590b6ecb4b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d628388c8823",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "growing-momentum-350": {
+        "contentHash": "03b456448419",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "de21b44b84aa",
+        "children": {
+          "_label": {
+            "contentHash": "de21b44b84aa",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "49c4286d19a9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-outlook-for-refi-515": {
+        "contentHash": "10baa7a34d35",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3ca3d17d65f9",
+        "children": {
+          "_label": {
+            "contentHash": "3ca3d17d65f9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fb954fa37c8d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "what-is-regenerative-finance-000",
+      "cryptos-energy-problem-048",
+      "carbon-negative-blockchains-131",
+      "refi-projects-in-action-216",
+      "growing-momentum-350",
+      "the-outlook-for-refi-515"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

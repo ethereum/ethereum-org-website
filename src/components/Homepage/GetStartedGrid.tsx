@@ -87,9 +87,9 @@ const GetStartedGrid = async ({
 
   return (
     <Section id="get-started" className={cn("relative", className)}>
-      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pb-8 pt-20 md:px-8">
+      <div className="flex flex-col gap-12 rounded-t-4xl bg-radial-a px-4 pt-20 pb-8 md:px-8">
         <div className="flex flex-col items-center gap-2 text-center">
-          <SectionHeader className="mb-0 mt-0">
+          <SectionHeader className="mt-0 mb-0">
             {t("page-index-get-started-title")}
           </SectionHeader>
           <p className="max-w-[42rem] text-lg text-body-medium lg:text-2xl">
@@ -121,7 +121,7 @@ const GetStartedGrid = async ({
                       >
                         <card.icon className={cn("size-6", card.iconColor)} />
                       </div>
-                      <h3 className="text-2xl font-bold leading-8">
+                      <h3 className="text-2xl leading-8 font-bold">
                         {card.title}
                       </h3>
                     </div>

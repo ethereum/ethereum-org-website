@@ -163,7 +163,7 @@ const KPISection = ({
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{t("page-index-kpi-tag")}</SectionTag>
 
-          <SectionHeader className="!mb-0 !mt-0">
+          <SectionHeader className="!mt-0 !mb-0">
             {t("page-index-kpi-title")}
           </SectionHeader>
         </div>
@@ -183,7 +183,7 @@ const KPISection = ({
               strokeWidth={1.5}
             />
             <div className="flex flex-col gap-1">
-              <p className="text-4xl font-bold leading-[1.2]">
+              <p className="text-4xl leading-[1.2] font-bold">
                 {accountHolders !== null
                   ? formatCompactNumber(accountHolders, locale)
                   : "—"}
@@ -204,10 +204,10 @@ const KPISection = ({
                 <AnimatedNumber
                   value={liveTransactions}
                   formatter={formatTransactions}
-                  className="text-4xl font-bold leading-[1.2]"
+                  className="text-4xl leading-[1.2] font-bold"
                 />
               ) : (
-                <p className="text-4xl font-bold leading-[1.2]">—</p>
+                <p className="text-4xl leading-[1.2] font-bold">—</p>
               )}
               <p className="text-base leading-[1.6] text-body-medium">
                 {t("page-index-kpi-transactions")}

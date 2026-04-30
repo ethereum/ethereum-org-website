@@ -37,7 +37,7 @@ const StepBox = (
   const { t } = useTranslation("page-stablecoins")
 
   return (
-    <LinkBox className="bg-background hover:bg-background-highlight flex flex-col items-start border p-4 transition-transform duration-200 not-[:first-child]:-mt-px hover:scale-105 md:flex-row md:items-stretch">
+    <LinkBox className="flex flex-col items-start border bg-background p-4 transition-transform duration-200 not-[:first-child]:-mt-px hover:scale-105 hover:bg-background-highlight md:flex-row md:items-stretch">
       <Flex className="w-full items-center justify-between">
         <div>
           <LinkOverlay asChild>

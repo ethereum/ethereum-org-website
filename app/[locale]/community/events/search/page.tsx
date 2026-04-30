@@ -82,7 +82,7 @@ const Page = async (props: {
 
     return (
       <>
-        <div className="grid-cols-fill-4 grid gap-8">
+        <div className="grid grid-cols-fill-4 gap-8">
           {filteredEvents.map((event) => (
             <EventCard
               key={event.id}

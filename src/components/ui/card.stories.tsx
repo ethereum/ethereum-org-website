@@ -16,7 +16,7 @@ export default meta
 export const FitCover = {
   render: () => (
     <VStack className="max-w-md items-stretch gap-4">
-      <p className="text-body-medium text-sm">
+      <p className="text-sm text-body-medium">
         Default fit=&quot;cover&quot; - image fills container, may be cropped
       </p>
       <CardBanner background="accent-a">
@@ -30,7 +30,7 @@ export const FitCover = {
 export const FitContain = {
   render: () => (
     <VStack className="max-w-md items-stretch gap-4">
-      <p className="text-body-medium text-sm">
+      <p className="text-sm text-body-medium">
         fit=&quot;contain&quot; - blur background auto-generated from single
         image
       </p>
@@ -49,7 +49,7 @@ export const BackgroundVariants = {
         ["accent-a", "accent-b", "accent-c", "primary", "body", "none"] as const
       ).map((bg) => (
         <div key={bg}>
-          <p className="text-body-medium mb-2 text-sm">background: {bg}</p>
+          <p className="mb-2 text-sm text-body-medium">background: {bg}</p>
           <CardBanner background={bg}>
             <Image
               src="/images/dapps/uni.png"

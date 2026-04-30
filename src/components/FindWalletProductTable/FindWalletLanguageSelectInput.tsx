@@ -77,7 +77,7 @@ const FindWalletLanguageSelectInput = ({
         </SelectTrigger>
         <SelectContent>
           <div
-            className="bg-background sticky -top-2 z-10 p-2"
+            className="sticky -top-2 z-10 bg-background p-2"
             onKeyDown={(e) => e.stopPropagation()}
             onClick={(e) => e.stopPropagation()}
           >
@@ -127,7 +127,7 @@ const FindWalletLanguageSelectInput = ({
           })}
         </SelectContent>
       </Select>
-      <p className="text-body-medium text-sm">
+      <p className="text-sm text-body-medium">
         {t("page-find-wallet-popular-languages")}
       </p>
       <div className="flex flex-row flex-wrap gap-2">
@@ -135,7 +135,7 @@ const FindWalletLanguageSelectInput = ({
           return (
             <span
               key={language.langCode}
-              className="text-primary cursor-pointer text-sm"
+              className="cursor-pointer text-sm text-primary"
               onClick={() => {
                 trackCustomEvent({
                   eventCategory: "WalletFilterSidebar",
