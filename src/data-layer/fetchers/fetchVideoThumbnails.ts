@@ -1,15 +1,24 @@
-import { readdir, readFile } from "fs/promises"
-import { join } from "path"
-
 import matter from "gray-matter"
 
 import type { VideoFrontmatter } from "@/lib/interfaces"
 
-import { CONTENT_DIR } from "@/lib/constants"
-
 import { uploadToS3 } from "../s3"
 
+import { fetchRetry } from "./fetchRetry"
+
+const GITHUB_API_BASE =
+  "https://api.github.com/repos/ethereum/ethereum-org-website"
+const RAW_BASE =
+  "https://raw.githubusercontent.com/ethereum/ethereum-org-website/master"
+const VIDEOS_PATH_PREFIX = "public/content/videos/"
+const VIDEO_INDEX_SUFFIX = "/index.md"
+
 const THUMBNAIL_PREFIX = "videos/thumbnails"
+
+interface GitTreeItem {
+  path: string
+  type: "blob" | "tree"
+}
 
 /**
  * Derive an S3 key extension from a URL path. Falls back to "jpg".
@@ -30,8 +39,73 @@ function youtubeThumbnailUrl(youtubeId: string, quality: "sd" | "hq"): string {
 }
 
 /**
+ * Fetch the repo tree and return the list of video slugs (top-level entries
+ * under public/content/videos/ that have an index.md).
+ */
+async function discoverVideoSlugs(token: string): Promise<string[]> {
+  const url = `${GITHUB_API_BASE}/git/trees/master?recursive=1`
+  const response = await fetchRetry(url, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github.v3+json",
+    },
+  })
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch repo tree: ${response.status}`)
+  }
+
+  const data = await response.json()
+  const tree: GitTreeItem[] = data.tree
+
+  const slugs: string[] = []
+  for (const item of tree) {
+    if (item.type !== "blob") continue
+    if (!item.path.startsWith(VIDEOS_PATH_PREFIX)) continue
+    if (!item.path.endsWith(VIDEO_INDEX_SUFFIX)) continue
+
+    const inner = item.path.slice(
+      VIDEOS_PATH_PREFIX.length,
+      -VIDEO_INDEX_SUFFIX.length
+    )
+    // Skip nested paths (none expected, kept defensive)
+    if (!inner.includes("/")) slugs.push(inner)
+  }
+  return slugs
+}
+
+/**
+ * Fetch a single video's frontmatter from raw GitHub content.
+ * Returns null on fetch failure so the caller can skip and continue.
+ */
+async function fetchFrontmatter(
+  slug: string,
+  token: string
+): Promise<VideoFrontmatter | null> {
+  const url = `${RAW_BASE}/${VIDEOS_PATH_PREFIX}${slug}${VIDEO_INDEX_SUFFIX}`
+  const response = await fetchRetry(url, {
+    headers: { Authorization: `Bearer ${token}` },
+  })
+
+  if (!response.ok) {
+    console.warn(
+      `[VideoThumbnails] Failed to fetch markdown for ${slug}: ${response.status}`
+    )
+    return null
+  }
+
+  const text = await response.text()
+  const { data } = matter(text)
+  return data as VideoFrontmatter
+}
+
+/**
  * Fetch video thumbnails from YouTube (or custom URLs) and upload to S3.
  * Keyed by video slug so each video maps to exactly one S3 object.
+ *
+ * Reads video frontmatter (youtubeId, customThumbnailUrl) from GitHub via
+ * the API rather than the local filesystem, so the task runs cleanly on
+ * Trigger.dev where the app's content tree isn't bundled.
  *
  * For each video:
  * 1. If customThumbnailUrl exists, upload that
@@ -41,19 +115,21 @@ function youtubeThumbnailUrl(youtubeId: string, quality: "sd" | "hq"): string {
  * Returns a map of video slug -> S3 thumbnail URL.
  */
 export async function fetchVideoThumbnails(): Promise<Record<string, string>> {
+  const token = process.env.GITHUB_TOKEN_READ_ONLY
+  if (!token) {
+    throw new Error("GitHub token not set (GITHUB_TOKEN_READ_ONLY)")
+  }
+
   console.log("Starting video thumbnail sync to S3")
 
-  const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
-  const entries = await readdir(videosDir, { withFileTypes: true })
-  const slugs = entries.filter((e) => e.isDirectory()).map((e) => e.name)
+  const slugs = await discoverVideoSlugs(token)
+  console.log(`Found ${slugs.length} videos in repo tree`)
 
   const results = await Promise.all(
     slugs.map(async (slug) => {
       try {
-        const mdPath = join(videosDir, slug, "index.md")
-        const raw = await readFile(mdPath, "utf-8")
-        const { data } = matter(raw)
-        const fm = data as VideoFrontmatter
+        const fm = await fetchFrontmatter(slug, token)
+        if (!fm) return null
 
         // YouTube thumbs are always jpg; custom URLs derive ext from the path.
         const ext = fm.customThumbnailUrl
