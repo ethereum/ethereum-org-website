@@ -1,220 +1,283 @@
 ---
-title: Uondoji wa hisa
-description: Ukurasa unaofupisha nini ni "staking push withdrawals", jinsi zinavyofanya kazi, na nini stakers wanahitaji kufanya ili kupata zawadi zao
+title: Utoaji wa kuweka dhamana
+description: Ukurasa unaofupisha utoaji wa kuweka dhamana ni nini, jinsi unavyofanya kazi, na kile ambacho waweka dhamana wanahitaji kufanya ili kupata zawadi zao
 lang: sw
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Leslie kifaru akiwa na zawadi zake za staking
+alt: Leslie kifaru akiwa na zawadi zake za kuweka dhamana
 sidebarDepth: 2
 summaryPoints:
-  - Sasisho la Shanghai/Capella liliwezesha uondoaji wa staking kwenye Ethereum
-  - Waendeshaji wa validator lazima watoe anwani ya uondoaji ili kuwezesha
-  - Zawadi zinasambazwa kiotomatiki kila baada ya siku chache
-  - Validator wanaoacha kabisa staking watapokea salio lao lililobaki
+  - Waendeshaji wa wathibitishaji lazima watoe anwani ya utoaji ili kuwezesha utoaji
+  - Wathibitishaji wa zamani wana salio la ziada zaidi ya 32 ETH linalotolewa kiotomatiki kila baada ya siku chache
+  - Wathibitishaji wanaojumuisha hupata zawadi kwenye salio lao kamili hadi 2048 ETH
+  - Wathibitishaji wanaoacha kabisa kuweka dhamana watapokea salio lao lililosalia
 ---
 
-**Uondoaji wa staking** unarejelea uhamisho wa ETH kutoka kwa akaunti ya mthibitishaji kwenye safu ya makubaliano ya Ethereum (Mnyororo Kioleza), hadi kwenye safu ya utekelezaji ambapo inaweza kufanyiwa miamala.
+**Utoaji wa kuweka dhamana** unarejelea uhamishaji wa ETH kutoka kwenye akaunti ya mthibitishaji kwenye safu ya makubaliano ya Ethereum (roro wa beacon), hadi kwenye safu ya utekelezaji ambapo inaweza kufanyiwa muamala.
 
-**Malipo ya zawadi ya salio la ziada** zaidi ya 32 ETH yatatumwa kiotomatiki na mara kwa mara kwa anwani ya uondoaji iliyounganishwa kwa kila mthibitishaji, pindi itakapowekwa na mtumiaji. Watumiaji wanaweza pia **kuacha staking kabisa**, na kufungua salio lao lote la mthibitishaji.
+Jinsi utoaji unavyofanya kazi inategemea aina ya kitambulisho cha utoaji cha mthibitishaji wako:
 
-## Zawadi za Kusimamisha {#staking-rewards}
+- **Wathibitishaji wa zamani (Aina ya 1)**: Salio la ziada zaidi ya 32 ETH hutumwa kiotomatiki na mara kwa mara kwenye anwani ya utoaji iliyounganishwa na mthibitishaji. Zawadi zilizo juu ya 32 ETH hazichangii kwenye uzito wa mthibitishaji kwenye mtandao.
+- **Wathibitishaji wanaojumuisha (Aina ya 2)**: Zawadi hujumuishwa kwenye salio tendaji la mthibitishaji hadi 2048 ETH, na kuongeza uzito wa mthibitishaji na kupata zawadi zaidi. Salio linalozidi 2048 ETH pekee ndilo linalofagiliwa kiotomatiki.
 
-Malipo ya zawadi yanashughulikiwa kiotomatiki kwa akaunti za validator zinazofanya kazi na salio la juu la 32 ETH.
+Watumiaji wanaweza pia **kuacha kuweka dhamana kabisa**, na kufungua salio lao kamili la mthibitishaji.
 
-Salio lolote zaidi ya 32 ETH lililopatikana kupitia zawadi halichangii kwenye mtaji mkuu, au kuongeza uzito wa validator huyu kwenye mtandao, na hivyo hutolewa kiotomatiki kama malipo ya zawadi kila baada ya siku chache. Kando na kutoa anwani ya uondoaji mara moja, zawadi hizi hazihitaji hatua yoyote kutoka kwa mwendeshaji wa validator. Hii yote inaanzishwa kwenye safu ya makubaliano, hivyo hakuna gesi (ada ya muamala) inayohitajika katika hatua yoyote.
+## Zawadi za kuweka dhamana {#staking-rewards}
 
-### Tumefikaje hapa? {#how-did-we-get-here}
+Jinsi zawadi zinavyoshughulikiwa inategemea aina ya kitambulisho cha mthibitishaji:
 
-Katika miaka michache iliyopita, Ethereum imepitia maboresho kadhaa ya mtandao ikibadilika kuwa mtandao unaolindwa na ETH yenyewe, badala ya uchimbaji unaotumia nishati nyingi kama ilivyokuwa awali. Kushiriki katika makubaliano kwenye Ethereum sasa kunajulikana kama "staking", ambapo washiriki wamefunga ETH kwa hiari, kuiweka "hatarini" kwa uwezo wa kushiriki kwenye mtandao. Watumiaji wanaofuata sheria watapata zawadi, wakati majaribio ya kudanganya yanaweza kuadhibiwa.
+**Wathibitishaji wa zamani (Aina ya 1)** wana salio tendaji lililowekewa kikomo cha 32 ETH. Salio lolote zaidi ya 32 ETH linalopatikana kupitia zawadi halichangii kwenye mtaji au kuongeza uzito wa mthibitishaji huyu kwenye mtandao, na hutolewa kiotomatiki kama malipo ya zawadi kila baada ya siku chache. Mbali na kutoa anwani ya utoaji mara moja, zawadi hizi hazihitaji hatua yoyote kutoka kwa mwendeshaji wa mthibitishaji. Haya yote huanzishwa kwenye safu ya makubaliano, hivyo hakuna gesi (ada ya muamala) inayohitajika katika hatua yoyote.
 
-Tangu kuzinduliwa kwa mkataba wa amana ya staking mnamo Novemba 2020, baadhi ya waanzilishi wa Ethereum wamefunga fedha kwa hiari ili kuanzisha "validators", akaunti maalum ambazo zina haki ya kuthibitisha na kupendekeza vitalu, zikifuata sheria za mtandao.
+**Wathibitishaji wanaojumuisha (Aina ya 2)** wanaweza kuwa na salio tendaji popote kati ya 32 na 2048 ETH. Zawadi zinazopatikana na wathibitishaji hawa hujumuishwa kwenye salio lao tendaji, na kuongeza uzito wa mthibitishaji na zawadi za baadaye. Ufagiaji wa kiotomatiki hutokea tu kwa salio linalozidi 2048 ETH. Ili kutoa zawadi chini ya kizingiti cha 2048 ETH, wathibitishaji wanaojumuisha lazima waanzishe utoaji wa kiasi fulani kwa mikono kutoka kwenye safu ya utekelezaji, jambo ambalo linahitaji gesi.
 
-Kabla ya sasisho la Shanghai/Capella, hukuweza kutumia au kufikia ETH yako iliyowekwa kwenye staking. Lakini sasa, unaweza kuchagua kupokea zawadi zako kiotomatiki kwenye akaunti uliyochagua, na pia unaweza kutoa ETH yako iliyowekwa kwenye staking wakati wowote unapotaka.
+### Tulifikaje hapa? {#how-did-we-get-here}
 
-### Niandae vipi? {#how-do-i-prepare}
+Katika miaka michache iliyopita [Ethereum](/) imepitia maboresho kadhaa ya mtandao na kuhamia kwenye mtandao unaolindwa na ETH yenyewe, badala ya uchimbaji unaotumia nishati nyingi kama ilivyokuwa zamani. Kushiriki katika makubaliano kwenye Ethereum sasa kunajulikana kama "kuweka dhamana", kwani washiriki wamefunga ETH kwa hiari, wakiiweka "kama dhamana" kwa uwezo wa kushiriki kwenye mtandao. Watumiaji wanaofuata sheria watazawadiwa, huku majaribio ya kudanganya yanaweza kuadhibiwa.
+
+Tangu kuzinduliwa kwa mkataba wa amana wa kuweka dhamana mnamo Novemba 2020, baadhi ya waanzilishi jasiri wa Ethereum wamefunga fedha kwa hiari ili kuwezesha "wathibitishaji", akaunti maalum ambazo zina haki ya kuthibitisha rasmi na kupendekeza bloku, kufuatia sheria za mtandao.
+
+Kabla ya uboreshaji wa Shanghai/Capella, hukuweza kutumia au kufikia ETH yako uliyoweka dhamana. Lakini sasa, unaweza kuchagua kupokea zawadi zako kiotomatiki kwenye akaunti uliyochagua, na unaweza pia kutoa ETH yako uliyoweka dhamana wakati wowote unapotaka.
+
+### Ninajiandaaje? {#how-do-i-prepare}
 
 <WithdrawalsTabComparison />
 
-### Matangazo muhimu {#important-notices}
+### Taarifa muhimu {#important-notices}
 
-Kutoa anwani ya uondoaji ni hatua inayohitajika kwa akaunti yoyote ya validator kabla ya kuwa na sifa ya kutoa ETH kutoka kwenye salio lake.
+Kutoa anwani ya utoaji ni hatua inayohitajika kwa akaunti yoyote ya mthibitishaji kabla ya kustahili kutolewa ETH kutoka kwenye salio lake.
 
 <Alert variant="warning">
 <AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
-<strong>Kila akaunti ya mthibitishaji inaweza tu kupewa anwani moja ya uondoaji, mara moja.</strong> Mara tu anwani inapochaguliwa na kuwasilishwa kwenye safu ya makubaliano, hii haiwezi kutenduliwa au kubadilishwa tena. Hakiki maradufu umiliki na usahihi wa anwani iliyotolewa kabla ya kuwasilisha.
+**Kila akaunti ya mthibitishaji inaweza tu kupewa anwani moja ya utoaji, mara moja.** Pindi anwani inapochaguliwa na kuwasilishwa kwenye safu ya makubaliano, hili haliwezi kutenguliwa au kubadilishwa tena. Hakikisha mara mbili umiliki na usahihi wa anwani iliyotolewa kabla ya kuwasilisha.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Hakuna <strong>tishio lolote kwa fedha zako kwa sasa</strong> kwa kutotoa hii, ikichukuliwa kuwa fungu la maneno yako ya mnemonic/msingi limebaki salama nje ya mtandao, na halijaathiriwa kwa njia yoyote. Kukosa kuongeza stakabadhi za uondoaji kutaacha tu ETH ikiwa imefungwa kwenye akaunti ya mthibitishaji kama ilivyokuwa hadi anwani ya uondoaji itakapotolewa.
+Hakuna **tishio kwa fedha zako kwa wakati huu** kwa kutotoa hili, ikizingatiwa kuwa kifungu cha maneno ya siri kimesalia salama nje ya mtandao, na hakijaingiliwa kwa njia yoyote. Kushindwa kuongeza vitambulisho vya utoaji kutaacha tu ETH imefungwa kwenye akaunti ya mthibitishaji kama ilivyokuwa hadi anwani ya utoaji itakapotolewa.
 
-## Kuacha staking kabisa {#exiting-staking-entirely}
+## Wathibitishaji wanaojumuisha {#compounding-validators}
 
-Kutoa anwani ya uondoaji kunahitajika kabla _fedha zozote_ haziwezi kuhamishwa kutoka kwa salio la akaunti ya mthibitishaji.
+Wathibitishaji wanaweza kuchagua **kujumuisha** kwa kubadilisha vitambulisho vyao vya utoaji kutoka Aina ya 1 hadi Aina ya 2. Hii inaongeza kiwango cha juu cha salio tendaji kutoka 32 ETH hadi **2048 ETH**, ikiruhusu zawadi kujumuishwa kwenye salio tendaji la mthibitishaji badala ya kufagiliwa kiotomatiki.
 
-Watumiaji wanaotaka kuacha staking kabisa na kutoa salio lao lote lazima pia watie sahihi na kutangaza ujumbe wa "kujiondoa kwa hiari" na funguo za mthibitishaji ambao utaanza mchakato wa kujiondoa kwenye staking. Hii inafanywa na mteja wako wa kithibitishaji na kuwasilishwa kwenye nodi yako ya makubaliano, na haihitaji gesi.
+Pamoja na ujumuishaji kuwezeshwa:
 
-Mchakato wa mthibitishaji kujiondoa kwenye staking huchukua muda tofauti, kulingana na wangapi wengine wanajiondoa kwa wakati mmoja. Mara tu itakapokamilika, akaunti hii haitawajibika tena kwa kutekeleza majukumu ya mtandao wa mthibitishaji, haistahiki tena zawadi, na haina tena ETH yake "iliyowekwa hisa". Kwa wakati huu akaunti itawekwa alama kuwa "inayoweza kutolewa" kikamilifu.
+- Zawadi huongeza salio tendaji la mthibitishaji katika nyongeza za 1 ETH (kulingana na [bafa ndogo ya hysteresis](https://www.attestant.io/posts/understanding-validator-effective-balance/)), na kupata zawadi zaidi kadiri muda unavyopita
+- Ufagiaji wa kiotomatiki hutokea tu kwa salio linalozidi 2048 ETH
+- Utoaji wa kiasi fulani chini ya kizingiti cha 2048 ETH lazima uanzishwe kwa mikono kutoka kwenye safu ya utekelezaji (hii inagharimu gesi)
+- Wathibitishaji wengi wanaweza **kuunganishwa** kuwa mthibitishaji mmoja anayejumuisha, na kupunguza gharama za uendeshaji
 
-Mara tu akaunti itakapotiwa alama ya "inayoweza kutolewa", na stakabadhi za uondoaji zimetolewa, hakuna kingine ambacho mtumiaji anahitaji kufanya isipokuwa kusubiri. Akaunti hufagiliwa kiotomatiki na mfululizo na wapendekezaji wa bloku kwa ajili ya fedha zinazostahiki zilizotolewa, na salio la akaunti yako litahamishwa kikamilifu (pia inajulikana kama "uondoaji kamili") wakati wa <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>ufagiaji</a> unaofuata.
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
+**Kubadilisha kutoka vitambulisho vya utoaji vya Aina ya 1 hadi Aina ya 2 hakuwezi kutenguliwa.** Tumia [Staking Launchpad](https://launchpad.ethereum.org/validator-actions) kama zana rasmi kwa ubadilishaji huu. Kwa maelezo zaidi kuhusu mchakato wa ubadilishaji, hatari, na uunganishaji, tazama [uchambuzi wa kina wa MaxEB](/roadmap/pectra/maxeb/).
+</AlertDescription>
+</AlertContent>
+</Alert>
 
-## Uondoaji wa staking uliwashwa lini? {#when}
+## Kuacha kuweka dhamana kabisa {#exiting-staking-entirely}
 
-Utendaji wa uondoaji uliwezeshwa kama sehemu ya sasisho la Shanghai/Capella lililotokea **tarehe 12 Aprili 2023**.
+Kutoa anwani ya utoaji inahitajika kabla ya fedha _zozote_ kuweza kuhamishwa kutoka kwenye salio la akaunti ya mthibitishaji.
 
-Sasisho la Shanghai/Capella liliwezesha ETH iliyokuwa imewekwa hisa awali kurejeshwa kwenye akaunti za kawaida za Ethereum. Hii ilifunga mduara juu ya ukwasi wa staking, na kuleta Ethereum hatua moja karibu zaidi katika safari yake ya kujenga mfumo ikolojia endelevu, unaoweza kupanuka, na salama uliogatuliwa.
+Watumiaji wanaotaka kuacha kuweka dhamana kabisa na kutoa salio lao kamili lazima waanzishe "kujiondoa kwa hiari". Hili linaweza kufanywa kwa njia mbili:
+
+- **Kutumia funguo za mthibitishaji**: Saini na utangaze ujumbe wa kujiondoa kwa hiari na mteja wako wa mthibitishaji, uliowasilishwa kwenye Nodi yako ya makubaliano. Hili halihitaji gesi.
+- **Kutumia vitambulisho vya utoaji**: Anzisha kujiondoa kutoka kwenye safu ya utekelezaji ukitumia anwani yako ya utoaji, bila kuhitaji ufikiaji wa ufunguo wa kusaini wa mthibitishaji. Hili linahitaji muamala na linagharimu gesi.
+
+Mchakato wa mthibitishaji kuacha kuweka dhamana huchukua muda tofauti, kulingana na ni wangapi wengine wanaoacha kwa wakati mmoja. Pindi utakapokamilika, akaunti hii haitawajibika tena kutekeleza majukumu ya mtandao ya mthibitishaji, haistahiki tena kupata zawadi, na haina tena ETH yao "kama dhamana". Kwa wakati huu akaunti itawekewa alama kama "inayoweza kutolewa" kikamilifu.
+
+Pindi akaunti inapowekewa alama kama "inayoweza kutolewa", na vitambulisho vya utoaji vimetolewa, hakuna kitu kingine ambacho mtumiaji anahitaji kufanya zaidi ya kusubiri. Akaunti hufagiliwa kiotomatiki na mfululizo na mpendekezaji wa kizuizi kwa fedha zinazostahiki zilizotolewa, na salio la akaunti yako litahamishwa kikamilifu (pia inajulikana kama "utoaji kamili") wakati wa <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>ufagiaji</a> unaofuata.
+
+## Utoaji wa kuweka dhamana uliwezeshwa lini? {#when}
+
+Utendaji wa utoaji uliwezeshwa awali kama sehemu ya uboreshaji wa Shanghai/Capella mnamo **Aprili 12, 2023**. [Uboreshaji wa Pectra](/roadmap/pectra/) (Mei 2025) baadaye ulianzisha wathibitishaji wanaojumuisha na kiwango cha juu zaidi cha salio tendaji cha 2048 ETH, pamoja na kujiondoa na utoaji wa kiasi fulani ulioanzishwa na safu ya utekelezaji.
+
+Uboreshaji wa Shanghai/Capella uliwezesha ETH iliyowekwa dhamana hapo awali kurejeshwa kwenye akaunti za kawaida za Ethereum. Hili lilifunga mzunguko wa ukwasi wa kuweka dhamana, na kuileta Ethereum hatua moja karibu katika safari yake ya kujenga mfumo wa ikolojia wa mfumo mtawanyo ulio endelevu, unaoweza kupanuka, na salama.
 
 - [Zaidi kuhusu historia ya Ethereum](/ethereum-forks/)
-- [Zaidi kuhusu mpango wa maendeleo wa Ethereum](/roadmap/)
+- [Zaidi kuhusu mpango wa utekelezaji wa Ethereum](/roadmap/)
 
-## Malipo ya uondoaji hufanyaje kazi? {#how-do-withdrawals-work}
+## Malipo ya utoaji yanafanyaje kazi? {#how-do-withdrawals-work}
 
-Iwapo mthibitishaji fulani anastahiki uondoaji au la huamuliwa na hali ya akaunti ya mthibitishaji yenyewe. Hakuna ingizo la mtumiaji linalohitajika wakati wowote ili kubaini kama akaunti inapaswa kuanzishiwa uondoaji au la—mchakato mzima unafanywa kiotomatiki na safu ya makubaliano katika mzunguko unaoendelea.
+Ikiwa mthibitishaji fulani anastahili utoaji au la inatambuliwa na hali ya akaunti ya mthibitishaji yenyewe. Hakuna mchango wa mtumiaji unaohitajika wakati wowote ili kubaini ikiwa akaunti inapaswa kuanzishiwa utoaji au la—mchakato mzima unafanywa kiotomatiki na safu ya makubaliano kwenye mzunguko unaoendelea.
 
-### Wewe ni mwanafunzi wa kuona zaidi? {#visual-learner}
+### Je, unapendelea kujifunza kwa kuona? {#visual-learner}
 
-Angalia maelezo haya ya uondoaji wa staking wa Ethereum na Finematics:
+Tazama maelezo haya ya utoaji wa kuweka dhamana wa Ethereum na Finematics:
 
 <YouTube id="RwwU3P9n3uo" />
 
-### "Ufagiaji" wa Mthibitishaji {#validator-sweeping}
+### "Ufagiaji" wa mthibitishaji {#validator-sweeping}
 
-Wakati mthibitishaji amepangiwa kupendekeza bloku inayofuata, inatakiwa kuunda foleni ya uondoaji, ya hadi uondoaji 16 unaostahiki. Hii inafanywa kwa kuanza na faharasa ya mthibitishaji 0, kubaini kama kuna uondoaji unaostahiki kwa akaunti hii kulingana na sheria za itifaki, na kuiongeza kwenye foleni ikiwa ipo. Seti ya mthibitishaji iliyopangwa kupendekeza bloku inayofuata itaendelea pale ambapo ya mwisho iliishia, ikiendelea kwa utaratibu bila kikomo.
+Wakati mthibitishaji amepangwa kupendekeza kitalu kinachofuata, anahitajika kujenga foleni ya utoaji, ya hadi utoaji 16 unaostahiki. Hili linafanywa kwa kuanza awali na faharisi ya mthibitishaji 0, kubaini ikiwa kuna utoaji unaostahiki kwa akaunti hii kulingana na sheria za itifaki, na kuiongeza kwenye foleni ikiwa ipo. Mthibitishaji aliyepangwa kupendekeza kitalu kinachofuata ataendelea pale ambapo wa mwisho aliishia, akiendelea kwa mpangilio bila kikomo.
 
 <Alert variant="update">
 <AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
-Fikiria kuhusu saa ya analojia. Mkono kwenye saa unaelekeza kwenye saa, huendelea kwa mwelekeo mmoja, hauruki saa zozote, na hatimaye huzunguka na kurudi mwanzo tena baada ya nambari ya mwisho kufikiwa.<br/><br/>
-Sasa badala ya 1 hadi 12, fikiria saa ina 0 hadi N <em>(jumla ya idadi ya akaunti za wathibitishaji ambazo zimewahi kusajiliwa kwenye safu ya makubaliano, zaidi ya 500,000 kufikia Jan 2023).</em><br/><br/>
-Mkono kwenye saa unaelekeza kwa mthibitishaji anayefuata anayehitaji kukaguliwa kwa ajili ya uondoaji unaostahiki. Huanza saa 0, na huendelea kuzunguka bila kuruka akaunti zozote. Mthibitishaji wa mwisho anapofikiwa, mzunguko unaendelea tena mwanzoni.
+Fikiria kuhusu saa ya mshale. Mshale kwenye saa unaonyesha saa, unasonga katika mwelekeo mmoja, hauruki saa yoyote, na hatimaye unarudi mwanzo tena baada ya nambari ya mwisho kufikiwa.
+
+Sasa badala ya 1 hadi 12, fikiria saa ina 0 hadi N _(jumla ya idadi ya akaunti za wathibitishaji ambazo zimewahi kusajiliwa kwenye safu ya makubaliano, zaidi ya 500,000 kufikia Jan 2023)._
+
+Mshale kwenye saa unaonyesha mthibitishaji anayefuata ambaye anahitaji kukaguliwa kwa utoaji unaostahiki. Inaanza saa 0, na inaendelea kuzunguka bila kuruka akaunti yoyote. Wakati mthibitishaji wa mwisho anafikiwa, mzunguko unaendelea tena mwanzoni.
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-#### Kukagua akaunti kwa ajili ya uondoaji {#checking-an-account-for-withdrawals}
+#### Kukagua akaunti kwa ajili ya utoaji {#checking-an-account-for-withdrawals}
 
-Wakati mpendekezaji anafagia wathibitishaji kwa ajili ya uondoaji unaowezekana, kila mthibitishaji anayekaguliwa anapimwa dhidi ya mfululizo mfupi wa maswali ili kubaini kama uondoaji unapaswa kuanzishwa, na ikiwa ndivyo, ni kiasi gani cha ETH kinapaswa kutolewa.
+Wakati mpendekezaji anafagia kupitia wathibitishaji kwa utoaji unaowezekana, kila mthibitishaji anayekaguliwa anatathminiwa dhidi ya mfululizo mfupi wa maswali ili kubaini ikiwa utoaji unapaswa kuanzishwa, na ikiwa ndivyo, ni kiasi gani cha ETH kinapaswa kutolewa.
 
-1. **Je, anwani ya uondoaji imetolewa?** Ikiwa hakuna anwani ya uondoaji iliyotolewa, akaunti inarukwa na hakuna uondoaji unaoanzishwa.
-2. **Je, mthibitishaji amejiondoa na anaweza kutoa?** Ikiwa mthibitishaji amejiondoa kabisa, na tumefikia epoki ambapo akaunti yake inachukuliwa kuwa "inayoweza kutolewa", basi uondoaji kamili utachakatwa. Hii itahamisha salio lote lililobaki kwenye anwani ya uondoaji.
-3. **Je, salio halisi limefikia kiwango cha juu cha 32?** Ikiwa akaunti ina stakabadhi za uondoaji, haijatoka kikamilifu, na ina zawadi zaidi ya 32 zinazosubiri, uondoaji kiasi utachakatwa ambao utahamisha tu zawadi zilizo juu ya 32 kwenye anwani ya uondoaji ya mtumiaji.
+1. **Je, anwani ya utoaji imetolewa?** Ikiwa hakuna anwani ya utoaji iliyotolewa, akaunti inarukwa na hakuna utoaji unaoanzishwa.
+2. **Je, mthibitishaji amejiondoa na anaweza kutolewa?** Ikiwa mthibitishaji amejiondoa kikamilifu, na tumefikia kipindi ambapo akaunti yao inachukuliwa kuwa "inayoweza kutolewa", basi utoaji kamili utachakatwa. Hili litahamisha salio lote lililosalia kwenye anwani ya utoaji.
+3. **Je, salio linazidi kiwango cha juu cha salio tendaji?** Kwa wathibitishaji wa zamani (Aina ya 1), kizingiti hiki ni 32 ETH. Kwa wathibitishaji wanaojumuisha (Aina ya 2), kizingiti hiki ni 2048 ETH. Ikiwa akaunti ina vitambulisho vya utoaji, haijajiondoa kikamilifu, na ina salio juu ya kizingiti chake, utoaji wa kiasi fulani utachakatwa ambao unahamisha tu ziada kwenye anwani ya utoaji ya mtumiaji.
 
-Kuna vitendo viwili tu vinavyochukuliwa na waendeshaji wa vithibitishaji wakati wa mzunguko wa maisha wa mthibitishaji ambavyo huathiri mtiririko huu moja kwa moja:
+Kuna hatua mbili tu zinazochukuliwa na waendeshaji wa wathibitishaji wakati wa mzunguko wa maisha wa mthibitishaji ambazo huathiri mtiririko huu moja kwa moja:
 
-- Toa stakabadhi za uondoaji ili kuwezesha aina yoyote ya uondoaji
-- Toka kwenye mtandao, jambo ambalo litaanzisha uondoaji kamili
+- Kutoa vitambulisho vya utoaji ili kuwezesha aina yoyote ya utoaji
+- Kujiondoa kwenye mtandao, jambo ambalo litaanzisha utoaji kamili
 
 ### Bila gesi {#gas-free}
 
-Njia hii ya uondoaji wa staking huepuka kuwataka waweka hisa kuwasilisha muamala wao wenyewe wakiomba kiasi fulani cha ETH kitolewe. Hii inamaanisha hakuna **gesi (ada ya muamala) inayohitajika**, na uondoaji pia haushindani na nafasi iliyopo ya bloku ya safu ya utekelezaji.
+Ufagiaji wa utoaji wa kiotomatiki hauhitaji waweka dhamana kuwasilisha muamala kwa mikono. Hii inamaanisha **hakuna gesi (ada ya muamala) inayohitajika** kwa ufagiaji wa kiotomatiki, na hazishindanii nafasi iliyopo ya kitalu cha safu ya utekelezaji.
 
-### Nitapata zawadi zangu za staking mara ngapi? {#how-soon}
+Kumbuka kwamba [wathibitishaji wanaojumuisha](#compounding-validators) wanaotaka kuanzisha utoaji wa kiasi fulani chini ya kizingiti cha 2048 ETH lazima wafanye hivyo kwa mikono kutoka kwenye safu ya utekelezaji, jambo ambalo linahitaji gesi.
 
-Uondoaji wa juu wa 16 unaweza kuchakatwa katika bloku moja. Kwa kiwango hicho, uondoaji wa wathibitishaji 115,200 unaweza kuchakatwa kwa siku (kwa kuchukulia hakuna nafasi zilizokosekana). Kama ilivyoelezwa hapo juu, wathibitishaji wasio na uondoaji unaostahiki watarukwa, na kupunguza muda wa kumaliza ufagiaji.
+### Nitapata zawadi zangu za kuweka dhamana mara ngapi? {#how-soon}
 
-Kwa kupanua hesabu hii, tunaweza kukadiria muda utakaotumika kuchakata idadi fulani ya uondoaji:
+Kiwango cha juu cha utoaji 16 kinaweza kuchakatwa katika kitalu kimoja. Kwa kiwango hicho, utoaji 115,200 wa wathibitishaji unaweza kuchakatwa kwa siku (ikizingatiwa hakuna nafasi zilizokosa). Kama ilivyoelezwa hapo juu, wathibitishaji wasio na utoaji unaostahiki watarukwa, na kupunguza muda wa kumaliza ufagiaji.
+
+Kwa kupanua hesabu hii, tunaweza kukadiria muda utakaohitajika kuchakata idadi fulani ya utoaji:
 
 <TableContainer>
 
-| Idadi ya uondoaji |    Muda wa kukamilisha   |
-| :---------------: | :----------------------: |
-|      400,000      | siku 3.5 |
-|      500,000      | siku 4.3 |
-|      600,000      | siku 5.2 |
-|      700,000      | siku 6.1 |
-|      800,000      | siku 7.0 |
+| Idadi ya utoaji | Muda wa kukamilisha |
+| :-------------------: | :--------------: |
+|        400,000        |     siku 3.5     |
+|        500,000        |     siku 4.3     |
+|        600,000        |     siku 5.2     |
+|        700,000        |     siku 6.1     |
+|        800,000        |     siku 7.0     |
 
 </TableContainer>
 
-Kama unavyoona, hii hupungua kasi kadiri wathibitishaji wengi wanavyokuwa kwenye mtandao. Ongezeko la nafasi zilizokosekana linaweza kupunguza kasi hii kwa uwiano, lakini kwa ujumla hii itawakilisha upande wa polepole wa matokeo yanayowezekana.
+Kama unavyoona hii inapungua kasi kadiri wathibitishaji wengi wanavyokuwa kwenye mtandao. Ongezeko la nafasi zilizokosa linaweza kupunguza kasi hii kwa uwiano, lakini hii kwa ujumla itawakilisha upande wa polepole wa matokeo yanayowezekana.
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
 <ExpandableCard
-title="Mara tu nitakapotoa anwani ya uondoaji, naweza kuibadilisha na anwani mbadala ya uondoaji?"
+title="Pindi ninapotoa anwani ya utoaji, je, ninaweza kuibadilisha kuwa anwani mbadala ya utoaji?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
-Hapana, mchakato wa kutoa stakabadhi za uondoaji ni wa mara moja tu, na hauwezi kubadilishwa baada ya kuwasilishwa.
+Hapana, mchakato wa kutoa vitambulisho vya utoaji ni mchakato wa mara moja, na hauwezi kubadilishwa pindi unapowasilishwa.
 </ExpandableCard>
 
 <ExpandableCard
-title="Kwa nini anwani ya uondoaji inaweza kuwekwa mara moja tu?"
+title="Kwa nini anwani ya utoaji inaweza kuwekwa mara moja tu?"
 eventCategory="FAQ"
 eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
-Kwa kuweka anwani ya uondoaji ya safu ya utekelezaji, stakabadhi za uondoaji za mthibitishaji huyo hubadilishwa kabisa. Hii inamaanisha stakabadhi za zamani hazitafanya kazi tena, na stakabadhi mpya zinaelekeza kwenye akaunti ya safu ya utekelezaji.
+Kwa kuweka anwani ya utoaji ya safu ya utekelezaji, vitambulisho vya utoaji kwa mthibitishaji huyo vimebadilishwa kabisa. Hii inamaanisha vitambulisho vya zamani havitafanya kazi tena, na vitambulisho vipya vinaelekeza kwenye akaunti ya safu ya utekelezaji.
 
-Anwani za uondoaji zinaweza kuwa mkataba-erevu (unadhibitiwa na msimbo wake), au akaunti inayomilikiwa nje (EOA, inayodhibitiwa na ufunguo wake binafsi). Kwa sasa akaunti hizi hazina njia ya kuwasiliana na ujumbe kurudi kwenye safu ya makubaliano ambayo ingeashiria mabadiliko ya stakabadhi za mthibitishaji, na kuongeza utendaji huu kungeongeza ugumu usio wa lazima kwenye itifaki.
+Anwani za utoaji zinaweza kuwa mkataba mahiri (unaodhibitiwa na msimbo wake), au akaunti ya nje inayomilikiwa (EOA, inayodhibitiwa na ufunguo wake binafsi). Kwa sasa akaunti hizi hazina njia ya kuwasilisha ujumbe kurudi kwenye safu ya makubaliano ambao ungeashiria mabadiliko ya vitambulisho vya mthibitishaji, na kuongeza utendaji huu kungeongeza utata usio wa lazima kwenye itifaki.
 
-Kama mbadala wa kubadilisha anwani ya uondoaji kwa mthibitishaji fulani, watumiaji wanaweza kuchagua kuweka mkataba-erevu kama anwani yao ya uondoaji ambayo inaweza kushughulikia uzungushaji wa funguo, kama vile Safe. Watumiaji wanaoweka fedha zao kwenye EOA zao wenyewe wanaweza kutoka kikamilifu ili kutoa fedha zao zote zilizowekwa hisa, na kisha kuweka hisa tena kwa kutumia stakabadhi mpya.
+Kama mbadala wa kubadilisha anwani ya utoaji kwa mthibitishaji fulani, watumiaji wanaweza kuchagua kuweka mkataba mahiri kama anwani yao ya utoaji ambao unaweza kushughulikia mzunguko wa funguo, kama vile Safe. Watumiaji wanaoweka fedha zao kwenye EOA yao wenyewe wanaweza kufanya kujiondoa kamili ili kutoa fedha zao zote walizoweka dhamana, na kisha kuweka dhamana tena wakitumia vitambulisho vipya.
 </ExpandableCard>
 
 <ExpandableCard
-title="Vipi nikishiriki kwenye staking ya tokeni au staking ya pamoja?"
+title="Vipi ikiwa ninashiriki katika tokeni za kuweka dhamana au kuweka dhamana kwa pamoja"
 eventCategory="FAQ"
 eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Ikiwa wewe ni sehemu ya [bwawa la staking](/staking/pools/) au unamiliki tokeni za staking, unapaswa kuwasiliana na mtoa huduma wako kwa maelezo zaidi kuhusu jinsi uondoaji wa staking unavyoshughulikiwa, kwani kila huduma hufanya kazi tofauti.
+Ikiwa wewe ni sehemu ya [bwawa la kushikiria dhamana](/staking/pools/) au unashikilia tokeni za kuweka dhamana, unapaswa kuwasiliana na mtoa huduma wako kwa maelezo zaidi kuhusu jinsi utoaji wa kuweka dhamana unavyoshughulikiwa, kwani kila huduma inafanya kazi tofauti.
 
-Kwa ujumla, watumiaji wanapaswa kuwa huru kudai ETH yao ya msingi iliyowekwa hisa, au kubadilisha mtoa huduma wa staking wanayemtumia. Ikiwa bwawa fulani linakuwa kubwa sana, fedha zinaweza kutolewa, kukombolewa, na kuwekwa hisa tena na <a href="https://rated.network/">mtoa huduma mdogo</a>. Au, ikiwa umekusanya ETH ya kutosha unaweza [kuweka hisa kutoka nyumbani](/staking/solo/).
+Kwa ujumla, watumiaji wanapaswa kuwa huru kurejesha ETH yao ya msingi waliyoweka dhamana, au kubadilisha mtoa huduma wa kuweka dhamana wanayemtumia. Ikiwa bwawa fulani linakuwa kubwa sana, fedha zinaweza kutolewa, kukombolewa, na kuwekwa dhamana tena na [mtoa huduma mdogo](https://rated.network/). Au, ikiwa umekusanya ETH ya kutosha unaweza [kuweka dhamana ukiwa nyumbani](/staking/solo/).
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Je, malipo ya zawadi (uondoaji kiasi) hufanyika kiotomatiki?"
+title="Je, malipo ya zawadi (utoaji wa kiasi fulani) hufanyika kiotomatiki?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Ndiyo, mradi tu mthibitishaji wako ametoa anwani ya uondoaji. Hii lazima itolewe mara moja ili kuwezesha uondoaji wowote, kisha malipo ya zawadi yataanzishwa kiotomatiki kila baada ya siku chache kwa kila ufagiaji wa mthibitishaji.
+Kwa **wathibitishaji wa zamani (Aina ya 1)**, ndiyo — mradi tu mthibitishaji wako ametoa anwani ya utoaji. Hii lazima itolewe mara moja ili kuwezesha utoaji wowote mwanzoni, kisha malipo ya zawadi yataanzishwa kiotomatiki kila baada ya siku chache kwa kila ufagiaji wa mthibitishaji.
+
+Kwa **wathibitishaji wanaojumuisha (Aina ya 2)**, zawadi hujumuishwa kwenye salio tendaji badala ya kufagiliwa. Ufagiaji wa kiotomatiki hutokea tu kwa salio linalozidi 2048 ETH. Ili kutoa zawadi chini ya kizingiti hiki, lazima uanzishe utoaji wa kiasi fulani kwa mikono kutoka kwenye safu ya utekelezaji.
 </ExpandableCard>
 
 <ExpandableCard
-title="Je, uondoaji kamili hufanyika kiotomatiki?"
+title="Je, utoaji kamili hufanyika kiotomatiki?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
 
-Hapana, ikiwa mthibitishaji wako bado anafanya kazi kwenye mtandao, uondoaji kamili hautafanyika kiotomatiki. Hii inahitaji kuanzisha mwenyewe kujiondoa kwa hiari.
+Hapana, ikiwa mthibitishaji wako bado anafanya kazi kwenye mtandao, utoaji kamili hautafanyika kiotomatiki. Hili linahitaji kuanzisha kujiondoa kwa hiari kwa mikono.
 
-Mara tu mthibitishaji anapokamilisha mchakato wa kutoka, na kwa kuchukulia kuwa akaunti ina stakabadhi za uondoaji, salio lililobaki <em>litatolewa</em> wakati wa <a href="#validator-sweeping">ufagiaji wa mthibitishaji</a> unaofuata.
+Pindi mthibitishaji anapokamilisha mchakato wa kujiondoa, na ikizingatiwa akaunti ina vitambulisho vya utoaji, salio lililosalia _kisha_ litatolewa wakati wa <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "FAQ happen automatically (sweep)", eventName: "click" }}>ufagiaji wa mthibitishaji</a> unaofuata.
+
 </ExpandableCard>
 
-<ExpandableCard title="Je, naweza kutoa kiasi maalum?"
+<ExpandableCard title="Je, ninaweza kutoa kiasi maalum?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
-Uondoaji umeundwa kusukumwa kiotomatiki, ukihamisha ETH yoyote ambayo haichangii kikamilifu kwenye hisa. Hii inajumuisha salio kamili kwa akaunti ambazo zimekamilisha mchakato wa kutoka.
+Kwa **wathibitishaji wa zamani (Aina ya 1)**, utoaji unasukumwa kiotomatiki, ukihamisha ETH yoyote ambayo haichangii kikamilifu kwenye dhamana. Hii inajumuisha salio kamili kwa akaunti ambazo zimekamilisha mchakato wa kujiondoa. Haiwezekani kuomba kwa mikono kiasi maalum cha ETH kutolewa kwa wathibitishaji wa Aina ya 1.
 
-Haiwezekani kuomba mwenyewe kiasi maalum cha ETH kitolewe.
+**Wathibitishaji wanaojumuisha (Aina ya 2)** wanaweza kuanzisha utoaji wa kiasi fulani cha kiasi maalum kutoka kwenye safu ya utekelezaji, mradi tu salio lililosalia linabaki kuwa 32 ETH au zaidi. Hili linahitaji muamala na linagharimu gesi.
 </ExpandableCard>
 
 <ExpandableCard
-title="Ninaendesha mthibitishaji. Ninaweza kupata wapi habari zaidi juu ya kuwezesha uondoaji?"
+title="Ninaendesha mthibitishaji. Ninaweza kupata wapi maelezo zaidi kuhusu kuwezesha utoaji?"
 eventCategory="FAQ"
-eventAction="I operate a validator. Ninaweza kupata wapi habari zaidi juu ya kuwezesha uondoaji?"
+eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Waendeshaji wa vithibitishaji wanapendekezwa kutembelea ukurasa wa <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> ambapo utapata maelezo zaidi kuhusu jinsi ya kuandaa mthibitishaji wako kwa ajili ya uondoaji, muda wa matukio, na maelezo zaidi kuhusu jinsi uondoaji unavyofanya kazi.
+Waendeshaji wa wathibitishaji wanapendekezwa kutembelea ukurasa wa [Utoaji wa Staking Launchpad](https://launchpad.ethereum.org/withdrawals/) ambapo utapata maelezo zaidi kuhusu jinsi ya kuandaa mthibitishaji wako kwa utoaji, muda wa matukio, na maelezo zaidi kuhusu jinsi utoaji unavyofanya kazi.
 
-Ili kujaribu usanidi wako kwenye testnet kwanza, tembelea <a href="https://hoodi.launchpad.ethereum.org">Hoodi Testnet Staking Launchpad</a> ili kuanza.
+Ili kujaribu usanidi wako kwenye testnet kwanza, tembelea [Hoodi Testnet Staking Launchpad](https://hoodi.launchpad.ethereum.org) ili kuanza.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Je, naweza kuamilisha tena mthibitishaji wangu baada ya kutoka kwa kuweka ETH zaidi?"
+title="Je, ninaweza kuwezesha tena mthibitishaji wangu baada ya kujiondoa kwa kuweka ETH zaidi?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-Hapana. Mara tu mthibitishaji anapotoka na salio lake lote limetolewa, fedha zozote za ziada zilizowekwa kwa mthibitishaji huyo zitahamishiwa kiotomatiki kwenye anwani ya uondoaji wakati wa ufagiaji wa mthibitishaji unaofuata. Ili kuweka hisa tena ETH, mthibitishaji mpya lazima aamilishwe.
+Hapana. Pindi mthibitishaji anapojiondoa na salio lake kamili kutolewa, fedha zozote za ziada zinazowekwa kwa mthibitishaji huyo zitahamishwa kiotomatiki kwenye anwani ya utoaji wakati wa ufagiaji wa mthibitishaji unaofuata. Ili kuweka dhamana ya ETH tena, mthibitishaji mpya lazima awezeshwe.
 </ExpandableCard>
 
-## Masomo zaidi {#further-reading}
+<ExpandableCard
+title="Kuna tofauti gani kati ya wathibitishaji wa zamani na wanaojumuisha?"
+eventCategory="FAQ"
+eventAction="What is the difference between legacy and compounding validators?"
+eventName="read more">
+Wathibitishaji wa zamani hutumia vitambulisho vya utoaji vya **Aina ya 1** na wana salio tendaji lililowekewa kikomo cha 32 ETH. Ziada yoyote hufagiliwa kiotomatiki kwenye anwani ya utoaji kila baada ya siku chache.
 
-- [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
-- [EIP-4895: Uondoaji wa kushinikiza wa Mnyororo Kioleza kama operesheni](https://eips.ethereum.org/EIPS/eip-4895)
-- [PEEPanEIP #94: Uondoaji wa ETH Iliyowekwa Hisa (Majaribio) na Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Uondoaji wa kushinikiza wa Mnyororo Kioleza kama operesheni na Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
-- [Kuelewa Salio Halisi la Mthibitishaji](https://www.attestant.io/posts/understanding-validator-effective-balance/)
+Wathibitishaji wanaojumuisha hutumia vitambulisho vya utoaji vya **Aina ya 2** na wanaweza kuwa na salio tendaji hadi 2048 ETH. Zawadi hujumuishwa kwenye salio lao tendaji, na kuongeza uzito wa mthibitishaji kwenye mtandao na zawadi za baadaye. Ufagiaji wa kiotomatiki hutokea tu kwa salio linalozidi 2048 ETH. Ili kutoa chini ya kizingiti hiki, utoaji wa kiasi fulani kwa mikono lazima uanzishwe kutoka kwenye safu ya utekelezaji.
+
+Kwa maelezo zaidi, tazama [uchambuzi wa kina wa MaxEB](/roadmap/pectra/maxeb/).
+</ExpandableCard>
+
+<ExpandableCard
+title="Ninabadilishaje kuwa mthibitishaji anayejumuisha?"
+eventCategory="FAQ"
+eventAction="How do I convert to a compounding validator?"
+eventName="read more">
+Unaweza kubadilisha kutoka vitambulisho vya utoaji vya Aina ya 1 hadi Aina ya 2 ukitumia [Staking Launchpad](https://launchpad.ethereum.org/validator-actions). Operesheni hii **haiwezi kutenguliwa** — pindi unapobadilisha, huwezi kurudi kwenye vitambulisho vya Aina ya 1.
+
+Baada ya kubadilisha, unaweza pia **kuunganisha** wathibitishaji wengi kuwa mmoja, ukichanganya salio lao kuwa mthibitishaji mmoja anayejumuisha. Kwa mwongozo kamili wa mchakato wa ubadilishaji, hatari, na zana za uunganishaji, tazama [uchambuzi wa kina wa MaxEB](/roadmap/pectra/maxeb/).
+</ExpandableCard>
+
+## Usomaji zaidi {#further-reading}
+
+- [Utoaji wa Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
+- [Vitendo vya Mthibitishaji vya Staking Launchpad](https://launchpad.ethereum.org/validator-actions)
+- [Uchambuzi wa kina wa MaxEB: ujumuishaji na uunganishaji](/roadmap/pectra/maxeb/)
+- [EIP-4895: Utoaji wa kusukuma wa roro wa beacon kama operesheni](https://eips.ethereum.org/EIPS/eip-4895)
+- [PEEPanEIP #94: Utoaji wa ETH Iliyowekwa Dhamana (Majaribio) na Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
+- [PEEPanEIP#68: EIP-4895: Utoaji wa kusukuma wa roro wa beacon kama operesheni na Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [Kuelewa Salio Tendaji la Mthibitishaji](https://www.attestant.io/posts/understanding-validator-effective-balance/)
