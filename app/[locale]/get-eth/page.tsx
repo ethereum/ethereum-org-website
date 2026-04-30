@@ -86,7 +86,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       alt: "",
     },
     {
-      title: "Bancor",
+      title: "Carbon DeFi",
       link: "https://www.carbondefi.xyz/",
       image: bancor,
       alt: "",
