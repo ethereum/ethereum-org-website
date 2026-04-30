@@ -21,10 +21,6 @@ const FindWalletProductTable = ({ wallets }: { wallets: WalletRow[] }) => {
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
 
-  if (!Array.isArray(wallets)) {
-    return <div>Error loading wallets</div>
-  }
-
   return (
     <ProductTable<WalletRow>
       data={wallets}

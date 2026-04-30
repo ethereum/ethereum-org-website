@@ -43,7 +43,7 @@ const Row = memo(function Row({
       <summary className="cursor-pointer list-none p-4 focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover [&::-webkit-details-marker]:hidden">
         <WalletInfo wallet={wallet} />
       </summary>
-      <div className="p-4">{children}</div>
+      {open && <div className="p-4">{children}</div>}
     </details>
   )
 })

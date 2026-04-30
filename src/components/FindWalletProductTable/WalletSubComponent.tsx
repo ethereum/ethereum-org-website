@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { Globe, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
@@ -16,7 +15,6 @@ import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { getLocaleFormattedDate } from "@/lib/utils/date"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -55,15 +53,6 @@ const WalletSubComponent = ({
     locale as Lang,
     wallet.last_updated
   )
-
-  useEffect(() => {
-    trackCustomEvent({
-      eventCategory: "WalletMoreInfo",
-      eventAction: "More info wallet",
-      eventName: `More info ${wallet.name}`,
-    })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   return (
     <div className="flex flex-row gap-2">
