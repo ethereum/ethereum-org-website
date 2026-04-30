@@ -1,10 +1,10 @@
 ---
-title: Wypłaty ze stakingu
-description: Strona podsumowująca, czym są wypłaty ze stakingu typu push, jak działają i co stakujący muszą zrobić, aby otrzymać swoje nagrody
+title: "Wypłaty ze stakingu"
+description: "Strona podsumowująca, czym są wypłaty ze stakingu typu push, jak działają i co stakujący muszą zrobić, aby otrzymać swoje nagrody"
 lang: pl
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Nosorożec Leslie ze swoimi nagrodami za staking
+alt: "Nosorożec Leslie ze swoimi nagrodami za staking"
 sidebarDepth: 2
 summaryPoints:
   - Operatorzy walidatorów muszą podać adres wypłaty, aby umożliwić wypłaty

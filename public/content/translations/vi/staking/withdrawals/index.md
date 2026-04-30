@@ -1,10 +1,10 @@
 ---
-title: Rút tiền đặt cọc
-description: Trang tóm tắt về việc rút tiền đặt cọc là gì, cách thức hoạt động và những gì người đặt cọc cần làm để nhận phần thưởng của họ
+title: "Rút tiền đặt cọc"
+description: "Trang tóm tắt về việc rút tiền đặt cọc là gì, cách thức hoạt động và những gì người đặt cọc cần làm để nhận phần thưởng của họ"
 lang: vi
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Tê giác Leslie với phần thưởng đặt cọc của cô ấy
+alt: "Tê giác Leslie với phần thưởng đặt cọc của cô ấy"
 sidebarDepth: 2
 summaryPoints:
   - Người vận hành trình xác thực phải cung cấp địa chỉ rút tiền để cho phép rút tiền

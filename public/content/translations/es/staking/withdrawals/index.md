@@ -1,6 +1,6 @@
 ---
 title: Retiros de staking
-description: Página que resume qué son los retiros automáticos (push) de staking, cómo funcionan y qué deben hacer los participantes para obtener sus recompensas
+description: "Página que resume qué son los retiros automáticos (push) de staking, cómo funcionan y qué deben hacer los participantes para obtener sus recompensas"
 lang: es
 template: staking
 image: /images/staking/leslie-withdrawal.png

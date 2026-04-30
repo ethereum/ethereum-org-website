@@ -1,10 +1,10 @@
 ---
 title: Retraits de staking
-description: Page résumant ce que sont les retraits de staking, comment ils fonctionnent et ce que les stakers doivent faire pour obtenir leurs récompenses
+description: "Page résumant ce que sont les retraits de staking, comment ils fonctionnent et ce que les stakers doivent faire pour obtenir leurs récompenses"
 lang: fr
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Leslie le rhinocéros avec ses récompenses de staking
+alt: "Leslie le rhinocéros avec ses récompenses de staking"
 sidebarDepth: 2
 summaryPoints:
   - Les opérateurs de validateurs doivent fournir une adresse de retrait pour activer les retraits

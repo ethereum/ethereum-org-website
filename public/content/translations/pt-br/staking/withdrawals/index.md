@@ -1,6 +1,6 @@
 ---
 title: Saques de staking
-description: Página que resume o que são os saques automáticos (push) de staking, como funcionam e o que os stakers precisam fazer para obter suas recompensas
+description: "Página que resume o que são os saques automáticos (push) de staking, como funcionam e o que os stakers precisam fazer para obter suas recompensas"
 lang: pt-br
 template: staking
 image: /images/staking/leslie-withdrawal.png

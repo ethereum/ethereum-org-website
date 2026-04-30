@@ -1,10 +1,10 @@
 ---
-title: Staking çekimleri
-description: Staking push çekimlerinin ne olduğunu, nasıl çalıştığını ve staker'ların ödüllerini almak için ne yapmaları gerektiğini özetleyen sayfa
+title: "Staking çekimleri"
+description: "Staking push çekimlerinin ne olduğunu, nasıl çalıştığını ve staker'ların ödüllerini almak için ne yapmaları gerektiğini özetleyen sayfa"
 lang: tr
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Staking ödülleriyle gergedan Leslie
+alt: "Staking ödülleriyle gergedan Leslie"
 sidebarDepth: 2
 summaryPoints:
   - Doğrulayıcı operatörleri, çekimleri etkinleştirmek için bir çekim adresi sağlamalıdır

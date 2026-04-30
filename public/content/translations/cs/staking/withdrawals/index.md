@@ -1,10 +1,10 @@
 ---
-title: Výběry ze stakingu
-description: Stránka shrnující, co jsou push výběry ze stakingu, jak fungují a co musí stakeři udělat, aby získali své odměny
+title: "Výběry ze stakingu"
+description: "Stránka shrnující, co jsou push výběry ze stakingu, jak fungují a co musí stakeři udělat, aby získali své odměny"
 lang: cs
 template: staking
 image: /images/staking/leslie-withdrawal.png
-alt: Nosorožec Leslie se svými odměnami ze stakingu
+alt: "Nosorožec Leslie se svými odměnami ze stakingu"
 sidebarDepth: 2
 summaryPoints:
   - Operátoři validátorů musí poskytnout adresu pro výběr, aby umožnili výběry
