@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/ethereum-staking-withdrawals/index.md",
+  "generatedAt": "2026-04-29T05:32:15.403Z",
+  "rootHash": "b5cf246fa9f3",
+  "tree": {
+    "contentHash": "b367030d075e",
+    "anchorHash": "2960d04a5ebe",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "47d6b26100d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "24ec7cfcba7b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7f8236b8803e"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e67cadb556d6"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "64a601e752dd"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4198f4149a33"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b89edaaeebe5"
+      },
+      "prose:1": {
+        "contentHash": "0dd0373bfa55",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "78dbed6ac092"
+      },
+      "prose:2": {
+        "contentHash": "1ceb1c096756",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-beacon-chain-031": {
+        "contentHash": "6b48f58b44fb",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3b5ac3656b02",
+        "children": {
+          "_label": {
+            "contentHash": "3b5ac3656b02",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ca8964d49903",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "withdrawals-209": {
+        "contentHash": "c203305ec8ce",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a2106bd82028",
+        "children": {
+          "_label": {
+            "contentHash": "a2106bd82028",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "62f45612a6a4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "mechanics-340": {
+        "contentHash": "eb132678cd4a",
+        "anchorHash": "be8c0df30837",
+        "labelHash": "012c528c9da7",
+        "children": {
+          "_label": {
+            "contentHash": "012c528c9da7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:7": {
+            "contentHash": "5f1e27118ad2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c4dd67368286"
+          },
+          "prose:8": {
+            "contentHash": "7175517a370b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b51c80e50d66"
+          },
+          "prose:9": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c4dd67368286"
+          },
+          "prose:10": {
+            "contentHash": "c356cfbebf9a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b51c80e50d66"
+          },
+          "prose:11": {
+            "contentHash": "790400be81c5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b51c80e50d66"
+          },
+          "prose:12": {
+            "contentHash": "33a2f1bc5f4d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "c4dd67368286"
+          },
+          "prose:13": {
+            "contentHash": "05aa1f78e35a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:6": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b51c80e50d66"
+          },
+          "prose:14": {
+            "contentHash": "c86463038eed",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:7",
+          "inline-code:0",
+          "prose:8",
+          "inline-code:1",
+          "prose:9",
+          "inline-code:2",
+          "prose:10",
+          "inline-code:3",
+          "prose:11",
+          "inline-code:4",
+          "prose:12",
+          "inline-code:5",
+          "prose:13",
+          "inline-code:6",
+          "prose:14"
+        ]
+      },
+      "misconceptions-630": {
+        "contentHash": "afb0015fa7cc",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e3f3125ee993",
+        "children": {
+          "_label": {
+            "contentHash": "e3f3125ee993",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b7658c83492b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "implications-839": {
+        "contentHash": "8fd57352170b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0c3b7ef79fbf",
+        "children": {
+          "_label": {
+            "contentHash": "0c3b7ef79fbf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "41af1b87e4cd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "summary-1001": {
+        "contentHash": "7db205cc7817",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bd3a9c433dae",
+        "children": {
+          "_label": {
+            "contentHash": "bd3a9c433dae",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "57a5e8694683",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "the-beacon-chain-031",
+      "withdrawals-209",
+      "mechanics-340",
+      "misconceptions-630",
+      "implications-839",
+      "summary-1001"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

@@ -86,13 +86,20 @@ test.describe("buildIncrementalPrompt -- per-file-type BiDi rules", () => {
     glossaryTerms: new Map<string, string>(),
   }
 
-  test("RTL markdown prompt instructs span dir=ltr wrapping", () => {
+  test("RTL markdown prompt: span dir=ltr for body, LRI/PDI for frontmatter", () => {
+    // Markdown has a dual policy: body uses <span dir="ltr"> (MDX parses HTML
+    // and the browser honors `dir`), but frontmatter values must use raw
+    // Unicode bidi isolates U+2066 (LRI) / U+2069 (PDI) -- the inner double
+    // quote on a `dir="ltr"` attribute terminates the outer YAML string and
+    // breaks the build.
     const prompt = buildIncrementalPrompt({
       ...baseOptions,
       fileType: "markdown",
     })
     expect(prompt).toContain('<span dir="ltr">')
-    expect(prompt).not.toContain("U+2066")
+    expect(prompt).toContain("U+2066")
+    expect(prompt).toContain("U+2069")
+    expect(prompt).toContain("frontmatter")
   })
 
   test("RTL json prompt instructs raw Unicode bidi isolates and forbids spans", () => {
