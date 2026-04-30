@@ -263,7 +263,7 @@ The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into 
 
 - [More on Ethereum history](/ethereum-forks/)
 - [More on the Ethereum roadmap](/roadmap/)
-  </ExpandableCard>
+</ExpandableCard>
 
 ## Further reading {#further-reading}
 
