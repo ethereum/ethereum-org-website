@@ -20,7 +20,7 @@ export type ExpandableCardProps = {
   children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: React.FC<React.SVGProps<SVGElement>>
+  svg?: ReactNode
   eventAction?: string
   eventCategory?: string
   eventName?: string
@@ -32,7 +32,7 @@ const ExpandableCard = ({
   children,
   contentPreview,
   title,
-  svg: Svg,
+  svg,
   eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
@@ -78,8 +78,8 @@ const ExpandableCard = ({
           >
             <Flex className="w-full flex-col items-center text-left sm:flex-row">
               <VStack className="items-center md:items-start">
-                <HStack className="mt-4 mb-2">
-                  {Svg && <Svg className="mr-6" />}
+                <HStack className="mt-4 mb-2 gap-8">
+                  {svg}
                   <h3 className="text-xl font-semibold">{title}</h3>
                 </HStack>
                 <p className="w-fit text-sm text-body-medium">
