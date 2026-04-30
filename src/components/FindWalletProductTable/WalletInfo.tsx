@@ -61,7 +61,7 @@ const WalletInfo = ({ wallet }: WalletInfoProps) => {
       {/* Open-state stripe (desktop only), sits in the image-column gutter. */}
       <div
         aria-hidden
-        className={`pointer-events-none absolute top-14 -bottom-9 left-7 hidden w-1 -translate-x-1/2 lg:group-[[open]]/collapsible:block ${wallet.twBackgroundColor}`}
+        className={`pointer-events-none absolute inset-s-7 top-16 -bottom-9 hidden w-1 -translate-x-1/2 lg:group-[[open]]/collapsible:block rtl:translate-x-1/2 ${wallet.twBackgroundColor}`}
       />
 
       <div className="flex flex-row items-center justify-between gap-4">
