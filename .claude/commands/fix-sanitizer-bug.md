@@ -6,13 +6,13 @@ argument-hint: [--language=CODE] [--issue="description"] [--file=PATH] [--skip-b
 
 # Fix Sanitizer Bug
 
-Iterative workflow for fixing bugs in the post-import translation sanitizer (`src/scripts/i18n/post_import_sanitize.ts`). Follows a test-first approach: triage the issue, write a failing test, implement the fix, verify across languages.
+Iterative workflow for fixing bugs in the post-import translation sanitizer (`src/scripts/intl-pipeline/intl-sanitizer.ts`). Follows a test-first approach: triage the issue, write a failing test, implement the fix, verify across languages.
 
 ## Context
 - Current branch: !`git branch --show-current`
 - Arguments: $ARGUMENTS
-- Sanitizer: `src/scripts/i18n/post_import_sanitize.ts`
-- Test files: `tests/unit/sanitizer/*.spec.ts`
+- Sanitizer: `src/scripts/intl-pipeline/intl-sanitizer.ts`
+- Test files: `tests/unit/intl-pipeline/sanitizer/*.spec.ts`
 - Research docs: `docs/solutions/integration-issues/`
 
 ## Phase 0: Gather Context
@@ -100,9 +100,9 @@ Examples: "Gas" → "Sprit" (gasoline) in German, tone inconsistency
 
 ### Determine which test file
 
-- Pure function (no English source needed) → `tests/unit/sanitizer/standalone-fixes.spec.ts`
-- Needs English comparison → `tests/unit/sanitizer/english-comparison.spec.ts`
-- End-to-end through processMarkdownFile/processJsonFile → `tests/unit/sanitizer/integration.spec.ts`
+- Pure function (no English source needed) → `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts`
+- Needs English comparison → `tests/unit/intl-pipeline/sanitizer/english-comparison.spec.ts`
+- End-to-end through processMarkdownFile/processJsonFile → `tests/unit/intl-pipeline/sanitizer/integration.spec.ts`
 
 ### Write the test FIRST
 
@@ -141,7 +141,7 @@ Add the new function name to the destructured import from `_testOnly` at the top
 ### Verify test fails
 
 ```bash
-npx playwright test --project=unit tests/unit/sanitizer/{FILE}.spec.ts
+npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/{FILE}.spec.ts
 ```
 
 The new test MUST fail (function doesn't exist yet). Existing tests should still pass.
@@ -165,13 +165,13 @@ test.describe("warnNewIssue", () => {
 })
 ```
 
-Use `tests/unit/sanitizer/warnings.spec.ts` for warn-only functions.
+Use `tests/unit/intl-pipeline/sanitizer/warnings.spec.ts` for warn-only functions.
 
 ## Phase 4: Implement the Fix
 
 ### Write the function in the sanitizer
 
-**File:** `src/scripts/i18n/post_import_sanitize.ts`
+**File:** `src/scripts/intl-pipeline/intl-sanitizer.ts`
 
 **For fix functions** — follow the established pattern:
 
@@ -235,7 +235,7 @@ issues.push(...newWarnings)
 ### Step 1: Unit tests
 
 ```bash
-npx playwright test --project=unit tests/unit/sanitizer/
+npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 ```
 
 **All tests must pass** — both the new test and all existing 99+ tests.
@@ -253,11 +253,11 @@ Determine which files to test from the PR context (e.g., `gaming/index.md`). The
 ```bash
 # If TARGET_FILES env var is supported:
 TARGET_FILES="public/content/translations/{LANGUAGE}/{PAGE_PATH}" \
-  npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/post_import_sanitize.ts
+  npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
 
 # If not, write a quick inline node script that calls processMarkdownFile directly:
 node -e '
-const { _testOnly } = require("./src/scripts/i18n/post_import_sanitize");
+const { _testOnly } = require("./src/scripts/intl-pipeline/intl-sanitizer");
 const fs = require("fs");
 const file = "public/content/translations/{LANGUAGE}/{PAGE_PATH}";
 const content = fs.readFileSync(file, "utf8");
@@ -303,7 +303,7 @@ Test the same page in 2-3 other languages to check for false positives. **NEVER 
 # Test the same page path in a few other languages
 for lang in es tr ja; do
   node -e "
-    const { _testOnly } = require('./src/scripts/i18n/post_import_sanitize');
+    const { _testOnly } = require('./src/scripts/intl-pipeline/intl-sanitizer');
     const fs = require('fs');
     const file = 'public/content/translations/$lang/{PAGE_PATH}';
     if (!fs.existsSync(file)) { console.log('$lang: file not found, skipping'); process.exit(0); }
@@ -376,8 +376,8 @@ Display to user:
 **Tests:** {N} new tests added, {TOTAL} total passing
 **Languages verified:** {LANGUAGES_CHECKED}
 **Files changed:**
-  - src/scripts/i18n/post_import_sanitize.ts (fix + export)
-  - tests/unit/sanitizer/{FILE}.spec.ts (new tests)
+  - src/scripts/intl-pipeline/intl-sanitizer.ts (fix + export)
+  - tests/unit/intl-pipeline/sanitizer/{FILE}.spec.ts (new tests)
   - docs/solutions/integration-issues/sanitizer-test-research.md (documentation)
 ```
 
@@ -385,22 +385,22 @@ Display to user:
 
 ### Run all sanitizer tests
 ```bash
-npx playwright test --project=unit tests/unit/sanitizer/
+npx playwright test --project=unit tests/unit/intl-pipeline/sanitizer/
 ```
 
 ### Run sanitizer against a language
 ```bash
-TARGET_LANGUAGES=ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/i18n/post_import_sanitize.ts
+TARGET_LANGUAGES=ja npx ts-node -O '{"module":"commonjs"}' ./src/scripts/intl-pipeline/intl-sanitizer.ts
 ```
 
 ### Key files
 | File | Purpose |
 |------|---------|
-| `src/scripts/i18n/post_import_sanitize.ts` | Sanitizer source (~2100 lines) |
-| `tests/unit/sanitizer/standalone-fixes.spec.ts` | Tests for pure functions |
-| `tests/unit/sanitizer/english-comparison.spec.ts` | Tests needing English source |
-| `tests/unit/sanitizer/warnings.spec.ts` | Tests for warn-only functions |
-| `tests/unit/sanitizer/integration.spec.ts` | End-to-end tests |
+| `src/scripts/intl-pipeline/intl-sanitizer.ts` | Sanitizer source (~2100 lines) |
+| `tests/unit/intl-pipeline/sanitizer/standalone-fixes.spec.ts` | Tests for pure functions |
+| `tests/unit/intl-pipeline/sanitizer/english-comparison.spec.ts` | Tests needing English source |
+| `tests/unit/intl-pipeline/sanitizer/warnings.spec.ts` | Tests for warn-only functions |
+| `tests/unit/intl-pipeline/sanitizer/integration.spec.ts` | End-to-end tests |
 | `docs/solutions/integration-issues/sanitizer-test-research.md` | Pattern catalog |
 
 ### Code block awareness pattern

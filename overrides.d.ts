@@ -8,16 +8,3 @@ declare module "*.mp4" {
   const src: string
   export default src
 }
-
-declare module "*/.all-contributorsrc" {
-  const content: {
-    contributors: Array<{
-      login: string
-      name: string
-      avatar_url: string
-      profile?: string
-      contributions: Array<string>
-    }>
-  }
-  export default content
-}

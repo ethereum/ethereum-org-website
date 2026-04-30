@@ -30,7 +30,9 @@ export class FindWalletPage extends BasePage {
     this.mobileFiltersSubmitButton = page.getByTestId(
       "mobile-filters-submit-button"
     )
-    this.walletRows = page.getByTestId("wallet-list").locator(":scope > div")
+    this.walletRows = page
+      .getByTestId("wallet-list")
+      .locator(":scope > details")
     this.rowCounter = page.getByText(/Showing all wallets \(\d+\)/i)
   }
 

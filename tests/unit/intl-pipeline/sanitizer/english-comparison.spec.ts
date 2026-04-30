@@ -1381,4 +1381,205 @@ test.describe("English Comparison Fixes", () => {
       expect(fixCount).toBe(3)
     })
   })
+
+  test.describe("syncHeaderIdsWithEnglish -- HTML tags inside {#...}", () => {
+    // Doc's mandate: heading IDs are deterministically copied from English.
+    // No editing of the {#id} block is permitted. The pipeline emits
+    // <span dir="ltr"> tags inside slugs for RTL locales, which violates
+    // markdownlint's custom-id rule and breaks anchor links. The sync must
+    // strip embedded tags and replace the slug with the English ASCII ID.
+    test("strips HTML tags injected inside heading-ID anchors (Urdu RTL)", () => {
+      const english = [
+        "## Intro {#introduction}",
+        "",
+        "Body.",
+        "",
+        "#### The evolving role of L2s (6:14) {#the-evolving-role-of-l2s-614}",
+      ].join("\n")
+      const translated = [
+        "## تعارف {#introduction}",
+        "",
+        "Body.",
+        "",
+        '#### لیئر ۲ (<span dir="ltr">l2s</span>) کا کردار (<span dir="ltr">6:14</span>) {#the-evolving-role-of-l<span dir="ltr">2s</span>-614}',
+      ].join("\n")
+      const result = syncHeaderIdsWithEnglish(translated, english)
+      expect(result).toContain("{#the-evolving-role-of-l2s-614}")
+      expect(result).not.toMatch(/\{#[^}]*<span/)
+    })
+
+    test("handles span tags wrapping a hyphenated slug fragment", () => {
+      const english =
+        "#### Decentralization and Layer 2 (6:55) {#decentralization-and-layer-2s-655}"
+      const translated =
+        '#### لامرکزیت اور لیئر ۲ (l2) (<span dir="ltr">6:55</span>) {#decentralization-and-layer<span dir="ltr">-2s</span>-655}'
+      const result = syncHeaderIdsWithEnglish(translated, english)
+      expect(result).toContain("{#decentralization-and-layer-2s-655}")
+      expect(result).not.toMatch(/\{#[^}]*<span/)
+    })
+  })
+
+  test.describe("syncProtectedFrontmatterFields -- video locked fields", () => {
+    // Per Doc's spec for /videos frontmatter:
+    //   TRANSLATE: title, description, breadcrumb
+    //   COPY FROM ENGLISH: uploadDate, duration, educationLevel,
+    //                       youtubeId, format, topic
+    //   FROM PATH: lang
+    //   PER-LOCALE RULE: author (transliteration locales handle separately)
+
+    test("restores translated uploadDate, duration, educationLevel from English", () => {
+      const english = [
+        "---",
+        'title: "Video"',
+        "uploadDate: 2025-01-15",
+        'duration: "1:08:42"',
+        "educationLevel: intermediate",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        'title: "ویڈیو"',
+        "uploadDate: 15-01-2025",
+        'duration: "ایک گھنٹہ"',
+        "educationLevel: درمیانی",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ur"
+      )
+      expect(content).toContain("uploadDate: 2025-01-15")
+      expect(content).toContain('duration: "1:08:42"')
+      expect(content).toContain("educationLevel: intermediate")
+      // Title (translatable) MUST be preserved
+      expect(content).toContain('title: "ویڈیو"')
+      expect(fixCount).toBe(3)
+    })
+
+    test("restores translated youtubeId and format from English", () => {
+      const english = [
+        "---",
+        'title: "X"',
+        'youtubeId: "ZCsOMxnIruA"',
+        "format: interview",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        'title: "X"',
+        'youtubeId: "وائی-ٹیوب-آئی-ڈی"',
+        "format: انٹرویو",
+        "---",
+      ].join("\n")
+      const { content, fixCount } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ur"
+      )
+      expect(content).toContain('youtubeId: "ZCsOMxnIruA"')
+      expect(content).toContain("format: interview")
+      expect(fixCount).toBe(2)
+    })
+
+    test("copies multi-line topic array verbatim from English (Tamil regression)", () => {
+      const english = [
+        "---",
+        'title: "X"',
+        "topic:",
+        '  - "scaling"',
+        '  - "blobs"',
+        '  - "dencun"',
+        '  - "upgrades"',
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        'title: "X"',
+        "topic:",
+        '  - "அளவிடுதல்"',
+        '  - "தரவுத் திரளைகள்"',
+        '  - "dencun"',
+        '  - "மேம்படுத்தல்கள்"',
+        "---",
+      ].join("\n")
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ta"
+      )
+      expect(content).toContain('  - "scaling"')
+      expect(content).toContain('  - "blobs"')
+      expect(content).toContain('  - "dencun"')
+      expect(content).toContain('  - "upgrades"')
+      expect(content).not.toContain("அளவிடுதல்")
+    })
+
+    test("copies inline topic array verbatim from English", () => {
+      const english = [
+        "---",
+        'title: "X"',
+        'topic: ["use-cases", "ai", "agents"]',
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        'title: "X"',
+        'topic: ["استعمال کے کیسز", "مصنوعی ذہانت", "ایجنٹس"]',
+        "---",
+      ].join("\n")
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ur"
+      )
+      expect(content).toContain('topic: ["use-cases", "ai", "agents"]')
+    })
+
+    test("leaves topic untouched when translation already matches English", () => {
+      const english = [
+        "---",
+        "topic:",
+        '  - "scaling"',
+        '  - "blobs"',
+        "---",
+      ].join("\n")
+      const translated = english
+      const { content, fixCount } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ta"
+      )
+      expect(content).toBe(translated)
+      expect(fixCount).toBe(0)
+    })
+
+    test("preserves translatable title/description/breadcrumb", () => {
+      const english = [
+        "---",
+        'title: "Pectra"',
+        'description: "Pectra overview"',
+        'breadcrumb: "Pectra"',
+        "uploadDate: 2024-02-27",
+        "---",
+      ].join("\n")
+      const translated = [
+        "---",
+        'title: "پیکٹرا"',
+        'description: "پیکٹرا کا جائزہ"',
+        'breadcrumb: "پیکٹرا"',
+        "uploadDate: 27-02-2024",
+        "---",
+      ].join("\n")
+      const { content } = syncProtectedFrontmatterFields(
+        translated,
+        english,
+        "ur"
+      )
+      expect(content).toContain('title: "پیکٹرا"')
+      expect(content).toContain('description: "پیکٹرا کا جائزہ"')
+      expect(content).toContain('breadcrumb: "پیکٹرا"')
+      expect(content).toContain("uploadDate: 2024-02-27")
+    })
+  })
 })
