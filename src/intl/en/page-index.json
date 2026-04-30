@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "custody promise",
   "page-index-features-ownership-description-2": "Your Ethereum balance is true ownership.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "Daily trading volume",
+  "page-index-features-ownership-stat-label": "Daily trading volume (USD)",
   "page-index-features-public-rules-title": "Public rules",
   "page-index-features-public-rules-description": "The code is public, agreements execute exactly as written. Think vending machine versus hoping the cashier gives correct change.",
   "page-index-features-global-title": "Global",
