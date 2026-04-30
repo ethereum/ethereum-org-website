@@ -78,7 +78,7 @@
     "humanize-duration": "^3.33.1",
     "i18n-iso-countries": "^7.14.0",
     "lodash": "^4.18.1",
-    "lucide-react": "^0.516.0",
+    "lucide-react": "^1.12.0",
     "motion": "^12.36.0",
     "next": "^16.2.3",
     "next-intl": "^4.9.1",
