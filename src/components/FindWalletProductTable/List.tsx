@@ -5,7 +5,7 @@ import type { WalletRow } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import WalletInfo from "../FindWalletProductTable/WalletInfo"
+import WalletInfo from "./WalletInfo"
 
 type RowProps = {
   wallet: WalletRow
@@ -40,7 +40,7 @@ const Row = memo(function Row({
         !visible && "hidden"
       )}
     >
-      <summary className="cursor-pointer list-none p-4 focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover [&::-webkit-details-marker]:hidden">
+      <summary className="cursor-pointer list-none p-4 focus-visible:outline focus-visible:-outline-offset-1 focus-visible:outline-primary-hover [&::-webkit-details-marker]:hidden">
         <WalletInfo wallet={wallet} />
       </summary>
       {open && <div className="p-4">{children}</div>}

@@ -9,9 +9,8 @@ import ProductTable from "@/components/ProductTable"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { filterFn } from "@/lib/utils/wallets"
 
-import List from "../ProductTable/List"
-
 import FindWalletsNoResults from "./FindWalletsNoResults"
+import List from "./List"
 import WalletSubComponent from "./WalletSubComponent"
 
 import { useTranslation } from "@/hooks/useTranslation"
