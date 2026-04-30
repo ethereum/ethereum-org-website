@@ -6,17 +6,12 @@ import {
   useMemo,
   useState,
 } from "react"
-import { useSearchParams } from "next/navigation"
 
 import type { FilterOption, TPresetFilters } from "@/lib/types"
 
 import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
-
-import { breakpointAsNumber } from "@/lib/utils/screen"
-
-import MediaQuery from "../MediaQuery"
 
 import { getActiveFiltersCount, parseQueryParams } from "@/lib/product-table"
 
@@ -28,13 +23,17 @@ interface ProductTableProps<T extends { id: string }> {
   onResetFilters?: () => void
   mobileFiltersLabel: string
   children: ({
+    data,
     filteredData,
+    matchedIds,
     filters,
     setMobileFiltersOpen,
     resetFilters,
     activeFiltersCount,
   }: {
+    data: T[]
     filteredData: T[]
+    matchedIds: Set<string>
     filters: FilterOption[]
     setMobileFiltersOpen: (open: boolean) => void
     resetFilters: () => void
@@ -51,14 +50,17 @@ const ProductTable = <T extends { id: string }>({
   mobileFiltersLabel,
   children,
 }: ProductTableProps<T>) => {
-  const searchParams = useSearchParams()
-
   const [filters, setFilters] = useState<FilterOption[]>(initialFilters)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
-  // Update filters based on router query
+  // Hydrate filters from URL params once on mount. Reads window.location.search
+  // directly (not useSearchParams) to avoid Next's CSR bailout on this SSG page.
+  // Re-evaluate this when the page leaves SSG or gains a "share filtered URL"
+  // flow that pushes new params client-side.
   useEffect(() => {
-    const query = Object.fromEntries(searchParams?.entries() ?? [])
+    const query = Object.fromEntries(
+      new URLSearchParams(window.location.search).entries()
+    )
 
     if (Object.keys(query).length > 0) {
       const updatedFilters = filters.map((filter) => ({
@@ -75,12 +77,9 @@ const ProductTable = <T extends { id: string }>({
         })),
       }))
       setFilters(updatedFilters)
-
-      // TODO: Fix this, removed to avoid infinite re-renders
-      // router.replace(pathname, undefined, { shallow: true })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams])
+  }, [])
 
   const updateFilters = useCallback(
     (filters: FilterOption | FilterOption[]) => {
@@ -112,6 +111,13 @@ const ProductTable = <T extends { id: string }>({
   const filteredData = useMemo(() => {
     return filterFn(data, filters)
   }, [data, filters, filterFn])
+
+  // Stable Set of currently-matching IDs. Consumers can render every row
+  // unconditionally and toggle visibility via this Set instead of mounting
+  // and unmounting subtrees on every filter change.
+  const matchedIds = useMemo(() => {
+    return new Set(filteredData.map((item) => item.id))
+  }, [filteredData])
 
   const presetFiltersCounts = useMemo(() => {
     return presetFilters.map((persona) => {
@@ -155,19 +161,19 @@ const ProductTable = <T extends { id: string }>({
               mobileFiltersLabel={mobileFiltersLabel}
             />
           </div>
-          <MediaQuery queries={[`(min-width: ${breakpointAsNumber.lg}px)`]}>
-            <div className="hidden lg:block">
-              <Filters
-                filters={filters}
-                setFilters={updateFilters}
-                resetFilters={resetFilters}
-                activeFiltersCount={activeFiltersCount}
-              />
-            </div>
-          </MediaQuery>
+          <div className="hidden lg:block">
+            <Filters
+              filters={filters}
+              setFilters={updateFilters}
+              resetFilters={resetFilters}
+              activeFiltersCount={activeFiltersCount}
+            />
+          </div>
           <div className="flex-1">
             {children({
+              data,
               filteredData,
+              matchedIds,
               filters,
               setMobileFiltersOpen,
               resetFilters,
