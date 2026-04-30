@@ -13,7 +13,7 @@ const SheetTrigger = SheetPrimitive.Trigger
 const SheetPortal = SheetPrimitive.Portal
 
 const SheetClose = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Close>,
+  React.ComponentRef<typeof SheetPrimitive.Close>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Close>
 >((props, ref) => (
   <SheetPrimitive.Close ref={ref} asChild>
@@ -23,13 +23,13 @@ const SheetClose = React.forwardRef<
 SheetClose.displayName = SheetPrimitive.Close.displayName
 
 const SheetDismiss = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Close>,
+  React.ComponentRef<typeof SheetPrimitive.Close>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Close>
 >(({ ...props }, ref) => <SheetPrimitive.Close ref={ref} asChild {...props} />)
 SheetDismiss.displayName = SheetPrimitive.Close.displayName
 
 const SheetOverlay = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Overlay>,
+  React.ComponentRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
@@ -69,7 +69,7 @@ interface SheetContentProps
 }
 
 const SheetContent = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Content>,
+  React.ComponentRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 >(({ side = "right", hideOverlay = false, className, ...props }, ref) => (
   <SheetPortal>
@@ -115,7 +115,7 @@ const SheetFooter = ({
 SheetFooter.displayName = "SheetFooter"
 
 const SheetTitle = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Title>,
+  React.ComponentRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
@@ -127,7 +127,7 @@ const SheetTitle = React.forwardRef<
 SheetTitle.displayName = SheetPrimitive.Title.displayName
 
 const SheetDescription = React.forwardRef<
-  React.ElementRef<typeof SheetPrimitive.Description>,
+  React.ComponentRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Description
