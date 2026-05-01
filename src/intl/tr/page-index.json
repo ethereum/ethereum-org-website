@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "saklama vaadidir",
   "page-index-features-ownership-description-2": "Ethereum bakiyeniz ise gerçek mülkiyettir.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "Günlük işlem hacmi",
+  "page-index-features-ownership-stat-label": "Günlük işlem hacmi (USD)",
   "page-index-features-public-rules-title": "Açık kurallar",
   "page-index-features-public-rules-description": "Kod herkese açıktır, anlaşmalar tam olarak yazıldığı gibi yürütülür. Kasiyerin doğru para üstü vermesini ummak yerine bir otomat makinesini düşünün.",
   "page-index-features-global-title": "Küresel",
