@@ -246,12 +246,9 @@ See the [GAME SDK documentation](https://docs.game.virtuals.io/) for the current
 
 ## Production guardrails {#production-guardrails}
 
-<Alert variant="info" className="my-8">
-<AlertContent>
-<p className="mt-0"><strong>Required before going to Mainnet</strong></p>
-<p className="mt-2">Regardless of which framework you choose, apply pre-execution simulation, session key spending limits, and application-layer rate limiting before any production deployment. These patterns are documented with full implementation code in <a href="/ai-agents/getting-started/#set-guardrails">Getting started: Set guardrails</a>.</p>
-</AlertContent>
-</Alert>
+Before going to Mainnet, every agent needs pre-execution simulation, session key spending limits, and application-layer rate limiting. These guardrails are framework-agnostic and apply to any production deployment.
+
+[Getting started: Set guardrails](/ai-agents/getting-started/#set-guardrails)
 
 ## Frequently asked questions {#faq}
 
