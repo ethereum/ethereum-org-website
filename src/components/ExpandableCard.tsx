@@ -76,32 +76,33 @@ const ExpandableCard = ({
           <AccordionTrigger
             hideIcon
             onClick={onClick}
-            className="transition-color hover:transition-color w-full cursor-pointer bg-transparent! p-6 text-body! data-[state=open]:text-body! md:p-6"
+            className={cn(
+              "w-full gap-4 p-6 text-start max-sm:flex-col max-sm:items-start max-sm:space-y-4 md:p-6",
+              "transition-color hover:transition-color cursor-pointer bg-transparent! text-body! data-[state=open]:text-body!"
+            )}
           >
-            <div className="flex w-full flex-col items-center gap-4 text-left sm:flex-row">
-              <div className="flex-1 space-y-4">
-                <HStack className="gap-6">
-                  {Svg && <Svg />}
-                  <h3 className="text-xl font-semibold">{title}</h3>
-                </HStack>
-                <p className="w-fit text-sm text-pretty text-body-medium">
-                  {contentPreview}
-                </p>
-              </div>
-              <span className="my-auto text-primary">
-                {t(isVisible ? "less" : "more")}
-              </span>
+            <div className="flex-1 space-y-4">
+              <HStack className="gap-6">
+                {Svg && <Svg />}
+                <h3 className="text-xl font-semibold">{title}</h3>
+              </HStack>
+              <p className="w-fit text-sm text-pretty text-body-medium">
+                {contentPreview}
+              </p>
             </div>
+            <span className="my-auto text-primary">
+              {t(isVisible ? "less" : "more")}
+            </span>
           </AccordionTrigger>
           <AccordionContent
             forceMount={forceMount}
             className={cn(
-              "p-6 pt-0 md:p-6 md:pt-0",
+              "px-6 py-0 text-md md:px-6 md:py-0",
               forceMount &&
                 "in-data-[state=closed]:hidden in-data-[state=closed]:h-0"
             )}
           >
-            <div className="border-t pt-6 text-md text-body">{children}</div>
+            <div className="border-t pt-6">{children}</div>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
