@@ -86,9 +86,11 @@ const ExpandableCard = ({
                 {Svg && <Svg />}
                 <h3 className="text-xl font-semibold">{title}</h3>
               </HStack>
-              <p className="w-fit text-sm text-pretty text-body-medium">
-                {contentPreview}
-              </p>
+              {contentPreview && (
+                <p className="w-fit text-sm text-pretty text-body-medium">
+                  {contentPreview}
+                </p>
+              )}
             </div>
             <span className="my-auto text-primary">
               {t(isVisible ? "less" : "more")}
@@ -97,7 +99,7 @@ const ExpandableCard = ({
           <AccordionContent
             forceMount={forceMount}
             className={cn(
-              "px-6 py-0 text-md md:px-6 md:py-0",
+              "p-6! pt-0! text-md",
               forceMount &&
                 "in-data-[state=closed]:hidden in-data-[state=closed]:h-0"
             )}
