@@ -298,7 +298,8 @@ const SlideContent = ({
           <Image
             src={slide.image}
             alt=""
-            sizes="100vw"
+            sizes="(max-width: 480px) calc(100vw - 32px), 100vw"
+            quality={65}
             className="h-full w-full object-cover"
           />
         </div>
@@ -309,7 +310,8 @@ const SlideContent = ({
             <Image
               src={slide.image}
               alt=""
-              sizes="(max-width: 768px) 100vw, 1200px"
+              sizes="(max-width: 1024px) 384px, 512px"
+              quality={65}
               className="h-full w-full object-cover"
             />
           </div>
