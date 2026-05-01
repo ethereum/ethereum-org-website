@@ -79,7 +79,7 @@
   "page-index-features-ownership-description-custody": "promesa de custodia",
   "page-index-features-ownership-description-2": "Tu saldo de Ethereum es verdadera propiedad.",
   "page-index-features-ownership-stat": "{volume}+",
-  "page-index-features-ownership-stat-label": "Volumen de operaciones diario",
+  "page-index-features-ownership-stat-label": "Volumen de operaciones diario (USD)",
   "page-index-features-public-rules-title": "Reglas públicas",
   "page-index-features-public-rules-description": "El código es público, los acuerdos se ejecutan exactamente como están escritos. Piensa en una máquina expendedora en lugar de esperar que el cajero te dé el cambio correcto.",
   "page-index-features-global-title": "Global",
