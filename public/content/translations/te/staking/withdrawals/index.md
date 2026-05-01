@@ -161,7 +161,7 @@ summaryPoints:
 ## తరచుగా అడిగే ప్రశ్నలు {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="ఒకసారి ఉపసంహరణ చిరునామాను అందించిన తర్వాత, దాన్ని ప్రత్యామ్నాయ ఉపసంహరణ చిరునామాకు మార్చగలనా?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="ధృవీకర్త యొక్క ఉపసంహరణ చిరునామాను ఒకసారి మాత్రమే ఎందుకు సెట్ చేయవచ్చు?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="ప్రొవైడర్, స్టేకింగ్ పూల్ ద్వారా స్టేక్ చేస్తే, లేదా లిక్విడ్ స్టేకింగ్ టోకెన్‌లతో పాల్గొంటే, నేను స్టేకింగ్ నుండి ఎలా ఉపసంహరించుకోవాలి?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="నెట్‌వర్క్ ప్రతిఫలాలను క్లెయిమ్ చేయడం (పాక్షిక ఉపసంహరణలు) స్వయంచాలకంగా జరుగుతుందా?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ eventName="read more">
 **కాంపౌండింగ్ (టైప్ 2) ధృవీకర్తలకు**, ప్రతిఫలాలు ఉపసంహరణ చిరునామాకు స్వీప్ చేయబడటానికి బదులుగా ధృవీకర్త యొక్క ప్రభావవంతమైన నిల్వలో (2048 ETH వరకు) కలుస్తాయి. 2048 ETH కంటే ఎక్కువ ఉన్న నిల్వలకు మాత్రమే స్వయంచాలక స్వీప్‌లు జరుగుతాయి. ఈ పరిమితి కంటే తక్కువ ఉన్న ప్రతిఫలాలను ఉపసంహరించుకోవడానికి, మీరు అమలు పొర నుండి పాక్షిక ఉపసంహరణను మాన్యువల్‌గా ప్రేరేపించాలి.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="నేను నాకు కావలసిన మొత్తాన్ని ఉపసంహరించుకోగలనా?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="నేను ఒక ధృవీకర్తను నిర్వహిస్తున్నాను. ఉపసంహరణ ప్రక్రియను నిర్వహించడం గురించి మరింత సమాచారం ఎక్కడ కనుగొనగలను?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="నిష్క్రమించిన తర్వాత మరిన్ని ETH డిపాజిట్ చేయడం ద్వారా నా ధృవీకర్తను మళ్లీ సక్రియం చేయగలనా?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="లెగసీ మరియు కాంపౌండింగ్ ధృవీకర్తల మధ్య తేడా ఏమిటి?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="కాంపౌండింగ్ ధృవీకర్తగా ఎలా మార్చాలి?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="స్టేకింగ్ ఉపసంహరణలు ఎప్పుడు ప్రారంభించబడ్డాయి?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

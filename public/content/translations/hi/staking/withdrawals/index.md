@@ -161,7 +161,7 @@ Finematics द्वारा इथेरियम स्टेकिंग न
 ## अक्सर पूछे जाने वाले प्रश्न {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="एक बार जब मैंने एक निकासी पता प्रदान कर दिया है, तो क्या मैं इसे एक वैकल्पिक निकासी पते में बदल सकता हूँ?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="एक सत्यापक का निकासी पता केवल एक बार ही क्यों सेट किया जा सकता है?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="अगर मैं किसी प्रदाता, स्टेकिंग पूल के माध्यम से स्टेक करता हूँ, या लिक्विड स्टेकिंग टोकन के साथ भाग लेता हूँ, तो मैं स्टेकिंग से कैसे निकासी करूँ?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="क्या नेटवर्क पुरस्कारों का दावा (आंशिक निकासी) स्वचालित रूप से होता है?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ eventName="read more">
 **कंपाउंडिंग (Type 2) सत्यापकों** के लिए, पुरस्कार निकासी पते पर स्वीप होने के बजाय सत्यापक के प्रभावी शेष (2048 ETH तक) में कंपाउंड होते हैं। स्वचालित स्वीप केवल 2048 ETH से अधिक के शेष के लिए होते हैं। इस सीमा से नीचे के पुरस्कारों को निकालने के लिए, आपको निष्पादन परत से मैन्युअल रूप से आंशिक निकासी ट्रिगर करनी होगी।
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="क्या मैं एक कस्टम राशि निकाल सकता हूँ?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="मैं एक सत्यापक संचालित करता हूँ। निकासी प्रक्रिया के प्रबंधन के बारे में अधिक जानकारी मुझे कहाँ मिल सकती है?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="क्या मैं अधिक ETH जमा करके बाहर निकलने के बाद अपने सत्यापक को फिर से सक्रिय कर सकता हूँ?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="लीगेसी और कंपाउंडिंग सत्यापकों के बीच क्या अंतर है?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="मैं कंपाउंडिंग सत्यापक में कैसे परिवर्तित होऊँ?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="स्टेकिंग निकासी कब सक्षम की गई थी?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

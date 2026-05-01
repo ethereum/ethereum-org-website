@@ -161,7 +161,7 @@ summaryPoints:
 ## الأسئلة الشائعة {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="بمجرد أن قدمت عنوان سحب، هل يمكنني تغييره إلى عنوان سحب بديل؟"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="لماذا يمكن تعيين عنوان سحب المُدَقِّق مرة واحدة فقط؟"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="كيف أسحب من التخزين إذا كنت أخزن من خلال مزود، أو مجمع تخزين، أو أشارك برموز التخزين السائلة؟"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="هل تتم المطالبة بمكافآت الشبكة (السحوبات الجزئية) تلقائيًا؟"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ eventName="read more">
 بالنسبة لـ **المُدَقِّقين المركبين (<span dir="ltr">Type 2</span>)**، تتراكم المكافآت في الرصيد الفعال للمُدَقِّق (حتى <span dir="ltr">2048 ETH</span>) بدلاً من سحبها إلى عنوان السحب. تحدث عمليات السحب التلقائية فقط للأرصدة التي تتجاوز <span dir="ltr">2048 ETH</span>. لسحب المكافآت التي تقل عن هذا الحد، يجب عليك بدء سحب جزئي يدويًا من طبقة التنفيذ.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="هل يمكنني سحب مبلغ مخصص؟"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="أنا أُشغّل مُدَقِّقًا. أين يمكنني العثور على مزيد من المعلومات حول إدارة عملية السحب؟"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="هل يمكنني إعادة تنشيط المُدَقِّق الخاص بي بعد الخروج عن طريق إيداع المزيد من ETH؟"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="ما الفرق بين المُدَقِّقين القدامى والمُدَقِّقين المركبين؟"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="كيف أحوّل إلى مُدَقِّق مركب؟"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="متى تم تمكين سحوبات التخزين؟"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

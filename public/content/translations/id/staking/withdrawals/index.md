@@ -161,7 +161,7 @@ Seperti yang Anda lihat, ini melambat karena semakin banyak validator di jaringa
 ## Pertanyaan yang sering diajukan {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="Setelah saya memberikan alamat penarikan, dapatkah saya mengubahnya ke alamat penarikan alternatif?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ Tidak, proses untuk memberikan kredensial penarikan adalah proses satu kali, dan
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="Mengapa alamat penarikan validator hanya dapat diatur sekali?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ Pengguna yang mencari manajemen penarikan yang fleksibel dapat mengatur dompet k
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="Bagaimana cara menarik dari staking jika saya melakukan staking melalui penyedia, pool staking, atau berpartisipasi dengan token liquid staking?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ Secara umum, saat melakukan staking melalui penyedia atau pool, Anda harus bebas
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="Apakah klaim imbalan jaringan (penarikan sebagian) terjadi secara otomatis?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ Untuk **validator lama (Tipe 1)**, ya—selama validator Anda telah memberikan a
 Untuk **validator majemuk (Tipe 2)**, imbalan dimajemukkan ke dalam saldo efektif validator (hingga 2048 ETH) alih-alih disapu ke alamat penarikan. Sapuan otomatis hanya terjadi untuk saldo yang melebihi 2048 ETH. Untuk menarik imbalan di bawah ambang batas ini, Anda harus memicu penarikan sebagian secara manual dari lapisan eksekusi.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="Dapatkah saya menarik jumlah khusus?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ Untuk **validator lama (Tipe 1)**, setiap imbalan jaringan ETH yang telah terkum
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="Saya mengoperasikan validator. Di mana saya dapat menemukan informasi lebih lanjut tentang pengelolaan proses penarikan?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ Untuk mencoba pengaturan Anda di testnet terlebih dahulu, kunjungi [Staking Laun
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="Dapatkah saya mengaktifkan kembali validator saya setelah keluar dengan mendepositkan lebih banyak ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ Tidak. Setelah validator keluar dan saldo penuhnya telah ditarik, setiap ETH tam
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="Apa perbedaan antara validator lama dan validator majemuk?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ Untuk detail lebih lanjut, lihat [penyelaman mendalam MaxEB](/roadmap/pectra/max
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="Bagaimana cara mengonversi ke validator majemuk?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ Setelah mengonversi, Anda juga dapat **mengonsolidasikan** beberapa validator me
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="Kapan penarikan staking diaktifkan?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

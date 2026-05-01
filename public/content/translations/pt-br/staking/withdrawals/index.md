@@ -161,7 +161,7 @@ Como você pode ver, isso diminui a velocidade à medida que mais validadores es
 ## Perguntas frequentes {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="Depois que forneci um endereço de saque, posso alterá-lo para um endereço de saque alternativo?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ Não, o processo para fornecer credenciais de saque é um processo único e não
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="Por que o endereço de saque de um validador só pode ser definido uma vez?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ Os usuários que buscam um gerenciamento flexível de saques podem definir uma c
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="Como faço para sacar do staking se faço staking por meio de um provedor, pool de staking ou participo com tokens de staking líquido?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ Em geral, ao fazer staking por meio de um provedor ou pool, você deve estar liv
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="A reivindicação de recompensas da rede (saques parciais) acontece automaticamente?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ Para **validadores legados (Tipo 1)**, sim — desde que seu validador tenha for
 Para **validadores de composição (Tipo 2)**, as recompensas são compostas no saldo efetivo do validador (até 2048 ETH) em vez de serem varridas para o endereço de saque. Varreduras automáticas ocorrem apenas para saldos que excedem 2048 ETH. Para sacar recompensas abaixo desse limite, você deve acionar manualmente um saque parcial a partir da camada de execução.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="Posso sacar uma quantia personalizada?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ Para **validadores legados (Tipo 1)**, quaisquer recompensas da rede em ETH que 
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="Eu opero um validador. Onde posso encontrar mais informações sobre o gerenciamento do processo de saque?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ Para testar sua configuração em uma rede de teste primeiro, visite o [Staking 
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="Posso reativar meu validador após sair depositando mais ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ Não. Uma vez que um validador tenha saído e seu saldo total tenha sido sacado,
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="Qual é a diferença entre validadores legados e de composição?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ Para obter mais detalhes, consulte a [análise detalhada do MaxEB](/roadmap/pect
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="Como converto para um validador de composição?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ Após a conversão, você também pode **consolidar** vários validadores em um,
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="Quando os saques de staking foram habilitados?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

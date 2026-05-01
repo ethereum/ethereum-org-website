@@ -161,7 +161,7 @@ Kama unavyoona hii inapungua kasi kadiri wathibitishaji wengi wanavyokuwa kwenye
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="Mara baada ya kutoa anwani ya utoaji, je, ninaweza kuibadilisha kuwa anwani mbadala ya utoaji?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ Hapana, mchakato wa kutoa vitambulisho vya uondoaji ni mchakato wa mara moja, na
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="Kwa nini anwani ya utoaji ya mthibitishaji inaweza kuwekwa mara moja tu?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ Watumiaji wanaotafuta usimamizi rahisi wa utoaji wanaweza kuweka mkoba wa mkatab
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="Ninawezaje kutoa kutoka kwa uwekaji dhamana ikiwa ninaweka dhamana kupitia mtoa huduma, bwawa la uwekaji dhamana, au ninashiriki na tokeni za uwekaji dhamana wa kioevu?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ Kwa ujumla, unapoweka dhamana kupitia mtoa huduma au bwawa, unapaswa kuwa huru k
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="Je, kudai tuzo za mtandao (utoaji wa sehemu) hutokea kiotomatiki?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ Kwa **wathibitishaji wa zamani (Aina ya 1)**, ndiyo—mradi tu mthibitishaji wak
 Kwa **wathibitishaji wa kujumuisha (Aina ya 2)**, tuzo hujumuishwa kwenye salio tendaji la mthibitishaji (hadi ETH 2048) badala ya kufagiliwa kwenye anwani ya utoaji. Ufagiaji wa kiotomatiki hutokea tu kwa salio linalozidi ETH 2048. Ili kutoa tuzo zilizo chini ya kizingiti hiki, lazima uanzishe utoaji wa kiasi kwa mikono kutoka kwenye tabaka la utekelezaji.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="Je, ninaweza kutoa kiasi maalum?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ Kwa **wathibitishaji wa zamani (Aina ya 1)**, tuzo zozote za mtandao za ETH amba
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="Ninaendesha mthibitishaji. Naweza kupata wapi maelezo zaidi kuhusu kusimamia mchakato wa utoaji?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ Ili kujaribu usanidi wako kwenye mtandao wa majaribio kwanza, tembelea [Kizinduz
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="Je, ninaweza kuwasha tena mthibitishaji wangu baada ya kujitoa kwa kuweka ETH zaidi?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ Hapana. Pindi mthibitishaji anapojitoa na salio lake kamili kutolewa, ETH yoyote
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="Kuna tofauti gani kati ya wathibitishaji wa zamani na wathibitishaji wa kujumuisha?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ Kwa maelezo zaidi, tazama [uchunguzi wa kina wa MaxEB](/roadmap/pectra/maxeb/).
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="Ninabadilishaje kuwa mthibitishaji wa kujumuisha?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ Baada ya kubadilisha, unaweza pia **kuunganisha** wathibitishaji wengi kuwa mmoj
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="Utoaji wa uwekaji dhamana uliwezeshwa lini?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

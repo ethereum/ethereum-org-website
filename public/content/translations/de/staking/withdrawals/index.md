@@ -161,7 +161,7 @@ Wie Sie sehen, verlangsamt sich dies, je mehr Validatoren im Netzwerk sind. Eine
 ## Häufig gestellte Fragen {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="Sobald ich eine Abhebungsadresse angegeben habe, kann ich diese in eine alternative Abhebungsadresse ändern?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ Nein, der Prozess zur Angabe von Auszahlungsberechtigungen ist ein einmaliger Vo
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="Warum kann die Abhebungsadresse eines Validators nur einmal festgelegt werden?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ Benutzer, die eine flexible Abhebungsverwaltung suchen, können eine Smart-Contr
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="Wie hebe ich Staking-Gelder ab, wenn ich über einen Anbieter, einen Staking-Pool oder mit Liquid-Staking-Token stake?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ Im Allgemeinen sollten Sie beim Staking über einen Anbieter oder Pool die Freih
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="Erfolgt das Beanspruchen von Netzwerk-Belohnungen (Teilabhebungen) automatisch?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ Für **Legacy-Validatoren (Typ 1)**, ja – solange Ihr Validator eine Abhebungs
 Bei **Compounding-Validatoren (Typ 2)** fließen die Belohnungen in das effektive Guthaben des Validators ein (bis zu 2048 ETH), anstatt auf die Abhebungsadresse abgeschöpft zu werden. Automatische Abschöpfungen erfolgen nur für Guthaben, die 2048 ETH übersteigen. Um Belohnungen unter diesem Schwellenwert abzuheben, müssen Sie manuell eine teilweise Abhebung von der Ausführungsschicht auslösen.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="Kann ich einen benutzerdefinierten Betrag abheben?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ Bei **Legacy-Validatoren (Typ 1)** werden alle ETH-Netzwerk-Belohnungen, die üb
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="Ich betreibe einen Validator. Wo finde ich weitere Informationen zur Verwaltung des Abhebungsprozesses?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ Um Ihr Setup zunächst in einem Testnetz auszuprobieren, besuchen Sie das [Hoodi
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="Kann ich meinen Validator nach dem Austritt durch die Einzahlung von mehr ETH wieder aktivieren?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben 
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="Was ist der Unterschied zwischen Legacy- und Compounding-Validatoren?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ Weitere Details finden Sie im [MaxEB-Deep-Dive](/roadmap/pectra/maxeb/).
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="Wie konvertiere ich zu einem Compounding-Validator?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ Nach der Umwandlung können Sie auch mehrere Validatoren zu einem einzigen **kon
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="Wann wurden Staking-Abhebungen aktiviert?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

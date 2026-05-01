@@ -161,7 +161,7 @@ Finematics의 이더리움 스테이킹 인출에 대한 다음 설명을 확인
 ## 자주 묻는 질문(FAQ) {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="인출 주소를 제공한 후 대체 인출 주소로 변경할 수 있나요?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="검증자의 인출 주소는 왜 한 번만 설정할 수 있나요?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="제공업체나 스테이킹 풀을 통해 스테이킹하거나 유동성 스테이킹 토큰으로 참여하는 경우 스테이킹에서 어떻게 인출하나요?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="네트워크 보상 청구(부분 인출)는 자동으로 이루어지나요?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ eventName="read more">
 <strong>복리(유형 2) 검증자</strong>의 경우, 보상은 인출 주소로 스윕되는 대신 검증자의 유효 잔고(최대 2048 ETH)에 복리로 적용됩니다. 자동 스윕은 2048 ETH를 초과하는 잔고에 대해서만 발생합니다. 이 임계값 미만의 보상을 인출하려면 실행 계층에서 수동으로 부분 인출을 트리거해야 합니다.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="사용자 지정 금액을 인출할 수 있나요?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="저는 검증자를 운영합니다. 인출 프로세스 관리에 대한 자세한 정보는 어디에서 찾을 수 있나요?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="더 많은 ETH를 예치하여 종료한 후 검증자를 다시 활성화할 수 있나요?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="레거시(유형 1) 검증자와 복리(유형 2) 검증자의 차이점은 무엇인가요?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="복리(유형 2) 검증자로 어떻게 전환하나요?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="스테이킹 인출은 언제 활성화되었나요?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

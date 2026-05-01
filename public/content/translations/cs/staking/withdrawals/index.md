@@ -161,7 +161,7 @@ Jak vidíte, toto se zpomaluje s tím, jak je v síti více validátorů. Nárů
 ## Často kladené dotazy {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="Mohu po zadání adresy pro výběr tuto adresu změnit na jinou?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ Ne, proces poskytnutí pověření k výběru je jednorázový proces a po odesl
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="Proč lze adresu pro výběr validátora nastavit pouze jednou?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ Uživatelé, kteří hledají flexibilní správu výběrů, mohou jako adresu p
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="Jak vybírat ze stakingu, pokud stakuji prostřednictvím poskytovatele, stakingového poolu nebo se účastním pomocí liquid staking tokenů?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ Obecně platí, že při stakingu prostřednictvím poskytovatele nebo poolu bys
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="Probíhá uplatnění odměn ze sítě (částečné výběry) automaticky?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ Pro **starší validátory (Typ 1)** ano – pokud váš validátor poskytl adre
 U **compounding validátorů (Typ 2)** se odměny skládají do efektivního zůstatku validátora (až do 2048 ETH), spíše než aby byly vybírány na adresu pro výběr. K automatickým výběrům dochází pouze u zůstatků přesahujících 2048 ETH. Pro výběr odměn pod touto hranicí musíte ručně spustit částečný výběr z exekuční vrstvy.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="Mohu vybrat vlastní částku?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ U **starších validátorů (Typ 1)** jsou jakékoli odměny ze sítě v ETH, kt
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="Provozuji validátora. Kde najdu více informací o správě procesu výběru?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ Chcete-li si své nastavení nejprve vyzkoušet na testnetu, navštivte [Hoodi T
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="Mohu znovu aktivovat svého validátora po výstupu vložením dalšího ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ Ne. Jakmile validátor vystoupí a jeho celý zůstatek je vybrán, jakékoli da
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="Jaký je rozdíl mezi staršími a compounding validátory?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ Další podrobnosti naleznete v [podrobném průvodci MaxEB](/roadmap/pectra/max
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="Jak přejít na compounding validátora?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ Po převodu můžete také **konsolidovat** více validátorů do jednoho a spoj
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="Kdy byly povoleny výběry ze stakingu?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

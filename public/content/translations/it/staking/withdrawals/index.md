@@ -161,7 +161,7 @@ Come puoi vedere, questo rallenta man mano che ci sono più validatori sulla ret
 ## Domande frequenti {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="Una volta fornito un indirizzo di prelievo, posso cambiarlo con un indirizzo di prelievo alternativo?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ No, il processo per fornire le credenziali di prelievo è un processo una tantum
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="Perché l'indirizzo di prelievo di un validatore può essere impostato solo una volta?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ Gli utenti che cercano una gestione flessibile dei prelievi possono impostare un
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="Come prelevo dallo staking se faccio staking tramite un fornitore, una pool di staking o partecipo con token di staking liquido?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ In generale, quando fai staking tramite un fornitore o una pool, dovresti essere
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="La richiesta delle ricompense di rete (prelievi parziali) avviene automaticamente?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ Per i **validatori legacy (Tipo 1)**, sì, a patto che il tuo validatore abbia f
 Per i **validatori compounding (Tipo 2)**, le ricompense si accumulano nel saldo effettivo del validatore (fino a 2048 ETH) piuttosto che essere prelevate all'indirizzo di prelievo. I prelievi automatici avvengono solo per i saldi che superano i 2048 ETH. Per prelevare le ricompense al di sotto di questa soglia, devi attivare manualmente un prelievo parziale dal livello di esecuzione.
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="Posso prelevare un importo personalizzato?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ I **validatori compounding (Tipo 2)** possono attivare prelievi parziali di un i
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="Gestisco un validatore. Dove posso trovare maggiori informazioni sulla gestione del processo di prelievo?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ Per provare prima la tua configurazione su una testnet, visita l'[Hoodi Testnet 
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="Posso riattivare il mio validatore dopo l'uscita depositando più ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ No. Una volta che un validatore è uscito e il suo intero saldo è stato preleva
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="Qual è la differenza tra validatori legacy e compounding?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ Per maggiori dettagli, consulta l'[approfondimento su MaxEB](/roadmap/pectra/max
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="Come passare a un validatore compounding?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ Dopo la conversione, puoi anche **consolidare** più validatori in uno solo, com
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="Quando sono stati abilitati i prelievi dallo staking?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

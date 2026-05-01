@@ -161,7 +161,7 @@ Finematics-এর ইথেরিয়াম স্টেকিং উত্তো
 ## সচরাচর জিজ্ঞাসিত প্রশ্ন {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="একবার আমি একটি উত্তোলন ঠিকানা প্রদান করার পর, আমি কি এটিকে একটি বিকল্প উত্তোলন ঠিকানায় পরিবর্তন করতে পারি?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="একজন ভ্যালিডেটর-এর উত্তোলন ঠিকানা কেন শুধুমাত্র একবারই সেট করা যায়?"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="যদি আমি কোনো প্রদানকারী, স্টেকিং পুলের মাধ্যমে স্টেক করি, অথবা লিকুইড স্টেকিং টোকেনের সাথে অংশগ্রহণ করি, তাহলে আমি কীভাবে স্টেকিং থেকে উত্তোলন করব?"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -192,7 +192,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="নেটওয়ার্ক পুরস্কার দাবি করা (আংশিক উত্তোলন) কি স্বয়ংক্রিয়ভাবে ঘটে?"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -201,7 +201,7 @@ eventName="read more">
 **কম্পাউন্ডিং (Type 2) ভ্যালিডেটরদের** জন্য, পুরস্কারগুলো উত্তোলন ঠিকানায় সুইপ হওয়ার পরিবর্তে ভ্যালিডেটর-এর কার্যকর ব্যালেন্স-এ (2048 ETH পর্যন্ত) কম্পাউন্ড হয়। স্বয়ংক্রিয় সুইপ শুধুমাত্র 2048 ETH-এর বেশি ব্যালেন্সের জন্য ঘটে। এই সীমার নিচের পুরস্কার উত্তোলন করতে, আপনাকে অবশ্যই এক্সিকিউশন লেয়ার থেকে ম্যানুয়ালি একটি আংশিক উত্তোলন ট্রিগার করতে হবে।
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="আমি কি একটি কাস্টম পরিমাণ উত্তোলন করতে পারি?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -211,7 +211,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="আমি একজন ভ্যালিডেটর পরিচালনা করি। উত্তোলন প্রক্রিয়া পরিচালনা সম্পর্কে আমি আরও তথ্য কোথায় পেতে পারি?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -223,7 +223,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="আমি কি আরও ETH জমা করে প্রস্থানের পরে আমার ভ্যালিডেটরকে পুনরায় সক্রিয় করতে পারি?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -231,7 +231,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="লিগ্যাসি এবং কম্পাউন্ডিং ভ্যালিডেটরদের মধ্যে পার্থক্য কী?"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -243,7 +243,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="আমি কীভাবে একটি কম্পাউন্ডিং ভ্যালিডেটরে রূপান্তর করব?"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -253,7 +253,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="স্টেকিং উত্তোলন কখন সক্রিয় করা হয়েছিল?"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">

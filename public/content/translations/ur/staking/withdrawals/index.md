@@ -161,7 +161,7 @@ Finematics کی جانب سے ایتھیریم اسٹیکنگ کے انخلا ک
 ## اکثر پوچھے گئے سوالات {#faq}
 
 <ExpandableCard
-title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+title="ایک بار جب میں نے انخلا کا پتہ فراہم کر دیا ہے، تو کیا میں اسے متبادل انخلا کے پتے میں تبدیل کر سکتا ہوں؟"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventName="read more">
@@ -169,7 +169,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Why can a validator's withdrawal address only be set once?"
+title="توثیق کار کا انخلا کا پتہ صرف ایک بار ہی کیوں ترتیب دیا جا سکتا ہے؟"
 eventCategory="FAQ"
 eventAction="Why can a validator's withdrawal address only be set once?"
 eventName="read more">
@@ -181,7 +181,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
+title="اگر میں کسی فراہم کنندہ، اسٹیکنگ پول کے ذریعے اسٹیک کرتا ہوں، یا لیکویڈ اسٹیکنگ ٹوکنز کے ساتھ حصہ لیتا ہوں، تو میں اسٹیکنگ سے انخلا کیسے کروں؟"
 eventCategory="FAQ"
 eventAction="How do I withdraw from staking if I stake through a provider, staking pool, or participate with liquid staking tokens?"
 eventName="read more">
@@ -191,7 +191,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Does claiming network rewards (partial withdrawals) happen automatically?"
+title="کیا نیٹ ورک کے انعامات کا دعوی کرنا (جزوی انخلا) خود بخود ہوتا ہے؟"
 eventCategory="FAQ"
 eventAction="Does claiming network rewards (partial withdrawals) happen automatically?"
 eventName="read more">
@@ -200,7 +200,7 @@ eventName="read more">
 **کمپاؤنڈنگ (قسم 2) توثیق کاروں** کے لیے، انعامات انخلا کے پتہ پر نکالے جانے کے بجائے توثیق کار کے مؤثر بیلنس (<span dir="ltr">2048 ETH</span> تک) میں جمع ہوتے ہیں۔ خودکار انخلا صرف <span dir="ltr">2048 ETH</span> سے زیادہ کے بیلنس کے لیے ہوتا ہے۔ اس حد سے کم انعامات نکالنے کے لیے، آپ کو عمل درآمد کی تہہ سے دستی طور پر جزوی انخلا شروع کرنا ہوگا۔
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?"
+<ExpandableCard title="کیا میں اپنی مرضی کی رقم نکال سکتا ہوں؟"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
@@ -210,7 +210,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator. Where can I find more information about managing the withdrawal process?"
+title="میں ایک توثیق کار چلاتا ہوں۔ انخلا کے عمل کے انتظام کے بارے میں مزید معلومات مجھے کہاں مل سکتی ہیں؟"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information about managing the withdrawal process?"
 eventName="read more">
@@ -220,7 +220,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="Can I re-activate my validator after exiting by depositing more ETH?"
+title="کیا میں مزید ETH جمع کر کے خروج کے بعد اپنے توثیق کار کو دوبارہ فعال کر سکتا ہوں؟"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
@@ -228,7 +228,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="What is the difference between legacy and compounding validators?"
+title="لیگیسی اور کمپاؤنڈنگ توثیق کاروں کے درمیان کیا فرق ہے؟"
 eventCategory="FAQ"
 eventAction="What is the difference between legacy and compounding validators?"
 eventName="read more">
@@ -240,7 +240,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="How do I convert to a compounding validator?"
+title="میں کمپاؤنڈنگ توثیق کار میں کیسے تبدیل ہوں؟"
 eventCategory="FAQ"
 eventAction="How do I convert to a compounding validator?"
 eventName="read more">
@@ -250,7 +250,7 @@ eventName="read more">
 </ExpandableCard>
 
 <ExpandableCard
-title="When were staking withdrawals enabled?"
+title="اسٹیکنگ کے انخلا کب فعال کیے گئے تھے؟"
 eventCategory="FAQ"
 eventAction="When were staking withdrawals enabled?"
 eventName="read more">
