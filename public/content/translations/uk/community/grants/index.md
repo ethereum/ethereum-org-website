@@ -1,6 +1,6 @@
 ---
-title: Грантові програми Ethereum Foundation та спільноти
-description: Перелік грантових програм в екосистемі Етеріуму.
+title: "Грантові програми Ethereum Foundation та спільноти"
+description: "Перелік грантових програм в екосистемі Етеріуму."
 lang: uk
 ---
 

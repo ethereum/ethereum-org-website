@@ -1,6 +1,6 @@
 ---
-title: Các chương trình tài trợ của Ethereum Foundation và cộng đồng
-description: Danh sách các chương trình tài trợ trong toàn bộ hệ sinh thái Ethereum.
+title: "Các chương trình tài trợ của Ethereum Foundation và cộng đồng"
+description: "Danh sách các chương trình tài trợ trong toàn bộ hệ sinh thái Ethereum."
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Grantové programy Ethereum Foundation a komunity
-description: Seznam grantových programů napříč ekosystémem Etherea.
+title: "Grantové programy Ethereum Foundation a komunity"
+description: "Seznam grantových programů napříč ekosystémem Etherea."
 lang: cs
 ---
 

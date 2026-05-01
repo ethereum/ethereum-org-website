@@ -1,6 +1,6 @@
 ---
-title: Programy grantowe Fundacji Ethereum i społeczności
-description: Lista programów grantowych w całym ekosystemie Ethereum.
+title: "Programy grantowe Fundacji Ethereum i społeczności"
+description: "Lista programów grantowych w całym ekosystemie Ethereum."
 lang: pl
 ---
 

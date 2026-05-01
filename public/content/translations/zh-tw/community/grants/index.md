@@ -1,6 +1,6 @@
 ---
-title: 以太坊基金會與社群資助計畫
-description: 以太坊生態系中的資助計畫列表。
+title: "以太坊基金會與社群資助計畫"
+description: "以太坊生態系中的資助計畫列表。"
 lang: zh-tw
 ---
 

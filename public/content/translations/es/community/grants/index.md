@@ -1,5 +1,5 @@
 ---
-title: Programas de subvenciones de la Fundación Ethereum y la comunidad
+title: "Programas de subvenciones de la Fundación Ethereum y la comunidad"
 description: Una lista de los programas de subvenciones en todo el ecosistema de Ethereum.
 lang: es
 ---

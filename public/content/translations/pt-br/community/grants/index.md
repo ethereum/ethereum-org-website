@@ -1,6 +1,6 @@
 ---
-title: Programas de subsídios da Ethereum Foundation e da comunidade
-description: Uma lista dos programas de subsídios em todo o ecossistema Ethereum.
+title: "Programas de subsídios da Ethereum Foundation e da comunidade"
+description: "Uma lista dos programas de subsídios em todo o ecossistema Ethereum."
 lang: pt-br
 ---
 

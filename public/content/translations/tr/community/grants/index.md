@@ -1,6 +1,6 @@
 ---
-title: Ethereum Vakfı ve topluluk hibe programları
-description: Ethereum ekosistemindeki hibe programlarının bir listesi.
+title: "Ethereum Vakfı ve topluluk hibe programları"
+description: "Ethereum ekosistemindeki hibe programlarının bir listesi."
 lang: tr
 ---
 

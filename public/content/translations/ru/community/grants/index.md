@@ -1,6 +1,6 @@
 ---
-title: Программы грантов Ethereum Foundation и сообщества
-description: Список программ грантов в экосистеме Эфириума.
+title: "Программы грантов Ethereum Foundation и сообщества"
+description: "Список программ грантов в экосистеме Эфириума."
 lang: ru
 ---
 
