@@ -30,9 +30,11 @@ export class FindWalletPage extends BasePage {
     this.mobileFiltersSubmitButton = page.getByTestId(
       "mobile-filters-submit-button"
     )
+    // SSR renders all wallets and hides filtered-out rows via `.hidden`.
+    // Exclude them so assertions only run against visible rows.
     this.walletRows = page
       .getByTestId("wallet-list")
-      .locator(":scope > details")
+      .locator(":scope > details:not(.hidden)")
     this.rowCounter = page.getByText(/Showing all wallets \(\d+\)/i)
   }
 
