@@ -32,7 +32,7 @@ These resources compile and organize various grant opportunities across the Ethe
 These general platforms offer broad coverage of grants across the entire Web3 space and are useful starting points for anyone looking for funding:
 
 - [Karma Funding Map](https://gap.karmahq.xyz/funding-map) - Directory of all the web3 grant programs, updated on weekly basis
-- [Etherscan Grant Directory](https://etherscan.io/directory/Others/Grant) - _Curated list of grants on the Ethereum block explorer_
+- [Etherscan Grant Directory](https://etherscan.io/directory/Others/Grant) - Curated list of grants on the Ethereum block explorer
 
 ### For developers and builders {#for-developers-and-builders}
 
