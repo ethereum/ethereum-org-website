@@ -40,7 +40,7 @@ test.describe("Home Page", () => {
     await homePage.verifyMobileNavigation()
     await homePage.navigateFromMobileMenu(
       "learn",
-      "basics",
+      "ethereum explained",
       "what is ethereum",
       /.*\/what-is-ethereum/
     )
