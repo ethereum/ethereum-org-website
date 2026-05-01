@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/ethereum-localism-global-protocols-local-power/index.md",
+  "generatedAt": "2026-04-29T05:32:25.662Z",
+  "rootHash": "6a3f6edff038",
+  "tree": {
+    "contentHash": "d52524b01032",
+    "anchorHash": "9644050cacea",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d3f1aaeb490a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "9ac04063df12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "131b2b042c1e"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "cf6021cfdd79"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "495d06c59be0"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "02540942346f"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0038b8b17ecb"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e43588d51df3"
+      },
+      "prose:1": {
+        "contentHash": "38c54786f051",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "a9022c084eff"
+      },
+      "prose:2": {
+        "contentHash": "644f0bb7c4fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-to-ethereum-localism-012": {
+        "contentHash": "e2f060bbc87c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e07be2b4f254",
+        "children": {
+          "_label": {
+            "contentHash": "e07be2b4f254",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c0d120a345d9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "values-and-the-tension-of-global-vs-local-240": {
+        "contentHash": "7c56d3fc8f1b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6cd23cc94f2f",
+        "children": {
+          "_label": {
+            "contentHash": "6cd23cc94f2f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7e9ac9e875c8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-localism-fund-and-consolidating-values-527": {
+        "contentHash": "cb5ceba0534e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "538fcf7f13ce",
+        "children": {
+          "_label": {
+            "contentHash": "538fcf7f13ce",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "9f202b627e65",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "transparency-and-allocating-capital-1001": {
+        "contentHash": "115d040aa045",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d8d710b68cd4",
+        "children": {
+          "_label": {
+            "contentHash": "d8d710b68cd4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7dcde9716e62",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-protocol-underground-and-social-technologies-1503": {
+        "contentHash": "a4d76fce94de",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "783b759ea83c",
+        "children": {
+          "_label": {
+            "contentHash": "783b759ea83c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ad5fe17f3b60",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "deciding-what-to-build-for-global-impact-2025": {
+        "contentHash": "348dd7fb480b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "58e09e87d8fc",
+        "children": {
+          "_label": {
+            "contentHash": "58e09e87d8fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4a2d270f58aa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "credible-neutrality-and-subsidiarity-2716": {
+        "contentHash": "de067d8d5d55",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "381d426b598a",
+        "children": {
+          "_label": {
+            "contentHash": "381d426b598a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ef80f75e3d97",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "value-flows-and-universal-truth-in-ethereum-3017": {
+        "contentHash": "b042075a2608",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "284a9356cfe7",
+        "children": {
+          "_label": {
+            "contentHash": "284a9356cfe7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b031c5380dca",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "global-citizens-with-local-responsibilities-3503": {
+        "contentHash": "2ac568c6c038",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b8b33f3b0949",
+        "children": {
+          "_label": {
+            "contentHash": "b8b33f3b0949",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fd8267ac705b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-to-ethereum-localism-012",
+      "values-and-the-tension-of-global-vs-local-240",
+      "the-localism-fund-and-consolidating-values-527",
+      "transparency-and-allocating-capital-1001",
+      "the-protocol-underground-and-social-technologies-1503",
+      "deciding-what-to-build-for-global-impact-2025",
+      "credible-neutrality-and-subsidiarity-2716",
+      "value-flows-and-universal-truth-in-ethereum-3017",
+      "global-citizens-with-local-responsibilities-3503"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

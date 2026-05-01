@@ -198,9 +198,9 @@ export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
         ref={ref}
         {...props}
       >
-        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
-        &nbsp;
         <span className="group-hover:underline">{children}</span>
+        &nbsp;
+        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
       </BaseLink>
     )
   }

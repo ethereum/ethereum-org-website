@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/atoms-institutions-blockchains-josh-stark/index.md",
+  "generatedAt": "2026-04-29T04:43:33.258Z",
+  "rootHash": "7afb590290aa",
+  "tree": {
+    "contentHash": "5b644f8a3638",
+    "anchorHash": "55e729912c29",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "276232e147e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "bc80c32db896",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f2024e5d5df2"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "428dfa40beff"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "53ee00ec0dbf"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "58c45f156e35"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bf63cf23317d"
+      },
+      "prose:1": {
+        "contentHash": "ba380c610f26",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "0355bc9360c6"
+      },
+      "prose:2": {
+        "contentHash": "32bc6f339804",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "why-cant-we-explain-blockchains-000": {
+        "contentHash": "0b965085b04d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a4e06def89e3",
+        "children": {
+          "_label": {
+            "contentHash": "a4e06def89e3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4a379f22c131",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "claude-shannon-and-the-idea-of-information-400": {
+        "contentHash": "93042c9b9970",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "65ab050c1f4b",
+        "children": {
+          "_label": {
+            "contentHash": "65ab050c1f4b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e9dce5607dde",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "three-clues-700": {
+        "contentHash": "1889a072fdb3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d19c21fdbd6c",
+        "children": {
+          "_label": {
+            "contentHash": "d19c21fdbd6c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8826665f3f19",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "introducing-hardness-1100": {
+        "contentHash": "b347cb27beed",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ff9f69a4aedd",
+        "children": {
+          "_label": {
+            "contentHash": "ff9f69a4aedd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "805713e2b89b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-is-hardness-1400": {
+        "contentHash": "5bdab63031ad",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bd6d057f1094",
+        "children": {
+          "_label": {
+            "contentHash": "bd6d057f1094",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "04452f0761f9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "atom-hardness-1900": {
+        "contentHash": "e1485a4d94a2",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "1cbe0dd206ac",
+        "children": {
+          "_label": {
+            "contentHash": "1cbe0dd206ac",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3c8943403674",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "institutional-hardness-2200": {
+        "contentHash": "e435eed666f0",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0d5efa6c8029",
+        "children": {
+          "_label": {
+            "contentHash": "0d5efa6c8029",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3545ebb9110a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "blockchain-hardness-2420": {
+        "contentHash": "36de5d1683ae",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "475404f63101",
+        "children": {
+          "_label": {
+            "contentHash": "475404f63101",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ea60a356149b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "why-this-matters-2510": {
+        "contentHash": "bbf4a4550aac",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "32ba58948a39",
+        "children": {
+          "_label": {
+            "contentHash": "32ba58948a39",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4aa77cfbb45b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "raising-our-ambitions-2700": {
+        "contentHash": "df2b994e4f71",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b6d844717ec5",
+        "children": {
+          "_label": {
+            "contentHash": "b6d844717ec5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "05fce300156a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "why-cant-we-explain-blockchains-000",
+      "claude-shannon-and-the-idea-of-information-400",
+      "three-clues-700",
+      "introducing-hardness-1100",
+      "what-is-hardness-1400",
+      "atom-hardness-1900",
+      "institutional-hardness-2200",
+      "blockchain-hardness-2420",
+      "why-this-matters-2510",
+      "raising-our-ambitions-2700"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

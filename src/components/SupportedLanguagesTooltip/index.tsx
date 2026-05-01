@@ -8,7 +8,6 @@ type SupportedLanguagesTooltipProps = {
   supportedLanguages: string[]
 }
 
-// Tooltip to show other supported languages on a wallet
 export const SupportedLanguagesTooltip = ({
   supportedLanguages,
 }: SupportedLanguagesTooltipProps) => {
