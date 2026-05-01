@@ -50,6 +50,10 @@ import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.
 import dogeImage from "@/public/images/doge-computer.png"
 import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
+// Re-fetch events from the Geode Labs API every 24 h so the hackathons
+// section never shows past events between full deployments.
+export const revalidate = 86400
+
 const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
