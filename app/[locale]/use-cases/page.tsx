@@ -54,7 +54,7 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card className="bg-background-highlight row-span-3 grid grid-rows-subgrid gap-y-8 p-8 max-md:p-4">
+  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:p-4">
     <CardBanner background="none" fit="contain">
       <Image src={image} alt="" sizes="250px" />
     </CardBanner>
@@ -117,7 +117,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
         showDropdown={false}
       >
         <div className="space-y-24 max-lg:pt-10">
-          <p className="text-body-medium text-lg">
+          <p className="text-lg text-body-medium">
             {t("page-intro-before-link")}{" "}
             <InlineLink href="/what-is-ether/">
               {t("page-intro-ether-link")}
@@ -131,7 +131,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               <h2>{tocItems[0].title}</h2>
               <p>{t("financial-tools-description")}</p>
 
-              <div className="grid-cols-fill-4 grid gap-4">
+              <div className="grid grid-cols-fill-4 gap-4">
                 <UseCaseCard
                   href="/defi/"
                   image={defi}
@@ -159,7 +159,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <div className="space-y-8">
               <h3>{t("novel-uses-title")}</h3>
 
-              <div className="grid-cols-fill-4 grid gap-4">
+              <div className="grid grid-cols-fill-4 gap-4">
                 <UseCaseCard
                   href="/real-world-assets/"
                   image={manAndDog}
@@ -207,7 +207,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <h2>{tocItems[1].title}</h2>
             <p>{t("digital-ownership-description")}</p>
 
-            <div className="grid-cols-fill-4 grid gap-4">
+            <div className="grid grid-cols-fill-4 gap-4">
               <UseCaseCard
                 href="/nft/"
                 image={infrastructureTransparent}
@@ -230,7 +230,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <h2>{tocItems[2].title}</h2>
             <p>{t("organizations-description")}</p>
 
-            <div className="grid-cols-fill-4 grid gap-4">
+            <div className="grid grid-cols-fill-4 gap-4">
               <UseCaseCard
                 href="/dao/"
                 image={daoImg}
@@ -260,7 +260,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             <h2>{tocItems[3].title}</h2>
             <p>{t("science-description")}</p>
 
-            <div className="grid-cols-fill-4 grid gap-4">
+            <div className="grid grid-cols-fill-4 gap-4">
               <UseCaseCard
                 href="/desci/"
                 image={futureTransparent}

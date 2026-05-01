@@ -54,11 +54,11 @@ const RightColumn = (props: ChildOnlyProp) => (
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <h1 className="leading-xs py-8" {...props} />
+  <h1 className="py-8 leading-xs" {...props} />
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <p className="leading-xs text-body-medium mb-14" {...props} />
+  <p className="mb-14 leading-xs text-body-medium" {...props} />
 )
 
 const ButtonRow = (props: ChildOnlyProp) => (
@@ -69,7 +69,7 @@ const ButtonRow = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <h2 className="leading-xs mt-12 mb-8" {...props} />
+  <h2 className="mt-12 mb-8 leading-xs" {...props} />
 )
 
 const StyledButton = ({
@@ -83,7 +83,7 @@ const StyledButton = ({
 
 const CardTag = (props: ChildOnlyProp) => (
   <Flex
-    className="bg-primary dark:text-background-medium items-center justify-center rounded-t-sm border-b-white p-2 text-sm text-white uppercase"
+    className="items-center justify-center rounded-t-sm border-b-white bg-primary p-2 text-sm text-white uppercase dark:text-background-medium"
     {...props}
   />
 )
@@ -91,7 +91,7 @@ const CardTag = (props: ChildOnlyProp) => (
 const AddressCard = (props: ChildOnlyProp) => {
   return (
     <div
-      className="border-border shadow-table mb-8 max-w-full rounded-xs border lg:sticky lg:top-28 lg:max-w-[560px]"
+      className="mb-8 max-w-full rounded-xs border border-border shadow-table lg:sticky lg:top-28 lg:max-w-[560px]"
       {...props}
     />
   )
@@ -99,7 +99,7 @@ const AddressCard = (props: ChildOnlyProp) => {
 
 const Address = (props: ChildOnlyProp) => (
   <div
-    className="font-monospace leading-xs mb-4 flex-wrap rounded-xs text-[2rem] uppercase"
+    className="mb-4 flex-wrap rounded-xs font-monospace text-[2rem] leading-xs uppercase"
     {...props}
   />
 )
@@ -124,7 +124,7 @@ const CardTitle = (props: ChildOnlyProp) => (
 )
 
 const Caption = (props: ChildOnlyProp) => (
-  <p className="text-body-medium mb-8 md:mb-8 lg:mb-0" {...props} />
+  <p className="mb-8 text-body-medium md:mb-8 lg:mb-0" {...props} />
 )
 
 const Blockie = (props: { src: string }) => (
@@ -139,7 +139,7 @@ const Blockie = (props: { src: string }) => (
 
 const StyledFakeLink = (props: ButtonProps) => (
   <Button
-    className="text-primary me-2 cursor-pointer px-0"
+    className="me-2 cursor-pointer px-0 text-primary"
     variant="ghost"
     {...props}
   />

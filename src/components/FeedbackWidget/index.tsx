@@ -50,7 +50,7 @@ const FeedbackWidget = () => {
         </PopoverTrigger>
 
         <PopoverContent
-          className="bg-background mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded p-4 sm:p-8"
+          className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded bg-background p-4 sm:p-8"
           data-testid="feedback-widget-modal"
         >
           <div className="flex items-start gap-2">
@@ -62,7 +62,7 @@ const FeedbackWidget = () => {
             <PopoverClose asChild>
               <Button
                 variant="ghost"
-                className="text-body w-8 py-0"
+                className="w-8 py-0 text-body"
                 size="sm"
                 ref={cancelRef}
               >
@@ -73,10 +73,10 @@ const FeedbackWidget = () => {
 
           {feedbackSubmitted && (
             <>
-              <div className="text-md text-center leading-5 font-normal">
+              <div className="text-center text-md leading-5 font-normal">
                 {t("feedback-widget-thank-you-subtitle")}
               </div>
-              <div className="text-body-medium text-center text-xs leading-4 font-bold tracking-wide">
+              <div className="text-center text-xs leading-4 font-bold tracking-wide text-body-medium">
                 {t("feedback-widget-thank-you-timing")}
               </div>
             </>

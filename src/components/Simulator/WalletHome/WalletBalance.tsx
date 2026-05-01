@@ -18,7 +18,7 @@ export const WalletBalance = ({ usdAmount = 0 }: WalletBalanceProps) => {
       <p className="mb-2 text-center text-body-medium md:mb-4">
         {t("sim-your-total")}
       </p>
-      <p className="text-center text-3xl font-bold !leading-base md:text-5xl">
+      <p className="text-center text-3xl !leading-base font-bold md:text-5xl">
         {formatWalletUsd(usdAmount)}
       </p>
       <Flex className="mb-4 justify-center">

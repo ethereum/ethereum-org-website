@@ -1,8 +1,8 @@
 ---
 title: "Sponsoring von Gasgebühren: Wie Sie Transaktionskosten für Ihre Nutzer übernehmen"
-description: "Es ist einfach, einen Private-Key und eine Adresse zu erstellen; es ist nur eine Frage der Ausführung der richtigen Software. Aber es gibt viele Orte auf der Welt, an denen es viel schwieriger ist, ETH zu bekommen, um Transaktionen zu senden. In diesem Tutorial lernen Sie, wie Sie die Gasgebühren auf der Blockchain für die Ausführung von nutzersignierten, strukturierten Off-Chain-Daten in Ihrem Smart Contract übernehmen. Sie lassen den Nutzer eine Struktur signieren, die die Transaktionsinformationen enthält, welche Ihr Off-Chain-Code dann als Transaktion an die Blockchain übermittelt."
+description: "Es ist einfach, einen privaten Schlüssel und eine Adresse zu erstellen; man muss nur die richtige Software ausführen. Aber es gibt viele Orte auf der Welt, an denen es viel schwieriger ist, ETH zu bekommen, um Transaktionen zu senden. In diesem Tutorial lernen Sie, wie Sie die Onchain-Gaskosten für die Ausführung von nutzersignierten, offchain strukturierten Daten in Ihrem Smart Contract übernehmen. Sie lassen den Nutzer eine Struktur signieren, die die Transaktionsinformationen enthält, welche Ihr Offchain-Code dann als Transaktion an die Blockchain übermittelt."
 author: Ori Pomerantz
-tags: ["gaslos", "Solidity", "EIP-712", "Meta-Transaktionen"]
+tags: ["gaslos", "Solidity", "eip-712", "Meta-Transaktionen"]
 skill: intermediate
 breadcrumb: Gas-Sponsoring
 lang: de
@@ -13,9 +13,9 @@ published: 2026-02-27
 
 Wenn wir wollen, dass Ethereum [einer Milliarde weiterer Menschen](https://blog.ethereum.org/category/next-billion) dient, müssen wir Reibungspunkte beseitigen und die Nutzung so einfach wie möglich machen. Eine Quelle dieser Reibung ist die Notwendigkeit von ETH, um Gasgebühren zu bezahlen.
 
-Wenn Sie eine Dapp haben, die mit Nutzern Geld verdient, könnte es sinnvoll sein, Nutzer Transaktionen über Ihren Server einreichen zu lassen und die Transaktionsgebühren selbst zu bezahlen. Da die Nutzer weiterhin eine [EIP-712-Autorisierungsnachricht](https://eips.ethereum.org/EIPS/eip-712) in ihren Wallets signieren, behalten sie die Integritätsgarantien von Ethereum. Die Verfügbarkeit hängt von dem Server ab, der die Transaktionen weiterleitet, und ist daher eingeschränkter. Sie können es jedoch so einrichten, dass Nutzer auch direkt auf den Smart Contract zugreifen können (wenn sie ETH erhalten), und andere ihre eigenen Server einrichten lassen, wenn sie Transaktionen sponsern möchten.
+Wenn Sie eine Dezentrale Anwendung (Dapp) haben, die mit Nutzern Geld verdient, könnte es sinnvoll sein, Nutzer Transaktionen über Ihren Server einreichen zu lassen und die Transaktionsgebühren selbst zu bezahlen. Da die Nutzer weiterhin eine [EIP-712-Autorisierungsnachricht](https://eips.ethereum.org/EIPS/eip-712) in ihrer Wallet signieren, behalten sie die Integritätsgarantien von Ethereum. Die Verfügbarkeit hängt von dem Server ab, der die Transaktionen weiterleitet, und ist daher eingeschränkter. Sie können es jedoch so einrichten, dass Nutzer auch direkt auf den Smart Contract zugreifen können (sofern sie ETH erhalten), und anderen erlauben, eigene Server einzurichten, wenn sie Transaktionen sponsern möchten.
 
-Die Technik in diesem Tutorial funktioniert nur, wenn Sie den Smart Contract kontrollieren. Es gibt andere Techniken, einschließlich der [Kontoabstraktion](https://eips.ethereum.org/EIPS/eip-4337), mit denen Sie Transaktionen an andere Smart Contracts sponsern können, was ich hoffentlich in einem zukünftigen Tutorial behandeln werde.
+Die Technik in diesem Tutorial funktioniert nur, wenn Sie den Smart Contract kontrollieren. Es gibt andere Techniken, einschließlich der [Kontoabstraktion](https://eips.ethereum.org/EIPS/eip-4337), die es Ihnen ermöglichen, Transaktionen an andere Smart Contracts zu sponsern, was ich hoffentlich in einem zukünftigen Tutorial behandeln werde.
 
 Hinweis: Dies ist _kein_ produktionsreifer Code. Er ist anfällig für erhebliche Angriffe und es fehlen wichtige Funktionen. Erfahren Sie mehr im [Abschnitt über Schwachstellen in diesem Leitfaden](#vulnerabilities).
 
@@ -29,9 +29,9 @@ Um dieses Tutorial zu verstehen, sollten Sie bereits vertraut sein mit:
 
 ## Die Beispielanwendung {#sample-app}
 
-Die hier gezeigte Beispielanwendung ist eine Variante des `Greeter`-Vertrags von Hardhat. Sie können sie [auf GitHub](https://github.com/qbzzt/260301-gasless) ansehen. Der Smart Contract ist bereits auf [Sepolia](https://sepolia.dev/) unter der Adresse [`0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA) bereitgestellt.
+Die Beispielanwendung hier ist eine Variante des `Greeter`-Vertrags von Hardhat. Sie können sie [auf GitHub](https://github.com/qbzzt/260301-gasless) ansehen. Der Smart Contract ist bereits auf [Sepolia](https://sepolia.dev/) unter der Adresse [`0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA`](https://eth-sepolia.blockscout.com/address/0xC87506C66c7896366b9E988FE0aA5B6dDE77CFfA) bereitgestellt.
 
-Um sie in Aktion zu sehen, befolgen Sie diese Schritte.
+Um sie in Aktion zu sehen, folgen Sie diesen Schritten.
 
 1. Klonen Sie das Repository und installieren Sie die erforderliche Software.
 
@@ -39,19 +39,19 @@ Um sie in Aktion zu sehen, befolgen Sie diese Schritte.
    git clone https://github.com/qbzzt/260301-gasless.git
    cd 260301-gasless/server
    npm install
-```
+   ```
 
-2. Bearbeiten Sie `.env`, um `PRIVATE_KEY` auf ein Wallet zu setzen, das ETH auf Sepolia hat. Wenn Sie Sepolia-ETH benötigen, [verwenden Sie ein Faucet](/developers/docs/networks/#sepolia). Idealerweise sollte sich dieser Private-Key von dem in Ihrem Browser-Wallet unterscheiden.
+2. Bearbeiten Sie `.env`, um `PRIVATE_KEY` auf eine Wallet zu setzen, die ETH auf Sepolia hat. Wenn Sie Sepolia-ETH benötigen, [nutzen Sie ein Faucet](/developers/docs/networks/#sepolia). Idealerweise sollte dieser private Schlüssel ein anderer sein als der in Ihrer Browser-Wallet.
 
 3. Starten Sie den Server.
 
    ```sh
    npm run dev
-```
+   ```
 
 4. Rufen Sie die Anwendung unter der URL [`http://localhost:5173`](http://localhost:5173) auf.
 
-5. Klicken Sie auf **Connect with Injected**, um sich mit einem Wallet zu verbinden. Bestätigen Sie dies im Wallet und genehmigen Sie bei Bedarf den Wechsel zu Sepolia.
+5. Klicken Sie auf **Connect with Injected**, um sich mit einer Wallet zu verbinden. Genehmigen Sie dies in der Wallet und genehmigen Sie bei Bedarf den Wechsel zu Sepolia.
 
 6. Schreiben Sie eine neue Begrüßung und klicken Sie auf **Update greeting via sponsor**.
 
@@ -59,7 +59,7 @@ Um sie in Aktion zu sehen, befolgen Sie diese Schritte.
 
 8. Warten Sie etwa 12 Sekunden (die Blockzeit auf Sepolia). Während Sie warten, können Sie sich die URL in der Serverkonsole ansehen, um die Transaktion zu sehen.
 
-9. Sehen Sie, dass sich die Begrüßung geändert hat und dass der Wert der Adresse, die zuletzt aktualisiert hat, nun die Adresse Ihres Browser-Wallets ist.
+9. Sehen Sie, dass sich die Begrüßung geändert hat und dass der Wert der zuletzt aktualisierten Adresse nun die Adresse Ihrer Browser-Wallet ist.
 
 Um zu verstehen, wie das funktioniert, müssen wir uns ansehen, wie die Nachricht in der Benutzeroberfläche erstellt wird, wie sie vom Server weitergeleitet wird und wie der Smart Contract sie verarbeitet.
 
@@ -91,9 +91,9 @@ Wenn es kein Konto gibt, wird ein Fehler ausgelöst. Dies sollte niemals passier
         }
 ```
 
-Parameter für den [Domain-Separator](https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator). Dieser Wert ist konstant, daher könnten wir ihn in einer besser optimierten Implementierung einmal berechnen, anstatt ihn bei jedem Aufruf der Funktion neu zu berechnen.
+Parameter für den [Domain-Separator](https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator). Dieser Wert ist konstant, daher könnten wir ihn in einer besser optimierten Implementierung einmal berechnen, anstatt ihn bei jedem Funktionsaufruf neu zu berechnen.
 
-- `name` ist ein für den Nutzer lesbarer Name, wie z. B. der Name der Dapp, für die wir Signaturen erstellen.
+- `name` ist ein für den Nutzer lesbarer Name, wie zum Beispiel der Name der Dapp, für die wir Signaturen erstellen.
 - `version` ist die Version. Verschiedene Versionen sind nicht kompatibel.
 - `chainId` ist die Chain, die wir verwenden, wie sie [von WAGMI](https://wagmi.sh/react/api/hooks/useChainId) bereitgestellt wird.
 - `verifyingContract` ist die Vertragsadresse, die diese Signatur verifizieren wird. Wir möchten nicht, dass dieselbe Signatur für mehrere Verträge gilt, falls es mehrere `Greeter`-Verträge gibt und wir möchten, dass sie unterschiedliche Begrüßungen haben.
@@ -147,7 +147,7 @@ Die Funktion gibt einen einzelnen hexadezimalen Wert zurück. Hier teilen wir ih
 )
 ```
 
-Wenn sich eine dieser Variablen ändert, erstellen Sie eine neue Instanz der Funktion. Die Parameter `account` und `chainId` können vom Nutzer im Wallet geändert werden. `contractAddr` ist eine Funktion der Chain-ID. `signTypedDataAsync` sollte sich nicht ändern, aber wir importieren es aus [einem Hook](https://wagmi.sh/react/api/hooks/useSignTypedData), daher können wir nicht sicher sein, und es ist am besten, es hier hinzuzufügen.
+Wenn sich eine dieser Variablen ändert, erstellen Sie eine neue Instanz der Funktion. Die Parameter `account` und `chainId` können vom Nutzer in der Wallet geändert werden. `contractAddr` ist eine Funktion der Chain-ID. `signTypedDataAsync` sollte sich nicht ändern, aber wir importieren es aus [einem Hook](https://wagmi.sh/react/api/hooks/useSignTypedData), daher können wir nicht sicher sein, und es ist am besten, es hier hinzuzufügen.
 
 Nachdem die neue Begrüßung nun signiert ist, müssen wir sie an den Server senden.
 
@@ -172,7 +172,7 @@ Senden Sie an den Pfad `/server/sponsor` auf dem Server, von dem wir gekommen si
       })
 ```
 
-Verwenden Sie `POST`, um die Informationen JSON-codiert zu senden.
+Verwenden Sie `POST`, um die Informationen JSON-kodiert zu senden.
 
 ```js
       const data = await response.json()
@@ -187,9 +187,9 @@ Geben Sie die Antwort aus. Auf einem Produktionssystem würden wir die Antwort a
 
 ### Der Server {#server}
 
-Ich verwende gerne [Vite](https://vite.dev/) als mein Front-End. Es stellt automatisch die React-Bibliotheken bereit und aktualisiert den Browser, wenn sich der Front-End-Code ändert. Vite enthält jedoch keine Backend-Tools.
+Ich verwende gerne [Vite](https://vite.dev/) als mein Frontend. Es stellt automatisch die React-Bibliotheken bereit und aktualisiert den Browser, wenn sich der Frontend-Code ändert. Vite enthält jedoch keine Backend-Tools.
 
-Die Lösung befindet sich in [`index.js`](https://github.com/qbzzt/260301-gasless/blob/main/server/index.js).
+Die Lösung findet sich in [`index.js`](https://github.com/qbzzt/260301-gasless/blob/main/server/index.js).
 
 ```js
   app.post("/server/sponsor", async (req, res) => {
@@ -245,7 +245,7 @@ Schließlich muss [`Greeter.sol`](https://github.com/qbzzt/260301-gasless/blob/m
     }
 ```
 
-Der Konstruktor erstellt den [Domain-Separator](https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator), ähnlich wie der obige Benutzeroberflächen-Code. Die Ausführung auf der Blockchain ist viel teurer, daher berechnen wir ihn nur einmal.
+Der Konstruktor erstellt den [Domain-Separator](https://eips.ethereum.org/EIPS/eip-712#definition-of-domainseparator), ähnlich wie der Benutzeroberflächen-Code oben. Die Ausführung auf der Blockchain ist viel teurer, daher berechnen wir ihn nur einmal.
 
 ```solidity
     struct GreetingRequest {
@@ -289,7 +289,7 @@ Diese Funktion empfängt eine signierte Anfrage und aktualisiert die Begrüßung
         );
 ```
 
-Erstellen Sie den Digest in Übereinstimmung mit [EIP 712](https://eips.ethereum.org/EIPS/eip-712).
+Erstellen Sie den Digest in Übereinstimmung mit [EIP-712](https://eips.ethereum.org/EIPS/eip-712).
 
 ```solidity
         // Signer wiederherstellen
@@ -312,13 +312,13 @@ Aktualisieren Sie die Begrüßung.
 
 Dies ist _kein_ produktionsreifer Code. Er ist anfällig für erhebliche Angriffe und es fehlen wichtige Funktionen. Hier sind einige davon, zusammen mit Lösungsansätzen.
 
-Um einige dieser Angriffe zu sehen, klicken Sie auf die Schaltflächen unter der Überschrift _Attacks_ und sehen Sie, was passiert. Für die Schaltfläche **Invalid signature** überprüfen Sie die Serverkonsole, um die Transaktionsantwort zu sehen.
+Um einige dieser Angriffe zu sehen, klicken Sie auf die Schaltflächen unter der Überschrift _Attacks_ und beobachten Sie, was passiert. Für die Schaltfläche **Invalid signature** überprüfen Sie die Serverkonsole, um die Transaktionsantwort zu sehen.
 
 ### Denial-of-Service auf dem Server {#dos-on-server}
 
 Der einfachste Angriff ist ein [Denial-of-Service](https://en.wikipedia.org/wiki/Denial-of-service_attack)-Angriff auf den Server. Der Server empfängt Anfragen von überall im Internet und sendet basierend auf diesen Anfragen Transaktionen. Es gibt absolut nichts, was einen Angreifer daran hindert, eine Reihe von Signaturen auszustellen, ob gültig oder ungültig. Jede wird eine Transaktion verursachen. Letztendlich wird dem Server das ETH ausgehen, um für Gas zu bezahlen.
 
-Eine Lösung für dieses Problem besteht darin, die Rate auf eine Transaktion pro Block zu begrenzen. Wenn der Zweck darin besteht, Begrüßungen für [Extern verwaltete Konten](/developers/docs/accounts/#key-differences) anzuzeigen, spielt es ohnehin keine Rolle, wie die Begrüßung in der Mitte des Blocks lautet.
+Eine Lösung für dieses Problem besteht darin, die Rate auf eine Transaktion pro Block zu begrenzen. Wenn der Zweck darin besteht, Begrüßungen für [extern verwaltete Konten (Externally Owned Accounts)](/developers/docs/accounts/#key-differences) anzuzeigen, spielt es ohnehin keine Rolle, wie die Begrüßung in der Mitte des Blocks lautet.
 
 Eine weitere Lösung besteht darin, Adressen nachzuverfolgen und nur Signaturen von gültigen Kunden zuzulassen.
 
@@ -330,9 +330,9 @@ Um dieses Problem zu lösen, fügen Sie die Adresse zur [signierten Struktur](ht
 
 ### Replay-Angriffe {#replay-attack}
 
-Wenn Sie auf **Replay attack** klicken, übermitteln Sie dieselbe Signatur „Ich bin 0xaA92c5d426430D4769c9E878C1333BDe3d689b3e und ich möchte, dass die Begrüßung `Hello` lautet“, aber mit der korrekten Begrüßung. Infolgedessen glaubt der Smart Contract, dass die Adresse (die nicht Ihre ist) die Begrüßung wieder in `Hello` geändert hat. Die Informationen dazu sind öffentlich in den [Transaktionsinformationen](https://eth-sepolia.blockscout.com/tx/0xa66afe4bbf886f59533e677a798c802ceab1ac0f9db6e83a4d4b59a45cf7c1b1) verfügbar.
+Wenn Sie auf **Replay attack** klicken, übermitteln Sie dieselbe Signatur „Ich bin 0xaA92c5d426430D4769c9E878C1333BDe3d689b3e und ich möchte, dass die Begrüßung `Hello` lautet“, aber mit der richtigen Begrüßung. Infolgedessen glaubt der Smart Contract, dass die Adresse (die nicht Ihre ist) die Begrüßung wieder in `Hello` geändert hat. Die Informationen, um dies zu tun, sind öffentlich in den [Transaktionsinformationen](https://eth-sepolia.blockscout.com/tx/0xa66afe4bbf886f59533e677a798c802ceab1ac0f9db6e83a4d4b59a45cf7c1b1) verfügbar.
 
-Wenn dies ein Problem darstellt, besteht eine Lösung darin, eine [Nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) hinzuzufügen. Erstellen Sie ein [Mapping](https://docs.soliditylang.org/en/latest/types.html#mapping-types) zwischen Adressen und Zahlen und fügen Sie der Signatur ein Nonce-Feld hinzu. Wenn das Nonce-Feld mit dem Mapping für die Adresse übereinstimmt, akzeptieren Sie die Signatur und erhöhen Sie das Mapping für das nächste Mal. Wenn nicht, lehnen Sie die Transaktion ab.
+Wenn dies ein Problem darstellt, ist eine Lösung das Hinzufügen einer [Nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce). Erstellen Sie ein [Mapping](https://docs.soliditylang.org/en/latest/types.html#mapping-types) zwischen Adressen und Zahlen und fügen Sie der Signatur ein Nonce-Feld hinzu. Wenn das Nonce-Feld mit dem Mapping für die Adresse übereinstimmt, akzeptieren Sie die Signatur und erhöhen Sie das Mapping für das nächste Mal. Wenn nicht, lehnen Sie die Transaktion ab.
 
 Eine weitere Lösung besteht darin, den signierten Daten einen Zeitstempel hinzuzufügen und die Signatur nur für wenige Sekunden nach diesem Zeitstempel als gültig zu akzeptieren. Dies ist einfacher und billiger, aber wir riskieren Replay-Angriffe innerhalb des Zeitfensters und das Fehlschlagen legitimer Transaktionen, wenn das Zeitfenster überschritten wird.
 
@@ -342,22 +342,22 @@ Es gibt zusätzliche Funktionen, die wir in einer Produktionsumgebung hinzufüge
 
 ### Zugriff von anderen Servern {#other-servers}
 
-Derzeit erlauben wir jeder Adresse, ein `sponsorSetGreeting` zu übermitteln. Dies könnte im Interesse der Dezentralisierung genau das sein, was wir wollen. Oder vielleicht möchten wir sicherstellen, dass gesponserte Transaktionen über _unseren_ Server laufen, in welchem Fall wir `msg.sender` im Smart Contract überprüfen würden.
+Derzeit erlauben wir jeder Adresse, ein `sponsorSetGreeting` einzureichen. Dies könnte im Interesse der Dezentralisierung genau das sein, was wir wollen. Oder vielleicht möchten wir sicherstellen, dass gesponserte Transaktionen über _unseren_ Server laufen; in diesem Fall würden wir `msg.sender` im Smart Contract überprüfen.
 
 So oder so sollte dies eine bewusste Designentscheidung sein und nicht nur das Ergebnis davon, dass man nicht über das Problem nachgedacht hat.
 
 ### Fehlerbehandlung {#error-handling}
 
-Ein Nutzer übermittelt eine Begrüßung. Vielleicht wird sie beim nächsten Block aktualisiert. Vielleicht auch nicht. Fehler sind unsichtbar. Auf einem Produktionssystem sollte der Nutzer zwischen diesen Fällen unterscheiden können:
+Ein Nutzer reicht eine Begrüßung ein. Vielleicht wird sie beim nächsten Block aktualisiert. Vielleicht auch nicht. Fehler sind unsichtbar. Auf einem Produktionssystem sollte der Nutzer zwischen diesen Fällen unterscheiden können:
 
-- Die neue Begrüßung wurde noch nicht übermittelt
-- Die neue Begrüßung wurde übermittelt und wird verarbeitet
+- Die neue Begrüßung wurde noch nicht eingereicht
+- Die neue Begrüßung wurde eingereicht und wird verarbeitet
 - Die neue Begrüßung wurde abgelehnt
 
 ## Fazit {#conclusion}
 
 An diesem Punkt sollten Sie in der Lage sein, ein gasloses Erlebnis für die Nutzer Ihrer Dapp zu schaffen, auf Kosten einer gewissen Zentralisierung.
 
-Dies funktioniert jedoch nur mit Smart Contracts, die ERC-712 unterstützen. Um beispielsweise einen ERC-20-Token zu übertragen, ist es erforderlich, dass die Transaktion vom Eigentümer signiert wird und nicht nur eine Nachricht. Die Lösung ist die [Kontoabstraktion (ERC-4337)](https://docs.erc4337.io/index.html). Ich hoffe, in Zukunft ein Tutorial darüber zu schreiben.
+Dies funktioniert jedoch nur mit Smart Contracts, die ERC-712 unterstützen. Um beispielsweise einen ERC-20-Token zu transferieren, ist es erforderlich, dass die Transaktion vom Eigentümer signiert wird und nicht nur eine Nachricht. Die Lösung ist die [Kontoabstraktion (ERC-4337)](https://docs.erc4337.io/index.html). Ich hoffe, in Zukunft ein Tutorial darüber zu schreiben.
 
-[Sehen Sie hier für weitere meiner Arbeiten](https://cryptodocguy.pro/).
+[Sehen Sie hier mehr von meiner Arbeit](https://cryptodocguy.pro/).

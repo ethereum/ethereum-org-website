@@ -31,7 +31,7 @@ const QuizItem = ({
     <ListItem
       className={cn(
         isCompleted ? "text-body-medium" : "text-body",
-        "border-disabled mb-0 border-b py-4 font-bold [counter-increment:_list-counter] lg:px-4"
+        "mb-0 border-b border-disabled py-4 font-bold [counter-increment:_list-counter] lg:px-4"
       )}
     >
       <Flex className="justify-between max-lg:flex-col lg:items-center">

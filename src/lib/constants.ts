@@ -7,7 +7,6 @@ import type { CommunityBlog } from "./types"
 export const OLD_CONTENT_DIR = "src/content" // For old git commit history -- do not remove
 export const CONTENT_DIR = "public/content"
 export const CONTENT_PATH = "/content"
-export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
 export const INTERNAL_TUTORIALS_JSON = "src/data/internalTutorials.json"
@@ -99,6 +98,8 @@ export const WALLETS_FILTERS_DEFAULT = {
   withdraw_crypto: false,
   multisig: false,
   social_recovery: false,
+  eip_4337_support: false,
+  eip_7702_support: false,
   new_to_crypto: false,
 }
 

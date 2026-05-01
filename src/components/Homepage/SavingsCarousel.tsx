@@ -7,7 +7,7 @@ import type { Swiper as SwiperType } from "swiper"
 import { SwiperSlide } from "swiper/react"
 
 import { Image } from "@/components/Image"
-import Link from "@/components/ui/Link"
+import Link, { LinkWithArrow } from "@/components/ui/Link"
 import {
   SectionContent,
   SectionHeader,
@@ -193,7 +193,7 @@ const ComparisonCard = ({
       <FloatingCard variant={variant}>
         <p
           className={cn(
-            "text-sm font-semibold uppercase tracking-wider",
+            "text-sm font-semibold tracking-wider uppercase",
             !isPrimary && "text-body-medium"
           )}
         >
@@ -250,7 +250,7 @@ const SlideContent = ({
       <SectionContent className="order-2 flex flex-col gap-6 md:order-1 md:max-w-[660px] md:gap-10">
         <div className="flex flex-col gap-2">
           <SectionTag variant="plain">{slide.tag}</SectionTag>
-          <SectionHeader className="!mb-0 !mt-0 md:text-6xl">
+          <SectionHeader className="!mt-0 !mb-0 md:text-6xl">
             {slide.title}
           </SectionHeader>
         </div>
@@ -260,7 +260,7 @@ const SlideContent = ({
           <p>{slide.description}</p>
         </div>
 
-        <Link
+        <LinkWithArrow
           href={slide.href}
           className="no-underline"
           customEventOptions={{
@@ -270,7 +270,7 @@ const SlideContent = ({
           }}
         >
           {slide.cta}
-        </Link>
+        </LinkWithArrow>
 
         {/* Mobile comparison cards - stacked below content */}
         <div className="flex flex-col gap-5 md:hidden">

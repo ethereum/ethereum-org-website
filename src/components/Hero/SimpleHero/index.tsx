@@ -50,7 +50,7 @@ const SimpleHero = ({
     >
       {breadcrumbs}
       <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">{title}</h1>
-      <div className="text-body-medium text-xl leading-[1.4]">{subtitle}</div>
+      <div className="text-xl leading-[1.4] text-body-medium">{subtitle}</div>
       {buttons && buttons.length > 0 && (
         <div className="flex flex-wrap gap-4">
           {buttons.map((button, index) => (

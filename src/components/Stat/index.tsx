@@ -40,7 +40,7 @@ const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
 
   return (
     <Flex className="flex-col-reverse">
-      <div className="text-body-medium flex items-center space-x-2 leading-none">
+      <div className="flex items-center space-x-2 leading-none text-body-medium">
         <span>{label}</span>
         {!!tooltipProps && (
           <Tooltip {...tooltipProps} asChild>

@@ -2215,7 +2215,7 @@ function normalizeFrontmatterDates(content: string): {
   )
 
   if (frontmatter !== originalFrontmatter) {
-    content = content.replace(frontmatterRe, `---\n${frontmatter}\n---`)
+    content = content.replace(frontmatterRe, () => `---\n${frontmatter}\n---`)
   }
 
   return { content, fixCount }
@@ -2224,6 +2224,19 @@ function normalizeFrontmatterDates(content: string): {
 /**
  * Sync protected frontmatter fields from English source.
  * These fields should never be translated (e.g., template, sidebar).
+ *
+ * Includes /videos taxonomy and metadata fields. Per the videos
+ * frontmatter spec:
+ *   TRANSLATE: title, description, breadcrumb
+ *   COPY FROM ENGLISH: uploadDate, duration, educationLevel, youtubeId,
+ *     format, topic
+ *   FROM PATH: lang (handled by fixFrontmatterLang)
+ *   author follows the existing per-locale rule (transliterated for
+ *     non-Latin locales, copied from English otherwise).
+ *
+ * `topic:` is a YAML array (inline or multi-line) of taxonomy slugs.
+ * Translating its values fragments site-wide topic filtering, so the
+ * entire array block is replaced with the English source verbatim.
  */
 function syncProtectedFrontmatterFields(
   translatedMd: string,
@@ -2253,6 +2266,12 @@ function syncProtectedFrontmatterFields(
     "showDropdown",
     "image",
     "blurDataURL",
+    // /videos taxonomy and metadata fields
+    "uploadDate",
+    "duration",
+    "educationLevel",
+    "youtubeId",
+    "format",
   ]
   let fixCount = 0
 
@@ -2285,21 +2304,33 @@ function syncProtectedFrontmatterFields(
       const cleanEnglish = englishValue.replace(/^["']|["']$/g, "")
 
       if (cleanTranslated !== cleanEnglish) {
-        // Replace with English value
+        // Replace with English value. Callback form prevents `$` in the
+        // English value from being interpreted as a regex backreference.
         transFrontmatter = transFrontmatter.replace(
           transFieldRe,
-          `${field}: ${englishValue}`
+          () => `${field}: ${englishValue}`
         )
         fixCount++
       }
     }
   }
 
+  // topic: array (taxonomy slugs) -- copy whole block verbatim from English.
+  // Match either inline `topic: [...]` or multi-line `topic:\n  - ...`.
+  // The block ends at the next top-level YAML key or the end of frontmatter.
+  const topicBlockRe = /^topic:[ \t]*(?:\[[^\]]*\]|(?:\n[ \t]+(?:-|#)[^\n]*)+)/m
+  const engTopic = engFrontmatter.match(topicBlockRe)
+  const transTopic = transFrontmatter.match(topicBlockRe)
+  if (engTopic && transTopic && engTopic[0] !== transTopic[0]) {
+    transFrontmatter = transFrontmatter.replace(topicBlockRe, () => engTopic[0])
+    fixCount++
+  }
+
   if (fixCount > 0) {
     return {
       content: translatedMd.replace(
         frontmatterRe,
-        `---\n${transFrontmatter}\n---`
+        () => `---\n${transFrontmatter}\n---`
       ),
       fixCount,
     }
@@ -2333,8 +2364,13 @@ function fixFrontmatterLang(
   if (currentLang === locale) return { content, fixCount: 0 }
 
   const fixedFrontmatter = frontmatter.replace(langRe, `lang: ${locale}`)
+  // Callback form prevents `$N` sequences in the frontmatter (e.g. `$17M`)
+  // from being interpreted as regex backreferences during replacement.
   return {
-    content: content.replace(frontmatterRe, `---\n${fixedFrontmatter}\n---`),
+    content: content.replace(
+      frontmatterRe,
+      () => `---\n${fixedFrontmatter}\n---`
+    ),
     fixCount: 1,
   }
 }
@@ -2409,7 +2445,7 @@ function syncButtonsFrontmatterFields(
   if (fixCount > 0) {
     const newFm = lines.join("\n")
     return {
-      content: translatedMd.replace(frontmatterRe, `---\n${newFm}\n---`),
+      content: translatedMd.replace(frontmatterRe, () => `---\n${newFm}\n---`),
       fixCount,
     }
   }
@@ -2703,7 +2739,7 @@ function quoteFrontmatterNonAscii(content: string): {
 
   frontmatter = lines.join("\n")
   if (frontmatter !== originalFrontmatter) {
-    content = content.replace(frontmatterRe, `---\n${frontmatter}\n---`)
+    content = content.replace(frontmatterRe, () => `---\n${frontmatter}\n---`)
   }
 
   return { content, fixCount }
@@ -2831,8 +2867,16 @@ const RTL_LOCALES = new Set(["ar", "ur"])
  * - HTML attributes: attr="value"
  * - Already-wrapped spans: <span dir="ltr">...</span>
  */
+// Protected zones that RTL "wrap bare LTR" passes must NEVER touch:
+//   - fenced code blocks, inline code
+//   - markdown link URL targets and bare URLs
+//   - existing <span dir="ltr"> wrappers (idempotency)
+//   - HTML/JSX attribute values
+//   - heading-ID anchors `{#...}` -- syncHeaderIdsWithEnglish copies these
+//     verbatim from the English source, and any later span-wrapping inside
+//     the slug breaks markdownlint's custom-id rule and TOC anchors
 const RTL_SKIP_PATTERN =
-  /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`|\]\([^)]+\)|https?:\/\/[^\s<>)]+|<span dir="ltr">[\s\S]*?<\/span>|\w+="[^"]*")/g
+  /(```[\s\S]*?```|~~~[\s\S]*?~~~|`[^`]+`|\]\([^)]+\)|https?:\/\/[^\s<>)]+|<span dir="ltr">[\s\S]*?<\/span>|\w+="[^"]*"|\{#[^}]+\})/g
 
 /**
  * Wrap bare numeric dates in RTL files with <span dir="ltr"> to prevent
@@ -5367,7 +5411,7 @@ function fixDuplicateFrontmatterAuthor(content: string): {
     const fixedFm = fm.replace(dupAuthorRe, "$1")
     fixCount = 1
     return {
-      content: content.replace(frontmatterRe, `---\n${fixedFm}\n---`),
+      content: content.replace(frontmatterRe, () => `---\n${fixedFm}\n---`),
       fixCount,
     }
   }

@@ -22,7 +22,7 @@ import { ContentLayout } from "../ContentLayout"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid-cols-fill-4 grid gap-8" {...props} />
+  <div className="grid grid-cols-fill-4 gap-8" {...props} />
 )
 
 // UseCases layout components

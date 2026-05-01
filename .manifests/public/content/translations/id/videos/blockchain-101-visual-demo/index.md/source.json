@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/blockchain-101-visual-demo/index.md",
+  "generatedAt": "2026-04-28T22:46:59.359Z",
+  "rootHash": "f6f672c04594",
+  "tree": {
+    "contentHash": "b36595b105cf",
+    "anchorHash": "daf98ed19600",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "23a26b8af983",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "ba54093deecd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8aff7d63ece6"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "a2711bc251a8"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e6b0d1e05bfc"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8f45a9eaa723"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "16413c6ab9f4"
+      },
+      "prose:1": {
+        "contentHash": "46535b263c0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "1199f6d3c0e9"
+      },
+      "prose:2": {
+        "contentHash": "717e5fccda00",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "sha-256-hash-001": {
+        "contentHash": "4abedbe874f5",
+        "anchorHash": "960e6df22429",
+        "labelHash": "69f0fcd58d29",
+        "children": {
+          "_label": {
+            "contentHash": "69f0fcd58d29",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "7735d5b81be7",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "15984a5eccf4"
+          },
+          "prose:4": {
+            "contentHash": "a42a4ece21c5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "15984a5eccf4"
+          },
+          "prose:5": {
+            "contentHash": "7570f8b755b2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "a10264cc5148"
+          },
+          "prose:6": {
+            "contentHash": "f0da8e746352",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "inline-code:2",
+          "prose:6"
+        ]
+      },
+      "block-210": {
+        "contentHash": "8c2cfb7057f9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6f466136557d",
+        "children": {
+          "_label": {
+            "contentHash": "6f466136557d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "33ab462a3617",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "blockchain-516": {
+        "contentHash": "d965d9902ae7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e6fba8472eed",
+        "children": {
+          "_label": {
+            "contentHash": "e6fba8472eed",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "3e74e945f9df",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "distributed-blockchain-918": {
+        "contentHash": "e74d20c846e5",
+        "anchorHash": "a7beb6973a8e",
+        "labelHash": "ab235ee4baba",
+        "children": {
+          "_label": {
+            "contentHash": "ab235ee4baba",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:6": {
+            "contentHash": "1e0928186c17",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "82d8961f9730"
+          },
+          "prose:7": {
+            "contentHash": "72768fe54640",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "82d8961f9730"
+          },
+          "prose:8": {
+            "contentHash": "19aef4aefe7a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "82d8961f9730"
+          },
+          "prose:9": {
+            "contentHash": "d220de2cffbd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "82d8961f9730"
+          },
+          "prose:10": {
+            "contentHash": "d081cc8c55c6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:4": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "7a2f56740060"
+          },
+          "prose:11": {
+            "contentHash": "04bfcc1ba276",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:5": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "82d8961f9730"
+          },
+          "prose:12": {
+            "contentHash": "7a19bfefc792",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:6",
+          "inline-code:0",
+          "prose:7",
+          "inline-code:1",
+          "prose:8",
+          "inline-code:2",
+          "prose:9",
+          "inline-code:3",
+          "prose:10",
+          "inline-code:4",
+          "prose:11",
+          "inline-code:5",
+          "prose:12"
+        ]
+      },
+      "tokens-1217": {
+        "contentHash": "8edbff30f988",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "1941b517af83",
+        "children": {
+          "_label": {
+            "contentHash": "1941b517af83",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "00d283261c2f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "coinbase-transaction-1434": {
+        "contentHash": "65f3307da5e0",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c26a6077edb4",
+        "children": {
+          "_label": {
+            "contentHash": "c26a6077edb4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "807ffc189edf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "closing-1630": {
+        "contentHash": "69f365fe9be1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "18d28edfa4b6",
+        "children": {
+          "_label": {
+            "contentHash": "18d28edfa4b6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4a388f8538a3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "sha-256-hash-001",
+      "block-210",
+      "blockchain-516",
+      "distributed-blockchain-918",
+      "tokens-1217",
+      "coinbase-transaction-1434",
+      "closing-1630"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

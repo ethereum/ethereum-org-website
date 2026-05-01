@@ -52,3 +52,4 @@ export const getDeveloperToolsData = () => get<DeveloperToolsDataEnvelope>(KEYS.
 export const getAccountHolders = () => get<MetricReturnData>(KEYS.ACCOUNT_HOLDERS)
 export const getTranslationGlossary = () => get<GlossaryEntry[]>(KEYS.TRANSLATION_GLOSSARY)
 export const getGitHubContributors = () => get<GitHubContributorsData>(KEYS.GITHUB_CONTRIBUTORS)
+export const getVideoThumbnails = () => get<Record<string, string>>(KEYS.VIDEO_THUMBNAILS)
