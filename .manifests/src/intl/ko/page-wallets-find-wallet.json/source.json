@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-wallets-find-wallet.json",
-  "generatedAt": "2026-04-30T20:53:28.026Z",
-  "rootHash": "4cf44ce23966",
+  "generatedAt": "2026-04-30T23:51:45.081Z",
+  "rootHash": "6d7e16f1635c",
   "tree": {
-    "contentHash": "052f37c1b3d2",
-    "anchorHash": "cb2a96a449a4",
+    "contentHash": "f3a64fe4d1aa",
+    "anchorHash": "f99d57092e14",
     "children": {
       "page-find-wallet-clear": {
         "contentHash": "7179ea0035fc",
@@ -384,6 +384,22 @@
         "contentHash": "7968aebf1133",
         "anchorHash": "e3b0c44298fc"
       },
+      "page-find-wallet-smart-accounts": {
+        "contentHash": "13d7887a935f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-smart-accounts-desc": {
+        "contentHash": "c3fbfe0ff448",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-account-upgrades": {
+        "contentHash": "bb189df817fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-find-wallet-account-upgrades-desc": {
+        "contentHash": "85ca72879bfa",
+        "anchorHash": "e3b0c44298fc"
+      },
       "page-find-wallet-see-wallets": {
         "contentHash": "ea0ff8b64bbc",
         "anchorHash": "e3b0c44298fc"
@@ -533,6 +549,10 @@
       "page-find-wallet-empty-results-desc",
       "page-find-wallet-privacy",
       "page-find-wallet-privacy-desc",
+      "page-find-wallet-smart-accounts",
+      "page-find-wallet-smart-accounts-desc",
+      "page-find-wallet-account-upgrades",
+      "page-find-wallet-account-upgrades-desc",
       "page-find-wallet-see-wallets",
       "page-find-wallet-search-languages",
       "page-find-wallet-methodology-title",
@@ -550,5 +570,5 @@
       "page-find-wallet-methodology-filters"
     ]
   },
-  "sourceCommitSha": "7f6aa63d6684192e895001b8c8b0141b10156638"
+  "sourceCommitSha": "4fec705a363c6773a0b9e094f9e66bd54cc83dd5"
 }
