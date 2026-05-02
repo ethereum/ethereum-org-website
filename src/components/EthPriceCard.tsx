@@ -1,6 +1,6 @@
 "use client"
 
-import { Info } from "lucide-react"
+import { ArrowDownRight, ArrowUpRight, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import Tooltip from "@/components/Tooltip"
@@ -8,11 +8,12 @@ import InlineLink from "@/components/ui/Link"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
+import { formatPriceUSD, numberToPercent } from "@/lib/utils/numbers"
 
 import { Flex } from "./ui/flex"
 
 import { useGasEthPrice } from "@/hooks/useGasEthPrice"
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const EthPriceCard = ({
@@ -21,17 +22,12 @@ const EthPriceCard = ({
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const locale = useLocale()
   const { t } = useTranslation()
-  const { ethPrice } = useGasEthPrice()
+  const { ethPrice, ethPercentChange24h } = useGasEthPrice()
+  const { twFlipForRtl } = useRtlFlip()
 
   const isLoading = ethPrice === 0
-
-  const formatPrice = (price: number) =>
-    numberFormat(locale, {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(price)
+  const hasChange = typeof ethPercentChange24h === "number"
+  const isNegativeChange = hasChange && ethPercentChange24h < 0
 
   const tooltipContent = (
     <div>
@@ -45,7 +41,10 @@ const EthPriceCard = ({
   return (
     <Flex
       className={cn(
-        "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border bg-linear-to-t from-success/20 p-6 dark:border-success/50",
+        "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border p-6",
+        isNegativeChange
+          ? "bg-linear-to-b from-error/10 dark:border-error/50"
+          : "bg-linear-to-t from-success/20 dark:border-success/50",
         className
       )}
       {...props}
@@ -57,13 +56,46 @@ const EthPriceCard = ({
         </Tooltip>
       </h4>
 
-      <div className="text-5xl leading-xs">
+      <div className="flex w-full items-center justify-center text-5xl leading-xs">
         {isLoading ? (
-          <Skeleton className="my-4 h-12 w-48" />
+          <Skeleton className="h-[1lh] w-60" />
         ) : (
-          formatPrice(ethPrice)
+          formatPriceUSD(ethPrice, locale)
         )}
       </div>
+
+      {/* min-h-[33px] prevents jump when price loads */}
+      <Flex className="mt-2 min-h-[33px] w-full flex-col-reverse items-center justify-center sm:flex-row">
+        <div className="me-4 flex h-7 w-28 items-center justify-end">
+          {isLoading ? (
+            <Skeleton className="h-full w-full" />
+          ) : (
+            hasChange && (
+              <span
+                className={cn(
+                  "text-2xl leading-xs",
+                  isNegativeChange ? "text-error" : "text-success"
+                )}
+              >
+                {numberToPercent(ethPercentChange24h, locale, {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+                {isNegativeChange ? (
+                  <ArrowDownRight
+                    className={cn(twFlipForRtl, "inline-block")}
+                  />
+                ) : (
+                  <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
+                )}
+              </span>
+            )
+          )}
+        </div>
+        <div className="text-sm leading-xs tracking-wider text-body-medium uppercase">
+          ({t("last-24-hrs")})
+        </div>
+      </Flex>
     </Flex>
   )
 }
