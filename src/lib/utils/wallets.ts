@@ -1,7 +1,7 @@
 import { union } from "lodash"
 
 import { getLanguageCodeName } from "@/lib/utils/intl"
-import { maybeShuffle } from "@/lib/utils/random"
+import { safeShuffle } from "@/lib/utils/random"
 import { capitalize } from "@/lib/utils/string"
 
 import { newToCrypto } from "@/data/wallets/new-to-crypto"
@@ -23,14 +23,14 @@ import type {
 } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
-  maybeShuffle(
+  safeShuffle(
     walletsData.filter((wallet) =>
       wallet.languages_supported.includes(locale as WalletLanguage)
     )
   )
 
 export const getNonSupportedLocaleWallets = (locale: string) =>
-  maybeShuffle(
+  safeShuffle(
     walletsData.filter(
       (wallet) => !wallet.languages_supported.includes(locale as WalletLanguage)
     )

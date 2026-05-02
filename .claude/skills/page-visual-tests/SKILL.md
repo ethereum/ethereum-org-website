@@ -62,7 +62,9 @@ test.describe("Page Visual Tests", () => {
 
 **Adding a page.** Each entry costs three snapshots (one per viewport) against Chromatic's budget, so check whether the page's layout (under `src/layouts/`) is already covered before adding. Scan the page subtree for bespoke loaders — they're the single biggest flake cause — and confirm full-page height stays under the 25M-pixel budget. Local loop: `pnpm test:visual:build` once, then `pnpm test:visual:desktop` for iteration, `pnpm test:visual` for the full sweep.
 
-**Flaky snapshot.** Two main causes. (1) A loader without `data-slot="loading"` — run with `--trace=on` and inspect the `waitForFunction` step; ~0 ms duration means it isn't being waited on. (2) Random ordering — grep the page subtree for `shuffle(`, `Math.random()`, or `.sort(() =>` and route through `maybeShuffle`. If dynamic content is drifting, double-check `USE_MOCK_DATA=true` is set in both build and test steps.
+**Flaky snapshot.** Two main causes. (1) A loader without `data-slot="loading"` — run with `--trace=on` and inspect the `waitForFunction` step; ~0 ms duration means it isn't being waited on. (2) Random ordering — grep the page subtree for `shuffle(`, `Math.random()`, or `.sort(() =>` and route through `safeShuffle`. If dynamic content is drifting, double-check `USE_MOCK_DATA=true` is set in both build and test steps.
+
+**Local `pnpm dev` masks a regression.** `playwright.visual.config.ts` sets `reuseExistingServer: true`, which is correct for CI but means a `pnpm dev` already running on :3000 will be used silently in place of the production build the suite assumes. If a snapshot diff doesn't reproduce in CI, kill the dev server and run `pnpm test:visual:build` to rebuild against the production output before retrying.
 
 **Pixel-limit error.** Measure the page's full-page height at 1024 px; if it exceeds ~24,400 px, the page needs shortening or removal from the suite. Cropping to viewport was considered and rejected — it defeats the below-the-fold regression coverage that justifies using Playwright over Storybook here.
 

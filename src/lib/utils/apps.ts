@@ -3,7 +3,7 @@ import { AppCategory, AppCategoryEnum, AppData } from "@/lib/types"
 import { TagProps } from "@/components/ui/tag"
 
 import { getValidDate } from "@/lib/utils/date"
-import { maybeShuffle } from "@/lib/utils/random"
+import { safeShuffle } from "@/lib/utils/random"
 
 // Get highlighted apps (apps with highlight=true)
 export const getHighlightedApps = (
@@ -15,7 +15,7 @@ export const getHighlightedApps = (
     ? appsData[category]
     : Object.values(appsData).flatMap((categoryApps) => categoryApps)
 
-  const highlightedApps = maybeShuffle(
+  const highlightedApps = safeShuffle(
     appsToFilter.filter((app) => app.highlight)
   )
 
@@ -27,7 +27,7 @@ export const getDiscoverApps = (
   appsData: Record<AppCategory, AppData[]>,
   count?: number
 ) => {
-  const discoverApps = maybeShuffle(
+  const discoverApps = safeShuffle(
     Object.values(appsData)
       .flatMap((categoryDapps) => categoryDapps)
       .filter((app) => app.discover)
@@ -52,7 +52,7 @@ export const parseAppsOfTheWeek = (
 ) => {
   const currentDate = new Date()
 
-  const appsOfTheWeek = maybeShuffle(
+  const appsOfTheWeek = safeShuffle(
     Object.values(appsData)
       .flatMap((categoryApps) => categoryApps)
       .filter((app) => {

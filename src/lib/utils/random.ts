@@ -3,7 +3,7 @@ import { shuffle } from "lodash"
 // Visual test builds set IS_VISUAL_TEST=true to keep list order deterministic
 // across runs. Not tied to USE_MOCK_DATA, which is also used by unit tests and
 // local dev with mocked storage.
-export const maybeShuffle = <T>(list: T[]): T[] =>
+export const safeShuffle = <T>(list: T[]): T[] =>
   process.env.IS_VISUAL_TEST === "true" ? list : shuffle(list)
 
 /**
