@@ -85,7 +85,7 @@ const myComponentVariants = tv({
 })
 ```
 
-Don't use `cva` for new components. (Existing `cva` components are not being migrated.)
+Don't use `cva` for new components. (No bulk migration of existing `cva` components -- swap opportunistically when touching them for other reasons.)
 
 ### `cn` for className merging
 

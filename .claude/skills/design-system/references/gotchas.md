@@ -72,7 +72,7 @@ If you're writing `flex items-center gap-X rounded-Y border bg-... p-Z` to make 
 
 ### Using `cva` for new components
 
-The team prefers `tailwind-variants` (`tv`) for new and refactored work. Existing `cva` components are not being migrated -- don't refactor them unless asked. But for *new* components, use `tv`.
+The team prefers `tailwind-variants` (`tv`) for new and refactored work. No bulk migration of existing `cva` components -- swap to `tv` opportunistically when you're touching one for another reason. For *new* components, always use `tv`.
 
 ## Hidden Side Effects
 

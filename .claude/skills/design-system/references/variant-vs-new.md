@@ -64,7 +64,7 @@ The bar is high. Most "new component" instincts are actually "new variant" insti
 
 ## Adding a Variant with `tailwind-variants` (`tv`)
 
-The team prefers `tv` for new and refactored components. (Existing `cva` components are not being migrated -- don't refactor them unless asked, but use `tv` for new work.)
+The team prefers `tv` for new and refactored components. No bulk migration of existing `cva` components -- swap to `tv` opportunistically when you're already touching one for another reason. For *new* components, always use `tv`.
 
 ### Pattern
 
