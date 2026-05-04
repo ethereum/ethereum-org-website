@@ -25,7 +25,7 @@
   "page-get-eth-dexs-desc": "Bursa terdesentralisasi adalah pasar terbuka untuk ETH dan token lainnya. Mereka menghubungkan pembeli dan penjual secara langsung.",
   "page-get-eth-dexs-desc-2": "Alih-alih menggunakan pihak ketiga tepercaya untuk mengamankan dana dalam transaksi, mereka menggunakan kode. ETH penjual hanya akan ditransfer ketika pembayaran dijamin. Jenis kode ini dikenal sebagai kontrak pintar.",
   "page-get-eth-dexs-desc-3": "Ini berarti ada lebih sedikit batasan geografis dibandingkan dengan alternatif terpusat. Jika seseorang menjual apa yang Anda inginkan dan menerima metode pembayaran yang dapat Anda berikan, Anda siap untuk bertransaksi.",
-  "page-get-eth-dexs-desc-4": "Catatan: banyak DEX menggunakan ether terbungkus (weth) untuk berfungsi. <a href=\"/wrapped-eth\">Pelajari lebih lanjut tentang ether terbungkus</a>.",
+  "page-get-eth-dexs-desc-4": "Catatan: banyak DEX menggunakan ether terbungkus (WETH) untuk berfungsi. <a href=\"/wrapped-eth\">Pelajari lebih lanjut tentang ether terbungkus</a>.",
   "page-get-eth-do-not-copy": "Contoh: Jangan disalin",
   "page-get-eth-exchanges-disclaimer": "Kami mengumpulkan informasi ini secara manual. Jika Anda menemukan sesuatu yang salah, beri tahu kami di",
   "page-get-eth-exchanges-empty-state-text": "Masukkan negara tempat tinggal Anda untuk melihat daftar bursa yang mungkin dapat Anda gunakan",

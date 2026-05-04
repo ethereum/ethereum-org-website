@@ -25,7 +25,7 @@
   "page-get-eth-dexs-desc": "As exchanges descentralizadas são mercados abertos para ETH e outros tokens. Elas conectam compradores e vendedores diretamente.",
   "page-get-eth-dexs-desc-2": "Em vez de usar um terceiro de confiança para proteger os fundos na transação, elas usam código. O ETH do vendedor só será transferido quando o pagamento for garantido. Esse tipo de código é conhecido como contrato inteligente.",
   "page-get-eth-dexs-desc-3": "Isso significa que há menos restrições geográficas do que com alternativas centralizadas. Se alguém estiver vendendo o que você deseja e aceitando um método de pagamento que você pode fornecer, você está pronto para começar.",
-  "page-get-eth-dexs-desc-4": "Nota: muitas DEXs usam ether empacotado (weth) para funcionar. <a href=\"/wrapped-eth\">Aprenda mais sobre ether empacotado</a>.",
+  "page-get-eth-dexs-desc-4": "Nota: muitas DEXs usam ether empacotado (WETH) para funcionar. <a href=\"/wrapped-eth\">Aprenda mais sobre ether empacotado</a>.",
   "page-get-eth-do-not-copy": "Exemplo: Não copie",
   "page-get-eth-exchanges-disclaimer": "Coletamos essas informações manualmente. Se você notar algo errado, avise-nos em",
   "page-get-eth-exchanges-empty-state-text": "Insira seu país de residência para ver uma lista de exchanges que você pode usar",
