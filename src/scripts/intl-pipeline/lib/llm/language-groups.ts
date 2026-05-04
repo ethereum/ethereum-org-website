@@ -64,7 +64,7 @@ function rtlBidiRules(fileType: "markdown" | "json"): string {
   const isMd = fileType === "markdown"
 
   const opener = isMd
-    ? `BiDi rules for RTL -- wrap LTR content in <span dir="ltr">...</span> to prevent layout flipping:`
+    ? `BiDi rules for RTL -- wrap LTR content in <span dir="ltr">...</span> to prevent layout flipping. NEVER use this wrapper inside YAML frontmatter values: the inner double-quote on the dir attribute terminates the outer YAML string and breaks the build. For LTR fragments inside frontmatter values (title, description, breadcrumb), use raw Unicode bidi isolates U+2066 (LRI, open) and U+2069 (PDI, close) instead -- e.g. \`title: "Devconnect Argentina ⁦2025⁩ recap"\`.`
     : `BiDi rules for RTL in JSON values -- isolate LTR content using raw Unicode characters U+2066 (LRI, open) and U+2069 (PDI, close). Do NOT use <span dir="ltr"> tags -- they break next-intl's t() which renders JSON values as plain text, not rich markup.`
 
   const keepUnitsExample = isMd
@@ -138,11 +138,11 @@ ${rtlBidiRules(fileType)}`
 
     case "indic":
       return `${common}
-- Use Western Arabic numerals (1, 2, 3) -- not native numeral scripts.`
+- ALWAYS use Western Arabic numerals (0-9) for ALL digits -- including in headings, numbered lists, dates, statistics, and prose. Never use native numeral scripts (e.g., never ১২৩, never १२३). This applies to the entire site, not just code.`
 
     case "cyrillic":
       return `${common}
-- Use Western Arabic numerals (1, 2, 3) -- not native numeral scripts.
+- ALWAYS use Western Arabic numerals (0-9) for ALL digits -- including in headings, numbered lists, dates, statistics, and prose. Never use native numeral scripts.
 - Use correct grammatical plural categories (one/few/many/other) as appropriate for the target language.`
 
     case "latin":

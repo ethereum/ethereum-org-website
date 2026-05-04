@@ -51,7 +51,7 @@ const ConnectYourWallet = ({
         <div className="hidden flex-col items-center justify-center gap-4 lg:flex">
           {isConnected && <Emoji text="🎉" className="text-[72px]" />}
           {isConnected && (
-            <p className="text-md text-center font-bold">
+            <p className="text-center text-md font-bold">
               {t("page-start-connect-wallet-account-message")}
             </p>
           )}
@@ -102,7 +102,7 @@ const ConnectYourWallet = ({
         <div className="mb-2.5 flex w-full flex-col items-center justify-center gap-4 sm:mb-0 lg:hidden">
           {isConnected && <Emoji text="🎉" className="text-[72px]" />}
           {isConnected && (
-            <p className="text-md text-center font-bold">
+            <p className="text-center text-md font-bold">
               {t("page-start-connect-wallet-account-message")}
             </p>
           )}

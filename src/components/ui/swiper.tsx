@@ -96,7 +96,7 @@ const SwiperNavContainer = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "bg-background-highlight mx-auto flex h-6 w-fit items-center gap-4 rounded-full",
+      "mx-auto flex h-6 w-fit items-center gap-4 rounded-full bg-background-highlight",
       className
     )}
     {...props}

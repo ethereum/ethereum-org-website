@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/understanding-consensus-mechanisms/index.md",
+  "generatedAt": "2026-04-29T06:22:53.275Z",
+  "rootHash": "84506cd0baec",
+  "tree": {
+    "contentHash": "ff95755566f3",
+    "anchorHash": "e14d14156985",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "2513fee6af52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "ab3d8d4805ee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7c58a2b66917"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "21c324048073"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5aaa69e1b248"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "60c68796bab5"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "caa32a83056f"
+      },
+      "prose:1": {
+        "contentHash": "16716183ad44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "54a62316221f"
+      },
+      "prose:2": {
+        "contentHash": "e9249d599754",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-consensus-mechanisms-000": {
+        "contentHash": "99bd37164754",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "22e6d9147648",
+        "children": {
+          "_label": {
+            "contentHash": "22e6d9147648",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5f676218a6e3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "proof-of-work-023": {
+        "contentHash": "06b95ebdf2f5",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ac5b25970eff",
+        "children": {
+          "_label": {
+            "contentHash": "ac5b25970eff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1c19242aba8b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "proof-of-stake-104": {
+        "contentHash": "f1dd2d631d10",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "66e4a8cf8cdf",
+        "children": {
+          "_label": {
+            "contentHash": "66e4a8cf8cdf",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5d2ba6d8e316",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "proof-of-authority-142": {
+        "contentHash": "a18ba0f8d1b3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bf6bd2535574",
+        "children": {
+          "_label": {
+            "contentHash": "bf6bd2535574",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "30d33c63411f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "hybrid-consensus-models-214": {
+        "contentHash": "611ec0a34308",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7015332d9d51",
+        "children": {
+          "_label": {
+            "contentHash": "7015332d9d51",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f73e854af2c8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "privacy-and-student-data-302": {
+        "contentHash": "a61c4a6b38cf",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "22e9701ef6f8",
+        "children": {
+          "_label": {
+            "contentHash": "22e9701ef6f8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0d7a4b0b4962",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "closing-337": {
+        "contentHash": "8d0316ca44f7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "16b05a765a30",
+        "children": {
+          "_label": {
+            "contentHash": "16b05a765a30",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2d245b9e77cb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "what-are-consensus-mechanisms-000",
+      "proof-of-work-023",
+      "proof-of-stake-104",
+      "proof-of-authority-142",
+      "hybrid-consensus-models-214",
+      "privacy-and-student-data-302",
+      "closing-337"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

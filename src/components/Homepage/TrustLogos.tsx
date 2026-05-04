@@ -1,8 +1,8 @@
-import { ArrowRight, Check } from "lucide-react"
+import { Check } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import { BaseLink } from "@/components/ui/Link"
+import { LinkWithArrow } from "@/components/ui/Link"
 import {
   Section,
   SectionContent,
@@ -50,22 +50,22 @@ const TrustLogos = async ({
           </div>
 
           <FloatingCard className="absolute top-8 -left-4 z-10 shadow-lg md:top-12 lg:-left-8">
-            <p className="text-body text-lg font-bold md:text-xl lg:text-2xl">
+            <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
               {t("page-index-trust-never-offline")}
             </p>
             <div className="mt-1 flex items-center gap-1 md:mt-2">
-              <Check className="text-success size-3 md:size-4" />
-              <span className="text-success text-xs font-semibold md:text-sm">
+              <Check className="size-3 text-success md:size-4" />
+              <span className="text-xs font-semibold text-success md:text-sm">
                 {t("page-index-trust-uptime", { uptime })}
               </span>
             </div>
           </FloatingCard>
 
           <FloatingCard className="absolute -right-4 bottom-12 z-10 shadow-lg md:-right-6 lg:-right-12">
-            <p className="text-body text-lg font-bold md:text-xl lg:text-2xl">
+            <p className="text-lg font-bold text-body md:text-xl lg:text-2xl">
               {t("page-index-trust-years", { count })}
             </p>
-            <p className="text-body-medium mt-1 text-xs md:text-sm">
+            <p className="mt-1 text-xs text-body-medium md:text-sm">
               {t("page-index-trust-since")}
             </p>
           </FloatingCard>
@@ -80,15 +80,13 @@ const TrustLogos = async ({
           </SectionHeader>
         </div>
 
-        <div className="text-body-medium flex flex-col gap-6 text-lg leading-relaxed lg:text-2xl lg:leading-relaxed">
+        <div className="flex flex-col gap-6 text-lg leading-relaxed text-body-medium lg:text-2xl lg:leading-relaxed">
           <p>{t("page-index-trust-description-1")}</p>
           <p>{t("page-index-trust-description-2")}</p>
         </div>
 
-        <BaseLink
+        <LinkWithArrow
           href="/get-eth/"
-          className="inline-flex items-center gap-1 no-underline"
-          hideArrow
           customEventOptions={{
             eventCategory,
             eventAction: "section_click",
@@ -96,8 +94,7 @@ const TrustLogos = async ({
           }}
         >
           {t("page-index-trust-cta")}
-          <ArrowRight className="size-4" />
-        </BaseLink>
+        </LinkWithArrow>
       </SectionContent>
     </Section>
   )

@@ -6,7 +6,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
-import { formatCompactNumber } from "@/lib/utils/numbers"
+import { formatSmallUSD } from "@/lib/utils/numbers"
 
 import freeAccessImage from "@/public/images/homepage/features/free-access.png"
 import globalImage from "@/public/images/homepage/features/global.png"
@@ -25,14 +25,12 @@ const FeatureCards = async ({
   const t = await getTranslations("page-index")
   const locale = await getLocale()
 
-  const volume = formatCompactNumber(4_600_000_000, locale, {
-    maximumSignificantDigits: 2,
-  })
+  const volume = formatSmallUSD(4_600_000_000, locale)
 
   return (
     <Section
       className={cn(
-        "bg-background-highlight rounded-none py-20 lg:py-24",
+        "rounded-none bg-background-highlight py-20 lg:py-24",
         className
       )}
     >
@@ -44,7 +42,7 @@ const FeatureCards = async ({
               {t("page-index-features-title-highlight")}
             </span>
           </SectionHeader>
-          <p className="text-body-medium max-w-xl text-lg">
+          <p className="max-w-xl text-lg text-body-medium">
             {t("page-index-features-subtitle")}
           </p>
         </div>
@@ -91,7 +89,7 @@ const FeatureCards = async ({
               </div>
             </div>
 
-            <div className="bg-background relative overflow-hidden rounded-3xl border p-8 lg:col-span-5">
+            <div className="relative overflow-hidden rounded-3xl border bg-background p-8 lg:col-span-5">
               <Image
                 src={publicRulesImage}
                 alt=""
@@ -103,7 +101,7 @@ const FeatureCards = async ({
                 <h3 className="mb-4 text-4xl font-black lg:text-5xl">
                   {t("page-index-features-public-rules-title")}
                 </h3>
-                <p className="text-body max-w-xs">
+                <p className="max-w-xs text-body">
                   {t("page-index-features-public-rules-description")}
                 </p>
               </div>
@@ -111,7 +109,7 @@ const FeatureCards = async ({
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-background relative overflow-hidden rounded-3xl border p-8">
+            <div className="relative overflow-hidden rounded-3xl border bg-background p-8">
               <Image
                 src={globalImage}
                 alt=""
@@ -129,7 +127,7 @@ const FeatureCards = async ({
               </div>
             </div>
 
-            <div className="bg-background relative overflow-hidden rounded-3xl border p-8">
+            <div className="relative overflow-hidden rounded-3xl border bg-background p-8">
               <Image
                 src={freeAccessImage}
                 alt=""
@@ -147,7 +145,7 @@ const FeatureCards = async ({
               </div>
             </div>
 
-            <div className="border-body rounded-3xl border p-8 md:col-span-2 lg:col-span-1">
+            <div className="rounded-3xl border border-body p-8 md:col-span-2 lg:col-span-1">
               <h3 className="mb-3 text-3xl font-black">
                 {t("page-index-features-nobody-owns-title")}
               </h3>

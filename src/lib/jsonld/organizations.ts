@@ -1,3 +1,5 @@
+import { REFERENCE } from "./references"
+
 /**
  * Known Organization profiles for JSON-LD attribution
  *
@@ -6,6 +8,39 @@
  * (e.g. podcasts, video channels, events).
  */
 export const KNOWN_ORGANIZATIONS = {
+  /**
+   * Ethereum Foundation organization definition
+   * Can be used as publisher, maintainer, author, etc.
+   */
+  "ethereum-foundation": {
+    "@type": "Organization" as const,
+    name: "Ethereum Foundation",
+    url: "https://ethereum.foundation",
+    ownershipFundingInfo: "https://ethereum.foundation/ef",
+    logo: "https://ethereum.org/images/ef-logo.png",
+    sameAs: [
+      "https://www.wikidata.org/wiki/Q114736857",
+      "https://www.crunchbase.com/organization/ethereum",
+      "https://x.com/ethereumfndn",
+      "https://www.linkedin.com/company/ethereum-foundation",
+    ],
+    ...REFERENCE.ETHEREUM_FOUNDATION,
+  },
+
+  /**
+   * Ethereum Community contributor organization
+   */
+  "ethereum-community": {
+    "@type": "Organization" as const,
+    name: "Ethereum Community",
+    url: "https://github.com/ethereum/ethereum-org-website/graphs/contributors",
+    description: "A global collective of open-source contributors.",
+    ...REFERENCE.ETHEREUM_COMMUNITY,
+  },
+
+  /**
+   * Other known organizations
+   */
   bankless: {
     "@type": "Organization" as const,
     "@id": "https://ethereum.org/#bankless",

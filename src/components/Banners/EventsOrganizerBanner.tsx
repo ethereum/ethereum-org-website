@@ -15,7 +15,7 @@ function EventsOrganizerBanner({
     <aside
       className={cn(
         "flex flex-col rounded md:flex-row",
-        "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r",
+        "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
         className
       )}
       {...props}
@@ -41,7 +41,7 @@ function EventsOrganizerBanner({
       >
         <Stack className="px-2">
           <h2>Planning an Ethereum event?</h2>
-          <p className="text-body text-lg">
+          <p className="text-lg text-body">
             Check out the Ethereum event guide built by the community, for the
             community.
           </p>

@@ -8,7 +8,6 @@ import remarkSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkHeadingId from "remark-heading-id"
 
-import { CONTENT_DIR, CONTENT_PATH } from "../constants"
 import { Frontmatter, Layout, TocNodeType } from "../types"
 
 import { escapeHeadingIds } from "@/lib/md/escapeHeadingIds"
@@ -40,8 +39,8 @@ export const compile = async ({
     tocNodeItems = "items" in toc ? toc.items : []
   }
 
-  const mdPath = join(CONTENT_PATH, ...slugArray)
-  const mdDir = join(CONTENT_DIR, ...slugArray)
+  const mdPath = join("/content", ...slugArray)
+  const mdDir = join("public/content", ...slugArray)
 
   const mdxOptions = {
     remarkPlugins: [

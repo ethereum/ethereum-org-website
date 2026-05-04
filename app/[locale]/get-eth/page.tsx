@@ -86,7 +86,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
       alt: "",
     },
     {
-      title: "Bancor",
+      title: "Carbon DeFi",
       link: "https://www.carbondefi.xyz/",
       image: bancor,
       alt: "",
@@ -138,7 +138,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 <h1 className="my-8 text-4xl md:text-5xl">
                   {t("page-get-eth-where-to-buy-title")}
                 </h1>
-                <p className="text-body-medium mb-0 max-w-[45ch] text-center text-xl leading-snug">
+                <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">
                   {t("page-get-eth-where-to-buy-desc")}
                 </p>
                 <br />
@@ -239,7 +239,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               id="country-picker"
               className={cn(
                 "-mx-8 my-0 flex flex-col items-center px-8 py-16 sm:p-16 md:my-16 lg:mx-0",
-                "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r"
+                "bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
               )}
             >
               <div className="flex flex-col items-center">
@@ -344,10 +344,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                     </h3>
                     <p>{t("page-get-eth-your-address-desc")}</p>
                     <div className="mb-6 flex flex-col-reverse justify-between rounded bg-[#191919] p-2 select-none lg:flex-row">
-                      <p className="font-monospace mb-0 text-xs text-white">
+                      <p className="mb-0 font-monospace text-xs text-white">
                         0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
                       </p>
-                      <p className="text-error mx-4 mb-0 text-sm uppercase">
+                      <p className="mx-4 mb-0 text-sm text-error uppercase">
                         {t("page-get-eth-do-not-copy")}
                       </p>
                     </div>

@@ -7,7 +7,7 @@ import type { Swiper as SwiperType } from "swiper"
 import { SwiperSlide } from "swiper/react"
 
 import { Image } from "@/components/Image"
-import Link from "@/components/ui/Link"
+import Link, { LinkWithArrow } from "@/components/ui/Link"
 import {
   SectionContent,
   SectionHeader,
@@ -255,12 +255,12 @@ const SlideContent = ({
           </SectionHeader>
         </div>
 
-        <div className="text-body-medium flex flex-col gap-4 text-lg leading-relaxed md:gap-6 lg:text-2xl lg:leading-relaxed">
+        <div className="flex flex-col gap-4 text-lg leading-relaxed text-body-medium md:gap-6 lg:text-2xl lg:leading-relaxed">
           <p>{slide.subtitle}</p>
           <p>{slide.description}</p>
         </div>
 
-        <Link
+        <LinkWithArrow
           href={slide.href}
           className="no-underline"
           customEventOptions={{
@@ -270,7 +270,7 @@ const SlideContent = ({
           }}
         >
           {slide.cta}
-        </Link>
+        </LinkWithArrow>
 
         {/* Mobile comparison cards - stacked below content */}
         <div className="flex flex-col gap-5 md:hidden">

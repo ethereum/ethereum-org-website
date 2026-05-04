@@ -1,6 +1,5 @@
-"use client"
-
 import { type HTMLAttributes, ReactNode } from "react"
+import { getTranslations } from "next-intl/server"
 
 import type {
   ChildOnlyProp,
@@ -32,7 +31,6 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
 
-import useTranslation from "@/hooks/useTranslation"
 import rhino from "@/public/images/upgrades/upgrade_rhino.png"
 
 type BenefitsType = {
@@ -48,7 +46,7 @@ const PageContainer = (props: ChildOnlyProp) => (
 )
 
 const HeroStatsWrapper = (props: ChildOnlyProp) => (
-  <VStack className="bg-main-gradient w-full gap-0" {...props} />
+  <VStack className="w-full gap-0 bg-main-gradient" {...props} />
 )
 
 const ComparisonGrid = (props: ChildOnlyProp) => {
@@ -61,7 +59,7 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
 }
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className="leading-xs mt-0 mb-8 text-2xl md:text-[2rem]" {...props} />
+  <h2 className="mt-0 mb-8 text-2xl leading-xs md:text-[2rem]" {...props} />
 )
 
 const ColorH3 = ({
@@ -109,12 +107,12 @@ type Props = PageWithContributorsProps & {
   data: StakingStatsData
 }
 
-const StakingPage = ({
+const StakingPage = async ({
   data,
   contributors,
   lastEditLocaleTimestamp,
 }: Props) => {
-  const { t } = useTranslation("page-staking")
+  const t = await getTranslations("page-staking")
 
   const heroContent = {
     title: t("page-staking-hero-title"),

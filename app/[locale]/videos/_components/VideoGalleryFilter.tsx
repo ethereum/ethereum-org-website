@@ -158,7 +158,7 @@ const VideoGalleryFilter = ({
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           {/* Search input */}
           <div className="relative w-full sm:max-w-xs">
-            <Search className="text-body-medium pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2" />
+            <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-body-medium" />
             <Input
               type="text"
               placeholder={t("page-videos-search-placeholder")}
@@ -170,7 +170,7 @@ const VideoGalleryFilter = ({
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="text-body-medium hover:text-body absolute end-3 top-1/2 -translate-y-1/2"
+                className="absolute end-3 top-1/2 -translate-y-1/2 text-body-medium hover:text-body"
               >
                 <X className="size-4" />
               </button>
@@ -200,8 +200,8 @@ const VideoGalleryFilter = ({
 
       {/* Active filter strip */}
       {hasActiveFilters && (
-        <div className="border-border flex flex-wrap items-center gap-2 border-t pt-4">
-          <span className="text-body-medium text-xs">
+        <div className="flex flex-wrap items-center gap-2 border-t border-border pt-4">
+          <span className="text-xs text-body-medium">
             {t("page-videos-filtering-by")}
           </span>
 
@@ -244,7 +244,7 @@ const VideoGalleryFilter = ({
           )}
 
           <Button
-            className="text-primary cursor-pointer p-0 text-xs underline"
+            className="cursor-pointer p-0 text-xs text-primary underline"
             variant="ghost"
             size="sm"
             onClick={handleClearAll}

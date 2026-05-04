@@ -199,6 +199,12 @@ export const getGitHubContributors = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
+export const getVideoThumbnails = createCachedGetter(
+  dataLayer.getVideoThumbnails,
+  ["video-thumbnails"],
+  CACHE_REVALIDATE_DAY
+)
+
 /**
  * Static-cached version of getGitHubContributors — no revalidation.
  * Use this in static pages (e.g., md content pages via [...slug]) to avoid

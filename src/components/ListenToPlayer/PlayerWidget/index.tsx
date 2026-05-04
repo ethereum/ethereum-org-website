@@ -140,7 +140,7 @@ const PlayerWidget = ({
   return (
     <div
       className={cn(
-        "bg-background shadow-widget w-80 border",
+        "w-80 border bg-background shadow-widget",
         isExpanded ? "rounded-2xl p-4" : "rounded-t-2xl p-2"
       )}
     >
@@ -148,10 +148,10 @@ const PlayerWidget = ({
         className={cn("flex flex-col gap-2", isExpanded ? "block" : "hidden")}
       >
         <div className="flex justify-between">
-          <p className="leading-base text-sm font-bold">{title}</p>
+          <p className="text-sm leading-base font-bold">{title}</p>
           <Tooltip content={"Collapse"} asChild>
             <button
-              className="text-body-medium hover:text-body cursor-pointer"
+              className="cursor-pointer text-body-medium hover:text-body"
               aria-label={"Collapse"}
               onClick={() => {
                 setIsExpanded(!isExpanded)
@@ -169,23 +169,23 @@ const PlayerWidget = ({
         <div className="flex items-center justify-between">
           <div
             ref={scrubBarRef}
-            className="bg-background-highlight relative h-0.5 w-[240px] cursor-pointer rounded"
+            className="relative h-0.5 w-[240px] cursor-pointer rounded bg-background-highlight"
             onMouseDown={handleMouseDown}
           >
             <div
-              className="bg-primary absolute top-0 left-0 h-full rounded"
+              className="absolute top-0 left-0 h-full rounded bg-primary"
               style={{
                 width: `${Number.isFinite(progress) && progress >= 0 ? progress : 0}%`,
               }}
             />
             <div
-              className="bg-primary absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-md transition-transform hover:scale-110"
+              className="absolute top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary shadow-md transition-transform hover:scale-110"
               style={{
                 left: `${Number.isFinite(progress) && progress >= 0 ? progress : 0}%`,
               }}
             />
           </div>
-          <div className="text-body-medium text-sm">
+          <div className="text-sm text-body-medium">
             {`${Math.floor(timeRemaining / 60)}:${String(Math.floor(timeRemaining % 60)).padStart(2, "0")}`}
           </div>
         </div>
@@ -193,7 +193,7 @@ const PlayerWidget = ({
           <div className="relative">
             <PlayerButton tooltipContent={"Playback speed"}>
               <button
-                className="leading-base text-body-medium hover:text-body w-[24px] cursor-pointer text-right text-xs font-bold"
+                className="w-[24px] cursor-pointer text-right text-xs leading-base font-bold text-body-medium hover:text-body"
                 onClick={() => setShowSpeedMenu(!showSpeedMenu)}
                 title={`Playback speed`}
                 aria-label={"Playback speed"}
@@ -204,12 +204,12 @@ const PlayerWidget = ({
             {showSpeedMenu && (
               <div
                 ref={speedMenuRef}
-                className="bg-background absolute bottom-full left-0 mb-2 rounded-lg border shadow-lg"
+                className="absolute bottom-full left-0 mb-2 rounded-lg border bg-background shadow-lg"
               >
                 {speedOptions.map((speed) => (
                   <button
                     key={speed}
-                    className="hover:bg-background-highlight cursor-pointer px-4 py-1 text-xs"
+                    className="cursor-pointer px-4 py-1 text-xs hover:bg-background-highlight"
                     onClick={() => {
                       handlePlaybackSpeed(speed)
                       setShowSpeedMenu(false)
@@ -224,7 +224,7 @@ const PlayerWidget = ({
           <PlayerButton tooltipContent={"Previous"}>
             <button
               className={cn(
-                "hover:text-primary cursor-pointer text-2xl",
+                "cursor-pointer text-2xl hover:text-primary",
                 currentTrackIndex === 0 ? "text-disabled" : "text-body-medium"
               )}
               onClick={handlePrevious}
@@ -236,7 +236,7 @@ const PlayerWidget = ({
           </PlayerButton>
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
-              className="text-//[32px] text-primary hover:text-primary-hover cursor-pointer"
+              className="text-//[32px] cursor-pointer text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
               title={isPlaying ? "Pause" : "Play"}
               aria-label={isPlaying ? "Pause" : "Play"}
@@ -251,7 +251,7 @@ const PlayerWidget = ({
           <PlayerButton tooltipContent={"Next"}>
             <button
               className={cn(
-                "hover:text-primary cursor-pointer text-2xl",
+                "cursor-pointer text-2xl hover:text-primary",
                 currentTrackIndex === totalTracks - 1
                   ? "text-disabled"
                   : "text-body-medium"
@@ -291,7 +291,7 @@ const PlayerWidget = ({
         <div className="flex flex-row items-center gap-2">
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
-              className="text-primary hover:text-primary-hover cursor-pointer"
+              className="cursor-pointer text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
               title={isPlaying ? "Pause" : "Play"}
               aria-label={isPlaying ? "Pause" : "Play"}
@@ -303,14 +303,14 @@ const PlayerWidget = ({
               )}
             </button>
           </PlayerButton>
-          <div className="text-body-medium text-sm">
+          <div className="text-sm text-body-medium">
             {`${Math.floor(timeRemaining / 60)}:${String(Math.floor(timeRemaining % 60)).padStart(2, "0")}`}
           </div>
         </div>
         <div className="flex flex-row gap-6">
           <PlayerButton tooltipContent={"Expand"}>
             <button
-              className="text-disabled hover:text-body cursor-pointer"
+              className="cursor-pointer text-disabled hover:text-body"
               title={"Expand"}
               aria-label={"Expand"}
               onClick={() => {
@@ -327,7 +327,7 @@ const PlayerWidget = ({
           </PlayerButton>
           <PlayerButton tooltipContent={"Close"}>
             <button
-              className="text-disabled hover:text-body cursor-pointer"
+              className="cursor-pointer text-disabled hover:text-body"
               title={"Close"}
               aria-label={"Close"}
               onClick={() => {

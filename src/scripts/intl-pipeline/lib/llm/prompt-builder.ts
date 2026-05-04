@@ -101,10 +101,15 @@ ${htmlRule}
       : "Transliterate the author field into the target script (phonetic, not semantic). Pseudonyms or GitHub handles (e.g., qbzzt, jdourlens) must stay in Latin."
 
   return `Format rules:
-- Frontmatter: translate the values of title, description, and breadcrumb. Translate concept tags but keep brand-name tags in Latin (per site rules above). ${authorRule} Change the \`lang\` field to \`${targetLanguage}\`. Keep all other fields (skill, published, sidebarDepth) unchanged. Preserve YAML structure exactly.
+- Frontmatter -- per-field policy:
+  TRANSLATE the values of: title, description, breadcrumb.
+  TRANSLATE concept tags inside \`tags:\` arrays, but keep brand-name tags in Latin (per site rules above).
+  KEEP UNCHANGED (must match the English value byte-for-byte): topic, uploadDate, duration, educationLevel, youtubeId, format, skill, published, sidebarDepth, template, sidebar, source, sourceUrl, address, emoji, image, blurDataURL. \`topic\` is a taxonomy-slug array -- never translate, transliterate, or reformat its values.
+  ${authorRule}
+  Set the \`lang\` field to \`${targetLanguage}\`.
+  Preserve YAML structure exactly. NEVER use \`<span dir="ltr">\` inside any frontmatter value -- the inner double-quote on the dir attribute breaks YAML. For LTR fragments inside frontmatter values use Unicode bidi isolates U+2066 (LRI) and U+2069 (PDI) instead.
 - Preserve all markdown syntax (headings, lists, links) and their indentation exactly.
 - Preserve all JSX/HTML components and their attributes exactly.
-- Preserve heading anchor IDs exactly as in English ({#anchor-id}).
 - HTML comment placeholders like \`<!-- CODE_BLOCK_0 -->\` are code block stand-ins managed by our pipeline. You MUST preserve them EXACTLY as-is -- same text, same position, same line. Do NOT remove, translate, modify, or replace them with code. They will be restored automatically after translation.
 - If a true code fence (\`\`\` block) is encountered in the source, never translate the functional code inside it. Only code comments (// or /* */ or #) within fences may be translated. Never change the language identifier after the opening fence (e.g. \`\`\`python, \`\`\`solidity, \`\`\`bash must stay exactly as-is).
 - Internal links (href starting with /) must match English exactly.
@@ -140,8 +145,13 @@ function getNormalizedFormatRules(
       : "Transliterate the author field into the target script (phonetic, not semantic). Pseudonyms or GitHub handles (e.g., qbzzt, jdourlens) must stay in Latin."
 
   return `Format rules:
-- Frontmatter: translate the values of title, description, and breadcrumb. Translate concept tags but keep brand-name tags in Latin (per site rules above). ${authorRule} Change the \`lang\` field to \`${targetLanguage}\`. Keep all other fields (skill, published, sidebarDepth) unchanged. Preserve YAML structure exactly.
-- Preserve heading anchor IDs exactly as in English ({#anchor-id}).
+- Frontmatter -- per-field policy:
+  TRANSLATE the values of: title, description, breadcrumb.
+  TRANSLATE concept tags inside \`tags:\` arrays, but keep brand-name tags in Latin (per site rules above).
+  KEEP UNCHANGED (must match the English value byte-for-byte): topic, uploadDate, duration, educationLevel, youtubeId, format, skill, published, sidebarDepth, template, sidebar, source, sourceUrl, address, emoji, image, blurDataURL. \`topic\` is a taxonomy-slug array -- never translate, transliterate, or reformat its values.
+  ${authorRule}
+  Set the \`lang\` field to \`${targetLanguage}\`.
+  Preserve YAML structure exactly. NEVER use \`<span dir="ltr">\` inside any frontmatter value -- the inner double-quote on the dir attribute breaks YAML. For LTR fragments inside frontmatter values use Unicode bidi isolates U+2066 (LRI) and U+2069 (PDI) instead.
 - Preserve all markdown formatting (headings, lists, bold, italic, blockquotes) and their indentation exactly.
 
 PLACEHOLDER RULES (critical):
@@ -186,7 +196,6 @@ function getSanitizerHints(): string {
 - Brand names in frontmatter tags must stay Latin (Solidity, MetaMask, etc.)
 - Ticker symbols (ETH, ERC-20) must stay Latin
 - Internal hrefs must match English source exactly
-- No translated heading anchor IDs
 - No broken markdown link syntax
 - Valid JSON structure (for JSON files)
 Getting these right the first time avoids post-processing corrections.`

@@ -86,7 +86,7 @@ const CentralContent = (props: ChildOnlyProp) => (
 
 const TrilemmaContent = (props: ChildOnlyProp) => (
   <div
-    className="from-accent-a/10 to-accent-c/10 my-8 w-full bg-linear-to-r p-8"
+    className="my-8 w-full bg-linear-to-r from-accent-a/10 to-accent-c/10 p-8"
     {...props}
   />
 )

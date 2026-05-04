@@ -27,7 +27,7 @@ export const ResourceItem = ({
   <Link
     href={href}
     className={cn(
-      "text-body hover:bg-background-highlight hover:text-body flex gap-2 border-b p-3 no-underline last-of-type:border-0",
+      "flex gap-2 border-b p-3 text-body no-underline last-of-type:border-0 hover:bg-background-highlight hover:text-body",
       className
     )}
     customEventOptions={{
