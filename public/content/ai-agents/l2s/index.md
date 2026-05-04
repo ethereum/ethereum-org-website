@@ -7,9 +7,9 @@ emoji: ":chains:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Layer 2 networks for AI agents on Ethereum
-summaryPoint1: Evaluate L2s by execution environment, agent tooling ecosystem, finality, and trust assumptions
-summaryPoint2: Match your agent workload type to the right L2 architecture for high-frequency, privacy-sensitive, or cross-chain operations
-summaryPoint3: Deploy on optimistic or ZK rollups with the same smart account and session key patterns used on Mainnet
+summaryPoint1: Evaluate L2s by execution, tooling, finality, and trust
+summaryPoint2: Match agent workload to the right L2 architecture
+summaryPoint3: Same patterns work on optimistic and ZK rollups
 faqItems:
   - question: "Can AI agents use Ethereum L2s?"
     answer: "Yes. All Ethereum L2s are compatible with standard EVM tooling. An agent that works on Mainnet will work on any Ethereum L2 with only an RPC URL and chain ID change. L2s are the recommended deployment environment for most agents due to lower transaction costs and specialized use case environments."
@@ -106,7 +106,7 @@ ZK rollups may require **specific compiler tooling** and have minor EVM compatib
 
 Each L2 publishes its own RPC endpoints, chain IDs, and block explorer URLs in its official documentation. [Chainlist](https://chainlist.org) provides a searchable directory of all EVM-compatible networks with one-click wallet configuration.
 
-<Alert variant="info" className="my-8">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0">For production agent deployments, use a dedicated RPC provider rather than public endpoints. Public RPCs have rate limits and offer no uptime guarantees. Providers such as Alchemy, Infura, and QuickNode support most major L2s.</p>
 </AlertContent>

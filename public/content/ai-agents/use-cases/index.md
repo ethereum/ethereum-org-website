@@ -7,9 +7,9 @@ emoji: ":gear:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent use cases on Ethereum
-summaryPoint1: DeFi automation, prediction markets, and agent-to-agent commerce are the most active use cases today
-summaryPoint2: Each use case maps to specific infrastructure from the builder hub, including wallets, payments, identity, and verification
-summaryPoint3: Live agents are already trading, deploying tokens, and coordinating autonomously onchain
+summaryPoint1: DeFi automation, prediction markets, and agent-to-agent commerce
+summaryPoint2: Each use case maps to builder hub infrastructure
+summaryPoint3: Live agents trade, deploy tokens, and coordinate onchain
 faqItems:
   - question: "What is the most production-ready AI agent use case on Ethereum?"
     answer: "DeFi automation is the most mature use case. The infrastructure it depends on, including ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment."
@@ -110,7 +110,7 @@ AI-generated creative work has a provenance problem: anyone can claim that a spe
 **Example: Botto**
 [Botto](https://botto.com/) is a decentralized autonomous artist. It's an AI system that generates visual art and mints it onchain. The community votes on which outputs to mint, and the agent's creative direction is influenced by onchain feedback. Botto's outputs have sold as NFTs, demonstrating that markets are willing to value AI-generated work when its provenance and production process are publicly verifiable.
 
-<Alert variant="info" className="my-8">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Maturity note</strong></p>
 <p className="mt-2">Onchain provenance for AI-generated creative work is still an emerging practice. Standards for linking model outputs to a specific agent identity and generation parameters are not yet finalized. Botto represents one working implementation. Broader tooling and conventions for this pattern are actively developing.</p>

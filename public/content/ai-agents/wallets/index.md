@@ -7,9 +7,9 @@ emoji: ":purse:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent wallets on Ethereum
-summaryPoint1: Deploy smart account wallets with session keys, spending limits, and contract allowlists for safe agent autonomy
-summaryPoint2: Choose between ERC-4337 for new deployments and EIP-7702 for upgrading existing wallets
-summaryPoint3: Production key management patterns with human-in-the-loop escalation and spending policy enforcement
+summaryPoint1: Smart accounts with session keys and spending limits
+summaryPoint2: ERC-4337 for new wallets, EIP-7702 for upgrades
+summaryPoint3: Key management patterns with human-in-the-loop escalation
 faqItems:
   - question: "Do AI agents need a wallet?"
     answer: "Yes. Any agent that needs to send, receive, or interact with onchain protocols needs a wallet. For production agents, a smart account (ERC-4337 or EIP-7702) is the recommended approach. It allows you to set spending limits, allowlists, and time-bounded session keys at the contract level. A raw EOA with no spending policy is not appropriate for autonomous operation."
@@ -106,7 +106,7 @@ Both have well-documented session key permission APIs. If evaluating other walle
 
 ### ZeroDev (Kernel) {#zerodev-kernel}
 
-<Alert variant="info" className="my-8">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Best for:</strong> New agent deployments requiring granular per-contract, per-function, or per-value policy enforcement, and teams comfortable building on a still-maturing ERC-4337 ecosystem.</p>
 </AlertContent>
@@ -187,7 +187,7 @@ Any UserOperation that violates `callPolicy` or `timestampPolicy` is rejected by
 
 ### Safe (Allowance Module) {#safe-allowance-module}
 
-<Alert variant="info" className="my-8">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Best for:</strong> Any production agent deployment that requires a battle-tested foundation. Safe is widely audited, multi-party by default, and the only option in this guide that does not depend on still-maturing ERC-4337 tooling. Particularly suited to DAO treasury delegation and cases where the agent must spend from a shared team treasury without being granted full multisig signing authority.</p>
 </AlertContent>

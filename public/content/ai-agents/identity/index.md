@@ -7,9 +7,9 @@ emoji: ":id:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Agent identity with ERC-8004 on Ethereum
-summaryPoint1: ERC-8004 provides onchain identity, reputation, and validation registries for autonomous agents across 20+ chains
-summaryPoint2: Agents discover and verify each other without a centralized directory using censorship-resistant registry infrastructure
-summaryPoint3: The protocol stack combines ERC-8004 identity with x402 payments for fully autonomous agent-to-agent commerce
+summaryPoint1: ERC-8004 identity registries, live on 20+ chains
+summaryPoint2: Discover and verify agents without a central directory
+summaryPoint3: ERC-8004 identity plus x402 payments enables agent-to-agent commerce
 faqItems:
   - question: "What is ERC-8004?"
     answer: "ERC-8004 is the Trustless Agents Standard, live on Ethereum Mainnet and 20+ chains since January 29, 2026. It provides three onchain registries: an Identity Registry (agent discovery), a Reputation Registry (onchain feedback signals), and a Validation Registry (hooks for cryptographic verification of agent outputs, not yet deployed). The standard uses the same contract addresses across all supported chains via deterministic deployment."

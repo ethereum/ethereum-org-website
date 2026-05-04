@@ -7,9 +7,9 @@ emoji: ":rocket:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Getting started with AI agents on Ethereum
-summaryPoint1: Deploy a smart account wallet, fund it, and connect an agent framework in four steps
-summaryPoint2: Configure session key spending policies to give your agent safe, bounded autonomy
-summaryPoint3: Working code examples for smart account setup, framework connection, and spending guardrails
+summaryPoint1: Set up your first agent in four steps
+summaryPoint2: Configure session keys for bounded agent autonomy
+summaryPoint3: Code examples for setup, integration, and guardrails
 faqItems:
   - question: "How do I build my first AI agent on Ethereum?"
     answer: "Start with four steps: (1) Create a smart account wallet using an SDK like ZeroDev, Safe, or another ERC-4337 compatible provider, (2) fund it with testnet ETH from a Sepolia faucet, (3) connect an agent framework like GOAT or ElizaOS that provides the LLM interface and tool orchestration, and (4) configure session key spending policies as guardrails. The Getting started guide walks through each step with working code."

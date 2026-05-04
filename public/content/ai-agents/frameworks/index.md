@@ -7,9 +7,9 @@ emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent frameworks on Ethereum
-summaryPoint1: Choose an agent framework based on your language, protocol needs, and deployment target
+summaryPoint1: Choose by language, protocol coverage, and deployment target
 summaryPoint2: Compare popular agent frameworks for Ethereum integration, with a decision guide and code samples
-summaryPoint3: Integration guides with code samples for each framework
+summaryPoint3: Code samples for each framework's Ethereum integration
 faqItems:
   - question: "Which agent framework should I use?"
     answer: "For maximum EVM protocol coverage (200+ plugins), evaluate GOAT. For multi-platform social agents (Discord, Twitter, Telegram), evaluate ElizaOS. For Rust and latency-sensitive agents, evaluate Rig. For autonomous services with onchain coordination, evaluate Olas. For game-native or no-code deployments in the Virtuals ecosystem, evaluate GAME. For the widest Python ecosystem and LLM community, evaluate LangChain paired with GOAT's LangChain adapter. See the Frameworks decision guide for a full comparison."
@@ -99,7 +99,7 @@ GOAT is the recommended starting point for production EVM agent deployments. It 
 
 **Best for:** Production EVM agents that need broad DeFi protocol coverage out of the box, or TypeScript and Python teams that want a single framework compatible with the Vercel AI SDK, LangChain, and LlamaIndex.
 
-<Alert variant="info" className="my-8">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Package names</strong></p>
 <p className="mt-2">GOAT adapter package names follow the pattern <code>@goat-sdk/adapter-[ai-sdk-name]</code>. Verify current package names against the <a href="https://github.com/goat-sdk/goat">GOAT repository</a> before installing.</p>
@@ -191,7 +191,7 @@ alloy = { version = "0.9", features = ["full"] }
 tokio = { version = "1", features = ["full"] }
 ```
 
-<Alert variant="info" className="my-8">
+<Alert variant="warning" className="my-8">
 <AlertContent>
 <p className="mt-0"><strong>Verify crate versions</strong></p>
 <p className="mt-2">riglr is under active development. Confirm current crate names and versions against the <a href="https://github.com/riglr/riglr">riglr repository</a> before adding them to your project.</p>

@@ -8,9 +8,9 @@ emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Developer working with AI agent architecture on Ethereum
-summaryPoint1: Deploy autonomous agents with programmable wallets, spending limits, and session keys
-summaryPoint2: Verify agent behavior onchain using zero-knowledge machine learning (zkML) and trusted execution environments (TEEs)
-summaryPoint3: Enable machine-to-machine payments and agent commerce with stablecoin rails and open payment protocols
+summaryPoint1: Programmable wallets with spending limits and session keys
+summaryPoint2: Verifiable behavior via zkML proofs and TEE attestations
+summaryPoint3: Machine-to-machine payments using stablecoins and open protocols
 buttons:
   - content: Getting started
     href: /ai-agents/getting-started/
