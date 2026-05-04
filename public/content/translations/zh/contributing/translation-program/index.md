@@ -1,7 +1,7 @@
 ---
-title: 翻译计划
+title: "翻译计划"
 lang: zh
-description: 关于 ethereum.org 翻译计划的信息
+description: "关于 ethereum.org 翻译计划的信息"
 ---
 
 # 翻译计划 {#translation-program}
@@ -16,11 +16,11 @@ Ethereum.org 翻译计划是开放的，所有人都可以参与！
 
 1. 你需要登录或注册 Crowdin 帐户。
 2. 选择你想贡献翻译的语言。
-3. 在开始之前，请查看[如何翻译](/contributing/translation-program/how-to-translate/)指南，学习如何使用 Crowdin 和 [翻译风格指南](/contributing/translation-program/translators-guide/)，了解相关提示和最佳做法。
+3. 在开始之前，请先阅读[如何翻译](/contributing/translation-program/how-to-translate/)指南，了解如何使用 Crowdin，并查看[翻译风格指南](/contributing/translation-program/translators-guide/)，获取提示和最佳实践。
 4. 机器翻译将不会被批准。
 5. 所有翻译在添加到网站之前都会经过审核，因此你的翻译在上线之前会有一个短暂的延迟。
 
-_加入 [ethereum.org Discord](https://discord.gg/ethereum-org) 合作翻译、提问、分享反馈和想法，或加入翻译组。_
+_加入 [ethereum.org Discord](https://discord.gg/ethereum-org) 协作翻译、提问、分享反馈和想法，或加入一个翻译组。_
 
 <ButtonLink href="https://crowdin.com/project/ethereum-org/">
   开始翻译
@@ -32,35 +32,36 @@ _加入 [ethereum.org Discord](https://discord.gg/ethereum-org) 合作翻译、�
 
 Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容翻译成尽可能多的语言，让所有人都能参与以太坊。
 
-阅读更多关于 Ethereum.org 翻译计划[任务和愿景](/contributing/translation-program/mission-and-vision)的信息。
+阅读更多关于 ethereum.org 翻译计划的[使命和愿景](/contributing/translation-program/mission-and-vision)。
 
-### 我们迄今取得的进展 {#our-progress}
+### 我们目前的进展 {#our-progress}
 
-- [**超过 6,900 **位翻译人员](/contributing/translation-program/contributors/)
-- 网站支持 **68** 种语言
-- [2024 年翻译了** 289 万**字](/contributing/translation-program/acknowledgements/)
+- [**6,900 多名**翻译者](/contributing/translation-program/contributors/)
+- **68** 种语言已在网站上线
+- [2024 年已翻译 **289 万**字](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
 ### 致谢 {#acknowledgements}
 
-成千上万社区成员参与 Ethereum.org 的翻译，他们是翻译计划的关键组成部分。 我们要感谢我们的翻译人员，并在他们的职业生涯中给予支持。 以下是我们对翻译人员的一些致谢方式：
+成千上万社区成员参与 Ethereum.org 的翻译，他们是翻译计划的关键组成部分。
+我们要感谢我们的翻译人员，并在他们的职业生涯中给予支持。 以下是我们对翻译人员的一些致谢方式：
 
 #### 证书 {#certificate}
 
-如果你参与了翻译计划，并且至少有 5000 个翻译的字词获得批准，就有资格获得 Ethereum.org 翻译人员证书。 [更多关于证书的信息](/contributing/translation-program/acknowledgements/#certificate)
+如果你参与了翻译计划，并且至少有 5000 个翻译的字词获得批准，就有资格获得 Ethereum.org 翻译人员证书。 [关于证书的更多信息](/contributing/translation-program/acknowledgements/#certificate)
 
 #### OAT {#oats}
 
-翻译计划的贡献者有资格根据 2024 年翻译的字数获得不同的 OAT（链上成就代币）。 链上成就代币是非同质化代币，可证明你对 ethereum.org 翻译计划的贡献。 [有关链上成就代币的更多信息](/contributing/translation-program/acknowledgements/#oats)
+翻译计划的贡献者有资格根据 2024 年翻译的字数获得不同的 OAT（链上成就代币）。 链上成就代币是非同质化代币，可证明你对 ethereum.org 翻译计划的贡献。 [关于 OAT 的更多信息](/contributing/translation-program/acknowledgements/#oats)
 
-#### 致谢翻译人员 {#translator-acknowledgements}
+#### 译者致谢 {#translator-acknowledgements}
 
-通过发布[排行榜](/contributing/translation-program/acknowledgements/)和[翻译计划全体贡献者名单](/contributing/translation-program/contributors/)，对我们的优秀翻译人员致以公开感谢。
+通过[排行榜](/contributing/translation-program/acknowledgements/)和[翻译计划所有贡献者列表](/contributing/translation-program/contributors/)公开致谢我们的顶级译者。
 
 #### 奖励 {#rewards}
 
-过去，我们追加奖励了最活跃的贡献者，为其提供了 [Devcon](https://devcon.org/en/) 和 [Devconnect](https://devconnect.org/) 等以太坊会议的票证以及 Ethereum.org 专属商品。
+过去，我们曾向最活跃的贡献者追溯发放奖励，包括 [Devcon](https://devcon.org/en/) 和 [Devconnect](https://devconnect.org/) 等以太坊会议的门票以及 ethereum.org 独家周边商品。
 
 我们一直在考虑一些创新方式来奖励我们的贡献者，敬请关注！
 
@@ -68,23 +69,23 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 如果你正在为翻译计划做贡献或考虑参与其中，应该查看以下翻译指南：
 
-- [翻译风格指南](/contributing/translation-program/translators-guide/) _– 面向 ethereum.org 翻译人员的说明和技巧_
-- [翻译常见问题](/contributing/translation-program/faq/) _– 有关 ethereum.org 翻译计划的一些常见问题与解答_
-- [Crowdin 在线编辑器指南](https://support.crowdin.com/online-editor/) _- 使用 Crowdin 在线编辑器和 Crowdin 一些高级功能的深度指南_
-- [内容存储桶](/contributing/translation-program/content-buckets/) _– ethereum.org 的每个内容存储桶中包含哪些页面_
+- [翻译风格指南](/contributing/translation-program/translators-guide/) _– 面向 ethereum.org 译者的说明和提示_
+- [翻译常见问题解答](/contributing/translation-program/faq/) _– 关于 ethereum.org 翻译计划的常见问题与解答_
+- [Crowdin 在线编辑器指南](https://support.crowdin.com/online-editor/) _– 关于如何使用 Crowdin 在线编辑器和 Crowdin 部分高级功能的深度指南_
 
-有关其他有用的翻译工具、翻译人员社区和翻译计划博客文章，请访问[资源页面](/contributing/translation-program/resources/)。
+有关其他有用的翻译工具、译者社区和翻译计划博客文章，请访问[资源页面](/contributing/translation-program/resources/)。
 
 ## 联系我们 {#get-in-touch}
 
-还有其他问题吗？ 或者想与我们的团队和其他翻译人员合作？ 请在我们 [ethereum.org Discord 服务器](https://discord.gg/ethereum-org)的 #translations 频道中发帖
+还有其他问题吗？ 或者想与我们的团队和其他翻译人员合作？ 请在我们的 [ethereum.org Discord 服务器](https://discord.gg/ethereum-org) 的 #translations 频道中发帖
 
 也可以通过向 translations@ethereum.org 发送邮件联系我们
 
-## 开始你自己的翻译计划 {#starting-a-translation-program}
+## 启动你自己的翻译计划 {#starting-a-translation-program}
 
-我们致力于将以太坊内容翻译成尽可能多的语言，并向所有人提供教育内容。 我们对翻译很重视，希望帮助其他以太坊项目组织、管理和改进他们的翻译工作。
+我们致力于将以太坊内容翻译成尽可能多的语言，并向所有人提供教育内容。
+我们对翻译很重视，希望帮助其他以太坊项目组织、管理和改进他们的翻译工作。
 
-出于这个原因，我们制作了一本[翻译计划手册](/contributing/translation-program/playbook/)，其中包含我们在翻译 ethereum.org 的过程中获得的一些技巧和最佳做法。
+为此，我们创建了[翻译计划手册](/contributing/translation-program/playbook/)，其中包含我们在翻译 ethereum.org 过程中总结的一些技巧和最佳实践。
 
 想要进一步合作或使用我们的一些翻译资源？ 对手册有任何反馈意见？ 我们很乐意通过 translations@ethereum.org 听到你们的声音。

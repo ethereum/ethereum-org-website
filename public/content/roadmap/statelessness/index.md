@@ -6,7 +6,7 @@ lang: en
 
 # Statelessness, state expiry and history expiry {#statelessness}
 
-The ability to run Ethereum nodes on modest hardware is critical for true decentralization. This is because running a node gives users the ability to verify information by performing cryptographic checks independently rather than trusting a third party to feed them data. Running a node allows users to submit transactions directly to the Ethereum peer-to-peer network rather than having to trust an intermediary. Decentralization is not possible if these benefits are only available to users with expensive hardware. Instead, nodes should be able to run with extremely modest processing and memory requirements so that they can run on mobile phones, micro-computers or unnoticeably on a home computer.
+The ability to run [Ethereum](/) nodes on modest hardware is critical for true decentralization. This is because running a node gives users the ability to verify information by performing cryptographic checks independently rather than trusting a third party to feed them data. Running a node allows users to submit transactions directly to the Ethereum peer-to-peer network rather than having to trust an intermediary. Decentralization is not possible if these benefits are only available to users with expensive hardware. Instead, nodes should be able to run with extremely modest processing and memory requirements so that they can run on mobile phones, micro-computers or unnoticeably on a home computer.
 
 Today, high disk space requirements is the main barrier preventing universal access to nodes. This is primarily due to the need to store large chunks of Ethereum's state data. This state data contains critical information required to correctly process new blocks and transactions. At the time of writing, a fast 2TB SSD is recommended for running a full Ethereum node. For a node that does not prune any older data, the storage requirement grows at around 14GB/week, and archive nodes that store all data since genesis are approaching 12 TB (at time of writing, in Feb 2023).
 
@@ -50,7 +50,7 @@ Similarly to history expiry, under state expiry responsibility for storing old s
 
 State expiry is still in the research phase and not yet ready to ship. State expiry may well happen later than stateless clients and history expiry because those upgrades make large state sizes easily manageable for the majority of validators.
 
-## Statelessness {#statelessness}
+## Statelessness {#statelessness-2}
 
 Statelessness is a bit of a misnomer because it does not mean the concept of "state" is eliminated, but it does involve changes to how Ethereum nodes handle state data. Statelessness itself comes in two flavors: weak statelessness and strong statelessness. Weak statelessness enables most nodes to go stateless by putting responsibility for state storage onto a few. Strong statelessness completely removes the need for any node to store the full state data. Both weak and strong statelessness offer the following benefits to normal validators:
 
@@ -78,6 +78,8 @@ Statelessness relies on block builders maintaining a copy of the full state data
 Block proposers use the state data to create "witnesses" - the minimal set of data that prove the values of the state that are being changed by the transactions in a block. Other validators do not hold the state, they only store the state root (a hash of the entire state). They receive a block and a witness and use them to update their state root. This makes a validating node extremely lightweight.
 
 Weak statelessness is in an advanced state of research, but it relies upon proposer-builder separation and Verkle Trees to have been implemented so that small witnesses can be passed between peers. This means weak statelessness is probably a few years away from Ethereum Mainnet.
+
+[zkEVM for L1 verification](/roadmap/zkevm/) is a complementary technology that could further enhance stateless verification. Instead of just checking witnesses, validators could verify a zero-knowledge proof that the entire block was executed correctly—providing cryptographic certainty without re-executing transactions.
 
 ### Strong statelessness {#strong-statelessness}
 

@@ -7,7 +7,7 @@ const MenuHeader = () => {
 
   return (
     <div className="flex items-center justify-between p-6">
-      <SheetTitle className="p-0 text-md uppercase text-body-medium">
+      <SheetTitle className="p-0 text-md text-body-medium uppercase">
         {t("site-title")}
       </SheetTitle>
       <SheetClose className="w-fit text-md" data-testid="mobile-menu-close">

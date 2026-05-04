@@ -1,6 +1,6 @@
 ---
-title: Направления проводимых исследований Ethereum
-description: Ознакомьтесь с различными областями проводимых исследований и узнайте, как принять участие.
+title: "Направления проводимых исследований Ethereum"
+description: "Ознакомьтесь с различными областями проводимых исследований и узнайте, как принять участие."
 lang: ru
 ---
 
@@ -247,7 +247,7 @@ lang: ru
 #### Недавние исследования {#recent-research-10}
 
 - [Видеопрезентация многомерного протокола EIP-1559](https://youtu.be/QbR4MTgnCko)
-- [Кроссдоменная MEV](http://arxiv.org/abs/2112.01472)
+- [Кроссдоменная MEV](https://arxiv.org/abs/2112.01472)
 - [Аукционы MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### Поощрения при использовании доказательства доли владения {#proof-of-stake-incentives}
@@ -377,7 +377,7 @@ lang: ru
 
 - [Отчет об эксплойте Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Анализ причин взломов контрактов Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Новости Rekt](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Новости Rekt](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Недавние исследования {#recent-research-19}
 

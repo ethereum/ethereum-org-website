@@ -4,7 +4,7 @@ description: A comparison between Ethereum's proof-of-stake and proof-of-work ba
 lang: en
 ---
 
-When Ethereum launched, proof-of-stake still needed a lot of research and development before it could be trusted to secure Ethereum. Proof-of-work was a simpler mechanism that had already been proven by Bitcoin, meaning core developers could implement it right away to get Ethereum launched. It took a further eight years to develop proof-of-stake to the point where it could be implemented.
+When [Ethereum](/) launched, proof-of-stake still needed a lot of research and development before it could be trusted to secure Ethereum. Proof-of-work was a simpler mechanism that had already been proven by Bitcoin, meaning core developers could implement it right away to get Ethereum launched. It took a further eight years to develop proof-of-stake to the point where it could be implemented.
 
 This page explains the rationale behind Ethereum's switch to proof-of-stake from proof-of-work and the trade-offs involved.
 
@@ -58,9 +58,8 @@ Proof-of-stake Ethereum can pay for its security by issuing far fewer coins than
 
 ## More of a visual learner? {#visual-learner}
 
-Watch Justin Drake explain the benefits of proof-of-stake over proof-of-work:
 
-<YouTube id="1m12zgJ42dI" />
+<VideoWatch slug="pow-vs-pos" />
 
 ## Further reading {#further-reading}
 

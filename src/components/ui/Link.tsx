@@ -14,8 +14,8 @@ import * as url from "@/lib/utils/url"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
-import { Link as I18nLink } from "@/i18n/routing"
-import { usePathname } from "@/i18n/routing"
+import { Link as I18nLink } from "@/i18n/navigation"
+import { usePathname } from "@/i18n/navigation"
 
 export const ExternalLinkIcon = () => {
   const { twFlipForRtl } = useRtlFlip()
@@ -23,7 +23,7 @@ export const ExternalLinkIcon = () => {
     <ExternalLink
       data-label="arrow"
       className={cn(
-        "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
+        "ms-1 !mb-0.5 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
         twFlipForRtl
       )}
     />
@@ -62,6 +62,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     isPartiallyActive = true,
     activeClassName = "text-primary",
     customEventOptions,
+    onClick,
     ...props
   }: LinkProps,
   ref
@@ -72,6 +73,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
+
+  href = url.normalizeHref(href)
 
   const isActive = url.isHrefActive(href, pathname || "", isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
@@ -98,6 +101,19 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     href,
   }
 
+  // Create click handler that tracks events and calls any passed onClick
+  const createClickHandler =
+    (eventName: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      trackCustomEvent(
+        customEventOptions ?? {
+          eventCategory: "Link",
+          eventAction: "Clicked",
+          eventName: `${eventName} - ${href}`,
+        }
+      )
+      onClick?.(e)
+    }
+
   if (isExternal) {
     const { className, ...rest } = commonProps
 
@@ -105,31 +121,23 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       <a
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: `Link`,
-              eventAction: `Clicked`,
-              eventName: "Clicked on external link",
-              eventValue: href,
-            }
-          )
-        }
-        className={cn("relative", className)}
         {...rest}
+        onClick={createClickHandler("Clicked on external link")}
+        className={cn("relative", className)}
       >
         {isMailto ? (
           <span className="text-nowrap">
             {!hideArrow && (
-              <Mail className="!mb-0.5 me-1 inline-block size-[1em] shrink-0" />
+              <Mail className="me-1 !mb-0.5 inline-block size-[1em] shrink-0" />
             )}
             {children}
           </span>
         ) : (
           children
         )}
-        <span className="sr-only">
-          {isMailto ? "opens email client" : "opens in a new tab"}
+        <span className="sr-only select-none">
+          &nbsp;
+          {isMailto ? "(opens email client)" : "(opens in a new tab)"}
         </span>
         {!hideArrow && !isMailto && <ExternalLinkIcon />}
       </a>
@@ -141,17 +149,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       <NextLink
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() =>
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: `Link`,
-              eventAction: `Clicked`,
-              eventName: "Clicked on internal PDF",
-              eventValue: href,
-            }
-          )
-        }
         {...commonProps}
+        onClick={createClickHandler("Clicked on internal PDF")}
       >
         {children}
       </NextLink>
@@ -165,18 +164,11 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     // as a same-page scroll rather than a route change)
     return (
       <I18nLink
+        {...commonProps}
         onClick={(e) => {
           e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ?? {
-              eventCategory: "Link",
-              eventAction: "Clicked",
-              eventName: "Clicked on hash link",
-              eventValue: href,
-            }
-          )
+          createClickHandler("Clicked on hash link")(e)
         }}
-        {...commonProps}
       >
         {children}
       </I18nLink>
@@ -185,17 +177,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   return (
     <I18nLink
-      onClick={() =>
-        trackCustomEvent(
-          customEventOptions ?? {
-            eventCategory: `Link`,
-            eventAction: `Clicked`,
-            eventName: `Clicked on internal link`,
-            eventValue: href,
-          }
-        )
-      }
       {...commonProps}
+      onClick={createClickHandler("Clicked on internal link")}
     >
       {children}
     </I18nLink>
@@ -215,9 +198,9 @@ export const LinkWithArrow = forwardRef<HTMLAnchorElement, LinkProps>(
         ref={ref}
         {...props}
       >
-        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
-        &nbsp;
         <span className="group-hover:underline">{children}</span>
+        &nbsp;
+        <ArrowRight className={cn("mb-1 inline size-[1em]", twFlipForRtl)} />
       </BaseLink>
     )
   }

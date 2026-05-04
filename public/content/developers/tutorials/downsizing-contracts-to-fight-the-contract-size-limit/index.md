@@ -5,6 +5,7 @@ author: Markus Waas
 lang: en
 tags: ["solidity", "smart contracts", "storage"]
 skill: intermediate
+breadcrumb: Downsizing contracts
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size
@@ -12,7 +13,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## Why is there a limit? {#why-is-there-a-limit}
 
-On [November 22, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/) the Spurious Dragon hard-fork introduced [EIP-170](https://eips.ethereum.org/EIPS/eip-170) which added a smart contract size limit of 24.576 kb. For you as a Solidity developer this means when you add more and more functionality to your contract, at some point you will reach the limit and when deploying will see the error:
+On [November 22, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon) the Spurious Dragon hard-fork introduced [EIP-170](https://eips.ethereum.org/EIPS/eip-170) which added a smart contract size limit of 24.576 kb. For you as a Solidity developer this means when you add more and more functionality to your contract, at some point you will reach the limit and when deploying will see the error:
 
 `Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 
@@ -78,7 +79,7 @@ require(msg.sender == owner, "Only the owner of this contract can call this func
 require(msg.sender == owner, "OW1");
 ```
 
-### Use custom errors instead of error messages
+### Use custom errors instead of error messages {#use-custom-errors-instead-of-error-messages}
 
 Custom errors have been introduced in [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). They are a great way to reduce the size of your contracts, because they are ABI-encoded as selectors (just like functions are).
 

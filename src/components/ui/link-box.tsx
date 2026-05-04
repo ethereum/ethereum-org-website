@@ -1,6 +1,6 @@
 "use client"
 
-import { type BaseHTMLAttributes, type ElementRef, forwardRef } from "react"
+import { type BaseHTMLAttributes, type ComponentRef, forwardRef } from "react"
 import { Slot } from "@radix-ui/react-slot"
 
 import type { MatomoEventOptions } from "@/lib/types"
@@ -10,7 +10,7 @@ import { BaseLink } from "@/components/ui/Link"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-type LinkBoxElement = ElementRef<"div">
+type LinkBoxElement = ComponentRef<"div">
 
 type LinkBoxProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 
@@ -25,7 +25,7 @@ const LinkBox = forwardRef<LinkBoxElement, LinkBoxProps>(
 
 LinkBox.displayName = "LinkBox"
 
-type LinkOverlayElement = ElementRef<typeof BaseLink>
+type LinkOverlayElement = ComponentRef<typeof BaseLink>
 
 type LinkOverlayProps = React.ComponentProps<typeof BaseLink> & {
   asChild?: boolean
@@ -40,7 +40,9 @@ const LinkOverlay = forwardRef<LinkOverlayElement, LinkOverlayProps>(
       <Comp
         ref={ref}
         className={cn(
-          "before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-['']",
+          // Use !static to override the `relative` that BaseLink adds to external links
+          // This ensures the ::before pseudo-element is positioned relative to the LinkBox parent
+          "!static before:absolute before:top-0 before:left-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-['']",
           className
         )}
         onClick={() => matomoEvent && trackCustomEvent(matomoEvent)}

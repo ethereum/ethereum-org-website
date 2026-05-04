@@ -10,6 +10,7 @@ tags:
     "eventos"
   ]
 skill: intermediate
+breadcrumb: "Registro de eventos"
 lang: es
 published: 2020-04-03
 source: EthereumDev

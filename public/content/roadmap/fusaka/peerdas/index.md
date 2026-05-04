@@ -2,11 +2,12 @@
 title: PeerDAS
 description: Learn about PeerDAS as part of the Fusaka Ethereum protocol upgrade
 lang: en
+authors: ["Nixo", "Mario Havel"]
 ---
 
 # PeerDAS {#peer-das}
 
-The Ethereum protocol is undergoing its most significant scaling upgrade since the [introduction of blob transactions with EIP-4844](/roadmap/danksharding/). As part of the [Fusaka upgrade](/roadmap/fusaka/), PeerDAS introduces a new way of handling blob data, delivering roughly an order-of-magnitude increase in **[data availability (DA)](/developers/docs/data-availability/)** capacity for L2s.
+The [Ethereum](/) protocol is undergoing its most significant scaling upgrade since the [introduction of blob transactions with EIP-4844](/roadmap/danksharding/). As part of the [Fusaka upgrade](/roadmap/fusaka/), PeerDAS introduces a new way of handling blob data, delivering roughly an order-of-magnitude increase in **[data availability (DA)](/developers/docs/data-availability/)** capacity for L2s.
 
 [More on blob scaling roadmap](https://blog.ethereum.org/2025/08/22/protocol-update-002)
 
@@ -40,7 +41,7 @@ To ensure the integrity of the data, EIP-4844 was already implemented with KZG c
 
 DAS is a mechanism that builds on top of this and ensures the data is both correct and available. Sampling is a process where a node queries only a small part of the data and verifies it against the commitment. KZG is a polynomial commitment scheme which means that any single point on the polynomial curve can be verified. By checking only a couple points on the polynomial, the client doing the sampling can have a strong probabilistic guarantee that the data is available. 
 
-## PeerDAS {#peer-das}
+## PeerDAS {#peer-das-2}
 
 [PeerDAS (EIP-7594)](https://eips.ethereum.org/EIPS/eip-7594) is a specific proposal that implements the DAS mechanism in Ethereum, marking probably the biggest upgrade since The Merge. PeerDAS is designed to extend blob data, dividing it into columns and distributing a subset to nodes.
 

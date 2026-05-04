@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
@@ -33,6 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { stablecoins } from "./data"
@@ -75,10 +76,11 @@ const Section = ({
   <section className={cn("w-full px-8 py-4", className)} {...props} />
 )
 
-async function Page({ params }: { params: PageParams }) {
+async function Page(props: { params: Promise<PageParams> }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("page-stablecoins")
+  const tCommon = await getTranslations("common")
 
   setRequestLocale(locale)
 
@@ -105,7 +107,7 @@ async function Page({ params }: { params: PageParams }) {
       .map(({ id, ...rest }) => {
         const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
         if (!coinMarketData) {
-          console.warn("CoinGecko stablecoin data not found:", id)
+          // CoinGecko data may not include all configured stablecoins
           return null
         }
         return { ...coinMarketData, ...rest }
@@ -117,7 +119,7 @@ async function Page({ params }: { params: PageParams }) {
       .sort((a, b) => b.market_cap - a.market_cap)
       .map(({ market_cap, ...rest }) => ({
         ...rest,
-        marketCap: new Intl.NumberFormat("en-US", {
+        marketCap: numberFormat(locale, {
           style: "currency",
           currency: "USD",
           minimumFractionDigits: 0,
@@ -260,7 +262,7 @@ async function Page({ params }: { params: PageParams }) {
       name: "Aave",
       description: t("page-stablecoins-stablecoins-dapp-description-1"),
       className:
-        "[&>[data-label='banner']]:bg-gradient-to-tr from-[#5cb8c4] to-[#aa589b]",
+        "[&>[data-label='banner']]:bg-linear-to-tr from-[#5cb8c4] to-[#aa589b]",
     },
     {
       url: "https://compound.finance",
@@ -269,8 +271,7 @@ async function Page({ params }: { params: PageParams }) {
       width: 64 * 2,
       name: "Compound",
       description: t("page-stablecoins-stablecoins-dapp-description-2"),
-      className:
-        "[&>[data-label='banner']]:bg-gradient-to-tr dark:from-white/5 ",
+      className: "[&>[data-label='banner']]:bg-linear-to-tr dark:from-white/5 ",
     },
     {
       url: "https://summer.fi/",
@@ -280,7 +281,7 @@ async function Page({ params }: { params: PageParams }) {
       name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
       className:
-        "[&>[data-label='banner']]:bg-gradient-to-br from-[#c7efe6] to-[#eeeac7]",
+        "[&>[data-label='banner']]:bg-linear-to-br from-[#c7efe6] to-[#eeeac7]",
     },
     {
       url: "https://spark.fi/",
@@ -289,8 +290,7 @@ async function Page({ params }: { params: PageParams }) {
       width: 64 * 2,
       name: "Spark Protocol",
       description: t("page-stablecoins-stablecoins-dapp-description-5"),
-      className:
-        "[&>[data-label='banner']]:bg-gradient-to-tr dark:from-white/5",
+      className: "[&>[data-label='banner']]:bg-linear-to-tr dark:from-white/5",
     },
   ]
 
@@ -410,11 +410,9 @@ async function Page({ params }: { params: PageParams }) {
     },
   ]
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "stablecoins",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -425,20 +423,20 @@ async function Page({ params }: { params: PageParams }) {
           <PageHero isReverse content={heroContent} />
           <Divider />
           <Section>
-            <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
-              <div className="me-auto ms-auto w-full lg:me-2 lg:ms-0">
+            <Flex className="me-8 mb-8 w-full flex-col items-start lg:flex-row">
+              <div className="ms-auto me-auto w-full lg:ms-0 lg:me-2">
                 <h2 className="mb-8">
                   {t("page-stablecoins-why-stablecoins")}
                 </h2>
                 <p className="mb-6">
-                  {t("page-stablecoins-prices-definition")}{" "}
+                  <Translation id="page-stablecoins:page-stablecoins-prices-definition" />{" "}
                   <InlineLink href="#how">
                     {t("page-stablecoins-prices-definition-how")}
                   </InlineLink>
                 </p>
               </div>
             </Flex>
-            <Flex className="mb-8 me-0 w-full flex-col items-start lg:me-8 lg:flex-row">
+            <Flex className="me-0 mb-8 w-full flex-col items-start lg:me-8 lg:flex-row">
               <Flex className="mx-auto w-full flex-col gap-2 lg:mx-8 lg:my-0">
                 {tokens.map((token, index) => (
                   <div key={index} className="my-2 min-w-full">
@@ -451,7 +449,7 @@ async function Page({ params }: { params: PageParams }) {
               </Flex>
               <GhostCard className="me-0 mt-16 max-w-[640px] lg:me-8 lg:mt-2">
                 <Emoji text=":pizza:" className="text-5xl" />
-                <h3 className="mb-8 mt-12">
+                <h3 className="mt-12 mb-8">
                   {t("page-stablecoins-bitcoin-pizza")}
                 </h3>
                 <p className="mb-6">
@@ -464,13 +462,13 @@ async function Page({ params }: { params: PageParams }) {
           <div
             className={cn(
               "my-8 w-full py-16 shadow-inner",
-              "bg-gradient-to-r from-accent-a/10 to-accent-c/10",
-              "dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
+              "bg-linear-to-r from-accent-a/10 to-accent-c/10",
+              "dark:bg-linear-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
             )}
           >
             <div className="-mb-8 w-full px-8 py-4">
               <h2 className="mb-8">{t("page-stablecoins-find-stablecoin")}</h2>
-              <Flex className="me-auto ms-auto w-full flex-col justify-center lg:me-2 lg:ms-0 lg:w-1/2">
+              <Flex className="ms-auto me-auto w-full flex-col justify-center lg:ms-0 lg:me-2 lg:w-1/2">
                 <p className="mb-6">
                   {t("page-stablecoins-find-stablecoin-intro")}
                 </p>
@@ -488,7 +486,7 @@ async function Page({ params }: { params: PageParams }) {
                 </ul>
               </Flex>
 
-              <h3 className="mb-4 mt-0">
+              <h3 className="mt-0 mb-4">
                 {t("page-stablecoins-editors-choice")}
               </h3>
               <p className="mb-6">
@@ -498,7 +496,7 @@ async function Page({ params }: { params: PageParams }) {
               <div className="mb-16 grid grid-cols-1 gap-16 lg:grid-cols-2">
                 {editorsChoices.map((choice, idx) => (
                   <Flex
-                    className="w-full flex-col-reverse justify-between gap-x-8 rounded-sm border border-border-high-contrast bg-background p-8 text-body sm:flex-row"
+                    className="w-full flex-col-reverse justify-between gap-x-8 rounded-xs border border-border-high-contrast bg-background p-8 text-body sm:flex-row"
                     key={idx}
                     style={{
                       boxShadow: `0.75rem 0.75rem 0 hsla(var(--${choice.shadowColor}-500), 0.25)`,
@@ -513,7 +511,7 @@ async function Page({ params }: { params: PageParams }) {
                         <Flex className="flex-col">
                           <div>
                             <ButtonLink
-                              className="mb-4 me-4"
+                              className="me-4 mb-4"
                               href={choice.swapUrl}
                             >
                               {choice.swapButtonText}
@@ -532,7 +530,7 @@ async function Page({ params }: { params: PageParams }) {
                       </div>
                     </Flex>
                     <Flex className="items-center justify-between gap-x-8 gap-y-4 max-sm:mb-8 max-sm:max-h-16 sm:flex-col sm:justify-center">
-                      <div className="relative isolate my-8 max-w-24 self-center bg-cover bg-repeat max-sm:w-16 sm:min-w-40 sm:max-w-40 md:my-0">
+                      <div className="relative isolate my-8 max-w-24 self-center bg-cover bg-repeat max-sm:w-16 sm:max-w-40 sm:min-w-40 md:my-0">
                         <Image
                           src={choice.image}
                           alt=""
@@ -563,7 +561,7 @@ async function Page({ params }: { params: PageParams }) {
                 ))}
               </div>
 
-              <h3 id="stablecoin-markets" className="mb-8 mt-12">
+              <h3 id="stablecoin-markets" className="mt-12 mb-8">
                 {t("page-stablecoins-top-coins")}&nbsp;
                 <Tooltip content={tooltipContent}>
                   <Info className="size-4" />
@@ -585,7 +583,7 @@ async function Page({ params }: { params: PageParams }) {
 
           <Section id="explore">
             <h2 className="mb-8">{t("page-stablecoins-get-stablecoins")}</h2>
-            <Flex className="w-full items-center pb-4 pe-0 ps-0 lg:pe-8 lg:ps-8">
+            <Flex className="w-full items-center ps-0 pe-0 pb-4 lg:ps-8 lg:pe-8">
               {/* CLIENT SIDE */}
               <StablecoinAccordion />
             </Flex>
@@ -593,7 +591,7 @@ async function Page({ params }: { params: PageParams }) {
           <Divider />
           <Section>
             <CalloutBannerSSR
-              className="mx-0 mb-16 mt-8"
+              className="mx-0 mt-8 mb-16"
               title={t("page-stablecoins-stablecoins-dapp-callout-title")}
               description={t(
                 "page-stablecoins-stablecoins-dapp-callout-description"
@@ -617,12 +615,12 @@ async function Page({ params }: { params: PageParams }) {
               </div>
             </CalloutBannerSSR>
             <h2>{t("page-stablecoins-save-stablecoins")}</h2>
-            <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
-              <div className="me-auto ms-auto w-full lg:me-2 lg:ms-0">
+            <Flex className="me-8 mb-8 w-full flex-col items-start lg:flex-row">
+              <div className="ms-auto me-auto w-full lg:ms-0 lg:me-2">
                 <p className="mb-6">
                   {t("page-stablecoins-save-stablecoins-body")}
                 </p>
-                <h3 className="mb-8 mt-12">
+                <h3 className="mt-12 mb-8">
                   {t("page-stablecoins-interest-earning-dapps")}
                 </h3>
                 <p className="mb-6">{t("page-stablecoins-saving")}</p>
@@ -667,7 +665,7 @@ async function Page({ params }: { params: PageParams }) {
               {features.map((feature) => (
                 <TabsContent key={feature.title} value={feature.title}>
                   <div className="flex flex-col gap-6 md:flex-row md:items-start">
-                    <div className="mb-4 flex-shrink-0 text-7xl md:mb-0 md:me-8 md:text-8xl">
+                    <div className="mb-4 shrink-0 text-7xl md:me-8 md:mb-0 md:text-8xl">
                       <Emoji text={feature.emoji} />
                     </div>
                     <div className="flex-1">
@@ -756,14 +754,13 @@ async function Page({ params }: { params: PageParams }) {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+  const t = await getTranslations("page-stablecoins")
 
   return await getMetadata({
     locale,

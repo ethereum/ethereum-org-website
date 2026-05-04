@@ -1,12 +1,16 @@
 /**
  * Trigger.dev scheduled tasks for data fetching.
  *
+ * Weekly tasks run on Sundays at midnight UTC.
  * Daily tasks run at midnight UTC.
  * Hourly tasks run every hour.
  */
 
-import { retry, schedules } from "@trigger.dev/sdk/v3"
+import * as Sentry from "@sentry/nextjs"
+import { logger, schedules, task, tasks } from "@trigger.dev/sdk/v3"
 
+import { fetchDeveloperTools } from "./fetchers/developer-tools"
+import { fetchAccountHolders } from "./fetchers/fetchAccountHolders"
 import { fetchApps } from "./fetchers/fetchApps"
 import { fetchBeaconChain } from "./fetchers/fetchBeaconChain"
 import { fetchBlobscanStats } from "./fetchers/fetchBlobscanStats"
@@ -16,8 +20,10 @@ import { fetchEthereumMarketcap } from "./fetchers/fetchEthereumMarketcap"
 import { fetchEthereumStablecoinsMcap } from "./fetchers/fetchEthereumStablecoinsMcap"
 import { fetchEthPrice } from "./fetchers/fetchEthPrice"
 import { fetchEvents } from "./fetchers/fetchEvents"
+import { fetchGasPrice } from "./fetchers/fetchGasPrice"
 import { fetchGFIs } from "./fetchers/fetchGFIs"
 import { fetchGitHistory } from "./fetchers/fetchGitHistory"
+import { fetchGitHubContributors } from "./fetchers/fetchGitHubContributors"
 import { fetchGithubRepoData } from "./fetchers/fetchGithubRepoData"
 import { fetchGrowThePie } from "./fetchers/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "./fetchers/fetchGrowThePieBlockspace"
@@ -28,12 +34,16 @@ import { fetchRSS } from "./fetchers/fetchRSS"
 import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
+import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
+import { fetchVideoThumbnails } from "./fetchers/fetchVideoThumbnails"
 import { set } from "./storage"
 
 export const KEYS = {
   APPS: "fetch-apps",
   CALENDAR_EVENTS: "fetch-calendar-events",
+  GITHUB_CONTRIBUTORS: "fetch-github-contributors",
   COMMUNITY_PICKS: "fetch-community-picks",
+  DEVELOPER_TOOLS: "fetch-developer-tools",
   GFIS: "fetch-gfis",
   GIT_HISTORY: "fetch-git-history",
   GROW_THE_PIE: "fetch-grow-the-pie",
@@ -49,15 +59,22 @@ export const KEYS = {
   ETHEREUM_MARKETCAP: "fetch-ethereum-marketcap",
   ETHEREUM_STABLECOINS_MCAP: "fetch-ethereum-stablecoins-mcap",
   ETH_PRICE: "fetch-eth-price",
+  GAS_PRICE: "fetch-gas-price",
   TOTAL_ETH_STAKED: "fetch-total-eth-staked",
   TOTAL_VALUE_LOCKED: "fetch-total-value-locked",
   STABLECOINS_DATA: "fetch-stablecoins-data",
+  ACCOUNT_HOLDERS: "fetch-account-holders",
+  TRANSLATION_GLOSSARY: "fetch-translation-glossary",
+  VIDEO_THUMBNAILS: "fetch-video-thumbnails",
 } as const
 
 // Task definition: storage key + fetch function
-type Task = [string, () => Promise<unknown>]
+type TaskDef = [string, () => Promise<unknown>]
 
-const DAILY: Task[] = [
+const WEEKLY: TaskDef[] = [[KEYS.GITHUB_CONTRIBUTORS, fetchGitHubContributors]]
+
+const DAILY: TaskDef[] = [
+  [KEYS.ACCOUNT_HOLDERS, fetchAccountHolders],
   [KEYS.APPS, fetchApps],
   [KEYS.CALENDAR_EVENTS, fetchCalendarEvents],
   [KEYS.COMMUNITY_PICKS, fetchCommunityPicks],
@@ -71,55 +88,94 @@ const DAILY: Task[] = [
   [KEYS.RSS, fetchRSS],
   [KEYS.GITHUB_REPO_DATA, fetchGithubRepoData],
   [KEYS.EVENTS, fetchEvents],
+  [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
+  [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
+  [KEYS.BEACONCHAIN, fetchBeaconChain],
+  [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
 ]
 
-const HOURLY: Task[] = [
-  [KEYS.BEACONCHAIN, fetchBeaconChain],
+const HOURLY: TaskDef[] = [
   [KEYS.BLOBSCAN_STATS, fetchBlobscanStats],
   [KEYS.ETHEREUM_MARKETCAP, fetchEthereumMarketcap],
   [KEYS.ETHEREUM_STABLECOINS_MCAP, fetchEthereumStablecoinsMcap],
   [KEYS.ETH_PRICE, fetchEthPrice],
+  [KEYS.GAS_PRICE, fetchGasPrice],
   [KEYS.TOTAL_ETH_STAKED, fetchTotalEthStaked],
   [KEYS.TOTAL_VALUE_LOCKED, fetchTotalValueLocked],
   [KEYS.STABLECOINS_DATA, fetchStablecoinsData],
 ]
 
-async function runTasks(tasks: Task[]) {
-  const results = await Promise.allSettled(
-    tasks.map(async ([key, fetchFn]) => {
-      const data = await retry.onThrow(fetchFn, {
-        maxAttempts: 3,
-        minTimeoutInMs: 2000,
-        maxTimeoutInMs: 30000,
-        factor: 2,
-        randomize: true,
-      })
+// ─── Dynamic task creation ───
+function createDataTask([key, fetchFn]: TaskDef) {
+  return task({
+    id: key,
+    retry: {
+      maxAttempts: 2,
+    },
+    catchError: async ({ error }) => {
+      logger.error(`[${key}] failed`, { error })
+    },
+    run: async () => {
+      const data = await fetchFn()
       await set(key, data)
-      console.log(`✓ ${key}`)
-      return key
-    })
-  )
-
-  const summary = results.map((r, i) => ({
-    key: tasks[i][0],
-    ok: r.status === "fulfilled",
-    error: r.status === "rejected" ? String(r.reason) : undefined,
-  }))
-
-  const failed = summary.filter((s) => !s.ok)
-  failed.forEach((f) => console.error(`✗ ${f.key}: ${f.error}`))
-
-  return summary
+      logger.info(`✓ ${key}`)
+      return { key }
+    },
+  })
 }
+
+const weeklyFetchTasks = WEEKLY.map(createDataTask)
+const dailyFetchTasks = DAILY.map(createDataTask)
+const hourlyFetchTasks = HOURLY.map(createDataTask)
+
+// Must export for trigger.dev to discover
+export const allFetchTasks = [
+  ...weeklyFetchTasks,
+  ...dailyFetchTasks,
+  ...hourlyFetchTasks,
+]
+
+// ─── Scheduled orchestrators ───
+export const weeklyTask = schedules.task({
+  id: "weekly-data-fetch",
+  cron: "0 0 * * 0", // Sundays at midnight UTC
+  run: () => Promise.all(weeklyFetchTasks.map((t) => t.trigger())),
+})
 
 export const dailyTask = schedules.task({
   id: "daily-data-fetch",
   cron: "0 0 * * *",
-  run: () => runTasks(DAILY),
+  run: () => Promise.all(dailyFetchTasks.map((t) => t.trigger())),
 })
 
 export const hourlyTask = schedules.task({
   id: "hourly-data-fetch",
   cron: "0 * * * *",
-  run: () => runTasks(HOURLY),
+  run: () => Promise.all(hourlyFetchTasks.map((t) => t.trigger())),
+})
+
+// ─── Global failure handler → Sentry + Discord ───
+tasks.onFailure(async ({ ctx, error }) => {
+  Sentry.captureException(error, {
+    tags: { module: "data-layer" },
+    extra: { taskId: ctx.task.id },
+  })
+
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL
+  if (!webhookUrl) return
+
+  await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      embeds: [
+        {
+          title: `Data Fetch Failed: ${ctx.task.id}`,
+          color: 0xff0000,
+          description: String(error).slice(0, 2000),
+          timestamp: new Date().toISOString(),
+        },
+      ],
+    }),
+  })
 })

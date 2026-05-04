@@ -7,7 +7,7 @@ import game from "@/public/images/ai-agents/game.png"
 const BuildYourOwnAIAgent = () => {
   return (
     <div className="flex flex-col gap-8 md:flex-row">
-      <div className="flex flex-1 flex-col gap-4 rounded-xl border bg-gradient-to-br from-transparent to-purple-200/10 p-8">
+      <div className="flex flex-1 flex-col gap-4 rounded-xl border bg-linear-to-br from-transparent to-purple-200/10 p-8">
         <Image
           src={ai16z}
           alt="AI16Z"
@@ -22,11 +22,11 @@ const BuildYourOwnAIAgent = () => {
         </p>
         <div>
           <ButtonLink href="https://elizaos.github.io/eliza/" variant="outline">
-            Use Eliza
+            Use ElizaOS
           </ButtonLink>
         </div>
       </div>
-      <div className="flex flex-1 flex-col gap-4 rounded-xl border bg-gradient-to-br from-transparent to-purple-200/10 p-8">
+      <div className="flex flex-1 flex-col gap-4 rounded-xl border bg-linear-to-br from-transparent to-purple-200/10 p-8">
         <Image
           src={game}
           alt="GAME"

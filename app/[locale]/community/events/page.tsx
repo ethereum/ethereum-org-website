@@ -8,12 +8,7 @@ import {
 } from "lucide-react"
 import { getMessages, getTranslations } from "next-intl/server"
 
-import type {
-  CommitHistory,
-  Lang,
-  PageParams,
-  SectionNavDetails,
-} from "@/lib/types"
+import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
 import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -49,28 +44,24 @@ import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
 import heroImage from "@/public/images/enterprise-eth.png"
 import organizerImage from "@/public/images/people-learning.png"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   const _events = (await getEventsData()) ?? []
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community/events")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "community/events",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
-  const events = mapEventTranslations(_events, t)
+  const events = mapEventTranslations(_events, t, locale)
 
   // Get highlighted conferences (with highlight flag or first 3)
   const conferences = events.filter(
@@ -91,7 +82,7 @@ const Page = async ({ params }: { params: PageParams }) => {
       !e.eventTypes?.includes("conference") &&
       !e.eventTypes?.includes("hackathon")
   )
-  const meetupGroups = getMeetupGroups()
+  const meetupGroups = getMeetupGroups(locale)
   const meetups = [...apiMeetups, ...meetupGroups]
 
   // Continent labels for tabs
@@ -224,7 +215,13 @@ const Page = async ({ params }: { params: PageParams }) => {
                           sizes="6rem"
                         />
                       </div>
-                      <h3 className="text-2xl font-bold">{location}</h3>
+                      <h3 className="text-2xl font-bold">
+                        {location}
+                        <span className="sr-only">
+                          &nbsp;
+                          {t("page-events-meta-ethereum-community-hub")}
+                        </span>
+                      </h3>
                       <div className="space-y-[1lh]">
                         <p>{t(descriptionKey)}</p>
                         <p>{t(ctaKey)}</p>
@@ -367,6 +364,13 @@ const Page = async ({ params }: { params: PageParams }) => {
                 eventName: "regular_conf",
               }}
             />
+            <p className="!mt-8 text-body-medium">
+              {t.rich("page-events-data-source-callout", {
+                a: (chunks) => (
+                  <Link href="https://ethstars.xyz/">{chunks}</Link>
+                ),
+              })}
+            </p>
             <div className="flex justify-center">
               <ButtonLink
                 href="/community/events/conferences/"
@@ -431,14 +435,10 @@ const Page = async ({ params }: { params: PageParams }) => {
             </div>
             <div className="grid gap-8 md:grid-cols-2">
               {/* Ethereum Everywhere Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
+              <div className="flex flex-col gap-y-8 rounded-4xl bg-linear-to-b from-accent-a/5 to-accent-a/15 px-4 py-6 md:p-12 dark:from-accent-a/10 dark:to-accent-a/20">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
-                    <Image
-                      src={ethereumEverywhereLogo}
-                      alt={t("item-logo", { name: "Ethereum Everywhere" })}
-                      sizes="4rem"
-                    />
+                    <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
                   </div>
                   <h3 className="text-xl font-bold">
                     {t("page-events-support-ethereum-everywhere")}
@@ -499,14 +499,10 @@ const Page = async ({ params }: { params: PageParams }) => {
               </div>
 
               {/* Geode Labs Card */}
-              <div className="flex flex-col gap-y-8 rounded-4xl bg-gradient-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
+              <div className="flex flex-col gap-y-8 rounded-4xl bg-linear-to-b from-accent-c/5 to-accent-c/15 px-4 py-6 md:p-12 dark:from-accent-c/10 dark:to-accent-c/20">
                 <div className="flex items-center gap-3">
                   <div className="size-16 overflow-hidden rounded-full">
-                    <Image
-                      src={geodeLabsLogo}
-                      alt={t("item-logo", { name: "GeodeLabs" })}
-                      sizes="4rem"
-                    />
+                    <Image src={geodeLabsLogo} alt="" sizes="4rem" />
                   </div>
                   <h3 className="text-xl font-bold">
                     {t("page-events-support-geode-labs")}
@@ -588,16 +584,12 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-community-events",
-  })
+  const t = await getTranslations("page-community-events")
 
   const year = getLocaleYear(locale)
 

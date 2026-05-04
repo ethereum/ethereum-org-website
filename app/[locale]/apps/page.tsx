@@ -5,22 +5,28 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { CommitHistory, Lang, PageParams } from "@/lib/types"
+import { AppCategory, AppData, Lang, PageParams } from "@/lib/types"
 
+import AppCard from "@/components/AppCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
-import { getDiscoverApps, getHighlightedApps } from "@/lib/utils/apps"
+import {
+  APP_TAG_VARIANTS,
+  getDiscoverApps,
+  getHighlightedApps,
+} from "@/lib/utils/apps"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getLocalizedDescription } from "@/lib/utils/i18n-descriptions"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { slugify } from "@/lib/utils/url"
 
 import { appsCategories } from "@/data/apps/categories"
 
-import AppCard from "./_components/AppCard"
 import AppsHighlight from "./_components/AppsHighlight"
 import CommunityPicks from "./_components/CommunityPicks"
 import SuggestAnApp from "./_components/SuggestAnApp"
@@ -29,7 +35,8 @@ import AppsJsonLD from "./page-jsonld"
 
 import { getAppsData, getCommunityPicks } from "@/lib/data"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
@@ -55,18 +62,50 @@ const Page = async ({ params }: { params: PageParams }) => {
   const discoverApps = getDiscoverApps(appsData, 6)
 
   // Get translations
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
+  const appDescriptions = await getTranslations("page-app-descriptions")
+  const tSubcategory = await getTranslations("app-subcategories")
+
+  // Translate subcategory tags, falling back to the raw string
+  const translateSubcategories = (tag: string) => {
+    const key = `subcategory-${slugify(tag)}`
+    return tSubcategory.has(key) ? tSubcategory(key) : tag
+  }
+
+  const translateApp = (app: AppData) =>
+    ({
+      ...app,
+      subCategory: app.subCategory.map(translateSubcategories),
+    }) as AppData
+
+  const translatedAppsData = Object.fromEntries(
+    Object.entries(appsData).map(([category, apps]) => [
+      category,
+      (apps as AppData[]).map(translateApp),
+    ])
+  ) as Record<AppCategory, AppData[]>
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const commitHistoryCache: CommitHistory = {}
+  const localizeApps = <T extends { name: string; description: string }>(
+    apps: T[]
+  ): T[] =>
+    apps.map((app) => ({
+      ...app,
+      description: getLocalizedDescription(
+        appDescriptions,
+        "app",
+        app.name,
+        app.description
+      ),
+    }))
+
   const { contributors } = await getAppPageContributorInfo(
     "apps",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -90,20 +129,36 @@ const Page = async ({ params }: { params: PageParams }) => {
         <MainArticle className="flex flex-col gap-32 py-10">
           <div className="flex flex-col gap-8 px-4 md:px-8">
             <h2>{t("page-apps-highlights-title")}</h2>
-            <AppsHighlight apps={highlightedApps} matomoCategory="apps" />
+            <AppsHighlight
+              apps={localizeApps(highlightedApps.map(translateApp))}
+              matomoCategory="apps"
+            />
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
             <h2>{t("page-apps-discover-title")}</h2>
             <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-              {discoverApps.map((app) => (
+              {localizeApps(discoverApps).map((app) => (
                 <AppCard
                   key={app.name}
-                  app={app}
-                  imageSize={24}
-                  showDescription
-                  matomoCategory="apps"
-                  matomoAction="staff"
+                  name={app.name}
+                  description={app.description}
+                  thumbnail={app.image}
+                  category={app.category}
+                  categoryTagStatus={APP_TAG_VARIANTS[app.category]}
+                  tags={app.subCategory.map(translateSubcategories)}
+                  href={`/apps/${slugify(app.name)}`}
+                  imageSize="large"
+                  customEventOptions={{
+                    eventCategory: "apps",
+                    eventAction: "staff",
+                    eventName: `app name ${app.name}`,
+                  }}
+                  descriptionTracking={{
+                    eventCategory: "apps",
+                    eventAction: "staff_show_more",
+                    eventName: `app description ${app.name}`,
+                  }}
                 />
               ))}
             </div>
@@ -111,7 +166,7 @@ const Page = async ({ params }: { params: PageParams }) => {
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
             <h2>{t("page-apps-applications-title")}</h2>
-            <TopApps appsData={appsData} />
+            <TopApps appsData={translatedAppsData} />
           </div>
 
           {/* Note: Implemented this instead of swiper from design to allow for SSR */}
@@ -139,7 +194,7 @@ const Page = async ({ params }: { params: PageParams }) => {
             <h2>{t("page-apps-community-picks-title")}</h2>
             <CommunityPicks
               communityPicks={communityPicks}
-              appsData={appsData}
+              appsData={translatedAppsData}
             />
           </div>
 
@@ -152,13 +207,12 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: "page-apps" })
+  const t = await getTranslations("page-apps")
 
   return await getMetadata({
     locale,

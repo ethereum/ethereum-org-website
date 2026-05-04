@@ -1,5 +1,7 @@
 import type { GrowThePieMasterData } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_GROW_THE_PIE_MASTER_TASK_ID = "fetch-grow-the-pie-master"
 
 interface Chain {
@@ -20,7 +22,7 @@ export async function fetchGrowThePieMaster(): Promise<GrowThePieMasterData> {
 
   console.log("Starting GrowThePie master data fetch")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

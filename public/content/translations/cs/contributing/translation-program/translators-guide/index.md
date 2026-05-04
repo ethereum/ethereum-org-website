@@ -1,7 +1,7 @@
 ---
-title: Průvodce překladem
+title: "Průvodce překladem"
 lang: cs
-description: Pokyny a tipy pro překladatele ethereum.org
+description: "Pokyny a tipy pro překladatele ethereum.org"
 ---
 
 # Průvodce stylem překladu ethereum.org {#style-guide}
@@ -10,15 +10,15 @@ Průvodce stylem překladu pro ethereum.org obsahuje některé z nejdůležitěj
 
 Tento dokument slouží jako obecný průvodce a není specifický pro žádný konkrétní jazyk.
 
-Pokud máte jakékoli dotazy, návrhy nebo zpětnou vazbu, neváhejte nás kontaktovat na translations@ethereum.org, pošlete zprávu na @ethdotorg na Crowdin nebo se [připojte k našemu Discordu](https://discord.gg/ethereum-org), kde nám můžete poslat zprávu v kanálu #translations nebo kontaktovat některého z členů týmu.
+Pokud máte nějaké dotazy, návrhy nebo zpětnou vazbu, neváhejte nás kontaktovat na adrese translations@ethereum.org, pošlete zprávu uživateli @ethdotorg na Crowdinu nebo se [připojte k našemu Discordu](https://discord.gg/ethereum-org), kde nám můžete napsat do kanálu #translations nebo se obrátit na kteréhokoliv člena týmu.
 
 ## Používání Crowdinu {#using-crowdin}
 
-Základní pokyny, jak se připojit k projektu na Crowdinu a jak používat online editor Crowdin, najdete na stránce [Translation Program](/contributing/translation-program/#how-to-translate).
+Základní pokyny, jak se připojit k projektu na Crowdinu a jak používat online editor Crowdin, naleznete na [stránce překladatelského programu](/contributing/translation-program/#how-to-translate).
 
-Pokud byste se chtěli dozvědět více o Crowdinu a používat některé z jeho pokročilých funkcí, [znalostní báze Crowdin](https://support.crowdin.com/online-editor/) obsahuje mnoho podrobných průvodců a přehledů všech jeho funkcionalit.
+Pokud se chcete dozvědět více o Crowdinu a používání některých jeho pokročilých funkcí, [znalostní báze Crowdinu](https://support.crowdin.com/online-editor/) obsahuje mnoho podrobných příruček a přehledů všech funkcí Crowdinu.
 
-## Zachycení podstaty sdělení {#capturing-the-essence}
+## Vystižení podstaty sdělení {#capturing-the-essence}
 
 Při překládání obsahu ethereum.org se vyhýbejte doslovným překladům.
 
@@ -28,7 +28,7 @@ Různé jazyky mají různá gramatické pravidla, konvence a pořadí slov. Př
 
 Místo překládání zdrojového textu slovo od slova se doporučuje přečíst si celou větu a přizpůsobit ji tak, aby odpovídala konvencím cílového jazyka.
 
-## Formální vs. neformální {#formal-vs-informal}
+## Formální vs. neformální oslovení {#formal-vs-informal}
 
 Používáme formální oslovení, které je vždy zdvořilé a vhodné pro všechny návštěvníky.
 
@@ -42,7 +42,7 @@ Naším cílem je, aby obsah na webu byl srozumitelný co největšímu počtu l
 
 Ve většině případů toho lze snadno dosáhnout použitím krátkých a jednoduchých slov, která jsou snadno srozumitelná. Pokud ve vašem jazyce existuje více možných překladů pro určitý výraz se stejným významem, nejlepší možností je většinou nejkratší slovo, které jasně odráží význam.
 
-## Písmo {#writing-system}
+## Systém písma {#writing-system}
 
 Ethereum.org je dostupné v řadě jazyků, které používají alternativní písma (nebo abecedy) k latince.
 
@@ -54,13 +54,13 @@ Běžná mylná představa je, že Ethereum by mělo být vždy psáno latinkou.
 
 **Výše uvedené neplatí pro jazyky, kde se jména obvykle nepřekládají.**
 
-## Překládání metadat stránky {#translating-metadata}
+## Překlad metadat stránky {#translating-metadata}
 
 Některé stránky obsahují metadata jako „title“, „lang“, „description“, „sidebar“ atd.
 
 Když nahráváme nové stránky do Crowdinu, skryjeme obsah, který by překladatelé nikdy neměli překládat, což znamená, že všechna metadata viditelná pro překladatele v Crowdinu by měla být přeložena.
 
-Buďte obzvláště opatrní při překládání jakýchkoli řetězců, kde je zdrojový text „en“. Tento text představuje jazyk, ve kterém je stránka dostupná, a měl by být přeložen na [ISO jazykový kód vašeho jazyka](https://www.andiamo.co.uk/resources/iso-language-codes/). Tyto řetězce by měly být vždy přeloženy pomocí latinských znaků, nikoli abecedy, která je vlastní cílovému jazyku.
+Buďte obzvláště opatrní při překládání jakýchkoli řetězců, kde je zdrojový text „en“. Toto označuje jazyk, ve kterém je stránka k dispozici, a mělo by být přeloženo jako [jazykový kód ISO pro váš jazyk](https://www.andiamo.co.uk/resources/iso-language-codes/). Tyto řetězce by měly být vždy přeloženy pomocí latinských znaků, nikoli abecedy, která je vlastní cílovému jazyku.
 
 Pokud si nejste jisti, jaký jazykový kód použít, můžete se podívat do překladové paměti v Crowdinu nebo najít jazykový kód pro váš jazyk v URL stránky v online editoru Crowdin.
 
@@ -78,17 +78,20 @@ Některé řetězce obsahují názvy externích článků. Většina našich str
 
 Níže najdete několik příkladů toho, jak tyto řetězce vypadají pro překladatele a jak je identifikovat (odkazy na články najdete většinou na konci těchto stránek, v sekci „Další čtení“):
 
-![Názvy článků v postranním panelu.png](./article-titles-in-sidebar.png) ![Názvy článků v editoru.png](./article-titles-in-editor.png)
+![Názvy článků v postranním panelu.png](./article-titles-in-sidebar.png)
+![Názvy článků v editoru.png](./article-titles-in-editor.png)
 
 ## Upozornění v Crowdinu {#crowdin-warnings}
 
-Crowdin má zabudovanou funkci, která varuje překladatele, když se chystají udělat chybu. Crowdin vás automaticky upozorní před uložením překladu, pokud zapomenete zahrnout tag ze zdroje, přeložíte prvky, které by neměly být přeloženy, přidáte několik po sobě jdoucích mezer, zapomenete koncové interpunkční znaménko atd. Pokud vidíte takové upozornění, vraťte se a dvakrát zkontrolujte navrhovaný překlad.
+Crowdin má zabudovanou funkci, která varuje překladatele, když se chystají udělat chybu. Crowdin vás automaticky upozorní před uložením překladu, pokud zapomenete zahrnout tag ze zdroje, přeložíte prvky, které by neměly být přeloženy, přidáte několik po sobě jdoucích mezer, zapomenete koncové interpunkční znaménko atd.
+Pokud vidíte takové upozornění, vraťte se a dvakrát zkontrolujte navrhovaný překlad.
 
 **Nikdy tato varování neignorujte, protože obvykle znamenají, že něco není v pořádku nebo že v překladu chybí klíčová část zdrojového textu.**
 
-Příklad upozornění v Crowdinu, když zapomenete přidat tag do překladu: ![Příklad upozornění v Crowdinu](./crowdin-warning-example.png)
+Příklad upozornění v Crowdinu, když do překladu zapomenete přidat značku:
+![Příklad upozornění v Crowdinu](./crowdin-warning-example.png)
 
-## Práce s tagy a úryvky kódu {#dealing-with-tags}
+## Práce se značkami a úryvky kódu {#dealing-with-tags}
 
 Mnoho zdrojového obsahu obsahuje tagy a proměnné, které jsou v editoru Crowdin zvýrazněny žlutě. Tyto prvky slouží různým funkcím a je nutné k nim přistupovat správně.
 
@@ -96,15 +99,18 @@ Mnoho zdrojového obsahu obsahuje tagy a proměnné, které jsou v editoru Crowd
 
 Aby bylo snazší pracovat s tagy a kopírovat je přímo ze zdroje, doporučujeme změnit nastavení v editoru Crowdin.
 
-1. Otevřete nastavení ![Jak otevřít nastavení v editoru](./editor-settings.png)
+1. Otevřít nastavení
+   ![Jak otevřít nastavení v editoru](./editor-settings.png)
 
 2. Sjeďte dolů do sekce „Zobrazování HTML tagů“
 
-3. Vyberte „Skrýt“ ![Prosím, zvolte možnost „Skrýt“](./hide-tags.png)
+3. Zvolte „Skrýt“
+   ![Zvolte prosím „Skrýt“](./hide-tags.png)
 
 4. Klikněte na „Uložit“
 
-Při výběru této možnosti se celý text tagu již nebude zobrazovat a bude nahrazen číslem. Při překládání kliknutí na tento tag automaticky zkopíruje přesný tag do pole překladu.
+Při výběru této možnosti se celý text tagu již nebude zobrazovat a bude nahrazen číslem.
+Při překládání kliknutí na tento tag automaticky zkopíruje přesný tag do pole překladu.
 
 **Odkazy**
 
@@ -116,7 +122,7 @@ Nejlepší způsob, jak pracovat s odkazy, je kopírovat je přímo ze zdroje, b
 
 ![Příklad odkazu.png](./example-of-link.png)
 
-Odkazy se také zobrazují ve zdrojovém textu ve formě tagů (tj. \<0> \</0>). Pokud na tag umístíte kurzor, editor zobrazí jeho celý obsah – někdy tyto tagy představují odkazy.
+Odkazy se ve zdrojovém textu také objevují v podobě značek (tj. `<0>` `</0>`). Pokud na tag umístíte kurzor, editor zobrazí jeho celý obsah – někdy tyto tagy představují odkazy.
 
 Je velmi důležité zkopírovat odkazy ze zdroje a neměnit jejich pořadí.
 
@@ -130,35 +136,35 @@ Zdrojový text obsahuje mnoho různých typů tagů, které by měly být vždy 
 
 Tagy vždy obsahují otevírací a zavírací tag. Ve většině případů by text mezi otevíracím a zavíracím tagem měl být přeložen.
 
-Příklad: `<strong x-id="1">`Decentralized`</strong>`
+Příklad: `<strong x-id="1">`Decentralizované`</strong>`
 
-`<strong x-id="1">` – _otevírací tag, který udělá text tučným_
+`<strong x-id="1">` – _Otevírací značka, která udělá text tučným_
 
-Decentralized – _přeložitelný text_
+Decentralized – _Přeložitelný text_
 
-`</strong>` – _zavírací tag_
+`</strong>` – _Zavírací značka_
 
-![Příklad tagů „strong“.png](./example-of-strong-tags.png)
+![Příklad značek 'strong'.png](./example-of-strong-tags.png)
 
 Úryvky kódu by měly být zpracovány trochu jinak než ostatní tagy, protože obsahují kód, který by neměl být přeložen.
 
 Příklad: `<code>`nonce`</code>`
 
-`<code>` – _otevírací tag, který obsahuje úryvek kódu_
+`<code>` – _Otevírací značka, která obsahuje úryvek kódu_
 
-nonce – _text, který není určen k překladu_
+nonce – _Nepřeložitelný text_
 
-`</code>` – _zavírací tag_
+`</code>` – _Zavírací značka_
 
 ![Příklad úryvků kódu.png](./example-of-code-snippets.png)
 
 Zdrojový text také obsahuje zkrácené tagy, které obsahují pouze čísla, což znamená, že jejich funkce není okamžitě zřejmá. Můžete na tyto tagy najet kurzorem, abyste přesně zjistili, jakou funkci plní.
 
-V příkladu níže můžete vidět, že když najedete kurzorem na tag \<0> , zobrazí se, že představuje `<code>` a obsahuje úryvek kódu, takže obsah uvnitř těchto tagů by neměl být přeložen.
+V níže uvedeném příkladu můžete vidět, že když najedete kurzorem na značku `<0>`, zobrazí se, že představuje `<code>` a obsahuje úryvek kódu, proto by se obsah uvnitř těchto značek neměl překládat.
 
-![Příklad nejednoznačných tagů.png](./example-of-ambiguous-tags.png)
+![Příklad nejednoznačných značek.png](./example-of-ambiguous-tags.png)
 
-## Krátké versus plné formy nebo zkratky {#short-vs-full-forms}
+## Krátké vs. plné tvary / zkratky {#short-vs-full-forms}
 
 Na webových stránkách se používá mnoho zkratek, např. dapps, NFT, DAO, DeFi atd. Tyto zkratky jsou běžně používány v angličtině a většina návštěvníků webu je s nimi obeznámena.
 
@@ -168,9 +174,9 @@ Tyto zkratky nepřekládejte, protože většina lidí by jim nerozuměla a loka
 
 Příklad, jak přeložit dapps:
 
-- Decentralized applications (dapps) → _přeložená plná forma (anglická zkratka v závorkách)_
+- Decentralized applications (dapps) → _Přeložený plný tvar (anglická zkratka v závorce)_
 
-## Termíny bez zavedených překladů {#terms-without-established-translations}
+## Pojmy bez zavedených překladů {#terms-without-established-translations}
 
 Některé termíny nemusí mít zavedené překlady v jiných jazycích a jsou široce známé pod původním anglickým termínem. Tyto termíny většinou zahrnují novější koncepty, jako je proof-of-work, proof-of-stake, Beacon Chain, staking atd.
 
@@ -190,7 +196,7 @@ Překlady tlačítek by měly být co nejkratší, aby se zabránilo problémům
 
 ![Jak najít tlačítko.png](./how-to-find-a-button.png)
 
-## Překládání s ohledem na inkluzivitu {#translating-for-inclusivity}
+## Překlad s ohledem na inkluzivitu {#translating-for-inclusivity}
 
 Návštěvníci ethereum.org pocházejí z celého světa a z různých prostředí. Jazyk na webu by proto měl být neutrální, přívětivý ke všem a ne vylučující.
 
@@ -200,7 +206,7 @@ Další formou inkluzivity je snaha překládat pro globální publikum, nikoli 
 
 Jazyk by měl být vhodný pro všechna publika a věkové kategorie.
 
-## Jazykově specifické překlady {#language-specific-translations}
+## Překlady specifické pro daný jazyk {#language-specific-translations}
 
 Při překládání je důležité dodržovat gramatická pravidla, konvence a formátování používané ve vašem jazyce, na rozdíl od kopírování ze zdroje. Zdrojový text se řídí anglickými gramatickými pravidly a konvencemi, což není použitelné pro mnoho jiných jazyků.
 
@@ -229,7 +235,7 @@ Některé příklady toho, na co být obzvláště opatrní:
 
 - Každý jazyk má rozmanitý a složitý soubor pravidel pro psaní seznamů. Tato pravidla mohou být výrazně odlišná od angličtiny.
 - V některých jazycích je první slovo každé nové položky seznamu třeba psát s velkým písmenem, zatímco v jiných jazycích by nové položky měly začínat malým písmenem. Mnoho jazyků má také různá pravidla pro psaní velkých písmen v seznamech, která závisí na délce každé položky.
-- Totéž platí pro interpunkci jednotlivých položek seznamu. Závěrečná interpunkce v seznamech může být tečka (**.**), čárka (**,**) nebo středník (**;**), v závislosti na jazyce.
+- Totéž platí pro interpunkci jednotlivých položek seznamu. Koncová interpunkce v seznamech může být tečka (**.**), čárka (**,**) nebo středník (**;**), v závislosti na jazyce.
 
 **Uvozovky**
 
@@ -256,7 +262,7 @@ Některé příklady toho, na co být obzvláště opatrní:
     - Angličtina – **1,000.50**
     - Španělština – **1.000,50**
     - Francouzština – **1 000,50**
-- Dalším důležitým faktorem při překladu čísel je procentní znak. Ten může být psán různými způsoby: **100%**, **100 %** nebo **%100**.
+- Dalším důležitým faktorem při překladu čísel je procentní znak. Lze jej zapsat různými způsoby: **100%**, **100 %** nebo **%100**.
 - Záporná čísla mohou být zobrazena různě, v závislosti na jazyce: -100, 100-, (100) nebo [100].
 
 **Data**

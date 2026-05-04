@@ -4,7 +4,7 @@ import { Info } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { cn } from "@/lib/utils/cn"
-import { isValidDate } from "@/lib/utils/date"
+import { dateTimeFormat, isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
@@ -64,11 +64,11 @@ const BigNumber = async ({
   variant,
 }: BigNumberProps) => {
   const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "common" })
+  const t = await getTranslations("common")
 
   const lastUpdatedDisplay =
     lastUpdated && isValidDate(lastUpdated)
-      ? new Intl.DateTimeFormat(locale, {
+      ? dateTimeFormat(locale, {
           dateStyle: "medium",
         }).format(new Date(lastUpdated))
       : ""
@@ -118,9 +118,18 @@ const BigNumber = async ({
           </div>
         </>
       ) : (
-        <span className="pt-4 text-md text-body-medium">
-          {t("loading-error-refresh")}
-        </span>
+        <>
+          <div
+            data-label="value"
+            className={valueVariants({ variant })}
+            aria-label={t("loading-error-refresh")}
+          >
+            —
+          </div>
+          <div className={childrenVariants({ variant })}>
+            <span>{children}</span>
+          </div>
+        </>
       )}
     </div>
   )

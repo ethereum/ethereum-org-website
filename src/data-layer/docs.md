@@ -10,7 +10,8 @@ src/data-layer/
 ├── mocks/            # Mock JSON files for local development
 ├── index.ts          # Public API - typed getter functions
 ├── tasks.ts          # KEYS constant + Trigger.dev scheduled tasks
-└── storage.ts        # get/set abstraction (Netlify Blobs or mock files)
+├── storage.ts        # get/set abstraction (Netlify Blobs or mock files)
+└── s3.ts             # S3 image upload utility for external images
 
 src/lib/data/
 └── index.ts          # Next.js caching adapter
@@ -50,6 +51,10 @@ export const getEventsData = createCachedGetter(
 
 Direct `@/data-layer` imports work but have no caching.
 
+### 4. Keep fetchers isolated from the app
+
+Fetchers run on Trigger.dev — a separate runtime from the Next.js app — and cannot assume the app's filesystem or modules are available. Any import or runtime dependency reaching outside `src/data-layer/` is a warning sign; if a fetcher needs app data, fetch it via the GitHub API and treat the repo as an external system. See `fetchGitHubContributors.ts` for the pattern, and the data-layer skill (Rule 5) for the full allow/deny list.
+
 ## Adding a New Data Source
 
 1. **Create fetcher** in `src/data-layer/fetchers/fetchNewData.ts`
@@ -60,12 +65,42 @@ Direct `@/data-layer` imports work but have no caching.
 6. **Add mock file** at `src/data-layer/mocks/{key}.json` for local development
 7. **Add cached wrapper** in `src/lib/data/index.ts`
 
+## S3 Image Uploads
+
+External images should be uploaded to S3 to reduce Next.js `remotePatterns` complexity. Use `s3.ts` in fetchers:
+
+```typescript
+import { uploadToS3, uploadManyToS3 } from "../s3"
+
+// Single image
+const logoUrl = await uploadToS3(event.logoImage, "events/logos")
+
+// Batch upload (parallel)
+const urls = await uploadManyToS3(imageUrls, "apps/banners")
+```
+
+Key features:
+- **SSRF protection** - Blocks private network addresses
+- **Deduplication** - SHA256 hash prevents re-uploads
+- **5MB limit** - Large images return `null`
+- **Immutable caching** - 1-year cache headers
+
+Always handle `null` returns with fallback values.
+
 ## Environment Variables
 
 **Production:**
 - `SITE_ID` - Netlify site ID (auto-provided)
 - `NETLIFY_BLOBS_TOKEN` - Netlify Blobs access token
+- `BLOB_STORE_NAME` - Blob store name (default: `data-layer`). Use `data-layer-dev` for dev environments.
 - `TRIGGER_PROJECT_ID` - Trigger.dev project ID
+
+**S3 Image Storage:**
+- `S3_REGION` - AWS region (e.g., `us-east-1`)
+- `S3_ENDPOINT` - S3-compatible endpoint URL
+- `S3_ACCESS_KEY_ID` - Access key ID
+- `S3_SECRET_ACCESS_KEY` - Secret access key
+- `S3_IMAGE_BUCKET` - Bucket name for images
 
 **Local development:**
 - `USE_MOCK_DATA=true` - Use mock storage

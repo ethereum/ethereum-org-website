@@ -1,16 +1,16 @@
 ---
-title: 去中心化金融 (DeFi)
-metaTitle: 什么是去中心化金融？ 去中心化金融的优势和作用
-description: 以太坊上的去中心化金融简介
+title: "去中心化金融 (DeFi)"
+metaTitle: "什么是去中心化金融？ 去中心化金融的优势和作用"
+description: "以太坊上的去中心化金融简介"
 lang: zh
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
-alt: 由乐高积木拼成的以太坊徽标。
+alt: "由乐高积木拼成的以太坊徽标。"
 sidebarDepth: 2
-summaryPoint1: 当前金融体系的全球性、开放性替代方案。
-summaryPoint2: 允许用户进行借贷、储蓄、投资、交易等等的产品。
-summaryPoint3: 基于开源技术，任何人都可以来编程。
+summaryPoint1: "当前金融体系的全球性、开放性替代方案。"
+summaryPoint2: "允许用户进行借贷、储蓄、投资、交易等等的产品。"
+summaryPoint3: "基于开源技术，任何人都可以来编程。"
 ---
 
 去中心化金融是专为互联网时代构建的开放式全球金融系统，可替代不透明、控制严格并由几十年前的基础设施和流程支撑的系统。 让你可以控制和了解自己的资金。 让你有机会接触全球市场，并可以替代当地货币或银行业务。 去中心化金融产品向任何有互联网连接的人开放金融服务，产品主要由用户创造和维护。 迄今为止，价值数百亿美元的加密货币已经通过去中心化金融应用程序流动，而且每天都在增长。
@@ -23,7 +23,7 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 <YouTube id="H-O3r2YMWJ4" />
 
-## 去中心化金融与传统金融 {#defi-vs-tradfi}
+## DeFi 与传统金融 {#defi-vs-tradfi}
 
 了解去中心化金融潜力的最佳方法是了解目前存在的问题。
 
@@ -36,9 +36,9 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 - 由于内部的人工流程，资金转移可能需要几天时间。
 - 金融服务存在溢价，因为中介机构需要分成。
 
-### 对比 {#defi-comparison}
+### 比较 {#defi-comparison}
 
-| 去中心化金融                            | 传统金融                                 |
+| 去中心化金融 (DeFi)  | 传统金融                                 |
 | --------------------------------- | ------------------------------------ |
 | 你持有你的钱。                           | 资金由机构持有。                             |
 | 你可以控制自己的资金流向和使用方式。                | 你必须相信机构不会出现资金管理不善问题，比如不会将钱借给高风险借款人。  |
@@ -56,17 +56,17 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 从某种程度来讲，比特币是第一款去中心化金融应用程序。 比特币让你真正拥有和掌控价值，并可将其发送到世界任何地方。 为实现这一点，它提供了一种方式，让众多互不信任的人在无需可信赖中介的情况下，就帐户的账本达成一致。 比特币向所有人公开，任何人都无权更改其规则。 比特币的规则（例如稀缺性和开放性），都写入了技术中。 与传统金融不同：在传统金融中，政府可以印钞使你的存款贬值，而机构则可以关闭市场。
 
-以太坊便以此为基础。 就像比特币一样，规则不会因你而改变，而且每个人都可以得到。 使用[智能合约](/glossary/#smart-contract)技术还可以让这种数字货币可编程，使其功能不仅仅限于储蓄和交易。
+以太坊便以此为基础。 就像比特币一样，规则不会因你而改变，而且每个人都可以得到。 但它也使得这种数字货币可编程，通过使用[智能合约](/glossary/#smart-contract)，你可以超越储存和发送价值的范畴。
 
 <YouTube id="qFBYB4W2tqU" />
 
 ## 可编程货币 {#programmable-money}
 
-这听起来很奇怪……“我为什么会想对钱进行编程”？ 然而，这只是以太坊代币的一个默认功能。 任何人都可以对逻辑编程，以生成支付。 这样，你就可以将比特币的控制权和安全性与传统金融机构提供的服务相结合。 然后，你就可以用加密货币做一些比特币做不到的事情，比如借贷、预约付款、投资指数基金等等。
+这听起来很奇怪…… “我为什么要对我的钱进行编程”？ 然而，这只是以太坊代币的一个默认功能。 任何人都可以对逻辑编程，以生成支付。 这样，你就可以将比特币的控制权和安全性与传统金融机构提供的服务相结合。 然后，你就可以用加密货币做一些比特币做不到的事情，比如借贷、预约付款、投资指数基金等等。
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
-<AlertContent className="justify-between flex-row items-center">
+<AlertContent className="flex-row justify-between items-center">
   <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。</div>
   <ButtonLink href="/apps/categories/defi">
     探索去中心化金融应用程序
@@ -78,15 +78,15 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 大多数金融服务都有去中心化的替代方案。 但以太坊也为打造全新的金融产品开辟了机会。 这个清单还在不断增长。
 
-- [向世界各地汇款](#send-money)
+- [向全球汇款](#send-money)
 - [在全球范围内流转资金](#stream-money)
 - [获取稳定货币](#stablecoins)
 - [抵押借款](#lending)
 - [无抵押借款](#flash-loans)
-- [开始加密货币存款](#saving)
+- [开始加密货币储蓄](#saving)
 - [交易代币](#swaps)
 - [扩充你的投资组合](#investing)
-- [为你的想法提供资金](#crowdfunding)
+- [为你的想法募资](#crowdfunding)
 - [购买保险](#insurance)
 - [管理你的投资组合](#aggregators)
 
@@ -94,17 +94,17 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 ### 向世界各地快速汇款 {#send-money}
 
-作为一个区块链，以太坊设计用于让用户在全球范围内安全地发送交易。 与比特币一样，以太坊使得向世界各地发送资金就像发送电子邮件一样容易。 只需从钱包中输入收款人的[以太坊域名服务名称](/glossary/#ens)（如 bob.eth）或他们的帐户地址，你的付款（通常）将在几分钟内直接到达对方帐户。 要发送或接收付款，你将需要一个[钱包](/wallets/)。
+作为一个区块链，以太坊设计用于让用户在全球范围内安全地发送交易。 与比特币一样，以太坊使得向世界各地发送资金就像发送电子邮件一样容易。 只需在你的钱包中输入收款人的 [ENS 名称](/glossary/#ens)（如 bob.eth）或其账户地址，你的付款（通常）将在几分钟内直接到账。 要发送或接收付款，你将需要一个[钱包](/wallets/)。
 
 <ButtonLink href="/apps/categories/defi">
-  查看支付 dapp
+  查看支付去中心化应用程序
 </ButtonLink>
 
 #### 在全球范围内流转资金... {#stream-money}
 
 你也可以通过以太坊汇款。 这可以让你秒速支付某人的工资，让他们可以在需要时获得资金。 或者立刻租用一些物品，如储物柜或电动滑板车。
 
-而且，如果你因为以太币的价值波动过大而不想发送或流式传输[以太币](/glossary/#ether)，以太坊上还有其他可供选择的货币：[稳定币](/glossary/#stablecoin)。
+而且，如果你因为 [ETH](/glossary/#ether) 的价值波动过大而不想发送或流式传输它，以太坊上还有其他可供选择的货币：[稳定币](/glossary/#stablecoin)。
 
 <Divider />
 
@@ -128,24 +128,24 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 - 基于资金池，贷款人向借款人可以借贷的资金池提供资金（流动性）。
 
 <ButtonLink href="/apps/categories/defi">
-  查看借款 dapp
+  查看借款去中心化应用程序
 </ButtonLink>
 
 选择去中心化贷款人具有许多优势...
 
-#### 隐私借贷 {#borrowing-privacy}
+#### 私密借款 {#borrowing-privacy}
 
 今天，贷款和借钱都围绕着相关个人进行。 在放贷前，银行需要了解你是否有能力偿还贷款。
 
-去中心化借贷无需任何一方表明自己的身份即可进行。 但是，借款人必须提供抵押品，如果他们没有偿还贷款，贷款人将自动获得抵押品。 有的贷款人甚至接受[非同质化代币](/glossary/#nft)作为抵押品。 非同质化代币是指绘画等独特资产。 [关于非同质化代币的更多信息](/nft/)
+去中心化借贷无需任何一方表明自己的身份即可进行。 但是，借款人必须提供抵押品，如果他们没有偿还贷款，贷款人将自动获得抵押品。 有些贷款人甚至接受 [NFT](/glossary/#nft) 作为抵押品。 非同质化代币是指绘画等独特资产。 [关于 NFT 的更多信息](/nft/)
 
 这允许你在不进行征信调查或透露私人信息的情况下借钱。
 
-#### 获得全球资金 {#access-global-funds}
+#### 获取全球资金 {#access-global-funds}
 
 当你选择去中心化贷款人时，可以使用来自全球各地的存款，而不仅仅是选定银行或机构保管的资金。 这使人们更容易获得贷款，并提高利率。
 
-#### 税收优惠 {#tax-efficiencies}
+#### 税收效率 {#tax-efficiencies}
 
 借贷可以让你获得所需资金，而无需出售你的以太币（该行为需要征税）。 然而，你可以使用以太币作为抵押品，借入稳定币。 这不仅为你提供所需的现金流，你还可以继续持有自己的以太币。 当你需要现金时，稳定币是更好的代币，因为它们不会像以太币一样波动。 [关于稳定币的更多信息](#stablecoins)
 
@@ -178,19 +178,19 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 <Divider />
 
-### 开始使用加密货币存款 {#saving}
+### 开始使用加密货币储蓄 {#saving}
 
-#### 借款 {#lending}
+#### 出借 {#lending}
 
 你可以通过借出加密货币来赚取利息，并看到资金的实时增长。 现在的利率比当地银行可能高出许多（如果有幸能够使用当地的银行系统）。 下面是一个示例：
 
-- 你借出 100 Dai [稳定币](/stablecoins/)，借给类似 Aave 的产品。
+- 你将 100 Dai（一种[稳定币](/stablecoins/)）出借给像 Aave 这样的产品。
 - 你会收到 100 个 Aave Dai (aDai)，代表你已借出的 Dai。
-- 你的 aDai 将根据利率增加，你可以看到钱包里的余额在增长。 根据[年利率](/glossary/#apr)，你的钱包余额在几天甚至几小时后会显示为 100.1234 这样的数字。
+- 你的 aDai 将根据利率增加，你可以看到钱包里的余额在增长。 取决于 [APR](/glossary/#apr)，几天甚至几小时后，你的钱包余额就会显示为 100.1234 之类的数字！
 - 你可以随时提取与 aDai 余额等额的普通 Dai。
 
 <ButtonLink href="/apps/categories/defi">
-  查看借款 dapp
+  查看出借去中心化应用程序
 </ButtonLink>
 
 #### 无损彩票 {#no-loss-lotteries}
@@ -218,7 +218,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 例如，如果你想使用无损彩票 PoolTogether（如上所述），则需要类似 Dai 或 USDC 的代币。 DEX 允许你将以太币换成这些代币，并在完成交易后再换回来。
 
 <ButtonLink href="/apps/categories/defi">
-  查看代币兑换
+  查看代币交易所
 </ButtonLink>
 
 <Divider />
@@ -230,7 +230,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 使用中心化交易所时，你必须在交易前存入资产，并相信交易所会妥善处理这些资产。 当你存入资产时，它们会面临风险，因为中心化交易所对黑客来说是诱人目标。
 
 <ButtonLink href="/apps/categories/defi">
-  查看更多交易 dapp
+  查看交易去中心化应用程序
 </ButtonLink>
 
 <Divider />
@@ -239,7 +239,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 以太坊上有一些基金管理产品，它们会尝试根据你选择的策略为你的投资组合增值。 自动完成而且对每个人都开放，没有管理人员从利润中抽成。
 
-一个很好的示例是[去中心化金融指数基金](https://defipulse.com/blog/defi-pulse-index/)。 这是一支自动再平衡基金，可确保你的投资组合总是包含市值最高的去中心化金融代币。 你无需管理任何细节，并且可以随时从基金中提款。
+一个很好的例子是 [DeFi Pulse Index 基金 (DPI)](https://defipulse.com/blog/defi-pulse-index/)。 这是一支自动再平衡基金，可确保你的投资组合总是包含市值最高的去中心化金融代币。 你无需管理任何细节，并且可以随时从基金中提款。
 
 <ButtonLink href="/apps/categories/defi">
   查看投资去中心化应用程序
@@ -247,7 +247,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 <Divider />
 
-### 为你的想法提供资金 {#crowdfunding}
+### 为你的想法募资 {#crowdfunding}
 
 以太坊是一个理想的众筹平台：
 
@@ -256,10 +256,10 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 - 募捐者可以设置自动退款，例如，如果有未达到特定的最后期限和最低金额，就可以自动退款。
 
 <ButtonLink href="/apps/categories/defi">
-  查看更多众筹去中心化应用程序
+  查看众筹去中心化应用程序
 </ButtonLink>
 
-#### 二次方融资 {#quadratic-funding}
+#### 二次方募资 {#quadratic-funding}
 
 以太坊是开源软件，到目前为止，很多工作都由社区资助。 这催生了一种有趣的新型募资模式：二次方融资。 这有可能改进我们在未来为各种公共产品募资的方式。
 
@@ -273,7 +273,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 这意味着获得 100 笔 1 美元捐款的项目 A 最终可能比获得 1 笔 1 万美元捐款的项目 B 获得更多资金（取决于匹配池的大小）。
 
 <ButtonLink href="https://wtfisqf.com">
-  关于二次方融资的更多信息
+  关于二次方募资的更多信息
 </ButtonLink>
 
 <Divider />
@@ -282,7 +282,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 去中心化保险旨在使保险更便宜、支付速度更快且更加透明。 随着自动化程度的提高，保险的价格更加低廉，赔付的速度也快了很多。 用来决定你的索赔的数据完全透明。
 
-就像任何软件一样，以太坊产品也可能出现漏洞。 因此，目前该领域中的许多保险产品都致力于保护用户免受资金损失。 然而，一些项目开始构建全面覆盖我们生活中可能出现的各种情况的保险方案。 Etherisc 的作物保护就是一个很好的例子，其目的是[保护肯尼亚的小农户对抗干旱和洪水侵袭](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc)。 去中心化保险可以为那些经常被传统保险拒之门外的农民提供更便宜的保险。
+就像任何软件一样，以太坊产品可能出现漏洞。 因此，目前该领域中的许多保险产品都致力于保护用户免受资金损失。 然而，一些项目开始构建全面覆盖我们生活中可能出现的各种情况的保险方案。 一个很好的例子是 Etherisc 的农作物保险，旨在[保护肯尼亚的小农户免受干旱和洪水的影响](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc)。 去中心化保险可以为那些经常被传统保险拒之门外的农民提供更便宜的保险。
 
 <ButtonLink href="/apps/categories/defi">
   查看保险去中心化应用程序
@@ -290,7 +290,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 <Divider />
 
-### 聚集者和投资组合管理 {#aggregators}
+### 聚合器和投资组合经理 {#aggregators}
 
 拥有了这么多种服务，你需要一种方法来跟踪跟踪所有投资、贷款和交易。 有许多产品可以让你集中协调所有去中心化金融活动。 这就是去中心化金融开放架构的魅力所在。 团队可以创建界面，你不仅可以看到各个产品中的余额，也可以使用其功能。 当你探索更多的去中心化金融时，可能会发现这个很有用。
 
@@ -312,7 +312,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 这确实意味着，目前需要信任以太坊社区中能够读取代码的技术员。 基于开源的社区有助于控制开发者，但是随着时间的推移，这种需求将逐渐减少，因为智能合约变得更易于阅读。并且开发了其他方法来证明代码的可信赖性。
 
-## 以太坊与去中心化金融 {#ethereum-and-defi}
+## 以太坊和 DeFi {#ethereum-and-defi}
 
 以太坊为去中心化金融提供了良好基础，原因如下：
 
@@ -324,13 +324,13 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 你可以把去中心化金融看成分层结构：
 
 1. 区块链 - 以太坊包含交易历史和帐户状态。
-2. 资产 - [以太币](/what-is-ether/)和其他代币。
-3. 协议 — 提供功能的[智能合约](/glossary/#smart-contract)，例如，一项提供去中心化资产借贷的服务。
-4. [应用程序](/apps/) - 我们用来管理和访问协议的产品。
+2. 资产 – [ETH](/what-is-ether/) 和其他代币（货币）。
+3. 协议——提供功能的[智能合约](/glossary/#smart-contract)，例如允许去中心化资产出借的服务。
+4. [应用程序](/apps/) – 我们用来管理和访问协议的产品。
 
-注意：许多去中心化金融使用 [ERC-20 标准](/glossary/#erc-20)。 去中心化金融 (DeFi) 中的应用程序使用一种包装的以太币，称为包装以太币 (WETH)。 [了解更多关于包装以太币的信息](/wrapped-eth)。
+注意：许多 DeFi 都使用 [ERC-20 标准](/glossary/#erc-20)。 去中心化金融 (DeFi) 中的应用程序使用一种包装的以太币，称为包装以太币 (WETH)。 [了解更多关于封装以太币的信息](/wrapped-eth)。
 
-## 构建去中心化金融 {#build-defi}
+## 构建 DeFi {#build-defi}
 
 去中心化金融是一场开源行动。 去中心化金融协议和应用都是开放的，你可以自行检查、分叉和创新。 由于这个分层堆栈（他们都共享相同的基础区块链和资产），协议可以混合和匹配以解锁独特的组合机会。
 
@@ -338,27 +338,28 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
   关于构建去中心化应用程序的更多信息
 </ButtonLink>
 
-## 延伸阅读 {#further-reading}
+## 扩展阅读{#further-reading}
 
-### 去中心化金融数据 {#defi-data}
+### DeFi 数据 {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
-### 去中心化金融相关文章 {#defi-articles}
+### DeFi 文章 {#defi-articles}
 
-- [去中心化金融 (DeFi) 初学者指南](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu，2020 年 1 月 6 日_
+- [DeFi 新手指南](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu，2020 年 1 月 6 日_
+- [EEA DeFi 风险评估指南](https://entethalliance.org/specs/defi-risks/) – 一份行业支持的概述，介绍了如何识别和评估 DeFi 协议中的关键风险。
 
 ### 视频 {#videos}
 
-- [Finematics - 去中心化金融教育](https://finematics.com/) - _关于去中心化金融的视频_
-- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _去中心化金融基础：在这个偶尔令人困惑的空间里，你开始需要了解的一切。_
-- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _ - 什么是去中心化金融？_
+- [Finematics - 去中心化金融教育](https://finematics.com/) – _关于 DeFi 的视频_
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _DeFi 基础知识：在这个时而令人费解的领域，入门所需了解的一切。_
+- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _什么是 DeFi？_
 
 ### 社区 {#communities}
 
-- [去中心化金融 Llama Discord 服务器](https://discord.defillama.com/)
-- [去中心化金融 Pulse Discord 服务器](https://discord.gg/Gx4TCTk)
+- [DeFi Llama Discord 服务器](https://discord.defillama.com/)
+- [DeFi Pulse Discord 服务器](https://discord.gg/Gx4TCTk)
 
 <Divider />
 

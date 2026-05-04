@@ -1,10 +1,17 @@
+import { Suspense } from "react"
+import dynamic from "next/dynamic"
 import { getImageProps, type StaticImageData } from "next/image"
-import { getLocale, getTranslations } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import type { ClassNameProp } from "@/lib/types"
 
-import ABTestWrapper from "@/components/AB/TestWrapper"
+import { ChevronNext } from "@/components/Chevron"
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
+import { Button } from "@/components/ui/buttons/Button"
+
+const PersonaModalCTA = dynamic(
+  () => import("@/components/Homepage/PersonaModalCTA")
+)
 
 import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber } from "@/lib/utils/screen"
@@ -16,6 +23,7 @@ type HomeHeroProps = ClassNameProp & {
   image?: StaticImageData
   image2xl?: StaticImageData
   alt?: string
+  eventCategory?: string
 }
 
 const HomeHero = async ({
@@ -23,10 +31,9 @@ const HomeHero = async ({
   image,
   image2xl,
   alt: altProp,
+  eventCategory = "Homepage",
 }: HomeHeroProps) => {
-  const locale = getLocale()
-  const t = await getTranslations({ locale, namespace: "page-index" })
-
+  const t = await getTranslations("page-index")
   const baseImage = image ?? heroBase
   const xlImage = image2xl ?? image ?? hero2xl
   const alt = altProp ?? t("page-index-hero-image-alt")
@@ -49,8 +56,13 @@ const HomeHero = async ({
     props: { srcSet: srcSetBase, ...rest },
   } = getImageProps({ ...common, ...baseImage, quality: 5 })
 
+  // Remove blurWidth/blurHeight from rest to avoid React DOM warnings
+  // (Next.js getImageProps includes them but they're not valid HTML attributes)
+  delete (rest as Record<string, unknown>).blurWidth
+  delete (rest as Record<string, unknown>).blurHeight
+
   return (
-    <div className={cn("w-full", className)}>
+    <section className={cn("w-full", className)}>
       <div className="h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
         <picture>
           <source
@@ -65,50 +77,43 @@ const HomeHero = async ({
             media={`(max-width: ${breakpointAsNumber["md"] - 1}px)`}
             srcSet={srcSetBase}
           />
-          <img {...rest} alt={alt} className="h-full w-full object-cover" />
+          <img
+            {...rest}
+            alt={alt}
+            fetchPriority="high"
+            loading="eager"
+            className="h-full w-full object-cover"
+          />
         </picture>
       </div>
-      <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
-        <ABTestWrapper
-          testKey="HomepagePersonaCTAs"
-          variants={[
-            // Original: LanguageMorpher + existing title/description
-            <div
-              key="original-hero-content"
-              className="flex flex-col items-center"
+
+      <div className="flex flex-col items-center px-4 py-12 text-center lg:py-16">
+        <div className="flex w-full flex-col items-center gap-4">
+          <LanguageMorpher />
+
+          <div className="flex flex-col items-center gap-8">
+            <h1 className="max-w-[893px] text-5xl leading-[1.1] font-black text-balance md:text-6xl lg:text-7xl lg:leading-[0.9]">
+              {t("page-index-hero-title")}
+            </h1>
+
+            <p className="max-w-[741px] text-lg leading-relaxed tracking-[0.07px] text-body-medium md:text-2xl md:leading-[1.625]">
+              {t("page-index-hero-subtitle")}
+            </p>
+
+            <Suspense
+              fallback={
+                <Button variant="solid" size="lg" className="gap-2">
+                  {t("page-index-hero-cta")}
+                  <ChevronNext className="size-5" />
+                </Button>
+              }
             >
-              <LanguageMorpher />
-              <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
-                <h1 className="font-black">{t("page-index-title")}</h1>
-                <p className="max-w-96 text-md text-body-medium lg:text-lg">
-                  {t("page-index-description")}
-                </p>
-              </div>
-            </div>,
-            // Variation1: New title/subtitle for persona modal
-            <div
-              key="persona-hero-content"
-              className="flex flex-col items-center gap-y-5 lg:max-w-2xl"
-            >
-              <LanguageMorpher />
-              <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
-                <h1 className="font-black">
-                  The internet
-                  <br />
-                  that belongs to you
-                </h1>
-                <p className="max-w-lg text-md text-body-medium lg:text-lg">
-                  Create, own, build, connect, and transact.
-                  <br />
-                  Ethereum is a network that everyone can use and anyone can
-                  build on.
-                </p>
-              </div>
-            </div>,
-          ]}
-        />
+              <PersonaModalCTA eventCategory={eventCategory} />
+            </Suspense>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

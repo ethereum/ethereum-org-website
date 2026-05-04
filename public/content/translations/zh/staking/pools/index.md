@@ -5,7 +5,7 @@ lang: zh
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
-alt: 莱斯利犀牛在泳池中游泳。
+alt: "莱斯利犀牛在泳池中游泳。"
 sidebarDepth: 2
 summaryPoints:
   - 通过联合其他人质押任意数量的以太币获得奖励
@@ -57,7 +57,7 @@ summaryPoints:
 
 想要推荐其他未提到的质押工具吗？ 查看我们的[产品上架政策](/contributing/adding-staking-products/)，了解您的产品是否合适，并提交审核。
 
-## 常见问题 {#faq}
+## 常见问题{#faq}
 
 <ExpandableCard title="如何赚取奖励？">
 通常，ERC-20 质押代币会发行给质押人，代表其质押以太币的价值以及奖励。 请记住，不同资金池向用户发放质押奖励的方法也略有不同，但主题却是相同的。

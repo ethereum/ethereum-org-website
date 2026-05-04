@@ -19,7 +19,7 @@ Staking as a service (“SaaS") represents a category of staking services where 
 
 ## Why stake with a service? {#why-stake-with-a-service}
 
-The Ethereum protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part while you earn native block rewards.
+The [Ethereum](/) protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part while you earn native block rewards.
 
 <CardGrid>
   <Card title="Your own validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
@@ -43,13 +43,13 @@ Below are some available SaaS providers. Use the above indicators to help guide 
 
 <ProductDisclaimer />
 
-### SaaS providers
+### SaaS providers {#saas-providers-2}
 
 <StakingProductsCardGrid category="saas" />
 
 Please note the importance of supporting [client diversity](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> and <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
-### Key Generators
+### Key Generators {#key-generators}
 
 <StakingProductsCardGrid category="keyGen" />
 

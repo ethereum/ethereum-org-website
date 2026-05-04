@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 import type { MatomoEventOptions, SectionNavDetails } from "@/lib/types"
 
@@ -55,7 +55,7 @@ const TabNav = ({
             variant: "ghost" as ButtonVariantProps["variant"],
             isSecondary: true,
             className: cn(
-              "relative flex-shrink-0 text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
+              "relative shrink-0 text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
               isActive && "!text-primary"
             ),
             customEventOptions: customEventOptions

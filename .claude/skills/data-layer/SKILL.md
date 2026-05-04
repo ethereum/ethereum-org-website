@@ -13,11 +13,40 @@ src/data-layer/
 ├── index.ts          # Public API - typed getter functions
 ├── tasks.ts          # KEYS constant + Trigger.dev scheduled tasks
 ├── storage.ts        # get/set abstraction (Netlify Blobs or mock files)
-└── mocks/            # Mock data files for local development
+├── s3.ts             # S3 image upload utility for external images
+├── mocks/            # Mock data files for local development
+└── .env.example      # Environment variables for data-layer/Trigger.dev
 
 src/lib/data/
 └── index.ts          # Next.js caching adapter (createCachedGetter)
 ```
+
+## Environment Variables
+
+The data-layer uses a **dedicated `.env.local` file** at `src/data-layer/.env.local`, separate from the main app's root `.env.local`.
+
+### Local Development Setup
+
+1. Copy the example file:
+   ```bash
+   cp src/data-layer/.env.example src/data-layer/.env.local
+   ```
+
+2. Fill in the required API keys (see `.env.example` for all options)
+
+3. Run Trigger.dev tasks locally:
+   ```bash
+   pnpm trigger:dev
+   ```
+
+### Variable Categories
+
+- **Shared with Main App**: `GITHUB_TOKEN_READ_ONLY`, Sentry vars (configure in both files)
+- **Data Layer Only**: API keys (CoinGecko, Beaconcha.in, Dune, Google, etc.), Netlify Blobs tokens, S3 credentials, Trigger.dev config
+
+### Production (Trigger.dev Cloud)
+
+Configure environment variables in your Trigger.dev project dashboard. The main app and data-layer run in separate environments.
 
 ## Key Files
 
@@ -63,6 +92,25 @@ export async function set(key: string, data: unknown): Promise<void>
 
 Uses `USE_MOCK_DATA=true` env var for local development.
 
+### s3.ts - Image Upload Utility
+
+Centralized S3 upload for external images. Fetchers use this to upload external images to a single S3 bucket, reducing Next.js `remotePatterns` complexity.
+
+```typescript
+// Upload single image
+const s3Url = await uploadToS3(sourceUrl, "events/logos")
+
+// Batch upload (parallel)
+const s3Urls = await uploadManyToS3(urls, "apps/banners")
+```
+
+Key features:
+- **SSRF protection** - Blocks private/internal network addresses
+- **Deduplication** - SHA256 hash of source URL as key
+- **Existence check** - Skips if already uploaded
+- **5MB size limit** - Returns `null` for large images
+- **Content-Type detection** - From header or URL extension fallback
+
 ## Rules
 
 ### 1. Getters must be pure passthrough
@@ -97,6 +145,28 @@ export const getEventsData = createCachedGetter(
   CACHE_REVALIDATE_DAY  // or CACHE_REVALIDATE_HOUR
 )
 ```
+
+### 4. Use S3 for external images
+
+External images should be uploaded to S3 in the fetcher to centralize image domains:
+
+```typescript
+// In fetcher - correct
+import { uploadToS3 } from "../s3"
+
+const logoUrl = await uploadToS3(event.logoImage, "events/logos")
+return { ...event, logoImage: logoUrl ?? "" }
+```
+
+Always handle `null` returns (upload failures) with fallback/empty string.
+
+### 5. Keep fetchers isolated from the app
+
+Fetchers run on Trigger.dev — a separate runtime, deployment, and bundle from the Next.js app. They cannot assume the app's filesystem, environment, or modules are available.
+
+Any import or runtime dependency reaching outside `src/data-layer/` is a warning sign. Allowed: types (`@/lib/types`, `@/lib/interfaces`), pure constants (`@/lib/constants`), and pure utility functions with no app-runtime dependencies. Not allowed: anything that reads `process.cwd()`, anything from `app/` or `public/`, anything from `src/components/`, or `src/lib/data/` (which wraps the data layer and would create a cycle).
+
+If a fetcher needs data that lives in the app — content files, frontmatter, etc. — fetch it over the network via the GitHub API and treat the repo as an external system. See `fetchGitHubContributors.ts` for the pattern. Don't work around this with `additionalFiles` in `trigger.config.ts`; bundling app files into the data-layer deployment re-creates the coupling.
 
 ## Adding a New Data Source
 

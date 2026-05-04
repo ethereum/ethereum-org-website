@@ -4,15 +4,14 @@ description: An introductory paper to Ethereum, published in 2013 before its lau
 lang: en
 sidebarDepth: 2
 hideEditButton: true
+authors: ["Vitalik Buterin"]
 ---
 
+<WhitepaperBridge />
+
+_While several years old, we maintain the original paper below because it continues to serve as a useful reference and an accurate representation of [Ethereum](/) and its vision._
+
 # Ethereum Whitepaper {#ethereum-whitepaper}
-
-_This introductory paper was originally published in 2014 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch in 2015. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since its initial inception._
-
-_While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and its vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
-
-[Researchers and academics seeking a historical or canonical version of the whitepaper [from December 2014] should use this PDF.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
 ## A Next-Generation Smart Contract and Decentralized Application Platform {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
@@ -207,7 +206,7 @@ if !self.storage[calldataload(0)]:
   self.storage[calldataload(0)] = calldataload(32)
 ```
 
-Note that in reality the contract code is written in the low-level EVM code; this example is written in Serpent, one of our high-level languages, for clarity, and can be compiled down to EVM code. Suppose that the contract's storage starts off empty, and a transaction is sent with 10 ether value, 2000 gas, 0.001 ether gasprice, and 64 bytes of data, with bytes 0-31 representing the number `2` and bytes 32-63 representing the string `CHARLIE`. The process for the state transition function in this case is as follows:
+Note that in reality the contract code is written in the low-level EVM code; this example is written in Serpent, one of our high-level languages, for clarity, and can be compiled down to EVM code. Suppose that the contract's storage starts off empty, and a transaction is sent with 10 ether value, 2000 gas, 0.001 ether gasprice, and 64 bytes of data, with bytes 0-31 representing the number `2` and bytes 32-63 representing the string `CHARLIE`<sup>[fn3](#notes)</sup>. The process for the state transition function in this case is as follows:
 
 1. Check that the transaction is valid and well formed.
 2. Check that the transaction sender has at least 2000 \* 0.001 = 2 ether. If it is, then subtract 2 ether from the sender's account.
@@ -331,7 +330,7 @@ Normally, 1% per day is enough for Alice, and if Alice wants to withdraw more sh
 
 **2. Crop insurance**. One can easily make a financial derivatives contract but using a data feed of the weather instead of any price index. If a farmer in Iowa purchases a derivative that pays out inversely based on the precipitation in Iowa, then if there is a drought, the farmer will automatically receive money and if there is enough rain the farmer will be happy because their crops would do well. This can be expanded to natural disaster insurance generally.
 
-**3. A decentralized data feed**. For financial contracts for difference, it may actually be possible to decentralize the data feed via a protocol called "[SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/)". SchellingCoin basically works as follows: N parties all put into the system the value of a given datum (e.g., the ETH/USD price), the values are sorted, and everyone between the 25th and 75th percentile gets one token as a reward. Everyone has the incentive to provide the answer that everyone else will provide, and the only value that a large number of players can realistically agree on is the obvious default: the truth. This creates a decentralized protocol that can theoretically provide any number of values, including the ETH/USD price, the temperature in Berlin or even the result of a particular hard computation.
+**3. A decentralized data feed**. For financial contracts for difference, it may actually be possible to decentralize the data feed via a protocol called "[SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed)". SchellingCoin basically works as follows: N parties all put into the system the value of a given datum (e.g., the ETH/USD price), the values are sorted, and everyone between the 25th and 75th percentile gets one token as a reward. Everyone has the incentive to provide the answer that everyone else will provide, and the only value that a large number of players can realistically agree on is the obvious default: the truth. This creates a decentralized protocol that can theoretically provide any number of values, including the ETH/USD price, the temperature in Berlin or even the result of a particular hard computation.
 
 **4. Smart multisignature escrow**. Bitcoin allows multisignature transaction contracts where, for example, three out of a given five keys can spend the funds. Ethereum allows for more granularity; for example, four out of five can spend everything, three out of five can spend up to 10% per day, and two out of five can spend up to 0.5% per day. Additionally, Ethereum multisig is asynchronous - two parties can register their signatures on the blockchain at different times and the last signature will automatically send the transaction.
 
@@ -451,7 +450,7 @@ The issuance model will be as follows:
 | Reserve used post-sale | 8.26%     | 6.79%        | 3.96%         |
 | Miners                 | 0%        | 17.8%        | 52.0%         |
 
-#### Long-Term Supply Growth Rate (percent)
+#### Long-Term Supply Growth Rate (percent) {#long-term-supply-growth-rate-percent}
 
 ![Ethereum inflation](./ethereum-inflation.png)
 
@@ -493,7 +492,7 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 
 1. A sophisticated reader may notice that in fact a Bitcoin address is the hash of the elliptic curve public key, and not the public key itself. However, it is in fact perfectly legitimate cryptographic terminology to refer to the pubkey hash as a public key itself. This is because Bitcoin's cryptography can be considered to be a custom digital signature algorithm, where the public key consists of the hash of the ECC pubkey, the signature consists of the ECC pubkey concatenated with the ECC signature, and the verification algorithm involves checking the ECC pubkey in the signature against the ECC pubkey hash provided as a public key and then verifying the ECC signature against the ECC pubkey.
 2. Technically, the median of the 11 previous blocks.
-3. Internally, 2 and "CHARLIE" are both numbers<sup>[fn3](#notes)</sup>, with the latter being in big-endian base 256 representation. Numbers can be at least 0 and at most 2<sup>256</sup>-1.
+3. Internally, 2 and "CHARLIE" are both numbers, with the latter being in big-endian base 256 representation. Numbers can be at least 0 and at most 2<sup>256</sup>-1.
 
 ### Further Reading {#further-reading}
 
@@ -503,7 +502,7 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Reusable proofs of work](https://nakamotoinstitute.org/finney/rpow/)
 6. [Secure property titles with owner authority](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Bitcoin whitepaper](http://bitcoin.org/bitcoin.pdf)
+7. [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Zooko's triangle](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Colored coins whitepaper](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
@@ -519,6 +518,6 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 20. [Ethereum Merkle Patricia trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
 21. [Peter Todd on Merkle sum trees](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
-_For history of the whitepaper, see [this wiki](https://web.archive.org/web/20250427212319/https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
+_For history of the whitepaper, see [this wiki](https://web.archive.org/web/20250427212319/https://ethereum.org/whitepaper/)._
 
 _Ethereum, like many community-driven, open-source software projects, has evolved since its initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._

@@ -1,6 +1,6 @@
 ---
-title: Démarrer le développement de votre interface dApp avec create-eth-app
-description: Aperçu de l'utilisation de create-eth-app et de ses fonctionnalités
+title: "Démarrer le développement de votre interface dApp avec create-eth-app"
+description: "Aperçu de l'utilisation de create-eth-app et de ses fonctionnalités"
 author: "Markus Waas"
 tags:
   - "create-eth-app"
@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-La dernière fois nous nous sommes intéressés à [Solidity](https://soliditydeveloper.com/solidity-overview-2020) et avons mentionné [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Vous allez maintenant découvrir comment l'utiliser, quelles fonctionnalités y sont intégrées et comment l'étendre encore. Initiée par Paul Razvan Berg, fondateur de [Sablier](http://sablier.com/), cette application livrée avec plusieurs intégrations facultatives au choix va vous permettre de débuter le développement de votre interface.
+La dernière fois nous nous sommes intéressés à [Solidity](https://soliditydeveloper.com/solidity-overview-2020) et avons mentionné [create-eth-app](https://github.com/PaulRBerg/create-eth-app). Vous allez maintenant découvrir comment l'utiliser, quelles fonctionnalités y sont intégrées et comment l'étendre encore. Initiée par Paul Razvan Berg, fondateur de [Sablier](https://sablier.com/), cette application livrée avec plusieurs intégrations facultatives au choix va vous permettre de débuter le développement de votre interface.
 
 ## Installation {#installation}
 

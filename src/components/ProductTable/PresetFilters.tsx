@@ -148,7 +148,7 @@ const PresetFilters = ({
             >
               <button
                 className={cn(
-                  "duration-50 group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all hover:bg-background-highlight lg:h-full lg:p-6",
+                  "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all duration-50 hover:bg-background-highlight lg:h-full lg:p-6",
                   "focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover",
                   activePresets.includes(idx)
                     ? "border-primary"
@@ -171,7 +171,7 @@ const PresetFilters = ({
                   </div>
                   <h3
                     className={cn(
-                      "duration-50 hyphens-auto text-left text-xl transition-all",
+                      "text-left text-xl hyphens-auto transition-all duration-50",
                       colors.text[colorIdx]
                     )}
                   >

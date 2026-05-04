@@ -1,0 +1,49 @@
+{
+  // Rule reference: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+  // Custom rules
+  "customRules": [
+    ".markdownlint-rules/require-heading-id.js",
+    ".markdownlint-rules/no-duplicate-heading-id.js",
+    ".markdownlint-rules/lowercase-heading-id.js",
+    ".markdownlint-rules/match-english-heading-ids.js"
+  ],
+
+  // Rule configuration
+  "config": {
+    // Start conservative: disable all built-in rules, enable selectively
+    "default": false,
+
+    // MD001: Heading levels increment by one (no h2 -> h4 skips)
+    // Flexible on starting level -- disable frontmatter title as implicit h1
+    "MD001": { "front_matter_title": "" },
+
+    // MD024: No duplicate heading text among siblings
+    "MD024": { "siblings_only": true },
+
+    // MD025: Only one top-level heading per file
+    // Disable frontmatter title as implicit h1 (same reason as MD001)
+    "MD025": { "front_matter_title": "" },
+
+    // MD041: First line must be top-level heading -- DISABLED
+    // Our files start at h1, h2, or h3 depending on layout
+    "MD041": false,
+
+    // MD051: Link fragments must point to valid heading anchors
+    "MD051": true,
+
+    // Custom: Every h1-h4 must have {#anchor-id}
+    "heading-requires-id": true,
+
+    // Custom: No duplicate {#id} anchors in the same file
+    "no-duplicate-heading-id": true,
+
+    // Custom: Heading IDs must be lowercase
+    "lowercase-heading-id": true,
+
+    // Custom: Translation IDs must match English source (flag only, no auto-fix)
+    // DISABLED until translation pipeline with drift detection is in place.
+    // Rule file kept for future use as a pipeline validation step.
+    "match-english-heading-ids": false
+  }
+}

@@ -1,6 +1,6 @@
 ---
 title: Technologia rozproszonego walidatora
-description: Technologia rozproszonego walidatora umożliwia rozproszoną obsługę walidatora Ethereum przez wiele podmiotów.
+description: "Technologia rozproszonego walidatora umożliwia rozproszoną obsługę walidatora Ethereum przez wiele podmiotów."
 lang: pl
 ---
 
@@ -8,7 +8,7 @@ lang: pl
 
 Technologia rozproszonego walidatora (DVT) to podejście do bezpieczeństwa walidatora, które rozkłada zarządzanie kluczami i obowiązki podpisywania na wiele podmiotów, aby zmniejszyć liczbę pojedynczych punktów awarii i zwiększyć odporność walidatora.
 
-Robi to poprzez **rozdzielenie klucza prywatnego** używanego do zabezpieczenia walidatora **pomiędzy wiele komputerów** zorganizowanych w „klaster”. Zaletą tego rozwiązania jest to, że atakującym bardzo trudno jest uzyskać dostęp do klucza, ponieważ nie jest on przechowywany w całości na żadnym komputerze. Pozwala to również na wyłączenie niektórych węzłów, ponieważ niezbędne podpisywanie może być wykonywane przez podzbiór komputerów w każdym klastrze. Zmniejsza to liczbę pojedynczych punktów awarii w sieci i sprawia, że cały zestaw walidatorów jest bardziej niezawodny.
+Robi to poprzez **rozdzielenie klucza prywatnego** używanego do zabezpieczenia walidatora **pomiędzy wiele komputerów** zorganizowanych w "klaster". Zaletą tego rozwiązania jest to, że atakującym bardzo trudno jest uzyskać dostęp do klucza, ponieważ nie jest on przechowywany w całości na żadnym komputerze. Pozwala to również na wyłączenie niektórych węzłów, ponieważ niezbędne podpisywanie może być wykonywane przez podzbiór komputerów w każdym klastrze. Zmniejsza to liczbę pojedynczych punktów awarii w sieci i sprawia, że cały zestaw walidatorów jest bardziej niezawodny.
 
 ![Schemat pokazujący, w jaki sposób pojedynczy klucz walidatora jest dzielony na udziały klucza i dystrybuowany do wielu węzłów z różnymi komponentami.](./dvt-cluster.png)
 
@@ -36,21 +36,21 @@ Bez DVT dostawcom stakingu łatwiej jest obsługiwać tylko jedną lub dwie konf
 
 1. **Decentralizacja** konsensusu Ethereum proof-of-stake
 2. Zapewnia **żywotność** sieci
-3. Tworzy **tolerancję na błędy** walidatora
-4. Działanie walidatora z **minimalizacją zaufania**
-5. **Zminimalizowane ryzyko odcięć** i przestojów
-6. **Zwiększa różnorodność** (klient, centrum danych, lokalizacja, przepisy itp.)
+3. Tworzy **odporność na błędy** walidatora
+4. **Działanie walidatora z minimalizacją zaufania**
+5. Zminimalizowane ryzyko **slashingu** i przestojów
+6. **Zwiększa różnorodność** (klient, centrum danych, lokalizacja, regulacje itp.)
 7. **Zwiększone bezpieczeństwo** zarządzania kluczami walidatora
 
 ## Jak działa DVT? {#how-does-dvt-work}
 
 Rozwiązanie DVT zawiera następujące składniki:
 
-- **[Dzielenie sekretu protokołem Shamira](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** — Walidatory używają [kluczy BLS](https://en.wikipedia.org/wiki/BLS_digital_signature). Poszczególne „udziały klucza” BLS („udziały klucza”) mogą być łączone w jeden zagregowany klucz (podpis). W DVT klucz prywatny dla walidatora jest połączonym podpisem BLS każdego operatora w klastrze.
-- **[Schemat podpisów progowych](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** — Określa liczbę indywidualnych udziałów klucza, które są wymagane do podpisywania obowiązków, np. 3 z 4.
-- **[Rozproszone generowanie kluczy (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** — Proces kryptograficzny, który generuje udziały klucza i jest używany do dystrybucji udziałów istniejącego lub nowego klucza walidatora do węzłów w klastrze.
-- **[Obliczenia wielostronne (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** — Pełny klucz walidatora jest generowany w tajemnicy przy użyciu obliczeń wielostronnych. Pełen klucz nigdy nie jest znany żadnemu indywidualnemu operatorowi — zna on tylko swoją część („udział”).
-- **Protokół konsensusu** — Protokół konsensusu wybiera jeden węzeł, aby proponował bloki. Współdzielą blok z innymi węzłami w klastrze, które dodają swoje udziały klucza do zagregowanego podpisu. Po zagregowaniu wystarczającej liczby udziałów klucza blok jest proponowany na Ethereum.
+- **[Dzielenie sekretu Shamira](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Walidatorzy używają [kluczy BLS](https://en.wikipedia.org/wiki/BLS_digital_signature). Poszczególne „udziały klucza” BLS („udziały klucza”) mogą być łączone w jeden zagregowany klucz (podpis). W DVT klucz prywatny dla walidatora jest połączonym podpisem BLS każdego operatora w klastrze.
+- **[Schemat podpisów progowych](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Określa liczbę indywidualnych udziałów klucza, które są wymagane do podpisywania obowiązków, np. 3 z 4.
+- **[Rozproszone generowanie kluczy (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Proces kryptograficzny, który generuje udziały klucza i jest używany do dystrybucji udziałów istniejącego lub nowego klucza walidatora do węzłów w klastrze.
+- **[Obliczenia wielostronne (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - Pełny klucz walidatora jest generowany w tajemnicy przy użyciu obliczeń wielostronnych. Pełen klucz nigdy nie jest znany żadnemu indywidualnemu operatorowi — zna on tylko swoją część („udział”).
+- **Protokół konsensusu** - Protokół konsensusu wybiera jeden węzeł, aby proponował bloki. Współdzielą blok z innymi węzłami w klastrze, które dodają swoje udziały klucza do zagregowanego podpisu. Po zagregowaniu wystarczającej liczby udziałów klucza blok jest proponowany na Ethereum.
 
 Rozproszone walidatory mają wbudowaną tolerancję na błędy i mogą działać nawet wtedy, gdy niektóre z poszczególnych węzłów przejdą w tryb offline. Oznacza to, że klaster jest odporny, nawet jeśli niektóre z jego węzłów okażą się złośliwe lub leniwe.
 
@@ -58,17 +58,17 @@ Rozproszone walidatory mają wbudowaną tolerancję na błędy i mogą działać
 
 DVT ma znaczące implikacje dla szerszej branży stakingowej:
 
-### Stakerzy solo {#solo-stakers}
+### Stakujący solo {#solo-stakers}
 
 DVT pozwala również na stakowanie bez nadzoru, umożliwiając dystrybucję klucza walidatora w zdalnych węzłach, przy jednoczesnym zachowaniu pełnego klucza całkowicie offline. Oznacza to, że stakerzy domowi niekoniecznie muszą wydawać pieniądze na sprzęt, a dystrybucja udziałów w kluczach może pomóc wzmocnić ich przed potencjalnymi włamaniami.
 
-### Usługi stakingowe (SaaS) {#saas}
+### Staking jako usługa (SaaS) {#saas}
 
 Operatorzy (tacy jak stakowanie w puli i stakerzy instytucjonalni) zarządzający wieloma walidatorami mogą korzystać z DVT, aby zmniejszyć swoje ryzyko. Dystrybucja infrastruktury pozwala na zwiększenie redundancji operacji i dywersyfikację typów używanego sprzętu.
 
 DVT dzieli odpowiedzialność za zarządzanie kluczami na wiele węzłów, co oznacza, że niektóre koszty operacyjne mogą być również dzielone. DVT może również zmniejszyć ryzyko operacyjne i koszty ubezpieczenia dla dostawców stakingu.
 
-### Staking pools {#staking-pools}
+### Pule stakingowe {#staking-pools}
 
 Ze względu na standardowe konfiguracje walidatorów, stakowanie w puli i dostawcy płynnych stakingów są zmuszeni do posiadania różnych poziomów zaufania pojedynczego operatora, ponieważ zyski i straty są uspołeczniane w całej puli. Są one również zależne od operatorów w zakresie ochrony kluczy podpisujących, ponieważ do tej pory nie było dla nich innej opcji.
 
@@ -80,12 +80,12 @@ Kolejną korzyścią płynącą z minimalizowania zaufania pojedynczego operator
 
 ## Potencjalne wady korzystania z DVT {#potential-drawbacks-of-using-dvt}
 
-- **Dodatkowy komponent** — wprowadzenie węzła DVT dodaje kolejną część, która może być wadliwa lub podatna na ataki. Sposobem na złagodzenie tego jest dążenie do wielu implementacji węzła DVT, co oznacza wielu klientów DVT (podobnie jak istnieje wielu klientów dla warstw konsensusu i wykonania).
-- **Koszty operacyjne** — ponieważ DVT dystrybuuje walidator między wieloma podmiotami, do działania wymagana jest większa liczba węzłów zamiast tylko jednego węzła, co powoduje wzrost kosztów operacyjnych.
-- **Potencjalnie zwiększone opóźnienie** — ponieważ DVT wykorzystuje protokół konsensusu do osiągnięcia konsensusu między wieloma węzłami obsługującymi walidator, może potencjalnie wprowadzić zwiększone opóźnienie.
+- **Dodatkowy komponent** - wprowadzenie węzła DVT dodaje kolejną część, która może być wadliwa lub podatna na ataki. Sposobem na złagodzenie tego jest dążenie do wielu implementacji węzła DVT, co oznacza wielu klientów DVT (podobnie jak istnieje wielu klientów dla warstw konsensusu i wykonania).
+- **Koszty operacyjne** - ponieważ DVT dystrybuuje walidatora między wieloma podmiotami, do działania wymagana jest większa liczba węzłów zamiast tylko jednego węzła, co powoduje wzrost kosztów operacyjnych.
+- **Potencjalnie zwiększone opóźnienie** - ponieważ DVT wykorzystuje protokół konsensusu do osiągnięcia konsensusu między wieloma węzłami obsługującymi walidatora, może potencjalnie wprowadzić zwiększone opóźnienie.
 
 ## Dalsza lektura {#further-reading}
 
-- [Specyfikacja rozproszonego walidatora Ethereum (wysoki poziom)](https://github.com/ethereum/distributed-validator-specs)
-- [Specyfikacja techniczna rozproszonego walidatora Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
-- [Aplikacja demo do dzielenia sekretu protokołem Shamira](https://iancoleman.io/shamir/)
+- [Specyfikacje rozproszonego walidatora Ethereum (ogólne)](https://github.com/ethereum/distributed-validator-specs)
+- [Specyfikacje techniczne rozproszonego walidatora Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+- [Dzielenie sekretu Shamira – aplikacja demonstracyjna](https://iancoleman.io/shamir/)

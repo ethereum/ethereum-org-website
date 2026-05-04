@@ -1,5 +1,7 @@
 import type { MetricReturnData } from "@/lib/types"
 
+import { fetchRetry } from "./fetchRetry"
+
 export const FETCH_ETH_PRICE_TASK_ID = "fetch-eth-price"
 
 /**
@@ -7,12 +9,12 @@ export const FETCH_ETH_PRICE_TASK_ID = "fetch-eth-price"
  * Returns the latest USD price data.
  */
 export async function fetchEthPrice(): Promise<MetricReturnData> {
-  const url =
-    "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
+  const apiKey = process.env.COINGECKO_API_KEY
+  const url = `https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&x_cg_demo_api_key=${apiKey}`
 
   console.log("Starting Ethereum price data fetch")
 
-  const response = await fetch(url)
+  const response = await fetchRetry(url)
 
   if (!response.ok) {
     const status = response.status

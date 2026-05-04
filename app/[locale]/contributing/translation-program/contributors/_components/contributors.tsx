@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils/cn"
 import allTimeData from "@/data/translation-reports/alltime/alltime-data.json"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 
 const Content = ({ ...props }: BaseHTMLAttributes<HTMLHeadingElement>) => (
   <MainArticle className="w-full px-10 py-4" {...props} />
@@ -74,7 +74,7 @@ const Contributors = () => {
           </InlineLink>
           .
         </Text>
-        <h2 className="mb-8 mt-12 leading-xs">
+        <h2 className="mt-12 mb-8 leading-xs">
           {t("page-contributing-translation-program-contributors-thank-you")}
         </h2>
         <List className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">

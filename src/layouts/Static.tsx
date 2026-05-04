@@ -32,6 +32,7 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import { Alert } from "@/components/ui/alert"
 import { Flex, Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
+import WhitepaperBridge from "@/components/WhitepaperBridge"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -71,6 +72,7 @@ export const staticComponents = {
   SocialListItem,
   TranslationChartImage,
   ListenToPlayer,
+  WhitepaperBridge,
 }
 
 type StaticLayoutProps = ChildOnlyProp &
@@ -114,7 +116,7 @@ export const StaticLayout = ({
             <Stack className="gap-8">
               <Breadcrumbs slug={slug} />
 
-              {!slug.includes("/whitepaper") && (
+              {!slug.includes("/whitepaper") && lastEditLocaleTimestamp && (
                 <p
                   className="text-body-medium"
                   dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
@@ -136,11 +138,13 @@ export const StaticLayout = ({
             />
             {children}
 
-            <FileContributors
-              className="my-10 border-t"
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
+            {!frontmatter.hideEditButton && (
+              <FileContributors
+                className="my-10 border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+              />
+            )}
             <FeedbackCard isArticle />
           </MainArticle>
         </div>

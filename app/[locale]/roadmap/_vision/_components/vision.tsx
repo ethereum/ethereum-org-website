@@ -24,7 +24,7 @@ import { List, ListItem } from "@/components/ui/list"
 import { cn } from "@/lib/utils/cn"
 
 import useTranslation from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
+import { usePathname } from "@/i18n/navigation"
 import oldship from "@/public/images/upgrades/oldship.png"
 
 /**
@@ -47,7 +47,7 @@ const PageContent = (props: ChildOnlyProp) => (
 const H2 = ({ className, ...props }: ComponentProps<"h2">) => (
   <h2
     className={cn(
-      "mb-8 text-2xl font-semibold leading-[1.4] md:text-[2rem]",
+      "mb-8 text-2xl leading-[1.4] font-semibold md:text-[2rem]",
       className
     )}
     {...props}
@@ -60,7 +60,7 @@ const CenterH2 = (props: Omit<ComponentProps<"h2">, "className">) => (
 
 const H3 = (props: Omit<ComponentProps<"h3">, "className">) => (
   <h3
-    className="mb-8 mt-10 text-xl font-semibold leading-[1.4] md:text-2xl"
+    className="mt-10 mb-8 text-xl leading-[1.4] font-semibold md:text-2xl"
     {...props}
   />
 )
@@ -86,7 +86,7 @@ const CentralContent = (props: ChildOnlyProp) => (
 
 const TrilemmaContent = (props: ChildOnlyProp) => (
   <div
-    className="my-8 w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 p-8"
+    className="my-8 w-full bg-linear-to-r from-accent-a/10 to-accent-c/10 p-8"
     {...props}
   />
 )

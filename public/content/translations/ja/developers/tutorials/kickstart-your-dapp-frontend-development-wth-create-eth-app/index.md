@@ -1,6 +1,6 @@
 ---
-title: create-eth-appでDappのフロントエンド開発をはじめましょう
-description: create-eth-appの使い方と機能の概要
+title: "create-eth-appでDappのフロントエンド開発をはじめましょう"
+description: "create-eth-appの使い方と機能の概要"
 author: "Markus Waas"
 tags:
   - "create-eth-app"
@@ -16,7 +16,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-[create-eth-app](https://github.com/PaulRBerg/create-eth-app)については、前回の記事（[Solidityの全体像](https://soliditydeveloper.com/solidity-overview-2020)）で紹介しました。 今回は、create-eth-appをどのように使うか、どのような機能が統合されているか、およびさらに拡張する方法について学びます。 create-eth-appは、[ Sablier ](http://sablier.com/)の創業者であるPaul Razvan Bergが立ち上げたプロジェクトで、フロントエンド開発をすばやく開始できるだけでなく、さまざまなオプションの統合機能も活用できます。
+[create-eth-app](https://github.com/PaulRBerg/create-eth-app)については、前回の記事（[Solidityの全体像](https://soliditydeveloper.com/solidity-overview-2020)）で紹介しました。 今回は、create-eth-appをどのように使うか、どのような機能が統合されているか、およびさらに拡張する方法について学びます。 create-eth-appは、[ Sablier ](https://sablier.com/)の創業者であるPaul Razvan Bergが立ち上げたプロジェクトで、フロントエンド開発をすばやく開始できるだけでなく、さまざまなオプションの統合機能も活用できます。
 
 ## インストール {#installation}
 

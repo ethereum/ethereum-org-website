@@ -126,7 +126,7 @@
   "page-upgrades-question-9-answer-3": "如果你有技术专长，可以帮忙查找新客户端的漏洞。",
   "page-upgrades-question-9-answer-4": "你可以在 ethresear.ch 上和以太坊研究人员进行各种技术方面的讨论。",
   "page-upgrades-question-9-desc": "你不需要成为技术专家来为以太坊作出贡献。社区需要各种技能的同路人贡献自己的力量。",
-  "page-upgrades-question-9-stake-eth": "质押ETH",
+  "page-upgrades-question-9-stake-eth": "质押以太币",
   "page-upgrades-question-9-title": "我如何为以太坊升级做贡献？",
   "page-upgrades-question-9-more": "寻找更多常规方式来参与以太坊的工作",
   "page-upgrades-question-10-title": "什么是“以太坊 2 阶段”？",
@@ -182,7 +182,7 @@
   "page-upgrades-what-happened-to-eth2-3-1": "“以太坊 1”现在是处理交易和执行的“执行层”。",
   "page-upgrades-what-happened-to-eth2-3-2": "“以太坊 2”现在是处理权益证明共识的“共识层”。",
   "page-upgrades-what-happened-to-eth2-4": "这些术语的更新仅会改变命名约定；不会改变以太坊的目标及路线图。",
-  "page-upgrades-what-happened-to-eth2-5": "了解有关“以太坊 2”重命名的更多信息",
+  "page-upgrades-what-happened-to-eth2-5": "了解关于“以太坊 2”重命名的更多信息",
   "page-upgrades-why-cant-we-just-use-eth2-title": "使用以太坊 2 就可以了，但为什么不呢？",
   "page-upgrades-why-cant-we-just-use-eth2-mental-models-title": "心理模型",
   "page-upgrades-why-cant-we-just-use-eth2-mental-models-description": "以太坊 2 名称的一个主要问题是为以太坊新用户建立了一种破碎的心理模型。他们会凭直觉认为以太坊 1 在前，以太坊 2 在后。或者以太坊 2 问世后，以太坊 1 就不复存在了。但这两种想法都不对。弃用术语“以太坊 2”，将来的用户就不会有这种心理模型的困扰。",
@@ -201,8 +201,8 @@
   "page-upgrades-whats-new": "以太坊下一步要做什么？",
   "page-upgrades-security-link": "更多关于安全和预防诈骗的信息",
   "page-staking-deposit-contract-staking-more-link": "关于质押的更多信息",
-  "docs-nav-proof-of-stake": "权益证明",
-  "docs-nav-proof-of-work": "工作量证明",
+  "docs-nav-proof-of-stake": "权益证明。",
+  "docs-nav-proof-of-work": "工作量证明。",
   "page-upgrades-get-involved-ethresearch-1": "分片",
   "page-upgrades-get-involved-ethresearch-2": "合并"
 }

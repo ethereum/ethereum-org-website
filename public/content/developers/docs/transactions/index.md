@@ -4,7 +4,7 @@ description: An overview of Ethereum transactions – how they work, their data 
 lang: en
 ---
 
-Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to another.
+Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the [Ethereum](/) network. The simplest transaction is transferring ETH from one account to another.
 
 ## Prerequisites {#prerequisites}
 
@@ -190,7 +190,7 @@ Once the transaction has been submitted the following happens:
 
 Watch Austin walk you through transactions, gas, and mining.
 
-<YouTube id="er-0ihqFQB0" />
+<VideoWatch slug="transactions-eth-build" />
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 

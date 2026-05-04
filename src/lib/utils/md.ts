@@ -10,12 +10,12 @@ import { dateToString } from "@/lib/utils/date"
 
 import internalTutorialSlugs from "@/data/internalTutorials.json"
 
-import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
 function getContentRoot() {
-  return join(process.cwd(), CONTENT_DIR)
+  return join(process.cwd(), "public/content")
 }
 
 export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
@@ -37,6 +37,8 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
       if (stats.isDirectory()) {
         // Skip nested translations directory
         if (fileOrDir === "translations") continue
+        // Skip videos directory — video pages have their own dedicated route
+        if (fileOrDir === "videos") continue
         // If it is a directory, recursively call the `getPostSlugs` function with the
         // directory path and the files array
         const nestedDir = join(dir, fileOrDir)
@@ -75,35 +77,36 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
 export const getTutorialsData = async (
   locale: string
 ): Promise<ITutorial[]> => {
-  // Read tutorials from filesystem in parallel using dynamic imports
+  const contentRoot = join(process.cwd(), "public/content")
+
   const tutorialPromises = (internalTutorialSlugs as string[]).map(
     async (slug) => {
       try {
         let fileContents: string
         let isTranslated = true
 
+        const enPath = join(
+          contentRoot,
+          "developers/tutorials",
+          slug,
+          "index.md"
+        )
+
         if (locale === DEFAULT_LOCALE) {
-          // English: read directly from content directory
-          fileContents = (
-            await import(
-              `../../../public/content/developers/tutorials/${slug}/index.md`
-            )
-          ).default
+          fileContents = await fsp.readFile(enPath, "utf-8")
         } else {
-          // Non-English: try translation first, fallback to English
+          const translatedPath = join(
+            contentRoot,
+            "translations",
+            locale,
+            "developers/tutorials",
+            slug,
+            "index.md"
+          )
           try {
-            fileContents = (
-              await import(
-                `../../../public/content/translations/${locale}/developers/tutorials/${slug}/index.md`
-              )
-            ).default
+            fileContents = await fsp.readFile(translatedPath, "utf-8")
           } catch {
-            // Fallback to English content
-            fileContents = (
-              await import(
-                `../../../public/content/developers/tutorials/${slug}/index.md`
-              )
-            ).default
+            fileContents = await fsp.readFile(enPath, "utf-8")
             isTranslated = false
           }
         }
@@ -112,7 +115,7 @@ export const getTutorialsData = async (
         const frontmatter = data as Frontmatter
 
         return {
-          href: `/${locale}/developers/tutorials/${slug}`,
+          href: `/developers/tutorials/${slug}`,
           title: frontmatter.title,
           description: frontmatter.description,
           author: frontmatter.author || "",
@@ -143,3 +146,42 @@ export const checkPathValidity = (
   { slug: slugArray }: SlugPageParams
 ): boolean =>
   validPaths.some((path) => path.slug.join("/") === slugArray.join("/"))
+
+/**
+ * Strips markdown syntax from text, leaving plain text.
+ * For preview/snippet text where markdown shouldn't be visible.
+ *
+ * @param text - Text with markdown syntax
+ * @param preserveNewlines - When true, collapses runs of 3+ newlines to 2
+ *   instead of collapsing all whitespace to single spaces. Useful for
+ *   structured output like JSON-LD transcripts.
+ * @returns Plain text with markdown markers removed
+ */
+export function stripMarkdown(
+  text: string,
+  preserveNewlines?: boolean
+): string {
+  let result = text
+    // Remove bold/italic (**text** or __text__)
+    .replace(/(\*\*|__)(.*?)\1/g, "$2")
+    // Remove italic (*text* or _text_)
+    .replace(/(\*|_)(.*?)\1/g, "$2")
+    // Remove inline code (`code`)
+    .replace(/`([^`]+)`/g, "$1")
+    // Remove links [text](url) -> text
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    // Remove images ![alt](url) -> empty
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, "")
+    // Remove headings (# text)
+    .replace(/^#{1,6}\s+/gm, "")
+    // Remove list markers (- or * or 1.)
+    .replace(/^[\s]*[-*+]\s+/gm, "")
+    .replace(/^[\s]*\d+\.\s+/gm, "")
+
+  // Clean up whitespace
+  result = preserveNewlines
+    ? result.replace(/\n{3,}/g, "\n\n")
+    : result.replace(/\s+/g, " ")
+
+  return result.trim()
+}

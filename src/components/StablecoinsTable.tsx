@@ -335,13 +335,14 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
                           src={image}
                           alt=""
                           className="me-4 h-6 w-6"
+                          sizes="24px"
                           width={24}
                           height={24}
                         />
                       )}
                       <span>
                         {name}{" "}
-                        <span className="text-sm uppercase text-body-medium">
+                        <span className="text-sm text-body-medium uppercase">
                           {symbol}
                         </span>
                       </span>

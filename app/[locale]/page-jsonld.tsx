@@ -4,51 +4,42 @@ import { Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-} from "@/lib/utils/jsonld"
-import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import { ETHEREUM_ORG_WEBSITE } from "@/lib/jsonld/constants"
+import { KNOWN_ORGANIZATIONS } from "@/lib/jsonld/organizations"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function IndexPageJsonLD({
   locale,
 }: {
   locale: Lang | undefined
 }) {
-  const t = await getTranslations({
-    namespace: "page-index",
-  })
-
-  const url = normalizeUrlForJsonLd(locale, `/`)
+  const t = await getTranslations("page-index")
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      KNOWN_ORGANIZATIONS["ethereum-foundation"],
+      KNOWN_ORGANIZATIONS["ethereum-community"],
       {
-        "@type": "WebSite",
-        "@id": "https://ethereum.org/#website",
-        url: url,
-        name: "ethereum.org",
+        ...ETHEREUM_ORG_WEBSITE,
         description: t("page-index-meta-description"),
-        educationalUse: "Independent Study",
+        educationalUse: "Self-Paced",
         keywords:
-          "Ethereum, Blockchain, Smart Contracts, Web3, Open Source, Protocol, Documentation, Education",
+          "Ethereum, ETH, Crypto, Digital Ownership, DeFi, Decentralized Finance, Privacy, Stablecoins, Web3, Blockchain, Smart Contracts, Open Source",
         inLanguage: locale,
         license: "https://opensource.org/licenses/MIT",
         audience: {
           "@type": "EducationalAudience",
-          educationalRole: ["developer", "student"],
           audienceType: "public",
         },
-        publisher: ethereumFoundationOrganization,
-        maintainer: ethereumFoundationReference,
-        contributor: ethereumCommunityOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        maintainer: REFERENCE.ETHEREUM_FOUNDATION,
+        contributor: REFERENCE.ETHEREUM_COMMUNITY,
         about: {
           "@type": "Thing",
           name: "Ethereum",
           description:
-            "A decentralized, open-source blockchain with smart contract functionality.",
+            "Ethereum is a global, open-source blockchain network with smart contract functionality, and a platform that powers digital ownership, decentralized finance (DeFi), and privacy-preserving applications.",
           image: "https://ethereum.org/images/assets/eth-diamond-glyph.png",
           sameAs: [
             "https://www.wikidata.org/wiki/Q16783523",

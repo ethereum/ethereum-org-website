@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
@@ -16,16 +16,15 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import Contributors from "./_components/contributors"
 import ContributorsJsonLD from "./page-jsonld"
 
-const Page = async ({ params }: { params: PageParams }) => {
+const Page = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "contributing/translation-program/contributors",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   // Get i18n messages
@@ -45,17 +44,15 @@ const Page = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-contributing-translation-program-contributors",
-  })
+  const t = await getTranslations(
+    "page-contributing-translation-program-contributors"
+  )
 
   return await getMetadata({
     locale,

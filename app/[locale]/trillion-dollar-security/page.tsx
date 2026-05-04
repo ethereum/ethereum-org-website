@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { CommitHistory, Lang, PageParams } from "@/lib/types"
+import type { Lang, PageParams } from "@/lib/types"
 
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -24,7 +24,7 @@ import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
 const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => {
   return (
-    <Card className="rounded-2xl border bg-card-gradient p-8 shadow dark:bg-gradient-to-br dark:from-white/0 dark:to-purple-500/10">
+    <Card className="rounded-2xl border bg-card-gradient p-8 shadow dark:bg-linear-to-br dark:from-white/0 dark:to-purple-500/10">
       <CardContent className="p-0 pb-4">
         <CardParagraph variant="light" size="sm">
           <Image
@@ -43,21 +43,17 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => {
   )
 }
 
-const TdsPage = async ({ params }: { params: PageParams }) => {
+const TdsPage = async (props: { params: Promise<PageParams> }) => {
+  const params = await props.params
   const { locale } = params
 
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-trillion-dollar-security",
-  })
+  const t = await getTranslations("page-trillion-dollar-security")
 
-  const commitHistoryCache: CommitHistory = {}
   const { contributors } = await getAppPageContributorInfo(
     "trillion-dollar-security",
-    locale as Lang,
-    commitHistoryCache
+    locale as Lang
   )
 
   return (
@@ -77,7 +73,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
             className="max-h-[480px] w-full object-cover"
           />
           <div className="px-6 md:px-8">
-            <p className="mb-2 mt-6 text-center text-body-medium">
+            <p className="mt-6 mb-2 text-center text-body-medium">
               {t("page-trillion-dollar-security-subtitle")}
             </p>
             <h1 className="mb-20 text-center">
@@ -86,7 +82,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
 
             <div className="mt-8">
               {/* Right: Download Card */}
-              <div className="hidden w-full max-w-sm md:float-right md:mb-16 md:ms-16 md:block">
+              <div className="hidden w-full max-w-sm md:float-right md:ms-16 md:mb-16 md:block">
                 <ReportCard
                   cta={t("page-trillion-dollar-security-download-report")}
                   altText={t("page-trillion-dollar-security-image-alt-report")}
@@ -232,7 +228,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
               id="ux"
               className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
             >
-              <div className="top-24 flex h-fit flex-shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
+              <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
                 <h3 className="mb-4">
                   1. {t("page-trillion-dollar-security-user-experience-title")}
                 </h3>
@@ -374,7 +370,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
               id="smart-contracts"
               className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
             >
-              <div className="top-24 flex h-fit flex-shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
+              <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
                 <h3 className="mb-4">
                   2. {t("page-trillion-dollar-security-smart-contract-title")}
                 </h3>
@@ -418,7 +414,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                     <p>
                       {t("page-trillion-dollar-security-section-2-1-paragraph")}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         <b>
                           {t(
@@ -525,7 +521,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                     <p>
                       {t("page-trillion-dollar-security-section-2-2-paragraph")}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         <b>
                           {t(
@@ -621,7 +617,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
               id="infrastructure"
               className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
             >
-              <div className="top-24 flex h-fit flex-shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
+              <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
                 <h3 className="mb-4">
                   3. {t("page-trillion-dollar-security-infrastructure-title")}
                 </h3>
@@ -642,7 +638,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                     <p>
                       {t("page-trillion-dollar-security-section-3-1-paragraph")}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         <b>
                           {t(
@@ -712,7 +708,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                     <p>
                       {t("page-trillion-dollar-security-section-3-3-paragraph")}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         {t("page-trillion-dollar-security-section-3-3-list-1")}
                       </li>
@@ -732,7 +728,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                     <p>
                       {t("page-trillion-dollar-security-section-3-4-paragraph")}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         <b>
                           {t(
@@ -787,7 +783,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                         "page-trillion-dollar-security-section-3-6-paragraph-1"
                       )}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         {t("page-trillion-dollar-security-section-3-6-list-1")}
                       </li>
@@ -816,7 +812,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
               id="consensus"
               className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
             >
-              <div className="top-24 flex h-fit flex-shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
+              <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
                 <h3 className="mb-4">
                   4. {t("page-trillion-dollar-security-consensus-title")}
                 </h3>
@@ -855,7 +851,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                     <p>
                       {t("page-trillion-dollar-security-section-4-3-paragraph")}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         {t("page-trillion-dollar-security-section-4-3-list-1")}
                       </li>
@@ -878,7 +874,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                     <p>
                       {t("page-trillion-dollar-security-section-4-5-paragraph")}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         {t("page-trillion-dollar-security-section-4-5-list-1")}
                       </li>
@@ -918,7 +914,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
               id="incident"
               className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
             >
-              <div className="top-24 flex h-fit flex-shrink-0 flex-col items-start self-start lg:sticky lg:flex lg:w-[400px]">
+              <div className="top-24 flex h-fit shrink-0 flex-col items-start self-start lg:sticky lg:flex lg:w-[400px]">
                 <h3 className="mb-4">
                   5. {t("page-trillion-dollar-security-incident-title")}
                 </h3>
@@ -929,7 +925,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                     <p>
                       {t("page-trillion-dollar-security-section-5-paragraph-1")}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         <b>
                           {t(
@@ -996,7 +992,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
               id="social"
               className="mb-8 flex scroll-mt-24 flex-col gap-8 lg:flex-row"
             >
-              <div className="top-24 flex h-fit flex-shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
+              <div className="top-24 flex h-fit shrink-0 flex-col items-start gap-4 self-start lg:sticky lg:flex lg:w-[400px]">
                 <h3 className="mb-4">
                   6. {t("page-trillion-dollar-security-social-title")}
                 </h3>
@@ -1023,7 +1019,7 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
                         "page-trillion-dollar-security-section-6-1-paragraph-2"
                       )}
                     </p>
-                    <ul className="ml-6 mt-2 list-disc">
+                    <ul className="mt-2 ml-6 list-disc">
                       <li>
                         {t("page-trillion-dollar-security-section-6-1-list-1")}
                       </li>
@@ -1091,17 +1087,13 @@ const TdsPage = async ({ params }: { params: PageParams }) => {
   )
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string }
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>
 }) {
+  const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-trillion-dollar-security",
-  })
+  const t = await getTranslations("page-trillion-dollar-security")
 
   return await getMetadata({
     locale,

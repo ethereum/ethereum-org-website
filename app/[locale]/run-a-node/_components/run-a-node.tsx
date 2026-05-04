@@ -82,7 +82,7 @@ const SoftwareHighlight = ({
 }: HTMLAttributes<HTMLHeadingElement>) => (
   <Center
     className={cn(
-      "relative isolate !ml-0 w-full flex-col-reverse gap-8 rounded-sm border border-border-high-contrast p-8 pe-16 ps-16 text-body after:absolute after:inset-0 after:-z-10 after:bg-inherit after:blur-xl after:content-[''] md:mx-24 md:flex-row",
+      "relative isolate !ml-0 w-full flex-col-reverse gap-8 rounded-xs border border-border-high-contrast p-8 ps-16 pe-16 text-body after:absolute after:inset-0 after:-z-10 after:bg-inherit after:blur-xl after:content-[''] md:mx-24 md:flex-row",
       className
     )}
     {...props}
@@ -172,11 +172,11 @@ const StakingCalloutContainer = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <h2 className="mb-8 mt-12 leading-xs" {...props} />
+  <h2 className="mt-12 mb-8 leading-xs" {...props} />
 )
 
 const H3 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-  <h3 className={cn("mb-8 mt-10 leading-xs", className)} {...props} />
+  <h3 className={cn("mt-10 mb-8 leading-xs", className)} {...props} />
 )
 
 const H4 = (props: ChildOnlyProp) => (
@@ -296,7 +296,7 @@ const RunANodePage = ({
   return (
     <>
       <GappedPage>
-        <div className="w-full bg-gradient-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
+        <div className="w-full bg-linear-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
           <div className="pb-8">
             <PageHero content={heroContent} isReverse />
           </div>
@@ -309,7 +309,9 @@ const RunANodePage = ({
                 <Translation id="page-run-a-node:page-run-a-node-what-title" />
               </H2>
               <H3>{t("page-run-a-node-what-1-subtitle")}</H3>
-              <Text>{t("page-run-a-node-what-1-text")}</Text>
+              <Text>
+                <Translation id="page-run-a-node:page-run-a-node-what-1-text" />
+              </Text>
               <H3>{t("page-run-a-node-what-2-subtitle")}</H3>
               <Text>{t("page-run-a-node-what-2-text")}</Text>
               <H3>{t("page-run-a-node-what-3-subtitle")}</H3>
@@ -329,8 +331,8 @@ const RunANodePage = ({
         <FlexContent>
           <VStack
             className={cn(
-              "relative mb-0 w-full gap-0 self-center rounded-sm border p-6 md:mb-4 md:w-[90%]",
-              "bg-gradient-to-br from-blue-500/20 from-10% to-pink-600/20 to-90%"
+              "relative mb-0 w-full gap-0 self-center rounded-xs border p-6 md:mb-4 md:w-[90%]",
+              "bg-linear-to-br from-blue-500/20 from-10% to-pink-600/20 to-90%"
             )}
           >
             <Stack className="flex-col items-center justify-between gap-8 md:flex-row md:gap-12">
@@ -341,7 +343,7 @@ const RunANodePage = ({
                 style={{ width: "300px", height: "auto" }}
               />
               <div className="me-4">
-                <h2 className="mb-5 mt-4 text-2xl font-semibold leading-[1.4] md:text-[2rem]">
+                <h2 className="mt-4 mb-5 text-2xl leading-[1.4] font-semibold md:text-[2rem]">
                   <Translation id="page-run-a-node:page-run-a-node-who-title" />
                 </h2>
                 <p className="body-medium mb-0">
@@ -355,7 +357,7 @@ const RunANodePage = ({
               </p>
               <p className="mb-6">{t("page-run-a-node-who-copy-2")}</p>
               <p className="mb-6">{t("page-run-a-node-who-copy-3")}</p>
-              <p className="mb-6 text-[150%] font-semibold leading-none">
+              <p className="mb-6 text-[150%] leading-none font-semibold">
                 {t("page-run-a-node-who-copy-bold")}
               </p>
             </div>
@@ -705,7 +707,7 @@ const RunANodePage = ({
         <StakingCalloutContainer>
           <Column>
             <Image
-              className="-translate-y-12 -scale-x-100 transform lg:-translate-x-8 lg:translate-y-0 lg:scale-[115%] lg:-scale-x-[115%]"
+              className="-translate-y-12 -scale-x-100 transform lg:-translate-x-8 lg:translate-y-0 lg:-scale-x-[115%] lg:scale-[115%]"
               src={leslie}
               alt=""
               sizes="624px"

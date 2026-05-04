@@ -1,6 +1,7 @@
 "use client"
 
 import React, { type ReactNode, useState } from "react"
+import type { AccordionContentProps } from "@radix-ui/react-accordion"
 
 import { Flex, HStack, VStack } from "@/components/ui/flex"
 
@@ -26,7 +27,7 @@ export type ExpandableCardProps = {
   eventName?: string
   visible?: boolean
   className?: string
-}
+} & Pick<AccordionContentProps, "forceMount">
 
 const ExpandableCard = ({
   children,
@@ -38,6 +39,7 @@ const ExpandableCard = ({
   eventName = "",
   visible = false,
   className,
+  forceMount,
 }: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(visible)
   const { t } = useTranslation("common")
@@ -69,7 +71,7 @@ const ExpandableCard = ({
       >
         <AccordionItem
           value="item-1"
-          className="rounded-sm border hover:bg-background-highlight"
+          className="rounded-xs border hover:bg-background-highlight"
         >
           <AccordionTrigger
             hideIcon
@@ -78,7 +80,7 @@ const ExpandableCard = ({
           >
             <Flex className="w-full flex-col items-center text-left sm:flex-row">
               <VStack className="items-center md:items-start">
-                <HStack className="mb-2 mt-4">
+                <HStack className="mt-4 mb-2">
                   {Svg && <Svg className="mr-6" />}
                   <h3 className="text-xl font-semibold">{title}</h3>
                 </HStack>
@@ -91,7 +93,14 @@ const ExpandableCard = ({
               </span>
             </Flex>
           </AccordionTrigger>
-          <AccordionContent className="p-6 pt-0 md:p-6 md:pt-0">
+          <AccordionContent
+            forceMount={forceMount}
+            className={cn(
+              "p-6 pt-0 md:p-6 md:pt-0",
+              forceMount &&
+                "in-data-[state=closed]:hidden in-data-[state=closed]:h-0"
+            )}
+          >
             <div className="border-t pt-6 text-md text-body">{children}</div>
           </AccordionContent>
         </AccordionItem>

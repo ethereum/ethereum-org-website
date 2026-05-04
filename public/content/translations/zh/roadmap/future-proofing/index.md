@@ -1,6 +1,6 @@
 ---
-title: 打造面向未来的以太坊
-description: 无论未来会发生什么，这些升级都可以增强以太坊，使其成为可以适应未来需求的有韧性、去中心化的基础层。
+title: "打造面向未来的以太坊"
+description: "无论未来会发生什么，这些升级都可以增强以太坊，使其成为可以适应未来需求的有韧性、去中心化的基础层。"
 lang: zh
 image: /images/roadmap/roadmap-future.png
 alt: "以太坊路线图"
@@ -9,30 +9,45 @@ template: roadmap
 
 路线图的部分内容并不是对于以太坊的短期扩展或保护而言必不可少，但可以为以太坊长期稳定性和可靠性奠定基础。
 
-## 量子抗性 {#quantum-resistance}
+## 抗量子性 {#quantum-resistance}
 
-当量子计算成为现实时，一些目前用于保护以太坊安全的[加密技术](/glossary/#cryptography)将会受到威胁。 尽管量子计算机可能还需要几十年才能对现代加密技术构成真正的威胁，但以太坊的构建方式要保证以太坊在未来几个世纪内都保持安全。 这意味着要尽快使[以太坊具备量子抗性](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/)。
+当量子计算成为现实时，当前保护以太坊安全的部分[加密技术](/glossary/#cryptography)将会受到威胁。 尽管量子计算机可能还需要几十年才能对现代加密技术构成真正的威胁，但以太坊的构建方式要保证以太坊在未来几个世纪内都保持安全。 这意味着需要尽快让[以太坊具备抗量子性](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/)。
 
-以太坊开发者面临的挑战是，当前的[权益证明](/glossary/#pos)协议依赖于一种称为 BLS 的非常高效的签名方案对有效[区块](/glossary/#block)的投票进行聚合。 这种签名方案会被量子计算机破解，但是具有量子抗性的替代方案没有那么高效。
+以太坊开发者面临的挑战是，当前的[权益证明](/glossary/#pos)协议依赖一种称为 BLS 的高效签名方案来聚合有效[区块](/glossary/#block)的投票。 这种签名方案会被量子计算机破解，但是具有量子抗性的替代方案没有那么高效。
 
-在以太坊的多个地方使用的、用于生成密码学密钥的[“KZG”承诺方案](/roadmap/danksharding/#what-is-kzg)面临量子计算时存在漏洞。 目前，这个问题是通过“可信设置”来规避的，即多个用户生成的随机性无法被量子计算机逆向工程。 然而，理想的解决方案就是采用量子安全加密技术。 可以替代 BLS 方案的高效方法主要有两种：[基于 STARK ](https://hackmd.io/@vbuterin/stark_aggregation)和[基于点阵的](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175)签名方案。 **这些方案仍处在研究和原型开发阶段**。
+以太坊中多处用于生成加密机密的 [“KZG” 承诺方案](/roadmap/danksharding/#what-is-kzg)已知存在量子漏洞。 目前，这个问题通过使用 “可信设置”（trusted setups）来规避（其主要的设置仪式已于 2023 年成功完成），在这个过程中，许多用户生成了 不可被量子计算机逆向工程 的随机性。 然而，理想的长期解决方案是采用量子安全加密技术。 有两种主要方法可以有效替代 BLS 方案：[基于 STARK](https://hackmd.io/@vbuterin/stark_aggregation) 和[基于格](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175)的签名。 **这些技术仍在积极研究和原型开发中**。
 
-<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> 阅读了解 KZG 和可信设置的相关内容。</ButtonLink>
+[阅读有关 KZG 和可信设置的内容](/roadmap/danksharding#what-is-kzg)
 
-## 简化以太坊，提高以太坊效率 {#simpler-more-efficient-ethereum}
+## 更简单、更高效的以太坊 {#simpler-more-efficient-ethereum}
 
-复杂性会导致出现可以被攻击者利用的错误或漏洞。 因此，路线图的一部分是简化以太坊，并删除那些在各种升级后留存但不再需要或可以改进的代码。 更精简、更简单的代码库更容易被开发者维护和推理。
+复杂性为漏洞或错误提供了机会，这些漏洞或错误可能被攻击者利用。 因此，路线图中的一部分是关于简化以太坊，移除或修改那些在多次升级中残留的、但现在不再需要或可以改进的代码。 精简和简单的代码库更容易让开发者进行维护和理解。
 
-我们将对[以太坊虚拟机 (EVM)](/developers/docs/evm)进行多项更新，使其更简单和更高效。 其中包括[删除 SELFDESTRUCT 操作码](https://hackmd.io/@vbuterin/selfdestruct)，该命令很少使用、不再需要，并且在某些情况下使用可能会带来危险，特别是当与以太坊存储模型的其他未来升级结合时。 [以太坊客户端](/glossary/#consensus-client)仍然支持一些旧的交易类型，这些类型现在完全可以被删除。 [燃料费](/glossary/#gas)的计算方式也可以改进，并且可以引入更高效的算法来支持一些加密操作。
+为了让[以太坊虚拟机 (EVM)](/developers/docs/evm) 更简单、更高效，我们正在不断研究和实施改进方案。 这涉及处理遗留组件和引入优化措施。
 
-同样，现有以太坊客户端的其他部分也可以进行更新。 例如，目前执行和共识客户端使用不同类型的数据压缩。 当整个网络统一压缩方案时，客户端之间共享数据将变得更加简单直观。
+**近期实施的变更：**
+
+- \*\*燃料计算机制改革：\*\*通过 **EIP-1559（在 2021 年伦敦升级中实施）**，[燃料](/glossary/#gas)的计算方式得到了显著改进，引入了基本费用和销毁机制，使交易定价更可预测。
+- **`SELFDESTRUCT` 限制：**`SELFDESTRUCT` 操作码虽然很少使用，但存在潜在风险。 为了减轻风险（尤其是在状态管理方面），其功能在**Dencun 升级（2024 年 3 月）中通过 EIP-6780**受到了严格**限制**。
+- \*\*现代化交易类型：\*\*引入了新的交易格式（例如，通过 **EIP-2718** 和用于 Dencun 升级中 blob 的 **EIP-4844**）以支持新功能，并提高相对于旧类型的效率。
+
+**持续和未来的目标：**
+
+- **进一步处理 `SELFDESTRUCT`：**虽然已受限制，但仍在考虑为将来的升级**可能完全移除** `SELFDESTRUCT` 操作码，以进一步简化 EVM 状态。 （[关于 SELFDESTRUCT 问题的更多背景信息](https://hackmd.io/@vbuterin/selfdestruct)）。
+- **逐步淘汰旧版交易：**虽然[以太坊客户端](/glossary/#consensus-client)为了向后兼容性仍然支持旧版交易类型，但目标是鼓励迁移到新类型，并在未来**可能弃用或完全移除对最旧格式的支持**。
+- **持续的燃料效率研究：**对**燃料计算的进一步改进**仍在探索中，可能包括多维燃料等概念，以更好地反映资源使用情况。
+- **优化加密操作：**我们正在不断努力，为支持 EVM 中加密操作的**算术引入更高效的方法**。
+
+同样，也可以对目前以太坊客户端的其他部分进行更新。 举个例子，当前的执行和共识客户端使用的是不同类型的数据压缩。 如果整个网络的压缩方案能够统一，客户端之间共享数据将变得更加容易和直观。 这仍是一个有待探索的领域。
 
 ## 当前进展 {#current-progress}
 
-打造面向未来的以太坊所需的大部分升级**仍处于研究阶段，并且可能需要数年时间**才能实现。 诸如删除 SELFDESTRUCT 和统一执行执行和共识客户端中所用压缩方案之类的升级，可能会比抗量子加密更快推出。
+许多长期的、保障未来发展的升级，尤其是**核心协议的完全抗量子性，仍处于研究阶段，可能需要数年时间**才能实施。
 
-**延伸阅读**
+然而，**在简化工作方面已经取得了重大进展**。例如，像**限制 `SELFDESTRUCT` (EIP-6780)** 和引入**携带 blob 的交易 (EIP-4844)** 等关键变更已在 \*\*Dencun 升级（2024 年 3 月）\*\*中实施。 客户端压缩方案的协调和其他改进效率的工作也在继续。
+
+**扩展阅读**
 
 - [燃料](/developers/docs/gas)
-- [EVM 以太坊虚拟机](/developers/docs/evm)
+- [EVM](/developers/docs/evm)
 - [数据结构](/developers/docs/data-structures-and-encoding)

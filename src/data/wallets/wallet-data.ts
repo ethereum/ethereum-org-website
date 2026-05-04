@@ -29,6 +29,7 @@ import GemWalletImage from "@/public/images/wallets/gemwallet.png"
 import GridPlusImage from "@/public/images/wallets/gridplus.png"
 import imKeyImage from "@/public/images/wallets/imkey.png"
 import imTokenImage from "@/public/images/wallets/imtoken.png"
+import InfinexImage from "@/public/images/wallets/infinexwallet.png"
 import IoFinnetImage from "@/public/images/wallets/iofinnet.png"
 import KeystoneImage from "@/public/images/wallets/keystone.png"
 import LedgerImage from "@/public/images/wallets/ledger.png"
@@ -426,7 +427,7 @@ export const walletsData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: true,
+    open_source: false,
     repo_url: "https://github.com/MetaMask",
     non_custodial: true,
     security_audit: [],
@@ -445,6 +446,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://support.metamask.io",
     documentation: "https://docs.metamask.io/",
     supported_chains: [
@@ -501,6 +503,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: true,
     social_recovery: true,
+    eip_4337_support: true,
     onboard_documentation: "https://docs.safe.global/",
     documentation: "https://docs.safe.global/",
     supported_chains: [
@@ -636,6 +639,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_4337_support: true,
     onboard_documentation:
       "https://help.ambire.com/hc/en-us/categories/4404980091538-Ambire-Wallet",
     documentation: "",
@@ -837,7 +841,7 @@ export const walletsData: WalletData[] = [
     image: FoxWalletImage,
     twBackgroundColor: "bg-[#000000]",
     twGradiantBrandColor: "from-[#000000]",
-    url: "https://foxwallet.com/en",
+    url: "https://foxwallet.com/",
     active_development_team: true,
     languages_supported: [
       "en",
@@ -940,6 +944,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://docs.pillarx.app/",
     documentation: "https://docs.pillarx.app/",
     supported_chains: [
@@ -1325,6 +1330,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://learn.rainbow.me/",
     documentation: "",
     supported_chains: [
@@ -1782,6 +1788,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://study.bitkeep.com/en/",
     documentation: "https://docs.bitkeep.com/en/docs/guide/",
     supported_chains: [
@@ -2153,6 +2160,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://community.trustwallet.com/",
     documentation: "https://developer.trustwallet.com/developer/",
     supported_chains: [
@@ -2813,6 +2821,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://support.nu.fi/",
     documentation: "https://support.nu.fi/",
     supported_chains: [
@@ -2913,6 +2922,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation:
       "https://support.uniswap.org/hc/en-us/categories/11301970439565-Uniswap-Wallet",
     documentation: "https://docs.uniswap.org/",
@@ -2993,6 +3003,68 @@ export const walletsData: WalletData[] = [
       "Abstract",
       "World Chain",
     ],
+  },
+  {
+    // https://github.com/ethereum/ethereum-org-website/issues/17586
+    last_updated: "2026-02-17",
+    name: "Infinex Wallet & Crypto Superapp",
+    image: InfinexImage,
+    twBackgroundColor: "bg-[#FE6F39]",
+    twGradiantBrandColor: "from-[#FE6F39]",
+    active_development_team: true,
+    url: "https://infinex.xyz/extension?ref=ethfw",
+    twitter: "https://x.com/infinex",
+    discord: "https://discord.com/invite/infinex",
+    reddit: "",
+    telegram: "https://t.me/infinexbroadcast",
+    onboard_documentation:
+      "https://support.infinex.xyz/en/articles/12854879-infinex-browser-extension?ref=ethfw",
+    documentation:
+      "https://support.infinex.xyz/en/collections/9874360-your-infinex-account?ref=ethfw",
+    ios: false, // pinnable webapp
+    android: false, // pinnable webapp
+    linux: false, // pinnable webapp
+    windows: false, // pinnable webapp
+    macOS: false, // pinnable webapp
+    firefox: false,
+    chromium: true, // https://chromewebstore.google.com/detail/infinex/ibcnlnjajdjfjdcogphnhombiegpcnbj
+    hardware: false,
+    multichain: true,
+    supported_chains: [
+      // https://infinex.xyz/legals/supported-assets
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "OP Mainnet",
+      "Base",
+      "Blast",
+      "Unichain",
+      "Ink",
+    ],
+    languages_supported: ["en"],
+    buy_crypto: false,
+    withdraw_crypto: false,
+    connect_to_dapps: true,
+    nft_support: true,
+    staking: true,
+    layer_2: true,
+    swaps: true,
+    hardware_support: true, // https://infinex.xyz/news/59-hardware-wallet-support-bulk-move
+    ens_support: true,
+    open_source: false,
+    repo_url: "https://github.com/infinex-xyz",
+    non_custodial: true,
+    security_audit: [
+      "https://iosiro.com/audits/infinex-accounts-smart-account-smart-contract-audit",
+      "https://ottersec.notion.site/Infinex-68e26cdbdc7848b7992b80d5b7005063",
+    ],
+    scam_protection: true,
+    multisig: false,
+    mpc: false,
+    social_recovery: true,
+    privacy: true, // no KYC, private send https://infinex.xyz/news/61-incognito-mode
+    rpc_importing: false,
+    erc_20_support: true, // auto, but scam assets are filtered (can be selectively disabled)
+    gas_fee_customization: false,
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 

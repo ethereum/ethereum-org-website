@@ -1,4 +1,10 @@
-import { createContext, useContext } from "react"
+import {
+  createContext,
+  isValidElement,
+  useContext,
+  useEffect,
+  useRef,
+} from "react"
 import { ChevronDown } from "lucide-react"
 import type {
   ContainerProps,
@@ -11,6 +17,7 @@ import type {
   OptionProps,
 } from "react-select"
 import { tv, type VariantProps } from "tailwind-variants"
+import { useVirtualizer } from "@tanstack/react-virtual"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -154,6 +161,9 @@ const Menu = <
   )
 }
 
+const OPTION_HEIGHT = 36
+const VIRTUAL_THRESHOLD = 30
+
 const MenuList = <
   Option,
   IsMulti extends boolean,
@@ -163,14 +173,105 @@ const MenuList = <
 ) => {
   const { innerProps, innerRef, children } = props
   const { menuList } = useSelectStyles()
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  const childArray = Array.isArray(children) ? children : []
+  const shouldVirtualize = childArray.length > VIRTUAL_THRESHOLD
+
+  if (!shouldVirtualize) {
+    return (
+      <div
+        ref={innerRef}
+        {...innerProps}
+        className={menuList()}
+        id="react-select-menu-list"
+      >
+        {children}
+      </div>
+    )
+  }
+
+  return (
+    <VirtualizedMenuListInner
+      innerRef={innerRef}
+      innerProps={innerProps}
+      className={menuList()}
+      items={childArray}
+      focusedIndex={childArray.findIndex(
+        (child) =>
+          isValidElement<{ isFocused?: boolean }>(child) &&
+          child.props.isFocused
+      )}
+      scrollRef={scrollRef}
+    />
+  )
+}
+
+function VirtualizedMenuListInner({
+  innerRef,
+  innerProps,
+  className,
+  items,
+  focusedIndex,
+  scrollRef,
+}: {
+  innerRef: React.Ref<HTMLDivElement>
+  innerProps: React.HTMLAttributes<HTMLDivElement>
+  className: string
+  items: React.ReactNode[]
+  focusedIndex: number
+  scrollRef: React.RefObject<HTMLDivElement | null>
+}) {
+  const virtualizer = useVirtualizer({
+    count: items.length,
+    getScrollElement: () => scrollRef.current,
+    estimateSize: () => OPTION_HEIGHT,
+    overscan: 5,
+    initialOffset: focusedIndex > 0 ? focusedIndex * OPTION_HEIGHT : 0,
+  })
+
+  // Scroll to focused option on keyboard navigation (arrow keys, Page Up/Down, Home/End)
+  useEffect(() => {
+    if (focusedIndex >= 0) {
+      virtualizer.scrollToIndex(focusedIndex, { align: "auto" })
+    }
+  }, [focusedIndex, virtualizer])
+
   return (
     <div
-      ref={innerRef}
+      ref={(el) => {
+        scrollRef.current = el
+        if (typeof innerRef === "function") innerRef(el)
+        else if (innerRef && "current" in innerRef)
+          (innerRef as React.MutableRefObject<HTMLDivElement | null>).current =
+            el
+      }}
       {...innerProps}
-      className={menuList()}
+      className={className}
       id="react-select-menu-list"
     >
-      {children}
+      <div
+        style={{
+          height: virtualizer.getTotalSize(),
+          width: "100%",
+          position: "relative",
+        }}
+      >
+        {virtualizer.getVirtualItems().map((virtualItem) => (
+          <div
+            key={virtualItem.key}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              transform: `translateY(${virtualItem.start}px)`,
+            }}
+          >
+            {items[virtualItem.index]}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

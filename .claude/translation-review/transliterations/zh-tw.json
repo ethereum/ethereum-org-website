@@ -1,0 +1,965 @@
+{
+  "_meta": {
+    "language": "zh-tw",
+    "language_name": "Traditional Chinese",
+    "script": "Hanzi (Taiwanese Phonetic Std)",
+    "generated": "2026-03-16",
+    "generator": "Gemini",
+    "version": 2
+  },
+  "transliterations": {
+    "Ori Pomerantz": {
+      "text": "奧里·波梅蘭茨",
+      "source": "gemini"
+    },
+    "Elan Halpern": {
+      "text": "埃蘭·哈爾彭",
+      "source": "gemini"
+    },
+    "Marc Garreau": {
+      "text": "馬克·加羅",
+      "source": "gemini"
+    },
+    "Nathan H. Leung": {
+      "text": "內森·H·梁",
+      "source": "gemini"
+    },
+    "Paul Apivat": {
+      "text": "保羅·阿皮瓦特",
+      "source": "gemini"
+    },
+    "Alberto Cuesta Canada": {
+      "text": "阿爾貝托·奎斯塔·卡納達",
+      "source": "gemini"
+    },
+    "Sumi Mudgil": {
+      "text": "蘇米·穆德吉爾",
+      "source": "gemini"
+    },
+    "Mario Havel": {
+      "text": "馬里奧·哈維爾",
+      "source": "gemini"
+    },
+    "Markus Waas": {
+      "text": "馬庫斯·瓦斯",
+      "source": "gemini"
+    },
+    "Ewa Kowalska": {
+      "text": "埃娃·科瓦爾斯卡",
+      "source": "gemini"
+    },
+    "Kim YongJun": {
+      "text": "金勇俊",
+      "source": "gemini"
+    },
+    "Daniel Izdebski": {
+      "text": "丹尼爾·伊茲代布斯基",
+      "source": "gemini"
+    },
+    "Tedi Mitiku": {
+      "text": "特迪·米蒂庫",
+      "source": "gemini"
+    },
+    "Vitalik Buterin": {
+      "text": "維塔利克·布特林",
+      "source": "gemini"
+    },
+    "Gavin Wood": {
+      "text": "加文·伍德",
+      "source": "gemini"
+    },
+    "Joseph Lubin": {
+      "text": "約瑟夫·魯賓",
+      "source": "gemini"
+    },
+    "Tim Beiko": {
+      "text": "蒂姆·貝科",
+      "source": "gemini"
+    },
+    "Peter Szilagyi": {
+      "text": "彼得·西拉吉",
+      "source": "gemini"
+    },
+    "Jeffrey Wilcke": {
+      "text": "傑弗里·威爾克",
+      "source": "gemini"
+    },
+    "Mihai Alisie": {
+      "text": "米哈伊·阿利西耶",
+      "source": "gemini"
+    },
+    "Anthony Di Iorio": {
+      "text": "安東尼·迪·伊奧里奧",
+      "source": "gemini"
+    },
+    "Amir Chetrit": {
+      "text": "阿米爾·切特里特",
+      "source": "gemini"
+    },
+    "Charles Hoskinson": {
+      "text": "查爾斯·霍斯金森",
+      "source": "gemini"
+    },
+    "Albert Einstein": {
+      "text": "愛因斯坦",
+      "source": "gemini"
+    },
+    "Solidity": {
+      "text": "索利迪蒂",
+      "source": "gemini"
+    },
+    "Vyper": {
+      "text": "維佩爾",
+      "source": "gemini"
+    },
+    "Rust": {
+      "text": "拉斯脫",
+      "source": "gemini"
+    },
+    "JavaScript": {
+      "text": "爪哇腳本",
+      "source": "gemini"
+    },
+    "TypeScript": {
+      "text": "泰普腳本",
+      "source": "gemini"
+    },
+    "Python": {
+      "text": "派森",
+      "source": "gemini"
+    },
+    "Go": {
+      "text": "勾",
+      "source": "gemini"
+    },
+    "Golang": {
+      "text": "勾朗",
+      "source": "gemini"
+    },
+    "Java": {
+      "text": "爪哇",
+      "source": "gemini"
+    },
+    "Ruby": {
+      "text": "魯比",
+      "source": "gemini"
+    },
+    "Elixir": {
+      "text": "埃利克西爾",
+      "source": "gemini"
+    },
+    "Dart": {
+      "text": "達特",
+      "source": "gemini"
+    },
+    "Delphi": {
+      "text": "德爾菲",
+      "source": "gemini"
+    },
+    "C++": {
+      "text": "C加加",
+      "source": "gemini"
+    },
+    ".NET": {
+      "text": "多特奈特",
+      "source": "gemini"
+    },
+    "Hardhat": {
+      "text": "哈德哈特",
+      "source": "gemini"
+    },
+    "Foundry": {
+      "text": "方德里",
+      "source": "gemini"
+    },
+    "Remix": {
+      "text": "瑞米克斯",
+      "source": "gemini"
+    },
+    "Truffle": {
+      "text": "特拉弗爾",
+      "source": "gemini"
+    },
+    "Waffle": {
+      "text": "瓦弗爾",
+      "source": "gemini"
+    },
+    "Brownie": {
+      "text": "布勞尼",
+      "source": "gemini"
+    },
+    "Scaffold-ETH": {
+      "text": "斯卡福爾德-以太",
+      "source": "gemini"
+    },
+    "Wagmi": {
+      "text": "瓦格米",
+      "source": "gemini"
+    },
+    "Ethers.js": {
+      "text": "以太斯.js",
+      "source": "gemini"
+    },
+    "Web3.js": {
+      "text": "Web3.js",
+      "source": "gemini"
+    },
+    "Web3.py": {
+      "text": "Web3.py",
+      "source": "gemini"
+    },
+    "Viem": {
+      "text": "維埃姆",
+      "source": "gemini"
+    },
+    "React": {
+      "text": "瑞阿克特",
+      "source": "gemini"
+    },
+    "Next.js": {
+      "text": "奈克斯特.js",
+      "source": "gemini"
+    },
+    "Node.js": {
+      "text": "諾德.js",
+      "source": "gemini"
+    },
+    "RainbowKit": {
+      "text": "雷恩博基特",
+      "source": "gemini"
+    },
+    "WalletConnect": {
+      "text": "沃利特康內克特",
+      "source": "gemini"
+    },
+    "Geth": {
+      "text": "蓋斯",
+      "source": "gemini"
+    },
+    "Prysm": {
+      "text": "普利茲姆",
+      "source": "gemini"
+    },
+    "Lighthouse": {
+      "text": "萊特豪斯",
+      "source": "gemini"
+    },
+    "Teku": {
+      "text": "泰庫",
+      "source": "gemini"
+    },
+    "Nimbus": {
+      "text": "寧巴斯",
+      "source": "gemini"
+    },
+    "Lodestar": {
+      "text": "洛德斯塔",
+      "source": "gemini"
+    },
+    "Besu": {
+      "text": "貝蘇",
+      "source": "gemini"
+    },
+    "Nethermind": {
+      "text": "內瑟邁恩德",
+      "source": "gemini"
+    },
+    "Erigon": {
+      "text": "埃里貢",
+      "source": "gemini"
+    },
+    "Reth": {
+      "text": "雷斯",
+      "source": "gemini"
+    },
+    "IPFS": {
+      "text": "星際文件系統",
+      "source": "gemini"
+    },
+    "Filecoin": {
+      "text": "文件幣",
+      "source": "gemini"
+    },
+    "Arweave": {
+      "text": "阿維夫",
+      "source": "gemini"
+    },
+    "Ethereum Foundation": {
+      "text": "以太坊基金會",
+      "source": "gemini"
+    },
+    "ConsenSys": {
+      "text": "康森西斯",
+      "source": "gemini"
+    },
+    "Alchemy": {
+      "text": "阿爾凱米",
+      "source": "gemini"
+    },
+    "Infura": {
+      "text": "因弗拉",
+      "source": "gemini"
+    },
+    "Chainlink": {
+      "text": "鏈環",
+      "source": "gemini"
+    },
+    "OpenZeppelin": {
+      "text": "歐彭澤柏林",
+      "source": "gemini"
+    },
+    "Gnosis": {
+      "text": "格諾西斯",
+      "source": "gemini"
+    },
+    "Flashbots": {
+      "text": "閃電機器人",
+      "source": "gemini"
+    },
+    "Trail of Bits": {
+      "text": "比特追蹤",
+      "source": "gemini"
+    },
+    "Tellor": {
+      "text": "泰勒",
+      "source": "gemini"
+    },
+    "EigenLayer": {
+      "text": "艾根層",
+      "source": "gemini"
+    },
+    "Moralis": {
+      "text": "莫拉利斯",
+      "source": "gemini"
+    },
+    "Gitcoin": {
+      "text": "吉特幣",
+      "source": "gemini"
+    },
+    "Dune Analytics": {
+      "text": "沙丘分析",
+      "source": "gemini"
+    },
+    "CoinGecko": {
+      "text": "硬幣壁虎",
+      "source": "gemini"
+    },
+    "Uniswap": {
+      "text": "優尼互換",
+      "source": "gemini"
+    },
+    "Aave": {
+      "text": "阿維",
+      "source": "gemini"
+    },
+    "MakerDAO": {
+      "text": "創客DAO",
+      "source": "gemini"
+    },
+    "Compound": {
+      "text": "康龐德",
+      "source": "gemini"
+    },
+    "Lido": {
+      "text": "麗都",
+      "source": "gemini"
+    },
+    "Rocket Pool": {
+      "text": "火箭池",
+      "source": "gemini"
+    },
+    "ENS": {
+      "text": "以太坊域名服務",
+      "source": "gemini"
+    },
+    "The Graph": {
+      "text": "去中心化圖譜",
+      "source": "gemini"
+    },
+    "Curve": {
+      "text": "克爾夫",
+      "source": "gemini"
+    },
+    "Balancer": {
+      "text": "平衡器",
+      "source": "gemini"
+    },
+    "Farcaster": {
+      "text": "法卡斯特",
+      "source": "gemini"
+    },
+    "Lens Protocol": {
+      "text": "透鏡協議",
+      "source": "gemini"
+    },
+    "Snapshot": {
+      "text": "快照",
+      "source": "gemini"
+    },
+    "Aragon": {
+      "text": "阿拉貢",
+      "source": "gemini"
+    },
+    "Optimism": {
+      "text": "樂觀網路",
+      "source": "gemini"
+    },
+    "Arbitrum": {
+      "text": "阿比創",
+      "source": "gemini"
+    },
+    "Polygon": {
+      "text": "馬蹄鏈",
+      "source": "gemini"
+    },
+    "zkSync": {
+      "text": "zk同步",
+      "source": "gemini"
+    },
+    "Starknet": {
+      "text": "斯塔克網路",
+      "source": "gemini"
+    },
+    "Base": {
+      "text": "貝斯",
+      "source": "gemini"
+    },
+    "Scroll": {
+      "text": "斯克羅爾",
+      "source": "gemini"
+    },
+    "Linea": {
+      "text": "莉尼亞",
+      "source": "gemini"
+    },
+    "Taiko": {
+      "text": "太鼓",
+      "source": "gemini"
+    },
+    "Slither": {
+      "text": "斯利瑟",
+      "source": "gemini"
+    },
+    "Manticore": {
+      "text": "曼蒂科爾",
+      "source": "gemini"
+    },
+    "Echidna": {
+      "text": "埃基德納",
+      "source": "gemini"
+    },
+    "MythX": {
+      "text": "米斯X",
+      "source": "gemini"
+    },
+    "Mythril": {
+      "text": "米斯里爾",
+      "source": "gemini"
+    },
+    "Certora": {
+      "text": "塞爾托拉",
+      "source": "gemini"
+    },
+    "MetaMask": {
+      "text": "麥塔馬斯克",
+      "source": "gemini"
+    },
+    "Etherscan": {
+      "text": "以太掃描",
+      "source": "gemini"
+    },
+    "GitHub": {
+      "text": "吉特哈布",
+      "source": "gemini"
+    },
+    "Discord": {
+      "text": "迪斯考德",
+      "source": "gemini"
+    },
+    "Reddit": {
+      "text": "雷迪特",
+      "source": "gemini"
+    },
+    "Telegram": {
+      "text": "電報",
+      "source": "gemini"
+    },
+    "YouTube": {
+      "text": "油管",
+      "source": "gemini"
+    },
+    "Crowdin": {
+      "text": "克勞丁",
+      "source": "gemini"
+    },
+    "Docker": {
+      "text": "多克",
+      "source": "gemini"
+    },
+    "Linux": {
+      "text": "林納克斯",
+      "source": "gemini"
+    },
+    "Raspberry Pi": {
+      "text": "樹莓派",
+      "source": "gemini"
+    },
+    "InfluxDB": {
+      "text": "因弗盧克斯DB",
+      "source": "gemini"
+    },
+    "Grafana": {
+      "text": "格拉法納",
+      "source": "gemini"
+    },
+    "Tenderly": {
+      "text": "坦德利",
+      "source": "gemini"
+    },
+    "Ethereum": {
+      "text": "以太坊",
+      "source": "gemini"
+    },
+    "Bitcoin": {
+      "text": "比特幣",
+      "source": "gemini"
+    },
+    "Beacon Chain": {
+      "text": "信標鏈",
+      "source": "gemini"
+    },
+    "The Merge": {
+      "text": "合併",
+      "source": "gemini"
+    },
+    "Web3": {
+      "text": "Web3",
+      "source": "gemini"
+    },
+    "DeFi": {
+      "text": "去中心化金融",
+      "source": "gemini"
+    },
+    "NFT": {
+      "text": "非同質化代幣",
+      "source": "gemini"
+    },
+    "DApp": {
+      "text": "去中心化應用",
+      "source": "gemini"
+    },
+    "DAO": {
+      "text": "去中心化自治組織",
+      "source": "gemini"
+    },
+    "Glamsterdam": {
+      "text": "格蘭姆斯特丹",
+      "source": "gemini"
+    },
+    "PeerDAS": {
+      "text": "皮爾DAS",
+      "source": "gemini"
+    },
+    "Dencun": {
+      "text": "登昆",
+      "source": "gemini"
+    },
+    "Pectra": {
+      "text": "佩克特拉",
+      "source": "gemini"
+    },
+    "Gasper": {
+      "text": "加斯珀",
+      "source": "gemini"
+    },
+    "Ethash": {
+      "text": "艾斯哈希",
+      "source": "gemini"
+    },
+    "Casper": {
+      "text": "卡斯珀",
+      "source": "gemini"
+    },
+    "Goerli": {
+      "text": "戈爾利",
+      "source": "gemini"
+    },
+    "Sepolia": {
+      "text": "塞波利亞",
+      "source": "gemini"
+    },
+    "Holesky": {
+      "text": "霍爾斯基",
+      "source": "gemini"
+    },
+    "Ropsten": {
+      "text": "羅普斯滕",
+      "source": "gemini"
+    },
+    "Hoodi": {
+      "text": "胡迪",
+      "source": "gemini"
+    },
+    "Noir": {
+      "text": "諾爾",
+      "source": "gemini"
+    },
+    "Zokrates": {
+      "text": "索克拉底",
+      "source": "gemini"
+    },
+    "Blockscout": {
+      "text": "布洛克斯考特",
+      "source": "gemini"
+    },
+    "Kurtosis": {
+      "text": "庫托西斯",
+      "source": "gemini"
+    },
+    "Nethereum": {
+      "text": "內瑟倫",
+      "source": "gemini"
+    },
+    "Yul": {
+      "text": "尤爾",
+      "source": "gemini"
+    },
+    "Pinata": {
+      "text": "皮納塔",
+      "source": "gemini"
+    },
+    "DAppNode": {
+      "text": "DApp諾德",
+      "source": "gemini"
+    },
+    "Vite": {
+      "text": "維特",
+      "source": "gemini"
+    },
+    "GraphQL": {
+      "text": "葛拉夫QL",
+      "source": "gemini"
+    },
+    "Sourcify": {
+      "text": "索里法伊",
+      "source": "gemini"
+    },
+    "EthereumJS": {
+      "text": "艾瑟瑞恩JS",
+      "source": "gemini"
+    },
+    "Web3j": {
+      "text": "Web3j",
+      "source": "gemini"
+    },
+    "Otterscan": {
+      "text": "奧特斯坎",
+      "source": "gemini"
+    },
+    "SubQuery": {
+      "text": "薩布快瑞",
+      "source": "gemini"
+    },
+    "GitPOAP": {
+      "text": "GitPOAP",
+      "source": "gemini"
+    },
+    "Crytic": {
+      "text": "克里提克",
+      "source": "gemini"
+    },
+    "Wake": {
+      "text": "韋克",
+      "source": "gemini"
+    },
+    "Scribble": {
+      "text": "斯克里布爾",
+      "source": "gemini"
+    },
+    "OpenGSN": {
+      "text": "OpenGSN",
+      "source": "gemini"
+    },
+    "Sablier": {
+      "text": "薩布利爾",
+      "source": "gemini"
+    },
+    "Chainstack": {
+      "text": "錢史塔克",
+      "source": "gemini"
+    },
+    "QuickNode": {
+      "text": "奎克諾德",
+      "source": "gemini"
+    },
+    "NatSpec": {
+      "text": "納特斯派克",
+      "source": "gemini"
+    },
+    "WebAssembly": {
+      "text": "韋伯阿森布里",
+      "source": "gemini"
+    },
+    "Blast": {
+      "text": "布拉斯托",
+      "source": "gemini"
+    },
+    "Sushiswap": {
+      "text": "蘇希史瓦普",
+      "source": "gemini"
+    },
+    "Namecoin": {
+      "text": "內姆寇恩",
+      "source": "gemini"
+    },
+    "Twitter": {
+      "text": "推特",
+      "source": "gemini"
+    },
+    "PayPal": {
+      "text": "貝寶",
+      "source": "gemini"
+    },
+    "OpenSea": {
+      "text": "歐噴希",
+      "source": "gemini"
+    },
+    "Figma": {
+      "text": "菲格瑪",
+      "source": "gemini"
+    },
+    "Binance": {
+      "text": "拜南斯",
+      "source": "gemini"
+    },
+    "VSCode": {
+      "text": "VSCode",
+      "source": "gemini"
+    },
+    "Coinbase": {
+      "text": "寇恩貝斯",
+      "source": "gemini"
+    },
+    "EVERLAND": {
+      "text": "艾弗蘭德",
+      "source": "gemini"
+    },
+    "Gitter": {
+      "text": "吉特",
+      "source": "gemini"
+    },
+    "Filebase": {
+      "text": "費爾貝斯",
+      "source": "gemini"
+    },
+    "Windows": {
+      "text": "溫多斯",
+      "source": "gemini"
+    },
+    "macOS": {
+      "text": "macOS",
+      "source": "gemini"
+    },
+    "Android": {
+      "text": "安卓",
+      "source": "gemini"
+    },
+    "iOS": {
+      "text": "iOS",
+      "source": "gemini"
+    },
+    "Chrome": {
+      "text": "克羅姆",
+      "source": "gemini"
+    },
+    "Netflix": {
+      "text": "奈飛",
+      "source": "gemini"
+    },
+    "Facebook": {
+      "text": "費斯布克",
+      "source": "gemini"
+    },
+    "Microsoft": {
+      "text": "麥克羅索夫特",
+      "source": "gemini"
+    },
+    "Parity": {
+      "text": "帕里提",
+      "source": "gemini"
+    },
+    "Hyperledger": {
+      "text": "海波萊傑",
+      "source": "gemini"
+    },
+    "Kaleido": {
+      "text": "卡萊多",
+      "source": "gemini"
+    },
+    "EthStaker": {
+      "text": "艾斯史戴克",
+      "source": "gemini"
+    },
+    "ETHGlobal": {
+      "text": "ETH葛羅波",
+      "source": "gemini"
+    },
+    "PoolTogether": {
+      "text": "普爾圖蓋瑟",
+      "source": "gemini"
+    },
+    "MolochDAO": {
+      "text": "摩洛DAO",
+      "source": "gemini"
+    },
+    "Bankless": {
+      "text": "班克萊斯",
+      "source": "gemini"
+    },
+    "MyCrypto": {
+      "text": "麥克利普托",
+      "source": "gemini"
+    },
+    "CryptoKitties": {
+      "text": "克利普托凱蒂",
+      "source": "gemini"
+    },
+    "QuarkID": {
+      "text": "夸克ID",
+      "source": "gemini"
+    },
+    "L2BEAT": {
+      "text": "L2BEAT",
+      "source": "gemini"
+    },
+    "Ethereum Cat Herders": {
+      "text": "艾瑟瑞恩凱特賀德斯",
+      "source": "gemini"
+    },
+    "Ethereum Magicians": {
+      "text": "艾瑟瑞恩馬吉遜",
+      "source": "gemini"
+    },
+    "Grandine": {
+      "text": "格蘭丁",
+      "source": "gemini"
+    },
+    "Nim": {
+      "text": "尼姆",
+      "source": "gemini"
+    },
+    "Tornado Cash": {
+      "text": "托內多凱許",
+      "source": "gemini"
+    },
+    "Swarm": {
+      "text": "斯沃姆",
+      "source": "gemini"
+    },
+    "Quorum": {
+      "text": "奎若姆",
+      "source": "gemini"
+    },
+    "Cyfrin Updraft": {
+      "text": "塞弗林阿普卓夫特",
+      "source": "gemini"
+    },
+    "Microsoft Learn": {
+      "text": "麥克羅索夫特勒恩",
+      "source": "gemini"
+    },
+    "Omer Greismen": {
+      "text": "奧默·格賴斯曼",
+      "source": "gemini"
+    },
+    "Gal Weizman": {
+      "text": "加爾·魏茨曼",
+      "source": "gemini"
+    },
+    "Shy Datika": {
+      "text": "夏伊·達提卡",
+      "source": "gemini"
+    },
+    "Roy Confino": {
+      "text": "羅伊·孔菲諾",
+      "source": "gemini"
+    },
+    "Idan Ofrat": {
+      "text": "伊丹·奧夫拉特",
+      "source": "gemini"
+    },
+    "Dror Aviely": {
+      "text": "德羅爾·艾維利",
+      "source": "gemini"
+    },
+    "Nir Rozin": {
+      "text": "尼爾·羅津",
+      "source": "gemini"
+    },
+    "Adan Kedem": {
+      "text": "阿丹·克德姆",
+      "source": "gemini"
+    },
+    "Uri Kolodny": {
+      "text": "尤里·科洛德尼",
+      "source": "gemini"
+    },
+    "Ben Samocha": {
+      "text": "本·薩莫查",
+      "source": "gemini"
+    },
+    "Alon Muroch": {
+      "text": "阿隆·穆羅克",
+      "source": "gemini"
+    },
+    "Zhen Xiao": {
+      "text": "肖震",
+      "source": "gemini"
+    },
+    "James Prestwich": {
+      "text": "詹姆斯·普雷斯特維奇",
+      "source": "gemini"
+    },
+    "Max Mersch": {
+      "text": "馬克斯·梅爾施",
+      "source": "gemini"
+    },
+    "Udi Wertheimer": {
+      "text": "烏迪·韋特海默",
+      "source": "gemini"
+    },
+    "Eilon Aviv": {
+      "text": "埃隆·阿維夫",
+      "source": "gemini"
+    },
+    "Wei Dai": {
+      "text": "戴維",
+      "source": "gemini"
+    },
+    "Wei Wang": {
+      "text": "王微",
+      "source": "gemini"
+    },
+    "Refik Anadol": {
+      "text": "瑞菲克·安納多爾",
+      "source": "gemini"
+    },
+    "NFTs": {
+      "text": "NFTs",
+      "source": "gemini"
+    },
+    "DAOs": {
+      "text": "DAOs",
+      "source": "gemini"
+    },
+    "DApps": {
+      "text": "DApps",
+      "source": "gemini"
+    }
+  },
+  "_alternatives": {
+    "MetaMask": [
+      "小狐狸錢包"
+    ]
+  }
+}
