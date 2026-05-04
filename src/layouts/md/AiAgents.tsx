@@ -49,7 +49,40 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-4 gap-8" {...props} />
+  <div className="grid-cols-fill-4 my-8 grid gap-4" {...props} />
+)
+
+type HubCardProps = {
+  emoji: string
+  title: string
+  description: string
+  href: string
+  ctaLabel: string
+}
+
+const HubCard = ({
+  emoji,
+  title,
+  description,
+  href,
+  ctaLabel,
+}: HubCardProps) => (
+  <Card className="bg-background-highlight row-span-3 grid grid-rows-subgrid gap-y-8 p-8 max-md:p-4">
+    <CardBanner
+      background="none"
+      fit="contain"
+      className="flex h-auto self-start items-center justify-center"
+    >
+      <Emoji text={emoji} className="text-6xl leading-none" />
+    </CardBanner>
+    <CardContent className="p-0">
+      <CardTitle variant="bold">{title}</CardTitle>
+      <CardParagraph variant="light">{description}</CardParagraph>
+    </CardContent>
+    <ButtonLink href={href} variant="solid">
+      {ctaLabel}
+    </ButtonLink>
+  </Card>
 )
 
 const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
@@ -66,6 +99,7 @@ export const aiAgentsComponents = {
   h4: Heading4,
   pre: Pre,
   CardGrid,
+  HubCard,
 }
 
 type AiAgentsLayoutProps = ChildOnlyProp &
