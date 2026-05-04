@@ -25,7 +25,7 @@ This guide walks through the four steps required to deploy your first autonomous
 
 Before going further, it is worth understanding why this stack differs from standard Ethereum development. When a human signs a transaction, they act as a natural safety checkpoint. An autonomous agent does not. 
 
-**Giving an agent an unconstrained private key is equivalent to giving it unlimited spending authority**—a single hallucination, a logic error, or a prompt injection can drain an account. The patterns below are designed to prevent that.
+**Giving an agent an unconstrained private key is equivalent to giving it unlimited spending authority.** A single hallucination, a logic error, or a prompt injection can drain an account. The patterns below are designed to prevent that.
 
 ## Prerequisites {#prerequisites}
 
@@ -251,7 +251,7 @@ With a connected framework, your agent can sign and submit transactions. Before 
 
 **Session keys** are the primary mechanism. A session key is a time-bounded, policy-bounded signing credential that authorizes the agent to act within a defined scope without exposing the master private key. 
 
-A well-structured session key policy specifies a maximum spend per transaction, a rolling time-window budget, a contract allowlist, and a validity window. If the key is compromised, the blast radius is limited to those parameters—the smart contract will reject any UserOperation that violates them regardless of what the LLM instructs. 
+A well-structured session key policy specifies a maximum spend per transaction, a rolling time-window budget, a contract allowlist, and a validity window. If the key is compromised, the blast radius is limited to those parameters. The smart contract will reject any UserOperation that violates them regardless of what the LLM instructs.
 
 [ERC-7715](https://eips.ethereum.org/EIPS/eip-7715) formalizes the wallet-level API for requesting these scoped permissions; it is in draft and being adopted by major smart wallet providers.
 

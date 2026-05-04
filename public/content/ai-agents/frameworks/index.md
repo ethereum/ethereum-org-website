@@ -8,7 +8,7 @@ sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent frameworks on Ethereum
 summaryPoint1: Choose by language, protocol coverage, and deployment target
-summaryPoint2: Compare popular agent frameworks for Ethereum integration, with a decision guide and code samples
+summaryPoint2: GOAT, ElizaOS, Rig, Olas, GAME, and LangChain compared
 summaryPoint3: Code samples for each framework's Ethereum integration
 faqItems:
   - question: "Which agent framework should I use?"

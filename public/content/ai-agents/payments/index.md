@@ -7,7 +7,7 @@ emoji: ":money_with_wings:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Machine payments with x402 on Ethereum
-summaryPoint1: Per-request machine-to-machine payments using HTTP 402 and stablecoins
+summaryPoint1: Per-request machine-to-machine payments via HTTP 402
 summaryPoint2: Pay-per-use, with no accounts, subscriptions, or human approval
 summaryPoint3: Production-ready, with adoption across cloud and payments providers
 faqItems:
