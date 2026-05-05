@@ -40,6 +40,7 @@ const CalloutSSR = ({
             src={image}
             alt={alt || ""}
             className="max-h-[263px] min-h-[200px] max-w-[263px] object-contain"
+            sizes="263px"
           />
         </div>
       )}

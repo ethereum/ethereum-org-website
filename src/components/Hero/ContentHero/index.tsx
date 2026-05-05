@@ -48,8 +48,8 @@ const ContentHero = (props: ContentHeroProps) => {
             className="my-auto h-full max-h-[479px] w-full flex-auto object-contain md:flex-none"
             src={heroImg}
             alt=""
-            preload
-            sizes={`(max-width: ${screens.lg}) 100vw, ${breakpointAsNumber["2xl"] / 2}px`}
+            priority
+            sizes={`(max-width: ${screens.lg}) 100vw, (max-width: ${screens["2xl"]}) 50vw, ${breakpointAsNumber["2xl"] / 2}px`}
           />
         )}
       </div>

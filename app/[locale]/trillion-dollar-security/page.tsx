@@ -31,6 +31,7 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => {
             src={TdsReport}
             alt={altText}
             className="w-full object-contain"
+            sizes="(max-width: 383px) calc(100vw - 32px), 384px"
           />
         </CardParagraph>
       </CardContent>

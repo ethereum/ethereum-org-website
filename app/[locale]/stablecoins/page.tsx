@@ -537,12 +537,12 @@ async function Page(props: { params: Promise<PageParams> }) {
                           data-label="blur-decorator"
                           aria-disabled
                           className="absolute inset-0 z-[-1] blur-[12px]"
-                          sizes="(max-width: 480px) 64px, 160px"
+                          sizes="(max-width: 479px) 64px, 160px"
                         />
                         <Image
                           src={choice.image}
                           alt={choice.alt}
-                          sizes="(max-width: 480px) 64px, 160px"
+                          sizes="(max-width: 479px) 64px, 160px"
                         />
                       </div>
                       <div>
