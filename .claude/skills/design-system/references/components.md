@@ -457,13 +457,13 @@ The `product` variant currently has stale shadcn tokens (`hover:bg-muted/50`, `t
 
 ### Horizontal scroll / carousel
 
-Three components exist in this space; only one is recommended for new work:
+Three components exist in this space:
 
 | Component | Status |
 |---|---|
 | `EdgeScrollContainer` (`@/components/ui/edge-scroll-container`) | **Preferred** for new horizontal scroll lists |
-| `Carousel` (`@/components/ui/carousel`) | Not recommended for new work; has unresolved RTL issues |
-| `Swiper` (`@/components/ui/swiper`) | Not recommended for new work; planned for removal |
+| `Carousel` (`@/components/ui/carousel`) | Not recommended for new work; has unresolved RTL issues. Status pending team discussion |
+| `Swiper` (deprecation track) | Don't use for new work; on the path to removal |
 
 `EdgeScrollContainer` is a CSS-driven horizontal scroll with snap and edge mask:
 
@@ -471,7 +471,16 @@ Three components exist in this space; only one is recommended for new work:
 import { EdgeScrollContainer, EdgeScrollItem } from "@/components/ui/edge-scroll-container"
 ```
 
-CSS-var driven (`--edge-spacing`, `--edge-mask-size`, `--edge-overflow-y-pad`). Mask fade only at `2xl+`. The component is being polished further; don't add new `Carousel` or `Swiper` usage in the meantime.
+CSS-var driven (`--edge-spacing`, `--edge-mask-size`, `--edge-overflow-y-pad`). Mask fade only at `2xl+`.
+
+### `Swiper` (deprecation track)
+
+```tsx
+// DON'T use for new work:
+import { Swiper, ... } from "@/components/ui/swiper"
+```
+
+`"use client"`, wraps swiper.js. On the deprecation track. Migrate existing consumers to `EdgeScrollContainer`.
 
 ### `List` / `OrderedList` / `UnorderedList` / `ListItem`
 
