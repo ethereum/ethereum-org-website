@@ -23,12 +23,16 @@ If you've justified the new file, continue.
 
 ## File Structure
 
+For `ui/` primitives: source co-located in `src/components/ui/`, stories under `src/components/ui/__stories__/` (NOT co-located alongside the source). Story files use PascalCase names regardless of source casing.
+
 ```
-src/components/ui/MyComponent.tsx          # Single-file component
-src/components/ui/MyComponent.stories.tsx  # Storybook story (REQUIRED for ui/)
+src/components/ui/
+  my-component.tsx                      # Source
+  __stories__/
+    MyComponent.stories.tsx             # Story (REQUIRED for ui/ primitives)
 ```
 
-For complex components with sub-parts, use a directory:
+For feature components with sub-parts, use a directory and co-locate the story:
 
 ```
 src/components/MyComponent/
@@ -154,9 +158,9 @@ See `references/a11y.md`.
 ## Storybook Story (REQUIRED for `ui/`)
 
 ```tsx
-// src/components/ui/MyComponent.stories.tsx
+// src/components/ui/__stories__/MyComponent.stories.tsx
 import type { Meta, StoryObj } from "@storybook/nextjs"
-import { MyComponent } from "."
+import { MyComponent } from "../my-component"
 
 const meta = {
   title: "UI / MyComponent",
