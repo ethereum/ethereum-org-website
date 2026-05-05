@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { shuffle } from "lodash"
+
+import { safeShuffle } from "@/lib/utils/random"
 
 import stakingProducts from "@/data/staking-products.json"
 
@@ -110,7 +111,7 @@ export const useStakingProductsCardGrid = ({
     }
 
     updateRankedProducts(
-      shuffle(products)
+      safeShuffle(products)
         .map((product) => ({
           ...product,
           rankingScore: getRankingScore(product),

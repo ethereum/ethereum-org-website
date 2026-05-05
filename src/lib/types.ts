@@ -577,6 +577,10 @@ export type DefiLlamaTVLResponse = {
 
 export type MetricReturnData = ValueOrError<number>
 
+export type EthPriceData =
+  | { value: number; timestamp?: number; percentChange24h?: number }
+  | { error: string }
+
 export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
