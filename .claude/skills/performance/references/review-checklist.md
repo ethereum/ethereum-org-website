@@ -16,6 +16,7 @@ Mechanical scan of changed code against ethereum.org's perf landmines — patter
 | `unstable_cache(` on an MDX-rendered route                           | `anti-patterns.md` — triggers ISR + silent 404s on dynamic segments            |
 | `import(\`…${` (template-literal dynamic import path)                | `build.md` — Webpack/Turbopack enumerates all combos → Netlify OOM             |
 | `getImageProps(` used inside a manual `<picture>`                    | `images.md` — `priority: true` does NOT set `fetchPriority`; add it manually   |
+| New/changed `<Image …sizes=` on a non-LCP image                      | `images.md` — tighten `sizes` to actual rendered width; loose values over-fetch |
 | New file `app/**/page.tsx`                                           | `edge-caching.md`, `rsc.md` — verify `revalidate` strategy + RSC payload       |
 | New file under `app/api/`                                            | `edge-caching.md` — TTL strategy, internal-only fetch boundary                 |
 | New keys in `src/intl/en/common*.json`                               | `rsc.md` — server-only vs client (`common.json` vs `common-server.json`)       |
