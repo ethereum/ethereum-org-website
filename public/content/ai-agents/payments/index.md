@@ -10,9 +10,6 @@ alt: Machine payments with x402 on Ethereum
 summaryPoint1: Per-request machine-to-machine payments via HTTP 402
 summaryPoint2: Pay-per-use, with no accounts, subscriptions, or human approval
 summaryPoint3: Production-ready, with adoption across cloud and payments providers
-faqItems:
-  - question: "What is x402?"
-    answer: "x402 is a machine-to-machine payment protocol built on the HTTP 402 status code. An agent requests a resource, the server returns a 402 with payment terms (stablecoin, amount, address), the agent signs an 'ERC-3009: Transfer With Authorization' payment authorization, and retries the request with the payment header. The server verifies the signature and delivers the resource. No account, no subscription, no human approval. Production-ready since Q1 2026."
 ---
 
 # Machine payments with x402 {#machine-payments}

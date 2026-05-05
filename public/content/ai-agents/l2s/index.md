@@ -10,15 +10,6 @@ alt: Layer 2 networks for AI agents on Ethereum
 summaryPoint1: Evaluate L2s by execution, tooling, finality, and trust
 summaryPoint2: Match agent workload to the right L2 architecture
 summaryPoint3: Same patterns work on optimistic and ZK rollups
-faqItems:
-  - question: "Can AI agents use Ethereum L2s?"
-    answer: "Yes. All Ethereum L2s are compatible with standard EVM tooling. An agent that works on Mainnet will work on any Ethereum L2 with only an RPC URL and chain ID change. L2s are the recommended deployment environment for most agents due to lower transaction costs and specialized use case environments."
-  - question: "Why would an AI agent deploy on an L2 instead of Mainnet?"
-    answer: "L2s offer specialized execution environments that Mainnet does not provide. Some L2s use TEE-based transaction ordering to eliminate frontrunning. Others support Rust smart contracts alongside Solidity. Many have concentrated agent infrastructure, like identity registries and machine-to-machine payment tooling, that agents can use out of the box. L2s also offer faster block times and lower transaction costs, which matter for agents executing high-frequency workloads. The choice depends on which capabilities your agent needs, not just on cost."
-  - question: "What should a developer consider when choosing an L2 for an AI agent?"
-    answer: "The key factors include transaction cost, finality speed, ecosystem support for agent-specific standards, and rollup type. Transaction cost determines whether your agent's workload is economically viable. Finality speed affects how quickly an agent can act on confirmed state. Ecosystem support (available SDKs, identity and payment protocol integrations) affects how much you build from scratch. Rollup type, like optimistic versus ZK, affects smart contract compatibility and tooling requirements."
-  - question: "How does rollup finality affect AI agent design?"
-    answer: "Optimistic rollups have a challenge window (typically seven days) before withdrawals to Mainnet are final. For most agent operations that remain within a single L2, this does not affect day-to-day execution: transactions confirm in seconds. It becomes relevant when an agent needs to move assets across chains. ZK rollups reach cryptographic finality faster but may require specific compiler tooling and have minor EVM compatibility differences. Agents that bridge frequently should account for finality delay or use fast bridge protocols that accept the additional trust assumptions that come with speed."
 ---
 
 # Layer 2 networks for AI agents {#l2s-for-agents}

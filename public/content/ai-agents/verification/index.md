@@ -10,11 +10,6 @@ alt: Verifiable AI agents on Ethereum
 summaryPoint1: zkML proofs and TEE attestations remove operator trust
 summaryPoint2: Contracts verify correct model execution before releasing funds
 summaryPoint3: Permanent, tamper-resistant onchain audit trails of agent behavior
-faqItems:
-  - question: "What is zkML and why does it matter for AI agents?"
-    answer: "Zero-knowledge machine learning (zkML) generates a cryptographic proof that a specific model ran a specific computation and produced a specific output. A smart contract can verify this proof before releasing funds or executing a consequential action, allowing the contract to condition behavior on the agent's reasoning, not just its assertion. Today zkML is production-viable for bounded models (decision trees, classifiers). Large language model inference remains too slow for real-time use but is improving rapidly."
-  - question: "How do I verify what my AI agent did?"
-    answer: "Three mechanisms: (1) Onchain transaction history — every transaction signed by the agent is permanently recorded on the L2 and settled to Mainnet. (2) ERC-8004 Reputation Registry — other parties can post feedback about the agent's behavior. (3) zkML proofs or TEE attestations — for cases where you need to prove that a specific model produced a specific output. Most production agents today rely on onchain transaction history for auditing. zkML is used when you need cryptographic proof of policy compliance."
 ---
 
 # Verifiable AI agents {#verifiable-ai-agents}

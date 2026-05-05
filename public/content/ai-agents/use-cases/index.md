@@ -10,11 +10,6 @@ alt: AI agent use cases on Ethereum
 summaryPoint1: DeFi automation, prediction markets, and agent-to-agent commerce
 summaryPoint2: Each use case maps to builder hub infrastructure
 summaryPoint3: Live agents trade, deploy tokens, and coordinate onchain
-faqItems:
-  - question: "What is the most production-ready AI agent use case on Ethereum?"
-    answer: "DeFi automation is the most mature use case. The infrastructure it depends on, including ERC-4337 smart accounts, session keys, and low-cost Layer 2 transactions, is production-ready today. Agent-to-agent commerce and autonomous governance are earlier in their maturity curves; builders should evaluate the maturity notes on each use case before committing to a production deployment."
-  - question: "How do I choose which use case to build first?"
-    answer: "Evaluate the infrastructure each use case requires. DeFi automation needs wallets and session keys (production-ready). Agent-to-agent commerce adds payments (x402, production-ready) and identity (ERC-8004, live but Draft status). Autonomous governance adds human-in-the-loop escalation for high-stakes votes. Start with the use case whose infrastructure dependencies are closest to production-ready for your deployment timeline, and use the Getting started guide to build your first agent."
 ---
 
 # AI agent use cases on Ethereum {#use-cases}

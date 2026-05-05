@@ -10,11 +10,6 @@ alt: Why Ethereum for AI agents
 summaryPoint1: Mature smart accounts and onchain agent identity
 summaryPoint2: Programmable guardrails and session keys for bounded autonomy
 summaryPoint3: Permissionless access to DeFi, payments, and identity
-faqItems:
-  - question: "Why would an AI agent use Ethereum instead of a centralized API?"
-    answer: "Centralized APIs require accounts, API keys, rate limits set by the provider, and trust that the provider will not change terms, throttle access, or shut down. Ethereum provides a global, permissionless API that any agent can call without registration. The same DeFi protocols, payment infrastructure, and identity registries are accessible to any address (human or machine) without gatekeeping."
-  - question: "What does Ethereum provide for AI agents that other blockchains may not?"
-    answer: "Three capabilities in combination: the deepest ecosystem of production smart contracts (most DeFi, most stablecoins, most tooling), the most mature smart account infrastructure (ERC-4337 with production EntryPoint deployments on all major networks, EIP-7702 live since May 2025), and a production-deployed onchain agent identity standard (ERC-8004, live January 29, 2026 — Draft status, in active adoption). Evaluate whether your agent requires all three before choosing a settlement layer."
 ---
 # Why Ethereum for AI agents {#why-ethereum-for-ai-agents}
 

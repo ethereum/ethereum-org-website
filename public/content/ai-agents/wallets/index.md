@@ -10,19 +10,6 @@ alt: AI agent wallets on Ethereum
 summaryPoint1: Smart accounts with session keys and spending limits
 summaryPoint2: ERC-4337 for new wallets, EIP-7702 for upgrades
 summaryPoint3: Key management patterns with human-in-the-loop escalation
-faqItems:
-  - question: "Do AI agents need a wallet?"
-    answer: "Yes. Any agent that needs to send, receive, or interact with onchain protocols needs a wallet. For production agents, a smart account (ERC-4337 or EIP-7702) is the recommended approach. It allows you to set spending limits, allowlists, and time-bounded session keys at the contract level. A raw EOA with no spending policy is not appropriate for autonomous operation."
-  - question: "Can AI agents own cryptocurrency?"
-    answer: "Yes. An Ethereum smart account is not tied to a legal entity. An agent can hold ETH, stablecoins, and any ERC-20 or ERC-721 token. The agent controls these assets through its signing key. This is different from a human controlling an agent's wallet; the agent itself holds the key and signs transactions directly (with guardrails in place)."
-  - question: "What is ERC-4337 and how do agents use it?"
-    answer: "ERC-4337 is the smart account standard for Ethereum. Instead of a raw externally owned account (EOA) controlled by a private key with no spending constraints, ERC-4337 deploys a smart contract wallet that enforces spending limits, allowlists, and session key policies at the contract level. For agents, this means a compromised session key cannot drain the wallet beyond the policy it is scoped to."
-  - question: "What is EIP-7702?"
-    answer: "EIP-7702 is live on Ethereum Mainnet since the Pectra upgrade (May 7, 2025). It allows an existing EOA to temporarily delegate execution to a smart contract module, gaining smart account capabilities (spending limits, session keys, gas abstraction) without migrating assets to a new address. Use EIP-7702 when you need to upgrade an existing wallet without changing its address. Use ERC-4337 when deploying a new agent from scratch."
-  - question: "How do I limit what my AI agent can spend?"
-    answer: "Use an ERC-4337 smart account with a session key policy. A session key is a time-bounded, policy-bounded signing credential that authorizes the agent to act within a defined scope. For example, maximum 0.01 ETH per transaction, 100 USDC per day, only allowed to call Uniswap and Aave. The smart contract enforces these limits and rejects any UserOperation that violates them regardless of what the language model instructs."
-  - question: "Can an AI agent drain my wallet?"
-    answer: "A raw EOA with no spending constraints can be drained if the agent is compromised, hallucinating, or subject to a prompt injection attack. A smart account with a session key policy limits the blast radius to the policy parameters. If the session key is compromised, the attacker can only spend up to the daily limit and only call the allowlisted contracts. For production deployments with significant value at risk, use a Safe 2-of-3 (agent key, human hot wallet, human cold wallet) so no single key can authorize large treasury movements."
 ---
 
 # AI Agent wallets {#agent-wallets}
