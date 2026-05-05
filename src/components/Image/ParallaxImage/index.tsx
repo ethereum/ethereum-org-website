@@ -14,7 +14,12 @@ export type ParallaxImageProps = NextImageProps & {
   className?: string
 }
 
-const ParallaxImage = ({ src, alt, className }: ParallaxImageProps) => {
+const ParallaxImage = ({
+  src,
+  alt,
+  className,
+  ...props
+}: ParallaxImageProps) => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
   useEventListener("mousemove", (e: MouseEvent) => {
@@ -36,6 +41,7 @@ const ParallaxImage = ({ src, alt, className }: ParallaxImageProps) => {
       alt={alt}
       className={cn("animate-fade-in", className)}
       style={style}
+      {...props}
     />
   )
 }

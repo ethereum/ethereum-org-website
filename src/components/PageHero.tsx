@@ -142,7 +142,7 @@ const PageHero = ({
             objectFit: "contain",
           }}
           alt={alt}
-          priority
+          preload
         />
       </Center>
     </Flex>

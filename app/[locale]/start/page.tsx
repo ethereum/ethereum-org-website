@@ -56,7 +56,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             alt={t("page-start-hero-alt")}
             sizes="(max-width: 1504px) 100vw, 1504px"
             className="h-full w-full object-cover"
-            priority
+            preload
           />
         </div>
 

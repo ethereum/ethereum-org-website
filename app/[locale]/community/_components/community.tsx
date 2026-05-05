@@ -197,6 +197,7 @@ const CommunityPage = () => {
                 className="-my-4 object-cover"
                 src={developersEthBlockImg}
                 alt={t("page-community-get-involved-image-alt")}
+                sizes="(max-width: 992px) 75vw, 50vw"
               />
             </ImageContainer>
           </Flex>
@@ -239,6 +240,7 @@ const CommunityPage = () => {
               className="object-cover"
               src={whatIsEthereumImg}
               alt={t("page-community-open-source-image-alt")}
+              sizes="(max-width: 992px) 75vw, 50vw"
             />
           </ImageContainer>
         </RowReverse>
@@ -268,6 +270,7 @@ const CommunityPage = () => {
               className="object-cover"
               src={financeTransparentImg}
               alt={t("page-index-internet-image-alt")}
+              sizes="(max-width: 992px) 75vw, 50vw"
             />
           </ImageContainer>
         </Flex>
@@ -288,6 +291,7 @@ const CommunityPage = () => {
               className="object-cover"
               src={hackathonTransparentImg}
               alt={t("page-community-support-alt")}
+              sizes="(max-width: 992px) 75vw, 50vw"
             />
           </ImageContainer>
         </RowReverse>

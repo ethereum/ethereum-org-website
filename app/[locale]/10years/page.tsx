@@ -326,6 +326,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   src={card.image}
                   alt={t(`page-10-year-adoption-card-${index + 1}-title`)}
                   className="mx-auto mb-4 max-h-[300px] object-contain"
+                  sizes="384px"
                 />
                 <h3 className="mb-4 text-2xl font-bold">
                   {t(`page-10-year-adoption-card-${index + 1}-title`)}
