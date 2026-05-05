@@ -25,7 +25,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import UseCasesPageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import aiAgentsHero from "@/public/images/ai-agents/hero-image.png"
+import decentralizedAiHero from "@/public/images/ai-agents/hero-image.png"
 import ethImg from "@/public/images/eth.png"
 import ethGifCat from "@/public/images/eth-gif-cat.png"
 import ethereumLearn from "@/public/images/ethereum-learn.png"
@@ -189,16 +189,19 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
           </Section>
 
-          {/* AI agents banner */}
+          {/* Decentralized AI banner */}
           <CalloutBannerSSR
-            id="ai-agents"
-            title={t("ai-agents-title")}
-            image={aiAgentsHero}
-            description={t("ai-agents-description")}
+            id="decentralized-ai"
+            title={t("decentralized-ai-title")}
+            image={decentralizedAiHero}
+            description={t("decentralized-ai-description")}
             variant="small"
           >
-            <ButtonLink href="/ai-agents/" className="w-fit max-sm:w-full">
-              {t("ai-agents-cta")}
+            <ButtonLink
+              href="/decentralized-ai/"
+              className="w-fit max-sm:w-full"
+            >
+              {t("decentralized-ai-cta")}
             </ButtonLink>
           </CalloutBannerSSR>
 
