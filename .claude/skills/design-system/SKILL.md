@@ -57,7 +57,7 @@ Used in 5 places. Don't introduce new uses. Use Tailwind `dark:` variant + seman
 - `<Button isSecondary>` only takes effect on `outline` and `ghost` variants. Silent no-op on `solid`/`link`.
 - `<CardBanner fit="contain">` with a single `<Image>` child auto-clones it as a blurred backdrop. Pass two children and you lose this magic.
 - `LinkBox` requires a `LinkOverlay` somewhere inside; without it, the whole-card-clickable pattern doesn't work.
-- `commonControlClasses` in `ui/checkbox.tsx` is shared by `Switch` and `RadioGroup`. Editing it changes all three.
+- `commonControlClasses` in `ui/checkbox.tsx` is shared by `Switch`. Editing it changes both.
 
 ### No `Heading` primitive -- use semantic tags
 

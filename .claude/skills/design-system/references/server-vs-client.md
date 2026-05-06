@@ -30,7 +30,7 @@ Primitives that handle their own client boundary:
 - `InlineLink` / `BaseLink` (`usePathname` + tracking)
 - `Avatar` (image-error state)
 - `Tooltip` (mobile detection, scroll-close)
-- `Modal` / `Dialog` / `Sheet` / `Drawer` / `Popover` / `DropdownMenu` / `Select` (open state)
+- `Modal` / `Dialog` / `Sheet` / `Popover` / `DropdownMenu` / `Select` (open state)
 - `Tabs`, `Accordion`, `TabNav` (active-state)
 - `Carousel`, `Swiper`, `TerminalTypewriter`, `TruncatedText` (animation/state)
 - `LinkBox` / `LinkOverlay`, `PersistentPanel` (interaction state)
@@ -41,16 +41,9 @@ Primitives that handle their own client boundary:
 
 The `t()` functions returned by these are *similar but not strictly equivalent* -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths. If a change touches both, test both. Don't assume swapping `useTranslations` for `getTranslations` (or vice versa) is a no-op.
 
-### Existing SSR variants for translation-only client splits
+### Callout / CalloutBanner consolidation
 
-Several components have `*SSR` variants explicitly to keep parent pages server-side:
-
-| Client | SSR equivalent (preferred) |
-|---|---|
-| `Callout.tsx` | `CalloutSSR.tsx` |
-| `CalloutBanner.tsx` | `CalloutBannerSSR.tsx` (canonical; older variant deprecated) |
-
-Use the SSR version whenever the parent can do the translation work via `getTranslations`.
+`Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` exist as client/server pairs today. A unified server-renderable `Callout` is being built to absorb both pairs into a single primitive. While the migration is in flight, prefer the `*SSR` variants when the parent can call `getTranslations`. Tracked in a dedicated issue.
 
 ## Patterns Worth Knowing
 
@@ -94,8 +87,8 @@ export default async function Page() {
 
 ## Common Mistakes in This Codebase
 
-- **`Callout` instead of `CalloutSSR`** when parent could be server
-- **`CalloutBanner` instead of `CalloutBannerSSR`** (the latter is canonical post-cva)
+- **`Callout` instead of `CalloutSSR`** when parent could be server (pending the unified `Callout`)
+- **`CalloutBanner` instead of `CalloutBannerSSR`** (same -- the latter is the canonical until consolidation)
 - **`useEffect` data fetching** in a component that could be a Server Component
 - **`"use client"` at the top of a page** when only a small subtree is interactive
 - **`useTranslations` in a leaf component** instead of restructuring so the parent uses `getTranslations`

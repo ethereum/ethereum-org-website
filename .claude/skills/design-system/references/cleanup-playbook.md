@@ -233,21 +233,6 @@ Add the new key to `src/intl/en/[namespace].json`.
 
 > **Data fetching patterns** (Server Component data, caching, sources) are out of scope for this design-system skill. See the `data-layer` skill for canonical fetching guidance.
 
-## `Callout` (client) -> `CalloutSSR` (server)
-
-```tsx
-// Before:
-import Callout from "@/components/Callout"
-<Callout title={t("title")} ... />
-
-// After (when the parent can be server):
-import CalloutSSR from "@/components/CalloutSSR"
-const t = await getTranslations()
-<CalloutSSR title={t("title")} ... />
-```
-
-Same applies to `CalloutBanner` -> `CalloutBannerSSR`.
-
 ## `PageHero` -> `ContentHero` (or appropriate Hero variant)
 
 ```tsx

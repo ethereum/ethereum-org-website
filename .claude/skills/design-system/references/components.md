@@ -34,36 +34,6 @@ The canonical clickable. `Button` for `<button>`-class actions; `ButtonLink` for
 
 `"use client"` because of click tracking and `scrollIntoView`.
 
-### `ButtonTwoLines` / `ButtonLinkTwoLines`
-
-```tsx
-import { ButtonTwoLines, ButtonLinkTwoLines } from "@/components/ui/buttons/ButtonTwoLines"
-```
-
-Stacked two-line button with icon.
-
-```tsx
-<ButtonTwoLines icon={ChevronRight} mainText="Title" helperText="Subtitle" />
-```
-
-**Variants**: `solid | outline` only
-**Sizes**: `md | sm` only
-
-### `SvgButtonLink`
-
-```tsx
-import { SvgButtonLink } from "@/components/ui/buttons/SvgButtonLink"
-```
-
-Iconic link card with stylized box-shadow halo. Used heavily on docs hubs.
-
-```tsx
-<SvgButtonLink href="/x" Svg={MySvg} label="Title">desc</SvgButtonLink>
-```
-
-**Variants**: `row | col` (default `row`)
-Built with `tv`.
-
 ### `BaseLink` / `InlineLink` / `LinkWithArrow`
 
 ```tsx
@@ -250,15 +220,6 @@ import { PersistentPanel } from "@/components/ui/persistent-panel"
 
 > **Future**: There's an open question about consolidating these two using Radix Dialog's `forceMount` prop for the persistent case. Tracked in the cleanup tracking issue. For now, use them as documented above.
 
-### `Drawer` (deprecation track)
-
-```tsx
-// DON'T use for new work:
-import { Drawer, ... } from "@/components/ui/drawer"
-```
-
-Bottom drawer using `vaul`. **Zero consumers in the codebase.** Marked for removal. Use `Sheet` (with `side="bottom"`) for any new bottom-panel needs.
-
 ### `Popover`
 
 ```tsx
@@ -318,15 +279,14 @@ import { Textarea } from "@/components/ui/textarea"
 
 Same shape as `Input`.
 
-### `Checkbox` / `Switch` / `RadioGroup`
+### `Checkbox` / `Switch`
 
 ```tsx
 import Checkbox from "@/components/ui/checkbox"
 import Switch from "@/components/ui/switch"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 ```
 
-All three share styling via `commonControlClasses` exported from `checkbox.tsx`. Editing that constant affects all three.
+Both share styling via `commonControlClasses` exported from `checkbox.tsx`. Editing that constant affects both.
 
 ## Display
 
@@ -565,7 +525,15 @@ See `canonical-imports.md` for selection.
 
 ### Banners -- `@/components/Banners`
 
-`BannerNotification`, `DismissableBanner`, `EnvWarningBanner` (exemplary -- thin wrap of `Alert variant="warning"`), `TranslationBanner`, `UpgradeBannerNotification`.
+`BannerNotification` (will be absorbed into the unified `Callout` -- see `canonical-imports.md`), `EnvWarningBanner` (exemplary -- thin wrap of `Alert variant="warning"`), `TranslationBanner`.
+
+### `Faq`
+
+```tsx
+import { Faq, FaqContent, FaqItem, FaqTrigger } from "@/components/Faq"
+```
+
+Compositional FAQ primitive. Stories exist; ready for use in pages that need an expandable Q&A list.
 
 ### `MdComponents`
 

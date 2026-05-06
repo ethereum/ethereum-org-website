@@ -49,14 +49,14 @@ If your "new component" is mostly:
 
 **Wrong**: Create `<DownloadButton>` that wraps `Button` with a download icon.
 
-**Right**: Just use `<Button><Download /> Download</Button>`. If the icon-button pattern is repeated 10+ times, *then* consider a tiny wrapper -- but call it `IconButton` or use `ButtonTwoLines` if it fits.
+**Right**: Just use `<Button><Download /> Download</Button>`. If the icon-button pattern is repeated 10+ times, *then* consider a tiny wrapper -- but call it `IconButton`.
 
 ## When a New Component IS the Answer
 
 A new component is justified when:
 
 - It encapsulates a **different shape of behavior** (e.g., `LinkBox` -- different click semantics, not just styling)
-- It composes **multiple primitives in a domain-specific way** (e.g., `Layer2ProductCard` -- Card + Tag + Avatar + specific data shape)
+- It composes **multiple primitives in a domain-specific way** (e.g., `AppCard` -- Card + Tag + Avatar + specific data shape)
 - It manages **its own state or effects** that don't belong in a generic primitive
 - It has **a different a11y story** (e.g., `Tooltip` wrapping both `ui/tooltip` for hover AND `ui/popover` for click)
 

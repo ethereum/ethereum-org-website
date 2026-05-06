@@ -9,7 +9,7 @@ Before reaching for a primitive, name the shape:
 - **A linkable summary card** with title, description, optional image -> `Card`
 - **A whole-card-clickable wrapper for non-card content** (multiple interactive elements inside) -> `LinkBox` + `LinkOverlay`
 - **A skeleton loading placeholder** -> `SkeletonCard`
-- **An app/product listing** -> existing domain-specific component (e.g., `AppCard`, `Layer2ProductCard`) -- only if data shape matches
+- **An app/product listing** -> existing domain-specific component (e.g., `AppCard`) -- only if data shape matches
 - **Markdown shortcode** -- `MdComponents` already wires this up; just use `<Card>` in markdown
 
 ## Step 2: Compose `Card`
@@ -78,7 +78,7 @@ If you're building UI that:
 - Composes Card + Tag + Avatar + specific layout for a recurring product/wallet/network listing
 - Has its own loading/error states
 
-...then a wrapper component makes sense. Look at `Layer2ProductCard` or `AppCard` for the pattern: they compose `Card` underneath and add domain-specific structure on top. Don't reinvent the card shell.
+...then a wrapper component makes sense. Look at `AppCard` for the pattern: it composes `Card` underneath and adds domain-specific structure on top. Don't reinvent the card shell.
 
 ## What NOT to Do
 

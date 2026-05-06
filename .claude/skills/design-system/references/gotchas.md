@@ -42,9 +42,9 @@ If you pass `<CardBanner fit="contain"><Image .../></CardBanner>` with **one** c
 
 The whole-card-clickable pattern uses a `before:absolute` pseudo-element on `LinkOverlay`. Use `LinkBox` without `LinkOverlay` and the click-the-whole-card behavior breaks.
 
-### `commonControlClasses` in `ui/checkbox.tsx` is shared by Switch and RadioGroup
+### `commonControlClasses` in `ui/checkbox.tsx` is shared by Switch
 
-`Checkbox.tsx` exports a `commonControlClasses` constant that is also imported by `Switch` and `RadioGroup`. Editing it changes all three. If you're adjusting checkbox styling, you're adjusting switches and radios too -- audit all three before merging.
+`Checkbox.tsx` exports a `commonControlClasses` constant that is also imported by `Switch`. Editing it changes both. If you're adjusting checkbox styling, you're adjusting switches too -- audit both before merging.
 
 ### `Stack`'s `separator` prop clones a separator between children
 
@@ -88,9 +88,9 @@ Just be aware which side of the boundary you're on when adding hooks/effects.
 
 Static buttons get unnecessarily forced into client. Splitting would be invasive; for now, just know this is true.
 
-### `Callout.tsx` is `"use client"` only because of `useTranslation`
+### `Callout` and `CalloutBanner` are pending consolidation
 
-There's a `CalloutSSR.tsx` for the server-translated split. Prefer `CalloutSSR` whenever the parent can do the translation work via `getTranslations` (server). Same applies to `CalloutBanner` vs `CalloutBannerSSR`.
+`Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` exist as client/server pairs today. A unified server-renderable `Callout` component is being built to absorb both pairs (plus `BannerNotification` and `DismissableBanner`) into a single primitive with variants. While the migration is in flight, prefer the `*SSR` variants when the parent can do translation work via `getTranslations`. Tracked in a dedicated issue.
 
 ### Event tracking is automatic on `Button` and `Link`
 
@@ -151,10 +151,6 @@ Configured in `base.css` lines 97-107. Persian fallback. Triggered by `:lang(ur)
 `HubHero` uses `<h1>` for its uppercase eyebrow when `title` is set. This is content-correct (the eyebrow IS the page title for SEO).
 
 ## Things Not Used Anymore
-
-### `Drawer` (`ui/drawer.tsx`)
-
-Zero consumers in `src/`/`app/`. On the deprecation track. Use `Sheet` (with `side="bottom"` if needed). Don't introduce new `Drawer` usage.
 
 ### `useColorModeValue` (`@/hooks/useColorModeValue`)
 

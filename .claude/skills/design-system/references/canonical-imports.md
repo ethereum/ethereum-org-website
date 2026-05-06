@@ -38,7 +38,7 @@ import Card from "@/components/Card"
 
 This is the legacy card, registered in `MdComponents` for the markdown `<Card>` shortcode. It is reserved for markdown rendering. Importing it from app code is a smell.
 
-### Domain-specific cards exist (`AppCard`, `Layer2ProductCard`, `EthPriceCard`, etc.)
+### Domain-specific cards exist (`AppCard`, `EthPriceCard`, etc.)
 
 These are feature components. Don't reuse them outside their domain.
 
@@ -113,22 +113,6 @@ Variants: `solid | outline | ghost | link` (default `solid`). Sizes: `lg | md | 
 
 `isSecondary` flips text/border to body color -- but only applies to `outline` and `ghost`. Setting `isSecondary` on a `solid` or `link` button does nothing (silent no-op).
 
-### Two-line buttons
-
-```tsx
-import { ButtonTwoLines, ButtonLinkTwoLines } from "@/components/ui/buttons/ButtonTwoLines"
-```
-
-Stacked main/helper text with an icon. Restricted to `solid` / `outline` variants and `md` / `sm` sizes.
-
-### SVG-stylized link cards
-
-```tsx
-import { SvgButtonLink } from "@/components/ui/buttons/SvgButtonLink"
-```
-
-Box-shadow halo card with icon + label + description. Variants: `row | col`.
-
 ## Anchors / Links
 
 ```tsx
@@ -201,8 +185,6 @@ import PageHero from "@/components/PageHero"
 
 ## Banners / Callouts / Alerts
 
-These three shapes overlap visually. Pick by *placement* and *purpose*:
-
 ### Inline message in content area: `Alert`
 
 ```tsx
@@ -211,37 +193,15 @@ import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 
 Variants: `info | error | success | warning | update`. Optional `size: "full"` for borderless full-width.
 
-### Top-of-page site-wide stripe: `BannerNotification`
+### In-content / top-of-page callout: `Callout`
 
-```tsx
-import BannerNotification from "@/components/Banners/BannerNotification"
-```
+> **Migration in progress.** A unified server-renderable `Callout` component is being built that absorbs the current `Callout`/`CalloutSSR`/`CalloutBanner`/`CalloutBannerSSR`/`BannerNotification`/`DismissableBanner` set into a single primitive with variants. Tracked in a dedicated issue.
 
-Full-width `bg-primary-action` stripe. Use for site-wide announcements.
-
-### Dismissable banner: `DismissableBanner`
-
-```tsx
-import DismissableBanner from "@/components/Banners/DismissableBanner"
-```
-
-Wraps `BannerNotification` with localStorage state for "don't show again."
-
-### In-content callout with image + heading: `CalloutBannerSSR`
-
-```tsx
-import CalloutBannerSSR from "@/components/CalloutBannerSSR"
-```
-
-Use this, NOT `CalloutBanner.tsx`. The SSR variant uses `cva` with `large | medium | small` sizes and is server-renderable.
-
-### Big ornamental section divider: `CalloutSSR` / `Callout`
-
-```tsx
-import CalloutSSR from "@/components/CalloutSSR"
-```
-
-For the marketing-style large ornamental callouts with image overlap.
+Until the unified `Callout` lands:
+- For **in-content** callouts with image + heading: use `CalloutBannerSSR` (NOT `CalloutBanner.tsx`). Server-renderable; uses `cva` with `large | medium | small` sizes.
+- For **big ornamental section dividers** with image overlap: use `CalloutSSR` (NOT `Callout.tsx`). Server-renderable.
+- For **top-of-page site-wide stripes**: use `BannerNotification` (`@/components/Banners/BannerNotification`). Will be absorbed as a `notification` variant on the unified `Callout`.
+- Avoid `Callout.tsx` and `CalloutBanner.tsx` (client-only thunks; superseded by their SSR siblings and ultimately by the unified component).
 
 ## Tabs / Tab Navigation
 
