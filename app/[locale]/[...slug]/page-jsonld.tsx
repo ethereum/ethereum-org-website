@@ -80,7 +80,7 @@ export default async function SlugJsonLD({
         mainEntity: { "@id": `${url}#article` },
       },
       {
-        "@type": "Article",
+        "@type": slug.startsWith("developers/blog") ? "BlogPosting" : "Article",
         "@id": `${url}#article`,
         headline: frontmatter.title,
         description: frontmatter.description,

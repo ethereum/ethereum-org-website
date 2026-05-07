@@ -2,12 +2,14 @@ import { MDXRemoteProps } from "next-mdx-remote"
 
 import { Layout } from "@/lib/types"
 
+import { blogComponents, BlogLayout } from "./Blog"
 import { docsComponents, DocsLayout } from "./Docs"
 import * as mdLayouts from "./md"
 import { staticComponents, StaticLayout } from "./Static"
 import { TutorialLayout, tutorialsComponents } from "./Tutorial"
 
 export * from "./BaseLayout"
+export * from "./Blog"
 export * from "./Docs"
 export * from "./md"
 export * from "./Static"
@@ -22,6 +24,7 @@ export const layoutMapping = {
   translatathon: mdLayouts.TranslatathonLayout,
   docs: DocsLayout,
   tutorial: TutorialLayout,
+  blog: BlogLayout,
 }
 
 export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
@@ -33,4 +36,5 @@ export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
   translatathon: mdLayouts.translatathonComponents,
   docs: docsComponents,
   tutorial: tutorialsComponents,
+  blog: blogComponents,
 }

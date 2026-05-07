@@ -113,6 +113,17 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   breadcrumb?: string
 }
 
+export interface BlogFrontmatter extends SharedFrontmatter {
+  tags?: string[]
+  author: string
+  published: string
+  image?: string
+  team?: string
+  sourceUrl?: string
+  hideEditButton?: boolean
+  breadcrumb?: string
+}
+
 export interface MdPageContent {
   slug: string
   content: string

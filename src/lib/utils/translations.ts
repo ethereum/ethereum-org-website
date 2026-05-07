@@ -43,6 +43,7 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/layer-2/", "page-layer-2"],
   ["/developers/local-environment/", "page-developers-local-environment"],
   ["/developers/learning-tools/", "page-developers-learning-tools"],
+  ["/developers/blog/", "page-developers-blog"],
   ["/developers/tutorials/", "page-developers-tutorials"],
   ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
@@ -128,6 +129,7 @@ const LAYOUT_NAMESPACES: Record<string, string[]> = {
   "use-cases": ["template-usecase", "learn-quizzes"],
   upgrade: ["page-upgrades", "page-upgrades-index"],
   tutorial: ["page-developers-tutorials"],
+  blog: ["page-developers-blog"],
 }
 
 export const isLangRightToLeft = (lang: Lang): boolean => {

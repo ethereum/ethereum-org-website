@@ -32,6 +32,7 @@ import { TerminalTypewriter } from "@/components/ui/terminal-typewriter"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { formatDateRange } from "@/lib/utils/date"
+import { getBlogPostsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
@@ -43,6 +44,10 @@ import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
 import DevelopersPageJsonLD from "./page-jsonld"
 import { getBuilderPaths, getHackathons, getVideoCourses } from "./utils"
 
+import blogTile1 from "@/public/images/developers/blog/builder-tile-1.png"
+import blogTile2 from "@/public/images/developers/blog/builder-tile-2.png"
+import blogTile3 from "@/public/images/developers/blog/builder-tile-3.png"
+import blogTile4 from "@/public/images/developers/blog/builder-tile-4.png"
 import resourcesBanner from "@/public/images/developers/resources-banner.png"
 import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-screenshot.png"
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
@@ -50,6 +55,8 @@ import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.
 import dogeImage from "@/public/images/doge-computer.png"
 import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
+
+const BLOG_TILE_FALLBACKS = [blogTile1, blogTile2, blogTile3, blogTile4]
 const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
@@ -137,6 +144,8 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
   const courses = await getVideoCourses()
 
   const hackathons = (await getHackathons()).slice(0, 5)
+
+  const recentPosts = (await getBlogPostsData(locale)).slice(0, 3)
 
   const { contributors } = await getAppPageContributorInfo(
     "developers",
@@ -444,6 +453,84 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               <VideoCourseSwiper courses={courses} />
             </div>
           </Section>
+
+          {recentPosts.length > 0 && (
+            <Section id="blog" className="space-y-4 py-10 md:py-12">
+              <h2>{t("page-developers-blog-title")}</h2>
+              <p>{t("page-developers-blog-desc")}</p>
+
+              <EdgeScrollContainer>
+                {recentPosts.map((post, idx) => (
+                  <EdgeScrollItem
+                    key={post.href}
+                    asChild
+                    className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+                  >
+                    <Card
+                      href={post.href}
+                      customEventOptions={{
+                        eventCategory: "builder-blog",
+                        eventAction: "click",
+                        eventName: post.title,
+                      }}
+                      className="max-w-md min-w-72 flex-1"
+                    >
+                      <CardBanner
+                        background={
+                          (["accent-a", "accent-b", "accent-c"] as const)[
+                            idx % 3
+                          ]
+                        }
+                        className="h-36"
+                      >
+                        {post.image ? (
+                          <CardImage src={post.image} />
+                        ) : (
+                          <Image
+                            src={
+                              BLOG_TILE_FALLBACKS[
+                                idx % BLOG_TILE_FALLBACKS.length
+                              ]
+                            }
+                            alt=""
+                            sizes="448px"
+                          />
+                        )}
+                      </CardBanner>
+                      <CardContent>
+                        <CardTitle className="line-clamp-2">
+                          {post.title}
+                        </CardTitle>
+                        <CardParagraph variant="subtitle" size="sm">
+                          {post.author}
+                          {post.team ? ` · ${post.team}` : ""}
+                        </CardParagraph>
+                        <CardParagraph size="sm" className="mt-2 line-clamp-3">
+                          {post.description}
+                        </CardParagraph>
+                        <span className="mt-4 block text-xs text-body-medium">
+                          {post.published}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </EdgeScrollItem>
+                ))}
+              </EdgeScrollContainer>
+
+              <div className="flex justify-center">
+                <ButtonLink
+                  href="/developers/blog/"
+                  customEventOptions={{
+                    eventCategory: "builder-blog",
+                    eventAction: "click",
+                    eventName: "view-all-updates",
+                  }}
+                >
+                  {t("page-developers-blog-view-all")}
+                </ButtonLink>
+              </div>
+            </Section>
+          )}
 
           <Section
             id="docs"
