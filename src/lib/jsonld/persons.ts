@@ -346,6 +346,79 @@ export const KNOWN_PERSONS = {
     ],
   },
 
+  "sophia-dew": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#sophia-dew",
+    name: "Sophia Dew",
+    jobTitle: "Builder Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    description:
+      "Sophia Dew is a member of the Ethereum Foundation's Builder Growth team, where she focuses on AI agent infrastructure, developer education, and onchain agent standards. She previously served as a Developer Relations Engineering Lead at the Celo Foundation and worked on public goods infrastructure at Gitcoin. She holds a BS in Computer Science and Product Design from Stanford University.",
+    knowsAbout: [
+      "AI Agents on Ethereum",
+      "Onchain Agent Standards",
+      "Agent Frameworks and MCP Tooling",
+      "Ethereum L1 Scaling",
+      "Ethereum Protocol Architecture",
+      "Agent Security and Guardrails",
+      "Developer Relations",
+      "Public Goods Infrastructure",
+    ],
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Stanford University",
+        url: "https://www.stanford.edu/",
+      },
+      {
+        "@type": "Organization",
+        name: "Stanford Blockchain Club",
+        url: "https://stanfordblockchain.org/",
+      },
+      {
+        "@type": "Organization",
+        name: "Gitcoin",
+        url: "https://www.gitcoin.co/",
+      },
+      {
+        "@type": "Organization",
+        name: "Celo Foundation",
+        url: "https://celo.org/",
+      },
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/sophiadew/",
+      "https://x.com/sodofi_",
+      "https://github.com/sodofi",
+    ],
+  },
+
+  rick: {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#rick",
+    name: "Rick",
+    jobTitle: "Builder Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    url: "https://www.rick.build/",
+    description:
+      "Rick is a member of the Ethereum Foundation's Builder Growth team, where he focuses on agentic commerce infrastructure, sovereign AI agents, and developer education. He writes about the Ethereum standards stack for autonomous agent economies, including ERC-8004, ERC-8183, x402, and onchain agent primitives.",
+    knowsAbout: [
+      "Agentic Commerce Infrastructure",
+      "AI Agents on Ethereum",
+      "Onchain Agent Standards",
+      "Sovereign AI and Local Inference",
+      "Ethereum Developer Education",
+      "Agent Key Management and Wallets",
+      "Layer 2 Ecosystem and Adoption",
+      "SpeedRunEthereum",
+    ],
+    sameAs: [
+      "https://www.rick.build/",
+      "https://x.com/rickdotbuild",
+      "https://github.com/rickkdev",
+    ],
+  },
+
   "anders-brownworth": {
     "@type": "Person" as const,
     "@id": "https://ethereum.org/#anders-brownworth",
