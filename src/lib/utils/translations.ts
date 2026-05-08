@@ -241,7 +241,9 @@ export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined
 ) => {
-  const baseNamespaces = ["common"]
+  // "common" is provided by the layout-level provider and merged automatically
+  // by the page-level I18nProvider, so it doesn't need to be included here.
+  const baseNamespaces: string[] = []
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
   // TODO remove layout case since we can't use it anymore
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
