@@ -31,6 +31,7 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: t("page-find-wallet-mobile"),
           description: "",
           inputState: false,
+          optionsLegend: t("table:table-mobile-platforms") as string,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
@@ -140,6 +141,7 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: t("page-find-wallet-desktop"),
           description: "",
           inputState: false,
+          optionsLegend: t("table:table-desktop-platforms") as string,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
@@ -290,6 +292,7 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: t("page-find-wallet-browser"),
           description: "",
           inputState: false,
+          optionsLegend: t("table:table-browser-engines") as string,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
