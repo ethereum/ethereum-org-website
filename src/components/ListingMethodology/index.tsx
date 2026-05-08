@@ -36,9 +36,7 @@ const ListingMethodology = async ({
           {heading}
         </h2>
 
-        <p className="text-lg leading-relaxed text-body-medium">
-          {description}
-        </p>
+        <p className="text-body-medium">{description}</p>
 
         {href && (
           <BaseLink href={href}>{t("full-criteria-link-label")}</BaseLink>
@@ -58,7 +56,7 @@ const ListingMethodology = async ({
           contentPreview={t("details-preview")}
           forceMount
         >
-          <div className="space-y-4 text-lg leading-relaxed">
+          <div className="space-y-4">
             {children}
 
             {footers && (

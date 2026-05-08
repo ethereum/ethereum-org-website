@@ -506,8 +506,8 @@ export default async function Page(props: { params: Promise<Params> }) {
                     C-KZG-4844
                   </InlineLink>
                   <br />
-                  <InlineLink href="https://github.com/crate-crypto/go-kzg-4844">
-                    Go-KZG-4844
+                  <InlineLink href="https://github.com/crate-crypto/go-eth-kzg">
+                    Go-ETH-KZG
                   </InlineLink>
                 </div>
               </StyledCard>

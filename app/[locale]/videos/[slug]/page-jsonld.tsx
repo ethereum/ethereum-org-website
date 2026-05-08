@@ -51,7 +51,7 @@ export default async function VideoPageJsonLD({
         "@id": url,
         name: frontmatter.title,
         description: frontmatter.description,
-        url: url,
+        url,
         inLanguage: locale,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,

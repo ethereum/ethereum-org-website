@@ -10,6 +10,7 @@
 /coverage
 tests/__results__/
 tests/__report__/
+test-results/
 
 # next.js
 /.next/
@@ -64,6 +65,7 @@ src/data/crowdin/bucketsAwaitingReviewReport.csv
 build-storybook.log
 build-archive.log
 storybook-static
+storybook-static-pages
 
 # Trigger
 .trigger

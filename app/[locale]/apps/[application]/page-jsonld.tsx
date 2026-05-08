@@ -46,7 +46,7 @@ export default async function AppsAppJsonLD({
         "@id": url,
         name: `Ethereum Apps - ${app.name}`,
         description: app.description,
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
