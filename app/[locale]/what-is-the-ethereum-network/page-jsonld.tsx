@@ -28,16 +28,19 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#what-is-the-ethereum-network` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-what-is-ethereum-network-meta-title"),
         description: t("page-what-is-ethereum-network-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -67,11 +70,12 @@ export default async function WhatIsTheEthereumNetworkPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#what-is-the-ethereum-network` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#what-is-the-ethereum-network`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-what-is-ethereum-network-title"),
         description: t("page-what-is-ethereum-network-meta-description"),
         image: "https://ethereum.org/images/what-is-ethereum-network.png",

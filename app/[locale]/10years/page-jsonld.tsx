@@ -35,7 +35,7 @@ export default async function TenYearJsonLD({
         "@id": url,
         name: t("page-10-year-anniversary-meta-title"),
         description: t("page-10-year-anniversary-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,

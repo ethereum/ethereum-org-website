@@ -35,7 +35,7 @@ export default async function TranslatathonLeaderboardJsonLD({
         name: "2025 Ethereum.org Translatathon Leaderboard",
         description:
           "Leaderboard for the 2025 Ethereum.org Translatathon showing translation progress and participant rankings",
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

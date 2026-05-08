@@ -37,7 +37,7 @@ export default async function TutorialsPageJsonLD({
         "@id": url,
         name: t("page-tutorials-meta-title"),
         description: t("page-tutorials-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -74,7 +74,7 @@ export default async function TutorialsPageJsonLD({
         "@id": `${url}#tutorials`,
         name: t("page-tutorial-title"),
         description: t("page-tutorials-meta-description"),
-        url: url,
+        url,
         numberOfItems: internalTutorials.length,
         itemListElement: internalTutorials
           .slice(0, 10)
