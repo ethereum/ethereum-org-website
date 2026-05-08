@@ -7,7 +7,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 import { getLocaleYear } from "@/lib/utils/date"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 function eventTypeFor(
   event: EventItem

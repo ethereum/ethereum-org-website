@@ -51,6 +51,10 @@ export const getEventsData = createCachedGetter(
 
 Direct `@/data-layer` imports work but have no caching.
 
+### 4. Keep fetchers isolated from the app
+
+Fetchers run on Trigger.dev — a separate runtime from the Next.js app — and cannot assume the app's filesystem or modules are available. Any import or runtime dependency reaching outside `src/data-layer/` is a warning sign; if a fetcher needs app data, fetch it via the GitHub API and treat the repo as an external system. See `fetchGitHubContributors.ts` for the pattern, and the data-layer skill (Rule 5) for the full allow/deny list.
+
 ## Adding a New Data Source
 
 1. **Create fetcher** in `src/data-layer/fetchers/fetchNewData.ts`

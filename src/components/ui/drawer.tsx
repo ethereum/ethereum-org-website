@@ -21,19 +21,19 @@ const DrawerPortal = DrawerPrimitive.Portal
 const DrawerClose = DrawerPrimitive.Close
 
 const DrawerOverlay = React.forwardRef<
-  React.ElementRef<typeof DrawerPrimitive.Overlay>,
+  React.ComponentRef<typeof DrawerPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Overlay
     ref={ref}
-    className={cn("z-overlay fixed inset-0 bg-black/80", className)}
+    className={cn("fixed inset-0 z-overlay bg-black/80", className)}
     {...props}
   />
 ))
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName
 
 const DrawerContent = React.forwardRef<
-  React.ElementRef<typeof DrawerPrimitive.Content>,
+  React.ComponentRef<typeof DrawerPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <DrawerPortal>
@@ -41,7 +41,7 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        "z-modal bg-background fixed inset-x-0 bottom-0 mt-24 flex h-auto flex-col border",
+        "fixed inset-x-0 bottom-0 z-modal mt-24 flex h-auto flex-col border bg-background",
         className
       )}
       {...props}
@@ -75,7 +75,7 @@ const DrawerFooter = ({
 DrawerFooter.displayName = "DrawerFooter"
 
 const DrawerTitle = React.forwardRef<
-  React.ElementRef<typeof DrawerPrimitive.Title>,
+  React.ComponentRef<typeof DrawerPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Title
@@ -90,7 +90,7 @@ const DrawerTitle = React.forwardRef<
 DrawerTitle.displayName = DrawerPrimitive.Title.displayName
 
 const DrawerDescription = React.forwardRef<
-  React.ElementRef<typeof DrawerPrimitive.Description>,
+  React.ComponentRef<typeof DrawerPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description

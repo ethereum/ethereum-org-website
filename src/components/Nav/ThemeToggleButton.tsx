@@ -12,7 +12,7 @@ export const ThemeToggleButton = () => {
       aria-label={themeIconAriaLabel}
       variant="ghost"
       isSecondary
-      className="group animate-fade-in [&>svg]:hover:text-primary-hover px-2 max-md:hidden xl:px-3 [&>svg]:transition-transform [&>svg]:duration-500 [&>svg]:hover:rotate-12"
+      className="group animate-fade-in px-2 max-md:hidden xl:px-3 [&>svg]:transition-transform [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
       onClick={toggleColorMode}
     >
       <ThemeIcon className="transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500" />

@@ -34,7 +34,7 @@ const SubpageCard = ({
   return (
     <LinkBox
       className={cn(
-        "bg-card-gradient-secondary hover:bg-card-gradient-secondary-hover flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] p-6 hover:shadow-lg",
+        "flex flex-col gap-3 rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg",
         className
       )}
     >
@@ -42,7 +42,7 @@ const SubpageCard = ({
         <div className="text-primary">{icon}</div>
         <h3 className="text-xl">{title}</h3>
       </div>
-      <p className="text-body-medium m-0 p-0">{description}</p>
+      <p className="m-0 p-0 text-body-medium">{description}</p>
 
       {inlineLink ? (
         <LinkOverlay asChild>

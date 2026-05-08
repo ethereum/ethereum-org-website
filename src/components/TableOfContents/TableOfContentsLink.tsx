@@ -48,7 +48,7 @@ const Link = ({
       <div
         data-label="marker"
         className={cn(
-          "border-primary-hover bg-background absolute top-1/2 -mt-1 hidden h-2 w-2 rounded-full border group-hover:inline-block",
+          "absolute top-1/2 -mt-1 hidden h-2 w-2 rounded-full border border-primary-hover bg-background group-hover:inline-block",
           isActive && "inline-block"
         )}
         style={{

@@ -4,11 +4,7 @@ import { join } from "path"
 import { appsCategories } from "@/data/apps/categories"
 import { DEV_TOOL_CATEGORY_SLUG_LIST } from "@/data/developerTools"
 
-import {
-  DEFAULT_LOCALE,
-  LOCALES_CODES,
-  TRANSLATIONS_DIR,
-} from "@/lib/constants"
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { getPostSlugs } from "../utils/md"
 import { getStaticPagePaths } from "../utils/staticPages"
@@ -27,7 +23,12 @@ async function isMdPageTranslated(
     return true
   }
 
-  const translationPath = join(TRANSLATIONS_DIR, locale, slug, "index.md")
+  const translationPath = join(
+    "public/content/translations",
+    locale,
+    slug,
+    "index.md"
+  )
   return existsSync(translationPath)
 }
 

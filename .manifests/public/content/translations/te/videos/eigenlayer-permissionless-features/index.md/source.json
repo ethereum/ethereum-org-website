@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/eigenlayer-permissionless-features/index.md",
+  "generatedAt": "2026-04-29T05:20:50.926Z",
+  "rootHash": "f06ef4580eb6",
+  "tree": {
+    "contentHash": "e055e52d130d",
+    "anchorHash": "7f74321dbb3e",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "e76becb5ac1d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "29e31ba181f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b2ae2e3be487"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f7afec6581b6"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5600c7ab0aab"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d21f85ea3816"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1cc60119ff8f"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d1da73e420e4"
+      },
+      "prose:1": {
+        "contentHash": "c218fa689415",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "2a35e74f382d"
+      },
+      "prose:2": {
+        "contentHash": "5f882530fa65",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-000": {
+        "contentHash": "92cd43d8e7ef",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "92590c627fa1",
+        "children": {
+          "_label": {
+            "contentHash": "92590c627fa1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "76ae1cb288fb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "when-are-blockchains-accountable-131": {
+        "contentHash": "abfe99c287e9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "28a3486f50d0",
+        "children": {
+          "_label": {
+            "contentHash": "28a3486f50d0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "58ea752d32d9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "multi-resource-consensus-211": {
+        "contentHash": "1c5e85a68ab7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ed16aa6dcbd4",
+        "children": {
+          "_label": {
+            "contentHash": "ed16aa6dcbd4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fbb4d26ecccf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "decoupling-trust-and-innovation-830": {
+        "contentHash": "58256e803722",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3c265af571fb",
+        "children": {
+          "_label": {
+            "contentHash": "3c265af571fb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8ab086026256",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "open-innovation-1023": {
+        "contentHash": "c263eb81cca7",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "36e498d6c1d2",
+        "children": {
+          "_label": {
+            "contentHash": "36e498d6c1d2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "759d489dc17b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "microeconomic-problem-1628": {
+        "contentHash": "d1011ad45b40",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0d6f61c748fc",
+        "children": {
+          "_label": {
+            "contentHash": "0d6f61c748fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "2e63e1de7e95",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "economic-problem-1952": {
+        "contentHash": "5d36137ff9c9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "bcabf79fdd3c",
+        "children": {
+          "_label": {
+            "contentHash": "bcabf79fdd3c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1bb92898d0b0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "eigenlayer-2044": {
+        "contentHash": "1afacbe05a76",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5ce9fff9584c",
+        "children": {
+          "_label": {
+            "contentHash": "5ce9fff9584c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c72da5d96310",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-eigenlayer-aligns-the-ecosystem-2350": {
+        "contentHash": "9e29999d861a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ff60c277015c",
+        "children": {
+          "_label": {
+            "contentHash": "ff60c277015c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "672d3d43213a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "over-leveraging-and-risk-management-3300": {
+        "contentHash": "6ef05ae46ace",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c00d80ffedf1",
+        "children": {
+          "_label": {
+            "contentHash": "c00d80ffedf1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "dbe3201385ee",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "block-space-economics-4358": {
+        "contentHash": "407e01e4e395",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "de2b3d166f6f",
+        "children": {
+          "_label": {
+            "contentHash": "de2b3d166f6f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b7e22b8d348b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "staker-heterogeneity-4857": {
+        "contentHash": "9bfce5e48331",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a5d36dede1cc",
+        "children": {
+          "_label": {
+            "contentHash": "a5d36dede1cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4357f72d5a45",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "democratic-and-agile-innovation-5101": {
+        "contentHash": "2abd15e3f288",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3b1e8342c958",
+        "children": {
+          "_label": {
+            "contentHash": "3b1e8342c958",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6c0143b823ed",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "eigenda-and-closing-5256": {
+        "contentHash": "e00c980bb032",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a0f74503dffb",
+        "children": {
+          "_label": {
+            "contentHash": "a0f74503dffb",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "73513017198c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-highlights-5800": {
+        "contentHash": "4aab92fa6fd0",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "499e7fd7a7d0",
+        "children": {
+          "_label": {
+            "contentHash": "499e7fd7a7d0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4a50cb965afd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-000",
+      "when-are-blockchains-accountable-131",
+      "multi-resource-consensus-211",
+      "decoupling-trust-and-innovation-830",
+      "open-innovation-1023",
+      "microeconomic-problem-1628",
+      "economic-problem-1952",
+      "eigenlayer-2044",
+      "how-eigenlayer-aligns-the-ecosystem-2350",
+      "over-leveraging-and-risk-management-3300",
+      "block-space-economics-4358",
+      "staker-heterogeneity-4857",
+      "democratic-and-agile-innovation-5101",
+      "eigenda-and-closing-5256",
+      "qa-highlights-5800"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

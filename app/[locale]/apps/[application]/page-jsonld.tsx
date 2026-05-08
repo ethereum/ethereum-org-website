@@ -4,7 +4,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd, slugify } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 // Map internal app categories to schema.org enumerated applicationCategory values
 // https://schema.org/applicationCategory

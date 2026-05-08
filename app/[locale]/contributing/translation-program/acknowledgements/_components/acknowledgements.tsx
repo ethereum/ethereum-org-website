@@ -37,7 +37,7 @@ const H2 = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className={cn("leading-xs mt-12 mb-8", className)} {...props} />
+  <h2 className={cn("mt-12 mb-8 leading-xs", className)} {...props} />
 )
 
 const Text = ({
@@ -62,7 +62,7 @@ const TranslatorAcknowledgements = () => {
     <Flex className="w-full flex-col items-center">
       <Content>
         <Breadcrumbs slug={pathname} className="mt-12" />
-        <h1 className="leading-xs my-8">
+        <h1 className="my-8 leading-xs">
           {t(
             "page-contributing-translation-program-acknowledgements-acknowledgement-page-title"
           )}
@@ -192,7 +192,7 @@ const TranslatorAcknowledgements = () => {
         <Text>
           {t("page-contributing-translation-program-acknowledgements-3")}
         </Text>
-        <h3 className="leading-xs mt-10 mb-8">
+        <h3 className="mt-10 mb-8 leading-xs">
           {t(
             "page-contributing-translation-program-acknowledgements-how-to-claim-title"
           )}

@@ -43,7 +43,7 @@ export default function CategoryToolsGrid({
         totalCount={tools.length}
       />
 
-      <div className="grid-cols-fill-3 grid gap-x-8">
+      <div className="grid grid-cols-fill-3 gap-x-8">
         {filteredTools.map((tool) => (
           <AppCard
             key={tool.id}

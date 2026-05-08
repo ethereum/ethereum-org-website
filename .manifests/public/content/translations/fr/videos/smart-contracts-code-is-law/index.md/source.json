@@ -1,0 +1,365 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/smart-contracts-code-is-law/index.md",
+  "generatedAt": "2026-04-29T00:11:54.890Z",
+  "rootHash": "a7144b8d5dbf",
+  "tree": {
+    "contentHash": "8d64db893e9f",
+    "anchorHash": "e9413c81fa1f",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "7871b9a8dee6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b86a1b3c3eb1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "5b49836789e4"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e04d422820a5"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "2f35df55c628"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4198f4149a33"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4d863c652f5b"
+      },
+      "prose:1": {
+        "contentHash": "67d9118387fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "38a08fc5cd64"
+      },
+      "prose:2": {
+        "contentHash": "1ceb1c096756",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-000": {
+        "contentHash": "ccaad2e3762d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "92590c627fa1",
+        "children": {
+          "_label": {
+            "contentHash": "92590c627fa1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4595f656577d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "ethereum-smart-contracts-309": {
+        "contentHash": "30bbf25dbade",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "dd68cf4488fd",
+        "children": {
+          "_label": {
+            "contentHash": "dd68cf4488fd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7c018245275e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "smart-contract-definition-423": {
+        "contentHash": "d522b4a85e03",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a37bc30552ff",
+        "children": {
+          "_label": {
+            "contentHash": "a37bc30552ff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "755e51a2a81b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "smart-contract-example-446": {
+        "contentHash": "d0c7050cdfa3",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "13c063781c05",
+        "children": {
+          "_label": {
+            "contentHash": "13c063781c05",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "735e5325483f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "smart-contract-problems-545": {
+        "contentHash": "90562b3cca1a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d409192ff9c5",
+        "children": {
+          "_label": {
+            "contentHash": "d409192ff9c5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e626c914a9e1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "speed-647": {
+        "contentHash": "d78ca845f00c",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "0e9ffe2e78b1",
+        "children": {
+          "_label": {
+            "contentHash": "0e9ffe2e78b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "43efa346dbe6",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "cost-716": {
+        "contentHash": "de7a2379e734",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a3ab8ff70d98",
+        "children": {
+          "_label": {
+            "contentHash": "a3ab8ff70d98",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c6b1bdebad6c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "fraud-758": {
+        "contentHash": "903ea7f77eef",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "d9269feba525",
+        "children": {
+          "_label": {
+            "contentHash": "d9269feba525",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "09a6e0de1028",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "use-cases-842": {
+        "contentHash": "a777d3178dc6",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2cef85ed7cd4",
+        "children": {
+          "_label": {
+            "contentHash": "2cef85ed7cd4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c149ffc72c45",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "defi-907": {
+        "contentHash": "10ef094bb3ed",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9616b0458fb9",
+        "children": {
+          "_label": {
+            "contentHash": "9616b0458fb9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6a71fe70ead7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "crowdfunding-and-supply-chains-1005": {
+        "contentHash": "a8f14d86244f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e828520237bd",
+        "children": {
+          "_label": {
+            "contentHash": "e828520237bd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b3fb6f413fc9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "future-smart-contracts-1029": {
+        "contentHash": "c5eaf060462a",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "2f03d48d32cc",
+        "children": {
+          "_label": {
+            "contentHash": "2f03d48d32cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4131f0d66440",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "can-we-replace-lawyers-1358": {
+        "contentHash": "10405ff1e9bd",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "423917a16de9",
+        "children": {
+          "_label": {
+            "contentHash": "423917a16de9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "48efdcaf5a07",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "summary-1453": {
+        "contentHash": "20adcbda16f2",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "c74387450d5c",
+        "children": {
+          "_label": {
+            "contentHash": "c74387450d5c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "29ecfb92c087",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-000",
+      "ethereum-smart-contracts-309",
+      "smart-contract-definition-423",
+      "smart-contract-example-446",
+      "smart-contract-problems-545",
+      "speed-647",
+      "cost-716",
+      "fraud-758",
+      "use-cases-842",
+      "defi-907",
+      "crowdfunding-and-supply-chains-1005",
+      "future-smart-contracts-1029",
+      "can-we-replace-lawyers-1358",
+      "summary-1453"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

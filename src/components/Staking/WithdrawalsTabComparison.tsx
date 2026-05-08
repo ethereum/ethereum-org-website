@@ -42,7 +42,7 @@ const WithdrawalsTabComparison = () => {
 
       <TabsContent
         value="current"
-        className="bg-background-highlight space-y-4"
+        className="space-y-4 bg-background-highlight"
       >
         <h3>{t("comp-withdrawal-comparison-current-title")}</h3>
         <UnorderedList>
@@ -63,7 +63,7 @@ const WithdrawalsTabComparison = () => {
               <InlineLink href="https://beaconcha.in">{chunks}</InlineLink>
             ),
             prefix: (chunks) => (
-              <span className="text-warning-border dark:text-warning font-mono font-bold">
+              <span className="font-mono font-bold text-warning-border dark:text-warning">
                 {chunks}
               </span>
             ),
@@ -73,7 +73,7 @@ const WithdrawalsTabComparison = () => {
         <WithdrawalCredentials />
       </TabsContent>
 
-      <TabsContent value="new" className="bg-background-highlight space-y-4">
+      <TabsContent value="new" className="space-y-4 bg-background-highlight">
         <h3>{t("comp-withdrawal-comparison-new-title")}</h3>
         <UnorderedList>
           <ListItem>{t("comp-withdrawal-comparison-new-li-1")}</ListItem>

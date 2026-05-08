@@ -37,8 +37,8 @@ export const ReceiveEther = () => {
             src={QrImage}
             className="size-[6rem] rounded p-1 md:size-[7.5rem] dark:invert"
           />
-          <div className="absolute left-1/2 top-1/2 size-10 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-primary-action" />
-          <EthGlyph className="absolute left-1/2 top-1/2 size-6 -translate-x-1/2 -translate-y-1/2 transform text-white" />
+          <div className="absolute top-1/2 left-1/2 size-10 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-primary-action" />
+          <EthGlyph className="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2 transform text-white" />
         </div>
       </NotificationPopover>
       <Flex className="relative mb-3 w-full items-center justify-between gap-2 rounded border px-3 py-2 md:mb-5">

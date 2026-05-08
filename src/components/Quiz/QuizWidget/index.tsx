@@ -118,7 +118,7 @@ const QuizWidget = ({
             "relative w-full gap-8",
             // Reduce padding when showing Spinner
             !quizData ? "pt-10 pb-5" : "pt-5 pb-4 md:pt-12 md:pb-8",
-            isStandaloneQuiz && "shadow-drop px-4"
+            isStandaloneQuiz && "px-4 shadow-drop"
           )}
         >
           <Center

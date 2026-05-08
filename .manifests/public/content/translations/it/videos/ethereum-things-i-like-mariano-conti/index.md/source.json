@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/ethereum-things-i-like-mariano-conti/index.md",
+  "generatedAt": "2026-04-28T23:31:55.589Z",
+  "rootHash": "dad66df7e404",
+  "tree": {
+    "contentHash": "dea6a1fce067",
+    "anchorHash": "6dacdc1eec90",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "5bd715a3c080",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "4b9bced6bd5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "41c0548633cd"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f2f2a5a007c8"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dd1de8e9eb32"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b1cc2e711844"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ebd3b6655337"
+      },
+      "prose:1": {
+        "contentHash": "606994c2d021",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "20d4056e638b"
+      },
+      "prose:2": {
+        "contentHash": "e04b1ae0fddc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-008": {
+        "contentHash": "cfc7b4e8525e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4555ce17089b",
+        "children": {
+          "_label": {
+            "contentHash": "4555ce17089b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0d47d1d3ed02",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "devcon-in-buenos-aires-220": {
+        "contentHash": "b58639e45e25",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3ac02de25563",
+        "children": {
+          "_label": {
+            "contentHash": "3ac02de25563",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "123c6c7710e3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "things-i-like-about-ethereum-428": {
+        "contentHash": "60905331aba0",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "dff31f608146",
+        "children": {
+          "_label": {
+            "contentHash": "dff31f608146",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "55088253e2f2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-community-525": {
+        "contentHash": "714fea0dc247",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "09c36e60944b",
+        "children": {
+          "_label": {
+            "contentHash": "09c36e60944b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e42d0c8f6b80",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "things-i-dont-like-700": {
+        "contentHash": "dbc5e3339807",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "6ee2237b9445",
+        "children": {
+          "_label": {
+            "contentHash": "6ee2237b9445",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a8eb1612bbcf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "calls-to-action-1024": {
+        "contentHash": "e241139f2e10",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ee339b1b798f",
+        "children": {
+          "_label": {
+            "contentHash": "ee339b1b798f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "8cac92bfb4f3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-session-1210": {
+        "contentHash": "91110fc50511",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "da929e28da17",
+        "children": {
+          "_label": {
+            "contentHash": "da929e28da17",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5e3598a1c01f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "cypherpunk-ethos-and-advice-1545": {
+        "contentHash": "00b878d34c4e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "88afe56a2859",
+        "children": {
+          "_label": {
+            "contentHash": "88afe56a2859",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d1f8b68c817f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-008",
+      "devcon-in-buenos-aires-220",
+      "things-i-like-about-ethereum-428",
+      "the-community-525",
+      "things-i-dont-like-700",
+      "calls-to-action-1024",
+      "qa-session-1210",
+      "cypherpunk-ethos-and-advice-1545"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

@@ -18,7 +18,7 @@ const SearchInputButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         data-testid="search-input-button"
         variant="ghost"
         className={cn(
-          "group border-disabled hover:border-primary-hover me-3 border",
+          "group me-3 border border-disabled hover:border-primary-hover",
           className
         )}
         {...props}

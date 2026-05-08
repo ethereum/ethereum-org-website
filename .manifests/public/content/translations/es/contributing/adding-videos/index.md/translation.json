@@ -1,0 +1,601 @@
+{
+  "version": 1,
+  "locale": "es",
+  "translatedAt": "2026-04-24T21:52:32.122Z",
+  "englishManifestHash": "1ad5a5adf71e",
+  "placeholderOrder": [
+    "LINK-1ebcc5",
+    "CODE-a48746",
+    "CODEBLOCK-b1208f",
+    "CODE-8a8629",
+    "CODE-a48746",
+    "CODEBLOCK-90c5bf",
+    "CODE-aaf232",
+    "CODE-c9046f",
+    "CODE-5cf7d7",
+    "CODE-dbd3a4",
+    "CODE-9c2aa1",
+    "CODE-b2ff60",
+    "CODE-be158a",
+    "CODE-6c4858",
+    "CODE-caa79a",
+    "CODE-89455d",
+    "CODE-6024b6",
+    "CODE-665581",
+    "CODE-d0c2eb",
+    "CODE-94e6f0",
+    "CODE-d21f85",
+    "CODE-23d611",
+    "CODE-e904c9",
+    "CODE-0cb1dd",
+    "CODE-bfac31",
+    "CODE-025409",
+    "CODE-fe3003",
+    "CODE-320e00",
+    "CODE-636485",
+    "CODE-d6dc6b",
+    "CODE-8ff084",
+    "CODE-cb3f91",
+    "CODEBLOCK-dbca55",
+    "CODE-56dc6d",
+    "CODE-3ddeb5",
+    "CODE-c983c5",
+    "CODE-ef7797",
+    "CODE-e06554",
+    "CODE-bc62a3",
+    "CODE-b60d7b",
+    "CODE-c432b3",
+    "CODE-81dc07",
+    "CODE-7160f8",
+    "CODE-2658a7",
+    "CODE-dd2026",
+    "CODE-dc2963",
+    "CODE-23b8d0",
+    "CODE-400986",
+    "CODE-008a17",
+    "CODE-3aa3a9",
+    "CODE-58624b",
+    "CODE-6a4444",
+    "CODE-2b9bbc",
+    "CODE-ec8eb7",
+    "CODE-3b3e1a",
+    "CODE-567cf0",
+    "CODE-6bdb18",
+    "CODE-8bffd6",
+    "CODE-5ab07e",
+    "CODE-b766b2",
+    "CODE-2290d7",
+    "CODE-da9fa3",
+    "CODE-eab762",
+    "CODE-160317",
+    "CODE-39d40b",
+    "CODE-2636f4",
+    "CODE-33ec8d",
+    "CODE-c40cc2",
+    "CODE-afdb24",
+    "CODE-f1135b",
+    "CODE-638671",
+    "CODE-689f6a",
+    "CODE-f09e6b",
+    "CODE-c192a6",
+    "CODE-38344b",
+    "CODE-a4cc6b",
+    "CODE-b9d906",
+    "CODE-9af299",
+    "CODE-b7a348",
+    "CODE-b3eff2",
+    "CODE-f354ee",
+    "CODE-2290d7",
+    "CODE-3b3e1a",
+    "CODE-ef260e",
+    "LINK-f21d55",
+    "LINK-c2821f",
+    "LINK-0da87f"
+  ],
+  "placeholderMap": {
+    "CODEBLOCK-b1208f": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-90c5bf": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODEBLOCK-dbca55": {
+      "type": "code-fence",
+      "values": {}
+    },
+    "CODE-a48746": {
+      "type": "inline-code",
+      "values": {
+        "content": "index.md"
+      }
+    },
+    "CODE-8a8629": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockchain-101-visual-demo"
+      }
+    },
+    "CODE-aaf232": {
+      "type": "inline-code",
+      "values": {
+        "content": "title"
+      }
+    },
+    "CODE-c9046f": {
+      "type": "inline-code",
+      "values": {
+        "content": "description"
+      }
+    },
+    "CODE-5cf7d7": {
+      "type": "inline-code",
+      "values": {
+        "content": "lang"
+      }
+    },
+    "CODE-dbd3a4": {
+      "type": "inline-code",
+      "values": {
+        "content": "en"
+      }
+    },
+    "CODE-9c2aa1": {
+      "type": "inline-code",
+      "values": {
+        "content": "youtubeId"
+      }
+    },
+    "CODE-b2ff60": {
+      "type": "inline-code",
+      "values": {
+        "content": "v="
+      }
+    },
+    "CODE-be158a": {
+      "type": "inline-code",
+      "values": {
+        "content": "uploadDate"
+      }
+    },
+    "CODE-6c4858": {
+      "type": "inline-code",
+      "values": {
+        "content": "YYYY-MM-DD"
+      }
+    },
+    "CODE-caa79a": {
+      "type": "inline-code",
+      "values": {
+        "content": "duration"
+      }
+    },
+    "CODE-89455d": {
+      "type": "inline-code",
+      "values": {
+        "content": "H:MM:SS"
+      }
+    },
+    "CODE-6024b6": {
+      "type": "inline-code",
+      "values": {
+        "content": "M:SS"
+      }
+    },
+    "CODE-665581": {
+      "type": "inline-code",
+      "values": {
+        "content": "educationLevel"
+      }
+    },
+    "CODE-d0c2eb": {
+      "type": "inline-code",
+      "values": {
+        "content": "beginner"
+      }
+    },
+    "CODE-94e6f0": {
+      "type": "inline-code",
+      "values": {
+        "content": "intermediate"
+      }
+    },
+    "CODE-d21f85": {
+      "type": "inline-code",
+      "values": {
+        "content": "advanced"
+      }
+    },
+    "CODE-23d611": {
+      "type": "inline-code",
+      "values": {
+        "content": "topic"
+      }
+    },
+    "CODE-e904c9": {
+      "type": "inline-code",
+      "values": {
+        "content": "format"
+      }
+    },
+    "CODE-0cb1dd": {
+      "type": "inline-code",
+      "values": {
+        "content": "explainer"
+      }
+    },
+    "CODE-bfac31": {
+      "type": "inline-code",
+      "values": {
+        "content": "presentation"
+      }
+    },
+    "CODE-025409": {
+      "type": "inline-code",
+      "values": {
+        "content": "interview"
+      }
+    },
+    "CODE-fe3003": {
+      "type": "inline-code",
+      "values": {
+        "content": "tutorial"
+      }
+    },
+    "CODE-320e00": {
+      "type": "inline-code",
+      "values": {
+        "content": "panel"
+      }
+    },
+    "CODE-636485": {
+      "type": "inline-code",
+      "values": {
+        "content": "author"
+      }
+    },
+    "CODE-d6dc6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "breadcrumb"
+      }
+    },
+    "CODE-8ff084": {
+      "type": "inline-code",
+      "values": {
+        "content": "customThumbnailUrl"
+      }
+    },
+    "CODE-cb3f91": {
+      "type": "inline-code",
+      "values": {
+        "content": "---"
+      }
+    },
+    "CODE-56dc6d": {
+      "type": "inline-code",
+      "values": {
+        "content": "###"
+      }
+    },
+    "CODE-3ddeb5": {
+      "type": "inline-code",
+      "values": {
+        "content": "how-ethereum-works"
+      }
+    },
+    "CODE-c983c5": {
+      "type": "inline-code",
+      "values": {
+        "content": "consensus"
+      }
+    },
+    "CODE-ef7797": {
+      "type": "inline-code",
+      "values": {
+        "content": "blockchain"
+      }
+    },
+    "CODE-e06554": {
+      "type": "inline-code",
+      "values": {
+        "content": "cryptography"
+      }
+    },
+    "CODE-bc62a3": {
+      "type": "inline-code",
+      "values": {
+        "content": "accounts"
+      }
+    },
+    "CODE-b60d7b": {
+      "type": "inline-code",
+      "values": {
+        "content": "ethereum"
+      }
+    },
+    "CODE-c432b3": {
+      "type": "inline-code",
+      "values": {
+        "content": "intro"
+      }
+    },
+    "CODE-81dc07": {
+      "type": "inline-code",
+      "values": {
+        "content": "transactions"
+      }
+    },
+    "CODE-7160f8": {
+      "type": "inline-code",
+      "values": {
+        "content": "pos"
+      }
+    },
+    "CODE-2658a7": {
+      "type": "inline-code",
+      "values": {
+        "content": "smart-contracts"
+      }
+    },
+    "CODE-dd2026": {
+      "type": "inline-code",
+      "values": {
+        "content": "network-upgrades"
+      }
+    },
+    "CODE-dc2963": {
+      "type": "inline-code",
+      "values": {
+        "content": "upgrades"
+      }
+    },
+    "CODE-23b8d0": {
+      "type": "inline-code",
+      "values": {
+        "content": "pectra"
+      }
+    },
+    "CODE-400986": {
+      "type": "inline-code",
+      "values": {
+        "content": "dencun"
+      }
+    },
+    "CODE-008a17": {
+      "type": "inline-code",
+      "values": {
+        "content": "eip-4844"
+      }
+    },
+    "CODE-3aa3a9": {
+      "type": "inline-code",
+      "values": {
+        "content": "blobs"
+      }
+    },
+    "CODE-58624b": {
+      "type": "inline-code",
+      "values": {
+        "content": "fusaka"
+      }
+    },
+    "CODE-6a4444": {
+      "type": "inline-code",
+      "values": {
+        "content": "roadmap-and-priorities"
+      }
+    },
+    "CODE-2b9bbc": {
+      "type": "inline-code",
+      "values": {
+        "content": "pbs"
+      }
+    },
+    "CODE-ec8eb7": {
+      "type": "inline-code",
+      "values": {
+        "content": "mev"
+      }
+    },
+    "CODE-3b3e1a": {
+      "type": "inline-code",
+      "values": {
+        "content": "scaling-and-layer-2"
+      }
+    },
+    "CODE-567cf0": {
+      "type": "inline-code",
+      "values": {
+        "content": "scaling"
+      }
+    },
+    "CODE-6bdb18": {
+      "type": "inline-code",
+      "values": {
+        "content": "layer-2"
+      }
+    },
+    "CODE-8bffd6": {
+      "type": "inline-code",
+      "values": {
+        "content": "rollups"
+      }
+    },
+    "CODE-5ab07e": {
+      "type": "inline-code",
+      "values": {
+        "content": "optimistic-rollups"
+      }
+    },
+    "CODE-b766b2": {
+      "type": "inline-code",
+      "values": {
+        "content": "zk-rollups"
+      }
+    },
+    "CODE-2290d7": {
+      "type": "inline-code",
+      "values": {
+        "content": "use-cases"
+      }
+    },
+    "CODE-da9fa3": {
+      "type": "inline-code",
+      "values": {
+        "content": "defi"
+      }
+    },
+    "CODE-eab762": {
+      "type": "inline-code",
+      "values": {
+        "content": "finance"
+      }
+    },
+    "CODE-160317": {
+      "type": "inline-code",
+      "values": {
+        "content": "nfts"
+      }
+    },
+    "CODE-39d40b": {
+      "type": "inline-code",
+      "values": {
+        "content": "erc-721"
+      }
+    },
+    "CODE-2636f4": {
+      "type": "inline-code",
+      "values": {
+        "content": "erc-1155"
+      }
+    },
+    "CODE-33ec8d": {
+      "type": "inline-code",
+      "values": {
+        "content": "lending"
+      }
+    },
+    "CODE-c40cc2": {
+      "type": "inline-code",
+      "values": {
+        "content": "dapps"
+      }
+    },
+    "CODE-afdb24": {
+      "type": "inline-code",
+      "values": {
+        "content": "restaking"
+      }
+    },
+    "CODE-f1135b": {
+      "type": "inline-code",
+      "values": {
+        "content": "eigenlayer"
+      }
+    },
+    "CODE-638671": {
+      "type": "inline-code",
+      "values": {
+        "content": "dao"
+      }
+    },
+    "CODE-689f6a": {
+      "type": "inline-code",
+      "values": {
+        "content": "identity"
+      }
+    },
+    "CODE-f09e6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "desci"
+      }
+    },
+    "CODE-c192a6": {
+      "type": "inline-code",
+      "values": {
+        "content": "refi"
+      }
+    },
+    "CODE-38344b": {
+      "type": "inline-code",
+      "values": {
+        "content": "privacy-and-security"
+      }
+    },
+    "CODE-a4cc6b": {
+      "type": "inline-code",
+      "values": {
+        "content": "privacy"
+      }
+    },
+    "CODE-b9d906": {
+      "type": "inline-code",
+      "values": {
+        "content": "authentication"
+      }
+    },
+    "CODE-9af299": {
+      "type": "inline-code",
+      "values": {
+        "content": "community-stories"
+      }
+    },
+    "CODE-b7a348": {
+      "type": "inline-code",
+      "values": {
+        "content": "contributing"
+      }
+    },
+    "CODE-b3eff2": {
+      "type": "inline-code",
+      "values": {
+        "content": "translations"
+      }
+    },
+    "CODE-f354ee": {
+      "type": "inline-code",
+      "values": {
+        "content": "community"
+      }
+    },
+    "CODE-ef260e": {
+      "type": "inline-code",
+      "values": {
+        "content": "dev"
+      }
+    },
+    "LINK-1ebcc5": {
+      "type": "link",
+      "values": {
+        "url": "/videos/"
+      }
+    },
+    "LINK-f21d55": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml"
+      }
+    },
+    "LINK-c2821f": {
+      "type": "link",
+      "values": {
+        "url": "mailto:website@ethereum.org"
+      }
+    },
+    "LINK-0da87f": {
+      "type": "link",
+      "values": {
+        "url": "/terms-of-use/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-04-24T21:52:32.122Z",
+      "status": "success"
+    }
+  }
+}

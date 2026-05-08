@@ -58,7 +58,7 @@ const CalloutSSR = ({
             </h3>
           )}
           {description && (
-            <p className="text-body-medium mb-6 text-xl leading-[140%]">
+            <p className="mb-6 text-xl leading-[140%] text-body-medium">
               {description}
             </p>
           )}

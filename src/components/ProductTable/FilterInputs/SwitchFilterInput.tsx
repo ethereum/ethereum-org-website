@@ -1,11 +1,12 @@
 import { ReactElement } from "react"
+import type { LucideIcon } from "lucide-react"
 
 import { FilterInputState } from "@/lib/types"
 
 import Switch from "@/components/ui/switch"
 
 interface SwitchFilterInputProps {
-  Icon?: React.FC<React.SVGProps<SVGElement>>
+  Icon?: React.FC<React.SVGProps<SVGElement>> | LucideIcon
   label: string
   description?: string | ReactElement<unknown>
   filterIndex: number
@@ -32,7 +33,9 @@ const SwitchFilterInput = ({
       <div className="flex flex-row items-center justify-between gap-2 border-t py-4">
         <div className="flex flex-row items-center">
           <div className="h-8 w-8">
-            {Icon && <Icon className="mt-0.5 size-7" aria-hidden />}
+            {Icon && (
+              <Icon className="mt-0.5 size-7" strokeWidth={1} aria-hidden />
+            )}
           </div>
           <p>{label}</p>
         </div>
@@ -43,7 +46,7 @@ const SwitchFilterInput = ({
           }}
         />
       </div>
-      <p className="text-body-medium ms-8">{description}</p>
+      <p className="ms-8 text-body-medium">{description}</p>
     </>
   )
 }

@@ -113,7 +113,7 @@ const ReleaseCarousel = () => {
   return (
     <div className="w-full max-w-[100vw] overflow-hidden" dir="ltr">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
-        <div className="bg-background-highlight w-full rounded-2xl py-6">
+        <div className="w-full rounded-2xl bg-background-highlight py-6">
           <div className="flex flex-col gap-6">
             {/* First Carousel */}
             <Carousel
@@ -141,7 +141,7 @@ const ReleaseCarousel = () => {
                           {status === "prod" && (
                             <div
                               className={cn(
-                                "bg-primary-low-contrast w-fit rounded-lg px-2 py-1",
+                                "w-fit rounded-lg bg-primary-low-contrast px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -153,7 +153,7 @@ const ReleaseCarousel = () => {
                           {status === "soon" && (
                             <div
                               className={cn(
-                                "bg-warning-light w-fit rounded-lg px-2 py-1",
+                                "w-fit rounded-lg bg-warning-light px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -165,7 +165,7 @@ const ReleaseCarousel = () => {
                           {status === "dev" && (
                             <div
                               className={cn(
-                                "bg-card-gradient-secondary-hover w-fit rounded-lg px-2 py-1",
+                                "w-fit rounded-lg bg-card-gradient-secondary-hover px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -182,7 +182,7 @@ const ReleaseCarousel = () => {
                               "flex h-1 flex-1",
                               index !== 0
                                 ? status === "soon"
-                                  ? "from-primary to-primary-low-contrast bg-linear-to-r"
+                                  ? "bg-linear-to-r from-primary to-primary-low-contrast"
                                   : status === "prod"
                                     ? "bg-primary"
                                     : "bg-primary-low-contrast"
@@ -196,7 +196,7 @@ const ReleaseCarousel = () => {
                                 ? "bg-primary"
                                 : "bg-primary-low-contrast",
                               status === "soon" &&
-                                "border-primary bg-background border-2"
+                                "border-2 border-primary bg-background"
                             )}
                           />
                           <div
@@ -214,7 +214,7 @@ const ReleaseCarousel = () => {
                           <p className="text-md font-bold">
                             {release.releaseName}
                           </p>
-                          <p className="text-body-medium font-mono text-sm">
+                          <p className="font-mono text-sm text-body-medium">
                             {displayDate}
                           </p>
                         </div>

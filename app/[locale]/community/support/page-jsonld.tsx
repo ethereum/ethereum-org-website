@@ -8,7 +8,8 @@ import { isExternal, normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { sections } from "./data"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function SupportJsonLD({
   locale,

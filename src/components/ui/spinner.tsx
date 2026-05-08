@@ -5,7 +5,7 @@ const Spinner = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={className} {...props}>
+  <div ref={ref} data-slot="loading" className={className} {...props}>
     <Loader2 className="size-[1em] motion-safe:animate-spin motion-reduce:animate-pulse" />
   </div>
 ))
