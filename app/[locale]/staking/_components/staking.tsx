@@ -464,26 +464,19 @@ const StakingPage = async ({
             <div>
               <H2 id={tocItems.faq.id}>{tocItems.faq.title}</H2>
               <ExpandableCard title={t("page-staking-faq-4-question")}>
-                <Stack className="gap-[1.45rem]">
-                  <p>{t("page-staking-faq-4-answer-p1")}</p>
-                  <p>{t("page-staking-faq-4-answer-p2")}</p>
-                  <p>{t("page-staking-faq-4-answer-p3")}</p>
-                  <ButtonLink className="self-start" href="/roadmap/merge/">
-                    {t("page-upgrades-merge-btn")}
-                  </ButtonLink>
-                </Stack>
+                <p>{t("page-staking-faq-4-answer-p1")}</p>
+                <p>{t("page-staking-faq-4-answer-p2")}</p>
+                <p>{t("page-staking-faq-4-answer-p3")}</p>
+                <ButtonLink className="self-start" href="/roadmap/merge/">
+                  {t("page-upgrades-merge-btn")}
+                </ButtonLink>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-5-question")}>
-                <Stack className="gap-[1.45rem]">
-                  <p>{t("page-staking-faq-5-answer-p1")}</p>
-                  <p>{t("page-staking-faq-5-answer-p2")}</p>
-                  <ButtonLink
-                    className="self-start"
-                    href="/staking/withdrawals/"
-                  >
-                    {t("page-staking-faq-5-answer-link")}
-                  </ButtonLink>
-                </Stack>
+                <p>{t("page-staking-faq-5-answer-p1")}</p>
+                <p>{t("page-staking-faq-5-answer-p2")}</p>
+                <ButtonLink className="self-start" href="/staking/withdrawals/">
+                  {t("page-staking-faq-5-answer-link")}
+                </ButtonLink>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-1-question")}>
                 <Translation id="page-staking:page-staking-faq-1-answer" />
@@ -492,12 +485,10 @@ const StakingPage = async ({
                 {t("page-staking-faq-2-answer")}
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-3-question")}>
-                <Stack className="gap-[1.45rem]">
-                  <p>{t("page-staking-faq-3-answer-p1")}</p>
-                  <p>
-                    <Translation id="page-staking:page-staking-faq-3-answer-p2" />
-                  </p>
-                </Stack>
+                <p>{t("page-staking-faq-3-answer-p1")}</p>
+                <p>
+                  <Translation id="page-staking:page-staking-faq-3-answer-p2" />
+                </p>
               </ExpandableCard>
             </div>
             <div>
