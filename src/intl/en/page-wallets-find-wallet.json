@@ -72,6 +72,8 @@
   "page-find-wallet-finance-desc": "Wallets focusing on frequent usage of DeFi apps.",
   "page-find-wallet-developer-title": "Developer",
   "page-find-wallet-developer-desc": "Wallets that help develop and test dapps.",
+  "page-find-wallet-persona-legend": "Filter wallets by user type",
+  "page-find-wallet-persona-count-available": "{count} available",
   "page-find-wallet-active": "active",
   "page-find-wallet-footnote-1": "Wallets listed on this page are not official endorsements, and are provided for informational purposes only.",
   "page-find-wallet-footnote-2": "Their descriptions have been provided by the wallet projects themselves.",
