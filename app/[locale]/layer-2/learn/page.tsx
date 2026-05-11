@@ -140,7 +140,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <div className="w-full md:w-[30%]">
             <Image
               src={WhatIsEthereumImage}
-              alt="What is Ethereum"
+              alt=""
+              sizes="(max-width: 768px) calc(100vw - 64px), (max-width: 1536px) 30vw, 432px"
               className="h-full w-full object-cover"
             />
           </div>

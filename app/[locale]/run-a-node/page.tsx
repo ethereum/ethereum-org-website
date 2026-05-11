@@ -344,7 +344,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <Image
                 src={hackathon}
                 alt=""
-                sizes="624px"
+                sizes="(max-width: 480px) calc(100vw - 64px), 624px"
                 style={{ width: "624px", height: "auto" }}
               />
             </Width40>
@@ -689,7 +689,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <Image
                 src={community}
                 alt=""
-                sizes="624px"
+                sizes="(max-width: 480px) calc(100vw - 64px), (max-width: 1280px) calc((100vw - 96px) / 2), 624px"
                 style={{ width: "624px", height: "auto" }}
               />
             </Column>
@@ -727,7 +727,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               className="-translate-y-12 -scale-x-100 transform lg:-translate-x-8 lg:translate-y-0 lg:-scale-x-[115%] lg:scale-[115%]"
               src={leslie}
               alt=""
-              sizes="624px"
+              sizes="(max-width: 480px) calc(100vw - 64px), (max-width: 1280px) calc((100vw - 96px) / 2), 624px"
               style={{ width: "624px", height: "auto" }}
             />
           </Column>

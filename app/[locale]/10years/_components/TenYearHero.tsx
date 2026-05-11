@@ -32,14 +32,15 @@ const TenYearHero = async () => {
           src={TenYearBackgroundImage}
           alt="" // decorative element
           className="max-h-[350px] object-cover"
-          priority
+          preload
+          sizes="(max-width: 1536px) 100vw, 1536px"
         />
         {/* CLIENT SIDE, lazy loaded */}
         <ParallaxImage
           src={TenYearGraphicImage}
           alt={t("page-10-year-anniversary-meta-title")}
           className="absolute top-0 left-0 max-h-[350px] object-contain transition-transform duration-200 ease-out"
-          priority
+          sizes="(max-width: 1536px) 100vw, 1536px"
         />
       </div>
       <p className="text-center text-3xl">

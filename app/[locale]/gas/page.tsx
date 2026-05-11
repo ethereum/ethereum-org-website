@@ -189,7 +189,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
 
             <div className="hidden max-h-[450px] flex-[50%] justify-center lg:flex">
-              <Image src={walletImg} alt="A robot" className="object-contain" />
+              <Image
+                src={walletImg}
+                alt="A robot"
+                className="object-contain"
+                sizes="(max-width: 991px) 1px, (max-width: 1536px) 50vw, 768px"
+              />
             </div>
           </Flex>
         </Content>
