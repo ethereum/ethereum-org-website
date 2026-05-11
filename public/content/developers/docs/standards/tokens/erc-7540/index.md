@@ -177,4 +177,4 @@ In asynchronous vaults, `previewDeposit`, `previewMint`, `previewRedeem`, and `p
 
 - [EIP-7540: Asynchronous ERC-4626 Tokenized Vaults](https://eips.ethereum.org/EIPS/eip-7540)
 - [EIP-4626: Tokenized Vault Standard](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-7540 Reference Implementation](https://github.com/ERC4626-Alliance/ERC-7540-Reference)
+- [OpenZeppelin ERC-7540 Implementation](https://github.com/OpenZeppelin/openzeppelin-community-contracts/blob/master/contracts/token/ERC20/extensions/ERC7540.sol)
