@@ -9,7 +9,7 @@ breadcrumb: Clear signing
 published: 2026-05-11
 ---
 
-Most major Ethereum exploits have had the same final step: a user approving a transaction they could not meaningfully understand. Hardware wallets show raw hex calldata, and worse force you to have blind signing on. Software wallets show decoded fields, but only when they recognise the contract. When they don't, whether because the protocol is new, the app is compromised, or the device is offline, users sign blind.
+Most major Ethereum exploits had the same final step: a user approving a transaction they could not meaningfully understand. Hardware wallets show raw hex calldata, and worse force you to have blind signing on. Software wallets show decoded fields, but only when they recognise the contract. When they don't, whether because the protocol is new, the app is compromised, or the device is offline, users sign blind.
 
 [ERC-7730](https://eips.ethereum.org/EIPS/eip-7730) defines a standard JSON format for describing what your contract's function calls *mean*. 
 
@@ -31,7 +31,7 @@ This is [clear signing](https://clearsigning.org/) — "What You See Is What You
 ## Prerequisites {#prerequisites}
 
 - Familiarity with Solidity and smart contract ABIs
-- A deployed contract with a verified ABI ([Sourcify](https://sourcify.dev) verification is required before a descriptor is accepted to the registry) 
+- A deployed smart contract with a verified ABI ([Sourcify](https://sourcify.dev) verification is required before a descriptor is accepted to the registry) 
 - Python 3.12+ for the validation CLI 
 - Basic JSON knowledge
 
@@ -80,10 +80,10 @@ The `context` section binds the descriptor to one or more contract deployments. 
 
 ### Context fields {#context-fields}
 
-- `context.$id`: A unique identifier for this descriptor document or deployment configuration.
-- `contract.deployments`: The set of deployments this descriptor applies to.
-- `deployments[].chainId`: The EVM chain ID for a deployment. Include every chain where your contract is deployed.
-- `deployments[].address`: The contract address wallets should associate with this descriptor. Use the implementation address that holds the execution logic.
+- `context.$id` — A unique identifier for this descriptor document or deployment configuration.
+- `contract.deployments` — The set of deployments this descriptor applies to.
+- `deployments[].chainId` — The EVM chain ID for a deployment. Include every chain where your contract is deployed.
+- `deployments[].address` — The contract address wallets should associate with this descriptor. Use the implementation address that holds the execution logic.
 
 ## Step 3: Write the metadata section {#step-3-write-the-metadata-section}
 
@@ -100,15 +100,11 @@ The metadata section provides human-readable information about the project and c
 
 ### Metadata fields {#metadata-fields}
 
-- `owner`: The project, protocol, organization, or maintainer responsible for this descriptor.
-- `info.url`: A canonical project or documentation URL wallets may display to users for additional context.
-- `contractName`: The contract or implementation name described by this file, typically matching the verified source code or ABI.
+- `owner` — The project, protocol, organization, or maintainer responsible for this descriptor.
+- `info.url` — A canonical project or documentation URL wallets may display to users for additional context.
+- `contractName` — The contract or implementation name described by this file, typically matching the verified source code or ABI.
 
-If your ERC-7730 file describes an ERC-20 contract, you should add a token object too. It contains:
-
-- `name`: the token name, equivalent to the ERC-20 `name()` return value.
-- `ticker`: the token symbol/ticker shown by wallets, equivalent to the ERC-20 `symbol()` return value.
-- `decimals`: the number of decimal places used to format token amounts, equivalent to the ERC-20 `decimals()` return value.
+If your ERC-7730 file describes an ERC-20 contract, you should add a token object too. 
 
 ## Step 4: Write the display formats section {#step-4-write-the-displayformats-section}
 
@@ -117,7 +113,7 @@ The `display.formats` object maps function signatures to human-readable signing 
 Each key is a human-readable ABI fragment — the function signature including both parameter names and parameter types exactly as they appear in your ABI.
 
 
-### E.g. Describing a token swap {#eg-describing-token-swap}
+### Example: Describing a token swap {#eg-describing-token-swap}
 
 ```json
 "display": {
@@ -168,22 +164,22 @@ Each key is a human-readable ABI fragment — the function signature including b
 
 ### Display fields {#display-fields}
 
-- **`intent`** — **(required)** A short, user-friendly description of the action, such as "Swap".
-- **`interpolatedIntent`** — **(recommended)** A richer sentence template that embeds formatted field values, such as `"Swap {amountIn} for at least {amountOutMin}"`. Include this alongside `intent` to provide an even more user friendly descriptor that wallets can choose to show provided any display constraints.
-- **`fields`** — **(required)** The ordered list of transaction fields wallets should display to users.
-- **`path`** — **(required)** A reference to the transaction data. `#.fieldName` points to a decoded calldata parameter by the name in the ABI. `@.value` refers to the ETH value sent with the transaction.
-- **`label`** — **(required)** The human-readable label shown beside the value.
-- **`format`** — **(recommended)** Controls how the value should be rendered. Common formats include:
-  - `tokenAmount`
-  - `addressName`
-  - `date`
+- **`intent`** — **(Required)** A short, user-friendly description of the action, such as "Swap".
+- **`interpolatedIntent`** — **(Recommended)** A richer sentence template that embeds formatted field values, such as `"Swap {amountIn} for at least {amountOutMin}"`. Include this alongside `intent` to provide an even more user friendly descriptor that wallets can choose to show provided any display constraints.
+- **`fields`** — **(Required)** The ordered list of transaction fields wallets should display to users.
+  - **`path`** — **(Required)** A reference to the transaction data. `#.fieldName` points to a decoded calldata parameter by the name in the ABI. `@.value` refers to the ETH value sent with the transaction.
+  - **`label`** — **(Required)** The human-readable label shown beside the value.
+  - **`format`** — **(Recommended)** Controls how the value should be rendered. Common formats include:
+    - `tokenAmount`
+    - `addressName`
+    - `date`
 
-  Use `raw` when no additional formatting is needed. Some formats accept additional **`params`** configuration. For example:
+    Use `raw` when no additional formatting is needed. Some formats accept additional **`params`** configuration. For example:
 
-- `tokenAmount` can use `tokenPath` to identify which token address provides decimals and ticker metadata.
-- `date` can use `encoding` to describe how the timestamp is encoded.
+    - `tokenAmount` can use `tokenPath` to identify which token address provides decimals and ticker metadata.
+    - `date` can use `encoding` to describe how the timestamp is encoded.
 
-  If the selected format does not require extra information, omit `params`.
+    If the selected format does not require extra information, omit `params`.
 
 ## The complete descriptor {#the-complete-descriptor}
 
@@ -260,7 +256,7 @@ Each key is a human-readable ABI fragment — the function signature including b
 
 ## Step 5: Submit to the registry {#step-5-submit-to-the-registry}
 
-The [ERC-7730 registry](https://github.com/ethereum/clear-signing-erc7730-registry) is an open repository hosted by the Ethereum Foundation as a neutral steward. Anyone is free to clone and self-host it — wallets independently decide which registry instances they trust.
+The [ERC-7730 registry](https://github.com/ethereum/clear-signing-erc7730-registry) is an open repository hosted by the [Ethereum Foundation](/foundation/) as a neutral steward. Anyone is free to clone and self-host it — wallets independently decide which registry instances they trust.
 
 1. Fork the repository on GitHub  
 2. Create a folder at `registry/<your-project-name>/`  
@@ -270,11 +266,19 @@ The [ERC-7730 registry](https://github.com/ethereum/clear-signing-erc7730-regist
 
 When you open the PR, CI automatically runs schema validation, checks that function signatures produce valid selectors, confirms the contract address is verified on Sourcify, and flags ABI inconsistencies. The check results appear inline on the PR. Registry maintainers screen submissions for malformed or potentially malicious descriptors. Inclusion in the registry does not imply audit or endorsement.
 
-**Note:** Your contract must be verified on [Sourcify](https://repo.sourcify.dev) before your PR can be accepted. If it is not yet verified, [submit verification](https://verify.sourcify.dev/) first.
+<Alert variant="info">
+<AlertContent>
+<AlertDescription>
+**Note:** Your contract must be verified on <a href="https://repo.sourcify.dev">Sourcify</a> before your PR can be accepted. If it is not yet verified, <a href="https://verify.sourcify.dev/">submit verification</a> first.
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## What happens after merging? {#what-happens-after-merging}
 
-All descriptors in the registry are open to auditors. After your PR is merged, any auditor can review your descriptor and publish a cryptographic attestation (under [ERC-8176](https://github.com/ethereum/ERCs/pull/1576)) confirming its accuracy. These attestation signals let wallets apply their own trust policies — a descriptor with multiple independent attestations carries more weight than one without. You can reach the auditor community through [clearsigning.org](https://clearsigning.org).
+All descriptors in the registry are open to auditors. After your PR is merged, any auditor can review your descriptor and publish a cryptographic attestation (under [ERC-8176](https://github.com/ethereum/ERCs/pull/1576)) confirming its accuracy. 
+
+These attestation signals let wallets apply their own trust policies — a descriptor with multiple independent attestations carries more weight than one without. You can reach the auditor community through [clearsigning.org](https://clearsigning.org).
 
 Wallets choose which registry they will support. Once your descriptor is in the registry, wallets that support ERC-7730 will start fetching it if it is in their registry and will display human-readable data when users interact with your contract.
 
