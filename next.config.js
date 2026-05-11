@@ -3,6 +3,8 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
 const createNextIntlPlugin = require("next-intl/plugin")
 
+const { createMDX } = require("fumadocs-mdx/next")
+
 const { withSentryConfig } = require("@sentry/nextjs")
 
 const redirects = require("./redirects.config")
@@ -10,6 +12,35 @@ const redirects = require("./redirects.config")
 const i18nConfigJson = require("./i18n.config.json")
 
 const withNextIntl = createNextIntlPlugin()
+
+// PoC: Fumadocs MDX plugin compiles MDX files referenced in source.config.ts
+// at build time, emitting JS modules to `.source/` that ship with the bundle.
+// Disabled in this run if FUMADOCS_POC=0 is set so we can A/B the build.
+// NOTE: createMDX() registers a global turbopack rule for *.yaml that shadows
+// this repo's existing yaml-loader rule (needed for src/data/*.yaml). We
+// restore the original rules below so non-content yaml files keep working.
+const fumadocsWrapper =
+  process.env.FUMADOCS_POC === "0" ? (c) => c : createMDX()
+const withFumadocs = (cfg) => {
+  if (process.env.FUMADOCS_POC !== "0" && cfg.turbopack?.rules) {
+    // Drop our `*.md` raw-loader rule so Fumadocs' `*.{md,mdx}` loader handles
+    // markdown content. No code imports `.md` files directly, so the raw rule
+    // was unused.
+    delete cfg.turbopack.rules["*.md"]
+  }
+  const wrapped = fumadocsWrapper(cfg)
+  if (wrapped.turbopack?.rules && cfg.turbopack?.rules) {
+    // Restore our yaml rules — createMDX() registers a blanket `*.yaml` rule
+    // for its meta collection that shadows our yaml-loader rule needed by
+    // `src/data/*.yaml`.
+    wrapped.turbopack.rules = {
+      ...wrapped.turbopack.rules,
+      "*.yaml": cfg.turbopack.rules["*.yaml"],
+      "*.yml": cfg.turbopack.rules["*.yml"],
+    }
+  }
+  return wrapped
+}
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
@@ -262,7 +293,7 @@ module.exports = (phase) => {
     }
   }
 
-  return withNextIntl(nextConfig)
+  return withFumadocs(withNextIntl(nextConfig))
 }
 
 module.exports = withSentryConfig(module.exports, {

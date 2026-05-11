@@ -143,6 +143,8 @@
     "eslint-plugin-storybook": "10.3.3",
     "eslint-plugin-unused-imports": "^3.2.0",
     "franc-min": "^6.2.0",
+    "fumadocs-core": "^16.8.9",
+    "fumadocs-mdx": "^15.0.2",
     "husky": "^9.0.11",
     "image-size": "^1.0.2",
     "intl-content-tree": "^0.3.0",
