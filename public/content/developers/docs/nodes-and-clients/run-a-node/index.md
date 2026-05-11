@@ -128,6 +128,7 @@ Multiple user-friendly projects aim to improve the experience of setting up a cl
 
 Below are a few projects which can help you install and control clients just with a few clicks:
 
+- [Chainstack Self-Hosted](https://docs.chainstack.com/docs/self-hosted/introduction) - Web UI and CLI for deploying execution and consensus clients on Kubernetes. Snapshot bootstrap and built-in monitoring included. Free. No Chainstack account required. Built by Chainstack.
 - [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
 - [EthPillar](https://www.coincashew.com/coins/overview-eth/ethpillar) - Quickest and easiest way to setup a full node. One-liner setup tool and node management TUI. Free. Open source. Public goods for Ethereum by solo stakers. ARM64 and AMD64 support.
 - [eth-docker](https://eth-docker.net/) - Automated setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
