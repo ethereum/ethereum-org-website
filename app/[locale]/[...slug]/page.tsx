@@ -44,8 +44,10 @@ export default async function Page(props: { params: Promise<Params> }) {
   const localeSource = getContentSource(locale)
   if (!localeSource) notFound()
 
+  // Fall back to EN when the translation is missing — but only if EN is in
+  // the build (NEXT_PUBLIC_BUILD_LOCALES could exclude it).
   const page =
-    localeSource.getPage(slugArray) ?? contentSource.getPage(slugArray)
+    localeSource.getPage(slugArray) ?? contentSource?.getPage(slugArray)
   const isTranslated = Boolean(localeSource.getPage(slugArray))
   if (!page) notFound()
 
@@ -130,7 +132,7 @@ export async function generateMetadata(props: { params: Promise<Params> }) {
   const { locale, slug } = await props.params
   const src = getContentSource(locale)
   const page =
-    src?.getPage(slug) ?? (src ? contentSource.getPage(slug) : undefined)
+    src?.getPage(slug) ?? (src ? contentSource?.getPage(slug) : undefined)
   if (!page) {
     const t = await getTranslations("common")
     return {

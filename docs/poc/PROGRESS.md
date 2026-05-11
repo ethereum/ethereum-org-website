@@ -368,6 +368,37 @@ Measured: **6 m 15 s** cold-build for all 25 locales × 326 pages going
 entirely through Fumadocs. Comparable to today's Netlify build envelope.
 Build perf is not a blocker even at full scope.
 
+## Honouring `NEXT_PUBLIC_BUILD_LOCALES`
+
+The repo already has a convention (`src/lib/constants.ts:21`) for subsetting
+the built locales via the comma-separated `NEXT_PUBLIC_BUILD_LOCALES` env
+var. The fumadocs pipeline now honours it the same way:
+
+- **`source.config.ts`** — when set, disabled locales' `files` glob switches
+  to `["__disabled_locale_never_matches__.never"]` (a positive pattern that
+  matches nothing). Fumadocs-mdx emits zero glob imports for those
+  collections, so they cost nothing at compile.
+- **`src/lib/poc-fumadocs/source.ts`** — disabled locales are filtered out of
+  the `sources` record. `getContentSource(locale)` returns `undefined` for
+  them; the route then 404s.
+- **`generateStaticParams`** — `allLocaleParams()` iterates only enabled
+  locales, so non-built locale × slug combinations never become routes.
+
+Effect — same env var, three measured modes:
+
+|                   | All 25 locales | EN-only (`=en`) | Baseline (legacy, all locales) |
+|-------------------|----------------|-----------------|--------------------------------|
+| Routes            | 8213           | 388             | 1140                           |
+| Compile           | 3.0 min        | 46 s            | 26.6 s                         |
+| TypeScript        | 39 s           | 34.9 s          | 21.5 s                         |
+| Static generation | 2.3 min        | 11.5 s          | 50 s                           |
+| **Total wall**    | **6 m 15 s**   | **1 m 40 s**    | **1 m 42 s**                   |
+| `.next` size      | 8.2 GB         | 714 MB          | 1.6 GB                         |
+
+For CI smoke tests or visual regression, `NEXT_PUBLIC_BUILD_LOCALES=en` is
+already the configured pattern (`pnpm test:visual:build` in `package.json`)
+— this works out of the box.
+
 ## How to reproduce
 
 ```bash
