@@ -106,6 +106,7 @@ const AssetsPage = () => {
               className="w-20"
               src={assetPageHeroImage}
               alt={t("page-assets-eth-diamond-gray")}
+              sizes="80px"
             />
           </Center>
           <Center>

@@ -115,6 +115,7 @@ const Layer2Learn = ({
           <Image
             src={WhatIsEthereumImage}
             alt="What is Ethereum"
+            sizes="(max-width: 768px) calc(100vw - 64px), (max-width: 1536px) 30vw, 432px"
             className="h-full w-full object-cover"
           />
         </div>

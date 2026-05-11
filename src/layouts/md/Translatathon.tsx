@@ -26,7 +26,12 @@ const ContentSplit = ({ children }) => {
     <Flex className="w-full flex-col md:flex-row">
       <div>{children}</div>
       <Flex className="max-h-[300px]">
-        <Image src={robotImage} alt="robot" className="object-contain" />
+        <Image
+          src={robotImage}
+          alt="robot"
+          className="object-contain"
+          sizes="227px"
+        />
       </Flex>
     </Flex>
   )
@@ -42,7 +47,7 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 const WhyWeDoItColumn = (props: ChildOnlyProp) => (
   <Flex className="my-auto w-full flex-col lg:m-0 lg:me-8">
     <div className="mx-auto h-[272px]">
-      <Image src={WhyWeDoItImage} alt="" className="h-[272px]" />
+      <Image src={WhyWeDoItImage} alt="" className="h-[272px]" sizes="199px" />
     </div>
     <div>{props.children}</div>
   </Flex>
@@ -51,7 +56,12 @@ const WhyWeDoItColumn = (props: ChildOnlyProp) => (
 const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
   <Flex className="my-auto w-full flex-col lg:m-0 lg:ms-8">
     <div className="mx-auto h-[272px]">
-      <Image src={HowDoesItWorkImage} alt="" className="h-[272px]" />
+      <Image
+        src={HowDoesItWorkImage}
+        alt=""
+        className="h-[272px]"
+        sizes="294px"
+      />
     </div>
     <div>{props.children}</div>
   </Flex>
