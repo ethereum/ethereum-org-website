@@ -7,9 +7,9 @@ import PageJsonLD from "@/components/PageJsonLD"
 import { stripMarkdown } from "@/lib/utils/md"
 import { toIsoDuration } from "@/lib/utils/time"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
-import { getDefaultThumbnailUrl } from "@/lib/utils/videos"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 import { resolveAuthorsFromFrontmatter } from "@/lib/jsonld/utils"
 
 export default async function VideoPageJsonLD({
@@ -51,7 +51,7 @@ export default async function VideoPageJsonLD({
         "@id": url,
         name: frontmatter.title,
         description: frontmatter.description,
-        url: url,
+        url,
         inLanguage: locale,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
@@ -92,7 +92,7 @@ export default async function VideoPageJsonLD({
         isPartOf: { "@id": videoGalleryUrl },
         thumbnailUrl:
           frontmatter.customThumbnailUrl ||
-          getDefaultThumbnailUrl(frontmatter.youtubeId),
+          `https://img.youtube.com/vi/${frontmatter.youtubeId}/hqdefault.jpg`,
         embedUrl: `https://www.youtube.com/embed/${frontmatter.youtubeId}`,
         contentUrl: `https://www.youtube.com/watch?v=${frontmatter.youtubeId}`,
         educationalLevel: frontmatter.educationLevel,

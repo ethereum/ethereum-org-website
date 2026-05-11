@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/dao-hack-ethereum-classic/index.md",
+  "generatedAt": "2026-04-28T23:05:03.091Z",
+  "rootHash": "4089fed1426f",
+  "tree": {
+    "contentHash": "41c915d54010",
+    "anchorHash": "b608ad78d29b",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "c481733889ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "a76f8a9618a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "4c2df52cc443"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "590831944f90"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "816021af9486"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0c2ebfa3490"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "ac6a51791a9c"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "1d2304519a4e"
+      },
+      "prose:1": {
+        "contentHash": "ff388753e032",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "ca17c3d16b37"
+      },
+      "prose:2": {
+        "contentHash": "ec933e1f0c09",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "the-discovery-000": {
+        "contentHash": "5aa15481e600",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f7344ddd7755",
+        "children": {
+          "_label": {
+            "contentHash": "f7344ddd7755",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1415fe2238d7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "what-was-the-dao-200": {
+        "contentHash": "6c11c4742494",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9d911fc2b3e2",
+        "children": {
+          "_label": {
+            "contentHash": "9d911fc2b3e2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "1ece0277f8b5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-crowdfund-401": {
+        "contentHash": "d6a289d99a30",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "391d7444500b",
+        "children": {
+          "_label": {
+            "contentHash": "391d7444500b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d17bf81f6639",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-hack-502": {
+        "contentHash": "a72ab2cf33de",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a22c8fa3570f",
+        "children": {
+          "_label": {
+            "contentHash": "a22c8fa3570f",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b2976ec83a85",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-robin-hood-group-655": {
+        "contentHash": "aeb0e7082551",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "ca0df2727d31",
+        "children": {
+          "_label": {
+            "contentHash": "ca0df2727d31",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "293e8112a1ff",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-race-to-empty-910": {
+        "contentHash": "6f19791b790b",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "aabb279f59c0",
+        "children": {
+          "_label": {
+            "contentHash": "aabb279f59c0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "baf82d3aca2e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-fork-1008": {
+        "contentHash": "1294a3c9f811",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "36613f7fc3ad",
+        "children": {
+          "_label": {
+            "contentHash": "36613f7fc3ad",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4aee6072068a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "code-is-law-1148": {
+        "contentHash": "9f47aa02a517",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e3243c4f58e3",
+        "children": {
+          "_label": {
+            "contentHash": "e3243c4f58e3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d05f1c3077a2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "ethereum-classic-1434": {
+        "contentHash": "15037eefa60d",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f85dcc309b2b",
+        "children": {
+          "_label": {
+            "contentHash": "f85dcc309b2b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "87e914779a92",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "legacy-of-the-dao-1614": {
+        "contentHash": "b51e5002ed57",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a5a41a714069",
+        "children": {
+          "_label": {
+            "contentHash": "a5a41a714069",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "a5e2a10713b9",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-daos-lasting-impact-1726": {
+        "contentHash": "a83bc54ad898",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "7729bbc25eec",
+        "children": {
+          "_label": {
+            "contentHash": "7729bbc25eec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "939be35ceb7d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "the-discovery-000",
+      "what-was-the-dao-200",
+      "the-crowdfund-401",
+      "the-hack-502",
+      "the-robin-hood-group-655",
+      "the-race-to-empty-910",
+      "the-fork-1008",
+      "code-is-law-1148",
+      "ethereum-classic-1434",
+      "legacy-of-the-dao-1614",
+      "the-daos-lasting-impact-1726"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

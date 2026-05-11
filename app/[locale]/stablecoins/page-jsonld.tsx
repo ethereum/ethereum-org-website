@@ -4,7 +4,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function StablecoinsPageJsonLD({ locale, contributors }) {
   const t = await getTranslations("page-stablecoins")
@@ -17,16 +18,19 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#stablecoins` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-stablecoins-meta-title"),
         description: t("page-stablecoins-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -50,11 +54,12 @@ export default async function StablecoinsPageJsonLD({ locale, contributors }) {
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#stablecoins` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#stablecoins`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-stablecoins-title"),
         description: t("page-stablecoins-meta-description"),
         image: "https://ethereum.org/images/stablecoins/hero.png",

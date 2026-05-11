@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/restaking-explained/index.md",
+  "generatedAt": "2026-04-29T00:07:52.347Z",
+  "rootHash": "516101d6dee7",
+  "tree": {
+    "contentHash": "172d0ef02eb3",
+    "anchorHash": "d9dac51b3ed1",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "89f83cd5a01b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "42f4571bd835",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "79c34e2226aa"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "542e876beddc"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "329ca82fa2c1"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0cb1dd1d18fd"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "7361fff8c7dc"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "f8ff31877a80"
+      },
+      "prose:1": {
+        "contentHash": "7dc5c906fef2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "c79e9c871498"
+      },
+      "prose:2": {
+        "contentHash": "087a563bac41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "introduction-000": {
+        "contentHash": "551b799525c5",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "92590c627fa1",
+        "children": {
+          "_label": {
+            "contentHash": "92590c627fa1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "5e8efc8e8eec",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "self-staking-048": {
+        "contentHash": "52ca10771199",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "92a7ee2b43c6",
+        "children": {
+          "_label": {
+            "contentHash": "92a7ee2b43c6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "07bd2a30d6f3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "delegated-staking-252": {
+        "contentHash": "4796ad8bdacf",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "a8ee4727fe55",
+        "children": {
+          "_label": {
+            "contentHash": "a8ee4727fe55",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7450b4619df2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "self-restaking-with-native-eth-442": {
+        "contentHash": "52ce57b1f705",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "79672d1238b6",
+        "children": {
+          "_label": {
+            "contentHash": "79672d1238b6",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "d31367b2bd18",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "delegated-native-restaking-828": {
+        "contentHash": "bb7ce04a1972",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e22d71bf3738",
+        "children": {
+          "_label": {
+            "contentHash": "e22d71bf3738",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7432e0cbf68c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "non-native-restaking-1057": {
+        "contentHash": "bb9b772ba762",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f47876ebff99",
+        "children": {
+          "_label": {
+            "contentHash": "f47876ebff99",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "94d7a2b73cfa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "slashing-and-restaking-1355": {
+        "contentHash": "76cbcec303a9",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "213b70072d01",
+        "children": {
+          "_label": {
+            "contentHash": "213b70072d01",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "656047320e0d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "introduction-000",
+      "self-staking-048",
+      "delegated-staking-252",
+      "self-restaking-with-native-eth-442",
+      "delegated-native-restaking-828",
+      "non-native-restaking-1057",
+      "slashing-and-restaking-1355"
+    ]
+  },
+  "sourceCommitSha": "9e5ab55f25ed7c9bc1e423002e980c4df0384178"
+}

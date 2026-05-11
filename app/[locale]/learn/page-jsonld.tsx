@@ -4,7 +4,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function LearnPageJsonLD({ locale, contributors }) {
   const t = await getTranslations("page-learn")
@@ -26,7 +27,7 @@ export default async function LearnPageJsonLD({ locale, contributors }) {
         "@id": url,
         name: t("page-learn-meta-title"),
         description: t("hero-subtitle"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

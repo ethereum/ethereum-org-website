@@ -10,7 +10,8 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 import { communityHubSchemas } from "@/data/community-hub-schemas"
 import communityHubs from "@/data/community-hubs"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 function buildHubSchemaNodes(
   hub: (typeof communityHubs)[number],
@@ -128,7 +129,7 @@ export default async function EventsJsonLD({
         "@id": url,
         name: t("page-events-meta-title", { year }),
         description: t("page-events-meta-description", { year }),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -165,7 +166,7 @@ export default async function EventsJsonLD({
         "@id": `${url}#sections`,
         name: t("page-events-meta-title", { year }),
         description: t("page-events-meta-description", { year }),
-        url: url,
+        url,
         numberOfItems: 4,
         itemListElement: [
           {

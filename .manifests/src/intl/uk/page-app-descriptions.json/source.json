@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-app-descriptions.json",
-  "generatedAt": "2026-04-27T01:18:51.673Z",
-  "rootHash": "7405254e8ae5",
+  "generatedAt": "2026-05-01T17:07:49.778Z",
+  "rootHash": "7bcf677b9f7e",
   "tree": {
-    "contentHash": "62370da95bcf",
-    "anchorHash": "3e2772382b70",
+    "contentHash": "e2b98a191a8b",
+    "anchorHash": "a02da288de3d",
     "children": {
       "app-0xbow-description": {
         "contentHash": "d6f1ff938878",
@@ -475,10 +475,6 @@
         "contentHash": "64d53839e023",
         "anchorHash": "e3b0c44298fc"
       },
-      "app-scout-game-description": {
-        "contentHash": "50f7349b8886",
-        "anchorHash": "e3b0c44298fc"
-      },
       "app-self-description": {
         "contentHash": "1c7b5748cedd",
         "anchorHash": "e3b0c44298fc"
@@ -742,7 +738,6 @@
       "app-sablier-description",
       "app-safe-description",
       "app-sandbox-description",
-      "app-scout-game-description",
       "app-self-description",
       "app-sequence-description",
       "app-shibuya-films-description",
@@ -781,5 +776,5 @@
       "app-zupass-description"
     ]
   },
-  "sourceCommitSha": "a022ed450bfa7dc241c16f16bcab5a7ab7c243d8"
+  "sourceCommitSha": "102e7d69213329505b9595dbf50a235b7e6c2a9d"
 }

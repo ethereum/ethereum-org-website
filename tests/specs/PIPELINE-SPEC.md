@@ -201,8 +201,10 @@ For each section in the llm-required list:
 3. Send to LLM with instructions:
    - Translate only the provided section
    - Preserve all markdown formatting, components, links, code fences
-   - Do NOT translate component attributes, code bodies, URLs, or heading IDs
+   - Do NOT translate code bodies, URLs, or heading IDs
    - Return ONLY the translated section content
+
+   JSX components are not directly visible to the LLM in the normalized path -- the content normalizer replaces components with `<HTML-PLACEHOLDER-COMPONENT-* />` placeholders before the prompt is built, and translatable attribute *values* are extracted as separate leaves. The dedicated JSX Attribute Translation Pass (Phase 4b) handles those leaves after this phase. The non-normalized fallback path (used for e.g. JSON files) does see raw component tags; in that case the prompt rule is "preserve components and their attributes exactly" because attribute translation in the same call is unreliable.
 4. Receive translated section
 
 The LLM receives english-B content, which already contains all inert values (new URLs, new attributes, etc.). The LLM is expected to preserve these as-is. This is the same behavior as a full translation -- the LLM never sees old inert values.
@@ -223,6 +225,42 @@ For frontmatter translatable fields:
 - The mock does NOT receive unchanged or inert-only sections
 - The mock does NOT receive structural-only sections
 - Frontmatter translatable fields are sent individually, not as part of a section
+
+---
+
+## Phase 4b: JSX Attribute Translation Pass
+
+**Input:** english-B (source) + the post-Phase-4 locale file
+**Output:** locale file with translatable JSX attribute values translated
+
+**Why this is a separate pass:** JSX components like `<ExpandableCard title="..." eventCategory="..." />` have a mix of translatable (`title`) and non-translatable (`eventCategory`, `href`, `src`) attributes. The Phase 4 LLM prompt instructs the model to preserve component tags and attribute names exactly to avoid breaking JSX. Doing the same prompt-based translation on attribute values is unreliable -- the LLM either over-translates (breaks `eventName` analytics tags) or under-translates (the bug that motivated this pass). A dedicated, narrowly-scoped pass with an allow-list is safer.
+
+**What it does:**
+1. Parse english-B into a content tree (already done in Phase 1; reuse).
+2. Walk the tree for nodes where `elementType === "component-attribute"`.
+3. For each such node, check:
+   - Attribute name is in the allow-list (`TRANSLATABLE_ATTRIBUTES` in `lib/shared-patterns.ts`: title, description, alt, label, aria-label, placeholder, buttonLabel, name, caption, contentPreview, location).
+   - Value passes the translatability heuristic in `shared-patterns.ts` (rejects URLs, paths, identifiers, code).
+4. The pass is **idempotent and self-healing**: it filters leaves to only those whose English value still appears verbatim in the locale file. If a leaf's English value isn't found in the locale, it's already been translated -- skip. This means re-running the pipeline on a file with already-translated attrs is a no-op for that file (no LLM call, no commit).
+5. Batch the leaves per language. Send a focused prompt to the LLM with:
+   - The component name + attribute name + English value
+   - Glossary terms for the language (same loader as Phase 4)
+   - Instructions: translate the value naturally; preserve product names per glossary; do not translate identifiers
+6. Receive translations. Map back to leaves.
+7. Apply to the locale file using the same regex-based replacement the deterministic-apply path uses for component-attribute changes (`pipeline.ts:340`-style: `attr="oldValue"` → `attr="newValue"`).
+8. Failure isolation: if the LLM returns a malformed batch (wrong count, missing fields), skip those leaves and continue. The locale file is left untouched for those attrs; a warning is logged.
+
+**Manifest impact:**
+- Source manifest: unchanged (the source content didn't change; we just translated previously-untranslated leaves).
+- Translation manifest: updated to reflect the now-translated values. Subsequent runs will see no drift on these leaves.
+
+**Test assertions:**
+- Translatable attrs (`title`, `description`, etc.) on JSX components in the output are translated.
+- Non-translatable attrs (`eventCategory`, `eventName`, `href`, `src`) in the output are byte-for-byte identical to english-B.
+- Values that look like URLs, paths, or identifiers (per the heuristic) are not translated even if they appear under a translatable attribute name.
+- A file with no English drift is skipped entirely (existing behavior).
+- Idempotency: running the pipeline twice on the same file (with translation already applied) does not re-call the LLM for the attribute pass (the self-healing filter drops leaves whose English value no longer appears in the locale).
+- LLM batch with malformed output: affected leaves are skipped, file is left valid, warning is logged.
 
 ---
 

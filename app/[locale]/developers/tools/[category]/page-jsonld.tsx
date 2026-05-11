@@ -8,7 +8,8 @@ import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import type { DeveloperTool, DeveloperToolCategorySlug } from "../types"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function DevelopersToolsCategoryJsonLD({
   locale,
@@ -42,7 +43,7 @@ export default async function DevelopersToolsCategoryJsonLD({
         description: t(
           `page-developers-tools-category-${category}-meta-description`
         ),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -87,7 +88,7 @@ export default async function DevelopersToolsCategoryJsonLD({
         description: t(
           `page-developers-tools-category-${category}-description`
         ),
-        url: url,
+        url,
         numberOfItems: categoryTools.length,
         itemListElement: categoryTools.slice(0, 10).map((tool, index) => ({
           "@type": "ListItem",

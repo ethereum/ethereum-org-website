@@ -20,5 +20,6 @@ export async function GET() {
   return NextResponse.json({
     gasPrice: gasPriceData.gasPrice,
     ethPriceUSD: ethPriceData.value,
+    ethPercentChange24h: ethPriceData.percentChange24h,
   })
 }

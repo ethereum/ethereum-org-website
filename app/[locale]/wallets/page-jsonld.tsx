@@ -4,7 +4,8 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
-import { BASE_GRAPH_NODES, REFERENCE } from "@/lib/jsonld/constants"
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function WalletsPageJsonLD({
   locale,
@@ -21,16 +22,19 @@ export default async function WalletsPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#wallets` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-wallets-meta-title"),
         description: t("page-wallets-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -54,11 +58,12 @@ export default async function WalletsPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#wallets` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#wallets`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-wallets-title"),
         description: t("page-wallets-meta-description"),
         image: "https://ethereum.org/images/wallets/wallet-hero.png",
