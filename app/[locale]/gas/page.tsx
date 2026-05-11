@@ -103,6 +103,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     await getAppPageContributorInfo("gas", locale as Lang)
 
   const t = await getTranslations("page-gas")
+  const tCommunity = await getTranslations("page-community")
 
   const benefits = [
     {
@@ -412,14 +413,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               className="min-h-full flex-[1_1_416px]"
               image={dogeComputerImg}
               titleKey={"page-community:page-community-explore-dapps-title"}
-              alt={t("page-community:page-community-explore-dapps-alt")}
+              alt={tCommunity("page-community-explore-dapps-alt")}
               descriptionKey={
                 "page-community:page-community-explore-dapps-description"
               }
             >
               <div>
                 <ButtonLink href="/apps/">
-                  {t("page-community:page-community-explore-dapps")}
+                  {tCommunity("page-community-explore-dapps")}
                 </ButtonLink>
               </div>
             </Callout>
