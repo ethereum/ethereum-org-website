@@ -50,11 +50,14 @@ export async function getVideoData(
   const cached = videoDataCache.get(cacheKey)
   if (cached) return cached
 
-  // Always read English source for full metadata
+  // Always read English source for full metadata.
+  // gray-matter has a global content-keyed cache that returns a shallow copy
+  // (`data` shared by reference), so we spread to avoid mutating the cached
+  // object — otherwise overriding title/description below leaks across locales.
   const enPath = videoPath(slug, DEFAULT_LOCALE)
   const enRaw = await readFile(enPath, "utf-8")
   const enParsed = matter(enRaw)
-  const frontmatter = enParsed.data as VideoFrontmatter
+  const frontmatter = { ...enParsed.data } as VideoFrontmatter
 
   // gray-matter auto-converts YAML dates to Date objects; coerce back to string
   if ((frontmatter.uploadDate as unknown) instanceof Date) {
