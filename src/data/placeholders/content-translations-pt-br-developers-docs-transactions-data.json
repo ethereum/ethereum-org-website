@@ -1,0 +1,10 @@
+{
+  "/content/translations/pt-br/developers/docs/transactions/tx.png": {
+    "hash": "924d9a13",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNUlEQVR4nI2Rz0oCURTGbykVES2CyE3t9QGCyvAhYgihHqJlq3kGS8txnLnemWBs/BNCufUleolahMxCM8FfXE2waZEfHPg493c/zuEIIYQAVmO1ImLSvTgnlhFC/An7JdN8XbNcjisVTm3JieOQK9mf6YWIaUDJJm1Z5DSj2XKVo0KBdVEsklIPDJQPrmIchOD6NKdfrzI70XV2V3vl0QlbM0az0iNSigNh2+y5iuim+D65u+8Pq+4XVYdwGmBmtibm4bb2UtG23RGF27dhqdyf2M7oIwjYF1KSqjcZNFrQbDN+6UIQziYIjTDRM3tJ7YOQznMXHpuMW09QbxBZegIp2ZAeRs0n7yrOaz4XjkN2vv/8Inpvqbj8YfLS48yy2FzqEv/KNEkulmGEiThjGCTinH74BpgM6TrtdcR7AAAAAElFTkSuQmCC"
+  },
+  "/content/translations/pt-br/developers/docs/transactions/gas-tx.png": {
+    "hash": "0885d0c2",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABh0lEQVR4nJVRyyuEURz9zTcPgzESkg0WVpoFKcnCUBbKwurbKdmMspvESt0/waNJrpFJXnVLXlmgfCy805DH1DT1RXmMskEjjxzd+2kWbDh1uveee3/n3vO7BCIbApSFIGWCkZv+i+Fh5I2Nvc0NDdws8dFng0+gSepCwP4nAyHOXHw8VTfSf1XP+VPjHL8vtnTdDp1+UXxTrYlsxBhp6vnNlCGF29Xj7KeZcBF0GanCBeZ3gFc7Eah2wvA7ALIrsuIsuUcS22tmx4bxcHBw+L4TPXoLJqdCldDJA1buRVehRwih4mytP7csr7zsLK68bm4umFXpGOfRVF88AVzfAoloqldq4E256MnPkfxkNV4QaUviozPEAR4GlmdfGtIGsd1Y2WkMdXsnqL0wEr4UHyiREYhgU2awRiMJjzm/330Znn6/C4VaVbFqRlAetmBGIu7PyUGv0hk5FMX3XH55UM986G7zPTJ/ARhppERW6jYj7YrgAacqlk37wfhgc8YZ013qYstc+wJSD9bGun11WgAAAABJRU5ErkJggg=="
+  }
+}

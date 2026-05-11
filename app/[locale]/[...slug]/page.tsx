@@ -24,31 +24,42 @@ import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { importMd } from "@/lib/md/import"
-import { contentSource } from "@/lib/poc-fumadocs/source"
+import {
+  allLocaleParams,
+  contentSource,
+  getContentSource,
+} from "@/lib/poc-fumadocs/source"
 import { fumadocsTocToCItems } from "@/lib/poc-fumadocs/toc"
 
 type Params = { locale: string; slug: string[] }
 
-// PoC cutover: this catch-all is served entirely by Fumadocs for English.
-// Non-English locales 404 here until the i18n adapter lands — see
-// docs/poc/fumadocs-evaluation.md for the open i18n question.
+// PoC: this catch-all is served entirely by Fumadocs. There are 25 collections
+// (one per locale); the route picks the right source for the request's locale.
+// When a translation is missing, fall back to the English source and pass
+// `contentNotTranslated={true}` so the layout renders the "not translated"
+// banner (matches today's `getPageData` behaviour).
 export default async function Page(props: { params: Promise<Params> }) {
   const { locale, slug: slugArray } = await props.params
 
-  if (locale !== "en") notFound()
+  const localeSource = getContentSource(locale)
+  if (!localeSource) notFound()
 
-  const page = contentSource.getPage(slugArray)
+  const page =
+    localeSource.getPage(slugArray) ?? contentSource.getPage(slugArray)
+  const isTranslated = Boolean(localeSource.getPage(slugArray))
   if (!page) notFound()
 
   setRequestLocale(locale)
 
   const slug = slugArray.join("/")
-  const MDXContent = page.data.body
-  const tocItems = fumadocsTocToCItems(
-    page.data.toc as
-      | { title: unknown; url: string; depth: number }[]
-      | undefined
-  )
+  // `body` and `toc` are runtime fields added by fumadocs-mdx — not part of
+  // the schema, so the inferred type doesn't surface them. Cast to access.
+  const pageData = page.data as unknown as {
+    body: (p: { components: Record<string, unknown> }) => React.ReactNode
+    toc?: { title: unknown; url: string; depth: number }[]
+  }
+  const MDXContent = pageData.body
+  const tocItems = fumadocsTocToCItems(pageData.toc)
 
   // Pull frontmatter from the raw markdown so we don't carry `page.data.body`
   // (a function) or `page.data.toc` (React nodes) into the Layout's client
@@ -57,11 +68,9 @@ export default async function Page(props: { params: Promise<Params> }) {
   const { data: frontmatterData } = matter(markdown)
   const frontmatter = frontmatterData as Frontmatter
 
-  // Layout selection: frontmatter.template wins, else heuristic from slug.
   const layout = frontmatter.template || getLayoutFromSlug(slug)
   const Layout = layoutMapping[layout]
 
-  // Contributors + last-edit timestamp via filesystem + git scan.
   const { contributors, lastUpdatedDate } =
     await getMarkdownFileContributorInfo(
       slug,
@@ -82,7 +91,6 @@ export default async function Page(props: { params: Promise<Params> }) {
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
   const messages = pick(allMessages, requiredNamespaces)
 
-  // Components: base (mdComponents + VideoWatch) + layout-specific overrides.
   const components = {
     ...mdComponents,
     VideoWatch,
@@ -103,7 +111,7 @@ export default async function Page(props: { params: Promise<Params> }) {
           frontmatter={frontmatter}
           tocItems={tocItems}
           lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          contentNotTranslated={false}
+          contentNotTranslated={!isTranslated}
           contributors={contributors}
           timeToRead={Math.round(timeToRead.minutes)}
         >
@@ -115,23 +123,14 @@ export default async function Page(props: { params: Promise<Params> }) {
 }
 
 export async function generateStaticParams() {
-  // English only; non-EN locales return notFound() above.
-  return contentSource.generateParams().map((p) => ({
-    ...p,
-    locale: "en",
-  }))
+  return allLocaleParams()
 }
 
 export async function generateMetadata(props: { params: Promise<Params> }) {
   const { locale, slug } = await props.params
-  if (locale !== "en") {
-    const t = await getTranslations("common")
-    return {
-      title: t("page-not-found"),
-      description: t("page-not-found-description"),
-    }
-  }
-  const page = contentSource.getPage(slug)
+  const src = getContentSource(locale)
+  const page =
+    src?.getPage(slug) ?? (src ? contentSource.getPage(slug) : undefined)
   if (!page) {
     const t = await getTranslations("common")
     return {

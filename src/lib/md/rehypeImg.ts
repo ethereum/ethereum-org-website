@@ -62,7 +62,14 @@ const getImageSize = (src: string, dir: string) => {
   if (dir && shouldJoin) {
     src = path.join(dir, src)
   }
-  return sizeOf(src)
+  try {
+    return sizeOf(src)
+  } catch {
+    // PoC: stale image refs in translated md files point at EN paths that
+    // have since been renamed. Returning undefined keeps the build going;
+    // the img tag still renders with no width/height (browser fallback).
+    return undefined
+  }
 }
 
 /**

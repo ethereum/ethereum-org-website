@@ -295,6 +295,79 @@ git checkout HEAD -- app/[locale]/[...slug]/page-jsonld.tsx   # if deleted
 # want to keep PoC alongside the existing route.
 ```
 
+## i18n: all 25 locales
+
+Goal: extend the fumadocs cutover to the full locale matrix without
+restructuring the `translations/<locale>/<slug>/index.md` layout. Per-locale
+collections keep each tree compiling independently; the route dispatches by
+`params.locale`.
+
+### Changes
+
+- `source.config.ts` — 25 `defineCollections({ type: "doc" })` exports, one
+  per locale. EN reads from `public/content` with `!translations/**`; every
+  other reads from `public/content/translations/<locale>`. Underscores in
+  exports (`content_pt_br`, `content_zh_tw`) because JS identifiers can't
+  contain hyphens.
+- `src/lib/poc-fumadocs/source.ts` — `sources` record keyed by locale, each
+  value is a Fumadocs `loader({ baseUrl: "/<locale>" })`. `getContentSource`
+  is the lookup; `allLocaleParams()` flattens for `generateStaticParams`.
+- `app/[locale]/[...slug]/page.tsx` — drops the EN-only check; tries the
+  locale source first and falls back to EN with `contentNotTranslated={true}`
+  when a translation is missing (matches today's `getPageData` behavior).
+- `src/lib/poc-fumadocs/rehypeImgForFumadocs.ts` — strips
+  `translations/<locale>/` from the file path before deriving `dir`/`srcPath`,
+  so translated pages resolve images from the (image-bearing) EN tree. Passes
+  locale through to `rehypeImg` so the i18n-aware translated-image swap still
+  fires.
+- `src/lib/md/rehypeImg.ts` — `getImageSize` wraps `sizeOf` in try/catch and
+  returns `undefined` on missing files. PoC tolerance for stale image refs
+  in translated md (≈29 references to renamed EN paths).
+- `public/content/translations/te/videos/ai-agents-interview-luna/index.md`
+  — frontmatter had a duplicated `title:` prefix inside a quoted string AND
+  a duplicated trailing frontmatter block. Cleaned.
+
+### Cold-build measurements (all 25 locales)
+
+|                   | EN-only cutover | 25 locales (this run) |
+|-------------------|-----------------|-----------------------|
+| Routes            | 604             | 8213                  |
+| Compile           | 26.8 s          | 3.0 min               |
+| TypeScript        | 19.4 s          | 39.1 s                |
+| Static generation | 11.4 s          | 2.3 min               |
+| Total wall        | 1 m 2 s         | **6 m 15 s**          |
+| `.next` size      | 822 MB          | 8.2 GB                |
+
+For 13.6× more routes (604 → 8213), wall time grew 6.0× and compile 6.7×.
+Per-page extrapolation continues to hold: ~22 ms compile/page,
+~17 ms gen/page across the full locale matrix.
+
+### Open issues this surfaced
+
+1. **Stale image refs in translations** (~29). Translations point at EN
+   image paths that have since been renamed (e.g.
+   `developers/docs/layer-2-scaling/optimistic-rollups.png` →
+   `developers/docs/scaling/layer-2-rollups/optimistic-rollups.png`). Today's
+   pipeline ALSO fails on these at request time — contributes to the
+   ISR-404 class. PoC handles by skipping width/height on missing files.
+   Real fix: rerun intl-pipeline so translations reflect the current EN tree.
+2. **Malformed YAML frontmatter** — found one corrupted file in `te/`
+   (duplicate frontmatter block, unescaped quotes). Cleaned. A pre-merge
+   YAML lint on `public/content/translations/**/*.md` would catch this class.
+3. **Non-EN images opt out of placeholder generation** when missing on disk.
+   Resulting HTML keeps the bare `<img src="…">` with no `width`/`height`
+   so it doesn't shift the page, but no blur placeholder either.
+
+### What the i18n run answers
+
+The original eval's last go/no-go gate was build perf at full scale:
+> "PoC compiles 57 files; the full 8,052 is two orders of magnitude larger.
+> Need to measure cold `next build` time with all content vs. today."
+
+Measured: **6 m 15 s** cold-build for all 25 locales × 326 pages going
+entirely through Fumadocs. Comparable to today's Netlify build envelope.
+Build perf is not a blocker even at full scope.
+
 ## How to reproduce
 
 ```bash

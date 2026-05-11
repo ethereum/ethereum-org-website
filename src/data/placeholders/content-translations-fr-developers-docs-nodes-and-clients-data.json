@@ -1,0 +1,10 @@
+{
+  "/content/translations/fr/developers/docs/nodes-and-clients/eth1eth2client.png": {
+    "hash": "45325f76",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABbElEQVR4nG1SLZODMBDNX6iur6mqqUehqqqqUFW4KhSqDoeKq6pD1dXh6nCYToYTcXFx3HHk3byd0ut97MwO7PLe42U3CsAAYPydxpjxdrv9SfYfmADgXT2KH+Gcw+FwQBRFkkmSoGkaGGNwuVzQ973gvPeD8t6PU2N6Eng+nwVcVRXquhYBvud5Dmst2rYlbng6IHlKElarFbIsE9JutxPBoiiw3++xXC6Rpilpg7LWjlSjbYKUUlgsFgLQWqMsS/nr8XiU5NHojNi2bQeltR6pSOJsNsPpdBIxumCQzD4JDDp6iUFVVTXO53OxTDLFODiemUJ0st1uRYCzuV6vz0Fba79n8LoBWl2v1zJ9ijJ5forFcYzNZiPzcc7JFj6992FK7tc5F/I8D2maBq11KIoilGUpdRzHIUkSfqeDj3/vAa1OM+DKWPNJd9MMuC25B8QD6F7Te9/Vdd0ZY549a23XNI30Wfd9/wbg/gWnoDIku3En/wAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/fr/developers/docs/nodes-and-clients/nodes.png": {
+    "hash": "0792f586",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAsTAAALEwEAmpwYAAABe0lEQVR4nIVQO0vDYBSNIujg4uAkiHvFzdFdEP0DguAPEBzUtYurQ0Vc/AMOiuCggkK0Sm19tbVWMaFqY5smpsmX2qR558gXDLioFw7nwrn33AfD/BOpVKr3JJ8fEm0siUawXTewxjtIUC0JdEdFyWSyGwzTFQGIwAI9VLt5rkxx1VfX7nyGrmmEgdWBphFTUK3JPyfj2/0jwGYYOmjyBVt9zPlK8cJxmhKIgzLLvvYxHMf1TiQSi/dHu/OkfHbZfs7smXxugZROi7aQX5F0/bb2wkPl7wIiVCCpQSgqPmTiuaLujjMH6fTgxvrO1tPJ+XTlOltSHrJbNn81U729LLT4wpxiGBm5LoC8PPqt2hskyQwbshUqJLDetfZYtKooYpDyIWuNsCz66er7x51hyrIXrAIemlze1coZVyuyTkg+oLSQjs/tooifR41iUJGV5f6Gpu1ZngPfR2B1fDTqhBMa7dGfD6MmEf+S9wiWN1kz/GVBx2xVx0Dc9wUltzFXHmH4kAAAAABJRU5ErkJggg=="
+  }
+}
