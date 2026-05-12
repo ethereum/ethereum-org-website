@@ -68,13 +68,14 @@ Create a file named `calldata-<contractname>-<descriptorversion>.json`. The `cal
 The `context` section binds the descriptor to one or more contract deployments. Wallets use this to match an incoming transaction to the correct descriptor.
 
 ```json
-"context": { 
-   "$id": "uniswap-v3-router-mainnet", 
-   "contract": { "deployments": [ { 
-   "chainId": 1, "address": "0xYourContractAddressOnMainnet" }, 
-   { "chainId": 137, "address": "0xYourContractAddressOnPolygon" } 
-    ] 
-   }
+"context": {
+  "$id": "uniswap-v3-router-mainnet",
+  "contract": {
+    "deployments": [
+      { "chainId": 1, "address": "0xYourContractAddressOnMainnet" },
+      { "chainId": 137, "address": "0xYourContractAddressOnPolygon" }
+    ]
+  }
 }
 ```
 
@@ -90,11 +91,10 @@ The `context` section binds the descriptor to one or more contract deployments. 
 The metadata section provides human-readable information about the project and contract described by this file. Wallets may use this information to display protocol names, links, and other contextual details during signing.
 
 ```json
-"metadata": { 
-   "owner": "Example Swap Protocol", 
-   "info": { "url": "https://example.xyz", 
-}, 
-"contractName": "SwapRouter" 
+"metadata": {
+  "owner": "Example Swap Protocol",
+  "info": { "url": "https://example.xyz" },
+  "contractName": "SwapRouter"
 }
 ```
 
