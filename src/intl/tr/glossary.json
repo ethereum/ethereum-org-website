@@ -36,7 +36,7 @@
   "block-proposer-term": "Blok teklifçisi",
   "block-proposer-definition": "Belirli bir <a href=\"/glossary/#slot\">slotta</a> bir blok oluşturmak için seçilen belirli doğrulayıcı.",
   "block-reward-term": "Blok ödülü",
-  "block-reward-definition": "Yeni ve geçerli bir bloğun teklifçisine ödül olarak verilen Ether mikt.",
+  "block-reward-definition": "Yeni ve geçerli bir bloğun teklifçisine ödül olarak verilen Ether miktarı.",
   "block-status-term": "Blok durumu",
   "block-status-definition": "Bir bloğun içinde bulunabileceği durumlar. Olası durumlar şunları içerir:<br/><br/><ul><li>teklif edildi (proposed): blok bir doğrulayıcı tarafından teklif edildi</li><li>planlandı (scheduled): doğrulayıcılar şu anda veri gönderiyor</li><li>kaçırıldı/atlandı (missed/skipped): teklifçi uygun zaman dilimi içinde bir blok teklif etmedi</li><li>yetim (orphaned): blok, <a href=\"/glossary/#fork-choice-algorithm\">çatallanma seçimi algoritması</a> tarafından yeniden düzenleme (reorg) ile dışarıda bırakıldı</li></ul>",
   "block-time-term": "Blok süresi",

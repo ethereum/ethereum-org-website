@@ -369,7 +369,7 @@
   "gas-5-b-explanation": "Les frais de gaz sont déterminés à l'aide de la formule : unités de gaz utilisées × (frais de base + frais de priorité).",
   "gas-5-c-label": "Taille du bloc × plafond des frais de priorité du validateur",
   "gas-5-c-explanation": "La taille du bloc n'entre pas directement en compte dans cette formule.",
-  "gas-5-d-label": "Frais de base + frais de priorité + frais de priorité",
+  "gas-5-d-label": "Frais de base + frais de priorité + pourboire",
   "gas-5-d-explanation": "Les frais de base et les frais de priorité font partie de la formule ; le « tip » (pourboire) correspond aux frais de priorité.",
   "daos-1-prompt": "Qu'est-ce qui est vrai à propos des DAO ?",
   "daos-1-a-label": "Les DAO sont détenues collectivement via des jetons de gouvernance",
