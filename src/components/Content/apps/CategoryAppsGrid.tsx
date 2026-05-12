@@ -11,7 +11,7 @@ import { getDayOfYear } from "@/lib/utils/date"
 import { seededShuffle } from "@/lib/utils/random"
 import { slugify } from "@/lib/utils/url"
 
-import { getStaticAppsData } from "@/lib/data"
+import { getISRTestAppsData } from "@/lib/data"
 
 function getCategoryEnum(category: string): AppCategoryEnum | undefined {
   const slug = category.toLowerCase()
@@ -64,7 +64,7 @@ const CategoryAppsGrid = async ({
 
   let apps: AppData[] = []
   try {
-    const appsData = await getStaticAppsData()
+    const appsData = await getISRTestAppsData()
     apps = (appsData?.[categoryEnum] ?? []) as AppData[]
   } catch (error) {
     console.warn(`Failed to fetch ${category} apps:`, error)

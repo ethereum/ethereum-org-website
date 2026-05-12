@@ -67,6 +67,19 @@ export const getStaticAppsData = createCachedGetter(
   false
 )
 
+/**
+ * PoC ISR-bug test getter -- 60s revalidation, on purpose.
+ * Wired into <CategoryAppsGrid> on the fumadocs PoC branch so the gaming
+ * page opts INTO ISR mode. Used to verify whether the fumadocs rewrite
+ * eliminates the public/content/ runtime read that breaks the original
+ * route after cache expiry. Remove after the test.
+ */
+export const getISRTestAppsData = createCachedGetter(
+  dataLayer.getAppsData,
+  ["apps-data-isr-test"],
+  60
+)
+
 export const getGrowThePieData = createCachedGetter(
   dataLayer.getGrowThePieData,
   ["grow-the-pie-data"],
