@@ -12,13 +12,13 @@ breadcrumb: Building on Ethereum in 2026
 lang: en
 ---
 
-If your mental model of Ethereum was formed in 2021 to 2023, it is out of date. Three protocol upgrades since then, Dencun in March 2024, Pectra in May 2025, and Fusaka in December 2025, changed two things builders care about, how much L1 costs to use and what regular wallets can do.
+If your mental model of Ethereum was formed in 2021 to 2023, it is out of date. Three protocol upgrades since then, [Dencun](/roadmap/dencun/) in March 2024, [Pectra](/roadmap/pectra/) in May 2025, and [Fusaka](/roadmap/fusaka/) in December 2025, changed two things builders care about, how much L1 costs to use and what regular wallets can do.
 
 ## Mainnet is cheap again {#mainnet-is-cheap-again}
 
 The 2021 to 2023 fee regime is no longer a safe default assumption.
 
-As of May 5, 2026, Etherscan's gas tracker shows standard gas around 0.15 gwei, with daily averages near 0.5 gwei through April. A basic ETH transfer costs under a cent at that level, with typical recent days landing in the low single-digit cents. The trend has been falling across each of the recent upgrades, and the next one, Glamsterdam, is set to push fees lower still. That makes "Ethereum mainnet is too expensive for most apps" a stale starting point.
+As of May 5, 2026, Etherscan's gas tracker shows standard gas around 0.15 gwei, with daily averages near 0.5 gwei through April. A basic ETH transfer costs under a cent at that level, with typical recent days landing in the low single-digit cents. The trend has been falling across each of the recent upgrades, and the next one, [Glamsterdam](/roadmap/glamsterdam/), is set to push fees lower still. That makes "Ethereum mainnet is too expensive for most apps" a stale starting point.
 
 If you want a simple rule of thumb, use gas math instead of old folklore. At 0.5 gwei, the recent April average, and ETH at roughly $2,350, illustrative costs look like this.
 
@@ -62,7 +62,7 @@ The account assumption changes too. Do not design new apps as if every user acco
 
 ## What is next {#whats-next}
 
-Ethereum's next named upgrade is Glamsterdam, with Block-level Access Lists (BALs) and enshrined proposer-builder separation (ePBS) as headline items. Together those make it safe to raise the block gas limit from 60 million today toward roughly 200 million, leaving more L1 capacity for builders to work with. Activation is expected in the second half of 2026. After Glamsterdam, Hegota is planned to follow, with Fork-choice enforced Inclusion Lists (FOCIL) selected as its headlining feature.
+Ethereum's next named upgrade is Glamsterdam, with Block-level Access Lists (BALs) and enshrined proposer-builder separation (ePBS) as headline items. Together those make it safe to raise the block gas limit from 60 million today toward roughly 200 million, leaving more L1 capacity for builders to work with. Activation is expected in the second half of 2026. After Glamsterdam, [Hegotá](https://forkcast.org/upgrade/hegota/) is planned to follow, with Fork-choice enforced Inclusion Lists (FOCIL) selected as its headlining feature.
 
 For builders, the items worth tracking are more L1 capacity (BALs), more reliable transaction inclusion (FOCIL), and the path toward native account abstraction. ePBS, the other Glamsterdam headline, is mostly an infrastructure change that removes a trust dependency under L1 transaction inclusion. The direct app-level surface change is small.
 
@@ -70,11 +70,11 @@ BALs are about keeping L1 cheap as usage grows. In plain English, a block would 
 
 FOCIL is about getting valid transactions into blocks even when one block producer would rather leave them out. Today, if the party building a block ignores a transaction, the rest of the protocol has limited ways to force it in. With EIP-7805, several validators would say, in effect, "we saw these valid transactions waiting in the public mempool." The next block then has to include them, or validators can refuse to support that block. For builders, this matters when reliable access to L1 is part of the product, including privacy tooling, regulated onramps, or apps serving users who may be filtered by some infrastructure providers.
 
-For app builders, the Hegota item to watch most closely is account abstraction. EIP-8141, Frame Transactions, would add a transaction type where validation, execution, and gas payment are split into frames. In practice, that means a smart account could verify a transaction itself, define its own signature rules, approve who pays gas, and execute one or more actions without depending on the ERC-4337 EntryPoint, bundlers, or app-run relayers.
+For app builders, the Hegotá item to watch most closely is account abstraction. EIP-8141, Frame Transactions, would add a transaction type where validation, execution, and gas payment are split into frames. In practice, that means a smart account could verify a transaction itself, define its own signature rules, approve who pays gas, and execute one or more actions without depending on the ERC-4337 EntryPoint, bundlers, or app-run relayers.
 
 That changes product assumptions. Gas sponsorship becomes a native account pattern instead of infrastructure every app has to arrange separately. Alternative signature schemes become easier to support, including passkeys today and a path away from ECDSA if post-quantum migration becomes necessary. If EIP-8141 or a similar native account abstraction design lands, the builder model shifts from "an EOA signs a transaction" to "an account defines how it validates, pays for, and executes a transaction."
 
-That is the direction, not a promise. EIP-8141 is Draft, and as of May 2026 it is only "considered for inclusion" in Hegota, meaning client teams are discussing it but have not committed to shipping it in that upgrade. The practical 2026 build path for account UX is still EIP-7702 plus ERC-4337 wallet flows, but builders should design as if programmable accounts are becoming the default account model.
+That is the direction, not a promise. EIP-8141 is Draft, and as of May 2026 it is only "considered for inclusion" in Hegotá, meaning client teams are discussing it but have not committed to shipping it in that upgrade. The practical 2026 build path for account UX is still EIP-7702 plus ERC-4337 wallet flows, but builders should design as if programmable accounts are becoming the default account model.
 
 ## What to build differently now {#what-to-build-differently-now}
 
@@ -97,7 +97,7 @@ Stop treating Ethereum mainnet as the expensive settlement layer you only touch 
 - [EIP-7928 Block-level Access Lists](https://eips.ethereum.org/EIPS/eip-7928)
 - [EIP-7805 Fork-choice enforced Inclusion Lists (FOCIL)](https://eips.ethereum.org/EIPS/eip-7805)
 - [EIP-8141 Frame Transaction](https://eips.ethereum.org/EIPS/eip-8141)
-- [Forkcast Hegota Upgrade](https://forkcast.org/upgrade/hegota/)
+- [Forkcast Hegotá Upgrade](https://forkcast.org/upgrade/hegota/)
 - [Etherscan Gas Tracker](https://etherscan.io/gastracker)
 - [EIP-7773 Glamsterdam Hardfork Meta](https://eips.ethereum.org/EIPS/eip-7773)
 - [Glamsterdam roadmap on ethereum.org](https://ethereum.org/roadmap/glamsterdam/)
