@@ -8,6 +8,7 @@
     "dev:webpack": "next dev --webpack",
     "build": "next build",
     "build:webpack": "next build --webpack",
+    "postinstall": "fumadocs-mdx",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
