@@ -132,7 +132,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 className="absolute -z-[1] min-h-[300px] w-full object-cover max-md:hidden"
                 sizes="100vw"
                 alt={t("page-get-eth-hero-image-alt")}
-                priority
+                preload
               />
               <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mt-24 lg:mb-0">
                 <h1 className="my-8 text-4xl md:text-5xl">

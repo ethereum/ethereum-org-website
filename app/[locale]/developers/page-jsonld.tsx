@@ -43,7 +43,7 @@ export default async function DevelopersPageJsonLD({
         "@id": url,
         name: t("page-developer-meta-title"),
         description: t("page-developers-meta-desc"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -75,7 +75,7 @@ export default async function DevelopersPageJsonLD({
         name: t("page-developer-meta-title"),
         description:
           "Comprehensive resources for building on Ethereum including tutorials, tools, documentation, and courses",
-        url: url,
+        url,
         numberOfItems: paths.length + courses.length + hackathons.length,
         itemListElement: [
           ...paths.map((path, index) => ({

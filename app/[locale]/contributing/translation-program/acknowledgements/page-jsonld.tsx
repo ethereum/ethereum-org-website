@@ -44,7 +44,7 @@ export default async function AcknowledgementsJsonLD({
         description: t(
           "page-contributing-translation-program-acknowledgements-meta-description"
         ),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

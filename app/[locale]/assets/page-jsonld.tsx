@@ -35,7 +35,7 @@ export default async function AssetsJsonLD({
         "@id": url,
         name: t("page-assets-meta-title"),
         description: t("page-assets-meta-desc"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -66,7 +66,7 @@ export default async function AssetsJsonLD({
         "@id": `${url}#assets`,
         name: t("page-assets-h1"),
         description: t("page-assets-meta-desc"),
-        url: url,
+        url,
         numberOfItems: 3,
         itemListElement: [
           {

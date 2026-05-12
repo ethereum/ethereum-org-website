@@ -36,7 +36,7 @@ export default async function EventsSearchJsonLD({
         "@id": url,
         name: t("page-events-search-hero-title"),
         description: t("page-events-search-metadata-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

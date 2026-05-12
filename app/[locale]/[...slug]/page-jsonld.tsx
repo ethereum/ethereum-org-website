@@ -56,6 +56,9 @@ export default async function SlugJsonLD({
     frontmatter.authors ?? frontmatter.author
   )
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#article` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -63,10 +66,10 @@ export default async function SlugJsonLD({
       ...authorGraphNodes,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: frontmatter.title,
         description: frontmatter.description,
-        url: url,
+        url,
         inLanguage: locale,
         author: authorIds,
         contributor: contributorList,
@@ -77,11 +80,12 @@ export default async function SlugJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#article` },
+        mainEntity: articleId,
       },
       {
-        "@type": slug.startsWith("developers/blog") ? "BlogPosting" : "Article",
-        "@id": `${url}#article`,
+        "@type": "Article",
+        ...articleId,
+        isPartOf: webPageId,
         headline: frontmatter.title,
         description: frontmatter.description,
         image: frontmatter.image

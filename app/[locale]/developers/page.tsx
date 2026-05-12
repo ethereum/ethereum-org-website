@@ -580,6 +580,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   className="mt-16 hidden max-w-[400px] lg:block"
                   src={dogeImage}
                   alt={t("page-assets-doge")}
+                  sizes="400px"
                 />
               </Column>
               <Column>

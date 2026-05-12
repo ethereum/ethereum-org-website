@@ -334,6 +334,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   src={FindWalletImage}
                   alt=""
                   className="mt-8 w-full max-w-[800px] bg-cover bg-no-repeat"
+                  sizes="(max-width: 864px) calc(100vw - 64px), 800px"
                 />
               </div>
             </div>

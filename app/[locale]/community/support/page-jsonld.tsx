@@ -60,7 +60,7 @@ export default async function SupportJsonLD({
         "@id": url,
         name: t("page-community-support-hero-title"),
         description: t("page-community-support-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
