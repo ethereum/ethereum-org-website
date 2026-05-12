@@ -7,13 +7,11 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { VideoData } from "@/lib/types"
-
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import { htmlElements } from "@/components/MdComponents"
+import mdComponents, { htmlElements } from "@/components/MdComponents"
 import {
   Accordion,
   AccordionContent,
@@ -25,11 +23,14 @@ import YouTube from "@/components/YouTube"
 import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { getVideoData, getVideoSlugs } from "@/lib/utils/videos"
 
 import VideoPageJsonLD from "./page-jsonld"
 
-import { renderSimpleMarkdown } from "@/lib/md/renderSimple"
+import {
+  getVideoDataFromFumadocs,
+  getVideoPageFromFumadocs,
+  getVideoSlugsFromFumadocs,
+} from "@/lib/poc-fumadocs/videos"
 
 const VideoLandingPage = async (props: {
   params: Promise<{ locale: string; slug: string }>
@@ -39,15 +40,29 @@ const VideoLandingPage = async (props: {
   const t = await getTranslations("page-videos")
   setRequestLocale(locale)
 
-  let data: VideoData | undefined
-  try {
-    data = await getVideoData(slug, locale)
-  } catch {
-    notFound()
-  }
+  const data = await getVideoDataFromFumadocs(slug, locale)
+  if (!data) notFound()
 
   const { frontmatter } = data
-  const transcriptMdx = data.content.trim() || null
+  const transcriptPage = getVideoPageFromFumadocs(slug, locale)
+  const transcriptLoaded = transcriptPage
+    ? await (
+        transcriptPage.data as unknown as {
+          load: () => Promise<{
+            body: (p: {
+              components: Record<string, unknown>
+            }) => React.ReactNode
+            toc?: unknown[]
+          }>
+        }
+      ).load()
+    : null
+  // toc presence is a reasonable proxy for "this page has transcript content"
+  // — bare-metadata video pages have no markdown body and therefore no toc.
+  const hasTranscript = Boolean(
+    transcriptLoaded?.toc && transcriptLoaded.toc.length > 0
+  )
+  const TranscriptBody = transcriptLoaded?.body
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -59,11 +74,15 @@ const VideoLandingPage = async (props: {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
+      {/* PoC: transcript is dropped from JSON-LD because the raw markdown
+          body is no longer read at request time. Rendered transcript below
+          still shows for users; re-add to structured data via a fumadocs
+          `_markdown` export (`includeProcessedMarkdown: true`) when needed. */}
       <VideoPageJsonLD
         locale={locale}
         slug={slug}
         frontmatter={frontmatter}
-        transcript={transcriptMdx}
+        transcript={null}
       />
 
       <MainArticle className="max-w-4xl space-y-8 px-4 md:px-8">
@@ -88,7 +107,7 @@ const VideoLandingPage = async (props: {
           </p>
         </div>
 
-        {transcriptMdx && (
+        {hasTranscript && TranscriptBody && (
           <Accordion type="single" collapsible>
             <AccordionItem value="transcript">
               <AccordionTrigger className="py-4">
@@ -99,9 +118,9 @@ const VideoLandingPage = async (props: {
                 className="text-base [[data-state=closed]_&]:invisible [[data-state=closed]_&]:h-0"
                 forceMount
               >
-                {await renderSimpleMarkdown(transcriptMdx, {
-                  h1: htmlElements.h2,
-                })}
+                <TranscriptBody
+                  components={{ ...mdComponents, h1: htmlElements.h2 }}
+                />
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -113,8 +132,8 @@ const VideoLandingPage = async (props: {
   )
 }
 
-export async function generateStaticParams() {
-  const slugs = await getVideoSlugs()
+export function generateStaticParams() {
+  const slugs = getVideoSlugsFromFumadocs()
   return slugs.map((slug) => ({ slug }))
 }
 
@@ -123,10 +142,8 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
 
-  let data
-  try {
-    data = await getVideoData(slug, locale)
-  } catch {
+  const data = await getVideoDataFromFumadocs(slug, locale)
+  if (!data) {
     const t = await getTranslations("common")
     return {
       title: t("page-not-found"),

@@ -1,7 +1,5 @@
 import { getTranslations } from "next-intl/server"
 
-import type { VideoData } from "@/lib/types"
-
 import {
   Card,
   CardContent,
@@ -12,7 +10,13 @@ import { LinkWithArrow } from "@/components/ui/Link"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
-import { getVideoData } from "@/lib/utils/videos"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import {
+  getVideoDataFromFumadocs,
+  getVideoPageFromFumadocs,
+} from "@/lib/poc-fumadocs/videos"
 
 interface VideoWatchProps {
   slug: string
@@ -28,15 +32,21 @@ interface VideoWatchProps {
  * NOT imported from MdComponents/index.tsx to avoid polluting the client-safe barrel.
  */
 const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
-  let data: VideoData | undefined
-  try {
-    data = await getVideoData(slug)
-  } catch {
-    return null
-  }
+  const data = await getVideoDataFromFumadocs(slug, DEFAULT_LOCALE)
+  if (!data) return null
 
-  const { frontmatter, content } = data
-  const hasTranscript = content.trim().length > 0
+  const { frontmatter } = data
+  // toc presence is a reasonable proxy for "this page has transcript content"
+  // — bare-metadata video pages compile to a body with no toc entries.
+  const page = getVideoPageFromFumadocs(slug, DEFAULT_LOCALE)
+  const loaded = page
+    ? await (
+        page.data as unknown as {
+          load: () => Promise<{ toc?: unknown[] }>
+        }
+      ).load()
+    : null
+  const hasTranscript = Boolean(loaded?.toc && loaded.toc.length > 0)
 
   const t = await getTranslations("page-videos")
 

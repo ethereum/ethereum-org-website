@@ -14,13 +14,13 @@ import { Section } from "@/components/ui/section"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { getVideos } from "@/lib/utils/videos"
 
 import VideoGalleryFilter from "./_components/VideoGalleryFilter"
 import { VIDEO_CATEGORIES } from "./constants"
 import VideosPageJsonLD from "./page-jsonld"
 
 import { routing } from "@/i18n/routing"
+import { getVideosFromFumadocs } from "@/lib/poc-fumadocs/videos"
 
 const VideoGalleryPage = async (props: {
   params: Promise<{ locale: string }>
@@ -29,7 +29,7 @@ const VideoGalleryPage = async (props: {
 
   setRequestLocale(locale)
 
-  const videos = await getVideos(locale)
+  const videos = await getVideosFromFumadocs(locale)
   const t = await getTranslations("page-videos")
 
   // Get i18n messages

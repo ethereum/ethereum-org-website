@@ -14,7 +14,6 @@ import MainArticle from "@/components/MainArticle"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -22,6 +21,7 @@ import TutorialSubmitModal from "./_components/modal"
 import TutorialsList from "./_components/TutorialsLazy"
 import TutorialsPageJsonLD from "./page-jsonld"
 
+import { getTutorialsDataFromFumadocs } from "@/lib/poc-fumadocs/tutorials"
 import heroImg from "@/public/images/doge-computer.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -42,7 +42,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
   const dir = contentNotTranslated ? "ltr" : "unset"
 
-  const internalTutorials = await getTutorialsData(locale)
+  const internalTutorials = await getTutorialsDataFromFumadocs(locale)
 
   const { contributors } = await getAppPageContributorInfo(
     "developers/tutorials",
