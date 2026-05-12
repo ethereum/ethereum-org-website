@@ -1,4 +1,3 @@
-import matter from "gray-matter"
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
 import {
@@ -6,7 +5,6 @@ import {
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
-import readingTime from "reading-time"
 
 import type { Frontmatter, Lang } from "@/lib/types"
 
@@ -23,7 +21,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
-import { importMd } from "@/lib/md/import"
 import {
   allLocaleParams,
   contentSource,
@@ -71,12 +68,16 @@ export default async function Page(props: { params: Promise<Params> }) {
   const MDXContent = loaded.body
   const tocItems = fumadocsTocToCItems(loaded.toc)
 
-  // Pull frontmatter from the raw markdown so we don't carry `page.data.body`
-  // (a function) or `page.data.toc` (React nodes) into the Layout's client
-  // boundary — RSC can't serialize functions as props to client components.
-  const { markdown } = await importMd(locale, slug)
-  const { data: frontmatterData } = matter(markdown)
-  const frontmatter = frontmatterData as Frontmatter
+  // Source frontmatter from the fumadocs eager export — no filesystem reads.
+  // The schema in source.config.ts does no runtime validation, so every YAML
+  // key survives the import. Strip the doc-collection methods/info so we
+  // don't carry functions across the RSC boundary or into JSON-LD.
+  const DOC_ENTRY_KEYS = new Set(["load", "getText", "getMDAST", "info"])
+  const frontmatter = Object.fromEntries(
+    Object.entries(page.data as unknown as Record<string, unknown>).filter(
+      ([k]) => !DOC_ENTRY_KEYS.has(k)
+    )
+  ) as unknown as Frontmatter
 
   const layout = frontmatter.template || getLayoutFromSlug(slug)
   const Layout = layoutMapping[layout]
@@ -91,7 +92,10 @@ export default async function Page(props: { params: Promise<Params> }) {
     ? getLocaleTimestamp(locale as Lang, lastUpdatedDate)
     : undefined
 
-  const timeToRead = readingTime(markdown)
+  // PoC test stub: hardcoded so we can validate the ISR path without porting
+  // reading-time computation off the raw markdown yet. Real fix would be a
+  // remark plugin that stuffs `timeToRead` into the eager frontmatter.
+  const timeToRead = { minutes: 5 }
 
   if ("published" in frontmatter) {
     frontmatter.published = dateToString(frontmatter.published)
