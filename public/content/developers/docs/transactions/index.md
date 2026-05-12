@@ -132,6 +132,14 @@ According to the ABI specifications, integer values (such as addresses, which ar
 So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279).
 The `value` is 0x3b0559f4 = 990206452.
 
+### Transaction descriptors {#transaction-descriptors}
+
+Because the data field contains opaque hexadecimal bytes, it can be extremely difficult to verify what action a transaction will actually perform. This "blind signing" vulnerability is addressed by **[Clear Signing](https://clearsigning.org/)** through the use of [transaction descriptors](https://eips.ethereum.org/EIPS/eip-7730) (defined by ERC-7730).  
+
+The ERC-7730 specification uses transaction descriptors (often structured as JSON files) to enrich the data found in ABIs and structured messages, like EVM transaction calldata, EIP-712 messages, and EIP-4337 User Operations. Developers use these descriptors to map specific transaction variables directly into formatting templates, ensuring the underlying data remains machine-readable for applications.
+
+On the frontend, wallets use this formatting context to translate opaque bytecode into clear, human-readable information. By automatically resolving values like token addresses into recognized tickers, or amounts into decimals, users are presented with a plain-language summary of the transaction's exact intent (e.g., 'Swap 1000 USDC for at least 0.25 WETH') before they sign
+
 ## Types of transactions {#types-of-transactions}
 
 On Ethereum there are a few different types of transactions:
