@@ -73,5 +73,6 @@ storybook-static-pages
 # Git worktrees for Claude commands
 .worktrees
 
-# Fumadocs PoC build cache
-.source
+# Fumadocs PoC build cache — temporarily checked in to isolate whether
+# the Netlify build issue is `.source/` generation or something downstream.
+# Regenerate with `npx fumadocs-mdx` when content changes.
