@@ -14231,6 +14231,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "nikolay-udovik",
+      "name": "Nikolay Udovik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73495276?v=4",
+      "profile": "https://github.com/nikolay-udovik",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
