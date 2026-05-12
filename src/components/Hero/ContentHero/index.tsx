@@ -49,7 +49,7 @@ const ContentHero = (props: ContentHeroProps) => {
             src={heroImg}
             alt=""
             priority
-            sizes={`(max-width: ${screens.lg}) 100vw, ${breakpointAsNumber["2xl"] / 2}px`}
+            sizes={`(max-width: ${screens.lg}) 100vw, (max-width: ${screens["2xl"]}) 50vw, ${breakpointAsNumber["2xl"] / 2}px`}
           />
         )}
       </div>

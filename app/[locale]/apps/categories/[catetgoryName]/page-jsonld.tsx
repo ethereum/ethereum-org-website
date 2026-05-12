@@ -43,7 +43,7 @@ export default async function AppsCategoryJsonLD({
         "@id": url,
         name: t(category.metaTitle),
         description: t(category.metaDescription),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -80,7 +80,7 @@ export default async function AppsCategoryJsonLD({
         "@id": `${url}#categories`,
         name: t(category.name),
         description: t(category.description),
-        url: url,
+        url,
         numberOfItems: categoryApps.length,
         itemListElement: categoryApps.slice(0, 10).map((app, index) => ({
           "@type": "ListItem",

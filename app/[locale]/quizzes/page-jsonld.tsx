@@ -35,7 +35,7 @@ export default async function QuizzesPageJsonLD({
         "@id": url,
         name: t("common:quizzes-title"),
         description: t("quizzes-subtitle"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

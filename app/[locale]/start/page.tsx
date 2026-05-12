@@ -56,7 +56,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             alt={t("page-start-hero-alt")}
             sizes="(max-width: 1504px) 100vw, 1504px"
             className="h-full w-full object-cover"
-            priority
+            preload
           />
         </div>
 
@@ -80,7 +80,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </div>
               </div>
               <div className="flex max-w-[450px] flex-col items-center justify-center">
-                <Image src={ManDogeImage} alt={t("page-start-man-doge-alt")} />
+                <Image
+                  src={ManDogeImage}
+                  alt={t("page-start-man-doge-alt")}
+                  sizes="(max-width: 479px) calc(100vw - 64px), 375px"
+                />
               </div>
             </div>
           </I18nProvider>
