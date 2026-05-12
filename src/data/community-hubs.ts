@@ -13,7 +13,7 @@ export type CommunityHub = {
   id: string
   location: string
   descriptionKey: string
-  ctaKey: string
+  cadenceKey: string
   coworkingSignupUrl: string
   meetupUrl: string
   banner: StaticImageData
@@ -25,7 +25,7 @@ const communityHubs: CommunityHub[] = [
     id: "buenos-aires",
     location: "Buenos Aires",
     descriptionKey: "page-events-hub-description-buenos-aires",
-    ctaKey: "page-events-hub-cta-buenos-aires",
+    cadenceKey: "page-events-hub-cadence-everyday",
     coworkingSignupUrl:
       "https://airtable.com/appENuebGSKMB5sia/pagWfsW9hrLZUqBAf/form",
     meetupUrl: "https://luma.com/user/crecimientoar",
@@ -37,7 +37,7 @@ const communityHubs: CommunityHub[] = [
     id: "hong-kong",
     location: "Hong Kong",
     descriptionKey: "page-events-hub-description-hong-kong",
-    ctaKey: "page-events-hub-cta-hong-kong",
+    cadenceKey: "page-events-hub-cadence-everyday",
     coworkingSignupUrl: "https://forms.gle/bm78vRjZqvu45tsz5",
     meetupUrl: "https://luma.com/user/usr-ut3JGCXXuokkPdK",
     banner: HongKongHubBanner,
@@ -48,7 +48,7 @@ const communityHubs: CommunityHub[] = [
     id: "rome",
     location: "Rome",
     descriptionKey: "page-events-hub-description-rome",
-    ctaKey: "page-events-hub-cta-rome",
+    cadenceKey: "page-events-hub-cadence-everyday",
     coworkingSignupUrl: "https://forms.gle/wrjF85XYghXyFXH87",
     meetupUrl: "https://luma.com/user/UrbeHub",
     banner: RomeHubBanner,
@@ -59,7 +59,7 @@ const communityHubs: CommunityHub[] = [
     id: "london",
     location: "London",
     descriptionKey: "page-events-hub-description-london",
-    ctaKey: "page-events-hub-cta-default",
+    cadenceKey: "page-events-hub-cadence-everyday",
     coworkingSignupUrl: "https://hub.encode.club/ethereum",
     meetupUrl: "https://luma.com/ethldn",
     banner: LondonHubBanner,
@@ -70,7 +70,7 @@ const communityHubs: CommunityHub[] = [
     id: "berlin",
     location: "Berlin",
     descriptionKey: "page-events-hub-description-berlin",
-    ctaKey: "page-events-hub-cta-berlin",
+    cadenceKey: "page-events-hub-cadence-wednesdays",
     coworkingSignupUrl:
       "https://docs.google.com/forms/d/e/1FAIpQLScRgO-0OMUXOu30F5s2DYpImMKb4qgTp5pn-4Y6wjiCeY7bYQ/viewform",
     meetupUrl: "https://www.meetup.com/berlin-ethereum-meetup/",
@@ -82,7 +82,7 @@ const communityHubs: CommunityHub[] = [
     id: "dubai",
     location: "Dubai",
     descriptionKey: "page-events-hub-description-dubai",
-    ctaKey: "page-events-hub-cta-default",
+    cadenceKey: "page-events-hub-cadence-everyday",
     coworkingSignupUrl: "https://forms.gle/G4PthfvMMy476QmZ6",
     meetupUrl: "https://luma.com/HadronFC?k=c",
     banner: DubaiHubBanner,
@@ -93,7 +93,7 @@ const communityHubs: CommunityHub[] = [
     id: "lagos",
     location: "Lagos",
     descriptionKey: "page-events-hub-description-lagos",
-    ctaKey: "page-events-hub-cta-default",
+    cadenceKey: "page-events-hub-cadence-everyday",
     coworkingSignupUrl: "https://t.me/+LGAiPevzRNk1ZTM0",
     meetupUrl: "https://t.me/+LGAiPevzRNk1ZTM0",
     banner: LagosHubBanner,
@@ -104,7 +104,7 @@ const communityHubs: CommunityHub[] = [
     id: "sf",
     location: "San Francisco",
     descriptionKey: "page-events-hub-description-sf",
-    ctaKey: "page-events-hub-cta-default",
+    cadenceKey: "page-events-hub-cadence-everyday",
     coworkingSignupUrl: "https://frontiertower.io/apply",
     meetupUrl: "https://luma.com/user/ethereumhouseSF",
     banner: SFHubBanner,

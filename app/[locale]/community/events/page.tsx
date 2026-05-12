@@ -22,6 +22,7 @@ import {
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
+import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -186,75 +187,76 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-hubs-subtitle")}
               </p>
             </div>
-            <EdgeScrollContainer>
+            <div className="grid grid-cols-fill-3-w-full gap-4">
               {communityHubs.map(
                 ({
                   id,
                   location,
                   descriptionKey,
-                  ctaKey,
+                  cadenceKey,
                   coworkingSignupUrl,
                   meetupUrl,
                   banner,
                   brandColor: logoBgColor,
                 }) => (
-                  <EdgeScrollItem
+                  <div
                     key={id}
                     className={cn(
-                      "ms-6 w-[calc(100%-4rem)] max-w-96 md:w-96 lg:max-w-[30%] xl:max-w-[22%]",
-                      "flex flex-col justify-between gap-4 rounded-4xl border p-8 shadow-lg",
+                      "flex w-full gap-4 rounded-4xl border p-6 shadow-lg sm:gap-6 sm:p-8",
                       logoBgColor
                     )}
                   >
-                    <div className="space-y-2">
-                      <div className="grid size-fit shrink-0 place-items-center overflow-hidden rounded-full">
-                        <Image
-                          src={banner}
-                          alt=""
-                          className="size-24 object-cover object-center"
-                          sizes="6rem"
-                        />
+                    <div className="size-16 shrink-0 overflow-hidden rounded-full sm:size-20">
+                      <Image
+                        src={banner}
+                        alt=""
+                        className="size-full object-cover object-center"
+                        sizes="5rem"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col gap-3">
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                        <h3 className="text-2xl font-bold">
+                          {location}
+                          <span className="sr-only">
+                            &nbsp;
+                            {t("page-events-meta-ethereum-community-hub")}
+                          </span>
+                        </h3>
+                        <Tag size="small" status="tag-green">
+                          {t(cadenceKey)}
+                        </Tag>
                       </div>
-                      <h3 className="text-2xl font-bold">
-                        {location}
-                        <span className="sr-only">
-                          &nbsp;
-                          {t("page-events-meta-ethereum-community-hub")}
-                        </span>
-                      </h3>
-                      <div className="space-y-[1lh]">
-                        <p>{t(descriptionKey)}</p>
-                        <p>{t(ctaKey)}</p>
+                      <p>{t(descriptionKey)}</p>
+                      <div className="mt-auto flex flex-wrap gap-x-6 gap-y-2 pt-2">
+                        <Link
+                          href={coworkingSignupUrl}
+                          className="font-bold no-underline"
+                          customEventOptions={{
+                            eventCategory: "Events",
+                            eventAction: "hubs",
+                            eventName: `${location}_cowork`,
+                          }}
+                        >
+                          {t("page-events-hub-cowork-signup")}
+                        </Link>
+                        <Link
+                          href={meetupUrl}
+                          className="font-bold no-underline"
+                          customEventOptions={{
+                            eventCategory: "Events",
+                            eventAction: "hubs",
+                            eventName: `${location}_meetup`,
+                          }}
+                        >
+                          {t("page-events-hub-meetups")}
+                        </Link>
                       </div>
                     </div>
-                    <div className="mt-auto flex justify-between gap-6">
-                      <Link
-                        href={coworkingSignupUrl}
-                        className="font-bold no-underline"
-                        customEventOptions={{
-                          eventCategory: "Events",
-                          eventAction: "hubs",
-                          eventName: `${location}_cowork`,
-                        }}
-                      >
-                        {t("page-events-hub-cowork-signup")}
-                      </Link>
-                      <Link
-                        href={meetupUrl}
-                        className="font-bold no-underline"
-                        customEventOptions={{
-                          eventCategory: "Events",
-                          eventAction: "hubs",
-                          eventName: `${location}_meetup`,
-                        }}
-                      >
-                        {t("page-events-hub-meetups")}
-                      </Link>
-                    </div>
-                  </EdgeScrollItem>
+                  </div>
                 )
               )}
-            </EdgeScrollContainer>
+            </div>
             <div className="md:px-4">
               <ButtonLink
                 href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
