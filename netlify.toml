@@ -16,11 +16,11 @@
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
-  # PoC(fumadocs): subset locales to prove the architecture scales past EN-only
-  # without hitting the 8 GB Netlify ceiling. Full 25-locale build OOMs after
-  # ~57 min wall (turbopack chunking explosion across ~8000 MDX modules).
+  # PoC(fumadocs): probing the OOM breakpoint. 6 locales built in 4 min; 25
+  # OOMed at 57 min (non-linear chunk-graph blow-up). 12 doubles the previous
+  # subset to find where the curve becomes unfeasible on 8 GB / 4 CPU.
   # See docs/poc/PROGRESS.md "Memory budget".
-  NEXT_PUBLIC_BUILD_LOCALES="en,es,de,fr,zh,ja"
+  NEXT_PUBLIC_BUILD_LOCALES="en,es,de,fr,zh,ja,ko,it,pt-br,ru,vi,hi"
 
 [[headers]]
   for = "/*"

@@ -17,6 +17,14 @@ const browserCollections = {
       import(
         "../public/content/translations/de/about/index.md?collection=content_de"
       ),
+    "ai-agents/index.md": () =>
+      import(
+        "../public/content/translations/de/ai-agents/index.md?collection=content_de"
+      ),
+    "bridges/index.md": () =>
+      import(
+        "../public/content/translations/de/bridges/index.md?collection=content_de"
+      ),
     "contributing/index.md": () =>
       import(
         "../public/content/translations/de/contributing/index.md?collection=content_de"
@@ -25,21 +33,17 @@ const browserCollections = {
       import(
         "../public/content/translations/de/dao/index.md?collection=content_de"
       ),
-    "bridges/index.md": () =>
+    "decentralized-identity/index.md": () =>
       import(
-        "../public/content/translations/de/bridges/index.md?collection=content_de"
+        "../public/content/translations/de/decentralized-identity/index.md?collection=content_de"
+      ),
+    "eips/index.md": () =>
+      import(
+        "../public/content/translations/de/eips/index.md?collection=content_de"
       ),
     "defi/index.md": () =>
       import(
         "../public/content/translations/de/defi/index.md?collection=content_de"
-      ),
-    "ai-agents/index.md": () =>
-      import(
-        "../public/content/translations/de/ai-agents/index.md?collection=content_de"
-      ),
-    "decentralized-identity/index.md": () =>
-      import(
-        "../public/content/translations/de/decentralized-identity/index.md?collection=content_de"
       ),
     "energy-consumption/index.md": () =>
       import(
@@ -53,21 +57,21 @@ const browserCollections = {
       import(
         "../public/content/translations/de/ethereum-forks/index.md?collection=content_de"
       ),
-    "eips/index.md": () =>
+    "glossary/index.md": () =>
       import(
-        "../public/content/translations/de/eips/index.md?collection=content_de"
+        "../public/content/translations/de/glossary/index.md?collection=content_de"
       ),
     "gaming/index.md": () =>
       import(
         "../public/content/translations/de/gaming/index.md?collection=content_de"
       ),
-    "glossary/index.md": () =>
-      import(
-        "../public/content/translations/de/glossary/index.md?collection=content_de"
-      ),
     "foundation/index.md": () =>
       import(
         "../public/content/translations/de/foundation/index.md?collection=content_de"
+      ),
+    "governance/index.md": () =>
+      import(
+        "../public/content/translations/de/governance/index.md?collection=content_de"
       ),
     "guides/index.md": () =>
       import(
@@ -77,49 +81,49 @@ const browserCollections = {
       import(
         "../public/content/translations/de/nft/index.md?collection=content_de"
       ),
-    "privacy/index.md": () =>
+    "payments/index.md": () =>
       import(
-        "../public/content/translations/de/privacy/index.md?collection=content_de"
-      ),
-    "governance/index.md": () =>
-      import(
-        "../public/content/translations/de/governance/index.md?collection=content_de"
+        "../public/content/translations/de/payments/index.md?collection=content_de"
       ),
     "prediction-markets/index.md": () =>
       import(
         "../public/content/translations/de/prediction-markets/index.md?collection=content_de"
       ),
+    "privacy/index.md": () =>
+      import(
+        "../public/content/translations/de/privacy/index.md?collection=content_de"
+      ),
     "real-world-assets/index.md": () =>
       import(
         "../public/content/translations/de/real-world-assets/index.md?collection=content_de"
-      ),
-    "payments/index.md": () =>
-      import(
-        "../public/content/translations/de/payments/index.md?collection=content_de"
-      ),
-    "restaking/index.md": () =>
-      import(
-        "../public/content/translations/de/restaking/index.md?collection=content_de"
       ),
     "refi/index.md": () =>
       import(
         "../public/content/translations/de/refi/index.md?collection=content_de"
       ),
-    "smart-contracts/index.md": () =>
+    "restaking/index.md": () =>
       import(
-        "../public/content/translations/de/smart-contracts/index.md?collection=content_de"
-      ),
-    "social-networks/index.md": () =>
-      import(
-        "../public/content/translations/de/social-networks/index.md?collection=content_de"
+        "../public/content/translations/de/restaking/index.md?collection=content_de"
       ),
     "security/index.md": () =>
       import(
         "../public/content/translations/de/security/index.md?collection=content_de"
       ),
+    "social-networks/index.md": () =>
+      import(
+        "../public/content/translations/de/social-networks/index.md?collection=content_de"
+      ),
+    "smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/de/smart-contracts/index.md?collection=content_de"
+      ),
     "web3/index.md": () =>
       import(
         "../public/content/translations/de/web3/index.md?collection=content_de"
+      ),
+    "what-are-apps/index.md": () =>
+      import(
+        "../public/content/translations/de/what-are-apps/index.md?collection=content_de"
       ),
     "whitepaper/index.md": () =>
       import(
@@ -129,33 +133,29 @@ const browserCollections = {
       import(
         "../public/content/translations/de/wrapped-eth/index.md?collection=content_de"
       ),
-    "what-are-apps/index.md": () =>
-      import(
-        "../public/content/translations/de/what-are-apps/index.md?collection=content_de"
-      ),
     "zero-knowledge-proofs/index.md": () =>
       import(
         "../public/content/translations/de/zero-knowledge-proofs/index.md?collection=content_de"
-      ),
-    "community/code-of-conduct/index.md": () =>
-      import(
-        "../public/content/translations/de/community/code-of-conduct/index.md?collection=content_de"
       ),
     "community/get-involved/index.md": () =>
       import(
         "../public/content/translations/de/community/get-involved/index.md?collection=content_de"
       ),
+    "community/code-of-conduct/index.md": () =>
+      import(
+        "../public/content/translations/de/community/code-of-conduct/index.md?collection=content_de"
+      ),
     "community/grants/index.md": () =>
       import(
         "../public/content/translations/de/community/grants/index.md?collection=content_de"
       ),
-    "community/online/index.md": () =>
-      import(
-        "../public/content/translations/de/community/online/index.md?collection=content_de"
-      ),
     "community/language-resources/index.md": () =>
       import(
         "../public/content/translations/de/community/language-resources/index.md?collection=content_de"
+      ),
+    "community/online/index.md": () =>
+      import(
+        "../public/content/translations/de/community/online/index.md?collection=content_de"
       ),
     "community/research/index.md": () =>
       import(
@@ -197,13 +197,13 @@ const browserCollections = {
       import(
         "../public/content/translations/de/contributing/adding-videos/index.md?collection=content_de"
       ),
-    "contributing/content-resources/index.md": () =>
-      import(
-        "../public/content/translations/de/contributing/content-resources/index.md?collection=content_de"
-      ),
     "contributing/adding-wallets/index.md": () =>
       import(
         "../public/content/translations/de/contributing/adding-wallets/index.md?collection=content_de"
+      ),
+    "contributing/content-resources/index.md": () =>
+      import(
+        "../public/content/translations/de/contributing/content-resources/index.md?collection=content_de"
       ),
     "contributing/design/index.md": () =>
       import(
@@ -257,21 +257,21 @@ const browserCollections = {
       import(
         "../public/content/translations/de/roadmap/account-abstraction/index.md?collection=content_de"
       ),
-    "roadmap/beacon-chain/index.md": () =>
-      import(
-        "../public/content/translations/de/roadmap/beacon-chain/index.md?collection=content_de"
-      ),
     "roadmap/danksharding/index.md": () =>
       import(
         "../public/content/translations/de/roadmap/danksharding/index.md?collection=content_de"
       ),
-    "roadmap/dencun/index.md": () =>
+    "roadmap/beacon-chain/index.md": () =>
       import(
-        "../public/content/translations/de/roadmap/dencun/index.md?collection=content_de"
+        "../public/content/translations/de/roadmap/beacon-chain/index.md?collection=content_de"
       ),
     "roadmap/fusaka/index.md": () =>
       import(
         "../public/content/translations/de/roadmap/fusaka/index.md?collection=content_de"
+      ),
+    "roadmap/dencun/index.md": () =>
+      import(
+        "../public/content/translations/de/roadmap/dencun/index.md?collection=content_de"
       ),
     "roadmap/future-proofing/index.md": () =>
       import(
@@ -305,13 +305,13 @@ const browserCollections = {
       import(
         "../public/content/translations/de/roadmap/security/index.md?collection=content_de"
       ),
-    "roadmap/single-slot-finality/index.md": () =>
-      import(
-        "../public/content/translations/de/roadmap/single-slot-finality/index.md?collection=content_de"
-      ),
     "roadmap/statelessness/index.md": () =>
       import(
         "../public/content/translations/de/roadmap/statelessness/index.md?collection=content_de"
+      ),
+    "roadmap/single-slot-finality/index.md": () =>
+      import(
+        "../public/content/translations/de/roadmap/single-slot-finality/index.md?collection=content_de"
       ),
     "roadmap/user-experience/index.md": () =>
       import(
@@ -329,21 +329,21 @@ const browserCollections = {
       import(
         "../public/content/translations/de/staking/dvt/index.md?collection=content_de"
       ),
+    "staking/pools/index.md": () =>
+      import(
+        "../public/content/translations/de/staking/pools/index.md?collection=content_de"
+      ),
     "staking/saas/index.md": () =>
       import(
         "../public/content/translations/de/staking/saas/index.md?collection=content_de"
-      ),
-    "staking/withdrawals/index.md": () =>
-      import(
-        "../public/content/translations/de/staking/withdrawals/index.md?collection=content_de"
       ),
     "staking/solo/index.md": () =>
       import(
         "../public/content/translations/de/staking/solo/index.md?collection=content_de"
       ),
-    "staking/pools/index.md": () =>
+    "staking/withdrawals/index.md": () =>
       import(
-        "../public/content/translations/de/staking/pools/index.md?collection=content_de"
+        "../public/content/translations/de/staking/withdrawals/index.md?collection=content_de"
       ),
     "videos/ai-agents-interview-luna/index.md": () =>
       import(
@@ -353,10 +353,6 @@ const browserCollections = {
       import(
         "../public/content/translations/de/videos/atoms-institutions-blockchains-josh-stark/index.md?collection=content_de"
       ),
-    "videos/blobspace-101-dencun/index.md": () =>
-      import(
-        "../public/content/translations/de/videos/blobspace-101-dencun/index.md?collection=content_de"
-      ),
     "videos/blockchain-101-visual-demo/index.md": () =>
       import(
         "../public/content/translations/de/videos/blockchain-101-visual-demo/index.md?collection=content_de"
@@ -364,6 +360,10 @@ const browserCollections = {
     "videos/blockchain-eth-build/index.md": () =>
       import(
         "../public/content/translations/de/videos/blockchain-eth-build/index.md?collection=content_de"
+      ),
+    "videos/blobspace-101-dencun/index.md": () =>
+      import(
+        "../public/content/translations/de/videos/blobspace-101-dencun/index.md?collection=content_de"
       ),
     "videos/crypto-apps-desocial-linda-xie/index.md": () =>
       import(
@@ -377,13 +377,13 @@ const browserCollections = {
       import(
         "../public/content/translations/de/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md?collection=content_de"
       ),
-    "videos/dao-build-next-great-city/index.md": () =>
-      import(
-        "../public/content/translations/de/videos/dao-build-next-great-city/index.md?collection=content_de"
-      ),
     "videos/dao-hack-ethereum-classic/index.md": () =>
       import(
         "../public/content/translations/de/videos/dao-hack-ethereum-classic/index.md?collection=content_de"
+      ),
+    "videos/dao-build-next-great-city/index.md": () =>
+      import(
+        "../public/content/translations/de/videos/dao-build-next-great-city/index.md?collection=content_de"
       ),
     "videos/decentralized-identity-explained/index.md": () =>
       import(
@@ -397,6 +397,10 @@ const browserCollections = {
       import(
         "../public/content/translations/de/videos/defi-future-of-finance/index.md?collection=content_de"
       ),
+    "videos/defi-history-inception-to-2021/index.md": () =>
+      import(
+        "../public/content/translations/de/videos/defi-history-inception-to-2021/index.md?collection=content_de"
+      ),
     "videos/desci-movement-juan-benet/index.md": () =>
       import(
         "../public/content/translations/de/videos/desci-movement-juan-benet/index.md?collection=content_de"
@@ -405,21 +409,17 @@ const browserCollections = {
       import(
         "../public/content/translations/de/videos/devcon-mumbai-coming-2026/index.md?collection=content_de"
       ),
-    "videos/defi-history-inception-to-2021/index.md": () =>
-      import(
-        "../public/content/translations/de/videos/defi-history-inception-to-2021/index.md?collection=content_de"
-      ),
     "videos/devconnect-argentina-2025-recap/index.md": () =>
       import(
         "../public/content/translations/de/videos/devconnect-argentina-2025-recap/index.md?collection=content_de"
       ),
-    "videos/devconnect-buenos-aires-promo/index.md": () =>
-      import(
-        "../public/content/translations/de/videos/devconnect-buenos-aires-promo/index.md?collection=content_de"
-      ),
     "videos/eigenlayer-permissionless-features/index.md": () =>
       import(
         "../public/content/translations/de/videos/eigenlayer-permissionless-features/index.md?collection=content_de"
+      ),
+    "videos/devconnect-buenos-aires-promo/index.md": () =>
+      import(
+        "../public/content/translations/de/videos/devconnect-buenos-aires-promo/index.md?collection=content_de"
       ),
     "videos/eip-4844-dencun-explained/index.md": () =>
       import(
@@ -461,13 +461,13 @@ const browserCollections = {
       import(
         "../public/content/translations/de/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_de"
       ),
-    "videos/hash-function-eth-build/index.md": () =>
-      import(
-        "../public/content/translations/de/videos/hash-function-eth-build/index.md?collection=content_de"
-      ),
     "videos/fusaka-upgrade-explained/index.md": () =>
       import(
         "../public/content/translations/de/videos/fusaka-upgrade-explained/index.md?collection=content_de"
+      ),
+    "videos/hash-function-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/de/videos/hash-function-eth-build/index.md?collection=content_de"
       ),
     "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
       import(
@@ -513,13 +513,13 @@ const browserCollections = {
       import(
         "../public/content/translations/de/videos/pow-vs-pos/index.md?collection=content_de"
       ),
-    "videos/proof-of-authority-explained/index.md": () =>
-      import(
-        "../public/content/translations/de/videos/proof-of-authority-explained/index.md?collection=content_de"
-      ),
     "videos/privacy-is-existential/index.md": () =>
       import(
         "../public/content/translations/de/videos/privacy-is-existential/index.md?collection=content_de"
+      ),
+    "videos/proof-of-authority-explained/index.md": () =>
+      import(
+        "../public/content/translations/de/videos/proof-of-authority-explained/index.md?collection=content_de"
       ),
     "videos/proof-of-work-explained/index.md": () =>
       import(
@@ -629,10 +629,6 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/accounts/index.md?collection=content_de"
       ),
-    "developers/docs/blocks/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/blocks/index.md?collection=content_de"
-      ),
     "developers/docs/bridges/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/bridges/index.md?collection=content_de"
@@ -640,6 +636,10 @@ const browserCollections = {
     "developers/docs/consensus-mechanisms/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/consensus-mechanisms/index.md?collection=content_de"
+      ),
+    "developers/docs/blocks/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/blocks/index.md?collection=content_de"
       ),
     "developers/docs/dapps/index.md": () =>
       import(
@@ -745,15 +745,15 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/wrapped-eth/index.md?collection=content_de"
       ),
-    "developers/tutorials/ai-trading-agent/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/tutorials/ai-trading-agent/index.md?collection=content_de"
-      ),
     "developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md":
       () =>
         import(
           "../public/content/translations/de/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_de"
         ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/tutorials/ai-trading-agent/index.md?collection=content_de"
+      ),
     "developers/tutorials/all-you-can-cache/index.md": () =>
       import(
         "../public/content/translations/de/developers/tutorials/all-you-can-cache/index.md?collection=content_de"
@@ -831,15 +831,15 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_de"
       ),
-    "developers/tutorials/how-to-mint-an-nft/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_de"
-      ),
     "developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md":
       () =>
         import(
           "../public/content/translations/de/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md?collection=content_de"
         ),
+    "developers/tutorials/how-to-mint-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_de"
+      ),
     "developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md":
       () =>
         import(
@@ -946,13 +946,13 @@ const browserCollections = {
         import(
           "../public/content/translations/de/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md?collection=content_de"
         ),
-    "developers/tutorials/short-abi/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/tutorials/short-abi/index.md?collection=content_de"
-      ),
     "developers/tutorials/smart-contract-security-guidelines/index.md": () =>
       import(
         "../public/content/translations/de/developers/tutorials/smart-contract-security-guidelines/index.md?collection=content_de"
+      ),
+    "developers/tutorials/short-abi/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/tutorials/short-abi/index.md?collection=content_de"
       ),
     "developers/tutorials/stealth-addr/index.md": () =>
       import(
@@ -1024,6 +1024,10 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/apis/json-rpc/index.md?collection=content_de"
       ),
+    "developers/docs/consensus-mechanisms/pow/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/consensus-mechanisms/pow/index.md?collection=content_de"
+      ),
     "developers/docs/consensus-mechanisms/poa/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/consensus-mechanisms/poa/index.md?collection=content_de"
@@ -1031,10 +1035,6 @@ const browserCollections = {
     "developers/docs/consensus-mechanisms/pos/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/index.md?collection=content_de"
-      ),
-    "developers/docs/consensus-mechanisms/pow/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/consensus-mechanisms/pow/index.md?collection=content_de"
       ),
     "developers/docs/data-and-analytics/block-explorers/index.md": () =>
       import(
@@ -1054,15 +1054,15 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_de"
       ),
-    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_de"
-      ),
     "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
       () =>
         import(
           "../public/content/translations/de/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_de"
         ),
+    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_de"
+      ),
     "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_de"
@@ -1075,13 +1075,13 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/evm/opcodes/index.md?collection=content_de"
       ),
-    "developers/docs/networking-layer/network-addresses/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/networking-layer/network-addresses/index.md?collection=content_de"
-      ),
     "developers/docs/networking-layer/portal-network/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/networking-layer/portal-network/index.md?collection=content_de"
+      ),
+    "developers/docs/networking-layer/network-addresses/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/networking-layer/network-addresses/index.md?collection=content_de"
       ),
     "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
       import(
@@ -1099,13 +1099,13 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_de"
       ),
-    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_de"
-      ),
     "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_de"
+      ),
+    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_de"
       ),
     "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
       import(
@@ -1143,6 +1143,10 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/programming-languages/python/index.md?collection=content_de"
       ),
+    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/scaling/optimistic-rollups/index.md?collection=content_de"
+      ),
     "developers/docs/programming-languages/ruby/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/programming-languages/ruby/index.md?collection=content_de"
@@ -1151,33 +1155,25 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/programming-languages/rust/index.md?collection=content_de"
       ),
-    "developers/docs/scaling/optimistic-rollups/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/scaling/optimistic-rollups/index.md?collection=content_de"
-      ),
     "developers/docs/scaling/plasma/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/scaling/plasma/index.md?collection=content_de"
-      ),
-    "developers/docs/scaling/sidechains/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/scaling/sidechains/index.md?collection=content_de"
       ),
     "developers/docs/scaling/state-channels/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/scaling/state-channels/index.md?collection=content_de"
       ),
-    "developers/docs/scaling/validium/index.md": () =>
+    "developers/docs/scaling/sidechains/index.md": () =>
       import(
-        "../public/content/translations/de/developers/docs/scaling/validium/index.md?collection=content_de"
+        "../public/content/translations/de/developers/docs/scaling/sidechains/index.md?collection=content_de"
       ),
     "developers/docs/scaling/zk-rollups/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/scaling/zk-rollups/index.md?collection=content_de"
       ),
-    "developers/docs/smart-contracts/anatomy/index.md": () =>
+    "developers/docs/scaling/validium/index.md": () =>
       import(
-        "../public/content/translations/de/developers/docs/smart-contracts/anatomy/index.md?collection=content_de"
+        "../public/content/translations/de/developers/docs/scaling/validium/index.md?collection=content_de"
       ),
     "developers/docs/smart-contracts/compiling/index.md": () =>
       import(
@@ -1187,6 +1183,10 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/smart-contracts/composability/index.md?collection=content_de"
       ),
+    "developers/docs/smart-contracts/anatomy/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/smart-contracts/anatomy/index.md?collection=content_de"
+      ),
     "developers/docs/smart-contracts/deploying/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/smart-contracts/deploying/index.md?collection=content_de"
@@ -1195,13 +1195,13 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/smart-contracts/formal-verification/index.md?collection=content_de"
       ),
-    "developers/docs/smart-contracts/languages/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/smart-contracts/languages/index.md?collection=content_de"
-      ),
     "developers/docs/smart-contracts/libraries/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/smart-contracts/libraries/index.md?collection=content_de"
+      ),
+    "developers/docs/smart-contracts/languages/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/smart-contracts/languages/index.md?collection=content_de"
       ),
     "developers/docs/smart-contracts/naming/index.md": () =>
       import(
@@ -1227,9 +1227,9 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/standards/tokens/index.md?collection=content_de"
       ),
-    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
       import(
-        "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_de"
+        "../public/content/translations/de/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_de"
       ),
     "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
       () =>
@@ -1240,6 +1240,10 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_de"
       ),
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_de"
+      ),
     "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_de"
@@ -1248,32 +1252,28 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_de"
       ),
-    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_de"
-      ),
-    "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
-      () =>
-        import(
-          "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_de"
-        ),
     "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_de"
       ),
-    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
       import(
-        "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_de"
+        "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_de"
       ),
     "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
       () =>
         import(
           "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_de"
         ),
-    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
       import(
-        "../public/content/translations/de/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_de"
+        "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_de"
       ),
+    "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
+      () =>
+        import(
+          "../public/content/translations/de/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_de"
+        ),
     "developers/docs/standards/tokens/erc-1155/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/standards/tokens/erc-1155/index.md?collection=content_de"
@@ -1281,14 +1281,6 @@ const browserCollections = {
     "developers/docs/standards/tokens/erc-1363/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/standards/tokens/erc-1363/index.md?collection=content_de"
-      ),
-    "developers/docs/standards/tokens/erc-20/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/standards/tokens/erc-20/index.md?collection=content_de"
-      ),
-    "developers/docs/standards/tokens/erc-223/index.md": () =>
-      import(
-        "../public/content/translations/de/developers/docs/standards/tokens/erc-223/index.md?collection=content_de"
       ),
     "developers/docs/standards/tokens/erc-4626/index.md": () =>
       import(
@@ -1298,9 +1290,17 @@ const browserCollections = {
       import(
         "../public/content/translations/de/developers/docs/standards/tokens/erc-721/index.md?collection=content_de"
       ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/standards/tokens/erc-223/index.md?collection=content_de"
+      ),
     "developers/docs/standards/tokens/erc-777/index.md": () =>
       import(
         "../public/content/translations/de/developers/docs/standards/tokens/erc-777/index.md?collection=content_de"
+      ),
+    "developers/docs/standards/tokens/erc-20/index.md": () =>
+      import(
+        "../public/content/translations/de/developers/docs/standards/tokens/erc-20/index.md?collection=content_de"
       ),
     "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
       () =>
@@ -1321,54 +1321,54 @@ const browserCollections = {
   content_en: create.doc("content_en", {
     "about/index.md": () =>
       import("../public/content/about/index.md?collection=content_en"),
-    "bridges/index.md": () =>
-      import("../public/content/bridges/index.md?collection=content_en"),
     "ai-agents/index.md": () =>
       import("../public/content/ai-agents/index.md?collection=content_en"),
-    "cookie-policy/index.md": () =>
-      import("../public/content/cookie-policy/index.md?collection=content_en"),
+    "bridges/index.md": () =>
+      import("../public/content/bridges/index.md?collection=content_en"),
     "dao/index.md": () =>
       import("../public/content/dao/index.md?collection=content_en"),
     "decentralized-identity/index.md": () =>
       import(
         "../public/content/decentralized-identity/index.md?collection=content_en"
       ),
+    "cookie-policy/index.md": () =>
+      import("../public/content/cookie-policy/index.md?collection=content_en"),
     "contributing/index.md": () =>
       import("../public/content/contributing/index.md?collection=content_en"),
-    "desci/index.md": () =>
-      import("../public/content/desci/index.md?collection=content_en"),
     "defi/index.md": () =>
       import("../public/content/defi/index.md?collection=content_en"),
+    "desci/index.md": () =>
+      import("../public/content/desci/index.md?collection=content_en"),
     "eips/index.md": () =>
       import("../public/content/eips/index.md?collection=content_en"),
+    "foundation/index.md": () =>
+      import("../public/content/foundation/index.md?collection=content_en"),
     "energy-consumption/index.md": () =>
       import(
         "../public/content/energy-consumption/index.md?collection=content_en"
       ),
     "gaming/index.md": () =>
       import("../public/content/gaming/index.md?collection=content_en"),
-    "ethereum-forks/index.md": () =>
-      import("../public/content/ethereum-forks/index.md?collection=content_en"),
-    "foundation/index.md": () =>
-      import("../public/content/foundation/index.md?collection=content_en"),
     "glossary/index.md": () =>
       import("../public/content/glossary/index.md?collection=content_en"),
     "governance/index.md": () =>
       import("../public/content/governance/index.md?collection=content_en"),
+    "ethereum-forks/index.md": () =>
+      import("../public/content/ethereum-forks/index.md?collection=content_en"),
     "guides/index.md": () =>
       import("../public/content/guides/index.md?collection=content_en"),
-    "prediction-markets/index.md": () =>
-      import(
-        "../public/content/prediction-markets/index.md?collection=content_en"
-      ),
     "nft/index.md": () =>
       import("../public/content/nft/index.md?collection=content_en"),
     "payments/index.md": () =>
       import("../public/content/payments/index.md?collection=content_en"),
-    "privacy-policy/index.md": () =>
-      import("../public/content/privacy-policy/index.md?collection=content_en"),
+    "prediction-markets/index.md": () =>
+      import(
+        "../public/content/prediction-markets/index.md?collection=content_en"
+      ),
     "privacy/index.md": () =>
       import("../public/content/privacy/index.md?collection=content_en"),
+    "privacy-policy/index.md": () =>
+      import("../public/content/privacy-policy/index.md?collection=content_en"),
     "real-world-assets/index.md": () =>
       import(
         "../public/content/real-world-assets/index.md?collection=content_en"
@@ -1377,12 +1377,12 @@ const browserCollections = {
       import("../public/content/refi/index.md?collection=content_en"),
     "restaking/index.md": () =>
       import("../public/content/restaking/index.md?collection=content_en"),
+    "security/index.md": () =>
+      import("../public/content/security/index.md?collection=content_en"),
     "smart-contracts/index.md": () =>
       import(
         "../public/content/smart-contracts/index.md?collection=content_en"
       ),
-    "security/index.md": () =>
-      import("../public/content/security/index.md?collection=content_en"),
     "social-networks/index.md": () =>
       import(
         "../public/content/social-networks/index.md?collection=content_en"
@@ -1401,13 +1401,13 @@ const browserCollections = {
       import(
         "../public/content/zero-knowledge-proofs/index.md?collection=content_en"
       ),
-    "community/get-involved/index.md": () =>
-      import(
-        "../public/content/community/get-involved/index.md?collection=content_en"
-      ),
     "community/code-of-conduct/index.md": () =>
       import(
         "../public/content/community/code-of-conduct/index.md?collection=content_en"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/community/get-involved/index.md?collection=content_en"
       ),
     "community/grants/index.md": () =>
       import(
@@ -1433,13 +1433,13 @@ const browserCollections = {
       import(
         "../public/content/contributing/adding-developer-tools/index.md?collection=content_en"
       ),
-    "contributing/adding-glossary-terms/index.md": () =>
-      import(
-        "../public/content/contributing/adding-glossary-terms/index.md?collection=content_en"
-      ),
     "contributing/adding-exchanges/index.md": () =>
       import(
         "../public/content/contributing/adding-exchanges/index.md?collection=content_en"
+      ),
+    "contributing/adding-glossary-terms/index.md": () =>
+      import(
+        "../public/content/contributing/adding-glossary-terms/index.md?collection=content_en"
       ),
     "contributing/adding-layer-2s/index.md": () =>
       import(
@@ -1469,13 +1469,13 @@ const browserCollections = {
       import(
         "../public/content/contributing/content-resources/index.md?collection=content_en"
       ),
-    "contributing/design-principles/index.md": () =>
-      import(
-        "../public/content/contributing/design-principles/index.md?collection=content_en"
-      ),
     "contributing/design/index.md": () =>
       import(
         "../public/content/contributing/design/index.md?collection=content_en"
+      ),
+    "contributing/design-principles/index.md": () =>
+      import(
+        "../public/content/contributing/design-principles/index.md?collection=content_en"
       ),
     "contributing/quizzes/index.md": () =>
       import(
@@ -1503,13 +1503,13 @@ const browserCollections = {
       import(
         "../public/content/guides/how-to-create-an-ethereum-account/index.md?collection=content_en"
       ),
-    "guides/how-to-id-scam-tokens/index.md": () =>
-      import(
-        "../public/content/guides/how-to-id-scam-tokens/index.md?collection=content_en"
-      ),
     "guides/how-to-revoke-token-access/index.md": () =>
       import(
         "../public/content/guides/how-to-revoke-token-access/index.md?collection=content_en"
+      ),
+    "guides/how-to-id-scam-tokens/index.md": () =>
+      import(
+        "../public/content/guides/how-to-id-scam-tokens/index.md?collection=content_en"
       ),
     "guides/how-to-swap-tokens/index.md": () =>
       import(
@@ -1547,10 +1547,10 @@ const browserCollections = {
       import(
         "../public/content/roadmap/glamsterdam/index.md?collection=content_en"
       ),
-    "roadmap/pbs/index.md": () =>
-      import("../public/content/roadmap/pbs/index.md?collection=content_en"),
     "roadmap/merge/index.md": () =>
       import("../public/content/roadmap/merge/index.md?collection=content_en"),
+    "roadmap/pbs/index.md": () =>
+      import("../public/content/roadmap/pbs/index.md?collection=content_en"),
     "roadmap/pectra/index.md": () =>
       import("../public/content/roadmap/pectra/index.md?collection=content_en"),
     "roadmap/scaling/index.md": () =>
@@ -1611,10 +1611,6 @@ const browserCollections = {
       import(
         "../public/content/videos/blockchain-101-visual-demo/index.md?collection=content_en"
       ),
-    "videos/crypto-security-passwords/index.md": () =>
-      import(
-        "../public/content/videos/crypto-security-passwords/index.md?collection=content_en"
-      ),
     "videos/blockchain-eth-build/index.md": () =>
       import(
         "../public/content/videos/blockchain-eth-build/index.md?collection=content_en"
@@ -1622,6 +1618,10 @@ const browserCollections = {
     "videos/crypto-apps-desocial-linda-xie/index.md": () =>
       import(
         "../public/content/videos/crypto-apps-desocial-linda-xie/index.md?collection=content_en"
+      ),
+    "videos/crypto-security-passwords/index.md": () =>
+      import(
+        "../public/content/videos/crypto-security-passwords/index.md?collection=content_en"
       ),
     "videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md": () =>
       import(
@@ -1671,13 +1671,13 @@ const browserCollections = {
       import(
         "../public/content/videos/eigenlayer-permissionless-features/index.md?collection=content_en"
       ),
-    "videos/ethereum-basics-intro/index.md": () =>
-      import(
-        "../public/content/videos/ethereum-basics-intro/index.md?collection=content_en"
-      ),
     "videos/eip-4844-dencun-explained/index.md": () =>
       import(
         "../public/content/videos/eip-4844-dencun-explained/index.md?collection=content_en"
+      ),
+    "videos/ethereum-basics-intro/index.md": () =>
+      import(
+        "../public/content/videos/ethereum-basics-intro/index.md?collection=content_en"
       ),
     "videos/ethereum-core-governance-explained/index.md": () =>
       import(
@@ -1687,13 +1687,13 @@ const browserCollections = {
       import(
         "../public/content/videos/ethereum-evolution-glamsterdam/index.md?collection=content_en"
       ),
-    "videos/ethereum-institutional-privacy-panel/index.md": () =>
-      import(
-        "../public/content/videos/ethereum-institutional-privacy-panel/index.md?collection=content_en"
-      ),
     "videos/ethereum-in-30-minutes-vitalik-buterin/index.md": () =>
       import(
         "../public/content/videos/ethereum-in-30-minutes-vitalik-buterin/index.md?collection=content_en"
+      ),
+    "videos/ethereum-institutional-privacy-panel/index.md": () =>
+      import(
+        "../public/content/videos/ethereum-institutional-privacy-panel/index.md?collection=content_en"
       ),
     "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
       import(
@@ -1719,13 +1719,13 @@ const browserCollections = {
       import(
         "../public/content/videos/hash-function-eth-build/index.md?collection=content_en"
       ),
-    "videos/how-to-make-a-guerilla-l2/index.md": () =>
-      import(
-        "../public/content/videos/how-to-make-a-guerilla-l2/index.md?collection=content_en"
-      ),
     "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
       import(
         "../public/content/videos/how-to-be-cypherpunk-juan-benet/index.md?collection=content_en"
+      ),
+    "videos/how-to-make-a-guerilla-l2/index.md": () =>
+      import(
+        "../public/content/videos/how-to-make-a-guerilla-l2/index.md?collection=content_en"
       ),
     "videos/key-pair-eth-build/index.md": () =>
       import(
@@ -1851,25 +1851,25 @@ const browserCollections = {
       import(
         "../public/content/contributing/style-guide/content-standardization/index.md?collection=content_en"
       ),
-    "contributing/translation-program/faq/index.md": () =>
-      import(
-        "../public/content/contributing/translation-program/faq/index.md?collection=content_en"
-      ),
     "contributing/translation-program/how-to-translate/index.md": () =>
       import(
         "../public/content/contributing/translation-program/how-to-translate/index.md?collection=content_en"
+      ),
+    "contributing/translation-program/faq/index.md": () =>
+      import(
+        "../public/content/contributing/translation-program/faq/index.md?collection=content_en"
       ),
     "contributing/translation-program/mission-and-vision/index.md": () =>
       import(
         "../public/content/contributing/translation-program/mission-and-vision/index.md?collection=content_en"
       ),
-    "contributing/translation-program/playbook/index.md": () =>
-      import(
-        "../public/content/contributing/translation-program/playbook/index.md?collection=content_en"
-      ),
     "contributing/translation-program/resources/index.md": () =>
       import(
         "../public/content/contributing/translation-program/resources/index.md?collection=content_en"
+      ),
+    "contributing/translation-program/playbook/index.md": () =>
+      import(
+        "../public/content/contributing/translation-program/playbook/index.md?collection=content_en"
       ),
     "contributing/translation-program/translatathon/index.md": () =>
       import(
@@ -1951,13 +1951,13 @@ const browserCollections = {
       import(
         "../public/content/developers/docs/mev/index.md?collection=content_en"
       ),
-    "developers/docs/networking-layer/index.md": () =>
-      import(
-        "../public/content/developers/docs/networking-layer/index.md?collection=content_en"
-      ),
     "developers/docs/networks/index.md": () =>
       import(
         "../public/content/developers/docs/networks/index.md?collection=content_en"
+      ),
+    "developers/docs/networking-layer/index.md": () =>
+      import(
+        "../public/content/developers/docs/networking-layer/index.md?collection=content_en"
       ),
     "developers/docs/nodes-and-clients/index.md": () =>
       import(
@@ -2051,10 +2051,6 @@ const browserCollections = {
       import(
         "../public/content/developers/tutorials/erc20-with-safety-rails/index.md?collection=content_en"
       ),
-    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
-      import(
-        "../public/content/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_en"
-      ),
     "developers/tutorials/gasless/index.md": () =>
       import(
         "../public/content/developers/tutorials/gasless/index.md?collection=content_en"
@@ -2063,27 +2059,31 @@ const browserCollections = {
       import(
         "../public/content/developers/tutorials/gasless-token/index.md?collection=content_en"
       ),
-    "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
-      () =>
-        import(
-          "../public/content/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md?collection=content_en"
-        ),
     "developers/tutorials/guide-to-smart-contract-security-tools/index.md":
       () =>
         import(
           "../public/content/developers/tutorials/guide-to-smart-contract-security-tools/index.md?collection=content_en"
         ),
+    "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md?collection=content_en"
+        ),
+    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+      import(
+        "../public/content/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_en"
+      ),
     "developers/tutorials/hello-world-smart-contract/index.md": () =>
       import(
         "../public/content/developers/tutorials/hello-world-smart-contract/index.md?collection=content_en"
       ),
-    "developers/tutorials/hello-world-smart-contract-fullstack/index.md": () =>
-      import(
-        "../public/content/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_en"
-      ),
     "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
       import(
         "../public/content/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_en"
+      ),
+    "developers/tutorials/hello-world-smart-contract-fullstack/index.md": () =>
+      import(
+        "../public/content/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_en"
       ),
     "developers/tutorials/how-to-mint-an-nft/index.md": () =>
       import(
@@ -2099,15 +2099,15 @@ const browserCollections = {
         import(
           "../public/content/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md?collection=content_en"
         ),
-    "developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md":
-      () =>
-        import(
-          "../public/content/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md?collection=content_en"
-        ),
     "developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md":
       () =>
         import(
           "../public/content/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md?collection=content_en"
+        ),
+    "developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md?collection=content_en"
         ),
     "developers/tutorials/how-to-use-tellor-as-your-oracle/index.md": () =>
       import(
@@ -2149,15 +2149,15 @@ const browserCollections = {
         import(
           "../public/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md?collection=content_en"
         ),
+    "developers/tutorials/nft-minter/index.md": () =>
+      import(
+        "../public/content/developers/tutorials/nft-minter/index.md?collection=content_en"
+      ),
     "developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md":
       () =>
         import(
           "../public/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md?collection=content_en"
         ),
-    "developers/tutorials/nft-minter/index.md": () =>
-      import(
-        "../public/content/developers/tutorials/nft-minter/index.md?collection=content_en"
-      ),
     "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
       import(
         "../public/content/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_en"
@@ -2212,27 +2212,27 @@ const browserCollections = {
       import(
         "../public/content/developers/tutorials/stealth-addr/index.md?collection=content_en"
       ),
-    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
-      import(
-        "../public/content/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_en"
-      ),
     "developers/tutorials/token-integration-checklist/index.md": () =>
       import(
         "../public/content/developers/tutorials/token-integration-checklist/index.md?collection=content_en"
       ),
-    "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
-      () =>
-        import(
-          "../public/content/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md?collection=content_en"
-        ),
     "developers/tutorials/understand-the-erc-20-token-smart-contract/index.md":
       () =>
         import(
           "../public/content/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md?collection=content_en"
         ),
+    "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md?collection=content_en"
+        ),
     "developers/tutorials/uniswap-v2-annotated-code/index.md": () =>
       import(
         "../public/content/developers/tutorials/uniswap-v2-annotated-code/index.md?collection=content_en"
+      ),
+    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
+      import(
+        "../public/content/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_en"
       ),
     "developers/tutorials/using-websockets/index.md": () =>
       import(
@@ -2262,38 +2262,38 @@ const browserCollections = {
       import(
         "../public/content/roadmap/pectra/maxeb/index.md?collection=content_en"
       ),
+    "contributing/translation-program/translatathon/details/index.md": () =>
+      import(
+        "../public/content/contributing/translation-program/translatathon/details/index.md?collection=content_en"
+      ),
     "contributing/translation-program/translatathon/terms-and-conditions/index.md":
       () =>
         import(
           "../public/content/contributing/translation-program/translatathon/terms-and-conditions/index.md?collection=content_en"
         ),
-    "contributing/translation-program/translatathon/details/index.md": () =>
+    "developers/docs/apis/javascript/index.md": () =>
       import(
-        "../public/content/contributing/translation-program/translatathon/details/index.md?collection=content_en"
-      ),
-    "developers/docs/apis/backend/index.md": () =>
-      import(
-        "../public/content/developers/docs/apis/backend/index.md?collection=content_en"
+        "../public/content/developers/docs/apis/javascript/index.md?collection=content_en"
       ),
     "developers/docs/apis/json-rpc/index.md": () =>
       import(
         "../public/content/developers/docs/apis/json-rpc/index.md?collection=content_en"
       ),
+    "developers/docs/apis/backend/index.md": () =>
+      import(
+        "../public/content/developers/docs/apis/backend/index.md?collection=content_en"
+      ),
     "developers/docs/consensus-mechanisms/poa/index.md": () =>
       import(
         "../public/content/developers/docs/consensus-mechanisms/poa/index.md?collection=content_en"
       ),
-    "developers/docs/apis/javascript/index.md": () =>
+    "developers/docs/consensus-mechanisms/pos/index.md": () =>
       import(
-        "../public/content/developers/docs/apis/javascript/index.md?collection=content_en"
+        "../public/content/developers/docs/consensus-mechanisms/pos/index.md?collection=content_en"
       ),
     "developers/docs/consensus-mechanisms/pow/index.md": () =>
       import(
         "../public/content/developers/docs/consensus-mechanisms/pow/index.md?collection=content_en"
-      ),
-    "developers/docs/consensus-mechanisms/pos/index.md": () =>
-      import(
-        "../public/content/developers/docs/consensus-mechanisms/pos/index.md?collection=content_en"
       ),
     "developers/docs/data-and-analytics/block-explorers/index.md": () =>
       import(
@@ -2322,13 +2322,13 @@ const browserCollections = {
         import(
           "../public/content/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_en"
         ),
-    "developers/docs/design-and-ux/heuristics-for-web3/index.md": () =>
-      import(
-        "../public/content/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_en"
-      ),
     "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
       import(
         "../public/content/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_en"
+      ),
+    "developers/docs/design-and-ux/heuristics-for-web3/index.md": () =>
+      import(
+        "../public/content/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_en"
       ),
     "developers/docs/evm/opcodes/index.md": () =>
       import(
@@ -2358,6 +2358,10 @@ const browserCollections = {
       import(
         "../public/content/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_en"
       ),
+    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
+      import(
+        "../public/content/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_en"
+      ),
     "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
       import(
         "../public/content/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_en"
@@ -2366,21 +2370,17 @@ const browserCollections = {
       import(
         "../public/content/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_en"
       ),
-    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
-      import(
-        "../public/content/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_en"
-      ),
     "developers/docs/programming-languages/dart/index.md": () =>
       import(
         "../public/content/developers/docs/programming-languages/dart/index.md?collection=content_en"
       ),
-    "developers/docs/programming-languages/delphi/index.md": () =>
-      import(
-        "../public/content/developers/docs/programming-languages/delphi/index.md?collection=content_en"
-      ),
     "developers/docs/programming-languages/dot-net/index.md": () =>
       import(
         "../public/content/developers/docs/programming-languages/dot-net/index.md?collection=content_en"
+      ),
+    "developers/docs/programming-languages/delphi/index.md": () =>
+      import(
+        "../public/content/developers/docs/programming-languages/delphi/index.md?collection=content_en"
       ),
     "developers/docs/programming-languages/elixir/index.md": () =>
       import(
@@ -2426,13 +2426,13 @@ const browserCollections = {
       import(
         "../public/content/developers/docs/scaling/state-channels/index.md?collection=content_en"
       ),
-    "developers/docs/scaling/zk-rollups/index.md": () =>
-      import(
-        "../public/content/developers/docs/scaling/zk-rollups/index.md?collection=content_en"
-      ),
     "developers/docs/scaling/validium/index.md": () =>
       import(
         "../public/content/developers/docs/scaling/validium/index.md?collection=content_en"
+      ),
+    "developers/docs/scaling/zk-rollups/index.md": () =>
+      import(
+        "../public/content/developers/docs/scaling/zk-rollups/index.md?collection=content_en"
       ),
     "developers/docs/smart-contracts/anatomy/index.md": () =>
       import(
@@ -2442,13 +2442,13 @@ const browserCollections = {
       import(
         "../public/content/developers/docs/smart-contracts/compiling/index.md?collection=content_en"
       ),
-    "developers/docs/smart-contracts/deploying/index.md": () =>
-      import(
-        "../public/content/developers/docs/smart-contracts/deploying/index.md?collection=content_en"
-      ),
     "developers/docs/smart-contracts/composability/index.md": () =>
       import(
         "../public/content/developers/docs/smart-contracts/composability/index.md?collection=content_en"
+      ),
+    "developers/docs/smart-contracts/deploying/index.md": () =>
+      import(
+        "../public/content/developers/docs/smart-contracts/deploying/index.md?collection=content_en"
       ),
     "developers/docs/smart-contracts/formal-verification/index.md": () =>
       import(
@@ -2486,10 +2486,6 @@ const browserCollections = {
       import(
         "../public/content/developers/docs/standards/tokens/index.md?collection=content_en"
       ),
-    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
-      import(
-        "../public/content/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_en"
-      ),
     "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
       () =>
         import(
@@ -2499,63 +2495,67 @@ const browserCollections = {
       import(
         "../public/content/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_en"
       ),
-    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
-      import(
-        "../public/content/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_en"
-      ),
     "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
       import(
         "../public/content/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_en"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+      import(
+        "../public/content/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_en"
       ),
     "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
       import(
         "../public/content/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_en"
       ),
-    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
-      import(
-        "../public/content/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_en"
-      ),
     "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
       import(
         "../public/content/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_en"
+      ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_en"
+      ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_en"
       ),
     "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
       () =>
         import(
           "../public/content/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_en"
         ),
-    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
-      import(
-        "../public/content/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_en"
-      ),
     "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
       () =>
         import(
           "../public/content/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_en"
         ),
-    "developers/docs/standards/tokens/erc-1363/index.md": () =>
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
       import(
-        "../public/content/developers/docs/standards/tokens/erc-1363/index.md?collection=content_en"
+        "../public/content/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_en"
       ),
     "developers/docs/standards/tokens/erc-1155/index.md": () =>
       import(
         "../public/content/developers/docs/standards/tokens/erc-1155/index.md?collection=content_en"
       ),
-    "developers/docs/standards/tokens/erc-20/index.md": () =>
-      import(
-        "../public/content/developers/docs/standards/tokens/erc-20/index.md?collection=content_en"
-      ),
     "developers/docs/standards/tokens/erc-223/index.md": () =>
       import(
         "../public/content/developers/docs/standards/tokens/erc-223/index.md?collection=content_en"
       ),
-    "developers/docs/standards/tokens/erc-721/index.md": () =>
+    "developers/docs/standards/tokens/erc-20/index.md": () =>
       import(
-        "../public/content/developers/docs/standards/tokens/erc-721/index.md?collection=content_en"
+        "../public/content/developers/docs/standards/tokens/erc-20/index.md?collection=content_en"
+      ),
+    "developers/docs/standards/tokens/erc-1363/index.md": () =>
+      import(
+        "../public/content/developers/docs/standards/tokens/erc-1363/index.md?collection=content_en"
       ),
     "developers/docs/standards/tokens/erc-4626/index.md": () =>
       import(
         "../public/content/developers/docs/standards/tokens/erc-4626/index.md?collection=content_en"
+      ),
+    "developers/docs/standards/tokens/erc-721/index.md": () =>
+      import(
+        "../public/content/developers/docs/standards/tokens/erc-721/index.md?collection=content_en"
       ),
     "developers/docs/standards/tokens/erc-777/index.md": () =>
       import(
@@ -2566,22 +2566,18 @@ const browserCollections = {
         import(
           "../public/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_en"
         ),
-    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
-      () =>
-        import(
-          "../public/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_en"
-        ),
     "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
       () =>
         import(
           "../public/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_en"
         ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
+      () =>
+        import(
+          "../public/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_en"
+        ),
   }),
   content_es: create.doc("content_es", {
-    "ai-agents/index.md": () =>
-      import(
-        "../public/content/translations/es/ai-agents/index.md?collection=content_es"
-      ),
     "about/index.md": () =>
       import(
         "../public/content/translations/es/about/index.md?collection=content_es"
@@ -2590,13 +2586,17 @@ const browserCollections = {
       import(
         "../public/content/translations/es/bridges/index.md?collection=content_es"
       ),
-    "dao/index.md": () =>
+    "ai-agents/index.md": () =>
       import(
-        "../public/content/translations/es/dao/index.md?collection=content_es"
+        "../public/content/translations/es/ai-agents/index.md?collection=content_es"
       ),
     "contributing/index.md": () =>
       import(
         "../public/content/translations/es/contributing/index.md?collection=content_es"
+      ),
+    "dao/index.md": () =>
+      import(
+        "../public/content/translations/es/dao/index.md?collection=content_es"
       ),
     "decentralized-identity/index.md": () =>
       import(
@@ -2638,17 +2638,13 @@ const browserCollections = {
       import(
         "../public/content/translations/es/governance/index.md?collection=content_es"
       ),
-    "how-to-create-an-ethereum-account/index.md": () =>
-      import(
-        "../public/content/translations/es/how-to-create-an-ethereum-account/index.md?collection=content_es"
-      ),
     "guides/index.md": () =>
       import(
         "../public/content/translations/es/guides/index.md?collection=content_es"
       ),
-    "prediction-markets/index.md": () =>
+    "how-to-create-an-ethereum-account/index.md": () =>
       import(
-        "../public/content/translations/es/prediction-markets/index.md?collection=content_es"
+        "../public/content/translations/es/how-to-create-an-ethereum-account/index.md?collection=content_es"
       ),
     "nft/index.md": () =>
       import(
@@ -2658,13 +2654,17 @@ const browserCollections = {
       import(
         "../public/content/translations/es/payments/index.md?collection=content_es"
       ),
-    "real-world-assets/index.md": () =>
+    "prediction-markets/index.md": () =>
       import(
-        "../public/content/translations/es/real-world-assets/index.md?collection=content_es"
+        "../public/content/translations/es/prediction-markets/index.md?collection=content_es"
       ),
     "privacy/index.md": () =>
       import(
         "../public/content/translations/es/privacy/index.md?collection=content_es"
+      ),
+    "real-world-assets/index.md": () =>
+      import(
+        "../public/content/translations/es/real-world-assets/index.md?collection=content_es"
       ),
     "refi/index.md": () =>
       import(
@@ -2686,10 +2686,6 @@ const browserCollections = {
       import(
         "../public/content/translations/es/social-networks/index.md?collection=content_es"
       ),
-    "whitepaper/index.md": () =>
-      import(
-        "../public/content/translations/es/whitepaper/index.md?collection=content_es"
-      ),
     "web3/index.md": () =>
       import(
         "../public/content/translations/es/web3/index.md?collection=content_es"
@@ -2697,6 +2693,10 @@ const browserCollections = {
     "what-are-apps/index.md": () =>
       import(
         "../public/content/translations/es/what-are-apps/index.md?collection=content_es"
+      ),
+    "whitepaper/index.md": () =>
+      import(
+        "../public/content/translations/es/whitepaper/index.md?collection=content_es"
       ),
     "wrapped-eth/index.md": () =>
       import(
@@ -2770,21 +2770,21 @@ const browserCollections = {
       import(
         "../public/content/translations/es/contributing/adding-videos/index.md?collection=content_es"
       ),
-    "contributing/design/index.md": () =>
+    "contributing/adding-wallets/index.md": () =>
       import(
-        "../public/content/translations/es/contributing/design/index.md?collection=content_es"
+        "../public/content/translations/es/contributing/adding-wallets/index.md?collection=content_es"
       ),
     "contributing/content-resources/index.md": () =>
       import(
         "../public/content/translations/es/contributing/content-resources/index.md?collection=content_es"
       ),
+    "contributing/design/index.md": () =>
+      import(
+        "../public/content/translations/es/contributing/design/index.md?collection=content_es"
+      ),
     "contributing/design-principles/index.md": () =>
       import(
         "../public/content/translations/es/contributing/design-principles/index.md?collection=content_es"
-      ),
-    "contributing/adding-wallets/index.md": () =>
-      import(
-        "../public/content/translations/es/contributing/adding-wallets/index.md?collection=content_es"
       ),
     "contributing/quizzes/index.md": () =>
       import(
@@ -2794,13 +2794,13 @@ const browserCollections = {
       import(
         "../public/content/translations/es/contributing/translation-program/index.md?collection=content_es"
       ),
-    "eth/supply/index.md": () =>
-      import(
-        "../public/content/translations/es/eth/supply/index.md?collection=content_es"
-      ),
     "developers/docs/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/index.md?collection=content_es"
+      ),
+    "eth/supply/index.md": () =>
+      import(
+        "../public/content/translations/es/eth/supply/index.md?collection=content_es"
       ),
     "guides/how-to-create-an-ethereum-account/index.md": () =>
       import(
@@ -2834,6 +2834,10 @@ const browserCollections = {
       import(
         "../public/content/translations/es/roadmap/beacon-chain/index.md?collection=content_es"
       ),
+    "roadmap/danksharding/index.md": () =>
+      import(
+        "../public/content/translations/es/roadmap/danksharding/index.md?collection=content_es"
+      ),
     "roadmap/dencun/index.md": () =>
       import(
         "../public/content/translations/es/roadmap/dencun/index.md?collection=content_es"
@@ -2841,10 +2845,6 @@ const browserCollections = {
     "roadmap/fusaka/index.md": () =>
       import(
         "../public/content/translations/es/roadmap/fusaka/index.md?collection=content_es"
-      ),
-    "roadmap/danksharding/index.md": () =>
-      import(
-        "../public/content/translations/es/roadmap/danksharding/index.md?collection=content_es"
       ),
     "roadmap/future-proofing/index.md": () =>
       import(
@@ -3014,10 +3014,6 @@ const browserCollections = {
       import(
         "../public/content/translations/es/videos/ethereum-in-30-minutes-vitalik-buterin/index.md?collection=content_es"
       ),
-    "videos/ethereum-staking-withdrawals/index.md": () =>
-      import(
-        "../public/content/translations/es/videos/ethereum-staking-withdrawals/index.md?collection=content_es"
-      ),
     "videos/ethereum-institutional-privacy-panel/index.md": () =>
       import(
         "../public/content/translations/es/videos/ethereum-institutional-privacy-panel/index.md?collection=content_es"
@@ -3025,6 +3021,10 @@ const browserCollections = {
     "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
       import(
         "../public/content/translations/es/videos/ethereum-localism-global-protocols-local-power/index.md?collection=content_es"
+      ),
+    "videos/ethereum-staking-withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/es/videos/ethereum-staking-withdrawals/index.md?collection=content_es"
       ),
     "videos/ethereum-things-i-like-mariano-conti/index.md": () =>
       import(
@@ -3034,25 +3034,25 @@ const browserCollections = {
       import(
         "../public/content/translations/es/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_es"
       ),
-    "videos/hash-function-eth-build/index.md": () =>
-      import(
-        "../public/content/translations/es/videos/hash-function-eth-build/index.md?collection=content_es"
-      ),
     "videos/fusaka-upgrade-explained/index.md": () =>
       import(
         "../public/content/translations/es/videos/fusaka-upgrade-explained/index.md?collection=content_es"
+      ),
+    "videos/hash-function-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/es/videos/hash-function-eth-build/index.md?collection=content_es"
       ),
     "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
       import(
         "../public/content/translations/es/videos/how-to-be-cypherpunk-juan-benet/index.md?collection=content_es"
       ),
-    "videos/key-pair-eth-build/index.md": () =>
-      import(
-        "../public/content/translations/es/videos/key-pair-eth-build/index.md?collection=content_es"
-      ),
     "videos/how-to-make-a-guerilla-l2/index.md": () =>
       import(
         "../public/content/translations/es/videos/how-to-make-a-guerilla-l2/index.md?collection=content_es"
+      ),
+    "videos/key-pair-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/es/videos/key-pair-eth-build/index.md?collection=content_es"
       ),
     "videos/layer-2-scaling-explained/index.md": () =>
       import(
@@ -3126,6 +3126,10 @@ const browserCollections = {
       import(
         "../public/content/translations/es/videos/smart-contracts-code-is-law/index.md?collection=content_es"
       ),
+    "videos/stani-kulechov-building-aave/index.md": () =>
+      import(
+        "../public/content/translations/es/videos/stani-kulechov-building-aave/index.md?collection=content_es"
+      ),
     "videos/surveillance-silence-reclaiming-privacy/index.md": () =>
       import(
         "../public/content/translations/es/videos/surveillance-silence-reclaiming-privacy/index.md?collection=content_es"
@@ -3146,10 +3150,6 @@ const browserCollections = {
       import(
         "../public/content/translations/es/videos/zero-knowledge-proofs-5-levels/index.md?collection=content_es"
       ),
-    "videos/stani-kulechov-building-aave/index.md": () =>
-      import(
-        "../public/content/translations/es/videos/stani-kulechov-building-aave/index.md?collection=content_es"
-      ),
     "community/events/organizing/index.md": () =>
       import(
         "../public/content/translations/es/community/events/organizing/index.md?collection=content_es"
@@ -3158,13 +3158,13 @@ const browserCollections = {
       import(
         "../public/content/translations/es/community/support/faq/index.md?collection=content_es"
       ),
-    "community/support/misconceptions/index.md": () =>
-      import(
-        "../public/content/translations/es/community/support/misconceptions/index.md?collection=content_es"
-      ),
     "community/support/scams/index.md": () =>
       import(
         "../public/content/translations/es/community/support/scams/index.md?collection=content_es"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/es/community/support/misconceptions/index.md?collection=content_es"
       ),
     "contributing/design/adding-design-resources/index.md": () =>
       import(
@@ -3222,10 +3222,6 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/data-and-analytics/index.md?collection=content_es"
       ),
-    "developers/docs/data-availability/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/data-availability/index.md?collection=content_es"
-      ),
     "developers/docs/data-structures-and-encoding/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/data-structures-and-encoding/index.md?collection=content_es"
@@ -3237,6 +3233,10 @@ const browserCollections = {
     "developers/docs/development-networks/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/development-networks/index.md?collection=content_es"
+      ),
+    "developers/docs/data-availability/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/data-availability/index.md?collection=content_es"
       ),
     "developers/docs/ethereum-stack/index.md": () =>
       import(
@@ -3266,13 +3266,13 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/intro-to-ethereum/index.md?collection=content_es"
       ),
-    "developers/docs/layer-2-scaling/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/layer-2-scaling/index.md?collection=content_es"
-      ),
     "developers/docs/mev/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/mev/index.md?collection=content_es"
+      ),
+    "developers/docs/layer-2-scaling/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/layer-2-scaling/index.md?collection=content_es"
       ),
     "developers/docs/networking-layer/index.md": () =>
       import(
@@ -3294,21 +3294,21 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/programming-languages/index.md?collection=content_es"
       ),
-    "developers/docs/scaling/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/scaling/index.md?collection=content_es"
-      ),
     "developers/docs/security/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/security/index.md?collection=content_es"
       ),
-    "developers/docs/smart-contracts/index.md": () =>
+    "developers/docs/scaling/index.md": () =>
       import(
-        "../public/content/translations/es/developers/docs/smart-contracts/index.md?collection=content_es"
+        "../public/content/translations/es/developers/docs/scaling/index.md?collection=content_es"
       ),
     "developers/docs/standards/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/standards/index.md?collection=content_es"
+      ),
+    "developers/docs/smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/smart-contracts/index.md?collection=content_es"
       ),
     "developers/docs/storage/index.md": () =>
       import(
@@ -3343,15 +3343,15 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/tutorials/app-plasma/index.md?collection=content_es"
       ),
+    "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_es"
+      ),
     "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
       () =>
         import(
           "../public/content/translations/es/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_es"
         ),
-    "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_es"
-      ),
     "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
       import(
         "../public/content/translations/es/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_es"
@@ -3570,21 +3570,21 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/tutorials/uniswap-v2-annotated-code/index.md?collection=content_es"
       ),
-    "developers/tutorials/using-websockets/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/tutorials/using-websockets/index.md?collection=content_es"
-      ),
     "developers/tutorials/yellow-paper-evm/index.md": () =>
       import(
         "../public/content/translations/es/developers/tutorials/yellow-paper-evm/index.md?collection=content_es"
       ),
-    "roadmap/fusaka/peerdas/index.md": () =>
+    "developers/tutorials/using-websockets/index.md": () =>
       import(
-        "../public/content/translations/es/roadmap/fusaka/peerdas/index.md?collection=content_es"
+        "../public/content/translations/es/developers/tutorials/using-websockets/index.md?collection=content_es"
       ),
     "roadmap/future-proofing/quantum-resistance/index.md": () =>
       import(
         "../public/content/translations/es/roadmap/future-proofing/quantum-resistance/index.md?collection=content_es"
+      ),
+    "roadmap/fusaka/peerdas/index.md": () =>
+      import(
+        "../public/content/translations/es/roadmap/fusaka/peerdas/index.md?collection=content_es"
       ),
     "roadmap/merge/issuance/index.md": () =>
       import(
@@ -3630,23 +3630,18 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_es"
       ),
-    "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
-      () =>
-        import(
-          "../public/content/translations/es/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_es"
-        ),
     "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
       () =>
         import(
           "../public/content/translations/es/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_es"
         ),
-    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_es"
-      ),
     "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_es"
+      ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_es"
       ),
     "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
       () =>
@@ -3666,6 +3661,11 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_es"
       ),
+    "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
+      () =>
+        import(
+          "../public/content/translations/es/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_es"
+        ),
     "developers/docs/evm/opcodes/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/evm/opcodes/index.md?collection=content_es"
@@ -3682,37 +3682,37 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/nodes-and-clients/archive-nodes/index.md?collection=content_es"
       ),
-    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_es"
-      ),
     "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_es"
       ),
-    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
+    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
       import(
-        "../public/content/translations/es/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_es"
+        "../public/content/translations/es/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_es"
       ),
     "developers/docs/nodes-and-clients/light-clients/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_es"
       ),
-    "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
+    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
       import(
-        "../public/content/translations/es/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_es"
+        "../public/content/translations/es/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_es"
       ),
     "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_es"
       ),
-    "developers/docs/programming-languages/dart/index.md": () =>
+    "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
       import(
-        "../public/content/translations/es/developers/docs/programming-languages/dart/index.md?collection=content_es"
+        "../public/content/translations/es/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_es"
       ),
     "developers/docs/programming-languages/delphi/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/programming-languages/delphi/index.md?collection=content_es"
+      ),
+    "developers/docs/programming-languages/dart/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/programming-languages/dart/index.md?collection=content_es"
       ),
     "developers/docs/programming-languages/dot-net/index.md": () =>
       import(
@@ -3750,25 +3750,29 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/scaling/optimistic-rollups/index.md?collection=content_es"
       ),
-    "developers/docs/scaling/plasma/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/scaling/plasma/index.md?collection=content_es"
-      ),
     "developers/docs/scaling/sidechains/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/scaling/sidechains/index.md?collection=content_es"
       ),
-    "developers/docs/scaling/state-channels/index.md": () =>
+    "developers/docs/scaling/plasma/index.md": () =>
       import(
-        "../public/content/translations/es/developers/docs/scaling/state-channels/index.md?collection=content_es"
+        "../public/content/translations/es/developers/docs/scaling/plasma/index.md?collection=content_es"
       ),
     "developers/docs/scaling/validium/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/scaling/validium/index.md?collection=content_es"
       ),
+    "developers/docs/scaling/state-channels/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/scaling/state-channels/index.md?collection=content_es"
+      ),
     "developers/docs/scaling/zk-rollups/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/scaling/zk-rollups/index.md?collection=content_es"
+      ),
+    "developers/docs/standards/tokens/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/standards/tokens/index.md?collection=content_es"
       ),
     "developers/docs/smart-contracts/anatomy/index.md": () =>
       import(
@@ -3798,13 +3802,13 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/smart-contracts/libraries/index.md?collection=content_es"
       ),
-    "developers/docs/smart-contracts/security/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/smart-contracts/security/index.md?collection=content_es"
-      ),
     "developers/docs/smart-contracts/naming/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/smart-contracts/naming/index.md?collection=content_es"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/smart-contracts/security/index.md?collection=content_es"
       ),
     "developers/docs/smart-contracts/testing/index.md": () =>
       import(
@@ -3817,10 +3821,6 @@ const browserCollections = {
     "developers/docs/smart-contracts/verifying/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/smart-contracts/verifying/index.md?collection=content_es"
-      ),
-    "developers/docs/standards/tokens/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/standards/tokens/index.md?collection=content_es"
       ),
     "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
       import(
@@ -3839,36 +3839,36 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_es"
       ),
-    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_es"
-      ),
     "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_es"
       ),
-    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
       import(
-        "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_es"
+        "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_es"
       ),
     "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_es"
+      ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_es"
       ),
     "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
       () =>
         import(
           "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_es"
         ),
-    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_es"
-      ),
     "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
       () =>
         import(
           "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_es"
         ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_es"
+      ),
     "developers/docs/standards/tokens/erc-1155/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/standards/tokens/erc-1155/index.md?collection=content_es"
@@ -3881,13 +3881,13 @@ const browserCollections = {
       import(
         "../public/content/translations/es/developers/docs/standards/tokens/erc-20/index.md?collection=content_es"
       ),
-    "developers/docs/standards/tokens/erc-223/index.md": () =>
-      import(
-        "../public/content/translations/es/developers/docs/standards/tokens/erc-223/index.md?collection=content_es"
-      ),
     "developers/docs/standards/tokens/erc-4626/index.md": () =>
       import(
         "../public/content/translations/es/developers/docs/standards/tokens/erc-4626/index.md?collection=content_es"
+      ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/es/developers/docs/standards/tokens/erc-223/index.md?collection=content_es"
       ),
     "developers/docs/standards/tokens/erc-721/index.md": () =>
       import(
@@ -3926,6 +3926,10 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/bridges/index.md?collection=content_fr"
       ),
+    "contributing/index.md": () =>
+      import(
+        "../public/content/translations/fr/contributing/index.md?collection=content_fr"
+      ),
     "dao/index.md": () =>
       import(
         "../public/content/translations/fr/dao/index.md?collection=content_fr"
@@ -3937,10 +3941,6 @@ const browserCollections = {
     "defi/index.md": () =>
       import(
         "../public/content/translations/fr/defi/index.md?collection=content_fr"
-      ),
-    "contributing/index.md": () =>
-      import(
-        "../public/content/translations/fr/contributing/index.md?collection=content_fr"
       ),
     "desci/index.md": () =>
       import(
@@ -3954,10 +3954,6 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/energy-consumption/index.md?collection=content_fr"
       ),
-    "ethereum-forks/index.md": () =>
-      import(
-        "../public/content/translations/fr/ethereum-forks/index.md?collection=content_fr"
-      ),
     "foundation/index.md": () =>
       import(
         "../public/content/translations/fr/foundation/index.md?collection=content_fr"
@@ -3965,6 +3961,10 @@ const browserCollections = {
     "gaming/index.md": () =>
       import(
         "../public/content/translations/fr/gaming/index.md?collection=content_fr"
+      ),
+    "ethereum-forks/index.md": () =>
+      import(
+        "../public/content/translations/fr/ethereum-forks/index.md?collection=content_fr"
       ),
     "glossary/index.md": () =>
       import(
@@ -3986,21 +3986,21 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/payments/index.md?collection=content_fr"
       ),
-    "privacy/index.md": () =>
-      import(
-        "../public/content/translations/fr/privacy/index.md?collection=content_fr"
-      ),
     "prediction-markets/index.md": () =>
       import(
         "../public/content/translations/fr/prediction-markets/index.md?collection=content_fr"
       ),
-    "refi/index.md": () =>
+    "privacy/index.md": () =>
       import(
-        "../public/content/translations/fr/refi/index.md?collection=content_fr"
+        "../public/content/translations/fr/privacy/index.md?collection=content_fr"
       ),
     "real-world-assets/index.md": () =>
       import(
         "../public/content/translations/fr/real-world-assets/index.md?collection=content_fr"
+      ),
+    "refi/index.md": () =>
+      import(
+        "../public/content/translations/fr/refi/index.md?collection=content_fr"
       ),
     "restaking/index.md": () =>
       import(
@@ -4042,13 +4042,13 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/community/code-of-conduct/index.md?collection=content_fr"
       ),
-    "community/get-involved/index.md": () =>
-      import(
-        "../public/content/translations/fr/community/get-involved/index.md?collection=content_fr"
-      ),
     "community/grants/index.md": () =>
       import(
         "../public/content/translations/fr/community/grants/index.md?collection=content_fr"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/translations/fr/community/get-involved/index.md?collection=content_fr"
       ),
     "community/language-resources/index.md": () =>
       import(
@@ -4074,6 +4074,10 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/contributing/adding-exchanges/index.md?collection=content_fr"
       ),
+    "contributing/adding-glossary-terms/index.md": () =>
+      import(
+        "../public/content/translations/fr/contributing/adding-glossary-terms/index.md?collection=content_fr"
+      ),
     "contributing/adding-layer-2s/index.md": () =>
       import(
         "../public/content/translations/fr/contributing/adding-layer-2s/index.md?collection=content_fr"
@@ -4085,10 +4089,6 @@ const browserCollections = {
     "contributing/adding-resources/index.md": () =>
       import(
         "../public/content/translations/fr/contributing/adding-resources/index.md?collection=content_fr"
-      ),
-    "contributing/adding-glossary-terms/index.md": () =>
-      import(
-        "../public/content/translations/fr/contributing/adding-glossary-terms/index.md?collection=content_fr"
       ),
     "contributing/adding-staking-products/index.md": () =>
       import(
@@ -4194,10 +4194,6 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/roadmap/pectra/index.md?collection=content_fr"
       ),
-    "roadmap/scaling/index.md": () =>
-      import(
-        "../public/content/translations/fr/roadmap/scaling/index.md?collection=content_fr"
-      ),
     "roadmap/secret-leader-election/index.md": () =>
       import(
         "../public/content/translations/fr/roadmap/secret-leader-election/index.md?collection=content_fr"
@@ -4209,6 +4205,10 @@ const browserCollections = {
     "roadmap/single-slot-finality/index.md": () =>
       import(
         "../public/content/translations/fr/roadmap/single-slot-finality/index.md?collection=content_fr"
+      ),
+    "roadmap/scaling/index.md": () =>
+      import(
+        "../public/content/translations/fr/roadmap/scaling/index.md?collection=content_fr"
       ),
     "roadmap/statelessness/index.md": () =>
       import(
@@ -4238,13 +4238,13 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/staking/saas/index.md?collection=content_fr"
       ),
-    "staking/withdrawals/index.md": () =>
-      import(
-        "../public/content/translations/fr/staking/withdrawals/index.md?collection=content_fr"
-      ),
     "staking/solo/index.md": () =>
       import(
         "../public/content/translations/fr/staking/solo/index.md?collection=content_fr"
+      ),
+    "staking/withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/fr/staking/withdrawals/index.md?collection=content_fr"
       ),
     "videos/ai-agents-interview-luna/index.md": () =>
       import(
@@ -4258,10 +4258,6 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/videos/blobspace-101-dencun/index.md?collection=content_fr"
       ),
-    "videos/blockchain-eth-build/index.md": () =>
-      import(
-        "../public/content/translations/fr/videos/blockchain-eth-build/index.md?collection=content_fr"
-      ),
     "videos/blockchain-101-visual-demo/index.md": () =>
       import(
         "../public/content/translations/fr/videos/blockchain-101-visual-demo/index.md?collection=content_fr"
@@ -4273,6 +4269,10 @@ const browserCollections = {
     "videos/crypto-security-passwords/index.md": () =>
       import(
         "../public/content/translations/fr/videos/crypto-security-passwords/index.md?collection=content_fr"
+      ),
+    "videos/blockchain-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/fr/videos/blockchain-eth-build/index.md?collection=content_fr"
       ),
     "videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md": () =>
       import(
@@ -4362,13 +4362,13 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_fr"
       ),
-    "videos/fusaka-upgrade-explained/index.md": () =>
-      import(
-        "../public/content/translations/fr/videos/fusaka-upgrade-explained/index.md?collection=content_fr"
-      ),
     "videos/hash-function-eth-build/index.md": () =>
       import(
         "../public/content/translations/fr/videos/hash-function-eth-build/index.md?collection=content_fr"
+      ),
+    "videos/fusaka-upgrade-explained/index.md": () =>
+      import(
+        "../public/content/translations/fr/videos/fusaka-upgrade-explained/index.md?collection=content_fr"
       ),
     "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
       import(
@@ -4394,13 +4394,13 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/videos/next-10-years-of-ethereum/index.md?collection=content_fr"
       ),
-    "videos/pectra-what-stakers-need-to-know/index.md": () =>
-      import(
-        "../public/content/translations/fr/videos/pectra-what-stakers-need-to-know/index.md?collection=content_fr"
-      ),
     "videos/pectra-upgrade-overview/index.md": () =>
       import(
         "../public/content/translations/fr/videos/pectra-upgrade-overview/index.md?collection=content_fr"
+      ),
+    "videos/pectra-what-stakers-need-to-know/index.md": () =>
+      import(
+        "../public/content/translations/fr/videos/pectra-what-stakers-need-to-know/index.md?collection=content_fr"
       ),
     "videos/pos-reorgs-attack-defense/index.md": () =>
       import(
@@ -4442,13 +4442,13 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/videos/rollups-scaling-strategy/index.md?collection=content_fr"
       ),
-    "videos/security-through-obscurity-microdots/index.md": () =>
-      import(
-        "../public/content/translations/fr/videos/security-through-obscurity-microdots/index.md?collection=content_fr"
-      ),
     "videos/smart-contracts-code-is-law/index.md": () =>
       import(
         "../public/content/translations/fr/videos/smart-contracts-code-is-law/index.md?collection=content_fr"
+      ),
+    "videos/security-through-obscurity-microdots/index.md": () =>
+      import(
+        "../public/content/translations/fr/videos/security-through-obscurity-microdots/index.md?collection=content_fr"
       ),
     "videos/stani-kulechov-building-aave/index.md": () =>
       import(
@@ -4482,13 +4482,13 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/community/support/faq/index.md?collection=content_fr"
       ),
-    "community/support/misconceptions/index.md": () =>
-      import(
-        "../public/content/translations/fr/community/support/misconceptions/index.md?collection=content_fr"
-      ),
     "community/support/scams/index.md": () =>
       import(
         "../public/content/translations/fr/community/support/scams/index.md?collection=content_fr"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/fr/community/support/misconceptions/index.md?collection=content_fr"
       ),
     "contributing/design/adding-design-resources/index.md": () =>
       import(
@@ -4506,21 +4506,21 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/contributing/translation-program/mission-and-vision/index.md?collection=content_fr"
       ),
-    "contributing/translation-program/playbook/index.md": () =>
-      import(
-        "../public/content/translations/fr/contributing/translation-program/playbook/index.md?collection=content_fr"
-      ),
     "contributing/translation-program/resources/index.md": () =>
       import(
         "../public/content/translations/fr/contributing/translation-program/resources/index.md?collection=content_fr"
       ),
-    "contributing/translation-program/translatathon/index.md": () =>
+    "contributing/translation-program/playbook/index.md": () =>
       import(
-        "../public/content/translations/fr/contributing/translation-program/translatathon/index.md?collection=content_fr"
+        "../public/content/translations/fr/contributing/translation-program/playbook/index.md?collection=content_fr"
       ),
     "contributing/translation-program/translators-guide/index.md": () =>
       import(
         "../public/content/translations/fr/contributing/translation-program/translators-guide/index.md?collection=content_fr"
+      ),
+    "contributing/translation-program/translatathon/index.md": () =>
+      import(
+        "../public/content/translations/fr/contributing/translation-program/translatathon/index.md?collection=content_fr"
       ),
     "developers/docs/accounts/index.md": () =>
       import(
@@ -4542,13 +4542,13 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/developers/docs/dapps/index.md?collection=content_fr"
       ),
-    "developers/docs/data-and-analytics/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/data-and-analytics/index.md?collection=content_fr"
-      ),
     "developers/docs/data-availability/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/data-availability/index.md?collection=content_fr"
+      ),
+    "developers/docs/data-and-analytics/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/data-and-analytics/index.md?collection=content_fr"
       ),
     "developers/docs/data-structures-and-encoding/index.md": () =>
       import(
@@ -4566,21 +4566,21 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/developers/docs/ethereum-stack/index.md?collection=content_fr"
       ),
-    "developers/docs/evm/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/evm/index.md?collection=content_fr"
-      ),
     "developers/docs/frameworks/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/frameworks/index.md?collection=content_fr"
       ),
-    "developers/docs/gas/index.md": () =>
+    "developers/docs/evm/index.md": () =>
       import(
-        "../public/content/translations/fr/developers/docs/gas/index.md?collection=content_fr"
+        "../public/content/translations/fr/developers/docs/evm/index.md?collection=content_fr"
       ),
     "developers/docs/ides/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/ides/index.md?collection=content_fr"
+      ),
+    "developers/docs/gas/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/gas/index.md?collection=content_fr"
       ),
     "developers/docs/intro-to-ether/index.md": () =>
       import(
@@ -4655,10 +4655,6 @@ const browserCollections = {
         import(
           "../public/content/translations/fr/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_fr"
         ),
-    "developers/tutorials/ai-trading-agent/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/tutorials/ai-trading-agent/index.md?collection=content_fr"
-      ),
     "developers/tutorials/all-you-can-cache/index.md": () =>
       import(
         "../public/content/translations/fr/developers/tutorials/all-you-can-cache/index.md?collection=content_fr"
@@ -4672,6 +4668,10 @@ const browserCollections = {
         import(
           "../public/content/translations/fr/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_fr"
         ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/tutorials/ai-trading-agent/index.md?collection=content_fr"
+      ),
     "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
       import(
         "../public/content/translations/fr/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_fr"
@@ -4922,48 +4922,48 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/contributing/translation-program/translatathon/details/index.md?collection=content_fr"
       ),
-    "developers/docs/apis/javascript/index.md": () =>
+    "developers/docs/apis/json-rpc/index.md": () =>
       import(
-        "../public/content/translations/fr/developers/docs/apis/javascript/index.md?collection=content_fr"
+        "../public/content/translations/fr/developers/docs/apis/json-rpc/index.md?collection=content_fr"
       ),
     "developers/docs/apis/backend/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/apis/backend/index.md?collection=content_fr"
       ),
-    "developers/docs/apis/json-rpc/index.md": () =>
+    "developers/docs/apis/javascript/index.md": () =>
       import(
-        "../public/content/translations/fr/developers/docs/apis/json-rpc/index.md?collection=content_fr"
+        "../public/content/translations/fr/developers/docs/apis/javascript/index.md?collection=content_fr"
       ),
     "developers/docs/consensus-mechanisms/poa/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/consensus-mechanisms/poa/index.md?collection=content_fr"
       ),
-    "developers/docs/consensus-mechanisms/pow/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pow/index.md?collection=content_fr"
-      ),
     "developers/docs/consensus-mechanisms/pos/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/index.md?collection=content_fr"
       ),
-    "developers/docs/data-and-analytics/block-explorers/index.md": () =>
+    "developers/docs/consensus-mechanisms/pow/index.md": () =>
       import(
-        "../public/content/translations/fr/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_fr"
+        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pow/index.md?collection=content_fr"
       ),
     "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
       () =>
         import(
           "../public/content/translations/fr/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_fr"
         ),
-    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+    "developers/docs/data-and-analytics/block-explorers/index.md": () =>
       import(
-        "../public/content/translations/fr/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_fr"
+        "../public/content/translations/fr/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_fr"
       ),
     "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
       () =>
         import(
           "../public/content/translations/fr/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_fr"
         ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_fr"
+      ),
     "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_fr"
@@ -5034,17 +5034,21 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/developers/docs/programming-languages/delphi/index.md?collection=content_fr"
       ),
-    "developers/docs/programming-languages/dot-net/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/programming-languages/dot-net/index.md?collection=content_fr"
-      ),
     "developers/docs/programming-languages/elixir/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/programming-languages/elixir/index.md?collection=content_fr"
       ),
+    "developers/docs/programming-languages/dot-net/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/programming-languages/dot-net/index.md?collection=content_fr"
+      ),
     "developers/docs/programming-languages/golang/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/programming-languages/golang/index.md?collection=content_fr"
+      ),
+    "developers/docs/programming-languages/javascript/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/programming-languages/javascript/index.md?collection=content_fr"
       ),
     "developers/docs/programming-languages/java/index.md": () =>
       import(
@@ -5054,10 +5058,6 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/developers/docs/programming-languages/python/index.md?collection=content_fr"
       ),
-    "developers/docs/programming-languages/javascript/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/programming-languages/javascript/index.md?collection=content_fr"
-      ),
     "developers/docs/programming-languages/ruby/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/programming-languages/ruby/index.md?collection=content_fr"
@@ -5066,10 +5066,6 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/developers/docs/programming-languages/rust/index.md?collection=content_fr"
       ),
-    "developers/docs/scaling/plasma/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/scaling/plasma/index.md?collection=content_fr"
-      ),
     "developers/docs/scaling/optimistic-rollups/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/scaling/optimistic-rollups/index.md?collection=content_fr"
@@ -5077,6 +5073,10 @@ const browserCollections = {
     "developers/docs/scaling/sidechains/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/scaling/sidechains/index.md?collection=content_fr"
+      ),
+    "developers/docs/scaling/plasma/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/scaling/plasma/index.md?collection=content_fr"
       ),
     "developers/docs/scaling/state-channels/index.md": () =>
       import(
@@ -5142,26 +5142,22 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/developers/docs/standards/tokens/index.md?collection=content_fr"
       ),
-    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_fr"
-      ),
-    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_fr"
-      ),
     "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
       () =>
         import(
           "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_fr"
         ),
+    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_fr"
+      ),
     "developers/docs/consensus-mechanisms/pos/block-proposal/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_fr"
       ),
-    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
       import(
-        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_fr"
+        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_fr"
       ),
     "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
       import(
@@ -5175,20 +5171,24 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_fr"
       ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_fr"
+      ),
     "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
       () =>
         import(
           "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_fr"
         ),
-    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_fr"
-      ),
     "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
       () =>
         import(
           "../public/content/translations/fr/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_fr"
         ),
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_fr"
+      ),
     "developers/docs/standards/tokens/erc-1155/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/standards/tokens/erc-1155/index.md?collection=content_fr"
@@ -5205,13 +5205,13 @@ const browserCollections = {
       import(
         "../public/content/translations/fr/developers/docs/standards/tokens/erc-223/index.md?collection=content_fr"
       ),
-    "developers/docs/standards/tokens/erc-4626/index.md": () =>
-      import(
-        "../public/content/translations/fr/developers/docs/standards/tokens/erc-4626/index.md?collection=content_fr"
-      ),
     "developers/docs/standards/tokens/erc-721/index.md": () =>
       import(
         "../public/content/translations/fr/developers/docs/standards/tokens/erc-721/index.md?collection=content_fr"
+      ),
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+      import(
+        "../public/content/translations/fr/developers/docs/standards/tokens/erc-4626/index.md?collection=content_fr"
       ),
     "developers/docs/standards/tokens/erc-777/index.md": () =>
       import(
@@ -5222,20 +5222,2674 @@ const browserCollections = {
         import(
           "../public/content/translations/fr/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_fr"
         ),
-    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
-      () =>
-        import(
-          "../public/content/translations/fr/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_fr"
-        ),
     "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
       () =>
         import(
           "../public/content/translations/fr/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_fr"
         ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
+      () =>
+        import(
+          "../public/content/translations/fr/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_fr"
+        ),
   }),
-  content_hi: create.doc("content_hi", {}),
+  content_hi: create.doc("content_hi", {
+    "about/index.md": () =>
+      import(
+        "../public/content/translations/hi/about/index.md?collection=content_hi"
+      ),
+    "ai-agents/index.md": () =>
+      import(
+        "../public/content/translations/hi/ai-agents/index.md?collection=content_hi"
+      ),
+    "bridges/index.md": () =>
+      import(
+        "../public/content/translations/hi/bridges/index.md?collection=content_hi"
+      ),
+    "contributing/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/index.md?collection=content_hi"
+      ),
+    "dao/index.md": () =>
+      import(
+        "../public/content/translations/hi/dao/index.md?collection=content_hi"
+      ),
+    "decentralized-identity/index.md": () =>
+      import(
+        "../public/content/translations/hi/decentralized-identity/index.md?collection=content_hi"
+      ),
+    "desci/index.md": () =>
+      import(
+        "../public/content/translations/hi/desci/index.md?collection=content_hi"
+      ),
+    "defi/index.md": () =>
+      import(
+        "../public/content/translations/hi/defi/index.md?collection=content_hi"
+      ),
+    "eips/index.md": () =>
+      import(
+        "../public/content/translations/hi/eips/index.md?collection=content_hi"
+      ),
+    "energy-consumption/index.md": () =>
+      import(
+        "../public/content/translations/hi/energy-consumption/index.md?collection=content_hi"
+      ),
+    "ethereum-forks/index.md": () =>
+      import(
+        "../public/content/translations/hi/ethereum-forks/index.md?collection=content_hi"
+      ),
+    "foundation/index.md": () =>
+      import(
+        "../public/content/translations/hi/foundation/index.md?collection=content_hi"
+      ),
+    "gaming/index.md": () =>
+      import(
+        "../public/content/translations/hi/gaming/index.md?collection=content_hi"
+      ),
+    "glossary/index.md": () =>
+      import(
+        "../public/content/translations/hi/glossary/index.md?collection=content_hi"
+      ),
+    "governance/index.md": () =>
+      import(
+        "../public/content/translations/hi/governance/index.md?collection=content_hi"
+      ),
+    "guides/index.md": () =>
+      import(
+        "../public/content/translations/hi/guides/index.md?collection=content_hi"
+      ),
+    "how-to-create-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/hi/how-to-create-an-ethereum-account/index.md?collection=content_hi"
+      ),
+    "nft/index.md": () =>
+      import(
+        "../public/content/translations/hi/nft/index.md?collection=content_hi"
+      ),
+    "payments/index.md": () =>
+      import(
+        "../public/content/translations/hi/payments/index.md?collection=content_hi"
+      ),
+    "prediction-markets/index.md": () =>
+      import(
+        "../public/content/translations/hi/prediction-markets/index.md?collection=content_hi"
+      ),
+    "privacy/index.md": () =>
+      import(
+        "../public/content/translations/hi/privacy/index.md?collection=content_hi"
+      ),
+    "real-world-assets/index.md": () =>
+      import(
+        "../public/content/translations/hi/real-world-assets/index.md?collection=content_hi"
+      ),
+    "refi/index.md": () =>
+      import(
+        "../public/content/translations/hi/refi/index.md?collection=content_hi"
+      ),
+    "restaking/index.md": () =>
+      import(
+        "../public/content/translations/hi/restaking/index.md?collection=content_hi"
+      ),
+    "smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/hi/smart-contracts/index.md?collection=content_hi"
+      ),
+    "security/index.md": () =>
+      import(
+        "../public/content/translations/hi/security/index.md?collection=content_hi"
+      ),
+    "social-networks/index.md": () =>
+      import(
+        "../public/content/translations/hi/social-networks/index.md?collection=content_hi"
+      ),
+    "web3/index.md": () =>
+      import(
+        "../public/content/translations/hi/web3/index.md?collection=content_hi"
+      ),
+    "what-are-apps/index.md": () =>
+      import(
+        "../public/content/translations/hi/what-are-apps/index.md?collection=content_hi"
+      ),
+    "whitepaper/index.md": () =>
+      import(
+        "../public/content/translations/hi/whitepaper/index.md?collection=content_hi"
+      ),
+    "wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/hi/wrapped-eth/index.md?collection=content_hi"
+      ),
+    "zero-knowledge-proofs/index.md": () =>
+      import(
+        "../public/content/translations/hi/zero-knowledge-proofs/index.md?collection=content_hi"
+      ),
+    "community/code-of-conduct/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/code-of-conduct/index.md?collection=content_hi"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/get-involved/index.md?collection=content_hi"
+      ),
+    "community/grants/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/grants/index.md?collection=content_hi"
+      ),
+    "community/language-resources/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/language-resources/index.md?collection=content_hi"
+      ),
+    "community/online/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/online/index.md?collection=content_hi"
+      ),
+    "community/research/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/research/index.md?collection=content_hi"
+      ),
+    "community/support/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/support/index.md?collection=content_hi"
+      ),
+    "contributing/adding-desci-projects/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-desci-projects/index.md?collection=content_hi"
+      ),
+    "contributing/adding-developer-tools/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-developer-tools/index.md?collection=content_hi"
+      ),
+    "contributing/adding-exchanges/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-exchanges/index.md?collection=content_hi"
+      ),
+    "contributing/adding-glossary-terms/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-glossary-terms/index.md?collection=content_hi"
+      ),
+    "contributing/adding-layer-2s/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-layer-2s/index.md?collection=content_hi"
+      ),
+    "contributing/adding-products/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-products/index.md?collection=content_hi"
+      ),
+    "contributing/adding-staking-products/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-staking-products/index.md?collection=content_hi"
+      ),
+    "contributing/adding-resources/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-resources/index.md?collection=content_hi"
+      ),
+    "contributing/adding-videos/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-videos/index.md?collection=content_hi"
+      ),
+    "contributing/adding-wallets/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/adding-wallets/index.md?collection=content_hi"
+      ),
+    "contributing/content-resources/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/content-resources/index.md?collection=content_hi"
+      ),
+    "contributing/design/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/design/index.md?collection=content_hi"
+      ),
+    "contributing/design-principles/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/design-principles/index.md?collection=content_hi"
+      ),
+    "contributing/quizzes/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/quizzes/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/index.md?collection=content_hi"
+      ),
+    "developers/docs/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/index.md?collection=content_hi"
+      ),
+    "eth/supply/index.md": () =>
+      import(
+        "../public/content/translations/hi/eth/supply/index.md?collection=content_hi"
+      ),
+    "guides/how-to-create-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/hi/guides/how-to-create-an-ethereum-account/index.md?collection=content_hi"
+      ),
+    "guides/how-to-id-scam-tokens/index.md": () =>
+      import(
+        "../public/content/translations/hi/guides/how-to-id-scam-tokens/index.md?collection=content_hi"
+      ),
+    "guides/how-to-revoke-token-access/index.md": () =>
+      import(
+        "../public/content/translations/hi/guides/how-to-revoke-token-access/index.md?collection=content_hi"
+      ),
+    "guides/how-to-swap-tokens/index.md": () =>
+      import(
+        "../public/content/translations/hi/guides/how-to-swap-tokens/index.md?collection=content_hi"
+      ),
+    "guides/how-to-use-a-bridge/index.md": () =>
+      import(
+        "../public/content/translations/hi/guides/how-to-use-a-bridge/index.md?collection=content_hi"
+      ),
+    "guides/how-to-use-a-wallet/index.md": () =>
+      import(
+        "../public/content/translations/hi/guides/how-to-use-a-wallet/index.md?collection=content_hi"
+      ),
+    "roadmap/account-abstraction/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/account-abstraction/index.md?collection=content_hi"
+      ),
+    "roadmap/beacon-chain/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/beacon-chain/index.md?collection=content_hi"
+      ),
+    "roadmap/danksharding/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/danksharding/index.md?collection=content_hi"
+      ),
+    "roadmap/dencun/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/dencun/index.md?collection=content_hi"
+      ),
+    "roadmap/fusaka/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/fusaka/index.md?collection=content_hi"
+      ),
+    "roadmap/future-proofing/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/future-proofing/index.md?collection=content_hi"
+      ),
+    "roadmap/glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/glamsterdam/index.md?collection=content_hi"
+      ),
+    "roadmap/merge/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/merge/index.md?collection=content_hi"
+      ),
+    "roadmap/pbs/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/pbs/index.md?collection=content_hi"
+      ),
+    "roadmap/pectra/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/pectra/index.md?collection=content_hi"
+      ),
+    "roadmap/scaling/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/scaling/index.md?collection=content_hi"
+      ),
+    "roadmap/secret-leader-election/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/secret-leader-election/index.md?collection=content_hi"
+      ),
+    "roadmap/security/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/security/index.md?collection=content_hi"
+      ),
+    "roadmap/single-slot-finality/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/single-slot-finality/index.md?collection=content_hi"
+      ),
+    "roadmap/statelessness/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/statelessness/index.md?collection=content_hi"
+      ),
+    "roadmap/user-experience/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/user-experience/index.md?collection=content_hi"
+      ),
+    "roadmap/verkle-trees/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/verkle-trees/index.md?collection=content_hi"
+      ),
+    "roadmap/zkevm/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/zkevm/index.md?collection=content_hi"
+      ),
+    "staking/dvt/index.md": () =>
+      import(
+        "../public/content/translations/hi/staking/dvt/index.md?collection=content_hi"
+      ),
+    "staking/pools/index.md": () =>
+      import(
+        "../public/content/translations/hi/staking/pools/index.md?collection=content_hi"
+      ),
+    "staking/solo/index.md": () =>
+      import(
+        "../public/content/translations/hi/staking/solo/index.md?collection=content_hi"
+      ),
+    "staking/saas/index.md": () =>
+      import(
+        "../public/content/translations/hi/staking/saas/index.md?collection=content_hi"
+      ),
+    "staking/withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/hi/staking/withdrawals/index.md?collection=content_hi"
+      ),
+    "videos/ai-agents-interview-luna/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ai-agents-interview-luna/index.md?collection=content_hi"
+      ),
+    "videos/atoms-institutions-blockchains-josh-stark/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/atoms-institutions-blockchains-josh-stark/index.md?collection=content_hi"
+      ),
+    "videos/blobspace-101-dencun/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/blobspace-101-dencun/index.md?collection=content_hi"
+      ),
+    "videos/blockchain-101-visual-demo/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/blockchain-101-visual-demo/index.md?collection=content_hi"
+      ),
+    "videos/blockchain-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/blockchain-eth-build/index.md?collection=content_hi"
+      ),
+    "videos/crypto-apps-desocial-linda-xie/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/crypto-apps-desocial-linda-xie/index.md?collection=content_hi"
+      ),
+    "videos/crypto-security-passwords/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/crypto-security-passwords/index.md?collection=content_hi"
+      ),
+    "videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md?collection=content_hi"
+      ),
+    "videos/dao-hack-ethereum-classic/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/dao-hack-ethereum-classic/index.md?collection=content_hi"
+      ),
+    "videos/dao-build-next-great-city/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/dao-build-next-great-city/index.md?collection=content_hi"
+      ),
+    "videos/decentralized-identity-explained/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/decentralized-identity-explained/index.md?collection=content_hi"
+      ),
+    "videos/decentralized-social-media/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/decentralized-social-media/index.md?collection=content_hi"
+      ),
+    "videos/defi-future-of-finance/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/defi-future-of-finance/index.md?collection=content_hi"
+      ),
+    "videos/defi-history-inception-to-2021/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/defi-history-inception-to-2021/index.md?collection=content_hi"
+      ),
+    "videos/desci-movement-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/desci-movement-juan-benet/index.md?collection=content_hi"
+      ),
+    "videos/devcon-mumbai-coming-2026/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/devcon-mumbai-coming-2026/index.md?collection=content_hi"
+      ),
+    "videos/devconnect-argentina-2025-recap/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/devconnect-argentina-2025-recap/index.md?collection=content_hi"
+      ),
+    "videos/devconnect-buenos-aires-promo/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/devconnect-buenos-aires-promo/index.md?collection=content_hi"
+      ),
+    "videos/eigenlayer-permissionless-features/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/eigenlayer-permissionless-features/index.md?collection=content_hi"
+      ),
+    "videos/eip-4844-dencun-explained/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/eip-4844-dencun-explained/index.md?collection=content_hi"
+      ),
+    "videos/ethereum-basics-intro/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereum-basics-intro/index.md?collection=content_hi"
+      ),
+    "videos/ethereum-core-governance-explained/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereum-core-governance-explained/index.md?collection=content_hi"
+      ),
+    "videos/ethereum-evolution-glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereum-evolution-glamsterdam/index.md?collection=content_hi"
+      ),
+    "videos/ethereum-in-30-minutes-vitalik-buterin/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereum-in-30-minutes-vitalik-buterin/index.md?collection=content_hi"
+      ),
+    "videos/ethereum-institutional-privacy-panel/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereum-institutional-privacy-panel/index.md?collection=content_hi"
+      ),
+    "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereum-localism-global-protocols-local-power/index.md?collection=content_hi"
+      ),
+    "videos/ethereum-staking-withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereum-staking-withdrawals/index.md?collection=content_hi"
+      ),
+    "videos/ethereum-things-i-like-mariano-conti/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereum-things-i-like-mariano-conti/index.md?collection=content_hi"
+      ),
+    "videos/ethereums-quantum-plan-justin-drake/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_hi"
+      ),
+    "videos/fusaka-upgrade-explained/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/fusaka-upgrade-explained/index.md?collection=content_hi"
+      ),
+    "videos/hash-function-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/hash-function-eth-build/index.md?collection=content_hi"
+      ),
+    "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/how-to-be-cypherpunk-juan-benet/index.md?collection=content_hi"
+      ),
+    "videos/how-to-make-a-guerilla-l2/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/how-to-make-a-guerilla-l2/index.md?collection=content_hi"
+      ),
+    "videos/key-pair-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/key-pair-eth-build/index.md?collection=content_hi"
+      ),
+    "videos/layer-2-scaling-explained/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/layer-2-scaling-explained/index.md?collection=content_hi"
+      ),
+    "videos/learn-nfts-and-defi/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/learn-nfts-and-defi/index.md?collection=content_hi"
+      ),
+    "videos/next-10-years-of-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/next-10-years-of-ethereum/index.md?collection=content_hi"
+      ),
+    "videos/pectra-upgrade-overview/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/pectra-upgrade-overview/index.md?collection=content_hi"
+      ),
+    "videos/pectra-what-stakers-need-to-know/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/pectra-what-stakers-need-to-know/index.md?collection=content_hi"
+      ),
+    "videos/pos-reorgs-attack-defense/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/pos-reorgs-attack-defense/index.md?collection=content_hi"
+      ),
+    "videos/post-quantum-security-ethereum-roadmap/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/post-quantum-security-ethereum-roadmap/index.md?collection=content_hi"
+      ),
+    "videos/pow-vs-pos/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/pow-vs-pos/index.md?collection=content_hi"
+      ),
+    "videos/privacy-is-existential/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/privacy-is-existential/index.md?collection=content_hi"
+      ),
+    "videos/proof-of-authority-explained/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/proof-of-authority-explained/index.md?collection=content_hi"
+      ),
+    "videos/proof-of-work-explained/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/proof-of-work-explained/index.md?collection=content_hi"
+      ),
+    "videos/proposer-builder-separation/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/proposer-builder-separation/index.md?collection=content_hi"
+      ),
+    "videos/real-state-of-l2s-bartek-kiepuszewski/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/real-state-of-l2s-bartek-kiepuszewski/index.md?collection=content_hi"
+      ),
+    "videos/regenerative-finance-refi/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/regenerative-finance-refi/index.md?collection=content_hi"
+      ),
+    "videos/restaking-explained/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/restaking-explained/index.md?collection=content_hi"
+      ),
+    "videos/rollups-scaling-strategy/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/rollups-scaling-strategy/index.md?collection=content_hi"
+      ),
+    "videos/security-through-obscurity-microdots/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/security-through-obscurity-microdots/index.md?collection=content_hi"
+      ),
+    "videos/smart-contracts-code-is-law/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/smart-contracts-code-is-law/index.md?collection=content_hi"
+      ),
+    "videos/stani-kulechov-building-aave/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/stani-kulechov-building-aave/index.md?collection=content_hi"
+      ),
+    "videos/surveillance-silence-reclaiming-privacy/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/surveillance-silence-reclaiming-privacy/index.md?collection=content_hi"
+      ),
+    "videos/transactions-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/transactions-eth-build/index.md?collection=content_hi"
+      ),
+    "videos/understanding-consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/understanding-consensus-mechanisms/index.md?collection=content_hi"
+      ),
+    "videos/what-is-a-dapp/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/what-is-a-dapp/index.md?collection=content_hi"
+      ),
+    "videos/zero-knowledge-proofs-5-levels/index.md": () =>
+      import(
+        "../public/content/translations/hi/videos/zero-knowledge-proofs-5-levels/index.md?collection=content_hi"
+      ),
+    "community/events/organizing/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/events/organizing/index.md?collection=content_hi"
+      ),
+    "community/support/faq/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/support/faq/index.md?collection=content_hi"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/support/misconceptions/index.md?collection=content_hi"
+      ),
+    "community/support/scams/index.md": () =>
+      import(
+        "../public/content/translations/hi/community/support/scams/index.md?collection=content_hi"
+      ),
+    "contributing/design/adding-design-resources/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/design/adding-design-resources/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/faq/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/faq/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/how-to-translate/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/how-to-translate/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/mission-and-vision/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/mission-and-vision/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/playbook/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/playbook/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/resources/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/resources/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/translatathon/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/translatathon/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/translators-guide/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/translators-guide/index.md?collection=content_hi"
+      ),
+    "developers/docs/accounts/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/accounts/index.md?collection=content_hi"
+      ),
+    "developers/docs/blocks/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/blocks/index.md?collection=content_hi"
+      ),
+    "developers/docs/bridges/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/bridges/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/index.md?collection=content_hi"
+      ),
+    "developers/docs/dapps/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/dapps/index.md?collection=content_hi"
+      ),
+    "developers/docs/data-and-analytics/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/data-and-analytics/index.md?collection=content_hi"
+      ),
+    "developers/docs/data-availability/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/data-availability/index.md?collection=content_hi"
+      ),
+    "developers/docs/data-structures-and-encoding/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/data-structures-and-encoding/index.md?collection=content_hi"
+      ),
+    "developers/docs/design-and-ux/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/design-and-ux/index.md?collection=content_hi"
+      ),
+    "developers/docs/development-networks/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/development-networks/index.md?collection=content_hi"
+      ),
+    "developers/docs/ethereum-stack/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/ethereum-stack/index.md?collection=content_hi"
+      ),
+    "developers/docs/evm/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/evm/index.md?collection=content_hi"
+      ),
+    "developers/docs/frameworks/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/frameworks/index.md?collection=content_hi"
+      ),
+    "developers/docs/gas/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/gas/index.md?collection=content_hi"
+      ),
+    "developers/docs/ides/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/ides/index.md?collection=content_hi"
+      ),
+    "developers/docs/intro-to-ether/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/intro-to-ether/index.md?collection=content_hi"
+      ),
+    "developers/docs/intro-to-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/intro-to-ethereum/index.md?collection=content_hi"
+      ),
+    "developers/docs/mev/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/mev/index.md?collection=content_hi"
+      ),
+    "developers/docs/networking-layer/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/networking-layer/index.md?collection=content_hi"
+      ),
+    "developers/docs/networks/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/networks/index.md?collection=content_hi"
+      ),
+    "developers/docs/oracles/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/oracles/index.md?collection=content_hi"
+      ),
+    "developers/docs/nodes-and-clients/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/nodes-and-clients/index.md?collection=content_hi"
+      ),
+    "developers/docs/scaling/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/scaling/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/index.md?collection=content_hi"
+      ),
+    "developers/docs/standards/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/index.md?collection=content_hi"
+      ),
+    "developers/docs/storage/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/storage/index.md?collection=content_hi"
+      ),
+    "developers/docs/transactions/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/transactions/index.md?collection=content_hi"
+      ),
+    "developers/docs/web2-vs-web3/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/web2-vs-web3/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/ai-trading-agent/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/all-you-can-cache/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/all-you-can-cache/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/app-plasma/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/app-plasma/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/eip-1271-smart-contract-signatures/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/eip-1271-smart-contract-signatures/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/erc-721-vyper-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/erc-721-vyper-annotated-code/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/erc20-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/erc20-annotated-code/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/erc20-with-safety-rails/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/erc20-with-safety-rails/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/gasless/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/gasless/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/guide-to-smart-contract-security-tools/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/guide-to-smart-contract-security-tools/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/hello-world-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/hello-world-smart-contract/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/hello-world-smart-contract-fullstack/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/how-to-mint-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/how-to-use-tellor-as-your-oracle/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/how-to-view-nft-in-metamask/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/how-to-view-nft-in-metamask/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/how-to-write-and-deploy-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/how-to-write-and-deploy-an-nft/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/interact-with-other-contracts-from-solidity/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/interact-with-other-contracts-from-solidity/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/ipfs-decentralized-ui/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/ipfs-decentralized-ui/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/logging-events-smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/logging-events-smart-contracts/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/nft-minter/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/nft-minter/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/reverse-engineering-a-contract/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/reverse-engineering-a-contract/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/run-node-raspberry-pi/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/run-node-raspberry-pi/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/scam-token-tricks/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/scam-token-tricks/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/secret-state/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/secret-state/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/secure-development-workflow/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/secure-development-workflow/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/send-token-ethersjs/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/send-token-ethersjs/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/server-components/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/server-components/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/short-abi/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/short-abi/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/smart-contract-security-guidelines/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/smart-contract-security-guidelines/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/stealth-addr/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/stealth-addr/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/token-integration-checklist/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/token-integration-checklist/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/uniswap-v2-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/uniswap-v2-annotated-code/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/understand-the-erc-20-token-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/using-websockets/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/using-websockets/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md?collection=content_hi"
+        ),
+    "developers/tutorials/waffle-test-simple-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/waffle-test-simple-smart-contract/index.md?collection=content_hi"
+      ),
+    "developers/tutorials/yellow-paper-evm/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/tutorials/yellow-paper-evm/index.md?collection=content_hi"
+      ),
+    "roadmap/fusaka/peerdas/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/fusaka/peerdas/index.md?collection=content_hi"
+      ),
+    "roadmap/future-proofing/quantum-resistance/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/future-proofing/quantum-resistance/index.md?collection=content_hi"
+      ),
+    "roadmap/merge/issuance/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/merge/issuance/index.md?collection=content_hi"
+      ),
+    "roadmap/pectra/7702/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/pectra/7702/index.md?collection=content_hi"
+      ),
+    "roadmap/pectra/maxeb/index.md": () =>
+      import(
+        "../public/content/translations/hi/roadmap/pectra/maxeb/index.md?collection=content_hi"
+      ),
+    "contributing/translation-program/translatathon/details/index.md": () =>
+      import(
+        "../public/content/translations/hi/contributing/translation-program/translatathon/details/index.md?collection=content_hi"
+      ),
+    "developers/docs/apis/backend/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/apis/backend/index.md?collection=content_hi"
+      ),
+    "developers/docs/apis/json-rpc/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/apis/json-rpc/index.md?collection=content_hi"
+      ),
+    "developers/docs/apis/javascript/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/apis/javascript/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/poa/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/poa/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pow/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pow/index.md?collection=content_hi"
+      ),
+    "developers/docs/data-and-analytics/block-explorers/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/index.md?collection=content_hi"
+      ),
+    "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_hi"
+        ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_hi"
+      ),
+    "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_hi"
+        ),
+    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_hi"
+      ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_hi"
+        ),
+    "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_hi"
+      ),
+    "developers/docs/design-and-ux/heuristics-for-web3/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_hi"
+      ),
+    "developers/docs/evm/opcodes/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/evm/opcodes/index.md?collection=content_hi"
+      ),
+    "developers/docs/networking-layer/portal-network/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/networking-layer/portal-network/index.md?collection=content_hi"
+      ),
+    "developers/docs/networking-layer/network-addresses/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/networking-layer/network-addresses/index.md?collection=content_hi"
+      ),
+    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_hi"
+      ),
+    "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/nodes-and-clients/archive-nodes/index.md?collection=content_hi"
+      ),
+    "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_hi"
+      ),
+    "developers/docs/nodes-and-clients/light-clients/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_hi"
+      ),
+    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_hi"
+      ),
+    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_hi"
+      ),
+    "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_hi"
+      ),
+    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/scaling/optimistic-rollups/index.md?collection=content_hi"
+      ),
+    "developers/docs/scaling/plasma/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/scaling/plasma/index.md?collection=content_hi"
+      ),
+    "developers/docs/scaling/state-channels/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/scaling/state-channels/index.md?collection=content_hi"
+      ),
+    "developers/docs/scaling/sidechains/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/scaling/sidechains/index.md?collection=content_hi"
+      ),
+    "developers/docs/scaling/validium/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/scaling/validium/index.md?collection=content_hi"
+      ),
+    "developers/docs/scaling/zk-rollups/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/scaling/zk-rollups/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/dart/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/dart/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/dot-net/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/dot-net/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/delphi/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/delphi/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/golang/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/golang/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/elixir/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/elixir/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/java/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/java/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/javascript/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/javascript/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/rust/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/rust/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/python/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/python/index.md?collection=content_hi"
+      ),
+    "developers/docs/programming-languages/ruby/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/programming-languages/ruby/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/anatomy/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/anatomy/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/composability/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/composability/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/compiling/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/compiling/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/formal-verification/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/formal-verification/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/deploying/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/deploying/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/naming/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/naming/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/languages/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/languages/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/libraries/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/libraries/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/security/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/testing/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/testing/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/upgrading/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/upgrading/index.md?collection=content_hi"
+      ),
+    "developers/docs/standards/tokens/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/tokens/index.md?collection=content_hi"
+      ),
+    "developers/docs/smart-contracts/verifying/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/smart-contracts/verifying/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_hi"
+        ),
+    "developers/docs/consensus-mechanisms/pos/block-proposal/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_hi"
+        ),
+    "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_hi"
+        ),
+    "developers/docs/standards/tokens/erc-1363/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/tokens/erc-1363/index.md?collection=content_hi"
+      ),
+    "developers/docs/standards/tokens/erc-20/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/tokens/erc-20/index.md?collection=content_hi"
+      ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/tokens/erc-223/index.md?collection=content_hi"
+      ),
+    "developers/docs/standards/tokens/erc-1155/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/tokens/erc-1155/index.md?collection=content_hi"
+      ),
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/tokens/erc-4626/index.md?collection=content_hi"
+      ),
+    "developers/docs/standards/tokens/erc-721/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/tokens/erc-721/index.md?collection=content_hi"
+      ),
+    "developers/docs/standards/tokens/erc-777/index.md": () =>
+      import(
+        "../public/content/translations/hi/developers/docs/standards/tokens/erc-777/index.md?collection=content_hi"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_hi"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_hi"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
+      () =>
+        import(
+          "../public/content/translations/hi/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_hi"
+        ),
+  }),
   content_id: create.doc("content_id", {}),
-  content_it: create.doc("content_it", {}),
+  content_it: create.doc("content_it", {
+    "about/index.md": () =>
+      import(
+        "../public/content/translations/it/about/index.md?collection=content_it"
+      ),
+    "ai-agents/index.md": () =>
+      import(
+        "../public/content/translations/it/ai-agents/index.md?collection=content_it"
+      ),
+    "bridges/index.md": () =>
+      import(
+        "../public/content/translations/it/bridges/index.md?collection=content_it"
+      ),
+    "contributing/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/index.md?collection=content_it"
+      ),
+    "dao/index.md": () =>
+      import(
+        "../public/content/translations/it/dao/index.md?collection=content_it"
+      ),
+    "decentralized-identity/index.md": () =>
+      import(
+        "../public/content/translations/it/decentralized-identity/index.md?collection=content_it"
+      ),
+    "defi/index.md": () =>
+      import(
+        "../public/content/translations/it/defi/index.md?collection=content_it"
+      ),
+    "desci/index.md": () =>
+      import(
+        "../public/content/translations/it/desci/index.md?collection=content_it"
+      ),
+    "eips/index.md": () =>
+      import(
+        "../public/content/translations/it/eips/index.md?collection=content_it"
+      ),
+    "energy-consumption/index.md": () =>
+      import(
+        "../public/content/translations/it/energy-consumption/index.md?collection=content_it"
+      ),
+    "ethereum-forks/index.md": () =>
+      import(
+        "../public/content/translations/it/ethereum-forks/index.md?collection=content_it"
+      ),
+    "foundation/index.md": () =>
+      import(
+        "../public/content/translations/it/foundation/index.md?collection=content_it"
+      ),
+    "gaming/index.md": () =>
+      import(
+        "../public/content/translations/it/gaming/index.md?collection=content_it"
+      ),
+    "glossary/index.md": () =>
+      import(
+        "../public/content/translations/it/glossary/index.md?collection=content_it"
+      ),
+    "governance/index.md": () =>
+      import(
+        "../public/content/translations/it/governance/index.md?collection=content_it"
+      ),
+    "guides/index.md": () =>
+      import(
+        "../public/content/translations/it/guides/index.md?collection=content_it"
+      ),
+    "nft/index.md": () =>
+      import(
+        "../public/content/translations/it/nft/index.md?collection=content_it"
+      ),
+    "payments/index.md": () =>
+      import(
+        "../public/content/translations/it/payments/index.md?collection=content_it"
+      ),
+    "privacy/index.md": () =>
+      import(
+        "../public/content/translations/it/privacy/index.md?collection=content_it"
+      ),
+    "prediction-markets/index.md": () =>
+      import(
+        "../public/content/translations/it/prediction-markets/index.md?collection=content_it"
+      ),
+    "real-world-assets/index.md": () =>
+      import(
+        "../public/content/translations/it/real-world-assets/index.md?collection=content_it"
+      ),
+    "refi/index.md": () =>
+      import(
+        "../public/content/translations/it/refi/index.md?collection=content_it"
+      ),
+    "restaking/index.md": () =>
+      import(
+        "../public/content/translations/it/restaking/index.md?collection=content_it"
+      ),
+    "security/index.md": () =>
+      import(
+        "../public/content/translations/it/security/index.md?collection=content_it"
+      ),
+    "smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/it/smart-contracts/index.md?collection=content_it"
+      ),
+    "social-networks/index.md": () =>
+      import(
+        "../public/content/translations/it/social-networks/index.md?collection=content_it"
+      ),
+    "web3/index.md": () =>
+      import(
+        "../public/content/translations/it/web3/index.md?collection=content_it"
+      ),
+    "what-are-apps/index.md": () =>
+      import(
+        "../public/content/translations/it/what-are-apps/index.md?collection=content_it"
+      ),
+    "whitepaper/index.md": () =>
+      import(
+        "../public/content/translations/it/whitepaper/index.md?collection=content_it"
+      ),
+    "wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/it/wrapped-eth/index.md?collection=content_it"
+      ),
+    "zero-knowledge-proofs/index.md": () =>
+      import(
+        "../public/content/translations/it/zero-knowledge-proofs/index.md?collection=content_it"
+      ),
+    "community/code-of-conduct/index.md": () =>
+      import(
+        "../public/content/translations/it/community/code-of-conduct/index.md?collection=content_it"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/translations/it/community/get-involved/index.md?collection=content_it"
+      ),
+    "community/grants/index.md": () =>
+      import(
+        "../public/content/translations/it/community/grants/index.md?collection=content_it"
+      ),
+    "community/language-resources/index.md": () =>
+      import(
+        "../public/content/translations/it/community/language-resources/index.md?collection=content_it"
+      ),
+    "community/research/index.md": () =>
+      import(
+        "../public/content/translations/it/community/research/index.md?collection=content_it"
+      ),
+    "community/online/index.md": () =>
+      import(
+        "../public/content/translations/it/community/online/index.md?collection=content_it"
+      ),
+    "contributing/adding-desci-projects/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-desci-projects/index.md?collection=content_it"
+      ),
+    "contributing/adding-developer-tools/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-developer-tools/index.md?collection=content_it"
+      ),
+    "contributing/adding-exchanges/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-exchanges/index.md?collection=content_it"
+      ),
+    "contributing/adding-glossary-terms/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-glossary-terms/index.md?collection=content_it"
+      ),
+    "contributing/adding-layer-2s/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-layer-2s/index.md?collection=content_it"
+      ),
+    "contributing/adding-products/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-products/index.md?collection=content_it"
+      ),
+    "contributing/adding-resources/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-resources/index.md?collection=content_it"
+      ),
+    "contributing/adding-staking-products/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-staking-products/index.md?collection=content_it"
+      ),
+    "contributing/adding-wallets/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-wallets/index.md?collection=content_it"
+      ),
+    "contributing/content-resources/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/content-resources/index.md?collection=content_it"
+      ),
+    "contributing/adding-videos/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/adding-videos/index.md?collection=content_it"
+      ),
+    "contributing/design/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/design/index.md?collection=content_it"
+      ),
+    "contributing/design-principles/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/design-principles/index.md?collection=content_it"
+      ),
+    "contributing/quizzes/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/quizzes/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/index.md?collection=content_it"
+      ),
+    "developers/docs/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/index.md?collection=content_it"
+      ),
+    "eth/supply/index.md": () =>
+      import(
+        "../public/content/translations/it/eth/supply/index.md?collection=content_it"
+      ),
+    "guides/how-to-create-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/it/guides/how-to-create-an-ethereum-account/index.md?collection=content_it"
+      ),
+    "guides/how-to-id-scam-tokens/index.md": () =>
+      import(
+        "../public/content/translations/it/guides/how-to-id-scam-tokens/index.md?collection=content_it"
+      ),
+    "guides/how-to-revoke-token-access/index.md": () =>
+      import(
+        "../public/content/translations/it/guides/how-to-revoke-token-access/index.md?collection=content_it"
+      ),
+    "guides/how-to-swap-tokens/index.md": () =>
+      import(
+        "../public/content/translations/it/guides/how-to-swap-tokens/index.md?collection=content_it"
+      ),
+    "guides/how-to-use-a-bridge/index.md": () =>
+      import(
+        "../public/content/translations/it/guides/how-to-use-a-bridge/index.md?collection=content_it"
+      ),
+    "guides/how-to-use-a-wallet/index.md": () =>
+      import(
+        "../public/content/translations/it/guides/how-to-use-a-wallet/index.md?collection=content_it"
+      ),
+    "roadmap/account-abstraction/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/account-abstraction/index.md?collection=content_it"
+      ),
+    "roadmap/beacon-chain/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/beacon-chain/index.md?collection=content_it"
+      ),
+    "roadmap/danksharding/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/danksharding/index.md?collection=content_it"
+      ),
+    "roadmap/dencun/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/dencun/index.md?collection=content_it"
+      ),
+    "roadmap/fusaka/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/fusaka/index.md?collection=content_it"
+      ),
+    "roadmap/future-proofing/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/future-proofing/index.md?collection=content_it"
+      ),
+    "roadmap/glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/glamsterdam/index.md?collection=content_it"
+      ),
+    "roadmap/merge/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/merge/index.md?collection=content_it"
+      ),
+    "roadmap/pbs/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/pbs/index.md?collection=content_it"
+      ),
+    "roadmap/pectra/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/pectra/index.md?collection=content_it"
+      ),
+    "roadmap/scaling/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/scaling/index.md?collection=content_it"
+      ),
+    "roadmap/secret-leader-election/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/secret-leader-election/index.md?collection=content_it"
+      ),
+    "roadmap/security/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/security/index.md?collection=content_it"
+      ),
+    "roadmap/single-slot-finality/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/single-slot-finality/index.md?collection=content_it"
+      ),
+    "roadmap/statelessness/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/statelessness/index.md?collection=content_it"
+      ),
+    "roadmap/user-experience/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/user-experience/index.md?collection=content_it"
+      ),
+    "roadmap/verkle-trees/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/verkle-trees/index.md?collection=content_it"
+      ),
+    "roadmap/zkevm/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/zkevm/index.md?collection=content_it"
+      ),
+    "staking/dvt/index.md": () =>
+      import(
+        "../public/content/translations/it/staking/dvt/index.md?collection=content_it"
+      ),
+    "staking/pools/index.md": () =>
+      import(
+        "../public/content/translations/it/staking/pools/index.md?collection=content_it"
+      ),
+    "staking/saas/index.md": () =>
+      import(
+        "../public/content/translations/it/staking/saas/index.md?collection=content_it"
+      ),
+    "staking/solo/index.md": () =>
+      import(
+        "../public/content/translations/it/staking/solo/index.md?collection=content_it"
+      ),
+    "staking/withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/it/staking/withdrawals/index.md?collection=content_it"
+      ),
+    "videos/ai-agents-interview-luna/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ai-agents-interview-luna/index.md?collection=content_it"
+      ),
+    "videos/atoms-institutions-blockchains-josh-stark/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/atoms-institutions-blockchains-josh-stark/index.md?collection=content_it"
+      ),
+    "videos/blockchain-101-visual-demo/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/blockchain-101-visual-demo/index.md?collection=content_it"
+      ),
+    "videos/blobspace-101-dencun/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/blobspace-101-dencun/index.md?collection=content_it"
+      ),
+    "videos/crypto-apps-desocial-linda-xie/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/crypto-apps-desocial-linda-xie/index.md?collection=content_it"
+      ),
+    "videos/blockchain-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/blockchain-eth-build/index.md?collection=content_it"
+      ),
+    "videos/crypto-security-passwords/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/crypto-security-passwords/index.md?collection=content_it"
+      ),
+    "videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md?collection=content_it"
+      ),
+    "videos/dao-build-next-great-city/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/dao-build-next-great-city/index.md?collection=content_it"
+      ),
+    "videos/dao-hack-ethereum-classic/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/dao-hack-ethereum-classic/index.md?collection=content_it"
+      ),
+    "videos/decentralized-identity-explained/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/decentralized-identity-explained/index.md?collection=content_it"
+      ),
+    "videos/decentralized-social-media/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/decentralized-social-media/index.md?collection=content_it"
+      ),
+    "videos/defi-future-of-finance/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/defi-future-of-finance/index.md?collection=content_it"
+      ),
+    "videos/defi-history-inception-to-2021/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/defi-history-inception-to-2021/index.md?collection=content_it"
+      ),
+    "videos/desci-movement-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/desci-movement-juan-benet/index.md?collection=content_it"
+      ),
+    "videos/devconnect-argentina-2025-recap/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/devconnect-argentina-2025-recap/index.md?collection=content_it"
+      ),
+    "videos/devcon-mumbai-coming-2026/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/devcon-mumbai-coming-2026/index.md?collection=content_it"
+      ),
+    "videos/devconnect-buenos-aires-promo/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/devconnect-buenos-aires-promo/index.md?collection=content_it"
+      ),
+    "videos/eigenlayer-permissionless-features/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/eigenlayer-permissionless-features/index.md?collection=content_it"
+      ),
+    "videos/eip-4844-dencun-explained/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/eip-4844-dencun-explained/index.md?collection=content_it"
+      ),
+    "videos/ethereum-basics-intro/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereum-basics-intro/index.md?collection=content_it"
+      ),
+    "videos/ethereum-core-governance-explained/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereum-core-governance-explained/index.md?collection=content_it"
+      ),
+    "videos/ethereum-evolution-glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereum-evolution-glamsterdam/index.md?collection=content_it"
+      ),
+    "videos/ethereum-in-30-minutes-vitalik-buterin/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereum-in-30-minutes-vitalik-buterin/index.md?collection=content_it"
+      ),
+    "videos/ethereum-institutional-privacy-panel/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereum-institutional-privacy-panel/index.md?collection=content_it"
+      ),
+    "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereum-localism-global-protocols-local-power/index.md?collection=content_it"
+      ),
+    "videos/ethereum-staking-withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereum-staking-withdrawals/index.md?collection=content_it"
+      ),
+    "videos/ethereum-things-i-like-mariano-conti/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereum-things-i-like-mariano-conti/index.md?collection=content_it"
+      ),
+    "videos/ethereums-quantum-plan-justin-drake/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_it"
+      ),
+    "videos/fusaka-upgrade-explained/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/fusaka-upgrade-explained/index.md?collection=content_it"
+      ),
+    "videos/hash-function-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/hash-function-eth-build/index.md?collection=content_it"
+      ),
+    "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/how-to-be-cypherpunk-juan-benet/index.md?collection=content_it"
+      ),
+    "videos/how-to-make-a-guerilla-l2/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/how-to-make-a-guerilla-l2/index.md?collection=content_it"
+      ),
+    "videos/layer-2-scaling-explained/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/layer-2-scaling-explained/index.md?collection=content_it"
+      ),
+    "videos/key-pair-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/key-pair-eth-build/index.md?collection=content_it"
+      ),
+    "videos/learn-nfts-and-defi/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/learn-nfts-and-defi/index.md?collection=content_it"
+      ),
+    "videos/next-10-years-of-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/next-10-years-of-ethereum/index.md?collection=content_it"
+      ),
+    "videos/pectra-what-stakers-need-to-know/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/pectra-what-stakers-need-to-know/index.md?collection=content_it"
+      ),
+    "videos/pectra-upgrade-overview/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/pectra-upgrade-overview/index.md?collection=content_it"
+      ),
+    "videos/pos-reorgs-attack-defense/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/pos-reorgs-attack-defense/index.md?collection=content_it"
+      ),
+    "videos/post-quantum-security-ethereum-roadmap/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/post-quantum-security-ethereum-roadmap/index.md?collection=content_it"
+      ),
+    "videos/pow-vs-pos/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/pow-vs-pos/index.md?collection=content_it"
+      ),
+    "videos/privacy-is-existential/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/privacy-is-existential/index.md?collection=content_it"
+      ),
+    "videos/proof-of-authority-explained/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/proof-of-authority-explained/index.md?collection=content_it"
+      ),
+    "videos/proof-of-work-explained/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/proof-of-work-explained/index.md?collection=content_it"
+      ),
+    "videos/proposer-builder-separation/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/proposer-builder-separation/index.md?collection=content_it"
+      ),
+    "videos/real-state-of-l2s-bartek-kiepuszewski/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/real-state-of-l2s-bartek-kiepuszewski/index.md?collection=content_it"
+      ),
+    "videos/regenerative-finance-refi/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/regenerative-finance-refi/index.md?collection=content_it"
+      ),
+    "videos/restaking-explained/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/restaking-explained/index.md?collection=content_it"
+      ),
+    "videos/rollups-scaling-strategy/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/rollups-scaling-strategy/index.md?collection=content_it"
+      ),
+    "videos/security-through-obscurity-microdots/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/security-through-obscurity-microdots/index.md?collection=content_it"
+      ),
+    "videos/smart-contracts-code-is-law/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/smart-contracts-code-is-law/index.md?collection=content_it"
+      ),
+    "videos/stani-kulechov-building-aave/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/stani-kulechov-building-aave/index.md?collection=content_it"
+      ),
+    "videos/surveillance-silence-reclaiming-privacy/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/surveillance-silence-reclaiming-privacy/index.md?collection=content_it"
+      ),
+    "videos/transactions-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/transactions-eth-build/index.md?collection=content_it"
+      ),
+    "videos/what-is-a-dapp/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/what-is-a-dapp/index.md?collection=content_it"
+      ),
+    "videos/understanding-consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/understanding-consensus-mechanisms/index.md?collection=content_it"
+      ),
+    "videos/zero-knowledge-proofs-5-levels/index.md": () =>
+      import(
+        "../public/content/translations/it/videos/zero-knowledge-proofs-5-levels/index.md?collection=content_it"
+      ),
+    "community/events/organizing/index.md": () =>
+      import(
+        "../public/content/translations/it/community/events/organizing/index.md?collection=content_it"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/it/community/support/misconceptions/index.md?collection=content_it"
+      ),
+    "community/support/scams/index.md": () =>
+      import(
+        "../public/content/translations/it/community/support/scams/index.md?collection=content_it"
+      ),
+    "community/support/faq/index.md": () =>
+      import(
+        "../public/content/translations/it/community/support/faq/index.md?collection=content_it"
+      ),
+    "contributing/design/adding-design-resources/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/design/adding-design-resources/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/faq/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/faq/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/how-to-translate/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/how-to-translate/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/mission-and-vision/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/mission-and-vision/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/playbook/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/playbook/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/resources/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/resources/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/translatathon/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/translatathon/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/translators-guide/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/translators-guide/index.md?collection=content_it"
+      ),
+    "developers/docs/accounts/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/accounts/index.md?collection=content_it"
+      ),
+    "developers/docs/blocks/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/blocks/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/index.md?collection=content_it"
+      ),
+    "developers/docs/bridges/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/bridges/index.md?collection=content_it"
+      ),
+    "developers/docs/dapps/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/dapps/index.md?collection=content_it"
+      ),
+    "developers/docs/data-and-analytics/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/data-and-analytics/index.md?collection=content_it"
+      ),
+    "developers/docs/data-availability/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/data-availability/index.md?collection=content_it"
+      ),
+    "developers/docs/data-structures-and-encoding/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/data-structures-and-encoding/index.md?collection=content_it"
+      ),
+    "developers/docs/development-networks/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/development-networks/index.md?collection=content_it"
+      ),
+    "developers/docs/design-and-ux/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/design-and-ux/index.md?collection=content_it"
+      ),
+    "developers/docs/ethereum-stack/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/ethereum-stack/index.md?collection=content_it"
+      ),
+    "developers/docs/evm/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/evm/index.md?collection=content_it"
+      ),
+    "developers/docs/frameworks/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/frameworks/index.md?collection=content_it"
+      ),
+    "developers/docs/gas/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/gas/index.md?collection=content_it"
+      ),
+    "developers/docs/ides/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/ides/index.md?collection=content_it"
+      ),
+    "developers/docs/intro-to-ether/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/intro-to-ether/index.md?collection=content_it"
+      ),
+    "developers/docs/intro-to-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/intro-to-ethereum/index.md?collection=content_it"
+      ),
+    "developers/docs/layer-2-scaling/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/layer-2-scaling/index.md?collection=content_it"
+      ),
+    "developers/docs/mev/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/mev/index.md?collection=content_it"
+      ),
+    "developers/docs/networks/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/networks/index.md?collection=content_it"
+      ),
+    "developers/docs/networking-layer/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/networking-layer/index.md?collection=content_it"
+      ),
+    "developers/docs/nodes-and-clients/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/nodes-and-clients/index.md?collection=content_it"
+      ),
+    "developers/docs/oracles/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/oracles/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/index.md?collection=content_it"
+      ),
+    "developers/docs/scaling/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/scaling/index.md?collection=content_it"
+      ),
+    "developers/docs/security/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/security/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/index.md?collection=content_it"
+      ),
+    "developers/docs/storage/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/storage/index.md?collection=content_it"
+      ),
+    "developers/docs/transactions/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/transactions/index.md?collection=content_it"
+      ),
+    "developers/docs/web2-vs-web3/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/web2-vs-web3/index.md?collection=content_it"
+      ),
+    "developers/docs/wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/wrapped-eth/index.md?collection=content_it"
+      ),
+    "developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_it"
+        ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/ai-trading-agent/index.md?collection=content_it"
+      ),
+    "developers/tutorials/all-you-can-cache/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/all-you-can-cache/index.md?collection=content_it"
+      ),
+    "developers/tutorials/app-plasma/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/app-plasma/index.md?collection=content_it"
+      ),
+    "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_it"
+        ),
+    "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_it"
+      ),
+    "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_it"
+      ),
+    "developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md?collection=content_it"
+        ),
+    "developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md?collection=content_it"
+        ),
+    "developers/tutorials/eip-1271-smart-contract-signatures/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/eip-1271-smart-contract-signatures/index.md?collection=content_it"
+      ),
+    "developers/tutorials/erc-721-vyper-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/erc-721-vyper-annotated-code/index.md?collection=content_it"
+      ),
+    "developers/tutorials/erc20-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/erc20-annotated-code/index.md?collection=content_it"
+      ),
+    "developers/tutorials/erc20-with-safety-rails/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/erc20-with-safety-rails/index.md?collection=content_it"
+      ),
+    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_it"
+      ),
+    "developers/tutorials/gasless/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/gasless/index.md?collection=content_it"
+      ),
+    "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md?collection=content_it"
+        ),
+    "developers/tutorials/guide-to-smart-contract-security-tools/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/guide-to-smart-contract-security-tools/index.md?collection=content_it"
+        ),
+    "developers/tutorials/hello-world-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/hello-world-smart-contract/index.md?collection=content_it"
+      ),
+    "developers/tutorials/hello-world-smart-contract-fullstack/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_it"
+      ),
+    "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_it"
+      ),
+    "developers/tutorials/how-to-mint-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_it"
+      ),
+    "developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md?collection=content_it"
+        ),
+    "developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md?collection=content_it"
+        ),
+    "developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md?collection=content_it"
+        ),
+    "developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md?collection=content_it"
+        ),
+    "developers/tutorials/how-to-use-tellor-as-your-oracle/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md?collection=content_it"
+      ),
+    "developers/tutorials/how-to-view-nft-in-metamask/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/how-to-view-nft-in-metamask/index.md?collection=content_it"
+      ),
+    "developers/tutorials/how-to-write-and-deploy-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/how-to-write-and-deploy-an-nft/index.md?collection=content_it"
+      ),
+    "developers/tutorials/interact-with-other-contracts-from-solidity/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/interact-with-other-contracts-from-solidity/index.md?collection=content_it"
+        ),
+    "developers/tutorials/ipfs-decentralized-ui/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/ipfs-decentralized-ui/index.md?collection=content_it"
+      ),
+    "developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md?collection=content_it"
+        ),
+    "developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/index.md?collection=content_it"
+        ),
+    "developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md?collection=content_it"
+        ),
+    "developers/tutorials/logging-events-smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/logging-events-smart-contracts/index.md?collection=content_it"
+      ),
+    "developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md?collection=content_it"
+        ),
+    "developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md?collection=content_it"
+        ),
+    "developers/tutorials/nft-minter/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/nft-minter/index.md?collection=content_it"
+      ),
+    "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_it"
+      ),
+    "developers/tutorials/run-node-raspberry-pi/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/run-node-raspberry-pi/index.md?collection=content_it"
+      ),
+    "developers/tutorials/reverse-engineering-a-contract/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/reverse-engineering-a-contract/index.md?collection=content_it"
+      ),
+    "developers/tutorials/scam-token-tricks/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/scam-token-tricks/index.md?collection=content_it"
+      ),
+    "developers/tutorials/secret-state/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/secret-state/index.md?collection=content_it"
+      ),
+    "developers/tutorials/secure-development-workflow/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/secure-development-workflow/index.md?collection=content_it"
+      ),
+    "developers/tutorials/send-token-etherjs/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/send-token-etherjs/index.md?collection=content_it"
+      ),
+    "developers/tutorials/send-token-ethersjs/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/send-token-ethersjs/index.md?collection=content_it"
+      ),
+    "developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md?collection=content_it"
+        ),
+    "developers/tutorials/server-components/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/server-components/index.md?collection=content_it"
+      ),
+    "developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md?collection=content_it"
+        ),
+    "developers/tutorials/smart-contract-security-guidelines/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/smart-contract-security-guidelines/index.md?collection=content_it"
+      ),
+    "developers/tutorials/stealth-addr/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/stealth-addr/index.md?collection=content_it"
+      ),
+    "developers/tutorials/short-abi/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/short-abi/index.md?collection=content_it"
+      ),
+    "developers/tutorials/testing-smart-contract-with-waffle/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/testing-smart-contract-with-waffle/index.md?collection=content_it"
+      ),
+    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_it"
+      ),
+    "developers/tutorials/token-integration-checklist/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/token-integration-checklist/index.md?collection=content_it"
+      ),
+    "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md?collection=content_it"
+        ),
+    "developers/tutorials/understand-the-erc-20-token-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md?collection=content_it"
+        ),
+    "developers/tutorials/uniswap-v2-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/uniswap-v2-annotated-code/index.md?collection=content_it"
+      ),
+    "developers/tutorials/using-websockets/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/using-websockets/index.md?collection=content_it"
+      ),
+    "developers/tutorials/yellow-paper-evm/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/tutorials/yellow-paper-evm/index.md?collection=content_it"
+      ),
+    "roadmap/fusaka/peerdas/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/fusaka/peerdas/index.md?collection=content_it"
+      ),
+    "roadmap/future-proofing/quantum-resistance/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/future-proofing/quantum-resistance/index.md?collection=content_it"
+      ),
+    "roadmap/merge/issuance/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/merge/issuance/index.md?collection=content_it"
+      ),
+    "roadmap/pectra/7702/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/pectra/7702/index.md?collection=content_it"
+      ),
+    "roadmap/pectra/maxeb/index.md": () =>
+      import(
+        "../public/content/translations/it/roadmap/pectra/maxeb/index.md?collection=content_it"
+      ),
+    "contributing/translation-program/translatathon/details/index.md": () =>
+      import(
+        "../public/content/translations/it/contributing/translation-program/translatathon/details/index.md?collection=content_it"
+      ),
+    "developers/docs/apis/backend/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/apis/backend/index.md?collection=content_it"
+      ),
+    "developers/docs/apis/javascript/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/apis/javascript/index.md?collection=content_it"
+      ),
+    "developers/docs/apis/json-rpc/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/apis/json-rpc/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/poa/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/poa/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pow/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pow/index.md?collection=content_it"
+      ),
+    "developers/docs/data-and-analytics/block-explorers/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_it"
+      ),
+    "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_it"
+        ),
+    "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_it"
+        ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_it"
+      ),
+    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_it"
+      ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_it"
+        ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md?collection=content_it"
+        ),
+    "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_it"
+      ),
+    "developers/docs/design-and-ux/heuristics-for-web3/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_it"
+      ),
+    "developers/docs/evm/opcodes/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/evm/opcodes/index.md?collection=content_it"
+      ),
+    "developers/docs/networking-layer/network-addresses/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/networking-layer/network-addresses/index.md?collection=content_it"
+      ),
+    "developers/docs/networking-layer/portal-network/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/networking-layer/portal-network/index.md?collection=content_it"
+      ),
+    "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/nodes-and-clients/archive-nodes/index.md?collection=content_it"
+      ),
+    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_it"
+      ),
+    "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_it"
+      ),
+    "developers/docs/nodes-and-clients/light-clients/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_it"
+      ),
+    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_it"
+      ),
+    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_it"
+      ),
+    "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/dot-net/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/dot-net/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/delphi/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/delphi/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/dart/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/dart/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/elixir/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/elixir/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/golang/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/golang/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/java/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/java/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/javascript/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/javascript/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/python/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/python/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/rust/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/rust/index.md?collection=content_it"
+      ),
+    "developers/docs/programming-languages/ruby/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/programming-languages/ruby/index.md?collection=content_it"
+      ),
+    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/scaling/optimistic-rollups/index.md?collection=content_it"
+      ),
+    "developers/docs/scaling/plasma/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/scaling/plasma/index.md?collection=content_it"
+      ),
+    "developers/docs/scaling/validium/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/scaling/validium/index.md?collection=content_it"
+      ),
+    "developers/docs/scaling/sidechains/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/scaling/sidechains/index.md?collection=content_it"
+      ),
+    "developers/docs/scaling/state-channels/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/scaling/state-channels/index.md?collection=content_it"
+      ),
+    "developers/docs/scaling/zk-rollups/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/scaling/zk-rollups/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/compiling/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/compiling/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/composability/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/composability/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/anatomy/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/anatomy/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/languages/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/languages/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/formal-verification/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/formal-verification/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/libraries/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/libraries/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/naming/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/naming/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/deploying/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/deploying/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/security/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/testing/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/testing/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/upgrading/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/upgrading/index.md?collection=content_it"
+      ),
+    "developers/docs/smart-contracts/verifying/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/smart-contracts/verifying/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/tokens/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/tokens/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/block-proposal/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_it"
+        ),
+    "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_it"
+        ),
+    "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_it"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/tokens/erc-1155/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/tokens/erc-1155/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/tokens/erc-20/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/tokens/erc-20/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/tokens/erc-1363/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/tokens/erc-1363/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/tokens/erc-4626/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/tokens/erc-223/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/tokens/erc-721/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/tokens/erc-721/index.md?collection=content_it"
+      ),
+    "developers/docs/standards/tokens/erc-777/index.md": () =>
+      import(
+        "../public/content/translations/it/developers/docs/standards/tokens/erc-777/index.md?collection=content_it"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_it"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_it"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
+      () =>
+        import(
+          "../public/content/translations/it/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_it"
+        ),
+  }),
   content_ja: create.doc("content_ja", {
     "about/index.md": () =>
       import(
@@ -5253,25 +7907,25 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/contributing/index.md?collection=content_ja"
       ),
-    "dao/index.md": () =>
+    "decentralized-identity/index.md": () =>
       import(
-        "../public/content/translations/ja/dao/index.md?collection=content_ja"
+        "../public/content/translations/ja/decentralized-identity/index.md?collection=content_ja"
       ),
     "defi/index.md": () =>
       import(
         "../public/content/translations/ja/defi/index.md?collection=content_ja"
       ),
-    "decentralized-identity/index.md": () =>
+    "dao/index.md": () =>
       import(
-        "../public/content/translations/ja/decentralized-identity/index.md?collection=content_ja"
-      ),
-    "desci/index.md": () =>
-      import(
-        "../public/content/translations/ja/desci/index.md?collection=content_ja"
+        "../public/content/translations/ja/dao/index.md?collection=content_ja"
       ),
     "eips/index.md": () =>
       import(
         "../public/content/translations/ja/eips/index.md?collection=content_ja"
+      ),
+    "desci/index.md": () =>
+      import(
+        "../public/content/translations/ja/desci/index.md?collection=content_ja"
       ),
     "energy-consumption/index.md": () =>
       import(
@@ -5305,6 +7959,10 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/nft/index.md?collection=content_ja"
       ),
+    "guides/index.md": () =>
+      import(
+        "../public/content/translations/ja/guides/index.md?collection=content_ja"
+      ),
     "payments/index.md": () =>
       import(
         "../public/content/translations/ja/payments/index.md?collection=content_ja"
@@ -5312,10 +7970,6 @@ const browserCollections = {
     "prediction-markets/index.md": () =>
       import(
         "../public/content/translations/ja/prediction-markets/index.md?collection=content_ja"
-      ),
-    "guides/index.md": () =>
-      import(
-        "../public/content/translations/ja/guides/index.md?collection=content_ja"
       ),
     "privacy/index.md": () =>
       import(
@@ -5337,10 +7991,6 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/security/index.md?collection=content_ja"
       ),
-    "smart-contracts/index.md": () =>
-      import(
-        "../public/content/translations/ja/smart-contracts/index.md?collection=content_ja"
-      ),
     "social-networks/index.md": () =>
       import(
         "../public/content/translations/ja/social-networks/index.md?collection=content_ja"
@@ -5357,13 +8007,17 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/whitepaper/index.md?collection=content_ja"
       ),
+    "zero-knowledge-proofs/index.md": () =>
+      import(
+        "../public/content/translations/ja/zero-knowledge-proofs/index.md?collection=content_ja"
+      ),
     "wrapped-eth/index.md": () =>
       import(
         "../public/content/translations/ja/wrapped-eth/index.md?collection=content_ja"
       ),
-    "zero-knowledge-proofs/index.md": () =>
+    "smart-contracts/index.md": () =>
       import(
-        "../public/content/translations/ja/zero-knowledge-proofs/index.md?collection=content_ja"
+        "../public/content/translations/ja/smart-contracts/index.md?collection=content_ja"
       ),
     "community/code-of-conduct/index.md": () =>
       import(
@@ -5373,13 +8027,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/community/get-involved/index.md?collection=content_ja"
       ),
-    "community/grants/index.md": () =>
-      import(
-        "../public/content/translations/ja/community/grants/index.md?collection=content_ja"
-      ),
     "community/language-resources/index.md": () =>
       import(
         "../public/content/translations/ja/community/language-resources/index.md?collection=content_ja"
+      ),
+    "community/grants/index.md": () =>
+      import(
+        "../public/content/translations/ja/community/grants/index.md?collection=content_ja"
       ),
     "community/online/index.md": () =>
       import(
@@ -5461,13 +8115,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/guides/how-to-create-an-ethereum-account/index.md?collection=content_ja"
       ),
-    "guides/how-to-revoke-token-access/index.md": () =>
-      import(
-        "../public/content/translations/ja/guides/how-to-revoke-token-access/index.md?collection=content_ja"
-      ),
     "guides/how-to-id-scam-tokens/index.md": () =>
       import(
         "../public/content/translations/ja/guides/how-to-id-scam-tokens/index.md?collection=content_ja"
+      ),
+    "guides/how-to-revoke-token-access/index.md": () =>
+      import(
+        "../public/content/translations/ja/guides/how-to-revoke-token-access/index.md?collection=content_ja"
       ),
     "guides/how-to-swap-tokens/index.md": () =>
       import(
@@ -5533,13 +8187,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/roadmap/security/index.md?collection=content_ja"
       ),
-    "roadmap/statelessness/index.md": () =>
-      import(
-        "../public/content/translations/ja/roadmap/statelessness/index.md?collection=content_ja"
-      ),
     "roadmap/single-slot-finality/index.md": () =>
       import(
         "../public/content/translations/ja/roadmap/single-slot-finality/index.md?collection=content_ja"
+      ),
+    "roadmap/statelessness/index.md": () =>
+      import(
+        "../public/content/translations/ja/roadmap/statelessness/index.md?collection=content_ja"
       ),
     "roadmap/user-experience/index.md": () =>
       import(
@@ -5565,13 +8219,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/staking/saas/index.md?collection=content_ja"
       ),
-    "staking/solo/index.md": () =>
-      import(
-        "../public/content/translations/ja/staking/solo/index.md?collection=content_ja"
-      ),
     "staking/withdrawals/index.md": () =>
       import(
         "../public/content/translations/ja/staking/withdrawals/index.md?collection=content_ja"
+      ),
+    "staking/solo/index.md": () =>
+      import(
+        "../public/content/translations/ja/staking/solo/index.md?collection=content_ja"
       ),
     "videos/ai-agents-interview-luna/index.md": () =>
       import(
@@ -5617,25 +8271,25 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/videos/decentralized-identity-explained/index.md?collection=content_ja"
       ),
-    "videos/defi-future-of-finance/index.md": () =>
-      import(
-        "../public/content/translations/ja/videos/defi-future-of-finance/index.md?collection=content_ja"
-      ),
     "videos/decentralized-social-media/index.md": () =>
       import(
         "../public/content/translations/ja/videos/decentralized-social-media/index.md?collection=content_ja"
+      ),
+    "videos/defi-future-of-finance/index.md": () =>
+      import(
+        "../public/content/translations/ja/videos/defi-future-of-finance/index.md?collection=content_ja"
       ),
     "videos/defi-history-inception-to-2021/index.md": () =>
       import(
         "../public/content/translations/ja/videos/defi-history-inception-to-2021/index.md?collection=content_ja"
       ),
-    "videos/desci-movement-juan-benet/index.md": () =>
-      import(
-        "../public/content/translations/ja/videos/desci-movement-juan-benet/index.md?collection=content_ja"
-      ),
     "videos/devcon-mumbai-coming-2026/index.md": () =>
       import(
         "../public/content/translations/ja/videos/devcon-mumbai-coming-2026/index.md?collection=content_ja"
+      ),
+    "videos/desci-movement-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/ja/videos/desci-movement-juan-benet/index.md?collection=content_ja"
       ),
     "videos/devconnect-argentina-2025-recap/index.md": () =>
       import(
@@ -5657,10 +8311,6 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/videos/ethereum-basics-intro/index.md?collection=content_ja"
       ),
-    "videos/ethereum-core-governance-explained/index.md": () =>
-      import(
-        "../public/content/translations/ja/videos/ethereum-core-governance-explained/index.md?collection=content_ja"
-      ),
     "videos/ethereum-evolution-glamsterdam/index.md": () =>
       import(
         "../public/content/translations/ja/videos/ethereum-evolution-glamsterdam/index.md?collection=content_ja"
@@ -5672,6 +8322,10 @@ const browserCollections = {
     "videos/ethereum-institutional-privacy-panel/index.md": () =>
       import(
         "../public/content/translations/ja/videos/ethereum-institutional-privacy-panel/index.md?collection=content_ja"
+      ),
+    "videos/ethereum-core-governance-explained/index.md": () =>
+      import(
+        "../public/content/translations/ja/videos/ethereum-core-governance-explained/index.md?collection=content_ja"
       ),
     "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
       import(
@@ -5705,6 +8359,10 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/videos/how-to-make-a-guerilla-l2/index.md?collection=content_ja"
       ),
+    "videos/layer-2-scaling-explained/index.md": () =>
+      import(
+        "../public/content/translations/ja/videos/layer-2-scaling-explained/index.md?collection=content_ja"
+      ),
     "videos/key-pair-eth-build/index.md": () =>
       import(
         "../public/content/translations/ja/videos/key-pair-eth-build/index.md?collection=content_ja"
@@ -5712,10 +8370,6 @@ const browserCollections = {
     "videos/learn-nfts-and-defi/index.md": () =>
       import(
         "../public/content/translations/ja/videos/learn-nfts-and-defi/index.md?collection=content_ja"
-      ),
-    "videos/layer-2-scaling-explained/index.md": () =>
-      import(
-        "../public/content/translations/ja/videos/layer-2-scaling-explained/index.md?collection=content_ja"
       ),
     "videos/next-10-years-of-ethereum/index.md": () =>
       import(
@@ -5813,13 +8467,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/community/support/faq/index.md?collection=content_ja"
       ),
-    "community/support/scams/index.md": () =>
-      import(
-        "../public/content/translations/ja/community/support/scams/index.md?collection=content_ja"
-      ),
     "community/support/misconceptions/index.md": () =>
       import(
         "../public/content/translations/ja/community/support/misconceptions/index.md?collection=content_ja"
+      ),
+    "community/support/scams/index.md": () =>
+      import(
+        "../public/content/translations/ja/community/support/scams/index.md?collection=content_ja"
       ),
     "contributing/design/adding-design-resources/index.md": () =>
       import(
@@ -5833,13 +8487,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/contributing/translation-program/how-to-translate/index.md?collection=content_ja"
       ),
-    "contributing/translation-program/mission-and-vision/index.md": () =>
-      import(
-        "../public/content/translations/ja/contributing/translation-program/mission-and-vision/index.md?collection=content_ja"
-      ),
     "contributing/translation-program/playbook/index.md": () =>
       import(
         "../public/content/translations/ja/contributing/translation-program/playbook/index.md?collection=content_ja"
+      ),
+    "contributing/translation-program/mission-and-vision/index.md": () =>
+      import(
+        "../public/content/translations/ja/contributing/translation-program/mission-and-vision/index.md?collection=content_ja"
       ),
     "contributing/translation-program/resources/index.md": () =>
       import(
@@ -5861,13 +8515,17 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/blocks/index.md?collection=content_ja"
       ),
+    "developers/docs/consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/consensus-mechanisms/index.md?collection=content_ja"
+      ),
     "developers/docs/bridges/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/bridges/index.md?collection=content_ja"
       ),
-    "developers/docs/consensus-mechanisms/index.md": () =>
+    "developers/docs/dapps/index.md": () =>
       import(
-        "../public/content/translations/ja/developers/docs/consensus-mechanisms/index.md?collection=content_ja"
+        "../public/content/translations/ja/developers/docs/dapps/index.md?collection=content_ja"
       ),
     "developers/docs/data-and-analytics/index.md": () =>
       import(
@@ -5877,29 +8535,25 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/data-availability/index.md?collection=content_ja"
       ),
-    "developers/docs/dapps/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/dapps/index.md?collection=content_ja"
-      ),
     "developers/docs/data-structures-and-encoding/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/data-structures-and-encoding/index.md?collection=content_ja"
-      ),
-    "developers/docs/design-and-ux/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/design-and-ux/index.md?collection=content_ja"
       ),
     "developers/docs/development-networks/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/development-networks/index.md?collection=content_ja"
       ),
-    "developers/docs/ethereum-stack/index.md": () =>
+    "developers/docs/design-and-ux/index.md": () =>
       import(
-        "../public/content/translations/ja/developers/docs/ethereum-stack/index.md?collection=content_ja"
+        "../public/content/translations/ja/developers/docs/design-and-ux/index.md?collection=content_ja"
       ),
     "developers/docs/evm/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/evm/index.md?collection=content_ja"
+      ),
+    "developers/docs/ethereum-stack/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/ethereum-stack/index.md?collection=content_ja"
       ),
     "developers/docs/frameworks/index.md": () =>
       import(
@@ -5941,10 +8595,6 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/oracles/index.md?collection=content_ja"
       ),
-    "developers/docs/scaling/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/scaling/index.md?collection=content_ja"
-      ),
     "developers/docs/programming-languages/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/programming-languages/index.md?collection=content_ja"
@@ -5952,6 +8602,10 @@ const browserCollections = {
     "developers/docs/smart-contracts/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/smart-contracts/index.md?collection=content_ja"
+      ),
+    "developers/docs/scaling/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/scaling/index.md?collection=content_ja"
       ),
     "developers/docs/standards/index.md": () =>
       import(
@@ -5961,10 +8615,6 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/storage/index.md?collection=content_ja"
       ),
-    "developers/docs/transactions/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/transactions/index.md?collection=content_ja"
-      ),
     "developers/docs/web2-vs-web3/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/web2-vs-web3/index.md?collection=content_ja"
@@ -5973,28 +8623,27 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/wrapped-eth/index.md?collection=content_ja"
       ),
+    "developers/docs/transactions/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/transactions/index.md?collection=content_ja"
+      ),
     "developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md":
       () =>
         import(
           "../public/content/translations/ja/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_ja"
         ),
-    "developers/tutorials/ai-trading-agent/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/tutorials/ai-trading-agent/index.md?collection=content_ja"
-      ),
     "developers/tutorials/all-you-can-cache/index.md": () =>
       import(
         "../public/content/translations/ja/developers/tutorials/all-you-can-cache/index.md?collection=content_ja"
+      ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/tutorials/ai-trading-agent/index.md?collection=content_ja"
       ),
     "developers/tutorials/app-plasma/index.md": () =>
       import(
         "../public/content/translations/ja/developers/tutorials/app-plasma/index.md?collection=content_ja"
       ),
-    "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
-      () =>
-        import(
-          "../public/content/translations/ja/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_ja"
-        ),
     "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
       import(
         "../public/content/translations/ja/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_ja"
@@ -6003,6 +8652,11 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_ja"
       ),
+    "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/ja/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_ja"
+        ),
     "developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md":
       () =>
         import(
@@ -6055,13 +8709,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_ja"
       ),
-    "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_ja"
-      ),
     "developers/tutorials/how-to-mint-an-nft/index.md": () =>
       import(
         "../public/content/translations/ja/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_ja"
+      ),
+    "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_ja"
       ),
     "developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md":
       () =>
@@ -6161,10 +8815,6 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/tutorials/secure-development-workflow/index.md?collection=content_ja"
       ),
-    "developers/tutorials/send-token-etherjs/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/tutorials/send-token-etherjs/index.md?collection=content_ja"
-      ),
     "developers/tutorials/send-token-ethersjs/index.md": () =>
       import(
         "../public/content/translations/ja/developers/tutorials/send-token-ethersjs/index.md?collection=content_ja"
@@ -6174,6 +8824,10 @@ const browserCollections = {
         import(
           "../public/content/translations/ja/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md?collection=content_ja"
         ),
+    "developers/tutorials/send-token-etherjs/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/tutorials/send-token-etherjs/index.md?collection=content_ja"
+      ),
     "developers/tutorials/server-components/index.md": () =>
       import(
         "../public/content/translations/ja/developers/tutorials/server-components/index.md?collection=content_ja"
@@ -6199,13 +8853,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/tutorials/testing-smart-contract-with-waffle/index.md?collection=content_ja"
       ),
-    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_ja"
-      ),
     "developers/tutorials/token-integration-checklist/index.md": () =>
       import(
         "../public/content/translations/ja/developers/tutorials/token-integration-checklist/index.md?collection=content_ja"
+      ),
+    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_ja"
       ),
     "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
       () =>
@@ -6253,13 +8907,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/contributing/translation-program/translatathon/details/index.md?collection=content_ja"
       ),
-    "developers/docs/apis/javascript/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/apis/javascript/index.md?collection=content_ja"
-      ),
     "developers/docs/apis/backend/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/apis/backend/index.md?collection=content_ja"
+      ),
+    "developers/docs/apis/javascript/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/apis/javascript/index.md?collection=content_ja"
       ),
     "developers/docs/apis/json-rpc/index.md": () =>
       import(
@@ -6286,15 +8940,15 @@ const browserCollections = {
         import(
           "../public/content/translations/ja/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_ja"
         ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_ja"
+      ),
     "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
       () =>
         import(
           "../public/content/translations/ja/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_ja"
         ),
-    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_ja"
-      ),
     "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_ja"
@@ -6304,11 +8958,6 @@ const browserCollections = {
         import(
           "../public/content/translations/ja/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_ja"
         ),
-    "developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md":
-      () =>
-        import(
-          "../public/content/translations/ja/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md?collection=content_ja"
-        ),
     "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_ja"
@@ -6317,21 +8966,22 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_ja"
       ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md":
+      () =>
+        import(
+          "../public/content/translations/ja/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md?collection=content_ja"
+        ),
     "developers/docs/evm/opcodes/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/evm/opcodes/index.md?collection=content_ja"
-      ),
-    "developers/docs/networking-layer/portal-network/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/networking-layer/portal-network/index.md?collection=content_ja"
       ),
     "developers/docs/networking-layer/network-addresses/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/networking-layer/network-addresses/index.md?collection=content_ja"
       ),
-    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
+    "developers/docs/networking-layer/portal-network/index.md": () =>
       import(
-        "../public/content/translations/ja/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_ja"
+        "../public/content/translations/ja/developers/docs/networking-layer/portal-network/index.md?collection=content_ja"
       ),
     "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
       import(
@@ -6341,6 +8991,10 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_ja"
       ),
+    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_ja"
+      ),
     "developers/docs/nodes-and-clients/light-clients/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_ja"
@@ -6349,49 +9003,25 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_ja"
       ),
-    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_ja"
-      ),
     "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_ja"
       ),
-    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
       import(
-        "../public/content/translations/ja/developers/docs/scaling/optimistic-rollups/index.md?collection=content_ja"
-      ),
-    "developers/docs/scaling/plasma/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/scaling/plasma/index.md?collection=content_ja"
-      ),
-    "developers/docs/scaling/sidechains/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/scaling/sidechains/index.md?collection=content_ja"
-      ),
-    "developers/docs/scaling/state-channels/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/scaling/state-channels/index.md?collection=content_ja"
-      ),
-    "developers/docs/scaling/validium/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/scaling/validium/index.md?collection=content_ja"
-      ),
-    "developers/docs/scaling/zk-rollups/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/scaling/zk-rollups/index.md?collection=content_ja"
+        "../public/content/translations/ja/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_ja"
       ),
     "developers/docs/programming-languages/dart/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/programming-languages/dart/index.md?collection=content_ja"
       ),
-    "developers/docs/programming-languages/delphi/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/programming-languages/delphi/index.md?collection=content_ja"
-      ),
     "developers/docs/programming-languages/dot-net/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/programming-languages/dot-net/index.md?collection=content_ja"
+      ),
+    "developers/docs/programming-languages/delphi/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/programming-languages/delphi/index.md?collection=content_ja"
       ),
     "developers/docs/programming-languages/elixir/index.md": () =>
       import(
@@ -6401,29 +9031,25 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/programming-languages/golang/index.md?collection=content_ja"
       ),
-    "developers/docs/programming-languages/java/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/programming-languages/java/index.md?collection=content_ja"
-      ),
     "developers/docs/programming-languages/javascript/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/programming-languages/javascript/index.md?collection=content_ja"
+      ),
+    "developers/docs/programming-languages/java/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/programming-languages/java/index.md?collection=content_ja"
       ),
     "developers/docs/programming-languages/python/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/programming-languages/python/index.md?collection=content_ja"
       ),
-    "developers/docs/programming-languages/ruby/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/programming-languages/ruby/index.md?collection=content_ja"
-      ),
-    "developers/docs/smart-contracts/anatomy/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/smart-contracts/anatomy/index.md?collection=content_ja"
-      ),
     "developers/docs/programming-languages/rust/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/programming-languages/rust/index.md?collection=content_ja"
+      ),
+    "developers/docs/programming-languages/ruby/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/programming-languages/ruby/index.md?collection=content_ja"
       ),
     "developers/docs/smart-contracts/compiling/index.md": () =>
       import(
@@ -6433,17 +9059,21 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/smart-contracts/composability/index.md?collection=content_ja"
       ),
+    "developers/docs/smart-contracts/anatomy/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/smart-contracts/anatomy/index.md?collection=content_ja"
+      ),
     "developers/docs/smart-contracts/deploying/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/smart-contracts/deploying/index.md?collection=content_ja"
       ),
-    "developers/docs/smart-contracts/languages/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/smart-contracts/languages/index.md?collection=content_ja"
-      ),
     "developers/docs/smart-contracts/formal-verification/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/smart-contracts/formal-verification/index.md?collection=content_ja"
+      ),
+    "developers/docs/smart-contracts/languages/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/smart-contracts/languages/index.md?collection=content_ja"
       ),
     "developers/docs/smart-contracts/libraries/index.md": () =>
       import(
@@ -6453,13 +9083,13 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/smart-contracts/naming/index.md?collection=content_ja"
       ),
-    "developers/docs/smart-contracts/security/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/smart-contracts/security/index.md?collection=content_ja"
-      ),
     "developers/docs/smart-contracts/testing/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/smart-contracts/testing/index.md?collection=content_ja"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/smart-contracts/security/index.md?collection=content_ja"
       ),
     "developers/docs/smart-contracts/upgrading/index.md": () =>
       import(
@@ -6469,6 +9099,30 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/smart-contracts/verifying/index.md?collection=content_ja"
       ),
+    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/scaling/optimistic-rollups/index.md?collection=content_ja"
+      ),
+    "developers/docs/scaling/plasma/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/scaling/plasma/index.md?collection=content_ja"
+      ),
+    "developers/docs/scaling/state-channels/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/scaling/state-channels/index.md?collection=content_ja"
+      ),
+    "developers/docs/scaling/sidechains/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/scaling/sidechains/index.md?collection=content_ja"
+      ),
+    "developers/docs/scaling/validium/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/scaling/validium/index.md?collection=content_ja"
+      ),
+    "developers/docs/scaling/zk-rollups/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/scaling/zk-rollups/index.md?collection=content_ja"
+      ),
     "developers/docs/standards/tokens/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/standards/tokens/index.md?collection=content_ja"
@@ -6477,11 +9131,6 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_ja"
       ),
-    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
-      () =>
-        import(
-          "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_ja"
-        ),
     "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_ja"
@@ -6490,6 +9139,11 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_ja"
       ),
+    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
+      () =>
+        import(
+          "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_ja"
+        ),
     "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_ja"
@@ -6497,10 +9151,6 @@ const browserCollections = {
     "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_ja"
-      ),
-    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_ja"
       ),
     "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
       import(
@@ -6511,6 +9161,10 @@ const browserCollections = {
         import(
           "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_ja"
         ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_ja"
+      ),
     "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_ja"
@@ -6520,10 +9174,6 @@ const browserCollections = {
         import(
           "../public/content/translations/ja/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_ja"
         ),
-    "developers/docs/standards/tokens/erc-1155/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/standards/tokens/erc-1155/index.md?collection=content_ja"
-      ),
     "developers/docs/standards/tokens/erc-1363/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/standards/tokens/erc-1363/index.md?collection=content_ja"
@@ -6532,54 +9182,5338 @@ const browserCollections = {
       import(
         "../public/content/translations/ja/developers/docs/standards/tokens/erc-20/index.md?collection=content_ja"
       ),
-    "developers/docs/standards/tokens/erc-223/index.md": () =>
+    "developers/docs/standards/tokens/erc-1155/index.md": () =>
       import(
-        "../public/content/translations/ja/developers/docs/standards/tokens/erc-223/index.md?collection=content_ja"
-      ),
-    "developers/docs/standards/tokens/erc-4626/index.md": () =>
-      import(
-        "../public/content/translations/ja/developers/docs/standards/tokens/erc-4626/index.md?collection=content_ja"
+        "../public/content/translations/ja/developers/docs/standards/tokens/erc-1155/index.md?collection=content_ja"
       ),
     "developers/docs/standards/tokens/erc-721/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/standards/tokens/erc-721/index.md?collection=content_ja"
       ),
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/standards/tokens/erc-4626/index.md?collection=content_ja"
+      ),
     "developers/docs/standards/tokens/erc-777/index.md": () =>
       import(
         "../public/content/translations/ja/developers/docs/standards/tokens/erc-777/index.md?collection=content_ja"
+      ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/ja/developers/docs/standards/tokens/erc-223/index.md?collection=content_ja"
       ),
     "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
       () =>
         import(
           "../public/content/translations/ja/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_ja"
         ),
-    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
-      () =>
-        import(
-          "../public/content/translations/ja/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_ja"
-        ),
     "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
       () =>
         import(
           "../public/content/translations/ja/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_ja"
         ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
+      () =>
+        import(
+          "../public/content/translations/ja/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_ja"
+        ),
   }),
-  content_ko: create.doc("content_ko", {}),
+  content_ko: create.doc("content_ko", {
+    "about/index.md": () =>
+      import(
+        "../public/content/translations/ko/about/index.md?collection=content_ko"
+      ),
+    "ai-agents/index.md": () =>
+      import(
+        "../public/content/translations/ko/ai-agents/index.md?collection=content_ko"
+      ),
+    "bridges/index.md": () =>
+      import(
+        "../public/content/translations/ko/bridges/index.md?collection=content_ko"
+      ),
+    "contributing/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/index.md?collection=content_ko"
+      ),
+    "dao/index.md": () =>
+      import(
+        "../public/content/translations/ko/dao/index.md?collection=content_ko"
+      ),
+    "defi/index.md": () =>
+      import(
+        "../public/content/translations/ko/defi/index.md?collection=content_ko"
+      ),
+    "decentralized-identity/index.md": () =>
+      import(
+        "../public/content/translations/ko/decentralized-identity/index.md?collection=content_ko"
+      ),
+    "desci/index.md": () =>
+      import(
+        "../public/content/translations/ko/desci/index.md?collection=content_ko"
+      ),
+    "eips/index.md": () =>
+      import(
+        "../public/content/translations/ko/eips/index.md?collection=content_ko"
+      ),
+    "energy-consumption/index.md": () =>
+      import(
+        "../public/content/translations/ko/energy-consumption/index.md?collection=content_ko"
+      ),
+    "ethereum-forks/index.md": () =>
+      import(
+        "../public/content/translations/ko/ethereum-forks/index.md?collection=content_ko"
+      ),
+    "foundation/index.md": () =>
+      import(
+        "../public/content/translations/ko/foundation/index.md?collection=content_ko"
+      ),
+    "gaming/index.md": () =>
+      import(
+        "../public/content/translations/ko/gaming/index.md?collection=content_ko"
+      ),
+    "glossary/index.md": () =>
+      import(
+        "../public/content/translations/ko/glossary/index.md?collection=content_ko"
+      ),
+    "governance/index.md": () =>
+      import(
+        "../public/content/translations/ko/governance/index.md?collection=content_ko"
+      ),
+    "guides/index.md": () =>
+      import(
+        "../public/content/translations/ko/guides/index.md?collection=content_ko"
+      ),
+    "nft/index.md": () =>
+      import(
+        "../public/content/translations/ko/nft/index.md?collection=content_ko"
+      ),
+    "payments/index.md": () =>
+      import(
+        "../public/content/translations/ko/payments/index.md?collection=content_ko"
+      ),
+    "prediction-markets/index.md": () =>
+      import(
+        "../public/content/translations/ko/prediction-markets/index.md?collection=content_ko"
+      ),
+    "privacy/index.md": () =>
+      import(
+        "../public/content/translations/ko/privacy/index.md?collection=content_ko"
+      ),
+    "real-world-assets/index.md": () =>
+      import(
+        "../public/content/translations/ko/real-world-assets/index.md?collection=content_ko"
+      ),
+    "refi/index.md": () =>
+      import(
+        "../public/content/translations/ko/refi/index.md?collection=content_ko"
+      ),
+    "restaking/index.md": () =>
+      import(
+        "../public/content/translations/ko/restaking/index.md?collection=content_ko"
+      ),
+    "security/index.md": () =>
+      import(
+        "../public/content/translations/ko/security/index.md?collection=content_ko"
+      ),
+    "smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/ko/smart-contracts/index.md?collection=content_ko"
+      ),
+    "social-networks/index.md": () =>
+      import(
+        "../public/content/translations/ko/social-networks/index.md?collection=content_ko"
+      ),
+    "web3/index.md": () =>
+      import(
+        "../public/content/translations/ko/web3/index.md?collection=content_ko"
+      ),
+    "what-are-apps/index.md": () =>
+      import(
+        "../public/content/translations/ko/what-are-apps/index.md?collection=content_ko"
+      ),
+    "whitepaper/index.md": () =>
+      import(
+        "../public/content/translations/ko/whitepaper/index.md?collection=content_ko"
+      ),
+    "wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/ko/wrapped-eth/index.md?collection=content_ko"
+      ),
+    "zero-knowledge-proofs/index.md": () =>
+      import(
+        "../public/content/translations/ko/zero-knowledge-proofs/index.md?collection=content_ko"
+      ),
+    "community/code-of-conduct/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/code-of-conduct/index.md?collection=content_ko"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/get-involved/index.md?collection=content_ko"
+      ),
+    "community/grants/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/grants/index.md?collection=content_ko"
+      ),
+    "community/language-resources/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/language-resources/index.md?collection=content_ko"
+      ),
+    "community/online/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/online/index.md?collection=content_ko"
+      ),
+    "community/research/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/research/index.md?collection=content_ko"
+      ),
+    "contributing/adding-desci-projects/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-desci-projects/index.md?collection=content_ko"
+      ),
+    "contributing/adding-developer-tools/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-developer-tools/index.md?collection=content_ko"
+      ),
+    "contributing/adding-exchanges/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-exchanges/index.md?collection=content_ko"
+      ),
+    "contributing/adding-glossary-terms/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-glossary-terms/index.md?collection=content_ko"
+      ),
+    "contributing/adding-layer-2s/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-layer-2s/index.md?collection=content_ko"
+      ),
+    "contributing/adding-products/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-products/index.md?collection=content_ko"
+      ),
+    "contributing/adding-resources/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-resources/index.md?collection=content_ko"
+      ),
+    "contributing/adding-staking-products/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-staking-products/index.md?collection=content_ko"
+      ),
+    "contributing/adding-wallets/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-wallets/index.md?collection=content_ko"
+      ),
+    "contributing/adding-videos/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/adding-videos/index.md?collection=content_ko"
+      ),
+    "contributing/content-resources/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/content-resources/index.md?collection=content_ko"
+      ),
+    "contributing/design/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/design/index.md?collection=content_ko"
+      ),
+    "contributing/design-principles/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/design-principles/index.md?collection=content_ko"
+      ),
+    "contributing/quizzes/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/quizzes/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/index.md?collection=content_ko"
+      ),
+    "developers/docs/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/index.md?collection=content_ko"
+      ),
+    "eth/supply/index.md": () =>
+      import(
+        "../public/content/translations/ko/eth/supply/index.md?collection=content_ko"
+      ),
+    "guides/how-to-create-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/ko/guides/how-to-create-an-ethereum-account/index.md?collection=content_ko"
+      ),
+    "guides/how-to-id-scam-tokens/index.md": () =>
+      import(
+        "../public/content/translations/ko/guides/how-to-id-scam-tokens/index.md?collection=content_ko"
+      ),
+    "guides/how-to-revoke-token-access/index.md": () =>
+      import(
+        "../public/content/translations/ko/guides/how-to-revoke-token-access/index.md?collection=content_ko"
+      ),
+    "guides/how-to-swap-tokens/index.md": () =>
+      import(
+        "../public/content/translations/ko/guides/how-to-swap-tokens/index.md?collection=content_ko"
+      ),
+    "guides/how-to-use-a-wallet/index.md": () =>
+      import(
+        "../public/content/translations/ko/guides/how-to-use-a-wallet/index.md?collection=content_ko"
+      ),
+    "guides/how-to-use-a-bridge/index.md": () =>
+      import(
+        "../public/content/translations/ko/guides/how-to-use-a-bridge/index.md?collection=content_ko"
+      ),
+    "roadmap/account-abstraction/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/account-abstraction/index.md?collection=content_ko"
+      ),
+    "roadmap/beacon-chain/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/beacon-chain/index.md?collection=content_ko"
+      ),
+    "roadmap/danksharding/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/danksharding/index.md?collection=content_ko"
+      ),
+    "roadmap/dencun/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/dencun/index.md?collection=content_ko"
+      ),
+    "roadmap/fusaka/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/fusaka/index.md?collection=content_ko"
+      ),
+    "roadmap/future-proofing/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/future-proofing/index.md?collection=content_ko"
+      ),
+    "roadmap/glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/glamsterdam/index.md?collection=content_ko"
+      ),
+    "roadmap/merge/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/merge/index.md?collection=content_ko"
+      ),
+    "roadmap/pbs/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/pbs/index.md?collection=content_ko"
+      ),
+    "roadmap/pectra/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/pectra/index.md?collection=content_ko"
+      ),
+    "roadmap/scaling/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/scaling/index.md?collection=content_ko"
+      ),
+    "roadmap/secret-leader-election/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/secret-leader-election/index.md?collection=content_ko"
+      ),
+    "roadmap/security/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/security/index.md?collection=content_ko"
+      ),
+    "roadmap/single-slot-finality/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/single-slot-finality/index.md?collection=content_ko"
+      ),
+    "roadmap/statelessness/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/statelessness/index.md?collection=content_ko"
+      ),
+    "roadmap/user-experience/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/user-experience/index.md?collection=content_ko"
+      ),
+    "roadmap/verkle-trees/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/verkle-trees/index.md?collection=content_ko"
+      ),
+    "roadmap/zkevm/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/zkevm/index.md?collection=content_ko"
+      ),
+    "staking/dvt/index.md": () =>
+      import(
+        "../public/content/translations/ko/staking/dvt/index.md?collection=content_ko"
+      ),
+    "staking/pools/index.md": () =>
+      import(
+        "../public/content/translations/ko/staking/pools/index.md?collection=content_ko"
+      ),
+    "staking/saas/index.md": () =>
+      import(
+        "../public/content/translations/ko/staking/saas/index.md?collection=content_ko"
+      ),
+    "staking/solo/index.md": () =>
+      import(
+        "../public/content/translations/ko/staking/solo/index.md?collection=content_ko"
+      ),
+    "staking/withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/ko/staking/withdrawals/index.md?collection=content_ko"
+      ),
+    "videos/ai-agents-interview-luna/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ai-agents-interview-luna/index.md?collection=content_ko"
+      ),
+    "videos/atoms-institutions-blockchains-josh-stark/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/atoms-institutions-blockchains-josh-stark/index.md?collection=content_ko"
+      ),
+    "videos/blobspace-101-dencun/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/blobspace-101-dencun/index.md?collection=content_ko"
+      ),
+    "videos/blockchain-101-visual-demo/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/blockchain-101-visual-demo/index.md?collection=content_ko"
+      ),
+    "videos/blockchain-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/blockchain-eth-build/index.md?collection=content_ko"
+      ),
+    "videos/crypto-apps-desocial-linda-xie/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/crypto-apps-desocial-linda-xie/index.md?collection=content_ko"
+      ),
+    "videos/crypto-security-passwords/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/crypto-security-passwords/index.md?collection=content_ko"
+      ),
+    "videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md?collection=content_ko"
+      ),
+    "videos/dao-build-next-great-city/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/dao-build-next-great-city/index.md?collection=content_ko"
+      ),
+    "videos/dao-hack-ethereum-classic/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/dao-hack-ethereum-classic/index.md?collection=content_ko"
+      ),
+    "videos/decentralized-identity-explained/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/decentralized-identity-explained/index.md?collection=content_ko"
+      ),
+    "videos/decentralized-social-media/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/decentralized-social-media/index.md?collection=content_ko"
+      ),
+    "videos/defi-future-of-finance/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/defi-future-of-finance/index.md?collection=content_ko"
+      ),
+    "videos/defi-history-inception-to-2021/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/defi-history-inception-to-2021/index.md?collection=content_ko"
+      ),
+    "videos/desci-movement-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/desci-movement-juan-benet/index.md?collection=content_ko"
+      ),
+    "videos/devcon-mumbai-coming-2026/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/devcon-mumbai-coming-2026/index.md?collection=content_ko"
+      ),
+    "videos/devconnect-argentina-2025-recap/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/devconnect-argentina-2025-recap/index.md?collection=content_ko"
+      ),
+    "videos/devconnect-buenos-aires-promo/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/devconnect-buenos-aires-promo/index.md?collection=content_ko"
+      ),
+    "videos/eigenlayer-permissionless-features/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/eigenlayer-permissionless-features/index.md?collection=content_ko"
+      ),
+    "videos/eip-4844-dencun-explained/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/eip-4844-dencun-explained/index.md?collection=content_ko"
+      ),
+    "videos/ethereum-basics-intro/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereum-basics-intro/index.md?collection=content_ko"
+      ),
+    "videos/ethereum-core-governance-explained/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereum-core-governance-explained/index.md?collection=content_ko"
+      ),
+    "videos/ethereum-evolution-glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereum-evolution-glamsterdam/index.md?collection=content_ko"
+      ),
+    "videos/ethereum-in-30-minutes-vitalik-buterin/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereum-in-30-minutes-vitalik-buterin/index.md?collection=content_ko"
+      ),
+    "videos/ethereum-institutional-privacy-panel/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereum-institutional-privacy-panel/index.md?collection=content_ko"
+      ),
+    "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereum-localism-global-protocols-local-power/index.md?collection=content_ko"
+      ),
+    "videos/ethereum-staking-withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereum-staking-withdrawals/index.md?collection=content_ko"
+      ),
+    "videos/ethereum-things-i-like-mariano-conti/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereum-things-i-like-mariano-conti/index.md?collection=content_ko"
+      ),
+    "videos/ethereums-quantum-plan-justin-drake/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_ko"
+      ),
+    "videos/fusaka-upgrade-explained/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/fusaka-upgrade-explained/index.md?collection=content_ko"
+      ),
+    "videos/hash-function-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/hash-function-eth-build/index.md?collection=content_ko"
+      ),
+    "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/how-to-be-cypherpunk-juan-benet/index.md?collection=content_ko"
+      ),
+    "videos/how-to-make-a-guerilla-l2/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/how-to-make-a-guerilla-l2/index.md?collection=content_ko"
+      ),
+    "videos/key-pair-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/key-pair-eth-build/index.md?collection=content_ko"
+      ),
+    "videos/layer-2-scaling-explained/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/layer-2-scaling-explained/index.md?collection=content_ko"
+      ),
+    "videos/learn-nfts-and-defi/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/learn-nfts-and-defi/index.md?collection=content_ko"
+      ),
+    "videos/next-10-years-of-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/next-10-years-of-ethereum/index.md?collection=content_ko"
+      ),
+    "videos/pectra-upgrade-overview/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/pectra-upgrade-overview/index.md?collection=content_ko"
+      ),
+    "videos/pectra-what-stakers-need-to-know/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/pectra-what-stakers-need-to-know/index.md?collection=content_ko"
+      ),
+    "videos/pos-reorgs-attack-defense/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/pos-reorgs-attack-defense/index.md?collection=content_ko"
+      ),
+    "videos/post-quantum-security-ethereum-roadmap/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/post-quantum-security-ethereum-roadmap/index.md?collection=content_ko"
+      ),
+    "videos/pow-vs-pos/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/pow-vs-pos/index.md?collection=content_ko"
+      ),
+    "videos/privacy-is-existential/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/privacy-is-existential/index.md?collection=content_ko"
+      ),
+    "videos/proof-of-authority-explained/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/proof-of-authority-explained/index.md?collection=content_ko"
+      ),
+    "videos/proof-of-work-explained/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/proof-of-work-explained/index.md?collection=content_ko"
+      ),
+    "videos/proposer-builder-separation/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/proposer-builder-separation/index.md?collection=content_ko"
+      ),
+    "videos/real-state-of-l2s-bartek-kiepuszewski/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/real-state-of-l2s-bartek-kiepuszewski/index.md?collection=content_ko"
+      ),
+    "videos/regenerative-finance-refi/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/regenerative-finance-refi/index.md?collection=content_ko"
+      ),
+    "videos/restaking-explained/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/restaking-explained/index.md?collection=content_ko"
+      ),
+    "videos/rollups-scaling-strategy/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/rollups-scaling-strategy/index.md?collection=content_ko"
+      ),
+    "videos/security-through-obscurity-microdots/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/security-through-obscurity-microdots/index.md?collection=content_ko"
+      ),
+    "videos/smart-contracts-code-is-law/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/smart-contracts-code-is-law/index.md?collection=content_ko"
+      ),
+    "videos/stani-kulechov-building-aave/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/stani-kulechov-building-aave/index.md?collection=content_ko"
+      ),
+    "videos/surveillance-silence-reclaiming-privacy/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/surveillance-silence-reclaiming-privacy/index.md?collection=content_ko"
+      ),
+    "videos/transactions-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/transactions-eth-build/index.md?collection=content_ko"
+      ),
+    "videos/understanding-consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/understanding-consensus-mechanisms/index.md?collection=content_ko"
+      ),
+    "videos/what-is-a-dapp/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/what-is-a-dapp/index.md?collection=content_ko"
+      ),
+    "videos/zero-knowledge-proofs-5-levels/index.md": () =>
+      import(
+        "../public/content/translations/ko/videos/zero-knowledge-proofs-5-levels/index.md?collection=content_ko"
+      ),
+    "community/events/organizing/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/events/organizing/index.md?collection=content_ko"
+      ),
+    "community/support/faq/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/support/faq/index.md?collection=content_ko"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/support/misconceptions/index.md?collection=content_ko"
+      ),
+    "community/support/scams/index.md": () =>
+      import(
+        "../public/content/translations/ko/community/support/scams/index.md?collection=content_ko"
+      ),
+    "contributing/design/adding-design-resources/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/design/adding-design-resources/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/faq/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/faq/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/how-to-translate/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/how-to-translate/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/mission-and-vision/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/mission-and-vision/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/playbook/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/playbook/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/resources/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/resources/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/translatathon/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/translatathon/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/translators-guide/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/translators-guide/index.md?collection=content_ko"
+      ),
+    "developers/docs/accounts/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/accounts/index.md?collection=content_ko"
+      ),
+    "developers/docs/blocks/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/blocks/index.md?collection=content_ko"
+      ),
+    "developers/docs/bridges/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/bridges/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/index.md?collection=content_ko"
+      ),
+    "developers/docs/dapps/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/dapps/index.md?collection=content_ko"
+      ),
+    "developers/docs/data-and-analytics/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/data-and-analytics/index.md?collection=content_ko"
+      ),
+    "developers/docs/data-availability/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/data-availability/index.md?collection=content_ko"
+      ),
+    "developers/docs/data-structures-and-encoding/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/data-structures-and-encoding/index.md?collection=content_ko"
+      ),
+    "developers/docs/development-networks/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/development-networks/index.md?collection=content_ko"
+      ),
+    "developers/docs/ethereum-stack/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/ethereum-stack/index.md?collection=content_ko"
+      ),
+    "developers/docs/design-and-ux/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/design-and-ux/index.md?collection=content_ko"
+      ),
+    "developers/docs/evm/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/evm/index.md?collection=content_ko"
+      ),
+    "developers/docs/frameworks/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/frameworks/index.md?collection=content_ko"
+      ),
+    "developers/docs/gas/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/gas/index.md?collection=content_ko"
+      ),
+    "developers/docs/ides/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/ides/index.md?collection=content_ko"
+      ),
+    "developers/docs/intro-to-ether/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/intro-to-ether/index.md?collection=content_ko"
+      ),
+    "developers/docs/intro-to-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/intro-to-ethereum/index.md?collection=content_ko"
+      ),
+    "developers/docs/mev/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/mev/index.md?collection=content_ko"
+      ),
+    "developers/docs/networking-layer/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/networking-layer/index.md?collection=content_ko"
+      ),
+    "developers/docs/networks/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/networks/index.md?collection=content_ko"
+      ),
+    "developers/docs/oracles/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/oracles/index.md?collection=content_ko"
+      ),
+    "developers/docs/nodes-and-clients/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/nodes-and-clients/index.md?collection=content_ko"
+      ),
+    "developers/docs/scaling/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/scaling/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/index.md?collection=content_ko"
+      ),
+    "developers/docs/standards/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/index.md?collection=content_ko"
+      ),
+    "developers/docs/storage/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/storage/index.md?collection=content_ko"
+      ),
+    "developers/docs/transactions/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/transactions/index.md?collection=content_ko"
+      ),
+    "developers/docs/web2-vs-web3/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/web2-vs-web3/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/ai-trading-agent/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/all-you-can-cache/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/all-you-can-cache/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/app-plasma/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/app-plasma/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/eip-1271-smart-contract-signatures/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/eip-1271-smart-contract-signatures/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/erc-721-vyper-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/erc-721-vyper-annotated-code/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/erc20-with-safety-rails/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/erc20-with-safety-rails/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/erc20-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/erc20-annotated-code/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/gasless/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/gasless/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/guide-to-smart-contract-security-tools/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/guide-to-smart-contract-security-tools/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/hello-world-smart-contract-fullstack/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/hello-world-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/hello-world-smart-contract/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/how-to-mint-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/how-to-use-tellor-as-your-oracle/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/how-to-view-nft-in-metamask/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/how-to-view-nft-in-metamask/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/how-to-write-and-deploy-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/how-to-write-and-deploy-an-nft/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/interact-with-other-contracts-from-solidity/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/interact-with-other-contracts-from-solidity/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/ipfs-decentralized-ui/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/ipfs-decentralized-ui/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/logging-events-smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/logging-events-smart-contracts/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/nft-minter/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/nft-minter/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/reverse-engineering-a-contract/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/reverse-engineering-a-contract/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/run-node-raspberry-pi/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/run-node-raspberry-pi/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/scam-token-tricks/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/scam-token-tricks/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/secret-state/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/secret-state/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/secure-development-workflow/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/secure-development-workflow/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/send-token-ethersjs/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/send-token-ethersjs/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/server-components/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/server-components/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/short-abi/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/short-abi/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/smart-contract-security-guidelines/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/smart-contract-security-guidelines/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/stealth-addr/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/stealth-addr/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/token-integration-checklist/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/token-integration-checklist/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/understand-the-erc-20-token-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/uniswap-v2-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/uniswap-v2-annotated-code/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/using-websockets/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/using-websockets/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md?collection=content_ko"
+        ),
+    "developers/tutorials/waffle-test-simple-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/waffle-test-simple-smart-contract/index.md?collection=content_ko"
+      ),
+    "developers/tutorials/yellow-paper-evm/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/tutorials/yellow-paper-evm/index.md?collection=content_ko"
+      ),
+    "roadmap/fusaka/peerdas/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/fusaka/peerdas/index.md?collection=content_ko"
+      ),
+    "roadmap/future-proofing/quantum-resistance/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/future-proofing/quantum-resistance/index.md?collection=content_ko"
+      ),
+    "roadmap/merge/issuance/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/merge/issuance/index.md?collection=content_ko"
+      ),
+    "roadmap/pectra/7702/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/pectra/7702/index.md?collection=content_ko"
+      ),
+    "roadmap/pectra/maxeb/index.md": () =>
+      import(
+        "../public/content/translations/ko/roadmap/pectra/maxeb/index.md?collection=content_ko"
+      ),
+    "contributing/translation-program/translatathon/details/index.md": () =>
+      import(
+        "../public/content/translations/ko/contributing/translation-program/translatathon/details/index.md?collection=content_ko"
+      ),
+    "developers/docs/apis/javascript/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/apis/javascript/index.md?collection=content_ko"
+      ),
+    "developers/docs/apis/backend/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/apis/backend/index.md?collection=content_ko"
+      ),
+    "developers/docs/apis/json-rpc/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/apis/json-rpc/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/poa/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/poa/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pow/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pow/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/index.md?collection=content_ko"
+      ),
+    "developers/docs/data-and-analytics/block-explorers/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_ko"
+      ),
+    "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_ko"
+        ),
+    "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_ko"
+        ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_ko"
+      ),
+    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_ko"
+      ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_ko"
+        ),
+    "developers/docs/design-and-ux/heuristics-for-web3/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_ko"
+      ),
+    "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_ko"
+      ),
+    "developers/docs/evm/opcodes/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/evm/opcodes/index.md?collection=content_ko"
+      ),
+    "developers/docs/networking-layer/network-addresses/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/networking-layer/network-addresses/index.md?collection=content_ko"
+      ),
+    "developers/docs/networking-layer/portal-network/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/networking-layer/portal-network/index.md?collection=content_ko"
+      ),
+    "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/nodes-and-clients/archive-nodes/index.md?collection=content_ko"
+      ),
+    "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_ko"
+      ),
+    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_ko"
+      ),
+    "developers/docs/nodes-and-clients/light-clients/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_ko"
+      ),
+    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_ko"
+      ),
+    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_ko"
+      ),
+    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/scaling/optimistic-rollups/index.md?collection=content_ko"
+      ),
+    "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_ko"
+      ),
+    "developers/docs/scaling/plasma/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/scaling/plasma/index.md?collection=content_ko"
+      ),
+    "developers/docs/scaling/sidechains/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/scaling/sidechains/index.md?collection=content_ko"
+      ),
+    "developers/docs/scaling/state-channels/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/scaling/state-channels/index.md?collection=content_ko"
+      ),
+    "developers/docs/scaling/validium/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/scaling/validium/index.md?collection=content_ko"
+      ),
+    "developers/docs/scaling/zk-rollups/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/scaling/zk-rollups/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/dot-net/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/dot-net/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/delphi/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/delphi/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/dart/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/dart/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/elixir/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/elixir/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/golang/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/golang/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/java/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/java/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/javascript/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/javascript/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/python/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/python/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/rust/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/rust/index.md?collection=content_ko"
+      ),
+    "developers/docs/programming-languages/ruby/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/programming-languages/ruby/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/compiling/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/compiling/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/anatomy/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/anatomy/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/deploying/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/deploying/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/formal-verification/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/formal-verification/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/composability/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/composability/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/languages/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/languages/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/naming/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/naming/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/libraries/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/libraries/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/security/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/testing/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/testing/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/upgrading/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/upgrading/index.md?collection=content_ko"
+      ),
+    "developers/docs/smart-contracts/verifying/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/smart-contracts/verifying/index.md?collection=content_ko"
+      ),
+    "developers/docs/standards/tokens/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/tokens/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_ko"
+        ),
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/block-proposal/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_ko"
+        ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_ko"
+        ),
+    "developers/docs/standards/tokens/erc-1155/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/tokens/erc-1155/index.md?collection=content_ko"
+      ),
+    "developers/docs/standards/tokens/erc-1363/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/tokens/erc-1363/index.md?collection=content_ko"
+      ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/tokens/erc-223/index.md?collection=content_ko"
+      ),
+    "developers/docs/standards/tokens/erc-20/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/tokens/erc-20/index.md?collection=content_ko"
+      ),
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/tokens/erc-4626/index.md?collection=content_ko"
+      ),
+    "developers/docs/standards/tokens/erc-721/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/tokens/erc-721/index.md?collection=content_ko"
+      ),
+    "developers/docs/standards/tokens/erc-777/index.md": () =>
+      import(
+        "../public/content/translations/ko/developers/docs/standards/tokens/erc-777/index.md?collection=content_ko"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_ko"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_ko"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
+      () =>
+        import(
+          "../public/content/translations/ko/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_ko"
+        ),
+  }),
   content_mr: create.doc("content_mr", {}),
   content_pl: create.doc("content_pl", {}),
-  content_pt_br: create.doc("content_pt_br", {}),
-  content_ru: create.doc("content_ru", {}),
+  content_pt_br: create.doc("content_pt_br", {
+    "about/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/about/index.md?collection=content_pt_br"
+      ),
+    "ai-agents/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/ai-agents/index.md?collection=content_pt_br"
+      ),
+    "bridges/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/bridges/index.md?collection=content_pt_br"
+      ),
+    "dao/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/dao/index.md?collection=content_pt_br"
+      ),
+    "decentralized-identity/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/decentralized-identity/index.md?collection=content_pt_br"
+      ),
+    "defi/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/defi/index.md?collection=content_pt_br"
+      ),
+    "contributing/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/index.md?collection=content_pt_br"
+      ),
+    "desci/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/desci/index.md?collection=content_pt_br"
+      ),
+    "eips/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/eips/index.md?collection=content_pt_br"
+      ),
+    "energy-consumption/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/energy-consumption/index.md?collection=content_pt_br"
+      ),
+    "ethereum-forks/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/ethereum-forks/index.md?collection=content_pt_br"
+      ),
+    "foundation/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/foundation/index.md?collection=content_pt_br"
+      ),
+    "gaming/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/gaming/index.md?collection=content_pt_br"
+      ),
+    "glossary/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/glossary/index.md?collection=content_pt_br"
+      ),
+    "governance/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/governance/index.md?collection=content_pt_br"
+      ),
+    "guides/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/guides/index.md?collection=content_pt_br"
+      ),
+    "how-to-create-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/how-to-create-an-ethereum-account/index.md?collection=content_pt_br"
+      ),
+    "nft/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/nft/index.md?collection=content_pt_br"
+      ),
+    "payments/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/payments/index.md?collection=content_pt_br"
+      ),
+    "prediction-markets/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/prediction-markets/index.md?collection=content_pt_br"
+      ),
+    "privacy/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/privacy/index.md?collection=content_pt_br"
+      ),
+    "real-world-assets/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/real-world-assets/index.md?collection=content_pt_br"
+      ),
+    "refi/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/refi/index.md?collection=content_pt_br"
+      ),
+    "restaking/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/restaking/index.md?collection=content_pt_br"
+      ),
+    "security/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/security/index.md?collection=content_pt_br"
+      ),
+    "smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/smart-contracts/index.md?collection=content_pt_br"
+      ),
+    "social-networks/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/social-networks/index.md?collection=content_pt_br"
+      ),
+    "web3/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/web3/index.md?collection=content_pt_br"
+      ),
+    "what-are-apps/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/what-are-apps/index.md?collection=content_pt_br"
+      ),
+    "whitepaper/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/whitepaper/index.md?collection=content_pt_br"
+      ),
+    "wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/wrapped-eth/index.md?collection=content_pt_br"
+      ),
+    "zero-knowledge-proofs/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/zero-knowledge-proofs/index.md?collection=content_pt_br"
+      ),
+    "community/code-of-conduct/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/code-of-conduct/index.md?collection=content_pt_br"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/get-involved/index.md?collection=content_pt_br"
+      ),
+    "community/language-resources/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/language-resources/index.md?collection=content_pt_br"
+      ),
+    "community/online/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/online/index.md?collection=content_pt_br"
+      ),
+    "community/grants/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/grants/index.md?collection=content_pt_br"
+      ),
+    "community/research/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/research/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-desci-projects/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-desci-projects/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-developer-tools/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-developer-tools/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-exchanges/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-exchanges/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-glossary-terms/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-glossary-terms/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-products/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-products/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-layer-2s/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-layer-2s/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-resources/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-resources/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-staking-products/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-staking-products/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-videos/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-videos/index.md?collection=content_pt_br"
+      ),
+    "contributing/adding-wallets/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/adding-wallets/index.md?collection=content_pt_br"
+      ),
+    "contributing/content-resources/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/content-resources/index.md?collection=content_pt_br"
+      ),
+    "contributing/design/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/design/index.md?collection=content_pt_br"
+      ),
+    "contributing/design-principles/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/design-principles/index.md?collection=content_pt_br"
+      ),
+    "contributing/quizzes/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/quizzes/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/index.md?collection=content_pt_br"
+      ),
+    "eth/supply/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/eth/supply/index.md?collection=content_pt_br"
+      ),
+    "guides/how-to-create-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/guides/how-to-create-an-ethereum-account/index.md?collection=content_pt_br"
+      ),
+    "guides/how-to-id-scam-tokens/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/guides/how-to-id-scam-tokens/index.md?collection=content_pt_br"
+      ),
+    "guides/how-to-register-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/guides/how-to-register-an-ethereum-account/index.md?collection=content_pt_br"
+      ),
+    "guides/how-to-revoke-token-access/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/guides/how-to-revoke-token-access/index.md?collection=content_pt_br"
+      ),
+    "guides/how-to-swap-tokens/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/guides/how-to-swap-tokens/index.md?collection=content_pt_br"
+      ),
+    "guides/how-to-use-a-bridge/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/guides/how-to-use-a-bridge/index.md?collection=content_pt_br"
+      ),
+    "guides/how-to-use-a-wallet/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/guides/how-to-use-a-wallet/index.md?collection=content_pt_br"
+      ),
+    "roadmap/account-abstraction/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/account-abstraction/index.md?collection=content_pt_br"
+      ),
+    "roadmap/beacon-chain/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/beacon-chain/index.md?collection=content_pt_br"
+      ),
+    "roadmap/danksharding/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/danksharding/index.md?collection=content_pt_br"
+      ),
+    "roadmap/dencun/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/dencun/index.md?collection=content_pt_br"
+      ),
+    "roadmap/fusaka/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/fusaka/index.md?collection=content_pt_br"
+      ),
+    "roadmap/future-proofing/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/future-proofing/index.md?collection=content_pt_br"
+      ),
+    "roadmap/glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/glamsterdam/index.md?collection=content_pt_br"
+      ),
+    "roadmap/merge/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/merge/index.md?collection=content_pt_br"
+      ),
+    "roadmap/pbs/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/pbs/index.md?collection=content_pt_br"
+      ),
+    "roadmap/pectra/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/pectra/index.md?collection=content_pt_br"
+      ),
+    "roadmap/scaling/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/scaling/index.md?collection=content_pt_br"
+      ),
+    "roadmap/secret-leader-election/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/secret-leader-election/index.md?collection=content_pt_br"
+      ),
+    "roadmap/security/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/security/index.md?collection=content_pt_br"
+      ),
+    "roadmap/single-slot-finality/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/single-slot-finality/index.md?collection=content_pt_br"
+      ),
+    "roadmap/statelessness/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/statelessness/index.md?collection=content_pt_br"
+      ),
+    "roadmap/user-experience/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/user-experience/index.md?collection=content_pt_br"
+      ),
+    "roadmap/verkle-trees/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/verkle-trees/index.md?collection=content_pt_br"
+      ),
+    "roadmap/zkevm/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/zkevm/index.md?collection=content_pt_br"
+      ),
+    "staking/dvt/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/staking/dvt/index.md?collection=content_pt_br"
+      ),
+    "staking/pools/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/staking/pools/index.md?collection=content_pt_br"
+      ),
+    "staking/solo/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/staking/solo/index.md?collection=content_pt_br"
+      ),
+    "staking/saas/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/staking/saas/index.md?collection=content_pt_br"
+      ),
+    "staking/withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/staking/withdrawals/index.md?collection=content_pt_br"
+      ),
+    "videos/ai-agents-interview-luna/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ai-agents-interview-luna/index.md?collection=content_pt_br"
+      ),
+    "videos/atoms-institutions-blockchains-josh-stark/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/atoms-institutions-blockchains-josh-stark/index.md?collection=content_pt_br"
+      ),
+    "videos/blobspace-101-dencun/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/blobspace-101-dencun/index.md?collection=content_pt_br"
+      ),
+    "videos/blockchain-101-visual-demo/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/blockchain-101-visual-demo/index.md?collection=content_pt_br"
+      ),
+    "videos/blockchain-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/blockchain-eth-build/index.md?collection=content_pt_br"
+      ),
+    "videos/crypto-apps-desocial-linda-xie/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/crypto-apps-desocial-linda-xie/index.md?collection=content_pt_br"
+      ),
+    "videos/crypto-security-passwords/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/crypto-security-passwords/index.md?collection=content_pt_br"
+      ),
+    "videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md?collection=content_pt_br"
+      ),
+    "videos/dao-build-next-great-city/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/dao-build-next-great-city/index.md?collection=content_pt_br"
+      ),
+    "videos/dao-hack-ethereum-classic/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/dao-hack-ethereum-classic/index.md?collection=content_pt_br"
+      ),
+    "videos/decentralized-identity-explained/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/decentralized-identity-explained/index.md?collection=content_pt_br"
+      ),
+    "videos/decentralized-social-media/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/decentralized-social-media/index.md?collection=content_pt_br"
+      ),
+    "videos/defi-future-of-finance/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/defi-future-of-finance/index.md?collection=content_pt_br"
+      ),
+    "videos/defi-history-inception-to-2021/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/defi-history-inception-to-2021/index.md?collection=content_pt_br"
+      ),
+    "videos/desci-movement-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/desci-movement-juan-benet/index.md?collection=content_pt_br"
+      ),
+    "videos/devcon-mumbai-coming-2026/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/devcon-mumbai-coming-2026/index.md?collection=content_pt_br"
+      ),
+    "videos/devconnect-argentina-2025-recap/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/devconnect-argentina-2025-recap/index.md?collection=content_pt_br"
+      ),
+    "videos/devconnect-buenos-aires-promo/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/devconnect-buenos-aires-promo/index.md?collection=content_pt_br"
+      ),
+    "videos/eigenlayer-permissionless-features/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/eigenlayer-permissionless-features/index.md?collection=content_pt_br"
+      ),
+    "videos/eip-4844-dencun-explained/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/eip-4844-dencun-explained/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereum-basics-intro/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereum-basics-intro/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereum-core-governance-explained/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereum-core-governance-explained/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereum-evolution-glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereum-evolution-glamsterdam/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereum-in-30-minutes-vitalik-buterin/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereum-in-30-minutes-vitalik-buterin/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereum-institutional-privacy-panel/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereum-institutional-privacy-panel/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereum-localism-global-protocols-local-power/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereum-staking-withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereum-staking-withdrawals/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereum-things-i-like-mariano-conti/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereum-things-i-like-mariano-conti/index.md?collection=content_pt_br"
+      ),
+    "videos/ethereums-quantum-plan-justin-drake/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_pt_br"
+      ),
+    "videos/fusaka-upgrade-explained/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/fusaka-upgrade-explained/index.md?collection=content_pt_br"
+      ),
+    "videos/hash-function-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/hash-function-eth-build/index.md?collection=content_pt_br"
+      ),
+    "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/how-to-be-cypherpunk-juan-benet/index.md?collection=content_pt_br"
+      ),
+    "videos/how-to-make-a-guerilla-l2/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/how-to-make-a-guerilla-l2/index.md?collection=content_pt_br"
+      ),
+    "videos/key-pair-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/key-pair-eth-build/index.md?collection=content_pt_br"
+      ),
+    "videos/layer-2-scaling-explained/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/layer-2-scaling-explained/index.md?collection=content_pt_br"
+      ),
+    "videos/learn-nfts-and-defi/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/learn-nfts-and-defi/index.md?collection=content_pt_br"
+      ),
+    "videos/next-10-years-of-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/next-10-years-of-ethereum/index.md?collection=content_pt_br"
+      ),
+    "videos/pectra-upgrade-overview/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/pectra-upgrade-overview/index.md?collection=content_pt_br"
+      ),
+    "videos/pectra-what-stakers-need-to-know/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/pectra-what-stakers-need-to-know/index.md?collection=content_pt_br"
+      ),
+    "videos/pos-reorgs-attack-defense/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/pos-reorgs-attack-defense/index.md?collection=content_pt_br"
+      ),
+    "videos/post-quantum-security-ethereum-roadmap/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/post-quantum-security-ethereum-roadmap/index.md?collection=content_pt_br"
+      ),
+    "videos/pow-vs-pos/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/pow-vs-pos/index.md?collection=content_pt_br"
+      ),
+    "videos/privacy-is-existential/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/privacy-is-existential/index.md?collection=content_pt_br"
+      ),
+    "videos/proof-of-authority-explained/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/proof-of-authority-explained/index.md?collection=content_pt_br"
+      ),
+    "videos/proof-of-work-explained/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/proof-of-work-explained/index.md?collection=content_pt_br"
+      ),
+    "videos/proposer-builder-separation/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/proposer-builder-separation/index.md?collection=content_pt_br"
+      ),
+    "videos/real-state-of-l2s-bartek-kiepuszewski/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/real-state-of-l2s-bartek-kiepuszewski/index.md?collection=content_pt_br"
+      ),
+    "videos/regenerative-finance-refi/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/regenerative-finance-refi/index.md?collection=content_pt_br"
+      ),
+    "videos/restaking-explained/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/restaking-explained/index.md?collection=content_pt_br"
+      ),
+    "videos/rollups-scaling-strategy/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/rollups-scaling-strategy/index.md?collection=content_pt_br"
+      ),
+    "videos/security-through-obscurity-microdots/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/security-through-obscurity-microdots/index.md?collection=content_pt_br"
+      ),
+    "videos/smart-contracts-code-is-law/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/smart-contracts-code-is-law/index.md?collection=content_pt_br"
+      ),
+    "videos/stani-kulechov-building-aave/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/stani-kulechov-building-aave/index.md?collection=content_pt_br"
+      ),
+    "videos/surveillance-silence-reclaiming-privacy/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/surveillance-silence-reclaiming-privacy/index.md?collection=content_pt_br"
+      ),
+    "videos/transactions-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/transactions-eth-build/index.md?collection=content_pt_br"
+      ),
+    "videos/understanding-consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/understanding-consensus-mechanisms/index.md?collection=content_pt_br"
+      ),
+    "videos/what-is-a-dapp/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/what-is-a-dapp/index.md?collection=content_pt_br"
+      ),
+    "videos/zero-knowledge-proofs-5-levels/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/videos/zero-knowledge-proofs-5-levels/index.md?collection=content_pt_br"
+      ),
+    "community/events/organizing/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/events/organizing/index.md?collection=content_pt_br"
+      ),
+    "community/support/faq/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/support/faq/index.md?collection=content_pt_br"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/support/misconceptions/index.md?collection=content_pt_br"
+      ),
+    "community/support/scams/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/community/support/scams/index.md?collection=content_pt_br"
+      ),
+    "contributing/design/adding-design-resources/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/design/adding-design-resources/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/faq/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/faq/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/how-to-translate/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/how-to-translate/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/mission-and-vision/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/mission-and-vision/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/resources/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/resources/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/playbook/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/playbook/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/translatathon/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/translatathon/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/translators-guide/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/translators-guide/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/accounts/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/accounts/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/blocks/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/blocks/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/bridges/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/bridges/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/dapps/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/dapps/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/data-availability/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/data-availability/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/data-and-analytics/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/data-and-analytics/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/data-structures-and-encoding/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/data-structures-and-encoding/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/design-and-ux/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/design-and-ux/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/development-networks/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/development-networks/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/ethereum-stack/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/ethereum-stack/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/evm/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/evm/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/frameworks/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/frameworks/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/gas/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/gas/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/ides/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/ides/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/intro-to-ether/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/intro-to-ether/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/intro-to-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/intro-to-ethereum/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/mev/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/mev/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/networking-layer/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/networking-layer/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/networks/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/networks/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/nodes-and-clients/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/nodes-and-clients/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/oracles/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/oracles/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/scaling/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/scaling/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/storage/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/storage/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/transactions/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/transactions/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/web2-vs-web3/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/web2-vs-web3/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/wrapped-eth/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/ai-trading-agent/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/all-you-can-cache/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/all-you-can-cache/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/app-plasma/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/app-plasma/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/eip-1271-smart-contract-signatures/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/eip-1271-smart-contract-signatures/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/erc-721-vyper-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/erc-721-vyper-annotated-code/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/erc20-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/erc20-annotated-code/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/erc20-with-safety-rails/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/erc20-with-safety-rails/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/gasless/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/gasless/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/guide-to-smart-contract-security-tools/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/guide-to-smart-contract-security-tools/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/hello-world-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/hello-world-smart-contract/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/hello-world-smart-contract-fullstack/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/how-to-mint-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/how-to-use-tellor-as-your-oracle/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/how-to-view-nft-in-metamask/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/how-to-view-nft-in-metamask/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/how-to-write-and-deploy-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/how-to-write-and-deploy-an-nft/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/interact-with-other-contracts-from-solidity/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/interact-with-other-contracts-from-solidity/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/ipfs-decentralized-ui/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/ipfs-decentralized-ui/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/logging-events-smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/logging-events-smart-contracts/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/nft-minter/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/nft-minter/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/reverse-engineering-a-contract/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/reverse-engineering-a-contract/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/run-node-raspberry-pi/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/run-node-raspberry-pi/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/scam-token-tricks/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/scam-token-tricks/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/secret-state/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/secret-state/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/secure-development-workflow/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/secure-development-workflow/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/send-token-ethersjs/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/send-token-ethersjs/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/server-components/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/server-components/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/short-abi/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/short-abi/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/smart-contract-security-guidelines/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/smart-contract-security-guidelines/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/stealth-addr/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/stealth-addr/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/token-integration-checklist/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/token-integration-checklist/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/understand-the-erc-20-token-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md?collection=content_pt_br"
+        ),
+    "developers/tutorials/uniswap-v2-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/uniswap-v2-annotated-code/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/using-websockets/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/using-websockets/index.md?collection=content_pt_br"
+      ),
+    "developers/tutorials/yellow-paper-evm/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/tutorials/yellow-paper-evm/index.md?collection=content_pt_br"
+      ),
+    "roadmap/fusaka/peerdas/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/fusaka/peerdas/index.md?collection=content_pt_br"
+      ),
+    "roadmap/future-proofing/quantum-resistance/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/future-proofing/quantum-resistance/index.md?collection=content_pt_br"
+      ),
+    "roadmap/merge/issuance/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/merge/issuance/index.md?collection=content_pt_br"
+      ),
+    "roadmap/pectra/7702/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/pectra/7702/index.md?collection=content_pt_br"
+      ),
+    "roadmap/pectra/maxeb/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/roadmap/pectra/maxeb/index.md?collection=content_pt_br"
+      ),
+    "contributing/translation-program/translatathon/details/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/contributing/translation-program/translatathon/details/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/apis/backend/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/apis/backend/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/apis/javascript/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/apis/javascript/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/poa/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/poa/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/apis/json-rpc/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/apis/json-rpc/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pow/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pow/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/data-and-analytics/block-explorers/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/evm/opcodes/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/evm/opcodes/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/design-and-ux/heuristics-for-web3/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/networking-layer/network-addresses/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/networking-layer/network-addresses/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/networking-layer/portal-network/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/networking-layer/portal-network/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/nodes-and-clients/archive-nodes/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/nodes-and-clients/light-clients/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/delphi/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/delphi/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/dot-net/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/dot-net/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/dart/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/dart/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/golang/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/golang/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/elixir/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/elixir/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/java/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/java/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/javascript/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/javascript/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/python/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/python/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/rust/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/rust/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/programming-languages/ruby/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/programming-languages/ruby/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/scaling/plasma/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/scaling/plasma/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/scaling/optimistic-rollups/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/scaling/sidechains/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/scaling/sidechains/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/scaling/state-channels/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/scaling/state-channels/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/scaling/validium/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/scaling/validium/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/scaling/zk-rollups/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/scaling/zk-rollups/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/anatomy/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/anatomy/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/compiling/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/compiling/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/composability/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/composability/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/deploying/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/deploying/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/formal-verification/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/formal-verification/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/languages/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/languages/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/libraries/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/libraries/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/naming/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/naming/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/security/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/testing/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/testing/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/upgrading/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/upgrading/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/smart-contracts/verifying/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/smart-contracts/verifying/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/tokens/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/tokens/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/block-proposal/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/tokens/erc-1155/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/tokens/erc-1155/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/tokens/erc-1363/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/tokens/erc-1363/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/tokens/erc-20/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/tokens/erc-20/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/tokens/erc-4626/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/tokens/erc-721/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/tokens/erc-721/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/tokens/erc-223/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/standards/tokens/erc-777/index.md": () =>
+      import(
+        "../public/content/translations/pt-br/developers/docs/standards/tokens/erc-777/index.md?collection=content_pt_br"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_pt_br"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
+      () =>
+        import(
+          "../public/content/translations/pt-br/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_pt_br"
+        ),
+  }),
+  content_ru: create.doc("content_ru", {
+    "about/index.md": () =>
+      import(
+        "../public/content/translations/ru/about/index.md?collection=content_ru"
+      ),
+    "ai-agents/index.md": () =>
+      import(
+        "../public/content/translations/ru/ai-agents/index.md?collection=content_ru"
+      ),
+    "bridges/index.md": () =>
+      import(
+        "../public/content/translations/ru/bridges/index.md?collection=content_ru"
+      ),
+    "contributing/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/index.md?collection=content_ru"
+      ),
+    "dao/index.md": () =>
+      import(
+        "../public/content/translations/ru/dao/index.md?collection=content_ru"
+      ),
+    "decentralized-identity/index.md": () =>
+      import(
+        "../public/content/translations/ru/decentralized-identity/index.md?collection=content_ru"
+      ),
+    "defi/index.md": () =>
+      import(
+        "../public/content/translations/ru/defi/index.md?collection=content_ru"
+      ),
+    "desci/index.md": () =>
+      import(
+        "../public/content/translations/ru/desci/index.md?collection=content_ru"
+      ),
+    "eips/index.md": () =>
+      import(
+        "../public/content/translations/ru/eips/index.md?collection=content_ru"
+      ),
+    "energy-consumption/index.md": () =>
+      import(
+        "../public/content/translations/ru/energy-consumption/index.md?collection=content_ru"
+      ),
+    "ethereum-forks/index.md": () =>
+      import(
+        "../public/content/translations/ru/ethereum-forks/index.md?collection=content_ru"
+      ),
+    "foundation/index.md": () =>
+      import(
+        "../public/content/translations/ru/foundation/index.md?collection=content_ru"
+      ),
+    "gaming/index.md": () =>
+      import(
+        "../public/content/translations/ru/gaming/index.md?collection=content_ru"
+      ),
+    "glossary/index.md": () =>
+      import(
+        "../public/content/translations/ru/glossary/index.md?collection=content_ru"
+      ),
+    "governance/index.md": () =>
+      import(
+        "../public/content/translations/ru/governance/index.md?collection=content_ru"
+      ),
+    "guides/index.md": () =>
+      import(
+        "../public/content/translations/ru/guides/index.md?collection=content_ru"
+      ),
+    "learn/index.md": () =>
+      import(
+        "../public/content/translations/ru/learn/index.md?collection=content_ru"
+      ),
+    "nft/index.md": () =>
+      import(
+        "../public/content/translations/ru/nft/index.md?collection=content_ru"
+      ),
+    "payments/index.md": () =>
+      import(
+        "../public/content/translations/ru/payments/index.md?collection=content_ru"
+      ),
+    "prediction-markets/index.md": () =>
+      import(
+        "../public/content/translations/ru/prediction-markets/index.md?collection=content_ru"
+      ),
+    "privacy/index.md": () =>
+      import(
+        "../public/content/translations/ru/privacy/index.md?collection=content_ru"
+      ),
+    "real-world-assets/index.md": () =>
+      import(
+        "../public/content/translations/ru/real-world-assets/index.md?collection=content_ru"
+      ),
+    "refi/index.md": () =>
+      import(
+        "../public/content/translations/ru/refi/index.md?collection=content_ru"
+      ),
+    "restaking/index.md": () =>
+      import(
+        "../public/content/translations/ru/restaking/index.md?collection=content_ru"
+      ),
+    "security/index.md": () =>
+      import(
+        "../public/content/translations/ru/security/index.md?collection=content_ru"
+      ),
+    "smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/ru/smart-contracts/index.md?collection=content_ru"
+      ),
+    "social-networks/index.md": () =>
+      import(
+        "../public/content/translations/ru/social-networks/index.md?collection=content_ru"
+      ),
+    "what-are-apps/index.md": () =>
+      import(
+        "../public/content/translations/ru/what-are-apps/index.md?collection=content_ru"
+      ),
+    "whitepaper/index.md": () =>
+      import(
+        "../public/content/translations/ru/whitepaper/index.md?collection=content_ru"
+      ),
+    "wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/ru/wrapped-eth/index.md?collection=content_ru"
+      ),
+    "web3/index.md": () =>
+      import(
+        "../public/content/translations/ru/web3/index.md?collection=content_ru"
+      ),
+    "zero-knowledge-proofs/index.md": () =>
+      import(
+        "../public/content/translations/ru/zero-knowledge-proofs/index.md?collection=content_ru"
+      ),
+    "community/code-of-conduct/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/code-of-conduct/index.md?collection=content_ru"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/get-involved/index.md?collection=content_ru"
+      ),
+    "community/grants/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/grants/index.md?collection=content_ru"
+      ),
+    "community/language-resources/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/language-resources/index.md?collection=content_ru"
+      ),
+    "community/online/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/online/index.md?collection=content_ru"
+      ),
+    "community/research/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/research/index.md?collection=content_ru"
+      ),
+    "contributing/adding-desci-projects/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-desci-projects/index.md?collection=content_ru"
+      ),
+    "contributing/adding-developer-tools/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-developer-tools/index.md?collection=content_ru"
+      ),
+    "contributing/adding-exchanges/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-exchanges/index.md?collection=content_ru"
+      ),
+    "contributing/adding-glossary-terms/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-glossary-terms/index.md?collection=content_ru"
+      ),
+    "contributing/adding-layer-2s/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-layer-2s/index.md?collection=content_ru"
+      ),
+    "contributing/adding-products/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-products/index.md?collection=content_ru"
+      ),
+    "contributing/adding-resources/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-resources/index.md?collection=content_ru"
+      ),
+    "contributing/adding-staking-products/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-staking-products/index.md?collection=content_ru"
+      ),
+    "contributing/adding-videos/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-videos/index.md?collection=content_ru"
+      ),
+    "contributing/adding-wallets/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/adding-wallets/index.md?collection=content_ru"
+      ),
+    "contributing/content-resources/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/content-resources/index.md?collection=content_ru"
+      ),
+    "contributing/design/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/design/index.md?collection=content_ru"
+      ),
+    "contributing/design-principles/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/design-principles/index.md?collection=content_ru"
+      ),
+    "contributing/quizzes/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/quizzes/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/index.md?collection=content_ru"
+      ),
+    "developers/docs/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/index.md?collection=content_ru"
+      ),
+    "eth/supply/index.md": () =>
+      import(
+        "../public/content/translations/ru/eth/supply/index.md?collection=content_ru"
+      ),
+    "guides/how-to-create-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/ru/guides/how-to-create-an-ethereum-account/index.md?collection=content_ru"
+      ),
+    "guides/how-to-revoke-token-access/index.md": () =>
+      import(
+        "../public/content/translations/ru/guides/how-to-revoke-token-access/index.md?collection=content_ru"
+      ),
+    "guides/how-to-swap-tokens/index.md": () =>
+      import(
+        "../public/content/translations/ru/guides/how-to-swap-tokens/index.md?collection=content_ru"
+      ),
+    "guides/how-to-use-a-bridge/index.md": () =>
+      import(
+        "../public/content/translations/ru/guides/how-to-use-a-bridge/index.md?collection=content_ru"
+      ),
+    "guides/how-to-use-a-wallet/index.md": () =>
+      import(
+        "../public/content/translations/ru/guides/how-to-use-a-wallet/index.md?collection=content_ru"
+      ),
+    "guides/how-to-id-scam-tokens/index.md": () =>
+      import(
+        "../public/content/translations/ru/guides/how-to-id-scam-tokens/index.md?collection=content_ru"
+      ),
+    "roadmap/account-abstraction/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/account-abstraction/index.md?collection=content_ru"
+      ),
+    "roadmap/danksharding/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/danksharding/index.md?collection=content_ru"
+      ),
+    "roadmap/beacon-chain/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/beacon-chain/index.md?collection=content_ru"
+      ),
+    "roadmap/dencun/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/dencun/index.md?collection=content_ru"
+      ),
+    "roadmap/fusaka/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/fusaka/index.md?collection=content_ru"
+      ),
+    "roadmap/future-proofing/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/future-proofing/index.md?collection=content_ru"
+      ),
+    "roadmap/glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/glamsterdam/index.md?collection=content_ru"
+      ),
+    "roadmap/merge/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/merge/index.md?collection=content_ru"
+      ),
+    "roadmap/pbs/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/pbs/index.md?collection=content_ru"
+      ),
+    "roadmap/pectra/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/pectra/index.md?collection=content_ru"
+      ),
+    "roadmap/scaling/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/scaling/index.md?collection=content_ru"
+      ),
+    "roadmap/secret-leader-election/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/secret-leader-election/index.md?collection=content_ru"
+      ),
+    "roadmap/security/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/security/index.md?collection=content_ru"
+      ),
+    "roadmap/single-slot-finality/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/single-slot-finality/index.md?collection=content_ru"
+      ),
+    "roadmap/statelessness/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/statelessness/index.md?collection=content_ru"
+      ),
+    "roadmap/user-experience/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/user-experience/index.md?collection=content_ru"
+      ),
+    "roadmap/verkle-trees/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/verkle-trees/index.md?collection=content_ru"
+      ),
+    "roadmap/zkevm/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/zkevm/index.md?collection=content_ru"
+      ),
+    "staking/dvt/index.md": () =>
+      import(
+        "../public/content/translations/ru/staking/dvt/index.md?collection=content_ru"
+      ),
+    "staking/pools/index.md": () =>
+      import(
+        "../public/content/translations/ru/staking/pools/index.md?collection=content_ru"
+      ),
+    "staking/saas/index.md": () =>
+      import(
+        "../public/content/translations/ru/staking/saas/index.md?collection=content_ru"
+      ),
+    "staking/solo/index.md": () =>
+      import(
+        "../public/content/translations/ru/staking/solo/index.md?collection=content_ru"
+      ),
+    "staking/withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/ru/staking/withdrawals/index.md?collection=content_ru"
+      ),
+    "videos/ai-agents-interview-luna/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ai-agents-interview-luna/index.md?collection=content_ru"
+      ),
+    "videos/atoms-institutions-blockchains-josh-stark/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/atoms-institutions-blockchains-josh-stark/index.md?collection=content_ru"
+      ),
+    "videos/blobspace-101-dencun/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/blobspace-101-dencun/index.md?collection=content_ru"
+      ),
+    "videos/blockchain-101-visual-demo/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/blockchain-101-visual-demo/index.md?collection=content_ru"
+      ),
+    "videos/blockchain-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/blockchain-eth-build/index.md?collection=content_ru"
+      ),
+    "videos/crypto-apps-desocial-linda-xie/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/crypto-apps-desocial-linda-xie/index.md?collection=content_ru"
+      ),
+    "videos/crypto-security-passwords/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/crypto-security-passwords/index.md?collection=content_ru"
+      ),
+    "videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md?collection=content_ru"
+      ),
+    "videos/dao-build-next-great-city/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/dao-build-next-great-city/index.md?collection=content_ru"
+      ),
+    "videos/dao-hack-ethereum-classic/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/dao-hack-ethereum-classic/index.md?collection=content_ru"
+      ),
+    "videos/decentralized-identity-explained/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/decentralized-identity-explained/index.md?collection=content_ru"
+      ),
+    "videos/decentralized-social-media/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/decentralized-social-media/index.md?collection=content_ru"
+      ),
+    "videos/defi-future-of-finance/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/defi-future-of-finance/index.md?collection=content_ru"
+      ),
+    "videos/defi-history-inception-to-2021/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/defi-history-inception-to-2021/index.md?collection=content_ru"
+      ),
+    "videos/desci-movement-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/desci-movement-juan-benet/index.md?collection=content_ru"
+      ),
+    "videos/devcon-mumbai-coming-2026/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/devcon-mumbai-coming-2026/index.md?collection=content_ru"
+      ),
+    "videos/devconnect-argentina-2025-recap/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/devconnect-argentina-2025-recap/index.md?collection=content_ru"
+      ),
+    "videos/devconnect-buenos-aires-promo/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/devconnect-buenos-aires-promo/index.md?collection=content_ru"
+      ),
+    "videos/eigenlayer-permissionless-features/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/eigenlayer-permissionless-features/index.md?collection=content_ru"
+      ),
+    "videos/eip-4844-dencun-explained/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/eip-4844-dencun-explained/index.md?collection=content_ru"
+      ),
+    "videos/ethereum-basics-intro/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereum-basics-intro/index.md?collection=content_ru"
+      ),
+    "videos/ethereum-core-governance-explained/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereum-core-governance-explained/index.md?collection=content_ru"
+      ),
+    "videos/ethereum-evolution-glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereum-evolution-glamsterdam/index.md?collection=content_ru"
+      ),
+    "videos/ethereum-in-30-minutes-vitalik-buterin/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereum-in-30-minutes-vitalik-buterin/index.md?collection=content_ru"
+      ),
+    "videos/ethereum-institutional-privacy-panel/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereum-institutional-privacy-panel/index.md?collection=content_ru"
+      ),
+    "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereum-localism-global-protocols-local-power/index.md?collection=content_ru"
+      ),
+    "videos/ethereum-staking-withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereum-staking-withdrawals/index.md?collection=content_ru"
+      ),
+    "videos/ethereum-things-i-like-mariano-conti/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereum-things-i-like-mariano-conti/index.md?collection=content_ru"
+      ),
+    "videos/ethereums-quantum-plan-justin-drake/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_ru"
+      ),
+    "videos/fusaka-upgrade-explained/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/fusaka-upgrade-explained/index.md?collection=content_ru"
+      ),
+    "videos/hash-function-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/hash-function-eth-build/index.md?collection=content_ru"
+      ),
+    "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/how-to-be-cypherpunk-juan-benet/index.md?collection=content_ru"
+      ),
+    "videos/how-to-make-a-guerilla-l2/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/how-to-make-a-guerilla-l2/index.md?collection=content_ru"
+      ),
+    "videos/key-pair-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/key-pair-eth-build/index.md?collection=content_ru"
+      ),
+    "videos/layer-2-scaling-explained/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/layer-2-scaling-explained/index.md?collection=content_ru"
+      ),
+    "videos/learn-nfts-and-defi/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/learn-nfts-and-defi/index.md?collection=content_ru"
+      ),
+    "videos/next-10-years-of-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/next-10-years-of-ethereum/index.md?collection=content_ru"
+      ),
+    "videos/pectra-upgrade-overview/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/pectra-upgrade-overview/index.md?collection=content_ru"
+      ),
+    "videos/pectra-what-stakers-need-to-know/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/pectra-what-stakers-need-to-know/index.md?collection=content_ru"
+      ),
+    "videos/pos-reorgs-attack-defense/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/pos-reorgs-attack-defense/index.md?collection=content_ru"
+      ),
+    "videos/post-quantum-security-ethereum-roadmap/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/post-quantum-security-ethereum-roadmap/index.md?collection=content_ru"
+      ),
+    "videos/pow-vs-pos/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/pow-vs-pos/index.md?collection=content_ru"
+      ),
+    "videos/privacy-is-existential/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/privacy-is-existential/index.md?collection=content_ru"
+      ),
+    "videos/proof-of-authority-explained/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/proof-of-authority-explained/index.md?collection=content_ru"
+      ),
+    "videos/proof-of-work-explained/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/proof-of-work-explained/index.md?collection=content_ru"
+      ),
+    "videos/proposer-builder-separation/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/proposer-builder-separation/index.md?collection=content_ru"
+      ),
+    "videos/real-state-of-l2s-bartek-kiepuszewski/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/real-state-of-l2s-bartek-kiepuszewski/index.md?collection=content_ru"
+      ),
+    "videos/regenerative-finance-refi/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/regenerative-finance-refi/index.md?collection=content_ru"
+      ),
+    "videos/restaking-explained/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/restaking-explained/index.md?collection=content_ru"
+      ),
+    "videos/rollups-scaling-strategy/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/rollups-scaling-strategy/index.md?collection=content_ru"
+      ),
+    "videos/security-through-obscurity-microdots/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/security-through-obscurity-microdots/index.md?collection=content_ru"
+      ),
+    "videos/smart-contracts-code-is-law/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/smart-contracts-code-is-law/index.md?collection=content_ru"
+      ),
+    "videos/stani-kulechov-building-aave/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/stani-kulechov-building-aave/index.md?collection=content_ru"
+      ),
+    "videos/surveillance-silence-reclaiming-privacy/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/surveillance-silence-reclaiming-privacy/index.md?collection=content_ru"
+      ),
+    "videos/transactions-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/transactions-eth-build/index.md?collection=content_ru"
+      ),
+    "videos/understanding-consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/understanding-consensus-mechanisms/index.md?collection=content_ru"
+      ),
+    "videos/what-is-a-dapp/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/what-is-a-dapp/index.md?collection=content_ru"
+      ),
+    "videos/zero-knowledge-proofs-5-levels/index.md": () =>
+      import(
+        "../public/content/translations/ru/videos/zero-knowledge-proofs-5-levels/index.md?collection=content_ru"
+      ),
+    "community/events/organizing/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/events/organizing/index.md?collection=content_ru"
+      ),
+    "community/support/faq/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/support/faq/index.md?collection=content_ru"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/support/misconceptions/index.md?collection=content_ru"
+      ),
+    "community/support/scams/index.md": () =>
+      import(
+        "../public/content/translations/ru/community/support/scams/index.md?collection=content_ru"
+      ),
+    "contributing/design/adding-design-resources/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/design/adding-design-resources/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/faq/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/faq/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/how-to-translate/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/how-to-translate/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/mission-and-vision/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/mission-and-vision/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/resources/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/resources/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/translatathon/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/translatathon/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/playbook/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/playbook/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/translators-guide/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/translators-guide/index.md?collection=content_ru"
+      ),
+    "developers/docs/accounts/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/accounts/index.md?collection=content_ru"
+      ),
+    "developers/docs/blocks/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/blocks/index.md?collection=content_ru"
+      ),
+    "developers/docs/bridges/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/bridges/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/index.md?collection=content_ru"
+      ),
+    "developers/docs/dapps/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/dapps/index.md?collection=content_ru"
+      ),
+    "developers/docs/data-and-analytics/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/data-and-analytics/index.md?collection=content_ru"
+      ),
+    "developers/docs/data-availability/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/data-availability/index.md?collection=content_ru"
+      ),
+    "developers/docs/data-structures-and-encoding/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/data-structures-and-encoding/index.md?collection=content_ru"
+      ),
+    "developers/docs/design-and-ux/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/design-and-ux/index.md?collection=content_ru"
+      ),
+    "developers/docs/development-networks/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/development-networks/index.md?collection=content_ru"
+      ),
+    "developers/docs/ethereum-stack/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/ethereum-stack/index.md?collection=content_ru"
+      ),
+    "developers/docs/evm/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/evm/index.md?collection=content_ru"
+      ),
+    "developers/docs/frameworks/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/frameworks/index.md?collection=content_ru"
+      ),
+    "developers/docs/gas/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/gas/index.md?collection=content_ru"
+      ),
+    "developers/docs/ides/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/ides/index.md?collection=content_ru"
+      ),
+    "developers/docs/intro-to-ether/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/intro-to-ether/index.md?collection=content_ru"
+      ),
+    "developers/docs/intro-to-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/intro-to-ethereum/index.md?collection=content_ru"
+      ),
+    "developers/docs/mev/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/mev/index.md?collection=content_ru"
+      ),
+    "developers/docs/networking-layer/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/networking-layer/index.md?collection=content_ru"
+      ),
+    "developers/docs/networks/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/networks/index.md?collection=content_ru"
+      ),
+    "developers/docs/nodes-and-clients/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/nodes-and-clients/index.md?collection=content_ru"
+      ),
+    "developers/docs/oracles/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/oracles/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/index.md?collection=content_ru"
+      ),
+    "developers/docs/scaling/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/scaling/index.md?collection=content_ru"
+      ),
+    "developers/docs/storage/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/storage/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/index.md?collection=content_ru"
+      ),
+    "developers/docs/transactions/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/transactions/index.md?collection=content_ru"
+      ),
+    "developers/docs/web2-vs-web3/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/web2-vs-web3/index.md?collection=content_ru"
+      ),
+    "developers/docs/wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/wrapped-eth/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/ai-trading-agent/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/all-you-can-cache/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/all-you-can-cache/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/app-plasma/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/app-plasma/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/eip-1271-smart-contract-signatures/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/eip-1271-smart-contract-signatures/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/erc-721-vyper-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/erc-721-vyper-annotated-code/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/erc20-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/erc20-annotated-code/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/erc20-with-safety-rails/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/erc20-with-safety-rails/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/gasless/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/gasless/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/guide-to-smart-contract-security-tools/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/guide-to-smart-contract-security-tools/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/hello-world-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/hello-world-smart-contract/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/hello-world-smart-contract-fullstack/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/how-to-mint-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/how-to-use-tellor-as-your-oracle/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/how-to-view-nft-in-metamask/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/how-to-view-nft-in-metamask/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/how-to-write-and-deploy-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/how-to-write-and-deploy-an-nft/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/interact-with-other-contracts-from-solidity/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/interact-with-other-contracts-from-solidity/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/ipfs-decentralized-ui/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/ipfs-decentralized-ui/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/logging-events-smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/logging-events-smart-contracts/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/reverse-engineering-a-contract/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/reverse-engineering-a-contract/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/nft-minter/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/nft-minter/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/run-node-raspberry-pi/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/run-node-raspberry-pi/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/scam-token-tricks/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/scam-token-tricks/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/secret-state/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/secret-state/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/secure-development-workflow/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/secure-development-workflow/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/send-token-ethersjs/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/send-token-ethersjs/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/server-components/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/server-components/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/short-abi/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/short-abi/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/smart-contract-security-guidelines/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/smart-contract-security-guidelines/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/stealth-addr/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/stealth-addr/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/token-integration-checklist/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/token-integration-checklist/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/understand-the-erc-20-token-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/uniswap-v2-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/uniswap-v2-annotated-code/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/using-websockets/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/using-websockets/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md?collection=content_ru"
+        ),
+    "developers/tutorials/waffle-test-simple-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/waffle-test-simple-smart-contract/index.md?collection=content_ru"
+      ),
+    "developers/tutorials/yellow-paper-evm/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/tutorials/yellow-paper-evm/index.md?collection=content_ru"
+      ),
+    "roadmap/fusaka/peerdas/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/fusaka/peerdas/index.md?collection=content_ru"
+      ),
+    "roadmap/future-proofing/quantum-resistance/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/future-proofing/quantum-resistance/index.md?collection=content_ru"
+      ),
+    "roadmap/merge/issuance/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/merge/issuance/index.md?collection=content_ru"
+      ),
+    "roadmap/pectra/7702/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/pectra/7702/index.md?collection=content_ru"
+      ),
+    "roadmap/pectra/maxeb/index.md": () =>
+      import(
+        "../public/content/translations/ru/roadmap/pectra/maxeb/index.md?collection=content_ru"
+      ),
+    "contributing/translation-program/translatathon/details/index.md": () =>
+      import(
+        "../public/content/translations/ru/contributing/translation-program/translatathon/details/index.md?collection=content_ru"
+      ),
+    "developers/docs/apis/backend/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/apis/backend/index.md?collection=content_ru"
+      ),
+    "developers/docs/apis/javascript/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/apis/javascript/index.md?collection=content_ru"
+      ),
+    "developers/docs/apis/json-rpc/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/apis/json-rpc/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/poa/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/poa/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pow/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pow/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pos/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/index.md?collection=content_ru"
+      ),
+    "developers/docs/data-and-analytics/block-explorers/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_ru"
+      ),
+    "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_ru"
+        ),
+    "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_ru"
+        ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_ru"
+      ),
+    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_ru"
+      ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_ru"
+        ),
+    "developers/docs/design-and-ux/heuristics-for-web3/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_ru"
+      ),
+    "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_ru"
+      ),
+    "developers/docs/evm/opcodes/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/evm/opcodes/index.md?collection=content_ru"
+      ),
+    "developers/docs/networking-layer/portal-network/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/networking-layer/portal-network/index.md?collection=content_ru"
+      ),
+    "developers/docs/networking-layer/network-addresses/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/networking-layer/network-addresses/index.md?collection=content_ru"
+      ),
+    "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/nodes-and-clients/archive-nodes/index.md?collection=content_ru"
+      ),
+    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_ru"
+      ),
+    "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_ru"
+      ),
+    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_ru"
+      ),
+    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_ru"
+      ),
+    "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_ru"
+      ),
+    "developers/docs/nodes-and-clients/light-clients/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/dart/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/dart/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/delphi/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/delphi/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/elixir/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/elixir/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/dot-net/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/dot-net/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/golang/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/golang/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/javascript/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/javascript/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/java/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/java/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/python/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/python/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/ruby/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/ruby/index.md?collection=content_ru"
+      ),
+    "developers/docs/programming-languages/rust/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/programming-languages/rust/index.md?collection=content_ru"
+      ),
+    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/scaling/optimistic-rollups/index.md?collection=content_ru"
+      ),
+    "developers/docs/scaling/plasma/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/scaling/plasma/index.md?collection=content_ru"
+      ),
+    "developers/docs/scaling/sidechains/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/scaling/sidechains/index.md?collection=content_ru"
+      ),
+    "developers/docs/scaling/state-channels/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/scaling/state-channels/index.md?collection=content_ru"
+      ),
+    "developers/docs/scaling/zk-rollups/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/scaling/zk-rollups/index.md?collection=content_ru"
+      ),
+    "developers/docs/scaling/validium/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/scaling/validium/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/tokens/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/tokens/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/anatomy/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/anatomy/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/compiling/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/compiling/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/composability/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/composability/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/formal-verification/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/formal-verification/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/languages/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/languages/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/deploying/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/deploying/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/libraries/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/libraries/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/naming/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/naming/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/security/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/upgrading/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/upgrading/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/verifying/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/verifying/index.md?collection=content_ru"
+      ),
+    "developers/docs/smart-contracts/testing/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/smart-contracts/testing/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_ru"
+        ),
+    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pos/block-proposal/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_ru"
+        ),
+    "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_ru"
+        ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/tokens/erc-1155/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/tokens/erc-1155/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/tokens/erc-20/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/tokens/erc-20/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/tokens/erc-223/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/tokens/erc-1363/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/tokens/erc-1363/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/tokens/erc-4626/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/tokens/erc-721/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/tokens/erc-721/index.md?collection=content_ru"
+      ),
+    "developers/docs/standards/tokens/erc-777/index.md": () =>
+      import(
+        "../public/content/translations/ru/developers/docs/standards/tokens/erc-777/index.md?collection=content_ru"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_ru"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_ru"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
+      () =>
+        import(
+          "../public/content/translations/ru/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_ru"
+        ),
+  }),
   content_sw: create.doc("content_sw", {}),
   content_ta: create.doc("content_ta", {}),
   content_te: create.doc("content_te", {}),
   content_tr: create.doc("content_tr", {}),
   content_uk: create.doc("content_uk", {}),
   content_ur: create.doc("content_ur", {}),
-  content_vi: create.doc("content_vi", {}),
+  content_vi: create.doc("content_vi", {
+    "about/index.md": () =>
+      import(
+        "../public/content/translations/vi/about/index.md?collection=content_vi"
+      ),
+    "ai-agents/index.md": () =>
+      import(
+        "../public/content/translations/vi/ai-agents/index.md?collection=content_vi"
+      ),
+    "bridges/index.md": () =>
+      import(
+        "../public/content/translations/vi/bridges/index.md?collection=content_vi"
+      ),
+    "contributing/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/index.md?collection=content_vi"
+      ),
+    "decentralized-identity/index.md": () =>
+      import(
+        "../public/content/translations/vi/decentralized-identity/index.md?collection=content_vi"
+      ),
+    "dao/index.md": () =>
+      import(
+        "../public/content/translations/vi/dao/index.md?collection=content_vi"
+      ),
+    "defi/index.md": () =>
+      import(
+        "../public/content/translations/vi/defi/index.md?collection=content_vi"
+      ),
+    "desci/index.md": () =>
+      import(
+        "../public/content/translations/vi/desci/index.md?collection=content_vi"
+      ),
+    "eips/index.md": () =>
+      import(
+        "../public/content/translations/vi/eips/index.md?collection=content_vi"
+      ),
+    "energy-consumption/index.md": () =>
+      import(
+        "../public/content/translations/vi/energy-consumption/index.md?collection=content_vi"
+      ),
+    "ethereum-forks/index.md": () =>
+      import(
+        "../public/content/translations/vi/ethereum-forks/index.md?collection=content_vi"
+      ),
+    "foundation/index.md": () =>
+      import(
+        "../public/content/translations/vi/foundation/index.md?collection=content_vi"
+      ),
+    "gaming/index.md": () =>
+      import(
+        "../public/content/translations/vi/gaming/index.md?collection=content_vi"
+      ),
+    "glossary/index.md": () =>
+      import(
+        "../public/content/translations/vi/glossary/index.md?collection=content_vi"
+      ),
+    "governance/index.md": () =>
+      import(
+        "../public/content/translations/vi/governance/index.md?collection=content_vi"
+      ),
+    "guides/index.md": () =>
+      import(
+        "../public/content/translations/vi/guides/index.md?collection=content_vi"
+      ),
+    "nft/index.md": () =>
+      import(
+        "../public/content/translations/vi/nft/index.md?collection=content_vi"
+      ),
+    "payments/index.md": () =>
+      import(
+        "../public/content/translations/vi/payments/index.md?collection=content_vi"
+      ),
+    "prediction-markets/index.md": () =>
+      import(
+        "../public/content/translations/vi/prediction-markets/index.md?collection=content_vi"
+      ),
+    "privacy/index.md": () =>
+      import(
+        "../public/content/translations/vi/privacy/index.md?collection=content_vi"
+      ),
+    "real-world-assets/index.md": () =>
+      import(
+        "../public/content/translations/vi/real-world-assets/index.md?collection=content_vi"
+      ),
+    "refi/index.md": () =>
+      import(
+        "../public/content/translations/vi/refi/index.md?collection=content_vi"
+      ),
+    "restaking/index.md": () =>
+      import(
+        "../public/content/translations/vi/restaking/index.md?collection=content_vi"
+      ),
+    "security/index.md": () =>
+      import(
+        "../public/content/translations/vi/security/index.md?collection=content_vi"
+      ),
+    "smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/vi/smart-contracts/index.md?collection=content_vi"
+      ),
+    "social-networks/index.md": () =>
+      import(
+        "../public/content/translations/vi/social-networks/index.md?collection=content_vi"
+      ),
+    "web3/index.md": () =>
+      import(
+        "../public/content/translations/vi/web3/index.md?collection=content_vi"
+      ),
+    "what-are-apps/index.md": () =>
+      import(
+        "../public/content/translations/vi/what-are-apps/index.md?collection=content_vi"
+      ),
+    "whitepaper/index.md": () =>
+      import(
+        "../public/content/translations/vi/whitepaper/index.md?collection=content_vi"
+      ),
+    "wrapped-eth/index.md": () =>
+      import(
+        "../public/content/translations/vi/wrapped-eth/index.md?collection=content_vi"
+      ),
+    "zero-knowledge-proofs/index.md": () =>
+      import(
+        "../public/content/translations/vi/zero-knowledge-proofs/index.md?collection=content_vi"
+      ),
+    "community/code-of-conduct/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/code-of-conduct/index.md?collection=content_vi"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/get-involved/index.md?collection=content_vi"
+      ),
+    "community/grants/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/grants/index.md?collection=content_vi"
+      ),
+    "community/language-resources/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/language-resources/index.md?collection=content_vi"
+      ),
+    "community/online/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/online/index.md?collection=content_vi"
+      ),
+    "community/research/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/research/index.md?collection=content_vi"
+      ),
+    "contributing/adding-desci-projects/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-desci-projects/index.md?collection=content_vi"
+      ),
+    "contributing/adding-developer-tools/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-developer-tools/index.md?collection=content_vi"
+      ),
+    "contributing/adding-exchanges/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-exchanges/index.md?collection=content_vi"
+      ),
+    "contributing/adding-glossary-terms/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-glossary-terms/index.md?collection=content_vi"
+      ),
+    "contributing/adding-layer-2s/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-layer-2s/index.md?collection=content_vi"
+      ),
+    "contributing/adding-products/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-products/index.md?collection=content_vi"
+      ),
+    "contributing/adding-resources/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-resources/index.md?collection=content_vi"
+      ),
+    "contributing/adding-staking-products/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-staking-products/index.md?collection=content_vi"
+      ),
+    "contributing/adding-videos/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-videos/index.md?collection=content_vi"
+      ),
+    "contributing/adding-wallets/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/adding-wallets/index.md?collection=content_vi"
+      ),
+    "contributing/content-resources/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/content-resources/index.md?collection=content_vi"
+      ),
+    "contributing/design/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/design/index.md?collection=content_vi"
+      ),
+    "contributing/design-principles/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/design-principles/index.md?collection=content_vi"
+      ),
+    "contributing/quizzes/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/quizzes/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/index.md?collection=content_vi"
+      ),
+    "developers/docs/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/index.md?collection=content_vi"
+      ),
+    "eth/supply/index.md": () =>
+      import(
+        "../public/content/translations/vi/eth/supply/index.md?collection=content_vi"
+      ),
+    "guides/how-to-create-an-ethereum-account/index.md": () =>
+      import(
+        "../public/content/translations/vi/guides/how-to-create-an-ethereum-account/index.md?collection=content_vi"
+      ),
+    "guides/how-to-id-scam-tokens/index.md": () =>
+      import(
+        "../public/content/translations/vi/guides/how-to-id-scam-tokens/index.md?collection=content_vi"
+      ),
+    "guides/how-to-revoke-token-access/index.md": () =>
+      import(
+        "../public/content/translations/vi/guides/how-to-revoke-token-access/index.md?collection=content_vi"
+      ),
+    "guides/how-to-swap-tokens/index.md": () =>
+      import(
+        "../public/content/translations/vi/guides/how-to-swap-tokens/index.md?collection=content_vi"
+      ),
+    "guides/how-to-use-a-bridge/index.md": () =>
+      import(
+        "../public/content/translations/vi/guides/how-to-use-a-bridge/index.md?collection=content_vi"
+      ),
+    "guides/how-to-use-a-wallet/index.md": () =>
+      import(
+        "../public/content/translations/vi/guides/how-to-use-a-wallet/index.md?collection=content_vi"
+      ),
+    "roadmap/account-abstraction/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/account-abstraction/index.md?collection=content_vi"
+      ),
+    "roadmap/beacon-chain/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/beacon-chain/index.md?collection=content_vi"
+      ),
+    "roadmap/danksharding/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/danksharding/index.md?collection=content_vi"
+      ),
+    "roadmap/dencun/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/dencun/index.md?collection=content_vi"
+      ),
+    "roadmap/fusaka/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/fusaka/index.md?collection=content_vi"
+      ),
+    "roadmap/future-proofing/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/future-proofing/index.md?collection=content_vi"
+      ),
+    "roadmap/glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/glamsterdam/index.md?collection=content_vi"
+      ),
+    "roadmap/merge/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/merge/index.md?collection=content_vi"
+      ),
+    "roadmap/pbs/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/pbs/index.md?collection=content_vi"
+      ),
+    "roadmap/pectra/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/pectra/index.md?collection=content_vi"
+      ),
+    "roadmap/scaling/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/scaling/index.md?collection=content_vi"
+      ),
+    "roadmap/secret-leader-election/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/secret-leader-election/index.md?collection=content_vi"
+      ),
+    "roadmap/security/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/security/index.md?collection=content_vi"
+      ),
+    "roadmap/single-slot-finality/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/single-slot-finality/index.md?collection=content_vi"
+      ),
+    "roadmap/statelessness/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/statelessness/index.md?collection=content_vi"
+      ),
+    "roadmap/user-experience/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/user-experience/index.md?collection=content_vi"
+      ),
+    "roadmap/verkle-trees/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/verkle-trees/index.md?collection=content_vi"
+      ),
+    "roadmap/zkevm/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/zkevm/index.md?collection=content_vi"
+      ),
+    "staking/dvt/index.md": () =>
+      import(
+        "../public/content/translations/vi/staking/dvt/index.md?collection=content_vi"
+      ),
+    "staking/pools/index.md": () =>
+      import(
+        "../public/content/translations/vi/staking/pools/index.md?collection=content_vi"
+      ),
+    "staking/saas/index.md": () =>
+      import(
+        "../public/content/translations/vi/staking/saas/index.md?collection=content_vi"
+      ),
+    "staking/solo/index.md": () =>
+      import(
+        "../public/content/translations/vi/staking/solo/index.md?collection=content_vi"
+      ),
+    "staking/withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/vi/staking/withdrawals/index.md?collection=content_vi"
+      ),
+    "videos/ai-agents-interview-luna/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ai-agents-interview-luna/index.md?collection=content_vi"
+      ),
+    "videos/atoms-institutions-blockchains-josh-stark/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/atoms-institutions-blockchains-josh-stark/index.md?collection=content_vi"
+      ),
+    "videos/blobspace-101-dencun/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/blobspace-101-dencun/index.md?collection=content_vi"
+      ),
+    "videos/blockchain-101-visual-demo/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/blockchain-101-visual-demo/index.md?collection=content_vi"
+      ),
+    "videos/blockchain-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/blockchain-eth-build/index.md?collection=content_vi"
+      ),
+    "videos/crypto-apps-desocial-linda-xie/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/crypto-apps-desocial-linda-xie/index.md?collection=content_vi"
+      ),
+    "videos/crypto-security-passwords/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/crypto-security-passwords/index.md?collection=content_vi"
+      ),
+    "videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md?collection=content_vi"
+      ),
+    "videos/dao-hack-ethereum-classic/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/dao-hack-ethereum-classic/index.md?collection=content_vi"
+      ),
+    "videos/dao-build-next-great-city/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/dao-build-next-great-city/index.md?collection=content_vi"
+      ),
+    "videos/decentralized-identity-explained/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/decentralized-identity-explained/index.md?collection=content_vi"
+      ),
+    "videos/decentralized-social-media/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/decentralized-social-media/index.md?collection=content_vi"
+      ),
+    "videos/defi-future-of-finance/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/defi-future-of-finance/index.md?collection=content_vi"
+      ),
+    "videos/defi-history-inception-to-2021/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/defi-history-inception-to-2021/index.md?collection=content_vi"
+      ),
+    "videos/desci-movement-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/desci-movement-juan-benet/index.md?collection=content_vi"
+      ),
+    "videos/devcon-mumbai-coming-2026/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/devcon-mumbai-coming-2026/index.md?collection=content_vi"
+      ),
+    "videos/devconnect-argentina-2025-recap/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/devconnect-argentina-2025-recap/index.md?collection=content_vi"
+      ),
+    "videos/devconnect-buenos-aires-promo/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/devconnect-buenos-aires-promo/index.md?collection=content_vi"
+      ),
+    "videos/eigenlayer-permissionless-features/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/eigenlayer-permissionless-features/index.md?collection=content_vi"
+      ),
+    "videos/eip-4844-dencun-explained/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/eip-4844-dencun-explained/index.md?collection=content_vi"
+      ),
+    "videos/ethereum-basics-intro/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereum-basics-intro/index.md?collection=content_vi"
+      ),
+    "videos/ethereum-core-governance-explained/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereum-core-governance-explained/index.md?collection=content_vi"
+      ),
+    "videos/ethereum-evolution-glamsterdam/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereum-evolution-glamsterdam/index.md?collection=content_vi"
+      ),
+    "videos/ethereum-in-30-minutes-vitalik-buterin/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereum-in-30-minutes-vitalik-buterin/index.md?collection=content_vi"
+      ),
+    "videos/ethereum-institutional-privacy-panel/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereum-institutional-privacy-panel/index.md?collection=content_vi"
+      ),
+    "videos/ethereum-localism-global-protocols-local-power/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereum-localism-global-protocols-local-power/index.md?collection=content_vi"
+      ),
+    "videos/ethereum-staking-withdrawals/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereum-staking-withdrawals/index.md?collection=content_vi"
+      ),
+    "videos/ethereum-things-i-like-mariano-conti/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereum-things-i-like-mariano-conti/index.md?collection=content_vi"
+      ),
+    "videos/ethereums-quantum-plan-justin-drake/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/ethereums-quantum-plan-justin-drake/index.md?collection=content_vi"
+      ),
+    "videos/fusaka-upgrade-explained/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/fusaka-upgrade-explained/index.md?collection=content_vi"
+      ),
+    "videos/hash-function-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/hash-function-eth-build/index.md?collection=content_vi"
+      ),
+    "videos/how-to-be-cypherpunk-juan-benet/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/how-to-be-cypherpunk-juan-benet/index.md?collection=content_vi"
+      ),
+    "videos/how-to-make-a-guerilla-l2/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/how-to-make-a-guerilla-l2/index.md?collection=content_vi"
+      ),
+    "videos/key-pair-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/key-pair-eth-build/index.md?collection=content_vi"
+      ),
+    "videos/layer-2-scaling-explained/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/layer-2-scaling-explained/index.md?collection=content_vi"
+      ),
+    "videos/learn-nfts-and-defi/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/learn-nfts-and-defi/index.md?collection=content_vi"
+      ),
+    "videos/next-10-years-of-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/next-10-years-of-ethereum/index.md?collection=content_vi"
+      ),
+    "videos/pectra-upgrade-overview/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/pectra-upgrade-overview/index.md?collection=content_vi"
+      ),
+    "videos/pectra-what-stakers-need-to-know/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/pectra-what-stakers-need-to-know/index.md?collection=content_vi"
+      ),
+    "videos/pos-reorgs-attack-defense/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/pos-reorgs-attack-defense/index.md?collection=content_vi"
+      ),
+    "videos/post-quantum-security-ethereum-roadmap/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/post-quantum-security-ethereum-roadmap/index.md?collection=content_vi"
+      ),
+    "videos/pow-vs-pos/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/pow-vs-pos/index.md?collection=content_vi"
+      ),
+    "videos/privacy-is-existential/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/privacy-is-existential/index.md?collection=content_vi"
+      ),
+    "videos/proof-of-authority-explained/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/proof-of-authority-explained/index.md?collection=content_vi"
+      ),
+    "videos/proof-of-work-explained/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/proof-of-work-explained/index.md?collection=content_vi"
+      ),
+    "videos/proposer-builder-separation/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/proposer-builder-separation/index.md?collection=content_vi"
+      ),
+    "videos/real-state-of-l2s-bartek-kiepuszewski/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/real-state-of-l2s-bartek-kiepuszewski/index.md?collection=content_vi"
+      ),
+    "videos/regenerative-finance-refi/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/regenerative-finance-refi/index.md?collection=content_vi"
+      ),
+    "videos/restaking-explained/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/restaking-explained/index.md?collection=content_vi"
+      ),
+    "videos/rollups-scaling-strategy/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/rollups-scaling-strategy/index.md?collection=content_vi"
+      ),
+    "videos/security-through-obscurity-microdots/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/security-through-obscurity-microdots/index.md?collection=content_vi"
+      ),
+    "videos/smart-contracts-code-is-law/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/smart-contracts-code-is-law/index.md?collection=content_vi"
+      ),
+    "videos/stani-kulechov-building-aave/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/stani-kulechov-building-aave/index.md?collection=content_vi"
+      ),
+    "videos/surveillance-silence-reclaiming-privacy/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/surveillance-silence-reclaiming-privacy/index.md?collection=content_vi"
+      ),
+    "videos/transactions-eth-build/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/transactions-eth-build/index.md?collection=content_vi"
+      ),
+    "videos/understanding-consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/understanding-consensus-mechanisms/index.md?collection=content_vi"
+      ),
+    "videos/what-is-a-dapp/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/what-is-a-dapp/index.md?collection=content_vi"
+      ),
+    "videos/zero-knowledge-proofs-5-levels/index.md": () =>
+      import(
+        "../public/content/translations/vi/videos/zero-knowledge-proofs-5-levels/index.md?collection=content_vi"
+      ),
+    "community/events/organizing/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/events/organizing/index.md?collection=content_vi"
+      ),
+    "community/support/faq/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/support/faq/index.md?collection=content_vi"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/support/misconceptions/index.md?collection=content_vi"
+      ),
+    "community/support/scams/index.md": () =>
+      import(
+        "../public/content/translations/vi/community/support/scams/index.md?collection=content_vi"
+      ),
+    "contributing/design/adding-design-resources/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/design/adding-design-resources/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/faq/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/faq/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/how-to-translate/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/how-to-translate/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/mission-and-vision/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/mission-and-vision/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/playbook/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/playbook/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/resources/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/resources/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/translatathon/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/translatathon/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/translators-guide/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/translators-guide/index.md?collection=content_vi"
+      ),
+    "developers/docs/accounts/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/accounts/index.md?collection=content_vi"
+      ),
+    "developers/docs/blocks/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/blocks/index.md?collection=content_vi"
+      ),
+    "developers/docs/bridges/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/bridges/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/index.md?collection=content_vi"
+      ),
+    "developers/docs/dapps/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/dapps/index.md?collection=content_vi"
+      ),
+    "developers/docs/data-and-analytics/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/data-and-analytics/index.md?collection=content_vi"
+      ),
+    "developers/docs/data-availability/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/data-availability/index.md?collection=content_vi"
+      ),
+    "developers/docs/data-structures-and-encoding/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/data-structures-and-encoding/index.md?collection=content_vi"
+      ),
+    "developers/docs/design-and-ux/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/design-and-ux/index.md?collection=content_vi"
+      ),
+    "developers/docs/development-networks/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/development-networks/index.md?collection=content_vi"
+      ),
+    "developers/docs/ethereum-stack/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/ethereum-stack/index.md?collection=content_vi"
+      ),
+    "developers/docs/evm/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/evm/index.md?collection=content_vi"
+      ),
+    "developers/docs/frameworks/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/frameworks/index.md?collection=content_vi"
+      ),
+    "developers/docs/gas/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/gas/index.md?collection=content_vi"
+      ),
+    "developers/docs/ides/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/ides/index.md?collection=content_vi"
+      ),
+    "developers/docs/intro-to-ether/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/intro-to-ether/index.md?collection=content_vi"
+      ),
+    "developers/docs/intro-to-ethereum/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/intro-to-ethereum/index.md?collection=content_vi"
+      ),
+    "developers/docs/mev/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/mev/index.md?collection=content_vi"
+      ),
+    "developers/docs/networking-layer/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/networking-layer/index.md?collection=content_vi"
+      ),
+    "developers/docs/networks/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/networks/index.md?collection=content_vi"
+      ),
+    "developers/docs/nodes-and-clients/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/nodes-and-clients/index.md?collection=content_vi"
+      ),
+    "developers/docs/oracles/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/oracles/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/index.md?collection=content_vi"
+      ),
+    "developers/docs/scaling/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/scaling/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/index.md?collection=content_vi"
+      ),
+    "developers/docs/standards/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/index.md?collection=content_vi"
+      ),
+    "developers/docs/storage/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/storage/index.md?collection=content_vi"
+      ),
+    "developers/docs/web2-vs-web3/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/web2-vs-web3/index.md?collection=content_vi"
+      ),
+    "developers/docs/transactions/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/transactions/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/all-you-can-cache/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/all-you-can-cache/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/ai-trading-agent/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/ai-trading-agent/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/app-plasma/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/app-plasma/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/calling-a-smart-contract-from-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/calling-a-smart-contract-from-javascript/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/eip-1271-smart-contract-signatures/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/eip-1271-smart-contract-signatures/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/erc-721-vyper-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/erc-721-vyper-annotated-code/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/erc20-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/erc20-annotated-code/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/erc20-with-safety-rails/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/erc20-with-safety-rails/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/gasless/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/gasless/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/guide-to-smart-contract-security-tools/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/guide-to-smart-contract-security-tools/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/hello-world-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/hello-world-smart-contract/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/hello-world-smart-contract-fullstack/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/hello-world-smart-contract-fullstack/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/how-to-implement-an-erc721-market/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/how-to-implement-an-erc721-market/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/how-to-mint-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/how-to-mint-an-nft/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/how-to-use-tellor-as-your-oracle/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/how-to-view-nft-in-metamask/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/how-to-view-nft-in-metamask/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/how-to-write-and-deploy-an-nft/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/how-to-write-and-deploy-an-nft/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/interact-with-other-contracts-from-solidity/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/interact-with-other-contracts-from-solidity/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/ipfs-decentralized-ui/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/ipfs-decentralized-ui/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/logging-events-smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/logging-events-smart-contracts/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/nft-minter/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/nft-minter/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/reverse-engineering-a-contract/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/reverse-engineering-a-contract/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/run-node-raspberry-pi/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/run-node-raspberry-pi/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/scam-token-tricks/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/scam-token-tricks/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/secret-state/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/secret-state/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/secure-development-workflow/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/secure-development-workflow/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/send-token-ethersjs/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/send-token-ethersjs/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/server-components/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/server-components/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/short-abi/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/short-abi/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/smart-contract-security-guidelines/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/smart-contract-security-guidelines/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/stealth-addr/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/stealth-addr/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/token-integration-checklist/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/token-integration-checklist/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/the-graph-fixing-web3-data-querying/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/the-graph-fixing-web3-data-querying/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/understand-the-erc-20-token-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/uniswap-v2-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/uniswap-v2-annotated-code/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/using-websockets/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/using-websockets/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md?collection=content_vi"
+        ),
+    "developers/tutorials/waffle-test-simple-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/waffle-test-simple-smart-contract/index.md?collection=content_vi"
+      ),
+    "developers/tutorials/yellow-paper-evm/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/tutorials/yellow-paper-evm/index.md?collection=content_vi"
+      ),
+    "roadmap/fusaka/peerdas/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/fusaka/peerdas/index.md?collection=content_vi"
+      ),
+    "roadmap/future-proofing/quantum-resistance/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/future-proofing/quantum-resistance/index.md?collection=content_vi"
+      ),
+    "roadmap/merge/issuance/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/merge/issuance/index.md?collection=content_vi"
+      ),
+    "roadmap/pectra/maxeb/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/pectra/maxeb/index.md?collection=content_vi"
+      ),
+    "roadmap/pectra/7702/index.md": () =>
+      import(
+        "../public/content/translations/vi/roadmap/pectra/7702/index.md?collection=content_vi"
+      ),
+    "contributing/translation-program/translatathon/details/index.md": () =>
+      import(
+        "../public/content/translations/vi/contributing/translation-program/translatathon/details/index.md?collection=content_vi"
+      ),
+    "developers/docs/apis/backend/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/apis/backend/index.md?collection=content_vi"
+      ),
+    "developers/docs/apis/javascript/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/apis/javascript/index.md?collection=content_vi"
+      ),
+    "developers/docs/apis/json-rpc/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/apis/json-rpc/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/poa/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/poa/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pow/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pow/index.md?collection=content_vi"
+      ),
+    "developers/docs/data-and-analytics/block-explorers/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/data-and-analytics/block-explorers/index.md?collection=content_vi"
+      ),
+    "developers/docs/data-availability/blockchain-data-storage-strategies/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_vi"
+        ),
+    "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_vi"
+        ),
+    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_vi"
+      ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_vi"
+        ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_vi"
+      ),
+    "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_vi"
+      ),
+    "developers/docs/design-and-ux/heuristics-for-web3/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_vi"
+      ),
+    "developers/docs/evm/opcodes/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/evm/opcodes/index.md?collection=content_vi"
+      ),
+    "developers/docs/networking-layer/portal-network/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/networking-layer/portal-network/index.md?collection=content_vi"
+      ),
+    "developers/docs/networking-layer/network-addresses/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/networking-layer/network-addresses/index.md?collection=content_vi"
+      ),
+    "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/nodes-and-clients/archive-nodes/index.md?collection=content_vi"
+      ),
+    "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_vi"
+      ),
+    "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_vi"
+      ),
+    "developers/docs/nodes-and-clients/light-clients/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/nodes-and-clients/light-clients/index.md?collection=content_vi"
+      ),
+    "developers/docs/nodes-and-clients/node-architecture/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/nodes-and-clients/node-architecture/index.md?collection=content_vi"
+      ),
+    "developers/docs/nodes-and-clients/run-a-node/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/nodes-and-clients/run-a-node/index.md?collection=content_vi"
+      ),
+    "developers/docs/nodes-and-clients/nodes-as-a-service/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/nodes-and-clients/nodes-as-a-service/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/dart/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/dart/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/delphi/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/delphi/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/dot-net/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/dot-net/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/elixir/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/elixir/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/golang/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/golang/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/java/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/java/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/javascript/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/javascript/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/ruby/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/ruby/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/rust/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/rust/index.md?collection=content_vi"
+      ),
+    "developers/docs/programming-languages/python/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/programming-languages/python/index.md?collection=content_vi"
+      ),
+    "developers/docs/scaling/optimistic-rollups/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/scaling/optimistic-rollups/index.md?collection=content_vi"
+      ),
+    "developers/docs/scaling/plasma/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/scaling/plasma/index.md?collection=content_vi"
+      ),
+    "developers/docs/scaling/state-channels/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/scaling/state-channels/index.md?collection=content_vi"
+      ),
+    "developers/docs/scaling/sidechains/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/scaling/sidechains/index.md?collection=content_vi"
+      ),
+    "developers/docs/scaling/validium/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/scaling/validium/index.md?collection=content_vi"
+      ),
+    "developers/docs/scaling/zk-rollups/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/scaling/zk-rollups/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/anatomy/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/anatomy/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/composability/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/composability/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/compiling/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/compiling/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/deploying/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/deploying/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/formal-verification/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/formal-verification/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/libraries/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/libraries/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/languages/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/languages/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/naming/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/naming/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/testing/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/testing/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/security/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/verifying/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/verifying/index.md?collection=content_vi"
+      ),
+    "developers/docs/smart-contracts/upgrading/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/smart-contracts/upgrading/index.md?collection=content_vi"
+      ),
+    "developers/docs/standards/tokens/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/tokens/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_vi"
+        ),
+    "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/block-proposal/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/gasper/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/gasper/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_vi"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md?collection=content_vi"
+        ),
+    "developers/docs/standards/tokens/erc-1155/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/tokens/erc-1155/index.md?collection=content_vi"
+      ),
+    "developers/docs/standards/tokens/erc-1363/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/tokens/erc-1363/index.md?collection=content_vi"
+      ),
+    "developers/docs/standards/tokens/erc-20/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/tokens/erc-20/index.md?collection=content_vi"
+      ),
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/tokens/erc-4626/index.md?collection=content_vi"
+      ),
+    "developers/docs/standards/tokens/erc-223/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/tokens/erc-223/index.md?collection=content_vi"
+      ),
+    "developers/docs/standards/tokens/erc-721/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/tokens/erc-721/index.md?collection=content_vi"
+      ),
+    "developers/docs/standards/tokens/erc-777/index.md": () =>
+      import(
+        "../public/content/translations/vi/developers/docs/standards/tokens/erc-777/index.md?collection=content_vi"
+      ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md?collection=content_vi"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md?collection=content_vi"
+        ),
+    "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md":
+      () =>
+        import(
+          "../public/content/translations/vi/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md?collection=content_vi"
+        ),
+  }),
   content_zh: create.doc("content_zh", {
     "about/index.md": () =>
       import(
         "../public/content/translations/zh/about/index.md?collection=content_zh"
+      ),
+    "account-abstraction/index.md": () =>
+      import(
+        "../public/content/translations/zh/account-abstraction/index.md?collection=content_zh"
       ),
     "ai-agents/index.md": () =>
       import(
@@ -6589,37 +14523,33 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/beacon-chain/index.md?collection=content_zh"
       ),
-    "account-abstraction/index.md": () =>
+    "bridges/index.md": () =>
       import(
-        "../public/content/translations/zh/account-abstraction/index.md?collection=content_zh"
-      ),
-    "danksharding/index.md": () =>
-      import(
-        "../public/content/translations/zh/danksharding/index.md?collection=content_zh"
+        "../public/content/translations/zh/bridges/index.md?collection=content_zh"
       ),
     "contributing/index.md": () =>
       import(
         "../public/content/translations/zh/contributing/index.md?collection=content_zh"
       ),
+    "danksharding/index.md": () =>
+      import(
+        "../public/content/translations/zh/danksharding/index.md?collection=content_zh"
+      ),
     "dao/index.md": () =>
       import(
         "../public/content/translations/zh/dao/index.md?collection=content_zh"
-      ),
-    "defi/index.md": () =>
-      import(
-        "../public/content/translations/zh/defi/index.md?collection=content_zh"
       ),
     "decentralized-identity/index.md": () =>
       import(
         "../public/content/translations/zh/decentralized-identity/index.md?collection=content_zh"
       ),
+    "defi/index.md": () =>
+      import(
+        "../public/content/translations/zh/defi/index.md?collection=content_zh"
+      ),
     "desci/index.md": () =>
       import(
         "../public/content/translations/zh/desci/index.md?collection=content_zh"
-      ),
-    "bridges/index.md": () =>
-      import(
-        "../public/content/translations/zh/bridges/index.md?collection=content_zh"
       ),
     "dvt/index.md": () =>
       import(
@@ -6637,17 +14567,13 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/ethereum-forks/index.md?collection=content_zh"
       ),
-    "future-proofing/index.md": () =>
-      import(
-        "../public/content/translations/zh/future-proofing/index.md?collection=content_zh"
-      ),
     "foundation/index.md": () =>
       import(
         "../public/content/translations/zh/foundation/index.md?collection=content_zh"
       ),
-    "governance/index.md": () =>
+    "future-proofing/index.md": () =>
       import(
-        "../public/content/translations/zh/governance/index.md?collection=content_zh"
+        "../public/content/translations/zh/future-proofing/index.md?collection=content_zh"
       ),
     "gaming/index.md": () =>
       import(
@@ -6657,21 +14583,25 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/glossary/index.md?collection=content_zh"
       ),
-    "how-to-create-an-ethereum-account/index.md": () =>
+    "governance/index.md": () =>
       import(
-        "../public/content/translations/zh/how-to-create-an-ethereum-account/index.md?collection=content_zh"
+        "../public/content/translations/zh/governance/index.md?collection=content_zh"
       ),
     "guides/index.md": () =>
       import(
         "../public/content/translations/zh/guides/index.md?collection=content_zh"
       ),
-    "payments/index.md": () =>
+    "how-to-create-an-ethereum-account/index.md": () =>
       import(
-        "../public/content/translations/zh/payments/index.md?collection=content_zh"
+        "../public/content/translations/zh/how-to-create-an-ethereum-account/index.md?collection=content_zh"
       ),
     "nft/index.md": () =>
       import(
         "../public/content/translations/zh/nft/index.md?collection=content_zh"
+      ),
+    "payments/index.md": () =>
+      import(
+        "../public/content/translations/zh/payments/index.md?collection=content_zh"
       ),
     "prediction-markets/index.md": () =>
       import(
@@ -6681,10 +14611,6 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/privacy/index.md?collection=content_zh"
       ),
-    "restaking/index.md": () =>
-      import(
-        "../public/content/translations/zh/restaking/index.md?collection=content_zh"
-      ),
     "real-world-assets/index.md": () =>
       import(
         "../public/content/translations/zh/real-world-assets/index.md?collection=content_zh"
@@ -6693,25 +14619,25 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/refi/index.md?collection=content_zh"
       ),
+    "restaking/index.md": () =>
+      import(
+        "../public/content/translations/zh/restaking/index.md?collection=content_zh"
+      ),
     "scaling/index.md": () =>
       import(
         "../public/content/translations/zh/scaling/index.md?collection=content_zh"
-      ),
-    "smart-contracts/index.md": () =>
-      import(
-        "../public/content/translations/zh/smart-contracts/index.md?collection=content_zh"
       ),
     "security/index.md": () =>
       import(
         "../public/content/translations/zh/security/index.md?collection=content_zh"
       ),
+    "smart-contracts/index.md": () =>
+      import(
+        "../public/content/translations/zh/smart-contracts/index.md?collection=content_zh"
+      ),
     "social-networks/index.md": () =>
       import(
         "../public/content/translations/zh/social-networks/index.md?collection=content_zh"
-      ),
-    "user-experience/index.md": () =>
-      import(
-        "../public/content/translations/zh/user-experience/index.md?collection=content_zh"
       ),
     "statelessness/index.md": () =>
       import(
@@ -6721,17 +14647,21 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/support/index.md?collection=content_zh"
       ),
-    "whitepaper/index.md": () =>
+    "user-experience/index.md": () =>
       import(
-        "../public/content/translations/zh/whitepaper/index.md?collection=content_zh"
+        "../public/content/translations/zh/user-experience/index.md?collection=content_zh"
+      ),
+    "web3/index.md": () =>
+      import(
+        "../public/content/translations/zh/web3/index.md?collection=content_zh"
       ),
     "what-are-apps/index.md": () =>
       import(
         "../public/content/translations/zh/what-are-apps/index.md?collection=content_zh"
       ),
-    "web3/index.md": () =>
+    "whitepaper/index.md": () =>
       import(
-        "../public/content/translations/zh/web3/index.md?collection=content_zh"
+        "../public/content/translations/zh/whitepaper/index.md?collection=content_zh"
       ),
     "wrapped-eth/index.md": () =>
       import(
@@ -6740,6 +14670,30 @@ const browserCollections = {
     "zero-knowledge-proofs/index.md": () =>
       import(
         "../public/content/translations/zh/zero-knowledge-proofs/index.md?collection=content_zh"
+      ),
+    "community/code-of-conduct/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/code-of-conduct/index.md?collection=content_zh"
+      ),
+    "community/get-involved/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/get-involved/index.md?collection=content_zh"
+      ),
+    "community/grants/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/grants/index.md?collection=content_zh"
+      ),
+    "community/language-resources/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/language-resources/index.md?collection=content_zh"
+      ),
+    "community/online/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/online/index.md?collection=content_zh"
+      ),
+    "community/research/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/research/index.md?collection=content_zh"
       ),
     "contributing/adding-desci-projects/index.md": () =>
       import(
@@ -6804,30 +14758,6 @@ const browserCollections = {
     "developers/docs/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/index.md?collection=content_zh"
-      ),
-    "community/get-involved/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/get-involved/index.md?collection=content_zh"
-      ),
-    "community/code-of-conduct/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/code-of-conduct/index.md?collection=content_zh"
-      ),
-    "community/grants/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/grants/index.md?collection=content_zh"
-      ),
-    "community/language-resources/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/language-resources/index.md?collection=content_zh"
-      ),
-    "community/online/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/online/index.md?collection=content_zh"
-      ),
-    "community/research/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/research/index.md?collection=content_zh"
       ),
     "eth/supply/index.md": () =>
       import(
@@ -6961,6 +14891,10 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/videos/atoms-institutions-blockchains-josh-stark/index.md?collection=content_zh"
       ),
+    "videos/blobspace-101-dencun/index.md": () =>
+      import(
+        "../public/content/translations/zh/videos/blobspace-101-dencun/index.md?collection=content_zh"
+      ),
     "videos/blockchain-101-visual-demo/index.md": () =>
       import(
         "../public/content/translations/zh/videos/blockchain-101-visual-demo/index.md?collection=content_zh"
@@ -6968,10 +14902,6 @@ const browserCollections = {
     "videos/blockchain-eth-build/index.md": () =>
       import(
         "../public/content/translations/zh/videos/blockchain-eth-build/index.md?collection=content_zh"
-      ),
-    "videos/blobspace-101-dencun/index.md": () =>
-      import(
-        "../public/content/translations/zh/videos/blobspace-101-dencun/index.md?collection=content_zh"
       ),
     "videos/crypto-apps-desocial-linda-xie/index.md": () =>
       import(
@@ -6985,13 +14915,13 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/videos/danny-ryan-leading-cryptos-biggest-upgrade/index.md?collection=content_zh"
       ),
-    "videos/dao-hack-ethereum-classic/index.md": () =>
-      import(
-        "../public/content/translations/zh/videos/dao-hack-ethereum-classic/index.md?collection=content_zh"
-      ),
     "videos/dao-build-next-great-city/index.md": () =>
       import(
         "../public/content/translations/zh/videos/dao-build-next-great-city/index.md?collection=content_zh"
+      ),
+    "videos/dao-hack-ethereum-classic/index.md": () =>
+      import(
+        "../public/content/translations/zh/videos/dao-hack-ethereum-classic/index.md?collection=content_zh"
       ),
     "videos/decentralized-identity-explained/index.md": () =>
       import(
@@ -7145,13 +15075,13 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/videos/regenerative-finance-refi/index.md?collection=content_zh"
       ),
-    "videos/rollups-scaling-strategy/index.md": () =>
-      import(
-        "../public/content/translations/zh/videos/rollups-scaling-strategy/index.md?collection=content_zh"
-      ),
     "videos/restaking-explained/index.md": () =>
       import(
         "../public/content/translations/zh/videos/restaking-explained/index.md?collection=content_zh"
+      ),
+    "videos/rollups-scaling-strategy/index.md": () =>
+      import(
+        "../public/content/translations/zh/videos/rollups-scaling-strategy/index.md?collection=content_zh"
       ),
     "videos/security-through-obscurity-microdots/index.md": () =>
       import(
@@ -7185,6 +15115,22 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/videos/zero-knowledge-proofs-5-levels/index.md?collection=content_zh"
       ),
+    "community/events/organizing/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/events/organizing/index.md?collection=content_zh"
+      ),
+    "community/support/faq/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/support/faq/index.md?collection=content_zh"
+      ),
+    "community/support/misconceptions/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/support/misconceptions/index.md?collection=content_zh"
+      ),
+    "community/support/scams/index.md": () =>
+      import(
+        "../public/content/translations/zh/community/support/scams/index.md?collection=content_zh"
+      ),
     "contributing/design/adding-design-resources/index.md": () =>
       import(
         "../public/content/translations/zh/contributing/design/adding-design-resources/index.md?collection=content_zh"
@@ -7193,17 +15139,13 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/contributing/translation-program/faq/index.md?collection=content_zh"
       ),
-    "contributing/translation-program/how-to-translate/index.md": () =>
-      import(
-        "../public/content/translations/zh/contributing/translation-program/how-to-translate/index.md?collection=content_zh"
-      ),
     "contributing/translation-program/mission-and-vision/index.md": () =>
       import(
         "../public/content/translations/zh/contributing/translation-program/mission-and-vision/index.md?collection=content_zh"
       ),
-    "contributing/translation-program/playbook/index.md": () =>
+    "contributing/translation-program/how-to-translate/index.md": () =>
       import(
-        "../public/content/translations/zh/contributing/translation-program/playbook/index.md?collection=content_zh"
+        "../public/content/translations/zh/contributing/translation-program/how-to-translate/index.md?collection=content_zh"
       ),
     "contributing/translation-program/resources/index.md": () =>
       import(
@@ -7212,6 +15154,10 @@ const browserCollections = {
     "contributing/translation-program/translatathon/index.md": () =>
       import(
         "../public/content/translations/zh/contributing/translation-program/translatathon/index.md?collection=content_zh"
+      ),
+    "contributing/translation-program/playbook/index.md": () =>
+      import(
+        "../public/content/translations/zh/contributing/translation-program/playbook/index.md?collection=content_zh"
       ),
     "contributing/translation-program/translators-guide/index.md": () =>
       import(
@@ -7245,25 +15191,25 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/data-availability/index.md?collection=content_zh"
       ),
-    "developers/docs/data-structures-and-encoding/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/data-structures-and-encoding/index.md?collection=content_zh"
-      ),
     "developers/docs/design-and-ux/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/design-and-ux/index.md?collection=content_zh"
+      ),
+    "developers/docs/data-structures-and-encoding/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/data-structures-and-encoding/index.md?collection=content_zh"
       ),
     "developers/docs/development-networks/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/development-networks/index.md?collection=content_zh"
       ),
-    "developers/docs/ethereum-stack/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/ethereum-stack/index.md?collection=content_zh"
-      ),
     "developers/docs/evm/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/evm/index.md?collection=content_zh"
+      ),
+    "developers/docs/ethereum-stack/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/ethereum-stack/index.md?collection=content_zh"
       ),
     "developers/docs/frameworks/index.md": () =>
       import(
@@ -7289,21 +15235,21 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/mev/index.md?collection=content_zh"
       ),
-    "developers/docs/networking-layer/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/networking-layer/index.md?collection=content_zh"
-      ),
     "developers/docs/networks/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/networks/index.md?collection=content_zh"
       ),
-    "developers/docs/nodes-and-clients/index.md": () =>
+    "developers/docs/networking-layer/index.md": () =>
       import(
-        "../public/content/translations/zh/developers/docs/nodes-and-clients/index.md?collection=content_zh"
+        "../public/content/translations/zh/developers/docs/networking-layer/index.md?collection=content_zh"
       ),
     "developers/docs/oracles/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/oracles/index.md?collection=content_zh"
+      ),
+    "developers/docs/nodes-and-clients/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/nodes-and-clients/index.md?collection=content_zh"
       ),
     "developers/docs/programming-languages/index.md": () =>
       import(
@@ -7372,15 +15318,15 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/tutorials/creating-a-wagmi-ui-for-your-contract/index.md?collection=content_zh"
       ),
-    "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_zh"
-      ),
     "developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md":
       () =>
         import(
           "../public/content/translations/zh/developers/tutorials/develop-and-test-dapps-with-a-multi-client-local-eth-testnet/index.md?collection=content_zh"
         ),
+    "developers/tutorials/deploying-your-first-smart-contract/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/tutorials/deploying-your-first-smart-contract/index.md?collection=content_zh"
+      ),
     "developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md":
       () =>
         import(
@@ -7394,21 +15340,21 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/tutorials/erc-721-vyper-annotated-code/index.md?collection=content_zh"
       ),
-    "developers/tutorials/erc20-annotated-code/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/tutorials/erc20-annotated-code/index.md?collection=content_zh"
-      ),
     "developers/tutorials/erc20-with-safety-rails/index.md": () =>
       import(
         "../public/content/translations/zh/developers/tutorials/erc20-with-safety-rails/index.md?collection=content_zh"
       ),
-    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+    "developers/tutorials/erc20-annotated-code/index.md": () =>
       import(
-        "../public/content/translations/zh/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_zh"
+        "../public/content/translations/zh/developers/tutorials/erc20-annotated-code/index.md?collection=content_zh"
       ),
     "developers/tutorials/gasless/index.md": () =>
       import(
         "../public/content/translations/zh/developers/tutorials/gasless/index.md?collection=content_zh"
+      ),
+    "developers/tutorials/ethereum-for-web2-auth/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/tutorials/ethereum-for-web2-auth/index.md?collection=content_zh"
       ),
     "developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md":
       () =>
@@ -7510,13 +15456,13 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/tutorials/nft-minter/index.md?collection=content_zh"
       ),
-    "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_zh"
-      ),
     "developers/tutorials/reverse-engineering-a-contract/index.md": () =>
       import(
         "../public/content/translations/zh/developers/tutorials/reverse-engineering-a-contract/index.md?collection=content_zh"
+      ),
+    "developers/tutorials/optimism-std-bridge-annotated-code/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/tutorials/optimism-std-bridge-annotated-code/index.md?collection=content_zh"
       ),
     "developers/tutorials/run-node-raspberry-pi/index.md": () =>
       import(
@@ -7547,15 +15493,15 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/tutorials/server-components/index.md?collection=content_zh"
       ),
+    "developers/tutorials/short-abi/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/tutorials/short-abi/index.md?collection=content_zh"
+      ),
     "developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md":
       () =>
         import(
           "../public/content/translations/zh/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md?collection=content_zh"
         ),
-    "developers/tutorials/short-abi/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/tutorials/short-abi/index.md?collection=content_zh"
-      ),
     "developers/tutorials/smart-contract-security-guidelines/index.md": () =>
       import(
         "../public/content/translations/zh/developers/tutorials/smart-contract-security-guidelines/index.md?collection=content_zh"
@@ -7598,22 +15544,6 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/tutorials/yellow-paper-evm/index.md?collection=content_zh"
       ),
-    "community/events/organizing/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/events/organizing/index.md?collection=content_zh"
-      ),
-    "community/support/faq/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/support/faq/index.md?collection=content_zh"
-      ),
-    "community/support/misconceptions/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/support/misconceptions/index.md?collection=content_zh"
-      ),
-    "community/support/scams/index.md": () =>
-      import(
-        "../public/content/translations/zh/community/support/scams/index.md?collection=content_zh"
-      ),
     "roadmap/fusaka/peerdas/index.md": () =>
       import(
         "../public/content/translations/zh/roadmap/fusaka/peerdas/index.md?collection=content_zh"
@@ -7638,10 +15568,6 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/contributing/translation-program/translatathon/details/index.md?collection=content_zh"
       ),
-    "developers/docs/apis/javascript/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/apis/javascript/index.md?collection=content_zh"
-      ),
     "developers/docs/apis/backend/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/apis/backend/index.md?collection=content_zh"
@@ -7649,6 +15575,10 @@ const browserCollections = {
     "developers/docs/apis/json-rpc/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/apis/json-rpc/index.md?collection=content_zh"
+      ),
+    "developers/docs/apis/javascript/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/apis/javascript/index.md?collection=content_zh"
       ),
     "developers/docs/consensus-mechanisms/poa/index.md": () =>
       import(
@@ -7671,29 +15601,6 @@ const browserCollections = {
         import(
           "../public/content/translations/zh/developers/docs/data-availability/blockchain-data-storage-strategies/index.md?collection=content_zh"
         ),
-    "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
-      () =>
-        import(
-          "../public/content/translations/zh/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_zh"
-        ),
-    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_zh"
-      ),
-    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_zh"
-      ),
-    "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
-      () =>
-        import(
-          "../public/content/translations/zh/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_zh"
-        ),
-    "developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md":
-      () =>
-        import(
-          "../public/content/translations/zh/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md?collection=content_zh"
-        ),
     "developers/docs/design-and-ux/dex-design-best-practice/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/design-and-ux/dex-design-best-practice/index.md?collection=content_zh"
@@ -7702,6 +15609,29 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/design-and-ux/heuristics-for-web3/index.md?collection=content_zh"
       ),
+    "developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md":
+      () =>
+        import(
+          "../public/content/translations/zh/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md?collection=content_zh"
+        ),
+    "developers/docs/data-structures-and-encoding/ssz/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/data-structures-and-encoding/ssz/index.md?collection=content_zh"
+      ),
+    "developers/docs/data-structures-and-encoding/rlp/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/data-structures-and-encoding/rlp/index.md?collection=content_zh"
+      ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md":
+      () =>
+        import(
+          "../public/content/translations/zh/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md?collection=content_zh"
+        ),
+    "developers/docs/data-structures-and-encoding/web3-secret-storage/index.md":
+      () =>
+        import(
+          "../public/content/translations/zh/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md?collection=content_zh"
+        ),
     "developers/docs/evm/opcodes/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/evm/opcodes/index.md?collection=content_zh"
@@ -7714,10 +15644,6 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/networking-layer/network-addresses/index.md?collection=content_zh"
       ),
-    "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_zh"
-      ),
     "developers/docs/nodes-and-clients/archive-nodes/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/nodes-and-clients/archive-nodes/index.md?collection=content_zh"
@@ -7725,6 +15651,10 @@ const browserCollections = {
     "developers/docs/nodes-and-clients/bootnodes/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/nodes-and-clients/bootnodes/index.md?collection=content_zh"
+      ),
+    "developers/docs/nodes-and-clients/client-diversity/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/nodes-and-clients/client-diversity/index.md?collection=content_zh"
       ),
     "developers/docs/nodes-and-clients/light-clients/index.md": () =>
       import(
@@ -7774,13 +15704,13 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/programming-languages/python/index.md?collection=content_zh"
       ),
-    "developers/docs/programming-languages/ruby/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/programming-languages/ruby/index.md?collection=content_zh"
-      ),
     "developers/docs/programming-languages/rust/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/programming-languages/rust/index.md?collection=content_zh"
+      ),
+    "developers/docs/programming-languages/ruby/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/programming-languages/ruby/index.md?collection=content_zh"
       ),
     "developers/docs/scaling/optimistic-rollups/index.md": () =>
       import(
@@ -7838,13 +15768,13 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/smart-contracts/naming/index.md?collection=content_zh"
       ),
-    "developers/docs/smart-contracts/security/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/smart-contracts/security/index.md?collection=content_zh"
-      ),
     "developers/docs/smart-contracts/testing/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/smart-contracts/testing/index.md?collection=content_zh"
+      ),
+    "developers/docs/smart-contracts/security/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/smart-contracts/security/index.md?collection=content_zh"
       ),
     "developers/docs/smart-contracts/upgrading/index.md": () =>
       import(
@@ -7862,11 +15792,6 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/consensus-mechanisms/pow/mining/index.md?collection=content_zh"
       ),
-    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
-      () =>
-        import(
-          "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_zh"
-        ),
     "developers/docs/consensus-mechanisms/pos/attestations/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/attestations/index.md?collection=content_zh"
@@ -7875,6 +15800,11 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/block-proposal/index.md?collection=content_zh"
       ),
+    "developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md":
+      () =>
+        import(
+          "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md?collection=content_zh"
+        ),
     "developers/docs/consensus-mechanisms/pos/faqs/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/faqs/index.md?collection=content_zh"
@@ -7886,10 +15816,6 @@ const browserCollections = {
     "developers/docs/consensus-mechanisms/pos/keys/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/keys/index.md?collection=content_zh"
-      ),
-    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
-      import(
-        "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_zh"
       ),
     "developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md":
       () =>
@@ -7905,13 +15831,17 @@ const browserCollections = {
         import(
           "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/withdrawal-credentials/index.md?collection=content_zh"
         ),
-    "developers/docs/standards/tokens/erc-1155/index.md": () =>
+    "developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md": () =>
       import(
-        "../public/content/translations/zh/developers/docs/standards/tokens/erc-1155/index.md?collection=content_zh"
+        "../public/content/translations/zh/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md?collection=content_zh"
       ),
     "developers/docs/standards/tokens/erc-1363/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/standards/tokens/erc-1363/index.md?collection=content_zh"
+      ),
+    "developers/docs/standards/tokens/erc-1155/index.md": () =>
+      import(
+        "../public/content/translations/zh/developers/docs/standards/tokens/erc-1155/index.md?collection=content_zh"
       ),
     "developers/docs/standards/tokens/erc-20/index.md": () =>
       import(
@@ -7921,17 +15851,17 @@ const browserCollections = {
       import(
         "../public/content/translations/zh/developers/docs/standards/tokens/erc-223/index.md?collection=content_zh"
       ),
-    "developers/docs/standards/tokens/erc-4626/index.md": () =>
+    "developers/docs/standards/tokens/erc-777/index.md": () =>
       import(
-        "../public/content/translations/zh/developers/docs/standards/tokens/erc-4626/index.md?collection=content_zh"
+        "../public/content/translations/zh/developers/docs/standards/tokens/erc-777/index.md?collection=content_zh"
       ),
     "developers/docs/standards/tokens/erc-721/index.md": () =>
       import(
         "../public/content/translations/zh/developers/docs/standards/tokens/erc-721/index.md?collection=content_zh"
       ),
-    "developers/docs/standards/tokens/erc-777/index.md": () =>
+    "developers/docs/standards/tokens/erc-4626/index.md": () =>
       import(
-        "../public/content/translations/zh/developers/docs/standards/tokens/erc-777/index.md?collection=content_zh"
+        "../public/content/translations/zh/developers/docs/standards/tokens/erc-4626/index.md?collection=content_zh"
       ),
     "developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md":
       () =>
