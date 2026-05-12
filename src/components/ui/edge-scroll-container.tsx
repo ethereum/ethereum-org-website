@@ -26,6 +26,9 @@ import { cn } from "@/lib/utils/cn"
 const wrapperClasses = cn(
   // Negative margin to extend to screen edges
   "-mx-[var(--edge-spacing)]",
+  // Contain the inner scroll area so it doesn't leak into page scroll
+  // width. `relative` is required for `clip` to work in Chromium.
+  "relative overflow-x-clip",
   // Mask fade at 2xl+
   "2xl:[mask-image:linear-gradient(to_right,transparent,white_var(--edge-mask-size),white_calc(100%-var(--edge-mask-size)),transparent)]"
 )

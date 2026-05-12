@@ -177,6 +177,7 @@ const RoadmapPage = () => {
                 alt={t("page-roadmap-hero-alt")}
                 className="absolute inset-0 h-full w-full object-cover"
                 fill
+                sizes="(max-width: 768px) calc(100vw - 64px), (max-width: 1280px) 50vw, 512px"
               />
             </div>
           </div>
@@ -205,6 +206,7 @@ const RoadmapPage = () => {
                 src={ethBlocksImage}
                 alt={t("page-roadmap-blocks-alt")}
                 className="object-contain"
+                sizes="(max-width: 992px) calc(100vw - 64px), (max-width: 1536px) 50vw, 720px"
               />
             </div>
             <div className="flex flex-1 flex-col gap-8">

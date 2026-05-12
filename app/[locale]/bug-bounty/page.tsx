@@ -280,7 +280,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 {t("page-upgrades-bug-bounty-subtitle")}
               </Text>
               <Flex className="mt-4 flex-wrap items-center gap-4">
-                <ButtonLink href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+                <ButtonLink href="https://bbp-form.ethereum.org/">
                   {t("page-upgrades-bug-bounty-submit")}
                 </ButtonLink>
                 <ButtonLink variant="outline" href="#in-scope" isSecondary>
@@ -387,9 +387,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               <Text>
                 {t.rich("page-upgrades-bug-bounty-validity-desc", {
                   a: (chunks) => (
-                    <Link href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-                      {chunks}
-                    </Link>
+                    <Link href="https://bbp-form.ethereum.org/">{chunks}</Link>
                   ),
                 })}
               </Text>
