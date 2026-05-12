@@ -16,11 +16,6 @@
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
-  # PoC(fumadocs): scope the build to EN only while validating the
-  # architecture end-to-end. The full 25-locale build OOMs Netlify's
-  # 8 GB / 4-CPU container (PROGRESS measured 8.2 GB .next locally).
-  # Remove once the per-locale memory budget is solved.
-  NEXT_PUBLIC_BUILD_LOCALES="en"
 
 [[headers]]
   for = "/*"
