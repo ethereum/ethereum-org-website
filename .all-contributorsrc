@@ -14222,6 +14222,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "tenderdeve",
+      "name": "TenderDeve",
+      "avatar_url": "https://avatars.githubusercontent.com/u/171561659?v=4",
+      "profile": "https://manmit07.netlify.app/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
