@@ -19,6 +19,13 @@ interface Options {
   dir: string
   srcPath: string
   locale: string
+  /**
+   * When true, skips Sharp/plaiceholder placeholder generation. Width/height
+   * are still computed. Used for translated locales — they reuse EN images,
+   * so re-running Sharp 24 times multiplies native memory without producing
+   * different output. EN compile keeps full placeholder generation.
+   */
+  skipPlaceholders?: boolean
 }
 
 type ImageNode = {
@@ -162,6 +169,7 @@ const rehypeImg = (options: Options) => {
   const dir = opts.dir
   const srcPath = opts.srcPath
   const locale = opts.locale
+  const skipPlaceholders = opts.skipPlaceholders ?? false
 
   return async (tree) => {
     // Instantiate an empty array for image nodes
@@ -196,7 +204,9 @@ const rehypeImg = (options: Options) => {
       }
     })
 
-    await setImagePlaceholders(images, srcPath)
+    if (!skipPlaceholders) {
+      await setImagePlaceholders(images, srcPath)
+    }
   }
 }
 

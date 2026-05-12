@@ -39,7 +39,13 @@ const rehypeImgForFumadocs = () => {
     }
     const dir = path.dirname(normalized)
     const srcPath = "/" + dir.replace(/^public\//, "")
-    const inner = rehypeImg({ dir, srcPath, locale })
+    // Translations reuse EN's image tree (the `dir`/`srcPath` above are
+    // normalized to EN). Running Sharp/plaiceholder 24 more times produces
+    // the same blurDataURL while spiking native memory past Netlify's 8 GB
+    // ceiling. Skip the placeholder pass for non-EN; width/height still get
+    // computed so layout shifts stay bounded.
+    const skipPlaceholders = locale !== "en"
+    const inner = rehypeImg({ dir, srcPath, locale, skipPlaceholders })
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return inner(tree as any)
   }
