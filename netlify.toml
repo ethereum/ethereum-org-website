@@ -16,6 +16,11 @@
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
+  # PoC(fumadocs): subset locales to prove the architecture scales past EN-only
+  # without hitting the 8 GB Netlify ceiling. Full 25-locale build OOMs after
+  # ~57 min wall (turbopack chunking explosion across ~8000 MDX modules).
+  # See docs/poc/PROGRESS.md "Memory budget".
+  NEXT_PUBLIC_BUILD_LOCALES="en,es,de,fr,zh,ja"
 
 [[headers]]
   for = "/*"

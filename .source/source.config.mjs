@@ -336,6 +336,7 @@ var rehypeImg = (options) => {
   const dir = opts.dir;
   const srcPath = opts.srcPath;
   const locale = opts.locale;
+  const skipPlaceholders = opts.skipPlaceholders ?? false;
   return async (tree) => {
     const images = [];
     visit(tree, "element", (node) => {
@@ -355,7 +356,9 @@ var rehypeImg = (options) => {
         images.push(node);
       }
     });
-    await setImagePlaceholders(images, srcPath);
+    if (!skipPlaceholders) {
+      await setImagePlaceholders(images, srcPath);
+    }
   };
 };
 var rehypeImg_default = rehypeImg;
@@ -376,7 +379,8 @@ var rehypeImgForFumadocs = () => {
     }
     const dir = path2.dirname(normalized);
     const srcPath = "/" + dir.replace(/^public\//, "");
-    const inner = rehypeImg_default({ dir, srcPath, locale });
+    const skipPlaceholders = locale !== "en";
+    const inner = rehypeImg_default({ dir, srcPath, locale, skipPlaceholders });
     return inner(tree);
   };
 };
