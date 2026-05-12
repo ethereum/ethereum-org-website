@@ -54,14 +54,22 @@ export default async function Page(props: { params: Promise<Params> }) {
   setRequestLocale(locale)
 
   const slug = slugArray.join("/")
-  // `body` and `toc` are runtime fields added by fumadocs-mdx — not part of
-  // the schema, so the inferred type doesn't surface them. Cast to access.
-  const pageData = page.data as unknown as {
+  // Async-mode collections expose body/toc behind `data.load()` (lazy body
+  // import) instead of as eager fields on `data` itself. The schema only
+  // types the frontmatter, so cast `load()` here.
+  const loaded = (await (
+    page.data as unknown as {
+      load: () => Promise<{
+        body: (p: { components: Record<string, unknown> }) => React.ReactNode
+        toc?: { title: unknown; url: string; depth: number }[]
+      }>
+    }
+  ).load()) as {
     body: (p: { components: Record<string, unknown> }) => React.ReactNode
     toc?: { title: unknown; url: string; depth: number }[]
   }
-  const MDXContent = pageData.body
-  const tocItems = fumadocsTocToCItems(pageData.toc)
+  const MDXContent = loaded.body
+  const tocItems = fumadocsTocToCItems(loaded.toc)
 
   // Pull frontmatter from the raw markdown so we don't carry `page.data.body`
   // (a function) or `page.data.toc` (React nodes) into the Layout's client

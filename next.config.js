@@ -3,6 +3,13 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
 const createNextIntlPlugin = require("next-intl/plugin")
 
+// Block fumadocs-mdx's fire-and-forget init() inside createMDX(). The
+// `postinstall: fumadocs-mdx` script already populated `.source/`; without
+// this guard the auto-trigger races on cold builds and clobbers it with
+// a partial result (only ~3 of 25 locale collections get written, breaking
+// the catch-all route). The internal guard `_FUMADOCS_MDX` short-circuits
+// init while leaving the turbopack loader rules intact.
+process.env._FUMADOCS_MDX = "1"
 const { createMDX } = require("fumadocs-mdx/next")
 
 const { withSentryConfig } = require("@sentry/nextjs")

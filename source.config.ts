@@ -68,6 +68,12 @@ const docCollection = (dir: string, files: string[], locale: string) =>
     dir,
     files: isLocaleEnabled(locale) ? files : NO_MATCH,
     schema: frontmatterSchema,
+    // Async mode emits lazy `() => import()` body refs and only eagerly
+    // imports frontmatter. The page handler awaits `data.load()` to pull
+    // the compiled body/toc on demand. Matches solana-com's pattern for
+    // large MDX trees; defers per-page compile to first request rather
+    // than enumerating all body modules at config-load time.
+    async: true,
     mdxOptions: sharedMdxOptions,
   })
 
