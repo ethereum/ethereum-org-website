@@ -1,7 +1,7 @@
 ---
 title: "إضافة التوقيع الواضح إلى بروتوكولك باستخدام ⁦ERC-7730⁩"
 description: "تعلم كيفية كتابة واصف ⁦ERC-7730⁩ بحيث تعرض تفاعلات العقد الذكي الخاص بك تفاصيل قابلة للقراءة البشرية في المحافظ قبل أن يقوم المستخدمون بالتوقيع."
-author: هيستر برويكمان
+author: "هيستر برويكمان"
 lang: ar
 tags: ["ERC-7730", "الأمان", "توقيع", "عقود ذكية", "محافظ"]
 skill: intermediate
@@ -35,7 +35,7 @@ published: 2026-05-11
 - <span dir="ltr">Python 3.12+</span> لأداة سطر الأوامر (<span dir="ltr">CLI</span>) الخاصة بالتحقق 
 - معرفة أساسية بتنسيق <span dir="ltr">JSON</span>
 
-## ما هو واصف ⁦ERC-7730⁩؟ {#what-is-an-erc-7730-descriptor}
+## ما هو واصف ⁦<span dir="ltr">ERC-7730</span>⁩؟ {#what-is-an-erc-7730-descriptor}
 
 الواصف هو ملف <span dir="ltr">JSON</span> واحد يتكون من ثلاثة أقسام:
 
@@ -256,7 +256,7 @@ published: 2026-05-11
 
 ## الخطوة 5: الإرسال إلى السجل {#step-5-submit-to-the-registry}
 
-يعد [سجل ⁦ERC-7730⁩](https://github.com/ethereum/clear-signing-erc7730-registry) مستودعًا مفتوحًا تستضيفه [مؤسسة إيثيريوم](/foundation/) كجهة راعية محايدة. يمكن لأي شخص استنساخه واستضافته ذاتيًا — وتقرر المحافظ بشكل مستقل مثيلات السجل التي تثق بها.
+يعد [سجل ⁦<span dir="ltr">ERC-7730</span>⁩](https://github.com/ethereum/clear-signing-erc7730-registry) مستودعًا مفتوحًا تستضيفه [مؤسسة إيثيريوم](/foundation/) كجهة راعية محايدة. يمكن لأي شخص استنساخه واستضافته ذاتيًا — وتقرر المحافظ بشكل مستقل مثيلات السجل التي تثق بها.
 
 1. قم بعمل تفرع (Fork) للمستودع على <span dir="ltr">GitHub</span>  
 2. قم بإنشاء مجلد في `registry/<your-project-name>/`  
@@ -284,8 +284,8 @@ published: 2026-05-11
 
 ## قراءة إضافية {#further-reading}
 
-- [مواصفات ⁦ERC-7730⁩](https://eips.ethereum.org/EIPS/eip-7730)  
-- [سجل ⁦ERC-7730⁩](https://github.com/ethereum/clear-signing-erc7730-registry)  
+- [مواصفات ⁦<span dir="ltr">ERC-7730</span>⁩](https://eips.ethereum.org/EIPS/eip-7730)  
+- [سجل ⁦<span dir="ltr">ERC-7730</span>⁩](https://github.com/ethereum/clear-signing-erc7730-registry)  
 - [clearsigning.org](https://clearsigning.org) — الأدوات، وحالة النظام البيئي، والحوكمة  
 - [التحقق من العقود عبر Sourcify](https://sourcify.dev)  
 - [مبادرة أمان التريليون دولار](https://trilliondollarsecurity.org)

@@ -1,6 +1,6 @@
 ---
 title: Adicione assinatura clara ao seu protocolo com o ERC-7730
-description: Aprenda a escrever um descritor ERC-7730 para que as interações do seu contrato inteligente exibam detalhes legíveis por humanos nas carteiras antes que os usuários assinem.
+description: "Aprenda a escrever um descritor ERC-7730 para que as interações do seu contrato inteligente exibam detalhes legíveis por humanos nas carteiras antes que os usuários assinem."
 author: Hester Bruikman
 lang: pt-br
 tags: ["ERC-7730", "segurança", "assinatura", "contratos inteligentes", "carteiras"]

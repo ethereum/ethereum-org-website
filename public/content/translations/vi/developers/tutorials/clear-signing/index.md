@@ -1,11 +1,11 @@
 ---
-title: Thêm việc ký rõ ràng vào giao thức của bạn với ERC-7730
-description: Tìm hiểu cách viết bộ mô tả ERC-7730 để các tương tác hợp đồng thông minh của bạn hiển thị chi tiết dễ đọc trong ví trước khi người dùng ký.
+title: "Thêm việc ký rõ ràng vào giao thức của bạn với ERC-7730"
+description: "Tìm hiểu cách viết bộ mô tả ERC-7730 để các tương tác hợp đồng thông minh của bạn hiển thị chi tiết dễ đọc trong ví trước khi người dùng ký."
 author: Hester Bruikman
 lang: vi
 tags: ["ERC-7730", "bảo mật", "việc ký", "hợp đồng thông minh", "ví"]
 skill: intermediate
-breadcrumb: Việc ký rõ ràng
+breadcrumb: "Việc ký rõ ràng"
 published: 2026-05-11
 ---
 

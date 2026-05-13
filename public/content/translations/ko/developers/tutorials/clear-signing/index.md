@@ -1,11 +1,11 @@
 ---
-title: ERC-7730으로 프로토콜에 명확한 서명하기 추가하기
-description: 사용자가 서명하기 전에 지갑에 사람이 읽을 수 있는 세부 정보를 표시하도록 스마트 컨트랙트 상호작용을 위한 ERC-7730 설명자(descriptor)를 작성하는 방법을 알아보세요.
-author: 헤스터 브루이크만
+title: "ERC-7730으로 프로토콜에 명확한 서명하기 추가하기"
+description: "사용자가 서명하기 전에 지갑에 사람이 읽을 수 있는 세부 정보를 표시하도록 스마트 컨트랙트 상호작용을 위한 ERC-7730 설명자(descriptor)를 작성하는 방법을 알아보세요."
+author: "헤스터 브루이크만"
 lang: ko
 tags: ["ERC-7730", "보안", "서명하기", "스마트 컨트랙트", "지갑"]
 skill: intermediate
-breadcrumb: 명확한 서명하기
+breadcrumb: "명확한 서명하기"
 published: 2026-05-11
 ---
 

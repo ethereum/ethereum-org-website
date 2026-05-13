@@ -1,11 +1,11 @@
 ---
-title: 使用 ERC-7730 为你的协议添加明文签名
-description: 了解如何编写 ERC-7730 描述符，以便在用户签名前，你的智能合约交互能在钱包中显示人类可读的详细信息。
-author: 海斯特·布鲁克曼
+title: "使用 ERC-7730 为你的协议添加明文签名"
+description: "了解如何编写 ERC-7730 描述符，以便在用户签名前，你的智能合约交互能在钱包中显示人类可读的详细信息。"
+author: "海斯特·布鲁克曼"
 lang: zh
 tags: ["ERC-7730", "安全", "签名", "智能合约", "钱包"]
 skill: intermediate
-breadcrumb: 明文签名
+breadcrumb: "明文签名"
 published: 2026-05-11
 ---
 

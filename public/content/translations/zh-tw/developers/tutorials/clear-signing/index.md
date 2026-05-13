@@ -1,7 +1,7 @@
 ---
-title: 透過 ERC-7730 為您的協定加入清晰簽署
-description: 了解如何撰寫 ERC-7730 描述檔，讓您的智能合約互動在使用者簽署前，於錢包中顯示人類可讀的詳細資訊。
-author: 赫斯特·布魯克曼
+title: "透過 ERC-7730 為您的協定加入清晰簽署"
+description: "了解如何撰寫 ERC-7730 描述檔，讓您的智能合約互動在使用者簽署前，於錢包中顯示人類可讀的詳細資訊。"
+author: "赫斯特·布魯克曼"
 lang: zh-tw
 tags:
   - ERC-7730
@@ -10,7 +10,7 @@ tags:
   - 智能合約
   - 錢包
 skill: intermediate
-breadcrumb: 清晰簽署
+breadcrumb: "清晰簽署"
 published: 2026-05-11
 ---
 

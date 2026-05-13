@@ -1,6 +1,6 @@
 ---
-title: Ajouter la signature en clair à votre protocole avec l'ERC-7730
-description: Apprenez à écrire un descripteur ERC-7730 pour que les interactions avec vos contrats intelligents affichent des détails lisibles par l'homme dans les portefeuilles avant que les utilisateurs ne signent.
+title: "Ajouter la signature en clair à votre protocole avec l'ERC-7730"
+description: "Apprenez à écrire un descripteur ERC-7730 pour que les interactions avec vos contrats intelligents affichent des détails lisibles par l'homme dans les portefeuilles avant que les utilisateurs ne signent."
 author: Hester Bruikman
 lang: fr
 tags: ["ERC-7730", "sécurité", "signature", "contrats intelligents", "portefeuilles"]

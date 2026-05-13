@@ -1,6 +1,6 @@
 ---
-title: Dodaj przejrzyste podpisywanie do swojego protokołu za pomocą ERC-7730
-description: Dowiedz się, jak napisać deskryptor ERC-7730, aby interakcje z Twoim inteligentnym kontraktem wyświetlały czytelne dla człowieka szczegóły w portfelach, zanim użytkownicy je podpiszą.
+title: "Dodaj przejrzyste podpisywanie do swojego protokołu za pomocą ERC-7730"
+description: "Dowiedz się, jak napisać deskryptor ERC-7730, aby interakcje z Twoim inteligentnym kontraktem wyświetlały czytelne dla człowieka szczegóły w portfelach, zanim użytkownicy je podpiszą."
 author: Hester Bruikman
 lang: pl
 tags: ["ERC-7730", "bezpieczeństwo", "podpisywanie", "inteligentne kontrakty", "portfele"]

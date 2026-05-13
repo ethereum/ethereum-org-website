@@ -1,11 +1,11 @@
 ---
-title: ERC-7730 ile protokolünüze açık imzalama ekleyin
-description: Kullanıcılar imzalamadan önce akıllı sözleşme etkileşimlerinizin cüzdanlarda insan tarafından okunabilir ayrıntılar göstermesi için nasıl bir ERC-7730 tanımlayıcısı yazacağınızı öğrenin.
+title: "ERC-7730 ile protokolünüze açık imzalama ekleyin"
+description: "Kullanıcılar imzalamadan önce akıllı sözleşme etkileşimlerinizin cüzdanlarda insan tarafından okunabilir ayrıntılar göstermesi için nasıl bir ERC-7730 tanımlayıcısı yazacağınızı öğrenin."
 author: Hester Bruikman
 lang: tr
 tags: ["ERC-7730", "güvenlik", "imzalama", "akıllı sözleşmeler", "cüzdanlar"]
 skill: intermediate
-breadcrumb: Açık imzalama
+breadcrumb: "Açık imzalama"
 published: 2026-05-11
 ---
 

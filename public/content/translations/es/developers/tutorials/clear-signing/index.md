@@ -1,5 +1,5 @@
 ---
-title: Añade la firma clara a tu protocolo con ERC-7730
+title: "Añade la firma clara a tu protocolo con ERC-7730"
 description: Aprende a escribir un descriptor ERC-7730 para que las interacciones de tu contrato inteligente muestren detalles legibles por humanos en las billeteras antes de que los usuarios firmen.
 author: Hester Bruikman
 lang: es

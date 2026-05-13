@@ -1,6 +1,6 @@
 ---
-title: Přidejte do svého protokolu transparentní podepisování pomocí ERC-7730
-description: Naučte se napsat deskriptor ERC-7730, aby interakce s vaším chytrým kontraktem zobrazovaly v peněženkách před podepsáním uživatelem srozumitelné podrobnosti.
+title: "Přidejte do svého protokolu transparentní podepisování pomocí ERC-7730"
+description: "Naučte se napsat deskriptor ERC-7730, aby interakce s vaším chytrým kontraktem zobrazovaly v peněženkách před podepsáním uživatelem srozumitelné podrobnosti."
 author: Hester Bruikman
 lang: cs
 tags:
@@ -10,7 +10,7 @@ tags:
   - chytré kontrakty
   - peněženky
 skill: intermediate
-breadcrumb: Transparentní podepisování
+breadcrumb: "Transparentní podepisování"
 published: 2026-05-11
 ---
 

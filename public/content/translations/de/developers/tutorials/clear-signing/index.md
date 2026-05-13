@@ -1,5 +1,5 @@
 ---
-title: Clear Signing zu Ihrem Protokoll mit ERC-7730 hinzufügen
+title: "Clear Signing zu Ihrem Protokoll mit ERC-7730 hinzufügen"
 description: Erfahren Sie, wie Sie einen ERC-7730-Deskriptor schreiben, damit Ihre Smart-Contract-Interaktionen in Wallets menschenlesbare Details anzeigen, bevor Benutzer signieren.
 author: Hester Bruikman
 lang: de
