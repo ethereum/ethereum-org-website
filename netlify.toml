@@ -45,17 +45,29 @@
 
 [functions]
   # PoC(hybrid): MDX bodies are compiled at request time (legacy
-  # next-mdx-remote path inside getPageData). For ISR revalidation
-  # and on-demand renders of non-prerendered locales to work, the raw
-  # markdown files must be in the function bundle. ~175 MB unzipped
-  # → ~50 MB zipped; comfortably under the 250 MB limit.
+  # next-mdx-remote path inside getPageData). For ISR revalidation and
+  # on-demand renders to work, the raw markdown files must ship in the
+  # function bundle.
+  #
+  # Bundling every locale's translations costs ~154 MB unzipped and
+  # tips the function over Netlify's 250 MB unzipped limit. We bundle
+  # only the locales listed below; locales outside this set 404 on
+  # on-demand renders (their static prerenders, when present, are
+  # served by the CDN without touching the function).
+  #
+  # Keep this list in sync with NEXT_PUBLIC_PRERENDER_LOCALES.
   included_files = [
     "i18n.config.json",
     "src/intl/**/*",
     "src/data-layer/mocks/**/*",
-    "public/content/**/*.md",
-    "public/content/**/*.mdx",
     ".source/manifest.json",
+    # English content (everything under public/content except translations/).
+    "public/content/!(translations)/**/*.md",
+    "public/content/!(translations)/**/*.mdx",
+    # Only the locales we render on-demand. Brace expansion + extglob
+    # are supported by minimatch (Netlify's glob library).
+    "public/content/translations/{en,es,zh,de}/**/*.md",
+    "public/content/translations/{en,es,zh,de}/**/*.mdx",
   ]
 
 # Override SITE_URL for named branches with custom subdomains so canonical
