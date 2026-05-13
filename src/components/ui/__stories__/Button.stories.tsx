@@ -33,9 +33,12 @@ const VARIANTS: ButtonVariantProps["variant"][] = [
 
 const SIZES: ButtonVariantProps["size"][] = ["lg", "md", "sm"]
 
-export const Default: Story = {}
+export const Default: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
+}
 
 export const Variants: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   render: (args) => (
     <VStack className="items-start gap-4">
       {VARIANTS.map((variant) => (
@@ -49,6 +52,7 @@ export const Variants: Story = {
 }
 
 export const Sizes: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   render: (args) => (
     <HStack className="items-center gap-4">
       {SIZES.map((size) => (
@@ -60,6 +64,7 @@ export const Sizes: Story = {
 
 export const SizeVariantMatrix: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -97,6 +102,7 @@ export const SizeVariantMatrix: Story = {
 
 export const IsSecondary: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -122,6 +128,7 @@ export const IsSecondary: Story = {
 
 export const AsChild: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:

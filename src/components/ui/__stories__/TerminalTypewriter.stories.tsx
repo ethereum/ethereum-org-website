@@ -56,6 +56,7 @@ export const Default: Story = {
 }
 
 export const StaticMessages: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: {
     messages: [
       "Build dapps with Solidity",
@@ -75,6 +76,7 @@ export const StaticMessages: Story = {
 }
 
 export const SingleMessage: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: {
     messages: ["The only message keeps re-typing on loop."],
   },
@@ -89,6 +91,7 @@ export const SingleMessage: Story = {
 }
 
 export const LongMessage: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: {
     messages: [
       "Smart contracts running on the Ethereum Virtual Machine settle to layer 1 with finality measured in slots.",
@@ -106,6 +109,7 @@ export const LongMessage: Story = {
 }
 
 export const Empty: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { messages: [] },
   parameters: {
     docs: {

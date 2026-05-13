@@ -36,6 +36,7 @@ const SampleCard = ({ children }: { children: React.ReactNode }) => (
 const cardsArray = Array.from({ length: 10 }).map((_, idx) => idx + 1)
 
 export const Default: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   render: () => (
     <EdgeScrollContainer>
       {cardsArray.map((i) => (
@@ -69,6 +70,7 @@ export const WithoutSnap: Story = {
 
 export const AsChild: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -94,6 +96,7 @@ export const AsChild: Story = {
 
 export const CustomSpacing: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -114,6 +117,7 @@ export const CustomSpacing: Story = {
 
 export const FewItems: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:

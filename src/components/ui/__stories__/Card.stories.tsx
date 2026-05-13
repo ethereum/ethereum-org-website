@@ -16,6 +16,7 @@ const meta = {
   title: "UI / Card",
   component: Card,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

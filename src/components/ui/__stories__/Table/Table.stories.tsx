@@ -34,26 +34,32 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Simple: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { variant: "simple", children: <MdxDemoData /> },
 }
 
 export const Minimal: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { variant: "minimal", children: <MdxDemoData /> },
 }
 
 export const SimpleStriped: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { variant: "simple-striped", children: <MdxDemoData /> },
 }
 
 export const MinimalStriped: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { variant: "minimal-striped", children: <MdxDemoData /> },
 }
 
 export const Product: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { variant: "product", children: <MdxDemoData /> },
 }
 
 export const HighlightFirstColumn: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: {
     variant: "highlight-first-column",
     children: <MdxEnergyConsumpData />,

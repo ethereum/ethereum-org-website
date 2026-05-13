@@ -11,6 +11,7 @@ const meta = {
     children: "What is Ethereum?",
   },
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

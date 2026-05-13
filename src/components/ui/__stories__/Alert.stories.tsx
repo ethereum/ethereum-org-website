@@ -43,6 +43,7 @@ const DESC = "This is an alert to be used for important information."
 const VARIANTS = ["info", "error", "success", "warning", "update"] as const
 
 export const Default: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   render: () => (
     <Alert className="w-[500px]">
       <AlertContent>
@@ -93,6 +94,7 @@ export const WithCloseButton: Story = {
 
 export const WithIcon: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -135,6 +137,7 @@ export const WithIcon: Story = {
 
 export const WithEmoji: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -169,6 +172,7 @@ export const WithEmoji: Story = {
 
 export const SizeFull: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:

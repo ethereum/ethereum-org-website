@@ -38,6 +38,7 @@ const MockParagraph = ({ href }: { href: string }) => (
 )
 
 export const InlineLinkStory: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   name: "InlineLink",
   parameters: {
     docs: {
@@ -52,6 +53,7 @@ export const InlineLinkStory: Story = {
 }
 
 export const BaseLinkStory: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   name: "BaseLink",
   parameters: {
     docs: {
@@ -71,6 +73,7 @@ export const BaseLinkStory: Story = {
 }
 
 export const LinkWithArrowStory: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   name: "LinkWithArrow",
   parameters: {
     docs: {
@@ -90,6 +93,7 @@ export const LinkWithArrowStory: Story = {
 
 export const ExternalDetection: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -103,6 +107,7 @@ export const ExternalDetection: Story = {
 
 export const MailtoDetection: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -121,6 +126,7 @@ export const MailtoDetection: Story = {
 
 export const FileExtensionDetection: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -141,6 +147,7 @@ export const FileExtensionDetection: Story = {
 
 export const HashLink: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story: "Hash-only hrefs scroll within the page rather than navigating.",

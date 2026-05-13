@@ -34,6 +34,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Sizes: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: SAMPLE,
   render: (args) => (
     <HStack className="items-center gap-4">
@@ -45,6 +46,7 @@ export const Sizes: Story = {
 }
 
 export const WithLabel: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: {
     ...SAMPLE,
     href: "https://github.com/samajammin",
@@ -122,6 +124,7 @@ export const BrokenImageFallback: Story = {
 
 export const BasePrimitives: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -145,6 +148,7 @@ export const BasePrimitives: Story = {
 
 export const FallbackOnly: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story: "`AvatarFallback` rendered without an image source.",

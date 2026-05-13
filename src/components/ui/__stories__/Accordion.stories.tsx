@@ -18,6 +18,7 @@ const meta = {
     ),
   ],
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

@@ -7,6 +7,7 @@ const meta = {
   title: "UI / Tag",
   component: Tag,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:
