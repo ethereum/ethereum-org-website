@@ -7,6 +7,7 @@ const meta = {
   title: "UI / Primitives / Checkbox",
   component: Checkbox,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

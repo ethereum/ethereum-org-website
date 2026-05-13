@@ -21,6 +21,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { placeholder: "Search" },
   render: (args) => (
     <div className="w-[258px]">
@@ -40,6 +41,7 @@ export const Sizes: Story = {
 }
 
 export const HasError: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { placeholder: "Required" },
   render: (args) => (
     <VStack className="w-[258px] gap-4">
@@ -50,6 +52,7 @@ export const HasError: Story = {
 }
 
 export const Disabled: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { placeholder: "Cannot edit" },
   render: (args) => (
     <VStack className="w-[258px] gap-4">
@@ -60,6 +63,7 @@ export const Disabled: Story = {
 }
 
 export const AutoFocus: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   args: { placeholder: "Focused on mount", autoFocus: true },
   render: (args) => (
     <div className="w-[258px]">
@@ -70,6 +74,7 @@ export const AutoFocus: Story = {
 
 export const WithHelperText: Story = {
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:

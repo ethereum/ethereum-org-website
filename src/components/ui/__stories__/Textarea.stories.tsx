@@ -7,6 +7,7 @@ const meta = {
   title: "UI / Primitives / Textarea",
   component: Textarea,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

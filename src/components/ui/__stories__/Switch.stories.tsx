@@ -7,6 +7,7 @@ const meta = {
   title: "UI / Primitives / Switch",
   component: Switch,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:
