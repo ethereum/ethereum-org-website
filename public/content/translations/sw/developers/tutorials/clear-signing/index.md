@@ -288,4 +288,4 @@ Mikoba huchagua ni sajili gani itakayounga mkono. Pindi kifafanuzi chako kikiwa 
 - [Sajili ya ERC-7730](https://github.com/ethereum/clear-signing-erc7730-registry)  
 - [clearsigning.org](https://clearsigning.org) — zana, hali ya mfumo wa ikolojia, na utawala  
 - [Uthibitishaji wa mkataba wa Sourcify](https://sourcify.dev)  
-- [Mpango wa Usalama wa Trillioni ya Dola](https://trilliondollarsecurity.org)
+- [Mpango wa Usalama wa Trilioni ya Dola](https://trilliondollarsecurity.org)

@@ -84,7 +84,7 @@ A seção `context` vincula o descritor a uma ou mais implantações de contrato
 - `context.$id` — Um identificador exclusivo para este documento descritor ou configuração de implantação.
 - `contract.deployments` — O conjunto de implantações ao qual este descritor se aplica.
 - `deployments[].chainId` — O ID da cadeia (chain ID) EVM para uma implantação. Inclua todas as cadeias onde seu contrato está implantado.
-- `deployments[].address` — O endereço do contrato que as carteiras devem associar a este descritor. Use o endereço de implantação que contém a lógica de execução.
+- `deployments[].address` — O endereço do contrato que as carteiras devem associar a este descritor. Use o endereço de implementação que contém a lógica de execução.
 
 ## Passo 3: Escrever a seção de metadados {#step-3-write-the-metadata-section}
 
@@ -102,7 +102,7 @@ A seção de metadados fornece informações legíveis por humanos sobre o proje
 
 - `owner` — O projeto, protocolo, organização ou mantenedor responsável por este descritor.
 - `info.url` — Uma URL canônica do projeto ou da documentação que as carteiras podem exibir aos usuários para contexto adicional.
-- `contractName` — O nome do contrato ou da implantação descrito por este arquivo, geralmente correspondendo ao código-fonte verificado ou à ABI.
+- `contractName` — O nome do contrato ou da implementação descrito por este arquivo, geralmente correspondendo ao código-fonte verificado ou à ABI.
 
 Se o seu arquivo ERC-7730 descreve um contrato ERC-20, você também deve adicionar um objeto de token. 
 
