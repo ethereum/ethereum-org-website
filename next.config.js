@@ -163,6 +163,12 @@ module.exports = (phase) => {
     // Replaces config.externals.push("pino-pretty", "lokijs", "encoding")
     serverExternalPackages: ["pino-pretty", "lokijs", "encoding"],
     trailingSlash: true,
+    // PoC(fumadocs): Tier-1 memory mitigations for the 25-locale Netlify
+    // build. `tsc --noEmit` and source-map generation are both significant
+    // RSS spikes on top of the Turbopack chunk graph for 8k+ static
+    // routes. TS checking should run as a separate CI step.
+    typescript: { ignoreBuildErrors: true },
+    productionBrowserSourceMaps: false,
     images: {
       qualities: [5, 10, 20, 35, 40, 75, 90, 100],
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
@@ -255,6 +261,10 @@ module.exports = (phase) => {
       ...experimental,
       // Restore client-side Router Cache durations to Next 14 defaults
       staleTimes: { dynamic: 30, static: 300 },
+      // PoC(fumadocs): server source-map generation is another RSS spike
+      // during static-gen for 8k+ routes; only relevant for cacheComponents
+      // (not enabled here) but explicit so Sentry can't reactivate it.
+      serverSourceMaps: false,
     },
   }
 
@@ -307,5 +317,14 @@ module.exports = withSentryConfig(module.exports, {
   org: "ethereumorg-ow",
   project: "ethorg",
   silent: true,
-  widenClientFileUpload: true,
+  // PoC(fumadocs): widening the upload is moot once sourcemaps are off;
+  // kept false explicitly so the Sentry CLI doesn't walk extra chunks.
+  widenClientFileUpload: false,
+  // PoC(fumadocs): disable Sentry source-map generation + upload for the
+  // 25-locale Netlify build. Sentry's source-map step is a known OOM
+  // source on Next 14/15/16 with large static-gen builds (see
+  // getsentry/sentry-javascript#10468, #13836). Errors will still report,
+  // but stack traces won't be source-mapped until we re-enable this or
+  // upload separately via the CLI from a smaller post-build job.
+  sourcemaps: { disable: true },
 })

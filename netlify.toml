@@ -13,10 +13,12 @@
   # headroom on the build VM. The cache is only useful for incremental builds
   # which don't apply on Netlify (each build starts fresh).
   #
-  # PoC(fumadocs): leading recon block prints the actual container limits
-  # (memory tier, CPU count, cgroup ceilings, NODE_OPTIONS) so we can verify
-  # which Netlify build resource tier this site is running on. Remove once
-  # the OOM-vs-tier question is resolved.
+  # PoC(fumadocs): recon block prints the actual container limits, then a
+  # background sampler logs RSS every 15 s so the OOM moment in the log can
+  # be matched to a build phase (compile / collecting page data /
+  # generating static pages). `--experimental-debug-memory-usage` adds
+  # Next.js-side heap/GC reporting throughout. Remove the instrumentation
+  # once the OOM is resolved.
   command = """
 echo '=== BUILD ENV RECON ===' && \
 echo '-- /proc/meminfo --' && grep -E '^(MemTotal|MemAvailable|SwapTotal):' /proc/meminfo && \
@@ -28,16 +30,31 @@ echo '-- ulimit -a --' && ulimit -a && \
 echo '-- NODE_OPTIONS --' && echo "${NODE_OPTIONS:-(unset)}" && \
 echo '-- free -h --' && free -h && \
 echo '=== /BUILD ENV RECON ===' && \
-pnpm build && rm -rf .next/cache
+BUILD_START=$(date +%s) ; \
+( while sleep 15; do T=$(( $(date +%s) - BUILD_START )); free -m | awk -v t=$T '/^Mem:/ {printf "[mem t=%ds] used=%dMB free=%dMB avail=%dMB\\n", t, $3, $4, $7}'; ps -eo pid,rss,comm --sort=-rss --no-headers | head -5 | awk '{printf "[top] pid=%s rss=%dMB %s\\n", $1, $2/1024, $3}'; done ) & SAMPLER=$! ; \
+trap "kill $SAMPLER 2>/dev/null" EXIT ; \
+pnpm exec next build --experimental-debug-memory-usage ; BUILD_EXIT=$? ; \
+kill $SAMPLER 2>/dev/null ; \
+rm -rf .next/cache ; \
+exit $BUILD_EXIT
 """
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
-  # PoC(fumadocs): probing the OOM breakpoint. 6 locales built in 4 min; 25
-  # OOMed at 57 min (non-linear chunk-graph blow-up). 12 doubles the previous
-  # subset to find where the curve becomes unfeasible on 8 GB / 4 CPU.
+  # PoC(fumadocs): now attempting full 25 locales with the Tier-1 memory
+  # mitigations applied (Sentry sourcemaps off, TS check off,
+  # serverSourceMaps off, cpus=1, V8 heap reined in below cgroup ceiling).
   # See docs/poc/PROGRESS.md "Memory budget".
-  NEXT_PUBLIC_BUILD_LOCALES="en,es,de,fr,zh,ja,ko,it,pt-br,ru,vi,hi"
+  NEXT_PUBLIC_BUILD_LOCALES="en,ar,bn,cs,de,es,fr,hi,id,it,ja,ko,mr,pl,pt-br,ru,sw,ta,te,tr,uk,ur,vi,zh,zh-tw"
+  # Force single-CPU static-page generation so peak parallel render memory
+  # is one page at a time. Tradeoff: longer wall time, lower peak RSS.
+  LIMIT_CPUS = "1"
+  # Cap V8 heap at 8 GB inside the ~10.7 GB cgroup. Leaves ~2.5 GB
+  # headroom for native (Turbopack Rust workers, Sharp, worker children).
+  # Netlify's auto-setting of 10240 lets V8 alone fill the container,
+  # which makes any native alloc the SIGKILL trigger. Smaller semi-space
+  # forces more frequent young-gen GC, keeping RSS flatter.
+  NODE_OPTIONS = "--max-old-space-size=8192 --max-semi-space-size=64"
 
 [[headers]]
   for = "/*"

@@ -5,411 +5,271 @@ Chronological log of the PoC session. For the architectural evaluation, see
 
 ## End state
 
-**Full-scope PoC**: all 326 English markdown pages under `public/content/**`
-(translations excluded) compile and render through Fumadocs at
-`/en/poc-fumadocs/<…>/`. Production build green; cold-build cost is +10 s
-(+10 %) over baseline for +326 prerendered routes (+29 %). See the
-*Full-scope expansion* section below for measurements.
-
-Earlier narrow scope (preserved in this log for context):
-- 57 tutorials at `/en/poc-fumadocs/developers/tutorials/<slug>/`
-- Whitepaper at `/en/poc-fumadocs/whitepaper/`
-- Index at `/en/poc-fumadocs/`
-
-Existing routes (`/en/developers/tutorials/...`, `/en/whitepaper/`) unaffected.
-
-**Dev warm-cache timing (whitepaper, 3-run avg):**
-| | PoC | Existing |
-|---|---|---|
-| Time | ~600 ms | ~1800 ms |
-
-PoC is ~3× faster on warm requests because MDX is compiled to JS at build, not per-request.
+- All 326 EN markdown pages compile and render via Fumadocs at the live
+  catch-all `/[locale]/[...slug]`.
+- **Catch-all and three hub routes (videos, video detail, tutorials)
+  source frontmatter from compiled `.source/` modules — zero `public/content/`
+  filesystem reads at request time.** This is the architectural change that
+  fixes the ISR 404 class of bugs documented in
+  `docs/solutions/integration-issues/netlify-isr-404-async-server-components.md`
+  (see *ISR-fix verification* below).
+- Per-locale collections for all 25 locales exist; the route picks the
+  source by `params.locale` and falls back to EN with
+  `contentNotTranslated={true}` when a translation is missing.
+- **Currently deployed: 12-locale subset** (`en,es,de,fr,zh,ja,ko,it,
+  pt-br,ru,vi,hi`). 6 locales builds green in ~4 min; 12 OOMs the current
+  Netlify container; 25 also OOMs. The container is ~10.7 GB / 6 CPU
+  (smaller than the 36 GB Enterprise tier the org should have access to) —
+  a billing/entitlement question, see *Memory budget* below.
+- Some feature parity gaps remain (see *Feature parity gaps*).
 
 ## Files added / changed
 
 ```
-source.config.ts                                  # NEW — collections + preset wiring
-src/lib/poc-fumadocs/source.ts                    # NEW — loader instances
-src/lib/poc-fumadocs/rehypeImgForFumadocs.ts      # NEW — rehypeImg adapter
-app/[locale]/poc-fumadocs/[[...slug]]/page.tsx    # NEW — route
-next.config.js                                    # MODIFIED — wrap + rule preservation
-.gitignore                                        # MODIFIED — +.source/
-package.json + pnpm-lock.yaml                     # MODIFIED — +fumadocs-mdx, +fumadocs-core (devDeps)
+source.config.ts                                # 25 collections, async:true
+src/lib/poc-fumadocs/source.ts                  # per-locale loader map
+src/lib/poc-fumadocs/videos.ts                  # fumadocs-backed video helpers
+src/lib/poc-fumadocs/tutorials.ts               # fumadocs-backed tutorials helpers
+src/lib/poc-fumadocs/rehypeImgForFumadocs.ts    # rehypeImg adapter (skip plaiceholder for non-EN)
+src/lib/poc-fumadocs/rehypeStripRaw.ts          # strip raw hast before rehype-toc
+src/lib/poc-fumadocs/toc.ts                     # fumadocs TOC → CItems shape
+app/[locale]/[...slug]/page.tsx                 # REPLACED — fumadocs-backed, no importMd
+app/[locale]/videos/page.tsx                    # MODIFIED — uses fumadocs helpers
+app/[locale]/videos/[slug]/page.tsx             # MODIFIED — uses fumadocs helpers
+app/[locale]/developers/tutorials/page.tsx      # MODIFIED — uses fumadocs helper
+src/components/Videos/VideoWatch/index.tsx      # MODIFIED — uses fumadocs helpers
+src/lib/md/rehypeImg.ts                         # MODIFIED — +skipPlaceholders option
+src/lib/data/index.ts                           # +getISRTestAppsData (60s revalidate)
+src/components/Content/apps/CategoryAppsGrid.tsx  # MODIFIED — uses ISR test getter
+next.config.js                                  # MODIFIED — preset env guard + rules
+netlify.toml                                    # MODIFIED — locale subset + recon block
+package.json                                    # +fumadocs-mdx, +fumadocs-core, postinstall
+.gitignore                                      # .source/ checked in (race workaround)
+.source/                                        # NEW — committed
 ```
 
-Generated (gitignored): `.source/{server,browser,dynamic}.ts`, `.source/source.config.mjs`.
-
-## Session timeline (problems and fixes)
-
-### 1. Setup
-- Installed `fumadocs-mdx@15.0.2` + `fumadocs-core@16.8.9` as devDeps. Zod 4 peer warning (we have 3.25.76) — sidestepped by skipping Zod-based schemas.
-- Wrote `source.config.ts` with `defineDocs({...})` pointing at `public/content/developers/tutorials`.
-- Wired `createMDX()` into `next.config.js`.
-
-### 2. First failure: yaml loader collision
-`defineDocs` registers a meta collection whose webpack/turbopack `*.yaml` loader shadows our existing `yaml-loader` rule (used for `src/data/*.yaml`). Build broke on `developer-docs-links.yaml`.
-
-**Fix:** switched to `defineCollections({type: 'doc'})` (no meta collection) and re-applied our `*.yaml` turbopack rule *after* Fumadocs in `next.config.js`.
-
-### 3. Second failure: `Invalid tag: ---` on every tutorial
-Hypothesis at first: MDX 3 rejecting our content (legacy v1 patterns, `<sup>` HTML, Crowdin-mangled syntax). Documented as a real migration cost.
-
-**Real cause:** turbopack matched our `*.md` raw-loader rule over Fumadocs' `*.{md,mdx}` rule (literal pattern beats brace pattern). Files arrived as raw strings; React tried to render the whole file as a JSX tag named after the file contents.
-
-**Fix:** delete `*.md` from `cfg.turbopack.rules` before Fumadocs wraps the config. After this, *all 58 pages compiled cleanly* with no MDX content changes needed. The "MDX strictness" blocker dissolved.
-
-### 4. Heading IDs were rendered literally
-`{#kebab-id}` syntax appeared as text in headings.
-
-**Fix:** added `remark-heading-id` to the collection's `mdxOptions.remarkPlugins`.
-
-### 5. Images broke (`width "NaN"`)
-Our `MdComponents.img` expects width/height props. Markdown produced bare `<img src="./x.png">`.
-
-**Fix:** wrote `src/lib/poc-fumadocs/rehypeImgForFumadocs.ts` — thin adapter that derives `dir`/`srcPath`/`locale` from `vfile.path` per file, then delegates to our existing `rehypeImg`. Result: Next.js `<Image>`, srcset, blur placeholders, all working.
-
-### 6. TOC empty
-We had passed `remarkPlugins: [remarkHeadingId]` directly, which replaced Fumadocs' default preset (TOC extraction, code highlighting, image transform).
-
-**Fix:** wrap with `applyMdxPreset({...})` explicitly. Found via reading `build-DPafU2lu.js` — when `collection.mdxOptions` is set, the preset is *not* auto-applied. After preset: TOC populated.
-
-### 7. `Dynamic href \`[object Object]\`` from Link
-Default preset's `remarkImage` with `useImport: true` rewrites `![](./x.png)` into ES module imports — clashes with our `rehypeImgForFumadocs`.
-
-**Fix:** `remarkImageOptions: false` in the preset call.
-
-### 8. ShikiError: Language `yul` not found
-Preset's `rehypeCode` (Shiki) doesn't know our exotic langs (`yul`, `zokrates`, etc). Our existing pipeline highlights via `pre`/`code` component overrides, not at compile time.
-
-**Fix:** `rehypeCodeOptions: false`.
-
-### 9. RSC component-serialize errors (false alarm)
-Initially we saw "Functions cannot be passed directly to Client Components" when passing our mixed `mdComponents` (server + client) to `<MDXContent components={...} />`. Hypothesized as a real blocker requiring an MDXProvider client boundary.
-
-**Real cause:** side-effect of issue #3. Once MDX was actually compiling instead of arriving as raw strings, components wired straight through with no provider boundary needed.
-
-### 10. JSX components silently stripped
-Files like `<Emoji>`, `<Alert>`, `<WhitepaperBridge>` disappear from rendered output. 17/57 tutorials use these; whitepaper has `<WhitepaperBridge />` on line 10.
-
-**Cause:** Fumadocs derives MDX `format` from file extension (`.md` → markdown mode, `.mdx` → JSX mode). Our files are `.md`. The setting in `mdxOptions.format` is overridden by the file-extension check in `build-mdx-DeW1GoVI.js`.
-
-**Status:** documented in evaluation, **not fixed**. Workaround would be renaming `.md` to `.mdx` (one mechanical PR across all content) or patching Fumadocs' extension check via a plugin's `doc.vfile` hook.
-
-### 11. Type errors after the runtime worked
-TypeScript flagged 3 errors:
-- `Source<{..., metaData: never}>` not assignable to `loader()`'s `ResolvedInput`
-- `page.data.body` / `page.data.toc` missing on `PageData`
-
-**Fix:** added a minimal Standard Schema (`StandardSchemaV1`) in `source.config.ts` for `Frontmatter`. No runtime validation (frontmatter parsing already happens upstream), but it gives `DocCollectionEntry<>` a proper `Frontmatter` type so the inferred Source satisfies `pageData extends PageData`. Removed the `@ts-ignore` on the `.source/server` import. Types flow through cleanly. `tsc --noEmit` passes on the whole repo.
-
-### 12. Whitepaper added for comparison
-Added a second `defineCollections` for `public/content/whitepaper`. Page route resolves slug prefix `["whitepaper", ...]` to the whitepaper source. 38 TOC entries, 6 optimized images, ~3× warm-fetch speedup over existing route.
-
-## Key insight from the session
-
-The first evaluation report listed three "migration blockers" (MDX strictness, RSC component serialization, i18n layout). Two of the three turned out to be **misdiagnosed**. The actual blocker was a single-line turbopack rule precedence issue — fix that and 58 pages render with full image, TOC, and component-override parity.
-
-The real remaining costs are:
-1. `.md` → `.mdx` rename to enable embedded JSX components.
-2. i18n adapter (Fumadocs' sibling-suffix translations vs our `translations/<locale>/<slug>/` layout).
-3. Build perf at scale — 8,052 files vs the 58 we measured.
-
-## Full-scope expansion: all 326 English md pages
-
-After validating the narrow PoC (57 tutorials + whitepaper), the PoC was
-expanded to compile **every English markdown page** under `public/content/**`
-(translations excluded) through one Fumadocs collection. Goal: see what a full
-production build looks like with the entire EN tree going through Fumadocs.
-
-### Setup change
-
-`source.config.ts` now declares one collection instead of two:
-
-```ts
-export const content = defineCollections({
-  type: "doc",
-  dir: "public/content",
-  files: ["**/*.md", "**/*.mdx", "!translations/**"],
-  schema: frontmatterSchema,
-  mdxOptions: sharedMdxOptions,
-})
-```
-
-The route at `app/[locale]/poc-fumadocs/[[...slug]]/page.tsx` uses a single
-`contentSource` loader, so any `public/content/<a>/<b>/.../index.md` renders at
-`/en/poc-fumadocs/<a>/<b>/.../`. `generateStaticParams` returns 326 paths.
-
-### New issue: rehype-toc chokes on `raw` hast nodes
-
-Six files (~2% of EN) failed the bundler with
-`Error: Cannot handle unknown node 'raw'` from `hast-util-to-estree`, called
-inside Fumadocs' `rehype-toc`. Cause: all six had headings with inline JSX —
-`<Emoji text=":one:" />`, `<sup>`, `<Emoji text="🦓" />` — which in `.md`
-mode parse as raw HTML. The hast `raw` node has no estree handler.
-
-Failing files:
-- `roadmap/merge/issuance/index.md` — `<sup>` in paragraph + `<Emoji>` heading
-- `roadmap/fusaka/index.md` — `<Emoji>` headings
-- `contributing/design/index.md` — `<Emoji>` headings
-- `community/get-involved/index.md` — `<Emoji>` headings
-- `ethereum-forks/index.md` — `<Emoji>` heading
-- `developers/docs/networks/index.md` — `<Emoji>` headings
-
-Fix: a 15-line `rehypeStripRaw` plugin removes `raw` nodes from the hast tree
-before `rehype-toc` runs. Plugin-ordering catch: Fumadocs' preset resolver
-appends user-returned plugins AFTER the preset's own (rehype-toc included).
-To run *before* rehype-toc, prepend in the resolver:
-`rehypePlugins: (v) => [rehypeStripRaw, ...v, rehypeImgForFumadocs]`.
-
-After this fix, **all 326 EN pages compile and render** through the PoC route.
-
-### Build measurements (cold, FUMADOCS_POC=1 vs 0)
-
-Cold builds (`rm -rf .next` between runs), `LIMIT_CPUS=8`,
-`NODE_OPTIONS=--max-old-space-size=8192`, Next.js 16.2.3 Turbopack.
-
-|                       | Baseline (FUMADOCS_POC=0) | PoC (FUMADOCS_POC=1) | Δ                    |
-|-----------------------|---------------------------|----------------------|----------------------|
-| Routes prerendered    | 1140                      | 1466                 | +326 (+29%)          |
-| Compile               | 26.6 s                    | 38.8 s               | +12.2 s              |
-| TypeScript            | 21.5 s                    | 18.3 s               | within noise         |
-| Static generation     | 50 s / 1140 pages         | 50 s / 1466 pages    | same wall, +29% pages |
-| Total wall time       | 1 m 42 s                  | 1 m 52 s             | +10 s (+10%)         |
-| `.next` size          | 1.6 GB                    | 1.9 GB               | +300 MB (+19%)       |
-| `.source/` size       | —                         | 124 KB               | —                    |
-
-Caveats: the PoC adds 326 routes *on top of* the existing pipeline (both render
-the EN tree in parallel). A real migration would replace, not duplicate — so
-the .next-size delta isn't representative of post-migration steady state.
-
-Key observation: **static-gen wall time was identical (50 s) despite the PoC
-producing 326 more pages**. The fumadocs pages are essentially free at gen time
-because they're already compiled to JS modules in `.source/`. The +12 s
-compile delta is the entire per-page cost, paid once.
-
-### What this means for the migration math
-
-Original eval flagged build perf at scale as a Go/No-Go gate:
-> "PoC compiles 57 files; the full 8,052 is two orders of magnitude larger.
-> Need to measure cold `next build` time with all content vs. today."
-
-Measured cost: **+12 s of compile for 326 EN pages ≈ 37 ms/page** at the MDX
-compile step. Even if the full 8,052 (25 locales × 326) goes through fumadocs
-linearly, that's ~5 min of MDX compile — but locales would more realistically
-ship pre-compiled, or share compiled JS across locales (an i18n adapter
-decision). Per-page cost is the right way to extrapolate, not raw file count.
-
-The original concern that "if build time doubles, that offsets the
-runtime-correctness win" doesn't materialize here — at full EN scope the
-delta is +10 s on a 102 s baseline.
-
-### Residual issues at full scope
-
-1. **JSX components silently stripped in `.md` mode** — 58/326 EN files use
-   `<Card>`, `<Alert>`, `<Emoji>`, `<EnvWarningBanner>`, `<WhitepaperBridge>`,
-   `<YouTube>`, etc. and would render with those components missing.
-   Resolution path: rename `.md` → `.mdx` (mechanical PR).
-2. **Inline HTML in markdown** (`<sup>`, `<dl>`, etc.) requires the
-   `rehypeStripRaw` workaround above OR `.md` → `.mdx` rename + a proper
-   MDX parse. After rename, `<sup>` would be valid JSX and the strip-raw
-   adapter goes away.
-3. **i18n adapter** — unchanged from the original eval. PoC is English-only.
-   Either restructure `translations/<locale>/<slug>/index.md` to sibling-suffix
-   (large intl-pipeline change) or write a custom `Source` adapter
-   (~150 LOC).
-4. **Build duplication** — the PoC compiles every EN file twice (existing
-   pipeline + fumadocs). A real migration replaces the existing route's
-   `getPageData` path with `contentSource.getPage()`, reclaiming the 1140
-   non-fumadocs routes that today still go through `[...slug]/page.tsx`.
-
-### Updated recommendation
-
-The full-scope PoC strengthens the original recommendation:
-
-1. **`.md` → `.mdx` rename** (one mechanical PR). Removes 18% silent-strip
-   and eliminates the rehype-raw workaround.
-2. **End-to-end cutover of one layout** (tutorials, 57 EN files × 25 locales).
-   Now that the i18n adapter is the only open question, that's the first
-   real migration step.
-3. **Measure full multi-locale build** before broader rollout. The +12 s for
-   EN-only is encouraging but doesn't yet model the locale matrix cost.
-
-The PoC has now answered every question the original eval flagged as a
-go/no-go gate except #3 (i18n adapter). Build perf is not a blocker.
-
-## Cutover: replace `[locale]/[...slug]/page.tsx` with Fumadocs
-
-Goal: make Fumadocs serve the same URLs as today (`/<locale>/<…slug>/`) by
-fully replacing the existing catch-all instead of running as a parallel
-PoC route. Scope is intentionally PoC-level (EN-only, no layout wrapper).
-
-### Changes
-
-- `src/lib/poc-fumadocs/source.ts` — `baseUrl: "/poc-fumadocs"` → `baseUrl: "/"`.
-- `app/[locale]/[...slug]/page.tsx` — replaced. Returns `notFound()` for
-  `locale !== "en"`. Uses `contentSource.getPage(slug)` for EN.
-  `generateStaticParams` hands back English-only paths.
-- Deleted `app/[locale]/[...slug]/page-jsonld.tsx` (no longer wired in).
-- Deleted `app/[locale]/poc-fumadocs/` — the parallel PoC URL prefix is gone.
-
-### Cold-build measurements after cutover
-
-|                   | Baseline (FUMADOCS_POC=0) | Dual-pipeline PoC (FUMADOCS_POC=1, parallel route) | Cutover (FUMADOCS_POC=1, replaces `[...slug]`) |
-|-------------------|---------------------------|----------------------------------------------------|------------------------------------------------|
-| Routes            | 1140                      | 1466                                               | 604                                            |
-| Compile           | 26.6 s                    | 38.8 s                                             | 26.8 s                                         |
-| TypeScript        | 21.5 s                    | 18.3 s                                             | 19.4 s                                         |
-| Static generation | 50 s                      | 50 s                                               | **11.4 s**                                     |
-| Total wall        | 1 m 42 s                  | 1 m 52 s                                           | **1 m 2 s**                                    |
-| `.next` size      | 1.6 GB                    | 1.9 GB                                             | 822 MB                                         |
-
-Important caveat: route count drops from 1140 → 604 because non-EN locales
-404 at the catch-all (24 locales' worth of static paths removed). The 4×
-static-gen speed-up is partly fumadocs pages being free at gen time, partly
-fewer pages to generate. After the i18n adapter lands and non-EN locales come
-back, route count will rise and gen time will follow — though still benefiting
-from the pre-compiled pages.
-
-### Feature parity gaps (intentional, PoC-scope)
-
-The replacement route is intentionally minimal. Things the old route did that
-this version drops:
-
-| Feature | Where it lived | Reattach plan |
+## ISR-fix verification
+
+The whole reason for this refactor was to fix the ISR 404 class of bugs
+documented in
+`docs/solutions/integration-issues/netlify-isr-404-async-server-components.md`:
+catch-all pages that embed `unstable_cache`-revalidated async server
+components (e.g. gaming's `<CategoryAppsGrid>`) 404 on Netlify after the
+cache TTL expires, because the serverless function can't read
+`public/content/*.md` at runtime.
+
+**Setup:** swapped the gaming page back into ISR via a 60s revalidate
+getter (`getISRTestAppsData`). With the legacy route, that's the bug.
+With the fumadocs route — which now sources frontmatter from `page.data`
+and never calls `importMd()` — it should pass.
+
+**Probe:** after `curl /api/revalidate?path=/en/gaming/`, the cache state
+flipped exactly as predicted:
+
+| Signal | Before revalidate | After revalidate |
 |---|---|---|
-| Layout selection (`docs` / `tutorial` / `static` / `upgrade` / …) | `getLayoutFromSlug` + `layoutMapping` | Decide per-collection in `source.config.ts` or per-page via `frontmatter.template`; wrap output in `Layout`. |
-| `I18nProvider` + scoped messages | `pick(allMessages, requiredNamespaces)` | Re-add once non-EN locales are restored. |
-| JSON-LD | `SlugJsonLD` component | Re-add as a thin component reading `page.data` frontmatter. |
-| Contributors / reading-time / `lastEditLocaleTimestamp` | filesystem + git scan in `getPageData` | Port as a Fumadocs plugin `doc.frontmatter` hook, or precompute at content-source time. |
-| GFI scope (`getGFIs()` injected as `gfissues`) | data-layer | Re-add per layout that needs it. |
-| Dynamic frontmatter `published` formatting | `dateToString` | Add to the rendering layer. |
-| 24 non-English locales for catch-all routes | `getPostSlugs` enumerated all locales | i18n adapter (still the open gate). |
+| HTTP | 200 | 200 |
+| etag | `W/"npqvazvo5f8juv"` | `W/"17mx9kszo6r8k3z"` (new) |
+| x-nextjs-date | build-time | fresh render (~7 min later) |
+| cache-status | `Next.js; hit` | `Netlify Durable; fwd=stale; ttl=…; stored` |
 
-### How to back out
+The `stored` line is the smoking gun — Netlify's Durable cache missed,
+the serverless function re-executed the page render, and the output was
+stored fresh. Function logs across that window show **zero** `ENOENT`
+errors on `public/content/gaming/...`. With the legacy route this is
+exactly where the 404 fires.
 
-```bash
-git restore app/[locale]/[...slug]/page.tsx
-git restore --staged app/[locale]/[...slug]/page-jsonld.tsx
-git checkout HEAD -- app/[locale]/[...slug]/page-jsonld.tsx   # if deleted
-# baseUrl back to "/poc-fumadocs" in src/lib/poc-fumadocs/source.ts if you
-# want to keep PoC alongside the existing route.
+The unrelated `/videos` ENOENT noise that was in earlier logs is now
+gone too: the hub routes (videos / video detail / tutorials / VideoWatch)
+have been migrated to fumadocs-backed helpers (`src/lib/poc-fumadocs/
+{videos,tutorials}.ts`) so they don't `readdir(public/content/...)` at
+request time either. Same class of bug, same fix.
+
+## Memory budget
+
+The OOM-vs-locale-count curve so far, on Netlify:
+
+| Locales | Wall | Outcome |
+|---|---|---|
+| 1 (EN) | 1 m 22 s | green |
+| 6 (en,es,de,fr,zh,ja) | ~4 min | green |
+| 12 (+ko,it,pt-br,ru,vi,hi) | unknown | OOM (SIGKILL) |
+| 25 (all) | 57 min | OOM (SIGKILL) |
+
+A recon block in `netlify.toml` prints the actual container limits at
+build start. Captured numbers:
+
+```
+MemTotal:    10.7 GB
+CPUs:        6
+NODE_OPTIONS: --max-old-space-size=10240
 ```
 
-## i18n: all 25 locales
+So the container is ~10.7 GB / 6 CPU with a 10 GB V8 heap cap — **not**
+the 36 GB / 10 CPU Enterprise High-Performance tier the org reportedly
+has access to. `nf_team_business` plan, no per-site `build_resource_class`
+override applied. The "Killed" signature (vs. a JS heap-exhaustion
+exception) means total RSS (Node heap + Sharp native + worker threads)
+is crossing the container ceiling, not V8 specifically.
 
-Goal: extend the fumadocs cutover to the full locale matrix without
-restructuring the `translations/<locale>/<slug>/index.md` layout. Per-locale
-collections keep each tree compiling independently; the route dispatches by
-`params.locale`.
+Once the entitlement is applied to this site, the projection is that
+25 locales fit on 36 GB with ~10-15 min wall.
 
-### Changes
+Open levers if Enterprise isn't on the table:
 
-- `source.config.ts` — 25 `defineCollections({ type: "doc" })` exports, one
-  per locale. EN reads from `public/content` with `!translations/**`; every
-  other reads from `public/content/translations/<locale>`. Underscores in
-  exports (`content_pt_br`, `content_zh_tw`) because JS identifiers can't
-  contain hyphens.
-- `src/lib/poc-fumadocs/source.ts` — `sources` record keyed by locale, each
-  value is a Fumadocs `loader({ baseUrl: "/<locale>" })`. `getContentSource`
-  is the lookup; `allLocaleParams()` flattens for `generateStaticParams`.
-- `app/[locale]/[...slug]/page.tsx` — drops the EN-only check; tries the
-  locale source first and falls back to EN with `contentNotTranslated={true}`
-  when a translation is missing (matches today's `getPageData` behavior).
-- `src/lib/poc-fumadocs/rehypeImgForFumadocs.ts` — strips
-  `translations/<locale>/` from the file path before deriving `dir`/`srcPath`,
-  so translated pages resolve images from the (image-bearing) EN tree. Passes
-  locale through to `rehypeImg` so the i18n-aware translated-image swap still
-  fires.
-- `src/lib/md/rehypeImg.ts` — `getImageSize` wraps `sizeOf` in try/catch and
-  returns `undefined` on missing files. PoC tolerance for stale image refs
-  in translated md (≈29 references to renamed EN paths).
-- `public/content/translations/te/videos/ai-agents-interview-luna/index.md`
-  — frontmatter had a duplicated `title:` prefix inside a quoted string AND
-  a duplicated trailing frontmatter block. Cleaned.
+- **Split-build per locale group** — 5 groups × 5 locales × ~4 min each,
+  parallel Netlify branches, recombined at deploy. Real engineering
+  project (~1-2 weeks).
+- **Move plaiceholder out of MDX compile** — separate pre-build step that
+  writes a static JSON, rehypeImg only looks up. Won't fix turbopack's
+  own memory growth, but bounds Sharp's native allocations cleanly.
+- **Webpack fallback** — `--no-turbo`. Slower, different allocation
+  profile, may or may not fit. Not validated.
 
-### Cold-build measurements (all 25 locales)
+Already applied:
+- **`async: true` on every collection** — lazy body imports, eager
+  frontmatter only.
+- **Skip plaiceholder/Sharp for non-EN locales** in `rehypeImgForFumadocs`.
+  Translations reuse EN's image tree, so the 24 redundant Sharp passes
+  produce no new output. Didn't fix the OOM by itself — turbopack's own
+  chunk graph is the dominant memory consumer.
 
-|                   | EN-only cutover | 25 locales (this run) |
-|-------------------|-----------------|-----------------------|
-| Routes            | 604             | 8213                  |
-| Compile           | 26.8 s          | 3.0 min               |
-| TypeScript        | 19.4 s          | 39.1 s                |
-| Static generation | 11.4 s          | 2.3 min               |
-| Total wall        | 1 m 2 s         | **6 m 15 s**          |
-| `.next` size      | 822 MB          | 8.2 GB                |
+## Tier-1 mitigations (this run)
 
-For 13.6× more routes (604 → 8213), wall time grew 6.0× and compile 6.7×.
-Per-page extrapolation continues to hold: ~22 ms compile/page,
-~17 ms gen/page across the full locale matrix.
+Hypotheses for the 25-locale OOM, in suspicion order:
 
-### Open issues this surfaced
+1. **Eager frontmatter graph in `.source/server.ts`** — 8,054 distinct
+   `?only=frontmatter` virtual modules + their underlying `.md` files in
+   the turbopack module graph. The `async: true` lazy-body trick doesn't
+   shrink this: `.source/server.ts` is 3.1 MB at 25 locales.
+2. **Static-page render workers + Next 16 RSC payloads** — ~8,213 routes;
+   per-page output is ~30% larger than Next 14. With `cpus = 2` in
+   `next.config.js` the parallel render peak was already bounded, but at
+   8 k routes the cumulative held output is still significant.
+3. **Sentry source-map generation/upload** — `widenClientFileUpload: true`
+   was on with no `sourcemaps.disable`. Known OOM source on large
+   static-gen builds (getsentry/sentry-javascript#10468, #13836).
+4. **Sharp/plaiceholder native** — bounded already.
+
+Tier-1 fixes layered in this build (cheap, low-risk, all reversible):
+
+| Lever | Change | Where |
+|---|---|---|
+| Sentry source maps | `sourcemaps: { disable: true }`, `widenClientFileUpload: false` | `next.config.js` |
+| TS type-check at build | `typescript.ignoreBuildErrors: true` | `next.config.js` |
+| Server source maps | `experimental.serverSourceMaps: false` | `next.config.js` |
+| Browser source maps | `productionBrowserSourceMaps: false` (explicit) | `next.config.js` |
+| Static-gen concurrency | `LIMIT_CPUS=1` (→ `experimental.cpus: 1`) | `netlify.toml` |
+| V8 heap headroom | `NODE_OPTIONS=--max-old-space-size=8192 --max-semi-space-size=64` (was Netlify-auto `10240`) | `netlify.toml` |
+| Diagnostics | `next build --experimental-debug-memory-usage` + 15 s RSS sampler logging top-5 RSS by process | `netlify.toml` |
+
+The heap cap going *down* is deliberate: SIGKILL is cgroup-RSS-driven
+(Killed, not "JavaScript heap out of memory"), so V8 was already allowed
+to fill the whole 10.7 GB container — any native allocation then
+triggers the kill. Reining V8 to 8 GB leaves ~2.5 GB for Turbopack's
+Rust workers + Sharp + worker children.
+
+If this run still OOMs, the sampler log + `--experimental-debug-memory-usage`
+output will show *where* on the build timeline RSS spikes, which routes
+to Tier-2:
+
+- **JSON-manifest frontmatter source** — replace `defineCollections` with
+  a postinstall-built `frontmatter.json` + custom fumadocs source.
+  Eliminates ~8 k entries from the turbopack module graph.
+- **Webpack A/B** (`next build --webpack`) — `experimental.webpackMemoryOptimizations: true`
+  + default `webpackBuildWorker: true` are designed for this scenario.
+
+## Feature parity gaps (intentional, PoC-scope)
+
+| Feature | Reattach plan |
+|---|---|
+| `I18nProvider` + scoped messages | done |
+| JSON-LD on catch-all | done (reads `page.data` frontmatter) |
+| Per-page layout selection | done (per-page via `frontmatter.template`) |
+| Reading-time | **stub** (`{ minutes: 5 }`); real fix is a remark plugin |
+| Video transcript in JSON-LD | dropped; needs `includeProcessedMarkdown: true` |
+| Contributors / `lastEditLocaleTimestamp` | done (via `getStaticGitHubContributors`, already safe) |
+| Tutorials' `timeToRead` | **stub** (5 min) — same fix as catch-all reading-time |
+
+## Known content-tree quirks surfaced by the run
 
 1. **Stale image refs in translations** (~29). Translations point at EN
-   image paths that have since been renamed (e.g.
-   `developers/docs/layer-2-scaling/optimistic-rollups.png` →
-   `developers/docs/scaling/layer-2-rollups/optimistic-rollups.png`). Today's
-   pipeline ALSO fails on these at request time — contributes to the
-   ISR-404 class. PoC handles by skipping width/height on missing files.
-   Real fix: rerun intl-pipeline so translations reflect the current EN tree.
-2. **Malformed YAML frontmatter** — found one corrupted file in `te/`
-   (duplicate frontmatter block, unescaped quotes). Cleaned. A pre-merge
-   YAML lint on `public/content/translations/**/*.md` would catch this class.
-3. **Non-EN images opt out of placeholder generation** when missing on disk.
-   Resulting HTML keeps the bare `<img src="…">` with no `width`/`height`
-   so it doesn't shift the page, but no blur placeholder either.
+   image paths since renamed. Today's pipeline also 404s on these at
+   request time; PoC tolerates by skipping width/height on missing files.
+   Real fix is to rerun intl-pipeline.
+2. **Malformed YAML frontmatter in `te/videos/ai-agents-interview-luna`** —
+   duplicate `title:` prefix; cleaned. A pre-merge YAML lint on
+   `translations/**/*.md` would catch this class.
+3. **`.md` mode silently strips JSX components** (58/326 EN files use
+   `<Card>` / `<Alert>` / `<Emoji>` / etc.). Fumadocs derives MDX `format`
+   from extension. Workaround: mechanical `.md` → `.mdx` rename.
 
-### What the i18n run answers
+## Measurements summary (local, baseline reference)
 
-The original eval's last go/no-go gate was build perf at full scale:
-> "PoC compiles 57 files; the full 8,052 is two orders of magnitude larger.
-> Need to measure cold `next build` time with all content vs. today."
+Cold builds, `LIMIT_CPUS=8`, `NODE_OPTIONS=--max-old-space-size=8192`,
+Next.js 16.2.3 Turbopack — measured locally except the Netlify rows.
 
-Measured: **6 m 15 s** cold-build for all 25 locales × 326 pages going
-entirely through Fumadocs. Comparable to today's Netlify build envelope.
-Build perf is not a blocker even at full scope.
+| Mode | Routes | Compile | Wall | `.next` |
+|---|---|---|---|---|
+| Baseline (legacy, 25 locales) | 1140 | 26.6 s | 1 m 42 s | 1.6 GB |
+| 25-locale full PoC (local) | 8213 | 3.0 min | 6 m 15 s | 8.2 GB |
+| Netlify EN-only PoC (deployed) | 388 | 32.5 s | 1 m 22 s | — |
+| Netlify 6-locale PoC (deployed) | ~2300 | 45 s | ~4 min | — |
 
-## Honouring `NEXT_PUBLIC_BUILD_LOCALES`
+Per-page cost: ~22 ms compile, ~17 ms static-gen across the locale
+matrix. Static-gen wall time is roughly constant in route count because
+the fumadocs pages are pre-compiled JS modules.
 
-The repo already has a convention (`src/lib/constants.ts:21`) for subsetting
-the built locales via the comma-separated `NEXT_PUBLIC_BUILD_LOCALES` env
-var. The fumadocs pipeline now honours it the same way:
+`NEXT_PUBLIC_BUILD_LOCALES` is honoured at three layers: `source.config.ts`
+swaps disabled locales' glob to a never-match pattern, `source.ts` filters
+the loader map, `allLocaleParams()` iterates only enabled locales.
 
-- **`source.config.ts`** — when set, disabled locales' `files` glob switches
-  to `["__disabled_locale_never_matches__.never"]` (a positive pattern that
-  matches nothing). Fumadocs-mdx emits zero glob imports for those
-  collections, so they cost nothing at compile.
-- **`src/lib/poc-fumadocs/source.ts`** — disabled locales are filtered out of
-  the `sources` record. `getContentSource(locale)` returns `undefined` for
-  them; the route then 404s.
-- **`generateStaticParams`** — `allLocaleParams()` iterates only enabled
-  locales, so non-built locale × slug combinations never become routes.
+---
 
-Effect — same env var, three measured modes:
+## The `.source/` race and how it was fixed
 
-|                   | All 25 locales | EN-only (`=en`) | Baseline (legacy, all locales) |
-|-------------------|----------------|-----------------|--------------------------------|
-| Routes            | 8213           | 388             | 1140                           |
-| Compile           | 3.0 min        | 46 s            | 26.6 s                         |
-| TypeScript        | 39 s           | 34.9 s          | 21.5 s                         |
-| Static generation | 2.3 min        | 11.5 s          | 50 s                           |
-| **Total wall**    | **6 m 15 s**   | **1 m 40 s**    | **1 m 42 s**                   |
-| `.next` size      | 8.2 GB         | 714 MB          | 1.6 GB                         |
+In `fumadocs-mdx@15.0.2`, `createMDX()` calls its async `init()`
+fire-and-forget — `next.config.js` returns before the file generation
+completes. At small scale the race is invisible; at 25 collections × 326
+files the gap is wide enough that `.source/server.ts` lands on disk with
+only ~3 of 25 collections populated. The smoking gun in build logs was
+`[MDX] generated files in 12-20ms` vs. the 137-300 ms a clean run takes.
 
-For CI smoke tests or visual regression, `NEXT_PUBLIC_BUILD_LOCALES=en` is
-already the configured pattern (`pnpm test:visual:build` in `package.json`)
-— this works out of the box.
+Fix has four pieces, none sufficient alone:
+
+1. **`package.json`** — conditional postinstall: `test -f .source/server.ts
+   || fumadocs-mdx`. Regenerates when missing (local cold install), no-ops
+   when the committed copy is present (Netlify).
+2. **`next.config.js`** — `process.env._FUMADOCS_MDX = "1"` set *before*
+   `require("fumadocs-mdx/next")` short-circuits the fire-and-forget init.
+3. **`source.config.ts`** — `async: true` on every collection. Lazy
+   `() => import()` body refs, eager frontmatter only. Shrinks the eager
+   build-graph.
+4. **`.source/` is checked in** (gitignore entry replaced with a comment).
+   Workaround for the upstream race, not a permanent fix. Regenerate with
+   `NEXT_PUBLIC_BUILD_LOCALES=<…> npx fumadocs-mdx` when content changes.
+
+**Upstream issue worth filing:** the race is reproducible at any scale
+that pushes init() longer than the time until the first turbopack consumer
+reads `.source/server.ts`. Fix is either `await init(...)` in `createMDX`
+or an opt-in `createMDX({ sync: true })`.
 
 ## How to reproduce
 
 ```bash
 pnpm install
-npx fumadocs-mdx     # generates .source/
+# postinstall regenerates .source/ if missing; otherwise the committed copy is used.
 pnpm dev
-# Visit:
-#   http://localhost:3000/en/poc-fumadocs/                     -> index
-#   http://localhost:3000/en/poc-fumadocs/whitepaper/          -> whitepaper
-#   http://localhost:3000/en/poc-fumadocs/<tutorial-slug>/     -> any tutorial
-#   http://localhost:3000/en/whitepaper/                       -> existing route (for comparison)
+# Visit /en/<slug>/ for any EN page — fumadocs serves the catch-all directly.
 ```
 
-To remove: revert `next.config.js`, delete `source.config.ts`, `.source/`, `src/lib/poc-fumadocs/`, `app/[locale]/poc-fumadocs/`, `docs/poc/`, then `pnpm remove fumadocs-mdx fumadocs-core`.
+Regenerate `.source/` after content edits:
+
+```bash
+NEXT_PUBLIC_BUILD_LOCALES=en npx fumadocs-mdx   # EN-only
+npx fumadocs-mdx                                # all 25 locales
+```
+
+To remove: revert `next.config.js`, `netlify.toml`, `package.json`, delete
+`source.config.ts`, `.source/`, `src/lib/poc-fumadocs/`, `docs/poc/`, then
+`pnpm remove fumadocs-mdx fumadocs-core`.
