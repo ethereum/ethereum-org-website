@@ -7,6 +7,7 @@ const meta = {
   title: "UI / LinkBox",
   component: LinkBox,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

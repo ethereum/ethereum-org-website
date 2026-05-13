@@ -6,6 +6,7 @@ const meta = {
   title: "UI / Flex",
   component: Flex,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

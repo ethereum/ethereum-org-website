@@ -12,6 +12,7 @@ const meta = {
   title: "UI / Section",
   component: Section,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

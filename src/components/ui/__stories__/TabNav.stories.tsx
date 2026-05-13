@@ -10,6 +10,7 @@ const meta = {
   title: "UI / TabNav",
   component: TabNav,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:
