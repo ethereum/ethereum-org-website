@@ -22,9 +22,9 @@ import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
 import {
-  allLocaleParams,
   contentSource,
   getContentSource,
+  prerenderLocaleParams,
 } from "@/lib/poc-fumadocs/source"
 import { fumadocsTocToCItems } from "@/lib/poc-fumadocs/toc"
 
@@ -136,8 +136,16 @@ export default async function Page(props: { params: Promise<Params> }) {
   )
 }
 
+// Pages for locales in NEXT_PUBLIC_PRERENDER_LOCALES are statically
+// generated at build time. Locales in BUILD_LOCALES but not PRERENDER are
+// allowed by `dynamicParams = true` and render on-demand on first
+// request; subsequent requests hit Netlify's Durable cache. Compile still
+// includes every locale's body chunks in the function bundle, so on-demand
+// renders don't hit `public/content/` at request time (no ISR-404 regress).
+export const dynamicParams = true
+
 export async function generateStaticParams() {
-  return allLocaleParams()
+  return prerenderLocaleParams()
 }
 
 export async function generateMetadata(props: { params: Promise<Params> }) {

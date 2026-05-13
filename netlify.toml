@@ -46,6 +46,14 @@ exit $BUILD_EXIT
   # serverSourceMaps off, cpus=1, V8 heap reined in below cgroup ceiling).
   # See docs/poc/PROGRESS.md "Memory budget".
   NEXT_PUBLIC_BUILD_LOCALES="en,ar,bn,cs,de,es,fr,hi,id,it,ja,ko,mr,pl,pt-br,ru,sw,ta,te,tr,uk,ur,vi,zh,zh-tw"
+  # Only EN is pre-rendered at build time (~326 routes). The other 24
+  # locales are *served* (BUILD_LOCALES includes them — their body chunks
+  # are in the function bundle) but rendered on-demand on first request
+  # and cached by Netlify Durable. This trims the static-gen accumulation
+  # (~1.6 GB) that pushed PID-2564 RSS over the ceiling in the previous
+  # build. Compile still costs ~7 GB (all 25 collections); ramp this up to
+  # add more pre-rendered locales as headroom allows.
+  NEXT_PUBLIC_PRERENDER_LOCALES="en"
   # Force single-CPU static-page generation so peak parallel render memory
   # is one page at a time. Tradeoff: longer wall time, lower peak RSS.
   LIMIT_CPUS = "1"

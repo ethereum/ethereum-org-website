@@ -107,3 +107,23 @@ export const allLocaleParams = () =>
   (Object.entries(sources) as [ContentLocale, ContentSource][]).flatMap(
     ([locale, src]) => src.generateParams().map((p) => ({ ...p, locale }))
   )
+
+// `NEXT_PUBLIC_PRERENDER_LOCALES` (comma-separated) narrows the locale set
+// that gets *statically generated at build time*. Locales in BUILD_LOCALES
+// but not PRERENDER_LOCALES are still served — they render on-demand on
+// first request and get cached by Netlify's Durable cache. Compile still
+// loads all 25 collections so the body chunks are in the function bundle;
+// only the static-gen accumulation cost is trimmed.
+//
+// Unset = pre-render all enabled locales.
+const PRERENDER_LOCALES = process.env.NEXT_PUBLIC_PRERENDER_LOCALES?.split(",")
+
+export const prerenderLocaleParams = () => {
+  if (!PRERENDER_LOCALES) return allLocaleParams()
+  const set = new Set(PRERENDER_LOCALES)
+  return (Object.entries(sources) as [ContentLocale, ContentSource][])
+    .filter(([locale]) => set.has(locale))
+    .flatMap(([locale, src]) =>
+      src.generateParams().map((p) => ({ ...p, locale }))
+    )
+}

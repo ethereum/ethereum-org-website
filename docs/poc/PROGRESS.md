@@ -196,11 +196,65 @@ fresh installs auto-patch. The patched file is committed alongside
 `.source/server.ts` (the same race-workaround as before).
 
 Tier-1 levers stay in place; they were not the cause but each remains a
-small independent win and a hedge against the next bottleneck. If this
-Tier-2 commit still OOMs, the remaining levers are:
+small independent win and a hedge against the next bottleneck.
+
+## Tier-2 outcome + Tier-3: scope static-gen to EN
+
+Tier-2 build (commit `224614bded`) ran for **7 minutes** before SIGKILL
+(vs 2 m 19 s previously). The curve shows the inline-frontmatter patch
+fixed compile — RSS still spikes to 7 GB at 45 s, but the build now
+moves *past* compile and runs static-page generation. The kill happens
+during static-gen / finalization:
+
+| t | PID-2564 RSS | likely phase |
+|---|---|---|
+| 45 s | 7076 MB | compile peak |
+| 62–119 s | 7140 MB | compile finishing / collecting page data |
+| 144 s | 7401 MB | static-gen starts (slow ramp begins) |
+| 309 s | 7942 MB | mid-gen |
+| 389 s | 8041 MB | late gen |
+| 406 s | **8673 MB** | sudden +632 MB jump — finalization |
+| 428 s | SIGKILL | |
+
+Main process accumulates ~1.5 GB across the ~5 min static-gen window,
+plus another +600 MB spike at finalization. Math: 8,213 routes ×
+~200 KB output (HTML + RSC payload) ≈ 1.6 GB — matches the climb. Body
+chunks loaded lazily per render also stay in the bundler's module cache
+on the main side.
+
+Fix: keep compile at 25 locales (needed so on-demand renders have body
+chunks in the function bundle), but **only pre-render EN at build time**.
+Translations are still served — they render on first request and
+Netlify Durable caches the result.
+
+| | Before | After |
+|---|---|---|
+| `generateStaticParams` count | 8,213 | ~326 (EN only) |
+| static-gen RSS accumulation | ~1.6 GB | ~65 MB |
+| compile cost | 7 GB (unchanged) | 7 GB |
+| projected peak RSS | ~8.7 GB → SIGKILL | ~7.2 GB → fits |
+
+Mechanics:
+
+- `src/lib/poc-fumadocs/source.ts` exposes `prerenderLocaleParams()` that
+  honours `NEXT_PUBLIC_PRERENDER_LOCALES`. Unset = pre-render all.
+- `app/[locale]/[...slug]/page.tsx` uses it in `generateStaticParams`
+  and sets `export const dynamicParams = true` so locales outside the
+  pre-render set are rendered on-demand.
+- `netlify.toml` sets `NEXT_PUBLIC_PRERENDER_LOCALES=en`. Bump up as
+  headroom allows.
+
+No ISR-404 regress: the on-demand render path reads frontmatter from
+inline constants in `.source/server.ts` and loads body via the
+pre-compiled lazy chunks that *are* in the function bundle — never from
+`public/content/` at request time.
+
+Tier-4 levers if static-gen still overflows even at 326 EN-only routes:
 
 - **`fumadocs dynamic: true`** — runtime MDX compile, zero build-time
-  body compilation. Tradeoff: cold-route TTFB.
+  body compilation. Tradeoff: cold-route TTFB; needs `public/content/`
+  re-added to function bundle (re-opens ISR-404 risk for routes using
+  data-layer fetchers).
 - **Webpack A/B** — `next build --webpack`, `experimental.webpackMemoryOptimizations: true`.
 - **Split-build per locale group** — the previous fallback.
 
