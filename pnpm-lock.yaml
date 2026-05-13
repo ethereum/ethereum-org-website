@@ -14707,7 +14707,7 @@ snapshots:
       '@types/debug': 4.1.13
       debug: 4.4.3(supports-color@10.2.2)
       pony-cause: 2.1.11
-      semver: 7.7.4
+      semver: 7.8.0
       uuid: 9.0.1
     transitivePeerDependencies:
       - supports-color
