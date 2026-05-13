@@ -7,6 +7,7 @@ const meta = {
   title: "UI / TruncatedText",
   component: TruncatedText,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

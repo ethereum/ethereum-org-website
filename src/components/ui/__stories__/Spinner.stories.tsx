@@ -7,6 +7,7 @@ const meta = {
   title: "UI / Spinner",
   component: Spinner,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

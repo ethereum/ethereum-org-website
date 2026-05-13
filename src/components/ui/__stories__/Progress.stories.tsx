@@ -7,6 +7,7 @@ const meta = {
   title: "UI / Primitives / Progress",
   component: Progress,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

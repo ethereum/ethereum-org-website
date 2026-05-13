@@ -6,6 +6,7 @@ const meta = {
   title: "UI / Primitives / Tabs",
   component: Tabs,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

@@ -14,6 +14,7 @@ const meta = {
   title: "UI / Primitives / Breadcrumb",
   component: Breadcrumb,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

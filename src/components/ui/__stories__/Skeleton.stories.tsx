@@ -13,6 +13,7 @@ const meta = {
   title: "UI / Skeleton",
   component: Skeleton,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

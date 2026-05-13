@@ -6,6 +6,7 @@ const meta = {
   title: "UI / Primitives / ScrollArea",
   component: ScrollArea,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

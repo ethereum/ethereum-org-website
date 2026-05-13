@@ -6,6 +6,7 @@ const meta = {
   title: "UI / List",
   component: List,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

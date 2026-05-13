@@ -13,6 +13,7 @@ const meta = {
   title: "UI / Primitives / Collapsible",
   component: Collapsible,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

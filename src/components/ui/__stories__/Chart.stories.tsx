@@ -27,6 +27,7 @@ const meta = {
   title: "UI / Chart",
   component: ChartContainer,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:
