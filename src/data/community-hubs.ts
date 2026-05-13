@@ -42,7 +42,7 @@ const communityHubs: CommunityHub[] = [
     meetupUrl: "https://luma.com/user/usr-ut3JGCXXuokkPdK",
     banner: HongKongHubBanner,
     brandColor:
-      "bg-linear-to-b from-[#A4FCF5]/5 to-[#A4FCF5]/10 dark:from-[#A4FCF5]/20 dark:to-[#A4FCF5]/10 border-[#A4FCF5]/20",
+      "bg-linear-to-b from-[#83AAFA]/5 to-[#83AAFA]/10 dark:from-[#CFC4FA]/20 dark:to-[#CFC4FA]/10 border-[#83AAFA]/20 dark:border-[#CFC4FA]/10",
   },
   {
     id: "rome",

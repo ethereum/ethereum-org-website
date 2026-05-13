@@ -197,13 +197,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   coworkingSignupUrl,
                   meetupUrl,
                   banner,
-                  brandColor: logoBgColor,
+                  brandColor,
                 }) => (
                   <div
                     key={id}
                     className={cn(
                       "flex w-full gap-4 rounded-4xl border p-6 shadow-lg sm:gap-6 sm:p-8",
-                      logoBgColor
+                      brandColor
                     )}
                   >
                     <div className="size-16 shrink-0 overflow-hidden rounded-full sm:size-20">
