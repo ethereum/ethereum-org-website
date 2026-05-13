@@ -109,10 +109,11 @@ export const isContentLocale = (locale: string): boolean =>
 // look up per-locale frontmatter via `getContentSource`.
 export const listSlugsUnder = (prefix: string): string[] => {
   const root = prefix.replace(/^\/|\/$/g, "")
-  const en = manifest.en ?? {}
-  if (!root) return Object.keys(en)
+  const enSlugs =
+    contentSource?.generateParams().map((p) => p.slug.join("/")) ?? []
+  if (!root) return enSlugs
   const head = `${root}/`
-  return Object.keys(en)
+  return enSlugs
     .filter((slug) => slug.startsWith(head))
     .map((slug) => slug.slice(head.length))
 }

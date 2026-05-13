@@ -176,7 +176,9 @@ ${slugLiteral}
 
 export type ManifestFrontmatter = Frontmatter
 
-export type Manifest = Record<ContentLocale, Record<string, ManifestFrontmatter>>
+export type Manifest = Partial<
+  Record<ContentLocale, Record<string, ManifestFrontmatter>>
+>
 `
 }
 
