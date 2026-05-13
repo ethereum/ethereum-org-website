@@ -373,15 +373,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <H2 className="mt-0">{t("page-gas-faq-header")}</H2>
           <div className="max-w-[832px]">
             <ExpandableCard title={t("page-gas-faq-question-1-q")}>
-              <p className="mb-6">
+              <p>
                 <Translation id="page-gas:page-gas-faq-question-1-a-1" />
               </p>
-              <p className="mb-6">
+              <p>
                 <Translation id="page-gas:page-gas-faq-question-1-a-2" />
               </p>
             </ExpandableCard>
             <ExpandableCard title={t("page-gas-faq-question-2-q")}>
-              <p className="mb-6">
+              <p>
                 <Translation id="page-gas:page-gas-faq-question-2-a-1" />
               </p>
               <BaseLink href="/eth/">
@@ -389,10 +389,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </BaseLink>
             </ExpandableCard>
             <ExpandableCard title={t("page-gas-faq-question-3-q")}>
-              <p className="mb-6">
+              <p>
                 <Translation id="page-gas:page-gas-faq-question-3-a-1" />
               </p>
-              <p className="mb-6">{t("page-gas-faq-question-3-a-2")}</p>
+              <p>{t("page-gas-faq-question-3-a-2")}</p>
             </ExpandableCard>
           </div>
         </Content>
