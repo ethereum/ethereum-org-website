@@ -134,50 +134,75 @@ Already applied:
   produce no new output. Didn't fix the OOM by itself — turbopack's own
   chunk graph is the dominant memory consumer.
 
-## Tier-1 mitigations (this run)
+## Tier-1 + diagnostics (commit `aa66bc1095`)
 
-Hypotheses for the 25-locale OOM, in suspicion order:
+Tier-1 fixes applied: Sentry source-maps off, `typescript.ignoreBuildErrors`,
+`serverSourceMaps: false`, `productionBrowserSourceMaps: false` (explicit),
+`LIMIT_CPUS=1`, `NODE_OPTIONS=--max-old-space-size=8192 --max-semi-space-size=64`.
+Diagnostics: `next build --experimental-debug-memory-usage` + 15 s
+free/top-RSS sampler.
 
-1. **Eager frontmatter graph in `.source/server.ts`** — 8,054 distinct
-   `?only=frontmatter` virtual modules + their underlying `.md` files in
-   the turbopack module graph. The `async: true` lazy-body trick doesn't
-   shrink this: `.source/server.ts` is 3.1 MB at 25 locales.
-2. **Static-page render workers + Next 16 RSC payloads** — ~8,213 routes;
-   per-page output is ~30% larger than Next 14. With `cpus = 2` in
-   `next.config.js` the parallel render peak was already bounded, but at
-   8 k routes the cumulative held output is still significant.
-3. **Sentry source-map generation/upload** — `widenClientFileUpload: true`
-   was on with no `sourcemaps.disable`. Known OOM source on large
-   static-gen builds (getsentry/sentry-javascript#10468, #13836).
-4. **Sharp/plaiceholder native** — bounded already.
+**Result: OOM at t=139 s during compile.** The log makes the cause
+unambiguous:
 
-Tier-1 fixes layered in this build (cheap, low-risk, all reversible):
+| t | PID 2570 RSS | V8 heap used | System used / avail |
+|---|---|---|---|
+| 0 s | 158 MB | 39 MB | 1.1 / 9.7 GB |
+| 15 s | 2754 MB | — | 5.2 / 5.8 GB |
+| 30 s | 5955 MB | 34 MB | 9.7 / 1.3 GB |
+| 45 s | 7132 MB | — | 10.9 / 0.1 GB |
+| 89 s | 7211 MB | 34 MB | 10.9 / 0.1 GB |
+| 139 s | SIGKILL | | |
 
-| Lever | Change | Where |
+**V8 heap stays at ~34 MB the entire time** (0.41 % of the 8 GB cap).
+The 7 GB RSS that fills the container is **native** memory inside the
+main `next build` process — Turbopack's Rust-side module graph. None of
+the Tier-1 levers reach that layer; they target V8 heap (Sentry source
+maps, TS check, server source maps, `cpus`, V8 cap), so it's expected
+that they didn't move the needle here. They're still applied because
+each is independently cheap, but the OOM driver is the module graph.
+
+The SIGKILL happens *before* "Collecting page data" — i.e. compile
+itself doesn't fit, so `cpus = 1` (which only affects static-page
+generation concurrency) can never help.
+
+## Tier-2: JSON-manifest frontmatter (this run)
+
+The fumadocs-mdx generator emits **8,052 eager imports** of the form
+`import { frontmatter as __fd_glob_N } from "<path>?only=frontmatter"`
+in `.source/server.ts` (plus 8,052 lazy `?collection=…` body imports).
+Each `?only=frontmatter` virtual module becomes its own entry in the
+turbopack chunk graph and is resolved + parsed at compile time. That's
+the 7 GB of native RSS.
+
+Fix: `src/lib/poc-fumadocs/inline-frontmatter.mjs` post-processes
+`.source/server.ts` to replace each `import … from "<file>?only=frontmatter"`
+with an inline `const __fd_glob_N = {…fm}` literal. Frontmatter is
+parsed once at postinstall time via gray-matter and embedded as JSON.
+The 25 `create.docLazy` calls keep referencing the same constants by
+name, so the source-tree shape and the route's `page.data` contract are
+unchanged. **Lazy body imports are preserved** — bodies still compile
+on-demand at first request.
+
+| | Before | After |
 |---|---|---|
-| Sentry source maps | `sourcemaps: { disable: true }`, `widenClientFileUpload: false` | `next.config.js` |
-| TS type-check at build | `typescript.ignoreBuildErrors: true` | `next.config.js` |
-| Server source maps | `experimental.serverSourceMaps: false` | `next.config.js` |
-| Browser source maps | `productionBrowserSourceMaps: false` (explicit) | `next.config.js` |
-| Static-gen concurrency | `LIMIT_CPUS=1` (→ `experimental.cpus: 1`) | `netlify.toml` |
-| V8 heap headroom | `NODE_OPTIONS=--max-old-space-size=8192 --max-semi-space-size=64` (was Netlify-auto `10240`) | `netlify.toml` |
-| Diagnostics | `next build --experimental-debug-memory-usage` + 15 s RSS sampler logging top-5 RSS by process | `netlify.toml` |
+| eager `?only=frontmatter` virtual modules | 8,052 | 0 |
+| lazy `?collection=` body chunks | 8,052 | 8,052 |
+| `.source/server.ts` size | 3.1 MB / 8,109 lines | 5.3 MB / 50,706 lines |
+| `.source/server.ts` cost in turbopack graph | resolve + parse 8 k modules eagerly | parse one 5.3 MB JS file once |
 
-The heap cap going *down* is deliberate: SIGKILL is cgroup-RSS-driven
-(Killed, not "JavaScript heap out of memory"), so V8 was already allowed
-to fill the whole 10.7 GB container — any native allocation then
-triggers the kill. Reining V8 to 8 GB leaves ~2.5 GB for Turbopack's
-Rust workers + Sharp + worker children.
+`postinstall` runs `fumadocs-mdx && node …inline-frontmatter.mjs`, so
+fresh installs auto-patch. The patched file is committed alongside
+`.source/server.ts` (the same race-workaround as before).
 
-If this run still OOMs, the sampler log + `--experimental-debug-memory-usage`
-output will show *where* on the build timeline RSS spikes, which routes
-to Tier-2:
+Tier-1 levers stay in place; they were not the cause but each remains a
+small independent win and a hedge against the next bottleneck. If this
+Tier-2 commit still OOMs, the remaining levers are:
 
-- **JSON-manifest frontmatter source** — replace `defineCollections` with
-  a postinstall-built `frontmatter.json` + custom fumadocs source.
-  Eliminates ~8 k entries from the turbopack module graph.
-- **Webpack A/B** (`next build --webpack`) — `experimental.webpackMemoryOptimizations: true`
-  + default `webpackBuildWorker: true` are designed for this scenario.
+- **`fumadocs dynamic: true`** — runtime MDX compile, zero build-time
+  body compilation. Tradeoff: cold-route TTFB.
+- **Webpack A/B** — `next build --webpack`, `experimental.webpackMemoryOptimizations: true`.
+- **Split-build per locale group** — the previous fallback.
 
 ## Feature parity gaps (intentional, PoC-scope)
 

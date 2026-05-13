@@ -8,7 +8,7 @@
     "dev:webpack": "next dev --webpack",
     "build": "next build",
     "build:webpack": "next build --webpack",
-    "postinstall": "test -f .source/server.ts || fumadocs-mdx",
+    "postinstall": "test -f .source/server.ts || (fumadocs-mdx && node src/lib/poc-fumadocs/inline-frontmatter.mjs)",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
