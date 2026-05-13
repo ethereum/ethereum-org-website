@@ -86,7 +86,7 @@
     "lucide-react": "^1.12.0",
     "motion": "^12.36.0",
     "next": "^16.2.3",
-    "next-intl": "^4.9.1",
+    "next-intl": "^4.9.2",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.3.0",
     "prism-react-renderer": "2.4.1",
