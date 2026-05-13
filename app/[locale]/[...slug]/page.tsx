@@ -14,7 +14,7 @@ import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
-import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { getGFIs } from "@/data-layer"
@@ -23,17 +23,32 @@ import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { getPageData } from "@/lib/md/data"
-import { getMdMetadata } from "@/lib/md/metadata"
+import {
+  contentSource,
+  getContentSource,
+  prerenderLocaleParams,
+} from "@/lib/poc-fumadocs/source"
+
+// PoC(hybrid): page existence + metadata come from `.source/manifest.json`
+// (built by `src/lib/poc-fumadocs/build-manifest.mjs` at postinstall).
+// Body compilation stays on the legacy `importMd` + `compile` path inside
+// `getPageData()`. `dynamicParams=true` lets locales outside
+// NEXT_PUBLIC_PRERENDER_LOCALES render on first request and be cached by
+// Netlify Durable; the function bundle must include public/content/**/*.md
+// for those on-demand renders to work (see netlify.toml [functions]).
+export const dynamicParams = true
 
 export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const params = await props.params
   const { locale, slug: slugArray } = params
 
-  // Check if this specific path is in our valid paths
-  const validPaths = (await generateStaticParams()) as SlugPageParams[]
-  const isValidPath = checkPathValidity(validPaths, params)
-
-  if (!isValidPath) notFound()
+  // Fast manifest lookup — no fs access. Falls back to EN when the
+  // locale's translation is missing (matches the legacy importMd
+  // fallback). If neither has it, the path is invalid.
+  const localeSource = getContentSource(locale)
+  const manifestPage =
+    localeSource?.getPage(slugArray) ?? contentSource?.getPage(slugArray)
+  if (!manifestPage) notFound()
 
   // Enable static rendering
   setRequestLocale(locale)
@@ -105,41 +120,38 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
 }
 
 export async function generateStaticParams() {
-  try {
-    const slugs = await getPostSlugs("/")
-
-    return slugs.map((slug) => ({
-      slug: slug.split("/").slice(1),
-    }))
-  } catch (error) {
-    // If content directory doesn't exist (e.g., in Netlify serverless environment),
-    // return empty array to allow ISR to handle all routes dynamically
-    console.warn(
-      "Content directory not found, enabling full dynamic routing:",
-      error
-    )
-    return []
-  }
+  return prerenderLocaleParams()
 }
 
 export async function generateMetadata(props: {
   params: Promise<SlugPageParams>
 }) {
   const params = await props.params
-  const { locale, slug } = params
+  const { locale, slug: slugArray } = params
 
-  try {
-    return await getMdMetadata({
-      locale,
-      slug,
-    })
-  } catch (error) {
+  const localeSource = getContentSource(locale)
+  const page =
+    localeSource?.getPage(slugArray) ?? contentSource?.getPage(slugArray)
+  if (!page) {
     const t = await getTranslations("common")
-
-    // Return basic metadata for invalid paths
     return {
       title: t("page-not-found"),
       description: t("page-not-found-description"),
     }
   }
+
+  const fm = page.data
+  const rawTitle = (fm.metaTitle ?? fm.title) as string | undefined
+  const title = rawTitle ?? ""
+  const pageTitle =
+    title.includes("ethereum.org") || !title ? title : `${title} | ethereum.org`
+
+  return await getMetadata({
+    locale,
+    slug: slugArray,
+    title: pageTitle,
+    description: fm.description as string | undefined,
+    image: fm.image as string | undefined,
+    author: fm.author as string | undefined,
+  })
 }
