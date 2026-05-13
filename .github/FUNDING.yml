@@ -1,0 +1,17 @@
+# These are supported funding model platforms
+
+github: # Replace with up to 4 GitHub Sponsors-enabled usernames e.g., [user1, user2]
+patreon: # Replace with a single Patreon username
+open_collective: # Replace with a single Open Collective username
+ko_fi: # Replace with a single Ko-fi username
+tidelift: # แทนที่ด้วยชื่อแพลตฟอร์ม/ชื่อแพ็คเกจ Tidelift เดียว เช่น npm/babel
+community_bridge: # แทนที่ด้วยชื่อโปรเจกต์ Community Bridge เดียว เช่น cloud-foundry
+liberapay: # แทนที่ด้วยชื่อผู้ใช้ Liberapay เดียว
+issuehunt: # แทนที่ด้วยชื่อผู้ใช้ IssueHunt เดียว
+lfx_crowdfunding: # แทนที่ด้วยชื่อโปรเจกต์ LFX Crowdfunding เดียว เช่น cloud-foundry
+ขั้วโลก: # แทนที่ด้วยชื่อผู้ใช้ Polar เดียว
+buy_me_a_coffee: # แทนที่ด้วยชื่อผู้ใช้ Buy Me a Coffee เดียว
+thanks_dev: # แทนที่ด้วยชื่อผู้ใช้ thanks.dev เดียว
+กำหนดเอง: # Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']
+github: [Pum482930]
+custom: ['https://blockscan.com/address/0x4971c0016ce3eb45a70d50b6627885524ee9961f', 'pump482930.base.eth']
