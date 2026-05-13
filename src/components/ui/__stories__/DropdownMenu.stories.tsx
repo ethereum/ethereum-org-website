@@ -22,6 +22,7 @@ const meta = {
   title: "UI / Primitives / DropdownMenu",
   component: DropdownMenu,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

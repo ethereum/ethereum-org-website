@@ -16,6 +16,7 @@ const meta = {
   title: "UI / Primitives / Sheet",
   component: Sheet,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

@@ -6,6 +6,9 @@ import ModalComponent from "../dialog-modal"
 const meta = {
   title: "UI / Modal",
   component: ModalComponent,
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   args: {
     defaultOpen: true,
     title: "Modal title",

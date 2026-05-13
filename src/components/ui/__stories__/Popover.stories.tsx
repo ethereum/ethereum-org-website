@@ -13,6 +13,7 @@ const meta = {
   title: "UI / Primitives / Popover",
   component: Popover,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

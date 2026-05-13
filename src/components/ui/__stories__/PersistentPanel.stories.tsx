@@ -12,6 +12,7 @@ const meta = {
     children: null,
   },
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

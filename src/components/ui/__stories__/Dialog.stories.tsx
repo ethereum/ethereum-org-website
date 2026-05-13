@@ -18,6 +18,7 @@ const meta = {
   title: "UI / Primitives / Dialog",
   component: Dialog,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:

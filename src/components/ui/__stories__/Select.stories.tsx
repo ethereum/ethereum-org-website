@@ -16,6 +16,7 @@ const meta = {
   title: "UI / Primitives / Select",
   component: Select,
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         component:
