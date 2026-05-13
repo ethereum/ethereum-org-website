@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:webpack": "next dev --webpack",
-    "build": "next build",
-    "build:webpack": "next build --webpack",
+    "build": "node src/lib/poc-fumadocs/build-manifest.mjs && next build",
+    "build:webpack": "node src/lib/poc-fumadocs/build-manifest.mjs && next build --webpack",
     "postinstall": "node src/lib/poc-fumadocs/build-manifest.mjs",
     "start": "next start",
     "lint": "eslint .",

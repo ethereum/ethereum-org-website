@@ -1,4 +1,4 @@
-import { readdir, readFile } from "fs/promises"
+import { readFile } from "fs/promises"
 import { join } from "path"
 
 import matter from "gray-matter"
@@ -9,6 +9,11 @@ import type { VideoFrontmatter } from "@/lib/interfaces"
 import { CONTENT_DIR, DEFAULT_LOCALE } from "@/lib/constants"
 
 import { getVideoThumbnails } from "@/lib/data"
+import {
+  contentSource,
+  getContentSource,
+  listSlugsUnder,
+} from "@/lib/poc-fumadocs/source"
 
 // Build-time caches to avoid redundant filesystem reads during static generation.
 // These are module-scoped Maps that persist for the duration of the build process.
@@ -95,43 +100,20 @@ export async function getVideoData(
 }
 
 /**
- * Convert VideoData to a flat VideoCardData suitable for client components.
- * Thumbnails are served from S3 (populated by the fetchVideoThumbnails task,
- * which handles both YouTube and customThumbnailUrl sources).
- */
-function toVideoCardData(
-  data: VideoData,
-  thumbnailMap: Record<string, string> | null
-): VideoCardData {
-  const { slug, frontmatter: fm } = data
-  return {
-    slug,
-    title: fm.title,
-    description: fm.description,
-    uploadDate: fm.uploadDate,
-    duration: fm.duration,
-    topic: fm.topic,
-    thumbnailUrl: thumbnailMap?.[slug] || "",
-  }
-}
-
-/**
- * Get all video slugs by scanning the content/videos directory.
- * Results are cached for the duration of the build.
+ * Get all video slugs from the content manifest (.source/manifest.json).
+ * No filesystem walk — the manifest is the source of truth.
  */
 export async function getVideoSlugs(): Promise<string[]> {
   if (slugsCache) return slugsCache
-
-  const videosDir = join(process.cwd(), CONTENT_DIR, "videos")
-  const entries = await readdir(videosDir, { withFileTypes: true })
-  slugsCache = entries.filter((e) => e.isDirectory()).map((e) => e.name)
+  slugsCache = listSlugsUnder("videos")
   return slugsCache
 }
 
 /**
- * Get all videos by scanning the content/videos directory.
- * Returns flat VideoCardData[] suitable for passing to client components.
- * Results are cached per locale for the duration of the build.
+ * Get all videos for the gallery hub page. Resolves frontmatter from the
+ * manifest only (no fs reads) — title/description come from the locale
+ * manifest with EN as fallback; structural metadata (youtubeId, duration,
+ * uploadDate, topic) always comes from EN.
  */
 export async function getVideos(
   locale: string = DEFAULT_LOCALE
@@ -144,19 +126,37 @@ export async function getVideos(
     getVideoThumbnails().catch(() => null),
   ])
 
-  const results = await Promise.all(
-    slugs.map(async (slug) => {
-      try {
-        const data = await getVideoData(slug, locale)
-        return toVideoCardData(data, thumbnailMap)
-      } catch {
-        console.warn(`Skipping video ${slug}: missing index.md`)
-        return null
-      }
-    })
-  )
+  const localeSrc = getContentSource(locale)
 
-  const videos = results.filter((v): v is VideoCardData => v !== null)
+  const videos = slugs.flatMap((slug): VideoCardData[] => {
+    const enPage = contentSource?.getPage(["videos", slug])
+    if (!enPage) return []
+    const en = enPage.data as unknown as VideoFrontmatter
+
+    const localePage = localeSrc?.getPage(["videos", slug])
+    const localeFm = (localePage?.data ?? {}) as Partial<VideoFrontmatter>
+
+    return [
+      {
+        slug,
+        title: typeof localeFm.title === "string" ? localeFm.title : en.title,
+        description:
+          typeof localeFm.description === "string"
+            ? localeFm.description
+            : en.description,
+        uploadDate:
+          typeof en.uploadDate === "string"
+            ? en.uploadDate
+            : new Date(en.uploadDate as unknown as Date)
+                .toISOString()
+                .split("T")[0],
+        duration: en.duration,
+        topic: en.topic,
+        thumbnailUrl: thumbnailMap?.[slug] || "",
+      },
+    ]
+  })
+
   videosCache.set(locale, videos)
   return videos
 }

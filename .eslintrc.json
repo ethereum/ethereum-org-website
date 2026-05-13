@@ -78,6 +78,29 @@
     {
       "files": ["**/*.stories.@(js|jsx|ts|tsx|mdx)"],
       "extends": ["plugin:storybook/recommended"]
+    },
+    {
+      "files": [
+        "src/components/Content/**/*.{ts,tsx}",
+        "src/layouts/md/**/*.{ts,tsx}",
+        "src/layouts/Static.tsx",
+        "src/layouts/Docs.tsx",
+        "src/layouts/Tutorial.tsx"
+      ],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "paths": [
+              {
+                "name": "next/cache",
+                "importNames": ["unstable_cache"],
+                "message": "MDX-embedded components must not call `unstable_cache` with a finite `revalidate` — it opts the catch-all into ISR and breaks on Netlify (see docs/solutions/integration-issues/netlify-isr-404-async-server-components.md). Use a `revalidate: false` wrapper from `@/lib/data` instead (e.g. `getStaticAppsData`)."
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "ignorePatterns": [

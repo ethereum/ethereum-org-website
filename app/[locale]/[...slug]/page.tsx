@@ -26,6 +26,7 @@ import { getPageData } from "@/lib/md/data"
 import {
   contentSource,
   getContentSource,
+  isCanonicalSlug,
   prerenderLocaleParams,
 } from "@/lib/poc-fumadocs/source"
 
@@ -42,13 +43,10 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const params = await props.params
   const { locale, slug: slugArray } = params
 
-  // Fast manifest lookup — no fs access. Falls back to EN when the
-  // locale's translation is missing (matches the legacy importMd
-  // fallback). If neither has it, the path is invalid.
-  const localeSource = getContentSource(locale)
-  const manifestPage =
-    localeSource?.getPage(slugArray) ?? contentSource?.getPage(slugArray)
-  if (!manifestPage) notFound()
+  // Fast manifest lookup — no fs access. The canonical EN slug set is
+  // the source of truth: orphan translations (EN deleted, translation
+  // lingering) 404 the same way they did under the legacy fs-walk.
+  if (!isCanonicalSlug(slugArray)) notFound()
 
   // Enable static rendering
   setRequestLocale(locale)
@@ -129,9 +127,10 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, slug: slugArray } = params
 
+  // Canonical EN gate: same orphan-translation rule as the page handler.
+  const enPage = contentSource?.getPage(slugArray)
   const localeSource = getContentSource(locale)
-  const page =
-    localeSource?.getPage(slugArray) ?? contentSource?.getPage(slugArray)
+  const page = enPage ? (localeSource?.getPage(slugArray) ?? enPage) : undefined
   if (!page) {
     const t = await getTranslations("common")
     return {
