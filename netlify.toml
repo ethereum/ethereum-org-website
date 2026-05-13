@@ -12,7 +12,24 @@
   # larger than Next.js 14 (.segments trees, RSC payloads), leaving little
   # headroom on the build VM. The cache is only useful for incremental builds
   # which don't apply on Netlify (each build starts fresh).
-  command = "pnpm build && rm -rf .next/cache"
+  #
+  # PoC(fumadocs): leading recon block prints the actual container limits
+  # (memory tier, CPU count, cgroup ceilings, NODE_OPTIONS) so we can verify
+  # which Netlify build resource tier this site is running on. Remove once
+  # the OOM-vs-tier question is resolved.
+  command = """
+echo '=== BUILD ENV RECON ===' && \
+echo '-- /proc/meminfo --' && grep -E '^(MemTotal|MemAvailable|SwapTotal):' /proc/meminfo && \
+echo '-- CPUs --' && nproc && \
+echo '-- cgroup memory.max --' && (cat /sys/fs/cgroup/memory.max 2>/dev/null || cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2>/dev/null || echo unknown) && \
+echo '-- cgroup cpu.max --' && (cat /sys/fs/cgroup/cpu.max 2>/dev/null || echo unknown) && \
+echo '-- ulimit -v (KB) --' && ulimit -v && \
+echo '-- ulimit -a --' && ulimit -a && \
+echo '-- NODE_OPTIONS --' && echo "${NODE_OPTIONS:-(unset)}" && \
+echo '-- free -h --' && free -h && \
+echo '=== /BUILD ENV RECON ===' && \
+pnpm build && rm -rf .next/cache
+"""
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
