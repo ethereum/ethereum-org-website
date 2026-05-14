@@ -1,8 +1,7 @@
 /* SHIKI CODEBLOCK STYLES
-   Drives the highlighted output from <Codeblock /> (server-rendered via
-   shiki with dual themes: one-light + one-dark-pro). Shiki emits CSS
-   variables (--shiki-light / --shiki-dark) — we wire them up to `color`
-   so the theme switch works without re-highlighting on the client. */
+   Drives the highlighted output from <Codeblock />. Shiki emits CSS variables
+   (--shiki-light / --shiki-dark) so the theme switch happens without
+   re-highlighting on the client. */
 
 .codeblock-shiki .shiki,
 .codeblock-shiki .shiki span {
@@ -16,20 +15,35 @@
   background-color: transparent;
 }
 
+.codeblock-shiki .shiki,
+.codeblock-shiki .shiki code {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
 .codeblock-shiki .shiki {
   margin: 0;
-  padding: 1.5rem 1rem;
+  padding: 0.875rem 1rem;
   width: fit-content;
   min-width: 100%;
   overflow: visible;
+  tab-size: 2;
 }
 
-.codeblock-shiki.has-top-bar .shiki {
-  padding-top: 2.75rem;
+/* When corner UI is overlaid, give the first line headroom so it never sits
+   underneath the language watermark / copy button. */
+.codeblock-shiki.has-corner .shiki {
+  padding-top: 1.75rem;
 }
 
-/* Line numbers via CSS counter — keeps shiki's <span class="line"> output
-   intact and avoids server-side post-processing. */
+/* Trim shiki's trailing empty line. */
+.codeblock-shiki .shiki .line:last-child:has(> span:empty:only-child),
+.codeblock-shiki .shiki .line:last-child:empty {
+  display: none;
+}
+
+/* Line numbers via CSS counter. Real disabled-color column with a hairline
+   inner separator — readable for keyboard users, still recedes visually. */
 .codeblock-shiki.line-numbers .shiki code {
   counter-reset: shiki-line;
 }
@@ -38,9 +52,64 @@
   counter-increment: shiki-line;
   content: counter(shiki-line);
   display: inline-block;
-  width: 2rem;
-  margin-inline-end: 2rem;
+  width: 1.5rem;
+  padding-inline-end: 0.75rem;
+  margin-inline-end: 1rem;
+  border-inline-end: 1px solid hsla(var(--border-low-contrast));
   text-align: end;
-  opacity: 0.4;
+  color: hsla(var(--disabled));
   user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Collapsed surface: cap the code surface and flatten its bottom corners so
+   the expander row can sit flush beneath it. */
+.codeblock-shiki.is-collapsed > [data-code-surface] {
+  max-height: calc((1.5rem * 8) + 1.75rem);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Fade overlay riding just above the expander row: dissolves the cut line of
+   code into the surface tint instead of hard-clipping it. */
+.codeblock-shiki.is-collapsed::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 1.875rem;
+  height: 2.75rem;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    hsla(var(--background-highlight))
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Bottom inline expander — replaces the corner "Show all" button. Shares the
+   code surface tint so it reads as one continuous region. */
+.codeblock-shiki .codeblock-expander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  width: 100%;
+  padding-block: 0.5rem 0.625rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: hsla(var(--body-medium));
+  background: hsla(var(--background-highlight));
+  border-radius: 0 0 0.375rem 0.375rem;
+  cursor: pointer;
+  transition: color 120ms ease-out;
+}
+
+.codeblock-shiki .codeblock-expander:hover {
+  color: hsla(var(--primary));
+}
+
+.codeblock-shiki .codeblock-expander:focus-visible {
+  outline: 2px solid hsla(var(--primary));
+  outline-offset: 2px;
 }
