@@ -7,9 +7,14 @@ import { FileContributor, Frontmatter, Lang, ToCItem } from "@/lib/types"
 import { getMarkdownFileContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
+import type { ContentManifestEntry } from "../content/types"
 import { getLayoutFromSlug } from "../utils/layout"
 
-import { compile, extractLayoutFromMarkdown } from "./compile"
+import {
+  attachBlurDataURL,
+  compile,
+  extractLayoutFromMarkdown,
+} from "./compile"
 import { importMd } from "./import"
 
 interface GetPageDataParams {
@@ -19,6 +24,7 @@ interface GetPageDataParams {
   componentsMapping: Record<Layout, MDXRemoteProps["components"]>
   layout?: Layout
   scope?: Record<string, unknown>
+  manifestEntry?: ContentManifestEntry
 }
 
 interface PageData {
@@ -38,14 +44,18 @@ export async function getPageData({
   componentsMapping,
   layout: layoutFromProps,
   scope,
+  manifestEntry,
 }: GetPageDataParams): Promise<PageData> {
   const slugArray = slug.split("/")
 
   // Import and compile markdown
   const { markdown, isTranslated } = await importMd(locale, slug)
-  // Determine layout first to finalize list of components
+  // Determine layout first to finalize list of components.
+  // When a manifest entry is available, trust it — it already encodes
+  // `frontmatter.template ?? getLayoutFromSlug(slug)` from build time.
   const layout =
     layoutFromProps ||
+    manifestEntry?.layout ||
     (await extractLayoutFromMarkdown(markdown)) ||
     getLayoutFromSlug(slug)
 
@@ -60,7 +70,16 @@ export async function getPageData({
     locale,
     components,
     scope,
+    parseFrontmatter: !manifestEntry,
   })
+
+  // When the manifest provided the frontmatter, compile() skipped parsing.
+  // Hydrate the result with the manifest's frontmatter and attach the
+  // (request-time) blur placeholder for hero images.
+  if (manifestEntry) {
+    Object.assign(frontmatter, manifestEntry.frontmatter)
+    await attachBlurDataURL(frontmatter)
+  }
 
   // Process TOC items
   const tocItems =

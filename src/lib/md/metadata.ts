@@ -1,7 +1,5 @@
+import { getManifestEntry } from "../content/lookup"
 import { getMetadata } from "../utils/metadata"
-
-import { compile } from "./compile"
-import { importMd } from "./import"
 
 export const getMdMetadata = async ({
   locale,
@@ -12,13 +10,13 @@ export const getMdMetadata = async ({
 }) => {
   const slug = slugArray.join("/")
 
-  const { markdown } = await importMd(locale, slug)
-  const { frontmatter } = await compile({
-    markdown,
-    slugArray: slug.split("/"),
-    locale,
-    components: {},
-  })
+  const entry = getManifestEntry(locale, slug)
+  if (!entry) {
+    // Slug is not in the manifest — let the catch-all's notFound() path
+    // surface this; metadata callers handle the throw via their try/catch.
+    throw new Error(`No content manifest entry for slug "${slug}"`)
+  }
+  const { frontmatter } = entry
 
   const title = frontmatter.metaTitle ?? frontmatter.title
   const pageTitle = title.includes("ethereum.org")
@@ -28,13 +26,12 @@ export const getMdMetadata = async ({
   const image = frontmatter.image
   const author = frontmatter.author
 
-  const metadata = await getMetadata({
+  return getMetadata({
     locale,
     slug: slugArray,
     title: pageTitle,
     description,
     image,
-    author,
+    author: typeof author === "string" ? author : undefined,
   })
-  return metadata
 }

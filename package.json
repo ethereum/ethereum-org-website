@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "dev:webpack": "next dev --webpack",
+    "predev": "pnpm build:content-manifest",
     "build": "next build",
     "build:webpack": "next build --webpack",
+    "prebuild": "pnpm build:content-manifest",
+    "build:content-manifest": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/build-content-manifest/main.ts",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

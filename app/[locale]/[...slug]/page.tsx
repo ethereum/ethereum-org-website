@@ -14,7 +14,6 @@ import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
-import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { getGFIs } from "@/data-layer"
@@ -22,18 +21,20 @@ import { getGFIs } from "@/data-layer"
 import SlugJsonLD from "./page-jsonld"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
+import {
+  allSlugs,
+  getManifestEntry,
+  hasContentSlug,
+} from "@/lib/content/lookup"
 import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
 
 export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const params = await props.params
   const { locale, slug: slugArray } = params
+  const slug = slugArray.join("/")
 
-  // Check if this specific path is in our valid paths
-  const validPaths = (await generateStaticParams()) as SlugPageParams[]
-  const isValidPath = checkPathValidity(validPaths, params)
-
-  if (!isValidPath) notFound()
+  if (!hasContentSlug(slug)) notFound()
 
   // Enable static rendering
   setRequestLocale(locale)
@@ -45,7 +46,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
     console.warn("Failed to fetch GFIs for slug page:", error)
   }
 
-  const slug = slugArray.join("/")
+  const manifestEntry = getManifestEntry(locale, slug)
 
   const {
     content,
@@ -63,6 +64,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
     scope: {
       gfissues,
     },
+    manifestEntry,
   })
 
   // Determine the actual layout after we have the frontmatter
@@ -105,21 +107,9 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
 }
 
 export async function generateStaticParams() {
-  try {
-    const slugs = await getPostSlugs("/")
-
-    return slugs.map((slug) => ({
-      slug: slug.split("/").slice(1),
-    }))
-  } catch (error) {
-    // If content directory doesn't exist (e.g., in Netlify serverless environment),
-    // return empty array to allow ISR to handle all routes dynamically
-    console.warn(
-      "Content directory not found, enabling full dynamic routing:",
-      error
-    )
-    return []
-  }
+  return allSlugs.map((slug) => ({
+    slug: slug.split("/"),
+  }))
 }
 
 export async function generateMetadata(props: {

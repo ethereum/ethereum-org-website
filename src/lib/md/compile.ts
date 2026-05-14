@@ -22,12 +22,14 @@ export const compile = async ({
   locale,
   components = {},
   scope = {},
+  parseFrontmatter = true,
 }: {
   markdown: string
   slugArray: string[]
   locale: string
   components: MDXRemoteProps["components"]
   scope?: Record<string, unknown>
+  parseFrontmatter?: boolean
 }) => {
   let tocNodeItems: TocNodeType[] = []
   const tocCallback = (toc: TocNodeType): void => {
@@ -54,7 +56,7 @@ export const compile = async ({
     source,
     components,
     options: {
-      parseFrontmatter: true,
+      parseFrontmatter,
       mdxOptions,
       scope,
     },
@@ -62,10 +64,7 @@ export const compile = async ({
 
   // If the page has a hero image, generate a blurDataURL for it
   if ("image" in frontmatter) {
-    const heroImagePath = join(process.cwd(), "public", frontmatter.image)
-    const imageBuffer = fs.readFileSync(heroImagePath)
-    const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
-    frontmatter.blurDataURL = base64
+    await attachBlurDataURL(frontmatter)
   }
 
   return {
@@ -73,6 +72,16 @@ export const compile = async ({
     frontmatter,
     tocNodeItems,
   }
+}
+
+export const attachBlurDataURL = async (
+  frontmatter: Partial<Frontmatter> & { image?: string; blurDataURL?: string }
+): Promise<void> => {
+  if (!frontmatter.image) return
+  const heroImagePath = join(process.cwd(), "public", frontmatter.image)
+  const imageBuffer = fs.readFileSync(heroImagePath)
+  const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
+  frontmatter.blurDataURL = base64
 }
 
 export const extractLayoutFromMarkdown = async (
