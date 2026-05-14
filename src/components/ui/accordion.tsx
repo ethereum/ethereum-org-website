@@ -46,9 +46,10 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef<
   React.ComponentRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({ className, children, ...props }, ref) => (
+>(({ className, forceMount = true, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
+    forceMount={forceMount} // forceMount keeps content in DOM for SEO crawlers
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
