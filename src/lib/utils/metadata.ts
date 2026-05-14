@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server"
 import {
   DEFAULT_OG_IMAGE,
   IS_PRODUCTION_DEPLOY,
+  SITE_TITLE,
   SITE_URL,
 } from "@/lib/constants"
 
@@ -65,7 +66,12 @@ export const getMetadata = async ({
   const t = await getTranslations("common")
 
   const description = descriptionProp || t("site-description")
-  const siteTitle = t("site-title")
+
+  const titleAlreadyHasBrand = title
+    .toLowerCase()
+    .includes(SITE_TITLE.toLowerCase())
+
+  const finalTitle = titleAlreadyHasBrand ? title : `${title} | ⁦${SITE_TITLE}⁩`
 
   // Auto-detect translated locales if not provided
   const finalTranslatedLocales =
@@ -93,7 +99,7 @@ export const getMetadata = async ({
     : []
 
   const base: Metadata = {
-    title,
+    title: finalTitle,
     description,
     formatDetection: { telephone: false },
     metadataBase: new URL(SITE_URL),
@@ -109,12 +115,12 @@ export const getMetadata = async ({
       }),
     },
     openGraph: {
-      title,
+      title: finalTitle,
       description,
       locale,
       type: "website",
       url,
-      siteName: siteTitle,
+      siteName: SITE_TITLE,
       images: [
         {
           url: ogImage,
@@ -122,11 +128,11 @@ export const getMetadata = async ({
       ],
     },
     twitter: {
-      title,
+      title: finalTitle,
       description: twitterDescription || description,
       card: "summary_large_image",
-      creator: author || siteTitle,
-      site: author || siteTitle,
+      creator: author || SITE_TITLE,
+      site: author || SITE_TITLE,
       images: [
         {
           url: ogImage,
