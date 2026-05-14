@@ -1,0 +1,3187 @@
+{
+  "metadata": {
+    "source": "intl-pipeline transliteration banks vs ETHGlossary state on 2026-05-14",
+    "ethglossary_total_at_diff_time": 498,
+    "missing_count": 190,
+    "diff_method": "case-insensitive match against ETHGlossary .term + .aliases[].term",
+    "generated": "2026-05-14T12:27:26.772Z",
+    "models_attempted": [
+      "gemini-3.1-pro-preview",
+      "gemini-3.1-pro"
+    ],
+    "pass1_total": 190,
+    "pass2_promoted": 34,
+    "low_confidence_flags": {
+      "bn": "12 of 34 promoted terms returned confidence=low",
+      "te": "14 of 34 promoted terms returned confidence=low"
+    }
+  },
+  "entries": [
+    {
+      "term": "Adan Kedem",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Albert Einstein",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Globally famous historical figure with established transliterations in all target languages.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "ألبرت أينشتاين",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "অ্যালবার্ট আইনস্টাইন",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "अल्बर्ट आइंस्टीन",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "アルベルト・アインシュタイン",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "알베르트 아인슈타인",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "अल्बर्ट् आइनस्टाइन्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Альберт Эйнштейн",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஆல்பர்ட் ஐன்ஸ்டீன்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "ఆల్బర్ట్ ఐన్‌స్టీన్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": "Альберт Ейнштейн",
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "البرٹ آئن سٹائن",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "阿尔伯特·爱因斯坦",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "愛因斯坦",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Alberto Cuesta Canada",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Alon Muroch",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Amir Chetrit",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Anthony Di Iorio",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Ben Samocha",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Charles Hoskinson",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major crypto founder with established transliterations in multiple languages.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "تشارلز هوسكينسون",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "চার্লস হসকিনসন",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "चार्ल्स हॉस्किन्सन",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "チャールズ・ホスキンソン",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "찰스 호스킨슨",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "चार्ल्स् हॉस्किन्सन्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Чарльз Хоскинсон",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "சார்லஸ் ஹாஸ்கின்சன்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": "చార్లెస్ హాస్కిన్సన్",
+          "confidence": "medium"
+        },
+        "uk": {
+          "native_form": "Чарльз Хоскінсон",
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "چارلس ہاسکنسن",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "查尔斯·霍斯金森",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "查爾斯·霍斯金森",
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "term": "Daniel Izdebski",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Dror Aviely",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Eilon Aviv",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Elan Halpern",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Ewa Kowalska",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Gal Weizman",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Gavin Wood",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Ethereum co-founder with widely established transliterations.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "غافين وود",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "গ্যাভিন উড",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "गैविन वुड",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ギャビン・ウッド",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "개빈 우드",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "गॅव्हिन् वूड्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Гэвин Вуд",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "கவின் வுட்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": "గావిన్ వుడ్",
+          "confidence": "medium"
+        },
+        "uk": {
+          "native_form": "Гевін Вуд",
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "گیون وڈ",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "加文·伍德",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "加文·伍德",
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "term": "Idan Ofrat",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "James Prestwich",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Jeffrey Wilcke",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Joseph Lubin",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "ConsenSys founder with established transliterations in multiple languages.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "جوزيف لوبين",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "জোসেফ লুবিন",
+          "confidence": "medium"
+        },
+        "hi": {
+          "native_form": "जोसेफ लुबिन",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ジョセフ・ルービン",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "조셉 루빈",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "जोसेफ् लुबिन्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Джозеф Любин",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஜோசப் லூபின்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": "జోసెఫ్ లూబిన్",
+          "confidence": "medium"
+        },
+        "uk": {
+          "native_form": "Джозеф Любін",
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "جوزف لوبن",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "约瑟夫·鲁宾",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "喬瑟夫·魯賓",
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "term": "Kim YongJun",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Marc Garreau",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Mario Havel",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Markus Waas",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Max Mersch",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Mihai Alisie",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Nathan H. Leung",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Nir Rozin",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Omer Greismen",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Ori Pomerantz",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Paul Apivat",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Peter Szilagyi",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Refik Anadol",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Roy Confino",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Shy Datika",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Sumi Mudgil",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Tedi Mitiku",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Tim Beiko",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Udi Wertheimer",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Uri Kolodny",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Vitalik Buterin",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Ethereum creator with universally established transliterations across non-Latin scripts.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "فيتاليك بوتيرين",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "ভিটালিক বুটেরিন",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "विटालिक बुटेरिन",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ヴィタリック・ブテリン",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "비탈릭 부테린",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "विटालिक् बुटेरिन्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Виталик Бутерин",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "விட்டாலிக் புட்டெரின்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": "విటాలిక్ బుటెరిన్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": "Віталік Бутерін",
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "وٹالک بوٹرین",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "维塔利克·布特林",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "維塔利克·布特林",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Wei Dai",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Famous cypherpunk with established Hanzi and transliterations.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "وي داي",
+          "confidence": "medium"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "वेई दाई",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ウェイ・ダイ",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "웨이 다이",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "वेई दाई",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Вэй Дай",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "வெய் டாய்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": "Вей Дай",
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "وے ڈائی",
+          "confidence": "medium"
+        },
+        "zh": {
+          "native_form": "戴伟",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "戴偉",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Wei Wang",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": "Zhen Xiao",
+      "term_role": "person-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Lesser-known individual without universally established transliterations across multiple non-Latin scripts."
+    },
+    {
+      "term": ".NET",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Aave",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "آفي",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "आवे",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "アーベ",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "에이브",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "आवे",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஆவே",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "آوے",
+          "confidence": "medium"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Alchemy",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Android",
+      "term_role": "os-platform",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "OS and platform names must remain Latin per policy."
+    },
+    {
+      "term": "Aragon",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Arbitrum",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "أربيتروم",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "আরবিট্রাম",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "आर्बिट्रम",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "アービトラム",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "아비트럼",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "आर्बिट्रम्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஆர்பிட்ரம்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "آربٹرم",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Arweave",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Balancer",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Bankless",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Base",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Binance",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "بينانس",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "বাইন্যান্স",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "बाइनेंस",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "バイナンス",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "바이낸스",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "बायनान्स्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "பைனான்ஸ்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "బైనాన్స్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "بائنانس",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "币安",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "幣安",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Blast",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Blockscout",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Brownie",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "C++",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Casper",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Certora",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Chainstack",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Chrome",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "كروم",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "ক্রোম",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "क्रोम",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "クローム",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "크롬",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "क्रोम्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Хром",
+          "confidence": "medium"
+        },
+        "ta": {
+          "native_form": "குரோம்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "క్రోమ్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "کروم",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "medium"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "CoinGecko",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Coinbase",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "كوين بيس",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "কয়েনবেস",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "कॉइनबेस",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "コインベース",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "코인베이스",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "कॉइनबेस्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "காயின்பேஸ்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "కాయిన్‌బేస్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "کوائن بیس",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Compound",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "ConsenSys",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "كونسينسيس",
+          "confidence": "medium"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "कॉन्सेन्सिस",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "コンセンシス",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "컨센시스",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "कॉन्सेन्सिस्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "கன்சென்சிஸ்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "کنسینسس",
+          "confidence": "medium"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Crowdin",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "CryptoKitties",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "كريبتو كيتيز",
+          "confidence": "medium"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "क्रिप्टोकिटीज़",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "クリプトキティーズ",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "크립토키티",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "क्रिप्टोकिटीज्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Криптокотики",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "கிரிப்டோகிட்டிஸ்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "کرپٹو کٹیز",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "加密猫",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "加密貓",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Crytic",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Curve",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Cyfrin Updraft",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "DAppNode",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Dart",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Delphi",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Dencun",
+      "term_role": "network-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major Ethereum networks and upgrades have established transliterations or calques in non-Latin communities.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "دينكون",
+          "confidence": "medium"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "डेंकुन",
+          "confidence": "medium"
+        },
+        "ja": {
+          "native_form": "デンクン",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "덴쿤",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "डेन्कन्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Денкун",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "டென்குன்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": "Денкун",
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "ڈینکن",
+          "confidence": "medium"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "medium"
+        }
+      }
+    },
+    {
+      "term": "Discord",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "ديسكورد",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "ডিসকর্ড",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "डिस्कॉर्ड",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ディスコード",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "디스코드",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "डिस्कॉर्ड्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Дискорд",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "டிஸ்கார்ட்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "డిస్కార్డ్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "ڈسکارڈ",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Docker",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Dune Analytics",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "ETHGlobal",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "EVERLAND",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "EigenLayer",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Elixir",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "EthStaker",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Ethereum Cat Herders",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Ethereum Magicians",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "EthereumJS",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Ethers.js",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Facebook",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "فيسبوك",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "ফেসবুক",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "फेसबुक",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "フェイスブック",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "페이스북",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "फेसबुक्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Фейсбук",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஃபேஸ்புக்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "ఫేస్‌బుక్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "فیس بک",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "脸书",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "臉書",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Farcaster",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Figma",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Filebase",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Filecoin",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "فايل كوين",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "ফাইলকয়েন",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "फाइलकॉइन",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ファイルコイン",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "파일코인",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "फाईलकॉइन्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஃபைல்காயின்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": "ఫైల్‌కాయిన్",
+          "confidence": "medium"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "فائل کوائن",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Flashbots",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "GitHub",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "GitPOAP",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Gitcoin",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Gitter",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Gnosis",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Go",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Goerli",
+      "term_role": "network-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major Ethereum networks and upgrades have established transliterations or calques in non-Latin communities.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "غويرلي",
+          "confidence": "medium"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "गोएर्ली",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ゴエリ",
+          "confidence": "medium"
+        },
+        "ko": {
+          "native_form": "괴를리",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "गोर्ली",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Гёрли",
+          "confidence": "medium"
+        },
+        "ta": {
+          "native_form": "கோர்லி",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": "Ґерлі",
+          "confidence": "medium"
+        },
+        "ur": {
+          "native_form": "گورلی",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Golang",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Grafana",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Grandine",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "GraphQL",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Holesky",
+      "term_role": "network-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major Ethereum networks and upgrades have established transliterations or calques in non-Latin communities.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "هوليسكي",
+          "confidence": "medium"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "होलेस्की",
+          "confidence": "medium"
+        },
+        "ja": {
+          "native_form": "ホルスキー",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "홀스카이",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "होल्स्की",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Холески",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஹோல்ஸ்கி",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": "Голескі",
+          "confidence": "medium"
+        },
+        "ur": {
+          "native_form": "ہولسکی",
+          "confidence": "medium"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Hoodi",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Hyperledger",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "InfluxDB",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Infura",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Java",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "JavaScript",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Kaleido",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "L2BEAT",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Lens Protocol",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Lido",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "ليدو",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "लिडो",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "リド",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "리도",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "लिडो",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "லிடோ",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "لیڈو",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Linea",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Linux",
+      "term_role": "os-platform",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "OS and platform names must remain Latin per policy."
+    },
+    {
+      "term": "MakerDAO",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "ميكر داو",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "मेकरडाओ",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "メイカーダオ",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "메이커다오",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "मेकरडाओ",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "میکر ڈاؤ",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Microsoft",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "مايكروسوفت",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "মাইক্রোসফট",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "माइक्रोसॉफ्ट",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "マイクロソフト",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "마이크로소프트",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "मायक्रोसॉफ्ट्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Майкрософт",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "மைக்ரோசாப்ட்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "మైక్రోసాఫ్ట్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "مائیکروسافٹ",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "微软",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "微軟",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Microsoft Learn",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "MolochDAO",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Moralis",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "MyCrypto",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "MythX",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Mythril",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Namecoin",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "NatSpec",
+      "term_role": "ticker-or-standard",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Technical standard or format identifier that must remain Latin per policy."
+    },
+    {
+      "term": "Netflix",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "نتفليكس",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "নেটফ্লিক্স",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "नेटफ्लिक्स",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ネットフリックス",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "넷플릭스",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "नेटफ्लिक्स्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Нетфликс",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "நெட்ஃப்ளிக்ஸ்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "నెట్‌ఫ్లిక్స్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "نیٹ فلکس",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "网飞",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "網飛",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Nethereum",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Next.js",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Nim",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Node.js",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Noir",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "OpenGSN",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "OpenSea",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "أوبن سي",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "ওপেনসি",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "ओपनसी",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "オープンシー",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "오픈씨",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "ओपनसी",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஓபன்சீ",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": "ఓపెన్‌సీ",
+          "confidence": "medium"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "اوپن سی",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Optimism",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "أوبتيميزم",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "অপটিমিজম",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "ऑप्टिमिज़्म",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "オプティミズム",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "옵티미즘",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "ऑप्टिमिझम्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஆப்டிமிசம்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "آپٹیمزم",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Otterscan",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Parity",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "PayPal",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "باي بال",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "পেপ্যাল",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "पेपाल",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ペイパル",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "페이팔",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "पेपल्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "பேபால்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "పేపాల్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "پے پال",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "贝宝",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Pinata",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Polygon",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "بوليغون",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "পলিগন",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "पॉलीगॉन",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ポリゴン",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "폴리곤",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "पॉलिगॉन्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "பாலிகன்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "పాలిగాన్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "پولی گون",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "PoolTogether",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Python",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "QuarkID",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "QuickNode",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Quorum",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "RainbowKit",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Raspberry Pi",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "React",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Reddit",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "ريديت",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "রেডিট",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "रेडिट",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "レディット",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "레딧",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "रेडिट्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Реддит",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ரெட்டிட்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "రెడిట్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "ریڈٹ",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Rocket Pool",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Ropsten",
+      "term_role": "network-name",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major Ethereum networks and upgrades have established transliterations or calques in non-Latin communities.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "روبستن",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "रॉप्स्टन",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ロプステン",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "롭스텐",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "रॉप्स्टन्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Ропстен",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ராப்ஸ்டன்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": "Ропстен",
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "روپسٹن",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Ruby",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Rust",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Sablier",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Scaffold-ETH",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Scribble",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Scroll",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Snapshot",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Sourcify",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Starknet",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "ستارك نت",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "स्टार्कनेट",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "スタークネット",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "스타크넷",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "स्टार्कनेट्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ஸ்டார்க்நெட்",
+          "confidence": "medium"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "سٹارک نیٹ",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "SubQuery",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Sushiswap",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Taiko",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Telegram",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "تيليغرام",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "টেলিগ্রাম",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "टेलीग्राम",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "テレグラム",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "텔레그램",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "टेलिग्राम्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Телеграм",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "டெலிகிராம்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "టెలిగ్రామ్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "ٹیلی گرام",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "电报",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Tenderly",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "The Graph",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Tornado Cash",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": false,
+      "rationale": "Brand or project without universally established native-script forms across multiple languages; defaults to transliterate but requires per-language curation."
+    },
+    {
+      "term": "Trail of Bits",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Truffle",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Twitter",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "تويتر",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "টুইটার",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "ट्विटर",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ツイッター",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "트위터",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "ट्विटर्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Твиттер",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "ட்விட்டர்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "ట్విట్టర్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "ٹوئٹر",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": "推特",
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": "推特",
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "TypeScript",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "VSCode",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Viem",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Vite",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Waffle",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Wagmi",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Wake",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "WalletConnect",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Web3.js",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Web3.py",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "Web3j",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "WebAssembly",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Windows",
+      "term_role": "os-platform",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "OS and platform names must remain Latin per policy."
+    },
+    {
+      "term": "YouTube",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": "يوتيوب",
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": "ইউটিউব",
+          "confidence": "high"
+        },
+        "hi": {
+          "native_form": "यूट्यूब",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": "ユーチューブ",
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "유튜브",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "यूट्यूब्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": "Ютуб",
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": "யூடியூப்",
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": "యూట్యూబ్",
+          "confidence": "high"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "یوٹیوب",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    },
+    {
+      "term": "Yul",
+      "term_role": "programming-language",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "Programming languages must remain Latin to preserve code fidelity per policy."
+    },
+    {
+      "term": "Zokrates",
+      "term_role": "brand-or-project",
+      "script_rule_default": "keep_latin",
+      "promote_to_master": false,
+      "rationale": "Developer tools and libraries are kept in Latin to maintain technical clarity and code searchability."
+    },
+    {
+      "term": "iOS",
+      "term_role": "os-platform",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "OS and platform names must remain Latin per policy."
+    },
+    {
+      "term": "macOS",
+      "term_role": "os-platform",
+      "script_rule_default": "always_latin",
+      "promote_to_master": false,
+      "rationale": "OS and platform names must remain Latin per policy."
+    },
+    {
+      "term": "zkSync",
+      "term_role": "brand-or-project",
+      "script_rule_default": "transliterate",
+      "promote_to_master": true,
+      "rationale": "Major consumer-tier brand or project with officially adopted or widely established native-script forms.",
+      "per_language_native_forms": {
+        "ar": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "bn": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "hi": {
+          "native_form": "ज़ेडकेसिंक",
+          "confidence": "high"
+        },
+        "ja": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ko": {
+          "native_form": "지케이싱크",
+          "confidence": "high"
+        },
+        "mr": {
+          "native_form": "झेडकेसिंक्",
+          "confidence": "high"
+        },
+        "ru": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ta": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "te": {
+          "native_form": null,
+          "confidence": "low"
+        },
+        "uk": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "ur": {
+          "native_form": "زی کے سنک",
+          "confidence": "high"
+        },
+        "zh": {
+          "native_form": null,
+          "confidence": "high"
+        },
+        "zh-tw": {
+          "native_form": null,
+          "confidence": "high"
+        }
+      }
+    }
+  ]
+}
