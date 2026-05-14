@@ -1,10 +1,68 @@
 name: Branch Task
 
+# One-off task: Gemini 3.1 Pro classification of ETHGlossary candidate terms.
+# Runs on task/* branches only. Trigger via:
+#   gh workflow run branch-task.yml --ref task/gemini-glossary-review
+# Output JSON is committed back to the SAME task branch (never dev/master/staging).
+# Branch is deleted after the output is retrieved by the ETHGlossary repo.
+
 on:
   workflow_dispatch:
 
 jobs:
-  stub:
+  gemini-glossary-review:
+    name: Gemini Glossary Review
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
     steps:
-      - run: echo "ok"
+      - name: Safety check (must be a task/* branch)
+        run: |
+          if [[ "${GITHUB_REF_NAME}" == "dev" || "${GITHUB_REF_NAME}" == "master" || "${GITHUB_REF_NAME}" == "staging" ]]; then
+            echo "::error::Refusing to run on protected branch: ${GITHUB_REF_NAME}"
+            exit 1
+          fi
+          if [[ "${GITHUB_REF_NAME}" != task/* ]]; then
+            echo "::error::This workflow must run on a task/* branch. Got: ${GITHUB_REF_NAME}"
+            exit 1
+          fi
+          echo "Running on branch: ${GITHUB_REF_NAME}"
+
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-pnpm-node
+
+      - name: Run Gemini classification
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          mkdir -p tmp/output
+          node scripts/gemini-glossary-review.mjs \
+            --policy tmp/translation-policy-snapshot.md \
+            --terms tmp/gemini-glossary-terms.json \
+            --out tmp/output/gemini-glossary-review.json
+
+      - name: Commit output to task branch
+        run: |
+          # Belt-and-suspenders: re-verify branch before pushing.
+          if [[ "${GITHUB_REF_NAME}" != task/* ]]; then
+            echo "::error::Refusing to push: not on a task/* branch (got ${GITHUB_REF_NAME})"
+            exit 1
+          fi
+          if [[ "${GITHUB_REF_NAME}" == "dev" || "${GITHUB_REF_NAME}" == "master" || "${GITHUB_REF_NAME}" == "staging" ]]; then
+            echo "::error::Refusing to push to protected branch: ${GITHUB_REF_NAME}"
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add tmp/output/gemini-glossary-review.json
+          if git diff --staged --quiet; then
+            echo "No new output to commit"
+            exit 0
+          fi
+
+          git commit -m "add: Gemini glossary review output (run ${GITHUB_RUN_ID})"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

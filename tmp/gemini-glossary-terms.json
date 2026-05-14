@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "source": "intl-pipeline transliteration banks vs ETHGlossary state on 2026-05-14",
+    "ethglossary_total_at_diff_time": 498,
+    "missing_count": 190,
+    "diff_method": "case-insensitive match against ETHGlossary .term + .aliases[].term"
+  },
+  "people": [
+    "Adan Kedem", "Albert Einstein", "Alberto Cuesta Canada", "Alon Muroch",
+    "Amir Chetrit", "Anthony Di Iorio", "Ben Samocha", "Charles Hoskinson",
+    "Daniel Izdebski", "Dror Aviely", "Eilon Aviv", "Elan Halpern",
+    "Ewa Kowalska", "Gal Weizman", "Gavin Wood", "Idan Ofrat",
+    "James Prestwich", "Jeffrey Wilcke", "Joseph Lubin", "Kim YongJun",
+    "Marc Garreau", "Mario Havel", "Markus Waas", "Max Mersch",
+    "Mihai Alisie", "Nathan H. Leung", "Nir Rozin", "Omer Greismen",
+    "Ori Pomerantz", "Paul Apivat", "Peter Szilagyi", "Refik Anadol",
+    "Roy Confino", "Shy Datika", "Sumi Mudgil", "Tedi Mitiku",
+    "Tim Beiko", "Udi Wertheimer", "Uri Kolodny", "Vitalik Buterin",
+    "Wei Dai", "Wei Wang", "Zhen Xiao"
+  ],
+  "products": [
+    ".NET", "Aave", "Alchemy", "Android", "Aragon", "Arbitrum", "Arweave",
+    "Balancer", "Bankless", "Base", "Binance", "Blast", "Blockscout",
+    "Brownie", "C++", "Casper", "Certora", "Chainstack", "Chrome",
+    "CoinGecko", "Coinbase", "Compound", "ConsenSys", "Crowdin",
+    "CryptoKitties", "Crytic", "Curve", "Cyfrin Updraft", "DAppNode",
+    "Dart", "Delphi", "Dencun", "Discord", "Docker", "Dune Analytics",
+    "ETHGlobal", "EVERLAND", "EigenLayer", "Elixir", "EthStaker",
+    "Ethereum Cat Herders", "Ethereum Magicians", "EthereumJS", "Ethers.js",
+    "Facebook", "Farcaster", "Figma", "Filebase", "Filecoin", "Flashbots",
+    "GitHub", "GitPOAP", "Gitcoin", "Gitter", "Gnosis", "Go", "Goerli",
+    "Golang", "Grafana", "Grandine", "GraphQL", "Holesky", "Hoodi",
+    "Hyperledger", "InfluxDB", "Infura", "Java", "JavaScript", "Kaleido",
+    "L2BEAT", "Lens Protocol", "Lido", "Linea", "Linux", "MakerDAO",
+    "Microsoft", "Microsoft Learn", "MolochDAO", "Moralis", "MyCrypto",
+    "MythX", "Mythril", "Namecoin", "NatSpec", "Netflix", "Nethereum",
+    "Next.js", "Nim", "Node.js", "Noir", "OpenGSN", "OpenSea", "Optimism",
+    "Otterscan", "Parity", "PayPal", "Pinata", "Polygon", "PoolTogether",
+    "Python", "QuarkID", "QuickNode", "Quorum", "RainbowKit", "Raspberry Pi",
+    "React", "Reddit", "Rocket Pool", "Ropsten", "Ruby", "Rust", "Sablier",
+    "Scaffold-ETH", "Scribble", "Scroll", "Snapshot", "Sourcify", "Starknet",
+    "SubQuery", "Sushiswap", "Taiko", "Telegram", "Tenderly", "The Graph",
+    "Tornado Cash", "Trail of Bits", "Truffle", "Twitter", "TypeScript",
+    "VSCode", "Viem", "Vite", "Waffle", "Wagmi", "Wake", "WalletConnect",
+    "Web3.js", "Web3.py", "Web3j", "WebAssembly", "Windows", "YouTube",
+    "Yul", "Zokrates", "iOS", "macOS", "zkSync"
+  ]
+}
