@@ -1,0 +1,46 @@
+/* SHIKI CODEBLOCK STYLES
+   Drives the highlighted output from <Codeblock /> (server-rendered via
+   shiki with dual themes: one-light + one-dark-pro). Shiki emits CSS
+   variables (--shiki-light / --shiki-dark) — we wire them up to `color`
+   so the theme switch works without re-highlighting on the client. */
+
+.codeblock-shiki .shiki,
+.codeblock-shiki .shiki span {
+  color: var(--shiki-light);
+  background-color: transparent;
+}
+
+.dark .codeblock-shiki .shiki,
+.dark .codeblock-shiki .shiki span {
+  color: var(--shiki-dark);
+  background-color: transparent;
+}
+
+.codeblock-shiki .shiki {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  width: fit-content;
+  min-width: 100%;
+  overflow: visible;
+}
+
+.codeblock-shiki.has-top-bar .shiki {
+  padding-top: 2.75rem;
+}
+
+/* Line numbers via CSS counter — keeps shiki's <span class="line"> output
+   intact and avoids server-side post-processing. */
+.codeblock-shiki.line-numbers .shiki code {
+  counter-reset: shiki-line;
+}
+
+.codeblock-shiki.line-numbers .shiki .line::before {
+  counter-increment: shiki-line;
+  content: counter(shiki-line);
+  display: inline-block;
+  width: 2rem;
+  margin-inline-end: 2rem;
+  text-align: end;
+  opacity: 0.4;
+  user-select: none;
+}

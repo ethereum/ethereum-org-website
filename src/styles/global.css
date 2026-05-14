@@ -14,5 +14,6 @@
 @import "./base.css";
 @import "./utilities.css";
 @import "./docsearch.css";
+@import "./codeblock.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
