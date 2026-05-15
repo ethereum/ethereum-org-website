@@ -71,7 +71,9 @@ export const getMetadata = async ({
     .toLowerCase()
     .includes(SITE_TITLE.toLowerCase())
 
-  const finalTitle = titleAlreadyHasBrand ? title : `${title} | ⁦${SITE_TITLE}⁩`
+  const finalTitle = titleAlreadyHasBrand
+    ? title
+    : `${title} | \u2066${SITE_TITLE}\u2069`
 
   // Auto-detect translated locales if not provided
   const finalTranslatedLocales =
