@@ -10,6 +10,7 @@ import type { GHIssue, SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
+import OpcodesTable from "@/components/Table/OpcodesTable"
 import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { dateToString } from "@/lib/utils/date"
@@ -58,7 +59,11 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   } = await getPageData({
     locale,
     slug,
-    baseComponents: { ...mdComponents, VideoWatch },
+    baseComponents: {
+      ...mdComponents,
+      VideoWatch,
+      OpcodesTable,
+    },
     componentsMapping,
     scope: {
       gfissues,
@@ -107,6 +112,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
 export async function generateStaticParams() {
   try {
     const slugs = await getPostSlugs("/")
+    console.log("ALL SLUGS:", slugs)
 
     return slugs.map((slug) => ({
       slug: slug.split("/").slice(1),
