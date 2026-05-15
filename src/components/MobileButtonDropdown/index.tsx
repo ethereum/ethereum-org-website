@@ -1,4 +1,6 @@
-import ButtonDropdown, { type ButtonDropdownProps } from "./ButtonDropdown"
+import ButtonDropdown, {
+  type ButtonDropdownProps,
+} from "@/components/ButtonDropdown"
 
 const MobileButtonDropdown = (props: ButtonDropdownProps) => {
   return (
