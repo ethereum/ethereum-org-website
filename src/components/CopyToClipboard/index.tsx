@@ -2,9 +2,9 @@
 
 import { Clipboard, ClipboardCheck } from "lucide-react"
 
-import { cn } from "@/lib/utils/cn"
+import { Button, type ButtonProps } from "@/components/ui/buttons/Button"
 
-import { Button, type ButtonProps } from "./ui/buttons/Button"
+import { cn } from "@/lib/utils/cn"
 
 import { useClipboard } from "@/hooks/useClipboard"
 
