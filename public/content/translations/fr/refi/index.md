@@ -3,13 +3,13 @@ title: "Finance Régénérative (ReFi)"
 description: Une vue d'ensemble de la ReFi et de ses cas d'utilisation actuels.
 lang: fr
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: "Un système économique alternatif fondé sur des principes de régénération"
-summaryPoint2: "Une tentative d'utilisation d'Ethereum pour résoudre les crises de coordination au niveau mondial, telles que le changement climatique"
-summaryPoint3: "Un outil permettant une augmentation drastique des bénéfices écologiques tels que les crédits de carbone vérifiés"
+summaryPoints:
+  - "Un système économique alternatif fondé sur des principes de régénération"
+  - "Une tentative d'utilisation d'Ethereum pour résoudre les crises de coordination au niveau mondial, telles que le changement climatique"
+  - "Un outil permettant une augmentation drastique des bénéfices écologiques tels que les crédits de carbone vérifiés"
 ---
 
 ## Qu'est-ce que la ReFi ? {#what-is-refi}

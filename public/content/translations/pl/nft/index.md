@@ -4,13 +4,13 @@ metaTitle: "Czym są NFT? | Korzyści i zastosowania"
 description: Przedstawienie NFT na Ethereum
 lang: pl
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "Logo Ethereum wyświetlane jako hologram."
-summaryPoint1: "Sposób reprezentowania czegoś wyjątkowego jako aktywu na blockchainie Ethereum."
-summaryPoint2: "NFT dają ich twórcom możliwości, których nigdy wcześniej nie mieli."
-summaryPoint3: Wspierane przez inteligentne kontrakty na blockchainie Ethereum.
+summaryPoints:
+  - "Sposób reprezentowania czegoś wyjątkowego jako aktywu na blockchainie Ethereum."
+  - "NFT dają ich twórcom możliwości, których nigdy wcześniej nie mieli."
+  - "Wspierane przez inteligentne kontrakty na blockchainie Ethereum."
 ---
 
 ## Czym są NFT? {#what-are-nfts}

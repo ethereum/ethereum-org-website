@@ -4,13 +4,13 @@ metaTitle: "¿Qué son los NFT? | Beneficios y uso"
 description: "Una visión general de los NFT en Ethereum"
 lang: es
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "Un logotipo Eth mostrado a través de un holograma."
-summaryPoint1: "Una forma de representar cualquier cosa única como un activo basado en Ethereum."
-summaryPoint2: "Los NFT están otorgando más poder a los creadores de contenido que nunca."
-summaryPoint3: Impulsados por contratos inteligentes en la cadena de bloques de Ethereum.
+summaryPoints:
+  - "Una forma de representar cualquier cosa única como un activo basado en Ethereum."
+  - "Los NFT están otorgando más poder a los creadores de contenido que nunca."
+  - "Impulsados por contratos inteligentes en la cadena de bloques de Ethereum."
 ---
 
 ## ¿Qué son los NFT? {#what-are-nfts}

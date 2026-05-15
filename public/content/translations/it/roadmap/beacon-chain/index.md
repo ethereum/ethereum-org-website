@@ -5,9 +5,10 @@ lang: it
 template: upgrade
 image: /images/upgrades/core.png
 alt: 
-summaryPoint1: La Beacon Chain ha introdotto la prova di stake nell'ecosistema di Ethereum.
-summaryPoint2: "È stata unita alla catena originale basata sulla prova di lavoro di Ethereum nel settembre 2022."
-summaryPoint3: La Beacon Chain ha introdotto la logica di consenso e il protocollo di gossip dei blocchi che ora protegge Ethereum.
+summaryPoints:
+  - "La Beacon Chain ha introdotto la prova di stake nell'ecosistema di Ethereum."
+  - "È stata unita alla catena originale basata sulla prova di lavoro di Ethereum nel settembre 2022."
+  - "La Beacon Chain ha introdotto la logica di consenso e il protocollo di gossip dei blocchi che ora protegge Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

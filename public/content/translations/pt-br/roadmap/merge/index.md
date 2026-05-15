@@ -5,10 +5,11 @@ lang: pt-br
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: "A rede principal do Ethereum usa prova de participação, mas esse nem sempre foi o caso."
-summaryPoint2: "A melhoria do mecanismo original de prova de trabalho para prova de participação foi chamada de The Merge, ou seja, A Fusão."
-summaryPoint3: "A Fusão se refere à fusão original da Rede principal do Ethereum com uma blockchain de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia."
-summaryPoint4: "A Fusão reduziu o consumo de energia do Ethereum em cerca de 99,95%."
+summaryPoints:
+  - "A rede principal do Ethereum usa prova de participação, mas esse nem sempre foi o caso."
+  - "A melhoria do mecanismo original de prova de trabalho para prova de participação foi chamada de The Merge, ou seja, A Fusão."
+  - "A Fusão se refere à fusão original da Rede principal do Ethereum com uma blockchain de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia."
+  - "A Fusão reduziu o consumo de energia do Ethereum em cerca de 99,95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

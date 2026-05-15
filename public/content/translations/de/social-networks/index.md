@@ -3,12 +3,12 @@ title: Dezentralisierte soziale Netzwerke
 description: "Ein Überblick über dezentralisierte soziale Netzwerke auf Ethereum"
 lang: de
 template: use-cases
-emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: "Blockchain-basierte Plattformen für soziale Interaktion sowie die Erstellung und Verbreitung von Inhalten."
-summaryPoint2: "Dezentralisierte soziale Netzwerke schützen die Privatsphäre der Nutzer und verbessern die Datensicherheit."
-summaryPoint3: "Token und NFTs schaffen neue Möglichkeiten zur Monetarisierung von Inhalten."
+summaryPoints:
+  - "Blockchain-basierte Plattformen für soziale Interaktion sowie die Erstellung und Verbreitung von Inhalten."
+  - "Dezentralisierte soziale Netzwerke schützen die Privatsphäre der Nutzer und verbessern die Datensicherheit."
+  - "Token und NFTs schaffen neue Möglichkeiten zur Monetarisierung von Inhalten."
 ---
 
 Soziale Netzwerke spielen eine massive Rolle in unserer täglichen Kommunikation und Interaktion. Die zentralisierte Kontrolle dieser Plattformen hat jedoch viele Probleme verursacht: Datenschutzverletzungen, Serverausfälle, De-Platforming, Zensur und Verletzungen der Privatsphäre sind einige der Kompromisse, die soziale Medien oft eingehen. Um diese Probleme zu bekämpfen, entwickeln Entwickler soziale Netzwerke auf [Ethereum](/). Dezentralisierte soziale Netzwerke können viele der Probleme traditioneller sozialer Netzwerkplattformen beheben und die allgemeine Nutzererfahrung verbessern.
