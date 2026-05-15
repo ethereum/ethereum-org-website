@@ -1,0 +1,321 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [dev, master, staging, "test/**"]
+    types: [opened, synchronize, ready_for_review]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Shared base URL for the production server we boot for e2e + lighthouse.
+  LOCAL_BASE_URL: http://localhost:3000
+
+# Extended jobs (build / e2e / lighthouse / visual / page-visual) only run for
+# PRs into master, staging, or test/** branches. Jobs downstream of `build`
+# inherit gating automatically via `needs:` (skipped jobs propagate).
+#
+# `fetch-depth: 0` is set selectively: lint needs it for `git diff`, and the
+# two Chromatic jobs need it for baseline detection. Other jobs use the default
+# shallow clone for speed.
+jobs:
+  lint:
+    name: Lint, type-check & markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/setup-pnpm-node
+
+      - name: ESLint
+        run: pnpm lint
+
+      - name: TypeScript
+        run: pnpm type-check
+
+      - name: Find changed English markdown
+        id: changed
+        run: |
+          FILES=$(git diff --name-only --diff-filter=ACMR origin/${{ github.base_ref }}...HEAD \
+            | grep '^public/content/.*\.md$' \
+            | grep -v '^public/content/translations/' \
+            || true)
+          {
+            echo "files<<EOF"
+            echo "$FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Lint changed markdown
+        if: steps.changed.outputs.files != ''
+        uses: DavidAnson/markdownlint-cli2-action@v22
+        with:
+          globs: ${{ steps.changed.outputs.files }}
+
+  unit-tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-pnpm-node
+      - name: Run unit tests
+        run: pnpm test:unit
+
+  visual-tests:
+    name: Visual regression (Chromatic)
+    if: |
+      github.base_ref == 'master'
+      || github.base_ref == 'staging'
+      || startsWith(github.base_ref, 'test/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/setup-pnpm-node
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v16
+        with:
+          projectToken: fee8e66c9916
+          exitZeroOnChanges: true
+          onlyChanged: true
+          zip: true
+
+  build:
+    name: Build website (mock data)
+    if: |
+      github.base_ref == 'master'
+      || github.base_ref == 'staging'
+      || startsWith(github.base_ref, 'test/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-pnpm-node
+
+      - name: Build (mock data, deterministic, e2e locale subset)
+        run: pnpm build
+        env:
+          USE_MOCK_DATA: "true"
+          IS_VISUAL_TEST: "true"
+          # E2E specs reference en/es/zh/ar (404 i18n + language picker + RTL).
+          # Page-visual + lighthouse only need en. Build all four once.
+          NEXT_PUBLIC_BUILD_LOCALES: "en,es,zh,ar"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: next-build
+          path: |
+            .next
+            !.next/cache
+          retention-days: 1
+          include-hidden-files: true
+
+  e2e-tests:
+    name: E2E tests
+    if: |
+      github.base_ref == 'master'
+      || github.base_ref == 'staging'
+      || startsWith(github.base_ref, 'test/')
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_PREVIEW_URL: https://deploy-preview-${{ github.event.pull_request.number }}--ethereumorg.netlify.app
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ./.github/actions/setup-pnpm-node
+
+      - name: Install Playwright with browser deps
+        run: npx playwright install --with-deps
+
+      - name: Wait for Netlify deploy preview to be ready
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+          REPO: ${{ github.repository }}
+          CHECK_NAME: netlify/ethereumorg/deploy-preview
+        run: |
+          for _ in $(seq 1 60); do
+            STATE=$(curl -sf -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/$REPO/commits/$SHA/statuses" \
+              | python3 -c "import json,sys,os; d=json.load(sys.stdin); m=next((s for s in d if s['context']==os.environ['CHECK_NAME']), None); print(m['state'] if m else '')")
+            case "$STATE" in
+              "success")
+                echo "Deploy preview ready for $SHA"
+                exit 0
+                ;;
+              "failure"|"error")
+                echo "Deploy preview failed: $STATE"
+                exit 1
+                ;;
+              *)
+                echo "Deploy preview state='${STATE:-not yet posted}' — waiting 30s"
+                sleep 30
+                ;;
+            esac
+          done
+          echo "Timed out waiting for deploy preview status"
+          exit 1
+
+      - name: Warm up Netlify edge cache
+        run: |
+          for path in / /wallets/find-wallet/ /staking/ /whitepaper/ /nft/ /developers/ /start/; do
+            curl -s -o /dev/null "${DEPLOY_PREVIEW_URL}${path}" &
+          done
+          wait
+
+      - name: Run E2E tests
+        run: pnpm test:e2e
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: ${{ env.DEPLOY_PREVIEW_URL }}
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: ./tests/__results__
+          retention-days: 7
+
+  lighthouse:
+    name: Lighthouse audit
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-pnpm-node
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: next-build
+          path: .next
+
+      - name: Start production server
+        run: pnpm start &
+
+      - uses: ./.github/actions/wait-for-server
+        with:
+          url: ${{ env.LOCAL_BASE_URL }}
+
+      - name: Audit URLs using Lighthouse
+        id: lighthouse_audit
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          urls: |
+            ${{ env.LOCAL_BASE_URL }}/en/
+            ${{ env.LOCAL_BASE_URL }}/en/wallets/find-wallet/
+            ${{ env.LOCAL_BASE_URL }}/en/staking/
+            ${{ env.LOCAL_BASE_URL }}/en/whitepaper/
+            ${{ env.LOCAL_BASE_URL }}/en/nft/
+            ${{ env.LOCAL_BASE_URL }}/en/developers/docs/intro-to-ethereum/
+            ${{ env.LOCAL_BASE_URL }}/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/
+          runs: 3
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+      - name: Format Lighthouse score
+        id: format_lighthouse_score
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const manifests = ${{ steps.lighthouse_audit.outputs.manifest }};
+            const links = ${{ steps.lighthouse_audit.outputs.links }};
+            const formatResult = (res) => Math.round((res * 100));
+
+            console.log('Total manifests:', manifests.length);
+            console.log('Manifests:', JSON.stringify(manifests, null, 2));
+            console.log('Links:', JSON.stringify(links, null, 2));
+
+            let comment = [
+              '| Page | Performance | Accessibility | Best practices | SEO | PWA |',
+              '| --- | --- | --- | --- | --- | --- |',
+            ];
+
+            Object.entries(links).forEach(([pageUrl, reportUrl]) => {
+              const relevantManifests = manifests.filter(manifest => manifest.url === pageUrl);
+              const results = relevantManifests.map(manifest => manifest.summary);
+              const averagedResults = {};
+
+              if (results.length > 0) {
+                Object.keys(results[0]).forEach(key => {
+                  averagedResults[key] = formatResult(
+                    results.reduce((acc, cur) => acc + cur[key], 0) / results.length
+                  );
+                });
+
+                const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴';
+                const urlForTable = pageUrl.includes('/en/') ? pageUrl.substring(pageUrl.indexOf('/en/')) : pageUrl;
+
+                comment.push(
+                  `| [${urlForTable}](${reportUrl}) | ${score(averagedResults.performance)} ${averagedResults.performance} | ${score(averagedResults.accessibility)} ${averagedResults.accessibility} | ${score(averagedResults['best-practices'])} ${averagedResults['best-practices']} | ${score(averagedResults.seo)} ${averagedResults.seo} | ${score(averagedResults.pwa)} ${averagedResults.pwa} |`
+                );
+              } else {
+                console.error('No results found for URL:', pageUrl);
+              }
+            });
+
+            comment.push(
+              ' ',
+              '*Lighthouse scores are calculated based on the latest audit results*'
+            );
+
+            comment = comment.join('\n');
+            core.setOutput("comment", comment);
+
+      - name: Add Lighthouse stats as comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ github.event.pull_request.number }}
+          header: lighthouse
+          message: ${{ steps.format_lighthouse_score.outputs.comment }}
+
+  page-visual-tests:
+    name: Page visual snapshots (Playwright + Chromatic)
+    needs: build
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.53.1-noble
+    env:
+      # Playwright image preinstalls browsers under /root; GitHub Actions
+      # otherwise overrides HOME to /github/home and Playwright re-downloads.
+      HOME: /root
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Mark workspace as safe for git
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - uses: ./.github/actions/setup-pnpm-node
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: next-build
+          path: .next
+
+      - name: Run visual tests
+        run: pnpm test:visual
+
+      - name: Publish to Chromatic
+        if: always()
+        uses: chromaui/action@v16
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PAGES_TOKEN }}
+          playwright: true
+          exitZeroOnChanges: true
+          zip: true

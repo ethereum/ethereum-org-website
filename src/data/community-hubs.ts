@@ -38,7 +38,8 @@ const communityHubs: CommunityHub[] = [
     location: "Hong Kong",
     descriptionKey: "page-events-hub-description-hong-kong",
     ctaKey: "page-events-hub-cta-hong-kong",
-    coworkingSignupUrl: "https://forms.gle/bm78vRjZqvu45tsz5",
+    coworkingSignupUrl:
+      "https://docs.google.com/forms/d/e/1FAIpQLSf8HrsYvKfs4eEI4dxSLAjquutu2jz5FiluePe4MsTwswQhHw/viewform",
     meetupUrl: "https://luma.com/user/usr-ut3JGCXXuokkPdK",
     banner: HongKongHubBanner,
     brandColor:
