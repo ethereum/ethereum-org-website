@@ -115,6 +115,12 @@ module.exports = [
     "/contributing/translation-program/blog-translations",
     "/contributing/translation-program/",
   ],
+  ["/contributing/translation-program/translatathon/details", "/contributing/"],
+  [
+    "/contributing/translation-program/translatathon/terms-and-conditions",
+    "/contributing/",
+  ],
+  ["/contributing/translation-program/translatathon", "/contributing/"],
   ["/donate", "/"],
   [
     "/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash",
