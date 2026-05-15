@@ -1,8 +1,8 @@
 import React from "react"
 
-import { cn } from "@/lib/utils/cn"
+import { Card } from "@/components/ui/card"
 
-import { Card } from "./ui/card"
+import { cn } from "@/lib/utils/cn"
 
 interface GhostCardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode
