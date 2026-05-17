@@ -2,7 +2,6 @@ import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import Card from "@/components/Card"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
@@ -17,6 +16,7 @@ import MarkdownImage from "@/components/Image/MarkdownImage"
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -171,7 +171,7 @@ export const reactComponents = {
   ...AlertComponents,
   BrowseApps,
   ButtonLink,
-  Card,
+  Card: MarkdownCard,
   ContentContainer,
   Contributors,
   Divider,

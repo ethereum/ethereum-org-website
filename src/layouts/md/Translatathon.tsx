@@ -2,9 +2,9 @@ import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import Card from "@/components/Card"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import { Image } from "@/components/Image"
+import MarkdownCard from "@/components/MarkdownCard"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import PaperformCallToAction from "@/components/Translatathon/PaperformCallToAction"
@@ -80,7 +80,7 @@ const CardContainer = (props: ChildOnlyProp) => (
 )
 
 const EmojiCard = ({ emoji, title, description }) => (
-  <Card
+  <MarkdownCard
     emoji={emoji}
     title={title}
     description={description}

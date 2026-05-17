@@ -3,7 +3,7 @@ import { Meta, type StoryObj } from "@storybook/nextjs"
 
 import { Button } from "../ui/buttons/Button"
 
-import CardComponent, { CardProps } from "."
+import CardComponent, { MarkdownCardProps } from "."
 
 const meta = {
   component: CardComponent,
@@ -24,7 +24,7 @@ export const Card: StoryObj<typeof meta> = {
   render: (args) => {
     const t = useTranslations(DEVELOPS_INDEX_NS)
 
-    const defaultProps: CardProps = {
+    const defaultProps: MarkdownCardProps = {
       emoji: ":woman_student:",
       title: t("page-developers-learn"),
       description: t("page-developers-learn-desc"),

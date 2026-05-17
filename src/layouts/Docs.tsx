@@ -6,7 +6,6 @@ import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
@@ -15,6 +14,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -87,7 +87,7 @@ export const docsComponents = {
   pre: Pre,
   ...mdxTableComponents,
   ButtonLink,
-  Card,
+  Card: MarkdownCard,
   CallToContribute,
   DeveloperDocsLinks,
   Divider,
