@@ -1,1 +1,0 @@
-export { appsCategories } from "./categories"
