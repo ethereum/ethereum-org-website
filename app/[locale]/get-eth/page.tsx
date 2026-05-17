@@ -25,8 +25,10 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardContent,
+  CardEmoji,
   CardFooter,
   CardHeader,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import { Divider } from "@/components/ui/divider"
@@ -58,13 +60,13 @@ type CardProps = {
 }
 
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="flex flex-col rounded-xs border">
+  <Card className="border">
     <CardHeader className="space-y-4">
-      <Emoji text={emoji} className="text-5xl leading-none" />
+      <CardEmoji text={emoji} />
       <CardTitle>{title}</CardTitle>
     </CardHeader>
-    <CardContent className="flex-1 px-6">
-      <p>{description}</p>
+    <CardContent>
+      <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>{children}</CardFooter>
   </Card>

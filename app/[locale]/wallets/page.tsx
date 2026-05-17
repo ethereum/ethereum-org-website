@@ -1,4 +1,4 @@
-import { ComponentPropsWithRef, Suspense } from "react"
+import { Suspense } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -9,7 +9,6 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import Callout from "@/components/Callout"
-import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
@@ -18,6 +17,7 @@ import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
@@ -36,13 +36,6 @@ import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
-
-const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
-  <Card
-    className="m-4 max-w-full min-w-[280px] flex-1 bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
-    {...props}
-  />
-)
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -233,17 +226,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
             </div>
           </div>
-          <div className="w-full px-8 py-4">
-            <div className="-ms-4 -me-4 flex flex-wrap">
-              {cards.map((card, idx) => (
-                <StyledCard
-                  key={idx}
-                  emoji={card.emoji}
-                  title={card.title}
-                  description={card.description}
-                />
-              ))}
-            </div>
+          <div className="flex w-full flex-wrap gap-8 px-8 py-4">
+            {cards.map((card, idx) => (
+              <MarkdownCard
+                key={idx}
+                emoji={card.emoji}
+                title={card.title}
+                description={card.description}
+                background="nested"
+                className="max-w-full min-w-[280px] flex-1 md:max-w-[46%] lg:max-w-[31%]"
+              />
+            ))}
           </div>
         </div>
 

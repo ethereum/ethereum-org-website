@@ -13,6 +13,8 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardFooter,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -54,21 +56,26 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:p-4">
-    <CardBanner background="none" fit="contain">
-      <Image
-        src={image}
-        alt=""
-        sizes="(min-width: 1280px) 340px, (min-width: 992px) 440px, (min-width: 640px) calc(50vw - 2.5rem), calc(100vw - 4rem)"
-      />
-    </CardBanner>
-    <CardContent className="p-0">
+  <Card spacing="lg">
+    <CardHeader>
+      <CardBanner background="none" fit="contain">
+        <Image
+          src={image}
+          alt=""
+          sizes="(min-width: 1280px) 340px, (min-width: 992px) 440px, (min-width: 640px) calc(50vw - 2.5rem), calc(100vw - 4rem)"
+        />
+      </CardBanner>
+    </CardHeader>
+    {/* // TODO: Decide on design system spacing */}
+    <CardContent spacing="sm">
       <CardTitle variant="bold">{title}</CardTitle>
       <CardParagraph variant="light">{description}</CardParagraph>
     </CardContent>
-    <ButtonLink href={href} variant="solid">
-      {ctaLabel}
-    </ButtonLink>
+    <CardFooter>
+      <ButtonLink href={href} className="w-full">
+        {ctaLabel}
+      </ButtonLink>
+    </CardFooter>
   </Card>
 )
 

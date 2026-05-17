@@ -11,13 +11,13 @@ import type { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
 import Callout from "@/components/Callout"
-import Card from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import Translation from "@/components/Translation"
 import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -39,10 +39,6 @@ import hackathonTransparentImg from "@/public/images/hackathon_transparent.png"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
 import upgradesCoreImg from "@/public/images/upgrades/core.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
-
-const CardContainer = ({ children }: ChildOnlyProp) => (
-  <Flex className="-mx-4 flex-wrap">{children}</Flex>
-)
 
 const Content = ({ children }: ChildOnlyProp) => (
   <div className="w-full px-8 py-4">{children}</div>
@@ -184,17 +180,17 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   {t("page-community-why-get-involved-title")}
                 </H2>
               </Flex>
-              <CardContainer>
+              <Flex className="flex-wrap gap-8">
                 {whyGetInvolvedCards.map((card, idx) => (
-                  <Card
-                    className="m-4 max-w-full min-w-[280px] flex-[1_0_30%] p-6 md:max-w-[46%] lg:max-w-[31%]"
+                  <MarkdownCard
                     key={idx}
                     emoji={card.emoji}
                     title={card.title}
                     description={card.description}
+                    className="w-full max-w-full min-w-[280px] flex-[1_0_30%] md:max-w-[46%] lg:max-w-[31%]"
                   />
                 ))}
-              </CardContainer>
+              </Flex>
             </div>
           </Flex>
           <div className="w-full bg-background-highlight pb-16 shadow-table-item-box">
@@ -325,7 +321,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
           </Flex>
           <Content>
-            <CardContainer>
+            <Flex className="-mx- flex-wrap">
               <Callout
                 className="min-h-full flex-[1_1_416px]"
                 image={ethImg}
@@ -352,7 +348,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   </ButtonLink>
                 </div>
               </Callout>
-            </CardContainer>
+            </Flex>
           </Content>
           <FeedbackCard />
         </PageContainer>

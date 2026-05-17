@@ -26,7 +26,14 @@ import ListenToPlayer from "@/components/ListenToPlayer/lazy"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardContent, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
@@ -635,71 +642,71 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </div>
               </div>
 
-              <Card className="overflow-hidden rounded-2xl border">
-                <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
+              <Card className="border" background="header-bar" spacing="lg">
+                <CardHeader variant="bar" spacing="inherit">
                   <User className="size-8 text-accent-a" />
-                  {t("page-what-is-ethereum-start-individuals-title")}
-                </CardTitle>
-                <CardContent className="space-y-12 p-8">
-                  <div className="space-y-6">
-                    <p>
-                      <span className="font-bold">
-                        {t("page-what-is-ethereum-start-individuals-desc-1")}
-                      </span>
-                    </p>
+                  <CardTitle>
+                    {t("page-what-is-ethereum-start-individuals-title")}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardParagraph>
+                    <strong>
+                      {t("page-what-is-ethereum-start-individuals-desc-1")}
+                    </strong>
+                  </CardParagraph>
 
-                    <p>
+                  <CardParagraph>
+                    {t.rich("page-what-is-ethereum-start-individuals-desc-3", {
+                      zerion: (chunks) => (
+                        <Link href="https://zerion.io/">{chunks}</Link>
+                      ),
+                      rainbow: (chunks) => (
+                        <Link href="https://rainbow.me/">{chunks}</Link>
+                      ),
+                      coinbase: (chunks) => (
+                        <Link href="https://www.coinbase.com/wallet">
+                          {chunks}
+                        </Link>
+                      ),
+                    })}
+                  </CardParagraph>
+
+                  <UnorderedList className="*:[li]:mb-0">
+                    <ListItem>
+                      {t("page-what-is-ethereum-start-individuals-step-1")}
+                    </ListItem>
+                    <ListItem>
+                      {t("page-what-is-ethereum-start-individuals-step-2")}
+                    </ListItem>
+                    <ListItem>
                       {t.rich(
-                        "page-what-is-ethereum-start-individuals-desc-3",
+                        "page-what-is-ethereum-start-individuals-step-3",
                         {
-                          zerion: (chunks) => (
-                            <Link href="https://zerion.io/">{chunks}</Link>
+                          zora: (chunks) => (
+                            <Link href="https://zora.co/">{chunks}</Link>
                           ),
-                          rainbow: (chunks) => (
-                            <Link href="https://rainbow.me/">{chunks}</Link>
-                          ),
-                          coinbase: (chunks) => (
-                            <Link href="https://www.coinbase.com/wallet">
+                          uniswap: (chunks) => (
+                            <Link href="https://app.uniswap.org/">
                               {chunks}
                             </Link>
                           ),
+                          farcaster: (chunks) => (
+                            <Link href="https://farcaster.xyz/">{chunks}</Link>
+                          ),
                         }
                       )}
-                    </p>
+                    </ListItem>
+                  </UnorderedList>
 
-                    <UnorderedList className="[&>li]:mb-0">
-                      <ListItem>
-                        {t("page-what-is-ethereum-start-individuals-step-1")}
-                      </ListItem>
-                      <ListItem>
-                        {t("page-what-is-ethereum-start-individuals-step-2")}
-                      </ListItem>
-                      <ListItem>
-                        {t.rich(
-                          "page-what-is-ethereum-start-individuals-step-3",
-                          {
-                            zora: (chunks) => (
-                              <Link href="https://zora.co/">{chunks}</Link>
-                            ),
-                            uniswap: (chunks) => (
-                              <Link href="https://app.uniswap.org/">
-                                {chunks}
-                              </Link>
-                            ),
-                            farcaster: (chunks) => (
-                              <Link href="https://farcaster.xyz/">
-                                {chunks}
-                              </Link>
-                            ),
-                          }
-                        )}
-                      </ListItem>
-                    </UnorderedList>
-
-                    <p>{t("page-what-is-ethereum-start-individuals-desc-4")}</p>
-                    <p>{t("page-what-is-ethereum-start-individuals-desc-5")}</p>
-                  </div>
-
+                  <CardParagraph>
+                    {t("page-what-is-ethereum-start-individuals-desc-4")}
+                  </CardParagraph>
+                  <CardParagraph>
+                    {t("page-what-is-ethereum-start-individuals-desc-5")}
+                  </CardParagraph>
+                </CardContent>
+                <CardFooter spacing="inherit">
                   <div className="flex flex-wrap gap-4">
                     <ButtonLink href="/start/">
                       {t("page-what-is-ethereum-start-individuals-cta-1")}
@@ -708,86 +715,100 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       {t("page-what-is-ethereum-start-individuals-cta-2")}
                     </ButtonLink>
                   </div>
-                </CardContent>
+                </CardFooter>
               </Card>
 
-              <Card className="overflow-hidden rounded-2xl border">
-                <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
+              <Card className="border" background="header-bar" spacing="lg">
+                <CardHeader variant="bar" spacing="inherit">
                   <SquareCode className="size-8 text-accent-b" />
-                  {t("page-what-is-ethereum-start-developers-title")}
-                </CardTitle>
-                <CardContent className="space-y-12 p-8">
-                  <div className="space-y-6">
-                    <p>{t("page-what-is-ethereum-start-developers-desc-1")}</p>
-                    <p>
-                      {t.rich("page-what-is-ethereum-start-developers-desc-2", {
-                        a: (chunks) => (
-                          <Link href="/developers/docs/">{chunks}</Link>
-                        ),
-                      })}
-                    </p>
-                    <p>
-                      {t.rich("page-what-is-ethereum-start-developers-desc-3", {
-                        hardhat: (chunks) => (
-                          <Link href="https://hardhat.org/">{chunks}</Link>
-                        ),
-                        foundry: (chunks) => (
-                          <Link href="https://getfoundry.sh/">{chunks}</Link>
-                        ),
-                        ethers: (chunks) => (
-                          <Link href="https://docs.ethers.org/">{chunks}</Link>
-                        ),
-                        thirdweb: (chunks) => (
-                          <Link href="https://thirdweb.com/">{chunks}</Link>
-                        ),
-                        moralis: (chunks) => (
-                          <Link href="https://moralis.com/">{chunks}</Link>
-                        ),
-                      })}
-                    </p>
-                    <p>{t("page-what-is-ethereum-start-developers-desc-4")}</p>
-                  </div>
+                  <CardTitle>
+                    {t("page-what-is-ethereum-start-developers-title")}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardParagraph>
+                    {t("page-what-is-ethereum-start-developers-desc-1")}
+                  </CardParagraph>
+                  <CardParagraph>
+                    {t.rich("page-what-is-ethereum-start-developers-desc-2", {
+                      a: (chunks) => (
+                        <Link href="/developers/docs/">{chunks}</Link>
+                      ),
+                    })}
+                  </CardParagraph>
+                  <CardParagraph>
+                    {t.rich("page-what-is-ethereum-start-developers-desc-3", {
+                      hardhat: (chunks) => (
+                        <Link href="https://hardhat.org/">{chunks}</Link>
+                      ),
+                      foundry: (chunks) => (
+                        <Link href="https://getfoundry.sh/">{chunks}</Link>
+                      ),
+                      ethers: (chunks) => (
+                        <Link href="https://docs.ethers.org/">{chunks}</Link>
+                      ),
+                      thirdweb: (chunks) => (
+                        <Link href="https://thirdweb.com/">{chunks}</Link>
+                      ),
+                      moralis: (chunks) => (
+                        <Link href="https://moralis.com/">{chunks}</Link>
+                      ),
+                    })}
+                  </CardParagraph>
+                  <CardParagraph>
+                    {t("page-what-is-ethereum-start-developers-desc-4")}
+                  </CardParagraph>
+                </CardContent>
+                <CardFooter spacing="inherit">
                   <ButtonLink href="/developers/">
                     {t("page-what-is-ethereum-start-developers-cta")}
                   </ButtonLink>
-                </CardContent>
+                </CardFooter>
               </Card>
 
-              <Card className="overflow-hidden rounded-2xl border">
-                <CardTitle className="flex items-center gap-4 border-b bg-background-highlight p-4">
+              <Card className="border" background="header-bar" spacing="lg">
+                <CardHeader variant="bar" spacing="inherit">
                   <Landmark className="size-8 text-accent-c" />
-                  {t("page-what-is-ethereum-start-business-title")}
-                </CardTitle>
-                <CardContent className="space-y-12 p-8">
-                  <div className="space-y-6">
-                    <p>{t("page-what-is-ethereum-start-business-desc-1")}</p>
-                    <p>{t("page-what-is-ethereum-start-business-desc-2")} </p>
-                    <p>{t("page-what-is-ethereum-start-business-desc-3")}</p>
-                    <UnorderedList className="[&>li]:mb-0">
-                      <ListItem>
-                        {t("page-what-is-ethereum-start-business-benefit-1")}
-                      </ListItem>
-                      <ListItem>
-                        {t("page-what-is-ethereum-start-business-benefit-2")}
-                      </ListItem>
-                      <ListItem>
-                        {t("page-what-is-ethereum-start-business-benefit-3")}
-                      </ListItem>
-                    </UnorderedList>
-                    <p>
-                      {t.rich("page-what-is-ethereum-start-business-example", {
-                        a: (chunks) => (
-                          <Link href="https://www.shopify.com/news/stablecoins-on-shopify">
-                            {chunks}
-                          </Link>
-                        ),
-                      })}
-                    </p>
-                  </div>
+                  <CardTitle>
+                    {t("page-what-is-ethereum-start-business-title")}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardParagraph>
+                    {t("page-what-is-ethereum-start-business-desc-1")}
+                  </CardParagraph>
+                  <CardParagraph>
+                    {t("page-what-is-ethereum-start-business-desc-2")}
+                  </CardParagraph>
+                  <CardParagraph>
+                    {t("page-what-is-ethereum-start-business-desc-3")}
+                  </CardParagraph>
+                  <UnorderedList className="*:[li]:mb-0">
+                    <ListItem>
+                      {t("page-what-is-ethereum-start-business-benefit-1")}
+                    </ListItem>
+                    <ListItem>
+                      {t("page-what-is-ethereum-start-business-benefit-2")}
+                    </ListItem>
+                    <ListItem>
+                      {t("page-what-is-ethereum-start-business-benefit-3")}
+                    </ListItem>
+                  </UnorderedList>
+                  <CardParagraph>
+                    {t.rich("page-what-is-ethereum-start-business-example", {
+                      a: (chunks) => (
+                        <Link href="https://www.shopify.com/news/stablecoins-on-shopify">
+                          {chunks}
+                        </Link>
+                      ),
+                    })}
+                  </CardParagraph>
+                </CardContent>
+                <CardFooter spacing="inherit">
                   <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
                     {t("page-what-is-ethereum-start-business-cta")}
                   </ButtonLink>
-                </CardContent>
+                </CardFooter>
               </Card>
             </Section>
 

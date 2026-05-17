@@ -14,11 +14,11 @@ import type {
 } from "@/lib/types"
 
 import { type List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
+import MarkdownCard from "@/components/MarkdownCard"
 import { ContentContainer, Page as MdPage } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
@@ -94,22 +94,6 @@ const StyledButtonLink = ({
 
 const CardGrid = (props: ChildOnlyProp) => (
   <div className="grid grid-cols-1 gap-8 lg:grid-cols-3" {...props} />
-)
-
-const StyledCard = (props: {
-  title: string
-  emoji: string
-  description: ReactNode
-  children: ReactNode
-}) => (
-  <Card
-    title={props.title}
-    emoji={props.emoji}
-    description={props.description}
-    className="justify-start [&_h3]:mt-0 [&_h3]:mb-1 [&_h3]:font-bold"
-  >
-    {props.children}
-  </Card>
 )
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -308,16 +292,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <CardGrid>
                   {benefits.map(
                     ({ title, description, emoji, linkText, href }, idx) => (
-                      <StyledCard
-                        title={title}
-                        emoji={emoji}
+                      <MarkdownCard
                         key={idx}
+                        emoji={emoji}
+                        title={title}
                         description={description}
                       >
                         {href && linkText && (
                           <InlineLink href={href}>{linkText}</InlineLink>
                         )}
-                      </StyledCard>
+                      </MarkdownCard>
                     )
                   )}
                 </CardGrid>

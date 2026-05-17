@@ -9,7 +9,6 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import Callout from "@/components/Callout"
-import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -19,6 +18,7 @@ import HorizontalCard from "@/components/HorizontalCard"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
@@ -68,9 +68,9 @@ const PageContainer = ({ className, ...props }: FlexProps) => (
   </Flex>
 )
 
-const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
-  <Card
-    className="max-w-full min-w-[280px] flex-[1_0_30%] p-6 md:max-w-[46%]"
+const StyledCard = (props: ComponentPropsWithRef<typeof MarkdownCard>) => (
+  <MarkdownCard
+    className="max-w-full min-w-[280px] flex-[1_0_30%] md:max-w-[46%]"
     {...props}
   />
 )
