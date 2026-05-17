@@ -1,9 +1,14 @@
 import React from "react"
 
 import { AvatarBase, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import { BaseLink } from "@/components/ui/Link"
-import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -21,9 +26,6 @@ interface TorchHistoryCardProps {
   from: number
   to?: number
   transactionHash: string
-  className?: string
-  isCurrentHolder?: boolean
-  isPlaceholder?: boolean
 }
 
 const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
@@ -34,72 +36,42 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
   from,
   to,
   transactionHash,
-  className,
-  isCurrentHolder,
-  isPlaceholder = false,
 }) => {
+  // TODO: Extract intl strings
   return (
-    <Card
-      className={cn(
-        "flex flex-col rounded-xl border border-gray-100/50 bg-linear-to-b from-white to-gray-100 px-6 py-12 shadow-lg dark:text-body-inverse",
-        isCurrentHolder && "bg-linear-to-b from-[#B38DF0] to-[#DED4ED]",
-        isPlaceholder && "bg-linear-to-b from-gray-100 to-gray-200 opacity-50",
-        className
-      )}
-    >
-      <CardHeader className="flex flex-col p-0">
-        <div className="mb-4 flex flex-col items-center">
-          <AvatarBase
-            className={cn(
-              "h-32 w-32 border-2 border-gray-100/50 !shadow-none",
-              !twitter && "pointer-events-none"
-            )}
-          >
-            {twitter ? (
-              <BaseLink href={`https://x.com/${extractTwitterHandle(twitter)}`}>
-                <AvatarImage src={avatar} alt={name} />
-                <AvatarFallback>{name[0]}</AvatarFallback>
-              </BaseLink>
-            ) : (
-              <>
-                <AvatarImage src={avatar} alt={name} />
-                <AvatarFallback>{name[0]}</AvatarFallback>
-              </>
-            )}
-          </AvatarBase>
-        </div>
-
-        {isCurrentHolder && (
-          <div>
-            <Tag
-              size="small"
-              variant="solid"
-              status="tag"
-              className="text-2xs font-bold"
-            >
-              Current torchbearer
-            </Tag>
-          </div>
-        )}
-
-        <CardTitle className="text-lg">{name}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex flex-col gap-1 p-0">
-        <div>{role}</div>
-        {!isPlaceholder && (
-          <>
-            <div className="text-xs text-gray-500">
-              From {formatTorchDate(from)}
-              {to !== undefined ? ` to ${formatTorchDate(to)}` : " to present"}
-            </div>
-            <BaseLink
-              href={getTxEtherscanUrl(transactionHash)}
-              className="text-xs text-purple-600 hover:text-purple-500"
-            >
-              View on Etherscan
+    <Card>
+      <CardHeader className="flex flex-col">
+        <AvatarBase
+          className={cn(
+            "mx-auto h-32 w-32 border-2 !shadow-none",
+            !twitter && "pointer-events-none"
+          )}
+        >
+          {twitter ? (
+            <BaseLink href={`https://x.com/${extractTwitterHandle(twitter)}`}>
+              <AvatarImage src={avatar} alt={name} />
+              <AvatarFallback>{name[0]}</AvatarFallback>
             </BaseLink>
-          </>
-        )}
+          ) : (
+            <>
+              <AvatarImage src={avatar} alt={name} />
+              <AvatarFallback>{name[0]}</AvatarFallback>
+            </>
+          )}
+        </AvatarBase>
+      </CardHeader>
+      <CardContent spacing="sm">
+        <div>
+          <CardTitle variant="semibold">{name}</CardTitle>
+          <CardParagraph>{role}</CardParagraph>
+        </div>
+        <CardParagraph size="sm" variant="light">
+          From {formatTorchDate(from)}
+          {to !== undefined ? ` to ${formatTorchDate(to)}` : " to present"}
+        </CardParagraph>
+        <BaseLink href={getTxEtherscanUrl(transactionHash)} className="text-sm">
+          View on Etherscan
+        </BaseLink>
       </CardContent>
     </Card>
   )

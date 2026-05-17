@@ -1,30 +1,31 @@
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
-import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import Link from "@/components/ui/Link"
-
-import { cn } from "@/lib/utils/cn"
 
 import Curved10YearsText from "@/public/images/10-year-anniversary/10y-curved-heading.svg"
 
 const TORCH_CONTRACT_ADDRESS = "0x26d85a13212433fe6a8381969c2b0db390a0b0ae"
 
-interface NFTMintCardProps {
-  className?: string
-}
-
-const NFTMintCard = ({ className }: NFTMintCardProps) => {
-  const t = useTranslations("page-10-year-anniversary")
+const NFTMintCard = async () => {
+  const t = await getTranslations("page-10-year-anniversary")
 
   return (
-    <Card
-      className={cn(
-        "w-full overflow-hidden rounded-3xl bg-linear-to-b from-[#A66BFF20] to-[#EED9FE16] shadow-lg",
-        className
-      )}
-    >
-      <CardHeader className="gap-4 pb-0">
+    <Card className="text-center shadow-lg" background="radial-a" spacing="lg">
+      <CardHeader>
         <div className="relative">
           {/* Torch/flame video */}
           <div className="flex items-center justify-center pt-12">
@@ -52,28 +53,26 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
             height="auto"
           />
         </div>
-
-        <CardTitle className="text-center">
-          {t("page-10-year-mint-card-title")}
-        </CardTitle>
       </CardHeader>
 
-      <CardContent className="space-y-6 p-6 text-center">
-        <p className="text-body-medium">
-          {t("page-10-year-mint-card-description")}
-        </p>
+      <CardContent spacing="lg">
+        <CardTitle>{t("page-10-year-mint-card-title")}</CardTitle>
 
+        <CardParagraph variant="light">
+          {t("page-10-year-mint-card-description")}
+        </CardParagraph>
+      </CardContent>
+
+      <CardFooter>
         <Alert
           variant="update"
-          className="w-full rounded-none border-none text-center"
+          className="rounded-[max(0px,calc(var(--card-radius)-var(--card-pad)))] border-none"
         >
           <AlertContent>
-            <AlertTitle className="!text-primary">
-              {t("page-10-year-mint-card-ended-title")}
-            </AlertTitle>
-            <p className="text-primary">
+            <AlertTitle>{t("page-10-year-mint-card-ended-title")}</AlertTitle>
+            <AlertDescription className="text-primary">
               {t("page-10-year-mint-card-ended-description")}
-            </p>
+            </AlertDescription>
             <Link
               href={`https://opensea.io/item/ethereum/${TORCH_CONTRACT_ADDRESS}`}
               title={TORCH_CONTRACT_ADDRESS}
@@ -82,7 +81,7 @@ const NFTMintCard = ({ className }: NFTMintCardProps) => {
             </Link>
           </AlertContent>
         </Alert>
-      </CardContent>
+      </CardFooter>
     </Card>
   )
 }
