@@ -133,6 +133,7 @@ const Page = async (props: {
               name="q"
               defaultValue={q ? safeDecodeURIComponent(q) : ""}
               placeholder={t("page-events-search-placeholder")}
+              aria-label={t("page-events-search-placeholder")}
               aria-describedby="input-instruction"
               className="w-full"
               required

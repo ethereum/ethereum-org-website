@@ -8,6 +8,8 @@ import { cn } from "@/lib/utils/cn"
 import { Button } from "./buttons/Button"
 import { Center, Flex } from "./flex"
 
+import useTranslation from "@/hooks/useTranslation"
+
 const dialogVariant = tv({
   slots: {
     content:
@@ -115,13 +117,13 @@ const DialogHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const { header, close } = useDialogStyles()
+  const { t } = useTranslation("common")
   return (
     <div className={cn(header(), className)} {...props}>
       {children}
       <Center className={close()} asChild>
-        <DialogPrimitive.Close>
+        <DialogPrimitive.Close aria-label={t("close")}>
           <X size="20" />
-          <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </Center>
     </div>

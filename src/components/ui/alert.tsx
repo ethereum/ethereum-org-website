@@ -1,6 +1,7 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
+import { getTranslations } from "next-intl/server"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -81,17 +82,20 @@ AlertDescription.displayName = "AlertDescription"
 const AlertCloseButton = React.forwardRef<
   HTMLButtonElement,
   React.ButtonHTMLAttributes<HTMLButtonElement>
->(({ className, ...props }, ref) => (
-  <Button
-    ref={ref}
-    variant="ghost"
-    className={cn("-me-4 rounded-full text-body", className)}
-    {...props}
-  >
-    <X className="h-6 w-6" />
-    <span className="sr-only">Close</span>
-  </Button>
-))
+>(async ({ className, ...props }, ref) => {
+  const t = await getTranslations("common")
+  return (
+    <Button
+      ref={ref}
+      variant="ghost"
+      className={cn("-me-4 rounded-full text-body", className)}
+      {...props}
+      aria-label={props["aria-label"] || t("close")}
+    >
+      <X className="h-6 w-6" />
+    </Button>
+  )
+})
 AlertCloseButton.displayName = "AlertCloseButton"
 
 const AlertEmoji = ({ className, ...props }: EmojiProps) => (
