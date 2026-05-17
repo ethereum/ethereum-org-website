@@ -8,7 +8,7 @@ import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import { Button } from "@/components/ui/buttons/Button"
-import { Card } from "@/components/ui/card"
+import { Card, CardHeader } from "@/components/ui/card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
@@ -94,29 +94,35 @@ const Page = async (props: {
                 asChild
                 className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
               >
-                <Card className="h-fit overflow-hidden border">
-                  <LinkBox className="p-4 hover:bg-background-highlight">
-                    <LinkOverlay
-                      href={`/developers/tools/${slug}`}
-                      className="text-body no-underline"
-                    >
-                      <div className="flex items-center gap-2">
-                        <div className="rounded-lg border p-2">
-                          <Icon className="size-6" />
+                <Card
+                  className="h-fit overflow-hidden border"
+                  spacing="md"
+                  background="none"
+                >
+                  <LinkBox className="hover:bg-background-highlight">
+                    <CardHeader spacing="inherit">
+                      <LinkOverlay
+                        href={`/developers/tools/${slug}`}
+                        className="text-body no-underline"
+                      >
+                        <div className="flex items-center gap-2">
+                          <div className="rounded-lg border p-2">
+                            <Icon className="size-6" />
+                          </div>
+                          <h3 className="flex-1 text-md">
+                            {t(`page-developers-tools-category-${slug}-title`)}
+                          </h3>
+                          <Button
+                            variant="outline"
+                            isSecondary
+                            size="sm"
+                            className="shrink-0 text-sm"
+                          >
+                            {t("page-developers-tools-see-all")}
+                          </Button>
                         </div>
-                        <h3 className="flex-1 text-md">
-                          {t(`page-developers-tools-category-${slug}-title`)}
-                        </h3>
-                        <Button
-                          variant="outline"
-                          isSecondary
-                          size="sm"
-                          className="shrink-0 text-sm"
-                        >
-                          {t("page-developers-tools-see-all")}
-                        </Button>
-                      </div>
-                    </LinkOverlay>
+                      </LinkOverlay>
+                    </CardHeader>
                   </LinkBox>
 
                   {previewsByCategory[slug].map((app) => (

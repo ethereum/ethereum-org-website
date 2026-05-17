@@ -1,5 +1,11 @@
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  Card,
+  CardContent,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -17,19 +23,24 @@ const SpeedRunCard = ({
   ctaLabel,
   className,
 }: SpeedRunCardProps) => (
-  <div
-    className={cn("relative h-[450px]", className)}
+  <Card
+    background="none"
+    className={cn(
+      "relative min-h-112 overflow-hidden rounded-b-none",
+      className
+    )}
     data-label="speedrunethereum-banner"
   >
     <Image
-      className="pointer-events-none absolute -z-[1] h-full w-screen rounded-t-4xl object-cover object-[75%_50%]"
+      className="pointer-events-none absolute z-hide h-full w-screen object-cover object-[75%_50%]"
       src={speedRunEthereumImage}
       alt="SpeedRunEthereum banner"
       sizes="(max-width: 768px) 100vw, 50vw"
     />
-    <div className="z-[1] flex flex-col space-y-4 px-6 py-10 break-words md:space-y-6 lg:p-6">
-      <h3>{title}</h3>
-      <p>{description}</p>
+
+    <CardContent spacing="lg">
+      <CardTitle variant="black">{title}</CardTitle>
+      <CardParagraph>{description}</CardParagraph>
       <ButtonLink
         href="https://speedrunethereum.com/"
         className="sm:w-fit"
@@ -42,8 +53,8 @@ const SpeedRunCard = ({
       >
         {ctaLabel}
       </ButtonLink>
-    </div>
-  </div>
+    </CardContent>
+  </Card>
 )
 
 export default SpeedRunCard
