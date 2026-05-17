@@ -321,7 +321,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
           </Flex>
           <Content>
-            <Flex className="-mx- flex-wrap">
+            <Flex className="flex-wrap">
               <Callout
                 className="min-h-full flex-[1_1_416px]"
                 image={ethImg}
