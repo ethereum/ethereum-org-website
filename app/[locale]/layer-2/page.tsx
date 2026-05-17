@@ -462,16 +462,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               eventAction="expand"
               eventName="how do i know if a network is part of ethereum"
             >
-              <div className="flex flex-col gap-8">
-                <p>
-                  {t("page-layer-2-faq-ExpandableCard-1-description-1")}{" "}
-                  <InlineLink href="/layer-2/networks">
-                    {tCommon("nav-ethereum-networks")}
-                  </InlineLink>
-                  {t("page-layer-2-period")}
-                </p>
-                <p>{t("page-layer-2-faq-ExpandableCard-1-description-2")}</p>
-              </div>
+              <p>
+                {t("page-layer-2-faq-ExpandableCard-1-description-1")}{" "}
+                <InlineLink href="/layer-2/networks">
+                  {tCommon("nav-ethereum-networks")}
+                </InlineLink>
+                {t("page-layer-2-period")}
+              </p>
+              <p>{t("page-layer-2-faq-ExpandableCard-1-description-2")}</p>
             </ExpandableCard>
             <ExpandableCard
               title={t("page-layer-2-faq-ExpandableCard-2-title")}
@@ -479,16 +477,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               eventAction="expand"
               eventName="are all these networks safe"
             >
-              <div className="flex flex-col gap-8">
-                <p>
-                  {t("page-layer-2-faq-ExpandableCard-2-description-1")}{" "}
-                  <InlineLink href="/layer-2/networks">
-                    {t("page-layer-2-faq-ExpandableCard-2-link")}
-                  </InlineLink>
-                  {t("page-layer-2-period")}
-                </p>
-                <p>{t("page-layer-2-faq-ExpandableCard-2-description-2")}</p>
-              </div>
+              <p>
+                {t("page-layer-2-faq-ExpandableCard-2-description-1")}{" "}
+                <InlineLink href="/layer-2/networks">
+                  {t("page-layer-2-faq-ExpandableCard-2-link")}
+                </InlineLink>
+                {t("page-layer-2-period")}
+              </p>
+              <p>{t("page-layer-2-faq-ExpandableCard-2-description-2")}</p>
             </ExpandableCard>
             <ExpandableCard
               title={t("page-layer-2-faq-ExpandableCard-3-title")}

@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "11.6.1",
+  "version": "11.6.2",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
     "format": "prettier \"**/*.{js,jsx,ts,tsx}\" --write",
     "preversion": "bash ./src/scripts/updatePublishDate.sh",
     "storybook": "storybook dev -p 6006",
@@ -84,8 +85,8 @@
     "lodash": "^4.18.1",
     "lucide-react": "^1.12.0",
     "motion": "^12.36.0",
-    "next": "^16.2.3",
-    "next-intl": "^4.9.1",
+    "next": "^16.2.6",
+    "next-intl": "^4.9.2",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.3.0",
     "prism-react-renderer": "2.4.1",

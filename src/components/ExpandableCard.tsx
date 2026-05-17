@@ -39,7 +39,7 @@ const ExpandableCard = ({
   eventName = "",
   visible = false,
   className,
-  forceMount,
+  forceMount = true,
 }: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(visible)
   const { t } = useTranslation("common")
@@ -71,7 +71,7 @@ const ExpandableCard = ({
       >
         <AccordionItem
           value="item-1"
-          className="rounded-xs border hover:bg-background-highlight"
+          className="rounded-2xl border hover:bg-background-highlight"
         >
           <AccordionTrigger
             hideIcon
@@ -104,7 +104,9 @@ const ExpandableCard = ({
                 "in-data-[state=closed]:hidden in-data-[state=closed]:h-0"
             )}
           >
-            <div className="border-t pt-6">{children}</div>
+            <div className="space-y-[1lh] border-t pt-6 [&>p]:first:mt-0 [&>p]:last:mb-0">
+              {children}
+            </div>
           </AccordionContent>
         </AccordionItem>
       </Accordion>

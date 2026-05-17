@@ -2213,6 +2213,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bshastry"><img src="https://avatars.githubusercontent.com/u/2388185?v=4?s=100" width="100px;" alt="Bhargava Shastry"/><br /><sub><b>Bhargava Shastry</b></sub></a><br /><a href="#maintenance-bshastry" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://blog.naftalimurgor.com"><img src="https://avatars.githubusercontent.com/u/37052032?v=4?s=100" width="100px;" alt="Naftali Murgor"/><br /><sub><b>Naftali Murgor</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Anaftalimurgor" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://manmit07.netlify.app/"><img src="https://avatars.githubusercontent.com/u/171561659?v=4?s=100" width="100px;" alt="TenderDeve"/><br /><sub><b>TenderDeve</b></sub></a><br /><a href="#maintenance-tenderdeve" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nikolay-udovik"><img src="https://avatars.githubusercontent.com/u/73495276?v=4?s=100" width="100px;" alt="Nikolay Udovik"/><br /><sub><b>Nikolay Udovik</b></sub></a><br /><a href="#maintenance-nikolay-udovik" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
