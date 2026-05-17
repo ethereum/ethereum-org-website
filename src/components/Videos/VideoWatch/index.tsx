@@ -4,7 +4,9 @@ import type { VideoData } from "@/lib/types"
 
 import {
   Card,
+  CardBanner,
   CardContent,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -14,6 +16,7 @@ import YouTube from "@/components/YouTube"
 import { cn } from "@/lib/utils/cn"
 import { getVideoData } from "@/lib/utils/videos"
 
+// TODO: Accept `portrait` prop and pass to YouTube component
 interface VideoWatchProps {
   slug: string
   startTime?: string
@@ -41,19 +44,18 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
   const t = await getTranslations("page-videos")
 
   return (
-    <Card
-      className={cn(
-        "my-8 max-w-xl space-y-4 border bg-background-highlight p-4 md:p-6",
-        className
-      )}
-    >
-      <YouTube
-        id={frontmatter.youtubeId}
-        title={frontmatter.title}
-        className="m-0 overflow-hidden rounded-md"
-        start={startTime}
-      />
-      <CardContent className="p-0">
+    <Card className={cn("my-8 max-w-xl border", className)}>
+      <CardHeader>
+        <CardBanner background="none" size="full">
+          <YouTube
+            id={frontmatter.youtubeId}
+            title={frontmatter.title}
+            start={startTime}
+          />
+        </CardBanner>
+      </CardHeader>
+
+      <CardContent spacing="sm">
         <CardTitle variant="semibold">{frontmatter.title}</CardTitle>
         <CardParagraph variant="light">
           {frontmatter.description.split(/(?<=\.)\s/)[0]}

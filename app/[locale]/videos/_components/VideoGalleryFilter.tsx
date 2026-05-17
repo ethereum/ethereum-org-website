@@ -262,7 +262,11 @@ const VideoGalleryFilter = ({
       ) : (
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {sortedVideos.map((video) => (
-            <Card key={video.slug} href={`/videos/${video.slug}/`}>
+            <Card
+              key={video.slug}
+              href={`/videos/${video.slug}/`}
+              background="none"
+            >
               <CardBanner className="aspect-video h-auto">
                 <Image
                   src={video.thumbnailUrl}
@@ -273,8 +277,8 @@ const VideoGalleryFilter = ({
                   loading="lazy"
                 />
               </CardBanner>
-              <CardContent>
-                <CardTitle className="text-lg">{video.title}</CardTitle>
+              <CardContent spacing="sm">
+                <CardTitle variant="semibold">{video.title}</CardTitle>
                 <CardParagraph
                   variant="light"
                   size="sm"
