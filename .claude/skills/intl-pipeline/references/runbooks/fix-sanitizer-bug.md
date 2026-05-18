@@ -17,7 +17,7 @@ When NOT to invoke:
 
 ## The slash command
 
-```
+```bash
 /fix-sanitizer-bug --language=ja --issue="Title attribute embedded quotes break parse" --file=public/content/translations/ja/some-page/index.md
 ```
 

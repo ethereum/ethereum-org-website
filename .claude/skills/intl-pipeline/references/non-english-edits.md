@@ -4,7 +4,7 @@ Decision tree for: "Can I edit this translated file by hand?" The answer is some
 
 ## The decision tree
 
-```
+```text
 Are you editing a translated file?
 │
 ├── Has the English source changed since the manifest was stamped?

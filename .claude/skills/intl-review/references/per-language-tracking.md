@@ -16,7 +16,7 @@ It is **not** the same as `.claude/translation-review/known-patterns.md`, which 
 
 ## File path
 
-```
+```text
 .claude/translation-review/per-language/{lang}.md
 ```
 
