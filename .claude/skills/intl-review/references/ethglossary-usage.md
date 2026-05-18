@@ -2,11 +2,22 @@
 
 Review-specific guidance for using ETHGlossary as the authority during translation review. For the pipeline-side integration (how the pipeline produces translations using ETHGlossary), see `intl-pipeline/references/ethglossary.md`.
 
+## Start with llms.txt
+
+ETHGlossary publishes a canonical agent reference at the **domain root** `${GLOSSARY_HOST}/llms.txt` (not under `/api/v1/`). Fetch this first when you need API details — endpoint shapes, parameters, and response schemas come from llms.txt, which stays in sync with the live API:
+
+```bash
+GLOSSARY_HOST="${GLOSSARY_API_URL%/api/*}"
+curl -sf "$GLOSSARY_HOST/llms.txt"
+```
+
+This doc focuses on the review-specific patterns (severity mapping, what to flag); endpoint contract details live in llms.txt.
+
 ## The authority rule
 
 **Any translated term that differs from its ETHGlossary entry for the target language is a CRITICAL issue.** Not a warning. The auto-fix step in `/review-translations` corrects these by replacing the wrong translation with the glossary-approved form. If you don't reference ETHGlossary during review, the review is invalid.
 
-This is the determinism backbone. Reviewers don't argue terminology with the pipeline — both pipeline and reviewer defer to ETHGlossary. Disagreements get resolved upstream (PR against `wackerow/ethglossary`), not in the locale file.
+This is the determinism backbone. Reviewers don't argue terminology with the pipeline — both pipeline and reviewer defer to ETHGlossary. If a glossary entry looks wrong during review, flag it in the report; don't patch the locale to disagree with it.
 
 ## How to query
 
@@ -42,16 +53,12 @@ Configured in `src/scripts/intl-pipeline/config.ts` under `GLOSSARY_API_URL`; ca
 
 ```bash
 GLOSSARY_API_URL="${GLOSSARY_API_URL:-$(grep -oE 'https://[^"]+/api/v[0-9]+' src/scripts/intl-pipeline/config.ts | head -1)}"
-```
-
-Fetch `llms.txt` first for the canonical API surface:
-
-```bash
 GLOSSARY_HOST="${GLOSSARY_API_URL%/api/*}"
-curl -sf "$GLOSSARY_HOST/llms.txt" -o /tmp/ethglossary-llms.txt
 ```
 
 ## What each term entry tells the reviewer
+
+Field shapes are documented in llms.txt; this is the review-time interpretation.
 
 | Field | Review use |
 |---|---|
@@ -72,7 +79,7 @@ curl -sf "$GLOSSARY_HOST/llms.txt" -o /tmp/ethglossary-llms.txt
 | Locale form differs from `script_rule: keep_latin` entry | Critical | Yes — revert to Latin |
 | Locale form differs from `script_rule: transliterate` entry (different from `translation.term`) | Critical | Yes — replace with `translation.term` |
 | Locale form differs from `script_rule: translate` / `calque` entry | High (semantic, not deterministic) | No — flag for review |
-| Term not in ETHGlossary at all | Medium (missing data) | No — flag, suggest adding to ETHGlossary |
+| Term not in ETHGlossary at all | Medium (missing data) | No — flag in review report |
 | Term has `translation.confidence: low` in ETHGlossary | Medium (uncertain authority) | No — flag for native-speaker review |
 
 ## What to do when a term is missing
@@ -81,20 +88,21 @@ If a review surfaces a brand / person / project / tool that ETHGlossary doesn't 
 
 1. Confirm it's genuinely missing (single-term endpoint returns 404; `/filter` doesn't surface it on a source file that mentions it).
 2. Flag it in the review report as "missing from ETHGlossary; using locale form as-is."
-3. **After the review**, open a PR against `wackerow/ethglossary` to add the entry (or file an issue if the per-language form isn't clear).
-4. Note the addition in `.claude/translation-review/per-language/{lang}.md` as a follow-up item.
+3. Note it in `.claude/translation-review/per-language/{lang}.md` so the next review of that language picks it up.
 
-Don't block the review on adding the term upstream. The review's job is to report; the PR against ETHGlossary is separate work.
+Don't patch the locale to compensate. Don't author terminology locally. Upstream coordination (whether someone files an issue or PR against ETHGlossary) is a separate maintainer task, not part of the review.
 
 ## What NOT to do
 
-- **Don't argue with ETHGlossary in the locale file.** If you think the glossary is wrong, file a PR; don't leave the locale's deviation in.
+- **Don't argue with ETHGlossary in the locale file.** If you think the glossary is wrong, flag it in the report; don't leave the locale's deviation in.
 - **Don't auto-fix `script_rule: translate` deviations.** Semantic translation has variance; auto-fix would erase legitimate variation. Flag for human review instead.
 - **Don't query ETHGlossary from memory.** Always use the API for the actual review evaluation. Memory is for understanding patterns, not for citing specific terms.
+- **Don't read endpoint shapes from this doc.** Use llms.txt for the canonical API contract.
 
 ## See also
 
 - `intl-pipeline/references/ethglossary.md` for the pipeline-side integration (how translations are produced)
 - ETHGlossary `docs/translation-policy.md` for the canonical policy
+- `${GLOSSARY_HOST}/llms.txt` for the canonical API contract
 - `references/critical-vs-warning.md` for the broader severity rubric this slots into
 - `.claude/commands/review-translations.md` for the slash command's full ETHGlossary integration flow
