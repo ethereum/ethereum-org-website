@@ -49,7 +49,7 @@ Worth noting in the report but not actioning:
 
 Example: ETHGlossary says `Hardhat` is `keep_latin` for all languages. Locale has `ハードハット` (Japanese transliteration). This is a **critical** issue — auto-fix to `Hardhat`.
 
-Subtle: this also means the local transliteration banks (`.claude/translation-review/transliterations/*.json`, deprecated post-v0.3.0) sometimes have transliterated forms that DISAGREE with ETHGlossary. ETHGlossary wins. The local file's form is wrong by policy.
+Note: some legacy translations may show brand-name forms that disagree with ETHGlossary's current `script_rule`. ETHGlossary is authoritative; the auto-fix path corrects to the canonical form regardless of what the locale currently shows.
 
 ### When the locale uses a valid alias
 

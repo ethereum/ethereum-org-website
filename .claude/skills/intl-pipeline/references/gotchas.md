@@ -66,12 +66,6 @@ If a translation has a translated ID (e.g., `{#网络影响}`), that's a Crowdin
 
 Each manifest has a `version` field. As of v1, version is `"1"`. Schema migrations would bump this and need a parallel pipeline migration path. If you change manifest shape, bump the version AND handle older manifests gracefully (or do a clean re-stamp).
 
-## The `_alternatives` block in old transliteration files
-
-`.claude/translation-review/transliterations/{lang}.json` files (now superseded by ETHGlossary v0.3.0) have an `_alternatives` block with acceptable variant forms. ETHGlossary's per-language entries don't directly expose alternatives for the overlap terms — the sanitizer needs to do without this when migrated.
-
-Until the sanitizer is refactored to use ETHGlossary exclusively, the local files remain load-bearing.
-
 ## Whitespace after structural removals
 
 Phase 3's component removal normalizes surrounding whitespace (avoid double blank lines). If a translation has unexpected blank-line patterns, it may be:
