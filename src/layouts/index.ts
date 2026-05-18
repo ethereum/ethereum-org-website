@@ -19,7 +19,6 @@ export const layoutMapping = {
   staking: mdLayouts.StakingLayout,
   roadmap: mdLayouts.RoadmapLayout,
   upgrade: mdLayouts.UpgradeLayout,
-  translatathon: mdLayouts.TranslatathonLayout,
   docs: DocsLayout,
   tutorial: TutorialLayout,
 }
@@ -30,7 +29,6 @@ export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
   staking: mdLayouts.stakingComponents,
   roadmap: mdLayouts.roadmapComponents,
   upgrade: mdLayouts.upgradeComponents,
-  translatathon: mdLayouts.translatathonComponents,
   docs: docsComponents,
   tutorial: tutorialsComponents,
 }

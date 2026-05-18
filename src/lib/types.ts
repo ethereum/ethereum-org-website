@@ -877,6 +877,7 @@ type FilterItem = {
   ignoreFilterReset?: boolean
   input: FilterInput
   options: Array<FilterOptionItem>
+  optionsLegend?: string // sr-only legend for the nested fieldset wrapping `options` (when present)
 }
 
 type FilterInput = (
