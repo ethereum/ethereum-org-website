@@ -1,31 +1,40 @@
-# 👋 ยินดีต้อนรับสู่ ethereum.org!
+# 🚀 ethereum-org-website (Thai Community Edition)
 
-นี่คือ Repository ของเว็บไซต์ [ethereum.org](https://ethereum.org) ซึ่งเป็นแหล่งข้อมูลหลักสำหรับชุมชน Ethereum ทั่วโลก เป้าหมายของเราคือการเป็น **"ประตูสู่โลก Ethereum ที่ดีที่สุด"** สำหรับทุกคน
-
----
-
-## 📑 สารบัญ
-- [วิธีการมีส่วนร่วม (How to contribute)](#วิธีการมีส่วนร่วม)
-- [การตั้งค่าสภาพแวดล้อมสำหรับนักพัฒนา](#การตั้งค่าสภาพแวดล้อม)
-- [รางวัลสำหรับผู้ช่วยพัฒนา (POAP & OATs)](#รางวัลสำหรับผู้ช่วยพัฒนา)
+ยินดีต้อนรับสู่คลังพัฒนาและแปลเว็บไซต์ **Ethereum.org** แหล่งข้อมูลหลักสำหรับชุมชน Ethereum ตอนนี้เรากำลังขับเคลื่อนในส่วนของ **WEB3 & AI DEVELOPMENT STACK** เพื่อให้ชุมชนไทยเข้าถึงเทคโนโลยีล่าสุดได้ง่ายที่สุด!
 
 ---
 
-## 🤝 วิธีการมีส่วนร่วม
-
-เรารับฟังความคิดเห็นและการสนับสนุนจากทุกคน! คุณสามารถช่วยเราได้ดังนี้:
-
-1.  **แจ้งปัญหา (Submit an issue):** หากพบจุดผิดหรือต้องการเสนอไอเดียใหม่ [สร้าง Issue ที่นี่](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
-2.  **Fork โปรเจกต์:** คัดลอก Repo นี้ไปยังบัญชี GitHub ของคุณเอง
-3.  **ส่ง Pull Request (PR):** เมื่อแก้ไขเสร็จแล้ว ส่งการเปลี่ยนแปลงของคุณกลับมาที่ Branch `dev` เพื่อให้ทีมงานตรวจสอบ
+## 🤝 วิธีการมีส่วนร่วม (How to Contribute)
+เรายินดีต้อนรับนักพัฒนา (Devs) และนักแปล (Translators) ทุกคน!
+1. **Fork** โปรเจกต์นี้ไปยังบัญชีของคุณ
+2. **Clone** ลงไปทำงานในเครื่องคอมพิวเตอร์ของคุณ
+3. **สร้าง บรันช์ ใหม่** เพื่อเริ่มลงมือแก้ไขโค้ดหรือเนื้อหาภาษาไทย
+4. **ส่ง Pull Request (PR)** กลับมาที่นี่ เพื่อร่วมกันพัฒนาเว็บไซต์หลัก
 
 ---
 
-## 💻 การตั้งค่าสภาพแวดล้อม (Local Setup)
+## 💬 ชุมชนและการพูดคุย
+เข้ามาอัปเดตงาน พูดคุยเรื่อง Web3/AI หรือปรึกษาการแปลร่วมกับเราได้ที่:
+* 🌐 **Discord Community:** [คลิกเพื่อเข้าสู่ Discord](https://discord.gg/3rBPqHSgga)
 
-หากคุณเป็นนักพัฒนาและต้องการรันเว็บไซต์บนเครื่องตัวเอง ให้ทำตามขั้นตอนดังนี้:
+---
 
-### 1. Clone โปรเจกต์
-```sh
-git clone git@github.com:[ชื่อผู้ใช้ของคุณ]/ethereum-org-website.git
-cd ethereum-org-website
+## 💎 สนับสนุนโครงการและนักพัฒนา (Support & Donations)
+
+ร่วมเป็นส่วนหนึ่งในการขับเคลื่อนและสนับสนุนการทำงานของเราในระบบนิเวศของ Ethereum และ Base (เพื่อนๆ และชุมชนสามารถส่งกำลังใจหรือสนับสนุนค่าน้ำชาได้ที่นี่ครับ):
+
+### 🔵 Support via Base / Ethereum Network
+* **ENS Domain:** `Pump482930.base.eth` 👈 *สามารถใช้ชื่อนี้โอนได้เลย*
+* **Wallet Address:** `0x4971C0016Ce3EB45a70D50b6627885524EE9961f`
+* **Base App Invite:** สนับสนุนและเข้าร่วมกับเราบน Base ได้ที่นี่ 👉 [Base App Invite](https://base.app/invite/pump482930/DYWZQP2Z)
+
+### 🔸 บริการแนะนำสำหรับผู้เริ่มต้น
+หากคุณต้องการเริ่มต้นเข้าสู่โลกคริปโตอย่างปลอดภัยบนกระดานเทรดที่ถูกกฎหมายในไทย สามารถสมัครใช้งานผ่านลิงก์สนับสนุนของเราได้ที่นี่:
+👉 **[สมัครใช้งาน Binance TH](https://accounts.binance.th/th/register?ref=MC7PQ9LS)**
+
+---
+
+## 📱 Connect With Me
+
+[![X_Twitter-Follow Me](https://img.shields.io/badge/X_Twitter-Follow%20Me-black?style=for-the-badge&logo=x)](https://x.com/kokocodes)
+[![LinkedIn-Connect With Me](https://img.shields.io/badge/LinkedIn-Connect%20With%20Me-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/)
