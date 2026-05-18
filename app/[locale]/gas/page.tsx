@@ -371,7 +371,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </Content>
         <Content>
           <H2 className="mt-0">{t("page-gas-faq-header")}</H2>
-          <div className="max-w-[832px]">
+          <div className="max-w-[832px] space-y-4">
             <ExpandableCard title={t("page-gas-faq-question-1-q")}>
               <p>
                 <Translation id="page-gas:page-gas-faq-question-1-a-1" />

@@ -456,7 +456,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           className="flex w-full max-w-[832px] flex-col gap-12 px-8 py-9"
         >
           <h2>{t("page-layer-2-faq-title")}</h2>
-          <div>
+          <div className="space-y-4">
             <ExpandableCard
               title={t("page-layer-2-faq-ExpandableCard-1-title")}
               eventCategory="l2_hub"

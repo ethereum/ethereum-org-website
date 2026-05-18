@@ -767,8 +767,8 @@ export default async function Page(props: { params: Promise<Params> }) {
               {t("page-upgrades-question-title")}
             </H2>
           </Center>
-          <Flex className="mt-16 flex-col lg:flex-row">
-            <div className="w-full">
+          <Flex className="mt-16 flex-col gap-x-8 gap-y-4 lg:flex-row">
+            <div className="flex-1 space-y-4">
               <ExpandableCard
                 title={t("bug-bounty-faq-q2-title")}
                 contentPreview={t("bug-bounty-faq-q2-contentPreview")}
@@ -798,7 +798,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 <p>{t("bug-bounty-faq-q4-content-1")}</p>
               </ExpandableCard>
             </div>
-            <Flex className="ms-0 w-full flex-col lg:ms-8">
+            <div className="flex-1 space-y-4">
               <ExpandableCard
                 title={t("bug-bounty-faq-q5-title")}
                 contentPreview={t("bug-bounty-faq-q5-contentPreview")}
@@ -818,7 +818,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               >
                 <p>{t("bug-bounty-faq-q7-content-1")}</p>
               </ExpandableCard>
-            </Flex>
+            </div>
           </Flex>
           <FileContributors
             className="my-10 border-t"

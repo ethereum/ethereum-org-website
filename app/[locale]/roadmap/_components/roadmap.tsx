@@ -211,21 +211,15 @@ const RoadmapPage = () => {
             </div>
             <div className="flex flex-1 flex-col gap-8">
               <h2>{t("page-roadmap-timeline-title")}</h2>
-              <div>
-                <ExpandableCard
-                  title={t("page-roadmap-faq-1-title")}
-                  className="mb-0"
-                >
+              <div className="space-y-4">
+                <ExpandableCard title={t("page-roadmap-faq-1-title")}>
                   <p>
                     <strong>{t("page-roadmap-faq-1-p1")}</strong>{" "}
                     {t("page-roadmap-faq-1-p1-continued")}
                   </p>
                   <p>{t("page-roadmap-faq-1-p2")}</p>
                 </ExpandableCard>
-                <ExpandableCard
-                  title={t("page-roadmap-faq-2-title")}
-                  className="mb-0"
-                >
+                <ExpandableCard title={t("page-roadmap-faq-2-title")}>
                   <p>
                     {t("page-roadmap-faq-2-p1")}{" "}
                     <strong>{t("page-roadmap-faq-2-p1-strong")}</strong>{" "}
@@ -233,10 +227,7 @@ const RoadmapPage = () => {
                   </p>
                   <p>{t("page-roadmap-faq-2-p2")}</p>
                 </ExpandableCard>
-                <ExpandableCard
-                  title={t("page-roadmap-faq-3-title")}
-                  className="mb-0"
-                >
+                <ExpandableCard title={t("page-roadmap-faq-3-title")}>
                   <p>
                     <Translation
                       id="page-roadmap:page-roadmap-faq-3-p1"
@@ -244,10 +235,7 @@ const RoadmapPage = () => {
                     />
                   </p>
                 </ExpandableCard>
-                <ExpandableCard
-                  title={t("page-roadmap-faq-4-title")}
-                  className="mb-0"
-                >
+                <ExpandableCard title={t("page-roadmap-faq-4-title")}>
                   <p>
                     <Translation
                       id="page-roadmap:page-roadmap-faq-4-p1"
