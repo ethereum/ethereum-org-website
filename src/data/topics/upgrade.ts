@@ -24,6 +24,5 @@ export const upgrade: TopicConfig = {
       },
     ],
   },
-  heroImage: { width: 5750, height: 4332 },
   showLastUpdatedInHero: true,
 }

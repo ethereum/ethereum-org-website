@@ -111,8 +111,8 @@ export const TopicLayout = async ({
         breadcrumbs={{ slug, startDepth: 1 }}
         heroImg={{
           src: frontmatter.image,
-          width: config.heroImage?.width ?? 760,
-          height: config.heroImage?.height ?? 450,
+          width: frontmatter.imageWidth ?? 760,
+          height: frontmatter.imageHeight ?? 450,
         }}
         blurDataURL={frontmatter.blurDataURL}
         title={frontmatter.title}

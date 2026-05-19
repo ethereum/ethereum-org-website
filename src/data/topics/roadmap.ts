@@ -34,5 +34,4 @@ export const roadmap: TopicConfig = {
       },
     ],
   },
-  heroImage: { width: 1456, height: 816 },
 }

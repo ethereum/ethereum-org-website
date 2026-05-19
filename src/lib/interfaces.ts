@@ -41,6 +41,8 @@ interface ImageInfo {
   image: string
   alt: string
   blurDataURL: string
+  imageWidth?: number
+  imageHeight?: number
 }
 
 /**

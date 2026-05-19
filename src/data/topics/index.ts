@@ -12,7 +12,6 @@ export type TopicConfig = {
     matomoCategory: string
     items: TopicDropdownItem[]
   }
-  heroImage?: { width: number; height: number }
   editBanner?: { textKey: string; linkKey: string }
   /**
    * When true, the hero description gets an appended "page last updated"

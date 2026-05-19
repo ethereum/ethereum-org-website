@@ -34,5 +34,4 @@ export const staking: TopicConfig = {
       },
     ],
   },
-  heroImage: { width: 800, height: 605 },
 }
