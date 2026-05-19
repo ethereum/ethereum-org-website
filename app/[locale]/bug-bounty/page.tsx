@@ -18,8 +18,7 @@ import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
 import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Divider } from "@/components/ui/divider"
-import { Center, Flex, VStack } from "@/components/ui/flex"
+import { Flex, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import Link from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -64,7 +63,7 @@ const Text = ({ className, ...props }: ComponentProps<"p">) => (
 )
 
 const FullLeaderboardContainer = (props: ChildOnlyProp) => (
-  <VStack className="mx-auto my-8 max-w-3xl px-8 py-0" {...props} />
+  <Stack className="w-full max-w-3xl" {...props} />
 )
 
 const ClientRow = (props: ChildOnlyProp) => (
@@ -727,48 +726,41 @@ export default async function Page(props: { params: Promise<Params> }) {
           </Content>
         </div>
         <Content>
-          <Row>
-            <div className="max-w-[100ch] flex-1">
-              <H2 id="submit-bug">{t("page-upgrades-bug-bounty-submit")}</H2>
-            </div>
-          </Row>
+          <H2 id="submit-bug">{t("page-upgrades-bug-bounty-submit")}</H2>
+          <BugBountyCards />
         </Content>
-        <BugBountyCards />
         <div
           id="leaderboard"
-          className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box"
+          className={cn(
+            "flex w-full flex-col items-start justify-center lg:flex-row",
+            "mt-8 gap-x-16 gap-y-8 px-8 pt-20 pb-16",
+            "border-t bg-banner-grid-gradient shadow-table-item-box"
+          )}
         >
-          <Flex className="flex-col items-start justify-center lg:flex-row">
-            <FullLeaderboardContainer>
-              <H2 id="el-leaderboard" className="text-center">
-                {t("page-upgrades-bug-bounty-hunting-execution-leaderboard")}
-              </H2>
-              <Text>
-                {t(
-                  "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
-                )}
-              </Text>
-              <Leaderboard content={executionBountyHunters} />
-            </FullLeaderboardContainer>
-            <FullLeaderboardContainer>
-              <H2 id="cl-leaderboard" className="text-center">
-                {t("page-upgrades-bug-bounty-hunting-leaderboard")}
-              </H2>
-              <Text>
-                {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
-              </Text>
-              <Leaderboard content={consensusBountyHunters} />
-            </FullLeaderboardContainer>
-          </Flex>
-        </div>
-        <Divider />
-        <Content>
-          <Center>
-            <H2 id="faq" className="text-center">
-              {t("page-upgrades-question-title")}
+          <FullLeaderboardContainer>
+            <H2 id="el-leaderboard">
+              {t("page-upgrades-bug-bounty-hunting-execution-leaderboard")}
             </H2>
-          </Center>
-          <AccordionContainer className="mx-auto mt-16">
+            <Text>
+              {t(
+                "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
+              )}
+            </Text>
+            <Leaderboard content={executionBountyHunters} />
+          </FullLeaderboardContainer>
+          <FullLeaderboardContainer>
+            <H2 id="cl-leaderboard">
+              {t("page-upgrades-bug-bounty-hunting-leaderboard")}
+            </H2>
+            <Text>
+              {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
+            </Text>
+            <Leaderboard content={consensusBountyHunters} />
+          </FullLeaderboardContainer>
+        </div>
+        <div className="w-full space-y-16 px-8 py-4">
+          <H2 id="faq">{t("page-upgrades-question-title")}</H2>
+          <AccordionContainer>
             <ExpandableCard
               title={t("bug-bounty-faq-q2-title")}
               contentPreview={t("bug-bounty-faq-q2-contentPreview")}
@@ -818,11 +810,11 @@ export default async function Page(props: { params: Promise<Params> }) {
             </ExpandableCard>
           </AccordionContainer>
           <FileContributors
-            className="my-10 border-t"
+            className="border-t"
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-        </Content>
+        </div>
         <FeedbackCard />
       </MainArticle>
     </>
