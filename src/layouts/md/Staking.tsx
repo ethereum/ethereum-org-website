@@ -36,7 +36,7 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 export const InfoGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-3 gap-8" {...props} />
+  <div className="grid grid-cols-fill-3 gap-x-8" {...props} />
 )
 
 const CardGrid = (props: ChildOnlyProp) => (
