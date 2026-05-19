@@ -16,6 +16,9 @@ test-results/
 /.next/
 /out/
 
+# generated content manifests (built from public/content via src/scripts/build-content-manifests)
+/src/data/generated/
+
 # production
 /build
 

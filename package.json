@@ -8,6 +8,8 @@
     "dev:webpack": "next dev --webpack",
     "build": "next build",
     "build:webpack": "next build --webpack",
+    "build-content-manifests": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/build-content-manifests/main.ts",
+    "prebuild": "pnpm build-content-manifests",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
