@@ -5,7 +5,6 @@ import { Layout } from "@/lib/types"
 import * as topicComponents from "@/components/MdComponents/topics"
 
 import { docsComponents, DocsLayout } from "./Docs"
-import * as mdLayouts from "./md"
 import { staticComponents, StaticLayout } from "./Static"
 import { TopicLayout } from "./Topic"
 import { TutorialLayout, tutorialsComponents } from "./Tutorial"
@@ -23,7 +22,6 @@ export const layoutMapping = {
   staking: TopicLayout,
   roadmap: TopicLayout,
   upgrade: TopicLayout,
-  translatathon: mdLayouts.TranslatathonLayout,
   docs: DocsLayout,
   tutorial: TutorialLayout,
 }
@@ -34,7 +32,6 @@ export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
   staking: topicComponents.stakingComponents,
   roadmap: topicComponents.roadmapComponents,
   upgrade: topicComponents.upgradeComponents,
-  translatathon: mdLayouts.translatathonComponents,
   docs: docsComponents,
   tutorial: tutorialsComponents,
 }
