@@ -139,6 +139,7 @@ const Page = async (props: {
     locale as Lang
   )
 
+  const hasChainInfo = (app.networks as ChainName[]).length > 0
   return (
     <>
       <AppsAppJsonLD locale={locale} app={app} contributors={contributors} />
@@ -184,29 +185,36 @@ const Page = async (props: {
                     </div>
                     <h1 className="mt-0 text-xl lg:text-5xl">{app.name}</h1>
                     <div className="flex flex-col items-start gap-2 lg:flex-row lg:items-center">
-                      <div className="flex flex-row items-center gap-2">
-                        <ChainImages
-                          chains={app.networks as ChainName[]}
-                          className="mt-2"
-                        />
-                        <p className="text-sm text-body-medium">
-                          by {app.parentCompany}
-                        </p>
-                      </div>
-                      <div className="flex flex-row items-center">
-                        <LanguagesIcon className="size-6" />
-                        <p className="text-sm text-body-medium">
-                          {formatStringList(
-                            formatLanguageNames(app.languages),
-                            5
-                          )}{" "}
-                          <SupportedLanguagesTooltip
-                            supportedLanguages={formatLanguageNames(
-                              app.languages
-                            )}
-                          />
-                        </p>
-                      </div>
+                      {(hasChainInfo || app.parentCompany) && (
+                        <div className="flex flex-row items-center gap-2">
+                          {hasChainInfo && (
+                            <ChainImages chains={app.networks as ChainName[]} />
+                          )}
+                          {app.parentCompany && (
+                            <p className="text-sm text-body-medium">
+                              {t("page-apps-by-company", {
+                                company: app.parentCompany,
+                              })}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                      {app.languages.length > 0 && (
+                        <div className="flex flex-row items-center">
+                          <LanguagesIcon className="size-6" />
+                          <p className="text-sm text-body-medium">
+                            {formatStringList(
+                              formatLanguageNames(app.languages),
+                              5
+                            )}{" "}
+                            <SupportedLanguagesTooltip
+                              supportedLanguages={formatLanguageNames(
+                                app.languages
+                              )}
+                            />
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 lg:flex-row">
