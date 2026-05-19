@@ -107,9 +107,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       },
       {
         content: t("page-layer-2-hero-button-2-content"),
-        href: "#layer-2-powered-by-ethereum",
+        href: "/layer-2/learn",
         matomo: {
-          eventCategory: "l2_hub",
+          eventCategory: "l2_learn_page",
           eventAction: "button_click",
           eventName: "hero_get_started",
         },
