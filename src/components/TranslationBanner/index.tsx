@@ -4,13 +4,12 @@ import { useEffect, useMemo, useState } from "react"
 import { X } from "lucide-react"
 import { useLocale } from "next-intl"
 
+import Emoji from "@/components/Emoji"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import Emoji from "./Emoji"
 
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"

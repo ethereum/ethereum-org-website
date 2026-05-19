@@ -2,7 +2,7 @@
 
 import type { TranslationKey } from "@/lib/types"
 
-import CalloutSSR, { CalloutBaseProps } from "./CalloutSSR"
+import CalloutSSR, { CalloutBaseProps } from "@/components/CalloutSSR"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
