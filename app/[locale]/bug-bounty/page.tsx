@@ -16,6 +16,7 @@ import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
+import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Center, Flex, VStack } from "@/components/ui/flex"
@@ -767,59 +768,55 @@ export default async function Page(props: { params: Promise<Params> }) {
               {t("page-upgrades-question-title")}
             </H2>
           </Center>
-          <Flex className="mt-16 flex-col gap-x-8 gap-y-4 lg:flex-row">
-            <div className="flex-1 space-y-4">
-              <ExpandableCard
-                title={t("bug-bounty-faq-q2-title")}
-                contentPreview={t("bug-bounty-faq-q2-contentPreview")}
-              >
-                <p>
-                  {t.rich("bug-bounty-faq-q2-content-1", {
-                    a: (chunks) => (
-                      <Link href="https://blog.ethereum.org/">{chunks}</Link>
-                    ),
-                  })}
-                </p>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q3-title")}
-                contentPreview={t("bug-bounty-faq-q3-contentPreview")}
-              >
-                <p>
-                  {t.rich("bug-bounty-faq-q3-content-1", {
-                    strong: Strong,
-                  })}
-                </p>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q4-title")}
-                contentPreview={t("bug-bounty-faq-q4-contentPreview")}
-              >
-                <p>{t("bug-bounty-faq-q4-content-1")}</p>
-              </ExpandableCard>
-            </div>
-            <div className="flex-1 space-y-4">
-              <ExpandableCard
-                title={t("bug-bounty-faq-q5-title")}
-                contentPreview={t("bug-bounty-faq-q5-contentPreview")}
-              >
-                <p>{t("bug-bounty-faq-q5-content-1")}</p>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q6-title")}
-                contentPreview={t("bug-bounty-faq-q6-contentPreview")}
-              >
-                <p>{t("bug-bounty-faq-q6-content-1")}</p>
-                <p>{t("bug-bounty-faq-q6-content-2")}</p>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q7-title")}
-                contentPreview={t("bug-bounty-faq-q7-contentPreview")}
-              >
-                <p>{t("bug-bounty-faq-q7-content-1")}</p>
-              </ExpandableCard>
-            </div>
-          </Flex>
+          <AccordionContainer className="mx-auto mt-16">
+            <ExpandableCard
+              title={t("bug-bounty-faq-q2-title")}
+              contentPreview={t("bug-bounty-faq-q2-contentPreview")}
+            >
+              <p>
+                {t.rich("bug-bounty-faq-q2-content-1", {
+                  a: (chunks) => (
+                    <Link href="https://blog.ethereum.org/">{chunks}</Link>
+                  ),
+                })}
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q3-title")}
+              contentPreview={t("bug-bounty-faq-q3-contentPreview")}
+            >
+              <p>
+                {t.rich("bug-bounty-faq-q3-content-1", {
+                  strong: Strong,
+                })}
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q4-title")}
+              contentPreview={t("bug-bounty-faq-q4-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q4-content-1")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q5-title")}
+              contentPreview={t("bug-bounty-faq-q5-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q5-content-1")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q6-title")}
+              contentPreview={t("bug-bounty-faq-q6-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q6-content-1")}</p>
+              <p>{t("bug-bounty-faq-q6-content-2")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q7-title")}
+              contentPreview={t("bug-bounty-faq-q7-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q7-content-1")}</p>
+            </ExpandableCard>
+          </AccordionContainer>
           <FileContributors
             className="my-10 border-t"
             contributors={contributors}

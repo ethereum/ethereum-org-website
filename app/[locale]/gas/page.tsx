@@ -22,6 +22,7 @@ import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -371,7 +372,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </Content>
         <Content>
           <H2 className="mt-0">{t("page-gas-faq-header")}</H2>
-          <div className="max-w-[832px] space-y-4">
+          <AccordionContainer>
             <ExpandableCard title={t("page-gas-faq-question-1-q")}>
               <p>
                 <Translation id="page-gas:page-gas-faq-question-1-a-1" />
@@ -394,7 +395,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
               <p>{t("page-gas-faq-question-3-a-2")}</p>
             </ExpandableCard>
-          </div>
+          </AccordionContainer>
         </Content>
         <Divider />
         <Content>

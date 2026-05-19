@@ -27,6 +27,7 @@ import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import {
   ButtonLink,
   type ButtonLinkProps,
@@ -506,7 +507,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
               <div>
                 <H2 id={tocItems.faq.id}>{tocItems.faq.title}</H2>
-                <div className="space-y-4">
+                <AccordionContainer>
                   <ExpandableCard title={t("page-staking-faq-4-question")}>
                     <p>{t("page-staking-faq-4-answer-p1")}</p>
                     <p>{t("page-staking-faq-4-answer-p2")}</p>
@@ -537,7 +538,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       <Translation id="page-staking:page-staking-faq-3-answer-p2" />
                     </p>
                   </ExpandableCard>
-                </div>
+                </AccordionContainer>
               </div>
               <div>
                 <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>

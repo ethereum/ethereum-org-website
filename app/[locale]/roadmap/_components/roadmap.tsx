@@ -19,6 +19,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 
@@ -209,9 +210,9 @@ const RoadmapPage = () => {
                 sizes="(max-width: 992px) calc(100vw - 64px), (max-width: 1536px) 50vw, 720px"
               />
             </div>
-            <div className="flex flex-1 flex-col gap-8">
+            <div className="flex-1 space-y-8">
               <h2>{t("page-roadmap-timeline-title")}</h2>
-              <div className="space-y-4">
+              <AccordionContainer>
                 <ExpandableCard title={t("page-roadmap-faq-1-title")}>
                   <p>
                     <strong>{t("page-roadmap-faq-1-p1")}</strong>{" "}
@@ -243,7 +244,7 @@ const RoadmapPage = () => {
                     />
                   </p>
                 </ExpandableCard>
-              </div>
+              </AccordionContainer>
             </div>
           </div>
 
