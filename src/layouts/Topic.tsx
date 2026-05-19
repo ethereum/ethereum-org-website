@@ -31,7 +31,6 @@ type TopicLayoutProps = ChildOnlyProp &
     // The slug router only renders TopicLayout when a config lookup succeeds,
     // so in practice this is always populated.
     config?: TopicConfig
-    afterContent?: React.ReactNode
   }
 
 export const TopicLayout = async ({
@@ -43,7 +42,6 @@ export const TopicLayout = async ({
   contributors,
   lastEditLocaleTimestamp,
   config,
-  afterContent,
 }: TopicLayoutProps) => {
   if (!config) {
     throw new Error(
@@ -93,21 +91,6 @@ export const TopicLayout = async ({
       baseDescription
     )
 
-  const heroSection = (
-    <ContentHero
-      breadcrumbs={{ slug, startDepth: 1 }}
-      heroImg={{
-        src: frontmatter.image,
-        width: config.heroImage?.width ?? 760,
-        height: config.heroImage?.height ?? 450,
-      }}
-      blurDataURL={frontmatter.blurDataURL}
-      title={frontmatter.title}
-      description={heroDescription}
-      buttons={frontmatter.buttons}
-    />
-  )
-
   const editBanner =
     config.editBanner && frontmatter.hideEditBanner !== true ? (
       <BannerNotification shouldShow className="z-sticky max-lg:hidden">
@@ -121,6 +104,24 @@ export const TopicLayout = async ({
       </BannerNotification>
     ) : null
 
+  const heroSection = (
+    <>
+      {editBanner}
+      <ContentHero
+        breadcrumbs={{ slug, startDepth: 1 }}
+        heroImg={{
+          src: frontmatter.image,
+          width: config.heroImage?.width ?? 760,
+          height: config.heroImage?.height ?? 450,
+        }}
+        blurDataURL={frontmatter.blurDataURL}
+        title={frontmatter.title}
+        description={heroDescription}
+        buttons={frontmatter.buttons}
+      />
+    </>
+  )
+
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
@@ -130,10 +131,8 @@ export const TopicLayout = async ({
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={heroSection}
       showDropdown={frontmatter.showDropdown ?? true}
-      editBanner={editBanner}
     >
       {children}
-      {afterContent}
     </ContentLayout>
   )
 }

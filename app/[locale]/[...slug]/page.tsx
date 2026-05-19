@@ -104,9 +104,9 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
             contentNotTranslated={!isTranslated}
             contributors={contributors}
             config={topicConfig}
-            afterContent={afterContent}
           >
             {content}
+            {afterContent}
           </TopicLayout>
         </I18nProvider>
       </>

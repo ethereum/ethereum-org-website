@@ -17,7 +17,6 @@ type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
     heroSection: React.ReactNode
     contributors: FileContributor[]
     lastEditLocaleTimestamp?: string
-    editBanner?: React.ReactNode
   }
 
 export const ContentLayout = ({
@@ -28,12 +27,10 @@ export const ContentLayout = ({
   heroSection,
   contributors,
   lastEditLocaleTimestamp,
-  editBanner,
   ...props
 }: ContentLayoutProps) => {
   return (
     <div {...props}>
-      {editBanner}
       {heroSection}
 
       <Page>
