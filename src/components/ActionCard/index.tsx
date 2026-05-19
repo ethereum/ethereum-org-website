@@ -2,12 +2,12 @@ import { StaticImageData } from "next/image"
 import type { BaseHTMLAttributes, ElementType, ReactNode } from "react"
 
 import { Image } from "@/components/Image"
+import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Flex } from "./ui/flex"
 export type ActionCardProps = Omit<
   BaseHTMLAttributes<HTMLDivElement>,
   "title"
