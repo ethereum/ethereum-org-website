@@ -4,13 +4,13 @@ metaTitle: Was sind RWAs? | Vorteile und Nutzung von Real-World Assets
 description: "Ein Überblick über Real-World Assets auf Ethereum"
 lang: de
 template: use-cases
-emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Mann und Hund spielen.
 sidebarDepth: 2
-summaryPoint1: Eine Methode, um wertvolle Rohstoffe in digitale Token zu verwandeln.
-summaryPoint2: "Sie können nun Anteile an realen Objekten oder Vermögenswerten besitzen, anstatt eine ganze Immobilie oder einen ganzen Gegenstand kaufen zu müssen."
-summaryPoint3: "Verbindet das traditionelle Finanzwesen mit dem Blockchain-Ökosystem."
+summaryPoints:
+  - "Eine Methode, um wertvolle Rohstoffe in digitale Token zu verwandeln."
+  - "Sie können nun Anteile an realen Objekten oder Vermögenswerten besitzen, anstatt eine ganze Immobilie oder einen ganzen Gegenstand kaufen zu müssen."
+  - "Verbindet das traditionelle Finanzwesen mit dem Blockchain-Ökosystem."
 ---
 
 Real-World Assets (RWAs) sind Token, die bestehende Vermögenswerte wie Immobilien, Gold, Aktien, Kunst, Maschinen oder Sammlerstücke repräsentieren. Die Tokenisierung dieser Gegenstände überführt sie in eine digitale Form, wodurch sie auf mehrere Eigentümer aufgeteilt werden können und der Handel mit ihnen erleichtert wird.

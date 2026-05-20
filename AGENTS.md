@@ -76,10 +76,12 @@ This is the official Ethereum.org website - a Next.js application that serves as
 ### Styling Conventions
 
 - **Primary approach**: Tailwind CSS utility classes
-- **Component variants**: Use `class-variance-authority` (cva)
+- **Component variants**: Use `tailwind-variants` (`tv`) for new and refactored work. Existing `class-variance-authority` (`cva`) components don't need bulk migration -- swap to `tv` opportunistically when you're already touching the component for another reason.
 - **Dynamic classes**: Use `cn()` utility (clsx + tailwind-merge)
-- **Custom properties**: CSS variables in `:root` for theme values
+- **Custom properties**: CSS variables in `src/styles/` for theme values
 - **Responsive design**: Mobile-first approach
+
+For UI work, see the **`design-system` skill** at `.claude/skills/design-system/`. It's the canonical knowledge base for component choices, design tokens, RTL/i18n, server/client boundaries, and the "use a variant, not a new component" pattern.
 
 ## Development Workflows
 

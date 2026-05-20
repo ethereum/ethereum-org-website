@@ -67,6 +67,10 @@ You cannot reliably delete IPFS files, so as long as you're modifying your user 
 
 Additionally, some packages have a problem with IPFS, so if your web site is very complicated that may not be a good solution. And of course, anything that relies on server integration cannot be decentralized just by having the client side on IPFS.
 
+## Discoverability via ENS {#discoverability}
+
+If you point an ENS name (like vitalik.eth) to your website, it will be considered a fully decentralized webpage and will be automatically pinned by the [dweb3.wtf](https://dweb3.wtf) service, as well as made searchable through the [web3compass.net](https://web3compass.net) search engine, much like DuckDuckGo, Brave Search or Google does for the traditional web.
+
 ## Conclusion {#conclusion}
 
 Just as Ethereum lets you decentralize the database and business logic aspects of your dapp, IPFS lets you decentralize the user interface. This lets you shut off one more attack vector against your dapp.

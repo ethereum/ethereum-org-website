@@ -4,8 +4,9 @@ lang: pt-br
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Receba incentivos financeiros para gerar previsões precisas"
-summaryPoint2: "Previsões de alta qualidade sobre eventos que virão"
+summaryPoints:
+  - "Receba incentivos financeiros para gerar previsões precisas"
+  - "Previsões de alta qualidade sobre eventos que virão"
 buttons:
   - content: Saiba mais
     toId: "como funciona o mercado das previsões"

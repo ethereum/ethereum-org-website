@@ -4,13 +4,13 @@ metaTitle: What are NFTs? | Benefits and use
 description: An overview of NFTs on Ethereum
 lang: en
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: An Eth logo being displayed via hologram.
-summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
-summaryPoint2: NFTs are giving more power to content creators than ever before.
-summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
+summaryPoints:
+  - "A way to represent anything unique as an Ethereum-based asset."
+  - "NFTs are giving more power to content creators than ever before."
+  - "Powered by smart contracts on the Ethereum blockchain."
 ---
 
 ## What are NFTs? {#what-are-nfts}

@@ -4,13 +4,13 @@ metaTitle: "NFT'ler nelerdir? Faydalar ve kullanım"
 description: "Ethereum'da NFT'lere genel bakış"
 lang: tr
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "Hologram ile gösterilen bir Eth logosu."
-summaryPoint1: "Benzersiz herhangi şeyi Ethereum tabanlı bir varlık olarak temsil etmenin yolu."
-summaryPoint2: "NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor."
-summaryPoint3: "Ethereum blokzincirindeki akıllı sözleşmelerle desteklenmektedir."
+summaryPoints:
+  - "Benzersiz herhangi şeyi Ethereum tabanlı bir varlık olarak temsil etmenin yolu."
+  - "NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor."
+  - "Ethereum blokzincirindeki akıllı sözleşmelerle desteklenmektedir."
 ---
 
 ## NFT'ler nelerdir? {#what-are-nfts}

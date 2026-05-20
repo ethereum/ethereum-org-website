@@ -4,8 +4,9 @@ lang: sw
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Pokea motisha za kifedha ili kutoa utabiri sahihi
-summaryPoint2: Utabiri wa hali ya juu kuhusu yajayo
+summaryPoints:
+  - "Pokea motisha za kifedha ili kutoa utabiri sahihi"
+  - "Utabiri wa hali ya juu kuhusu yajayo"
 buttons:
   - content: Jifunze zaidi
     toId: how-prediction-markets-work

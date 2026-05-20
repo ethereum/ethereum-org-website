@@ -4,13 +4,13 @@ metaTitle: Cosa sono gli NFT? | Vantaggi e utilizzo
 description: Una panoramica degli NFT su Ethereum
 lang: it
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Un logo di Eth visualizzato tramite ologramma.
-summaryPoint1: Un modo per rappresentare qualsiasi cosa unica come un asset basato su Ethereum.
-summaryPoint2: "Gli NFT stanno dando ai creatori di contenuti più potere che mai."
-summaryPoint3: Alimentati dai contratti intelligenti sulla blockchain di Ethereum.
+summaryPoints:
+  - "Un modo per rappresentare qualsiasi cosa unica come un asset basato su Ethereum."
+  - "Gli NFT stanno dando ai creatori di contenuti più potere che mai."
+  - "Alimentati dai contratti intelligenti sulla blockchain di Ethereum."
 ---
 
 ## Cosa sono gli NFT? {#what-are-nfts}

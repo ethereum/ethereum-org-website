@@ -4,11 +4,11 @@ metaTitle: "Co je to opětovné uzamčení? | Výhody a využití opětovného u
 description: "Použijte uzamčené ETH k zabezpečení dalších decentralizovaných služeb a získejte další odměny."
 lang: cs
 template: use-cases
-emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: "Vizuální znázornění opětovného uzamčení na Ethereu."
 sidebarDepth: 2
-summaryPoint1: "Použijte uzamčené ETH k zabezpečení dalších decentralizovaných služeb a získejte další odměny."
+summaryPoints:
+  - "Použijte uzamčené ETH k zabezpečení dalších decentralizovaných služeb a získejte další odměny."
 buttons:
   - content: Co je to opětovné uzamčení?
     toId: what-is-restaking

@@ -4,9 +4,10 @@ lang: it
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Le regole e lo stato del gioco possono essere applicati dalla blockchain di Ethereum, non dai server di uno studio, rappresentando un vantaggio chiave dei giochi on-chain
-summaryPoint2: "Chiunque può creare mod, bot o giochi completamente nuovi che si collegano agli stessi dati aperti on-chain"
-summaryPoint3: "I L2 appositamente creati consentono un gameplay in tempo reale con commissioni inferiori, mentre i framework di sviluppo di giochi rendono la creazione di giochi on-chain più accessibile che mai"
+summaryPoints:
+  - "Le regole e lo stato del gioco possono essere applicati dalla blockchain di Ethereum, non dai server di uno studio, rappresentando un vantaggio chiave dei giochi on-chain"
+  - "Chiunque può creare mod, bot o giochi completamente nuovi che si collegano agli stessi dati aperti on-chain"
+  - "I L2 appositamente creati consentono un gameplay in tempo reale con commissioni inferiori, mentre i framework di sviluppo di giochi rendono la creazione di giochi on-chain più accessibile che mai"
 buttons:
   - content: Scopri di più
     toId: gaming-on-ethereum

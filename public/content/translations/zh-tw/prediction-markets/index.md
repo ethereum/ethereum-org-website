@@ -4,8 +4,9 @@ lang: zh-tw
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "藉由得到財務的激勵產生正確的預測"
-summaryPoint2: "高品質預測未來事件"
+summaryPoints:
+  - "藉由得到財務的激勵產生正確的預測"
+  - "高品質預測未來事件"
 buttons:
   - content: 瞭解更多
     toId: how-prediction-markets-work

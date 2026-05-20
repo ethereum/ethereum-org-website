@@ -4,13 +4,13 @@ metaTitle: "Co jsou NFTéčka? | Výhody a využití"
 description: "Přehled NFT na Ethereu"
 lang: cs
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "Logo Eth zobrazené prostřednictvím hologramu."
-summaryPoint1: "Způsob, jak reprezentovat cokoliv unikátního jako majetek založený na Ethereu."
-summaryPoint2: "NFT dávají tvůrcům obsahu větší moc než kdykoliv předtím."
-summaryPoint3: "Běží na chytrých kontraktech na blockchainu Ethereum."
+summaryPoints:
+  - "Způsob, jak reprezentovat cokoliv unikátního jako majetek založený na Ethereu."
+  - "NFT dávají tvůrcům obsahu větší moc než kdykoliv předtím."
+  - "Běží na chytrých kontraktech na blockchainu Ethereum."
 ---
 
 ## Co jsou NFTéčka? {#what-are-nfts}

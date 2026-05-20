@@ -4,13 +4,13 @@ metaTitle: "ИИ агенты | ИИ агенты на Ethereum"
 description: "Обзор ИИ агентов на Ethereum"
 lang: ru
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "Люди собрались за столом управления"
-summaryPoint1: "ИИ, который взаимодействует с блокчейном и торгует сам по себе"
-summaryPoint2: "Контролирует он-чейн кошельки и средства"
-summaryPoint3: "Нанимает людей или других агентов для работы"
+summaryPoints:
+  - "ИИ, который взаимодействует с блокчейном и торгует сам по себе"
+  - "Контролирует он-чейн кошельки и средства"
+  - "Нанимает людей или других агентов для работы"
 buttons:
   - content: Кто такие ИИ агенты?
     toId: what-are-ai-agents
