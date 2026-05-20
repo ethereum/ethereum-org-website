@@ -5,3 +5,4 @@ package-lock.json
 public
 build
 pnpm-lock.yaml
+next-env.d.ts
