@@ -10,7 +10,7 @@ const meta = {
     docs: {
       description: {
         component:
-          "Syntax-highlighted code block built on `prism-react-renderer`. Renders a line-numbered listing, with optional Copy and Show all / Show less controls. Languages with copy-button support: `js`, `json`, `python`, `solidity`. `bash` blocks suppress line numbers. Pass `fromHomepage` to render without the top bar (no copy, no collapse).",
+          "Syntax-highlighted code block with Copy and Show all / Show less controls. `bash` blocks suppress line numbers. Pass `fromHomepage` to render without the top bar (no copy, no collapse).",
       },
     },
   },
