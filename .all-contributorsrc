@@ -14258,6 +14258,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "escottalexander",
+      "name": "Elliott Alexander",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22101475?v=4",
+      "profile": "https://github.com/escottalexander",
+      "contributions": [
+        "tutorial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
