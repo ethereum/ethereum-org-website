@@ -140,6 +140,12 @@ export const htmlElements = {
 /**
  * Custom React components
  */
+const { Alert, ...AlertSubComponents } = AlertComponents
+
+const AlertWithMargins = ({ className, ...props }) => (
+  <Alert className={cn("my-8", className)} {...props} />
+)
+
 export const Page = ({
   className,
   ...props
@@ -168,7 +174,8 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 
 // All custom React components
 export const reactComponents = {
-  ...AlertComponents,
+  Alert: AlertWithMargins,
+  ...AlertSubComponents,
   BrowseApps,
   ButtonLink,
   Card,
