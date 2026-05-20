@@ -4,13 +4,13 @@ metaTitle: "什麼是非同質化代幣？ | 優點和作用"
 description: "以太坊生態系非同質化代幣概要"
 lang: zh-tw
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "全息投影顯示的以太幣標誌。"
-summaryPoint1: "一種用以太坊資產來呈現任何獨特事物的方式。"
-summaryPoint2: "非同質化代幣賦予了內容創作者前所未有的強大力量。"
-summaryPoint3: "由建置於以太坊區塊鏈上的智慧型合約提供支援。"
+summaryPoints:
+  - "一種用以太坊資產來呈現任何獨特事物的方式。"
+  - "非同質化代幣賦予了內容創作者前所未有的強大力量。"
+  - "由建置於以太坊區塊鏈上的智慧型合約提供支援。"
 ---
 
 ## 什麼是非同質化代幣？ {#what-are-nfts}

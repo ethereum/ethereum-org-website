@@ -4,13 +4,13 @@ metaTitle: AI agenti | AI agenti na Ethereu
 description: "Přehled AI agentů na Ethereu"
 lang: cs
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "Lidé shromáždění u stolu s terminálem"
-summaryPoint1: "AI, která interaguje s blockchainem a samostatně obchoduje"
-summaryPoint2: "Ovládá peněženky a prostředky na blockchainu"
-summaryPoint3: "Najímá lidi nebo jiné agenty na práci"
+summaryPoints:
+  - "AI, která interaguje s blockchainem a samostatně obchoduje"
+  - "Ovládá peněženky a prostředky na blockchainu"
+  - "Najímá lidi nebo jiné agenty na práci"
 buttons:
   - content: Co jsou AI agenti?
     toId: what-are-ai-agents

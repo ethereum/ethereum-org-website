@@ -28,16 +28,19 @@ export default async function StakingPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#staking` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-staking-meta-title"),
         description: t("page-staking-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -61,11 +64,12 @@ export default async function StakingPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#staking` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#staking`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-staking-hero-title"),
         description: t("page-staking-meta-description"),
         image: "https://ethereum.org/images/upgrades/upgrade_rhino.png",

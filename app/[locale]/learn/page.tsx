@@ -72,7 +72,11 @@ const LearnCard = ({
 }) => (
   <Card className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:p-4">
     <CardBanner background="none" fit="contain">
-      <Image src={image} alt="" sizes="250px" />
+      <Image
+        src={image}
+        alt=""
+        sizes="(min-width: 1280px) 340px, (min-width: 992px) 440px, (min-width: 640px) calc(50vw - 2.5rem), calc(100vw - 4rem)"
+      />
     </CardBanner>
     <CardContent className="p-0">
       <CardTitle variant="bold">{title}</CardTitle>

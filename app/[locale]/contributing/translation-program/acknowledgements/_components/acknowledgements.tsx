@@ -173,7 +173,11 @@ const TranslatorAcknowledgements = () => {
           {t("page-contributing-translation-program-acknowledgements-cert-3")}
         </Text>
         <Flex className="justify-center">
-          <Image src={themedCertificateImage} alt="translator certificate" />
+          <Image
+            src={themedCertificateImage}
+            alt="translator certificate"
+            sizes="(max-width: 880px) calc(100vw - 80px), 720px"
+          />
         </Flex>
       </Content>
 

@@ -4,13 +4,13 @@ metaTitle: "RWA'lar nedir? | Gerçek dünya varlıklarının Faydaları ve Kulla
 description: "Ethereum'daki Gerçek dünya varlıklarına genel bir bakış"
 lang: tr
 template: use-cases
-emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: "Adam ve köpek oyun oynuyor."
 sidebarDepth: 2
-summaryPoint1: "Değerli emtiaları dijital tokenlere dönüştürme yöntemi."
-summaryPoint2: "Artık bir mülkün veya eşyanın tamamını satın almak yerine, gerçek hayattaki nesnelerin veya varlıkların bir kısmına sahip olabilirsiniz."
-summaryPoint3: "Geleneksel finansı blokzincir ekosistemine bağlar."
+summaryPoints:
+  - "Değerli emtiaları dijital tokenlere dönüştürme yöntemi."
+  - "Artık bir mülkün veya eşyanın tamamını satın almak yerine, gerçek hayattaki nesnelerin veya varlıkların bir kısmına sahip olabilirsiniz."
+  - "Geleneksel finansı blokzincir ekosistemine bağlar."
 ---
 
 Gerçek dünya varlıkları (RWA'lar), gayrimenkul, altın, hisse senetleri, sanat eserleri, makineler veya koleksiyon ürünleri gibi mevcut servet biçimlerini temsil eden jetonlardır. Bu öğeleri jetonlaştırmak, onları dijital forma dönüştürerek birden fazla sahip arasında bölünmelerine olanak tanır ve ticaretini yapmayı kolaylaştırır.

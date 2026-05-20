@@ -5,10 +5,11 @@ lang: zh
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: "以太坊主网采用权益证明机制，但情况并非一直如此。"
-summaryPoint2: "从原有的工作量证明机制过渡到权益证明机制的升级称为合并。"
-summaryPoint3: "合并是指原有的以太坊主网与单独的权益证明区块链（即信标链）合并，现已成为一条链。"
-summaryPoint4: "合并将使以太坊的能源消耗减少大约 99.95%。"
+summaryPoints:
+  - "以太坊主网采用权益证明机制，但情况并非一直如此。"
+  - "从原有的工作量证明机制过渡到权益证明机制的升级称为合并。"
+  - "合并是指原有的以太坊主网与单独的权益证明区块链（即信标链）合并，现已成为一条链。"
+  - "合并将使以太坊的能源消耗减少大约 99.95%。"
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

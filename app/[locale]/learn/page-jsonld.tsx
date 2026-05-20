@@ -27,7 +27,7 @@ export default async function LearnPageJsonLD({ locale, contributors }) {
         "@id": url,
         name: t("page-learn-meta-title"),
         description: t("hero-subtitle"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

@@ -4,13 +4,13 @@ metaTitle: "NFT म्हणजे काय? | फायदे आणि वा
 description: "Ethereum वर NFT चे विहंगावलोकन"
 lang: mr
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "होलोग्रामद्वारे Ethचा लोगो प्रदर्शित केले जात आहे."
-summaryPoint1: "Ethereum-आधारित मालमत्ता म्हणून अद्वितीय कोणत्याही गोष्टीचे प्रतिनिधित्व करण्याचा एक मार्ग."
-summaryPoint2: "NFT सामग्री निर्मात्यांना पूर्वीपेक्षा अधिक शक्ती देत ​​आहेत."
-summaryPoint3: "Ethereum ब्लॉकचेनवर स्मार्ट कॉन्ट्रॅक्टद्वारे समर्थित."
+summaryPoints:
+  - "Ethereum-आधारित मालमत्ता म्हणून अद्वितीय कोणत्याही गोष्टीचे प्रतिनिधित्व करण्याचा एक मार्ग."
+  - "NFT सामग्री निर्मात्यांना पूर्वीपेक्षा अधिक शक्ती देत ​​आहेत."
+  - "Ethereum ब्लॉकचेनवर स्मार्ट कॉन्ट्रॅक्टद्वारे समर्थित."
 ---
 
 ## NFT म्हणजे काय? {#what-are-nfts}

@@ -4,13 +4,13 @@ metaTitle: Apa itu DAO? | Organisasi Otonom Terdesentralisasi
 description: Gambaran umum tentang DAO di Ethereum
 lang: id
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: Representasi DAO yang sedang memberikan suara pada sebuah proposal.
-summaryPoint1: Komunitas milik anggota tanpa kepemimpinan terpusat.
-summaryPoint2: Cara yang aman untuk berkolaborasi dengan orang asing di internet.
-summaryPoint3: Tempat yang aman untuk menyalurkan dana pada tujuan tertentu.
+summaryPoints:
+  - "Komunitas milik anggota tanpa kepemimpinan terpusat."
+  - "Cara yang aman untuk berkolaborasi dengan orang asing di internet."
+  - "Tempat yang aman untuk menyalurkan dana pada tujuan tertentu."
 ---
 
 ## Apa itu DAO? {#what-are-daos}

@@ -205,6 +205,15 @@ Proof-of-stake based:
 - [Documentation](https://docs.spheron.network/)
 - [GitHub](https://github.com/spheronFdn)
 
+**dweb3 - _Resolver for decentralized webpages, similar to eth.limo, supporting all types and not limited to ENS and IPFS._**
+
+- [dweb3.wtf](https://dweb3.wtf)
+
+**web3compass - _Search engine for IPFS + ENS backed decentralized websites._**
+
+- [web3compass.net](https://www.web3compass.net/)
+- [Documentation](https://www.web3compass.net/statistics)
+
 ## Further reading {#further-reading}
 
 - [What Is Decentralized Storage?](https://coinmarketcap.com/academy/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
