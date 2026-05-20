@@ -559,6 +559,10 @@ export default async function Page(props: { params: Promise<Params> }) {
                         key: "page-upgrades-bug-bounty-not-included-li-9",
                         footnote: false,
                       },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-10",
+                        footnote: false,
+                      },
                     ] as const
                   ).map(({ key, footnote }) => (
                     <li key={key} className="flex items-start gap-3 text-sm">

@@ -151,9 +151,10 @@
   "page-upgrades-bug-bounty-not-included-li-2": "ERC-20 contract bugs",
   "page-upgrades-bug-bounty-not-included-li-3": "Ethereum Naming Service (ENS) bugs (maintained by the ENS foundation)",
   "page-upgrades-bug-bounty-not-included-li-4": "Vulnerabilities requiring the user to have publicly exposed an API, such as JSON-RPC or the Beacon API",
-  "page-upgrades-bug-bounty-not-included-li-5": "Typographical errors",
-  "page-upgrades-bug-bounty-not-included-li-6": "Tests",
-  "page-upgrades-bug-bounty-not-included-li-7": "High-effort (sustained, CPU or bandwidth intensive, and/or requires more than 1 packet or onchain transaction) single-peer DoS attacks",
-  "page-upgrades-bug-bounty-not-included-li-8": "Any publicly known issues (includes forum posts, PRs, github issues, commits, blog posts, public discord messages, etc.)",
-  "page-upgrades-bug-bounty-not-included-li-9": "Anything that does not currently have a direct impact on Ethereum mainnet."
+  "page-upgrades-bug-bounty-not-included-li-5": "EngineAPI is considered trusted and not meant to be publicly exposed",
+  "page-upgrades-bug-bounty-not-included-li-6": "Typographical errors",
+  "page-upgrades-bug-bounty-not-included-li-7": "Tests",
+  "page-upgrades-bug-bounty-not-included-li-8": "High-effort (sustained, CPU or bandwidth intensive, and/or requires more than 1 packet or onchain transaction) single-peer DoS attacks",
+  "page-upgrades-bug-bounty-not-included-li-9": "Any publicly known issues (includes forum posts, PRs, github issues, commits, blog posts, public discord messages, etc.)",
+  "page-upgrades-bug-bounty-not-included-li-10": "Anything that does not currently have a direct impact on Ethereum mainnet."
 }
