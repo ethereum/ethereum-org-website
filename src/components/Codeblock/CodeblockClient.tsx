@@ -16,7 +16,6 @@ type CodeblockClientProps = {
   codeText: string
   languageLabel: string
   allowCollapse: boolean
-  shouldShowCopyWidget: boolean
   shouldShowLineNumbers: boolean
   totalLines: number
   fromHomepage: boolean
@@ -28,7 +27,6 @@ const CodeblockClient = ({
   codeText,
   languageLabel,
   allowCollapse,
-  shouldShowCopyWidget,
   shouldShowLineNumbers,
   totalLines,
   fromHomepage,
@@ -42,7 +40,7 @@ const CodeblockClient = ({
   const [isCollapsed, setIsCollapsed] = useState(isCollapsable)
 
   const showLanguageLabel = !fromHomepage && languageLabel.length > 0
-  const showCopy = !fromHomepage && shouldShowCopyWidget
+  const showCopy = !fromHomepage
   const showCornerCollapse = isCollapsable && !isCollapsed
   const hasCornerUi = showLanguageLabel || showCopy || showCornerCollapse
 

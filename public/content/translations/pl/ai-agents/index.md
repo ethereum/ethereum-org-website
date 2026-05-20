@@ -4,13 +4,13 @@ metaTitle: Agenci AI | Agenci AI na Ethereum
 description: "Przegląd agentów AI na Ethereum"
 lang: pl
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "Ludzie stojący przy stole z ekranami"
-summaryPoint1: "AI, która współpracuje z blockchainem i dokonuje niezależnych transakcji"
-summaryPoint2: Kontroluje portfele blockchain i finanse
-summaryPoint3: "Współpracuje z ludźmi i innymi agentami"
+summaryPoints:
+  - "AI, która współpracuje z blockchainem i dokonuje niezależnych transakcji"
+  - "Kontroluje portfele blockchain i finanse"
+  - "Współpracuje z ludźmi i innymi agentami"
 buttons:
   - content: Czym są agenci AI?
     toId: what-are-ai-agents

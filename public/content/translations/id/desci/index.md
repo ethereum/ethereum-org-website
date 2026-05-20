@@ -3,13 +3,13 @@ title: Sains terdesentralisasi (DeSci)
 description: Gambaran umum tentang sains terdesentralisasi di Ethereum
 lang: id
 template: use-cases
-emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Alternatif global dan terbuka untuk sistem ilmiah saat ini.
-summaryPoint2: Teknologi yang memungkinkan ilmuwan untuk menggalang dana, menjalankan eksperimen, berbagi data, mendistribusikan wawasan, dan banyak lagi.
-summaryPoint3: Dibangun di atas gerakan sains terbuka.
+summaryPoints:
+  - "Alternatif global dan terbuka untuk sistem ilmiah saat ini."
+  - "Teknologi yang memungkinkan ilmuwan untuk menggalang dana, menjalankan eksperimen, berbagi data, mendistribusikan wawasan, dan banyak lagi."
+  - "Dibangun di atas gerakan sains terbuka."
 ---
 
 ## Apa itu sains terdesentralisasi (DeSci)? {#what-is-desci}

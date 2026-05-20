@@ -4,9 +4,10 @@ lang: vi
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: "Các quy tắc và trạng thái của trò chơi có thể được thực thi bởi chuỗi khối Ethereum, không phải bởi máy chủ của studio, đây là một lợi ích chính của các trò chơi trên chuỗi"
-summaryPoint2: "Bất kỳ ai cũng có thể xây dựng các bản mod, bot hoặc các trò chơi hoàn toàn mới kết nối vào cùng một dữ liệu mở trên chuỗi"
-summaryPoint3: "Các Lớp 2 được xây dựng chuyên dụng cho phép chơi game theo thời gian thực với mức phí thấp hơn, trong khi các khung phát triển trò chơi giúp việc xây dựng các trò chơi trên chuỗi dễ tiếp cận hơn bao giờ hết"
+summaryPoints:
+  - "Các quy tắc và trạng thái của trò chơi có thể được thực thi bởi chuỗi khối Ethereum, không phải bởi máy chủ của studio, đây là một lợi ích chính của các trò chơi trên chuỗi"
+  - "Bất kỳ ai cũng có thể xây dựng các bản mod, bot hoặc các trò chơi hoàn toàn mới kết nối vào cùng một dữ liệu mở trên chuỗi"
+  - "Các Lớp 2 được xây dựng chuyên dụng cho phép chơi game theo thời gian thực với mức phí thấp hơn, trong khi các khung phát triển trò chơi giúp việc xây dựng các trò chơi trên chuỗi dễ tiếp cận hơn bao giờ hết"
 buttons:
   - content: Tìm hiểu thêm
     toId: gaming-on-ethereum

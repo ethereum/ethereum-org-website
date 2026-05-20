@@ -3,13 +3,13 @@ title: "分散型サイエンス(DeSci)"
 description: "イーサリアム上の分散型科学の概要"
 lang: ja
 template: use-cases
-emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: "現在の科学に代わる、グローバルで開かれたシステム。"
-summaryPoint2: "科学者が資金を調達し、実験を行い、データーを共有し、得られた見識を広めることなどを可能にする技術。"
-summaryPoint3: "オープンサイエンス運動の上に構築。"
+summaryPoints:
+  - "現在の科学に代わる、グローバルで開かれたシステム。"
+  - "科学者が資金を調達し、実験を行い、データーを共有し、得られた見識を広めることなどを可能にする技術。"
+  - "オープンサイエンス運動の上に構築。"
 ---
 
 ## 分散型科学(DeSci)とは何か {#what-is-desci}

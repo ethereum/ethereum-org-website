@@ -3,12 +3,12 @@ title: Identitas terdesentralisasi
 description: Apa itu identitas terdesentralisasi, dan mengapa itu penting?
 lang: id
 template: use-cases
-emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Sistem identitas tradisional telah memusatkan penerbitan, pemeliharaan, dan kontrol pengidentifikasi Anda.
-summaryPoint2: Identitas terdesentralisasi menghilangkan ketergantungan pada pihak ketiga yang terpusat.
-summaryPoint3: Berkat kripto, pengguna kini memiliki alat untuk menerbitkan, menyimpan, dan mengontrol pengidentifikasi dan pengesahan mereka sendiri sekali lagi.
+summaryPoints:
+  - "Sistem identitas tradisional telah memusatkan penerbitan, pemeliharaan, dan kontrol pengidentifikasi Anda."
+  - "Identitas terdesentralisasi menghilangkan ketergantungan pada pihak ketiga yang terpusat."
+  - "Berkat kripto, pengguna kini memiliki alat untuk menerbitkan, menyimpan, dan mengontrol pengidentifikasi dan pengesahan mereka sendiri sekali lagi."
 ---
 
 Identitas mendasari hampir setiap aspek kehidupan Anda saat ini. Menggunakan layanan online, membuka rekening bank, memberikan suara dalam pemilihan umum, membeli properti, mendapatkan pekerjaan—semua hal ini memerlukan pembuktian identitas Anda.
