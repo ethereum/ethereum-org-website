@@ -25,9 +25,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install ts-node
-        run: pnpm add -g ts-node
-
       - name: Set up git
         run: |
           git config --global user.email "actions@github.com"
@@ -44,7 +41,7 @@ jobs:
           git checkout -b "automated-update-${{ env.TIMESTAMP }}" origin/dev
 
       - name: Update chains data
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/update-chains.ts
+        run: pnpm exec tsx ./src/scripts/update-chains.ts
 
       - name: Commit and push
         run: |

@@ -1,16 +1,9 @@
 import fsp from "fs/promises"
 import { extname, join } from "path"
 
-import matter from "gray-matter"
-import readingTime from "reading-time"
+import type { ITutorial, SlugPageParams } from "@/lib/types"
 
-import type { Frontmatter, ITutorial, Skill, SlugPageParams } from "@/lib/types"
-
-import { dateToString } from "@/lib/utils/date"
-
-import internalTutorialSlugs from "@/data/internalTutorials.json"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
+import tutorialsManifest from "@/data/generated/tutorials.json"
 
 import { toPosixPath } from "./relativePath"
 
@@ -77,68 +70,8 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
 export const getTutorialsData = async (
   locale: string
 ): Promise<ITutorial[]> => {
-  const contentRoot = join(process.cwd(), "public/content")
-
-  const tutorialPromises = (internalTutorialSlugs as string[]).map(
-    async (slug) => {
-      try {
-        let fileContents: string
-        let isTranslated = true
-
-        const enPath = join(
-          contentRoot,
-          "developers/tutorials",
-          slug,
-          "index.md"
-        )
-
-        if (locale === DEFAULT_LOCALE) {
-          fileContents = await fsp.readFile(enPath, "utf-8")
-        } else {
-          const translatedPath = join(
-            contentRoot,
-            "translations",
-            locale,
-            "developers/tutorials",
-            slug,
-            "index.md"
-          )
-          try {
-            fileContents = await fsp.readFile(translatedPath, "utf-8")
-          } catch {
-            fileContents = await fsp.readFile(enPath, "utf-8")
-            isTranslated = false
-          }
-        }
-
-        const { data, content } = matter(fileContents)
-        const frontmatter = data as Frontmatter
-
-        return {
-          href: `/developers/tutorials/${slug}`,
-          title: frontmatter.title,
-          description: frontmatter.description,
-          author: frontmatter.author || "",
-          tags: frontmatter.tags,
-          skill: frontmatter.skill as Skill,
-          timeToRead: Math.round(readingTime(content).minutes),
-          published: dateToString(frontmatter.published),
-          lang: frontmatter.lang,
-          isExternal: false,
-          isTranslated,
-        }
-      } catch (error) {
-        // Only warn if English content is missing (actual error)
-        console.warn(`Error reading tutorial ${slug}:`, error)
-        return null
-      }
-    }
-  )
-
-  const results = await Promise.all(tutorialPromises)
-
-  // Filter out null results (missing tutorials)
-  return results.filter((tutorial) => tutorial !== null) as ITutorial[]
+  const manifest = tutorialsManifest as Record<string, ITutorial[]>
+  return manifest[locale] ?? manifest.en ?? []
 }
 
 export const checkPathValidity = (
