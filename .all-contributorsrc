@@ -14249,6 +14249,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "akegaviar",
+      "name": "Ake",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10195782?v=4",
+      "profile": "https://ake.gg",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,

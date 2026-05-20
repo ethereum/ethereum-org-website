@@ -2216,6 +2216,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://manmit07.netlify.app/"><img src="https://avatars.githubusercontent.com/u/171561659?v=4?s=100" width="100px;" alt="TenderDeve"/><br /><sub><b>TenderDeve</b></sub></a><br /><a href="#maintenance-tenderdeve" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nikolay-udovik"><img src="https://avatars.githubusercontent.com/u/73495276?v=4?s=100" width="100px;" alt="Nikolay Udovik"/><br /><sub><b>Nikolay Udovik</b></sub></a><br /><a href="#maintenance-nikolay-udovik" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kafeelraza"><img src="https://avatars.githubusercontent.com/u/193384171?v=4?s=100" width="100px;" alt="kafeelraza"/><br /><sub><b>kafeelraza</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kafeelraza" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://ake.gg"><img src="https://avatars.githubusercontent.com/u/10195782?v=4?s=100" width="100px;" alt="Ake"/><br /><sub><b>Ake</b></sub></a><br /><a href="#tool-akegaviar" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
