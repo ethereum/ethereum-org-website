@@ -17,7 +17,6 @@ type CodeblockClientProps = {
   html: string
   codeText: string
   allowCollapse: boolean
-  shouldShowCopyWidget: boolean
   shouldShowLineNumbers: boolean
   totalLines: number
   fromHomepage: boolean
@@ -28,7 +27,6 @@ const CodeblockClient = ({
   html,
   codeText,
   allowCollapse,
-  shouldShowCopyWidget,
   shouldShowLineNumbers,
   totalLines,
   fromHomepage,
@@ -38,8 +36,7 @@ const CodeblockClient = ({
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
 
   const isCollapsable = totalLines - 1 > LINES_BEFORE_COLLAPSABLE
-  const hasTopBar = shouldShowCopyWidget || isCollapsable
-  const showButtons = !fromHomepage && hasTopBar
+  const showButtons = !fromHomepage
 
   return (
     /* Overwrites codeblocks inheriting RTL styling in Right-To-Left script languages (e.g., Arabic) */
@@ -48,7 +45,7 @@ const CodeblockClient = ({
       <div
         className={cn(
           "codeblock-shiki overflow-auto rounded bg-background-highlight text-primary",
-          hasTopBar && "has-top-bar",
+          showButtons && "has-top-bar",
           shouldShowLineNumbers && "line-numbers"
         )}
         style={{
@@ -70,30 +67,28 @@ const CodeblockClient = ({
               {isCollapsed ? t("show-all") : t("show-less")}
             </Button>
           )}
-          {shouldShowCopyWidget && (
-            <Button
-              variant="outline"
-              size="sm"
-              asChild
-              className="bg-background-highlight"
-            >
-              <CopyToClipboard text={codeText}>
-                {(isCopied) =>
-                  !isCopied ? (
-                    <>
-                      {t("copy")}
-                      <Clipboard className="size-[1em]" />
-                    </>
-                  ) : (
-                    <>
-                      {t("copied")}
-                      <ClipboardCheck className="size-[1em]" />
-                    </>
-                  )
-                }
-              </CopyToClipboard>
-            </Button>
-          )}
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="bg-background-highlight"
+          >
+            <CopyToClipboard text={codeText}>
+              {(isCopied) =>
+                !isCopied ? (
+                  <>
+                    {t("copy")}
+                    <Clipboard className="size-[1em]" />
+                  </>
+                ) : (
+                  <>
+                    {t("copied")}
+                    <ClipboardCheck className="size-[1em]" />
+                  </>
+                )
+              }
+            </CopyToClipboard>
+          </Button>
         </Flex>
       )}
     </div>
