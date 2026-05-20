@@ -122,8 +122,9 @@ The sections above describe how zkML proofs, TEE attestations, and onchain audit
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Maturity note</strong></p>
-<p className="mt-2">Most production agents in 2026 do not use verifiable inference. Integrating zkML or TEE attestations adds engineering complexity and, for zkML, meaningful latency. The guidance below describes when the added complexity is justified.</p>
+**Maturity note**
+
+Most production agents in 2026 do not use verifiable inference. Integrating zkML or TEE attestations adds engineering complexity and, for zkML, meaningful latency. The guidance below describes when the added complexity is justified.
 </AlertContent>
 </Alert>
 

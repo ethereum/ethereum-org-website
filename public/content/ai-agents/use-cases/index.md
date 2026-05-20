@@ -57,8 +57,9 @@ Agents can hire other agents for specialized tasks, paying per output using x402
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Maturity note</strong></p>
-<p className="mt-2"><strong>ERC-8004</strong> (agent identity registry) is live on 20+ chains as of January 2026, with 20,000+ feedback entries recorded, primarily on Base. <strong>x402</strong> machine payments reached production-ready status in Q1 2026. However, end-to-end agent-to-agent commerce workflows, where agents autonomously discover, hire, and pay other agents, are still early. Treat the five-step pattern above as an architectural target, not a widely battle-tested production pattern.</p>
+**Maturity note**
+
+**ERC-8004** (agent identity registry) is live on 20+ chains as of January 2026, with 20,000+ feedback entries recorded, primarily on Base. **x402** machine payments reached production-ready status in Q1 2026. However, end-to-end agent-to-agent commerce workflows, where agents autonomously discover, hire, and pay other agents, are still early. Treat the five-step pattern above as an architectural target, not a widely battle-tested production pattern.
 </AlertContent>
 </Alert>
 
@@ -77,8 +78,9 @@ DAO governance requires ongoing attention: reading proposals, evaluating their a
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Governance risk</strong></p>
-<p className="mt-2">Fully autonomous governance agents carry governance risk. A logic error or prompt injection can cause an agent to vote against its owner's intent. Production governance agents typically use human-in-the-loop escalation for high-stakes votes and operate autonomously only for routine, low-impact proposals.</p>
+**Governance risk**
+
+Fully autonomous governance agents carry governance risk. A logic error or prompt injection can cause an agent to vote against its owner's intent. Production governance agents typically use human-in-the-loop escalation for high-stakes votes and operate autonomously only for routine, low-impact proposals.
 </AlertContent>
 </Alert>
 
@@ -108,8 +110,9 @@ AI-generated creative work has a provenance problem: anyone can claim that a spe
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Maturity note</strong></p>
-<p className="mt-2">Onchain provenance for AI-generated creative work is still an emerging practice. Standards for linking model outputs to a specific agent identity and generation parameters are not yet finalized. Botto represents one working implementation. Broader tooling and conventions for this pattern are actively developing.</p>
+**Maturity note**
+
+Onchain provenance for AI-generated creative work is still an emerging practice. Standards for linking model outputs to a specific agent identity and generation parameters are not yet finalized. Botto represents one working implementation. Broader tooling and conventions for this pattern are actively developing.
 </AlertContent>
 </Alert>
 

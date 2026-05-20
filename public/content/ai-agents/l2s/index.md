@@ -100,7 +100,7 @@ Each L2 publishes its own RPC endpoints, chain IDs, and block explorer URLs in i
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0">For production agent deployments, use a dedicated RPC provider rather than public endpoints. Public RPCs have rate limits and offer no uptime guarantees. Providers such as Alchemy, Infura, and QuickNode support most major L2s.</p>
+For production agent deployments, use a dedicated RPC provider rather than public endpoints. Public RPCs have rate limits and offer no uptime guarantees. Providers such as Alchemy, Infura, and QuickNode support most major L2s.
 </AlertContent>
 </Alert>
 

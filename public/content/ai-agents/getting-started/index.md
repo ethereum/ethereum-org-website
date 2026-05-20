@@ -56,8 +56,9 @@ If you are undecided, ElizaOS and GOAT are generally considered the most beginne
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Warning!</strong></p>
-<p className="mt-2">Before connecting any third-party plugin or protocol adapter to your agent, review what permissions each tool requests. A malicious or misconfigured plugin can instruct your agent to interact with unintended contracts. Only include plugins from sources you have audited or that are widely reviewed in the ecosystem.</p>
+**Warning!**
+
+Before connecting any third-party plugin or protocol adapter to your agent, review what permissions each tool requests. A malicious or misconfigured plugin can instruct your agent to interact with unintended contracts. Only include plugins from sources you have audited or that are widely reviewed in the ecosystem.
 </AlertContent>
 </Alert>
 
@@ -139,8 +140,9 @@ The addresses in this section refer to your **agent's smart account address** (t
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Local testing with Anvil/Hardhat</strong></p>
-<p className="mt-2">If you test your agent against a local blockchain node (like Anvil), be aware that LLMs can discover and use privileged debug methods (for example, `anvil_setBalance`) to "cheat" simulations rather than executing proper contract logic. To prevent this, route your agent's RPC calls through a restrictive proxy (like Veto) that blocks non-standard JSON-RPC methods. See the [AI agents: Wallets](/ai-agents/wallets/) for more on local testing security.</p>
+**Local testing with Anvil/Hardhat**
+
+If you test your agent against a local blockchain node (like Anvil), be aware that LLMs can discover and use privileged debug methods (for example, `anvil_setBalance`) to "cheat" simulations rather than executing proper contract logic. To prevent this, route your agent's RPC calls through a restrictive proxy (like Veto) that blocks non-standard JSON-RPC methods. See the [AI agents: Wallets](/ai-agents/wallets/) for more on local testing security.
 </AlertContent>
 </Alert>
 

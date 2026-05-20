@@ -18,10 +18,11 @@ Most AI today runs inside **centralized servers owned by a handful of companies*
 
 The Ethereum network offers an open layer for **settlement, coordination, verification, and digital identity**, that AI systems can use without depending on centralized intermediaries.
 
-<Alert variant="info" className="my-8">
+<Alert className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Are you a builder?</strong></p>
-<p className="mt-2">If you want to deploy AI applications and agents on Ethereum, check out the <a href="/ai-agents/">builder hub for AI infrastructure</a>.</p>
+**Are you a builder?**
+
+If you want to deploy AI applications and agents on Ethereum, check out the [builder hub for AI infrastructure](/ai-agents/).
 </AlertContent>
 </Alert>
 
@@ -47,11 +48,12 @@ Ethereum provides tools that **shift the paradigm from "believe what you see" to
 Onchain **attestations** are a primary approach to this problem. The [Ethereum Attestation Service (EAS)](https://attest.org/) allows any issuer, whether a media organization, a developer, or an institution, to **publish a signed, tamper-resistant claim** about a piece of content or an AI agent's identity on the Ethereum blockchain. The attestation records are **verifiable by anyone and cannot be altered after-the-fact**.
 
 
-<Alert variant="info" className="my-8">
+<Alert className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Early blockchain media authenticity proofs</strong></p>
-<p className="mt-2">Using blockchain-based attestations as a verification layer to combat deepfakes is not a new concept. In 2019, the News Provenance Project, a collaboration between the BBC, The New York Times, and The Wall Street Journal, explored the use of blockchain technology to verify the authenticity of photos and more shared on social media platforms. Their [proof of concept](https://www.newsprovenanceproject.com/proof-of-concept) demonstrated how blockchain technology could be used to track the origin and modification history of digital media as it's shared across the web. 
-Today, anyone can build such verification systems using Ethereum's globally-verifiable, open-source tooling.</p>
+**Early blockchain media authenticity proofs**
+
+Using blockchain-based attestations as a verification layer to combat deepfakes is not a new concept. In 2019, the News Provenance Project, a collaboration between the BBC, The New York Times, and The Wall Street Journal, explored the use of blockchain technology to verify the authenticity of photos and more shared on social media platforms. Their [proof of concept](https://www.newsprovenanceproject.com/proof-of-concept) demonstrated how blockchain technology could be used to track the origin and modification history of digital media as it's shared across the web. 
+Today, anyone can build such verification systems using Ethereum's globally-verifiable, open-source tooling.
 </AlertContent>
 </Alert> 
 
@@ -67,8 +69,9 @@ AI-assisted wallets have the potential to support **an easier transaction experi
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Before using AI wallet tools</strong></p>
-<p className="mt-2">AI-powered wallet interfaces are still maturing technology. Risks include smart contract vulnerabilities in the session key infrastructure, agent errors from model hallucinations, and phishing sites impersonating legitimate wallet assistants. Only use audited applications, review the permissions granted to any agent, and verify all transactions before signing.</p>
+**Before using AI wallet tools**
+
+AI-powered wallet interfaces are still maturing technology. Risks include smart contract vulnerabilities in the session key infrastructure, agent errors from model hallucinations, and phishing sites impersonating legitimate wallet assistants. Only use audited applications, review the permissions granted to any agent, and verify all transactions before signing.
 </AlertContent>
 </Alert>
 
@@ -103,8 +106,9 @@ Explore autonomous agents and AI assistants built on Ethereum:
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Good to know</strong></p>
-<p className="mt-2">Artificial intelligence agents and related execution tools are still in early development. The applications listed above vary in maturity and audit status. Always verify the source and permissions of any tool before connecting your wallet.</p>
+**Good to know**
+
+Artificial intelligence agents and related execution tools are still in early development. The applications listed above vary in maturity and audit status. Always verify the source and permissions of any tool before connecting your wallet.
 </AlertContent>
 </Alert>
 

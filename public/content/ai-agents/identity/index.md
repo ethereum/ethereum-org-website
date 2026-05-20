@@ -25,8 +25,9 @@ Onchain identity standards on Ethereum address the same problem by making regist
 
 <Alert variant="warning" className="my-8">
 <AlertContent>
-<p className="mt-0"><strong>Draft standard in active adoption</strong></p>
-<p className="mt-2">ERC-8004 carries an official status of <em>Draft</em> on the Ethereum Improvement Proposals site. The contracts are deployed and live in production, but the interface specification may change as the standard progresses toward Final. Until the standard is finalized, pin your integration to a specific contract address and ABI version rather than assuming forward compatibility. Monitor the <a href="https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098">Ethereum Magicians discussion thread</a> for interface changes.</p>
+**Draft standard in active adoption**
+
+ERC-8004 carries an official status of _Draft_ on the Ethereum Improvement Proposals site. The contracts are deployed and live in production, but the interface specification may change as the standard progresses toward Final. Until the standard is finalized, pin your integration to a specific contract address and ABI version rather than assuming forward compatibility. Monitor the [Ethereum Magicians discussion thread](https://ethereum-magicians.org/t/erc-8004-trustless-agents/25098) for interface changes.
 </AlertContent>
 </Alert>
 
