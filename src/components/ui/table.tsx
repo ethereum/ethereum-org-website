@@ -7,46 +7,21 @@ import { tv, type VariantProps } from "tailwind-variants"
 import { cn } from "@/lib/utils/cn"
 
 const baseStyles = {
-  th: `
-    text-start
-    border-b
-    border-body
-    text-body
-    normal-case
-    align-bottom
-    p-4
-    text-sm
-    font-semibold
-    whitespace-normal
-    break-words
-  `,
+  th: "text-start border-b border-body text-body normal-case align-bottom p-4 text-sm font-semibold whitespace-normal break-words",
 
-  tr: `
-    not-[:last-of-type]:[&_th]:border-e-2
-    not-[:last-of-type]:[&_th]:border-e-background
-    not-[:last-of-type]:[&_td]:border-e-2
-    not-[:last-of-type]:[&_td]:border-e-background
-  `,
+  tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
 
-  td: `
-    p-4
-    text-sm
-    align-top
-    whitespace-normal
-    break-words
-  `,
+  td: "p-4 text-sm align-top whitespace-normal break-words",
 
-  tbody: `
-    [&_tr]:align-top
-    hover:[&_tr]:bg-background-highlight
-  `,
+  tbody:
+    "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
 }
 
 const stripedTbody = "even:[&_tr]:bg-background-highlight"
 
 const tableVariants = tv({
   slots: {
-    table: "w-full min-w-[1100px] table-fixed",
+    table: "w-full table-fixed",
     th: "",
     tr: "",
     td: "",
@@ -83,44 +58,18 @@ const tableVariants = tv({
 
         tbody: "[&_tr:last-child]:border-0",
 
-        tr: `
-          border-t
-          transition-colors
-          first-of-type:border-t-0
-          hover:bg-muted/50
-          data-[state=selected]:bg-muted
-        `,
+        tr: "border-t transition-colors first-of-type:border-t-0 hover:bg-muted/50 data-[state=selected]:bg-muted",
 
-        th: `
-          text-muted-foreground
-          h-12
-          px-4
-          text-left
-          align-middle
-          font-medium
-          whitespace-normal
-          break-words
-          [&:has([role=checkbox])]:pr-0
-        `,
+        th: "text-muted-foreground h-12 px-4 text-left align-middle font-medium whitespace-normal break-words [&:has([role=checkbox])]:pr-0",
 
-        td: `
-          p-4
-          align-middle
-          whitespace-normal
-          break-words
-          [&:has([role=checkbox])]:pr-0
-        `,
+        td: "p-4 align-middle whitespace-normal break-words [&:has([role=checkbox])]:pr-0",
       },
 
       "highlight-first-column": {
         ...baseStyles,
         thead: "bg-background-highlight",
 
-        td: `
-          ${baseStyles.td}
-          first:bg-background-highlight
-          first:font-bold
-        `,
+        td: `${baseStyles.td} first:bg-background-highlight first:font-bold`,
       },
     },
   },
@@ -134,6 +83,9 @@ type TableVariants = VariantProps<typeof tableVariants>
 
 type TableVariantsReturnType = ReturnType<typeof tableVariants>
 
+/**
+ * `align` prop uses CSS textAlign instead of deprecated HTML align attribute
+ */
 type CellPropsWithAlign<C> = Omit<C, "align"> & {
   align?: React.CSSProperties["textAlign"]
 }

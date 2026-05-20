@@ -1,5 +1,6 @@
-"use client"
+import { getTranslations } from "next-intl/server"
 
+import InlineLink from "@/components/ui/Link"
 import {
   Table,
   TableBody,
@@ -11,37 +12,32 @@ import {
 
 import { OPCODES } from "@/data/evm/opcodes"
 
-const renderCell = (cell?: { label: string; href?: string }) => {
-  if (!cell) return ""
+type Cell = {
+  label: string
+  href?: string
+}
 
+const renderCell = (cell: Cell) => {
   if (cell.href) {
-    return (
-      <a
-        href={cell.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline"
-      >
-        {cell.label}
-      </a>
-    )
+    return <InlineLink href={cell.href}>{cell.label}</InlineLink>
   }
 
   return cell.label
 }
 
-export default function OpcodesTable() {
+export default async function OpcodesTable() {
+  const t = await getTranslations("component-opcodes-table")
   return (
-    <Table>
+    <Table className="min-w-[1100px]">
       <TableHeader>
         <TableRow>
-          <TableHead>Opcode</TableHead>
-          <TableHead>Name</TableHead>
-          <TableHead>Gas</TableHead>
-          <TableHead>Inputs</TableHead>
-          <TableHead>Outputs</TableHead>
-          <TableHead>Mem / Storage</TableHead>
-          <TableHead>Notes</TableHead>
+          <TableHead>{t("opcode")}</TableHead>
+          <TableHead>{t("name")}</TableHead>
+          <TableHead>{t("gas")}</TableHead>
+          <TableHead>{t("initial-stack")}</TableHead>
+          <TableHead>{t("resulting-stack")}</TableHead>
+          <TableHead>{t("mem-storage")}</TableHead>
+          <TableHead>{t("notes")}</TableHead>
         </TableRow>
       </TableHeader>
 

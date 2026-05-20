@@ -1,21 +1,19 @@
-export interface Opcodes {
-  stack: string
-  name: string
-  gas: {
-    label: string
-    href?: string
-  }
-  inputs: string[]
-  outputs: string[]
-  memStorage: {
-    label: string
-  }
-  notes: {
-    label: string
-  }
+type Cell = {
+  label: string
+  href?: string
 }
 
-export const OPCODES: Opcodes[] = [
+export interface Opcode {
+  stack: string
+  name: string
+  gas: Cell
+  inputs: string[]
+  outputs: string[]
+  memStorage: Cell
+notes: Cell
+}
+
+export const OPCODES: Opcode[] = [
   // ── Arithmetic ────────────────────────────────────────────────────────────
   {
     stack: "00",

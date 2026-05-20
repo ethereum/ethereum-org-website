@@ -112,8 +112,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
 export async function generateStaticParams() {
   try {
     const slugs = await getPostSlugs("/")
-    console.log("ALL SLUGS:", slugs)
-
+   
     return slugs.map((slug) => ({
       slug: slug.split("/").slice(1),
     }))
