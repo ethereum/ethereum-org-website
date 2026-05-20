@@ -5,9 +5,10 @@ lang: uk
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: "З Beacon Chain в екосистемі Ethereum з’явився доказ частки володіння."
-summaryPoint2: "У вересні 2022 року відбулося об’єднання з оригінальним ланцюжком Ethereum, що ґрунтувався на доказі виконання роботи."
-summaryPoint3: "З Beacon Chain у системі з’явився протокол логіки консенсусу та обміну блоками, який наразі захищає Ethereum."
+summaryPoints:
+  - "З Beacon Chain в екосистемі Ethereum з’явився доказ частки володіння."
+  - "У вересні 2022 року відбулося об’єднання з оригінальним ланцюжком Ethereum, що ґрунтувався на доказі виконання роботи."
+  - "З Beacon Chain у системі з’явився протокол логіки консенсусу та обміну блоками, який наразі захищає Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

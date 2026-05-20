@@ -7,7 +7,6 @@ import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 import BannerNotification from "@/components/Banners/BannerNotification"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
-import Codeblock from "@/components/Codeblock"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
@@ -73,18 +72,11 @@ const BackToTop = (props: ChildOnlyProp) => (
   </div>
 )
 
-const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
-  const match = props.className?.match(/(language-\S+)/)
-  const codeLanguage = match ? match[0] : "plain-text"
-  return <Codeblock codeLanguage={codeLanguage} {...props} />
-}
-
 export const docsComponents = {
   h1: H1,
   h2: H2,
   h3: H3,
   h4: H4,
-  pre: Pre,
   ...mdxTableComponents,
   ButtonLink,
   Card,

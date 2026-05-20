@@ -5,9 +5,10 @@ lang: ur
 template: upgrade
 image: /images/upgrades/core.png
 alt: 
-summaryPoint1: "بیکن چین نے ایتھریم ایکو سسٹم میں پروف آف اسٹیک (proof-of-stake) متعارف کرایا۔"
-summaryPoint2: "اسے ستمبر 2022 میں اصل ایتھریم پروف آف ورک (proof-of-work) چین کے ساتھ ضم (merge) کر دیا گیا تھا۔"
-summaryPoint3: "بیکن چین نے کنسینسس لاجک اور بلاک گپ شپ (block gossip) پروٹوکول متعارف کرایا جو اب ایتھریم کو محفوظ بناتا ہے۔"
+summaryPoints:
+  - "بیکن چین نے ایتھریم ایکو سسٹم میں پروف آف اسٹیک (proof-of-stake) متعارف کرایا۔"
+  - "اسے ستمبر 2022 میں اصل ایتھریم پروف آف ورک (proof-of-work) چین کے ساتھ ضم (merge) کر دیا گیا تھا۔"
+  - "بیکن چین نے کنسینسس لاجک اور بلاک گپ شپ (block gossip) پروٹوکول متعارف کرایا جو اب ایتھریم کو محفوظ بناتا ہے۔"
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

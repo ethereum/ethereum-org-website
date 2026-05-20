@@ -3,12 +3,12 @@ title: Mitandao ya kijamiii iliogatuliwa
 description: Muhtasari wa mitandao ya kijamii iliyogatuliwa kwenye Ethereum
 lang: sw
 template: use-cases
-emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Mifumo inayotegemea mnyororo wa bloku kwa ajili ya mwingiliano wa kijamii na uundaji na usambazaji wa maudhui.
-summaryPoint2: Mitandao ya kijamii iliyogatuliwa hulinda faragha ya mtumiaji na kuimarisha usalama wa data.
-summaryPoint3: Tokeni na NFT huunda njia mpya za kuchuma mapato kutokana na maudhui.
+summaryPoints:
+  - "Mifumo inayotegemea mnyororo wa bloku kwa ajili ya mwingiliano wa kijamii na uundaji na usambazaji wa maudhui."
+  - "Mitandao ya kijamii iliyogatuliwa hulinda faragha ya mtumiaji na kuimarisha usalama wa data."
+  - "Tokeni na NFT huunda njia mpya za kuchuma mapato kutokana na maudhui."
 ---
 
 Mitandao ya kijamii ina jukumu kubwa katika mawasiliano na mwingiliano wetu wa kila siku. Hata hivyo, udhibiti wa kati wa mifumo hii umeleta matatizo mengi: ukiukaji wa data, kukatika kwa seva, kuondolewa kwenye mifumo, udhibiti, na ukiukaji wa faragha ni baadhi ya hasara ambazo mitandao ya kijamii mara nyingi hukabiliana nazo. Ili kukabiliana na masuala haya, wasanidi programu wanaunda mitandao ya kijamii kwenye Ethereum. Mitandao ya kijamii iliyogatuliwa inaweza kurekebisha matatizo mengi ya mifumo ya mitandao ya kijamii ya jadi na kuboresha uzoefu wa jumla wa watumiaji.

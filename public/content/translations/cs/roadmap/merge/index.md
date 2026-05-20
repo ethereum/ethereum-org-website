@@ -5,10 +5,11 @@ lang: cs
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: "Hlavní síť Ethereum používá důkaz podílem, ale ne vždy tomu tak bylo."
-summaryPoint2: "Upgrade z původního mechanismu důkazu prací na důkaz podílem se nazývá Sloučení."
-summaryPoint3: "Sloučení označuje sloučení původní hlavní sítě Ethereum s odděleným blockchainem založeným na důkazu podílem nazývaným Řetězová vazba, které nyní existují jako jeden řetězec."
-summaryPoint4: "Sloučení snížilo spotřebu energie potřebné k provozu Etherea přibližně o 99,95 %."
+summaryPoints:
+  - "Hlavní síť Ethereum používá důkaz podílem, ale ne vždy tomu tak bylo."
+  - "Upgrade z původního mechanismu důkazu prací na důkaz podílem se nazývá Sloučení."
+  - "Sloučení označuje sloučení původní hlavní sítě Ethereum s odděleným blockchainem založeným na důkazu podílem nazývaným Řetězová vazba, které nyní existují jako jeden řetězec."
+  - "Sloučení snížilo spotřebu energie potřebné k provozu Etherea přibližně o 99,95 %."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
