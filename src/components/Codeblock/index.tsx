@@ -23,6 +23,29 @@ export type CodeblockProps = React.HTMLAttributes<HTMLDivElement> & {
   fromHomepage?: boolean
 }
 
+const LANGUAGE_LABELS: Record<string, string> = {
+  js: "JS",
+  javascript: "JS",
+  ts: "TS",
+  typescript: "TS",
+  jsx: "JSX",
+  tsx: "TSX",
+  json: "JSON",
+  python: "Python",
+  py: "Python",
+  solidity: "Solidity",
+  sol: "Solidity",
+  bash: "Shell",
+  sh: "Shell",
+  shell: "Shell",
+  yaml: "YAML",
+  yml: "YAML",
+  html: "HTML",
+  css: "CSS",
+  rust: "Rust",
+  go: "Go",
+}
+
 const Codeblock = async ({
   children,
   allowCollapse = true,
@@ -52,11 +75,13 @@ const Codeblock = async ({
 
   const shouldShowLineNumbers = resolvedLang !== "bash"
   const totalLines = codeText.split("\n").length
+  const languageLabel = LANGUAGE_LABELS[language] ?? ""
 
   return (
     <CodeblockClient
       html={html}
       codeText={codeText}
+      languageLabel={languageLabel}
       allowCollapse={allowCollapse}
       shouldShowLineNumbers={shouldShowLineNumbers}
       totalLines={totalLines}
