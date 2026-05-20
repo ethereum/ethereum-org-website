@@ -4,13 +4,13 @@ metaTitle: What is a DAO? | Decentralized Autonomous Organization
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: A representation of a DAO voting on a proposal.
-summaryPoint1: Member-owned communities without centralized leadership.
-summaryPoint2: A safe way to collaborate with internet strangers.
-summaryPoint3: A safe place to commit funds to a specific cause.
+summaryPoints:
+  - "Member-owned communities without centralized leadership."
+  - "A safe way to collaborate with internet strangers."
+  - "A safe place to commit funds to a specific cause."
 ---
 
 ## What are DAOs? {#what-are-daos}

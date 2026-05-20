@@ -4,13 +4,13 @@ metaTitle: Cosa sono gli RWA? | Vantaggi e utilizzo degli asset del mondo reale
 description: Una panoramica degli asset del mondo reale su Ethereum
 lang: it
 template: use-cases
-emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Uomo e cane che giocano.
 sidebarDepth: 2
-summaryPoint1: Un metodo per trasformare materie prime di valore in token digitali.
-summaryPoint2: "Ora puoi possedere porzioni di oggetti o asset della vita reale, invece di dover acquistare un'intera proprietà o un intero articolo."
-summaryPoint3: Collega la finanza tradizionale con l'ecosistema della blockchain.
+summaryPoints:
+  - "Un metodo per trasformare materie prime di valore in token digitali."
+  - "Ora puoi possedere porzioni di oggetti o asset della vita reale, invece di dover acquistare un'intera proprietà o un intero articolo."
+  - "Collega la finanza tradizionale con l'ecosistema della blockchain."
 ---
 
 Gli asset del mondo reale (RWA) sono token che rappresentano forme di ricchezza esistenti, come immobili, oro, azioni, arte, macchinari o oggetti da collezione. La tokenizzazione di questi articoli li traduce in forma digitale, consentendo di dividerli tra più proprietari e facilitandone lo scambio.

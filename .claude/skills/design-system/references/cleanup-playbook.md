@@ -287,3 +287,46 @@ import { Stack } from "@/components/ui/flex"
 ```
 
 (Stack already defaults to `flex-col gap-2`, so often you can drop the className entirely.)
+
+## Per-section `src/layouts/md/<Section>Layout` -> `TopicLayout` config
+
+```tsx
+// Before -- a section gets its own layout file that duplicates 90% of every other section's layout:
+// src/layouts/md/Staking.tsx
+export const StakingLayout = ({ children, frontmatter, slug, ... }) => {
+  const { t } = useTranslation("page-staking")
+  const dropdownLinks = { text: t("..."), items: [ /* ... */ ] }
+  const heroProps = { ...frontmatter, breadcrumbs: { slug, startDepth: 1 }, heroImg: { ... } }
+  return <ContentLayout dropdownLinks={dropdownLinks} heroSection={<ContentHero {...heroProps} />}>{children}</ContentLayout>
+}
+
+// After -- the data lives in a config file, no layout component needed:
+// src/data/topics/staking.ts
+import type { TopicConfig } from "."
+export const staking: TopicConfig = {
+  translationNs: "page-staking",
+  dropdown: {
+    textKey: "page-staking-dropdown-staking-options",
+    ariaLabelKey: "page-staking-dropdown-staking-options-alt",
+    matomoCategory: "Staking dropdown",
+    items: [
+      { textKey: "page-staking-dropdown-home", href: "/staking/", matomoEvent: "clicked staking home" },
+      // ...
+    ],
+  },
+  heroImage: { width: 800, height: 605 },
+}
+
+// src/layouts/index.ts
+export const layoutMapping = {
+  // ...
+  staking: TopicLayout,  // was: StakingLayout
+}
+```
+
+After the move:
+- Keep the section's MDX component bundle (`stakingComponents`) in `src/layouts/md/<key>.tsx`; only the layout export goes away.
+- Delete any per-section heading overrides (`Heading1`/`Heading2`/etc. with extra className). The defaults in `MdComponents` are the baseline.
+- If the section needs a swap-in component (HubHero on a specific slug, content after the markdown), use `config.hubHero` or the `afterContent` prop -- don't fork a new layout.
+
+See `references/layouts.md` for the full inventory and `docs/topic-layout-refactor.md` for the worked migration.

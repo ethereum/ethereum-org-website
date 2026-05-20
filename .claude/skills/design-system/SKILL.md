@@ -32,6 +32,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 8. **`useRtlFlip()` for directional icons** (right-pointing arrows/chevrons). Or use `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
 9. **Markdown content goes through `MdComponents`.** The legacy `@/components/Card` (default export) is reserved for markdown shortcodes -- never import it from app code; use `@/components/ui/card`.
 10. **Storybook stories ship with new UI components.** No automated unit tests; Storybook + Chromatic + types are the verification layer.
+11. **Don't add new layouts.** There are six canonical layouts (`TopicLayout`, `StaticLayout`, `DocsLayout`, `TutorialLayout`, `ContentLayout`, `BaseLayout`). New sectioned content goes in `src/data/topics/<key>.ts` as a `TopicLayout` config -- not a new layout component. See `references/layouts.md`.
 
 ## Highest-Value Gotchas (read these now)
 
@@ -105,6 +106,7 @@ Pull these in only when the trigger applies. Don't read them all upfront.
 - **`references/a11y.md`** -- Load when adding interactive elements (modals, dropdowns, custom click targets), building forms, or working with images and headings.
 - **`references/card-walkthrough.md`** -- Load when starting any card-shaped UI work; an end-to-end worked example.
 - **`references/page-hero-walkthrough.md`** -- Load when starting a new page that needs a hero; an end-to-end worked example.
+- **`references/layouts.md`** -- Load when you're tempted to create a new layout, when adding a new topic-hub section, or when refactoring a one-off `src/layouts/md/<Section>Layout` file. The canonical inventory plus the rule that new layouts are very rare.
 - **`references/new-component-checklist.md`** -- Load before opening a PR for a new component. The pre-merge checklist.
 
 ## Other Project Skills That May Apply

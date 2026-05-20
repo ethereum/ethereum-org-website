@@ -4,8 +4,9 @@ lang: en
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: Receive financial incentives to generate accurate forecasts 
-summaryPoint2: High quality predictions about future events
+summaryPoints:
+  - "Receive financial incentives to generate accurate forecasts"
+  - "High quality predictions about future events"
 buttons: 
   - content: Learn more
     toId: how-prediction-markets-work
