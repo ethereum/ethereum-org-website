@@ -3,13 +3,13 @@ title: Sayansi iliogatuliwa (DeSci)
 description: Muhtasari wa sayansi iliyogatuliwa kwenye Ethereum
 lang: sw
 template: use-cases
-emoji: ":microscope:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Mbadala wa kimataifa, wazi kwa mfumo wa sasa wa kisayansi.
-summaryPoint2: Teknolojia inayowezesha wanasayansi kukusanya fedha, kufanya majaribio, kushiriki data, kusambaza maarifa, na zaidi.
-summaryPoint3: Inajengwa juu ya harakati ya sayansi huria.
+summaryPoints:
+  - "Mbadala wa kimataifa, wazi kwa mfumo wa sasa wa kisayansi."
+  - "Teknolojia inayowezesha wanasayansi kukusanya fedha, kufanya majaribio, kushiriki data, kusambaza maarifa, na zaidi."
+  - "Inajengwa juu ya harakati ya sayansi huria."
 ---
 
 ## Sayansi iliyogatuliwa (DeSci) ni nini? {#what-is-desci}

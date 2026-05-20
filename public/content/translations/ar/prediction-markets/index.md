@@ -4,8 +4,9 @@ lang: ar
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "خذ المال لتعطيك خبر صحيحة"
-summaryPoint2: "تنبأت عالية الجودة حول الأحداث المستقبلية"
+summaryPoints:
+  - "خذ المال لتعطيك خبر صحيحة"
+  - "تنبأت عالية الجودة حول الأحداث المستقبلية"
 buttons:
   - content: معرفة المزيد
     toId: how-prediction-markets-work

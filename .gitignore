@@ -71,3 +71,6 @@ storybook-static-pages
 
 # Git worktrees for Claude commands
 .worktrees
+
+# Hide skill eval workspaces
+.claude/skills/*-workspace

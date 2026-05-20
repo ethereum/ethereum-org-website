@@ -4,8 +4,9 @@ lang: id
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Terima insentif finansial untuk menghasilkan perkiraan yang akurat"
-summaryPoint2: Prediksi berkualitas tinggi tentang peristiwa masa depan
+summaryPoints:
+  - "Terima insentif finansial untuk menghasilkan perkiraan yang akurat"
+  - "Prediksi berkualitas tinggi tentang peristiwa masa depan"
 buttons: 
   - content: Pelajari lebih lanjut
     toId: how-prediction-markets-work

@@ -4,13 +4,13 @@ metaTitle: Nini ni NFTs? | Faida na matumizi
 description: Muhtasari wa NFT kwenye Ethereum
 lang: sw
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Nembo ya Eth ikionyeshwa kwa kupitia hologramu.
-summaryPoint1: Njia ya kuwakilisha kitu chochote cha kipekee kilicho na msingi wa Ethereum.
-summaryPoint2: NFT zinawapatia waundaji wa maudhui nguvu zaidi kuliko zamani.
-summaryPoint3: Inaendeshwa na mikataba erevu kwenye mnyororo wa bloku wa Ethereum.
+summaryPoints:
+  - "Njia ya kuwakilisha kitu chochote cha kipekee kilicho na msingi wa Ethereum."
+  - "NFT zinawapatia waundaji wa maudhui nguvu zaidi kuliko zamani."
+  - "Inaendeshwa na mikataba erevu kwenye mnyororo wa bloku wa Ethereum."
 ---
 
 ## Nini ni NFTs? {#what-are-nfts}

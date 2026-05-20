@@ -4,13 +4,13 @@ metaTitle: "¿Qué son los activos del mundo real (RWA)? | Beneficios y uso de a
 description: "Visión general de los activos del mundo real en Ethereum"
 lang: es
 template: use-cases
-emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Hombre y perro jugando.
 sidebarDepth: 2
-summaryPoint1: "Un método para convertir valiosos productos básicos en tókenes digitales."
-summaryPoint2: Ahora puede poseer partes de activos u objetos de la vida real, en vez de tener que comprar una propiedad o un objeto en su totalidad.
-summaryPoint3: Conecta las finanzas tradicionales con el ecosistema de la cadena de bloques.
+summaryPoints:
+  - "Un método para convertir valiosos productos básicos en tókenes digitales."
+  - "Ahora puede poseer partes de activos u objetos de la vida real, en vez de tener que comprar una propiedad o un objeto en su totalidad."
+  - "Conecta las finanzas tradicionales con el ecosistema de la cadena de bloques."
 ---
 
 Los activos del mundo real (RWA) son tókenes que representan formas existentes de riqueza, como bienes inmuebles, oro, acciones, arte, maquinarias o coleccionables. La tokenización de estos objetos los transforma en digitales, lo que permite dividirlos entre varios propietarios y facilita su comercialización.

@@ -4,11 +4,11 @@ metaTitle: Kuweka dhamana tena ni nini? | Manufaa na matumizi ya kuweka dhamana 
 description: Tumia ETH iliyowekwa dhamana ili kulinda huduma zingine zilizogatuliwa na upate zawadi za ziada.
 lang: sw
 template: use-cases
-emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: Uwawakilishi wa picha ya kuweka dhamana tena kwenye Ethereum.
 sidebarDepth: 2
-summaryPoint1: Tumia ETH iliyowekwa dhamana ili kulinda huduma zingine zilizogatuliwa na upate zawadi za ziada.
+summaryPoints:
+  - "Tumia ETH iliyowekwa dhamana ili kulinda huduma zingine zilizogatuliwa na upate zawadi za ziada."
 buttons:
   - content: Kuweka dhamana tena ni nini?
     toId: what-is-restaking

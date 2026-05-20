@@ -4,13 +4,13 @@ metaTitle: "Czym są AŚR? | Korzyści i zastosowania aktywów ze świata rzeczy
 description: "Przegląd aktywów ze świata rzeczywistego na Ethereum"
 lang: pl
 template: use-cases
-emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: "Bawiący się mężczyzna i pies."
 sidebarDepth: 2
-summaryPoint1: "Metoda na przekształcanie wartościowych dóbr w cyfrowe tokeny."
-summaryPoint2: "Możesz teraz posiadać kawałki obiektów lub aktywów z rzeczywistego świata, zamiast kupować całą nieruchomość lub przedmiot."
-summaryPoint3: "Łączy tradycyjne finanse z ekosystemem Ethereum."
+summaryPoints:
+  - "Metoda na przekształcanie wartościowych dóbr w cyfrowe tokeny."
+  - "Możesz teraz posiadać kawałki obiektów lub aktywów z rzeczywistego świata, zamiast kupować całą nieruchomość lub przedmiot."
+  - "Łączy tradycyjne finanse z ekosystemem Ethereum."
 ---
 
 Aktywa ze świata rzeczywistego (AŚR) to tokeny reprezentujące istniejące formy majątku, takie jak nieruchomości, złoto, akcje, dzieła sztuki, maszyny czy przedmioty kolekcjonerskie. Tokenizacja tych przedmiotów przekształca je w formę cyfrową, umożliwiając podział między wielu właścicieli i ułatwiając ich handel.

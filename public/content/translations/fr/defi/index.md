@@ -4,13 +4,13 @@ metaTitle: "Qu'est-ce que DeFi ? | Avantages et utilisation de la finance décen
 description: "Un aperçu de la DeFi sur Ethereum"
 lang: fr
 template: use-cases
-emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: Un logo Eth fait en briques lego.
 sidebarDepth: 2
-summaryPoint1: "Une alternative mondiale ouverte au système financier actuel."
-summaryPoint2: "Des produits qui vous permettent d'emprunter, d'épargner, d'investir, d'échanger et plus encore."
-summaryPoint3: "Basé sur une technologie open-source avec laquelle n'importe qui peut programmer."
+summaryPoints:
+  - "Une alternative mondiale ouverte au système financier actuel."
+  - "Des produits qui vous permettent d'emprunter, d'épargner, d'investir, d'échanger et plus encore."
+  - "Basé sur une technologie open-source avec laquelle n'importe qui peut programmer."
 ---
 
 La DeFi est un système financier ouvert et mondial conçu pour l'ère de l'internet - une alternative à un système opaque, contrôlé rigoureusement et maintenu par des infrastructures et des processus vieux de plusieurs décennies. Il vous donne le contrôle et la visibilité de votre argent. Il vous offre une exposition aux marchés mondiaux et des alternatives à vos options bancaires ou monétaires locales. Les produits DeFi ouvrent des services financiers à toute personne disposant d'une connexion Internet et ils sont en grande partie la propriété de leurs utilisateurs. Jusqu'à présent, des dizaines de milliards de dollars de cryptomonnaies ont coulé à travers des applications DeFi et ils se développent chaque jour.
