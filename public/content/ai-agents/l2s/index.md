@@ -7,9 +7,10 @@ emoji: ":chains:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Layer 2 networks for AI agents on Ethereum
-summaryPoint1: Evaluate L2s by execution, tooling, finality, and trust
-summaryPoint2: Match agent workload to the right L2 architecture
-summaryPoint3: Same patterns work on optimistic and ZK rollups
+summaryPoints:
+  - "Evaluate L2s by execution, tooling, finality, and trust"
+  - "Match agent workload to the right L2 architecture"
+  - "Same patterns work on optimistic and ZK rollups"
 ---
 
 # Layer 2 networks for AI agents {#l2s-for-agents}

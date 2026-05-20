@@ -4,13 +4,13 @@ metaTitle: "Що таке NFT? | Переваги та використання"
 description: "Огляд NFT на Ethereum"
 lang: uk
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "Логотип Eth відображається за допомогою голограми."
-summaryPoint1: "Спосіб представити що-небудь унікальне як актив на основі Ethereum."
-summaryPoint2: "Завдяки NFT у творців контенту з’являється більше можливостей, ніж будь-коли раніше."
-summaryPoint3: "На основі смартконтрактів блокчейну Ethereum."
+summaryPoints:
+  - "Спосіб представити що-небудь унікальне як актив на основі Ethereum."
+  - "Завдяки NFT у творців контенту з’являється більше можливостей, ніж будь-коли раніше."
+  - "На основі смартконтрактів блокчейну Ethereum."
 ---
 
 ## Що таке NFT? {#what-are-nfts}

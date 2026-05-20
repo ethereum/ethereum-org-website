@@ -7,9 +7,10 @@ emoji: ":id:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Agent identity with ERC-8004 on Ethereum
-summaryPoint1: ERC-8004 identity registries, live on 20+ chains
-summaryPoint2: Discover and verify agents without a central directory
-summaryPoint3: ERC-8004 identity plus x402 payments enables agent-to-agent commerce
+summaryPoints:
+  - "ERC-8004 identity registries, live on 20+ chains"
+  - "Discover and verify agents without a central directory"
+  - "ERC-8004 identity plus x402 payments enables agent-to-agent commerce"
 ---
 
 # Agent identity with ERC-8004 {#agent-identity}

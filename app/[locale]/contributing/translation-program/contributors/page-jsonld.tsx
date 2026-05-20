@@ -44,7 +44,7 @@ export default async function ContributorsJsonLD({
         description: t(
           "page-contributing-translation-program-contributors-meta-description"
         ),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

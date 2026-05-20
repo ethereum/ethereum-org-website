@@ -7,9 +7,10 @@ emoji: ":rocket:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Getting started with AI agents on Ethereum
-summaryPoint1: Set up your first agent in four steps
-summaryPoint2: Configure session keys for bounded agent autonomy
-summaryPoint3: Code examples for setup, integration, and guardrails
+summaryPoints:
+  - "Set up your first agent in four steps"
+  - "Configure session keys for bounded agent autonomy"
+  - "Code examples for setup, integration, and guardrails"
 ---
 
 # Getting started with AI agents {#getting-started}

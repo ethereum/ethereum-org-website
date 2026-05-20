@@ -13,6 +13,7 @@ import I18nProvider from "@/components/I18nProvider"
 import ListingMethodology from "@/components/ListingMethodology"
 import MainArticle from "@/components/MainArticle"
 import { UnorderedList } from "@/components/ui/list"
+import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { formatDate } from "@/lib/utils/date"
@@ -88,7 +89,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </p>
           </div>
 
-          <FindWalletProductTable wallets={wallets} />
+          <Section id="wallets">
+            <h2 className="sr-only select-none">
+              {t("page-find-wallet-table-title")}
+            </h2>
+            <FindWalletProductTable wallets={wallets} />
+          </Section>
 
           <ListingMethodology
             heading={t("page-find-wallet-methodology-title")}

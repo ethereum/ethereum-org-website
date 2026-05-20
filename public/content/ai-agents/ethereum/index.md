@@ -7,9 +7,10 @@ emoji: ":diamond_shape_with_a_dot_inside:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Why Ethereum for AI agents
-summaryPoint1: Mature smart accounts and onchain agent identity
-summaryPoint2: Programmable guardrails and session keys for bounded autonomy
-summaryPoint3: Permissionless access to DeFi, payments, and identity
+summaryPoints:
+  - "Mature smart accounts and onchain agent identity"
+  - "Programmable guardrails and session keys for bounded autonomy"
+  - "Permissionless access to DeFi, payments, and identity"
 ---
 # Why Ethereum for AI agents {#why-ethereum-for-ai-agents}
 

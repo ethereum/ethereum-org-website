@@ -3,6 +3,7 @@ import type {
   BlockspaceData,
   Commit,
   CommunityPick,
+  EthPriceData,
   EventItem,
   GHIssue,
   GitHubContributorsData,
@@ -26,7 +27,7 @@ import { KEYS } from "./tasks"
 
 export { KEYS }
 
-export const getEthPrice = () => get<MetricReturnData>(KEYS.ETH_PRICE)
+export const getEthPrice = () => get<EthPriceData>(KEYS.ETH_PRICE)
 export const getL2beatData = () => get<L2beatData>(KEYS.L2BEAT)
 export const getAppsData = () => get<Record<string, AppData[]>>(KEYS.APPS)
 export const getGrowThePieData = () => get<GrowThePieData>(KEYS.GROW_THE_PIE)

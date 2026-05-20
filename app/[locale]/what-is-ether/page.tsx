@@ -309,6 +309,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               src={ethOrgLogo}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[123px]"
+              sizes="123px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
@@ -398,6 +399,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               src={infrastructureTransparent}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[330px]"
+              sizes="330px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[4].url)} className="scroll-mt-28">
@@ -466,6 +468,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               src={developersHubHero}
               alt="Ethereum.org Logo"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), 800px`}
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[5].url)} className="scroll-mt-28">
@@ -571,6 +574,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               src={impactTransparent}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[214px]"
+              sizes="214px"
             />
             <div className="space-y-6">
               <h3>{t("page-what-is-ether-who-holds-most")}</h3>

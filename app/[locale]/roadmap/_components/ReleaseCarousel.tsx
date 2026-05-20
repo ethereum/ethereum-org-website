@@ -253,6 +253,7 @@ const ReleaseCarousel = () => {
                           src={release.image}
                           alt={release.releaseName}
                           className="h-[240px] rounded-2xl object-cover md:h-[266px] lg:h-[551px]"
+                          sizes="(max-width: 992px) 100vw, (max-width: 1536px) 50vw, 768px"
                         />
                       </div>
                       <div className="flex flex-1 flex-col gap-8">

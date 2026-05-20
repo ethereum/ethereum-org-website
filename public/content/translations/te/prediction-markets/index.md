@@ -4,8 +4,9 @@ lang: te
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "ఖచ్చితమైన సూచనలను రూపొందించడానికి ఆర్థిక ప్రోత్సాహకాలను స్వీకరించండి"
-summaryPoint2: "భవిష్యత్ సంఘటనల గురించి అధిక నాణ్యత గల అంచనాలు"
+summaryPoints:
+  - "ఖచ్చితమైన సూచనలను రూపొందించడానికి ఆర్థిక ప్రోత్సాహకాలను స్వీకరించండి"
+  - "భవిష్యత్ సంఘటనల గురించి అధిక నాణ్యత గల అంచనాలు"
 buttons:
   - content: ఇంకా నేర్చుకోండి
     toId: how-prediction-markets-work

@@ -280,7 +280,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 {t("page-upgrades-bug-bounty-subtitle")}
               </Text>
               <Flex className="mt-4 flex-wrap items-center gap-4">
-                <ButtonLink href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+                <ButtonLink href="https://bbp-form.ethereum.org/">
                   {t("page-upgrades-bug-bounty-submit")}
                 </ButtonLink>
                 <ButtonLink variant="outline" href="#in-scope" isSecondary>
@@ -387,9 +387,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               <Text>
                 {t.rich("page-upgrades-bug-bounty-validity-desc", {
                   a: (chunks) => (
-                    <Link href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-                      {chunks}
-                    </Link>
+                    <Link href="https://bbp-form.ethereum.org/">{chunks}</Link>
                   ),
                 })}
               </Text>
@@ -506,8 +504,8 @@ export default async function Page(props: { params: Promise<Params> }) {
                     C-KZG-4844
                   </InlineLink>
                   <br />
-                  <InlineLink href="https://github.com/crate-crypto/go-kzg-4844">
-                    Go-KZG-4844
+                  <InlineLink href="https://github.com/crate-crypto/go-eth-kzg">
+                    Go-ETH-KZG
                   </InlineLink>
                 </div>
               </StyledCard>
@@ -539,6 +537,10 @@ export default async function Page(props: { params: Promise<Params> }) {
                       },
                       {
                         key: "page-upgrades-bug-bounty-not-included-li-4",
+                        footnote: false,
+                      },
+                      {
+                        key: "page-upgrades-bug-bounty-not-included-li-10",
                         footnote: false,
                       },
                       {
@@ -775,29 +777,29 @@ export default async function Page(props: { params: Promise<Params> }) {
                 title={t("bug-bounty-faq-q2-title")}
                 contentPreview={t("bug-bounty-faq-q2-contentPreview")}
               >
-                <Text>
+                <p>
                   {t.rich("bug-bounty-faq-q2-content-1", {
                     a: (chunks) => (
                       <Link href="https://blog.ethereum.org/">{chunks}</Link>
                     ),
                   })}
-                </Text>
+                </p>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q3-title")}
                 contentPreview={t("bug-bounty-faq-q3-contentPreview")}
               >
-                <Text>
+                <p>
                   {t.rich("bug-bounty-faq-q3-content-1", {
                     strong: Strong,
                   })}
-                </Text>
+                </p>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q4-title")}
                 contentPreview={t("bug-bounty-faq-q4-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q4-content-1")}</Text>
+                <p>{t("bug-bounty-faq-q4-content-1")}</p>
               </ExpandableCard>
             </div>
             <Flex className="ms-0 w-full flex-col lg:ms-8">
@@ -805,20 +807,20 @@ export default async function Page(props: { params: Promise<Params> }) {
                 title={t("bug-bounty-faq-q5-title")}
                 contentPreview={t("bug-bounty-faq-q5-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q5-content-1")}</Text>
+                <p>{t("bug-bounty-faq-q5-content-1")}</p>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q6-title")}
                 contentPreview={t("bug-bounty-faq-q6-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q6-content-1")}</Text>
-                <Text>{t("bug-bounty-faq-q6-content-2")}</Text>
+                <p>{t("bug-bounty-faq-q6-content-1")}</p>
+                <p>{t("bug-bounty-faq-q6-content-2")}</p>
               </ExpandableCard>
               <ExpandableCard
                 title={t("bug-bounty-faq-q7-title")}
                 contentPreview={t("bug-bounty-faq-q7-contentPreview")}
               >
-                <Text>{t("bug-bounty-faq-q7-content-1")}</Text>
+                <p>{t("bug-bounty-faq-q7-content-1")}</p>
               </ExpandableCard>
             </Flex>
           </Flex>

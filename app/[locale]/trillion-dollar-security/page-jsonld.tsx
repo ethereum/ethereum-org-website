@@ -28,6 +28,9 @@ export default async function TrillionDollarSecurityPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#trillion-dollar-security` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -36,10 +39,10 @@ export default async function TrillionDollarSecurityPageJsonLD({
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-trillion-dollar-security-meta-title"),
         description: t("page-trillion-dollar-security-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [
@@ -66,11 +69,12 @@ export default async function TrillionDollarSecurityPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#trillion-dollar-security` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#trillion-dollar-security`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-trillion-dollar-security-title"),
         description: t("page-trillion-dollar-security-meta-description"),
         image: "https://ethereum.org/images/trillion-dollar-security/hero.png",

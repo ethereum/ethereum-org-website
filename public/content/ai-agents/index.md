@@ -4,13 +4,13 @@ metaTitle: AI agent builder hub | ethereum.org
 description: A developer hub for building AI agents on Ethereum. Covers wallets, verifiable computation, machine payments, agent identity, and the L2 ecosystem.
 lang: en
 template: ai-agents
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Developer working with AI agent architecture on Ethereum
-summaryPoint1: Programmable wallets with spending limits and session keys
-summaryPoint2: Verifiable behavior via zkML proofs and TEE attestations
-summaryPoint3: Machine-to-machine payments using stablecoins and open protocols
+summaryPoints:
+  - "Programmable wallets with spending limits and session keys"
+  - "Verifiable behavior via zkML proofs and TEE attestations"
+  - "Machine-to-machine payments using stablecoins and open protocols"
 buttons:
   - content: Getting started
     href: /ai-agents/getting-started/

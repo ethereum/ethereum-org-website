@@ -46,7 +46,6 @@ export const PREFIX_PATH_NAMESPACE_MAP: Array<[string, string]> = [
   ["/developers/tutorials/", "page-developers-tutorials"],
   ["/developers/tools/", "page-developers-tools"],
   ["/developers/", "page-developers-index"],
-  ["/contributing/translation-program/translatathon/", "page-translatathon"],
   ["/community/events/", "page-community-events"],
   ["/community/support/", "page-community-support"],
   ["/community/", "page-community"],
@@ -126,7 +125,7 @@ const QUIZZES_PREFIXES: string[] = [
 const LAYOUT_NAMESPACES: Record<string, string[]> = {
   docs: ["page-developers-docs"],
   "use-cases": ["template-usecase", "learn-quizzes"],
-  "ai-agents": ["page-ai-agents"],
+  "ai-agents": ["template-ai-agents"],
   upgrade: ["page-upgrades", "page-upgrades-index"],
   tutorial: ["page-developers-tutorials"],
 }

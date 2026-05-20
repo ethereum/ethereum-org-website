@@ -3,6 +3,7 @@ import { type ComponentProps, type HTMLAttributes } from "react"
 import type { ChildOnlyProp } from "@/lib/types"
 
 import Card from "@/components/Card"
+import Codeblock from "@/components/Codeblock"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
@@ -94,12 +95,11 @@ export const Heading4 = ({
   </h4>
 )
 
-export const Pre = (props: ChildOnlyProp) => (
-  <pre
-    className="max-w-full overflow-x-scroll rounded border bg-background-highlight p-4 whitespace-pre-wrap"
-    {...props}
-  />
-)
+export const Pre = (props: HTMLAttributes<HTMLDivElement>) => {
+  const match = props.className?.match(/(language-\S+)/)
+  const codeLanguage = match ? match[0] : "plain-text"
+  return <Codeblock codeLanguage={codeLanguage} {...props} />
+}
 
 type ParagraphProps = ChildOnlyProp & { className?: string }
 

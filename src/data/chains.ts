@@ -1031,7 +1031,7 @@ const chains = [
       symbol: "ETH",
       decimals: 18,
     },
-    chain: "ETH",
+    chain: "MegaETH",
   },
   {
     name: "OEV Network",
@@ -1892,7 +1892,7 @@ const chains = [
     chain: "Eventum",
   },
   {
-    name: "Taiko Alethia",
+    name: "Taiko",
     infoURL: "https://taiko.xyz",
     chainId: 167000,
     nativeCurrency: {
@@ -2276,6 +2276,17 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+  },
+  {
+    name: "MAKI Chain",
+    infoURL: "https://makiai.app",
+    chainId: 8000008,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "MAKI",
   },
   {
     name: "Hokum",

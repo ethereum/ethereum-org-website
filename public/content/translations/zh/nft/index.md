@@ -4,13 +4,13 @@ metaTitle: "什么是非同质化代币？ | 优势和作用"
 description: "以太坊上的非同质化代币简介"
 lang: zh
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "通过全息图显示的以太币徽标。"
-summaryPoint1: "一种用以太坊资产表示任何独特事物的方法。"
-summaryPoint2: "非同质化代币正在前所未有地向内容创作人赋予更多权利。"
-summaryPoint3: "由以太坊区块链上的智能合约提供支持"
+summaryPoints:
+  - "一种用以太坊资产表示任何独特事物的方法。"
+  - "非同质化代币正在前所未有地向内容创作人赋予更多权利。"
+  - "由以太坊区块链上的智能合约提供支持"
 ---
 
 ## 什么是非同质化代币？ {#what-are-nfts}

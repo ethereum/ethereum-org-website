@@ -64,7 +64,7 @@ export default async function MeetupsJsonLD({
         "@id": url,
         name: t("page-events-meetups-hero-title", { year }),
         description: t("page-events-meta-description", { year }),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

@@ -7,9 +7,10 @@ emoji: ":gear:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent use cases on Ethereum
-summaryPoint1: DeFi automation, prediction markets, and agent-to-agent commerce
-summaryPoint2: Each use case maps to builder hub infrastructure
-summaryPoint3: Live agents trade, deploy tokens, and coordinate onchain
+summaryPoints:
+  - "DeFi automation, prediction markets, and agent-to-agent commerce"
+  - "Each use case maps to builder hub infrastructure"
+  - "Live agents trade, deploy tokens, and coordinate onchain"
 ---
 
 # AI agent use cases on Ethereum {#use-cases}

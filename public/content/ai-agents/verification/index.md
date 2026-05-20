@@ -7,9 +7,10 @@ emoji: ":shield:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Verifiable AI agents on Ethereum
-summaryPoint1: zkML proofs and TEE attestations remove operator trust
-summaryPoint2: Contracts verify correct model execution before releasing funds
-summaryPoint3: Permanent, tamper-resistant onchain audit trails of agent behavior
+summaryPoints:
+  - "zkML proofs and TEE attestations remove operator trust"
+  - "Contracts verify correct model execution before releasing funds"
+  - "Permanent, tamper-resistant onchain audit trails of agent behavior"
 ---
 
 # Verifiable AI agents {#verifiable-ai-agents}

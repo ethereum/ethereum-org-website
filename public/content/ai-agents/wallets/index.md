@@ -7,9 +7,10 @@ emoji: ":purse:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent wallets on Ethereum
-summaryPoint1: Smart accounts with session keys and spending limits
-summaryPoint2: ERC-4337 for new wallets, EIP-7702 for upgrades
-summaryPoint3: Key management patterns with human-in-the-loop escalation
+summaryPoints:
+  - "Smart accounts with session keys and spending limits"
+  - "ERC-4337 for new wallets, EIP-7702 for upgrades"
+  - "Key management patterns with human-in-the-loop escalation"
 ---
 
 # AI Agent wallets {#agent-wallets}
