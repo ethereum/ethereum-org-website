@@ -2219,6 +2219,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://ake.gg"><img src="https://avatars.githubusercontent.com/u/10195782?v=4?s=100" width="100px;" alt="Ake"/><br /><sub><b>Ake</b></sub></a><br /><a href="#tool-akegaviar" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/escottalexander"><img src="https://avatars.githubusercontent.com/u/22101475?v=4?s=100" width="100px;" alt="Elliott Alexander"/><br /><sub><b>Elliott Alexander</b></sub></a><br /><a href="#tutorial-escottalexander" title="Tutorials">✅</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Emgevorgyan"><img src="https://avatars.githubusercontent.com/u/26285829?v=4?s=100" width="100px;" alt="Emgevorgyan"/><br /><sub><b>Emgevorgyan</b></sub></a><br /><a href="#tool-Emgevorgyan" title="Tools">🔧</a></td>
+    </tr>
   </tbody>
 </table>
 
