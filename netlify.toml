@@ -16,6 +16,10 @@
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
+  # Bump Node's heap ceiling. Velite peaks ~4 GB during MDX precompile, and
+  # `next build` then statically renders ~6.5k content pages on top. Without
+  # an explicit ceiling Node OOMs before the prerender phase finishes.
+  NODE_OPTIONS="--max-old-space-size=8192"
 
 [[headers]]
   for = "/*"
