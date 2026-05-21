@@ -185,22 +185,49 @@ import PageHero from "@/components/PageHero"
 
 ## Banners / Callouts / Alerts
 
-### Inline message in content area: `Alert`
+### Inline notice AND top-of-page ribbon: `Alert`
 
 ```tsx
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 ```
 
-Variants: `info | error | success | warning | update`. Optional `size: "full"` for borderless full-width.
+One primitive covers both shapes via `variant`:
 
-### In-content / top-of-page callout: `Callout`
+| Use case | Variant |
+|---|---|
+| In-prose notice | `info` `error` `success` `warning` `update` |
+| Full-bleed top-of-page ribbon (white-on-primary) | `banner` |
 
-> **Migration in progress.** A unified server-renderable `Callout` component is being built that absorbs the current `Callout`/`CalloutSSR`/`CalloutBanner`/`CalloutBannerSSR`/`BannerNotification`/`DismissableBanner` set into a single primitive with variants. Tracked in a dedicated issue.
+```tsx
+// Top-of-page ribbon:
+<Alert variant="banner">{t("page-roadmap-banner-notification")}</Alert>
+
+// In-content warning:
+<Alert variant="warning">
+  <AlertContent>
+    <AlertDescription>{t("warning-text")}</AlertDescription>
+  </AlertContent>
+</Alert>
+```
+
+`variant="banner"` renders `<aside>` (tangential to main content); other variants render `<div>`. No ARIA role by default -- pass `role="status"` for polite dynamic announcements (e.g. filter result counts) or `role="alert"` for genuine assertive errors. See `references/components.md` for the full parts inventory.
+
+### Do NOT import `BannerNotification`
+
+```tsx
+// DON'T -- file deleted May 2026:
+import BannerNotification from "@/components/Banners/BannerNotification"
+```
+
+The `Banners/` subdirectory is gone. Use `<Alert variant="banner">` for top-of-page ribbons.
+
+### Card-shaped in-content callouts: `Callout` family
+
+> **Migration in progress.** A unified server-renderable `Callout` component is being built to absorb `Callout`/`CalloutSSR`/`CalloutBanner`/`CalloutBannerSSR`/`DismissableBanner` into a single primitive with variants. (`BannerNotification` was previously on this list but was absorbed into `Alert` as `variant="banner"` ahead of the broader consolidation.) Tracked in a dedicated issue.
 
 Until the unified `Callout` lands:
 - For **in-content** callouts with image + heading: use `CalloutBannerSSR` (NOT `CalloutBanner.tsx`). Server-renderable; uses `cva` with `large | medium | small` sizes.
 - For **big ornamental section dividers** with image overlap: use `CalloutSSR` (NOT `Callout.tsx`). Server-renderable.
-- For **top-of-page site-wide stripes**: use `BannerNotification` (`@/components/Banners/BannerNotification`). Will be absorbed as a `notification` variant on the unified `Callout`.
 - Avoid `Callout.tsx` and `CalloutBanner.tsx` (client-only thunks; superseded by their SSR siblings and ultimately by the unified component).
 
 ## Tabs / Tab Navigation
