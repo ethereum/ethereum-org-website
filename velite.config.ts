@@ -1,5 +1,5 @@
 import matter from "gray-matter"
-import { mkdir, writeFile } from "node:fs/promises"
+import { mkdir, rm, writeFile } from "node:fs/promises"
 import path from "node:path"
 import readingTime from "reading-time"
 import rehypeSlug from "rehype-slug"
@@ -303,5 +303,19 @@ export default defineConfig({
       path.join(OUT_DIR, "manifest.json"),
       JSON.stringify({ pages: pagesManifest, videos: videosManifest })
     )
+
+    // Drop the default bulk JSON outputs (~240 MB combined). Nothing imports
+    // them at runtime (only `import type` from `#velite` survives), and they
+    // double the Netlify function bundle size past the 250 MB limit. Also
+    // stub out `.velite/index.js` so its re-exports don't point at deleted
+    // files if anything ever resolves the module.
+    await Promise.all([
+      rm(path.join(OUT_DIR, "pages.json"), { force: true }),
+      rm(path.join(OUT_DIR, "videos.json"), { force: true }),
+      writeFile(
+        path.join(OUT_DIR, "index.js"),
+        "// Bulk arrays intentionally removed. Use src/lib/md/getCompiledPage helpers.\nexport const pages = []\nexport const videos = []\n"
+      ),
+    ])
   },
 })
