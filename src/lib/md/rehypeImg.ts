@@ -62,7 +62,13 @@ const getImageSize = (src: string, dir: string) => {
   if (dir && shouldJoin) {
     src = path.join(dir, src)
   }
-  return sizeOf(src)
+  try {
+    return sizeOf(src)
+  } catch {
+    // Image missing on disk (e.g., translated content referencing an English
+    // image that was renamed). Skip dimensions + blur — page still compiles.
+    return undefined
+  }
 }
 
 /**

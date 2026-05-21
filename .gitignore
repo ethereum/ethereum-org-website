@@ -16,6 +16,10 @@ test-results/
 /.next/
 /out/
 
+# velite
+/.velite/
+/public/static/
+
 # production
 /build
 

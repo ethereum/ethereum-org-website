@@ -3,11 +3,13 @@ import { join } from "path"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
-import { getPostSlugs } from "../utils/md"
+import {
+  getEnglishPageSlugs,
+  getEnglishVideoSlugs,
+} from "../md/getCompiledPage"
 import { getStaticPagePaths } from "../utils/staticPages"
 import { getPrimaryNamespaceForPath } from "../utils/translations"
 import { addSlashes } from "../utils/url"
-import { getVideoSlugs } from "../utils/videos"
 
 import { areNamespacesTranslated } from "./translationStatus"
 
@@ -136,12 +138,13 @@ export async function getAllPagesWithTranslations(): Promise<
 > {
   const pages: PageWithTranslations[] = []
 
-  const mdSlugs = await getPostSlugs("/")
+  const mdSlugs = getEnglishPageSlugs()
 
   // Video detail pages live under public/content/videos/ but are excluded from
-  // getPostSlugs() because they have a dedicated [slug] route. Surface them
-  // here so they flow through the same content-driven translation resolution.
-  const videoSlugs = (await getVideoSlugs()).map((slug) => `videos/${slug}`)
+  // the page collection because they have a dedicated [slug] route. Surface
+  // them here so they flow through the same content-driven translation
+  // resolution.
+  const videoSlugs = getEnglishVideoSlugs().map((slug) => `videos/${slug}`)
 
   const intlPaths = [
     ...getStaticPagePaths(),

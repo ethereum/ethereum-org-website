@@ -1,78 +1,16 @@
 import fsp from "fs/promises"
-import { extname, join } from "path"
+import { join } from "path"
 
 import matter from "gray-matter"
 import readingTime from "reading-time"
 
-import type { Frontmatter, ITutorial, Skill, SlugPageParams } from "@/lib/types"
+import type { Frontmatter, ITutorial, Skill } from "@/lib/types"
 
 import { dateToString } from "@/lib/utils/date"
 
 import internalTutorialSlugs from "@/data/internalTutorials.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import { toPosixPath } from "./relativePath"
-
-function getContentRoot() {
-  return join(process.cwd(), "public/content")
-}
-
-export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
-  const contentRoot = getContentRoot()
-  const _dir = join(contentRoot, dir)
-
-  try {
-    // Get an array of all files and directories in the passed directory using `fs.readdirSync`
-    const dirContents = await fsp.readdir(_dir)
-
-    const files: string[] = []
-
-    // Create the full path of the file/directory by concatenating the passed directory and file/directory name
-    for (const fileOrDir of dirContents) {
-      // file = "about", "bridges".... "translations" (<-- skip that one)...
-      const path = join(_dir, fileOrDir)
-
-      const stats = await fsp.stat(path)
-      if (stats.isDirectory()) {
-        // Skip nested translations directory
-        if (fileOrDir === "translations") continue
-        // Skip videos directory — video pages have their own dedicated route
-        if (fileOrDir === "videos") continue
-        // If it is a directory, recursively call the `getPostSlugs` function with the
-        // directory path and the files array
-        const nestedDir = join(dir, fileOrDir)
-
-        const nestedFiles = await getPostSlugs(nestedDir, filterRegex)
-        files.push(...nestedFiles)
-        continue
-      }
-
-      if (filterRegex?.test(path)) continue
-
-      // If the current file is not a markdown file, skip it
-      if (extname(path) !== ".md") continue
-
-      const sanitizedPath = toPosixPath(
-        path.replace(contentRoot, "").replace("/index.md", "")
-      )
-
-      files.push(sanitizedPath)
-    }
-
-    return files
-  } catch (error) {
-    // If directory doesn't exist (e.g., in Netlify serverless environment), return empty array
-    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
-      console.warn(
-        `Content directory ${_dir} not found, returning empty slug list`
-      )
-      return []
-    }
-    // Re-throw other errors
-    throw error
-  }
-}
 
 export const getTutorialsData = async (
   locale: string
@@ -140,12 +78,6 @@ export const getTutorialsData = async (
   // Filter out null results (missing tutorials)
   return results.filter((tutorial) => tutorial !== null) as ITutorial[]
 }
-
-export const checkPathValidity = (
-  validPaths: SlugPageParams[],
-  { slug: slugArray }: SlugPageParams
-): boolean =>
-  validPaths.some((path) => path.slug.join("/") === slugArray.join("/"))
 
 /**
  * Strips markdown syntax from text, leaving plain text.

@@ -32,6 +32,9 @@
       ],
       "@/storybook/*": [
         "./.storybook/*"
+      ],
+      "#velite": [
+        "./.velite"
       ]
     },
     "plugins": [
@@ -46,7 +49,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    ".velite/index.d.ts"
   ],
   "exclude": [
     "node_modules",

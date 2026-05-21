@@ -1,7 +1,5 @@
 import { getTranslations } from "next-intl/server"
 
-import type { VideoData } from "@/lib/types"
-
 import {
   Card,
   CardContent,
@@ -12,7 +10,8 @@ import { LinkWithArrow } from "@/components/ui/Link"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
-import { getVideoData } from "@/lib/utils/videos"
+
+import { getCompiledVideo } from "@/lib/md/getCompiledPage"
 
 interface VideoWatchProps {
   slug: string
@@ -22,21 +21,18 @@ interface VideoWatchProps {
 
 /**
  * Server Component -- inline video embed for MDX content pages.
- * Fetches title + description from index.md frontmatter (i18n-ready).
+ * Pulls title + description from the Velite-compiled video entry.
  *
  * Registered in [locale]/[...slug]/page.tsx baseComponents (server-only context).
  * NOT imported from MdComponents/index.tsx to avoid polluting the client-safe barrel.
  */
 const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
-  let data: VideoData | undefined
-  try {
-    data = await getVideoData(slug)
-  } catch {
-    return null
-  }
+  const video = getCompiledVideo("en", slug)
+  if (!video) return null
 
-  const { frontmatter, content } = data
-  const hasTranscript = content.trim().length > 0
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const rawBody: string = (video as any).rawBody ?? ""
+  const hasTranscript = rawBody.trim().length > 0
 
   const t = await getTranslations("page-videos")
 
@@ -48,15 +44,15 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
       )}
     >
       <YouTube
-        id={frontmatter.youtubeId}
-        title={frontmatter.title}
+        id={video.youtubeId ?? ""}
+        title={video.title ?? ""}
         className="m-0 overflow-hidden rounded-md"
         start={startTime}
       />
       <CardContent className="p-0">
-        <CardTitle variant="semibold">{frontmatter.title}</CardTitle>
+        <CardTitle variant="semibold">{video.title}</CardTitle>
         <CardParagraph variant="light">
-          {frontmatter.description.split(/(?<=\.)\s/)[0]}
+          {(video.description ?? "").split(/(?<=\.)\s/)[0]}
         </CardParagraph>
         {hasTranscript && (
           <LinkWithArrow href={`/videos/${slug}/`}>
