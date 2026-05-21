@@ -4,6 +4,7 @@ import { AvatarBase, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
   Card,
   CardContent,
+  CardFooter,
   CardHeader,
   CardParagraph,
   CardTitle,
@@ -61,18 +62,20 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         </AvatarBase>
       </CardHeader>
       <CardContent spacing="sm">
-        <div>
-          <CardTitle variant="semibold">{name}</CardTitle>
-          <CardParagraph>{role}</CardParagraph>
-        </div>
+        <CardTitle variant="semibold" spacing="none">
+          {name}
+        </CardTitle>
+        <CardParagraph>{role}</CardParagraph>
         <CardParagraph size="sm" variant="light">
           From {formatTorchDate(from)}
           {to !== undefined ? ` to ${formatTorchDate(to)}` : " to present"}
         </CardParagraph>
+      </CardContent>
+      <CardFooter>
         <BaseLink href={getTxEtherscanUrl(transactionHash)} className="text-sm">
           View on Etherscan
         </BaseLink>
-      </CardContent>
+      </CardFooter>
     </Card>
   )
 }

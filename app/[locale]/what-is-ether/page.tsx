@@ -7,7 +7,6 @@ import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import {
   HighlightCard,
-  HighlightCardContent,
   HighlightStack,
   IconBox,
 } from "@/components/HighlightCard"
@@ -16,7 +15,7 @@ import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
-import { CardTitle } from "@/components/ui/card"
+import { CardParagraph, CardTitle } from "@/components/ui/card"
 import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
@@ -165,45 +164,39 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   <IconBox>
                     <User className="text-accent-a" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <div className="space-y-2!">
+                    <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-6")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t("page-what-is-ether-what-is-ether-description-7")}
-                      </p>
-                    </HighlightCardContent>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ether-what-is-ether-description-7")}
+                    </CardParagraph>
                   </div>
                 </HighlightCard>
                 <HighlightCard>
                   <IconBox>
                     <SquareCode className="text-accent-b" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <div className="space-y-2!">
+                    <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-8")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t("page-what-is-ether-what-is-ether-description-9")}
-                      </p>
-                    </HighlightCardContent>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ether-what-is-ether-description-9")}
+                    </CardParagraph>
                   </div>
                 </HighlightCard>
                 <HighlightCard>
                   <IconBox>
                     <Landmark className="text-accent-c" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <div className="space-y-2!">
+                    <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-10")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t("page-what-is-ether-what-is-ether-description-11")}
-                      </p>
-                    </HighlightCardContent>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ether-what-is-ether-description-11")}
+                    </CardParagraph>
                   </div>
                 </HighlightCard>
               </HighlightStack>

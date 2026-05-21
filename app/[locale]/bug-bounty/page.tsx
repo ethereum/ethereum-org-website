@@ -405,7 +405,9 @@ export default async function Page(props: { params: Promise<Params> }) {
                   </InlineLink>
                 </div>
 
-                <Text>{t("page-upgrades-bug-bounty-annotations")}</Text>
+                <CardParagraph variant="light">
+                  {t("page-upgrades-bug-bounty-annotations")}
+                </CardParagraph>
                 <UnorderedList>
                   <ListItem>
                     <InlineLink href="https://benjaminion.xyz/eth2-annotated-spec/">
@@ -439,7 +441,9 @@ export default async function Page(props: { params: Promise<Params> }) {
                 background="nested"
                 className="flex-[1_1_464px]"
               >
-                <Text>{t("page-upgrades-bug-bounty-client-bugs-desc-2")}</Text>
+                <CardParagraph variant="light">
+                  {t("page-upgrades-bug-bounty-client-bugs-desc-2")}
+                </CardParagraph>
                 <H4>{t("page-upgrades-bug-bounty-types")}</H4>
                 <UnorderedList>
                   <ListItem>
@@ -464,7 +468,9 @@ export default async function Page(props: { params: Promise<Params> }) {
                 background="nested"
                 className="flex-[1_1_464px]"
               >
-                <Text>{t("page-upgrades-bug-bounty-misc-bugs-desc-2")}</Text>
+                <CardParagraph variant="light">
+                  {t("page-upgrades-bug-bounty-misc-bugs-desc-2")}
+                </CardParagraph>
                 <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                 <CardList items={languages} />
               </MarkdownCard>
@@ -592,7 +598,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 <CardParagraph variant="light">
                   <em>{t("page-upgrades-bug-bounty-hunting-desc")}</em>
                 </CardParagraph>
-                <OrderedList className="space-y-//3 ms-0">
+                <OrderedList className="m-0">
                   {(
                     [
                       "page-upgrades-bug-bounty-hunting-li-1",

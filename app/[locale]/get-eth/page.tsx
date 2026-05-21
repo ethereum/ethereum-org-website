@@ -60,13 +60,13 @@ type CardProps = {
 }
 
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="border">
-    <CardHeader className="space-y-4">
+  <Card>
+    <CardHeader>
       <CardEmoji text={emoji} />
-      <CardTitle>{title}</CardTitle>
     </CardHeader>
     <CardContent>
-      <CardParagraph>{description}</CardParagraph>
+      <CardTitle>{title}</CardTitle>
+      <CardParagraph variant="light">{description}</CardParagraph>
     </CardContent>
     <CardFooter>{children}</CardFooter>
   </Card>

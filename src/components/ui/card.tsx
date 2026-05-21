@@ -10,7 +10,8 @@ import { BaseLink, LinkProps } from "./Link"
 
 const cardVariants = cva(
   cn(
-    "rounded-(--card-radius) text-body no-underline hover:text-body",
+    "[--banner-radius:--spacing(1)] rounded-[calc(var(--card-pad)+var(--banner-radius))]",
+    "text-body no-underline hover:text-body",
     "transition-all duration-300 hover:transition-all hover:duration-300"
   ),
   {
@@ -18,7 +19,7 @@ const cardVariants = cva(
       background: {
         base: "bg-background-highlight",
         nested: "bg-background",
-        none: "",
+        none: "[--banner-radius:--spacing(4)]",
         // TODO: Confirm gradient
         gradient:
           "bg-card-gradient dark:bg-linear-to-br dark:from-transparent dark:to-primary/10",
@@ -27,12 +28,11 @@ const cardVariants = cva(
         "radial-a": "bg-radial-a",
       },
       spacing: {
-        // --card-radius should be greater than --card-pad
-        lg: "[--card-pad:--spacing(6)] md:[--card-pad:--spacing(8)] [--content-space:--spacing(8)] [--card-radius:--spacing(9)] md:[--card-radius:--spacing(11)]", // TODO: Confirm rounded, consider: 10 md:12?
-        base: "[--card-pad:--spacing(4)] md:[--card-pad:--spacing(6)] [--content-space:1lh] [--card-radius:--spacing(7)] md:[--card-radius:--spacing(9)]", // TODO: Confirm rounded, consider: 8 md:10?
-        md: "[--card-pad:--spacing(4)] [--content-space:--spacing(4)] [--card-radius:--spacing(6)]", // TODO: Confirm rounded, consider: 8?
-        sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)] [--card-radius:--spacing(6)]",
-        xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)] [--card-radius:--spacing(4)]",
+        lg: "[--card-pad:--spacing(6)] md:[--card-pad:--spacing(8)] [--content-space:--spacing(8)] [--banner-radius:--spacing(1.5)]",
+        base: "[--card-pad:--spacing(4)] md:[--card-pad:--spacing(6)] [--content-space:1lh]",
+        md: "[--card-pad:--spacing(4)] [--content-space:--spacing(4)]",
+        sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
+        xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
       hoverEffect: {
         lift: "shadow-md hover:shadow-lg scale-100 hover:scale-[1.0075]",
@@ -117,7 +117,7 @@ const childSpacingVariants = cva("", {
     spacing: {
       base: "data-[label=card-header]:pb-0 data-[label=card-footer]:pt-0",
       lg: "[--content-space:--spacing(4)] md:[--content-space:--spacing(6)]",
-      md: "[--content-space:--spacing(4)] md://[--content-space:--spacing(4)]",
+      md: "[--content-space:--spacing(4)]",
       sm: "[--content-space:--spacing(2.5)]",
       xs: "[--content-space:--spacing(1)]",
       inherit: "",
@@ -131,7 +131,7 @@ const childSpacingVariants = cva("", {
 const headerVariants = cva("", {
   variants: {
     variant: {
-      bar: "flex items-center gap-4 border-b",
+      bar: "[--card-pad:--spacing(5)] flex items-center gap-4 border-b",
     },
   },
 })
@@ -187,18 +187,28 @@ const buttonVariants = cva("", {
   },
 })
 
+const footerVariants = cva("", {
+  variants: {
+    rounded: {
+      fit: "*:rounded-(--banner-radius)",
+    },
+  },
+})
+
 const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> &
     VariantProps<typeof childSpacingVariants> &
-    VariantProps<typeof buttonVariants>
->(({ className, spacing, buttons, ...props }, ref) => (
+    VariantProps<typeof buttonVariants> &
+    VariantProps<typeof footerVariants>
+>(({ className, spacing, buttons, rounded, ...props }, ref) => (
   <div
     ref={ref}
     data-label="card-footer"
     className={cn(
       childSpacingVariants({ spacing }),
       buttonVariants({ buttons }),
+      footerVariants({ rounded }),
       "p-(--card-pad)",
       className
     )}
@@ -224,7 +234,7 @@ CardEmoji.displayName = "CardEmoji"
 
 const cardBannerVariants = cva(
   cn(
-    "overflow-hidden rounded-[max(0px,calc(var(--card-radius)-var(--card-pad)))]",
+    "overflow-hidden rounded-(--banner-radius)",
     "[&_img]:size-full [&_img]:duration-300"
   ),
   {
@@ -308,7 +318,6 @@ const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
         ref={ref}
         data-label="card-banner"
         className={cn(
-          "rounded-[max(0px,calc(var(--card-radius)-var(--card-pad)))]",
           cardBannerVariants({ background, size, fit, zoom }),
           className
         )}
@@ -330,9 +339,18 @@ const titleVariants = cva(
         bold: "text-2xl font-bold",
         black: "text-3xl font-black",
       },
+      spacing: {
+        half: "[&:has(+[data-label=card-paragraph])]:mb-[calc(var(--content-space)_/_2)]",
+        quarter:
+          "[&:has(+[data-label=card-paragraph])]:mb-[calc(var(--content-space)_/_4)]",
+        none: "[&:has(+[data-label=card-paragraph])]:mb-0",
+        inherit: "",
+      },
     },
+
     defaultVariants: {
       variant: "bold",
+      spacing: "half",
     },
   }
 )
@@ -343,13 +361,13 @@ const CardTitle = React.forwardRef<
     VariantProps<typeof titleVariants> & {
       asChild?: boolean
     }
->(({ asChild, className, variant, ...props }, ref) => {
+>(({ asChild, className, variant, spacing, ...props }, ref) => {
   const Comp = asChild ? Slot : "h3"
   return (
     <Comp
       ref={ref}
       data-label="card-title"
-      className={cn(titleVariants({ variant }), className)}
+      className={cn(titleVariants({ variant, spacing }), className)}
       {...props}
     />
   )

@@ -16,7 +16,6 @@ import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import {
   HighlightCard,
-  HighlightCardContent,
   HighlightStack,
   IconBox,
 } from "@/components/HighlightCard"
@@ -217,60 +216,54 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <IconBox>
                     <Shield className="text-accent-a" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <CardContent spacing="md">
+                    <CardTitle>
                       {t("page-what-is-ethereum-network-censorship-title")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t("page-what-is-ethereum-network-censorship-desc-1")}
-                      </p>
-                      <p>
-                        {t("page-what-is-ethereum-network-censorship-desc-2")}
-                      </p>
-                    </HighlightCardContent>
-                  </div>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-network-censorship-desc-1")}
+                    </CardParagraph>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-network-censorship-desc-2")}
+                    </CardParagraph>
+                  </CardContent>
                 </HighlightCard>
                 <HighlightCard>
                   <IconBox>
                     <LockKeyhole className="text-accent-b" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <CardContent spacing="md">
+                    <CardTitle>
                       {t("page-what-is-ethereum-network-security-title")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t("page-what-is-ethereum-network-security-desc-1")}
-                      </p>
-                      <p>
-                        {t("page-what-is-ethereum-network-security-desc-2")}
-                      </p>
-                    </HighlightCardContent>
-                  </div>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-network-security-desc-1")}
+                    </CardParagraph>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-network-security-desc-2")}
+                    </CardParagraph>
+                  </CardContent>
                 </HighlightCard>
                 <HighlightCard>
                   <IconBox>
                     <Castle className="text-accent-c" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <CardContent spacing="md">
+                    <CardTitle>
                       {t("page-what-is-ethereum-network-reliability-title")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t.rich(
-                          "page-what-is-ethereum-network-reliability-desc-1",
-                          {
-                            a: (chunks) => <Link href="#">{chunks}</Link>,
-                          }
-                        )}
-                      </p>
-                      <p>
-                        {t("page-what-is-ethereum-network-reliability-desc-2")}
-                      </p>
-                    </HighlightCardContent>
-                  </div>
+                    <CardParagraph variant="light">
+                      {t.rich(
+                        "page-what-is-ethereum-network-reliability-desc-1",
+                        {
+                          a: (chunks) => <Link href="#">{chunks}</Link>,
+                        }
+                      )}
+                    </CardParagraph>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-network-reliability-desc-2")}
+                    </CardParagraph>
+                  </CardContent>
                 </HighlightCard>
               </HighlightStack>
 
@@ -485,138 +478,135 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <IconBox>
                     <User className="text-accent-a" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <CardContent spacing="md">
+                    <CardTitle>
                       {t("page-what-is-ethereum-what-consumers-title")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>{t("page-what-is-ethereum-what-consumers-desc-1")}</p>
-                      <p>{t("page-what-is-ethereum-what-consumers-desc-2")}</p>
-                      <UnorderedList className="[&>li]:mb-0.5">
-                        <ListItem>
-                          {t.rich(
-                            "page-what-is-ethereum-what-consumers-benefit-1",
-                            {
-                              strong: Strong,
-                            }
-                          )}
-                        </ListItem>
-                        <ListItem>
-                          {t.rich(
-                            "page-what-is-ethereum-what-consumers-benefit-2",
-                            {
-                              strong: Strong,
-                            }
-                          )}
-                        </ListItem>
-                        <ListItem>
-                          {t.rich(
-                            "page-what-is-ethereum-what-consumers-benefit-3",
-                            {
-                              strong: Strong,
-                            }
-                          )}
-                        </ListItem>
-                        <ListItem>
-                          {t("page-what-is-ethereum-what-consumers-benefit-4")}
-                        </ListItem>
-                      </UnorderedList>
-                    </HighlightCardContent>
-                  </div>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-what-consumers-desc-1")}
+                    </CardParagraph>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-what-consumers-desc-2")}
+                    </CardParagraph>
+                    <UnorderedList className="space-y-0.5! text-body-medium">
+                      <ListItem>
+                        {t.rich(
+                          "page-what-is-ethereum-what-consumers-benefit-1",
+                          {
+                            strong: Strong,
+                          }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-what-is-ethereum-what-consumers-benefit-2",
+                          {
+                            strong: Strong,
+                          }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-what-is-ethereum-what-consumers-benefit-3",
+                          {
+                            strong: Strong,
+                          }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t("page-what-is-ethereum-what-consumers-benefit-4")}
+                      </ListItem>
+                    </UnorderedList>
+                  </CardContent>
                 </HighlightCard>
                 <HighlightCard>
                   <IconBox>
                     <SquareCode className="text-accent-b" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <CardContent spacing="md">
+                    <CardTitle>
                       {t("page-what-is-ethereum-what-businesses-title")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <UnorderedList className="[&>li]:mb-0.5">
-                        <ListItem>
-                          {t("page-what-is-ethereum-what-businesses-benefit-1")}
-                        </ListItem>
-                        <ListItem>
-                          {t.rich(
-                            "page-what-is-ethereum-what-businesses-benefit-2",
-                            {
-                              strong: Strong,
-                            }
-                          )}
-                        </ListItem>
-                        <ListItem>
-                          {t("page-what-is-ethereum-what-businesses-benefit-3")}
-                        </ListItem>
-                      </UnorderedList>
-                      <p>
+                    <UnorderedList className="space-y-0.5! text-body-medium">
+                      <ListItem>
+                        {t("page-what-is-ethereum-what-businesses-benefit-1")}
+                      </ListItem>
+                      <ListItem>
                         {t.rich(
-                          "page-what-is-ethereum-what-businesses-example",
+                          "page-what-is-ethereum-what-businesses-benefit-2",
                           {
-                            a: (chunks) => (
-                              <Link href="https://newsroom.paypal-corp.com/2023-08-07-PayPal-Launches-U-S-Dollar-Stablecoin">
-                                {chunks}
-                              </Link>
-                            ),
+                            strong: Strong,
                           }
                         )}
-                      </p>
-                    </HighlightCardContent>
-                  </div>
+                      </ListItem>
+                      <ListItem>
+                        {t("page-what-is-ethereum-what-businesses-benefit-3")}
+                      </ListItem>
+                    </UnorderedList>
+                    <CardParagraph variant="light">
+                      {t.rich("page-what-is-ethereum-what-businesses-example", {
+                        a: (chunks) => (
+                          <Link href="https://newsroom.paypal-corp.com/2023-08-07-PayPal-Launches-U-S-Dollar-Stablecoin">
+                            {chunks}
+                          </Link>
+                        ),
+                      })}
+                    </CardParagraph>
+                  </CardContent>
                 </HighlightCard>
                 <HighlightCard>
                   <IconBox>
                     <Landmark className="text-accent-c" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <CardContent spacing="md">
+                    <CardTitle>
                       {t("page-what-is-ethereum-what-governments-title")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>{t("page-what-is-ethereum-what-governments-intro")}</p>
-                      <UnorderedList className="[&>li]:mb-0.5">
-                        <ListItem>
-                          {t.rich(
-                            "page-what-is-ethereum-what-governments-benefit-1",
-                            {
-                              strong: Strong,
-                            }
-                          )}
-                        </ListItem>
-                        <ListItem>
-                          {t.rich(
-                            "page-what-is-ethereum-what-governments-benefit-2",
-                            {
-                              strong: Strong,
-                            }
-                          )}
-                        </ListItem>
-                        <ListItem>
-                          {t.rich(
-                            "page-what-is-ethereum-what-governments-benefit-3",
-                            {
-                              strong: Strong,
-                            }
-                          )}
-                        </ListItem>
-                      </UnorderedList>
-                      <p>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-what-governments-intro")}
+                    </CardParagraph>
+                    <UnorderedList className="space-y-0.5! text-body-medium">
+                      <ListItem>
                         {t.rich(
-                          "page-what-is-ethereum-what-governments-example-1",
+                          "page-what-is-ethereum-what-governments-benefit-1",
                           {
-                            a: (chunks) => (
-                              <Link href="https://www.weforum.org/stories/2023/03/the-role-cryptocurrency-crypto-huge-in-ukraine-war-russia/">
-                                {chunks}
-                              </Link>
-                            ),
+                            strong: Strong,
                           }
                         )}
-                      </p>
-                      <p>
-                        {t("page-what-is-ethereum-what-governments-example-2")}
-                      </p>
-                    </HighlightCardContent>
-                  </div>
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-what-is-ethereum-what-governments-benefit-2",
+                          {
+                            strong: Strong,
+                          }
+                        )}
+                      </ListItem>
+                      <ListItem>
+                        {t.rich(
+                          "page-what-is-ethereum-what-governments-benefit-3",
+                          {
+                            strong: Strong,
+                          }
+                        )}
+                      </ListItem>
+                    </UnorderedList>
+                    <CardParagraph variant="light">
+                      {t.rich(
+                        "page-what-is-ethereum-what-governments-example-1",
+                        {
+                          a: (chunks) => (
+                            <Link href="https://www.weforum.org/stories/2023/03/the-role-cryptocurrency-crypto-huge-in-ukraine-war-russia/">
+                              {chunks}
+                            </Link>
+                          ),
+                        }
+                      )}
+                    </CardParagraph>
+                    <CardParagraph variant="light">
+                      {t("page-what-is-ethereum-what-governments-example-2")}
+                    </CardParagraph>
+                  </CardContent>
                 </HighlightCard>
               </HighlightStack>
 
@@ -672,7 +662,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     })}
                   </CardParagraph>
 
-                  <UnorderedList className="*:[li]:mb-0">
+                  <UnorderedList className="space-y-0!">
                     <ListItem>
                       {t("page-what-is-ethereum-start-individuals-step-1")}
                     </ListItem>

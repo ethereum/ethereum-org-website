@@ -56,7 +56,7 @@ const UseCaseCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card spacing="lg">
+  <Card>
     <CardHeader>
       <CardBanner background="none" fit="contain">
         <Image
@@ -66,9 +66,8 @@ const UseCaseCard = ({
         />
       </CardBanner>
     </CardHeader>
-    {/* // TODO: Decide on design system spacing */}
-    <CardContent spacing="sm">
-      <CardTitle variant="bold">{title}</CardTitle>
+    <CardContent>
+      <CardTitle>{title}</CardTitle>
       <CardParagraph variant="light">{description}</CardParagraph>
     </CardContent>
     <CardFooter>

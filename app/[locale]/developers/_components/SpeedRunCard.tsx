@@ -38,7 +38,7 @@ const SpeedRunCard = ({
       sizes="(max-width: 768px) 100vw, 50vw"
     />
 
-    <CardContent spacing="lg">
+    <CardContent>
       <CardTitle variant="black">{title}</CardTitle>
       <CardParagraph>{description}</CardParagraph>
       <ButtonLink

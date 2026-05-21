@@ -55,7 +55,7 @@ const NFTMintCard = async () => {
         </div>
       </CardHeader>
 
-      <CardContent spacing="lg">
+      <CardContent>
         <CardTitle>{t("page-10-year-mint-card-title")}</CardTitle>
 
         <CardParagraph variant="light">
@@ -66,7 +66,7 @@ const NFTMintCard = async () => {
       <CardFooter>
         <Alert
           variant="update"
-          className="rounded-[max(0px,calc(var(--card-radius)-var(--card-pad)))] border-none"
+          className="rounded-(--banner-radius) border-none"
         >
           <AlertContent>
             <AlertTitle>{t("page-10-year-mint-card-ended-title")}</AlertTitle>

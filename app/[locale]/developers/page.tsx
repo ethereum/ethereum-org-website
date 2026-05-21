@@ -283,25 +283,23 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <div>
-                  <CardTitle variant="black">
-                    {t("page-developers-jump-right-in-title")}
-                  </CardTitle>
-                  <CardParagraph size="sm" variant="light">
-                    {t("page-developers-quickstart-scaffold-subtext")}{" "}
-                    <Link
-                      href="https://docs.scaffoldeth.io/"
-                      customEventOptions={{
-                        eventCategory: "mid_boxes",
-                        eventAction: "click",
-                        eventName: "scaffold-docs",
-                      }}
-                      rel="noopener"
-                    >
-                      {t("page-developers-quickstart-scaffold-docs")}
-                    </Link>
-                  </CardParagraph>
-                </div>
+                <CardTitle variant="black">
+                  {t("page-developers-jump-right-in-title")}
+                </CardTitle>
+                <CardParagraph size="sm" variant="light">
+                  {t("page-developers-quickstart-scaffold-subtext")}{" "}
+                  <Link
+                    href="https://docs.scaffoldeth.io/"
+                    customEventOptions={{
+                      eventCategory: "mid_boxes",
+                      eventAction: "click",
+                      eventName: "scaffold-docs",
+                    }}
+                    rel="noopener"
+                  >
+                    {t("page-developers-quickstart-scaffold-docs")}
+                  </Link>
+                </CardParagraph>
 
                 <div className="flex items-center rounded-lg border bg-background px-3 py-1">
                   <span className="flex-1 font-mono text-sm">
@@ -345,14 +343,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <div>
-                  <CardTitle variant="black">
-                    {t("page-developers-get-help-title")}
-                  </CardTitle>
-                  <CardParagraph size="sm" variant="light">
-                    {t("page-developers-get-help-desc")}
-                  </CardParagraph>
-                </div>
+                <CardTitle variant="black">
+                  {t("page-developers-get-help-title")}
+                </CardTitle>
+                <CardParagraph size="sm" variant="light">
+                  {t("page-developers-get-help-desc")}
+                </CardParagraph>
               </CardContent>
               <CardFooter>
                 <ButtonLink
@@ -382,14 +378,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <div>
-                  <CardTitle variant="black">
-                    {t("page-developers-resources-title")}
-                  </CardTitle>
-                  <CardParagraph size="sm" variant="light">
-                    {t("page-developers-resources-desc")}
-                  </CardParagraph>
-                </div>
+                <CardTitle variant="black">
+                  {t("page-developers-resources-title")}
+                </CardTitle>
+                <CardParagraph size="sm" variant="light">
+                  {t("page-developers-resources-desc")}
+                </CardParagraph>
               </CardContent>
               <CardFooter>
                 <ButtonLink
@@ -420,14 +414,12 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <div>
-                  <CardTitle variant="black">
-                    {t("page-developers-tutorials-title")}
-                  </CardTitle>
-                  <CardParagraph size="sm" variant="light">
-                    {t("page-developers-tutorials-desc")}
-                  </CardParagraph>
-                </div>
+                <CardTitle variant="black">
+                  {t("page-developers-tutorials-title")}
+                </CardTitle>
+                <CardParagraph size="sm" variant="light">
+                  {t("page-developers-tutorials-desc")}
+                </CardParagraph>
               </CardContent>
               <CardFooter>
                 <ButtonLink
@@ -598,15 +590,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-developers-hackathons-desc")}</p>
 
             <EdgeScrollContainer>
-              {/* // TODO: REMOVE MOCK DUPLICATES */}
-              {[
-                ...hackathons,
-                ...hackathons,
-                ...hackathons,
-                ...hackathons,
-                ...hackathons,
-                ...hackathons,
-              ].map((event, idx) => {
+              {hackathons.map((event) => {
                 const {
                   title,
                   link,
@@ -618,8 +602,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
                 return (
                   <EdgeScrollItem
-                    key={idx}
-                    // key={event.id}
+                    key={event.id}
                     asChild
                     className={cn(
                       "ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",

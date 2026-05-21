@@ -24,10 +24,16 @@ const MarkdownCard = ({
   ...props
 }: MarkdownCardProps) => (
   <Card {...props}>
-    {emoji && <CardHeader>{emoji && <CardEmoji text={emoji} />}</CardHeader>}
+    {emoji && (
+      <CardHeader>
+        <CardEmoji text={emoji} />
+      </CardHeader>
+    )}
     <CardContent>
       {title && <CardTitle>{title}</CardTitle>}
-      {description && <CardParagraph>{description}</CardParagraph>}
+      {description && (
+        <CardParagraph variant="light">{description}</CardParagraph>
+      )}
       {children}
     </CardContent>
   </Card>

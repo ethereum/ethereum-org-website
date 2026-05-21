@@ -266,6 +266,7 @@ const VideoGalleryFilter = ({
               key={video.slug}
               href={`/videos/${video.slug}/`}
               background="none"
+              spacing="sm"
             >
               <CardBanner className="aspect-video h-auto">
                 <Image
@@ -277,7 +278,7 @@ const VideoGalleryFilter = ({
                   loading="lazy"
                 />
               </CardBanner>
-              <CardContent spacing="sm">
+              <CardContent>
                 <CardTitle variant="semibold">{video.title}</CardTitle>
                 <CardParagraph
                   variant="light"
@@ -291,7 +292,7 @@ const VideoGalleryFilter = ({
                   size="sm"
                   className="inline-flex items-center gap-1"
                 >
-                  <Timer className="mb-px size-[1em]" />
+                  <Timer className="-ms-px mb-0.75 size-[1em]" />
                   {video.duration}
                 </CardParagraph>
               </CardContent>

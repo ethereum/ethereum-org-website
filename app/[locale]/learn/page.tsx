@@ -72,7 +72,7 @@ const LearnCard = ({
   description: string
   ctaLabel: string
 }) => (
-  <Card spacing="lg">
+  <Card>
     <CardHeader>
       <CardBanner background="none" fit="contain">
         <Image
@@ -82,8 +82,8 @@ const LearnCard = ({
         />
       </CardBanner>
     </CardHeader>
-    <CardContent spacing="sm">
-      <CardTitle variant="bold">{title}</CardTitle>
+    <CardContent>
+      <CardTitle>{title}</CardTitle>
       <CardParagraph variant="light">{description}</CardParagraph>
     </CardContent>
     <CardFooter>
