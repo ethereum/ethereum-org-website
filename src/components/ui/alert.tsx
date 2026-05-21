@@ -35,6 +35,12 @@ const alertVariants = cva(
   }
 )
 
+/**
+ * Visual notice component. Renders an `aside` for `variant="banner"`,
+ * otherwise a `div`. No ARIA role by default -- pass `role="status"` for
+ * polite dynamic announcements (e.g. filter result counts) or
+ * `role="alert"` for assertive runtime errors.
+ */
 const Alert = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
@@ -43,7 +49,6 @@ const Alert = React.forwardRef<
   return (
     <Comp
       ref={ref}
-      role="alert"
       className={cn(alertVariants({ variant }), className)}
       {...props}
     />

@@ -57,7 +57,11 @@ export default function FilterEvents({ events }: FilterProps) {
 
     if (!filteredEvents.length)
       return (
-        <Alert variant="warning" className="mx-auto max-w-xl justify-center">
+        <Alert
+          variant="warning"
+          role="status"
+          className="mx-auto max-w-xl justify-center"
+        >
           <Info className="size-6 !text-current" />
           <AlertContent className="flex-none">
             {t("page-events-search-no-results")}
