@@ -4,7 +4,6 @@ import type { HTMLAttributes } from "react"
 import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import CallToContribute from "@/components/CallToContribute"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
@@ -25,6 +24,7 @@ import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import InlineLink from "@/components/ui/Link"
@@ -117,9 +117,9 @@ export const DocsLayout = ({
     <div className="flex w-full flex-col border-b">
       <SideNavMobile path={slug} />
       {isPageIncomplete && (
-        <BannerNotification shouldShow={isPageIncomplete}>
+        <Alert variant="banner">
           <Translation id="page-developers-docs:banner-page-incomplete" />
-        </BannerNotification>
+        </Alert>
       )}
       <div
         className="flex justify-between bg-background-highlight lg:pe-8"

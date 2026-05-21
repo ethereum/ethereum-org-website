@@ -56,7 +56,7 @@
     --error-dark: var(--red-900);
     --error-border: var(--red-800);
 
-    --warning: var(--yellow-300);
+    --warning: var(--yellow-400);
     --warning-light: var(--yellow-100);
     --warning-dark: var(--yellow-900);
     --warning-border: var(--yellow-700);
