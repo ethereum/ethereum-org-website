@@ -6,7 +6,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardBanner, CardContent, CardHeader } from "@/components/ui/card"
+import { Card, CardBanner, CardFooter, CardHeader } from "@/components/ui/card"
 import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -19,7 +19,7 @@ import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
 const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
   <Card className="shadow" background="gradient" spacing="lg">
-    <CardHeader spacing="lg">
+    <CardHeader spacing="md">
       <CardBanner fit="contain" size="full">
         <Image
           src={TdsReport}
@@ -28,7 +28,7 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
         />
       </CardBanner>
     </CardHeader>
-    <CardContent>
+    <CardFooter>
       <ButtonLink
         size="lg"
         href="/reports/trillion-dollar-security.pdf"
@@ -36,7 +36,7 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
       >
         {cta}
       </ButtonLink>
-    </CardContent>
+    </CardFooter>
   </Card>
 )
 
