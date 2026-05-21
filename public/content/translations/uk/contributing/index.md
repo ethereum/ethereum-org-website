@@ -51,7 +51,7 @@ Ethereum.org — це проєкт із відкритим вихідним ко
 
 Ось кілька поточних завдань, у вирішенні яких ви могли б нам допомогти та взяти на себе відповідальність. Для більшості з них вам знадобиться обліковий запис GitHub, оскільки більшість змін на сайті вносяться через GitHub.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Переглянути всі завдання</ButtonLink>
 

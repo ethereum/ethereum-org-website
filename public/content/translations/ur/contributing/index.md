@@ -46,7 +46,7 @@ Ethereum.org ایک اوپن سورس پروجیکٹ ہے جس میں **12,000+*
 
 یہ کچھ موجودہ ٹاسکس ہیں جنہیں حل کرنے اور ان کی ذمہ داری لینے میں آپ ہماری مدد کر سکتے ہیں۔ زیادہ تر کے لیے آپ کو GitHub اکاؤنٹ کی ضرورت ہوگی کیونکہ ویب سائٹ میں زیادہ تر تبدیلیاں GitHub کے ذریعے کی جاتی ہیں۔
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">تمام ٹاسکس دیکھیں</ButtonLink>
 

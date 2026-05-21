@@ -51,7 +51,7 @@ Sorunuz mu var? 🤔 [Discord sunucumuza](https://discord.gg/ethereum-org) katı
 
 Bunlar, çözmemize yardımcı olabileceğiniz ve sorumluluğunu alabileceğiniz birkaç güncel görevdir. Çoğunuz için GitHub hesabına ihtiyacınız olacak çünkü web sitesi üzerindeki değişikliklerin çoğu GitHub üzerinden yapılıyor.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Tüm görevleri gör</ButtonLink>
 

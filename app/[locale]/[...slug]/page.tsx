@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import type { GHIssue, SlugPageParams } from "@/lib/types"
+import type { SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
@@ -19,7 +19,6 @@ import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { topics } from "@/data/topics"
-import { getGFIs } from "@/data-layer"
 
 import SlugJsonLD from "./page-jsonld"
 
@@ -40,13 +39,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   // Enable static rendering
   setRequestLocale(locale)
 
-  let gfissues: GHIssue[] = []
-  try {
-    gfissues = (await getGFIs()) ?? []
-  } catch (error) {
-    console.warn("Failed to fetch GFIs for slug page:", error)
-  }
-
   const slug = slugArray.join("/")
 
   const {
@@ -62,9 +54,6 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
     slug,
     baseComponents: { ...mdComponents, VideoWatch },
     componentsMapping,
-    scope: {
-      gfissues,
-    },
   })
 
   // Determine the actual layout after we have the frontmatter
