@@ -1,4 +1,5 @@
 import matter from "gray-matter"
+import { mkdir, writeFile } from "node:fs/promises"
 import path from "node:path"
 import readingTime from "reading-time"
 import rehypeSlug from "rehype-slug"
@@ -182,10 +183,33 @@ const videoSchema = s
     }
   })
 
+// Slugs can contain `/` (e.g. `developers/docs/intro-to-ethereum`); use nested
+// dirs so each entry maps to a flat filename and `mkdir({ recursive: true })`
+// handles the tree. Empty slug (would be the site root) gets `_root` as filename.
+const entryFilename = (slug: string) =>
+  slug === "" ? "_root.json" : `${slug}.json`
+
+// Strip the heavy `body` field for manifest entries. Pages manifest is just
+// slugs (enumeration only). Videos manifest carries card metadata so the
+// videos listing page doesn't have to read 1.5k per-entry files.
+type AnyPage = { locale: string; slug: string }
+type AnyVideo = {
+  locale: string
+  slug: string
+  title?: string
+  description?: string
+  uploadDate?: string
+  duration?: string | number
+  topic?: string | string[]
+  isTranslated?: boolean
+}
+
+const OUT_DIR = ".velite"
+
 export default defineConfig({
   root: "public/content",
   output: {
-    data: ".velite",
+    data: OUT_DIR,
     assets: "public/static",
     base: "/static/",
     name: "[name]-[hash:8].[ext]",
@@ -210,5 +234,74 @@ export default defineConfig({
     copyLinkedFiles: false,
     remarkPlugins: [remarkHeadingId, remarkPreserveJsx],
     rehypePlugins: [rehypeSlug, rehypeImgFromVfile],
+  },
+  // Split Velite's bulk JSON outputs into per-entry files + a small manifest.
+  // The bulk `.velite/pages.json` is ~167 MB and ~75 MB for videos; importing
+  // either one into the Next build process loads the whole compiled-MDX
+  // collection into V8 heap (~600 MB resident) for every worker, OOM'ing the
+  // Netlify build container. With per-entry files, the render path reads only
+  // the page it needs (~30 KB) and the bulk files can be ignored at runtime.
+  complete: async (data) => {
+    const pagesDir = path.join(OUT_DIR, "pages")
+    const videosDir = path.join(OUT_DIR, "videos")
+
+    const pagesManifest: Record<string, string[]> = {}
+    const videosManifest: Record<
+      string,
+      Array<
+        Pick<
+          AnyVideo,
+          | "slug"
+          | "title"
+          | "description"
+          | "uploadDate"
+          | "duration"
+          | "topic"
+          | "isTranslated"
+        >
+      >
+    > = {}
+
+    const writes: Promise<void>[] = []
+
+    for (const page of data.pages as AnyPage[]) {
+      const dir = path.join(
+        pagesDir,
+        page.locale,
+        path.dirname(page.slug || "_root")
+      )
+      const file = path.join(pagesDir, page.locale, entryFilename(page.slug))
+      writes.push(
+        mkdir(dir, { recursive: true }).then(() =>
+          writeFile(file, JSON.stringify(page))
+        )
+      )
+      ;(pagesManifest[page.locale] ??= []).push(page.slug)
+    }
+
+    for (const video of data.videos as AnyVideo[]) {
+      const dir = path.join(videosDir, video.locale)
+      const file = path.join(videosDir, video.locale, entryFilename(video.slug))
+      writes.push(
+        mkdir(dir, { recursive: true }).then(() =>
+          writeFile(file, JSON.stringify(video))
+        )
+      )
+      ;(videosManifest[video.locale] ??= []).push({
+        slug: video.slug,
+        title: video.title,
+        description: video.description,
+        uploadDate: video.uploadDate,
+        duration: video.duration,
+        topic: video.topic,
+        isTranslated: video.isTranslated,
+      })
+    }
+
+    await Promise.all(writes)
+    await writeFile(
+      path.join(OUT_DIR, "manifest.json"),
+      JSON.stringify({ pages: pagesManifest, videos: videosManifest })
+    )
   },
 })

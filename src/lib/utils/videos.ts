@@ -3,15 +3,12 @@ import type { VideoCardData } from "@/lib/types"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { getVideoThumbnails } from "@/lib/data"
-import {
-  getCompiledVideo,
-  getEnglishVideoSlugs,
-} from "@/lib/md/getCompiledPage"
+import { getVideoCardMetas } from "@/lib/md/getCompiledPage"
 
 const videosCache = new Map<string, VideoCardData[]>()
 
 /**
- * Get all videos by reading the Velite-compiled videos collection.
+ * Get all videos by reading the Velite-compiled videos manifest.
  * Returns a flat VideoCardData[] suitable for client components.
  * Results are cached per locale for the duration of the build.
  */
@@ -23,22 +20,18 @@ export async function getVideos(
 
   const thumbnailMap = await getVideoThumbnails().catch(() => null)
 
-  const slugs = getEnglishVideoSlugs()
-  const results = slugs.map((slug) => {
-    const video = getCompiledVideo(locale, slug)
-    if (!video) return null
-    return {
-      slug,
-      title: video.title ?? "",
-      description: video.description ?? "",
-      uploadDate: video.uploadDate ?? "",
-      duration: video.duration ?? "",
-      topic: video.topic,
-      thumbnailUrl: thumbnailMap?.[slug] || "",
-    } as VideoCardData
-  })
+  const metas = getVideoCardMetas(locale)
+  const videos: VideoCardData[] = metas.map((m) => ({
+    slug: m.slug,
+    title: m.title ?? "",
+    description: m.description ?? "",
+    uploadDate: m.uploadDate ?? "",
+    duration:
+      typeof m.duration === "number" ? String(m.duration) : (m.duration ?? ""),
+    topic: Array.isArray(m.topic) ? m.topic : m.topic ? [m.topic] : [],
+    thumbnailUrl: thumbnailMap?.[m.slug] || "",
+  }))
 
-  const videos = results.filter((v): v is VideoCardData => v !== null)
   videosCache.set(locale, videos)
   return videos
 }
