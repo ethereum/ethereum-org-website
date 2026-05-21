@@ -17,29 +17,21 @@ type CompiledModule = {
  * returns `{ default: MDXContent }`. We wrap it with `new Function(body)` and
  * invoke it with the JSX runtime.
  *
- * Cached per compiled-body string so the same page rendered multiple times
- * (e.g. in dev) skips the Function compilation.
+ * Intentionally NOT cached: in static generation each page renders once, so a
+ * cache holds compiled Function objects + their captured V8 native code alive
+ * for the duration of the build with no hit rate. That memory pressure across
+ * thousands of pages was OOM-ing `next build`.
  */
-const componentCache = new Map<string, CompiledModule["default"]>()
-
-const useMDXComponent = (body: string): CompiledModule["default"] => {
-  const cached = componentCache.get(body)
-  if (cached) return cached
-  const fn = new Function(body) as (
-    runtime: typeof jsxRuntime
-  ) => CompiledModule
-  const { default: Component } = fn(jsxRuntime)
-  componentCache.set(body, Component)
-  return Component
-}
-
 type Props = {
   body: string
   components?: Record<string, unknown>
 }
 
 const MdxContent = ({ body, components }: Props) => {
-  const Component = useMDXComponent(body)
+  const fn = new Function(body) as (
+    runtime: typeof jsxRuntime
+  ) => CompiledModule
+  const Component = fn(jsxRuntime).default
   return <Component components={components} />
 }
 
