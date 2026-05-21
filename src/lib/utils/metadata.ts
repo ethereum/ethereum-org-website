@@ -9,7 +9,7 @@ import {
 
 import { getTranslatedLocales } from "../i18n/translationRegistry"
 
-import { getFullUrl } from "./url"
+import { getFullUrl, toLanguageTag } from "./url"
 
 import { routing } from "@/i18n/routing"
 
@@ -103,7 +103,10 @@ export const getMetadata = async ({
         languages: {
           "x-default": xDefault,
           ...Object.fromEntries(
-            localesForHreflang.map((loc) => [loc, getFullUrl(loc, slugString)])
+            localesForHreflang.map((loc) => [
+              toLanguageTag(loc),
+              getFullUrl(loc, slugString),
+            ])
           ),
         },
       }),
