@@ -3,12 +3,12 @@ title: Decentralized identity
 description: What is decentralized identity, and why does it matter?
 lang: en
 template: use-cases
-emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Traditional identity systems have centralized the issuance, maintenance and control of your identifiers.
-summaryPoint2: Decentralized identity removes reliance on centralized third parties.
-summaryPoint3: Thanks to crypto, users now have the tools to issue, hold and control their own identifiers and attestations once again.
+summaryPoints:
+  - "Traditional identity systems have centralized the issuance, maintenance and control of your identifiers."
+  - "Decentralized identity removes reliance on centralized third parties."
+  - "Thanks to crypto, users now have the tools to issue, hold and control their own identifiers and attestations once again."
 ---
 
 Identity underpins virtually every aspect of your life today. Using online services, opening a bank account, voting in elections, buying property, securing employment—all of these things require proving your identity.

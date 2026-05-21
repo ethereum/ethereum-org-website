@@ -5,10 +5,11 @@ lang: tr
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: "Ethereum Ana Ağı hisse ispatı kullanır, ancak her zaman geçerli olan durum bu değildi."
-summaryPoint2: "Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır."
-summaryPoint3: "Birleşim, esas Ethereum Ana Ağının İşaret Zinciri olarak adlandırılan ayrı bir hisse ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder."
-summaryPoint4: "Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azalttı."
+summaryPoints:
+  - "Ethereum Ana Ağı hisse ispatı kullanır, ancak her zaman geçerli olan durum bu değildi."
+  - "Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır."
+  - "Birleşim, esas Ethereum Ana Ağının İşaret Zinciri olarak adlandırılan ayrı bir hisse ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder."
+  - "Birleşim, Ethereum'un enerji tüketimini ~ %99,95 oranında azalttı."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

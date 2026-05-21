@@ -52,7 +52,7 @@ import howBanner from "@/public/images/hackathon_transparent.png"
 import startBanner from "@/public/images/heroes/guides-hub-hero.jpg"
 import networksBanner from "@/public/images/heroes/learn-hub-hero.png"
 import etherBanner from "@/public/images/impact_transparent.png"
-import whenWhoBanner from "@/public/images/translatathon/walking.png"
+import whenWhoBanner from "@/public/images/walking.png"
 import heroImg from "@/public/images/what-is-ethereum.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {

@@ -14240,6 +14240,52 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "kafeelraza",
+      "name": "kafeelraza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193384171?v=4",
+      "profile": "https://github.com/kafeelraza",
+      "contributions": [
+        "code",
+        "tool"
+      ]
+    },
+    {
+      "login": "akegaviar",
+      "name": "Ake",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10195782?v=4",
+      "profile": "https://ake.gg",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "escottalexander",
+      "name": "Elliott Alexander",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22101475?v=4",
+      "profile": "https://github.com/escottalexander",
+      "contributions": [
+        "tutorial"
+      ]
+    },
+    {
+      "login": "Emgevorgyan",
+      "name": "Emgevorgyan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26285829?v=4",
+      "profile": "https://github.com/Emgevorgyan",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "ricardo-jtg",
+      "name": "Ricardo Gonçalves",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35004742?v=4",
+      "profile": "https://github.com/ricardo-jtg",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,

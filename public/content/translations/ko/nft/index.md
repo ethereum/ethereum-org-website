@@ -4,13 +4,13 @@ metaTitle: "NFT란 무엇인가요? | 혜택 및 사용 사례"
 description: "이더리움의 NFT 개요"
 lang: ko
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "홀로그램을 통해 표시되고 있는 ETH 로고."
-summaryPoint1: "이더리움 기반 자산으로 고유한 모든 것을 나타내는 방법입니다."
-summaryPoint2: "NFT는 콘텐츠 창작자에게 그 어느 때보다도 더 많은 힘을 실어주고 있습니다."
-summaryPoint3: "이더리움 블록체인의 스마트 계약을 기반으로 구동됩니다."
+summaryPoints:
+  - "이더리움 기반 자산으로 고유한 모든 것을 나타내는 방법입니다."
+  - "NFT는 콘텐츠 창작자에게 그 어느 때보다도 더 많은 힘을 실어주고 있습니다."
+  - "이더리움 블록체인의 스마트 계약을 기반으로 구동됩니다."
 ---
 
 ## NFT란 무엇인가요? {#what-are-nfts}

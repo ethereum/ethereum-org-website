@@ -3,13 +3,13 @@ title: Keuangan Regeneratif (ReFi)
 description: Gambaran umum tentang ReFi dan kasus penggunaannya saat ini.
 lang: id
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Sistem ekonomi alternatif yang dibangun di atas prinsip-prinsip regeneratif
-summaryPoint2: Upaya untuk memanfaatkan Ethereum guna menyelesaikan krisis koordinasi tingkat global seperti perubahan iklim
-summaryPoint3: Alat untuk meningkatkan skala aset manfaat ekologis secara drastis seperti kredit karbon yang terverifikasi
+summaryPoints:
+  - "Sistem ekonomi alternatif yang dibangun di atas prinsip-prinsip regeneratif"
+  - "Upaya untuk memanfaatkan Ethereum guna menyelesaikan krisis koordinasi tingkat global seperti perubahan iklim"
+  - "Alat untuk meningkatkan skala aset manfaat ekologis secara drastis seperti kredit karbon yang terverifikasi"
 ---
 
 ## Apa itu ReFi? {#what-is-refi}

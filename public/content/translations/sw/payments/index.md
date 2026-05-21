@@ -4,13 +4,13 @@ metaTitle: Malipo ya Ethereum
 description: Maelezo ya malipo juu ya Ethereum
 lang: sw
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: Nembo ya Eth kuonyeshwa pamoja na kupeana mikono.
-summaryPoint1: Ulimwengu ambamo pesa hutiririka kwa uhuru kama habari
-summaryPoint2: Wazi na wa kimataifa, kuwezesha shughuli bila mipaka kwa kila mtu
-summaryPoint3: Malipo kupokea ndani ya dakika
+summaryPoints:
+  - "Ulimwengu ambamo pesa hutiririka kwa uhuru kama habari"
+  - "Wazi na wa kimataifa, kuwezesha shughuli bila mipaka kwa kila mtu"
+  - "Malipo kupokea ndani ya dakika"
 ---
 
 Kila siku, mamilioni ya watu huona tatizo hilohilo: Kuhamisha pesa kutoka nchi moja hadi nyingine huchukua muda mrefu,

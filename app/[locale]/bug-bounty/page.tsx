@@ -539,6 +539,10 @@ export default async function Page(props: { params: Promise<Params> }) {
                         footnote: false,
                       },
                       {
+                        key: "page-upgrades-bug-bounty-not-included-li-10",
+                        footnote: false,
+                      },
+                      {
                         key: "page-upgrades-bug-bounty-not-included-li-5",
                         footnote: false,
                       },

@@ -4,8 +4,9 @@ lang: vi
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Nhận động lực tài chính để tạo ra các dự báo chính xác"
-summaryPoint2: "Dự đoán chất lượng về các sự kiện tương lai"
+summaryPoints:
+  - "Nhận động lực tài chính để tạo ra các dự báo chính xác"
+  - "Dự đoán chất lượng về các sự kiện tương lai"
 buttons:
   - content: Tìm hiểu thêm
     toId: "cách-thị-trường-dự-đoán-hoạt-động"

@@ -5,9 +5,10 @@ lang: sw
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: Mnyororo Kioleza ulianzisha uthibitisho-wa-hisa kwa mfumo wa ikolojia wa Ethereum.
-summaryPoint2: Uliunganishwa na mnyororo asilia wa uthibitishaji-wa-kazi wa Ethereum mnamo Septemba 2022.
-summaryPoint3: Mnyororo Kioleza ulianzisha mantiki ya makubaliano na itifaki ya uvumi wa bloku ambayo sasa inalinda Ethereum.
+summaryPoints:
+  - "Mnyororo Kioleza ulianzisha uthibitisho-wa-hisa kwa mfumo wa ikolojia wa Ethereum."
+  - "Uliunganishwa na mnyororo asilia wa uthibitishaji-wa-kazi wa Ethereum mnamo Septemba 2022."
+  - "Mnyororo Kioleza ulianzisha mantiki ya makubaliano na itifaki ya uvumi wa bloku ambayo sasa inalinda Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
