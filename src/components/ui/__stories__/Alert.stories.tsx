@@ -1,4 +1,3 @@
-import * as React from "react"
 import { Info } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/nextjs"
 
@@ -7,9 +6,10 @@ import {
   AlertCloseButton,
   AlertContent,
   AlertDescription,
+  AlertIcon,
   AlertTitle,
 } from "../alert"
-import { Center } from "../flex"
+import { VStack } from "../flex"
 
 const meta = {
   title: "Molecules / Action Feedback / Alerts",
@@ -19,9 +19,9 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Center className="min-h-[100vh]">
+      <VStack className="min-h-screen">
         <Story />
-      </Center>
+      </VStack>
     ),
   ],
 } satisfies Meta<typeof Alert>
@@ -37,7 +37,7 @@ const VARIANTS = ["info", "error", "success", "warning", "update"] as const
 
 export const Variants: Story = {
   render: (args) => (
-    <div className="flex w-[500px] flex-col gap-4">
+    <div className="flex w-lg flex-col gap-4">
       {VARIANTS.map((variant) => (
         <Alert key={variant} variant={variant} className="w-full" {...args}>
           <AlertContent>
@@ -66,22 +66,30 @@ export const WithCloseButton: Story = {
   ),
 }
 
-export const Banner: Story = {
+export const WithIcon: Story = {
   render: (args) => (
-    <div className="mx-8 flex w-full flex-col gap-4">
+    <div className="flex flex-col gap-4">
       {VARIANTS.map((variant) => (
-        <Alert key={variant} variant={variant} size="full" {...args}>
-          <Info className="text-2xl" />
+        <Alert key={variant} variant={variant} {...args}>
+          <AlertIcon>
+            <Info />
+          </AlertIcon>
           <AlertContent>
-            <AlertTitle>Banner use case</AlertTitle>
-            <AlertDescription>
-              <p>{DEMO_DESC}</p>
-              <p>{DEMO_DESC}</p>
-            </AlertDescription>
+            <AlertTitle>{DEMO_TITLE}</AlertTitle>
+            <AlertDescription>{DEMO_DESC}</AlertDescription>
           </AlertContent>
-          <AlertCloseButton />
         </Alert>
       ))}
+    </div>
+  ),
+}
+
+export const Banner: Story = {
+  render: (args) => (
+    <div className="w-full max-w-(--breakpoint-2xl)">
+      <Alert variant="banner" {...args}>
+        {DEMO_DESC}
+      </Alert>
     </div>
   ),
 }

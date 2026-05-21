@@ -81,7 +81,7 @@ Don't add more. Use `numberFormat()`.
 | Anchor (CTA with arrow) | `import { LinkWithArrow } from "@/components/ui/Link"` |
 | Page hero | `import { ContentHero, SimpleHero, HubHero, MdxHero } from "@/components/Hero"` |
 | Inline alert | `import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"` |
-| Top-of-page banner | `import BannerNotification from "@/components/Banners/BannerNotification"` |
+| Top-of-page banner | `import { Alert } from "@/components/ui/alert"` then `<Alert variant="banner">` |
 | Big numeric display | `import BigNumber from "@/components/BigNumber"` |
 | Layout | `import { Stack, HStack, VStack, Flex, Center } from "@/components/ui/flex"` |
 | Number formatting | `import { numberFormat } from "@/lib/utils/numbers"` |

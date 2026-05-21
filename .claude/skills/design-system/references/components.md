@@ -309,21 +309,86 @@ Big variant matrix.
 ### `Alert`
 
 ```tsx
-import { Alert, AlertContent, AlertDescription, AlertTitle, AlertEmoji, AlertIcon, AlertCloseButton } from "@/components/ui/alert"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertTitle,
+  AlertEmoji,
+  AlertIcon,
+  AlertCloseButton,
+} from "@/components/ui/alert"
 ```
 
-Inline messages.
+Notice/callout primitive. Covers both inline article callouts and the full-bleed top-of-page ribbon.
 
 ```tsx
+// Inline content callout (description only):
 <Alert variant="warning">
   <AlertContent>
     <AlertDescription>Heads up.</AlertDescription>
   </AlertContent>
 </Alert>
+
+// Inline content callout (bold lead-in + body):
+<Alert variant="info">
+  <AlertContent>
+    <AlertTitle>{t("note-label")}</AlertTitle>
+    <AlertDescription>
+      <p>{t("note-body")}</p>
+    </AlertDescription>
+  </AlertContent>
+</Alert>
+
+// Top-of-page ribbon (full-bleed, white-on-primary):
+<Alert variant="banner">{t("page-roadmap-banner-notification")}</Alert>
 ```
 
-**`variant`**: `info | error | success | warning | update`
-**`size`**: `full` (borderless full-width)
+**`variant`**: `info | error | success | warning | update | banner`
+
+**Element**: renders `<aside>` for `variant="banner"` (the ribbon is tangential to main content), otherwise `<div>`. There is no `size` prop -- older docs mentioned a `size: "full"` variant that never existed; full-bleed treatment now lives in `variant="banner"`.
+
+**ARIA role**: no role applied by default. The site is primarily editorial, so error/warning/etc. variants are visual emphasis, not runtime UI state, and shouldn't announce on page load. Opt in when the alert is genuinely dynamic:
+
+- `role="status"` -- polite live region (e.g. filter "no results" empty state)
+- `role="alert"` -- assertive live region (e.g. form submission failure)
+
+`role` is a plain pass-through HTML attribute -- no custom prop needed.
+
+**Parts**:
+
+- `AlertContent` -- wraps the body (flex column, takes remaining width)
+- `AlertTitle` -- bold standard-font-size lead-in line for an alert. Renders `<p>` (not a heading -- changed from `<h6>` to avoid jumping heading levels in flow content); `asChild` available for `Slot`. **Use this whenever an alert needs a bold opening line** -- don't roll your own `<p><strong>...</strong></p>`.
+- `AlertDescription` -- prose container for the alert body. Handles paragraph spacing internally (first `<p>` has `mt-0`, last has `mb-0`, others have `mb-4`). **Wrap body paragraphs in this** -- don't apply your own `mt-`/`mb-` classes to paragraphs inside an Alert.
+- `AlertEmoji` -- emoji glyph aligned to start
+- `AlertIcon` -- Lucide-style SVG slot (inherits variant's text color)
+- `AlertCloseButton` -- dismiss button (`<X />`)
+
+**Anti-pattern**: don't manually compose a bold-lead-in-plus-body shape with inline `<strong>` and margin classes:
+
+```tsx
+// DON'T:
+<Alert variant="info">
+  <AlertContent>
+    <p className="mt-0"><strong>Some initial text</strong></p>
+    <p className="mt-4">Some description text...</p>
+  </AlertContent>
+</Alert>
+
+// DO:
+<Alert variant="info">
+  <AlertContent>
+    <AlertTitle>Some initial text</AlertTitle>
+    <AlertDescription>
+      <p>Some description text...</p>
+    </AlertDescription>
+  </AlertContent>
+</Alert>
+```
+
+The sub-components handle font weight, color, and paragraph spacing -- callers shouldn't be adding `mt-`/`mb-`/`font-bold` to paragraphs inside an Alert.
+
+**Migration**: `BannerNotification` was absorbed in May 2026 -- replace any lingering `<BannerNotification shouldShow>...` with `<Alert variant="banner">...`. The standalone `BugBountyBanner` wrapper was removed in the same pass; inline `<Alert variant="banner">` at the call site.
 
 ### `Avatar`
 
@@ -523,9 +588,15 @@ import { ContentHero, HomeHero, HubHero, MdxHero, SimpleHero } from "@/component
 
 See `canonical-imports.md` for selection.
 
-### Banners -- `@/components/Banners`
+### Banner-named components
 
-`BannerNotification` (will be absorbed into the unified `Callout` -- see `canonical-imports.md`), `EnvWarningBanner` (exemplary -- thin wrap of `Alert variant="warning"`), `TranslationBanner`.
+The `Banners/` subdirectory was removed in May 2026. `BannerNotification` is now `<Alert variant="banner">`; the standalone `BugBountyBanner` wrapper was deleted (inline `<Alert variant="banner">` at call sites).
+
+The remaining `*Banner*`-named files at the root of `src/components/` are:
+
+- `EnvWarningBanner` -- exemplary thin wrap of `<Alert variant="warning">`
+- `TranslationBanner` -- floating Arabic/Urdu translation feedback CTA; still a raw `<aside>` (deprecation candidate -- could be migrated to `<Alert variant="banner">` next time it's touched)
+- `CalloutBanner` / `CalloutBannerSSR` -- in-content card-with-image callout primitives (see `canonical-imports.md`); unrelated to the top-of-page ribbon
 
 ### `Faq`
 

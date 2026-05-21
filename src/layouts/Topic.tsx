@@ -3,10 +3,10 @@ import { getTranslations } from "next-intl/server"
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TopicFrontmatter } from "@/lib/interfaces"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
+import { Alert } from "@/components/ui/alert"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
@@ -93,15 +93,15 @@ export const TopicLayout = async ({
 
   const editBanner =
     config.editBanner && frontmatter.hideEditBanner !== true ? (
-      <BannerNotification shouldShow className="z-sticky max-lg:hidden">
-        <Emoji text=":pencil:" className="me-4 shrink-0 text-2xl" />
+      <Alert variant="banner" className="max-lg:hidden">
+        <Emoji text=":pencil:" className="shrink-0 text-2xl" />
         <p>
           {t(config.editBanner.textKey)}{" "}
-          <InlineLink href={getEditPath(slug)} className="text-white">
+          <InlineLink href={getEditPath(slug)}>
             {t(config.editBanner.linkKey)}
           </InlineLink>
         </p>
-      </BannerNotification>
+      </Alert>
     ) : null
 
   const heroSection = (
