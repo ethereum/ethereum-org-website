@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "type-check": "tsc --noEmit",
+    "type-check": "next typegen && tsc --noEmit",
     "format": "prettier \"**/*.{js,jsx,ts,tsx}\" --write",
     "preversion": "bash ./src/scripts/updatePublishDate.sh",
     "storybook": "storybook dev -p 6006",
