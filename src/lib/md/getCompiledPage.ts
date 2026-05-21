@@ -103,10 +103,9 @@ export const getCompiledVideo = (
     title: translated.title || english.title,
     description: translated.description || english.description,
     body: useTranslatedBody ? translated.body : english.body,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     rawBody: useTranslatedBody
       ? translatedRaw
-      : ((english as unknown).rawBody ?? ""),
+      : ((english as { rawBody?: string }).rawBody ?? ""),
     locale,
     isTranslated: true,
   }
