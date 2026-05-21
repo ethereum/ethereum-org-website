@@ -4,11 +4,11 @@ metaTitle: "Cos'è il restaking? | Vantaggi e utilizzo del restaking"
 description: Usa gli ETH in staking per proteggere altri servizi decentralizzati e guadagnare ricompense extra.
 lang: it
 template: use-cases
-emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: Una rappresentazione visiva del restaking su Ethereum.
 sidebarDepth: 2
-summaryPoint1: Usa gli ETH in staking per proteggere altri servizi decentralizzati e guadagnare ricompense extra.
+summaryPoints:
+  - "Usa gli ETH in staking per proteggere altri servizi decentralizzati e guadagnare ricompense extra."
 buttons:
   - content: Cos'è il restaking?
     toId: what-is-restaking

@@ -37,51 +37,25 @@ export interface StaticFrontmatter extends SharedFrontmatter {
   hideEditButton?: boolean
 }
 
-/**
- * TODO: Refactor markdown content that currently uses SummaryPointsNumbered
- * to use SummaryPoints (`summaryPoints: string[]`) instead. Then
- * deprecate @/lib/util/getSummaryPoints.ts
- */
-export interface SummaryPointsNumbered {
-  summary?: string
-  summaryPoint1?: string
-  summaryPoint2?: string
-  summaryPoint3?: string
-  summaryPoint4?: string
-}
-
-interface SummaryPoints {
-  summaryPoints: string[]
-}
-
 interface ImageInfo {
   image: string
   alt: string
   blurDataURL: string
+  imageWidth?: number
+  imageHeight?: number
 }
 
-export interface UpgradeFrontmatter
-  extends SharedFrontmatter,
-    SummaryPointsNumbered,
-    ImageInfo {}
-
-export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
-  buttons: CommonHeroProps["buttons"]
-}
-
-export interface UseCasesFrontmatter
-  extends SharedFrontmatter,
-    SummaryPointsNumbered,
-    ImageInfo {
-  emoji: string
+/**
+ * Canonical frontmatter shape for any page rendered through `TopicLayout`.
+ * Used for staking, use-cases, roadmap, upgrade, and ai-agents.
+ * See `docs/topic-layout-refactor.md`.
+ */
+export interface TopicFrontmatter extends SharedFrontmatter, ImageInfo {
+  summaryPoints?: string[]
+  summary?: string
+  buttons?: CommonHeroProps["buttons"]
   showDropdown?: boolean
-}
-
-export interface StakingFrontmatter
-  extends SharedFrontmatter,
-    SummaryPoints,
-    ImageInfo {
-  emoji: string
+  hideEditBanner?: boolean
 }
 
 export interface DocsFrontmatter extends SharedFrontmatter {

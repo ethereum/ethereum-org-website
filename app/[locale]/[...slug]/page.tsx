@@ -10,6 +10,7 @@ import type { GHIssue, SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
+import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import OpcodesTable from "@/components/Table/OpcodesTable"
 import VideoWatch from "@/components/Videos/VideoWatch"
 
@@ -18,11 +19,12 @@ import { getLayoutFromSlug } from "@/lib/utils/layout"
 import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { topics } from "@/data/topics"
 import { getGFIs } from "@/data-layer"
 
 import SlugJsonLD from "./page-jsonld"
 
-import { componentsMapping, layoutMapping } from "@/layouts"
+import { componentsMapping, layoutMapping, TopicLayout } from "@/layouts"
 import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
 
@@ -72,7 +74,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
 
   // Determine the actual layout after we have the frontmatter
   const layout = frontmatter.template || getLayoutFromSlug(slug)
-  const Layout = layoutMapping[layout]
+  const topicConfig = topics[layout]
 
   // If the page has a published date, format it
   if ("published" in frontmatter) {
@@ -83,6 +85,40 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
   const messages = pick(allMessages, requiredNamespaces)
+
+  if (topicConfig) {
+    const afterContent =
+      layout === "staking" ? (
+        <StakingCommunityCallout className="my-16" />
+      ) : undefined
+
+    return (
+      <>
+        <SlugJsonLD
+          locale={locale}
+          slug={slug}
+          frontmatter={frontmatter}
+          contributors={contributors}
+        />
+        <I18nProvider locale={locale} messages={messages}>
+          <TopicLayout
+            slug={slug}
+            frontmatter={frontmatter}
+            tocItems={tocItems}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            contentNotTranslated={!isTranslated}
+            contributors={contributors}
+            config={topicConfig}
+          >
+            {content}
+            {afterContent}
+          </TopicLayout>
+        </I18nProvider>
+      </>
+    )
+  }
+
+  const Layout = layoutMapping[layout]
 
   return (
     <>
@@ -112,7 +148,7 @@ export default async function Page(props: { params: Promise<SlugPageParams> }) {
 export async function generateStaticParams() {
   try {
     const slugs = await getPostSlugs("/")
-   
+
     return slugs.map((slug) => ({
       slug: slug.split("/").slice(1),
     }))

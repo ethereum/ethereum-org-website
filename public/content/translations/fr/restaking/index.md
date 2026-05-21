@@ -4,11 +4,11 @@ metaTitle: Qu'est-ce que la re-mise en jeu ? | Avantages et utilisation de la re
 description: "Utilisez l'ETH mis en jeu pour sécuriser d'autres services décentralisés et gagner des récompenses supplémentaires."
 lang: fr
 template: use-cases
-emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: "Une représentation visuelle de la re-mise en jeu sur Ethereum."
 sidebarDepth: 2
-summaryPoint1: "Utilisez l'ETH mis en jeu pour sécuriser d'autres services décentralisés et gagner des récompenses supplémentaires."
+summaryPoints:
+  - "Utilisez l'ETH mis en jeu pour sécuriser d'autres services décentralisés et gagner des récompenses supplémentaires."
 buttons:
   - content: Qu'est-ce que la re-mise en jeu ?
     toId: what-is-restaking
