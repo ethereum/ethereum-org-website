@@ -24,7 +24,7 @@ const cardVariants = cva(
         gradient:
           "bg-card-gradient dark:bg-linear-to-br dark:from-transparent dark:to-primary/10",
         "header-bar":
-          "overflow-hidden *:data-[label=card-header]:bg-background-highlight",
+          "overflow-hidden *:data-[label=card-header]:bg-background-highlight border",
         "radial-a": "bg-radial-a",
       },
       spacing: {
