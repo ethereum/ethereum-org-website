@@ -93,8 +93,9 @@ export const reports: Report[] = [
     publisher: "a16z crypto",
     date: "Oct 2025",
     category: "crypto-native",
-    href: "https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/",
+    href: "https://dwt2zme5yrom6.cloudfront.net/uploads/2025/10/State-of-Crypto-2025-a16z-crypto.pdf",
     imgSrc: a16zCover,
+    fileSizeBytes: 17291230,
   },
   {
     slug: "etherealize-nethermind-l2beat-l2-landscape",
@@ -131,8 +132,9 @@ export const reports: Report[] = [
     publisher: "Twinstake",
     date: "2025",
     category: "crypto-native",
-    href: "https://www.twinstake.com/reports/ethereum-pectra-upgrade-the-impact-on-institutional-staking",
+    href: "https://cdn.prod.website-files.com/658498cb3744de71ad789ca8/67cee06a2f54159204b600ea_Pectra%20Report.pdf",
     imgSrc: twinstakeCover,
+    fileSizeBytes: 1258985,
   },
   {
     slug: "white-house-pwg-crypto",
@@ -141,8 +143,9 @@ export const reports: Report[] = [
       "The White House (President's Working Group on Digital Asset Markets)",
     date: "Jul 2025",
     category: "regulator",
-    href: "https://www.whitehouse.gov/crypto/",
+    href: "https://www.whitehouse.gov/wp-content/uploads/2025/07/Digital-Assets-Report-EO14178.pdf",
     imgSrc: whiteHouseCover,
+    fileSizeBytes: 5864568,
   },
   {
     slug: "bis-papers-156-defi-functions-stability",
@@ -151,8 +154,9 @@ export const reports: Report[] = [
     publisher: "Bank for International Settlements",
     date: "Apr 2025",
     category: "central-bank",
-    href: "https://www.bis.org/publ/bppdf/bispap156.htm",
+    href: "https://www.bis.org/publ/bppdf/bispap156.pdf",
     imgSrc: bisCover,
+    fileSizeBytes: 751136,
   },
   {
     slug: "mckinsey-from-ripples-to-waves",

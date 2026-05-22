@@ -94,6 +94,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             size: (fileSizeBytes / 1048576).toFixed(1),
                           })}
                         </CardParagraph>
+                      ) : !internal ? (
+                        <CardParagraph variant="light" size="sm">
+                          {t("page-reports-web-article")}
+                        </CardParagraph>
                       ) : null}
                     </CardContent>
                     <ButtonLink href={href} variant="outline">
