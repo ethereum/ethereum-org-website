@@ -4,13 +4,13 @@ metaTitle: Pembayaran di Ethereum
 description: Gambaran umum tentang pembayaran di Ethereum
 lang: id
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: Logo Eth ditampilkan bersama dengan tangan yang memberi.
-summaryPoint1: Dunia di mana uang bergerak sebebas informasi
-summaryPoint2: Terbuka dan global, memungkinkan transaksi tanpa batas untuk semua orang
-summaryPoint3: Pembayaran diterima dalam waktu satu menit
+summaryPoints:
+  - "Dunia di mana uang bergerak sebebas informasi"
+  - "Terbuka dan global, memungkinkan transaksi tanpa batas untuk semua orang"
+  - "Pembayaran diterima dalam waktu satu menit"
 ---
 
 Setiap hari, jutaan orang menghadapi tantangan yang sama: memindahkan uang melintasi batas negara itu lambat, mahal, dan sering kali membuat frustrasi. Seorang pekerja lepas di Bali menunggu berhari-hari agar pembayaran dari kliennya di New York cair. Hal ini sangat memengaruhi orang-orang di wilayah dengan infrastruktur perbankan yang terbatas, sehingga menyulitkan mereka untuk berpartisipasi dalam ekonomi global.

@@ -4,13 +4,13 @@ metaTitle: KI-Agenten | KI-Agenten auf Ethereum
 description: "Ein Überblick über KI-Agenten auf Ethereum"
 lang: de
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Menschen versammelt an einem Terminal-Tisch
-summaryPoint1: "KI, die mit der Blockchain interagiert und unabhängig handelt"
-summaryPoint2: Kontrolliert Wallets und Gelder auf der Blockchain
-summaryPoint3: "Stellt Menschen oder andere Agenten für Arbeiten ein"
+summaryPoints:
+  - "KI, die mit der Blockchain interagiert und unabhängig handelt"
+  - "Kontrolliert Wallets und Gelder auf der Blockchain"
+  - "Stellt Menschen oder andere Agenten für Arbeiten ein"
 buttons:
   - content: Was sind KI-Agenten?
     toId: what-are-ai-agents

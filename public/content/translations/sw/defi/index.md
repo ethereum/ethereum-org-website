@@ -4,15 +4,15 @@ metaTitle: Nini ni DeFi (Uchumi Gatuzi)? manufaa na utumizi wa fedha huru kati
 description: Maelezo ya jumla ya DeFi kwenye Ethereum
 lang: sw
 template: use-cases
-emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: |-
   Nembo ya Eth kufanywa
    kwa matofali ya matofali.
 sidebarDepth: 2
-summaryPoint1: Mpango mwingine wa kimataifa, ulio wazi kwa mfumo wa sasa wa kifedha.
-summaryPoint2: Bidhaa ambayo Kuazima, kuhifadhi kufanya biashara, na zaidi.
-summaryPoint3: Kulingana na teknolojia ya chanzo wazi ambayo mtu yeyote anaweza Mpango na.
+summaryPoints:
+  - "Mpango mwingine wa kimataifa, ulio wazi kwa mfumo wa sasa wa kifedha."
+  - "Bidhaa ambayo Kuazima, kuhifadhi kufanya biashara, na zaidi."
+  - "Kulingana na teknolojia ya chanzo wazi ambayo mtu yeyote anaweza Mpango na."
 ---
 
 DeFi ni mfumo wa kifedha wa wazi na wa kimataifa uliojengwa kwa enzi ya mzunguko - chaguo wa mfumo ambao hauna uwazi, bila udhibiti kwa nguvu, na kushikamana na miundombinu na taratibu ya miongo kadhaa. Anatoa udhibiti na kujulikana kwa pesa zako. Anatoa ufikiaji wa masoko ya kimataifa na kwa sarafu yako ya ndani au chaguzi za benki. Bidhaa za DeFi hufungua huduma za kifedha kwa mtu yeyote aliye na kiungo wa shirikisho na kwa kiasi kikubwa inayoshikilia na kuhifadhiwa na watumiaji wao. Hadi sasa, kripto yenye thamani ya makumi ya mabilioni ya dola imepita kwenye programu za DeFi na inaendelea kukua kila siku.

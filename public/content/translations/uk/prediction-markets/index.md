@@ -4,8 +4,9 @@ lang: uk
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Отримуйте фінансові стимули для створення точних прогнозів"
-summaryPoint2: "Високоякісні прогнози щодо майбутніх подій"
+summaryPoints:
+  - "Отримуйте фінансові стимули для створення точних прогнозів"
+  - "Високоякісні прогнози щодо майбутніх подій"
 buttons:
   - content: Дізнайтеся більше
     toId: how-prediction-markets-work

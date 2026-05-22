@@ -5,10 +5,11 @@ lang: sw
 template: upgrade
 image: /images/upgrades/merge.png
 alt: 
-summaryPoint1: Mainnet ya Ethereum inatumia uthibitishaji wa dhamana, lakini haikuwa hivi siku zote.
-summaryPoint2: Uboreshaji kutoka kwenye mfumo wa asili wa uthibitishaji wa kazi kwenda kwenye uthibitishaji wa dhamana uliitwa Muungano.
-summaryPoint3: Muungano unarejelea Mainnet ya asili ya Ethereum kuungana na kiambajengo tofauti cha uthibitishaji wa dhamana kinachoitwa Beacon Chain, ambacho sasa kipo kama mnyororo mmoja.
-summaryPoint4: Muungano ulipunguza matumizi ya nishati ya Ethereum kwa ~99.95%.
+summaryPoints:
+  - "Mainnet ya Ethereum inatumia uthibitishaji wa dhamana, lakini haikuwa hivi siku zote."
+  - "Uboreshaji kutoka kwenye mfumo wa asili wa uthibitishaji wa kazi kwenda kwenye uthibitishaji wa dhamana uliitwa Muungano."
+  - "Muungano unarejelea Mainnet ya asili ya Ethereum kuungana na kiambajengo tofauti cha uthibitishaji wa dhamana kinachoitwa Beacon Chain, ambacho sasa kipo kama mnyororo mmoja."
+  - "Muungano ulipunguza matumizi ya nishati ya Ethereum kwa ~99.95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

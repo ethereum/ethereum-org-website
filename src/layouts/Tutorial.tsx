@@ -7,7 +7,6 @@ import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
-import Codeblock from "@/components/Codeblock"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -61,12 +60,6 @@ const KBD = (props: HTMLAttributes<HTMLElement>) => (
   />
 )
 
-const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
-  const match = props.className?.match(/(language-\S+)/)
-  const codeLanguage = match ? match[0] : "plain-text"
-  return <Codeblock codeLanguage={codeLanguage} {...props} />
-}
-
 export const tutorialsComponents = {
   a: TooltipLink,
   h1: Heading1,
@@ -75,7 +68,6 @@ export const tutorialsComponents = {
   h4: Heading4,
   p: Paragraph,
   kbd: KBD,
-  pre: Pre,
   ...mdxTableComponents,
   ButtonLink,
   CallToContribute,
