@@ -6,11 +6,15 @@ import { Button } from "../ui/buttons/Button"
 import CardComponent, { MarkdownCardProps } from "."
 
 const meta = {
+  title: "UI / Cards / MarkdownCard",
   component: CardComponent,
+  parameters: { layout: "fullscreen" },
   decorators: [
     (Story) => (
-      <div className="max-w-[342px]">
-        <Story />
+      <div className="grid w-full grid-cols-fill-3 gap-8 p-8">
+        {Array.from({ length: 3 }).map((_, idx) => (
+          <Story key={idx} />
+        ))}
       </div>
     ),
   ],
