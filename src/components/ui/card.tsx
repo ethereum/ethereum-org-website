@@ -261,7 +261,7 @@ const cardBannerVariants = cva(
       },
       fit: {
         cover: "[&_img]:object-cover",
-        contain: "relative [&_img]:object-contain",
+        contain: "relative isolate [&_img]:object-contain",
       },
       zoom: {
         true: "group-hover/link:[&_img]:scale-110 group-hover/link:[&_img]:duration-300 group-focus/link:[&_img]:scale-110 group-focus/link:[&_img]:duration-300",
