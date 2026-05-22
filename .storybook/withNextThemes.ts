@@ -1,10 +1,10 @@
-import { useEffect } from "react"
 import { useTheme } from "next-themes"
 import {
   type DataAttributeStrategyConfiguration,
   DecoratorHelpers,
 } from "@storybook/addon-themes"
 import type { Decorator } from "@storybook/nextjs"
+import { useEffect } from "storybook/preview-api"
 
 const { initializeThemeState, pluckThemeFromContext } = DecoratorHelpers
 
