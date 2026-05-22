@@ -38,6 +38,12 @@ export type Report = {
   internal?: boolean
   /** Cover image. Publisher OG image or first-page render of the source PDF. */
   imgSrc: StaticImageData
+  /**
+   * If the link points directly to a PDF, the file size in bytes (from the
+   * publisher's Content-Length header at the time of authoring). Surfaced in
+   * the card so readers know what they are about to download.
+   */
+  fileSizeBytes?: number
 }
 
 /**
@@ -68,6 +74,7 @@ export const reports: Report[] = [
     category: "crypto-native",
     href: "https://openzeppelin.com/hubfs/OpenZeppelin%20%7C%20Technical%20Risk%20Assessment%20on%20Blockchain%20Networks.pdf",
     imgSrc: openzeppelinCover,
+    fileSizeBytes: 841405,
   },
   {
     slug: "coinbase-iab-quantum-computing-blockchain",
@@ -78,6 +85,7 @@ export const reports: Report[] = [
     category: "academic",
     href: "https://assets.ctfassets.net/sygt3q11s4a9/6EjYavuGdtJDYCqaJrASj9/9f464a8bf26f44bd6c85710fe7e4a29f/Quantum_Computing_and_Blockchain_v10.3_15April2026.pdf",
     imgSrc: quantumCover,
+    fileSizeBytes: 434102,
   },
   {
     slug: "a16z-state-of-crypto-2025",
@@ -97,6 +105,7 @@ export const reports: Report[] = [
     category: "crypto-native",
     href: "https://cdn.prod.website-files.com/6728e9076a3b5a8ca8ec4816/6931c20f55129e498a8da223_%5BCompressed%5D%20L2s%20Report.pdf",
     imgSrc: l2LandscapeCover,
+    fileSizeBytes: 6953384,
   },
   {
     slug: "fidelity-coin-report-ethereum",

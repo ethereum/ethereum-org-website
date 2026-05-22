@@ -57,7 +57,16 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
             <div className="grid grid-cols-fill-4 gap-4">
               {reports.map(
-                ({ slug, title, publisher, date, href, internal, imgSrc }) => (
+                ({
+                  slug,
+                  title,
+                  publisher,
+                  date,
+                  href,
+                  internal,
+                  imgSrc,
+                  fileSizeBytes,
+                }) => (
                   <Card
                     key={slug}
                     className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:p-4"
@@ -79,6 +88,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                       </Tag>
                       <CardTitle variant="bold">{title}</CardTitle>
                       <CardParagraph variant="light">{publisher}</CardParagraph>
+                      {fileSizeBytes ? (
+                        <CardParagraph variant="light" size="sm">
+                          {t("page-reports-pdf-size", {
+                            size: (fileSizeBytes / 1048576).toFixed(1),
+                          })}
+                        </CardParagraph>
+                      ) : null}
                     </CardContent>
                     <ButtonLink href={href} variant="outline">
                       {internal
