@@ -9,6 +9,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 concurrency:
   group: weekly-release
@@ -19,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      # Use a bot token so the auto-created deploy PR triggers downstream
-      # pull_request workflows (GITHUB_TOKEN-authored PRs don't).
-      GH_TOKEN: ${{ secrets.RELEASE_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+      # Required: deploy PR must be authored by a bot token so downstream
+      # pull_request workflows fire.
+      GH_TOKEN: ${{ secrets.RELEASE_BOT_TOKEN }}
     outputs:
       skipped: ${{ steps.skip_check.outputs.skip }}
       skip_reason: ${{ steps.skip_check.outputs.reason }}
@@ -34,7 +35,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
-          token: ${{ secrets.RELEASE_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASE_BOT_TOKEN }}
 
       - name: Configure git identity
         run: |
