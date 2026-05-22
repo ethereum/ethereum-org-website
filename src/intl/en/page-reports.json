@@ -1,0 +1,13 @@
+{
+  "page-reports-title": "Reports",
+  "page-reports-description": "A curated collection of reputable, third-party reports on Ethereum from regulators, central banks, banks, consultancies, and leading research firms. Each report links to the publisher.",
+  "page-reports-heading": "Trusted reports on Ethereum",
+  "page-reports-intro": "Every report listed has been independently verified — published by a named, credible institution, with substantive Ethereum content. External links open the publisher's site.",
+  "page-reports-cta-read": "Read report",
+  "page-reports-cta-view": "View report",
+  "page-reports-suggest-heading": "Suggest a report",
+  "page-reports-suggest-body": "Know a high-quality institutional report on Ethereum that should be listed here? Open an issue on the ethereum.org GitHub with the title, publisher, date and link.",
+  "page-reports-suggest-cta": "Suggest a report on GitHub",
+  "page-reports-metadata-title": "Reports on Ethereum",
+  "page-reports-metadata-description": "Reputable third-party reports on Ethereum from regulators, central banks, banks, consultancies and leading research firms."
+}

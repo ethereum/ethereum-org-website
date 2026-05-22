@@ -267,7 +267,11 @@ const Footer = async ({ lastDeployLocaleTimestamp }: FooterProps) => {
           text: t("ethereum-governance"),
         },
         {
-          href: "/trillion-dollar-security/",
+          href: "/reports/",
+          text: t("reports"),
+        },
+        {
+          href: "/reports/trillion-dollar-security/",
           text: t("trillion-dollar-security"),
         },
       ],
