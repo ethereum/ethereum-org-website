@@ -319,7 +319,7 @@ const DepositContractPage = () => {
                         <CardTitle>
                           {t("page-staking-deposit-contract-address")}
                         </CardTitle>
-                        <CardParagraph variant="light">
+                        <CardParagraph>
                           {t("page-staking-deposit-contract-address-caption")}
                         </CardParagraph>
                       </div>

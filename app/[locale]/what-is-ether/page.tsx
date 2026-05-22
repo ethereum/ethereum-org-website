@@ -168,7 +168,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                     <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-6")}
                     </CardTitle>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ether-what-is-ether-description-7")}
                     </CardParagraph>
                   </div>
@@ -181,7 +181,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                     <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-8")}
                     </CardTitle>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ether-what-is-ether-description-9")}
                     </CardParagraph>
                   </div>
@@ -194,7 +194,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                     <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-10")}
                     </CardTitle>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ether-what-is-ether-description-11")}
                     </CardParagraph>
                   </div>

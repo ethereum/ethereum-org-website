@@ -140,9 +140,7 @@ const GetStartedGrid = async ({
                   <CardTitle>{card.title}</CardTitle>
                 </div>
 
-                <CardParagraph variant="light">
-                  {card.description}
-                </CardParagraph>
+                <CardParagraph>{card.description}</CardParagraph>
 
                 <ul className="m-0">
                   {card.bullets.map((bullet) => (

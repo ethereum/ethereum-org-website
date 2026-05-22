@@ -44,9 +44,7 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
         {course.hours}
       </Tag>
       <CardTitle variant="semibold">{course.title}</CardTitle>
-      <CardParagraph size="sm" variant="light">
-        {course.description}
-      </CardParagraph>
+      <CardParagraph size="sm">{course.description}</CardParagraph>
     </CardContent>
   </Card>
 )

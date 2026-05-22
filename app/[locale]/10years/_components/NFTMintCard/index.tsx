@@ -57,10 +57,7 @@ const NFTMintCard = async () => {
 
       <CardContent>
         <CardTitle>{t("page-10-year-mint-card-title")}</CardTitle>
-
-        <CardParagraph variant="light">
-          {t("page-10-year-mint-card-description")}
-        </CardParagraph>
+        <CardParagraph>{t("page-10-year-mint-card-description")}</CardParagraph>
       </CardContent>
 
       <CardFooter>

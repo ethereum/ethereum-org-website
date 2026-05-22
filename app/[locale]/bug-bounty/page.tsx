@@ -405,7 +405,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   </InlineLink>
                 </div>
 
-                <CardParagraph variant="light">
+                <CardParagraph>
                   {t("page-upgrades-bug-bounty-annotations")}
                 </CardParagraph>
                 <UnorderedList>
@@ -441,7 +441,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 background="nested"
                 className="flex-[1_1_464px]"
               >
-                <CardParagraph variant="light">
+                <CardParagraph>
                   {t("page-upgrades-bug-bounty-client-bugs-desc-2")}
                 </CardParagraph>
                 <H4>{t("page-upgrades-bug-bounty-types")}</H4>
@@ -468,7 +468,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 background="nested"
                 className="flex-[1_1_464px]"
               >
-                <CardParagraph variant="light">
+                <CardParagraph>
                   {t("page-upgrades-bug-bounty-misc-bugs-desc-2")}
                 </CardParagraph>
                 <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
@@ -520,7 +520,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 className="flex-[1_1_100%]"
               >
                 <h2>{t("page-upgrades-bug-bounty-not-included")}</h2>
-                <CardParagraph variant="light">
+                <CardParagraph>
                   {t.rich("page-upgrades-bug-bounty-not-included-desc", {
                     a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
                   })}
@@ -582,7 +582,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                     </ListItem>
                   ))}
                 </UnorderedList>
-                <CardParagraph variant="light" size="sm">
+                <CardParagraph size="sm">
                   <sup>*</sup>
                   {t("page-upgrades-bug-bounty-out-of-scope-footnote")}
                 </CardParagraph>
@@ -595,7 +595,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 className="flex-[1_1_100%]"
               >
                 <h2>{t("page-upgrades-bug-bounty-hunting")}</h2>
-                <CardParagraph variant="light">
+                <CardParagraph>
                   <em>{t("page-upgrades-bug-bounty-hunting-desc")}</em>
                 </CardParagraph>
                 <OrderedList className="m-0">

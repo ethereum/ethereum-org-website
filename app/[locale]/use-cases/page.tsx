@@ -68,7 +68,7 @@ const UseCaseCard = ({
     </CardHeader>
     <CardContent>
       <CardTitle>{title}</CardTitle>
-      <CardParagraph variant="light">{description}</CardParagraph>
+      <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>
       <ButtonLink href={href} className="w-full">

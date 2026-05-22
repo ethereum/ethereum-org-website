@@ -167,6 +167,7 @@ const CardContent = React.forwardRef<
     className={cn(
       childSpacingVariants({ spacing }),
       "flex-1 space-y-(--content-space) p-(--card-pad)",
+      "text-body-medium **:data-[label=card-title]:text-body **:[strong]:text-body",
       className
     )}
     {...props}
@@ -377,19 +378,15 @@ CardTitle.displayName = "CardTitle"
 const paragraphVariants = cva("", {
   variants: {
     variant: {
-      base: "text-body",
-      light: "text-body-medium",
-      uppercase: "uppercase text-body-medium",
+      uppercase: "uppercase",
       subtitle: "italic",
     },
+    textColor: {
+      body: "text-body!",
+    },
     size: {
-      base: "",
       sm: "text-sm",
     },
-  },
-  defaultVariants: {
-    variant: "base",
-    size: "base",
   },
 })
 
@@ -397,11 +394,11 @@ const CardParagraph = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement> &
     VariantProps<typeof paragraphVariants>
->(({ className, variant, size, ...props }, ref) => (
+>(({ className, variant, size, textColor, ...props }, ref) => (
   <p
     ref={ref}
     data-label="card-paragraph"
-    className={cn(paragraphVariants({ variant, size }), className)}
+    className={cn(paragraphVariants({ variant, size, textColor }), className)}
     {...props}
   />
 ))

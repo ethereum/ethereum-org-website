@@ -220,10 +220,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardTitle>
                       {t("page-what-is-ethereum-network-censorship-title")}
                     </CardTitle>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-network-censorship-desc-1")}
                     </CardParagraph>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-network-censorship-desc-2")}
                     </CardParagraph>
                   </CardContent>
@@ -236,10 +236,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardTitle>
                       {t("page-what-is-ethereum-network-security-title")}
                     </CardTitle>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-network-security-desc-1")}
                     </CardParagraph>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-network-security-desc-2")}
                     </CardParagraph>
                   </CardContent>
@@ -252,7 +252,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardTitle>
                       {t("page-what-is-ethereum-network-reliability-title")}
                     </CardTitle>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t.rich(
                         "page-what-is-ethereum-network-reliability-desc-1",
                         {
@@ -260,7 +260,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         }
                       )}
                     </CardParagraph>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-network-reliability-desc-2")}
                     </CardParagraph>
                   </CardContent>
@@ -482,10 +482,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardTitle>
                       {t("page-what-is-ethereum-what-consumers-title")}
                     </CardTitle>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-what-consumers-desc-1")}
                     </CardParagraph>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-what-consumers-desc-2")}
                     </CardParagraph>
                     <UnorderedList className="space-y-0.5! text-body-medium">
@@ -543,7 +543,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         {t("page-what-is-ethereum-what-businesses-benefit-3")}
                       </ListItem>
                     </UnorderedList>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t.rich("page-what-is-ethereum-what-businesses-example", {
                         a: (chunks) => (
                           <Link href="https://newsroom.paypal-corp.com/2023-08-07-PayPal-Launches-U-S-Dollar-Stablecoin">
@@ -562,7 +562,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardTitle>
                       {t("page-what-is-ethereum-what-governments-title")}
                     </CardTitle>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-what-governments-intro")}
                     </CardParagraph>
                     <UnorderedList className="space-y-0.5! text-body-medium">
@@ -591,7 +591,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         )}
                       </ListItem>
                     </UnorderedList>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t.rich(
                         "page-what-is-ethereum-what-governments-example-1",
                         {
@@ -603,7 +603,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         }
                       )}
                     </CardParagraph>
-                    <CardParagraph variant="light">
+                    <CardParagraph>
                       {t("page-what-is-ethereum-what-governments-example-2")}
                     </CardParagraph>
                   </CardContent>

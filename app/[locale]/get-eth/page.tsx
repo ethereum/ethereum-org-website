@@ -66,7 +66,7 @@ const StyledCard = ({ children, emoji, title, description }: CardProps) => (
     </CardHeader>
     <CardContent>
       <CardTitle>{title}</CardTitle>
-      <CardParagraph variant="light">{description}</CardParagraph>
+      <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>{children}</CardFooter>
   </Card>

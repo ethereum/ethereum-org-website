@@ -70,7 +70,7 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
                           height={23 * 4}
                         />
                       </CardBanner>
-                      <CardParagraph variant="base" className="line-clamp-2">
+                      <CardParagraph textColor="body" className="line-clamp-2">
                         {stripMarkdown(
                           getLocalizedDescription(
                             toolDescriptions,

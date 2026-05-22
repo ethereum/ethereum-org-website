@@ -280,15 +280,10 @@ const VideoGalleryFilter = ({
               </CardBanner>
               <CardContent>
                 <CardTitle variant="semibold">{video.title}</CardTitle>
-                <CardParagraph
-                  variant="light"
-                  size="sm"
-                  className="line-clamp-2"
-                >
+                <CardParagraph size="sm" className="line-clamp-2">
                   {video.description}
                 </CardParagraph>
                 <CardParagraph
-                  variant="light"
                   size="sm"
                   className="inline-flex items-center gap-1"
                 >

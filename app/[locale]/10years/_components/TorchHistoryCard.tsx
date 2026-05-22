@@ -65,8 +65,8 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         <CardTitle variant="semibold" spacing="none">
           {name}
         </CardTitle>
-        <CardParagraph>{role}</CardParagraph>
-        <CardParagraph size="sm" variant="light">
+        <CardParagraph textColor="body">{role}</CardParagraph>
+        <CardParagraph size="sm">
           From {formatTorchDate(from)}
           {to !== undefined ? ` to ${formatTorchDate(to)}` : " to present"}
         </CardParagraph>

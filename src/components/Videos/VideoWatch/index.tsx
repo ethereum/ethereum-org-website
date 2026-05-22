@@ -57,7 +57,7 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
 
       <CardContent spacing="sm">
         <CardTitle variant="semibold">{frontmatter.title}</CardTitle>
-        <CardParagraph variant="light">
+        <CardParagraph>
           {frontmatter.description.split(/(?<=\.)\s/)[0]}
         </CardParagraph>
         {hasTranscript && (

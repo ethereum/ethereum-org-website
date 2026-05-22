@@ -31,9 +31,7 @@ const MarkdownCard = ({
     )}
     <CardContent>
       {title && <CardTitle>{title}</CardTitle>}
-      {description && (
-        <CardParagraph variant="light">{description}</CardParagraph>
-      )}
+      {description && <CardParagraph>{description}</CardParagraph>}
       {children}
     </CardContent>
   </Card>
