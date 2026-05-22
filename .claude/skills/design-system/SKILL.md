@@ -56,6 +56,7 @@ Used in 5 places. Don't introduce new uses. Use Tailwind `dark:` variant + seman
 ### Subtle component behaviors
 
 - `<Button isSecondary>` only takes effect on `outline` and `ghost` variants. Silent no-op on `solid`/`link`.
+- **`Card` is variant-driven, not `className`-driven.** Padding, spacing, background, border-radius, and text color are owned by `background` / `spacing` variants and the CSS vars they set (`--card-pad`, `--content-space`, `--banner-radius`). Adjusting any of those via `className` on `Card`/`CardContent`/`CardHeader`/`CardFooter` is the wrong escape hatch — add a variant case in `card.tsx` instead. See `references/card-walkthrough.md`.
 - `<CardBanner fit="contain">` with a single `<Image>` child auto-clones it as a blurred backdrop. Pass two children and you lose this magic.
 - `LinkBox` requires a `LinkOverlay` somewhere inside; without it, the whole-card-clickable pattern doesn't work.
 - `commonControlClasses` in `ui/checkbox.tsx` is shared by `Switch`. Editing it changes both.

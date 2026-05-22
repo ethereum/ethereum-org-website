@@ -59,6 +59,7 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardEmoji,
   CardFooter,
   CardHeader,
   CardParagraph,
@@ -66,27 +67,64 @@ import {
 } from "@/components/ui/card"
 ```
 
-The canonical card primitive. `rounded-2xl text-body`. With `href`, wraps in `BaseLink` and propagates a `group/link` class so descendant text can react to card-level hover.
+The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card-pad`, `--content-space`, `--banner-radius`) so children respond automatically when you change a parent variant. `Card` with `href` automatically wraps in `BaseLink` and adds a `group/link` class so descendants can react to card-level hover/focus.
+
+**Core principle**: pick variants, don't reach for `className`. If you're tempted to override padding, spacing, background, border-radius, or text color via `className`, the variant matrix is probably missing a case — add the variant in `card.tsx` instead. See `card-walkthrough.md` for the full guide.
 
 ```tsx
-<Card href="/x">
-  <CardBanner background="accent-a">
-    <Image src="..." alt="..." />
-  </CardBanner>
+<Card href="/x" background="base" spacing="base">
+  <CardHeader>
+    <CardBanner background="accent-a"><Image src="..." alt="..." /></CardBanner>
+  </CardHeader>
   <CardContent>
     <CardTitle>Title</CardTitle>
     <CardParagraph>Description</CardParagraph>
   </CardContent>
+  <CardFooter>
+    <ButtonLink href="...">CTA</ButtonLink>
+  </CardFooter>
 </Card>
 ```
 
-**`CardBanner` props**:
-- `background`: `accent-a | accent-b | accent-c | primary | body | none` (default `body`)
-- `size`: `full | thumbnail` (default `full`)
-- `fit`: `cover | contain` (default `cover`)
-- **Magic**: `fit="contain"` with a single `<Image>` child auto-clones it as a blurred backdrop.
+**`Card` variants**:
+- `background`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `header-bar` (highlight only on header, bordered card, paired with a `CardHeader variant="bar"`) | `none` (no bg; auto-widens `--banner-radius`) | `gradient` (avoid unless asked) | `radial-a` (avoid unless asked)
+- `spacing`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
+- `orientation`: `col (default) | row | unset`. Only `col` is in production use; coordinate with design before reaching for `row`.
+- `hoverEffect`: proof-of-concept, **not in production use**. May be removed before merge.
+- `href`: pass to wrap in `BaseLink` and get whole-card-clickable behavior with `group/link` propagation.
 
-**`CardTitle` variants**: `semibold | bold | black` (default `bold`).
+**`CardHeader` variants**:
+- `variant="bar"`: makes it `flex flex-row items-center` with a bottom border — for icon+text bar headers, pairs with `Card background="header-bar"`.
+- `spacing="inherit"`: keep `padding-bottom`. Default zeroes it so the only gap between Header and Content is Content's `padding-top`.
+
+**`CardContent` variants**:
+- `spacing`: `base (default) | lg | md | sm | xs | inherit`. Overrides `--content-space` for tighter or looser child rhythm than the Card-level default.
+- Expands to fill height (`flex-1`) so `CardFooter` pushes to the bottom and footers align across cards of varying content.
+- Default text color is `text-body-medium`; `CardTitle` and `<strong>` re-assert `text-body`. Don't set per-paragraph colors.
+
+**`CardFooter` variants**:
+- `buttons`: `full (default)` stretches buttons/ButtonLinks to full width with centered text | `compact` sizes them to fit | `inherit` does nothing.
+- `spacing="inherit"`: keep `padding-top` (rare).
+- `rounded="fit"`: proof-of-concept, **not implemented**. Don't reach for it.
+
+**`CardBanner` variants**:
+- `background`: `body (default)` | `accent-a` | `accent-b` | `accent-c` | `primary` | `none`. `none` only when the image won't cover the full rectangle.
+- `size`: `full | lg | base | sm | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm.
+- `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
+- `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
+- Placement: inside `CardHeader` for padded; as a direct child of `Card` (pair with `Card spacing="xs"`) for edge-to-edge.
+
+**`CardTitle` variants**:
+- `variant`: `semibold | bold (default) | black`.
+- `spacing` (gap before a following `CardParagraph` only): `half (default) | quarter | none | inherit`. Uses `:has(+...)` selector.
+- **`asChild`**: required when `<h3>` would break the document's heading outline. Pass your own semantic tag inside.
+
+**`CardParagraph` variants**:
+- `size`: omit (16px / `text-body-medium`) | `sm` (14px). Avoid other sizes.
+- `variant`: `uppercase | subtitle`.
+- `textColor="body"`: re-assert base body color (rare; inherits correctly by default).
+
+**`CardEmoji`**: wraps `<Emoji text=":rocket:" />` in a fixed-size `div` to prevent layout shift on client-side hydration. Typically lives in `CardHeader`.
 
 ### `Section`
 
