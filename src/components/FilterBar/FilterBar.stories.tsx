@@ -1,24 +1,7 @@
-import { useState } from "react"
-import type { Meta } from "@storybook/nextjs"
+import { useArgs } from "storybook/preview-api"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import FilterBar from "./"
-
-const meta = {
-  title: "Molecules / Navigation / FilterBar",
-  component: FilterBar,
-  parameters: {
-    layout: "fullscreen",
-  },
-  decorators: [
-    (Story) => (
-      <div className="w-full max-w-screen-2xl p-4">
-        <Story />
-      </div>
-    ),
-  ],
-} satisfies Meta<typeof FilterBar>
-
-export default meta
 
 const sampleItems = [
   { value: "defi", label: "DeFi" },
@@ -46,53 +29,64 @@ const manyItems = [
   { value: "wallets", label: "Wallets" },
 ]
 
-export const Default = {
-  render: () => {
-    const [value, setValue] = useState<string>()
-    const filteredCount = value ? 12 : 48
+const meta = {
+  title: "Molecules / Navigation / FilterBar",
+  component: FilterBar,
+  parameters: {
+    layout: "fullscreen",
+  },
+  decorators: [
+    (Story) => (
+      <div className="w-full max-w-screen-2xl p-4">
+        <Story />
+      </div>
+    ),
+  ],
+  args: {
+    onValueChange: () => {},
+  },
+  render: (args) => {
+    const [{ value }, updateArgs] = useArgs<{ value?: string }>()
+    const count = value ? 12 : args.totalCount
 
     return (
       <FilterBar
-        items={sampleItems}
+        {...args}
         value={value}
-        onValueChange={setValue}
-        count={filteredCount}
-        totalCount={48}
+        count={count}
+        onValueChange={(next) => updateArgs({ value: next })}
       />
     )
   },
-}
+} satisfies Meta<typeof FilterBar>
 
-export const WithActiveFilter = {
-  render: () => {
-    const [value, setValue] = useState<string | undefined>("defi")
-    const filteredCount = value ? 12 : 48
+export default meta
 
-    return (
-      <FilterBar
-        items={sampleItems}
-        value={value}
-        onValueChange={setValue}
-        count={filteredCount}
-        totalCount={48}
-      />
-    )
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {
+  args: {
+    items: sampleItems,
+    value: undefined,
+    count: 48,
+    totalCount: 48,
   },
 }
 
-export const ManyItems = {
-  render: () => {
-    const [value, setValue] = useState<string>()
-    const filteredCount = value ? 8 : 120
+export const WithActiveFilter: Story = {
+  args: {
+    items: sampleItems,
+    value: "defi",
+    count: 12,
+    totalCount: 48,
+  },
+}
 
-    return (
-      <FilterBar
-        items={manyItems}
-        value={value}
-        onValueChange={setValue}
-        count={filteredCount}
-        totalCount={120}
-      />
-    )
+export const ManyItems: Story = {
+  args: {
+    items: manyItems,
+    value: undefined,
+    count: 120,
+    totalCount: 120,
   },
 }
