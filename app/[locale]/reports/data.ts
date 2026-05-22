@@ -30,13 +30,13 @@ export type Report = {
   publisher: string
   /** Concise date string e.g. "Apr 2025" (shown as the card tag) */
   date: string
-  /** Publisher category — used for grouping/filtering */
+  /** Publisher category, used for grouping or filtering. */
   category: ReportCategory
   /** Destination link. Internal entries point to /reports/<slug>/. */
   href: string
   /** Internal entries open a subpage; external entries open the publisher URL in a new tab. */
   internal?: boolean
-  /** Cover image — publisher OG image or first-page render of the source PDF */
+  /** Cover image. Publisher OG image or first-page render of the source PDF. */
   imgSrc: StaticImageData
 }
 
@@ -45,9 +45,9 @@ export type Report = {
  *
  * Ordering: internal EF reports first, then external by date desc.
  *
- * Every external entry has been independently verified — URL fetched, title /
- * author / date confirmed on the publisher site, Ethereum content confirmed
- * substantive. See PR description for the full audit.
+ * Every external entry has been independently verified. URL fetched, title,
+ * author, and date confirmed on the publisher site, Ethereum content
+ * confirmed substantive. See PR description for the full audit.
  */
 export const reports: Report[] = [
   {
@@ -138,7 +138,7 @@ export const reports: Report[] = [
   {
     slug: "bis-papers-156-defi-functions-stability",
     title:
-      "BIS Papers 156: Cryptocurrencies and decentralised finance — functions and financial stability implications",
+      "Cryptocurrencies and decentralised finance: functions and financial stability implications",
     publisher: "Bank for International Settlements",
     date: "Apr 2025",
     category: "central-bank",
