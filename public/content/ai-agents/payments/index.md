@@ -157,7 +157,7 @@ x402 supports any ERC-20 token on EVM chains via two transfer methods, selected 
 | DAI | Permit2 | One-time on-chain approval required; then gasless |
 | Any ERC-20 | Permit2 | x402 supports any token a facilitator chooses to accept |
 
-<Alert className="my-8">
+<Alert>
 <AlertContent>
 For supported tokens, contract addresses, and transfer method requirements per network, see the [x402 network and token support documentation](https://docs.x402.org/core-concepts/network-and-token-support).
 </AlertContent>

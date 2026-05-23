@@ -54,11 +54,14 @@ Popular options with native Ethereum support include:
 
 If you are undecided, ElizaOS and GOAT are generally considered the most beginner-friendly for developers coming from a web3 background.
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Warning!**
-
+<AlertTitle>
+Warning!
+</AlertTitle>
+<AlertDescription>
 Before connecting any third-party plugin or protocol adapter to your agent, review what permissions each tool requests. A malicious or misconfigured plugin can instruct your agent to interact with unintended contracts. Only include plugins from sources you have audited or that are widely reviewed in the ecosystem.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
@@ -138,11 +141,14 @@ The addresses in this section refer to your **agent's smart account address** (t
 
 ### Testnet (recommended starting point) {#testnet-funding}
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Local testing with Anvil/Hardhat**
-
+<AlertTitle>
+Local testing with Anvil/Hardhat
+</AlertTitle>
+<AlertDescription>
 If you test your agent against a local blockchain node (like Anvil), be aware that LLMs can discover and use privileged debug methods (for example, `anvil_setBalance`) to "cheat" simulations rather than executing proper contract logic. To prevent this, route your agent's RPC calls through a restrictive proxy (like Veto) that blocks non-standard JSON-RPC methods. See the [AI agents: Wallets](/ai-agents/wallets/) for more on local testing security.
+</AlertDescription>
 </AlertContent>
 </Alert>
 

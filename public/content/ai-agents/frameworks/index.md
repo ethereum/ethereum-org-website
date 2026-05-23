@@ -30,11 +30,14 @@ This page covers a selection of commonly-used frameworks with active Ethereum in
 | **[GAME](https://docs.game.virtuals.io/)** | TypeScript / no-code | ACP v2.0 hook contracts (Base Mainnet) | Autonomous game agents, Virtuals ecosystem — ecosystem-specific, not general-purpose EVM |
 | **[LangChain](https://python.langchain.com/)** | Python / TypeScript | Via GOAT's LangChain adapter or Web3 tools | General-purpose agents, largest community — use GOAT alongside LangChain for EVM tool coverage |
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Maturity note**
-
+<AlertTitle>
+Maturity note
+</AlertTitle>
+<AlertDescription>
 This ecosystem evolves quickly. Package names, API surfaces, and EVM plugin versions can change between minor releases. Always verify integration patterns against each framework's official documentation before building.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
@@ -96,11 +99,14 @@ GOAT is the recommended starting point for production EVM agent deployments. It 
 
 **Best for:** Production EVM agents that need broad DeFi protocol coverage out of the box, or TypeScript and Python teams that want a single framework compatible with the Vercel AI SDK, LangChain, and LlamaIndex.
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Package names**
-
+<AlertTitle>
+Package names
+</AlertTitle>
+<AlertDescription>
 GOAT adapter package names follow the pattern `@goat-sdk/adapter-[ai-sdk-name]`. Verify current package names against the [GOAT repository](https://github.com/goat-sdk/goat) before installing.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
@@ -189,11 +195,14 @@ alloy = { version = "0.9", features = ["full"] }
 tokio = { version = "1", features = ["full"] }
 ```
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Verify crate versions**
-
+<AlertTitle>
+Verify crate versions
+</AlertTitle>
+<AlertDescription>
 riglr is under active development. Confirm current crate names and versions against the [riglr repository](https://github.com/riglr/riglr) before adding them to your project.
+</AlertDescription>
 </AlertContent>
 </Alert>
 

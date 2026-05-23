@@ -55,11 +55,14 @@ Prediction market agents act on external information to take financial positions
 
 Agents can hire other agents for specialized tasks, paying per output using x402 machine payments. This enables a **division of labor that mirrors human organizational structures, where a coordinator agent delegates specialized subtasks** to specialist agents and aggregates the results. The coordinator discovers providers via the [ERC-8004 Identity Registry](/ai-agents/identity/), checks reputation scores, pays per result via [x402](/ai-agents/payments/), and posts feedback after delivery. **No human is required at any step** once the coordinator's strategy is initialized. See [AI agents: Identity — The protocol stack](/ai-agents/identity/#protocol-stack) for the full step-by-step loop.
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Maturity note**
-
+<AlertTitle>
+Maturity note
+</AlertTitle>
+<AlertDescription>
 **ERC-8004** (agent identity registry) is live on 20+ chains as of January 2026, with 20,000+ feedback entries recorded, primarily on Base. **x402** machine payments reached production-ready status in Q1 2026. However, end-to-end agent-to-agent commerce workflows, where agents autonomously discover, hire, and pay other agents, are still early. Treat the five-step pattern above as an architectural target, not a widely battle-tested production pattern.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
@@ -76,11 +79,14 @@ DAO governance requires ongoing attention: reading proposals, evaluating their a
 - Voting autonomously within a defined strategy (for example, always vote for proposals that reduce protocol fees below a threshold).
 - Delegating voting power to agent addresses that operate on behalf of token-holding humans.
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Governance risk**
-
+<AlertTitle>
+Governance risk
+</AlertTitle>
+<AlertDescription>
 Fully autonomous governance agents carry governance risk. A logic error or prompt injection can cause an agent to vote against its owner's intent. Production governance agents typically use human-in-the-loop escalation for high-stakes votes and operate autonomously only for routine, low-impact proposals.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
@@ -108,11 +114,14 @@ AI-generated creative work has a provenance problem: anyone can claim that a spe
 **Example: Botto**
 [Botto](https://botto.com/) is a decentralized autonomous artist. It's an AI system that generates visual art and mints it onchain. The community votes on which outputs to mint, and the agent's creative direction is influenced by onchain feedback. Botto's outputs have sold as NFTs, demonstrating that markets are willing to value AI-generated work when its provenance and production process are publicly verifiable.
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Maturity note**
-
+<AlertTitle>
+Maturity note
+</AlertTitle>
+<AlertDescription>
 Onchain provenance for AI-generated creative work is still an emerging practice. Standards for linking model outputs to a specific agent identity and generation parameters are not yet finalized. Botto represents one working implementation. Broader tooling and conventions for this pattern are actively developing.
+</AlertDescription>
 </AlertContent>
 </Alert>
 

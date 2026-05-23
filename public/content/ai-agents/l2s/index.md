@@ -98,7 +98,7 @@ ZK rollups may require **specific compiler tooling** and have minor EVM compatib
 
 Each L2 publishes its own RPC endpoints, chain IDs, and block explorer URLs in its official documentation. [Chainlist](https://chainlist.org) provides a searchable directory of all EVM-compatible networks with one-click wallet configuration.
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
 For production agent deployments, use a dedicated RPC provider rather than public endpoints. Public RPCs have rate limits and offer no uptime guarantees. Providers such as Alchemy, Infura, and QuickNode support most major L2s.
 </AlertContent>

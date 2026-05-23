@@ -25,11 +25,14 @@ Ethereum provides the infrastructure these agents need: programmable wallets tha
 
 This builder hub is the starting point for developers building production AI agents on Ethereum.
 
-<Alert className="my-8">
+<Alert>
 <AlertContent>
-**New to AI on Ethereum?**
-
+<AlertTitle>
+New to AI on Ethereum?
+</AlertTitle>
+<AlertDescription>
 If you want to learn how AI and Ethereum work together as a use case, visit the [Decentralized AI](/decentralized-ai/) overview page.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
@@ -115,11 +118,14 @@ The standards and protocols that power AI agents on Ethereum have crossed from r
 - [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
 - [Layer 2s](/ai-agents/l2s/) — How to choose an L2 for your agent based on cost, throughput, privacy, and ecosystem fit.
 
-<Alert variant="warning" className="my-8">
+<Alert variant="warning">
 <AlertContent>
-**Maturity note**
-
+<AlertTitle>
+Maturity note
+</AlertTitle>
+<AlertDescription>
 AI agent infrastructure on Ethereum ranges from production-ready standards (ERC-4337, stablecoin payments) to actively experimental technology (zkML at scale, agent-to-agent commerce). Each sub-page in this hub flags the maturity level of the patterns it covers.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
