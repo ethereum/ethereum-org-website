@@ -33,11 +33,11 @@ This distinction matters for how zkML is used in practice. It is most valuable f
 
 The following tools have production-ready APIs and are suitable for builder integration as of early 2026:
 
-| Tool | Description | Maturity |
-| :--- | :--- | :--- |
-| **[EZKL](https://ezkl.xyz/)** | Converts ONNX models to ZK circuits; CLI and Python SDK; GPU-accelerated with CUDA kernel support | Production-ready — audited, deployed in adversarial environments |
-| **[Risc Zero](https://dev.risczero.com/)** | General-purpose ZK proofs via zkVM; supports arbitrary Rust programs with onchain verifier contracts | Production-ready (post-1.0 release) |
-| **[SP1 (Succinct)](https://docs.succinct.xyz/)** | ZK proving system for RISC-V programs; multilinear polynomial-based proof system | Production-ready (SP1 Hypercube, launched mainnet Feb 2026) |
+| Tool                                             | Description                                                                                          | Maturity                                                         |
+| :----------------------------------------------- | :--------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------- |
+| **[EZKL](https://ezkl.xyz/)**                    | Converts ONNX models to ZK circuits; CLI and Python SDK; GPU-accelerated with CUDA kernel support    | Production-ready — audited, deployed in adversarial environments |
+| **[Risc Zero](https://dev.risczero.com/)**       | General-purpose ZK proofs via zkVM; supports arbitrary Rust programs with onchain verifier contracts | Production-ready (post-1.0 release)                              |
+| **[SP1 (Succinct)](https://docs.succinct.xyz/)** | ZK proving system for RISC-V programs; multilinear polynomial-based proof system                     | Production-ready (SP1 Hypercube, launched mainnet Feb 2026)      |
 
 **Emerging tools:** [DeepProve (Lagrange)](https://lagrange.dev/deepprove) has demonstrated transformer-scale proving (GPT-2) but is not yet generally available. [Jolt (a16z)](https://jolt.a16zcrypto.com/) added native zero-knowledge privacy support in March 2026 but remains in alpha. Neither is recommended for production agent deployments today.
 
@@ -89,12 +89,12 @@ TEE attestations can be published onchain as a verifiable claim about the agent'
 
 ### TEE providers {#tee-providers}
 
-| Provider | Notes |
-| :--- | :--- |
+| Provider               | Notes                                                                        |
+| :--------------------- | :--------------------------------------------------------------------------- |
 | **AWS Nitro Enclaves** | Easiest to deploy; well-documented; strong isolation from the EC2 hypervisor |
-| **Intel TDX** | Broader hardware support; used in GCP Confidential VMs |
-| **AMD SEV** | Hardware-level memory encryption; used in Azure Confidential VMs |
-| **Phala Network** | TEE-based smart contracts; onchain attestation via the Phala Protocol |
+| **Intel TDX**          | Broader hardware support; used in GCP Confidential VMs                       |
+| **AMD SEV**            | Hardware-level memory encryption; used in Azure Confidential VMs             |
+| **Phala Network**      | TEE-based smart contracts; onchain attestation via the Phala Protocol        |
 
 [Unichain](https://docs.unichain.org/) uses TEE-based block ordering to provide **MEV-resistant transaction sequencing** via Flashbots Rollup-Boost, demonstrating how TEE guarantees can be integrated into L2 protocol design, not just agent deployments.
 
@@ -130,11 +130,13 @@ Most production agents in 2026 do not use verifiable inference. Integrating zkML
 </Alert>
 
 **Use zkML when:**
+
 - The agent controls funds or executes consequential transactions that require verifiable policy compliance.
 - You need asynchronous proof submission, meaning the agent acts, generates a proof offline, and the proof is verified before a subsequent dependent action.
 - The model is small and bounded: decision trees, compact classifiers, or fraud detectors under a few thousand parameters.
 
 **Use TEEs when:**
+
 - The agent's model weights or strategy are proprietary and cannot be revealed, but the agent needs to prove it is running unmodified code.
 - Real-time operation is required and zkML proving latency is not acceptable.
 - The hardware supply chain risk of TEEs is acceptable for your threat model.
@@ -160,4 +162,3 @@ Three mechanisms: (1) **Onchain transaction history** — every transaction sign
 - [The promise and challenges of crypto + AI applications](https://vitalik.eth.limo/general/2024/01/30/cryptoai.html) — Vitalik Buterin's foundational analysis of where cryptographic verification adds value to AI systems and where it does not.
 - [The Definitive Guide to ZKML (2025)](https://blog.icme.io/the-definitive-guide-to-zkml-2025/) — Comprehensive technical overview of the zkML landscape, covering proving infrastructure evolution, tool comparisons, and performance benchmarks from 2023 to 2025.
 - [Agent identity (ERC-8004)](/ai-agents/identity/) — The onchain agent identity standard, including the Validation Registry design that will route verification requests to delegated verifier contracts once finalized.
-

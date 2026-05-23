@@ -17,7 +17,7 @@ This guide walks through the four steps required to deploy your first autonomous
 
 <VideoWatch slug="ai-agents-ethereum-vito-rivabella" />
 
-Before going further, it is worth understanding why this stack differs from standard Ethereum development. When a human signs a transaction, they act as a natural safety checkpoint. An autonomous agent does not. 
+Before going further, it is worth understanding why this stack differs from standard Ethereum development. When a human signs a transaction, they act as a natural safety checkpoint. An autonomous agent does not.
 
 **Giving an agent an unconstrained private key is equivalent to giving it unlimited spending authority.** A single hallucination, a logic error, or a prompt injection can drain an account. The patterns below are designed to prevent that.
 
@@ -41,10 +41,11 @@ BUNDLER_RPC=https://rpc.zerodev.app/api/v2/bundler/<your-project-id>
 PAYMASTER_RPC=https://rpc.zerodev.app/api/v2/paymaster/<your-project-id>
 ```
 
-**A framework decision.** An agent framework handles the language model interface, tool orchestration, and the logic loop that drives your agent. The choice you make here shapes which wallet SDK integrates most naturally. 
-*See [AI agents: Frameworks](/ai-agents/frameworks/) for a full comparison.* 
+**A framework decision.** An agent framework handles the language model interface, tool orchestration, and the logic loop that drives your agent. The choice you make here shapes which wallet SDK integrates most naturally.
+_See [AI agents: Frameworks](/ai-agents/frameworks/) for a full comparison._
 
 Popular options with native Ethereum support include:
+
 - **[ElizaOS](https://elizaos.github.io/eliza/)** — Plugin-based, TypeScript, EVM plugin for smart account support.
 - **[GOAT](https://ohmygoat.dev/)** — TypeScript, 200+ protocol plugins, compatible with all major EVM wallet SDKs.
 - **[Rig](https://rig.rs/)** — Rust, high-performance, suited to agents with latency constraints.
@@ -65,7 +66,7 @@ Before connecting any third-party plugin or protocol adapter to your agent, revi
 
 ## Step 1: Create an agent wallet {#create-wallet}
 
-**Do not give your agent a raw externally owned account (EOA) private key.** 
+**Do not give your agent a raw externally owned account (EOA) private key.**
 
 EOAs have no native concept of spending limits or allowlists. Under account abstraction standards (primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/)), you can instead deploy a **smart account** that enforces your agent's operational policy at the contract level. Use ERC-4337 when deploying a new agent from scratch (new contract address, maximum flexibility). Use EIP-7702 when upgrading an existing EOA without migrating assets. For a full comparison of both standards, session key policies, and production key management, see [AI agents: Wallets](/ai-agents/wallets/).
 
@@ -133,7 +134,7 @@ If your project has different requirements, such as existing multi-signature gov
 
 ## Step 2: Fund your wallet {#fund-wallet}
 
-Your agent's smart account needs ETH to pay for gas and to fulfill any onchain operations it runs. During development and learning, fund a testnet account rather than a Mainnet account. Testnet ETH has no real value, which means experimentation and mistakes carry no financial risk. 
+Your agent's smart account needs ETH to pay for gas and to fulfill any onchain operations it runs. During development and learning, fund a testnet account rather than a Mainnet account. Testnet ETH has no real value, which means experimentation and mistakes carry no financial risk.
 
 The addresses in this section refer to your **agent's smart account address** (the contract address printed in Step 1), not the owner's externally owned account (EOA).
 
@@ -187,6 +188,7 @@ const kernelClient = createKernelAccountClient({
   },
 })
 ```
+
 A Paymaster is a smart contract that pays gas fees on behalf of your agent's account, removing the need for the agent to maintain an ETH balance for each operation. Paymasters are available on testnets through [ZeroDev](https://zerodev.app/), [Biconomy](https://www.biconomy.io/), and [Pimlico](https://www.pimlico.io/). On Mainnet, gas sponsorship is typically funded by your application budget. On Mainnet, gas sponsorship is funded from your application budget and configured through the same providers.
 
 ### L2 funding for low-cost development {#l2-funding}
@@ -251,13 +253,13 @@ For installation, adapter wiring, and working integration guides for ElizaOS, Ri
 
 With a connected framework, your agent can sign and submit transactions. Before moving to any production-like environment, configure hard limits on what it is allowed to do. **This step is not optional.** An unconstrained agent with signing authority and no spending policy is a single logic error or prompt injection away from draining its account.
 
-**Session keys** are the primary mechanism. A session key is a time-bounded, policy-bounded signing credential that authorizes the agent to act within a defined scope without exposing the master private key. 
+**Session keys** are the primary mechanism. A session key is a time-bounded, policy-bounded signing credential that authorizes the agent to act within a defined scope without exposing the master private key.
 
 A well-structured session key policy specifies a maximum spend per transaction, a rolling time-window budget, a contract allowlist, and a validity window. If the key is compromised, the blast radius is limited to those parameters. The smart contract will reject any UserOperation that violates them regardless of what the LLM instructs.
 
 [ERC-7715](https://eips.ethereum.org/EIPS/eip-7715) formalizes the wallet-level API for requesting these scoped permissions; it is in draft and being adopted by major smart wallet providers.
 
-**Pre-execution simulation** is required before submitting any `writeContract` call. 
+**Pre-execution simulation** is required before submitting any `writeContract` call.
 
 Simulation catches reverts, bad parameters, and policy violations before they cost gas or damage state. An agent that skips simulation is an agent that will eventually drain funds on a failed transaction.
 
@@ -325,6 +327,5 @@ Start on Sepolia testnet. Testnet ETH has no real value, so experimentation carr
 
 ## Further reading {#further-reading}
 
-- [AI Agents in Cryptocurrency: Architecture, Integration, and Best Practices](https://medium.com/@gwrx2005/ai-agents-in-cryptocurrency-architecture-integration-and-best-practices-a107429bf780) - A comprehensive overview of AI agents in cryptocurrency, covering their architecture, integration with blockchain, and best practices. 
-- [When AI Meets Blockchain: A Guide to Securing the Next Frontier](https://quantstamp.com/blog/when-ai-meets-blockchain-a-guide-to-securing-the-next-frontier) - Exploring the security vulnerabilities introduced by integrating autonomous AI agents into blockchain ecosystems, and outlining mitigation strategies developers can use to safeguard. 
-
+- [AI Agents in Cryptocurrency: Architecture, Integration, and Best Practices](https://medium.com/@gwrx2005/ai-agents-in-cryptocurrency-architecture-integration-and-best-practices-a107429bf780) - A comprehensive overview of AI agents in cryptocurrency, covering their architecture, integration with blockchain, and best practices.
+- [When AI Meets Blockchain: A Guide to Securing the Next Frontier](https://quantstamp.com/blog/when-ai-meets-blockchain-a-guide-to-securing-the-next-frontier) - Exploring the security vulnerabilities introduced by integrating autonomous AI agents into blockchain ecosystems, and outlining mitigation strategies developers can use to safeguard.

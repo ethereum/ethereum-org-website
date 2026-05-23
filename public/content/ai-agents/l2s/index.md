@@ -42,13 +42,13 @@ You can also browse the full [Ethereum layer 2 networks directory](/layer-2/netw
 
 ### What to look for {#what-to-look-for}
 
-| Criterion | Why it matters for agents | Where to check |
-| :--- | :--- | :--- |
-| **Rollup type** | Optimistic rollups are broadly EVM-compatible and deploy like Mainnet. ZK rollups may require specific compilers and have minor opcode differences. | [L2Beat risk analysis](https://l2beat.com/scaling/risk) |
-| **Block time** | Agents acting on confirmed state need fast finality. Block times range from sub-second to several seconds across L2s. | Each L2's documentation |
-| **Agent tooling ecosystem** | Some L2s have concentrated communities building agent infrastructure (identity registries, payment protocol integrations, SDKs). Deploying where the tooling exists reduces what you build from scratch. | L2 developer documentation, ecosystem directories |
-| **Withdrawal finality** | Optimistic rollups have a challenge window (typically seven days) for withdrawals to Mainnet. ZK rollups reach cryptographic finality faster. This matters for agents that bridge assets frequently. | [L2Beat finality dashboard](https://l2beat.com/scaling/finality) |
-| **Trust assumptions** | Each L2 makes different tradeoffs around sequencer centralization, data availability, and upgrade authority. An agent holding significant value should deploy on an L2 whose trust model matches the risk profile. | [L2Beat risk analysis](https://l2beat.com/scaling/risk) |
+| Criterion                   | Why it matters for agents                                                                                                                                                                                          | Where to check                                                   |
+| :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------- |
+| **Rollup type**             | Optimistic rollups are broadly EVM-compatible and deploy like Mainnet. ZK rollups may require specific compilers and have minor opcode differences.                                                                | [L2Beat risk analysis](https://l2beat.com/scaling/risk)          |
+| **Block time**              | Agents acting on confirmed state need fast finality. Block times range from sub-second to several seconds across L2s.                                                                                              | Each L2's documentation                                          |
+| **Agent tooling ecosystem** | Some L2s have concentrated communities building agent infrastructure (identity registries, payment protocol integrations, SDKs). Deploying where the tooling exists reduces what you build from scratch.           | L2 developer documentation, ecosystem directories                |
+| **Withdrawal finality**     | Optimistic rollups have a challenge window (typically seven days) for withdrawals to Mainnet. ZK rollups reach cryptographic finality faster. This matters for agents that bridge assets frequently.               | [L2Beat finality dashboard](https://l2beat.com/scaling/finality) |
+| **Trust assumptions**       | Each L2 makes different tradeoffs around sequencer centralization, data availability, and upgrade authority. An agent holding significant value should deploy on an L2 whose trust model matches the risk profile. | [L2Beat risk analysis](https://l2beat.com/scaling/risk)          |
 
 ## Choosing by workload type {#workload-types}
 
@@ -62,7 +62,7 @@ Agents executing many small operations, like DeFi automation, data purchases via
 
 Agents handling confidential model inputs, user data, or proprietary strategy require execution environments where **neither the cloud provider nor the node operator can observe the agent's inputs or logic**.
 
-**TEEs are the primary mechanism.** Some L2s have built TEE properties directly into their sequencer architecture, for example, using TEE-based block ordering to provide MEV-resistant transaction sequencing, where transactions are ordered by time of arrival rather than by gas price. Time-of-arrival ordering eliminates frontrunning at the protocol level. 
+**TEEs are the primary mechanism.** Some L2s have built TEE properties directly into their sequencer architecture, for example, using TEE-based block ordering to provide MEV-resistant transaction sequencing, where transactions are ordered by time of arrival rather than by gas price. Time-of-arrival ordering eliminates frontrunning at the protocol level.
 
 For agents that need to keep model weights or strategy private while still proving execution integrity, **hardware-based TEE infrastructure can be combined with any L2** for off-chain private computation with onchain settlement. See [AI agents: Verification](/ai-agents/verification/#tees) for implementation details.
 
@@ -81,6 +81,7 @@ Agents that coordinate across multiple protocols or chains need **reliable bridg
 Deploy exactly as you would on Mainnet. **Change only the RPC URL and chain ID**. Smart contracts, tooling, and wallet infrastructure work identically.
 
 **Common gotchas across optimistic rollups:**
+
 - Some optimistic rollups return the L1 block number from `block.number`, not the L2 block number. Use `block.timestamp` for time-based logic to avoid unexpected behavior.
 - L2s with TEE-based transaction ordering sequence by arrival time, not gas price. On those networks, paying a priority fee above the base fee is wasted.
 
@@ -132,7 +133,6 @@ Optimistic rollups have a challenge window (typically seven days) before withdra
 
 - [L2Beat](https://l2beat.com) — Security ratings, TVL, and risk analysis for all L2s; the authoritative reference for comparing rollup trust assumptions before committing to a deployment target.
 - [growthepie](https://www.growthepie.com/) — Transaction data and cost explorer for all L2s and Mainnet.
-- [Autonomous Agents on Blockchains: Standards, Execution Models, and Trust Boundaries](https://arxiv.org/html/2601.04583v1) — Reviewing current standards, execution models, and trust boundaries in autonomous agent research and development, including L2s for AI agent scaling, L2 selection criteria, security model considerations, and more. 
+- [Autonomous Agents on Blockchains: Standards, Execution Models, and Trust Boundaries](https://arxiv.org/html/2601.04583v1) — Reviewing current standards, execution models, and trust boundaries in autonomous agent research and development, including L2s for AI agent scaling, L2 selection criteria, security model considerations, and more.
 - [Scaling Ethereum](/developers/docs/scaling/) — Technical overview of rollups, sidechains, and data availability solutions that underpin L2 architecture.
 - [Layer 2 overview](/layer-2/) — ethereum.org introduction to how Ethereum scaling works, covering optimistic and ZK rollup mechanisms.
-

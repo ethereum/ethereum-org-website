@@ -19,14 +19,14 @@ This page covers a selection of commonly-used frameworks with active Ethereum in
 
 ## Framework directory {#framework-directory}
 
-| Framework | Language | Ethereum support | Best for |
-| :--- | :--- | :--- | :--- |
-| **[GOAT](https://ohmygoat.dev/)** | TypeScript | Native — 200+ protocol plugins | Production EVM agents, DeFi automation |
-| **[ElizaOS](https://elizaos.github.io/eliza/)** | TypeScript | Plugin-based (EVM plugin, v2+) | Multi-platform social agents |
-| **[Rig](https://rig.rs/)** | Rust | Via alloy / ethers-rs crates | High-performance, latency-sensitive agents |
-| **[Olas](https://olas.network/)** | Python | Native — Pearl app store, onchain registry | Autonomous services with onchain coordination |
-| **[GAME](https://docs.game.virtuals.io/)** | TypeScript / no-code | ACP v2.0 hook contracts (Base Mainnet) | Autonomous game agents, Virtuals ecosystem — ecosystem-specific, not general-purpose EVM |
-| **[LangChain](https://python.langchain.com/)** | Python / TypeScript | Via GOAT's LangChain adapter or Web3 tools | General-purpose agents, largest community — use GOAT alongside LangChain for EVM tool coverage |
+| Framework                                       | Language             | Ethereum support                           | Best for                                                                                       |
+| :---------------------------------------------- | :------------------- | :----------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| **[GOAT](https://ohmygoat.dev/)**               | TypeScript           | Native — 200+ protocol plugins             | Production EVM agents, DeFi automation                                                         |
+| **[ElizaOS](https://elizaos.github.io/eliza/)** | TypeScript           | Plugin-based (EVM plugin, v2+)             | Multi-platform social agents                                                                   |
+| **[Rig](https://rig.rs/)**                      | Rust                 | Via alloy / ethers-rs crates               | High-performance, latency-sensitive agents                                                     |
+| **[Olas](https://olas.network/)**               | Python               | Native — Pearl app store, onchain registry | Autonomous services with onchain coordination                                                  |
+| **[GAME](https://docs.game.virtuals.io/)**      | TypeScript / no-code | ACP v2.0 hook contracts (Base Mainnet)     | Autonomous game agents, Virtuals ecosystem — ecosystem-specific, not general-purpose EVM       |
+| **[LangChain](https://python.langchain.com/)**  | Python / TypeScript  | Via GOAT's LangChain adapter or Web3 tools | General-purpose agents, largest community — use GOAT alongside LangChain for EVM tool coverage |
 
 <Alert variant="warning">
 <AlertContent>
@@ -41,13 +41,13 @@ This ecosystem evolves quickly. Package names, API surfaces, and EVM plugin vers
 
 ## Which framework should I choose? {#choosing-a-framework}
 
-| If you need... | Use |
-| :--- | :--- |
-| Maximum EVM protocol coverage, 200+ pre-built plugins | **GOAT** |
-| Multi-chain social agent (Discord, Twitter, Telegram) | **ElizaOS** |
-| Rust runtime, type safety, or latency under 100ms | **Rig** |
-| Autonomous agent services with onchain coordination | **Olas** |
-| No-code or game-native deployment within the Virtuals ecosystem | **GAME** |
+| If you need...                                                                             | Use           |
+| :----------------------------------------------------------------------------------------- | :------------ |
+| Maximum EVM protocol coverage, 200+ pre-built plugins                                      | **GOAT**      |
+| Multi-chain social agent (Discord, Twitter, Telegram)                                      | **ElizaOS**   |
+| Rust runtime, type safety, or latency under 100ms                                          | **Rig**       |
+| Autonomous agent services with onchain coordination                                        | **Olas**      |
+| No-code or game-native deployment within the Virtuals ecosystem                            | **GAME**      |
 | Python ecosystem and widest LLM/tool community. Pair with GOAT's LangChain adapter for EVM | **LangChain** |
 
 The examples on this page use **GOAT** because it provides 200+ pre-built EVM protocol plugins, is directly compatible with the Vercel AI SDK, and publishes native adapters for LangChain and LlamaIndex, making it a practical starting point for both TypeScript and Python-based pipelines.
@@ -73,7 +73,7 @@ In this pattern, **only the Executor holds signing authority**. Stateless specia
 
 ### Shared-state coordination (onchain) {#shared-state-onchain}
 
-A traditional shared database requires a trusted central coordinator, a single operator all agents agree to rely on. When agents are operated by different parties, or when no single operator should have privileged write access, a smart contract provides neutral shared state instead. 
+A traditional shared database requires a trusted central coordinator, a single operator all agents agree to rely on. When agents are operated by different parties, or when no single operator should have privileged write access, a smart contract provides neutral shared state instead.
 
 All agents read from and write to the same onchain state, eliminating race conditions and producing a tamper-proof audit trail any party can verify. Use this pattern when multiple independent agents must coordinate over a shared resource and you need a canonical, censorship-resistant record that no single operator controls.
 
@@ -181,7 +181,7 @@ Rig is a Rust-based framework suited to agents where latency and type safety are
 
 **Best for:** Agents with latency constraints below 100ms, or teams that require Rust's ownership model and type safety guarantees for production infrastructure. Note that riglr, Rig's Ethereum extension, is under active development. Verify crate versions before production use.
 
-**Ethereum integration:** Rig connects to Ethereum through **riglr** (pronounced "riggler"), its blockchain-specific extension. riglr provides the [`riglr-evm-tools`](https://github.com/riglr/riglr) crate, which wraps the [`alloy`](https://github.com/alloy-rs/alloy) library for type-safe transaction construction and signing. 
+**Ethereum integration:** Rig connects to Ethereum through **riglr** (pronounced "riggler"), its blockchain-specific extension. riglr provides the [`riglr-evm-tools`](https://github.com/riglr/riglr) crate, which wraps the [`alloy`](https://github.com/alloy-rs/alloy) library for type-safe transaction construction and signing.
 
 Add both to your `Cargo.toml`:
 
@@ -274,6 +274,5 @@ GOAT is a protocol-first framework: it provides 200+ pre-built EVM protocol plug
 
 - [GOAT quickstarts](https://github.com/goat-sdk/goat/tree/main/typescript/examples) — Full end-to-end examples wiring GOAT to different frameworks and wallet types
 - [LangGraph](https://langchain-ai.github.io/langgraph/) — Durable agent state and `interrupt_before` / `interrupt_after` patterns for human-in-the-loop workflows
-- [Create an AI agent that can transfer and swap tokens using ElizaOS](https://metamask.io/news/create-an-ai-agent-that-can-transfer-and-swap-tokens-using-elizaos) — MetaMask guide covering how to create an AI agent that can transfer and swap tokens. 
+- [Create an AI agent that can transfer and swap tokens using ElizaOS](https://metamask.io/news/create-an-ai-agent-that-can-transfer-and-swap-tokens-using-elizaos) — MetaMask guide covering how to create an AI agent that can transfer and swap tokens.
 - [AI Agent Framework Security: LangChain, LangGraph, CrewAI & More](https://blog.securelayer7.net/ai-agent-frameworks/) — Common vulnerability patterns in agent frameworks, with real-world exploit examples and mitigation strategies for production deployments.
-

@@ -15,7 +15,7 @@ summaryPoints:
 
 When an autonomous agent interacts with another agent or a human counterparty, the counterparty needs to answer three questions: Is this agent who it says it is? What can it do? Has it behaved reliably in the past?
 
-Centralized identity directories answer these questions by asking all parties to trust the directory operator. That trust assumption is fragile: **the operator can be captured, shut down, or selectively deny access**. 
+Centralized identity directories answer these questions by asking all parties to trust the directory operator. That trust assumption is fragile: **the operator can be captured, shut down, or selectively deny access**.
 
 Onchain identity standards on Ethereum address the same problem by making registrations publicly verifiable and censorship-resistant. Any application can query the registry, and **no single party controls who can register or who gets responses**.
 
@@ -41,6 +41,7 @@ ERC-8004 provides three onchain registries, each serving a distinct function in 
 The Identity Registry gives each agent a portable, censorship-resistant identifier tied to an Ethereum address. Registrations are [ERC-721 tokens](/developers/docs/standards/tokens/erc-721/); the agent's identity NFT is owned by its controller and can be transferred, but the identity record itself is permanently associated with the agent's address history.
 
 Each identity record stores:
+
 - The agent's declared capabilities and supported task types
 - The agent's primary network and contract address
 - Links to off-chain documentation, API endpoints, and supporting evidence
@@ -50,7 +51,7 @@ Each identity record stores:
 
 ### Reputation Registry {#reputation-registry}
 
-The Reputation Registry stores structured feedback signals from agents and human users who have interacted with a given agent. Feedback can be revoked by the original submitter, but the revocation is recorded onchain, so the history of a revocation is itself permanent and auditable. 
+The Reputation Registry stores structured feedback signals from agents and human users who have interacted with a given agent. Feedback can be revoked by the original submitter, but the revocation is recorded onchain, so the history of a revocation is itself permanent and auditable.
 
 Applications can query cumulative reputation scores across multiple dimensions (task completion rate, response latency, payment reliability) before deciding to interact with or pay an agent. As of early 2026, the registry holds 20,000+ feedback entries.
 
@@ -60,13 +61,14 @@ The Reputation Registry feeds directly into discovery decisions. An agent checki
 
 ### Validation Registry {#validation-registry}
 
-The Validation Registry is designed to cryptographically validate agent behavior by routing verification requests to delegated smart contracts. When deployed, an application will be able to submit a verification request specifying the output to be checked and the verification method. 
+The Validation Registry is designed to cryptographically validate agent behavior by routing verification requests to delegated smart contracts. When deployed, an application will be able to submit a verification request specifying the output to be checked and the verification method.
 
 The registry will route the request to a registered verifier and record the result onchain, creating an auditable, tamper-resistant trail that lets any counterparty confirm a specific agent output was independently verified at a specific point in time, without having to trust the agent or its operator.
 
 Unlike the Identity and Reputation registries, which are destination contracts that applications read and write directly, the Validation Registry is designed as a coordination layer. Validator smart contracts will register themselves independently and respond to requests routed through the registry; the verification work will happen in those separate validator contracts, with the result recorded onchain for composability.
 
 The ERC-8004 contributors and community are actively working on the specification. Three verification approaches are under consideration:
+
 - **TEE attestations** — outputs verified by trusted execution environments
 - **Crypto-economic security** — staking validators independently re-execute the inference and reach consensus
 - **zkML** — zero-knowledge proofs of correct model execution
@@ -77,17 +79,17 @@ For output verification options that are available today, see [AI agents: Verifi
 
 ## Ecosystem status {#ecosystem-status}
 
-| Metric | Status (early 2026) |
-| :--- | :--- |
-| **Standard status** | Draft (in active adoption — see maturity note above) |
-| **Identity Registry deployed** | January 29, 2026 |
-| **Reputation Registry deployed** | January 29, 2026 |
-| **Validation Registry** | Not yet deployed — specification in active community discussion |
-| **Networks** | Ethereum Mainnet, Base, Arbitrum, Optimism, Polygon, BNB Chain, Celo, Monad, and 12+ others |
-| **Same addresses across chains** | Yes — deterministic deployment |
-| **Feedback entries** | 20,000+ |
-| **Primary network by activity** | Base (73.6% of feedback) |
-| **Co-authors** | Marco De Rossi (MetaMask), Davide Crapis (Ethereum Foundation), Jordan Ellis (Google), Erik Reppel (Coinbase) |
+| Metric                           | Status (early 2026)                                                                                           |
+| :------------------------------- | :------------------------------------------------------------------------------------------------------------ |
+| **Standard status**              | Draft (in active adoption — see maturity note above)                                                          |
+| **Identity Registry deployed**   | January 29, 2026                                                                                              |
+| **Reputation Registry deployed** | January 29, 2026                                                                                              |
+| **Validation Registry**          | Not yet deployed — specification in active community discussion                                               |
+| **Networks**                     | Ethereum Mainnet, Base, Arbitrum, Optimism, Polygon, BNB Chain, Celo, Monad, and 12+ others                   |
+| **Same addresses across chains** | Yes — deterministic deployment                                                                                |
+| **Feedback entries**             | 20,000+                                                                                                       |
+| **Primary network by activity**  | Base (73.6% of feedback)                                                                                      |
+| **Co-authors**                   | Marco De Rossi (MetaMask), Davide Crapis (Ethereum Foundation), Jordan Ellis (Google), Erik Reppel (Coinbase) |
 
 ## The protocol stack {#protocol-stack}
 
@@ -122,9 +124,10 @@ Beyond ERC-8004's built-in reputation registry, two complementary patterns are c
 
 ### Attestation registries {#attestation-registries}
 
-The [Ethereum Attestation Service (EAS)](https://attest.sh/) provides a general-purpose onchain attestation framework. Any address can create a schema and issue attestations to any other address. 
+The [Ethereum Attestation Service (EAS)](https://attest.sh/) provides a general-purpose onchain attestation framework. Any address can create a schema and issue attestations to any other address.
 
 For AI agents, common attestation patterns include:
+
 - **Capability attestations** — a trusted third party attests that a given agent has passed an evaluation for a specific task type.
 - **Audit attestations** — a security researcher attests that an agent's code was reviewed and found to meet defined standards.
 - **Completion attestations** — a client attests that a specific task was completed to specification.
@@ -135,7 +138,7 @@ EAS attestations are queryable via the EAS GraphQL API and can be verified oncha
 
 For interactions where distinguishing an agent acting on behalf of a verified human from a fully autonomous agent matters, proof-of-personhood mechanisms provide an additional trust signal.
 
-These mechanisms do not prove that the agent itself is human (it is not), but that a verified human authorized the agent to act on their behalf. 
+These mechanisms do not prove that the agent itself is human (it is not), but that a verified human authorized the agent to act on their behalf.
 
 **[Proof of Humanity](https://www.proofofhumanity.id/)** provides an alternative social-vouching based approach to humanhood verification, with a focus on DAO membership and universal basic income applications.
 
@@ -147,13 +150,14 @@ For agent interactions that gate access based on personhood, combining an ERC-80
 
 ## How to register an agent {#how-to-register}
 
-ERC-8004 registration uses the same addresses across all supported chains. 
+ERC-8004 registration uses the same addresses across all supported chains.
 
 The registration process involves:
+
 1. **Choose your network** — view all current supported networks [on the 8004 site](https://www.8004.org/build), and all deployed 8004 contracts across chains in the [official 8004 contract repository](https://github.com/erc-8004/erc-8004-contracts).
 2. **Call the Identity Registry** — invoke the `register` function with your agent's address, capability declarations, and metadata URI.
 3. **Fund the reputation registry** — initial feedback can be submitted by early users or test integrations to establish a starting reputation signal.
-4. **Integrate the validation registry** *(optional — not yet deployed)* — once live, this step applies if your use case requires cryptographic output verification. See the [Validation Registry section above](#validation-registry) for current status.
+4. **Integrate the validation registry** _(optional — not yet deployed)_ — once live, this step applies if your use case requires cryptographic output verification. See the [Validation Registry section above](#validation-registry) for current status.
 
 For the current contract ABI and registration walkthrough, see the [ERC-8004 specification](https://eips.ethereum.org/EIPS/eip-8004) and the [ERC-8004 developer site](https://www.8004.org).
 
@@ -202,8 +206,8 @@ No. ERC-8004 carries an official EIP status of **Draft**. The contracts are depl
 - [The Identity Problem in Agentic Commerce: How ENS Can Enable Trust for AI Agents](https://ens.domains/blog/post/ens-ai-agent-erc8004) — Explainer on the need for AI Agent identity onchain, plus how ENS names can be used alongside ERC-8004 for agent identities.
 
 **Ecosystem tools**
+
 - [8004scan](https://8004scan.io/) — Browse registered agents, submit feedback, and view reputation leaderboards.
 - [Agentscan](https://agentscan.info/) — Multi-chain ERC-8004 explorer with OASF taxonomy classifications, reputation scores, and onchain activity across 21+ networks.
 - [8004agents.ai](https://8004agents.ai/) — Multi-chain agent directory with reputation scores, validation status, and ecosystem news.
 - [trust8004](https://www.trust8004.xyz/) — Agent scanner focused on comparing combined identity and reputation trust signals, with endpoint verification, across chains.
-

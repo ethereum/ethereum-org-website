@@ -29,12 +29,12 @@ If you want to deploy AI applications and agents on Ethereum, check out the [bui
 </AlertContent>
 </Alert>
 
-
 ## What makes AI on Ethereum different? {#what-makes-ai-on-ethereum-different}
 
-AI applications built on Ethereum **inherit properties that centralized AI platforms cannot offer**. AI systems built on Ethereum can provide features like **verifiable guarantees and auditable records** instead of relying on a single company to manage data and maintain access. 
+AI applications built on Ethereum **inherit properties that centralized AI platforms cannot offer**. AI systems built on Ethereum can provide features like **verifiable guarantees and auditable records** instead of relying on a single company to manage data and maintain access.
 
 As a blockchain that can provide structural guarantees, Ethereum allows these AI applications to inherit core properties, like:
+
 - **Censorship-resistance:** No single entity can shut down or modify the AI models and agent infrastructure running on a decentralized network.
 - **Open-source:** Publicly auditable code lets users and researchers independently verify what an application does, rather than taking a vendor's word for it.
 - **Privacy:** Cryptographic techniques like [zero-knowledge proofs](/zero-knowledge-proofs/) allow applications on Ethereum to process user data without exposing it to third parties. AI implementations can use secure hardware enclaves or zero-knowledge proofs to keep user inputs confidential, even from the infrastructure running the AI. These privacy approaches are not automatic for all Ethereum applications and depend on the specific design choices made by developers.
@@ -44,12 +44,11 @@ As a blockchain that can provide structural guarantees, Ethereum allows these AI
 
 ## Digital authenticity {#digital-authenticity}
 
-Generative AI can now produce **photorealistic images, video, and voice that are difficult to distinguish from authentic media**. **Proving that a piece of content is genuine is a growing challenge**. 
+Generative AI can now produce **photorealistic images, video, and voice that are difficult to distinguish from authentic media**. **Proving that a piece of content is genuine is a growing challenge**.
 
-Ethereum provides tools that **shift the paradigm from "believe what you see" to "verify what you see."** 
+Ethereum provides tools that **shift the paradigm from "believe what you see" to "verify what you see."**
 
 Onchain **attestations** are a primary approach to this problem. The [Ethereum Attestation Service (EAS)](https://attest.org/) allows any issuer, whether a media organization, a developer, or an institution, to **publish a signed, tamper-resistant claim** about a piece of content or an AI agent's identity on the Ethereum blockchain. The attestation records are **verifiable by anyone and cannot be altered after-the-fact**.
-
 
 <Alert>
 <AlertContent>
@@ -63,15 +62,16 @@ Using blockchain-based attestations as a verification layer to combat deepfakes 
 Today, anyone can build such verification systems using Ethereum's globally-verifiable, open-source tooling.
 </AlertDescription>
 </AlertContent>
-</Alert> 
+</Alert>
 
-Researchers are already applying these cryptographic tools to verify real-world media on Ethereum: 
-- **[Roc Camera](https://roc.camera/)** lets users capture photos that are cryptographically signed at the moment of capture. It then registers these cryptographic proofs onchain using the Ethereum Attestation Service (EAS) on Base (an Ethereum [Layer 2](/layer-2/) network), producing a verifiable record that the image is authentic and unaltered. 
-- The **[ZK Microphone](https://ethglobal.com/showcase/zk-microphone-8161v)** project, developed at the ETHGlobal Paris hackathon, applies the same principle to audio. A hardware secure enclave signs a recording at capture. When the audio is legitimately edited, the software generates a zero-knowledge proof proving the edit was mathematically derived from the original hardware-signed file. This proof is then published to Ethereum via an onchain attestation, allowing anyone to verify the audio's provenance without exposing the underlying recording.  
+Researchers are already applying these cryptographic tools to verify real-world media on Ethereum:
+
+- **[Roc Camera](https://roc.camera/)** lets users capture photos that are cryptographically signed at the moment of capture. It then registers these cryptographic proofs onchain using the Ethereum Attestation Service (EAS) on Base (an Ethereum [Layer 2](/layer-2/) network), producing a verifiable record that the image is authentic and unaltered.
+- The **[ZK Microphone](https://ethglobal.com/showcase/zk-microphone-8161v)** project, developed at the ETHGlobal Paris hackathon, applies the same principle to audio. A hardware secure enclave signs a recording at capture. When the audio is legitimately edited, the software generates a zero-knowledge proof proving the edit was mathematically derived from the original hardware-signed file. This proof is then published to Ethereum via an onchain attestation, allowing anyone to verify the audio's provenance without exposing the underlying recording.
 
 ## Intent-based wallets using AI {#ai-intent-based-ai-wallets}
 
-Most [wallets](/wallets/) on Ethereum require users to understand technical transaction details before interacting with them (efforts like the [Clear Signing Initiative](https://clearsigning.org/) aim to solve this across the wallet landscape). 
+Most [wallets](/wallets/) on Ethereum require users to understand technical transaction details before interacting with them (efforts like the [Clear Signing Initiative](https://clearsigning.org/) aim to solve this across the wallet landscape).
 
 AI-assisted wallets have the potential to support **an easier transaction experience by letting users describe what they want in plain language**, then handling the technical steps automatically.
 
@@ -86,9 +86,9 @@ AI-powered wallet interfaces are still maturing technology. Risks include smart 
 </AlertContent>
 </Alert>
 
-Intent-centric wallet designs position the wallet **not as a passive key store, but as an assistant that acts on a user's behalf**. Instead of manually signing every transaction, a user can tell their AI wallet assistant to **rebalance a portfolio or execute a swap**. The AI converts the request into a transaction sequence and **executes it automatically**. 
+Intent-centric wallet designs position the wallet **not as a passive key store, but as an assistant that acts on a user's behalf**. Instead of manually signing every transaction, a user can tell their AI wallet assistant to **rebalance a portfolio or execute a swap**. The AI converts the request into a transaction sequence and **executes it automatically**.
 
-Crucially, **the user's main private key should never be exposed to the AI**. Using Ethereum's [account abstraction](/account-abstraction/) frameworks, the user stays in control by issuing **highly restricted session keys**. The keys act as **temporary permissions for the AI to execute transactions with strict guardrails**, like spending limits, approved applications, and time boundaries. 
+Crucially, **the user's main private key should never be exposed to the AI**. Using Ethereum's [account abstraction](/account-abstraction/) frameworks, the user stays in control by issuing **highly restricted session keys**. The keys act as **temporary permissions for the AI to execute transactions with strict guardrails**, like spending limits, approved applications, and time boundaries.
 
 The AI can only act within those predefined rules, and **once the task is done, the permissions expire**. These boundaries make it possible to **delegate complex onchain tasks to software without putting the entire wallet at risk**.
 
@@ -108,7 +108,7 @@ Managing crypto assets manually across multiple protocols is **time-consuming an
   <Card title="Portfolio optimization" description="AI agents can evaluate liquidity conditions, yield rates, and gas costs across apps and networks in real time, identifying opportunities that would be time-consuming to track manually." />
 </CardGrid>
 
-Ecosystems like [Olas](https://olas.network/) illustrate what this looks like in practice. Olas uses a suite of smart contracts on Ethereum and its Layer 2s to **coordinate an open network where developers contribute autonomous agent modules** for portfolio management, liquidity tracking, and governance participation. By early 2026, [agents on the Olas network were processing over five million transactions](https://olas.network/timeline) across these integrated chains. 
+Ecosystems like [Olas](https://olas.network/) illustrate what this looks like in practice. Olas uses a suite of smart contracts on Ethereum and its Layer 2s to **coordinate an open network where developers contribute autonomous agent modules** for portfolio management, liquidity tracking, and governance participation. By early 2026, [agents on the Olas network were processing over five million transactions](https://olas.network/timeline) across these integrated chains.
 
 Another example is [Wayfinder](https://wayfinder.ai), a multi-agent system that **routes proposed actions through a simulation environment before committing them** to Ethereum or L2 networks. This allows the system to **verify outcomes and catch errors before executing the actual DeFi transactions onchain**.
 
@@ -130,12 +130,13 @@ Artificial intelligence agents and related execution tools are still in early de
 
 Knowing that a piece of media is authentic is only part of the challenge. As AI tools are increasingly able to execute multi-step tasks on behalf of users, users also need a way to **prove that an AI model actually behaved as claimed**.
 
-**Zero-knowledge machine learning (zkML)** lets developers prove that a specific AI model produced a specific output from a specific input, without revealing the model's internal data or the user's private information. This proof is recorded onchain so anyone can verify it. 
+**Zero-knowledge machine learning (zkML)** lets developers prove that a specific AI model produced a specific output from a specific input, without revealing the model's internal data or the user's private information. This proof is recorded onchain so anyone can verify it.
 
 **One important limitation:** zkML confirms that the **computation ran correctly, not that the result is factually accurate**. An AI model can still produce a wrong answer. zkML only guarantees that it followed its own logic consistently.
 
 Projects are actively building the infrastructure to make this verification possible at scale:
-- At the infrastructure level, **[Lagrange's DeepProve](https://lagrange.dev/blog/deepprove-zkml)** library provides zkML tooling capable of verifying machine learning computations at scale. 
+
+- At the infrastructure level, **[Lagrange's DeepProve](https://lagrange.dev/blog/deepprove-zkml)** library provides zkML tooling capable of verifying machine learning computations at scale.
 - **[Modulus Labs](https://world.org/blog/announcements/tools-for-humanity-acquires-modulus-labs)** generated a complete [zero-knowledge proof of a 1.5 billion parameter language model](https://medium.com/@CountableMagic/chapter-14-the-worlds-1st-on-chain-llm-7e389189f85e) verified onchain on Ethereum, demonstrating that large-model verification is technically achievable.
 - In production, **[Worldcoin (World ID)](https://world.org/)** uses zero-knowledge machine learning to allow users to verify their biometric data locally on their device. This proves their unique human identity without exposing the underlying biometric data to the network or protocol.
 
@@ -145,7 +146,7 @@ Beyond cryptographic verification, the Ethereum ecosystem also supports **decent
 
 ## Standardizing the agent economy {#standardizing-the-agent-economy}
 
-Because Ethereum provides a secure, programmable foundation, developers can build **shared standards that allow AI systems to interact safely**. These standards are the **building blocks of a new machine-to-machine economy**. For example, standards for agent identity ([ERC-8004](https://eips.ethereum.org/EIPS/eip-8004)) let applications **verify an AI assistant's reputation and permissions**, ensuring it only takes actions you have explicitly authorized. Paired with machine-to-machine payment protocols ([x402](https://www.x402.org/)), agents can **automatically pay each other for data or services**. 
+Because Ethereum provides a secure, programmable foundation, developers can build **shared standards that allow AI systems to interact safely**. These standards are the **building blocks of a new machine-to-machine economy**. For example, standards for agent identity ([ERC-8004](https://eips.ethereum.org/EIPS/eip-8004)) let applications **verify an AI assistant's reputation and permissions**, ensuring it only takes actions you have explicitly authorized. Paired with machine-to-machine payment protocols ([x402](https://www.x402.org/)), agents can **automatically pay each other for data or services**.
 
 For everyday users, applications built on these Ethereum standards unlock new models like **seamless micropayments**; for example, paying a **fraction of a cent to read a single article** on a news site instead of needing a monthly subscription.
 
@@ -164,7 +165,7 @@ To learn how to build AI applications on these standards, visit the [builder hub
 
 - [Account Abstraction (ERC-4337)](https://ethereum.org/en/roadmap/account-abstraction/) — ethereum.org
 - [ERC-8004: Trustless agent identity standard](https://eips.ethereum.org/EIPS/eip-8004) — Ethereum Improvement Proposals
-- [x402: Machine-to-machine payment protocol](https://docs.x402.org/) 
+- [x402: Machine-to-machine payment protocol](https://docs.x402.org/)
 
 ### Confidential compute and AI inference {#further-reading-infrastructure}
 

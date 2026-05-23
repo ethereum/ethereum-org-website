@@ -15,13 +15,13 @@ summaryPoints:
 
 AI agents operate across many platforms and networks. This page covers what builders need to understand about building on [Ethereum](/): the specific **technical capabilities** the network provides for autonomous agents, and the **architectural tradeoffs** to weigh before committing to that stack.
 
-**Not every agent deployment belongs on a blockchain like Ethereum.** Agents that are purely read-only, that operate entirely offchain, or that can accept a trusted operator model **may not require the overhead of onchain settlement**. 
+**Not every agent deployment belongs on a blockchain like Ethereum.** Agents that are purely read-only, that operate entirely offchain, or that can accept a trusted operator model **may not require the overhead of onchain settlement**.
 
 However, when an agent requires **trustless coordination**, the capabilities below allow agents to **control non-custodial assets, verify their own execution, and interoperate permissionlessly** with open protocols. The capabilities that Ethereum's agent standards provide **replace the need for a trusted operator with code that counterparties can independently verify**.
 
 ## Onchain ownership {#onchain-ownership}
 
-An [AI agent's wallet](/ai-agents/wallets/) and its digital assets exist independently on Ethereum. **No unauthorized third party, operator, platform, or cloud provider can unilaterally revoke or freeze them**, because **ownership is enforced by the network itself** rather than by a company's terms of service. 
+An [AI agent's wallet](/ai-agents/wallets/) and its digital assets exist independently on Ethereum. **No unauthorized third party, operator, platform, or cloud provider can unilaterally revoke or freeze them**, because **ownership is enforced by the network itself** rather than by a company's terms of service.
 
 The wallet's controller (whoever holds the keys or owns the smart contract account) retains full authority over those assets. Constraining what the agent itself can spend is a separate concern (covered in the [Programmable guardrails](#programmable-guardrails) section below).
 
@@ -102,4 +102,3 @@ Three capabilities in combination: the deepest ecosystem of production smart con
 - [EIP-7702: Smart account delegation for existing wallets](https://ethereum.org/en/roadmap/pectra/7702/) — ethereum.org
 - [ERC-8004: Trustless agent identity standard](https://eips.ethereum.org/EIPS/eip-8004) — Ethereum Improvement Proposals
 - [x402: Machine-to-machine payment protocol](https://docs.x402.org/)
-

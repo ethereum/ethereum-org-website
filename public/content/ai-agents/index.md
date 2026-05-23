@@ -38,20 +38,20 @@ If you want to learn how AI and Ethereum work together as a use case, visit the 
 
 ## AI agents vs AI bots {#ai-agents-vs-bots}
 
-|                      | AI agents                                                                      | AI bots                                        |
-| -------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------- |
-| **Decision-making**  | Autonomous; adapts to new inputs and conditions                                | Rule-based; executes fixed, pre-programmed logic |
-| **Learning**         | Can update behavior from real-time data and feedback                           | Operates on pre-trained data or hardcoded rules  |
-| **Onchain identity** | Holds a programmable wallet, can sign and send transactions                    | Typically reads data; does not hold assets       |
-| **Composability**    | Can discover and interact with any open protocol                                | Limited to the APIs it was explicitly integrated with |
-| **Guardrails**       | Enforced by smart contract logic (spending limits, session keys, allowlists)   | Enforced by the operator's server configuration  |
-| **Verification**     | Behavior can be proven onchain via zkML or TEE attestations                    | Behavior is attested only by the operator        |
+|                      | AI agents                                                                    | AI bots                                               |
+| -------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------- |
+| **Decision-making**  | Autonomous; adapts to new inputs and conditions                              | Rule-based; executes fixed, pre-programmed logic      |
+| **Learning**         | Can update behavior from real-time data and feedback                         | Operates on pre-trained data or hardcoded rules       |
+| **Onchain identity** | Holds a programmable wallet, can sign and send transactions                  | Typically reads data; does not hold assets            |
+| **Composability**    | Can discover and interact with any open protocol                             | Limited to the APIs it was explicitly integrated with |
+| **Guardrails**       | Enforced by smart contract logic (spending limits, session keys, allowlists) | Enforced by the operator's server configuration       |
+| **Verification**     | Behavior can be proven onchain via zkML or TEE attestations                  | Behavior is attested only by the operator             |
 
 See [AI agents: Why Ethereum](/ai-agents/ethereum/) to learn more about the technical case for using Ethereum as the settlement and coordination layer for AI agents.
 
 ## What the AI agent builder hub covers {#what-the-ai-agent-hub-covers}
 
-Ethereum provides a unique set of technical foundations for deploying production AI agents. 
+Ethereum provides a unique set of technical foundations for deploying production AI agents.
 
 The AI agent builder hub covers each of these core building blocks in depth:
 
@@ -90,13 +90,13 @@ The AI agent builder hub covers each of these core building blocks in depth:
 
 The standards and protocols that power AI agents on Ethereum have crossed from research into production.
 
-| Standard or protocol | Status |
-| :--- | :--- |
-| **EIP-7702** — Smart account delegation for existing EOAs | Live since the Pectra upgrade, May 2025 |
-| **ERC-4337** — Smart account standard | Production EntryPoint deployments on all major networks (v0.7 widely adopted; v0.8, v0.9 also live) |
-| **ERC-8004** — Onchain agent identity registry | Draft — in active adoption; live on 20+ chains since January 2026 |
-| **x402** — Machine-to-machine HTTP payments | Production-ready since Q1 2026 |
-| **L2 transaction cost** | $0.001–$0.003 per operation |
+| Standard or protocol                                      | Status                                                                                              |
+| :-------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
+| **EIP-7702** — Smart account delegation for existing EOAs | Live since the Pectra upgrade, May 2025                                                             |
+| **ERC-4337** — Smart account standard                     | Production EntryPoint deployments on all major networks (v0.7 widely adopted; v0.8, v0.9 also live) |
+| **ERC-8004** — Onchain agent identity registry            | Draft — in active adoption; live on 20+ chains since January 2026                                   |
+| **x402** — Machine-to-machine HTTP payments               | Production-ready since Q1 2026                                                                      |
+| **L2 transaction cost**                                   | $0.001–$0.003 per operation                                                                         |
 
 ## AI agent builder hub sections {#ai-agent-builder-hub-sections}
 
@@ -142,4 +142,3 @@ An AI agent is an autonomous software program that uses a language model to reas
 A bot follows fixed rules. Given input X, it always does Y. An AI agent uses a language model to reason about novel situations, form a plan, and take sequences of actions that may differ depending on context. Agents are capable of multi-step reasoning, adapting to unexpected conditions, and handling tasks they were not explicitly programmed for. The trade-off is that agent behavior is less predictable, which is why spending limits and session keys are essential. See the [AI agents: Getting started](/ai-agents/getting-started/) guide.
 
 </ExpandableCard>
-

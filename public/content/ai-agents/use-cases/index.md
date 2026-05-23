@@ -22,6 +22,7 @@ The following use cases represent what autonomous AI agents are doing on Ethereu
 DeFi protocols operate 24 hours a day, seven days a week. Human traders cannot. Autonomous agents fill this gap by monitoring positions, executing strategies, and responding to market conditions continuously without requiring human oversight for each action.
 
 **What agents are doing today:**
+
 - **Yield optimization** — agents monitor yield rates across lending protocols (Aave, Compound, Morpho) and rebalance positions to maximize returns, moving capital when rate differentials exceed a minimum threshold.
 - **Liquidation protection** — agents watch collateralization ratios and automatically top up collateral or partially repay debt when a position approaches the liquidation threshold.
 - **Portfolio rebalancing** — agents maintain target asset allocations by executing swaps when drift exceeds defined parameters.
@@ -37,6 +38,7 @@ DeFi automation is the most mature AI agent use case on Ethereum. The infrastruc
 Prediction markets let participants trade on the outcome of real-world events. AI agents are well suited to this domain because they can continuously monitor information sources, update probability estimates, and execute trades faster than human participants.
 
 **What agents are doing today:**
+
 - **Market making** — agents provide liquidity on prediction market platforms by quoting bid and ask prices on event outcomes, earning the spread while keeping markets efficient.
 - **Information aggregation** — agents ingest data from news feeds, social media sentiment, and onchain signals to update their probability models and trade when they detect mispricing.
 - **Automated position management** — agents monitor open positions across multiple markets, hedge correlated risks, and exit positions as new information arrives.
@@ -73,6 +75,7 @@ Autonomous governance participation, covered next, follows a similar coordinator
 DAO governance requires ongoing attention: reading proposals, evaluating their alignment with stated goals, and casting votes before deadlines. Agents can automate this process by monitoring governance contracts for new proposals and voting according to a programmed strategy.
 
 **What agents are doing today:**
+
 - Reading proposal calldata and applying heuristic or model-based evaluation.
 - Voting autonomously within a defined strategy (for example, always vote for proposals that reduce protocol fees below a threshold).
 - Delegating voting power to agent addresses that operate on behalf of token-holding humans.
@@ -97,6 +100,7 @@ Governance agents are primarily reactive, responding to events. Risk management 
 Agents are well suited to continuous monitoring tasks that are tedious for humans but straightforward for software: watching for anomalous transaction patterns, detecting scam contracts, and alerting on unusual protocol behavior.
 
 **What agents are doing today:**
+
 - **Scam detection** — agents monitor token approval requests and flag interactions with known scam contracts or newly deployed contracts with no verified source code.
 - **MEV protection** — agents route transactions through private mempools (Flashbots Protect) or MEV-resistant L2s (Unichain) to avoid sandwich attacks on swaps.
 - **Position monitoring** — agents watch protocol health metrics (utilization rates, oracle price deviations) and alert operators when conditions move outside safe parameters.
@@ -134,6 +138,7 @@ Provenance depends on being able to verify which agent produced a given output. 
 When agents interact with each other or with humans, counterparties need to verify what an agent is and whether it can be trusted. Without an identity layer, any agent can claim any capability.
 
 **What ERC-8004 enables today:**
+
 - Agent A looks up Agent B's declared capabilities in the ERC-8004 Identity Registry before deciding whether to hire it.
 - Agent A checks Agent B's Reputation Registry entry for prior task-completion signals.
 - Smart contracts condition payments or access on whether a calling agent holds a valid ERC-8004 registration.
@@ -182,6 +187,5 @@ Evaluate the infrastructure each use case requires. **DeFi automation** needs [w
 
 - [Cookie.fun](https://cookie.fun/) — An onchain AI agent tracker that surfaces activity, mindshare, and engagement metrics across the agent ecosystem.
 - [The Block - Research: AI Agent Sector Overview](https://www.theblock.co/post/344635/research-ai-agent-sector-overview) — An overview of the onchain AI agent ecosystem, evaluating early and second-wave projects and how they collectively contribute to the sector’s future.
-- [Trustless AI-Powered Crypto Trading Agents with ERC-8004 and Moltbot](https://medium.com/@gwrx2005/trustless-ai-powered-crypto-trading-agents-with-erc-8004-and-moltbot-58d8789be837) — Research into the design, implementation, frameworks, limitations, and more, for ERC-8004 enabled AI crypto trading agents. 
+- [Trustless AI-Powered Crypto Trading Agents with ERC-8004 and Moltbot](https://medium.com/@gwrx2005/trustless-ai-powered-crypto-trading-agents-with-erc-8004-and-moltbot-58d8789be837) — Research into the design, implementation, frameworks, limitations, and more, for ERC-8004 enabled AI crypto trading agents.
 - [Make your own AI trading agent on Ethereum](/developers/tutorials/ai-trading-agent/) — A tutorial on how to build an AI trading agent on Ethereum.
-

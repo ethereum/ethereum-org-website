@@ -66,18 +66,18 @@ The agent pays for **exactly what it uses, per request**, with no subscription, 
 
 ## Ecosystem status {#ecosystem-status}
 
-| Metric | Status (early 2026) |
-| :--- | :--- |
-| **Protocol version** | Production-ready |
-| **Enterprise integrations** | Google Cloud, Stripe, Cloudflare |
-| **SDKs** | TypeScript (`@x402/fetch`), Python (`x402`), Go (`github.com/coinbase/x402/go`), Java |
-| **ERC-8004 integration** | x402 payment receipts can be logged to the ERC-8004 AI agent reputation registry (Learn about ERC-8004 and onchain agent identity on the [AI agents: Identity](/ai-agents/identity/) page) |
+| Metric                      | Status (early 2026)                                                                                                                                                                        |
+| :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Protocol version**        | Production-ready                                                                                                                                                                           |
+| **Enterprise integrations** | Google Cloud, Stripe, Cloudflare                                                                                                                                                           |
+| **SDKs**                    | TypeScript (`@x402/fetch`), Python (`x402`), Go (`github.com/coinbase/x402/go`), Java                                                                                                      |
+| **ERC-8004 integration**    | x402 payment receipts can be logged to the ERC-8004 AI agent reputation registry (Learn about ERC-8004 and onchain agent identity on the [AI agents: Identity](/ai-agents/identity/) page) |
 
 ## Integration guide {#integration-guide}
 
 ### Agent-side: paying for a resource {#agent-side}
 
-The [`@x402/fetch` TypeScript SDK](https://www.npmjs.com/package/@x402/fetch) handles the full payment flow transparently. The example below installs the SDK and demonstrates how an agent signs and pays for a resource in a single call. 
+The [`@x402/fetch` TypeScript SDK](https://www.npmjs.com/package/@x402/fetch) handles the full payment flow transparently. The example below installs the SDK and demonstrates how an agent signs and pays for a resource in a single call.
 
 If the server returns a standard 200, the request passes through without payment. If it returns a 402, the SDK parses the payment terms, signs the ERC-3009 authorization, and retries automatically.
 
@@ -148,12 +148,12 @@ x402 supports any ERC-20 token on EVM chains via two transfer methods, selected 
 - **ERC-3009** (`transferWithAuthorization`) — the preferred path. A single off-chain signature authorizes the transfer with no prior on-chain approval step. USDC implements ERC-3009 natively.
 - **Permit2** — the universal fallback for any ERC-20 without ERC-3009 support. Requires a one-time on-chain approval to the Permit2 contract, after which payments are signature-based and gasless. The facilitator sponsors gas for both methods.
 
-| Stablecoin | Transfer method | Notes |
-| :--- | :--- | :--- |
-| USDC | ERC-3009 | Preferred — single signature, no approval step |
-| USDT | Permit2 | One-time on-chain approval required; then gasless |
-| DAI | Permit2 | One-time on-chain approval required; then gasless |
-| Any ERC-20 | Permit2 | x402 supports any token a facilitator chooses to accept |
+| Stablecoin | Transfer method | Notes                                                   |
+| :--------- | :-------------- | :------------------------------------------------------ |
+| USDC       | ERC-3009        | Preferred — single signature, no approval step          |
+| USDT       | Permit2         | One-time on-chain approval required; then gasless       |
+| DAI        | Permit2         | One-time on-chain approval required; then gasless       |
+| Any ERC-20 | Permit2         | x402 supports any token a facilitator chooses to accept |
 
 <Alert>
 <AlertContent>
@@ -169,14 +169,14 @@ For agents making high-frequency calls to a single provider — continuous data 
 
 **Stripe's [Machine Payments Protocol (MPP)](https://stripe.com/payments/mpp)** is the primary production alternative for streaming use cases. MPP establishes an authenticated payment session, aggregates micro-transactions off-chain using Shared Payment Tokens (SPTs), and settles in bulk at session end. It supports stablecoin, fiat, and corporate card rails within the same session, and includes enterprise compliance tooling (fraud controls, tax reporting) built in.
 
-| | x402 | Stripe MPP |
-| :--- | :--- | :--- |
-| **Settlement** | Per-request, on-chain | Session-based, off-chain aggregation |
-| **Best for** | Discrete micropayments, permissionless APIs | High-frequency streaming, long-running tasks |
-| **Payment rails** | Any ERC-20 (EVM), SPL (Solana), SEP-41 (Stellar) | Stablecoin, fiat, corporate card |
-| **Permissionless** | Yes — no account required | No — requires Stripe account |
-| **Compliance** | None built in | Enterprise fraud, tax, and reporting tooling |
-| **Onchain transparency** | Every payment settled onchain | Aggregated; onchain only at session settlement |
+|                          | x402                                             | Stripe MPP                                     |
+| :----------------------- | :----------------------------------------------- | :--------------------------------------------- |
+| **Settlement**           | Per-request, on-chain                            | Session-based, off-chain aggregation           |
+| **Best for**             | Discrete micropayments, permissionless APIs      | High-frequency streaming, long-running tasks   |
+| **Payment rails**        | Any ERC-20 (EVM), SPL (Solana), SEP-41 (Stellar) | Stablecoin, fiat, corporate card               |
+| **Permissionless**       | Yes — no account required                        | No — requires Stripe account                   |
+| **Compliance**           | None built in                                    | Enterprise fraud, tax, and reporting tooling   |
+| **Onchain transparency** | Every payment settled onchain                    | Aggregated; onchain only at session settlement |
 
 For a detailed architectural comparison, see [x402 vs. Stripe MPP: choosing payment infrastructure for AI agents](https://workos.com/blog/x402-vs-stripe-mpp-how-to-choose-payment-infrastructure-for-ai-agents-and-mcp-tools-in-2026).
 
@@ -196,4 +196,3 @@ x402 is a machine-to-machine payment protocol built on the HTTP 402 status code.
 - [x402 vs. Stripe MPP: choosing payment infrastructure for AI agents](https://workos.com/blog/x402-vs-stripe-mpp-how-to-choose-payment-infrastructure-for-ai-agents-and-mcp-tools-in-2026) — Architectural comparison of discrete vs. session-based payment models for high-frequency and streaming agent workloads
 - [x402 documentation](https://docs.x402.org/) — x402.org
 - [Agentic Payments and Crypto’s Emerging Role in the AI Economy](https://www.galaxy.com/insights/research/x402-ai-agents-crypto-payments) — How standards like x402 aim to make AI agents full-fledged economic actors, and the potential to power non-crypto applications.
-
