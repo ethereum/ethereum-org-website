@@ -219,11 +219,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   description={t(
                     "page-gas-how-do-i-pay-less-gas-card-3-description"
                   )}
-                >
-                  <ButtonLink className="w-fit" href="/layer-2/">
-                    {t("page-gas-try-layer-2")}
-                  </ButtonLink>
-                </MarkdownCard>
+                  ctaLabel={t("page-gas-try-layer-2")}
+                  href="/layer-2/"
+                />
               </Flex>
             </div>
           </Flex>

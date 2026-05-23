@@ -1,26 +1,35 @@
 import { ReactNode } from "react"
 
+import { ButtonLink } from "../ui/buttons/Button"
 import {
   Card,
   CardContent,
   CardEmoji,
+  CardFooter,
   CardHeader,
   CardParagraph,
   CardProps,
   CardTitle,
 } from "../ui/card"
 
+type MarkdownCardCTAProps =
+  | { ctaLabel: ReactNode; href: string }
+  | { ctaLabel?: never; href?: never }
+
 export type MarkdownCardProps = {
   emoji?: string
   title?: ReactNode
   description?: ReactNode
-} & CardProps
+} & MarkdownCardCTAProps &
+  CardProps
 
 const MarkdownCard = ({
   emoji,
   title,
   description,
   children,
+  ctaLabel,
+  href,
   ...props
 }: MarkdownCardProps) => (
   <Card {...props}>
@@ -34,6 +43,11 @@ const MarkdownCard = ({
       {description && <CardParagraph>{description}</CardParagraph>}
       {children}
     </CardContent>
+    {ctaLabel && (
+      <CardFooter>
+        <ButtonLink href={href}>{ctaLabel}</ButtonLink>
+      </CardFooter>
+    )}
   </Card>
 )
 
