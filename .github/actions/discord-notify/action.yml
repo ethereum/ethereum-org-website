@@ -1,0 +1,52 @@
+name: Discord notify
+description: Post or edit a Discord webhook message. Returns the message ID so downstream steps can keep updating the same message instead of spamming new ones.
+
+inputs:
+  webhook:
+    description: Discord webhook URL (pass an empty string to skip).
+    required: true
+  message:
+    description: Message content to post (or replace, if editing).
+    required: true
+  message_id:
+    description: If set, EDIT this message ID instead of creating a new one. If empty, a new message is created and its ID is returned.
+    required: false
+    default: ""
+
+outputs:
+  message_id:
+    description: ID of the created or edited message (empty if the webhook is missing or the request failed).
+    value: ${{ steps.notify.outputs.message_id }}
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      id: notify
+      env:
+        WEBHOOK: ${{ inputs.webhook }}
+        MSG: ${{ inputs.message }}
+        MESSAGE_ID: ${{ inputs.message_id }}
+      run: |
+        if [[ -z "$WEBHOOK" ]]; then
+          echo "No Discord webhook configured — skipping."
+          exit 0
+        fi
+        body=$(jq -nc --arg c "$MSG" '{content: $c}')
+        if [[ -n "$MESSAGE_ID" ]]; then
+          # Edit the existing message — Discord PATCH returns the updated object.
+          response=$(curl -fsSL -X PATCH -H 'Content-Type: application/json' \
+            -d "$body" "$WEBHOOK/messages/$MESSAGE_ID") || {
+            echo "::warning::Discord PATCH failed — message not updated."
+            exit 0
+          }
+        else
+          # Create new message — ?wait=true returns the message body so we can capture the ID.
+          response=$(curl -fsSL -X POST -H 'Content-Type: application/json' \
+            -d "$body" "${WEBHOOK}?wait=true") || {
+            echo "::warning::Discord POST failed — continuing."
+            exit 0
+          }
+        fi
+        id=$(echo "$response" | jq -r '.id // empty')
+        echo "message_id=$id" >> "$GITHUB_OUTPUT"

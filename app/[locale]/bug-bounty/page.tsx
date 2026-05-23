@@ -3,7 +3,6 @@ import type { ComponentProps } from "react"
 
 import type { ChildOnlyProp, Lang, Params } from "@/lib/types"
 
-/* Uncomment for Bug Bounty Banner: */
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import Card from "@/components/Card"
@@ -16,6 +15,8 @@ import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
+// Uncomment `Alert` for Bug Bounty Banner:
+// import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Center, Flex, VStack } from "@/components/ui/flex"
@@ -251,9 +252,11 @@ export default async function Page(props: { params: Promise<Params> }) {
   return (
     <>
       <BugBountyJsonLD locale={locale} contributors={contributors} />
+      {/* Uncomment for Bug Bounty Banner: */}
+      {/* <Alert variant="banner">
+        Fusaka vulnerabilities are now part of the Bug Bounty Program!
+      </Alert> */}
       <MainArticle className="mx-auto my-0 flex w-full flex-col items-center">
-        {/* Uncomment for Bug Bounty Banner: */}
-        {/* <BugBountyBanner /> */}
         <Content>
           <VStack className="-mt-8 justify-between lg:mt-0 lg:flex-row lg:ps-0">
             <div className="flex-1 basis-1/2 pt-24 pr-0 pb-16 pl-0 lg:-mt-32 lg:pt-32 lg:pr-8 lg:pb-32 lg:pl-8">
