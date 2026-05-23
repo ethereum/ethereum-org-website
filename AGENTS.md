@@ -194,7 +194,7 @@ This project enforces type-safe chain names via TypeScript. When working with la
 
 1. **Always look up exact names** - Before adding `chainName` or `supported_chains`, search `chains.ts` for the exact `name` value
 2. **Names are case-sensitive and exact** - e.g., use `"Zircuit Mainnet"` not `"Zircuit"`, use `"OP Mainnet"` not `"Optimism"`
-3. **Run type checking** - Use `npx tsc --noEmit` to verify chain names are valid before committing
+3. **Run type checking** - Use `pnpm type-check` to verify chain names are valid before committing
 4. **Non-EVM chains** - For Starknet and other non-EVM chains, use `NonEVMChainName` type
 
 **Common Mistakes:**

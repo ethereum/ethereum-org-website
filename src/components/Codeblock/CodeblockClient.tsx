@@ -16,7 +16,6 @@ type CodeblockClientProps = {
   codeText: string
   languageLabel: string
   allowCollapse: boolean
-  shouldShowCopyWidget: boolean
   shouldShowLineNumbers: boolean
   totalLines: number
   fromHomepage: boolean
@@ -28,7 +27,6 @@ const CodeblockClient = ({
   codeText,
   languageLabel,
   allowCollapse,
-  shouldShowCopyWidget,
   shouldShowLineNumbers,
   totalLines,
   fromHomepage,
@@ -42,7 +40,7 @@ const CodeblockClient = ({
   const [isCollapsed, setIsCollapsed] = useState(isCollapsable)
 
   const showLanguageLabel = !fromHomepage && languageLabel.length > 0
-  const showCopy = !fromHomepage && shouldShowCopyWidget
+  const showCopy = !fromHomepage
   const showCornerCollapse = isCollapsable && !isCollapsed
   const hasCornerUi = showLanguageLabel || showCopy || showCornerCollapse
 
@@ -66,7 +64,7 @@ const CodeblockClient = ({
       />
 
       {hasCornerUi && (
-        <div className="pointer-events-none absolute inset-e-4 top-1.5 flex items-center gap-1 font-mono text-[10px] leading-none tracking-[0.08em] text-disabled uppercase">
+        <div className="pointer-events-none absolute inset-e-4 top-1.5 flex items-center gap-1 font-mono text-2xs leading-none tracking-[0.08em] text-disabled uppercase">
           {showCornerCollapse && (
             <button
               type="button"
@@ -113,7 +111,7 @@ const CodeblockClient = ({
         >
           <span>
             {t("show-all")}{" "}
-            <span className="text-disabled transition-colors duration-[120ms] ease-out group-hover/expander:text-primary">
+            <span className="text-disabled transition-colors duration-120 ease-out group-hover/expander:text-primary">
               ({codeLineCount})
             </span>
           </span>

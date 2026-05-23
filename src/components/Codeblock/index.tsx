@@ -2,14 +2,7 @@ import React from "react"
 
 import CodeblockClient from "./CodeblockClient"
 
-import { highlight, type Lang, resolveLang } from "@/lib/shiki"
-
-const COPY_WIDGET_LANGS = new Set<Lang>([
-  "javascript",
-  "json",
-  "python",
-  "solidity",
-])
+import { highlight, resolveLang } from "@/lib/shiki"
 
 const getValidChildrenForCodeblock = (child: unknown): string | undefined => {
   try {
@@ -80,8 +73,6 @@ const Codeblock = async ({
 
   const html = await highlight(codeText, language)
 
-  const shouldShowCopyWidget =
-    resolvedLang !== "text" && COPY_WIDGET_LANGS.has(resolvedLang)
   const shouldShowLineNumbers = resolvedLang !== "bash"
   const totalLines = codeText.split("\n").length
   const languageLabel = LANGUAGE_LABELS[language] ?? ""
@@ -92,7 +83,6 @@ const Codeblock = async ({
       codeText={codeText}
       languageLabel={languageLabel}
       allowCollapse={allowCollapse}
-      shouldShowCopyWidget={shouldShowCopyWidget}
       shouldShowLineNumbers={shouldShowLineNumbers}
       totalLines={totalLines}
       fromHomepage={fromHomepage}

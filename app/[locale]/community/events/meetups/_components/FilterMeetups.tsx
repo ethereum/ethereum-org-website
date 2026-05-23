@@ -66,7 +66,7 @@ export default function FilterMeetups({ events }: FilterMeetupsProps) {
           ))}
         </div>
       ) : (
-        <Alert variant="warning">
+        <Alert variant="warning" role="status">
           <Info className="size-6 !text-current" />
           <AlertContent>{t("page-events-search-no-results")}</AlertContent>
         </Alert>
