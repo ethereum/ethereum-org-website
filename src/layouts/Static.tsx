@@ -6,7 +6,6 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
-import Codeblock from "@/components/Codeblock"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -52,19 +51,12 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4 className="max-md:text-md" {...props} />
 )
 
-const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
-  const match = props.className?.match(/(language-\S+)/)
-  const codeLanguage = match ? match[0] : "plain-text"
-  return <Codeblock codeLanguage={codeLanguage} {...props} />
-}
-
 // Static layout components
 export const staticComponents = {
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
-  pre: Pre,
   Alert,
   Callout,
   Contributors,
