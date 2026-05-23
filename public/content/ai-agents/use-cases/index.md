@@ -13,8 +13,6 @@ summaryPoints:
   - "Live agents trade, deploy tokens, and coordinate onchain"
 ---
 
-# AI agent use cases on Ethereum {#use-cases}
-
 The following use cases represent what autonomous AI agents are doing on Ethereum today. **Each is grounded in capabilities covered in depth elsewhere in this builder hub**: programmable wallets, machine payments, onchain identity, and verifiable inference. The links below connect each use case to the infrastructure that makes it possible.
 
 ---

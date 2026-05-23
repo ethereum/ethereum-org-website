@@ -13,8 +13,6 @@ summaryPoints:
   - "Production-ready, with adoption across cloud and payments providers"
 ---
 
-# Machine payments with x402 {#machine-payments}
-
 **Standard financial infrastructure was designed for humans and corporations.** Bank accounts require legal entities. Payment APIs require API keys tied to user accounts. OAuth tokens require a human to authorize them. An autonomous agent cannot hold a bank account, and requiring human approval for every API call defeats the purpose of autonomy.
 
 Ethereum provides a native payment rail that autonomous code can use directly. Agents can hold stablecoins without a bank account, and emerging protocols like x402 give any API endpoint a machine-readable way to request and receive payment in a single HTTP exchange.

@@ -13,8 +13,6 @@ summaryPoints:
   - "Code samples for each framework's Ethereum integration"
 ---
 
-# AI agent frameworks {#ai-agent-frameworks}
-
 An agent framework handles three responsibilities: **the language model interface, tool orchestration, and the reasoning loop** that drives your agent between steps. The framework you choose shapes which wallet SDK integrates most naturally, what deployment patterns are available to you, and how your agent manages state across calls.
 
 This page covers a selection of commonly-used frameworks with active Ethereum integration, with a decision guide and integration notes for each.

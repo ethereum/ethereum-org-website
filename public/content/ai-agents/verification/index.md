@@ -13,8 +13,6 @@ summaryPoints:
   - "Permanent, tamper-resistant onchain audit trails of agent behavior"
 ---
 
-# Verifiable AI agents {#verifiable-ai-agents}
-
 **An AI agent running offchain is, by default, opaque.** Users and counterparties have no way to confirm that the model producing the agent's outputs is the model it claims to be, that it ran without tampering, or that it followed its stated rules. When an agent takes a consequential action, like executing a trade, releasing funds, or making a governance vote, the only evidence it provides is its own assertion.
 
 Ethereum provides two technical paths for making agent behavior verifiable without requiring trust in the agent's operator: **zero-knowledge machine learning (zkML) proofs** and **trusted execution environment (TEE) attestations**. Smart contracts can verify both types of evidence before releasing funds or executing other consequential actions, creating a chain of verifiable behavior from model inference to onchain settlement.

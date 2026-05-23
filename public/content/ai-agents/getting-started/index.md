@@ -13,8 +13,6 @@ summaryPoints:
   - "Code examples for setup, integration, and guardrails"
 ---
 
-# Getting started with AI agents {#getting-started}
-
 This guide walks through the four steps required to deploy your first autonomous agent on Ethereum: creating a smart account wallet, funding it, connecting an agent framework, and configuring spending guardrails. Each step links to dedicated pages for deeper implementation guidance.
 
 <VideoWatch slug="ai-agents-ethereum-vito-rivabella" />

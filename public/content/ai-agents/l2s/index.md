@@ -13,8 +13,6 @@ summaryPoints:
   - "Same patterns work on optimistic and ZK rollups"
 ---
 
-# Layer 2 networks for AI agents {#l2s-for-agents}
-
 **Ethereum Mainnet provides the canonical security and settlement layer.** [Layer 2](/layer-2/) networks extend it by offering **specialized execution environments**, such as **[trusted execution environment (TEE)](/ai-agents/verification/#tees)-based transaction ordering**, alternative smart contract languages, and concentrated agent tooling ecosystems, alongside lower fees and faster finality. For many agent workloads, the choice of L2 is driven by the capabilities it provides, not just by cost.
 
 All Ethereum L2s ultimately settle to Mainnet. An agent's assets, identity, and onchain records remain **anchored to Ethereum's security guarantees** regardless of which L2 it operates on.

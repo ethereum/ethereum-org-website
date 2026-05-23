@@ -13,8 +13,6 @@ summaryPoints:
   - "ERC-8004 identity plus x402 payments enables agent-to-agent commerce"
 ---
 
-# Agent identity with ERC-8004 {#agent-identity}
-
 When an autonomous agent interacts with another agent or a human counterparty, the counterparty needs to answer three questions: Is this agent who it says it is? What can it do? Has it behaved reliably in the past?
 
 Centralized identity directories answer these questions by asking all parties to trust the directory operator. That trust assumption is fragile: **the operator can be captured, shut down, or selectively deny access**. 

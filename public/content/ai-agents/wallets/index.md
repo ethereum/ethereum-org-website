@@ -13,8 +13,6 @@ summaryPoints:
   - "Key management patterns with human-in-the-loop escalation"
 ---
 
-# AI Agent wallets {#agent-wallets}
-
 This page covers wallet infrastructure for autonomous AI agents: programmatic key management, spending guardrails, and session-based access control. 
 
 For personal wallets (human-managed Ethereum accounts, wallet apps, self-custody basics, and security), see [Ethereum wallets](/wallets/).

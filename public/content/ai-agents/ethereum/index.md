@@ -12,7 +12,6 @@ summaryPoints:
   - "Programmable guardrails and session keys for bounded autonomy"
   - "Permissionless access to DeFi, payments, and identity"
 ---
-# Why Ethereum for AI agents {#why-ethereum-for-ai-agents}
 
 AI agents operate across many platforms and networks. This page covers what builders need to understand about building on [Ethereum](/): the specific **technical capabilities** the network provides for autonomous agents, and the **architectural tradeoffs** to weigh before committing to that stack.
 
