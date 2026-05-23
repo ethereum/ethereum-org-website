@@ -10,10 +10,12 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
+// TODO: Standardize CardGrid across all MdComponents
 const CardGrid = (props: ChildOnlyProp) => (
   <div className="my-8 grid grid-cols-fill-4 gap-4" {...props} />
 )
 
+// TODO: Remove in lieu of MarkdownCard and MarkdownCardProps when #18210 merged
 type HubCardProps = {
   emoji: string
   title: string
@@ -41,9 +43,7 @@ const HubCard = ({
       <CardTitle variant="bold">{title}</CardTitle>
       <CardParagraph variant="light">{description}</CardParagraph>
     </CardContent>
-    <ButtonLink href={href} variant="solid">
-      {ctaLabel}
-    </ButtonLink>
+    <ButtonLink href={href}>{ctaLabel}</ButtonLink>
   </Card>
 )
 
