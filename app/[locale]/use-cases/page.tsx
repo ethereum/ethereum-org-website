@@ -3,12 +3,12 @@ import { getTranslations } from "next-intl/server"
 import type { PageParams, ToCItem } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 
-import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DocLink from "@/components/DocLink"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, ImageProps } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
@@ -194,17 +194,15 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           </Section>
 
           {/* AI agents banner */}
-          <CalloutBannerSSR
+          <Callout
             id="ai-agents"
             title={t("ai-agents-title")}
             image={aiAgentsHero}
             description={t("ai-agents-description")}
             variant="small"
           >
-            <ButtonLink href="/ai-agents/" className="w-fit max-sm:w-full">
-              {t("ai-agents-cta")}
-            </ButtonLink>
-          </CalloutBannerSSR>
+            <ButtonLink href="/ai-agents/">{t("ai-agents-cta")}</ButtonLink>
+          </Callout>
 
           {/* Digital ownership and gaming */}
           <Section id={tocItems[1].id} className="space-y-8">
@@ -283,21 +281,19 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           </Section>
 
           {/* Ready to start? */}
-          <CalloutBannerSSR
+          <Callout
             id="ready-to-start"
             title={t("ready-to-start-title")}
             description={t("ready-to-start-description")}
             variant="medium"
           >
-            <div className="flex flex-wrap gap-4 max-sm:flex-col [&>a]:max-sm:flex-1">
-              <ButtonLink href="/wallets/find-wallet/" variant="solid">
-                {t("ready-to-start-wallet-cta")}
-              </ButtonLink>
-              <ButtonLink href="/get-eth/" variant="outline" isSecondary>
-                {t("ready-to-start-eth-cta")}
-              </ButtonLink>
-            </div>
-          </CalloutBannerSSR>
+            <ButtonLink href="/wallets/find-wallet/">
+              {t("ready-to-start-wallet-cta")}
+            </ButtonLink>
+            <ButtonLink href="/get-eth/" variant="outline" isSecondary>
+              {t("ready-to-start-eth-cta")}
+            </ButtonLink>
+          </Callout>
         </div>
       </ContentLayout>
     </>

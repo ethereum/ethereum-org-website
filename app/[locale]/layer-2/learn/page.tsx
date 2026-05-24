@@ -7,7 +7,6 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
 import Card from "@/components/Card"
 import FileContributors from "@/components/FileContributors"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
@@ -17,6 +16,7 @@ import MainArticle from "@/components/MainArticle"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -318,42 +318,38 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div id="callout-cards" className="px-8 py-9">
           <div className="flex w-full flex-col lg:flex-row">
-            <CalloutSSR
+            <Callout
               image={Callout1Image}
               title={t("page-layer-2-learn-callout-1-title")}
               description={t("page-layer-2-learn-callout-1-description")}
             >
-              <div>
-                <ButtonLink
-                  href="/layer-2"
-                  customEventOptions={{
-                    eventCategory: "l2_learn",
-                    eventAction: "button_click",
-                    eventName: "learn_more",
-                  }}
-                >
-                  {t("page-layer-2-learn-learn-more")}
-                </ButtonLink>
-              </div>
-            </CalloutSSR>
-            <CalloutSSR
+              <ButtonLink
+                href="/layer-2"
+                customEventOptions={{
+                  eventCategory: "l2_learn",
+                  eventAction: "button_click",
+                  eventName: "learn_more",
+                }}
+              >
+                {t("page-layer-2-learn-learn-more")}
+              </ButtonLink>
+            </Callout>
+            <Callout
               image={Callout2Image}
               title={t("page-layer-2-learn-callout-2-title")}
               description={t("page-layer-2-learn-callout-2-description")}
             >
-              <div>
-                <ButtonLink
-                  href="/layer-2/networks"
-                  customEventOptions={{
-                    eventCategory: "l2_learn",
-                    eventAction: "button_click",
-                    eventName: "explore_networks",
-                  }}
-                >
-                  {t("page-layer-2-learn-explore-networks")}
-                </ButtonLink>
-              </div>
-            </CalloutSSR>
+              <ButtonLink
+                href="/layer-2/networks"
+                customEventOptions={{
+                  eventCategory: "l2_learn",
+                  eventAction: "button_click",
+                  eventName: "explore_networks",
+                }}
+              >
+                {t("page-layer-2-learn-explore-networks")}
+              </ButtonLink>
+            </Callout>
           </div>
         </div>
 

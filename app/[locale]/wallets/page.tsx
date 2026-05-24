@@ -8,7 +8,6 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -23,6 +22,7 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -418,29 +418,25 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <div className="-ms-4 -me-4 mt-16 flex flex-wrap">
             <Callout
               image={ETHImage}
-              titleKey="page-wallets:page-wallets-get-some"
-              alt={t("page-wallets-get-some-alt")}
-              descriptionKey="page-wallets:page-wallets-get-some-desc"
+              title="page-wallets-get-some"
+              // alt={t("page-wallets-get-some-alt")}
+              description="page-wallets-get-some-desc"
               className="min-h-full flex-1 basis-[424px]"
             >
-              <div>
-                <ButtonLink href="/get-eth/">
-                  {t("page-wallets-get-some-btn")}
-                </ButtonLink>
-              </div>
+              <ButtonLink href="/get-eth/">
+                {t("page-wallets-get-some-btn")}
+              </ButtonLink>
             </Callout>
             <Callout
               image={DappsImage}
-              titleKey="page-wallets:page-wallets-try-dapps"
-              alt={t("page-wallets-try-dapps-alt")}
-              descriptionKey="page-wallets:page-wallets-try-dapps-desc"
+              title="page-wallets-try-dapps"
+              // alt={t("page-wallets-try-dapps-alt")}
+              description="page-wallets-try-dapps-desc"
               className="min-h-full flex-1 basis-[424px]"
             >
-              <div>
-                <ButtonLink href="/apps/">
-                  {t("page-wallets-more-on-dapps-btn")}
-                </ButtonLink>
-              </div>
+              <ButtonLink href="/apps/">
+                {t("page-wallets-more-on-dapps-btn")}
+              </ButtonLink>
             </Callout>
           </div>
         </div>

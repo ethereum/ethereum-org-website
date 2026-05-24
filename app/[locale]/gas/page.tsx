@@ -8,7 +8,6 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
@@ -24,6 +23,7 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex, type FlexProps } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
@@ -398,36 +398,30 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </Content>
         <Divider />
         <Content>
-          <Flex className="-mx-4 flex-wrap">
+          <Flex className="flex-wrap gap-8 max-md:flex-col">
             <Callout
-              className="min-h-full flex-[1_1_416px]"
+              title={t("page-gas-how-do-i-pay-less-gas-card-3-title")}
+              description={t(
+                "page-gas-how-do-i-pay-less-gas-card-3-description"
+              )}
               image={whatIsEthereumImg}
-              titleKey={"page-gas:page-gas-how-do-i-pay-less-gas-card-3-title"}
-              alt=""
-              descriptionKey={
-                "page-gas:page-gas-how-do-i-pay-less-gas-card-3-description"
-              }
+              className="min-h-full flex-[1_1_416px]"
             >
-              <div>
-                <ButtonLink href="/layer-2/">
-                  {t("page-gas-use-layer-2")}
-                </ButtonLink>
-              </div>
+              <ButtonLink href="/layer-2/">
+                {t("page-gas-use-layer-2")}
+              </ButtonLink>
             </Callout>
             <Callout
-              className="min-h-full flex-[1_1_416px]"
+              title={tCommunity("page-community-explore-dapps-title")}
+              description={tCommunity(
+                "page-community-explore-dapps-description"
+              )}
               image={dogeComputerImg}
-              titleKey={"page-community:page-community-explore-dapps-title"}
-              alt={tCommunity("page-community-explore-dapps-alt")}
-              descriptionKey={
-                "page-community:page-community-explore-dapps-description"
-              }
+              className="min-h-full flex-[1_1_416px]"
             >
-              <div>
-                <ButtonLink href="/apps/">
-                  {tCommunity("page-community-explore-dapps")}
-                </ButtonLink>
-              </div>
+              <ButtonLink href="/apps/">
+                {tCommunity("page-community-explore-dapps")}
+              </ButtonLink>
             </Callout>
           </Flex>
         </Content>

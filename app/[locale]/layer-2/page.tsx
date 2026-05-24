@@ -7,7 +7,6 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { type HubHeroProps } from "@/components/Hero/HubHero"
@@ -16,6 +15,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import InlineLink from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -510,43 +510,38 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           id="layer-2-callout-cards"
           className="flex w-full flex-col px-8 py-8 md:flex-row"
         >
-          <CalloutSSR
+          <Callout
             image={ExploreImage}
             title={t("page-layer-2-callout-1-title")}
             description={t("page-layer-2-callout-1-description")}
           >
-            <div>
-              <ButtonLink
-                href="/layer-2/networks"
-                customEventOptions={{
-                  eventCategory: "l2_hub",
-                  eventAction: "button_click",
-                  eventName: "bottom_explore_networks",
-                }}
-              >
-                {tCommon("nav-networks-explore-networks-label")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
-          <CalloutSSR
+            <ButtonLink
+              href="/layer-2/networks"
+              customEventOptions={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "bottom_explore_networks",
+              }}
+            >
+              {tCommon("nav-networks-explore-networks-label")}
+            </ButtonLink>
+          </Callout>
+          <Callout
             image={WalkingImage}
             title={t("page-layer-2-callout-2-title")}
             description={t("page-layer-2-callout-2-description")}
-            headerClassName="-mt-6"
           >
-            <div>
-              <ButtonLink
-                href="/layer-2/learn"
-                customEventOptions={{
-                  eventCategory: "l2_hub",
-                  eventAction: "button_click",
-                  eventName: "bottom_l2_learn",
-                }}
-              >
-                {tCommon("learn-more")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
+            <ButtonLink
+              href="/layer-2/learn"
+              customEventOptions={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "bottom_l2_learn",
+              }}
+            >
+              {tCommon("learn-more")}
+            </ButtonLink>
+          </Callout>
         </div>
       </MainArticle>
     </I18nProvider>

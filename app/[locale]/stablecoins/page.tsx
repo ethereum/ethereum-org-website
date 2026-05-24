@@ -8,7 +8,6 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -25,6 +24,7 @@ import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -595,7 +595,7 @@ async function Page(props: { params: Promise<PageParams> }) {
           </Section>
           <Divider />
           <Section>
-            <CalloutBannerSSR
+            <Callout
               className="mx-0 mt-8 mb-16"
               title={t("page-stablecoins-stablecoins-dapp-callout-title")}
               description={t(
@@ -605,20 +605,13 @@ async function Page(props: { params: Promise<PageParams> }) {
               imageWidth={600}
               alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
             >
-              <div key="two-buttons" className="flex flex-wrap gap-4">
-                <ButtonLink href="/apps/">
-                  {t("page-stablecoins-explore-dapps")}
-                </ButtonLink>
-                <ButtonLink
-                  variant="outline"
-                  href="/defi/"
-                  className="whitespace-normal"
-                  isSecondary
-                >
-                  {t("page-stablecoins-more-defi-button")}
-                </ButtonLink>
-              </div>
-            </CalloutBannerSSR>
+              <ButtonLink href="/apps/">
+                {t("page-stablecoins-explore-dapps")}
+              </ButtonLink>
+              <ButtonLink href="/defi/" variant="outline" isSecondary>
+                {t("page-stablecoins-more-defi-button")}
+              </ButtonLink>
+            </Callout>
             <h2>{t("page-stablecoins-save-stablecoins")}</h2>
             <Flex className="me-8 mb-8 w-full flex-col items-start lg:flex-row">
               <div className="ms-auto me-auto w-full lg:ms-0 lg:me-2">

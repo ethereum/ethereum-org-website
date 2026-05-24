@@ -4,12 +4,12 @@ import { getTranslations } from "next-intl/server"
 import type { PageParams, ToCItem } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 
-import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DocLink, { type DocLinkProps } from "@/components/DocLink"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, type ImageProps } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardBanner,
@@ -367,7 +367,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               <h2>{tocItems[2].title}</h2>
               <p>{t("what-is-ethereum-used-for-1")}</p>
 
-              <CalloutBannerSSR
+              <Callout
                 id="explore-use-cases"
                 title={t("explore-use-cases-card-title")}
                 image={developersEthBlocks}
@@ -375,10 +375,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 variant="small"
                 className="[&_img]:max-lg:-mt-12"
               >
-                <ButtonLink href="/use-cases/" className="w-fit max-sm:w-full">
+                <ButtonLink href="/use-cases/">
                   {t("explore-use-cases-cta")}
                 </ButtonLink>
-              </CalloutBannerSSR>
+              </Callout>
             </div>
           </Section>
 

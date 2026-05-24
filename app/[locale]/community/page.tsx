@@ -10,7 +10,6 @@ import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 import type { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
-import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
@@ -20,6 +19,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
 
@@ -327,30 +327,24 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <Content>
             <CardContainer>
               <Callout
-                className="min-h-full flex-[1_1_416px]"
+                title={t("page-community-get-eth-title")}
+                description={t("page-community-get-eth-description")}
                 image={ethImg}
-                titleKey="page-community:page-community-get-eth-title"
-                alt={t("page-community-get-eth-alt")}
-                descriptionKey="page-community:page-community-get-eth-description"
+                className="min-h-full flex-[1_1_416px]"
               >
-                <div>
-                  <ButtonLink href="/get-eth/">
-                    {t("page-community-get-eth")}
-                  </ButtonLink>
-                </div>
+                <ButtonLink href="/get-eth/">
+                  {t("page-community-get-eth")}
+                </ButtonLink>
               </Callout>
               <Callout
-                className="min-h-full flex-[1_1_416px]"
+                title={t("page-community-explore-dapps-title")}
+                description={t("page-community-explore-dapps-description")}
                 image={dogeComputerImg}
-                titleKey="page-community:page-community-explore-dapps-title"
-                alt={t("page-community-explore-dapps-alt")}
-                descriptionKey="page-community:page-community-explore-dapps-description"
+                className="min-h-full flex-[1_1_416px]"
               >
-                <div>
-                  <ButtonLink href="/apps/">
-                    {t("page-community-explore-dapps")}
-                  </ButtonLink>
-                </div>
+                <ButtonLink href="/apps/">
+                  {t("page-community-explore-dapps")}
+                </ButtonLink>
               </Callout>
             </CardContainer>
           </Content>
