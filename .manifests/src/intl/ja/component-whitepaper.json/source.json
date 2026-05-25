@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/component-whitepaper.json",
+  "generatedAt": "2026-05-25T10:39:49.535Z",
+  "rootHash": "de917f3b6a84",
+  "tree": {
+    "contentHash": "3e1a624e7d6a",
+    "anchorHash": "1286c462d536",
+    "children": {
+      "before-you-read": {
+        "contentHash": "282c316bbaa1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "heading": {
+        "contentHash": "c45e7e6cb41f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "description": {
+        "contentHash": "734cb72e6369",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d5a21dfc32b4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "cta-learn": {
+        "contentHash": "e90cc95196ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "cta-download-pdf": {
+        "contentHash": "6f6b983b28f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "whats-changed": {
+        "contentHash": "95f90911dbaf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evolution-pos": {
+        "contentHash": "3191340b6aef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evolution-l2": {
+        "contentHash": "56b98a3fee13",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evolution-usecases": {
+        "contentHash": "7f942dedd881",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "evolution-standards": {
+        "contentHash": "02406954c7c3",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "before-you-read",
+      "heading",
+      "description",
+      "cta-learn",
+      "cta-download-pdf",
+      "whats-changed",
+      "evolution-pos",
+      "evolution-l2",
+      "evolution-usecases",
+      "evolution-standards"
+    ]
+  },
+  "sourceCommitSha": "647106d896d17d983a5bec54d4f14ca23f4039cf"
+}
