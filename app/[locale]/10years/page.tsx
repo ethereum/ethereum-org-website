@@ -117,7 +117,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               defaultValue={Object.keys(tenYearEventRegions)[0]}
               className="w-full"
             >
-              <TabsList className="border-b-primary w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 !p-0 shadow-none md:border-0 md:shadow-none">
+              <TabsList className="w-full max-w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden">
                 {Object.entries(tenYearEventRegions).map(([key, data]) => (
                   <TabsTrigger
                     key={key}
