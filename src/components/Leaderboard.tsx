@@ -32,7 +32,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
 
   return (
     <List
-      className="ms-0 mb-8 w-full list-none bg-background shadow-table-box"
+      className="bg-background shadow-table-box mb-8 ms-0 w-full list-none"
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content
@@ -54,7 +54,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
           return (
             <ListItem className="mb-0" key={username}>
               <LinkBox
-                className="mb-1 flex w-full items-center justify-between p-4 shadow-table-item-box hover:rounded-lg hover:bg-background-highlight hover:no-underline hover:shadow-primary"
+                className="shadow-table-item-box hover:bg-background-highlight hover:shadow-primary mb-1 flex w-full items-center justify-between p-4 hover:no-underline"
                 key={idx}
               >
                 <div className="me-4 opacity-40">{idx + 1}</div>
@@ -80,7 +80,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                     )}
                   </LinkOverlay>
 
-                  <div className="text-sm text-body-medium">
+                  <div className="text-body-medium text-sm">
                     {score} {t("page-upgrades-bug-bounty-leaderboard-points")}
                   </div>
                 </Flex>
