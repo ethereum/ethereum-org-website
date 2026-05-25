@@ -240,7 +240,7 @@ curl -sf "$GLOSSARY_HOST/llms.txt" \
 ENGLISH_SOURCE=$(cat "$WORKTREE_PATH/public/content/{path}.md")
 curl -sf -X POST "$GLOSSARY_API_URL/filter" \
   -H "Content-Type: application/json" \
-  -d "$(jq -n --arg text "$ENGLISH_SOURCE" --arg lang "{LANGUAGE_CODE}" '{text: $text, language: $lang}')"
+  -d "$(jq -n --arg content "$ENGLISH_SOURCE" --arg lang "{LANGUAGE_CODE}" '{content: $content, language: $lang}')"
 ```
 
 **Fallback — full language** when filtering per file is impractical or the endpoint is unreachable:
