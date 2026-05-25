@@ -65,7 +65,7 @@ Bir topluluğun bu yönergelere göre eklenmesi veya kaldırılması gerektiğin
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout emoji=":classical_building:" title="Merkeziyetsiz Otonom Organizasyonlar (DAO)" description="Bu gruplar, organizasyonu ve iş birliğini kolaylaştırmak için Ethereum teknolojisinden yararlanır. Örneğin; üyeliği kontrol etmek, teklifleri oylamak veya havuza alınan varlıkları yönetmek için.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAO'lar hakkında daha fazla bilgi edinin

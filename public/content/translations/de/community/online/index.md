@@ -65,7 +65,7 @@ Wenn Sie der Meinung sind, dass eine Community basierend auf diesen Richtlinien 
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout emoji=":classical_building:" title="Dezentrale Autonome Organisationen (DAOs)" description="Diese Gruppen nutzen die Ethereum-Technologie, um Organisation und Zusammenarbeit zu erleichtern. Zum Beispiel für die Kontrolle der Mitgliedschaft, die Abstimmung über Vorschläge oder die Verwaltung von gebündelten Vermögenswerten.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Erfahren Sie mehr über DAOs

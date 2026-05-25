@@ -65,7 +65,7 @@ lang: ja
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout emoji=":classical_building:" title="自律分散型組織 (DAO)" description="分散型自律組織(DAO)とは、メンバーシップの管理、提案への投票、またはプールされた資産の管理など、イーサリアム技術を活用し、組織運営やコラボレーションを円滑化している組織のことです。">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAOについてもっと知る

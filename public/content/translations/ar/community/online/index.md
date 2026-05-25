@@ -65,7 +65,7 @@ lang: ar
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout emoji=":classical_building:" title="المنظمات المستقلة اللامركزية (دي إيه أوز)" description="وتستخدم هذه المجموعات تكنولوجيا إيثيريوم لتيسير التنظيم والتعاون. على سبيل المثال، للسيطرة على العضوية، أو التصويت على المقترحات، أو إدارة الأصول المجمعة.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       تعرف على المزيد حول دي إيه أوز

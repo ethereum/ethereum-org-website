@@ -65,7 +65,7 @@ Si considera que debería añadirse o eliminarse una comunidad en función de es
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout emoji=":classical_building:" title="Organizaciones Autónomas Descentralizadas (DAO)" description="Estos grupos aprovechan la tecnología de Ethereum para facilitar la organización y la colaboración. Por ejemplo, para controlar la membresía, votar propuestas o administrar los activos agrupados.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Más información sobre DAOs

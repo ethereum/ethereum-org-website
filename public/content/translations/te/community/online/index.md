@@ -65,7 +65,7 @@ lang: te
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout emoji=":classical_building:" title="వికేంద్రీకృత స్వయంప్రతిపత్త సంస్థలు (DAOలు)" description="ఈ సమూహాలు సంస్థను మరియు సహకారాన్ని సులభతరం చేయడానికి Ethereum సాంకేతికతను ఉపయోగించుకుంటాయి. ఉదాహరణకు, సభ్యత్వాన్ని నియంత్రించడం, ప్రతిపాదనలపై ఓటు వేయడం లేదా సమీకరించిన ఆస్తులను నిర్వహించడం కోసం.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAOల గురించి మరింత తెలుసుకోండి

@@ -65,7 +65,7 @@ Ikiwa unaamini jumuiya inapaswa kuongezwa au kuondolewa kulingana na miongozo hi
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout emoji=":classical_building:" title="Mashirika huru yasiyotawaliwa (DAOs)" description="Haya makundi huinua teknolojia ya Ethereum ili kuwezesha ushirikiano na mashirika.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Pata maelezo zaidi kuhusu DAO
