@@ -1,7 +1,10 @@
 {
   "table-active": "செயலில்",
+  "table-browser-engines": "உலாவி இயந்திரங்கள்",
+  "table-desktop-platforms": "டெஸ்க்டாப் தளங்கள்",
   "table-filters": "வடிகட்டிகள்",
-  "table-showing": "காட்டப்படுகிறது",
+  "table-mobile-platforms": "மொபைல் தளங்கள்",
   "table-reset-filters": "மீட்டமை",
+  "table-showing": "காட்டப்படுகிறது",
   "table-what-are-you-looking-for": "நீங்கள் எதைத் தேடுகிறீர்கள்?"
 }
