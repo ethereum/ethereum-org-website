@@ -4,13 +4,14 @@ import a16zCover from "@/public/images/reports/a16z-state-of-crypto-2025.webp"
 import bisCover from "@/public/images/reports/bis-papers-156.webp"
 import quantumCover from "@/public/images/reports/coinbase-quantum-blockchain.webp"
 import consensysCover from "@/public/images/reports/consensys-trustware.webp"
+import ethereumBasicsCover from "@/public/images/reports/ethereum-basics-governments-institutions.webp"
 import fidelityCoinCover from "@/public/images/reports/fidelity-coin-report-ethereum.webp"
 import l2LandscapeCover from "@/public/images/reports/l2-landscape.webp"
 import mckinseyCover from "@/public/images/reports/mckinsey-ripples-to-waves.webp"
 import openzeppelinCover from "@/public/images/reports/openzeppelin-risk-assessment.webp"
+import tdsCover from "@/public/images/reports/trillion-dollar-security-card.webp"
 import twinstakeCover from "@/public/images/reports/twinstake-pectra.webp"
 import whiteHouseCover from "@/public/images/reports/white-house-crypto.webp"
-import tdsCover from "@/public/images/trillion-dollar-security/report.png"
 
 export type ReportCategory =
   | "ef-original"
@@ -56,6 +57,16 @@ export type Report = {
  * confirmed substantive. See PR description for the full audit.
  */
 export const reports: Report[] = [
+  {
+    slug: "ethereum-basics-governments-institutions",
+    title: "Ethereum Basics for Governments and Institutions",
+    publisher: "Ethereum Foundation",
+    date: "2026",
+    category: "ef-original",
+    // TODO: PDF to be uploaded to /public/reports/ — confirm filename + add fileSizeBytes.
+    href: "/reports/ethereum-basics-for-governments-and-institutions.pdf",
+    imgSrc: ethereumBasicsCover,
+  },
   {
     slug: "trillion-dollar-security",
     title: "Trillion Dollar Security",
