@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "uk",
+  "translatedAt": "2026-05-25T10:45:56.192Z",
+  "englishManifestHash": "57c3f8518a32",
+  "placeholderOrder": [
+    "ICU-VARIABLE-0"
+  ],
+  "placeholderMap": {
+    "ICU-VARIABLE-0": {
+      "type": "icu-variable",
+      "values": {
+        "value": "{url}"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-05-25T10:45:56.192Z",
+      "status": "success"
+    }
+  }
+}

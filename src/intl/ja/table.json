@@ -1,7 +1,10 @@
 {
   "table-active": "アクティブ",
+  "table-browser-engines": "ブラウザエンジン",
+  "table-desktop-platforms": "デスクトッププラットフォーム",
   "table-filters": "フィルター",
-  "table-showing": "表示",
+  "table-mobile-platforms": "モバイルプラットフォーム",
   "table-reset-filters": "リセット",
+  "table-showing": "表示中",
   "table-what-are-you-looking-for": "何をお探しですか？"
 }
