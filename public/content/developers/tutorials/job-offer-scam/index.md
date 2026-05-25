@@ -176,7 +176,7 @@ If you want to open the code in Visual Studio, do *not* open it directly, as it 
 
 If you use an IDE with an AI, such as Co-pilot, you can use a prompt similar to this:
 
-> Review the material in the \\wsl.localhost\Ubuntu\home\evil directory, without running anything in it, and find as many tricks that can be used against the device running it as possible.
+> Review the material in the `\\wsl.localhost\Ubuntu\home\evil` directory, without running anything in it, and find as many tricks that can be used against the device running it as possible.
 
 ## Conclusion {#conclusion}
 
