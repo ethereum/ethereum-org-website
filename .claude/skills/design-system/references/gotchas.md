@@ -88,11 +88,9 @@ Just be aware which side of the boundary you're on when adding hooks/effects.
 
 Static buttons get unnecessarily forced into client. Splitting would be invasive; for now, just know this is true.
 
-### `Callout` and `CalloutBanner` are pending consolidation
+### `Callout` consolidation is complete
 
-`Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` exist as client/server pairs today. A unified server-renderable `Callout` component is being built to absorb both pairs (plus `DismissableBanner`) into a single primitive with variants. While the migration is in flight, prefer the `*SSR` variants when the parent can do translation work via `getTranslations`. Tracked in a dedicated issue.
-
-> `BannerNotification` was on this consolidation list previously but was absorbed into `Alert` as `variant="banner"` in May 2026 (ahead of the broader Callout consolidation). The `Banners/` subdirectory no longer exists.
+The legacy `Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` client/server pairs were unified into a single server-renderable `Callout` at `@/components/ui/callout` (see `callout-walkthrough.md`). The root-level files were removed; don't reintroduce them. `BannerNotification` was absorbed into `Alert` as `variant="banner"` in May 2026 in the same direction-of-travel.
 
 ### Event tracking is automatic on `Button` and `Link`
 

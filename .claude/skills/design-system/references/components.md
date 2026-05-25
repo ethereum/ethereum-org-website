@@ -596,7 +596,7 @@ The remaining `*Banner*`-named files at the root of `src/components/` are:
 
 - `EnvWarningBanner` -- exemplary thin wrap of `<Alert variant="warning">`
 - `TranslationBanner` -- floating Arabic/Urdu translation feedback CTA; still a raw `<aside>` (deprecation candidate -- could be migrated to `<Alert variant="banner">` next time it's touched)
-- `CalloutBanner` / `CalloutBannerSSR` -- in-content card-with-image callout primitives (see `canonical-imports.md`); unrelated to the top-of-page ribbon
+- (The legacy `Callout` / `CalloutBanner` / `CalloutSSR` / `CalloutBannerSSR` files at the root of `src/components/` were unified into `@/components/ui/callout` — see `canonical-imports.md` and `callout-walkthrough.md`. Unrelated to the top-of-page ribbon.)
 
 ### `Faq`
 
