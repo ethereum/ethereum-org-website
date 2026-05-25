@@ -370,8 +370,6 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("page-get-eth-use-your-eth-dapps")}
               image={dapps}
               alt={t("page-index:page-index-sections-individuals-image-alt")}
-              imageWidth={600}
-              className="mx-4 mt-24 mb-40"
             >
               <ButtonLink href="/apps/">
                 {t("page-get-eth-checkout-dapps-btn")}

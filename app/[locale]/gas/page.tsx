@@ -398,14 +398,13 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </Content>
         <Divider />
         <Content>
-          <Flex className="flex-wrap gap-8 max-md:flex-col">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <Callout
               title={t("page-gas-how-do-i-pay-less-gas-card-3-title")}
               description={t(
                 "page-gas-how-do-i-pay-less-gas-card-3-description"
               )}
               image={whatIsEthereumImg}
-              className="min-h-full flex-[1_1_416px]"
             >
               <ButtonLink href="/layer-2/">
                 {t("page-gas-use-layer-2")}
@@ -417,13 +416,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 "page-community-explore-dapps-description"
               )}
               image={dogeComputerImg}
-              className="min-h-full flex-[1_1_416px]"
             >
               <ButtonLink href="/apps/">
                 {tCommunity("page-community-explore-dapps")}
               </ButtonLink>
             </Callout>
-          </Flex>
+          </div>
         </Content>
         <Content>
           <StandaloneQuizWidget quizKey="gas" />

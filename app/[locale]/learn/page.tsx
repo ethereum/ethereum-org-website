@@ -373,7 +373,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 image={developersEthBlocks}
                 description={t("explore-use-cases-card-description")}
                 variant="small"
-                className="[&_img]:max-lg:-mt-12"
+                as="h3"
               >
                 <ButtonLink href="/use-cases/">
                   {t("explore-use-cases-cta")}

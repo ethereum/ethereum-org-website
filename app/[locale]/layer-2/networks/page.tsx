@@ -193,7 +193,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div
           id="callout-cards"
-          className="flex w-full flex-col px-8 py-9 lg:flex-row lg:gap-16"
+          className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2"
         >
           <Callout
             image={Callout1Image}

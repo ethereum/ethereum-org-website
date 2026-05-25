@@ -316,41 +316,42 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           />
         </div>
 
-        <div id="callout-cards" className="px-8 py-9">
-          <div className="flex w-full flex-col lg:flex-row">
-            <Callout
-              image={Callout1Image}
-              title={t("page-layer-2-learn-callout-1-title")}
-              description={t("page-layer-2-learn-callout-1-description")}
+        <div
+          id="callout-cards"
+          className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2"
+        >
+          <Callout
+            image={Callout1Image}
+            title={t("page-layer-2-learn-callout-1-title")}
+            description={t("page-layer-2-learn-callout-1-description")}
+          >
+            <ButtonLink
+              href="/layer-2"
+              customEventOptions={{
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "learn_more",
+              }}
             >
-              <ButtonLink
-                href="/layer-2"
-                customEventOptions={{
-                  eventCategory: "l2_learn",
-                  eventAction: "button_click",
-                  eventName: "learn_more",
-                }}
-              >
-                {t("page-layer-2-learn-learn-more")}
-              </ButtonLink>
-            </Callout>
-            <Callout
-              image={Callout2Image}
-              title={t("page-layer-2-learn-callout-2-title")}
-              description={t("page-layer-2-learn-callout-2-description")}
+              {t("page-layer-2-learn-learn-more")}
+            </ButtonLink>
+          </Callout>
+          <Callout
+            image={Callout2Image}
+            title={t("page-layer-2-learn-callout-2-title")}
+            description={t("page-layer-2-learn-callout-2-description")}
+          >
+            <ButtonLink
+              href="/layer-2/networks"
+              customEventOptions={{
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "explore_networks",
+              }}
             >
-              <ButtonLink
-                href="/layer-2/networks"
-                customEventOptions={{
-                  eventCategory: "l2_learn",
-                  eventAction: "button_click",
-                  eventName: "explore_networks",
-                }}
-              >
-                {t("page-layer-2-learn-explore-networks")}
-              </ButtonLink>
-            </Callout>
-          </div>
+              {t("page-layer-2-learn-explore-networks")}
+            </ButtonLink>
+          </Callout>
         </div>
 
         <div id="quiz" className="px-8 py-9">

@@ -14,11 +14,10 @@ const StakingCommunityCallout = async (
 
   return (
     <Callout
-      {...props}
       image={image}
       title={t("page-staking-join-community")}
       description={t("page-staking-join-community-desc")}
-      imageWidth={350}
+      {...props}
     >
       <ButtonLink
         href="https://discord.gg/ethstaker"

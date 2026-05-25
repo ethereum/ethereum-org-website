@@ -415,13 +415,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <h2 className="mt-12 mb-8 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-explore")}
           </h2>
-          <div className="-ms-4 -me-4 mt-16 flex flex-wrap">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <Callout
               image={ETHImage}
-              title="page-wallets-get-some"
-              // alt={t("page-wallets-get-some-alt")}
-              description="page-wallets-get-some-desc"
-              className="min-h-full flex-1 basis-[424px]"
+              title={t("page-wallets-get-some")}
+              description={t("page-wallets-get-some-desc")}
+              as="h3"
             >
               <ButtonLink href="/get-eth/">
                 {t("page-wallets-get-some-btn")}
@@ -429,10 +428,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Callout>
             <Callout
               image={DappsImage}
-              title="page-wallets-try-dapps"
-              // alt={t("page-wallets-try-dapps-alt")}
-              description="page-wallets-try-dapps-desc"
-              className="min-h-full flex-1 basis-[424px]"
+              title={t("page-wallets-try-dapps")}
+              description={t("page-wallets-try-dapps-desc")}
+              as="h3"
             >
               <ButtonLink href="/apps/">
                 {t("page-wallets-more-on-dapps-btn")}

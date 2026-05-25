@@ -505,10 +505,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </ExpandableCard>
           </div>
         </div>
-
         <div
           id="layer-2-callout-cards"
-          className="flex w-full flex-col px-8 py-8 md:flex-row"
+          className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2"
         >
           <Callout
             image={ExploreImage}

@@ -11,29 +11,22 @@ type AsProp = { as?: "h3" | "h4" }
 
 const variants = cva(
   cn(
-    "rounded-2xl p-8 sm:p-12",
-    "flex flex-col lg:flex-row-reverse",
-    "from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20 bg-linear-to-r",
-    "**:data-[label=description]:text-body-medium"
+    "@container/callout flex flex-col *:flex-1",
+    "@max-3xl/callout:has-[[data-label=callout-banner]]:*:mt-24", // Banner adjustment margin top (reserves space for image overlap when a banner is present)
+    "*:[--callout-padding:--spacing(8)] *:@3xl/callout:[--callout-padding:--spacing(12)]", // Callout padding variable
+    "[--content-font-size:var(--text-base)]"
   ),
   {
     variants: {
       variant: {
         large: cn(
-          "**:data-[label=callout-content]:flex **:data-[label=callout-content]:w-full **:data-[label=callout-content]:flex-shrink-0 **:data-[label=callout-content]:flex-grow **:data-[label=callout-content]:basis-1/2 **:data-[label=callout-content]:flex-col **:data-[label=callout-content]:justify-center **:data-[label=callout-content]:sm:ps-4 **:data-[label=callout-content]:lg:w-[inherit] **:data-[label=callout-content]:lg:ps-8",
-          "**:is(h2,h3,h4):mb-8 **:is(h2,h3,h4):text-2xl **:is(h2,h3,h4):leading-xs **:is(h2,h3,h4):sm:text-[2rem]",
-          "**:data-[label=description]:mb-8 **:data-[label=description]:w-[90%] **:data-[label=description]:text-xl"
+          "**:data-[label=callout-content]:@3xl/callout:w-[inherit]",
+          "[--title-font-size:var(--text-2xl)] *:@3xl/callout:[--title-font-size:var(--text-3xl)]",
+          "[--content-font-size:var(--text-xl)]"
         ),
-        medium: cn(
-          "**:data-[label=callout-content]:space-y-8",
-          "**:is(h2,h3,h4):mb-8 **:is(h2,h3,h4):text-2xl **:is(h2,h3,h4):leading-xs **:is(h2,h3,h4):sm:text-[2rem]",
-          "**:data-[label=description]:text-inherit"
-        ),
-        small: cn(
-          "**:data-[label=callout-content]:space-y-4",
-          "**:is(h2,h3,h4):text-xl **:is(h2,h3,h4):text-body **:is(h2,h3,h4):md:text-2xl",
-          "**:img:max-w-64"
-        ),
+        medium: "*:@3xl/callout:[--title-font-size:var(--text-3xl)]",
+        small:
+          "[--title-font-size:var(--text-xl)] *:@3xl/callout:[--title-font-size:var(--text-2xl)]",
       },
     },
     defaultVariants: {
@@ -43,14 +36,23 @@ const variants = cva(
 )
 
 const CalloutRoot = React.forwardRef<
-  HTMLElement,
-  React.HTMLAttributes<HTMLElement> & VariantProps<typeof variants>
->(({ className, variant, ...props }, ref) => (
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
+>(({ className, variant, children, ...props }, ref) => (
   <aside
     ref={ref}
-    className={cn(variants({ variant }), className)}
+    className={cn("min-h-full", variants({ variant }), className)}
     {...props}
-  />
+  >
+    <div
+      className={cn(
+        "flex flex-col @3xl/callout:flex-row-reverse",
+        "rounded-2xl bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+      )}
+    >
+      {children}
+    </div>
+  </aside>
 ))
 CalloutRoot.displayName = "CalloutRoot"
 
@@ -58,7 +60,17 @@ const CalloutBanner = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("flex", className)} {...props} />
+  <div
+    ref={ref}
+    data-label="callout-banner"
+    className={cn(
+      "grid place-items-center px-(--callout-padding) @3xl/callout:flex-2",
+      "@max-3xl/callout:-mt-24 @max-3xl/callout:md:[aside:not(:only-child)_&]:min-h-64",
+      "*:[img]:max-h-64 *:[img]:object-contain",
+      className
+    )}
+    {...props}
+  />
 ))
 CalloutBanner.displayName = "CalloutBanner"
 
@@ -84,7 +96,11 @@ const CalloutContent = React.forwardRef<
   <div
     ref={ref}
     data-label="callout-content"
-    className={cn("flex flex-col", className)}
+    className={cn(
+      "@container/content flex flex-col gap-4 p-(--callout-padding)",
+      "flex-1 @3xl/callout:flex-3",
+      className
+    )}
     {...props}
   />
 ))
@@ -97,8 +113,8 @@ const CalloutButtons = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "flex flex-wrap gap-4 max-sm:flex-col",
-      "*:w-full *:text-center sm:*:w-fit",
+      "mt-auto flex flex-wrap gap-4 pt-4 max-sm:flex-col",
+      "*:w-full *:text-center sm:*:w-fit", // Button styling
       className
     )}
     {...props}
@@ -111,7 +127,13 @@ const CalloutTitle = React.forwardRef<
   React.HTMLAttributes<HTMLHeadingElement> & AsProp
 >(({ as, className, ...props }, ref) => {
   const Comp = as || "h2"
-  return <Comp ref={ref} className={className} {...props} />
+  return (
+    <Comp
+      ref={ref}
+      className={cn("[font-size:var(--title-font-size,inherit)]", className)}
+      {...props}
+    />
+  )
 })
 CalloutTitle.displayName = "CalloutTitle"
 
@@ -122,7 +144,10 @@ const CalloutDescription = React.forwardRef<
   <p
     ref={ref}
     data-label="description"
-    className={cn("flex-1", className)}
+    className={cn(
+      "[font-size:var(--content-font-size,inherit)] text-body-medium",
+      className
+    )}
     {...props}
   />
 ))
@@ -133,7 +158,6 @@ type BannerProp =
   | { image?: never; emoji?: string }
 
 export type CalloutProps = React.HTMLAttributes<HTMLDivElement> & {
-  imageWidth?: number
   title: string
   description: string
   alt?: string
@@ -144,7 +168,7 @@ export type CalloutProps = React.HTMLAttributes<HTMLDivElement> & {
 const Callout = ({
   image,
   emoji,
-  imageWidth,
+  as,
   title,
   description,
   alt = "",
@@ -157,16 +181,14 @@ const Callout = ({
         <Image
           src={image}
           alt={alt}
-          width={imageWidth}
-          className="mx-auto -my-24 object-contain max-lg:mb-0"
-          sizes="(max-width: 991px) calc(100vw - 128px), 600px"
+          sizes="(min-width: 768px) 400px, calc(100vw - 64px)"
         />
       </CalloutBanner>
     )}
     <CalloutContent>
       {emoji && <CalloutEmoji text={emoji} />}
 
-      <CalloutTitle>{title}</CalloutTitle>
+      <CalloutTitle as={as}>{title}</CalloutTitle>
       <CalloutDescription>{description}</CalloutDescription>
 
       {children && <CalloutButtons>{children}</CalloutButtons>}

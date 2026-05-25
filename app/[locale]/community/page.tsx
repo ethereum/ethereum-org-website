@@ -325,12 +325,11 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
           </Flex>
           <Content>
-            <CardContainer>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <Callout
                 title={t("page-community-get-eth-title")}
                 description={t("page-community-get-eth-description")}
                 image={ethImg}
-                className="min-h-full flex-[1_1_416px]"
               >
                 <ButtonLink href="/get-eth/">
                   {t("page-community-get-eth")}
@@ -340,13 +339,12 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 title={t("page-community-explore-dapps-title")}
                 description={t("page-community-explore-dapps-description")}
                 image={dogeComputerImg}
-                className="min-h-full flex-[1_1_416px]"
               >
                 <ButtonLink href="/apps/">
                   {t("page-community-explore-dapps")}
                 </ButtonLink>
               </Callout>
-            </CardContainer>
+            </div>
           </Content>
           <FeedbackCard />
         </PageContainer>
