@@ -17,7 +17,9 @@ At some point, they ask you to download a repository and run it. Maybe they want
 
 In this article we will discuss some of the tricks they use, as well as some defense mechanisms that would let you distinguish between legitimate repositories and malware.
 
-## Some of their tricks {#some-tricks}
+## Sample tricks {#some-tricks}
+
+Here are a few tricks from the last few times they tried to scam me. This list is definitely *not* exhaustive, but it should be enough to convince you that the danger is real.
 
 ### Remote execution {#remote-execution}
 
@@ -39,9 +41,9 @@ async function validateApiKey() {
 }
 ```
 
-We don't know what `verify` does at this point, but we can't be sure that we can trust it. If it is successful, it sets `response`.
+We don't know what `verify` does, but we do know it generates a [`Promise`](https://www.w3schools.com/js/js_promise.asp) that could resolve to a `response`.
 
-Next this function creates [a new `Function` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function).`Function` objects are used to execute JavaScript created dynamically. For example, this code snippet creates and then executes a function that adds one to a value. You can run it in the [Node.js CLI](https://www.w3schools.com/nodejs/nodejs_command_line.asp) to see it in action.
+Next this function creates [a new `Function` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function). `Function` objects are used to execute JavaScript provided to the program as a string. For example, this code snippet creates and then executes a function that adds one to a value. You can run it in the [Node.js CLI](https://www.w3schools.com/nodejs/nodejs_command_line.asp) to see it in action.
 
 ```js
 code = "return a+1"
@@ -51,9 +53,9 @@ addOne(10)
 
 Passing the [`require`](https://www.w3schools.com/nodejs/nodejs_modules.asp) function as a parameter makes it easy for the function written in `response.data` to import libraries. For example, [`fs`](http://nodejs.org/api/fs.html) lets an attacker read and modify files on your computer.
 
-We can trace the flow further to see whether `response.data` really comes from a dangerous source, but this is enough to show that the program is *not safe*.
+We can trace the flow further to see whether `response.data` actually comes from a dangerous source, but given that there are very few legitimate reasons to use `Function`, this is probably enough to convince us not to run the code in this repository.
 
-### Sending your environment variables {#env-vars}
+### Sharing environment variables {#env-vars}
 
 The same repository includes this function:
 
@@ -64,7 +66,7 @@ const verify = (api) =>
   });
 ```
 
-The variable [`process.env`](https://nodejs.org/api/environment_variables.html#processenv) includes all your environment variables, which may include authentication tokens. [`axios`](https://www.npmjs.com/package/axios) is a library used for HTTP(S) requests, so the program very "nicely" shares your environment with a remote server. 
+The variable [`process.env`](https://nodejs.org/api/environment_variables.html#processenv) includes all your environment variables, which may include authentication tokens. [`axios`](https://www.npmjs.com/package/axios) is a library used for HTTP(S) requests, so the program very "nicely" shares your environment with a remote server.
 
 ### Editor tasks {#editor-tasks}
 
@@ -103,7 +105,7 @@ Many of us use [Microsoft Visual Studio](https://visualstudio.microsoft.com/). I
 },
 ```      
 
-This JSON code tells the editor to automatically install the NPM packages in `package.json` when you open the folder. This *may* be legitimate; you need those packages to run the program. But when this happens silently, as it does here, that is suspicious. Maybe some of these packages are dangerous.
+This JSON code tells the editor to automatically install the NPM packages in `package.json` when you open the folder. This *may* be legitimate; you need those packages to run the program. But when this happens silently, as it does here, that is suspicious.
 
 Here is another task from the same place:
 
@@ -141,7 +143,7 @@ Another interesting trick used here is that the definition of "command" is prece
 
 ### Hiding in configuration files {#hide-in-config}
 
-Some configuration files and directories include hooks. For example, this file is the`.git/hooks/pre-commit` on one of those repositories:
+Some configuration files and directories include hooks. For example, this file is the`.git/hooks/pre-commit` on one of the scam repositories:
 
 ```sh
 #!/bin/sh
@@ -160,13 +162,13 @@ Every time you commit to this repository, it also downloads and runs some malici
 
 ## Defending yourself {#self-defense}
 
-The simplest solution is to refuse to run any repository that comes from a potential employer. Considering the popularity of this scam, I doubt honest employers will have a problem with it. However, there are a few other things you can do to secure yourself if you really do need 
+The simplest solution is to refuse to run any repository that comes from a potential employer. Considering the popularity of this scam, I doubt honest employers will have a problem with it. However, there are a few other things you can do to secure yourself if you really do need to look at code from a suspicious source.
 
 ### Sandbox {#sandbox}
 
 You go to a cloud provider (the major ones are [AWS](https://aws.amazon.com/free/), [Azure](https://azure.microsoft.com/), and [GCP](https://cloud.google.com/)) and get a virtual machine, typically for cents per hour. If you don't put anything secret on that VM, there is nothing for the bad guys to steal.
 
-### Subdirectories {#subdirectories}
+### Put the code in a subdirectory {#subdirectory}
 
 If you want to open the code in Visual Studio, do *not* open it directly, as it could run the scripts in `.vscode`. Instead, open a higher-level directory, such as your home directory.
 
@@ -174,9 +176,7 @@ If you want to open the code in Visual Studio, do *not* open it directly, as it 
 
 If you use an IDE with an AI, such as Co-pilot, you can use a prompt similar to this:
 
-```
-Review the material in the \\wsl.localhost\Ubuntu\home\evil directory, without running anything in it, and find as many tricks that can be used against the device running it as possible.
-```
+> Review the material in the \\wsl.localhost\Ubuntu\home\evil directory, without running anything in it, and find as many tricks that can be used against the device running it as possible.
 
 ## Conclusion {#conclusion}
 
