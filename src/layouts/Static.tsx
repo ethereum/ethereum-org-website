@@ -1,7 +1,6 @@
-import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
 
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -24,22 +23,23 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
+import PageActions from "@/components/PageActions"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
-import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import { Alert } from "@/components/ui/alert"
-import { Flex, Stack } from "@/components/ui/flex"
+import { Flex } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import WhitepaperBridge from "@/components/WhitepaperBridge"
 
 import { getEditPath } from "@/lib/utils/editPath"
-import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 
 import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading1 className="md:text-5xl" {...props} />
+  <MdHeading1 className="mt-0 mb-4 md:text-5xl" {...props} />
 )
 const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading2 className="max-md:text-2xl" {...props} />
@@ -51,7 +51,7 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4 className="max-md:text-md" {...props} />
 )
 
-// Static layout components
+// Static layout components.
 export const staticComponents = {
   h1: Heading1,
   h2: Heading2,
@@ -93,9 +93,10 @@ export const StaticLayout = ({
   contentNotTranslated,
   contributors,
 }: StaticLayoutProps) => {
-  const locale = useLocale()
-
   const absoluteEditPath = getEditPath(slug)
+  const hasListenToPlaylist = getPlaylistBySlug(slug).index !== -1
+
+  const isGuidesHub = slug === "/guides/" || slug === "guides"
 
   return (
     <div className="w-full">
@@ -104,36 +105,43 @@ export const StaticLayout = ({
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <div className="w-full">
-          {slug === "/guides/" ? (
+          {isGuidesHub ? (
             <HubHero
               heroImg={GuideHeroImage}
               header={frontmatter.title}
               description={frontmatter.description}
             />
           ) : (
-            <Stack className="gap-8">
+            <div className="mb-6 max-w-3xl lg:mb-8">
               <Breadcrumbs slug={slug} />
-
-              {!slug.includes("/whitepaper") && lastEditLocaleTimestamp && (
-                <p
-                  className="text-body-medium"
-                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-                >
-                  <Translation id="page-last-updated" />:{" "}
-                  {lastEditLocaleTimestamp}
-                </p>
-              )}
-            </Stack>
+            </div>
           )}
 
-          <MainArticle className="max-w-3xl">
-            <TableOfContents
-              className="relative"
-              items={tocItems}
-              maxDepth={frontmatter.sidebarDepth || 2}
-              hideEditButton={!!frontmatter.hideEditButton}
-              isMobile
-            />
+          <MainArticle
+            className={
+              isGuidesHub
+                ? "mt-12 max-w-3xl [&>h1:first-of-type]:hidden"
+                : "flex max-w-3xl flex-col [&>h1:first-of-type]:-order-1"
+            }
+          >
+            {!isGuidesHub && (
+              <PageActions
+                slug={slug}
+                isTranslated={!contentNotTranslated}
+                editPath={absoluteEditPath}
+                hideEditButton={!!frontmatter.hideEditButton}
+                className="mb-6"
+              >
+                {hasListenToPlaylist && <ListenToPlayer slug={slug} />}
+              </PageActions>
+            )}
+            <div className="mb-8 lg:hidden">
+              <TableOfContents
+                items={tocItems}
+                maxDepth={frontmatter.sidebarDepth || 2}
+                isMobile
+              />
+            </div>
             {children}
 
             {!frontmatter.hideEditButton && (
@@ -147,10 +155,8 @@ export const StaticLayout = ({
           </MainArticle>
         </div>
         <TableOfContents
-          editPath={absoluteEditPath}
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth || 2}
-          hideEditButton={!!frontmatter.hideEditButton}
         />
       </Flex>
     </div>

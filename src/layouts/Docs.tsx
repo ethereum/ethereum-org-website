@@ -19,6 +19,7 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
+import PageActions from "@/components/PageActions"
 import { PieChart } from "@/components/PieChart"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
@@ -39,7 +40,7 @@ const baseHeadingClasses = "font-bold scroll-mt-40 break-words"
 
 const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
-    className={cn(baseHeadingClasses, "max-md:mt-0 max-md:text-[2rem]")}
+    className={cn(baseHeadingClasses, "mt-0 mb-3 max-md:text-[2rem]")}
     {...props}
   />
 )
@@ -128,23 +129,29 @@ export const DocsLayout = ({
         <SideNav path={addSlashes(slug)} />
         <MainArticle className="min-w-0 flex-1 px-8 pt-8 pb-8 md:px-16 md:pt-12 md:pb-16">
           <H1 id="top">{frontmatter.title}</H1>
-          {!frontmatter.hideEditButton && (
-            <FileContributors
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
-          )}
-          <TableOfContents
+          <PageActions
+            slug={slug}
+            isTranslated={!contentNotTranslated}
             editPath={absoluteEditPath}
+            hideEditButton={!!frontmatter.hideEditButton}
+            className="mb-10 lg:mb-12"
+          />
+          <TableOfContents
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
-            hideEditButton={!!frontmatter.hideEditButton}
             isMobile
           />
           <div className="prose prose-lg max-w-none break-words">
             {children}
           </div>
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          )}
           <BackToTop />
           <FeedbackCard isArticle />
           <DocsNav contentNotTranslated={contentNotTranslated} />
@@ -152,10 +159,8 @@ export const DocsLayout = ({
         {tocItems && (
           <TableOfContents
             className={isPageIncomplete ? "pt-20" : "pt-12"}
-            editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
-            hideEditButton={!!frontmatter.hideEditButton}
           />
         )}
       </div>

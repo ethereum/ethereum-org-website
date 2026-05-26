@@ -7,17 +7,13 @@ import type { ToCItem } from "@/lib/types"
 import ButtonDropdown, {
   List as ButtonDropdownList,
 } from "@/components/ButtonDropdown"
-import Github from "@/components/icons/github.svg"
 import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
 import { cn } from "@/lib/utils/cn"
 
-import { ButtonLink } from "../ui/buttons/Button"
-
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/navigation"
 
 const variants = cva(
   "sticky flex h-fit max-lg:hidden flex-col items-start overflow-y-auto",
@@ -67,8 +63,6 @@ const listVariants = cva("mx-0 gap-2 py-0", {
 export interface TableOfContentsProps extends VariantProps<typeof variants> {
   items: Array<ToCItem>
   maxDepth?: number
-  editPath?: string
-  hideEditButton?: boolean
   isMobile?: boolean
   className?: string
   dropdownLinks?: ButtonDropdownList
@@ -78,8 +72,6 @@ export interface TableOfContentsProps extends VariantProps<typeof variants> {
 const TableOfContents = ({
   items,
   maxDepth = 1,
-  editPath,
-  hideEditButton = false,
   isMobile = false,
   className,
   variant,
@@ -87,7 +79,6 @@ const TableOfContents = ({
   showDropdown = true,
   ...rest
 }: TableOfContentsProps) => {
-  const pathname = usePathname()
   const { t } = useTranslation("common")
   const titleIds: Array<string> = []
   if (!isMobile) {
@@ -121,20 +112,6 @@ const TableOfContents = ({
 
   return (
     <nav className={variants({ variant, className })} {...style} {...rest}>
-      {!hideEditButton && editPath && (
-        <ButtonLink
-          href={editPath}
-          variant="outline"
-          customEventOptions={{
-            eventCategory: "edit_page",
-            eventAction: "gh_edit_click",
-            eventName: `${pathname}`,
-          }}
-        >
-          <Github />
-          {t("edit-page")}
-        </ButtonLink>
-      )}
       {variant === "left" && showDropdown && dropdownLinks && (
         <div className="relative mb-8 flex w-full items-end justify-end">
           <ButtonDropdown

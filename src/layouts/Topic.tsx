@@ -6,6 +6,7 @@ import type { MdPageContent, TopicFrontmatter } from "@/lib/interfaces"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
+import PageActions from "@/components/PageActions"
 import { Alert } from "@/components/ui/alert"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
@@ -134,6 +135,12 @@ export const TopicLayout = async ({
       heroSection={heroSection}
       showDropdown={frontmatter.showDropdown ?? true}
     >
+      <PageActions
+        slug={slug}
+        isTranslated={!contentNotTranslated}
+        editPath={getEditPath(slug)}
+        className="mt-8 mb-8 lg:mt-0 [&+h2]:!mt-0"
+      />
       {children}
     </ContentLayout>
   )

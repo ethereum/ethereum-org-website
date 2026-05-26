@@ -1,4 +1,4 @@
-import type { ReactElement } from "react"
+import type { ReactElement, ReactNode } from "react"
 
 import type { CommonHeroProps } from "@/lib/types"
 
@@ -16,6 +16,7 @@ export type ContentHeroProps = Omit<
 > & {
   blurDataURL?: CommonHeroProps["blurDataURL"]
   heroImg?: CommonHeroProps["heroImg"]
+  actions?: ReactNode
 }
 
 const ContentHero = (props: ContentHeroProps) => {
@@ -27,6 +28,7 @@ const ContentHero = (props: ContentHeroProps) => {
     description,
     blurDataURL,
     className,
+    actions,
   } = props
   if (blurDataURL && heroImg) heroImg.blurDataURL = blurDataURL
 
@@ -54,7 +56,10 @@ const ContentHero = (props: ContentHeroProps) => {
         )}
       </div>
       <div className="flex h-full flex-col gap-9 p-8 lg:col-start-1 lg:row-start-1 lg:px-11 lg:py-16">
-        <Breadcrumbs {...breadcrumbs} />
+        <div className="flex items-start justify-between gap-4">
+          <Breadcrumbs {...breadcrumbs} />
+          {actions}
+        </div>
         <div className="flex flex-col gap-6">
           <h1 className="text-4xl font-black lg:text-7xl">{title}</h1>
           {typeof description === "string" ? (
