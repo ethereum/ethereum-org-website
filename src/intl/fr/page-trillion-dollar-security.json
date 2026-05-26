@@ -84,7 +84,7 @@
   "page-trillion-dollar-security-section-2-1-list-desc-6": "où une clé privée capable de contrôler le contrat est obtenue par un acteur malveillant.",
   "page-trillion-dollar-security-section-2-1-list-title-7": "Ponts et interactions inter-chaînes",
   "page-trillion-dollar-security-section-2-1-list-desc-7": "Les ponts et les protocoles inter-chaînes introduisent une complexité supplémentaire, et les attaquants peuvent exploiter les faiblesses dans la façon dont les messages inter-chaînes sont transmis ou validés.",
-  "page-trillion-dollar-security-section-2-1-list-title-8": "Délégation de compte détenu par un tiers (EOA) ou utilisation abusive de signature",
+  "page-trillion-dollar-security-section-2-1-list-title-8": "Délégation de compte externe (EOA) ou utilisation abusive de signature",
   "page-trillion-dollar-security-section-2-1-list-desc-8": "Des applications malveillantes peuvent inciter les utilisateurs à signer la délégation complète de leur compte à une autre partie, permettant ainsi le vol. Les applications malveillantes peuvent également utiliser les messages signés par l'utilisateur de manière inattendue, par exemple, dans une attaque par rejeu.",
   "page-trillion-dollar-security-section-2-1-list-title-9": "Risque émergent de bugs introduits par la génération de code par l'IA ou les outils de refactorisation automatisés",
   "page-trillion-dollar-security-section-2-2-title": "2.2 Expérience développeur, outils et langages de programmation",
