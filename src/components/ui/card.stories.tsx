@@ -357,7 +357,14 @@ const BANNER_BACKGROUNDS = [
   "none",
 ] as const
 
-const BANNER_SIZES = ["full", "lg", "base", "sm", "thumbnail"] as const
+const BANNER_SIZES = [
+  "full",
+  "lg",
+  "base",
+  "sm",
+  "thumbnail-lg",
+  "thumbnail",
+] as const
 
 export const BannerBackgrounds: Story = {
   render: () => (
