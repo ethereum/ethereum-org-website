@@ -30,7 +30,6 @@ const {
   FeaturedText,
   Divider,
   hr: HR,
-  pre: Pre,
   Page,
 } = MdComponentSet
 
@@ -60,7 +59,6 @@ export const MdComponents: StoryObj = {
           <Title>Title</Title>
           <Para />
           <Divider />
-          <Pre>Lots of coding here</Pre>
           <HR />
           <FeaturedText>Feature Text</FeaturedText>
         </ContentContainer>

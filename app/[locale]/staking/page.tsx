@@ -14,11 +14,11 @@ import type {
 } from "@/lib/types"
 
 import { type List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
+import MarkdownCard, { MarkdownCardProps } from "@/components/MarkdownCard"
 import { ContentContainer, Page as MdPage } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
@@ -45,14 +45,6 @@ import StakingPageJsonLD from "./page-jsonld"
 
 import { getBeaconchainData } from "@/lib/data"
 import rhino from "@/public/images/upgrades/upgrade_rhino.png"
-
-type BenefitsType = {
-  title: string
-  emoji: string
-  description: ReactNode
-  linkText?: string
-  href?: string
-}
 
 const PageContainer = (props: ChildOnlyProp) => (
   <VStack className="mx-auto w-full gap-0" {...props} />
@@ -94,22 +86,6 @@ const StyledButtonLink = ({
 
 const CardGrid = (props: ChildOnlyProp) => (
   <div className="grid grid-cols-1 gap-8 lg:grid-cols-3" {...props} />
-)
-
-const StyledCard = (props: {
-  title: string
-  emoji: string
-  description: ReactNode
-  children: ReactNode
-}) => (
-  <Card
-    title={props.title}
-    emoji={props.emoji}
-    description={props.description}
-    className="justify-start [&_h3]:mt-0 [&_h3]:mb-1 [&_h3]:font-bold"
-  >
-    {props.children}
-  </Card>
 )
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -154,7 +130,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     buttons: [],
   }
 
-  const benefits: BenefitsType[] = [
+  const benefits: MarkdownCardProps[] = [
     {
       title: t("page-staking-benefits-1-title"),
       emoji: "💰",
@@ -171,7 +147,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       title: t("page-staking-benefits-3-title"),
       emoji: "🍃",
       description: t("page-staking-benefits-3-description"),
-      linkText: t("page-staking-benefits-3-link"),
+      ctaLabel: t("page-staking-benefits-3-link"),
       href: "/energy-consumption",
     },
   ]
@@ -307,17 +283,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </H2>
                 <CardGrid>
                   {benefits.map(
-                    ({ title, description, emoji, linkText, href }, idx) => (
-                      <StyledCard
-                        title={title}
-                        emoji={emoji}
+                    ({ title, description, emoji, ctaLabel, href }, idx) => (
+                      <MarkdownCard
                         key={idx}
+                        emoji={emoji}
+                        title={title}
                         description={description}
                       >
-                        {href && linkText && (
-                          <InlineLink href={href}>{linkText}</InlineLink>
+                        {href && ctaLabel && (
+                          <InlineLink href={href}>{ctaLabel}</InlineLink>
                         )}
-                      </StyledCard>
+                      </MarkdownCard>
                     )
                   )}
                 </CardGrid>

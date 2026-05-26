@@ -1,0 +1,730 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-developers-index.json",
+  "generatedAt": "2026-05-26T10:03:27.064Z",
+  "rootHash": "029f8dd7f7d9",
+  "tree": {
+    "contentHash": "a6e905a977e2",
+    "anchorHash": "fc982ee94c6e",
+    "children": {
+      "page-developer-meta-title": {
+        "contentHash": "dc4543bddb68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-account-desc": {
+        "contentHash": "89ff01942e07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-accounts-link": {
+        "contentHash": "8a7c8b67fe8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-api-desc": {
+        "contentHash": "be305a57bbc2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-api-link": {
+        "contentHash": "8ae9cad53864",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-block-desc": {
+        "contentHash": "56363bddfd47",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-block-explorers-desc": {
+        "contentHash": "29c8e9867413",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-block-explorers-link": {
+        "contentHash": "22da58fdc2b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-blocks-link": {
+        "contentHash": "1cd5a6687bb7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-dev-env-desc": {
+        "contentHash": "d4ee7c5517d5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-dev-env-link": {
+        "contentHash": "11696cab6b49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-docs-introductions": {
+        "contentHash": "0d654bf97be0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ethskills-cta": {
+        "contentHash": "56712e875d76",
+        "anchorHash": "d7c0cfde8b58",
+        "children": {
+          "prose:1": {
+            "contentHash": "46334791c5b5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "108390a7f20c"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-developers-ethskills-desc": {
+        "contentHash": "e4621723e0fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ethskills-label": {
+        "contentHash": "621dbafe9e54",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ethskills-msg-1": {
+        "contentHash": "a26f7f3dd7ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ethskills-msg-2": {
+        "contentHash": "0310f6f0b468",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ethskills-msg-3": {
+        "contentHash": "b51b14bedb1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ethskills-msg-4": {
+        "contentHash": "08d911abaa1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ethskills-msg-5": {
+        "contentHash": "7d7e280d275e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ethskills-title": {
+        "contentHash": "2c0507a97360",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-evm-desc": {
+        "contentHash": "83f37e2ee938",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-evm-link": {
+        "contentHash": "7f676a90210e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-explore-documentation": {
+        "contentHash": "218012b043fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-frameworks-desc": {
+        "contentHash": "808870aebeb6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-frameworks-link": {
+        "contentHash": "81dc3a308ef5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-fundamentals": {
+        "contentHash": "915ff7435dae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-gas-desc": {
+        "contentHash": "d6526149146a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-gas-link": {
+        "contentHash": "e23a445d0fa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-get-started": {
+        "contentHash": "3cb11a9bb686",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-into-eth-desc": {
+        "contentHash": "57b967dff958",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-intro-ether-desc": {
+        "contentHash": "7ec71660ca25",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-intro-dapps-desc": {
+        "contentHash": "ad2fbf6c277b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-intro-dapps-link": {
+        "contentHash": "8a39d4de13f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-intro-eth-link": {
+        "contentHash": "fb401ef36a93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-intro-ether-link": {
+        "contentHash": "966ac42b7c75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-intro-stack": {
+        "contentHash": "9170d4101576",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-intro-stack-desc": {
+        "contentHash": "7ccea1eaec58",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-js-libraries-desc": {
+        "contentHash": "7ad361f12f05",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-js-libraries-link": {
+        "contentHash": "fd388b22a99e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-jump-right-in-title": {
+        "contentHash": "9d4f3472aba4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-language-desc": {
+        "contentHash": "25870991bae2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-languages": {
+        "contentHash": "0c85ff9f6ed0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-learn": {
+        "contentHash": "115e92179d8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-learn-desc": {
+        "contentHash": "6c8723560f2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-learn-tutorials": {
+        "contentHash": "837405ac5e80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-learn-tutorials-cta": {
+        "contentHash": "28aeccd728aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-learn-tutorials-desc": {
+        "contentHash": "d2942a52dc02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-meta-desc": {
+        "contentHash": "b02a93d94d2a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-networks-desc": {
+        "contentHash": "e45c528226ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-networks-link": {
+        "contentHash": "ab2c47c3c77f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-node-clients-desc": {
+        "contentHash": "86d130355bda",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-node-clients-link": {
+        "contentHash": "0e034426d05b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-play-code": {
+        "contentHash": "c847fb93ffce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-quickstart-scaffold-subtext": {
+        "contentHash": "a370d7133b21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-quickstart-scaffold-docs": {
+        "contentHash": "a9f5ae586174",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-read-docs": {
+        "contentHash": "559b1cc46027",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-start-quest": {
+        "contentHash": "95903fb7e824",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-resources": {
+        "contentHash": "e89b30aa1dc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-smart-contract-security-desc": {
+        "contentHash": "e8f5ecc00eb4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-smart-contract-security-link": {
+        "contentHash": "ed145638d4ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-smart-contracts-desc": {
+        "contentHash": "0ef772f7a1ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-smart-contracts-link": {
+        "contentHash": "c9239b20a918",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-solidity-docs": {
+        "contentHash": "98e0f3405f07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrunethereum-title": {
+        "contentHash": "e57e6adc9fc1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrunethereum-description": {
+        "contentHash": "69777dfeee3e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrunethereum-link": {
+        "contentHash": "238a3774b965",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-stack": {
+        "contentHash": "757d4af22a81",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-start": {
+        "contentHash": "967a61586c12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-storage-desc": {
+        "contentHash": "a3576f4d89ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-storage-link": {
+        "contentHash": "a69c4dece144",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-subtitle": {
+        "contentHash": "34ab44210491",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-title-1": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-title-2": {
+        "contentHash": "88fa0d759f84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-title-3": {
+        "contentHash": "41d311a60552",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-transactions-desc": {
+        "contentHash": "0291c48a19f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-transactions-link": {
+        "contentHash": "3e5136fd4b11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-web3-desc": {
+        "contentHash": "9ce0f8169540",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-web3-link": {
+        "contentHash": "de29eb5878cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-networking-layer": {
+        "contentHash": "d8c53a0e90b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-networking-layer-link": {
+        "contentHash": "d8c53a0e90b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-networking-layer-desc": {
+        "contentHash": "f81d8664c027",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-data-structures-and-encoding": {
+        "contentHash": "33d90e3eb884",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-data-structures-and-encoding-link": {
+        "contentHash": "33d90e3eb884",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-data-structures-and-encoding-desc": {
+        "contentHash": "8b944067a981",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "alt-eth-blocks": {
+        "contentHash": "6739ad501261",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-assets-doge": {
+        "contentHash": "8ae668d814bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-build-section-desc": {
+        "contentHash": "e7ce535dbb5d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-resources-section-title": {
+        "contentHash": "8f82ec7cad5e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-get-help-title": {
+        "contentHash": "fd64e81bf74d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-get-help-desc": {
+        "contentHash": "150cfee656ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-stack-exchange": {
+        "contentHash": "9909a96e6dd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-ask-ai": {
+        "contentHash": "ea9e45ac7083",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-resources-title": {
+        "contentHash": "e89b30aa1dc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-resources-desc": {
+        "contentHash": "8e8a8cd94e43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tutorials-title": {
+        "contentHash": "8d9f66992dd4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-tutorials-desc": {
+        "contentHash": "d2942a52dc02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-video-courses-title": {
+        "contentHash": "ed7e9c278756",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-video-courses-desc": {
+        "contentHash": "87d5a48c4852",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-docs-section-desc": {
+        "contentHash": "ba8bfaa1bb9e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-hackathons-title": {
+        "contentHash": "052139f3e88c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-hackathons-desc": {
+        "contentHash": "27255b0d62d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-visit-ethglobal": {
+        "contentHash": "4cf7526883b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-founders-title": {
+        "contentHash": "627d46f1d1c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-founders-desc": {
+        "contentHash": "d68a6e3a8a02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-get-in-touch": {
+        "contentHash": "115e410f01dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-see-grant-options": {
+        "contentHash": "519692ee030f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-nft-alt": {
+        "contentHash": "8c44ccc56f83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-nft-title": {
+        "contentHash": "efa97c915ed6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-nft-desc": {
+        "contentHash": "37899572a6ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-skill-beginner": {
+        "contentHash": "c865ebb3052c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-skill-intermediate": {
+        "contentHash": "3b1cfa63d7d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-skill-advanced": {
+        "contentHash": "9f088dbebd6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-dex-alt": {
+        "contentHash": "3069b858747d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-dex-title": {
+        "contentHash": "6eeee9f311c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-dex-desc": {
+        "contentHash": "558c9c760c14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-stablecoins-alt": {
+        "contentHash": "db455fe7ca94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-stablecoins-title": {
+        "contentHash": "2d46a862ce8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-speedrun-stablecoins-desc": {
+        "contentHash": "059b6d0d0294",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-duration": {
+        "contentHash": "298b703b4244",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1ca2501bfa0a",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-developers-course-blockchain-basics-title": {
+        "contentHash": "66ec297712db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-blockchain-basics-desc": {
+        "contentHash": "8fd45d72b8f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-blockchain-basics-alt": {
+        "contentHash": "ed8db8beaebb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-solidity-title": {
+        "contentHash": "f125937483d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-solidity-desc": {
+        "contentHash": "f950a229f26b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-solidity-alt": {
+        "contentHash": "da851cba3e18",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-foundry-fundamentals-title": {
+        "contentHash": "e9286f9f5c8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-foundry-fundamentals-desc": {
+        "contentHash": "2a4f9df9f260",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-foundry-fundamentals-alt": {
+        "contentHash": "816ac3ef7405",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-advanced-foundry-title": {
+        "contentHash": "b4b22d743f78",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-advanced-foundry-desc": {
+        "contentHash": "4f1f00c250e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-advanced-foundry-alt": {
+        "contentHash": "97af9f83d538",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-security-title": {
+        "contentHash": "ed145638d4ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-security-desc": {
+        "contentHash": "935a2705716a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-course-security-alt": {
+        "contentHash": "ed8db8beaebb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-why-title": {
+        "contentHash": "e6c0d74f1016",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-why-subtitle": {
+        "contentHash": "565ab0b95e66",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-why-avg-salary-dev": {
+        "contentHash": "1707805a1ed0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-developers-why-avg-salary-blockchain": {
+        "contentHash": "d0e0efbfa4c5",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-developer-meta-title",
+      "page-developers-account-desc",
+      "page-developers-accounts-link",
+      "page-developers-api-desc",
+      "page-developers-api-link",
+      "page-developers-block-desc",
+      "page-developers-block-explorers-desc",
+      "page-developers-block-explorers-link",
+      "page-developers-blocks-link",
+      "page-developers-dev-env-desc",
+      "page-developers-dev-env-link",
+      "page-developers-docs-introductions",
+      "page-developers-ethskills-cta",
+      "page-developers-ethskills-desc",
+      "page-developers-ethskills-label",
+      "page-developers-ethskills-msg-1",
+      "page-developers-ethskills-msg-2",
+      "page-developers-ethskills-msg-3",
+      "page-developers-ethskills-msg-4",
+      "page-developers-ethskills-msg-5",
+      "page-developers-ethskills-title",
+      "page-developers-evm-desc",
+      "page-developers-evm-link",
+      "page-developers-explore-documentation",
+      "page-developers-frameworks-desc",
+      "page-developers-frameworks-link",
+      "page-developers-fundamentals",
+      "page-developers-gas-desc",
+      "page-developers-gas-link",
+      "page-developers-get-started",
+      "page-developers-into-eth-desc",
+      "page-developers-intro-ether-desc",
+      "page-developers-intro-dapps-desc",
+      "page-developers-intro-dapps-link",
+      "page-developers-intro-eth-link",
+      "page-developers-intro-ether-link",
+      "page-developers-intro-stack",
+      "page-developers-intro-stack-desc",
+      "page-developers-js-libraries-desc",
+      "page-developers-js-libraries-link",
+      "page-developers-jump-right-in-title",
+      "page-developers-language-desc",
+      "page-developers-languages",
+      "page-developers-learn",
+      "page-developers-learn-desc",
+      "page-developers-learn-tutorials",
+      "page-developers-learn-tutorials-cta",
+      "page-developers-learn-tutorials-desc",
+      "page-developers-meta-desc",
+      "page-developers-networks-desc",
+      "page-developers-networks-link",
+      "page-developers-node-clients-desc",
+      "page-developers-node-clients-link",
+      "page-developers-play-code",
+      "page-developers-quickstart-scaffold-subtext",
+      "page-developers-quickstart-scaffold-docs",
+      "page-developers-read-docs",
+      "page-developers-start-quest",
+      "page-developers-resources",
+      "page-developers-smart-contract-security-desc",
+      "page-developers-smart-contract-security-link",
+      "page-developers-smart-contracts-desc",
+      "page-developers-smart-contracts-link",
+      "page-developers-solidity-docs",
+      "page-developers-speedrunethereum-title",
+      "page-developers-speedrunethereum-description",
+      "page-developers-speedrunethereum-link",
+      "page-developers-stack",
+      "page-developers-start",
+      "page-developers-storage-desc",
+      "page-developers-storage-link",
+      "page-developers-subtitle",
+      "page-developers-title-1",
+      "page-developers-title-2",
+      "page-developers-title-3",
+      "page-developers-transactions-desc",
+      "page-developers-transactions-link",
+      "page-developers-web3-desc",
+      "page-developers-web3-link",
+      "page-developers-networking-layer",
+      "page-developers-networking-layer-link",
+      "page-developers-networking-layer-desc",
+      "page-developers-data-structures-and-encoding",
+      "page-developers-data-structures-and-encoding-link",
+      "page-developers-data-structures-and-encoding-desc",
+      "alt-eth-blocks",
+      "page-assets-doge",
+      "page-developers-build-section-desc",
+      "page-developers-resources-section-title",
+      "page-developers-get-help-title",
+      "page-developers-get-help-desc",
+      "page-developers-stack-exchange",
+      "page-developers-ask-ai",
+      "page-developers-resources-title",
+      "page-developers-resources-desc",
+      "page-developers-tutorials-title",
+      "page-developers-tutorials-desc",
+      "page-developers-video-courses-title",
+      "page-developers-video-courses-desc",
+      "page-developers-docs-section-desc",
+      "page-developers-hackathons-title",
+      "page-developers-hackathons-desc",
+      "page-developers-visit-ethglobal",
+      "page-developers-founders-title",
+      "page-developers-founders-desc",
+      "page-developers-get-in-touch",
+      "page-developers-see-grant-options",
+      "page-developers-speedrun-nft-alt",
+      "page-developers-speedrun-nft-title",
+      "page-developers-speedrun-nft-desc",
+      "page-developers-skill-beginner",
+      "page-developers-skill-intermediate",
+      "page-developers-skill-advanced",
+      "page-developers-speedrun-dex-alt",
+      "page-developers-speedrun-dex-title",
+      "page-developers-speedrun-dex-desc",
+      "page-developers-speedrun-stablecoins-alt",
+      "page-developers-speedrun-stablecoins-title",
+      "page-developers-speedrun-stablecoins-desc",
+      "page-developers-course-duration",
+      "page-developers-course-blockchain-basics-title",
+      "page-developers-course-blockchain-basics-desc",
+      "page-developers-course-blockchain-basics-alt",
+      "page-developers-course-solidity-title",
+      "page-developers-course-solidity-desc",
+      "page-developers-course-solidity-alt",
+      "page-developers-course-foundry-fundamentals-title",
+      "page-developers-course-foundry-fundamentals-desc",
+      "page-developers-course-foundry-fundamentals-alt",
+      "page-developers-course-advanced-foundry-title",
+      "page-developers-course-advanced-foundry-desc",
+      "page-developers-course-advanced-foundry-alt",
+      "page-developers-course-security-title",
+      "page-developers-course-security-desc",
+      "page-developers-course-security-alt",
+      "page-developers-why-title",
+      "page-developers-why-subtitle",
+      "page-developers-why-avg-salary-dev",
+      "page-developers-why-avg-salary-blockchain"
+    ]
+  },
+  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+}

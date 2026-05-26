@@ -1,5 +1,5 @@
 {
-  "template-usecase-dropdown-decentralized-ai": "Yapay zeka temsilcileri",
+  "template-usecase-dropdown-decentralized-ai": "Yapay zeka ajanları",
   "template-usecase-dropdown-defi": "Merkeziyetsiz finans (DeFi)",
   "template-usecase-dropdown-nft": "Değiştirilemez token'lar (NFT'ler)",
   "template-usecase-dropdown-dao": "Merkeziyetsiz otonom organizasyonlar (DAO'lar)",
@@ -7,14 +7,15 @@
   "template-usecase-dropdown-payments": "Ethereum Ödemeleri",
   "template-usecase-dropdown-prediction-markets": "Tahmin Piyasaları",
   "template-usecase-dropdown-social-networks": "Merkeziyetsiz sosyal ağlar",
-  "template-usecase-dropdown-restaking": "Yeniden Hisseleme",
+  "template-usecase-dropdown-restaking": "Yeniden staking",
   "template-usecase-dropdown-identity": "Merkeziyetsiz kimlik",
   "template-usecase-dropdown-desci": "Merkeziyetsiz bilim (DeSci)",
-  "template-usecase-dropdown-refi": "Sürdürülebilir finans (SüFi)",
-  "template-usecase-dropdown": "Ethereum kullanım alanları",
-  "template-usecase-banner": "Ethereum'un kullanımı sürekli gelişir ve evrilir. Konuyu daha açık veya güncel hâle getireceğini düşündüğünüz tüm bilgileri ekleyin.",
+  "template-usecase-dropdown-refi": "Onarıcı finans (ReFi)",
+  "template-usecase-dropdown-all-use-cases": "Tüm kullanım durumları",
+  "template-usecase-dropdown": "Ethereum kullanım durumları",
+  "template-usecase-banner": "Ethereum'un kullanım alanları her zaman gelişiyor ve evriliyor. İşleri daha net veya daha güncel hale getireceğini düşündüğünüz herhangi bir bilgiyi ekleyin.",
   "template-usecase-edit-link": "Sayfayı düzenle",
-  "template-usecase-dropdown-aria": "Kullanım alanları açılır menüsü",
-  "template-usecase-dropdown-onchain-gaming": "Zincir Üstü Oyun",
+  "template-usecase-dropdown-aria": "Kullanım durumu açılır menüsü",
+  "template-usecase-dropdown-onchain-gaming": "Zincir İçi Oyun",
   "template-usecase-dropdown-rwa": "Gerçek dünya varlıkları (RWA'lar)"
 }

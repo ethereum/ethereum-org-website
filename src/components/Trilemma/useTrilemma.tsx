@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { isMobile } from "@/lib/utils/isMobile"
 
-import { CardProps } from "../Card"
+import { MarkdownCardProps } from "../MarkdownCard"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -110,6 +110,6 @@ export const useTrilemma = () => {
     cardDetail: {
       title: cardTitle,
       description: cardText,
-    } as Pick<CardProps, "title" | "description">,
+    } as Pick<MarkdownCardProps, "title" | "description">,
   }
 }
