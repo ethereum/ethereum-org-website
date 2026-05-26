@@ -117,14 +117,14 @@ export const TutorialLayout = ({
           startDepth={1}
         />
         <Heading1>{frontmatter.title}</Heading1>
+        <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
         <PageActions
           slug={slug}
           isTranslated={!contentNotTranslated}
           editPath={absoluteEditPath}
           hideEditButton={!!frontmatter.hideEditButton}
-          className="-ms-2 mb-6"
+          className="-ms-2 mb-6 lg:mt-6"
         />
-        <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
         <TableOfContents
           className="pt-6"
           items={tocItems}
