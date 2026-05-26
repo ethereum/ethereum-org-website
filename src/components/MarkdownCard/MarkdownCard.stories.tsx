@@ -24,7 +24,7 @@ export default meta
 
 const DEVELOPS_INDEX_NS = "page-developers-index"
 
-export const Card: StoryObj<typeof meta> = {
+export const Card: StoryObj<MarkdownCardProps> = {
   render: (args) => {
     const t = useTranslations(DEVELOPS_INDEX_NS)
 
