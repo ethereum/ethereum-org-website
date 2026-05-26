@@ -5,8 +5,6 @@ import { Image, type ImageProps } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
 
-import Emoji from "../Emoji"
-
 type AsProp = { as?: "h3" | "h4" }
 
 const variants = cva(
@@ -75,21 +73,6 @@ const CalloutBanner = React.forwardRef<
   />
 ))
 CalloutBanner.displayName = "CalloutBanner"
-
-const CalloutEmoji = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & { text: string }
->(({ className, text, ...props }, ref) => (
-  <div
-    ref={ref}
-    data-label="card-emoji"
-    className={cn("mb-[calc(var(--spacing-unit)*4)] size-12", className)}
-    {...props}
-  >
-    <Emoji text={text} className="text-5xl" />
-  </div>
-))
-CalloutEmoji.displayName = "CalloutEmoji"
 
 const CalloutMain = React.forwardRef<
   HTMLDivElement,
@@ -169,21 +152,16 @@ const CalloutDescription = React.forwardRef<
 ))
 CalloutDescription.displayName = "CalloutDescription"
 
-type BannerProp =
-  | { image?: ImageProps["src"]; emoji?: never }
-  | { image?: never; emoji?: string }
-
 export type CalloutProps = React.HTMLAttributes<HTMLDivElement> & {
   title: string
   description: string
   alt?: string
+  image?: ImageProps["src"]
 } & VariantProps<typeof variants> &
-  AsProp &
-  BannerProp
+  AsProp
 
 const Callout = ({
   image,
-  emoji,
   as,
   title,
   description,
@@ -203,8 +181,6 @@ const Callout = ({
     )}
     <CalloutMain>
       <CalloutContent>
-        {emoji && <CalloutEmoji text={emoji} />}
-
         <CalloutTitle as={as}>{title}</CalloutTitle>
         <CalloutDescription>{description}</CalloutDescription>
       </CalloutContent>

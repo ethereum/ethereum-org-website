@@ -65,7 +65,7 @@ If you believe a community should be added or removed based on these guidelines,
 
 <Divider />
 
-<Callout emoji=":classical_building:" title="Decentralized Autonomous Organizations (DAOs)" description="These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets.">
+<Callout title="Decentralized Autonomous Organizations (DAOs)" description="These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets.">
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Learn more about DAOs
   </ButtonLink>

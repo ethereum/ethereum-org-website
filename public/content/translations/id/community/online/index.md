@@ -65,7 +65,7 @@ Jika Anda yakin sebuah komunitas harus ditambahkan atau dihapus berdasarkan pand
 
 <Divider />
 
-<Callout emoji=":classical_building:" title="Organisasi Otonom Terdesentralisasi (DAO)" description="Kelompok-kelompok ini memanfaatkan teknologi Ethereum untuk memfasilitasi organisasi dan kolaborasi. Misalnya, untuk mengontrol keanggotaan, memberikan suara pada proposal, atau mengelola aset yang dikumpulkan.">
+<Callout title="Organisasi Otonom Terdesentralisasi (DAO)" description="Kelompok-kelompok ini memanfaatkan teknologi Ethereum untuk memfasilitasi organisasi dan kolaborasi. Misalnya, untuk mengontrol keanggotaan, memberikan suara pada proposal, atau mengelola aset yang dikumpulkan.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Pelajari lebih lanjut tentang DAO

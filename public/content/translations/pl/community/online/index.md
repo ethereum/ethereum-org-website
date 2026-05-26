@@ -65,7 +65,7 @@ Jeśli uważasz, że społeczność powinna zostać dodana lub usunięta na pods
 
 <Divider />
 
-<Callout emoji=":classical_building:" title="Zdecentralizowane Organizacje Autonomiczne (DAO)" description="Grupy te wykorzystują technologię Ethereum w celu umocnienia organizacji i współpracy. Na przykład w celu kontrolowania członkostwa, głosowania nad propozycjami lub zarządzania wspólnymi aktywami.">
+<Callout title="Zdecentralizowane Organizacje Autonomiczne (DAO)" description="Grupy te wykorzystują technologię Ethereum w celu umocnienia organizacji i współpracy. Na przykład w celu kontrolowania członkostwa, głosowania nad propozycjami lub zarządzania wspólnymi aktywami.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Dowiedz się więcej o DAO

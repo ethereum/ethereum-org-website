@@ -65,7 +65,7 @@ Nếu bạn tin rằng một cộng đồng nên được thêm hoặc xóa dự
 
 <Divider />
 
-<Callout emoji=":classical_building:" title="Các tổ chức tự trị phi tập trung (DAOs)" description="Các nhóm này tận dụng công nghệ Ethereum để thúc đẩy việc tổ chức và hợp tác. Chẳng hạn, để kiểm soát thành viên, bỏ phiếu cho các đề xuất, hoặc quản lý tài sản đã được tập hợp.">
+<Callout title="Các tổ chức tự trị phi tập trung (DAOs)" description="Các nhóm này tận dụng công nghệ Ethereum để thúc đẩy việc tổ chức và hợp tác. Chẳng hạn, để kiểm soát thành viên, bỏ phiếu cho các đề xuất, hoặc quản lý tài sản đã được tập hợp.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Tìm hiểu thêm về các DAO
