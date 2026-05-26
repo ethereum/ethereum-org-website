@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server"
 
+import { SITE_URL } from "@/lib/constants"
+
 import { renderLegalSection, renderNavSection } from "@/lib/llms-txt/render"
 import { buildNavigation } from "@/lib/nav/buildNavigation"
 import {
@@ -13,7 +15,7 @@ const INTRO = `# Ethereum.org
 
 > The official Ethereum website providing comprehensive education, resources, and community information about Ethereum — the decentralized world computer that enables smart contracts and decentralized applications.
 
-Ethereum.org is the primary educational hub for Ethereum, offering beginner-friendly explanations alongside advanced technical documentation. The site covers everything from basic concepts like "What is Ethereum?" to detailed developer guides, staking information, and protocol research. For the developer-documentation-only index, see https://ethereum.org/developers/docs/llms.txt.`
+Ethereum.org is the primary educational hub for Ethereum, offering beginner-friendly explanations alongside advanced technical documentation. The site covers everything from basic concepts like "What is Ethereum?" to detailed developer guides, staking information, and protocol research. For the developer-documentation-only index, see ${SITE_URL}/developers/docs/llms.txt.`
 
 export const GET = async () => {
   const t = await getTranslations({ locale: "en", namespace: "common" })

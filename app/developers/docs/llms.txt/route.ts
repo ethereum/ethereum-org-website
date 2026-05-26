@@ -2,6 +2,8 @@ import { getTranslations } from "next-intl/server"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
+import { SITE_URL } from "@/lib/constants"
+
 import {
   type DocLink,
   renderDocsNode,
@@ -14,7 +16,7 @@ const INTRO = `# Ethereum Developer Documentation
 
 > Technical reference for building on Ethereum: protocol concepts, the Ethereum stack, smart contracts, scaling solutions, and developer tooling.
 
-This file indexes the developer documentation under https://ethereum.org/developers/docs/. For the full ethereum.org index including learner content, guides, and community resources, see https://ethereum.org/llms.txt.`
+This file indexes the developer documentation under ${SITE_URL}/developers/docs/. For the full ethereum.org index including learner content, guides, and community resources, see ${SITE_URL}/llms.txt.`
 
 const links = docLinks as unknown as DocLink[]
 
