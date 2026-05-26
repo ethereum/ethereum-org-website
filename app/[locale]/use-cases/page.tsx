@@ -199,7 +199,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             title={t("ai-agents-title")}
             image={aiAgentsHero}
             description={t("ai-agents-description")}
-            variant="small"
+            variant="sm"
           >
             <ButtonLink href="/ai-agents/">{t("ai-agents-cta")}</ButtonLink>
           </Callout>
@@ -285,7 +285,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             id="ready-to-start"
             title={t("ready-to-start-title")}
             description={t("ready-to-start-description")}
-            variant="medium"
+            variant="sm"
           >
             <ButtonLink href="/wallets/find-wallet/">
               {t("ready-to-start-wallet-cta")}

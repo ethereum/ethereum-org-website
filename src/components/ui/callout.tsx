@@ -14,23 +14,24 @@ const variants = cva(
     "@container/callout flex flex-col *:flex-1",
     "@max-3xl/callout:has-[[data-label=callout-banner]]:*:mt-24", // Banner adjustment margin top (reserves space for image overlap when a banner is present)
     "*:[--callout-padding:--spacing(8)] *:@3xl/callout:[--callout-padding:--spacing(12)]", // Callout padding variable
-    "[--content-font-size:var(--text-base)]"
+    "[--spacing-unit:0.25lh]" // Default spacing unit
   ),
   {
     variants: {
       variant: {
-        large: cn(
+        base: cn(
           "**:data-[label=callout-content]:@3xl/callout:w-[inherit]",
           "[--title-font-size:var(--text-2xl)] *:@3xl/callout:[--title-font-size:var(--text-3xl)]",
-          "[--content-font-size:var(--text-xl)]"
+          "[--content-font-size:var(--text-lg)] *:@3xl/callout:[--content-font-size:var(--text-xl)]"
         ),
-        medium: "*:@3xl/callout:[--title-font-size:var(--text-3xl)]",
-        small:
+        sm: cn(
           "[--title-font-size:var(--text-xl)] *:@3xl/callout:[--title-font-size:var(--text-2xl)]",
+          "[--content-font-size:var(--text-base)] *:@3xl/callout:[--content-font-size:var(--text-lg)]"
+        ),
       },
     },
     defaultVariants: {
-      variant: "large",
+      variant: "base",
     },
   }
 )
@@ -47,7 +48,8 @@ const CalloutRoot = React.forwardRef<
     <div
       className={cn(
         "flex flex-col @3xl/callout:flex-row-reverse",
-        "rounded-2xl bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+        "rounded-2xl",
+        "bg-card-gradient-secondary"
       )}
     >
       {children}
@@ -64,7 +66,7 @@ const CalloutBanner = React.forwardRef<
     ref={ref}
     data-label="callout-banner"
     className={cn(
-      "grid place-items-center px-(--callout-padding) @3xl/callout:flex-2",
+      "grid place-items-center @max-3xl/callout:px-(--callout-padding) @3xl/callout:flex-2",
       "@max-3xl/callout:-mt-24 @max-3xl/callout:md:[aside:not(:only-child)_&]:min-h-64",
       "*:[img]:max-h-64 *:[img]:object-contain",
       className
@@ -81,13 +83,31 @@ const CalloutEmoji = React.forwardRef<
   <div
     ref={ref}
     data-label="card-emoji"
-    className={cn("size-12", className)}
+    className={cn("mb-[calc(var(--spacing-unit)*4)] size-12", className)}
     {...props}
   >
     <Emoji text={text} className="text-5xl" />
   </div>
 ))
 CalloutEmoji.displayName = "CalloutEmoji"
+
+const CalloutMain = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    data-label="callout-main"
+    className={cn(
+      "@container/content flex flex-col p-(--callout-padding)",
+      "gap-[calc(var(--spacing-unit)*4)]",
+      "flex-1 @3xl/callout:flex-3",
+      className
+    )}
+    {...props}
+  />
+))
+CalloutMain.displayName = "CalloutMain"
 
 const CalloutContent = React.forwardRef<
   HTMLDivElement,
@@ -96,11 +116,7 @@ const CalloutContent = React.forwardRef<
   <div
     ref={ref}
     data-label="callout-content"
-    className={cn(
-      "@container/content flex flex-col gap-4 p-(--callout-padding)",
-      "flex-1 @3xl/callout:flex-3",
-      className
-    )}
+    className={cn("flex flex-col gap-(--spacing-unit)", className)}
     {...props}
   />
 ))
@@ -113,7 +129,7 @@ const CalloutButtons = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "mt-auto flex flex-wrap gap-4 pt-4 max-sm:flex-col",
+      "pt-//4 mt-auto flex flex-wrap gap-4 max-sm:flex-col",
       "*:w-full *:text-center sm:*:w-fit", // Button styling
       className
     )}
@@ -185,14 +201,15 @@ const Callout = ({
         />
       </CalloutBanner>
     )}
-    <CalloutContent>
-      {emoji && <CalloutEmoji text={emoji} />}
+    <CalloutMain>
+      <CalloutContent>
+        {emoji && <CalloutEmoji text={emoji} />}
 
-      <CalloutTitle as={as}>{title}</CalloutTitle>
-      <CalloutDescription>{description}</CalloutDescription>
-
+        <CalloutTitle as={as}>{title}</CalloutTitle>
+        <CalloutDescription>{description}</CalloutDescription>
+      </CalloutContent>
       {children && <CalloutButtons>{children}</CalloutButtons>}
-    </CalloutContent>
+    </CalloutMain>
   </CalloutRoot>
 )
 

@@ -372,7 +372,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 title={t("explore-use-cases-card-title")}
                 image={developersEthBlocks}
                 description={t("explore-use-cases-card-description")}
-                variant="small"
+                variant="sm"
                 as="h3"
               >
                 <ButtonLink href="/use-cases/">

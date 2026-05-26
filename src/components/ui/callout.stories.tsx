@@ -41,7 +41,7 @@ const Label = ({ children }: { children: React.ReactNode }) => (
 
 // ---------- Variants (size axis) ----------
 
-const VARIANTS = ["large", "medium", "small"] as const
+const VARIANTS = ["base", "sm"] as const
 
 export const Variants: Story = {
   render: () => (
@@ -50,7 +50,7 @@ export const Variants: Story = {
         <div key={variant}>
           <Label>
             variant=&quot;{variant}&quot;
-            {variant === "large" ? " [default]" : ""}
+            {variant === "base" ? " [default]" : ""}
           </Label>
           <Callout
             variant={variant}

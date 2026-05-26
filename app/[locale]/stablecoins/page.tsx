@@ -602,7 +602,6 @@ async function Page(props: { params: Promise<PageParams> }) {
                 "page-stablecoins-stablecoins-dapp-callout-description"
               )}
               image={dogeComputerImg}
-              alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
             >
               <ButtonLink href="/apps/">
                 {t("page-stablecoins-explore-dapps")}
