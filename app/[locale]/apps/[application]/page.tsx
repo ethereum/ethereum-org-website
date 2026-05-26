@@ -139,6 +139,11 @@ const Page = async (props: {
     locale as Lang
   )
 
+  const allImages = [
+    ...(app.bannerImage ? [app.bannerImage] : []),
+    ...app.screenshots,
+  ]
+
   return (
     <>
       <AppsAppJsonLD locale={locale} app={app} contributors={contributors} />
@@ -357,13 +362,10 @@ const Page = async (props: {
                 <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
               </div>
             </div>
-            {app.screenshots.length > 0 && (
+            {allImages.length > 0 && (
               <div className="flex flex-col gap-4">
                 <h3 className="text-2xl">{t("page-apps-gallery-title")}</h3>
-                <ScreenshotSwiper
-                  screenshots={app.screenshots}
-                  appName={app.name}
-                />
+                <ScreenshotSwiper screenshots={allImages} appName={app.name} />
               </div>
             )}
           </div>
