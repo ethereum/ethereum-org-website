@@ -24,7 +24,7 @@ The canonical card primitive. Composable parts. If `href` is provided, the card 
 
 `CardBanner` props worth knowing:
 - `background`: `"accent-a" | "accent-b" | "accent-c" | "primary" | "body" | "none"` (default `body`)
-- `size`: `"full" | "lg" | "base" | "sm" | "thumbnail"` (default `base`)
+- `size`: `"full" | "lg" | "base" | "sm" | "thumbnail-lg" | "thumbnail"` (default `base`)
 - `fit`: `"cover" | "contain"` (default `cover`)
 - `zoom`: `true` (default) | `false` — when the parent `Card` has `href`, controls whether the image scales on hover/focus via `group/link`
 
