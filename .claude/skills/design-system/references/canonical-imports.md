@@ -234,7 +234,7 @@ import Callout, {
 } from "@/components/ui/callout"
 ```
 
-Server-renderable, takes literal `title` / `description` strings (call site resolves intl). One optical anchor at a time: `image` *or* `emoji`. `variant`: `large` (default) | `medium` | `small`. Children render as buttons via `CalloutButtons`.
+Server-renderable, takes literal `title` / `description` strings (call site resolves intl). Optional `image` banner (overhangs the gradient card); omit for a content-only callout. `variant`: `base` (default) | `sm`. Children render as buttons via `CalloutButtons`.
 
 ```tsx
 <Callout

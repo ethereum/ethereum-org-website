@@ -1,18 +1,18 @@
 # Walkthrough: "I Need a Callout"
 
-A worked example of using the design system correctly when adding an in-content callout — a card-shaped block with an optical anchor (image or emoji), title, description, and optional CTA buttons.
+A worked example of using the design system correctly when adding an in-content callout — a card-shaped block with an optional image banner, title, description, and optional CTA buttons.
 
 ## Step 1: Confirm it's a `Callout`
 
 `Callout` is one of several similar-looking primitives. Pick by what you're actually building:
 
-- **Card-shaped promotional/educational block, with image/emoji at the top, title, description, and 0–2 CTA buttons** → `Callout`
+- **Card-shaped promotional/educational block, with an optional image banner, title, description, and 0–2 CTA buttons** → `Callout`
 - **Linkable summary card in a grid (list of things)** → `Card`
 - **In-prose notice or warning** → `<Alert variant="info|warning|error|success|update">`
 - **Top-of-page full-bleed ribbon** → `<Alert variant="banner">`
 - **Whole-card-clickable wrapper around arbitrary content** → `LinkBox` + `LinkOverlay`
 
-If you're tempted to inline `flex flex-col rounded-2xl bg-gradient-to-r ... p-8` with an `<img>` overhang, you're reinventing `Callout`.
+If you're tempted to inline `flex flex-col rounded-2xl bg-card-gradient-secondary ... p-8` with an `<img>` overhang, you're reinventing `Callout`.
 
 ## Step 2: Compose `Callout`
 
@@ -34,23 +34,19 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 ### What's happening
 
-- `Callout` wraps `CalloutRoot` (the `<aside>`) → optional `CalloutBanner` → `CalloutContent` → `CalloutTitle` + `CalloutDescription` + optional `CalloutButtons`.
-- `image` is the optical anchor at the top. It overflows the gradient card via paired `mt-24` (reservation) / `-mt-24` (banner offset) so the image floats above. The reservation is gated to `@max-3xl/callout` and only applies when a banner is present (so emoji-only callouts don't reserve space).
+- `Callout` wraps `CalloutRoot` (the `<aside>`) → optional `CalloutBanner` → `CalloutMain` → (`CalloutContent` → `CalloutTitle` + `CalloutDescription`) + optional `CalloutButtons`. `CalloutMain` is the internal flex parent that gives the title/description block and the buttons block their asymmetric spacing (title↔description tight, content↔buttons loose); `CalloutContent` holds only the heading + description.
+- `image` is the optical anchor at the top. It overflows the gradient card via paired `mt-24` (reservation) / `-mt-24` (banner offset) so the image floats above. The reservation is gated to `@max-3xl/callout` and only applies when a banner is present (so banner-less callouts don't reserve space).
 - `title` and `description` are literal strings — the call site resolves intl. Do **not** reintroduce `titleKey` / `descriptionKey` props; those were removed during unification.
-- Children render inside `CalloutButtons`. The buttons slot uses `mt-auto pt-8` so it pins to the bottom of the content area.
+- Children render inside `CalloutButtons`. The buttons slot uses `mt-auto` so it pins to the bottom of the main area.
 
-## Step 3: Banner shape — image vs emoji
+## Step 3: Banner shape — image or none
 
-One optical anchor at a time, enforced by the `BannerProp` discriminated union:
-
-```ts
-{ image?: ImageProps["src"]; emoji?: never }
-| { image?: never; emoji?: string }
-```
+The only optical anchor is `image`:
 
 - `image` renders a `<CalloutBanner>` with the image. Banner area reserves 96px above the gradient card for the overlap effect.
-- `emoji` renders a `<CalloutEmoji>` *inside* the content area (no banner). The aside skips the 96px reservation entirely (via `has-[[data-label=callout-banner]]:` gate), so the gradient card sits flush at the top.
-- Pass neither for a content-only callout.
+- Omit `image` for a content-only callout. The aside skips the 96px reservation entirely (via the `has-[[data-label=callout-banner]]:` gate), so the gradient card sits flush at the top.
+
+The legacy `emoji` prop / `CalloutEmoji` slot was removed in May 2026 — the single in-tree consumer was migrated to a banner-less callout, and the pattern was retired. Do not reintroduce.
 
 ## Step 4: Side-by-side equalization (automatic)
 
@@ -77,13 +73,14 @@ The equalization rule lives on `CalloutBanner` as:
 
 ## Step 5: Variants
 
-| Variant | Title font-size | Description font-size | Notes |
-|---|---|---|---|
-| `large` (default) | `text-2xl` (`text-3xl` at `@3xl/callout`) | `text-xl` (20px) | Biggest text scale; default for prominent CTAs |
-| `medium` | inherits (`text-3xl` at `@3xl/callout`) | `text-base` (16px) | Mid scale |
-| `small` | `text-xl` (`text-2xl` at `@3xl/callout`) | `text-base` (16px) | Tightest |
+Two size variants, both fully responsive across the `@3xl/callout` container breakpoint:
 
-Variant naming reflects visual prominence, not gap size. `large` has the same gap as `small` (16px / `--spacing(4)`); only this scaling axis differs.
+| Variant | Title @ `@max-3xl/callout` → `@3xl/callout` | Description @ `@max-3xl/callout` → `@3xl/callout` | Notes |
+|---|---|---|---|
+| `base` (default) | `text-2xl` (24px) → `text-3xl` (30px) | `text-lg` (18px) → `text-xl` (20px) | Default scale; use for prominent CTAs |
+| `sm` | `text-xl` (20px) → `text-2xl` (24px) | `text-base` (16px) → `text-lg` (18px) | Tighter; use when the callout is secondary to surrounding content or stacked at narrower widths |
+
+Variant naming reflects visual prominence (text scale only). Gap and padding are unchanged across variants. The previous `large` / `medium` / `small` triad was consolidated into `base` / `sm` in May 2026 — descriptions are now responsive in both variants (they were fixed-size before).
 
 ## Step 6: Heading level (`as` prop)
 
@@ -97,25 +94,27 @@ Variant naming reflects visual prominence, not gap size. `large` has the same ga
 
 Layout values are driven by CSS variables on the aside. Variants override these; pages can override per-instance via `className`.
 
-| Variable | Default | Overridable on |
-|---|---|---|
-| `--callout-padding` | `--spacing(8)` (32px), `--spacing(12)` at `@3xl/callout` | All variants |
-| `--callout-content-gap` | `--spacing(4)` (16px) | Variants (currently no variant overrides) |
-| `--title-font-size` | Set by each variant | Variants |
-| `--content-font-size` | `var(--text-base)` (16px) | Variants |
+| Variable | Default | Set by | Notes |
+|---|---|---|---|
+| `--callout-padding` | `--spacing(8)` (32px), `--spacing(12)` at `@3xl/callout` | Root | Banner horizontal padding and `CalloutMain` padding both read this |
+| `--spacing-unit` | `0.25lh` | Root | Line-height-relative rhythm unit. `CalloutContent` uses `gap-(--spacing-unit)` (title↔description tight); `CalloutMain` uses `gap-[calc(var(--spacing-unit)*4)]` (content↔buttons loose) |
+| `--title-font-size` | Variant-driven, responsive at `@3xl/callout` | Variants | See Step 5 table |
+| `--content-font-size` | Variant-driven, responsive at `@3xl/callout` | Variants | See Step 5 table |
 
-Adding a variant follows the existing pattern — set the variable on the aside in the variant's `cn()` block:
+Adding a variant follows the existing pattern — set the variable on the aside in the variant's `cn()` block, mirroring the responsive shape used by `base` / `sm`:
 
 ```tsx
 // In ui/callout.tsx, inside variants:
 xl: cn(
   "[--callout-padding:--spacing(16)]",
-  "[--title-font-size:var(--text-4xl)]",
-  "[--content-font-size:var(--text-2xl)]",
+  "[--title-font-size:var(--text-3xl)] *:@3xl/callout:[--title-font-size:var(--text-4xl)]",
+  "[--content-font-size:var(--text-xl)] *:@3xl/callout:[--content-font-size:var(--text-2xl)]",
 ),
 ```
 
-Avoid the `**:data-[label=callout-content]:...` descendant-selector pattern for new variants — push the rule onto `CalloutContent` directly, or use a CSS variable hook so the slot owns its own behavior.
+The `*:@3xl/callout:[--var:...]` shape is required (not `@3xl/callout:[--var:...]`) because the `@container/callout` lives on the aside itself — the override has to descend through a child before the container query resolves.
+
+Avoid the `**:data-[label=callout-content]:...` descendant-selector pattern for new variants — push the rule onto `CalloutContent` directly, or use a CSS variable hook so the slot owns its own behavior. The one remaining instance of that pattern (on `base`, for `w-[inherit]`) is preserved from the pre-consolidation default and should not be propagated.
 
 ## Step 8: When the shape doesn't quite match
 
@@ -131,8 +130,8 @@ Almost always the answer is "add a variant" or "expose a CSS variable hook" rath
 
 ## Pre-merge checklist
 
-- [ ] Used `image` *or* `emoji`, never both (TS would reject anyway).
 - [ ] `title` / `description` are translated at the call site (no `titleKey` / `descriptionKey`).
+- [ ] `variant` is `base` (default) or `sm` — the old `large` / `medium` / `small` names were removed.
 - [ ] If using `as`, the resulting heading level matches the section's hierarchy.
 - [ ] If introducing a new visual treatment, it lives as a variant or CSS variable hook on `ui/callout`, not a sibling component.
 - [ ] Storybook coverage updated if the new variant/shape isn't already represented.
