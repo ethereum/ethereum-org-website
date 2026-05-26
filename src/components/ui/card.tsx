@@ -10,6 +10,7 @@ import { BaseLink, LinkProps } from "./Link"
 
 const cardVariants = cva(
   cn(
+    "flex flex-col",
     "[--banner-radius:--spacing(1)] rounded-[calc(var(--card-pad)+var(--banner-radius))]",
     "text-body no-underline hover:text-body",
     "transition-all duration-300 hover:transition-all hover:duration-300"
@@ -42,21 +43,9 @@ const cardVariants = cva(
   }
 )
 
-const orientationVariants = cva("", {
-  variants: {
-    orientation: {
-      col: "flex flex-col",
-      row: "flex",
-      unset: "",
-    },
-  },
-  defaultVariants: { orientation: "col" },
-})
-
 export type CardProps = React.HTMLAttributes<HTMLDivElement> &
   Pick<LinkProps, "href" | "customEventOptions"> &
-  VariantProps<typeof cardVariants> &
-  VariantProps<typeof orientationVariants>
+  VariantProps<typeof cardVariants>
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   (
@@ -66,7 +55,6 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       customEventOptions,
       background,
       size,
-      orientation,
       hoverEffect,
       ...props
     },
@@ -78,18 +66,13 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           href={href}
           className={cn(
             cardVariants({ background, size, hoverEffect }),
-            orientationVariants({ orientation }),
             className,
             "group/link"
           )}
           customEventOptions={customEventOptions}
           hideArrow
         >
-          <div
-            ref={ref}
-            className={cn(orientationVariants({ orientation }), "flex-1")}
-            {...props}
-          />
+          <div ref={ref} className="flex flex-1 flex-col" {...props} />
         </BaseLink>
       )
     }
@@ -98,7 +81,6 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
         ref={ref}
         className={cn(
           cardVariants({ background, size, hoverEffect }),
-          orientationVariants({ orientation }),
           className,
           "group"
         )}
