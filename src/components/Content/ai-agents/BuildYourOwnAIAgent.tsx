@@ -25,7 +25,7 @@ const BuildYourOwnAIAgent = async () => {
       tagline: t("elizaos-tagline"),
       description: t("elizaos-description"),
       ctaLabel: t("elizaos-cta"),
-      href: "https://elizaos.github.io/eliza/",
+      href: "https://elizaos.ai/",
     },
     {
       image: game,
