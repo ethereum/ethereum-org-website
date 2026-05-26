@@ -59,7 +59,7 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
                   scroll={false}
                   className="space-y-6 no-underline"
                 >
-                  <Card size="xs" background="none">
+                  <Card size="xs" variant="ghost">
                     <CardContent spacing="md">
                       <CardBanner background="accent-a" fit="contain">
                         <Image

@@ -395,7 +395,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 emoji=":ledger:"
                 title={t("page-upgrades-bug-bounty-ledger-title")}
                 description={t("page-upgrades-bug-bounty-ledger-desc")}
-                background="nested"
+                variant="nested"
                 className="flex-[1_1_464px]"
               >
                 <div>
@@ -441,7 +441,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 emoji=":computer:"
                 title={t("page-upgrades-bug-bounty-client-bugs")}
                 description={t("page-upgrades-bug-bounty-client-bugs-desc")}
-                background="nested"
+                variant="nested"
                 className="flex-[1_1_464px]"
               >
                 <CardParagraph>
@@ -468,7 +468,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 emoji=":book:"
                 title={t("page-upgrades-bug-bounty-misc-bugs")}
                 description={t("page-upgrades-bug-bounty-misc-bugs-desc")}
-                background="nested"
+                variant="nested"
                 className="flex-[1_1_464px]"
               >
                 <CardParagraph>
@@ -482,7 +482,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 emoji=":scroll:"
                 title={t("page-upgrades-bug-bounty-deposit-bugs")}
                 description={t("page-upgrades-bug-bounty-deposit-bugs-desc")}
-                background="nested"
+                variant="nested"
                 className="flex-[1_1_464px]"
               >
                 <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
@@ -501,7 +501,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                 emoji=":bug:"
                 title={t("page-upgrades-bug-bounty-dependency-bugs")}
                 description={t("page-upgrades-bug-bounty-dependency-bugs-desc")}
-                background="nested"
+                variant="nested"
                 className="flex-[1_1_464px]"
               >
                 <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
@@ -519,7 +519,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               {/* Out of Scope */}
               <MarkdownCard
                 id="out-of-scope"
-                background="nested"
+                variant="nested"
                 className="flex-[1_1_100%]"
               >
                 <h2>{t("page-upgrades-bug-bounty-not-included")}</h2>
@@ -594,7 +594,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               {/* Bug Hunting Rules */}
               <MarkdownCard
                 id="rules"
-                background="nested"
+                variant="nested"
                 className="flex-[1_1_100%]"
               >
                 <h2>{t("page-upgrades-bug-bounty-hunting")}</h2>

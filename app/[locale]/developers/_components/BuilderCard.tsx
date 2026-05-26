@@ -18,7 +18,7 @@ type BuildCardProps = {
 }
 
 const BuilderCard = ({ path }: BuildCardProps) => (
-  <Card background="none" className="border">
+  <Card variant="ghost" className="border">
     <CardHeader>
       <CardBanner fit="contain" background="none">
         <Image

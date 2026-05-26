@@ -24,7 +24,7 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
       eventAction: "click",
       eventName: course.title,
     }}
-    background="none"
+    variant="ghost"
     size="xs"
   >
     <CardBanner size="sm">

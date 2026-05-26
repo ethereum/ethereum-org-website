@@ -24,7 +24,7 @@ const SpeedRunCard = ({
   className,
 }: SpeedRunCardProps) => (
   <Card
-    background="none"
+    variant="ghost"
     className={cn(
       "relative min-h-112 overflow-hidden rounded-b-none",
       className

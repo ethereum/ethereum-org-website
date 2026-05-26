@@ -271,7 +271,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </h2>
 
             {/* Quickstart your idea */}
-            <Card background="nested" size="lg">
+            <Card variant="nested" size="lg">
               <CardHeader>
                 <CardBanner background="none" size="lg">
                   <Image
@@ -331,7 +331,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Get help */}
-            <Card background="nested" size="lg">
+            <Card variant="nested" size="lg">
               <CardHeader>
                 <CardBanner background="none" size="lg">
                   <Image
@@ -367,7 +367,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Resources */}
-            <Card background="nested" size="lg">
+            <Card variant="nested" size="lg">
               <CardHeader>
                 <CardBanner background="none" size="lg" fit="contain">
                   <Image
@@ -402,7 +402,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Tutorials */}
-            <Card background="nested" size="lg">
+            <Card variant="nested" size="lg">
               <CardHeader>
                 <CardBanner background="none" size="lg" fit="contain">
                   <Image
@@ -616,7 +616,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: title,
                       }}
-                      background="none"
+                      variant="ghost"
                       size="sm"
                     >
                       <CardBanner size="sm">

@@ -404,7 +404,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             <Logo className="max-h-9 max-w-full **:fill-body!" />
                           </CardHeader>
                           <CardContent spacing="md">
-                            {/* <div className="space-y-4"> */}
                             {!!tags.length && (
                               <div className="flex flex-wrap gap-x-1 gap-y-2">
                                 {tags.map((tag) => (

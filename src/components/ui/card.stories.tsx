@@ -77,7 +77,7 @@ export const Backgrounds: Story = {
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       <div>
         <Label>background=&quot;base&quot; (default)</Label>
-        <Card background="base">
+        <Card variant="base">
           <StandardBody />
         </Card>
       </div>
@@ -86,7 +86,7 @@ export const Backgrounds: Story = {
         <Label>
           background=&quot;nested&quot; (shown inside a tinted container)
         </Label>
-        <Card background="nested">
+        <Card variant="nested">
           <StandardBody />
         </Card>
       </div>
@@ -96,7 +96,7 @@ export const Backgrounds: Story = {
           background=&quot;header-bar&quot; (pair with CardHeader
           variant=&quot;bar&quot; and spacing=&quot;inherit&quot;)
         </Label>
-        <Card background="header-bar">
+        <Card variant="header-bar">
           <CardHeader variant="bar" spacing="inherit">
             <Shield className="text-accent-a" />
             <CardTitle variant="semibold">Header-bar card</CardTitle>
@@ -117,7 +117,7 @@ export const Backgrounds: Story = {
         <Label>
           background=&quot;none&quot; (note: --banner-radius widens to 16px)
         </Label>
-        <Card background="none">
+        <Card variant="ghost">
           <StandardBody />
         </Card>
       </div>
@@ -126,7 +126,8 @@ export const Backgrounds: Story = {
         <Label>
           background=&quot;gradient&quot; (avoid unless designers ask)
         </Label>
-        <Card background="gradient">
+        {/* // TODO: Remove gradient */}
+        <Card variant="gradient">
           <StandardBody />
         </Card>
       </div>
@@ -135,7 +136,8 @@ export const Backgrounds: Story = {
         <Label>
           background=&quot;radial-a&quot; (avoid unless designers ask)
         </Label>
-        <Card background="radial-a">
+        {/* // TODO: Remove radial-a */}
+        <Card variant="radial-a">
           <StandardBody />
         </Card>
       </div>
@@ -304,7 +306,7 @@ export const BannerPlacement: Story = {
           Direct child of Card + background=&quot;none&quot; (widened
           --banner-radius)
         </Label>
-        <Card background="none">
+        <Card variant="ghost">
           <CardBanner>
             <Image
               src={heroLandscape}
@@ -425,7 +427,7 @@ export const HeaderVariants: Story = {
           CardHeader variant=&quot;bar&quot; spacing=&quot;inherit&quot; (pair
           with Card background=&quot;header-bar&quot;)
         </Label>
-        <Card background="header-bar">
+        <Card variant="header-bar">
           <CardHeader variant="bar" spacing="inherit">
             <Shield className="text-accent-a" />
             <CardTitle variant="semibold">Bar header</CardTitle>
@@ -569,7 +571,7 @@ export const Composites: Story = {
         {/* Image-banner card (BuilderCard shape) */}
         <div>
           <Label>Image-banner card (BuilderCard shape)</Label>
-          <Card background="none">
+          <Card variant="ghost">
             <CardHeader>
               <CardBanner fit="contain" background="none">
                 <Image
@@ -627,7 +629,7 @@ export const Composites: Story = {
         {/* Header-bar card (what-is-ethereum start sections) */}
         <div>
           <Label>Header-bar card (icon bar + content + footer)</Label>
-          <Card background="header-bar" size="lg">
+          <Card variant="header-bar" size="lg">
             <CardHeader variant="bar" spacing="inherit">
               <User className="size-8 text-accent-a" />
               <CardTitle>
