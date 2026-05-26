@@ -632,8 +632,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </div>
               </div>
 
-              <Card background="header-bar" spacing="lg">
-                <CardHeader variant="bar" spacing="inherit">
+              <Card variant="header-bar" size="lg">
+                <CardHeader>
                   <User className="size-8 text-accent-a" />
                   <CardTitle>
                     {t("page-what-is-ethereum-start-individuals-title")}
@@ -696,7 +696,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     {t("page-what-is-ethereum-start-individuals-desc-5")}
                   </CardParagraph>
                 </CardContent>
-                <CardFooter spacing="inherit">
+                <CardFooter>
                   <div className="flex flex-wrap gap-4">
                     <ButtonLink href="/start/">
                       {t("page-what-is-ethereum-start-individuals-cta-1")}
@@ -708,8 +708,8 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </CardFooter>
               </Card>
 
-              <Card background="header-bar" spacing="lg">
-                <CardHeader variant="bar" spacing="inherit">
+              <Card variant="header-bar" size="lg">
+                <CardHeader>
                   <SquareCode className="size-8 text-accent-b" />
                   <CardTitle>
                     {t("page-what-is-ethereum-start-developers-title")}
@@ -749,15 +749,15 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     {t("page-what-is-ethereum-start-developers-desc-4")}
                   </CardParagraph>
                 </CardContent>
-                <CardFooter spacing="inherit">
+                <CardFooter>
                   <ButtonLink href="/developers/">
                     {t("page-what-is-ethereum-start-developers-cta")}
                   </ButtonLink>
                 </CardFooter>
               </Card>
 
-              <Card background="header-bar" spacing="lg">
-                <CardHeader variant="bar" spacing="inherit">
+              <Card variant="header-bar" size="lg">
+                <CardHeader>
                   <Landmark className="size-8 text-accent-c" />
                   <CardTitle>
                     {t("page-what-is-ethereum-start-business-title")}
@@ -794,7 +794,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     })}
                   </CardParagraph>
                 </CardContent>
-                <CardFooter spacing="inherit">
+                <CardFooter>
                   <ButtonLink href={ENTERPRISE_ETHEREUM_URL}>
                     {t("page-what-is-ethereum-start-business-cta")}
                   </ButtonLink>

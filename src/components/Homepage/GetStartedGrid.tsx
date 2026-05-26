@@ -109,9 +109,9 @@ const GetStartedGrid = async ({
             <Card
               key={card.title}
               className="border transition-colors hover:border-primary-hover"
-              background="nested"
+              variant="nested"
               href={card.href}
-              spacing="lg"
+              size="lg"
               customEventOptions={{
                 eventCategory,
                 eventAction: "section_click",

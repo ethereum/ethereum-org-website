@@ -241,14 +241,10 @@ const DepositContractPage = () => {
           <RightColumn>
             <Card
               className="overflow-hidden lg:sticky lg:top-28 lg:max-w-xl"
-              spacing="lg"
+              variant="header-bar"
             >
-              <CardHeader
-                variant="bar"
-                spacing="inherit"
-                className="items-center justify-center bg-primary p-2"
-              >
-                <h2 className="text-sm font-normal text-white uppercase dark:text-background-medium">
+              <CardHeader className="items-center justify-center p-2! text-center">
+                <h2 className="text-sm font-normal uppercase">
                   {t("page-staking-deposit-contract-address-check-btn")}
                 </h2>
               </CardHeader>
@@ -376,7 +372,7 @@ const DepositContractPage = () => {
                 )}
               </CardContent>
               <CardFooter>
-                <Alert variant="warning" className="rounded-(--banner-radius)">
+                <Alert variant="warning">
                   <AlertEmoji text=":warning:" />
                   <AlertContent>
                     <AlertDescription>

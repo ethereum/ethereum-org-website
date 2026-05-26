@@ -10,104 +10,59 @@ import { BaseLink, LinkProps } from "./Link"
 
 const cardVariants = cva(
   cn(
+    "flex flex-col",
     "[--banner-radius:--spacing(1)] rounded-[calc(var(--card-pad)+var(--banner-radius))]",
     "text-body no-underline hover:text-body",
-    "transition-all duration-300 hover:transition-all hover:duration-300"
+    "transition-all duration-300 hover:transition-all hover:duration-300",
+    "**:data-[label=card-header]:pb-0 **:data-[label=card-footer]:pt-0"
   ),
   {
     variants: {
-      background: {
+      variant: {
         base: "bg-background-highlight",
         nested: "bg-background",
-        none: "[--banner-radius:--spacing(4)]",
-        // TODO: Confirm gradient
-        gradient:
-          "bg-card-gradient dark:bg-linear-to-br dark:from-transparent dark:to-primary/10",
-        "header-bar":
+        ghost: "[--banner-radius:--spacing(4)]",
+        "header-bar": cn(
           "overflow-hidden *:data-[label=card-header]:bg-background-highlight border",
-        "radial-a": "bg-radial-a",
+          "[--card-pad:--spacing(5)]! **:data-[label=card-header]:flex **:data-[label=card-header]:items-center **:data-[label=card-header]:gap-4 **:data-[label=card-header]:border-b",
+          "**:data-[label=card-header]:pb-(--card-pad) **:data-[label=card-footer]:pt-(--card-pad)"
+        ),
       },
-      spacing: {
+      size: {
         lg: "[--card-pad:--spacing(6)] md:[--card-pad:--spacing(8)] [--content-space:--spacing(8)] [--banner-radius:--spacing(1.5)]",
         base: "[--card-pad:--spacing(4)] md:[--card-pad:--spacing(6)] [--content-space:1lh]",
         md: "[--card-pad:--spacing(4)] [--content-space:--spacing(4)]",
         sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
-      hoverEffect: {
-        lift: "shadow-md hover:shadow-lg scale-100 hover:scale-[1.0075]",
-      },
     },
     defaultVariants: {
-      background: "base",
-      spacing: "base",
+      variant: "base",
+      size: "base",
     },
   }
 )
 
-const orientationVariants = cva("", {
-  variants: {
-    orientation: {
-      col: "flex flex-col",
-      row: "flex",
-      unset: "",
-    },
-  },
-  defaultVariants: { orientation: "col" },
-})
-
 export type CardProps = React.HTMLAttributes<HTMLDivElement> &
   Pick<LinkProps, "href" | "customEventOptions"> &
-  VariantProps<typeof cardVariants> &
-  VariantProps<typeof orientationVariants>
+  VariantProps<typeof cardVariants>
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  (
-    {
-      className,
-      href,
-      customEventOptions,
-      background,
-      spacing,
-      orientation,
-      hoverEffect,
-      ...props
-    },
-    ref
-  ) => {
+  ({ className, href, customEventOptions, variant, size, ...props }, ref) => {
+    const classNames = [cardVariants({ variant, size }), className]
     if (href) {
       return (
         <BaseLink
           href={href}
-          className={cn(
-            cardVariants({ background, spacing, hoverEffect }),
-            orientationVariants({ orientation }),
-            className,
-            "group/link"
-          )}
+          className={cn(...classNames, "group/link")}
           customEventOptions={customEventOptions}
           hideArrow
         >
-          <div
-            ref={ref}
-            className={cn(orientationVariants({ orientation }), "flex-1")}
-            {...props}
-          />
+          <div ref={ref} className="flex flex-1 flex-col" {...props} />
         </BaseLink>
       )
     }
-    return (
-      <div
-        ref={ref}
-        className={cn(
-          cardVariants({ background, spacing, hoverEffect }),
-          orientationVariants({ orientation }),
-          className,
-          "group"
-        )}
-        {...props}
-      />
-    )
+    return <div ref={ref} className={cn(...classNames, "group")} {...props} />
   }
 )
 Card.displayName = "Card"
@@ -115,42 +70,22 @@ Card.displayName = "Card"
 const childSpacingVariants = cva("", {
   variants: {
     spacing: {
-      base: "data-[label=card-header]:pb-0 data-[label=card-footer]:pt-0",
       lg: "[--content-space:--spacing(4)] md:[--content-space:--spacing(6)]",
       md: "[--content-space:--spacing(4)]",
       sm: "[--content-space:--spacing(2.5)]",
       xs: "[--content-space:--spacing(1)]",
-      inherit: "",
-    },
-  },
-  defaultVariants: {
-    spacing: "base",
-  },
-})
-
-const headerVariants = cva("", {
-  variants: {
-    variant: {
-      bar: "[--card-pad:--spacing(5)] flex items-center gap-4 border-b",
     },
   },
 })
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> &
-    VariantProps<typeof childSpacingVariants> &
-    VariantProps<typeof headerVariants>
->(({ className, variant, spacing, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
   <div
     ref={ref}
     data-label="card-header"
-    className={cn(
-      childSpacingVariants({ spacing }),
-      headerVariants({ variant }),
-      "p-(--card-pad)",
-      className
-    )}
+    className={cn("p-(--card-pad)", className)}
     {...props}
   />
 ))
@@ -188,31 +123,14 @@ const buttonVariants = cva("", {
   },
 })
 
-const footerVariants = cva("", {
-  variants: {
-    rounded: {
-      fit: "*:rounded-(--banner-radius)",
-    },
-  },
-})
-
 const CardFooter = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> &
-    VariantProps<typeof childSpacingVariants> &
-    VariantProps<typeof buttonVariants> &
-    VariantProps<typeof footerVariants>
->(({ className, spacing, buttons, rounded, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof buttonVariants>
+>(({ className, buttons, ...props }, ref) => (
   <div
     ref={ref}
     data-label="card-footer"
-    className={cn(
-      childSpacingVariants({ spacing }),
-      buttonVariants({ buttons }),
-      footerVariants({ rounded }),
-      "p-(--card-pad)",
-      className
-    )}
+    className={cn(buttonVariants({ buttons }), "p-(--card-pad)", className)}
     {...props}
   />
 ))
@@ -342,7 +260,6 @@ const titleVariants = cva(
         black: "text-3xl font-black",
       },
       spacing: {
-        half: "[&:has(+[data-label=card-paragraph])]:mb-[calc(var(--content-space)_/_2)]",
         quarter:
           "[&:has(+[data-label=card-paragraph])]:mb-[calc(var(--content-space)_/_4)]",
         none: "[&:has(+[data-label=card-paragraph])]:mb-0",
@@ -352,7 +269,7 @@ const titleVariants = cva(
 
     defaultVariants: {
       variant: "bold",
-      spacing: "half",
+      spacing: "quarter",
     },
   }
 )

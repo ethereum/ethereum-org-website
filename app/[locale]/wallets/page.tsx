@@ -233,7 +233,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 emoji={card.emoji}
                 title={card.title}
                 description={card.description}
-                background="nested"
+                variant="nested"
                 className="max-w-full min-w-[280px] flex-1 md:max-w-[46%] lg:max-w-[31%]"
               />
             ))}

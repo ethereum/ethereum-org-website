@@ -398,14 +398,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         <Card
                           key={name}
                           className="row-span-3 grid grid-rows-subgrid gap-0"
-                          spacing="lg"
                         >
                           <CardHeader className="my-auto">
                             <h3 className="sr-only">{name}</h3>
                             <Logo className="max-h-9 max-w-full **:fill-body!" />
                           </CardHeader>
                           <CardContent spacing="md">
-                            {/* <div className="space-y-4"> */}
                             {!!tags.length && (
                               <div className="flex flex-wrap gap-x-1 gap-y-2">
                                 {tags.map((tag) => (

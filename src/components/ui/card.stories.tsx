@@ -40,8 +40,8 @@ const Label = ({ children }: { children: React.ReactNode }) => (
 )
 
 // Reusable "standard" inner content for variant-axis stories where the focus
-// is the wrapper (background, spacing, etc.), not the body. Includes a banner
-// since banner-plus-content is the most common card composition in production.
+// is the wrapper (variant, size, etc.), not the body. Includes a banner since
+// banner-plus-content is the most common card composition in production.
 const StandardBody = () => (
   <>
     <CardHeader>
@@ -70,34 +70,43 @@ const StandardBody = () => (
   </>
 )
 
-// ---------- Backgrounds ----------
+// ---------- Variants ----------
 
-export const Backgrounds: Story = {
+export const Variants: Story = {
   render: () => (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       <div>
-        <Label>background=&quot;base&quot; (default)</Label>
-        <Card background="base">
+        <Label>variant=&quot;base&quot; (default)</Label>
+        <Card variant="base">
           <StandardBody />
         </Card>
       </div>
 
       <div className="rounded-lg bg-background-highlight p-4">
         <Label>
-          background=&quot;nested&quot; (shown inside a tinted container)
+          variant=&quot;nested&quot; (shown inside a tinted container)
         </Label>
-        <Card background="nested">
+        <Card variant="nested">
           <StandardBody />
         </Card>
       </div>
 
       <div>
         <Label>
-          background=&quot;header-bar&quot; (pair with CardHeader
-          variant=&quot;bar&quot; and spacing=&quot;inherit&quot;)
+          variant=&quot;ghost&quot; (no bg; --banner-radius widens to 16px)
         </Label>
-        <Card background="header-bar">
-          <CardHeader variant="bar" spacing="inherit">
+        <Card variant="ghost">
+          <StandardBody />
+        </Card>
+      </div>
+
+      <div>
+        <Label>
+          variant=&quot;header-bar&quot; (header layout baked in — just drop a
+          CardHeader inside)
+        </Label>
+        <Card variant="header-bar">
+          <CardHeader>
             <Shield className="text-accent-a" />
             <CardTitle variant="semibold">Header-bar card</CardTitle>
           </CardHeader>
@@ -112,40 +121,13 @@ export const Backgrounds: Story = {
           </CardFooter>
         </Card>
       </div>
-
-      <div>
-        <Label>
-          background=&quot;none&quot; (note: --banner-radius widens to 16px)
-        </Label>
-        <Card background="none">
-          <StandardBody />
-        </Card>
-      </div>
-
-      <div>
-        <Label>
-          background=&quot;gradient&quot; (avoid unless designers ask)
-        </Label>
-        <Card background="gradient">
-          <StandardBody />
-        </Card>
-      </div>
-
-      <div>
-        <Label>
-          background=&quot;radial-a&quot; (avoid unless designers ask)
-        </Label>
-        <Card background="radial-a">
-          <StandardBody />
-        </Card>
-      </div>
     </div>
   ),
 }
 
-// ---------- Spacing ----------
+// ---------- Sizes ----------
 
-const SPACING_LABELS = {
+const SIZE_LABELS = {
   lg: "lg (24/32px pad, 32px content)",
   base: "base (16/24px pad, 1lh content) [default]",
   md: "md (16px pad, 16px content)",
@@ -153,19 +135,45 @@ const SPACING_LABELS = {
   xs: "xs (0 pad, 4px content)",
 } as const
 
-const SPACING_VARIANTS = ["lg", "base", "md", "sm", "xs"] as const
+const SIZE_VARIANTS = ["lg", "base", "md", "sm", "xs"] as const
 
-export const Spacing: Story = {
+export const Sizes: Story = {
   render: () => (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-      {SPACING_VARIANTS.map((spacing) => (
-        <div key={spacing}>
+      {SIZE_VARIANTS.map((size) => (
+        <div key={size}>
           <Label>
-            spacing=&quot;{spacing}&quot; - {SPACING_LABELS[spacing]}
+            size=&quot;{size}&quot; - {SIZE_LABELS[size]}
+            {size === "xs" ? ' (paired with variant="ghost")' : ""}
           </Label>
-          <Card spacing={spacing}>
-            <StandardBody />
-          </Card>
+          {size === "xs" ? (
+            <Card size="xs" variant="ghost">
+              <CardHeader>
+                <CardBanner>
+                  <Image
+                    src={heroLandscape}
+                    alt=""
+                    sizes="(min-width: 768px) 400px, 100vw"
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle>Card title</CardTitle>
+                <CardParagraph>
+                  Body copy that fills the card with realistic content so
+                  spacing and background colors can be evaluated.
+                </CardParagraph>
+                <CardParagraph>
+                  Second paragraph so the inter-element rhythm inside
+                  CardContent is visible.
+                </CardParagraph>
+              </CardContent>
+            </Card>
+          ) : (
+            <Card size={size}>
+              <StandardBody />
+            </Card>
+          )}
         </div>
       ))}
     </div>
@@ -176,12 +184,11 @@ export const Spacing: Story = {
 // Demonstrates how CardContent's own spacing variant can override the parent
 // Card's --content-space without changing the outer --card-pad. Common when
 // the outer card needs lg padding for breathing room but the inner content
-// reads tighter.
+// reads tighter. Omitting CardContent spacing inherits from the parent size.
 
-const CONTENT_SPACING_VARIANTS = ["base", "lg", "md", "sm", "xs"] as const
+const CONTENT_SPACING_VARIANTS = ["lg", "md", "sm", "xs"] as const
 
 const CONTENT_SPACING_LABELS = {
-  base: "base (inherits parent's --content-space) [default]",
   lg: "lg (16/24px)",
   md: "md (16px)",
   sm: "sm (10px)",
@@ -194,10 +201,10 @@ export const ContentSpacingOverride: Story = {
       {CONTENT_SPACING_VARIANTS.map((contentSpacing) => (
         <div key={contentSpacing}>
           <Label>
-            Card spacing=&quot;lg&quot;, CardContent spacing=&quot;
+            Card size=&quot;lg&quot;, CardContent spacing=&quot;
             {contentSpacing}&quot; - {CONTENT_SPACING_LABELS[contentSpacing]}
           </Label>
-          <Card spacing="lg">
+          <Card size="lg">
             <CardHeader>
               <CardBanner>
                 <Image
@@ -210,9 +217,9 @@ export const ContentSpacingOverride: Story = {
             <CardContent spacing={contentSpacing}>
               <CardTitle>Card title</CardTitle>
               <CardParagraph>
-                Outer Card uses spacing=&quot;lg&quot; (wide --card-pad). The
-                inner CardContent rhythm is overridden per-cell so the
-                paragraphs sit tighter or looser than the parent default.
+                Outer Card uses size=&quot;lg&quot; (wide --card-pad). The inner
+                CardContent rhythm is overridden per-cell so the paragraphs sit
+                tighter or looser than the parent default.
               </CardParagraph>
               <CardParagraph>
                 Second paragraph so the inter-element gap is observable.
@@ -231,7 +238,7 @@ export const ContentSpacingOverride: Story = {
 // ---------- Title Variants (variant x spacing matrix) ----------
 
 const TITLE_VARIANTS = ["semibold", "bold", "black"] as const
-const TITLE_SPACINGS = ["half", "quarter", "none", "inherit"] as const
+const TITLE_SPACINGS = ["quarter", "none", "inherit"] as const
 
 export const TitleVariants: Story = {
   render: () => (
@@ -256,7 +263,7 @@ export const TitleVariants: Story = {
               <CardContent>
                 <CardTitle variant={variant} spacing={spacing}>
                   Title spacing={spacing}
-                  {spacing === "half" ? " (default)" : ""}
+                  {spacing === "quarter" ? " (default)" : ""}
                 </CardTitle>
                 <CardParagraph>
                   Body paragraph immediately following the title. The gap above
@@ -301,10 +308,10 @@ export const BannerPlacement: Story = {
 
       <div>
         <Label>
-          Direct child of Card + background=&quot;none&quot; (widened
+          Direct child of Card + variant=&quot;ghost&quot; (widened
           --banner-radius)
         </Label>
-        <Card background="none">
+        <Card variant="ghost">
           <CardBanner>
             <Image
               src={heroLandscape}
@@ -316,8 +323,8 @@ export const BannerPlacement: Story = {
             <CardTitle>Edge-to-edge banner</CardTitle>
             <CardParagraph>
               Banner is a direct child of Card so it sits flush against the card
-              edges. background=&quot;none&quot; removes the surrounding tint
-              and widens --banner-radius to match the card&apos;s outer corners.
+              edges. variant=&quot;ghost&quot; removes the surrounding tint and
+              widens --banner-radius to match the card&apos;s outer corners.
             </CardParagraph>
           </CardContent>
         </Card>
@@ -406,22 +413,23 @@ export const BannerSizes: Story = {
   ),
 }
 
-// ---------- Header Variants ----------
+// ---------- Header Layouts ----------
+// CardHeader itself has no variants. The bar-style header (row layout with
+// bottom border) is driven entirely by the parent Card variant="header-bar".
 
-export const HeaderVariants: Story = {
+export const HeaderLayouts: Story = {
   render: () => (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       <div>
-        <Label>CardHeader (default; no variant)</Label>
+        <Label>Default header (Card variant=&quot;base&quot;)</Label>
         <Card>
           <CardHeader>
             <CardTitle>Default header</CardTitle>
           </CardHeader>
           <CardContent>
             <CardParagraph>
-              The default header is a vertical container with padding-bottom
-              zeroed so the only gap to the content comes from
-              CardContent&apos;s padding-top.
+              Default vertical container with padding-bottom zeroed so the only
+              gap to the content comes from CardContent&apos;s padding-top.
             </CardParagraph>
           </CardContent>
         </Card>
@@ -429,19 +437,19 @@ export const HeaderVariants: Story = {
 
       <div>
         <Label>
-          CardHeader variant=&quot;bar&quot; spacing=&quot;inherit&quot; (pair
-          with Card background=&quot;header-bar&quot;)
+          Bar-style header via Card variant=&quot;header-bar&quot; (no props on
+          CardHeader)
         </Label>
-        <Card background="header-bar">
-          <CardHeader variant="bar" spacing="inherit">
+        <Card variant="header-bar">
+          <CardHeader>
             <Shield className="text-accent-a" />
             <CardTitle variant="semibold">Bar header</CardTitle>
           </CardHeader>
           <CardContent>
             <CardParagraph>
-              variant=&quot;bar&quot; arranges the header in a row with a bottom
-              border. Almost always paired with Card
-              background=&quot;header-bar&quot;.
+              The parent Card supplies the row layout, bottom border, and
+              restored padding via descendant selectors. CardHeader stays
+              prop-less.
             </CardParagraph>
           </CardContent>
         </Card>
@@ -576,7 +584,7 @@ export const Composites: Story = {
         {/* Image-banner card (BuilderCard shape) */}
         <div>
           <Label>Image-banner card (BuilderCard shape)</Label>
-          <Card background="none">
+          <Card variant="ghost">
             <CardHeader>
               <CardBanner fit="contain" background="none">
                 <Image
@@ -634,8 +642,8 @@ export const Composites: Story = {
         {/* Header-bar card (what-is-ethereum start sections) */}
         <div>
           <Label>Header-bar card (icon bar + content + footer)</Label>
-          <Card background="header-bar" spacing="lg">
-            <CardHeader variant="bar" spacing="inherit">
+          <Card variant="header-bar" size="lg">
+            <CardHeader>
               <User className="size-8 text-accent-a" />
               <CardTitle>
                 {tWie("page-what-is-ethereum-start-individuals-title")}
@@ -656,7 +664,7 @@ export const Composites: Story = {
                 </ListItem>
               </UnorderedList>
             </CardContent>
-            <CardFooter spacing="inherit">
+            <CardFooter>
               <ButtonLink href="#">
                 {tWie("page-what-is-ethereum-start-individuals-cta-1")}
               </ButtonLink>

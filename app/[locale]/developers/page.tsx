@@ -271,7 +271,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </h2>
 
             {/* Quickstart your idea */}
-            <Card background="nested" spacing="lg">
+            <Card variant="nested" size="lg">
               <CardHeader>
                 <CardBanner background="none" size="lg">
                   <Image
@@ -286,7 +286,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 <CardTitle variant="black">
                   {t("page-developers-jump-right-in-title")}
                 </CardTitle>
-                <CardParagraph size="sm">
+                <CardParagraph>
                   {t("page-developers-quickstart-scaffold-subtext")}{" "}
                   <Link
                     href="https://docs.scaffoldeth.io/"
@@ -331,7 +331,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Get help */}
-            <Card background="nested" spacing="lg">
+            <Card variant="nested" size="lg">
               <CardHeader>
                 <CardBanner background="none" size="lg">
                   <Image
@@ -346,7 +346,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 <CardTitle variant="black">
                   {t("page-developers-get-help-title")}
                 </CardTitle>
-                <CardParagraph size="sm">
+                <CardParagraph>
                   {t("page-developers-get-help-desc")}
                 </CardParagraph>
               </CardContent>
@@ -367,7 +367,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Resources */}
-            <Card background="nested" spacing="lg">
+            <Card variant="nested" size="lg">
               <CardHeader>
                 <CardBanner background="none" size="lg" fit="contain">
                   <Image
@@ -381,7 +381,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 <CardTitle variant="black">
                   {t("page-developers-resources-title")}
                 </CardTitle>
-                <CardParagraph size="sm">
+                <CardParagraph>
                   {t("page-developers-resources-desc")}
                 </CardParagraph>
               </CardContent>
@@ -402,7 +402,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </Card>
 
             {/* Tutorials */}
-            <Card background="nested" spacing="lg">
+            <Card variant="nested" size="lg">
               <CardHeader>
                 <CardBanner background="none" size="lg" fit="contain">
                   <Image
@@ -417,7 +417,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 <CardTitle variant="black">
                   {t("page-developers-tutorials-title")}
                 </CardTitle>
-                <CardParagraph size="sm">
+                <CardParagraph>
                   {t("page-developers-tutorials-desc")}
                 </CardParagraph>
               </CardContent>
@@ -616,8 +616,8 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: title,
                       }}
-                      background="none"
-                      spacing="sm"
+                      variant="ghost"
+                      size="sm"
                     >
                       <CardBanner size="sm">
                         {bannerImage ? (
