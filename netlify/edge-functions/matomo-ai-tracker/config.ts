@@ -1,4 +1,4 @@
-import type { Env, LogLevel, MatomoConfig } from "./types"
+import type { Env, LogLevel, MatomoConfig } from "./types.ts"
 
 const toInt = (value: string | undefined | null, fallback?: number) => {
   if (value === undefined || value === null || value === "") return fallback

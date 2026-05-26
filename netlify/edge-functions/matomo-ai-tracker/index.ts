@@ -1,8 +1,8 @@
-import { getConfig } from "./config"
-import { sendMatomoHit } from "./http"
-import { createLogger } from "./logger"
-import { buildMatomoPayload } from "./matomo"
-import type { MatomoConfig } from "./types"
+import { getConfig } from "./config.ts"
+import { sendMatomoHit } from "./http.ts"
+import { createLogger } from "./logger.ts"
+import { buildMatomoPayload } from "./matomo.ts"
+import type { MatomoConfig } from "./types.ts"
 
 const trackRequest = async (
   request: Request,

@@ -1,9 +1,9 @@
-import type { MatomoConfig, MatomoPayload } from "./types"
+import type { MatomoConfig, MatomoPayload } from "./types.ts"
 import {
   formatMatomoDateTime,
   getContentLength,
   isUserAgentAllowed,
-} from "./utils"
+} from "./utils.ts"
 
 export function buildMatomoPayload(
   request: Request,

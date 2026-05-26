@@ -1,4 +1,4 @@
-import type { Logger, LogLevel } from "./types"
+import type { Logger, LogLevel } from "./types.ts"
 
 const levels = ["silent", "error", "warn", "info", "debug"]
 

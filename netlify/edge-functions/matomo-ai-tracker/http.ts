@@ -1,6 +1,6 @@
 /* global RequestInfo, RequestInit */
-import { createLogger } from "./logger"
-import type { LogLevel, MatomoPayload } from "./types"
+import { createLogger } from "./logger.ts"
+import type { LogLevel, MatomoPayload } from "./types.ts"
 
 export function buildMatomoRequestPayload(
   payload: Record<string, string | number | boolean | null | undefined>
