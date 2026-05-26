@@ -30,7 +30,7 @@ When the existing primitive doesn't quite fit, the answer is usually "add a vari
 6. **Logical CSS for direction.** Use `ms-`/`me-`/`ps-`/`pe-`/`inset-s-`/`inset-e-`/`border-s`/`border-e`/`text-start`/`text-end`. The site supports Arabic and Urdu (RTL). Hard-coded `left-`/`right-`/`ml-`/`mr-`/`pl-`/`pr-` breaks RTL.
 7. **Locale-aware formatters.** `numberFormat()` from `@/lib/utils/numbers`, `dateTimeFormat()` from `@/lib/utils/date`. Never `toLocaleString` / `Intl.NumberFormat` directly.
 8. **`useRtlFlip()` for directional icons** (right-pointing arrows/chevrons). Or use `ChevronNext`/`ChevronPrev` from `@/components/Chevron`.
-9. **Markdown content goes through `MdComponents`.** The legacy `@/components/Card` (default export) is reserved for markdown shortcodes -- never import it from app code; use `@/components/ui/card`.
+9. **Markdown content goes through `MdComponents`.** The `<Card>` markdown shortcode is backed by `@/components/MarkdownCard` (a thin wrapper around the `ui/card` primitives with an MDX-friendly prop shape). For app code, compose the primitives directly from `@/components/ui/card`.
 10. **Storybook stories ship with new UI components.** No automated unit tests; Storybook + Chromatic + types are the verification layer.
 11. **Don't add new layouts.** There are six canonical layouts (`TopicLayout`, `StaticLayout`, `DocsLayout`, `TutorialLayout`, `ContentLayout`, `BaseLayout`). New sectioned content goes in `src/data/topics/<key>.ts` as a `TopicLayout` config -- not a new layout component. See `references/layouts.md`.
 
@@ -40,7 +40,7 @@ These are landmines where the code looks reasonable but the pattern is wrong. Th
 
 ### Imports that look right but aren't
 
-- **Cards**: `import { Card } from "@/components/ui/card"` is canonical. **Not** `import Card from "@/components/Card"` (default export of that file is reserved for markdown shortcodes).
+- **Cards**: `import { Card } from "@/components/ui/card"` is canonical for app code. The `<Card>` markdown shortcode is backed by `@/components/MarkdownCard` — that wrapper is rarely imported from app code, since composing the `ui/card` parts directly is more flexible.
 - **Tooltips**: `import Tooltip from "@/components/Tooltip"` (mobile-aware, Matomo-tracked, scroll-close). **Not** `import { Tooltip } from "@/components/ui/tooltip"` (that's the bare Radix primitive used internally).
 - **Modals**: `import Modal from "@/components/ui/dialog-modal"` (default export, the high-level convenience) for typical modal needs. `@/components/ui/dialog` is the vanilla shadcn-style primitive for fine-grained Radix control. Same names exported from both files; **do not mix sources within a feature**.
 - **Heroes**: import from `@/components/Hero` (`ContentHero`, `SimpleHero`, `HubHero`, `MdxHero`, `HomeHero`). **Not** `@/components/PageHero` (deprecation track).
@@ -56,6 +56,7 @@ Used in 5 places. Don't introduce new uses. Use Tailwind `dark:` variant + seman
 ### Subtle component behaviors
 
 - `<Button isSecondary>` only takes effect on `outline` and `ghost` variants. Silent no-op on `solid`/`link`.
+- **`Card` is variant-driven, not `className`-driven.** Padding, spacing, background, border-radius, and text color are owned by the `variant` / `size` variants and the CSS vars they set (`--card-pad`, `--content-space`, `--banner-radius`). Adjusting any of those via `className` on `Card`/`CardContent`/`CardHeader`/`CardFooter` is the wrong escape hatch — add a variant case in `card.tsx` instead. See `references/card-walkthrough.md`.
 - `<CardBanner fit="contain">` with a single `<Image>` child auto-clones it as a blurred backdrop. Pass two children and you lose this magic.
 - `LinkBox` requires a `LinkOverlay` somewhere inside; without it, the whole-card-clickable pattern doesn't work.
 - `commonControlClasses` in `ui/checkbox.tsx` is shared by `Switch`. Editing it changes both.

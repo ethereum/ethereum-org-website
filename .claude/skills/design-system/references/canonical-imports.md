@@ -24,19 +24,15 @@ The canonical card primitive. Composable parts. If `href` is provided, the card 
 
 `CardBanner` props worth knowing:
 - `background`: `"accent-a" | "accent-b" | "accent-c" | "primary" | "body" | "none"` (default `body`)
-- `size`: `"full" | "thumbnail"` (default `full`)
+- `size`: `"full" | "lg" | "base" | "sm" | "thumbnail"` (default `base`)
 - `fit`: `"cover" | "contain"` (default `cover`)
+- `zoom`: `true` (default) | `false` — when the parent `Card` has `href`, controls whether the image scales on hover/focus via `group/link`
 
 When `fit="contain"` and you pass a single `<Image>` child, the banner auto-clones it as a blurred backdrop behind a sharp foreground. Pass two children and you lose this magic.
 
-### Do NOT import `@/components/Card`
+### Markdown shortcode lives in `@/components/MarkdownCard`
 
-```tsx
-// DON'T:
-import Card from "@/components/Card"
-```
-
-This is the legacy card, registered in `MdComponents` for the markdown `<Card>` shortcode. It is reserved for markdown rendering. Importing it from app code is a smell.
+The `<Card>` MDX shortcode (registered in `MdComponents`) is backed by `@/components/MarkdownCard`, which composes the `ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). Use this wrapper if you have an existing MDX-style API to preserve. For new app code, compose the `ui/card` primitives directly — they're more flexible.
 
 ### Domain-specific cards exist (`AppCard`, `EthPriceCard`, etc.)
 

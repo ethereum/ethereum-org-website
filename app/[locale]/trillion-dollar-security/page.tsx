@@ -6,12 +6,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardParagraph,
-} from "@/components/ui/card"
+import { Card, CardBanner, CardFooter, CardHeader } from "@/components/ui/card"
 import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -22,27 +17,28 @@ import TrillionDollarSecurityPageJsonLD from "./page-jsonld"
 import TdsHero from "@/public/images/trillion-dollar-security/hero.png"
 import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
-const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => {
-  return (
-    <Card className="rounded-2xl border bg-card-gradient p-8 shadow dark:bg-linear-to-br dark:from-white/0 dark:to-purple-500/10">
-      <CardContent className="p-0 pb-4">
-        <CardParagraph variant="light" size="sm">
-          <Image
-            src={TdsReport}
-            alt={altText}
-            className="w-full object-contain"
-            sizes="(max-width: 383px) calc(100vw - 32px), 384px"
-          />
-        </CardParagraph>
-      </CardContent>
-      <CardFooter className="justify-center p-0">
-        <ButtonLink size="lg" href="/reports/trillion-dollar-security.pdf">
-          {cta}
-        </ButtonLink>
-      </CardFooter>
-    </Card>
-  )
-}
+const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
+  <Card size="lg">
+    <CardHeader>
+      <CardBanner fit="contain" size="full">
+        <Image
+          src={TdsReport}
+          alt={altText}
+          sizes="(max-width: 383px) calc(100vw - 32px), 384px"
+        />
+      </CardBanner>
+    </CardHeader>
+    <CardFooter>
+      <ButtonLink
+        size="lg"
+        href="/reports/trillion-dollar-security.pdf"
+        className="block text-center"
+      >
+        {cta}
+      </ButtonLink>
+    </CardFooter>
+  </Card>
+)
 
 const TdsPage = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
