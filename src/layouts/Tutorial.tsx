@@ -122,7 +122,7 @@ export const TutorialLayout = ({
           isTranslated={!contentNotTranslated}
           editPath={absoluteEditPath}
           hideEditButton={!!frontmatter.hideEditButton}
-          className="mb-6"
+          className="-ms-2 mb-6"
         />
         <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
         <TableOfContents

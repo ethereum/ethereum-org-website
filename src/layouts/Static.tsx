@@ -130,7 +130,7 @@ export const StaticLayout = ({
                 isTranslated={!contentNotTranslated}
                 editPath={absoluteEditPath}
                 hideEditButton={!!frontmatter.hideEditButton}
-                className="mb-6"
+                className="-ms-2 mb-6"
               >
                 {hasListenToPlaylist && <ListenToPlayer slug={slug} />}
               </PageActions>

@@ -134,7 +134,7 @@ export const DocsLayout = ({
             isTranslated={!contentNotTranslated}
             editPath={absoluteEditPath}
             hideEditButton={!!frontmatter.hideEditButton}
-            className="mb-10 lg:mb-12"
+            className="-ms-2 mb-10 lg:mb-12"
           />
           <TableOfContents
             items={tocItems}
