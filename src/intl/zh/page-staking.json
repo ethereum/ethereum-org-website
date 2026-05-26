@@ -192,7 +192,7 @@
   "page-staking-section-comparison-pools-requirements-li1": "最低的 ETH 要求，一些项目只需 0.01 ETH",
   "page-staking-section-comparison-pools-requirements-li2": "直接从你的钱包存入不同的联合质押平台，或者直接兑换其中一种质押流动性代币",
   "page-staking-faq-1-question": "什么是验证者？",
-  "page-staking-faq-1-answer": "A <em>验证者</em>是存在于以太坊上并参与以太坊协议共识的虚拟实体。验证者由余额、公钥和其他属性表示。<em>验证者客户端</em>是代表验证者持有并使用其私钥的软件。单个验证者客户端可以持有许多密钥对，从而控制许多验证者。",
+  "page-staking-faq-1-answer": "<em>验证者</em>是存在于以太坊上并参与以太坊协议共识的虚拟实体。验证者由余额、公钥和其他属性表示。<em>验证者客户端</em>是代表验证者持有并使用其私钥的软件。单个验证者客户端可以持有许多密钥对，从而控制许多验证者。",
   "page-staking-faq-2-question": "为什么我需要质押资金？",
   "page-staking-faq-2-answer": "验证者有能力为网络提议和证明区块。为了防止不诚实行为，用户必须质押他们的资金。这允许协议惩罚恶意行为者。质押是保持你诚实的一种手段，因为你的行为将产生财务后果。",
   "page-staking-faq-3-question": "我可以购买“Eth2”吗？",
