@@ -266,7 +266,7 @@ const VideoGalleryFilter = ({
               key={video.slug}
               href={`/videos/${video.slug}/`}
               background="none"
-              spacing="sm"
+              size="sm"
             >
               <CardBanner className="aspect-video h-auto">
                 <Image

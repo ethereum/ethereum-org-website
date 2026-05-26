@@ -24,7 +24,7 @@ const cardVariants = cva(
           "overflow-hidden *:data-[label=card-header]:bg-background-highlight border",
         "radial-a": "bg-radial-a",
       },
-      spacing: {
+      size: {
         lg: "[--card-pad:--spacing(6)] md:[--card-pad:--spacing(8)] [--content-space:--spacing(8)] [--banner-radius:--spacing(1.5)]",
         base: "[--card-pad:--spacing(4)] md:[--card-pad:--spacing(6)] [--content-space:1lh]",
         md: "[--card-pad:--spacing(4)] [--content-space:--spacing(4)]",
@@ -37,7 +37,7 @@ const cardVariants = cva(
     },
     defaultVariants: {
       background: "base",
-      spacing: "base",
+      size: "base",
     },
   }
 )
@@ -65,7 +65,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       href,
       customEventOptions,
       background,
-      spacing,
+      size,
       orientation,
       hoverEffect,
       ...props
@@ -77,7 +77,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
         <BaseLink
           href={href}
           className={cn(
-            cardVariants({ background, spacing, hoverEffect }),
+            cardVariants({ background, size, hoverEffect }),
             orientationVariants({ orientation }),
             className,
             "group/link"
@@ -97,7 +97,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
       <div
         ref={ref}
         className={cn(
-          cardVariants({ background, spacing, hoverEffect }),
+          cardVariants({ background, size, hoverEffect }),
           orientationVariants({ orientation }),
           className,
           "group"

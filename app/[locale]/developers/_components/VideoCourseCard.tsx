@@ -25,7 +25,7 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
       eventName: course.title,
     }}
     background="none"
-    spacing="xs"
+    size="xs"
   >
     <CardBanner size="sm">
       <Image

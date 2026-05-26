@@ -632,7 +632,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </div>
               </div>
 
-              <Card background="header-bar" spacing="lg">
+              <Card background="header-bar" size="lg">
                 <CardHeader variant="bar" spacing="inherit">
                   <User className="size-8 text-accent-a" />
                   <CardTitle>
@@ -708,7 +708,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </CardFooter>
               </Card>
 
-              <Card background="header-bar" spacing="lg">
+              <Card background="header-bar" size="lg">
                 <CardHeader variant="bar" spacing="inherit">
                   <SquareCode className="size-8 text-accent-b" />
                   <CardTitle>
@@ -756,7 +756,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </CardFooter>
               </Card>
 
-              <Card background="header-bar" spacing="lg">
+              <Card background="header-bar" size="lg">
                 <CardHeader variant="bar" spacing="inherit">
                   <Landmark className="size-8 text-accent-c" />
                   <CardTitle>

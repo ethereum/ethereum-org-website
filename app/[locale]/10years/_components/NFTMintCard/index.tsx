@@ -24,7 +24,7 @@ const NFTMintCard = async () => {
   const t = await getTranslations("page-10-year-anniversary")
 
   return (
-    <Card className="text-center" spacing="lg">
+    <Card className="text-center" size="lg">
       <CardHeader>
         <div className="relative">
           {/* Torch/flame video */}

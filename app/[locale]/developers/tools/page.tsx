@@ -96,7 +96,7 @@ const Page = async (props: {
               >
                 <Card
                   className="h-fit overflow-hidden border"
-                  spacing="md"
+                  size="md"
                   background="none"
                 >
                   <LinkBox className="hover:bg-background-highlight">

@@ -163,7 +163,7 @@ export const Spacing: Story = {
           <Label>
             spacing=&quot;{spacing}&quot; - {SPACING_LABELS[spacing]}
           </Label>
-          <Card spacing={spacing}>
+          <Card size={spacing}>
             <StandardBody />
           </Card>
         </div>
@@ -197,7 +197,7 @@ export const ContentSpacingOverride: Story = {
             Card spacing=&quot;lg&quot;, CardContent spacing=&quot;
             {contentSpacing}&quot; - {CONTENT_SPACING_LABELS[contentSpacing]}
           </Label>
-          <Card spacing="lg">
+          <Card size="lg">
             <CardHeader>
               <CardBanner>
                 <Image
@@ -627,7 +627,7 @@ export const Composites: Story = {
         {/* Header-bar card (what-is-ethereum start sections) */}
         <div>
           <Label>Header-bar card (icon bar + content + footer)</Label>
-          <Card background="header-bar" spacing="lg">
+          <Card background="header-bar" size="lg">
             <CardHeader variant="bar" spacing="inherit">
               <User className="size-8 text-accent-a" />
               <CardTitle>
