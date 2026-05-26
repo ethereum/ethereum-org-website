@@ -56,28 +56,28 @@ Ethereum provides a unique set of technical foundations for deploying production
 The AI agent builder hub covers each of these core building blocks in depth:
 
 <CardGrid>
-  <HubCard
+  <Card
     emoji=":closed_lock_with_key:"
     title="Programmable wallets"
     description="Agents can hold and transfer digital assets directly. A smart account functions as the agent's onchain identity and treasury, with spending limits, allowlists, and session keys enforced at the contract level."
     href="/ai-agents/wallets/"
     ctaLabel="See Agent wallets"
   />
-  <HubCard
+  <Card
     emoji=":mag:"
     title="Verifiable inference"
     description="An agent running offchain is a black box. By anchoring key decisions to onchain proofs via zkML or TEEs, developers can give counterparties a way to confirm that the agent followed its stated logic."
     href="/ai-agents/verification/"
     ctaLabel="See Verification"
   />
-  <HubCard
+  <Card
     emoji=":money_with_wings:"
     title="Machine payments"
     description="Autonomous agents need to pay for compute and data without human intervention. Stablecoins and open protocols like x402 provide a programmable settlement layer for agent commerce."
     href="/ai-agents/payments/"
     ctaLabel="See Payments"
   />
-  <HubCard
+  <Card
     emoji=":bust_in_silhouette:"
     title="Agent identity"
     description="When agents interact with humans or other agents, counterparties need a way to verify what an agent is and what its track record is using onchain registries like ERC-8004."
