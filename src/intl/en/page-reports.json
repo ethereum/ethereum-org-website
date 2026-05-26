@@ -1,5 +1,5 @@
 {
-  "page-reports-title": "Reports",
+  "page-reports-title": "Reports on Ethereum from institutions",
   "page-reports-description": "Research about Ethereum from regulators, central banks, banks, consultancies, and research firms. Each card links to the publisher's original report.",
   "page-reports-heading": "Research on Ethereum",
   "page-reports-intro": "Use these reports to learn how institutions describe Ethereum: how it works, what it is used for, and how it fits into the wider financial system. Each one is published by a named institution and links out to the publisher's own site.",
@@ -10,6 +10,6 @@
   "page-reports-suggest-heading": "Suggest a report",
   "page-reports-suggest-body": "Know an institutional report about Ethereum that should be listed here? Open an issue with the title, publisher, date, and link.",
   "page-reports-suggest-cta": "Suggest a report on GitHub",
-  "page-reports-metadata-title": "Reports on Ethereum",
+  "page-reports-metadata-title": "Reports on Ethereum from institutions",
   "page-reports-metadata-description": "Research about Ethereum from regulators, central banks, banks, consultancies, and research firms."
 }

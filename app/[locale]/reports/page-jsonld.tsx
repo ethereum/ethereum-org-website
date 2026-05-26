@@ -112,7 +112,7 @@ export default async function ReportsPageJsonLD({
       {
         "@type": "ItemList",
         "@id": itemListId,
-        name: t("page-reports-heading"),
+        name: t("page-reports-metadata-title"),
         description: t("page-reports-metadata-description"),
         numberOfItems: reports.length,
         itemListOrder: "https://schema.org/ItemListOrderDescending",
