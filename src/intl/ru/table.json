@@ -1,7 +1,10 @@
 {
-  "table-active": "активные",
+  "table-active": "активно",
+  "table-browser-engines": "Браузерные движки",
+  "table-desktop-platforms": "Десктопные платформы",
   "table-filters": "Фильтры",
-  "table-showing": "Показаны",
+  "table-mobile-platforms": "Мобильные платформы",
   "table-reset-filters": "Сбросить",
+  "table-showing": "Показано",
   "table-what-are-you-looking-for": "Что вы ищете?"
 }

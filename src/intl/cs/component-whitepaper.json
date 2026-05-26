@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Než začnete číst",
+  "heading": "Chcete porozumět Ethereu?",
+  "description": "Tato bílá kniha byla vydána v roce <strong>2014</strong>, ještě před spuštěním Etherea. Po více než 10 letech vývoje, velkých aktualizací a růstu ekosystému <strong>původní bílá kniha již neodráží to, čím je Ethereum dnes</strong>.",
+  "cta-learn": "Zjistěte více o dnešním Ethereu",
+  "cta-download-pdf": "Stáhnout původní PDF (2014)",
+  "whats-changed": "Co se od roku 2014 změnilo?",
+  "evolution-pos": "Ethereum přešlo z důkazu prací (PoW) na důkaz podílem (PoS) (Merge, 2022)",
+  "evolution-l2": "Řešení škálování na vrstvě 2 (l2) nyní zpracovávají miliony transakcí",
+  "evolution-usecases": "Decentralizované finance (DeFi), NFT a DAO se staly hlavními případy užití",
+  "evolution-standards": "Standardy chytrých kontraktů (ERC-20, ERC-721) se staly základy celého odvětví"
+}

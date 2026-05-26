@@ -1,0 +1,961 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-bug-bounty.json",
+  "generatedAt": "2026-05-25T10:42:42.877Z",
+  "rootHash": "e56660a5993b",
+  "tree": {
+    "contentHash": "2a705e2e9c42",
+    "anchorHash": "6fd1aaf42012",
+    "children": {
+      "page-upgrades-bug-bounty-annotated-specs": {
+        "contentHash": "6f7bffb82029",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-annotations": {
+        "contentHash": "c63f4029f898",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-client-bugs": {
+        "contentHash": "6b17b0557a16",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-client-bugs-desc": {
+        "contentHash": "da2a6e22da4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-client-bugs-desc-2": {
+        "contentHash": "d5567597f375",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-clients": {
+        "contentHash": "a4b9fd0f8dd3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-clients-type-1": {
+        "contentHash": "e1a06c57cd6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-clients-type-2": {
+        "contentHash": "c4570bde61b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-clients-type-3": {
+        "contentHash": "7b77a3f3a030",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-misc-bugs": {
+        "contentHash": "0353d104c3e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-misc-bugs-desc": {
+        "contentHash": "f03e8bd323d3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-misc-bugs-desc-2": {
+        "contentHash": "a6ebdb6ec1ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-deposit-bugs": {
+        "contentHash": "9df82daac3bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-deposit-bugs-desc": {
+        "contentHash": "94fd83ae57a7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-deposit-contract-specs": {
+        "contentHash": "c9c2a121f3bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-deposit-contract-source": {
+        "contentHash": "5b0ba8c7a08b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-dependency-bugs": {
+        "contentHash": "b6f4412325b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-dependency-bugs-desc": {
+        "contentHash": "ca579192a91d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-docking": {
+        "contentHash": "283128acef14",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-email-us": {
+        "contentHash": "5ac328e91681",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-help-links": {
+        "contentHash": "2791cc22a0f5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting": {
+        "contentHash": "cadedcf738b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-desc": {
+        "contentHash": "643e15999e69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-leaderboard": {
+        "contentHash": "7fa7e472bb92",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-execution-leaderboard": {
+        "contentHash": "04ecf953e565",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-leaderboard-subtitle": {
+        "contentHash": "8b2365b1cba6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle": {
+        "contentHash": "694fb1d029bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-li-1": {
+        "contentHash": "be79a4866ed6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-li-2": {
+        "contentHash": "92fea1b83b8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-li-3": {
+        "contentHash": "dc4e29d50e8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-hunting-li-4": {
+        "contentHash": "f59cabcc66b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-leaderboard": {
+        "contentHash": "22f4bef7ef20",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-leaderboard-list": {
+        "contentHash": "c226ef666e95",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-leaderboard-points": {
+        "contentHash": "c54a061dfcc1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-ledger-desc": {
+        "contentHash": "9ddca4a5f6d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-ledger-title": {
+        "contentHash": "ba1998076300",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-meta-description": {
+        "contentHash": "0321bd8bf0c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-meta-title": {
+        "contentHash": "9d7362e0ff06",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included": {
+        "contentHash": "3e914d798438",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-desc": {
+        "contentHash": "4b2ff5620d0d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4d55e652225d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-owasp": {
+        "contentHash": "9663eccb3c5d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-points-error": {
+        "contentHash": "804a85919530",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-points-exchange": {
+        "contentHash": "b23c893d2142",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-points-loading": {
+        "contentHash": "85c22ff132da",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-points-payout-desc": {
+        "contentHash": "468c2bfb3e2a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-points-point": {
+        "contentHash": "863fa0f57870",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-points-rights-desc": {
+        "contentHash": "e737a77933d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-points-usd": {
+        "contentHash": "483c24cb69a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-questions": {
+        "contentHash": "3fc2334e5b29",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-rules": {
+        "contentHash": "2ceaba001003",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-slogan": {
+        "contentHash": "01a8935da13f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-specs": {
+        "contentHash": "8e1de23c4f21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-execution-specs": {
+        "contentHash": "54d7dfb65161",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-specs-docs": {
+        "contentHash": "8565cf862ddc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-submit": {
+        "contentHash": "c58f4903df0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-subtitle": {
+        "contentHash": "4c21b89cc5a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-title": {
+        "contentHash": "66d74c53428f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-title-1": {
+        "contentHash": "1c677c008e2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-title-2": {
+        "contentHash": "98e00165704e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-title-3": {
+        "contentHash": "298cf4346bc6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-title-4": {
+        "contentHash": "d9ff1a1bce6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-type-1": {
+        "contentHash": "a86519c8e864",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-type-2": {
+        "contentHash": "e43b4682b8e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-type-3": {
+        "contentHash": "f776938ba962",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-type-4": {
+        "contentHash": "df9056b00c49",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-types": {
+        "contentHash": "203fe58f1820",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-validity": {
+        "contentHash": "41dee9b562a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-validity-desc": {
+        "contentHash": "c922cf1f89d3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c823776a7df4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-card-critical": {
+        "contentHash": "427dd2969bd1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-critical-risk": {
+        "contentHash": "bc93de5365d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-h2": {
+        "contentHash": "8e588cd18774",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-high": {
+        "contentHash": "c4ebc6d4a583",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-high-risk": {
+        "contentHash": "5dd0b006acd6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-label-1": {
+        "contentHash": "f28016127c41",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-label-2": {
+        "contentHash": "ccddbe378d9b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-label-3": {
+        "contentHash": "4b4e09dc636b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-label-4": {
+        "contentHash": "a9005c98c44d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-label-5": {
+        "contentHash": "cb4710bd17d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-label-6": {
+        "contentHash": "4ec030161f8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-label-7": {
+        "contentHash": "0124cec4f615",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-label-8": {
+        "contentHash": "e86921e2e46f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-li-1": {
+        "contentHash": "83a724e2bd05",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-li-2": {
+        "contentHash": "b228042e8ec9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-li-3": {
+        "contentHash": "8b2d9f8ca0f6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-li-4": {
+        "contentHash": "abf9c7283518",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-li-5": {
+        "contentHash": "fafb30868085",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-li-6": {
+        "contentHash": "b16b2c02c6db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-li-7": {
+        "contentHash": "a728dfadb010",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-li-8": {
+        "contentHash": "ded0051e62fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-low": {
+        "contentHash": "f793de205ead",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-low-risk": {
+        "contentHash": "de1154b2cd5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-medium-risk": {
+        "contentHash": "1c55231d5efb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-subheader": {
+        "contentHash": "5e9f98120dbe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-card-subheader-2": {
+        "contentHash": "d029f87e3d80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-question-title": {
+        "contentHash": "e956a9404b46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q1-title": {
+        "contentHash": "c5240aab9bad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q1-contentPreview": {
+        "contentHash": "14158d1d6eb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q1-content-1": {
+        "contentHash": "d82947fc2c89",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "29bd3de577eb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q1-content-2": {
+        "contentHash": "d8bf8886f0b9",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "47c37b53b351",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q1-content-3": {
+        "contentHash": "c0c600ed7946",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0aab6fe72e0c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q1-content-4": {
+        "contentHash": "cb56e754fec6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cc11334c211b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q1-content-5": {
+        "contentHash": "a6d89df66e73",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2e4b671a0364",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q1-content-6": {
+        "contentHash": "e4a10d57f5c8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e189f8e3c3fa",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q1-content-7": {
+        "contentHash": "1a7160cc4f2d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "88fd6a90debf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q2-title": {
+        "contentHash": "681cc48c4dd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q2-contentPreview": {
+        "contentHash": "38178a20b470",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q2-content-1": {
+        "contentHash": "7cb2f95eadf0",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0c3636445008",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q3-title": {
+        "contentHash": "5db2efc79c77",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q3-contentPreview": {
+        "contentHash": "1a16061a6382",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q3-content-1": {
+        "contentHash": "b166369b14b9",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c71c61c42d57",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q4-title": {
+        "contentHash": "09bece3c5637",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q4-contentPreview": {
+        "contentHash": "8aff5108a050",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q4-content-1": {
+        "contentHash": "3916f427566d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q5-title": {
+        "contentHash": "97c26950e266",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q5-contentPreview": {
+        "contentHash": "80fae97c794b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q5-content-1": {
+        "contentHash": "5b1637fab3bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q6-title": {
+        "contentHash": "068fa046d3a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q6-contentPreview": {
+        "contentHash": "7d923b712014",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q6-content-1": {
+        "contentHash": "c2b25c473fb2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q6-content-2": {
+        "contentHash": "f9c5cdbc7c0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q7-title": {
+        "contentHash": "9b1f413649c1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q7-contentPreview": {
+        "contentHash": "b295544c6bad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q7-content-1": {
+        "contentHash": "d37ea9c35d58",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q8-title": {
+        "contentHash": "a4901456fee3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q8-contentPreview": {
+        "contentHash": "b4e32dd63dfc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty-faq-q8-content-1": {
+        "contentHash": "d979aef2967c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ee3c3fc3be58",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "bug-bounty-faq-q8-PGP-key": {
+        "contentHash": "c6b9e369e00e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-severity-qualifications-title": {
+        "contentHash": "cfb25794b7ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-severity-qualifications-desc": {
+        "contentHash": "b24667f03cc7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-severity-low-title": {
+        "contentHash": "8c8b92aefebd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-severity-low-li-1": {
+        "contentHash": "8e5285acf60c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c0c068847357",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-low-li-2": {
+        "contentHash": "4a77f4c87a14",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "27598a9d6dfe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-low-li-3": {
+        "contentHash": "460f90ffba57",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a433c10a0fe2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-medium-title": {
+        "contentHash": "c63ef75dfaee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-severity-medium-li-1": {
+        "contentHash": "80426909c157",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e7066f39d1ea",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-medium-li-2": {
+        "contentHash": "0f619ed108d1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "95a4f7f45d20",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-medium-li-3": {
+        "contentHash": "d9515a427c26",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "75f1b0c6a195",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-high-title": {
+        "contentHash": "604740a26b3f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-severity-high-li-1": {
+        "contentHash": "8f1687055af8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "bb9984dbaae4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-high-li-2": {
+        "contentHash": "f62362a3534c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9acc659893eb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-high-li-3": {
+        "contentHash": "f346b83f4ae7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "371f3862176d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-critical-title": {
+        "contentHash": "73850df67f04",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-severity-critical-li-1": {
+        "contentHash": "b1d28ddde9b5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0422c8093e0b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-critical-li-2": {
+        "contentHash": "00314ae160c3",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a57c703f3b81",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-critical-li-3": {
+        "contentHash": "70d6466e87f5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9580798c176f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-critical-li-4": {
+        "contentHash": "82a747462111",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "92121a683456",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-severity-critical-li-5": {
+        "contentHash": "cd6031114aba",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "e6460349de77",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-upgrades-bug-bounty-out-of-scope-footnote": {
+        "contentHash": "474384d8687d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-1": {
+        "contentHash": "54904a73a84e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-2": {
+        "contentHash": "dd1a707df896",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-3": {
+        "contentHash": "55007223fb82",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-4": {
+        "contentHash": "d539872533ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-5": {
+        "contentHash": "7fd5e6ce05fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-6": {
+        "contentHash": "e5c9d7030bad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-7": {
+        "contentHash": "bf0d6a691c3d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-8": {
+        "contentHash": "602eda6ee6df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-9": {
+        "contentHash": "4486e8c66586",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-upgrades-bug-bounty-not-included-li-10": {
+        "contentHash": "ec7bc96e2d53",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-upgrades-bug-bounty-annotated-specs",
+      "page-upgrades-bug-bounty-annotations",
+      "page-upgrades-bug-bounty-client-bugs",
+      "page-upgrades-bug-bounty-client-bugs-desc",
+      "page-upgrades-bug-bounty-client-bugs-desc-2",
+      "page-upgrades-bug-bounty-clients",
+      "page-upgrades-bug-bounty-clients-type-1",
+      "page-upgrades-bug-bounty-clients-type-2",
+      "page-upgrades-bug-bounty-clients-type-3",
+      "page-upgrades-bug-bounty-misc-bugs",
+      "page-upgrades-bug-bounty-misc-bugs-desc",
+      "page-upgrades-bug-bounty-misc-bugs-desc-2",
+      "page-upgrades-bug-bounty-deposit-bugs",
+      "page-upgrades-bug-bounty-deposit-bugs-desc",
+      "page-upgrades-bug-bounty-deposit-contract-specs",
+      "page-upgrades-bug-bounty-deposit-contract-source",
+      "page-upgrades-bug-bounty-dependency-bugs",
+      "page-upgrades-bug-bounty-dependency-bugs-desc",
+      "page-upgrades-bug-bounty-docking",
+      "page-upgrades-bug-bounty-email-us",
+      "page-upgrades-bug-bounty-help-links",
+      "page-upgrades-bug-bounty-hunting",
+      "page-upgrades-bug-bounty-hunting-desc",
+      "page-upgrades-bug-bounty-hunting-leaderboard",
+      "page-upgrades-bug-bounty-hunting-execution-leaderboard",
+      "page-upgrades-bug-bounty-hunting-leaderboard-subtitle",
+      "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle",
+      "page-upgrades-bug-bounty-hunting-li-1",
+      "page-upgrades-bug-bounty-hunting-li-2",
+      "page-upgrades-bug-bounty-hunting-li-3",
+      "page-upgrades-bug-bounty-hunting-li-4",
+      "page-upgrades-bug-bounty-leaderboard",
+      "page-upgrades-bug-bounty-leaderboard-list",
+      "page-upgrades-bug-bounty-leaderboard-points",
+      "page-upgrades-bug-bounty-ledger-desc",
+      "page-upgrades-bug-bounty-ledger-title",
+      "page-upgrades-bug-bounty-meta-description",
+      "page-upgrades-bug-bounty-meta-title",
+      "page-upgrades-bug-bounty-not-included",
+      "page-upgrades-bug-bounty-not-included-desc",
+      "page-upgrades-bug-bounty-owasp",
+      "page-upgrades-bug-bounty-points-error",
+      "page-upgrades-bug-bounty-points-exchange",
+      "page-upgrades-bug-bounty-points-loading",
+      "page-upgrades-bug-bounty-points-payout-desc",
+      "page-upgrades-bug-bounty-points-point",
+      "page-upgrades-bug-bounty-points-rights-desc",
+      "page-upgrades-bug-bounty-points-usd",
+      "page-upgrades-bug-bounty-questions",
+      "page-upgrades-bug-bounty-rules",
+      "page-upgrades-bug-bounty-slogan",
+      "page-upgrades-bug-bounty-specs",
+      "page-upgrades-bug-bounty-execution-specs",
+      "page-upgrades-bug-bounty-specs-docs",
+      "page-upgrades-bug-bounty-submit",
+      "page-upgrades-bug-bounty-subtitle",
+      "page-upgrades-bug-bounty-title",
+      "page-upgrades-bug-bounty-title-1",
+      "page-upgrades-bug-bounty-title-2",
+      "page-upgrades-bug-bounty-title-3",
+      "page-upgrades-bug-bounty-title-4",
+      "page-upgrades-bug-bounty-type-1",
+      "page-upgrades-bug-bounty-type-2",
+      "page-upgrades-bug-bounty-type-3",
+      "page-upgrades-bug-bounty-type-4",
+      "page-upgrades-bug-bounty-types",
+      "page-upgrades-bug-bounty-validity",
+      "page-upgrades-bug-bounty-validity-desc",
+      "page-upgrades-bug-bounty-card-critical",
+      "page-upgrades-bug-bounty-card-critical-risk",
+      "page-upgrades-bug-bounty-card-h2",
+      "page-upgrades-bug-bounty-card-high",
+      "page-upgrades-bug-bounty-card-high-risk",
+      "page-upgrades-bug-bounty-card-label-1",
+      "page-upgrades-bug-bounty-card-label-2",
+      "page-upgrades-bug-bounty-card-label-3",
+      "page-upgrades-bug-bounty-card-label-4",
+      "page-upgrades-bug-bounty-card-label-5",
+      "page-upgrades-bug-bounty-card-label-6",
+      "page-upgrades-bug-bounty-card-label-7",
+      "page-upgrades-bug-bounty-card-label-8",
+      "page-upgrades-bug-bounty-card-li-1",
+      "page-upgrades-bug-bounty-card-li-2",
+      "page-upgrades-bug-bounty-card-li-3",
+      "page-upgrades-bug-bounty-card-li-4",
+      "page-upgrades-bug-bounty-card-li-5",
+      "page-upgrades-bug-bounty-card-li-6",
+      "page-upgrades-bug-bounty-card-li-7",
+      "page-upgrades-bug-bounty-card-li-8",
+      "page-upgrades-bug-bounty-card-low",
+      "page-upgrades-bug-bounty-card-low-risk",
+      "page-upgrades-bug-bounty-card-medium-risk",
+      "page-upgrades-bug-bounty-card-subheader",
+      "page-upgrades-bug-bounty-card-subheader-2",
+      "page-upgrades-question-title",
+      "bug-bounty-faq-q1-title",
+      "bug-bounty-faq-q1-contentPreview",
+      "bug-bounty-faq-q1-content-1",
+      "bug-bounty-faq-q1-content-2",
+      "bug-bounty-faq-q1-content-3",
+      "bug-bounty-faq-q1-content-4",
+      "bug-bounty-faq-q1-content-5",
+      "bug-bounty-faq-q1-content-6",
+      "bug-bounty-faq-q1-content-7",
+      "bug-bounty-faq-q2-title",
+      "bug-bounty-faq-q2-contentPreview",
+      "bug-bounty-faq-q2-content-1",
+      "bug-bounty-faq-q3-title",
+      "bug-bounty-faq-q3-contentPreview",
+      "bug-bounty-faq-q3-content-1",
+      "bug-bounty-faq-q4-title",
+      "bug-bounty-faq-q4-contentPreview",
+      "bug-bounty-faq-q4-content-1",
+      "bug-bounty-faq-q5-title",
+      "bug-bounty-faq-q5-contentPreview",
+      "bug-bounty-faq-q5-content-1",
+      "bug-bounty-faq-q6-title",
+      "bug-bounty-faq-q6-contentPreview",
+      "bug-bounty-faq-q6-content-1",
+      "bug-bounty-faq-q6-content-2",
+      "bug-bounty-faq-q7-title",
+      "bug-bounty-faq-q7-contentPreview",
+      "bug-bounty-faq-q7-content-1",
+      "bug-bounty-faq-q8-title",
+      "bug-bounty-faq-q8-contentPreview",
+      "bug-bounty-faq-q8-content-1",
+      "bug-bounty-faq-q8-PGP-key",
+      "page-upgrades-bug-bounty-severity-qualifications-title",
+      "page-upgrades-bug-bounty-severity-qualifications-desc",
+      "page-upgrades-bug-bounty-severity-low-title",
+      "page-upgrades-bug-bounty-severity-low-li-1",
+      "page-upgrades-bug-bounty-severity-low-li-2",
+      "page-upgrades-bug-bounty-severity-low-li-3",
+      "page-upgrades-bug-bounty-severity-medium-title",
+      "page-upgrades-bug-bounty-severity-medium-li-1",
+      "page-upgrades-bug-bounty-severity-medium-li-2",
+      "page-upgrades-bug-bounty-severity-medium-li-3",
+      "page-upgrades-bug-bounty-severity-high-title",
+      "page-upgrades-bug-bounty-severity-high-li-1",
+      "page-upgrades-bug-bounty-severity-high-li-2",
+      "page-upgrades-bug-bounty-severity-high-li-3",
+      "page-upgrades-bug-bounty-severity-critical-title",
+      "page-upgrades-bug-bounty-severity-critical-li-1",
+      "page-upgrades-bug-bounty-severity-critical-li-2",
+      "page-upgrades-bug-bounty-severity-critical-li-3",
+      "page-upgrades-bug-bounty-severity-critical-li-4",
+      "page-upgrades-bug-bounty-severity-critical-li-5",
+      "page-upgrades-bug-bounty-out-of-scope-footnote",
+      "page-upgrades-bug-bounty-not-included-li-1",
+      "page-upgrades-bug-bounty-not-included-li-2",
+      "page-upgrades-bug-bounty-not-included-li-3",
+      "page-upgrades-bug-bounty-not-included-li-4",
+      "page-upgrades-bug-bounty-not-included-li-5",
+      "page-upgrades-bug-bounty-not-included-li-6",
+      "page-upgrades-bug-bounty-not-included-li-7",
+      "page-upgrades-bug-bounty-not-included-li-8",
+      "page-upgrades-bug-bounty-not-included-li-9",
+      "page-upgrades-bug-bounty-not-included-li-10"
+    ]
+  },
+  "sourceCommitSha": "647106d896d17d983a5bec54d4f14ca23f4039cf"
+}
