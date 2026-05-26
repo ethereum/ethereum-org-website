@@ -258,6 +258,7 @@ const cardBannerVariants = cva(
         base: "h-48 w-full self-stretch",
         sm: "h-36 w-full self-stretch",
         thumbnail: "size-16 shrink-0",
+        "thumbnail-lg": "size-32 shrink-0",
       },
       fit: {
         cover: "[&_img]:object-cover",
