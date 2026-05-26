@@ -29,6 +29,14 @@ const meta = {
     // production-shape callout compositions.
     chromatic: { disableSnapshot: true },
   },
+  // Placeholder defaults so render-driven stories don't each need to declare
+  // `args` to satisfy Callout's required `title` / `description` props.
+  // Every story below provides its own copy via `render`; these defaults
+  // only appear if a story without a `render` is ever added.
+  args: {
+    title: "Callout title",
+    description: "Callout description",
+  },
 } satisfies Meta<typeof Callout>
 
 export default meta
@@ -86,21 +94,12 @@ export const BannerShapes: Story = {
       </div>
 
       <div>
-        <Label>emoji — no banner, no overflow reservation</Label>
-        <Callout
-          emoji=":classical_building:"
-          title="Emoji form"
-          description="Without an image, the banner reservation collapses (gated via has-[[data-label=callout-banner]]) and the content sits flush at the top."
-        >
-          <ButtonLink href="#">Action</ButtonLink>
-        </Callout>
-      </div>
-
-      <div>
-        <Label>neither image nor emoji</Label>
+        <Label>
+          no image — banner reservation collapses; content sits flush at the top
+        </Label>
         <Callout
           title="Plain title"
-          description="No optical anchor at the top — content-only card."
+          description="Without an image, the banner reservation is gated off via has-[[data-label=callout-banner]] and the gradient card sits flush at the top."
         >
           <ButtonLink href="#">Action</ButtonLink>
         </Callout>
@@ -117,7 +116,6 @@ export const HeadingLevels: Story = {
       <div>
         <Label>as omitted → renders &lt;h2&gt; [default]</Label>
         <Callout
-          emoji=":1234:"
           title="Default heading"
           description="CalloutTitle defaults to h2."
         />
@@ -126,7 +124,6 @@ export const HeadingLevels: Story = {
         <Label>as=&quot;h3&quot;</Label>
         <Callout
           as="h3"
-          emoji=":1234:"
           title="h3 heading"
           description="For callouts nested inside sections already introduced by an h2."
         />
@@ -135,7 +132,6 @@ export const HeadingLevels: Story = {
         <Label>as=&quot;h4&quot;</Label>
         <Callout
           as="h4"
-          emoji=":1234:"
           title="h4 heading"
           description="For deeper nesting inside h3-introduced subsections."
         />
