@@ -39,7 +39,11 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   return (
     <>
-      <ReportsPageJsonLD locale={locale} contributors={contributors} />
+      <ReportsPageJsonLD
+        locale={locale}
+        contributors={contributors}
+        reports={reports}
+      />
 
       <div>
         <ContentHero

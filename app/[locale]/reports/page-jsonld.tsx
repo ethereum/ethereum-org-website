@@ -6,19 +6,67 @@ import PageJsonLD from "@/components/PageJsonLD"
 
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
+import { SITE_URL } from "@/lib/constants"
+
+import type { Report } from "./data"
+
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
+
+const isAbsoluteUrl = (href: string) => /^https?:\/\//.test(href)
+
+const reportSchema = (
+  report: Report,
+  index: number,
+  locale: string,
+  pageUrl: string
+) => {
+  const itemUrl = isAbsoluteUrl(report.href)
+    ? report.href
+    : normalizeUrlForJsonLd(locale, report.href)
+  const imageUrl = `${SITE_URL}${report.imgSrc.src}`
+  const isPdf =
+    typeof report.fileSizeBytes === "number" ||
+    /\.pdf(?:$|\?)/i.test(report.href)
+
+  return {
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Report",
+      "@id": `${pageUrl}#${report.slug}`,
+      name: report.title,
+      url: itemUrl,
+      image: imageUrl,
+      datePublished: report.dateIso,
+      inLanguage: "en",
+      publisher: {
+        "@type": "Organization",
+        name: report.publisher,
+      },
+      ...(isPdf && {
+        encodingFormat: "application/pdf",
+      }),
+      ...(typeof report.fileSizeBytes === "number" && {
+        contentSize: `${(report.fileSizeBytes / 1048576).toFixed(1)} MB`,
+      }),
+    },
+  }
+}
 
 export default async function ReportsPageJsonLD({
   locale,
   contributors,
+  reports,
 }: {
   locale: string
   contributors: FileContributor[]
+  reports: Report[]
 }) {
   const t = await getTranslations("page-reports")
 
   const url = normalizeUrlForJsonLd(locale, "/reports/")
+  const itemListId = `${url}#reports-list`
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
@@ -31,7 +79,7 @@ export default async function ReportsPageJsonLD({
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
-        "@type": "WebPage",
+        "@type": "CollectionPage",
         "@id": url,
         name: t("page-reports-metadata-title"),
         description: t("page-reports-metadata-description"),
@@ -59,6 +107,18 @@ export default async function ReportsPageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        mainEntity: { "@id": itemListId },
+      },
+      {
+        "@type": "ItemList",
+        "@id": itemListId,
+        name: t("page-reports-heading"),
+        description: t("page-reports-metadata-description"),
+        numberOfItems: reports.length,
+        itemListOrder: "https://schema.org/ItemListOrderDescending",
+        itemListElement: reports.map((report, index) =>
+          reportSchema(report, index, locale, url)
+        ),
       },
     ],
   }
