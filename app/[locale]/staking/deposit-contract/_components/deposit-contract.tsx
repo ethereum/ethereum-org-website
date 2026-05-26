@@ -239,10 +239,7 @@ const DepositContractPage = () => {
             <CardList items={addressSources} />
           </LeftColumn>
           <RightColumn>
-            <Card
-              className="overflow-hidden lg:sticky lg:top-28 lg:max-w-xl"
-              spacing="lg"
-            >
+            <Card className="overflow-hidden lg:sticky lg:top-28 lg:max-w-xl">
               <CardHeader
                 variant="bar"
                 spacing="inherit"
@@ -376,7 +373,7 @@ const DepositContractPage = () => {
                 )}
               </CardContent>
               <CardFooter>
-                <Alert variant="warning" className="rounded-(--banner-radius)">
+                <Alert variant="warning">
                   <AlertEmoji text=":warning:" />
                   <AlertContent>
                     <AlertDescription>

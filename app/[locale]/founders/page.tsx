@@ -398,7 +398,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         <Card
                           key={name}
                           className="row-span-3 grid grid-rows-subgrid gap-0"
-                          spacing="lg"
                         >
                           <CardHeader className="my-auto">
                             <h3 className="sr-only">{name}</h3>

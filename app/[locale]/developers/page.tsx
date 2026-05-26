@@ -286,7 +286,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 <CardTitle variant="black">
                   {t("page-developers-jump-right-in-title")}
                 </CardTitle>
-                <CardParagraph size="sm">
+                <CardParagraph>
                   {t("page-developers-quickstart-scaffold-subtext")}{" "}
                   <Link
                     href="https://docs.scaffoldeth.io/"
@@ -346,7 +346,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 <CardTitle variant="black">
                   {t("page-developers-get-help-title")}
                 </CardTitle>
-                <CardParagraph size="sm">
+                <CardParagraph>
                   {t("page-developers-get-help-desc")}
                 </CardParagraph>
               </CardContent>
@@ -381,7 +381,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 <CardTitle variant="black">
                   {t("page-developers-resources-title")}
                 </CardTitle>
-                <CardParagraph size="sm">
+                <CardParagraph>
                   {t("page-developers-resources-desc")}
                 </CardParagraph>
               </CardContent>
@@ -417,7 +417,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 <CardTitle variant="black">
                   {t("page-developers-tutorials-title")}
                 </CardTitle>
-                <CardParagraph size="sm">
+                <CardParagraph>
                   {t("page-developers-tutorials-desc")}
                 </CardParagraph>
               </CardContent>

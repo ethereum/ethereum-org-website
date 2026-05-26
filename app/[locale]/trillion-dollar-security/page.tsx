@@ -18,7 +18,7 @@ import TdsHero from "@/public/images/trillion-dollar-security/hero.png"
 import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
 const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
-  <Card className="shadow" background="gradient" spacing="lg">
+  <Card spacing="lg">
     <CardHeader spacing="md">
       <CardBanner fit="contain" size="full">
         <Image

@@ -20,9 +20,6 @@ const cardVariants = cva(
         base: "bg-background-highlight",
         nested: "bg-background",
         none: "[--banner-radius:--spacing(4)]",
-        // TODO: Confirm gradient
-        gradient:
-          "bg-card-gradient dark:bg-linear-to-br dark:from-transparent dark:to-primary/10",
         "header-bar":
           "overflow-hidden *:data-[label=card-header]:bg-background-highlight border",
         "radial-a": "bg-radial-a",
@@ -341,7 +338,6 @@ const titleVariants = cva(
         black: "text-3xl font-black",
       },
       spacing: {
-        half: "[&:has(+[data-label=card-paragraph])]:mb-[calc(var(--content-space)_/_2)]",
         quarter:
           "[&:has(+[data-label=card-paragraph])]:mb-[calc(var(--content-space)_/_4)]",
         none: "[&:has(+[data-label=card-paragraph])]:mb-0",
@@ -351,7 +347,7 @@ const titleVariants = cva(
 
     defaultVariants: {
       variant: "bold",
-      spacing: "half",
+      spacing: "quarter",
     },
   }
 )
