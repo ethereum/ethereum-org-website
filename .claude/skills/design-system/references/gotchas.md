@@ -4,11 +4,11 @@ The highest-value content in this skill. Each entry is a place where the code lo
 
 ## Imports That Look Right But Aren't
 
-### `@/components/Card` vs `@/components/ui/card`
+### `@/components/MarkdownCard` vs `@/components/ui/card`
 
-Default export of `@/components/Card` exists for the markdown `<Card>` shortcode (registered in `MdComponents`). Importing it from app code is wrong, even though it autocompletes.
+`@/components/MarkdownCard` is a thin wrapper that composes the `ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). It's what the `<Card>` markdown shortcode resolves to via `MdComponents`. Importing it from app code is not wrong, but it's usually a smell — the wrapper's narrow prop surface fights you the moment you need a banner, a custom layout, or anything beyond emoji+title+desc.
 
-**Use `@/components/ui/card`** for any new card UI.
+**Use `@/components/ui/card`** and compose the parts directly for app code. Reach for `MarkdownCard` only when you have an existing MDX-style call shape to preserve.
 
 ### `@/components/ui/tooltip` vs `@/components/Tooltip`
 
