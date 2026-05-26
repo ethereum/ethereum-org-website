@@ -19,7 +19,7 @@ import TdsReport from "@/public/images/trillion-dollar-security/report.png"
 
 const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
   <Card size="lg">
-    <CardHeader spacing="md">
+    <CardHeader>
       <CardBanner fit="contain" size="full">
         <Image
           src={TdsReport}
