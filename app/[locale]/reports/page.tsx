@@ -22,7 +22,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { reports } from "./data"
 import ReportsPageJsonLD from "./page-jsonld"
 
-import heroImg from "@/public/images/reports/reports-hero.webp"
+import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-network.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -144,7 +144,7 @@ export async function generateMetadata(props: {
     slug: ["reports"],
     title: t("page-reports-metadata-title"),
     description: t("page-reports-metadata-description"),
-    image: "/images/reports/reports-hero.webp",
+    image: "/images/what-is-ethereum-network/what-is-ethereum-network.png",
   })
 }
 
