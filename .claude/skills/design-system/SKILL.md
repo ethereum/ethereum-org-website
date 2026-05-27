@@ -106,6 +106,7 @@ Pull these in only when the trigger applies. Don't read them all upfront.
 - **`references/server-vs-client.md`** -- Load when deciding whether to mark a component `"use client"`, structuring a page that mixes static and interactive parts, or refactoring across the SSR boundary.
 - **`references/a11y.md`** -- Load when adding interactive elements (modals, dropdowns, custom click targets), building forms, or working with images and headings.
 - **`references/card-walkthrough.md`** -- Load when starting any card-shaped UI work; an end-to-end worked example.
+- **`references/callout-walkthrough.md`** -- Load when adding or modifying an in-content `Callout` (image/emoji + title + description + CTA); covers banner shape, side-by-side equalization, variants, and the CSS variable hooks.
 - **`references/page-hero-walkthrough.md`** -- Load when starting a new page that needs a hero; an end-to-end worked example.
 - **`references/layouts.md`** -- Load when you're tempted to create a new layout, when adding a new topic-hub section, or when refactoring a one-off `src/layouts/md/<Section>Layout` file. The canonical inventory plus the rule that new layouts are very rare.
 - **`references/new-component-checklist.md`** -- Load before opening a PR for a new component. The pre-merge checklist.

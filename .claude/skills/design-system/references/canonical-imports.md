@@ -217,14 +217,35 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 
 The `Banners/` subdirectory is gone. Use `<Alert variant="banner">` for top-of-page ribbons.
 
-### Card-shaped in-content callouts: `Callout` family
+### Card-shaped in-content callouts: `Callout`
 
-> **Migration in progress.** A unified server-renderable `Callout` component is being built to absorb `Callout`/`CalloutSSR`/`CalloutBanner`/`CalloutBannerSSR`/`DismissableBanner` into a single primitive with variants. (`BannerNotification` was previously on this list but was absorbed into `Alert` as `variant="banner"` ahead of the broader consolidation.) Tracked in a dedicated issue.
+```tsx
+import Callout, {
+  CalloutBanner,
+  CalloutButtons,
+  CalloutContent,
+  CalloutDescription,
+  CalloutRoot,
+  CalloutTitle,
+} from "@/components/ui/callout"
+```
 
-Until the unified `Callout` lands:
-- For **in-content** callouts with image + heading: use `CalloutBannerSSR` (NOT `CalloutBanner.tsx`). Server-renderable; uses `cva` with `large | medium | small` sizes.
-- For **big ornamental section dividers** with image overlap: use `CalloutSSR` (NOT `Callout.tsx`). Server-renderable.
-- Avoid `Callout.tsx` and `CalloutBanner.tsx` (client-only thunks; superseded by their SSR siblings and ultimately by the unified component).
+Server-renderable, takes literal `title` / `description` strings (call site resolves intl). Optional `image` banner (overhangs the gradient card); omit for a content-only callout. `variant`: `base` (default) | `sm`. Children render as buttons via `CalloutButtons`.
+
+```tsx
+<Callout
+  image={someImage}
+  alt="..."
+  title={t("...")}
+  description={t("...")}
+>
+  <ButtonLink href="/...">{t("...")}</ButtonLink>
+</Callout>
+```
+
+The default export covers the common shape. The named primitives are available for custom composition (interleaving children between parts, applying classNames on individual slots). The legacy `Callout` / `CalloutSSR` / `CalloutBanner` / `CalloutBannerSSR` files at the root of `src/components/` were removed during the unification — do not reintroduce.
+
+Side-by-side equalization is automatic: when two or more `Callout`s share a parent at `md+` viewport, banners pin to a 16rem min-height and buttons bottom-align across cards. See `callout-walkthrough.md`.
 
 ## Tabs / Tab Navigation
 
