@@ -45,7 +45,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   )
 
   const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "latest", startDepth: 1 },
+    breadcrumbs: { slug: "latest" },
     heroImg,
     title: t("page-blog-title"),
     description: t("page-blog-subtitle"),
