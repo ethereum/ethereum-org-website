@@ -429,6 +429,12 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           href: "/whitepaper/",
         },
         {
+          id: "research/reports",
+          label: t("nav-reports-label"),
+          description: t("nav-reports-description"),
+          href: "/reports/",
+        },
+        {
           id: "research/governance",
           label: t("nav-governance-label"),
           description: t("nav-governance-description"),
@@ -489,7 +495,7 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
             {
               label: t("nav-trillion-dollar-security-label"),
               description: t("nav-trillion-dollar-security-description"),
-              href: "/trillion-dollar-security/",
+              href: "/reports/trillion-dollar-security/",
             },
           ],
         },

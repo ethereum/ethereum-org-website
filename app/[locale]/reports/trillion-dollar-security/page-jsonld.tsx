@@ -20,7 +20,10 @@ export default async function TrillionDollarSecurityPageJsonLD({
 }) {
   const t = await getTranslations("page-trillion-dollar-security")
 
-  const url = normalizeUrlForJsonLd(locale, `/trillion-dollar-security/`)
+  const url = normalizeUrlForJsonLd(
+    locale,
+    `/reports/trillion-dollar-security/`
+  )
 
   const contributorList = contributors.map((contributor) => ({
     "@type": "Person",
