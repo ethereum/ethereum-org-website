@@ -1,6 +1,6 @@
 "use client"
 
-import { type ReactNode, useEffect, useState } from "react"
+import { type ReactNode, useState } from "react"
 import {
   ArrowUpRight,
   Check,
@@ -10,6 +10,8 @@ import {
   Loader2,
 } from "lucide-react"
 import { useLocale } from "next-intl"
+
+import type { MatomoEventOptions } from "@/lib/types"
 
 import { ButtonGroup } from "@/components/ui/button-group"
 import { Button } from "@/components/ui/buttons/Button"
@@ -21,6 +23,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
@@ -50,6 +53,7 @@ type CopyPageMenuItemProps = {
   icon: ReactNode
   title: string
   description: string
+  eventOptions: MatomoEventOptions
 }
 
 const CopyPageMenuItem = ({
@@ -57,12 +61,14 @@ const CopyPageMenuItem = ({
   icon,
   title,
   description,
+  eventOptions,
 }: CopyPageMenuItemProps) => (
   <DropdownMenuItem asChild>
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackCustomEvent(eventOptions)}
       className="group flex items-start gap-3 px-3 py-2.5 no-underline hover:no-underline"
     >
       <span
@@ -98,24 +104,12 @@ const CopyPageButton = ({
   const [isLoading, setIsLoading] = useState(false)
 
   const cleanSlug = slug.replace(/^\/+|\/+$/g, "")
-  // Static markdown lives at /content/<slug>/index.md (English) or
-  // /content/translations/<locale>/<slug>/index.md (other locales). When a
-  // locale has no translated file for this page, fall back to English to match
-  // what the rendered page is showing.
   const useTranslatedPath = locale !== DEFAULT_LOCALE && isTranslated
   const mdPath = useTranslatedPath
     ? `/content/translations/${locale}/${cleanSlug}/index.md`
     : `/content/${cleanSlug}/index.md`
   const pagePath = `/${locale}/${cleanSlug}/`
-
-  // Use the current origin at runtime so dev/preview/prod each share their own
-  // links instead of leaking localhost URLs to ChatGPT/Claude or pointing the
-  // markdown view at a route that may not exist on the configured SITE_URL.
-  const [origin, setOrigin] = useState(SITE_URL)
-  useEffect(() => {
-    setOrigin(window.location.origin)
-  }, [])
-  const pageUrl = `${origin}${pagePath}`
+  const pageUrl = `${SITE_URL}${pagePath}`
 
   const handleCopy = async () => {
     if (isLoading || hasCopied) return
@@ -153,10 +147,6 @@ const CopyPageButton = ({
       ? t("copied")
       : t("copy-page")
 
-  // Render every state stacked invisibly so the grid cell sizes to the widest
-  // label and the button width stays stable as state changes.
-  const allLabels = [t("copy-page"), t("loading"), t("copied")]
-
   const CopyIconSlot = isLoading ? Loader2 : hasCopied ? Check : Copy
 
   return (
@@ -167,7 +157,7 @@ const CopyPageButton = ({
         isSecondary
         onClick={handleCopy}
         disabled={isLoading}
-        aria-label={t("copy-page-aria-label") as string}
+        aria-label={t("copy-page-aria-label")}
         customEventOptions={{
           eventCategory: "CopyPage",
           eventAction: "click",
@@ -179,17 +169,14 @@ const CopyPageButton = ({
           aria-hidden="true"
         />
         <span className="grid text-start">
-          {allLabels.map((label, i) => (
-            <span
-              key={i}
-              aria-hidden="true"
-              className="invisible col-start-1 row-start-1"
-            >
-              {label as string}
-            </span>
-          ))}
+          <span
+            aria-hidden="true"
+            className="invisible col-start-1 row-start-1"
+          >
+            {t("copy-page")}
+          </span>
           <span className="col-start-1 row-start-1" aria-live="polite">
-            {copyLabel as string}
+            {copyLabel}
           </span>
         </span>
       </Button>
@@ -200,7 +187,7 @@ const CopyPageButton = ({
             size="sm"
             isSecondary
             className="px-1!"
-            aria-label={t("copy-page-options") as string}
+            aria-label={t("copy-page-options")}
           >
             <ChevronDown
               className="transition-transform data-[state=open]:rotate-180"
@@ -216,20 +203,35 @@ const CopyPageButton = ({
           <CopyPageMenuItem
             href={mdPath}
             icon={<FileText className="size-5" />}
-            title={t("copy-page-markdown-title") as string}
-            description={t("copy-page-markdown-description") as string}
+            title={t("copy-page-markdown-title")}
+            description={t("copy-page-markdown-description")}
+            eventOptions={{
+              eventCategory: "CopyPage",
+              eventAction: "view-markdown",
+              eventName: cleanSlug,
+            }}
           />
           <CopyPageMenuItem
             href={buildChatGPTUrl(pageUrl)}
             icon={<ChatGPTIcon className="size-5" />}
-            title={t("copy-page-chatgpt-title") as string}
-            description={t("copy-page-chatgpt-description") as string}
+            title={t("copy-page-chatgpt-title")}
+            description={t("copy-page-chatgpt-description")}
+            eventOptions={{
+              eventCategory: "CopyPage",
+              eventAction: "open-chatgpt",
+              eventName: cleanSlug,
+            }}
           />
           <CopyPageMenuItem
             href={buildClaudeUrl(pageUrl)}
             icon={<ClaudeIcon className="size-5" />}
-            title={t("copy-page-claude-title") as string}
-            description={t("copy-page-claude-description") as string}
+            title={t("copy-page-claude-title")}
+            description={t("copy-page-claude-description")}
+            eventOptions={{
+              eventCategory: "CopyPage",
+              eventAction: "open-claude",
+              eventName: cleanSlug,
+            }}
           />
         </DropdownMenuContent>
       </DropdownMenu>

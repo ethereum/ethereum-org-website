@@ -51,7 +51,7 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4 className="max-md:text-md" {...props} />
 )
 
-// Static layout components.
+// Static layout components
 export const staticComponents = {
   h1: Heading1,
   h2: Heading2,
