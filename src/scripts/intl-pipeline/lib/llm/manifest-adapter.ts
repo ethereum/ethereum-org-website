@@ -41,7 +41,7 @@ const ETHEREUM_ORG_CONFIG: Partial<ContentTreeConfig> = {
     "label",
     "aria-label",
     "placeholder",
-    "buttonLabel",
+    "ctaLabel",
     "name",
     "caption",
     "contentPreview",

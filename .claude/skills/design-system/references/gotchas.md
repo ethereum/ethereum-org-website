@@ -4,11 +4,11 @@ The highest-value content in this skill. Each entry is a place where the code lo
 
 ## Imports That Look Right But Aren't
 
-### `@/components/Card` vs `@/components/ui/card`
+### `@/components/MarkdownCard` vs `@/components/ui/card`
 
-Default export of `@/components/Card` exists for the markdown `<Card>` shortcode (registered in `MdComponents`). Importing it from app code is wrong, even though it autocompletes.
+`@/components/MarkdownCard` is a thin wrapper that composes the `ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). It's what the `<Card>` markdown shortcode resolves to via `MdComponents`. Importing it from app code is not wrong, but it's usually a smell — the wrapper's narrow prop surface fights you the moment you need a banner, a custom layout, or anything beyond emoji+title+desc.
 
-**Use `@/components/ui/card`** for any new card UI.
+**Use `@/components/ui/card`** and compose the parts directly for app code. Reach for `MarkdownCard` only when you have an existing MDX-style call shape to preserve.
 
 ### `@/components/ui/tooltip` vs `@/components/Tooltip`
 
@@ -88,11 +88,9 @@ Just be aware which side of the boundary you're on when adding hooks/effects.
 
 Static buttons get unnecessarily forced into client. Splitting would be invasive; for now, just know this is true.
 
-### `Callout` and `CalloutBanner` are pending consolidation
+### `Callout` consolidation is complete
 
-`Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` exist as client/server pairs today. A unified server-renderable `Callout` component is being built to absorb both pairs (plus `DismissableBanner`) into a single primitive with variants. While the migration is in flight, prefer the `*SSR` variants when the parent can do translation work via `getTranslations`. Tracked in a dedicated issue.
-
-> `BannerNotification` was on this consolidation list previously but was absorbed into `Alert` as `variant="banner"` in May 2026 (ahead of the broader Callout consolidation). The `Banners/` subdirectory no longer exists.
+The legacy `Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` client/server pairs were unified into a single server-renderable `Callout` at `@/components/ui/callout` (see `callout-walkthrough.md`). The root-level files were removed; don't reintroduce them. `BannerNotification` was absorbed into `Alert` as `variant="banner"` in May 2026 in the same direction-of-travel.
 
 ### Event tracking is automatic on `Button` and `Link`
 

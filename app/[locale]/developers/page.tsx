@@ -16,6 +16,8 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardFooter,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
@@ -269,16 +271,22 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
             </h2>
 
             {/* Quickstart your idea */}
-            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
-              <Image
-                src={scaffoldDebugScreenshot}
-                alt="Scaffold-ETH 2 debug screenshot"
-                sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                className="h-56 object-cover"
-              />
-              <div>
-                <h3>{t("page-developers-jump-right-in-title")}</h3>
-                <p className="text-sm text-body-medium">
+            <Card variant="nested" size="lg">
+              <CardHeader>
+                <CardBanner background="none" size="lg">
+                  <Image
+                    src={scaffoldDebugScreenshot}
+                    alt=""
+                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                    className="h-56 object-cover"
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle variant="black">
+                  {t("page-developers-jump-right-in-title")}
+                </CardTitle>
+                <CardParagraph>
                   {t("page-developers-quickstart-scaffold-subtext")}{" "}
                   <Link
                     href="https://docs.scaffoldeth.io/"
@@ -291,27 +299,26 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   >
                     {t("page-developers-quickstart-scaffold-docs")}
                   </Link>
-                </p>
-              </div>
-              <div className="flex items-center rounded-lg border bg-background px-3 py-1">
-                <span className="flex-1 font-mono text-sm">
-                  npx create-eth@latest
-                </span>
-                <CopyButton
-                  message="npx create-eth@latest"
-                  size="sm"
-                  customEventOptions={{
-                    eventCategory: "mid_boxes",
-                    eventAction: "click",
-                    eventName: "scaffold-npx-copy",
-                  }}
-                />
-              </div>
+                </CardParagraph>
 
-              <div>
+                <div className="flex items-center rounded-lg border bg-background px-3 py-1">
+                  <span className="flex-1 font-mono text-sm">
+                    npx create-eth@latest
+                  </span>
+                  <CopyButton
+                    message="npx create-eth@latest"
+                    size="sm"
+                    customEventOptions={{
+                      eventCategory: "mid_boxes",
+                      eventAction: "click",
+                      eventName: "scaffold-npx-copy",
+                    }}
+                  />
+                </div>
+              </CardContent>
+              <CardFooter>
                 <Link
                   href="https://docs.scaffoldeth.io/llms-full.txt"
-                  className="block"
                   customEventOptions={{
                     eventCategory: "mid_boxes",
                     eventAction: "click",
@@ -320,25 +327,30 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 >
                   Scaffold-ETH 2 <code>llms-full.txt</code>
                 </Link>
-              </div>
+              </CardFooter>
             </Card>
 
             {/* Get help */}
-            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
-              <Image
-                src={stackExchangeScreenshot}
-                alt="Ethereum Stack Exchange screenshot"
-                sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                className="max-h-56 w-full object-cover object-top"
-              />
-              <div>
-                <h3>{t("page-developers-get-help-title")}</h3>
-                <p className="text-sm text-body-medium">
+            <Card variant="nested" size="lg">
+              <CardHeader>
+                <CardBanner background="none" size="lg">
+                  <Image
+                    src={stackExchangeScreenshot}
+                    alt=""
+                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                    className="object-top"
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle variant="black">
+                  {t("page-developers-get-help-title")}
+                </CardTitle>
+                <CardParagraph>
                   {t("page-developers-get-help-desc")}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-6">
+                </CardParagraph>
+              </CardContent>
+              <CardFooter>
                 <ButtonLink
                   variant="outline"
                   isSecondary
@@ -351,32 +363,29 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 >
                   {t("page-developers-stack-exchange")}
                 </ButtonLink>
-                {/* <ButtonLink
-                variant="glow"
-                href="#some-magical-AI-link"
-                className="text-body"
-                >
-                {t("page-developers-ask-ai")}
-                </ButtonLink> */}
-              </div>
+              </CardFooter>
             </Card>
 
             {/* Resources */}
-            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
-              <Image
-                src={resourcesBanner}
-                alt="Banner showing four resource app icons"
-                sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                className="-my-2 max-h-60 w-full object-contain" // -my-2 accounts for image shadows
-              />
-              <div>
-                <h3>{t("page-developers-resources-title")}</h3>
-                <p className="text-sm text-body-medium">
+            <Card variant="nested" size="lg">
+              <CardHeader>
+                <CardBanner background="none" size="lg" fit="contain">
+                  <Image
+                    src={resourcesBanner}
+                    alt=""
+                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle variant="black">
+                  {t("page-developers-resources-title")}
+                </CardTitle>
+                <CardParagraph>
                   {t("page-developers-resources-desc")}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-6">
+                </CardParagraph>
+              </CardContent>
+              <CardFooter>
                 <ButtonLink
                   variant="outline"
                   isSecondary
@@ -389,25 +398,30 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 >
                   {t("page-developers-play-code")}
                 </ButtonLink>
-              </div>
+              </CardFooter>
             </Card>
 
             {/* Tutorials */}
-            <Card className="!space-y-8 bg-background px-6 py-8 break-words md:space-y-6 lg:p-8">
-              <Image
-                src={tutorialTagsBanner}
-                alt="Banner displaying multiple learning topics in a tag cloud"
-                sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-                className="max-h-56 w-full object-contain"
-              />
-              <div>
-                <h3>{t("page-developers-tutorials-title")}</h3>
-                <p className="text-sm text-body-medium">
+            <Card variant="nested" size="lg">
+              <CardHeader>
+                <CardBanner background="none" size="lg" fit="contain">
+                  <Image
+                    src={tutorialTagsBanner}
+                    // src={resourcesBanner}
+                    alt=""
+                    sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+                  />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle variant="black">
+                  {t("page-developers-tutorials-title")}
+                </CardTitle>
+                <CardParagraph>
                   {t("page-developers-tutorials-desc")}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-6">
+                </CardParagraph>
+              </CardContent>
+              <CardFooter>
                 <ButtonLink
                   variant="outline"
                   isSecondary
@@ -420,7 +434,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 >
                   {t("page-developers-learn-tutorials-cta")}
                 </ButtonLink>
-              </div>
+              </CardFooter>
             </Card>
           </Section>
 
@@ -590,7 +604,10 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                   <EdgeScrollItem
                     key={event.id}
                     asChild
-                    className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
+                    className={cn(
+                      "ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]",
+                      "*:max-w-md *:min-w-72 *:flex-1"
+                    )}
                   >
                     <Card
                       href={link}
@@ -599,9 +616,10 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: title,
                       }}
-                      className="max-w-md min-w-72 flex-1"
+                      variant="ghost"
+                      size="sm"
                     >
-                      <CardBanner className="h-36">
+                      <CardBanner size="sm">
                         {bannerImage ? (
                           <CardImage src={bannerImage} />
                         ) : (

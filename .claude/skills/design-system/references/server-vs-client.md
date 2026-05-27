@@ -41,9 +41,9 @@ Primitives that handle their own client boundary:
 
 The `t()` functions returned by these are *similar but not strictly equivalent* -- variable interpolation, ICU pluralization, and rich-text/htmr patterns can behave differently between server and client paths. If a change touches both, test both. Don't assume swapping `useTranslations` for `getTranslations` (or vice versa) is a no-op.
 
-### Callout / CalloutBanner consolidation
+### Callout is server-renderable (consolidation done)
 
-`Callout.tsx`/`CalloutSSR.tsx` and `CalloutBanner.tsx`/`CalloutBannerSSR.tsx` exist as client/server pairs today. A unified server-renderable `Callout` is being built to absorb both pairs into a single primitive. While the migration is in flight, prefer the `*SSR` variants when the parent can call `getTranslations`. Tracked in a dedicated issue.
+The unified `Callout` at `@/components/ui/callout` is a Server Component — the old client/server pairs (`Callout.tsx`/`CalloutSSR.tsx`, `CalloutBanner.tsx`/`CalloutBannerSSR.tsx`) were merged and the legacy files removed. Resolve intl at the parent (server) via `getTranslations` and pass plain strings into `title` / `description`.
 
 ## Patterns Worth Knowing
 
@@ -87,8 +87,6 @@ export default async function Page() {
 
 ## Common Mistakes in This Codebase
 
-- **`Callout` instead of `CalloutSSR`** when parent could be server (pending the unified `Callout`)
-- **`CalloutBanner` instead of `CalloutBannerSSR`** (same -- the latter is the canonical until consolidation)
 - **`useEffect` data fetching** in a component that could be a Server Component
 - **`"use client"` at the top of a page** when only a small subtree is interactive
 - **`useTranslations` in a leaf component** instead of restructuring so the parent uses `getTranslations`

@@ -78,7 +78,7 @@ const WhitepaperBridge = async () => {
           <p className="mb-4 text-sm font-semibold tracking-wide text-body-medium uppercase">
             {t("whats-changed")}
           </p>
-          <UnorderedList className="ms-0 space-y-3">
+          <UnorderedList className="m-0 space-y-3">
             {evolutionKeys.map((key) => (
               <Flex key={key} className="gap-3">
                 <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-success" />

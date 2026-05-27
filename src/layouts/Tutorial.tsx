@@ -6,12 +6,12 @@ import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -72,7 +72,7 @@ export const tutorialsComponents = {
   ...mdxTableComponents,
   ButtonLink,
   CallToContribute,
-  Card,
+  Card: MarkdownCard,
   Emoji,
   EnvWarningBanner,
   YouTube,

@@ -5,7 +5,6 @@ import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
@@ -13,6 +12,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -80,7 +80,7 @@ export const docsComponents = {
   h4: H4,
   ...mdxTableComponents,
   ButtonLink,
-  Card,
+  Card: MarkdownCard,
   CallToContribute,
   DeveloperDocsLinks,
   Divider,
