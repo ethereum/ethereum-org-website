@@ -29,12 +29,9 @@ export type Report = {
   title: string
   /** Publisher (shown as paragraph text under the title) */
   publisher: string
-  /** Concise date string e.g. "Apr 2025" (shown as the card tag). */
-  date: string
   /**
    * Publication date in ISO 8601 (YYYY, YYYY-MM, or YYYY-MM-DD). Used as
-   * `datePublished` in the Report JSON-LD. Kept separate from `date` so the
-   * card tag can stay short while the schema gets a parseable value.
+   * `datePublished` in the Report JSON-LD and rendered as short date on card.
    */
   dateIso: string
   /** Publisher category, used for grouping or filtering. */
@@ -67,7 +64,6 @@ export const reports: Report[] = [
     slug: "ethereum-basics-governments-institutions",
     title: "Ethereum Basics for Governments and Institutions",
     publisher: "Ethereum Foundation",
-    date: "2026",
     dateIso: "2026",
     category: "ef-original",
     // TODO: PDF to be uploaded to /public/reports/ — confirm filename + add fileSizeBytes.
@@ -78,7 +74,6 @@ export const reports: Report[] = [
     slug: "trillion-dollar-security",
     title: "Trillion Dollar Security",
     publisher: "Ethereum Foundation",
-    date: "May 2025",
     dateIso: "2025-05",
     category: "ef-original",
     href: "/reports/trillion-dollar-security/",
@@ -89,7 +84,6 @@ export const reports: Report[] = [
     slug: "openzeppelin-blockchain-network-risk-assessment",
     title: "Technical Risk Assessment on Blockchain Networks",
     publisher: "OpenZeppelin",
-    date: "Apr 2026",
     dateIso: "2026-04-30",
     category: "crypto-native",
     href: "https://openzeppelin.com/hubfs/OpenZeppelin%20%7C%20Technical%20Risk%20Assessment%20on%20Blockchain%20Networks.pdf",
@@ -101,7 +95,6 @@ export const reports: Report[] = [
     title: "Quantum Computing & Blockchain",
     publisher:
       "Coinbase Independent Advisory Board on Quantum Computing and Blockchain",
-    date: "Apr 2026",
     dateIso: "2026-04-21",
     category: "academic",
     href: "https://assets.ctfassets.net/sygt3q11s4a9/6EjYavuGdtJDYCqaJrASj9/9f464a8bf26f44bd6c85710fe7e4a29f/Quantum_Computing_and_Blockchain_v10.3_15April2026.pdf",
@@ -112,7 +105,6 @@ export const reports: Report[] = [
     slug: "a16z-state-of-crypto-2025",
     title: "State of Crypto Report 2025",
     publisher: "a16z crypto",
-    date: "Oct 2025",
     dateIso: "2025-10-22",
     category: "crypto-native",
     href: "https://dwt2zme5yrom6.cloudfront.net/uploads/2025/10/State-of-Crypto-2025-a16z-crypto.pdf",
@@ -124,7 +116,6 @@ export const reports: Report[] = [
     title:
       "The Future of Financial Infrastructure: Ethereum's Layer 2 Landscape",
     publisher: "Etherealize, Nethermind and L2BEAT",
-    date: "Dec 2025",
     dateIso: "2025-12-04",
     category: "crypto-native",
     href: "https://cdn.prod.website-files.com/6728e9076a3b5a8ca8ec4816/6931c20f55129e498a8da223_%5BCompressed%5D%20L2s%20Report.pdf",
@@ -135,7 +126,6 @@ export const reports: Report[] = [
     slug: "fidelity-coin-report-ethereum",
     title: "Coin Report: Ethereum (ETH)",
     publisher: "Fidelity Digital Assets",
-    date: "Aug 2025",
     dateIso: "2025-08-21",
     category: "bank-research",
     href: "https://www.fidelitydigitalassets.com/research-and-insights/coin-report-ethereum-eth",
@@ -145,7 +135,6 @@ export const reports: Report[] = [
     slug: "consensys-ethereum-is-trustware",
     title: "Ethereum is Trustware: core trust infrastructure for the world",
     publisher: "Consensys",
-    date: "Aug 2025",
     dateIso: "2025-08-04",
     category: "crypto-native",
     href: "https://consensys.io/ethereum/trust",
@@ -155,7 +144,6 @@ export const reports: Report[] = [
     slug: "twinstake-ethereum-pectra-institutional-staking",
     title: "Ethereum Pectra Upgrade: The Impact on Institutional Staking",
     publisher: "Twinstake",
-    date: "2025",
     dateIso: "2025",
     category: "crypto-native",
     href: "https://cdn.prod.website-files.com/658498cb3744de71ad789ca8/67cee06a2f54159204b600ea_Pectra%20Report.pdf",
@@ -167,7 +155,6 @@ export const reports: Report[] = [
     title: "Strengthening American Leadership in Digital Financial Technology",
     publisher:
       "The White House (President's Working Group on Digital Asset Markets)",
-    date: "Jul 2025",
     dateIso: "2025-07-30",
     category: "regulator",
     href: "https://www.whitehouse.gov/wp-content/uploads/2025/07/Digital-Assets-Report-EO14178.pdf",
@@ -179,7 +166,6 @@ export const reports: Report[] = [
     title:
       "Cryptocurrencies and decentralised finance: functions and financial stability implications",
     publisher: "Bank for International Settlements",
-    date: "Apr 2025",
     dateIso: "2025-04-15",
     category: "central-bank",
     href: "https://www.bis.org/publ/bppdf/bispap156.pdf",
@@ -191,7 +177,6 @@ export const reports: Report[] = [
     title:
       "From ripples to waves: The transformational power of tokenizing assets",
     publisher: "McKinsey & Company",
-    date: "Jun 2024",
     dateIso: "2024-06-20",
     category: "big-four",
     href: "https://www.mckinsey.com/industries/financial-services/our-insights/from-ripples-to-waves-the-transformational-power-of-tokenizing-assets",

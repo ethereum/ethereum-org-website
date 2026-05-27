@@ -19,6 +19,7 @@ import { Section } from "@/components/ui/section"
 import { Tag } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
 import { isExternal, isFile } from "@/lib/utils/url"
 
@@ -68,7 +69,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   slug,
                   title,
                   publisher,
-                  date,
+                  dateIso,
                   href,
                   internal,
                   imgSrc,
@@ -87,7 +88,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     <CardContent>
                       <div className="flex flex-wrap gap-2 font-bold uppercase">
                         <Tag status="warning" size="small">
-                          {date}
+                          {formatDate(dateIso, locale, {
+                            year: "numeric",
+                            month: "short",
+                            timeZone: "UTC",
+                            day: undefined,
+                          })}
                         </Tag>
                         {fileSizeBytes ? (
                           <Tag status="accent-a" size="small">
