@@ -8,6 +8,7 @@ tags:
   - "censorship resistance"
   - "composability"
 published: 2026-05-12
+image: /images/developers/blog/latest-post-header-1.png
 breadcrumb: Why build on Ethereum
 lang: en
 ---

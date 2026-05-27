@@ -5,12 +5,12 @@ import type { ChildOnlyProp } from "@/lib/types"
 import type { BlogFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BlogPostMetadata from "@/components/BlogPostMetadata"
-import Breadcrumbs from "@/components/Breadcrumbs"
 import Codeblock from "@/components/Codeblock"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
+import { MdxHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import {
@@ -109,46 +109,50 @@ export const BlogLayout = ({
   const absoluteEditPath = getEditPath(slug)
 
   return (
-    <div className="flex w-full gap-8">
-      <MainArticle
-        className="max-w-screen-lg min-w-0 px-8 lg:py-8"
-        dir={contentNotTranslated ? "ltr" : "unset"}
-      >
-        <Breadcrumbs
-          slug={[
+    <>
+      <MdxHero
+        breadcrumbs={{
+          slug: [
             ...slug.split("/").slice(0, -1),
             frontmatter.breadcrumb || slug.split("/").slice(-1),
-          ].join("/")}
-          startDepth={1}
-        />
-        <Heading1>{frontmatter.title}</Heading1>
-        <BlogPostMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
-        <TableOfContents
-          className="pt-8"
-          items={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
-          editPath={absoluteEditPath}
-          isMobile
-        />
-        {children}
-        {!frontmatter.hideEditButton && (
-          <FileContributors
-            className="my-10 border-t"
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          ].join("/"),
+          startDepth: 1,
+        }}
+        title={frontmatter.title}
+      />
+      <div className="flex w-full gap-8">
+        <MainArticle
+          className="max-w-screen-lg min-w-0 px-8 lg:py-8"
+          dir={contentNotTranslated ? "ltr" : "unset"}
+        >
+          <BlogPostMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
+          <TableOfContents
+            className="pt-8"
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+            editPath={absoluteEditPath}
+            isMobile
+          />
+          {children}
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          )}
+          <FeedbackCard />
+        </MainArticle>
+        {tocItems && (
+          <TableOfContents
+            className="pt-16"
+            items={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+            editPath={absoluteEditPath}
+            hideEditButton={!!frontmatter.hideEditButton}
           />
         )}
-        <FeedbackCard />
-      </MainArticle>
-      {tocItems && (
-        <TableOfContents
-          className="pt-16"
-          items={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
-          editPath={absoluteEditPath}
-          hideEditButton={!!frontmatter.hideEditButton}
-        />
-      )}
-    </div>
+      </div>
+    </>
   )
 }

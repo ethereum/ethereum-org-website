@@ -46,10 +46,9 @@ import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
 import DevelopersPageJsonLD from "./page-jsonld"
 import { getBuilderPaths, getHackathons, getVideoCourses } from "./utils"
 
-import blogTile1 from "@/public/images/developers/blog/builder-tile-1.png"
-import blogTile2 from "@/public/images/developers/blog/builder-tile-2.png"
-import blogTile3 from "@/public/images/developers/blog/builder-tile-3.png"
-import blogTile4 from "@/public/images/developers/blog/builder-tile-4.png"
+import postHeader1 from "@/public/images/developers/blog/latest-post-header-1.png"
+import postHeader2 from "@/public/images/developers/blog/latest-post-header-2.png"
+import postHeader3 from "@/public/images/developers/blog/latest-post-header-3.png"
 import resourcesBanner from "@/public/images/developers/resources-banner.png"
 import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-screenshot.png"
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
@@ -58,7 +57,7 @@ import dogeImage from "@/public/images/doge-computer.png"
 import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
 
-const BLOG_TILE_FALLBACKS = [blogTile1, blogTile2, blogTile3, blogTile4]
+const BLOG_TILE_FALLBACKS = [postHeader1, postHeader2, postHeader3]
 const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />

@@ -8,6 +8,7 @@ tags:
   - "account abstraction"
   - "protocol upgrades"
 published: 2026-05-07
+image: /images/developers/blog/latest-post-header-3.png
 breadcrumb: Building on Ethereum in 2026
 lang: en
 ---
