@@ -4,7 +4,7 @@ import { FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+import { isExternal, isPdf, normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { SITE_URL } from "@/lib/constants"
 
@@ -13,21 +13,16 @@ import type { Report } from "./data"
 import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
 import { REFERENCE } from "@/lib/jsonld/references"
 
-const isAbsoluteUrl = (href: string) => /^https?:\/\//.test(href)
-
 const reportSchema = (
   report: Report,
   index: number,
   locale: string,
   pageUrl: string
 ) => {
-  const itemUrl = isAbsoluteUrl(report.href)
+  const itemUrl = isExternal(report.href)
     ? report.href
     : normalizeUrlForJsonLd(locale, report.href)
   const imageUrl = `${SITE_URL}${report.imgSrc.src}`
-  const isPdf =
-    typeof report.fileSizeBytes === "number" ||
-    /\.pdf(?:$|\?)/i.test(report.href)
 
   return {
     "@type": "ListItem",
@@ -44,7 +39,7 @@ const reportSchema = (
         "@type": "Organization",
         name: report.publisher,
       },
-      ...(isPdf && {
+      ...(isPdf(report.href) && {
         encodingFormat: "application/pdf",
       }),
       ...(typeof report.fileSizeBytes === "number" && {
