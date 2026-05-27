@@ -26,5 +26,13 @@
   "/content/translations/tr/developers/docs/nodes-and-clients/run-a-node/diagram.png": {
     "hash": "8a127415",
     "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAsTAAALEwEAmpwYAAABDklEQVR4nFVQIdNFUBC9f8Df8EMEM2YESRNkwYz2BU3QRMGMIGiaIpgRBEEQzAiCIAiCIAjCfee7633vfSfsnN179+zZZfd9c86naarruqoqxLZt/zgi0q7rwIdh8H2fcQEk8zxf13WeJ1L8+Hlj3/dLAARtLAzDKIpIuCxLx3E8zyuKIkmSLMvyPEePZVmoo9j3PXNdl36kaTqOYyqAB8QgCJqmieMYv8FhD+ljCfKwtCzLKAAOkxi+riupwAL2RJHR0mCrAHrmN2AadRoCt+jctu2ZgC2P47j/g4RgWFEUOEcnJD5Xwh34Fw4BskTr4oC/O5ASSqqqGoah67qmaaZpMgFZlk0BPNm2LUnSC1L4OuDCBS0KAAAAAElFTkSuQmCC"
+  },
+  "\\content\\translations\\it\\developers\\docs\\nodes-and-clients\\run-a-node\\diagram.png": {
+    "hash": "de0308c1",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABMklEQVR4nF1Roa6DQBC8H+Af+BqSJhWo+joSRBNEEwSCpAKHQCBIKhAVdUhEEwQCUYEgQSAQCEQFogJRMc1scuS9XjK53dm73Zs59fl8wNX3PR6PB8qylL2ua1RVJbnmmqYRnnHbtgiCAEpuA0IMw4D3+y1gY3Ln8xm+7yOOYyzLgnVdBYzZWF0uF6RpKtMITtCX7vc7kiRBURRy5ng8ClzXxe12w/P5hPpL5Hkuk8IwRBRF8DwPh8NB6qfTSXZybM7GlKS0BE6mhHmexQ+COQ9lWSYxuev1Kh4wp0SlTWQyTZNgHMftAmM2ZV03o3bWyG8vYJHGsOEv9ABKsG1bZPAVr9fr/y/Q3d/FpkTXdeIRvaIM/aJNAh23LAv7/V6w2+3EQKWUwDRN+QFyhOM4MAwDX87hw9hFoQZRAAAAAElFTkSuQmCC"
+  },
+  "\\content\\translations\\pt-br\\developers\\docs\\nodes-and-clients\\run-a-node\\diagram.png": {
+    "hash": "e3b11c5c",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZklEQVR4nHVRoa7CQBA8j0HzA3wBv4BD4hBNMDiSMySYJogKRAUC0wSBIcE0qThTgbmkoqYCUYOoINkgKhAnjqRDdvMg74m3yaQ3u5O9matyznkAvqoqb4zxaZr6LMvknOf5H26tlR7zsiy91tor/FRZlqjrGq/XC865L7bbLZbLJdI0Ff58PgVt28IYAxVFEdbrNfb7PYqiEGEQBILD4YDT6SRLzuczkiTBZDIRfZ7nuFwuUPP5HOPxWJos5sFqtcJisRAex7E4+CxSSmE2m8lFrFWfCLyNI9xuN1yvVwFzdqa1Frs8Y8dZlsmMYyvOzMX2m6YRsJAFvOR+v+PxeKCqKnHBTjkac+6zg45hre3atpXzbzjn5FvXdae17pRS3XQ6Fd40TfeNwBv5lf8rdsKudrsdrLXyt+QNnHMEgIwxFIYhRVFEm82G4jim4XBI/X6fBoMB9Xo9CoKAjsejaJIkodFoRG/CJsLyzz0/DAAAAABJRU5ErkJggg=="
   }
 }
