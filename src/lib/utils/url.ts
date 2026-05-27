@@ -23,7 +23,7 @@ export const isExternal = (href: string): boolean =>
 export const isGlossary = (href: string): boolean =>
   href.includes("glossary") && href.includes("#")
 
-export const isPdf = (href: string): boolean => href.endsWith(".pdf")
+export const isPdf = (href: string): boolean => /\.pdf(?:$|\?)/i.test(href)
 
 export const isFile = (href: string): boolean => extname(href).length > 0
 

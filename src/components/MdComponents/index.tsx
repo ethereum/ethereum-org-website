@@ -140,6 +140,12 @@ export const htmlElements = {
 /**
  * Custom React components
  */
+const { Alert, ...AlertSubComponents } = AlertComponents
+
+const AlertWithMargins = ({ className, ...props }) => (
+  <Alert className={cn("my-8", className)} {...props} />
+)
+
 export const Page = ({
   className,
   ...props
@@ -160,7 +166,7 @@ export const Title = (props: ChildOnlyProp) => (
 export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
     <MainArticle
-      className="relative flex-[1_1_992px] px-8 pb-8 [&>h2:first-child]:mt-0"
+      className="relative flex-[1_1_992px] px-8 pb-8 *:first:mt-0"
       {...props}
     />
   )
@@ -168,7 +174,8 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 
 // All custom React components
 export const reactComponents = {
-  ...AlertComponents,
+  Alert: AlertWithMargins,
+  ...AlertSubComponents,
   BrowseApps,
   ButtonLink,
   Card: MarkdownCard,

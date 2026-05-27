@@ -65,7 +65,7 @@ Pokud si myslíte, že by na základě těchto pokynů měla být komunita přid
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout title="Decentralizované autonomní organizace (DAO)" description="Tyto skupiny využívají technologii Etherea k usnadnění organizace a spolupráce. Například pro ovládání členství, hlasování o návrzích nebo správu sdružených aktiv.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Více o DAO

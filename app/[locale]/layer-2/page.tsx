@@ -7,7 +7,6 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
 import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { type HubHeroProps } from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
@@ -16,6 +15,7 @@ import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import InlineLink from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -107,9 +107,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       },
       {
         content: t("page-layer-2-hero-button-2-content"),
-        href: "#layer-2-powered-by-ethereum",
+        href: "/layer-2/learn",
         matomo: {
-          eventCategory: "l2_hub",
+          eventCategory: "l2_learn_page",
           eventAction: "button_click",
           eventName: "hero_get_started",
         },
@@ -504,48 +504,42 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </ExpandableCard>
           </div>
         </div>
-
         <div
           id="layer-2-callout-cards"
-          className="flex w-full flex-col px-8 py-8 md:flex-row"
+          className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2"
         >
-          <CalloutSSR
+          <Callout
             image={ExploreImage}
             title={t("page-layer-2-callout-1-title")}
             description={t("page-layer-2-callout-1-description")}
           >
-            <div>
-              <ButtonLink
-                href="/layer-2/networks"
-                customEventOptions={{
-                  eventCategory: "l2_hub",
-                  eventAction: "button_click",
-                  eventName: "bottom_explore_networks",
-                }}
-              >
-                {tCommon("nav-networks-explore-networks-label")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
-          <CalloutSSR
+            <ButtonLink
+              href="/layer-2/networks"
+              customEventOptions={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "bottom_explore_networks",
+              }}
+            >
+              {tCommon("nav-networks-explore-networks-label")}
+            </ButtonLink>
+          </Callout>
+          <Callout
             image={WalkingImage}
             title={t("page-layer-2-callout-2-title")}
             description={t("page-layer-2-callout-2-description")}
-            headerClassName="-mt-6"
           >
-            <div>
-              <ButtonLink
-                href="/layer-2/learn"
-                customEventOptions={{
-                  eventCategory: "l2_hub",
-                  eventAction: "button_click",
-                  eventName: "bottom_l2_learn",
-                }}
-              >
-                {tCommon("learn-more")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
+            <ButtonLink
+              href="/layer-2/learn"
+              customEventOptions={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "bottom_l2_learn",
+              }}
+            >
+              {tCommon("learn-more")}
+            </ButtonLink>
+          </Callout>
         </div>
       </MainArticle>
     </I18nProvider>

@@ -265,7 +265,7 @@ const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
 CardBanner.displayName = "CardBanner"
 
 const titleVariants = cva(
-  "group-hover/link:underline group-focus/link:underline",
+  "group-hover/link:underline group-focus/link:underline text-pretty",
   {
     variants: {
       variant: {

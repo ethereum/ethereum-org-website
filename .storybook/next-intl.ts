@@ -15,6 +15,8 @@ export const ns = [
   "learn-quizzes",
   "page-about",
   "page-assets",
+  "page-community",
+  "page-gas",
   "page-index",
   "page-learn",
   "page-upgrades",

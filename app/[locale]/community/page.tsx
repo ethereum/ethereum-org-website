@@ -10,7 +10,6 @@ import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 import type { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
-import Callout from "@/components/Callout"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
@@ -20,6 +19,7 @@ import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import Translation from "@/components/Translation"
 import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
 
@@ -321,34 +321,26 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
           </Flex>
           <Content>
-            <Flex className="flex-wrap">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <Callout
-                className="min-h-full flex-[1_1_416px]"
+                title={t("page-community-get-eth-title")}
+                description={t("page-community-get-eth-description")}
                 image={ethImg}
-                titleKey="page-community:page-community-get-eth-title"
-                alt={t("page-community-get-eth-alt")}
-                descriptionKey="page-community:page-community-get-eth-description"
               >
-                <div>
-                  <ButtonLink href="/get-eth/">
-                    {t("page-community-get-eth")}
-                  </ButtonLink>
-                </div>
+                <ButtonLink href="/get-eth/">
+                  {t("page-community-get-eth")}
+                </ButtonLink>
               </Callout>
               <Callout
-                className="min-h-full flex-[1_1_416px]"
+                title={t("page-community-explore-dapps-title")}
+                description={t("page-community-explore-dapps-description")}
                 image={dogeComputerImg}
-                titleKey="page-community:page-community-explore-dapps-title"
-                alt={t("page-community-explore-dapps-alt")}
-                descriptionKey="page-community:page-community-explore-dapps-description"
               >
-                <div>
-                  <ButtonLink href="/apps/">
-                    {t("page-community-explore-dapps")}
-                  </ButtonLink>
-                </div>
+                <ButtonLink href="/apps/">
+                  {t("page-community-explore-dapps")}
+                </ButtonLink>
               </Callout>
-            </Flex>
+            </div>
           </Content>
           <FeedbackCard />
         </PageContainer>

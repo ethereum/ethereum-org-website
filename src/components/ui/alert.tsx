@@ -16,13 +16,13 @@ const alertVariants = cva(
       variant: {
         info: "bg-background-highlight",
         error:
-          "dark:border-error/70 border-error dark:bg-error-dark bg-error-light **:[svg]:text-error",
+          "dark:border-error/70 border-error dark:bg-error-dark bg-error-light **:[svg:not(.lucide-external-link)]:text-error",
         success:
-          "dark:border-success/70 border-success dark:bg-success-dark bg-success-light **:[svg]:text-success",
+          "dark:border-success/70 border-success dark:bg-success-dark bg-success-light **:[svg:not(.lucide-external-link)]:text-success",
         warning:
-          "dark:border-warning/70 border-warning dark:bg-warning-dark bg-warning-light **:[svg]:text-warning",
+          "dark:border-warning/70 border-warning dark:bg-warning-dark bg-warning-light **:[svg:not(.lucide-external-link)]:text-warning",
         update:
-          "border-primary-high-contrast/70 bg-primary-low-contrast **:[svg]:text-primary-high-contrast",
+          "border-primary-high-contrast/70 bg-primary-low-contrast **:[svg:not(.lucide-external-link)]:text-primary-high-contrast",
         banner: cn(
           "rounded-none text-balance border-none w-full text-center justify-center bg-primary-action px-8",
           "text-white **:[a]:text-white **:[a]:hover:text-white/80 **:[a]:visited:text-white"
