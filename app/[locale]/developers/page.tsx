@@ -29,11 +29,13 @@ import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
+import { TagsInlineText } from "@/components/ui/tag"
 import { TerminalTypewriter } from "@/components/ui/terminal-typewriter"
 
+import { getBlogFallbackHero } from "@/lib/utils/blog"
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { formatDateRange } from "@/lib/utils/date"
+import { formatDate, formatDateRange } from "@/lib/utils/date"
 import { getBlogPostsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
@@ -46,9 +48,6 @@ import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
 import DevelopersPageJsonLD from "./page-jsonld"
 import { getBuilderPaths, getHackathons, getVideoCourses } from "./utils"
 
-import postHeader1 from "@/public/images/developers/blog/latest-post-header-1.png"
-import postHeader2 from "@/public/images/developers/blog/latest-post-header-2.png"
-import postHeader3 from "@/public/images/developers/blog/latest-post-header-3.png"
 import resourcesBanner from "@/public/images/developers/resources-banner.png"
 import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-screenshot.png"
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
@@ -57,7 +56,6 @@ import dogeImage from "@/public/images/doge-computer.png"
 import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.png"
 
-const BLOG_TILE_FALLBACKS = [postHeader1, postHeader2, postHeader3]
 const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
@@ -473,7 +471,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               <p>{t("page-developers-blog-desc")}</p>
 
               <EdgeScrollContainer>
-                {recentPosts.map((post, idx) => (
+                {recentPosts.map((post) => (
                   <EdgeScrollItem
                     key={post.href}
                     asChild
@@ -486,45 +484,43 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: post.title,
                       }}
-                      className="max-w-md min-w-72 flex-1"
+                      size="sm"
                     >
-                      <CardBanner
-                        background={
-                          (["accent-a", "accent-b", "accent-c"] as const)[
-                            idx % 3
-                          ]
-                        }
-                        className="h-36"
-                      >
-                        {post.image ? (
-                          <CardImage src={post.image} />
-                        ) : (
-                          <Image
-                            src={
-                              BLOG_TILE_FALLBACKS[
-                                idx % BLOG_TILE_FALLBACKS.length
-                              ]
-                            }
-                            alt=""
-                            sizes="448px"
-                          />
-                        )}
-                      </CardBanner>
+                      <CardHeader>
+                        <CardBanner size="sm">
+                          {post.image ? (
+                            <Image
+                              src={post.image}
+                              alt=""
+                              width={1200}
+                              height={630}
+                              sizes="448px"
+                            />
+                          ) : (
+                            <Image
+                              src={getBlogFallbackHero(post.href)}
+                              alt=""
+                              sizes="448px"
+                            />
+                          )}
+                        </CardBanner>
+                      </CardHeader>
                       <CardContent>
                         <CardTitle className="line-clamp-2">
                           {post.title}
                         </CardTitle>
                         <CardParagraph variant="subtitle" size="sm">
-                          {post.author}
-                          {post.team ? ` · ${post.team}` : ""}
+                          <TagsInlineText list={[post.author, post.team]} />
                         </CardParagraph>
-                        <CardParagraph size="sm" className="mt-2 line-clamp-3">
+                        <CardParagraph size="sm" className="line-clamp-3">
                           {post.description}
                         </CardParagraph>
-                        <span className="mt-4 block text-xs text-body-medium">
-                          {post.published}
-                        </span>
                       </CardContent>
+                      <CardFooter>
+                        <CardParagraph size="sm">
+                          {formatDate(post.published, locale)}
+                        </CardParagraph>
+                      </CardFooter>
                     </Card>
                   </EdgeScrollItem>
                 ))}
