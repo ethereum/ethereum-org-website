@@ -26,6 +26,14 @@ import {
   type ButtonLinkProps,
   type ButtonProps,
 } from "@/components/ui/buttons/Button"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import Checkbox from "@/components/ui/checkbox"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -61,13 +69,6 @@ const Subtitle = (props: ChildOnlyProp) => (
   <p className="mb-14 leading-xs text-body-medium" {...props} />
 )
 
-const ButtonRow = (props: ChildOnlyProp) => (
-  <Flex
-    className="flex-col-reverse items-start justify-start md:flex-row md:items-center"
-    {...props}
-  />
-)
-
 const H2 = (props: ChildOnlyProp) => (
   <h2 className="mt-12 mb-8 leading-xs" {...props} />
 )
@@ -81,59 +82,11 @@ const StyledButton = ({
   </ButtonLink>
 )
 
-const CardTag = (props: ChildOnlyProp) => (
-  <Flex
-    className="items-center justify-center rounded-t-sm border-b-white bg-primary p-2 text-sm text-white uppercase dark:text-background-medium"
-    {...props}
-  />
-)
-
-const AddressCard = (props: ChildOnlyProp) => {
-  return (
-    <div
-      className="mb-8 max-w-full rounded-xs border border-border shadow-table lg:sticky lg:top-28 lg:max-w-[560px]"
-      {...props}
-    />
-  )
-}
-
-const Address = (props: ChildOnlyProp) => (
-  <div
-    className="mb-4 flex-wrap rounded-xs font-monospace text-[2rem] leading-xs uppercase"
-    {...props}
-  />
-)
-
 const CopyButton = (props: ButtonProps) => (
   <Button
     className="me-0 mt-4 mb-4 md:me-6 md:mt-0"
     variant="outline"
     {...props}
-  />
-)
-
-const Row = (props: ChildOnlyProp) => (
-  <Flex
-    className="mb-4 flex-col items-start justify-start text-left md:flex-row md:justify-between"
-    {...props}
-  />
-)
-
-const CardTitle = (props: ChildOnlyProp) => (
-  <h2 className="mb-4 text-[2rem] leading-[1.4] font-semibold" {...props} />
-)
-
-const Caption = (props: ChildOnlyProp) => (
-  <p className="mb-8 text-body-medium md:mb-8 lg:mb-0" {...props} />
-)
-
-const Blockie = (props: { src: string }) => (
-  <Image
-    className="rounded-xs"
-    src={props.src}
-    alt={""}
-    height={64}
-    width={64}
   />
 )
 
@@ -286,22 +239,25 @@ const DepositContractPage = () => {
             <CardList items={addressSources} />
           </LeftColumn>
           <RightColumn>
-            <AddressCard>
-              <CardTag>
-                {t("page-staking-deposit-contract-address-check-btn")}
-              </CardTag>
-              <div className="m-8">
+            <Card
+              className="overflow-hidden lg:sticky lg:top-28 lg:max-w-xl"
+              variant="header-bar"
+            >
+              <CardHeader className="items-center justify-center p-2! text-center">
+                <h2 className="text-sm font-normal uppercase">
+                  {t("page-staking-deposit-contract-address-check-btn")}
+                </h2>
+              </CardHeader>
+              <CardContent spacing="md">
                 {!state.showAddress && (
                   <>
-                    <Row>
-                      <CardTitle>
-                        {t("page-staking-deposit-contract-confirm-address")}
-                      </CardTitle>
-                    </Row>
-                    <Flex className="flex-col">
-                      <label className="mb-2 flex items-center gap-2">
+                    <CardTitle>
+                      {t("page-staking-deposit-contract-confirm-address")}
+                    </CardTitle>
+                    <div>
+                      <label className="flex gap-2">
                         <Checkbox
-                          className="flex-none"
+                          className="m-1 shrink-0"
                           checked={state.userHasUsedLaunchpad}
                           onCheckedChange={() =>
                             setState({
@@ -312,9 +268,9 @@ const DepositContractPage = () => {
                         />
                         {t("page-staking-deposit-contract-checkbox1")}
                       </label>
-                      <label className="mb-2 flex items-center gap-2">
+                      <label className="flex gap-2">
                         <Checkbox
-                          className="flex-none"
+                          className="m-1 shrink-0"
                           checked={state.userUnderstandsStaking}
                           onCheckedChange={() =>
                             setState({
@@ -326,9 +282,9 @@ const DepositContractPage = () => {
                         />
                         {t("page-staking-deposit-contract-checkbox2")}
                       </label>
-                      <label className="mb-2 flex items-center gap-2">
+                      <label className="flex gap-2">
                         <Checkbox
-                          className="flex-none"
+                          className="m-1 shrink-0"
                           checked={state.userWillCheckOtherSources}
                           onCheckedChange={() =>
                             setState({
@@ -340,7 +296,7 @@ const DepositContractPage = () => {
                         />
                         {t("page-staking-deposit-contract-checkbox3")}
                       </label>
-                    </Flex>
+                    </div>
                     <CopyButton
                       disabled={!isButtonEnabled}
                       onClick={() =>
@@ -354,17 +310,23 @@ const DepositContractPage = () => {
                 )}
                 {state.showAddress && (
                   <>
-                    <Row>
+                    <div className="flex flex-col items-start justify-start md:flex-row md:justify-between">
                       <div>
                         <CardTitle>
                           {t("page-staking-deposit-contract-address")}
                         </CardTitle>
-                        <Caption>
+                        <CardParagraph>
                           {t("page-staking-deposit-contract-address-caption")}
-                        </Caption>
+                        </CardParagraph>
                       </div>
-                      <Blockie src={blockieSrc} />
-                    </Row>
+                      <Image
+                        className="rounded-xs"
+                        src={blockieSrc}
+                        alt=""
+                        height={64}
+                        width={64}
+                      />
+                    </div>
                     {state.browserHasTextToSpeechSupport && (
                       <Flex className="mb-8 items-center">
                         <StyledFakeLink onClick={handleTextToSpeech}>
@@ -378,21 +340,23 @@ const DepositContractPage = () => {
                     <Tooltip
                       content={t("page-staking-deposit-contract-warning")}
                     >
-                      <Address>{CHUNKED_ADDRESS}</Address>
+                      <div className="mb-4 font-monospace text-3xl/xs text-balance uppercase">
+                        {CHUNKED_ADDRESS}
+                      </div>
                     </Tooltip>
-                    <ButtonRow>
+                    <div className="flex flex-col-reverse items-start justify-start md:flex-row md:items-center">
                       <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
                         {(isCopied) => (
                           <CopyButton>
                             {!isCopied ? (
                               <>
                                 {t("page-staking-deposit-contract-copy")}
-                                <Clipboard className="ms-1" />
+                                <Clipboard className="-me-1 mb-0.5" />
                               </>
                             ) : (
                               <>
                                 {t("page-staking-deposit-contract-copied")}
-                                <ClipboardCheck className="ms-1" />
+                                <ClipboardCheck className="-me-1 mb-0.5" />
                               </>
                             )}
                           </CopyButton>
@@ -403,9 +367,11 @@ const DepositContractPage = () => {
                       >
                         {t("page-staking-deposit-contract-blockexplorer")}
                       </InlineLink>
-                    </ButtonRow>
+                    </div>
                   </>
                 )}
+              </CardContent>
+              <CardFooter>
                 <Alert variant="warning">
                   <AlertEmoji text=":warning:" />
                   <AlertContent>
@@ -420,8 +386,8 @@ const DepositContractPage = () => {
                     </AlertDescription>
                   </AlertContent>
                 </Alert>
-              </div>
-            </AddressCard>
+              </CardFooter>
+            </Card>
           </RightColumn>
         </FlexBox>
         <FeedbackCard />

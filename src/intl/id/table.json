@@ -1,7 +1,10 @@
 {
   "table-active": "aktif",
+  "table-browser-engines": "Mesin peramban",
+  "table-desktop-platforms": "Platform desktop",
   "table-filters": "Filter",
+  "table-mobile-platforms": "Platform seluler",
+  "table-reset-filters": "Atur ulang",
   "table-showing": "Menampilkan",
-  "table-reset-filters": "Reset",
   "table-what-are-you-looking-for": "Apa yang Anda cari?"
 }

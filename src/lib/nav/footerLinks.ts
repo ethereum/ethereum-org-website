@@ -95,8 +95,9 @@ export const buildFooterLinkSections = (
       { href: "/community/research/", text: t("nav-open-research-label") },
       { href: "/eips/", text: t("eips") },
       { href: "/governance/", text: t("ethereum-governance") },
+      { href: "/reports/", text: t("reports") },
       {
-        href: "/trillion-dollar-security/",
+        href: "/reports/trillion-dollar-security/",
         text: t("trillion-dollar-security"),
       },
     ],

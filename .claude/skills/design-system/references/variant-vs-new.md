@@ -179,3 +179,7 @@ These are all current candidates for absorption (each is a one-off that could be
 | `FeedbackCard.tsx` | `Card` `tone="feedback-gradient"` |
 
 See `cleanup-playbook.md` for the full list of cleanup-track items.
+
+### Recently absorbed (worked precedent)
+
+`BannerNotification` (a 27-line `Banners/BannerNotification/index.tsx` rendering a full-bleed `<aside>` with `shouldShow` early-return) was deleted in May 2026 and replaced with `<Alert variant="banner">`. The replacement adds a new variant to the existing `Alert` primitive rather than keeping a separate file; the `shouldShow` prop disappears (callers gate at the JSX level with `{condition && <Alert variant="banner">...</Alert>}`). `BugBountyBanner` (a thin one-off wrapper around `BannerNotification`) was deleted in the same pass with no replacement file -- callers inline `<Alert variant="banner">` directly. This is the canonical pattern for absorbing a single-purpose component file into a variant of an existing primitive.

@@ -65,7 +65,7 @@ lang: hi
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout title="विकेंद्रीकृत स्वायत्त संगठन (डीएओ)" description="ये समूह संगठन और सहयोग को सुविधाजनक बनाने के लिए एथेरियम तकनीक का लाभ उठाते हैं। उदाहरण के लिए, सदस्यता को नियंत्रित करने, प्रस्तावों पर मतदान करने या एकत्रित संपत्तियों के प्रबंधन के लिए।">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       डीएओ के बारे में और जानें

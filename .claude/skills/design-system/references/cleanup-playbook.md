@@ -247,6 +247,53 @@ import { ContentHero } from "@/components/Hero"
 
 The shapes are different; you may need to restructure the page slightly. `PageHero` is on the deprecation track.
 
+## `BannerNotification` -> `Alert variant="banner"`
+
+```tsx
+// Before (file no longer exists -- import is broken):
+import BannerNotification from "@/components/Banners/BannerNotification"
+<BannerNotification shouldShow={isPageIncomplete}>
+  <Translation id="page-developers-docs:banner-page-incomplete" />
+</BannerNotification>
+
+// After:
+import { Alert } from "@/components/ui/alert"
+{isPageIncomplete && (
+  <Alert variant="banner">
+    <Translation id="page-developers-docs:banner-page-incomplete" />
+  </Alert>
+)}
+```
+
+`BannerNotification` was deleted in May 2026; if you find the import in stale code, this is the replacement. The `shouldShow` prop has no equivalent on `Alert` -- gate at the JSX level (`{condition && <Alert>...</Alert>}`).
+
+`BugBountyBanner` (a thin one-off wrapper around `BannerNotification`) was deleted in the same pass with no replacement file -- inline `<Alert variant="banner">` at the call site.
+
+## Inline `<strong>` lead-in inside `Alert` -> `AlertTitle` + `AlertDescription`
+
+```tsx
+// Before:
+<Alert variant="info">
+  <AlertContent>
+    <p className="mt-0"><strong>Heads up</strong></p>
+    <p className="mt-4">Some description text...</p>
+  </AlertContent>
+</Alert>
+
+// After:
+import { AlertTitle, AlertDescription } from "@/components/ui/alert"
+<Alert variant="info">
+  <AlertContent>
+    <AlertTitle>Heads up</AlertTitle>
+    <AlertDescription>
+      <p>Some description text...</p>
+    </AlertDescription>
+  </AlertContent>
+</Alert>
+```
+
+`AlertTitle` is the canonical "bold standard-font-size lead-in line" for an Alert -- use it whenever an alert needs a bold opening line. `AlertDescription` normalizes paragraph spacing internally, so no `mt-`/`mb-` classes are needed on the body paragraphs. The Alert sub-components are designed so callers don't apply manual typography or spacing inside the Alert.
+
 ## Arbitrary z-index -> named z scale
 
 ```tsx

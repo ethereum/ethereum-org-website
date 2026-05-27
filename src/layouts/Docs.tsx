@@ -4,9 +4,7 @@ import type { HTMLAttributes } from "react"
 import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
@@ -14,6 +12,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -25,6 +24,7 @@ import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import InlineLink from "@/components/ui/Link"
@@ -79,7 +79,7 @@ export const docsComponents = {
   h4: H4,
   ...mdxTableComponents,
   ButtonLink,
-  Card,
+  Card: MarkdownCard,
   CallToContribute,
   DeveloperDocsLinks,
   Divider,
@@ -117,9 +117,9 @@ export const DocsLayout = ({
     <div className="flex w-full flex-col border-b">
       <SideNavMobile path={slug} />
       {isPageIncomplete && (
-        <BannerNotification shouldShow={isPageIncomplete}>
+        <Alert variant="banner">
           <Translation id="page-developers-docs:banner-page-incomplete" />
-        </BannerNotification>
+        </Alert>
       )}
       <div
         className="flex justify-between bg-background-highlight lg:pe-8"

@@ -65,7 +65,7 @@ lang: ur
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout title="غیر مرکزی خود مختار تنظیمیں (DAOs)" description="یہ گروپس تنظیم اور تعاون کو آسان بنانے کے لیے Ethereum ٹیکنالوجی کا فائدہ اٹھاتے ہیں۔ مثال کے طور پر، رکنیت کو کنٹرول کرنے، تجاویز پر ووٹ دینے، یا جمع شدہ اثاثوں کے انتظام کے لیے۔">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAOs کے بارے میں مزید جانیں
