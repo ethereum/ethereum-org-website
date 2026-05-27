@@ -130,7 +130,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = Omit<LinkProps, "href"> &
+export type ButtonLinkProps = Omit<LinkProps, "href"> &
   Pick<ButtonProps, "size" | "variant" | "isSecondary"> & {
     href: string
     buttonProps?: Omit<ButtonProps, "size" | "variant">
@@ -161,6 +161,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         {...buttonProps}
       >
         <BaseLink
+          data-label="button-link"
           ref={ref}
           className={cn(
             "no-underline hover:no-underline [&_[data-label='arrow']]:ms-0",
@@ -179,10 +180,4 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 )
 ButtonLink.displayName = "ButtonLink"
 
-export {
-  Button,
-  ButtonLink,
-  type ButtonLinkProps,
-  type ButtonVariantProps,
-  buttonVariants,
-}
+export { Button, ButtonLink, type ButtonVariantProps, buttonVariants }

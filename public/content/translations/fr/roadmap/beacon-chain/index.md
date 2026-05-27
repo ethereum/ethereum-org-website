@@ -5,9 +5,10 @@ lang: fr
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: "La Chaîne phare a introduit la preuve d'enjeu dans l'écosystème Ethereum."
-summaryPoint2: "Elle a été fusionnée avec la chaîne originale de preuve de travail Ethereum en septembre 2022."
-summaryPoint3: "La Chaîne phare a introduit la logique de consensus et le protocole de commutation de bloc qui sécurise désormais Ethereum."
+summaryPoints:
+  - "La Chaîne phare a introduit la preuve d'enjeu dans l'écosystème Ethereum."
+  - "Elle a été fusionnée avec la chaîne originale de preuve de travail Ethereum en septembre 2022."
+  - "La Chaîne phare a introduit la logique de consensus et le protocole de commutation de bloc qui sécurise désormais Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

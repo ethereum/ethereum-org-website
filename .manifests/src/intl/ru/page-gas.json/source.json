@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-gas.json",
+  "generatedAt": "2026-05-26T10:06:25.321Z",
+  "rootHash": "b2a579282d7b",
+  "tree": {
+    "contentHash": "f89b37dad840",
+    "anchorHash": "8773b9ed5da7",
+    "children": {
+      "page-gas-meta-title": {
+        "contentHash": "fc52df68ce0e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-meta-description": {
+        "contentHash": "0a3fb7442104",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-hero-title": {
+        "contentHash": "d85b58b6125d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-hero-header": {
+        "contentHash": "598ce3ccc02e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-hero-button-1-content": {
+        "contentHash": "ddff5b514f29",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-hero-subtitle-1": {
+        "contentHash": "41846eeaa3b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-hero-subtitle-2": {
+        "contentHash": "5eb203ebc345",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-summary-title": {
+        "contentHash": "8e76a94ac832",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-summary-item-1": {
+        "contentHash": "1092798aee84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-summary-item-2": {
+        "contentHash": "adc02fb3853b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-summary-item-3": {
+        "contentHash": "6c08c1d4875d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-what-are-gas-fees-header": {
+        "contentHash": "92c715bde366",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-what-are-gas-fees-text-1": {
+        "contentHash": "ccf726791dea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-what-are-gas-fees-text-2": {
+        "contentHash": "43601c0e6873",
+        "anchorHash": "c76b94fd4b9e",
+        "children": {
+          "prose:1": {
+            "contentHash": "dddebf36fdba",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "d0665bba31dc",
+            "anchorHash": "c99af25b777e"
+          },
+          "prose:2": {
+            "contentHash": "bc99161e9b74",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-gas-how-do-i-pay-less-gas-header": {
+        "contentHash": "d641bd4807bf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-do-i-pay-less-gas-text": {
+        "contentHash": "cab9ae5aab37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-do-i-pay-less-gas-card-1-title": {
+        "contentHash": "ef6284f804b8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-do-i-pay-less-gas-card-1-description": {
+        "contentHash": "2b6ba0c2fc8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-do-i-pay-less-gas-card-2-title": {
+        "contentHash": "eac096b3db71",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-do-i-pay-less-gas-card-2-description": {
+        "contentHash": "7059a05cabfc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-do-i-pay-less-gas-card-3-title": {
+        "contentHash": "7dd5f7094b72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-do-i-pay-less-gas-card-3-description": {
+        "contentHash": "bb15c7533e0f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-try-layer-2": {
+        "contentHash": "e417d583096f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-what-causes-high-gas-fees-header": {
+        "contentHash": "aa032a841ec6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-what-causes-high-gas-fees-text-1": {
+        "contentHash": "64a602d10277",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-what-causes-high-gas-fees-text-2": {
+        "contentHash": "832232a060a8",
+        "anchorHash": "07d5df040fd8",
+        "children": {
+          "prose:2": {
+            "contentHash": "0e8bf922739c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "7b5e1661cf07",
+            "anchorHash": "f36193b8f637"
+          },
+          "prose:3": {
+            "contentHash": "b9b20a223ac9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "18c7a74d871c",
+            "anchorHash": "6d733730ba68"
+          },
+          "prose:4": {
+            "contentHash": "b7f94dc0b4a2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
+      "page-gas-what-causes-high-gas-fees-text-3": {
+        "contentHash": "85449a8c7815",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-want-to-dive-deeper": {
+        "contentHash": "07503cb20a48",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-check-out-the-developer-docs": {
+        "contentHash": "4fdc9f3d819a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-attack-of-the-cryptokitties-header": {
+        "contentHash": "60598ac936f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-attack-of-the-cryptokitties-text": {
+        "contentHash": "cf1ecd559b97",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-why-do-we-need-gas-header": {
+        "contentHash": "0ad20b1d0609",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-why-do-we-need-gas-text": {
+        "contentHash": "64fa4cd9c7af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-benefits-1-description": {
+        "contentHash": "3bd8a1719c28",
+        "anchorHash": "b81cfbb4a5db",
+        "children": {
+          "prose:1": {
+            "contentHash": "70b8c77ca64d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "5e1850cff26d",
+            "anchorHash": "2cd06318f59f"
+          },
+          "prose:2": {
+            "contentHash": "f857878b70ef",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-gas-benefits-2-description": {
+        "contentHash": "f211c4313aac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-benefits-3-description": {
+        "contentHash": "4271a600f78f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-is-gas-calculated-header": {
+        "contentHash": "f34051c8c4e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-advanced": {
+        "contentHash": "9f088dbebd6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-is-gas-calculated-text-1": {
+        "contentHash": "ff3762c27992",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-how-is-gas-calculated-item-1": {
+        "contentHash": "972629a19169",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7ed8efc0d82f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-gas-how-is-gas-calculated-item-2": {
+        "contentHash": "755a318b78ab",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7e594290d302",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-gas-how-is-gas-calculated-item-3": {
+        "contentHash": "37fbaa27af46",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8d4c590b0b72",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-gas-how-is-gas-calculated-list-item-1": {
+        "contentHash": "3a0e9e015959",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f7c22a8107c2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-gas-how-is-gas-calculated-text-2": {
+        "contentHash": "6c64bc6abb91",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-table-figure": {
+        "contentHash": "a2f043b44029",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a6f5e6c68b03",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-gas-table-header-1": {
+        "contentHash": "303efbcfcb5d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-table-header-2": {
+        "contentHash": "221b54c1524a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-table-item-1-transaction-type": {
+        "contentHash": "1627c19c008d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-table-item-2-transaction-type": {
+        "contentHash": "6bfff7bbc329",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-table-item-3-transaction-type": {
+        "contentHash": "57c5bfb6ed2b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-table-item-4-transaction-type": {
+        "contentHash": "b53533d8f680",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-header": {
+        "contentHash": "e956a9404b46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-question-1-q": {
+        "contentHash": "65fc2e25c120",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-question-1-a-1": {
+        "contentHash": "13e2f597114c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-question-1-a-2": {
+        "contentHash": "255d973d5b31",
+        "anchorHash": "7f08bcac8c62",
+        "children": {
+          "prose:1": {
+            "contentHash": "b7c40026a8a5",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "8b7faa4335e2",
+            "anchorHash": "8de13ad31444"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0"
+        ]
+      },
+      "page-gas-faq-question-2-q": {
+        "contentHash": "103c758857d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-question-2-a-1": {
+        "contentHash": "cb502a49197f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-question-2-a-2": {
+        "contentHash": "cccdfc63c129",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-question-3-q": {
+        "contentHash": "07e2ffc93213",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-question-3-a-1": {
+        "contentHash": "d6ea67cb782c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-faq-question-3-a-2": {
+        "contentHash": "a9773fff4d3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-gas-use-layer-2": {
+        "contentHash": "7dd5f7094b72",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-gas-meta-title",
+      "page-gas-meta-description",
+      "page-gas-hero-title",
+      "page-gas-hero-header",
+      "page-gas-hero-button-1-content",
+      "page-gas-hero-subtitle-1",
+      "page-gas-hero-subtitle-2",
+      "page-gas-summary-title",
+      "page-gas-summary-item-1",
+      "page-gas-summary-item-2",
+      "page-gas-summary-item-3",
+      "page-gas-what-are-gas-fees-header",
+      "page-gas-what-are-gas-fees-text-1",
+      "page-gas-what-are-gas-fees-text-2",
+      "page-gas-how-do-i-pay-less-gas-header",
+      "page-gas-how-do-i-pay-less-gas-text",
+      "page-gas-how-do-i-pay-less-gas-card-1-title",
+      "page-gas-how-do-i-pay-less-gas-card-1-description",
+      "page-gas-how-do-i-pay-less-gas-card-2-title",
+      "page-gas-how-do-i-pay-less-gas-card-2-description",
+      "page-gas-how-do-i-pay-less-gas-card-3-title",
+      "page-gas-how-do-i-pay-less-gas-card-3-description",
+      "page-gas-try-layer-2",
+      "page-gas-what-causes-high-gas-fees-header",
+      "page-gas-what-causes-high-gas-fees-text-1",
+      "page-gas-what-causes-high-gas-fees-text-2",
+      "page-gas-what-causes-high-gas-fees-text-3",
+      "page-gas-want-to-dive-deeper",
+      "page-gas-check-out-the-developer-docs",
+      "page-gas-attack-of-the-cryptokitties-header",
+      "page-gas-attack-of-the-cryptokitties-text",
+      "page-gas-why-do-we-need-gas-header",
+      "page-gas-why-do-we-need-gas-text",
+      "page-gas-benefits-1-description",
+      "page-gas-benefits-2-description",
+      "page-gas-benefits-3-description",
+      "page-gas-how-is-gas-calculated-header",
+      "page-gas-advanced",
+      "page-gas-how-is-gas-calculated-text-1",
+      "page-gas-how-is-gas-calculated-item-1",
+      "page-gas-how-is-gas-calculated-item-2",
+      "page-gas-how-is-gas-calculated-item-3",
+      "page-gas-how-is-gas-calculated-list-item-1",
+      "page-gas-how-is-gas-calculated-text-2",
+      "page-gas-table-figure",
+      "page-gas-table-header-1",
+      "page-gas-table-header-2",
+      "page-gas-table-item-1-transaction-type",
+      "page-gas-table-item-2-transaction-type",
+      "page-gas-table-item-3-transaction-type",
+      "page-gas-table-item-4-transaction-type",
+      "page-gas-faq-header",
+      "page-gas-faq-question-1-q",
+      "page-gas-faq-question-1-a-1",
+      "page-gas-faq-question-1-a-2",
+      "page-gas-faq-question-2-q",
+      "page-gas-faq-question-2-a-1",
+      "page-gas-faq-question-2-a-2",
+      "page-gas-faq-question-3-q",
+      "page-gas-faq-question-3-a-1",
+      "page-gas-faq-question-3-a-2",
+      "page-gas-use-layer-2"
+    ]
+  },
+  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+}

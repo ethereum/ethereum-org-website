@@ -225,6 +225,6 @@ Title hierarchy:
 - [ ] No commented-out code
 - [ ] No `console.log` debug statements
 - [ ] No TODO comments without an owner / issue link
-- [ ] Type errors clean (`npx tsc --noEmit`)
+- [ ] Type errors clean (`pnpm type-check`)
 - [ ] Lint clean (`pnpm lint`)
 - [ ] Format clean (`pnpm format`)

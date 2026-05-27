@@ -1,20 +1,23 @@
 ---
 description: Review a release/deploy PR by checking key changes on staging with a browser
-allowed-tools: Bash, Read, Glob, Grep, Agent, Skill, AskUserQuestion
-argument-hints: [<pr-number> (auto-detects latest deploy PR)]
+allowed-tools: Bash, Read, Glob, Grep, Agent, Skill
+argument-hints: [<pr-number>] [--post-comment]
 ---
 
 # Review Release
 
 Review a release/deploy PR by fetching its description, identifying the most important changes, and verifying them on the staging deploy using the browser.
 
+This command NEVER approves or requests changes on the PR. By default it only prints the summary in the terminal. Pass `--post-comment` to additionally post the summary as a comment on the PR (informational, not a review).
+
 ## Arguments
 
-`$ARGUMENTS` may contain the PR number to review. If empty, auto-detect the latest deploy PR:
-
-```bash
-gh pr list -B master -H staging -s open -S "Deploy" --json number -q ".[0].number" -L 1
-```
+`$ARGUMENTS` may contain:
+- A PR number to review. If omitted, auto-detect the latest deploy PR:
+  ```bash
+  gh pr list -B master -H staging -s open -S "Deploy" --json number -q ".[0].number" -L 1
+  ```
+- `--post-comment` flag. If present, after producing the summary, post it as a PR comment via `gh pr comment`. Without this flag, the summary is only printed to the terminal.
 
 ## Workflow
 
@@ -57,24 +60,26 @@ Present a summary table with:
 |------|--------|-------|
 | Page name | Pass/Fail | What was checked and confirmed |
 
-Flag any issues found. If everything looks good, confirm the deploy is ready to ship.
+Flag any issues found. If everything looks good, note that the deploy looks ready to ship.
 
-### Step 5: Submit Review
+### Step 5: Optionally Post as PR Comment
 
-After presenting results, ask the user if they want to submit a review on the PR. Offer two options:
-
-1. **Approve** — if all checks passed
-2. **Request changes** — if issues were found
-
-Ask the user which action to take (or skip). If they choose to submit, post the summary table as the review body using:
+If `--post-comment` was passed in `$ARGUMENTS`, post the summary table as a PR comment:
 
 ```bash
-gh pr review <PR_NUMBER> --repo ethereum/ethereum-org-website --approve --body "..."
-# or
-gh pr review <PR_NUMBER> --repo ethereum/ethereum-org-website --request-changes --body "..."
+gh pr comment <PR_NUMBER> --repo ethereum/ethereum-org-website --body "$(cat <<'EOF'
+## /review-release summary
+
+<summary table here>
+
+_Informational only — this is not a PR review. Approval and merge remain manual._
+EOF
+)"
 ```
 
-Do NOT submit a review without explicit user confirmation.
+If `--post-comment` is NOT present, do nothing further — the terminal output is the only artifact.
+
+This command must NEVER call `gh pr review --approve` or `gh pr review --request-changes`. Approval and merge stay with humans.
 
 ## Tips
 

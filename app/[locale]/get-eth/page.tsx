@@ -8,7 +8,6 @@ import type { ReactNode } from "react"
 
 import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
-import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
   type CardProps as CardListCardProps,
 } from "@/components/CardList"
@@ -22,11 +21,14 @@ import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 import {
   Card,
   CardContent,
+  CardEmoji,
   CardFooter,
   CardHeader,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import { Divider } from "@/components/ui/divider"
@@ -58,13 +60,13 @@ type CardProps = {
 }
 
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="flex flex-col rounded-xs border">
-    <CardHeader className="space-y-4">
-      <Emoji text={emoji} className="text-5xl leading-none" />
-      <CardTitle>{title}</CardTitle>
+  <Card>
+    <CardHeader>
+      <CardEmoji text={emoji} />
     </CardHeader>
-    <CardContent className="flex-1 px-6">
-      <p>{description}</p>
+    <CardContent>
+      <CardTitle>{title}</CardTitle>
+      <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>{children}</CardFooter>
   </Card>
@@ -365,20 +367,16 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
             <Divider className="mx-auto my-16 md:my-32" />
 
-            <CalloutBanner
-              className="mx-4 mt-24 mb-40"
-              titleKey="page-get-eth:page-get-eth-use-your-eth"
-              descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
+            <Callout
+              title={t("page-get-eth-use-your-eth")}
+              description={t("page-get-eth-use-your-eth-dapps")}
               image={dapps}
               alt={t("page-index:page-index-sections-individuals-image-alt")}
-              imageWidth={600}
             >
-              <div>
-                <ButtonLink href="/apps/">
-                  {t("page-get-eth-checkout-dapps-btn")}
-                </ButtonLink>
-              </div>
-            </CalloutBanner>
+              <ButtonLink href="/apps/">
+                {t("page-get-eth-checkout-dapps-btn")}
+              </ButtonLink>
+            </Callout>
 
             <FileContributors
               className="border-t"

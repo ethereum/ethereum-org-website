@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-04-30T20:50:33.904Z",
-  "rootHash": "fd45482206c1",
+  "generatedAt": "2026-05-20T17:26:30.046Z",
+  "rootHash": "57a30a6f1d94",
   "tree": {
-    "contentHash": "96892feec391",
+    "contentHash": "1481d367f681",
     "anchorHash": "490d863f6f7e",
     "children": {
       "about-ethereum-org": {
@@ -1870,6 +1870,10 @@
           }
         }
       },
+      "quantum-resistance": {
+        "contentHash": "e456dd4f208f",
+        "anchorHash": "e3b0c44298fc"
+      },
       "quizzes": {
         "contentHash": "f1e638bae6e8",
         "anchorHash": "e3b0c44298fc"
@@ -1968,10 +1972,6 @@
       },
       "site-description": {
         "contentHash": "c6b5cba81fec",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "site-title": {
-        "contentHash": "174eee2e4551",
         "anchorHash": "e3b0c44298fc"
       },
       "skip-to-main-content": {
@@ -2630,6 +2630,7 @@
       "prediction-markets",
       "privacy-policy",
       "product-disclaimer",
+      "quantum-resistance",
       "quizzes",
       "quizzes-title",
       "refresh",
@@ -2655,7 +2656,6 @@
       "show-less",
       "single-slot-finality",
       "site-description",
-      "site-title",
       "skip-to-main-content",
       "smart-contracts",
       "solo",
@@ -2709,5 +2709,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "7f6aa63d6684192e895001b8c8b0141b10156638"
+  "sourceCommitSha": "71ae652e5f2bfee97d550284550a7069b569f9eb"
 }

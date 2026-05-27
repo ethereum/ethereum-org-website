@@ -4,13 +4,13 @@ metaTitle: "¿Qué son las DeFi? | Beneficios y usos de las Finanzas Descentrali
 description: "Una visión de las finanzas descentralizadas en Ethereum"
 lang: es
 template: use-cases
-emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: Un logotipo de Ethereum hecho de bloques de Lego.
 sidebarDepth: 2
-summaryPoint1: Una alternativa global y abierta al sistema financiero actual.
-summaryPoint2: "Productos que le permiten tomar prestado, ahorrar, invertir, comerciar y más."
-summaryPoint3: "Basado en tecnología de código abierto con la que cualquiera puede programar."
+summaryPoints:
+  - "Una alternativa global y abierta al sistema financiero actual."
+  - "Productos que le permiten tomar prestado, ahorrar, invertir, comerciar y más."
+  - "Basado en tecnología de código abierto con la que cualquiera puede programar."
 ---
 
 DeFi o Finanzas Descentralizadas es un sistema financiero global y abierto para la era de Internet, una alternativa al sistema anticuado, fuertemente controlado y mantenido por procesos e infraestructuras del siglo pasado. En DeFi, usted tiene el control y la total visibilidad sobre su dinero. Puede interactuar con mercados mundiales y alternativos a la moneda local o entidades bancarias de su país. Los productos en DeFi permiten el uso de servicios financieros a cualquier persona que tenga una conexión a Internet y además, dichos servicios son manejados y mantenidos por sus propios usuarios. Hasta el momento, miles de millones de dólares en criptomonedas han circulado a través de las aplicaciones DeFi y siguen aumentando cada día.

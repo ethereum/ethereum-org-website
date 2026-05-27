@@ -5,10 +5,11 @@ lang: ko
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: "이더리움 메인넷은 지분 증명을 사용하지만, 처음부터 그랬던 것은 아닙니다."
-summaryPoint2: "기존의 작업 증명 방식(PoW) 에서 지분 증명 방식(PoS) 로의 업그레이드를 더 머지(The Merge) 라고 합니다."
-summaryPoint3: "더 머지(The Merge) 란 원래의 이더리움 메인넷과 별도의 지분 증명 블록체인인 비콘 체인을 병합시켜, 하나의 체인이 된 것을 말합니다."
-summaryPoint4: "더 머지(The Merge) 를 통해 이더리움은 에너지 소비량을 최대 99.95%까지 줄였습니다."
+summaryPoints:
+  - "이더리움 메인넷은 지분 증명을 사용하지만, 처음부터 그랬던 것은 아닙니다."
+  - "기존의 작업 증명 방식(PoW) 에서 지분 증명 방식(PoS) 로의 업그레이드를 더 머지(The Merge) 라고 합니다."
+  - "더 머지(The Merge) 란 원래의 이더리움 메인넷과 별도의 지분 증명 블록체인인 비콘 체인을 병합시켜, 하나의 체인이 된 것을 말합니다."
+  - "더 머지(The Merge) 를 통해 이더리움은 에너지 소비량을 최대 99.95%까지 줄였습니다."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

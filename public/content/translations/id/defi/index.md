@@ -4,13 +4,13 @@ metaTitle: Apa itu DeFi? | Manfaat dan Penggunaan Keuangan Terdesentralisasi
 description: Gambaran umum DeFi di Ethereum
 lang: id
 template: use-cases
-emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: Logo Eth yang terbuat dari balok lego.
 sidebarDepth: 2
-summaryPoint1: Alternatif global dan terbuka untuk sistem keuangan saat ini.
-summaryPoint2: Produk yang memungkinkan Anda meminjam, menabung, berinvestasi, berdagang, dan banyak lagi.
-summaryPoint3: Berbasis teknologi sumber terbuka yang dapat diprogram oleh siapa saja.
+summaryPoints:
+  - "Alternatif global dan terbuka untuk sistem keuangan saat ini."
+  - "Produk yang memungkinkan Anda meminjam, menabung, berinvestasi, berdagang, dan banyak lagi."
+  - "Berbasis teknologi sumber terbuka yang dapat diprogram oleh siapa saja."
 ---
 
 DeFi adalah sistem keuangan terbuka dan global yang dibangun untuk era internet – sebuah alternatif untuk sistem yang tidak transparan, dikontrol ketat, dan ditopang oleh infrastruktur serta proses yang sudah berusia puluhan tahun. Ini memberi Anda kendali dan visibilitas atas uang Anda. Ini memberi Anda eksposur ke pasar global dan alternatif untuk mata uang lokal atau opsi perbankan Anda. Produk DeFi membuka layanan keuangan bagi siapa saja yang memiliki koneksi internet dan sebagian besar dimiliki serta dikelola oleh penggunanya. Sejauh ini, kripto senilai puluhan miliar dolar telah mengalir melalui aplikasi DeFi dan terus berkembang setiap harinya.

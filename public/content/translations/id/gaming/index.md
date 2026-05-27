@@ -4,9 +4,10 @@ lang: id
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Aturan dan status game dapat ditegakkan oleh blockchain Ethereum, bukan server studio, yang merupakan manfaat utama dari game onchain
-summaryPoint2: Siapa pun dapat membangun mod, bot, atau game yang sama sekali baru yang terhubung ke data onchain terbuka yang sama
-summaryPoint3: L2 yang dibangun khusus memungkinkan gameplay waktu nyata dengan biaya yang lebih rendah, sementara kerangka kerja pengembangan game membuat pembuatan game onchain menjadi lebih mudah diakses dari sebelumnya
+summaryPoints:
+  - "Aturan dan status game dapat ditegakkan oleh blockchain Ethereum, bukan server studio, yang merupakan manfaat utama dari game onchain"
+  - "Siapa pun dapat membangun mod, bot, atau game yang sama sekali baru yang terhubung ke data onchain terbuka yang sama"
+  - "L2 yang dibangun khusus memungkinkan gameplay waktu nyata dengan biaya yang lebih rendah, sementara kerangka kerja pengembangan game membuat pembuatan game onchain menjadi lebih mudah diakses dari sebelumnya"
 buttons:
   - content: Pelajari lebih lanjut
     toId: gaming-on-ethereum
