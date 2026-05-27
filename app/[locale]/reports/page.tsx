@@ -10,14 +10,17 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardHeader,
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { ExternalLinkIcon } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import { Tag } from "@/components/ui/tag"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
+import { isExternal, isFile } from "@/lib/utils/url"
 
 import { reports } from "./data"
 import ReportsPageJsonLD from "./page-jsonld"
@@ -54,7 +57,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         />
         <MainArticle className="relative space-y-16 px-4 py-16 md:space-y-20 md:px-10 md:py-20">
           <Section id="reports" className="space-y-12">
-            <div className="max-w-3xl space-y-4">
+            <div className="max-w-3xl space-y-[0.25lh]">
               <h2>{t("page-reports-heading")}</h2>
               <p>{t("page-reports-intro")}</p>
             </div>
@@ -71,53 +74,52 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   imgSrc,
                   fileSizeBytes,
                 }) => (
-                  <Card
-                    key={slug}
-                    className="row-span-3 grid grid-rows-subgrid gap-y-8 bg-background-highlight p-8 max-md:p-4"
-                  >
-                    <CardBanner background="none" fit="contain">
-                      <Image
-                        src={imgSrc}
-                        alt=""
-                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 384px"
-                      />
-                    </CardBanner>
-                    <CardContent className="space-y-4 p-0">
-                      <Tag
-                        status="warning"
-                        size="small"
-                        className="w-fit rounded-[4px] px-1 py-px font-bold normal-case"
-                      >
-                        {date}
-                      </Tag>
-                      <CardTitle variant="bold">{title}</CardTitle>
-                      <CardParagraph variant="light">{publisher}</CardParagraph>
-                      {fileSizeBytes ? (
-                        <CardParagraph variant="light" size="sm">
-                          {t("page-reports-pdf-size", {
-                            size: (fileSizeBytes / 1048576).toFixed(1),
-                          })}
-                        </CardParagraph>
-                      ) : !internal ? (
-                        <CardParagraph variant="light" size="sm">
-                          {t("page-reports-web-article")}
-                        </CardParagraph>
-                      ) : null}
+                  <Card key={slug} href={href}>
+                    <CardHeader>
+                      <CardBanner size="full" fit="contain">
+                        <Image
+                          src={imgSrc}
+                          alt=""
+                          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 384px"
+                        />
+                      </CardBanner>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex flex-wrap gap-2 font-bold uppercase">
+                        <Tag status="warning" size="small">
+                          {date}
+                        </Tag>
+                        {fileSizeBytes ? (
+                          <Tag status="accent-a" size="small">
+                            {t("page-reports-pdf-size", {
+                              size: (fileSizeBytes / 1048576).toFixed(1),
+                            })}
+                          </Tag>
+                        ) : !internal ? (
+                          <Tag status="accent-b" size="small">
+                            {t("page-reports-web-article")}
+                          </Tag>
+                        ) : null}
+                      </div>
+                      <CardTitle>
+                        {title}
+                        {(isExternal(href) || isFile(href)) && (
+                          <ExternalLinkIcon />
+                        )}
+                      </CardTitle>
+                      <CardParagraph>{publisher}</CardParagraph>
                     </CardContent>
-                    <ButtonLink href={href} variant="outline">
-                      {internal
-                        ? t("page-reports-cta-view")
-                        : t("page-reports-cta-read")}
-                    </ButtonLink>
                   </Card>
                 )
               )}
             </div>
           </Section>
 
-          <Section id="suggest" className="max-w-3xl space-y-4">
-            <h2>{t("page-reports-suggest-heading")}</h2>
-            <p>{t("page-reports-suggest-body")}</p>
+          <Section id="suggest" className="space-y-[1.5lh]">
+            <div className="max-w-3xl space-y-[0.25lh]">
+              <h2>{t("page-reports-suggest-heading")}</h2>
+              <p>{t("page-reports-suggest-body")}</p>
+            </div>
             <ButtonLink
               href="https://github.com/ethereum/ethereum-org-website/issues/new/choose"
               variant="outline"
