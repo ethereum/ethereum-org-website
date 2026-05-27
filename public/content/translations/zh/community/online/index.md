@@ -47,7 +47,7 @@ lang: zh
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout title="去中心化自治组织 (DAO)" description="这些团体利用以太坊技术来促进组织和协作。例如，用于会籍管理、对提议进行投票或管理集合资产。">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       了解更多有关 DAO 的信息

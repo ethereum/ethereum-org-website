@@ -4,9 +4,7 @@ import type { HTMLAttributes } from "react"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
-import EventsOrganizerBanner from "@/components/Banners/EventsOrganizerBanner"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -30,6 +28,7 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import { Alert } from "@/components/ui/alert"
+import Callout from "@/components/ui/callout"
 import { Flex, Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import WhitepaperBridge from "@/components/WhitepaperBridge"
@@ -62,7 +61,6 @@ export const staticComponents = {
   Callout,
   Contributors,
   EnergyConsumptionChart,
-  EventsOrganizerBanner,
   GlossaryDefinition,
   GlossaryTooltip,
   Link,

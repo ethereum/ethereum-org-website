@@ -4,13 +4,13 @@ metaTitle: What are NFTs? | Benefits and use
 description: An overview of NFTs on Ethereum
 lang: en
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: An Eth logo being displayed via hologram.
-summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
-summaryPoint2: NFTs are giving more power to content creators than ever before.
-summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
+summaryPoints:
+  - "A way to represent anything unique as an Ethereum-based asset."
+  - "NFTs are giving more power to content creators than ever before."
+  - "Powered by smart contracts on the Ethereum blockchain."
 ---
 
 ## What are NFTs? {#what-are-nfts}
@@ -55,7 +55,7 @@ NFTs are used for many things, including:
 
 Maybe you are an artist that wants to share their work using NFTs, without losing control and sacrificing your profits to intermediaries. You can create a new contract and specify the number of NFTs, their properties and a link to some specific artwork. As the artist, **you can program into the smart contract the royalties** you should be paid (e.g., transfer 5% of the sale price to the contract owner each time an NFT is transferred). You can also always prove that you created the NFTs because you own the [wallet](/glossary/#wallet) that deployed the contract. Your buyers can easily prove that they own an **authentic NFT** from your collection because their wallet [address](/glossary/#address) is associated with a token in your smart contract. They can use it across the Ethereum ecosystem, confident in its authenticity.
 
-<Alert variant="update" className="mt-8">
+<Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Explore, buy or create your own NFT art/collectibles...</div>

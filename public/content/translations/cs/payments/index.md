@@ -4,13 +4,13 @@ metaTitle: Platby na Ethereu
 description: "Přehled plateb na Ethereu"
 lang: cs
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "Logo Eth zobrazené s podávajícíma si rukama."
-summaryPoint1: "Svět, kde se peníze pohybují stejně volně jako informace"
-summaryPoint2: "Otevřené a globální, umožňující bezhraniční transakce pro všechny"
-summaryPoint3: "Platby přijaté do minuty"
+summaryPoints:
+  - "Svět, kde se peníze pohybují stejně volně jako informace"
+  - "Otevřené a globální, umožňující bezhraniční transakce pro všechny"
+  - "Platby přijaté do minuty"
 ---
 
 Každý den čelí miliony lidí stejné výzvě: přesouvání peněz přes hranice je pomalé, drahé a často frustrující. Nezávislý pracovník na Bali čeká dny na zúčtování platby od svého klienta z New Yorku. To se týká zejména lidí v regionech s omezenou bankovní infrastrukturou, což jim ztěžuje účastnit se globální ekonomiky.

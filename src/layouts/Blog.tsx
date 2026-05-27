@@ -6,13 +6,13 @@ import type { BlogFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BlogPostMetadata from "@/components/BlogPostMetadata"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -77,7 +77,7 @@ export const blogComponents = {
   pre: Pre,
   ...mdxTableComponents,
   ButtonLink,
-  Card,
+  Card: MarkdownCard,
   Emoji,
   EnvWarningBanner,
   YouTube,

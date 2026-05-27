@@ -67,15 +67,6 @@ export default async function TranslatathonLeaderboardJsonLD({
             {
               "@type": "ListItem",
               position: 4,
-              name: "Translatathon",
-              item: normalizeUrlForJsonLd(
-                locale,
-                "/contributing/translation-program/translatathon/"
-              ),
-            },
-            {
-              "@type": "ListItem",
-              position: 5,
               name: "Leaderboard",
               item: url,
             },

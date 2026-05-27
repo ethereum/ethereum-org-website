@@ -10,5 +10,4 @@ export const TEAM_LOGINS: Set<string> = new Set([
   "nloureiro",
   "konopkja",
   "mnelsonBT",
-  "lukassim",
 ])

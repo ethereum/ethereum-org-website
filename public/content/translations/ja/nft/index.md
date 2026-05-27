@@ -4,13 +4,13 @@ metaTitle: "NFTとは? | 利点と利用法"
 description: "イーサリアムにおける非代替性トークン(NFT)の概要"
 lang: ja
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: "ホログラムを介して表示されているETHロゴ"
-summaryPoint1: "イーサリアムベースのアセットとして、唯一無二なものをトークンとして表現する方法。"
-summaryPoint2: "NFTは、これまで以上に多くのコンテンツ・クリエイターを後押ししています。"
-summaryPoint3: "イーサリアムブロックチェーン上のスマートコントラクトを利用。"
+summaryPoints:
+  - "イーサリアムベースのアセットとして、唯一無二なものをトークンとして表現する方法。"
+  - "NFTは、これまで以上に多くのコンテンツ・クリエイターを後押ししています。"
+  - "イーサリアムブロックチェーン上のスマートコントラクトを利用。"
 ---
 
 ## NFTとは? {#what-are-nfts}

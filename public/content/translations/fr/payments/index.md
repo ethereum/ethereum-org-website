@@ -4,13 +4,13 @@ metaTitle: Paiements sur Ethereum
 description: "Un aperçu des paiements sur Ethereum"
 lang: fr
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "Logo d’Ethereum accompagné de mains tendues."
-summaryPoint1: "Un monde où l’argent circule aussi librement que l’information"
-summaryPoint2: "Ouvert et global, permettant des transactions sans frontières pour tous"
-summaryPoint3: "Paiements reçus en moins d’une minute"
+summaryPoints:
+  - "Un monde où l’argent circule aussi librement que l’information"
+  - "Ouvert et global, permettant des transactions sans frontières pour tous"
+  - "Paiements reçus en moins d’une minute"
 ---
 
 Chaque jour, des millions de personnes font face au même défi : transférer de l’argent à travers le monde est lent, coûteux et souvent frustrant. Un freelance à Bali attend plusieurs jours que le paiement de son client à New York soit validé. Cela touche particulièrement les personnes vivant dans des régions où l’infrastructure bancaire est limitée, rendant leur participation à l’économie mondiale difficile.

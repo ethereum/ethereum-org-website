@@ -117,17 +117,16 @@ export function PieChart({
     return (
       <Card className="w-full">
         {(title || description) && (
-          <CardHeader className="!pt-0">
+          <CardHeader className="pt-0!">
             {title && <CardTitle>{title}</CardTitle>}
             {description && (
-              <CardParagraph variant="light" size="sm">
-                {description}
-              </CardParagraph>
+              <CardParagraph size="sm">{description}</CardParagraph>
             )}
           </CardHeader>
         )}
         <CardContent className="flex h-64 items-center justify-center">
-          <p className="text-muted-foreground">No data available</p>
+          {/* // TODO: Extract intl string */}
+          <CardParagraph>No data available</CardParagraph>
         </CardContent>
       </Card>
     )
@@ -199,11 +198,7 @@ export function PieChart({
     >
       <CardHeader className="!pt-0">
         {title && <CardTitle>{title}</CardTitle>}
-        {description && (
-          <CardParagraph variant="light" size="sm">
-            {description}
-          </CardParagraph>
-        )}
+        {description && <CardParagraph size="sm">{description}</CardParagraph>}
       </CardHeader>
 
       <CardContent>

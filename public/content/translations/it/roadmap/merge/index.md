@@ -5,10 +5,11 @@ lang: it
 template: upgrade
 image: /images/upgrades/merge.png
 alt: 
-summaryPoint1: "La rete principale di Ethereum utilizza la prova di stake, ma non è sempre stato così."
-summaryPoint2: "L'aggiornamento dal meccanismo originale di prova di lavoro alla prova di stake è stato chiamato The Merge."
-summaryPoint3: The Merge si riferisce all'unione della rete principale originale di Ethereum con una blockchain separata basata sulla prova di stake chiamata Beacon Chain, che ora esistono come un'unica catena.
-summaryPoint4: The Merge ha ridotto il consumo energetico di Ethereum di circa il 99,95%.
+summaryPoints:
+  - "La rete principale di Ethereum utilizza la prova di stake, ma non è sempre stato così."
+  - "L'aggiornamento dal meccanismo originale di prova di lavoro alla prova di stake è stato chiamato The Merge."
+  - "The Merge si riferisce all'unione della rete principale originale di Ethereum con una blockchain separata basata sulla prova di stake chiamata Beacon Chain, che ora esistono come un'unica catena."
+  - "The Merge ha ridotto il consumo energetico di Ethereum di circa il 99,95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

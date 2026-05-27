@@ -1,0 +1,12 @@
+{
+  "before-you-read": "Trước khi bạn đọc",
+  "heading": "Bạn đang muốn tìm hiểu về Ethereum?",
+  "description": "Sách trắng này được xuất bản vào năm <strong>2014</strong>, trước khi Ethereum ra mắt. Sau hơn 10 năm phát triển, với các bản nâng cấp lớn và sự phát triển của hệ sinh thái, <strong>sách trắng ban đầu không còn phản ánh đúng về Ethereum ngày nay nữa</strong>.",
+  "cta-learn": "Tìm hiểu về Ethereum ngày nay",
+  "cta-download-pdf": "Tải xuống bản PDF gốc (2014)",
+  "whats-changed": "Có gì thay đổi kể từ năm 2014?",
+  "evolution-pos": "Ethereum đã chuyển từ Bằng chứng công việc (PoW) sang Bằng chứng cổ phần (PoS) (The Merge, 2022)",
+  "evolution-l2": "Các giải pháp mở rộng quy mô lớp 2 (L2) hiện xử lý hàng triệu giao dịch",
+  "evolution-usecases": "Tài chính phi tập trung (DeFi), NFT và DAO đã nổi lên như những trường hợp sử dụng chính",
+  "evolution-standards": "Các tiêu chuẩn hợp đồng thông minh (ERC-20, ERC-721) đã trở thành nền tảng của ngành"
+}

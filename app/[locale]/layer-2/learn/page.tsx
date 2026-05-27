@@ -7,16 +7,16 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
-import Card from "@/components/Card"
 import FileContributors from "@/components/FileContributors"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Callout from "@/components/ui/callout"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -219,19 +219,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div id="layer-2-cards" className="w-full px-8 py-9">
-          <div className="flex flex-col gap-9 md:flex-row">
-            {layer2Cards.map((card, idx) => (
-              <div key={idx} className="flex flex-1">
-                <Card
-                  description={card.description}
-                  title={card.title}
-                  emoji={card.emoji}
-                  className="flex flex-1 flex-col"
-                />
-              </div>
-            ))}
-          </div>
+        <div
+          id="layer-2-cards"
+          className="flex w-full flex-col gap-8 p-8 *:flex-1 md:flex-row"
+        >
+          {layer2Cards.map((card, idx) => (
+            <MarkdownCard
+              key={idx}
+              description={card.description}
+              title={card.title}
+              emoji={card.emoji}
+            />
+          ))}
         </div>
 
         <div
@@ -316,45 +315,42 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           />
         </div>
 
-        <div id="callout-cards" className="px-8 py-9">
-          <div className="flex w-full flex-col lg:flex-row">
-            <CalloutSSR
-              image={Callout1Image}
-              title={t("page-layer-2-learn-callout-1-title")}
-              description={t("page-layer-2-learn-callout-1-description")}
+        <div
+          id="callout-cards"
+          className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2"
+        >
+          <Callout
+            image={Callout1Image}
+            title={t("page-layer-2-learn-callout-1-title")}
+            description={t("page-layer-2-learn-callout-1-description")}
+          >
+            <ButtonLink
+              href="/layer-2"
+              customEventOptions={{
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "learn_more",
+              }}
             >
-              <div>
-                <ButtonLink
-                  href="/layer-2"
-                  customEventOptions={{
-                    eventCategory: "l2_learn",
-                    eventAction: "button_click",
-                    eventName: "learn_more",
-                  }}
-                >
-                  {t("page-layer-2-learn-learn-more")}
-                </ButtonLink>
-              </div>
-            </CalloutSSR>
-            <CalloutSSR
-              image={Callout2Image}
-              title={t("page-layer-2-learn-callout-2-title")}
-              description={t("page-layer-2-learn-callout-2-description")}
+              {t("page-layer-2-learn-learn-more")}
+            </ButtonLink>
+          </Callout>
+          <Callout
+            image={Callout2Image}
+            title={t("page-layer-2-learn-callout-2-title")}
+            description={t("page-layer-2-learn-callout-2-description")}
+          >
+            <ButtonLink
+              href="/layer-2/networks"
+              customEventOptions={{
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "explore_networks",
+              }}
             >
-              <div>
-                <ButtonLink
-                  href="/layer-2/networks"
-                  customEventOptions={{
-                    eventCategory: "l2_learn",
-                    eventAction: "button_click",
-                    eventName: "explore_networks",
-                  }}
-                >
-                  {t("page-layer-2-learn-explore-networks")}
-                </ButtonLink>
-              </div>
-            </CalloutSSR>
-          </div>
+              {t("page-layer-2-learn-explore-networks")}
+            </ButtonLink>
+          </Callout>
         </div>
 
         <div id="quiz" className="px-8 py-9">

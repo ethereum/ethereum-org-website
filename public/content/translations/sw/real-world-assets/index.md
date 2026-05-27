@@ -4,13 +4,13 @@ metaTitle: RWAs ni nini? Faida na matumizi ya Thamani halisiza Ulimwengu
 description: Muhtasari wa Mali Halisi kwenye Ethereum
 lang: sw
 template: use-cases
-emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Mwanamume na mbwa wanaocheza.
 sidebarDepth: 2
-summaryPoint1: Njia ya kubadilisha bidhaa zenye thamani kuwa tokeni za kidijitali.
-summaryPoint2: Sasa unaweza kumiliki sehemu za vitu vya kweli au mali, badala ya kununua mali yote au kitu.
-summaryPoint3: Inaunganisha fedha za jadi na mfumo wa ikolojia wa blockchain.
+summaryPoints:
+  - "Njia ya kubadilisha bidhaa zenye thamani kuwa tokeni za kidijitali."
+  - "Sasa unaweza kumiliki sehemu za vitu vya kweli au mali, badala ya kununua mali yote au kitu."
+  - "Inaunganisha fedha za jadi na mfumo wa ikolojia wa blockchain."
 ---
 
 Mali ya ulimwengu wa kweli (RWAs) ni ishara zinazowakilisha aina za utajiri, kama mali isiyohamishika, dhahabu, hisa, sanaa, mashine au mkusanyiko. Kuinua vitu hivi hutafsiri kwa fomu ya dijiti, ikiruhusu kugawanywa kati ya wamiliki wengi na kuifanya iwe rahisi kuzifanya.
