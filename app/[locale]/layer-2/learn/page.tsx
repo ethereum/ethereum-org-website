@@ -7,12 +7,12 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import Card from "@/components/Card"
 import FileContributors from "@/components/FileContributors"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -219,19 +219,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div id="layer-2-cards" className="w-full px-8 py-9">
-          <div className="flex flex-col gap-9 md:flex-row">
-            {layer2Cards.map((card, idx) => (
-              <div key={idx} className="flex flex-1">
-                <Card
-                  description={card.description}
-                  title={card.title}
-                  emoji={card.emoji}
-                  className="flex flex-1 flex-col"
-                />
-              </div>
-            ))}
-          </div>
+        <div
+          id="layer-2-cards"
+          className="flex w-full flex-col gap-8 p-8 *:flex-1 md:flex-row"
+        >
+          {layer2Cards.map((card, idx) => (
+            <MarkdownCard
+              key={idx}
+              description={card.description}
+              title={card.title}
+              emoji={card.emoji}
+            />
+          ))}
         </div>
 
         <div

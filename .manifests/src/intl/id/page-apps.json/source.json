@@ -1,0 +1,393 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-apps.json",
+  "generatedAt": "2026-05-26T16:35:16.611Z",
+  "rootHash": "cc2207d66e71",
+  "tree": {
+    "contentHash": "ca58a1193dc6",
+    "anchorHash": "cdc2b392ee16",
+    "children": {
+      "page-apps-all-apps": {
+        "contentHash": "01bed311e7d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-dapp-description-cent": {
+        "contentHash": "d1bb16758f99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-dapp-description-decentraland": {
+        "contentHash": "6d489eea1920",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-dapp-description-ens": {
+        "contentHash": "67f78dbf4a2b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-dapp-description-gitcoin": {
+        "contentHash": "9ca0991fabdc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-dapp-description-gods-unchained": {
+        "contentHash": "9f6ffc8d3690",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-dapp-description-augur": {
+        "contentHash": "4aefaf941dc1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-ready-button": {
+        "contentHash": "6cc8519b9158",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "foundation": {
+        "contentHash": "df42a4d5d353",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-wallets-get-some": {
+        "contentHash": "8f1c0203866c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-title": {
+        "contentHash": "89dd748442c1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-subtitle": {
+        "contentHash": "38056acadb48",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-learn-button": {
+        "contentHash": "2b8128515732",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-highlights-title": {
+        "contentHash": "6e517828c3d8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-discover-title": {
+        "contentHash": "d4a33d5b78bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-applications-title": {
+        "contentHash": "98e33b0f3104",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-categories-title": {
+        "contentHash": "3edfdbf8bda8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-community-picks-title": {
+        "contentHash": "d5fc1a1a1d7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-meta-title": {
+        "contentHash": "b9f735447d23",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-meta-description": {
+        "contentHash": "66f3c4be7e87",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-defi-name": {
+        "contentHash": "3871f97fc9a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-defi-description": {
+        "contentHash": "a024db03b847",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-defi-meta-title": {
+        "contentHash": "f0a49f3d12be",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-defi-meta-description": {
+        "contentHash": "6d579a243de5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-collectibles-name": {
+        "contentHash": "90f564a7b77c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-collectibles-description": {
+        "contentHash": "ea717d890c6b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-collectibles-meta-title": {
+        "contentHash": "c7c353268f5a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-collectibles-meta-description": {
+        "contentHash": "f9afb41cec64",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-social-name": {
+        "contentHash": "f1b7505afa5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-social-description": {
+        "contentHash": "6e966a63081e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-social-meta-title": {
+        "contentHash": "d23afda36722",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-social-meta-description": {
+        "contentHash": "6db75b6dd11a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-gaming-name": {
+        "contentHash": "0fadfa228814",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-gaming-description": {
+        "contentHash": "001a5e15a55b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-gaming-meta-title": {
+        "contentHash": "9b0c0e41bde3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-gaming-meta-description": {
+        "contentHash": "992fe398c31c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-bridge-name": {
+        "contentHash": "3892e10346fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-bridge-description": {
+        "contentHash": "3757a8176306",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-bridge-meta-title": {
+        "contentHash": "2ac9b815cb37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-bridge-meta-description": {
+        "contentHash": "d3d130b5077f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-productivity-name": {
+        "contentHash": "f42bca637cb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-productivity-description": {
+        "contentHash": "e43ff2d5177a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-productivity-meta-title": {
+        "contentHash": "e24e43be16c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-productivity-meta-description": {
+        "contentHash": "9d6fc5978d6f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-privacy-name": {
+        "contentHash": "54a57c3147c4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-privacy-description": {
+        "contentHash": "a18793d8ac69",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-privacy-meta-title": {
+        "contentHash": "53be8c8b401a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-privacy-meta-description": {
+        "contentHash": "563f8f38232f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-dao-name": {
+        "contentHash": "74421bd4bcec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-dao-description": {
+        "contentHash": "f34da94f706a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-dao-meta-title": {
+        "contentHash": "c3352cb4046b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-category-dao-meta-description": {
+        "contentHash": "cad297169ff2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-see-all": {
+        "contentHash": "d7a8c446069a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-suggest-an-app-title": {
+        "contentHash": "01caf8c50bb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-suggest-an-app-description": {
+        "contentHash": "575a90d92ab3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-suggest-an-app-button": {
+        "contentHash": "01caf8c50bb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-filter-by": {
+        "contentHash": "d00f52454412",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-filter-all": {
+        "contentHash": "a52ace420f21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-showing": {
+        "contentHash": "d604310a789a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-visit-app": {
+        "contentHash": "fdd97f785936",
+        "anchorHash": "99046c58da38",
+        "children": {
+          "prose:1": {
+            "contentHash": "1c8ac867f052",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "d3d932af628a"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "icu:0"
+        ]
+      },
+      "page-apps-see-next": {
+        "contentHash": "6e4135961a36",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-info-title": {
+        "contentHash": "170322a32f3c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-info-founded": {
+        "contentHash": "6520e4488973",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-info-creator": {
+        "contentHash": "88447b83090c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-info-last-updated": {
+        "contentHash": "382ac5f308f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-gallery-title": {
+        "contentHash": "352cfc749e55",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-more-apps-like-this": {
+        "contentHash": "5da04a5d9a6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-today": {
+        "contentHash": "2b065c7c9ce4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-one-day-ago": {
+        "contentHash": "961f4ea2623a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-apps-days-ago": {
+        "contentHash": "73d2f9546ba2",
+        "anchorHash": "86f3a92e2330",
+        "children": {
+          "icu:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "fe0b96c2ffb2"
+          },
+          "prose:1": {
+            "contentHash": "37dad91df7b2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "icu:0",
+          "prose:1"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "page-apps-all-apps",
+      "page-apps-dapp-description-cent",
+      "page-apps-dapp-description-decentraland",
+      "page-apps-dapp-description-ens",
+      "page-apps-dapp-description-gitcoin",
+      "page-apps-dapp-description-gods-unchained",
+      "page-apps-dapp-description-augur",
+      "page-apps-ready-button",
+      "foundation",
+      "page-wallets-get-some",
+      "page-apps-title",
+      "page-apps-subtitle",
+      "page-apps-learn-button",
+      "page-apps-highlights-title",
+      "page-apps-discover-title",
+      "page-apps-applications-title",
+      "page-apps-categories-title",
+      "page-apps-community-picks-title",
+      "page-apps-meta-title",
+      "page-apps-meta-description",
+      "page-apps-category-defi-name",
+      "page-apps-category-defi-description",
+      "page-apps-category-defi-meta-title",
+      "page-apps-category-defi-meta-description",
+      "page-apps-category-collectibles-name",
+      "page-apps-category-collectibles-description",
+      "page-apps-category-collectibles-meta-title",
+      "page-apps-category-collectibles-meta-description",
+      "page-apps-category-social-name",
+      "page-apps-category-social-description",
+      "page-apps-category-social-meta-title",
+      "page-apps-category-social-meta-description",
+      "page-apps-category-gaming-name",
+      "page-apps-category-gaming-description",
+      "page-apps-category-gaming-meta-title",
+      "page-apps-category-gaming-meta-description",
+      "page-apps-category-bridge-name",
+      "page-apps-category-bridge-description",
+      "page-apps-category-bridge-meta-title",
+      "page-apps-category-bridge-meta-description",
+      "page-apps-category-productivity-name",
+      "page-apps-category-productivity-description",
+      "page-apps-category-productivity-meta-title",
+      "page-apps-category-productivity-meta-description",
+      "page-apps-category-privacy-name",
+      "page-apps-category-privacy-description",
+      "page-apps-category-privacy-meta-title",
+      "page-apps-category-privacy-meta-description",
+      "page-apps-category-dao-name",
+      "page-apps-category-dao-description",
+      "page-apps-category-dao-meta-title",
+      "page-apps-category-dao-meta-description",
+      "page-apps-see-all",
+      "page-apps-suggest-an-app-title",
+      "page-apps-suggest-an-app-description",
+      "page-apps-suggest-an-app-button",
+      "page-apps-filter-by",
+      "page-apps-filter-all",
+      "page-apps-showing",
+      "page-apps-visit-app",
+      "page-apps-see-next",
+      "page-apps-info-title",
+      "page-apps-info-founded",
+      "page-apps-info-creator",
+      "page-apps-info-last-updated",
+      "page-apps-gallery-title",
+      "page-apps-more-apps-like-this",
+      "page-apps-today",
+      "page-apps-one-day-ago",
+      "page-apps-days-ago"
+    ]
+  },
+  "sourceCommitSha": "a8478a15398e05bbd134fb0d64575a708b5b3efd"
+}

@@ -1,4 +1,4 @@
-import { type BaseHTMLAttributes, type ComponentPropsWithRef } from "react"
+import { type BaseHTMLAttributes } from "react"
 import { pick } from "lodash"
 import {
   getMessages,
@@ -8,7 +8,6 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -18,6 +17,7 @@ import HorizontalCard from "@/components/HorizontalCard"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
@@ -66,13 +66,6 @@ const PageContainer = ({ className, ...props }: FlexProps) => (
   >
     <MainArticle {...props} />
   </Flex>
-)
-
-const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
-  <Card
-    className="max-w-full min-w-[280px] flex-[1_0_30%] p-6 md:max-w-[46%]"
-    {...props}
-  />
 )
 
 const H2 = ({
@@ -205,32 +198,30 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-gas-how-do-i-pay-less-gas-header")}
               </H2>
               <p className="mb-6">{t("page-gas-how-do-i-pay-less-gas-text")}</p>
-              <Flex className="my-4 flex-wrap gap-8 lg:my-0">
-                <StyledCard
+              <Flex className="my-4 flex-wrap gap-8 *:max-w-full *:min-w-2xs *:flex-[1_0_30%] md:*:max-w-[46%] lg:my-0">
+                <MarkdownCard
                   emoji=":alarm_clock:"
                   title={t("page-gas-how-do-i-pay-less-gas-card-1-title")}
                   description={t(
                     "page-gas-how-do-i-pay-less-gas-card-1-description"
                   )}
                 />
-                <StyledCard
+                <MarkdownCard
                   emoji=":robot:"
                   title={t("page-gas-how-do-i-pay-less-gas-card-2-title")}
                   description={t(
                     "page-gas-how-do-i-pay-less-gas-card-2-description"
                   )}
                 />
-                <StyledCard
+                <MarkdownCard
                   emoji=":rocket:"
                   title={t("page-gas-how-do-i-pay-less-gas-card-3-title")}
                   description={t(
                     "page-gas-how-do-i-pay-less-gas-card-3-description"
                   )}
-                >
-                  <ButtonLink className="w-fit" href="/layer-2/">
-                    {t("page-gas-try-layer-2")}
-                  </ButtonLink>
-                </StyledCard>
+                  ctaLabel={t("page-gas-try-layer-2")}
+                  href="/layer-2/"
+                />
               </Flex>
             </div>
           </Flex>

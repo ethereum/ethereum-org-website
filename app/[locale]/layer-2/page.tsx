@@ -7,12 +7,12 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { type HubHeroProps } from "@/components/Hero/HubHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
@@ -107,9 +107,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       },
       {
         content: t("page-layer-2-hero-button-2-content"),
-        href: "#layer-2-powered-by-ethereum",
+        href: "/layer-2/learn",
         matomo: {
-          eventCategory: "l2_hub",
+          eventCategory: "l2_learn_page",
           eventAction: "button_click",
           eventName: "hero_get_started",
         },
@@ -323,19 +323,18 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div id="layer-2-callout-cards" className="w-full px-8 py-9">
-          <div className="flex flex-col gap-9 md:flex-row">
-            {calloutCards.map((card, idx) => (
-              <div key={idx} className="flex flex-1">
-                <Card
-                  description={card.description}
-                  title={card.title}
-                  emoji={card.emoji}
-                  className="flex flex-1 flex-col"
-                />
-              </div>
-            ))}
-          </div>
+        <div
+          id="layer-2-callout-cards"
+          className="flex w-full flex-col gap-8 p-8 *:flex-1 md:flex-row"
+        >
+          {calloutCards.map((card, idx) => (
+            <MarkdownCard
+              key={idx}
+              description={card.description}
+              title={card.title}
+              emoji={card.emoji}
+            />
+          ))}
         </div>
 
         <div id="layer-2-ready-to-start" className="w-full px-8 py-9">

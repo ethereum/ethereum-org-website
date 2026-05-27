@@ -1,4 +1,4 @@
-import Card from "@/components/Card"
+import MarkdownCard from "@/components/MarkdownCard"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
 import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet"
 
@@ -35,11 +35,17 @@ const Trilemma = () => {
             {t("page-roadmap-vision-trilemma-modal-tip")}:
           </p>
         </VStack>
-        <Card {...cardDetail} className="hidden min-h-[300px] lg:block" />
+        <MarkdownCard
+          {...cardDetail}
+          className="hidden min-h-[300px] lg:block"
+        />
       </Stack>
       <Sheet open={mobileModalOpen} onOpenChange={handleModalClose}>
         <SheetContent side="bottom" className="rounded-t-[16px]">
-          <Card {...cardDetail} className="my-8 border-none bg-transparent" />
+          <MarkdownCard
+            {...cardDetail}
+            className="my-8 border-none bg-transparent"
+          />
           <SheetClose className="absolute top-5 right-3">
             <span className="sr-only">Close</span>
             <svg

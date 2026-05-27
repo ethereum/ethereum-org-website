@@ -25,8 +25,10 @@ import Callout from "@/components/ui/callout"
 import {
   Card,
   CardContent,
+  CardEmoji,
   CardFooter,
   CardHeader,
+  CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
 import { Divider } from "@/components/ui/divider"
@@ -58,13 +60,13 @@ type CardProps = {
 }
 
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="flex flex-col rounded-xs border">
-    <CardHeader className="space-y-4">
-      <Emoji text={emoji} className="text-5xl leading-none" />
-      <CardTitle>{title}</CardTitle>
+  <Card>
+    <CardHeader>
+      <CardEmoji text={emoji} />
     </CardHeader>
-    <CardContent className="flex-1 px-6">
-      <p>{description}</p>
+    <CardContent>
+      <CardTitle>{title}</CardTitle>
+      <CardParagraph>{description}</CardParagraph>
     </CardContent>
     <CardFooter>{children}</CardFooter>
   </Card>

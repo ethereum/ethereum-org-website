@@ -77,6 +77,8 @@ export const TopicLayout = async ({
         <ListItem key={idx}>{point}</ListItem>
       ))}
     </List>
+  ) : frontmatter.description ? (
+    <p className="text-lg">{frontmatter.description}</p>
   ) : undefined
 
   const heroDescription =
