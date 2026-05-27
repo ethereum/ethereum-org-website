@@ -35,6 +35,9 @@ const cardVariants = cva(
         sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
+      hoverEffect: {
+        lift: "hover:shadow-md hover:scale-[1.005]",
+      },
     },
     defaultVariants: {
       variant: "base",
@@ -48,8 +51,19 @@ export type CardProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof cardVariants>
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, href, customEventOptions, variant, size, ...props }, ref) => {
-    const classNames = [cardVariants({ variant, size }), className]
+  (
+    {
+      className,
+      href,
+      customEventOptions,
+      variant,
+      size,
+      hoverEffect,
+      ...props
+    },
+    ref
+  ) => {
+    const classNames = [cardVariants({ variant, size, hoverEffect }), className]
     if (href) {
       return (
         <BaseLink
@@ -293,7 +307,7 @@ const CardTitle = React.forwardRef<
 })
 CardTitle.displayName = "CardTitle"
 
-const paragraphVariants = cva("", {
+const paragraphVariants = cva("text-body-medium", {
   variants: {
     variant: {
       uppercase: "uppercase",
