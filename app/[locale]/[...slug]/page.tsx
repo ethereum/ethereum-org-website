@@ -10,7 +10,6 @@ import type { GHIssue, SlugPageParams } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
-import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import VideoWatch from "@/components/Videos/VideoWatch"
 
 import { dateToString } from "@/lib/utils/date"
@@ -20,6 +19,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { topics } from "@/data/topics"
 import { getGFIs } from "@/data-layer"
+
+import StakingCommunityCallout from "../staking/_components/StakingCommunityCallout"
 
 import SlugJsonLD from "./page-jsonld"
 
