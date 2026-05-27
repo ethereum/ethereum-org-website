@@ -154,8 +154,8 @@ export async function generateMetadata(props: {
   return await getMetadata({
     locale,
     slug: ["reports"],
-    title: t("page-reports-metadata-title"),
-    description: t("page-reports-metadata-description"),
+    title: t("page-reports-title"),
+    description: t("page-reports-description"),
     image: "/images/reports/reports-hero.webp",
   })
 }
