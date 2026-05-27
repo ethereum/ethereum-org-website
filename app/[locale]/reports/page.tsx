@@ -21,6 +21,7 @@ import { Tag } from "@/components/ui/tag"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { formatDate } from "@/lib/utils/date"
 import { getMetadata } from "@/lib/utils/metadata"
+import { numberFormat } from "@/lib/utils/numbers"
 import { isExternal, isFile } from "@/lib/utils/url"
 
 import { reports } from "./data"
@@ -98,7 +99,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         {fileSizeBytes ? (
                           <Tag status="accent-a" size="small">
                             {t("page-reports-pdf-size", {
-                              size: (fileSizeBytes / 1048576).toFixed(1),
+                              size: numberFormat(locale, {
+                                style: "unit",
+                                unit: "megabyte",
+                                unitDisplay: "short",
+                                maximumFractionDigits: 1,
+                              }).format(fileSizeBytes / 2 ** 20),
                             })}
                           </Tag>
                         ) : !internal ? (
