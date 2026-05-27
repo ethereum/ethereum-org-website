@@ -270,9 +270,9 @@ module.exports = (phase) => {
        * so the `[locale]` brackets must be escaped to match literally.
        */
       outputFileTracingIncludes: {
-        "\\[locale\\]/developers/blog": [
-          "./public/content/developers/blog/**/*.md",
-          "./public/content/translations/*/developers/blog/**/*.md",
+        "\\[locale\\]/latest": [
+          "./public/content/latest/**/*.md",
+          "./public/content/translations/*/latest/**/*.md",
         ],
         "\\[locale\\]/developers/tutorials": [
           "./public/content/developers/tutorials/**/*.md",
@@ -283,8 +283,8 @@ module.exports = (phase) => {
           "./public/content/translations/*/videos/**/*.md",
         ],
         "\\[locale\\]/developers": [
-          "./public/content/developers/blog/**/*.md",
-          "./public/content/translations/*/developers/blog/**/*.md",
+          "./public/content/latest/**/*.md",
+          "./public/content/translations/*/latest/**/*.md",
         ],
       },
     }

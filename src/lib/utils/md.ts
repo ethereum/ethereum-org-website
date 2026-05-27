@@ -215,9 +215,9 @@ export const getBlogPostsData = async (
   const posts = await getContentListData(
     locale,
     blogPostSlugs as string[],
-    "developers/blog",
+    "latest",
     (frontmatter, content, slug) => ({
-      href: `/developers/blog/${slug}`,
+      href: `/latest/${slug}`,
       title: frontmatter.title,
       description: frontmatter.description,
       author: frontmatter.author || "",

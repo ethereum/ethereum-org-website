@@ -533,7 +533,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
               <div className="flex justify-center">
                 <ButtonLink
-                  href="/developers/blog/"
+                  href="/latest/"
                   customEventOptions={{
                     eventCategory: "builder-blog",
                     eventAction: "click",
