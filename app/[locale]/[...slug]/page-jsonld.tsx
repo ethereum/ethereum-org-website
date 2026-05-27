@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server"
+
 import { FileContributor, Frontmatter } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
@@ -19,26 +21,23 @@ export default async function SlugJsonLD({
   frontmatter: Frontmatter
   contributors: FileContributor[]
 }) {
+  const t = await getTranslations("common")
+
   const url = normalizeUrlForJsonLd(locale, `/${slug}`)
 
-  // Generate breadcrumb items for the slug path
+  // Breadcrumb labels are sourced from `common.json` (same keys the UI
+  // Breadcrumbs component uses), falling back to a title-cased slug fragment
+  // when no translation exists. This keeps JSON-LD localized and avoids
+  // hand-maintained acronym overrides (e.g. "ai-agents" -> "AI agents").
   const breadcrumbItems = [
     {
       "@type": "ListItem",
       position: 1,
-      name: "Home",
+      name: t.has("home") ? t("home") : "Home",
       item: normalizeUrlForJsonLd(locale, "/"),
     },
   ]
 
-  // Acronym overrides for slug-derived breadcrumb labels.
-  // Slugs like "ai-agents" are naively title-cased to "Ai agents";
-  // this map ensures known acronyms render correctly in JSON-LD.
-  const BREADCRUMB_LABEL_OVERRIDES: Record<string, string> = {
-    "ai-agents": "AI agents",
-  }
-
-  // Add breadcrumb items for each part of the slug path
   const slugParts = slug.split("/").filter(Boolean)
   let currentPath = ""
 
@@ -49,7 +48,7 @@ export default async function SlugJsonLD({
     breadcrumbItems.push({
       "@type": "ListItem",
       position: index + 2,
-      name: BREADCRUMB_LABEL_OVERRIDES[part] ?? defaultName,
+      name: t.has(part) ? t(part) : defaultName,
       item: normalizeUrlForJsonLd(locale, currentPath),
     })
   })
