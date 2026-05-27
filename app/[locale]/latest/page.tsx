@@ -22,7 +22,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import BlogPageJsonLD from "./page-jsonld"
 
-import heroImg from "@/public/images/developers/blog/builder-blog-hero.png"
+import heroImg from "@/public/images/developers/blog/latest-landing-hero.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
