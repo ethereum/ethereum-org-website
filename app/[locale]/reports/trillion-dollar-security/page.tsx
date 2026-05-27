@@ -49,7 +49,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-trillion-dollar-security")
 
   const { contributors } = await getAppPageContributorInfo(
-    "trillion-dollar-security",
+    "reports/trillion-dollar-security",
     locale as Lang
   )
 
@@ -1094,7 +1094,7 @@ export async function generateMetadata(props: {
 
   return await getMetadata({
     locale,
-    slug: ["trillion-dollar-security"],
+    slug: ["reports", "trillion-dollar-security"],
     title: t("page-trillion-dollar-security-meta-title"),
     description: t("page-trillion-dollar-security-meta-description"),
     image: "/images/trillion-dollar-security/og-image.png",
