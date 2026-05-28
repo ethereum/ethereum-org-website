@@ -32,7 +32,7 @@ These improvements ensure Ethereum remains fast, affordable, and decentralized a
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Note: This article currently highlights a selection of EIPs being considered for inclusion in Glamsterdam. For the latest status updates, view the [Glamsterdam upgrade on Forkcast](https://forkcast.org/upgrade/glamsterdam).
+Note: This article currently highlights a selection of EIPs being considered for inclusion in Glamsterdam. Additional proposals actively being tested in devnets include EIP-7778, EIP-7843, EIP-7976, EIP-7981, and EIP-8024. For the latest status updates, view the [Glamsterdam upgrade on Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
 If you want to add an EIP that’s under consideration for Glamsterdam, but hasn’t been added to this page yet, [learn how to contribute to ethereum.org here](/contributing/).
 </AlertDescription>
@@ -56,6 +56,7 @@ Meaningful L1 scaling requires moving away from off-protocol trust assumptions a
 - Removes off-protocol trust assumptions and reliance on third-party relays
 - Supports L1 scaling by allowing much larger payloads through extended propagation windows
 - Introduces trustless builder payments directly into the protocol 
+- Requires architectural updates for staking pools to enable trustless monitoring, though overall staking user experience is improved by a refined builder selection process
 
 Currently, the process of proposing and building blocks includes a hand-off between block proposers and block builders. The relationship between proposers and builders isn’t part of the core Ethereum protocol, so it relies on trusted third-party middleware, software (relays), and off-protocol trust between entities.
 
@@ -93,7 +94,7 @@ The parallel disk reads enabled by BALs will be a significant step toward a futu
 
 #### eth/71 Block Access List Exchange {#bale}
 
-Block Access List Exchange (eth/71 or EIP-8159) is the direct networking companion to block-level access lists. While BALs unlock parallel execution, eth/71 upgrades the peer-to-peer protocol to allow nodes to actually share these lists over the network. Implementing the block access list exchange will enable faster syncing and allow nodes to perform executionless state updates.
+Block Access List Exchange (eth/71 or EIP-8159) is the direct networking companion to block-level access lists. While BALs unlock parallel execution, eth/71 upgrades the peer-to-peer protocol to allow nodes to actually share these lists over the network. Now required for all Execution Layer clients, the block access list exchange will enable faster syncing and allow nodes to perform executionless state updates.
 
 **Resources**:
 
@@ -107,18 +108,18 @@ As the Ethereum network grows faster, it’s important to ensure that the cost o
 ### State creation gas cost increase {#state-creation-gas-cost-increase}
 
 - Ensures that the fees to create new accounts or smart contracts accurately reflect the long-term burden they place on Ethereum's database
-- Sets a fixed cost per state byte (CPSB) targeting a safe and predictable growth rate of 100 GiB/year, ensuring standard physical hardware can continue running the network
+- Sets a fixed cost per state byte (CPSB) targeting a safe and predictable growth rate of 120 GiB/year, ensuring standard physical hardware can continue running the network
 - Separates the accounting for these specific fees to a new reservoir, removing old transaction limits and allowing developers to deploy larger, more complex applications
 
 Adding new accounts, tokens, and [smart contracts](/glossary/#smart-contract) creates permanent data (known as "state") that every computer running the network must store indefinitely. The current fees to add or read this data are inconsistent and don’t necessarily reflect the actual, long-term storage burden they place on the network's hardware.
 
 Some actions that create state on Ethereum, like creating new accounts or deploying large smart contracts, have been relatively low-cost compared to the permanent storage space they take up on the network’s nodes, for example, contract deployment is significantly cheaper per byte than creating storage slots.
 
-Without adjustment, Ethereum’s state growth would become unsustainable as the network scales toward the 200M gas limit floor enabled by Glamsterdam.
+Without adjustment, Ethereum’s state growth would become unsustainable as the network scales toward the 200M gas limit floor enabled by Glamsterdam (with developers currently testing at a 150M reference block gas limit to derive accurate state pricing).
 
 **State creation gas cost increase (or EIP-8037)** harmonizes costs by tying them to the actual size of the data being created, updating the fees so they are proportional to the amount of permanent data an operation creates or accesses.
 
-EIP-8037 also introduces a reservoir model to manage these costs more predictably; state gas charges draw from the `state_gas_reservoir` first, and the `GAS` opcode only returns `gas_left`, preventing execution frames from miscalculating available gas.
+EIP-8037 also introduces a reservoir model to manage these costs more predictably; state gas charges draw from the `state_gas_reservoir` first, and the `GAS` opcode only returns `gas_left`, preventing execution frames from miscalculating available gas. To support this, essential background tasks are given an extra fuel allowance that goes straight into this dedicated reserve, ensuring critical network operations won't fail simply because storing permanent data requires more resources.
 
 Before EIP-8037, both the computational work (the active processing) and the permanent data storage (saving the smart contract to the network's database) share the same gas limit. The reservoir model splits accounting: the gas limit for the actual computational work of the transaction (processing) and for long-term data storage (state gas). Separating the two helps prevent the sheer size of an application's data from capping out the gas limit; as long as developers provide enough funds to fill the reservoir for data storage, they can deploy much larger and more complex smart contracts.
 
@@ -234,7 +235,7 @@ This will make it much easier and more reliable for wallets, exchanges, and brid
 
 As we increase the amount of work Ethereum can do, the lists of receipts for those actions (the data records of these transactions) are getting so large that they could potentially cause the network’s nodes to fail when trying to sync data with one another.
 
-eth/70 partial block receipt lists (or EIP-7975) introduces a new way for nodes to talk to each other (eth/70) that allows these large lists to be broken into smaller, more manageable pieces. eth/70 introduces a pagination system for the network's communication protocol that allows nodes to break block receipt lists down and safely request the data in smaller, more manageable chunks.
+Now a requirement for all Execution Layer clients, eth/70 partial block receipt lists (or EIP-7975) introduces a new way for nodes to talk to each other (eth/70) that allows these large lists to be broken into smaller, more manageable pieces. eth/70 introduces a pagination system for the network's communication protocol that allows nodes to break block receipt lists down and safely request the data in smaller, more manageable chunks.
 
 This change would prevent network sync failures during periods of heavy activity. Ultimately, it paves the way for Ethereum to increase its block capacity, and process more transactions per block in the future, without overwhelming the physical hardware syncing the chain.
 
@@ -294,5 +295,5 @@ Existing contracts will continue to function normally after Glamsterdam. Develop
 
 Multiple EIPs under consideration for Glamsterdam address the performance cliff of state growth:
 
-- State creation gas cost increase (or EIP-8037) introduces a fixed-cost framework (CPSB) to target a state database growth rate of 100 GiB/year, ensuring standard physical hardware can continue running the network efficiently.
+- State creation gas cost increase (or EIP-8037) introduces a fixed-cost framework (CPSB) to target a state database growth rate of 120 GiB/year, ensuring standard physical hardware can continue running the network efficiently.
 - eth/70 partial block receipt lists (or EIP-7975) allows nodes to request paginated block receipts, which breaks data-heavy block receipt lists into smaller chunks to prevent crashes and syncs as Ethereum scales.
