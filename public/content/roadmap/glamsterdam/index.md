@@ -83,11 +83,11 @@ By replacing off-protocol middleware and relays with in-protocol mechanics, ePBS
 
 Today’s Ethereum is like a single-lane road; because the network doesn’t know what data a transaction will need or change (like which accounts a transaction will touch) until a transaction has been run, validators must process transactions one by one in a strict, sequential line. If they tried to process the transactions all at once, without knowing these dependencies, two transactions might accidentally try to change the exact same data at the same time, causing errors.
 
-**Block-Level Access Lists (BALs, or EIP-7928)** are like a map that’s included in every block, telling the network which parts of the database will be accessed before the work begins. BALs require every block to include the hash of every account change that the transactions will touch, along with the final results of those changes (the hash record of all state accesses and post-execution values).
+**Block-Level Access Lists (BALs, or EIP-7928)** function like a map for the network, detailing which parts of the database will be accessed before the work begins. The execution layer stores the full Block Access List, including every account change that the transactions will touch, along with the final results of those changes (all state accesses and post-execution values). To keep blocks lightweight, the block header contains a new field with a unique digital fingerprint (the hash record) of this list.
 
 Because they give instant visibility into which transactions don’t overlap, BALs allow nodes to perform parallel disk reads, fetching information for many transactions simultaneously. The network can safely group unrelated transactions and process them in parallel.
 
-Because the BAL includes the final results of transactions (the post-execution values), when the network’s nodes need to sync to the network’s current state, they can copy those final results to update their records. Validators no longer have to replay all the complicated transactions from scratch to know what happened, making it faster and easier for new nodes to join the network.
+As the BAL includes the final results of transactions (the post-execution values), when the network’s nodes need to sync to the network’s current state, they can copy those final results to update their records. Validators no longer have to replay all the complicated transactions from scratch to know what happened, making it faster and easier for new nodes to join the network.
 
 The parallel disk reads enabled by BALs will be a significant step toward a future where Ethereum can process many transactions at once, significantly increasing the network’s speed.
 
@@ -107,14 +107,14 @@ As the Ethereum network grows faster, it’s important to ensure that the cost o
 ### State creation gas cost increase {#state-creation-gas-cost-increase}
 
 - Ensures that the fees to create new accounts or smart contracts accurately reflect the long-term burden they place on Ethereum's database
-- Automatically adjusts these data-creation fees based on the network's overall capacity, targeting a safe and predictable growth rate so standard physical hardware can continue running the network
+- Sets a fixed cost per state byte (CPSB) targeting a safe and predictable growth rate of 100 GiB/year, ensuring standard physical hardware can continue running the network
 - Separates the accounting for these specific fees to a new reservoir, removing old transaction limits and allowing developers to deploy larger, more complex applications
 
 Adding new accounts, tokens, and [smart contracts](/glossary/#smart-contract) creates permanent data (known as "state") that every computer running the network must store indefinitely. The current fees to add or read this data are inconsistent and don’t necessarily reflect the actual, long-term storage burden they place on the network's hardware.
 
 Some actions that create state on Ethereum, like creating new accounts or deploying large smart contracts, have been relatively low-cost compared to the permanent storage space they take up on the network’s nodes, for example, contract deployment is significantly cheaper per byte than creating storage slots.
 
-Without adjustment, Ethereum’s state could grow by nearly 200 GiB a year if the network scales to a 100M gas limit, eventually outstripping common hardware.
+Without adjustment, Ethereum’s state growth would become unsustainable as the network scales toward the 200M gas limit floor enabled by Glamsterdam.
 
 **State creation gas cost increase (or EIP-8037)** harmonizes costs by tying them to the actual size of the data being created, updating the fees so they are proportional to the amount of permanent data an operation creates or accesses.
 
@@ -288,11 +288,11 @@ Existing contracts will continue to function normally after Glamsterdam. Develop
 - Increase maximum contract size (or EIP-7954) allows developers to deploy larger applications, raising the maximum contract size limit from roughly 24KiB to 32KiB.
 - Deterministic factory predeploy (or EIP-7997) introduces a universal, built-in factory contract. It allows developers to deploy their applications and smart contract wallets to the exact same address across all participating EVM chains.
 - If your app relies on complex tracing to find ETH transfers, ETH transfers and burns emit a log (or EIP-7708) will allow you to switch to using logs for more simple and reliable accounting.
-- State creation gas cost increase (or EIP-8037) and state-access gas cost update (or EIP-8038) introduce new sustainability models that will change certain contract deployment costs, as creating new accounts or permanent storage will have a dynamically-adjusting fee.
+- State creation gas cost increase (or EIP-8037) and state-access gas cost update (or EIP-8038) introduce new sustainability models that will change certain contract deployment costs, as creating new accounts or permanent storage will have a new standardized fixed fee based on the size of the data created.
 
 ### How will Glamsterdam affect node storage and hardware requirements? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
 Multiple EIPs under consideration for Glamsterdam address the performance cliff of state growth:
 
-- State creation gas cost increase (or EIP-8037) introduces a dynamic pricing model to target a state database growth rate of 100 GiB/year, ensuring standard physical hardware can continue running the network efficiently.
+- State creation gas cost increase (or EIP-8037) introduces a fixed-cost framework (CPSB) to target a state database growth rate of 100 GiB/year, ensuring standard physical hardware can continue running the network efficiently.
 - eth/70 partial block receipt lists (or EIP-7975) allows nodes to request paginated block receipts, which breaks data-heavy block receipt lists into smaller chunks to prevent crashes and syncs as Ethereum scales.
