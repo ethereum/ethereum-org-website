@@ -470,7 +470,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
               <h2>{t("page-developers-blog-title")}</h2>
               <p>{t("page-developers-blog-desc")}</p>
 
-              <EdgeScrollContainer>
+              <EdgeScrollContainer className="[--edge-spacing:2rem]">
                 {recentPosts.map((post) => (
                   <EdgeScrollItem
                     key={post.href}
@@ -509,9 +509,11 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         <CardTitle className="line-clamp-2">
                           {post.title}
                         </CardTitle>
-                        <CardParagraph variant="subtitle" size="sm">
-                          <TagsInlineText list={[post.author, post.team]} />
-                        </CardParagraph>
+                        <TagsInlineText
+                          list={[post.author, post.team]}
+                          variant="light"
+                          className="italic"
+                        />
                         <CardParagraph size="sm" className="line-clamp-3">
                           {post.description}
                         </CardParagraph>
