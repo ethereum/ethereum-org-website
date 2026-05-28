@@ -142,7 +142,7 @@ export async function generateMetadata(props: {
   const metadata = await getMetadata({
     locale,
     slug: ["latest"],
-    title: t("page-blog-meta-title"),
+    title: t("page-blog-title"),
     description: t("page-blog-meta-description"),
   })
 
