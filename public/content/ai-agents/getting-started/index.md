@@ -45,7 +45,7 @@ _See [AI agents: Frameworks](/ai-agents/frameworks/) for a full comparison._
 
 Popular options with native Ethereum support include:
 
-- **[ElizaOS](https://elizaos.github.io/eliza/)** — Plugin-based, TypeScript, EVM plugin for smart account support.
+- **[ElizaOS](https://elizaos.ai/)** — Plugin-based, TypeScript, EVM plugin for smart account support.
 - **[GOAT](https://ohmygoat.dev/)** — TypeScript, 200+ protocol plugins, compatible with all major EVM wallet SDKs.
 - **[Rig](https://rig.rs/)** — Rust, high-performance, suited to agents with latency constraints.
 - **[GAME](https://docs.game.virtuals.io/)** — Hook-based agent commerce framework (ACP v2.0) for the Virtuals Protocol ecosystem on Base. Not a general-purpose EVM framework.

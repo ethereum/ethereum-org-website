@@ -21,7 +21,7 @@ const BuildYourOwnAIAgent = () => {
           autonomous AI agents.
         </p>
         <div>
-          <ButtonLink href="https://elizaos.github.io/eliza/" variant="outline">
+          <ButtonLink href="https://elizaos.ai/" variant="outline">
             Use ElizaOS
           </ButtonLink>
         </div>

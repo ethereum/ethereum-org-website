@@ -21,7 +21,7 @@ This page covers a selection of commonly-used frameworks with active Ethereum in
 | Framework                                       | Language             | Ethereum support                           | Best for                                                                                       |
 | :---------------------------------------------- | :------------------- | :----------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | **[GOAT](https://ohmygoat.dev/)**               | TypeScript           | Native — 200+ protocol plugins             | Production EVM agents, DeFi automation                                                         |
-| **[ElizaOS](https://elizaos.github.io/eliza/)** | TypeScript           | Plugin-based (EVM plugin, v2+)             | Multi-platform social agents                                                                   |
+| **[ElizaOS](https://elizaos.ai/)** | TypeScript           | Plugin-based (EVM plugin, v2+)             | Multi-platform social agents                                                                   |
 | **[Rig](https://rig.rs/)**                      | Rust                 | Via alloy / ethers-rs crates               | High-performance, latency-sensitive agents                                                     |
 | **[Olas](https://olas.network/)**               | Python               | Native — Pearl app store, onchain registry | Autonomous services with onchain coordination                                                  |
 | **[GAME](https://docs.game.virtuals.io/)**      | TypeScript / no-code | ACP v2.0 hook contracts (Base Mainnet)     | Autonomous game agents, Virtuals ecosystem — ecosystem-specific, not general-purpose EVM       |
@@ -172,7 +172,7 @@ const agent = await createAgent({
 })
 ```
 
-Once registered, ElizaOS routes any onchain tool calls through the EVM plugin, which uses your wallet client to sign and submit transactions. See the [ElizaOS documentation](https://elizaos.github.io/eliza/docs/api/) for the current character configuration API and plugin lifecycle hooks.
+Once registered, ElizaOS routes any onchain tool calls through the EVM plugin, which uses your wallet client to sign and submit transactions. See the [ElizaOS documentation](https://docs.elizaos.ai/) for the current character configuration API and plugin lifecycle hooks.
 
 ## Rig {#rig}
 
