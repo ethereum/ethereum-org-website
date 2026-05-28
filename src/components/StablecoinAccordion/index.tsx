@@ -24,11 +24,11 @@ import { useStablecoinAccordion } from "./useStablecoinAccordion"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const SectionTitle = (props: ChildOnlyProp) => (
-  <h4 className="mt-0 mb-8 text-start text-xl font-bold" {...props} />
+  <h4 className="mb-8 mt-0 text-start text-xl font-bold" {...props} />
 )
 
 const StepBoxContainer = (props: ChildOnlyProp) => (
-  <div className="mt-4 mb-8" {...props} />
+  <div className="mb-8 mt-4" {...props} />
 )
 
 const StepBox = (
@@ -37,7 +37,7 @@ const StepBox = (
   const { t } = useTranslation("page-stablecoins")
 
   return (
-    <LinkBox className="flex flex-col items-start border bg-background p-4 transition-transform duration-200 not-[:first-child]:-mt-px hover:scale-105 hover:bg-background-highlight md:flex-row md:items-stretch">
+    <LinkBox className="bg-background not-[:first-child]:-mt-px hover:bg-background-highlight flex flex-col items-start border p-4 transition-transform duration-200 hover:scale-105 md:flex-row md:items-stretch">
       <Flex className="w-full items-center justify-between">
         <div>
           <LinkOverlay asChild>
@@ -224,7 +224,7 @@ const StablecoinAccordion = () => {
           </SectionTitle>
           <p className="mb-6 leading-6">
             {t("page-stablecoins-accordion-borrow-risks-copy")}{" "}
-            <InlineLink href="/eth/">
+            <InlineLink href="/what-is-ether/">
               {t("page-stablecoins-accordion-borrow-risks-link")}
             </InlineLink>
           </p>
