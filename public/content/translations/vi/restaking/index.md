@@ -178,7 +178,7 @@ Mặc dù AVS cung cấp các tỷ lệ khác nhau, các Token Tái cổ phần 
 
 ## Đọc thêm {#further-reading}
 
-1. [ethereum.org - Hướng dẫn góp cổ phần ETH](https://ethereum.org/staking/)
+1. [ethereum.org - Hướng dẫn góp cổ phần ETH](/staking/)
 2. [Ledger Academy - Tái cổ phần Ethereum là gì?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: Giải thích về Giao thức Tái cổ phần Ethereum Phi tập trung](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - Đừng làm quá tải sự đồng thuận của Ethereum](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

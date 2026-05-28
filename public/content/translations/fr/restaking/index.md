@@ -178,7 +178,7 @@ Alors que les AVS offrent des taux différents, les jetons de re-mise en jeu liq
 
 ## En savoir plus {#further-reading}
 
-1. [ethereum.org - Guide de la mise en jeu d'ETH](https://ethereum.org/staking/)
+1. [ethereum.org - Guide de la mise en jeu d'ETH](/staking/)
 2. [Ledger Academy - Qu'est-ce que la re-mise en jeu sur Ethereum ?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer : explication du protocole de re-mise en jeu décentralisé d'Ethereum](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - Ne surchargez pas le consensus d'Ethereum](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

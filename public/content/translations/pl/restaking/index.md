@@ -178,7 +178,7 @@ Podczas gdy AVS-y oferują różne stawki, tokeny płynnego restakingu (LRT), ta
 
 ## Dalsza lektura {#further-reading}
 
-1. [ethereum.org - przewodnik po stakowaniu ETH](https://ethereum.org/staking/)
+1. [ethereum.org - przewodnik po stakowaniu ETH](/staking/)
 2. [Ledger Academy – czym jest restaking Ethereum?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys – EigenLayer: wyjaśnienie zdecentralizowanego protokołu restakingu Ethereum](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin – Nie przeciążaj konsensusu Ethereum](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)
