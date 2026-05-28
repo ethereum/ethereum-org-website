@@ -178,7 +178,7 @@ buttons:
 
 ## 延伸閱讀 {#further-reading}
 
-1. [ethereum.org - ETH 質押指南](https://ethereum.org/en/staking/)
+1. [ethereum.org - ETH 質押指南](/staking/)
 2. [Ledger Academy - 什麼是以太坊再質押？](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer：去中心化以太坊再質押協議詳解](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - 不要讓以太坊的共識超載](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)
