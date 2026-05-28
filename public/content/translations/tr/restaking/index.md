@@ -4,11 +4,11 @@ metaTitle: "Yeniden hisseleme nedir? | Yeniden hisselemenin avantajları ve kull
 description: "Diğer merkeziyetsiz hizmetleri güvence altına almak ve ek ödüller kazanmak için hisselenmiş ETH'yi kullanın."
 lang: tr
 template: use-cases
-emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: "Ethereum'da yeniden hisselemenin görsel bir temsili."
 sidebarDepth: 2
-summaryPoint1: "Diğer merkeziyetsiz hizmetleri güvence altına almak ve ek ödüller kazanmak için hisselenmiş ETH'yi kullanın."
+summaryPoints:
+  - "Diğer merkeziyetsiz hizmetleri güvence altına almak ve ek ödüller kazanmak için hisselenmiş ETH'yi kullanın."
 buttons:
   - content: Yeniden hisseleme nedir?
     toId: what-is-restaking
@@ -144,7 +144,7 @@ AVS'ler farklı oranlar sunsa da, eETH gibi Likit Yeniden Hisseleme Jetonları (
 <AlertDescription>
   <p className="mt-0"><strong>Ethereum'un kurucu ortağı yazıyor…</strong></p>
   <p className="mt-2">
-    Ethereum'un kurucu ortağı Vitalik, 2021 tarihli <a href = "https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a> adlı blog yazısında yeniden hisselemenin potansiyel riskleri konusunda uyardı.  
+    Ethereum'un kurucu ortağı Vitalik, 2021 tarihli <a href="https://vitalik.eth.limo/general/2023/05/21/dont_overload.html">Don't Overload Consensus</a> adlı blog yazısında yeniden hisselemenin potansiyel riskleri konusunda uyardı.  
 </p>
 </AlertDescription>
 </AlertContent>

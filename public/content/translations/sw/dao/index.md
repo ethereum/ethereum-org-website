@@ -4,13 +4,13 @@ metaTitle: DAO ni nini? | Shirika Linalojitawala Lililogatuliwa
 description: Muhtasari wa DAO juu ya Ethereum
 lang: sw
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: Uwakilishi wa DAO wa kupiga kura juu ya pendekezo.
-summaryPoint1: Jamii zinazomilikiwa na wanachama bila miongozo ya serikali.
-summaryPoint2: Njia salama ya kushirikiana na wageni wa mtandaoni.
-summaryPoint3: Sehemu salama ya kutoa fedha kwa sababu maalumu.
+summaryPoints:
+  - "Jamii zinazomilikiwa na wanachama bila miongozo ya serikali."
+  - "Njia salama ya kushirikiana na wageni wa mtandaoni."
+  - "Sehemu salama ya kutoa fedha kwa sababu maalumu."
 ---
 
 ## DAOs ni nini? {#what-are-daos}
@@ -114,7 +114,7 @@ _Hua inatumika kwa ajili ya muunganiko wa karibu, mashirika yanayozingatia binad
 
 #### Mfano maarufu {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO imejikita katika kufadhili miradi ya Ethereum. Inahitaji pendekezo kwenye chama ili kundi lifanye tathmini kama unavigezo vinavyokidhi mahitaji na mtaji kufanya maamuzi sahihi kuhusu wafadhili watarajiwa. Huwezi kununua ufikiaji wa DAO kwenye soko la wazi.
+[MolochDAO](https://molochdao.com/) – MolochDAO imejikita katika kufadhili miradi ya Ethereum. Inahitaji pendekezo kwenye chama ili kundi lifanye tathmini kama unavigezo vinavyokidhi mahitaji na mtaji kufanya maamuzi sahihi kuhusu wafadhili watarajiwa. Huwezi kununua ufikiaji wa DAO kwenye soko la wazi.
 
 ### Uanachama unaotegemea sifa {#reputation-based-membership}
 

@@ -7,13 +7,12 @@ import AppCard from "@/components/AppCard"
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
-import { Button } from "@/components/ui/buttons/Button"
-import { Card } from "@/components/ui/card"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Card, CardHeader } from "@/components/ui/card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -38,10 +37,7 @@ const Page = async (props: {
   const { toolId } = searchParams
 
   setRequestLocale(locale)
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   const data = await getDeveloperToolsData()
   if (!data) throw Error("No developer apps data available")
@@ -97,30 +93,30 @@ const Page = async (props: {
                 asChild
                 className="ms-6 w-[calc(100%-4rem)] max-w-md md:min-w-96 md:flex-1 lg:max-w-[33%]"
               >
-                <Card className="h-fit overflow-hidden border">
-                  <LinkBox className="p-4 hover:bg-background-highlight">
-                    <LinkOverlay
-                      href={`/developers/tools/${slug}`}
-                      className="text-body no-underline"
-                    >
-                      <div className="flex items-center gap-2">
-                        <div className="rounded-lg border p-2">
-                          <Icon className="size-6" />
-                        </div>
-                        <h3 className="flex-1 text-md">
-                          {t(`page-developers-tools-category-${slug}-title`)}
-                        </h3>
-                        <Button
-                          variant="outline"
-                          isSecondary
-                          size="sm"
-                          className="shrink-0 text-sm"
-                        >
-                          {t("page-developers-tools-see-all")}
-                        </Button>
+                <Card
+                  className="h-fit overflow-hidden border"
+                  size="md"
+                  variant="header-bar"
+                >
+                  <CardHeader className="bg-transparent!">
+                    <div className="flex w-full items-center gap-2">
+                      <div className="rounded-lg border p-2">
+                        <Icon className="size-6" />
                       </div>
-                    </LinkOverlay>
-                  </LinkBox>
+                      <h3 className="flex-1 text-md">
+                        {t(`page-developers-tools-category-${slug}-title`)}
+                      </h3>
+                      <ButtonLink
+                        variant="outline"
+                        href={`/developers/tools/${slug}`}
+                        isSecondary
+                        size="sm"
+                        className="ms-auto shrink-0 text-sm"
+                      >
+                        {t("page-developers-tools-see-all")}
+                      </ButtonLink>
+                    </div>
+                  </CardHeader>
 
                   {previewsByCategory[slug].map((app) => (
                     <AppCard
@@ -172,10 +168,7 @@ export async function generateMetadata(props: {
 }) {
   const params = await props.params
   const { locale } = params
-  const t = await getTranslations({
-    locale,
-    namespace: "page-developers-tools",
-  })
+  const t = await getTranslations("page-developers-tools")
 
   return await getMetadata({
     locale,

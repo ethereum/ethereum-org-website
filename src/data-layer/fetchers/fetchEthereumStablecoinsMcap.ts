@@ -6,10 +6,10 @@ export const FETCH_ETHEREUM_STABLECOINS_MCAP_TASK_ID =
   "fetch-ethereum-stablecoins-mcap"
 
 export type LlamaStablecoinchainsResponseItem = {
-  gecko_id: string | null
   totalCirculatingUSD: Record<string, number>
-  tokenSymbol: string | null
   name: string
+  gecko_id?: string | null
+  tokenSymbol?: string | null
 }
 
 /**
@@ -32,7 +32,7 @@ export async function fetchEthereumStablecoinsMcap(): Promise<MetricReturnData> 
 
   const data: LlamaStablecoinchainsResponseItem[] = await response.json()
 
-  const ethereumData = data.find(({ gecko_id }) => gecko_id === "ethereum")
+  const ethereumData = data.find(({ name }) => name === "Ethereum")
   if (!ethereumData) {
     throw new Error("Ethereum stablecoin data not found")
   }

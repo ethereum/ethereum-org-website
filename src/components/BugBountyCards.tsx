@@ -118,11 +118,11 @@ const BugBountyCards = () => {
               </p>
             </div>
 
-            <p className="mb-2 mt-4 text-sm uppercase opacity-60">
+            <p className="mt-4 mb-2 text-sm uppercase opacity-60">
               {t(card.subDescriptionTranslationId)}
             </p>
 
-            <ButtonLink href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+            <ButtonLink href="https://bbp-form.ethereum.org/">
               {t(card.styledButtonTranslationId)}
             </ButtonLink>
           </div>

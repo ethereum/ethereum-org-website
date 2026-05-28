@@ -4,13 +4,13 @@ metaTitle: "Co je DAO? | Decentralizovaná autonomní organizace"
 description: "Přehled DAO na Ethereu"
 lang: cs
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: "Vyobrazení decentralizované autonomní organizace hlasující o návrhu."
-summaryPoint1: "Členské komunity bez centralizovaného vedení."
-summaryPoint2: "Bezpečný způsob, jak spolupracovat s lidmi na internetu."
-summaryPoint3: "Bezpečné místo pro vložení prostředků na konkrétní věc."
+summaryPoints:
+  - "Členské komunity bez centralizovaného vedení."
+  - "Bezpečný způsob, jak spolupracovat s lidmi na internetu."
+  - "Bezpečné místo pro vložení prostředků na konkrétní věc."
 ---
 
 ## Co jsou DAO? {#what-are-daos}
@@ -116,7 +116,7 @@ _Obvykle se používá u lidskoprávních organizací, jako jsou charity a odbor
 
 #### Známý příklad {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO se zaměřuje na financování projektů na Ethereu. Pro získání členství je potřeba předložit návrh, na jehož základě skupina posoudí, má-li zájemce potřebné odborné znalosti a kapitál, aby mohl činit informované úsudky o potenciálních grantech. Přístup k takovému DAO tedy nelze koupit na otevřeném trhu.
+[MolochDAO](https://molochdao.com/) – MolochDAO se zaměřuje na financování projektů na Ethereu. Pro získání členství je potřeba předložit návrh, na jehož základě skupina posoudí, má-li zájemce potřebné odborné znalosti a kapitál, aby mohl činit informované úsudky o potenciálních grantech. Přístup k takovému DAO tedy nelze koupit na otevřeném trhu.
 
 ### Členství na základě reputace {#reputation-based-membership}
 

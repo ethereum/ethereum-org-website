@@ -35,6 +35,7 @@ import { fetchStablecoinsData } from "./fetchers/fetchStablecoinsData"
 import { fetchTotalEthStaked } from "./fetchers/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "./fetchers/fetchTotalValueLocked"
 import { fetchTranslationGlossary } from "./fetchers/fetchTranslationGlossary"
+import { fetchVideoThumbnails } from "./fetchers/fetchVideoThumbnails"
 import { set } from "./storage"
 
 export const KEYS = {
@@ -64,6 +65,7 @@ export const KEYS = {
   STABLECOINS_DATA: "fetch-stablecoins-data",
   ACCOUNT_HOLDERS: "fetch-account-holders",
   TRANSLATION_GLOSSARY: "fetch-translation-glossary",
+  VIDEO_THUMBNAILS: "fetch-video-thumbnails",
 } as const
 
 // Task definition: storage key + fetch function
@@ -89,6 +91,7 @@ const DAILY: TaskDef[] = [
   [KEYS.DEVELOPER_TOOLS, fetchDeveloperTools],
   [KEYS.TRANSLATION_GLOSSARY, fetchTranslationGlossary],
   [KEYS.BEACONCHAIN, fetchBeaconChain],
+  [KEYS.VIDEO_THUMBNAILS, fetchVideoThumbnails],
 ]
 
 const HOURLY: TaskDef[] = [

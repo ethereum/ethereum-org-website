@@ -247,7 +247,7 @@ lang: ar
 #### أبحاث حديثة {#recent-research-10}
 
 - [عرض فيديو EIP-1559 متعدد الأبعاد](https://youtu.be/QbR4MTgnCko)
-- [أقصى قيمة قابلة للاستخراج (MEV) عبر النطاقات](http://arxiv.org/abs/2112.01472)
+- [أقصى قيمة قابلة للاستخراج (MEV) عبر النطاقات](https://arxiv.org/abs/2112.01472)
 - [مزادات MEV](https://ethresear.ch/t/mev-auction-auctioning-transaction-ordering-rights-as-a-solution-to-miner-extractable-value/6788)
 
 ### حوافز إثبات الحصة {#proof-of-stake-incentives}

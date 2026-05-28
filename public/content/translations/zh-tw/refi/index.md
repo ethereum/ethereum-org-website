@@ -3,13 +3,13 @@ title: "再生金融 (ReFi)"
 description: "再生金融概觀及當前使用案例。"
 lang: zh-tw
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: "建立在再生原則上的替代性經濟體系"
-summaryPoint2: "嘗試使用以太坊解決全球協調危機，如氣候變遷"
-summaryPoint3: "可大幅擴展生態效益資產 (如已驗證碳權) 的工具"
+summaryPoints:
+  - "建立在再生原則上的替代性經濟體系"
+  - "嘗試使用以太坊解決全球協調危機，如氣候變遷"
+  - "可大幅擴展生態效益資產 (如已驗證碳權) 的工具"
 ---
 
 ## 什麼是再生金融 (ReFi)？ {#what-is-refi}
@@ -65,7 +65,7 @@ ReFi 也與 [去中心化科學 (DeSci)](/desci/) 運動重疊，後者使用以
 
 例如，[Klima Infinity](https://www.klimadao.finance/infinity) 和 [Senken](https://senken.io/) 提供了由第三方開發並在既定標準（如 Verra）下發行的各種專案；其他如 [Nori](https://nori.com/) 就只提供了以其自家碳權標準開發的特定專案，這些專案由他們發行，並為之準備了自己的專門市場。
 
-4. 基礎設施促使碳交易市場整體供應鏈的影響和效益隨之擴張。 [KlimaDAO](http://klimadao.finance/) 將流動性當成公共物品（允許任何人以透明的價格買賣碳權）供應，透過獎勵來提高碳交易市場和碳註銷（指碳權的配額永久減少）的吞吐量，並提供簡單易用的可交互運作工具來存取相關資料，以及收購和註銷各種代幣化碳權。
+4. 基礎設施促使碳交易市場整體供應鏈的影響和效益隨之擴張。 [KlimaDAO](https://klimadao.finance/) 將流動性當成公共物品（允許任何人以透明的價格買賣碳權）供應，透過獎勵來提高碳交易市場和碳註銷（指碳權的配額永久減少）的吞吐量，並提供簡單易用的可交互運作工具來存取相關資料，以及收購和註銷各種代幣化碳權。
 
 ## 碳交易市場以外的再生金融 {#refi-beyond}
 

@@ -3,13 +3,13 @@ title: Regenerative Finance (ReFi)
 description: "Ein Überblick über ReFi und seine aktuellen Anwendungsfälle."
 lang: de
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Ein alternatives Wirtschaftssystem, das auf regenerativen Prinzipien aufbaut
-summaryPoint2: "Ein Versuch, Ethereum zu nutzen, um globale Koordinationskrisen wie den Klimawandel zu lösen"
-summaryPoint3: "Ein Werkzeug zur drastischen Skalierung von ökologischen Vermögenswerten wie verifizierten Emissionsgutschriften"
+summaryPoints:
+  - "Ein alternatives Wirtschaftssystem, das auf regenerativen Prinzipien aufbaut"
+  - "Ein Versuch, Ethereum zu nutzen, um globale Koordinationskrisen wie den Klimawandel zu lösen"
+  - "Ein Werkzeug zur drastischen Skalierung von ökologischen Vermögenswerten wie verifizierten Emissionsgutschriften"
 ---
 
 ## Was ist ReFi? {#what-is-refi}
@@ -65,7 +65,7 @@ Es gibt eine neue Welle innovativer Projekte, die auf Blockchains aufbauen und v
 
 Einige wie [Klima Infinity](https://www.klimadao.finance/infinity) und [Senken](https://senken.io/) bieten eine Vielzahl von Projekten an, die von Dritten entwickelt und unter etablierten Standards wie Verra ausgegeben werden; andere wie [Nori](https://nori.com/) bieten nur spezifische Projekte an, die unter ihrem eigenen Standard für Emissionsgutschriften entwickelt wurden, die sie ausgeben und für die sie einen eigenen dedizierten Marktplatz haben.
 
-4. Die zugrunde liegenden Schienen und die Infrastruktur, die die Skalierung der Auswirkungen und der Effizienz der gesamten Lieferkette des Kohlenstoffmarktes erleichtern. [KlimaDAO](http://klimadao.finance/) stellt Liquidität als öffentliches Gut zur Verfügung (was es jedem ermöglicht, Emissionsgutschriften zu einem transparenten Preis zu kaufen oder zu verkaufen), schafft Anreize für einen erhöhten Durchsatz der Kohlenstoffmärkte und Stilllegungen durch Belohnungen und bietet benutzerfreundliche, interoperable Werkzeuge, um auf Daten zuzugreifen sowie eine Vielzahl von tokenisierten Emissionsgutschriften zu erwerben und stillzulegen.
+4. Die zugrunde liegenden Schienen und die Infrastruktur, die die Skalierung der Auswirkungen und der Effizienz der gesamten Lieferkette des Kohlenstoffmarktes erleichtern. [KlimaDAO](https://klimadao.finance/) stellt Liquidität als öffentliches Gut zur Verfügung (was es jedem ermöglicht, Emissionsgutschriften zu einem transparenten Preis zu kaufen oder zu verkaufen), schafft Anreize für einen erhöhten Durchsatz der Kohlenstoffmärkte und Stilllegungen durch Belohnungen und bietet benutzerfreundliche, interoperable Werkzeuge, um auf Daten zuzugreifen sowie eine Vielzahl von tokenisierten Emissionsgutschriften zu erwerben und stillzulegen.
 
 ## ReFi jenseits von Kohlenstoffmärkten {#refi-beyond}
 

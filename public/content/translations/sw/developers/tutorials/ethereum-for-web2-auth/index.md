@@ -8,7 +8,7 @@ lang: sw
 published: 2025-04-30
 ---
 
-## Utangulizi
+## Utangulizi {#introduction}
 
 [SAML](https://www.onelogin.com/learn/saml) ni kiwango kinachotumika kwenye web2 kuruhusu [mtoa huduma wa kitambulisho (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) kutoa taarifa za mtumiaji kwa [watoa huduma (SP)](https://en.wikipedia.org/wiki/Service_provider_\(SAML\)).
 
@@ -21,7 +21,7 @@ Kumbuka kwamba mafunzo haya yameandikwa kwa ajili ya hadhira mbili tofauti:
 
 Kutokana na hilo, itaendana na kuwa na nyenzo nyingi za utangulizi ambazo tayari unazijua. Jisikie huru kuiruka.
 
-### SAML kwa watu wa Ethereum
+### SAML kwa watu wa Ethereum {#saml-for-ethereum-people}
 
 SAML ni itifaki ya kati. Mtoa huduma (SP) anakubali tu madai (kama vile "huyu ni mtumiaji wangu John, anapaswa kuwa na ruhusa za kufanya A, B, na C") kutoka kwa mtoa huduma wa kitambulisho (IdP) ikiwa ina uhusiano wa awali wa kuaminiana nayo, au na [mamlaka ya cheti](https://www.ssl.com/article/what-is-a-certificate-authority-ca/) iliyosaini cheti cha IdP hicho.
 
@@ -31,7 +31,7 @@ Kwa mfano, SP inaweza kuwa wakala wa usafiri unaotoa huduma za usafiri kwa makam
 
 Hii ndiyo njia ambayo taasisi tatu, kivinjari, SP, na IdP, hujadiliana kwa ajili ya ufikiaji. SP haihitaji kujua chochote kuhusu mtumiaji anayetumia kivinjari mapema, ila tu kumwamini IdP.
 
-### Ethereum kwa watu wa SAML
+### Ethereum kwa watu wa SAML {#ethereum-for-saml-people}
 
 Ethereum ni mfumo uliotawanywa.
 
@@ -50,7 +50,7 @@ Saini inathibitisha tu anwani ya Ethereum. Ili kupata sifa zingine za mtumiaji, 
 
 Kwa sababu ya asili ya mfumo uliotawanywa wa Ethereum, mtumiaji yeyote anaweza kufanya uthibitisho. Utambulisho wa mthibitishaji ni muhimu kutambua ni uthibitisho upi tunaouzingatia kuwa wa kuaminika.
 
-## Mpangilio
+## Mpangilio {#setup}
 
 Hatua ya kwanza ni kuwa na SAML SP na SAML IdP zinazowasiliana kati yao.
 
@@ -82,13 +82,13 @@ Hatua ya kwanza ni kuwa na SAML SP na SAML IdP zinazowasiliana kati yao.
 
 5. Mpe IdP anwani yako ya barua pepe na ubofye **Ingia kwa mtoa huduma**. Tazama kuwa unaelekezwa tena kwa mtoa huduma (mlango 3000) na kwamba anakutambua kwa anwani yako ya barua pepe.
 
-### Maelezo ya kina
+### Maelezo ya kina {#detailed-explanation}
 
 Hivi ndivyo inavyotokea, hatua kwa hatua:
 
 ![Kuingia kwa kawaida kwa SAML bila Ethereum](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
 Faili hii ina usanidi kwa Mtoa Huduma wa Kitambulisho na Mtoa Huduma. Kwa kawaida hizi mbili zingekuwa taasisi tofauti, lakini hapa tunaweza kushiriki msimbo kwa urahisi.
 
@@ -166,7 +166,7 @@ export const idpPublicData = {
 
 Data ya umma kwa mtoa huduma wa kitambulisho ni sawa. Inabainisha kuwa ili kumwingiza mtumiaji unatumia POST kwa `http://localhost:3001/idp/login` na kumtoa mtumiaji unatumia POST kwa `http://localhost:3001/idp/logout`.
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 Huu ndio msimbo unaotekeleza mtoa huduma.
 
@@ -341,7 +341,7 @@ app.listen(config.spPort, () => {
 
 Sikiliza `spPort` na programu hii ya express.
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
 Huyu ndiye mtoa huduma wa kitambulisho. Ni sawa na mtoa huduma, maelezo yaliyo hapa chini ni ya sehemu ambazo ni tofauti.
 
@@ -471,7 +471,7 @@ Hii ni sehemu ya mwisho inayopokea ombi la kuingia kutoka kwa mtoa huduma. Hii n
 
 Tunapaswa kuwa na uwezo wa kutumia [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) kusoma kitambulisho cha ombi la uthibitishaji. Hata hivyo, sikuweza kuifanyia kazi na haikustahili kutumia muda mwingi juu yake kwa hivyo ninatumia tu [kichanganuzi cha XML cha jumla](https://www.npmjs.com/package/fast-xml-parser). Taarifa tunayohitaji ni sifa ya `ID` ndani ya lebo ya `<samlp:AuthnRequest>`, ambayo iko katika kiwango cha juu cha XML.
 
-## Kutumia saini za Ethereum
+## Kutumia saini za Ethereum {#using-ethereum-signatures}
 
 Sasa kwa kuwa tunaweza kutuma utambulisho wa mtumiaji kwa mtoa huduma, hatua inayofuata ni kupata utambulisho wa mtumiaji kwa njia inayoaminika. Viem inaturuhusu kuuliza tu mkoba kwa anwani ya mtumiaji, lakini hii inamaanisha kuuliza kivinjari kwa habari. Hatuidhibiti kivinjari, kwa hivyo hatuwezi kuamini moja kwa moja jibu tunalopata kutoka kwake.
 
@@ -489,7 +489,7 @@ Kisha vinjari [kwa SP](http://localhost:3000) na ufuate maelekezo.
 
 Kumbuka kuwa kwa wakati huu hatujui jinsi ya kupata anwani ya barua pepe kutoka kwa anwani ya Ethereum, kwa hivyo badala yake tunaripoti `<ethereum address>@bad.email.address` kwa SP.
 
-### Maelezo ya kina
+### Maelezo ya kina {#detailed-explanation-2}
 
 Mabadiliko yapo katika hatua 4-5 katika mchoro uliopita.
 
@@ -699,7 +699,7 @@ idpRouter.post(`/login`,
 
 Badala ya `getLoginPage`, sasa tumia `getSignaturePage` katika kishikilizi cha hatua ya 3.
 
-## Kupata anwani ya barua pepe
+## Kupata anwani ya barua pepe {#getting-the-email-address}
 
 Hatua inayofuata ni kupata anwani ya barua pepe, kitambulisho kinachoombwa na mtoa huduma. Ili kufanya hivyo, tunatumia [Huduma ya Uthibitisho ya Ethereum (EAS)](https://attest.org/).
 
@@ -755,7 +755,7 @@ Kisha toa anwani yako ya barua pepe. Una njia mbili za kufanya hivyo:
 
 Vyovyote vile, baada ya kufanya hivi nenda kwenye [http://localhost:3000](http://localhost:3000) na ufuate maelekezo. Ikiwa umeingiza ufunguo binafsi wa majaribio, barua pepe unayopokea ni `test_addr_0@example.com`. Ikiwa umetumia anwani yako mwenyewe, inapaswa kuwa chochote ulichothibitisha.
 
-### Maelezo ya kina
+### Maelezo ya kina {#detailed-explanation-3}
 
 ![Kupata kutoka anwani ya Ethereum hadi barua-pepe](./fig-06-saml-sig-n-email.png)
 
@@ -872,13 +872,13 @@ Ikiwa kuna thamani, tumia `decodeData` kusimbua data. Hatuhitaji metadata inayot
 
 Tumia kazi mpya kupata anwani ya barua pepe.
 
-## Vipi kuhusu utawanyaji wa mamlaka?
+## Vipi kuhusu utawanyaji wa mamlaka? {#what-about-decentralization}
 
 Katika usanidi huu watumiaji hawawezi kujifanya kuwa mtu mwingine, mradi tu tunategemea wathibitishaji wanaoaminika kwa ramani ya anwani ya Ethereum hadi barua pepe. Hata hivyo, mtoa huduma wetu wa kitambulisho bado ni sehemu ya kati. Yeyote aliye na ufunguo binafsi wa mtoa huduma wa kitambulisho anaweza kutuma habari za uongo kwa mtoa huduma.
 
 Kunaweza kuwa na suluhisho kwa kutumia [hesabu ya pande nyingi (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Natumai kuandika kuihusu katika mafunzo yajayo.
 
-## Hitimisho
+## Hitimisho {#conclusion}
 
 Kukubalika kwa kiwango cha kuingia, kama vile saini za Ethereum, kunakabiliwa na tatizo la kuku na yai. Watoa huduma wanataka kuvutia soko pana iwezekanavyo. Watumiaji wanataka kuwa na uwezo wa kufikia huduma bila kuwa na wasiwasi kuhusu kuunga mkono kiwango chao cha kuingia.
 Kuunda adapta, kama vile Ethereum IdP, kunaweza kutusaidia kushinda kikwazo hiki.

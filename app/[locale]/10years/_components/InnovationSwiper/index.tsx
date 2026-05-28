@@ -30,6 +30,7 @@ const InnovationSwiper = ({ innovationCards }: InnovationSwiperProps) => (
                 src={image}
                 alt={title}
                 className="mx-auto my-4 h-auto max-h-48 object-contain"
+                sizes="(max-width: 992px) calc(100vw - 64px), (max-width: 1280px) 550px, 700px"
               />
               <div>
                 <h3 className="mb-4">{title}</h3>

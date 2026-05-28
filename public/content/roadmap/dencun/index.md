@@ -101,11 +101,11 @@ Simply being compatible with the Ethereum Virtual Machine (EVM) does not mean th
 
 ## More of a visual learner? {#visual-learner}
 
-<YouTube id="HT9PHWloIiU" />
+<VideoWatch slug="eip-4844-dencun-explained" />
 
 _Unlocking Ethereum's Scaling, EIP-4844 — Finematics _
 
-<YouTube id="dFjyUY3e53Q" />
+<VideoWatch slug="blobspace-101-dencun" />
 
 _Blobspace 101 with Domothy — Bankless_
 

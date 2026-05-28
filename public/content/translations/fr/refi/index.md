@@ -3,13 +3,13 @@ title: "Finance Régénérative (ReFi)"
 description: Une vue d'ensemble de la ReFi et de ses cas d'utilisation actuels.
 lang: fr
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: "Un système économique alternatif fondé sur des principes de régénération"
-summaryPoint2: "Une tentative d'utilisation d'Ethereum pour résoudre les crises de coordination au niveau mondial, telles que le changement climatique"
-summaryPoint3: "Un outil permettant une augmentation drastique des bénéfices écologiques tels que les crédits de carbone vérifiés"
+summaryPoints:
+  - "Un système économique alternatif fondé sur des principes de régénération"
+  - "Une tentative d'utilisation d'Ethereum pour résoudre les crises de coordination au niveau mondial, telles que le changement climatique"
+  - "Un outil permettant une augmentation drastique des bénéfices écologiques tels que les crédits de carbone vérifiés"
 ---
 
 ## Qu'est-ce que la ReFi ? {#what-is-refi}
@@ -65,7 +65,7 @@ Une nouvelle vague de projets innovants est en train d'être développée sur de
 
 Certains, comme [Klima Infinity](https://www.klimadao.finance/infinity) et [Senken](https://senken.io/), proposent une grande variété de projets développés par des tiers et émis conformément à des normes établies comme Verra ; d'autres, comme [Nori](https://nori.com/), ne proposent que des projets spécifiques développés selon leur propre norme de crédit carbone, qu'ils émettent et pour lesquels ils ont leur propre place de marché dédiée.
 
-4. Les rails et l'infrastructure sous-jacente qui facilitent la montée en charge de l'impact et de l'efficacité de l'ensemble de la chaîne d'approvisionnement du marché du carbone. [KlimaDAO](http://klimadao.finance/) fournit de la liquidité en tant que bien public (permettant à quiconque d'acheter ou de vendre des crédits carbone à un prix transparent), incite à augmenter le débit des marchés du carbone et des retraits avec des récompenses, et fournit des outils conviviaux et interopérables pour accéder aux données relatives à une grande variété de crédits carbone tokenisés, mais aussi pour en acquérir et en retirer.
+4. Les rails et l'infrastructure sous-jacente qui facilitent la montée en charge de l'impact et de l'efficacité de l'ensemble de la chaîne d'approvisionnement du marché du carbone. [KlimaDAO](https://klimadao.finance/) fournit de la liquidité en tant que bien public (permettant à quiconque d'acheter ou de vendre des crédits carbone à un prix transparent), incite à augmenter le débit des marchés du carbone et des retraits avec des récompenses, et fournit des outils conviviaux et interopérables pour accéder aux données relatives à une grande variété de crédits carbone tokenisés, mais aussi pour en acquérir et en retirer.
 
 ## La ReFi au-delà des marchés du carbone {#refi-beyond}
 

@@ -5,9 +5,10 @@ lang: en
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Game rules and state can be enforced by the Ethereum blockchain, not a studio's servers
-summaryPoint2: Anyone can build mods, bots, or entirely new games that plug into the same open onchain data
-summaryPoint3: Purpose-built L2s enable real-time gameplay with lower fees, while game development frameworks make building onchain games more accessible than ever
+summaryPoints:
+  - "Game rules and state can be enforced by the Ethereum blockchain, not a studio's servers, representing a key benefit of onchain games"
+  - "Anyone can build mods, bots, or entirely new games that plug into the same open onchain data"
+  - "Purpose-built L2s enable real-time gameplay with lower fees, while game development frameworks make building onchain games more accessible than ever"
 buttons:
   - content: Learn more
     toId: gaming-on-ethereum

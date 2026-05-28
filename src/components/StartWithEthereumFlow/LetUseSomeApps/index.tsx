@@ -139,7 +139,7 @@ const LetUseSomeApps = ({
                   href={dapp.url}
                   variant="outline"
                   size="sm"
-                  className="w-full group-hover:!text-primary-hover group-hover:shadow-[4px_4px_theme('colors.primary.low-contrast')] sm:w-auto"
+                  className="w-full group-hover:!text-primary-hover group-hover:shadow-[4px_4px_hsla(var(--primary-low-contrast))] sm:w-auto"
                 >
                   {t("page-start-apps-go")}
                 </ButtonLink>

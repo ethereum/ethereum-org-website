@@ -207,7 +207,7 @@ Les événements permettent à votre contrat intelligent de communiquer avec vot
 
 ## Exemples annotés {#annotated-examples}
 
-Voici quelques exemples rédigés en Solidity. Si vous souhaitez vous amuser avec le code, vous pouvez interagir avec celui-ci dans [Remix](http://remix.ethereum.org).
+Voici quelques exemples rédigés en Solidity. Si vous souhaitez vous amuser avec le code, vous pouvez interagir avec celui-ci dans [Remix](https://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 

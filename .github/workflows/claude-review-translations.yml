@@ -11,14 +11,11 @@ on:
         description: "Language code(s) to review (comma-separated, e.g. 'hi' or 'hi,bn')"
         required: false
         type: string
-      scope:
-        description: "Review scope"
+      full:
+        description: "Re-review the entire PR (ignore prior-review SHA, force full diff)"
         required: false
-        default: "pr"
-        type: choice
-        options:
-          - pr
-          - full
+        default: false
+        type: boolean
       model:
         description: "Claude model for analysis"
         required: false
@@ -52,21 +49,21 @@ jobs:
         github.event_name == 'issue_comment' &&
         contains(github.event.comment.body, '@claude') &&
         contains(github.event.comment.body, '/review-translations') &&
-        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja","mnelsonBT","lukassim"]'), github.event.comment.user.login) &&
+        contains(fromJSON('["pettinarip","wackerow","nloureiro","konopkja","mnelsonBT"]'), github.event.comment.user.login) &&
         github.event.issue.pull_request
       ) ||
       (
         github.event_name == 'pull_request_review_comment' &&
         contains(github.event.comment.body, '@claude') &&
         contains(github.event.comment.body, '/review-translations') &&
-        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja","mnelsonBT","lukassim"]'), github.event.comment.user.login)
+        contains(fromJSON('["pettinarip","wackerow","nloureiro","konopkja","mnelsonBT"]'), github.event.comment.user.login)
       ) ||
       (
         github.event_name == 'pull_request' &&
         startsWith(github.event.pull_request.title, 'i18n:') &&
-        startsWith(github.event.pull_request.head.ref, 'i18n/') &&
+        startsWith(github.event.pull_request.head.ref, 'intl/pending-') &&
         github.event.pull_request.head.repo.full_name == github.repository &&
-        contains(fromJSON('["minimalsm","pettinarip","wackerow","nloureiro","konopkja","mnelsonBT","lukassim"]'), github.event.pull_request.user.login)
+        contains(fromJSON('["pettinarip","wackerow","nloureiro","konopkja","mnelsonBT"]'), github.event.pull_request.user.login)
       )
     runs-on: ubuntu-latest
     permissions:
@@ -111,15 +108,15 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
           INPUT_LANGUAGE: ${{ github.event.inputs.language }}
-          INPUT_SCOPE: ${{ github.event.inputs.scope }}
+          INPUT_FULL: ${{ github.event.inputs.full }}
           INPUT_MODEL: ${{ github.event.inputs.model }}
           INPUT_FIX: ${{ github.event.inputs.fix }}
           COMMENT_BODY: ${{ github.event.comment.body }}
         run: |
-          # For automatic triggers (pull_request), use defaults
+          # For automatic triggers (pull_request), use defaults (incremental scope)
           if [[ "$EVENT_NAME" == "pull_request" ]]; then
             echo "language_flag=" >> $GITHUB_OUTPUT
-            echo "scope_flag=" >> $GITHUB_OUTPUT
+            echo "full_flag=" >> $GITHUB_OUTPUT
             echo "model=opus" >> $GITHUB_OUTPUT
             echo "fix_flag=" >> $GITHUB_OUTPUT
             exit 0
@@ -132,10 +129,13 @@ jobs:
             else
               echo "language_flag=" >> $GITHUB_OUTPUT
             fi
-            # INPUT_SCOPE and INPUT_MODEL are choice types, safe values enforced by GitHub
-            echo "scope_flag=--scope=${INPUT_SCOPE}" >> $GITHUB_OUTPUT
+            # INPUT_MODEL is a choice type, safe values enforced by GitHub
             echo "model=${INPUT_MODEL}" >> $GITHUB_OUTPUT
-            # Set fix_flag based on checkbox input
+            if [[ "$INPUT_FULL" == "true" ]]; then
+              echo "full_flag=--full" >> $GITHUB_OUTPUT
+            else
+              echo "full_flag=" >> $GITHUB_OUTPUT
+            fi
             if [[ "$INPUT_FIX" == "true" ]]; then
               echo "fix_flag=--fix" >> $GITHUB_OUTPUT
             else
@@ -152,11 +152,11 @@ jobs:
             echo "language_flag=" >> $GITHUB_OUTPUT
           fi
 
-          # Extract --scope flag if present
-          if [[ "$COMMENT_BODY" =~ --scope=(pr|full) ]]; then
-            echo "scope_flag=--scope=${BASH_REMATCH[1]}" >> $GITHUB_OUTPUT
+          # Extract --full flag if present (override incremental, re-review entire PR)
+          if [[ "$COMMENT_BODY" =~ --full([[:space:]]|$) ]]; then
+            echo "full_flag=--full" >> $GITHUB_OUTPUT
           else
-            echo "scope_flag=" >> $GITHUB_OUTPUT
+            echo "full_flag=" >> $GITHUB_OUTPUT
           fi
 
           # Extract --model flag if present (default to opus per skill spec)
@@ -191,26 +191,41 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           claude_args: |
             --model ${{ steps.parse.outputs.model }}
-            --allowedTools "Task,Glob,Grep,LS,Read,Edit,WebFetch,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git fetch:*),Bash(git worktree:*),Bash(git add:*),Bash(git commit:*),Bash(gh api:*),Bash(gh pr view:*),Bash(gh pr comment:*)"
+            --allowedTools "Task,Glob,Grep,LS,Read,Edit,WebFetch,Bash(git status:*),Bash(git diff:*),Bash(git log:*),Bash(git fetch:*),Bash(git worktree:*),Bash(git add:*),Bash(git commit:*),Bash(gh api:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr comment:*),Bash(gh pr review:*)"
           prompt: |
             Execute the /review-translations command for PR #${{ steps.pr.outputs.number }}.
 
-            Arguments: --pr=${{ steps.pr.outputs.number }} ${{ steps.parse.outputs.language_flag }} ${{ steps.parse.outputs.scope_flag }} ${{ steps.parse.outputs.fix_flag }}
+            Arguments: --pr=${{ steps.pr.outputs.number }} ${{ steps.parse.outputs.language_flag }} ${{ steps.parse.outputs.full_flag }} ${{ steps.parse.outputs.fix_flag }}
 
-            Follow the instructions in .claude/commands/review-translations.md for Phase 0 (scope detection), Phase 1 (parallel agents), and Phase 2 (collecting results).
+            Follow the instructions in .claude/commands/review-translations.md for Phase 0 (scope detection -- read prior review SHA from gh api .../reviews unless --full was passed), Phase 1 (parallel agents), and Phase 2 (collecting results).
 
             IMPORTANT workflow modifications for GitHub Actions context:
-            1. Use parallel Task agents (ONE agent per language) as specified in the skill
-            2. After collecting results in Phase 2, post the full review report as a PR comment using:
-               gh pr comment ${{ steps.pr.outputs.number }} --body "..."
-               Use a HEREDOC for the body to preserve formatting.
-            3. If the report is very long (>60000 chars), split it into multiple comments per language
-            4. Auto-fix behavior - check if --fix flag is present in Arguments above:
-               - If --fix flag IS present: After posting the review, automatically apply fixes for all critical issues found using the Edit tool (work in PR branch worktree as specified in skill). Then commit the changes.
-               - If --fix flag is NOT present: Do NOT apply fixes automatically - just report the issues found. At the end of your review comment, if there are critical issues, include:
+
+            1. Use parallel Task agents (ONE agent per language) as specified in the skill.
+
+            2. SUBMIT THE REVIEW AS A PROPER PR REVIEW, NOT AN ISSUE COMMENT.
+               This is mandatory: the next /review-translations invocation reads each PR Review's GitHub-attached `commit_id` to determine incremental scope. An issue comment (`gh pr comment`) does not carry a `commit_id` and would break the incremental flow.
+
+               Write the body to a temp file (to avoid heredoc issues), then submit via `gh pr review`, which auto-attaches the current PR HEAD SHA:
+                 gh pr review ${{ steps.pr.outputs.number }} --comment --body-file /tmp/pr-review-body.md
+
+               Default to `--comment`. Use `--approve` instead only when the review turned up ZERO critical issues (none found, or all auto-fixed in this same run). Never use `--request-changes`.
+
+            3. Body length: aim for a SINGLE review body. If it exceeds GitHub's body limit (~65k chars), keep the per-language summary table + scoring inside the Review body, and post ONLY the verbose per-language detail dumps as follow-up issue comments via `gh pr comment` (NOT additional Reviews -- supplemental detail does not need its own SHA marker).
+
+            4. The review body MUST include a `**Fixes:**` line near the top, with one of:
+               - `Critical fixes applied: {N}` -- if --fix was passed AND fixes were committed (NOTE: this GitHub Actions context CANNOT auto-fix on the PR branch because we are not running in the PR branch's worktree; for now this case will not occur from CI)
+               - `No fixes applied (review-only)` -- always the value when run from this workflow
+               - `No critical issues found` -- when there are no critical issues at all
+               This standardizes the format with the local /review-translations command.
+
+            5. Auto-fix behavior - check if --fix flag is present in Arguments above:
+               - If --fix flag IS present: this CI workflow is not currently set up to commit fixes back to the PR branch. Note this in the review body and recommend running locally: `/review-translations --pr=${{ steps.pr.outputs.number }} --fix`
+               - If --fix flag is NOT present: Do NOT apply fixes. At the end of your review body, if there are critical issues, include:
                  ---
-                 **To apply fixes**, reply with:
+                 **To apply fixes**, run locally:
                  ```
-                 @claude /review-translations --fix
+                 /review-translations --pr=${{ steps.pr.outputs.number }} --fix
                  ```
-            5. Do NOT prompt for user input with AskUserQuestion - this is fully automated
+
+            6. Do NOT prompt for user input with AskUserQuestion - this is fully automated.

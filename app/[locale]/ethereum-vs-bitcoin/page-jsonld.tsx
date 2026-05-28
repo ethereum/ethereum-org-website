@@ -4,11 +4,10 @@ import { FileContributor, Lang } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 export default async function EthereumVsBitcoinPageJsonLD({
   locale,
@@ -19,9 +18,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({
-    namespace: "page-ethereum-vs-bitcoin",
-  })
+  const t = await getTranslations("page-ethereum-vs-bitcoin")
 
   const url = normalizeUrlForJsonLd(locale, `/ethereum-vs-bitcoin/`)
 
@@ -31,24 +28,23 @@ export default async function EthereumVsBitcoinPageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#ethereum-vs-bitcoin` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-ethereum-vs-bitcoin-meta-title"),
         description: t("page-ethereum-vs-bitcoin-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -66,21 +62,21 @@ export default async function EthereumVsBitcoinPageJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
-        mainEntity: { "@id": `${url}#ethereum-vs-bitcoin` },
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#ethereum-vs-bitcoin`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-ethereum-vs-bitcoin-title"),
         description: t("page-ethereum-vs-bitcoin-meta-description"),
         image:
           "https://ethereum.org/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png",
-        author: [ethereumCommunityOrganization],
-        publisher: ethereumFoundationOrganization,
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,
-        reviewedBy: ethereumFoundationOrganization,
         about: [
           {
             "@type": "Thing",

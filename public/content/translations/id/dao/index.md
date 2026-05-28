@@ -4,13 +4,13 @@ metaTitle: Apa itu DAO? | Organisasi Otonom Terdesentralisasi
 description: Gambaran umum tentang DAO di Ethereum
 lang: id
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: Representasi DAO yang sedang memberikan suara pada sebuah proposal.
-summaryPoint1: Komunitas milik anggota tanpa kepemimpinan terpusat.
-summaryPoint2: Cara yang aman untuk berkolaborasi dengan orang asing di internet.
-summaryPoint3: Tempat yang aman untuk menyalurkan dana pada tujuan tertentu.
+summaryPoints:
+  - "Komunitas milik anggota tanpa kepemimpinan terpusat."
+  - "Cara yang aman untuk berkolaborasi dengan orang asing di internet."
+  - "Tempat yang aman untuk menyalurkan dana pada tujuan tertentu."
 ---
 
 ## Apa itu DAO? {#what-are-daos}
@@ -116,7 +116,7 @@ _Biasanya digunakan untuk organisasi yang lebih erat dan berpusat pada manusia s
 
 #### Contoh terkenal {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO difokuskan pada pendanaan proyek Ethereum. Mereka memerlukan proposal untuk keanggotaan sehingga kelompok dapat menilai apakah Anda memiliki keahlian dan modal yang diperlukan untuk membuat penilaian yang tepat tentang calon penerima hibah. Anda tidak bisa begitu saja membeli akses ke DAO di pasar terbuka.
+[MolochDAO](https://molochdao.com/) – MolochDAO difokuskan pada pendanaan proyek Ethereum. Mereka memerlukan proposal untuk keanggotaan sehingga kelompok dapat menilai apakah Anda memiliki keahlian dan modal yang diperlukan untuk membuat penilaian yang tepat tentang calon penerima hibah. Anda tidak bisa begitu saja membeli akses ke DAO di pasar terbuka.
 
 ### Keanggotaan berbasis reputasi {#reputation-based-membership}
 

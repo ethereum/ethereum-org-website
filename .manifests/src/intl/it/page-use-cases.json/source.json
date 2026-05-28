@@ -1,0 +1,370 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-use-cases.json",
+  "generatedAt": "2026-04-27T16:14:41.724Z",
+  "rootHash": "156861499629",
+  "tree": {
+    "contentHash": "869ff61f5633",
+    "anchorHash": "d2c7de30f1f1",
+    "children": {
+      "meta-title": {
+        "contentHash": "cf96345bd8cd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "meta-description": {
+        "contentHash": "e9210b175368",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "hero-title": {
+        "contentHash": "f45bf9e18d4d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "hero-header": {
+        "contentHash": "49911b5cbdab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "hero-description": {
+        "contentHash": "ac183b7d96e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-intro-heading": {
+        "contentHash": "fd900e040338",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-intro-before-link": {
+        "contentHash": "8719dc922e8f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-intro-ether-link": {
+        "contentHash": "8fe215591c32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-intro-after-link": {
+        "contentHash": "bb667d43af94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "hero-button": {
+        "contentHash": "16b98aa8bc32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "toc-financial-tools": {
+        "contentHash": "260482742d1a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "toc-digital-ownership": {
+        "contentHash": "e414152ab28f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "toc-organizations": {
+        "contentHash": "dcf947350395",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "toc-science": {
+        "contentHash": "fc27777fd7db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "toc-emerging": {
+        "contentHash": "23e036ede60a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "financial-tools-description": {
+        "contentHash": "cfd7826c4dee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "defi-title": {
+        "contentHash": "ea432a65612d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "defi-description": {
+        "contentHash": "4959003fa86d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "defi-cta": {
+        "contentHash": "69648f8966bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stablecoins-title": {
+        "contentHash": "2d46a862ce8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stablecoins-description": {
+        "contentHash": "5f5ae681f360",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stablecoins-cta": {
+        "contentHash": "716793de485f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-title": {
+        "contentHash": "632e1c583941",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-description": {
+        "contentHash": "b8ed8c1db063",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-cta": {
+        "contentHash": "ffcf0846896c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "rwa-title": {
+        "contentHash": "9075dda0a4aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "rwa-description": {
+        "contentHash": "70e8de26703c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "rwa-cta": {
+        "contentHash": "c3b02cd4ecc8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "digital-ownership-description": {
+        "contentHash": "118c9eae0104",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nft-title": {
+        "contentHash": "132d548bd673",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nft-description": {
+        "contentHash": "1ed1eaa74a61",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nft-cta": {
+        "contentHash": "ec35c6903205",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "gaming-title": {
+        "contentHash": "0fadfa228814",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "gaming-description": {
+        "contentHash": "1777ef440b32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "gaming-cta": {
+        "contentHash": "8c8dd53bb9de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "organizations-description": {
+        "contentHash": "08a857408f10",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "dao-title": {
+        "contentHash": "e85f4f88b9df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "dao-description": {
+        "contentHash": "3ca0b9a13127",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "dao-cta": {
+        "contentHash": "c594dc03abed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "identity-title": {
+        "contentHash": "a71bc8e61322",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "identity-description": {
+        "contentHash": "e28fe0cf7657",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "identity-cta": {
+        "contentHash": "115f090cebce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "social-title": {
+        "contentHash": "e9b357787b6e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "social-description": {
+        "contentHash": "7f239fa322c0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "social-cta": {
+        "contentHash": "50857931e0bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "science-description": {
+        "contentHash": "25a8e4ca6e90",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "desci-title": {
+        "contentHash": "6cd406da7370",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "desci-description": {
+        "contentHash": "3c94e4284926",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "desci-cta": {
+        "contentHash": "8ed48bb03a63",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "refi-title": {
+        "contentHash": "8d2010348010",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "refi-description": {
+        "contentHash": "cf622b577f1b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "refi-cta": {
+        "contentHash": "4197abcf1562",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "novel-uses-title": {
+        "contentHash": "20c3012dbf3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "emerging-description": {
+        "contentHash": "047e2a932dd5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ai-agents-title": {
+        "contentHash": "3d9e43485a12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ai-agents-description": {
+        "contentHash": "503078660557",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ai-agents-cta": {
+        "contentHash": "347a70b09893",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prediction-markets-title": {
+        "contentHash": "3b50eae8b6b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prediction-markets-description": {
+        "contentHash": "a0a38bcc5ad3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prediction-markets-cta": {
+        "contentHash": "612c23827f86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "restaking-title": {
+        "contentHash": "fee35e745a2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "restaking-description": {
+        "contentHash": "90cf39052d1a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "restaking-cta": {
+        "contentHash": "2bdb6da34919",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "restaking-link": {
+        "contentHash": "fa9b97daad51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "institutions-title": {
+        "contentHash": "bff6f3d80ae1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "institutions-description": {
+        "contentHash": "729e4c778a89",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "institutions-cta": {
+        "contentHash": "543277f047c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ready-to-start-title": {
+        "contentHash": "fd27954c03ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ready-to-start-description": {
+        "contentHash": "acb56ba61193",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ready-to-start-wallet-cta": {
+        "contentHash": "c96d704b5c33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ready-to-start-eth-cta": {
+        "contentHash": "8c677f2fb12b",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "meta-title",
+      "meta-description",
+      "hero-title",
+      "hero-header",
+      "hero-description",
+      "page-intro-heading",
+      "page-intro-before-link",
+      "page-intro-ether-link",
+      "page-intro-after-link",
+      "hero-button",
+      "toc-financial-tools",
+      "toc-digital-ownership",
+      "toc-organizations",
+      "toc-science",
+      "toc-emerging",
+      "financial-tools-description",
+      "defi-title",
+      "defi-description",
+      "defi-cta",
+      "stablecoins-title",
+      "stablecoins-description",
+      "stablecoins-cta",
+      "payments-title",
+      "payments-description",
+      "payments-cta",
+      "rwa-title",
+      "rwa-description",
+      "rwa-cta",
+      "digital-ownership-description",
+      "nft-title",
+      "nft-description",
+      "nft-cta",
+      "gaming-title",
+      "gaming-description",
+      "gaming-cta",
+      "organizations-description",
+      "dao-title",
+      "dao-description",
+      "dao-cta",
+      "identity-title",
+      "identity-description",
+      "identity-cta",
+      "social-title",
+      "social-description",
+      "social-cta",
+      "science-description",
+      "desci-title",
+      "desci-description",
+      "desci-cta",
+      "refi-title",
+      "refi-description",
+      "refi-cta",
+      "novel-uses-title",
+      "emerging-description",
+      "ai-agents-title",
+      "ai-agents-description",
+      "ai-agents-cta",
+      "prediction-markets-title",
+      "prediction-markets-description",
+      "prediction-markets-cta",
+      "restaking-title",
+      "restaking-description",
+      "restaking-cta",
+      "restaking-link",
+      "institutions-title",
+      "institutions-description",
+      "institutions-cta",
+      "ready-to-start-title",
+      "ready-to-start-description",
+      "ready-to-start-wallet-cta",
+      "ready-to-start-eth-cta"
+    ]
+  },
+  "sourceCommitSha": "2d028c1f6f2e405835b098e3340933118e98589a"
+}

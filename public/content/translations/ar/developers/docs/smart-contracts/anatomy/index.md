@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## أمثلة مشروحة {#annotated-examples}
 
-هذه بعض الأمثلة الصلبة المكتوبة . إذا كنت ترغب في تجربة النص البرمجي، يمكنك التفاعل معه في [ريميكس](http://remix.ethereum.org).
+هذه بعض الأمثلة الصلبة المكتوبة . إذا كنت ترغب في تجربة النص البرمجي، يمكنك التفاعل معه في [ريميكس](https://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 

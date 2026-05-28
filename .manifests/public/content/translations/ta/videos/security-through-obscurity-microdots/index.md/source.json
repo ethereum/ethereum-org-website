@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/videos/security-through-obscurity-microdots/index.md",
+  "generatedAt": "2026-04-29T06:14:20.072Z",
+  "rootHash": "9b0044759778",
+  "tree": {
+    "contentHash": "0e3d9f43cb23",
+    "anchorHash": "c2b6ecd30d6d",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "68798dd9014e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "4463a6b0bd00",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:youtubeId": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d362cf8e39db"
+      },
+      "frontmatter:uploadDate": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "0bd7b82c45c6"
+      },
+      "frontmatter:duration": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "10bf210af155"
+      },
+      "frontmatter:educationLevel": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "94e6f02a5aca"
+      },
+      "frontmatter:topic": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:format": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "bfac314fefdc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "b1cc2e711844"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e2e73e5dc348"
+      },
+      "prose:1": {
+        "contentHash": "26b5145c6ffa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "82b9caff648d",
+        "anchorHash": "196790285729"
+      },
+      "prose:2": {
+        "contentHash": "e04b1ae0fddc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "why-microdots-000": {
+        "contentHash": "6ece627b5d93",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "df1f7e8979e2",
+        "children": {
+          "_label": {
+            "contentHash": "df1f7e8979e2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "33060d0a6d68",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-history-of-microdot-steganography-200": {
+        "contentHash": "b6d18cc6d507",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "5b946c32d10a",
+        "children": {
+          "_label": {
+            "contentHash": "5b946c32d10a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "76417858deb8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "analog-photography-for-security-330": {
+        "contentHash": "7cd58acc1d7f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "9895411b28b1",
+        "children": {
+          "_label": {
+            "contentHash": "9895411b28b1",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "e5bfa9b33ee4",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-british-process-500": {
+        "contentHash": "a45c0bf08adf",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "f90361c4fe93",
+        "children": {
+          "_label": {
+            "contentHash": "f90361c4fe93",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "4a535be7c7bc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-dichromated-process-700": {
+        "contentHash": "9a823f36d509",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "3f8747b410ff",
+        "children": {
+          "_label": {
+            "contentHash": "3f8747b410ff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "575e8f82eefe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "qa-800": {
+        "contentHash": "dc37097972c1",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "4a79c5df5a47",
+        "children": {
+          "_label": {
+            "contentHash": "4a79c5df5a47",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "73cc15e41e3c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "frontmatter:youtubeId",
+      "frontmatter:uploadDate",
+      "frontmatter:duration",
+      "frontmatter:educationLevel",
+      "frontmatter:topic",
+      "frontmatter:format",
+      "frontmatter:author",
+      "frontmatter:breadcrumb",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "why-microdots-000",
+      "the-history-of-microdot-steganography-200",
+      "analog-photography-for-security-330",
+      "the-british-process-500",
+      "the-dichromated-process-700",
+      "qa-800"
+    ]
+  },
+  "sourceCommitSha": "3d1f9081e0bc1a2ac95d5bc267b67a6d4d67c448"
+}

@@ -15,7 +15,6 @@ import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { getLocaleFormattedDate } from "@/lib/utils/date"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -55,18 +54,12 @@ const WalletSubComponent = ({
     wallet.last_updated
   )
 
-  trackCustomEvent({
-    eventCategory: "WalletMoreInfo",
-    eventAction: "More info wallet",
-    eventName: `More info ${wallet.name}`,
-  })
-
   return (
     <div className="flex flex-row gap-2">
       <div className="w-1 md:w-14">
         <div
           className={cn(
-            "to-97% m-auto h-full w-1 bg-gradient-to-b",
+            "m-auto h-full w-1 bg-linear-to-b to-97%",
             wallet.twGradiantBrandColor
           )}
         />
@@ -107,7 +100,7 @@ const WalletSubComponent = ({
                               <WarningProductGlyph className="size-4" />
                             )}
                           </span>
-                          <p className={cn("leading-1", featureColor)}>
+                          <p className={featureColor}>
                             {filterLabelRoot && `${filterLabelRoot} `}
                             <span className="whitespace-nowrap">
                               {filterLabelLastWord}

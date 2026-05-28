@@ -159,5 +159,5 @@ DevP2P بحد ذاته عبارة عن حزمة كاملة من البروتوك
 [من kademlia إلى discv5](https://vac.dev/kademlia-to-discv5)
 [ورقة بحثية عن kademlia](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
 [مقدمة عن شبكة نظير لنظير في إيثريوم](https://p2p.paris/en/talks/intro-ethereum-networking/)
-[العلاقة بين eth1 و eth2](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+[العلاقة بين eth1 و eth2](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 [فيديو تفاصيل الدمج وعميل eth2](https://www.youtube.com/watch?v=zNIrIninMgg)

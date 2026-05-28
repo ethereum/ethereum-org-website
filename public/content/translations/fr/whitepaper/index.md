@@ -500,7 +500,7 @@ Le concept d'une fonction de transition d'état arbitraire telle qu'implémenté
 4. [B-money](http://www.weidai.com/bmoney.txt)
 5. [Preuves de travail réutilisables](https://nakamotoinstitute.org/finney/rpow/)
 6. [Titres de propriété sécurisés avec autorité du propriétaire](https://nakamotoinstitute.org/library/secure-property-titles/)
-7. [Livre blanc de Bitcoin](http://bitcoin.org/bitcoin.pdf)
+7. [Livre blanc de Bitcoin](https://bitcoin.org/bitcoin.pdf)
 8. [Namecoin](https://namecoin.org/)
 9. [Triangle de Zooko](https://wikipedia.org/wiki/Zooko's_triangle)
 10. [Livre blanc des pièces colorées](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)

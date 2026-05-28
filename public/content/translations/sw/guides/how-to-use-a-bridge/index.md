@@ -49,7 +49,7 @@ Utaratibu huu haupaswi kuchukua zaidi ya dakika 10.
 
 ## 7. Ongeza mtandao wa safu ya 2 uliochaguliwa kwenye mkoba wako (hiari)
 
-Unaweza kutumia [chainlist.org](http://chainlist.org) kupata maelezo ya RPC ya mtandao. Mara tu mtandao unapoongezwa na muamala kukamilika, unapaswa kuona tokeni kwenye mkoba wako. <br />
+Unaweza kutumia [chainlist.org](https://chainlist.org) kupata maelezo ya RPC ya mtandao. Mara tu mtandao unapoongezwa na muamala kukamilika, unapaswa kuona tokeni kwenye mkoba wako. <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>

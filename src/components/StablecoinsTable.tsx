@@ -342,7 +342,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
                       )}
                       <span>
                         {name}{" "}
-                        <span className="text-sm uppercase text-body-medium">
+                        <span className="text-sm text-body-medium uppercase">
                           {symbol}
                         </span>
                       </span>

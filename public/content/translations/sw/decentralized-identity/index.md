@@ -3,12 +3,12 @@ title: Utambulisho uliokatuliwa
 description: Ni nini utambulisho uliogatuliwa, na kwa nini ina umuhimu?
 lang: sw
 template: use-cases
-emoji: ":id:"
 sidebarDepth: 2
 image: /images/eth-gif-cat.png
-summaryPoint1: Mifumo ya kitambulisho cha jadi imekita utoaji, matengenezo, na udhibiti wa vitambulisho vyako katika kituo kimoja.
-summaryPoint2: Utambulisho uliogatuliwa huondoa utegemezi kwa washirika wengine wa kati.
-summaryPoint3: Shukrani kwa crypto, watumiaji sasa wana zana za kutoa, kushikilia na kudhibiti vitambulisho na uthibitishaji wao wenyewe kwa mara nyingine.
+summaryPoints:
+  - "Mifumo ya kitambulisho cha jadi imekita utoaji, matengenezo, na udhibiti wa vitambulisho vyako katika kituo kimoja."
+  - "Utambulisho uliogatuliwa huondoa utegemezi kwa washirika wengine wa kati."
+  - "Shukrani kwa crypto, watumiaji sasa wana zana za kutoa, kushikilia na kudhibiti vitambulisho na uthibitishaji wao wenyewe kwa mara nyingine."
 ---
 
 Utambulisho unashikilia takriban kila nyanja ya maisha yako leo. Kutumia huduma za mtandaoni, kufungua akaunti ya benki, kupiga kura katika uchaguzi, kununua mali, kupata ajira—mambo haya yote yanahitaji kuthibitisha utambulisho wako.

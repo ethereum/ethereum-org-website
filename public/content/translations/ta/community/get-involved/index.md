@@ -13,7 +13,7 @@ lang: ta
 ## டெவலப்பர்கள் <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) இல் எத்தேரியம் பற்றி அறிந்து, அதை முயற்சிக்கவும்
-- உங்களுக்கு அருகிலுள்ள [ETHGlobal](http://ethglobal.co/) ஹேக்கத்தானில் கலந்து கொள்ளுங்கள்!
+- உங்களுக்கு அருகிலுள்ள [ETHGlobal](https://ethglobal.co/) ஹேக்கத்தானில் கலந்து கொள்ளுங்கள்!
 - [உங்கள் நிபுணத்துவப் பகுதி அல்லது நீங்கள் விரும்பும் நிரலாக்க மொழி தொடர்பான திட்டங்களைச்](/developers/docs/programming-languages/) சரிபார்க்கவும்
 - [ஒருமித்த மற்றும் செயலாக்க அடுக்கு (Consensus and Execution Layer) அழைப்புகளைப்](https://www.youtube.com/@EthereumProtocol/streams) பார்க்கவும் அல்லது அதில் பங்கேற்கவும்
 - [Ecosystem Support Program இன் விருப்பப் பட்டியல்](https://esp.ethereum.foundation/wishlist/) - எத்தேரியம் Ecosystem Support Program தீவிரமாக மானிய விண்ணப்பங்களைத் தேடும் கருவி, ஆவணங்கள் மற்றும் உள்கட்டமைப்புப் பகுதிகள்
@@ -109,7 +109,7 @@ lang: ta
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys இல் வேலைவாய்ப்புகள்](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless வேலைவாய்ப்புப் பலகை](https://pallet.xyz/list/bankless/jobs)
+- [Bankless வேலைவாய்ப்புப் பலகை](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

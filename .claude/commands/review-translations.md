@@ -1,7 +1,7 @@
 ---
 description: Review translation imports for quality issues (full pipeline)
 allowed-tools: Bash(git *), Bash(pnpm *), Bash(npx tsx *), Bash(gh *), Bash(cp *), Bash(pwd), Bash(ls *), Bash(test *), Read, Glob, Grep, Task, Edit, Write, AskUserQuestion
-argument-hint: [--pr=NUMBER (auto)] [--scope=pr|full (pr)] [--language=CODE] [--model=opus|sonnet|haiku (opus)] [--no-fix] [--build-local] [--netlify-check]
+argument-hint: [--pr=NUMBER] [--language=CODE] [--model=opus|sonnet|haiku (opus)] [--full] [--no-fix] [--build-local] [--netlify-check]
 ---
 
 # Translation Review Command
@@ -14,20 +14,18 @@ Full pipeline for reviewing translation imports: worktree setup, sanitizer, AI r
 
 ## Modes of Operation
 
-### Mode 1: PR Review (Default)
-Reviews files changed in a specific PR.
+### Mode 1: Pending Translations (Default)
+Reviews the open PR for the canonical pending-translations branch (`intl/pending-dev`).
 ```
-/review-translations                    # Auto-detect PR, review all languages
-/review-translations --pr=16979         # Review specific PR's changed files
-/review-translations --scope=full       # Review ALL files for languages in PR
+/review-translations                    # Open PR for intl/pending-dev, all languages
+/review-translations --language=hi      # Same, filtered to Hindi only
 ```
 
-### Mode 2: Filtered PR Review
-Reviews only specific language(s) from a PR.
+### Mode 2: Specific PR
+Reviews a specific PR (e.g., a feature-branch translation PR like `intl/pending-feat-foo`).
 ```
-/review-translations --language=hi              # Filter auto-detected PR to Hindi only
-/review-translations --pr=16979 --language=hi   # Review only Hindi files from PR #16979
-/review-translations --pr=16979 --language=hi,bn --scope=full  # All Hindi+Bengali files
+/review-translations --pr=18040                 # Specific PR
+/review-translations --pr=18040 --language=hi   # Specific PR, Hindi only
 ```
 
 ### Mode 3: Standalone Language Review
@@ -36,14 +34,18 @@ Reviews all files for a language when no PR context is available.
 /review-translations --language=es      # On dev branch: review all Spanish files
 ```
 
+## Scope behavior
+
+By default, the command reviews **only files changed since the last LLM review** of this PR (incremental). The prior-review SHA is read from the most recent submitted PR Review on the PR (`commit_id` field, see Phase 0). If no prior review exists, the full PR diff is reviewed. Pass `--full` to override and re-review the entire PR diff even when a prior review exists.
+
 ## Flags
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `--pr=NUMBER` | Specific PR to review | auto-detect from `i18n*` branch |
-| `--scope=pr\|full` | `pr` = only PR changed files, `full` = all files for languages | `pr` |
+| `--pr=NUMBER` | Specific PR to review | open PR for `intl/pending-dev` |
 | `--language=CODES` | Filter to specific language(s), comma-separated | all languages in PR |
 | `--model=MODEL` | Model for analysis: `opus` (deep), `sonnet` (balanced), `haiku` (fast) | `opus` |
+| `--full` | Re-review the entire PR diff, ignoring any prior review SHA | absent (incremental) |
 | `--no-fix` | Skip auto-fixing critical issues; only present findings | absent (fixes applied by default) |
 | `--build-local` | Run a local scoped build to verify no MDX compilation errors | absent (skipped by default) |
 | `--netlify-check` | Check Netlify deploy preview for build failures | absent (skipped by default) |
@@ -53,9 +55,9 @@ Reviews all files for a language when no PR context is available.
 ### Parse Flags
 
 Extract from $ARGUMENTS:
-- `PR_NUMBER`: from `--pr=NUMBER` or auto-detect
+- `PR_NUMBER`: from `--pr=NUMBER` or auto-detect (see below)
 - `LANGUAGE_FILTER`: from `--language=CODES` (comma-separated) or empty
-- `SCOPE`: from `--scope=pr|full` (default: `pr`)
+- `FULL_REVIEW`: `true` if `--full` is present, `false` otherwise
 - `NO_FIX`: `true` if `--no-fix` is present, `false` otherwise
 - `BUILD_LOCAL`: `true` if `--build-local` is present, `false` otherwise
 - `NETLIFY_CHECK`: `true` if `--netlify-check` is present, `false` otherwise
@@ -64,25 +66,22 @@ Extract from $ARGUMENTS:
 
 1. **Attempt PR Detection**
    - If `--pr=NUMBER` provided → use that PR
-   - Otherwise, check if branch starts with `i18n`:
+   - Otherwise, look up the open PR for the canonical pending-translations branch:
      ```bash
-     BRANCH=$(git branch --show-current)
-     if [[ "$BRANCH" == i18n* ]]; then
-       PR_NUMBER=$(gh pr view --json number -q .number 2>/dev/null)
-     fi
+     PR_NUMBER=$(gh pr list --head intl/pending-dev --state open --json number -q '.[0].number' 2>/dev/null)
      ```
 
 2. **Route to Mode**
    - If `PR_NUMBER` found → continue to **PR Mode Setup**
    - If no `PR_NUMBER`:
      - If `--language` provided → continue to **Standalone Mode Setup**
-     - Otherwise → error: "No PR detected. Use --pr=NUMBER or --language=CODE"
+     - Otherwise → error: "No open PR found for intl/pending-dev. Use --pr=NUMBER or --language=CODE."
 
 ### PR Mode Setup (Mode 1 & 2)
 
 3. **Determine Languages**
-   - If `--language=CODES` provided: Use those as filter (Mode 2)
-   - Otherwise: Extract all languages from PR (Mode 1)
+   - If `--language=CODES` provided: Use those as filter
+   - Otherwise: Extract all languages from PR
 
    To extract languages from PR:
    ```bash
@@ -91,26 +90,44 @@ Extract from $ARGUMENTS:
      sed 's|.*translations/||;s|.*intl/||' | cut -d'/' -f1 | sort -u
    ```
 
-4. **Determine File Scope**
-   - If `--scope=full`: Review ALL files for the determined languages
-   - If `--scope=pr` (default): Review ONLY files changed in the PR
+4. **Determine Scope: Incremental vs. Full PR Diff**
 
-   For `--scope=pr`, get the specific file list:
+   The default behavior is **incremental** — review only files changed since the last LLM review of this PR. The prior-review SHA comes from the PR's submitted reviews. If `FULL_REVIEW` is true (i.e., `--full` was passed), skip the prior-review lookup entirely and use the full PR diff.
+
    ```bash
-   gh api repos/{owner}/{repo}/pulls/{PR}/files --paginate -q '.[].filename' | \
-     grep -E "(translations/|intl/)" | \
-     grep -E "/(${LANGUAGES_REGEX})/"  # If language filter applied
+   # Fetch all submitted reviews for this PR, sorted oldest -> newest
+   # Skip this fetch entirely when FULL_REVIEW is true.
+   REVIEWS_JSON=$(gh api "repos/{owner}/{repo}/pulls/${PR_NUMBER}/reviews" --paginate)
    ```
 
-5. **Report**:
-   - Mode 1: "Reviewing {N} files in PR #{NUMBER} ({LANGUAGES})"
-   - Mode 2: "Reviewing {N} {LANGUAGE} files in PR #{NUMBER}"
+   **Identify the prior intl-pipeline review** (most recent first). If `FULL_REVIEW` is true, skip this step and proceed directly to the full-PR-diff branch below; report `"Override (--full): reviewing full PR diff ({N} files)."` This command may be invoked locally, in which case the review may have been posted under the user's GitHub identity rather than Claude's — so do **not** filter by `user.login`. Instead, scan review bodies and pick the most recent one whose body looks like a translation-quality review (heuristics: contains the heading `Translation Quality Review`, mentions multiple language codes, contains a scoring table, mentions glossary/ETHGlossary, or is signed by Claude). Bodies like "LGTM", "approved", or unrelated technical reviews must NOT match.
+
+   - If a matching review is found:
+     - Set `LAST_REVIEWED_SHA = <commit_id>` from that review object (GitHub-attached, authoritative).
+     - Compute the file list as the diff from `LAST_REVIEWED_SHA` to PR HEAD:
+       ```bash
+       PR_HEAD_SHA=$(gh pr view ${PR_NUMBER} --json headRefOid -q .headRefOid)
+       gh api "repos/{owner}/{repo}/compare/${LAST_REVIEWED_SHA}...${PR_HEAD_SHA}" \
+         --jq '.files[].filename' | \
+         grep -E "(translations/|intl/)" | \
+         grep -E "/(${LANGUAGES_REGEX})/"   # If language filter applied
+       ```
+     - If the compare API errors (e.g., `LAST_REVIEWED_SHA` is unreachable from current HEAD due to a force-push or rebase): log a warning and fall back to the full PR diff below.
+     - Report: "Incremental review since prior review at `${LAST_REVIEWED_SHA:0:10}` -- {N} files changed."
+
+   - If no matching prior review is found: review the full PR diff.
+     ```bash
+     gh api repos/{owner}/{repo}/pulls/{PR}/files --paginate -q '.[].filename' | \
+       grep -E "(translations/|intl/)" | \
+       grep -E "/(${LANGUAGES_REGEX})/"   # If language filter applied
+     ```
+     Report: "No prior LLM review found -- reviewing full PR diff ({N} files)."
 
 ### Standalone Mode Setup (Mode 3)
 
 3. **Set Languages** from `--language=CODES`
 
-4. **Set Scope** to `full` (review all files for those languages on `dev` branch)
+4. **Scope:** Review all files for those languages on the `dev` branch.
 
 5. **Report**: "Reviewing all {LANGUAGE} files on dev branch"
 
@@ -191,30 +208,6 @@ cp .env.example .env.local
 pnpm install
 ```
 
-### 1d. Run Sanitizer
-
-Run the PR-scoped sanitizer to fix deterministic issues before the AI review:
-
-```bash
-cd "$WORKTREE_PATH"
-npx tsx src/scripts/i18n/sanitize-pr.ts --pr={PR_NUMBER}
-```
-
-The sanitizer handles:
-- Brand name auto-fix in frontmatter tags
-- Ticker symbol corrections
-- MDX angle bracket escaping (`<` → `&lt;`)
-- Orphaned HTML tag removal
-- Cross-script contamination detection
-- Untranslated content detection (franc-min)
-
-**Review the sanitizer output.** Stage the fixes it makes:
-```bash
-git add -A public/content/translations/ src/intl/
-```
-
-Report to user: "Sanitizer complete. {N} files modified. Changes staged."
-
 ## Phase 2: Load Knowledge Base and Glossary
 
 Before deploying agents, load accumulated knowledge from prior reviews:
@@ -224,38 +217,39 @@ Read `.claude/translation-review/known-patterns.md` — this contains all issue 
 
 ### Translation Glossary (AUTHORITATIVE SOURCE)
 
-The EthGlossary API (`https://ethereum.org/api/glossary`) is the **authoritative source** for all Ethereum term translations across the entire pipeline. Community-voted glossary terms are not suggestions — they are the required translations.
+**ETHGlossary** is the authoritative source for Ethereum term translations. Deviations are critical issues, not warnings.
 
-**Fetch live from the API first, fall back to cache only if the API is unreachable:**
+Resolve the base URL from the pipeline config (env var wins; default lives in `src/scripts/intl-pipeline/config.ts` under `GLOSSARY_API_URL`):
 
 ```bash
-# Fetch live glossary
-GLOSSARY_CACHE="$HOME/.claude/translation-review/fetch-translation-glossary.json"
-GLOSSARY_URL="https://ethereum.org/api/glossary"
-
-# Try live fetch first
-if curl -sf "$GLOSSARY_URL" -o "$TMPDIR/glossary-live.json" 2>/dev/null; then
-  # Update cache with fresh data
-  cp "$TMPDIR/glossary-live.json" "$GLOSSARY_CACHE"
-  echo "Glossary fetched live from API and cache updated."
-else
-  echo "WARNING: API unreachable, using cached glossary."
-fi
+GLOSSARY_API_URL="${GLOSSARY_API_URL:-$(grep -oE 'https://[^"]+/api/v[0-9]+' "$WORKTREE_PATH/src/scripts/intl-pipeline/config.ts" | head -1)}"
+GLOSSARY_HOST="${GLOSSARY_API_URL%/api/*}"
 ```
 
-Schema: `Array<{ string_term, translation_text, language_code, total_votes }>`.
+Fetch `llms.txt` first as the canonical reference for endpoints and languages; if examples below disagree, llms.txt wins:
 
-For each language being reviewed, extract relevant glossary terms:
-```
-Filter entries where language_code matches the target locale.
-Sort by total_votes descending.
-Include ALL terms for the language (not just top 50) — these are authoritative.
+```bash
+curl -sf "$GLOSSARY_HOST/llms.txt" \
+  -o "$TMPDIR/ethglossary-llms.txt" \
+  && cp "$TMPDIR/ethglossary-llms.txt" "$HOME/.claude/translation-review/ethglossary-llms.txt"
 ```
 
-**The glossary is used in every subsequent phase:**
-- **Phase 3 (Review):** Agents treat glossary deviations as CRITICAL, not warnings
-- **Phase 5 (Auto-Fix):** Glossary deviations are auto-corrected to the top-voted translation
-- **Phase 8 (Knowledge Base):** New deviations discovered are logged for future reviews
+**Preferred — per-file filter** (`POST /filter`): returns only the glossary terms that appear in the English source, with translations sorted by occurrence. Avoids pulling hundreds of irrelevant terms into agent context.
+
+```bash
+ENGLISH_SOURCE=$(cat "$WORKTREE_PATH/public/content/{path}.md")
+curl -sf -X POST "$GLOSSARY_API_URL/filter" \
+  -H "Content-Type: application/json" \
+  -d "$(jq -n --arg content "$ENGLISH_SOURCE" --arg lang "{LANGUAGE_CODE}" '{content: $content, language: $lang}')"
+```
+
+**Fallback — full language** when filtering per file is impractical or the endpoint is unreachable:
+
+```bash
+curl -sf "$GLOSSARY_API_URL/translations/{LANGUAGE_CODE}"
+```
+
+Used in Phase 3 (review — deviations are CRITICAL), Phase 5 (auto-fix corrects to ETHGlossary translation), Phase 8 (new deviations logged).
 
 ### Per-Language Prior Findings
 Check if `.claude/translation-review/per-language/{LANGUAGE_CODE}.md` exists. If so, read it and inject relevant prior findings into the agent prompt.
@@ -322,31 +316,24 @@ The community has voted on these translations for key Ethereum terms. Use these 
 
 ## Review Methodology
 
-**For PR scope (`--scope=pr`):**
-- Focus on NEW or CHANGED content in the PR (not pre-existing content)
+**For PR-mode reviews (Modes 1 & 2):**
+- Focus on NEW or CHANGED content within the scope determined in Phase 0 (incremental since last review, or full PR diff)
 - Issues in unchanged lines are out of scope for this review
 - Read both translation AND English source files from the worktree
 
-**For full scope (`--scope=full` or `--language`):**
+**For standalone language review (Mode 3):**
 - Review the entire current content of each file
 - Compare against English source files from the worktree
 
-## MANDATORY: Fetch Ethereum Glossary FIRST
+## MANDATORY: Use ETHGlossary for the target language
 
-**Before reviewing ANY translation, you MUST fetch the official Ethereum glossary for the language(s) being reviewed.** This is non-negotiable. The glossary contains community-approved translations for key terms.
+Use the ETHGlossary terms fetched in Phase 2 as the authority for technical term translations. Report deviations as **critical** issues (not warnings), with the current (wrong) translation and the expected (ETHGlossary) translation so Phase 5 can auto-fix them.
 
-```bash
-# Fetch full glossary (all languages):
-curl -s "https://ethereum.org/api/glossary/"
+**If you skip ETHGlossary, the entire review is invalid.**
 
-# Fetch glossary for a specific language (optional lang param, one at a time):
-curl -s "https://ethereum.org/api/glossary/?lang=fr"
-curl -s "https://ethereum.org/api/glossary/?lang=ja"
-```
+## On finding zero issues
 
-The glossary returns approved translations per language. Use these as the authority for how technical terms SHOULD be translated. Flag any deviations as warnings with "Glossary mismatch" in the issue column.
-
-**If you skip the glossary, the entire review is invalid.**
+**Reporting zero critical issues is a fully acceptable outcome.** Do not invent issues to "show your work." If you genuinely cannot find a critical problem after a thorough check, report `0 critical, N warnings` (or `0/0`) and that is a valid result. Fabricated criticals cost more reviewer time than missed minor issues.
 
 ## Review Checklist
 
@@ -607,27 +594,38 @@ Use AskUserQuestion to present options:
 **Question:** "Review complete. Found X critical issues (auto-fixed), Y warnings across N languages."
 
 **Options:**
-1. **Post scores to PR** — Post quality scores as a comment on the PR
+1. **Submit review to PR** — Submit quality scores as a proper PR Review (not an issue comment)
 2. **Review warnings** — Show detailed warning list for manual review
 3. **Prepare commit message** — Generate commit message for all staged changes (sanitizer + review fixes)
 4. **Done** — End review session
 
-### If "Post scores to PR" selected:
+### If "Submit review to PR" selected:
 
-Write the comment body to a temp file (to avoid heredoc backtick issues), then post:
+**This MUST be submitted as a proper PR Review, not an issue comment.** The next invocation of `/review-translations` reads each PR Review's GitHub-attached `commit_id` to determine the incremental scope. An issue comment (`gh pr comment`) does not carry a `commit_id` and would break the incremental flow.
+
+Write the review body to a temp file (to avoid heredoc backtick issues), then submit it via `gh pr review`, which auto-attaches the current PR HEAD SHA as `commit_id`:
 
 ```bash
-gh pr comment {PR_NUMBER} --body-file "$TMPDIR/pr-comment-{PR_NUMBER}.md"
+gh pr review ${PR_NUMBER} --comment --body-file "$TMPDIR/pr-review-${PR_NUMBER}.md"
 ```
 
-Comment format:
+Use `--approve` instead of `--comment` only when the review turned up **zero critical issues** (whether because none were found, or because all were auto-fixed in this same run). Otherwise use `--comment`. Never use `--request-changes`.
+
+Review body format:
 ```markdown
 ## Translation Quality Review
 
 **PR:** #{PR_NUMBER}
+**Branch HEAD:** `{PR_HEAD_SHA_FIRST_10}` (capture inline: `gh pr view ${PR_NUMBER} --json headRefOid -q .headRefOid`)
 **Languages:** {LANG_LIST}
 **Files reviewed:** {TOTAL_FILES}
 **Date:** {TODAY}
+**Fixes:** {FIXES_LINE}
+
+Where `{FIXES_LINE}` is one of:
+- `Critical fixes applied: {N}` -- when running locally with auto-fix enabled and fixes were committed to this branch
+- `No fixes applied (review-only)` -- when running in GitHub Actions without `--fix`, or when `--no-fix` was passed locally
+- `No critical issues found` -- when there were no critical issues to fix in the first place
 
 | Language | Files | Quality Score | Issues |
 |----------|-------|---------------|--------|
@@ -733,6 +731,6 @@ ETH, Wei, Gwei, Gas
 - Use `--model=sonnet` or `--model=haiku` for faster reviews
 - Build verification is opt-in: `--build-local` for local scoped builds, `--netlify-check` for Netlify deploy preview checks
 - If an agent exceeds context limits with Opus, fall back to Sonnet with Grep-based file inspection
-- **EthGlossary API** (`https://ethereum.org/api/glossary`) is fetched live in Phase 2 and is the authoritative source for term translations across the entire pipeline — review (Phase 3), auto-fix (Phase 5), and knowledge base (Phase 8). The local cache at `~/.claude/translation-review/fetch-translation-glossary.json` is a fallback only.
+- **ETHGlossary** is the authoritative source for term translations across review (Phase 3), auto-fix (Phase 5), and knowledge base (Phase 8). See Phase 2 for usage; `llms.txt` is the canonical endpoint reference.
 - Knowledge base at `.claude/translation-review/` accumulates findings across reviews (committed to repo)
 - `gh` CLI commands require `dangerouslyDisableSandbox: true` due to TLS certificate verification issues in sandbox mode

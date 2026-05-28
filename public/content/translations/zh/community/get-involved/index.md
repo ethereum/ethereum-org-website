@@ -13,7 +13,7 @@ lang: zh
 ## 开发者 <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - 访问 [ethereum.org/developers/](/developers/)，了解并尝试以太坊
-- 参加您附近的 [ETHGlobal](http://ethglobal.co/) 黑客马拉松！
+- 参加您附近的 [ETHGlobal](https://ethglobal.co/) 黑客马拉松！
 - 查看[与您的专业领域或所选编程语言相关的项目](/developers/docs/programming-languages/)
 - 观看或参与[共识层与执行层开发者会议](https://www.youtube.com/@EthereumProtocol/streams)
 - [生态系统支持计划的愿望清单](https://esp.ethereum.foundation/wishlist/) - 以太坊生态系统支持计划正在积极寻求工具、文档和基础设施领域的资助申请
@@ -109,7 +109,7 @@ lang: zh
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [ConsenSys 职业发展](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless 招聘看板](https://pallet.xyz/list/bankless/jobs)
+- [Bankless 招聘看板](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

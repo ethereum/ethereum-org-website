@@ -2,7 +2,7 @@ import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import Card from "@/components/Card"
+import Codeblock from "@/components/Codeblock"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
@@ -17,6 +17,7 @@ import MarkdownImage from "@/components/Image/MarkdownImage"
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -94,28 +95,27 @@ export const Heading4 = ({
   </h4>
 )
 
-export const Pre = (props: ChildOnlyProp) => (
-  <pre
-    className="max-w-full overflow-x-scroll whitespace-pre-wrap rounded border bg-background-highlight p-4"
-    {...props}
-  />
-)
+export const Pre = (props: HTMLAttributes<HTMLDivElement>) => {
+  const match = props.className?.match(/(language-\S+)/)
+  const codeLanguage = match ? match[0] : "plain-text"
+  return <Codeblock codeLanguage={codeLanguage} {...props} />
+}
 
 type ParagraphProps = ChildOnlyProp & { className?: string }
 
 export const Paragraph = ({ className, ...props }: ParagraphProps) => (
-  <p className={cn("mb-4 mt-8", className)} {...props} />
+  <p className={cn("mt-8 mb-4", className)} {...props} />
 )
 
 export const Blockquote = (props: ChildOnlyProp) => (
   <blockquote
-    className="mb-4 mt-8 border-s-2 border-accent-a bg-accent-a/10 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
+    className="mt-8 mb-4 border-s-2 border-accent-a bg-accent-a/10 p-6 [&>:first-child]:mt-0 [&>:last-child]:mb-0"
     {...props}
   />
 )
 
 export const HR = () => (
-  <hr className="mb-4 mt-8 inline-block w-full border-body-medium opacity-60" />
+  <hr className="mt-8 mb-4 inline-block w-full border-body-medium opacity-60" />
 )
 
 // All base html element components
@@ -140,13 +140,19 @@ export const htmlElements = {
 /**
  * Custom React components
  */
+const { Alert, ...AlertSubComponents } = AlertComponents
+
+const AlertWithMargins = ({ className, ...props }) => (
+  <Alert className={cn("my-8", className)} {...props} />
+)
+
 export const Page = ({
   className,
   ...props
 }: HTMLAttributes<HTMLDivElement>) => (
   <Flex
     className={cn(
-      "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16 lg:first-of-type:[&_h2]:mt-0",
+      "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16",
       className
     )}
     {...props}
@@ -159,16 +165,20 @@ export const Title = (props: ChildOnlyProp) => (
 
 export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
-    <MainArticle className="relative flex-[1_1_992px] px-8 pb-8" {...props} />
+    <MainArticle
+      className="relative flex-[1_1_992px] px-8 pb-8 *:first:mt-0"
+      {...props}
+    />
   )
 }
 
 // All custom React components
 export const reactComponents = {
-  ...AlertComponents,
+  Alert: AlertWithMargins,
+  ...AlertSubComponents,
   BrowseApps,
   ButtonLink,
-  Card,
+  Card: MarkdownCard,
   ContentContainer,
   Contributors,
   Divider,

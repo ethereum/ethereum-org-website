@@ -13,12 +13,13 @@ import {
 import { getAppPageLastCommitDate } from "./gh"
 import { getLocaleTimestamp } from "./time"
 
-import { getGitHubContributors, getStaticGitHubContributors } from "@/lib/data"
+import { getStaticGitHubContributors } from "@/lib/data"
 
 /** Sort team members to the end, preserving relative order within each group. */
 const sortTeamToEnd = (contributors: FileContributor[]): FileContributor[] =>
-  contributors.toSorted((a, b) =>
-    Number(TEAM_LOGINS.has(a.login)) - Number(TEAM_LOGINS.has(b.login))
+  contributors.toSorted(
+    (a, b) =>
+      Number(TEAM_LOGINS.has(a.login)) - Number(TEAM_LOGINS.has(b.login))
   )
 
 export const getMarkdownFileContributorInfo = async (
@@ -53,7 +54,7 @@ export const getAppPageContributorInfo = async (
 ) => {
   // TODO: Incorporate Crowdin contributor information
 
-  const contributorsData = await getGitHubContributors()
+  const contributorsData = await getStaticGitHubContributors()
   const gitHubContributors = contributorsData?.appPages[pagePath] ?? []
 
   const uniqueGitHubContributors = gitHubContributors.filter(

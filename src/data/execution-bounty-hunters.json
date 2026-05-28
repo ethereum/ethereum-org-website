@@ -42,7 +42,7 @@
     {
     "username": "revofusion",
     "name": "Revofusion",
-    "score": 20000
+    "score": 25000
   },
   {
     "username": "peckshield",
@@ -57,6 +57,11 @@
   {
     "username": "catageek",
     "name": "Bertrand Masius",
+    "score": 15000
+  },
+  {
+    "username": "VulSight",
+    "name": "VulSight",
     "score": 15000
   },
   {
@@ -92,7 +97,12 @@
   {
     "username": "iam-ned",
     "name": "David Matosse",
-    "score": 10000
+    "score": 16250
+  },
+  {
+    "username": "cyberthirst",
+    "name": "cyberthirst",
+    "score": 11000
   },
   {
     "username": "jtoman",
@@ -102,11 +112,6 @@
   {
     "username": "ehdgks0627",
     "name": "DongHan Kim",
-    "score": 10000
-  },
-  {
-    "username": "VulSight",
-    "name": "VulSight",
     "score": 10000
   },
   {
@@ -123,6 +128,11 @@
     "username": "",
     "name": "Dominic Brütsch",
     "score": 7500
+  },
+  {
+    "username": "r9295",
+    "name": "aarnavrotten",
+    "score": 5250
   },
   {
     "username": "HarryR",
@@ -152,11 +162,6 @@
   {
     "username": "Yenya030",
     "name": "Yenya",
-    "score": 5000
-  },
-  {
-    "username": "r9295",
-    "name": "aarnavrotten",
     "score": 5000
   },
   {
@@ -307,7 +312,7 @@
   {
     "username": "DELENE-TCHIO-ROMUALD",
     "name": "Delene Tchio Romuald",
-    "score": 11000
+    "score": 11250
   },
   {
     "username": "Mart1i1n",
@@ -327,6 +332,11 @@
   {
     "username": "Audittens",
     "name": "Audittens",
+    "score": 1000
+  },
+  {
+    "username": "sonny2k",
+    "name": "sonny2k",
     "score": 1000
   },
   {

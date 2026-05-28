@@ -79,17 +79,12 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
                   <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />
                 </p>
                 <p>
-                  {row.original.txCosts ? (
-                    <>
-                      $
-                      {numberFormat(meta.locale as Lang, {
+                  {row.original.txCosts
+                    ? `$${numberFormat(meta.locale as Lang, {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 3,
-                      }).format(row.original.txCosts || 0)}
-                    </>
-                  ) : (
-                    <p>-</p>
-                  )}
+                      }).format(row.original.txCosts || 0)}`
+                    : "-"}
                 </p>
               </div>
               <div>
@@ -129,7 +124,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
     id: "average_transaction_fee",
     header: () => (
       <TableHead className="hidden w-[145px] px-0 text-end lg:table-cell">
-        <p className="leading-1 text-xs">
+        <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip
@@ -186,7 +181,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
     id: "market_share",
     header: () => (
       <TableHead className="hidden w-[120px] px-0 text-end lg:table-cell">
-        <p className="leading-1 text-xs">
+        <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-market-share" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip
@@ -238,7 +233,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup & { id: string }>[] = [
     id: "network_maturity",
     header: () => (
       <TableHead className="hidden w-[145px] px-0 text-end lg:table-cell">
-        <p className="leading-1 text-xs">
+        <p className="text-xs">
           <Translation id="page-layer-2-networks:page-layer-2-networks-network-maturity" />{" "}
           <span className="whitespace-nowrap">
             <Tooltip

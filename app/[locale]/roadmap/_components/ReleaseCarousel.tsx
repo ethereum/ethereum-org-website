@@ -182,7 +182,7 @@ const ReleaseCarousel = () => {
                               "flex h-1 flex-1",
                               index !== 0
                                 ? status === "soon"
-                                  ? "bg-gradient-to-r from-primary to-primary-low-contrast"
+                                  ? "bg-linear-to-r from-primary to-primary-low-contrast"
                                   : status === "prod"
                                     ? "bg-primary"
                                     : "bg-primary-low-contrast"
@@ -253,6 +253,7 @@ const ReleaseCarousel = () => {
                           src={release.image}
                           alt={release.releaseName}
                           className="h-[240px] rounded-2xl object-cover md:h-[266px] lg:h-[551px]"
+                          sizes="(max-width: 992px) 100vw, (max-width: 1536px) 50vw, 768px"
                         />
                       </div>
                       <div className="flex flex-1 flex-col gap-8">

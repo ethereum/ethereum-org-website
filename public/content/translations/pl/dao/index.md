@@ -4,13 +4,13 @@ metaTitle: Czym jest DAO? | Zdecentralizowana organizacja autonomiczna
 description: "Przegląd DAO na Ethereum"
 lang: pl
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: "Reprezentacja DAO głosującego nad wnioskiem."
-summaryPoint1: "Społeczności należące do członków bez scentralizowanego przywództwa."
-summaryPoint2: "Bezpieczny sposób współpracy z nieznajomymi w Internecie."
-summaryPoint3: "Bezpieczne miejsce, w którym można przeznaczyć środki na określoną sprawę."
+summaryPoints:
+  - "Społeczności należące do członków bez scentralizowanego przywództwa."
+  - "Bezpieczny sposób współpracy z nieznajomymi w Internecie."
+  - "Bezpieczne miejsce, w którym można przeznaczyć środki na określoną sprawę."
 ---
 
 ## Czym są DAO? {#what-are-daos}
@@ -114,7 +114,7 @@ _Zwykle używane w przypadku organizacji bardziej zwartych i zorientowanych na l
 
 #### Znany przykład {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO koncentruje się na finansowaniu projektów Ethereum. Wymagają one wniosku o członkostwo, tak aby grupa mogła ocenić, czy posiadasz kapitał i wiedzę specjalistyczną niezbędną do dokonania świadomych ocen dotyczących potencjalnych odbiorców grantów. Nie można po prostu kupić dostępu do DAO na otwartym rynku.
+[MolochDAO](https://molochdao.com/) – MolochDAO koncentruje się na finansowaniu projektów Ethereum. Wymagają one wniosku o członkostwo, tak aby grupa mogła ocenić, czy posiadasz kapitał i wiedzę specjalistyczną niezbędną do dokonania świadomych ocen dotyczących potencjalnych odbiorców grantów. Nie można po prostu kupić dostępu do DAO na otwartym rynku.
 
 ### Członkostwo oparte na reputacji {#reputation-based-membership}
 

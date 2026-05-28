@@ -13,7 +13,7 @@ lang: bn
 ## ডেভেলপার <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/)-এ ইথিরিয়াম সম্পর্কে জানুন এবং চেষ্টা করে দেখুন
-- আপনার কাছাকাছি একটি [ETHGlobal](http://ethglobal.co/) হ্যাকাথনে অংশগ্রহণ করুন!
+- আপনার কাছাকাছি একটি [ETHGlobal](https://ethglobal.co/) হ্যাকাথনে অংশগ্রহণ করুন!
 - [আপনার দক্ষতার ক্ষেত্র বা পছন্দের প্রোগ্রামিং ভাষার সাথে সম্পর্কিত প্রজেক্টগুলো](/developers/docs/programming-languages/) দেখুন
 - [কনসেন্সাস এবং এক্সিকিউশন লেয়ার কলগুলোতে](https://www.youtube.com/@EthereumProtocol/streams) অংশগ্রহণ করুন বা দেখুন
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - টুলিং, ডকুমেন্টেশন এবং ইনফ্রাস্ট্রাকচার ক্ষেত্র যেখানে ইথিরিয়াম ইকোসিস্টেম সাপোর্ট প্রোগ্রাম সক্রিয়ভাবে অনুদানের আবেদন খুঁজছে
@@ -109,7 +109,7 @@ lang: bn
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless জব বোর্ড](https://pallet.xyz/list/bankless/jobs)
+- [Bankless জব বোর্ড](https://www.bankless.com/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

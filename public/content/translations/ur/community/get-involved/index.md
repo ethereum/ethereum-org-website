@@ -13,7 +13,7 @@ lang: ur
 ## ڈیولپرز <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) پر ایتھیریم کے بارے میں جانیں اور اسے آزمائیں
-- اپنے قریب کسی [ETHGlobal](http://ethglobal.co/) ہیکاتھون میں شرکت کریں!
+- اپنے قریب کسی [ETHGlobal](https://ethglobal.co/) ہیکاتھون میں شرکت کریں!
 - [اپنی مہارت کے شعبے یا پسندیدہ پروگرامنگ زبان سے متعلق پروجیکٹس](/developers/docs/programming-languages/) دیکھیں
 - [Consensus and Execution Layer calls](https://www.youtube.com/@EthereumProtocol/streams) دیکھیں یا ان میں حصہ لیں
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - ٹولنگ، دستاویزات، اور انفراسٹرکچر کے وہ شعبے جہاں ایتھیریم ایکو سسٹم سپورٹ پروگرام فعال طور پر گرانٹ کی درخواستیں طلب کر رہا ہے

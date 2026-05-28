@@ -1,4 +1,4 @@
-import Card from "@/components/Card"
+import MarkdownCard from "@/components/MarkdownCard"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
 import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet"
 
@@ -24,10 +24,10 @@ const Trilemma = () => {
   }
 
   return (
-    <Flex className="flex-col items-center justify-between space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
-      <Stack className="mt-16 space-y-8 md:mx-12 md:mt-20 lg:mb-20 lg:mr-0 lg:flex-[0_1_500px]">
+    <Flex className="flex-col items-center justify-between gap-8 lg:flex-row lg:gap-12">
+      <Stack className="mt-16 gap-8 md:mx-12 md:mt-20 lg:mr-0 lg:mb-20 lg:flex-[0_1_500px]">
         <h2>{t("page-roadmap-vision-trilemma-h2")}</h2>
-        <VStack className="space-y-6">
+        <VStack className="gap-6">
           <p>{t("page-roadmap-vision-trilemma-p")}</p>
           <p>{t("page-roadmap-vision-trilemma-p-1")}</p>
           <p>{t("page-roadmap-vision-trilemma-p-2")}</p>
@@ -35,12 +35,18 @@ const Trilemma = () => {
             {t("page-roadmap-vision-trilemma-modal-tip")}:
           </p>
         </VStack>
-        <Card {...cardDetail} className="mt-6 hidden min-h-[300px] lg:block" />
+        <MarkdownCard
+          {...cardDetail}
+          className="hidden min-h-[300px] lg:block"
+        />
       </Stack>
       <Sheet open={mobileModalOpen} onOpenChange={handleModalClose}>
         <SheetContent side="bottom" className="rounded-t-[16px]">
-          <Card {...cardDetail} className="my-8 border-none bg-transparent" />
-          <SheetClose className="absolute right-3 top-5">
+          <MarkdownCard
+            {...cardDetail}
+            className="my-8 border-none bg-transparent"
+          />
+          <SheetClose className="absolute top-5 right-3">
             <span className="sr-only">Close</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

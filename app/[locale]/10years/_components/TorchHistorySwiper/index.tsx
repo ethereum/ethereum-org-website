@@ -49,7 +49,6 @@ const TorchHistorySwiper = ({ holders }: TorchHistorySwiperProps) => {
               className="flex !min-h-[400px] !w-60 justify-center"
             >
               <TorchHistoryCard
-                className="!min-h-[400px]"
                 name={holder.name}
                 role={holder.role}
                 avatar={holder.avatarPath}
@@ -57,8 +56,6 @@ const TorchHistorySwiper = ({ holders }: TorchHistorySwiperProps) => {
                 from={holder.event.timestamp}
                 to={toTimestamp}
                 transactionHash={holder.event.transactionHash}
-                isCurrentHolder={false}
-                isPlaceholder={false}
               />
             </SwiperSlide>
           )

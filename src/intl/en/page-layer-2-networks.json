@@ -64,6 +64,7 @@
   "page-layer-2-networks-transaction-fee": "Transaction fee",
   "page-layer-2-networks-transaction-fee-description": "The average cost of transaction for transfers, swaps, minting and other activities.",
   "page-layer-2-networks-transaction-see-networks": "See networks",
+  "page-layer-2-network-maturity-component-title": "Network maturity explained",
   "page-layer-2-network-maturity-component-1": "We review the network’s progress towards",
   "page-layer-2-network-maturity-component-2": "Ethereum alignment",
   "page-layer-2-network-maturity-component-3": "total value locked (TVL)",

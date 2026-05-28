@@ -1,5 +1,5 @@
 import { pickBy } from "lodash"
-import type { Meta, StoryObj } from "@storybook/react/*"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import { viewportModes } from "@/storybook/modes"
 
@@ -30,7 +30,6 @@ const {
   FeaturedText,
   Divider,
   hr: HR,
-  pre: Pre,
   Page,
 } = MdComponentSet
 
@@ -60,7 +59,6 @@ export const MdComponents: StoryObj = {
           <Title>Title</Title>
           <Para />
           <Divider />
-          <Pre>Lots of coding here</Pre>
           <HR />
           <FeaturedText>Feature Text</FeaturedText>
         </ContentContainer>

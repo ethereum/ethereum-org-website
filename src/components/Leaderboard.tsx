@@ -32,7 +32,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
 
   return (
     <List
-      className="mb-8 ms-0 w-full list-none bg-background shadow-table-box"
+      className="ms-0 mb-8 w-full list-none bg-background shadow-table-box"
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content
@@ -52,9 +52,9 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
           }
 
           return (
-            <ListItem className="mb-0" key={username}>
+            <ListItem className="mb-0" key={name + username + score}>
               <LinkBox
-                className="mb-1 flex w-full items-center justify-between p-4 shadow-table-item-box hover:rounded-lg hover:bg-background-highlight hover:no-underline hover:shadow-primary"
+                className="flex w-full items-center justify-between p-4 shadow-table-item-box hover:bg-background-highlight hover:no-underline hover:shadow-primary"
                 key={idx}
               >
                 <div className="me-4 opacity-40">{idx + 1}</div>

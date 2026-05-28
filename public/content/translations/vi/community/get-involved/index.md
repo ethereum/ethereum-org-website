@@ -13,7 +13,7 @@ Bắt đầu bằng cách đọc về sứ mệnh và giá trị của ethereum.
 ## Các nhà phát triển <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Tìm hiểu và dùng thử Ethereum tại [ethereum.org/developers/](/developers/)
-- Tham dự một hackathon [ETHGlobal](http://ethglobal.co/) gần bạn!
+- Tham dự một hackathon [ETHGlobal](https://ethglobal.co/) gần bạn!
 - Xem các [dự án liên quan đến lĩnh vực chuyên môn hoặc ngôn ngữ lập trình bạn chọn](/developers/docs/programming-languages/)
 - Xem hoặc tham gia các [cuộc gọi về Lớp đồng thuận và Lớp thực thi](https://www.youtube.com/@EthereumProtocol/streams)
 - [Danh sách mong muốn của Chương trình Hỗ trợ Hệ sinh thái](https://esp.ethereum.foundation/wishlist/) - các lĩnh vực công cụ, tài liệu và cơ sở hạ tầng mà Chương trình Hỗ trợ Hệ sinh thái Ethereum đang tích cực tìm kiếm các đơn xin tài trợ
@@ -109,7 +109,7 @@ Hệ sinh thái Ethereum đang nỗ lực tài trợ cho các sản phẩm công
 - [Việc làm Tiền mã hóa](https://cryptocurrencyjobs.co/ethereum/)
 - [Cơ hội nghề nghiệp tại ConsenSys](https://consensys.net/careers/)
 - [Danh sách Việc làm Crypto](https://cryptojobslist.com/ethereum-jobs)
-- [Bảng tin việc làm Bankless](https://pallet.xyz/list/bankless/jobs)
+- [Bảng tin việc làm Bankless](https://www.bankless.com/jobs)
 - [Việc làm Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Việc làm Crypto Valley](https://cryptovalley.jobs/)

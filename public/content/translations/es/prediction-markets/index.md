@@ -4,8 +4,9 @@ lang: es
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Reciba incentivos económicos por generar pronósticos precisos"
-summaryPoint2: Predicciones de alta calidad sobre eventos futuros
+summaryPoints:
+  - "Reciba incentivos económicos por generar pronósticos precisos"
+  - "Predicciones de alta calidad sobre eventos futuros"
 buttons:
   - content: Más información
     toId: "cómo-funcionan-los-mercados-de-predicción"

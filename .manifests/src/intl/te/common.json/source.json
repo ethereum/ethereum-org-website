@@ -1,0 +1,2713 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/common.json",
+  "generatedAt": "2026-05-20T17:27:10.503Z",
+  "rootHash": "57a30a6f1d94",
+  "tree": {
+    "contentHash": "1481d367f681",
+    "anchorHash": "490d863f6f7e",
+    "children": {
+      "about-ethereum-org": {
+        "contentHash": "9aafb3686977",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "about-us": {
+        "contentHash": "b4b580a9ad8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "account-abstraction": {
+        "contentHash": "2ebcf10050c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "acknowledgements": {
+        "contentHash": "c9015d53b908",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-desci-projects": {
+        "contentHash": "92d45401c7e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-developer-tools": {
+        "contentHash": "29af1093250c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-exchanges": {
+        "contentHash": "466b53f9bd45",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-glossary-terms": {
+        "contentHash": "1bae78a1c7db",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-layer-2s": {
+        "contentHash": "6d923239d710",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-products": {
+        "contentHash": "2b0088c852a3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-staking-products": {
+        "contentHash": "164d7d039b56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "adding-wallets": {
+        "contentHash": "fd215ca4b497",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ai-agents": {
+        "contentHash": "3d9e43485a12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "apps": {
+        "contentHash": "89dd748442c1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aria-toggle-menu-button": {
+        "contentHash": "5444ac6d3efd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "aria-toggle-search-button": {
+        "contentHash": "7c8ae7cbc0a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "beacon-chain": {
+        "contentHash": "1c677c008e2c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bridges": {
+        "contentHash": "ed615810e7b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "bug-bounty": {
+        "contentHash": "a1e0e1c4c290",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "build": {
+        "contentHash": "bdd254b65baa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "build-menu": {
+        "contentHash": "67bae0edaaa5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "business": {
+        "contentHash": "76f68a75f01e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "clear": {
+        "contentHash": "83b12c2216ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "close": {
+        "contentHash": "7d9eb7acb13e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "community": {
+        "contentHash": "bb501d7877eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "community-hub": {
+        "contentHash": "c2f9c96f91b7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "conferences": {
+        "contentHash": "dc2055fb466d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "consensus-when-shipping": {
+        "contentHash": "1afa1294f835",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "contact": {
+        "contentHash": "ca502deaca4b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "content-resources": {
+        "contentHash": "deab638494f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "content-standardization": {
+        "contentHash": "f1854793f823",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "contributing": {
+        "contentHash": "2b18598c711f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "contributors": {
+        "contentHash": "350ad433c42f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "contributors-thanks": {
+        "contentHash": "fb22f41eda02",
+        "anchorHash": "18c05effa137",
+        "children": {
+          "prose:1": {
+            "contentHash": "41ab0cea517c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "cbed6f45ba14",
+            "anchorHash": "ca7476848e57"
+          },
+          "prose:2": {
+            "contentHash": "7fac763b7e70",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "cookie-policy": {
+        "contentHash": "edd5b2fd9f74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copied": {
+        "contentHash": "8d525e5f158b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "copy": {
+        "contentHash": "e21f935f11d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "danksharding": {
+        "contentHash": "d5c7c6294c3d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "dao-page": {
+        "contentHash": "3b8a14b99fc4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "dark-mode": {
+        "contentHash": "60acc53f13a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "dark-mode-aria-label": {
+        "contentHash": "fc43ea9804c7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "data-provided-by": {
+        "contentHash": "41b27fa840e7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "application-explorer": {
+        "contentHash": "40b476a30fcc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "decentralized-identity": {
+        "contentHash": "a71bc8e61322",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "decentralized-science": {
+        "contentHash": "59a8a56953f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "decentralized-social-networks": {
+        "contentHash": "4f2cedac6570",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "defi-page": {
+        "contentHash": "ba1a84f8388c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "description": {
+        "contentHash": "c7b1e6b4be2a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "design": {
+        "contentHash": "0072e6b93494",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "design-principles": {
+        "contentHash": "213f16fc34b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "devcon": {
+        "contentHash": "fb7c67ccf472",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "developers": {
+        "contentHash": "fc799da2088d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docs": {
+        "contentHash": "7af023c43013",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-error-help": {
+        "contentHash": "a90ebaa3e738",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-error-title": {
+        "contentHash": "d8819ac88d31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-no-results-missing": {
+        "contentHash": "d258ae019466",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-no-results-missing-link": {
+        "contentHash": "e0b5363aa7b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-no-results-suggested-query": {
+        "contentHash": "71d1853437eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-no-results-text": {
+        "contentHash": "ca05013959ab",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-search-by": {
+        "contentHash": "86f5c627fced",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-start-favorite-searches": {
+        "contentHash": "ea713ecd8537",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-start-no-recent-searches": {
+        "contentHash": "fa985b571cdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-start-recent-searches-title": {
+        "contentHash": "690dbe9dc099",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-start-remove-favorite-search": {
+        "contentHash": "7013068aa1a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-start-remove-recent-search": {
+        "contentHash": "0f108aa28256",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-start-save-recent-search": {
+        "contentHash": "cd3b55bc11fa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-to-close": {
+        "contentHash": "99d2bb9a2a40",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-to-navigate": {
+        "contentHash": "05e5ac73a088",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "docsearch-to-select": {
+        "contentHash": "df509057007d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "documentation": {
+        "contentHash": "c205924de0fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "down": {
+        "contentHash": "b86d11af7918",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "edit-page": {
+        "contentHash": "5d2c6743b87c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ef-blog": {
+        "contentHash": "9362e5809fd0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "eips": {
+        "contentHash": "3cb43c77bc90",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "energy-consumption": {
+        "contentHash": "3b1f6d75a256",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "enterprise": {
+        "contentHash": "3fbe5ed156f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "use-cases": {
+        "contentHash": "ff27a991e855",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "enterprise-mainnet": {
+        "contentHash": "a594331c65a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "error-page-title": {
+        "contentHash": "4dca8d33eea2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "error-page-description": {
+        "contentHash": "1686e622cb0e",
+        "anchorHash": "cb6d05680f66",
+        "children": {
+          "prose:1": {
+            "contentHash": "da05947f5d55",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "505554929de3",
+            "anchorHash": "4a970cf80bb1"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "error-page-home-link": {
+        "contentHash": "d54d95b53fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "esp": {
+        "contentHash": "026022cfd560",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "eth-current-price": {
+        "contentHash": "b37c986895b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-brand-assets": {
+        "contentHash": "1e8655d5ae07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-bug-bounty": {
+        "contentHash": "512e2984949f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-events": {
+        "contentHash": "e85df834e78c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-foundation": {
+        "contentHash": "b1cc2e711844",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-foundation-logo": {
+        "contentHash": "69d7d40b2e88",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-glossary": {
+        "contentHash": "e4c68a9413a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-governance": {
+        "contentHash": "fd08a1b80253",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-history-founder-and-ownership": {
+        "contentHash": "d38a5ffb2ed6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-logo": {
+        "contentHash": "d243bac02fcd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-online": {
+        "contentHash": "639f07268b31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-roadmap": {
+        "contentHash": "be50ffa0fc02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-security": {
+        "contentHash": "d9e12940a383",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-privacy": {
+        "contentHash": "d452cb414fe3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-vs-bitcoin": {
+        "contentHash": "cbc477017fea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-wallets": {
+        "contentHash": "5f491e83bc51",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "ethereum-whitepaper": {
+        "contentHash": "9c16c962b9f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "events": {
+        "contentHash": "8d14f6e72de8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-card-prompt-article": {
+        "contentHash": "1faa5076774f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-card-prompt-page": {
+        "contentHash": "c8f62fcc6b3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-card-prompt-tutorial": {
+        "contentHash": "1096c26981eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-widget": {
+        "contentHash": "aac77df34720",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-widget-prompt": {
+        "contentHash": "a5ef5d104600",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-widget-thank-you-cta": {
+        "contentHash": "fd15e716328d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-widget-thank-you-subtitle": {
+        "contentHash": "6b4507c34e7a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-widget-thank-you-subtitle-ext": {
+        "contentHash": "4916546f2dde",
+        "anchorHash": "499de7b4e55f",
+        "children": {
+          "prose:1": {
+            "contentHash": "96f25d0af4e8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "053bc65874ad",
+            "anchorHash": "36f38461c003"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "feedback-widget-thank-you-timing": {
+        "contentHash": "0ce1c8e7a082",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "feedback-widget-thank-you-title": {
+        "contentHash": "d7ba98aba443",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "filter-bar-clear": {
+        "contentHash": "ba59e2d4a5e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "filter-bar-no-results": {
+        "contentHash": "7d7e36058609",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "filter-bar-placeholder": {
+        "contentHash": "d00f52454412",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "filter-bar-showing": {
+        "contentHash": "d604310a789a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "find-wallet": {
+        "contentHash": "3f7850a3d1e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "founders": {
+        "contentHash": "75f977702daa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "from": {
+        "contentHash": "218197693424",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "future-proofing": {
+        "contentHash": "d35c1e677306",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "get-eth": {
+        "contentHash": "8c677f2fb12b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "get-involved": {
+        "contentHash": "2cba40c2541b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "get-started": {
+        "contentHash": "61e8d44ad423",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "go-to-top": {
+        "contentHash": "b3c3f34d8a86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "grants": {
+        "contentHash": "b3e1c95a4be3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "guides": {
+        "contentHash": "572cd72feb9a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "home": {
+        "contentHash": "3a78695388b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-to-create-an-ethereum-account": {
+        "contentHash": "f434d7dbb52e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-to-revoke-token-access": {
+        "contentHash": "d8d58a776ff6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-to-swap-tokens": {
+        "contentHash": "d7834a22fa0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-to-use-a-bridge": {
+        "contentHash": "152ed6d36cf4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "how-to-use-a-wallet": {
+        "contentHash": "2b58bdf9f156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "image": {
+        "contentHash": "6105d6cc76af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "jobs": {
+        "contentHash": "2f17a0f8d518",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "kraken-logo": {
+        "contentHash": "11e6ccd62e9f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-am": {
+        "contentHash": "e1b6cb2bfcfa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-be": {
+        "contentHash": "70964175569e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ar": {
+        "contentHash": "bafb66f32cd7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-az": {
+        "contentHash": "717455722060",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-bg": {
+        "contentHash": "ecd986094baf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-bn": {
+        "contentHash": "e7f4fe2631bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-bs": {
+        "contentHash": "1d25285d7182",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ca": {
+        "contentHash": "843c489421f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-cs": {
+        "contentHash": "8b463ea23a7e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-da": {
+        "contentHash": "fe4338ad620c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-de": {
+        "contentHash": "a659b60d246d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-el": {
+        "contentHash": "5c74e5b8100c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-en": {
+        "contentHash": "ba118bf7fc9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-es": {
+        "contentHash": "3411059cb8e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-fa": {
+        "contentHash": "e4d40d318e99",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-fi": {
+        "contentHash": "5710b435f90a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-fil": {
+        "contentHash": "e8a6062c5c37",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-fr": {
+        "contentHash": "7458199fe97a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-gl": {
+        "contentHash": "9363fa206c21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-gu": {
+        "contentHash": "aa1324f5df47",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-he": {
+        "contentHash": "33e00df2aac3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-hi": {
+        "contentHash": "63c2dc51d089",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-hr": {
+        "contentHash": "754787c2f88c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-hu": {
+        "contentHash": "58801e6907f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-hy-am": {
+        "contentHash": "676f73a9f00a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-id": {
+        "contentHash": "4fe1bb67f3b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ig": {
+        "contentHash": "f5d590be06b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-it": {
+        "contentHash": "fe1d9c7db376",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ja": {
+        "contentHash": "be4ee906d3ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ka": {
+        "contentHash": "9ef3f1385ffb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-kk": {
+        "contentHash": "601883e0a2f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-km": {
+        "contentHash": "08d72ec6a16a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-kn": {
+        "contentHash": "4829406f52d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ko": {
+        "contentHash": "04656c6fe003",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-lt": {
+        "contentHash": "8625f6a2065b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ml": {
+        "contentHash": "2247ef59ce64",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-mr": {
+        "contentHash": "6bbef3a79c78",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ms": {
+        "contentHash": "cd43b2d3b020",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-nb": {
+        "contentHash": "71f4cf5c7a23",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ne-np": {
+        "contentHash": "0112367e107e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-nl": {
+        "contentHash": "45f16144c18c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-pcm": {
+        "contentHash": "2ab1ce18e71d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-pl": {
+        "contentHash": "770341d6e89e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-pt": {
+        "contentHash": "98b01b890687",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-pt-br": {
+        "contentHash": "887273461bc1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-resources": {
+        "contentHash": "66fda5f624aa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ro": {
+        "contentHash": "096b861df653",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ru": {
+        "contentHash": "5bcc40adf6e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-se": {
+        "contentHash": "a89a9329d3d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-sk": {
+        "contentHash": "e2922f6751d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-sl": {
+        "contentHash": "dea070feef80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-sr": {
+        "contentHash": "b4a077dadb30",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-support": {
+        "contentHash": "cf1b517ca362",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-sw": {
+        "contentHash": "ef13b74e5743",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ta": {
+        "contentHash": "135d78ac8f56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-te": {
+        "contentHash": "a4504b3d0ff7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-th": {
+        "contentHash": "ad705ee19c04",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-tk": {
+        "contentHash": "0d3fce2df27f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-tl": {
+        "contentHash": "605eac303049",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-tr": {
+        "contentHash": "6e7aac65db01",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-uk": {
+        "contentHash": "6f424303fa12",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-ur": {
+        "contentHash": "2c6ef73fc9e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-uz": {
+        "contentHash": "ea2f3df3ff0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-vi": {
+        "contentHash": "f25499e9df5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-zh": {
+        "contentHash": "bc1eddbdaf24",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "language-zh-tw": {
+        "contentHash": "796db1e1a768",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "languages": {
+        "contentHash": "318655cea4bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "last-24-hrs": {
+        "contentHash": "5c37cf8f018b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-last-update": {
+        "contentHash": "bb1808f821ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "last-updated": {
+        "contentHash": "382ac5f308f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "layer-2": {
+        "contentHash": "620558ceadc1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "learn": {
+        "contentHash": "ce78afd0e6a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "learn-ethereum-development": {
+        "contentHash": "115e92179d8c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "learn-hub": {
+        "contentHash": "f5613d144d75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "learn-menu": {
+        "contentHash": "b809ef263313",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "learn-more": {
+        "contentHash": "1445799c033a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "less": {
+        "contentHash": "ae5239ec63f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "light-mode": {
+        "contentHash": "dbcd5e7bb7a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "light-mode-aria-label": {
+        "contentHash": "bfa0cab91d75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "loading": {
+        "contentHash": "47d2a515ef2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "loading-error-refresh": {
+        "contentHash": "b069b214293b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "meetups": {
+        "contentHash": "ce225ab0270b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "menu": {
+        "contentHash": "99af6606ff9d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "merge": {
+        "contentHash": "8851aaa7d08c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "more": {
+        "contentHash": "d47d7cb0e4f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-about-description": {
+        "contentHash": "6672284d705e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-advanced-description": {
+        "contentHash": "3bcbd3353d70",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-advanced-label": {
+        "contentHash": "9f088dbebd6c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ai-agents-description": {
+        "contentHash": "93aebc90f70e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-basics-description": {
+        "contentHash": "3ce8dffec782",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-basics-label": {
+        "contentHash": "8fdd2ee8475e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-brand-assets-description": {
+        "contentHash": "685473ab3029",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-brand-assets-label": {
+        "contentHash": "5491b0ff70a2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-bridges-description": {
+        "contentHash": "6b127defe740",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-bug-bounty-description": {
+        "contentHash": "0e557ab01091",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-bug-bounty-label": {
+        "contentHash": "a1e0e1c4c290",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-builder-tools-description": {
+        "contentHash": "e030e6dbfca4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-builder-tools-label": {
+        "contentHash": "2ab95f29b6f2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-builders-home-description": {
+        "contentHash": "5cf6ce804657",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-builders-home-label": {
+        "contentHash": "c41281b4f0d0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-business-description": {
+        "contentHash": "c73e5ed60878",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-code-of-conduct": {
+        "contentHash": "04b9f0eb98cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-code-tutorials-description": {
+        "contentHash": "4615dd2fd7dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-code-tutorials-label": {
+        "contentHash": "e9f5b79c2405",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-collectibles-description": {
+        "contentHash": "3b2a42b171cf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-collectibles-label": {
+        "contentHash": "a60860fc878b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-connect-description": {
+        "contentHash": "9c52b9c3aee7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-connect-label": {
+        "contentHash": "1a2303ede074",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-context-description": {
+        "contentHash": "fbeaf135f2f7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-context-label": {
+        "contentHash": "a6e600a10fed",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-contribute-description": {
+        "contentHash": "c9955abd5c87",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-contribute-label": {
+        "contentHash": "b359f96d24e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-dao-description": {
+        "contentHash": "6457f1fece9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-data-analytics-description": {
+        "contentHash": "e31b053f2489",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-data-analytics-label": {
+        "contentHash": "788981c69e4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-apps-description": {
+        "contentHash": "5c4b5a0b4124",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-desci-description": {
+        "contentHash": "ddb9de5a3a60",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-desoc-description": {
+        "contentHash": "ecbb41642d93",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-developers-docs": {
+        "contentHash": "6c8afc83ed34",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-development-description": {
+        "contentHash": "5f7f5ff17bf3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-development-label": {
+        "contentHash": "21b6a798321a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-devcon-description": {
+        "contentHash": "b8e7f01bc5f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-devcon-label": {
+        "contentHash": "fb7c67ccf472",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-did-description": {
+        "contentHash": "2b7b75fea3b9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-description": {
+        "contentHash": "871d9e284f27",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-design-description": {
+        "contentHash": "10151ddb053c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-design-label": {
+        "contentHash": "bbc8a7896777",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-foundation-description": {
+        "contentHash": "249217e21901",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-foundation-label": {
+        "contentHash": "eb1455dc121a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-overview-description": {
+        "contentHash": "3078dd50f83c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-stack-description": {
+        "contentHash": "f8408ab99ca6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-docs-stack-label": {
+        "contentHash": "be1ff85b5120",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-eip-description": {
+        "contentHash": "f790e26ed2af",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-eip-label": {
+        "contentHash": "3f136dc1fc54",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-emerging-description": {
+        "contentHash": "0fd03ccfd02f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-emerging-label": {
+        "contentHash": "eac0addff433",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-energy-consumption-description": {
+        "contentHash": "72a6f727867d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-energy-consumption-label": {
+        "contentHash": "f794597f5b8f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-enterprise-description": {
+        "contentHash": "d9b55ed8a085",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ercs-description": {
+        "contentHash": "4fec529c326b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ercs-label": {
+        "contentHash": "6bdc17751663",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-explained-description": {
+        "contentHash": "ca083d1eb76e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-explained-label": {
+        "contentHash": "604754d63c8e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-foundation-description": {
+        "contentHash": "d4e36fd72ccd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-foundation-label": {
+        "contentHash": "b1cc2e711844",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-org-description": {
+        "contentHash": "fff5a82078c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-networks": {
+        "contentHash": "52281e65571f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-networks-description": {
+        "contentHash": "382579127533",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-vs-bitcoin-description": {
+        "contentHash": "ddb0a1d3b90b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-history-founder-and-ownership-description": {
+        "contentHash": "6eb8fb1e5b06",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-ethereum-wallets-description": {
+        "contentHash": "29fcc5fd52e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-events-calendar-description": {
+        "contentHash": "15803ba13e11",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-events-calendar-label": {
+        "contentHash": "3ac6ecc4b6ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-events-description": {
+        "contentHash": "f158f44c38df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-events-irl-description": {
+        "contentHash": "46d96d559703",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-events-label": {
+        "contentHash": "3b2a8baa8cea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-explore-apps-description": {
+        "contentHash": "8a0470c6f29e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-explore-apps-label": {
+        "contentHash": "e0ab0ec18559",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-explore-networks-description": {
+        "contentHash": "15f664d1e753",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-explore-networks-label": {
+        "contentHash": "41744416458a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-events-online-description": {
+        "contentHash": "cc4cc6ed65d9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-find-l2-description": {
+        "contentHash": "129c6419e93f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-find-l2-label": {
+        "contentHash": "ebdde26356f0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-find-wallet-description": {
+        "contentHash": "e4350c966433",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-find-wallet-label": {
+        "contentHash": "aecbd96c0c74",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-gaming-description": {
+        "contentHash": "512b21a18bc0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-founders-description": {
+        "contentHash": "e52cbd9df009",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-gas-fees-description": {
+        "contentHash": "bf3cd83e9bac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-gas-fees-label": {
+        "contentHash": "d85b58b6125d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-get-eth-description": {
+        "contentHash": "650b432fc551",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-get-involved-description": {
+        "contentHash": "47c697f0337f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-get-involved-label": {
+        "contentHash": "2cba40c2541b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-get-started-description": {
+        "contentHash": "9eb86c220fd8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-governance-description": {
+        "contentHash": "f49ba0d357e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-governance-label": {
+        "contentHash": "86f8a694159b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-grants-description": {
+        "contentHash": "13349f22a05a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guide-create-account-description": {
+        "contentHash": "5caacae5092d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guide-create-account-label": {
+        "contentHash": "98647d7f95d2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guide-overview-description": {
+        "contentHash": "1b77ee04f698",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guide-revoke-access-description": {
+        "contentHash": "65c35389e088",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guide-revoke-access-label": {
+        "contentHash": "3ab4053af45c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guide-use-wallet-description": {
+        "contentHash": "034be3dae879",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guide-use-wallet-label": {
+        "contentHash": "2b58bdf9f156",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guides-description": {
+        "contentHash": "c768c778be7d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-guides-label": {
+        "contentHash": "fda608dc3be2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-history-description": {
+        "contentHash": "bdeaadc3c2e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-history-founders-description": {
+        "contentHash": "2208c8ce7743",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-history-founders-label": {
+        "contentHash": "b0c0909531e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-history-label": {
+        "contentHash": "dbfaaf2d91bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-how-ethereum-works-description": {
+        "contentHash": "e239447af3dc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-how-ethereum-works-label": {
+        "contentHash": "060d957bd9bc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-institution-enterprise-description": {
+        "contentHash": "d9b55ed8a085",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-institution-enterprise-label": {
+        "contentHash": "6af0ecdff330",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-join-ethereum-org-description": {
+        "contentHash": "98da0ce938bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-join-ethereum-org-label": {
+        "contentHash": "b837ba642ea2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-l2-networks-description": {
+        "contentHash": "20fb06948d5c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-l2-networks-label": {
+        "contentHash": "0524acd8a386",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-learn-by-coding-description": {
+        "contentHash": "ae1a7f0b6f72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-learn-by-coding-label": {
+        "contentHash": "4930a3e61aee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-learn-ethereum-development-description": {
+        "contentHash": "9573ce84e07e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-start-building-description": {
+        "contentHash": "d978b9572d52",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-networks-introduction-label": {
+        "contentHash": "b605350bc002",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-networks-introduction-description": {
+        "contentHash": "53cc802341dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-networks-explore-networks-label": {
+        "contentHash": "41744416458a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-networks-explore-networks-description": {
+        "contentHash": "d93070f99c33",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-networks-learn-label": {
+        "contentHash": "0b146b4b48ae",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-networks-learn-description": {
+        "contentHash": "b91e9dc30d04",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-nft-description": {
+        "contentHash": "4056cfee6b6f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-online-communities-description": {
+        "contentHash": "cf37477601f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-online-communities-label": {
+        "contentHash": "639f07268b31",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-open-research-description": {
+        "contentHash": "33ecaaae7624",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-open-research-label": {
+        "contentHash": "75d5a399c09c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-overview-description": {
+        "contentHash": "bf39b3fac82c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-overview-label": {
+        "contentHash": "d4b1ea5708dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-participate-overview-description": {
+        "contentHash": "462397498b88",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-payments-description": {
+        "contentHash": "aab9db8847e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-prediction-markets-description": {
+        "contentHash": "6e3fe3fddddb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-primary": {
+        "contentHash": "efe10c80ec8a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-quizzes-description": {
+        "contentHash": "2195e0f523eb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-quizzes-label": {
+        "contentHash": "2a2499f1f86d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-refi-description": {
+        "contentHash": "de20cb8d714b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-research-description": {
+        "contentHash": "b33190c4d97a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-research-label": {
+        "contentHash": "1e91cc66da1d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-description": {
+        "contentHash": "b533eb80a154",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-future-description": {
+        "contentHash": "b5b26dd03df3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-future-label": {
+        "contentHash": "d35c1e677306",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-future-proofing": {
+        "contentHash": "d35c1e677306",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-home": {
+        "contentHash": "ffe546f5e713",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-label": {
+        "contentHash": "92375f997ffe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-options": {
+        "contentHash": "62632203cf4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-options-alt": {
+        "contentHash": "0d19c1ec05fd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-overview-description": {
+        "contentHash": "edbc8cbbe264",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-scaling": {
+        "contentHash": "f1766cc4ec8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-scaling-description": {
+        "contentHash": "c73449344a6b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-scaling-label": {
+        "contentHash": "2fc8de069189",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-security": {
+        "contentHash": "b775475bebc4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-security-description": {
+        "contentHash": "a0be0297f174",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-security-label": {
+        "contentHash": "b209561576f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-user-experience": {
+        "contentHash": "7e9c787bf519",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-ux-description": {
+        "contentHash": "502622363bde",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-roadmap-ux-label": {
+        "contentHash": "7e9c787bf519",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-rwa-description": {
+        "contentHash": "ad022c2ebb7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-run-a-node-description": {
+        "contentHash": "9af22b44ab3a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-see-all-guides-description": {
+        "contentHash": "fb95a703e652",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-see-all-guides-label": {
+        "contentHash": "0cbcaf276b43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-see-all-use-cases-description": {
+        "contentHash": "e0342a631290",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-see-all-use-cases-label": {
+        "contentHash": "f559b8cf7694",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-security-description": {
+        "contentHash": "cc0b3cd29676",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-set-up-local-env-description": {
+        "contentHash": "ee9a8bc8ca05",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-set-up-local-env-label": {
+        "contentHash": "7083b66ab10f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-privacy-description": {
+        "contentHash": "7c86cc8e2dc5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-smart-contracts-description": {
+        "contentHash": "fef992812fa9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-stablecoins-description": {
+        "contentHash": "71b46dbed3c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-nodes-description": {
+        "contentHash": "bead6669057f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-nodes-label": {
+        "contentHash": "4f8f6c1c9cfc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-start-with-ethereum-description": {
+        "contentHash": "2381ef218823",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-start-with-ethereum-label": {
+        "contentHash": "b854457ebe46",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staying-safe-description": {
+        "contentHash": "411596f264dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staying-safe-label": {
+        "contentHash": "7eebee314856",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-stake-description": {
+        "contentHash": "395d76497810",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-stake-label": {
+        "contentHash": "8939aea8419b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-home-description": {
+        "contentHash": "81365c66130c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-home-label": {
+        "contentHash": "25406e75840d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-pool-description": {
+        "contentHash": "c1d3a610c8e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-pool-label": {
+        "contentHash": "f72b4371e7b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-saas-description": {
+        "contentHash": "56fec9711935",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-saas-label": {
+        "contentHash": "4c31dec05833",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-solo-description": {
+        "contentHash": "e24075b4651e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-support-description": {
+        "contentHash": "0b566ec45a9f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-staking-solo-label": {
+        "contentHash": "3663ec0493cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-start-get-started-description": {
+        "contentHash": "d0b438999db0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-start-with-crypto-title": {
+        "contentHash": "2adc964c0847",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-start-with-crypto-description": {
+        "contentHash": "c2c579b7f852",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-translation-program-description": {
+        "contentHash": "5ec659d8681f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-tutorials-description": {
+        "contentHash": "fcd3522b4555",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-use-cases-description": {
+        "contentHash": "639ac4aa8e2e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-use-cases-label": {
+        "contentHash": "ff27a991e855",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-technical-history-description": {
+        "contentHash": "0a0db6b61efa",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-technical-history-label": {
+        "contentHash": "e5b70d8cb2f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-trillion-dollar-security-description": {
+        "contentHash": "851c4bb49e5f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-trillion-dollar-security-label": {
+        "contentHash": "5e7e0f90e03e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-videos-description": {
+        "contentHash": "b55ac8af4448",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-videos-label": {
+        "contentHash": "c9a9639463c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-what-is-ether-description": {
+        "contentHash": "8a664ca3921a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-what-is-ethereum-description": {
+        "contentHash": "8763634b4307",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-what-is-ethereum-network-description": {
+        "contentHash": "2ce520ae6df7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-what-is-web3-description": {
+        "contentHash": "ebc479b8955e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-what-is-web3-label": {
+        "contentHash": "43c82fb496b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-where-to-start-description": {
+        "contentHash": "1c51fc229cdb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-where-to-start-label": {
+        "contentHash": "a08cf344721d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-whitepaper-description": {
+        "contentHash": "2753fe349ea5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-zkp-description": {
+        "contentHash": "d157dad01986",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nft-page": {
+        "contentHash": "031f7477d6fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nfts": {
+        "contentHash": "d185ae0e6c3b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "no": {
+        "contentHash": "1ea442a134b2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "on-this-page": {
+        "contentHash": "b5658fc8edda",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "onchain-gaming": {
+        "contentHash": "0710f93457e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "open": {
+        "contentHash": "ed077f3d8125",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-languages-filter-label": {
+        "contentHash": "ec9f53f02536",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-languages-filter-placeholder": {
+        "contentHash": "14b26622d3f9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-languages-interested": {
+        "contentHash": "8fe21fcdda9c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-languages-learn-more": {
+        "contentHash": "f9a3728f484a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-languages-want-more-header": {
+        "contentHash": "64e76d18f94f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-languages-want-more-link": {
+        "contentHash": "87730412fde5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-languages-want-more-paragraph": {
+        "contentHash": "34784d7f9812",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-last-updated": {
+        "contentHash": "381e0362f381",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-not-found": {
+        "contentHash": "a469ab4ca4e5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-not-found-description": {
+        "contentHash": "4b514fb988ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "participate": {
+        "contentHash": "38301e6935f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "participate-menu": {
+        "contentHash": "0ff5d9fb49b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "payments-page": {
+        "contentHash": "632e1c583941",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "pbs": {
+        "contentHash": "f04af9b1aa1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "pools": {
+        "contentHash": "f72b4371e7b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prediction-markets": {
+        "contentHash": "3b50eae8b6b6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "privacy-policy": {
+        "contentHash": "ba445cff3898",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "product-disclaimer": {
+        "contentHash": "bdcf4a947b14",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c112b5bfb942",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "quantum-resistance": {
+        "contentHash": "e456dd4f208f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "quizzes": {
+        "contentHash": "f1e638bae6e8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "quizzes-title": {
+        "contentHash": "ddd82e1196de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "refresh": {
+        "contentHash": "b873c33c1c43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "regenerative-finance": {
+        "contentHash": "b721844aa315",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "research": {
+        "contentHash": "979d6300fd98",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "research-menu": {
+        "contentHash": "b5985ec8963a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "resources": {
+        "contentHash": "567bed783952",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "return-home": {
+        "contentHash": "78413fe80539",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "roadmap": {
+        "contentHash": "be50ffa0fc02",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "rollup-component-website": {
+        "contentHash": "b5a229ac8bec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "run-a-node": {
+        "contentHash": "37a70eebd3a9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "real-world-assets": {
+        "contentHash": "c2edd58430df",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "saas": {
+        "contentHash": "6561796cd0de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "scaling": {
+        "contentHash": "f1766cc4ec8d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "search": {
+        "contentHash": "49c266baaaa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "search-ethereum-org": {
+        "contentHash": "3744a2002895",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "secret-leader-election": {
+        "contentHash": "9d1a2ca7f4a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "security": {
+        "contentHash": "8f6fb4eb7f42",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "see-contributors": {
+        "contentHash": "bdcc1746e82a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "start-building": {
+        "contentHash": "c5d0453e23e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "show-all": {
+        "contentHash": "2150d8df37e4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "show-more": {
+        "contentHash": "f5c9bd131486",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "show-less": {
+        "contentHash": "94ea9b1d33a0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "single-slot-finality": {
+        "contentHash": "57e99e621b32",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "site-description": {
+        "contentHash": "c6b5cba81fec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "skip-to-main-content": {
+        "contentHash": "c887f134c26e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "smart-contracts": {
+        "contentHash": "c9239b20a918",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "solo": {
+        "contentHash": "3663ec0493cc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stablecoins": {
+        "contentHash": "2d46a862ce8b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "stake-eth": {
+        "contentHash": "e53a7b6de046",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "staking": {
+        "contentHash": "5190ff487713",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "statelessness": {
+        "contentHash": "6c88f20571b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "style-guide": {
+        "contentHash": "ffbe1bf10800",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "support": {
+        "contentHash": "be91940b79f4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "terms-and-conditions": {
+        "contentHash": "173f5f9f26b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "terms-of-use": {
+        "contentHash": "8c45a486e4b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tools": {
+        "contentHash": "ea93d6a262ec",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-body-new": {
+        "contentHash": "f6a424e9fcdd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-body-update": {
+        "contentHash": "a82d5e9c3a2b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-button-see-english": {
+        "contentHash": "98ffb7043357",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-button-translate-page": {
+        "contentHash": "24287921c4c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-no-bugs-content": {
+        "contentHash": "bf9e66642ca6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-no-bugs-dont-show-again": {
+        "contentHash": "d16d035f6344",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-no-bugs-title": {
+        "contentHash": "7bec46938a56",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-title-new": {
+        "contentHash": "5a7d17cab663",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-banner-title-update": {
+        "contentHash": "1803c9b871c9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translation-program": {
+        "contentHash": "87730412fde5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "translator": {
+        "contentHash": "e6fe8ee281de",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "trillion-dollar-security": {
+        "contentHash": "e542c2c6f497",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "try-again": {
+        "contentHash": "d8b8392e2c54",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "try-using-search": {
+        "contentHash": "6661e0302b7c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "tutorials": {
+        "contentHash": "8d9f66992dd4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "up": {
+        "contentHash": "55490a4bf3a8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "use": {
+        "contentHash": "c36d819e7bc6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "use-menu": {
+        "contentHash": "677cb74a3146",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "user-experience": {
+        "contentHash": "c1729f0791a5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "verkle-trees": {
+        "contentHash": "fdf6b8b2922f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "videos": {
+        "contentHash": "c9a9639463c2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wallets": {
+        "contentHash": "e7fd629133a1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "we-couldnt-find-that-page": {
+        "contentHash": "9c1506a7d839",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "web3": {
+        "contentHash": "43c82fb496b4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "website-last-updated": {
+        "contentHash": "eb3d5c5a7363",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-are-apps": {
+        "contentHash": "58a0b40a99da",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ether": {
+        "contentHash": "2b9001f74ff5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-ethereum": {
+        "contentHash": "ac6e184ddd15",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "what-is-the-ethereum-network": {
+        "contentHash": "f914ad8e59c3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "withdrawals": {
+        "contentHash": "815840a47399",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "wrapped-eth": {
+        "contentHash": "eda7a123f115",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "yes": {
+        "contentHash": "85a39ab345d6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "zero-knowledge-proofs": {
+        "contentHash": "ae5bb240b17e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "region-crimea": {
+        "contentHash": "d9aeaabda70c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "region-navassa-island-usa": {
+        "contentHash": "241b646af901",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "region-wake-island-usa": {
+        "contentHash": "a7939d7c5821",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "region-bonaire-netherlands": {
+        "contentHash": "a041ccfffb94",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "region-saba-netherlands": {
+        "contentHash": "3f7e95f41fb8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "region-sint-eustatius-netherlands": {
+        "contentHash": "a01f3e34b65a",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "about-ethereum-org",
+      "about-us",
+      "account-abstraction",
+      "acknowledgements",
+      "adding-desci-projects",
+      "adding-developer-tools",
+      "adding-exchanges",
+      "adding-glossary-terms",
+      "adding-layer-2s",
+      "adding-products",
+      "adding-staking-products",
+      "adding-wallets",
+      "ai-agents",
+      "apps",
+      "aria-toggle-menu-button",
+      "aria-toggle-search-button",
+      "beacon-chain",
+      "bridges",
+      "bug-bounty",
+      "build",
+      "build-menu",
+      "business",
+      "clear",
+      "close",
+      "community",
+      "community-hub",
+      "conferences",
+      "consensus-when-shipping",
+      "contact",
+      "content-resources",
+      "content-standardization",
+      "contributing",
+      "contributors",
+      "contributors-thanks",
+      "cookie-policy",
+      "copied",
+      "copy",
+      "danksharding",
+      "dao-page",
+      "dark-mode",
+      "dark-mode-aria-label",
+      "data-provided-by",
+      "application-explorer",
+      "decentralized-identity",
+      "decentralized-science",
+      "decentralized-social-networks",
+      "defi-page",
+      "description",
+      "design",
+      "design-principles",
+      "devcon",
+      "developers",
+      "docs",
+      "docsearch-error-help",
+      "docsearch-error-title",
+      "docsearch-no-results-missing",
+      "docsearch-no-results-missing-link",
+      "docsearch-no-results-suggested-query",
+      "docsearch-no-results-text",
+      "docsearch-search-by",
+      "docsearch-start-favorite-searches",
+      "docsearch-start-no-recent-searches",
+      "docsearch-start-recent-searches-title",
+      "docsearch-start-remove-favorite-search",
+      "docsearch-start-remove-recent-search",
+      "docsearch-start-save-recent-search",
+      "docsearch-to-close",
+      "docsearch-to-navigate",
+      "docsearch-to-select",
+      "documentation",
+      "down",
+      "edit-page",
+      "ef-blog",
+      "eips",
+      "energy-consumption",
+      "enterprise",
+      "use-cases",
+      "enterprise-mainnet",
+      "error-page-title",
+      "error-page-description",
+      "error-page-home-link",
+      "esp",
+      "eth-current-price",
+      "ethereum",
+      "ethereum-brand-assets",
+      "ethereum-bug-bounty",
+      "ethereum-events",
+      "ethereum-foundation",
+      "ethereum-foundation-logo",
+      "ethereum-glossary",
+      "ethereum-governance",
+      "ethereum-history-founder-and-ownership",
+      "ethereum-logo",
+      "ethereum-online",
+      "ethereum-roadmap",
+      "ethereum-security",
+      "ethereum-privacy",
+      "ethereum-vs-bitcoin",
+      "ethereum-wallets",
+      "ethereum-whitepaper",
+      "events",
+      "feedback-card-prompt-article",
+      "feedback-card-prompt-page",
+      "feedback-card-prompt-tutorial",
+      "feedback-widget",
+      "feedback-widget-prompt",
+      "feedback-widget-thank-you-cta",
+      "feedback-widget-thank-you-subtitle",
+      "feedback-widget-thank-you-subtitle-ext",
+      "feedback-widget-thank-you-timing",
+      "feedback-widget-thank-you-title",
+      "filter-bar-clear",
+      "filter-bar-no-results",
+      "filter-bar-placeholder",
+      "filter-bar-showing",
+      "find-wallet",
+      "founders",
+      "from",
+      "future-proofing",
+      "get-eth",
+      "get-involved",
+      "get-started",
+      "go-to-top",
+      "grants",
+      "guides",
+      "home",
+      "how-to-create-an-ethereum-account",
+      "how-to-revoke-token-access",
+      "how-to-swap-tokens",
+      "how-to-use-a-bridge",
+      "how-to-use-a-wallet",
+      "image",
+      "jobs",
+      "kraken-logo",
+      "language-am",
+      "language-be",
+      "language-ar",
+      "language-az",
+      "language-bg",
+      "language-bn",
+      "language-bs",
+      "language-ca",
+      "language-cs",
+      "language-da",
+      "language-de",
+      "language-el",
+      "language-en",
+      "language-es",
+      "language-fa",
+      "language-fi",
+      "language-fil",
+      "language-fr",
+      "language-gl",
+      "language-gu",
+      "language-he",
+      "language-hi",
+      "language-hr",
+      "language-hu",
+      "language-hy-am",
+      "language-id",
+      "language-ig",
+      "language-it",
+      "language-ja",
+      "language-ka",
+      "language-kk",
+      "language-km",
+      "language-kn",
+      "language-ko",
+      "language-lt",
+      "language-ml",
+      "language-mr",
+      "language-ms",
+      "language-nb",
+      "language-ne-np",
+      "language-nl",
+      "language-pcm",
+      "language-pl",
+      "language-pt",
+      "language-pt-br",
+      "language-resources",
+      "language-ro",
+      "language-ru",
+      "language-se",
+      "language-sk",
+      "language-sl",
+      "language-sr",
+      "language-support",
+      "language-sw",
+      "language-ta",
+      "language-te",
+      "language-th",
+      "language-tk",
+      "language-tl",
+      "language-tr",
+      "language-uk",
+      "language-ur",
+      "language-uz",
+      "language-vi",
+      "language-zh",
+      "language-zh-tw",
+      "languages",
+      "last-24-hrs",
+      "page-last-update",
+      "last-updated",
+      "layer-2",
+      "learn",
+      "learn-ethereum-development",
+      "learn-hub",
+      "learn-menu",
+      "learn-more",
+      "less",
+      "light-mode",
+      "light-mode-aria-label",
+      "loading",
+      "loading-error-refresh",
+      "meetups",
+      "menu",
+      "merge",
+      "more",
+      "nav-about-description",
+      "nav-advanced-description",
+      "nav-advanced-label",
+      "nav-ai-agents-description",
+      "nav-basics-description",
+      "nav-basics-label",
+      "nav-brand-assets-description",
+      "nav-brand-assets-label",
+      "nav-bridges-description",
+      "nav-bug-bounty-description",
+      "nav-bug-bounty-label",
+      "nav-builder-tools-description",
+      "nav-builder-tools-label",
+      "nav-builders-home-description",
+      "nav-builders-home-label",
+      "nav-business-description",
+      "nav-code-of-conduct",
+      "nav-code-tutorials-description",
+      "nav-code-tutorials-label",
+      "nav-collectibles-description",
+      "nav-collectibles-label",
+      "nav-connect-description",
+      "nav-connect-label",
+      "nav-context-description",
+      "nav-context-label",
+      "nav-contribute-description",
+      "nav-contribute-label",
+      "nav-dao-description",
+      "nav-data-analytics-description",
+      "nav-data-analytics-label",
+      "nav-apps-description",
+      "nav-desci-description",
+      "nav-desoc-description",
+      "nav-developers-docs",
+      "nav-development-description",
+      "nav-development-label",
+      "nav-devcon-description",
+      "nav-devcon-label",
+      "nav-did-description",
+      "nav-docs-description",
+      "nav-docs-design-description",
+      "nav-docs-design-label",
+      "nav-docs-foundation-description",
+      "nav-docs-foundation-label",
+      "nav-docs-overview-description",
+      "nav-docs-stack-description",
+      "nav-docs-stack-label",
+      "nav-eip-description",
+      "nav-eip-label",
+      "nav-emerging-description",
+      "nav-emerging-label",
+      "nav-energy-consumption-description",
+      "nav-energy-consumption-label",
+      "nav-enterprise-description",
+      "nav-ercs-description",
+      "nav-ercs-label",
+      "nav-ethereum-explained-description",
+      "nav-ethereum-explained-label",
+      "nav-ethereum-foundation-description",
+      "nav-ethereum-foundation-label",
+      "nav-ethereum-org-description",
+      "nav-ethereum-networks",
+      "nav-ethereum-networks-description",
+      "nav-ethereum-vs-bitcoin-description",
+      "nav-ethereum-history-founder-and-ownership-description",
+      "nav-ethereum-wallets-description",
+      "nav-events-calendar-description",
+      "nav-events-calendar-label",
+      "nav-events-description",
+      "nav-events-irl-description",
+      "nav-events-label",
+      "nav-explore-apps-description",
+      "nav-explore-apps-label",
+      "nav-explore-networks-description",
+      "nav-explore-networks-label",
+      "nav-events-online-description",
+      "nav-find-l2-description",
+      "nav-find-l2-label",
+      "nav-find-wallet-description",
+      "nav-find-wallet-label",
+      "nav-gaming-description",
+      "nav-founders-description",
+      "nav-gas-fees-description",
+      "nav-gas-fees-label",
+      "nav-get-eth-description",
+      "nav-get-involved-description",
+      "nav-get-involved-label",
+      "nav-get-started-description",
+      "nav-governance-description",
+      "nav-governance-label",
+      "nav-grants-description",
+      "nav-guide-create-account-description",
+      "nav-guide-create-account-label",
+      "nav-guide-overview-description",
+      "nav-guide-revoke-access-description",
+      "nav-guide-revoke-access-label",
+      "nav-guide-use-wallet-description",
+      "nav-guide-use-wallet-label",
+      "nav-guides-description",
+      "nav-guides-label",
+      "nav-history-description",
+      "nav-history-founders-description",
+      "nav-history-founders-label",
+      "nav-history-label",
+      "nav-how-ethereum-works-description",
+      "nav-how-ethereum-works-label",
+      "nav-institution-enterprise-description",
+      "nav-institution-enterprise-label",
+      "nav-join-ethereum-org-description",
+      "nav-join-ethereum-org-label",
+      "nav-l2-networks-description",
+      "nav-l2-networks-label",
+      "nav-learn-by-coding-description",
+      "nav-learn-by-coding-label",
+      "nav-learn-ethereum-development-description",
+      "nav-start-building-description",
+      "nav-networks-introduction-label",
+      "nav-networks-introduction-description",
+      "nav-networks-explore-networks-label",
+      "nav-networks-explore-networks-description",
+      "nav-networks-learn-label",
+      "nav-networks-learn-description",
+      "nav-nft-description",
+      "nav-online-communities-description",
+      "nav-online-communities-label",
+      "nav-open-research-description",
+      "nav-open-research-label",
+      "nav-overview-description",
+      "nav-overview-label",
+      "nav-participate-overview-description",
+      "nav-payments-description",
+      "nav-prediction-markets-description",
+      "nav-primary",
+      "nav-quizzes-description",
+      "nav-quizzes-label",
+      "nav-refi-description",
+      "nav-research-description",
+      "nav-research-label",
+      "nav-roadmap-description",
+      "nav-roadmap-future-description",
+      "nav-roadmap-future-label",
+      "nav-roadmap-future-proofing",
+      "nav-roadmap-home",
+      "nav-roadmap-label",
+      "nav-roadmap-options",
+      "nav-roadmap-options-alt",
+      "nav-roadmap-overview-description",
+      "nav-roadmap-scaling",
+      "nav-roadmap-scaling-description",
+      "nav-roadmap-scaling-label",
+      "nav-roadmap-security",
+      "nav-roadmap-security-description",
+      "nav-roadmap-security-label",
+      "nav-roadmap-user-experience",
+      "nav-roadmap-ux-description",
+      "nav-roadmap-ux-label",
+      "nav-rwa-description",
+      "nav-run-a-node-description",
+      "nav-see-all-guides-description",
+      "nav-see-all-guides-label",
+      "nav-see-all-use-cases-description",
+      "nav-see-all-use-cases-label",
+      "nav-security-description",
+      "nav-set-up-local-env-description",
+      "nav-set-up-local-env-label",
+      "nav-privacy-description",
+      "nav-smart-contracts-description",
+      "nav-stablecoins-description",
+      "nav-staking-nodes-description",
+      "nav-staking-nodes-label",
+      "nav-start-with-ethereum-description",
+      "nav-start-with-ethereum-label",
+      "nav-staying-safe-description",
+      "nav-staying-safe-label",
+      "nav-stake-description",
+      "nav-stake-label",
+      "nav-staking-home-description",
+      "nav-staking-home-label",
+      "nav-staking-pool-description",
+      "nav-staking-pool-label",
+      "nav-staking-saas-description",
+      "nav-staking-saas-label",
+      "nav-staking-solo-description",
+      "nav-support-description",
+      "nav-staking-solo-label",
+      "nav-start-get-started-description",
+      "nav-start-with-crypto-title",
+      "nav-start-with-crypto-description",
+      "nav-translation-program-description",
+      "nav-tutorials-description",
+      "nav-use-cases-description",
+      "nav-use-cases-label",
+      "nav-technical-history-description",
+      "nav-technical-history-label",
+      "nav-trillion-dollar-security-description",
+      "nav-trillion-dollar-security-label",
+      "nav-videos-description",
+      "nav-videos-label",
+      "nav-what-is-ether-description",
+      "nav-what-is-ethereum-description",
+      "nav-what-is-ethereum-network-description",
+      "nav-what-is-web3-description",
+      "nav-what-is-web3-label",
+      "nav-where-to-start-description",
+      "nav-where-to-start-label",
+      "nav-whitepaper-description",
+      "nav-zkp-description",
+      "nft-page",
+      "nfts",
+      "no",
+      "on-this-page",
+      "onchain-gaming",
+      "open",
+      "page-languages-filter-label",
+      "page-languages-filter-placeholder",
+      "page-languages-interested",
+      "page-languages-learn-more",
+      "page-languages-want-more-header",
+      "page-languages-want-more-link",
+      "page-languages-want-more-paragraph",
+      "page-last-updated",
+      "page-not-found",
+      "page-not-found-description",
+      "participate",
+      "participate-menu",
+      "payments-page",
+      "pbs",
+      "pools",
+      "prediction-markets",
+      "privacy-policy",
+      "product-disclaimer",
+      "quantum-resistance",
+      "quizzes",
+      "quizzes-title",
+      "refresh",
+      "regenerative-finance",
+      "research",
+      "research-menu",
+      "resources",
+      "return-home",
+      "roadmap",
+      "rollup-component-website",
+      "run-a-node",
+      "real-world-assets",
+      "saas",
+      "scaling",
+      "search",
+      "search-ethereum-org",
+      "secret-leader-election",
+      "security",
+      "see-contributors",
+      "start-building",
+      "show-all",
+      "show-more",
+      "show-less",
+      "single-slot-finality",
+      "site-description",
+      "skip-to-main-content",
+      "smart-contracts",
+      "solo",
+      "stablecoins",
+      "stake-eth",
+      "staking",
+      "statelessness",
+      "style-guide",
+      "support",
+      "terms-and-conditions",
+      "terms-of-use",
+      "tools",
+      "translation-banner-body-new",
+      "translation-banner-body-update",
+      "translation-banner-button-see-english",
+      "translation-banner-button-translate-page",
+      "translation-banner-no-bugs-content",
+      "translation-banner-no-bugs-dont-show-again",
+      "translation-banner-no-bugs-title",
+      "translation-banner-title-new",
+      "translation-banner-title-update",
+      "translation-program",
+      "translator",
+      "trillion-dollar-security",
+      "try-again",
+      "try-using-search",
+      "tutorials",
+      "up",
+      "use",
+      "use-menu",
+      "user-experience",
+      "verkle-trees",
+      "videos",
+      "wallets",
+      "we-couldnt-find-that-page",
+      "web3",
+      "website-last-updated",
+      "what-are-apps",
+      "what-is-ether",
+      "what-is-ethereum",
+      "what-is-the-ethereum-network",
+      "withdrawals",
+      "wrapped-eth",
+      "yes",
+      "zero-knowledge-proofs",
+      "region-crimea",
+      "region-navassa-island-usa",
+      "region-wake-island-usa",
+      "region-bonaire-netherlands",
+      "region-saba-netherlands",
+      "region-sint-eustatius-netherlands"
+    ]
+  },
+  "sourceCommitSha": "71ae652e5f2bfee97d550284550a7069b569f9eb"
+}

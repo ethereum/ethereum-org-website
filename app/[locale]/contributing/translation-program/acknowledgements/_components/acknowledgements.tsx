@@ -37,7 +37,7 @@ const H2 = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className={cn("mb-8 mt-12 leading-xs", className)} {...props} />
+  <h2 className={cn("mt-12 mb-8 leading-xs", className)} {...props} />
 )
 
 const Text = ({
@@ -67,9 +67,9 @@ const TranslatorAcknowledgements = () => {
             "page-contributing-translation-program-acknowledgements-acknowledgement-page-title"
           )}
         </h1>
-        <Flex className="me-0 ms-0 w-full flex-col items-start lg:me-8 lg:flex-row">
+        <Flex className="ms-0 me-0 w-full flex-col items-start lg:me-8 lg:flex-row">
           {/* LEFT COLUMN */}
-          <div className="m-auto w-full lg:mb-0 lg:ml-0 lg:mr-8 lg:mt-0 lg:w-1/2">
+          <div className="m-auto w-full lg:mt-0 lg:mr-8 lg:mb-0 lg:ml-0 lg:w-1/2">
             <Text>
               {t(
                 "page-contributing-translation-program-acknowledgements-acknowledgement-page-1"
@@ -102,7 +102,7 @@ const TranslatorAcknowledgements = () => {
             </p> */}
           </div>
           {/* RIGHT COLUMN */}
-          <div className="m-auto w-full lg:mb-0 lg:ml-8 lg:mr-0 lg:mt-0 lg:w-1/2">
+          <div className="m-auto w-full lg:mt-0 lg:mr-0 lg:mb-0 lg:ml-8 lg:w-1/2">
             <Image
               width={500}
               src={dogeComputerImg}
@@ -173,7 +173,11 @@ const TranslatorAcknowledgements = () => {
           {t("page-contributing-translation-program-acknowledgements-cert-3")}
         </Text>
         <Flex className="justify-center">
-          <Image src={themedCertificateImage} alt="translator certificate" />
+          <Image
+            src={themedCertificateImage}
+            alt="translator certificate"
+            sizes="(max-width: 880px) calc(100vw - 80px), 720px"
+          />
         </Flex>
       </Content>
 
@@ -192,7 +196,7 @@ const TranslatorAcknowledgements = () => {
         <Text>
           {t("page-contributing-translation-program-acknowledgements-3")}
         </Text>
-        <h3 className="mb-8 mt-10 leading-xs">
+        <h3 className="mt-10 mb-8 leading-xs">
           {t(
             "page-contributing-translation-program-acknowledgements-how-to-claim-title"
           )}

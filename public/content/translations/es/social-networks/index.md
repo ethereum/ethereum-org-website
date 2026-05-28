@@ -3,12 +3,12 @@ title: Redes sociales descentralizadas
 description: "Una visión general de las redes sociales descentralizadas en Ethereum"
 lang: es
 template: use-cases
-emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: "Plataformas basadas en la cadena de bloques para interacción social, creación y distribución de contenidos."
-summaryPoint2: Las redes sociales descentralizadas protegen la privacidad del usuario y mejoran la seguridad de los datos.
-summaryPoint3: Tokens y NFT crean nuevas formas de monetizar contenido.
+summaryPoints:
+  - "Plataformas basadas en la cadena de bloques para interacción social, creación y distribución de contenidos."
+  - "Las redes sociales descentralizadas protegen la privacidad del usuario y mejoran la seguridad de los datos."
+  - "Tokens y NFT crean nuevas formas de monetizar contenido."
 ---
 
 Las redes sociales juegan un enorme papel en nuestras comunicaciones e interacciones diarias. Sin embargo el control centralizado de estas plataformas ha generado importantes problemas: brechas en la custodia de datos, servidores fuera de servicio, desviaciones de las plataformas, censura y violación de la privacidad son algunos de los inconvenientes que suelen producir las redes sociales. Para combatir estos problemas, los desarrolladores están construyendo redes sociales en Ethereum. Las redes sociales descentralizadas pueden solucionar muchos de los problemas de las plataformas de redes sociales tradicionales y mejorar las experiencia de los usuarios de forma global.

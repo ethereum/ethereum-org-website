@@ -101,7 +101,8 @@ module.exports = [
   ["/enterprise/private-ethereum", "https://institutions.ethereum.org/"],
   ["/enterprise/use-cases", "https://institutions.ethereum.org/", false],
   ["/dashboards", "/resources"],
-  ["/tds", "/trillion-dollar-security"],
+  ["/tds", "/reports/trillion-dollar-security"],
+  ["/trillion-dollar-security", "/reports/trillion-dollar-security"],
   ["/10-years", "/10years"],
   ["/history", "/ethereum-forks"],
   ["/developers/docs/scaling/rollups", "/developers/docs/scaling/#rollups"],
@@ -115,6 +116,12 @@ module.exports = [
     "/contributing/translation-program/blog-translations",
     "/contributing/translation-program/",
   ],
+  ["/contributing/translation-program/translatathon/details", "/contributing/"],
+  [
+    "/contributing/translation-program/translatathon/terms-and-conditions",
+    "/contributing/",
+  ],
+  ["/contributing/translation-program/translatathon", "/contributing/"],
   ["/donate", "/"],
   [
     "/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash",
@@ -135,7 +142,6 @@ module.exports = [
     false, // Selectively applying temporary for possible future route usage
   ],
   ["/developers/docs/rollups", "/developers/docs/scaling/#rollups"],
-  ["/roadmap/future-proofing/:path+", "/roadmap/future-proofing/"],
   ["/eth2/what-is-eth2", "/roadmap/"],
   [
     "/developers/docs/accounts/account-abstraction",

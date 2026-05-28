@@ -4,8 +4,9 @@ lang: ru
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Получайте финансовые стимулы за точные прогнозы"
-summaryPoint2: "Качественные предсказания будущих событий"
+summaryPoints:
+  - "Получайте финансовые стимулы за точные прогнозы"
+  - "Качественные предсказания будущих событий"
 buttons:
   - content: Узнать больше
     toId: how-prediction-markets-work

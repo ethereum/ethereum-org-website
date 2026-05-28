@@ -3,13 +3,13 @@ title: Finanse regeneracyjne (ReFi)
 description: "Przegląd ReFi i jego obecnych zastosowań."
 lang: pl
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Alternatywny system ekonomiczny oparty na zasadach regeneracji
-summaryPoint2: "Próba wykorzystania Ethereum do rozwiązania globalnych kryzysów koordynacyjnych, takich jak zmiany klimatu"
-summaryPoint3: "Narzędzie do drastycznego skalowania aktywów przynoszących korzyści ekologiczne, takich jak zweryfikowane kredyty węglowe."
+summaryPoints:
+  - "Alternatywny system ekonomiczny oparty na zasadach regeneracji"
+  - "Próba wykorzystania Ethereum do rozwiązania globalnych kryzysów koordynacyjnych, takich jak zmiany klimatu"
+  - "Narzędzie do drastycznego skalowania aktywów przynoszących korzyści ekologiczne, takich jak zweryfikowane kredyty węglowe."
 ---
 
 ## Czym jest ReFi? {#what-is-refi}
@@ -65,7 +65,7 @@ Istnieje nowa fala innowacyjnych projektów budowanych na blockchainach, które 
 
 Niektóre, takie jak [Klima Infinity](https://www.klimadao.finance/infinity) i [Senken](https://senken.io/), oferują szeroką gamę projektów opracowanych przez strony trzecie i wydanych zgodnie z ustalonymi standardami, takimi jak Verra; inne, jak [Nori](https://nori.com/), oferują tylko określone projekty opracowane w ramach własnego standardu kredytów węglowych, które emitują i dla których posiadają własny, dedykowany rynek.
 
-4. Podstawowe szyny i infrastruktura, które ułatwiają zwiększenie wpływu i wydajności całego łańcucha dostaw na rynku emisji dwutlenku węgla. [KlimaDAO](http://klimadao.finance/) dostarcza płynność jako dobro publiczne (pozwalając każdemu kupować lub sprzedawać kredyty węglowe po przejrzystej cenie), motywuje do zwiększenia przepustowości rynków emisji dwutlenku węgla i wycofywania kredytów za pomocą nagród, a także zapewnia przyjazne dla użytkownika, interoperacyjne narzędzia do uzyskiwania dostępu do danych, jak również do nabywania i wycofywania szerokiej gamy stokenizowanych kredytów węglowych.
+4. Podstawowe szyny i infrastruktura, które ułatwiają zwiększenie wpływu i wydajności całego łańcucha dostaw na rynku emisji dwutlenku węgla. [KlimaDAO](https://klimadao.finance/) dostarcza płynność jako dobro publiczne (pozwalając każdemu kupować lub sprzedawać kredyty węglowe po przejrzystej cenie), motywuje do zwiększenia przepustowości rynków emisji dwutlenku węgla i wycofywania kredytów za pomocą nagród, a także zapewnia przyjazne dla użytkownika, interoperacyjne narzędzia do uzyskiwania dostępu do danych, jak również do nabywania i wycofywania szerokiej gamy stokenizowanych kredytów węglowych.
 
 ## ReFi poza rynkami emisji dwutlenku węgla {#refi-beyond}
 

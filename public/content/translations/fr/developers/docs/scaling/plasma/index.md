@@ -16,7 +16,7 @@ Vous devez avoir une bonne compréhension de tous les sujets fondamentaux et une
 
 ## Qu'est-ce que Plasma ?
 
-Plasma est un cadre pour améliorer l'évolutivité des blockchains publiques comme Ethereum. Comme décrit dans le [livre blanc Plasma](http://plasma.io/plasma.pdf) original, les chaînes Plasma sont construites au-dessus d'une autre blockchain (appelée une "chaîne racine"). Chaque « chaîne enfant » s'étend à partir de la chaîne racine et est généralement gérée par un contrat intelligent déployé sur la chaîne mère.
+Plasma est un cadre pour améliorer l'évolutivité des blockchains publiques comme Ethereum. Comme décrit dans le [livre blanc Plasma](https://plasma.io/plasma.pdf) original, les chaînes Plasma sont construites au-dessus d'une autre blockchain (appelée une "chaîne racine"). Chaque « chaîne enfant » s'étend à partir de la chaîne racine et est généralement gérée par un contrat intelligent déployé sur la chaîne mère.
 
 Le contrat Plasma fonctionne, entre autres, comme un [pont](/developers/docs/bridges/) permettant aux utilisateurs de déplacer des actifs entre le réseau principal d'Ethereum et la chaîne plasma. Bien que cela les rende similaires aux [chaînes latérales](/developers/docs/scaling/sidechains/), les chaînes plasma bénéficient — du moins, dans une certaine mesure — de la sécurité du réseau principal d'Ethereum. Ce n'est pas le cas des chaînes latérales qui sont les seules responsables de leur sécurité.
 

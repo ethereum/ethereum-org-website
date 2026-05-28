@@ -4,13 +4,13 @@ metaTitle: DAO nedir? | Merkeziyetsiz Otonom Organizasyon
 description: "Ethereum'daki DAO'lara genel bakış"
 lang: tr
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: "Bir teklif üzerinde oy kullanan bir DAO'nun gösterimi."
-summaryPoint1: "Merkeziyetsiz liderliğe sahip olmayan, üyelere ait topluluklar."
-summaryPoint2: "İnternette tanımadığınız kişilerle iş birliği yapmanın güvenli bir yolu."
-summaryPoint3: "Belirli bir amaca para yatırmak için güvenli bir yer."
+summaryPoints:
+  - "Merkeziyetsiz liderliğe sahip olmayan, üyelere ait topluluklar."
+  - "İnternette tanımadığınız kişilerle iş birliği yapmanın güvenli bir yolu."
+  - "Belirli bir amaca para yatırmak için güvenli bir yer."
 ---
 
 ## DAO'lar Nedir? {#what-are-daos}
@@ -114,7 +114,7 @@ _Genellikle hayır kurumları, işçi kolektifleri ve yatırım kulüpleri gibi 
 
 #### Ünlü bir örnek {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO, Ethereum projelerini finanse etmeye odaklanmıştır. Üyelik için teklifi şart koştuğundan grup, potansiyel imtiyaz sahipleri hakkında bilinçli kararlar vermek için yeterli deneyim ve sermayeye sahip olup olmadığınızı değerlendirebilir. Serbest piyasada bir DAO'ya erişim satın alamazsınız.
+[MolochDAO](https://molochdao.com/) – MolochDAO, Ethereum projelerini finanse etmeye odaklanmıştır. Üyelik için teklifi şart koştuğundan grup, potansiyel imtiyaz sahipleri hakkında bilinçli kararlar vermek için yeterli deneyim ve sermayeye sahip olup olmadığınızı değerlendirebilir. Serbest piyasada bir DAO'ya erişim satın alamazsınız.
 
 ### İtibar tabanlı üyelik {#reputation-based-membership}
 

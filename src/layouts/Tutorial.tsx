@@ -6,13 +6,12 @@ import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
-import Codeblock from "@/components/Codeblock"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -51,21 +50,15 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const Paragraph = (props: HTMLAttributes<HTMLParagraphElement>) => (
-  <p className="mx-0 mb-4 mt-8 break-words" {...props} />
+  <p className="mx-0 mt-8 mb-4 break-words" {...props} />
 )
 
 const KBD = (props: HTMLAttributes<HTMLElement>) => (
   <kbd
-    className="rounded-sm border-2 border-primary px-2 py-0.5 align-middle"
+    className="rounded-xs border-2 border-primary px-2 py-0.5 align-middle"
     {...props}
   />
 )
-
-const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
-  const match = props.className?.match(/(language-\S+)/)
-  const codeLanguage = match ? match[0] : "plain-text"
-  return <Codeblock codeLanguage={codeLanguage} {...props} />
-}
 
 export const tutorialsComponents = {
   a: TooltipLink,
@@ -75,11 +68,10 @@ export const tutorialsComponents = {
   h4: Heading4,
   p: Paragraph,
   kbd: KBD,
-  pre: Pre,
   ...mdxTableComponents,
   ButtonLink,
   CallToContribute,
-  Card,
+  Card: MarkdownCard,
   Emoji,
   EnvWarningBanner,
   YouTube,
@@ -113,7 +105,7 @@ export const TutorialLayout = ({
   return (
     <div className="flex w-full gap-8">
       <MainArticle
-        className="min-w-0 max-w-screen-lg px-8 lg:py-8"
+        className="max-w-screen-lg min-w-0 px-8 lg:py-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <Breadcrumbs

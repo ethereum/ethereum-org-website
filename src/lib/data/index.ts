@@ -193,9 +193,9 @@ export const getTranslationGlossary = createCachedGetter(
   CACHE_REVALIDATE_DAY
 )
 
-export const getGitHubContributors = createCachedGetter(
-  dataLayer.getGitHubContributors,
-  ["github-contributors"],
+export const getVideoThumbnails = createCachedGetter(
+  dataLayer.getVideoThumbnails,
+  ["video-thumbnails"],
   CACHE_REVALIDATE_DAY
 )
 

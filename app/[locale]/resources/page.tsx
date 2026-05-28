@@ -2,12 +2,12 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Stack, VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
@@ -34,7 +34,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   // Fetch data using the new data-layer functions (already cached)
   const [growThePieData, blobscanOverallStats] = await Promise.all([
@@ -78,7 +78,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <ResourcesPageJsonLD locale={locale} contributors={contributors} />
 
       <MainArticle className="relative flex flex-col">
-        <BannerNotification shouldShow className="text-center max-md:flex-col">
+        <Alert variant="banner" className="max-md:flex-col">
           {t("page-resources-banner-notification-message")}{" "}
           <Link
             href={new URL(
@@ -94,7 +94,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           >
             {t("page-resources-share-feedback")}
           </Link>
-        </BannerNotification>
+        </Alert>
 
         <HubHero
           title={t("page-resources-hero-title")}
@@ -139,7 +139,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
                           {title}
                         </div>
-                        <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                        <div className="h-full bg-background bg-linear-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
                           {metric && metric}
                           <ResourcesContainer>
                             {items.map(({ className, ...item }) => (
@@ -236,7 +236,7 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const t = await getTranslations("page-resources")
 
   return await getMetadata({
     locale,

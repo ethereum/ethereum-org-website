@@ -23,7 +23,7 @@ export const isExternal = (href: string): boolean =>
 export const isGlossary = (href: string): boolean =>
   href.includes("glossary") && href.includes("#")
 
-export const isPdf = (href: string): boolean => href.endsWith(".pdf")
+export const isPdf = (href: string): boolean => /\.pdf(?:$|\?)/i.test(href)
 
 export const isFile = (href: string): boolean => extname(href).length > 0
 
@@ -36,6 +36,21 @@ export const sanitizeHitUrl = (url: string): string =>
 
 // remove any query params or hashes from the path
 export const cleanPath = (path: string): string => path.replace(/[$#].+$/, "")
+
+/**
+ * Upgrades `http://` to `https://` for ethereum.org and its subdomains.
+ * External data sources (translations, event feeds) sometimes emit insecure
+ * ethereum.org URLs that trip SEO crawlers with a mixed-protocol warning.
+ */
+export const normalizeHref = (href: string): string => {
+  if (
+    href.startsWith("http://") &&
+    /^http:\/\/([^/]*\.)?ethereum\.org(\/|$)/.test(href)
+  ) {
+    return href.replace(/^http:\/\//, "https://")
+  }
+  return href
+}
 
 export const isHrefActive = (
   href: string,

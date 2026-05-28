@@ -7,7 +7,6 @@ import FileContributors from "@/components/FileContributors"
 import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
 import {
   HighlightCard,
-  HighlightCardContent,
   HighlightStack,
   IconBox,
 } from "@/components/HighlightCard"
@@ -16,7 +15,7 @@ import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
 import TableOfContents from "@/components/TableOfContents"
 import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
-import { CardTitle } from "@/components/ui/card"
+import { CardParagraph, CardTitle } from "@/components/ui/card"
 import Link, { LinkWithArrow } from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
@@ -39,9 +38,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = params
   setRequestLocale(locale)
 
-  const t = await getTranslations({
-    namespace: "page-what-is-ether",
-  })
+  const t = await getTranslations("page-what-is-ether")
 
   const [
     { contributors, lastEditLocaleTimestamp },
@@ -167,45 +164,39 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                   <IconBox>
                     <User className="text-accent-a" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <div className="space-y-2!">
+                    <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-6")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t("page-what-is-ether-what-is-ether-description-7")}
-                      </p>
-                    </HighlightCardContent>
+                    <CardParagraph>
+                      {t("page-what-is-ether-what-is-ether-description-7")}
+                    </CardParagraph>
                   </div>
                 </HighlightCard>
                 <HighlightCard>
                   <IconBox>
                     <SquareCode className="text-accent-b" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <div className="space-y-2!">
+                    <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-8")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t("page-what-is-ether-what-is-ether-description-9")}
-                      </p>
-                    </HighlightCardContent>
+                    <CardParagraph>
+                      {t("page-what-is-ether-what-is-ether-description-9")}
+                    </CardParagraph>
                   </div>
                 </HighlightCard>
                 <HighlightCard>
                   <IconBox>
                     <Landmark className="text-accent-c" />
                   </IconBox>
-                  <div>
-                    <CardTitle className="mb-2">
+                  <div className="space-y-2!">
+                    <CardTitle>
                       {t("page-what-is-ether-what-is-ether-description-10")}
                     </CardTitle>
-                    <HighlightCardContent>
-                      <p>
-                        {t("page-what-is-ether-what-is-ether-description-11")}
-                      </p>
-                    </HighlightCardContent>
+                    <CardParagraph>
+                      {t("page-what-is-ether-what-is-ether-description-11")}
+                    </CardParagraph>
                   </div>
                 </HighlightCard>
               </HighlightStack>
@@ -238,7 +229,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                     strong: Strong,
                   })}
                 </p>
-                <UnorderedList className="mb-0 mt-2 [&>li]:mb-0.5">
+                <UnorderedList className="mt-2 mb-0 [&>li]:mb-0.5">
                   <ListItem>
                     {t.rich("page-what-is-ether-how-to-buy-eth-description-5", {
                       strong: Strong,
@@ -311,6 +302,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               src={ethOrgLogo}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[123px]"
+              sizes="123px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
@@ -400,6 +392,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               src={infrastructureTransparent}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[330px]"
+              sizes="330px"
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[4].url)} className="scroll-mt-28">
@@ -468,6 +461,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               src={developersHubHero}
               alt="Ethereum.org Logo"
               className="mx-auto"
+              sizes={`(max-width: 832px) calc(100vw - 32px), 800px`}
             />
             <div className="space-y-6">
               <h2 id={getId(tocItems[5].url)} className="scroll-mt-28">
@@ -573,6 +567,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
               src={impactTransparent}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[214px]"
+              sizes="214px"
             />
             <div className="space-y-6">
               <h3>{t("page-what-is-ether-who-holds-most")}</h3>
@@ -711,10 +706,7 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-what-is-ether",
-  })
+  const t = await getTranslations("page-what-is-ether")
 
   return await getMetadata({
     locale,

@@ -11,7 +11,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
 - **Next.js 14.2+** - React framework with App Router
 - **React 18** - UI library
 - **TypeScript 5.5+** - Type safety and development experience
-- **Tailwind CSS 3.4+** - Utility-first CSS framework
+- **Tailwind CSS 4+** - Utility-first CSS framework (CSS-first config in `src/styles/global.css`)
 
 ### Key Dependencies
 
@@ -54,6 +54,7 @@ This is the official Ethereum.org website - a Next.js application that serves as
   - **content/** - Markdown content files
   - **images/** - Image assets
 - **docs/** - Development documentation
+  - **solutions/** - Documented solutions to past problems, organized by category with YAML frontmatter (module, tags, problem_type)
 
 ## Code Conventions
 
@@ -75,10 +76,12 @@ This is the official Ethereum.org website - a Next.js application that serves as
 ### Styling Conventions
 
 - **Primary approach**: Tailwind CSS utility classes
-- **Component variants**: Use `class-variance-authority` (cva)
+- **Component variants**: Use `tailwind-variants` (`tv`) for new and refactored work. Existing `class-variance-authority` (`cva`) components don't need bulk migration -- swap to `tv` opportunistically when you're already touching the component for another reason.
 - **Dynamic classes**: Use `cn()` utility (clsx + tailwind-merge)
-- **Custom properties**: CSS variables in `:root` for theme values
+- **Custom properties**: CSS variables in `src/styles/` for theme values
 - **Responsive design**: Mobile-first approach
+
+For UI work, see the **`design-system` skill** at `.claude/skills/design-system/`. It's the canonical knowledge base for component choices, design tokens, RTL/i18n, server/client boundaries, and the "use a variant, not a new component" pattern.
 
 ## Development Workflows
 
@@ -101,6 +104,8 @@ pnpm build-storybook       # Build Storybook
 pnpm chromatic             # Run Chromatic visual tests
 
 # Content Management
+pnpm lint:md               # Lint English markdown content
+pnpm lint:md:fix           # Auto-fix header IDs and duplicates
 pnpm markdown-checker      # Validate markdown content
 pnpm events-import         # Import community events
 ```
@@ -116,10 +121,12 @@ pnpm events-import         # Import community events
 
 ### Internationalization
 
-- **25 languages** supported via Crowdin (canonical list: `i18n.config.json`)
-- **RTL support** for Arabic, Urdu
-- Translation files (JSON format) in `src/intl/[locale]/`
-- Content translations managed through Crowdin platform
+- **25 languages** supported (canonical list: `i18n.config.json`); **RTL support** for Arabic, Urdu
+- JSON UI strings in `src/intl/[locale]/`; translated markdown content in `public/content/translations/[locale]/`
+- Non-English markdown is propagated by the **intl-pipeline** (`src/scripts/intl-pipeline/`, entry `main.ts`). **Do not hand-propagate English changes into non-English files** -- let the pipeline run, or trigger `intl-pipeline.yml` with `stamp_only: true` if manifests must catch up urgently (e.g. unblocking a build). Hand-fixing a translation error is fine when the English side hasn't moved, since the manifest mapping stays valid. Spec: `tests/specs/PIPELINE-SPEC.md`.
+- Glossary: base URL from `GLOSSARY_API_URL` env var; default in `src/scripts/intl-pipeline/config.ts`. ETHGlossary is authoritative for Ethereum term translations.
+
+For pipeline mechanics, recovery, manifests, ETHGlossary integration, and the `intl/pending-{base}` orchestration model, see the **`intl-pipeline` skill** at `.claude/skills/intl-pipeline/`. For translation-quality review (scoring rubric, language-group rules, ETHGlossary-as-authority policy, multi-agent role split), see the **`intl-review` skill** at `.claude/skills/intl-review/`.
 
 ### Markdown Content
 
@@ -127,6 +134,7 @@ pnpm events-import         # Import community events
 - Processed with `next-mdx-remote`
 - Custom MDX components for rich content
 - Automatic table of contents generation
+- **All h1-h4 headings require a custom `{#lower-kebab-id}`** -- enforced by markdownlint via pre-commit hook. Run `pnpm lint:md:fix` to auto-add missing IDs. Config: `.markdownlint-cli2.jsonc`, custom rules: `.markdownlint-rules/`
 
 ### Asset Management
 
@@ -188,7 +196,7 @@ This project enforces type-safe chain names via TypeScript. When working with la
 
 1. **Always look up exact names** - Before adding `chainName` or `supported_chains`, search `chains.ts` for the exact `name` value
 2. **Names are case-sensitive and exact** - e.g., use `"Zircuit Mainnet"` not `"Zircuit"`, use `"OP Mainnet"` not `"Optimism"`
-3. **Run type checking** - Use `npx tsc --noEmit` to verify chain names are valid before committing
+3. **Run type checking** - Use `pnpm type-check` to verify chain names are valid before committing
 4. **Non-EVM chains** - For Starknet and other non-EVM chains, use `NonEVMChainName` type
 
 **Common Mistakes:**

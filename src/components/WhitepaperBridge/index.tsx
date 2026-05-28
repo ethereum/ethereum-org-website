@@ -28,10 +28,7 @@ import { Section } from "../ui/section"
 const WhitepaperBridge = async () => {
   const locale = await getLocale()
   const { twFlipForRtl } = getDirection(locale as Lang)
-  const t = await getTranslations({
-    locale,
-    namespace: "component-whitepaper",
-  })
+  const t = await getTranslations("component-whitepaper")
 
   const evolutionKeys = [
     "evolution-pos",
@@ -78,13 +75,13 @@ const WhitepaperBridge = async () => {
       {/* What's changed card - uses card-gradient-secondary */}
       <Card className="border border-primary-low-contrast bg-card-gradient-secondary">
         <CardContent className="p-4 md:p-6">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-body-medium">
+          <p className="mb-4 text-sm font-semibold tracking-wide text-body-medium uppercase">
             {t("whats-changed")}
           </p>
-          <UnorderedList className="ms-0 space-y-3">
+          <UnorderedList className="m-0 space-y-3">
             {evolutionKeys.map((key) => (
               <Flex key={key} className="gap-3">
-                <CheckCircle2 className="mt-0.5 size-5 flex-shrink-0 text-success" />
+                <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-success" />
                 <span className="flex-1 text-body-medium">{t(key)}</span>
               </Flex>
             ))}

@@ -1,13 +1,4 @@
 {
-  "adoption-chart-artists-label": "藝術家",
-  "adoption-chart-column-now-label": "現在",
-  "adoption-chart-companies-label": "公司",
-  "adoption-chart-developers-label": "開發者",
-  "adoption-chart-gamers-label": "遊戲玩家",
-  "adoption-chart-investors-label": "投資者",
-  "adoption-chart-musicians-label": "音樂家",
-  "adoption-chart-refugees-label": "難民",
-  "adoption-chart-writers-label": "作家",
   "energy-consumption-chart-airbnb-label": "AirBnB",
   "energy-consumption-chart-btc-pow-label": "比特幣工作量證明",
   "energy-consumption-chart-eth-pos-label": "以太幣權益證明",

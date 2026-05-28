@@ -6,7 +6,7 @@ lang: fr
 
 Un nœud Ethereum est composé de deux clients : un [client d'exécution](/developers/docs/nodes-and-clients/#execution-clients) et un [client de consensus](/developers/docs/nodes-and-clients/#consensus-clients). Pour qu'un nœud propose un nouveau bloc, il doit également exécuter un [client validateur](#validators).
 
-Lorsque Ethereum utilisait la [preuve de travail](/developers/docs/consensus-mechanisms/pow/), un client d'exécution était suffisant pour exécuter un nœud Ethereum complet. Cependant, depuis la mise en œuvre de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pow/), le client d'exécution doit être utilisé avec un autre logiciel appelé [client de consensus](/developers/docs/nodes-and-clients/#consensus-clients).
+Lorsque Ethereum utilisait la [preuve de travail](/developers/docs/consensus-mechanisms/pow/), un client d'exécution était suffisant pour exécuter un nœud Ethereum complet. Cependant, depuis la mise en œuvre de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/), le client d'exécution doit être utilisé avec un autre logiciel appelé [client de consensus](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Le diagramme ci-dessous montre la relation entre les deux clients Ethereum. Les deux clients se connectent à leurs propres réseaux peer-to-peer (P2P) respectifs. Des réseaux P2P séparés sont nécessaires car les clients d'exécution propagent les transactions sur leur réseau P2P, leur permettant de gérer leur pool de transactions local, tandis que les clients de consensus propagent les blocs sur leur réseau P2P, permettant le consensus et l'accroissement de la chaîne.
 

@@ -9,7 +9,7 @@ lang: cs
 published: 2025-04-30
 ---
 
-## Úvod
+## Úvod {#introduction}
 
 [SAML](https://www.onelogin.com/learn/saml) je standard používaný na web2, který umožňuje [poskytovateli identity (IdP)](https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider) poskytovat informace o uživateli [poskytovatelům služeb (SP)](https://en.wikipedia.org/wiki/Service_provider_\(SAML\)).
 
@@ -22,7 +22,7 @@ Upozorňujeme, že tento tutoriál je napsán pro dvě samostatné skupiny čten
 
 V důsledku toho bude obsahovat spoustu úvodního materiálu, který již znáte. Klidně ho přeskočte.
 
-### SAML pro lidi z komunity Etherea
+### SAML pro lidi z komunity Etherea {#saml-for-ethereum-people}
 
 SAML je centralizovaný protokol. Poskytovatel služeb (SP) přijímá tvrzení (například „toto je můj uživatel John, měl by mít oprávnění provádět A, B a C“) od poskytovatele identity (IdP) pouze pokud s ním má již existující vztah důvěry, nebo s [certifikační autoritou](https://www.ssl.com/article/what-is-a-certificate-authority-ca/), která podepsala certifikát daného IdP.
 
@@ -32,7 +32,7 @@ Například SP může být cestovní kancelář poskytující cestovní služby 
 
 Tímto způsobem si tři entity, prohlížeč, SP a IdP, vyjednávají přístup. SP nemusí předem vědět nic o uživateli používajícím prohlížeč, stačí, když důvěřuje IdP.
 
-### Ethereum pro lidi znalé SAML
+### Ethereum pro lidi znalé SAML {#ethereum-for-saml-people}
 
 Ethereum je decentralizovaný systém.
 
@@ -51,7 +51,7 @@ Podpis pouze ověřuje adresu Etherea. Chcete-li získat další atributy uživa
 
 Vzhledem k decentralizované povaze Etherea může atestace provádět kterýkoli uživatel. Identita atestátora je důležitá pro identifikaci atestací, které považujeme za spolehlivé.
 
-## Nastavení
+## Nastavení {#setup}
 
 Prvním krokem je zajistit komunikaci mezi SAML SP a SAML IdP.
 
@@ -83,13 +83,13 @@ Prvním krokem je zajistit komunikaci mezi SAML SP a SAML IdP.
 
 5. Poskytněte IdP svou e-mailovou adresu a klikněte na **Přihlásit se k poskytovateli služeb**. Uvidíte, že budete přesměrováni zpět k poskytovateli služeb (port 3000) a že vás pozná podle vaší e-mailové adresy.
 
-### Podrobné vysvětlení
+### Podrobné vysvětlení {#detailed-explanation}
 
 Toto se děje krok za krokem:
 
 ![Běžné přihlášení SAML bez Etherea](./fig-04-saml-no-eth.png)
 
-#### src/config.mts
+#### src/config.mts {#srcconfigmts}
 
 Tento soubor obsahuje konfiguraci jak pro poskytovatele identity, tak pro poskytovatele služeb. Obvykle by se jednalo o různé entity, ale zde můžeme pro zjednodušení sdílet kód.
 
@@ -167,7 +167,7 @@ export const idpPublicData = {
 
 Veřejná data pro poskytovatele identity jsou podobná. Určuje, že pro přihlášení uživatele je třeba odeslat POST na `http://localhost:3001/idp/login` a pro odhlášení uživatele POST na `http://localhost:3001/idp/logout`.
 
-#### src/sp.mts
+#### src/sp.mts {#srcspmts}
 
 Toto je kód, který implementuje poskytovatele služeb.
 
@@ -342,7 +342,7 @@ app.listen(config.spPort, () => {
 
 Naslouchejte na portu `spPort` pomocí této aplikace Express.
 
-#### src/idp.mts
+#### src/idp.mts {#srcidpmts}
 
 Toto je poskytovatel identity. Je velmi podobný poskytovateli služeb, níže uvedená vysvětlení se týkají částí, které se liší.
 
@@ -472,7 +472,7 @@ Toto je koncový bod, který přijímá požadavek na přihlášení od poskytov
 
 Měli bychom být schopni použít [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) ke čtení ID požadavku na ověření. Nepodařilo se mi to však zprovoznit a nestálo za to tím trávit spoustu času, tak jsem prostě použil [univerzální XML parser](https://www.npmjs.com/package/fast-xml-parser). Informace, kterou potřebujeme, je atribut `ID` uvnitř značky `<samlp:AuthnRequest>`, která je na nejvyšší úrovni XML.
 
-## Použití podpisů Etherea
+## Použití podpisů Etherea {#using-ethereum-signatures}
 
 Nyní, když můžeme odeslat identitu uživatele poskytovateli služeb, dalším krokem je získat identitu uživatele důvěryhodným způsobem. Viem nám umožňuje jednoduše požádat peněženku o adresu uživatele, ale to znamená žádat o informace prohlížeč. Prohlížeč nemáme pod kontrolou, takže nemůžeme automaticky důvěřovat odpovědi, kterou od něj dostaneme.
 
@@ -490,7 +490,7 @@ Poté přejděte [na SP](http://localhost:3000) a postupujte podle pokynů.
 
 Všimněte si, že v tomto okamžiku nevíme, jak získat e-mailovou adresu z adresy Etherea, takže místo toho hlásíme SP `<adresa etherea>@bad.email.address`.
 
-### Podrobné vysvětlení
+### Podrobné vysvětlení {#detailed-explanation-2}
 
 Změny jsou v krocích 4–5 v předchozím diagramu.
 
@@ -700,7 +700,7 @@ idpRouter.post(`/login`,
 
 Místo `getLoginPage` nyní v obslužném programu kroku 3 použijte `getSignaturePage`.
 
-## Získání e-mailové adresy
+## Získání e-mailové adresy {#getting-the-email-address}
 
 Dalším krokem je získání e-mailové adresy, identifikátoru požadovaného poskytovatelem služeb. K tomu používáme [službu Ethereum Attestation Service (EAS)](https://attest.org/).
 
@@ -756,7 +756,7 @@ Poté zadejte svou e-mailovou adresu. Máte dva způsoby, jak to udělat:
 
 Ať tak či onak, poté přejděte na [http://localhost:3000](http://localhost:3000) a postupujte podle pokynů. Pokud jste importovali testovací privátní klíč, e-mail, který obdržíte, je `test_addr_0@example.com`. Pokud jste použili vlastní adresu, měla by to být ta, kterou jste atestovali.
 
-### Podrobné vysvětlení
+### Podrobné vysvětlení {#detailed-explanation-3}
 
 ![Získání e-mailu z adresy Etherea](./fig-06-saml-sig-n-email.png)
 
@@ -873,13 +873,13 @@ Pokud existuje hodnota, použijte k dekódování dat `decodeData`. Nepotřebuje
 
 Pro získání e-mailové adresy použijte novou funkci.
 
-## A co decentralizace?
+## A co decentralizace? {#what-about-decentralization}
 
 V této konfiguraci se uživatelé nemohou vydávat za někoho, kým nejsou, pokud se spoléháme na důvěryhodné atestátory pro mapování adres Etherea na e-mailové adresy. Náš poskytovatel identity je však stále centralizovanou komponentou. Kdokoli, kdo má privátní klíč poskytovatele identity, může poskytovateli služeb posílat nepravdivé informace.
 
 Může existovat řešení pomocí [více-stranného výpočtu (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). Doufám, že o tom napíšu v budoucím tutoriálu.
 
-## Závěr
+## Závěr {#conclusion}
 
 Přijetí standardu pro přihlášení, jako jsou podpisy Etherea, se potýká s problémem slepice a vejce. Poskytovatelé služeb chtějí oslovit co nejširší trh. Uživatelé chtějí mít přístup ke službám, aniž by se museli starat o podporu svého standardu pro přihlášení.
 Vytváření adaptérů, jako je Ethereum IdP, nám může pomoci překonat tuto překážku.

@@ -3,15 +3,15 @@ title: Social network decentralizzati
 description: Una panoramica dei social network decentralizzati su Ethereum
 lang: it
 template: use-cases
-emoji: ":mega:"
 sidebarDepth: 2
 image: /images/ethereum-learn.png
-summaryPoint1: Piattaforme basate su blockchain per l'interazione sociale e la creazione e distribuzione di contenuti.
-summaryPoint2: Le reti di social media decentralizzate proteggono la privacy degli utenti e migliorano la sicurezza dei dati.
-summaryPoint3: I token e gli NFT creano nuovi modi per monetizzare i contenuti.
+summaryPoints:
+  - "Piattaforme basate su blockchain per l'interazione sociale e la creazione e distribuzione di contenuti."
+  - "Le reti di social media decentralizzate proteggono la privacy degli utenti e migliorano la sicurezza dei dati."
+  - "I token e gli NFT creano nuovi modi per monetizzare i contenuti."
 ---
 
-I social network svolgono un ruolo enorme nelle nostre comunicazioni e interazioni quotidiane. Tuttavia, il controllo centralizzato di queste piattaforme ha creato molti problemi: violazioni dei dati, interruzioni dei server, de-platforming, censura e violazioni della privacy sono alcuni dei compromessi che i social media spesso accettano. Per combattere questi problemi, gli sviluppatori stanno costruendo social network su [Ethereum](). I social network decentralizzati possono risolvere molti dei problemi delle piattaforme di social networking tradizionali e migliorare l'esperienza complessiva degli utenti.
+I social network svolgono un ruolo enorme nelle nostre comunicazioni e interazioni quotidiane. Tuttavia, il controllo centralizzato di queste piattaforme ha creato molti problemi: violazioni dei dati, interruzioni dei server, de-platforming, censura e violazioni della privacy sono alcuni dei compromessi che i social media spesso accettano. Per combattere questi problemi, gli sviluppatori stanno costruendo social network su [Ethereum](/). I social network decentralizzati possono risolvere molti dei problemi delle piattaforme di social networking tradizionali e migliorare l'esperienza complessiva degli utenti.
 
 ## Cosa sono i social network decentralizzati? {#what-are-decentralized-social-networks}
 

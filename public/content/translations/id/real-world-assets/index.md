@@ -4,13 +4,13 @@ metaTitle: Apa itu RWA? | Manfaat dan Penggunaan Aset dunia nyata
 description: Gambaran umum Aset dunia nyata di Ethereum
 lang: id
 template: use-cases
-emoji: ":house_buildings:"
 image: /images/man-and-dog-playing.png
 alt: Pria dan anjing sedang bermain.
 sidebarDepth: 2
-summaryPoint1: Metode untuk mengubah komoditas berharga menjadi token digital.
-summaryPoint2: Anda kini dapat memiliki sebagian dari objek atau aset di kehidupan nyata, daripada harus membeli seluruh properti atau barang.
-summaryPoint3: Menghubungkan keuangan tradisional dengan ekosistem blockchain.
+summaryPoints:
+  - "Metode untuk mengubah komoditas berharga menjadi token digital."
+  - "Anda kini dapat memiliki sebagian dari objek atau aset di kehidupan nyata, daripada harus membeli seluruh properti atau barang."
+  - "Menghubungkan keuangan tradisional dengan ekosistem blockchain."
 ---
 
 Aset dunia nyata (RWA) adalah token yang mewakili bentuk kekayaan yang ada, seperti real estat, emas, saham, seni, mesin, atau barang koleksi. Menokenisasi barang-barang ini menerjemahkannya ke dalam bentuk digital, memungkinkannya untuk dibagi di antara beberapa pemilik dan membuatnya lebih mudah untuk diperdagangkan.

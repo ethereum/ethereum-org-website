@@ -49,7 +49,7 @@ ACCESSES = 64                     # idadi ya ufikiaji katika kitanzi cha hashimo
 
 ### Matumizi ya 'SHA3' {#sha3}
 
-Ukuzaji wa Ethereum ulienda sambamba na ukuzaji wa kiwango cha SHA3, na mchakato wa viwango ulifanya mabadiliko ya kuchelewa katika pedi ya kanuni ya mwisho ya hashi, hivi kwamba hashi za "sha3_256" na "sha3_512" za Ethereum si hashi za kawaida za sha3, bali ni lahaja ambayo mara nyingi hujulikana kama "Keccak-256" na "Keccak-512" katika miktadha mingine. Tazama mjadala, k.m., [hapa](https://eips.ethereum.org/EIPS/eip-1803), [hapa](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), au [hapa](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Ukuzaji wa Ethereum ulienda sambamba na ukuzaji wa kiwango cha SHA3, na mchakato wa viwango ulifanya mabadiliko ya kuchelewa katika pedi ya kanuni ya mwisho ya hashi, hivi kwamba hashi za "sha3_256" na "sha3_512" za Ethereum si hashi za kawaida za sha3, bali ni lahaja ambayo mara nyingi hujulikana kama "Keccak-256" na "Keccak-512" katika miktadha mingine. Tazama mjadala, k.m., [hapa](https://eips.ethereum.org/EIPS/eip-1803), [hapa](https://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), au [hapa](https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Tafadhali zingatia hilo kwani hashi za "sha3" zinarejelewa katika maelezo ya kanuni hapa chini.
 

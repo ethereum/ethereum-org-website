@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 
 import { getHourlyEthPrice, getHourlyGasPriceData } from "@/lib/data"
 
-export const revalidate = 3600 // 1 hour
+export const revalidate = 3600
 
 export async function GET() {
   const [gasPriceData, ethPriceData] = await Promise.all([
@@ -20,5 +20,6 @@ export async function GET() {
   return NextResponse.json({
     gasPrice: gasPriceData.gasPrice,
     ethPriceUSD: ethPriceData.value,
+    ethPercentChange24h: ethPriceData.percentChange24h,
   })
 }

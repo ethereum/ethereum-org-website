@@ -58,7 +58,7 @@ type AvatarBaseProps = React.ComponentProps<typeof AvatarPrimitive.Root> &
   AvatarVariantProps
 
 const AvatarBase = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Root>,
+  React.ComponentRef<typeof AvatarPrimitive.Root>,
   AvatarBaseProps
 >(({ className, size, ...props }, ref) => (
   <AvatarStylesContext.Provider value={avatarStyles({ size })}>
@@ -77,7 +77,7 @@ const AvatarBase = React.forwardRef<
 AvatarBase.displayName = AvatarPrimitive.Root.displayName
 
 const AvatarImage = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Image>,
+  React.ComponentRef<typeof AvatarPrimitive.Image>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
 >(({ className, alt = "", ...props }, ref) => (
   <AvatarPrimitive.Image
@@ -90,7 +90,7 @@ const AvatarImage = React.forwardRef<
 AvatarImage.displayName = AvatarPrimitive.Image.displayName
 
 const AvatarFallback = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Fallback>,
+  React.ComponentRef<typeof AvatarPrimitive.Fallback>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback> &
     VariantProps<typeof avatarStyles>
 >(({ className, ...props }, ref) => {
@@ -122,7 +122,7 @@ export type AvatarProps = AvatarBaseProps &
   }
 
 const Avatar = React.forwardRef<
-  React.ElementRef<"span"> | React.ElementRef<"div">,
+  React.ComponentRef<"span"> | React.ComponentRef<"div">,
   AvatarProps
 >((props, ref) => {
   const {
@@ -135,6 +135,8 @@ const Avatar = React.forwardRef<
     direction = "row",
     dataTest,
   } = props
+
+  const [hasError, setHasError] = React.useState(false)
 
   const commonLinkProps = {
     href,
@@ -164,7 +166,7 @@ const Avatar = React.forwardRef<
             <BaseLink {...commonLinkProps}>{label}</BaseLink>
           </LinkOverlay>
           <AvatarBase size={size}>
-            {src ? (
+            {src && !hasError ? (
               <Image
                 className="object-fill"
                 width={128}
@@ -173,6 +175,7 @@ const Avatar = React.forwardRef<
                 src={src}
                 alt={name}
                 quality={100}
+                onError={() => setHasError(true)}
               />
             ) : (
               <AvatarImage />
@@ -187,7 +190,7 @@ const Avatar = React.forwardRef<
   return (
     <AvatarBase ref={ref} size={size} className={className} asChild>
       <BaseLink title={dataTest} {...commonLinkProps}>
-        {src ? (
+        {src && !hasError ? (
           <Image
             className="object-fill"
             width={128}
@@ -196,6 +199,7 @@ const Avatar = React.forwardRef<
             src={src}
             alt={name}
             quality={100}
+            onError={() => setHasError(true)}
           />
         ) : (
           <AvatarImage />

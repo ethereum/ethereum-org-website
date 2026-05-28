@@ -11,7 +11,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app
 ---
 
-上次我们探讨了 [Solidity 的宏观概况](https://soliditydeveloper.com/solidity-overview-2020)，并提到了 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)。 现在，你将了解如何使用它，它集成了哪些功能以及如何对其进行扩展等内容。 这个应用程序由 [Sablier](http://sablier.com/) 创始人 Paul Razvan Berg 发起，将帮助你启动前端开发，并提供多种可选集成。
+上次我们探讨了 [Solidity 的宏观概况](https://soliditydeveloper.com/solidity-overview-2020)，并提到了 [create-eth-app](https://github.com/PaulRBerg/create-eth-app)。 现在，你将了解如何使用它，它集成了哪些功能以及如何对其进行扩展等内容。 这个应用程序由 [Sablier](https://sablier.com/) 创始人 Paul Razvan Berg 发起，将帮助你启动前端开发，并提供多种可选集成。
 
 ## 安装 {#installation}
 

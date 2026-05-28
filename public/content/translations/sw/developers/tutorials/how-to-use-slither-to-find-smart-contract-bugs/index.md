@@ -70,7 +70,7 @@ Tumia [crytic.io](https://github.com/crytic) ili kupata ufikiaji wa vitambuzi vy
 
 Uwezo na muundo wa mfumo wa uchambuzi tuli wa Slither umeelezewa katika machapisho ya blogu ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) na [karatasi ya kitaaluma](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
-Uchambuzi tuli upo katika aina tofauti. Pengine unagundua kwamba vikompilaji kama [clang](https://clang-analyzer.llvm.org/) na [gcc](https://lwn.net/Articles/806099/) hutegemea mbinu hizi za utafiti, lakini pia inasaidia ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) na zana zinazotegemea mbinu rasmi kama vile [Frama-C](https://frama-c.com/) na [Polyspace](https://www.mathworks.com/products/polyspace.html).
+Uchambuzi tuli upo katika aina tofauti. Pengine unagundua kwamba vikompilaji kama [clang](https://clang-analyzer.llvm.org/) na [gcc](https://lwn.net/Articles/806099/) hutegemea mbinu hizi za utafiti, lakini pia inasaidia ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) na zana zinazotegemea mbinu rasmi kama vile [Frama-C](https://frama-c.com/) na [Polyspace](https://www.mathworks.com/products/polyspace.html).
 
 Hatutakuwa tukikagua kwa kina mbinu za uchambuzi tuli na watafiti hapa. Badala yake, tutazingatia kile kinachohitajika kuelewa jinsi Slither inavyofanya kazi ili uweze kuitumia kwa ufanisi zaidi kupata hitilafu na kuelewa msimbo.
 

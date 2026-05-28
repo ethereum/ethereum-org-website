@@ -11,7 +11,7 @@ import { ThemeToggleButton } from "./ThemeToggleButton"
 import { getLanguagesDisplayInfo } from "@/lib/nav/links"
 
 const DesktopNav = async ({ className }: { className?: string }) => {
-  const t = await getTranslations({ namespace: "common" })
+  const t = await getTranslations("common")
   const languages = await getLanguagesDisplayInfo()
 
   const locale = await getLocale()

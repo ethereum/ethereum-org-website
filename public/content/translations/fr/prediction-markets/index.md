@@ -4,8 +4,9 @@ lang: fr
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "Recevez des incitations financières pour produire des prévisions précises"
-summaryPoint2: "Prédictions de haute qualité sur des événements futurs"
+summaryPoints:
+  - "Recevez des incitations financières pour produire des prévisions précises"
+  - "Prédictions de haute qualité sur des événements futurs"
 buttons:
   - content: En savoir plus
     toId: how-prediction-markets-work

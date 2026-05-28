@@ -446,6 +446,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://support.metamask.io",
     documentation: "https://docs.metamask.io/",
     supported_chains: [
@@ -457,7 +458,7 @@ export const walletsData: WalletData[] = [
       "Base",
       "Scroll",
       "Blast",
-      "Taiko Alethia",
+      "Taiko",
       "Unichain",
       "Ink",
     ],
@@ -502,6 +503,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: true,
     social_recovery: true,
+    eip_4337_support: true,
     onboard_documentation: "https://docs.safe.global/",
     documentation: "https://docs.safe.global/",
     supported_chains: [
@@ -637,6 +639,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_4337_support: true,
     onboard_documentation:
       "https://help.ambire.com/hc/en-us/categories/4404980091538-Ambire-Wallet",
     documentation: "",
@@ -941,6 +944,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://docs.pillarx.app/",
     documentation: "https://docs.pillarx.app/",
     supported_chains: [
@@ -1326,6 +1330,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://learn.rainbow.me/",
     documentation: "",
     supported_chains: [
@@ -1783,6 +1788,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://study.bitkeep.com/en/",
     documentation: "https://docs.bitkeep.com/en/docs/guide/",
     supported_chains: [
@@ -2154,6 +2160,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://community.trustwallet.com/",
     documentation: "https://developer.trustwallet.com/developer/",
     supported_chains: [
@@ -2619,7 +2626,7 @@ export const walletsData: WalletData[] = [
       "Arbitrum One",
       "Linea",
       "Scroll",
-      "Taiko Alethia",
+      "Taiko",
     ],
   },
   {
@@ -2814,6 +2821,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation: "https://support.nu.fi/",
     documentation: "https://support.nu.fi/",
     supported_chains: [
@@ -2914,6 +2922,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
+    eip_7702_support: true,
     onboard_documentation:
       "https://support.uniswap.org/hc/en-us/categories/11301970439565-Uniswap-Wallet",
     documentation: "https://docs.uniswap.org/",
@@ -2989,7 +2998,7 @@ export const walletsData: WalletData[] = [
       "Base",
       "Unichain",
       "Arbitrum Nova",
-      "Taiko Alethia",
+      "Taiko",
       "Manta Pacific Mainnet",
       "Abstract",
       "World Chain",

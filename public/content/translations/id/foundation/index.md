@@ -9,7 +9,7 @@ lang: id
 
 <Logo/>
 
-[Ethereum Foundation](http://ethereum.foundation/) (EF) adalah organisasi nirlaba yang mendukung ekosistem [Ethereum](/). Organisasi ini mendanai pengembangan protokol, menumbuhkan ekosistem, dan mengadvokasi Ethereum.
+[Ethereum Foundation](https://ethereum.foundation/) (EF) adalah organisasi nirlaba yang mendukung ekosistem [Ethereum](/). Organisasi ini mendanai pengembangan protokol, menumbuhkan ekosistem, dan mengadvokasi Ethereum.
 
 EF bukanlah sebuah perusahaan, atau bahkan organisasi nirlaba tradisional. EF tidak mengendalikan atau memimpin Ethereum, dan bukan satu-satunya organisasi yang mendanai pengembangan penting dari teknologi terkait Ethereum. EF adalah salah satu bagian dari [ekosistem](/community/) yang jauh lebih besar.
 

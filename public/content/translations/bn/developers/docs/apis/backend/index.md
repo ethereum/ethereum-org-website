@@ -109,7 +109,7 @@ lang: bn
 **Nethereum -** **_ব্লকচেইনের জন্য একটি ওপেন সোর্স .NET ইন্টিগ্রেশন লাইব্রেরি।_**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
-- [Documentation](http://docs.nethereum.com/en/latest/)
+- [Documentation](https://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
 **Python Tooling -** **_পাইথনের মাধ্যমে ইথিরিয়াম ইন্টারঅ্যাকশনের জন্য বিভিন্ন লাইব্রেরি।_**

@@ -7,12 +7,10 @@ import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
   DocsFrontmatter,
-  RoadmapFrontmatter,
-  StakingFrontmatter,
   StaticFrontmatter,
+  TopicFrontmatter,
   TutorialFrontmatter,
-  UpgradeFrontmatter,
-  UseCasesFrontmatter,
+  VideoFrontmatter,
 } from "@/lib/interfaces"
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
@@ -63,13 +61,11 @@ export type Params = {
   locale: string
 }
 
-export type Frontmatter = RoadmapFrontmatter &
-  UpgradeFrontmatter &
+export type Frontmatter = TopicFrontmatter &
   StaticFrontmatter &
-  UseCasesFrontmatter &
-  StakingFrontmatter &
   DocsFrontmatter &
-  TutorialFrontmatter
+  TutorialFrontmatter &
+  VideoFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
 export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
@@ -576,9 +572,43 @@ export type DefiLlamaTVLResponse = {
 
 export type MetricReturnData = ValueOrError<number>
 
+export type EthPriceData =
+  | { value: number; timestamp?: number; percentChange24h?: number }
+  | { error: string }
+
 export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
+
+/**
+ * Full video data parsed from a video's index.md file.
+ * Includes frontmatter metadata and the markdown body (transcript).
+ */
+export type VideoData = {
+  slug: string
+  content: string
+  frontmatter: VideoFrontmatter
+}
+
+export type VideoFormat =
+  | "presentation"
+  | "explainer"
+  | "interview"
+  | "tutorial"
+  | "panel"
+/**
+ * Flat, serializable video data for client components (e.g. VideoGalleryFilter).
+ * thumbnailUrl is pre-resolved server-side from customThumbnailUrl or youtubeId.
+ */
+export type VideoCardData = {
+  slug: string
+  title: string
+  description: string
+  uploadDate: string
+  duration: string
+  topic: string[]
+  thumbnailUrl: string
+}
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
@@ -750,7 +780,7 @@ export type ExtendedRollup = Rollup & {
   walletsSupported: string[]
   activeAddresses: number | undefined
   launchDate: string | null
-  walletsSupportedCount: number
+  walletsSupportedCount: string
   blockspaceData: {
     nft: number
     defi: number
@@ -803,6 +833,8 @@ export type WalletData = {
   withdraw_crypto: boolean
   multisig: boolean
   social_recovery: boolean
+  eip_4337_support?: boolean
+  eip_7702_support?: boolean
   onboard_documentation: string
   documentation: string
   mpc?: boolean
@@ -840,6 +872,7 @@ type FilterItem = {
   ignoreFilterReset?: boolean
   input: FilterInput
   options: Array<FilterOptionItem>
+  optionsLegend?: string // sr-only legend for the nested fieldset wrapping `options` (when present)
 }
 
 type FilterInput = (

@@ -70,7 +70,7 @@ slither project_paths
 
 Slither 정적 분석 프레임워크의 기능과 디자인은 블로그 게시물([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) 및 [학술 논문](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf)에 설명되어 있습니다.
 
-정적 분석은 다양한 형태로 존재합니다. 아마도 [clang](https://clang-analyzer.llvm.org/) 및 [gcc](https://lwn.net/Articles/806099/)와 같은 컴파일러가 이러한 연구 기술에 의존한다는 것을 알고 계실 것입니다. 그러나 이는 ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](http://findbugs.sourceforge.net/) 및 [Frama-C](https://frama-c.com/) 및 [Polyspace](https://www.mathworks.com/products/polyspace.html)와 같은 형식적 방법에 기반한 도구)의 기반이 되기도 합니다.
+정적 분석은 다양한 형태로 존재합니다. 아마도 [clang](https://clang-analyzer.llvm.org/) 및 [gcc](https://lwn.net/Articles/806099/)와 같은 컴파일러가 이러한 연구 기술에 의존한다는 것을 알고 계실 것입니다. 그러나 이는 ([Infer](https://fbinfer.com/), [CodeClimate](https://codeclimate.com/), [FindBugs](https://findbugs.sourceforge.net/) 및 [Frama-C](https://frama-c.com/) 및 [Polyspace](https://www.mathworks.com/products/polyspace.html)와 같은 형식적 방법에 기반한 도구)의 기반이 되기도 합니다.
 
 여기서 정적 분석 기법과 연구자를 철저하게 검토하지는 않을 것입니다. 대신 Slither가 작동하는 방식을 이해하는 데 필요한 것에 초점을 맞춰 버그를 찾고 코드를 이해하는 데 더 효과적으로 사용할 수 있도록 할 것입니다.
 

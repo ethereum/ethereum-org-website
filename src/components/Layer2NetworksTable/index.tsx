@@ -1,3 +1,5 @@
+"use client"
+
 import { ExtendedRollup, FilterOption, Lang } from "@/lib/types"
 
 import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"

@@ -50,7 +50,7 @@ const TutorialMetadata = ({
           {t(getSkillTranslationId(frontmatter.skill as Skill))}
         </Tag>
       </Flex>
-      <Flex className="text-text300 mb-6 mt-[-1rem] flex-wrap gap-4 text-sm">
+      <Flex className="text-text300 mt-[-1rem] mb-6 flex-wrap gap-4 text-sm">
         {author && (
           <div>
             <Emoji className="me-2 text-sm" text=":writing_hand:" />
@@ -80,7 +80,7 @@ const TutorialMetadata = ({
         <Flex className="text-text300 -mt-4 mb-6 flex-wrap text-sm">
           <CopyToClipboard text={address}>
             {(isCopied) => (
-              <div className="cursor-pointer overflow-hidden text-ellipsis bg-background-highlight px-1 font-mono text-sm text-primary hover:bg-primary-hover hover:text-body-inverse">
+              <div className="cursor-pointer overflow-hidden bg-background-highlight px-1 font-mono text-sm text-ellipsis text-primary hover:bg-primary-hover hover:text-body-inverse">
                 <span className="uppercase">
                   <Translation id="page-developers-tutorials:comp-tutorial-metadata-tip-author" />
                 </span>{" "}

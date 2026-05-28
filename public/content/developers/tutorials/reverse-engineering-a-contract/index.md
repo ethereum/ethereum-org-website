@@ -539,7 +539,7 @@ Do you feel you understand the contract at this point? I don't. So far we have t
 | Transfer                          | Accept the value provided by the call and increase `Value*` by that amount           |
 | [splitter()](#splitter)           | Return Storage[3], the proxy address                                                 |
 | [currentWindow()](#currentwindow) | Return Storage[1]                                                                    |
-| [merkleRoot()](#merkeroot)        | Return Storage[0]                                                                    |
+| [merkleRoot()](#merkleroot)        | Return Storage[0]                                                                    |
 | [0x81e580d3](#0x81e580d3)         | Return the value from a lookup table, provided the parameter is less than Storage[4] |
 | [0x1f135823](#0x1f135823)         | Return Storage[6], a.k.a. Value\*                                                    |
 

@@ -6,7 +6,7 @@ lang: pl
 
 Węzeł Ethereum składa się z dwóch klientów: [klienta wykonawczego](/developers/docs/nodes-and-clients/#execution-clients) i [klienta konsensusu](/developers/docs/nodes-and-clients/#consensus-clients). Aby węzeł mógł zaproponować nowy blok, musi również uruchomić [klienta walidatora](#validators).
 
-Kiedy Ethereum korzystało z [proof-of-work](/developers/docs/consensus-mechanisms/pow/), do uruchomienia pełnego węzła Ethereum wystarczył klient wykonawczy. Jednak od czasu wdrożenia [proof-of-stake](/developers/docs/consensus-mechanisms/pow/), klient wykonawczy musi być używany wraz z innym oprogramowaniem zwanym [klientem konsensusu](/developers/docs/nodes-and-clients/#consensus-clients).
+Kiedy Ethereum korzystało z [proof-of-work](/developers/docs/consensus-mechanisms/pow/), do uruchomienia pełnego węzła Ethereum wystarczył klient wykonawczy. Jednak od czasu wdrożenia [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), klient wykonawczy musi być używany wraz z innym oprogramowaniem zwanym [klientem konsensusu](/developers/docs/nodes-and-clients/#consensus-clients).
 
 Poniższy diagram pokazuje relację między tymi dwoma klientami Ethereum. Oba klienty łączą się z własną siecią peer-to-peer (P2P). Oddzielnie sieci P2P są potrzebne, ponieważ klienty wykonawcze plotkują transakcje po swojej sieci P2P co pozwala im na zarządzanie lokalną pulą transakcji, podczas gdy klienty konsensusu plotkują bloki po swojej sieci P2P co z kolei pozwala konsensus i rozrost łańcucha.
 

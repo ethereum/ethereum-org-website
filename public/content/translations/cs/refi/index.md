@@ -3,13 +3,13 @@ title: "Regenerativní finance (ReFi)"
 description: "Přehled ReFi a aktuálních případů použití."
 lang: cs
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: "Alternativní ekonomický systém postavený na regenerativních principech"
-summaryPoint2: "Snaha využít Ethereum k řešení koordinačních krizí na globální úrovni, jako je změna klimatu"
-summaryPoint3: "Nástroj pro drastické škálování ekologických aktiv, jako jsou ověřené uhlíkové kredity."
+summaryPoints:
+  - "Alternativní ekonomický systém postavený na regenerativních principech"
+  - "Snaha využít Ethereum k řešení koordinačních krizí na globální úrovni, jako je změna klimatu"
+  - "Nástroj pro drastické škálování ekologických aktiv, jako jsou ověřené uhlíkové kredity."
 ---
 
 ## Co je to ReFi? {#what-is-refi}
@@ -65,7 +65,7 @@ Nová vlna inovativních projektů budovaných na blockchainech se snaží konku
 
 Některé, jako například [Klima Infinity](https://www.klimadao.finance/infinity) a [Senken](https://senken.io/), nabízejí širokou škálu projektů vyvinutých třetími stranami a vydaných podle zavedených standardů, jako je Verra; jiné, jako například [Nori](https://nori.com/), nabízejí pouze specifické projekty vyvinuté v rámci jejich vlastního standardu pro uhlíkové kredity, které vydávají a pro které mají vlastní vyhrazené tržiště.
 
-4. Základní infrastruktura, která usnadňuje zvýšení dopadu a účinnosti celého dodavatelského řetězce na trhu s emisními povolenkami. [KlimaDAO](http://klimadao.finance/) dodává likviditu jako veřejný statek (umožňuje komukoli nakupovat nebo prodávat uhlíkové kredity za transparentní cenu), motivuje odměnami ke zvýšení propustnosti trhů s uhlíkem a k vyřazování kreditů a poskytuje uživatelsky přívětivé interoperabilní nástroje pro přístup k datům, jakož i pro získávání a vyřazování široké škály tokenizovaných uhlíkových kreditů.
+4. Základní infrastruktura, která usnadňuje zvýšení dopadu a účinnosti celého dodavatelského řetězce na trhu s emisními povolenkami. [KlimaDAO](https://klimadao.finance/) dodává likviditu jako veřejný statek (umožňuje komukoli nakupovat nebo prodávat uhlíkové kredity za transparentní cenu), motivuje odměnami ke zvýšení propustnosti trhů s uhlíkem a k vyřazování kreditů a poskytuje uživatelsky přívětivé interoperabilní nástroje pro přístup k datům, jakož i pro získávání a vyřazování široké škály tokenizovaných uhlíkových kreditů.
 
 ## ReFi mimo trhy s uhlíkem {#refi-beyond}
 

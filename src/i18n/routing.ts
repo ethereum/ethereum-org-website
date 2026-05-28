@@ -8,4 +8,5 @@ export const routing = defineRouting({
   localePrefix: "as-needed",
   alternateLinks: false,
   localeDetection: false,
+  localeCookie: false,
 })

@@ -5,15 +5,13 @@ import { FileContributor } from "@/lib/types"
 import PageJsonLD from "@/components/PageJsonLD"
 
 import { getLocaleYear } from "@/lib/utils/date"
-import {
-  ethereumCommunityOrganization,
-  ethereumFoundationOrganization,
-  ethereumFoundationReference,
-} from "@/lib/utils/jsonld"
 import { normalizeUrlForJsonLd } from "@/lib/utils/url"
 
 import { communityHubSchemas } from "@/data/community-hub-schemas"
 import communityHubs from "@/data/community-hubs"
+
+import { BASE_GRAPH_NODES } from "@/lib/jsonld/constants"
+import { REFERENCE } from "@/lib/jsonld/references"
 
 function buildHubSchemaNodes(
   hub: (typeof communityHubs)[number],
@@ -29,7 +27,7 @@ function buildHubSchemaNodes(
     "@type": "Service" as const,
     name: "Ethereum Community Coworking and Events",
     description,
-    provider: ethereumFoundationReference,
+    provider: REFERENCE.ETHEREUM_FOUNDATION,
     areaServed: {
       "@type": "City" as const,
       name: hub.location,
@@ -77,7 +75,7 @@ function buildHubSchemaNodes(
     url: hub.coworkingSignupUrl,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    organizer: ethereumFoundationReference,
+    organizer: REFERENCE.ETHEREUM_FOUNDATION,
     location: { "@id": placeId },
     eventSchedule: {
       "@type": "Schedule" as const,
@@ -106,8 +104,8 @@ export default async function EventsJsonLD({
   locale: string
   contributors: FileContributor[]
 }) {
-  const t = await getTranslations({ namespace: "page-community-events" })
-  const common = await getTranslations({ namespace: "common" })
+  const t = await getTranslations("page-community-events")
+  const common = await getTranslations("common")
 
   const year = getLocaleYear(locale)
   const url = normalizeUrlForJsonLd(locale, `/community/events/`)
@@ -125,21 +123,17 @@ export default async function EventsJsonLD({
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
         "@id": url,
         name: t("page-events-meta-title", { year }),
         description: t("page-events-meta-description", { year }),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
-        author: [ethereumCommunityOrganization],
-        isPartOf: {
-          "@type": "WebSite",
-          "@id": "https://ethereum.org/#website",
-          name: "ethereum.org",
-          url: "https://ethereum.org",
-        },
+        author: [REFERENCE.ETHEREUM_COMMUNITY],
+        isPartOf: REFERENCE.ETHEREUM_ORG_WEBSITE,
         breadcrumb: {
           "@type": "BreadcrumbList",
           itemListElement: [
@@ -163,8 +157,8 @@ export default async function EventsJsonLD({
             },
           ],
         },
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
+        reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
         mainEntity: { "@id": `${url}#sections` },
       },
       {
@@ -172,7 +166,7 @@ export default async function EventsJsonLD({
         "@id": `${url}#sections`,
         name: t("page-events-meta-title", { year }),
         description: t("page-events-meta-description", { year }),
-        url: url,
+        url,
         numberOfItems: 4,
         itemListElement: [
           {
@@ -207,8 +201,7 @@ export default async function EventsJsonLD({
             url: `${url}#for-organizers`,
           },
         ],
-        publisher: ethereumFoundationOrganization,
-        reviewedBy: ethereumFoundationOrganization,
+        publisher: REFERENCE.ETHEREUM_FOUNDATION,
       },
       ...hubSchemaNodes,
     ],

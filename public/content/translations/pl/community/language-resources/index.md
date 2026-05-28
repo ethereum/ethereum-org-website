@@ -52,7 +52,6 @@ Jeśli jesteś osobą dwujęzyczną i chcesz pomóc nam dotrzeć do większej li
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) – treści utrzymywane przez społeczność, obejmujące wiedzę związaną z Ethereum, DeFi, NFT i Web3
 - [123ETH](https://123eth.org/) – portal do ekosystemu Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) – darmowe kursy online o kryptowalutach i ich zastosowaniach
-- [Biała Księga Ethereum](/zh/whitepaper/) – chińska wersja Białej Księgi Ethereum
 
 **Ekosystem Ethereum**
 

@@ -4,11 +4,11 @@ metaTitle: Apa itu restaking? | Manfaat dan penggunaan restaking
 description: Gunakan ETH yang di-stake untuk mengamankan layanan terdesentralisasi lainnya dan dapatkan hadiah tambahan.
 lang: id
 template: use-cases
-emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: Representasi visual dari restaking di Ethereum.
 sidebarDepth: 2
-summaryPoint1: Gunakan ETH yang di-stake untuk mengamankan layanan terdesentralisasi lainnya dan dapatkan hadiah tambahan.
+summaryPoints:
+  - "Gunakan ETH yang di-stake untuk mengamankan layanan terdesentralisasi lainnya dan dapatkan hadiah tambahan."
 buttons:
   - content: Apa itu restaking?
     toId: what-is-restaking

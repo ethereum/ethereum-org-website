@@ -30,7 +30,7 @@ const CommunityPicks = ({
   const cards = communityPicks.map((pick) => (
     <div key={pick.name} className="">
       <div className="flex flex-row gap-2">
-        <div className="h-12 w-12 flex-shrink-0 overflow-hidden rounded-full">
+        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full">
           <Image
             src={`https://unavatar.io/twitter/${getTwitterUsername(pick.twitterHandle)}`}
             alt={`${pick.name} profile`}

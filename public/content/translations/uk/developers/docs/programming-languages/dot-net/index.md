@@ -37,21 +37,21 @@ incomplete: true
 
 **Хочете пропустити налаштування і відразу перейти до прикладів?**
 
-- [Playground](http://playground.nethereum.com/) — взаємодійте з Ethereum і дізнавайтеся, як використовувати Nethereum через браузер.
-  - Запит балансу облікового запису [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
-  - Запит балансу смарт-контракту ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Переказ Ether на обліковий запис [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- [Playground](https://playground.nethereum.com/) — взаємодійте з Ethereum і дізнавайтеся, як використовувати Nethereum через браузер.
+  - Запит балансу облікового запису [C#](https://playground.nethereum.com/csharp/id/1001) [VB.NET](https://playground.nethereum.com/vb/id/2001)
+  - Запит балансу смарт-контракту ERC20 [C#](https://playground.nethereum.com/csharp/id/1005) [VB.NET](https://playground.nethereum.com/vb/id/2004)
+  - Переказ Ether на обліковий запис [C#](https://playground.nethereum.com/csharp/id/1003) [VB.NET](https://playground.nethereum.com/vb/id/2003)
   - ... Та багато іншого!
 
 ## Статті для середнього рівня {#intermediate-articles}
 
-- [Nethereum Workbook/Список зразків](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
+- [Nethereum Workbook/Список зразків](https://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Розгорніть власні тестові мережі для розробки](https://github.com/Nethereum/Testchains)
 - [Плагін Codegen для VSCode для Solidity](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity та Ethereum: чому й як](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [Створення веб-API ASP.NET Core для dapp-застосунків Ethereum](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Використання Nethereum Web3 для реалізації системи відстеження ланцюга постачання](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Обробка блоків Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), із [зразком C# Playground](http://playground.nethereum.com/csharp/id/1025)
+- [Обробка блоків Nethereum](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), із [зразком C# Playground](https://playground.nethereum.com/csharp/id/1025)
 - [Потокова передача даних Nethereum через Websocket](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido та Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum та Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -64,7 +64,7 @@ incomplete: true
 
 ## Проєкти, інструменти та інші цікаві речі .NET {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) — _компілюйте, створюйте та запускайте фрагменти коду Nethereum у браузері_
+- [Nethereum Playground](https://playground.nethereum.com/) — _компілюйте, створюйте та запускайте фрагменти коду Nethereum у браузері_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) — _кодогенератор Nethereum з інтерфейсом користувача в Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) — _легкий оглядач блокчейнів .NET Wasm SPA і простий гаманець_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) — _механізм бізнес-правил (і для платформи .NET, і для платформи Ethereum), що за своєю суттю керується метаданими_
@@ -78,7 +78,7 @@ incomplete: true
 
 У Nethereum ми здебільшого спілкуємося в [Gitter](https://gitter.im/Nethereum/Nethereum), де кожен може ставити запитання, відповідати на них, отримувати допомогу або просто відпочивати. Не соромтеся створювати PR або issue в [репозиторії Nethereum на GitHub](https://github.com/Nethereum) або просто перегляньте безліч побічних/зразкових проєктів, які ми маємо. Ви також можете знайти нас у [Discord](https://discord.gg/jQPrR58FxX)!
 
-Якщо ви новачок у Nethermind і вам потрібна допомога, щоб почати, приєднуйтеся до нашого [Discord](http://discord.gg/PaCMRFdvWT). Наші розробники готові відповісти на ваші запитання. Не соромтеся створювати PR або повідомляти про будь-які проблеми в [репозиторії Nethermind на GitHub](https://github.com/NethermindEth/nethermind).
+Якщо ви новачок у Nethermind і вам потрібна допомога, щоб почати, приєднуйтеся до нашого [Discord](https://discord.gg/PaCMRFdvWT). Наші розробники готові відповісти на ваші запитання. Не соромтеся створювати PR або повідомляти про будь-які проблеми в [репозиторії Nethermind на GitHub](https://github.com/NethermindEth/nethermind).
 
 ## Інші зведені списки {#other-aggregated-lists}
 

@@ -265,7 +265,7 @@ const chains = [
   },
   {
     name: "Defi Oracle Meta Mainnet",
-    infoURL: "https://info.defi-oracle.io/",
+    infoURL: "https://d-bis.org",
     chainId: 138,
     nativeCurrency: {
       name: "Ether",
@@ -1012,6 +1012,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Tempo Mainnet Presto",
+    infoURL: "https://tempo.xyz",
+    chainId: 4217,
+    nativeCurrency: {
+      name: "No native currency",
+      symbol: "USD",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "MegaETH Mainnet",
     infoURL: "https://megaeth.com",
     chainId: 4326,
@@ -1020,7 +1031,7 @@ const chains = [
       symbol: "ETH",
       decimals: 18,
     },
-    chain: "ETH",
+    chain: "MegaETH",
   },
   {
     name: "OEV Network",
@@ -1661,17 +1672,6 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Condrieu",
-    infoURL: "https://condrieu.ethdevops.io",
-    chainId: 69420,
-    nativeCurrency: {
-      name: "Condrieu Testnet Ether",
-      symbol: "CTE",
-      decimals: 18,
-    },
-    chain: "ETH",
-  },
-  {
     name: "Proof of Play - Apex",
     infoURL: "https://proofofplay.com",
     chainId: 70700,
@@ -1881,7 +1881,7 @@ const chains = [
     chain: "Eventum",
   },
   {
-    name: "Taiko Alethia",
+    name: "Taiko",
     infoURL: "https://taiko.xyz",
     chainId: 167000,
     nativeCurrency: {
@@ -2070,7 +2070,7 @@ const chains = [
   },
   {
     name: "Gensyn Mainnet",
-    infoURL: "https://www.gensyn.ai/",
+    infoURL: "https://gensyn.network/",
     chainId: 685689,
     nativeCurrency: {
       name: "Ether",
@@ -2265,6 +2265,17 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+  },
+  {
+    name: "MAKI Chain",
+    infoURL: "https://makiai.app",
+    chainId: 8000008,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "MAKI",
   },
   {
     name: "Hokum",

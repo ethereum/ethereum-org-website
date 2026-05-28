@@ -5,10 +5,11 @@ lang: pl
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
-summaryPoint1: "Sieć główna Ethereum wykorzystuje mechanizm proof-of-stake, ale nie zawsze tak było."
-summaryPoint2: "Przejście z oryginalnego mechanizmu proof-of-work na proof-of-stake zostało nazwane Połączeniem."
-summaryPoint3: "Połączenie odnosi się do połączenia pierwotnej sieci głównej Ethereum z oddzielnym łańcuchem blockchain proof-of-stake nazywaną łańcuchem śledzącym, które teraz istnieją jako jeden łańcuch."
-summaryPoint4: "Połączenie zmniejszyło zużycie energii przez Ethereum o około 99,95%."
+summaryPoints:
+  - "Sieć główna Ethereum wykorzystuje mechanizm proof-of-stake, ale nie zawsze tak było."
+  - "Przejście z oryginalnego mechanizmu proof-of-work na proof-of-stake zostało nazwane Połączeniem."
+  - "Połączenie odnosi się do połączenia pierwotnej sieci głównej Ethereum z oddzielnym łańcuchem blockchain proof-of-stake nazywaną łańcuchem śledzącym, które teraz istnieją jako jeden łańcuch."
+  - "Połączenie zmniejszyło zużycie energii przez Ethereum o około 99,95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
