@@ -76,13 +76,14 @@ export interface VideoFrontmatter extends SharedFrontmatter {
 }
 
 export interface TutorialFrontmatter extends SharedFrontmatter {
-  tags: string[]
+  tags?: string[]
   author: string
   source?: string
   sourceUrl?: string
-  skill: string
+  skill?: string
   published: string
   address?: string
+  team?: string
   hideEditButton?: boolean
   breadcrumb?: string
 }

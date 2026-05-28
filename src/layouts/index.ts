@@ -4,14 +4,12 @@ import { Layout } from "@/lib/types"
 
 import * as topicComponents from "@/components/MdComponents/topics"
 
-import { blogComponents, BlogLayout } from "./Blog"
 import { docsComponents, DocsLayout } from "./Docs"
 import { staticComponents, StaticLayout } from "./Static"
 import { TopicLayout } from "./Topic"
 import { TutorialLayout, tutorialsComponents } from "./Tutorial"
 
 export * from "./BaseLayout"
-export * from "./Blog"
 export * from "./Docs"
 export * from "./Static"
 export * from "./Topic"
@@ -25,7 +23,6 @@ export const layoutMapping = {
   upgrade: TopicLayout,
   docs: DocsLayout,
   tutorial: TutorialLayout,
-  blog: BlogLayout,
 }
 
 export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
@@ -36,5 +33,4 @@ export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
   upgrade: topicComponents.upgradeComponents,
   docs: docsComponents,
   tutorial: tutorialsComponents,
-  blog: blogComponents,
 }
