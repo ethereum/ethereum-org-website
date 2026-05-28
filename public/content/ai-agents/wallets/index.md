@@ -12,13 +12,13 @@ summaryPoints:
   - "Key management patterns with human-in-the-loop escalation"
 ---
 
-This page covers wallet infrastructure for autonomous AI agents: programmatic key management, spending guardrails, and session-based access control. 
+This page covers wallet infrastructure for autonomous AI agents: programmatic key management, spending guardrails, and session-based access control.
 
 For personal wallets (human-managed Ethereum accounts, wallet apps, self-custody basics, and security), see [Ethereum wallets](/wallets/).
 
 ---
 
-An autonomous agent requires a wallet with enforced operational boundaries. A raw externally owned account (EOA) **has no native concept of spending limits**, so a single hallucination, prompt injection, or logic error can drain it. 
+An autonomous agent requires a wallet with enforced operational boundaries. A raw externally owned account (EOA) **has no native concept of spending limits**, so a single hallucination, prompt injection, or logic error can drain it.
 
 Smart account standards, primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip-4337) and [EIP-7702](/roadmap/pectra/7702/), prevent these unauthorized drains by moving policy enforcement into the contract itself.
 
@@ -26,13 +26,13 @@ Smart account standards, primarily [ERC-4337](https://eips.ethereum.org/EIPS/eip
 
 Two standards dominate agent wallet infrastructure. The right choice depends on whether you are creating a new agent or upgrading an existing EOA.
 
-| | ERC-4337 smart account | EIP-7702 delegation |
-| :--- | :--- | :--- |
-| **Address** | New contract address | Preserves your existing EOA address |
-| **Gas** | Native abstraction via Paymaster contracts | Possible via delegated contract logic |
-| **Session keys** | Full support via permission plugins | Full support via delegation modules |
-| **Revocability** | Module upgrade or removal | Delegate to a null address |
-| **Best for** | New agent deployments, maximum flexibility | Adding smart account capabilities to an existing EOA without migrating assets |
+|                  | ERC-4337 smart account                     | EIP-7702 delegation                                                           |
+| :--------------- | :----------------------------------------- | :---------------------------------------------------------------------------- |
+| **Address**      | New contract address                       | Preserves your existing EOA address                                           |
+| **Gas**          | Native abstraction via Paymaster contracts | Possible via delegated contract logic                                         |
+| **Session keys** | Full support via permission plugins        | Full support via delegation modules                                           |
+| **Revocability** | Module upgrade or removal                  | Delegate to a null address                                                    |
+| **Best for**     | New agent deployments, maximum flexibility | Adding smart account capabilities to an existing EOA without migrating assets |
 
 **ERC-4337** deploys a new smart contract account at a fresh address. It is the standard starting point for new agent deployments and provides the most mature ecosystem of permission plugins and paymasters.
 
@@ -48,15 +48,16 @@ An autonomous agent must sign transactions programmatically, requiring a private
 
 The following patterns describe where to store the agent's signing key, scaling from local development shortcuts to production-grade architectures.
 
-| Pattern | Security | Operational complexity | Recommended for |
-| :--- | :--- | :--- | :--- |
-| Local `.env` file | Low | Minimal | Local development only — never production |
-| Encrypted keystore | Medium | Low | Early production with limited value at risk |
-| Cloud KMS (AWS, GCP) | High | Medium | Production deployments with automated signing |
-| Hardware wallet co-signing | Very high | High | High-value agent operations requiring human confirmation |
-| TEE (Trusted Execution Environment) | Very high | High | Agents requiring private keys to remain unextractable |
+| Pattern                             | Security  | Operational complexity | Recommended for                                          |
+| :---------------------------------- | :-------- | :--------------------- | :------------------------------------------------------- |
+| Local `.env` file                   | Low       | Minimal                | Local development only — never production                |
+| Encrypted keystore                  | Medium    | Low                    | Early production with limited value at risk              |
+| Cloud KMS (AWS, GCP)                | High      | Medium                 | Production deployments with automated signing            |
+| Hardware wallet co-signing          | Very high | High                   | High-value agent operations requiring human confirmation |
+| TEE (Trusted Execution Environment) | Very high | High                   | Agents requiring private keys to remain unextractable    |
 
 **Key safety rules:**
+
 - Never commit private keys to Git. Bots scrape GitHub in real time and exploit leaked secrets within seconds.
 - Never store a master private key in an agent's runtime environment. Use session keys.
 - Use a dedicated wallet with limited funds for agent operations.
@@ -75,36 +76,43 @@ A well-structured session key policy specifies:
 
 The **owner-agent key separation** pattern is essential. The agent generates a local key pair and sends only its public address to the account owner. The owner configures the session key policy and hands the bounded credential back to the agent. **The agent never sees the master private key.**
 
-Session keys are enabled by the custom validation logic built into ERC-4337 smart accounts and EIP-7702 delegation modules (they are not a core Ethereum protocol primitive). Because each SDK implementor built session key support independently, there is no unified interface for requesting them yet. 
+Session keys are enabled by the custom validation logic built into ERC-4337 smart accounts and EIP-7702 delegation modules (they are not a core Ethereum protocol primitive). Because each SDK implementor built session key support independently, there is no unified interface for requesting them yet.
 
-The proposed [Request Permissions from Wallets - ERC-7715](https://eips.ethereum.org/EIPS/eip-7715) addresses the lack of a unified interface by defining a standardized `wallet_grantPermissions` RPC method, through which an agent requests a scoped session key from a wallet provider. The policy parameters described above (spend limits, contract allowlist, validity window) are the values passed in that request. 
+The proposed [Request Permissions from Wallets - ERC-7715](https://eips.ethereum.org/EIPS/eip-7715) addresses the lack of a unified interface by defining a standardized `wallet_grantPermissions` RPC method, through which an agent requests a scoped session key from a wallet provider. The policy parameters described above (spend limits, contract allowlist, validity window) are the values passed in that request.
 
 ERC-7715 is in draft and being adopted by major smart wallet providers. Until it is finalized, consult your chosen SDK's documentation for its current permission request API.
 
 ## SDK implementation examples {#sdk-examples}
 
 The examples below cover two production-grade options that serve different deployment shapes:
+
 - ZeroDev for new agent deployments requiring granular policy enforcement
 - Safe for high-value or multi-party treasury deployments
 
-Both have well-documented session key permission APIs. If evaluating other wallet SDKs, verify they provide stable, documented methods for enforcing session key boundaries (such as spend limits and contract allowlists) while ERC-7715 remains in draft. 
+Both have well-documented session key permission APIs. If evaluating other wallet SDKs, verify they provide stable, documented methods for enforcing session key boundaries (such as spend limits and contract allowlists) while ERC-7715 remains in draft.
 
 ### ZeroDev (Kernel) {#zerodev-kernel}
 
 <Alert variant="warning">
 <AlertContent>
-**Best for:** New agent deployments requiring granular per-contract, per-function, or per-value policy enforcement, and teams comfortable building on a still-maturing ERC-4337 ecosystem.
+<AlertTitle>
+Best for:
+</AlertTitle>
+<AlertDescription>
+New agent deployments requiring granular per-contract, per-function, or per-value policy enforcement, and teams comfortable building on a still-maturing ERC-4337 ecosystem.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
 ZeroDev's [Kernel smart account](https://docs.zerodev.app/) uses composable permission plugins. It provides granular session key control and is frequently recommended for new agent deployments that need per-contract, per-function, or per-value policy enforcement.
 
-The example below demonstrates the pattern. It creates a Kernel smart account with two enforced policies: 
+The example below demonstrates the pattern. It creates a Kernel smart account with two enforced policies:
+
 1. A call policy restricting the agent to a single allowlisted contract address
 2. A timestamp policy expiring the session after 24 hours
-It then assembles a bundler client wired to a paymaster. 
+   It then assembles a bundler client wired to a paymaster.
 
-*Replace the example contract address with the smart contract you want to authorize your agent to interact with.*
+_Replace the example contract address with the smart contract you want to authorize your agent to interact with._
 
 ```bash
 npm install @zerodev/sdk @zerodev/ecdsa-validator @zerodev/permissions viem permissionless
@@ -174,7 +182,12 @@ Any UserOperation that violates `callPolicy` or `timestampPolicy` is rejected by
 
 <Alert variant="warning">
 <AlertContent>
-**Best for:** Any production agent deployment that requires a battle-tested foundation. Safe is widely audited, multi-party by default, and the only option in this guide that does not depend on still-maturing ERC-4337 tooling. Particularly suited to DAO treasury delegation and cases where the agent must spend from a shared team treasury without being granted full multisig signing authority.
+<AlertTitle>
+Best for:
+</AlertTitle>
+<AlertDescription>
+Any production agent deployment that requires a battle-tested foundation. Safe is widely audited, multi-party by default, and the only option in this guide that does not depend on still-maturing ERC-4337 tooling. Particularly suited to DAO treasury delegation and cases where the agent must spend from a shared team treasury without being granted full multisig signing authority.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
@@ -182,13 +195,15 @@ Safe provides widely audited smart account infrastructure on Ethereum. For agent
 
 Because the agent key is a hot key operating autonomously, placing the Safe under multisig ownership ensures no single compromised credential (whether the agent key, a human hot wallet, or a prompt injection) can unilaterally drain the treasury.
 
-**Recommended production pattern:** 
+**Recommended production pattern:**
+
 - A 2-of-3 Safe with an agent wallet (hot), a human hot wallet, and a human cold wallet
 - Threshold: 2
 
 The agent can spend within the allowance module's limits autonomously; any operation above the allowance requires the human co-signers.
 
-The code below shows how to connect the Safe SDK to an existing Safe instance. Enabling the Allowance Module is a two-step prerequisite: 
+The code below shows how to connect the Safe SDK to an existing Safe instance. Enabling the Allowance Module is a two-step prerequisite:
+
 1. Submit a module-enable transaction signed by the required threshold of owners
 2. Configure the agent's delegate address and per-period spending limit via the module's API before the agent can act autonomously.
 
@@ -214,11 +229,11 @@ const safeSdk = await Safe.create({
 
 **Key Safe contract addresses (v1.4.1, deterministic across chains):**
 
-| Contract | Address |
-| :--- | :--- |
-| Safe Singleton | `0x41675C099F32341bf84BFc5382aF534df5C7461a` |
+| Contract           | Address                                      |
+| :----------------- | :------------------------------------------- |
+| Safe Singleton     | `0x41675C099F32341bf84BFc5382aF534df5C7461a` |
 | Safe Proxy Factory | `0x4e1DCf7AD4e460CfD30791CCC4F9c8a4f820ec67` |
-| MultiSend | `0x38869bf66a61cF6bDB996A6aE40D5853Fd43B526` |
+| MultiSend          | `0x38869bf66a61cF6bDB996A6aE40D5853Fd43B526` |
 
 ## Human-in-the-loop escalation {#hitl}
 
@@ -230,9 +245,10 @@ Session key policies enforce hard limits, but some actions should require a huma
 
 The Vercel AI SDK's `onStepFinish` callback gives you a hook to inspect each tool invocation before the next reasoning step. For workflows that need durable state across pauses, [LangGraph](https://www.langchain.com/langgraph) provides `interrupt_before` / `interrupt_after` hooks that fully serialize agent state and resume only on an external signal.
 
-[Clear signing](https://clearsigning.org/) is an emerging initiative to ensure that every wallet displays a structured, human-readable transaction summary before the operator confirms, rather than raw hexadecimal calldata that operators cannot meaningfully verify. Without it, hardware wallet co-signing on AI agent actions is a blind confirmation: the operator has no way to know what the transaction actually does. [Structured Data Clear Signing Format - ERC-7730](https://eips.ethereum.org/EIPS/eip-7730) is the standard defining the metadata format that makes clear signing possible across wallets. 
+[Clear signing](https://clearsigning.org/) is an emerging initiative to ensure that every wallet displays a structured, human-readable transaction summary before the operator confirms, rather than raw hexadecimal calldata that operators cannot meaningfully verify. Without it, hardware wallet co-signing on AI agent actions is a blind confirmation: the operator has no way to know what the transaction actually does. [Structured Data Clear Signing Format - ERC-7730](https://eips.ethereum.org/EIPS/eip-7730) is the standard defining the metadata format that makes clear signing possible across wallets.
 
 Until ERC-7730 support is widespread, two interim practices maintain meaningful human review:
+
 - **Use a wallet with built-in transaction decoding.** Wallets that have adopted Clear Signing, Hardware wallets with proprietary clear signing implementations, and software wallets with integrated simulation can decode calldata before presenting it to the operator.
 - **Run pre-submission simulation in your escalation logic.** Before surfacing a high-value transaction to the human operator, call `publicClient.simulateContract()` and format the decoded result (including target address, function name, and parameters) as part of the approval request. This ensures the operator sees what they are approving regardless of their wallet's display capabilities.
 
@@ -261,6 +277,7 @@ npx @pimlico/veto --port 8546 --upstream http://localhost:8545
 Point your agent's RPC to `http://localhost:8546` (the Veto proxy) instead of `http://localhost:8545` (raw Anvil). The agent's transaction logic now must work within the constraints of standard Ethereum JSON-RPC, the same constraints it will face on testnet and mainnet.
 
 **Additional local testing practices:**
+
 - Run your full session key policy under Veto before deploying to testnet.
 - Test that your HITL escalation logic correctly intercepts operations that should require human approval.
 - Use `publicClient.simulateContract()` before every `writeContract` call, even in local tests.
@@ -310,4 +327,3 @@ A raw EOA with no spending constraints can be drained if the agent is compromise
 - [ZeroDev documentation](https://docs.zerodev.app/) — zerodev.app
 - [Veto JSON-RPC proxy](https://github.com/pimlicolabs/veto) — GitHub
 - [Flashbots Protect documentation](https://docs.flashbots.net/flashbots-protect/overview) — How private mempool routing works and when to use it for MEV-sensitive agent transactions
-
