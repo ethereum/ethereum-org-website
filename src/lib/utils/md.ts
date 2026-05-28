@@ -5,8 +5,8 @@ import matter from "gray-matter"
 import readingTime from "reading-time"
 
 import type {
+  BlogPost,
   Frontmatter,
-  IBlogPost,
   ITutorial,
   Skill,
   SlugPageParams,
@@ -209,9 +209,7 @@ export function stripMarkdown(
   return result.trim()
 }
 
-export const getBlogPostsData = async (
-  locale: string
-): Promise<IBlogPost[]> => {
+export const getBlogPostsData = async (locale: string): Promise<BlogPost[]> => {
   const posts = await getContentListData(
     locale,
     blogPostSlugs as string[],

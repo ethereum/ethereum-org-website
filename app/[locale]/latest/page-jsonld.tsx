@@ -1,4 +1,4 @@
-import type { FileContributor, IBlogPost } from "@/lib/types"
+import type { BlogPost, FileContributor } from "@/lib/types"
 
 import PageJsonLD from "@/components/PageJsonLD"
 
@@ -13,7 +13,7 @@ export default async function BlogPageJsonLD({
   contributors,
 }: {
   locale: string
-  blogPosts: IBlogPost[]
+  blogPosts: BlogPost[]
   contributors: FileContributor[]
 }) {
   const url = normalizeUrlForJsonLd(locale, "/latest")

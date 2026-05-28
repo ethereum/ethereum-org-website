@@ -616,7 +616,7 @@ export type VideoCardData = {
  * Blog post data for listing pages and carousels.
  * Parsed from frontmatter of blog post markdown files.
  */
-export type IBlogPost = {
+export type BlogPost = {
   href: string
   title: string
   description: string
