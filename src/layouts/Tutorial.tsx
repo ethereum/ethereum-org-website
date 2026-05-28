@@ -103,6 +103,8 @@ export const TutorialLayout = ({
 }: TutorialLayoutProps) => {
   const absoluteEditPath = getEditPath(slug)
   const heroImage = frontmatter.image
+  const hideEditButton =
+    slug.startsWith("latest/") || !!frontmatter.hideEditButton
 
   return (
     <div className="flex w-full gap-8">
@@ -154,7 +156,7 @@ export const TutorialLayout = ({
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
           editPath={absoluteEditPath}
-          hideEditButton={!!frontmatter.hideEditButton}
+          hideEditButton={hideEditButton}
         />
       )}
     </div>
