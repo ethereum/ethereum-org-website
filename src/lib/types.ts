@@ -6,6 +6,7 @@ import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
+  BlogFrontmatter,
   DocsFrontmatter,
   StaticFrontmatter,
   TopicFrontmatter,
@@ -65,6 +66,7 @@ export type Frontmatter = TopicFrontmatter &
   StaticFrontmatter &
   DocsFrontmatter &
   TutorialFrontmatter &
+  BlogFrontmatter &
   VideoFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
@@ -608,6 +610,23 @@ export type VideoCardData = {
   duration: string
   topic: string[]
   thumbnailUrl: string
+}
+
+/**
+ * Blog post data for listing pages and carousels.
+ * Parsed from frontmatter of blog post markdown files.
+ */
+export type BlogPost = {
+  href: string
+  title: string
+  description: string
+  author: string
+  team?: string
+  tags?: string[]
+  timeToRead: number
+  published: string
+  lang: string
+  image?: string
 }
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {

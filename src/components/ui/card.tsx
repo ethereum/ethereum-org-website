@@ -292,7 +292,7 @@ const CardTitle = React.forwardRef<
 })
 CardTitle.displayName = "CardTitle"
 
-const paragraphVariants = cva("", {
+const paragraphVariants = cva("text-body-medium", {
   variants: {
     variant: {
       uppercase: "uppercase",
