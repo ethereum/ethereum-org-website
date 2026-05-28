@@ -137,7 +137,7 @@ export const TutorialLayout = ({
             blurDataURL={frontmatter.blurDataURL}
             preload
             sizes="(max-width: 1024px) 100vw, 1024px"
-            className="my-6 h-auto w-full rounded-xl"
+            className="my-6 max-h-128 w-full rounded-xl object-cover"
           />
         )}
         {children}

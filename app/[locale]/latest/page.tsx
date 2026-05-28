@@ -9,7 +9,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { BaseLink } from "@/components/ui/Link"
@@ -57,13 +57,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "latest" },
-    heroImg,
-    title: t("page-blog-title"),
-    description: t("page-blog-subtitle"),
-  }
-
   return (
     <>
       <BlogPageJsonLD
@@ -72,7 +65,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <I18nProvider locale={locale} messages={messages}>
-        <ContentHero {...heroProps} />
+        <ContentHero
+          breadcrumbs={{ slug: "latest" }}
+          heroImg={heroImg}
+          title={t("page-blog-title")}
+          description={t("page-blog-subtitle")}
+        />
         <MainArticle className="mx-auto my-0 flex w-full flex-col items-center">
           <div className="my-8 w-full max-w-screen-lg shadow-table-box">
             {blogPosts.length === 0 ? (
