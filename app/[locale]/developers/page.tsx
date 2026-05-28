@@ -484,6 +484,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                         eventAction: "click",
                         eventName: post.title,
                       }}
+                      variant="ghost"
                       size="sm"
                     >
                       <CardHeader>
