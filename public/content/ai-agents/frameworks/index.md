@@ -3,7 +3,6 @@ title: AI agent frameworks
 description: A directory of agent frameworks with Ethereum integration, including GOAT, ElizaOS, Rig, Olas, GAME, and LangChain, with a decision guide for choosing between them
 lang: en
 template: ai-agents
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent frameworks on Ethereum

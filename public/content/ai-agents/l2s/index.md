@@ -3,7 +3,6 @@ title: Layer 2 networks for AI agents
 description: Choosing the right Ethereum layer 2 for AI agent workloads, comparing specialized execution environments, ecosystem tooling, finality, and agent infrastructure availability
 lang: en
 template: ai-agents
-emoji: ":chains:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Layer 2 networks for AI agents on Ethereum

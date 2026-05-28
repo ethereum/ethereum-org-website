@@ -3,7 +3,6 @@ title: Decentralized AI
 description: How Ethereum provides the trust and settlement layer for scalable, verifiable artificial intelligence
 lang: en
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Decentralized AI on Ethereum

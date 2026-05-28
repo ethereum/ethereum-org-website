@@ -3,7 +3,6 @@ title: AI agent wallets
 description: Smart account and wallet infrastructure for Ethereum AI agents, including ERC-4337, EIP-7702, session keys, key management security patterns, and SDK guidance for ZeroDev and Safe
 lang: en
 template: ai-agents
-emoji: ":purse:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent wallets on Ethereum

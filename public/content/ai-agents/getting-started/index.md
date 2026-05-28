@@ -3,7 +3,6 @@ title: Getting started with AI agents
 description: A developer on-ramp for building AI agents on Ethereum, from wallet creation to framework connection
 lang: en
 template: ai-agents
-emoji: ":rocket:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Getting started with AI agents on Ethereum

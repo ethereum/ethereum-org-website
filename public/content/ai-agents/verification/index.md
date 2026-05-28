@@ -3,7 +3,6 @@ title: Verifiable AI agents
 description: How zero-knowledge machine learning, trusted execution environments, and onchain audit trails enable verifiable AI agent behavior on Ethereum
 lang: en
 template: ai-agents
-emoji: ":shield:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Verifiable AI agents on Ethereum

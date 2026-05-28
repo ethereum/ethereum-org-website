@@ -3,7 +3,6 @@ title: AI agent use cases on Ethereum
 description: Real applications of autonomous AI agents on Ethereum, including DeFi automation, agent-to-agent commerce, onchain governance, risk management, and more
 lang: en
 template: ai-agents
-emoji: ":gear:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: AI agent use cases on Ethereum

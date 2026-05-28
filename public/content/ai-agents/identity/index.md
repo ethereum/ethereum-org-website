@@ -3,7 +3,6 @@ title: Agent identity with ERC-8004
 description: Onchain agent identity, reputation, and validation registries using ERC-8004 on Ethereum, including how agents discover, verify, and trust each other without a centralized directory
 lang: en
 template: ai-agents
-emoji: ":id:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Agent identity with ERC-8004 on Ethereum

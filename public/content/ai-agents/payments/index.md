@@ -3,7 +3,6 @@ title: Machine payments with x402
 description: How AI agents pay for compute, data, and API calls using the x402 protocol on Ethereum and layer 2 networks
 lang: en
 template: ai-agents
-emoji: ":money_with_wings:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Machine payments with x402 on Ethereum
