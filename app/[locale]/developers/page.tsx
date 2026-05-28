@@ -528,7 +528,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 ))}
               </EdgeScrollContainer>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center max-sm:*:w-full">
                 <ButtonLink
                   href="/latest/"
                   customEventOptions={{
