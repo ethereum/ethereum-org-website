@@ -23,13 +23,13 @@ As of May 5, 2026, Etherscan's gas tracker shows standard gas around 0.15 gwei, 
 
 If you want a simple rule of thumb, use gas math instead of old folklore. At 0.5 gwei, the recent April average, and ETH at roughly $2,350, illustrative costs look like this.
 
-| Operation | Gas Used | Illustrative Cost |
-| :---- | :---- | :---- |
-| ETH transfer | 21,000 | **$0.025** |
-| ERC-20 transfer | \~65,000 | **$0.076** |
-| ERC-20 approve | \~46,000 | **$0.054** |
-| Swap | \~180,000 | **$0.21** |
-| ERC-20 deploy | \~1,200,000 | **$1.41** |
+| Operation       | Gas Used    | Illustrative Cost |
+| :-------------- | :---------- | :---------------- |
+| ETH transfer    | 21,000      | **$0.025**        |
+| ERC-20 transfer | \~65,000    | **$0.076**        |
+| ERC-20 approve  | \~46,000    | **$0.054**        |
+| Swap            | \~180,000   | **$0.21**         |
+| ERC-20 deploy   | \~1,200,000 | **$1.41**         |
 
 Those are examples, not guarantees. Costs move with ETH price, gas price, and contract complexity. Gwei readings can swing widely inside a normal month while the dollar cost barely moves, because rollups now carry about 95 percent of Ethereum's transactions and L1 typically runs well below its block target. Mainnet fees are now low enough that many apps can sensibly run on mainnet.
 
