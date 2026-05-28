@@ -178,7 +178,7 @@ buttons:
 
 ## قراءة إضافية {#further-reading}
 
-1. [ethereum.org - دليل تخزين ETH](https://ethereum.org/en/staking/)
+1. [ethereum.org - دليل تخزين ETH](https://ethereum.org/staking/)
 2. [أكاديمية Ledger - ما هي إعادة تخزين إيثريوم؟](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - آيغن لاير: شرح بروتوكول إعادة تخزين إيثريوم اللامركزي](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [فيتاليك بوتيرين - لا تفرط في تحميل إجماع إيثريوم](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

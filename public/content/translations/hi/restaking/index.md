@@ -178,7 +178,7 @@ buttons:
 
 ## आगे की रीडिंग {#further-reading}
 
-1. [ethereum.org - ETH स्टेकिंग गाइड](https://ethereum.org/en/staking/)
+1. [ethereum.org - ETH स्टेकिंग गाइड](https://ethereum.org/staking/)
 2. [लेजर अकादमी - एथेरियम रीस्टेकिंग क्या है?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - आइगेनलेयर: विकेंद्रीकृत एथेरियम रीस्टेकिंग प्रोटोकॉल समझाया गया](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [विटालिक ब्यूटरिन - एथेरियम की सहमति को ओवरलोड न करें](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)
