@@ -6,7 +6,6 @@ team: "EF Builder Growth"
 tags:
   - "zero-knowledge proofs"
   - "privacy"
-  - "Noir"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-2.png
 breadcrumb: Privacy apps on Ethereum
