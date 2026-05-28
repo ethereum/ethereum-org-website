@@ -51,7 +51,7 @@ Có thắc mắc? 🤔 Tham gia [máy chủ Discord](https://discord.gg/ethereum
 
 Dưới đây là một số nhiệm vụ có sẵn mà bạn có thể giúp chúng tôi làm và nhận việc. Phần lớn yêu cầu bạn có tài khoản GitHub vì hầu hết thay đổi trên trang web được thực hiện qua GitHub.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Xem tất cả các nhiệm vụ</ButtonLink>
 

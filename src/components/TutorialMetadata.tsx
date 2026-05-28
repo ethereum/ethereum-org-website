@@ -10,6 +10,7 @@ import Emoji from "@/components/Emoji"
 import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
 
+import { cn } from "@/lib/utils/cn"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { Flex } from "./ui/flex"
@@ -38,23 +39,47 @@ const TutorialMetadata = ({
   const hasSource = frontmatter.source && frontmatter.sourceUrl
   const published = frontmatter.published
   const author = frontmatter.author
+  const team = frontmatter.team
   const address = frontmatter.address
+  const hasTags = !!frontmatter.tags?.length
+  const hasSkill = !!frontmatter.skill
+  const hasTopRow = hasTags || hasSkill
 
   return (
     <Flex className="flex-col justify-between border-b-0 border-border pb-2 lg:border-b">
-      <Flex className="mb-8 w-full items-center justify-between">
-        <Flex className="w-full flex-wrap">
-          <TutorialTags tags={frontmatter.tags} />
+      {hasTopRow && (
+        <Flex className="mb-8 w-full items-center justify-between">
+          {hasTags && (
+            <Flex className="w-full flex-wrap">
+              <TutorialTags tags={frontmatter.tags!} />
+            </Flex>
+          )}
+          {hasSkill && (
+            <Tag
+              variant="outline"
+              className="mb-2 self-start whitespace-nowrap"
+            >
+              {t(getSkillTranslationId(frontmatter.skill as Skill))}
+            </Tag>
+          )}
         </Flex>
-        <Tag variant="outline" className="mb-2 self-start whitespace-nowrap">
-          {t(getSkillTranslationId(frontmatter.skill as Skill))}
-        </Tag>
-      </Flex>
-      <Flex className="text-text300 mt-[-1rem] mb-6 flex-wrap gap-4 text-sm">
+      )}
+      <Flex
+        className={cn(
+          "text-text300 mb-6 flex-wrap gap-4 text-sm",
+          hasTopRow && "-mt-4"
+        )}
+      >
         {author && (
           <div>
             <Emoji className="me-2 text-sm" text=":writing_hand:" />
             {author}
+          </div>
+        )}
+        {team && (
+          <div>
+            <Emoji className="me-2 text-sm" text=":office_building:" />
+            {team}
           </div>
         )}
         {hasSource && (

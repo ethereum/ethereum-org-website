@@ -51,7 +51,7 @@ Ethereum.org एक ओपन-सोर्स प्रोजेक्ट है
 
 ये कुछ मौजूदा कार्य हैं जिन्हें हल करने और जिनकी जिम्मेदारी लेने में आप हमारी मदद कर सकते हैं। अधिकांश के लिए आपको गिटहब खाते की आवश्यकता होगी क्योंकि वेबसाइट में अधिकांश परिवर्तन गिटहब के माध्यम से किए जाते हैं।
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">सभी कार्य देखें</ButtonLink>
 

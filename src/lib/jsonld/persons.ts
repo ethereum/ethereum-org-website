@@ -270,10 +270,10 @@ export const KNOWN_PERSONS = {
     "@type": "Person" as const,
     "@id": "https://ethereum.org/#austin-griffith",
     name: "Austin Griffith",
-    jobTitle: "Head of Developer Growth",
+    jobTitle: "Head of Builder Growth",
     worksFor: { "@id": "https://ethereum.foundation/#organization" },
     description:
-      "Austin Griffith is the Head of Developer Growth at the Ethereum Foundation and the creator of Scaffold-ETH, BuidlGuidl, and SpeedRunEthereum. He is dedicated to educating builders and simplifying the onboarding process for Web3 developers.",
+      "Austin Griffith leads the Ethereum Foundation's Builder Growth team and is the creator of Scaffold-ETH, BuidlGuidl, and SpeedRunEthereum. He is dedicated to educating builders and simplifying the onboarding process for Web3 developers.",
     knowsAbout: [
       "Ethereum Development",
       "Smart Contract Engineering",
@@ -301,6 +301,121 @@ export const KNOWN_PERSONS = {
       "https://x.com/austingriffith",
       "https://www.linkedin.com/in/austin-griffith-65ba2a2/",
       "https://www.youtube.com/@austingriffith3550",
+    ],
+  },
+
+  "philip-krause": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#philip-krause",
+    name: "Philip Krause",
+    jobTitle: "Builder Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    description:
+      "Philip Krause is a member of the Ethereum Foundation's Builder Growth team, where he focuses on developer onboarding, ecosystem communications, reducing barriers for builders shipping on Ethereum, and develops educational resources and tooling. Before joining the Ethereum Foundation, he advised on DeFi product strategy at fija Finance and held consulting and investment roles in traditional finance. His current work spans AI agents on Ethereum, Solidity security and auditing, zero-knowledge applications with Noir, and translating protocol upgrades into practical guidance for application developers.",
+    knowsAbout: [
+      "AI Agents on Ethereum",
+      "Solidity Security and Auditing",
+      "Ethereum Protocol and Roadmap",
+      "Foundry",
+      "Scaffold-ETH",
+      "Zero-Knowledge Applications (Noir)",
+      "Layer 2 Scaling and Bridging",
+      "Account Abstraction",
+    ],
+    alumniOf: [
+      {
+        "@type": "Organization",
+        name: "BuidlGuidl",
+        url: "https://buidlguidl.com/",
+      },
+      {
+        "@type": "Organization",
+        name: "fija Finance GmbH",
+        url: "https://fija.finance/",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+        url: "https://www.fau.eu/",
+      },
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/philip-krause-7b597711a/",
+      "https://x.com/phipsae",
+      "https://github.com/phipsae",
+    ],
+  },
+
+  "sophia-dew": {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#sophia-dew",
+    name: "Sophia Dew",
+    jobTitle: "Builder Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    description:
+      "Sophia Dew is a member of the Ethereum Foundation's Builder Growth team, where she focuses on AI agent infrastructure, developer education, and onchain agent standards. She previously served as a Developer Relations Engineering Lead at the Celo Foundation and worked on public goods infrastructure at Gitcoin. She holds a BS in Computer Science and Product Design from Stanford University.",
+    knowsAbout: [
+      "AI Agents on Ethereum",
+      "Onchain Agent Standards",
+      "Agent Frameworks and MCP Tooling",
+      "Ethereum L1 Scaling",
+      "Ethereum Protocol Architecture",
+      "Agent Security and Guardrails",
+      "Developer Relations",
+      "Public Goods Infrastructure",
+    ],
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Stanford University",
+        url: "https://www.stanford.edu/",
+      },
+      {
+        "@type": "Organization",
+        name: "Stanford Blockchain Club",
+        url: "https://stanfordblockchain.org/",
+      },
+      {
+        "@type": "Organization",
+        name: "Gitcoin",
+        url: "https://www.gitcoin.co/",
+      },
+      {
+        "@type": "Organization",
+        name: "Celo Foundation",
+        url: "https://celo.org/",
+      },
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/sophiadew/",
+      "https://x.com/sodofi_",
+      "https://github.com/sodofi",
+    ],
+  },
+
+  rick: {
+    "@type": "Person" as const,
+    "@id": "https://ethereum.org/#rick",
+    name: "Rick",
+    jobTitle: "Builder Growth",
+    worksFor: { "@id": "https://ethereum.foundation/#organization" },
+    url: "https://www.rick.build/",
+    description:
+      "Rick is a member of the Ethereum Foundation's Builder Growth team, where he focuses on agentic commerce infrastructure, sovereign AI agents, and developer education. He writes about the Ethereum standards stack for autonomous agent economies, including ERC-8004, ERC-8183, x402, and onchain agent primitives.",
+    knowsAbout: [
+      "Agentic Commerce Infrastructure",
+      "AI Agents on Ethereum",
+      "Onchain Agent Standards",
+      "Sovereign AI and Local Inference",
+      "Ethereum Developer Education",
+      "Agent Key Management and Wallets",
+      "Layer 2 Ecosystem and Adoption",
+      "SpeedRunEthereum",
+    ],
+    sameAs: [
+      "https://www.rick.build/",
+      "https://x.com/rickdotbuild",
+      "https://github.com/rickkdev",
     ],
   },
 

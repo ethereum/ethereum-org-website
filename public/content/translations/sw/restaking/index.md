@@ -178,7 +178,7 @@ Ingawa AVS hutoa viwango tofauti, Tokeni za Kuweka Dhamana Tena kwa Ukwasi (LRTs
 
 ## Masomo zaidi {#further-reading}
 
-1. [ethereum.org - Mwongozo wa kuweka dhamana kwa ETH](https://ethereum.org/en/staking/)
+1. [ethereum.org - Mwongozo wa kuweka dhamana kwa ETH](/staking/)
 2. [Ledger Academy - Kuweka Dhamana Tena kwa Ethereum ni Nini?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: Itifaki ya Kuweka Dhamana Tena Iliyogatuliwa ya Ethereum Imefafanuliwa](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - Usizidishe makubaliano ya Ethereum](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

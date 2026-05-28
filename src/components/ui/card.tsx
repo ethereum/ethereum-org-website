@@ -250,7 +250,7 @@ const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
 CardBanner.displayName = "CardBanner"
 
 const titleVariants = cva(
-  "group-hover/link:underline group-focus/link:underline",
+  "group-hover/link:underline group-focus/link:underline text-pretty",
   {
     variants: {
       variant: {
@@ -292,7 +292,7 @@ const CardTitle = React.forwardRef<
 })
 CardTitle.displayName = "CardTitle"
 
-const paragraphVariants = cva("", {
+const paragraphVariants = cva("text-body-medium", {
   variants: {
     variant: {
       uppercase: "uppercase",

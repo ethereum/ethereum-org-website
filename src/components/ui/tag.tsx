@@ -176,20 +176,22 @@ const listVariants = cva("", {
 export interface TagsInlineTextProps
   extends Omit<HTMLAttributes<HTMLParagraphElement>, "children">,
     VariantProps<typeof listVariants> {
-  list: string[]
+  list: (string | undefined | null)[]
   delimiter?: string
   max?: number
 }
 
 const TagsInlineText = forwardRef<HTMLParagraphElement, TagsInlineTextProps>(
   ({ className, list, delimiter = "·", max, variant, ...props }, ref) => {
+    const renderList = list.filter(String)
+    if (renderList.length < 1) return null
     return (
       <p
         ref={ref}
         className={cn(listVariants({ variant, className }))}
         {...props}
       >
-        {list.slice(0, max).join(` ${delimiter} `)}
+        {renderList.slice(0, max).join(` ${delimiter} `)}
       </p>
     )
   }

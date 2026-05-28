@@ -46,7 +46,7 @@ Haben Sie Fragen? 🤔 Treten Sie unserem [Discord-Server](https://discord.gg/et
 
 Dies sind einige aktuelle Aufgaben, bei deren Lösung Sie uns helfen und für die Sie Verantwortung übernehmen können. Für die meisten benötigen Sie ein GitHub-Konto, da die meisten Änderungen an der Website über GitHub vorgenommen werden.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Alle Aufgaben ansehen</ButtonLink>
 
