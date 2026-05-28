@@ -20,6 +20,7 @@ import { getBlogPostsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { getFullUrl } from "@/lib/utils/url"
 
 import BlogPageJsonLD from "./page-jsonld"
 
@@ -138,12 +139,25 @@ export async function generateMetadata(props: {
 
   const t = await getTranslations("page-developers-blog")
 
-  return await getMetadata({
+  const metadata = await getMetadata({
     locale,
     slug: ["latest"],
     title: t("page-blog-meta-title"),
     description: t("page-blog-meta-description"),
   })
+
+  return {
+    ...metadata,
+    alternates: {
+      ...(metadata.alternates ?? {}),
+      types: {
+        "application/rss+xml": getFullUrl(locale, "/latest/feed.xml").replace(
+          /\/$/,
+          ""
+        ),
+      },
+    },
+  }
 }
 
 export default Page
