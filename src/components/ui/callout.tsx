@@ -38,11 +38,7 @@ const CalloutRoot = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
 >(({ className, variant, children, ...props }, ref) => (
-  <aside
-    ref={ref}
-    className={cn("min-h-full", variants({ variant }), className)}
-    {...props}
-  >
+  <aside ref={ref} className={cn(variants({ variant }), className)} {...props}>
     <div
       className={cn(
         "flex flex-col @3xl/callout:flex-row-reverse",
