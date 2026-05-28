@@ -84,6 +84,10 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   published: string
   address?: string
   team?: string
+  image?: string
+  imageWidth?: number
+  imageHeight?: number
+  blurDataURL?: string
   hideEditButton?: boolean
   breadcrumb?: string
 }

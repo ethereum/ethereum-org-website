@@ -10,6 +10,7 @@ import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import {
@@ -101,6 +102,7 @@ export const TutorialLayout = ({
   contentNotTranslated,
 }: TutorialLayoutProps) => {
   const absoluteEditPath = getEditPath(slug)
+  const heroImage = frontmatter.image
 
   return (
     <div className="flex w-full gap-8">
@@ -124,6 +126,18 @@ export const TutorialLayout = ({
           editPath={absoluteEditPath}
           isMobile
         />
+        {heroImage && (
+          <Image
+            src={heroImage}
+            alt=""
+            width={frontmatter.imageWidth ?? 1200}
+            height={frontmatter.imageHeight ?? 630}
+            blurDataURL={frontmatter.blurDataURL}
+            preload
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="my-6 h-auto w-full rounded-xl"
+          />
+        )}
         {children}
         {!frontmatter.hideEditButton && (
           <FileContributors
