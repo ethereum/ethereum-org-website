@@ -1,12 +1,13 @@
 "use client"
 
-import type { ReactNode } from "react"
-
 import CopyPageButton from "@/components/CopyPageButton"
 import Github from "@/components/icons/github.svg"
+import ListenToPlayer from "@/components/ListenToPlayer/lazy"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+
+import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
@@ -17,7 +18,6 @@ type PageActionsProps = {
   editPath?: string
   hideEditButton?: boolean
   className?: string
-  children?: ReactNode
 }
 
 const PageActions = ({
@@ -26,10 +26,10 @@ const PageActions = ({
   editPath,
   hideEditButton,
   className,
-  children,
 }: PageActionsProps) => {
   const { t } = useTranslation("common")
   const pathname = usePathname()
+  const hasListenToPlaylist = getPlaylistBySlug(slug).index !== -1
 
   return (
     <div
@@ -38,7 +38,7 @@ const PageActions = ({
         className
       )}
     >
-      {children}
+      {hasListenToPlaylist && <ListenToPlayer slug={slug} />}
       <CopyPageButton slug={slug} isTranslated={isTranslated} />
       {!hideEditButton && editPath && (
         <InlineLink

@@ -135,6 +135,12 @@ export const TopicLayout = async ({
       heroSection={heroSection}
       showDropdown={frontmatter.showDropdown ?? true}
     >
+      {/*
+        The `!` overrides defeat `ContentContainer`'s `*:first:mt-0` (which
+        would zero PageActions' mobile top spacing) and zero out the default
+        prose top margin on the following h2 that PageActions displaces from
+        first-child position.
+      */}
       <PageActions
         slug={slug}
         isTranslated={!contentNotTranslated}

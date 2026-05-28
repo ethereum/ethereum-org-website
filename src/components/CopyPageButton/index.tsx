@@ -13,6 +13,8 @@ import { useLocale } from "next-intl"
 
 import type { MatomoEventOptions } from "@/lib/types"
 
+import ChatGPTIcon from "@/components/icons/chatgpt.svg"
+import ClaudeIcon from "@/components/icons/claude.svg"
 import { ButtonGroup } from "@/components/ui/button-group"
 import { Button } from "@/components/ui/buttons/Button"
 import {
@@ -26,8 +28,6 @@ import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
-
-import { ChatGPTIcon, ClaudeIcon } from "./icons"
 
 import { useClipboard } from "@/hooks/useClipboard"
 import { useTranslation } from "@/hooks/useTranslation"
@@ -108,7 +108,10 @@ const CopyPageButton = ({
   const mdPath = useTranslatedPath
     ? `/content/translations/${locale}/${cleanSlug}/index.md`
     : `/content/${cleanSlug}/index.md`
-  const pagePath = `/${locale}/${cleanSlug}/`
+  // `localePrefix: "as-needed"` -> English canonical URL has no locale prefix.
+  // Feeding the canonical URL avoids redirects that some LLM fetchers don't follow.
+  const pagePath =
+    locale === DEFAULT_LOCALE ? `/${cleanSlug}/` : `/${locale}/${cleanSlug}/`
   const pageUrl = `${SITE_URL}${pagePath}`
 
   const handleCopy = async () => {

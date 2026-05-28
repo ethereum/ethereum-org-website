@@ -34,8 +34,6 @@ import WhitepaperBridge from "@/components/WhitepaperBridge"
 
 import { getEditPath } from "@/lib/utils/editPath"
 
-import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
-
 import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -94,7 +92,6 @@ export const StaticLayout = ({
   contributors,
 }: StaticLayoutProps) => {
   const absoluteEditPath = getEditPath(slug)
-  const hasListenToPlaylist = getPlaylistBySlug(slug).index !== -1
 
   const isGuidesHub = slug === "/guides/" || slug === "guides"
 
@@ -131,9 +128,7 @@ export const StaticLayout = ({
                 editPath={absoluteEditPath}
                 hideEditButton={!!frontmatter.hideEditButton}
                 className="-ms-2 mb-6"
-              >
-                {hasListenToPlaylist && <ListenToPlayer slug={slug} />}
-              </PageActions>
+              />
             )}
             <div className="mb-8 lg:hidden">
               <TableOfContents

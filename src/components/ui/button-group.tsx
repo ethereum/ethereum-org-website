@@ -1,31 +1,29 @@
 import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+import { tv, type VariantProps } from "tailwind-variants"
 import { Slot } from "@radix-ui/react-slot"
 
 import { Separator } from "@/components/ui/separator"
 
 import { cn } from "@/lib/utils/cn"
 
-const buttonGroupVariants = cva(
-  cn(
+const buttonGroupVariants = tv({
+  base: cn(
     "flex w-fit items-stretch",
     "has-[>[data-slot=button-group]]:gap-2",
     "[&>*]:focus-visible:relative [&>*]:focus-visible:z-10"
   ),
-  {
-    variants: {
-      orientation: {
-        horizontal:
-          "[&>*:not(:first-child)]:rounded-l-none [&>*:not(:first-child)]:border-l-0 [&>*:not(:last-child)]:rounded-r-none",
-        vertical:
-          "flex-col [&>*:not(:first-child)]:rounded-t-none [&>*:not(:first-child)]:border-t-0 [&>*:not(:last-child)]:rounded-b-none",
-      },
+  variants: {
+    orientation: {
+      horizontal:
+        "[&>*:not(:first-child)]:rounded-l-none [&>*:not(:first-child)]:border-l-0 [&>*:not(:last-child)]:rounded-r-none",
+      vertical:
+        "flex-col [&>*:not(:first-child)]:rounded-t-none [&>*:not(:first-child)]:border-t-0 [&>*:not(:last-child)]:rounded-b-none",
     },
-    defaultVariants: {
-      orientation: "horizontal",
-    },
-  }
-)
+  },
+  defaultVariants: {
+    orientation: "horizontal",
+  },
+})
 
 function ButtonGroup({
   className,
