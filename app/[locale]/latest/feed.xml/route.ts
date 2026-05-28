@@ -25,7 +25,7 @@ export async function GET(
 
   const t = await getTranslations({
     locale,
-    namespace: "page-developers-blog",
+    namespace: "page-latest",
   })
 
   const posts = await getBlogPostsData(locale)
@@ -34,8 +34,8 @@ export async function GET(
   // directory-style URLs, but feed.xml is a file).
   const feedUrl = getFullUrl(locale, "/latest/feed.xml").replace(/\/$/, "")
   const channelLink = getFullUrl(locale, "/latest/")
-  const channelTitle = t("page-blog-title")
-  const channelDescription = t("page-blog-subtitle")
+  const channelTitle = t("page-latest-title")
+  const channelDescription = t("page-latest-subtitle")
 
   const items = posts
     .map((post) => {

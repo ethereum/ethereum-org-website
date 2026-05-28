@@ -43,7 +43,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   setRequestLocale(locale)
 
-  const t = await getTranslations("page-developers-blog")
+  const t = await getTranslations("page-latest")
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -68,14 +68,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <ContentHero
           breadcrumbs={{ slug: "latest" }}
           heroImg={heroImg}
-          title={t("page-blog-title")}
-          description={t("page-blog-subtitle")}
+          title={t("page-latest-title")}
+          description={t("page-latest-subtitle")}
         />
         <MainArticle className="mx-auto my-0 flex w-full flex-col items-center">
           <div className="my-8 w-full max-w-screen-lg shadow-table-box">
             {blogPosts.length === 0 ? (
               <p className="p-12 text-center text-body-medium">
-                {t("page-blog-no-posts")}
+                {t("page-latest-no-posts")}
               </p>
             ) : (
               blogPosts.map((post) => (
@@ -105,7 +105,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                         {" "}
                         •
                         <Emoji text=":stopwatch:" className="mx-2 text-sm" />
-                        {post.timeToRead} {t("page-blog-minute-read")}
+                        {t("page-latest-minute-read", {
+                          minutes: post.timeToRead,
+                        })}
                       </>
                     ) : null}
                   </p>
@@ -135,13 +137,13 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale } = params
 
-  const t = await getTranslations("page-developers-blog")
+  const t = await getTranslations("page-latest")
 
   const metadata = await getMetadata({
     locale,
     slug: ["latest"],
-    title: t("page-blog-title"),
-    description: t("page-blog-meta-description"),
+    title: t("page-latest-title"),
+    description: t("page-latest-meta-description"),
   })
 
   return {
