@@ -51,7 +51,7 @@ Ethereum.org es un proyecto de código abierto gestionado por más de **12 000**
 
 Estas son algunas tareas actuales de las que podría encargarse y ayudarnos a resolver. Para la mayoría necesitará una cuenta de GitHub, ya que muchos de los cambios al sitio se hacen a través de GitHub.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Ver todas las tareas</ButtonLink>
 

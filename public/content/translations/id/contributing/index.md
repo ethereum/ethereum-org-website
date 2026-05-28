@@ -46,7 +46,7 @@ Ada pertanyaan? 🤔 Bergabunglah dengan [server Discord](https://discord.gg/eth
 
 Berikut adalah beberapa tugas saat ini yang dapat Anda bantu selesaikan dan ambil tanggung jawabnya. Untuk sebagian besar tugas, Anda akan memerlukan akun GitHub karena sebagian besar perubahan pada situs web dilakukan melalui GitHub.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Lihat semua tugas</ButtonLink>
 
