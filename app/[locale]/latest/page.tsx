@@ -151,10 +151,7 @@ export async function generateMetadata(props: {
     alternates: {
       ...(metadata.alternates ?? {}),
       types: {
-        "application/rss+xml": getFullUrl(locale, "/latest/feed.xml").replace(
-          /\/$/,
-          ""
-        ),
+        "application/rss+xml": getFullUrl(locale, "/latest/feed/"),
       },
     },
   }

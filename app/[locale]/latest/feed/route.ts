@@ -30,9 +30,7 @@ export async function GET(
 
   const posts = await getBlogPostsData(locale)
 
-  // Strip trailing slash for the .xml file URL (getFullUrl appends one for
-  // directory-style URLs, but feed.xml is a file).
-  const feedUrl = getFullUrl(locale, "/latest/feed.xml").replace(/\/$/, "")
+  const feedUrl = getFullUrl(locale, "/latest/feed/")
   const channelLink = getFullUrl(locale, "/latest/")
   const channelTitle = t("page-latest-title")
   const channelDescription = t("page-latest-subtitle")
