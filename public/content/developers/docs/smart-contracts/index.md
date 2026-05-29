@@ -16,6 +16,16 @@ If you're just getting started or looking for a less technical introduction, we 
 
 Make sure you've read up on [accounts](/developers/docs/accounts/), [transactions](/developers/docs/transactions/) and the [Ethereum virtual machine](/developers/docs/evm/) before jumping into the world of smart contracts.
 
+## Interacting with smart contracts {#interacting-with-smart-contracts}
+
+Once a smart contract is deployed, you can interact with it. Querying data (reading) is free, while mutating data (writing) requires sending a transaction and paying gas. You can interact with smart contracts using:
+
+- **Frontend applications**: Websites that connect to your wallet
+- **Backend scripts**: Programs that use libraries like ethers.js or web3.js
+- **Block explorers**: Tools like Blockscout or Etherscan that allow you to read and write to contracts directly
+
+[More on interacting with smart contracts](/developers/docs/smart-contracts/interacting/)
+
 ## A digital vending machine {#a-digital-vending-machine}
 
 Perhaps the best metaphor for a smart contract is a vending machine, as described by [Nick Szabo](https://unenumerated.blogspot.com/). With the right inputs, a certain output is guaranteed.
