@@ -28,10 +28,14 @@ const fillFor = (iso2: string | null) => {
     : `hsla(var(--primary), ${getAlpha(rate).toFixed(3)})`
 }
 
-// --- Projection + path generation (module scope: locale-independent, runs once,
-// identical on server and client so hydration matches) -----------------------
+// --- Projection + path generation (module scope: locale-independent, runs once
+// when this lazily-loaded chunk mounts) --------------------------------------
 const VIEW_WIDTH = 800
 const ANTARCTICA_ID = "010" // dropped to match the design (no data, wastes space)
+
+// 1-decimal coords: sub-pixel at render size, ~25% smaller than full precision.
+const roundCoords = (d: string) =>
+  d.replace(/-?\d+\.\d+/g, (m) => Number(m).toFixed(1))
 
 const topo = topology as unknown as Parameters<typeof feature>[0]
 const collection = feature(
@@ -58,7 +62,7 @@ type Shape = { key: string; iso2: string | null; d: string }
 
 const SHAPES: Shape[] = features.map((f) => {
   const iso2 = ISO_NUMERIC_TO_ALPHA2[String(f.id)] ?? null
-  return { key: String(f.id), iso2, d: pathGenerator(f) ?? "" }
+  return { key: String(f.id), iso2, d: roundCoords(pathGenerator(f) ?? "") }
 })
 
 type TooltipState = {
@@ -83,14 +87,6 @@ const WorldMap = () => {
     [locale]
   )
 
-  const countryName = (iso2: string) => {
-    try {
-      return regionNames.of(iso2) ?? iso2
-    } catch {
-      return iso2
-    }
-  }
-
   const resolveTarget = (target: EventTarget): TooltipState | null => {
     const path = (target as Element).closest?.("path[data-iso]")
     const container = containerRef.current
@@ -101,10 +97,17 @@ const WorldMap = () => {
     const rect = container.getBoundingClientRect()
     const box = path.getBoundingClientRect()
 
+    let name = iso2
+    try {
+      name = regionNames.of(iso2) ?? iso2
+    } catch {
+      // fall back to the ISO code
+    }
+
     return {
       x: box.left + box.width / 2 - rect.left,
       y: box.top - rect.top,
-      name: countryName(iso2),
+      name,
       value: rate === undefined ? null : percentFormat.format(rate / 100),
     }
   }
@@ -114,21 +117,15 @@ const WorldMap = () => {
   // Touch: tap a country to show its tooltip, tap empty space to dismiss.
   const handleClick = (e: MouseEvent) => setTooltip(resolveTarget(e.target))
 
-  const dataCountries = useMemo(
-    () =>
-      Object.entries(storiesAdoption)
-        .map(([iso, rate]) => ({
-          iso,
-          name: countryName(iso),
-          value: percentFormat.format(rate / 100),
-        }))
-        .sort((a, b) => a.name.localeCompare(b.name, locale)),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [regionNames, percentFormat, locale]
-  )
-
   return (
-    <figure className="relative m-0">
+    <div
+      ref={containerRef}
+      id={MAP_ID}
+      className="relative"
+      onMouseMove={handleMove}
+      onMouseLeave={() => setTooltip(null)}
+      onClick={handleClick}
+    >
       <style>{`
         #${MAP_ID} svg { width: 100%; height: auto; display: block; }
         #${MAP_ID} path {
@@ -142,70 +139,29 @@ const WorldMap = () => {
         }
       `}</style>
 
-      <div
-        ref={containerRef}
-        id={MAP_ID}
-        className="relative"
-        onMouseMove={handleMove}
-        onMouseLeave={() => setTooltip(null)}
-        onClick={handleClick}
-      >
-        <svg viewBox={`0 0 ${VIEW_WIDTH} ${VIEW_HEIGHT}`} aria-hidden>
-          {SHAPES.map((s) => (
-            <path
-              key={s.key}
-              d={s.d}
-              fill={fillFor(s.iso2)}
-              {...(s.iso2 ? { "data-iso": s.iso2 } : {})}
-            />
-          ))}
-        </svg>
-
-        {tooltip && (
-          <div
-            className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full rounded-md border border-body-medium/20 bg-background px-2 py-1 text-sm shadow-md"
-            style={{ left: tooltip.x, top: tooltip.y - 8 }}
-          >
-            <span className="font-bold">{tooltip.name}</span>
-            <span className="ms-1.5 text-body-medium">
-              {tooltip.value ?? t("page-stories-adoption-no-data")}
-            </span>
-          </div>
-        )}
-      </div>
-
-      {/* Legend */}
-      <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-body-medium">
-        <div className="flex items-center gap-2">
-          <span>{t("page-stories-adoption-legend-low")}</span>
-          <span
-            className="h-3 w-24 rounded-full"
-            style={{
-              background:
-                "linear-gradient(to right, hsla(var(--primary), 0.15), hsla(var(--primary), 1))",
-            }}
+      <svg viewBox={`0 0 ${VIEW_WIDTH} ${VIEW_HEIGHT}`} aria-hidden>
+        {SHAPES.map((s) => (
+          <path
+            key={s.key}
+            d={s.d}
+            fill={fillFor(s.iso2)}
+            {...(s.iso2 ? { "data-iso": s.iso2 } : {})}
           />
-          <span>{t("page-stories-adoption-legend-high")}</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span
-            className="h-3 w-3 rounded-sm border border-body-medium/40"
-            style={{ background: NO_DATA_FILL }}
-          />
-          <span>{t("page-stories-adoption-no-data")}</span>
-        </div>
-      </div>
+        ))}
+      </svg>
 
-      {/* Non-visual equivalent of the map + tooltips */}
-      <figcaption className="sr-only">
-        {t("page-stories-adoption-a11y-summary")}
-        <ul>
-          {dataCountries.map((c) => (
-            <li key={c.iso}>{`${c.name}: ${c.value}`}</li>
-          ))}
-        </ul>
-      </figcaption>
-    </figure>
+      {tooltip && (
+        <div
+          className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full rounded-md border border-body-medium/20 bg-background px-2 py-1 text-sm shadow-md"
+          style={{ left: tooltip.x, top: tooltip.y - 8 }}
+        >
+          <span className="font-bold">{tooltip.name}</span>
+          <span className="ms-1.5 text-body-medium">
+            {tooltip.value ?? t("page-stories-adoption-no-data")}
+          </span>
+        </div>
+      )}
+    </div>
   )
 }
 
