@@ -145,7 +145,6 @@ module.exports = (phase) => {
         { protocol: "https", hostname: "coin-images.coingecko.com" },
         { protocol: "https", hostname: "i.imgur.com" },
         { protocol: "https", hostname: "s3-dcl1.ethquokkaops.io" },
-        { protocol: "https", hostname: "img.youtube.com" },
         { protocol: "https", hostname: "cdn.galxe.com" },
         { protocol: "https", hostname: "assets.poap.xyz" },
         { protocol: "https", hostname: "unavatar.io" },

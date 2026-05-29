@@ -1,10 +1,17 @@
 ---
 title: "Canadian truckers using ETH during COVID"
 description: "After conventional fundraising was frozen, donations kept flowing through Ethereum."
+author: "Anna Mitchell"
+team: "Human Stories"
+tags:
+  - "censorship resistance"
+  - "donations"
+  - "permissionless"
+published: 2026-02-14
+image: /images/stories/hero.png
+breadcrumb: Canadian truckers
 lang: en
 ---
-
-# Canadian truckers using ETH during COVID {#canadian-truckers-using-eth-during-covid}
 
 > This is a placeholder story used while the full Human Stories layout is being designed. The copy below is illustrative.
 

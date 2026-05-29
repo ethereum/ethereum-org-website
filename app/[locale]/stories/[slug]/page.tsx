@@ -1,20 +1,16 @@
 import { pick } from "lodash"
 import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
+import { dateToString } from "@/lib/utils/date"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { getStorySlugs } from "../utils"
 
-import { componentsMapping, StaticLayout } from "@/layouts"
+import { componentsMapping, TutorialLayout } from "@/layouts"
 import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
 
@@ -29,18 +25,13 @@ const StoryPage = async (props: {
   // straight into the shared markdown pipeline once we prefix the slug.
   const fullSlug = `stories/${slug}`
 
-  let pageData
-  try {
-    pageData = await getPageData({
-      locale,
-      slug: fullSlug,
-      baseComponents: mdComponents,
-      componentsMapping,
-      layout: "static",
-    })
-  } catch {
-    notFound()
-  }
+  const pageData = await getPageData({
+    locale,
+    slug: fullSlug,
+    baseComponents: mdComponents,
+    componentsMapping,
+    layout: "tutorial",
+  })
 
   const {
     content,
@@ -49,24 +40,32 @@ const StoryPage = async (props: {
     lastEditLocaleTimestamp,
     isTranslated,
     contributors,
+    timeToRead,
   } = pageData
 
+  // Normalize the YAML date to a string before it crosses into the client
+  // TutorialMetadata component, matching the shared [...slug] route.
+  if ("published" in frontmatter) {
+    frontmatter.published = dateToString(frontmatter.published)
+  }
+
   const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage(fullSlug, "static")
+  const requiredNamespaces = getRequiredNamespacesForPage(fullSlug, "tutorial")
   const messages = pick(allMessages, requiredNamespaces)
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <StaticLayout
+      <TutorialLayout
         slug={fullSlug}
         frontmatter={frontmatter}
         tocItems={tocItems}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contentNotTranslated={!isTranslated}
         contributors={contributors}
+        timeToRead={Math.round(timeToRead.minutes)}
       >
         {content}
-      </StaticLayout>
+      </TutorialLayout>
     </I18nProvider>
   )
 }
@@ -81,18 +80,10 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { locale, slug } = await props.params
 
-  try {
-    return await getMdMetadata({
-      locale,
-      slug: ["stories", slug],
-    })
-  } catch {
-    const t = await getTranslations("common")
-    return {
-      title: t("page-not-found"),
-      description: t("page-not-found-description"),
-    }
-  }
+  return await getMdMetadata({
+    locale,
+    slug: ["stories", slug],
+  })
 }
 
 export default StoryPage

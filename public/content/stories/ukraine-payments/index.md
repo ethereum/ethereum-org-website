@@ -1,10 +1,17 @@
 ---
 title: "Ukraine payments during the war"
 description: "When traditional rails broke down, Ethereum helped move funds quickly to people who needed them most."
+author: "Olena Kovalenko"
+team: "Human Stories"
+tags:
+  - "payments"
+  - "humanitarian aid"
+  - "donations"
+published: 2026-04-21
+image: /images/stories/hero.png
+breadcrumb: Ukraine payments
 lang: en
 ---
-
-# Ukraine payments during the war {#ukraine-payments-during-the-war}
 
 > This is a placeholder story used while the full Human Stories layout is being designed. The copy below is illustrative.
 

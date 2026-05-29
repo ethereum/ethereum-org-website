@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 
+import type { Story } from "@/lib/types"
+
 import Twitter from "@/components/icons/twitter.svg"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 
@@ -9,17 +11,8 @@ import { cn } from "@/lib/utils/cn"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
-export type StoryCardData = {
-  name: string
-  storyEnglish: string
-  storyOriginal: string | null
-  twitter: string | null
-  country: string | null
-  date: string
-}
-
 type StoryCardProps = {
-  story: StoryCardData
+  story: Story
   className?: string
 }
 

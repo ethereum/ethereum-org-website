@@ -1,10 +1,17 @@
 ---
 title: "Escaping Venezuela's currency collapse"
 description: "How Venezuelans turned to Ethereum and stablecoins to protect their savings from hyperinflation."
+author: "Carlos Rivera"
+team: "Human Stories"
+tags:
+  - "stablecoins"
+  - "inflation"
+  - "financial inclusion"
+published: 2026-03-03
+image: /images/stories/hero.png
+breadcrumb: Escaping Venezuela
 lang: en
 ---
-
-# Escaping Venezuela's currency collapse {#escaping-venezuelas-currency-collapse}
 
 > This is a placeholder story used while the full Human Stories layout is being designed. The copy below is illustrative.
 
