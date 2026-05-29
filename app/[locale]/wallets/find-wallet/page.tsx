@@ -8,7 +8,7 @@ import {
 import type { Lang, PageParams, WalletData } from "@/lib/types"
 
 import FindWalletProductTable from "@/components/FindWalletProductTable"
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import ListingMethodology from "@/components/ListingMethodology"
 import MainArticle from "@/components/MainArticle"
@@ -79,7 +79,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
       <I18nProvider locale={locale} messages={messages}>
         <MainArticle className="relative flex flex-col">
-          <ContentHero
+          <PageHero
             breadcrumbs={{ slug: "/wallets/find-wallet" }}
             title={t("page-find-wallet-title")}
             description={t("page-find-wallet-description")}

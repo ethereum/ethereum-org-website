@@ -13,7 +13,7 @@ import type { Lang, PageParams, ToCItem } from "@/lib/types"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import {
   HighlightCard,
   HighlightStack,
@@ -93,7 +93,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <div>
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "learn/what-is-ethereum", startDepth: 1 }}
           heroImg={heroImg}
           title={tocItems[0].title}

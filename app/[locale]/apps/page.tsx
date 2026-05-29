@@ -8,7 +8,7 @@ import {
 import { AppCategory, AppData, Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
@@ -111,7 +111,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <AppsJsonLD locale={locale} contributors={contributors} />
       <I18nProvider locale={locale} messages={messages}>
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "/apps" }}
           title={t("page-apps-title")}
           description={t("page-apps-subtitle")}

@@ -3,7 +3,7 @@ import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
@@ -59,7 +59,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
         meetups={meetups}
       />
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug: "/community/events/meetups" }}
         title={t("page-events-meetups-hero-title", {
           year: getLocaleYear(locale),

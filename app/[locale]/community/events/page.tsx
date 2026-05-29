@@ -10,7 +10,7 @@ import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -126,7 +126,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <EventsJsonLD locale={locale} contributors={contributors} />
       <I18nProvider locale={locale} messages={messages}>
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "/community/events" }}
           heroImg={heroImage}
           title={t("page-events-hero-title", { year: getLocaleYear(locale) })}

@@ -14,7 +14,7 @@ import {
   type SectionNavDetails,
 } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -142,7 +142,7 @@ const Page = async (props: {
       />
       <I18nProvider locale={locale} messages={messages}>
         <div className="flex flex-col gap-12">
-          <ContentHero
+          <PageHero
             breadcrumbs={
               <Breadcrumb>
                 <BreadcrumbList>

@@ -4,7 +4,7 @@ import type { Lang, ToCItem } from "@/lib/types"
 
 import CommentCard from "@/components/CommentCard"
 import FileContributors from "@/components/FileContributors"
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Emphasis, Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
@@ -76,7 +76,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         contributors={contributors}
       />
 
-      <ContentHero
+      <PageHero
         breadcrumbs={{
           slug: "ethereum-history-founder-and-ownership",
           startDepth: 1,

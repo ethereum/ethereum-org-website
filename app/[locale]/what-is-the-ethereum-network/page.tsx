@@ -5,7 +5,7 @@ import type { Lang, ToCItem } from "@/lib/types"
 import CommentCard from "@/components/CommentCard"
 import DocLink from "@/components/DocLink"
 import FileContributors from "@/components/FileContributors"
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
@@ -73,7 +73,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
-      <ContentHero
+      <PageHero
         breadcrumbs={{
           slug: "learn/what-is-the-ethereum-network",
           startDepth: 1,

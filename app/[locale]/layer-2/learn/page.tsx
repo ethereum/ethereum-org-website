@@ -8,7 +8,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -95,7 +95,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <MainArticle className="relative flex flex-col">
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: SLUG, startDepth: 1 }}
           heroImg={heroImg}
           title={t("page-layer-2-learn-title")}

@@ -2,7 +2,7 @@ import { setRequestLocale } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -30,7 +30,7 @@ const Page = async (props: { params: Promise<{ locale: string }> }) => {
         locale={locale}
         contributors={contributors}
       />
-      <ContentHero
+      <PageHero
         breadcrumbs={{
           slug: "/contributing/translation-program/translatathon/leaderboard",
           startDepth: 1,

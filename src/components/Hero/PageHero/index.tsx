@@ -19,7 +19,7 @@ const variants = cva("flex flex-col border-b [--pad:--spacing(8)]", {
   },
 })
 
-export type ContentHeroProps = Omit<
+export type PageHeroProps = Omit<
   CommonHeroProps,
   "heroImg" | "header" | "blurDataURL" | "breadcrumbs"
 > &
@@ -33,7 +33,7 @@ export type ContentHeroProps = Omit<
     breadcrumbs: BreadcrumbsProps | ReactNode
   }
 
-const ContentHero = ({
+const PageHero = ({
   breadcrumbs,
   heroImg,
   buttons,
@@ -42,7 +42,7 @@ const ContentHero = ({
   blurDataURL,
   variant,
   className,
-}: ContentHeroProps) => {
+}: PageHeroProps) => {
   if (blurDataURL && heroImg) heroImg.blurDataURL = blurDataURL
 
   return (
@@ -106,4 +106,4 @@ const ContentHero = ({
   )
 }
 
-export default ContentHero
+export default PageHero

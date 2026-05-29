@@ -3,13 +3,13 @@ import { Meta, StoryObj } from "@storybook/nextjs"
 
 import { langViewportModes } from "@/storybook/modes"
 
-import ContentHeroComponent, { ContentHeroProps } from "."
+import PageHeroComponent, { PageHeroProps } from "."
 
 import heroImg from "@/public/images/upgrades/merge.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
-  component: ContentHeroComponent,
+  component: PageHeroComponent,
   parameters: {
     layout: "none",
     chromatic: {
@@ -18,11 +18,11 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof ContentHeroComponent>
+} satisfies Meta<typeof PageHeroComponent>
 
 export default meta
 
-export const ContentHero: StoryObj = {
+export const PageHero: StoryObj = {
   parameters: {
     // Set asPath in mock router so the Breadcrums component can render
     // the "home" text with correct translation
@@ -35,7 +35,7 @@ export const ContentHero: StoryObj = {
   render: () => {
     const t = useTranslations("page-learn")
 
-    const buttons: ContentHeroProps["buttons"] = [
+    const buttons: PageHeroProps["buttons"] = [
       {
         content: t("hero-button-lets-get-started"),
         toId: "what-is-crypto-ethereum",
@@ -55,7 +55,7 @@ export const ContentHero: StoryObj = {
       },
     ]
     return (
-      <ContentHeroComponent
+      <PageHeroComponent
         breadcrumbs={{ slug: "/run-a-node/" }}
         heroImg={heroImg}
         title={t("hero-header")}

@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -75,7 +75,7 @@ const Page = async (props: {
   return (
     <>
       <DevelopersToolsJsonLD locale={locale} contributors={contributors} />
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug: "/developers/tools" }}
         title={t("page-developers-tools-title")}
         description={t("page-developers-tools-subtitle")}

@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { Section } from "@/components/ui/section"
@@ -40,7 +40,7 @@ const VideoGalleryPage = async (props: {
     <I18nProvider locale={locale} messages={messages}>
       <VideosPageJsonLD locale={locale} videos={videos} />
       <MainArticle className="space-y-12">
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "/videos/" }}
           title={t("page-videos-hero-title")}
           description={t("page-videos-hero-description")}

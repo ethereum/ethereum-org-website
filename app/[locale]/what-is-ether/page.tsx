@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { Lang, ToCItem } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import {
   HighlightCard,
   HighlightStack,
@@ -101,7 +101,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         contributors={contributors}
       />
 
-      <ContentHero
+      <PageHero
         breadcrumbs={{
           slug: "what-is-ether",
           startDepth: 1,
