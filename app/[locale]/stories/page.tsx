@@ -23,6 +23,7 @@ import tenYearStories from "@/data/tenYearStories"
 import { parseStoryDates } from "../10years/_components/utils"
 import { getVideosByCategory } from "../videos/utils"
 
+import AdoptionMap from "./_components/AdoptionMap"
 import CommunityStories from "./_components/CommunityStories"
 import DiscoverStories from "./_components/DiscoverStories"
 import MoreStories from "./_components/MoreStories"
@@ -64,6 +65,10 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
 
         <Section id="discover" className="px-4 md:px-8">
           <DiscoverStories />
+        </Section>
+
+        <Section id="adoption" className="px-4 md:px-8">
+          <AdoptionMap />
         </Section>
 
         <Section id="more-stories" className="space-y-8 px-4 md:px-8">
