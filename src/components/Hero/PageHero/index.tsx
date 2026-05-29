@@ -44,9 +44,9 @@ const PageHero = ({
   breadcrumbs,
   header,
   heroImg,
-  buttons,
   title,
   description,
+  buttons,
   blurDataURL,
   variant,
   className,
@@ -82,7 +82,7 @@ const PageHero = ({
           <Image
             className={cn(
               "object-contain lg:absolute lg:inset-0 lg:size-full",
-              "py-8 pe-(--pad) max-lg:h-[max(--spacing(75),33vh)] max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
+              "py-8 pe-(--pad) max-lg:h-[max(--spacing(64),33vh)] max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
             )}
             src={heroImg}
             alt=""
