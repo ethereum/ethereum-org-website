@@ -2,6 +2,7 @@ import { WalletData } from "@/lib/types"
 
 import { newToCrypto } from "@/data/wallets/new-to-crypto"
 
+import ZerionImage from "@/public/images/layer-2/zerion.png"
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
@@ -50,10 +51,9 @@ import TahoImage from "@/public/images/wallets/taho.png"
 import TokenPocketImage from "@/public/images/wallets/tokenpocket.png"
 import TorusImage from "@/public/images/wallets/torus.png"
 import TrezorImage from "@/public/images/wallets/trezor.png"
-import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
+import TrustWalletImage from "@/public/images/wallets/trust.png"
 import UniswapWalletImage from "@/public/images/wallets/uniswapwallet.png"
 import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
-import ZerionImage from "@/public/images/wallets/zerion.png"
 
 /**
  * See src/data/chains.ts for available chains and names for use within

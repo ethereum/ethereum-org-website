@@ -33,8 +33,8 @@ import {
   getL2beatData,
 } from "@/lib/data"
 import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
-import Callout2Image from "@/public/images/layer-2/layer-2-walking.png"
 import Callout1Image from "@/public/images/man-and-dog-playing.png"
+import Callout2Image from "@/public/images/walking.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params

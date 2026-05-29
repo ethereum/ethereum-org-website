@@ -9,9 +9,9 @@ import fidelityCoinCover from "@/public/images/reports/fidelity-coin-report-ethe
 import l2LandscapeCover from "@/public/images/reports/l2-landscape.webp"
 import mckinseyCover from "@/public/images/reports/mckinsey-ripples-to-waves.webp"
 import openzeppelinCover from "@/public/images/reports/openzeppelin-risk-assessment.webp"
-import tdsCover from "@/public/images/reports/trillion-dollar-security-card.webp"
 import twinstakeCover from "@/public/images/reports/twinstake-pectra.webp"
 import whiteHouseCover from "@/public/images/reports/white-house-crypto.webp"
+import tdsCover from "@/public/images/trillion-dollar-security/report.png"
 
 export type ReportCategory =
   | "ef-original"

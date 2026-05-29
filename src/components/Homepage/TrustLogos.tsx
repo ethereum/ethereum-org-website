@@ -15,7 +15,7 @@ import { numberFormat, numberToPercent } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
-import builtToLastImage from "@/public/images/homepage/built-to-last.png"
+import builtToLastImage from "@/public/images/heroes/learn-hub-hero.png"
 
 type TrustLogosProps = {
   className?: string
