@@ -19,22 +19,30 @@ const variants = cva("flex flex-col border-b [--pad:--spacing(8)]", {
   },
 })
 
+type EyebrowProps =
+  /**
+   * Breadcrumbs to render. Pass a `BreadcrumbsProps` object to use the
+   * standardized `Breadcrumbs` component, or a fully custom `Breadcrumb`
+   * element when the slug-derived links don't map to real routes.
+   */
+  | { breadcrumbs: BreadcrumbsProps | ReactNode; header?: never }
+  /**
+   * Heading can be passed instead of breadcrumb to render an h1 in the same
+   * location, converting the title prop to use an h2.
+   */
+  | { breadcrumbs?: never; header: string }
+
 export type PageHeroProps = Omit<
   CommonHeroProps,
   "heroImg" | "header" | "blurDataURL" | "breadcrumbs"
 > &
   Partial<Pick<CommonHeroProps, "blurDataURL" | "heroImg">> &
-  VariantProps<typeof variants> & {
-    /**
-     * Breadcrumbs to render. Pass a `BreadcrumbsProps` object to use the
-     * standardized `Breadcrumbs` component, or a fully custom `Breadcrumb`
-     * element when the slug-derived links don't map to real routes.
-     */
-    breadcrumbs: BreadcrumbsProps | ReactNode
-  }
+  VariantProps<typeof variants> &
+  EyebrowProps
 
 const PageHero = ({
   breadcrumbs,
+  header,
   heroImg,
   buttons,
   title,
@@ -44,6 +52,22 @@ const PageHero = ({
   className,
 }: PageHeroProps) => {
   if (blurDataURL && heroImg) heroImg.blurDataURL = blurDataURL
+
+  const PrimaryHeading = header ? "h2" : "h1"
+
+  const Eyebrow = () => {
+    if (header) {
+      return (
+        <h1 className="text-base font-normal text-body-medium uppercase">
+          {header}
+        </h1>
+      )
+    }
+    if (isValidElement(breadcrumbs)) {
+      return breadcrumbs
+    }
+    return <Breadcrumbs {...(breadcrumbs as BreadcrumbsProps)} />
+  }
 
   return (
     <div
@@ -73,13 +97,12 @@ const PageHero = ({
           "p-(--pad) lg:px-[calc(var(--pad)*1.5)] lg:py-[calc(var(--pad)*2)]"
         )}
       >
-        {isValidElement(breadcrumbs) ? (
-          breadcrumbs
-        ) : (
-          <Breadcrumbs {...(breadcrumbs as BreadcrumbsProps)} />
-        )}
+        <Eyebrow />
+
         <div className="space-y-[0.33lh]">
-          <h1 className="font-black lg:text-6xl">{title}</h1>
+          <PrimaryHeading className="text-3xl font-black lg:text-6xl">
+            {title}
+          </PrimaryHeading>
           <div className="space-y-[0.5lh] text-lg">
             {typeof description === "string" ? (
               <p>{description}</p>
