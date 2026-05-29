@@ -47,11 +47,11 @@
       "id": 4,
       "name": "hero-family-and-server-component",
       "prompt": "we're adding a new landing page at app/[locale]/community/online/page.tsx. it needs a hero up top with a title, a one-paragraph blurb, an illustration on the right (use public/images/community.png), and two CTA buttons. should i build the hero from scratch or is there a pattern? just give me the file",
-      "expected_output": "Skill should recommend a hero from the @/components/Hero family (likely ContentHero or SimpleHero depending on shape) and explicitly avoid @/components/PageHero (deprecation track). Should keep the page as a Server Component (no 'use client'), use ButtonLink for CTAs (not raw <a>), and use getTranslations for copy.",
+      "expected_output": "Skill should recommend `PageHero` from `@/components/Hero` (the canonical workhorse; it covers both image and text-only heroes). Pass the illustration via `heroImg` and the two CTAs via the `buttons` prop. Should keep the page as a Server Component (no 'use client'), use ButtonLink for CTAs (not raw <a>), and use getTranslations for copy.",
       "files": [],
       "assertions": [
-        {"text": "Output imports a hero from the `@/components/Hero` family (ContentHero, SimpleHero, HubHero, or MdxHero)"},
-        {"text": "Output does NOT import from `@/components/PageHero` (deprecation track)"},
+        {"text": "Output imports `PageHero` (or another fitting hero: HubHero, MdxHero) from `@/components/Hero`"},
+        {"text": "Output does NOT import a default export from `@/components/PageHero` (that path no longer exists; the canonical PageHero lives in `@/components/Hero`)"},
         {"text": "Output does NOT include `'use client'` at the top of page.tsx (Server Component default)"},
         {"text": "CTA buttons use `ButtonLink` (or are passed via the hero's `buttons` prop), not raw `<a>` or `<button>` elements"},
         {"text": "Page-level copy (title, blurb, CTA labels) is routed through `getTranslations` from `next-intl/server`"}

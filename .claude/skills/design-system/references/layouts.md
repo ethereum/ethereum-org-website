@@ -85,7 +85,7 @@ That's it. No new layout component. No new MDX wiring beyond a `componentsMappin
 
 When the topic genuinely needs something extra:
 
-- **`config.hubHero`** — Swap `ContentHero` for `HubHero` on a specific slug (used by Roadmap on `/roadmap/`). Declarative; lives in the topic config.
+- **`config.hubHero`** — Swap `PageHero` for `HubHero` on a specific slug (used by Roadmap on `/roadmap/`). Declarative; lives in the topic config.
 - **`config.editBanner`** — Render the top-of-page "edit this page" banner on every page in the topic. Used by UseCases and AiAgents. Per-page opt-out via frontmatter `hideEditBanner: true` if a specific page needs to suppress.
 - **`afterContent` prop** — Render arbitrary JSX after the markdown content. Used by Staking for its community callout. Passed by the slug router for the one or two topics that need it. If you find yourself wanting a *third* `afterContent` consumer, consider promoting it to `config.afterContent` (still keyed by topic data).
 
