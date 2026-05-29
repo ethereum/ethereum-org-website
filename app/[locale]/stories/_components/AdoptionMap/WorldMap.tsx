@@ -84,10 +84,10 @@ const dropWrappedPolys = (f: GeoJSON.Feature): GeoJSON.Feature => {
 
 type Shape = { key: string; iso2: string | null; d: string }
 
-const SHAPES: Shape[] = features.map((f) => {
+const SHAPES: Shape[] = features.map((f, i) => {
   const iso2 = ISO_NUMERIC_TO_ALPHA2[String(f.id)] ?? null
   return {
-    key: String(f.id),
+    key: `${f.id ?? "geo"}-${i}`,
     iso2,
     d: roundCoords(pathGenerator(dropWrappedPolys(f)) ?? ""),
   }
