@@ -59,6 +59,7 @@ import {
   Card,
   CardBanner,
   CardContent,
+  CardEmoji,
   CardFooter,
   CardHeader,
   CardParagraph,
@@ -66,27 +67,59 @@ import {
 } from "@/components/ui/card"
 ```
 
-The canonical card primitive. `rounded-2xl text-body`. With `href`, wraps in `BaseLink` and propagates a `group/link` class so descendant text can react to card-level hover.
+The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card-pad`, `--content-space`, `--banner-radius`) so children respond automatically when you change a parent variant. `Card` with `href` automatically wraps in `BaseLink` and adds a `group/link` class so descendants can react to card-level hover/focus.
+
+**Core principle**: pick variants, don't reach for `className`. If you're tempted to override padding, spacing, background, border-radius, or text color via `className`, the variant matrix is probably missing a case — add the variant in `card.tsx` instead. See `card-walkthrough.md` for the full guide.
 
 ```tsx
-<Card href="/x">
-  <CardBanner background="accent-a">
-    <Image src="..." alt="..." />
-  </CardBanner>
+<Card href="/x" variant="base" size="base">
+  <CardHeader>
+    <CardBanner background="accent-a"><Image src="..." alt="..." /></CardBanner>
+  </CardHeader>
   <CardContent>
     <CardTitle>Title</CardTitle>
     <CardParagraph>Description</CardParagraph>
   </CardContent>
+  <CardFooter>
+    <ButtonLink href="...">CTA</ButtonLink>
+  </CardFooter>
 </Card>
 ```
 
-**`CardBanner` props**:
-- `background`: `accent-a | accent-b | accent-c | primary | body | none` (default `body`)
-- `size`: `full | thumbnail` (default `full`)
-- `fit`: `cover | contain` (default `cover`)
-- **Magic**: `fit="contain"` with a single `<Image>` child auto-clones it as a blurred backdrop.
+**`Card` variants**:
+- `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius` for edge-to-edge banners) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
+- `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
+- `href`: pass to wrap in `BaseLink` and get whole-card-clickable behavior with `group/link` propagation.
+- Card is always vertical (`flex flex-col`); there is no `orientation` variant.
 
-**`CardTitle` variants**: `semibold | bold | black` (default `bold`).
+**`CardHeader`**: no own variants. The parent `Card variant="header-bar"` applies the row layout / bottom border to descendant headers automatically.
+
+**`CardContent` variants**:
+- `spacing` (optional override): `lg | md | sm | xs`. Replaces `--content-space` locally when the body needs a different rhythm from the card-level `size`. Omit to inherit.
+- Expands to fill height (`flex-1`) so `CardFooter` pushes to the bottom and footers align across cards of varying content.
+- Default text color is `text-body-medium`; `CardTitle` and `<strong>` re-assert `text-body`. Don't set per-paragraph colors.
+
+**`CardFooter` variants**:
+- `buttons`: `full (default)` stretches buttons/ButtonLinks to full width with centered text | `compact` sizes them to fit | `inherit` opts out so children render at intrinsic width.
+
+**`CardBanner` variants**:
+- `background`: `body (default)` | `accent-a` | `accent-b` | `accent-c` | `primary` | `none`. `none` only when the image won't cover the full rectangle.
+- `size`: `full | lg | base (default) | sm | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm.
+- `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
+- `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
+- Placement: inside `CardHeader` for padded; as a direct child of `Card` (pair with `Card size="xs"` or `variant="ghost"`) for edge-to-edge.
+
+**`CardTitle` variants**:
+- `variant`: `semibold | bold (default) | black`.
+- `spacing` (gap before a following `CardParagraph` only): `quarter (default) | none | inherit`. Uses `:has(+...)` selector.
+- **`asChild`**: required when `<h3>` would break the document's heading outline. Pass your own semantic tag inside.
+
+**`CardParagraph` variants**:
+- `size`: omit (16px / `text-body-medium`) | `sm` (14px). Avoid other sizes.
+- `variant`: `uppercase | subtitle`.
+- `textColor="body"`: re-assert base body color (rare; inherits correctly by default).
+
+**`CardEmoji`**: wraps `<Emoji text=":rocket:" />` in a fixed-size `div` to prevent layout shift on client-side hydration. Typically lives in `CardHeader`.
 
 ### `Section`
 
@@ -596,7 +629,7 @@ The remaining `*Banner*`-named files at the root of `src/components/` are:
 
 - `EnvWarningBanner` -- exemplary thin wrap of `<Alert variant="warning">`
 - `TranslationBanner` -- floating Arabic/Urdu translation feedback CTA; still a raw `<aside>` (deprecation candidate -- could be migrated to `<Alert variant="banner">` next time it's touched)
-- `CalloutBanner` / `CalloutBannerSSR` -- in-content card-with-image callout primitives (see `canonical-imports.md`); unrelated to the top-of-page ribbon
+- (The legacy `Callout` / `CalloutBanner` / `CalloutSSR` / `CalloutBannerSSR` files at the root of `src/components/` were unified into `@/components/ui/callout` — see `canonical-imports.md` and `callout-walkthrough.md`. Unrelated to the top-of-page ribbon.)
 
 ### `Faq`
 
@@ -622,6 +655,6 @@ The shortcode registry for markdown content. To add a markdown shortcode, add th
 - `@/components/PageHero` -- use `@/components/Hero/*` instead
 - `@/hooks/useColorModeValue` -- Chakra leftover; use Tailwind `dark:` variant
 
-### Reserved
+### Markdown shortcode wrapper
 
-- `@/components/Card` (default export) -- reserved for markdown shortcode; use `@/components/ui/card`
+- `@/components/MarkdownCard` -- backs the `<Card>` markdown shortcode (registered in `MdComponents`). Composes the `@/components/ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). Importing it from app code is allowed but rare — most app-code cards should compose the primitives directly from `@/components/ui/card`.

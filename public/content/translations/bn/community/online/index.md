@@ -65,7 +65,7 @@ lang: bn
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout title="ডিসেন্ট্রালাইজড অটোনোমাস সংস্থা (DAOs)" description="এই গ্রুপগুলো সংগঠন এবং সহযোগিতাকে সহজতর করতে ইথিরিয়াম প্রযুক্তি ব্যবহার করে। উদাহরণস্বরূপ, সদস্যপদ নিয়ন্ত্রণ, প্রস্তাবগুলোতে ভোট দেওয়া, বা পুল করা সম্পদ পরিচালনা করার জন্য।">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAO সম্পর্কে আরও জানুন

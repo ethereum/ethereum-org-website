@@ -2,8 +2,15 @@ import { Book, Building2, Code } from "lucide-react"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import { Card, CardContent } from "@/components/ui/card"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -97,73 +104,70 @@ const GetStartedGrid = async ({
           </p>
         </div>
 
-        <div className="mx-auto grid w-full max-w-[76rem] gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid w-7xl max-w-full grid-cols-fill-3 gap-8">
           {cards.map((card) => (
-            <LinkBox key={card.title} className="h-full">
-              <Card className="flex h-full flex-col overflow-hidden rounded-4xl border bg-background p-8 transition-colors hover:border-primary-hover">
-                <div className="mb-7 h-48 overflow-hidden rounded-[10px]">
+            <Card
+              key={card.title}
+              className="border transition-colors hover:border-primary-hover"
+              variant="nested"
+              href={card.href}
+              size="lg"
+              customEventOptions={{
+                eventCategory,
+                eventAction: "section_click",
+                eventName: `get_started/${card.id}`,
+              }}
+            >
+              <CardHeader>
+                <CardBanner zoom={false}>
                   <Image
                     src={card.image}
                     alt=""
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
-                    className="h-full w-full object-cover"
                   />
+                </CardBanner>
+              </CardHeader>
+              <CardContent spacing="sm">
+                <div className="flex items-center gap-2">
+                  <div
+                    className={cn(
+                      "flex size-10 items-center justify-center rounded-lg",
+                      card.iconBg
+                    )}
+                  >
+                    <card.icon className={cn("size-6", card.iconColor)} />
+                  </div>
+                  <CardTitle>{card.title}</CardTitle>
                 </div>
 
-                <CardContent className="flex flex-1 flex-col justify-between gap-6 space-y-1.5 p-0">
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-2">
-                      <div
+                <CardParagraph>{card.description}</CardParagraph>
+
+                <ul className="m-0">
+                  {card.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="flex items-center gap-3.5 last:mb-0"
+                    >
+                      <span
                         className={cn(
-                          "flex size-10 items-center justify-center rounded-lg",
-                          card.iconBg
+                          "size-1.5 shrink-0 rounded-full",
+                          card.bulletColor
                         )}
-                      >
-                        <card.icon className={cn("size-6", card.iconColor)} />
-                      </div>
-                      <h3 className="text-2xl leading-8 font-bold">
-                        {card.title}
-                      </h3>
-                    </div>
-
-                    <p className="text-body-medium">{card.description}</p>
-
-                    <ul className="m-0">
-                      {card.bullets.map((bullet) => (
-                        <li
-                          key={bullet}
-                          className="flex items-center gap-3.5 last:mb-0"
-                        >
-                          <span
-                            className={cn(
-                              "size-1.5 shrink-0 rounded-full",
-                              card.bulletColor
-                            )}
-                          />
-                          <span className="text-sm leading-5 text-body-medium">
-                            {bullet}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <LinkOverlay
-                    href={card.href}
-                    hideArrow
-                    className="flex items-center gap-1 font-semibold no-underline"
-                    matomoEvent={{
-                      eventCategory,
-                      eventAction: "section_click",
-                      eventName: `get_started/${card.id}`,
-                    }}
-                  >
-                    {card.cta}
-                    <ChevronNext className="size-5" />
-                  </LinkOverlay>
-                </CardContent>
-              </Card>
-            </LinkBox>
+                      />
+                      <span className="text-sm leading-5 text-body-medium">
+                        {bullet}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <p className="inline-flex items-center font-bold text-primary group-hover/link:text-primary-hover">
+                  {card.cta}
+                  <ChevronNext className="size-5" />
+                </p>
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>

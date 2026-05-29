@@ -178,7 +178,7 @@ buttons:
 
 ## Дополнительные материалы {#further-reading}
 
-1. [ethereum.org - Руководство по стейкингу ETH](https://ethereum.org/en/staking/)
+1. [ethereum.org - Руководство по стейкингу ETH](/staking/)
 2. [Ledger Academy - Что такое рестейкинг Ethereum?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: объяснение децентрализованного протокола рестейкинга Ethereum](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Виталик Бутерин - Не перегружайте консенсус Ethereum](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

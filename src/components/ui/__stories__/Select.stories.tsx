@@ -139,7 +139,7 @@ export const ErrorState: Story = {
   render: () => (
     <div className="w-[220px]">
       <Select>
-        <SelectTrigger className="border-error focus-visible:outline-error hover:not-disabled:border-error">
+        <SelectTrigger className="border-error hover:not-disabled:border-error focus-visible:outline-error">
           <SelectValue placeholder="Required" />
         </SelectTrigger>
         <SelectContent>

@@ -41,7 +41,7 @@ lang: ru
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout title="Децентрализованные автономные организации (DAO)" description="Эти группы используют технологию Ethereum для облегчения организации и сотрудничества. Например, для управления составом участников, голосования по предложениям или управления объединенными активами.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Подробнее о DAO

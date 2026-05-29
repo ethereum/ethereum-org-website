@@ -6,12 +6,13 @@ import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -71,7 +72,7 @@ export const tutorialsComponents = {
   ...mdxTableComponents,
   ButtonLink,
   CallToContribute,
-  Card,
+  Card: MarkdownCard,
   Emoji,
   EnvWarningBanner,
   YouTube,
@@ -101,6 +102,9 @@ export const TutorialLayout = ({
   contentNotTranslated,
 }: TutorialLayoutProps) => {
   const absoluteEditPath = getEditPath(slug)
+  const heroImage = frontmatter.image
+  const hideEditButton =
+    slug.startsWith("latest/") || !!frontmatter.hideEditButton
 
   return (
     <div className="flex w-full gap-8">
@@ -124,6 +128,18 @@ export const TutorialLayout = ({
           editPath={absoluteEditPath}
           isMobile
         />
+        {heroImage && (
+          <Image
+            src={heroImage}
+            alt=""
+            width={frontmatter.imageWidth ?? 1200}
+            height={frontmatter.imageHeight ?? 630}
+            blurDataURL={frontmatter.blurDataURL}
+            preload
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="my-6 max-h-128 w-full rounded-xl object-cover"
+          />
+        )}
         {children}
         {!frontmatter.hideEditButton && (
           <FileContributors
@@ -140,7 +156,7 @@ export const TutorialLayout = ({
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
           editPath={absoluteEditPath}
-          hideEditButton={!!frontmatter.hideEditButton}
+          hideEditButton={hideEditButton}
         />
       )}
     </div>
