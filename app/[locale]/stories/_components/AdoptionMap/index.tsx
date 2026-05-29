@@ -6,8 +6,6 @@ import { storiesAdoption } from "@/data/storiesAdoption"
 
 import MapView from "./MapView"
 
-const NO_DATA_FILL = "hsla(var(--body-medium), 0.12)"
-
 const AdoptionMap = async () => {
   const t = await getTranslations("page-stories")
   const locale = await getLocale()
@@ -36,8 +34,10 @@ const AdoptionMap = async () => {
     .sort((a, b) => a.name.localeCompare(b.name, locale))
 
   return (
-    <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-12">
-      <div className="flex flex-col gap-3 lg:w-1/3">
+    // Map palette (Figma): single-hue indigo over a lavender surface. As CSS
+    // vars so the panel + per-country fills flip together in dark mode.
+    <div className="flex flex-col gap-8 [--map-ink:235_81%_68%] [--map-surface:240_100%_99%] lg:flex-row lg:items-start lg:gap-12 dark:[--map-ink:235_90%_75%] dark:[--map-surface:236_24%_13%]">
+      <div className="flex flex-col gap-3 lg:w-1/3 lg:pt-2">
         <h2>{t("page-stories-adoption-title")}</h2>
         <p className="text-lg text-body-medium">
           {t("page-stories-adoption-description")}
@@ -45,28 +45,8 @@ const AdoptionMap = async () => {
       </div>
 
       <figure className="m-0 lg:w-2/3">
-        <MapView />
-
-        {/* Legend (static, server-rendered so it shows before the map chunk) */}
-        <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-body-medium">
-          <div className="flex items-center gap-2">
-            <span>{t("page-stories-adoption-legend-low")}</span>
-            <span
-              className="h-3 w-24 rounded-full"
-              style={{
-                background:
-                  "linear-gradient(to right, hsla(var(--primary), 0.15), hsla(var(--primary), 1))",
-              }}
-            />
-            <span>{t("page-stories-adoption-legend-high")}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span
-              className="h-3 w-3 rounded-sm border border-body-medium/40"
-              style={{ background: NO_DATA_FILL }}
-            />
-            <span>{t("page-stories-adoption-no-data")}</span>
-          </div>
+        <div className="overflow-hidden rounded-4xl bg-[hsl(var(--map-surface))] p-4 md:p-8">
+          <MapView />
         </div>
 
         {/* Non-visual equivalent of the map + tooltips */}

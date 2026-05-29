@@ -19,13 +19,14 @@ const MAP_ID = "stories-adoption-map"
 // Map a 0–max rate onto a perceptible alpha range over the brand primary.
 const getAlpha = (rate: number) => 0.15 + 0.85 * (rate / STORIES_ADOPTION_MAX)
 
-const NO_DATA_FILL = "hsla(var(--body-medium), 0.12)"
+// Fills/strokes reference --map-ink / --map-surface (set on the section, theme-aware).
+const NO_DATA_FILL = "hsl(var(--map-ink) / 0.1)"
 
 const fillFor = (iso2: string | null) => {
   const rate = iso2 ? storiesAdoption[iso2] : undefined
   return rate === undefined
     ? NO_DATA_FILL
-    : `hsla(var(--primary), ${getAlpha(rate).toFixed(3)})`
+    : `hsl(var(--map-ink) / ${getAlpha(rate).toFixed(3)})`
 }
 
 // --- Projection + path generation (module scope: locale-independent, runs once
@@ -154,12 +155,12 @@ const WorldMap = () => {
       <style>{`
         #${MAP_ID} svg { width: 100%; height: auto; display: block; }
         #${MAP_ID} path {
-          stroke: hsla(var(--body-medium), 0.4);
-          stroke-width: 0.5;
+          stroke: hsl(var(--map-surface));
+          stroke-width: 0.75;
           transition: fill 150ms ease, stroke 150ms ease;
         }
         #${MAP_ID} path[data-iso]:hover {
-          stroke: hsla(var(--primary), 1);
+          stroke: hsl(var(--map-ink));
           stroke-width: 1.2;
         }
       `}</style>
