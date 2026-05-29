@@ -97,13 +97,18 @@ export async function getVideoData(
 /**
  * Convert VideoData to a flat VideoCardData suitable for client components.
  * Thumbnails are served from S3 (populated by the fetchVideoThumbnails task,
- * which handles both YouTube and customThumbnailUrl sources).
+ * which handles both YouTube and customThumbnailUrl sources). When the S3 map
+ * is unavailable (e.g. local dev without Netlify Blobs) or missing an entry,
+ * fall back to the YouTube hqdefault thumbnail, which always exists.
  */
 function toVideoCardData(
   data: VideoData,
   thumbnailMap: Record<string, string> | null
 ): VideoCardData {
   const { slug, frontmatter: fm } = data
+  const youtubeFallback = fm.youtubeId
+    ? `https://img.youtube.com/vi/${fm.youtubeId}/hqdefault.jpg`
+    : ""
   return {
     slug,
     title: fm.title,
@@ -111,7 +116,7 @@ function toVideoCardData(
     uploadDate: fm.uploadDate,
     duration: fm.duration,
     topic: fm.topic,
-    thumbnailUrl: thumbnailMap?.[slug] || "",
+    thumbnailUrl: thumbnailMap?.[slug] || youtubeFallback,
   }
 }
 
