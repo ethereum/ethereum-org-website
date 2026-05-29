@@ -15,7 +15,7 @@ const MapView = () => {
 
   return (
     // aspect-ratio matches the map's viewBox so the reserved space never shifts
-    <div ref={ref} className="aspect-[800/352] w-full">
+    <div ref={ref} className="aspect-[800/310] w-full">
       {isIntersecting && <WorldMap />}
     </div>
   )
