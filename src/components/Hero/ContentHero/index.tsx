@@ -1,8 +1,9 @@
-import type { ReactElement } from "react"
+import { isValidElement, type ReactElement, type ReactNode } from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 
 import type { CommonHeroProps } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
+import Breadcrumbs, { type BreadcrumbsProps } from "@/components/Breadcrumbs"
 import { Image } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
@@ -10,11 +11,27 @@ import { breakpointAsNumber, screens } from "@/lib/utils/screen"
 
 import { CallToAction } from "../CallToAction"
 
+const variants = cva("flex flex-col border-b [--pad:--spacing(8)]", {
+  variants: {
+    variant: {
+      "no-divider": "border-none",
+    },
+  },
+})
+
 export type ContentHeroProps = Omit<
   CommonHeroProps,
-  "heroImg" | "header" | "blurDataURL"
+  "heroImg" | "header" | "blurDataURL" | "breadcrumbs"
 > &
-  Partial<Pick<CommonHeroProps, "blurDataURL" | "heroImg">>
+  Partial<Pick<CommonHeroProps, "blurDataURL" | "heroImg">> &
+  VariantProps<typeof variants> & {
+    /**
+     * Breadcrumbs to render. Pass a `BreadcrumbsProps` object to use the
+     * standardized `Breadcrumbs` component, or a fully custom `Breadcrumb`
+     * element when the slug-derived links don't map to real routes.
+     */
+    breadcrumbs: BreadcrumbsProps | ReactNode
+  }
 
 const ContentHero = ({
   breadcrumbs,
@@ -23,6 +40,7 @@ const ContentHero = ({
   title,
   description,
   blurDataURL,
+  variant,
   className,
 }: ContentHeroProps) => {
   if (blurDataURL && heroImg) heroImg.blurDataURL = blurDataURL
@@ -30,7 +48,7 @@ const ContentHero = ({
   return (
     <div
       className={cn(
-        "flex flex-col border-b [--pad:--spacing(8)]",
+        variants({ variant }),
         heroImg ? "lg:flex-row-reverse" : "lg:flex-row",
         className
       )}
@@ -55,9 +73,13 @@ const ContentHero = ({
           "p-(--pad) lg:px-[calc(var(--pad)*1.5)] lg:py-[calc(var(--pad)*2)]"
         )}
       >
-        <Breadcrumbs {...breadcrumbs} />
+        {isValidElement(breadcrumbs) ? (
+          breadcrumbs
+        ) : (
+          <Breadcrumbs {...(breadcrumbs as BreadcrumbsProps)} />
+        )}
         <div className="space-y-[0.33lh]">
-          <h1 className="font-black lg:text-7xl">{title}</h1>
+          <h1 className="font-black lg:text-6xl">{title}</h1>
           <div className="space-y-[0.5lh] text-lg">
             {typeof description === "string" ? (
               <p>{description}</p>

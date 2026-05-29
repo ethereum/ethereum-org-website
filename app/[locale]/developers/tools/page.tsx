@@ -79,7 +79,7 @@ const Page = async (props: {
         breadcrumbs={{ slug: "/developers/tools" }}
         title={t("page-developers-tools-title")}
         description={t("page-developers-tools-subtitle")}
-        className="border-none" // TODO: Decide if `border-none` should be a ContentHero variant
+        variant="no-divider"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection tools={highlights} />

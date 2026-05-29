@@ -98,7 +98,7 @@ const Page = async (props: {
         description={t(
           `page-developers-tools-category-${category}-description`
         )}
-        className="border-none" // TODO: Decide if `border-none` should be a ContentHero variant
+        variant="no-divider"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection tools={highlights} />

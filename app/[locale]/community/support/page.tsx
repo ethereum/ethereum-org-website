@@ -3,9 +3,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
-import { SimpleHero } from "@/components/Hero"
+import ContentHero from "@/components/Hero/ContentHero"
 import MainArticle from "@/components/MainArticle"
 import {
   Alert,
@@ -45,21 +44,20 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     <div>
       <SupportJsonLD locale={locale} contributors={contributors} />
       {/* Hero */}
-      <SimpleHero
-        breadcrumbs={<Breadcrumbs slug="community/support" startDepth={1} />}
+      <ContentHero
+        breadcrumbs={{ slug: "/community/support", startDepth: 1 }}
         title={t("page-community-support-hero-title")}
-        subtitle={
-          <div className="space-y-[1lh] text-base text-body-medium">
-            <p className="text-lg">
-              {t("page-community-support-hero-subtitle-1")}
-            </p>
-            <p>
+        description={
+          <>
+            <p>{t("page-community-support-hero-subtitle-1")}</p>
+            <p className="text-base">
               {t.rich("page-community-support-hero-subtitle-2", {
                 a: (chunks) => <Link href="/">{chunks}</Link>,
               })}
             </p>
-          </div>
+          </>
         }
+        variant="no-divider"
       />
 
       <MainArticle className="space-y-16 px-4 py-16 md:px-10 md:py-20">

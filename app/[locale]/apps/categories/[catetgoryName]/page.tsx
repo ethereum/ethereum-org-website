@@ -14,7 +14,7 @@ import {
   type SectionNavDetails,
 } from "@/lib/types"
 
-import { SimpleHero } from "@/components/Hero"
+import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -142,34 +142,33 @@ const Page = async (props: {
       />
       <I18nProvider locale={locale} messages={messages}>
         <div className="flex flex-col gap-12">
-          <SimpleHero
+          <ContentHero
             breadcrumbs={
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
                     <BreadcrumbLink href="/">Ethereum.org</BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="mx-2.5 text-body-medium">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
-                    <BreadcrumbLink href="/apps" className="uppercase">
+                    <BreadcrumbLink href="/apps">
                       {t("page-apps-all-apps")}
                     </BreadcrumbLink>
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator className="ms-[0.625rem] me-[0.625rem] text-gray-400">
+                  <BreadcrumbSeparator className="mx-2.5 text-body-medium">
                     /
                   </BreadcrumbSeparator>
                   <BreadcrumbItem>
-                    <BreadcrumbPage>
-                      {t(category.name).toUpperCase()}
-                    </BreadcrumbPage>
+                    <BreadcrumbPage>{t(category.name)}</BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
             }
             title={t(category.name)}
-            subtitle={t(category.description)}
+            description={t(category.description)}
+            variant="no-divider"
           />
           <TabNav
             sections={navSections}

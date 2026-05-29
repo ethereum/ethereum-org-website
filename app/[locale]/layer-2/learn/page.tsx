@@ -99,14 +99,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           breadcrumbs={{ slug: SLUG, startDepth: 1 }}
           heroImg={heroImg}
           title={t("page-layer-2-learn-title")}
-          description={
-            <>
-              <p>{t("page-layer-2-learn-description")}</p>
-              <p>{t("page-layer-2-learn-description")}</p>
-              <p>{t("page-layer-2-learn-description")}</p>
-              <p>{t("page-layer-2-learn-description")}</p>
-            </>
-          }
+          description={t("page-layer-2-learn-description")}
           buttons={[
             {
               content: t("page-layer-2-learn-button-1-label"),

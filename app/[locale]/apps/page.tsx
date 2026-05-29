@@ -8,8 +8,7 @@ import {
 import { AppCategory, AppData, Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
-import Breadcrumbs from "@/components/Breadcrumbs"
-import { SimpleHero } from "@/components/Hero"
+import ContentHero from "@/components/Hero/ContentHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
@@ -112,18 +111,19 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     <>
       <AppsJsonLD locale={locale} contributors={contributors} />
       <I18nProvider locale={locale} messages={messages}>
-        <SimpleHero
-          breadcrumbs={<Breadcrumbs slug={"/apps"} />}
+        <ContentHero
+          breadcrumbs={{ slug: "/apps" }}
           title={t("page-apps-title")}
-          subtitle={t("page-apps-subtitle")}
+          description={t("page-apps-subtitle")}
           buttons={[
             {
               href: "/what-are-apps/",
-              label: t("page-apps-learn-button"),
+              content: t("page-apps-learn-button"),
               variant: "outline",
               isSecondary: true,
             },
           ]}
+          variant="no-divider"
         />
 
         <MainArticle className="flex flex-col gap-32 py-10">
