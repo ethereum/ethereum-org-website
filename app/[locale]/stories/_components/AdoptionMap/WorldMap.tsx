@@ -105,6 +105,7 @@ const WorldMap = () => {
   const locale = useLocale()
   const containerRef = useRef<HTMLDivElement>(null)
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
+  const [highlightD, setHighlightD] = useState<string | null>(null)
 
   const regionNames = useMemo(
     () => new Intl.DisplayNames([locale], { type: "region" }),
@@ -115,7 +116,9 @@ const WorldMap = () => {
     [locale]
   )
 
-  const resolveTarget = (target: EventTarget): TooltipState | null => {
+  const resolveTarget = (
+    target: EventTarget
+  ): { tooltip: TooltipState; d: string } | null => {
     const path = (target as Element).closest?.("path[data-iso]")
     const container = containerRef.current
     if (!path || !container) return null
@@ -133,37 +136,49 @@ const WorldMap = () => {
     }
 
     return {
-      x: box.left + box.width / 2 - rect.left,
-      y: box.top - rect.top,
-      name,
-      value: rate === undefined ? null : percentFormat.format(rate / 100),
+      tooltip: {
+        x: box.left + box.width / 2 - rect.left,
+        y: box.top - rect.top,
+        name,
+        value: rate === undefined ? null : percentFormat.format(rate / 100),
+      },
+      d: path.getAttribute("d") ?? "",
     }
   }
 
-  const handleMove = (e: MouseEvent) => setTooltip(resolveTarget(e.target))
+  const update = (e: MouseEvent) => {
+    const hit = resolveTarget(e.target)
+    setTooltip(hit?.tooltip ?? null)
+    setHighlightD(hit?.d ?? null)
+  }
 
-  // Touch: tap a country to show its tooltip, tap empty space to dismiss.
-  const handleClick = (e: MouseEvent) => setTooltip(resolveTarget(e.target))
+  const clear = () => {
+    setTooltip(null)
+    setHighlightD(null)
+  }
 
   return (
     <div
       ref={containerRef}
       id={MAP_ID}
       className="relative"
-      onMouseMove={handleMove}
-      onMouseLeave={() => setTooltip(null)}
-      onClick={handleClick}
+      onMouseMove={update}
+      onMouseLeave={clear}
+      onClick={update}
     >
       <style>{`
         #${MAP_ID} svg { width: 100%; height: auto; display: block; }
         #${MAP_ID} path {
           stroke: hsl(var(--map-surface));
           stroke-width: 0.75;
-          transition: fill 150ms ease, stroke 150ms ease;
+          transition: fill 150ms ease;
         }
-        #${MAP_ID} path[data-iso]:hover {
+        /* Hovered country outline, drawn last so it paints above all neighbors. */
+        #${MAP_ID} path.highlight {
+          fill: none;
           stroke: hsl(var(--map-ink));
           stroke-width: 1.2;
+          pointer-events: none;
         }
       `}</style>
 
@@ -176,6 +191,7 @@ const WorldMap = () => {
             {...(s.iso2 ? { "data-iso": s.iso2 } : {})}
           />
         ))}
+        {highlightD && <path className="highlight" d={highlightD} />}
       </svg>
 
       {tooltip && (
