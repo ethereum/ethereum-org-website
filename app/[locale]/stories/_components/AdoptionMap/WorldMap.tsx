@@ -20,7 +20,9 @@ const MAP_ID = "stories-adoption-map"
 const getAlpha = (rate: number) => 0.15 + 0.85 * (rate / STORIES_ADOPTION_MAX)
 
 // Fills/strokes reference --map-ink / --map-surface (set on the section, theme-aware).
-const NO_DATA_FILL = "hsl(var(--map-ink) / 0.1)"
+// No-data uses the scale's light-indigo baseline (the "zero" level) rather than a
+// near-transparent tint, so countries stay distinct from the lavender surface.
+const NO_DATA_FILL = "hsl(var(--map-ink) / 0.3)"
 
 const fillFor = (iso2: string | null) => {
   const rate = iso2 ? storiesAdoption[iso2] : undefined
