@@ -14,15 +14,21 @@ import { useTranslation } from "@/hooks/useTranslation"
 type StoryCardProps = {
   story: Story
   className?: string
+  /**
+   * When false, the story copy is always shown in full and the read-more
+   * expander is hidden. Useful in multi-column/masonry layouts where an
+   * inline height change would reflow every column. Defaults to true.
+   */
+  expandable?: boolean
 }
 
 /**
  * A single community story card with a flip toggle (English <-> original
- * language) and a read-more expander. Self-contained state so it can be
- * dropped into any layout (single-column list on /10years, masonry on
+ * language) and an optional read-more expander. Self-contained state so it
+ * can be dropped into any layout (single-column list on /10years, masonry on
  * /stories).
  */
-const StoryCard = ({ story, className }: StoryCardProps) => {
+const StoryCard = ({ story, className, expandable = true }: StoryCardProps) => {
   const { t } = useTranslation("page-10-year-anniversary")
   const [isFlipped, setIsFlipped] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
@@ -83,13 +89,13 @@ const StoryCard = ({ story, className }: StoryCardProps) => {
           <div className="flex flex-col">
             <p
               className={cn(
-                "mb-1 line-clamp-3",
-                isExpanded && "line-clamp-none"
+                "mb-1",
+                expandable && !isExpanded && "line-clamp-3"
               )}
             >
               {showOriginal ? story.storyOriginal : story.storyEnglish}
             </p>
-            {!isExpanded && (
+            {expandable && !isExpanded && (
               <div className="mb-2">
                 <Button
                   onClick={() => setIsExpanded(true)}

@@ -28,6 +28,7 @@ const CommunityStories = ({ stories }: CommunityStoriesProps) => {
           <StoryCard
             key={`${story.name}-${index}`}
             story={story}
+            expandable={false}
             className="mb-6 break-inside-avoid"
           />
         ))}
