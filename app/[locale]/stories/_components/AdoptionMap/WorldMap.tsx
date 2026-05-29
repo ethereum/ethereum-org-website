@@ -1,7 +1,7 @@
 "use client"
 
 import { type MouseEvent, useMemo, useRef, useState } from "react"
-import { geoEquirectangular, geoPath } from "d3-geo"
+import { geoMercator, geoPath } from "d3-geo"
 import { useLocale } from "next-intl"
 import { feature } from "topojson-client"
 
@@ -51,7 +51,7 @@ const featureCollection: GeoJSON.FeatureCollection = {
   features,
 }
 
-const projection = geoEquirectangular().fitWidth(VIEW_WIDTH, featureCollection)
+const projection = geoMercator().fitWidth(VIEW_WIDTH, featureCollection)
 const [[, minY], [, maxY]] = geoPath(projection).bounds(featureCollection)
 const [tx, ty] = projection.translate()
 projection.translate([tx, ty - minY]) // top-align so the viewBox is tight
