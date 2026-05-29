@@ -51,26 +51,43 @@ const featureCollection: GeoJSON.FeatureCollection = {
   features,
 }
 
-// Crop the far-left strip: Mercator's antimeridian seam (at 180°) slices the
-// part of far-eastern Russia that crosses 180°, wrapping it to the left edge as
-// a detached, cut-off sliver. It sits in open Pacific west of Alaska, so we trim
-// it off via the viewBox. (Alaska's western tip starts at ~x18; cropping here
-// leaves it intact.)
-const LEFT_CROP = 26
-
-const projection = geoMercator().fitWidth(VIEW_WIDTH, featureCollection)
+// Center on ~11°E so Mercator's antimeridian seam falls in the Bering Strait
+// (between Russia and Alaska) instead of at 180°. This keeps Russia whole
+// rather than slicing its far-eastern tip (Chukotka) off to the other edge.
+const projection = geoMercator()
+  .rotate([-11, 0])
+  .fitWidth(VIEW_WIDTH, featureCollection)
 const [[, minY], [, maxY]] = geoPath(projection).bounds(featureCollection)
 const [tx, ty] = projection.translate()
 projection.translate([tx, ty - minY]) // top-align so the viewBox is tight
 const VIEW_HEIGHT = Math.ceil(maxY - minY)
-const VIEW_BOX = `${LEFT_CROP} 0 ${VIEW_WIDTH - LEFT_CROP} ${VIEW_HEIGHT}`
+const VIEW_BOX = `0 0 ${VIEW_WIDTH} ${VIEW_HEIGHT}`
 const pathGenerator = geoPath(projection)
+
+// A few far-western US Aleutian islands sit on the far side of the new seam;
+// d3 renders such antimeridian-crossing polygons as a sliver smeared across the
+// whole map. Drop any polygon whose projected width spans most of the map.
+const SEAM_SPAN = 700
+const dropWrappedPolys = (f: GeoJSON.Feature): GeoJSON.Feature => {
+  if (f.geometry.type !== "MultiPolygon") return f
+  const coordinates = f.geometry.coordinates.filter((poly) => {
+    const xs = poly[0]
+      .map((c) => projection(c as [number, number])?.[0])
+      .filter((x): x is number => x != null)
+    return xs.length < 2 || Math.max(...xs) - Math.min(...xs) < SEAM_SPAN
+  })
+  return { ...f, geometry: { ...f.geometry, coordinates } }
+}
 
 type Shape = { key: string; iso2: string | null; d: string }
 
 const SHAPES: Shape[] = features.map((f) => {
   const iso2 = ISO_NUMERIC_TO_ALPHA2[String(f.id)] ?? null
-  return { key: String(f.id), iso2, d: roundCoords(pathGenerator(f) ?? "") }
+  return {
+    key: String(f.id),
+    iso2,
+    d: roundCoords(pathGenerator(dropWrappedPolys(f)) ?? ""),
+  }
 })
 
 type TooltipState = {
