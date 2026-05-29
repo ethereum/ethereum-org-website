@@ -51,11 +51,19 @@ const featureCollection: GeoJSON.FeatureCollection = {
   features,
 }
 
+// Crop the far-left strip: Mercator's antimeridian seam (at 180°) slices the
+// part of far-eastern Russia that crosses 180°, wrapping it to the left edge as
+// a detached, cut-off sliver. It sits in open Pacific west of Alaska, so we trim
+// it off via the viewBox. (Alaska's western tip starts at ~x18; cropping here
+// leaves it intact.)
+const LEFT_CROP = 26
+
 const projection = geoMercator().fitWidth(VIEW_WIDTH, featureCollection)
 const [[, minY], [, maxY]] = geoPath(projection).bounds(featureCollection)
 const [tx, ty] = projection.translate()
 projection.translate([tx, ty - minY]) // top-align so the viewBox is tight
 const VIEW_HEIGHT = Math.ceil(maxY - minY)
+const VIEW_BOX = `${LEFT_CROP} 0 ${VIEW_WIDTH - LEFT_CROP} ${VIEW_HEIGHT}`
 const pathGenerator = geoPath(projection)
 
 type Shape = { key: string; iso2: string | null; d: string }
@@ -139,7 +147,7 @@ const WorldMap = () => {
         }
       `}</style>
 
-      <svg viewBox={`0 0 ${VIEW_WIDTH} ${VIEW_HEIGHT}`} aria-hidden>
+      <svg viewBox={VIEW_BOX} aria-hidden>
         {SHAPES.map((s) => (
           <path
             key={s.key}
