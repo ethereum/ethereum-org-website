@@ -128,10 +128,10 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <I18nProvider locale={locale} messages={messages}>
         <ContentHero
           breadcrumbs={{ slug: "/community/events" }}
+          heroImg={heroImage}
           title={t("page-events-hero-title", { year: getLocaleYear(locale) })}
           description={t("page-events-hero-subtitle")}
-          heroImg={heroImage}
-          className="max-lg:flex max-lg:flex-col-reverse"
+          variant="reverse"
         />
 
         {/* What's on this page? + TabNav */}

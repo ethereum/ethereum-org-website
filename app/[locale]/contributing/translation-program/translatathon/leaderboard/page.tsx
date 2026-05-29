@@ -2,7 +2,7 @@ import { setRequestLocale } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import ContentHero from "@/components/Hero/ContentHero"
 import MainArticle from "@/components/MainArticle"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -19,18 +19,6 @@ const Page = async (props: { params: Promise<{ locale: string }> }) => {
 
   setRequestLocale(locale)
 
-  const heroProps = {
-    title: "2025 Ethereum.org Translatathon",
-    breadcrumbs: {
-      slug: "/contributing/translation-program/translatathon/leaderboard",
-      startDepth: 1,
-    },
-    heroImg: heroImg,
-    description: (
-      <p>Final leaderboard from the 2025 Ethereum.org Translatathon.</p>
-    ),
-  } satisfies ContentHeroProps
-
   const { contributors } = await getAppPageContributorInfo(
     "contributing/translation-program/translatathon/leaderboard",
     locale as Lang
@@ -42,9 +30,15 @@ const Page = async (props: { params: Promise<{ locale: string }> }) => {
         locale={locale}
         contributors={contributors}
       />
-      <div className="relative mt-4">
-        <ContentHero {...heroProps} />
-      </div>
+      <ContentHero
+        breadcrumbs={{
+          slug: "/contributing/translation-program/translatathon/leaderboard",
+          startDepth: 1,
+        }}
+        heroImg={heroImg}
+        title="2025 Ethereum.org Translatathon"
+        description="Final leaderboard from the 2025 Ethereum.org Translatathon."
+      />
 
       <MainArticle className="mx-auto mb-16 w-full max-w-screen-xl px-8 pb-8 lg:pt-16">
         <div className="flex flex-col gap-4">
