@@ -1,4 +1,3 @@
-import { cva, type VariantProps } from "class-variance-authority"
 import type { ReactElement } from "react"
 
 import type { CommonHeroProps } from "@/lib/types"
@@ -11,23 +10,11 @@ import { breakpointAsNumber, screens } from "@/lib/utils/screen"
 
 import { CallToAction } from "../CallToAction"
 
-const variants = cva("flex flex-col border-b [--pad:--spacing(8)]", {
-  variants: {
-    variant: {
-      reverse: "flex-col-reverse",
-    },
-    imageYPad: {
-      none: "**:[img]:py-0",
-    },
-  },
-})
-
 export type ContentHeroProps = Omit<
   CommonHeroProps,
   "heroImg" | "header" | "blurDataURL"
 > &
-  Partial<Pick<CommonHeroProps, "blurDataURL" | "heroImg">> &
-  VariantProps<typeof variants>
+  Partial<Pick<CommonHeroProps, "blurDataURL" | "heroImg">>
 
 const ContentHero = ({
   breadcrumbs,
@@ -36,8 +23,6 @@ const ContentHero = ({
   title,
   description,
   blurDataURL,
-  variant,
-  imageYPad,
   className,
 }: ContentHeroProps) => {
   if (blurDataURL && heroImg) heroImg.blurDataURL = blurDataURL
@@ -45,7 +30,7 @@ const ContentHero = ({
   return (
     <div
       className={cn(
-        variants({ variant, imageYPad }),
+        "flex flex-col border-b [--pad:--spacing(8)]",
         heroImg ? "lg:flex-row-reverse" : "lg:flex-row",
         className
       )}
@@ -55,10 +40,7 @@ const ContentHero = ({
           <Image
             className={cn(
               "object-contain lg:absolute lg:inset-0 lg:size-full",
-              "py-8 pe-(--pad) max-lg:h-[max(--spacing(75),33vh)] max-lg:px-(--pad)",
-              variant === "reverse"
-                ? "max-lg:pt-[calc(var(--pad)/2)]"
-                : "max-lg:pb-[calc(var(--pad)/2)]"
+              "py-8 pe-(--pad) max-lg:h-[max(--spacing(75),33vh)] max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
             )}
             src={heroImg}
             alt=""

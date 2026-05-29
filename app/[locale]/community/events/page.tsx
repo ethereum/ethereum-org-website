@@ -131,7 +131,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           heroImg={heroImage}
           title={t("page-events-hero-title", { year: getLocaleYear(locale) })}
           description={t("page-events-hero-subtitle")}
-          variant="reverse"
         />
 
         {/* What's on this page? + TabNav */}
