@@ -14,6 +14,8 @@
 
 import { createHash } from "crypto"
 
+import { MAX_CHUNK_BYTES } from "../../constants"
+
 type JsonValue =
   | string
   | number
@@ -43,11 +45,6 @@ export interface PreparedJsonBatches {
   batchSizes: number[]
 }
 
-/** Keys per Gemini request */
-const BATCH_SIZE = 100
-/** Avoid tiny final batches -- absorb up to this many extra keys */
-const BATCH_BUFFER = 20
-
 /** 6-char hex digest for content-addressed placeholder IDs */
 function shortHash(content: string): string {
   return createHash("sha256").update(content, "utf8").digest("hex").slice(0, 6)
@@ -73,14 +70,15 @@ const HTML_SELF_CLOSING_WITH_ATTRS_RE =
  * Prepare a JSON file for batched translation.
  *
  * 1. Parses the JSON
- * 2. Splits top-level keys into batches (~100 per batch)
+ * 2. Splits top-level keys into byte-aware batches (each batch's value-set
+ *    stays within MAX_CHUNK_BYTES, with minimum 1 key per batch)
  * 3. Extracts HTML tags from string values, replacing with placeholders
  * 4. Returns batch contents ready for Gemini + restoration maps
  */
 export function prepareJsonBatches(jsonContent: string): PreparedJsonBatches {
   const parsed = JSON.parse(jsonContent) as Record<string, JsonValue>
   const keys = Object.keys(parsed)
-  const keyBatches = splitIntoBatches(keys, BATCH_SIZE, BATCH_BUFFER)
+  const keyBatches = chunkKeysByBytes(parsed, MAX_CHUNK_BYTES)
 
   let htmlExtracted = false
   const batchContents: string[] = []
@@ -153,18 +151,66 @@ export function mergeJsonBatches(batchContents: string[]): string {
 }
 
 /**
- * Check whether a JSON file needs batching (has more keys than the threshold).
+ * Check whether a JSON file needs batching (byte size exceeds the chunk budget).
  */
 export function needsBatching(jsonContent: string): boolean {
   const parsed = JSON.parse(jsonContent) as Record<string, JsonValue>
-  return Object.keys(parsed).length > BATCH_SIZE + BATCH_BUFFER
+  return chunkKeysByBytes(parsed, MAX_CHUNK_BYTES).length > 1
 }
 
 // ---------------------------------------------------------------------------
 // Byte-size-aware chunking (CONCURRENCY-SPEC.md Part 2A)
 // ---------------------------------------------------------------------------
 
-import { MAX_CHUNK_BYTES } from "../../constants"
+/**
+ * Split top-level keys of a parsed JSON object into byte-aware batches.
+ * Each batch's combined JSON-encoded size stays within maxBytes; a key
+ * whose own value exceeds the budget gets its own single-key batch
+ * (minimum guarantee).
+ *
+ * Returns arrays of keys (not JSON strings) so callers that need per-key
+ * access (e.g., HTML extraction) avoid a redundant parse round-trip.
+ */
+function chunkKeysByBytes(
+  parsed: Record<string, JsonValue>,
+  maxBytes: number = MAX_CHUNK_BYTES
+): string[][] {
+  const keys = Object.keys(parsed)
+  if (keys.length === 0) return [[]]
+
+  // Fast path: if total fits in one chunk, return all keys together
+  const totalBytes = Buffer.byteLength(
+    JSON.stringify(parsed, null, 2),
+    "utf-8"
+  )
+  if (totalBytes <= maxBytes) return [keys]
+
+  const chunks: string[][] = []
+  let currentChunkKeys: string[] = []
+  let currentBytes = 0
+  // Overhead: opening { + closing } + newline formatting
+  const JSON_OVERHEAD = 4
+
+  for (const key of keys) {
+    const valueJson = JSON.stringify(parsed[key])
+    // Byte cost: "key": value, + formatting
+    const entryBytes = Buffer.byteLength(
+      `  ${JSON.stringify(key)}: ${valueJson},\n`,
+      "utf-8"
+    )
+
+    if (currentChunkKeys.length > 0 && currentBytes + entryBytes > maxBytes) {
+      chunks.push(currentChunkKeys)
+      currentChunkKeys = []
+      currentBytes = JSON_OVERHEAD
+    }
+    currentChunkKeys.push(key)
+    currentBytes += entryBytes
+  }
+
+  if (currentChunkKeys.length > 0) chunks.push(currentChunkKeys)
+  return chunks
+}
 
 /**
  * Chunk a JSON string by byte size. Each chunk is a valid JSON object
@@ -180,79 +226,16 @@ export function chunkJson(
   maxBytes: number = MAX_CHUNK_BYTES
 ): string[] {
   const parsed = JSON.parse(jsonContent) as Record<string, JsonValue>
-  const keys = Object.keys(parsed)
-
-  if (keys.length === 0) {
-    return [jsonContent]
-  }
-
-  // If total size is under budget, return as-is
+  if (Object.keys(parsed).length === 0) return [jsonContent]
   if (Buffer.byteLength(jsonContent, "utf-8") <= maxBytes) {
     return [jsonContent]
   }
 
-  const chunks: string[][] = []
-  let currentChunkKeys: string[] = []
-  let currentBytes = 0
-  // Overhead: opening { + closing } + newline formatting
-  const JSON_OVERHEAD = 4
-
-  for (const key of keys) {
-    const valueJson = JSON.stringify(parsed[key])
-    // Byte cost: "key": value, + formatting (roughly: key + colon + space + value + comma + newline)
-    const entryBytes = Buffer.byteLength(
-      `  ${JSON.stringify(key)}: ${valueJson},\n`,
-      "utf-8"
-    )
-
-    // If adding this key exceeds budget AND we already have keys, start new chunk
-    if (currentChunkKeys.length > 0 && currentBytes + entryBytes > maxBytes) {
-      chunks.push(currentChunkKeys)
-      currentChunkKeys = []
-      currentBytes = JSON_OVERHEAD
-    }
-
-    currentChunkKeys.push(key)
-    currentBytes += entryBytes
-  }
-
-  // Push remaining keys
-  if (currentChunkKeys.length > 0) {
-    chunks.push(currentChunkKeys)
-  }
-
-  // Build JSON strings for each chunk
-  return chunks.map((chunkKeys) => {
+  return chunkKeysByBytes(parsed, maxBytes).map((chunkKeys) => {
     const obj: Record<string, JsonValue> = {}
-    for (const k of chunkKeys) {
-      obj[k] = parsed[k]
-    }
+    for (const k of chunkKeys) obj[k] = parsed[k]
     return JSON.stringify(obj, null, 2)
   })
-}
-
-// ---------------------------------------------------------------------------
-// Batching (legacy key-count approach)
-// ---------------------------------------------------------------------------
-
-function splitIntoBatches(
-  keys: string[],
-  size: number,
-  buffer: number
-): string[][] {
-  if (keys.length <= size + buffer) return [keys]
-
-  const batches: string[][] = []
-  for (let i = 0; i < keys.length; i += size) {
-    const remaining = keys.length - i
-    // If remaining fits in one more batch (with buffer), take it all
-    if (remaining <= size + buffer) {
-      batches.push(keys.slice(i))
-      break
-    }
-    batches.push(keys.slice(i, i + size))
-  }
-  return batches
 }
 
 // ---------------------------------------------------------------------------
