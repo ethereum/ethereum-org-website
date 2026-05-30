@@ -11,13 +11,20 @@ import { breakpointAsNumber, screens } from "@/lib/utils/screen"
 
 import { CallToAction } from "../CallToAction"
 
-const variants = cva("flex flex-col border-b [--pad:--spacing(8)]", {
-  variants: {
-    variant: {
-      "no-divider": "border-none",
+const variants = cva(
+  cn(
+    "flex flex-col border-b",
+    "[--pad:--spacing(8)]",
+    "[--space:--spacing(4)] lg:[--space:--spacing(6)]" // Base spacing relative to primary header font-size
+  ),
+  {
+    variants: {
+      variant: {
+        "no-divider": "border-none",
+      },
     },
-  },
-})
+  }
+)
 
 type EyebrowProps =
   /**
@@ -81,8 +88,8 @@ const PageHero = ({
         <div className="grid flex-1 place-items-center lg:relative">
           <Image
             className={cn(
-              "object-contain lg:absolute lg:inset-0 lg:size-full",
-              "py-8 pe-(--pad) max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
+              "object-contain max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full lg:absolute lg:inset-0 lg:size-full",
+              "py-8 pe-(--pad) max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
             )}
             src={heroImg}
             alt=""
@@ -91,39 +98,32 @@ const PageHero = ({
           />
         </div>
       )}
-      <div
-        className={cn(
-          "max-w-3xl flex-1 space-y-8",
-          "p-(--pad) lg:px-[calc(var(--pad)*1.5)] lg:py-[calc(var(--pad)*2)]"
-        )}
-      >
-        <Eyebrow />
-
-        <div className="space-y-[0.33lh]">
-          <PrimaryHeading className="text-3xl font-black lg:text-6xl">
-            {title}
-          </PrimaryHeading>
-          <div className="space-y-[0.5lh] text-lg">
-            {typeof description === "string" ? (
-              <p>{description}</p>
-            ) : (
-              description
-            )}
-          </div>
-          {buttons && (
-            <div className="mt-[1.5lh] flex flex-col gap-4 md:flex-row">
-              {buttons.map((button, idx) => {
-                if (!button) return
-                // If it's a React element, render it directly
-                if (typeof button === "object" && "type" in button) {
-                  return <div key={idx}>{button as ReactElement<unknown>}</div>
-                }
-                // Otherwise, render as button props
-                return <CallToAction key={idx} index={idx} {...button} />
-              })}
-            </div>
-          )}
+      <div className="max-w-3xl flex-1 p-(--pad) lg:px-[calc(var(--pad)*1.5)] lg:py-[calc(var(--pad)*2)]">
+        <div className="mb-[calc(var(--space)*2)]">
+          <Eyebrow />
         </div>
+
+        <PrimaryHeading className="text-4xl font-black not-last:mb-(--space) lg:text-6xl">
+          {title}
+        </PrimaryHeading>
+
+        <div className="space-y-[0.5lh] text-lg not-last:mb-[calc(var(--space)*3)]">
+          {typeof description === "string" ? <p>{description}</p> : description}
+        </div>
+
+        {buttons && (
+          <div className="flex flex-col gap-4 md:flex-row">
+            {buttons.map((button, idx) => {
+              if (!button) return
+              // If it's a React element, render it directly
+              if (typeof button === "object" && "type" in button) {
+                return <div key={idx}>{button as ReactElement<unknown>}</div>
+              }
+              // Otherwise, render as button props
+              return <CallToAction key={idx} index={idx} {...button} />
+            })}
+          </div>
+        )}
       </div>
     </div>
   )
