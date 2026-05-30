@@ -1,6 +1,6 @@
 ---
 title: Interacting with smart contracts
-description: An overview of smart contracts, wallets, and how to intaract with smart contract efficiently
+description: Learn how applications, wallets, and services interact with smart contracts on Ethereum
 lang: en
 ---
 
