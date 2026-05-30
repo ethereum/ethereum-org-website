@@ -82,7 +82,7 @@ const PageHero = ({
           <Image
             className={cn(
               "object-contain lg:absolute lg:inset-0 lg:size-full",
-              "py-8 pe-(--pad) max-lg:h-[max(--spacing(64),33vh,fit-content)] max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
+              "py-8 pe-(--pad) max-lg:max-h-64 max-lg:w-auto max-lg:max-w-full max-lg:px-(--pad) max-lg:pb-[calc(var(--pad)/2)]"
             )}
             src={heroImg}
             alt=""
