@@ -147,7 +147,59 @@ Use these instead of arbitrary `z-[N]` values:
 
 ### Gradient backgrounds
 
-`bg-gradient-main`, `bg-card-gradient-secondary`, `bg-radial-a`, `bg-ten-year-gradient`. Use these instead of inlining a multi-stop `bg-linear-to-br from-[#...] via-[#...] to-[#...]`.
+Existing named gradient utilities include `bg-gradient-main`, `bg-card-gradient`/`-secondary`/`-secondary-hover`, `bg-radial-a`/`bg-radial-b`, `bg-gradient-banner`, `bg-banner-grid-gradient`, `bg-gradient-staking`. **Always check `utilities.css` for an existing one before writing any `bg-linear-*` / `from-*` / `to-*` chain.** A multi-stop gradient typed inline at a call site is a red flag - it almost always belongs in a named utility.
+
+Gradients are the highest-duplication area of the styling system (the same recipe gets hand-copied dozens of times). The full inventory is in `docs/gradient-audit.md`; a Storybook story lives at `src/styles/gradients.stories.tsx` (Design System / Gradients). The codebase is converging on a small, **closed** set of named gradient utilities - one class per gradient, with everything baked into the definition.
+
+#### How to reason about a gradient (decision ladder)
+
+Walk down until one fits:
+
+1. **A single design gradient reused across pages?** -> named `@utility` backed by CSS vars (the `bg-radial-a` pattern). Light/dark is handled for free by redefining the var under `.dark`.
+2. **Same shape, our-brand hue varies (tints/washes)?** -> use a named utility from the closed set (e.g. `bg-tint-accent-a`). The hue is encoded in the class name from an approved list - **never** a free argument and **never** re-spelled inline.
+3. **Owned by a specific component?** -> the component variant *applies* the named utility (e.g. `Card decoration="accent-a"` maps to `bg-tint-accent-a`). It does not redeclare the gradient. The utility is the single source of truth.
+4. **Genuine one-off / external brand color?** -> see the hex policy below.
+5. **A transparent->opaque fade/mask?** -> not a color decision; it's a mask utility. Leave it; out of scope for the color system.
+
+#### The rules the closed set enforces (don't break them at a call site)
+
+- **No our-brand hex.** Hex (`from-[#...]`) is an absolute last resort, permitted **only** to match an exact *external* brand color (wallet logos, community-hub city brands). Anything representing *our* brand uses semantic tokens (`accent-a/b/c`, `primary`, `body`) with the alpha modifier (`from-accent-a/10`).
+- **Compass directions only.** The 8 keyword directions (`to-t/tr/r/br/b/bl/l/tl`). No custom angles (`bg-linear-65`) - they add clutter without earning their keep.
+- **Stops at 0% / 50% / 100% only.** No arbitrary stop positions (`from-20%`, `to-97%`, `from-[60%]`).
+- **One shared opacity ramp**, theme-aware via CSS vars - not re-chosen per use.
+- **RTL.** Vertical gradients (`to-t`/`to-b`) are RTL-safe. Directional gradients (horizontal/diagonal fades) must flip for RTL - bake the flip into the utility definition so consumers never hand-write `rtl:from-... rtl:to-...`.
+
+#### Shape of a token gradient utility (repo-idiomatic)
+
+Color triplets are comma-separated; apply alpha with `hsla(var(--token), <alpha>)`. Put the opacity ramp in theme-aware vars so dark mode flips automatically:
+
+```css
+/* semantic-tokens.css */
+:root { --tint-from: 0.05; --tint-to: 0.10; }
+.dark { --tint-from: 0.10; --tint-to: 0.20; }
+
+/* utilities.css */
+@utility bg-tint-accent-a {
+  background-image: linear-gradient(to bottom,
+    hsla(var(--accent-a), var(--tint-from)),
+    hsla(var(--accent-a), var(--tint-to)));
+}
+```
+
+For an external brand color (the hex exception), only the hue varies - pass it as a custom property and keep direction/opacity/dark locked in the definition (`color-mix` applies the ramp to an arbitrary hex):
+
+```css
+@utility bg-brand-tint {
+  background-image: linear-gradient(to bottom,
+    color-mix(in srgb, var(--brand-color) 5%, transparent),
+    color-mix(in srgb, var(--brand-color) 10%, transparent));
+}
+```
+```tsx
+<div className="bg-brand-tint" style={{ "--brand-color": brandHex } as CSSProperties} />
+```
+
+> Why a closed named set rather than one open functional (`bg-tint-*` with `--value()`) utility? A functional utility accepts *any* hue, which just relocates the inconsistency to the call site. A fixed list of named utilities is constrained by design - you can only apply an approved one. Reserve parameterization for the genuinely open dimension (external brand hue), and lock everything else.
 
 ### Grid templates
 
@@ -225,7 +277,7 @@ If you're touching one of these primitives, replace the stale tokens. See `clean
 Decide based on what you're adding:
 
 - **A new semantic color** → `semantic-tokens.css` (must include both light and dark values), then register in `theme.css`'s `@theme inline` block.
-- **A new gradient** → `utilities.css` as `@utility`. Reference foundational/semantic vars.
+- **A new gradient** → `utilities.css` as `@utility`, referencing foundational/semantic vars. First walk the gradient decision ladder above and confirm an existing utility doesn't already cover it. Follow the closed-set rules (no our-brand hex, compass directions only, 0/50/100 stops, shared opacity ramp, RTL-flipped if directional).
 - **A new custom spacing/radius/breakpoint** → `theme.css` (under `@theme inline`).
 - **A foundational color** → `colors.css` (only if a new hue family is being added; rare).
 
