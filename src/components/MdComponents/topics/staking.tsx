@@ -12,10 +12,6 @@ import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import UpgradeStatus from "@/components/UpgradeStatus"
 
-export const InfoGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-fill-3 gap-x-8" {...props} />
-)
-
 const CardGrid = (props: ChildOnlyProp) => (
   <div
     className="m-auto grid grid-cols-1 gap-8 md:m-0 md:grid-cols-3 [&_h3]:mt-0"
@@ -33,7 +29,6 @@ const TableContainer = (props: ChildOnlyProp) => (
 export const stakingComponents = {
   CardGrid,
   DocLink,
-  InfoGrid,
   ProductDisclaimer,
   StakingComparison,
   StakingConsiderations,
