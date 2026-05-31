@@ -4,13 +4,13 @@ metaTitle: Mawakala wa AI | Mawakala wa AI kwenye Ethereum
 description: Muhtasari wa mawakala wa AI kwenye Ethereum
 lang: sw
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Watu walikusanyika kwenye jedwali la kituo
-summaryPoint1: AI ambayo inaingiliana na kiambajengo na inafanya biashara kwa kujitegemea
-summaryPoint2: Hudhibiti pochi na fedha zilizo kwenye mnyororo
-summaryPoint3: Huajiri watu au mawakala wengine kwa kazi
+summaryPoints:
+  - "AI ambayo inaingiliana na kiambajengo na inafanya biashara kwa kujitegemea"
+  - "Hudhibiti pochi na fedha zilizo kwenye mnyororo"
+  - "Huajiri watu au mawakala wengine kwa kazi"
 buttons:
   - content: Mawakala wa AI ni nini?
     toId: what-are-ai-agents

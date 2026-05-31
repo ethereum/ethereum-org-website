@@ -1,6 +1,5 @@
 "use client"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
@@ -20,6 +19,7 @@ import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import Translation from "@/components/Translation"
 import { AccordionContainer } from "@/components/ui/accordion"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 
@@ -115,10 +115,8 @@ const RoadmapPage = () => {
   // TODO: MATOMO EVENTS
   return (
     <>
+      <Alert variant="banner">{t("page-roadmap-banner-notification")}</Alert>
       <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <BannerNotification shouldShow>
-          <p>{t("page-roadmap-banner-notification")}</p>
-        </BannerNotification>
         <div className="flex flex-col gap-16">
           <HubHero {...heroContent} />
 

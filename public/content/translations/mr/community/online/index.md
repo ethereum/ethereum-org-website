@@ -65,7 +65,7 @@ lang: mr
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
+<Callout title="विकेंद्रित स्वायत्त संस्था (DAOs)" description="हे गट संघटन आणि सहयोग सुलभ करण्यासाठी Ethereum तंत्रज्ञानाचा फायदा घेतात. उदाहरणार्थ, सदस्यत्व नियंत्रित करण्यासाठी, प्रस्तावांवर मतदान करण्यासाठी किंवा एकत्रित मालमत्ता व्यवस्थापित करण्यासाठी.">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       DAOs बद्दल अधिक जाणून घ्या

@@ -4,13 +4,13 @@ metaTitle: "وكلاء الذكاء الاصطناعي | وكلاء الذكاء
 description: "نظرة عامة على وكلاء الذكاء الاصطناعي على إيثريوم"
 lang: ar
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: "تجمع الناس عند الطاولة في المحطة"
-summaryPoint1: "ذكاء اصطناعي يتفاعل مع بلوك تشين ويتداول بشكل مستقل"
-summaryPoint2: "يتحكم في المحافظ والأموال على الشبكة"
-summaryPoint3: "يستخدم البشر أو وكلاء آخرين للعمل"
+summaryPoints:
+  - "ذكاء اصطناعي يتفاعل مع بلوك تشين ويتداول بشكل مستقل"
+  - "يتحكم في المحافظ والأموال على الشبكة"
+  - "يستخدم البشر أو وكلاء آخرين للعمل"
 buttons:
   - content: ما هي وكلاء الذكاء الاصطناعي؟
     toId: what-are-ai-agents

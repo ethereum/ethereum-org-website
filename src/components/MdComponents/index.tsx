@@ -2,7 +2,7 @@ import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import Card from "@/components/Card"
+import Codeblock from "@/components/Codeblock"
 import { RestakingList } from "@/components/Content/restaking/RestakingList"
 import BrowseApps from "@/components/Content/what-are-apps/BrowseApps"
 import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsStories"
@@ -19,6 +19,7 @@ import MarkdownImage from "@/components/Image/MarkdownImage"
 import IssuesList from "@/components/IssuesList"
 import LocaleDateTime from "@/components/LocaleDateTime"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -96,12 +97,11 @@ export const Heading4 = ({
   </h4>
 )
 
-export const Pre = (props: ChildOnlyProp) => (
-  <pre
-    className="max-w-full overflow-x-scroll rounded border bg-background-highlight p-4 whitespace-pre-wrap"
-    {...props}
-  />
-)
+export const Pre = (props: HTMLAttributes<HTMLDivElement>) => {
+  const match = props.className?.match(/(language-\S+)/)
+  const codeLanguage = match ? match[0] : "plain-text"
+  return <Codeblock codeLanguage={codeLanguage} {...props} />
+}
 
 type ParagraphProps = ChildOnlyProp & { className?: string }
 
@@ -142,6 +142,12 @@ export const htmlElements = {
 /**
  * Custom React components
  */
+const { Alert, ...AlertSubComponents } = AlertComponents
+
+const AlertWithMargins = ({ className, ...props }) => (
+  <Alert className={cn("my-8", className)} {...props} />
+)
+
 export const Page = ({
   className,
   ...props
@@ -162,7 +168,7 @@ export const Title = (props: ChildOnlyProp) => (
 export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
     <MainArticle
-      className="relative flex-[1_1_992px] px-8 pb-8 [&>h2:first-child]:mt-0"
+      className="relative flex-[1_1_992px] px-8 pb-8 *:first:mt-0"
       {...props}
     />
   )
@@ -177,10 +183,11 @@ export const ExpandableCardWithMargin = ({
 
 // All custom React components
 export const reactComponents = {
-  ...AlertComponents,
+  Alert: AlertWithMargins,
+  ...AlertSubComponents,
   BrowseApps,
   ButtonLink,
-  Card,
+  Card: MarkdownCard,
   ContentContainer,
   Contributors,
   Divider,

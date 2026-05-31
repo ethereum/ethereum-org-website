@@ -247,6 +247,53 @@ import { ContentHero } from "@/components/Hero"
 
 The shapes are different; you may need to restructure the page slightly. `PageHero` is on the deprecation track.
 
+## `BannerNotification` -> `Alert variant="banner"`
+
+```tsx
+// Before (file no longer exists -- import is broken):
+import BannerNotification from "@/components/Banners/BannerNotification"
+<BannerNotification shouldShow={isPageIncomplete}>
+  <Translation id="page-developers-docs:banner-page-incomplete" />
+</BannerNotification>
+
+// After:
+import { Alert } from "@/components/ui/alert"
+{isPageIncomplete && (
+  <Alert variant="banner">
+    <Translation id="page-developers-docs:banner-page-incomplete" />
+  </Alert>
+)}
+```
+
+`BannerNotification` was deleted in May 2026; if you find the import in stale code, this is the replacement. The `shouldShow` prop has no equivalent on `Alert` -- gate at the JSX level (`{condition && <Alert>...</Alert>}`).
+
+`BugBountyBanner` (a thin one-off wrapper around `BannerNotification`) was deleted in the same pass with no replacement file -- inline `<Alert variant="banner">` at the call site.
+
+## Inline `<strong>` lead-in inside `Alert` -> `AlertTitle` + `AlertDescription`
+
+```tsx
+// Before:
+<Alert variant="info">
+  <AlertContent>
+    <p className="mt-0"><strong>Heads up</strong></p>
+    <p className="mt-4">Some description text...</p>
+  </AlertContent>
+</Alert>
+
+// After:
+import { AlertTitle, AlertDescription } from "@/components/ui/alert"
+<Alert variant="info">
+  <AlertContent>
+    <AlertTitle>Heads up</AlertTitle>
+    <AlertDescription>
+      <p>Some description text...</p>
+    </AlertDescription>
+  </AlertContent>
+</Alert>
+```
+
+`AlertTitle` is the canonical "bold standard-font-size lead-in line" for an Alert -- use it whenever an alert needs a bold opening line. `AlertDescription` normalizes paragraph spacing internally, so no `mt-`/`mb-` classes are needed on the body paragraphs. The Alert sub-components are designed so callers don't apply manual typography or spacing inside the Alert.
+
 ## Arbitrary z-index -> named z scale
 
 ```tsx
@@ -287,3 +334,46 @@ import { Stack } from "@/components/ui/flex"
 ```
 
 (Stack already defaults to `flex-col gap-2`, so often you can drop the className entirely.)
+
+## Per-section `src/layouts/md/<Section>Layout` -> `TopicLayout` config
+
+```tsx
+// Before -- a section gets its own layout file that duplicates 90% of every other section's layout:
+// src/layouts/md/Staking.tsx
+export const StakingLayout = ({ children, frontmatter, slug, ... }) => {
+  const { t } = useTranslation("page-staking")
+  const dropdownLinks = { text: t("..."), items: [ /* ... */ ] }
+  const heroProps = { ...frontmatter, breadcrumbs: { slug, startDepth: 1 }, heroImg: { ... } }
+  return <ContentLayout dropdownLinks={dropdownLinks} heroSection={<ContentHero {...heroProps} />}>{children}</ContentLayout>
+}
+
+// After -- the data lives in a config file, no layout component needed:
+// src/data/topics/staking.ts
+import type { TopicConfig } from "."
+export const staking: TopicConfig = {
+  translationNs: "page-staking",
+  dropdown: {
+    textKey: "page-staking-dropdown-staking-options",
+    ariaLabelKey: "page-staking-dropdown-staking-options-alt",
+    matomoCategory: "Staking dropdown",
+    items: [
+      { textKey: "page-staking-dropdown-home", href: "/staking/", matomoEvent: "clicked staking home" },
+      // ...
+    ],
+  },
+  heroImage: { width: 800, height: 605 },
+}
+
+// src/layouts/index.ts
+export const layoutMapping = {
+  // ...
+  staking: TopicLayout,  // was: StakingLayout
+}
+```
+
+After the move:
+- Keep the section's MDX component bundle (`stakingComponents`) in `src/layouts/md/<key>.tsx`; only the layout export goes away.
+- Delete any per-section heading overrides (`Heading1`/`Heading2`/etc. with extra className). The defaults in `MdComponents` are the baseline.
+- If the section needs a swap-in component (HubHero on a specific slug, content after the markdown), use `config.hubHero` or the `afterContent` prop -- don't fork a new layout.
+
+See `references/layouts.md` for the full inventory and `docs/topic-layout-refactor.md` for the worked migration.

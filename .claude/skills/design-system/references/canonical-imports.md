@@ -24,19 +24,15 @@ The canonical card primitive. Composable parts. If `href` is provided, the card 
 
 `CardBanner` props worth knowing:
 - `background`: `"accent-a" | "accent-b" | "accent-c" | "primary" | "body" | "none"` (default `body`)
-- `size`: `"full" | "thumbnail"` (default `full`)
+- `size`: `"full" | "lg" | "base" | "sm" | "thumbnail"` (default `base`)
 - `fit`: `"cover" | "contain"` (default `cover`)
+- `zoom`: `true` (default) | `false` — when the parent `Card` has `href`, controls whether the image scales on hover/focus via `group/link`
 
 When `fit="contain"` and you pass a single `<Image>` child, the banner auto-clones it as a blurred backdrop behind a sharp foreground. Pass two children and you lose this magic.
 
-### Do NOT import `@/components/Card`
+### Markdown shortcode lives in `@/components/MarkdownCard`
 
-```tsx
-// DON'T:
-import Card from "@/components/Card"
-```
-
-This is the legacy card, registered in `MdComponents` for the markdown `<Card>` shortcode. It is reserved for markdown rendering. Importing it from app code is a smell.
+The `<Card>` MDX shortcode (registered in `MdComponents`) is backed by `@/components/MarkdownCard`, which composes the `ui/card` primitives with an MDX-friendly prop shape (`emoji`, `title`, `description`, `ctaLabel`, `href`). Use this wrapper if you have an existing MDX-style API to preserve. For new app code, compose the `ui/card` primitives directly — they're more flexible.
 
 ### Domain-specific cards exist (`AppCard`, `EthPriceCard`, etc.)
 
@@ -185,23 +181,71 @@ import PageHero from "@/components/PageHero"
 
 ## Banners / Callouts / Alerts
 
-### Inline message in content area: `Alert`
+### Inline notice AND top-of-page ribbon: `Alert`
 
 ```tsx
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 ```
 
-Variants: `info | error | success | warning | update`. Optional `size: "full"` for borderless full-width.
+One primitive covers both shapes via `variant`:
 
-### In-content / top-of-page callout: `Callout`
+| Use case | Variant |
+|---|---|
+| In-prose notice | `info` `error` `success` `warning` `update` |
+| Full-bleed top-of-page ribbon (white-on-primary) | `banner` |
 
-> **Migration in progress.** A unified server-renderable `Callout` component is being built that absorbs the current `Callout`/`CalloutSSR`/`CalloutBanner`/`CalloutBannerSSR`/`BannerNotification`/`DismissableBanner` set into a single primitive with variants. Tracked in a dedicated issue.
+```tsx
+// Top-of-page ribbon:
+<Alert variant="banner">{t("page-roadmap-banner-notification")}</Alert>
 
-Until the unified `Callout` lands:
-- For **in-content** callouts with image + heading: use `CalloutBannerSSR` (NOT `CalloutBanner.tsx`). Server-renderable; uses `cva` with `large | medium | small` sizes.
-- For **big ornamental section dividers** with image overlap: use `CalloutSSR` (NOT `Callout.tsx`). Server-renderable.
-- For **top-of-page site-wide stripes**: use `BannerNotification` (`@/components/Banners/BannerNotification`). Will be absorbed as a `notification` variant on the unified `Callout`.
-- Avoid `Callout.tsx` and `CalloutBanner.tsx` (client-only thunks; superseded by their SSR siblings and ultimately by the unified component).
+// In-content warning:
+<Alert variant="warning">
+  <AlertContent>
+    <AlertDescription>{t("warning-text")}</AlertDescription>
+  </AlertContent>
+</Alert>
+```
+
+`variant="banner"` renders `<aside>` (tangential to main content); other variants render `<div>`. No ARIA role by default -- pass `role="status"` for polite dynamic announcements (e.g. filter result counts) or `role="alert"` for genuine assertive errors. See `references/components.md` for the full parts inventory.
+
+### Do NOT import `BannerNotification`
+
+```tsx
+// DON'T -- file deleted May 2026:
+import BannerNotification from "@/components/Banners/BannerNotification"
+```
+
+The `Banners/` subdirectory is gone. Use `<Alert variant="banner">` for top-of-page ribbons.
+
+### Card-shaped in-content callouts: `Callout`
+
+```tsx
+import Callout, {
+  CalloutBanner,
+  CalloutButtons,
+  CalloutContent,
+  CalloutDescription,
+  CalloutRoot,
+  CalloutTitle,
+} from "@/components/ui/callout"
+```
+
+Server-renderable, takes literal `title` / `description` strings (call site resolves intl). Optional `image` banner (overhangs the gradient card); omit for a content-only callout. `variant`: `base` (default) | `sm`. Children render as buttons via `CalloutButtons`.
+
+```tsx
+<Callout
+  image={someImage}
+  alt="..."
+  title={t("...")}
+  description={t("...")}
+>
+  <ButtonLink href="/...">{t("...")}</ButtonLink>
+</Callout>
+```
+
+The default export covers the common shape. The named primitives are available for custom composition (interleaving children between parts, applying classNames on individual slots). The legacy `Callout` / `CalloutSSR` / `CalloutBanner` / `CalloutBannerSSR` files at the root of `src/components/` were removed during the unification — do not reintroduce.
+
+Side-by-side equalization is automatic: when two or more `Callout`s share a parent at `md+` viewport, banners pin to a 16rem min-height and buttons bottom-align across cards. See `callout-walkthrough.md`.
 
 ## Tabs / Tab Navigation
 

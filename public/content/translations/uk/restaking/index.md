@@ -4,11 +4,11 @@ metaTitle: "Що таке рестейкінг? | Переваги та вико
 description: "Використовуйте ETH у стейкінгу, щоб захистити інші децентралізовані сервіси та заробити додаткові винагороди."
 lang: uk
 template: use-cases
-emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: "Візуальне представлення рестейкінгу на Ethereum."
 sidebarDepth: 2
-summaryPoint1: "Використовуйте ETH у стейкінгу, щоб захистити інші децентралізовані сервіси та заробити додаткові винагороди."
+summaryPoints:
+  - "Використовуйте ETH у стейкінгу, щоб захистити інші децентралізовані сервіси та заробити додаткові винагороди."
 buttons:
   - content: Що таке рестейкінг?
     toId: what-is-restaking
@@ -178,7 +178,7 @@ buttons:
 
 ## Для подальшого читання {#further-reading}
 
-1. [ethereum.org - посібник зі стейкінгу ETH](https://ethereum.org/en/staking/)
+1. [ethereum.org - посібник зі стейкінгу ETH](/staking/)
 2. [Ledger Academy - Що таке рестейкінг Ethereum?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: Пояснення децентралізованого протоколу рестейкінгу Ethereum](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Віталік Бутерін - Не перевантажуйте консенсус Ethereum](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

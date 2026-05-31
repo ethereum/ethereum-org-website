@@ -4,13 +4,13 @@ metaTitle: "¿Qué es una DAO? | Organizaciones Autónomas Descentralizadas"
 description: "Una visión general de las DAO en Ethereum"
 lang: es
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: Imagen de una DAO votando una propuesta.
-summaryPoint1: Comunidades con propiedad compartida por los miembros sin liderazgo centralizado.
-summaryPoint2: Una forma segura de colaborar con desconocidos en Internet.
-summaryPoint3: "Un lugar seguro para dar fondos a una causa específica."
+summaryPoints:
+  - "Comunidades con propiedad compartida por los miembros sin liderazgo centralizado."
+  - "Una forma segura de colaborar con desconocidos en Internet."
+  - "Un lugar seguro para dar fondos a una causa específica."
 ---
 
 ## ¿Qué son las DAO? {#what-are-daos}

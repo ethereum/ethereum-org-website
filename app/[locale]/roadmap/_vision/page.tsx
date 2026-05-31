@@ -9,12 +9,12 @@ import {
 import type { ChildOnlyProp, Lang, PageParams } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
-import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import MarkdownCard from "@/components/MarkdownCard"
 import PageHero, {
   type ContentType as PageHeroContent,
 } from "@/components/PageHero"
@@ -80,8 +80,8 @@ const ProblemCardContainer = (props: ChildOnlyProp) => (
   <CardContainer className="mx-auto max-w-screen-lg" {...props} />
 )
 
-const CentreCard = (props: ComponentPropsWithRef<typeof Card>) => (
-  <Card
+const CentreCard = (props: ComponentPropsWithRef<typeof MarkdownCard>) => (
+  <MarkdownCard
     className="m-4 min-w-[240px] flex-[1_1_30%] border-0 p-6 text-center"
     {...props}
   />

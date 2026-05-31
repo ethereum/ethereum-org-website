@@ -4,9 +4,10 @@ lang: sw
 template: use-cases
 image: /images/robot-help-bar.png
 sidebarDepth: 2
-summaryPoint1: Sheria na hali ya mchezo vinaweza kutekelezwa na kiambajengo cha Ethereum, si seva za studio, ikiwakilisha faida muhimu ya michezo ya ndani ya mnyororo
-summaryPoint2: Mtu yeyote anaweza kuunda mods, boti, au michezo mipya kabisa inayounganishwa na data ileile ya wazi ya ndani ya mnyororo
-summaryPoint3: Safu za 2 zilizoundwa maalum huwezesha uchezaji wa wakati halisi na ada za chini, huku mifumo ya uundaji wa michezo ikifanya uundaji wa michezo ya ndani ya mnyororo kupatikana zaidi kuliko hapo awali
+summaryPoints:
+  - "Sheria na hali ya mchezo vinaweza kutekelezwa na kiambajengo cha Ethereum, si seva za studio, ikiwakilisha faida muhimu ya michezo ya ndani ya mnyororo"
+  - "Mtu yeyote anaweza kuunda mods, boti, au michezo mipya kabisa inayounganishwa na data ileile ya wazi ya ndani ya mnyororo"
+  - "Safu za 2 zilizoundwa maalum huwezesha uchezaji wa wakati halisi na ada za chini, huku mifumo ya uundaji wa michezo ikifanya uundaji wa michezo ya ndani ya mnyororo kupatikana zaidi kuliko hapo awali"
 buttons:
   - content: Pata maelezo zaidi
     toId: gaming-on-ethereum

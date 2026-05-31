@@ -5,9 +5,10 @@ lang: pl
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: "Łańcuch śledzący wprowadził mechanizm proof-of-stake do ekosystemu Ethereum."
-summaryPoint2: "Został on połączony z pierwotnym łańcuchem proof-of-work Ethereum we wrześniu 2022."
-summaryPoint3: "Łańcuch śledzący wprowadził logikę konsensusu i protokół uzgadniania bloków, który obecnie zabezpiecza Ethereum."
+summaryPoints:
+  - "Łańcuch śledzący wprowadził mechanizm proof-of-stake do ekosystemu Ethereum."
+  - "Został on połączony z pierwotnym łańcuchem proof-of-work Ethereum we wrześniu 2022."
+  - "Łańcuch śledzący wprowadził logikę konsensusu i protokół uzgadniania bloków, który obecnie zabezpiecza Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

@@ -4,13 +4,13 @@ metaTitle: Apa itu NFT? | Manfaat dan penggunaan
 description: Gambaran umum tentang NFT di Ethereum
 lang: id
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Logo Eth yang ditampilkan melalui hologram.
-summaryPoint1: Cara untuk mewakili apa pun yang unik sebagai aset berbasis Ethereum.
-summaryPoint2: NFT memberikan lebih banyak kekuatan kepada pembuat konten daripada sebelumnya.
-summaryPoint3: Didukung oleh kontrak pintar di blockchain Ethereum.
+summaryPoints:
+  - "Cara untuk mewakili apa pun yang unik sebagai aset berbasis Ethereum."
+  - "NFT memberikan lebih banyak kekuatan kepada pembuat konten daripada sebelumnya."
+  - "Didukung oleh kontrak pintar di blockchain Ethereum."
 ---
 
 ## Apa itu NFT? {#what-are-nfts}

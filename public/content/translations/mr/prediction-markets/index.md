@@ -4,8 +4,9 @@ lang: mr
 template: use-cases
 image: /images/use-cases/prediction-markets.png
 sidebarDepth: 2
-summaryPoint1: "अचूक अंदाज निर्माण करण्यासाठी आर्थिक प्रोत्साहन मिळवा"
-summaryPoint2: "भविष्यातील घटनांबद्दल उच्च-गुणवत्तेचे अंदाज"
+summaryPoints:
+  - "अचूक अंदाज निर्माण करण्यासाठी आर्थिक प्रोत्साहन मिळवा"
+  - "भविष्यातील घटनांबद्दल उच्च-गुणवत्तेचे अंदाज"
 buttons:
   - content: अधिक जाणून घ्या
     toId: how-prediction-markets-work

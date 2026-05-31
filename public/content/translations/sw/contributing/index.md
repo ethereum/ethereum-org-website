@@ -51,7 +51,7 @@ Maswali yoyote? 🤔 Jiunge na [seva yetu ya Discord](https://discord.gg/ethereu
 
 Hizi ni kazi chache za sasa ambazo unaweza kutusaidia kutatua na kuwajibika nazo. Kwa nyingi utahitaji akaunti ya GitHub kwani mabadiliko mengi kwenye tovuti hufanywa kupitia GitHub.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Tazama kazi zote</ButtonLink>
 

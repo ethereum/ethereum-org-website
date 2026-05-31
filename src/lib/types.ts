@@ -6,13 +6,11 @@ import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
+  BlogFrontmatter,
   DocsFrontmatter,
-  RoadmapFrontmatter,
-  StakingFrontmatter,
   StaticFrontmatter,
+  TopicFrontmatter,
   TutorialFrontmatter,
-  UpgradeFrontmatter,
-  UseCasesFrontmatter,
   VideoFrontmatter,
 } from "@/lib/interfaces"
 
@@ -64,13 +62,12 @@ export type Params = {
   locale: string
 }
 
-export type Frontmatter = RoadmapFrontmatter &
-  UpgradeFrontmatter &
+export type Frontmatter = TopicFrontmatter &
   StaticFrontmatter &
-  UseCasesFrontmatter &
-  StakingFrontmatter &
   DocsFrontmatter &
-  TutorialFrontmatter
+  TutorialFrontmatter &
+  BlogFrontmatter &
+  VideoFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
 export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
@@ -613,6 +610,23 @@ export type VideoCardData = {
   duration: string
   topic: string[]
   thumbnailUrl: string
+}
+
+/**
+ * Blog post data for listing pages and carousels.
+ * Parsed from frontmatter of blog post markdown files.
+ */
+export type BlogPost = {
+  href: string
+  title: string
+  description: string
+  author: string
+  team?: string
+  tags?: string[]
+  timeToRead: number
+  published: string
+  lang: string
+  image?: string
 }
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {

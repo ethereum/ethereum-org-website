@@ -4,13 +4,13 @@ metaTitle: Was sind NFTs? | Vorteile und Nutzen
 description: "Ein Überblick über NFTs auf Ethereum"
 lang: de
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/infrastructure_transparent.png
 alt: Ein Eth-Logo, das als Hologramm angezeigt wird.
-summaryPoint1: "Eine Möglichkeit, alles Einzigartige als Ethereum-basierten Vermögenswert darzustellen."
-summaryPoint2: NFTs geben den Erstellern von Inhalten mehr Macht als je zuvor.
-summaryPoint3: Angetrieben durch Smart Contracts auf der Ethereum-Blockchain.
+summaryPoints:
+  - "Eine Möglichkeit, alles Einzigartige als Ethereum-basierten Vermögenswert darzustellen."
+  - "NFTs geben den Erstellern von Inhalten mehr Macht als je zuvor."
+  - "Angetrieben durch Smart Contracts auf der Ethereum-Blockchain."
 ---
 
 ## Was sind NFTs? {#what-are-nfts}

@@ -4,13 +4,13 @@ metaTitle: DAO ni nini? | Shirika Linalojitawala Lililogatuliwa
 description: Muhtasari wa DAO juu ya Ethereum
 lang: sw
 template: use-cases
-emoji: ":handshake:"
 sidebarDepth: 2
 image: /images/use-cases/dao-2.png
 alt: Uwakilishi wa DAO wa kupiga kura juu ya pendekezo.
-summaryPoint1: Jamii zinazomilikiwa na wanachama bila miongozo ya serikali.
-summaryPoint2: Njia salama ya kushirikiana na wageni wa mtandaoni.
-summaryPoint3: Sehemu salama ya kutoa fedha kwa sababu maalumu.
+summaryPoints:
+  - "Jamii zinazomilikiwa na wanachama bila miongozo ya serikali."
+  - "Njia salama ya kushirikiana na wageni wa mtandaoni."
+  - "Sehemu salama ya kutoa fedha kwa sababu maalumu."
 ---
 
 ## DAOs ni nini? {#what-are-daos}

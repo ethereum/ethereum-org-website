@@ -4,13 +4,13 @@ metaTitle: "以太坊支付"
 description: "以太坊支付概览"
 lang: zh
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "以太坊标志与一双给予的手一同展示。"
-summaryPoint1: "一个金钱像信息一样自由流通的世界"
-summaryPoint2: "开放全球，共享未来，赋能每个人实现无界交易"
-summaryPoint3: "一分钟内收到汇款"
+summaryPoints:
+  - "一个金钱像信息一样自由流通的世界"
+  - "开放全球，共享未来，赋能每个人实现无界交易"
+  - "一分钟内收到汇款"
 ---
 
 每天，全球数百万人正在经历同样的困境：跨境转账既手续繁琐又费用高昂，还经常遇到阻碍。 在巴厘岛的自由职业者要等待数天才能收到纽约客户的汇款。 这尤其影响银行基础设施有限地区的人们，使得他们难以参与全球经济。

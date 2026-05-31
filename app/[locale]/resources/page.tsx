@@ -2,12 +2,12 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
 import Github from "@/components/icons/github.svg"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Stack, VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
@@ -78,7 +78,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <ResourcesPageJsonLD locale={locale} contributors={contributors} />
 
       <MainArticle className="relative flex flex-col">
-        <BannerNotification shouldShow className="text-center max-md:flex-col">
+        <Alert variant="banner" className="max-md:flex-col">
           {t("page-resources-banner-notification-message")}{" "}
           <Link
             href={new URL(
@@ -94,7 +94,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           >
             {t("page-resources-share-feedback")}
           </Link>
-        </BannerNotification>
+        </Alert>
 
         <HubHero
           title={t("page-resources-hero-title")}
