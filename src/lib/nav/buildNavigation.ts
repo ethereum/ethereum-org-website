@@ -304,6 +304,11 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
               description: t("nav-institution-enterprise-description"),
               href: ENTERPRISE_ETHEREUM_URL,
             },
+            {
+              label: t("nav-iptf-label"),
+              description: t("nav-iptf-description"),
+              href: "https://iptf.ethereum.org/",
+            },
           ],
         },
       ],
