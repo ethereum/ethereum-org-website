@@ -6,6 +6,7 @@ import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Button, type ButtonProps } from "./buttons/Button"
 import { BaseLink, LinkProps } from "./Link"
 
 const cardVariants = cva(
@@ -135,6 +136,28 @@ const CardFooter = React.forwardRef<
   />
 ))
 CardFooter.displayName = "CardFooter"
+
+/**
+ * Presentational mirror of `Button` rendered as a non-interactive `<div>`, for use
+ * inside a `Card` that has an `href` (where the whole card is the anchor and a real
+ * `Button`/`ButtonLink` would nest an interactive element inside the link). Reuses all
+ * Button styling via `asChild`; Button's `hover-link` variant makes its hover state
+ * fire off the card's `group/link`, so hovering anywhere on the card is visually
+ * identical to hovering the button itself -- no hover styles are duplicated here.
+ */
+type CardButtonFakeProps = React.HTMLAttributes<HTMLDivElement> &
+  Pick<ButtonProps, "variant" | "size" | "isSecondary">
+
+const CardButtonFake = React.forwardRef<HTMLDivElement, CardButtonFakeProps>(
+  ({ className, variant, size, isSecondary, children, ...props }, ref) => (
+    <Button asChild variant={variant} size={size} isSecondary={isSecondary}>
+      <div ref={ref} data-label="button-link" className={className} {...props}>
+        {children}
+      </div>
+    </Button>
+  )
+)
+CardButtonFake.displayName = "CardButtonFake"
 
 const CardEmoji = React.forwardRef<
   HTMLDivElement,
@@ -324,6 +347,7 @@ CardParagraph.displayName = "CardParagraph"
 export {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardEmoji,
   CardFooter,
