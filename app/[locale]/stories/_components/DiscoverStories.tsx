@@ -1,10 +1,10 @@
 import { getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -39,9 +39,14 @@ const DiscoverStories = async () => {
 
       <div className="mx-auto grid max-w-screen-lg grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {FEATURED_STORIES.map((story) => (
-          <Card key={story.slug} variant="nested" className="border">
+          <Card
+            key={story.slug}
+            href={`/stories/${story.slug}/`}
+            variant="nested"
+            className="border"
+          >
             <CardHeader>
-              <CardBanner>
+              <CardBanner className="h-40">
                 <Image
                   src={placeholderImages[story.slug]}
                   alt=""
@@ -56,9 +61,9 @@ const DiscoverStories = async () => {
               </CardParagraph>
             </CardContent>
             <CardFooter>
-              <ButtonLink href={`/stories/${story.slug}/`}>
+              <CardButtonFake>
                 {t("page-stories-discover-read-full-story")}
-              </ButtonLink>
+              </CardButtonFake>
             </CardFooter>
           </Card>
         ))}
