@@ -595,8 +595,8 @@ Class component (`getDerivedStateFromError`), integrates with `@sentry/nextjs`. 
 There's a `Heading.stories.tsx` file but it just renders raw `<h1>` through `<h6>`. The headings are styled by `base.css` element defaults. Use semantic tags directly:
 
 ```tsx
-<h1>Title</h1>           // text-4xl lg:text-5xl, font-bold (from base.css)
-<h2>Subtitle</h2>        // text-3xl lg:text-4xl, font-bold
+<h1>Title</h1>           // text-4xl lg:text-5xl, font-black (from base.css)
+<h2>Subtitle</h2>        // text-3xl lg:text-4xl, font-black
 ```
 
 For markdown-rendered content, sizing comes from `MdComponents`.

@@ -192,7 +192,7 @@ The `useColorModeValue` hook (Chakra leftover) is **deprecated**. Don't introduc
 
 `<body>` automatically gets `bg-background font-body leading-base text-body`. You don't need to repeat these on top-level page wrappers.
 
-Headings (`<h1>` through `<h6>`) get sizing and `font-bold` from `base.css`:
+Headings (`<h1>` through `<h6>`) get sizing and `font-black` from `base.css`:
 - `<h1>`: `text-4xl lg:text-5xl`
 - `<h2>`: `text-3xl lg:text-4xl`
 - `<h3>`: `text-2xl lg:text-3xl`

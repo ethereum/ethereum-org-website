@@ -235,7 +235,9 @@ export const ContentSpacingOverride: Story = {
   ),
 }
 
-// ---------- Title Variants (variant x spacing matrix) ----------
+// ---------- Title Sizes (size x spacing matrix) ----------
+// CardTitle weight is always font-black (inherited from the base heading
+// style); `size` controls text size only. Default (no `size`) is text-2xl.
 
 const TITLE_SIZES = [undefined, "sm", "lg"] as const
 const TITLE_SPACINGS = ["quarter", "none", "inherit"] as const
@@ -243,11 +245,10 @@ const TITLE_SPACINGS = ["quarter", "none", "inherit"] as const
 export const TitleVariants: Story = {
   render: () => (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-      {TITLE_SIZES.map((variant) => (
-        <div key={variant} className="space-y-6">
+      {TITLE_SIZES.map((size) => (
+        <div key={size ?? "default"} className="space-y-6">
           <Label>
-            CardTitle variant=&quot;{variant}&quot;
-            {variant ? "" : " [default]"}
+            {size ? `CardTitle size="${size}"` : "CardTitle (default size)"}
           </Label>
           {TITLE_SPACINGS.map((spacing) => (
             <Card key={spacing}>
@@ -261,7 +262,7 @@ export const TitleVariants: Story = {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle size={variant} spacing={spacing}>
+                <CardTitle size={size} spacing={spacing}>
                   Title spacing={spacing}
                   {spacing === "quarter" ? " (default)" : ""}
                 </CardTitle>
