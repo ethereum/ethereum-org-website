@@ -178,7 +178,7 @@ export const StakingProductCard = ({
           )}
         </div>
       </div>
-      <div className="flex min-h-75 flex-wrap items-start gap-1 p-6 pt-0">
+      <div className="flex flex-wrap items-start gap-1 p-6 pt-0">
         {platforms.map((platform, idx) => (
           <StakingBadge type="platform" key={idx}>
             {platform}

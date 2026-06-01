@@ -1,33 +1,20 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { ArrowDownRight, ArrowUpRight, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
-import type { LoadingState } from "@/lib/types"
-
 import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
+import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
-import { numberFormat } from "@/lib/utils/numbers"
+import { formatPriceUSD, numberToPercent } from "@/lib/utils/numbers"
 
 import { Flex } from "./ui/flex"
 
+import { useGasEthPrice } from "@/hooks/useGasEthPrice"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useTranslation } from "@/hooks/useTranslation"
-
-type EthPriceResponse = {
-  ethereum: {
-    usd: string
-    usd_24h_change: number
-  }
-}
-
-type EthPriceState = {
-  currentPriceUSD: string
-  percentChangeUSD: number
-}
 
 const EthPriceCard = ({
   className,
@@ -35,67 +22,12 @@ const EthPriceCard = ({
 }: React.HTMLAttributes<HTMLDivElement>) => {
   const locale = useLocale()
   const { t } = useTranslation()
-  const [state, setState] = useState<LoadingState<EthPriceState>>({
-    loading: true,
-  })
+  const { ethPrice, ethPercentChange24h } = useGasEthPrice()
   const { twFlipForRtl } = useRtlFlip()
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
-        )
-        if (!response.ok) throw new Error(response.statusText)
-        const data: EthPriceResponse = await response.json()
-        if (data && data.ethereum) {
-          const currentPriceUSD = data.ethereum.usd
-          const percentChangeUSD = +data.ethereum.usd_24h_change / 100
-          setState({
-            loading: false,
-            data: { currentPriceUSD, percentChangeUSD },
-          })
-        }
-      } catch (error: unknown) {
-        error instanceof Error && console.error(error.message)
-        setState({
-          loading: false,
-          error,
-        })
-      }
-    }
-    fetchData()
-  }, [])
-
-  const hasError = "error" in state
-  const hasData = "data" in state
-
-  const formatPrice = (price: string) =>
-    numberFormat(locale, {
-      style: "currency",
-      currency: "USD",
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(+price)
-
-  const formatPercentage = (amount: number): string =>
-    numberFormat(locale, {
-      style: "percent",
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(amount)
-
-  const getPriceString = (): string => {
-    if (state.loading) return t("loading")
-    if (hasError) return t("loading-error-refresh")
-    return formatPrice(state.data.currentPriceUSD)
-  }
-
-  const price = getPriceString()
-
-  const isNegativeChange = hasData && state.data.percentChangeUSD < 0
-
-  const change = hasData ? formatPercentage(state.data.percentChangeUSD) : ""
+  const isLoading = ethPrice === 0
+  const hasChange = typeof ethPercentChange24h === "number"
+  const isNegativeChange = hasChange && ethPercentChange24h < 0
 
   const tooltipContent = (
     <div>
@@ -124,28 +56,40 @@ const EthPriceCard = ({
         </Tooltip>
       </h4>
 
-      <div
-        className={cn(
-          "text-5xl leading-xs",
-          hasError && "my-4 text-md text-error"
+      <div className="flex w-full items-center justify-center text-5xl leading-xs">
+        {isLoading ? (
+          <Skeleton className="h-[1lh] w-60" />
+        ) : (
+          formatPriceUSD(ethPrice, locale)
         )}
-      >
-        {price}
       </div>
 
       {/* min-h-[33px] prevents jump when price loads */}
       <Flex className="mt-2 min-h-[33px] w-full flex-col-reverse items-center justify-center sm:flex-row">
-        <div
-          className={cn(
-            "me-4 text-2xl leading-xs",
-            isNegativeChange ? "text-error" : "text-success"
-          )}
-        >
-          {change}
-          {isNegativeChange ? (
-            <ArrowDownRight className={cn(twFlipForRtl, "inline-block")} />
+        <div className="me-4 flex h-7 w-28 items-center justify-end">
+          {isLoading ? (
+            <Skeleton className="h-full w-full" />
           ) : (
-            <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
+            hasChange && (
+              <span
+                className={cn(
+                  "text-2xl leading-xs",
+                  isNegativeChange ? "text-error" : "text-success"
+                )}
+              >
+                {numberToPercent(ethPercentChange24h, locale, {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
+                {isNegativeChange ? (
+                  <ArrowDownRight
+                    className={cn(twFlipForRtl, "inline-block")}
+                  />
+                ) : (
+                  <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
+                )}
+              </span>
+            )
           )}
         </div>
         <div className="text-sm leading-xs tracking-wider text-body-medium uppercase">

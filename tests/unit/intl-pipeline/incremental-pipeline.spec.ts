@@ -56,7 +56,7 @@ const CONFIG: Partial<ContentTreeConfig> = {
     "label",
     "aria-label",
     "placeholder",
-    "buttonLabel",
+    "ctaLabel",
     "name",
     "caption",
     "contentPreview",

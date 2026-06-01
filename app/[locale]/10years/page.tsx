@@ -117,7 +117,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               defaultValue={Object.keys(tenYearEventRegions)[0]}
               className="w-full"
             >
-              <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
+              <TabsList className="flex-nowrap overflow-x-auto overflow-y-hidden">
                 {Object.entries(tenYearEventRegions).map(([key, data]) => (
                   <TabsTrigger
                     key={key}
@@ -326,6 +326,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   src={card.image}
                   alt={t(`page-10-year-adoption-card-${index + 1}-title`)}
                   className="mx-auto mb-4 max-h-[300px] object-contain"
+                  sizes="384px"
                 />
                 <h3 className="mb-4 text-2xl font-bold">
                   {t(`page-10-year-adoption-card-${index + 1}-title`)}

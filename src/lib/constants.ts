@@ -37,6 +37,7 @@ export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-websit
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
 export const DEFAULT_OG_IMAGE = "/images/home/hero.png"
+export const SITE_TITLE = "ethereum.org"
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800

@@ -122,7 +122,7 @@ const BugBountyCards = () => {
               {t(card.subDescriptionTranslationId)}
             </p>
 
-            <ButtonLink href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+            <ButtonLink href="https://bbp-form.ethereum.org/">
               {t(card.styledButtonTranslationId)}
             </ButtonLink>
           </div>

@@ -54,6 +54,7 @@ const DataProductCard = ({
           className="max-h-[257px] max-w-[311px] self-center object-cover sm:max-w-[372px]"
           src={image}
           width={imgWidth}
+          sizes="(max-width: 479px) 311px, 372px"
         />
       </Flex>
       <Flex className="flex-col justify-between text-left">

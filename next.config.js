@@ -42,6 +42,10 @@ module.exports = (phase) => {
         process.env.DEPLOY_URL ||
         process.env.URL ||
         "https://ethereum.org",
+      // Inline IS_VISUAL_TEST into the client bundle so client-side shuffles
+      // (e.g. useStakingProductsCardGrid) can opt out of randomization during
+      // visual test builds. Server code reads it from process.env directly.
+      IS_VISUAL_TEST: process.env.IS_VISUAL_TEST,
     },
     webpack: (config) => {
       config.module.rules.push({
@@ -253,6 +257,34 @@ module.exports = (phase) => {
           ".next/server/**/*.map",
           // Translation manifests (canonical name in src/scripts/intl-pipeline/constants.ts)
           ".manifests",
+        ],
+      },
+      /**
+       * Re-include MD that hub/index routes enumerate at runtime. These pages
+       * read from `public/content/` and may be opted into ISR via other data
+       * getters; without per-route includes the global `public/content` exclude
+       * above leaves those reads empty inside the Netlify function.
+       *
+       * Keys match the normalized App Router route via picomatch with
+       * `contains: true`. Bracketed segments are picomatch character classes,
+       * so the `[locale]` brackets must be escaped to match literally.
+       */
+      outputFileTracingIncludes: {
+        "\\[locale\\]/latest": [
+          "./public/content/latest/**/*.md",
+          "./public/content/translations/*/latest/**/*.md",
+        ],
+        "\\[locale\\]/developers/tutorials": [
+          "./public/content/developers/tutorials/**/*.md",
+          "./public/content/translations/*/developers/tutorials/**/*.md",
+        ],
+        "\\[locale\\]/videos": [
+          "./public/content/videos/**/*.md",
+          "./public/content/translations/*/videos/**/*.md",
+        ],
+        "\\[locale\\]/developers": [
+          "./public/content/latest/**/*.md",
+          "./public/content/translations/*/latest/**/*.md",
         ],
       },
     }

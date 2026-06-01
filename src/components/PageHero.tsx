@@ -134,15 +134,14 @@ const PageHero = ({
       >
         <Image
           src={image}
-          // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-          sizes="(max-width: 992px) 100vw, 624px"
+          sizes="(max-width: 624px) calc(100vw - 64px), (max-width: 992px) 560px, 624px"
           style={{
             width: "100%",
             height: "auto",
             objectFit: "contain",
           }}
           alt={alt}
-          priority
+          preload
         />
       </Center>
     </Flex>

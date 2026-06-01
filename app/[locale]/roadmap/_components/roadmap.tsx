@@ -1,6 +1,5 @@
 "use client"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
@@ -19,6 +18,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 
@@ -114,10 +114,8 @@ const RoadmapPage = () => {
   // TODO: MATOMO EVENTS
   return (
     <>
+      <Alert variant="banner">{t("page-roadmap-banner-notification")}</Alert>
       <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <BannerNotification shouldShow>
-          <p>{t("page-roadmap-banner-notification")}</p>
-        </BannerNotification>
         <div className="flex flex-col gap-16">
           <HubHero {...heroContent} />
 
@@ -177,6 +175,7 @@ const RoadmapPage = () => {
                 alt={t("page-roadmap-hero-alt")}
                 className="absolute inset-0 h-full w-full object-cover"
                 fill
+                sizes="(max-width: 768px) calc(100vw - 64px), (max-width: 1280px) 50vw, 512px"
               />
             </div>
           </div>
@@ -205,6 +204,7 @@ const RoadmapPage = () => {
                 src={ethBlocksImage}
                 alt={t("page-roadmap-blocks-alt")}
                 className="object-contain"
+                sizes="(max-width: 992px) calc(100vw - 64px), (max-width: 1536px) 50vw, 720px"
               />
             </div>
             <div className="flex flex-1 flex-col gap-8">
@@ -214,52 +214,44 @@ const RoadmapPage = () => {
                   title={t("page-roadmap-faq-1-title")}
                   className="mb-0"
                 >
-                  <div className="flex flex-col gap-4">
-                    <p>
-                      <strong>{t("page-roadmap-faq-1-p1")}</strong>{" "}
-                      {t("page-roadmap-faq-1-p1-continued")}
-                    </p>
-                    <p>{t("page-roadmap-faq-1-p2")}</p>
-                  </div>
+                  <p>
+                    <strong>{t("page-roadmap-faq-1-p1")}</strong>{" "}
+                    {t("page-roadmap-faq-1-p1-continued")}
+                  </p>
+                  <p>{t("page-roadmap-faq-1-p2")}</p>
                 </ExpandableCard>
                 <ExpandableCard
                   title={t("page-roadmap-faq-2-title")}
                   className="mb-0"
                 >
-                  <div className="flex flex-col gap-4">
-                    <p>
-                      {t("page-roadmap-faq-2-p1")}{" "}
-                      <strong>{t("page-roadmap-faq-2-p1-strong")}</strong>{" "}
-                      {t("page-roadmap-faq-2-p1-continued")}
-                    </p>
-                    <p>{t("page-roadmap-faq-2-p2")}</p>
-                  </div>
+                  <p>
+                    {t("page-roadmap-faq-2-p1")}{" "}
+                    <strong>{t("page-roadmap-faq-2-p1-strong")}</strong>{" "}
+                    {t("page-roadmap-faq-2-p1-continued")}
+                  </p>
+                  <p>{t("page-roadmap-faq-2-p2")}</p>
                 </ExpandableCard>
                 <ExpandableCard
                   title={t("page-roadmap-faq-3-title")}
                   className="mb-0"
                 >
-                  <div className="flex flex-col gap-4">
-                    <p>
-                      <Translation
-                        id="page-roadmap:page-roadmap-faq-3-p1"
-                        transform={{ a: Link }}
-                      />
-                    </p>
-                  </div>
+                  <p>
+                    <Translation
+                      id="page-roadmap:page-roadmap-faq-3-p1"
+                      transform={{ a: Link }}
+                    />
+                  </p>
                 </ExpandableCard>
                 <ExpandableCard
                   title={t("page-roadmap-faq-4-title")}
                   className="mb-0"
                 >
-                  <div className="flex flex-col gap-4">
-                    <p>
-                      <Translation
-                        id="page-roadmap:page-roadmap-faq-4-p1"
-                        transform={{ a: Link }}
-                      />
-                    </p>
-                  </div>
+                  <p>
+                    <Translation
+                      id="page-roadmap:page-roadmap-faq-4-p1"
+                      transform={{ a: Link }}
+                    />
+                  </p>
                 </ExpandableCard>
               </div>
             </div>

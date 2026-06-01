@@ -26,16 +26,19 @@ export default async function Layer2PageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#layer-2` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-layer-2-meta-title"),
         description: t("page-layer-2-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -59,11 +62,12 @@ export default async function Layer2PageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#layer-2` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#layer-2`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-layer-2-hero-title"),
         description: t("page-layer-2-meta-description"),
         image: "https://ethereum.org/images/layer-2/learn-hero.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)

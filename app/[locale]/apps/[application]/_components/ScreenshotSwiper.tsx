@@ -59,7 +59,7 @@ const ScreenshotSwiper = ({ screenshots, appName }: ScreenshotSwiperProps) => {
             />
           </SwiperSlide>
         ))}
-        <SwiperNavigation />
+        {screenshots.length > 1 && <SwiperNavigation />}
       </Swiper>
 
       <Modal

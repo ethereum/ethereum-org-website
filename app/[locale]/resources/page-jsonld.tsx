@@ -35,7 +35,7 @@ export default async function ResourcesPageJsonLD({
         "@id": url,
         name: t("page-resources-meta-title"),
         description: t("page-resources-meta-description"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],

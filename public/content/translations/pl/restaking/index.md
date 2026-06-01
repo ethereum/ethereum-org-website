@@ -4,11 +4,11 @@ metaTitle: "Czym jest restaking? | Korzyści i zastosowanie restakingu"
 description: "Użyj stakowanego ETH do zabezpieczenia innych zdecentralizowanych usług i zdobywaj dodatkowe nagrody."
 lang: pl
 template: use-cases
-emoji: ":recycle:"
 image: /images/use-cases/restaking.png
 alt: Wizualna reprezentacja restakingu na Ethereum.
 sidebarDepth: 2
-summaryPoint1: "Użyj stakowanego ETH do zabezpieczenia innych zdecentralizowanych usług i zdobywaj dodatkowe nagrody."
+summaryPoints:
+  - "Użyj stakowanego ETH do zabezpieczenia innych zdecentralizowanych usług i zdobywaj dodatkowe nagrody."
 buttons:
   - content: Czym jest restaking?
     toId: what-is-restaking
@@ -178,7 +178,7 @@ Podczas gdy AVS-y oferują różne stawki, tokeny płynnego restakingu (LRT), ta
 
 ## Dalsza lektura {#further-reading}
 
-1. [ethereum.org - przewodnik po stakowaniu ETH](https://ethereum.org/en/staking/)
+1. [ethereum.org - przewodnik po stakowaniu ETH](/staking/)
 2. [Ledger Academy – czym jest restaking Ethereum?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys – EigenLayer: wyjaśnienie zdecentralizowanego protokołu restakingu Ethereum](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin – Nie przeciążaj konsensusu Ethereum](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

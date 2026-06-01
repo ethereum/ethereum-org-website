@@ -5,9 +5,10 @@ lang: ru
 template: upgrade
 image: /images/upgrades/core.png
 alt:
-summaryPoint1: "С Beacon Chain в экосистеме Ethereum появилось доказательство доли владения."
-summaryPoint2: "Она была объединена с исходной сетью Ethereum, основанной на доказательстве выполнения работы, в сентябре 2022 года."
-summaryPoint3: "С Beacon Chain в системе появился протокол логики консенсуса и распространения блоков, который теперь защищает Ethereum."
+summaryPoints:
+  - "С Beacon Chain в экосистеме Ethereum появилось доказательство доли владения."
+  - "Она была объединена с исходной сетью Ethereum, основанной на доказательстве выполнения работы, в сентябре 2022 года."
+  - "С Beacon Chain в системе появился протокол логики консенсуса и распространения блоков, который теперь защищает Ethereum."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

@@ -431,7 +431,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **Tutorials**
 
 - [How to Fetch the Current Price of Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
-- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_ 
+- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_
+- [Oracles Challenge](https://speedrunethereum.com/challenge/oracles) - _Speedrun Ethereum_
 
 **Example projects**
 

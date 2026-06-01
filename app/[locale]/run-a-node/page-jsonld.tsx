@@ -28,16 +28,19 @@ export default async function RunANodePageJsonLD({
     url: contributor.html_url,
   }))
 
+  const webPageId = { "@id": url }
+  const articleId = { "@id": `${url}#run-a-node` }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       ...BASE_GRAPH_NODES,
       {
         "@type": "WebPage",
-        "@id": url,
+        ...webPageId,
         name: t("page-run-a-node-title"),
         description: t("page-run-a-node-hero-subtitle"),
-        url: url,
+        url,
         inLanguage: locale,
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
@@ -61,11 +64,12 @@ export default async function RunANodePageJsonLD({
         },
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         reviewedBy: REFERENCE.ETHEREUM_FOUNDATION,
-        mainEntity: { "@id": `${url}#run-a-node` },
+        mainEntity: articleId,
       },
       {
         "@type": "Article",
-        "@id": `${url}#run-a-node`,
+        ...articleId,
+        isPartOf: webPageId,
         headline: t("page-run-a-node-title"),
         description: t("page-run-a-node-hero-subtitle"),
         image: "https://ethereum.org/images/run-a-node/ethereum-inside.png",

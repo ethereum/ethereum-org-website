@@ -111,6 +111,7 @@ function EventCardHighlight({
               alt={`${event.title} banner`}
               fill
               className="object-cover"
+              sizes="(max-width: 768px) calc(100vw - 4rem), (max-width: 992px) 384px, 33vw"
               onError={() => setBannerError(true)}
             />
           ) : (

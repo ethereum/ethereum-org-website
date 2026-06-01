@@ -36,6 +36,7 @@ const AdoptionSwiper = ({
                   src={image}
                   alt={title}
                   className="mx-auto mb-4 h-36 object-contain"
+                  sizes="256px"
                 />
                 <h3 className="mb-4 text-2xl font-bold">{title}</h3>
                 <p className="mb-8">

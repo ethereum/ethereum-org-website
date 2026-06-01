@@ -1,4 +1,4 @@
-import { CheckCircle2, Info, TriangleAlert } from "lucide-react"
+import { Info } from "lucide-react"
 import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import {
@@ -10,25 +10,25 @@ import {
   AlertIcon,
   AlertTitle,
 } from "../alert"
-import { Center, VStack } from "../flex"
+import { VStack } from "../flex"
 
 const meta = {
-  title: "UI / Alert",
+  title: "Molecules / Action Feedback / Alerts",
   component: Alert,
   parameters: {
     docs: {
       description: {
         component:
-          "Inline alert/callout. Five `variant` colors (`info | error | success | warning | update`) and a `size: full` for full-width banners. Sub-components: `AlertContent`, `AlertTitle`, `AlertDescription`, `AlertIcon` (lucide or other SVG), `AlertEmoji`, `AlertCloseButton`.",
+          "Inline alert/callout. Six `variant` colors (`info | error | success | warning | update | banner`); `banner` renders edge-to-edge with no border-radius for top-of-page use. Sub-components: `AlertContent`, `AlertTitle`, `AlertDescription`, `AlertIcon` (lucide or other SVG), `AlertEmoji`, `AlertCloseButton`.",
       },
     },
     layout: "none",
   },
   decorators: [
     (Story) => (
-      <Center className="min-h-[100vh]">
+      <VStack className="min-h-screen">
         <Story />
-      </Center>
+      </VStack>
     ),
   ],
 } satisfies Meta<typeof Alert>
@@ -37,18 +37,18 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-const TITLE = "Alert or callout title"
-const DESC = "This is an alert to be used for important information."
+const DEMO_TITLE = "Alert or callout title"
+const DEMO_DESC = "This is an alert to be used for important information."
 
 const VARIANTS = ["info", "error", "success", "warning", "update"] as const
 
 export const Default: Story = {
   parameters: { chromatic: { disableSnapshot: true } },
-  render: () => (
-    <Alert className="w-[500px]">
+  render: (args) => (
+    <Alert className="w-lg" {...args}>
       <AlertContent>
-        <AlertTitle>{TITLE}</AlertTitle>
-        <AlertDescription>{DESC}</AlertDescription>
+        <AlertTitle>{DEMO_TITLE}</AlertTitle>
+        <AlertDescription>{DEMO_DESC}</AlertDescription>
       </AlertContent>
     </Alert>
   ),
@@ -62,76 +62,59 @@ export const Variants: Story = {
       },
     },
   },
-  render: () => (
-    <VStack className="w-[500px] items-stretch gap-4">
+  render: (args) => (
+    <div className="flex w-lg flex-col gap-4">
       {VARIANTS.map((variant) => (
-        <Alert key={variant} variant={variant}>
+        <Alert key={variant} variant={variant} className="w-full" {...args}>
           <AlertContent>
-            <AlertTitle>{TITLE}</AlertTitle>
-            <AlertDescription>This is a {variant} alert.</AlertDescription>
+            <AlertTitle>{DEMO_TITLE}</AlertTitle>
+            <AlertDescription>This is a {variant} alert</AlertDescription>
           </AlertContent>
         </Alert>
       ))}
-    </VStack>
+    </div>
   ),
 }
 
 export const WithCloseButton: Story = {
-  render: () => (
-    <VStack className="w-[500px] items-stretch gap-4">
+  render: (args) => (
+    <div className="flex flex-col gap-4">
       {VARIANTS.map((variant) => (
-        <Alert key={variant} variant={variant}>
+        <Alert key={variant} variant={variant} {...args}>
           <AlertContent>
-            <AlertTitle>{TITLE}</AlertTitle>
-            <AlertDescription>{DESC}</AlertDescription>
+            <AlertTitle>{DEMO_TITLE}</AlertTitle>
+            <AlertDescription>{DEMO_DESC}</AlertDescription>
           </AlertContent>
           <AlertCloseButton />
         </Alert>
       ))}
-    </VStack>
+    </div>
   ),
 }
 
 export const WithIcon: Story = {
   parameters: {
-    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
-          "`AlertIcon` wraps an SVG icon with `[&>svg]:size-6` to constrain size. Icon color inherits from the variant via `[&_svg]:text-*` class on the alert.",
+          "`AlertIcon` wraps an SVG icon with `[&>svg]:size-6` to constrain size. Icon color inherits from the variant via the alert's `**:[svg]:text-*` class.",
       },
     },
   },
-  render: () => (
-    <VStack className="w-[500px] items-stretch gap-4">
-      <Alert variant="info">
-        <AlertIcon>
-          <Info />
-        </AlertIcon>
-        <AlertContent>
-          <AlertTitle>Heads up</AlertTitle>
-          <AlertDescription>{DESC}</AlertDescription>
-        </AlertContent>
-      </Alert>
-      <Alert variant="success">
-        <AlertIcon>
-          <CheckCircle2 />
-        </AlertIcon>
-        <AlertContent>
-          <AlertTitle>All set</AlertTitle>
-          <AlertDescription>Action completed successfully.</AlertDescription>
-        </AlertContent>
-      </Alert>
-      <Alert variant="warning">
-        <AlertIcon>
-          <TriangleAlert />
-        </AlertIcon>
-        <AlertContent>
-          <AlertTitle>Be careful</AlertTitle>
-          <AlertDescription>Double-check before continuing.</AlertDescription>
-        </AlertContent>
-      </Alert>
-    </VStack>
+  render: (args) => (
+    <div className="flex flex-col gap-4">
+      {VARIANTS.map((variant) => (
+        <Alert key={variant} variant={variant} {...args}>
+          <AlertIcon>
+            <Info />
+          </AlertIcon>
+          <AlertContent>
+            <AlertTitle>{DEMO_TITLE}</AlertTitle>
+            <AlertDescription>{DEMO_DESC}</AlertDescription>
+          </AlertContent>
+        </Alert>
+      ))}
+    </div>
   ),
 }
 
@@ -145,9 +128,9 @@ export const WithEmoji: Story = {
       },
     },
   },
-  render: () => (
-    <VStack className="w-[500px] items-stretch gap-4">
-      <Alert variant="update">
+  render: (args) => (
+    <div className="flex w-lg flex-col gap-4">
+      <Alert variant="update" {...args}>
         <AlertEmoji text=":party_popper:" />
         <AlertContent>
           <AlertTitle>New feature</AlertTitle>
@@ -156,7 +139,7 @@ export const WithEmoji: Story = {
           </AlertDescription>
         </AlertContent>
       </Alert>
-      <Alert variant="info">
+      <Alert variant="info" {...args}>
         <AlertEmoji text=":information_source:" />
         <AlertContent>
           <AlertTitle>Did you know?</AlertTitle>
@@ -166,36 +149,16 @@ export const WithEmoji: Story = {
           </AlertDescription>
         </AlertContent>
       </Alert>
-    </VStack>
+    </div>
   ),
 }
 
-export const SizeFull: Story = {
-  parameters: {
-    chromatic: { disableSnapshot: true },
-    docs: {
-      description: {
-        story:
-          "`size: full` renders edge-to-edge with no border-radius for top-of-page banner use.",
-      },
-    },
-  },
-  render: () => (
-    <VStack className="w-full items-stretch gap-4">
-      {VARIANTS.map((variant) => (
-        <Alert key={variant} variant={variant} size="full">
-          <AlertIcon>
-            <Info />
-          </AlertIcon>
-          <AlertContent>
-            <AlertTitle>Banner: {variant}</AlertTitle>
-            <AlertDescription>
-              <p>{DESC}</p>
-            </AlertDescription>
-          </AlertContent>
-          <AlertCloseButton />
-        </Alert>
-      ))}
-    </VStack>
+export const Banner: Story = {
+  render: (args) => (
+    <div className="w-full max-w-(--breakpoint-2xl)">
+      <Alert variant="banner" {...args}>
+        {DEMO_DESC}
+      </Alert>
+    </div>
   ),
 }

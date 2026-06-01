@@ -1,0 +1,678 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-ethereum-vs-bitcoin.json",
+  "generatedAt": "2026-05-26T10:08:44.224Z",
+  "rootHash": "43dff5e88d37",
+  "tree": {
+    "contentHash": "4f2d2ac587ad",
+    "anchorHash": "9170d91bc003",
+    "children": {
+      "page-ethereum-vs-bitcoin-meta-title": {
+        "contentHash": "657f1edc426e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-meta-description": {
+        "contentHash": "118b607a0fdf",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-twitter-meta-description": {
+        "contentHash": "7ef10eb31623",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-title": {
+        "contentHash": "657f1edc426e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-description-1": {
+        "contentHash": "13ac1bf729d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-section-1": {
+        "contentHash": "3e1c49656ee8",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "cccc82620a07",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-section-2": {
+        "contentHash": "294bb6e60bbb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-bitcoin-section-title": {
+        "contentHash": "b3fa0c042c7f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-bitcoin-section-1": {
+        "contentHash": "44a92d9a3384",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "1661df25199d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-bitcoin-section-2": {
+        "contentHash": "b132d341bbda",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "50d303a27274",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-bitcoin-section-3": {
+        "contentHash": "94ff4a245416",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-bitcoin-section-4": {
+        "contentHash": "62cb5da639d7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ab0fb5fedfbd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-ethereum-section-title": {
+        "contentHash": "cd9abffc9499",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-ethereum-section-1": {
+        "contentHash": "0532917f208e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "bf9593443731",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-ethereum-section-2": {
+        "contentHash": "414867489c45",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "16082f62aa25",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-ethereum-section-3": {
+        "contentHash": "b61c306aa73b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "a83e0b372548",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-ethereum-section-4": {
+        "contentHash": "ee60b8b9e5ca",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-ethereum-section-5": {
+        "contentHash": "202336bbfc8f",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "386f6d5c5554",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-ethereum-section-6": {
+        "contentHash": "50ea23800a89",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-section-title": {
+        "contentHash": "21d1f16a5a43",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-section-1": {
+        "contentHash": "5553f9b325ce",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-area": {
+        "contentHash": "024dc204d7ba",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-bitcoin": {
+        "contentHash": "b4056df6691f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-ethereum": {
+        "contentHash": "a13bebeb57e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-1-1": {
+        "contentHash": "b4a9477321f3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-1-2": {
+        "contentHash": "50234b69d64a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-1-3": {
+        "contentHash": "b1d66c3e4d81",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-2-1": {
+        "contentHash": "c9239b20a918",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-2-2": {
+        "contentHash": "74e8477e28e0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-2-3": {
+        "contentHash": "79d08c5e20b1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-3-1": {
+        "contentHash": "bf428d3ff5c6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-3-2": {
+        "contentHash": "ce59ce1bb6fe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-3-3": {
+        "contentHash": "f5c1979e788f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-4-1": {
+        "contentHash": "e5f111e354f8",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-4-2": {
+        "contentHash": "735f891366e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-4-3": {
+        "contentHash": "c7a6db281618",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-5-1": {
+        "contentHash": "c372fee9b456",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-5-2": {
+        "contentHash": "47d87e9dd1f1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-5-3": {
+        "contentHash": "a5df4f722e0b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-6-1": {
+        "contentHash": "bb83eedc1575",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-6-2": {
+        "contentHash": "c4ebc6d4a583",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-6-3": {
+        "contentHash": "f793de205ead",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-7-1": {
+        "contentHash": "86f8a694159b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-7-2": {
+        "contentHash": "0933c20ff8ad",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-7-3": {
+        "contentHash": "949661f3ccc6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-8-1": {
+        "contentHash": "b166e69c07e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-8-2": {
+        "contentHash": "00417195b1e2",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-8-3": {
+        "contentHash": "ea10b797d501",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-9-1": {
+        "contentHash": "e02a5941602a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-9-2": {
+        "contentHash": "291d2a97565f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-differences-table-row-9-3": {
+        "contentHash": "19387ce49d2f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-purpose-title": {
+        "contentHash": "4c7a6025030c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-purpose-1": {
+        "contentHash": "9d1f4c5e3a56",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "478dfc7c8ee2",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-purpose-2": {
+        "contentHash": "4cf7e48bd492",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2da17228a4ba",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-purpose-3": {
+        "contentHash": "445b61f07d68",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-purpose-4": {
+        "contentHash": "a8afdc74afee",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-title": {
+        "contentHash": "ed01473b8d4a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-1": {
+        "contentHash": "82d94ecc50ed",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "f6883bf9e9e5",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-2": {
+        "contentHash": "df0096c24ad1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "d01ed1373f6d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-3": {
+        "contentHash": "3357905b5db0",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4d912e3d13d0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-4": {
+        "contentHash": "e61c415e43b6",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "6946920ab639",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-5": {
+        "contentHash": "29561f8dca75",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-monetary-policy-title": {
+        "contentHash": "51bb433eb1c5",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-monetary-policy-1": {
+        "contentHash": "8cb329e8841d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "c6ccef5c6586",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-monetary-policy-2": {
+        "contentHash": "36794537e987",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-monetary-policy-3": {
+        "contentHash": "7c84ffb4d0a5",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "55e79e01e643",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-monetary-policy-4": {
+        "contentHash": "4be6c4c73850",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-developer-ecosystem-title": {
+        "contentHash": "b166e69c07e3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-developer-ecosystem-1": {
+        "contentHash": "e023b914fae2",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "36bed192b9d7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-developer-ecosystem-2": {
+        "contentHash": "f5de5821f128",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-developer-ecosystem-3": {
+        "contentHash": "12b83d299153",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "2f65743cdc5e",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-developer-ecosystem-4": {
+        "contentHash": "d58f3997c373",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-security-and-consensus-title": {
+        "contentHash": "1975f45ab884",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-security-and-consensus-1": {
+        "contentHash": "4f85ef2828e6",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-security-and-consensus-2": {
+        "contentHash": "e6da116e278a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "5d9b2d9ffb7b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-security-and-consensus-3": {
+        "contentHash": "ddd7f945ef88",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "8c4a7ab3e997",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-security-and-consensus-4": {
+        "contentHash": "9f30b7a5b754",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-underlying-technology-title": {
+        "contentHash": "678cf2b85e84",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-underlying-technology-1": {
+        "contentHash": "044538e4b6a7",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "7aa690491ba3",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-underlying-technology-2": {
+        "contentHash": "27aee39447ef",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-underlying-technology-3": {
+        "contentHash": "b32535a3950e",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "26937e2203f1",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-underlying-technology-4": {
+        "contentHash": "4c5631c21626",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-underlying-technology-5": {
+        "contentHash": "bb0167b87113",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-decentralization-title": {
+        "contentHash": "e8492d3e2f90",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-decentralization-1": {
+        "contentHash": "fa6a562e79ac",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-decentralization-2": {
+        "contentHash": "64ef2c338ace",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "13e0011b8eaf",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-decentralization-3": {
+        "contentHash": "3ef4dc41475a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "68b7d9c14cae",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-decentralization-4": {
+        "contentHash": "a98a3bd7b5ce",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "ad44e8b9be22",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-environmental-impact-title": {
+        "contentHash": "59165c18e321",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-environmental-impact-1": {
+        "contentHash": "36937999436a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "99a82ec6a944",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-environmental-impact-2": {
+        "contentHash": "b6739641f0bd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-environmental-impact-3": {
+        "contentHash": "97a2bd7f7b7b",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "760751c4c36b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-environmental-impact-4": {
+        "contentHash": "a29e41756a1c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-environmental-impact-5": {
+        "contentHash": "1225456a7aa7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-future-outlook-title": {
+        "contentHash": "edb968df7c97",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-future-outlook-1": {
+        "contentHash": "650fd588340a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-future-outlook-2": {
+        "contentHash": "51b429cd1356",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-ethereum-vs-bitcoin-future-outlook-3": {
+        "contentHash": "f55c416e537c",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0b188648750d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-ethereum-vs-bitcoin-future-outlook-4": {
+        "contentHash": "7b2defd2be78",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-ethereum-vs-bitcoin-meta-title",
+      "page-ethereum-vs-bitcoin-meta-description",
+      "page-ethereum-vs-bitcoin-twitter-meta-description",
+      "page-ethereum-vs-bitcoin-title",
+      "page-ethereum-vs-bitcoin-description-1",
+      "page-ethereum-vs-bitcoin-section-1",
+      "page-ethereum-vs-bitcoin-section-2",
+      "page-ethereum-vs-bitcoin-bitcoin-section-title",
+      "page-ethereum-vs-bitcoin-bitcoin-section-1",
+      "page-ethereum-vs-bitcoin-bitcoin-section-2",
+      "page-ethereum-vs-bitcoin-bitcoin-section-3",
+      "page-ethereum-vs-bitcoin-bitcoin-section-4",
+      "page-ethereum-vs-bitcoin-ethereum-section-title",
+      "page-ethereum-vs-bitcoin-ethereum-section-1",
+      "page-ethereum-vs-bitcoin-ethereum-section-2",
+      "page-ethereum-vs-bitcoin-ethereum-section-3",
+      "page-ethereum-vs-bitcoin-ethereum-section-4",
+      "page-ethereum-vs-bitcoin-ethereum-section-5",
+      "page-ethereum-vs-bitcoin-ethereum-section-6",
+      "page-ethereum-vs-bitcoin-differences-section-title",
+      "page-ethereum-vs-bitcoin-differences-section-1",
+      "page-ethereum-vs-bitcoin-differences-table-area",
+      "page-ethereum-vs-bitcoin-differences-table-bitcoin",
+      "page-ethereum-vs-bitcoin-differences-table-ethereum",
+      "page-ethereum-vs-bitcoin-differences-table-row-1-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-1-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-1-3",
+      "page-ethereum-vs-bitcoin-differences-table-row-2-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-2-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-2-3",
+      "page-ethereum-vs-bitcoin-differences-table-row-3-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-3-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-3-3",
+      "page-ethereum-vs-bitcoin-differences-table-row-4-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-4-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-4-3",
+      "page-ethereum-vs-bitcoin-differences-table-row-5-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-5-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-5-3",
+      "page-ethereum-vs-bitcoin-differences-table-row-6-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-6-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-6-3",
+      "page-ethereum-vs-bitcoin-differences-table-row-7-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-7-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-7-3",
+      "page-ethereum-vs-bitcoin-differences-table-row-8-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-8-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-8-3",
+      "page-ethereum-vs-bitcoin-differences-table-row-9-1",
+      "page-ethereum-vs-bitcoin-differences-table-row-9-2",
+      "page-ethereum-vs-bitcoin-differences-table-row-9-3",
+      "page-ethereum-vs-bitcoin-purpose-title",
+      "page-ethereum-vs-bitcoin-purpose-1",
+      "page-ethereum-vs-bitcoin-purpose-2",
+      "page-ethereum-vs-bitcoin-purpose-3",
+      "page-ethereum-vs-bitcoin-purpose-4",
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-title",
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-1",
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-2",
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-3",
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-4",
+      "page-ethereum-vs-bitcoin-usecases-and-adoption-5",
+      "page-ethereum-vs-bitcoin-monetary-policy-title",
+      "page-ethereum-vs-bitcoin-monetary-policy-1",
+      "page-ethereum-vs-bitcoin-monetary-policy-2",
+      "page-ethereum-vs-bitcoin-monetary-policy-3",
+      "page-ethereum-vs-bitcoin-monetary-policy-4",
+      "page-ethereum-vs-bitcoin-developer-ecosystem-title",
+      "page-ethereum-vs-bitcoin-developer-ecosystem-1",
+      "page-ethereum-vs-bitcoin-developer-ecosystem-2",
+      "page-ethereum-vs-bitcoin-developer-ecosystem-3",
+      "page-ethereum-vs-bitcoin-developer-ecosystem-4",
+      "page-ethereum-vs-bitcoin-security-and-consensus-title",
+      "page-ethereum-vs-bitcoin-security-and-consensus-1",
+      "page-ethereum-vs-bitcoin-security-and-consensus-2",
+      "page-ethereum-vs-bitcoin-security-and-consensus-3",
+      "page-ethereum-vs-bitcoin-security-and-consensus-4",
+      "page-ethereum-vs-bitcoin-underlying-technology-title",
+      "page-ethereum-vs-bitcoin-underlying-technology-1",
+      "page-ethereum-vs-bitcoin-underlying-technology-2",
+      "page-ethereum-vs-bitcoin-underlying-technology-3",
+      "page-ethereum-vs-bitcoin-underlying-technology-4",
+      "page-ethereum-vs-bitcoin-underlying-technology-5",
+      "page-ethereum-vs-bitcoin-decentralization-title",
+      "page-ethereum-vs-bitcoin-decentralization-1",
+      "page-ethereum-vs-bitcoin-decentralization-2",
+      "page-ethereum-vs-bitcoin-decentralization-3",
+      "page-ethereum-vs-bitcoin-decentralization-4",
+      "page-ethereum-vs-bitcoin-environmental-impact-title",
+      "page-ethereum-vs-bitcoin-environmental-impact-1",
+      "page-ethereum-vs-bitcoin-environmental-impact-2",
+      "page-ethereum-vs-bitcoin-environmental-impact-3",
+      "page-ethereum-vs-bitcoin-environmental-impact-4",
+      "page-ethereum-vs-bitcoin-environmental-impact-5",
+      "page-ethereum-vs-bitcoin-future-outlook-title",
+      "page-ethereum-vs-bitcoin-future-outlook-1",
+      "page-ethereum-vs-bitcoin-future-outlook-2",
+      "page-ethereum-vs-bitcoin-future-outlook-3",
+      "page-ethereum-vs-bitcoin-future-outlook-4"
+    ]
+  },
+  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+}

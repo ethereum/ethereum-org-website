@@ -18,7 +18,6 @@ interface GetPageDataParams {
   baseComponents: MDXRemoteProps["components"]
   componentsMapping: Record<Layout, MDXRemoteProps["components"]>
   layout?: Layout
-  scope?: Record<string, unknown>
 }
 
 interface PageData {
@@ -37,7 +36,6 @@ export async function getPageData({
   baseComponents,
   componentsMapping,
   layout: layoutFromProps,
-  scope,
 }: GetPageDataParams): Promise<PageData> {
   const slugArray = slug.split("/")
 
@@ -59,7 +57,6 @@ export async function getPageData({
     slugArray,
     locale,
     components,
-    scope,
   })
 
   // Process TOC items

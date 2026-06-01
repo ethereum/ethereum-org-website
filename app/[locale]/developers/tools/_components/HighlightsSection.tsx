@@ -2,7 +2,12 @@ import { getTranslations } from "next-intl/server"
 
 import AppCard from "@/components/AppCard"
 import { Image } from "@/components/Image"
-import { CardBanner, CardParagraph } from "@/components/ui/card"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardParagraph,
+} from "@/components/ui/card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
@@ -45,7 +50,7 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
             >
               <LinkBox
                 className={cn(
-                  "group/appcard rounded-xl p-2",
+                  "group/appcard rounded-3xl p-2",
                   "hover:bg-background-highlight"
                 )}
               >
@@ -54,27 +59,29 @@ const HighlightsSection = async ({ tools }: { tools: DeveloperTool[] }) => {
                   scroll={false}
                   className="space-y-6 no-underline"
                 >
-                  <div className="space-y-4">
-                    <CardBanner background="accent-a" fit="contain">
-                      <Image
-                        src={tool.banner_url!}
-                        alt=""
-                        sizes="(max-width: 23rem) 100vw, 23rem"
-                        width={23 * 16}
-                        height={23 * 4}
-                      />
-                    </CardBanner>
-                    <CardParagraph variant="base" className="line-clamp-2">
-                      {stripMarkdown(
-                        getLocalizedDescription(
-                          toolDescriptions,
-                          "tool",
-                          tool.name,
-                          tool.description
-                        )
-                      )}
-                    </CardParagraph>
-                  </div>
+                  <Card size="xs" variant="ghost">
+                    <CardContent spacing="md">
+                      <CardBanner background="accent-a" fit="contain">
+                        <Image
+                          src={tool.banner_url!}
+                          alt=""
+                          sizes="(max-width: 23rem) 100vw, 23rem"
+                          width={23 * 16}
+                          height={23 * 4}
+                        />
+                      </CardBanner>
+                      <CardParagraph textColor="body" className="line-clamp-2">
+                        {stripMarkdown(
+                          getLocalizedDescription(
+                            toolDescriptions,
+                            "tool",
+                            tool.name,
+                            tool.description
+                          )
+                        )}
+                      </CardParagraph>
+                    </CardContent>
+                  </Card>
                   <AppCard
                     name={tool.name}
                     thumbnail={tool.thumbnail_url}

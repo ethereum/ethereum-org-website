@@ -3,13 +3,13 @@ title: Fedha za Kuzalisha Upya (ReFi)
 description: Muhtasari wa ReFi na matumizi yake ya sasa.
 lang: sw
 template: use-cases
-emoji: ":recycle:"
 sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
-summaryPoint1: Mfumo  wa uchumi mbadala uliojengwa kwa kanuni endelevu
-summaryPoint2: Jaribio la kutumia Ethereum kutatua migogoro ya uratibu wa kiwango cha kimataifa kama vile mabadiliko ya tabianchi.
-summaryPoint3: Zana ya kuongeza kwa kiasi kikubwa rasilimali za manufaa ya kiikolojia kama vile salio za kaboni zilizothibitishwa.
+summaryPoints:
+  - "Mfumo  wa uchumi mbadala uliojengwa kwa kanuni endelevu"
+  - "Jaribio la kutumia Ethereum kutatua migogoro ya uratibu wa kiwango cha kimataifa kama vile mabadiliko ya tabianchi."
+  - "Zana ya kuongeza kwa kiasi kikubwa rasilimali za manufaa ya kiikolojia kama vile salio za kaboni zilizothibitishwa."
 ---
 
 ## ReFi ni nini? {#what-is-refi}

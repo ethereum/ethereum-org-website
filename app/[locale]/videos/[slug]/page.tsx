@@ -94,11 +94,7 @@ const VideoLandingPage = async (props: {
               <AccordionTrigger className="py-4">
                 <h2 className="text-xl">{t("page-videos-view-transcript")}</h2>
               </AccordionTrigger>
-              {/* forceMount keeps transcript in DOM for SEO crawlers */}
-              <AccordionContent
-                className="text-base [[data-state=closed]_&]:invisible [[data-state=closed]_&]:h-0"
-                forceMount
-              >
+              <AccordionContent className="text-base [[data-state=closed]_&]:invisible [[data-state=closed]_&]:h-0">
                 {await renderSimpleMarkdown(transcriptMdx, {
                   h1: htmlElements.h2,
                 })}
