@@ -36,8 +36,7 @@ export const GITHUB_REPO_URL =
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
-export const DEFAULT_OG_IMAGE =
-  "/images/home/hero.png"
+export const DEFAULT_OG_IMAGE = "/images/home/hero.png"
 export const SITE_TITLE = "ethereum.org"
 
 // Config
