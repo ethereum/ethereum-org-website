@@ -36,34 +36,48 @@ const cardVariants = cva(
         sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
+      bordered: {
+        true: "border",
+        false: "",
+      },
     },
     defaultVariants: {
       variant: "base",
       size: "base",
+      bordered: false,
     },
   }
 )
 
-export type CardProps = React.HTMLAttributes<HTMLDivElement> &
+export type CardProps = React.HTMLAttributes<HTMLElement> &
   Pick<LinkProps, "href" | "customEventOptions"> &
   VariantProps<typeof cardVariants>
 
-const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, href, customEventOptions, variant, size, ...props }, ref) => {
-    const classNames = [cardVariants({ variant, size }), className]
+const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
+  (
+    { className, href, customEventOptions, variant, size, bordered, ...props },
+    ref
+  ) => {
+    const classes = cn(cardVariants({ variant, size, bordered }), className)
     if (href) {
       return (
         <BaseLink
+          ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
-          className={cn(...classNames, "group/link")}
+          className={cn(classes, "group/link")}
           customEventOptions={customEventOptions}
           hideArrow
-        >
-          <div ref={ref} className="flex flex-1 flex-col" {...props} />
-        </BaseLink>
+          {...props}
+        />
       )
     }
-    return <div ref={ref} className={cn(...classNames, "group")} {...props} />
+    return (
+      <div
+        ref={ref as React.Ref<HTMLDivElement>}
+        className={cn(classes, "group")}
+        {...props}
+      />
+    )
   }
 )
 Card.displayName = "Card"
@@ -75,6 +89,7 @@ const childSpacingVariants = cva("", {
       md: "[--content-space:--spacing(4)]",
       sm: "[--content-space:--spacing(2.5)]",
       xs: "[--content-space:--spacing(1)]",
+      none: "[--content-space:--spacing(0)]",
     },
   },
 })
