@@ -38,9 +38,8 @@ const MockParagraph = ({ href }: { href: string }) => (
 )
 
 export const InlineLinkStory: Story = {
-  parameters: { chromatic: { disableSnapshot: true } },
-  name: "InlineLink",
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -48,14 +47,14 @@ export const InlineLinkStory: Story = {
       },
     },
   },
+  name: "InlineLink",
   args: { href: "#" },
   render: (args) => <MockParagraph href={args.href!} />,
 }
 
 export const BaseLinkStory: Story = {
-  parameters: { chromatic: { disableSnapshot: true } },
-  name: "BaseLink",
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -63,6 +62,7 @@ export const BaseLinkStory: Story = {
       },
     },
   },
+  name: "BaseLink",
   render: () => (
     <VStack className="items-start gap-3">
       <BaseLink href="/learn">Internal nav link</BaseLink>
@@ -73,9 +73,8 @@ export const BaseLinkStory: Story = {
 }
 
 export const LinkWithArrowStory: Story = {
-  parameters: { chromatic: { disableSnapshot: true } },
-  name: "LinkWithArrow",
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -83,6 +82,7 @@ export const LinkWithArrowStory: Story = {
       },
     },
   },
+  name: "LinkWithArrow",
   render: () => (
     <VStack className="items-start gap-3">
       <LinkWithArrow href="/learn">Read more</LinkWithArrow>

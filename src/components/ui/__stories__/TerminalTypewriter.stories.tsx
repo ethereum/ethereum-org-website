@@ -56,7 +56,15 @@ export const Default: Story = {
 }
 
 export const StaticMessages: Story = {
-  parameters: { chromatic: { disableSnapshot: true } },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "Hard-coded English messages. Use when the typewriter content is fixed and not user-facing copy.",
+      },
+    },
+  },
   args: {
     messages: [
       "Build dapps with Solidity",
@@ -65,22 +73,11 @@ export const StaticMessages: Story = {
       "Inherit Ethereum's security",
     ],
   },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          "Hard-coded English messages. Use when the typewriter content is fixed and not user-facing copy.",
-      },
-    },
-  },
 }
 
 export const SingleMessage: Story = {
-  parameters: { chromatic: { disableSnapshot: true } },
-  args: {
-    messages: ["The only message keeps re-typing on loop."],
-  },
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -88,17 +85,14 @@ export const SingleMessage: Story = {
       },
     },
   },
+  args: {
+    messages: ["The only message keeps re-typing on loop."],
+  },
 }
 
 export const LongMessage: Story = {
-  parameters: { chromatic: { disableSnapshot: true } },
-  args: {
-    messages: [
-      "Smart contracts running on the Ethereum Virtual Machine settle to layer 1 with finality measured in slots.",
-      "Layer 2 rollups bundle thousands of transactions into a single proof posted to mainnet.",
-    ],
-  },
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -106,12 +100,17 @@ export const LongMessage: Story = {
       },
     },
   },
+  args: {
+    messages: [
+      "Smart contracts running on the Ethereum Virtual Machine settle to layer 1 with finality measured in slots.",
+      "Layer 2 rollups bundle thousands of transactions into a single proof posted to mainnet.",
+    ],
+  },
 }
 
 export const Empty: Story = {
-  parameters: { chromatic: { disableSnapshot: true } },
-  args: { messages: [] },
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
@@ -119,4 +118,5 @@ export const Empty: Story = {
       },
     },
   },
+  args: { messages: [] },
 }

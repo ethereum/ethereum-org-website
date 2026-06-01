@@ -46,19 +46,19 @@ export const Sizes: Story = {
 }
 
 export const WithLabel: Story = {
-  parameters: { chromatic: { disableSnapshot: true } },
-  args: {
-    ...SAMPLE,
-    href: "https://github.com/samajammin",
-    label: "samajammin",
-  },
   parameters: {
+    chromatic: { disableSnapshot: true },
     docs: {
       description: {
         story:
           "When `label` is provided, the avatar renders alongside the label inside a `LinkBox`. `direction: 'row'` (default) is horizontal; `'column'` stacks vertically.",
       },
     },
+  },
+  args: {
+    ...SAMPLE,
+    href: "https://github.com/samajammin",
+    label: "samajammin",
   },
   render: (args) => (
     <HStack className="items-start gap-12">
