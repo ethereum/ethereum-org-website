@@ -246,7 +246,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-1-1-title")}
                     </h4>
                     <p>
@@ -276,7 +276,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     </p>
                   </div>
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-1-2-title")}
                     </h4>
                     <p>
@@ -284,7 +284,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     </p>
                   </div>
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-1-3-title")}
                     </h4>
                     <p>
@@ -309,7 +309,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     </p>
                   </div>
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-1-4-title")}
                     </h4>
                     <p>
@@ -324,7 +324,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     </p>
                   </div>
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-1-5-title")}
                     </h4>
                     <p>
@@ -344,7 +344,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     </p>
                   </div>
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-1-6-title")}
                     </h4>
                     <p>
@@ -405,7 +405,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-2-1-title")}
                     </h4>
                     <p>
@@ -512,7 +512,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-2-2-title")}
                     </h4>
                     <p>
@@ -598,7 +598,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                     </ul>
                   </div>
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-2-3-title")}
                     </h4>
                     <p>
@@ -629,7 +629,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-3-1-title")}
                     </h4>
                     <p>
@@ -683,7 +683,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-3-2-title")}
                     </h4>
                     <p>
@@ -699,7 +699,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-3-3-title")}
                     </h4>
                     <p>
@@ -719,7 +719,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-3-4-title")}
                     </h4>
                     <p>
@@ -763,7 +763,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-3-5-title")}
                     </h4>
                     <p>
@@ -772,7 +772,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-3-6-title")}
                     </h4>
                     <p>
@@ -824,7 +824,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-4-1-title")}
                     </h4>
                     <p>
@@ -833,7 +833,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-4-2-title")}
                     </h4>
                     <p>
@@ -842,7 +842,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-4-3-title")}
                     </h4>
                     <p>
@@ -859,13 +859,13 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-4-4-title")}
                     </h4>
                     <p>
                       {t("page-trillion-dollar-security-section-4-4-paragraph")}
                     </p>
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-4-5-title")}
                     </h4>
                     <p>
@@ -888,7 +888,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-4-6-title")}
                     </h4>
                     <p>
@@ -1004,7 +1004,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-6-1-title")}
                     </h4>
                     <p>
@@ -1035,7 +1035,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-6-2-title")}
                     </h4>
                     <p>
@@ -1051,7 +1051,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-6-3-title")}
                     </h4>
                     <p>
@@ -1060,7 +1060,7 @@ const TdsPage = async (props: { params: Promise<PageParams> }) => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="mb-4 text-xl font-semibold">
+                    <h4 className="mb-4 text-xl">
                       {t("page-trillion-dollar-security-section-6-4-title")}
                     </h4>
                     <p>

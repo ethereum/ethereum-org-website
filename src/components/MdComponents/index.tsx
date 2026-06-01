@@ -87,7 +87,7 @@ export const Heading4 = ({
   ...rest
 }: HeadingProps) => (
   <h4
-    {...commonHeadingAttributes(cn("text-xl font-semibold", className), id)}
+    {...commonHeadingAttributes(cn("text-xl", className), id)}
     {...rest}
   >
     <IdAnchor id={id} />

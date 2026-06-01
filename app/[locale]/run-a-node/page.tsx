@@ -366,7 +366,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 style={{ width: "300px", height: "auto" }}
               />
               <div className="me-4">
-                <h2 className="mt-4 mb-5 text-2xl leading-[1.4] font-semibold md:text-[2rem]">
+                <h2 className="mt-4 mb-5 text-2xl leading-[1.4] md:text-[2rem]">
                   <Translation id="page-run-a-node:page-run-a-node-who-title" />
                 </h2>
                 <p className="body-medium mb-0">

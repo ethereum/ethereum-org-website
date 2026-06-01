@@ -90,7 +90,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     eventName: post.title,
                   }}
                 >
-                  <h3 className="text-2xl font-semibold text-body">
+                  <h3 className="text-2xl text-body">
                     {post.title}
                   </h3>
                   <p className="text-body-medium uppercase">
