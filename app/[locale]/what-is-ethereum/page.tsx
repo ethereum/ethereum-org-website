@@ -445,7 +445,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 sizes="320px"
                 className="mx-auto w-80 -scale-x-100"
               />
-              <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="w-full text-3xl/snug lg:text-4xl/tight">
                 {tocItems[4].title}
               </h2>
               <div className="space-y-6">
@@ -623,7 +623,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 sizes={`(max-width: 800px) 100vw, (max-width: ${screens.xl}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
               />
               <div>
-                <h2 className="mb-2 w-full text-3xl/snug font-bold lg:text-4xl/tight">
+                <h2 className="mb-2 w-full text-3xl/snug lg:text-4xl/tight">
                   {tocItems[5].title}
                 </h2>
                 <div className="space-y-6">
@@ -803,7 +803,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Section>
 
             <Section id={getId(tocItems[6].url)}>
-              <h2 className="mb-4 w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="mb-4 w-full text-3xl/snug lg:text-4xl/tight">
                 {tocItems[6].title}
               </h2>
 
@@ -879,7 +879,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               />
 
               <div className="space-y-4">
-                <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+                <h2 className="w-full text-3xl/snug lg:text-4xl/tight">
                   {tocItems[7].title}
                 </h2>
                 <div className="space-y-8">
@@ -1015,7 +1015,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Section>
 
             <Section id={getId(tocItems[8].url)} className="space-y-4">
-              <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="w-full text-3xl/snug lg:text-4xl/tight">
                 {tocItems[8].title}
               </h2>
               <div className="space-y-8">
@@ -1063,7 +1063,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Section>
 
             <Section id="further-reading" className="space-y-8">
-              <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="w-full text-3xl/snug lg:text-4xl/tight">
                 {t("page-what-is-ethereum-further-reading-title")}
               </h2>
               <UnorderedList className="ms-0 list-none">

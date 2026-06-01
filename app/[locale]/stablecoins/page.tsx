@@ -665,7 +665,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                       <Emoji text={feature.emoji} />
                     </div>
                     <div className="flex-1">
-                      <h3 className="mb-4 text-3xl font-bold">
+                      <h3 className="mb-4 text-3xl">
                         {feature.title}
                       </h3>
                       <div className="mb-6 text-lg">{feature.description}</div>

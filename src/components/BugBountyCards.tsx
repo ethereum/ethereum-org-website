@@ -110,7 +110,7 @@ const BugBountyCards = () => {
 
           <div className="row-span-5 grid grid-rows-subgrid gap-y-6 px-4 py-6">
             <div className="space-y-2">
-              <h3 className="text-2xl/6 font-bold">
+              <h3 className="text-2xl/6">
                 {t(card.h2TranslationId)}
               </h3>
               <p className="mb-6 text-xl opacity-60">

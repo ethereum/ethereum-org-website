@@ -24,7 +24,7 @@ import { useStablecoinAccordion } from "./useStablecoinAccordion"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const SectionTitle = (props: ChildOnlyProp) => (
-  <h4 className="mt-0 mb-8 text-start text-xl font-bold" {...props} />
+  <h4 className="mt-0 mb-8 text-start text-xl" {...props} />
 )
 
 const StepBoxContainer = (props: ChildOnlyProp) => (
@@ -57,7 +57,7 @@ const StepBox = (
 }
 
 const H4 = (props: ChildOnlyProp) => (
-  <h4 className="mb-4 text-xl font-bold" {...props} />
+  <h4 className="mb-4 text-xl" {...props} />
 )
 
 const StablecoinAccordion = () => {

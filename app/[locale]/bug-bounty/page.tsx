@@ -269,7 +269,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                <h1 className="mb-6 text-4xl font-bold lg:text-5xl">
+                <h1 className="mb-6 text-4xl lg:text-5xl">
                   {t("page-upgrades-bug-bounty-slogan")}&nbsp;
                   <Emoji text=":bug:" />
                 </h1>
