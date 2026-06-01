@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "ইথিরিয়ামের অ্যাপগুলো বিনামূল্যের, বৈশ্বিক এবং প্রাইভেট কোম্পানির সার্ভারের পরিবর্তে পাবলিক ব্লকচেইন ব্যবহার করে। এর মানে হলো আপনি প্রতিটি প্রজেক্টে একই একাউন্ট ব্যবহার করতে পারবেন এবং আপনার গোপনীয়তা বজায় রাখতে পারবেন।"
 ---
 

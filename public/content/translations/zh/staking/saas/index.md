@@ -4,7 +4,7 @@ description: 了解质押即服务
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "莱斯利犀牛在云中漂浮。"
 sidebarDepth: 2
 summaryPoints:

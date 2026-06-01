@@ -2,7 +2,7 @@
 title: "अंदाज बाजार"
 lang: mr
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "अचूक अंदाज निर्माण करण्यासाठी आर्थिक प्रोत्साहन मिळवा"

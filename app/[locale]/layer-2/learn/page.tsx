@@ -29,9 +29,9 @@ import heroImg from "@/public/images/layer-2/learn-hero.png"
 import OptimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
 import RollupImage from "@/public/images/layer-2/rollup-2.png"
 import ZKRollupImage from "@/public/images/layer-2/zk_rollup.png"
-import Callout1Image from "@/public/images/man-and-dog-playing.png"
-import DAOImage from "@/public/images/use-cases/dao-2.png"
-import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
+import Callout1Image from "@/public/images/man-playing-with-robot-shiba-dog.png"
+import WhatIsEthereumImage from "@/public/images/man-viewing-bazaar-through-three-windows.png"
+import DAOImage from "@/public/images/use-cases/dao-voting-network-figures.png"
 
 const SLUG = "/layer-2/learn"
 

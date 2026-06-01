@@ -4,7 +4,7 @@ description: Muhtasari wa sayansi iliyogatuliwa kwenye Ethereum
 lang: sw
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Mbadala wa kimataifa, wazi kwa mfumo wa sasa wa kisayansi."

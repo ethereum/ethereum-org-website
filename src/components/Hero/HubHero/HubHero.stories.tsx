@@ -5,7 +5,7 @@ import { langViewportModes } from "@/storybook/modes"
 
 import HubHeroComponent, { type HubHeroProps } from "./"
 
-import learnHubHeroImg from "@/public/images/heroes/learn-hub-hero.png"
+import learnHubHeroImg from "@/public/images/heroes/futuristic-community-center-floating-glyph-talking-foreground.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",

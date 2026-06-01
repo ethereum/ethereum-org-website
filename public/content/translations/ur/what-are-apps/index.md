@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "ایتھیریم پر ایپس مفت، عالمی ہیں اور نجی کمپنی کے سرورز کے بجائے عوامی بلاک چین کا استعمال کرتی ہیں۔ اس کا مطلب ہے کہ آپ ہر پروجیکٹ میں ایک ہی اکاؤنٹ استعمال کر سکتے ہیں اور اپنی پرائیویسی برقرار رکھ سکتے ہیں۔"
 ---
 

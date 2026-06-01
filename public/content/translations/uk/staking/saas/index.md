@@ -4,7 +4,7 @@ description: "Дізнайтеся про стейкінг як послугу"
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "Носоріг Леслі плаває в хмарах."
 sidebarDepth: 2
 summaryPoints:

@@ -2,7 +2,7 @@
 title: Ethereum yang lebih aman
 description: Ethereum adalah platform kontrak pintar paling aman dan terdesentralisasi yang pernah ada. Namun, masih ada peningkatan yang dapat dilakukan agar Ethereum tetap tangguh terhadap segala tingkat serangan jauh di masa depan.
 lang: id
-image: /images/roadmap/roadmap-security.png
+image: /images/roadmap/isometric-platform-shield-icon.png
 alt: "Peta jalan Ethereum"
 template: roadmap
 ---

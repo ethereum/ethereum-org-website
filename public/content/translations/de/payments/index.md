@@ -5,7 +5,7 @@ description: "Ein Überblick über Zahlungen auf Ethereum"
 lang: de
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "Ein Eth-Logo, das zusammen mit gebenden Händen angezeigt wird."
 summaryPoints:
   - "Eine Welt, in der sich Geld so frei bewegt wie Informationen"

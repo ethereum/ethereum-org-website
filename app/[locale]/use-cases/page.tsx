@@ -28,19 +28,19 @@ import UseCasesPageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
 import aiAgentsHero from "@/public/images/ai-agents/hero-image.png"
-import ethImg from "@/public/images/eth.png"
-import ethGifCat from "@/public/images/eth-gif-cat.png"
-import ethereumLearn from "@/public/images/ethereum-learn.png"
-import financeTransparent from "@/public/images/finance_transparent.png"
-import futureTransparent from "@/public/images/future_transparent.png"
-import heroImage from "@/public/images/heroes/guides-hub-hero.jpg"
-import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
-import manAndDog from "@/public/images/man-and-dog-playing.png"
-import robotHelpBar from "@/public/images/robot-help-bar.png"
+import futureTransparent from "@/public/images/crystal-projection-screen-keyboard-smart-contract.png"
+import infrastructureTransparent from "@/public/images/desktop-pc-projecting-glowing-glyph.png"
+import ethGifCat from "@/public/images/eth-glyph-kaleidoscope-cat-neon.png"
+import financeTransparent from "@/public/images/eth-glyph-lego-bricks-laurel-wreath.png"
+import ethImg from "@/public/images/four-people-doge-pink-3d-floating-eth-glyph.png"
+import heroImage from "@/public/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg"
+import manAndDog from "@/public/images/man-playing-with-robot-shiba-dog.png"
+import ethereumLearn from "@/public/images/meditating-figure-binary-glyph-circuit-tree.png"
+import robotHelpBar from "@/public/images/robot-and-people-at-help-counter.png"
 import stablecoinsHero from "@/public/images/stablecoins/hero.png"
-import daoImg from "@/public/images/use-cases/dao-2.png"
-import defi from "@/public/images/use-cases/defi.png"
-import predictionMarkets from "@/public/images/use-cases/prediction-markets.png"
+import predictionMarkets from "@/public/images/use-cases/crowd-at-futuristic-counter-robot-pets.png"
+import daoImg from "@/public/images/use-cases/dao-voting-network-figures.png"
+import defi from "@/public/images/use-cases/defi-neon-isometric-city-buildings.png"
 import restaking from "@/public/images/use-cases/restaking.png"
 
 const UseCaseCard = ({
@@ -318,6 +318,7 @@ export async function generateMetadata(props: {
     slug: ["use-cases"],
     title: t("meta-title"),
     description: t("meta-description"),
-    image: "/images/heroes/guides-hub-hero.jpg",
+    image:
+      "/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg",
   })
 }

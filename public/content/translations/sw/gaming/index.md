@@ -2,7 +2,7 @@
 title: Michezo kwenye Ethereum
 lang: sw
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Sheria na hali ya mchezo vinaweza kutekelezwa na kiambajengo cha Ethereum, si seva za studio, ikiwakilisha faida muhimu ya michezo ya ndani ya mnyororo"

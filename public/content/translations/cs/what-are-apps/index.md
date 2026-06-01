@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Aplikace na Ethereu jsou volně dostupné, globální a využívají veřejný blockchain namísto serverů soukromých společností. To znamená, že můžete používat stejný účet ve všech projektech a zároveň si zachovat své soukromí."
 ---
 

@@ -2,7 +2,7 @@
 title: "ایک زیادہ محفوظ Ethereum"
 description: "Ethereum موجودہ دور کا سب سے محفوظ اور غیر مرکزی سمارٹ-کنٹریکٹ پلیٹ فارم ہے۔ تاہم، ابھی بھی ایسی بہتری لائی جا سکتی ہے تاکہ Ethereum مستقبل میں کسی بھی سطح کے حملے کے خلاف لچکدار رہے۔"
 lang: ur
-image: /images/roadmap/roadmap-security.png
+image: /images/roadmap/isometric-platform-shield-icon.png
 alt: "Ethereum روڈ میپ"
 template: roadmap
 ---

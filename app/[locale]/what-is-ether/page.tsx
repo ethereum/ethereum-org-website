@@ -27,11 +27,11 @@ import GasTable from "./_components/GasTable"
 import WhatIsEtherPageJsonLD from "./page-jsonld"
 
 import { getEthPrice, getGasPriceData } from "@/lib/data"
-import heroImg from "@/public/images/eth.png"
+import infrastructureTransparent from "@/public/images/desktop-pc-projecting-glowing-glyph.png"
+import impactTransparent from "@/public/images/eth-glyph-hands-palms-up.png"
 import ethOrgLogo from "@/public/images/eth-org-logo.png"
-import developersHubHero from "@/public/images/heroes/developers-hub-hero.png"
-import impactTransparent from "@/public/images/impact_transparent.png"
-import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
+import heroImg from "@/public/images/four-people-doge-pink-3d-floating-eth-glyph.png"
+import developersHubHero from "@/public/images/heroes/futuristic-community-center-glass-roof.png"
 
 const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
   const params = await props.params

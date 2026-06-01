@@ -72,7 +72,8 @@ export default async function RunANodePageJsonLD({
         isPartOf: webPageId,
         headline: t("page-run-a-node-title"),
         description: t("page-run-a-node-hero-subtitle"),
-        image: "https://ethereum.org/images/run-a-node/ethereum-inside.png",
+        image:
+          "https://ethereum.org/images/run-a-node/node-box-ethereum-inside-with-diamond.png",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,

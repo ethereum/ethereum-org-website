@@ -4,7 +4,7 @@ metaTitle: What is DeFi? | Benefits and Use of Decentralised Finance
 description: An overview of DeFi on Ethereum
 lang: en
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: An Eth logo made of lego bricks.
 sidebarDepth: 2
 summaryPoints:

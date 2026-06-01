@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Приложения на Ethereum бесплатные, глобальные и используют публичный блокчейн вместо частных серверов компании. Это означает, что вы можете использовать один и тот же аккаунт в каждом проекте и сохранять свою конфиденциальность."
 ---
 

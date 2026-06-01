@@ -5,7 +5,7 @@ description: "이더리움 결제 개요"
 lang: ko
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "기부와 함께 이더리움 로고가 표시되고 있습니다."
 summaryPoints:
   - "돈이 정보만큼 자유롭게 움직이는 세상"

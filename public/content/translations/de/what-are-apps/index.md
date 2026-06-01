@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Apps auf Ethereum sind kostenlos, global und nutzen eine öffentliche Blockchain anstelle von privaten Unternehmensservern. Das bedeutet, dass Sie in jedem Projekt dasselbe Konto verwenden und Ihre Privatsphäre wahren können."
 ---
 

@@ -3,7 +3,7 @@ title: "Łańcuch śledzący"
 description: "Dowiedz się więcej o łańcuchu śledzącym — uaktualnieniu, które wprowadziło mechanizm proof-of-stake w sieci Ethereum."
 lang: pl
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "Łańcuch śledzący wprowadził mechanizm proof-of-stake do ekosystemu Ethereum."

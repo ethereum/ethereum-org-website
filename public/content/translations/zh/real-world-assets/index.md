@@ -4,7 +4,7 @@ metaTitle: "什么是 RWA？ ｜现实世界资产的优势和用途"
 description: "以太坊上的现实世界资产概述"
 lang: zh
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "男人和狗在玩耍。"
 sidebarDepth: 2
 summaryPoints:

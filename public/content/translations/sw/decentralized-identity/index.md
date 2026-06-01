@@ -4,7 +4,7 @@ description: Ni nini utambulisho uliogatuliwa, na kwa nini ina umuhimu?
 lang: sw
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "Mifumo ya kitambulisho cha jadi imekita utoaji, matengenezo, na udhibiti wa vitambulisho vyako katika kituo kimoja."
   - "Utambulisho uliogatuliwa huondoa utegemezi kwa washirika wengine wa kati."

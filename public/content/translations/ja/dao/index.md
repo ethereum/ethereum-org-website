@@ -5,7 +5,7 @@ description: "イーサリアムにおける分散型自律組織(DAO)の概要"
 lang: ja
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "提案に対する分散型自律組織(DAO)投票"
 summaryPoints:
   - "中央集権的な制御がない、メンバー所有のコミュニティ"

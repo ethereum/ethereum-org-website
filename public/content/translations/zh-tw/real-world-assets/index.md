@@ -4,7 +4,7 @@ metaTitle: "什麼是真實世界資產(Real-World Assets, RWAs)？ 真實世界
 description: "以太坊上真實世界資產概覽"
 lang: zh-tw
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "男人和狗正在一起玩耍。"
 sidebarDepth: 2
 summaryPoints:

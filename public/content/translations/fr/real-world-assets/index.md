@@ -4,7 +4,7 @@ metaTitle: "Que sont les RWA ? | Avantages et utilisation des actifs du monde r�
 description: "Un aperçu des actifs du monde réel sur Ethereum"
 lang: fr
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: Un homme et un chien en train de jouer.
 sidebarDepth: 2
 summaryPoints:

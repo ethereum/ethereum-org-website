@@ -80,7 +80,7 @@ export default async function EthereumHistoryFounderAndOwnershipPageJsonLD({
           "page-ethereum-history-founder-and-ownership-meta-description"
         ),
         image:
-          "https://ethereum.org/images/ethereum-history-founder-and-ownership/ethereum-history-founder-and-ownership-hero.png",
+          "https://ethereum.org/images/ethereum-history-founder-and-ownership/cloaked-figure-praying-beside-pink-glyph.png",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,

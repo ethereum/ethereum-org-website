@@ -2,7 +2,7 @@
 title: "ఇతీరియములో గేమింగ్"
 lang: te
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "గేమ్ నియమాలు మరియు స్థితి ఒక స్టూడియో సర్వర్‌ల ద్వారా కాకుండా, ఇతీరియము బ్లాక్‌చైన్ ద్వారా అమలు చేయబడతాయి, ఇది ఆన్‌చైన్ గేమ్‌ల యొక్క కీలక ప్రయోజనాన్ని సూచిస్తుంది"

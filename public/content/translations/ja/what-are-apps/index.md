@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "イーサリアム上のアプリは無料で、世界中どこからでも使え、民間企業のサーバーではなくパブリック・ブロックチェーンを利用しています。 つまり、すべてのプロジェクトで同じアカウントを使え、プライバシーを保つことができます。"
 ---
 

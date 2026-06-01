@@ -4,7 +4,7 @@ description: "Огляд децентралізованих соціальних
 lang: uk
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Платформи на основі блокчейну для соціальної взаємодії та створення й розповсюдження контенту."
   - "Децентралізовані соціальні мережі захищають конфіденційність користувачів і підвищують безпеку даних."

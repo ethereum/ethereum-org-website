@@ -4,7 +4,7 @@ description: "Ethereum वर विकेंद्रित सोशल ने
 lang: mr
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "सामाजिक संवाद आणि सामग्री निर्मिती आणि वितरणासाठी ब्लॉकचेन-आधारित प्लॅटफॉर्म."
   - "विकेंद्रित सोशल मीडिया नेटवर्क वापरकर्त्याच्या गोपनीयतेचे संरक्षण करतात आणि डेटा सुरक्षितता वाढवतात."

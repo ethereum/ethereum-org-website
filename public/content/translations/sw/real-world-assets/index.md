@@ -4,7 +4,7 @@ metaTitle: RWAs ni nini? Faida na matumizi ya Thamani halisiza Ulimwengu
 description: Muhtasari wa Mali Halisi kwenye Ethereum
 lang: sw
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: Mwanamume na mbwa wanaocheza.
 sidebarDepth: 2
 summaryPoints:

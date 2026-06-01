@@ -4,7 +4,7 @@ description: En savoir plus sur les pools de mise en jeu
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: "Leslie le rhinocéros nage dans la piscine."
 sidebarDepth: 2
 summaryPoints:

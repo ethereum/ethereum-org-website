@@ -4,7 +4,7 @@ description: "Přehled toho, jak začít uzamykat své ETH z domova"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "Nosorožec Leslie na svém vlastním počítačovém čipu."
 sidebarDepth: 2
 summaryPoints:

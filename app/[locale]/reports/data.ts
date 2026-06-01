@@ -11,7 +11,7 @@ import mckinseyCover from "@/public/images/reports/mckinsey-ripples-to-waves.web
 import openzeppelinCover from "@/public/images/reports/openzeppelin-risk-assessment.webp"
 import twinstakeCover from "@/public/images/reports/twinstake-pectra.webp"
 import whiteHouseCover from "@/public/images/reports/white-house-crypto.webp"
-import tdsCover from "@/public/images/trillion-dollar-security/report.png"
+import tdsCover from "@/public/images/trillion-dollar-security/trillion-dollar-security-report-cover.png"
 
 export type ReportCategory =
   | "ef-original"

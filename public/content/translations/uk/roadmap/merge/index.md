@@ -3,7 +3,7 @@ title: The Merge
 description: "Дізнайтеся про злиття — коли головна мережа Ethereum прийняла модель доказу частки."
 lang: uk
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "Головна мережа Ethereum використовує доказ частки володіння, але це не завжди було так."

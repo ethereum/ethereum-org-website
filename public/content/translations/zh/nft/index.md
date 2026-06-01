@@ -5,7 +5,7 @@ description: "以太坊上的非同质化代币简介"
 lang: zh
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "通过全息图显示的以太币徽标。"
 summaryPoints:
   - "一种用以太坊资产表示任何独特事物的方法。"

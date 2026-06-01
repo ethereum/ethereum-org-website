@@ -5,7 +5,7 @@ description: Przedstawienie NFT na Ethereum
 lang: pl
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "Logo Ethereum wyświetlane jako hologram."
 summaryPoints:
   - "Sposób reprezentowania czegoś wyjątkowego jako aktywu na blockchainie Ethereum."

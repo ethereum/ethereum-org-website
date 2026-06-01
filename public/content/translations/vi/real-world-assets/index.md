@@ -4,7 +4,7 @@ metaTitle: "RWAs là gì? | Lợi ích và công dụng của tài sản thực 
 description: "Tổng quan về tài sản thực (RWAs) trên Ethereum"
 lang: vi
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "Người đàn ông và con chó đang vui đùa."
 sidebarDepth: 2
 summaryPoints:

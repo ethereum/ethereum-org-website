@@ -3,7 +3,7 @@ title: "பீக்கான் செயின்"
 description: "பீக்கான் செயின் பற்றி அறிக - எத்தேரியத்தில் ப்ரூஃப்-ஆஃப்-ஸ்டேக்கை அறிமுகப்படுத்திய மேம்படுத்தல்."
 lang: ta
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt: 
 summaryPoints:
   - "பீக்கான் செயின் எத்தேரியம் சுற்றுச்சூழல் அமைப்பில் ப்ரூஃப்-ஆஃப்-ஸ்டேக்கை அறிமுகப்படுத்தியது."

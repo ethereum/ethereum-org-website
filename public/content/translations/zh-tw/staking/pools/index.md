@@ -4,7 +4,7 @@ description: "了解質押池"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: "萊斯利犀牛在池中游泳"
 sidebarDepth: 2
 summaryPoints:

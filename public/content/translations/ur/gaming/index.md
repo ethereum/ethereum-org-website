@@ -2,7 +2,7 @@
 title: "ایتھیریم پر گیمنگ"
 lang: ur
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "گیم کے اصول اور سٹیٹ کو کسی سٹوڈیو کے سرورز کے بجائے ایتھیریم بلاک چین کے ذریعے نافذ کیا جا سکتا ہے، جو آن چین گیمز کا ایک اہم فائدہ ہے۔"

@@ -20,12 +20,12 @@ import { screens } from "@/lib/utils/screen"
 
 import WhatIsTheEthereumNetworkPageJsonLD from "./page-jsonld"
 
-import developersHubImg from "@/public/images/heroes/developers-hub-hero.png"
-import layer2HubImg from "@/public/images/heroes/layer-2-hub-hero.png"
+import developersHubImg from "@/public/images/heroes/futuristic-community-center-glass-roof.png"
+import layer2HubImg from "@/public/images/heroes/futuristic-community-center-trees-central-column.png"
 import layer2LearnHeroImg from "@/public/images/layer-2/learn-hero.png"
-import manDogPlayingImg from "@/public/images/man-and-dog-playing.png"
-import computerImg from "@/public/images/what-is-ethereum-network/computer_alone.png"
-import heroImg from "@/public/images/what-is-ethereum-network/what-is-ethereum-network.png"
+import manDogPlayingImg from "@/public/images/man-playing-with-robot-shiba-dog.png"
+import computerImg from "@/public/images/what-is-ethereum-network/futuristic-computer-console-glyph-screen.png"
+import heroImg from "@/public/images/what-is-ethereum-network/person-on-pedestal-with-network-node-ring.png"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params

@@ -4,9 +4,9 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import ActionCard from "."
 
-import devBlocksImg from "@/public/images/developers-eth-blocks.png"
-import enterpriseImg from "@/public/images/enterprise.png"
-import communityHeroImg from "@/public/images/heroes/community-hero.png"
+import devBlocksImg from "@/public/images/hand-with-3d-eth-glyph-lego-blocks.png"
+import communityHeroImg from "@/public/images/heroes/forest-deck-campfire-gathering-people-robot.png"
+import enterpriseImg from "@/public/images/three-people-one-standing-carpet-building-blocks.png"
 
 const meta = {
   title: "Components / Cards / ActionCard",

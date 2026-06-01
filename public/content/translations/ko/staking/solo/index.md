@@ -4,7 +4,7 @@ description: "ETH 홈 스테이킹을 시작하는 방법에 대한 개요"
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "컴퓨터 칩 위의 코뿔쏘 레슬리"
 sidebarDepth: 2
 summaryPoints:

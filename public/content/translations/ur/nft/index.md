@@ -5,7 +5,7 @@ description: "ایتھیریم پر NFTs کا جائزہ"
 lang: ur
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "ہولوگرام کے ذریعے دکھایا جانے والا Eth لوگو۔"
 summaryPoints:
   - "کسی بھی منفرد چیز کو ایتھیریم پر مبنی اثاثے کے طور پر پیش کرنے کا ایک طریقہ۔"

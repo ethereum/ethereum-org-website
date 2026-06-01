@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image"
 
-import DevelopersHubHeroImage from "@/public/images/heroes/developers-hub-hero.png"
-import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
-import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.png"
-import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
-import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
-import GlamsterdamImage from "@/public/images/roadmap/roadmap-glamsterdam.png"
-import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
+import DevelopersHubHeroImage from "@/public/images/heroes/futuristic-community-center-glass-roof.png"
+import Layer2HubHeroImage from "@/public/images/heroes/futuristic-community-center-trees-central-column.png"
+import GuidesHubHeroImage from "@/public/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg"
+import QuizzesHubHeroImage from "@/public/images/heroes/sky-jungle-walkways-jumping.png"
+import GlamsterdamImage from "@/public/images/roadmap/beach-fireworks-city-skyline-night-crowd.png"
+import FusakaImage from "@/public/images/roadmap/osaka-neon-night-street-fusaka.png"
+import PectraImage from "@/public/images/roadmap/prague-old-town-pectra.png"
 
 type TranslationFunction = (key: string) => string
 

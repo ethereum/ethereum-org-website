@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "以太坊的应用是免费的，全球化的，并且使用的是公共区块链而不是私人公司服务器。 这意味着你可以每一个项目使用相同的账户并保持你的私密性。"
 ---
 

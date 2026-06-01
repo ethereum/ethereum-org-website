@@ -3,7 +3,7 @@ title: "Слияние"
 description: "Узнайте о слиянии — переходе основной сети Ethereum на доказательство владения."
 lang: ru
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "Основная сеть Ethereum использует доказательство доли владения, но так было не всегда."

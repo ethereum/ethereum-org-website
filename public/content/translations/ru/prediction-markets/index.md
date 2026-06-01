@@ -2,7 +2,7 @@
 title: "Рынки предсказаний"
 lang: ru
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "Получайте финансовые стимулы за точные прогнозы"

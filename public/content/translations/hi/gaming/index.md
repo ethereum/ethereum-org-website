@@ -2,7 +2,7 @@
 title: "एथेरियम पर गेमिंग"
 lang: hi
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "गेम के नियमों और स्थिति को एथेरियम ब्लॉकचेन द्वारा लागू किया जा सकता है, न कि स्टूडियो के सर्वर द्वारा, जो ऑनचेन गेम का एक प्रमुख लाभ दर्शाता है"

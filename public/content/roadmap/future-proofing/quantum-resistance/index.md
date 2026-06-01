@@ -2,7 +2,7 @@
 title: Post-quantum cryptography on Ethereum
 description: How Ethereum is preparing for the post-quantum era, what is vulnerable, and what is being built to protect it.
 lang: en
-image: /images/roadmap/roadmap-future.png
+image: /images/roadmap/isometric-platform-clock-icon.png
 alt: "Ethereum roadmap"
 template: roadmap
 summaryPoints:

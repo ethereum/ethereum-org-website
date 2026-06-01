@@ -2,7 +2,7 @@
 title: "Ігри в мережі Ethereum"
 lang: uk
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Правила гри та її стан можуть забезпечуватися блокчейном Ethereum, а не серверами студії, що є ключовою перевагою ончейн-ігор"

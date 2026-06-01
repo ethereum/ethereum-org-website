@@ -5,7 +5,7 @@ import { langViewportModes } from "@/storybook/modes"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
 
-import heroImg from "@/public/images/upgrades/merge.png"
+import heroImg from "@/public/images/upgrades/beacon-spaceship-fully-merged-rings.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",

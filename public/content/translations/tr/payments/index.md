@@ -5,7 +5,7 @@ description: "Ethereum'daki ödemelere genel bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "Yardım eden ellerle birlikte görüntülenen bir Eth logosu."
 summaryPoints:
   - "Paranın bilgi kadar özgürce hareket ettiği bir dünya"

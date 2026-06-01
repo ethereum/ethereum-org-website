@@ -2,7 +2,7 @@
 title: "توسيع نطاق الإيثريوم"
 description: "تقوم عمليات تجميع المعاملات معًا خارج السلسلة، مما يقلل التكاليف على المستخدم. تجميع المعاملات المجمعة خارج العقد، مما يحدد التكلفة بالنسبة للمستخدم. يعمل Proto-Danksharding على إصلاح هذا الأمر."
 lang: ar
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "خارطة طريق إيثريوم"
 template: roadmap
 ---

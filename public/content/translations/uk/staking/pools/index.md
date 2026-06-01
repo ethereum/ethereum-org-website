@@ -4,7 +4,7 @@ description: "Дізнайтеся про пули для стейкінгу"
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: "Носоріг Леслі плаває в басейні."
 sidebarDepth: 2
 summaryPoints:

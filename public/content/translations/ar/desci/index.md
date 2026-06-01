@@ -4,7 +4,7 @@ description: "نظرة عامة على العلوم اللامركزية على 
 lang: ar
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "نظام عالمي ومفتوح بديل للنظام العلمي الحالي."

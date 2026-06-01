@@ -3,7 +3,7 @@ title: "合并"
 description: "了解合并 - 以太坊主网何时采用权益证明机制。"
 lang: zh
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "以太坊主网采用权益证明机制，但情况并非一直如此。"

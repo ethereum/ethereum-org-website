@@ -4,7 +4,7 @@ description: Pelajari tentang mengunci sebagai layanan (staking as a service)
 lang: id
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: Badak Leslie mengambang di awan.
 sidebarDepth: 2
 summaryPoints:

@@ -4,7 +4,7 @@ description: "ایتھیریم پر ڈی سینٹرلائزڈ سائنس کا ج
 lang: ur
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "موجودہ سائنسی نظام کا ایک عالمی، کھلا متبادل۔"

@@ -3,7 +3,7 @@ title: "La Fusión"
 description: "Conozca más sobre La Fusión y sobre cuándo la red principal de Ethereum implementará la prueba de participación."
 lang: es
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "La Red Principal de Ethereum usa prueba de participación, pero este no fue siempre el caso."

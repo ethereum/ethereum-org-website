@@ -5,7 +5,7 @@ description: "이더리움의 DAO 개요"
 lang: ko
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "제안에 투표하는 DAO의 표현."
 summaryPoints:
   - "중앙화된 리더십이 없는 회원 소유 커뮤니티."

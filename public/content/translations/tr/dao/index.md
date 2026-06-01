@@ -5,7 +5,7 @@ description: "Ethereum'daki DAO'lara genel bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "Bir teklif üzerinde oy kullanan bir DAO'nun gösterimi."
 summaryPoints:
   - "Merkeziyetsiz liderliğe sahip olmayan, üyelere ait topluluklar."

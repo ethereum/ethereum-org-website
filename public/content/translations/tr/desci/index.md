@@ -4,7 +4,7 @@ description: "Ethereum üzerindeki merkeziyetsiz bilime genel bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Mevcut bilimsel sisteme küresel, açık bir alternatif."

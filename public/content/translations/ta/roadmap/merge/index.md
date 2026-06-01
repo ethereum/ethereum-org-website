@@ -3,7 +3,7 @@ title: "தி மெர்ஜ் (The Merge)"
 description: "தி மெர்ஜ் பற்றி அறிக - மெயின்நெட் எத்தேரியம் ப்ரூஃப்-ஆஃப்-ஸ்டேக்கிற்கு மாறிய போது."
 lang: ta
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt: 
 summaryPoints:
   - "எத்தேரியம் மெயின்நெட் ப்ரூஃப்-ஆஃப்-ஸ்டேக்கைப் பயன்படுத்துகிறது, ஆனால் இது எப்போதும் இப்படி இருந்ததில்லை."

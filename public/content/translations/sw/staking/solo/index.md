@@ -4,7 +4,7 @@ description: Muhtasari wa jinsi ya kuanza kuweka dhamana ya ETH yako ukiwa nyumb
 lang: sw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: Kifaru Leslie kwenye chipu yake ya kompyuta.
 sidebarDepth: 2
 summaryPoints:

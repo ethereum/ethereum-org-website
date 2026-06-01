@@ -3,7 +3,7 @@ title: "प्रमुख साखळी"
 description: "बीकन चेनबद्दल जाणून घ्या - ते अपग्रेड ज्याने प्रूफ-ऑफ-स्टेक इथेरियम सादर केले."
 lang: mr
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "बीकन चेनने इथेरियम इकोसिस्टममध्ये प्रूफ-ऑफ-स्टेक सादर केले."

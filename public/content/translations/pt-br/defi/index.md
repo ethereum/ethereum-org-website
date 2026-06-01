@@ -4,7 +4,7 @@ metaTitle: "O que é DeFi? | O benefício das Finanças descentralizadas"
 description: "Uma visão geral do DeFi na Ethereum"
 lang: pt-br
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: Um logotipo Eth feito de blocos de lego.
 sidebarDepth: 2
 summaryPoints:

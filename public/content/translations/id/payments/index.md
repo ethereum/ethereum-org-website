@@ -5,7 +5,7 @@ description: Gambaran umum tentang pembayaran di Ethereum
 lang: id
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: Logo Eth ditampilkan bersama dengan tangan yang memberi.
 summaryPoints:
   - "Dunia di mana uang bergerak sebebas informasi"

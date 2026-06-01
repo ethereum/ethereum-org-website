@@ -4,7 +4,7 @@ description: "Огляд ReFi і його поточних варіантів в
 lang: uk
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Альтернативна економічна система, побудована на регенеративних принципах"

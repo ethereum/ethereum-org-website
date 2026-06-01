@@ -2,7 +2,7 @@
 title: "প্রেডিকশন মার্কেট"
 lang: bn
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "সঠিক পূর্বাভাস তৈরি করে আর্থিক প্রণোদনা পান"

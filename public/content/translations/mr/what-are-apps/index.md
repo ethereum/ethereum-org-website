@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "इथेरियमवरील अ‍ॅप्स विनामूल्य, जागतिक आहेत आणि खाजगी कंपनीच्या सर्व्हरऐवजी सार्वजनिक ब्लॉकचेन वापरतात. याचा अर्थ असा की तुम्ही प्रत्येक प्रोजेक्टमध्ये तेच खाते वापरू शकता आणि तुमची गोपनीयता जपू शकता."
 ---
 

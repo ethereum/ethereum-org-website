@@ -41,14 +41,14 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import RunANodePageJsonLD from "./page-jsonld"
 
-import community from "@/public/images/enterprise-eth.png"
-import hackathon from "@/public/images/hackathon_transparent.png"
-import impact from "@/public/images/impact_transparent.png"
+import impact from "@/public/images/eth-glyph-hands-palms-up.png"
+import hackathon from "@/public/images/person-repairing-vintage-computer-screwdriver.png"
 import Dappnode from "@/public/images/run-a-node/dappnode.svg"
 import Dapptap from "@/public/images/run-a-node/dapptap.svg"
-import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
+import ethereumInside from "@/public/images/run-a-node/node-box-ethereum-inside-with-diamond.png"
 import Terminal from "@/public/images/run-a-node/terminal.svg"
-import leslie from "@/public/images/upgrades/upgrade_rhino.png"
+import community from "@/public/images/three-people-sitting-carpet-building-blocks.png"
+import leslie from "@/public/images/upgrades/leslie-rhino-mascot-running.png"
 
 const GappedPage = (props: ChildOnlyProp) => (
   <MainArticle
@@ -802,7 +802,7 @@ export async function generateMetadata(props: {
     slug: ["run-a-node"],
     title: t("page-run-a-node-meta-title"),
     description: t("page-run-a-node-meta-description"),
-    image: "/images/run-a-node/ethereum-inside.png",
+    image: "/images/run-a-node/node-box-ethereum-inside-with-diamond.png",
   })
 }
 

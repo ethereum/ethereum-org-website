@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "ఇతీరియములోని యాప్‌లు ఉచితం, ప్రపంచవ్యాప్తం మరియు ప్రైవేట్ కంపెనీ సర్వర్‌లకు బదులుగా పబ్లిక్ బ్లాక్ చైనును ఉపయోగిస్తాయి. అంటే మీరు ప్రతి ప్రాజెక్ట్‌లోనూ ఒకే ఖాతాను ఉపయోగించవచ్చు మరియు మీ గోప్యతను కాపాడుకోవచ్చు."
 ---
 

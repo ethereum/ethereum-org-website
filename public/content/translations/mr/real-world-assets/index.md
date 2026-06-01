@@ -4,7 +4,7 @@ metaTitle: "RWAs म्हणजे काय? | वास्तविक-जा
 description: "Ethereum वरील वास्तविक-जागतिक मालमत्तेचे विहंगावलोकन"
 lang: mr
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "एक माणूस आणि कुत्रा खेळत आहेत."
 sidebarDepth: 2
 summaryPoints:

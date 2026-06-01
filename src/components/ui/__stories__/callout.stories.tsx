@@ -12,9 +12,9 @@ import Callout, {
   CalloutTitle,
 } from "@/components/ui/callout"
 
-import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
-import manAndDog from "@/public/images/man-and-dog-playing.png"
-import walking from "@/public/images/walking.png"
+import developersEthBlocks from "@/public/images/hand-with-3d-eth-glyph-lego-blocks.png"
+import manAndDog from "@/public/images/man-playing-with-robot-shiba-dog.png"
+import walking from "@/public/images/two-people-walking-and-talking.png"
 
 const meta = {
   title: "UI / Primitives / Callout",

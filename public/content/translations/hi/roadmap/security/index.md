@@ -2,7 +2,7 @@
 title: "एक अधिक सुरक्षित एथेरियम"
 description: "एथेरियम वर्तमान में सबसे सुरक्षित और विकेन्द्रीकृत स्मार्ट-कॉन्ट्रैक्ट प्लेटफॉर्म है। हालाँकि, अभी भी सुधार किए जा सकते हैं ताकि एथेरियम भविष्य में किसी भी स्तर के हमले के लिए मजबूत बना रहे।"
 lang: hi
-image: /images/roadmap/roadmap-security.png
+image: /images/roadmap/isometric-platform-shield-icon.png
 alt: "एथेरियम दिशानिर्देश"
 template: roadmap
 ---

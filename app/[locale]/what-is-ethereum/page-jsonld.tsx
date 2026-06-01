@@ -78,7 +78,8 @@ export default async function WhatIsEthereumPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-what-is-ethereum-title"),
         description: t("page-what-is-ethereum-meta-description"),
-        image: "https://ethereum.org/images/what-is-ethereum.png",
+        image:
+          "https://ethereum.org/images/man-viewing-bazaar-through-three-windows.png",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,

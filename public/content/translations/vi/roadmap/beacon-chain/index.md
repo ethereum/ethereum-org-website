@@ -3,7 +3,7 @@ title: "Chuỗi Hải Đăng"
 description: "Tìm hiểu thêm về chuỗi Beacon - Nâng cấp đã giới thiệu bằng chứng cổ phần trên Ethereum."
 lang: vi
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "Chuỗi Beacon đã giới thiệu bằng chứng cổ phần trên hệ sinh thái Ethereum."

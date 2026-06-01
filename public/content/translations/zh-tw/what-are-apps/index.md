@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "以太坊上的應用程式為免費、全球化的，使用公鏈而非私人公司服務器。 這代表您可以在每個專案使用相同的帳號，並維持您的隱私性。"
 ---
 

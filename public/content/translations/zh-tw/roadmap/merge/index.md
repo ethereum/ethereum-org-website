@@ -3,7 +3,7 @@ title: "合併"
 description: "瞭解「合併 - 當以太坊主網採用權益證明時」的相關資訊。"
 lang: zh-tw
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "以太坊主網使用權益證明，但以前並非總是如此。"

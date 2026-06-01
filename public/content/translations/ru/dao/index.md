@@ -5,7 +5,7 @@ description: "Обзор DAO на Ethereum"
 lang: ru
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "Представление голосований DAO по предложению."
 summaryPoints:
   - "Сообщества, принадлежащие его членам, без централизованного аппарата управления."

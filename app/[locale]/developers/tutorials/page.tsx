@@ -22,7 +22,7 @@ import TutorialSubmitModal from "./_components/modal"
 import TutorialsList from "./_components/TutorialsLazy"
 import TutorialsPageJsonLD from "./page-jsonld"
 
-import heroImg from "@/public/images/doge-computer.png"
+import heroImg from "@/public/images/doge-shiba-robot-suit-at-computer.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params

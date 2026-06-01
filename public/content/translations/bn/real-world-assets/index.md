@@ -4,7 +4,7 @@ metaTitle: "RWAs কী? | রিয়েল-ওয়ার্ল্ড অ্
 description: "ইথেরিয়ামে রিয়েল-ওয়ার্ল্ড অ্যাসেটসের একটি ওভারভিউ"
 lang: bn
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "মানুষ এবং কুকুর খেলছে।"
 sidebarDepth: 2
 summaryPoints:

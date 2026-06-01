@@ -23,7 +23,7 @@ import { COLLECTIBLES_BASE_URL } from "./constants"
 import CollectiblesJsonLD from "./page-jsonld"
 import type { Badge, Stats } from "./types"
 
-import communityHeroImg from "@/public/images/heroes/community-hero.png"
+import communityHeroImg from "@/public/images/heroes/forest-deck-campfire-gathering-people-robot.png"
 
 // API endpoints
 const BADGES_API = `${COLLECTIBLES_BASE_URL}/api/badges`
@@ -165,6 +165,6 @@ export async function generateMetadata(props: {
     slug: ["collectibles"],
     title: t("page-collectibles-hero-header"),
     description: t("page-collectibles-hero-description"),
-    image: "/images/heroes/community-hero.png",
+    image: "/images/heroes/forest-deck-campfire-gathering-people-robot.png",
   })
 }

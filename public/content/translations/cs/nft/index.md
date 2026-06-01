@@ -5,7 +5,7 @@ description: "Přehled NFT na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "Logo Eth zobrazené prostřednictvím hologramu."
 summaryPoints:
   - "Způsob, jak reprezentovat cokoliv unikátního jako majetek založený na Ethereu."

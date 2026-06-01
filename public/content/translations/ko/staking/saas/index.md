@@ -4,7 +4,7 @@ description: "스테이킹으로서의 서비스 학습하기"
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "구름 위에 떠 있는 코뿔소 레슬리"
 sidebarDepth: 2
 summaryPoints:

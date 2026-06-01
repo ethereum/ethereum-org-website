@@ -4,7 +4,7 @@ description: "Co je decentralizovaná identita a proč na ní záleží?"
 lang: cs
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "Tradiční systémy identity centralizovaly vydávání, údržbu a kontrolu vašich identifikátorů."
   - "Decentralizovaná identita odstraňuje závislost na centralizovaných třetích stranách."

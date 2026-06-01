@@ -3,7 +3,7 @@ title: Beacon Chain
 description: "Узнайте о сети Beacon — обновлении, которое ввело Ethereum с доказательством владения."
 lang: ru
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "С Beacon Chain в экосистеме Ethereum появилось доказательство доли владения."

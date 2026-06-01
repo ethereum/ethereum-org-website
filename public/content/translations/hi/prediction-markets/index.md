@@ -2,7 +2,7 @@
 title: "भविष्यवाणी बाज़ार"
 lang: hi
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "सटीक पूर्वानुमान उत्पन्न करने के लिए वित्तीय प्रोत्साहन प्राप्त करें"

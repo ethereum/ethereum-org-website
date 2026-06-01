@@ -3,7 +3,7 @@ title: Beacon chain
 description: Jifunze juu ya Mnyororo Kioleza - Kisasisho kilichoanzishwa na Ethereum ya uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "Mnyororo Kioleza ulianzisha uthibitisho-wa-hisa kwa mfumo wa ikolojia wa Ethereum."

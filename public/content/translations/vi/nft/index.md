@@ -5,7 +5,7 @@ description: "Tổng quan về NFT trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "Logo của Eth hiển thị qua ảnh ba chiều."
 summaryPoints:
   - "Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản dựa trên Ethereum."

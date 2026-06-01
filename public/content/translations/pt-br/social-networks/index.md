@@ -4,7 +4,7 @@ description: "Uma visão geral das redes sociais descentralizadas no Ethereum"
 lang: pt-br
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Plataformas baseadas em blockchain para interação social, criação e distribuição de conteúdo."
   - "As redes de mídia social descentralizadas protegem a privacidade do usuário e aumentam a segurança dos dados."

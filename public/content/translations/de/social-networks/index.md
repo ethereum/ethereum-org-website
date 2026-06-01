@@ -4,7 +4,7 @@ description: "Ein Überblick über dezentralisierte soziale Netzwerke auf Ethere
 lang: de
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Blockchain-basierte Plattformen für soziale Interaktion sowie die Erstellung und Verbreitung von Inhalten."
   - "Dezentralisierte soziale Netzwerke schützen die Privatsphäre der Nutzer und verbessern die Datensicherheit."

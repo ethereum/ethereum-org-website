@@ -18,11 +18,28 @@ import { routing } from "@/i18n/routing"
  * List of default og images for different sections
  */
 const imageForSlug = [
-  { section: "developers", image: "/images/heroes/developers-hub-hero.png" },
-  { section: "roadmap", image: "/images/heroes/roadmap-hub-hero.jpg" },
-  { section: "guides", image: "/images/heroes/guides-hub-hero.jpg" },
-  { section: "community", image: "/images/heroes/community-hero.png" },
-  { section: "staking", image: "/images/upgrades/upgrade_rhino.png" },
+  {
+    section: "developers",
+    image: "/images/heroes/futuristic-community-center-glass-roof.png",
+  },
+  {
+    section: "roadmap",
+    image:
+      "/images/heroes/futuristic-night-cityscape-beacon-overlook-moon.jpg",
+  },
+  {
+    section: "guides",
+    image:
+      "/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg",
+  },
+  {
+    section: "community",
+    image: "/images/heroes/forest-deck-campfire-gathering-people-robot.png",
+  },
+  {
+    section: "staking",
+    image: "/images/upgrades/leslie-rhino-mascot-running.png",
+  },
   { section: "10years", image: "/images/10-year-anniversary/10-year-og.png" },
 ] as const
 

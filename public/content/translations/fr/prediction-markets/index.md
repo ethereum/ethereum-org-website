@@ -2,7 +2,7 @@
 title: "Marchés prédictifs"
 lang: fr
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "Recevez des incitations financières pour produire des prévisions précises"

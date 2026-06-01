@@ -4,7 +4,7 @@ description: "विकेंद्रित ओळख म्हणजे का
 lang: mr
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "पारंपारिक ओळख प्रणालींनी आपल्या अभिज्ञापकांचे जारी करणे, देखभाल आणि नियंत्रण केंद्रीकृत केले आहे."
   - "विकेंद्रित ओळख केंद्रीकृत तृतीय पक्षावरील अवलंबित्व काढून टाकते."

@@ -3,7 +3,7 @@ title: Rantai Suar
 description: Belajar tentang Rantai Suar - peningkatan yang memperkenalkan bukti taruhan Ethereum.
 lang: id
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoint1: Rantai Suar memperkenalkan bukti taruhan ke dalam ekosistem Ethereum.
 summaryPoint2: Rantai ini digabungkan dengan rantai bukti kerja Ethereum yang asli pada bulan September 2022.

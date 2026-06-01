@@ -4,7 +4,7 @@ description: "Przegląd tego, jak rozpocząć stakowanie ETH w domu"
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "Nosorożec Leslie na własnym chipie komputerowym."
 sidebarDepth: 2
 summaryPoints:

@@ -4,7 +4,7 @@ description: "Ethereum'daki merkeziyetsiz sosyal ağlara genel bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Sosyal etkileşim, içerik oluşturma ve dağıtım için blok zincir tabanlı platformlar."
   - "Merkeziyetsiz sosyal medya ağları, kullanıcı gizliliğini korur ve veri güvenliğini artırır."

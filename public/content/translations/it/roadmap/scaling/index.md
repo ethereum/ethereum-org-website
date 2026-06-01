@@ -2,7 +2,7 @@
 title: "Scalabilità di Ethereum"
 description: "I rollup raggruppano le transazioni fuori catena, riducendo i costi per l'utente. Tuttavia, il modo in cui i rollup utilizzano attualmente i dati è troppo costoso, limitando quanto possano essere economiche le transazioni. Il Proto-Danksharding risolve questo problema."
 lang: it
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "Piano d'azione di Ethereum"
 template: roadmap
 ---

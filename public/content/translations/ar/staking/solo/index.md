@@ -4,7 +4,7 @@ description: "نظرة عامة حول كيفية البدء في استثمار
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "ليزلي فرس النهر على شريحة الحاسوب الخاصة بها."
 sidebarDepth: 2
 summaryPoints:

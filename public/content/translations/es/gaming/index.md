@@ -2,7 +2,7 @@
 title: Juegos en Ethereum
 lang: es
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Las reglas del juego y el estado pueden ser aplicados por la cadena de bloques de Ethereum, no por los servidores de un estudio, lo que representa un beneficio clave de los juegos en cadena"

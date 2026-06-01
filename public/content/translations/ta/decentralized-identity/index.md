@@ -4,7 +4,7 @@ description: பரவலாக்கப்பட்ட அடையாளம்
 lang: ta
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "பாரம்பரிய அடையாள அமைப்புகள் உங்கள் அடையாளங்காட்டிகளின் வழங்கல், பராமரிப்பு மற்றும் கட்டுப்பாட்டை மையப்படுத்தியுள்ளன."
   - "பரவலாக்கப்பட்ட அடையாளம் மையப்படுத்தப்பட்ட மூன்றாம் தரப்பினரைச் சார்ந்திருப்பதை நீக்குகிறது."

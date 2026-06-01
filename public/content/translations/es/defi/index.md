@@ -4,7 +4,7 @@ metaTitle: "¿Qué son las DeFi? | Beneficios y usos de las Finanzas Descentrali
 description: "Una visión de las finanzas descentralizadas en Ethereum"
 lang: es
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: Un logotipo de Ethereum hecho de bloques de Lego.
 sidebarDepth: 2
 summaryPoints:

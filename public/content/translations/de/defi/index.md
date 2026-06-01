@@ -4,7 +4,7 @@ metaTitle: Was ist DeFi? | Vorteile und Nutzung des dezentralisierten Finanzwese
 description: "Ein Überblick über DeFi auf Ethereum"
 lang: de
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: Ein Eth-Logo aus Legosteinen.
 sidebarDepth: 2
 summaryPoints:

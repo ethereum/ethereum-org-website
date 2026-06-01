@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Застосунки на Ethereum є вільними, глобальними та використовують публічний блокчейн замість серверів приватних компаній. Це означає, що ви можете використовувати один і той самий обліковий запис у кожному проєкті та зберігати свою конфіденційність."
 ---
 

@@ -5,7 +5,7 @@ description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: A representation of a DAO voting on a proposal.
 summaryPoints:
   - "Member-owned communities without centralized leadership."

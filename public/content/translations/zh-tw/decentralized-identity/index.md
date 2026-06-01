@@ -4,7 +4,7 @@ description: "什麼是去中心化身分，它為什麼很重要？"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "傳統身分系統對你的身分識別進行中心化發行、維護和控制。"
   - "去中心化身分消除了對中心化第三方的依賴。"

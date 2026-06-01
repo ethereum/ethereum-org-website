@@ -5,7 +5,7 @@ import ParallaxImage from "@/components/Image/ParallaxImage/lazy"
 import Morpher from "@/components/Morpher/lazy"
 
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
-import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
+import TenYearGraphicImage from "@/public/images/10-year-anniversary/ten-years-of-ethereum-scroll-glyph.png"
 
 const TenYearHero = async () => {
   const t = await getTranslations("page-10-year-anniversary")

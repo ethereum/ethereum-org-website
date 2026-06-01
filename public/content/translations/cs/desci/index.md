@@ -4,7 +4,7 @@ description: "Přehled decentralizované vědy na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Globální, otevřená alternativa ke stávajícímu vědeckému systému."

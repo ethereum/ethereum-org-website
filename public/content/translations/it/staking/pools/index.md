@@ -4,7 +4,7 @@ description: Scopri le pool di staking
 lang: it
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: Leslie il rinoceronte che nuota nella piscina.
 sidebarDepth: 2
 summaryPoints:

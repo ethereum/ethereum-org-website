@@ -4,7 +4,7 @@ metaTitle: "O que são os RWA's? | Benefícios e Uso de ativos do mundo real"
 description: Um panorama de ativos do mundo real no Ethereum
 lang: pt-br
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: Homem e cachorro brincando.
 sidebarDepth: 2
 summaryPoints:

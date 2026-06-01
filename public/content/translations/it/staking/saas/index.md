@@ -4,7 +4,7 @@ description: "Scopri di più sullo staking come servizio"
 lang: it
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: Leslie il rinoceronte che fluttua tra le nuvole.
 sidebarDepth: 2
 summaryPoints:

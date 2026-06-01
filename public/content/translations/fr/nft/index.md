@@ -5,7 +5,7 @@ description: "Un aperçu des NFT sur Ethereum"
 lang: fr
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "Un logo Eth affiché par hologramme."
 summaryPoints:
   - "Un moyen de représenter toute chose unique en tant qu'actif Ethereum."

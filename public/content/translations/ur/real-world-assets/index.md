@@ -4,7 +4,7 @@ metaTitle: "RWAs کیا ہیں؟ | حقیقی دنیا کے اثاثوں کے ف
 description: "ایتھیریم پر حقیقی دنیا کے اثاثوں کا جائزہ"
 lang: ur
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "آدمی اور کتا کھیل رہے ہیں۔"
 sidebarDepth: 2
 summaryPoints:

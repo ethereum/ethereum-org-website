@@ -2,7 +2,7 @@
 title: "ইথিরিয়ামে গেমিং"
 lang: bn
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "গেমের নিয়ম এবং স্টেট কোনো স্টুডিওর সার্ভারের বদলে ইথিরিয়াম ব্লকচেইন দ্বারা প্রয়োগ করা যেতে পারে, যা অনচেইন গেমের একটি মূল সুবিধা"

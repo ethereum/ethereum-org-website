@@ -3,7 +3,7 @@ title: Beacon Chain
 description: Pelajari tentang Beacon Chain - peningkatan yang memperkenalkan Ethereum proof-of-stake.
 lang: id
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt: 
 summaryPoints:
   - "Beacon Chain memperkenalkan proof-of-stake ke ekosistem Ethereum."

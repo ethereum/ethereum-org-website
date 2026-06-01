@@ -4,7 +4,7 @@ description: "이더리움의 탈중앙화 과학 개요"
 lang: ko
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "현재 과학 시스템에 대한 글로벌하고 개방적인 대안입니다."

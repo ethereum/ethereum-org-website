@@ -4,7 +4,7 @@ description: "Tìm hiểu thêm về dịch vụ đặt cọc"
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "Tê giác Leslie lơ lửng giữa những đám mây."
 sidebarDepth: 2
 summaryPoints:

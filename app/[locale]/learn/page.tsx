@@ -29,16 +29,16 @@ import { getMetadata } from "@/lib/utils/metadata"
 import LearnPageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
-import eth from "@/public/images/eth.png"
-import financeTransparent from "@/public/images/finance_transparent.png"
-import futureTransparent from "@/public/images/future_transparent.png"
-import hackathon from "@/public/images/hackathon_transparent.png"
-import heroImage from "@/public/images/heroes/learn-hub-hero.png"
-import impact from "@/public/images/impact_transparent.png"
-import merge from "@/public/images/upgrades/merge.png"
-import wallet from "@/public/images/wallet.png"
-import whatIsEth from "@/public/images/what-is-ethereum.png"
+import futureTransparent from "@/public/images/crystal-projection-screen-keyboard-smart-contract.png"
+import impact from "@/public/images/eth-glyph-hands-palms-up.png"
+import financeTransparent from "@/public/images/eth-glyph-lego-bricks-laurel-wreath.png"
+import wallet from "@/public/images/ethereum-robot-standing.png"
+import eth from "@/public/images/four-people-doge-pink-3d-floating-eth-glyph.png"
+import developersEthBlocks from "@/public/images/hand-with-3d-eth-glyph-lego-blocks.png"
+import heroImage from "@/public/images/heroes/futuristic-community-center-floating-glyph-talking-foreground.png"
+import hackathon from "@/public/images/person-repairing-vintage-computer-screwdriver.png"
+import whatIsEth from "@/public/images/man-viewing-bazaar-through-three-windows.png"
+import merge from "@/public/images/upgrades/beacon-spaceship-fully-merged-rings.png"
 
 const AdditionalDocReading = ({
   heading,
@@ -487,6 +487,7 @@ export async function generateMetadata(props: {
     slug: ["learn"],
     title: t("page-learn-meta-title"),
     description: t("hero-subtitle"),
-    image: "/images/heroes/learn-hub-hero.png",
+    image:
+      "/images/heroes/futuristic-community-center-floating-glyph-talking-foreground.png",
   })
 }

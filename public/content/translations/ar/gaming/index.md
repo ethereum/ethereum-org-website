@@ -2,7 +2,7 @@
 title: "الألعاب على الإيثريوم"
 lang: ar
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "يمكن فرض قواعد اللعبة وحالتها من خلال بلوكتشين الإيثيريوم، وليس خوادم الاستوديو، مما يمثل فائدة رئيسية للألعاب الموجودة على السلسلة"

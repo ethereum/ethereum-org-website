@@ -2,7 +2,7 @@
 title: "மிகவும் பாதுகாப்பான Ethereum"
 description: "Ethereum தற்போதுள்ள மிகவும் பாதுகாப்பான மற்றும் பரவலாக்கப்பட்ட ஸ்மார்ட்-ஒப்பந்த தளமாகும். இருப்பினும், எதிர்காலத்தில் எந்த அளவிலான தாக்குதலையும் தாங்கக்கூடிய வகையில் Ethereum-ஐ மேம்படுத்த இன்னும் சில மாற்றங்களைச் செய்ய முடியும்."
 lang: ta
-image: /images/roadmap/roadmap-security.png
+image: /images/roadmap/isometric-platform-shield-icon.png
 alt: "Ethereum roadmap"
 template: roadmap
 ---

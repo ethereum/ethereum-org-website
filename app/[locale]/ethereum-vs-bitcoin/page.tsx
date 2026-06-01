@@ -18,12 +18,12 @@ import { screens } from "@/lib/utils/screen"
 import DifferencesTable from "./_components/DifferencesTable"
 import EthereumVsBitcoinPageJsonLD from "./page-jsonld"
 
-import enterpriseEthImg from "@/public/images/enterprise-eth.png"
 import ethdotorgLogoImg from "@/public/images/eth-org-logo.png"
-import heroImg from "@/public/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png"
-import hackathonImg from "@/public/images/hackathon_transparent.png"
-import guidesHubHeroImg from "@/public/images/heroes/guides-hub-hero.jpg"
-import layer2HeroImg from "@/public/images/heroes/layer-2-hub-hero.png"
+import heroImg from "@/public/images/ethereum-vs-bitcoin/bitcoin-and-ethereum-robots-shaking-hands.png"
+import layer2HeroImg from "@/public/images/heroes/futuristic-community-center-trees-central-column.png"
+import guidesHubHeroImg from "@/public/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg"
+import hackathonImg from "@/public/images/person-repairing-vintage-computer-screwdriver.png"
+import enterpriseEthImg from "@/public/images/three-people-sitting-carpet-building-blocks.png"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -448,7 +448,8 @@ export async function generateMetadata({
     title: t("page-ethereum-vs-bitcoin-meta-title"),
     description: t("page-ethereum-vs-bitcoin-meta-description"),
     twitterDescription: t("page-ethereum-vs-bitcoin-twitter-meta-description"),
-    image: "/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png",
+    image:
+      "/images/ethereum-vs-bitcoin/bitcoin-and-ethereum-robots-shaking-hands.png",
   })
 }
 

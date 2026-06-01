@@ -2,7 +2,7 @@
 title: Gaming on Ethereum
 lang: en
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Game rules and state can be enforced by the Ethereum blockchain, not a studio's servers, representing a key benefit of onchain games"

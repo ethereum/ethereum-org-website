@@ -4,7 +4,7 @@ description: "리파이의 개요와 현재 사용 사례."
 lang: ko
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "재생 원칙 위에 기반한 대안 경제 시스템"

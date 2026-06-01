@@ -4,7 +4,7 @@ metaTitle: "Co je to DeFi? | Výhody a využití decentralizovaných financí"
 description: "Přehled DeFi na platformě Ethereum"
 lang: cs
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "Logo Eth vyrobené z cihel lega."
 sidebarDepth: 2
 summaryPoints:

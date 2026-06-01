@@ -4,7 +4,7 @@ description: "اسٹیکنگ پولز کے بارے میں جانیں"
 lang: ur
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: "لیسلی گینڈا پول میں تیر رہا ہے۔"
 sidebarDepth: 2
 summaryPoints:

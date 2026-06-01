@@ -5,7 +5,7 @@ description: "Ethereum-இல் NFTகளின் மேலோட்டம்"
 lang: ta
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "ஹோலோகிராம் மூலம் காட்டப்படும் Eth லோகோ."
 summaryPoints:
   - "தனித்துவமான எதையும் Ethereum அடிப்படையிலான சொத்தாகக் குறிக்கும் ஒரு வழி."

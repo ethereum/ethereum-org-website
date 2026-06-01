@@ -5,7 +5,7 @@ description: "ایتھیریم پر ادائیگیوں کا ایک جائزہ"
 lang: ur
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "ایک Eth لوگو جسے دینے والے ہاتھوں کے ساتھ دکھایا جا رہا ہے۔"
 summaryPoints:
   - "ایک ایسی دنیا جہاں پیسہ معلومات کی طرح آزادانہ طور پر منتقل ہوتا ہے"

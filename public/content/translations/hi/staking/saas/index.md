@@ -4,7 +4,7 @@ description: "सेवा के रूप में स्टेकिंग �
 lang: hi
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "बादलों में तैरता हुआ राइनो लेस्ली।"
 sidebarDepth: 2
 summaryPoints:

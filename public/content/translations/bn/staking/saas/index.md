@@ -4,7 +4,7 @@ description: "সার্ভিস হিসেবে স্টেকিং স
 lang: bn
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "লেসলি গন্ডার মেঘের মধ্যে ভাসছে।"
 sidebarDepth: 2
 summaryPoints:

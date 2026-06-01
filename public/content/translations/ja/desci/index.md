@@ -4,7 +4,7 @@ description: "イーサリアム上の分散型科学の概要"
 lang: ja
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "現在の科学に代わる、グローバルで開かれたシステム。"

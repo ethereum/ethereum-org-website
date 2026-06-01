@@ -4,7 +4,7 @@ description: "بطور سروس اسٹیکنگ کے بارے میں جانیں"
 lang: ur
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "لیسلی گینڈا بادلوں میں تیر رہا ہے۔"
 sidebarDepth: 2
 summaryPoints:

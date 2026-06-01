@@ -26,7 +26,7 @@ import ResourcesPageJsonLD from "./page-jsonld"
 import { getResources } from "./utils"
 
 import { getBlobscanStats, getGrowThePieData } from "@/lib/data"
-import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
+import heroImg from "@/public/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg"
 
 const EVENT_CATEGORY = "dashboard"
 
@@ -243,7 +243,8 @@ export async function generateMetadata(props: {
     slug: ["resources"],
     title: t("page-resources-meta-title"),
     description: t("page-resources-meta-description"),
-    image: "/images/heroes/guides-hub-hero.jpg",
+    image:
+      "/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg",
   })
 }
 

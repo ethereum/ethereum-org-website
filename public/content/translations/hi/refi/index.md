@@ -4,7 +4,7 @@ description: "ReFi और इसके वर्तमान उपयोग म
 lang: hi
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "पुनर्योजी सिद्धांतों पर निर्मित एक वैकल्पिक आर्थिक प्रणाली"

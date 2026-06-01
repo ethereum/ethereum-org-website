@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "एथेरियम पर ऐप्स मुफ्त, वैश्विक हैं और निजी कंपनी सर्वरों के बजाय सार्वजनिक ब्लॉकचेन का उपयोग करते हैं। इसका मतलब है कि आप हर प्रोजेक्ट में एक ही खाते का उपयोग कर सकते हैं और अपनी गोपनीयता बनाए रख सकते हैं।"
 ---
 

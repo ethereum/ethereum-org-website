@@ -5,7 +5,7 @@ description: "以太坊上的去中心化自治组织简介"
 lang: zh
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "表示去中心化自治组织在对提案投票。"
 summaryPoints:
   - "没有集中领导的、成员共同拥有的社区。"

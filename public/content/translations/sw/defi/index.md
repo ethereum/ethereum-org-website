@@ -4,7 +4,7 @@ metaTitle: Nini ni DeFi (Uchumi Gatuzi)? manufaa na utumizi wa fedha huru kati
 description: Maelezo ya jumla ya DeFi kwenye Ethereum
 lang: sw
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: |-
   Nembo ya Eth kufanywa
    kwa matofali ya matofali.

@@ -5,7 +5,7 @@ description: Muhtasari wa NFT kwenye Ethereum
 lang: sw
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: Nembo ya Eth ikionyeshwa kwa kupitia hologramu.
 summaryPoints:
   - "Njia ya kuwakilisha kitu chochote cha kipekee kilicho na msingi wa Ethereum."

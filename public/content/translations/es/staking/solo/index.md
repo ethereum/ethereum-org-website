@@ -4,7 +4,7 @@ description: "Un resumen de cómo empezar con la participación desde casa de su
 lang: es
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: Leslie, el rinoceronte, en su propio chip.
 sidebarDepth: 2
 summaryPoints:

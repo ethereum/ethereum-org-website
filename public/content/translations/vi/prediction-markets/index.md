@@ -2,7 +2,7 @@
 title: "Thị trường dự đoán"
 lang: vi
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "Nhận động lực tài chính để tạo ra các dự báo chính xác"

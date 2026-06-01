@@ -5,7 +5,7 @@ description: "Огляд NFT на Ethereum"
 lang: uk
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "Логотип Eth відображається за допомогою голограми."
 summaryPoints:
   - "Спосіб представити що-небудь унікальне як актив на основі Ethereum."

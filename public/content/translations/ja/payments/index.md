@@ -5,7 +5,7 @@ description: "イーサリアム上での支払いの概要"
 lang: ja
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "Ethのロゴが表示されており、差し出す手が描かれている。"
 summaryPoints:
   - "お金が情報のように自由に動く世界"

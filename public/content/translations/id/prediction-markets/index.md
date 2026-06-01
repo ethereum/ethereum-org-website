@@ -2,7 +2,7 @@
 title: Pasar prediksi
 lang: id
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "Terima insentif finansial untuk menghasilkan perkiraan yang akurat"

@@ -4,7 +4,7 @@ description: "ReFi மற்றும் அதன் தற்போதைய �
 lang: ta
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "மீளுருவாக்கக் கொள்கைகளின் அடிப்படையில் கட்டமைக்கப்பட்ட ஒரு மாற்றுப் பொருளாதார அமைப்பு"

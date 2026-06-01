@@ -3,7 +3,7 @@ title: "İşaret Zinciri"
 description: "Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinciri hakkında bilgi edinin."
 lang: tr
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "İşaret Zinciri, hisse ispatını Ethereum ekosisteminde uygulamaya koydu."

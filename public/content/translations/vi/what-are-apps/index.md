@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Các ứng dụng trên Ethereum là miễn phí, mang tính toàn cầu và sử dụng mạng chuỗi khối thay vì những máy chủ bảo mật được đặt tại các công ty. Điều ấy có nghĩa là bạn có thể sử dụng cùng một tài khoản ở mọi dự án mà vẫn bảo toàn được danh tính."
 ---
 

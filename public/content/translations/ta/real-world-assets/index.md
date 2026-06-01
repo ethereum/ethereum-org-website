@@ -4,7 +4,7 @@ metaTitle: "RWAs என்றால் என்ன? | நிஜ-உலகச்
 description: "எத்தேரியத்தில் நிஜ-உலகச் சொத்துகள் பற்றிய ஒரு கண்ணோட்டம்"
 lang: ta
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "மனிதனும் நாயும் விளையாடுகிறார்கள்."
 sidebarDepth: 2
 summaryPoints:

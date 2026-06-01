@@ -2,7 +2,7 @@
 title: "ইথিরিয়াম স্কেলিং"
 description: "রোলআপস অফচেইনে একসাথে লেনদেন ব্যাচ করে, যা ব্যবহারকারীর জন্য খরচ কমায়। তবে, বর্তমানে রোলআপস যেভাবে ডেটা ব্যবহার করে তা অত্যন্ত ব্যয়বহুল, যা লেনদেন কতটা সস্তা হতে পারে তা সীমাবদ্ধ করে। প্রোটো-ড্যাঙ্কশার্ডিং এটি সমাধান করে।"
 lang: bn
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "ইথিরিয়াম রোডম্যাপ"
 template: roadmap
 ---

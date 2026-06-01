@@ -42,8 +42,8 @@ import { getMeetupGroups, mapEventTranslations } from "./utils"
 import { getEventsData } from "@/lib/data"
 import ethereumEverywhereLogo from "@/public/images/community/ethereum-everywhere-logo.png"
 import geodeLabsLogo from "@/public/images/community/geode-labs-logo.png"
-import heroImage from "@/public/images/enterprise-eth.png"
-import organizerImage from "@/public/images/people-learning.png"
+import heroImage from "@/public/images/three-people-sitting-carpet-building-blocks.png"
+import organizerImage from "@/public/images/two-people-talking-with-flow-diagram.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params

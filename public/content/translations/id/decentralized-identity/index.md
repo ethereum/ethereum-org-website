@@ -4,7 +4,7 @@ description: Apa itu identitas terdesentralisasi, dan mengapa itu penting?
 lang: id
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "Sistem identitas tradisional telah memusatkan penerbitan, pemeliharaan, dan kontrol pengidentifikasi Anda."
   - "Identitas terdesentralisasi menghilangkan ketergantungan pada pihak ketiga yang terpusat."

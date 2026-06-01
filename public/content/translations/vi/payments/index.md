@@ -5,7 +5,7 @@ description: "Tổng quan về thanh toán trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "Biểu tượng của ETH được hiển thị cùng hình ảnh những bàn tay đang trao đi."
 summaryPoints:
   - "Một thế giới nơi mà tiền di chuyển tự do như thông tin"

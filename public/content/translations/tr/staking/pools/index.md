@@ -4,7 +4,7 @@ description: "Paydaşlık havuzları hakkında bilgi edinin"
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: "Gergedan Leslie havuzda yüzüyor."
 sidebarDepth: 2
 summaryPoints:

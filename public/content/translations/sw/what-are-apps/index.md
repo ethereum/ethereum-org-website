@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: Programu kwenye Ethereum ni za bure, za kimataifa na zinatumia kiambajengo cha umma badala ya seva za kampuni binafsi. Hii inamaanisha unaweza kutumia akaunti ile ile katika kila mradi na kudumisha faragha yako.
 ---
 

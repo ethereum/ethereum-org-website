@@ -46,11 +46,11 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import GasPageJsonLD from "./page-jsonld"
 
-import dogeComputerImg from "@/public/images/doge-computer.png"
-import ethImg from "@/public/images/eth.png"
-import infrastructureTransparentImg from "@/public/images/infrastructure_transparent.png"
-import walletImg from "@/public/images/wallet.png"
-import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
+import infrastructureTransparentImg from "@/public/images/desktop-pc-projecting-glowing-glyph.png"
+import dogeComputerImg from "@/public/images/doge-shiba-robot-suit-at-computer.png"
+import walletImg from "@/public/images/ethereum-robot-standing.png"
+import ethImg from "@/public/images/four-people-doge-pink-3d-floating-eth-glyph.png"
+import whatIsEthereumImg from "@/public/images/man-viewing-bazaar-through-three-windows.png"
 
 const Content = ({
   className,

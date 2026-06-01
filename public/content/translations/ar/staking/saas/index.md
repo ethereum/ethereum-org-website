@@ -4,7 +4,7 @@ description: "تعرف على التخزين كخدمة"
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "يطوف ليزلي فرس النهر في السحاب."
 sidebarDepth: 2
 summaryPoints:

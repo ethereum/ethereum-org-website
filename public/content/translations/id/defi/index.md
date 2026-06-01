@@ -4,7 +4,7 @@ metaTitle: Apa itu DeFi? | Manfaat dan Penggunaan Keuangan Terdesentralisasi
 description: Gambaran umum DeFi di Ethereum
 lang: id
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: Logo Eth yang terbuat dari balok lego.
 sidebarDepth: 2
 summaryPoints:

@@ -4,7 +4,7 @@ description: "Ein Überblick darüber, wie Sie mit dem Staking Ihrer ETH von zu 
 lang: de
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: Leslie das Nashorn auf ihrem eigenen Computerchip.
 sidebarDepth: 2
 summaryPoints:

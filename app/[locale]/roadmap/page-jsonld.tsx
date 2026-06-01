@@ -70,7 +70,8 @@ export default async function RoadmapPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-roadmap-title"),
         description: t("page-roadmap-meta-description"),
-        image: "https://ethereum.org/images/heroes/roadmap-hub-hero.jpg",
+        image:
+          "https://ethereum.org/images/heroes/futuristic-night-cityscape-beacon-overlook-moon.jpg",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,

@@ -5,7 +5,7 @@ description: "ইথিরিয়ামে ডিএও (DAO)-এর একটি
 lang: bn
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "একটি প্রস্তাবে ডিএও (DAO) ভোটিংয়ের একটি উপস্থাপনা।"
 summaryPoints:
   - "কেন্দ্রীভূত নেতৃত্ব ছাড়া সদস্য-মালিকানাধীন কমিউনিটি।"

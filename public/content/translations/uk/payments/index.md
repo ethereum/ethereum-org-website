@@ -5,7 +5,7 @@ description: "Огляд платежів на Ethereum"
 lang: uk
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "Логотип Ethereum, що зображається поруч із простягнутими руками, які символізують допомогу."
 summaryPoints:
   - "Світ, де гроші рухаються так само вільно, як і інформація"

@@ -2,7 +2,7 @@
 title: "Zlepšování zkušeností uživatelů"
 description: "Používání Etherea je pro většinu lidí stále moc složité. Aby bylo možné přiblížit se k masovému přijetí, musí Ethereum zásadně snížit své bariéry pro vstup – uživatelé by měli mít výhody decentralizovaného, cenzuře odolného přístupu k Ethereu bez omezení, ale musí to být stejně bezproblémové, jako používání tradičních Web2 aplikací."
 lang: cs
-image: /images/roadmap/roadmap-ux.png
+image: /images/roadmap/isometric-platform-cursor-icon.png
 alt: "Plán Etherea"
 template: roadmap
 ---

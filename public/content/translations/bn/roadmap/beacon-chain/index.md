@@ -3,7 +3,7 @@ title: "বিকন চেইন"
 description: "বিকন চেইন সম্পর্কে জানুন - যে আপগ্রেডটি ইথিরিয়ামে প্রুফ-অফ-স্টেক চালু করেছে।"
 lang: bn
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt: 
 summaryPoints:
   - "বিকন চেইন ইথিরিয়াম ইকোসিস্টেমে প্রুফ-অফ-স্টেক চালু করেছে।"

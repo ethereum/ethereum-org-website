@@ -3,7 +3,7 @@ title: "मर्ज"
 description: "मर्ज के बारे में जानें - कब मेननेट एथेरियम ने हिस्सेदारी का सबूत अपनाया।"
 lang: hi
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "एथेरियम मेननेट प्रूफ-ऑफ-स्टेक का उपयोग करता है, लेकिन ऐसा हमेशा नहीं था।"

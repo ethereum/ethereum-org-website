@@ -2,7 +2,7 @@
 title: "எத்தேரியத்தில் கேமிங்"
 lang: ta
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "கேம் விதிகள் மற்றும் நிலையை ஒரு ஸ்டுடியோவின் சர்வர்களுக்குப் பதிலாக எத்தேரியம் பிளாக்செயின் மூலம் செயல்படுத்த முடியும், இது ஆன்செயின் கேம்களின் முக்கிய நன்மையைக் குறிக்கிறது."

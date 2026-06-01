@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "이더리움의 앱은 무료이며 글로벌하게 제공되며, 개인 회사 서버 대신 퍼블릭 블록체인을 사용합니다. 즉, 모든 프로젝트에서 동일한 계정을 사용하고 개인정보를 유지할 수 있습니다."
 ---
 

@@ -5,7 +5,7 @@ description: "इथेरियमवरील देयकांचे एक 
 lang: mr
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "देणाऱ्या हातांसोबत प्रदर्शित केला जात असलेला एक Eth लोगो."
 summaryPoints:
   - "असे जग जिथे पैसा माहितीइतकाच मुक्तपणे फिरतो"

@@ -2,7 +2,7 @@
 title: "Игры на Ethereum"
 lang: ru
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Правила игры и ее стейт могут обеспечиваться блокчейном Ethereum, а не серверами студии, что является ключевым преимуществом ончейн-игр"

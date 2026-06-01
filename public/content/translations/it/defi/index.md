@@ -4,7 +4,7 @@ metaTitle: "Cos'è la DeFi? | Vantaggi e utilizzo della finanza decentralizzata"
 description: Una panoramica della DeFi su Ethereum
 lang: it
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: Un logo di Eth fatto di mattoncini lego.
 sidebarDepth: 2
 summaryPoints:

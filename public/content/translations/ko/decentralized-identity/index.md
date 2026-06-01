@@ -4,7 +4,7 @@ description: "분산 신원 증명이란 무엇이며, 왜 중요할까요?"
 lang: ko
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "기존의 신원 증명 시스템은 식별자의 발급, 점검, 제어를 한 곳으로 집중시켰습니다."
   - "분산 신원 증명을 사용하면 더 이상 중앙화된 제3자에 의존할 필요가 없어집니다."

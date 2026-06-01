@@ -4,7 +4,7 @@ description: "Tìm hiểu thêm về bể cổ phần"
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: "Chú tê giác Leslie đang bơi trong bể."
 sidebarDepth: 2
 summaryPoints:

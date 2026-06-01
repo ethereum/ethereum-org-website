@@ -4,7 +4,7 @@ description: "Tổng quan về mạng xã hội phi tập trung trên nền tả
 lang: vi
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Các nền tảng trên blockchain cho việc tương tác xã hội, sáng tạo và phân phối nội dung."
   - "Các mạng xã hội phi tập trung bảo vệ quyền riêng tư của người dùng và nâng cao bảo mật dữ liệu."

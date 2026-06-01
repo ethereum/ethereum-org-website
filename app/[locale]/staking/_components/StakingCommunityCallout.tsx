@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 
-import image from "@/public/images/enterprise-eth.png"
+import image from "@/public/images/three-people-sitting-carpet-building-blocks.png"
 
 const StakingCommunityCallout = async (
   props: React.HTMLAttributes<HTMLDivElement>

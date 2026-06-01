@@ -2,7 +2,7 @@
 title: "Tahmin piyasaları"
 lang: tr
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "Doğru tahminler oluşturmak için finansal teşvikler alın"

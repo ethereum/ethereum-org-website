@@ -4,7 +4,7 @@ metaTitle: "RWAとは何か？ | 実世界資産の利点と用途"
 description: "イーサリアムにおけるリアルワールドアセットの概要"
 lang: ja
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "男性と犬が遊んでいる様子。"
 sidebarDepth: 2
 summaryPoints:

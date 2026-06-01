@@ -2,7 +2,7 @@
 title: "इथेरियमवर गेमिंग"
 lang: mr
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "खेळाचे नियम आणि स्थिती स्टुडिओच्या सर्व्हरद्वारे नव्हे, तर इथेरियम ब्लॉकचेनद्वारे लागू केले जाऊ शकतात, जे ऑनचेन खेळांचा एक महत्त्वाचा फायदा आहे."

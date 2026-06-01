@@ -3,7 +3,7 @@ title: Beacon Chain
 description: "Дізнайтеся про Beacon Chain — оновлення, за якого платформа Ethereum перейшла на модель доказу частки."
 lang: uk
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "З Beacon Chain в екосистемі Ethereum з’явився доказ частки володіння."

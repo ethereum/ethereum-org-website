@@ -2,7 +2,7 @@
 title: "Chơi game trên Ethereum"
 lang: vi
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Các quy tắc và trạng thái của trò chơi có thể được thực thi bởi chuỗi khối Ethereum, không phải bởi máy chủ của studio, đây là một lợi ích chính của các trò chơi trên chuỗi"

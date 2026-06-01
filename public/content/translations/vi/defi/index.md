@@ -4,7 +4,7 @@ metaTitle: "DeFi là gì? | Sử dụng Tài chính Phi tập trung và lợi í
 description: "Tổng quan về tài chính phi tập trung trên Ethereum"
 lang: vi
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "Logo của Eth làm bằng gạch lego."
 sidebarDepth: 2
 summaryPoints:

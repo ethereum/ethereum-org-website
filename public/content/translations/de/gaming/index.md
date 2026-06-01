@@ -2,7 +2,7 @@
 title: Gaming auf Ethereum
 lang: de
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Spielregeln und -zustände können durch die Ethereum-Blockchain und nicht durch die Server eines Studios durchgesetzt werden, was einen Hauptvorteil von Spielen auf der Blockchain darstellt"

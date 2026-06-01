@@ -17,7 +17,7 @@ import {
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tag } from "@/components/ui/tag"
 
-import heroLandscape from "@/public/images/heroes/guides-hub-hero.jpg"
+import heroLandscape from "@/public/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg"
 
 const meta = {
   title: "UI / Primitives / Card",
@@ -337,7 +337,12 @@ export const BannerPlacement: Story = {
         <Card>
           <CardHeader>
             <CardBanner fit="contain" background="accent-a">
-              <Image src="/images/mainnet.png" alt="" width={368} height={92} />
+              <Image
+                src="/images/upgrades/gold-rollup-spaceship-with-red-thrusters.png"
+                alt=""
+                width={368}
+                height={92}
+              />
             </CardBanner>
           </CardHeader>
           <CardContent>

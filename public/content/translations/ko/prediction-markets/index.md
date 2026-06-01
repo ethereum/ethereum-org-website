@@ -2,7 +2,7 @@
 title: "예측 시장"
 lang: ko
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "정확한 예측에 대한 금전적 보상 제공"

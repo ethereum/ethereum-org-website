@@ -2,7 +2,7 @@
 title: "మరింత సురక్షితమైన ఇతీరియము"
 description: "ఇతీరియము అనేది ఉనికిలో ఉన్న అత్యంత సురక్షితమైన మరియు వికేంద్రీకృత స్మార్ట్-కాంట్రాక్ట్ ప్లాట్‌ఫారమ్. అయినప్పటికీ, భవిష్యత్తులో ఏ స్థాయి దాడికైనా ఇతీరియము స్థితిస్థాపకంగా ఉండేలా ఇప్పటికీ మెరుగుదలలు చేయవచ్చు."
 lang: te
-image: /images/roadmap/roadmap-security.png
+image: /images/roadmap/isometric-platform-shield-icon.png
 alt: "Ethereum రోడ్‌మ్యాప్"
 template: roadmap
 ---

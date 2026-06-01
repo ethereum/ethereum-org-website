@@ -4,7 +4,7 @@ description: "உங்கள் ETH-ஐ வீட்டிலிருந்த
 lang: ta
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "லெஸ்லி காண்டாமிருகம் தனது சொந்த கம்ப்யூட்டர் சிப்பில் உள்ளது."
 sidebarDepth: 2
 summaryPoints:

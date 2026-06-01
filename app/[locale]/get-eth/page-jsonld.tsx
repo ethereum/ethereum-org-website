@@ -72,7 +72,8 @@ export default async function GetEthPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-get-eth-where-to-buy-title"),
         description: t("page-get-eth-meta-description"),
-        image: "https://ethereum.org/images/get-eth.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+        image:
+          "https://ethereum.org/images/various-eth-glyphs-white-circles.png", // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
         contributor: contributorList,
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,

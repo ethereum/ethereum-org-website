@@ -4,7 +4,7 @@ description: "ETH'nizi bireysel olarak hisselemeye nasıl başlayacağınız kon
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "Gergedan Leslie bilgisayar çipinin üstünde."
 sidebarDepth: 2
 summaryPoints:

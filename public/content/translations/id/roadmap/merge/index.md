@@ -3,7 +3,7 @@ title: The Merge
 description: Pelajari tentang The Merge - ketika Mainnet Ethereum mengadopsi proof-of-stake.
 lang: id
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt: 
 summaryPoints:
   - "Mainnet Ethereum menggunakan proof-of-stake, tetapi tidak selalu demikian."

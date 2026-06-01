@@ -29,11 +29,11 @@ import { layer2Data } from "@/data/networks/networks"
 import Layer2PageJsonLD from "./page-jsonld"
 
 import { getGrowThePieData, getL2beatData } from "@/lib/data"
-import HeroImage from "@/public/images/heroes/layer-2-hub-hero.png"
+import HeroImage from "@/public/images/heroes/futuristic-community-center-trees-central-column.png"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
 import ExploreImage from "@/public/images/layer-2/learn-hero.png"
-import ManDogCardImage from "@/public/images/man-and-dog-playing.png"
-import WalkingImage from "@/public/images/walking.png"
+import ManDogCardImage from "@/public/images/man-playing-with-robot-shiba-dog.png"
+import WalkingImage from "@/public/images/two-people-walking-and-talking.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params

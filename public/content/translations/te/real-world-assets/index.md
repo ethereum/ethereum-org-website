@@ -4,7 +4,7 @@ metaTitle: "RWAs అంటే ఏమిటి? | వాస్తవ-ప్రప
 description: "ఇతీరియముపై వాస్తవ-ప్రపంచ ఆస్తుల యొక్క అవలోకనం"
 lang: te
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "మనిషి మరియు కుక్క ఆడుకుంటున్నాయి."
 sidebarDepth: 2
 summaryPoints:

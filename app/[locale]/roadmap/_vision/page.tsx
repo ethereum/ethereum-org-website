@@ -33,7 +33,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import RoadmapVisionPageJsonLD from "./page-jsonld"
 
-import oldship from "@/public/images/upgrades/oldship.png"
+import oldship from "@/public/images/upgrades/gold-rollup-spaceship-with-red-thrusters.png"
 
 const SLUG = "/roadmap/vision"
 
