@@ -5,6 +5,7 @@ import { Image } from "@/components/Image"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -162,10 +163,10 @@ const GetStartedGrid = async ({
                 </ul>
               </CardContent>
               <CardFooter>
-                <p className="inline-flex items-center font-bold text-primary group-hover/link:text-primary-hover">
+                <CardButtonFake>
                   {card.cta}
                   <ChevronNext className="size-5" />
-                </p>
+                </CardButtonFake>
               </CardFooter>
             </Card>
           ))}

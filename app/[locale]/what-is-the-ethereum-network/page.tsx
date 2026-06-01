@@ -202,7 +202,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-gas-section-description-3"
                 )}
                 name="Tim Beiko"
-                title="Protocol Coordination, Ethereum Foundation"
+                title="Protocol Coordination, Ethereum Foundation (2025)"
               />
               <p>
                 {t.rich(
@@ -309,7 +309,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   "page-what-is-ethereum-network-staking-section-description-6"
                 )}
                 name="Barnabé Monnot"
-                title="Protocol Architecture, Ethereum Foundation"
+                title="Protocol Architecture, Ethereum Foundation (2025)"
               />
               <p>
                 {t.rich(
