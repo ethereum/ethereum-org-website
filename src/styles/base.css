@@ -125,3 +125,70 @@
     }
   }
 }
+
+/* CONTENT FLOW RHYTHM (POC -- see
+   .claude/skills/design-system/references/typography-spacing-flow-spec.md)
+   Opt-in via the `.flow` class on a content region. One base unit (--space);
+   every gap is a multiple of it, all as margin-top (space-before). No em/lh.
+   The "heading hugs its content" asymmetry comes from headings having MORE
+   space ABOVE them (2x/3x), not less below. Additive + scoped: pages that
+   don't opt in are unaffected. `calc(var(--spacing) * N)` == `--spacing(N)`. */
+
+:root {
+  /* The single base unit for the whole rhythm; responsive. */
+  --space: calc(var(--spacing) * 4); /* 16px */
+}
+
+@variant lg {
+  :root {
+    --space: calc(var(--spacing) * 6); /* 24px */
+  }
+}
+
+@layer base {
+  /* 1x default between any two siblings: heading->content, p->p, p->list, etc. */
+  .flow > * + * {
+    margin-top: var(--space);
+  }
+
+  /* 2x above a subsection heading. */
+  .flow > * + :is(h3, h4) {
+    margin-top: calc(var(--space) * 2);
+  }
+
+  /* 3x above a section boundary: a section heading (h1/h2) in a flat stream
+     (markdown), or an explicit <section> element (React's <Section>). The
+     section's own first-child heading is zeroed below, so they never double. */
+  .flow > * + :is(h1, h2, section) {
+    margin-top: calc(var(--space) * 3);
+  }
+
+  /* Call-to-action / button groups get extra room above (they conclude a
+     thought and invite action). A marker is needed because a button group has
+     no element selector; CTAs trail, so only the top gap matters. */
+  .flow > * + [data-flow="cta"] {
+    margin-top: calc(var(--space) * 2);
+  }
+
+  .flow > *:first-child {
+    margin-top: 0;
+  }
+
+  /* Lists: neutralize the legacy global list margins (scoped, so other pages
+     stay untouched until the global cleanup lands). The list flows at the 1x
+     default like any block; items get a tighter inner rhythm, no trailing
+     margin. */
+  .flow :is(ul, ol) {
+    margin-bottom: 0;
+    margin-inline: 0;
+    padding-inline-start: calc(var(--spacing) * 6);
+  }
+
+  .flow li {
+    margin-bottom: 0;
+  }
+
+  .flow li + li {
+    margin-top: calc(var(--space) * 0.5);
+  }
+}
