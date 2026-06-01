@@ -55,14 +55,25 @@ const kindBadge: Record<GradientKind, string> = {
   flat: "bg-warning/20 text-warning-dark",
 }
 
-/** One gradient, one demo box. Flips with the Storybook theme toggle. */
-const Swatch = ({ spec }: { spec: GradientSpec }) => (
+/**
+ * One gradient, one demo box. Flips with the Storybook theme toggle.
+ * `tall` renders the demo box in a portrait aspect ratio (for previewing
+ * gradients in tall containers like sidebars/cards); default is the wide box.
+ */
+const Swatch = ({
+  spec,
+  tall = false,
+}: {
+  spec: GradientSpec
+  tall?: boolean
+}) => (
   <div className="flex flex-col gap-3 rounded-xl border border-body-light p-5">
     {/* Demo box sits on the real page surface (bg-background) so translucent
         gradients read correctly; both flip with the theme toggle. */}
     <div
       className={cn(
-        "h-40 w-full rounded-lg border border-black/10 bg-background dark:border-white/10",
+        "w-full rounded-lg border border-black/10 bg-background dark:border-white/10",
+        tall ? "aspect-[3/4]" : "h-40",
         spec.className
       )}
       style={spec.style}
@@ -95,8 +106,22 @@ const Swatch = ({ spec }: { spec: GradientSpec }) => (
   </div>
 )
 
-const Grid = ({ children }: { children: ReactNode }) => (
-  <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">{children}</div>
+const Grid = ({
+  children,
+  tall = false,
+}: {
+  children: ReactNode
+  tall?: boolean
+}) => (
+  <div
+    className={cn(
+      "grid grid-cols-1 gap-5",
+      // Tall swatches are narrower, so fit more per row.
+      tall ? "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" : "lg:grid-cols-2"
+    )}
+  >
+    {children}
+  </div>
 )
 
 const Section = ({
@@ -597,59 +622,59 @@ export const FunctionalMasks: StoryObj = {
 /* Overview                                                           */
 /* ------------------------------------------------------------------ */
 
-export const AllGradients: StoryObj = {
-  render: () => (
-    <div className="divide-y divide-body-light">
-      <Section
-        title="1. Named utilities"
-        description="Canonical reusable set -- primary unification target."
-      >
-        <Grid>
-          {namedUtilities.map((spec) => (
-            <Swatch key={spec.name} spec={spec} />
+const overviewSections: {
+  title: string
+  description: string
+  specs: GradientSpec[]
+}[] = [
+  {
+    title: "1. Named utilities",
+    description: "Canonical reusable set -- primary unification target.",
+    specs: namedUtilities,
+  },
+  {
+    title: "2. Token-based inline",
+    description: "Semantic-token recipes, hand-copied across files.",
+    specs: tokenInline,
+  },
+  {
+    title: "3. Hardcoded hex",
+    description: "Literal hex -- the sprawl.",
+    specs: hexInline,
+  },
+  {
+    title: "4. Data-driven brand",
+    description: "Per-entity hues from data files.",
+    specs: dataDriven,
+  },
+  {
+    title: "5. Functional masks",
+    description: "Structural fades, out of scope for color unification.",
+    specs: functionalMasks,
+  },
+]
+
+/** Every gradient, all buckets. `tall` swaps the swatches to a portrait box. */
+const AllGradientsView = ({ tall }: { tall: boolean }) => (
+  <div className="divide-y divide-body-light">
+    {overviewSections.map(({ title, description, specs }) => (
+      <Section key={title} title={title} description={description}>
+        <Grid tall={tall}>
+          {specs.map((spec) => (
+            <Swatch key={spec.name} spec={spec} tall={tall} />
           ))}
         </Grid>
       </Section>
-      <Section
-        title="2. Token-based inline"
-        description="Semantic-token recipes, hand-copied across files."
-      >
-        <Grid>
-          {tokenInline.map((spec) => (
-            <Swatch key={spec.name} spec={spec} />
-          ))}
-        </Grid>
-      </Section>
-      <Section
-        title="3. Hardcoded hex"
-        description="Literal hex -- the sprawl."
-      >
-        <Grid>
-          {hexInline.map((spec) => (
-            <Swatch key={spec.name} spec={spec} />
-          ))}
-        </Grid>
-      </Section>
-      <Section
-        title="4. Data-driven brand"
-        description="Per-entity hues from data files."
-      >
-        <Grid>
-          {dataDriven.map((spec) => (
-            <Swatch key={spec.name} spec={spec} />
-          ))}
-        </Grid>
-      </Section>
-      <Section
-        title="5. Functional masks"
-        description="Structural fades, out of scope for color unification."
-      >
-        <Grid>
-          {functionalMasks.map((spec) => (
-            <Swatch key={spec.name} spec={spec} />
-          ))}
-        </Grid>
-      </Section>
-    </div>
-  ),
+    ))}
+  </div>
+)
+
+/** Wide (landscape) demo boxes -- good for banner/section-style gradients. */
+export const AllGradientsWide: StoryObj = {
+  render: () => <AllGradientsView tall={false} />,
+}
+
+/** Tall (portrait) demo boxes -- good for sidebar/card-style gradients. */
+export const AllGradientsTall: StoryObj = {
+  render: () => <AllGradientsView tall={true} />,
 }
