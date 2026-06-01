@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 
-import { Card } from "@/components/ui/card"
+import { Card, CardParagraph } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -32,9 +32,9 @@ const CommentCard = ({
         >
           {name.charAt(0)}
         </div>
-        <div>
-          <p className="leading-tight font-bold">{name}</p>
-          <p className="mt-1 text-sm leading-snug text-body-medium">{title}</p>
+        <div className="space-y-1">
+          <p className="leading-none font-bold">{name}</p>
+          <CardParagraph size="sm">{title}</CardParagraph>
         </div>
       </div>
     </Card>
