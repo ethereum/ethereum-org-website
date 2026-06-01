@@ -18,8 +18,10 @@ const buttonVariants = cva(
     "inline-flex gap-2 items-center justify-center rounded border border-solid transition [&>svg]:shrink-0",
     // Base default styling is "outline" pattern, primary color for text, border matches, no bg
     "text-primary border-current",
-    // Hover: Default hover adds box-shadow, text (border) to --primary-hover
-    "hover:!text-primary-hover hover:shadow-[4px_4px_hsla(var(--primary-low-contrast))]",
+    // Hover: Default hover adds box-shadow, text (border) to --primary-hover.
+    // `hover-link` also fires when an ancestor `group/link` (e.g. a clickable Card) is
+    // hovered, so a Button rendered as a non-interactive child mirrors the card's hover.
+    "hover-link:!text-primary-hover hover-link:shadow-[4px_4px_hsla(var(--primary-low-contrast))]",
     // Focus: Add 4px outline to all buttons, --primary-hover
     "focus-visible:outline focus-visible:outline-primary-hover focus-visible:outline-4 focus-visible:-outline-offset-1",
     // Active: text (border) to --primary-hover instead of primary, hide shadow
@@ -34,13 +36,13 @@ const buttonVariants = cva(
       variant: {
         solid: cn(
           "text-white bg-primary-action border-transparent",
-          "hover:!text-white hover:bg-primary-action-hover", // Hover
+          "hover-link:!text-white hover-link:bg-primary-action-hover", // Hover
           "active:bg-primary-action-hover", // Active
           "disabled:bg-disabled disabled:text-background" // Disabled
         ),
         outline: "", // Base styling
-        ghost: "border-transparent hover:shadow-none",
-        link: "border-transparent hover:shadow-none underline !min-h-0 !py-0 !px-1 active:text-primary",
+        ghost: "border-transparent hover-link:shadow-none",
+        link: "border-transparent hover-link:shadow-none underline !min-h-0 !py-0 !px-1 active:text-primary",
       },
       size: {
         lg: "text-lg py-3 px-8 [&>svg]:size-6 rounded-lg focus-visible:rounded-lg",
