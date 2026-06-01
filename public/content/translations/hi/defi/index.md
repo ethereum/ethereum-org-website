@@ -4,7 +4,7 @@ metaTitle: "DeFi क्या है? | विकेंद्रीकृत व
 description: "इथेरियम पर डीफाई का अवलोकन"
 lang: hi
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "lego ब्रिक्स से बना Eth लोगो।"
 sidebarDepth: 2
 summaryPoints:

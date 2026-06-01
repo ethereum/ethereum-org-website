@@ -4,7 +4,7 @@ description: "Một cái nhìn tổng quan của khoa học phi tập trung trê
 lang: vi
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Một giải pháp thay thế toàn cầu, rộng mở cho hệ thống khoa học hiện tại."

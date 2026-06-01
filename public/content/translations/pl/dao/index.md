@@ -5,7 +5,7 @@ description: "Przegląd DAO na Ethereum"
 lang: pl
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "Reprezentacja DAO głosującego nad wnioskiem."
 summaryPoints:
   - "Społeczności należące do członków bez scentralizowanego przywództwa."

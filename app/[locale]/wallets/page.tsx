@@ -32,7 +32,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import WalletsPageJsonLD from "./page-jsonld"
 import { WalletSimulator } from "./WalletSimulator"
 
-import DappsImage from "@/public/images/doge-computer.png"
+import DappsImage from "@/public/images/doge-shiba-robot-suit-at-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"

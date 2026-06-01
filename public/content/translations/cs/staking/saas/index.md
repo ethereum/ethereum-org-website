@@ -4,7 +4,7 @@ description: "Informace o uzamčení jako službě"
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "Nosorožec Leslie plovoucí v oblacích."
 sidebarDepth: 2
 summaryPoints:

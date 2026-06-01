@@ -5,7 +5,7 @@ description: "Un aperçu des DAO sur Ethereum"
 lang: fr
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "Une représentation d'une DAO qui vote une proposition."
 summaryPoints:
   - "Des communautés appartenant à leurs membres sans pouvoir centralisé."

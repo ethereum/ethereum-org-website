@@ -20,9 +20,9 @@ import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
 import { ChevronNext } from "../Chevron"
 
+import learnImage from "@/public/images/heroes/futuristic-community-center-glass-roof.png"
+import enterpriseImage from "@/public/images/heroes/sky-jungle-walkways-jumping.png"
 import developersImage from "@/public/images/homepage/get-started/developers.png"
-import enterpriseImage from "@/public/images/homepage/get-started/enterprise.png"
-import learnImage from "@/public/images/homepage/get-started/learn.png"
 
 type GetStartedGridProps = {
   className?: string

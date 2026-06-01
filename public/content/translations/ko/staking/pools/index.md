@@ -4,7 +4,7 @@ description: "스테이킹 풀에 대해 알아보기"
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: "수영장에서 수영하는 코뿔소 레슬리."
 sidebarDepth: 2
 summaryPoints:

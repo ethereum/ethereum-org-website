@@ -4,7 +4,7 @@ description: "Ein Überblick über ReFi und seine aktuellen Anwendungsfälle."
 lang: de
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Ein alternatives Wirtschaftssystem, das auf regenerativen Prinzipien aufbaut"

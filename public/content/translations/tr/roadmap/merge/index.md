@@ -3,7 +3,7 @@ title: "Birleşim"
 description: "Birleşim: Ana Ağ Ethereum'un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin."
 lang: tr
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "Ethereum Ana Ağı hisse ispatı kullanır, ancak her zaman geçerli olan durum bu değildi."

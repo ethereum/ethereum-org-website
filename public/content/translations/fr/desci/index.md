@@ -4,7 +4,7 @@ description: "Présentation de la science décentralisée sur Ethereum"
 lang: fr
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Une alternative globale et ouverte au système scientifique actuel. "

@@ -2,7 +2,7 @@
 title: Il gaming su Ethereum
 lang: it
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Le regole e lo stato del gioco possono essere applicati dalla blockchain di Ethereum, non dai server di uno studio, rappresentando un vantaggio chiave dei giochi on-chain"

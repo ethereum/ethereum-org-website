@@ -2,7 +2,7 @@
 title: "Škálování Etherea"
 description: "Rollupy združují transakce mimo blockchain, čímž uživateli snižují náklady za transakci. Současný způsob, jakým rollupy zpracovávají data, je však příliš drahý, což limituje, nakolik mohou transakce zlevnit. Tento problém řeší Proto-Danksharding."
 lang: cs
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "Plán Etherea"
 template: roadmap
 ---

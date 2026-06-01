@@ -52,9 +52,9 @@ import resourcesBanner from "@/public/images/developers/resources-banner.png"
 import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-screenshot.png"
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
-import dogeImage from "@/public/images/doge-computer.png"
+import dogeImage from "@/public/images/doge-shiba-robot-suit-at-computer.png"
 import fallbackThumbnail from "@/public/images/eth-glyph-thumbnail.png"
-import heroImage from "@/public/images/heroes/developers-hub-hero.png"
+import heroImage from "@/public/images/heroes/futuristic-community-center-glass-roof.png"
 
 const H3 = (props: ChildOnlyProp) => <h3 className="mt-10 mb-8" {...props} />
 

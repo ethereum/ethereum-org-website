@@ -72,7 +72,8 @@ export default async function StakingPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-staking-hero-title"),
         description: t("page-staking-meta-description"),
-        image: "https://ethereum.org/images/upgrades/upgrade_rhino.png",
+        image:
+          "https://ethereum.org/images/upgrades/leslie-rhino-mascot-running.png",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         contributor: contributorList,
         publisher: REFERENCE.ETHEREUM_FOUNDATION,

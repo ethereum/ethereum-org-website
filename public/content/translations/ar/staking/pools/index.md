@@ -4,7 +4,7 @@ description: "تعرف على مجموعات الرهان"
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/staking/leslie-rhino-mascot-swimming-pool.png
 alt: "يسبح ليزلي فرس النهر في حمام السباحة."
 sidebarDepth: 2
 summaryPoints:

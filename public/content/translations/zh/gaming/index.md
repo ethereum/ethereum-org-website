@@ -2,7 +2,7 @@
 title: "以太坊游戏"
 lang: zh
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "游戏规则和状态可由以太坊区块链（而非工作室的服务器）强制执行，这是链上游戏的一大关键优势"

@@ -2,7 +2,7 @@
 title: Gry na Ethereum
 lang: pl
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Zasady gry i jej stan mogą być egzekwowane przez blockchain Ethereum, a nie serwery studia, co stanowi kluczową korzyść gier na łańcuchu"

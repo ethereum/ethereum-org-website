@@ -3,7 +3,7 @@ title: The Merge
 description: Learn about The Merge - when Mainnet Ethereum adopted proof-of-stake.
 lang: en
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt: 
 summaryPoints:
   - "Ethereum Mainnet uses proof-of-stake, but this wasn't always the case."

@@ -2,7 +2,7 @@
 title: Kuongeza Ethereum
 description: Muunganiko wa miamala pamoja nje ya mtandao, kupunguza gharama kwa mtumiaji. Hata hivyo, namna muunganiko wa miamala inavyotumia data kwa sasa ni ghali sana, na kunazuia miamala kuwa ya bei nafuu zaidi. Proto-Danksharding inarekebisha hili.
 lang: sw
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "Ramani ya maendeleo ya Ethereum"
 template: roadmap
 ---

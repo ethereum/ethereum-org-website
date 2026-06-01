@@ -4,7 +4,7 @@ metaTitle: "分散型金融(DeFi)とは | 分散型金融の利点と使用法"
 description: "イーサリアムにおける分散型金融(DeFi)の概要"
 lang: ja
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "レゴブロックで作られたETHのロゴ"
 sidebarDepth: 2
 summaryPoints:

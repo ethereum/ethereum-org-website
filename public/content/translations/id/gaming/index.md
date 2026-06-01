@@ -2,7 +2,7 @@
 title: Gaming di Ethereum
 lang: id
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Aturan dan status game dapat ditegakkan oleh blockchain Ethereum, bukan server studio, yang merupakan manfaat utama dari game onchain"

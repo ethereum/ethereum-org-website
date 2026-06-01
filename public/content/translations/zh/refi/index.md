@@ -4,7 +4,7 @@ description: "再生金融及主流用例概览。"
 lang: zh
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "一种构建于再生原则之上的替代经济体系"

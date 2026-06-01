@@ -3,7 +3,7 @@ title: "ది మెర్జ్"
 description: "ది మెర్జ్ గురించి తెలుసుకోండి - మెయిన్‌నెట్ ఇతీరియము ప్రూఫ్-ఆఫ్-స్టేక్‌ను స్వీకరించినప్పుడు."
 lang: te
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "ఇతీరియము మెయిన్‌నెట్ ప్రూఫ్-ఆఫ్-స్టేక్‌ను ఉపయోగిస్తుంది, కానీ ఇది ఎల్లప్పుడూ అలా లేదు."

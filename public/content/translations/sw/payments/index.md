@@ -5,7 +5,7 @@ description: Maelezo ya malipo juu ya Ethereum
 lang: sw
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: Nembo ya Eth kuonyeshwa pamoja na kupeana mikono.
 summaryPoints:
   - "Ulimwengu ambamo pesa hutiririka kwa uhuru kama habari"

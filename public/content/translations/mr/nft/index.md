@@ -5,7 +5,7 @@ description: "Ethereum वर NFT चे विहंगावलोकन"
 lang: mr
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "होलोग्रामद्वारे Ethचा लोगो प्रदर्शित केले जात आहे."
 summaryPoints:
   - "Ethereum-आधारित मालमत्ता म्हणून अद्वितीय कोणत्याही गोष्टीचे प्रतिनिधित्व करण्याचा एक मार्ग."

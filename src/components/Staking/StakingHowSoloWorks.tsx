@@ -5,7 +5,7 @@ import { Center } from "@/components/ui/flex"
 
 import { ListItem, OrderedList } from "../ui/list"
 
-import image from "@/public/images/hackathon_transparent.png"
+import image from "@/public/images/person-repairing-vintage-computer-screwdriver.png"
 
 const StakingHowSoloWorks = () => {
   const items = [

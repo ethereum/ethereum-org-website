@@ -3,7 +3,7 @@ title: "信標鏈（Beacon Chain）"
 description: "瞭解信標鍊 - 將權益證明引入以太坊的升級。"
 lang: zh-tw
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "信標鏈將權益證明引入以太坊生態系統。"

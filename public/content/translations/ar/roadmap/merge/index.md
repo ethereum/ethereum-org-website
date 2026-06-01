@@ -3,7 +3,7 @@ title: "الدمج"
 description: "تعرّف على الدمج - عندما تبنت الشبكة الرئيسية إثيريوم إثبات الحصة."
 lang: ar
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "تستخدم الشبكة الرئيسية لإثيريوم إثبات الحصة، بيد أن ذلك ليس الوضع دائمًا."

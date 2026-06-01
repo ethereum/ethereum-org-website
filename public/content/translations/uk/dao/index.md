@@ -5,7 +5,7 @@ description: "Огляд DAO на Ethereum"
 lang: uk
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "Представлення голосувань DAO за пропозицію."
 summaryPoints:
   - "Спільноти, що належать учасникам, без централізованого керування."

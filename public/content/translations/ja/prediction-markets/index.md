@@ -2,7 +2,7 @@
 title: "予測市場"
 lang: ja
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "金融的インセンティブを受け取って正確な予測を実行"

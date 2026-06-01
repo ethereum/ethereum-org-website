@@ -2,7 +2,7 @@
 title: Peningkatan Ethereum
 description: Rollup menggabungkan transaksi bersama secara offchain, mengurangi biaya bagi pengguna. Namun, cara rollup saat ini menggunakan data terlalu mahal, membatasi seberapa murah transaksi bisa dilakukan. Proto-Danksharding memperbaiki hal ini.
 lang: id
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "Peta jalan Ethereum"
 template: roadmap
 ---

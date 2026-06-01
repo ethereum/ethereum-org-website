@@ -4,7 +4,7 @@ description: "సేవగా స్టాకింగ్ గురించి 
 lang: te
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "మేఘాలలో తేలుతున్న లెస్లీ అనే ఖడ్గమృగం."
 sidebarDepth: 2
 summaryPoints:

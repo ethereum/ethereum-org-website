@@ -3,7 +3,7 @@ title: Der Merge
 description: "Erfahren Sie mehr über den Merge – als das Ethereum-Mainnet auf Proof-of-Stake umstellte."
 lang: de
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt: 
 summaryPoints:
   - "Das Ethereum-Mainnet verwendet Proof-of-Stake, aber das war nicht immer so."

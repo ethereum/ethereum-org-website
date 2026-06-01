@@ -4,7 +4,7 @@ metaTitle: "DeFi nedir? Merkeziyetsiz Finans'ın Kullanımı ve Yararları"
 description: "Ethereum'da DeFi'ye genel bakış"
 lang: tr
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "Lego parçalarından yapılmış bir Eth logosu."
 sidebarDepth: 2
 summaryPoints:

@@ -5,7 +5,7 @@ description: Gambaran umum tentang DAO di Ethereum
 lang: id
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: Representasi DAO yang sedang memberikan suara pada sebuah proposal.
 summaryPoints:
   - "Komunitas milik anggota tanpa kepemimpinan terpusat."

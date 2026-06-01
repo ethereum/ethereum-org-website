@@ -2,7 +2,7 @@
 title: Ethereum salama zaidi
 description: Ethereum ndilo jukwaa salama zaidi na lililogatuliwa la kandarasi mahiri kuwapo. Hata hivyo, bado kuna maboresho ambayo yanaweza kufanywa ili Ethereum iendelee kustahimili kiwango chochote cha mashambulizi katika siku zijazo.
 lang: sw
-image: /images/roadmap/roadmap-security.png
+image: /images/roadmap/isometric-platform-shield-icon.png
 alt: "Ramani ya maendeleo ya Ethereum"
 template: roadmap
 ---

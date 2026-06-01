@@ -2,7 +2,7 @@
 title: "எத்தேரியத்தை அளவிடுதல்"
 description: "ரோலப்கள் (Rollups) பரிவர்த்தனைகளை ஆஃப்செயினில் (offchain) ஒன்றாகத் தொகுத்து, பயனருக்கான செலவுகளைக் குறைக்கின்றன. இருப்பினும், ரோலப்கள் தற்போது தரவைப் பயன்படுத்தும் விதம் மிகவும் விலை உயர்ந்தது, இது பரிவர்த்தனைகள் எவ்வளவு மலிவாக இருக்கும் என்பதைக் கட்டுப்படுத்துகிறது. புரோட்டோ-டாங்க்ஷார்டிங் (Proto-Danksharding) இதைச் சரிசெய்கிறது."
 lang: ta
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "Ethereum roadmap"
 template: roadmap
 ---

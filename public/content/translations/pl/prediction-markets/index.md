@@ -2,7 +2,7 @@
 title: Rynki prognostyczne
 lang: pl
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "Otrzymuj zachęty finansowe za tworzenie trafnych prognoz"

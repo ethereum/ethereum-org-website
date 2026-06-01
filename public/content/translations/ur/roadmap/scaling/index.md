@@ -2,7 +2,7 @@
 title: "ایتھریم کی اسکیلنگ"
 description: "رول اپس (Rollups) ٹرانزیکشنز کو آف چین ایک ساتھ بیچ (batch) کرتے ہیں، جس سے صارف کے لیے لاگت کم ہوتی ہے۔ تاہم، رول اپس فی الحال جس طرح سے ڈیٹا استعمال کرتے ہیں وہ بہت مہنگا ہے، جو اس بات کو محدود کرتا ہے کہ ٹرانزیکشنز کتنی سستی ہو سکتی ہیں۔ پروٹو-ڈینکشیرڈنگ (Proto-Danksharding) اسے ٹھیک کرتا ہے۔"
 lang: ur
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "ایتھریم روڈ میپ"
 template: roadmap
 ---

@@ -4,7 +4,7 @@ metaTitle: "ما هي ؟ | فوائد واستخدام الأصول الحقيق
 description: "نظرة عامة على الأصول الحقيقية على إيثيريوم"
 lang: ar
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "رجل و كلب يلعبان."
 sidebarDepth: 2
 summaryPoints:

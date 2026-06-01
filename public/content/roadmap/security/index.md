@@ -2,7 +2,7 @@
 title: A more secure Ethereum
 description: Ethereum is the most secure and decentralized smart-contract platform in existence. However, there are still improvements that can be made so that Ethereum stays resilient to any level of attack far into the future.
 lang: en
-image: /images/roadmap/roadmap-security.png
+image: /images/roadmap/isometric-platform-shield-icon.png
 alt: "Ethereum roadmap"
 template: roadmap
 ---

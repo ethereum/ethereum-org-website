@@ -16,6 +16,7 @@ import {
 import type { DashboardBox, DashboardSection } from "./types"
 
 import { getEthPrice } from "@/lib/data"
+import IconEtherscan from "@/public/images/projects/etherscan-logo-circle.png"
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
 import IconBlocknative from "@/public/images/resources/blocknative.png"
@@ -31,7 +32,6 @@ import IconEthGlyphBlueCircle from "@/public/images/resources/eth-glyph-blue-cir
 import IconEthGlyphEOrg from "@/public/images/resources/eth-glyph-e-org.png"
 import IconEthGlyphRainbowFrame from "@/public/images/resources/eth-glyph-rainbow-frame.png"
 import IconEtherealize from "@/public/images/resources/etherealize.png"
-import IconEtherscan from "@/public/images/resources/etherscan.png"
 import IconEthproofs from "@/public/images/resources/ethproofs.png"
 import IconFarcaster from "@/public/images/resources/farcaster.png"
 import IconGasTracker from "@/public/images/resources/gas.png"
@@ -51,8 +51,8 @@ import IconStablecoinsWtf from "@/public/images/resources/stablecoins-wtf.png"
 import IconSupermajority from "@/public/images/resources/supermajority.png"
 import IconTxCity from "@/public/images/resources/txcity.png"
 import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
-import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
 import IconWalletBeat from "@/public/images/resources/walletbeat.png"
+import IconVisaOnchainAnalytics from "@/public/images/stablecoins/tools/visa.png"
 
 export const getResources = async ({
   txCostsMedianUsd,

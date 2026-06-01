@@ -8,10 +8,10 @@ import { Section, SectionHeader } from "@/components/ui/section"
 import { cn } from "@/lib/utils/cn"
 import { formatSmallUSD } from "@/lib/utils/numbers"
 
-import freeAccessImage from "@/public/images/homepage/features/free-access.png"
-import globalImage from "@/public/images/homepage/features/global.png"
-import ownershipImage from "@/public/images/homepage/features/ownership.png"
-import publicRulesImage from "@/public/images/homepage/features/public-rules.png"
+import publicRulesImage from "@/public/images/crystal-projection-screen-keyboard-smart-contract.png"
+import ownershipImage from "@/public/images/eth-glyph-hands-palms-up.png"
+import globalImage from "@/public/images/hand-with-3d-eth-glyph-lego-blocks.png"
+import freeAccessImage from "@/public/images/upgrades/beacon-spaceship-grounded.png"
 
 type FeatureCardsProps = {
   className?: string

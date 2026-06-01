@@ -4,7 +4,7 @@ description: "Огляд децентралізованих наук на Ethere
 lang: uk
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Глобальна, відкрита альтернатива сучасній науковій системі."

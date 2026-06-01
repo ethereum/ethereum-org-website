@@ -4,7 +4,7 @@ description: "इथेरियम पर विकेंद्रीकृत 
 lang: hi
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "सामाजिक संपर्क, सामग्री निर्माण और वितरण के लिए ब्लॉकचेन-आधारित प्लेटफ़ॉर्म।"
   - "विकेंद्रीकृत सोशल मीडिया नेटवर्क उपयोगकर्ता की गोपनीयता की रक्षा करते हैं और डेटा सुरक्षा बढ़ाते हैं।"

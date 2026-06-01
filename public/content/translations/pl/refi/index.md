@@ -4,7 +4,7 @@ description: "Przegląd ReFi i jego obecnych zastosowań."
 lang: pl
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Alternatywny system ekonomiczny oparty na zasadach regeneracji"

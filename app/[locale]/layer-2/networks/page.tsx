@@ -32,9 +32,9 @@ import {
   getGrowThePieMasterData,
   getL2beatData,
 } from "@/lib/data"
-import heroImg from "@/public/images/heroes/layer-2-hub-hero.png"
-import Callout2Image from "@/public/images/layer-2/layer-2-walking.png"
-import Callout1Image from "@/public/images/man-and-dog-playing.png"
+import heroImg from "@/public/images/heroes/futuristic-community-center-trees-central-column.png"
+import Callout1Image from "@/public/images/man-playing-with-robot-shiba-dog.png"
+import Callout2Image from "@/public/images/two-people-walking-and-talking.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -246,7 +246,8 @@ export async function generateMetadata(props: {
     slug: ["layer-2", "networks"],
     title: t("page-layer-2-networks-meta-title"),
     description: t("page-layer-2-networks-hero-description"),
-    image: "/images/heroes/layer-2-hub-hero.png",
+    image:
+      "/images/heroes/futuristic-community-center-trees-central-column.png",
   })
 }
 

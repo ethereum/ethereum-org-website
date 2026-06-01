@@ -4,7 +4,7 @@ description: "Tổng quan về ReFi."
 lang: vi
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Một hệ thống kinh tế thay thế được xây dựng trên các nguyên tắc tái tạo"

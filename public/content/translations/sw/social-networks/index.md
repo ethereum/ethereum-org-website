@@ -4,7 +4,7 @@ description: Muhtasari wa mitandao ya kijamii iliyogatuliwa kwenye Ethereum
 lang: sw
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Mifumo inayotegemea mnyororo wa bloku kwa ajili ya mwingiliano wa kijamii na uundaji na usambazaji wa maudhui."
   - "Mitandao ya kijamii iliyogatuliwa hulinda faragha ya mtumiaji na kuimarisha usalama wa data."

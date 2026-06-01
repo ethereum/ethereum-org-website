@@ -4,7 +4,7 @@ description: "ReFi'ye ve mevcut kullanım durumlarına genel bakış."
 lang: tr
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Yenileyici ilkeler üzerine inşa edilmiş alternatif bir ekonomik sistem"

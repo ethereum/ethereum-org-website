@@ -19,7 +19,7 @@ import CollectiblesPreviousYears from "../CollectiblesPreviousYears"
 import CollectiblesProgress from "../CollectiblesProgress/lazy"
 
 import useTranslation from "@/hooks/useTranslation"
-import alreadyContributorImg from "@/public/images/10-year-anniversary/adoption-1.png"
+import alreadyContributorImg from "@/public/images/10-year-anniversary/two-people-conversing-walking.png"
 
 export type BadgeWithOwned = Badge & {
   owned: boolean

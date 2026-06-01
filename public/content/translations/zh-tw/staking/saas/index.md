@@ -4,7 +4,7 @@ description: "了解質押即服務"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "漂浮在雲端的犀牛萊斯利。"
 sidebarDepth: 2
 summaryPoints:

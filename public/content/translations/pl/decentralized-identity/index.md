@@ -4,7 +4,7 @@ description: "Czym jest zdecentralizowana tożsamość i dlaczego jest ważna?"
 lang: pl
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "W tradycyjnych systemach tożsamości wydawanie, utrzymywanie i kontrola Twoich identyfikatorów są scentralizowane."
   - "Tożsamość zdecentralizowana usuwa zależność od scentralizowanych podmiotów trzecich."

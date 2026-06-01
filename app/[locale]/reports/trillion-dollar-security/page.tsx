@@ -15,7 +15,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import TrillionDollarSecurityPageJsonLD from "./page-jsonld"
 
 import TdsHero from "@/public/images/trillion-dollar-security/hero.png"
-import TdsReport from "@/public/images/trillion-dollar-security/report.png"
+import TdsReport from "@/public/images/trillion-dollar-security/trillion-dollar-security-report-cover.png"
 
 const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
   <Card size="lg">

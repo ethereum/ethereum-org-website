@@ -5,7 +5,7 @@ description: "Ethereum वर DAO चे विहंगावलोकन"
 lang: mr
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "प्रस्तावावर मतदान करणाऱ्या DAO चे प्रतिनिधित्व."
 summaryPoints:
   - "केंद्रीकृत नेतृत्वाशिवाय सदस्यांच्या मालकीचे समुदाय."

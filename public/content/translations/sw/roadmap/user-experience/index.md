@@ -2,7 +2,7 @@
 title: Kuboresha uzoefu wa mtumiaji
 description: Bado ni vigumu sana kwa watu wengi kutumia Ethereum. Ili kuhamasisha kukubalika na umma, Ethereum inapaswa kupunguza sana vikwazo vya kujiunga. Watumiaji wanapaswa kupata manufaa ya kutumia Ethereum kwa njia iliyogatuliwa, isiyo na ruhusa, na isiyoweza kudhibitiwa, lakini iwe rahisi kama kutumia programu ya kawaida ya web2.
 lang: sw
-image: /images/roadmap/roadmap-ux.png
+image: /images/roadmap/isometric-platform-cursor-icon.png
 alt: "Ramani ya maendeleo ya Ethereum"
 template: roadmap
 ---

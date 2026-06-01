@@ -2,7 +2,7 @@
 title: "Hraní her na Ethereu"
 lang: cs
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Pravidla hry a její stav může vynucovat blockchain Etherea, nikoli servery studia, což je klíčová výhoda her na blockchainu."

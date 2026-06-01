@@ -4,7 +4,7 @@ description: "Przegląd zdecentralizowanych serwisów społecznościowych w Ethe
 lang: pl
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Oparte na łańcuchu bloków platformy umożliwiające interakcje społeczne oraz tworzenie i rozpowszechnianie treści."
   - "Zdecentralizowane sieci mediów społecznościowych zapewniają ochronę prywatności użytkowników i większe bezpieczeństwo danych."

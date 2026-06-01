@@ -25,9 +25,9 @@ import { formatPriceUSD, numberFormat } from "@/lib/utils/numbers"
 
 import FloatingCard from "./FloatingCard"
 
-import borrowingImage from "@/public/images/homepage/savings/borrowing.png"
-import defiImage from "@/public/images/homepage/savings/defi.png"
-import remittancesImage from "@/public/images/homepage/savings/remittances.png"
+import defiImage from "@/public/images/heroes/futuristic-community-center-floating-glyph-talking-foreground.png"
+import borrowingImage from "@/public/images/heroes/futuristic-community-center-glass-roof.png"
+import remittancesImage from "@/public/images/heroes/sky-jungle-walkways-jumping.png"
 
 type ComparisonItem = {
   label: string

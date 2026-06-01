@@ -3,7 +3,7 @@ title: "더 머지 (The Merge)"
 description: "더 머지(The Merge)에 대해 알아보기 - 이더리움 메인넷에 지분증명(PoS)이 적용된 날"
 lang: ko
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "이더리움 메인넷은 지분 증명을 사용하지만, 처음부터 그랬던 것은 아닙니다."

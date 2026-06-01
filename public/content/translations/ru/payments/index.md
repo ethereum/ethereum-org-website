@@ -5,7 +5,7 @@ description: "Обзор платежей на Ethereum"
 lang: ru
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "Логотип Eth показан с передающими его руками."
 summaryPoints:
   - "Мир, где деньги перемещаются также свободно, как информация"

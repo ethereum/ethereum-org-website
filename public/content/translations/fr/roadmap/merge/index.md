@@ -3,7 +3,7 @@ title: La Fusion
 description: "En savoir plus sur La Fusion - quand le réseau principal Ethereum adopte la preuve d'enjeu."
 lang: fr
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas."

@@ -4,7 +4,7 @@ description: Jifunze zaidi kuhusu kuwekeza kama huduma
 lang: sw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: Leslie kifaru anayepepea mawinguni.
 sidebarDepth: 2
 summaryPoints:

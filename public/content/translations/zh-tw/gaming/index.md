@@ -2,7 +2,7 @@
 title: "以太坊遊戲"
 lang: zh-tw
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "遊戲規則與狀態可由以太坊區塊鏈強制執行，而非工作室的伺服器，這是鏈上遊戲的一大關鍵優勢"

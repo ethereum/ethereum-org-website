@@ -24,7 +24,7 @@ import { INITIAL_QUIZ } from "@/lib/constants"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useTranslation } from "@/hooks/useTranslation"
-import HeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
+import HeroImage from "@/public/images/heroes/sky-jungle-walkways-jumping.png"
 
 const handleGHAdd = () =>
   trackCustomEvent({

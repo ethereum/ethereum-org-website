@@ -45,14 +45,14 @@ import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
 import WhatIsEthereumPageJsonLD from "./page-jsonld"
 
-import contributionBanner from "@/public/images/doge-computer.png"
-import whatBanner from "@/public/images/eth.png"
-import howBanner from "@/public/images/hackathon_transparent.png"
-import startBanner from "@/public/images/heroes/guides-hub-hero.jpg"
-import networksBanner from "@/public/images/heroes/learn-hub-hero.png"
-import etherBanner from "@/public/images/impact_transparent.png"
-import whenWhoBanner from "@/public/images/walking.png"
-import heroImg from "@/public/images/what-is-ethereum.png"
+import contributionBanner from "@/public/images/doge-shiba-robot-suit-at-computer.png"
+import etherBanner from "@/public/images/eth-glyph-hands-palms-up.png"
+import whatBanner from "@/public/images/four-people-doge-pink-3d-floating-eth-glyph.png"
+import networksBanner from "@/public/images/heroes/futuristic-community-center-floating-glyph-talking-foreground.png"
+import startBanner from "@/public/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg"
+import howBanner from "@/public/images/person-repairing-vintage-computer-screwdriver.png"
+import heroImg from "@/public/images/man-viewing-bazaar-through-three-windows.png"
+import whenWhoBanner from "@/public/images/two-people-walking-and-talking.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -1111,7 +1111,7 @@ export async function generateMetadata(props: {
     slug: ["what-is-ethereum"],
     title: t("page-what-is-ethereum-meta-title"),
     description: t("page-what-is-ethereum-meta-description"),
-    image: "/images/what-is-ethereum.png",
+    image: "/images/man-viewing-bazaar-through-three-windows.png",
   })
 }
 

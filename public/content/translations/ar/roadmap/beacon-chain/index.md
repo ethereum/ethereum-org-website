@@ -3,7 +3,7 @@ title: "سلسلة المنارة"
 description: "تعرّف على سلسلة المنارة - الترقية التي جعلت إثيريوم جزءًا من إثبات الحصة."
 lang: ar
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "قدمت سلسلة المنارة إثبات الحصة في منظومة إثيريوم."

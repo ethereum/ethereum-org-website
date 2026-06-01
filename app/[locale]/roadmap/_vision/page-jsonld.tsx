@@ -78,7 +78,8 @@ export default async function RoadmapVisionPageJsonLD({
         isPartOf: webPageId,
         headline: t("page-roadmap-vision-title"),
         description: t("page-roadmap-vision-subtitle"),
-        image: "https://ethereum.org/images/upgrades/oldship.png",
+        image:
+          "https://ethereum.org/images/upgrades/gold-rollup-spaceship-with-red-thrusters.png",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,

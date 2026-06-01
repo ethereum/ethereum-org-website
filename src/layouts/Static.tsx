@@ -36,7 +36,7 @@ import WhitepaperBridge from "@/components/WhitepaperBridge"
 import { getEditPath } from "@/lib/utils/editPath"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
+import GuideHeroImage from "@/public/images/heroes/futuristic-marketplace-hub-counters-people-robots.jpg"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1 className="md:text-5xl" {...props} />

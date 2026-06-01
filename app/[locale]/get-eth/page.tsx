@@ -47,10 +47,10 @@ import CentralizedExchanges from "./_components/CentralizedExchangesLazy"
 import GetEthPageJsonLD from "./page-jsonld"
 
 import uniswap from "@/public/images/dapps/uni.png"
-import dapps from "@/public/images/doge-computer.png"
+import dapps from "@/public/images/doge-shiba-robot-suit-at-computer.png"
+import wallet from "@/public/images/ethereum-robot-standing.png"
 import bancor from "@/public/images/exchanges/bancor.png"
-import hero from "@/public/images/get-eth.png"
-import wallet from "@/public/images/wallet.png"
+import hero from "@/public/images/various-eth-glyphs-white-circles.png"
 
 type CardProps = {
   children: ReactNode

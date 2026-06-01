@@ -4,7 +4,7 @@ metaTitle: "DeFi म्हणजे काय? | विकेंद्रित 
 description: "Ethereum वर DeFi चे विहंगावलोकन"
 lang: mr
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "lego विटांनी बनवलेला Eth लोगो."
 sidebarDepth: 2
 summaryPoints:

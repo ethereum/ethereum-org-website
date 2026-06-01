@@ -44,7 +44,7 @@ import StakingCommunityCallout from "./_components/StakingCommunityCallout"
 import StakingPageJsonLD from "./page-jsonld"
 
 import { getBeaconchainData } from "@/lib/data"
-import rhino from "@/public/images/upgrades/upgrade_rhino.png"
+import rhino from "@/public/images/upgrades/leslie-rhino-mascot-running.png"
 
 const PageContainer = (props: ChildOnlyProp) => (
   <VStack className="mx-auto w-full gap-0" {...props} />
@@ -589,7 +589,7 @@ export async function generateMetadata(props: {
     slug: ["staking"],
     title: t("page-staking-meta-title"),
     description: t("page-staking-meta-description"),
-    image: "/images/upgrades/upgrade_rhino.png",
+    image: "/images/upgrades/leslie-rhino-mascot-running.png",
   })
 }
 

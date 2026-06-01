@@ -3,7 +3,7 @@ title: "ビーコンチェーン"
 description: "ビーコンチェーン - プルーフ・オブ・ステークのイーサリアム導入アップグレード"
 lang: ja
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "イーサリアムエコシステムにプルーフ・オブ・ステークの導入を可能にしたのが、ビーコンチェーンです。"

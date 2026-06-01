@@ -3,7 +3,7 @@ title: "A Cadeia de Sinalização/Beacon"
 description: "Saiba mais sobre a Beacon Chain — a melhoria que introduziu a prova de participação no Ethereum."
 lang: pt-br
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "A Beacon Chain introduziu a prova de participação no ecossistema Ethereum."

@@ -4,7 +4,7 @@ description: Une vue d'ensemble de la ReFi et de ses cas d'utilisation actuels.
 lang: fr
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Un système économique alternatif fondé sur des principes de régénération"

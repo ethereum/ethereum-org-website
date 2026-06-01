@@ -30,15 +30,15 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CommunityJsonLD from "./page-jsonld"
 
-import developersEthBlockImg from "@/public/images/developers-eth-blocks.png"
-import dogeComputerImg from "@/public/images/doge-computer.png"
-import ethImg from "@/public/images/eth.png"
-import financeTransparentImg from "@/public/images/finance_transparent.png"
-import futureTransparentImg from "@/public/images/future_transparent.png"
-import hackathonTransparentImg from "@/public/images/hackathon_transparent.png"
-import communityHeroImg from "@/public/images/heroes/community-hero.png"
-import upgradesCoreImg from "@/public/images/upgrades/core.png"
-import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
+import futureTransparentImg from "@/public/images/crystal-projection-screen-keyboard-smart-contract.png"
+import dogeComputerImg from "@/public/images/doge-shiba-robot-suit-at-computer.png"
+import financeTransparentImg from "@/public/images/eth-glyph-lego-bricks-laurel-wreath.png"
+import ethImg from "@/public/images/four-people-doge-pink-3d-floating-eth-glyph.png"
+import developersEthBlockImg from "@/public/images/hand-with-3d-eth-glyph-lego-blocks.png"
+import communityHeroImg from "@/public/images/heroes/forest-deck-campfire-gathering-people-robot.png"
+import hackathonTransparentImg from "@/public/images/person-repairing-vintage-computer-screwdriver.png"
+import whatIsEthereumImg from "@/public/images/man-viewing-bazaar-through-three-windows.png"
+import upgradesCoreImg from "@/public/images/upgrades/beacon-spaceship-grounded.png"
 
 const Content = ({ children }: ChildOnlyProp) => (
   <div className="w-full px-8 py-4">{children}</div>

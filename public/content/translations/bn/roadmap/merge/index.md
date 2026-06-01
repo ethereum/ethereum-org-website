@@ -3,7 +3,7 @@ title: "দ্য মার্জ"
 description: "দ্য মার্জ সম্পর্কে জানুন - যখন মেইননেট ইথিরিয়াম প্রুফ-অফ-স্টেক গ্রহণ করেছিল।"
 lang: bn
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt: 
 summaryPoints:
   - "ইথিরিয়াম মেইননেট প্রুফ-অফ-স্টেক ব্যবহার করে, তবে এটি সবসময় এমন ছিল না।"

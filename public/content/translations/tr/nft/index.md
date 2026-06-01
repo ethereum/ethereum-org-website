@@ -5,7 +5,7 @@ description: "Ethereum'da NFT'lere genel bakış"
 lang: tr
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "Hologram ile gösterilen bir Eth logosu."
 summaryPoints:
   - "Benzersiz herhangi şeyi Ethereum tabanlı bir varlık olarak temsil etmenin yolu."

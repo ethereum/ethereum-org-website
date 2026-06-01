@@ -4,7 +4,7 @@ metaTitle: What are RWAs? | Benefits and Use of Real-world assets
 description: An overview of Real-world assets on Ethereum
 lang: en
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: Man and dog playing.
 sidebarDepth: 2
 summaryPoints:

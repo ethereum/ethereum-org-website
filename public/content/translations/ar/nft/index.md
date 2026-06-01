@@ -5,7 +5,7 @@ description: "نظرة عامة على الرموز المميزة غير الق
 lang: ar
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "يتم عرض شعار Eth عبر الهولوغرام."
 summaryPoints:
   - "طريقة لتمثيل أي شيء فريد كأصل مستند إلى إثيريوم."

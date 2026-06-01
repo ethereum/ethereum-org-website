@@ -4,7 +4,7 @@ description: "如何開始單獨質押以太幣的概覽"
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "萊斯利犀牛在她自己的電腦晶片上。"
 sidebarDepth: 2
 summaryPoints:

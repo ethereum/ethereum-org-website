@@ -5,7 +5,7 @@ description: "ایتھریم پر DAOs کا جائزہ"
 lang: ur
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "ایک تجویز پر ووٹنگ کرتے ہوئے DAO کی نمائندگی۔"
 summaryPoints:
   - "مرکزی قیادت کے بغیر ممبران کی ملکیت والی کمیونٹیز۔"

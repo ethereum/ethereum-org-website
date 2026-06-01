@@ -4,7 +4,7 @@ description: "Ethereum वर विकेंद्रित विज्ञा�
 lang: mr
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "सध्याच्या वैज्ञानिक प्रणालीसाठी जागतिक, खुला पर्याय."

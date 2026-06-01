@@ -4,7 +4,7 @@ description: "বিকেন্দ্রীভূত পরিচয় কী 
 lang: bn
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "ঐতিহ্যগত পরিচয় সিস্টেমগুলি আপনার শনাক্তকারী বৈশিষ্টসমূহের ইস্যুকরণ, রক্ষণাবেক্ষণ এবং নিয়ন্ত্রণকে কেন্দ্রীভূত করেছে।"
   - "বিকেন্দ্রীভূত পরিচয় কেন্দ্রীভূত তৃতীয় পক্ষের উপর নির্ভরতা দূর করে।"

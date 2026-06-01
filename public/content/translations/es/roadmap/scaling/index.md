@@ -2,7 +2,7 @@
 title: Escalar en Ethereum
 description: "Los rollups agrupan transacciones fuera de cadena, reduciendo los costes para el usuario. Sin embargo, la forma en que los rollups usan datos actualmente es muy costosa, limitando cuán baratas pueden ser las transacciones. Proto-anksharing se encarga de solucionarlo."
 lang: es
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "Hoja de ruta de Ethereum"
 template: roadmap
 ---

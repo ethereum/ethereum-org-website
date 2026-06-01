@@ -4,7 +4,7 @@ metaTitle: "Что такое RWA? Преимущества использова
 description: "Обзор активов реального мира на Ethereum"
 lang: ru
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: "Мужчина и собака играют."
 sidebarDepth: 2
 summaryPoints:

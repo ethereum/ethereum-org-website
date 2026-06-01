@@ -3,7 +3,7 @@ title: "マージ"
 description: "マージについて - イーサリアムメインネットへのプルーフ・オブ・ステークの導入"
 lang: ja
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "イーサリアムメインネットは現在プルーフ・オブ・ステークを使用していますが、これまではそうではありませんでした。"

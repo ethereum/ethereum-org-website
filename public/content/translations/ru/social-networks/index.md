@@ -4,7 +4,7 @@ description: "Обзор децентрализованных социальны
 lang: ru
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Платформы на основе блокчейна для социального взаимодействия, создания и распространения контента."
   - "Децентрализованные социальные сети защищают конфиденциальность пользователей и повышают безопасность данных."

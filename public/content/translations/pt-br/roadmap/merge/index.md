@@ -3,7 +3,7 @@ title: "The Merge (A Fusão)"
 description: "Aprenda sobre A Fusão — quando a Rede principal do Ethereum adotou a prova de participação."
 lang: pt-br
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "A rede principal do Ethereum usa prova de participação, mas esse nem sempre foi o caso."

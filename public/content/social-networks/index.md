@@ -4,7 +4,7 @@ description: An overview of decentralized social networks on Ethereum
 lang: en
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Blockchain-based platforms for social interaction and content creation and distribution."
   - "Decentralized social media networks protect user privacy and enhance data security."

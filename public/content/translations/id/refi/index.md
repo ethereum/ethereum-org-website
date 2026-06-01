@@ -4,7 +4,7 @@ description: Gambaran umum tentang ReFi dan kasus penggunaannya saat ini.
 lang: id
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Sistem ekonomi alternatif yang dibangun di atas prinsip-prinsip regeneratif"

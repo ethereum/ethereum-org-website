@@ -2,7 +2,7 @@
 title: Jeux sur Ethereum
 lang: fr
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Les règles du jeu et l'état peuvent être appliqués par la blockchain Ethereum, et non par les serveurs d'un studio, ce qui représente un avantage clé des jeux sur chaîne"

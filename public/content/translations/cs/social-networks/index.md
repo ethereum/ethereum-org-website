@@ -4,7 +4,7 @@ description: "Přehled decentralizovaných sociálních sítí na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Platformy založené na blockchainu pro sociální interakci a tvorbu a distribuci obsahu."
   - "Decentralizované sociální sítě chrání soukromí uživatelů a zvyšují bezpečnost dat."

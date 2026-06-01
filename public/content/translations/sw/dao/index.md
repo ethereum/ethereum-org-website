@@ -5,7 +5,7 @@ description: Muhtasari wa DAO juu ya Ethereum
 lang: sw
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: Uwakilishi wa DAO wa kupiga kura juu ya pendekezo.
 summaryPoints:
   - "Jamii zinazomilikiwa na wanachama bila miongozo ya serikali."

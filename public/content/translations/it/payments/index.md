@@ -5,7 +5,7 @@ description: Una panoramica sui pagamenti su Ethereum
 lang: it
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: Un logo Eth mostrato insieme a mani che donano.
 summaryPoints:
   - "Un mondo in cui il denaro si muove liberamente come le informazioni"

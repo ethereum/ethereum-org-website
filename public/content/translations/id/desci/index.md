@@ -4,7 +4,7 @@ description: Gambaran umum tentang sains terdesentralisasi di Ethereum
 lang: id
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Alternatif global dan terbuka untuk sistem ilmiah saat ini."

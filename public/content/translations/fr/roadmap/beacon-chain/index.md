@@ -3,7 +3,7 @@ title: "La Chaîne phare"
 description: "En savoir plus sur la chaîne phare - la mise à niveau qui a introduit la preuve d'enjeu d'Ethereum."
 lang: fr
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "La Chaîne phare a introduit la preuve d'enjeu dans l'écosystème Ethereum."

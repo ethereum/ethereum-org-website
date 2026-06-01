@@ -5,7 +5,7 @@ description: "ఈథరియంలో డిఎఓలు గురించి 
 lang: te
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "ప్రతిపాదనపై డిఎఓ ఓటింగ్ యొక్క ప్రాతినిధ్యం."
 summaryPoints:
   - "కేంద్రీకృత నాయకత్వం లేని సభ్యుల యాజమాన్యంలోని సంఘాలు."

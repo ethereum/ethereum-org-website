@@ -3,7 +3,7 @@ title: "دی مرج"
 description: "دی مرج کے بارے میں جانیں - جب مین نیٹ ایتھریم نے پروف-آف-اسٹیک کو اپنایا۔"
 lang: ur
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt: 
 summaryPoints:
   - "ایتھریم مین نیٹ پروف-آف-اسٹیک کا استعمال کرتا ہے، لیکن ہمیشہ ایسا نہیں تھا۔"

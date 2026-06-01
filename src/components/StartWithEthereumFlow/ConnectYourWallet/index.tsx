@@ -10,7 +10,7 @@ import { Tag } from "@/components/ui/tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import FinanceImage from "@/public/images/finance_transparent.png"
+import FinanceImage from "@/public/images/eth-glyph-lego-bricks-laurel-wreath.png"
 
 const ConnectYourWallet = ({
   handleNext,

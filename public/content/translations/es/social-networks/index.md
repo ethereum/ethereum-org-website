@@ -4,7 +4,7 @@ description: "Una visión general de las redes sociales descentralizadas en Ethe
 lang: es
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Plataformas basadas en la cadena de bloques para interacción social, creación y distribución de contenidos."
   - "Las redes sociales descentralizadas protegen la privacidad del usuario y mejoran la seguridad de los datos."

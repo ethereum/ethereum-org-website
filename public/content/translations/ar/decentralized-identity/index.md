@@ -4,7 +4,7 @@ description: "ما هي الهُوِيَّة اللامركزية، ولماذا
 lang: ar
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "جعلت أنظمة الهُوِيَّة التقليدية من إصدار المعرفات الخاصة بك، وصيانتها، والتحكم فيها، عملية مركزية."
   - "حيث تغني الهُوِيَّة اللامركزية عن الاعتماد على أطراف ثالثة مركزية."

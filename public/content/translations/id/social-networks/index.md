@@ -4,7 +4,7 @@ description: Gambaran umum tentang jejaring sosial terdesentralisasi di Ethereum
 lang: id
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "Platform berbasis blockchain untuk interaksi sosial serta pembuatan dan distribusi konten."
   - "Jaringan media sosial terdesentralisasi melindungi privasi pengguna dan meningkatkan keamanan data."

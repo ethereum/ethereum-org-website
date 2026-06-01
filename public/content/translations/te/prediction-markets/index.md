@@ -2,7 +2,7 @@
 title: "అంచనా మార్కెట్లు"
 lang: te
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "ఖచ్చితమైన సూచనలను రూపొందించడానికి ఆర్థిక ప్రోత్సాహకాలను స్వీకరించండి"

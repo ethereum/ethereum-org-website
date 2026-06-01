@@ -2,7 +2,7 @@
 title: "Ethereum'u ölçeklendirmek"
 description: "Toplamalar, işlemleri zincir dışında toplu hale getirerek kullanıcı için maliyetleri azaltır. Ancak, şu anda toplamaların verileri kullanma şekli çok pahalı ve bu da işlemlerin ne kadar ucuzlayabileceği konusunda sınırlama getiriyor. Proto-Danksharding bunu çözüyor."
 lang: tr
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "Ethereum yol haritası"
 template: roadmap
 ---

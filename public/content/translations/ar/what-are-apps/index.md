@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "التطبيقات على إيثريوم مجانية وعالمية وتستخدم البلوك تشين العام بدلاً من خوادم الشركات الخاصة. هذا يعني أنه يمكنك استخدام نفس الحساب في كل مشروع والحفاظ على خصوصيتك."
 ---
 

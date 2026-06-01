@@ -4,7 +4,7 @@ description: "Qu’est-ce que l’identité décentralisée et pourquoi est-ce i
 lang: fr
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "Les systèmes traditionnels d'identité centralisent l'émission, le maintien et le contrôle de vos identifiants."
   - "L'identité décentralisée supprime la dépendance à l'égard de tiers centralisés."

@@ -73,7 +73,7 @@ export default async function EthereumVsBitcoinPageJsonLD({
         headline: t("page-ethereum-vs-bitcoin-title"),
         description: t("page-ethereum-vs-bitcoin-meta-description"),
         image:
-          "https://ethereum.org/images/ethereum-vs-bitcoin/bitcoin-vs-ethereum-robots.png",
+          "https://ethereum.org/images/ethereum-vs-bitcoin/bitcoin-and-ethereum-robots-shaking-hands.png",
         author: [REFERENCE.ETHEREUM_COMMUNITY],
         publisher: REFERENCE.ETHEREUM_FOUNDATION,
         contributor: contributorList,

@@ -5,7 +5,7 @@ description: "Přehled plateb na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "Logo Eth zobrazené s podávajícíma si rukama."
 summaryPoints:
   - "Svět, kde se peníze pohybují stejně volně jako informace"

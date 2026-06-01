@@ -4,7 +4,7 @@ description: "अपने ETH की होम स्टेकिंग शु�
 lang: hi
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "लेस्ली राइनो अपने कंप्यूटर चिप पर।"
 sidebarDepth: 2
 summaryPoints:

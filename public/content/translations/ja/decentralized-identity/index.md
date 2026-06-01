@@ -4,7 +4,7 @@ description: "分散型アイデンティティとは、またこれが重要な
 lang: ja
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "身元を証明するIDは中央集権的に発行、更新、管理されてきた従来のアイデンティティ制度"
   - "分散型アイデンティティにより、中央集権的なサードパーティへの依存から脱却"

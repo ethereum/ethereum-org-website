@@ -5,7 +5,7 @@ description: "Přehled DAO na Ethereu"
 lang: cs
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "Vyobrazení decentralizované autonomní organizace hlasující o návrhu."
 summaryPoints:
   - "Členské komunity bez centralizovaného vedení."

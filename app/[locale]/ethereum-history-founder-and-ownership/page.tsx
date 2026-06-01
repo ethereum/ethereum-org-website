@@ -19,7 +19,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import EthereumHistoryFounderAndOwnershipPageJsonLD from "./page-jsonld"
 
 import EthereumOrgLogo from "@/public/images/eth-home-icon.png"
-import heroImg from "@/public/images/ethereum-history-founder-and-ownership/ethereum-history-founder-and-ownership-hero.png"
+import heroImg from "@/public/images/ethereum-history-founder-and-ownership/cloaked-figure-praying-beside-pink-glyph.png"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -585,7 +585,7 @@ export async function generateMetadata({
       "page-ethereum-history-founder-and-ownership-twitter-meta-description"
     ),
     image:
-      "/images/ethereum-history-founder-and-ownership/ethereum-history-founder-and-ownership-hero.png",
+      "/images/ethereum-history-founder-and-ownership/cloaked-figure-praying-beside-pink-glyph.png",
   })
 }
 

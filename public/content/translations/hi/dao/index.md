@@ -5,7 +5,7 @@ description: "इथेरियम पर डाओ का अवलोकन"
 lang: hi
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "किसी प्रस्ताव पर मतदान करने वाले DAO का प्रतिनिधित्व।"
 summaryPoints:
   - "केंद्रीकृत नेतृत्व के बिना सदस्य के स्वामित्व वाले समुदाय।"

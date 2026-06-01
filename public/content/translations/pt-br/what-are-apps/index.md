@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Aplicativos no Ethereum são gratuitos, globais e usam blockchain pública em vez de servidores privados. Isso significa que você pode usar a mesma conta em cada projeto e manter sua privacidade."
 ---
 

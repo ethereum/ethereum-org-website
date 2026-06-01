@@ -4,7 +4,7 @@ description: "Was ist eine dezentralisierte Identität und warum ist sie wichtig
 lang: de
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "Traditionelle Identitätssysteme haben die Emission, Pflege und Kontrolle Ihrer Identifikatoren zentralisiert."
   - "Dezentralisierte Identität beseitigt die Abhängigkeit von zentralisierten Drittanbietern."

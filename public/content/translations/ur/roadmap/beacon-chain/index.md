@@ -3,7 +3,7 @@ title: "بیکن چین"
 description: "بیکن چین کے بارے میں جانیں - وہ اپ گریڈ جس نے ایتھریم میں پروف آف اسٹیک (proof-of-stake) متعارف کرایا۔"
 lang: ur
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt: 
 summaryPoints:
   - "بیکن چین نے ایتھریم ایکو سسٹم میں پروف آف اسٹیک (proof-of-stake) متعارف کرایا۔"

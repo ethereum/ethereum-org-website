@@ -2,7 +2,7 @@
 title: "கணிப்புச் சந்தைகள்"
 lang: ta
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "துல்லியமான கணிப்புகளை உருவாக்குவதற்கான நிதி ஊக்கத்தொகைகளைப் பெறுங்கள்"

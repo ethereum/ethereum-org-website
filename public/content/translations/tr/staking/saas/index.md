@@ -4,7 +4,7 @@ description: "Hizmet olarak hisseleme hakkında bilgi edinin"
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "Gergedan Leslie bulutlarda dalgalanıyor."
 sidebarDepth: 2
 summaryPoints:

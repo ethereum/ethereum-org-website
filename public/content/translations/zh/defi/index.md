@@ -4,7 +4,7 @@ metaTitle: "什么是去中心化金融？ 去中心化金融的优势和作用"
 description: "以太坊上的去中心化金融简介"
 lang: zh
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "由乐高积木拼成的以太坊徽标。"
 sidebarDepth: 2
 summaryPoints:

@@ -3,7 +3,7 @@ title: "बीकन चेन"
 description: "बीकन चेन के बारे में जानें - अपग्रेड जिसने हिस्सेदारी का सबूत एथेरियम पेश किया।"
 lang: hi
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "बीकन चेन ने एथेरियम इकोसिस्टम के लिए प्रूफ-ऑफ-स्टेक पेश किया।"

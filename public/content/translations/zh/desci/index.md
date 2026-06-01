@@ -4,7 +4,7 @@ description: "以太坊去中心化科学概览"
 lang: zh
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "当前科学体系的全球性、开放性替代方案。"

@@ -3,7 +3,7 @@ title: The Merge
 description: "Tìm hiểu thêm về sự kiện hợp nhất - Khi mạng chính Ethereum tiếp nhận bằng chứng cổ phần."
 lang: vi
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "Mạng chính Ethereum sử dụng bằng chứng cổ phần, nhưng trước đây thì không như vậy."

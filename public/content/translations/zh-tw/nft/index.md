@@ -5,7 +5,7 @@ description: "以太坊生態系非同質化代幣概要"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "全息投影顯示的以太幣標誌。"
 summaryPoints:
   - "一種用以太坊資產來呈現任何獨特事物的方式。"

@@ -2,7 +2,7 @@
 title: "이더리움 게임"
 lang: ko
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "게임 규칙과 상태는 스튜디오의 서버가 아닌 이더리움 블록체인으로 적용 가능하며, 이는 온체인 게임의 핵심 이점입니다."

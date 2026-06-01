@@ -2,7 +2,7 @@
 title: "پیشین گوئی کی مارکیٹس"
 lang: ur
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "درست پیشین گوئیاں کرنے کے لیے مالی مراعات حاصل کریں"

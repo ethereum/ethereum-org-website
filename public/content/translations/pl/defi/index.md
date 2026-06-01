@@ -4,7 +4,7 @@ metaTitle: "Czym jest DeFi? | Korzyści i zastosowania zdecentralizowanych finan
 description: "Przegląd DeFi na Ethereum"
 lang: pl
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "Logo ETH wykonane z klocków lego."
 sidebarDepth: 2
 summaryPoints:

@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils/cn"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import heroBase from "@/public/images/home/hero.png"
-import hero2xl from "@/public/images/home/hero-2xl.png"
+import hero2xl from "@/public/images/home/hero-wide-2xl.png"
 
 type HomeHeroProps = ClassNameProp & {
   image?: StaticImageData

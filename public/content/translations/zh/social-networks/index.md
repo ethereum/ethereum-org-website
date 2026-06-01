@@ -4,7 +4,7 @@ description: "以太坊去中心化社交网络概览"
 lang: zh
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "基于区块链的社交互动与内容平台的创建和分配。"
   - "去中心化社交媒体网络可保护用户隐私并增强数据安全性。"

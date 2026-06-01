@@ -5,7 +5,7 @@ description: "نظرة عامة على المدفوعات عبر إيثريوم"
 lang: ar
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "يتم عرض شعار Eth جنبًا إلى جنب مع الأيدي المعطاءة."
 summaryPoints:
   - "عالم تتحرك فيه الأموال بحرية كما تتحرك المعلومات"

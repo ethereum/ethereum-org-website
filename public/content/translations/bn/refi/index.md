@@ -4,7 +4,7 @@ description: "ReFi এবং এর বর্তমান ব্যবহার 
 lang: bn
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "রিজেনারেটিভ নীতির উপর ভিত্তি করে তৈরি একটি বিকল্প অর্থনৈতিক ব্যবস্থা"

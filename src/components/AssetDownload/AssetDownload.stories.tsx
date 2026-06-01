@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import AssetDownload from "."
 
-import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
+import ethDiamondBlack from "@/public/images/assets/eth-glyph-semitransparent-shaded-black.png"
 import hero from "@/public/images/home/hero.png"
 
 const meta = {

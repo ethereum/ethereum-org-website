@@ -3,7 +3,7 @@ title: "Sloučení"
 description: "Zjistěte více o Sloučení – když hlavní síť Ethereum přešla na důkaz podílem."
 lang: cs
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "Hlavní síť Ethereum používá důkaz podílem, ale ne vždy tomu tak bylo."

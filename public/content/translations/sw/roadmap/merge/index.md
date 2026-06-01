@@ -3,7 +3,7 @@ title: Muungano
 description: Jifunze kuhusu Muungano - wakati Mainnet ya Ethereum ilipopitisha uthibitishaji wa dhamana.
 lang: sw
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt: 
 summaryPoints:
   - "Mainnet ya Ethereum inatumia uthibitishaji wa dhamana, lakini haikuwa hivi siku zote."

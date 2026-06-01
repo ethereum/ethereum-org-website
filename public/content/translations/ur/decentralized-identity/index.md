@@ -4,7 +4,7 @@ description: "غیر مرکزی شناخت کیا ہے، اور یہ کیوں ا
 lang: ur
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "روایتی شناختی سسٹمز نے آپ کے شناخت کنندگان کے اجراء، دیکھ بھال اور کنٹرول کو مرکزی بنا دیا ہے۔"
   - "غیر مرکزی شناخت مرکزی فریقین ثالث پر انحصار ختم کرتی ہے۔"

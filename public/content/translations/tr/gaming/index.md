@@ -2,7 +2,7 @@
 title: Ethereum'da Oyun
 lang: tr
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "Oyun kuralları ve durumu, bir stüdyonun sunucuları tarafından değil, Ethereum blokzinciri tarafından uygulanabilir; bu da zincir üstü oyunların önemli bir faydasını temsil eder"

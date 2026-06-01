@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Ethereum-ல் உள்ள பயன்பாடுகள் இலவசமானவை, உலகளாவியவை மற்றும் தனியார் நிறுவன சேவையகங்களுக்குப் பதிலாக பொது பிளாக்செயினைப் பயன்படுத்துகின்றன. இதன் பொருள் நீங்கள் ஒவ்வொரு திட்டத்திலும் ஒரே கணக்கைப் பயன்படுத்தலாம் மற்றும் உங்கள் தனியுரிமையைப் பராமரிக்கலாம்."
 ---
 

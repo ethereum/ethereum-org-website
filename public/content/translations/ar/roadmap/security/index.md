@@ -2,7 +2,7 @@
 title: "إيثريوم أكثر أمانًا"
 description: "إيثريوم هي منصة العقود الذكية الأكثر أمانًا ولامركزية في الوجود. ومع ذلك، لا يزال هناك تحسينات يمكن إجراؤها حتى تظل إيثريوم مرنة في مواجهة أي مستوى من الهجوم في المستقبل."
 lang: ar
-image: /images/roadmap/roadmap-security.png
+image: /images/roadmap/isometric-platform-shield-icon.png
 alt: "خارطة طريق إيثريوم"
 template: roadmap
 ---

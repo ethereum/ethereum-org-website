@@ -7,10 +7,10 @@ import type { ChildOnlyProp } from "@/lib/types"
 import { Center } from "@/components/ui/flex"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import withRestakingDark from "@/public/images/use-cases/with-restaking-dark.png"
-import withRestakingLight from "@/public/images/use-cases/with-restaking-light.png"
-import withoutRestakingDark from "@/public/images/use-cases/without-restaking-dark.png"
-import withoutRestakingLight from "@/public/images/use-cases/without-restaking-light.png"
+import withoutRestakingDark from "@/public/images/use-cases/restaking-avs-vs-staker-no-overlap-dark.png"
+import withoutRestakingLight from "@/public/images/use-cases/restaking-avs-vs-staker-no-overlap-light.png"
+import withRestakingDark from "@/public/images/use-cases/restaking-avs-vs-staker-venn-dark.png"
+import withRestakingLight from "@/public/images/use-cases/restaking-avs-vs-staker-venn-light.png"
 
 const Width60 = (props: ChildOnlyProp) => (
   <div className="w-full flex-[3]" {...props} />

@@ -5,7 +5,7 @@ description: "Tổng quan về DAO trên Ethereum"
 lang: vi
 template: use-cases
 sidebarDepth: 2
-image: /images/use-cases/dao-2.png
+image: /images/use-cases/dao-voting-network-figures.png
 alt: "Đại diện cho biểu quyết của tổ chức tự trị phi tập trung (DAO) đối với một đề xuất."
 summaryPoints:
   - "Các cộng đồng được sở hữu bởi thành viên mà không cần sự lãnh đạo tập trung."

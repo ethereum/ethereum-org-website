@@ -4,7 +4,7 @@ description: "Un aperçu de la façon de commencer à miser votre ETH à domicil
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "Leslie le rhinocéros sur sa puce d'ordinateur."
 sidebarDepth: 2
 summaryPoints:

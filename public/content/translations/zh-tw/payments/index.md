@@ -5,7 +5,7 @@ description: "以太坊支付概要"
 lang: zh-tw
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: "以太坊標誌與給予的手一同展示。"
 summaryPoints:
   - "一個金錢如資訊般自由流通的世界"

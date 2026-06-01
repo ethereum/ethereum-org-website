@@ -5,7 +5,7 @@ description: "이더리움의 NFT 개요"
 lang: ko
 template: use-cases
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /images/desktop-pc-projecting-glowing-glyph.png
 alt: "홀로그램을 통해 표시되고 있는 ETH 로고."
 summaryPoints:
   - "이더리움 기반 자산으로 고유한 모든 것을 나타내는 방법입니다."

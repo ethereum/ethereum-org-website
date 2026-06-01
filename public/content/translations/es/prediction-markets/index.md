@@ -2,7 +2,7 @@
 title: "Predicción de mercados"
 lang: es
 template: use-cases
-image: /images/use-cases/prediction-markets.png
+image: /images/use-cases/crowd-at-futuristic-counter-robot-pets.png
 sidebarDepth: 2
 summaryPoints:
   - "Reciba incentivos económicos por generar pronósticos precisos"

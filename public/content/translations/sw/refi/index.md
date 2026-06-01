@@ -4,7 +4,7 @@ description: Muhtasari wa ReFi na matumizi yake ya sasa.
 lang: sw
 template: use-cases
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /images/crystal-projection-screen-keyboard-smart-contract.png
 alt: ""
 summaryPoints:
   - "Mfumo  wa uchumi mbadala uliojengwa kwa kanuni endelevu"

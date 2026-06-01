@@ -53,7 +53,7 @@ export async function generateMetadata(props: {
     slug: ["quizzes"],
     title: `${t("common.quizzes-title")} | ethereum.org`,
     description: t("learn-quizzes.quizzes-subtitle"),
-    image: "/images/heroes/quizzes-hub-hero.png",
+    image: "/images/heroes/sky-jungle-walkways-jumping.png",
   })
 }
 

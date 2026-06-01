@@ -25,9 +25,9 @@ import Link from "@/components/ui/Link"
 import ReleaseCarousel from "./ReleaseCarousel"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import ethBlocksImage from "@/public/images/developers-eth-blocks.png"
-import communityHeroImg from "@/public/images/heroes/community-hero.png"
-import roadmapHeroImg from "@/public/images/heroes/roadmap-hub-hero.jpg"
+import ethBlocksImage from "@/public/images/hand-with-3d-eth-glyph-lego-blocks.png"
+import communityHeroImg from "@/public/images/heroes/forest-deck-campfire-gathering-people-robot.png"
+import roadmapHeroImg from "@/public/images/heroes/futuristic-night-cityscape-beacon-overlook-moon.jpg"
 
 const RoadmapPage = () => {
   const { t } = useTranslation("page-roadmap")

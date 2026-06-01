@@ -2,7 +2,7 @@
 title: "イーサリアム上のゲーミング"
 lang: ja
 template: use-cases
-image: /images/robot-help-bar.png
+image: /images/robot-and-people-at-help-counter.png
 sidebarDepth: 2
 summaryPoints:
   - "ゲームのルールと状態は、スタジオのサーバーではなくイーサリアムブロックチェーンによって強制される可能性があり、これがオンチェーンゲームの主な利点となります"

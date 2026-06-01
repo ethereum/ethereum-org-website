@@ -2,7 +2,7 @@
 title: "ఇతీరియమును విస్తరించడం"
 description: "రోల్అప్‌లు ఆఫ్‌చెయిన్‌లో లావాదేవీలను కలిసికట్టుగా చేస్తాయి, వినియోగదారుడికి ఖర్చులను తగ్గిస్తాయి. అయితే, రోల్అప్‌లు ప్రస్తుతం డేటాను ఉపయోగించే విధానం చాలా ఖరీదైనది, ఇది లావాదేవీలు ఎంత చౌకగా ఉండవచ్చో పరిమితం చేస్తుంది. ప్రోటో-డాంక్షార్డింగ్ దీనిని సరిచేస్తుంది."
 lang: te
-image: /images/roadmap/roadmap-transactions.png
+image: /images/roadmap/isometric-platform-transactions-icon.png
 alt: "Ethereum రోడ్‌మ్యాప్"
 template: roadmap
 ---

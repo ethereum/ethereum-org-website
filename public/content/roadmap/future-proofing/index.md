@@ -2,7 +2,7 @@
 title: Future-proofing Ethereum and crypto quantum security
 description: These upgrades cement Ethereum as the resilient, decentralized base layer for the future, whatever it may hold.
 lang: en
-image: /images/roadmap/roadmap-future.png
+image: /images/roadmap/isometric-platform-clock-icon.png
 alt: "Ethereum roadmap"
 template: roadmap
 summaryPoints:

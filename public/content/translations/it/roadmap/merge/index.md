@@ -3,7 +3,7 @@ title: The Merge
 description: "Scopri di più su The Merge: quando la rete principale di Ethereum ha adottato la prova di stake."
 lang: it
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt: 
 summaryPoints:
   - "La rete principale di Ethereum utilizza la prova di stake, ma non è sempre stato così."

@@ -11,7 +11,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { Leaderboard } from "./_components/Leaderboard"
 import TranslatathonLeaderboardJsonLD from "./page-jsonld"
 
-import heroImg from "@/public/images/heroes/translatathon-hero.png"
+import heroImg from "@/public/images/heroes/dolphin-hugging-eth-glyph-multilingual-badge.png"
 
 const Page = async (props: { params: Promise<{ locale: string }> }) => {
   const params = await props.params

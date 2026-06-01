@@ -4,7 +4,7 @@ description: "Conozca más a fondo la participación como servicio"
 lang: es
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: Leslie, el rinoceronte, flotando en las nubes.
 sidebarDepth: 2
 summaryPoints:

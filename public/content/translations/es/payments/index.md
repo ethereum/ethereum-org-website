@@ -5,7 +5,7 @@ description: Los pagos en Ethereum de un vistazo
 lang: es
 template: use-cases
 sidebarDepth: 2
-image: /images/impact_transparent.png
+image: /images/eth-glyph-hands-palms-up.png
 alt: Un logo de Ethereum aparece junto a manos extendidas.
 summaryPoints:
   - "Un mundo en que el dinero se mueve tan libremente como la información"

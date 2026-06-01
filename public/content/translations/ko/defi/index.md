@@ -4,7 +4,7 @@ metaTitle: "디파이란 무엇인가요? | 탈중앙화 금융의 혜택과 활
 description: "이더리움의 디파이 개요"
 lang: ko
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "레고 블록으로 만든 이더리움 로고."
 sidebarDepth: 2
 summaryPoints:

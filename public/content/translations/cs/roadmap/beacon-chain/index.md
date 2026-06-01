@@ -3,7 +3,7 @@ title: "Řetězová vazba"
 description: "Přečtěte si o Řetězové vazbě – vylepšení, které umožnilo důkaz podílem na Ethereu."
 lang: cs
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "Řetězová vazba zavedla důkaz podílem do ekosystému Etherea."

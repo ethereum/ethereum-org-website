@@ -3,7 +3,7 @@ title: "信标链"
 description: "了解信标链 - 引入权益证明的以太坊升级。"
 lang: zh
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "信标链为以太坊生态系统引入了权益证明机制。"

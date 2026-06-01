@@ -4,7 +4,7 @@ description: "ステーキング・アズ・ア・サービスについて学ぶ
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /images/staking/leslie-rhino-mascot-sitting-on-cloud.png
 alt: "雲に浮かぶサイのレスリー"
 sidebarDepth: 2
 summaryPoints:

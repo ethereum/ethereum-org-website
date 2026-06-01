@@ -4,7 +4,7 @@ metaTitle: "Qu'est-ce que DeFi ? | Avantages et utilisation de la finance décen
 description: "Un aperçu de la DeFi sur Ethereum"
 lang: fr
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: Un logo Eth fait en briques lego.
 sidebarDepth: 2
 summaryPoints:

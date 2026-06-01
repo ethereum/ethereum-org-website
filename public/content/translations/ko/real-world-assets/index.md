@@ -4,7 +4,7 @@ metaTitle: "RWA란 무엇인가요? | 실물 자산의 이점과 사용 사례"
 description: "이더리움에서의 실물 자산에 대한 개요"
 lang: ko
 template: use-cases
-image: /images/man-and-dog-playing.png
+image: /images/man-playing-with-robot-shiba-dog.png
 alt: Man and dog playing.
 sidebarDepth: 2
 summaryPoints:

@@ -3,7 +3,7 @@ title: "ది బీకన్ చైన్"
 description: "బీకాన్ చైన్ గురించి తెలుసుకోండి - ప్రూఫ్-ఆఫ్-స్టేక్ ఇతీరియమును పరిచయం చేసిన అప్‌గ్రేడ్."
 lang: te
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "బీకాన్ చైన్ ఇతీరియము పర్యావరణ వ్యవస్థకు ప్రూఫ్-ఆఫ్-స్టేక్‌ను పరిచయం చేసింది."

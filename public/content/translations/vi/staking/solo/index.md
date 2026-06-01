@@ -4,7 +4,7 @@ description: "Đây là khái quát về việc làm sao để bắt đầu Stak
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "Tê giác Leslie trên chip máy tính riêng."
 sidebarDepth: 2
 summaryPoints:

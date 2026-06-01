@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Aplikacje na sieci Ethereum są darmowe, globalne i używają publicznego łańcucha bloków zamiast serwerów prywatnej firmy To oznacza, że możesz używać tego samego konta w każdym projekcie, zachowując swoją prywatność."
 ---
 

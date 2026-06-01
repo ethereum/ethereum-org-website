@@ -7,7 +7,7 @@ template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
 showDropdown: false
-image: /images/doge-computer.png
+image: /images/doge-shiba-robot-suit-at-computer.png
 summary: "Ethereum'daki uygulamalar ücretsiz, küreseldir ve özel şirket sunucuları yerine genel blokzinciri kullanır. Bu, her projede aynı hesabı kullanabileceğiniz ve gizliliğinizi koruyabileceğiniz anlamına gelir."
 ---
 

@@ -4,7 +4,7 @@ description: "イーサリアム上の分散型ソーシャルネットワーク
 lang: ja
 template: use-cases
 sidebarDepth: 2
-image: /images/ethereum-learn.png
+image: /images/meditating-figure-binary-glyph-circuit-tree.png
 summaryPoints:
   - "ソーシャル・インタラクションとコンテンツの作成と配信のためのブロックチェーンベースのプラットフォーム"
   - "分散型ソーシャル・メディア・ネットワークは、ユーザーのプライバシーを保護し、データセキュリティを強化"

@@ -4,7 +4,7 @@ description: Gambaran umum tentang cara memulai mengunci ETH Anda dari rumah
 lang: id
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: Badak Leslie di atas chip komputernya sendiri.
 sidebarDepth: 2
 summaryPoints:

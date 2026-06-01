@@ -3,7 +3,7 @@ title: Die Beacon Chain
 description: "Erfahren Sie mehr über die Beacon Chain – das Upgrade, das Proof-of-Stake bei Ethereum eingeführt hat."
 lang: de
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt: 
 summaryPoints:
   - "Die Beacon Chain führte Proof-of-Stake in das Ethereum-Ökosystem ein."

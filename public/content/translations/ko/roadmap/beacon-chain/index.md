@@ -3,7 +3,7 @@ title: "비콘 체인"
 description: "비콘 체인에 대해 알아보기 - 이더리움에 지분 증명 시스템을 도입한 업그레이드"
 lang: ko
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt:
 summaryPoints:
   - "비콘 체인은 지분증명 방식을 이더리움 생태계에 도입했습니다"

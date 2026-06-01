@@ -4,7 +4,7 @@ metaTitle: "Що таке DeFi? | Переваги та застосування
 description: "Огляд DeFi на Ethereum"
 lang: uk
 template: use-cases
-image: /images/use-cases/defi.png
+image: /images/use-cases/defi-neon-isometric-city-buildings.png
 alt: "Логотип Eth із блоків Lego."
 sidebarDepth: 2
 summaryPoints:

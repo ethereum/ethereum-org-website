@@ -23,8 +23,8 @@ import { useTranslation } from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/navigation"
 import darkThemeCertificateImg from "@/public/images/certificates/dark-certificate.png"
 import lightThemeCertificateImg from "@/public/images/certificates/light-certificate.png"
-import dogeComputerImg from "@/public/images/doge-computer.png"
-import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
+import dogeComputerImg from "@/public/images/doge-shiba-robot-suit-at-computer.png"
+import whatIsEthereumImg from "@/public/images/man-viewing-bazaar-through-three-windows.png"
 
 const Content = ({
   className,

@@ -3,7 +3,7 @@ title: "द मर्ज"
 description: "द मर्ज बद्दल जाणून घ्या - जेव्हा मेननेट Ethereum ने प्रूफ-ऑफ-स्टेकचा अवलंब केला."
 lang: mr
 template: upgrade
-image: /images/upgrades/merge.png
+image: /images/upgrades/beacon-spaceship-fully-merged-rings.png
 alt:
 summaryPoints:
   - "Ethereum मेननेट प्रूफ-ऑफ-स्टेक वापरतो, परंतु हे नेहमीच असे नव्हते."

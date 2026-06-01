@@ -4,7 +4,7 @@ description: "Merkeziyetsiz kimlik nedir ve neden önemlidir?"
 lang: tr
 template: use-cases
 sidebarDepth: 2
-image: /images/eth-gif-cat.png
+image: /images/eth-glyph-kaleidoscope-cat-neon.png
 summaryPoints:
   - "Geleneksel kimlik sistemleri tanımlayıcılarınızın belirlenmesini, korunmasını ve kontrolünü merkezleştirdi."
   - "Merkeziyetsiz kimlik, merkezi üçüncü taraflara olan bağımlılığı ortadan kaldırır."

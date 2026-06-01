@@ -3,7 +3,7 @@ title: La Beacon Chain
 description: Scopri la Beacon Chain, l'aggiornamento che ha introdotto la prova di stake su Ethereum.
 lang: it
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/upgrades/beacon-spaceship-grounded.png
 alt: 
 summaryPoints:
   - "La Beacon Chain ha introdotto la prova di stake nell'ecosistema di Ethereum."

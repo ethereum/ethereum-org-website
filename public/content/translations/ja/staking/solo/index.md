@@ -4,7 +4,7 @@ description: "ETHのホームステーキングする方法の概要"
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-rhino-mascot-computer-chip.png
 alt: "コンピュータチップ上にサイのレスリー"
 sidebarDepth: 2
 summaryPoints:
