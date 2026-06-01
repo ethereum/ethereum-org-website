@@ -289,7 +289,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-jump-right-in-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -349,7 +349,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-get-help-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -384,7 +384,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-resources-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -420,7 +420,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-tutorials-title")}
                 </CardTitle>
                 <CardParagraph>

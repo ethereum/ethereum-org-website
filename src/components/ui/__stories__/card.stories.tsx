@@ -108,7 +108,7 @@ export const Variants: Story = {
         <Card variant="header-bar">
           <CardHeader>
             <Shield className="text-accent-a" />
-            <CardTitle variant="semibold">Header-bar card</CardTitle>
+            <CardTitle size="sm">Header-bar card</CardTitle>
           </CardHeader>
           <CardContent>
             <CardParagraph>
@@ -237,17 +237,17 @@ export const ContentSpacingOverride: Story = {
 
 // ---------- Title Variants (variant x spacing matrix) ----------
 
-const TITLE_VARIANTS = ["semibold", "bold", "black"] as const
+const TITLE_SIZES = [undefined, "sm", "lg"] as const
 const TITLE_SPACINGS = ["quarter", "none", "inherit"] as const
 
 export const TitleVariants: Story = {
   render: () => (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-      {TITLE_VARIANTS.map((variant) => (
+      {TITLE_SIZES.map((variant) => (
         <div key={variant} className="space-y-6">
           <Label>
             CardTitle variant=&quot;{variant}&quot;
-            {variant === "bold" ? " [default]" : ""}
+            {variant ? "" : " [default]"}
           </Label>
           {TITLE_SPACINGS.map((spacing) => (
             <Card key={spacing}>
@@ -261,7 +261,7 @@ export const TitleVariants: Story = {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant={variant} spacing={spacing}>
+                <CardTitle size={variant} spacing={spacing}>
                   Title spacing={spacing}
                   {spacing === "quarter" ? " (default)" : ""}
                 </CardTitle>
@@ -436,7 +436,7 @@ export const HeaderLayouts: Story = {
         <Card variant="header-bar">
           <CardHeader>
             <Shield className="text-accent-a" />
-            <CardTitle variant="semibold">Bar header</CardTitle>
+            <CardTitle size="sm">Bar header</CardTitle>
           </CardHeader>
           <CardContent>
             <CardParagraph>
@@ -596,9 +596,7 @@ export const Composites: Story = {
               >
                 New
               </Tag>
-              <CardTitle variant="semibold">
-                {tDev("page-developers-learn")}
-              </CardTitle>
+              <CardTitle size="sm">{tDev("page-developers-learn")}</CardTitle>
               <CardParagraph size="sm">
                 {tDev("page-developers-learn-desc")}
               </CardParagraph>
