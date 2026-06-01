@@ -31,7 +31,7 @@
   h5,
   h6,
   section {
-    @apply scroll-mt-20;
+    @apply scroll-mt-28;
   }
 
   h1 {
