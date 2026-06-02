@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import { Section } from "@/components/ui/section"
@@ -90,7 +90,7 @@ const Page = async (props: {
         categoryTools={allCategoryData}
         contributors={contributors}
       />
-      <ContentHero
+      <PageHero
         breadcrumbs={{
           slug: `/developers/tools/${t(`page-developers-tools-category-${category}-breadcrumb`)}`,
         }}
@@ -98,7 +98,7 @@ const Page = async (props: {
         description={t(
           `page-developers-tools-category-${category}-description`
         )}
-        className="border-none pb-0"
+        variant="no-divider"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection tools={highlights} />

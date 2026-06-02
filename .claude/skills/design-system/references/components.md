@@ -616,7 +616,7 @@ For prominent numeric displays (e.g., "$3000" prize amounts, statistics). Don't 
 ### Heroes -- `@/components/Hero`
 
 ```tsx
-import { ContentHero, HomeHero, HubHero, MdxHero, SimpleHero } from "@/components/Hero"
+import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
 ```
 
 See `canonical-imports.md` for selection.
@@ -652,7 +652,7 @@ The shortcode registry for markdown content. To add a markdown shortcode, add th
 
 ### Legacy / deprecated
 
-- `@/components/PageHero` -- use `@/components/Hero/*` instead
+- `@/components/PageHero` (old default export) -- the canonical `PageHero` is a named export from `@/components/Hero`.
 - `@/hooks/useColorModeValue` -- Chakra leftover; use Tailwind `dark:` variant
 
 ### Markdown shortcode wrapper

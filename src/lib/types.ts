@@ -495,7 +495,7 @@ export type CommonHeroProps<
   /**
    * The primary title of the page
    */
-  title?: string
+  title?: ReactNode
   /**
    * A tag name for the page
    */

@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -50,7 +50,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         reports={reports}
       />
 
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug: "research/reports", startDepth: 1 }}
         heroImg={heroImg}
         title={t("page-reports-title")}

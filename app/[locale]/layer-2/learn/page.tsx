@@ -8,7 +8,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
-import { ContentHero, type ContentHeroProps } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -60,33 +60,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-layer-2-learn")
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: SLUG, startDepth: 1 },
-    heroImg,
-    title: t("page-layer-2-learn-title"),
-    description: t("page-layer-2-learn-description"),
-    buttons: [
-      {
-        content: t("page-layer-2-learn-button-1-label"),
-        href: "/layer-2/",
-        matomo: {
-          eventCategory: "l2_learn",
-          eventAction: "button_click",
-          eventName: "what_is_l2",
-        },
-      },
-      {
-        content: t("page-layer-2-learn-button-2-label"),
-        href: "/layer-2/networks",
-        matomo: {
-          eventCategory: "l2_learn",
-          eventAction: "button_click",
-          eventName: "use_l2",
-        },
-      },
-    ],
-  }
-
   const layer2Cards = [
     {
       emoji: ":money_with_wings:",
@@ -132,7 +105,32 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <MainArticle className="relative flex flex-col">
-        <ContentHero {...heroProps} />
+        <PageHero
+          breadcrumbs={{ slug: SLUG, startDepth: 1 }}
+          heroImg={heroImg}
+          title={t("page-layer-2-learn-title")}
+          description={t("page-layer-2-learn-description")}
+          buttons={[
+            {
+              content: t("page-layer-2-learn-button-1-label"),
+              href: "/layer-2/",
+              matomo: {
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "what_is_l2",
+              },
+            },
+            {
+              content: t("page-layer-2-learn-button-2-label"),
+              href: "/layer-2/networks",
+              matomo: {
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "use_l2",
+              },
+            },
+          ]}
+        />
 
         <div
           id="what-is-layer-2"

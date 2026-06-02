@@ -5,7 +5,7 @@ import type { MdPageContent, TopicFrontmatter } from "@/lib/interfaces"
 
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import { Alert } from "@/components/ui/alert"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
@@ -109,7 +109,7 @@ export const TopicLayout = async ({
   const heroSection = (
     <>
       {editBanner}
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug, startDepth: 1 }}
         heroImg={{
           src: frontmatter.image,
