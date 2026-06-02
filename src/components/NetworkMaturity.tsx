@@ -1,3 +1,4 @@
+import { AccordionContainer } from "./ui/accordion"
 import InlineLink from "./ui/Link"
 import {
   Table,
@@ -19,7 +20,7 @@ const NetworkMaturity = () => {
   const { t } = useTranslation("page-layer-2-networks")
 
   return (
-    <div className="mx-9 mt-10">
+    <AccordionContainer className="mx-8 mt-10">
       <ExpandableCard
         title={t("page-layer-2-network-maturity-component-title")}
       >
@@ -115,7 +116,7 @@ const NetworkMaturity = () => {
           </TableBody>
         </Table>
       </ExpandableCard>
-    </div>
+    </AccordionContainer>
   )
 }
 

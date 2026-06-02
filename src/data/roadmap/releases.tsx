@@ -66,7 +66,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
         </ul>
       </div>
     ),
-    href: "/upgrades/merge",
+    href: "/roadmap/merge/",
   },
   {
     image: QuizzesHubHeroImage,
