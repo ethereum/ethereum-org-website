@@ -34,8 +34,10 @@ on:
     types: [created]
   pull_request_review_comment:
     types: [created]
-  pull_request:
-    types: [opened]
+  # Automatic trigger on PR open is disabled (cost/bug control).
+  # To re-enable, uncomment the block below and the matching clause in the `if:` below.
+  # pull_request:
+  #   types: [opened]
 
 jobs:
   review-translations:
@@ -57,14 +59,16 @@ jobs:
         contains(github.event.comment.body, '@claude') &&
         contains(github.event.comment.body, '/review-translations') &&
         contains(fromJSON('["pettinarip","wackerow","nloureiro","konopkja","mnelsonBT"]'), github.event.comment.user.login)
-      ) ||
-      (
-        github.event_name == 'pull_request' &&
-        startsWith(github.event.pull_request.title, 'i18n:') &&
-        startsWith(github.event.pull_request.head.ref, 'intl/pending-') &&
-        github.event.pull_request.head.repo.full_name == github.repository &&
-        contains(fromJSON('["pettinarip","wackerow","nloureiro","konopkja","mnelsonBT"]'), github.event.pull_request.user.login)
       )
+      # Automatic pull_request trigger disabled -- see `on:` block above.
+      # To re-enable, uncomment the clause below and add a trailing ` ||` to the line above.
+      # || (
+      #   github.event_name == 'pull_request' &&
+      #   startsWith(github.event.pull_request.title, 'i18n:') &&
+      #   startsWith(github.event.pull_request.head.ref, 'intl/pending-') &&
+      #   github.event.pull_request.head.repo.full_name == github.repository &&
+      #   contains(fromJSON('["pettinarip","wackerow","nloureiro","konopkja","mnelsonBT"]'), github.event.pull_request.user.login)
+      # )
     runs-on: ubuntu-latest
     permissions:
       contents: write

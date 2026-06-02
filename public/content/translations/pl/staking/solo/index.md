@@ -39,7 +39,6 @@ Stakowanie w domu wiąże się z większą odpowiedzialnością, ale zapewnia ma
 
 Chociaż chcielibyśmy, aby stakowanie w domu było dostępne i wolne od ryzyka dla każdego, nie jest to jednak rzeczywistością. Istnieje kilka praktycznych i poważnych kwestii, o których należy pamiętać przed podjęciem decyzji o stakowaniu ETH w domu.
 
-<InfoGrid>
 <ExpandableCard title="Lektura obowiązkowa" eventCategory="SoloStaking" eventName="clicked required reading">
 Podczas obsługi własnego węzła należy poświęcić trochę czasu na naukę obsługi wybranego oprogramowania. Obejmuje to czytanie odpowiedniej dokumentacji i bycie na bieżąco z kanałami komunikacji tych zespołów programistów.
 
@@ -71,8 +70,6 @@ W odróżnieniu od kar za bycie offline, <em>cięcie</em> jest znacznie poważni
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Więcej o cięciu i cyklu życia walidatora</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

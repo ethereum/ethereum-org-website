@@ -5,6 +5,7 @@ import { ChainName } from "@/lib/types"
 import { Image } from "@/components/Image"
 import Tooltip from "@/components/Tooltip"
 
+import { appOnlyNetworks } from "@/data/networks/app-networks"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 
 interface ChainImagesProps {
@@ -18,7 +19,7 @@ const ChainImages = ({
   size = 24,
   className = "",
 }: ChainImagesProps) => {
-  const networkData = [ethereumNetworkData, ...layer2Data]
+  const networkData = [ethereumNetworkData, ...layer2Data, ...appOnlyNetworks]
 
   const filteredChains = chains.filter((chain) =>
     networkData.some((network) => network.chainName === chain)

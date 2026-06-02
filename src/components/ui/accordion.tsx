@@ -5,6 +5,15 @@ import { ChevronNext } from "@/components/Chevron"
 
 import { cn } from "@/lib/utils/cn"
 
+const AccordionContainer = ({
+  className,
+  ...props
+}: React.BaseHTMLAttributes<HTMLDivElement>) => {
+  return (
+    <div className={cn("w-full max-w-5xl space-y-4", className)} {...props} />
+  )
+}
+
 const Accordion = AccordionPrimitive.Root
 
 const AccordionItem = React.forwardRef<
@@ -59,4 +68,10 @@ const AccordionContent = React.forwardRef<
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger }
+export {
+  Accordion,
+  AccordionContainer,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+}

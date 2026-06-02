@@ -76,8 +76,8 @@ export default async function ReportsPageJsonLD({
       {
         "@type": "CollectionPage",
         "@id": url,
-        name: t("page-reports-metadata-title"),
-        description: t("page-reports-metadata-description"),
+        name: t("page-reports-title"),
+        description: t("page-reports-description"),
         url,
         inLanguage: locale,
         contributor: contributorList,
@@ -95,7 +95,7 @@ export default async function ReportsPageJsonLD({
             {
               "@type": "ListItem",
               position: 2,
-              name: t("page-reports-metadata-title"),
+              name: t("page-reports-title"),
               item: normalizeUrlForJsonLd(locale, "/reports/"),
             },
           ],
@@ -107,8 +107,8 @@ export default async function ReportsPageJsonLD({
       {
         "@type": "ItemList",
         "@id": itemListId,
-        name: t("page-reports-metadata-title"),
-        description: t("page-reports-metadata-description"),
+        name: t("page-reports-title"),
+        description: t("page-reports-description"),
         numberOfItems: reports.length,
         itemListOrder: "https://schema.org/ItemListOrderDescending",
         itemListElement: reports.map((report, index) =>
