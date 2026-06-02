@@ -108,7 +108,7 @@ As the Ethereum network grows faster, it’s important to ensure that the cost o
 ### State creation gas cost increase {#state-creation-gas-cost-increase}
 
 - Ensures that the fees to create new accounts or smart contracts accurately reflect the long-term burden they place on Ethereum's database
-- Sets a fixed cost per state byte (CPSB) targeting a safe and predictable growth rate of 120 GiB/year, ensuring standard physical hardware can continue running the network
+- Sets a fixed **cost per state byte (CPSB)** targeting a safe and predictable growth rate of 120 GiB/year, ensuring standard physical hardware can continue running the network
 - Separates the accounting for these specific fees to a new reservoir, removing old transaction limits and allowing developers to deploy larger, more complex applications
 
 Adding new accounts, tokens, and [smart contracts](/glossary/#smart-contract) creates permanent data (known as "state") that every computer running the network must store indefinitely. The current fees to add or read this data are inconsistent and don’t necessarily reflect the actual, long-term storage burden they place on the network's hardware.
