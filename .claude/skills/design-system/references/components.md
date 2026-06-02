@@ -104,7 +104,7 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 
 **`CardBanner` variants**:
 - `background`: `body (default)` | `accent-a` | `accent-b` | `accent-c` | `primary` | `none`. `none` only when the image won't cover the full rectangle.
-- `size`: `full | lg | base (default) | sm | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm.
+- `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
 - `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
 - `zoom`: `true (default) | false`. Controls hover zoom propagation from a parent `group/link`.
 - Placement: inside `CardHeader` for padded; as a direct child of `Card` (pair with `Card size="xs"` or `variant="ghost"`) for edge-to-edge.
