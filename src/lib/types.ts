@@ -792,6 +792,8 @@ export type ChainName = (typeof chains)[number]["name"]
 
 export type NonEVMChainName = "Starknet"
 
+export type AppOnlyChainName = "Immutable zkEVM"
+
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
   txCosts: number | undefined
@@ -1224,7 +1226,7 @@ export type App = {
   image: string
   category: AppCategoryEnum
   subCategory: string[]
-  networks: (ChainName | NonEVMChainName)[]
+  networks: (ChainName | NonEVMChainName | AppOnlyChainName)[]
   screenshots: string[]
   bannerImage: string
   platforms: string[]
