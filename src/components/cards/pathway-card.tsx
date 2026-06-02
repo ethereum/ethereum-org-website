@@ -51,7 +51,7 @@ const PathwayCard = ({
         fit="contain"
         size="full"
         zoom={false}
-        className="flex h-32 w-full shrink-0 items-center justify-center sm:h-36 sm:w-40 sm:self-center"
+        className="flex h-32 w-full shrink-0 items-center justify-center pt-4 sm:h-36 sm:w-40 sm:self-center sm:pt-0"
       >
         {banner}
       </CardBanner>
