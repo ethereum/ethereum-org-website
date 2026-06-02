@@ -66,7 +66,7 @@ const ExpandableCard = ({
       <Accordion
         type="single"
         collapsible
-        className={cn("mb-4", className)}
+        className={className}
         defaultValue={visible ? "item-1" : undefined}
       >
         <AccordionItem
