@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Tìm hiểu về bản nâng cấp Giao thức Glamsterdam
+description: "Tìm hiểu về bản nâng cấp Giao thức Glamsterdam"
 lang: vi
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Erfahre mehr über das Glamsterdam-Protokoll-Upgrade
+description: "Erfahre mehr über das Glamsterdam-Protokoll-Upgrade"
 lang: de
 ---
 

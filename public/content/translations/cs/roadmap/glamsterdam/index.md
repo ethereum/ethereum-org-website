@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Přečtěte si o upgradu protokolu Glamsterdam
+description: "Přečtěte si o upgradu protokolu Glamsterdam"
 lang: cs
 ---
 

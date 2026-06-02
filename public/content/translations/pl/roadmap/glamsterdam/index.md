@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Dowiedz się więcej o aktualizacji protokołu Glamsterdam
+description: "Dowiedz się więcej o aktualizacji protokołu Glamsterdam"
 lang: pl
 ---
 

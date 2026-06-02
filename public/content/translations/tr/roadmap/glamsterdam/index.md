@@ -1,6 +1,6 @@
 ---
 title: Glamsterdam
-description: Glamsterdam protokol yükseltmesi hakkında bilgi edinin
+description: "Glamsterdam protokol yükseltmesi hakkında bilgi edinin"
 lang: tr
 ---
 
