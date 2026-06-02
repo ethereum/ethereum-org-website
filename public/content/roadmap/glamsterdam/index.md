@@ -235,7 +235,7 @@ This will make it much easier and more reliable for wallets, exchanges, and brid
 
 As we increase the amount of work Ethereum can do, the lists of receipts for those actions (the data records of these transactions) are getting so large that they could potentially cause the network’s nodes to fail when trying to sync data with one another.
 
-Now a requirement for all Execution Layer clients, eth/70 partial block receipt lists (or EIP-7975) introduces a new way for nodes to talk to each other (eth/70) that allows these large lists to be broken into smaller, more manageable pieces. eth/70 introduces a pagination system for the network's communication protocol that allows nodes to break block receipt lists down and safely request the data in smaller, more manageable chunks.
+Now a requirement for all execution layer clients, eth/70 partial block receipt lists (or EIP-7975) introduces a new way for nodes to talk to each other (eth/70) that allows these large lists to be broken into smaller, more manageable pieces. eth/70 introduces a pagination system for the network's communication protocol that allows nodes to break block receipt lists down and safely request the data in smaller, more manageable chunks.
 
 This change would prevent network sync failures during periods of heavy activity. Ultimately, it paves the way for Ethereum to increase its block capacity, and process more transactions per block in the future, without overwhelming the physical hardware syncing the chain.
 
