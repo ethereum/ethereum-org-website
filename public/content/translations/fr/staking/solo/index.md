@@ -39,7 +39,6 @@ La mise en jeu à domicile demande plus de responsabilités, mais vous donne un 
 
 Bien que nous souhaitions que la mise en jeu à domicile soit accessible et sans risque pour tout le monde, la réalité est différente. Il y a quelques considérations pratiques et sérieuses à garder à l'esprit avant de choisir de mettre en jeu vos ETH à domicile.
 
-<InfoGrid>
 <ExpandableCard title="Lecture indispensable" eventCategory="SoloStaking" eventName="clicked required reading">
 Lorsque vous exploitez votre propre nœud, vous devriez consacrer du temps à apprendre à utiliser le logiciel que vous avez choisi. Cela implique de lire la documentation pertinente et d'être à l'écoute des canaux de communication de ces équipes de développeurs.
 
@@ -71,8 +70,6 @@ Différent des pénalités d'inactivité pour être hors ligne, le <em>délestag
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Plus d'informations sur le délestage et le cycle de vie du validateur</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

@@ -39,7 +39,6 @@ O staking individual vem com mais responsabilidades, mas fornece o máximo de co
 
 Por mais que desejemos que o staking individual seja acessível e sem riscos para todos, isso não é a realidade. Existem algumas considerações práticas e sérias a serem lembradas antes de optar por fazer staking individual de seu ETH.
 
-<InfoGrid>
 <ExpandableCard title="Leitura obrigatória" eventCategory="SoloStaking" eventName="clicked required reading">
 Ao operar seu próprio nó, você deve gastar algum tempo aprendendo a usar o software que escolheu. Isso envolve ler a documentação relevante e estar em sintonia com os canais de comunicação dessas equipes de desenvolvimento.
 
@@ -71,8 +70,6 @@ Diferente das penalidades de inatividade por estar offline, o <em>corte</em> é 
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Mais sobre corte e o ciclo de vida do validador</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

@@ -39,7 +39,6 @@ summaryPoints:
 
 होम स्टेकिंग प्रत्येकासाठी प्रवेशयोग्य आणि जोखीममुक्त असावे अशी आमची कितीही इच्छा असली तरी, ते वास्तव नाही. तुमचा ETH होम स्टेक करण्याचा पर्याय निवडण्यापूर्वी काही व्यावहारिक आणि गंभीर बाबी लक्षात ठेवणे आवश्यक आहे.
 
-<InfoGrid>
 <ExpandableCard title="आवश्यक वाचन" eventCategory="SoloStaking" eventName="clicked required reading">
 तुमचा स्वतःचा नोड ऑपरेट करताना, तुम्ही निवडलेले सॉफ्टवेअर कसे वापरायचे हे शिकण्यासाठी थोडा वेळ दिला पाहिजे. यामध्ये संबंधित डॉक्युमेंटेशन वाचणे आणि त्या डेव्हलपर टीम्सच्या कम्युनिकेशन चॅनेलकडे लक्ष ठेवणे समाविष्ट आहे.
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> स्लॅशिंग आणि व्हॅलिडेटर लाइफसायकलबद्दल अधिक</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

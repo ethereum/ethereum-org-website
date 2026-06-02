@@ -50,7 +50,6 @@ const BLOCK_MDX_COMPONENTS = [
   "AlertContent",
   "AlertDescription",
   "Grid",
-  "InfoGrid",
   "InfoBanner",
   "Tabs",
   "TabItem",

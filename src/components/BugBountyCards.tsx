@@ -1,13 +1,13 @@
 import { BaseHTMLAttributes } from "react"
+import { getTranslations } from "next-intl/server"
 
 import type { TranslationKey } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "./ui/buttons/Button"
+import { CardParagraph, CardTitle } from "./ui/card"
 import { Center } from "./ui/flex"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement>
 
@@ -79,8 +79,8 @@ const bugBountyCardsInfo: BugBountyCardInfo[] = [
   },
 ]
 
-const BugBountyCards = () => {
-  const { t } = useTranslation("page-bug-bounty")
+const BugBountyCards = async () => {
+  const t = await getTranslations("page-bug-bounty")
 
   const Banner = ({ card }: { card: BugBountyCardInfo }) => {
     if (card.lowLabelTranslationId)
@@ -96,31 +96,28 @@ const BugBountyCards = () => {
     return <></>
   }
   return (
-    <div className="mx-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+    <div className="grid-cols-fill-4 grid gap-8">
       {bugBountyCardsInfo.map((card, idx) => (
         <div
           key={`bug-bounty-card-${idx}`}
           className={cn(
-            "row-span-6 m-4 grid grid-rows-subgrid",
             "overflow-hidden rounded border bg-background shadow-table-box",
             "hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:transition-transform hover:duration-100"
           )}
         >
           <Banner card={card} />
 
-          <div className="row-span-5 grid grid-rows-subgrid gap-y-6 px-4 py-6">
-            <div className="space-y-2">
-              <h3 className="text-2xl/6 font-bold">
-                {t(card.h2TranslationId)}
-              </h3>
-              <p className="mb-6 text-xl opacity-60">
+          <div className="flex flex-col gap-y-8 p-4 md:p-6">
+            <div className="mb-8 space-y-2">
+              <CardTitle variant="bold">{t(card.h2TranslationId)}</CardTitle>
+              <CardParagraph className="text-xl">
                 {t(card.descriptionTranslationId)}
-              </p>
+              </CardParagraph>
             </div>
 
-            <p className="mt-4 mb-2 text-sm uppercase opacity-60">
+            <CardParagraph size="sm" className="uppercase">
               {t(card.subDescriptionTranslationId)}
-            </p>
+            </CardParagraph>
 
             <ButtonLink href="https://bbp-form.ethereum.org/">
               {t(card.styledButtonTranslationId)}

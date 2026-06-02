@@ -39,7 +39,6 @@ Bireysel hisseleme daha çok sorumluluk gerektirir ancak fonlarınız ve hissele
 
 Evden stake etmenin herkes için erişilebilir ve risksiz olmasını ne kadar istesek de bu gerçek değil. ETH'nizi evden stake etmeyi seçmeden önce akılda tutulması gereken bazı pratik ve ciddi hususlar vardır.
 
-<InfoGrid>
 <ExpandableCard title="Okunması gerekenler" eventCategory="SoloStaking" eventName="clicked required reading">
 Kendi düğümünüzü çalıştırırken, seçtiğiniz yazılımı nasıl kullanacağınızı öğrenmek için biraz zaman ayırmalısınız. Bu, ilgili belgeleri okumayı ve bu geliştirici ekiplerinin iletişim kanallarına aşina olmayı içerir.
 
@@ -71,8 +70,6 @@ Donanım zaman zaman arızalanır, ağ bağlantıları kesilir ve istemci yazıl
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Kesme ve doğrulayıcı yaşam döngüsü hakkında daha fazla bilgi</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

@@ -10,7 +10,6 @@ import StakingLaunchpadWidget from "@/components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGrid"
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
-import { Grid } from "@/components/ui/grid"
 import UpgradeStatus from "@/components/UpgradeStatus"
 
 const TableContainer = (props: ChildOnlyProp) => (
@@ -22,7 +21,6 @@ const TableContainer = (props: ChildOnlyProp) => (
 // in `src/data/topics/staking.ts`.
 export const stakingComponents = {
   DocLink,
-  InfoGrid: Grid, //! TODO: Being deprecated in #18214
   ProductDisclaimer,
   StakingComparison,
   StakingConsiderations,

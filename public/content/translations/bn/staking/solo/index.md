@@ -39,7 +39,6 @@ summaryPoints:
 
 আমরা যতই চাই যে হোম স্টেকিং সবার জন্য অ্যাক্সেসযোগ্য এবং ঝুঁকিমুক্ত হোক, এটি বাস্তব নয়। আপনার ETH হোম স্টেক করার সিদ্ধান্ত নেওয়ার আগে কিছু ব্যবহারিক এবং গুরুতর বিবেচ্য বিষয় মাথায় রাখতে হবে।
 
-<InfoGrid>
 <ExpandableCard title="প্রয়োজনীয় পঠন" eventCategory="SoloStaking" eventName="clicked required reading">
 আপনার নিজের নোড পরিচালনা করার সময় আপনার বেছে নেওয়া সফটওয়্যারটি কীভাবে ব্যবহার করবেন তা শিখতে কিছু সময় ব্যয় করা উচিত। এর মধ্যে প্রাসঙ্গিক ডকুমেন্টেশন পড়া এবং সেই ডেভ টিমগুলোর যোগাযোগের চ্যানেলগুলোর সাথে যুক্ত থাকা অন্তর্ভুক্ত।
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> স্ল্যাশিং এবং ভ্যালিডেটর লাইফসাইকেল সম্পর্কে আরও জানুন</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

@@ -9,7 +9,9 @@ import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsSt
 import Contributors from "@/components/Contributors"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
+import ExpandableCard, {
+  type ExpandableCardProps,
+} from "@/components/ExpandableCard"
 import FeaturedText from "@/components/FeaturedText"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import IdAnchor from "@/components/IdAnchor"
@@ -172,6 +174,13 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
   )
 }
 
+export const ExpandableCardWithMargin = ({
+  className,
+  ...props
+}: ExpandableCardProps) => (
+  <ExpandableCard className={cn("mb-4", className)} {...props} />
+)
+
 // All custom React components
 export const reactComponents = {
   Alert: AlertWithMargins,
@@ -184,7 +193,7 @@ export const reactComponents = {
   Divider,
   DocLink,
   Emoji,
-  ExpandableCard,
+  ExpandableCard: ExpandableCardWithMargin,
   FeaturedText,
   GlossaryTooltip,
   Grid,

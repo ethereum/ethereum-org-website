@@ -39,7 +39,6 @@ Kuweka dhamana ukiwa nyumbani kunakuja na majukumu zaidi lakini kunakupa udhibit
 
 Ingawa tunatamani kuweka dhamana ukiwa nyumbani kufikiwe na kusiwe na hatari kwa kila mtu, huu sio ukweli. Kuna baadhi ya mambo ya vitendo na mazito ya kuzingatia kabla ya kuchagua kuweka dhamana ya ETH yako ukiwa nyumbani.
 
-<InfoGrid>
 <ExpandableCard title="Usomaji unaohitajika" eventCategory="SoloStaking" eventName="clicked required reading">
 Unapoendesha Nodi yako mwenyewe unapaswa kutumia muda kujifunza jinsi ya kutumia programu uliyochagua. Hii inahusisha kusoma nyaraka husika na kufuatilia njia za mawasiliano za timu hizo za wasanidi.
 
@@ -71,8 +70,6 @@ Tofauti na adhabu za kutofanya kazi kwa kutokuwa mtandaoni, <em>kupunguzwa kwa d
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Zaidi kuhusu kupunguzwa kwa dhamana na mzunguko wa maisha wa mthibitishaji</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

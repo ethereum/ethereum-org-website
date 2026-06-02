@@ -2222,6 +2222,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Emgevorgyan"><img src="https://avatars.githubusercontent.com/u/26285829?v=4?s=100" width="100px;" alt="Emgevorgyan"/><br /><sub><b>Emgevorgyan</b></sub></a><br /><a href="#tool-Emgevorgyan" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ricardo-jtg"><img src="https://avatars.githubusercontent.com/u/35004742?v=4?s=100" width="100px;" alt="Ricardo Gonçalves"/><br /><sub><b>Ricardo Gonçalves</b></sub></a><br /><a href="#tool-ricardo-jtg" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/andreivladbrg"><img src="https://avatars.githubusercontent.com/u/99738872?v=4?s=100" width="100px;" alt="Andrei Vlad Birgaoanu"/><br /><sub><b>Andrei Vlad Birgaoanu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aandreivladbrg" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>

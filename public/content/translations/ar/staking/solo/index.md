@@ -39,7 +39,6 @@ summaryPoints:
 
 بقدر ما نتمنى أن يكون التحصيص المنزلي متاحًا وخاليًا من المخاطر للجميع، هذا ليس هو الواقع. هناك بعض الاعتبارات العملية والجدية التي يجب أخذها في الحسبان قبل اختيار تجميد عملات ETH الخاصة بك من المنزل.
 
-<InfoGrid>
 <ExpandableCard title="قراءة مطلوبة" eventCategory="SoloStaking" eventName="clicked required reading">
 عند تشغيل عقدتك الخاصة، يجب أن تقضي بعض الوقت في تعلم كيفية استخدام البرنامج الذي اخترته. وهذا يتضمن قراءة الوثائق ذات الصلة ومتابعة قنوات الاتصال الخاصة بفرق المطورين.
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">المزيد عن الشطب ودورة حياة المدقق</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

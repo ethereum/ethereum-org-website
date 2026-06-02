@@ -39,7 +39,6 @@ Home Staking geht mit mehr Verantwortung einher, bietet Ihnen jedoch maximale Ko
 
 So sehr wir uns auch wünschen, dass Home Staking für jeden zugänglich und risikofrei ist, entspricht dies nicht der Realität. Es gibt einige praktische und ernsthafte Überlegungen, die Sie beachten sollten, bevor Sie sich entscheiden, Ihre ETH von zu Hause aus zu staken.
 
-<InfoGrid>
 <ExpandableCard title="Pflichtlektüre" eventCategory="SoloStaking" eventName="clicked required reading">
 Wenn Sie Ihren eigenen Blockchain-Knoten betreiben, sollten Sie einige Zeit darauf verwenden, zu lernen, wie Sie die von Ihnen gewählte Software verwenden. Dies beinhaltet das Lesen relevanter Dokumentationen und die Aufmerksamkeit für die Kommunikationskanäle dieser Entwicklerteams.
 
@@ -71,8 +70,6 @@ Im Gegensatz zu Inaktivitätsstrafen für das Offline-Sein ist <em>Slashing</em>
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Mehr über Slashing und den Lebenszyklus von Validatoren</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

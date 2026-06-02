@@ -39,7 +39,6 @@ summaryPoints:
 
 雖然我們希望人人都能輕鬆無風險地進行單獨質押，但現實並非如此。 在選擇單獨質押您的 ETH 之前，有一些實際且重要的考量事項需要謹記在心。
 
-<InfoGrid>
 <ExpandableCard title="必讀內容" eventCategory="SoloStaking" eventName="clicked required reading">
 在操作您自己的節點時，您應該花一些時間學習如何使用您所選擇的軟體。 這包括閱讀相關文件，並關注開發團隊的溝通管道。
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多關於罰沒與驗證者生命週期的資訊</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

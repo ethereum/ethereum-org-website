@@ -39,7 +39,6 @@ summaryPoints:
 
 尽管我们希望家庭质押能够对所有人开放且毫无风险，但现实并非如此。 在选择家庭质押你的 ETH 之前，有一些实际且重要的注意事项需要牢记。
 
-<InfoGrid>
 <ExpandableCard title="必读内容" eventCategory="SoloStaking" eventName="clicked required reading">
 运行自己的节点时，你应该花些时间学习如何使用你选择的软件。 这包括阅读相关文档并关注这些开发团队的沟通渠道。
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 更多关于罚没和验证者生命周期的信息</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 
