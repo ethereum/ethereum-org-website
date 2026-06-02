@@ -254,7 +254,7 @@ Essa mudança evitaria falhas de sincronização da rede durante períodos de at
 ### Como o ETH pode ser convertido após a bifurcação rígida Glamsterdam? {#how-can-eth-be-converted-after-the-hardfork}
 
 - **Nenhuma ação é necessária para o seu ETH**: Não há necessidade de converter ou atualizar seu ETH após a atualização Glamsterdam. Os saldos da sua conta permanecerão os mesmos, e o ETH que você possui atualmente permanecerá acessível em sua forma existente após a bifurcação rígida.
-- **Cuidado com golpes!** <Emoji text="⚠️" /> qualquer pessoa instruindo você a "atualizar" seu ETH está tentando aplicar um golpe. Não há nada que você precise fazer em relação a esta atualização. Seus ativos permanecerão completamente inalterados. Lembre-se, manter-se informado é a melhor defesa contra golpes.
+- **Cuidado com golpes!** <Emoji text="⚠️" /> **qualquer pessoa instruindo você a "atualizar" seu ETH está tentando aplicar um golpe.** Não há nada que você precise fazer em relação a esta atualização. Seus ativos permanecerão completamente inalterados. Lembre-se, manter-se informado é a melhor defesa contra golpes.
 
 [Mais sobre como reconhecer e evitar golpes](/security/)
 

@@ -94,7 +94,7 @@ Las lecturas de disco en paralelo habilitadas por las BAL serán un paso signifi
 
 #### Intercambio de listas de acceso de bloque eth/71 {#bale}
 
-El intercambio de listas de acceso de bloque (eth/71 o EIP-8159) es el complemento de red directo para las listas de acceso a nivel de bloque. Mientras que las BAL desbloqueean la ejecución en paralelo, eth/71 actualiza el protocolo entre pares para permitir que los nodos realmente compartan estas listas a través de la red. Ahora requerido para todos los clientes de la capa de ejecución, el intercambio de listas de acceso de bloque permitirá una sincronización más rápida y permitirá a los nodos realizar actualizaciones de estado sin ejecución.
+El intercambio de listas de acceso de bloque (eth/71 o EIP-8159) es el complemento de red directo para las listas de acceso a nivel de bloque. Mientras que las BAL desbloquean la ejecución en paralelo, eth/71 actualiza el protocolo entre pares para permitir que los nodos realmente compartan estas listas a través de la red. Ahora requerido para todos los clientes de la capa de ejecución, el intercambio de listas de acceso de bloque permitirá una sincronización más rápida y permitirá a los nodos realizar actualizaciones de estado sin ejecución.
 
 **Recursos**:
 
