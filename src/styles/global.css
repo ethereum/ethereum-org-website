@@ -17,3 +17,9 @@
 @import "./codeblock.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Fires on the element's own hover OR when an ancestor marked `group/link` is hovered.
+   Lets a Button rendered as a non-interactive child (e.g. CardButtonFake inside a
+   clickable Card) mirror its hover state from the surrounding card anchor, so hovering
+   anywhere on the card is visually identical to hovering the button itself. */
+@custom-variant hover-link (&:hover, &:where(.group\/link:hover *));

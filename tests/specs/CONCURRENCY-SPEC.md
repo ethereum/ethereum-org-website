@@ -67,10 +67,10 @@ Split large files into chunks that stay safely within Gemini's output token limi
 ### Chunk size budget
 
 ```
-MAX_CHUNK_BYTES = 65_536  (64KB)
+MAX_CHUNK_BYTES = 32_768  (32KB)
 ```
 
-At ~4 chars/token (English), 64KB = ~16K tokens input. With CJK at ~1-2 chars/token, 64KB = ~32-64K tokens -- still within the 65K output limit. This is deliberately conservative: more calls, fewer failures.
+At ~4 chars/token (English), 32KB = ~8K tokens input. With CJK at ~1-2 chars/token, 32KB = ~16-32K tokens input. Sized in tandem with `GEMINI_TIMEOUT_MS` (5 min) so high-expansion target languages (sw, ur, ar at ~1.5x output:input) produce output well within the timeout window. Deliberately conservative: more calls, fewer failures.
 
 ### JSON chunking (replaces current key-count approach)
 
@@ -87,9 +87,9 @@ At ~4 chars/token (English), 64KB = ~16K tokens input. With CJK at ~1-2 chars/to
 **Backward compatibility:** The HTML placeholder extraction pass runs BEFORE chunking (unchanged). Chunking operates on the placeholder-replaced content.
 
 **Test assertions:**
-- A JSON file with 50 keys averaging 2KB each (~100KB total) produces 2 chunks
+- A JSON file with 50 keys averaging 2KB each (~100KB total) splits into multiple chunks, each within MAX_CHUNK_BYTES
 - A JSON file with 3 keys where one value is 200KB produces 3 chunks (one per key)
-- A JSON file under 64KB produces 1 chunk (no splitting)
+- A JSON file under MAX_CHUNK_BYTES produces 1 chunk (no splitting)
 - Key order is preserved across chunks
 - Merged output matches original structure
 
@@ -97,7 +97,7 @@ At ~4 chars/token (English), 64KB = ~16K tokens input. With CJK at ~1-2 chars/to
 
 **Current:** Split at heading boundaries when > 40,000 chars (`PROSE_SIZE_THRESHOLD`).
 
-**New:** Replace `PROSE_SIZE_THRESHOLD` with `MAX_CHUNK_BYTES` (64KB). Additionally, if a single section exceeds MAX_CHUNK_BYTES, split on paragraph boundaries within that section.
+**New:** Replace `PROSE_SIZE_THRESHOLD` with `MAX_CHUNK_BYTES` (32KB). Additionally, if a single section exceeds MAX_CHUNK_BYTES, split on paragraph boundaries within that section.
 
 **Paragraph splitting algorithm:**
 1. Split section on blank lines (`\n\n`)
@@ -106,8 +106,8 @@ At ~4 chars/token (English), 64KB = ~16K tokens input. With CJK at ~1-2 chars/to
 4. Minimum: at least 1 paragraph per chunk
 
 **Test assertions:**
-- A markdown file under 64KB produces 1 chunk
-- A markdown file with 3 sections of 40KB each produces 3 chunks (one per section)
+- A markdown file under MAX_CHUNK_BYTES produces 1 chunk
+- 3 sections each sized so they each fit in their own chunk produce 3 chunks (heading-boundary splits)
 - A single section of 100KB splits on paragraph boundaries into 2 chunks
 - Heading context is included in each chunk of a split section
 - Reassembled output matches original content

@@ -14,6 +14,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import InlineLink from "@/components/ui/Link"
@@ -450,12 +451,9 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
         </div>
 
-        <div
-          id="layer-2-faq"
-          className="flex w-full max-w-[832px] flex-col gap-12 px-8 py-9"
-        >
+        <div id="layer-2-faq" className="space-y-8 px-8 py-9">
           <h2>{t("page-layer-2-faq-title")}</h2>
-          <div>
+          <AccordionContainer>
             <ExpandableCard
               title={t("page-layer-2-faq-ExpandableCard-1-title")}
               eventCategory="l2_hub"
@@ -502,7 +500,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             >
               <p>{t("page-layer-2-faq-ExpandableCard-4-description")}</p>
             </ExpandableCard>
-          </div>
+          </AccordionContainer>
         </div>
         <div
           id="layer-2-callout-cards"

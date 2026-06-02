@@ -15,14 +15,13 @@ import { Strong } from "@/components/IntlStringElements"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
+import { AccordionContainer } from "@/components/ui/accordion"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 // Uncomment `Alert` for Bug Bounty Banner:
 // import { Alert } from "@/components/ui/alert"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import { CardParagraph } from "@/components/ui/card"
-import { Divider } from "@/components/ui/divider"
-import { Center, Flex, VStack } from "@/components/ui/flex"
+import { Flex, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
-import Link from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
@@ -65,7 +64,7 @@ const Text = ({ className, ...props }: ComponentProps<"p">) => (
 )
 
 const FullLeaderboardContainer = (props: ChildOnlyProp) => (
-  <VStack className="mx-auto my-8 max-w-3xl px-8 py-0" {...props} />
+  <Stack className="w-full max-w-3xl" {...props} />
 )
 
 const ClientRow = (props: ChildOnlyProp) => (
@@ -385,7 +384,9 @@ export default async function Page(props: { params: Promise<Params> }) {
               <Text>
                 {t.rich("page-upgrades-bug-bounty-validity-desc", {
                   a: (chunks) => (
-                    <Link href="https://bbp-form.ethereum.org/">{chunks}</Link>
+                    <InlineLink href="https://bbp-form.ethereum.org/">
+                      {chunks}
+                    </InlineLink>
                   ),
                 })}
               </Text>
@@ -525,7 +526,9 @@ export default async function Page(props: { params: Promise<Params> }) {
                 <h2>{t("page-upgrades-bug-bounty-not-included")}</h2>
                 <CardParagraph>
                   {t.rich("page-upgrades-bug-bounty-not-included-desc", {
-                    a: (chunks) => <Link href="#in-scope">{chunks}</Link>,
+                    a: (chunks) => (
+                      <InlineLink href="#in-scope">{chunks}</InlineLink>
+                    ),
                   })}
                 </CardParagraph>
                 <UnorderedList>
@@ -745,106 +748,97 @@ export default async function Page(props: { params: Promise<Params> }) {
           </Content>
         </div>
         <Content>
-          <Row>
-            <div className="max-w-[100ch] flex-1">
-              <H2 id="submit-bug">{t("page-upgrades-bug-bounty-submit")}</H2>
-            </div>
-          </Row>
+          <H2 id="submit-bug">{t("page-upgrades-bug-bounty-submit")}</H2>
+          <BugBountyCards />
         </Content>
-        <BugBountyCards />
         <div
           id="leaderboard"
-          className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box"
+          className={cn(
+            "flex w-full flex-col items-start justify-center lg:flex-row",
+            "mt-8 gap-x-16 gap-y-8 px-8 pt-20 pb-16",
+            "border-t bg-banner-grid-gradient shadow-table-item-box"
+          )}
         >
-          <Flex className="flex-col items-start justify-center lg:flex-row">
-            <FullLeaderboardContainer>
-              <H2 id="el-leaderboard" className="text-center">
-                {t("page-upgrades-bug-bounty-hunting-execution-leaderboard")}
-              </H2>
-              <Text>
-                {t(
-                  "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
-                )}
-              </Text>
-              <Leaderboard content={executionBountyHunters} />
-            </FullLeaderboardContainer>
-            <FullLeaderboardContainer>
-              <H2 id="cl-leaderboard" className="text-center">
-                {t("page-upgrades-bug-bounty-hunting-leaderboard")}
-              </H2>
-              <Text>
-                {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
-              </Text>
-              <Leaderboard content={consensusBountyHunters} />
-            </FullLeaderboardContainer>
-          </Flex>
-        </div>
-        <Divider />
-        <Content>
-          <Center>
-            <H2 id="faq" className="text-center">
-              {t("page-upgrades-question-title")}
+          <FullLeaderboardContainer>
+            <H2 id="el-leaderboard">
+              {t("page-upgrades-bug-bounty-hunting-execution-leaderboard")}
             </H2>
-          </Center>
-          <Flex className="mt-16 flex-col lg:flex-row">
-            <div className="w-full">
-              <ExpandableCard
-                title={t("bug-bounty-faq-q2-title")}
-                contentPreview={t("bug-bounty-faq-q2-contentPreview")}
-              >
-                <p>
-                  {t.rich("bug-bounty-faq-q2-content-1", {
-                    a: (chunks) => (
-                      <Link href="https://blog.ethereum.org/">{chunks}</Link>
-                    ),
-                  })}
-                </p>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q3-title")}
-                contentPreview={t("bug-bounty-faq-q3-contentPreview")}
-              >
-                <p>
-                  {t.rich("bug-bounty-faq-q3-content-1", {
-                    strong: Strong,
-                  })}
-                </p>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q4-title")}
-                contentPreview={t("bug-bounty-faq-q4-contentPreview")}
-              >
-                <p>{t("bug-bounty-faq-q4-content-1")}</p>
-              </ExpandableCard>
-            </div>
-            <Flex className="ms-0 w-full flex-col lg:ms-8">
-              <ExpandableCard
-                title={t("bug-bounty-faq-q5-title")}
-                contentPreview={t("bug-bounty-faq-q5-contentPreview")}
-              >
-                <p>{t("bug-bounty-faq-q5-content-1")}</p>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q6-title")}
-                contentPreview={t("bug-bounty-faq-q6-contentPreview")}
-              >
-                <p>{t("bug-bounty-faq-q6-content-1")}</p>
-                <p>{t("bug-bounty-faq-q6-content-2")}</p>
-              </ExpandableCard>
-              <ExpandableCard
-                title={t("bug-bounty-faq-q7-title")}
-                contentPreview={t("bug-bounty-faq-q7-contentPreview")}
-              >
-                <p>{t("bug-bounty-faq-q7-content-1")}</p>
-              </ExpandableCard>
-            </Flex>
-          </Flex>
+            <Text>
+              {t(
+                "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
+              )}
+            </Text>
+            <Leaderboard content={executionBountyHunters} />
+          </FullLeaderboardContainer>
+          <FullLeaderboardContainer>
+            <H2 id="cl-leaderboard">
+              {t("page-upgrades-bug-bounty-hunting-leaderboard")}
+            </H2>
+            <Text>
+              {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
+            </Text>
+            <Leaderboard content={consensusBountyHunters} />
+          </FullLeaderboardContainer>
+        </div>
+        <div className="w-full space-y-16 px-8 py-4">
+          <H2 id="faq">{t("page-upgrades-question-title")}</H2>
+          <AccordionContainer>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q2-title")}
+              contentPreview={t("bug-bounty-faq-q2-contentPreview")}
+            >
+              <p>
+                {t.rich("bug-bounty-faq-q2-content-1", {
+                  a: (chunks) => (
+                    <InlineLink href="https://blog.ethereum.org/">
+                      {chunks}
+                    </InlineLink>
+                  ),
+                })}
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q3-title")}
+              contentPreview={t("bug-bounty-faq-q3-contentPreview")}
+            >
+              <p>
+                {t.rich("bug-bounty-faq-q3-content-1", {
+                  strong: Strong,
+                })}
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q4-title")}
+              contentPreview={t("bug-bounty-faq-q4-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q4-content-1")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q5-title")}
+              contentPreview={t("bug-bounty-faq-q5-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q5-content-1")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q6-title")}
+              contentPreview={t("bug-bounty-faq-q6-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q6-content-1")}</p>
+              <p>{t("bug-bounty-faq-q6-content-2")}</p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={t("bug-bounty-faq-q7-title")}
+              contentPreview={t("bug-bounty-faq-q7-contentPreview")}
+            >
+              <p>{t("bug-bounty-faq-q7-content-1")}</p>
+            </ExpandableCard>
+          </AccordionContainer>
           <FileContributors
-            className="my-10 border-t"
+            className="border-t"
             contributors={contributors}
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
-        </Content>
+        </div>
         <FeedbackCard />
       </MainArticle>
     </>

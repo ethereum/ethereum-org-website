@@ -9,7 +9,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { BaseLink } from "@/components/ui/Link"
@@ -65,7 +65,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <I18nProvider locale={locale} messages={messages}>
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "latest" }}
           heroImg={heroImg}
           title={t("page-latest-title")}
@@ -90,9 +90,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     eventName: post.title,
                   }}
                 >
-                  <h3 className="text-2xl text-body">
-                    {post.title}
-                  </h3>
+                  <h3 className="text-2xl text-body">{post.title}</h3>
                   <p className="text-body-medium uppercase">
                     <Emoji text=":writing_hand:" className="me-2 text-sm" />
                     {post.author}

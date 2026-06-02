@@ -3,7 +3,7 @@ import { getMessages, getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -80,7 +80,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
         conferences={conferences}
       />
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug: "/community/events/conferences" }}
         title={t("page-events-conferences-hero-title", {
           year: getLocaleYear(locale),
@@ -88,7 +88,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         description={t("page-events-conferences-hero-subtitle", {
           year: getLocaleYear(locale),
         })}
-        className="pb-0"
       />
 
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">

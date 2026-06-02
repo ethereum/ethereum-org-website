@@ -2322,6 +2322,17 @@ const chains = [
     chain: "ILT",
   },
   {
+    name: "Crynux on Base",
+    infoURL: "https://crynux.io",
+    chainId: 18896214,
+    nativeCurrency: {
+      name: "Crynux",
+      symbol: "CNX",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "DBK Chain",
     infoURL: "https://docs.dbkchain.io",
     chainId: 20240603,

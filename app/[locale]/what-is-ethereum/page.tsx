@@ -13,7 +13,7 @@ import type { Lang, PageParams, ToCItem } from "@/lib/types"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import {
   HighlightCard,
   HighlightStack,
@@ -80,18 +80,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     { title: t("page-what-is-ethereum-toc-roadmap"), url: "#roadmap" },
   ]
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "learn/what-is-ethereum", startDepth: 1 },
-    heroImg,
-    title: tocItems[0].title,
-    description: (
-      <>
-        <p>{t("page-what-is-ethereum-hero-description-1")}</p>
-        <p>{t("page-what-is-ethereum-hero-description-2")}</p>
-      </>
-    ),
-  }
-
   const getId = (input: string) => {
     const parts = input.split("#")
     return parts.length > 1 ? parts[1] : ""
@@ -105,7 +93,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <div>
-        <ContentHero {...heroProps} />
+        <PageHero
+          breadcrumbs={{ slug: "learn/what-is-ethereum", startDepth: 1 }}
+          heroImg={heroImg}
+          title={tocItems[0].title}
+          description={
+            <>
+              <p>{t("page-what-is-ethereum-hero-description-1")}</p>
+              <p>{t("page-what-is-ethereum-hero-description-2")}</p>
+            </>
+          }
+        />
 
         <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
           <div

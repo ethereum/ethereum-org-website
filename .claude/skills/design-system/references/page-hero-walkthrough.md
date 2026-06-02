@@ -4,38 +4,35 @@ A worked example of adding a page hero correctly.
 
 ## Step 1: Pick the right Hero variant
 
-`@/components/Hero` exports 5 hero shapes. Pick by what your page needs:
+`@/components/Hero` exports 4 hero shapes. Pick by what your page needs:
 
 | Hero | When to use |
 |---|---|
-| `ContentHero` | Most internal pages: 2-column with image, breadcrumb, buttons. The workhorse. |
+| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. Absorbed the former `ContentHero` and `SimpleHero`. |
 | `HubHero` | Hub/landing pages: full-bleed background image with overlay text card. |
 | `HomeHero` | Homepage only. Async server component with optimized image loading. |
-| `SimpleHero` | Text-only with breadcrumb + buttons. No image. |
 | `MdxHero` | Long-form articles: minimal breadcrumb + h1, optimized for reading. |
 
-If none of these fit, **stop and ask**. Don't reach for `PageHero` (deprecated). Don't invent a new hero.
+If none of these fit, **stop and ask**. Don't invent a new hero. Always import `PageHero` as a named export from `@/components/Hero`.
 
 ## Step 2: Compose
 
-### `ContentHero` (most common)
+Prop order convention (include only what's present): `breadcrumbs` **or** `header`, then `heroImg`, `title`, `description`, `buttons`, `variant`, `className`.
+
+### `PageHero` with breadcrumbs (most common)
 
 ```tsx
 import { getTranslations } from "next-intl/server"
-import { ContentHero } from "@/components/Hero"
-import heroImage from "@/public/images/topics/proof-of-stake.png"
+import { PageHero } from "@/components/Hero"
+import heroImg from "@/public/images/topics/proof-of-stake.png"
 
 export default async function Page() {
   const t = await getTranslations("page-pos")
   return (
     <main>
-      <ContentHero
-        breadcrumbs={[
-          { href: "/", label: "Home" },
-          { href: "/topics", label: "Topics" },
-        ]}
-        heroImg={heroImage}
-        header={t("hero-header")}
+      <PageHero
+        breadcrumbs={{ slug: "/staking/" }}
+        heroImg={heroImg}
         title={t("hero-title")}
         description={t("hero-description")}
         buttons={[
@@ -49,16 +46,31 @@ export default async function Page() {
 }
 ```
 
-### `SimpleHero` (text-only)
+`breadcrumbs` accepts either a `{ slug }` object (rendered by the standardized `Breadcrumbs` component) **or** a fully custom `<Breadcrumb>` element -- reach for the custom element when the slug-derived links don't map to real routes. With `breadcrumbs`, `title` is the page `<h1>`.
+
+### `PageHero` with an eyebrow (`header`)
+
+`breadcrumbs` and `header` are **mutually exclusive** (a discriminated union). Pass `header` instead of `breadcrumbs` to render a small uppercase eyebrow as the `<h1>` in the breadcrumb slot; this demotes `title` to `<h2>` (the same structure as `HubHero`).
 
 ```tsx
-import { SimpleHero } from "@/components/Hero"
+<PageHero
+  header={t("hero-eyebrow")}
+  heroImg={heroImg}
+  title={t("hero-title")}
+  description={t("hero-description")}
+/>
+```
 
-<SimpleHero
-  breadcrumbs={[...]}
-  header={t("eyebrow")}
+### `PageHero` text-only (no image)
+
+Omit `heroImg` for a text-only hero. Add `variant="no-divider"` when the next section already supplies its own top border (otherwise you'll get a double rule).
+
+```tsx
+<PageHero
+  breadcrumbs={{ slug: "/community/" }}
   title={t("title")}
   description={t("description")}
+  buttons={[{ content: t("cta"), href: "/get-involved" }]}
 />
 ```
 
@@ -67,10 +79,7 @@ import { SimpleHero } from "@/components/Hero"
 ```tsx
 import { MdxHero } from "@/components/Hero"
 
-<MdxHero
-  breadcrumbs={[...]}
-  title={t("title")}
-/>
+<MdxHero breadcrumbs={{ slug: "/developers/docs/" }} title={t("title")} />
 ```
 
 ## Step 3: Translation, not English
@@ -87,12 +96,6 @@ The page above is a Server Component (default), so it uses `getTranslations` fro
 - Hero images are decorative -- the component renders them with `alt=""`. Don't pass alt text; hero illustrations on this site don't carry content that needs description
 
 ## What NOT to Do
-
-```tsx
-// DON'T: Use deprecated PageHero
-import PageHero from "@/components/PageHero"
-<PageHero ... />
-```
 
 ```tsx
 // DON'T: Inline a hero from scratch
@@ -113,8 +116,9 @@ Reasons it's wrong:
 
 ## Pre-Merge Checklist for a New Page Hero
 
-- [ ] Imports from `@/components/Hero` (NOT `@/components/PageHero`)
+- [ ] Imports the hero as a named export from `@/components/Hero`
 - [ ] Picks the right Hero variant for the page type
+- [ ] Passes exactly one of `breadcrumbs` or `header` to `PageHero` (they're mutually exclusive)
 - [ ] All copy comes from `t()` -- no hard-coded English
 - [ ] Hero image is passed as a static import (`heroImg={heroImage}`)
 - [ ] Breadcrumbs are populated (most pages should have them)
