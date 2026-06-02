@@ -43,7 +43,7 @@ These are landmines where the code looks reasonable but the pattern is wrong. Th
 - **Cards**: `import { Card } from "@/components/ui/card"` is canonical for app code. The `<Card>` markdown shortcode is backed by `@/components/MarkdownCard` — that wrapper is rarely imported from app code, since composing the `ui/card` parts directly is more flexible.
 - **Tooltips**: `import Tooltip from "@/components/Tooltip"` (mobile-aware, Matomo-tracked, scroll-close). **Not** `import { Tooltip } from "@/components/ui/tooltip"` (that's the bare Radix primitive used internally).
 - **Modals**: `import Modal from "@/components/ui/dialog-modal"` (default export, the high-level convenience) for typical modal needs. `@/components/ui/dialog` is the vanilla shadcn-style primitive for fine-grained Radix control. Same names exported from both files; **do not mix sources within a feature**.
-- **Heroes**: import from `@/components/Hero` (`ContentHero`, `SimpleHero`, `HubHero`, `MdxHero`, `HomeHero`). **Not** `@/components/PageHero` (deprecation track).
+- **Heroes**: import from `@/components/Hero` (`PageHero`, `HubHero`, `MdxHero`, `HomeHero`). `PageHero` is the canonical workhorse, covering both image and text-only page heroes.
 
 ### Stale shadcn token names that don't resolve
 
@@ -80,7 +80,7 @@ Don't add more. Use `numberFormat()`.
 | Button | `import { Button, ButtonLink } from "@/components/ui/buttons/Button"` |
 | Anchor (in prose) | `import InlineLink from "@/components/ui/Link"` (default) |
 | Anchor (CTA with arrow) | `import { LinkWithArrow } from "@/components/ui/Link"` |
-| Page hero | `import { ContentHero, SimpleHero, HubHero, MdxHero } from "@/components/Hero"` |
+| Page hero | `import { PageHero, HubHero, MdxHero } from "@/components/Hero"` |
 | Inline alert | `import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"` |
 | Top-of-page banner | `import { Alert } from "@/components/ui/alert"` then `<Alert variant="banner">` |
 | Big numeric display | `import BigNumber from "@/components/BigNumber"` |

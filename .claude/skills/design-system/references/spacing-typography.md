@@ -31,16 +31,16 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 
 ### Hero "title" vs "header"
 
-Several `Hero/*` components use:
-- `header` -- a small uppercase eyebrow (often rendered as `<h1>` for SEO; this is intentional in `HubHero`)
-- `title` -- the visible large title
+`Hero/*` components use:
+- `header` -- a small uppercase eyebrow, rendered as `<h1>` (intentional in `HubHero` and `PageHero`). In `PageHero`, supplying `header` demotes `title` to `<h2>`, so the eyebrow is the page `<h1>`.
+- `title` -- the visible large title (the `<h1>` when no `header` eyebrow is passed)
 - `description` -- the lead paragraph
 
-Don't conflate these. Pass the right field to the Hero variant. See `references/page-hero-walkthrough.md`.
+In `PageHero` the eyebrow slot is a discriminated union: pass **either** `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element) **or** `header` -- not both. Don't conflate these fields. See `references/page-hero-walkthrough.md`.
 
 ### The "page title" gap
 
-There's a recurring `text-[2.5rem]` arbitrary value used in `MdComponents` and `SimpleHero` for in-article page titles. This is a known gap pending a `--text-page-title` token decision. Until that lands, the arbitrary value is the convention; don't reinvent your own page-title size.
+There's a recurring `text-[2.5rem]` arbitrary value in `MdComponents` for in-article page titles. This is a known gap pending a `--text-page-title` token decision. Until that lands, the arbitrary value is the convention there; don't reinvent your own page-title size. (Note: `PageHero` does **not** use this value -- its title is `text-3xl ... lg:text-6xl` -- so don't copy `text-[2.5rem]` into hero work.)
 
 ## Spacing Scale
 
