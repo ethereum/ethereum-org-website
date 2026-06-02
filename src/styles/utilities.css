@@ -67,6 +67,29 @@
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 7.5rem), 1fr));
 }
 
+/* Responsive grids: at most N columns, each at least --grid-item-min wide
+   (default 16rem). Items shrink fluidly until they hit that min, then a column
+   drops -- so fewer columns hold their layout longer. Any integer N works
+   (grid-cols-auto-3, -7, -12). Tune wrapping per item shape via --grid-item-min
+   (larger wraps sooner); keep N small enough that N items fit (min <= width/N).
+   Assumes a gap-4 gutter. Defaults to auto-fill (empty tracks kept at wide
+   widths); set --grid-repeat:auto-fit to collapse them so items stretch. */
+@utility grid-cols-auto-* {
+  grid-template-columns: repeat(
+    var(--grid-repeat, auto-fill),
+    minmax(
+      min(
+        100%,
+        max(
+          var(--grid-item-min, 18rem),
+          calc((100% - (--value(integer) - 1) * 1rem) / --value(integer))
+        )
+      ),
+      1fr
+    )
+  );
+}
+
 /* z-index named values */
 @utility z-hide {
   z-index: -1;
