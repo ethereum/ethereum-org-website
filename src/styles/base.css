@@ -128,11 +128,12 @@
 
 /* CONTENT FLOW RHYTHM (POC -- see
    .claude/skills/design-system/references/typography-spacing-flow-spec.md)
-   Opt-in via the `.flow` class on a content region. One base unit (--space);
-   every gap is a multiple of it, all as margin-top (space-before). No em/lh.
-   The "heading hugs its content" asymmetry comes from headings having MORE
-   space ABOVE them (2x/3x), not less below. Additive + scoped: pages that
-   don't opt in are unaffected. `calc(var(--spacing) * N)` == `--spacing(N)`. */
+   One `.flow` on a content region applies the rhythm to the direct children of
+   the region AND of any <section> within it (one level deep per section, so it
+   never reaches into a component's internals). Group content with
+   <section>/<Section>, not bare <div>s. A component that renders its own
+   <section> opts out with [data-flow="skip"]. Every gap is a margin-top multiple
+   of one base unit (--space); no em/lh. `calc(var(--spacing) * N)` == `--spacing(N)`. */
 
 :root {
   /* The single base unit for the whole rhythm; responsive. */
@@ -146,49 +147,55 @@
 }
 
 @layer base {
-  /* 1x default between any two siblings: heading->content, p->p, p->list, etc. */
-  .flow > * + * {
+  /* `:where()` keeps the scope at zero specificity, so the small type overrides
+     below win by intent and a plain utility class can still override any of it.
+     Scope = direct children of the region or of any <section> in it (not a
+     [data-flow="skip"] one). A first child has no preceding sibling, so the `+`
+     rules never touch it -- no explicit first-child reset needed. */
+
+  /* 1x default between adjacent blocks (heading->content, p->p, p->list, ...). */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + * {
     margin-top: var(--space);
   }
 
-  /* 2x above a subsection heading. */
-  .flow > * + :is(h3, h4) {
+  /* 2x above any heading that follows content within a region/section -- a
+     subsection heading, or a section heading preceded by a lead image. The
+     section's *first* heading has no preceding sibling so it gets none; the
+     section boundary below provides its break. (Ordered before the 3x rule so a
+     top-level markdown h1/h2 still wins 3x.) */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + :is(h2, h3, h4) {
     margin-top: calc(var(--space) * 2);
   }
 
-  /* 3x above a section boundary: a section heading (h1/h2) in a flat stream
-     (markdown), or an explicit <section> element (React's <Section>). The
-     section's own first-child heading is zeroed below, so they never double. */
-  .flow > * + :is(h1, h2, section) {
+  /* 3x above a section boundary: an explicit <section> (React's <Section>), or a
+     top-level h1/h2 that is a direct child of the region (a flat markdown
+     stream). An h2 *inside* a section is its first child, so it has no margin --
+     the section element provides the break. An image leading a section sits at
+     the 1x default below the section top, hugging its heading, not 3x. */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + section,
+  :where(.flow) > * + :is(h1, h2) {
     margin-top: calc(var(--space) * 3);
   }
 
-  /* Call-to-action / button groups get extra room above (they conclude a
-     thought and invite action). A marker is needed because a button group has
-     no element selector; CTAs trail, so only the top gap matters. */
-  .flow > * + [data-flow="cta"] {
+  /* CTA / button groups: extra room above. A marker is needed because a button
+     group has no element selector; CTAs trail, so only the top gap matters. */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + [data-flow="cta"] {
     margin-top: calc(var(--space) * 2);
   }
 
-  .flow > *:first-child {
-    margin-top: 0;
-  }
-
-  /* Lists: neutralize the legacy global list margins (scoped, so other pages
-     stay untouched until the global cleanup lands). The list flows at the 1x
-     default like any block; items get a tighter inner rhythm, no trailing
-     margin. */
-  .flow :is(ul, ol) {
+  /* Lists: neutralize the legacy global list margins (scoped to .flow). The list
+     flows at the default like any block; items get a tighter inner rhythm. */
+  :where(.flow) :is(ul, ol) {
     margin-bottom: 0;
     margin-inline: 0;
     padding-inline-start: calc(var(--spacing) * 6);
   }
 
-  .flow li {
+  :where(.flow) li {
     margin-bottom: 0;
   }
 
-  .flow li + li {
+  :where(.flow) li + li {
     margin-top: calc(var(--space) * 0.5);
   }
 }
