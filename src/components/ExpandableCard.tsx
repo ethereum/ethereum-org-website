@@ -84,7 +84,7 @@ const ExpandableCard = ({
             <div className="flex-1 space-y-4">
               <HStack className="gap-6">
                 {svg}
-                <h3 className="text-xl">{title}</h3>
+                <h3 className="text-xl font-semibold">{title}</h3>
               </HStack>
               {contentPreview && (
                 <p className="w-fit text-sm text-pretty text-body-medium">
