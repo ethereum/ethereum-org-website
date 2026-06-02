@@ -40,6 +40,9 @@ const cardVariants = cva(
         true: "border",
         false: "",
       },
+      hoverEffect: {
+        lift: "hover:shadow-md hover:scale-[1.005]",
+      },
     },
     defaultVariants: {
       variant: "base",
@@ -55,10 +58,22 @@ export type CardProps = React.HTMLAttributes<HTMLElement> &
 
 const Card = React.forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
   (
-    { className, href, customEventOptions, variant, size, bordered, ...props },
+    {
+      className,
+      href,
+      customEventOptions,
+      variant,
+      size,
+      bordered,
+      hoverEffect,
+      ...props
+    },
     ref
   ) => {
-    const classes = cn(cardVariants({ variant, size, bordered }), className)
+    const classes = cn(
+      cardVariants({ variant, size, bordered, hoverEffect }),
+      className
+    )
     if (href) {
       return (
         <BaseLink
@@ -214,6 +229,7 @@ const cardBannerVariants = cva(
         base: "h-48 w-full self-stretch",
         sm: "h-36 w-full self-stretch",
         thumbnail: "size-16 shrink-0",
+        "thumbnail-lg": "size-32 shrink-0",
       },
       fit: {
         cover: "[&_img]:object-cover",

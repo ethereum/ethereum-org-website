@@ -13,14 +13,15 @@ import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GhostCard from "@/components/GhostCard"
+import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
-import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
@@ -48,7 +49,7 @@ import GasPageJsonLD from "./page-jsonld"
 
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
-import infrastructureTransparentImg from "@/public/images/infrastructure_transparent.png"
+import heroImg from "@/public/images/infrastructure_transparent.png"
 import walletImg from "@/public/images/wallet.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
@@ -115,24 +116,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
   ]
 
-  const heroContent = {
-    title: t("page-gas-hero-title"),
-    header: t("page-gas-hero-header"),
-    image: infrastructureTransparentImg,
-    alt: "Hero header image",
-    buttons: [
-      {
-        content: t("page-gas-hero-button-1-content"),
-        toId: "what-is-gas",
-        matomo: {
-          eventCategory: "gas hero buttons",
-          eventAction: "click",
-          eventName: "what is gas",
-        },
-      },
-    ],
-  }
-
   return (
     <I18nProvider locale={locale} messages={messages}>
       <GasPageJsonLD
@@ -140,23 +123,30 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
+      <PageHero
+        header={t("page-gas-hero-title")}
+        heroImg={heroImg}
+        title={t("page-gas-hero-header")}
+        description={
+          <>
+            {t("page-gas-hero-subtitle-1")}
+            <br />
+            {t("page-gas-hero-subtitle-2")}
+          </>
+        }
+        buttons={[
+          {
+            content: t("page-gas-hero-button-1-content"),
+            toId: "what-is-gas",
+            matomo: {
+              eventCategory: "gas hero buttons",
+              eventAction: "click",
+              eventName: "what is gas",
+            },
+          },
+        ]}
+      />
       <PageContainer>
-        <div className="w-full bg-linear-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20">
-          <div className="pb-8">
-            <PageHero
-              content={{
-                subtitle: (
-                  <>
-                    {t("page-gas-hero-subtitle-1")}
-                    <br />
-                    {t("page-gas-hero-subtitle-2")}
-                  </>
-                ),
-                ...heroContent,
-              }}
-            />
-          </div>
-        </div>
         <Content className="mt-16 mb-16 lg:mb-32">
           <Flex className="w-full flex-col items-center lg:flex-row lg:items-start">
             <div className="me-auto w-full flex-[60%] lg:me-2">
@@ -362,7 +352,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         </Content>
         <Content>
           <H2 className="mt-0">{t("page-gas-faq-header")}</H2>
-          <div className="max-w-[832px]">
+          <AccordionContainer>
             <ExpandableCard title={t("page-gas-faq-question-1-q")}>
               <p>
                 <Translation id="page-gas:page-gas-faq-question-1-a-1" />
@@ -385,7 +375,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               </p>
               <p>{t("page-gas-faq-question-3-a-2")}</p>
             </ExpandableCard>
-          </div>
+          </AccordionContainer>
         </Content>
         <Divider />
         <Content>

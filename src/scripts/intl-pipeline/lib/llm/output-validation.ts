@@ -36,20 +36,28 @@ export function validateTranslatedJson(
   const translatedKeys = Object.keys(parsedTranslated).sort()
   const englishKeys = Object.keys(parsedEnglish).sort()
 
-  if (translatedKeys.length !== englishKeys.length) {
-    return {
-      valid: false,
-      error: `Key count mismatch: got ${translatedKeys.length}, expected ${englishKeys.length}`,
-    }
-  }
+  // Compute key set differences. We do this even when counts match, since
+  // counts can collide while keys still differ (one key dropped, another added).
+  const translatedSet = new Set(translatedKeys)
+  const englishSet = new Set(englishKeys)
+  const missing = englishKeys.filter((k) => !translatedSet.has(k))
+  const extra = translatedKeys.filter((k) => !englishSet.has(k))
 
-  // Check for missing keys
-  const missing = englishKeys.filter((k) => !translatedKeys.includes(k))
-  if (missing.length > 0) {
-    return {
-      valid: false,
-      error: `Missing keys: ${missing.slice(0, 5).join(", ")}${missing.length > 5 ? "..." : ""}`,
+  if (missing.length > 0 || extra.length > 0) {
+    const parts: string[] = [
+      `Key set mismatch: got ${translatedKeys.length}, expected ${englishKeys.length}`,
+    ]
+    if (missing.length > 0) {
+      parts.push(
+        `missing: ${missing.slice(0, 5).join(", ")}${missing.length > 5 ? ` (+${missing.length - 5} more)` : ""}`
+      )
     }
+    if (extra.length > 0) {
+      parts.push(
+        `extra: ${extra.slice(0, 5).join(", ")}${extra.length > 5 ? ` (+${extra.length - 5} more)` : ""}`
+      )
+    }
+    return { valid: false, error: parts.join("; ") }
   }
 
   return { valid: true }

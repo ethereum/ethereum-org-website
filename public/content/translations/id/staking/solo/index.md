@@ -39,7 +39,6 @@ Mengunci dari rumah datang dengan lebih banyak tanggung jawab tetapi memberi And
 
 Meskipun kami berharap mengunci dari rumah dapat diakses dan bebas risiko bagi semua orang, ini bukanlah kenyataan. Ada beberapa pertimbangan praktis dan serius yang perlu diingat sebelum memilih untuk mengunci ETH Anda dari rumah.
 
-<InfoGrid>
 <ExpandableCard title="Bacaan wajib" eventCategory="SoloStaking" eventName="clicked required reading">
 Saat mengoperasikan node Anda sendiri, Anda harus meluangkan waktu untuk mempelajari cara menggunakan perangkat lunak yang telah Anda pilih. Ini melibatkan membaca dokumentasi yang relevan dan peka terhadap saluran komunikasi dari tim pengembang tersebut.
 
@@ -71,8 +70,6 @@ Berbeda dengan penalti ketidakaktifan karena offline, <em>pemotongan</em> adalah
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Lebih lanjut tentang pemotongan dan siklus hidup validator</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

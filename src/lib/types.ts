@@ -495,7 +495,7 @@ export type CommonHeroProps<
   /**
    * The primary title of the page
    */
-  title?: string
+  title?: ReactNode
   /**
    * A tag name for the page
    */
@@ -791,6 +791,8 @@ export type Chain = Pick<
 export type ChainName = (typeof chains)[number]["name"]
 
 export type NonEVMChainName = "Starknet"
+
+export type AppOnlyChainName = "Immutable zkEVM"
 
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
@@ -1224,7 +1226,7 @@ export type App = {
   image: string
   category: AppCategoryEnum
   subCategory: string[]
-  networks: (ChainName | NonEVMChainName)[]
+  networks: (ChainName | NonEVMChainName | AppOnlyChainName)[]
   screenshots: string[]
   bannerImage: string
   platforms: string[]

@@ -7,7 +7,7 @@ import {
 
 import type { ExtendedRollup, Lang, PageParams } from "@/lib/types"
 
-import { ContentHero, type ContentHeroProps } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
@@ -147,13 +147,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
   const t = await getTranslations("page-layer-2-networks")
   const tCommon = await getTranslations("common")
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "/layer-2/networks", startDepth: 1 },
-    heroImg,
-    title: tCommon("nav-networks-explore-networks-label"),
-    description: t("page-layer-2-networks-hero-description"),
-  }
-
   return (
     <I18nProvider locale={locale} messages={messages}>
       <Layer2NetworksPageJsonLD
@@ -162,7 +155,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <MainArticle className="relative flex flex-col">
-        <ContentHero {...heroProps} />
+        <PageHero
+          breadcrumbs={{ slug: "/layer-2/networks", startDepth: 1 }}
+          heroImg={heroImg}
+          title={tCommon("nav-networks-explore-networks-label")}
+          description={t("page-layer-2-networks-hero-description")}
+        />
 
         <Layer2NetworksTable {...layer2NetworksProps} />
 

@@ -15,7 +15,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
-import { ContentHero, type ContentHeroProps } from "@/components/Hero"
+import { PageHero, type PageHeroProps } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { XCircle } from "@/components/icons/XCircle"
@@ -160,7 +160,7 @@ async function Page(props: { params: Promise<PageParams> }) {
     marketsHasError = true
   }
 
-  const heroButtons: ContentHeroProps["buttons"] = [
+  const heroButtons: PageHeroProps["buttons"] = [
     {
       content: t("page-stablecoins-hero-button"),
       toId: "get-stablecoins",
@@ -461,12 +461,13 @@ async function Page(props: { params: Promise<PageParams> }) {
     <I18nProvider locale={locale} messages={messages}>
       <StablecoinsPageJsonLD locale={locale} contributors={contributors} />
       <MainArticle className="mx-auto my-0 w-full flex-col items-center">
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "/stablecoins" }}
           title={t("page-stablecoins-hero-header")}
           description={t("page-stablecoins-hero-subtitle")}
           heroImg={heroImg}
           buttons={heroButtons}
+          variant="no-divider"
         />
 
         {/* Why stablecoins */}
