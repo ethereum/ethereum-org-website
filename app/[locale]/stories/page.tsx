@@ -8,7 +8,7 @@ import {
 
 import type { Story } from "@/lib/types"
 
-import { ContentHero } from "@/components/Hero"
+import { PageHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -50,7 +50,7 @@ const StoriesPage = async (props: { params: Promise<{ locale: string }> }) => {
   return (
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="mx-auto w-full max-w-screen-2xl space-y-16 pb-16 md:space-y-24">
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "stories" }}
           title={t("page-stories-hero-title")}
           description={t("page-stories-hero-description")}
