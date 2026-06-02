@@ -94,7 +94,7 @@ The parallel disk reads enabled by BALs will be a significant step toward a futu
 
 #### eth/71 Block Access List Exchange {#bale}
 
-Block Access List Exchange (eth/71 or EIP-8159) is the direct networking companion to block-level access lists. While BALs unlock parallel execution, eth/71 upgrades the peer-to-peer protocol to allow nodes to actually share these lists over the network. Now required for all Execution Layer clients, the block access list exchange will enable faster syncing and allow nodes to perform executionless state updates.
+Block Access List Exchange (eth/71 or EIP-8159) is the direct networking companion to block-level access lists. While BALs unlock parallel execution, eth/71 upgrades the peer-to-peer protocol to allow nodes to actually share these lists over the network. Now required for all execution layer clients, the block access list exchange will enable faster syncing and allow nodes to perform executionless state updates.
 
 **Resources**:
 
