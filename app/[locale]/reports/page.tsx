@@ -42,6 +42,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
+  const sortedReports = reports.sort((a, b) => {
+    const dateA = new Date(a.dateIso)
+    const dateB = new Date(b.dateIso)
+    return dateB.getTime() - dateA.getTime()
+  })
+
   return (
     <>
       <ReportsPageJsonLD
@@ -64,7 +70,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           </div>
 
           <div className="grid grid-cols-fill-4 gap-4">
-            {reports.map(
+            {sortedReports.map(
               ({
                 slug,
                 title,
