@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "Czym jest Ethereum? (Kompletny przewodnik) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "Czym jest Ethereum? (Kompletny przewodnik)",
   "page-what-is-ethereum-meta-description": "Pełny przegląd tego, czym jest Ethereum, jak działa, do czego służy oraz jak zacząć z niego korzystać lub na nim budować. Wyjaśnione w prostych słowach.",
   "page-what-is-ethereum-title": "Czym jest Ethereum?",
   "page-what-is-ethereum-hero-description-1": "Ethereum to zdecentralizowana sieć blockchain i platforma do tworzenia oprogramowania, napędzana przez kryptowalutę ether (ETH).",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "Jaka jest mapa drogowa Ethereum na 2026 rok?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum nie podąża za sztywną mapą drogową. Podąża za wspólną wizją.",
   "page-what-is-ethereum-roadmap-intro-2": "Aktualizacje sieci są wprowadzane jako EIP i rozwijane publicznie przez współtwórców z całego świata. Nie ma centralnego zespołu decydującego o tym, co się wydarzy, są tylko ludzie budujący to, co uważają za przydatne w oparciu o potrzeby użytkowników.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka to najnowsza aktualizacja, uruchomiona w grudniu 2025 roku. Wprowadziła PeerDAS dla bardziej wydajnej dostępności danych L2 i podniosła domyślny limit gazu do ~60M. Patrząc w przyszłość na rok 2026, Glamsterdam jest w fazie rozwoju i spodziewany jest w pierwszej połowie 2026 roku.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka to najnowsza aktualizacja, uruchomiona w grudniu 2025 roku. Wprowadziła ona PeerDAS dla bardziej wydajnej dostępności danych L2 i podniosła domyślny limit gazu do ~60 mln. Patrząc w przyszłość na rok 2026, Glamsterdam jest w fazie rozwoju, a jego wprowadzenie spodziewane jest w drugiej połowie 2026 roku.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>Patrząc w przyszłość</a>, priorytety Ethereum obejmują:",
   "page-what-is-ethereum-roadmap-priority-1": "Uczynienie głównego protokołu i jego L2 szybszymi i tańszymi dla każdego",
   "page-what-is-ethereum-roadmap-priority-2": "Poprawę doświadczeń użytkowników i deweloperów",
