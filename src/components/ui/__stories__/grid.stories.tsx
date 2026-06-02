@@ -52,9 +52,9 @@ export const Default: Story = {
   ),
 }
 
-// One grid per `columns` value at a given `itemSize`. Each renders exactly N
+// One grid per `columns` value at a given `size`. Each renders exactly N
 // tiles so it fills a single row at full width; narrow the canvas to fold it.
-const ItemSizeRange = ({
+const SizeRange = ({
   size,
   counts,
 }: {
@@ -65,7 +65,7 @@ const ItemSizeRange = ({
     {counts.map((columns) => (
       <div key={columns}>
         <p className="mb-2 font-mono text-xs text-body-medium">
-          columns={columns} itemSize=&quot;{size}&quot;
+          columns={columns} size=&quot;{size}&quot;
         </p>
         <Grid columns={columns} size={size}>
           <Items count={columns} />
@@ -75,37 +75,37 @@ const ItemSizeRange = ({
   </div>
 )
 
-// The three `itemSize` presets, each across the column range it can express at
+// The three `size` presets, each across the column range it can express at
 // full width (a larger min item width caps the usable count). Larger sizes wrap
 // sooner; fewer columns hold their layout longer.
 
 // small (7rem min): small items / badges.
 export const Small: Story = {
   render: () => (
-    <ItemSizeRange size="small" counts={[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} />
+    <SizeRange size="small" counts={[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} />
   ),
 }
 
 // narrow (12rem min): small items / badges.
 export const Narrow: Story = {
   render: () => (
-    <ItemSizeRange size="narrow" counts={[2, 3, 4, 5, 6, 7, 8, 9, 10]} />
+    <SizeRange size="narrow" counts={[2, 3, 4, 5, 6, 7, 8, 9, 10]} />
   ),
 }
 
 // base (18rem min, default): standard content cards.
 export const Medium: Story = {
-  render: () => <ItemSizeRange size="base" counts={[2, 3, 4, 5, 6]} />,
+  render: () => <SizeRange size="base" counts={[2, 3, 4, 5, 6]} />,
 }
 
 // wide (22rem min): horizontal items like callouts.
 export const Wide: Story = {
-  render: () => <ItemSizeRange size="wide" counts={[2, 3, 4]} />,
+  render: () => <SizeRange size="wide" counts={[2, 3, 4]} />,
 }
 
 // wider (26rem min): horizontal items like callouts.
 export const Wider: Story = {
-  render: () => <ItemSizeRange size="wider" counts={[2, 3]} />,
+  render: () => <SizeRange size="wider" counts={[2, 3]} />,
 }
 
 // `fit` (auto-fit) collapses empty tracks so a partially-filled row stretches

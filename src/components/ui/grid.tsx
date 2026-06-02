@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils/cn"
 // - `columns` is the max column count at full width; the grid folds to fewer
 //   columns as the viewport narrows. Each value maps to a static class string
 //   so Tailwind can detect it -- do not interpolate the count into the name.
-// - `itemSize` sets the min item width (--grid-item-min): the floor an item
+// - `size` sets the min item width (--grid-item-min): the floor an item
 //   shrinks to before a column drops, and so the fold-aggressiveness lever.
 //   Pick by item shape -- `narrow` for small items/badges (pairs with high
 //   `columns`), `base` for standard content cards (default), `wide` for
