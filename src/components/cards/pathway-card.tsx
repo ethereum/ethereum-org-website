@@ -1,6 +1,6 @@
-import { ChevronRight } from "lucide-react"
 import type { ReactNode } from "react"
 
+import { ChevronNext } from "@/components/Chevron"
 import {
   Card,
   CardBanner,
@@ -68,9 +68,9 @@ const PathwayCard = ({
         </div>
         <CardParagraph>{description}</CardParagraph>
       </div>
-      <ChevronRight
+      <ChevronNext
         className={cn(
-          "size-6 shrink-0 text-body-medium rtl:-scale-x-100",
+          "size-6 shrink-0 text-body-medium",
           "transition-transform duration-100 group-hover/link:translate-x-1 group-hover/link:text-primary"
         )}
       />
