@@ -35,7 +35,7 @@ import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
 import { addSlashes } from "@/lib/utils/url"
 
-const baseHeadingClasses = "font-bold scroll-mt-40 break-words"
+const baseHeadingClasses = "scroll-mt-40 break-words"
 
 const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
@@ -54,7 +54,7 @@ const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   />
 )
 
-const baseSubHeadingClasses = "leading-xs font-semibold break-words"
+const baseSubHeadingClasses = "leading-xs break-words"
 
 const H3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading3 className={cn(baseSubHeadingClasses, "mt-12")} {...props} />
