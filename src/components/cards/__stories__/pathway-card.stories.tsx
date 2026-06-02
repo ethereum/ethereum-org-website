@@ -2,12 +2,12 @@ import { Wallet } from "lucide-react"
 import Image from "next/image"
 import { Meta, StoryObj } from "@storybook/nextjs"
 
-import PathwayCard from "@/components/ui/cards/pathway-card"
+import PathwayCard from "@/components/cards/pathway-card"
 
 import walletCardImg from "@/public/images/homepage/features/global.png"
 
 const meta = {
-  title: "UI / Cards / PathwayCard",
+  title: "Cards / PathwayCard",
   component: PathwayCard,
   parameters: {
     layout: "centered",

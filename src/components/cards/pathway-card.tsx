@@ -43,8 +43,7 @@ const PathwayCard = ({
   <Card
     href={href}
     variant="nested"
-    bordered
-    className={cn("sm:flex-row", className)}
+    className={cn("border sm:flex-row", className)}
   >
     {banner && (
       <CardBanner

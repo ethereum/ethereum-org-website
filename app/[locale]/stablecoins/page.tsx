@@ -14,6 +14,7 @@ import {
 
 import type { Lang, PageParams } from "@/lib/types"
 
+import PathwayCard from "@/components/cards/pathway-card"
 import FeedbackCard from "@/components/FeedbackCard"
 import { PageHero, type PageHeroProps } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
@@ -36,7 +37,6 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
-import PathwayCard from "@/components/ui/cards/pathway-card"
 import {
   EdgeScrollContainer,
   EdgeScrollItem,
@@ -489,8 +489,7 @@ async function Page(props: { params: Promise<PageParams> }) {
           </div>
           <Card
             variant="nested"
-            className="flex-row items-center gap-6 p-6 text-start"
-            bordered
+            className="flex-row items-center gap-6 border p-6 text-start"
           >
             <div className="relative h-32 w-40 shrink-0 overflow-hidden rounded-xl max-sm:hidden">
               <Image
@@ -684,7 +683,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                   key={choice.title}
                   className="ms-4 basis-[80%] sm:basis-1/2 lg:basis-[29%]"
                 >
-                  <Card variant="nested" bordered className="h-full">
+                  <Card variant="nested" className="h-full border">
                     <CardHeader>
                       <CardBanner
                         background="none"
