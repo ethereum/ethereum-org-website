@@ -46,7 +46,7 @@ Ethereum.org হলো একটি ওপেন-সোর্স পরিচা
 
 এগুলো হলো বর্তমানের কিছু কাজ যা সমাধানে আপনি আমাদের সাহায্য করতে পারেন এবং দায়িত্ব নিতে পারেন। এগুলোর বেশিরভাগের জন্যই আপনার একটি GitHub একাউন্ট প্রয়োজন হবে, কারণ ওয়েবসাইটের বেশিরভাগ পরিবর্তন GitHub-এর মাধ্যমে করা হয়।
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">সব কাজ দেখুন</ButtonLink>
 

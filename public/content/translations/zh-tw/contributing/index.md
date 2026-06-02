@@ -51,7 +51,7 @@ Ethereum.org 是一個開源專案，擁有 **12,000+** 名貢獻者，他們協
 
 目前這裡有些你可以助我們解決並負責的任務。 大致上說你將需要 GitHub 帳戶，因為幾乎所有網站變更都是透過 GitHub 進行的。
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">查看所有任務</ButtonLink>
 

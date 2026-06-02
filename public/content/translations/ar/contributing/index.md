@@ -51,7 +51,7 @@ Ethereum.org هو مشروع مفتوح المصدر يضم **أكثر من 12,0
 
 هذه بعض المهام الحالية التي يمكنك مساعدتنا في حلها وتحمل المسؤولية عنها. بالنسبة لأغلب المستخدمين، ستحتاج إلى حساب غيت هاب، حيث يتم إجراء معظم التغييرات على موقع الويب من خلال غيت هاب.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">عرض كل المهام</ButtonLink>
 

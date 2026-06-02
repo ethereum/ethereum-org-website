@@ -4,13 +4,13 @@ metaTitle: Agen AI | Agen AI di Ethereum
 description: Gambaran umum tentang agen AI di Ethereum
 lang: id
 template: use-cases
-emoji: ":robot:"
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
 alt: Orang-orang berkumpul di meja terminal
-summaryPoint1: AI yang berinteraksi dengan blockchain dan berdagang secara mandiri
-summaryPoint2: Mengontrol dompet dan dana onchain
-summaryPoint3: Mempekerjakan manusia atau agen lain untuk bekerja
+summaryPoints:
+  - "AI yang berinteraksi dengan blockchain dan berdagang secara mandiri"
+  - "Mengontrol dompet dan dana onchain"
+  - "Mempekerjakan manusia atau agen lain untuk bekerja"
 buttons:
   - content: Apa itu agen AI?
     toId: what-are-ai-agents

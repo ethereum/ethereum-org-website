@@ -4,13 +4,13 @@ metaTitle: "以太坊支付"
 description: "以太坊支付概要"
 lang: zh-tw
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "以太坊標誌與給予的手一同展示。"
-summaryPoint1: "一個金錢如資訊般自由流通的世界"
-summaryPoint2: "開放且全球化，讓所有人實現無國界交易"
-summaryPoint3: "一分鐘內收到款項"
+summaryPoints:
+  - "一個金錢如資訊般自由流通的世界"
+  - "開放且全球化，讓所有人實現無國界交易"
+  - "一分鐘內收到款項"
 ---
 
 數百萬人每天面臨同樣的挑戰：跨境轉賬緩慢、昂貴，且經常遇到阻礙。 在峇里島的自由業者需等待多天才能收到紐約客戶的款項。 這由其影響銀行基礎設施有線區域的人們，使他們難以參與國際經濟。

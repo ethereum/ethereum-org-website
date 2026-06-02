@@ -4,13 +4,13 @@ metaTitle: "Płatności na Ethereum"
 description: "Przegląd płatności na Ethereum"
 lang: pl
 template: use-cases
-emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: "Logo Eth wyświetlane wraz z dłońmi w geście dawania."
-summaryPoint1: "Świat, w którym pieniądze przemieszczają się tak swobodnie jak informacje"
-summaryPoint2: "Otwarte i globalne, umożliwiające wszystkim transakcje bez granic"
-summaryPoint3: "Płatności otrzymywane w mniej niż minutę"
+summaryPoints:
+  - "Świat, w którym pieniądze przemieszczają się tak swobodnie jak informacje"
+  - "Otwarte i globalne, umożliwiające wszystkim transakcje bez granic"
+  - "Płatności otrzymywane w mniej niż minutę"
 ---
 
 Każdego dnia miliony ludzi stają przed tym samym wyzwaniem: przesyłanie pieniędzy za granicę jest powolne, kosztowne i często frustrujące. Freelancer na Bali czeka dniami, aż płatność od klienta z Nowego Jorku zostanie zrealizowana. Problem ten szczególnie dotyka osoby w regionach z ograniczoną infrastrukturą bankową, co utrudnia im udział w globalnej gospodarce.

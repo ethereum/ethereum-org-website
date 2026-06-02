@@ -5,10 +5,11 @@ lang: id
 template: upgrade
 image: /images/upgrades/merge.png
 alt: 
-summaryPoint1: Mainnet Ethereum menggunakan proof-of-stake, tetapi tidak selalu demikian.
-summaryPoint2: Peningkatan dari mekanisme proof-of-work asli ke proof-of-stake disebut The Merge.
-summaryPoint3: The Merge merujuk pada penggabungan Mainnet Ethereum asli dengan blockchain proof-of-stake terpisah yang disebut Beacon Chain, yang kini ada sebagai satu rantai.
-summaryPoint4: The Merge mengurangi konsumsi energi Ethereum sebesar ~99,95%.
+summaryPoints:
+  - "Mainnet Ethereum menggunakan proof-of-stake, tetapi tidak selalu demikian."
+  - "Peningkatan dari mekanisme proof-of-work asli ke proof-of-stake disebut The Merge."
+  - "The Merge merujuk pada penggabungan Mainnet Ethereum asli dengan blockchain proof-of-stake terpisah yang disebut Beacon Chain, yang kini ada sebagai satu rantai."
+  - "The Merge mengurangi konsumsi energi Ethereum sebesar ~99,95%."
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

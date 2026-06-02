@@ -40,9 +40,10 @@ pnpm-lock.yaml.bak
 
 # typescript
 *.tsbuildinfo
+next-env.d.ts
 
 # rss feeds
-feed.xml
+/feed.xml
 
 # Sitemaps
 sitemap*.xml

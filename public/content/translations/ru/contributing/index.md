@@ -51,7 +51,7 @@ Ethereum.org — это проект с открытым исходным код
 
 Вот несколько текущих задач, в решении которых вы могли бы нам помочь и взять на себя ответственность. Для большинства из них вам понадобится аккаунт на GitHub, так как большинство изменений на сайте вносятся через GitHub.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Посмотреть все задачи</ButtonLink>
 

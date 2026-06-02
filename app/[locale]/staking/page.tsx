@@ -14,19 +14,19 @@ import type {
 } from "@/lib/types"
 
 import { type List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
+import MarkdownCard, { MarkdownCardProps } from "@/components/MarkdownCard"
 import { ContentContainer, Page as MdPage } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
-import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import {
   ButtonLink,
   type ButtonLinkProps,
@@ -41,18 +41,11 @@ import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import StakingCommunityCallout from "./_components/StakingCommunityCallout"
 import StakingPageJsonLD from "./page-jsonld"
 
 import { getBeaconchainData } from "@/lib/data"
 import rhino from "@/public/images/upgrades/upgrade_rhino.png"
-
-type BenefitsType = {
-  title: string
-  emoji: string
-  description: ReactNode
-  linkText?: string
-  href?: string
-}
 
 const PageContainer = (props: ChildOnlyProp) => (
   <VStack className="mx-auto w-full gap-0" {...props} />
@@ -94,22 +87,6 @@ const StyledButtonLink = ({
 
 const CardGrid = (props: ChildOnlyProp) => (
   <div className="grid grid-cols-1 gap-8 lg:grid-cols-3" {...props} />
-)
-
-const StyledCard = (props: {
-  title: string
-  emoji: string
-  description: ReactNode
-  children: ReactNode
-}) => (
-  <Card
-    title={props.title}
-    emoji={props.emoji}
-    description={props.description}
-    className="justify-start [&_h3]:mt-0 [&_h3]:mb-1 [&_h3]:font-bold"
-  >
-    {props.children}
-  </Card>
 )
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -154,7 +131,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     buttons: [],
   }
 
-  const benefits: BenefitsType[] = [
+  const benefits: MarkdownCardProps[] = [
     {
       title: t("page-staking-benefits-1-title"),
       emoji: "💰",
@@ -171,7 +148,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       title: t("page-staking-benefits-3-title"),
       emoji: "🍃",
       description: t("page-staking-benefits-3-description"),
-      linkText: t("page-staking-benefits-3-link"),
+      ctaLabel: t("page-staking-benefits-3-link"),
       href: "/energy-consumption",
     },
   ]
@@ -307,17 +284,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </H2>
                 <CardGrid>
                   {benefits.map(
-                    ({ title, description, emoji, linkText, href }, idx) => (
-                      <StyledCard
-                        title={title}
-                        emoji={emoji}
+                    ({ title, description, emoji, ctaLabel, href }, idx) => (
+                      <MarkdownCard
                         key={idx}
+                        emoji={emoji}
+                        title={title}
                         description={description}
                       >
-                        {href && linkText && (
-                          <InlineLink href={href}>{linkText}</InlineLink>
+                        {href && ctaLabel && (
+                          <InlineLink href={href}>{ctaLabel}</InlineLink>
                         )}
-                      </StyledCard>
+                      </MarkdownCard>
                     )
                   )}
                 </CardGrid>
@@ -506,36 +483,38 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
               <div>
                 <H2 id={tocItems.faq.id}>{tocItems.faq.title}</H2>
-                <ExpandableCard title={t("page-staking-faq-4-question")}>
-                  <p>{t("page-staking-faq-4-answer-p1")}</p>
-                  <p>{t("page-staking-faq-4-answer-p2")}</p>
-                  <p>{t("page-staking-faq-4-answer-p3")}</p>
-                  <ButtonLink className="self-start" href="/roadmap/merge/">
-                    {t("page-upgrades-merge-btn")}
-                  </ButtonLink>
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-5-question")}>
-                  <p>{t("page-staking-faq-5-answer-p1")}</p>
-                  <p>{t("page-staking-faq-5-answer-p2")}</p>
-                  <ButtonLink
-                    className="self-start"
-                    href="/staking/withdrawals/"
-                  >
-                    {t("page-staking-faq-5-answer-link")}
-                  </ButtonLink>
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-1-question")}>
-                  <Translation id="page-staking:page-staking-faq-1-answer" />
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-2-question")}>
-                  {t("page-staking-faq-2-answer")}
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-3-question")}>
-                  <p>{t("page-staking-faq-3-answer-p1")}</p>
-                  <p>
-                    <Translation id="page-staking:page-staking-faq-3-answer-p2" />
-                  </p>
-                </ExpandableCard>
+                <AccordionContainer>
+                  <ExpandableCard title={t("page-staking-faq-4-question")}>
+                    <p>{t("page-staking-faq-4-answer-p1")}</p>
+                    <p>{t("page-staking-faq-4-answer-p2")}</p>
+                    <p>{t("page-staking-faq-4-answer-p3")}</p>
+                    <ButtonLink className="self-start" href="/roadmap/merge/">
+                      {t("page-upgrades-merge-btn")}
+                    </ButtonLink>
+                  </ExpandableCard>
+                  <ExpandableCard title={t("page-staking-faq-5-question")}>
+                    <p>{t("page-staking-faq-5-answer-p1")}</p>
+                    <p>{t("page-staking-faq-5-answer-p2")}</p>
+                    <ButtonLink
+                      className="self-start"
+                      href="/staking/withdrawals/"
+                    >
+                      {t("page-staking-faq-5-answer-link")}
+                    </ButtonLink>
+                  </ExpandableCard>
+                  <ExpandableCard title={t("page-staking-faq-1-question")}>
+                    <Translation id="page-staking:page-staking-faq-1-answer" />
+                  </ExpandableCard>
+                  <ExpandableCard title={t("page-staking-faq-2-question")}>
+                    {t("page-staking-faq-2-answer")}
+                  </ExpandableCard>
+                  <ExpandableCard title={t("page-staking-faq-3-question")}>
+                    <p>{t("page-staking-faq-3-answer-p1")}</p>
+                    <p>
+                      <Translation id="page-staking:page-staking-faq-3-answer-p2" />
+                    </p>
+                  </ExpandableCard>
+                </AccordionContainer>
               </div>
               <div>
                 <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>

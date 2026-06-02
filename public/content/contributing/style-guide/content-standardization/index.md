@@ -181,13 +181,13 @@ When linking to another page on ethereum.org, use the relative path over the abs
 ```md
 <!-- Good -->
 
-Read more about [smart contracts](/docs/developers/smart-contracts/)
+Read more about [smart contracts](/developers/docs/smart-contracts/)
 
 <!-- Bad -->
 
-Read more about [smart contracts](/en/docs/developers/smart-contracts)
-Read more about [smart contracts](/docs/developers/smart-contracts)
-Read more about [smart contracts](https://ethereum.org/docs/developers/smart-contracts)
+Read more about [smart contracts](/en/developers/docs/smart-contracts)
+Read more about [smart contracts](/developers/docs/smart-contracts)
+Read more about [smart contracts](https://ethereum.org/developers/docs/smart-contracts)
 ```
 
 Please also add a trailing slash to all links. This keeps links consistent and avoids redirects, which hurts site performance.

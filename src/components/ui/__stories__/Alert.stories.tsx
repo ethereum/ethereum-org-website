@@ -1,27 +1,34 @@
-import * as React from "react"
 import { Info } from "lucide-react"
-import { Meta, StoryObj } from "@storybook/nextjs"
+import type { Meta, StoryObj } from "@storybook/nextjs"
 
 import {
   Alert,
   AlertCloseButton,
   AlertContent,
   AlertDescription,
+  AlertEmoji,
+  AlertIcon,
   AlertTitle,
 } from "../alert"
-import { Center } from "../flex"
+import { VStack } from "../flex"
 
 const meta = {
   title: "Molecules / Action Feedback / Alerts",
   component: Alert,
   parameters: {
+    docs: {
+      description: {
+        component:
+          "Inline alert/callout. Six `variant` colors (`info | error | success | warning | update | banner`); `banner` renders edge-to-edge with no border-radius for top-of-page use. Sub-components: `AlertContent`, `AlertTitle`, `AlertDescription`, `AlertIcon` (lucide or other SVG), `AlertEmoji`, `AlertCloseButton`.",
+      },
+    },
     layout: "none",
   },
   decorators: [
     (Story) => (
-      <Center className="min-h-[100vh]">
+      <VStack className="min-h-screen">
         <Story />
-      </Center>
+      </VStack>
     ),
   ],
 } satisfies Meta<typeof Alert>
@@ -35,9 +42,28 @@ const DEMO_DESC = "This is an alert to be used for important information."
 
 const VARIANTS = ["info", "error", "success", "warning", "update"] as const
 
-export const Variants: Story = {
+export const Default: Story = {
+  parameters: { chromatic: { disableSnapshot: true } },
   render: (args) => (
-    <div className="flex w-[500px] flex-col gap-4">
+    <Alert className="w-lg" {...args}>
+      <AlertContent>
+        <AlertTitle>{DEMO_TITLE}</AlertTitle>
+        <AlertDescription>{DEMO_DESC}</AlertDescription>
+      </AlertContent>
+    </Alert>
+  ),
+}
+
+export const Variants: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: "All five `variant` options stacked for visual comparison.",
+      },
+    },
+  },
+  render: (args) => (
+    <div className="flex w-lg flex-col gap-4">
       {VARIANTS.map((variant) => (
         <Alert key={variant} variant={variant} className="w-full" {...args}>
           <AlertContent>
@@ -66,22 +92,73 @@ export const WithCloseButton: Story = {
   ),
 }
 
-export const Banner: Story = {
+export const WithIcon: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          "`AlertIcon` wraps an SVG icon with `[&>svg]:size-6` to constrain size. Icon color inherits from the variant via the alert's `**:[svg]:text-*` class.",
+      },
+    },
+  },
   render: (args) => (
-    <div className="mx-8 flex w-full flex-col gap-4">
+    <div className="flex flex-col gap-4">
       {VARIANTS.map((variant) => (
-        <Alert key={variant} variant={variant} size="full" {...args}>
-          <Info className="text-2xl" />
+        <Alert key={variant} variant={variant} {...args}>
+          <AlertIcon>
+            <Info />
+          </AlertIcon>
           <AlertContent>
-            <AlertTitle>Banner use case</AlertTitle>
-            <AlertDescription>
-              <p>{DEMO_DESC}</p>
-              <p>{DEMO_DESC}</p>
-            </AlertDescription>
+            <AlertTitle>{DEMO_TITLE}</AlertTitle>
+            <AlertDescription>{DEMO_DESC}</AlertDescription>
           </AlertContent>
-          <AlertCloseButton />
         </Alert>
       ))}
+    </div>
+  ),
+}
+
+export const WithEmoji: Story = {
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story:
+          "`AlertEmoji` renders the project's `Emoji` component at `text-4xl` aligned to the start of the alert.",
+      },
+    },
+  },
+  render: (args) => (
+    <div className="flex w-lg flex-col gap-4">
+      <Alert variant="update" {...args}>
+        <AlertEmoji text=":party_popper:" />
+        <AlertContent>
+          <AlertTitle>New feature</AlertTitle>
+          <AlertDescription>
+            Layer 2 network filtering is now live across the dapps directory.
+          </AlertDescription>
+        </AlertContent>
+      </Alert>
+      <Alert variant="info" {...args}>
+        <AlertEmoji text=":information_source:" />
+        <AlertContent>
+          <AlertTitle>Did you know?</AlertTitle>
+          <AlertDescription>
+            Validators secure the Ethereum network by proposing and attesting to
+            blocks.
+          </AlertDescription>
+        </AlertContent>
+      </Alert>
+    </div>
+  ),
+}
+
+export const Banner: Story = {
+  render: (args) => (
+    <div className="w-full max-w-(--breakpoint-2xl)">
+      <Alert variant="banner" {...args}>
+        {DEMO_DESC}
+      </Alert>
     </div>
   ),
 }

@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "sourceFile": "src/intl/en/page-layer-2-learn.json",
+  "generatedAt": "2026-05-26T09:56:13.205Z",
+  "rootHash": "03b3922883be",
+  "tree": {
+    "contentHash": "078ab4e82697",
+    "anchorHash": "025fa2061822",
+    "children": {
+      "page-layer-2-learn-meta-title": {
+        "contentHash": "4c4b2e9e2566",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-title": {
+        "contentHash": "4c4b2e9e2566",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-description": {
+        "contentHash": "92e37ef869e1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-button-1-label": {
+        "contentHash": "4c4b2e9e2566",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-button-2-label": {
+        "contentHash": "7dd5f7094b72",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-what-is-layer-2-title": {
+        "contentHash": "4c4b2e9e2566",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-what-is-layer-2-1": {
+        "contentHash": "6c66adc07d1f",
+        "anchorHash": "0496ec6890ea",
+        "children": {
+          "prose:1": {
+            "contentHash": "64677cc67a39",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "ef7797e13d3a",
+            "anchorHash": "db0d5f8fb432"
+          },
+          "prose:2": {
+            "contentHash": "3ab9b4ba60ef",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:1",
+          "html-tag:0",
+          "prose:2"
+        ]
+      },
+      "page-layer-2-learn-what-is-layer-2-2": {
+        "contentHash": "a67ec3b6b61d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-what-is-layer-1-title": {
+        "contentHash": "4ea2a77e5bb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-what-is-layer-1-1": {
+        "contentHash": "11332bf5904d",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "48b71c5a330c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-layer-2-learn-what-is-layer-1-2": {
+        "contentHash": "035646d95a08",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-layer-1-list-title": {
+        "contentHash": "60e7d465c96e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-layer-1-list-1": {
+        "contentHash": "d7ee122bc7c1",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "eae4287dbcbc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-layer-2-learn-layer-1-list-2": {
+        "contentHash": "ec49d318f68a",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "0eaad6ea9b8b",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-layer-2-learn-layer-1-list-3": {
+        "contentHash": "c94e261f7575",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "058e82f9434f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-layer-2-learn-layer-1-list-4": {
+        "contentHash": "2145b09e4785",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "4fe355df93c0",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-layer-2-learn-why-do-we-need-layer-2-title": {
+        "contentHash": "1c5a356ae80f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-why-do-we-need-layer-2-1": {
+        "contentHash": "3e120b9bfdb0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-why-do-we-need-layer-2-2": {
+        "contentHash": "281310e10e80",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-why-do-we-need-layer-2-scalability": {
+        "contentHash": "814fe33f11b3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-why-do-we-need-layer-2-scalability-1": {
+        "contentHash": "713b1d9d5972",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-why-do-we-need-layer-2-scalability-2": {
+        "contentHash": "bbb8d1554084",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-layer2Cards-1-title": {
+        "contentHash": "8cd0a2c0e6dd",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-layer2Cards-1-description": {
+        "contentHash": "99d48878e2ff",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-layer2Cards-2-title": {
+        "contentHash": "0cb55b8bf09e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-layer2Cards-2-description": {
+        "contentHash": "2e754efcd3d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-layer2Cards-3-title": {
+        "contentHash": "b2f458268657",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-layer2Cards-3-description": {
+        "contentHash": "c868dc227576",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-how-does-layer-2-work-title": {
+        "contentHash": "6125ec41c367",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-how-does-layer-2-work-1": {
+        "contentHash": "03f4e08b7ce1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-how-does-layer-2-work-2": {
+        "contentHash": "aba9a778a67c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-how-does-layer-2-work-rollups-title": {
+        "contentHash": "09ff9fac1a18",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-how-does-layer-2-work-rollups-1": {
+        "contentHash": "67d31a049ff7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-how-does-layer-2-work-rollups-2": {
+        "contentHash": "3b19783a0e21",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-rollupCards-optimistic-title": {
+        "contentHash": "0aa995f7eaeb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-rollupCards-optimistic-description": {
+        "contentHash": "b36cf4e09627",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-rollupCards-optimistic-childSentence": {
+        "contentHash": "8fef10ce9abb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-rollupCards-zk-title": {
+        "contentHash": "c240853b943b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-rollupCards-zk-description": {
+        "contentHash": "e1d9d2a153b0",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-rollupCards-zk-childSentence": {
+        "contentHash": "3dbc467ac9bb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-dyor-title": {
+        "contentHash": "fbdf1813ef07",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-dyor-1": {
+        "contentHash": "e7729d05e107",
+        "anchorHash": "4b9f7d802648",
+        "children": {
+          "prose:0": {
+            "contentHash": "9616a05077ce",
+            "anchorHash": "e3b0c44298fc"
+          }
+        }
+      },
+      "page-layer-2-learn-dyor-2": {
+        "contentHash": "4dcbccab7443",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-dyor-link": {
+        "contentHash": "3d6661e4293f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-note-on-alt-l1-title": {
+        "contentHash": "bcf0ad376dc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-note-on-alt-l1-1": {
+        "contentHash": "1b53ebf66133",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-note-on-alt-l1-2": {
+        "contentHash": "d57521f99233",
+        "anchorHash": "55d32605e67d",
+        "children": {
+          "prose:2": {
+            "contentHash": "282e71d004ff",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "9c8ae38f81d5",
+            "anchorHash": "79f1af8e6606"
+          },
+          "prose:3": {
+            "contentHash": "6201111b83a0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:1": {
+            "contentHash": "64d3e9f252a1",
+            "anchorHash": "b4c26b26824e"
+          },
+          "prose:4": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "prose:2",
+          "html-tag:0",
+          "prose:3",
+          "html-tag:1",
+          "prose:4"
+        ]
+      },
+      "page-layer-2-learn-callout-1-title": {
+        "contentHash": "fe44d51f690b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-callout-1-description": {
+        "contentHash": "cfbda0fd7ac7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-learn-more": {
+        "contentHash": "1445799c033a",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-callout-2-title": {
+        "contentHash": "e20242516122",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-callout-2-description": {
+        "contentHash": "a54f7a365ec4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "page-layer-2-learn-explore-networks": {
+        "contentHash": "41744416458a",
+        "anchorHash": "e3b0c44298fc"
+      }
+    },
+    "childrenOrder": [
+      "page-layer-2-learn-meta-title",
+      "page-layer-2-learn-title",
+      "page-layer-2-learn-description",
+      "page-layer-2-learn-button-1-label",
+      "page-layer-2-learn-button-2-label",
+      "page-layer-2-learn-what-is-layer-2-title",
+      "page-layer-2-learn-what-is-layer-2-1",
+      "page-layer-2-learn-what-is-layer-2-2",
+      "page-layer-2-learn-what-is-layer-1-title",
+      "page-layer-2-learn-what-is-layer-1-1",
+      "page-layer-2-learn-what-is-layer-1-2",
+      "page-layer-2-learn-layer-1-list-title",
+      "page-layer-2-learn-layer-1-list-1",
+      "page-layer-2-learn-layer-1-list-2",
+      "page-layer-2-learn-layer-1-list-3",
+      "page-layer-2-learn-layer-1-list-4",
+      "page-layer-2-learn-why-do-we-need-layer-2-title",
+      "page-layer-2-learn-why-do-we-need-layer-2-1",
+      "page-layer-2-learn-why-do-we-need-layer-2-2",
+      "page-layer-2-learn-why-do-we-need-layer-2-scalability",
+      "page-layer-2-learn-why-do-we-need-layer-2-scalability-1",
+      "page-layer-2-learn-why-do-we-need-layer-2-scalability-2",
+      "page-layer-2-learn-layer2Cards-1-title",
+      "page-layer-2-learn-layer2Cards-1-description",
+      "page-layer-2-learn-layer2Cards-2-title",
+      "page-layer-2-learn-layer2Cards-2-description",
+      "page-layer-2-learn-layer2Cards-3-title",
+      "page-layer-2-learn-layer2Cards-3-description",
+      "page-layer-2-learn-how-does-layer-2-work-title",
+      "page-layer-2-learn-how-does-layer-2-work-1",
+      "page-layer-2-learn-how-does-layer-2-work-2",
+      "page-layer-2-learn-how-does-layer-2-work-rollups-title",
+      "page-layer-2-learn-how-does-layer-2-work-rollups-1",
+      "page-layer-2-learn-how-does-layer-2-work-rollups-2",
+      "page-layer-2-learn-rollupCards-optimistic-title",
+      "page-layer-2-learn-rollupCards-optimistic-description",
+      "page-layer-2-learn-rollupCards-optimistic-childSentence",
+      "page-layer-2-learn-rollupCards-zk-title",
+      "page-layer-2-learn-rollupCards-zk-description",
+      "page-layer-2-learn-rollupCards-zk-childSentence",
+      "page-layer-2-learn-dyor-title",
+      "page-layer-2-learn-dyor-1",
+      "page-layer-2-learn-dyor-2",
+      "page-layer-2-learn-dyor-link",
+      "page-layer-2-learn-note-on-alt-l1-title",
+      "page-layer-2-learn-note-on-alt-l1-1",
+      "page-layer-2-learn-note-on-alt-l1-2",
+      "page-layer-2-learn-callout-1-title",
+      "page-layer-2-learn-callout-1-description",
+      "page-layer-2-learn-learn-more",
+      "page-layer-2-learn-callout-2-title",
+      "page-layer-2-learn-callout-2-description",
+      "page-layer-2-learn-explore-networks"
+    ]
+  },
+  "sourceCommitSha": "3ec7d2cd6ede59940bb02b21be2e5d211370a724"
+}
