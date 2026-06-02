@@ -48,24 +48,6 @@
 @utility grid-cols-bento {
   grid-template-columns: repeat(12, 1fr);
 }
-@utility grid-cols-fill-3-w-full {
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr));
-}
-@utility grid-cols-fill-3 {
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
-}
-@utility grid-cols-fill-4 {
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
-}
-@utility grid-cols-fit-4 {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-}
-@utility grid-cols-fill-8 {
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 11.25rem), 1fr));
-}
-@utility grid-cols-fill-10 {
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 7.5rem), 1fr));
-}
 
 /* Responsive grids: at most N columns, each at least --grid-item-min wide
    (default 16rem). Items shrink fluidly until they hit that min, then a column

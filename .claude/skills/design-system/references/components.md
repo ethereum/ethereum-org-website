@@ -121,6 +121,28 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 
 **`CardEmoji`**: wraps `<Emoji text=":rocket:" />` in a fixed-size `div` to prevent layout shift on client-side hydration. Typically lives in `CardHeader`.
 
+### `Grid`
+
+```tsx
+import { Grid } from "@/components/ui/grid"
+```
+
+Responsive grid for laying out a collection of items (cards, tiles, badges). Renders **at most `columns`** columns at full width and folds to fewer as the viewport narrows -- items shrink to a min width, then a column drops. **Use this instead of hand-rolling `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`** or reaching for the raw `grid-cols-auto-*` utility.
+
+```tsx
+<Grid columns={3}>
+  {items.map((item) => (
+    <Card key={item.id} href={item.href}>...</Card>
+  ))}
+</Grid>
+```
+
+**`Grid` variants**:
+- `columns`: `2`–`12` (default `4`). Max column count at full width; maps to a static `grid-cols-auto-N` class.
+- `size`: `small (7rem) | narrow (12rem) | base (18rem, default) | wide (22rem) | wider (26rem)`. The **min item width** (`--grid-item-min`) — the floor an item shrinks to before a column drops, and so the fold-aggressiveness lever. Pick by item shape: `small` for badges, `base` for standard content cards, `wide`/`wider` for horizontal items like callouts. Larger sizes wrap sooner; keep `columns` small enough that N items of the chosen width fit (min ≤ container/N).
+- `fit`: `boolean`. Default keeps empty tracks (`auto-fill`); `fit` collapses them (`auto-fit`) so a partially-filled row stretches to fill the width.
+- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed.
+
 ### `Section`
 
 ```tsx

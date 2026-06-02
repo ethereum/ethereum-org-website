@@ -38,6 +38,14 @@ The `<Card>` MDX shortcode (registered in `MdComponents`) is backed by `@/compon
 
 These are feature components. Don't reuse them outside their domain.
 
+### Use `@/components/ui/grid` to lay out a collection of cards/items
+
+```tsx
+import { Grid } from "@/components/ui/grid"
+```
+
+`<Grid columns={N}>` instead of hand-rolling `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`. Renders at most `columns` columns and folds down responsively; tune the per-item min width with `size` and switch `auto-fill`→`auto-fit` with `fit`. See `components.md` for the variant matrix. (The raw `grid-cols-auto-*` utility backs it; the older `grid-cols-fill-*` / `grid-cols-fit-*` classes are legacy.)
+
 ## Modal / Dialog
 
 Three import paths. Pick by use case.
