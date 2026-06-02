@@ -51,7 +51,7 @@ Jakieś pytania? 🤔 Dołącz do naszego [serwera Discord](https://discord.gg/e
 
 Oto parę aktualnych zadań, które możesz pomóc nam rozwiązać i wziąć za nie odpowiedzialność. Najprawdopodobniej będzie Ci potrzebne konto na GitHubie, ponieważ większość zmian na stronie jest robionych właśnie przez GitHuba.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">Zobacz wszystkie zadania</ButtonLink>
 

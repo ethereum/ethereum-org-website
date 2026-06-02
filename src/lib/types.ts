@@ -6,6 +6,7 @@ import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
+  BlogFrontmatter,
   DocsFrontmatter,
   StaticFrontmatter,
   TopicFrontmatter,
@@ -65,6 +66,7 @@ export type Frontmatter = TopicFrontmatter &
   StaticFrontmatter &
   DocsFrontmatter &
   TutorialFrontmatter &
+  BlogFrontmatter &
   VideoFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
@@ -610,6 +612,23 @@ export type VideoCardData = {
   thumbnailUrl: string
 }
 
+/**
+ * Blog post data for listing pages and carousels.
+ * Parsed from frontmatter of blog post markdown files.
+ */
+export type BlogPost = {
+  href: string
+  title: string
+  description: string
+  author: string
+  team?: string
+  tags?: string[]
+  timeToRead: number
+  published: string
+  lang: string
+  image?: string
+}
+
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number | undefined>
   activeAddresses: Record<string, number | undefined>
@@ -772,6 +791,8 @@ export type Chain = Pick<
 export type ChainName = (typeof chains)[number]["name"]
 
 export type NonEVMChainName = "Starknet"
+
+export type AppOnlyChainName = "Immutable zkEVM"
 
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
@@ -1205,7 +1226,7 @@ export type App = {
   image: string
   category: AppCategoryEnum
   subCategory: string[]
-  networks: (ChainName | NonEVMChainName)[]
+  networks: (ChainName | NonEVMChainName | AppOnlyChainName)[]
   screenshots: string[]
   bannerImage: string
   platforms: string[]

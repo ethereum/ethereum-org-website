@@ -46,7 +46,7 @@ Ethereum.org என்பது **12 000+** பங்களிப்பாளர
 
 இவை நீங்கள் எங்களுக்குத் தீர்க்கவும் பொறுப்பேற்கவும் உதவக்கூடிய சில தற்போதைய பணிகளாகும். இணையதளத்தில் பெரும்பாலான மாற்றங்கள் GitHub மூலம் செய்யப்படுவதால், பெரும்பாலானவற்றிற்கு உங்களுக்கு GitHub கணக்கு தேவைப்படும்.
 
-<IssuesList issues={gfissues} my={8} />
+<IssuesList my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">அனைத்துப் பணிகளையும் காண்க</ButtonLink>
 
