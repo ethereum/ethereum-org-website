@@ -391,7 +391,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <H2>
             <Translation id="page-run-a-node:page-run-a-node-why-title" />
           </H2>
-          <div className="grid grid-cols-fill-3 gap-8">
+          <div className="grid grid-cols-fill-3 gap-x-4 gap-y-8">
             {whyRunANodeCards.map(({ Svg, title, preview, body }) => (
               <ExpandableCard
                 contentPreview={preview}

@@ -39,7 +39,6 @@ Home staking comes with more responsibility but provides you with maximum contro
 
 As much as we wish that home staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to home stake your ETH.
 
-<InfoGrid>
 <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
 When operating your own node you should spend some time learning how to use the software you've chosen. This involves reading relevant documentation and being attune to communication channels of those dev teams.
 
@@ -71,7 +70,6 @@ Different from inactivity penalties for being offline, <em>slashing</em> is a mu
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> More on slashing and validator lifecycle</a>
 </ExpandableCard>
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

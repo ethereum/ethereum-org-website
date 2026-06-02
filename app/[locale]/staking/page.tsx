@@ -26,6 +26,7 @@ import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { AccordionContainer } from "@/components/ui/accordion"
 import {
   ButtonLink,
   type ButtonLinkProps,
@@ -482,36 +483,38 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
               <div>
                 <H2 id={tocItems.faq.id}>{tocItems.faq.title}</H2>
-                <ExpandableCard title={t("page-staking-faq-4-question")}>
-                  <p>{t("page-staking-faq-4-answer-p1")}</p>
-                  <p>{t("page-staking-faq-4-answer-p2")}</p>
-                  <p>{t("page-staking-faq-4-answer-p3")}</p>
-                  <ButtonLink className="self-start" href="/roadmap/merge/">
-                    {t("page-upgrades-merge-btn")}
-                  </ButtonLink>
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-5-question")}>
-                  <p>{t("page-staking-faq-5-answer-p1")}</p>
-                  <p>{t("page-staking-faq-5-answer-p2")}</p>
-                  <ButtonLink
-                    className="self-start"
-                    href="/staking/withdrawals/"
-                  >
-                    {t("page-staking-faq-5-answer-link")}
-                  </ButtonLink>
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-1-question")}>
-                  <Translation id="page-staking:page-staking-faq-1-answer" />
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-2-question")}>
-                  {t("page-staking-faq-2-answer")}
-                </ExpandableCard>
-                <ExpandableCard title={t("page-staking-faq-3-question")}>
-                  <p>{t("page-staking-faq-3-answer-p1")}</p>
-                  <p>
-                    <Translation id="page-staking:page-staking-faq-3-answer-p2" />
-                  </p>
-                </ExpandableCard>
+                <AccordionContainer>
+                  <ExpandableCard title={t("page-staking-faq-4-question")}>
+                    <p>{t("page-staking-faq-4-answer-p1")}</p>
+                    <p>{t("page-staking-faq-4-answer-p2")}</p>
+                    <p>{t("page-staking-faq-4-answer-p3")}</p>
+                    <ButtonLink className="self-start" href="/roadmap/merge/">
+                      {t("page-upgrades-merge-btn")}
+                    </ButtonLink>
+                  </ExpandableCard>
+                  <ExpandableCard title={t("page-staking-faq-5-question")}>
+                    <p>{t("page-staking-faq-5-answer-p1")}</p>
+                    <p>{t("page-staking-faq-5-answer-p2")}</p>
+                    <ButtonLink
+                      className="self-start"
+                      href="/staking/withdrawals/"
+                    >
+                      {t("page-staking-faq-5-answer-link")}
+                    </ButtonLink>
+                  </ExpandableCard>
+                  <ExpandableCard title={t("page-staking-faq-1-question")}>
+                    <Translation id="page-staking:page-staking-faq-1-answer" />
+                  </ExpandableCard>
+                  <ExpandableCard title={t("page-staking-faq-2-question")}>
+                    {t("page-staking-faq-2-answer")}
+                  </ExpandableCard>
+                  <ExpandableCard title={t("page-staking-faq-3-question")}>
+                    <p>{t("page-staking-faq-3-answer-p1")}</p>
+                    <p>
+                      <Translation id="page-staking:page-staking-faq-3-answer-p2" />
+                    </p>
+                  </ExpandableCard>
+                </AccordionContainer>
               </div>
               <div>
                 <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>

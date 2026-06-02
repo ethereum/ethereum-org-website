@@ -39,7 +39,6 @@ summaryPoints:
 
 ホームステーキングが誰にとってもアクセス可能でリスクフリーであることを願っていますが、現実はそうではありません。 ETHをホームステーキングすることを選択する前に、留意すべき実践的かつ深刻な考慮事項がいくつかあります。
 
-<InfoGrid>
 <ExpandableCard title="必読事項" eventCategory="SoloStaking" eventName="clicked required reading">
 ご自身のノードを運用する際には、選択したソフトウェアの使用方法を学ぶために時間をかけるべきです。 これには、関連ドキュメントを読み、それらの開発チームのコミュニケーションチャネルに注意を払うことが含まれます。
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">スラッシングとバリデータのライフサイクルに関する詳細</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 
