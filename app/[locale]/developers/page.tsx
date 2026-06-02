@@ -118,7 +118,7 @@ const WhyGrid = () => {
         <div className="flex gap-1.5" key={heading}>
           <CheckCircle />
           <div className="space-y-1">
-            <h3 className="text-lg">{heading}</h3>
+            <h3 className="text-lg font-bold">{heading}</h3>
             <p className="text-body-medium">{description}</p>
           </div>
         </div>
