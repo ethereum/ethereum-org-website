@@ -1,5 +1,7 @@
 "use client"
 
+import { Grid } from "@/components/ui/grid"
+
 import { StakingProductCard } from "./StakingProductCard"
 import { StakingProductsCategoryKeys } from "./types"
 import { useStakingProductsCardGrid } from "./useStakingProductsCardGrid"
@@ -14,11 +16,11 @@ const StakingProductsCardGrid = ({
   const { rankedProducts } = useStakingProductsCardGrid({ category })
 
   return (
-    <div className={"mx-0 my-12 grid grid-cols-fill-4 gap-6"}>
+    <Grid className="mx-0 my-12">
       {rankedProducts.map((product) => (
         <StakingProductCard key={product.name} product={product} />
       ))}
-    </div>
+    </Grid>
   )
 }
 

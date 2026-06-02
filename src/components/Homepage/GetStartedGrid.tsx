@@ -11,6 +11,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { Section, SectionHeader } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -104,7 +105,7 @@ const GetStartedGrid = async ({
           </p>
         </div>
 
-        <div className="mx-auto grid w-7xl max-w-full grid-cols-fill-3 gap-8">
+        <Grid columns={3} size="wide" className="mx-auto w-7xl max-w-full">
           {cards.map((card) => (
             <Card
               key={card.title}
@@ -169,7 +170,7 @@ const GetStartedGrid = async ({
               </CardFooter>
             </Card>
           ))}
-        </div>
+        </Grid>
       </div>
     </Section>
   )

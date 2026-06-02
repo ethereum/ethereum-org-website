@@ -19,6 +19,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -187,7 +188,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-hubs-subtitle")}
               </p>
             </div>
-            <div className="grid grid-cols-fill-3-w-full gap-4">
+            <Grid columns={3} size="wider">
               {communityHubs.map(
                 ({
                   id,
@@ -256,7 +257,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </div>
                 )
               )}
-            </div>
+            </Grid>
             <div className="md:px-4">
               <ButtonLink
                 href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"

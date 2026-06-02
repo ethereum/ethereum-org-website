@@ -7,6 +7,7 @@ import ContentHero from "@/components/Hero/ContentHero"
 import MainArticle from "@/components/MainArticle"
 import { Alert, AlertContent } from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/section"
 
@@ -82,7 +83,7 @@ const Page = async (props: {
 
     return (
       <>
-        <div className="grid grid-cols-fill-4 gap-8">
+        <Grid>
           {filteredEvents.map((event) => (
             <EventCard
               key={event.id}
@@ -97,7 +98,7 @@ const Page = async (props: {
               }}
             />
           ))}
-        </div>
+        </Grid>
       </>
     )
   }
