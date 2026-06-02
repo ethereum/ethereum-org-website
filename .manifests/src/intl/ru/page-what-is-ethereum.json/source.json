@@ -1,14 +1,14 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-what-is-ethereum.json",
-  "generatedAt": "2026-05-01T19:44:01.258Z",
-  "rootHash": "5b53607775b6",
+  "generatedAt": "2026-06-02T16:05:03.062Z",
+  "rootHash": "b9cbe34eed63",
   "tree": {
-    "contentHash": "5ba2ed442c07",
+    "contentHash": "e5e87cb2d39e",
     "anchorHash": "d1e634682c8d",
     "children": {
       "page-what-is-ethereum-meta-title": {
-        "contentHash": "ed9a0426edf4",
+        "contentHash": "8b4e0ea6aef8",
         "anchorHash": "e3b0c44298fc"
       },
       "page-what-is-ethereum-meta-description": {
@@ -888,7 +888,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-what-is-ethereum-roadmap-intro-3": {
-        "contentHash": "958a7d85951d",
+        "contentHash": "3846890f9966",
         "anchorHash": "e3b0c44298fc"
       },
       "page-what-is-ethereum-roadmap-priorities-intro": {
@@ -1200,5 +1200,5 @@
       "page-what-is-ethereum-banner-when-who-alt"
     ]
   },
-  "sourceCommitSha": "4a12cb9394943a43a5509983baec11bf9c3d756f"
+  "sourceCommitSha": "e65713ed154ea426f8c2ca96968df7fdd9929674"
 }
