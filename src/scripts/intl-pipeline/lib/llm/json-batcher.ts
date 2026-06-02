@@ -179,10 +179,7 @@ function chunkKeysByBytes(
   if (keys.length === 0) return [[]]
 
   // Fast path: if total fits in one chunk, return all keys together
-  const totalBytes = Buffer.byteLength(
-    JSON.stringify(parsed, null, 2),
-    "utf-8"
-  )
+  const totalBytes = Buffer.byteLength(JSON.stringify(parsed, null, 2), "utf-8")
   if (totalBytes <= maxBytes) return [keys]
 
   const chunks: string[][] = []

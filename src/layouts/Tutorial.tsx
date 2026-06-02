@@ -19,6 +19,7 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
+import PageActions from "@/components/PageActions"
 import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
@@ -29,7 +30,7 @@ import YouTube from "@/components/YouTube"
 import { getEditPath } from "@/lib/utils/editPath"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading1 className="max-lg:text-[1.75rem]" {...props} />
+  <MdHeading1 className="mt-6 mb-3 max-lg:text-[1.75rem]" {...props} />
 )
 
 const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -121,11 +122,17 @@ export const TutorialLayout = ({
         />
         <Heading1>{frontmatter.title}</Heading1>
         <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
+        <PageActions
+          slug={slug}
+          isTranslated={!contentNotTranslated}
+          editPath={absoluteEditPath}
+          hideEditButton={hideEditButton}
+          className="-ms-2 mb-6 lg:mt-6"
+        />
         <TableOfContents
-          className="pt-8"
+          className="pt-6"
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
-          editPath={absoluteEditPath}
           isMobile
         />
         {heroImage && (
@@ -155,8 +162,6 @@ export const TutorialLayout = ({
           className="pt-16"
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
-          editPath={absoluteEditPath}
-          hideEditButton={hideEditButton}
         />
       )}
     </div>

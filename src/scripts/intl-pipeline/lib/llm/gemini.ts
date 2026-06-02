@@ -789,7 +789,9 @@ async function translateBatchWithSplitFallback(
     if (halves.length < 2) throw err
 
     const errMsg =
-      err instanceof Error ? err.message.slice(0, 200) : String(err).slice(0, 200)
+      err instanceof Error
+        ? err.message.slice(0, 200)
+        : String(err).slice(0, 200)
     console.warn(
       `  [json-batch] ${metadata.filePath ?? ""}${metadata.targetLanguage ? ` [${metadata.targetLanguage}]` : ""}: split-fallback depth=${depth + 1}, splitting batch into ${halves.length} sub-batches (error: ${errMsg})`
     )
