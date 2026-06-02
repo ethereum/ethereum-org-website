@@ -29,11 +29,11 @@ Um staker individual recebe recompensas diretamente do protocolo por manter seu 
 
 O staking individual vem com mais responsabilidades, mas fornece o máximo de controle sobre seus fundos e configuração de participação.
 
-<CardGrid>
+<Grid>
   <Card title="Ganhe ETH" emoji="💸" description="Ganhe recompensas em ETH diretamente do protocolo quando seu validador estiver online, sem que intermediários fiquem com uma parte." />
   <Card title="Controle total" emoji="🎛️" description="Mantenha suas próprias chaves. Escolha a combinação de clientes e hardware que te permita minimizar seu risco e contribuir da melhor forma para a saúde e segurança da rede. Serviços de staking de terceiros tomam essas decisões por você, e nem sempre fazem as escolhas mais seguras." />
   <Card title="Segurança da rede" emoji="🔐" description="Fazer staking em casa é a maneira mais impactante de participar. Ao rodar um validador no seu próprio hardware, você fortalece a robustez, a descentralização e a segurança do protocolo Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Considerações antes do staking individual {#considerations-before-staking-solo}
 

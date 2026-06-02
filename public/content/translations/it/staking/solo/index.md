@@ -29,11 +29,11 @@ Uno staker da casa riceve ricompense direttamente dal protocollo per mantenere i
 
 Lo staking da casa comporta maggiori responsabilità, ma ti offre il massimo controllo sui tuoi fondi e sulla configurazione dello staking.
 
-<CardGrid>
+<Grid>
   <Card title="Guadagna nuovi ETH" emoji="💸" description="Guadagna ricompense denominate in ETH direttamente dal protocollo quando il tuo validatore è online, senza che alcun intermediario prenda una percentuale." />
   <Card title="Controllo totale" emoji="🎛️" description="Conserva le tue chiavi. Scegli la combinazione di client e hardware che ti consente di ridurre al minimo i rischi e contribuire al meglio alla salute e alla sicurezza della rete. I servizi di staking di terze parti prendono queste decisioni per te e non sempre fanno le scelte più sicure." />
   <Card title="Sicurezza della rete" emoji="🔐" description="Lo staking da casa è il modo più d'impatto per fare staking. Eseguendo un validatore sul tuo hardware a casa, rafforzi la robustezza, la decentralizzazione e la sicurezza del protocollo di Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Considerazioni prima di fare staking da casa {#considerations-before-staking-solo}
 

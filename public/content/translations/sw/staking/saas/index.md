@@ -21,11 +21,11 @@ Kuwekeza kwa kushikilia kama huduma (“SaaS”) inawakilisha aina ya huduma za 
 
 Itifaki ya Ethereum haiungi mkono uwakilishi wa hisa, kwa hivyo huduma hizi zimeundwa ili kujaza mahitaji haya. Iwapo una ETH 32 za kushikilia, lakini hujisikii vizuri kushughulika na maunzi, huduma za SaaS hukuruhusu kukabidhi mamlaka sehemu ngumu huku ukipata zawadi za kuzuia asili.
 
-<CardGrid>
+<Grid>
   <Card title="Kithibitishaji chako mwenyewe" emoji=":desktop_computer:" description="Weka ETH 32 zako mwenyewe ili kuwezesha funguo zako za kusaini zitakazoshiriki katika makubaliano ya Ethereum. Fuatilia maendeleo yako kupitia dashibodi ili kuona zawadi za ETH zikikusanyika." />
   <Card title="Rahisi kuanza" emoji="🏁" description="Sahau kuhusu mahitaji ya vifaa, usanidi, matengenezo ya nodi na maboresho. Watoa huduma wa SaaS hukuruhusu kuwakabidhi sehemu ngumu kwa kupakia vitambulisho vyako vya kusaini, na kuwaruhusu kuendesha kithibitishaji kwa niaba yako kwa gharama ndogo." />
   <Card title="Punguza hatari yako" emoji=":shield:" description="Mara nyingi watumiaji hawahitaji kuachia ufikiaji wa funguo zinazowezesha kutoa au kuhamisha fedha zilizowekwa. Hizi ni tofauti na funguo za kusaini, na zinaweza kuhifadhiwa kivyake ili kupunguza (lakini si kuondoa kabisa) hatari yako kama mwekezaji." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

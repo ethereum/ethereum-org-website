@@ -27,11 +27,11 @@ Dies ist kein ferner Traum – es passiert heute auf Ethereum. Während traditio
 
 Für Millionen von Menschen, die im Ausland arbeiten, ist es eine regelmäßige Notwendigkeit, Geld in die Heimat zu schicken. Traditionelle Überweisungsdienste sind oft mit hohen Gebühren und langsamen Bearbeitungszeiten verbunden. Ethereum bietet eine überzeugende Alternative.
 
-<CardGrid>
+<Grid>
   <Card title="Günstigere Gebühren" emoji=":money_with_wings:" description="Überweisungsdienste berechnen im Durchschnitt bis zu 14 $ an Gebühren. Ethereum-Transaktionen können oft für unter 0,01 $ abgeschlossen werden."/>
   <Card title="Schnellere Transfers" emoji="📶" description="Internationale Banküberweisungen dauern mehrere Tage. Ethereum-Transaktionen werden in Minuten abgewickelt." />
   <Card title="Offen für alle" emoji="🌎" description="Sie benötigen nur eine Internetverbindung und eine Wallet-App, um Ether zu senden oder zu empfangen." />
-</CardGrid>
+</Grid>
 
 ## Zugang zu globalen Währungen {#access-to-global-currencies}
 

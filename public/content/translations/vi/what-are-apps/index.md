@@ -21,11 +21,11 @@ Một khi ứng dụng được triển khai trên mạng chuỗi khối Ethereu
 
 Ứng dụng Ethereum có các mã nguồn chạy trên mạng chuỗi khối Ethereum thay vì trong một máy chủ tập trung. Điều ấy là lý do chúng thường được gọi là ứng dụng phi tập trung hoặc viết tắt là "dapps".
 
-<CardGrid>
+<Grid>
   <Card title="Riêng tư hơn" emoji=":detective:" description="Bạn chỉ cần một ví Ethereum để sử dụng bất kỳ ứng dụng phi tập trung nào. Dữ liệu cá nhân của bạn không bắt buộc. Đây chính là internet mà lẽ ra phải luôn như thế."/>
   <Card title="Truy cập toàn cầu" emoji="🌍" description="Các ứng dụng phi tập trung không bị chi phối bởi các quy tắc của khu vực và cửa hàng ứng dụng. Việc truy cập của bạn phụ thuộc vào kết nối internet – chứ không phải nơi bạn sống." />
   <Card title="Dịch vụ rẻ hơn" emoji=":handshake:" description="Các ứng dụng phi tập trung là mạng ngang hàng. Việc không có bên trung gian lấy phí có nghĩa là dịch vụ sẽ rẻ hơn." />
-</CardGrid>
+</Grid>
 
 ## Vậy nó giải quyết vấn đề gì {#why-does-this-matter}
 

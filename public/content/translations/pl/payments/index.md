@@ -26,11 +26,11 @@ To nie jest odległa wizja – to dzieje się już dziś na Ethereum. Podczas gd
 
 Dla milionów ludzi pracujących za granicą wysyłanie pieniędzy do domu jest regularną koniecznością. Tradycyjne usługi przekazów pieniężnych często wiążą się z wysokimi opłatami i powolnym czasem realizacji. Ethereum oferuje atrakcyjną alternatywę.
 
-<CardGrid>
+<Grid>
   <Card title="Tańsze opłaty" emoji=":money_with_wings:" description="Średnia opłata za przekaz pieniężny wynosi do 14 USD. Transakcje w Ethereum często kosztują poniżej 0,01 USD."/>
   <Card title="Szybsze transfery" emoji="📶" description="Przetworzenie międzynarodowych przelewów bankowych zajmuje kilka dni. Transakcje Ethereum są rozliczane w ciągu kilku minut." />
   <Card title="Otwarte dla każdego" emoji="🌎" description="Wystarczy połączenie z internetem i aplikacja portfela, aby wysyłać lub odbierać Ether." />
-</CardGrid>
+</Grid>
 
 ## Dostęp do globalnych walut {#access-to-global-currencies}
 

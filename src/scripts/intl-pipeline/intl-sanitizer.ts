@@ -49,7 +49,7 @@ const BLOCK_MDX_COMPONENTS = [
   "AlertEmoji",
   "AlertContent",
   "AlertDescription",
-  "CardGrid",
+  "Grid",
   "InfoGrid",
   "InfoBanner",
   "Tabs",

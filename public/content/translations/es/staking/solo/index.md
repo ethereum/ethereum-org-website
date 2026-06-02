@@ -29,11 +29,11 @@ Un participante desde casa recibe las recompensas directamente desde el protocol
 
 Participar desde casa conlleva más responsabilidad, pero proporciona el máximo control posible sobre los fondos y la configuración de los validadores.
 
-<CardGrid>
+<Grid>
   <Card title="Gana ETH nuevo" emoji="💸" description="Gana recompensas en ETH directamente del protocolo cuando tu validador esté en línea, sin que los intermediarios se lleven una parte." />
   <Card title="Control total" emoji="🎛️" description="Conserva tus propias claves. Elige la combinación de clientes y hardware que te permita minimizar tu riesgo y contribuir mejor a la salud y seguridad de la red. Los servicios de staking de terceros toman estas decisiones por ti y no siempre eligen las opciones más seguras." />
   <Card title="Seguridad de la red" emoji="🔐" description="Hacer staking en casa es la forma de staking con mayor impacto. Al ejecutar un validador en tu propio hardware en casa, fortaleces la robustez, la descentralización y la seguridad del protocolo de Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Consideraciones antes de hacer staking en casa {#considerations-before-staking-solo}
 
