@@ -80,7 +80,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         }
       />
 
-      <MainArticle className="w-full flex-col items-center">
+      <MainArticle className="w-full flex-col items-center px-4 lg:px-8">
         <h2 className="mt-12 mb-8 leading-xs">
           {t("page-contributing-translation-program-contributors-thank-you")}
         </h2>
