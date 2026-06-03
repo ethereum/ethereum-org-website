@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/latest/why-build-on-ethereum/index.md",
+  "generatedAt": "2026-06-03T07:06:20.349Z",
+  "rootHash": "76f2395cef75",
+  "tree": {
+    "contentHash": "c205340ed695",
+    "anchorHash": "b1d0363f497b",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "0968d690bfa9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "d13a9afc99e9",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "320fc488a16e"
+      },
+      "frontmatter:team": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0b40ef7405d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d279fe5d573b"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "8c907365a866"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "477cfb910177"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "227931f913fb",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "decentralization": {
+        "contentHash": "2bc7123f8da8",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "e8492d3e2f90",
+        "children": {
+          "_label": {
+            "contentHash": "e8492d3e2f90",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0b95d20e1fff",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "censorship-resistance": {
+        "contentHash": "a6b7df499030",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "cae4d9818fc9",
+        "children": {
+          "_label": {
+            "contentHash": "cae4d9818fc9",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "7a77acd245bd",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "permissionless": {
+        "contentHash": "66d51f45fa5e",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "cbc68abde686",
+        "children": {
+          "_label": {
+            "contentHash": "cbc68abde686",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f04c37c0fa89",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "composability": {
+        "contentHash": "b78d466ab270",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "b35f4f23f2af",
+        "children": {
+          "_label": {
+            "contentHash": "b35f4f23f2af",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "f494072fafd8",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "the-agent-economy": {
+        "contentHash": "d73060ed441f",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "95f280620123",
+        "children": {
+          "_label": {
+            "contentHash": "95f280620123",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "0d3f10eae657",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "conclusion": {
+        "contentHash": "e683e2333545",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "89db2ad881f2",
+        "children": {
+          "_label": {
+            "contentHash": "89db2ad881f2",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "b2b136ef8aec",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "ccdb31341893",
+        "anchorHash": "013dc031fe44",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:16": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f44e54e135df",
+            "anchorHash": "308f2b60c256"
+          },
+          "prose:17": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "118b42c388a0",
+            "anchorHash": "f2cefe30c605"
+          },
+          "prose:18": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "bddb8b8b73e2",
+            "anchorHash": "dea34f19329e"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "555fb99b962e",
+            "anchorHash": "a76c2c2af0e8"
+          },
+          "prose:20": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "10ca3bd024a6",
+            "anchorHash": "8a6935f89b2a"
+          },
+          "prose:21": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "21a7cbb639f6",
+            "anchorHash": "53697a3c0cbe"
+          },
+          "prose:22": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "651c72b4d5f3",
+            "anchorHash": "b63b6a2b0eb2"
+          },
+          "prose:23": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "b3e58fdaff1c",
+            "anchorHash": "c2d33489211b"
+          },
+          "prose:24": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "2c02f801785c",
+            "anchorHash": "0845a5fb969e"
+          },
+          "prose:25": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "babb78f15400",
+            "anchorHash": "03b87348436c"
+          },
+          "prose:26": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "8196c039c584",
+            "anchorHash": "2e5b303691c7"
+          },
+          "prose:27": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "3e4df6a23b69",
+            "anchorHash": "c6a17268548a"
+          },
+          "prose:28": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:12": {
+            "contentHash": "ec64fdfca416",
+            "anchorHash": "4d67e154fbe7"
+          },
+          "prose:29": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:13": {
+            "contentHash": "97c8d92f2c29",
+            "anchorHash": "b136a4bafe94"
+          },
+          "prose:30": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:14": {
+            "contentHash": "b693aa5c35e7",
+            "anchorHash": "21ec3166858d"
+          },
+          "prose:31": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:15": {
+            "contentHash": "dce9ea787e7c",
+            "anchorHash": "10b4dd36c9b4"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:16",
+          "link:0",
+          "prose:17",
+          "link:1",
+          "prose:18",
+          "link:2",
+          "prose:19",
+          "link:3",
+          "prose:20",
+          "link:4",
+          "prose:21",
+          "link:5",
+          "prose:22",
+          "link:6",
+          "prose:23",
+          "link:7",
+          "prose:24",
+          "link:8",
+          "prose:25",
+          "link:9",
+          "prose:26",
+          "link:10",
+          "prose:27",
+          "link:11",
+          "prose:28",
+          "link:12",
+          "prose:29",
+          "link:13",
+          "prose:30",
+          "link:14",
+          "prose:31",
+          "link:15"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:team",
+      "frontmatter:tags",
+      "frontmatter:published",
+      "frontmatter:image",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "prose:0",
+      "decentralization",
+      "censorship-resistance",
+      "permissionless",
+      "composability",
+      "the-agent-economy",
+      "conclusion",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3d9ccec5aac63a907c96f18f2699f8c05f31816d"
+}
