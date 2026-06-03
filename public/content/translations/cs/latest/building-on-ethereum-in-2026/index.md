@@ -31,7 +31,7 @@ Pokud chcete jednoduché pravidlo, použijte matematiku gasu místo starých pov
 | Swap | \~180,000 | **$0.21** |
 | Nasazení ERC-20 | \~1,200,000 | **$1.41** |
 
-Toto jsou příklady, nikoli záruky. Náklady se mění s cenou ETH, cenou plynu a složitostí kontraktu. Hodnoty Gwei mohou během běžného měsíce značně kolísat, zatímco cena v dolarech se téměř nemění, protože rollupy nyní zpracovávají asi 95 procent transakcí Etherea a vrstva 1 (l1) obvykle běží hluboko pod svým cílovým limitem bloku. Poplatky na Mainnetu jsou nyní natolik nízké, že mnoho aplikací může smysluplně běžet na Mainnetu.
+Toto jsou příklady, nikoli záruky. Náklady se mění s cenou ETH, cenou gasu a složitostí kontraktu. Hodnoty Gwei mohou během běžného měsíce značně kolísat, zatímco cena v dolarech se téměř nemění, protože rollupy nyní zpracovávají asi 95 procent transakcí Etherea a vrstva 1 (l1) obvykle běží hluboko pod svým cílovým limitem bloku. Poplatky na Mainnetu jsou nyní natolik nízké, že mnoho aplikací může smysluplně běžet na Mainnetu.
 
 ### Proč náklady klesly {#why-costs-fell}
 
@@ -41,7 +41,7 @@ Dencun (březen 2024) představil EIP-4844 a poskytl rollupům jejich vlastní d
 
 Pectra byla aktivována 7. května 2025. EIP-7691 zvýšil propustnost blobů z cílových 3 / maximálně 6 blobů na blok na cílových 6 / maximálně 9, což rozšířilo levný datový pruh, který rollupy používají, a stlačilo poplatky na vrstvě 2 (l2) níže.
 
-Fusaka byla aktivována 3. prosince 2025. Její hlavní změnou kapacity byl PeerDAS, který umožňuje validátorům vzorkovat data blobů místo stahování každého blobu v plném rozsahu, a právě toto vzorkování činí vyšší počty blobů bezpečnými na síťové vrstvě. Paralelně s tím komunita během roku 2025 zvýšila limit plynu na vrstvě 1 (l1) z 30M na 60M a EIP-7935 ve Fusace standardizoval 60M jako novou výchozí hodnotu. EIP-7825 omezuje jakoukoli jednotlivou transakci na \~16,78M gasu, čehož si většina aplikací nikdy nevšimne, ale velmi rozsáhlá nasazení a monolitické multicalls se nyní musí vejít do tohoto limitu. EIP-7951 také přidal nativní ověřování secp256r1 (P-256) na Mainnetu, díky čemuž je ověřování podpisů přístupových klíčů a WebAuthn v tocích účtů mnohem levnější.
+Fusaka byla aktivována 3. prosince 2025. Její hlavní změnou kapacity byl PeerDAS, který umožňuje validátorům vzorkovat data blobů místo stahování každého blobu v plném rozsahu, a právě toto vzorkování činí vyšší počty blobů bezpečnými na síťové vrstvě. Paralelně s tím komunita během roku 2025 zvýšila limit gasu na vrstvě 1 (l1) z 30M na 60M a EIP-7935 ve Fusace standardizoval 60M jako novou výchozí hodnotu. EIP-7825 omezuje jakoukoli jednotlivou transakci na \~16,78M gasu, čehož si většina aplikací nikdy nevšimne, ale velmi rozsáhlá nasazení a monolitické multicalls se nyní musí vejít do tohoto limitu. EIP-7951 také přidal nativní ověřování secp256r1 (P-256) na Mainnetu, díky čemuž je ověřování podpisů přístupových klíčů a WebAuthn v tocích účtů mnohem levnější.
 
 Čistým efektem je, že Mainnet už není cenově nastaven jako trvale přetížený řetězec.
 
@@ -63,11 +63,11 @@ Mění se i předpoklady ohledně účtů. Nenavrhujte nové aplikace tak, jako 
 
 ## Co bude dál {#whats-next}
 
-Dalším pojmenovaným upgradem Etherea je Glamsterdam, jehož hlavními body jsou seznamy přístupů na úrovni bloku (BALs) a zakotvené oddělení navrhovatele a tvůrce (ePBS). Společně umožňují bezpečně zvýšit limit plynu v bloku z dnešních 60 milionů na zhruba 200 milionů, což tvůrcům ponechá větší kapacitu na vrstvě 1 (l1). Aktivace se očekává ve druhé polovině roku 2026. Po Glamsterdamu má následovat [Hegotá](https://forkcast.org/upgrade/hegota/), jejíž hlavní funkcí byly zvoleny seznamy zahrnutí vynucené volbou forku (FOCIL).
+Dalším pojmenovaným upgradem Etherea je Glamsterdam, jehož hlavními body jsou seznamy přístupů na úrovni bloku (BALs) a zakotvené oddělení navrhovatele a tvůrce (ePBS). Společně umožňují bezpečně zvýšit limit gasu v bloku z dnešních 60 milionů na zhruba 200 milionů, což tvůrcům ponechá větší kapacitu na vrstvě 1 (l1). Aktivace se očekává ve druhé polovině roku 2026. Po Glamsterdamu má následovat [Hegotá](https://forkcast.org/upgrade/hegota/), jejíž hlavní funkcí byly zvoleny seznamy zahrnutí vynucené volbou forku (FOCIL).
 
 Pro tvůrce jsou položkami, které stojí za to sledovat, větší kapacita vrstvy 1 (l1) (BALs), spolehlivější zahrnutí transakcí (FOCIL) a cesta k nativní abstrakci účtu. ePBS, další hlavní bod Glamsterdamu, je převážně infrastrukturní změna, která odstraňuje závislost na důvěře při zahrnování transakcí na vrstvě 1 (l1). Přímá změna na úrovni aplikací je malá.
 
-Cílem BALs je udržet vrstvu 1 (l1) levnou i při rostoucím používání. Jednoduše řečeno, blok by obsahoval mapu účtů a úložišť, kterých se dotýká. Klienti mohou tuto mapu použít k předběžnému načtení dat a paralelnímu provádění nezávislých transakcí, což činí zvýšení limitu plynu na vrstvě 1 (l1) bezpečnějším, aniž by se bloky staly příliš pomalými na ověření. Praktickým důsledkem pro tvůrce je, že se na Mainnet může vrátit více aktivity, aniž by se automaticky obnovil režim gasu z let 2021 až 2023.
+Cílem BALs je udržet vrstvu 1 (l1) levnou i při rostoucím používání. Jednoduše řečeno, blok by obsahoval mapu účtů a úložišť, kterých se dotýká. Klienti mohou tuto mapu použít k předběžnému načtení dat a paralelnímu provádění nezávislých transakcí, což činí zvýšení limitu gasu na vrstvě 1 (l1) bezpečnějším, aniž by se bloky staly příliš pomalými na ověření. Praktickým důsledkem pro tvůrce je, že se na Mainnet může vrátit více aktivity, aniž by se automaticky obnovil režim gasu z let 2021 až 2023.
 
 FOCIL se týká dostávání platných transakcí do bloků i v případě, že by je jeden producent bloku raději vynechal. Dnes, pokud strana budující blok ignoruje transakci, má zbytek protokolu omezené možnosti, jak její zahrnutí vynutit. S EIP-7805 by několik validátorů v podstatě řeklo: „Viděli jsme tyto platné transakce čekat ve veřejném mempoolu.“ Další blok je pak musí zahrnout, jinak mohou validátoři odmítnout tento blok podpořit. Pro tvůrce je to důležité, když je spolehlivý přístup k vrstvě 1 (l1) součástí produktu, včetně nástrojů pro soukromí, regulovaných vstupních bran (onramps) nebo aplikací sloužících uživatelům, kteří mohou být filtrováni některými poskytovateli infrastruktury.
 
