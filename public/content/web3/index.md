@@ -6,10 +6,6 @@ lang: en
 
 # Introduction to Web3 {#introduction}
 
-<div className="mt-4">
-<ListenToPlayer slug="/web3/" />
-</div>
-
 Centralization has helped onboard billions of people to the World Wide Web and created the stable, robust infrastructure on which it lives. At the same time, a handful of centralized entities have a stronghold on large swathes of the World Wide Web, unilaterally deciding what should and should not be allowed.
 
 Web3 is the answer to this dilemma. Instead of a Web monopolized by large technology companies, Web3 embraces decentralization and is being built, operated, and owned by its users. Web3 puts power in the hands of individuals rather than corporations.
@@ -115,7 +111,7 @@ Web3 solves these problems by allowing you to control your digital identity with
 Web2's payment infrastructure relies on banks and payment processors, excluding people without bank accounts or those who happen to live within the borders of the wrong country.
 Web3 uses tokens like [ETH](/glossary/#ether) to send money directly in the browser and requires no trusted third party.
 
-<ButtonLink href="/eth/">
+<ButtonLink href="/what-is-ether/">
   More on ETH
 </ButtonLink>
 

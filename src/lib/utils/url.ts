@@ -115,6 +115,18 @@ export const slugify = (text: string): string => {
   )
 }
 
+/**
+ * Converts an internal locale code to a valid BCP 47 language tag.
+ * Internal codes use lowercase region subtags (e.g. "pt-br", "zh-tw")
+ * for use as URL path segments, but HTML lang and hreflang attributes
+ * require uppercase region subtags per BCP 47 (e.g. "pt-BR", "zh-TW").
+ */
+export const toLanguageTag = (locale: string): string => {
+  const parts = locale.split("-")
+  if (parts.length === 2) return `${parts[0]}-${parts[1].toUpperCase()}`
+  return locale
+}
+
 export const normalizeUrlForJsonLd = (
   locale: string | Lang | undefined,
   pathWithoutLocale: string

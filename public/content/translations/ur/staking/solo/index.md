@@ -39,7 +39,6 @@ summaryPoints:
 
 جتنا ہم چاہتے ہیں کہ ہوم اسٹیکنگ ہر ایک کے لیے قابل رسائی اور خطرے سے پاک ہو، یہ حقیقت نہیں ہے۔ اپنے ETH کو ہوم اسٹیک کرنے کا انتخاب کرنے سے پہلے ذہن میں رکھنے کے لیے کچھ عملی اور سنگین تحفظات ہیں۔
 
-<InfoGrid>
 <ExpandableCard title="مطلوبہ مطالعہ" eventCategory="SoloStaking" eventName="clicked required reading">
 اپنا نوڈ چلاتے وقت آپ کو اپنے منتخب کردہ سافٹ ویئر کو استعمال کرنے کا طریقہ سیکھنے میں کچھ وقت صرف کرنا چاہیے۔ اس میں متعلقہ دستاویزات کو پڑھنا اور ان ڈیولپر ٹیموں کے مواصلاتی چینلز سے باخبر رہنا شامل ہے۔
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> سلیشنگ اور ویلیڈیٹر لائف سائیکل کے بارے میں مزید</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

@@ -76,13 +76,29 @@ export interface VideoFrontmatter extends SharedFrontmatter {
 }
 
 export interface TutorialFrontmatter extends SharedFrontmatter {
-  tags: string[]
+  tags?: string[]
   author: string
   source?: string
   sourceUrl?: string
-  skill: string
+  skill?: string
   published: string
   address?: string
+  team?: string
+  image?: string
+  imageWidth?: number
+  imageHeight?: number
+  blurDataURL?: string
+  hideEditButton?: boolean
+  breadcrumb?: string
+}
+
+export interface BlogFrontmatter extends SharedFrontmatter {
+  tags?: string[]
+  author: string
+  published: string
+  image?: string
+  team?: string
+  sourceUrl?: string
   hideEditButton?: boolean
   breadcrumb?: string
 }

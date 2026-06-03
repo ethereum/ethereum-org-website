@@ -233,19 +233,22 @@ Add the new key to `src/intl/en/[namespace].json`.
 
 > **Data fetching patterns** (Server Component data, caching, sources) are out of scope for this design-system skill. See the `data-layer` skill for canonical fetching guidance.
 
-## `PageHero` -> `ContentHero` (or appropriate Hero variant)
+## `PageHero`: discrete props, not a `content` object
+
+`PageHero` (from `@/components/Hero`) takes discrete props:
 
 ```tsx
-// Before:
-import PageHero from "@/components/PageHero"
-<PageHero header={...} title={...} description={...} />
-
-// After:
-import { ContentHero } from "@/components/Hero"
-<ContentHero {...} />
+import { PageHero } from "@/components/Hero"
+<PageHero
+  header={...}      // small uppercase eyebrow (h1); or use `breadcrumbs` instead
+  heroImg={...}     // omit for a text-only hero
+  title={...}       // large heading
+  description={...}
+  buttons={[...]}   // up to two
+/>
 ```
 
-The shapes are different; you may need to restructure the page slightly. `PageHero` is on the deprecation track.
+Porting an older `content={{ title, header, subtitle, image, alt }}` shape? Mind the field swap: the old `title` was the eyebrow (now `header`), the old `header` was the large heading (now `title`), `image`/`alt` -> `heroImg` (decorative), and `isReverse` is gone (the layout auto-reverses when `heroImg` is present). See `references/page-hero-walkthrough.md`.
 
 ## `BannerNotification` -> `Alert variant="banner"`
 
@@ -344,7 +347,7 @@ export const StakingLayout = ({ children, frontmatter, slug, ... }) => {
   const { t } = useTranslation("page-staking")
   const dropdownLinks = { text: t("..."), items: [ /* ... */ ] }
   const heroProps = { ...frontmatter, breadcrumbs: { slug, startDepth: 1 }, heroImg: { ... } }
-  return <ContentLayout dropdownLinks={dropdownLinks} heroSection={<ContentHero {...heroProps} />}>{children}</ContentLayout>
+  return <ContentLayout dropdownLinks={dropdownLinks} heroSection={<PageHero {...heroProps} />}>{children}</ContentLayout>
 }
 
 // After -- the data lives in a config file, no layout component needed:

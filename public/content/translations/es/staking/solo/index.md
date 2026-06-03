@@ -39,7 +39,6 @@ Participar desde casa conlleva más responsabilidad, pero proporciona el máximo
 
 Por mucho que deseemos que el staking doméstico sea accesible y esté libre de riesgos para todo el mundo, no es la realidad. Hay algunas consideraciones prácticas y serias a tener en cuenta antes de elegir hacer staking doméstico con sus ETH.
 
-<InfoGrid>
 <ExpandableCard title="Lectura obligatoria" eventCategory="SoloStaking" eventName="clicked required reading">
 Cuando opere su propio nodo, debe dedicar algo de tiempo a aprender a usar el software que ha elegido. Esto implica leer la documentación pertinente y estar en sintonía con los canales de comunicación de los equipos de desarrollo.
 
@@ -71,8 +70,6 @@ A diferencia de las penalizaciones por inactividad por estar desconectado, el <e
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Más información sobre penalizaciones (slashing) y el ciclo de vida de los validadores</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 
