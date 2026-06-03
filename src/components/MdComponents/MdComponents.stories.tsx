@@ -21,12 +21,9 @@ export default meta
 
 const {
   ContentContainer,
-  h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
-  Title,
-  p: Paragraph,
   FeaturedText,
   Divider,
   hr: HR,
@@ -34,13 +31,13 @@ const {
 } = MdComponentSet
 
 const Para = () => (
-  <Paragraph>
+  <p>
     Ether (also known by its ticker symbol, ETH) is the native currency
     transacted on Ethereum. ETH is needed to pay for usage of the Ethereum
     network (in the form of transaction fees). ETH is also used to secure the
     network with staking. When people talk about the price of Ethereum,
     they&apos;re referring to ETH the asset.
-  </Paragraph>
+  </p>
 )
 
 export const MdComponents: StoryObj = {
@@ -48,15 +45,13 @@ export const MdComponents: StoryObj = {
     <div className="mx-auto max-w-screen-lg">
       <Page>
         <ContentContainer>
-          <Heading1>Heading1</Heading1>
+          <h1>Heading1</h1>
           <Para />
           <Heading2>Heading2</Heading2>
           <Para />
           <Heading3>Heading3</Heading3>
           <Para />
           <Heading4>Heading4</Heading4>
-          <Para />
-          <Title>Title</Title>
           <Para />
           <Divider />
           <HR />

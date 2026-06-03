@@ -21,7 +21,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold;
+    @apply font-bold text-pretty wrap-break-word;
   }
 
   h1,
@@ -31,7 +31,7 @@
   h5,
   h6,
   section {
-    @apply scroll-mt-28;
+    @apply scroll-mt-32;
   }
 
   h1 {
@@ -183,12 +183,20 @@
     margin-top: calc(var(--space) * 2);
   }
 
-  /* Lists: neutralize the legacy global list margins (scoped to .flow). The list
-     flows at the default like any block; items get a tighter inner rhythm. */
+  /* A list following content needs its top gap restored explicitly: the legacy
+     global `ul/ol` rule sets margin-top:0 at specificity (0,0,1), which beats the
+     zero-specificity `* + *` default -- so without this a list has no space above
+     it. This rule matches that specificity and, being later, wins. */
+  :where(.flow, .flow section:not([data-flow="skip"])) > * + :is(ul, ol) {
+    margin-top: var(--space);
+  }
+
+  /* Lists: flow owns the vertical rhythm (drop the legacy global bottom margin),
+     but indentation is left to the list itself -- ui/list's `ms-6`, or the global
+     `ul/ol` start margin for raw lists. Adding our own padding here would double
+     the indent (flow is base-layer and can't override the utility `ms-6`). */
   :where(.flow) :is(ul, ol) {
     margin-bottom: 0;
-    margin-inline: 0;
-    padding-inline-start: calc(var(--spacing) * 6);
   }
 
   :where(.flow) li {
