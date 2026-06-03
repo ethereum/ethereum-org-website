@@ -133,3 +133,38 @@ export const Fit: Story = {
     </div>
   ),
 }
+
+// `balanced={2|4}`: a fixed, deterministic breakpoint reflow (overrides
+// `columns`) for a known, FIXED set of items. Resize the canvas: `balanced={4}`
+// jumps 4 -> 2x2 -> 1 (never a 3-up row), `balanced={2}` folds 2 -> 1 at md, and
+// the auto-fill row passes through a 3-column intermediate.
+export const Balanced: Story = {
+  render: () => (
+    <div className="flex flex-col gap-8">
+      <div>
+        <p className="mb-2 font-mono text-xs text-body-medium">
+          balanced={4} (4 / 2x2 / 1)
+        </p>
+        <Grid balanced={4}>
+          <Items count={4} />
+        </Grid>
+      </div>
+      <div>
+        <p className="mb-2 font-mono text-xs text-body-medium">
+          balanced={2} (2 / 1 at md)
+        </p>
+        <Grid balanced={2}>
+          <Items count={2} />
+        </Grid>
+      </div>
+      <div>
+        <p className="mb-2 font-mono text-xs text-body-medium">
+          columns={4} (auto-fill, for contrast)
+        </p>
+        <Grid columns={4}>
+          <Items count={4} />
+        </Grid>
+      </div>
+    </div>
+  ),
+}

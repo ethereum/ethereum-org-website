@@ -5,17 +5,19 @@ import { cn } from "@/lib/utils/cn"
 
 // Responsive grid for laying out a collection of items (cards, tiles, badges).
 // - `columns` is the max column count at full width; the grid folds to fewer
-//   columns as the viewport narrows. Each value maps to a static class string
-//   so Tailwind can detect it -- do not interpolate the count into the name.
-// - `size` sets the min item width (--grid-item-min): the floor an item
-//   shrinks to before a column drops, and so the fold-aggressiveness lever.
-//   Pick by item shape -- `narrow` for small items/badges (pairs with high
-//   `columns`), `base` for standard content cards (default), `wide` for
-//   horizontal items like callouts (pairs with low `columns`). Larger sizes
-//   wrap sooner; keep `columns` small enough that N items fit.
-// - `fit` collapses empty tracks (auto-fit) so items stretch to fill the row;
-//   the default keeps empty tracks (auto-fill).
-// Override --grid-item-min via className for a bespoke width (`[--grid-item-min:20rem]`).
+//   columns as the viewport narrows (auto-fill). Each value maps to a static
+//   class so Tailwind can detect it -- do not interpolate the count.
+// - `size` sets the min item width (--grid-item-min): the floor an item shrinks
+//   to before a column drops, and so the fold-aggressiveness lever. `narrow`
+//   (badges) | `base` (default cards) | `wide`/`wider` (horizontal items like
+//   callouts). Larger sizes wrap sooner.
+// - `fit` collapses empty tracks (auto-fit) so items stretch to fill the row.
+// - `balanced={2|4}` is for a FIXED set of that many items: a deterministic
+//   breakpoint reflow instead of content-driven auto-fill. `4` -> `4 / 2x2 / 1`
+//   (never an orphan 3-up row); `2` -> `2 / 1` at md (a breakpoint-driven
+//   alternative to `columns={2}`, which folds by content width). It overrides
+//   `columns` and makes `size`/`fit` inert via `!important`.
+// Override --grid-item-min via className for a bespoke width.
 const gridVariants = cva("grid gap-4", {
   variants: {
     columns: {
@@ -41,6 +43,13 @@ const gridVariants = cva("grid gap-4", {
     fit: {
       true: "[--grid-repeat:auto-fit]",
     },
+    // Fixed symmetric reflow for a known set of items. `!important` overrides the
+    // grid-template-columns from `columns`, so the breakpoint ladder always wins.
+    // Both fold 1 -> 2 at md, matching the dominant 2-up grid pattern in-app.
+    balanced: {
+      2: "grid-cols-1! md:grid-cols-2!",
+      4: "grid-cols-1! md:grid-cols-2! xl:grid-cols-4!",
+    },
   },
   defaultVariants: {
     columns: 4,
@@ -51,11 +60,11 @@ const gridVariants = cva("grid gap-4", {
 const Grid = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof gridVariants>
->(({ className, columns, size, fit, ...props }, ref) => (
+>(({ className, columns, size, fit, balanced, ...props }, ref) => (
   <div
     ref={ref}
     data-label="grid"
-    className={cn(gridVariants({ columns, size, fit }), className)}
+    className={cn(gridVariants({ columns, size, fit, balanced }), className)}
     {...props}
   />
 ))
