@@ -1,5 +1,5 @@
 import * as React from "react"
-import { DocSearchButton } from "@docsearch/react"
+import { DocSearchButton } from "typesense-docsearch-react"
 
 import { cn } from "@/lib/utils/cn"
 

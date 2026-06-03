@@ -1,0 +1,51 @@
+{
+  "index_name": "ethereumorg",
+  "start_urls": [
+    "https://ethereum.org/en/",
+    "https://ethereum.org/ar/",
+    "https://ethereum.org/zh/"
+  ],
+  "sitemap_urls": ["https://ethereum.org/sitemap.xml"],
+  "stop_urls": ["/api/", "\\.(png|jpg|jpeg|svg|gif|webp|ico|css|js)$"],
+  "selectors": {
+    "default": {
+      "lvl0": {
+        "selector": "head > meta[property='og:title']",
+        "type": "xpath",
+        "global": true,
+        "default_value": "Ethereum.org"
+      },
+      "lvl1": "h1",
+      "lvl2": "h2",
+      "lvl3": "h3",
+      "lvl4": "h4",
+      "text": "p, li"
+    }
+  },
+  "selectors_exclude": ["nav", "aside", "footer", "style", "header"],
+  "strip_chars": " .,;:#",
+  "scrape_start_urls": true,
+  "custom_settings": {
+    "field_definitions": [
+      { "name": "anchor", "type": "string", "optional": true },
+      { "name": "content", "type": "string", "optional": true },
+      { "name": "url", "type": "string", "facet": true },
+      {
+        "name": "url_without_anchor",
+        "type": "string",
+        "facet": true,
+        "optional": true
+      },
+      { "name": "hierarchy.lvl0", "type": "string", "facet": true, "optional": true },
+      { "name": "hierarchy.lvl1", "type": "string", "facet": true, "optional": true },
+      { "name": "hierarchy.lvl2", "type": "string", "facet": true, "optional": true },
+      { "name": "hierarchy.lvl3", "type": "string", "facet": true, "optional": true },
+      { "name": "hierarchy.lvl4", "type": "string", "facet": true, "optional": true },
+      { "name": "hierarchy.lvl5", "type": "string", "facet": true, "optional": true },
+      { "name": "hierarchy.lvl6", "type": "string", "facet": true, "optional": true },
+      { "name": "type", "type": "string", "facet": true, "optional": true },
+      { "name": "language", "type": "string", "facet": true, "optional": true },
+      { "name": "item_priority", "type": "int64" }
+    ]
+  }
+}
