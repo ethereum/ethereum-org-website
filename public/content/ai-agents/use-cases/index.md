@@ -26,7 +26,7 @@ DeFi protocols operate 24 hours a day, seven days a week. Human traders cannot. 
 - **Liquidation protection** — agents watch collateralization ratios and automatically top up collateral or partially repay debt when a position approaches the liquidation threshold.
 - **Portfolio rebalancing** — agents maintain target asset allocations by executing swaps when drift exceeds defined parameters.
 
-**Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to specific protocols, [L2 deployment](/ai-agents/l2s/) for cost-effective high-frequency operations (Base or Arbitrum for deepest DeFi liquidity).
+**Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to specific protocols, [L2 deployment](/ai-agents/ethereum/) for cost-effective high-frequency operations (Base or Arbitrum for deepest DeFi liquidity).
 
 DeFi automation is the most mature AI agent use case on Ethereum. The infrastructure it depends on, like session keys, ERC-4337 smart accounts, and L2 transaction costs, is production-ready. Prediction markets, covered next, apply these same capabilities to a different use case.
 
@@ -44,7 +44,7 @@ Prediction markets let participants trade on the outcome of real-world events. A
 
 [Olas](https://olas.network/) operates one of the most active agent networks in this category. Its "Trader" agent type is built for prediction market participation. During the 2024 US election cycle, AI agents were widely reported as active participants on [Polymarket](https://polymarket.com/), serving as both market makers and position-takers. Ethereum-native prediction markets like [Gnosis](https://www.gnosis.io/) provide additional infrastructure for onchain agent participation.
 
-**Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to prediction market contracts, [frameworks](/ai-agents/frameworks/) for data ingestion and strategy execution, [L2 deployment](/ai-agents/l2s/) for cost-effective high-frequency trading.
+**Infrastructure required:** [Agent wallets](/ai-agents/wallets/) with session keys scoped to prediction market contracts, [frameworks](/ai-agents/frameworks/) for data ingestion and strategy execution, [L2 deployment](/ai-agents/ethereum/) for cost-effective high-frequency trading.
 
 <VideoWatch slug="ai-agents-prediction-markets-devcon" />
 
@@ -52,7 +52,7 @@ Prediction market agents act on external information to take financial positions
 
 ## Agent-to-agent commerce {#agent-commerce}
 
-Agents can hire other agents for specialized tasks, paying per output using x402 machine payments. This enables a **division of labor that mirrors human organizational structures, where a coordinator agent delegates specialized subtasks** to specialist agents and aggregates the results. The coordinator discovers providers via the [ERC-8004 Identity Registry](/ai-agents/identity/), checks reputation scores, pays per result via [x402](/ai-agents/payments/), and posts feedback after delivery. **No human is required at any step** once the coordinator's strategy is initialized. See [AI agents: Identity — The protocol stack](/ai-agents/identity/#protocol-stack) for the full step-by-step loop.
+Agents can hire other agents for specialized tasks, paying per output using x402 machine payments. This enables a **division of labor that mirrors human organizational structures, where a coordinator agent delegates specialized subtasks** to specialist agents and aggregates the results. The coordinator discovers providers via the [ERC-8004 Identity Registry](/ai-agents/agent-economy/), checks reputation scores, pays per result via [x402](/ai-agents/agent-economy/), and posts feedback after delivery. **No human is required at any step** once the coordinator's strategy is initialized. See [AI agents: Agent economy — The protocol stack](/ai-agents/agent-economy/#protocol-stack) for the full step-by-step loop.
 
 <Alert variant="warning">
 <AlertContent>
@@ -65,7 +65,7 @@ Maturity note
 </AlertContent>
 </Alert>
 
-**Infrastructure required:** [Payments (x402)](/ai-agents/payments/) for machine-to-machine settlement, [Identity (ERC-8004)](/ai-agents/identity/) for agent discovery and reputation.
+**Infrastructure required:** [Payments (x402)](/ai-agents/agent-economy/) for machine-to-machine settlement, [Identity (ERC-8004)](/ai-agents/agent-economy/) for agent discovery and reputation.
 
 Autonomous governance participation, covered next, follows a similar coordinator-delegate pattern but replaces specialist agents with onchain voting contracts.
 
@@ -104,7 +104,7 @@ Agents are well suited to continuous monitoring tasks that are tedious for human
 - **MEV protection** — agents route transactions through private mempools (Flashbots Protect) or MEV-resistant L2s (Unichain) to avoid sandwich attacks on swaps.
 - **Position monitoring** — agents watch protocol health metrics (utilization rates, oracle price deviations) and alert operators when conditions move outside safe parameters.
 
-**Infrastructure required:** [Frameworks](/ai-agents/frameworks/) for monitoring loops, [L2s](/ai-agents/l2s/) with appropriate finality guarantees for alert latency requirements.
+**Infrastructure required:** [Frameworks](/ai-agents/frameworks/) for monitoring loops, [L2s](/ai-agents/ethereum/) with appropriate finality guarantees for alert latency requirements.
 
 Monitoring agents act on existing protocol data. The next use case applies a different capability, onchain provenance, to a domain where data authenticity is itself the product: AI-generated creative work.
 
@@ -128,7 +128,7 @@ Onchain provenance for AI-generated creative work is still an emerging practice.
 
 **Broader pattern:** Artists and builders are using Ethereum to anchor AI-generated content to a specific model, timestamp, and generation parameters, creating a verifiable chain of custody for work that would otherwise be trivially forgeable.
 
-**Infrastructure required:** [Verification](/ai-agents/verification/) for provenance proofs, [Agent identity (ERC-8004)](/ai-agents/identity/) for linking outputs to a verifiable agent identity.
+**Infrastructure required:** [Security](/ai-agents/security/) for provenance proofs, [Agent identity (ERC-8004)](/ai-agents/agent-economy/) for linking outputs to a verifiable agent identity.
 
 Provenance depends on being able to verify which agent produced a given output. The identity and reputation layer that makes that possible is covered in the final use case below.
 
@@ -144,9 +144,9 @@ When agents interact with each other or with humans, counterparties need to veri
 
 The ERC-8004 identity and reputation layer is still early, with 20,000+ feedback entries as of early 2026, but it provides the foundation for agent interactions that do not require trusting a centralized directory operator.
 
-**Infrastructure required:** [Identity (ERC-8004)](/ai-agents/identity/), [Payments (x402)](/ai-agents/payments/).
+**Infrastructure required:** [Identity (ERC-8004)](/ai-agents/agent-economy/), [Payments (x402)](/ai-agents/agent-economy/).
 
-Builders starting today should read the [AI agents: Identity](/ai-agents/identity/) page for interim integration guidance while ERC-8004 adoption continues to develop across chains.
+Builders starting today should read the [AI agents: Agent economy](/ai-agents/agent-economy/) page for integration guidance while ERC-8004 adoption continues to develop across chains.
 
 ## Real-world examples {#real-world-examples}
 
@@ -178,7 +178,7 @@ DeFi automation is the most mature use case. The infrastructure it depends on, i
 
 <ExpandableCard title="How do I choose which use case to build first?">
 
-Evaluate the infrastructure each use case requires. **DeFi automation** needs [wallets and session keys](/ai-agents/wallets/) (production-ready). **Agent-to-agent commerce** adds [payments](/ai-agents/payments/) (x402, production-ready) and [identity](/ai-agents/identity/) (ERC-8004, live but Draft status). **Autonomous governance** adds human-in-the-loop escalation for high-stakes votes. Start with the use case whose infrastructure dependencies are closest to production-ready for your deployment timeline, and use the [Getting started guide](/ai-agents/getting-started/) to build your first agent.
+Evaluate the infrastructure each use case requires. **DeFi automation** needs [wallets and session keys](/ai-agents/wallets/) (production-ready). **Agent-to-agent commerce** adds [payments](/ai-agents/agent-economy/) (x402, production-ready) and [identity](/ai-agents/agent-economy/) (ERC-8004, live but Draft status). **Autonomous governance** adds human-in-the-loop escalation for high-stakes votes. Start with the use case whose infrastructure dependencies are closest to production-ready for your deployment timeline.
 
 </ExpandableCard>
 
