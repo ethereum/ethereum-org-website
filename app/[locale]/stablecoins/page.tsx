@@ -472,7 +472,9 @@ async function Page(props: { params: Promise<PageParams> }) {
 
         {/* Why stablecoins */}
         <Section className="text-center">
-          <h2 className="mb-4">{t("page-stablecoins-why-stablecoins")}</h2>
+          <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+            {t("page-stablecoins-why-stablecoins")}
+          </h2>
           <p className="mx-auto mb-12 max-w-3xl text-lg text-body-medium">
             <Translation id="page-stablecoins:page-stablecoins-why-stablecoins-intro" />
           </p>
@@ -481,7 +483,9 @@ async function Page(props: { params: Promise<PageParams> }) {
               <Card key={title} variant="base" size="lg">
                 <CardContent>
                   <Icon className="size-12 text-primary" />
-                  <CardTitle variant="black">{title}</CardTitle>
+                  <CardTitle variant="black" className="text-2xl">
+                    {title}
+                  </CardTitle>
                   <CardParagraph>{description}</CardParagraph>
                 </CardContent>
               </Card>
@@ -501,7 +505,7 @@ async function Page(props: { params: Promise<PageParams> }) {
               />
             </div>
             <div>
-              <CardTitle variant="semibold" className="mb-2">
+              <CardTitle variant="black" className="mb-2 text-2xl">
                 {t("page-stablecoins-bitcoin-pizza")}
               </CardTitle>
               <CardParagraph className="text-sm">
@@ -513,7 +517,9 @@ async function Page(props: { params: Promise<PageParams> }) {
 
         {/* How they work: types of stablecoins */}
         <Section id="how" className="text-center">
-          <h2 className="mb-4">{t("page-stablecoins-types-of-stablecoin")}</h2>
+          <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+            {t("page-stablecoins-types-of-stablecoin")}
+          </h2>
           <p className="mx-auto mb-10 max-w-3xl text-lg text-body-medium">
             {t("page-stablecoins-types-intro")}
           </p>
@@ -533,7 +539,7 @@ async function Page(props: { params: Promise<PageParams> }) {
               >
                 <div className="grid grid-cols-1 gap-8 rounded-2xl bg-background-highlight p-6 text-start md:grid-cols-2 md:p-10">
                   <div>
-                    <h3 className="mb-4 text-2xl">{type.title}</h3>
+                    <h3 className="mb-4 text-2xl font-black">{type.title}</h3>
                     <div className="mb-6 text-body-medium">
                       {type.description}
                     </div>
@@ -599,7 +605,7 @@ async function Page(props: { params: Promise<PageParams> }) {
         <Section>
           <div className="grid grid-cols-1 items-center gap-10 text-start lg:grid-cols-2 lg:gap-16">
             <div>
-              <h2 className="mb-4">
+              <h2 className="mb-4 text-4xl font-black lg:text-5xl">
                 {t("page-stablecoins-getting-started-title")}
               </h2>
               <p className="mb-8 text-lg text-body-medium">
@@ -657,7 +663,9 @@ async function Page(props: { params: Promise<PageParams> }) {
               the default symmetric py so the explicit values win at every bp. */}
           <Section className="pt-16 pb-12 lg:pt-20 lg:pb-16">
             <div className="text-center">
-              <h2 className="mb-4">{t("page-stablecoins-choose-title")}</h2>
+              <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+                {t("page-stablecoins-choose-title")}
+              </h2>
               <p className="mx-auto mb-6 max-w-3xl text-lg text-body-medium">
                 {t("page-stablecoins-choose-intro")}
               </p>
@@ -671,7 +679,7 @@ async function Page(props: { params: Promise<PageParams> }) {
               </div>
             </div>
 
-            <h3 className="mb-2 text-2xl">
+            <h3 className="mb-2 text-3xl font-black lg:text-4xl">
               {t("page-stablecoins-editors-choice")}
             </h3>
             <p className="mb-6 text-body-medium">
@@ -703,7 +711,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                       </CardBanner>
                     </CardHeader>
                     <CardContent spacing="sm">
-                      <CardTitle asChild>
+                      <CardTitle asChild className="font-black">
                         <h4>{choice.title}</h4>
                       </CardTitle>
                       <CardParagraph className="text-sm">
@@ -723,7 +731,10 @@ async function Page(props: { params: Promise<PageParams> }) {
               ))}
             </EdgeScrollContainer>
 
-            <h3 id="stablecoin-markets" className="mt-16 scroll-mt-24 text-2xl">
+            <h3
+              id="stablecoin-markets"
+              className="mt-16 scroll-mt-24 text-3xl font-black lg:text-4xl"
+            >
               {t("page-stablecoins-top-coins")}&nbsp;
               <Tooltip content={tooltipContent}>
                 <Info className="inline size-4" />
@@ -742,7 +753,9 @@ async function Page(props: { params: Promise<PageParams> }) {
 
         {/* How to get stablecoins */}
         <Section id="get-stablecoins" className="scroll-mt-24 text-center">
-          <h2 className="mb-4">{t("page-stablecoins-get-stablecoins")}</h2>
+          <h2 className="mb-4 text-4xl font-black lg:text-5xl">
+            {t("page-stablecoins-get-stablecoins")}
+          </h2>
           <p className="mx-auto mb-12 max-w-3xl text-lg text-body-medium">
             {t("page-stablecoins-get-intro")}
           </p>
@@ -771,7 +784,7 @@ async function Page(props: { params: Promise<PageParams> }) {
           <Section id="earn-interest" className="pt-16 pb-12 lg:pt-20 lg:pb-16">
             <div className="mb-12 flex flex-col items-center gap-8 lg:flex-row lg:justify-between">
               <div className="max-w-3xl">
-                <h2 className="mb-4">
+                <h2 className="mb-4 text-4xl font-black lg:text-5xl">
                   {t("page-stablecoins-interest-rate-title")}
                 </h2>
                 <p className="mb-0 text-lg text-body-medium">
@@ -785,7 +798,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                 className="h-auto w-full max-w-sm shrink-0 lg:w-[409px] lg:max-w-none"
               />
             </div>
-            <h3 className="mb-2 text-2xl">
+            <h3 className="mb-2 text-3xl font-black lg:text-4xl">
               {t("page-stablecoins-apps-earn-interest-title")}
             </h3>
             <p className="mb-8 text-body-medium">
@@ -813,7 +826,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                       </CardBanner>
                     </CardHeader>
                     <CardContent spacing="sm">
-                      <CardTitle className="uppercase" asChild>
+                      <CardTitle className="font-black uppercase" asChild>
                         <h4>{app.name}</h4>
                       </CardTitle>
                       <CardParagraph className="text-sm">
@@ -834,7 +847,9 @@ async function Page(props: { params: Promise<PageParams> }) {
 
         {/* Learn more / tools */}
         <Section>
-          <h2 className="mb-6">{t("page-stablecoins-tools-title")}</h2>
+          <h2 className="mb-6 text-4xl font-black lg:text-5xl">
+            {t("page-stablecoins-tools-title")}
+          </h2>
           <div className="[&_img]:shadow-none">
             <ProductList
               columns={2}
@@ -845,8 +860,11 @@ async function Page(props: { params: Promise<PageParams> }) {
           </div>
         </Section>
 
-        <Section>
+        <Section className="pb-0 lg:pb-0 [&_#quiz]:text-4xl [&_#quiz]:font-black [&_#quiz]:lg:text-5xl">
           <StandaloneQuizWidget quizKey="stablecoins" />
+        </Section>
+
+        <Section>
           <FeedbackCard />
         </Section>
       </MainArticle>

@@ -59,7 +59,9 @@ const PathwayCard = ({
     <CardContent spacing="none" className="flex items-center gap-4">
       <div className="flex-1">
         <div className="mb-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-          <CardTitle variant="bold">{title}</CardTitle>
+          <CardTitle variant="bold" className="font-black">
+            {title}
+          </CardTitle>
           {badge && (
             <Tag status={badge.status ?? "success"} size="small">
               {badge.label}
