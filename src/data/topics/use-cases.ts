@@ -53,7 +53,7 @@ export const useCases: TopicConfig = {
         matomoEvent: "refi",
       },
       {
-        textKey: "template-usecase-dropdown-ai-agents",
+        textKey: "template-usecase-dropdown-decentralized-ai",
         href: "/ai-agents/",
         matomoEvent: "ai-agents",
       },

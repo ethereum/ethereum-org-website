@@ -127,6 +127,7 @@ const QUIZZES_PREFIXES: string[] = [
 const LAYOUT_NAMESPACES: Record<string, string[]> = {
   docs: ["page-developers-docs"],
   "use-cases": ["template-usecase", "learn-quizzes"],
+  "ai-agents": ["template-ai-agents"],
   upgrade: ["page-upgrades", "page-upgrades-index"],
   tutorial: ["page-developers-tutorials"],
 }

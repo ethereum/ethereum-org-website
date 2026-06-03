@@ -168,7 +168,7 @@ export const Title = (props: ChildOnlyProp) => (
 export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
     <MainArticle
-      className="relative flex-[1_1_992px] px-8 pb-8 *:first:mt-0"
+      className="relative min-w-0 flex-[1_1_992px] px-8 pb-8 *:first:mt-0"
       {...props}
     />
   )

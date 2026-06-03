@@ -17,6 +17,7 @@ export * from "./Tutorial"
 
 export const layoutMapping = {
   static: StaticLayout,
+  "ai-agents": TopicLayout,
   "use-cases": TopicLayout,
   staking: TopicLayout,
   roadmap: TopicLayout,
@@ -27,6 +28,7 @@ export const layoutMapping = {
 
 export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
   static: staticComponents,
+  "ai-agents": topicComponents.aiAgentsComponents,
   "use-cases": topicComponents.useCasesComponents,
   staking: topicComponents.stakingComponents,
   roadmap: topicComponents.roadmapComponents,

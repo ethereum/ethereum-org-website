@@ -290,6 +290,43 @@ export const buildNavigation = (t: TranslateFn): NavSections => {
           ],
         },
         {
+          id: "build/ai-agents",
+          label: t("ai-agents"),
+          description: t("nav-build-ai-agents-description"),
+          items: [
+            {
+              label: t("nav-ai-agents-overview"),
+              description: t("nav-ai-agents-overview-description"),
+              href: "/ai-agents/",
+            },
+            {
+              label: t("nav-ai-agents-models"),
+              description: t("nav-ai-agents-models-description"),
+              href: "/ai-agents/models/",
+            },
+            {
+              label: t("nav-ai-agents-agent-harness"),
+              description: t("nav-ai-agents-agent-harness-description"),
+              href: "/ai-agents/agent-harness/",
+            },
+            {
+              label: t("nav-ai-agents-wallets"),
+              description: t("nav-ai-agents-wallets-description"),
+              href: "/ai-agents/wallets/",
+            },
+            {
+              label: t("nav-ai-agents-security"),
+              description: t("nav-ai-agents-security-description"),
+              href: "/ai-agents/security/",
+            },
+            {
+              label: t("nav-ai-agents-agent-economy"),
+              description: t("nav-ai-agents-agent-economy-description"),
+              href: "/ai-agents/agent-economy/",
+            },
+          ],
+        },
+        {
           id: "build/business",
           label: t("business"),
           description: t("nav-business-description"),

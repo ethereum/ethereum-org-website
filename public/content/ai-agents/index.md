@@ -1,143 +1,141 @@
 ---
-title: AI agents
-metaTitle: AI agents | AI agents on Ethereum
-description: An overview of AI agents on Ethereum
+title: Build AI agents on Ethereum
+metaTitle: AI agent builder hub | ethereum.org
+description: A developer hub for building AI agents on Ethereum. Covers wallets, verifiable computation, machine payments, agent identity, and the L2 ecosystem.
 lang: en
-template: use-cases
+template: ai-agents
 sidebarDepth: 2
 image: /images/ai-agents/hero-image.png
-alt: People gathered at terminal table
+alt: Developer working with AI agent architecture on Ethereum
 summaryPoints:
-  - "AI that interacts with blockchain and trades independently"
-  - "Controls onchain wallets and funds"
-  - "Hires humans or other agents for work"
+  - "Programmable wallets with spending limits and session keys"
+  - "Verifiable behavior via TEE attestations today, with zkML proofs emerging for smaller models"
+  - "Machine-to-machine payments using stablecoins and open protocols"
 buttons:
-  - content: What are AI agents?
-    toId: what-are-ai-agents
-  - content: Explore agents
-    toId: ai-agents-on-ethereum
-    isSecondary: false
+  - content: Browse the hub
+    toId: ai-agent-builder-hub-sections
+  - content: Why Ethereum
+    href: /ai-agents/ethereum/
+    isSecondary: true
 ---
 
-Imagine navigating Ethereum with an AI assistant that studies onchain market trends 24/7, answers questions, and even executes transactions on your behalf. Welcome to the world of AI Agents—intelligent systems designed to simplify your digital life.
+AI agents are software programs that observe their environment, make decisions, and take actions, including sending transactions, paying for services, and interacting with smart contracts, without requiring human input on every step.
 
-On Ethereum, we’re seeing innovations of AI agents ranging from virtual influencers and autonomous content creators to real-time market analysis platforms, empowering users by delivering insights, entertainment, and operational efficiency.
+Ethereum provides the infrastructure these agents need: programmable wallets that enforce spending limits, verification mechanisms like TEE attestations that can demonstrate an agent followed its stated logic, open payment rails for machine-to-machine commerce, and a permissionless identity layer that any application can verify. The difference from centralized infrastructure is **not capability, but control**: these properties are enforced by a network that no single party operates, meaning no single entity can unilaterally change the rules, revoke access, or shut down an agent's onchain assets.
 
-## What are AI agents? {#what-are-ai-agents}
+This builder hub is the starting point for developers building production AI agents on Ethereum.
 
-AI agents are software programs that use artificial intelligence to perform tasks or make own decisions. They learn from data, adapt to changes, and handle complex tasks. They operate non-stop and can instantly detect opportunities.
-
-### How AI agents work with blockchains {#how-ai-agents-work-with-blockchains}
-
-In traditional finance, AI agents often operate in centralized environments with limited data inputs. This hinders their ability to learn or manage assets autonomously.
-
-In contrast, Ethereum's decentralized ecosystem offers several key advantages:
-
-- <strong>Transparent data:</strong> Access to real-time blockchain information.
-- <strong>True asset ownership:</strong> Digital assets are fully owned by AI agents.
-- <strong>Robust onchain functionality:</strong> Enables AI Agents to execute transactions, interact with smart contracts, provide liquidity, and collaborate across protocols.
-
-These factors transform AI agents from simple bots into dynamic, self-improving systems that offer significant value across multiple sectors:
-
-<CardGrid>
-  <Card title="Automated DeFi" emoji=":money_with_wings:" description="AI agents keep a close eye on market trends, execute trades, and manage portfolios — making the complex world of DeFi a lot more approachable."/>
-  <Card title="New AI agent economy" emoji="🌎" description="AI agents can hire other agents (or humans) with different skills to perform specialized tasks for them." />
-  <Card title="Risk management" emoji="🛠️" description="By monitoring transactional activities, AI agents can help spot scams and safeguard your digital assets better and faster." />
-</CardGrid>
-
-## Verifiable AI {#verifiable-ai}
-
-AI agents running offchain often behave like "black boxes"—their reasoning, inputs, and outputs can’t be independently verified. Ethereum changes that. By anchoring agent behavior onchain, developers can build agents that are _trustless_, _transparent_, and _economically autonomous_. The actions of such agents can be audited, constrained, and proven.
-
-### Verifiable inference {#verifiable-inference}
-
-AI inference traditionally happens offchain, where execution is cheap but model execution is opaque. On Ethereum, developers can pair agents with verifiable computation using several techniques:
-
-- [**zkML (zero-knowledge machine learning)**](https://opengradient.medium.com/a-gentle-introduction-to-zkml-8049a0e10a04) lets agents prove that a model was executed correctly without revealing the model or inputs
-- [**TEE (trusted execution environment) attestations**](https://en.wikipedia.org/wiki/Trusted_execution_environment) allow hardware-backed proofs that an agent ran a specific model or code path
-- **Onchain immutability** ensures these proofs and attestations can be referenced, replayed, and trusted by any contract or agent
-
-## Payments, and commerce with x402 {#x402}
-
-The [x402 protocol](https://www.x402.org/), deployed on Ethereum and L2s, gives agents a native way to pay for resources and interact economically without human intervention. Agents can:
-
-- Pay for compute, data, and API calls using stablecoins
-- Request or verify attestations from other agents or services
-- Participate in agent-to-agent commerce, buying and selling compute, data, or model outputs
-
-x402 turns Ethereum into a programmable economic layer for autonomous agents, enabling pay-per-use interactions instead of accounts, subscriptions, or centralized billing.
-
-### Agentic finance security {#agentic-finance-security}
-
-Autonomous agents need guardrails. Ethereum provides them at the wallet and contract level:
-
-- [Smart accounts (EIP-4337)](https://eips.ethereum.org/EIPS/eip-4337) let developers enforce spending limits, whitelists, session keys, and granular permissions
-- Programmed constraints in smart contracts can restrict what an agent is allowed to do
-- Inference-based limits (e.g., requiring a zkML proof before executing a high-risk action) add another layer of safety
-
-These controls enable the deployment of autonomous agents that are not unbounded.
-
-### Onchain registries: ERC-8004 {#erc-8004}
-
-[ERC-8004](https://eips.ethereum.org/EIPS/eip-8004) defines onchain registries for agent identity, reputation, and validation. Co-authored by contributors from MetaMask, Ethereum Foundation, Google, and Coinbase, it is deployed on 16 networks including Ethereum mainnet, Base, Polygon, Arbitrum, and others.
-
-It provides:
-
-- An **identity registry** for portable, censorship-resistant agent identifiers
-- A **reputation registry** for standardized feedback signals across applications
-- A **validation registry** for requesting independent verification (zkML, TEE, staked re-execution)
-
-ERC-8004 makes it easier for agents to discover, verify, and transact with each other in a fully decentralized environment.
-
-## AI agents on Ethereum {#ai-agents-on-ethereum}
-
-We're beginning to explore the full potential of AI agents, and projects are already leveraging the synergy between AI and blockchain—particularly in transparency and monetization.
-
-<AiAgentProductLists list="ai-agents" />
-
-<strong>Luna's first appearance as a podcast guest</strong>
-
-<VideoWatch slug="ai-agents-interview-luna" />
-
-## Agent-controlled wallets {#agent-controlled-wallets}
-
-Agents like Luna or AIXBT control their own onchain wallet ([AIXBT's wallet](https://clusters.xyz/aixbt), [Luna's wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) enabling them to tip fans and participate in economic activities.
-
-During Luna's X social campaign #LunaMuralChallenge, Luna selected and rewarded the winners via her Base wallet — marking <strong>the first instance of an AI hiring humans for crypto reward</strong>.
-
-<Alert variant="warning">
-<AlertEmoji text="💡"/>
+<Alert>
 <AlertContent>
-<p className="mt-0"><strong>Good to know</strong></p>
-<p className="mt-2">AI agents and related tools are still in early development and very experimental—use with caution.</p>
+<AlertTitle>
+New to AI on Ethereum?
+</AlertTitle>
+<AlertDescription>
+If you want to learn how AI and Ethereum work together as a use case, visit the [Decentralized AI](/decentralized-ai/) overview page.
+</AlertDescription>
 </AlertContent>
 </Alert>
 
-## Control your wallet using chat commands {#control-your-wallet-using-chat-commands}
+## AI agents vs bots {#ai-agents-vs-bots}
 
-You can skip the complicated interfaces of DeFi and manage your crypto with simple chat commands.
+|                      | AI agents                                                                    | Bots                                                                              |
+| -------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Decision-making**  | Autonomous; adapts to new inputs and conditions                              | Executes fixed, pre-programmed logic                                              |
+| **Learning**         | Can update behavior from real-time data and feedback                         | Operates on pre-trained data or hardcoded rules                                   |
+| **Onchain identity** | Holds a programmable wallet, can sign and send transactions                  | May hold wallets (e.g., trading bots), typically with operator-managed keys       |
+| **Composability**    | Discovers and interacts with any open protocol dynamically                   | Typically limited to pre-configured API integrations                              |
+| **Guardrails**       | Enforced by smart contract logic (spending limits, session keys, allowlists) | Can use smart contract guardrails, but typically enforced by operator config       |
+| **Verification**     | Behavior can be proven onchain via zkML or TEE attestations                  | Can use onchain verification, but typically attested only by the operator          |
 
-This intuitive approach makes transactions faster, easier, and less prone to errors like sending funds to the wrong address or overpaying for fees.
+See [AI agents: Why Ethereum](/ai-agents/ethereum/) to learn more about the technical case for using Ethereum as the settlement and coordination layer for AI agents.
 
-<AiAgentProductLists list="chat" />
+## What the AI agent builder hub covers {#what-the-ai-agent-hub-covers}
 
-## AI agents vs AI bots {#ai-agents-vs-ai-bots}
+Ethereum provides a unique set of technical foundations for deploying production AI agents.
 
-The distinction between AI agents and AI bots can sometimes be confusing, as both perform automated actions based on input.
+The AI agent builder hub covers each of these core building blocks in depth:
 
-- AI bots are like automated assistants — They follow specific, pre-programmed instructions to perform routine tasks.
-- AI agents are more like intelligent companions — They learn from experience, adapt to new information, and make decisions on their own.
+<CardGrid>
+  <Card
+    emoji=":closed_lock_with_key:"
+    title="Programmable wallets"
+    description="Agents can hold and transfer digital assets directly. A smart account functions as the agent's onchain identity and treasury, with spending limits, allowlists, and session keys enforced at the contract level."
+    href="/ai-agents/wallets/"
+    ctaLabel="See Agent wallets"
+  />
+  <Card
+    emoji=":mag:"
+    title="Verifiable inference"
+    description="An agent running offchain is a black box. By anchoring key decisions to onchain proofs via zkML or TEEs, developers can give counterparties a way to confirm that the agent followed its stated logic."
+    href="/ai-agents/security/"
+    ctaLabel="See Security"
+  />
+  <Card
+    emoji=":money_with_wings:"
+    title="Machine payments"
+    description="Autonomous agents need to pay for compute and data without human intervention. Stablecoins and open protocols like x402 provide a programmable settlement layer for agent commerce."
+    href="/ai-agents/agent-economy/"
+    ctaLabel="See Agent economy"
+  />
+  <Card
+    emoji=":bust_in_silhouette:"
+    title="Agent identity"
+    description="When agents interact with humans or other agents, counterparties need a way to verify what an agent is and what its track record is using onchain registries like ERC-8004."
+    href="/ai-agents/agent-economy/"
+    ctaLabel="See Agent economy"
+  />
+</CardGrid>
 
-|                     | AI agents                                                              | AI bots                                     |
-| ------------------- | ---------------------------------------------------------------------- | ------------------------------------------- |
-| **Interactions**    | Complex, adaptable, autonomous                                         | Simple, pre-defined scope, hardcoded        |
-| **Learning**        | Learns continuously, can experiment and adapt to new data in real-time | Operates on pre-trained data or fixed rules |
-| **Task completion** | Aims to achieve broader objectives                                     | Focuses on specific tasks only              |
+## AI agent infrastructure today {#ecosystem-today}
 
-## Dive deeper {#dive-deeper}
+The standards and protocols that power AI agents on Ethereum have crossed from research into production.
 
-<AiAgentProductLists list="dive-deeper" />
+| Standard or protocol                                      | Status                                                                                              |
+| :-------------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
+| **EIP-7702** — Smart account delegation for existing EOAs | Live since the Pectra upgrade, May 2025                                                             |
+| **ERC-4337** — Smart account standard                     | Production EntryPoint deployments on all major networks (v0.7 widely adopted; v0.8, v0.9 also live) |
+| **ERC-8004** — Onchain agent identity registry            | Draft — in active adoption; live on 20+ chains since January 2026                                   |
+| **x402** — Machine-to-machine HTTP payments               | Production-ready since Q1 2026                                                                      |
+| **L2 transaction cost**                                   | Sub-cent to low-cents per operation                                                                 |
 
-## You can build your own AI agent {#you-can-build-your-own-ai-agent}
+## AI agent builder hub sections {#ai-agent-builder-hub-sections}
 
-<BuildYourOwnAIAgent />
+### Start here {#start-here}
+
+- [Why Ethereum](/ai-agents/ethereum/) — The technical case for using Ethereum as the settlement and coordination layer for AI agents.
+- [Use cases](/ai-agents/use-cases/) — What agents are doing on Ethereum today: DeFi automation, data markets, governance participation, and more.
+
+### Core building blocks {#core-building-blocks}
+
+- [Models](/ai-agents/models/) — Choose the model that drives your agent and where inference runs, from centralized APIs to verifiable and self-hosted options.
+- [Agent harness](/ai-agents/agent-harness/) — The runnable loop that turns a model into an acting agent, from frameworks to ready-made harnesses.
+- [Agent wallets](/ai-agents/wallets/) — Smart accounts, session keys, hardware trust layers, and the patterns for giving an agent safe spending authority.
+- [Frameworks](/ai-agents/frameworks/) — A directory of agent frameworks with Ethereum support and guidance on when to use each.
+- [Security](/ai-agents/security/) — Protect your agent from prompt injection, poisoned tools, and off-chain attack surfaces.
+- [Agent economy](/ai-agents/agent-economy/) — Pay for APIs, get paid for work, and discover and trust other agents through identity and escrow.
+
+<Alert variant="warning">
+<AlertContent>
+<AlertTitle>
+Maturity note
+</AlertTitle>
+<AlertDescription>
+AI agent infrastructure on Ethereum ranges from production-ready standards (ERC-4337, stablecoin payments) to actively experimental technology (zkML at scale, agent-to-agent commerce). Each sub-page in this hub flags the maturity level of the patterns it covers.
+</AlertDescription>
+</AlertContent>
+</Alert>
+
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="What is an AI agent on Ethereum?">
+
+An AI agent is an autonomous software program that uses a language model to reason about goals, decide what actions to take, and execute those actions in a loop without requiring human approval for each step. When that agent is connected to Ethereum, it can hold assets, sign transactions, interact with smart contracts, and participate in onchain protocols as a first-class participant. See [AI agents: Why Ethereum](/ai-agents/ethereum/) for the technical case for AI agents, or, to learn the basics of what people can do on Ethereum with AI, see [Decentralized AI](/decentralized-ai/).
+
+</ExpandableCard>
+
+<ExpandableCard title="How is an AI agent different from a bot?">
+
+A bot follows fixed rules. Given input X, it always does Y. An AI agent uses a language model to reason about novel situations, form a plan, and take sequences of actions that may differ depending on context. Agents are capable of multi-step reasoning, adapting to unexpected conditions, and handling tasks they were not explicitly programmed for. The trade-off is that agent behavior is less predictable, which is why spending limits and session keys are essential. See [AI agents: Wallets](/ai-agents/wallets/) for guardrail patterns.
+
+</ExpandableCard>
+

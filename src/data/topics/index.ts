@@ -21,12 +21,14 @@ export type TopicConfig = {
   showLastUpdatedInHero?: boolean
 }
 
+import { aiAgents } from "./ai-agents"
 import { roadmap } from "./roadmap"
 import { staking } from "./staking"
 import { upgrade } from "./upgrade"
 import { useCases } from "./use-cases"
 
 export const topics: Record<string, TopicConfig> = {
+  "ai-agents": aiAgents,
   roadmap,
   staking,
   upgrade,

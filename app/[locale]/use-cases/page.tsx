@@ -27,7 +27,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import UseCasesPageJsonLD from "./page-jsonld"
 
 import { ContentLayout } from "@/layouts/ContentLayout"
-import aiAgentsHero from "@/public/images/ai-agents/hero-image.png"
+import decentralizedAiHero from "@/public/images/ai-agents/hero-image.png"
 import ethImg from "@/public/images/eth.png"
 import ethGifCat from "@/public/images/eth-gif-cat.png"
 import ethereumLearn from "@/public/images/ethereum-learn.png"
@@ -199,15 +199,17 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             </div>
           </Section>
 
-          {/* AI agents banner */}
+          {/* Decentralized AI banner */}
           <Callout
-            id="ai-agents"
-            title={t("ai-agents-title")}
-            image={aiAgentsHero}
-            description={t("ai-agents-description")}
+            id="decentralized-ai"
+            title={t("decentralized-ai-title")}
+            image={decentralizedAiHero}
+            description={t("decentralized-ai-description")}
             variant="sm"
           >
-            <ButtonLink href="/ai-agents/">{t("ai-agents-cta")}</ButtonLink>
+            <ButtonLink href="/decentralized-ai/">
+              {t("decentralized-ai-cta")}
+            </ButtonLink>
           </Callout>
 
           {/* Digital ownership and gaming */}
