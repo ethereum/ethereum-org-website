@@ -15,6 +15,7 @@ import {
   AlertTitle,
 } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import WindowBox from "@/components/WindowBox"
@@ -83,7 +84,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <h2 className="text-2xl font-bold lg:text-3xl">
             {t("page-community-support-get-help")}
           </h2>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <Grid columns={2} size="wider">
             {sections.getHelp.map(
               ({
                 titleKey,
@@ -121,7 +122,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </WindowBox>
               )
             )}
-          </div>
+          </Grid>
         </Section>
 
         {/* Section 2: Learn */}
@@ -129,7 +130,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <h2 className="text-2xl font-bold lg:text-3xl">
             {t("page-community-support-learn")}
           </h2>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <Grid columns={2} size="wider">
             {sections.learn.map(
               ({
                 titleKey,
@@ -167,7 +168,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </WindowBox>
               )
             )}
-          </div>
+          </Grid>
         </Section>
 
         {/* Still need help? */}

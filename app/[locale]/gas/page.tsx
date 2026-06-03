@@ -27,6 +27,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex, type FlexProps } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import {
@@ -199,7 +200,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-gas-how-do-i-pay-less-gas-header")}
               </H2>
               <p className="mb-6">{t("page-gas-how-do-i-pay-less-gas-text")}</p>
-              <Flex className="my-4 flex-wrap gap-8 *:max-w-full *:min-w-2xs *:flex-[1_0_30%] md:*:max-w-[46%] lg:my-0">
+              <Grid columns={3} className="my-4 lg:my-0">
                 <MarkdownCard
                   emoji=":alarm_clock:"
                   title={t("page-gas-how-do-i-pay-less-gas-card-1-title")}
@@ -223,7 +224,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   ctaLabel={t("page-gas-try-layer-2")}
                   href="/layer-2/"
                 />
-              </Flex>
+              </Grid>
             </div>
           </Flex>
         </Content>

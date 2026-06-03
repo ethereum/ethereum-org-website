@@ -306,7 +306,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-local-meetups-subtitle")}
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            <Grid columns={3}>
               {meetups.slice(0, 6).map((event) => (
                 <EventCard
                   key={event.id}
@@ -321,7 +321,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }}
                 />
               ))}
-            </div>
+            </Grid>
             <div className="flex justify-center">
               <ButtonLink
                 href="/community/events/meetups/"
