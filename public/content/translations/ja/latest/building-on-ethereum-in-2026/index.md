@@ -9,7 +9,7 @@ tags:
   - "プロトコル・アップグレード"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: 2026年のイーサリアムでの構築
+breadcrumb: "2026年のイーサリアムでの構築"
 lang: ja
 ---
 

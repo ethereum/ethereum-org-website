@@ -9,7 +9,7 @@ tags:
   - "प्रोटोकॉल अपग्रेड"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: 2026 में इथेरियम पर निर्माण
+breadcrumb: "2026 में इथेरियम पर निर्माण"
 lang: hi
 ---
 

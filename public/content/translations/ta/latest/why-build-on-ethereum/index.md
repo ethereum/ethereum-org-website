@@ -9,7 +9,7 @@ tags:
   - "ஒருங்கிணைக்கக்கூடிய தன்மை"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-1.png
-breadcrumb: எத்திரியத்தில் ஏன் கட்டமைக்க வேண்டும்
+breadcrumb: "எத்திரியத்தில் ஏன் கட்டமைக்க வேண்டும்"
 lang: ta
 ---
 

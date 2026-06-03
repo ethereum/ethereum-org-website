@@ -9,7 +9,7 @@ tags:
   - "ప్రోటోకాల్ అప్‌గ్రేడ్‌లు"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: 2026లో ఎథీరియంపై నిర్మాణం
+breadcrumb: "2026లో ఎథీరియంపై నిర్మాణం"
 lang: te
 ---
 

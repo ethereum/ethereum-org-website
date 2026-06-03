@@ -8,7 +8,7 @@ tags:
   - "quyền riêng tư"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-2.png
-breadcrumb: Các ứng dụng quyền riêng tư trên Ethereum
+breadcrumb: "Các ứng dụng quyền riêng tư trên Ethereum"
 lang: vi
 ---
 

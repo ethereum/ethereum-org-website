@@ -9,7 +9,7 @@ tags:
   - "நெறிமுறை மேம்படுத்தல்கள்"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: 2026 இல் எத்திரியத்தில் கட்டமைத்தல்
+breadcrumb: "2026 இல் எத்திரியத்தில் கட்டமைத்தல்"
 lang: ta
 ---
 

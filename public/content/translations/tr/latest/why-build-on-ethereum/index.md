@@ -9,7 +9,7 @@ tags:
   - "birleştirilebilirlik"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-1.png
-breadcrumb: Neden Ethereum üzerinde geliştirmeli
+breadcrumb: "Neden Ethereum üzerinde geliştirmeli"
 lang: tr
 ---
 

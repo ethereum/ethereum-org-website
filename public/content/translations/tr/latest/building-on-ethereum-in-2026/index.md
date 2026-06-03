@@ -9,7 +9,7 @@ tags:
   - "protokol yükseltmeleri"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: 2026'da Ethereum Üzerinde Geliştirme Yapmak
+breadcrumb: "2026'da Ethereum Üzerinde Geliştirme Yapmak"
 lang: tr
 ---
 

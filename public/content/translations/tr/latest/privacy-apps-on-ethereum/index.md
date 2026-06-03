@@ -8,7 +8,7 @@ tags:
   - "gizlilik"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-2.png
-breadcrumb: Ethereum'da gizlilik uygulamaları
+breadcrumb: "Ethereum'da gizlilik uygulamaları"
 lang: tr
 ---
 

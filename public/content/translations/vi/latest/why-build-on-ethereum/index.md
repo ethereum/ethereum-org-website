@@ -9,7 +9,7 @@ tags:
   - "khả năng kết hợp"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-1.png
-breadcrumb: Tại sao nên xây dựng trên Ethereum
+breadcrumb: "Tại sao nên xây dựng trên Ethereum"
 lang: vi
 ---
 

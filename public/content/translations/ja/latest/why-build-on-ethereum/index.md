@@ -9,7 +9,7 @@ tags:
   - "コンポーザビリティ"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-1.png
-breadcrumb: イーサリアムで構築する理由
+breadcrumb: "イーサリアムで構築する理由"
 lang: ja
 ---
 

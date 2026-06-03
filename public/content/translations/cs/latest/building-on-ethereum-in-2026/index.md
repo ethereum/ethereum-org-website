@@ -9,7 +9,7 @@ tags:
   - "upgrady protokolu"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: Budování na Ethereu v roce 2026
+breadcrumb: "Budování na Ethereu v roce 2026"
 lang: cs
 ---
 

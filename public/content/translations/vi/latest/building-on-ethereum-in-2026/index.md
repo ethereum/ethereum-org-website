@@ -9,7 +9,7 @@ tags:
   - "nâng cấp giao thức"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: Xây dựng trên Ethereum vào năm 2026
+breadcrumb: "Xây dựng trên Ethereum vào năm 2026"
 lang: vi
 ---
 

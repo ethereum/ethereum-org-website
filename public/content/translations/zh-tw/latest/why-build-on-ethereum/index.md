@@ -9,7 +9,7 @@ tags:
   - "可組合性"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-1.png
-breadcrumb: 為何在以太坊上建構
+breadcrumb: "為何在以太坊上建構"
 lang: zh-tw
 ---
 

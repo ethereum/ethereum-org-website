@@ -8,7 +8,7 @@ tags:
   - "الخصوصية"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-2.png
-breadcrumb: تطبيقات الخصوصية على إيثيريوم
+breadcrumb: "تطبيقات الخصوصية على إيثيريوم"
 lang: ar
 ---
 

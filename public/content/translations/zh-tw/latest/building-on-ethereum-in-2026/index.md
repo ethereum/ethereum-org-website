@@ -9,7 +9,7 @@ tags:
   - "協定升級"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: 2026 年在以太坊上建構
+breadcrumb: "2026 年在以太坊上建構"
 lang: zh-tw
 ---
 

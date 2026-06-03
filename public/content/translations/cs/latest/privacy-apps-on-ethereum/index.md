@@ -8,7 +8,7 @@ tags:
   - "soukromí"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-2.png
-breadcrumb: Aplikace pro soukromí na Ethereu
+breadcrumb: "Aplikace pro soukromí na Ethereu"
 lang: cs
 ---
 

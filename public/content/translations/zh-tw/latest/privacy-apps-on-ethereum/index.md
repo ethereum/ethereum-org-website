@@ -8,7 +8,7 @@ tags:
   - "隱私"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-2.png
-breadcrumb: 以太坊上的隱私應用程式
+breadcrumb: "以太坊上的隱私應用程式"
 lang: zh-tw
 ---
 

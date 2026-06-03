@@ -9,7 +9,7 @@ tags:
   - "componibilità"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-1.png
-breadcrumb: Perché costruire su Ethereum
+breadcrumb: "Perché costruire su Ethereum"
 lang: it
 ---
 

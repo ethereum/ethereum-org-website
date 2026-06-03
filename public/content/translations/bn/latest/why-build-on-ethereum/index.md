@@ -9,7 +9,7 @@ tags:
   - "সংযোজনযোগ্যতা"
 published: 2026-05-12
 image: /images/developers/blog/latest-post-header-1.png
-breadcrumb: কেন ইথেরিয়ামে নির্মাণ করবেন
+breadcrumb: "কেন ইথেরিয়ামে নির্মাণ করবেন"
 lang: bn
 ---
 

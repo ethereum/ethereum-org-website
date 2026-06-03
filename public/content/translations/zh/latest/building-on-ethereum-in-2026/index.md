@@ -9,7 +9,7 @@ tags:
   - "协议升级"
 published: 2026-05-07
 image: /images/developers/blog/latest-post-header-3.png
-breadcrumb: 2026 年在以太坊上构建
+breadcrumb: "2026 年在以太坊上构建"
 lang: zh
 ---
 
