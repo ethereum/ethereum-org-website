@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils/cn"
 import { ButtonLink } from "./ui/buttons/Button"
 import { CardParagraph, CardTitle } from "./ui/card"
 import { Center } from "./ui/flex"
+import { Grid } from "./ui/grid"
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement>
 
@@ -96,7 +97,7 @@ const BugBountyCards = async () => {
     return <></>
   }
   return (
-    <div className="grid-cols-fill-4 grid gap-8">
+    <Grid>
       {bugBountyCardsInfo.map((card, idx) => (
         <div
           key={`bug-bounty-card-${idx}`}
@@ -125,7 +126,7 @@ const BugBountyCards = async () => {
           </div>
         </div>
       ))}
-    </div>
+    </Grid>
   )
 }
 
