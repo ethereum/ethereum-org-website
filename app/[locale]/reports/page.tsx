@@ -14,6 +14,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Flex } from "@/components/ui/flex"
 import { ExternalLinkIcon } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import { Tag } from "@/components/ui/tag"
@@ -131,12 +132,20 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <h2>{t("page-reports-suggest-heading")}</h2>
             <p>{t("page-reports-suggest-body")}</p>
           </div>
-          <ButtonLink
-            href="https://github.com/ethereum/ethereum-org-website/issues/new/choose"
-            variant="outline"
-          >
-            {t("page-reports-suggest-cta")}
-          </ButtonLink>
+          <Flex className="flex-wrap gap-4">
+            <ButtonLink
+              href="https://ethereumadoption.com/reports/eth/"
+              variant="outline"
+            >
+              {t("page-reports-more-cta")}
+            </ButtonLink>
+            <ButtonLink
+              href="https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+              variant="outline"
+            >
+              {t("page-reports-suggest-cta")}
+            </ButtonLink>
+          </Flex>
         </Section>
       </MainArticle>
     </>
