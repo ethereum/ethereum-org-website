@@ -21,6 +21,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 // import { Alert } from "@/components/ui/alert"
 import { CardParagraph } from "@/components/ui/card"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 
@@ -635,7 +636,7 @@ export default async function Page(props: { params: Promise<Params> }) {
               <p className="mb-8 max-w-[100ch] text-body-medium">
                 {t("page-upgrades-bug-bounty-severity-qualifications-desc")}
               </p>
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+              <Grid balanced={4}>
                 {/* Low */}
                 <div className="flex flex-col rounded-xs border border-border bg-background p-6">
                   <span className="mb-4 inline-flex w-fit rounded-full bg-green-500/10 px-3 py-1 text-sm font-semibold text-green-600 dark:text-green-400">
@@ -743,7 +744,7 @@ export default async function Page(props: { params: Promise<Params> }) {
                     </ListItem>
                   </UnorderedList>
                 </div>
-              </div>
+              </Grid>
             </div>
           </Content>
         </div>
