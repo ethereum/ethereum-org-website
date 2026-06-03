@@ -18,9 +18,19 @@ export const aiAgents: TopicConfig = {
         matomoEvent: "ethereum",
       },
       {
-        textKey: "template-ai-agents-dropdown-getting-started",
-        href: "/ai-agents/getting-started/",
-        matomoEvent: "getting-started",
+        textKey: "template-ai-agents-dropdown-use-cases",
+        href: "/ai-agents/use-cases/",
+        matomoEvent: "use-cases",
+      },
+      {
+        textKey: "template-ai-agents-dropdown-models",
+        href: "/ai-agents/models/",
+        matomoEvent: "models",
+      },
+      {
+        textKey: "template-ai-agents-dropdown-agent-harness",
+        href: "/ai-agents/agent-harness/",
+        matomoEvent: "agent-harness",
       },
       {
         textKey: "template-ai-agents-dropdown-wallets",
@@ -33,29 +43,14 @@ export const aiAgents: TopicConfig = {
         matomoEvent: "frameworks",
       },
       {
-        textKey: "template-ai-agents-dropdown-verification",
-        href: "/ai-agents/verification/",
-        matomoEvent: "verification",
+        textKey: "template-ai-agents-dropdown-security",
+        href: "/ai-agents/security/",
+        matomoEvent: "security",
       },
       {
-        textKey: "template-ai-agents-dropdown-payments",
-        href: "/ai-agents/payments/",
-        matomoEvent: "payments",
-      },
-      {
-        textKey: "template-ai-agents-dropdown-identity",
-        href: "/ai-agents/identity/",
-        matomoEvent: "identity",
-      },
-      {
-        textKey: "template-ai-agents-dropdown-use-cases",
-        href: "/ai-agents/use-cases/",
-        matomoEvent: "use-cases",
-      },
-      {
-        textKey: "template-ai-agents-dropdown-l2s",
-        href: "/ai-agents/l2s/",
-        matomoEvent: "l2s",
+        textKey: "template-ai-agents-dropdown-agent-economy",
+        href: "/ai-agents/agent-economy/",
+        matomoEvent: "agent-economy",
       },
     ],
   },
