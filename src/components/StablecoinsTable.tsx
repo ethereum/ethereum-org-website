@@ -58,16 +58,16 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
 
   return (
     <div className="mt-6 w-full overflow-x-auto">
-      <Table variant="minimal" className="min-w-[600px]">
+      <Table variant="minimal" className="min-w-[520px]">
         <TableHeader>
           <TableRow>
-            <TableHead className="w-1/2">
+            <TableHead className="w-2/5 whitespace-nowrap">
               {t("page-stablecoins-stablecoins-table-header-column-1")}
             </TableHead>
-            <TableHead className="w-1/4">
+            <TableHead className="w-[30%] whitespace-nowrap">
               {t("page-stablecoins-stablecoins-table-header-column-2")}
             </TableHead>
-            <TableHead className="w-1/4 text-end">
+            <TableHead className="w-[30%] text-end whitespace-nowrap">
               {t("page-stablecoins-stablecoins-table-header-column-3")}
             </TableHead>
           </TableRow>
@@ -122,7 +122,9 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
                       </span>
                     </Flex>
                   </TableCell>
-                  <TableCell>{marketCap}</TableCell>
+                  <TableCell className="whitespace-nowrap">
+                    {marketCap}
+                  </TableCell>
                   <TableCell className="text-end">
                     <Tag size="small" variant="outline">
                       {stablecoinsType[type]}
