@@ -62,7 +62,7 @@ const StoryCard = ({ story, className, expandable = true }: StoryCardProps) => {
         <div className="mb-4 flex flex-row items-center justify-between">
           <div className="flex flex-row items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-hover">
-              <p aria-hidden className="font-bold">
+              <p aria-hidden className="font-bold text-white">
                 {story.name?.slice(0, 1) || "?"}
               </p>
             </div>
