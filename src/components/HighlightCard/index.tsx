@@ -17,13 +17,7 @@ export const HighlightStack = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn(
-      "divide-y [&>div]:py-8 [&>div:first-child]:pt-0 [&>div:last-child]:pb-0",
-      className
-    )}
-    {...props}
-  />
+  <div className={cn("divide-y *:[div]:py-8", className)} {...props} />
 )
 
 export const HighlightCard = ({
