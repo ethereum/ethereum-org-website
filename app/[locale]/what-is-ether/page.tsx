@@ -117,31 +117,26 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
 
       <ContentHero {...heroProps} />
       <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
-        <div
-          data-label="extras"
-          className="mb-8 space-y-4 lg:col-start-1 lg:row-start-1 lg:mb-10"
-        >
-          <FileContributors
-            className="!py-0 [&>div]:mt-0"
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
-        </div>
+        <FileContributors
+          className="mb-8 py-0! lg:col-start-1 lg:row-start-1 lg:mb-10 [&>div]:mt-0"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
 
         <div className="row-start-1 lg:col-start-2 lg:row-span-2">
           <TableOfContents variant="card" items={tocItems} isMobile />
           <TableOfContents variant="card" items={tocItems} />
         </div>
 
-        <div className="max-w-[50rem] space-y-14 lg:col-start-1 lg:row-start-2">
-          <Section id={getId(tocItems[0].url)} className="space-y-6">
+        <div className="flow max-w-3xl lg:col-start-1 lg:row-start-2">
+          <Section id={getId(tocItems[0].url)}>
             <p>{t("page-what-is-ether-what-is-ether-description-1")}</p>
             <p>
               {t.rich("page-what-is-ether-what-is-ether-description-2", {
                 strong: Strong,
               })}
             </p>
-            <OrderedList className="[&>li]:mb-0.5">
+            <OrderedList>
               <ListItem>
                 {t("page-what-is-ether-what-is-ether-description-3")}
               </ListItem>
@@ -158,58 +153,54 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
                 ),
               })}
             </p>
-            <div className="py-14">
-              <HighlightStack data-label="ethereum-network-table">
-                <HighlightCard>
-                  <IconBox>
-                    <User className="text-accent-a" />
-                  </IconBox>
-                  <div className="space-y-2!">
-                    <CardTitle>
-                      {t("page-what-is-ether-what-is-ether-description-6")}
-                    </CardTitle>
-                    <CardParagraph>
-                      {t("page-what-is-ether-what-is-ether-description-7")}
-                    </CardParagraph>
-                  </div>
-                </HighlightCard>
-                <HighlightCard>
-                  <IconBox>
-                    <SquareCode className="text-accent-b" />
-                  </IconBox>
-                  <div className="space-y-2!">
-                    <CardTitle>
-                      {t("page-what-is-ether-what-is-ether-description-8")}
-                    </CardTitle>
-                    <CardParagraph>
-                      {t("page-what-is-ether-what-is-ether-description-9")}
-                    </CardParagraph>
-                  </div>
-                </HighlightCard>
-                <HighlightCard>
-                  <IconBox>
-                    <Landmark className="text-accent-c" />
-                  </IconBox>
-                  <div className="space-y-2!">
-                    <CardTitle>
-                      {t("page-what-is-ether-what-is-ether-description-10")}
-                    </CardTitle>
-                    <CardParagraph>
-                      {t("page-what-is-ether-what-is-ether-description-11")}
-                    </CardParagraph>
-                  </div>
-                </HighlightCard>
-              </HighlightStack>
-            </div>
+            <HighlightStack data-label="ethereum-network-table">
+              <HighlightCard>
+                <IconBox>
+                  <User className="text-accent-a" />
+                </IconBox>
+                <div className="space-y-2!">
+                  <CardTitle>
+                    {t("page-what-is-ether-what-is-ether-description-6")}
+                  </CardTitle>
+                  <CardParagraph>
+                    {t("page-what-is-ether-what-is-ether-description-7")}
+                  </CardParagraph>
+                </div>
+              </HighlightCard>
+              <HighlightCard>
+                <IconBox>
+                  <SquareCode className="text-accent-b" />
+                </IconBox>
+                <div className="space-y-2!">
+                  <CardTitle>
+                    {t("page-what-is-ether-what-is-ether-description-8")}
+                  </CardTitle>
+                  <CardParagraph>
+                    {t("page-what-is-ether-what-is-ether-description-9")}
+                  </CardParagraph>
+                </div>
+              </HighlightCard>
+              <HighlightCard>
+                <IconBox>
+                  <Landmark className="text-accent-c" />
+                </IconBox>
+                <div className="space-y-2!">
+                  <CardTitle>
+                    {t("page-what-is-ether-what-is-ether-description-10")}
+                  </CardTitle>
+                  <CardParagraph>
+                    {t("page-what-is-ether-what-is-ether-description-11")}
+                  </CardParagraph>
+                </div>
+              </HighlightCard>
+            </HighlightStack>
             <LinkWithArrow href="/staking/">
               {t("page-what-is-ether-what-is-ether-description-12")}
             </LinkWithArrow>
           </Section>
 
-          <Section id={getId(tocItems[1].url)} className="space-y-6">
-            <h2 id={getId(tocItems[1].url)} className="scroll-mt-28">
-              {tocItems[1].title}
-            </h2>
+          <Section id={getId(tocItems[1].url)}>
+            <h2>{tocItems[1].title}</h2>
             <p>
               {t.rich("page-what-is-ether-how-to-buy-eth-description-1", {
                 strong: Strong,
@@ -297,76 +288,68 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </LinkWithArrow>
           </Section>
 
-          <Section id={getId(tocItems[2].url)} className="space-y-14">
+          <Section id={getId(tocItems[2].url)}>
             <Image
               src={ethOrgLogo}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[123px]"
               sizes="123px"
             />
-            <div className="space-y-6">
-              <h2 id={getId(tocItems[2].url)} className="scroll-mt-28">
-                {tocItems[2].title}
-              </h2>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-how-to-send-and-receive-eth-description-1",
-                  {
+            <h2>{tocItems[2].title}</h2>
+            <p>
+              {t.rich(
+                "page-what-is-ether-how-to-send-and-receive-eth-description-1",
+                {
+                  strong: Strong,
+                }
+              )}
+            </p>
+            <p>
+              {t.rich(
+                "page-what-is-ether-how-to-send-and-receive-eth-description-2",
+                {
+                  strong: Strong,
+                }
+              )}
+            </p>
+            <p>
+              {t.rich(
+                "page-what-is-ether-how-to-send-and-receive-eth-description-3",
+                {
+                  strong: Strong,
+                  howToUseWallet: (chunks) => (
+                    <Link href="/guides/how-to-use-a-wallet/">{chunks}</Link>
+                  ),
+                }
+              )}
+            </p>
+            <Alert variant="warning">
+              <AlertEmoji text="💡" />
+              <AlertContent>
+                <p>
+                  {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
                     strong: Strong,
-                  }
-                )}
-              </p>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-how-to-send-and-receive-eth-description-2",
-                  {
-                    strong: Strong,
-                  }
-                )}
-              </p>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-how-to-send-and-receive-eth-description-3",
-                  {
-                    strong: Strong,
-                    howToUseWallet: (chunks) => (
-                      <Link href="/guides/how-to-use-a-wallet/">{chunks}</Link>
-                    ),
-                  }
-                )}
-              </p>
-              <Alert variant="warning">
-                <AlertEmoji text="💡" />
-                <AlertContent>
-                  <p>
-                    {t.rich("page-what-is-ether-how-to-buy-eth-description-3", {
-                      strong: Strong,
-                    })}
-                  </p>
-                  <p>
-                    {t(
-                      "page-what-is-ether-how-to-send-and-receive-eth-callout"
-                    )}
-                  </p>
-                </AlertContent>
-              </Alert>
-              <p>
-                {t(
-                  "page-what-is-ether-how-to-send-and-receive-eth-description-7"
-                )}
-              </p>
-              <LinkWithArrow href="/what-is-ethereum/">
-                {t(
-                  "page-what-is-ether-how-to-send-and-receive-eth-description-8"
-                )}
-              </LinkWithArrow>
-            </div>
+                  })}
+                </p>
+                <p>
+                  {t("page-what-is-ether-how-to-send-and-receive-eth-callout")}
+                </p>
+              </AlertContent>
+            </Alert>
+            <p>
+              {t(
+                "page-what-is-ether-how-to-send-and-receive-eth-description-7"
+              )}
+            </p>
+            <LinkWithArrow href="/what-is-ethereum/">
+              {t(
+                "page-what-is-ether-how-to-send-and-receive-eth-description-8"
+              )}
+            </LinkWithArrow>
           </Section>
 
-          <Section id={getId(tocItems[3].url)} className="space-y-6">
-            <h2 id={getId(tocItems[1].url)} className="scroll-mt-28">
-              {tocItems[3].title}
-            </h2>
+          <Section id={getId(tocItems[3].url)}>
+            <h2>{tocItems[3].title}</h2>
             <p>
               {t(
                 "page-what-is-ether-how-long-does-it-take-to-send-eth-description-1"
@@ -384,50 +367,43 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </Section>
 
-          <Section
-            id={getId(tocItems[4].url)}
-            className="-scroll-mt-80 space-y-14"
-          >
+          <Section id={getId(tocItems[4].url)}>
             <Image
               src={infrastructureTransparent}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[330px]"
               sizes="330px"
             />
-            <div className="space-y-6">
-              <h2 id={getId(tocItems[4].url)} className="scroll-mt-28">
-                {tocItems[4].title}
-              </h2>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-how-much-does-it-cost-to-send-eth-description-1",
-                  {
-                    strong: Strong,
-                  }
-                )}
-              </p>
-              <GasTable
-                labels={{
-                  transactionType: t(
-                    "page-what-is-ether-gas-table-transaction-type"
-                  ),
-                  typicalCostRange: t(
-                    "page-what-is-ether-gas-table-typical-cost-range"
-                  ),
-                  estimatedGasUnits: t(
-                    "page-what-is-ether-gas-table-estimated-gas-units"
-                  ),
-                  row1: t("page-what-is-ether-gas-table-row-1-1"),
-                  row2: t("page-what-is-ether-gas-table-row-2-1"),
-                  row3: t("page-what-is-ether-gas-table-row-3-1"),
-                }}
-                locale={locale}
-                initialData={gasTableInitialData}
-              />
-            </div>
+            <h2>{tocItems[4].title}</h2>
+            <p>
+              {t.rich(
+                "page-what-is-ether-how-much-does-it-cost-to-send-eth-description-1",
+                {
+                  strong: Strong,
+                }
+              )}
+            </p>
+            <GasTable
+              labels={{
+                transactionType: t(
+                  "page-what-is-ether-gas-table-transaction-type"
+                ),
+                typicalCostRange: t(
+                  "page-what-is-ether-gas-table-typical-cost-range"
+                ),
+                estimatedGasUnits: t(
+                  "page-what-is-ether-gas-table-estimated-gas-units"
+                ),
+                row1: t("page-what-is-ether-gas-table-row-1-1"),
+                row2: t("page-what-is-ether-gas-table-row-2-1"),
+                row3: t("page-what-is-ether-gas-table-row-3-1"),
+              }}
+              locale={locale}
+              initialData={gasTableInitialData}
+            />
           </Section>
 
-          <Section className="space-y-6">
+          <Section>
             <h3>{t("page-what-is-ether-l2s")}</h3>
             <p>
               {t.rich("page-what-is-ether-l2s-description-1", {
@@ -453,62 +429,53 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </Section>
 
-          <Section
-            id={getId(tocItems[5].url)}
-            className="-scroll-mt-80 space-y-14"
-          >
+          <Section id={getId(tocItems[5].url)}>
             <Image
               src={developersHubHero}
               alt="Ethereum.org Logo"
               className="mx-auto"
               sizes={`(max-width: 832px) calc(100vw - 32px), 800px`}
             />
-            <div className="space-y-6">
-              <h2 id={getId(tocItems[5].url)} className="scroll-mt-28">
-                {tocItems[5].title}
-              </h2>
-              <p>
-                {t("page-what-is-ether-what-is-the-eth-supply-description-1")}
-              </p>
-              <UnorderedList>
-                <ListItem>
-                  {t("page-what-is-ether-what-is-the-eth-supply-description-2")}
-                </ListItem>
-                <ListItem>
-                  {t("page-what-is-ether-what-is-the-eth-supply-description-3")}
-                </ListItem>
-                <ListItem>
-                  {t("page-what-is-ether-what-is-the-eth-supply-description-4")}
-                </ListItem>
-              </UnorderedList>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-what-is-the-eth-supply-description-5",
-                  {
-                    strong: Strong,
-                  }
-                )}
-              </p>
-              <p>
-                {t.rich(
-                  "page-what-is-ether-what-is-the-eth-supply-description-6",
-                  {
-                    etherscan: (chunks) => (
-                      <Link href="https://etherscan.io/">{chunks}</Link>
-                    ),
-                    ultrasound: (chunks) => (
-                      <Link href="https://ultrasound.money/">{chunks}</Link>
-                    ),
-                  }
-                )}
-              </p>
-            </div>
+            <h2>{tocItems[5].title}</h2>
+            <p>
+              {t("page-what-is-ether-what-is-the-eth-supply-description-1")}
+            </p>
+            <UnorderedList>
+              <ListItem>
+                {t("page-what-is-ether-what-is-the-eth-supply-description-2")}
+              </ListItem>
+              <ListItem>
+                {t("page-what-is-ether-what-is-the-eth-supply-description-3")}
+              </ListItem>
+              <ListItem>
+                {t("page-what-is-ether-what-is-the-eth-supply-description-4")}
+              </ListItem>
+            </UnorderedList>
+            <p>
+              {t.rich(
+                "page-what-is-ether-what-is-the-eth-supply-description-5",
+                {
+                  strong: Strong,
+                }
+              )}
+            </p>
+            <p>
+              {t.rich(
+                "page-what-is-ether-what-is-the-eth-supply-description-6",
+                {
+                  etherscan: (chunks) => (
+                    <Link href="https://etherscan.io/">{chunks}</Link>
+                  ),
+                  ultrasound: (chunks) => (
+                    <Link href="https://ultrasound.money/">{chunks}</Link>
+                  ),
+                }
+              )}
+            </p>
           </Section>
 
-          <Section id={getId(tocItems[6].url)} className="space-y-6">
-            <h2 id={getId(tocItems[6].url)} className="scroll-mt-28">
-              {tocItems[6].title}
-            </h2>
+          <Section id={getId(tocItems[6].url)}>
+            <h2>{tocItems[6].title}</h2>
             <p>
               {t.rich(
                 "page-what-is-ether-what-is-the-distribution-of-eth-description-1",
@@ -523,7 +490,7 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </Section>
 
-          <Section className="space-y-6">
+          <Section>
             <h3>{t("page-what-is-ether-breakdown")}</h3>
             <UnorderedList>
               <ListItem>
@@ -562,49 +529,45 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </UnorderedList>
           </Section>
 
-          <Section className="space-y-14">
+          <Section>
             <Image
               src={impactTransparent}
               alt="Ethereum.org Logo"
               className="mx-auto max-w-[214px]"
               sizes="214px"
             />
-            <div className="space-y-6">
-              <h3>{t("page-what-is-ether-who-holds-most")}</h3>
-              <p>{t("page-what-is-ether-who-holds-most-description-1")}</p>
-              <p>{t("page-what-is-ether-who-holds-most-description-2")}</p>
-              <UnorderedList>
-                <ListItem>
-                  {t.rich("page-what-is-ether-who-holds-most-description-3", {
-                    staked: (chunks) => <Link href="/staking/">{chunks}</Link>,
-                  })}
-                </ListItem>
-                <ListItem>
-                  {t("page-what-is-ether-who-holds-most-description-4")}
-                </ListItem>
-                <ListItem>
-                  {t("page-what-is-ether-who-holds-most-description-5")}
-                </ListItem>
-              </UnorderedList>
-              <p>
-                {t.rich("page-what-is-ether-who-holds-most-description-6", {
-                  etherscan: (chunks) => (
-                    <Link href="https://etherscan.io/accounts">{chunks}</Link>
-                  ),
+            <h3>{t("page-what-is-ether-who-holds-most")}</h3>
+            <p>{t("page-what-is-ether-who-holds-most-description-1")}</p>
+            <p>{t("page-what-is-ether-who-holds-most-description-2")}</p>
+            <UnorderedList>
+              <ListItem>
+                {t.rich("page-what-is-ether-who-holds-most-description-3", {
+                  staked: (chunks) => <Link href="/staking/">{chunks}</Link>,
                 })}
-              </p>
-            </div>
+              </ListItem>
+              <ListItem>
+                {t("page-what-is-ether-who-holds-most-description-4")}
+              </ListItem>
+              <ListItem>
+                {t("page-what-is-ether-who-holds-most-description-5")}
+              </ListItem>
+            </UnorderedList>
+            <p>
+              {t.rich("page-what-is-ether-who-holds-most-description-6", {
+                etherscan: (chunks) => (
+                  <Link href="https://etherscan.io/accounts">{chunks}</Link>
+                ),
+              })}
+            </p>
           </Section>
 
-          <Section className="space-y-6">
+          <Section>
             <h3>{t("page-what-is-ether-distribution")}</h3>
             <p>{t("page-what-is-ether-distribution-description-1")}</p>
           </Section>
 
-          <Section id={getId(tocItems[7].url)} className="space-y-6">
-            <h2 id={getId(tocItems[7].url)} className="scroll-mt-28">
-              {tocItems[7].title}
-            </h2>
+          <Section id={getId(tocItems[7].url)}>
+            <h2>{tocItems[7].title}</h2>
             <p>
               {t("page-what-is-ether-what-makes-eth-valuable-description-1")}
             </p>
@@ -647,10 +610,8 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </Section>
 
-          <Section id={getId(tocItems[8].url)} className="space-y-6">
-            <h2 id={getId(tocItems[8].url)} className="scroll-mt-28">
-              {tocItems[8].title}
-            </h2>
+          <Section id={getId(tocItems[8].url)}>
+            <h2>{tocItems[8].title}</h2>
             <p>{t("page-what-is-ether-what-is-wrapping-eth-description-1")}</p>
             <p>{t("page-what-is-ether-what-is-wrapping-eth-description-2")}</p>
             <UnorderedList>
