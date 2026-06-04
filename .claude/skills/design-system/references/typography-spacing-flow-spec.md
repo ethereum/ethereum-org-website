@@ -1,6 +1,6 @@
 # Typography & Spacing Flow -- Spec
 
-Status: POC implemented and validated on screen (opt-in `.flow` system + Storybook kitchen-sink). Broader migration (MdComponents, layouts, app pages, `<Section>`) still pending. Owner: ui-headers effort.
+Status: Shipped on the `ui-headers` branch. The opt-in `.flow` system lives in `base.css` and is applied to markdown content (`ContentContainer`, plus the `MainArticle` in the `Docs`/`Static`/`Tutorial` layouts) and to migrated React pages, with a Storybook kitchen-sink. The `<Section>` component refactor remains a separate follow-up. The durable rules are now distilled into `spacing-typography.md` (canonical); this doc holds the design rationale and edge cases.
 
 This document defines the target model for how headings, paragraphs, lists, and the vertical spacing between them work site-wide. It replaces the current mess -- per-layout heading wrappers, commented-out overrides, ad-hoc `mt-*/mb-*` on individual elements, two competing list-spacing sources, and arbitrary `text-[2.5rem]` values -- with a single, default-driven system.
 
@@ -31,22 +31,36 @@ The "hug" the designers wanted is NOT a special tight gap below headings -- it i
 Rules live in `src/styles/base.css` (`@layer base`), opt-in via the `.flow` class:
 
 ```css
-:root       { --space: calc(var(--spacing) * 4); }          /* 16px (== --spacing(4)) */
+:root       { --space: calc(var(--spacing) * 4); }           /* 16px (== --spacing(4)) */
 @variant lg { :root { --space: calc(var(--spacing) * 6); } } /* 24px */
 
 @layer base {
-  .flow > * + *                        { margin-top: var(--space); }              /* 1x default */
-  .flow > * + :is(h3, h4)              { margin-top: calc(var(--space) * 2); }    /* subsection */
-  .flow > * + :is(h1, h2, section)     { margin-top: calc(var(--space) * 3); }    /* section boundary */
-  .flow > * + [data-flow="cta"]        { margin-top: calc(var(--space) * 2); }    /* button group */
-  .flow > *:first-child                { margin-top: 0; }
+  /* SCOPE (abbreviated below) = direct children of the region OR of any <section>
+     one level inside it that hasn't opted out:
+       :where(.flow, .flow section:not([data-flow="skip"]))
+     `:where()` keeps it zero-specificity so a utility class always wins, and `+`
+     never matches a first child -- so no first-child reset is needed. */
 
-  /* Lists: neutralize the legacy global list margins, scoped to .flow. */
-  .flow :is(ul, ol) { margin-bottom: 0; margin-inline: 0; padding-inline-start: calc(var(--spacing) * 6); }
-  .flow li          { margin-bottom: 0; }
-  .flow li + li     { margin-top: calc(var(--space) * 0.5); }
+  SCOPE > * + *               { margin-top: var(--space); }            /* 1x default */
+  SCOPE > * + :is(h2, h3, h4) { margin-top: calc(var(--space) * 2); }  /* 2x above a heading */
+  SCOPE > * + section,
+  :where(.flow) > * + :is(h1, h2) { margin-top: calc(var(--space) * 3); } /* 3x section boundary */
+  SCOPE > * + [data-flow="cta"]   { margin-top: calc(var(--space) * 2); } /* 2x above a CTA group */
+  SCOPE > * + :is(ul, ol)         { margin-top: var(--space); }           /* restore list top gap */
+
+  /* Lists own their vertical rhythm; indentation is left to the list itself
+     (ui/list's `ms-6`, or the legacy global start-margin for raw lists) -- adding
+     padding here would double the indent. */
+  :where(.flow) :is(ul, ol) { margin-bottom: 0; }
+  :where(.flow) li          { margin-bottom: 0; }
+  :where(.flow) li + li     { margin-top: calc(var(--space) * 0.5); }
 }
 ```
+
+Two subtleties in the shipped rules:
+
+- **`h2` is matched twice.** It appears in both the `2x` heading rule and the `3x` boundary rule. A top-level `h2` (direct child of `.flow`) matches both, and source order makes the later `3x` rule win -- a section break. An `h2` *inside* a `<section>` only matches the `2x` rule, but as the section's first child it has no preceding sibling, so it gets nothing and the `<section>` boundary owns the gap. Net: top-level `h2` = `3x`, nested section heading = the section's `3x`, an `h2` mid-section (rare) = `2x`.
+- **The explicit list top-gap rule** (`* + :is(ul, ol)`) is required because the legacy global `ul/ol` rule sets `margin-top: 0` at specificity `(0,0,1)`, which would otherwise beat the zero-specificity `* + *` default and leave a list with no space above it.
 
 (`calc(var(--spacing) * N)` is used rather than the `--spacing(N)` function form because it is plain CSS that resolves regardless of where it sits in the build; they are equivalent.)
 
@@ -82,7 +96,7 @@ Heading sizes are element defaults in `base.css` (responsive at `lg`); just writ
 | `h5` | `text-md lg:text-xl` |
 | `h6` | `text-sm lg:text-md` |
 
-Done: the duplicate font-weight block in `base.css` has been collapsed to a single `h1-h6 { font-bold }`. Still to do (migration): remove the `text-[2.5rem]` arbitrary size on `Heading1` in `MdComponents` -- in-article page titles use the `h1` default (heroes own page titles; no dedicated token).
+The duplicate font-weight block in `base.css` is collapsed to a single `h1-h6 { font-black }` (weight 900 -- the heading-weight standardization that landed with the dev merge). Do **not** re-apply a weight on a heading: a utility-layer `font-bold`/`font-semibold` silently overrides the base `font-black`. The `text-[2.5rem]` arbitrary size formerly on `Heading1` in `MdComponents` has been removed -- in-article page titles use the `h1` default (heroes own their own titles; no dedicated token).
 
 ## Line-height policy
 
@@ -94,16 +108,16 @@ Line-height comes from the size-token pairing in `theme.css` (`--text-4xl--line-
 
 ## Markdown heading anchors (must preserve)
 
-When migration strips spacing/leading from the `MdComponents` heading wrappers, it must keep their structural behavior:
+The `MdComponents` heading wrappers had their spacing/leading stripped; the structural behavior was preserved:
 - The custom `{#kebab-id}` -> `id` attribute.
 - The `IdAnchor` child rendering the hover link icon and the `group` / `data-group` hooks.
 - The `scroll-mt-*` offset so anchored navigation isn't clipped by the sticky nav.
 
-Only the presentational noise is removed: `my-8`, `leading-xs`, `text-[2.5rem]`. Appearance comes from element defaults; spacing from `.flow`.
+Only the presentational noise was removed: `my-8`, `leading-xs`, `text-[2.5rem]`. Appearance comes from element defaults; spacing from `.flow`.
 
 ## Where `.flow` is applied
 
-- **Markdown content:** apply `.flow` to the content container (`ContentContainer` / `MainArticle` in `MdComponents`). All MDX prose then gets the rhythm, and the per-element wrappers lose their `my-8` / `mt-8 mb-4` spacing -- keeping only id + anchor + scroll-margin.
+- **Markdown content:** `.flow` is on the content container -- `ContentContainer` (the `ContentLayout` body) and the `MainArticle` in the `Docs`/`Static`/`Tutorial` layouts. All MDX prose gets the rhythm, and the `MdComponents` element wrappers carry no spacing of their own -- only id + anchor + scroll-margin.
 - **App pages (`page.tsx`):** wrap prose-like regions in `.flow`; use `Stack` / `gap` / `Section` for component composition. Prose-like = a sequence of mixed headings/paragraphs/lists; composition = repeated like-shaped blocks (cards, grid items).
 
 ## Section component (open / planned)
@@ -136,16 +150,23 @@ No unit tests in this project; Storybook + Chromatic is the regression net.
 - Chromatic locks the rhythm so any regression is a visible diff.
 - Optional later: an ESLint guard flagging new `text-[*rem]` and per-element heading margins in content.
 
-## Migration phases
+## Migration status
 
-0. Flow system POC -- DONE (this commit): `--space` + `.flow` in `base.css`, kitchen-sink story, this spec. Additive and opt-in; nothing renders differently until a container opts in.
-1. Line-height: remove component-level `leading-*` overrides in `MdComponents`.
-2. Appearance: remove `text-[2.5rem]` on `Heading1`. (Font-weight dedup already done.)
-3. Apply `.flow` to the markdown content container; strip the per-element spacing from the `MdComponents` wrappers; remove the legacy global `ul/ol/li` margins from `base.css` once nothing outside `.flow` relies on them.
-4. Layouts / MdComponents consolidation (one element map; delete dead per-layout wrappers).
-5. `<Section>` refactor (the four steps above).
-6. App-page long tail: migrate `page.tsx` files to semantic tags + `.flow` / `Stack`.
-7. Guardrails + docs: distill durable rules into `spacing-typography.md`; drop this scaffolding.
+Shipped on `ui-headers`:
+
+- `--space` + the `.flow` rules in `base.css`; kitchen-sink story; this spec.
+- Line-height: component-level `leading-*` overrides removed from `MdComponents`.
+- Appearance: `text-[2.5rem]` on the in-article title removed; font-weight collapsed to a single `font-black`.
+- `.flow` applied to the markdown content container; per-element spacing stripped from the `MdComponents` wrappers.
+- App pages migrated opportunistically to semantic tags + `.flow` / `Stack` (long tail ongoing).
+- Durable rules distilled into `spacing-typography.md` (canonical).
+
+Remaining:
+
+- `<Section>` refactor (see "Section component" above) -- add `flow` to its base, standardize scroll-margin, triage subcomponents.
+- Layouts / `MdComponents` consolidation: one canonical element map, delete any dead per-layout wrappers.
+- Remove the legacy global `ul/ol/li` block from `base.css` once nothing outside `.flow` relies on it.
+- Optional ESLint guardrail flagging new `text-[*rem]` / per-element heading margins in content.
 
 ## Decisions
 

@@ -117,7 +117,10 @@ export const KitchenSink: Story = {
         <Button variant="outline">Secondary action</Button>
       </div>
 
-      <section className="flow">
+      {/* A nested <section> needs no `flow` class of its own: the parent
+          `.flow` reaches one level into any <section> (the shipped
+          section-descendant scoping), so its children get the same rhythm. */}
+      <section>
         <h2>
           A <code className="text-[1em]">&lt;section&gt;</code> with buttons
         </h2>
