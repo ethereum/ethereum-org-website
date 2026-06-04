@@ -24,9 +24,9 @@ The bare Radix tooltip (`@/components/ui/tooltip`) is hover-only and has no mobi
 
 **Within a feature, don't mix.** Pick one file as your dialog source. The default export from `dialog-modal` is `Modal` (the high-level convenience); use that when you can.
 
-### `PageHero` is on the deprecation track
+### Import heroes from `@/components/Hero`
 
-`@/components/PageHero` predates the `Hero/` directory. New pages must import from `@/components/Hero` (`ContentHero`, `SimpleHero`, `HubHero`, `MdxHero`, `HomeHero`).
+Heroes are named exports of `@/components/Hero`: `PageHero` (the workhorse), `HubHero`, `MdxHero`, `HomeHero`. `PageHero` takes discrete props -- `breadcrumbs` **or** `header`, `heroImg`, `title`, `description`, `buttons`, `variant`.
 
 ## Component Behaviors You'd Miss
 
@@ -166,9 +166,9 @@ Chakra leftover, used in 5 places. Don't introduce new uses. Replace with Tailwi
 
 `MdComponents/index.tsx:47,59,74,89` overrides h1/h2 with `text-[2.5rem]`, `text-[2rem]`. These are markdown-specific sizing rules. Don't replicate the arbitrary values in non-markdown code.
 
-### `SimpleHero` and `MdComponents` both use `text-[2.5rem]`
+### `MdComponents` uses `text-[2.5rem]` for the page title
 
-This duplicate "page title size" suggests we need a `--text-page-title` token (or a `Heading` primitive). Until that exists, the arbitrary value is the convention.
+This arbitrary "page title size" suggests we need a `--text-page-title` token (or a `Heading` primitive). Until that exists, the arbitrary value is the convention in markdown rendering. Don't copy it elsewhere -- `PageHero`'s title uses the scale (`text-3xl ... lg:text-6xl`), not `text-[2.5rem]`.
 
 ### `BigNumber` exists -- USE IT
 

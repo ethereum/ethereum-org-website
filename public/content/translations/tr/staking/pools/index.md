@@ -23,11 +23,11 @@ Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarını
 
 [Hisselemeye giriş](/staking/) bölümümüzde belirttiğimiz faydalara ek olarak, bir havuzla hisselemek kendine özgü bir dizi faydayı da beraberinde getirir.
 
-<CardGrid>
+<Grid>
   <Card title="Düşük giriş engeli" emoji="🐟" description="Balina değil misiniz? Sorun değil. Tek başına staking 32 ETH gerektirirken, çoğu staking havuzu diğer staker'larla birleşerek neredeyse istediğiniz miktarda ETH stake etmenize olanak tanır." />
   <Card title="Bugün stake edin" emoji=":stopwatch:" description="Bir havuzla stake etmek, bir token takası kadar kolaydır. Donanım kurulumu ve düğüm bakımı konusunda endişelenmenize gerek yok. Havuzlar, ETH'nizi yatırmanıza olanak tanır, bu da düğüm operatörlerinin doğrulayıcıları çalıştırmasını sağlar. Ödüller, düğüm operasyonları ücreti düşüldükten sonra katkıda bulunanlara dağıtılır." />
   <Card title="Staking tokenleri" emoji=":droplet:" description="Birçok staking havuzu, stake ettiğiniz ETH'nizi ve oluşturduğu ödülleri temsil eden bir token sağlar. Bu, stake ettiğiniz ETH'nizi, örneğin DeFi uygulamalarında teminat olarak kullanmanıza olanak tanır." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

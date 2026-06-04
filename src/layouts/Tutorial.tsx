@@ -12,6 +12,7 @@ import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
+import PageActions from "@/components/PageActions"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -73,11 +74,17 @@ export const TutorialLayout = ({
         />
         <h1>{frontmatter.title}</h1>
         <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
+        <PageActions
+          slug={slug}
+          isTranslated={!contentNotTranslated}
+          editPath={absoluteEditPath}
+          hideEditButton={hideEditButton}
+          className="-ms-2 mb-6 lg:mt-6"
+        />
         <TableOfContents
-          className="pt-8"
+          className="pt-6"
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
-          editPath={absoluteEditPath}
           isMobile
         />
         {heroImage && (
@@ -107,8 +114,6 @@ export const TutorialLayout = ({
           className="pt-16"
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
-          editPath={absoluteEditPath}
-          hideEditButton={hideEditButton}
         />
       )}
     </div>

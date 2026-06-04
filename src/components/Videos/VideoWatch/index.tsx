@@ -56,7 +56,7 @@ const VideoWatch = async ({ slug, startTime, className }: VideoWatchProps) => {
       </CardHeader>
 
       <CardContent spacing="sm">
-        <CardTitle variant="semibold">{frontmatter.title}</CardTitle>
+        <CardTitle size="sm">{frontmatter.title}</CardTitle>
         <CardParagraph>
           {frontmatter.description.split(/(?<=\.)\s/)[0]}
         </CardParagraph>

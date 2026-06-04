@@ -11,13 +11,13 @@ import type { Lang, PageParams } from "@/lib/types"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
+import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
-import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
@@ -35,7 +35,7 @@ import { WalletSimulator } from "./WalletSimulator"
 import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
-import HeroImage from "@/public/images/wallets/wallet-hero.png"
+import heroImg from "@/public/images/wallets/wallet-hero.png"
 
 const Page = async (props: { params: Promise<PageParams> }) => {
   const params = await props.params
@@ -51,49 +51,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const { contributors, lastEditLocaleTimestamp } =
     await getAppPageContributorInfo("wallets", locale as Lang)
-
-  const heroContent = {
-    title: t("page-wallets-title"),
-    header: t("page-wallets-slogan"),
-    subtitle: t("page-wallets-subtitle"),
-    image: HeroImage,
-    alt: t("page-wallets-alt"),
-    // TODO: remove conditional after soft launch
-    buttons:
-      locale === "en"
-        ? [
-            {
-              href: "/wallets/find-wallet/",
-              content: t("page-wallets-find-wallet-link"),
-              matomo: {
-                eventCategory: "Header buttons",
-                eventAction: "click",
-                eventName: "Find_wallet",
-              },
-            },
-            {
-              href: `#${SIMULATOR_ID}`,
-              content: "How to use a wallet",
-              matomo: {
-                eventCategory: "Header buttons",
-                eventAction: "click",
-                eventName: "How_to_use_wallet",
-              },
-              variant: "outline" as const,
-            },
-          ]
-        : [
-            {
-              href: "/wallets/find-wallet/",
-              content: t("page-wallets-find-wallet-link"),
-              matomo: {
-                eventCategory: "Header button",
-                eventAction: "click",
-                eventName: "Find_wallet",
-              },
-            },
-          ],
-  }
 
   const cards = [
     {
@@ -195,9 +152,52 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
-      <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <PageHero content={heroContent} isReverse />
 
+      <PageHero
+        header={t("page-wallets-title")}
+        heroImg={heroImg}
+        title={t("page-wallets-slogan")}
+        description={t("page-wallets-subtitle")}
+        // TODO: remove conditional after soft launch
+        buttons={
+          locale === "en"
+            ? [
+                {
+                  href: "/wallets/find-wallet/",
+                  content: t("page-wallets-find-wallet-link"),
+                  matomo: {
+                    eventCategory: "Header buttons",
+                    eventAction: "click",
+                    eventName: "Find_wallet",
+                  },
+                },
+                {
+                  href: `#${SIMULATOR_ID}`,
+                  content: "How to use a wallet",
+                  matomo: {
+                    eventCategory: "Header buttons",
+                    eventAction: "click",
+                    eventName: "How_to_use_wallet",
+                  },
+                  variant: "outline",
+                },
+              ]
+            : [
+                {
+                  href: "/wallets/find-wallet/",
+                  content: t("page-wallets-find-wallet-link"),
+                  matomo: {
+                    eventCategory: "Header button",
+                    eventAction: "click",
+                    eventName: "Find_wallet",
+                  },
+                },
+              ]
+        }
+        variant="no-divider"
+      />
+
+      <MainArticle className="mx-auto flex w-full flex-col items-center">
         <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
           <div className="-mb-8 w-full px-8 py-4 pb-0">
             <ListenToPlayer slug="/wallets/" />
@@ -297,7 +297,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <p className="mb-2 text-lg leading-base text-body-medium italic md:text-xl lg:text-2xl">
                   Interactive tutorial
                 </p>
-                <h2 className="m-0 text-3xl leading-[115%] font-bold lg:text-5xl">
+                <h2 className="m-0 text-3xl leading-[115%] lg:text-5xl">
                   How to use a wallet
                 </h2>
               </WalletSimulator>

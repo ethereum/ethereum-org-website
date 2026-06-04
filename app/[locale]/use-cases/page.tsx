@@ -18,6 +18,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
@@ -139,7 +140,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <h2>{tocItems[0].title}</h2>
           <p>{t("financial-tools-description")}</p>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <UseCaseCard
               href="/defi/"
               image={defi}
@@ -161,11 +162,11 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("payments-description")}
               ctaLabel={t("payments-cta")}
             />
-          </div>
+          </Grid>
 
           <h3>{t("novel-uses-title")}</h3>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <UseCaseCard
               href="/real-world-assets/"
               image={manAndDog}
@@ -187,7 +188,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("institutions-description")}
               ctaLabel={t("institutions-cta")}
             />
-          </div>
+          </Grid>
 
           <div className="flex xl:mx-36">
             <DocLink href="/restaking/">{t("restaking-link")}</DocLink>
@@ -210,7 +211,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <h2>{tocItems[1].title}</h2>
           <p>{t("digital-ownership-description")}</p>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <UseCaseCard
               href="/nft/"
               image={infrastructureTransparent}
@@ -225,7 +226,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("gaming-description")}
               ctaLabel={t("gaming-cta")}
             />
-          </div>
+          </Grid>
         </Section>
 
         {/* Organizations and identity */}
@@ -233,7 +234,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <h2>{tocItems[2].title}</h2>
           <p>{t("organizations-description")}</p>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <UseCaseCard
               href="/dao/"
               image={daoImg}
@@ -255,7 +256,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("social-description")}
               ctaLabel={t("social-cta")}
             />
-          </div>
+          </Grid>
         </Section>
 
         {/* Science and public goods */}
@@ -263,7 +264,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <h2>{tocItems[3].title}</h2>
           <p>{t("science-description")}</p>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <UseCaseCard
               href="/desci/"
               image={futureTransparent}
@@ -278,7 +279,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("refi-description")}
               ctaLabel={t("refi-cta")}
             />
-          </div>
+          </Grid>
         </Section>
 
         {/* Ready to start? */}

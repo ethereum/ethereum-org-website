@@ -36,6 +36,9 @@ const cardVariants = cva(
         sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
+      hoverEffect: {
+        lift: "hover:shadow-md hover:scale-[1.005]",
+      },
     },
     defaultVariants: {
       variant: "base",
@@ -49,8 +52,19 @@ export type CardProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof cardVariants>
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, href, customEventOptions, variant, size, ...props }, ref) => {
-    const classNames = [cardVariants({ variant, size }), className]
+  (
+    {
+      className,
+      href,
+      customEventOptions,
+      variant,
+      size,
+      hoverEffect,
+      ...props
+    },
+    ref
+  ) => {
+    const classNames = [cardVariants({ variant, size, hoverEffect }), className]
     if (href) {
       return (
         <BaseLink
@@ -200,6 +214,7 @@ const cardBannerVariants = cva(
         base: "h-48 w-full self-stretch",
         sm: "h-36 w-full self-stretch",
         thumbnail: "size-16 shrink-0",
+        "thumbnail-lg": "size-32 shrink-0",
       },
       fit: {
         cover: "[&_img]:object-cover",
@@ -274,13 +289,12 @@ const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
 CardBanner.displayName = "CardBanner"
 
 const titleVariants = cva(
-  "group-hover/link:underline group-focus/link:underline text-pretty",
+  "group-hover/link:underline group-focus/link:underline text-pretty text-2xl",
   {
     variants: {
-      variant: {
-        semibold: "text-lg font-semibold",
-        bold: "text-2xl font-bold",
-        black: "text-3xl font-black",
+      size: {
+        sm: "text-lg",
+        lg: "text-3xl",
       },
       spacing: {
         quarter:
@@ -291,7 +305,6 @@ const titleVariants = cva(
     },
 
     defaultVariants: {
-      variant: "bold",
       spacing: "quarter",
     },
   }
@@ -303,13 +316,13 @@ const CardTitle = React.forwardRef<
     VariantProps<typeof titleVariants> & {
       asChild?: boolean
     }
->(({ asChild, className, variant, spacing, ...props }, ref) => {
+>(({ asChild, className, size: variant, spacing, ...props }, ref) => {
   const Comp = asChild ? Slot : "h3"
   return (
     <Comp
       ref={ref}
       data-label="card-title"
-      className={cn(titleVariants({ variant, spacing }), className)}
+      className={cn(titleVariants({ size: variant, spacing }), className)}
       {...props}
     />
   )

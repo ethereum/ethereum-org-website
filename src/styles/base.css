@@ -21,7 +21,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold text-pretty wrap-break-word;
+    @apply font-black text-pretty wrap-break-word;
   }
 
   h1,

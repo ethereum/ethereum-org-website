@@ -20,6 +20,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import Link, { ExternalLinkIcon, LinkProps } from "@/components/ui/Link"
 import {
   ListItem,
@@ -283,7 +284,7 @@ const CollectiblesCurrentYear = ({
                 alt="Developer badge" // TODO: extract intl
                 href={developerBadge.link}
               >
-                <h4 className="text-lg font-bold">
+                <h4 className="text-lg">
                   {t("page-collectibles-code-content-developer-title")}
                 </h4>
                 <p>{t("page-collectibles-code-content-developer-desc")}</p>
@@ -319,7 +320,7 @@ const CollectiblesCurrentYear = ({
                 alt="Writer badge" // TODO: extract intl
                 href={writingBadge.link}
               >
-                <h4 className="text-lg font-bold">
+                <h4 className="text-lg">
                   {t("page-collectibles-code-content-writing-title")}
                 </h4>
                 <p>{t("page-collectibles-code-content-writing-desc")}</p>
@@ -348,7 +349,7 @@ const CollectiblesCurrentYear = ({
                 alt="Design / user testing badge" // TODO: extract intl
                 href={designBadge.link}
               >
-                <h4 className="text-lg font-bold">
+                <h4 className="text-lg">
                   {t("page-collectibles-code-content-design-title")}
                 </h4>
                 <p>{t("page-collectibles-code-content-design-desc")}</p>
@@ -377,7 +378,7 @@ const CollectiblesCurrentYear = ({
                 alt="GitPOAP badge" // TODO: extract intl
                 href={gitpoapBadge.link}
               >
-                <h4 className="text-lg font-bold">
+                <h4 className="text-lg">
                   {t("page-collectibles-code-content-gitpoap-title")}
                 </h4>
                 <p>{t("page-collectibles-code-content-gitpoap-desc")}</p>
@@ -441,7 +442,7 @@ const CollectiblesCurrentYear = ({
                   address && !translationBadge.owned && "[&_img]:grayscale"
                 )}
               >
-                <h4 className="text-lg font-bold">
+                <h4 className="text-lg">
                   {t("page-collectibles-translations-title")}
                 </h4>
                 <p>{t("page-collectibles-translations-badge-desc")}</p>
@@ -507,7 +508,7 @@ const CollectiblesCurrentYear = ({
           </AccordionItem>
         </Accordion>
 
-        <div className="mt-4 grid grid-cols-fill-8 gap-2">
+        <Grid columns={8} size="narrow" className="mt-4 gap-2">
           {socialBadges.map((badge) => (
             <Link
               key={badge.id}
@@ -537,7 +538,7 @@ const CollectiblesCurrentYear = ({
               </div>
             </Link>
           ))}
-        </div>
+        </Grid>
       </div>
     </section>
   )

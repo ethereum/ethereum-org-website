@@ -39,11 +39,11 @@ Sebaliknya, ekosistem desentralisasi Ethereum menawarkan beberapa keuntungan uta
 
 Faktor-faktor ini mengubah agen AI dari sekadar bot sederhana menjadi sistem dinamis yang dapat meningkatkan kemampuannya sendiri, yang menawarkan nilai signifikan di berbagai sektor:
 
-<CardGrid>
+<Grid>
   <Card title="DeFi Otomatis" emoji=":money_with_wings:" description="Agen AI terus mengawasi tren pasar, mengeksekusi perdagangan, dan mengelola portofolio — membuat dunia DeFi yang kompleks menjadi jauh lebih mudah didekati."/>
   <Card title="Ekonomi agen AI baru" emoji="🌎" description="Agen AI dapat mempekerjakan agen lain (atau manusia) dengan keterampilan berbeda untuk melakukan tugas khusus bagi mereka." />
   <Card title="Manajemen risiko" emoji="🛠️" description="Dengan memantau aktivitas transaksional, agen AI dapat membantu mendeteksi penipuan dan melindungi aset digital Anda dengan lebih baik dan lebih cepat." />
-</CardGrid>
+</Grid>
 
 ## AI yang dapat diverifikasi {#verifiable-ai}
 

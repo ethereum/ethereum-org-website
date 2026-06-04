@@ -27,11 +27,11 @@ This isn't a far-off dream—it's happening today on Ethereum. While traditional
 
 For millions of people working abroad, sending money back home is a regular necessity. Traditional remittance services often come with high fees and slow processing times. Ethereum offers a compelling alternative.
 
-<CardGrid>
+<Grid>
   <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
   <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
   <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
-</CardGrid>
+</Grid>
 
 ## Access to global currencies {#access-to-global-currencies}
 

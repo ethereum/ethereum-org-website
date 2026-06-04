@@ -6,14 +6,16 @@ The most common source of "one-off styling" in this codebase is ad-hoc spacing a
 
 Headings (`<h1>`-`<h6>`) are styled by `src/styles/base.css` element defaults. **Just write the semantic tag.** Don't reinvent with `<div className="text-Xxl font-bold">`.
 
+All headings default to `font-black` (weight 900) via `base.css`. **Do not re-apply a weight** -- a hardcoded `font-bold`/`font-semibold` on a heading sits in the utilities layer and silently overrides the base `font-black`, which is exactly the drift the heading-weight standardization removed. If you need a lighter weight for an eyebrow/kicker/label, that's a deliberate `font-normal`/`font-medium` choice, not a default.
+
 | Tag | Default sizing | When to use |
 |---|---|---|
-| `<h1>` | `text-4xl lg:text-5xl font-bold` | Page title -- ONE per page |
-| `<h2>` | `text-3xl lg:text-4xl font-bold` | Top-level section title |
-| `<h3>` | `text-2xl lg:text-3xl font-bold` | Subsection title |
-| `<h4>` | `text-xl lg:text-2xl font-bold` | Sub-subsection title |
-| `<h5>` | `text-lg font-bold` | Small heading |
-| `<h6>` | `text-base font-bold` | Smallest heading; also used in `Alert`/`Callout` titles |
+| `<h1>` | `text-4xl lg:text-5xl font-black` | Page title -- ONE per page |
+| `<h2>` | `text-3xl lg:text-4xl font-black` | Top-level section title |
+| `<h3>` | `text-2xl lg:text-3xl font-black` | Subsection title |
+| `<h4>` | `text-xl lg:text-2xl font-black` | Sub-subsection title |
+| `<h5>` | `text-lg font-black` | Small heading |
+| `<h6>` | `text-base font-black` | Smallest heading; also used in `Alert`/`Callout` titles |
 
 ### Overrides
 
@@ -31,16 +33,16 @@ Don't go from `<h2>` to `<h4>`. Screen reader users navigate by heading level, a
 
 ### Hero "title" vs "header"
 
-Several `Hero/*` components use:
-- `header` -- a small uppercase eyebrow (often rendered as `<h1>` for SEO; this is intentional in `HubHero`)
-- `title` -- the visible large title
+`Hero/*` components use:
+- `header` -- a small uppercase eyebrow, rendered as `<h1>` (intentional in `HubHero` and `PageHero`). In `PageHero`, supplying `header` demotes `title` to `<h2>`, so the eyebrow is the page `<h1>`.
+- `title` -- the visible large title (the `<h1>` when no `header` eyebrow is passed)
 - `description` -- the lead paragraph
 
-Don't conflate these. Pass the right field to the Hero variant. See `references/page-hero-walkthrough.md`.
+In `PageHero` the eyebrow slot is a discriminated union: pass **either** `breadcrumbs` (a `{ slug }` object or a custom `<Breadcrumb>` element) **or** `header` -- not both. Don't conflate these fields. See `references/page-hero-walkthrough.md`.
 
 ### The "page title" gap
 
-There's a recurring `text-[2.5rem]` arbitrary value used in `MdComponents` and `SimpleHero` for in-article page titles. This is a known gap pending a `--text-page-title` token decision. Until that lands, the arbitrary value is the convention; don't reinvent your own page-title size.
+There's a recurring `text-[2.5rem]` arbitrary value in `MdComponents` for in-article page titles. This is a known gap pending a `--text-page-title` token decision. Until that lands, the arbitrary value is the convention there; don't reinvent your own page-title size. (Note: `PageHero` does **not** use this value -- its title is `text-3xl ... lg:text-6xl` -- so don't copy `text-[2.5rem]` into hero work.)
 
 ## Spacing Scale
 
@@ -153,7 +155,7 @@ Use semantic tokens (`text-body`, `text-body-medium`, `text-body-light`, `text-p
 
 ## Arbitrary Values
 
-Quick rule: prefer scale syntax over arbitrary syntax even for fractional values. See `references/tokens.md` for the full discussion. For grid templates specifically, check the existing custom `grid-cols-*` utilities (`grid-cols-bento`, `grid-cols-fill-N`, `grid-cols-fit-4`) before reaching for arbitrary track sizes -- documented in `tokens.md` under "Custom Utilities -- Grid templates."
+Quick rule: prefer scale syntax over arbitrary syntax even for fractional values. See `references/tokens.md` for the full discussion. For responsive card/item grids, use the `Grid` component (`@/components/ui/grid`) or its `grid-cols-auto-*` utility rather than arbitrary track sizes; `grid-cols-bento` covers the bento layout -- documented in `tokens.md` under "Grid templates."
 
 ## Common One-Off Styling Anti-Patterns
 

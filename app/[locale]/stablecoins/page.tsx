@@ -12,11 +12,11 @@ import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
+import PageHero from "@/components/Hero/PageHero"
 import HorizontalCard from "@/components/HorizontalCard"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageHero from "@/components/PageHero"
 import ProductList from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
@@ -27,6 +27,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -130,35 +131,6 @@ async function Page(props: { params: Promise<PageParams> }) {
   } catch (error) {
     console.error(error)
     marketsHasError = true // TODO: Handle error state
-  }
-
-  const heroContent = {
-    title: t("page-stablecoins-title"),
-    header: t("page-stablecoins-hero-header"),
-    subtitle: t("page-stablecoins-hero-subtitle"),
-    image: heroImg,
-    alt: t("page-stablecoins-hero-alt"),
-    buttons: [
-      {
-        content: t("page-stablecoins-hero-button"),
-        toId: "explore",
-        matomo: {
-          eventCategory: "stablecoins hero buttons",
-          eventAction: "click",
-          eventName: "get stablecoins",
-        },
-      },
-      {
-        content: t("page-stablecoins-how-they-work-button"),
-        toId: "how",
-        variant: "outline" as const,
-        matomo: {
-          eventCategory: "stablecoins hero buttons",
-          eventAction: "click",
-          eventName: "how they work",
-        },
-      },
-    ],
   }
 
   const tokens = [
@@ -419,9 +391,36 @@ async function Page(props: { params: Promise<PageParams> }) {
     <>
       <I18nProvider locale={locale} messages={messages}>
         <StablecoinsPageJsonLD locale={locale} contributors={contributors} />
-        <MainArticle className="mx-auto my-0 w-full flex-col items-center">
-          <PageHero isReverse content={heroContent} />
-          <Divider />
+
+        <PageHero
+          header={t("page-stablecoins-title")}
+          heroImg={heroImg}
+          title={t("page-stablecoins-hero-header")}
+          description={t("page-stablecoins-hero-subtitle")}
+          buttons={[
+            {
+              content: t("page-stablecoins-hero-button"),
+              toId: "explore",
+              matomo: {
+                eventCategory: "stablecoins hero buttons",
+                eventAction: "click",
+                eventName: "get stablecoins",
+              },
+            },
+            {
+              content: t("page-stablecoins-how-they-work-button"),
+              toId: "how",
+              variant: "outline",
+              matomo: {
+                eventCategory: "stablecoins hero buttons",
+                eventAction: "click",
+                eventName: "how they work",
+              },
+            },
+          ]}
+        />
+
+        <MainArticle className="mx-auto w-full flex-col items-center pt-16">
           <Section>
             <Flex className="me-8 mb-8 w-full flex-col items-start lg:flex-row">
               <div className="ms-auto me-auto w-full lg:ms-0 lg:me-2">
@@ -622,7 +621,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                 <p className="mb-6">{t("page-stablecoins-saving")}</p>
               </div>
             </Flex>
-            <div className="mb-16 grid grid-cols-fill-4 gap-8">
+            <Grid className="mb-16">
               {dapps.map((dapp, idx) => (
                 <DataProductCard
                   key={idx}
@@ -635,7 +634,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                   className={dapp.className}
                 />
               ))}
-            </div>
+            </Grid>
           </Section>
           <Divider />
           <Section id="how">
@@ -665,14 +664,12 @@ async function Page(props: { params: Promise<PageParams> }) {
                       <Emoji text={feature.emoji} />
                     </div>
                     <div className="flex-1">
-                      <h3 className="mb-4 text-3xl font-bold">
-                        {feature.title}
-                      </h3>
+                      <h3 className="mb-4 text-3xl">{feature.title}</h3>
                       <div className="mb-6 text-lg">{feature.description}</div>
                       <div className="my-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                         {feature.pros && (
                           <div>
-                            <h4 className="mb-2 rounded bg-success/25 p-2 text-xl font-semibold">
+                            <h4 className="mb-2 rounded bg-success/25 p-2 text-xl">
                               {t("pros")}
                             </h4>
                             <ul className="list-inside list-disc">
@@ -684,7 +681,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                         )}
                         {feature.cons && (
                           <div>
-                            <h4 className="mb-2 rounded bg-error/25 p-2 text-xl font-semibold">
+                            <h4 className="mb-2 rounded bg-error/25 p-2 text-xl">
                               {t("cons")}
                             </h4>
                             <ul className="list-inside list-disc">
@@ -697,7 +694,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                       </div>
                       {feature.links && feature.links.length > 0 && (
                         <div>
-                          <h4 className="mb-2 text-xl font-semibold">
+                          <h4 className="mb-2 text-xl">
                             {t("example-projects")}
                           </h4>
                           <ul className="list-inside list-disc">

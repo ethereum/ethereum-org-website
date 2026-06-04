@@ -29,11 +29,11 @@ Un validateur à domicile reçoit des récompenses directement du protocole pour
 
 La mise en jeu à domicile demande plus de responsabilités, mais vous donne un contrôle maximal sur vos fonds et votre configuration de mise en jeu.
 
-<CardGrid>
+<Grid>
   <Card title="Gagnez de nouveaux ETH" emoji="💸" description="Gagnez des récompenses en ETH directement depuis le protocole lorsque votre validateur est en ligne, sans qu'aucun intermédiaire ne prenne de commission." />
   <Card title="Plein contrôle" emoji="🎛️" description="Conservez vos propres clés. Choisissez la combinaison de clients et de matériel qui vous permet de minimiser vos risques et de contribuer au mieux à la santé et à la sécurité du réseau. Les services de staking tiers prennent ces décisions pour vous, et ils ne font pas toujours les choix les plus sûrs." />
   <Card title="Sécurité du réseau" emoji="🔐" description="Le staking à domicile est la manière la plus percutante de staker. En exécutant un validateur sur votre propre matériel à la maison, vous renforcez la robustesse, la décentralisation et la sécurité du protocole Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Éléments à prendre en compte avant la mise en jeu à domicile {#considerations-before-staking-solo}
 

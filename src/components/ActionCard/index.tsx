@@ -61,7 +61,7 @@ const ActionCard = ({
         />
       </Flex>
       <div className="flex flex-col justify-center p-6">
-        <h3 className="mt-2 mb-4 text-2xl leading-snug font-semibold">
+        <h3 className="mt-2 mb-4 text-2xl leading-snug">
           <LinkOverlay asChild>
             <InlineLink
               href={href}

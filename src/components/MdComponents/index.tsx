@@ -22,17 +22,17 @@ import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import * as AlertComponents from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import { Tag } from "@/components/ui/tag"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
-
-import * as AlertComponents from "../ui/alert"
 
 type HeadingProps = HTMLAttributes<HTMLHeadingElement>
 
@@ -150,6 +150,7 @@ export const reactComponents = {
   ExpandableCard: ExpandableCardWithMargin,
   FeaturedText,
   GlossaryTooltip,
+  Grid,
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,

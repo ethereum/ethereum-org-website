@@ -23,11 +23,11 @@ summaryPoints:
 
 除了我們在 [質押簡介](/staking/) 中概述的好處之外，透過質押池質押還有許多獨特的好處。
 
-<CardGrid>
+<Grid>
   <Card title="低門檻" emoji="🐟" description="不是巨鯨？沒問題。大部分的質押池讓你能和其他質押者聯手，質押幾乎任何數量的以太幣，不像單獨質押需要 32 枚以太幣。" />
   <Card title="立即質押" emoji=":stopwatch:" description="在質押池質押就像代幣交換一樣簡單。你無需擔心硬體設定和節點維護。質押池讓你存入以太幣，使節點營運商能夠運行驗證者。獎勵會在扣除節點營運費用後，分發給貢獻者。" />
   <Card title="質押代幣" emoji=":droplet:" description="許多質押池會提供一種代幣，作為你質押的以太幣及其所產生獎勵的憑證。這讓你能利用你已質押的以太幣，例如在 DeFi 應用程式中作為抵押品。" />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

@@ -21,11 +21,11 @@ Staking como um serviço ("SaaS") representa uma categoria de serviços de staki
 
 O protocolo Ethereum não suporta nativamente a delegação de stake, portanto esses serviços foram construídos para cumprir esta demanda. Se você tem 32 ETH para stake, mas não se sente à vontade para lidar com hardware, os serviços SaaS permitem que você delegue a parte difícil enquanto ganha recompensas nativas do bloco.
 
-<CardGrid>
+<Grid>
   <Card title="Seu próprio validador" emoji=":desktop_computer:" description="Deposite seus 32 ETH para ativar seu próprio conjunto de chaves de assinatura que participarão do consenso do Ethereum. Acompanhe seu progresso com painéis para ver suas recompensas em ETH se acumularem." />
   <Card title="Fácil de começar" emoji="🏁" description="Esqueça as especificações de hardware, configuração, manutenção de nós e atualizações. Os provedores de SaaS permitem que você terceirize a parte difícil enviando suas próprias credenciais de assinatura, permitindo que eles executem um validador em seu nome, por um pequeno custo." />
   <Card title="Limite seu risco" emoji=":shield:" description="Em muitos casos, os usuários não precisam ceder o acesso às chaves que permitem sacar ou transferir os fundos em stake. Elas são diferentes das chaves de assinatura e podem ser armazenadas separadamente para limitar (mas não eliminar) seu risco como staker." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

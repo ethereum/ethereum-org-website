@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { Lang, ToCItem } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { Image } from "@/components/Image"
 import { Strong } from "@/components/IntlStringElements"
 import MainArticle from "@/components/MainArticle"
@@ -54,17 +54,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "learn/ethereum-vs-bitcoin", startDepth: 1 },
-    heroImg,
-    title: t("page-ethereum-vs-bitcoin-title"),
-    description: (
-      <>
-        <p>{t("page-ethereum-vs-bitcoin-description-1")}</p>
-      </>
-    ),
-  }
-
   const getId = (input: string) => {
     const parts = input.split("#")
     return parts.length > 1 ? parts[1] : ""
@@ -78,7 +67,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         contributors={contributors}
       />
 
-      <ContentHero {...heroProps} />
+      <PageHero
+        breadcrumbs={{ slug: "learn/ethereum-vs-bitcoin", startDepth: 1 }}
+        heroImg={heroImg}
+        title={t("page-ethereum-vs-bitcoin-title")}
+        description={t("page-ethereum-vs-bitcoin-description-1")}
+      />
       <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
         <FileContributors
           className="mb-8 py-0! lg:col-start-1 lg:row-start-1 lg:mb-10 [&>div]:mt-0"

@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "locale": "ta",
+  "translatedAt": "2026-06-03T07:02:56.213Z",
+  "englishManifestHash": "5fbac46b8d27",
+  "placeholderOrder": [
+    "LINK-fdace0",
+    "LINK-fc40bd",
+    "LINK-3c5d02",
+    "LINK-5a7a20",
+    "LINK-302608",
+    "LINK-df6bb7",
+    "LINK-792202",
+    "LINK-6bfaee",
+    "LINK-ed80e5",
+    "LINK-046f60"
+  ],
+  "placeholderMap": {
+    "LINK-fdace0": {
+      "type": "link",
+      "values": {
+        "url": "https://ethereum.org/zero-knowledge-proofs/"
+      }
+    },
+    "LINK-fc40bd": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.semaphore.pse.dev/"
+      }
+    },
+    "LINK-3c5d02": {
+      "type": "link",
+      "values": {
+        "url": "https://maci.pse.dev/"
+      }
+    },
+    "LINK-5a7a20": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.circom.io/"
+      }
+    },
+    "LINK-302608": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/"
+      }
+    },
+    "LINK-df6bb7": {
+      "type": "link",
+      "values": {
+        "url": "https://zcash.github.io/halo2/"
+      }
+    },
+    "LINK-792202": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.gnark.consensys.io/"
+      }
+    },
+    "LINK-6bfaee": {
+      "type": "link",
+      "values": {
+        "url": "https://dev.risczero.com/api/"
+      }
+    },
+    "LINK-ed80e5": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.succinct.xyz/docs/sp1/introduction"
+      }
+    },
+    "LINK-046f60": {
+      "type": "link",
+      "values": {
+        "url": "https://eips.ethereum.org/EIPS/eip-4337"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-03T07:02:56.213Z",
+      "status": "success"
+    }
+  }
+}

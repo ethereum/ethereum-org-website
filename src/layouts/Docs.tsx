@@ -12,6 +12,7 @@ import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
+import PageActions from "@/components/PageActions"
 import { PieChart } from "@/components/PieChart"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
@@ -87,21 +88,27 @@ export const DocsLayout = ({
         <SideNav path={addSlashes(slug)} />
         <MainArticle className="flow min-w-0 flex-1 px-8 pt-8 pb-8 md:px-16 md:pt-12 md:pb-16">
           <h1 id="top">{frontmatter.title}</h1>
-          {!frontmatter.hideEditButton && (
-            <FileContributors
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
-          )}
-          <TableOfContents
+          <PageActions
+            slug={slug}
+            isTranslated={!contentNotTranslated}
             editPath={absoluteEditPath}
+            hideEditButton={!!frontmatter.hideEditButton}
+            className="-ms-2 mb-10 lg:mb-12"
+          />
+          <TableOfContents
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
-            hideEditButton={!!frontmatter.hideEditButton}
             isMobile
           />
           {children}
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
+          {!frontmatter.hideEditButton && (
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
+          )}
           <BackToTop />
           <FeedbackCard isArticle />
           <DocsNav contentNotTranslated={contentNotTranslated} />
@@ -109,10 +116,8 @@ export const DocsLayout = ({
         {tocItems && (
           <TableOfContents
             className={isPageIncomplete ? "pt-20" : "pt-12"}
-            editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
-            hideEditButton={!!frontmatter.hideEditButton}
           />
         )}
       </div>

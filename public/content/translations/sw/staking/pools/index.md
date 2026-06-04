@@ -23,11 +23,11 @@ Baadhi ya mabwawa yanaendeshwa kwa kutumia mikataba mahiri, ambapo fedha zinawez
 
 Mbali na faida tulizozieleza katika [utangulizi wa kusimamisha hisa](/staking/), kusimamisha hisa kwenye bwawa huja na faida kadhaa za kipekee.
 
-<CardGrid>
+<Grid>
   <Card title="Urahisi wa kujiunga" emoji="🐟" description="Huna ETH nyingi? Sio shida. Mabwawa mengi ya staking hukuruhusu kuweka kiasi chochote cha ETH kwa kuungana na waweka hisa wengine, tofauti na kustake peke yako ambako kunahitaji ETH 32." />
   <Card title="Anza kustake leo" emoji=":stopwatch:" description="Kustake na bwawa ni rahisi kama kubadilisha tokeni. Hakuna haja ya kuhangaika kuhusu ufungaji wa vifaa na matunzo ya node. Mabwawa hukuruhusu kuweka ETH yako, ambayo huwawezesha waendeshaji wa node kuendesha vithibitishaji. Zawadi kisha hugawiwa kwa wachangiaji baada ya kutoa ada ya uendeshaji wa node." />
   <Card title="Tokeni za staking" emoji=":droplet:" description="Mabwawa mengi ya staking hutoa tokeni inayowakilisha dai lako kwenye ETH uliyostake na zawadi inayotengeneza. Hii hukuruhusu kutumia ETH yako uliyostake, k.m., kama dhamana katika mifumo ya DeFi." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

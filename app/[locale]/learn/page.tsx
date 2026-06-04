@@ -19,6 +19,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Section } from "@/components/ui/section"
@@ -247,7 +248,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             {t("what-is-crypto-2-after-link")}
           </p>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <LearnCard
               href="/what-is-ethereum/"
               image={whatIsEth}
@@ -269,10 +270,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("ethereum-vs-bitcoin-card-description")}
               ctaLabel={t("ethereum-vs-bitcoin-cta")}
             />
-          </div>
+          </Grid>
 
           <h3>{t("keep-learning-title")}</h3>
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <LearnCard
               href="/what-is-the-ethereum-network/"
               image={developersEthBlocks}
@@ -294,7 +295,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("smart-contracts-card-description")}
               ctaLabel={t("smart-contracts-cta")}
             />
-          </div>
+          </Grid>
 
           <AdditionalDocReading
             heading={t("additional-reading-more-on-ethereum-basics")}
@@ -319,7 +320,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <h2>{tocItems[1].title}</h2>
           <p>{t("how-do-i-use-ethereum-1")}</p>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <LearnCard
               href="/wallets/"
               image={wallet}
@@ -341,7 +342,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("get-eth-card-description")}
               ctaLabel={t("get-eth-cta")}
             />
-          </div>
+          </Grid>
 
           <AdditionalDocReading
             heading={t("additional-reading-more-on-using-ethereum")}
@@ -384,7 +385,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           <h2>{tocItems[3].title}</h2>
           <p>{t("go-deeper-description")}</p>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             <LearnCard
               href="/roadmap/"
               image={merge}
@@ -406,7 +407,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               description={t("privacy-card-description")}
               ctaLabel={t("privacy-card-button")}
             />
-          </div>
+          </Grid>
 
           <AdditionalDocReading
             heading={t("more-on-ethereum-protocol-title")}

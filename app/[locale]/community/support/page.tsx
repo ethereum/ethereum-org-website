@@ -3,9 +3,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
-import { SimpleHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import {
   Alert,
@@ -15,6 +14,7 @@ import {
   AlertTitle,
 } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import WindowBox from "@/components/WindowBox"
@@ -45,21 +45,20 @@ export default async function Page(props: { params: Promise<PageParams> }) {
     <div>
       <SupportJsonLD locale={locale} contributors={contributors} />
       {/* Hero */}
-      <SimpleHero
-        breadcrumbs={<Breadcrumbs slug="community/support" startDepth={1} />}
+      <PageHero
+        breadcrumbs={{ slug: "/community/support", startDepth: 1 }}
         title={t("page-community-support-hero-title")}
-        subtitle={
-          <div className="space-y-[1lh] text-base text-body-medium">
-            <p className="text-lg">
-              {t("page-community-support-hero-subtitle-1")}
-            </p>
-            <p>
+        description={
+          <>
+            <p>{t("page-community-support-hero-subtitle-1")}</p>
+            <p className="text-base">
               {t.rich("page-community-support-hero-subtitle-2", {
                 a: (chunks) => <Link href="/">{chunks}</Link>,
               })}
             </p>
-          </div>
+          </>
         }
+        variant="no-divider"
       />
 
       <MainArticle className="space-y-16 px-4 py-16 md:px-10 md:py-20">
@@ -80,10 +79,10 @@ export default async function Page(props: { params: Promise<PageParams> }) {
 
         {/* Section 1: Get help */}
         <Section id="get-help" className="space-y-6">
-          <h2 className="text-2xl font-bold lg:text-3xl">
+          <h2 className="text-2xl lg:text-3xl">
             {t("page-community-support-get-help")}
           </h2>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <Grid columns={2} size="wider">
             {sections.getHelp.map(
               ({
                 titleKey,
@@ -121,15 +120,15 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </WindowBox>
               )
             )}
-          </div>
+          </Grid>
         </Section>
 
         {/* Section 2: Learn */}
         <Section id="learn" className="space-y-6">
-          <h2 className="text-2xl font-bold lg:text-3xl">
+          <h2 className="text-2xl lg:text-3xl">
             {t("page-community-support-learn")}
           </h2>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <Grid columns={2} size="wider">
             {sections.learn.map(
               ({
                 titleKey,
@@ -167,7 +166,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                 </WindowBox>
               )
             )}
-          </div>
+          </Grid>
         </Section>
 
         {/* Still need help? */}
@@ -176,7 +175,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
           className="space-y-8 rounded-4xl border border-accent-a/20 bg-linear-to-b from-accent-a/5 to-accent-a/10 px-8 py-16 lg:px-16 dark:from-accent-a/10 dark:to-accent-a/20"
         >
           <div className="flex flex-col items-center gap-6 text-center">
-            <h2 className="text-3xl font-bold lg:text-4xl">
+            <h2 className="text-3xl lg:text-4xl">
               {t("page-community-support-still-need-help")}
             </h2>
             <p className="max-w-lg text-body-medium">
