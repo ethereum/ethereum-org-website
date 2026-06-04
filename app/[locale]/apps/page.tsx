@@ -12,6 +12,7 @@ import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
+import { Grid } from "@/components/ui/grid"
 
 import {
   APP_TAG_VARIANTS,
@@ -137,7 +138,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
             <h2>{t("page-apps-discover-title")}</h2>
-            <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+            <Grid columns={3}>
               {localizeApps(discoverApps).map((app) => (
                 <AppCard
                   key={app.name}
@@ -161,7 +162,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }}
                 />
               ))}
-            </div>
+            </Grid>
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">
@@ -172,7 +173,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           {/* Note: Implemented this instead of swiper from design to allow for SSR */}
           <div className="flex flex-col gap-4 px-4 md:px-8">
             <h2>{t("page-apps-categories-title")}</h2>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <Grid columns={3}>
               {Object.values(appsCategories).map((category) => (
                 <SubpageCard
                   key={category.slug}
@@ -187,7 +188,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }}
                 />
               ))}
-            </div>
+            </Grid>
           </div>
 
           <div className="flex flex-col gap-4 px-4 md:px-8">

@@ -63,7 +63,7 @@ Used in 5 places. Don't introduce new uses. Use Tailwind `dark:` variant + seman
 
 ### No `Heading` primitive -- use semantic tags
 
-`base.css` styles `<h1>`-`<h6>` with the right sizes and `font-bold`. Just write `<h1>Title</h1>`. Override the size class on the heading element when really needed (`<h2 className="text-4xl">`). Reinventing with `<div className="text-5xl font-bold">` loses semantics and screen-reader navigation.
+`base.css` styles `<h1>`-`<h6>` with the right sizes and `font-black`. Just write `<h1>Title</h1>`. Override the size class on the heading element when really needed (`<h2 className="text-4xl">`), but don't re-apply a weight -- a utility-layer `font-bold` silently overrides the base `font-black`. Reinventing with `<div className="text-5xl font-bold">` loses semantics and screen-reader navigation.
 
 ### One stray `toLocaleString` in `ui/chart.tsx:241`
 

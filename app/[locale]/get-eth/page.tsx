@@ -33,6 +33,7 @@ import {
 } from "@/components/ui/card"
 import { Divider } from "@/components/ui/divider"
 import { Stack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -158,7 +159,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
               </div>
             </div>
 
-            <div className="my-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:my-0 lg:grid-cols-3">
+            <Grid columns={3} className="my-4 lg:my-0">
               <StyledCard
                 emoji=":office_building:"
                 title={t("page-get-eth-cex")}
@@ -213,7 +214,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   {t("page-get-eth-staking-link-desc")}
                 </InlineLink>
               </StyledCard>
-            </div>
+            </Grid>
 
             <Stack className="gap-16">
               <p>

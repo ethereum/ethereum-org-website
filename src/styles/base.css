@@ -21,7 +21,7 @@
   h4,
   h5,
   h6 {
-    @apply font-bold;
+    @apply font-black;
   }
 
   h1,

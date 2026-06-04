@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "Ethereum nedir? (Tam Kapsamlı Rehber) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "Ethereum nedir? (Eksiksiz Bir Kılavuz)",
   "page-what-is-ethereum-meta-description": "Ethereum'un ne olduğuna, nasıl çalıştığına, ne işe yaradığına ve onu kullanmaya veya üzerinde geliştirmeye nasıl başlanacağına dair tam bir genel bakış. Basit terimlerle açıklanmıştır.",
   "page-what-is-ethereum-title": "Ethereum nedir?",
   "page-what-is-ethereum-hero-description-1": "Ethereum, kripto para birimi Ether (ETH) tarafından desteklenen merkeziyetsiz bir blokzincir ağı ve yazılım geliştirme platformudur.",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "2026 için Ethereum yol haritası nedir?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum sabit bir yol haritası izlemez. Ortak bir vizyonu takip eder.",
   "page-what-is-ethereum-roadmap-intro-2": "Ağ yükseltmeleri EIP'ler olarak yapılır ve dünya çapındaki katkıda bulunanlar tarafından herkese açık olarak geliştirilir. Ne olacağına karar veren merkezi bir ekip yoktur, sadece kullanıcıların ihtiyaçlarına göre yararlı olduğuna inandıkları şeyleri inşa eden insanlar vardır.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka, Aralık 2025'te başlatılan en son yükseltmedir. Daha verimli Katman 2 (L2) veri kullanılabilirliği için PeerDAS'ı tanıttı ve varsayılan gaz limitini ~60M'ye çıkardı. 2026'ya bakıldığında, Glamsterdam geliştirme aşamasındadır ve 2026'nın ilk yarısında beklenmektedir.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka, Aralık 2025'te başlatılan en son yükseltmedir. Daha verimli L2 veri kullanılabilirliği için PeerDAS'ı kullanıma sundu ve varsayılan gaz limitini ~60M'ye çıkardı. 2026'ya baktığımızda, Glamsterdam geliştirme aşamasındadır ve 2026'nın ikinci yarısında beklenmektedir.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>İleriye bakıldığında</a>, Ethereum'un öncelikleri şunları içerir:",
   "page-what-is-ethereum-roadmap-priority-1": "Çekirdek protokolü ve L2'lerini herkes için daha hızlı ve daha ucuz hale getirmek",
   "page-what-is-ethereum-roadmap-priority-2": "Kullanıcılar ve geliştiriciler için deneyimi iyileştirmek",

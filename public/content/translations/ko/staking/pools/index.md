@@ -23,11 +23,11 @@ summaryPoints:
 
 풀을 통한 스테이킹에는 [스테이킹 소개](/staking/)에서 설명한 이점 외에도 뚜렷한 장점이 많습니다.
 
-<CardGrid>
+<Grid>
   <Card title="낮은 진입 장벽" emoji="🐟" description="고래가 아니어도 괜찮아요. 32 ETH가 필요한 단독 스테이킹과는 달리, 대부분의 스테이킹 풀에서는 다른 스테이커들과 함께 원하는 만큼의 ETH를 스테이킹할 수 있어요." />
   <Card title="지금 바로 스테이킹" emoji=":stopwatch:" description="풀 스테이킹은 토큰 스왑만큼 간단해요. 하드웨어 설정이나 노드 유지 관리에 대해 걱정할 필요가 없죠. 풀에 ETH를 예치하면 노드 운영자가 검증자를 실행하게 되고, 보상은 노드 운영 수수료를 제외하고 기여자들에게 분배됩니다." />
   <Card title="스테이킹 토큰" emoji=":droplet:" description="많은 스테이킹 풀은 스테이킹한 ETH와 그 보상에 대한 소유권을 나타내는 토큰을 제공해요. 덕분에 스테이킹한 ETH를 DeFi 애플리케이션에서 담보로 활용하는 등 다양하게 이용할 수 있죠." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

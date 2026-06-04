@@ -417,7 +417,7 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
             hideArrow
           >
             <Flex className="flex-col items-start justify-between gap-y-4 md:flex-row">
-              <h3 className="relative me-0 text-2xl font-semibold text-body md:me-24">
+              <h3 className="relative me-0 text-2xl text-body md:me-24">
                 {tutorial.title}
                 {tutorial.isExternal && (
                   <ExternalLink className="ms-[0.25em] mb-[0.25em] inline-block size-[0.875em]" />

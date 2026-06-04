@@ -26,11 +26,11 @@ summaryPoints:
 
 해외에서 일하는 수백만 명의 사람들에게 본국으로 송금하는 것은 정기적인 필수품입니다. 전통적인 송금 서비스는 종종 높은 수수료와 느린 처리 시간을 동반합니다. 이더리움은 매력적인 대안을 제시합니다.
 
-<CardGrid>
+<Grid>
   <Card title="더 저렴한 수수료" emoji=":money_with_wings:" description="송금 서비스는 평균적으로 최대 14달러의 수수료를 부과하지만, 이더리움 거래는 0.01달러 미만으로 완료되는 경우가 많습니다."/>
   <Card title="더 빠른 송금" emoji="📶" description="국제 은행 송금은 처리하는 데 며칠이 걸리지만, 이더리움 거래는 몇 분 안에 정산됩니다." />
   <Card title="누구나 이용 가능" emoji="🌎" description="인터넷 연결과 지갑 앱만 있으면 이더를 보내거나 받을 수 있습니다." />
-</CardGrid>
+</Grid>
 
 ## 글로벌 통화에 대한 접근성 {#access-to-global-currencies}
 

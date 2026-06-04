@@ -21,11 +21,11 @@ Uma vez que um aplicativo é publicado na blockchain Ethereum, ele torna-se impa
 
 Os aplicativos no Ethereum executam suas regras diretamente na blockchain Ethereum, em vez de servidores centralizados. É por isso que são chamados de aplicativos descentralizados, ou simplesmente dapps.
 
-<CardGrid>
+<Grid>
   <Card title="Mais privacidade" emoji=":detective:" description="Você só precisa de uma carteira Ethereum para usar qualquer dapp. Seus dados pessoais não são necessários. Essa é a internet como sempre deveria ter sido."/>
   <Card title="Acesso global" emoji="🌍" description="Os dapps não são governados pelas regras de regiões e lojas de aplicativos. Seu acesso depende de ter uma conexão com a internet, e não de onde você mora." />
   <Card title="Serviços mais baratos" emoji=":handshake:" description="Os dapps são peer-to-peer. Sem intermediários cobrando uma parte, os serviços ficam mais baratos." />
-</CardGrid>
+</Grid>
 
 ## A importância disso {#why-does-this-matter}
 

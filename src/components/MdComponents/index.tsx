@@ -22,9 +22,11 @@ import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import * as AlertComponents from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import { Tag } from "@/components/ui/tag"
@@ -32,12 +34,10 @@ import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 
-import * as AlertComponents from "../ui/alert"
-
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
   className: cn(
-    "font-bold leading-xs my-8",
+    "leading-xs my-8",
     id && "scroll-mt-28 relative group",
     className
   ),
@@ -88,10 +88,7 @@ export const Heading4 = ({
   className,
   ...rest
 }: HeadingProps) => (
-  <h4
-    {...commonHeadingAttributes(cn("text-xl font-semibold", className), id)}
-    {...rest}
-  >
+  <h4 {...commonHeadingAttributes(cn("text-xl", className), id)} {...rest}>
     <IdAnchor id={id} />
     {children}
   </h4>
@@ -196,6 +193,7 @@ export const reactComponents = {
   ExpandableCard: ExpandableCardWithMargin,
   FeaturedText,
   GlossaryTooltip,
+  Grid,
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,

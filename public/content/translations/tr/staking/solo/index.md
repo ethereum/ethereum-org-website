@@ -29,11 +29,11 @@ Bir bireysel hisseleyici, doğrulayıcısını düzgünce çalışmasını ve ç
 
 Bireysel hisseleme daha çok sorumluluk gerektirir ancak fonlarınız ve hisseleme kurulumunuz üzerinde maksimum kontrol sağlar.
 
-<CardGrid>
+<Grid>
   <Card title="Yeni ETH kazanın" emoji="💸" description="Doğrulayıcınız çevrimiçiyken, hiçbir aracı pay almadan doğrudan protokolden ETH cinsinden ödüller kazanın." />
   <Card title="Tam kontrol" emoji="🎛️" description="Kendi anahtarlarınızı elinizde tutun. Riskinizi en aza indirmenize ve ağın sağlığına ve güvenliğine en iyi şekilde katkıda bulunmanıza olanak tanıyan istemci ve donanım kombinasyonunu seçin. Üçüncü taraf staking hizmetleri bu kararları sizin yerinize verir ve her zaman en güvenli tercihleri yapmazlar." />
   <Card title="Ağ güvenliği" emoji="🔐" description="Evde stake etmek, stake etmenin en etkili yoludur. Evde kendi donanımınızda bir doğrulayıcı çalıştırarak Ethereum protokolünün sağlamlığını, merkeziyetsizliğini ve güvenliğini güçlendirirsiniz." />
-</CardGrid>
+</Grid>
 
 ## Evden stake etme öncesinde dikkat edilmesi gerekenler {#considerations-before-staking-solo}
 

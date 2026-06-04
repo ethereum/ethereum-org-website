@@ -21,11 +21,11 @@ Bir uygulama Ethereum blokzincirinde yayınlandığında durdurulamaz hale gelir
 
 Ethereum uygulamaları, merkezi sunucular yerine Ethereum blok zincirinde çalışan mantığa sahiptir. Bu nedenle sıklıkla merkeziyetsiz uygulamalar ya da kısaca dapp olarak anılırlar.
 
-<CardGrid>
+<Grid>
   <Card title="Daha gizli" emoji=":detective:" description="Merkeziyetsiz uygulamaları kullanmak için yalnızca bir Ethereum cüzdanına ihtiyacınız var. Kişisel verileriniz gerekmez. İnternet en başından beri böyle olmalıydı."/>
   <Card title="Küresel erişim" emoji="🌍" description="Merkeziyetsiz uygulamalar, bölgelerin ve uygulama mağazalarının kurallarına tabi değildir. Erişiminiz nerede yaşadığınıza değil, internet bağlantınızın olmasına bağlıdır." />
   <Card title="Daha ucuz hizmetler" emoji=":handshake:" description="Merkeziyetsiz uygulamalar eşler arasıdır. Pay alan aracıların olmaması, daha ucuz hizmetler anlamına gelir." />
-</CardGrid>
+</Grid>
 
 ## Bu neden önemli? {#why-does-this-matter}
 

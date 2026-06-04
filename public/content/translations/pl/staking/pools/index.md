@@ -23,11 +23,11 @@ Niektóre pule działają w oparciu o inteligentne kontrakty, w których środki
 
 Oprócz korzyści, które opisaliśmy w naszym [wprowadzeniu do stakingu](/staking/), stakowanie w puli wiąże się z szeregiem wyraźnych korzyści.
 
-<CardGrid>
+<Grid>
   <Card title="Niski próg wejścia" emoji="🐟" description="Nie jesteś wielorybem? Żaden problem. Większość puli stakingowych pozwala stakować niemal każdą ilość ETH, łącząc siły z innymi stakerami, w przeciwieństwie do samodzielnego stakowania, które wymaga 32 ETH." />
   <Card title="Stakuj już dziś" emoji=":stopwatch:" description="Stakowanie w puli jest tak proste, jak wymiana tokenów. Nie musisz martwić się o konfigurację sprzętu i konserwację węzła. Pule pozwalają na wpłatę ETH, co umożliwia operatorom węzłów uruchamianie walidatorów. Nagrody są następnie dzielone między uczestników po odjęciu opłaty za obsługę węzłów." />
   <Card title="Tokeny stakingowe" emoji=":droplet:" description="Wiele puli stakingowych dostarcza token, który reprezentuje Twoje stakowane ETH oraz generowane przez nie nagrody. Dzięki temu możesz wykorzystać swoje stakowane ETH, np. jako zabezpieczenie w aplikacjach DeFi." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

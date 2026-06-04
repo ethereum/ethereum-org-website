@@ -27,14 +27,14 @@ Token RWA tidak memiliki nilai intrinsik apa pun. Sebaliknya, token tersebut men
 
 ## Apa saja manfaat RWA? {#rwas-benefits}
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<Grid>
   <Card title="Kepemilikan Pecahan" emoji=":house_buildings:" description="RWA mendemokratisasi investasi. Jika Anda terhalang untuk berinvestasi pada jenis aset tertentu karena Anda tidak mampu membeli di pasar tersebut, Anda kini dapat melakukannya sebagai pemilik sebagian."/>
   <Card title="Diversifikasi investasi" emoji="🛒" description="Anda dapat berinvestasi dalam berbagai jenis aset, memungkinkan Anda untuk mendiversifikasi portofolio Anda tanpa menghabiskan uang dalam jumlah besar seperti dana lindung nilai (hedge fund)." />
   <Card title="Peluang global" emoji="🌏" description="RWA menghilangkan hambatan geografis untuk berinvestasi. Anda dapat membeli token untuk aset yang berlokasi di mana saja di dunia." />
   <Card title="Membuat aset menjadi likuid" emoji="🖼️" description="Banyak aset yang tidak likuid. Aset tersebut berharga, tetapi itu tidak sama dengan memiliki uang tunai yang dapat Anda belanjakan. Dengan menokenisasi sebuah aset, pemilik dapat mengubah sebagian atau seluruhnya menjadi nilai yang dapat mereka gunakan."/>
   <Card title="Pasar di seluruh dunia" emoji="💰" description="Pemilik yang ingin mengkapitalisasi aset mereka dapat menjangkau lebih banyak investor—bukan hanya orang-orang yang biasanya mampu membeli tanah, ekuitas, karya seni, atau instrumen keuangan tradisional." />
   <Card title="Melewati perantara" emoji="👩‍💻" description="Token berjalan di atas kontrak pintar, yang berarti token dapat diperdagangkan dari orang ke orang tanpa memerlukan perantara dan biaya yang terkait dengannya." />
-</CardGrid>
+</Grid>
 
 ## Bagaimana cara kerja RWA? {#how-rwas-work}
 

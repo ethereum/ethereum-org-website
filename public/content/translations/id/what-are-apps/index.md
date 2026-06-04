@@ -21,11 +21,11 @@ Setelah sebuah aplikasi dipublikasikan di blockchain Ethereum, aplikasi tersebut
 
 Aplikasi Ethereum memiliki logikanya yang berjalan di blockchain Ethereum alih-alih di server terpusat. Inilah sebabnya mengapa aplikasi ini sering disebut aplikasi terdesentralisasi atau disingkat dapps.
 
-<CardGrid>
+<Grid>
   <Card title="Lebih privat" emoji=":detective:" description="Anda hanya memerlukan dompet Ethereum untuk menggunakan dapp apa pun. Data pribadi Anda tidak diperlukan. Inilah internet sebagaimana mestinya sejak dulu."/>
   <Card title="Dapat diakses secara global" emoji="🌍" description="Dapps tidak diatur oleh aturan wilayah dan toko aplikasi. Akses Anda bergantung pada koneksi internet – bukan tempat Anda tinggal." />
   <Card title="Layanan yang lebih murah" emoji=":handshake:" description="Dapps bersifat peer-to-peer. Tidak ada perantara yang mengambil potongan berarti layanan menjadi lebih murah." />
-</CardGrid>
+</Grid>
 
 ## Mengapa ini penting {#why-does-this-matter}
 

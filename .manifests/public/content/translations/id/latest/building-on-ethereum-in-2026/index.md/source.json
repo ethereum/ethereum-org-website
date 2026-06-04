@@ -1,0 +1,420 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/latest/building-on-ethereum-in-2026/index.md",
+  "generatedAt": "2026-06-03T06:58:09.897Z",
+  "rootHash": "483e69529ebb",
+  "tree": {
+    "contentHash": "1dcf551c3115",
+    "anchorHash": "322cd04fe6d0",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "78c30c0b8f71",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "d2afcfe8bac3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:author": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "320fc488a16e"
+      },
+      "frontmatter:team": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d0b40ef7405d"
+      },
+      "frontmatter:tags": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:published": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "6e64e76521e3"
+      },
+      "frontmatter:image": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "d04b0e60b713"
+      },
+      "frontmatter:breadcrumb": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dffd871a1f2f"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:3": {
+        "contentHash": "75c0659d0762",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "94c27cae4154",
+        "anchorHash": "da95a7a64357"
+      },
+      "prose:4": {
+        "contentHash": "9bb9b74a6760",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "e84deb0fe6a2",
+        "anchorHash": "d9d83a207b8e"
+      },
+      "prose:5": {
+        "contentHash": "f6f94053157f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "8547dcd6bf46",
+        "anchorHash": "73127bba9213"
+      },
+      "prose:6": {
+        "contentHash": "434d9d497c44",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "mainnet-is-cheap-again": {
+        "contentHash": "7ab4cf2354f7",
+        "anchorHash": "a37d8d85840a",
+        "labelHash": "fa8ce27bd166",
+        "children": {
+          "_label": {
+            "contentHash": "fa8ce27bd166",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "dc2f1c3f71af",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "e2c1912b24c8",
+            "anchorHash": "932587649fdb"
+          },
+          "prose:2": {
+            "contentHash": "652cb48b5b90",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "why-costs-fell": {
+            "contentHash": "e27b7f21ecea",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "b14acfb71131",
+            "children": {
+              "_label": {
+                "contentHash": "b14acfb71131",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "2277666d0416",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2",
+          "why-costs-fell"
+        ]
+      },
+      "how-eip-7702-changes-the-account-model": {
+        "contentHash": "7752ecc6e4ee",
+        "anchorHash": "87ca2700a23a",
+        "labelHash": "7f284739e096",
+        "children": {
+          "_label": {
+            "contentHash": "7f284739e096",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:3": {
+            "contentHash": "53ca47ed8258",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "b03a82d31247"
+          },
+          "prose:4": {
+            "contentHash": "d03502c43d74",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:1": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ca8b16561a39"
+          },
+          "prose:5": {
+            "contentHash": "f95c12603215",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5fa3e0e7942b"
+          },
+          "prose:6": {
+            "contentHash": "d7a42b95c005",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:3",
+          "inline-code:0",
+          "prose:4",
+          "inline-code:1",
+          "prose:5",
+          "inline-code:2",
+          "prose:6"
+        ]
+      },
+      "what-this-changes-about-how-to-build": {
+        "contentHash": "1c81a8ad0638",
+        "anchorHash": "904f0f1649ea",
+        "labelHash": "068092b5f322",
+        "children": {
+          "_label": {
+            "contentHash": "068092b5f322",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "12859b5b1a64",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "inline-code:0": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "5fa3e0e7942b"
+          },
+          "prose:2": {
+            "contentHash": "fa8e4f2e8f4d",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "inline-code:0",
+          "prose:2"
+        ]
+      },
+      "whats-next": {
+        "contentHash": "fa429daeded1",
+        "anchorHash": "05e1f0bba5b3",
+        "labelHash": "8cfb34cea155",
+        "children": {
+          "_label": {
+            "contentHash": "8cfb34cea155",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "37b6195757cc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "72bdb517afef",
+            "anchorHash": "54e7ad503c0f"
+          },
+          "prose:2": {
+            "contentHash": "81403b0b9d6f",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      },
+      "what-to-build-differently-now": {
+        "contentHash": "695975e7e0f0",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "587722a83748",
+        "children": {
+          "_label": {
+            "contentHash": "587722a83748",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "6ddeb408e930",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "further-reading": {
+        "contentHash": "0f85d30f0f7f",
+        "anchorHash": "cf258d4afa89",
+        "labelHash": "4082f515b2f4",
+        "children": {
+          "_label": {
+            "contentHash": "4082f515b2f4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:13": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a7dc05be77af",
+            "anchorHash": "ec71aa341d93"
+          },
+          "prose:14": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "fa4312c6a879",
+            "anchorHash": "aedd0a16f712"
+          },
+          "prose:15": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "794f8ac34a42",
+            "anchorHash": "efde2318c016"
+          },
+          "prose:16": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "297276703f12",
+            "anchorHash": "308f2b60c256"
+          },
+          "prose:17": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "3fe2647a8d7a",
+            "anchorHash": "3b227748c28a"
+          },
+          "prose:18": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:5": {
+            "contentHash": "b1d850be1a1c",
+            "anchorHash": "e925009bccf3"
+          },
+          "prose:19": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:6": {
+            "contentHash": "1d9432b65177",
+            "anchorHash": "8e70b0beca37"
+          },
+          "prose:20": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:7": {
+            "contentHash": "cfad6ec12543",
+            "anchorHash": "0845a5fb969e"
+          },
+          "prose:21": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:8": {
+            "contentHash": "c2b840e1b49f",
+            "anchorHash": "d633316f659e"
+          },
+          "prose:22": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:9": {
+            "contentHash": "076187459e42",
+            "anchorHash": "54e7ad503c0f"
+          },
+          "prose:23": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:10": {
+            "contentHash": "9faae3c779bf",
+            "anchorHash": "3d21241828a2"
+          },
+          "prose:24": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:11": {
+            "contentHash": "078eab7850ae",
+            "anchorHash": "fc63da91c844"
+          },
+          "prose:25": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:12": {
+            "contentHash": "7e81e12f724e",
+            "anchorHash": "e48c6c412110"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:13",
+          "link:0",
+          "prose:14",
+          "link:1",
+          "prose:15",
+          "link:2",
+          "prose:16",
+          "link:3",
+          "prose:17",
+          "link:4",
+          "prose:18",
+          "link:5",
+          "prose:19",
+          "link:6",
+          "prose:20",
+          "link:7",
+          "prose:21",
+          "link:8",
+          "prose:22",
+          "link:9",
+          "prose:23",
+          "link:10",
+          "prose:24",
+          "link:11",
+          "prose:25",
+          "link:12"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:author",
+      "frontmatter:team",
+      "frontmatter:tags",
+      "frontmatter:published",
+      "frontmatter:image",
+      "frontmatter:breadcrumb",
+      "frontmatter:lang",
+      "prose:3",
+      "link:0",
+      "prose:4",
+      "link:1",
+      "prose:5",
+      "link:2",
+      "prose:6",
+      "mainnet-is-cheap-again",
+      "how-eip-7702-changes-the-account-model",
+      "what-this-changes-about-how-to-build",
+      "whats-next",
+      "what-to-build-differently-now",
+      "further-reading"
+    ]
+  },
+  "sourceCommitSha": "3d9ccec5aac63a907c96f18f2699f8c05f31816d"
+}

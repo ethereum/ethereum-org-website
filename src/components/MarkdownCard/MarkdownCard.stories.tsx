@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl"
 import { Meta, type StoryObj } from "@storybook/nextjs"
 
 import { Button } from "../ui/buttons/Button"
+import { Grid } from "../ui/grid"
 
 import CardComponent, { MarkdownCardProps } from "."
 
@@ -11,11 +12,11 @@ const meta = {
   parameters: { layout: "fullscreen" },
   decorators: [
     (Story) => (
-      <div className="grid w-full grid-cols-fill-3 gap-8 p-8">
+      <Grid className="w-full p-8">
         {Array.from({ length: 3 }).map((_, idx) => (
           <Story key={idx} />
         ))}
-      </div>
+      </Grid>
     ),
   ],
 } satisfies Meta<typeof CardComponent>
