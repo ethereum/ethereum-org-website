@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang, PageParams, SectionNavDetails } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -349,7 +349,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       <FoundersPageJsonLD locale={locale} contributors={contributors} />
 
       <div>
-        <ContentHero
+        <PageHero
           breadcrumbs={{ slug: "build/founders", startDepth: 1 }}
           heroImg={heroImg}
           title={t("page-founders-title")}

@@ -8,7 +8,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
@@ -49,18 +49,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     locale as Lang
   )
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "developers/tutorials", startDepth: 1 },
-    heroImg,
-    title: t("page-tutorial-title"),
-    description: t("page-tutorial-subtitle"),
-    buttons: [
-      <TutorialSubmitModal key="submit" dir={dir}>
-        {t("page-tutorial-submit-btn")}
-      </TutorialSubmitModal>,
-    ],
-  }
-
   return (
     <>
       <TutorialsPageJsonLD
@@ -69,7 +57,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <I18nProvider locale={locale} messages={messages}>
-        <ContentHero {...heroProps} />
+        <PageHero
+          breadcrumbs={{ slug: "developers/tutorials", startDepth: 1 }}
+          heroImg={heroImg}
+          title={t("page-tutorial-title")}
+          description={t("page-tutorial-subtitle")}
+          buttons={[
+            <TutorialSubmitModal key="submit" dir={dir}>
+              {t("page-tutorial-submit-btn")}
+            </TutorialSubmitModal>,
+          ]}
+        />
         <MainArticle
           className="mx-auto my-0 flex w-full flex-col items-center"
           dir={dir}

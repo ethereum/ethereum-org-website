@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { EventItem, Lang, PageParams } from "@/lib/types"
 
-import ContentHero from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import { Alert, AlertContent } from "@/components/ui/alert"
 import { Button } from "@/components/ui/buttons/Button"
@@ -111,11 +111,10 @@ const Page = async (props: {
   return (
     <>
       <EventsSearchJsonLD locale={locale} contributors={contributors} />
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug: "/community/events/search" }}
         title={title}
         description={t("page-events-meetups-hero-subtitle")}
-        className="pb-0"
       />
 
       <MainArticle className="flex flex-col gap-16 px-4 py-10 md:px-8">

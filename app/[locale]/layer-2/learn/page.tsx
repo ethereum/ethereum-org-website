@@ -8,7 +8,7 @@ import {
 import type { Lang, PageParams } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
-import { ContentHero, type ContentHeroProps } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -17,7 +17,17 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 import { Grid } from "@/components/ui/grid"
+import { LinkWithArrow } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -50,33 +60,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     await getAppPageContributorInfo("layer-2/learn", locale as Lang)
 
   const t = await getTranslations("page-layer-2-learn")
-
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: SLUG, startDepth: 1 },
-    heroImg,
-    title: t("page-layer-2-learn-title"),
-    description: t("page-layer-2-learn-description"),
-    buttons: [
-      {
-        content: t("page-layer-2-learn-button-1-label"),
-        href: "/layer-2/",
-        matomo: {
-          eventCategory: "l2_learn",
-          eventAction: "button_click",
-          eventName: "what_is_l2",
-        },
-      },
-      {
-        content: t("page-layer-2-learn-button-2-label"),
-        href: "/layer-2/networks",
-        matomo: {
-          eventCategory: "l2_learn",
-          eventAction: "button_click",
-          eventName: "use_l2",
-        },
-      },
-    ],
-  }
 
   const layer2Cards = [
     {
@@ -123,7 +106,32 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <MainArticle className="relative flex flex-col">
-        <ContentHero {...heroProps} />
+        <PageHero
+          breadcrumbs={{ slug: SLUG, startDepth: 1 }}
+          heroImg={heroImg}
+          title={t("page-layer-2-learn-title")}
+          description={t("page-layer-2-learn-description")}
+          buttons={[
+            {
+              content: t("page-layer-2-learn-button-1-label"),
+              href: "/layer-2/",
+              matomo: {
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "what_is_l2",
+              },
+            },
+            {
+              content: t("page-layer-2-learn-button-2-label"),
+              href: "/layer-2/networks",
+              matomo: {
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "use_l2",
+              },
+            },
+          ]}
+        />
 
         <div
           id="what-is-layer-2"
@@ -255,18 +263,25 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <div
           id="rollup-cards"
-          className="flex w-full flex-col gap-8 px-8 py-9 md:flex-row"
+          className="flex w-full flex-col gap-8 p-8 *:flex-1 md:flex-row"
         >
           {rollupCards.map((card, idx) => (
-            <div
-              key={idx}
-              className="flex w-full flex-col gap-4 rounded-xs border border-solid border-body-light bg-background-highlight p-6 md:w-[50%]"
-            >
-              <Image src={card.image} alt={""} />
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-              <a href={card.childLink}>{card.childSentence}</a>
-            </div>
+            <Card key={idx}>
+              <CardHeader>
+                <CardBanner fit="contain" background="none" size="thumbnail-lg">
+                  <Image src={card.image} alt="" sizes="128px" />
+                </CardBanner>
+              </CardHeader>
+              <CardContent>
+                <CardTitle>{card.title}</CardTitle>
+                <CardParagraph>{card.description}</CardParagraph>
+              </CardContent>
+              <CardFooter>
+                <LinkWithArrow href={card.childLink}>
+                  {card.childSentence}
+                </LinkWithArrow>
+              </CardFooter>
+            </Card>
           ))}
         </div>
 

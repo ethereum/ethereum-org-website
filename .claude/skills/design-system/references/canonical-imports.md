@@ -25,7 +25,7 @@ The canonical card primitive. Composable parts. If `href` is provided, the card 
 `CardBanner` props worth knowing:
 
 - `background`: `"accent-a" | "accent-b" | "accent-c" | "primary" | "body" | "none"` (default `body`)
-- `size`: `"full" | "lg" | "base" | "sm" | "thumbnail"` (default `base`)
+- `size`: `"full" | "lg" | "base" | "sm" | "thumbnail-lg" | "thumbnail"` (default `base`)
 - `fit`: `"cover" | "contain"` (default `cover`)
 - `zoom`: `true` (default) | `false` — when the parent `Card` has `href`, controls whether the image scales on hover/focus via `group/link`
 
@@ -166,31 +166,25 @@ If you use `LinkBox` without `LinkOverlay` somewhere inside, the whole-card-clic
 ## Heroes
 
 ```tsx
-import {
-  ContentHero,
-  HomeHero,
-  HubHero,
-  MdxHero,
-  SimpleHero,
-} from "@/components/Hero"
+import { HomeHero, HubHero, MdxHero, PageHero } from "@/components/Hero"
 ```
 
-| Hero          | Use case                                                                      |
-| ------------- | ----------------------------------------------------------------------------- |
-| `ContentHero` | Most internal pages: 2-column with image, breadcrumb, buttons. The workhorse. |
-| `HubHero`     | Full-bleed hero image with overlay text card.                                 |
-| `HomeHero`    | Homepage only. Async server component.                                        |
-| `SimpleHero`  | Text-only with breadcrumb + buttons. No image.                                |
-| `MdxHero`     | Minimal: breadcrumb + h1. For long-form articles.                             |
+| Hero | Use case |
+|---|---|
+| `PageHero` | The workhorse for most internal pages. 2-column with image, breadcrumb (or `header` eyebrow), and up to two buttons -- **or** text-only when you omit `heroImg`. |
+| `HubHero` | Full-bleed hero image with overlay text card. |
+| `HomeHero` | Homepage only. Async server component. |
+| `MdxHero` | Minimal: breadcrumb + h1. For long-form articles. |
 
-### Do NOT use `@/components/PageHero`
+### `PageHero` props
+
+`PageHero` is a **named** export from `@/components/Hero` and takes discrete props (not a single `content` object):
 
 ```tsx
-// DON'T:
-import PageHero from "@/components/PageHero"
+import { PageHero } from "@/components/Hero"
 ```
 
-`PageHero` predates the `Hero/` directory. It's used by a few legacy pages (`staking`, `run-a-node`) but is on the deprecation track. New pages must pick from `@/components/Hero`.
+Pass `breadcrumbs` **or** `header` (mutually exclusive eyebrow slot), plus `heroImg` (optional -- omit for text-only), `title`, `description`, `buttons` (up to two), and `variant`.
 
 ## Banners / Callouts / Alerts
 

@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "Was ist Ethereum? (Ein vollständiger Leitfaden) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "Was ist Ethereum? (Ein vollständiger Leitfaden)",
   "page-what-is-ethereum-meta-description": "Ein vollständiger Überblick darüber, was Ethereum ist, wie es funktioniert, was es macht und wie man anfängt, es zu nutzen oder darauf aufzubauen. Einfach erklärt.",
   "page-what-is-ethereum-title": "Was ist Ethereum?",
   "page-what-is-ethereum-hero-description-1": "Ethereum ist ein dezentrales Blockchain-Netzwerk und eine Softwareentwicklungsplattform, die von der Kryptowährung Ether (ETH) angetrieben wird.",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "Was ist die Ethereum-Roadmap für 2026?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum folgt keiner festen Roadmap. Es folgt einer gemeinsamen Vision.",
   "page-what-is-ethereum-roadmap-intro-2": "Netzwerk-Upgrades werden als EIPs durchgeführt und öffentlich von Mitwirkenden auf der ganzen Welt entwickelt. Es gibt kein zentrales Team, das entscheidet, was passiert, sondern nur Menschen, die basierend auf den Bedürfnissen der Nutzer das bauen, was sie für nützlich halten.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka ist das jüngste Upgrade, das im Dezember 2025 gestartet wurde. Es führte PeerDAS für eine effizientere L2-Datenverfügbarkeit ein und erhöhte das Standard-Gaslimit auf ~60M. Mit Blick auf 2026 befindet sich Glamsterdam in der Entwicklung und wird für das erste Halbjahr 2026 erwartet.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka ist das jüngste Upgrade, das im Dezember 2025 eingeführt wurde. Es führte PeerDAS für eine effizientere L2-Datenverfügbarkeit ein und erhöhte das Standard-Gaslimit auf ~60M. Mit Blick auf 2026 befindet sich Glamsterdam in der Entwicklung und wird für H2 2026 erwartet.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>Mit Blick auf die Zukunft</a> umfassen die Prioritäten von Ethereum:",
   "page-what-is-ethereum-roadmap-priority-1": "Das Kernprotokoll und seine L2s für alle schneller und günstiger zu machen",
   "page-what-is-ethereum-roadmap-priority-2": "Die Erfahrung für Nutzer und Entwickler zu verbessern",

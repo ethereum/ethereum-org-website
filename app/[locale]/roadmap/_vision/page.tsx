@@ -12,12 +12,10 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
-import PageHero, {
-  type ContentType as PageHeroContent,
-} from "@/components/PageHero"
 import Trilemma from "@/components/Trilemma"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -33,7 +31,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import RoadmapVisionPageJsonLD from "./page-jsonld"
 
-import oldship from "@/public/images/upgrades/oldship.png"
+import heroImg from "@/public/images/upgrades/oldship.png"
 
 const SLUG = "/roadmap/vision"
 
@@ -127,14 +125,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     },
   ]
 
-  const heroContent: PageHeroContent = {
-    title: t("page-roadmap-vision-title"),
-    header: t("page-roadmap-vision-future"),
-    subtitle: t("page-roadmap-vision-subtitle"),
-    image: oldship,
-    alt: t("page-eth-whats-eth-hero-alt"),
-  }
-
   return (
     <I18nProvider locale={locale} messages={messages}>
       <RoadmapVisionPageJsonLD
@@ -143,8 +133,12 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         contributors={contributors}
       />
       <PageContainer>
-        <PageHero content={heroContent} />
-        <Divider />
+        <PageHero
+          header={t("page-roadmap-vision-title")}
+          heroImg={heroImg}
+          title={t("page-roadmap-vision-future")}
+          description={t("page-roadmap-vision-subtitle")}
+        />
         <PageContent>
           <Breadcrumbs slug={SLUG} startDepth={1} />
           <CentralContent>
