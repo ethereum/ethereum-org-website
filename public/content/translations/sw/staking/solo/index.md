@@ -29,11 +29,11 @@ Muweka dhamana wa nyumbani hupokea zawadi moja kwa moja kutoka kwenye itifaki kw
 
 Kuweka dhamana ukiwa nyumbani kunakuja na majukumu zaidi lakini kunakupa udhibiti wa juu zaidi wa fedha zako na usanidi wako wa kuweka dhamana.
 
-<CardGrid>
+<Grid>
   <Card title="Pata ETH mpya" emoji="💸" description="Pata zawadi zinazotolewa kwa ETH moja kwa moja kutoka kwenye itifaki wakati mthibitishaji wako yuko mtandaoni, bila watu wa kati kuchukua mgawo." />
   <Card title="Udhibiti kamili" emoji="🎛️" description="Weka funguo zako mwenyewe. Chagua mchanganyiko wa wateja na maunzi unaokuruhusu kupunguza hatari yako na kuchangia vyema katika afya na usalama wa mtandao. Huduma za kuweka dhamana za wahusika wengine hufanya maamuzi haya kwa ajili yako, na huwa hawafanyi chaguo salama kila wakati." />
   <Card title="Usalama wa mtandao" emoji="🔐" description="Kuweka dhamana ukiwa nyumbani ndiyo njia yenye athari kubwa zaidi ya kuweka dhamana. Kwa kuendesha mthibitishaji kwenye maunzi yako mwenyewe nyumbani, unaimarisha uimara, mfumo mtawanyo, na usalama wa itifaki ya Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Mambo ya kuzingatia kabla ya kuweka dhamana ukiwa nyumbani {#considerations-before-staking-solo}
 

@@ -26,11 +26,11 @@ Ce n'est pas un rêve lointain — cela se produit aujourd'hui sur Ethereum. Bie
 
 Pour des millions de personnes travaillant à l’étranger, envoyer de l’argent au pays est une nécessité régulière. Les services de transfert de fonds traditionnels s’accompagnent souvent de frais élevés et de délais de traitement longs. Ethereum propose une alternative intéressante.
 
-<CardGrid>
+<Grid>
   <Card title="Frais moins chers" emoji=":money_with_wings:" description="Les services de transfert d'argent facturent en moyenne jusqu'à 14 $ de frais. Les transactions Ethereum peuvent souvent être réalisées pour moins de 0,01 $."/>
   <Card title="Transferts plus rapides" emoji="📶" description="Les virements bancaires internationaux prennent plusieurs jours à être traités. Les transactions Ethereum sont réglées en quelques minutes." />
   <Card title="Ouvert à tous" emoji="🌎" description="Vous n'avez besoin que d'une connexion Internet et d'une application de portefeuille pour envoyer ou recevoir de l'Ether." />
-</CardGrid>
+</Grid>
 
 ## Accès aux monnaies mondiales {#access-to-global-currencies}
 

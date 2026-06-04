@@ -21,11 +21,11 @@ Pindi programu inapochapishwa kwenye kiambajengo cha Ethereum, inakuwa isiyozuil
 
 Programu za Ethereum zina mantiki yake inayoendeshwa kwenye kiambajengo cha Ethereum badala ya kwenye seva kuu. Ndiyo maana mara nyingi zimekuwa zikiitwa mifumo iliyotawanywa au mfumo mtawanyo wa kimamlaka kwa ufupi.
 
-<CardGrid>
+<Grid>
   <Card title="Faragha zaidi" emoji=":detective:" description="Unahitaji tu mkoba wa Ethereum kutumia dapp yoyote. Data zako za kibinafsi hazihitajiki. Hii ndiyo intaneti kama ilivyopaswa kuwa siku zote."/>
   <Card title="Inapatikana kimataifa" emoji="🌍" description="Mfumo mtawanyo wa kimamlaka hautawaliwi na sheria za kanda na maduka ya programu. Ufikiaji wako unategemea kuwa na muunganisho wa intaneti – si mahali unapoishi." />
   <Card title="Huduma za bei nafuu" emoji=":handshake:" description="Mfumo mtawanyo wa kimamlaka ni wa mtu kwa mtu. Hakuna waamuzi wanaochukua mgao inamaanisha huduma za bei nafuu." />
-</CardGrid>
+</Grid>
 
 ## Kwa nini hii ni muhimu {#why-does-this-matter}
 

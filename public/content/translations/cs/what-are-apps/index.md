@@ -21,11 +21,11 @@ Jakmile je aplikace publikována na blockchainu Etherea, stává se nezastavitel
 
 Aplikace na Ethereu mají svou logiku spuštěnou na blockchainu Etherea namísto na centralizovaných serverech. Proto se jim často říká decentralizované aplikace neboli zkráceně dappky.
 
-<CardGrid>
+<Grid>
   <Card title="Více soukromí" emoji=":detective:" description="K používání jakékoli dapp vám stačí jen peněženka Ethereum. Vaše osobní údaje nejsou potřeba. Přesně takhle měl internet vždycky vypadat."/>
   <Card title="Dostupné po celém světě" emoji="🌍" description="Dapps se neřídí pravidly regionů a obchodů s aplikacemi. Váš přístup závisí na připojení k internetu – ne na tom, kde žijete." />
   <Card title="Levnější služby" emoji=":handshake:" description="Dapps jsou peer-to-peer. Bez prostředníků, kteří si berou podíl, jsou služby levnější." />
-</CardGrid>
+</Grid>
 
 ## Proč je to důležité {#why-does-this-matter}
 

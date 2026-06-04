@@ -19,6 +19,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import TabNav, { StickyContainer } from "@/components/ui/TabNav"
@@ -186,7 +187,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-hubs-subtitle")}
               </p>
             </div>
-            <div className="grid grid-cols-fill-3-w-full gap-4">
+            <Grid columns={3} size="wider">
               {communityHubs.map(
                 ({
                   id,
@@ -255,7 +256,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   </div>
                 )
               )}
-            </div>
+            </Grid>
             <div className="md:px-4">
               <ButtonLink
                 href="https://esp.ethereum.foundation/applicants/rfp/community-hubs"
@@ -304,7 +305,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 {t("page-events-section-local-meetups-subtitle")}
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            <Grid columns={3}>
               {meetups.slice(0, 6).map((event) => (
                 <EventCard
                   key={event.id}
@@ -319,7 +320,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   }}
                 />
               ))}
-            </div>
+            </Grid>
             <div className="flex justify-center">
               <ButtonLink
                 href="/community/events/meetups/"

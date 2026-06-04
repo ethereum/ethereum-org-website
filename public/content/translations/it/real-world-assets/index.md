@@ -27,14 +27,14 @@ I token RWA non hanno alcun valore intrinseco. Piuttosto, riflettono il valore d
 
 ## Quali sono i vantaggi degli RWA? {#rwas-benefits}
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<Grid>
   <Card title="Proprietà frazionata" emoji=":house_buildings:" description="Gli RWA democratizzano gli investimenti. Se sei escluso dall'investire in determinati tipi di asset perché non puoi permetterti di entrare in quei mercati, ora puoi farlo come proprietario parziale."/>
   <Card title="Diversificazione degli investimenti" emoji="🛒" description="Puoi investire in più tipi di asset, il che ti consente di diversificare il tuo portafoglio senza spendere somme di denaro da hedge fund." />
   <Card title="Opportunità globali" emoji="🌏" description="Gli RWA rimuovono le barriere geografiche agli investimenti. Puoi acquistare token per asset situati in qualsiasi parte del mondo." />
   <Card title="Rendere liquidi gli asset" emoji="🖼️" description="Molti asset sono illiquidi. Hanno valore, ma non è la stessa cosa che avere contanti da spendere. Tokenizzando un asset, i proprietari possono trasformarne una parte o la totalità in valore utilizzabile."/>
   <Card title="Mercato mondiale" emoji="💰" description="I proprietari che cercano di capitalizzare i propri asset possono raggiungere una gamma più ampia di investitori, non solo le persone che in genere possono permettersi di acquistare terreni, azioni, opere d'arte o strumenti finanziari tradizionali." />
   <Card title="Saltare gli intermediari" emoji="👩‍💻" description="I token funzionano su contratti intelligenti, il che significa che i token possono essere scambiati da persona a persona senza la necessità di intermediari e delle relative commissioni." />
-</CardGrid>
+</Grid>
 
 ## Come funzionano gli RWA? {#how-rwas-work}
 

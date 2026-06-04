@@ -1,296 +1,299 @@
 ---
 title: Glamsterdam
-description: "Dowiedz się więcej o aktualizacji protokół Glamsterdam"
+description: "Dowiedz się więcej o aktualizacji protokołu Glamsterdam"
 lang: pl
 ---
-# Glamsterdam {#glamsterdam}
 
+# Glamsterdam {#glamsterdam}
 
 <Alert variant="update">
 <AlertContent>
 <AlertTitle>
-Glamsterdam to nadchodząca aktualizacja Ethereum zaplanowana na pierwszą połowę 2026 roku
+Glamsterdam to nadchodząca aktualizacja Ethereum zaplanowana na drugą połowę 2026 roku
 </AlertTitle>
 <AlertDescription>
-Aktualizacja Glamsterdam to tylko jeden z kroków w długoterminowych celach rozwojowych Ethereum. Dowiedz się więcej o [plan działania protokół](/roadmap/) i [poprzednich aktualizacjach](/ethereum-forks/).
+Aktualizacja Glamsterdam to tylko jeden krok w długoterminowych celach rozwojowych Ethereum. Dowiedz się więcej o [mapie drogowej protokołu](/roadmap/) i [poprzednich aktualizacjach](/ethereum-forks/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Nadchodząca aktualizacja [Ethereum](/) o nazwie Glamsterdam ma na celu przygotowanie gruntu pod kolejną generację skalowanie. Nazwa Glamsterdam pochodzi od połączenia „Amsterdam” (aktualizacja warstwa wykonawcza, nazwana na cześć poprzedniej lokalizacji Devconnect) i „Gloas” (aktualizacja warstwa konsensusu, nazwana na cześć gwiazdy).
+Nadchodząca aktualizacja Glamsterdam w sieci [Ethereum](/) ma na celu utorowanie drogi dla nowej generacji skalowania. Nazwa Glamsterdam pochodzi z połączenia słów „Amsterdam” (aktualizacja warstwy wykonawczej, nazwana na cześć poprzedniej lokalizacji Devconnect) i „Gloas” (aktualizacja warstwy konsensusu, nazwana na cześć gwiazdy).
 
-Po postępach poczynionych w ramach aktualizacji [Fusaka](/roadmap/fusaka/), Glamsterdam skupia się na skalowanie L1 poprzez reorganizację sposobu, w jaki sieć przetwarza transakcje i zarządza swoją rosnącą bazą danych, fundamentalnie aktualizując sposób, w jaki Ethereum tworzy i weryfikuje bloki.
+W ślad za postępami poczynionymi w aktualizacji [Fusaka](/roadmap/fusaka/), Glamsterdam skupia się na skalowaniu warstwy 1 (L1) poprzez reorganizację sposobu, w jaki sieć przetwarza transakcje i zarządza swoją rosnącą bazą danych, fundamentalnie aktualizując sposób, w jaki Ethereum tworzy i weryfikuje bloki.
 
-Podczas gdy Fusaka skupiała się na podstawowych udoskonaleniach, Glamsterdam realizuje cele „Scale L1” i „Scale Blobs”, ustanawiając podział obowiązków między różnymi uczestnikami sieć i wprowadzając bardziej wydajne sposoby obsługi danych w celu przygotowania [stan](/glossary/#state) do wysokowydajnej paralelizacji. 
+Podczas gdy Fusaka skupiała się na fundamentalnych ulepszeniach, Glamsterdam posuwa naprzód cele „Skalowania L1” i „Skalowania blobów” poprzez włączenie do protokołu podziału obowiązków między różnymi uczestnikami sieci oraz wprowadzenie bardziej wydajnych sposobów obsługi danych, aby przygotować [stan](/glossary/#state) na równoległość o wysokiej przepustowości.
 
-Te ulepszenia zapewniają, że Ethereum pozostaje szybki, przystępny cenowo i zdecentralizowany w miarę obsługi większej liczby działań, przy jednoczesnym utrzymaniu rozsądnych wymagań sprzętowych dla osób uruchamiających [węzły](/glossary/#node) w domu.
+Te ulepszenia zapewniają, że Ethereum pozostanie szybkie, przystępne cenowo i zdecentralizowane w miarę obsługiwania większej aktywności, przy jednoczesnym utrzymaniu wymagań sprzętowych na rozsądnym poziomie dla osób uruchamiających [węzły](/glossary/#node) w domu.
 
-<YouTube id="GgKveVMLnoo" />
+<VideoWatch slug="ethereum-evolution-glamsterdam" />
 
-## Rozważane ulepszenia dla Glamsterdam {#improvements-in-glamsterdam}
+## Ulepszenia rozważane dla Glamsterdam {#improvements-in-glamsterdam}
 
 <Alert variant="info">
 <AlertContent>
 <AlertDescription>
-Uwaga: Ten artykuł przedstawia wybrane EIP, które są rozważane do włączenia do Glamsterdam. Najnowsze informacje o statusie można znaleźć w [aktualizacji Glamsterdam na Forkcast](https://forkcast.org/upgrade/glamsterdam). 
+Uwaga: Ten artykuł obecnie podkreśla wybór propozycji EIP rozważanych do włączenia w aktualizacji Glamsterdam. Dodatkowe propozycje aktywnie testowane w sieciach deweloperskich (devnetach) obejmują EIP-7778, EIP-7843, EIP-7976, EIP-7981 i EIP-8024. Aby uzyskać najnowsze informacje o statusie, zobacz [aktualizację Glamsterdam na Forkcast](https://forkcast.org/upgrade/glamsterdam).
 
-Jeśli chcesz dodać EIP, który jest rozważany dla Glamsterdam, ale nie został jeszcze dodany do tej strony, [dowiedz się, jak wnieść swój wkład w ethereum.org tutaj](/contributing/).
+Jeśli chcesz dodać EIP, który jest rozważany dla Glamsterdam, ale nie został jeszcze dodany do tej strony, [dowiedz się, jak współtworzyć ethereum.org tutaj](/contributing/).
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-Ulepszenie Glamsterdam koncentruje się na trzech głównych celach:
+Aktualizacja Glamsterdam skupia się na trzech głównych celach:
 
-- Przyspieszenie przetwarzania (paralelizacja): reorganizacja sposobu, w jaki sieć rejestruje zależności danych, tak aby mogła bezpiecznie przetwarzać wiele transakcje jednocześnie, zamiast w powolnej sekwencji jedna po drugiej.
-- Zwiększenie wydajności: Rozdzielenie ciężkich zadań związanych z tworzeniem i weryfikacją bloki, co daje sieć więcej czasu na propagację większych ilości danych bez spowalniania.
-- Zapobieganie rozrastaniu się bazy danych (zrównoważony rozwój): Dostosowanie opłat sieć w celu dokładnego odzwierciedlenia długoterminowych kosztów sprzętowych związanych z przechowywaniem nowych danych, odblokowanie przyszłych podwyżek limit gazu przy jednoczesnym zapobieganiu pogorszeniu wydajności sprzętu.
+- Przyspieszenie przetwarzania (równoległość): Reorganizacja sposobu, w jaki sieć rejestruje zależności danych, aby mogła bezpiecznie przetwarzać wiele transakcji w tym samym czasie, zamiast w powolnej sekwencji jedna po drugiej.
+- Zwiększenie pojemności: Podział ciężkiej pracy związanej z tworzeniem i weryfikacją bloków, co daje sieci więcej czasu na propagację większych ilości danych bez spowalniania.
+- Zapobieganie rozrostowi bazy danych (zrównoważony rozwój): Dostosowanie opłat sieciowych, aby dokładnie odzwierciedlały długoterminowe koszty sprzętowe przechowywania nowych danych, odblokowując przyszłe wzrosty limitu gazu przy jednoczesnym zapobieganiu spadkowi wydajności sprzętu.
 
-Krótko mówiąc, Glamsterdam wprowadzi zmiany strukturalne, aby zapewnić, że w miarę zwiększania przepustowości sieć, pozostanie ona zrównoważona, a jej wydajność wysoka.
+Krótko mówiąc, Glamsterdam wprowadzi zmiany strukturalne, aby zapewnić, że w miarę zwiększania pojemności sieci, pozostanie ona zrównoważona, a wydajność utrzyma się na wysokim poziomie.
 
-## Skalowanie L1 i przetwarzanie równoległe {#scale-l1}
+## Skalowanie warstwy 1 (L1) i przetwarzanie równoległe {#scale-l1}
 
-Znaczące skalowanie L1 wymaga odejścia od założeń zaufania poza protokołem i ograniczeń wykonywania szeregowego. Glamsterdam rozwiązuje ten problem, wprowadzając podział niektórych obowiązków związanych z tworzeniem bloków i nowe struktury danych, które pozwalają sieć przygotować się do równoległego przetwarzania.
+Znaczące skalowanie warstwy 1 (L1) wymaga odejścia od założeń dotyczących zaufania poza protokołem i ograniczeń związanych z wykonywaniem szeregowym. Glamsterdam rozwiązuje ten problem poprzez włączenie do protokołu podziału niektórych obowiązków związanych z budowaniem bloków i wprowadzenie nowych struktur danych, które pozwalają sieci przygotować się do przetwarzania równoległego.
 
-### Propozycja główna: Ustanowienie rozdzielenia ról proponent bloku-builder (ePBS) {#epbs}
+### Główna propozycja: Wbudowana w protokół separacja proponującego i budującego (ePBS) {#epbs}
 
-- Eliminuje założenia dotyczące zaufania spoza protokołu i poleganie na przekaźnikach zewnętrznych
-- Umożliwia skalowanie L1, pozwalając na przesyłanie znacznie większych ładunków dzięki rozszerzonym oknom propagacji
-- Wprowadza bezpośrednie, bezdowierzeniale płatności dla builderów do protokołu
+- Usuwa założenia dotyczące zaufania poza protokołem i poleganie na przekaźnikach (relays) stron trzecich
+- Wspiera skalowanie warstwy 1 (L1), pozwalając na znacznie większe ładunki dzięki wydłużonym oknom propagacji
+- Wprowadza niewymagające zaufania płatności dla budowniczych bezpośrednio do protokołu 
+- Wymaga aktualizacji architektonicznych dla pul stakingowych, aby umożliwić niewymagające zaufania monitorowanie, chociaż ogólne doświadczenie użytkownika związane ze stakingiem ulega poprawie dzięki udoskonalonemu procesowi wyboru budowniczego
 
-Obecnie proces proponowania i tworzenia bloków obejmuje przekazywanie zadań między podmiotami proponującymi bloki a podmiotami je tworzącymi. Relacja między podmiotami proponującymi a tworzącymi bloki nie jest częścią podstawowego protokołu Ethereum, więc opiera się na zaufanym oprogramowaniu pośredniczącym innych firm (przekaźnikach) oraz na zaufaniu między podmiotami poza protokołem.
+Obecnie proces proponowania i budowania bloków obejmuje przekazanie zadań między proponującymi bloki a budowniczymi bloków. Relacja między proponującymi a budowniczymi nie jest częścią głównego protokołu Ethereum, więc opiera się na zaufanym oprogramowaniu pośredniczącym stron trzecich, oprogramowaniu (przekaźnikach) i zaufaniu poza protokołem między podmiotami.
 
-Pozaprotokołowe relacje między proponentami bloków a builderami tworzą również „gorącą ścieżkę” podczas walidacji bloków, która zmusza [walidatorów](/glossary/#validator) do szybkiego nadawania i wykonywania transakcji w ścisłym 2-sekundowym oknie, ograniczając ilość danych, jaką sieć może obsłużyć.
+Relacja poza protokołem między proponującymi a budowniczymi tworzy również „gorącą ścieżkę” podczas walidacji bloku, która zmusza [walidatorów](/glossary/#validator) do pośpiesznego rozgłaszania i wykonywania transakcji w wąskim, 2-sekundowym oknie, ograniczając ilość danych, z którymi sieć może sobie poradzić.
 
-**Ustanowienie rozdzielenia ról proponent-builder (ePBS lub EIP-7732)** formalnie rozdziela zadanie proponenta (który wybiera blok konsensusu) od zadania buildera (który składa ładunek wykonawczy), wpisując ten proces bezpośrednio w protokół.
+**Wbudowana w protokół separacja proponującego i budującego (ePBS, czyli EIP-7732)** formalnie oddziela zadanie proponującego (który wybiera blok konsensusu) od budowniczego (który składa ładunek wykonawczy), włączając to przekazanie bezpośrednio do protokołu. 
 
-Wbudowanie bezdowierzenialnej wymiany ładunku bloku za płatność bezpośrednio w protokole eliminuje potrzebę korzystania z oprogramowania pośredniczącego innych firm (takiego jak MEV-Boost). Jednakże builderzy i proponenci mogą nadal korzystać z przekaźników lub oprogramowania pośredniczącego spoza protokołu w celu obsługi złożonych funkcji, które nie są jeszcze częścią podstawowego protokołu.
+Wbudowanie niewymagającej zaufania wymiany ładunku bloku na płatność bezpośrednio w protokół eliminuje potrzebę korzystania z oprogramowania pośredniczącego stron trzecich (takiego jak MEV-Boost). Jednak budowniczowie i proponujący mogą nadal decydować się na korzystanie z przekaźników lub oprogramowania pośredniczącego poza protokołem w przypadku złożonych funkcji, które nie są jeszcze częścią głównego protokołu. 
 
-Aby rozwiązać problem wąskiego gardła „gorącej ścieżki”, ePBS wprowadza również Payload Timeliness Committee (PTC) i logikę podwójnego terminu, pozwalając walidatorom poświadczać blok konsensusu i terminowość ładunku wykonawczego oddzielnie, aby zmaksymalizować przepustowość.
+Aby rozwiązać problem wąskiego gardła „gorącej ścieżki”, ePBS wprowadza również Komitet Terminowości Ładunku (Payload Timeliness Committee - PTC) i logikę podwójnego terminu, pozwalając walidatorom na oddzielne poświadczanie bloku konsensusu i terminowości ładunku wykonawczego w celu maksymalizacji przepustowości.
 
-<YouTube id="u8XvkTrjITs" />
+<VideoWatch slug="proposer-builder-separation" />
 
-Oddzielenie ról proponującego i konstruktora na poziomie protokołu rozszerza okno propagacji (lub czas dostępny do rozpowszechniania danych w sieci) z 2 sekund do około 9 sekund.
+Oddzielenie ról proponującego i budowniczego na poziomie protokołu wydłuża okno propagacji (czyli czas dostępny na rozpowszechnienie danych w sieci) z 2 sekund do około 9 sekund.
 
-Zastąpienie oprogramowania pośredniczącego i przekaźników spoza protokołu mechanizmami wbudowanymi w protokół pozwala ePBS zmniejszyć zależności od zaufania i umożliwia Ethereum bezpiecznie przetwarzać znacznie większe ilości danych (takie jak więcej blobów dla [warstw 2](/glossary/#layer-2)) bez obciążania sieci.
+Zastępując oprogramowanie pośredniczące i przekaźniki poza protokołem mechaniką wewnątrz protokołu, ePBS zmniejsza zależności od zaufania i pozwala Ethereum bezpiecznie przetwarzać znacznie większe ilości danych (takie jak więcej blobów dla [warstw 2 (L2)](/glossary/#layer-2)) bez obciążania sieci.
 
 **Zasoby**: [Specyfikacja techniczna EIP-7732](https://eips.ethereum.org/EIPS/eip-7732)
 
-### Propozycja główna: Listy kontroli dostępu na poziomie bloku (BAL) {#bals}
+### Główna propozycja: Listy dostępu na poziomie bloku (BALs) {#bals}
 
-- Eliminuje wąskie gardła w przetwarzaniu sekwencyjnym, zapewniając wstępną mapę wszystkich zależności transakcja, co umożliwia walidatorzy przetwarzanie wielu transakcje równolegle, zamiast jednej po drugiej.
-- Umożliwia węzłom aktualizowanie swoich rekordów poprzez odczytywanie ostatecznych wyników bez konieczności odtwarzania każdej transakcja (synchronizacja bez wykonywania), dzięki czemu synchronizacja węzeł z sieć jest znacznie szybsza. 
-- Eliminuje zgadywanie, umożliwiając walidatorzy wstępne załadowanie wszystkich niezbędnych danych jednocześnie, zamiast odkrywania ich krok po kroku, co znacznie przyspiesza walidację. 
+- Eliminuje wąskie gardła przetwarzania sekwencyjnego, dostarczając z góry mapę wszystkich zależności transakcji, przygotowując grunt dla walidatorów do przetwarzania wielu transakcji równolegle zamiast jednej po drugiej
+- Pozwala węzłom na aktualizację swoich rekordów poprzez odczytanie ostatecznych wyników bez konieczności ponownego odtwarzania każdej transakcji (synchronizacja bez wykonywania), co znacznie przyspiesza synchronizację węzła z siecią
+- Eliminuje zgadywanie, pozwalając walidatorom na wstępne załadowanie wszystkich niezbędnych danych na raz, zamiast odkrywania ich krok po kroku, co znacznie przyspiesza walidację
 
-Dzisiejszy Ethereum jest jak droga jednopasmowa; ponieważ sieć nie wie, jakich danych będzie potrzebować transakcja lub jakie dane zmieni (np. które konta transakcja dotknie), dopóki transakcja nie zostanie uruchomiona, walidatorzy muszą przetwarzać transakcje pojedynczo w ścisłej, sekwencyjnej kolejności. Gdyby próbowali przetwarzać transakcje wszystkie naraz, nie znając tych zależności, dwie transakcje mogłyby przypadkowo próbować zmienić dokładnie te same dane w tym samym czasie, powodując błędy.
+Dzisiejsze Ethereum przypomina drogę jednopasmową; ponieważ sieć nie wie, jakich danych będzie potrzebować lub jakie zmieni transakcja (np. jakich kont dotknie transakcja), dopóki transakcja nie zostanie wykonana, walidatorzy muszą przetwarzać transakcje jedna po drugiej w ścisłej, sekwencyjnej kolejności. Gdyby spróbowali przetworzyć transakcje wszystkie na raz, nie znając tych zależności, dwie transakcje mogłyby przypadkowo spróbować zmienić dokładnie te same dane w tym samym czasie, powodując błędy.
 
-**Listy dostępu na poziomie bloków (BAL, lub EIP-7928)** są jak mapa dołączona do każdego blok, która informuje sieć, do których części bazy danych będzie dostęp przed rozpoczęciem pracy. BAL wymagają, aby każdy blok zawierał hasz każdej zmiany konto, której dotkną transakcje, wraz z ostatecznymi wynikami tych zmian (rekord hasz wszystkich dostępów do stan i wartości po wykonaniu). 
+**Listy dostępu na poziomie bloku (Block-Level Access Lists - BALs, czyli EIP-7928)** działają jak mapa dla sieci, wyszczególniając, do których części bazy danych nastąpi dostęp przed rozpoczęciem pracy. Warstwa wykonawcza przechowuje pełną listę dostępu do bloku, w tym każdą zmianę konta, której dotkną transakcje, wraz z ostatecznymi wynikami tych zmian (wszystkie dostępy do stanu i wartości po wykonaniu). Aby utrzymać lekkość bloków, nagłówek bloku zawiera nowe pole z unikalnym cyfrowym odciskiem palca (rekord hash) tej listy.
 
-Ponieważ zapewniają natychmiastową widoczność transakcje, które się nie pokrywają, BAL-e umożliwiają węzłom równoległe odczyty z dysku, pobierając informacje dla wielu transakcje jednocześnie. sieć może bezpiecznie grupować niezwiązane transakcje i przetwarzać je równolegle. 
+Ponieważ dają one natychmiastowy wgląd w to, które transakcje się nie nakładają, BALs pozwalają węzłom na wykonywanie równoległych odczytów z dysku, pobierając informacje dla wielu transakcji jednocześnie. Sieć może bezpiecznie grupować niepowiązane transakcje i przetwarzać je równolegle.
 
-Ponieważ BAL zawiera ostateczne wyniki transakcje (wartości po wykonaniu), gdy węzły sieci muszą zsynchronizować się z bieżącym stan sieci, mogą skopiować te ostateczne wyniki, aby zaktualizować swoje dane. Walidatory nie muszą już odtwarzać wszystkich skomplikowanych transakcje od zera, aby wiedzieć, co się stało, co sprawia, że dołączenie nowych węzłów do sieć jest szybsze i łatwiejsze. 
+Ponieważ BAL zawiera ostateczne wyniki transakcji (wartości po wykonaniu), gdy węzły sieci muszą zsynchronizować się z obecnym stanem sieci, mogą skopiować te ostateczne wyniki, aby zaktualizować swoje rekordy. Walidatorzy nie muszą już odtwarzać wszystkich skomplikowanych transakcji od zera, aby wiedzieć, co się stało, co sprawia, że dołączanie nowych węzłów do sieci jest szybsze i łatwiejsze.
 
-Równoległe odczyty dysków, umożliwione przez BAL-e, będą znaczącym krokiem w kierunku przyszłości, w której Ethereum będzie mogło przetwarzać wiele transakcje jednocześnie, znacznie zwiększając szybkość sieci.
+Równoległe odczyty z dysku umożliwione przez BALs będą znaczącym krokiem w kierunku przyszłości, w której Ethereum będzie mogło przetwarzać wiele transakcji na raz, znacznie zwiększając prędkość sieci.
 
-#### eth/71 wymiana listy dostępu do blok {#bale}
+#### Wymiana listy dostępu do bloku eth/71 {#bale}
 
-Wymiana list dostępu do bloków (eth/71 lub EIP-8159) jest bezpośrednim uzupełnieniem sieciowym list dostępu na poziomie bloków. Podczas gdy listy dostępu do bloków odblokowują równoległe wykonanie, eth/71 ulepsza protokół peer-to-peer, aby umożliwić węzłom faktyczne udostępnianie tych list w sieć. Wdrożenie wymiany list dostępu do blok umożliwi szybszą synchronizację i pozwoli węzłom na wykonywanie aktualizacji stan bez wykonania.
+Wymiana listy dostępu do bloku (Block Access List Exchange - eth/71 lub EIP-8159) jest bezpośrednim sieciowym uzupełnieniem list dostępu na poziomie bloku. Podczas gdy BALs odblokowują równoległe wykonywanie, eth/71 aktualizuje protokół peer-to-peer, aby umożliwić węzłom faktyczne udostępnianie tych list w sieci. Wymiana listy dostępu do bloku, obecnie wymagana dla wszystkich klientów warstwy wykonawczej, umożliwi szybszą synchronizację i pozwoli węzłom na wykonywanie aktualizacji stanu bez wykonywania (executionless).
 
-**Zasoby**: 
+**Zasoby**:
+
 - [Specyfikacja techniczna EIP-7928](https://eips.ethereum.org/EIPS/eip-7928)
 - [Specyfikacja techniczna EIP-8159](https://eips.ethereum.org/EIPS/eip-8159)
 
 ## Zrównoważony rozwój sieci {#network-sustainability}
 
-W miarę szybszego rozwoju sieć Ethereum ważne jest, aby upewnić się, że koszt jej użytkowania odpowiada zużyciu sprzętu, na którym działa Ethereum. sieć musi zwiększyć swoje ogólne limity pojemności, aby bezpiecznie skalować i przetwarzać więcej transakcje. 
+W miarę jak sieć Ethereum staje się coraz szybsza, ważne jest, aby upewnić się, że koszt korzystania z niej odpowiada zużyciu sprzętu, na którym działa Ethereum. Sieć musi zwiększyć swoje ogólne limity pojemności, aby bezpiecznie się skalować i przetwarzać więcej transakcji.
 
-### Wzrost kosztów gaz przy tworzeniu stanu {#state-creation-gas-cost-increase}
+### Wzrost kosztu gazu za tworzenie stanu {#state-creation-gas-cost-increase}
 
-- Zapewnia, że opłaty za tworzenie nowych kont lub inteligentnych kontraktów dokładnie odzwierciedlają długoterminowe obciążenie, jakie nakładają one na bazę danych Ethereum.
-- Automatycznie dostosowuje te opłaty za tworzenie danych w oparciu o ogólną wydajność sieci, dążąc do bezpiecznego i przewidywalnego tempa wzrostu, aby standardowy sprzęt fizyczny mógł nadal obsługiwać sieć.
-- Oddziela rozliczanie tych konkretnych opłat do nowego zasobu, usuwając stare limity transakcja i umożliwiając programistom wdrażanie większych, bardziej złożonych aplikacji.
+- Zapewnia, że opłaty za tworzenie nowych kont lub inteligentnych kontraktów dokładnie odzwierciedlają długoterminowe obciążenie, jakie nakładają one na bazę danych Ethereum
+- Ustala stały **koszt za bajt stanu (cost per state byte - CPSB)**, celując w bezpieczne i przewidywalne tempo wzrostu na poziomie 120 GiB/rok, zapewniając, że standardowy sprzęt fizyczny może nadal obsługiwać sieć
+- Oddziela księgowanie tych konkretnych opłat do nowego rezerwuaru, usuwając stare limity transakcji i pozwalając deweloperom na wdrażanie większych, bardziej złożonych aplikacji
 
-Dodawanie nowych kont, tokenów i [inteligentnych kontraktów](/glossary/#smart-contract) tworzy trwałe dane (znane jako „stan”), które każdy komputer działający w sieć musi przechowywać bezterminowo. Obecne opłaty za dodawanie lub odczytywanie tych danych są niespójne i niekoniecznie odzwierciedlają rzeczywiste, długoterminowe obciążenie pamięci, jakie nakładają na sprzęt sieciowy.
+Dodawanie nowych kont, tokenów i [inteligentnych kontraktów](/glossary/#smart-contract) tworzy trwałe dane (znane jako „stan”), które każdy komputer obsługujący sieć musi przechowywać w nieskończoność. Obecne opłaty za dodawanie lub odczytywanie tych danych są niespójne i niekoniecznie odzwierciedlają rzeczywiste, długoterminowe obciążenie pamięci masowej, jakie nakładają one na sprzęt sieciowy.
 
-Niektóre działania, które tworzą stan w sieci Ethereum, takie jak tworzenie nowych kont lub wdrażanie dużych inteligentnych kontraktów, były stosunkowo tanie w porównaniu do trwałego miejsca do przechowywania, które zajmują w węzłach sieci. Na przykład wdrożenie kontraktu jest znacznie tańsze za bajt niż tworzenie miejsc do przechowywania. 
+Niektóre działania, które tworzą stan w Ethereum, takie jak tworzenie nowych kont lub wdrażanie dużych inteligentnych kontraktów, były stosunkowo tanie w porównaniu do trwałej przestrzeni dyskowej, którą zajmują na węzłach sieci, na przykład wdrożenie kontraktu jest znacznie tańsze w przeliczeniu na bajt niż tworzenie slotów pamięci masowej.
 
-Bez dostosowania stan Ethereum mógłby wzrosnąć o prawie 200 GiB rocznie, jeśli sieć skalowałaby się do limitu 100M gazu, ostatecznie przewyższając możliwości typowego sprzętu. 
+Bez dostosowania, wzrost stanu Ethereum stałby się niezrównoważony w miarę skalowania sieci w kierunku dolnego limitu gazu wynoszącego 200 milionów, umożliwionego przez Glamsterdam (przy czym deweloperzy obecnie testują przy referencyjnym limicie gazu bloku wynoszącym 150 milionów, aby uzyskać dokładną wycenę stanu).
 
-**Zwiększenie kosztów gaz przy tworzeniu stanu (lub EIP-8037)** harmonizuje koszty, wiążąc je z rzeczywistym rozmiarem tworzonych danych, aktualizując opłaty tak, aby były proporcjonalne do ilości trwałych danych, które operacja tworzy lub do których uzyskuje dostęp. 
+**Wzrost kosztu gazu za tworzenie stanu (czyli EIP-8037)** harmonizuje koszty, wiążąc je z rzeczywistym rozmiarem tworzonych danych, aktualizując opłaty tak, aby były proporcjonalne do ilości trwałych danych, które operacja tworzy lub do których uzyskuje dostęp.
 
-EIP-8037 wprowadza również model rezerwuaru, aby zarządzać tymi kosztami w bardziej przewidywalny sposób; opłaty za gaz stan pobierane są najpierw z `state_gas_reservoir`, a kod operacji `GAS` zwraca tylko `gas_left`, zapobiegając błędnemu obliczeniu dostępnego gaz przez ramki wykonania.
+EIP-8037 wprowadza również model rezerwuaru, aby zarządzać tymi kosztami w bardziej przewidywalny sposób; opłaty za gaz stanu są pobierane w pierwszej kolejności z `state_gas_reservoir`, a kod operacji `GAS` zwraca tylko `gas_left`, zapobiegając błędnemu obliczaniu dostępnego gazu przez ramki wykonawcze. Aby to wesprzeć, niezbędne zadania w tle otrzymują dodatkowy przydział paliwa, który trafia prosto do tej dedykowanej rezerwy, zapewniając, że krytyczne operacje sieciowe nie zakończą się niepowodzeniem tylko dlatego, że przechowywanie trwałych danych wymaga więcej zasobów.
 
-Przed EIP-8037 zarówno praca obliczeniowa (aktywne przetwarzanie), jak i trwałe przechowywanie danych (zapisywanie inteligentny kontrakt w bazie danych sieci) miały ten sam limit gazu. Model zbiornika rozdziela rozliczanie: limit gazu dla faktycznej pracy obliczeniowej transakcja (przetwarzania) i dla długoterminowego przechowywania danych ( gaz stan ). Rozdzielenie tych dwóch elementów pomaga zapobiec temu, aby sam rozmiar danych aplikacji nie przekraczał limit gazu; dopóki deweloperzy zapewnią wystarczające środki do wypełnienia zbiornika do przechowywania danych, mogą wdrażać znacznie większe i bardziej złożone inteligentne umowy. 
+Przed EIP-8037 zarówno praca obliczeniowa (aktywne przetwarzanie), jak i trwałe przechowywanie danych (zapisywanie inteligentnego kontraktu w bazie danych sieci) dzieliły ten sam limit gazu. Model rezerwuaru dzieli księgowanie: limit gazu na rzeczywistą pracę obliczeniową transakcji (przetwarzanie) i na długoterminowe przechowywanie danych (gaz stanu). Oddzielenie tych dwóch elementów pomaga zapobiec sytuacji, w której sam rozmiar danych aplikacji wyczerpuje limit gazu; dopóki deweloperzy zapewniają wystarczające środki na wypełnienie rezerwuaru na przechowywanie danych, mogą wdrażać znacznie większe i bardziej złożone inteligentne kontrakty.
 
-Dokładniejsze i bardziej przewidywalne wycenianie przechowywania danych pomoże Ethereum bezpiecznie zwiększyć swoją szybkość i pojemność bez nadmiernego rozrastania bazy danych. Ta zrównoważona polityka pozwoli operatorom węzeł na dalsze używanie (stosunkowo) przystępnego cenowo sprzętu przez wiele lat, utrzymując dostępność staking w warunkach domowych w celu zachowania zdecentralizowanej sieci.
+Dokładniejsze i bardziej przewidywalne wycenianie przechowywania danych pomoże Ethereum bezpiecznie zwiększyć swoją prędkość i pojemność bez rozrostu bazy danych. Ten zrównoważony rozwój pozwoli operatorom węzłów na dalsze korzystanie ze (stosunkowo) przystępnego cenowo sprzętu przez nadchodzące lata, utrzymując dostępność domowego stakingu w celu zachowania decentralizacji sieci.
 
 **Zasoby**: [Specyfikacja techniczna EIP-8037](https://eips.ethereum.org/EIPS/eip-8037)
 
-### Aktualizacja kosztów gaz w ramach programu State-Access {#state-access-gas-cost-update}
+### Aktualizacja kosztu gazu za dostęp do stanu {#state-access-gas-cost-update}
 
-- Zwiększa koszty gaz dla aplikacji odczytujących lub aktualizujących informacje trwale przechowywane w Ethereum (kody operacji dostępu do stanu), aby dokładnie odpowiadały pracy obliczeniowej wymaganej przez te polecenia.
-- Wzmacnia odporność sieci poprzez zapobieganie atakom typu odmowa usługi, które wykorzystują sztucznie zaniżone koszty operacji odczytu danych
+- Zwiększa koszty gazu, gdy aplikacje odczytują lub aktualizują informacje trwale przechowywane w Ethereum (kody operacji dostępu do stanu), aby dokładnie odpowiadały pracy obliczeniowej wymaganej przez te polecenia
+- Wzmacnia odporność sieci, zapobiegając atakom typu odmowa usługi (denial-of-service), które wykorzystują sztucznie tanie operacje odczytu danych
 
-W miarę jak stan Ethereum rósł, wyszukiwanie i odczytywanie starych danych („dostęp do stan ”) stawało się coraz bardziej obciążające i wolniejsze dla węzłów. Opłaty za te działania pozostały takie same, mimo że wyszukiwanie informacji jest teraz nieco droższe (pod względem mocy obliczeniowej). 
+W miarę jak stan Ethereum rósł, czynność wyszukiwania i odczytywania starych danych („dostęp do stanu”) stała się cięższa i wolniejsza do przetworzenia dla węzłów. Opłaty za te działania pozostały takie same, mimo że wyszukiwanie informacji jest teraz nieco droższe (pod względem mocy obliczeniowej).
 
-W rezultacie niektóre konkretne polecenia są obecnie niedoceniane w stosunku do pracy, którą zmuszają węzeł do wykonania. Na przykład `EXTCODESIZE` i `EXTCODECOPY` są niedoceniane, ponieważ wymagają dwóch oddzielnych odczytów z bazy danych — jednego dla obiektu konto i drugiego dla rzeczywistego rozmiaru kodu lub bajtkodu.
+W rezultacie niektóre konkretne polecenia są obecnie niedoszacowane w stosunku do pracy, do której zmuszają węzeł. Na przykład `EXTCODESIZE` i `EXTCODECOPY` są niedoszacowane, ponieważ wymagają dwóch oddzielnych odczytów z bazy danych — jednego dla obiektu konta, a drugiego dla rzeczywistego rozmiaru kodu lub kodu bajtowego.
 
-**Aktualizacja kosztów gaz dla dostępu do stanu (lub EIP-8038)** zwiększa stałe gaz dla kodów operacji dostępu do stanu, takich jak wyszukiwanie danych konto i kontraktu, aby dostosować je do wydajności nowoczesnego sprzętu i rozmiaru stan. 
+**Aktualizacja kosztu gazu za dostęp do stanu (czyli EIP-8038)** zwiększa stałe gazu dla kodów operacji dostępu do stanu, takich jak wyszukiwanie danych konta i kontraktu, aby dostosować je do wydajności nowoczesnego sprzętu i rozmiaru stanu.
 
-Ujednolicenie kosztów dostępu do stanu pomaga również zwiększyć odporność sieci Ethereum. Ponieważ te intensywne operacje odczytu danych są sztucznie tanie, złośliwy atakujący mógłby zasypać sieć tysiącami złożonych żądań danych w jednym blok, zanim osiągnie limit opłat sieci, potencjalnie powodując sieć spowolnienie lub awarię (atak typu DoS). Nawet bez złych intencji, deweloperzy nie są ekonomicznie zachęcani do tworzenia wydajnych aplikacji, jeśli odczyt danych sieć jest zbyt tani.
+Dostosowanie kosztu dostępu do stanu pomaga również uczynić Ethereum bardziej odpornym. Ponieważ te ciężkie działania polegające na odczycie danych są sztucznie tanie, złośliwy atakujący mógłby spamować sieć tysiącami złożonych żądań danych w jednym bloku przed osiągnięciem limitu opłat sieciowych, potencjalnie powodując zatrzymanie lub awarię sieci (atak typu odmowa usługi). Nawet bez złośliwych intencji, deweloperzy nie są ekonomicznie zachęcani do budowania wydajnych aplikacji, jeśli odczytywanie danych sieciowych jest zbyt tanie.
 
-Dzięki dokładniejszemu wycenianiu działań związanych z dostępem do stanu, Ethereum może być bardziej odporne na przypadkowe lub celowe spowolnienia, a dostosowanie kosztów sieć do obciążenia sprzętowego okazuje się bardziej zrównoważoną podstawą do przyszłych podwyżek limit gazu.
+Dzięki dokładniejszemu wycenianiu działań związanych z dostępem do stanu, Ethereum może być bardziej odporne na przypadkowe lub celowe spowolnienia, podczas gdy dostosowanie kosztów sieciowych do obciążenia sprzętu stanowi bardziej zrównoważoną podstawę dla przyszłych wzrostów limitu gazu.
 
 **Zasoby**: [Specyfikacja techniczna EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
-## Odporność sieci 
+## Odporność sieci {#network-resilience}
 
-Usprawnienia w obowiązkach walidator i procesach wyjścia zapewniają stabilność sieć podczas masowych zdarzeń slashingowych i demokratyzują płynność. Te ulepszenia sprawiają, że sieć jest bardziej stabilna i zapewniają, że wszyscy uczestnicy, zarówno duzi, jak i mali, są traktowani sprawiedliwie.
+Udoskonalenia obowiązków walidatorów i procesów wyjścia zapewniają stabilność sieci podczas zdarzeń masowego cięcia (mass-slashing) i demokratyzują płynność. Te ulepszenia sprawiają, że sieć jest bardziej stabilna i zapewniają, że wszyscy uczestnicy, duzi i mali, są traktowani sprawiedliwie.
 
-### Wyklucz walidatorzy z obniżonym limitem z proponowania {#exclude-slashed-validators}
+### Wykluczenie ukaranych cięciem walidatorów z proponowania {#exclude-slashed-validators}
 
-- Uniemożliwia wybór ukaranych (zdyskwalifikowanych) walidatorzy do proponowania przyszłych bloki, eliminując gwarantowane pominięte sloty.
-- Zapewnia płynne i niezawodne działanie Ethereum, zapobiegając poważnym przestojom w przypadku masowego cięcie.
+- Powstrzymuje ukaranych (poddanych cięciu) walidatorów przed wyborem do proponowania przyszłych bloków, eliminując gwarantowane pominięte sloty
+- Utrzymuje płynne i niezawodne działanie Ethereum, zapobiegając poważnym przestojom w przypadku zdarzenia masowego cięcia
 
-Obecnie, nawet jeśli walidator zostanie ukarany (za naruszenie zasad lub niedziałanie zgodnie z oczekiwaniami), system może nadal wybrać go do prowadzenia blok w niedalekiej przyszłości, gdy generuje przyszłe podpowiedzi dla propozytora. 
+Obecnie, nawet jeśli walidator zostanie ukarany cięciem (ukarany za złamanie zasad lub niedziałanie zgodnie z oczekiwaniami), system może nadal wybrać go do prowadzenia bloku w niedalekiej przyszłości, gdy generuje przyszłe prognozy proponujących.
 
-Ponieważ bloki od proponentów bloku, których stawki zostały obcięte, są automatycznie odrzucane jako nieprawidłowe, powoduje to, że sieć pomija sloty i opóźnia odzyskiwanie sieć podczas masowych cięcie stawek. 
+Ponieważ bloki od ukaranych cięciem proponujących są automatycznie odrzucane jako nieważne, powoduje to, że sieć pomija sloty i opóźnia odzyskiwanie sieci podczas zdarzeń masowego cięcia.
 
-**Wykluczenie ukaranych walidatorzy z proponowania (lub EIP-8045)** po prostu odfiltrowuje ukaranych walidatorzy z wyboru do przyszłych zadań. Poprawia to odporność łańcucha, zapewniając, że tylko zdrowi walidatorzy są wybierani do proponowania bloki, utrzymując jakość usług podczas zakłóceń sieć.
+**Wykluczenie ukaranych cięciem walidatorów z proponowania (czyli EIP-8045)** po prostu odfiltrowuje ukaranych cięciem walidatorów z wyboru do przyszłych obowiązków. Poprawia to odporność łańcucha, zapewniając, że tylko zdrowi walidatorzy są wybierani do proponowania bloków, utrzymując jakość usług podczas zakłóceń w sieci.
 
 **Zasoby**: [Specyfikacja techniczna EIP-8045](https://eips.ethereum.org/EIPS/eip-8045)
 
-### Zezwól wyjściom na korzystanie z kolejki konsolidacji {#let-exits-use-the-consolidation-queue}
+### Pozwolenie wyjściom na korzystanie z kolejki konsolidacji {#let-exits-use-the-consolidation-queue}
 
-- Zamyka lukę prawną, która pozwala walidatorzy z dużymi saldami opuszczać sieć szybciej niż walidatorzy z mniejszymi saldami za pośrednictwem kolejki konsolidacyjnej. 
-- Umożliwia regularnym wypłatom przechodzenie do tej drugiej kolejki, gdy ma ona wolną przestrzeń, skracając czas wypłat środków ze staking w okresach wzmożonego ruchu.
-- Utrzymuje ścisłe zabezpieczenia, aby uniknąć zmiany podstawowych limitów bezpieczeństwa Ethereum lub osłabienia sieć.
+- Zamyka lukę, która pozwala walidatorom z wysokim saldem na szybsze wyjście z sieci niż mniejszym walidatorom za pośrednictwem kolejki konsolidacji
+- Pozwala na przepełnienie regularnych wyjść do tej drugiej kolejki, gdy ma ona wolną pojemność, skracając czas wypłat ze stakingu w okresach dużego natężenia
+- Utrzymuje ścisłe bezpieczeństwo, aby uniknąć zmiany podstawowych limitów bezpieczeństwa Ethereum lub osłabienia sieci
 
-Ponieważ [aktualizacja Pectra](/roadmap/pectra) zwiększyła maksymalny efektywny depozyt dla walidatorzy Ethereum z 32 ETH do 2048 ETH, luka techniczna pozwala walidatorzy z wysokimi depozytami na szybsze wyjście z sieć niż walidatorzy z mniejszymi depozytami za pośrednictwem kolejki konsolidacyjnej.
+Odkąd [aktualizacja Pectra](/roadmap/pectra) zwiększyła maksymalne efektywne saldo dla walidatorów Ethereum z 32 ETH do 2048 ETH, techniczna luka pozwala walidatorom z wysokim saldem na szybsze wyjście z sieci niż mniejszym walidatorom za pośrednictwem kolejki konsolidacji.
 
-**Zezwolenie na używanie kolejki konsolidacyjnej (lub EIP-8080) przez wyjścia** demokratyzuje kolejkę konsolidacyjną dla wszystkich wyjść ze staking, tworząc jedną, sprawiedliwą kolejkę dla wszystkich.  
+**Pozwolenie wyjściom na korzystanie z kolejki konsolidacji (czyli EIP-8080)** demokratyzuje kolejkę konsolidacji dla wszystkich wyjść ze stakingu, tworząc jedną, sprawiedliwą linię dla wszystkich.
 
-Oto jak to działa obecnie:
+Aby przeanalizować, jak to działa dzisiaj:
 
-- Limit churnu Ethereum to limit bezpieczeństwa dotyczący szybkości, z jaką walidatorzy mogą wchodzić, wychodzić lub łączyć (konsolidować) swoje postawione ETH, aby zapewnić, że bezpieczeństwo sieci nigdy nie zostanie zdestabilizowane.
-- Ponieważ konsolidacja walidator jest cięższą akcją z większą liczbą ruchomych części niż standardowe wyjście walidator, zużywa ona większą część tego budżetu bezpieczeństwa (limit churn). 
-- Dokładniej, protokół określa, że dokładny koszt bezpieczeństwa jednego standardowego wyjścia wynosi dwie trzecie (2/3) kosztu jednej konsolidacji.
+- Limit rotacji Ethereum to limit bezpieczeństwa dotyczący tempa, w jakim walidatorzy mogą wchodzić, wychodzić lub łączyć (konsolidować) swoje stakowane ETH, aby zapewnić, że bezpieczeństwo sieci nigdy nie zostanie zdestabilizowane
+- Ponieważ konsolidacja walidatora jest cięższym działaniem z większą liczbą ruchomych części niż standardowe wyjście walidatora, pochłania ona większą część tego budżetu bezpieczeństwa (limitu rotacji)
+- W szczególności protokół dyktuje, że dokładny koszt bezpieczeństwa jednego standardowego wyjścia wynosi dwie trzecie (2/3) kosztu jednej konsolidacji
 
-Sprawiedliwsze kolejki wyjściowe pozwolą standardowym wyjściom pożyczać niewykorzystane miejsce z kolejki konsolidacyjnej w okresach dużego zapotrzebowania na wyjścia, stosując kurs wymiany „3 za 2” (na każde 2 niewykorzystane miejsca konsolidacyjne sieć może bezpiecznie przetworzyć 3 standardowe wyjścia). Ten współczynnik rotacji 3/2 równoważy popyt w kolejkach konsolidacyjnych i wyjściowych.
+Sprawiedliwsze kolejki wyjścia pozwolą standardowym wyjściom na pożyczanie niewykorzystanego miejsca z kolejki konsolidacji w okresach wysokiego popytu na wyjścia, stosując kurs wymiany „3 za 2” (na każde 2 niewykorzystane miejsca konsolidacji sieć może bezpiecznie przetworzyć 3 standardowe wyjścia). Ten współczynnik rotacji 3/2 równoważy popyt w kolejkach konsolidacji i wyjścia.
 
-Demokratyzacja dostępu do kolejki konsolidacyjnej zwiększy do 2,5x szybkość, z jaką użytkownicy mogą wyjść ze swojej stawka w okresach wysokiego popytu, bez uszczerbku dla bezpieczeństwa sieć.
+Demokratyzacja dostępu do kolejki konsolidacji zwiększy prędkość, z jaką użytkownicy mogą wycofać swoją stawkę w okresach wysokiego popytu, nawet 2,5-krotnie, bez narażania bezpieczeństwa sieci.
 
 **Zasoby**: [Specyfikacja techniczna EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
 
-## Poprawa doświadczeń użytkowników i deweloperów {#improve-user-developer-experience}
+## Poprawa doświadczenia użytkowników i deweloperów {#improve-user-developer-experience}
 
-Aktualizacja Glamsterdam dla Ethereum ma na celu poprawę komfortu użytkowania, zwiększenie możliwości wyszukiwania danych i obsługę rosnących rozmiarów wiadomości w celu zapobiegania błędom synchronizacji. Ułatwia to śledzenie tego, co dzieje się na łańcuchu, jednocześnie zapobiegając problemom technicznym w miarę skalowania sieć.
+Aktualizacja Glamsterdam w Ethereum ma na celu poprawę doświadczenia użytkownika, zwiększenie wykrywalności danych i obsługę rosnących rozmiarów wiadomości, aby zapobiec awariom synchronizacji. Ułatwia to śledzenie tego, co dzieje się onchain, jednocześnie zapobiegając problemom technicznym w miarę skalowania sieci.
 
-### Zmniejsz wewnętrzne koszty gaz transakcja {#reduce-intrinsic-transaction-gas-costs}
+### Zmniejszenie wewnętrznych kosztów gazu transakcji {#reduce-intrinsic-transaction-gas-costs}
 
-- Obniża podstawowa opłata za transakcje, zmniejszając całkowity koszt prostej, natywnej płatności w ETH. 
-- Dzięki temu mniejsze przelewy stają się bardziej przystępne cenowo, co zwiększa rentowność Ethereum jako rutynowego środka wymiany.
+- Obniża opłatę podstawową za transakcje, zmniejszając całkowity koszt prostej natywnej płatności w ETH
+- Sprawia, że mniejsze transfery są bardziej przystępne cenowo, zwiększając opłacalność Ethereum jako rutynowego środka wymiany
 
-Wszystkie transakcje Ethereum mają dziś stałą podstawową opłata za gaz, niezależnie od tego, jak proste lub złożone jest ich przetwarzanie. **Zmniejszenie wewnętrznego gaz transakcja (lub EIP-2780)** proponuje obniżenie tej podstawowa opłata, aby standardowy transfer ETH między istniejącymi kontami był do 71% tańszy. 
+Wszystkie transakcje Ethereum mają dziś zryczałtowaną podstawową opłatę za gaz, niezależnie od tego, jak proste lub złożone jest ich przetworzenie. **Zmniejszenie wewnętrznego gazu transakcji (czyli EIP-2780)** proponuje obniżenie tej opłaty podstawowej, aby standardowy transfer ETH między istniejącymi kontami był nawet o **71% tańszy**.
 
-Zmniejszenie wewnętrznego zużycia gaz transakcja poprzez rozbicie opłata transakcyjna tak, aby odzwierciedlała jedynie podstawową, niezbędną pracę, którą faktycznie wykonują komputery obsługujące sieć, taką jak weryfikacja podpis cyfrowy i aktualizacja salda. Ponieważ podstawowa płatność ETH nie wykonuje złożonego kodu ani nie przenosi dodatkowych danych, ta propozycja zmniejszyłaby jej opłatę, aby odpowiadała jej niewielkiemu obciążeniu. 
+Zmniejszenie wewnętrznego gazu transakcji działa poprzez rozbicie opłaty transakcyjnej tak, aby odzwierciedlała tylko podstawową, niezbędną pracę, którą faktycznie wykonują komputery obsługujące sieć, taką jak weryfikacja podpisu cyfrowego i aktualizacja salda. Ponieważ podstawowa płatność w ETH nie wykonuje złożonego kodu ani nie przenosi dodatkowych danych, ta propozycja obniżyłaby jej opłatę, aby dopasować ją do jej lekkiego charakteru.
 
-Propozycja wprowadza wyjątek dla tworzenia zupełnie nowych kont, aby niższe opłaty nie przeciążyły stan sieci. Jeśli transfer wysyła ETH na pusty, nieistniejący adres, sieć musi utworzyć dla niego trwały nowy rekord. Za utworzenie tego konto dodawana jest dopłata za gaz, aby pomóc pokryć długoterminowe koszty jego przechowywania. 
+Propozycja wprowadza wyjątek dla tworzenia zupełnie nowych kont, aby zapobiec przytłoczeniu stanu sieci przez niższe opłaty. Jeśli transfer wysyła ETH na pusty, nieistniejący adres, sieć musi utworzyć dla niego nowy, trwały rekord. Do tworzenia tego konta dodawana jest dopłata za gaz, aby pomóc pokryć obciążenie związane z jego długoterminowym przechowywaniem.
 
-Ogólnie rzecz biorąc, EIP-2780 ma na celu obniżenie kosztów codziennych przelewów między istniejącymi kontami, jednocześnie zapewniając ochronę sieć przed nadmiernym rozmiarem bazy danych poprzez dokładne wycenianie rzeczywistego wzrostu stan.
+Razem, EIP-2780 ma na celu uczynienie codziennych transferów między istniejącymi kontami bardziej przystępnymi cenowo, przy jednoczesnym zapewnieniu, że sieć jest nadal chroniona przed rozrostem bazy danych poprzez dokładne wycenianie prawdziwego wzrostu stanu.
 
 **Zasoby**: [Specyfikacja techniczna EIP-2780](https://eips.ethereum.org/EIPS/eip-2780)
 
-### Deterministyczne wstępne wdrożenie fabryczne {#deterministic-factory-predeploy}
+### Deterministyczne wstępne wdrożenie fabryki (Deterministic Factory Predeploy) {#deterministic-factory-predeploy}
 
-- Zapewnia programistom natywny sposób wdrażania aplikacji i portfeli inteligentny kontrakt pod dokładnie tym samym adres w wielu łańcuchach.
-- Umożliwia użytkownikom posiadanie tego samego adres inteligentnego portfel w wielu sieciach warstwy 2 (L2), zmniejszając obciążenie poznawcze, redukując zamieszanie i zmniejszając ryzyko przypadkowej utraty środków. 
-- Zastępuje obejścia, których obecnie używają programiści, aby osiągnąć tę równość, dzięki czemu tworzenie portfeli i aplikacji wielołańcuchowych jest łatwiejsze i bezpieczniejsze.
+- Daje deweloperom natywny sposób na wdrażanie aplikacji i portfeli inteligentnych kontraktów pod dokładnie tym samym adresem w wielu łańcuchach
+- Pozwala użytkownikom na posiadanie tego samego adresu inteligentnego portfela w wielu sieciach warstwy 2 (L2), zmniejszając obciążenie poznawcze, redukując zamieszanie i zmniejszając ryzyko przypadkowej utraty środków
+- Zastępuje obejścia, których deweloperzy obecnie używają do osiągnięcia tego parytetu, ułatwiając i zwiększając bezpieczeństwo budowania wielołańcuchowych portfeli i aplikacji
 
-Jeśli użytkownik posiada dziś portfel inteligentny kontrakt z kontami w wielu sieciach kompatybilnych z maszyną wirtualną Ethereum (EVM), często kończy się to posiadaniem zupełnie innych adres w różnych sieciach. Jest to nie tylko mylące, ale może również prowadzić do przypadkowej utraty środków. 
+Jeśli użytkownik posiada dziś portfel inteligentnych kontraktów z kontami w wielu łańcuchach kompatybilnych z Maszyną Wirtualną Ethereum (EVM), często kończy z zupełnie innym adresem w różnych sieciach. Jest to nie tylko mylące, ale może prowadzić do przypadkowej utraty środków.
 
-**Deterministyczne fabryczne wdrożenie wstępne (lub EIP-7997)** zapewnia programistom natywny, wbudowany sposób wdrażania zdecentralizowany aplikacji i portfeli inteligentny kontrakt pod dokładnie tym samym adres w wielu sieciach EVM, w tym w sieci głównej Ethereum, sieciach warstwy 2 (L2) i innych. Jeśli zostanie przyjęte, umożliwi użytkownikom posiadanie dokładnie tego samego adres w każdym uczestniczącym łańcuchu, znacznie zmniejszając obciążenie poznawcze i potencjalne błędy użytkownika.
+**Deterministyczne wstępne wdrożenie fabryki (czyli EIP-7997)** daje deweloperom natywny, wbudowany sposób na wdrażanie ich zdecentralizowanych aplikacji i portfeli inteligentnych kontraktów pod dokładnie tym samym adresem w wielu łańcuchach EVM, w tym w sieci głównej Ethereum, sieciach warstwy 2 (L2) i innych. Jeśli zostanie przyjęte, pozwoliłoby to użytkownikowi na posiadanie dokładnie tego samego adresu w każdym uczestniczącym łańcuchu, znacznie zmniejszając obciążenie poznawcze i potencjał błędu użytkownika.
 
-Deterministyczne fabryczne wstępne wdrożenie działa poprzez trwałe umieszczenie minimalnego, wyspecjalizowanego programu fabrycznego w identycznej lokalizacji (konkretnie adres 0x12) na każdym uczestniczącym łańcuchu kompatybilnym z EVM. Jego celem jest zapewnienie uniwersalnej, standardowej umowy fabrycznej, która może zostać przyjęta przez dowolną sieć kompatybilną z EVM; dopóki łańcuch EVM uczestniczy i przyjmuje ten standard, deweloperzy będą mogli go używać do wdrażania swoich inteligentnych kontraktów pod dokładnie tym samym adres w tej sieć. 
+Deterministyczne wstępne wdrożenie fabryki działa poprzez trwałe umieszczenie minimalnego, wyspecjalizowanego programu fabryki w identycznej lokalizacji (konkretnie pod adresem 0x12) w każdym uczestniczącym łańcuchu kompatybilnym z EVM. Jego celem jest zapewnienie uniwersalnego, standardowego kontraktu fabryki, który może zostać przyjęty przez dowolną sieć kompatybilną z EVM; dopóki łańcuch EVM uczestniczy i przyjmuje ten standard, deweloperzy będą mogli go używać do wdrażania swoich inteligentnych kontraktów pod dokładnie tym samym adresem w tej sieci.
 
-Ta standaryzacja upraszcza tworzenie i zarządzanie aplikacjami międzyłańcuchowymi dla programistów i szerszego ekosystemu. Programiści nie muszą już tworzyć niestandardowego, specyficznego dla danego łańcucha kodu, aby połączyć swoje oprogramowanie w różnych sieciach, zamiast tego używają tej uniwersalnej fabryki do generowania dokładnie tego samego adres dla swojej aplikacji wszędzie. Ponadto eksploratory blok, usługi śledzenia i portfele mogą łatwiej identyfikować i łączyć te aplikacje i konta w różnych łańcuchach, tworząc bardziej ujednolicone i płynne środowisko wielołańcuchowe dla wszystkich uczestników opartych na Ethereum. 
+Ta standaryzacja upraszcza budowanie i zarządzanie aplikacjami międzyłańcuchowymi dla deweloperów i szerszego ekosystemu. Deweloperzy nie muszą już pisać niestandardowego, specyficznego dla łańcucha kodu, aby połączyć swoje oprogramowanie w różnych sieciach, zamiast tego używając tej uniwersalnej fabryki do wygenerowania dokładnie tego samego adresu dla swojej aplikacji wszędzie. Ponadto eksploratory bloków, usługi śledzenia i portfele mogą łatwiej identyfikować i łączyć te aplikacje i konta w różnych łańcuchach, tworząc bardziej zunifikowane i płynne środowisko wielołańcuchowe dla wszystkich uczestników opartych na Ethereum.
 
 **Zasoby**: [Specyfikacja techniczna EIP-7997](https://eips.ethereum.org/EIPS/eip-7997)
 
-### Przelewy i spalanie ETH emitują log {#eth-transfers-and-burns-emit-a-log}
+### Transfery i spalanie ETH emitują log {#eth-transfers-and-burns-emit-a-log}
 
-- Automatycznie generuje trwały zapis (dziennik) za każdym razem, gdy ETH jest przesyłane lub spalane.
-- Usuwa historyczną lukę, która pozwala aplikacjom, giełdom i mostom na niezawodne wykrywanie wpłat użytkowników bez użycia doraźnych narzędzi do śledzenia.
+- Automatycznie generuje trwały rekord (log) za każdym razem, gdy ETH jest transferowane lub spalane
+- Naprawia historyczny martwy punkt, co pozwala aplikacjom, giełdom i mostom na niezawodne wykrywanie depozytów użytkowników bez narzędzi do śledzenia ad-hoc
 
-W przeciwieństwie do tokenów (ERC-20), zwykłe transfery ETH między inteligentnymi kontraktami nie generują wyraźnego potwierdzenia (standardowego logu), co utrudnia ich śledzenie przez giełdy i aplikacje.
+W przeciwieństwie do tokenów (ERC-20), regularne transfery ETH między inteligentnymi kontraktami nie emitują wyraźnego pokwitowania (standardowego logu), co utrudnia giełdom i aplikacjom ich śledzenie.
 
-Przelewy i spalanie ETH emitują log (lub EIP-7708), co sprawia, że sieć musi emitować standardowe zdarzenie logu za każdym razem, gdy przenoszona lub spalana jest niezerowa ilość ETH.
+Transfery i spalanie ETH emitują log (czyli EIP-7708) sprawia, że sieć ma obowiązek emitować standardowe zdarzenie logu za każdym razem, gdy niezerowa ilość ETH jest przenoszona lub spalana.
 
-Dzięki temu portfele, giełdy i operatorzy most będą mogli znacznie łatwiej i bardziej niezawodnie śledzić depozyty i przepływy środków bez potrzeby stosowania niestandardowych narzędzi.
+Sprawi to, że dokładne śledzenie depozytów i ruchów bez niestandardowych narzędzi będzie znacznie łatwiejsze i bardziej niezawodne dla portfeli, giełd i operatorów mostów.
 
 **Zasoby**: [Specyfikacja techniczna EIP-7708](https://eips.ethereum.org/EIPS/eip-7708)
 
-### eth/70 częściowe listy odbiorców blok {#eth-70-partial-block-receipt-lists}
+### Częściowe listy pokwitowań bloków eth/70 {#eth-70-partial-block-receipt-lists}
 
-W miarę zwiększania ilości pracy, jaką może wykonać Ethereum, listy potwierdzeń tych działań (zapisy danych tych transakcje) stają się tak duże, że mogą potencjalnie spowodować awarię węzłów sieci podczas próby synchronizacji danych między sobą. 
+W miarę jak zwiększamy ilość pracy, którą może wykonać Ethereum, listy pokwitowań dla tych działań (rekordy danych tych transakcji) stają się tak duże, że mogłyby potencjalnie spowodować awarię węzłów sieci podczas próby synchronizacji danych między sobą.
 
-eth/70 (lub EIP-7975) wprowadza nowy sposób komunikacji między węzłami (eth/70), który pozwala na podzielenie dużych list potwierdzeń blok na mniejsze, łatwiejsze do zarządzania części. eth/70 wprowadza system stronicowania dla protokół komunikacyjnego sieci, który pozwala węzłom dzielić listy potwierdzeń blok i bezpiecznie żądać danych w mniejszych, łatwiejszych do zarządzania fragmentach.
+Częściowe listy pokwitowań bloków eth/70 (czyli EIP-7975), będące obecnie wymogiem dla wszystkich klientów warstwy wykonawczej, wprowadzają nowy sposób komunikacji między węzłami (eth/70), który pozwala na podzielenie tych dużych list na mniejsze, łatwiejsze do zarządzania części. eth/70 wprowadza system paginacji dla protokołu komunikacyjnego sieci, który pozwala węzłom na dzielenie list pokwitowań bloków i bezpieczne żądanie danych w mniejszych, łatwiejszych do zarządzania fragmentach.
 
-Ta zmiana zapobiegnie awariom synchronizacji sieć w okresach wzmożonej aktywności. Ostatecznie utoruje ona drogę dla Ethereum do zwiększenia pojemności blok i przetwarzania większej transakcje na blok w przyszłości, bez przeciążania fizycznego sprzętu synchronizującego łańcuch.
+Ta zmiana zapobiegłaby awariom synchronizacji sieci w okresach dużej aktywności. Ostatecznie toruje to drogę dla Ethereum do zwiększenia pojemności bloków i przetwarzania większej liczby transakcji na blok w przyszłości, bez przytłaczania fizycznego sprzętu synchronizującego łańcuch.
 
 **Zasoby**: [Specyfikacja techniczna EIP-7975](https://eips.ethereum.org/EIPS/eip-7975)
 
 ## Dalsza lektura {#further-reading}
 
-- [plan działania Ethereum](/roadmap/)
+- [Mapa drogowa Ethereum](/roadmap/)
 - [Forkcast: Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
-- [Glamsterdam Meta EIP](https://eips.ethereum.org/EIPS/eip-7773) 
-- [Aktualizacja priorytetów protokołu na 2026 r. – ogłoszenie na blogu](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
-- [Podcast The Daily Gwei Refuel – Post-kwantowe Ethereum, nadchodzi Glamsterdam](https://www.youtube.com/watch?v=qx9sd50uQjQ) 
+- [Glamsterdam Meta EIP](https://eips.ethereum.org/EIPS/eip-7773)
+- [Ogłoszenie na blogu: Aktualizacja priorytetów protokołu na 2026 rok](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
+- [Podcast The Daily Gwei Refuel - Post-kwantowe Ethereum, nadchodzi Glamsterdam](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 
-## Często zadawane pytania {#faq}
+## Często zadawane pytania (FAQ) {#faq}
 
-### Jak można przekonwertować ETH po hard fork Glamsterdam? {#how-can-eth-be-converted-after-the-hardfork}
+### Jak można przekonwertować ETH po twardym rozwidleniu Glamsterdam? {#how-can-eth-be-converted-after-the-hardfork}
 
-- **Brak konieczności podejmowania działań w odniesieniu do Twoich ETH**: Po aktualizacji Glamsterdam nie ma potrzeby konwertowania ani ulepszania Twoich ETH. Salda Twoich konto pozostaną bez zmian, a ETH, które obecnie posiadasz, pozostanie dostępne w obecnej formie po hard fork.
-- **Uważaj na oszustwa!**<Emoji text="⚠️" /> **Każdy, kto instruuje Cię, aby „uaktualnić” swoje ETH, próbuje Cię oszukać.** Nie musisz nic robić w związku z tą aktualizacją. Twoje aktywa pozostaną całkowicie nienaruszone. Pamiętaj, że bycie poinformowanym to najlepsza obrona przed oszustwami.
+- **Twoje ETH nie wymaga żadnych działań**: Nie ma potrzeby konwertowania ani aktualizowania ETH po aktualizacji Glamsterdam. Salda Twoich kont pozostaną takie same, a ETH, które obecnie posiadasz, pozostanie dostępne w swojej dotychczasowej formie po twardym rozwidleniu.
+- **Uważaj na oszustwa!** <Emoji text="⚠️" /> **każdy, kto instruuje Cię, aby „zaktualizować” Twoje ETH, próbuje Cię oszukać.** Nie musisz nic robić w związku z tą aktualizacją. Twoje aktywa pozostaną całkowicie nienaruszone. Pamiętaj, że bycie poinformowanym to najlepsza obrona przed oszustwami.
 
 [Więcej o rozpoznawaniu i unikaniu oszustw](/security/)
 
-### Czy aktualizacja Glamsterdam dotyczy wszystkich węzłów i walidatorzy Ethereum? {#does-the-glamsterdam-upgrade-affect-all-ethereum-nodes-and-validators}
+### Czy aktualizacja Glamsterdam wpływa na wszystkie węzły i walidatory Ethereum? {#does-the-glamsterdam-upgrade-affect-all-ethereum-nodes-and-validators}
 
-Tak, aktualizacja Glamsterdam wymaga aktualizacji zarówno [klientów wykonawczych, jak i klientów konsensusu](/developers/docs/nodes-and-clients/). Ponieważ ta aktualizacja wprowadza Enshrined Proposer-Builder Separation (ePBS), operatorzy węzeł będą musieli upewnić się, że ich klienci są zaktualizowani, aby obsługiwać nowe sposoby tworzenia, walidacji i poświadczania bloki przez sieć. 
+Tak, aktualizacja Glamsterdam wymaga aktualizacji zarówno [klientów wykonawczych, jak i klientów konsensusu](/developers/docs/nodes-and-clients/). Ponieważ ta aktualizacja wprowadza wbudowaną w protokół separację proponującego i budującego (ePBS), operatorzy węzłów będą musieli upewnić się, że ich klienci są zaktualizowani, aby obsługiwać nowe sposoby budowania, walidacji i poświadczania bloków przez sieć.
 
-Wszyscy główni klienci Ethereum wydadzą wersje obsługujące hard fork oznaczony jako wysoki priorytet. Możesz śledzić, kiedy te wersje będą dostępne w repozytoriach klient na GitHubie, na ich [kanałach Discord](https://ethstaker.org/support), na [Discordzie EthStaker](https://dsc.gg/ethstaker) lub subskrybując blog Ethereum, aby otrzymywać aktualizacje protokół. 
+Wszyscy główni klienci Ethereum wydadzą wersje obsługujące twarde rozwidlenie oznaczone jako wysoki priorytet. Możesz śledzić, kiedy te wydania będą dostępne w repozytoriach klientów na GitHub, na ich [kanałach Discord](https://ethstaker.org/support), na [Discordzie EthStaker](https://dsc.gg/ethstaker) lub subskrybując blog Ethereum, aby otrzymywać aktualizacje protokołu.
 
-Aby utrzymać synchronizację z sieć Ethereum po aktualizacji, operatorzy węzeł muszą upewnić się, że używają obsługiwanej wersji klient. Należy pamiętać, że informacje o wydaniach klient są ograniczone czasowo, a użytkownicy powinni zapoznać się z najnowszymi aktualizacjami, aby uzyskać najbardziej aktualne informacje.
+Aby utrzymać synchronizację z siecią Ethereum po aktualizacji, operatorzy węzłów muszą upewnić się, że używają obsługiwanej wersji klienta. Należy pamiętać, że informacje o wydaniach klientów są wrażliwe na czas, a użytkownicy powinni odnosić się do najnowszych aktualizacji, aby uzyskać najbardziej aktualne szczegóły.
 
-### Co jako stakujący muszę zrobić w związku z aktualizacją Glamsterdam? {#as-a-staker-what-do-i-need-to-do-for-the-glamsterdam-upgrade}
+### Jako staker, co muszę zrobić w związku z aktualizacją Glamsterdam? {#as-a-staker-what-do-i-need-to-do-for-the-glamsterdam-upgrade}
 
-Jak w przypadku każdej aktualizacji sieć, upewnij się, że zaktualizowałeś swoje oprogramowanie klienckie do najnowszych wersji oznaczonych jako wspierane przez Glamsterdam. Śledź aktualizacje na liście mailingowej i [ogłoszenia dotyczące protokołu na blogu EF,](https://blog.ethereum.org/category/protocol) aby być na bieżąco z wydaniami.
+Podobnie jak w przypadku każdej aktualizacji sieci, upewnij się, że zaktualizowałeś swoich klientów do najnowszych wersji oznaczonych jako obsługujące Glamsterdam. Śledź aktualizacje na liście mailingowej i [Ogłoszenia dotyczące protokołu na blogu EF](https://blog.ethereum.org/category/protocol), aby być na bieżąco z wydaniami.
 
-Aby zweryfikować swoją konfigurację przed aktywacją Glamsterdam w sieci głównej, możesz uruchomić walidator w sieciach testowych. Informacje o rozgałęzieniach sieci testowych są również ogłaszane na liście mailingowej i blogu.
+Aby zweryfikować swoją konfigurację przed aktywacją Glamsterdam w sieci głównej (Mainnet), możesz uruchomić walidator w sieciach testowych. Rozwidlenia sieci testowych są również ogłaszane na liście mailingowej i blogu.
 
-### Jakie ulepszenia wprowadzi Glamsterdam w zakresie skalowania L1? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
+### Jakie ulepszenia dla skalowania warstwy 1 (L1) będzie zawierać Glamsterdam? {#what-improvements-will-glamsterdam-include-for-l1-scaling}
 
-Główną funkcją jest ePBS (EIP-7732), która oddziela ciężkie zadanie walidacji transakcje sieć od zadania osiągania konsensus. Rozszerza to okno propagacji danych z 2 sekund do około 9 sekund, odblokowując zdolność Ethereum do bezpiecznego obsługiwania znacznie większej przepustowości transakcja i uwzględniania większej liczby bloków danych dla sieci warstwy 2.
+Główną funkcją jest ePBS (EIP-7732), która oddziela ciężkie zadanie walidacji transakcji sieciowych od zadania osiągania konsensusu. Wydłuża to okno propagacji danych z 2 sekund do około 9 sekund, odblokowując zdolność Ethereum do bezpiecznej obsługi znacznie wyższej przepustowości transakcji i pomieszczenia większej liczby blobów danych dla sieci warstwy 2 (L2).
 
-### Czy Glamsterdam obniży opłaty za Ethereum (warstwa 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
+### Czy Glamsterdam obniży opłaty w Ethereum (warstwa 1)? {#will-glamsterdam-lower-fees-on-ethereum-layer-1}
 
-Tak, Glamsterdam najprawdopodobniej obniży opłaty dla codziennych użytkowników! Zmniejszenie wewnętrznego gaz transakcja (lub EIP-2780) obniża podstawowa opłata za wysyłanie ETH, dzięki czemu korzystanie z ETH do codziennych płatności jest znacznie tańsze.
+Tak, Glamsterdam najprawdopodobniej obniży opłaty dla codziennych użytkowników! Zmniejszenie wewnętrznego gazu transakcji (czyli EIP-2780) obniża opłatę podstawową za wysyłanie ETH, sprawiając, że używanie ETH do codziennych płatności będzie znacznie tańsze.
 
-Ponadto, w celu zapewnienia długoterminowej zrównoważoności, Glamsterdam wprowadza listy dostępu na poziomie bloków (Block-Level Access Lists – BAL). Umożliwia to równoległe przetwarzanie i przygotowuje warstwę L1 do bezpiecznego obsługiwania wyższych ogólnych limitów gaz w przyszłości, co prawdopodobnie zmniejszy koszty gaz za transakcję w miarę wzrostu przepustowości.
+Ponadto, w celu zapewnienia długoterminowego zrównoważonego rozwoju, Glamsterdam wprowadza listy dostępu na poziomie bloku (BALs). Umożliwia to przetwarzanie równoległe i przygotowuje warstwę 1 (L1) do bezpiecznej obsługi wyższych ogólnych limitów gazu w przyszłości, co prawdopodobnie obniży koszty gazu na transakcję w miarę wzrostu pojemności.
 
-### Czy po Glamsterdamie nastąpią jakieś zmiany w moich dotychczasowych inteligentnych kontraktach? {#will-my-smart-contracts-change}
+### Czy po aktualizacji Glamsterdam nastąpią jakieś zmiany w moich istniejących inteligentnych kontraktach? {#will-my-smart-contracts-change}
 
-Istniejące kontrakty będą nadal działać normalnie po Glamsterdamie. Deweloperzy prawdopodobnie otrzymają kilka nowych narzędzi i powinni sprawdzić zużycie gaz:
-- Zwiększenie maksymalnego rozmiaru kontraktu (lub EIP-7954) pozwala programistom wdrażać większe aplikacje, podnosząc maksymalny limit rozmiaru kontraktu z około 24 KiB do 32 KiB. 
-- Deterministyczne fabryki predeploy (lub EIP-7997) wprowadzają uniwersalną, wbudowaną fabrykę kontraktów. Pozwala ona deweloperom wdrażać swoje aplikacje i portfele inteligentny kontrakt pod dokładnie tym samym adres we wszystkich uczestniczących łańcuchach EVM.
-- Jeśli Twoja aplikacja polega na złożonym śledzeniu w celu znalezienia transferów ETH, transfery i spalanie ETH emitują log (lub EIP-7708), co pozwoli Ci przełączyć się na używanie logów w celu prostszego i bardziej niezawodnego rozliczania.
-- Wzrost kosztów gaz przy tworzeniu stanu (lub EIP-8037) i aktualizacja kosztów gaz przy dostępie do stanu (lub EIP-8038) wprowadzają nowe modele zrównoważonego rozwoju, które zmienią pewne koszty wdrożenia kontraktu, ponieważ tworzenie nowych kont lub pamięci trwałej będzie miało dynamicznie dostosowywaną opłatę. 
+Istniejące kontrakty będą nadal działać normalnie po aktualizacji Glamsterdam. Deweloperzy prawdopodobnie otrzymają kilka nowych narzędzi i powinni przejrzeć swoje zużycie gazu:
 
-### Jak Glamsterdam wpłynie na przechowywanie danych w węzeł i wymagania sprzętowe? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
+- Zwiększenie maksymalnego rozmiaru kontraktu (czyli EIP-7954) pozwala deweloperom na wdrażanie większych aplikacji, podnosząc limit maksymalnego rozmiaru kontraktu z około 24 KiB do 32 KiB.
+- Deterministyczne wstępne wdrożenie fabryki (czyli EIP-7997) wprowadza uniwersalny, wbudowany kontrakt fabryki. Pozwala to deweloperom na wdrażanie ich aplikacji i portfeli inteligentnych kontraktów pod dokładnie tym samym adresem we wszystkich uczestniczących łańcuchach EVM.
+- Jeśli Twoja aplikacja opiera się na złożonym śledzeniu w celu znalezienia transferów ETH, transfery i spalanie ETH emitują log (czyli EIP-7708) pozwoli Ci na przejście na korzystanie z logów w celu prostszego i bardziej niezawodnego księgowania.
+- Wzrost kosztu gazu za tworzenie stanu (czyli EIP-8037) i aktualizacja kosztu gazu za dostęp do stanu (czyli EIP-8038) wprowadzają nowe modele zrównoważonego rozwoju, które zmienią niektóre koszty wdrożenia kontraktów, ponieważ tworzenie nowych kont lub trwałej pamięci masowej będzie miało nową, ustandaryzowaną stałą opłatę opartą na rozmiarze utworzonych danych.
 
-Wiele EIP rozważanych dla Glamsterdam adres się do problemu wydajności w miarę wzrostu stan: 
-- Zwiększenie kosztów gaz przy tworzeniu stanu (lub EIP-8037) wprowadza dynamiczny model cenowy, którego celem jest osiągnięcie tempa wzrostu bazy danych stan na poziomie 100 GiB/rok, zapewniając, że standardowy sprzęt fizyczny będzie mógł nadal wydajnie obsługiwać sieć. 
-- eth/70 częściowe listy potwierdzeń blok (lub EIP-7975) pozwalają węzłom na żądanie potwierdzeń blok w podziale na strony, co dzieli listy potwierdzeń blok o dużej objętości danych na mniejsze fragmenty, aby zapobiec awariom i synchronizacjom w miarę skalowania Ethereum.
+### Jak Glamsterdam wpłynie na pamięć masową węzłów i wymagania sprzętowe? {#how-will-glamsterdam-affect-node-storage-and-hardware-requirements}
 
+Wiele propozycji EIP rozważanych dla Glamsterdam rozwiązuje problem spadku wydajności związanego ze wzrostem stanu:
+
+- Wzrost kosztu gazu za tworzenie stanu (czyli EIP-8037) wprowadza ramy stałych kosztów (CPSB), aby celować w tempo wzrostu bazy danych stanu na poziomie 120 GiB/rok, zapewniając, że standardowy sprzęt fizyczny może nadal wydajnie obsługiwać sieć.
+- Częściowe listy pokwitowań bloków eth/70 (czyli EIP-7975) pozwalają węzłom na żądanie paginowanych pokwitowań bloków, co dzieli ciężkie pod względem danych listy pokwitowań bloków na mniejsze fragmenty, aby zapobiec awariom i problemom z synchronizacją w miarę skalowania Ethereum.

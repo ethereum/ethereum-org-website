@@ -21,11 +21,11 @@ Mengunci sebagai layanan ("SaaS") mewakili kategori layanan mengunci di mana And
 
 Protokol [Ethereum](/) tidak secara bawaan mendukung pendelegasian stake, sehingga layanan ini telah dibangun untuk memenuhi permintaan ini. Jika Anda memiliki 32 ETH untuk di-stake, tetapi merasa tidak nyaman berurusan dengan perangkat keras, layanan SaaS memungkinkan Anda untuk mendelegasikan bagian yang sulit sementara Anda mendapatkan hadiah blok bawaan.
 
-<CardGrid>
+<Grid>
   <Card title="Validator Anda sendiri" emoji=":desktop_computer:" description="Depositkan 32 ETH Anda sendiri untuk mengaktifkan set kunci penandatanganan Anda sendiri yang akan berpartisipasi dalam konsensus Ethereum. Pantau kemajuan Anda dengan dasbor untuk melihat akumulasi hadiah ETH tersebut." />
   <Card title="Mudah untuk memulai" emoji="🏁" description="Lupakan tentang spesifikasi perangkat keras, pengaturan, pemeliharaan node, dan peningkatan. Penyedia SaaS memungkinkan Anda mengalihdayakan bagian yang sulit dengan mengunggah kredensial penandatanganan Anda sendiri, memungkinkan mereka menjalankan validator atas nama Anda, dengan biaya kecil." />
   <Card title="Batasi risiko Anda" emoji=":shield:" description="Dalam banyak kasus, pengguna tidak perlu menyerahkan akses ke kunci yang memungkinkan penarikan atau transfer dana yang di-stake. Kunci ini berbeda dari kunci penandatanganan, dan dapat disimpan secara terpisah untuk membatasi (tetapi tidak menghilangkan) risiko Anda sebagai staker." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

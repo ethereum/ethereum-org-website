@@ -7,6 +7,7 @@ Reference for the components in `src/components/ui/` and notable feature compone
 ## Conventions
 
 Each entry has:
+
 - **Import path**
 - **What it's for** (one-line use case)
 - **Canonical usage** (shortest valid invocation)
@@ -30,7 +31,7 @@ The canonical clickable. `Button` for `<button>`-class actions; `ButtonLink` for
 
 **Variants**: `solid | outline | ghost | link` (default `solid`)
 **Sizes**: `lg | md | sm` (default `md`)
-**Other props**: `isSecondary` (flips text/border to body color; *only applies to `outline`/`ghost`*), `asChild` (Radix Slot), `toId` (smooth-scroll to element), `customEventOptions` (Matomo override).
+**Other props**: `isSecondary` (flips text/border to body color; _only applies to `outline`/`ghost`_), `asChild` (Radix Slot), `toId` (smooth-scroll to element), `customEventOptions` (Matomo override).
 
 `"use client"` because of click tracking and `scrollIntoView`.
 
@@ -42,11 +43,11 @@ import InlineLink, { BaseLink, LinkWithArrow } from "@/components/ui/Link"
 
 ALL anchor tags. Auto-detects external (new tab + sr-only "(opens in new tab)"), mailto, files (`.pdf`), hashes, and locale-aware routing.
 
-| Export | When to use |
-|---|---|
-| `InlineLink` (default) | In-prose links (has `visited:` styling) |
-| `BaseLink` | Inside `LinkOverlay`, as `ButtonLink` `asChild` slot, or when `visited:` styling is unwanted |
-| `LinkWithArrow` | CTA arrow links, RTL-flip-aware |
+| Export                 | When to use                                                                                  |
+| ---------------------- | -------------------------------------------------------------------------------------------- |
+| `InlineLink` (default) | In-prose links (has `visited:` styling)                                                      |
+| `BaseLink`             | Inside `LinkOverlay`, as `ButtonLink` `asChild` slot, or when `visited:` styling is unwanted |
+| `LinkWithArrow`        | CTA arrow links, RTL-flip-aware                                                              |
 
 `"use client"` because of `usePathname` and tracking.
 
@@ -74,7 +75,9 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 ```tsx
 <Card href="/x" variant="base" size="base">
   <CardHeader>
-    <CardBanner background="accent-a"><Image src="..." alt="..." /></CardBanner>
+    <CardBanner background="accent-a">
+      <Image src="..." alt="..." />
+    </CardBanner>
   </CardHeader>
   <CardContent>
     <CardTitle>Title</CardTitle>
@@ -87,6 +90,7 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 ```
 
 **`Card` variants**:
+
 - `variant`: `base` (default, `bg-background-highlight` grey) | `nested` (`bg-background`, use when inside a colored section) | `ghost` (no bg; auto-widens `--banner-radius` for edge-to-edge banners) | `header-bar` (highlight only on the header, bordered card, header laid out as an icon+text row with bottom border — all baked in, just drop a `CardHeader` inside).
 - `size`: `lg | base (default) | md | sm | xs`. Controls `--card-pad` (between/around parts) and `--content-space` (within `CardContent`). `xs` = zero padding for edge-to-edge banner imagery.
 - `href`: pass to wrap in `BaseLink` and get whole-card-clickable behavior with `group/link` propagation.
@@ -95,14 +99,17 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 **`CardHeader`**: no own variants. The parent `Card variant="header-bar"` applies the row layout / bottom border to descendant headers automatically.
 
 **`CardContent` variants**:
+
 - `spacing` (optional override): `lg | md | sm | xs`. Replaces `--content-space` locally when the body needs a different rhythm from the card-level `size`. Omit to inherit.
 - Expands to fill height (`flex-1`) so `CardFooter` pushes to the bottom and footers align across cards of varying content.
 - Default text color is `text-body-medium`; `CardTitle` and `<strong>` re-assert `text-body`. Don't set per-paragraph colors.
 
 **`CardFooter` variants**:
+
 - `buttons`: `full (default)` stretches buttons/ButtonLinks to full width with centered text | `compact` sizes them to fit | `inherit` opts out so children render at intrinsic width.
 
 **`CardBanner` variants**:
+
 - `background`: `body (default)` | `accent-a` | `accent-b` | `accent-c` | `primary` | `none`. `none` only when the image won't cover the full rectangle.
 - `size`: `full | lg | base (default) | sm | thumbnail-lg | thumbnail`. Use these instead of `className="h-..."` to stay on-rhythm. `thumbnail-lg` is a 128px square; `thumbnail` is 64px — both `shrink-0` for small logo/icon placements.
 - `fit`: `cover (default) | contain`. With `fit="contain"` and a single `<Image>` child, the banner auto-clones the image as a blurred backdrop. Two children breaks the magic.
@@ -110,16 +117,46 @@ The canonical card primitive. **Driven by CSS variables set on `Card`** (`--card
 - Placement: inside `CardHeader` for padded; as a direct child of `Card` (pair with `Card size="xs"` or `variant="ghost"`) for edge-to-edge.
 
 **`CardTitle` variants**:
+
 - `variant`: `semibold | bold (default) | black`.
 - `spacing` (gap before a following `CardParagraph` only): `quarter (default) | none | inherit`. Uses `:has(+...)` selector.
 - **`asChild`**: required when `<h3>` would break the document's heading outline. Pass your own semantic tag inside.
 
 **`CardParagraph` variants**:
+
 - `size`: omit (16px / `text-body-medium`) | `sm` (14px). Avoid other sizes.
 - `variant`: `uppercase | subtitle`.
 - `textColor="body"`: re-assert base body color (rare; inherits correctly by default).
 
 **`CardEmoji`**: wraps `<Emoji text=":rocket:" />` in a fixed-size `div` to prevent layout shift on client-side hydration. Typically lives in `CardHeader`.
+
+### `Grid`
+
+```tsx
+import { Grid } from "@/components/ui/grid"
+```
+
+Responsive grid for laying out a collection of items (cards, tiles, badges). Renders **at most `columns`** columns at full width and folds to fewer as the viewport narrows -- items shrink to a min width, then a column drops. **Use this instead of hand-rolling `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3`** or reaching for the raw `grid-cols-auto-*` utility — for **variable-length collections that fold one column at a time**.
+
+**When NOT to use the default (auto-fill) mode**: a _fixed, known_ set that must reflow **symmetrically** — e.g. exactly 4 cards that go `4 → 2×2 → 1` and should **never** show a lone 3-up row. Auto-fill folds `4 → 3 → 2 → 1`, so it introduces that orphan intermediate. For those, use the **`balanced`** variant (below), or keep an explicit breakpoint grid (`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4`).
+
+```tsx
+<Grid columns={3}>
+  {items.map((item) => (
+    <Card key={item.id} href={item.href}>
+      ...
+    </Card>
+  ))}
+</Grid>
+```
+
+**`Grid` variants**:
+
+- `columns`: `2`–`12` (default `4`). Max column count at full width; maps to a static `grid-cols-auto-N` class.
+- `size`: `small (7rem) | narrow (12rem) | base (18rem, default) | wide (22rem) | wider (26rem)`. The **min item width** (`--grid-item-min`) — the floor an item shrinks to before a column drops, and so the fold-aggressiveness lever. Pick by item shape: `small` for badges, `base` for standard content cards, `wide`/`wider` for horizontal items like callouts. Larger sizes wrap sooner; keep `columns` small enough that N items of the chosen width fit (min ≤ container/N).
+- `fit`: `boolean` (auto-fill mode only). Default keeps empty tracks (`auto-fill`); `fit` collapses them (`auto-fit`) so a partially-filled row stretches to fill the width.
+- `balanced`: `2 | 4`. A fixed, deterministic **breakpoint** reflow (overrides `columns` via `!important`; `size`/`fit` inert). `balanced={4}` → `4 → 2×2 → 1`, never an orphan 3-up row (which auto-fill produces); `balanced={2}` → `2 → 1` at `md`, a breakpoint-driven alternative to `columns={2}` (which folds by content width). Both fold `1 → 2` at `md`. Use with a **fixed set** of that many items (or a multiple).
+- Applies `gap-4`. `className` is spread last, so override the gap (or `--grid-item-min` / `--grid-repeat`) per call site only when genuinely needed.
 
 ### `Section`
 
@@ -151,13 +188,13 @@ import { Center, Flex, HStack, Stack, VStack } from "@/components/ui/flex"
 
 Layout primitives.
 
-| Component | Default classes |
-|---|---|
-| `Flex` | `flex` |
-| `Center` | `flex items-center justify-center` |
-| `Stack` | `flex flex-col gap-2` |
-| `HStack` | `flex flex-row items-center gap-2` |
-| `VStack` | `flex flex-col items-center gap-2` |
+| Component | Default classes                    |
+| --------- | ---------------------------------- |
+| `Flex`    | `flex`                             |
+| `Center`  | `flex items-center justify-center` |
+| `Stack`   | `flex flex-col gap-2`              |
+| `HStack`  | `flex flex-row items-center gap-2` |
+| `VStack`  | `flex flex-col items-center gap-2` |
 
 `Stack` supports a `separator` prop that clones a separator element between children:
 
@@ -180,7 +217,9 @@ Whole-card-clickable without nesting `<a>` in `<a>`.
       <BaseLink href="/x">Title</BaseLink>
     </LinkOverlay>
   </h3>
-  <p>Other content; the LinkOverlay's :before pseudo covers the whole LinkBox.</p>
+  <p>
+    Other content; the LinkOverlay's :before pseudo covers the whole LinkBox.
+  </p>
 </LinkBox>
 ```
 
@@ -189,7 +228,10 @@ Whole-card-clickable without nesting `<a>` in `<a>`.
 ### `EdgeScrollContainer` / `EdgeScrollItem`
 
 ```tsx
-import { EdgeScrollContainer, EdgeScrollItem } from "@/components/ui/edge-scroll-container"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 ```
 
 Preferred horizontal scroll primitive (over `Carousel` and `Swiper`). See "Horizontal scroll / carousel" section below for the full picture.
@@ -230,15 +272,21 @@ Vanilla shadcn-style. Use only when you need fine-grained Radix control (rare).
 
 Both render a slide-in panel from a side. They're not interchangeable -- pick by mount semantics:
 
-| Component | Mount behavior | Underlying primitive | Compositional parts |
-|---|---|---|---|
-| `Sheet` | Mounts/unmounts each open | Radix Dialog (battle-tested) | `SheetHeader`, `SheetFooter`, `SheetTitle`, `SheetDescription` |
-| `PersistentPanel` | Lazy-mounts on first open, then **stays mounted** | Custom (`FocusScope` directly) | None |
+| Component         | Mount behavior                                    | Underlying primitive           | Compositional parts                                            |
+| ----------------- | ------------------------------------------------- | ------------------------------ | -------------------------------------------------------------- |
+| `Sheet`           | Mounts/unmounts each open                         | Radix Dialog (battle-tested)   | `SheetHeader`, `SheetFooter`, `SheetTitle`, `SheetDescription` |
+| `PersistentPanel` | Lazy-mounts on first open, then **stays mounted** | Custom (`FocusScope` directly) | None                                                           |
 
 Use `Sheet` for ordinary side-panel UI -- the conventional choice with the better-trodden Radix Dialog underneath:
 
 ```tsx
-import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet"
 ```
 
 **`side`**: `top | bottom | left | right` (default `right`). `SheetClose` wraps `Button variant="ghost" isSecondary`. `hideOverlay` prop on `SheetContent`.
@@ -256,7 +304,11 @@ import { PersistentPanel } from "@/components/ui/persistent-panel"
 ### `Popover`
 
 ```tsx
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover"
 ```
 
 Radix Popover with Arrow. Default `align="center" sideOffset=4`. Uses `z-popover`.
@@ -426,7 +478,13 @@ The sub-components handle font weight, color, and paragraph spacing -- callers s
 ### `Avatar`
 
 ```tsx
-import { Avatar, AvatarBase, AvatarImage, AvatarFallback, AvatarGroup } from "@/components/ui/avatar"
+import {
+  Avatar,
+  AvatarBase,
+  AvatarImage,
+  AvatarFallback,
+  AvatarGroup,
+} from "@/components/ui/avatar"
 ```
 
 Uses `tv` slots with React context. `"use client"` because of `useState(hasError)`.
@@ -450,7 +508,12 @@ Custom horizontal nav for long-page section navigation. URL-fragment-driven, use
 ### `Accordion`
 
 ```tsx
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion"
 ```
 
 Custom chevron rotation, RTL `dir(rtl)` variant included.
@@ -458,7 +521,13 @@ Custom chevron rotation, RTL `dir(rtl)` variant included.
 ### `Breadcrumb`
 
 ```tsx
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbPage } from "@/components/ui/breadcrumb"
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb"
 ```
 
 > Gotcha: The current-page item is rendered as `<span role="link" aria-disabled="true">` -- the `role="link"` is misleading; should arguably be a plain styled `<span>`. Aware-only; don't fix in passing.
@@ -480,7 +549,13 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 ### `Skeleton`
 
 ```tsx
-import { Skeleton, SkeletonLines, SkeletonCard, SkeletonCardContent, SkeletonCardGrid } from "@/components/ui/skeleton"
+import {
+  Skeleton,
+  SkeletonLines,
+  SkeletonCard,
+  SkeletonCardContent,
+  SkeletonCardGrid,
+} from "@/components/ui/skeleton"
 ```
 
 `SkeletonCard` composes `Card` for consistency.
@@ -504,7 +579,14 @@ Project-specific look: `my-16 h-1 w-[10%] bg-primary-high-contrast` purple bar. 
 ### `Table`
 
 ```tsx
-import { Table, TableHeader, TableBody, TableRow, TableCell, TableHead } from "@/components/ui/table"
+import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableRow,
+  TableCell,
+  TableHead,
+} from "@/components/ui/table"
 ```
 
 `tv` with slots, React context.
@@ -517,16 +599,19 @@ The `product` variant currently has stale shadcn tokens (`hover:bg-muted/50`, `t
 
 Three components exist in this space:
 
-| Component | Status |
-|---|---|
-| `EdgeScrollContainer` (`@/components/ui/edge-scroll-container`) | **Preferred** for new horizontal scroll lists |
-| `Carousel` (`@/components/ui/carousel`) | Not recommended for new work; has unresolved RTL issues. Status pending team discussion |
-| `Swiper` (deprecation track) | Don't use for new work; on the path to removal |
+| Component                                                       | Status                                                                                  |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `EdgeScrollContainer` (`@/components/ui/edge-scroll-container`) | **Preferred** for new horizontal scroll lists                                           |
+| `Carousel` (`@/components/ui/carousel`)                         | Not recommended for new work; has unresolved RTL issues. Status pending team discussion |
+| `Swiper` (deprecation track)                                    | Don't use for new work; on the path to removal                                          |
 
 `EdgeScrollContainer` is a CSS-driven horizontal scroll with snap and edge mask:
 
 ```tsx
-import { EdgeScrollContainer, EdgeScrollItem } from "@/components/ui/edge-scroll-container"
+import {
+  EdgeScrollContainer,
+  EdgeScrollItem,
+} from "@/components/ui/edge-scroll-container"
 ```
 
 CSS-var driven (`--edge-spacing`, `--edge-mask-size`, `--edge-overflow-y-pad`). Mask fade only at `2xl+`.
@@ -543,7 +628,12 @@ import { Swiper, ... } from "@/components/ui/swiper"
 ### `List` / `OrderedList` / `UnorderedList` / `ListItem`
 
 ```tsx
-import { List, OrderedList, UnorderedList, ListItem } from "@/components/ui/list"
+import {
+  List,
+  OrderedList,
+  UnorderedList,
+  ListItem,
+} from "@/components/ui/list"
 ```
 
 > `base.css` still has legacy global `ul`/`ol` styles flagged for removal. List migration is in progress.
@@ -577,7 +667,11 @@ Recharts wrapper.
 ### `Collapsible`
 
 ```tsx
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible"
+import {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from "@/components/ui/collapsible"
 ```
 
 Radix Collapsible.

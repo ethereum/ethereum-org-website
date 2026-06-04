@@ -155,7 +155,7 @@ Use semantic tokens (`text-body`, `text-body-medium`, `text-body-light`, `text-p
 
 ## Arbitrary Values
 
-Quick rule: prefer scale syntax over arbitrary syntax even for fractional values. See `references/tokens.md` for the full discussion. For grid templates specifically, check the existing custom `grid-cols-*` utilities (`grid-cols-bento`, `grid-cols-fill-N`, `grid-cols-fit-4`) before reaching for arbitrary track sizes -- documented in `tokens.md` under "Custom Utilities -- Grid templates."
+Quick rule: prefer scale syntax over arbitrary syntax even for fractional values. See `references/tokens.md` for the full discussion. For responsive card/item grids, use the `Grid` component (`@/components/ui/grid`) or its `grid-cols-auto-*` utility rather than arbitrary track sizes; `grid-cols-bento` covers the bento layout -- documented in `tokens.md` under "Grid templates."
 
 ## Common One-Off Styling Anti-Patterns
 

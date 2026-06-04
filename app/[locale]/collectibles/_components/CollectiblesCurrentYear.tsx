@@ -20,6 +20,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Card } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import Link, { ExternalLinkIcon, LinkProps } from "@/components/ui/Link"
 import {
   ListItem,
@@ -507,7 +508,7 @@ const CollectiblesCurrentYear = ({
           </AccordionItem>
         </Accordion>
 
-        <div className="mt-4 grid grid-cols-fill-8 gap-2">
+        <Grid columns={8} size="narrow" className="mt-4 gap-2">
           {socialBadges.map((badge) => (
             <Link
               key={badge.id}
@@ -537,7 +538,7 @@ const CollectiblesCurrentYear = ({
               </div>
             </Link>
           ))}
-        </div>
+        </Grid>
       </div>
     </section>
   )

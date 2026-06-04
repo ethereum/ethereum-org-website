@@ -13,6 +13,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -140,7 +141,7 @@ const Page = async (props: {
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title")}</h2>
-          <div className="grid grid-cols-fill-4 gap-8">
+          <Grid>
             {DEV_TOOL_CATEGORIES.map(({ slug, Icon }) => (
               <SubpageCard
                 key={slug}
@@ -152,7 +153,7 @@ const Page = async (props: {
                 href={`/developers/tools/${slug}`}
               />
             ))}
-          </div>
+          </Grid>
         </Section>
       </MainArticle>
 

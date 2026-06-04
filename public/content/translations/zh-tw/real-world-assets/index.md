@@ -27,14 +27,14 @@ RWA 代幣並沒有任何內在價值。 反之，其反映了他們所代表物
 
 ## RWA 有哪些優點？ {#rwas-benefits}
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<Grid>
   <Card title="部分所有權" emoji=":house_buildings:" description="RWA 讓投資更普及。如果你因為負擔不起市場價格而無法投資某些資產，現在可以透過部分所有權的方式參與。"/>
   <Card title="投資多元化" emoji="🛒" description="你可以投資多種類型的資產，讓你的投資組合更多元，而且無須花費避險基金等級的鉅額資金。" />
   <Card title="全球機會" emoji="🌏" description="RWA 消除了投資的地域限制。你可以購買位於世界任何地方的資產代幣。" />
   <Card title="提升資產流動性" emoji="🖼️" description="許多資產缺乏流動性。它們雖然有價值，但這不等於擁有可花用的現金。透過將資產代幣化，持有人可以將其部分或全部轉換為可利用的價值。"/>
   <Card title="全球市場" emoji="💰" description="想將資產變現的持有人，可以接觸到更廣泛的投資者—不只是那些通常有能力購買土地、股權、藝術品或傳統金融工具的人。" />
   <Card title="省去中介" emoji="👩‍💻" description="代幣在智慧合約上運行，這代表代幣可以直接進行點對點交易，無需中介機構及其相關費用。" />
-</CardGrid>
+</Grid>
 
 ## RWA 如何運作？ {#how-rwas-work}
 
