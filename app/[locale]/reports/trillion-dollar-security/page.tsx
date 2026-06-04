@@ -5,7 +5,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardBanner, CardFooter, CardHeader } from "@/components/ui/card"
+import { Card, CardBanner, CardContent, CardHeader } from "@/components/ui/card"
 import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -27,7 +27,7 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
         />
       </CardBanner>
     </CardHeader>
-    <CardFooter>
+    <CardContent>
       <ButtonLink
         size="lg"
         href="/reports/trillion-dollar-security.pdf"
@@ -35,7 +35,7 @@ const ReportCard = ({ cta, altText }: { cta: string; altText: string }) => (
       >
         {cta}
       </ButtonLink>
-    </CardFooter>
+    </CardContent>
   </Card>
 )
 
