@@ -28,9 +28,14 @@ export type PathwayCardProps = {
 
 /**
  * Clickable card preset for offering the user a discrete pathway forward:
- * leading banner (centered top banner on mobile, left-edge bleed at `sm`+),
- * a bold title with an optional status badge, a description, and a trailing
- * chevron that animates on hover. Built on the design-system `Card`.
+ * a banner (full-width on top when the card is narrow, left-aligned beside the
+ * text once the card is wide enough), a bold title with an optional status
+ * badge, a description, and a trailing chevron that animates on hover. Built on
+ * the design-system `Card`.
+ *
+ * The banner/text layout switches on the card's own width via a container query
+ * (`@container/pathway`), not the viewport -- so a card in a multi-column grid
+ * stacks rather than cramming the row layout into a narrow column.
  */
 const PathwayCard = ({
   href,
@@ -40,44 +45,44 @@ const PathwayCard = ({
   banner,
   className,
 }: PathwayCardProps) => (
-  <Card
-    href={href}
-    variant="nested"
-    className={cn("border sm:flex-row", className)}
-  >
-    {banner && (
-      <CardBanner
-        background="none"
-        fit="contain"
-        size="full"
-        zoom={false}
-        className="flex h-32 w-full shrink-0 items-center justify-center pt-4 sm:h-36 sm:w-40 sm:self-center sm:pt-0"
-      >
-        {banner}
-      </CardBanner>
-    )}
-    <CardContent spacing="none" className="flex items-center gap-4">
-      <div className="flex-1">
-        <div className="mb-1 flex flex-wrap items-center gap-x-3 gap-y-1">
-          <CardTitle variant="bold" className="font-black">
-            {title}
-          </CardTitle>
-          {badge && (
-            <Tag status={badge.status ?? "success"} size="small">
-              {badge.label}
-            </Tag>
-          )}
+  <div className="@container/pathway">
+    <Card
+      href={href}
+      variant="nested"
+      className={cn("border @lg/pathway:flex-row", className)}
+    >
+      {banner && (
+        <CardBanner
+          background="none"
+          fit="contain"
+          size="full"
+          zoom={false}
+          className="flex h-32 w-full shrink-0 items-center justify-center p-2 pt-4 @lg/pathway:h-36 @lg/pathway:w-40 @lg/pathway:self-center @lg/pathway:p-2"
+        >
+          {banner}
+        </CardBanner>
+      )}
+      <CardContent spacing="none" className="flex items-center gap-4">
+        <div className="flex-1">
+          <div className="mb-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+            <CardTitle>{title}</CardTitle>
+            {badge && (
+              <Tag status={badge.status ?? "success"} size="small">
+                {badge.label}
+              </Tag>
+            )}
+          </div>
+          <CardParagraph>{description}</CardParagraph>
         </div>
-        <CardParagraph>{description}</CardParagraph>
-      </div>
-      <ChevronNext
-        className={cn(
-          "size-6 shrink-0 text-body-medium",
-          "transition-transform duration-100 group-hover/link:translate-x-1 group-hover/link:text-primary"
-        )}
-      />
-    </CardContent>
-  </Card>
+        <ChevronNext
+          className={cn(
+            "size-6 shrink-0 text-body-medium",
+            "transition-transform duration-100 group-hover/link:translate-x-1 group-hover/link:text-primary"
+          )}
+        />
+      </CardContent>
+    </Card>
+  </div>
 )
 
 export default PathwayCard

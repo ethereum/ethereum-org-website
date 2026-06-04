@@ -16,7 +16,7 @@ import type { Lang, PageParams } from "@/lib/types"
 
 import PathwayCard from "@/components/cards/pathway-card"
 import FeedbackCard from "@/components/FeedbackCard"
-import { PageHero, type PageHeroProps } from "@/components/Hero"
+import { PageHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import { CheckCircle } from "@/components/icons/CheckCircle"
 import { XCircle } from "@/components/icons/XCircle"
@@ -41,6 +41,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import { Grid } from "@/components/ui/grid"
 import InlineLink, { LinkWithArrow } from "@/components/ui/Link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -59,14 +60,14 @@ import summerfiImg from "@/public/images/dapps/summerfi.png"
 import swapCardImg from "@/public/images/developers-eth-blocks.png"
 import exchangeCardImg from "@/public/images/homepage/features/global.png"
 import buyCardImg from "@/public/images/impact_transparent.png"
+import manAndDogImg from "@/public/images/man-and-dog-playing.png"
 import aaveImg from "@/public/images/stablecoins/aave.png"
-import bitcoinPizzaImg from "@/public/images/stablecoins/bitcoin-pizza.png"
+import bitcoinPizzaImg from "@/public/images/stablecoins/bitcoin-pizza-party-photo.png"
 import compoundImg from "@/public/images/stablecoins/compound.png"
-import gettingStartedImg from "@/public/images/stablecoins/getting-started.png"
 import ghoLargeImg from "@/public/images/stablecoins/gho-large.png"
 import gloLargeImg from "@/public/images/stablecoins/glo-large.png"
-import heroImg from "@/public/images/stablecoins/hero-coins.png"
-import interestImg from "@/public/images/stablecoins/interest.png"
+import heroImg from "@/public/images/stablecoins/gold-rollup-spaceship-with-coins.png"
+import gettingStartedImg from "@/public/images/stablecoins/three-people-cat-butterflies-petting-dog.png"
 import duneImg from "@/public/images/stablecoins/tools/dune.png"
 import stablePulseImg from "@/public/images/stablecoins/tools/stable-pulse.png"
 import stablecoinsWtfImg from "@/public/images/stablecoins/tools/stablecoinswtf.png"
@@ -159,27 +160,6 @@ async function Page(props: { params: Promise<PageParams> }) {
     console.error(error)
     marketsHasError = true
   }
-
-  const heroButtons: PageHeroProps["buttons"] = [
-    {
-      content: t("page-stablecoins-hero-button"),
-      toId: "get-stablecoins",
-      matomo: {
-        eventCategory: "stablecoins hero buttons",
-        eventAction: "click",
-        eventName: "get stablecoins",
-      },
-    },
-    {
-      content: t("page-stablecoins-how-they-work-button"),
-      toId: "how",
-      matomo: {
-        eventCategory: "stablecoins hero buttons",
-        eventAction: "click",
-        eventName: "how they work",
-      },
-    },
-  ]
 
   const features = [
     {
@@ -466,7 +446,26 @@ async function Page(props: { params: Promise<PageParams> }) {
           title={t("page-stablecoins-hero-header")}
           description={t("page-stablecoins-hero-subtitle")}
           heroImg={heroImg}
-          buttons={heroButtons}
+          buttons={[
+            {
+              content: t("page-stablecoins-hero-button"),
+              toId: "get-stablecoins",
+              matomo: {
+                eventCategory: "stablecoins hero buttons",
+                eventAction: "click",
+                eventName: "get stablecoins",
+              },
+            },
+            {
+              content: t("page-stablecoins-how-they-work-button"),
+              toId: "how",
+              matomo: {
+                eventCategory: "stablecoins hero buttons",
+                eventAction: "click",
+                eventName: "how they work",
+              },
+            },
+          ]}
           variant="no-divider"
         />
 
@@ -478,19 +477,17 @@ async function Page(props: { params: Promise<PageParams> }) {
           <p className="mx-auto mb-12 max-w-3xl text-lg text-body-medium">
             <Translation id="page-stablecoins:page-stablecoins-why-stablecoins-intro" />
           </p>
-          <div className="mb-12 grid grid-cols-1 gap-4 text-start sm:grid-cols-2 lg:grid-cols-4">
+          <Grid balanced={4} className="mb-12 gap-4 text-start">
             {features.map(({ title, description, icon: Icon }) => (
               <Card key={title} variant="base" size="lg">
                 <CardContent>
                   <Icon className="size-12 text-primary" />
-                  <CardTitle variant="black" className="text-2xl">
-                    {title}
-                  </CardTitle>
+                  <CardTitle>{title}</CardTitle>
                   <CardParagraph>{description}</CardParagraph>
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </Grid>
           <Card
             variant="nested"
             className="flex-row items-center gap-6 border p-6 text-start"
@@ -505,10 +502,10 @@ async function Page(props: { params: Promise<PageParams> }) {
               />
             </div>
             <div>
-              <CardTitle variant="black" className="mb-2 text-2xl">
+              <CardTitle className="mb-2">
                 {t("page-stablecoins-bitcoin-pizza")}
               </CardTitle>
-              <CardParagraph className="text-sm">
+              <CardParagraph size="sm">
                 {t("page-stablecoins-bitcoin-pizza-body")}
               </CardParagraph>
             </div>
@@ -537,7 +534,10 @@ async function Page(props: { params: Promise<PageParams> }) {
                 value={type.title}
                 className="mt-6 border-0 p-0"
               >
-                <div className="grid grid-cols-1 gap-8 rounded-2xl bg-background-highlight p-6 text-start md:grid-cols-2 md:p-10">
+                <Grid
+                  balanced={2}
+                  className="gap-8 rounded-2xl bg-background-highlight p-6 text-start md:p-10"
+                >
                   <div>
                     <h3 className="mb-4 text-2xl font-black">{type.title}</h3>
                     <div className="mb-6 text-body-medium">
@@ -595,7 +595,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Grid>
               </TabsContent>
             ))}
           </Tabs>
@@ -611,7 +611,7 @@ async function Page(props: { params: Promise<PageParams> }) {
               <p className="mb-8 text-lg text-body-medium">
                 {t("page-stablecoins-getting-started-intro")}
               </p>
-              <div className="grid grid-cols-1 gap-6">
+              <div className="flex flex-col gap-6">
                 <PathwayCard
                   href="/wallets/find-wallet/"
                   banner={
@@ -711,12 +711,10 @@ async function Page(props: { params: Promise<PageParams> }) {
                       </CardBanner>
                     </CardHeader>
                     <CardContent spacing="sm">
-                      <CardTitle asChild className="font-black">
+                      <CardTitle asChild>
                         <h4>{choice.title}</h4>
                       </CardTitle>
-                      <CardParagraph className="text-sm">
-                        {choice.body}
-                      </CardParagraph>
+                      <CardParagraph size="sm">{choice.body}</CardParagraph>
                     </CardContent>
                     <CardFooter buttons="full" className="flex flex-col gap-2">
                       <ButtonLink href={choice.swapUrl}>
@@ -759,7 +757,7 @@ async function Page(props: { params: Promise<PageParams> }) {
           <p className="mx-auto mb-12 max-w-3xl text-lg text-body-medium">
             {t("page-stablecoins-get-intro")}
           </p>
-          <div className="grid grid-cols-1 gap-6 text-start md:grid-cols-2">
+          <Grid balanced={2} className="gap-6 text-start">
             {methods.map((method) => (
               <PathwayCard
                 key={method.title}
@@ -776,7 +774,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                 badge={method.badge}
               />
             ))}
-          </div>
+          </Grid>
         </Section>
 
         {/* Interest rate / apps to earn interest */}
@@ -792,7 +790,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                 </p>
               </div>
               <Image
-                src={interestImg}
+                src={manAndDogImg}
                 alt={t("page-stablecoins-interest-rate-alt")}
                 sizes="(max-width: 1024px) 80vw, 409px"
                 className="h-auto w-full max-w-sm shrink-0 lg:w-[409px] lg:max-w-none"
@@ -826,12 +824,10 @@ async function Page(props: { params: Promise<PageParams> }) {
                       </CardBanner>
                     </CardHeader>
                     <CardContent spacing="sm">
-                      <CardTitle className="font-black uppercase" asChild>
+                      <CardTitle className="uppercase" asChild>
                         <h4>{app.name}</h4>
                       </CardTitle>
-                      <CardParagraph className="text-sm">
-                        {app.description}
-                      </CardParagraph>
+                      <CardParagraph size="sm">{app.description}</CardParagraph>
                     </CardContent>
                     <CardFooter buttons="full">
                       <ButtonLink href={app.url}>
