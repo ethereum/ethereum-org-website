@@ -14286,6 +14286,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "BabyScope",
+      "name": "BabyScope",
+      "avatar_url": "https://avatars.githubusercontent.com/u/163932585?v=4",
+      "profile": "https://nodeflare.app",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
