@@ -1,53 +1,63 @@
+import { getTranslations } from "next-intl/server"
+
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
 
 import ai16z from "@/public/images/ai-agents/ai16z.png"
 import game from "@/public/images/ai-agents/game.png"
 
-const BuildYourOwnAIAgent = () => {
+const BuildYourOwnAIAgent = async () => {
+  const t = await getTranslations("component-build-your-own-ai-agent")
+
+  const cards = [
+    {
+      image: ai16z,
+      title: t("elizaos-title"),
+      tagline: t("elizaos-tagline"),
+      description: t("elizaos-description"),
+      ctaLabel: t("elizaos-cta"),
+      href: "https://elizaos.ai/",
+    },
+    {
+      image: game,
+      title: t("game-title"),
+      tagline: t("game-tagline"),
+      description: t("game-description"),
+      ctaLabel: t("game-cta"),
+      href: "https://console.game.virtuals.io/",
+    },
+  ]
+
   return (
-    <div className="flex flex-col gap-8 md:flex-row">
-      <div className="flex flex-1 flex-col gap-4 rounded-xl border bg-linear-to-br from-transparent to-purple-200/10 p-8">
-        <Image
-          src={ai16z}
-          alt="AI16Z"
-          width={128}
-          className="rounded-xl shadow-lg dark:shadow-body-light"
-        />
-        <p className="text-2xl font-semibold">Build your own AI agent</p>
-        <p>Developer first framework</p>
-        <p>
-          An open-source framework designed to create, deploy, and manage
-          autonomous AI agents.
-        </p>
-        <div>
-          <ButtonLink href="https://elizaos.github.io/eliza/" variant="outline">
-            Use ElizaOS
-          </ButtonLink>
-        </div>
-      </div>
-      <div className="flex flex-1 flex-col gap-4 rounded-xl border bg-linear-to-br from-transparent to-purple-200/10 p-8">
-        <Image
-          src={game}
-          alt="GAME"
-          width={128}
-          className="rounded-xl shadow-lg dark:shadow-body-light"
-        />
-        <p className="text-2xl font-semibold">GAME framework</p>
-        <p>No-code AI agent platform</p>
-        <p>
-          Enables agents to be deployed on platforms like X and other
-          third-party apps.
-        </p>
-        <div>
-          <ButtonLink
-            href="https://console.game.virtuals.io/"
-            variant="outline"
-          >
-            Use GAME
-          </ButtonLink>
-        </div>
-      </div>
+    <div className="flex flex-col gap-8 *:flex-1 md:flex-row">
+      {cards.map((card) => (
+        <Card key={card.href}>
+          <CardHeader>
+            <CardBanner size="thumbnail-lg" background="none">
+              <Image src={card.image} alt="" sizes="128px" />
+            </CardBanner>
+          </CardHeader>
+          <CardContent>
+            <CardTitle>{card.title}</CardTitle>
+            <CardParagraph>{card.tagline}</CardParagraph>
+            <CardParagraph>{card.description}</CardParagraph>
+          </CardContent>
+          <CardFooter buttons="compact">
+            <ButtonLink href={card.href} variant="outline">
+              {card.ctaLabel}
+            </ButtonLink>
+          </CardFooter>
+        </Card>
+      ))}
     </div>
   )
 }

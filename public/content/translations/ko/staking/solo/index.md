@@ -39,7 +39,6 @@ summaryPoints:
 
 홈 스테이킹이 모든 사람에게 접근 가능하고 위험이 없기를 바라지만, 현실은 그렇지 않습니다. ETH를 홈 스테이킹하기로 선택하기 전에 명심해야 할 몇 가지 실용적이고 중요한 고려 사항이 있습니다.
 
-<InfoGrid>
 <ExpandableCard title="필독 자료" eventCategory="SoloStaking" eventName="clicked required reading">
 자체 노드를 운영할 때는 선택한 소프트웨어의 사용법을 배우는 데 시간을 투자해야 합니다. 여기에는 관련 문서를 읽고 해당 개발팀의 소통 채널에 주의를 기울이는 것이 포함됩니다.
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 슬래싱 및 검증자 수명 주기에 대해 더 알아보기</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

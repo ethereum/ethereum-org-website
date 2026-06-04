@@ -8,7 +8,7 @@
 import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai"
 
 import i18nConfig from "../../../../../i18n.config.json"
-import { LLM } from "../../constants"
+import { GEMINI_TIMEOUT_MS, LLM, MAX_SPLIT_DEPTH } from "../../constants"
 import { delay } from "../workflows/utils"
 
 import {
@@ -24,6 +24,7 @@ import {
 } from "./code-block-extractor"
 import { type ContentNode, normalizeContent } from "./content-normalizer"
 import {
+  chunkJson,
   mergeJsonBatches,
   prepareJsonBatches,
   restoreJsonBatch,
@@ -746,11 +747,101 @@ ${JSON.stringify(commentPayload, null, 2)}`
 }
 
 /**
+ * Translate a JSON batch with progressive split-on-failure fallback.
+ *
+ * Wraps callGemini. On retry exhaustion (validation failure or hard timeout
+ * after MAX_RETRIES inner attempts), splits the batch into two sub-batches via
+ * chunkJson(halfBudget) and recursively translates each. Recurses up to
+ * MAX_SPLIT_DEPTH levels deep before giving up.
+ *
+ * The returned content has placeholders still inline. Placeholder restoration
+ * happens in the caller after this returns -- splitting is safe because the
+ * placeholder map is shared across sub-batches and restoration is keyed by
+ * placeholder ID, which is preserved through the split.
+ */
+async function translateBatchWithSplitFallback(
+  options: TranslateFileOptions,
+  batchContent: string,
+  metadata: GeminiCallMetadata,
+  depth: number = 0
+): Promise<{
+  translatedContent: string
+  tokensUsed: { input: number; output: number }
+}> {
+  try {
+    const result = await callGemini(
+      { ...options, fileContent: batchContent },
+      metadata
+    )
+    return {
+      translatedContent: result.translatedContent,
+      tokensUsed: result.tokensUsed,
+    }
+  } catch (err) {
+    if (depth >= MAX_SPLIT_DEPTH) throw err
+
+    // Halve the byte budget and rechunk. If the batch contains a single
+    // oversized key, chunkJson will return it as a single chunk -- detect that
+    // and bail out so we don't recurse forever on an irreducible batch.
+    const batchBytes = Buffer.byteLength(batchContent, "utf-8")
+    const halfBudget = Math.max(1, Math.floor(batchBytes / 2))
+    const halves = chunkJson(batchContent, halfBudget)
+    if (halves.length < 2) throw err
+
+    const errMsg =
+      err instanceof Error
+        ? err.message.slice(0, 200)
+        : String(err).slice(0, 200)
+    console.warn(
+      `  [json-batch] ${metadata.filePath ?? ""}${metadata.targetLanguage ? ` [${metadata.targetLanguage}]` : ""}: split-fallback depth=${depth + 1}, splitting batch into ${halves.length} sub-batches (error: ${errMsg})`
+    )
+
+    // Translate sub-batches SERIALLY rather than via Promise.all. The outer
+    // task-pool (task-pool.ts) gates concurrency on a per-task basis, so
+    // each parallel Gemini call inside a single task amplifies actual
+    // in-flight requests beyond GEMINI_CONCURRENCY. Serial keeps the
+    // per-task request rate bounded; worst-case wall time grows but the
+    // path only engages on failures, not the happy path.
+    const subResults: Array<{
+      translatedContent: string
+      tokensUsed: { input: number; output: number }
+    }> = []
+    for (let idx = 0; idx < halves.length; idx++) {
+      subResults.push(
+        await translateBatchWithSplitFallback(
+          options,
+          halves[idx],
+          {
+            ...metadata,
+            label: `${metadata.label ?? "split"}.s${depth + 1}.${idx + 1}`,
+          },
+          depth + 1
+        )
+      )
+    }
+
+    return {
+      translatedContent: mergeJsonBatches(
+        subResults.map((r) => r.translatedContent)
+      ),
+      tokensUsed: subResults.reduce(
+        (acc, r) => ({
+          input: acc.input + r.tokensUsed.input,
+          output: acc.output + r.tokensUsed.output,
+        }),
+        { input: 0, output: 0 }
+      ),
+    }
+  }
+}
+
+/**
  * Translate a JSON file with batching and HTML placeholder extraction.
  *
  * 1. Parse and split into ~100-key batches (if large)
  * 2. Extract HTML tags from values into numbered placeholders
- * 3. Translate each batch via Gemini
+ * 3. Translate each batch via Gemini (with progressive split-fallback on
+ *    persistent failure -- see translateBatchWithSplitFallback)
  * 4. Restore HTML tags from placeholders
  * 5. Merge batches and validate against full English source
  */
@@ -779,13 +870,15 @@ async function translateJsonFile(
     const batchContent = prepared.batchContents[i]
     const isMultiBatch = prepared.batchContents.length > 1
 
-    // Translate this batch (callGemini handles retries and validation)
-    const result = await callGemini(
+    // Translate this batch. callGemini handles inner retries; the split-
+    // fallback wrapper kicks in only after those retries are exhausted.
+    const result = await translateBatchWithSplitFallback(
       {
         ...options,
         fileContent: batchContent,
         htmlExtracted: prepared.htmlExtracted,
       },
+      batchContent,
       {
         filePath,
         targetLanguage,
@@ -1063,7 +1156,6 @@ export async function callGeminiRaw(
       }
 
       try {
-        const GEMINI_TIMEOUT_MS = 5 * 60 * 1000 // 5 minutes
         const controller = new AbortController()
         const timeout = setTimeout(() => controller.abort(), GEMINI_TIMEOUT_MS)
         const response = await client.models

@@ -5,6 +5,7 @@ import { Image } from "@/components/Image"
 import {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardFooter,
   CardHeader,
@@ -20,9 +21,9 @@ import { ENTERPRISE_ETHEREUM_URL } from "@/lib/constants"
 
 import { ChevronNext } from "../Chevron"
 
+import learnImage from "@/public/images/heroes/guides-hub-hero.jpg"
+import enterpriseImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 import developersImage from "@/public/images/homepage/get-started/developers.png"
-import enterpriseImage from "@/public/images/homepage/get-started/enterprise.png"
-import learnImage from "@/public/images/homepage/get-started/learn.png"
 
 type GetStartedGridProps = {
   className?: string
@@ -162,10 +163,10 @@ const GetStartedGrid = async ({
                 </ul>
               </CardContent>
               <CardFooter>
-                <p className="inline-flex items-center font-bold text-primary group-hover/link:text-primary-hover">
+                <CardButtonFake>
                   {card.cta}
                   <ChevronNext className="size-5" />
-                </p>
+                </CardButtonFake>
               </CardFooter>
             </Card>
           ))}
