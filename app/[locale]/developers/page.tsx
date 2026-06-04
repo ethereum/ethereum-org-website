@@ -119,7 +119,7 @@ const WhyGrid = () => {
         <div className="flex gap-1.5" key={heading}>
           <CheckCircle />
           <div className="space-y-1">
-            <h3 className="text-lg">{heading}</h3>
+            <h3 className="text-lg font-bold">{heading}</h3>
             <p className="text-body-medium">{description}</p>
           </div>
         </div>
@@ -290,7 +290,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-jump-right-in-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -350,7 +350,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-get-help-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -385,7 +385,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-resources-title")}
                 </CardTitle>
                 <CardParagraph>
@@ -421,7 +421,7 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
                 </CardBanner>
               </CardHeader>
               <CardContent>
-                <CardTitle variant="black">
+                <CardTitle size="lg">
                   {t("page-developers-tutorials-title")}
                 </CardTitle>
                 <CardParagraph>

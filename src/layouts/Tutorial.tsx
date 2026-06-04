@@ -38,17 +38,11 @@ const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading3
-    className="scroll-mt-40 font-semibold max-md:text-md"
-    {...props}
-  />
+  <MdHeading3 className="scroll-mt-40 max-md:text-md" {...props} />
 )
 
 const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
-  <MdHeading4
-    className="scroll-mt-40 font-semibold max-md:text-md"
-    {...props}
-  />
+  <MdHeading4 className="scroll-mt-40 max-md:text-md" {...props} />
 )
 
 const Paragraph = (props: HTMLAttributes<HTMLParagraphElement>) => (

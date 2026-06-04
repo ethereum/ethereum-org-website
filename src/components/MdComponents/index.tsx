@@ -37,7 +37,7 @@ import { cn } from "@/lib/utils/cn"
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
   className: cn(
-    "font-bold leading-xs my-8",
+    "leading-xs my-8",
     id && "scroll-mt-28 relative group",
     className
   ),
@@ -88,10 +88,7 @@ export const Heading4 = ({
   className,
   ...rest
 }: HeadingProps) => (
-  <h4
-    {...commonHeadingAttributes(cn("text-xl font-semibold", className), id)}
-    {...rest}
-  >
+  <h4 {...commonHeadingAttributes(cn("text-xl", className), id)} {...rest}>
     <IdAnchor id={id} />
     {children}
   </h4>

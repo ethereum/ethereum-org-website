@@ -38,7 +38,7 @@ const BuilderCard = ({ path }: BuildCardProps) => (
           {path.tag}
         </Tag>
       )}
-      <CardTitle variant="semibold">{path.title}</CardTitle>
+      <CardTitle size="sm">{path.title}</CardTitle>
       <CardParagraph size="sm">{path.description}</CardParagraph>
     </CardContent>
     <CardFooter>

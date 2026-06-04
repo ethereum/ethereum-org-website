@@ -43,7 +43,7 @@ const ConnectYourWallet = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl font-bold">
+          <h2 className="text-3xl">
             {t("page-start-connect-wallet-title")}
           </h2>
           <p>{t("page-start-connect-wallet-description")}</p>

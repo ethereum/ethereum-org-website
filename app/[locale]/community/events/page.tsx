@@ -150,7 +150,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         <MainArticle className="space-y-20 px-4 py-10 md:px-8">
           {/* Major blockchain conferences */}
           <Section id="highlights">
-            <h2 className="mb-6 font-bold">
+            <h2 className="mb-6">
               {t("page-events-section-major-conferences")}
             </h2>
             <EdgeScrollContainer>
@@ -216,7 +216,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </div>
                     <div className="flex flex-1 flex-col gap-3">
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                        <h3 className="text-2xl font-bold">
+                        <h3 className="text-2xl">
                           {location}
                           <span className="sr-only">
                             &nbsp;
@@ -406,7 +406,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 />
               </div>
               <div>
-                <h3 className="mb-2 text-xl font-bold">
+                <h3 className="mb-2 text-xl">
                   {t("page-events-section-organizers-planning")}
                 </h3>
                 <p className="mb-4 max-w-4xl">
@@ -442,7 +442,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={ethereumEverywhereLogo} alt="" sizes="4rem" />
                   </div>
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl">
                     {t("page-events-support-ethereum-everywhere")}
                   </h3>
                 </div>
@@ -506,7 +506,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   <div className="size-16 overflow-hidden rounded-full">
                     <Image src={geodeLabsLogo} alt="" sizes="4rem" />
                   </div>
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl">
                     {t("page-events-support-geode-labs")}
                   </h3>
                 </div>

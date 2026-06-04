@@ -297,7 +297,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 <p className="mb-2 text-lg leading-base text-body-medium italic md:text-xl lg:text-2xl">
                   Interactive tutorial
                 </p>
-                <h2 className="m-0 text-3xl leading-[115%] font-bold lg:text-5xl">
+                <h2 className="m-0 text-3xl leading-[115%] lg:text-5xl">
                   How to use a wallet
                 </h2>
               </WalletSimulator>

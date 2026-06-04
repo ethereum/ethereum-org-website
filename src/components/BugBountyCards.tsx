@@ -110,7 +110,7 @@ const BugBountyCards = async () => {
 
           <div className="flex flex-col gap-y-8 p-4 md:p-6">
             <div className="mb-8 space-y-2">
-              <CardTitle variant="bold">{t(card.h2TranslationId)}</CardTitle>
+              <CardTitle>{t(card.h2TranslationId)}</CardTitle>
               <CardParagraph className="text-xl">
                 {t(card.descriptionTranslationId)}
               </CardParagraph>

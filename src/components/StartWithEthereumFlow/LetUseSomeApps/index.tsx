@@ -94,7 +94,7 @@ const LetUseSomeApps = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl font-bold">{t("page-start-apps-title")}</h2>
+          <h2 className="text-3xl">{t("page-start-apps-title")}</h2>
           <p>{t("page-start-apps-description")}</p>
           <div className="hidden lg:flex">
             <Link href="/apps" className="font-bold no-underline">
