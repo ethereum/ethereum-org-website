@@ -23,11 +23,11 @@ summaryPoints:
 
 除了我们在[质押简介](/staking/)中概述的好处之外，通过质押池进行质押还具有许多独特的优势。
 
-<CardGrid>
+<Grid>
   <Card title="门槛低" emoji="🐟" description="不是巨鲸？没问题。与需要 32 ETH 的单独质押不同，大多数质押池能让你与其他质押者一起，质押几乎任意数量的 ETH。" />
   <Card title="立即质押" emoji=":stopwatch:" description="通过质押池进行质押就像代币兑换一样简单，无需担心硬件设置和节点维护。你将 ETH 存入池中，节点运行者便可运行验证者。奖励在扣除节点运营费用后会分发给贡献者。" />
   <Card title="质押代币" emoji=":droplet:" description="许多质押池会提供一种代币，作为你已质押 ETH 及其所产生奖励的凭证。这让你能够利用你已质押的 ETH，例如，在 DeFi 应用中用作抵押品。" />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

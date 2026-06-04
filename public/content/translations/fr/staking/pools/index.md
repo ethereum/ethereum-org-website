@@ -23,11 +23,11 @@ Certains pools fonctionnent à l'aide de contrats intelligents, dans lesquels le
 
 En plus des avantages que nous avons décrits dans notre [introduction à la mise en jeu](/staking/), la mise en jeu mutualisée offre un certain nombre d'avantages distincts.
 
-<CardGrid>
+<Grid>
   <Card title="Facile d'accès" emoji="🐟" description="Pas une baleine ? Aucun problème. La plupart des pools de staking vous permettent de staker quasiment n'importe quel montant d'ETH en vous associant à d'autres stakers, contrairement au staking en solo qui nécessite 32 ETH." />
   <Card title="Stakez dès aujourd'hui" emoji=":stopwatch:" description="Staker avec un pool est aussi simple qu'un échange de jetons. Pas besoin de vous soucier de la configuration matérielle et de la maintenance des nœuds. Les pools vous permettent de déposer vos ETH, ce qui permet aux opérateurs de nœuds de faire fonctionner des validateurs. Les récompenses sont ensuite distribuées aux contributeurs, moins des frais pour les opérations de nœuds." />
   <Card title="Jetons de staking" emoji=":droplet:" description="De nombreux pools de staking fournissent un jeton qui représente un droit sur vos ETH stakés et les récompenses qu'ils génèrent. Cela vous permet d'utiliser vos ETH stakés, par exemple, comme garantie dans les applications DeFi." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

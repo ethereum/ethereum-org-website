@@ -14,6 +14,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tag } from "@/components/ui/tag"
 
@@ -74,7 +75,7 @@ const StandardBody = () => (
 
 export const Variants: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <Grid columns={3} size="wide">
       <div>
         <Label>variant=&quot;base&quot; (default)</Label>
         <Card variant="base">
@@ -121,7 +122,7 @@ export const Variants: Story = {
           </CardFooter>
         </Card>
       </div>
-    </div>
+    </Grid>
   ),
 }
 
@@ -139,7 +140,7 @@ const SIZE_VARIANTS = ["lg", "base", "md", "sm", "xs"] as const
 
 export const Sizes: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <Grid columns={3} size="wide">
       {SIZE_VARIANTS.map((size) => (
         <div key={size}>
           <Label>
@@ -176,7 +177,7 @@ export const Sizes: Story = {
           )}
         </div>
       ))}
-    </div>
+    </Grid>
   ),
 }
 
@@ -197,7 +198,7 @@ const CONTENT_SPACING_LABELS = {
 
 export const ContentSpacingOverride: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <Grid columns={3} size="wide">
       {CONTENT_SPACING_VARIANTS.map((contentSpacing) => (
         <div key={contentSpacing}>
           <Label>
@@ -231,7 +232,7 @@ export const ContentSpacingOverride: Story = {
           </Card>
         </div>
       ))}
-    </div>
+    </Grid>
   ),
 }
 
@@ -242,7 +243,7 @@ const TITLE_SPACINGS = ["quarter", "none", "inherit"] as const
 
 export const TitleVariants: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <Grid columns={3} size="wide">
       {TITLE_VARIANTS.map((variant) => (
         <div key={variant} className="space-y-6">
           <Label>
@@ -275,7 +276,7 @@ export const TitleVariants: Story = {
           ))}
         </div>
       ))}
-    </div>
+    </Grid>
   ),
 }
 
@@ -283,7 +284,7 @@ export const TitleVariants: Story = {
 
 export const BannerPlacement: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <Grid columns={3} size="wide">
       <div>
         <Label>Inside CardHeader (padded; default --banner-radius)</Label>
         <Card>
@@ -349,7 +350,7 @@ export const BannerPlacement: Story = {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </Grid>
   ),
 }
 
@@ -375,7 +376,7 @@ const BANNER_SIZES = [
 
 export const BannerBackgrounds: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <Grid columns={3} size="wide">
       {BANNER_BACKGROUNDS.map((bg) => (
         <div key={bg}>
           <Label>
@@ -385,14 +386,14 @@ export const BannerBackgrounds: Story = {
           <CardBanner background={bg} />
         </div>
       ))}
-    </div>
+    </Grid>
   ),
 }
 
 export const BannerSizes: Story = {
   parameters: { layout: "fullscreen " },
   render: () => (
-    <div className="grid grid-cols-fill-4 gap-8 p-8">
+    <Grid className="p-8">
       {BANNER_SIZES.map((size) => (
         <div key={size}>
           <Label>
@@ -409,7 +410,7 @@ export const BannerSizes: Story = {
           </CardBanner>
         </div>
       ))}
-    </div>
+    </Grid>
   ),
 }
 
@@ -419,7 +420,7 @@ export const BannerSizes: Story = {
 
 export const HeaderLayouts: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+    <Grid columns={2} size="wide">
       <div>
         <Label>Default header (Card variant=&quot;base&quot;)</Label>
         <Card>
@@ -454,7 +455,7 @@ export const HeaderLayouts: Story = {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </Grid>
   ),
 }
 
@@ -462,7 +463,7 @@ export const HeaderLayouts: Story = {
 
 export const FooterButtons: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+    <Grid columns={2} size="wide">
       <div>
         <Label>CardFooter buttons=&quot;full&quot; (default)</Label>
         <Card>
@@ -494,7 +495,7 @@ export const FooterButtons: Story = {
           </CardFooter>
         </Card>
       </div>
-    </div>
+    </Grid>
   ),
 }
 
@@ -502,7 +503,7 @@ export const FooterButtons: Story = {
 
 export const Linkable: Story = {
   render: () => (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <Grid columns={3} size="wide">
       <div>
         <Label>
           Card href=&quot;...&quot; + CardBanner zoom=&#123;true&#125; (default)
@@ -563,7 +564,7 @@ export const Linkable: Story = {
           </CardContent>
         </Card>
       </div>
-    </div>
+    </Grid>
   ),
 }
 
@@ -580,7 +581,7 @@ export const Composites: Story = {
     const tDev = useTranslations("page-developers-index")
 
     return (
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <Grid columns={2} size="wide">
         {/* Image-banner card (BuilderCard shape) */}
         <div>
           <Label>Image-banner card (BuilderCard shape)</Label>
@@ -687,7 +688,7 @@ export const Composites: Story = {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </Grid>
     )
   },
 }

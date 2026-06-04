@@ -26,6 +26,7 @@ import {
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
 import { VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
@@ -176,13 +177,13 @@ const DevelopersPage = async (props: { params: Promise<PageParams> }) => {
 
             <p>{t("page-developers-build-section-desc")}</p>
             {/* Desktop */}
-            <div className="grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-4">
+            <Grid balanced={4} className="max-md:hidden">
               {paths.map((path, idx) => (
                 <BuilderCard path={path} key={idx} />
               ))}
 
               <SpeedRunCard {...speedRunDetails} />
-            </div>
+            </Grid>
 
             {/* Mobile */}
             <div className="-mx-8 md:hidden">

@@ -14,6 +14,7 @@ import MainArticle from "@/components/MainArticle"
 import NetworkMaturity from "@/components/NetworkMaturity"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
+import { Grid } from "@/components/ui/grid"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -189,10 +190,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
         <NetworkMaturity />
 
-        <div
-          id="callout-cards"
-          className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2"
-        >
+        <Grid id="callout-cards" columns={2} size="wide" className="p-8">
           <Callout
             image={Callout1Image}
             title={t("page-layer-2-networks-callout-1-title")}
@@ -225,7 +223,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               {tCommon("learn-more")}
             </ButtonLink>
           </Callout>
-        </div>
+        </Grid>
       </MainArticle>
     </I18nProvider>
   )

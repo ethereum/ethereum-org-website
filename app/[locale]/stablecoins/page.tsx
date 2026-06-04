@@ -27,6 +27,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Callout from "@/components/ui/callout"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -620,7 +621,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                 <p className="mb-6">{t("page-stablecoins-saving")}</p>
               </div>
             </Flex>
-            <div className="mb-16 grid grid-cols-fill-4 gap-8">
+            <Grid className="mb-16">
               {dapps.map((dapp, idx) => (
                 <DataProductCard
                   key={idx}
@@ -633,7 +634,7 @@ async function Page(props: { params: Promise<PageParams> }) {
                   className={dapp.className}
                 />
               ))}
-            </div>
+            </Grid>
           </Section>
           <Divider />
           <Section id="how">

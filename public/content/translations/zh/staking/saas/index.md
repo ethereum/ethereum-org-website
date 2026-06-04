@@ -21,11 +21,11 @@ summaryPoints:
 
 以太坊协议本身并不支持质押委托，于是这类服务便为了满足这一需求而建。 如果你有 32 个以太币需要质押，但是没有合适的硬件设备，那么质押即服务可以使你在使用运营商硬件设施的同时获得区块奖励。
 
-<CardGrid>
+<Grid>
   <Card title="拥有自己的验证者" emoji=":desktop_computer:" description="存入 32 ETH 以激活你自己的签名密钥，参与以太坊共识。通过控制面板监控进度，见证 ETH 奖励的累积。" />
   <Card title="轻松入门" emoji="🏁" description="无需担心硬件规格、设置、节点维护和升级。SaaS 提供商让你将困难部分外包出去：只需上传你的签名凭证，他们就能代表你运行验证者，并收取少量费用。" />
   <Card title="限制风险" emoji=":shield:" description="在很多情况下，用户无需交出用于提款或转移质押资金的密钥。这些密钥与签名密钥不同，可以分开存放，以限制（但不能消除）你作为质押者的风险。" />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

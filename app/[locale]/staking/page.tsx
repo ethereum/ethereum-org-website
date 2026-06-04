@@ -33,6 +33,7 @@ import {
 } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, Stack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
@@ -75,10 +76,6 @@ const StyledButtonLink = ({
   children,
 }: Pick<ButtonLinkProps, "href" | "children">) => (
   <ButtonLink href={href}>{children}</ButtonLink>
-)
-
-const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-1 gap-8 lg:grid-cols-3" {...props} />
 )
 
 const Page = async (props: { params: Promise<PageParams> }) => {
@@ -273,7 +270,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               <H2 id={tocItems.whyStakeYourEth.id}>
                 {tocItems.whyStakeYourEth.title}
               </H2>
-              <CardGrid>
+              <Grid columns={3}>
                 {benefits.map(
                   ({ title, description, emoji, ctaLabel, href }, idx) => (
                     <MarkdownCard
@@ -288,7 +285,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                     </MarkdownCard>
                   )
                 )}
-              </CardGrid>
+              </Grid>
             </div>
             <div>
               <H2 id={tocItems.howToStakeYourEth.id}>

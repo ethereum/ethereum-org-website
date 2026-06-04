@@ -8,6 +8,7 @@ import type { EventItem } from "@/lib/types"
 
 import { Alert, AlertContent } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 
 import EventCard from "../_components/EventCard"
@@ -71,7 +72,7 @@ export default function FilterEvents({ events }: FilterProps) {
 
     return (
       <>
-        <div className="grid grid-cols-fill-4 gap-8">
+        <Grid columns={3}>
           {filteredEvents.slice(0, MAX_RESULTS).map((event) => (
             <EventCard
               key={event.id}
@@ -86,7 +87,7 @@ export default function FilterEvents({ events }: FilterProps) {
               }}
             />
           ))}
-        </div>
+        </Grid>
         {filteredEvents.length > MAX_RESULTS && (
           <div className="flex justify-center">
             <ButtonLink

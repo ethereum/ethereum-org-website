@@ -29,11 +29,11 @@ Một người stake tại nhà sẽ nhận phần thưởng trực tiếp từ 
 
 Stake tại nhà kèm theo trách nhiệm nhưng cung cấp sự kiểm soát tối đa quỹ của bạn và thiết lập Staking.
 
-<CardGrid>
+<Grid>
   <Card title="Kiếm ETH mới" emoji="💸" description="Nhận phần thưởng bằng ETH trực tiếp từ giao thức khi trình xác thực của bạn trực tuyến, không có bên trung gian nào cắt phế." />
   <Card title="Toàn quyền kiểm soát" emoji="🎛️" description="Tự giữ khóa của bạn. Chọn kết hợp máy khách và phần cứng để giảm thiểu rủi ro và góp phần bảo mật mạng lưới. Các dịch vụ đặt cược của bên thứ ba quyết định thay bạn, và họ không phải lúc nào cũng chọn phương án an toàn nhất." />
   <Card title="Bảo mật mạng lưới" emoji="🔐" description="Đặt cược tại nhà là cách đặt cược có tác động lớn nhất. Bằng cách chạy một trình xác thực trên phần cứng của riêng bạn tại nhà, bạn sẽ củng cố sự vững chắc, tính phi tập trung và bảo mật của giao thức Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Những điều cần cân nhắc trước khi đặt cược tại nhà {#considerations-before-staking-solo}
 

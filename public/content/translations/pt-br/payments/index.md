@@ -26,11 +26,11 @@ Isso não é um sonho distante — está acontecendo hoje no Ethereum. Embora in
 
 Para milhões de pessoas que trabalham no exterior, enviar dinheiro de volta para casa é uma necessidade regular. Serviços tradicionais de remessa frequentemente vem com taxas altas e tempos de processamento lentos. Ethereum oferece uma alternativa atraente.
 
-<CardGrid>
+<Grid>
   <Card title="Taxas mais baixas" emoji=":money_with_wings:" description="Serviços de remessa cobram em média até US$ 14 em taxas. Transações na Ethereum geralmente custam menos de US$ 0,01."/>
   <Card title="Transferências mais rápidas" emoji="📶" description="Transferências internacionais levam vários dias para serem processadas. Transações na Ethereum são concluídas em minutos." />
   <Card title="Aberto para todos" emoji="🌎" description="Você só precisa de uma conexão com a internet e um aplicativo de carteira para enviar ou receber Ether." />
-</CardGrid>
+</Grid>
 
 ## Acesso a moedas globais {#access-to-global-currencies}
 

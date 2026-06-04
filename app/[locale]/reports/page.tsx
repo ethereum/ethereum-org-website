@@ -14,6 +14,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import { ExternalLinkIcon } from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 import { Tag } from "@/components/ui/tag"
@@ -69,7 +70,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             <p>{t("page-reports-intro")}</p>
           </div>
 
-          <div className="grid grid-cols-fill-4 gap-4">
+          <Grid>
             {sortedReports.map(
               ({
                 slug,
@@ -129,7 +130,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 </Card>
               )
             )}
-          </div>
+          </Grid>
         </Section>
 
         <Section id="suggest" className="space-y-[1.5lh]">

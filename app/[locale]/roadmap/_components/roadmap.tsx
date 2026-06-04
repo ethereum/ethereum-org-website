@@ -21,6 +21,7 @@ import Translation from "@/components/Translation"
 import { AccordionContainer } from "@/components/ui/accordion"
 import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Grid } from "@/components/ui/grid"
 import Link from "@/components/ui/Link"
 
 import ReleaseCarousel from "./ReleaseCarousel"
@@ -129,7 +130,7 @@ const RoadmapPage = () => {
             <p className="max-w-screen-md text-lg">
               <Translation id="page-roadmap:page-roadmap-changes-coming-description" />
             </p>
-            <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <Grid balanced={4} className="items-stretch">
               {changesComingItems.map((item) => (
                 <div
                   key={item.title}
@@ -147,7 +148,7 @@ const RoadmapPage = () => {
                   </ButtonLink>
                 </div>
               ))}
-            </div>
+            </Grid>
           </div>
 
           <div className="flex flex-col-reverse gap-12 px-8 py-4 md:w-full md:flex-row">

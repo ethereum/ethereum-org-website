@@ -21,11 +21,11 @@ La participación como servicio (SaaS), representa una categoría de servicios d
 
 El protocolo de Ethereum no respalda originariamente la delegación de participaciones y, por tanto, estos servicios se han creado con el fin de cubrir esta demanda. Si tiene 32 ETH para participar, pero no domina con confianza el hardware, los servicios de participación (SaaS) le permiten delegar la parte técnica mientras gana recompensas de bloques nativos.
 
-<CardGrid>
+<Grid>
   <Card title="Tu propio validador" emoji=":desktop_computer:" description="Deposita tus 32 ETH para activar tu propio conjunto de claves de firma que participará en el consenso de Ethereum. Sigue tu progreso con los paneles para ver cómo se acumulan las recompensas de ETH." />
   <Card title="Fácil de empezar" emoji="🏁" description="Olvídate de las especificaciones de hardware, la configuración, el mantenimiento de nodos y las actualizaciones. Los proveedores de SaaS te permiten delegar la parte difícil subiendo tus propias credenciales de firma, permitiéndoles ejecutar un validador en tu nombre por un pequeño costo." />
   <Card title="Limita tu riesgo" emoji=":shield:" description="En muchos casos, los usuarios no tienen que ceder el acceso a las claves que permiten retirar o transferir los fondos en staking. Estas son diferentes de las claves de firma y se pueden almacenar por separado para limitar (pero no eliminar) tu riesgo como staker." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="saas" />
 

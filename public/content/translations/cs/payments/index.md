@@ -26,11 +26,11 @@ To není žádný vzdálený sen – děje se to dnes na Ethereu. Zatímco tradi
 
 Pro miliony lidí pracujících v zahraničí je posílání peněz domů pravidelnou nutností. Tradiční remitenční služby jsou často spojeny s vysokými poplatky a pomalou dobou zpracování. Ethereum nabízí zajímavou alternativu.
 
-<CardGrid>
+<Grid>
   <Card title="Levnější poplatky" emoji=":money_with_wings:" description="Služby pro převod peněz si v průměru účtují poplatky až 14 $. Transakce na Ethereu přitom často stojí méně než 0,01 $."/>
   <Card title="Rychlejší převody" emoji="📶" description="Zpracování mezinárodních bankovních převodů trvá několik dní. Transakce na Ethereu jsou vyřízeny během několika minut." />
   <Card title="Otevřeno pro každého" emoji="🌎" description="K odesílání nebo přijímání Etherů vám stačí jen připojení k internetu a peněženka." />
-</CardGrid>
+</Grid>
 
 ## Přístup ke globálním měnám {#access-to-global-currencies}
 
