@@ -81,6 +81,11 @@ export default async function Layer2NetworksPageJsonLD({
             url: network.website,
             applicationCategory: "Blockchain Network",
             operatingSystem: "Ethereum",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
             additionalProperty: [
               {
                 "@type": "PropertyValue",
