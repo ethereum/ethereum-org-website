@@ -1,5 +1,5 @@
 {
-  "page-what-is-ethereum-meta-title": "Ethereum là gì? (Hướng dẫn toàn tập) | ethereum.org",
+  "page-what-is-ethereum-meta-title": "Ethereum là gì? (Hướng dẫn toàn tập)",
   "page-what-is-ethereum-meta-description": "Tổng quan đầy đủ về Ethereum là gì, cách thức hoạt động, công dụng và cách bắt đầu sử dụng hoặc xây dựng trên đó. Được giải thích bằng các thuật ngữ đơn giản.",
   "page-what-is-ethereum-title": "Ethereum là gì?",
   "page-what-is-ethereum-hero-description-1": "Ethereum là một mạng lưới Chuỗi khối phi tập trung và nền tảng phát triển phần mềm, được vận hành bởi tiền mã hóa ether (ETH).",
@@ -156,7 +156,7 @@
   "page-what-is-ethereum-roadmap-title": "Lộ trình của Ethereum cho năm 2026 là gì?",
   "page-what-is-ethereum-roadmap-intro-1": "Ethereum không tuân theo một lộ trình cố định. Nó tuân theo một tầm nhìn chung.",
   "page-what-is-ethereum-roadmap-intro-2": "Các bản nâng cấp mạng lưới được thực hiện dưới dạng EIP và được phát triển công khai bởi các cộng tác viên trên toàn thế giới. Không có nhóm trung tâm nào quyết định điều gì sẽ xảy ra, chỉ có những người xây dựng những gì họ tin là hữu ích dựa trên nhu cầu của người dùng.",
-  "page-what-is-ethereum-roadmap-intro-3": "Fusaka là bản nâng cấp gần đây nhất, ra mắt vào tháng 12 năm 2025. Nó đã giới thiệu PeerDAS để có Tính khả dụng của dữ liệu lớp 2 (l2) hiệu quả hơn và nâng giới hạn gas mặc định lên ~60M. Hướng tới năm 2026, Glamsterdam đang được phát triển và dự kiến ra mắt vào nửa đầu năm 2026.",
+  "page-what-is-ethereum-roadmap-intro-3": "Fusaka là bản nâng cấp gần đây nhất, được ra mắt vào tháng 12 năm 2025. Nó đã giới thiệu PeerDAS để giúp tính khả dụng của dữ liệu lớp 2 (l2) hiệu quả hơn và tăng giới hạn gas mặc định lên ~60M. Hướng tới năm 2026, Glamsterdam đang được phát triển và dự kiến ra mắt vào nửa cuối năm 2026.",
   "page-what-is-ethereum-roadmap-priorities-intro": "<a>Hướng tới tương lai</a>, các ưu tiên của Ethereum bao gồm:",
   "page-what-is-ethereum-roadmap-priority-1": "Làm cho Giao thức cốt lõi và các lớp 2 (l2) của nó nhanh hơn và rẻ hơn cho mọi người",
   "page-what-is-ethereum-roadmap-priority-2": "Cải thiện trải nghiệm cho người dùng và nhà phát triển",

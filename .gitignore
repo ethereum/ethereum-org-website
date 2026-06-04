@@ -43,7 +43,7 @@ pnpm-lock.yaml.bak
 next-env.d.ts
 
 # rss feeds
-feed.xml
+/feed.xml
 
 # Sitemaps
 sitemap*.xml

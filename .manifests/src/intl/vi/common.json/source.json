@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/common.json",
-  "generatedAt": "2026-05-20T17:27:18.863Z",
-  "rootHash": "57a30a6f1d94",
+  "generatedAt": "2026-06-02T09:59:25.593Z",
+  "rootHash": "f6744960f9ba",
   "tree": {
-    "contentHash": "1481d367f681",
-    "anchorHash": "490d863f6f7e",
+    "contentHash": "d0599bca3752",
+    "anchorHash": "9073bb8b8520",
     "children": {
       "about-ethereum-org": {
         "contentHash": "9aafb3686977",
@@ -880,6 +880,10 @@
         "contentHash": "382ac5f308f7",
         "anchorHash": "e3b0c44298fc"
       },
+      "latest": {
+        "contentHash": "8730d3c2022a",
+        "anchorHash": "e3b0c44298fc"
+      },
       "layer-2": {
         "contentHash": "620558ceadc1",
         "anchorHash": "e3b0c44298fc"
@@ -1372,6 +1376,14 @@
         "contentHash": "6af0ecdff330",
         "anchorHash": "e3b0c44298fc"
       },
+      "nav-iptf-description": {
+        "contentHash": "1769c92fe619",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-iptf-label": {
+        "contentHash": "ea0c7dd5b0a9",
+        "anchorHash": "e3b0c44298fc"
+      },
       "nav-join-ethereum-org-description": {
         "contentHash": "98da0ce938bb",
         "anchorHash": "e3b0c44298fc"
@@ -1482,6 +1494,14 @@
       },
       "nav-refi-description": {
         "contentHash": "de20cb8d714b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-reports-description": {
+        "contentHash": "5699ba1aec1f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "nav-reports-label": {
+        "contentHash": "dacca3cba3f3",
         "anchorHash": "e3b0c44298fc"
       },
       "nav-research-description": {
@@ -2066,6 +2086,10 @@
         "contentHash": "e6fe8ee281de",
         "anchorHash": "e3b0c44298fc"
       },
+      "reports": {
+        "contentHash": "dacca3cba3f3",
+        "anchorHash": "e3b0c44298fc"
+      },
       "trillion-dollar-security": {
         "contentHash": "e542c2c6f497",
         "anchorHash": "e3b0c44298fc"
@@ -2384,6 +2408,7 @@
       "last-24-hrs",
       "page-last-update",
       "last-updated",
+      "latest",
       "layer-2",
       "learn",
       "learn-ethereum-development",
@@ -2507,6 +2532,8 @@
       "nav-how-ethereum-works-label",
       "nav-institution-enterprise-description",
       "nav-institution-enterprise-label",
+      "nav-iptf-description",
+      "nav-iptf-label",
       "nav-join-ethereum-org-description",
       "nav-join-ethereum-org-label",
       "nav-l2-networks-description",
@@ -2535,6 +2562,8 @@
       "nav-quizzes-description",
       "nav-quizzes-label",
       "nav-refi-description",
+      "nav-reports-description",
+      "nav-reports-label",
       "nav-research-description",
       "nav-research-label",
       "nav-roadmap-description",
@@ -2679,6 +2708,7 @@
       "translation-banner-title-update",
       "translation-program",
       "translator",
+      "reports",
       "trillion-dollar-security",
       "try-again",
       "try-using-search",
@@ -2709,5 +2739,5 @@
       "region-sint-eustatius-netherlands"
     ]
   },
-  "sourceCommitSha": "71ae652e5f2bfee97d550284550a7069b569f9eb"
+  "sourceCommitSha": "9c8ec781d111c9802b6d9677f581d21a46bedcb4"
 }

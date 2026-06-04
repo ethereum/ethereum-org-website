@@ -66,7 +66,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
         </ul>
       </div>
     ),
-    href: "/upgrades/merge",
+    href: "/roadmap/merge/",
   },
   {
     image: QuizzesHubHeroImage,
@@ -178,7 +178,7 @@ export const getReleasesData = (t: TranslationFunction): Release[] => [
     image: GlamsterdamImage,
     releaseName: "Glamsterdam",
     plannedReleaseYear: "2026",
-    displayDate: "H1 2026",
+    displayDate: "H2 2026",
     href: "/roadmap/glamsterdam/",
     content: (
       <div>

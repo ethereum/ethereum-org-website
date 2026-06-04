@@ -178,7 +178,7 @@ Embora os AVSs ofereçam taxas diferentes, os Liquid Restaking Tokens (LRTs) com
 
 ## Leitura adicional {#further-reading}
 
-1. [ethereum.org - guia de staking de ETH](https://ethereum.org/en/staking/)
+1. [ethereum.org - guia de staking de ETH](/staking/)
 2. [Ledger Academy - O que é o Restaking de Ethereum?](https://www.ledger.com/academy/what-is-ethereum-restaking)
 3. [Consensys - EigenLayer: protocolo descentralizado de Restaking da Ethereum explicado](https://consensys.io/blog/eigenlayer-decentralized-ethereum-restaking-protocol-explained)
 4. [Vitalik Buterin - Don't overload Ethereum's consensus](https://vitalik.eth.limo/general/2023/05/21/dont_overload.html)

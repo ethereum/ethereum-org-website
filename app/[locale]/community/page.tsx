@@ -237,7 +237,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
                   {t("page-community-open-source-description")}
                 </Subtitle>
                 <ButtonRow>
-                  <ButtonLink href="/community/get-involved/#ethereum-jobs/">
+                  <ButtonLink href="/community/get-involved#ethereum-jobs">
                     {t("page-community-find-a-job")}
                   </ButtonLink>
                   <StyledButtonLink

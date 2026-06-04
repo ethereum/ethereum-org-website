@@ -9,7 +9,7 @@ authors: ["Ethereum Foundation"]
 
 # The Ethereum Foundation Mandate {#mandate}
 
-This mandate was originally published by the Ethereum Foundation on 13-March-2026. Read the [original mandate here](https://ethereum.foundation/ef-mandate.pdf) in its fully-designed format.
+This mandate was originally published by the Ethereum Foundation on March 13, 2026. Read the [original mandate here](https://ethereum.foundation/ef-mandate.pdf) in its fully-designed format.
 
 This document was placed onchain and signed by the Foundation, [visible on the Blockscout block explorer](https://eth.blockscout.com/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855) (select "View details", under _Raw input_ with _UTF-8_).
 

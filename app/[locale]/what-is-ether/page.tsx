@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { Lang, ToCItem } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import {
   HighlightCard,
   HighlightStack,
@@ -55,20 +55,6 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
       ? { gasPrice: gasPriceData.gasPrice, ethPriceUSD: ethPriceData.value }
       : null
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: {
-      slug: "what-is-ether",
-      startDepth: 1,
-    },
-    heroImg,
-    title: t("page-what-is-ether-title"),
-    description: (
-      <>
-        <p>{t("page-what-is-ether-hero-description-1")}</p>
-      </>
-    ),
-  }
-
   const tocItems: ToCItem[] = [
     { title: t("page-what-is-ether-title"), url: "#what-is-ether" },
     { title: t("page-what-is-ether-how-to-buy-eth"), url: "#how-to-buy-eth" },
@@ -115,7 +101,15 @@ const Page = async (props: { params: Promise<{ locale: Lang }> }) => {
         contributors={contributors}
       />
 
-      <ContentHero {...heroProps} />
+      <PageHero
+        breadcrumbs={{
+          slug: "what-is-ether",
+          startDepth: 1,
+        }}
+        heroImg={heroImg}
+        title={t("page-what-is-ether-title")}
+        description={t("page-what-is-ether-hero-description-1")}
+      />
       <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
         <div
           data-label="extras"

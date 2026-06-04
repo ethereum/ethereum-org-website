@@ -13427,7 +13427,7 @@
       "login": "nixorokish",
       "name": "nixo",
       "avatar_url": "https://avatars.githubusercontent.com/u/23272494?v=4",
-      "profile": "http://ethereum.org",
+      "profile": "https://ethereum.org",
       "contributions": [
         "content",
         "maintenance"
@@ -14294,6 +14294,24 @@
       "profile": "https://nodeflare.app",
       "contributions": [
         "tool"
+      ]
+    },
+    {
+      "login": "andreivladbrg",
+      "name": "Andrei Vlad Birgaoanu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99738872?v=4",
+      "profile": "https://github.com/andreivladbrg",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "onchainze",
+      "name": "onchainze",
+      "avatar_url": "https://avatars.githubusercontent.com/u/288279120?v=4",
+      "profile": "https://github.com/onchainze",
+      "contributions": [
+        "bug"
       ]
     }
   ],
