@@ -23,11 +23,6 @@ import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
-import {
-  DeveloperToolCategory,
-  DeveloperToolTag,
-} from "../../app/[locale]/developers/tools/types"
-
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
@@ -1356,15 +1351,80 @@ export interface MatomoEventOptions {
   eventValue?: string
 }
 
-export type DeveloperToolsResponse = {
+export type DeveloperToolsRepoLink = {
+  href: string
+  stargazers?: number
+  forks?: number
+  watchers?: number
+  subscribers?: number
+  openIssues?: number
+  isArchived?: boolean
+  isFork?: boolean
+  daysSincePush?: number
+  officialScore?: number
+  inferredScore?: number
+  finalScore?: number
+  scoreSource?: "official-weight" | "github-inferred" | "unscored"
+  lastUpdated?: string | null
+}
+
+export type DeveloperToolsPackageLink = {
+  href: string
+  downloads?: number
+}
+
+export type BuilderResourcesCatalogResource = {
+  name: string
+  description: string
+  thumbnail_url?: string | null
+  banner_url?: string | null
+  twitter?: string | null
+  repos: Array<string | DeveloperToolsRepoLink>
+  packages?: Array<string | DeveloperToolsPackageLink>
+  tags: string[]
+  website?: string | null
+  llmstext?: string | null
+  subcategory_id: string
+  resource_raw_score?: number
+  resource_score?: number
+  resource_rank?: number
+  resource_score_source?: "official-weight" | "github-inferred" | "unscored"
+}
+
+export type DeveloperToolsRankingCoverage = {
+  totalResources: number
+  scoredResources: number
+  usedMedianFallbackCount: number
+  matchedOfficialRepoCount: number
+  inferredRepoCount: number
+  unscoredRepoCount: number
+  trainingSampleCount: number
+}
+
+export type DeveloperToolsRankingMetadata = {
+  rankingAlgorithmVersion: string
+  damping: number
+  maxIterations: number
+  rules: Record<string, number>
+  coverage: DeveloperToolsRankingCoverage
+}
+
+export interface BuilderResourcesTaxonomySubcategory {
   id: string
   name: string
   description: string
-  thumbnail_url?: string
-  banner_url?: string
-  twitter?: string
-  repos: string[]
-  tags: DeveloperToolTag[]
-  website?: string
-  category: DeveloperToolCategory
+}
+
+export interface BuilderResourcesTaxonomyCategory {
+  id: string
+  name: string
+  description: string
+  subcategories: BuilderResourcesTaxonomySubcategory[]
+}
+
+export interface BuilderResourcesTaxonomy {
+  categories: {
+    definitions: BuilderResourcesTaxonomyCategory[]
+  }
+  tags: string[]
 }
