@@ -1,8 +1,4 @@
-import type { DeveloperToolsResponse } from "@/lib/types"
-
 import { fetchRetry, sleep } from "@/data-layer/fetchers/fetchRetry"
-
-import type { DeveloperTool } from "./utils"
 
 type RepoInfo = {
   owner: string
@@ -12,6 +8,13 @@ type RepoInfo = {
 
 type GraphQLRepoResult = {
   stargazerCount: number
+  forkCount: number
+  watcherCount: number
+  subscriberCount: number
+  openIssueCount: number
+  isArchived: boolean
+  isFork: boolean
+  pushedAt: string | null
   lastCommitDate: string | null
 }
 
@@ -42,6 +45,19 @@ function buildGraphQLQuery(repos: RepoInfo[]): string {
       (repo, i) => `
     repo${i}: repository(owner: "${repo.owner}", name: "${repo.name}") {
       stargazerCount
+      forkCount
+      watchers {
+        totalCount
+      }
+      mentionableUsers {
+        totalCount
+      }
+      issues(states: OPEN) {
+        totalCount
+      }
+      isArchived
+      isFork
+      pushedAt
       defaultBranchRef {
         target {
           ... on Commit {
@@ -61,15 +77,19 @@ async function fetchReposBatch(
   repos: RepoInfo[]
 ): Promise<Map<string, GraphQLRepoResult>> {
   const results = new Map<string, GraphQLRepoResult>()
+  const token = process.env.GITHUB_TOKEN_READ_ONLY
 
   if (repos.length === 0) return results
+  if (!token) {
+    throw new Error("GitHub token not set (GITHUB_TOKEN_READ_ONLY)")
+  }
 
   const query = buildGraphQLQuery(repos)
 
   const response = await fetchRetry("https://api.github.com/graphql", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
+      Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ query }),
@@ -92,6 +112,13 @@ async function fetchReposBatch(
     if (data) {
       results.set(repo.originalHref, {
         stargazerCount: data.stargazerCount,
+        forkCount: data.forkCount ?? 0,
+        watcherCount: data.watchers?.totalCount ?? 0,
+        subscriberCount: data.mentionableUsers?.totalCount ?? 0,
+        openIssueCount: data.issues?.totalCount ?? 0,
+        isArchived: data.isArchived ?? false,
+        isFork: data.isFork ?? false,
+        pushedAt: data.pushedAt ?? null,
         lastCommitDate: data.defaultBranchRef?.target?.committedDate ?? null,
       })
     }
@@ -100,15 +127,46 @@ async function fetchReposBatch(
   return results
 }
 
-export async function fetchGitHub(
-  appData: DeveloperToolsResponse[]
-): Promise<DeveloperTool[]> {
+type ToolWithRepoUrls = {
+  repos: Array<string | { href: string }>
+} & Record<string, unknown>
+
+type ToolWithGitHubData<T extends ToolWithRepoUrls> = Omit<T, "repos"> & {
+  repos: {
+    href: string
+    stargazers?: number
+    forks?: number
+    watchers?: number
+    subscribers?: number
+    openIssues?: number
+    isArchived?: boolean
+    isFork?: boolean
+    daysSincePush?: number
+    lastUpdated?: string | null
+  }[]
+}
+
+function daysSince(dateIso: string | null): number | undefined {
+  if (!dateIso) return undefined
+  const timestamp = Date.parse(dateIso)
+  if (Number.isNaN(timestamp)) return undefined
+  return Math.max(0, (Date.now() - timestamp) / (1000 * 60 * 60 * 24))
+}
+
+export async function fetchGitHub<T extends ToolWithRepoUrls>(
+  appData: T[]
+): Promise<ToolWithGitHubData<T>[]> {
+  if (!process.env.GITHUB_TOKEN_READ_ONLY) {
+    throw new Error("GitHub token not set (GITHUB_TOKEN_READ_ONLY)")
+  }
+
   // Collect all unique repo URLs
   const allRepos: RepoInfo[] = []
   const seenHrefs = new Set<string>()
 
   for (const app of appData) {
-    for (const repoUrl of app.repos) {
+    for (const repoEntry of app.repos) {
+      const repoUrl = typeof repoEntry === "string" ? repoEntry : repoEntry.href
       if (seenHrefs.has(repoUrl)) continue
       seenHrefs.add(repoUrl)
 
@@ -121,8 +179,8 @@ export async function fetchGitHub(
 
   console.log(`Fetching stargazers for ${allRepos.length} GitHub repos`)
 
-  // GitHub GraphQL has a complexity limit; batch in chunks of ~100
-  const BATCH_SIZE = 100
+  // Keep queries small to avoid GraphQL resource-limit spikes on large batches.
+  const BATCH_SIZE = 25
   const repoDataMap = new Map<string, GraphQLRepoResult>()
 
   for (let i = 0; i < allRepos.length; i += BATCH_SIZE) {
@@ -149,12 +207,20 @@ export async function fetchGitHub(
 
   // Transform the data with enriched repos
   return appData.map(({ repos, ...app }) => ({
-    ...app,
-    repos: repos.map((repoUrl) => {
+    ...(app as Omit<T, "repos">),
+    repos: repos.map((repoEntry) => {
+      const repoUrl = typeof repoEntry === "string" ? repoEntry : repoEntry.href
       const data = repoDataMap.get(repoUrl)
       return {
         href: repoUrl,
         stargazers: data?.stargazerCount,
+        forks: data?.forkCount,
+        watchers: data?.watcherCount,
+        subscribers: data?.subscriberCount,
+        openIssues: data?.openIssueCount,
+        isArchived: data?.isArchived,
+        isFork: data?.isFork,
+        daysSincePush: daysSince(data?.pushedAt ?? null),
         lastUpdated: data?.lastCommitDate,
       }
     }),

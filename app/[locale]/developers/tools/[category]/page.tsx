@@ -1,150 +1,85 @@
-import { notFound, redirect } from "next/navigation"
+import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { Lang, PageParams } from "@/lib/types"
+import { PageHero } from "@/components/Hero"
 
-import PageHero from "@/components/Hero/PageHero"
-import MainArticle from "@/components/MainArticle"
-import SubpageCard from "@/components/SubpageCard"
-import { Grid } from "@/components/ui/grid"
-import { Section } from "@/components/ui/section"
-
-import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { normalizeDeveloperToolsData } from "@/lib/utils/developerToolsData"
 import { getMetadata } from "@/lib/utils/metadata"
 
-import CategoryToolsGrid from "../_components/CategoryToolsGrid"
-import HighlightsSection from "../_components/HighlightsSection"
-import ToolModalContents from "../_components/ToolModalContents"
-import ToolModalWrapper from "../_components/ToolModalWrapper"
-import {
-  DEV_TOOL_CATEGORIES,
-  DEV_TOOL_CATEGORY_SLUGS,
-  VALID_CATEGORY_SLUGS,
-} from "../constants"
-import type { DeveloperToolCategorySlug, DeveloperToolTag } from "../types"
+import ToolsPageBody from "../_components/ToolsPageBody"
+import { getToolsPageData } from "../page-data"
 
 import DevelopersToolsCategoryJsonLD from "./page-jsonld"
 
 import { getDeveloperToolsData } from "@/lib/data"
 
+// Re-render statically generated pages daily to pick up tools data updates
+export const revalidate = 86400
+
+// Legacy category slugs (e.g. /developers/tools/security) are permanently
+// redirected to their new canonical slugs via redirects.config.js
+
 const Page = async (props: {
-  params: Promise<PageParams & { category: DeveloperToolCategorySlug }>
-  searchParams: Promise<{ toolId?: string }>
+  params: Promise<{ locale: string; category: string }>
 }) => {
-  const searchParams = await props.searchParams
   const params = await props.params
   const { locale, category } = params
-  const { toolId } = searchParams
 
   setRequestLocale(locale)
 
-  if (!VALID_CATEGORY_SLUGS.has(category)) {
-    notFound()
-  }
+  const {
+    categories,
+    allTools,
+    countByCategory,
+    categoryLabels,
+    subcategoryLabels,
+    tagLabels,
+    contributors,
+  } = await getToolsPageData(locale)
 
-  const t = await getTranslations("page-developers-tools")
+  const currentCategory = categories.find(({ id }) => id === category)
+  if (!currentCategory) notFound()
 
-  const data = await getDeveloperToolsData()
-  if (!data) throw Error("No developer tools data available")
-
-  const { toolsById, selections } = data
-
-  // Get all tools for this category (filter at runtime - trivial for few hundred tools)
-  const allTools = Object.values(toolsById)
-  const allCategoryData = allTools.filter(
-    (tool) => DEV_TOOL_CATEGORY_SLUGS[tool.category] === category
-  )
-
-  // Extract unique tags from current category
-  const uniqueTags = Array.from(
-    new Set(allCategoryData.flatMap((tool) => tool.tags))
-  ).sort()
-
-  const activeTool = toolId ? toolsById[toolId] : undefined
-
-  // Clean up invalid toolId by redirecting
-  if (toolId && !activeTool) {
-    redirect(`/developers/tools/${category}`)
-  }
-
-  // Prepare tag labels for client component
-  const tagLabels = Object.fromEntries(
-    uniqueTags.map((tag) => [tag, t(`page-developers-tools-tag-${tag}`)])
-  ) as Record<DeveloperToolTag, string>
-
-  // Resolve category highlight IDs to full tool objects
-  const highlights = (selections.categoryHighlights[category] || [])
-    .map((id) => toolsById[id])
-    .filter(Boolean)
-
-  // Get contributor info for JSON-LD
-  const { contributors } = await getAppPageContributorInfo(
-    `developers/tools/${category}`,
-    locale as Lang
-  )
+  const categoryTools = allTools.filter((tool) => tool.categoryId === category)
 
   return (
     <>
       <DevelopersToolsCategoryJsonLD
         locale={locale}
         category={category}
-        categoryTools={allCategoryData}
+        categoryLabel={categoryLabels[category]}
+        categoryTools={categoryTools}
         contributors={contributors}
       />
       <PageHero
-        breadcrumbs={{
-          slug: `/developers/tools/${t(`page-developers-tools-category-${category}-breadcrumb`)}`,
-        }}
-        title={t(`page-developers-tools-category-${category}-title`)}
-        description={t(
-          `page-developers-tools-category-${category}-description`
-        )}
+        breadcrumbs={{ slug: `/developers/tools/${category}` }}
+        title={categoryLabels[category]}
+        description={currentCategory.description}
         variant="no-divider"
       />
-      <MainArticle className="space-y-20 px-4 py-10 md:px-8">
-        <HighlightsSection tools={highlights} />
-
-        <Section id="tools" className="space-y-4">
-          <h2 className="sr-only">
-            {t("page-developers-tools-applications-title")}
-          </h2>
-
-          <CategoryToolsGrid
-            tools={allCategoryData}
-            uniqueTags={uniqueTags}
-            tagLabels={tagLabels}
-          />
-        </Section>
-
-        <Section id="categories" className="space-y-4">
-          <h2>{t("page-developers-tools-categories-title-other")}</h2>
-          <Grid>
-            {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
-              ({ slug, Icon }) => (
-                <SubpageCard
-                  key={slug}
-                  title={t(`page-developers-tools-category-${slug}-title`)}
-                  description={t(
-                    `page-developers-tools-category-${slug}-description`
-                  )}
-                  icon={<Icon className="size-8" />}
-                  href={`/developers/tools/${slug}`}
-                />
-              )
-            )}
-          </Grid>
-        </Section>
-      </MainArticle>
-
-      <ToolModalWrapper variant="unstyled" open={!!activeTool}>
-        {activeTool && <ToolModalContents tool={activeTool} />}
-      </ToolModalWrapper>
+      <ToolsPageBody
+        locale={locale}
+        tools={categoryTools}
+        categories={categories}
+        categoryLabels={categoryLabels}
+        subcategoryLabels={subcategoryLabels}
+        tagLabels={tagLabels}
+        countByCategory={countByCategory}
+        totalCount={allTools.length}
+        currentCategoryId={category}
+      />
     </>
   )
 }
 
 export async function generateStaticParams() {
-  return DEV_TOOL_CATEGORIES.map(({ slug }) => ({ category: slug }))
+  const data = await getDeveloperToolsData()
+  const normalizedData = normalizeDeveloperToolsData(data)
+  if (!normalizedData) return []
+
+  return normalizedData.taxonomy.categories.definitions.map(({ id }) => ({
+    category: id,
+  }))
 }
 
 export async function generateMetadata(props: {
@@ -153,29 +88,26 @@ export async function generateMetadata(props: {
   const params = await props.params
   const { locale, category } = params
 
-  try {
-    if (!VALID_CATEGORY_SLUGS.has(category as DeveloperToolCategorySlug)) {
-      throw new Error(`Invalid developer tools category: ${category}`)
-    }
+  // Guard against legacy/invalid slugs: the page itself redirects or 404s,
+  // so skip building metadata from a nonexistent translation key
+  const data = await getDeveloperToolsData()
+  const normalizedData = normalizeDeveloperToolsData(data)
+  const isValidCategory = normalizedData?.taxonomy.categories.definitions.some(
+    ({ id }) => id === category
+  )
+  if (!isValidCategory) return {}
 
-    const t = await getTranslations("page-developers-tools")
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-tools",
+  })
 
-    return await getMetadata({
-      locale,
-      slug: ["developers", "tools", category],
-      title: t(`page-developers-tools-category-${category}-title`),
-      description: t(
-        `page-developers-tools-category-${category}-meta-description`
-      ),
-    })
-  } catch {
-    const t = await getTranslations("common")
-
-    return {
-      title: t("page-not-found"),
-      description: t("page-not-found-description"),
-    }
-  }
+  return await getMetadata({
+    locale,
+    slug: ["developers", "tools", category],
+    title: `${t(`page-developers-tools-category-${category}-title`)} | ${t("page-developers-tools-meta-title")}`,
+    description: t("page-developers-tools-meta-description"),
+  })
 }
 
 export default Page
