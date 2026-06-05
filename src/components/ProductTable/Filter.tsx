@@ -102,7 +102,7 @@ const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
       className="bg-background-highlight p-6"
     >
       <AccordionTrigger className="border-b md:px-0">
-        <p className="text-body text-base font-bold">{filter.title}</p>
+        <p className="text-base font-bold text-body">{filter.title}</p>
       </AccordionTrigger>
       <AccordionContent className="p-0 md:p-0">
         <FieldSet className="gap-0">

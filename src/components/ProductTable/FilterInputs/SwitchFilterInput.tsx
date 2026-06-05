@@ -38,7 +38,7 @@ const SwitchFilterInput = ({
       <div className="flex flex-row items-center justify-between gap-2">
         <FieldLabel
           htmlFor={id}
-          className="flex w-fit cursor-pointer flex-row items-center gap-0 text-base font-normal leading-normal"
+          className="flex w-fit cursor-pointer flex-row items-center gap-0 text-base leading-normal font-normal"
         >
           <span className="h-8 w-8">
             {Icon && (
@@ -59,7 +59,7 @@ const SwitchFilterInput = ({
       {description && (
         <FieldDescription
           id={descriptionId}
-          className="text-body-medium ps-8 text-base font-normal leading-normal"
+          className="ps-8 text-base leading-normal font-normal text-body-medium"
         >
           {description}
         </FieldDescription>
