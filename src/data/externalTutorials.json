@@ -5,9 +5,7 @@
     "description": "An initial explainer on how decentralized identity works",
     "author": "Aw Kai Shin",
     "authorGithub": "https://github.com/0xKai27",
-    "tags": [
-      "identity"
-    ],
+    "tags": ["identity"],
     "skillLevel": "intermediate",
     "timeToRead": "9",
     "lang": "en",
@@ -19,9 +17,7 @@
     "description": "What is the EIP-4844? Learn what proto-danksharding and blobs are, how they work, and how to send your first blob transaction using the new Ethereum improvement proposal",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "layer 2"
-    ],
+    "tags": ["layer 2"],
     "skillLevel": "intermediate",
     "timeToRead": "11",
     "lang": "en",
@@ -33,9 +29,7 @@
     "description": "What is EIP-4844? What are blob-carrying transactions?",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "layer 2"
-    ],
+    "tags": ["layer 2"],
     "skillLevel": "intermediate",
     "timeToRead": "10",
     "lang": "en",
@@ -102,9 +96,7 @@
     "description": "What is fuzz testing? What are invariant tests? We introduce how to use these tools in Web3 & Solidity and explain why they are essential, especially for security. ",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "security"
-    ],
+    "tags": ["security"],
     "skillLevel": "beginner",
     "timeToRead": "9",
     "lang": "en",
@@ -116,9 +108,7 @@
     "description": "Smart Contract Auditing | What it is, what to expect, and where to look for one. Everything you need to know!",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "security"
-    ],
+    "tags": ["security"],
     "skillLevel": "beginner",
     "timeToRead": "5",
     "lang": "en",
@@ -130,9 +120,7 @@
     "description": "We look at formal verification & symbolic execution with two Trail of Bits Web3 security team members. Additionally, we review the value these techniques bring and compare them to other tools.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "security"
-    ],
+    "tags": ["security"],
     "skillLevel": "intermediate",
     "timeToRead": "10",
     "lang": "en",
@@ -225,11 +213,7 @@
     "description": "We build a minimal Foundry project using a staking application to show you how to work with Foundry.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "solidity",
-      "foundry",
-      "video"
-    ],
+    "tags": ["solidity", "foundry", "video"],
     "skillLevel": "beginner",
     "timeToRead": "19",
     "lang": "en",
@@ -261,14 +245,7 @@
     "description": "Using Compound and Openzeppelin as a basis, we build a 100% onchain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "solidity",
-      "typescript",
-      "hardhat",
-      "defi",
-      "dao",
-      "video"
-    ],
+    "tags": ["solidity", "typescript", "hardhat", "defi", "dao", "video"],
     "skillLevel": "beginner",
     "timeToRead": "86",
     "lang": "en",
@@ -280,13 +257,7 @@
     "description": "Using Compound and Openzeppelin as a basis, we build a 100% onchain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "solidity",
-      "typescript",
-      "hardhat",
-      "defi",
-      "dao"
-    ],
+    "tags": ["solidity", "typescript", "hardhat", "defi", "dao"],
     "skillLevel": "beginner",
     "timeToRead": "6",
     "lang": "en",
@@ -317,9 +288,7 @@
     "description": "We explore the steps one needs to take to enter the world as a blockchain developer and engineer. We talk about how to get there.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "solidity"
-    ],
+    "tags": ["solidity"],
     "skillLevel": "beginner",
     "timeToRead": "12",
     "lang": "en",
@@ -351,12 +320,7 @@
     "description": "Learn how to make multiple API calls to a blockchain node with a single API call to a multicall contract.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": [
-      "brownie",
-      "web3.py",
-      "video",
-      "python"
-    ],
+    "tags": ["brownie", "web3.py", "video", "python"],
     "skillLevel": "intermediate",
     "timeToRead": "15",
     "lang": "en",
@@ -490,12 +454,7 @@
     "description": "Hardhat's beginners guide to Ethereum contracts and dapp development",
     "author": "Hardhat",
     "authorGithub": "https://https://hardhat.org/",
-    "tags": [
-      "hardhat",
-      "solidity",
-      "testing",
-      "smart contracts"
-    ],
+    "tags": ["hardhat", "solidity", "testing", "smart contracts"],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "06/22/2021"
@@ -506,13 +465,7 @@
     "description": "Building Full Stack dapps with React, Ethers.js, Solidity, and Hardhat",
     "author": "Nader Dabit",
     "authorGithub": "https://github.com/dabit3",
-    "tags": [
-      "solidity",
-      "hardhat",
-      "ethers.js",
-      "smart contracts",
-      "react"
-    ],
+    "tags": ["solidity", "hardhat", "ethers.js", "smart contracts", "react"],
     "skillLevel": "beginner",
     "timeToRead": "18",
     "lang": "en",
@@ -524,10 +477,7 @@
     "description": "Learn how to fetch the current price of Bitcoin, Ethereum and other cryptocurrencies in your Solidity smart contracts.",
     "author": "Harry Papacharissiou",
     "authorGithub": "https://github.com/kwsantiago",
-    "tags": [
-      "solidity",
-      "oracles"
-    ],
+    "tags": ["solidity", "oracles"],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "01/05/2021"
@@ -538,12 +488,7 @@
     "description": "devpill.me is a public good blockchain development guide aimed at becoming the go-to learning resource aggregator for building on Ethereum and its wider ecosystem of scaling solutions and applications.",
     "author": "dcbuilder",
     "authorGithub": "https://github.com/dcbuild3r",
-    "tags": [
-      "frontend",
-      "backend",
-      "smart contracts",
-      "solidity"
-    ],
+    "tags": ["frontend", "backend", "smart contracts", "solidity"],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "03/22/2023"
@@ -572,11 +517,7 @@
     "description": "Learn how to build a simple escrow smart contract, which will include deploying your own non-fungible token (NFT) and learning more about Solidity on Ethereum.",
     "author": "replit",
     "authorGithub": "https://github.com/replit",
-    "tags": [
-      "solidity",
-      "smart contracts",
-      "erc-721"
-    ],
+    "tags": ["solidity", "smart contracts", "erc-721"],
     "skillLevel": "beginner",
     "lang": "en",
     "timeToRead": "20",
@@ -588,12 +529,7 @@
     "description": "Learn how to create a simple generative art NFT, ReplBots, with part 1 focusing on the smart contract deployment.",
     "author": "replit",
     "authorGithub": "https://github.com/replit",
-    "tags": [
-      "solidity",
-      "smart contracts",
-      "erc-721",
-      "nft"
-    ],
+    "tags": ["solidity", "smart contracts", "erc-721", "nft"],
     "skillLevel": "beginner",
     "lang": "en",
     "timeToRead": "20",
@@ -605,10 +541,7 @@
     "description": "Continues from part 1 where you can learn how to create a frontend interface for your NFT application.",
     "author": "replit",
     "authorGithub": "https://github.com/replit",
-    "tags": [
-      "javascript",
-      "frontend"
-    ],
+    "tags": ["javascript", "frontend"],
     "skillLevel": "beginner",
     "lang": "en",
     "timeToRead": "15",
@@ -620,11 +553,7 @@
     "description": "Learn how to use oracles in smart contracts and how oracles work internally, and gain experience with hybrid on-and-offchain systems.",
     "author": "replit",
     "authorGithub": "https://github.com/replit",
-    "tags": [
-      "solidity",
-      "oracles",
-      "javascript"
-    ],
+    "tags": ["solidity", "oracles", "javascript"],
     "skillLevel": "beginner",
     "lang": "en",
     "timeToRead": "30",
@@ -636,10 +565,7 @@
     "description": "Learn how to get the full transaction history for a smart contract or a user address including external, internal, token, ERC-20, ERC-721 and ERC-1155 token transfers in a single request.",
     "author": "Alchemy",
     "authorGithub": "https://github.com/alchemyplatform",
-    "tags": [
-      "alchemy",
-      "querying"
-    ],
+    "tags": ["alchemy", "querying"],
     "skillLevel": "beginner",
     "lang": "en",
     "timeToRead": "10",
@@ -785,13 +711,7 @@
     "description": "Learn to decode Ethereum calldata to detect malicious transactions before signing.",
     "author": "Valentina Rivas",
     "authorGithub": "https://github.com/333cipher",
-    "tags": [
-      "security",
-      "smart contracts",
-      "python",
-      "transactions",
-      "ERC-20"
-    ],
+    "tags": ["security", "smart contracts", "python", "transactions", "ERC-20"],
     "skillLevel": "intermediate",
     "timeToRead": "15",
     "lang": "en",
@@ -867,12 +787,7 @@
     "description": "A mini-course developing a set of smart contracts with Remix, Truffle, Hardhat, and Foundry to demonstrate what each framework offers developers.",
     "author": "Thomas Wiesner",
     "authorGithub": "https://github.com/tomw1808",
-    "tags": [
-      "remix",
-      "truffle",
-      "hardhat",
-      "foundry"
-    ],
+    "tags": ["remix", "truffle", "hardhat", "foundry"],
     "skillLevel": "intermediate",
     "timeToRead": "60",
     "lang": "en",
@@ -884,12 +799,7 @@
     "description": "Learn how scammers target developers with fake job offers that include malicious repositories. Covers real-world attack techniques like remote code execution, environment variable exfiltration, VS Code task abuse, and defenses such as cloud sandboxes and AI-assisted code review.",
     "author": "Ori Pomerantz",
     "authorGithub": "https://github.com/qbzzt",
-    "tags": [
-      "security",
-      "javascript",
-      "scam",
-      "developer"
-    ],
+    "tags": ["security", "javascript", "scam", "developer"],
     "skillLevel": "beginner",
     "timeToRead": "10",
     "lang": "en",
