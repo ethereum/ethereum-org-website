@@ -15,6 +15,7 @@ import {
   CardParagraph,
   CardTitle,
 } from "@/components/ui/card"
+import { Grid } from "@/components/ui/grid"
 import Input from "@/components/ui/input"
 import {
   Select,
@@ -260,7 +261,7 @@ const VideoGalleryFilter = ({
           <p className="text-body-medium">{t("page-videos-no-results")}</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <Grid columns={3}>
           {sortedVideos.map((video) => (
             <Card
               key={video.slug}
@@ -279,7 +280,7 @@ const VideoGalleryFilter = ({
                 />
               </CardBanner>
               <CardContent>
-                <CardTitle variant="semibold">{video.title}</CardTitle>
+                <CardTitle size="sm">{video.title}</CardTitle>
                 <CardParagraph size="sm" className="line-clamp-2">
                   {video.description}
                 </CardParagraph>
@@ -293,7 +294,7 @@ const VideoGalleryFilter = ({
               </CardContent>
             </Card>
           ))}
-        </div>
+        </Grid>
       )}
     </div>
   )

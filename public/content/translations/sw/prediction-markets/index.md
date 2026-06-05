@@ -30,11 +30,11 @@ Kiurahisi, sababu wanaokamari wanaweza kufaidi kwa kuwa sahihi, soko la utabiri 
 
 Tofauti na utabiri wa kienyeji masoko ya utabiri hutumia teknolojia ya mnyororo wa vizuizi ni:
 
-<CardGrid>
+<Grid>
   <Card title="Ina vivutio" emoji=":money_with_wings:" description="Washiriki huweka fedha halisi, jambo linaloleta ubashiri wa hali ya juu."/>
   <Card title="Ugatuaji" emoji="🌎" description="Kutumia blockchain na mikataba janja huhakikisha malipo ya wazi na ya kiotomatiki." />
   <Card title="Odds zinazoamuliwa na soko" emoji="🤝" description="Bei huwekwa na wafanyabiashara wanaonunua na kuuza hisa za matokeo, badala ya kupangwa na bookmaker asiyegatuliwa." />
-</CardGrid>
+</Grid>
 
 Hata kama ni mchunguzi soko, unaweza changanua taarifa ambazo vinginevyo ni ngumu kupata. Fikiria hivi:
 

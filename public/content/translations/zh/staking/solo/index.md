@@ -29,17 +29,16 @@ summaryPoints:
 
 单独质押让你承担更大的责任，但会让你对资金和质押设置拥有最大的控制权。
 
-<CardGrid>
+<Grid>
   <Card title="赚取 ETH 奖励" emoji="💸" description="当你的验证者在线时，可直接从协议赚取 ETH 奖励，无中间商抽成。" />
   <Card title="完全控制" emoji="🎛️" description="掌握自己的密钥。选择客户端和硬件组合，最大限度地降低风险，为网络健康和安全做出最佳贡献。第三方质押服务会替你做这些决定，但他们不一定会做出最安全的选择。" />
   <Card title="网络安全" emoji="🔐" description="家庭质押是影响最大的质押方式。通过在家用自己的硬件运行验证者，你可以增强以太坊协议的稳健性、去中心化和安全性。" />
-</CardGrid>
+</Grid>
 
 ## 家庭质押前的注意事项 {#considerations-before-staking-solo}
 
 尽管我们希望家庭质押能够对所有人开放且毫无风险，但现实并非如此。 在选择家庭质押你的 ETH 之前，有一些实际且重要的注意事项需要牢记。
 
-<InfoGrid>
 <ExpandableCard title="必读内容" eventCategory="SoloStaking" eventName="clicked required reading">
 运行自己的节点时，你应该花些时间学习如何使用你选择的软件。 这包括阅读相关文档并关注这些开发团队的沟通渠道。
 
@@ -71,8 +70,6 @@ summaryPoints:
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 更多关于罚没和验证者生命周期的信息</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

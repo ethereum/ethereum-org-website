@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server"
 import type { ComponentType, ReactNode, SVGProps } from "react"
 
 import {
@@ -8,12 +9,20 @@ import {
 } from "@/components/icons/staking"
 import SocialListItem from "@/components/SocialListItem"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import Link from "@/components/ui/Link"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardParagraph,
+  CardTitle,
+} from "@/components/ui/card"
+import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tag } from "@/components/ui/tag"
 
-import { FlagType, Product } from "./types"
+import { cn } from "@/lib/utils/cn"
 
-import { useTranslation } from "@/hooks/useTranslation"
+import { FlagType, Product } from "./types"
 
 const getIconFromName = (
   imageName: string
@@ -48,20 +57,28 @@ const StakingBadge = ({
 }: {
   type: "ui" | "platform"
   children: ReactNode
-}) => {
-  const uiTypeColor = type === "ui"
-  return (
-    <Tag variant="solid" status={uiTypeColor ? "success" : "tag"} size="small">
-      {children}
-    </Tag>
-  )
-}
+}) => (
+  <Tag variant="solid" status={type === "ui" ? "success" : "tag"} size="small">
+    {children}
+  </Tag>
+)
+
+const SOCIAL_PLATFORMS = [
+  "twitter",
+  "reddit",
+  "youtube",
+  "discord",
+  "stackExchange",
+  "webpage",
+] as const
+
+type SocialPlatform = (typeof SOCIAL_PLATFORMS)[number]
 
 type StakingProductCardProps = {
   product: Product
 }
 
-export const StakingProductCard = ({
+export const StakingProductCard = async ({
   product: {
     name,
     imageName,
@@ -86,45 +103,30 @@ export const StakingProductCard = ({
     matomo,
   },
 }: StakingProductCardProps) => {
+  const t = await getTranslations("page-staking")
+  const tCommon = await getTranslations("common")
+
   const validSocials = socials
-    ? Object.entries(socials).filter(
+    ? (Object.entries(socials).filter(
         ([platform, url]) =>
-          url &&
-          [
-            "twitter",
-            "reddit",
-            "youtube",
-            "discord",
-            "stackExchange",
-            "webpage",
-          ].includes(platform)
-      )
+          !!url && SOCIAL_PLATFORMS.includes(platform as SocialPlatform)
+      ) as [SocialPlatform, string][])
     : []
 
-  const { t } = useTranslation("page-staking")
   const Svg = getIconFromName(imageName)
-  type DataType = { label: string; status?: FlagType }
-  const data: DataType[] = [
+
+  const data: { label: string; status?: FlagType }[] = [
     {
       label: t("page-staking-considerations-solo-1-title"),
       status: openSource,
     },
-    {
-      label: t("page-staking-considerations-solo-2-title"),
-      status: audited,
-    },
-    {
-      label: t("page-staking-considerations-solo-3-title"),
-      status: bugBounty,
-    },
+    { label: t("page-staking-considerations-solo-2-title"), status: audited },
+    { label: t("page-staking-considerations-solo-3-title"), status: bugBounty },
     {
       label: t("page-staking-considerations-solo-4-title"),
       status: battleTested,
     },
-    {
-      label: t("page-staking-considerations-solo-5-title"),
-      status: trustless,
-    },
+    { label: t("page-staking-considerations-solo-5-title"), status: trustless },
     {
       label: t("page-staking-considerations-solo-6-title"),
       status: permissionless,
@@ -160,84 +162,82 @@ export const StakingProductCard = ({
   ].filter(({ status }) => !!status)
 
   return (
-    <div className="rounded-base flex flex-col bg-background-highlight transition-transform hover:scale-101">
-      <div className="flex max-h-24 space-x-3 p-6">
-        {!!Svg && <Svg className="size-12" />}
-        <div className="flex flex-col justify-center">
-          <h4 className="text-xl">{name}</h4>
-          {typeof minEth !== "undefined" && (
-            <p className="text-sm font-normal text-body-medium">
-              {minEth > 0 ? (
-                <>
-                  {t("common:from")} <span dir="ltr">{minEth} ETH</span>
-                </>
-              ) : (
-                t("page-staking-any-amount")
-              )}
-            </p>
-          )}
+    <Card hoverEffect="lift">
+      <CardHeader className="space-y-4">
+        <div className="flex gap-3">
+          {!!Svg && <Svg className="size-12 shrink-0" />}
+          <div className="flex min-w-0 flex-col justify-center">
+            <CardTitle size="sm" asChild>
+              <h4>{name}</h4>
+            </CardTitle>
+            {typeof minEth !== "undefined" && (
+              <CardParagraph size="sm">
+                {minEth > 0 ? (
+                  <>
+                    {tCommon("from")} <span dir="ltr">{minEth} ETH</span>
+                  </>
+                ) : (
+                  t("page-staking-any-amount")
+                )}
+              </CardParagraph>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="flex flex-wrap items-start gap-1 p-6 pt-0">
-        {platforms.map((platform, idx) => (
-          <StakingBadge type="platform" key={idx}>
-            {platform}
-          </StakingBadge>
-        ))}
-        {ui.map((_ui, idx) => (
-          <StakingBadge type="ui" key={idx}>
-            {_ui}
-          </StakingBadge>
-        ))}
-      </div>
-      <div className="p-6 py-0">
-        <ul className="m-0 gap-3">
+        <div className="flex flex-wrap items-start gap-1">
+          {platforms.map((platform, idx) => (
+            <StakingBadge type="platform" key={idx}>
+              {platform}
+            </StakingBadge>
+          ))}
+          {ui.map((_ui, idx) => (
+            <StakingBadge type="ui" key={idx}>
+              {_ui}
+            </StakingBadge>
+          ))}
+        </div>
+      </CardHeader>
+      <CardContent>
+        <UnorderedList className="m-0 list-none ps-0">
           {data.map(({ label, status }, idx) => (
-            <li
+            <ListItem
               key={idx}
-              className={`my-4 ms-auto me-0 flex items-center gap-1 text-base/none ${status === "false" && "text-body-medium"}`}
+              className={cn(
+                "my-4 flex items-center gap-1 text-base/none",
+                status !== "false" && "text-body!"
+              )}
             >
               <Status status={status} />
               {label}
-            </li>
+            </ListItem>
           ))}
-        </ul>
-      </div>
-      <div className="mt-auto flex flex-col gap-3 p-6">
-        <ButtonLink
-          href={url}
-          customEventOptions={matomo}
-          className="w-full"
-          variant="outline"
-          isSecondary
-        >
+        </UnorderedList>
+      </CardContent>
+      <CardFooter>
+        {validSocials.length > 0 && (
+          <div className="flex items-center justify-center">
+            <CardParagraph className="me-2 text-body-medium">
+              {t("page-staking-products-follow")}
+            </CardParagraph>
+            {validSocials.map(([platform, socialUrl], idx) => (
+              <ButtonLink
+                key={idx}
+                href={socialUrl}
+                variant="ghost"
+                className="p-2!"
+                hideArrow
+              >
+                <SocialListItem
+                  className="p-0 **:[svg]:size-6 **:[svg]:p-0 **:[svg]:text-body hover:**:[svg]:text-primary-hover"
+                  socialIcon={platform as SocialPlatform}
+                />
+              </ButtonLink>
+            ))}
+          </div>
+        )}
+        <ButtonLink href={url} customEventOptions={matomo}>
           {t("page-staking-products-get-started")}
         </ButtonLink>
-        <div className="flex h-7.5 items-center justify-center">
-          {validSocials.length > 0 && (
-            <p className="me-2 text-body-medium">
-              {t("page-staking-products-follow")}
-            </p>
-          )}
-
-          {validSocials.map(([platform, url], idx) => (
-            <Link key={idx} href={url} hideArrow>
-              <SocialListItem
-                className="size-8 text-body [&>svg]:text-body"
-                socialIcon={
-                  platform as
-                    | "twitter"
-                    | "reddit"
-                    | "youtube"
-                    | "discord"
-                    | "stackExchange"
-                    | "webpage"
-                }
-              />
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
+      </CardFooter>
+    </Card>
   )
 }

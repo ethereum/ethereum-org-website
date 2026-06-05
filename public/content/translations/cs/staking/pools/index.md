@@ -23,11 +23,11 @@ Některé fondy fungují pomocí chytrých kontraktů, kde lze vložit prostřed
 
 Kromě výhod, které jsme nastínili v našem [úvodu do stakování](/staking/), přináší stakování v poolu řadu odlišných výhod.
 
-<CardGrid>
+<Grid>
   <Card title="Nízká vstupní bariéra" emoji="🐟" description="Nejste velryba? Žádný problém. Většina stakovacích poolů umožňuje stakovat prakticky jakékoli množství ETH společně s ostatními, na rozdíl od sólo stakování, které vyžaduje 32 ETH." />
   <Card title="Stakujte ještě dnes" emoji=":stopwatch:" description="Stakování v poolu je stejně snadné jako směna tokenů. Nemusíte si dělat starosti s nastavováním hardwaru a údržbou uzlu. Pooly vám umožní vložit ETH, což provozovatelům uzlů umožní spouštět validátory. Odměny se pak rozdělí mezi přispěvatele po odečtení poplatku za provoz uzlů." />
   <Card title="Stakovací tokeny" emoji=":droplet:" description="Mnoho stakovacích poolů poskytuje token, který představuje nárok na vaše stakované ETH a odměny, které generuje. To vám umožní využít vaše stakované ETH, například jako zástavu v DeFi aplikacích." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

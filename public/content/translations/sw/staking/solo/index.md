@@ -29,17 +29,16 @@ Muweka dhamana wa nyumbani hupokea zawadi moja kwa moja kutoka kwenye itifaki kw
 
 Kuweka dhamana ukiwa nyumbani kunakuja na majukumu zaidi lakini kunakupa udhibiti wa juu zaidi wa fedha zako na usanidi wako wa kuweka dhamana.
 
-<CardGrid>
+<Grid>
   <Card title="Pata ETH mpya" emoji="💸" description="Pata zawadi zinazotolewa kwa ETH moja kwa moja kutoka kwenye itifaki wakati mthibitishaji wako yuko mtandaoni, bila watu wa kati kuchukua mgawo." />
   <Card title="Udhibiti kamili" emoji="🎛️" description="Weka funguo zako mwenyewe. Chagua mchanganyiko wa wateja na maunzi unaokuruhusu kupunguza hatari yako na kuchangia vyema katika afya na usalama wa mtandao. Huduma za kuweka dhamana za wahusika wengine hufanya maamuzi haya kwa ajili yako, na huwa hawafanyi chaguo salama kila wakati." />
   <Card title="Usalama wa mtandao" emoji="🔐" description="Kuweka dhamana ukiwa nyumbani ndiyo njia yenye athari kubwa zaidi ya kuweka dhamana. Kwa kuendesha mthibitishaji kwenye maunzi yako mwenyewe nyumbani, unaimarisha uimara, mfumo mtawanyo, na usalama wa itifaki ya Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Mambo ya kuzingatia kabla ya kuweka dhamana ukiwa nyumbani {#considerations-before-staking-solo}
 
 Ingawa tunatamani kuweka dhamana ukiwa nyumbani kufikiwe na kusiwe na hatari kwa kila mtu, huu sio ukweli. Kuna baadhi ya mambo ya vitendo na mazito ya kuzingatia kabla ya kuchagua kuweka dhamana ya ETH yako ukiwa nyumbani.
 
-<InfoGrid>
 <ExpandableCard title="Usomaji unaohitajika" eventCategory="SoloStaking" eventName="clicked required reading">
 Unapoendesha Nodi yako mwenyewe unapaswa kutumia muda kujifunza jinsi ya kutumia programu uliyochagua. Hii inahusisha kusoma nyaraka husika na kufuatilia njia za mawasiliano za timu hizo za wasanidi.
 
@@ -71,8 +70,6 @@ Tofauti na adhabu za kutofanya kazi kwa kutokuwa mtandaoni, <em>kupunguzwa kwa d
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Zaidi kuhusu kupunguzwa kwa dhamana na mzunguko wa maisha wa mthibitishaji</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

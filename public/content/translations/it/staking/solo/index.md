@@ -29,17 +29,16 @@ Uno staker da casa riceve ricompense direttamente dal protocollo per mantenere i
 
 Lo staking da casa comporta maggiori responsabilità, ma ti offre il massimo controllo sui tuoi fondi e sulla configurazione dello staking.
 
-<CardGrid>
+<Grid>
   <Card title="Guadagna nuovi ETH" emoji="💸" description="Guadagna ricompense denominate in ETH direttamente dal protocollo quando il tuo validatore è online, senza che alcun intermediario prenda una percentuale." />
   <Card title="Controllo totale" emoji="🎛️" description="Conserva le tue chiavi. Scegli la combinazione di client e hardware che ti consente di ridurre al minimo i rischi e contribuire al meglio alla salute e alla sicurezza della rete. I servizi di staking di terze parti prendono queste decisioni per te e non sempre fanno le scelte più sicure." />
   <Card title="Sicurezza della rete" emoji="🔐" description="Lo staking da casa è il modo più d'impatto per fare staking. Eseguendo un validatore sul tuo hardware a casa, rafforzi la robustezza, la decentralizzazione e la sicurezza del protocollo di Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Considerazioni prima di fare staking da casa {#considerations-before-staking-solo}
 
 Per quanto vorremmo che lo staking da casa fosse accessibile e privo di rischi per tutti, questa non è la realtà. Ci sono alcune considerazioni pratiche e serie da tenere a mente prima di scegliere di fare staking di ETH da casa.
 
-<InfoGrid>
 <ExpandableCard title="Letture obbligatorie" eventCategory="SoloStaking" eventName="clicked required reading">
 Quando gestisci il tuo nodo dovresti dedicare del tempo a imparare come utilizzare il software che hai scelto. Ciò comporta la lettura della documentazione pertinente e l'attenzione ai canali di comunicazione di quei team di sviluppo.
 
@@ -71,8 +70,6 @@ A differenza delle penalità di inattività per essere offline, <em>punire</em> 
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Maggiori informazioni sull'essere puniti e sul ciclo di vita del validatore</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

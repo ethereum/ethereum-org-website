@@ -6,6 +6,7 @@ import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Button, type ButtonProps } from "./buttons/Button"
 import { BaseLink, LinkProps } from "./Link"
 
 const cardVariants = cva(
@@ -35,6 +36,9 @@ const cardVariants = cva(
         sm: "[--card-pad:--spacing(2.5)] [--content-space:--spacing(2.5)]",
         xs: "[--card-pad:--spacing(0)] [--content-space:--spacing(1)]",
       },
+      hoverEffect: {
+        lift: "hover:shadow-md hover:scale-[1.005]",
+      },
     },
     defaultVariants: {
       variant: "base",
@@ -48,8 +52,19 @@ export type CardProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof cardVariants>
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, href, customEventOptions, variant, size, ...props }, ref) => {
-    const classNames = [cardVariants({ variant, size }), className]
+  (
+    {
+      className,
+      href,
+      customEventOptions,
+      variant,
+      size,
+      hoverEffect,
+      ...props
+    },
+    ref
+  ) => {
+    const classNames = [cardVariants({ variant, size, hoverEffect }), className]
     if (href) {
       return (
         <BaseLink
@@ -136,6 +151,28 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
+/**
+ * Presentational mirror of `Button` rendered as a non-interactive `<div>`, for use
+ * inside a `Card` that has an `href` (where the whole card is the anchor and a real
+ * `Button`/`ButtonLink` would nest an interactive element inside the link). Reuses all
+ * Button styling via `asChild`; Button's `hover-link` variant makes its hover state
+ * fire off the card's `group/link`, so hovering anywhere on the card is visually
+ * identical to hovering the button itself -- no hover styles are duplicated here.
+ */
+type CardButtonFakeProps = React.HTMLAttributes<HTMLDivElement> &
+  Pick<ButtonProps, "variant" | "size" | "isSecondary">
+
+const CardButtonFake = React.forwardRef<HTMLDivElement, CardButtonFakeProps>(
+  ({ className, variant, size, isSecondary, children, ...props }, ref) => (
+    <Button asChild variant={variant} size={size} isSecondary={isSecondary}>
+      <div ref={ref} data-label="button-link" className={className} {...props}>
+        {children}
+      </div>
+    </Button>
+  )
+)
+CardButtonFake.displayName = "CardButtonFake"
+
 const CardEmoji = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & { text: string }
@@ -176,6 +213,7 @@ const cardBannerVariants = cva(
         base: "h-48 w-full self-stretch",
         sm: "h-36 w-full self-stretch",
         thumbnail: "size-16 shrink-0",
+        "thumbnail-lg": "size-32 shrink-0",
       },
       fit: {
         cover: "[&_img]:object-cover",
@@ -250,13 +288,12 @@ const CardBanner = React.forwardRef<HTMLDivElement, CardBannerProps>(
 CardBanner.displayName = "CardBanner"
 
 const titleVariants = cva(
-  "group-hover/link:underline group-focus/link:underline text-pretty",
+  "group-hover/link:underline group-focus/link:underline text-pretty text-2xl",
   {
     variants: {
-      variant: {
-        semibold: "text-lg font-semibold",
-        bold: "text-2xl font-bold",
-        black: "text-3xl font-black",
+      size: {
+        sm: "text-lg",
+        lg: "text-3xl",
       },
       spacing: {
         quarter:
@@ -267,7 +304,6 @@ const titleVariants = cva(
     },
 
     defaultVariants: {
-      variant: "bold",
       spacing: "quarter",
     },
   }
@@ -279,13 +315,13 @@ const CardTitle = React.forwardRef<
     VariantProps<typeof titleVariants> & {
       asChild?: boolean
     }
->(({ asChild, className, variant, spacing, ...props }, ref) => {
+>(({ asChild, className, size: variant, spacing, ...props }, ref) => {
   const Comp = asChild ? Slot : "h3"
   return (
     <Comp
       ref={ref}
       data-label="card-title"
-      className={cn(titleVariants({ variant, spacing }), className)}
+      className={cn(titleVariants({ size: variant, spacing }), className)}
       {...props}
     />
   )
@@ -324,6 +360,7 @@ CardParagraph.displayName = "CardParagraph"
 export {
   Card,
   CardBanner,
+  CardButtonFake,
   CardContent,
   CardEmoji,
   CardFooter,

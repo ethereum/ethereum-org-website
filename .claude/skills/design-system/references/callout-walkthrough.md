@@ -21,8 +21,7 @@ The default export covers the common shape:
 ```tsx
 import Callout from "@/components/ui/callout"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-
-<Callout
+;<Callout
   image={someImage}
   alt="Stylized illustration"
   title={t("page-x-callout-title")}
@@ -53,14 +52,14 @@ The legacy `emoji` prop / `CalloutEmoji` slot was removed in May 2026 — the si
 When two or more `<Callout>`s share a parent at `md+` viewport, banners pin to a 16rem min-height (256px) and buttons bottom-align across cards via `mt-auto`. Single callouts and stacked callouts (below `md`) retain natural banner height.
 
 ```tsx
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<Grid columns={2} size="wide">
   <Callout image={...} title={...} description="Short copy.">
     <ButtonLink href="#">A</ButtonLink>
   </Callout>
   <Callout image={...} title={...} description="A much longer description that wraps to multiple lines.">
     <ButtonLink href="#">B</ButtonLink>
   </Callout>
-</div>
+</Grid>
 ```
 
 The equalization rule lives on `CalloutBanner` as:
@@ -69,16 +68,16 @@ The equalization rule lives on `CalloutBanner` as:
 @max-3xl/callout:md:[aside:not(:only-child)_&]:min-h-64
 ```
 
-— "inside a small-container layout, at `md+` viewport, when the wrapping aside has a sibling aside, pin banner to 16rem." The `md:` gate is hardcoded to Tailwind's default 768px breakpoint, which matches the `md:grid-cols-2` pattern used across `gas`, `learn`, `layer-2`, and `stablecoins`. If you use a different parent breakpoint, equalization may misalign — flag it.
+— "inside a small-container layout, at `md+` viewport, when the wrapping aside has a sibling aside, pin banner to 16rem." The `md:` gate is hardcoded to Tailwind's default 768px breakpoint. The canonical side-by-side layout is now `<Grid columns={2} size="wide">` (see `components.md`); `size="wide"` (22rem min item) is chosen so the grid's content-width 2→1 fold lands near `md`, keeping the visible column count and the equalization roughly in sync on full-width sections. Note the two are now gated differently — equalization by viewport (`md:`), the grid fold by content width — so in a narrower parent they can diverge (e.g. callouts visually stacked but still banner-equalized because they remain DOM siblings at `md+`). Flag it if equalization looks off.
 
 ## Step 5: Variants
 
 Two size variants, both fully responsive across the `@3xl/callout` container breakpoint:
 
-| Variant | Title @ `@max-3xl/callout` → `@3xl/callout` | Description @ `@max-3xl/callout` → `@3xl/callout` | Notes |
-|---|---|---|---|
-| `base` (default) | `text-2xl` (24px) → `text-3xl` (30px) | `text-lg` (18px) → `text-xl` (20px) | Default scale; use for prominent CTAs |
-| `sm` | `text-xl` (20px) → `text-2xl` (24px) | `text-base` (16px) → `text-lg` (18px) | Tighter; use when the callout is secondary to surrounding content or stacked at narrower widths |
+| Variant          | Title @ `@max-3xl/callout` → `@3xl/callout` | Description @ `@max-3xl/callout` → `@3xl/callout` | Notes                                                                                           |
+| ---------------- | ------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `base` (default) | `text-2xl` (24px) → `text-3xl` (30px)       | `text-lg` (18px) → `text-xl` (20px)               | Default scale; use for prominent CTAs                                                           |
+| `sm`             | `text-xl` (20px) → `text-2xl` (24px)        | `text-base` (16px) → `text-lg` (18px)             | Tighter; use when the callout is secondary to surrounding content or stacked at narrower widths |
 
 Variant naming reflects visual prominence (text scale only). Gap and padding are unchanged across variants. The previous `large` / `medium` / `small` triad was consolidated into `base` / `sm` in May 2026 — descriptions are now responsive in both variants (they were fixed-size before).
 
@@ -94,12 +93,12 @@ Variant naming reflects visual prominence (text scale only). Gap and padding are
 
 Layout values are driven by CSS variables on the aside. Variants override these; pages can override per-instance via `className`.
 
-| Variable | Default | Set by | Notes |
-|---|---|---|---|
-| `--callout-padding` | `--spacing(8)` (32px), `--spacing(12)` at `@3xl/callout` | Root | Banner horizontal padding and `CalloutMain` padding both read this |
-| `--spacing-unit` | `0.25lh` | Root | Line-height-relative rhythm unit. `CalloutContent` uses `gap-(--spacing-unit)` (title↔description tight); `CalloutMain` uses `gap-[calc(var(--spacing-unit)*4)]` (content↔buttons loose) |
-| `--title-font-size` | Variant-driven, responsive at `@3xl/callout` | Variants | See Step 5 table |
-| `--content-font-size` | Variant-driven, responsive at `@3xl/callout` | Variants | See Step 5 table |
+| Variable              | Default                                                  | Set by   | Notes                                                                                                                                                                                      |
+| --------------------- | -------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--callout-padding`   | `--spacing(8)` (32px), `--spacing(12)` at `@3xl/callout` | Root     | Banner horizontal padding and `CalloutMain` padding both read this                                                                                                                         |
+| `--spacing-unit`      | `0.25lh`                                                 | Root     | Line-height-relative rhythm unit. `CalloutContent` uses `gap-(--spacing-unit)` (title↔description tight); `CalloutMain` uses `gap-[calc(var(--spacing-unit)*4)]` (content↔buttons loose) |
+| `--title-font-size`   | Variant-driven, responsive at `@3xl/callout`             | Variants | See Step 5 table                                                                                                                                                                           |
+| `--content-font-size` | Variant-driven, responsive at `@3xl/callout`             | Variants | See Step 5 table                                                                                                                                                                           |
 
 Adding a variant follows the existing pattern — set the variable on the aside in the variant's `cn()` block, mirroring the responsive shape used by `base` / `sm`:
 

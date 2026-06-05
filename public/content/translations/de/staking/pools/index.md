@@ -23,11 +23,11 @@ Einige Pools arbeiten mit Smart Contracts, bei denen Gelder in einen Vertrag ein
 
 Zusätzlich zu den Vorteilen, die wir in unserer [Einführung zum Staking](/staking/) beschrieben haben, bietet das Staking in einem Pool eine Reihe von besonderen Vorteilen.
 
-<CardGrid>
+<Grid>
   <Card title="Niedrige Eintrittsbarriere" emoji="🐟" description="Du bist kein Wal? Kein Problem. Die meisten Staking-Pools ermöglichen es dir, praktisch jeden beliebigen ETH-Betrag zu staken, indem du dich mit anderen Stakern zusammenschließt, im Gegensatz zum Solo-Staking, das 32 ETH erfordert." />
   <Card title="Stake noch heute" emoji=":stopwatch:" description="Staking in einem Pool ist so einfach wie das Tauschen von Token. Du musst dir keine Gedanken über die Hardware-Einrichtung und die Wartung von Blockchain-Knoten machen. Pools ermöglichen es dir, deine ETH einzuzahlen, was es den Betreibern von Blockchain-Knoten ermöglicht, Validatoren auszuführen. Die Belohnungen werden dann abzüglich einer Gebühr für den Betrieb der Blockchain-Knoten an die Mitwirkenden verteilt." />
   <Card title="Staking-Token" emoji=":droplet:" description="Viele Staking-Pools stellen einen Token zur Verfügung, der einen Anspruch auf deine gestakten ETH und die dadurch generierten Belohnungen darstellt. Dies ermöglicht es dir, deine gestakten ETH zu nutzen, z. B. als Sicherheit in DeFi-Anwendungen." />
-</CardGrid>
+</Grid>
 
 <StakingComparison page="pools" />
 

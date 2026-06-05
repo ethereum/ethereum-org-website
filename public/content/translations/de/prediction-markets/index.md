@@ -31,11 +31,11 @@ Da Wettende davon profitieren, wenn sie richtig liegen, können Prognosemärkte 
 
 Im Gegensatz zu traditionellen Prognosen sind Blockchain-basierte Prognosemärkte:
 
-<CardGrid>
+<Grid>
   <Card title="Anreizgesteuert" emoji=":money_with_wings:" description="Teilnehmer setzen echte Gelder ein, was auf qualitativ hochwertige Vorhersagen schließen lässt."/>
   <Card title="Dezentralisierung" emoji="🌎" description="Die Nutzung von Blockchain und Smart Contracts gewährleistet transparente und automatisierte Auszahlungen." />
   <Card title="Marktgesteuerte Quoten" emoji="🤝" description="Die Preise werden von Händlern festgelegt, die Ergebnisanteile kaufen und verkaufen, anstatt von einem zentralisierten Buchmacher vorgegeben zu werden." />
-</CardGrid>
+</Grid>
 
 Selbst als Beobachter des Marktes können Sie wertvolle Daten auswerten, die sonst nicht verfügbar wären. Stellen Sie sich das so vor:
 

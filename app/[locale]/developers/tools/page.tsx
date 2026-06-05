@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import type { Lang, PageParams } from "@/lib/types"
 
 import AppCard from "@/components/AppCard"
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -13,6 +13,7 @@ import {
   EdgeScrollContainer,
   EdgeScrollItem,
 } from "@/components/ui/edge-scroll-container"
+import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -75,11 +76,11 @@ const Page = async (props: {
   return (
     <>
       <DevelopersToolsJsonLD locale={locale} contributors={contributors} />
-      <ContentHero
+      <PageHero
         breadcrumbs={{ slug: "/developers/tools" }}
         title={t("page-developers-tools-title")}
         description={t("page-developers-tools-subtitle")}
-        className="border-none pb-0"
+        variant="no-divider"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection tools={highlights} />
@@ -140,7 +141,7 @@ const Page = async (props: {
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title")}</h2>
-          <div className="grid grid-cols-fill-4 gap-8">
+          <Grid>
             {DEV_TOOL_CATEGORIES.map(({ slug, Icon }) => (
               <SubpageCard
                 key={slug}
@@ -152,7 +153,7 @@ const Page = async (props: {
                 href={`/developers/tools/${slug}`}
               />
             ))}
-          </div>
+          </Grid>
         </Section>
       </MainArticle>
 

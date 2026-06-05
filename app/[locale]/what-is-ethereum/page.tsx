@@ -13,7 +13,7 @@ import type { Lang, PageParams, ToCItem } from "@/lib/types"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import ContentHero, { ContentHeroProps } from "@/components/Hero/ContentHero"
+import PageHero from "@/components/Hero/PageHero"
 import {
   HighlightCard,
   HighlightStack,
@@ -80,18 +80,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
     { title: t("page-what-is-ethereum-toc-roadmap"), url: "#roadmap" },
   ]
 
-  const heroProps: ContentHeroProps = {
-    breadcrumbs: { slug: "learn/what-is-ethereum", startDepth: 1 },
-    heroImg,
-    title: tocItems[0].title,
-    description: (
-      <>
-        <p>{t("page-what-is-ethereum-hero-description-1")}</p>
-        <p>{t("page-what-is-ethereum-hero-description-2")}</p>
-      </>
-    ),
-  }
-
   const getId = (input: string) => {
     const parts = input.split("#")
     return parts.length > 1 ? parts[1] : ""
@@ -105,7 +93,17 @@ const Page = async (props: { params: Promise<PageParams> }) => {
       />
 
       <div>
-        <ContentHero {...heroProps} />
+        <PageHero
+          breadcrumbs={{ slug: "learn/what-is-ethereum", startDepth: 1 }}
+          heroImg={heroImg}
+          title={tocItems[0].title}
+          description={
+            <>
+              <p>{t("page-what-is-ethereum-hero-description-1")}</p>
+              <p>{t("page-what-is-ethereum-hero-description-2")}</p>
+            </>
+          }
+        />
 
         <MainArticle className="grid w-full grid-cols-1 gap-x-20 px-4 py-8 lg:grid-cols-[1fr_auto] lg:px-10 lg:py-10">
           <div
@@ -445,7 +443,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 sizes="320px"
                 className="mx-auto w-80 -scale-x-100"
               />
-              <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="w-full text-3xl/snug lg:text-4xl/tight">
                 {tocItems[4].title}
               </h2>
               <div className="space-y-6">
@@ -623,7 +621,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 sizes={`(max-width: 800px) 100vw, (max-width: ${screens.xl}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
               />
               <div>
-                <h2 className="mb-2 w-full text-3xl/snug font-bold lg:text-4xl/tight">
+                <h2 className="mb-2 w-full text-3xl/snug lg:text-4xl/tight">
                   {tocItems[5].title}
                 </h2>
                 <div className="space-y-6">
@@ -803,7 +801,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Section>
 
             <Section id={getId(tocItems[6].url)}>
-              <h2 className="mb-4 w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="mb-4 w-full text-3xl/snug lg:text-4xl/tight">
                 {tocItems[6].title}
               </h2>
 
@@ -879,7 +877,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
               />
 
               <div className="space-y-4">
-                <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+                <h2 className="w-full text-3xl/snug lg:text-4xl/tight">
                   {tocItems[7].title}
                 </h2>
                 <div className="space-y-8">
@@ -1015,7 +1013,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Section>
 
             <Section id={getId(tocItems[8].url)} className="space-y-4">
-              <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="w-full text-3xl/snug lg:text-4xl/tight">
                 {tocItems[8].title}
               </h2>
               <div className="space-y-8">
@@ -1063,7 +1061,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </Section>
 
             <Section id="further-reading" className="space-y-8">
-              <h2 className="w-full text-3xl/snug font-bold lg:text-4xl/tight">
+              <h2 className="w-full text-3xl/snug lg:text-4xl/tight">
                 {t("page-what-is-ethereum-further-reading-title")}
               </h2>
               <UnorderedList className="ms-0 list-none">

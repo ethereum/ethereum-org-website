@@ -80,7 +80,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         >
           <div className="flex flex-1 flex-col gap-5">
             <div>
-              <h1 className="text-2xl font-bold">
+              <h1 className="text-2xl">
                 {t("page-10-year-hero-title")}
               </h1>
             </div>
@@ -157,7 +157,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                             key={country}
                             className={cn("flex flex-col border-b px-4 py-6")}
                           >
-                            <h3 className="mb-2 flex items-center gap-2 text-2xl font-bold text-body-medium">
+                            <h3 className="mb-2 flex items-center gap-2 text-2xl text-body-medium">
                               <span className="flex min-h-6 min-w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
                                 <Emoji
                                   text={countryEvents[0].countryFlag}
@@ -252,14 +252,14 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </div>
             <div className="flex flex-1 flex-col gap-8">
               <div>
-                <h3 className="text-lg font-bold">
+                <h3 className="text-lg">
                   {t("page-10-year-torch-one-of-kind-title")}
                 </h3>
                 <p>{t("page-10-year-torch-one-of-kind-description")}</p>
               </div>
 
               <div>
-                <h3 className="text-lg font-bold">
+                <h3 className="text-lg">
                   {t("page-10-year-torch-time-limited-title")}
                 </h3>
                 <p>{t("page-10-year-torch-time-limited-description")}</p>
@@ -328,7 +328,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                   className="mx-auto mb-4 max-h-[300px] object-contain"
                   sizes="384px"
                 />
-                <h3 className="mb-4 text-2xl font-bold">
+                <h3 className="mb-4 text-2xl">
                   {t(`page-10-year-adoption-card-${index + 1}-title`)}
                 </h3>
                 <p className="mb-8">

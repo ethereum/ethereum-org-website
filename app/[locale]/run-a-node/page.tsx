@@ -12,6 +12,7 @@ import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
+import PageHero from "@/components/Hero/PageHero"
 import I18nProvider from "@/components/I18nProvider"
 import Discord from "@/components/icons/discord.svg"
 import {
@@ -26,12 +27,12 @@ import {
 } from "@/components/icons/run-a-node"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Center, Flex, Stack, VStack } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -46,7 +47,7 @@ import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"
 import Dappnode from "@/public/images/run-a-node/dappnode.svg"
 import Dapptap from "@/public/images/run-a-node/dapptap.svg"
-import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
+import heroImg from "@/public/images/run-a-node/ethereum-inside.png"
 import Terminal from "@/public/images/run-a-node/terminal.svg"
 import leslie from "@/public/images/upgrades/upgrade_rhino.png"
 
@@ -226,25 +227,6 @@ const Page = async (props: { params: Promise<PageParams> }) => {
 
   const t = await getTranslations("page-run-a-node")
 
-  const heroContent = {
-    title: t("page-run-a-node-title"),
-    header: <Translation id="page-run-a-node:page-run-a-node-hero-header" />,
-    subtitle: t("page-run-a-node-hero-subtitle"),
-    image: ethereumInside,
-    alt: t("page-run-a-node-hero-alt"),
-    buttons: [
-      {
-        content: t("page-run-a-node-hero-cta-1"),
-        toId: "what-is-a-node",
-        matomo: {
-          eventCategory: "run a node hero buttons",
-          eventAction: "click",
-          eventName: "learn more",
-        },
-      },
-    ],
-  }
-
   const whyRunANodeCards: RunANodeCard[] = [
     {
       Svg: PrivacyGlyphIcon,
@@ -318,13 +300,24 @@ const Page = async (props: { params: Promise<PageParams> }) => {
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contributors={contributors}
       />
+      <PageHero
+        header={t("page-run-a-node-title")}
+        heroImg={heroImg}
+        title={<Translation id="page-run-a-node:page-run-a-node-hero-header" />}
+        description={t("page-run-a-node-hero-subtitle")}
+        buttons={[
+          {
+            content: t("page-run-a-node-hero-cta-1"),
+            toId: "what-is-a-node",
+            matomo: {
+              eventCategory: "run a node hero buttons",
+              eventAction: "click",
+              eventName: "learn more",
+            },
+          },
+        ]}
+      />
       <GappedPage>
-        <div className="w-full bg-linear-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
-          <div className="pb-8">
-            <PageHero content={heroContent} isReverse />
-          </div>
-        </div>
-
         <Content id="what-is-a-node">
           <TwoColumnContent>
             <Width60>
@@ -366,7 +359,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 style={{ width: "300px", height: "auto" }}
               />
               <div className="me-4">
-                <h2 className="mt-4 mb-5 text-2xl leading-[1.4] font-semibold md:text-[2rem]">
+                <h2 className="mt-4 mb-5 text-2xl leading-[1.4] md:text-[2rem]">
                   <Translation id="page-run-a-node:page-run-a-node-who-title" />
                 </h2>
                 <p className="body-medium mb-0">
@@ -391,7 +384,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
           <H2>
             <Translation id="page-run-a-node:page-run-a-node-why-title" />
           </H2>
-          <div className="grid grid-cols-fill-3 gap-8">
+          <Grid columns={3} size="wider">
             {whyRunANodeCards.map(({ Svg, title, preview, body }) => (
               <ExpandableCard
                 contentPreview={preview}
@@ -404,7 +397,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
                 ))}
               </ExpandableCard>
             ))}
-          </div>
+          </Grid>
         </Content>
 
         <Divider />
@@ -741,6 +734,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </ButtonContainer>
           </Column>
         </StakingCalloutContainer>
+
         <Content>
           <H3 id="plan-on-staking" className="flex items-center">
             <Emoji text=":cut_of_meat:" className="me-4 text-[2rem]" />
@@ -775,6 +769,7 @@ const Page = async (props: { params: Promise<PageParams> }) => {
             </li>
           </ul>
         </Content>
+
         <Content>
           <QuizWidget quizKey="run-a-node" />
           <FileContributors

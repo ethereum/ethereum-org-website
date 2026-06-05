@@ -22,7 +22,7 @@ Misunderstandings about how crypto works can lead to costly mistakes. For exampl
   What is Ethereum?
 </DocLink>
 
-<DocLink href="/eth/">
+<DocLink href="/what-is-ether/">
   What is ether?
 </DocLink>
 <Divider />

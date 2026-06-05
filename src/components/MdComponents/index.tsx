@@ -9,7 +9,9 @@ import WhatAreAppsStories from "@/components/Content/what-are-apps/WhatAreAppsSt
 import Contributors from "@/components/Contributors"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
+import ExpandableCard, {
+  type ExpandableCardProps,
+} from "@/components/ExpandableCard"
 import FeaturedText from "@/components/FeaturedText"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import IdAnchor from "@/components/IdAnchor"
@@ -20,9 +22,11 @@ import MainArticle from "@/components/MainArticle"
 import MarkdownCard from "@/components/MarkdownCard"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import TooltipLink from "@/components/TooltipLink"
+import * as AlertComponents from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
+import { Grid } from "@/components/ui/grid"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import { Tag } from "@/components/ui/tag"
@@ -30,12 +34,10 @@ import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 
-import * as AlertComponents from "../ui/alert"
-
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
   className: cn(
-    "font-bold leading-xs my-8",
+    "leading-xs my-8",
     id && "scroll-mt-28 relative group",
     className
   ),
@@ -86,10 +88,7 @@ export const Heading4 = ({
   className,
   ...rest
 }: HeadingProps) => (
-  <h4
-    {...commonHeadingAttributes(cn("text-xl font-semibold", className), id)}
-    {...rest}
-  >
+  <h4 {...commonHeadingAttributes(cn("text-xl", className), id)} {...rest}>
     <IdAnchor id={id} />
     {children}
   </h4>
@@ -172,6 +171,13 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
   )
 }
 
+export const ExpandableCardWithMargin = ({
+  className,
+  ...props
+}: ExpandableCardProps) => (
+  <ExpandableCard className={cn("mb-4", className)} {...props} />
+)
+
 // All custom React components
 export const reactComponents = {
   Alert: AlertWithMargins,
@@ -184,9 +190,10 @@ export const reactComponents = {
   Divider,
   DocLink,
   Emoji,
-  ExpandableCard,
+  ExpandableCard: ExpandableCardWithMargin,
   FeaturedText,
   GlossaryTooltip,
+  Grid,
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,

@@ -29,17 +29,16 @@ Un validateur à domicile reçoit des récompenses directement du protocole pour
 
 La mise en jeu à domicile demande plus de responsabilités, mais vous donne un contrôle maximal sur vos fonds et votre configuration de mise en jeu.
 
-<CardGrid>
+<Grid>
   <Card title="Gagnez de nouveaux ETH" emoji="💸" description="Gagnez des récompenses en ETH directement depuis le protocole lorsque votre validateur est en ligne, sans qu'aucun intermédiaire ne prenne de commission." />
   <Card title="Plein contrôle" emoji="🎛️" description="Conservez vos propres clés. Choisissez la combinaison de clients et de matériel qui vous permet de minimiser vos risques et de contribuer au mieux à la santé et à la sécurité du réseau. Les services de staking tiers prennent ces décisions pour vous, et ils ne font pas toujours les choix les plus sûrs." />
   <Card title="Sécurité du réseau" emoji="🔐" description="Le staking à domicile est la manière la plus percutante de staker. En exécutant un validateur sur votre propre matériel à la maison, vous renforcez la robustesse, la décentralisation et la sécurité du protocole Ethereum." />
-</CardGrid>
+</Grid>
 
 ## Éléments à prendre en compte avant la mise en jeu à domicile {#considerations-before-staking-solo}
 
 Bien que nous souhaitions que la mise en jeu à domicile soit accessible et sans risque pour tout le monde, la réalité est différente. Il y a quelques considérations pratiques et sérieuses à garder à l'esprit avant de choisir de mettre en jeu vos ETH à domicile.
 
-<InfoGrid>
 <ExpandableCard title="Lecture indispensable" eventCategory="SoloStaking" eventName="clicked required reading">
 Lorsque vous exploitez votre propre nœud, vous devriez consacrer du temps à apprendre à utiliser le logiciel que vous avez choisi. Cela implique de lire la documentation pertinente et d'être à l'écoute des canaux de communication de ces équipes de développeurs.
 
@@ -71,8 +70,6 @@ Différent des pénalités d'inactivité pour être hors ligne, le <em>délestag
 
 <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Plus d'informations sur le délestage et le cycle de vie du validateur</a>
 </ExpandableCard>
-
-</InfoGrid>
 
 <StakingComparison page="solo" />
 

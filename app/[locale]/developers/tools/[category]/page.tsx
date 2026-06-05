@@ -3,9 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type { Lang, PageParams } from "@/lib/types"
 
-import { ContentHero } from "@/components/Hero"
+import PageHero from "@/components/Hero/PageHero"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
+import { Grid } from "@/components/ui/grid"
 import { Section } from "@/components/ui/section"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -90,7 +91,7 @@ const Page = async (props: {
         categoryTools={allCategoryData}
         contributors={contributors}
       />
-      <ContentHero
+      <PageHero
         breadcrumbs={{
           slug: `/developers/tools/${t(`page-developers-tools-category-${category}-breadcrumb`)}`,
         }}
@@ -98,7 +99,7 @@ const Page = async (props: {
         description={t(
           `page-developers-tools-category-${category}-description`
         )}
-        className="border-none pb-0"
+        variant="no-divider"
       />
       <MainArticle className="space-y-20 px-4 py-10 md:px-8">
         <HighlightsSection tools={highlights} />
@@ -117,7 +118,7 @@ const Page = async (props: {
 
         <Section id="categories" className="space-y-4">
           <h2>{t("page-developers-tools-categories-title-other")}</h2>
-          <div className="grid grid-cols-fill-4 gap-8">
+          <Grid>
             {DEV_TOOL_CATEGORIES.filter(({ slug }) => slug !== category).map(
               ({ slug, Icon }) => (
                 <SubpageCard
@@ -131,7 +132,7 @@ const Page = async (props: {
                 />
               )
             )}
-          </div>
+          </Grid>
         </Section>
       </MainArticle>
 

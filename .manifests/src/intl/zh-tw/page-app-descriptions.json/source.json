@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-app-descriptions.json",
-  "generatedAt": "2026-05-01T17:08:00.683Z",
-  "rootHash": "7bcf677b9f7e",
+  "generatedAt": "2026-06-02T16:49:19.210Z",
+  "rootHash": "967ac71c1ddb",
   "tree": {
-    "contentHash": "e2b98a191a8b",
-    "anchorHash": "a02da288de3d",
+    "contentHash": "4ae2e96d32b2",
+    "anchorHash": "0517f0226548",
     "children": {
       "app-0xbow-description": {
         "contentHash": "d6f1ff938878",
@@ -59,8 +59,16 @@
         "contentHash": "8e4857ec413c",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-battle-bears-description": {
+        "contentHash": "b913f6b56ef3",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-belo-description": {
         "contentHash": "f8a17ff75682",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-blob-arena-description": {
+        "contentHash": "31d5b85103b1",
         "anchorHash": "e3b0c44298fc"
       },
       "app-blur-description": {
@@ -73,6 +81,10 @@
       },
       "app-bungee-description": {
         "contentHash": "570cdf8207d7",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-cambria-description": {
+        "contentHash": "df7892401d6f",
         "anchorHash": "e3b0c44298fc"
       },
       "app-celer-cbridge-description": {
@@ -123,12 +135,20 @@
         "contentHash": "9c569ed1be82",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-dark-forest-mud-description": {
+        "contentHash": "fa006e3dfcb3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-dark-shuffle-description": {
+        "contentHash": "24a4e2224b93",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-debridge-description": {
         "contentHash": "506923c3f08e",
         "anchorHash": "e3b0c44298fc"
       },
       "app-decentraland-description": {
-        "contentHash": "8ef8673c1f35",
+        "contentHash": "2edfd80d3593",
         "anchorHash": "e3b0c44298fc"
       },
       "app-defi-saver-description": {
@@ -137,6 +157,10 @@
       },
       "app-doodles-description": {
         "contentHash": "3e0a010da232",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-dope-wars-description": {
+        "contentHash": "2454becba947",
         "anchorHash": "e3b0c44298fc"
       },
       "app-drips-description": {
@@ -164,7 +188,7 @@
         "anchorHash": "e3b0c44298fc"
       },
       "app-eternum-description": {
-        "contentHash": "0c78881fb0da",
+        "contentHash": "26841712609a",
         "anchorHash": "e3b0c44298fc"
       },
       "app-ethena-usde-description": {
@@ -189,10 +213,6 @@
       },
       "app-eureka-description": {
         "contentHash": "9249544b5440",
-        "anchorHash": "e3b0c44298fc"
-      },
-      "app-eve-frontier-description": {
-        "contentHash": "c4fc449d8e42",
         "anchorHash": "e3b0c44298fc"
       },
       "app-event-horizon-description": {
@@ -255,8 +275,16 @@
         "contentHash": "b37b67bd8ba5",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-guild-of-guardians-description": {
+        "contentHash": "3ff5ff5d04ba",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-hats-protocol-description": {
         "contentHash": "9eb3000cca83",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-heroes-of-mavia-description": {
+        "contentHash": "30ded055a87b",
         "anchorHash": "e3b0c44298fc"
       },
       "app-heyxyz-description": {
@@ -291,8 +319,16 @@
         "contentHash": "30e3ef9fedbd",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-jokers-of-neon-description": {
+        "contentHash": "27b4a0045607",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-juiceboxeth-description": {
         "contentHash": "cbddf8a60f18",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-king-of-destiny-description": {
+        "contentHash": "625ab22ab500",
         "anchorHash": "e3b0c44298fc"
       },
       "app-kiwi-news-description": {
@@ -305,6 +341,10 @@
       },
       "app-layerswap-description": {
         "contentHash": "7768a743a8d1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-legends-of-elumia-description": {
+        "contentHash": "0251e6157deb",
         "anchorHash": "e3b0c44298fc"
       },
       "app-lemon-description": {
@@ -335,6 +375,10 @@
         "contentHash": "828ca3ce528c",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-might-magic-fates-description": {
+        "contentHash": "345d9f133e95",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-moonwell-description": {
         "contentHash": "dd9e7c62cb11",
         "anchorHash": "e3b0c44298fc"
@@ -351,6 +395,10 @@
         "contentHash": "7af0e57186fb",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-onchain-heroes-description": {
+        "contentHash": "e7a903c1d64d",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-opencerts-description": {
         "contentHash": "77910f6550e6",
         "anchorHash": "e3b0c44298fc"
@@ -365,6 +413,10 @@
       },
       "app-orbiter-finance-description": {
         "contentHash": "ecfa31e19059",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-oruggin-description": {
+        "contentHash": "040c247b6ab6",
         "anchorHash": "e3b0c44298fc"
       },
       "app-paragraph-description": {
@@ -391,6 +443,10 @@
         "contentHash": "c3411d2debc6",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-pirate-arcade-description": {
+        "contentHash": "0b2e124902f9",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-poap-description": {
         "contentHash": "eea2c2d69392",
         "anchorHash": "e3b0c44298fc"
@@ -401,6 +457,10 @@
       },
       "app-polymarket-description": {
         "contentHash": "e050e576e714",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-ponziland-description": {
+        "contentHash": "795d1869f20d",
         "anchorHash": "e3b0c44298fc"
       },
       "app-pooltogether-description": {
@@ -443,6 +503,10 @@
         "contentHash": "7856969119e1",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-realms-blitz-description": {
+        "contentHash": "f5febf75db40",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-remix-description": {
         "contentHash": "5ac23a6adb49",
         "anchorHash": "e3b0c44298fc"
@@ -473,6 +537,10 @@
       },
       "app-sandbox-description": {
         "contentHash": "64d53839e023",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-scout-game-description": {
+        "contentHash": "50f7349b8886",
         "anchorHash": "e3b0c44298fc"
       },
       "app-self-description": {
@@ -559,8 +627,16 @@
         "contentHash": "8510acbef9ad",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-the-beacon-description": {
+        "contentHash": "848b9cebd365",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-the-gauntlet-app-description": {
         "contentHash": "cd504ed42af1",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-the-sandbox-description": {
+        "contentHash": "c9b2e0f4c14b",
         "anchorHash": "e3b0c44298fc"
       },
       "app-tornado-cash-description": {
@@ -569,6 +645,10 @@
       },
       "app-towns-description": {
         "contentHash": "bc6a8582dc00",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-treeverse-description": {
+        "contentHash": "0d5a0f4d2673",
         "anchorHash": "e3b0c44298fc"
       },
       "app-true-markets-description": {
@@ -583,6 +663,10 @@
         "contentHash": "820e3f7a990c",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-upland-description": {
+        "contentHash": "84593fe8c8f8",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-usual-description": {
         "contentHash": "849fd26c9ecc",
         "anchorHash": "e3b0c44298fc"
@@ -591,8 +675,16 @@
         "contentHash": "c230b997a7ae",
         "anchorHash": "e3b0c44298fc"
       },
+      "app-voxie-tactics-description": {
+        "contentHash": "2015972c1630",
+        "anchorHash": "e3b0c44298fc"
+      },
       "app-wildcat-description": {
         "contentHash": "8c6554761006",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "app-wolf-game-description": {
+        "contentHash": "182929c30f4a",
         "anchorHash": "e3b0c44298fc"
       },
       "app-yearn-description": {
@@ -634,10 +726,13 @@
       "app-azuki-description",
       "app-balancer-description",
       "app-basepaint-description",
+      "app-battle-bears-description",
       "app-belo-description",
+      "app-blob-arena-description",
       "app-blur-description",
       "app-bored-ape-yacht-club-description",
       "app-bungee-description",
+      "app-cambria-description",
       "app-celer-cbridge-description",
       "app-centrifuge-description",
       "app-circle-usdc-description",
@@ -650,10 +745,13 @@
       "app-curve-description",
       "app-daimo-pay-description",
       "app-daohaus-description",
+      "app-dark-forest-mud-description",
+      "app-dark-shuffle-description",
       "app-debridge-description",
       "app-decentraland-description",
       "app-defi-saver-description",
       "app-doodles-description",
+      "app-dope-wars-description",
       "app-drips-description",
       "app-eas-description",
       "app-ekubo-description",
@@ -667,7 +765,6 @@
       "app-etherfi-description",
       "app-etherisc-description",
       "app-eureka-description",
-      "app-eve-frontier-description",
       "app-event-horizon-description",
       "app-farcaster-description",
       "app-fileverse-ddocs-description",
@@ -683,7 +780,9 @@
       "app-gigaverse-description",
       "app-gods-unchained-description",
       "app-goldfinch-description",
+      "app-guild-of-guardians-description",
       "app-hats-protocol-description",
+      "app-heroes-of-mavia-description",
       "app-heyxyz-description",
       "app-highlight-description",
       "app-hop-description",
@@ -692,10 +791,13 @@
       "app-illuvium-description",
       "app-interface-description",
       "app-jokerace-description",
+      "app-jokers-of-neon-description",
       "app-juiceboxeth-description",
+      "app-king-of-destiny-description",
       "app-kiwi-news-description",
       "app-kyberswap-description",
       "app-layerswap-description",
+      "app-legends-of-elumia-description",
       "app-lemon-description",
       "app-liquity-description",
       "app-livepeer-description",
@@ -703,23 +805,28 @@
       "app-manifold-description",
       "app-maple-description",
       "app-meson-description",
+      "app-might-magic-fates-description",
       "app-moonwell-description",
       "app-morpho-description",
       "app-octant-description",
       "app-offramp-description",
+      "app-onchain-heroes-description",
       "app-opencerts-description",
       "app-opensea-description",
       "app-orb-description",
       "app-orbiter-finance-description",
+      "app-oruggin-description",
       "app-paragraph-description",
       "app-parallel-description",
       "app-particle-network-description",
       "app-paypal-pyusd-description",
       "app-peer-description",
       "app-pendle-description",
+      "app-pirate-arcade-description",
       "app-poap-description",
       "app-poidh-description",
       "app-polymarket-description",
+      "app-ponziland-description",
       "app-pooltogether-description",
       "app-prime-intellect-description",
       "app-primodium-description",
@@ -730,6 +837,7 @@
       "app-railgun-description",
       "app-rarible-description",
       "app-rarimo-description",
+      "app-realms-blitz-description",
       "app-remix-description",
       "app-researchhub-description",
       "app-ripio-description",
@@ -738,6 +846,7 @@
       "app-sablier-description",
       "app-safe-description",
       "app-sandbox-description",
+      "app-scout-game-description",
       "app-self-description",
       "app-sequence-description",
       "app-shibuya-films-description",
@@ -759,15 +868,21 @@
       "app-tally-description",
       "app-teller-description",
       "app-tether-usdt-description",
+      "app-the-beacon-description",
       "app-the-gauntlet-app-description",
+      "app-the-sandbox-description",
       "app-tornado-cash-description",
       "app-towns-description",
+      "app-treeverse-description",
       "app-true-markets-description",
       "app-uniswap-description",
       "app-unlock-description",
+      "app-upland-description",
       "app-usual-description",
       "app-virtuals-description",
+      "app-voxie-tactics-description",
       "app-wildcat-description",
+      "app-wolf-game-description",
       "app-yearn-description",
       "app-zerolend-description",
       "app-zk-pass-description",
@@ -776,5 +891,5 @@
       "app-zupass-description"
     ]
   },
-  "sourceCommitSha": "102e7d69213329505b9595dbf50a235b7e6c2a9d"
+  "sourceCommitSha": "dfb759274c717847dbdf0fb0570d69de5aa53dfd"
 }

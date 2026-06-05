@@ -27,14 +27,14 @@ RWA jetonlarının kendilerine özgü bir değeri yoktur. Bunun yerine, temsil e
 
 ## RWA'ların faydaları nelerdir? {#rwas-benefits}
 
-<CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+<Grid>
   <Card title="Kısmi Sahiplik" emoji=":house_buildings:" description="RWA'lar yatırımı demokratikleştirir. Belirli varlık türlerine yatırım yapmaya gücünüz yetmiyorsa artık kısmi bir sahip olarak yatırım yapabilirsiniz."/>
   <Card title="Yatırım çeşitlendirmesi" emoji="🛒" description="Birden fazla varlık türüne yatırım yapabilir, büyük meblağlar harcamadan portföyünüzü çeşitlendirebilirsiniz." />
   <Card title="Küresel fırsatlar" emoji="🌏" description="RWA'lar yatırımdaki coğrafi engelleri ortadan kaldırır. Dünyanın herhangi bir yerindeki varlıklar için token satın alabilirsiniz." />
   <Card title="Varlıklara likidite kazandırma" emoji="🖼️" description="Çoğu varlık likit değildir. Değerli olmaları, harcanabilir nakit olmalarıyla aynı anlama gelmez. Sahipleri, bir varlığı token'laştırarak bir kısmını veya tamamını kullanabilecekleri bir değere dönüştürebilir."/>
   <Card title="Küresel pazar" emoji="💰" description="Varlıklarını değerlendirmek isteyen sahipler, sadece arsa, hisse senedi, sanat eseri veya geleneksel finansal araçları alabilenlere değil, çok daha geniş bir yatırımcı kitlesine ulaşabilir." />
   <Card title="Aracıları atlayın" emoji="👩‍💻" description="Token'lar akıllı sözleşmelerle çalışır; bu sayede aracılara ve onların ücretlerine gerek kalmadan kişiden kişiye alınıp satılabilirler." />
-</CardGrid>
+</Grid>
 
 ## RWA'lar nasıl çalışır? {#how-rwas-work}
 
