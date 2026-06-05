@@ -39,7 +39,7 @@
   "page-stablecoins-precious-metals-pro-1": "Kripto dalgalanmalarına karşı güvenlidir.",
   "page-stablecoins-precious-metals-con-1": "Merkezidir – birisi Token'ları ihraç etmelidir.",
   "page-stablecoins-precious-metals-con-2": "Token ihraççısına ve değerli metal rezervlerine güvenmeniz gerekir.",
-  "page-stablecoins-algorithmic": "Algormitik",
+  "page-stablecoins-algorithmic": "Algoritmik",
   "page-stablecoins-algorithmic-description": "Bu sabitcoinler başka hiçbir varlık tarafından desteklenmez. Bunun yerine bir algoritma, fiyat istenen değerin altına düşerse Token satar ve değer istenen miktarın üzerine çıkarsa Token arz eder. Dolaşımdaki bu Token'ların sayısı düzenli olarak değiştiğinden, sahip olduğunuz Token sayısı değişecektir, ancak her zaman payınızı yansıtacaktır.",
   "page-stablecoins-algorithmic-pro-1": "Teminata gerek yoktur.",
   "page-stablecoins-algorithmic-pro-2": "Herkese açık bir algoritma tarafından kontrol edilir.",
