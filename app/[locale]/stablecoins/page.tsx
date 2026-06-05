@@ -761,6 +761,7 @@ async function Page(props: { params: Promise<PageParams> }) {
             {methods.map((method) => (
               <PathwayCard
                 key={method.title}
+                className="h-full"
                 href={method.href}
                 banner={
                   <Image
