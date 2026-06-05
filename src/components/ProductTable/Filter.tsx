@@ -102,7 +102,7 @@ const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
       className="bg-background-highlight p-6"
     >
       <AccordionTrigger className="border-b md:px-0">
-        <p className="text-base font-bold text-body">{filter.title}</p>
+        <p className="text-body text-base font-bold">{filter.title}</p>
       </AccordionTrigger>
       <AccordionContent className="p-0 md:p-0">
         <FieldSet className="gap-0">
@@ -120,7 +120,7 @@ const Filter = ({ filter, filterIndex, onChange }: FilterProps) => {
                   handleChange
                 )}
                 {item.inputState === true && item.options.length ? (
-                  <FieldSet className="flex flex-row gap-6 px-2 pb-4">
+                  <FieldSet className="flex flex-row flex-wrap gap-x-6 gap-y-2 px-2 pb-4">
                     {item.optionsLegend && (
                       <FieldLegend className="sr-only">
                         {item.optionsLegend}
