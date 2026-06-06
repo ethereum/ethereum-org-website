@@ -1,10 +1,9 @@
 ---
-title: Style Guide
+title: ethereum.org style guide
+metaTitle: Style Guide
 description: Style guide for ethereum.org
 lang: en
 ---
-
-# Ethereum.org style guide {#style-guide}
 
 Content on [ethereum.org](/) is crowdsourced and primarily written by our incredible contributors.
 

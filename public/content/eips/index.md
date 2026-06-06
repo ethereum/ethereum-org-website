@@ -1,10 +1,9 @@
 ---
-title: Ethereum Improvement Proposals (EIPs)
+title: Introduction to Ethereum Improvement Proposals (EIPs)
+metaTitle: Ethereum Improvement Proposals (EIPs)
 description: The basic information you need to understand EIPs
 lang: en
 ---
-
-# Introduction to Ethereum Improvement Proposals (EIPs) {#introduction-to-ethereum-improvement-proposals}
 
 ## What are EIPs? {#what-are-eips}
 

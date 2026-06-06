@@ -1,10 +1,9 @@
 ---
-title: Ethereum Energy Consumption
+title: Ethereum's energy expenditure
+metaTitle: Ethereum Energy Consumption
 description: The basic information you need to understand Ethereum's energy consumption.
 lang: en
 ---
-
-# Ethereum's energy expenditure {#proof-of-stake-energy}
 
 [Ethereum](/) is a green blockchain. Ethereum's [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism uses ETH instead of [energy to secure the network](/developers/docs/consensus-mechanisms/pow). Ethereum's energy consumption is approximately [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) across the entire global network.
 

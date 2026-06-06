@@ -1,10 +1,9 @@
 ---
-title: Design principles
+title: Our design principles
+metaTitle: Design principles
 lang: en
 description: The principles behind ethereum.org's design and content decisions
 ---
-
-# Our design principles {#contributing-to-ethereumorg-}
 
 <Emoji text=":wave:" size={1} /> Hello, and welcome to the design principles for ethereum.org. This is part of an ongoing process to evolve and improve ethereum.org.
 

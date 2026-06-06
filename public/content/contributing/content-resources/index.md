@@ -4,8 +4,6 @@ lang: en
 description: Our criteria for listing content resources on ethereum.org
 ---
 
-# Adding content resources {#adding-content-resources}
-
 We can't hope to cover everything Ethereum so we try to showcase some of the brilliant articles, tutorials, newsletters, job boards and various content resources that the community creates. These often provide more in-depth information on topics that users may be interested in.
 
 If there's a content resource that you feel should be added to a page, feel free to suggest it somewhere appropriate.
