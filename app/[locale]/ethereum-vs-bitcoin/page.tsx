@@ -52,6 +52,42 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       title: t("page-ethereum-vs-bitcoin-differences-section-title"),
       url: "#differences",
     },
+    {
+      title: t("page-ethereum-vs-bitcoin-purpose-title"),
+      url: "#purpose",
+    },
+    {
+      title: t("page-ethereum-vs-bitcoin-usecases-and-adoption-title"),
+      url: "#usecases-and-adoption",
+    },
+    {
+      title: t("page-ethereum-vs-bitcoin-monetary-policy-title"),
+      url: "#monetary-policy",
+    },
+    {
+      title: t("page-ethereum-vs-bitcoin-developer-ecosystem-title"),
+      url: "#developer-ecosystem",
+    },
+    {
+      title: t("page-ethereum-vs-bitcoin-security-and-consensus-title"),
+      url: "#security-and-consensus",
+    },
+    {
+      title: t("page-ethereum-vs-bitcoin-underlying-technology-title"),
+      url: "#underlying-technology",
+    },
+    {
+      title: t("page-ethereum-vs-bitcoin-decentralization-title"),
+      url: "#decentralization",
+    },
+    {
+      title: t("page-ethereum-vs-bitcoin-environmental-impact-title"),
+      url: "#environmental-impact",
+    },
+    {
+      title: t("page-ethereum-vs-bitcoin-future-outlook-title"),
+      url: "#future-outlook",
+    },
   ]
 
   const getId = (input: string) => {
@@ -155,8 +191,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <DifferencesTable />
           </Section>
 
-          <Section>
-            <h3>{t("page-ethereum-vs-bitcoin-purpose-title")}</h3>
+          <Section id={getId(tocItems[4].url)}>
+            <h2>{tocItems[4].title}</h2>
             <p>
               {t.rich("page-ethereum-vs-bitcoin-purpose-1", {
                 strong: Strong,
@@ -171,14 +207,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <p>{t("page-ethereum-vs-bitcoin-purpose-4")}</p>
           </Section>
 
-          <Section>
+          <Section id={getId(tocItems[5].url)}>
             <Image
               src={layer2HeroImg}
               alt="Layer 2 Hub Hero"
               className="mx-auto"
               sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
-            <h3>{t("page-ethereum-vs-bitcoin-usecases-and-adoption-title")}</h3>
+            <h2>{tocItems[5].title}</h2>
             <p>
               {t.rich("page-ethereum-vs-bitcoin-usecases-and-adoption-1", {
                 strong: Strong,
@@ -204,8 +240,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </LinkWithArrow>
           </Section>
 
-          <Section>
-            <h3>{t("page-ethereum-vs-bitcoin-monetary-policy-title")}</h3>
+          <Section id={getId(tocItems[6].url)}>
+            <h2>{tocItems[6].title}</h2>
             <p>
               {t.rich("page-ethereum-vs-bitcoin-monetary-policy-1", {
                 strong: Strong,
@@ -220,14 +256,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <p>{t("page-ethereum-vs-bitcoin-monetary-policy-4")}</p>
           </Section>
 
-          <Section>
+          <Section id={getId(tocItems[7].url)}>
             <Image
               src={guidesHubHeroImg}
               alt="Guides Hub Hero"
               className="mx-auto"
               sizes={`(max-width: 832px) calc(100vw - 32px), (max-width: ${screens.lg}) 800px, (max-width: ${screens.xl}) calc(100vw - 480px), 800px`}
             />
-            <h3>{t("page-ethereum-vs-bitcoin-developer-ecosystem-title")}</h3>
+            <h2>{tocItems[7].title}</h2>
             <p>
               {t.rich("page-ethereum-vs-bitcoin-developer-ecosystem-1", {
                 strong: Strong,
@@ -244,10 +280,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </LinkWithArrow>
           </Section>
 
-          <Section>
-            <h3>
-              {t("page-ethereum-vs-bitcoin-security-and-consensus-title")}
-            </h3>
+          <Section id={getId(tocItems[8].url)}>
+            <h2>{tocItems[8].title}</h2>
             <p>{t("page-ethereum-vs-bitcoin-security-and-consensus-1")}</p>
             <p>
               {t.rich("page-ethereum-vs-bitcoin-security-and-consensus-2", {
@@ -264,14 +298,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </LinkWithArrow>
           </Section>
 
-          <Section>
+          <Section id={getId(tocItems[9].url)}>
             <Image
               src={enterpriseEthImg}
               alt="Enterprise ETH"
               className="mx-auto w-[350px] max-w-full"
               sizes="(max-width: 350px) 100vw, 350px"
             />
-            <h3>{t("page-ethereum-vs-bitcoin-underlying-technology-title")}</h3>
+            <h2>{tocItems[9].title}</h2>
             <p>
               {t.rich("page-ethereum-vs-bitcoin-underlying-technology-1", {
                 strong: Strong,
@@ -289,8 +323,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </LinkWithArrow>
           </Section>
 
-          <Section>
-            <h3>{t("page-ethereum-vs-bitcoin-decentralization-title")}</h3>
+          <Section id={getId(tocItems[10].url)}>
+            <h2>{tocItems[10].title}</h2>
             <p>{t("page-ethereum-vs-bitcoin-decentralization-1")}</p>
             <p>
               {t.rich("page-ethereum-vs-bitcoin-decentralization-2", {
@@ -309,14 +343,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </Section>
 
-          <Section>
+          <Section id={getId(tocItems[11].url)}>
             <Image
               src={hackathonImg}
               alt="Enterprise ETH"
               className="mx-auto w-[350px] max-w-full"
               sizes="(max-width: 350px) 100vw, 350px"
             />
-            <h3>{t("page-ethereum-vs-bitcoin-environmental-impact-title")}</h3>
+            <h2>{tocItems[11].title}</h2>
             <p>
               {t.rich("page-ethereum-vs-bitcoin-environmental-impact-1", {
                 strong: Strong,
@@ -334,8 +368,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </LinkWithArrow>
           </Section>
 
-          <Section>
-            <h3>{t("page-ethereum-vs-bitcoin-future-outlook-title")}</h3>
+          <Section id={getId(tocItems[12].url)}>
+            <h2>{tocItems[12].title}</h2>
             <p>{t("page-ethereum-vs-bitcoin-future-outlook-1")}</p>
             <p>{t("page-ethereum-vs-bitcoin-future-outlook-2")}</p>
             <p>
