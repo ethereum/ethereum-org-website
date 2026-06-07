@@ -83,7 +83,7 @@ export default async function Page(props: { params: Promise<PageParams> }) {
             id="stats"
             className="flex flex-col gap-x-6 gap-y-4 px-4 xl:flex-row xl:px-12"
           >
-            <div className="flex-[2] space-y-4 rounded-2xl border border-primary/10 bg-linear-to-r from-primary/10 to-primary/5 px-8 py-12 text-lg dark:from-primary/20 dark:to-primary/10">
+            <div className="flex-[2] space-y-4 rounded-base border border-primary/10 bg-linear-to-r from-primary/10 to-primary/5 px-8 py-12 text-lg dark:from-primary/20 dark:to-primary/10">
               <h2 className="text-3xl md:text-4xl">
                 {t("page-collectibles-improve-title")}
               </h2>

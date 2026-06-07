@@ -35,9 +35,7 @@ const DownloadAWallet = ({
               {stepIndex} / {totalSteps}
             </Tag>
           </div>
-          <h2 className="text-3xl">
-            {t("page-start-download-wallet-title")}
-          </h2>
+          <h2 className="text-3xl">{t("page-start-download-wallet-title")}</h2>
           <p>{t("page-start-download-wallet-description")}</p>
         </div>
         <div className="hidden flex-col gap-8 lg:flex">
@@ -72,7 +70,7 @@ const DownloadAWallet = ({
         </div>
       </div>
       <div className="flex w-full flex-1 flex-col gap-8">
-        <div className="flex flex-col overflow-hidden rounded-2xl border shadow-window-box">
+        <div className="flex flex-col overflow-hidden rounded-base border shadow-window-box">
           {newToCryptoWallets.map((wallet) => (
             <LinkBox
               key={wallet.name}
