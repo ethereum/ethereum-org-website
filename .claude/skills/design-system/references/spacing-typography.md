@@ -73,6 +73,30 @@ The designers' "heading hugs the content it introduces" effect is the `1x` defau
 
 **Scope.** `flow` styles the direct children of the region *and* the direct children of any `<section>` one level inside it -- so wrap a group of `<h2>` + content in `<Section>`/`<section>` and it gets the rhythm without its own `flow` class. A component that renders its own `<section>` but manages its own spacing opts out with `data-flow="skip"`. The rules are zero-specificity (`:where()`), so a plain utility class still overrides any gap when you genuinely need an exception.
 
+**To nest a group, reach for `<section>` (or `<Section>`), not `<div>`.** Flow reaches one level into a `<section>`, but a `<div>` is opaque to it -- its children get no rhythm at all:
+
+```tsx
+// children space correctly -- flow reaches one level into <section>
+<div className="flow">
+  <h2>Title</h2>
+  <section>
+    <h3>Subsection</h3>
+    <p>Spaced.</p>
+    <p>Spaced.</p>
+  </section>
+</div>
+
+// the <div> blocks flow -- its children get NO rhythm
+<div className="flow">
+  <h2>Title</h2>
+  <div>
+    <h3>Subsection</h3>
+    <p>No space above me.</p>
+    <p>No space above me.</p>
+  </div>
+</div>
+```
+
 **`.flow` vs `Stack`/`gap`.** Use `.flow` for *prose* (mixed heading/paragraph/list streams). Use `Stack`/`gap-*` (below) for *composition* -- repeated like-shaped blocks (cards, grid items, control rows). Don't put both on the same container.
 
 Full design rationale and edge cases: `references/typography-spacing-flow-spec.md`.
