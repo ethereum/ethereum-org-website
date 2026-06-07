@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Mainnet",
   "page-staking-launchpad-widget-start": "Mulai staking di {network}",
   "page-staking-launchpad-widget-span": "Pilih jaringan",
-  "page-staking-launchpad-widget-p1": "Validator mandiri diharapkan untuk <strong>menguji pengaturan</strong> dan keterampilan operasional mereka di testnet {{network}} sebelum mempertaruhkan dana. Ingatlah bahwa penting untuk memilih <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">klien minoritas</a> karena hal ini meningkatkan keamanan jaringan dan membatasi risiko Anda.",
+  "page-staking-launchpad-widget-p1": "Validator mandiri diharapkan untuk <strong>menguji pengaturan</strong> dan keterampilan operasional mereka di testnet {network} sebelum mempertaruhkan dana. Ingatlah bahwa penting untuk memilih <link>klien minoritas</link> karena hal ini meningkatkan keamanan jaringan dan membatasi risiko Anda.",
   "page-staking-launchpad-widget-p2": "Jika Anda merasa nyaman dengannya, Anda dapat mengatur semua yang dibutuhkan dari baris perintah hanya dengan menggunakan Staking Launchpad.",
   "page-staking-launchpad-widget-p3": "Untuk mempermudah, lihat beberapa alat dan panduan di bawah ini yang dapat membantu Anda bersama dengan Staking Launchpad untuk mengatur klien Anda dengan mudah.",
   "page-staking-launchpad-widget-link": "Alat perangkat lunak dan panduan",

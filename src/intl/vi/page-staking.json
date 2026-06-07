@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Mạng chính",
   "page-staking-launchpad-widget-start": "Bắt đầu đặt cọc trên {network}",
   "page-staking-launchpad-widget-span": "Chọn mạng lưới",
-  "page-staking-launchpad-widget-p1": "Các trình xác thực độc lập được kỳ vọng sẽ <strong>kiểm tra thiết lập</strong> và kỹ năng vận hành của họ trên mạng thử nghiệm {{network}} trước khi mạo hiểm với tiền thật. Hãy nhớ rằng việc chọn một <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">máy khách thiểu số</a> là rất quan trọng vì nó cải thiện tính bảo mật của mạng lưới và hạn chế rủi ro cho bạn.",
+  "page-staking-launchpad-widget-p1": "Các trình xác thực độc lập cần <strong>kiểm tra thiết lập</strong> và kỹ năng vận hành của mình trên mạng thử nghiệm {network} trước khi mạo hiểm với tiền của mình. Hãy nhớ rằng việc chọn một <link>máy khách thiểu số</link> là rất quan trọng vì nó giúp cải thiện tính bảo mật của mạng lưới và hạn chế rủi ro cho bạn.",
   "page-staking-launchpad-widget-p2": "Nếu bạn cảm thấy thoải mái với điều đó, bạn có thể thiết lập mọi thứ cần thiết từ dòng lệnh chỉ bằng Staking Launchpad.",
   "page-staking-launchpad-widget-p3": "Để mọi thứ dễ dàng hơn, hãy xem một số công cụ và hướng dẫn bên dưới có thể giúp bạn cùng với Staking Launchpad để thiết lập các máy khách của bạn một cách dễ dàng.",
   "page-staking-launchpad-widget-link": "Các công cụ phần mềm và hướng dẫn",
