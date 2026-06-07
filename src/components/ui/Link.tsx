@@ -17,18 +17,12 @@ import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { Link as I18nLink } from "@/i18n/navigation"
 import { usePathname } from "@/i18n/navigation"
 
-export const ExternalLinkIcon = () => {
-  const { twFlipForRtl } = useRtlFlip()
-  return (
-    <ExternalLink
-      data-label="arrow"
-      className={cn(
-        "ms-1 !mb-0.5 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
-        twFlipForRtl
-      )}
-    />
-  )
-}
+export const ExternalLinkIcon = () => (
+  <ExternalLink
+    data-label="arrow"
+    className="ms-1 mb-0.5! inline-block size-[0.875em] max-h-4 max-w-4 shrink-0 rtl:-scale-x-100"
+  />
+)
 
 type BaseProps = {
   hideArrow?: boolean
