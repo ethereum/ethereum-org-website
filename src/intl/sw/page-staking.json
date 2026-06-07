@@ -149,7 +149,7 @@
   "page-staking-launchpad-widget-mainnet-label": "Mtandao Mkuu",
   "page-staking-launchpad-widget-start": "Anza kuweka dhamana kwenye {network}",
   "page-staking-launchpad-widget-span": "Chagua mtandao",
-  "page-staking-launchpad-widget-p1": "Wathibitishaji wa kujitegemea wanatarajiwa <strong>kujaribu usanidi wao</strong> na ujuzi wa uendeshaji kwenye mtandao wa majaribio wa {{network}} kabla ya kuhatarisha fedha. Kumbuka ni muhimu kuchagua <a href=\"/developers/docs/nodes-and-clients/client-diversity/\">mteja wa wachache</a> kwani inaboresha usalama wa mtandao na kupunguza hatari yako.",
+  "page-staking-launchpad-widget-p1": "Wathibitishaji wa kujitegemea wanatarajiwa <strong>kujaribu usanidi wao</strong> na ujuzi wa uendeshaji kwenye mtandao wa majaribio wa {network} kabla ya kuhatarisha fedha. Kumbuka ni muhimu kuchagua <link>kiteja cha wachache</link> kwani inaboresha usalama wa mtandao na kupunguza hatari yako.",
   "page-staking-launchpad-widget-p2": "Ikiwa unajisikia vizuri nayo, unaweza kusanidi kila kitu kinachohitajika kutoka kwa mstari wa amri ukitumia Staking Launchpad pekee.",
   "page-staking-launchpad-widget-p3": "Ili kurahisisha mambo, angalia baadhi ya zana na miongozo hapa chini inayoweza kukusaidia pamoja na Staking Launchpad ili kusanidi wateja wako kwa urahisi.",
   "page-staking-launchpad-widget-link": "Zana za programu na mwongozo",
