@@ -1,11 +1,11 @@
 {
   "version": 1,
   "sourceFile": "src/intl/en/page-staking.json",
-  "generatedAt": "2026-05-26T07:18:18.637Z",
-  "rootHash": "69ceaa1bf9c5",
+  "generatedAt": "2026-06-07T07:46:08.868Z",
+  "rootHash": "78a107131f31",
   "tree": {
-    "contentHash": "74fd6703df5f",
-    "anchorHash": "0c2a596848c9",
+    "contentHash": "4a112ecd7120",
+    "anchorHash": "5d5f6e90bd5a",
     "children": {
       "comp-withdrawal-comparison-current-title": {
         "contentHash": "defd0a79e6f8",
@@ -853,36 +853,26 @@
         "anchorHash": "e3b0c44298fc"
       },
       "page-staking-launchpad-widget-p1": {
-        "contentHash": "940120ace41c",
-        "anchorHash": "ddca7a10fd71",
+        "contentHash": "edcb31000b64",
+        "anchorHash": "7c99629937df",
         "children": {
-          "prose:2": {
-            "contentHash": "6f7199aebc95",
+          "prose:1": {
+            "contentHash": "8c69cb41f8d7",
             "anchorHash": "e3b0c44298fc"
           },
-          "icu:1": {
+          "icu:0": {
             "contentHash": "e3b0c44298fc",
             "anchorHash": "20d60a940d71"
           },
-          "prose:3": {
-            "contentHash": "fb4eaf5a700a",
-            "anchorHash": "e3b0c44298fc"
-          },
-          "html-tag:0": {
-            "contentHash": "54d279fee3d6",
-            "anchorHash": "ba174d22158f"
-          },
-          "prose:4": {
-            "contentHash": "37fa07f1c082",
+          "prose:2": {
+            "contentHash": "5fa6d1b630ab",
             "anchorHash": "e3b0c44298fc"
           }
         },
         "childrenOrder": [
-          "prose:2",
-          "icu:1",
-          "prose:3",
-          "html-tag:0",
-          "prose:4"
+          "prose:1",
+          "icu:0",
+          "prose:2"
         ]
       },
       "page-staking-launchpad-widget-p2": {
@@ -1622,5 +1612,5 @@
       "page-staking-network-testnet"
     ]
   },
-  "sourceCommitSha": "2b6a038be7d8898383a4f0c64b2494eda62e06db"
+  "sourceCommitSha": "a2c271d7bb993845e9f4b6ca72140f608d5c3221"
 }
