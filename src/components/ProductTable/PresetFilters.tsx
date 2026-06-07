@@ -1,11 +1,22 @@
-import { useCallback, useMemo } from "react"
+"use client"
+
+import { useCallback, useId, useMemo } from "react"
 import { Check } from "lucide-react"
 
 import type { FilterOption, TPresetFilters } from "@/lib/types"
 
+import Checkbox from "@/components/ui/checkbox"
+import {
+  FieldDescription,
+  FieldLabel,
+  FieldLegend,
+  FieldSet,
+} from "@/components/ui/field"
+
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import { getActivePresets } from "@/lib/product-table"
 
 export interface PresetFiltersProps {
@@ -40,6 +51,105 @@ const colors = {
   ],
 }
 
+interface PresetCardProps {
+  preset: TPresetFilters[number]
+  idx: number
+  isActive: boolean
+  presetFiltersCount?: number
+  showMobileSidebar: boolean
+  onSelect: (idx: number) => void
+}
+
+const PresetCard = ({
+  preset,
+  idx,
+  isActive,
+  presetFiltersCount,
+  showMobileSidebar,
+  onSelect,
+}: PresetCardProps) => {
+  const { t } = useTranslation("page-wallets-find-wallet")
+  const id = useId()
+  const descriptionId = !showMobileSidebar ? `${id}-description` : undefined
+  const colorIdx = colors.text[idx] ? idx : idx % colors.text.length
+
+  const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Avoid double-toggle when clicks on the label area already forward to the checkbox
+    if ((e.target as HTMLElement).closest("label")) return
+    onSelect(idx)
+  }
+
+  return (
+    <div className={showMobileSidebar ? "w-full" : "grid-rows-1 pb-5"}>
+      <div
+        onClick={handleCardClick}
+        className={cn(
+          "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all duration-50 hover:bg-background-highlight lg:h-full lg:p-6",
+          "has-[:focus-visible]:outline has-[:focus-visible]:outline-4 has-[:focus-visible]:-outline-offset-4 has-[:focus-visible]:outline-primary-hover",
+          isActive ? "border-primary" : "border-primary-low-contrast",
+          showMobileSidebar && "h-full"
+        )}
+      >
+        <FieldLabel
+          htmlFor={id}
+          className="items-top flex w-full gap-2 px-1.5 text-base leading-normal font-normal has-data-[state=checked]:bg-transparent dark:has-data-[state=checked]:bg-transparent"
+        >
+          <Checkbox
+            id={id}
+            className="sr-only"
+            aria-describedby={descriptionId}
+            checked={isActive}
+            onCheckedChange={() => onSelect(idx)}
+          />
+          <span
+            aria-hidden
+            className={cn(
+              "relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2",
+              colors.border[colorIdx],
+              isActive && colors.bg[colorIdx]
+            )}
+          >
+            {isActive && (
+              <Check className="size-4 stroke-[3] text-background" />
+            )}
+          </span>
+          <span
+            className={cn(
+              "text-left text-xl hyphens-auto transition-all duration-50",
+              colors.text[colorIdx]
+            )}
+          >
+            {preset.title}
+            {presetFiltersCount && (
+              <>
+                <span aria-hidden="true" className="font-normal">
+                  {" "}
+                  ({presetFiltersCount})
+                </span>
+                <span className="sr-only">
+                  {" "}
+                  {t(
+                    "page-wallets-find-wallet:page-find-wallet-persona-count-available",
+                    { count: presetFiltersCount }
+                  )}
+                </span>
+              </>
+            )}
+          </span>
+        </FieldLabel>
+        {!showMobileSidebar && (
+          <FieldDescription
+            id={descriptionId}
+            className="p-2 text-left text-sm leading-normal font-normal text-body transition-colors duration-500"
+          >
+            {preset.description}
+          </FieldDescription>
+        )}
+      </div>
+    </div>
+  )
+}
+
 const PresetFilters = ({
   presets,
   filters,
@@ -47,6 +157,7 @@ const PresetFilters = ({
   showMobileSidebar = false,
   presetFiltersCounts,
 }: PresetFiltersProps) => {
+  const { t } = useTranslation("page-wallets-find-wallet")
   const activePresets = useMemo(() => {
     return getActivePresets(presets, filters)
   }, [presets, filters])
@@ -130,7 +241,10 @@ const PresetFilters = ({
   )
 
   return (
-    <div>
+    <FieldSet className="gap-0">
+      <FieldLegend className="sr-only">
+        {t("page-find-wallet-persona-legend")}
+      </FieldLegend>
       <div
         className={`lg:pb-11 ${
           showMobileSidebar
@@ -139,61 +253,19 @@ const PresetFilters = ({
         }`}
         data-testid="preset-filters-container"
       >
-        {presets.map((preset, idx) => {
-          const colorIdx = colors.text[idx] ? idx : idx % colors.text.length
-          return (
-            <div
-              key={idx}
-              className={showMobileSidebar ? "w-full" : "grid-rows-1 pb-5"}
-            >
-              <button
-                className={cn(
-                  "group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all duration-50 hover:bg-background-highlight lg:h-full lg:p-6",
-                  "focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover",
-                  activePresets.includes(idx)
-                    ? "border-primary"
-                    : "border-primary-low-contrast",
-                  showMobileSidebar && "h-full"
-                )}
-                onClick={() => handleSelectPreset(idx)}
-              >
-                <div className="items-top flex gap-2 px-1.5">
-                  <div
-                    className={cn(
-                      "relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2",
-                      colors.border[colorIdx],
-                      activePresets.includes(idx) && colors.bg[colorIdx]
-                    )}
-                  >
-                    {activePresets.includes(idx) && (
-                      <Check className="size-4 stroke-[3] text-background" />
-                    )}
-                  </div>
-                  <h3
-                    className={cn(
-                      "text-left text-xl hyphens-auto transition-all duration-50",
-                      colors.text[colorIdx]
-                    )}
-                  >
-                    {preset.title}{" "}
-                    {presetFiltersCounts?.[idx] && (
-                      <span className="font-normal">
-                        ({presetFiltersCounts[idx]})
-                      </span>
-                    )}
-                  </h3>
-                </div>
-                {!showMobileSidebar && (
-                  <p className="p-2 text-left text-sm text-body transition-colors duration-500">
-                    {preset.description}
-                  </p>
-                )}
-              </button>
-            </div>
-          )
-        })}
+        {presets.map((preset, idx) => (
+          <PresetCard
+            key={idx}
+            preset={preset}
+            idx={idx}
+            isActive={activePresets.includes(idx)}
+            presetFiltersCount={presetFiltersCounts?.[idx]}
+            showMobileSidebar={showMobileSidebar}
+            onSelect={handleSelectPreset}
+          />
+        ))}
       </div>
-    </div>
+    </FieldSet>
   )
 }
 
