@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowDownRight, ArrowUpRight, Info } from "lucide-react"
+import { ArrowUpRight, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import Tooltip from "@/components/Tooltip"
@@ -13,7 +13,6 @@ import { formatPriceUSD, numberToPercent } from "@/lib/utils/numbers"
 import { Flex } from "./ui/flex"
 
 import { useGasEthPrice } from "@/hooks/useGasEthPrice"
-import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const EthPriceCard = ({
@@ -23,7 +22,6 @@ const EthPriceCard = ({
   const locale = useLocale()
   const { t } = useTranslation()
   const { ethPrice, ethPercentChange24h } = useGasEthPrice()
-  const { twFlipForRtl } = useRtlFlip()
 
   const isLoading = ethPrice === 0
   const hasChange = typeof ethPercentChange24h === "number"
@@ -81,13 +79,12 @@ const EthPriceCard = ({
                   minimumFractionDigits: 2,
                   maximumFractionDigits: 2,
                 })}
-                {isNegativeChange ? (
-                  <ArrowDownRight
-                    className={cn(twFlipForRtl, "inline-block")}
-                  />
-                ) : (
-                  <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
-                )}
+                <ArrowUpRight
+                  className={cn(
+                    "inline-block rtl:-scale-x-100",
+                    isNegativeChange && "-scale-y-100 rtl:-scale-100"
+                  )}
+                />
               </span>
             )
           )}
