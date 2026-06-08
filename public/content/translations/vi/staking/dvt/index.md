@@ -1,91 +1,89 @@
 ---
-title: "Công nghệ xác thực phân tán"
-description: "Công nghệ xác thực phân tán cho phép nhiều bên tham gia hoạt động phân tán một nút xác thực Ethereum."
+title: Công nghệ trình xác thực phân tán
+description: Công nghệ trình xác thực phân tán cho phép nhiều bên cùng vận hành phân tán một trình xác thực Ethereum.
 lang: vi
 ---
 
-# Công nghệ nút xác thực phân tán {#distributed-validator-technology}
+Công nghệ trình xác thực phân tán (DVT) là một phương pháp bảo mật trình xác thực giúp phân tán việc quản lý khóa và trách nhiệm ký cho nhiều bên, nhằm giảm thiểu các điểm lỗi đơn lẻ và tăng cường khả năng phục hồi của trình xác thực.
 
-Công nghệ xác thực phân tán (DVT) là một phương pháp bảo mật nút xác thực, phân trách nhiệm quản lý khóa và ký cho nhiều bên tham gia, nhằm giảm thiểu các điểm lỗi đơn và tăng khả năng chịu lỗi của nút xác thực.
+Phương pháp này thực hiện điều đó bằng cách **chia nhỏ khóa riêng tư** được sử dụng để bảo mật một trình xác thực **trên nhiều máy tính** được tổ chức thành một "cụm". Lợi ích của việc này là làm cho những kẻ tấn công rất khó truy cập vào khóa, vì nó không được lưu trữ toàn bộ trên bất kỳ một máy tính đơn lẻ nào. Nó cũng cho phép một số nút ngoại tuyến, vì việc ký cần thiết có thể được thực hiện bởi một nhóm nhỏ các máy tính trong mỗi cụm. Điều này làm giảm các điểm lỗi đơn lẻ từ mạng lưới và làm cho toàn bộ tập hợp trình xác thực trở nên mạnh mẽ hơn.
 
-Điều này được thực hiện bằng cách **chia khóa riêng tư** được sử dụng để bảo mật một nút xác thực **trên nhiều máy tính** được tổ chức thành một "cụm". Lợi ích của điều này là khiến kẻ tấn công rất khó truy cập vào khóa bởi vì nó không được lưu trữ hoàn toàn trên bất kỳ thiết bị đơn lẻ nào. Nó cũng cho phép một số nút tạm thời ngưng hoạt động, vì một nhóm nhỏ các máy trong mỗi cụm có thể thực hiện quá trình ký. Điều này giúp giảm điểm lỗi đơn từ mạng và làm cho toàn bộ tập hợp nút xác thực trở nên mạnh mẽ hơn.
+![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
 
-![Sơ đồ minh họa cách một khóa nút xác thực duy nhất được chia thành các phần chia sẻ khóa và phân phối cho nhiều nút có các thành phần khác nhau.](./dvt-cluster.png)
-
-## Tại sao chúng ta lại cần DVT? {#why-do-we-need-dvt}
+## Tại sao chúng ta cần DVT? {#why-do-we-need-dvt}
 
 ### Bảo mật {#security}
 
-Các nút xác thực tạo ra hai cặp khóa là khóa chung và khóa riêng: khóa của nút xác thực để tham gia vào quá trình đồng thuận và khóa rút tiền để truy cập vào tài khoản tiền. Mặc dù người kiểm duyệt có thể bảo mật các khóa rút tiền trong lưu trữ lạnh, nhưng khóa riêng của người kiểm duyệt phải hoạt động trực tuyến 24/7. Nếu một khóa riêng của người kiểm duyệt bị xâm phạm, một kẻ tấn công có thể kiểm soát người kiểm duyệt, có khả năng dẫn đến người góp cổ phần bị cắt giảm hoặc mất ETH. DVT có thể trợ giúp giảm thiểu rủi ro này. Cách hoạt động:
+Các trình xác thực tạo ra hai cặp khóa công khai-riêng tư: khóa trình xác thực để tham gia vào đồng thuận và khóa rút tiền để truy cập vào tiền. Mặc dù các trình xác thực có thể bảo mật khóa rút tiền trong ví lạnh, nhưng các khóa riêng tư của trình xác thực phải luôn trực tuyến 24/7. Nếu một khóa riêng tư của trình xác thực bị xâm phạm, kẻ tấn công có thể kiểm soát trình xác thực, có khả năng dẫn đến việc bị phạt cắt giảm hoặc mất ETH của người đặt cọc. DVT có thể giúp giảm thiểu rủi ro này. Dưới đây là cách thức hoạt động:
 
-Bằng cách sử dụng DVT, người góp cổ phần có thể tham gia vào quá trình góp cổ phần trong khi giữ nguyên khóa riêng của nút xác thực trong kho lưu trữ lạnh. Có thể thực hiện điều này bằng cách mã hóa khóa nút xác thực đầy đủ ban đầu và sau đó chia thành các phần khóa. Các phần khóa kết nối trực tuyến và được phân tán tới nhiều nút khác nhau, tạo điều kiện cho hoạt động phân tán của nút xác thực. Có thể thực hiện điều này bởi vì các nút xác thực Ethereum sử dụng chữ ký BLS có tính cộng dần, có nghĩa là khóa gốc có thể được tái tạo bằng cách tổng hợp các phần. Điều này cho phép người đặt cọc giữ nguyên khóa 'chính' của nút xác thực ban đầu một cách an toàn ngoại tuyến.
+Bằng cách sử dụng DVT, những người đặt cọc có thể tham gia vào việc đặt cọc trong khi vẫn giữ khóa riêng tư của trình xác thực trong ví lạnh. Điều này đạt được bằng cách mã hóa khóa trình xác thực gốc, hoàn chỉnh và sau đó chia nó thành các phần chia sẻ khóa. Các phần chia sẻ khóa này hoạt động trực tuyến và được phân phối đến nhiều nút, cho phép vận hành phân tán trình xác thực. Điều này có thể thực hiện được vì các trình xác thực [Ethereum](/) sử dụng chữ ký BLS có tính cộng, nghĩa là khóa hoàn chỉnh có thể được tái tạo bằng cách cộng các phần thành phần của chúng lại với nhau. Điều này cho phép người đặt cọc giữ khóa trình xác thực 'chính' gốc, hoàn chỉnh ngoại tuyến một cách an toàn.
 
-### Không có điểm lỗi duy nhất {#no-single-point-of-failure}
+### Không có điểm lỗi đơn lẻ {#no-single-point-of-failure}
 
-Khi chia một nút xác thực cho nhiều nhà điều hành và nhiều máy, nó có thể chịu được sự cố về phần cứng và phần mềm của từng máy và không bị ngừng hoạt động. Cũng có thể giảm thiểu nguy cơ xảy ra sự cố bằng cách sử dụng các cấu hình phần cứng và phần mềm đa dạng trên các nút trong một cụm. Khả năng chịu đựng này không có sẵn trong cấu hình kiểm duyệt một nút duy nhất - nó đến từ lớp DVT.
+Khi một trình xác thực được chia cho nhiều người vận hành và nhiều máy tính, nó có thể chịu đựng được các lỗi phần cứng và phần mềm riêng lẻ mà không bị ngoại tuyến. Rủi ro xảy ra lỗi cũng có thể được giảm thiểu bằng cách sử dụng các cấu hình phần cứng và phần mềm đa dạng trên các nút trong một cụm. Khả năng phục hồi này không có sẵn đối với các cấu hình trình xác thực đơn nút - nó đến từ lớp DVT.
 
-Nếu một trong các thành phần của một máy trong một cụm gặp sự cố (ví dụ: nếu có bốn nhà điều hành trong một cụm kiểm duyệt và một trong số họ sử dụng một máy khách cụ thể có lỗi), các thành phần còn lại đảm bảo rằng nút xác thực vẫn tiếp tục hoạt động.
+Nếu một trong các thành phần của một máy tính trong cụm ngừng hoạt động (ví dụ: nếu có bốn người vận hành trong một cụm trình xác thực và một người sử dụng một máy khách cụ thể có lỗi), những người khác sẽ đảm bảo rằng trình xác thực vẫn tiếp tục hoạt động.
 
-### Tính phi tập trung {#decentralization}
+### Sự phi tập trung {#decentralization}
 
-Tình huống lý tưởng cho Ethereum là có càng nhiều nút xác thực được điều hành độc lập càng tốt. Tuy nhiên, một số nhà cung cấp dịch vụ đặt cọc đã trở nên rất phổ biến và chiếm một phần đáng kể của tổng lượng ETH được đặt cọc trên mạng. DVT có thể cho phép những nhà điều hành này tồn tại mài vẫn duy trì tính phi tập trung của cổ phần. Điều này là do khóa của từng nút xác thực được phân tán trên nhiều máy khác nhau. Do đó, cần phải có sự thông đồng với quy mô lớn hơn rất nhiều để một nút xác thực có thể trở nên độc hại.
+Kịch bản lý tưởng cho Ethereum là có càng nhiều trình xác thực được vận hành độc lập càng tốt. Tuy nhiên, một vài nhà cung cấp dịch vụ đặt cọc đã trở nên rất phổ biến và chiếm một phần đáng kể trong tổng số ETH được đặt cọc trên mạng lưới. DVT có thể cho phép các nhà vận hành này tồn tại trong khi vẫn duy trì sự phi tập trung của khoản đặt cọc. Điều này là do các khóa cho mỗi trình xác thực được phân phối trên nhiều máy tính và sẽ cần sự thông đồng lớn hơn nhiều để một trình xác thực trở nên độc hại.
 
-Nếu không có DVT, các nhà cung cấp dịch vụ góp cổ phần có thể dễ dàng hỗ trợ chỉ một hoặc hai cấu hình máy khách cho tất cả các nút xác thực, từ đó làm gia tăng tác động của lỗi máy khách. Có thể dùng DVT để phân tán rủi ro trên nhiều cấu hình máy khách và phần cứng khác nhau, tạo ra khả năng phục hồi thông qua tính đa dạng.
+Nếu không có DVT, các nhà cung cấp dịch vụ đặt cọc sẽ dễ dàng hơn trong việc chỉ hỗ trợ một hoặc hai cấu hình máy khách cho tất cả các trình xác thực của họ, làm tăng tác động của một lỗi máy khách. DVT có thể được sử dụng để phân tán rủi ro trên nhiều cấu hình máy khách và phần cứng khác nhau, tạo ra khả năng phục hồi thông qua sự đa dạng.
 
-**DVT mang lại các lợi ích sau cho Ethereum:**
+**DVT mang lại những lợi ích sau cho Ethereum:**
 
-1. **Sự phi tập trung hóa** của cơ chế đồng thuận bằng chứng cổ phần của Ethereum
+1. **Sự phi tập trung** của đồng thuận Bằng chứng cổ phần (PoS) trên Ethereum
 2. Đảm bảo **tính hoạt động** của mạng lưới
-3. Tạo **khả năng chịu lỗi** cho nút xác thực
-4. **Giảm thiểu sự tin cậy** trong vận hành nút xác thực
-5. **Giảm thiểu** rủi ro **slashing** và thời gian ngừng hoạt động
-6. **Cải thiện tính đa dạng** (máy khách, trung tâm dữ liệu, địa điểm, quy định, v.v.)
-7. **Tăng cường bảo mật** trong quản lý khóa của nút xác thực
+3. Tạo ra **khả năng chịu lỗi** cho trình xác thực
+4. Vận hành trình xác thực **giảm thiểu sự tin cậy**
+5. **Giảm thiểu rủi ro phạt cắt giảm** và thời gian ngừng hoạt động
+6. **Cải thiện sự đa dạng** (máy khách, trung tâm dữ liệu, vị trí, quy định, v.v.)
+7. **Tăng cường bảo mật** trong việc quản lý khóa của trình xác thực
 
-## DVT hoạt động ra sao? {#how-does-dvt-work}
+## DVT hoạt động như thế nào? {#how-does-dvt-work}
 
-Giải pháp DVT bao gồm các thành phần chính sau:
+Một giải pháp DVT bao gồm các thành phần sau:
 
-- **[Chia sẻ bí mật của Shamir](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Các nút xác thực sử dụng [khóa BLS](https://en.wikipedia.org/wiki/BLS_digital_signature). Có thể kết hợp các "phần khóa" BLS riêng lẻ ("phần khóa") thành một khóa tổng hợp (chữ ký). Trong DVT, khóa riêng của nút xác thực là chữ ký BLS kết hợp của từng nhà điều hành trong cụm.
-- **[Lược đồ chữ ký ngưỡng](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Xác định số lượng phần chia sẻ khóa riêng lẻ cần thiết cho các tác vụ ký, ví dụ: 3 trong 4.
-- **[Tạo khóa phân tán (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Quy trình mã hóa tạo ra các phần chia sẻ khóa và được sử dụng để phân phối các phần chia sẻ của một khóa nút xác thực hiện có hoặc mới cho các nút trong một cụm.
-- **[Tính toán đa bên (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - Toàn bộ khóa nút xác thực được tạo một cách bí mật bằng cách sử dụng tính toán đa bên. Không nhà điều hành riêng lẻ nào biết được khóa đầy đủ vì họ chỉ biết phần của mình ("phần khóa" của họ).
-- **Giao thức đồng thuận** - Giao thức đồng thuận chọn một nút làm trình đề xuất khối. Chúng chia sẻ khối với các nút khác trong cụm, những nút này sẽ thêm phần khóa của mình vào chữ ký tổng hợp. Khi phần khóa được tổng hợp đủ, khối sẽ được đề xuất trên Ethereum.
+- **[Chia sẻ bí mật của Shamir](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Các trình xác thực sử dụng [khóa BLS](https://en.wikipedia.org/wiki/BLS_digital_signature). Các "phần chia sẻ khóa" BLS riêng lẻ có thể được kết hợp thành một khóa (chữ ký) tổng hợp duy nhất. Trong DVT, khóa riêng tư cho một trình xác thực là chữ ký BLS kết hợp của mỗi người vận hành trong cụm.
+- **[Lược đồ chữ ký ngưỡng](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Xác định số lượng các phần chia sẻ khóa riêng lẻ cần thiết cho các nhiệm vụ ký, ví dụ: 3 trên 4.
+- **[Tạo khóa phân tán (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Quá trình mật mã học tạo ra các phần chia sẻ khóa và được sử dụng để phân phối các phần chia sẻ của một khóa trình xác thực hiện có hoặc mới cho các nút trong một cụm.
+- **[Tính toán nhiều bên (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - Khóa trình xác thực hoàn chỉnh được tạo ra một cách bí mật bằng cách sử dụng tính toán nhiều bên. Khóa hoàn chỉnh không bao giờ được biết đến bởi bất kỳ người vận hành riêng lẻ nào—họ chỉ biết phần của riêng họ (tức là "phần chia sẻ" của họ).
+- **Giao thức đồng thuận** - Giao thức đồng thuận chọn một nút làm người đề xuất khối. Họ chia sẻ khối với các nút khác trong cụm, những nút này sẽ thêm các phần chia sẻ khóa của họ vào chữ ký tổng hợp. Khi đủ số lượng phần chia sẻ khóa được tổng hợp, khối sẽ được đề xuất trên Ethereum.
 
-Các nút xác thực phân tán có khả năng chịu lỗi tích hợp và có thể tiếp tục chạy ngay cả khi một số nút riêng lẻ ngoại tuyến. Điều này cho thấy cụm có khả năng phục hồi ngay cả khi một số nút trong cụm trở nên độc hại hoặc ít hoạt động.
+Các trình xác thực phân tán có khả năng chịu lỗi tích hợp và có thể tiếp tục hoạt động ngay cả khi một số nút riêng lẻ bị ngoại tuyến. Điều này có nghĩa là cụm có khả năng phục hồi ngay cả khi một số nút bên trong nó trở nên độc hại hoặc lười biếng.
 
 ## Các trường hợp sử dụng DVT {#dvt-use-cases}
 
-DVT có những tác động quan trọng đến ngành đặt cọc nói chung:
+DVT có những tác động đáng kể đối với ngành công nghiệp đặt cọc nói chung:
 
-### Người đặt cược độc lập {#solo-stakers}
+### Người đặt cọc độc lập {#solo-stakers}
 
-DVT cho phép đặt cọc tự nắm giữ khóa bằng cách phân tán khóa nút xác thực của bạn trên các nút từ xa trong khi vẫn giữ cho toàn bộ khóa hoàn toàn ngoại tuyến. Nghĩa là những người tự đặt cọc không nhất thiết phải chi tiền mua phần cứng, trong khi cơ chế phân phối các phần khóa có thể giúp tăng cường bảo mật chống lại các vụ xâm nhập tiềm ẩn.
+DVT cũng cho phép đặt cọc không lưu ký bằng cách cho phép bạn phân phối khóa trình xác thực của mình trên các nút từ xa trong khi vẫn giữ khóa hoàn chỉnh hoàn toàn ngoại tuyến. Điều này có nghĩa là những người đặt cọc tại nhà không nhất thiết phải chi tiền cho phần cứng, trong khi việc phân phối các phần chia sẻ khóa có thể giúp củng cố chúng trước các vụ hack tiềm ẩn.
 
-### Đặt cược dưới dạng dịch vụ (SaaS) {#saas}
+### Staking như một dịch vụ (SaaS) {#saas}
 
-Các nhà điều hành (chẳng hạn như nhóm đặt cọc và đặt cọc theo tổ chức) nào quản lý nhiều nút xác thực có thể sử dụng DVT để giảm thiểu rủi ro. Bằng cách phân tán cơ sở hạ tầng, họ có thể tăng khả năng dự phòng cho các hoạt động và đa dạng hóa các loại phần cứng họ sử dụng.
+Các nhà vận hành (chẳng hạn như các nhóm đặt cọc và những người đặt cọc tổ chức) quản lý nhiều trình xác thực có thể sử dụng DVT để giảm thiểu rủi ro của họ. Bằng cách phân phối cơ sở hạ tầng của mình, họ có thể thêm tính dự phòng vào các hoạt động của mình và đa dạng hóa các loại phần cứng mà họ sử dụng.
 
-DVT có trách nhiệm quản lý khóa trên nhiều nút, nghĩa là có thể chia sẻ một số chi phí vận hành. Bên cạnh đó, DVT còn có thể giúp giảm thiểu rủi ro vận hành và chi phí bảo hiểm cho các nhà cung cấp dịch vụ đặt cọc.
+DVT chia sẻ trách nhiệm quản lý khóa trên nhiều nút, nghĩa là một số chi phí vận hành cũng có thể được chia sẻ. DVT cũng có thể giảm rủi ro vận hành và chi phí bảo hiểm cho các nhà cung cấp dịch vụ đặt cọc.
 
-### Bể đặt cược {#staking-pools}
+### Nhóm đặt cọc {#staking-pools}
 
-Do các thiết lập nút xác thực tiêu chuẩn, các nhóm góp cổ phần và nhà cung cấp dịch vụ góp cổ phần thanh khoản buộc phải có nhiều mức độ tin tưởng khác nhau đối với từng nhà điều hành vì lợi nhuận và thua lỗ được chia sẻ trong toàn bộ nhóm. Họ cũng phụ thuộc vào nhà điều hành để bảo vệ khóa ký vì cho đến nay, vẫn chưa có tùy chọn nào thay thế.
+Do các thiết lập trình xác thực tiêu chuẩn, các nhóm đặt cọc và các nhà cung cấp dịch vụ đặt cọc thanh khoản buộc phải có các mức độ tin cậy khác nhau đối với một người vận hành duy nhất vì lợi nhuận và thua lỗ được xã hội hóa trong toàn bộ nhóm. Họ cũng phụ thuộc vào các nhà vận hành để bảo vệ các khóa ký vì cho đến nay, không có lựa chọn nào khác cho họ.
 
-Mặc dù đã thực hiện nỗ lực để phân tán rủi ro bằng cách phân bổ cổ phần cho nhiều nhà điều hành, nhưng mỗi nhà điều hành vẫn quản lý một lượng cổ phần đáng kể một cách độc lập. Phụ thuộc vào một nhà điều hành duy nhất sẽ tiềm ẩn những rủi ro lớn nếu họ hoạt động kém hiệu quả, bị ngừng hoạt động, bị tấn công hoặc có hành động độc hại.
+Mặc dù theo truyền thống, các nỗ lực được thực hiện để phân tán rủi ro bằng cách phân phối các khoản đặt cọc cho nhiều người vận hành, mỗi người vận hành vẫn quản lý một khoản đặt cọc đáng kể một cách độc lập. Việc dựa vào một người vận hành duy nhất gây ra những rủi ro to lớn nếu họ hoạt động kém hiệu quả, gặp phải thời gian ngừng hoạt động, bị xâm phạm hoặc hành động độc hại.
 
-Nhờ DVT, không cần phải đặt quá nhiều niềm tin vào các nhà điều hành như trước. **Các bể cho phép nhà điều hành nắm giữ cổ phần mà không cần quyền giám sát khóa của nút xác thực** (vì chỉ sử dụng các phần chia sẻ khóa). Nó cũng cho phép phân bổ các cổ phần được quản lý cho nhiều nhà điều hành hơn (ví dụ: thay vì để một nhà điều hành duy nhất quản lý 1000 nút xác thực, DVT cho phép nhiều nhà điều hành quản lý các nút xác thực đó). Các thiết lập nhà điều hành đa dạng sẽ đảm bảo rằng dù có một nhà điều hành ngừng hoạt động, những nhà điều hành khác vẫn có thể chứng thực. Điều này giúp dự phòng và đa dạng hóa, làm cho hiệu suất và khả năng phục hồi tốt hơn, đồng thời tối đa hóa phần thưởng.
+Bằng cách tận dụng DVT, sự tin cậy cần thiết từ các nhà vận hành được giảm thiểu đáng kể. **Các nhóm có thể cho phép các nhà vận hành nắm giữ các khoản đặt cọc mà không cần lưu ký các khóa trình xác thực** (vì chỉ các phần chia sẻ khóa được sử dụng). Nó cũng cho phép các khoản đặt cọc được quản lý được phân phối giữa nhiều người vận hành hơn (ví dụ: thay vì có một người vận hành duy nhất quản lý 1000 trình xác thực, DVT cho phép các trình xác thực đó được vận hành chung bởi nhiều người vận hành). Các cấu hình người vận hành đa dạng sẽ đảm bảo rằng nếu một người vận hành ngừng hoạt động, những người khác vẫn có thể chứng thực. Điều này dẫn đến sự dự phòng và đa dạng hóa, mang lại hiệu suất và khả năng phục hồi tốt hơn, đồng thời tối đa hóa phần thưởng.
 
-Một lợi ích khác khi giảm mức độ tin tưởng vào một nhà điều hành duy nhất chính là các nhóm đặt cọc có thể cho phép nhiều nhà điều hành tham gia hơn và không cần cấp phép. Theo đó, các dịch vụ có thể giảm thiểu rủi ro và hỗ trợ phi tập trung hóa Ethereum bằng cách tận dụng cả những nhà điều hành được lựa chọn cẩn thận và những nhà điều hành không cần cấp phép, ví dụ như ghép nối các người đặt cọc cá nhân hoặc người đặt cọc nhỏ hơn với người đặt cọc lớn hơn.
+Một lợi ích khác của việc giảm thiểu sự tin cậy vào một người vận hành duy nhất là các nhóm đặt cọc có thể cho phép sự tham gia của người vận hành cởi mở hơn và không cần cấp phép. Bằng cách làm điều này, các dịch vụ có thể giảm thiểu rủi ro của họ và hỗ trợ sự phi tập trung của Ethereum bằng cách sử dụng cả các tập hợp người vận hành được tuyển chọn và không cần cấp phép, ví dụ: bằng cách ghép nối những người đặt cọc tại nhà hoặc nhỏ hơn với những người lớn hơn.
 
-## Những nhược điểm tiềm tàng khi sử dụng DVT {#potential-drawbacks-of-using-dvt}
+## Những hạn chế tiềm ẩn khi sử dụng DVT {#potential-drawbacks-of-using-dvt}
 
-- **Thành phần bổ sung** - việc thêm một nút DVT sẽ bổ sung một bộ phận khác có khả năng bị lỗi hoặc dễ bị tấn công. Một cách để giảm thiểu rủi ro này đó là cố gắng triển khai nhiều lần một nút DVT, nghĩa là nhiều máy khách DVT khác nhau (tương tự như tình huống có nhiều máy khách cho các lớp đồng thuận và thực thi).
-- **Chi phí vận hành** - vì DVT phân phối nút xác thực cho nhiều bên, nên cần nhiều nút hơn để vận hành thay vì chỉ một nút duy nhất, điều này làm tăng chi phí vận hành.
-- **Độ trễ có thể tăng** - do DVT sử dụng giao thức đồng thuận để đạt được sự đồng thuận giữa nhiều nút vận hành một nút xác thực, nên có khả năng gây ra độ trễ tăng lên.
+- **Thành phần bổ sung** - việc giới thiệu một nút DVT thêm vào một phần khác có thể bị lỗi hoặc dễ bị tổn thương. Một cách để giảm thiểu điều này là cố gắng có nhiều triển khai của một nút DVT, nghĩa là có nhiều máy khách DVT (tương tự như có nhiều máy khách cho các lớp đồng thuận và thực thi).
+- **Chi phí vận hành** - vì DVT phân phối trình xác thực giữa nhiều bên, nên cần nhiều nút hơn để vận hành thay vì chỉ một nút duy nhất, điều này làm tăng chi phí vận hành.
+- **Khả năng tăng độ trễ** - vì DVT sử dụng một giao thức đồng thuận để đạt được sự đồng thuận giữa nhiều nút vận hành một trình xác thực, nó có khả năng làm tăng độ trễ.
 
 ## Đọc thêm {#further-reading}
 
-- [Đặc tả nút xác thực phân tán của Ethereum (cấp cao)](https://github.com/ethereum/distributed-validator-specs)
-- [Đặc tả kỹ thuật nút xác thực phân tán của Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
-- [Ứng dụng demo Chia sẻ bí mật của Shamir](https://iancoleman.io/shamir/)
+- [Thông số kỹ thuật trình xác thực phân tán Ethereum (cấp cao)](https://github.com/ethereum/distributed-validator-specs)
+- [Thông số kỹ thuật chi tiết trình xác thực phân tán Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+- [Ứng dụng demo chia sẻ bí mật của Shamir](https://iancoleman.io/shamir/)
