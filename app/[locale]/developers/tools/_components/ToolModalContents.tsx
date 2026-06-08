@@ -35,7 +35,7 @@ const ToolModalContents = ({
   labels: ToolModalLabels
 }) => {
   return (
-    <div className="flex h-full min-h-0 flex-col bg-background">
+    <div className="flex min-h-0 flex-1 flex-col bg-background">
       {tool.banner_url && (
         <div className="h-24 w-full shrink-0 sm:h-36">
           <Image
@@ -47,8 +47,8 @@ const ToolModalContents = ({
           />
         </div>
       )}
-      <div className="grid min-h-0 flex-1 grid-rows-[auto_auto_minmax(0,1fr)] gap-4 p-4 sm:p-8">
-        <div className="space-y-1">
+      <div className="flex min-h-0 flex-1 flex-col gap-4 p-4 sm:p-8">
+        <div className="shrink-0 space-y-1">
           <Tag
             size="small"
             status={getCategoryTagStyle(tool.categoryId)}
@@ -69,9 +69,9 @@ const ToolModalContents = ({
         <div className="-mt-2 max-h-[8lh] shrink-0 overflow-y-auto [mask-image:linear-gradient(to_top,transparent,white_2rem,white_calc(100%-1rem),transparent)] pt-2 pb-4 sm:max-h-[10lh]">
           <p className="whitespace-pre-line">{tool.description}</p>
         </div>
-        <div className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)] gap-2">
-          <p>{labels.links}</p>
-          <div className="max-h-[40svh] min-h-0 touch-pan-y overflow-y-auto overscroll-contain pe-1 pb-6 [-webkit-overflow-scrolling:touch] sm:max-h-none">
+        <div className="flex min-h-0 flex-1 flex-col gap-2">
+          <p className="shrink-0">{labels.links}</p>
+          <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain pe-1 pb-6 [-webkit-overflow-scrolling:touch]">
             <div className="flex flex-wrap gap-2">
               {tool.website && (
                 <ButtonLink href={tool.website}>{labels.website}</ButtonLink>
@@ -89,6 +89,11 @@ const ToolModalContents = ({
                   typeof repo === "string" ? { href: repo } : repo
                 )
                 .filter((repo) => isExternal(repo.href))
+                .sort(
+                  (a, b) =>
+                    (typeof b.stargazers === "number" ? b.stargazers : -1) -
+                    (typeof a.stargazers === "number" ? a.stargazers : -1)
+                )
                 .map((repo) => {
                   const href = repo.href
                   const isGitHub = href.includes("https://github.com")
@@ -121,6 +126,11 @@ const ToolModalContents = ({
               {(tool.packages || [])
                 .map((pkg) => (typeof pkg === "string" ? { href: pkg } : pkg))
                 .filter((pkg) => isExternal(pkg.href))
+                .sort(
+                  (a, b) =>
+                    (typeof b.downloads === "number" ? b.downloads : -1) -
+                    (typeof a.downloads === "number" ? a.downloads : -1)
+                )
                 .map((pkg) => {
                   const href = pkg.href
                   const isNpm =
