@@ -18,6 +18,9 @@ Ethereum.org è una risorsa educativa e neutrale. La galleria video è curata pe
 
 Il sito non elenca video che promuovono principalmente un prodotto specifico, un token o un servizio commerciale.
 
+
+## Criteri di inclusione
+
 ## Criteri di inclusione {#criteria-for-inclusion}
 
 ### Requisiti fondamentali {#must-haves}
@@ -33,6 +36,9 @@ Il sito non elenca video che promuovono principalmente un prodotto specifico, un
 - **Presenza di una trascrizione** – I video con trascrizioni migliorano l'accessibilità e la SEO. Se non ne hai una, il team di ethereum.org può aiutarti a generarla.
 - **Da una fonte credibile** – I contenuti provenienti da educatori, ricercatori e fonti affermate hanno la priorità.
 - **Attuale e sempreverde** – I contenuti che rimangono pertinenti nel tempo sono preferiti rispetto al materiale sensibile al fattore tempo.
+
+
+## Come aggiungere un video
 
 ## Come aggiungere un video {#how-to-add-a-video}
 
@@ -141,6 +147,15 @@ Puoi anche utilizzare nuovi tag: saranno disponibili per futuri raggruppamenti d
 
 Apri una pull request con le tue modifiche al branch `dev`. Il team esaminerà la tua richiesta e fornirà un feedback.
 
+
+## Manutenzione
+I video elencati vengono regolarmente revisionati per garantire che:
+
+- Soddisfino ancora i criteri di inserimento
+- Contengano informazioni accurate e aggiornate
+- Abbiano link di hosting/YouTube funzionanti
+
+Se noti un problema con un video elencato, [crea una issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) o invia un'email a [website@ethereum.org](mailto:website@ethereum.org).
 ## Manutenzione {#maintenance}
 
 I video elencati vengono regolarmente revisionati per garantire che:
@@ -151,6 +166,9 @@ I video elencati vengono regolarmente revisionati per garantire che:
 
 Se noti un problema con un video elencato, [crea una issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) o invia un'email a [website@ethereum.org](mailto:website@ethereum.org).
 
+
+## Termini di utilizzo
+Fai riferimento ai [termini di utilizzo](/terms-of-use/) di ethereum.org. Le informazioni su ethereum.org sono fornite esclusivamente a scopo informativo generale.
 ## Termini di utilizzo {#terms-of-use}
 
 Fai riferimento ai [termini di utilizzo](/terms-of-use/) di ethereum.org. Le informazioni su ethereum.org sono fornite esclusivamente a scopo informativo generale.

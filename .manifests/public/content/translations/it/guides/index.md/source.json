@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/guides/index.md",
+  "generatedAt": "2026-06-08T09:59:05.627Z",
+  "rootHash": "c35a580d2421",
+  "tree": {
+    "contentHash": "d59fe5c210a5",
+    "anchorHash": "93ed96829a64",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "5a30239cdfc4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "35d42cfdf569",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "a1a3db14889e",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "getting-started": {
+        "contentHash": "d39bb15904ea",
+        "anchorHash": "54e1bc03c2ed",
+        "labelHash": "831d0f72d242",
+        "children": {
+          "_label": {
+            "contentHash": "831d0f72d242",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "c977dbe78522",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "f434d7dbb52e",
+            "anchorHash": "6baff4bd9072"
+          },
+          "prose:3": {
+            "contentHash": "0ad1f13e6f38",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "2b58bdf9f156",
+            "anchorHash": "a1dda3f61da1"
+          },
+          "prose:4": {
+            "contentHash": "fb7d269a9efb",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "security-basics": {
+        "contentHash": "8dffa06b3a36",
+        "anchorHash": "f1bd7f0379d1",
+        "labelHash": "33cbdc53c9a3",
+        "children": {
+          "_label": {
+            "contentHash": "33cbdc53c9a3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "c977dbe78522",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "d8d58a776ff6",
+            "anchorHash": "e99a14df0c81"
+          },
+          "prose:3": {
+            "contentHash": "a674be8f4048",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "8ba6867e2274",
+            "anchorHash": "1a15925e0cf0"
+          },
+          "prose:4": {
+            "contentHash": "3a3af88a2818",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      },
+      "using-ethereum": {
+        "contentHash": "bb4d815bff16",
+        "anchorHash": "c28d8268f53e",
+        "labelHash": "44d27526e8ce",
+        "children": {
+          "_label": {
+            "contentHash": "44d27526e8ce",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:2": {
+            "contentHash": "c977dbe78522",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "152ed6d36cf4",
+            "anchorHash": "97d2a28977c8"
+          },
+          "prose:3": {
+            "contentHash": "9178b000c589",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d7834a22fa0d",
+            "anchorHash": "3c806b79ea9f"
+          },
+          "prose:4": {
+            "contentHash": "3421d2017d27",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:2",
+          "link:0",
+          "prose:3",
+          "link:1",
+          "prose:4"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "getting-started",
+      "security-basics",
+      "using-ethereum"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}
