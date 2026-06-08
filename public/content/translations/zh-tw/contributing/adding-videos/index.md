@@ -18,6 +18,10 @@ Ethereum.org 是一個中立的教育資源。影片庫的策展目的是：
 
 本網站不會上架主要用於推廣特定產品、代幣或商業服務的影片。
 
+
+## 收錄標準
+
+
 ## 收錄標準 {#criteria-for-inclusion}
 
 ### 必備條件 {#must-haves}
@@ -33,6 +37,10 @@ Ethereum.org 是一個中立的教育資源。影片庫的策展目的是：
 - **附有逐字稿** – 附有逐字稿的影片能改善無障礙體驗與搜尋引擎最佳化 (SEO)。如果你沒有逐字稿，ethereum.org 團隊可以協助產生。
 - **來自可信來源** – 來自知名教育工作者、研究人員與來源的內容將獲優先考慮。
 - **具時效性與長青** – 隨著時間推移仍具相關性的內容，優於具時效限制的素材。
+
+
+## 如何新增影片
+
 
 ## 如何新增影片 {#how-to-add-a-video}
 
@@ -141,6 +149,16 @@ title: "..."
 
 將你的變更建立一個拉取請求 (Pull Request) 到 `dev` 分支。團隊將會審查你的提交並提供回饋。
 
+
+## 維護
+已上架的影片會定期接受審查，以確保它們：
+
+- 仍然符合上架標準
+- 包含準確、最新的資訊
+- 具有可正常運作的代管/YouTube 連結
+
+如果你發現已上架的影片有問題，請[建立一個 issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) 或傳送電子郵件至 [website@ethereum.org](mailto:website@ethereum.org)。
+
 ## 維護 {#maintenance}
 
 已上架的影片會定期接受審查，以確保它們：
@@ -150,6 +168,10 @@ title: "..."
 - 具有可正常運作的託管/YouTube 連結
 
 如果你發現已上架的影片有問題，請[建立一個 issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) 或發送電子郵件至 [website@ethereum.org](mailto:website@ethereum.org)。
+
+
+## 使用條款
+請參閱 ethereum.org 的[使用條款](/terms-of-use/)。ethereum.org 上的資訊僅供一般參考之用。
 
 ## 使用條款 {#terms-of-use}
 
