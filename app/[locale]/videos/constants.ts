@@ -90,6 +90,6 @@ export const VIDEO_CATEGORIES = [
   {
     key: "community-stories",
     labelKey: "page-videos-category-community-stories",
-    tags: ["community-stories", "contributing", "translations", "community"],
+    tags: ["community-stories", "contributing", "translations"],
   },
 ] as const

@@ -8,7 +8,6 @@ duration: "0:02:45"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Devconnect Recap"

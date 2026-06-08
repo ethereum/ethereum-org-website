@@ -8,7 +8,6 @@ duration: "0:00:25"
 educationLevel: beginner
 topic:
   - "community-stories"
-  - "community"
 format: explainer
 author: Ethereum Foundation
 breadcrumb: "Devconnect Buenos Aires"
