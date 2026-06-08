@@ -1,10 +1,10 @@
 ---
-title: "Ethereum கலைச்சொற்களஞ்சியம்"
-description: "Ethereum தொடர்பான தொழில்நுட்ப மற்றும் தொழில்நுட்பம் அல்லாத சொற்களின் முழுமையற்ற கலைச்சொற்களஞ்சியம்"
+title: கலைச்சொற்களஞ்சியம்
+metaTitle: எத்திரியம் கலைச்சொற்களஞ்சியம்
+description: எத்திரியம் தொடர்பான தொழில்நுட்ப மற்றும் தொழில்நுட்பம் அல்லாத சொற்களின் முழுமையற்ற கலைச்சொற்களஞ்சியம்
 lang: ta
+authors: ["ஆண்ட்ரியாஸ் அன்டோனோபோலோஸ்"]
 ---
-
-# கலைச்சொற்களஞ்சியம் {#ethereum-glossary}
 
 ## \# {#section-numbers}
 
@@ -494,12 +494,12 @@ lang: ta
 
 ## ஆதாரங்கள் {#sources}
 
-_CC-BY-SA உரிமத்தின் கீழ் [Andreas M. Antonopoulos, Gavin Wood](https://aantonop.com/books/mastering-ethereum) எழுதிய [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) மூலம் ஒரு பகுதி வழங்கப்பட்டுள்ளது_
+_[ஆண்ட்ரியாஸ் எம். அன்டோனோபோலோஸ், கவின் வுட்](https://aantonop.com/books/mastering-ethereum) எழுதிய [மாஸ்டரிங் எத்திரியம்](https://github.com/ethereumbook/ethereumbook) புத்தகத்திலிருந்து CC-BY-SA உரிமத்தின் கீழ் ஒரு பகுதி வழங்கப்பட்டுள்ளது_
 
 <Divider />
 
 ## இந்தப் பக்கத்திற்குப் பங்களிக்கவும் {#contribute-to-this-page}
 
-நாங்கள் எதையாவது தவறவிட்டோமா? ஏதாவது தவறாக உள்ளதா? GitHub இல் இந்தக் கலைச்சொற்களஞ்சியத்திற்குப் பங்களிப்பதன் மூலம் இதை மேம்படுத்த எங்களுக்கு உதவுங்கள்!
+நாங்கள் எதையாவது தவறவிட்டோமா? ஏதாவது தவறாக உள்ளதா? GitHub இல் இந்தக் கலைச்சொற்களஞ்சியத்திற்குப் பங்களிப்பதன் மூலம் இதை மேம்படுத்த உதவுங்கள்!
 
-[எவ்வாறு பங்களிப்பது என்பது பற்றி மேலும் அறிக](/contributing/adding-glossary-terms)
+[எப்படிப் பங்களிப்பது என்பது பற்றி மேலும் அறிக](/contributing/adding-glossary-terms)
