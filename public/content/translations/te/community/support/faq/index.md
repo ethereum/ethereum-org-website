@@ -1,77 +1,76 @@
 ---
-title: "తరచుగా అడిగే ప్రశ్నలు"
-description: Common Ethereum questions about wallets, transactions, staking, and more.
+title: తరచుగా అడిగే ప్రశ్నలు
+description: వాలెట్‌లు, లావాదేవీలు, స్టేకింగ్ మరియు మరిన్నింటి గురించి సాధారణ ఎథీరియం ప్రశ్నలు.
 lang: te
 ---
 
-# తరచుగా అడిగే ప్రశ్నలు {#faq}
+## నేను తప్పు చిరునామాకు క్రిప్టో పంపాను {#wrong-wallet}
 
-## I sent crypto to the wrong address {#wrong-wallet}
+ఎథీరియం పై పంపిన లావాదేవీని వెనక్కి తీసుకోలేము. దురదృష్టవశాత్తూ, మీరు తప్పు వాలెట్‌కు ETH లేదా టోకెన్‌లను పంపినట్లయితే, ఆ లావాదేవీని వెనక్కి తీసుకునే మార్గం లేదు.
 
-ఇతీరియములో పంపిన లావాదేవీ తిరిగి మార్చలేనిది. Unfortunately, if you sent ETH or tokens to the wrong wallet, there is no way to reverse the transaction.
+**మీరు ఏమి చేయగలరు:**
 
-**What you can do:**
+- **మీకు ఆ చిరునామా యజమాని తెలిస్తే**, వారిని నేరుగా సంప్రదించి నిధులను తిరిగి ఇవ్వమని అడగండి
+- **ఆ చిరునామా ఏదైనా ఎక్స్ఛేంజ్ లేదా తెలిసిన సేవకు చెందినదైతే**, వారి మద్దతు బృందాన్ని సంప్రదించండి, వారు సహాయం చేయగలరు
+- **మీరు కాంట్రాక్ట్ చిరునామాకు టోకెన్‌లను పంపినట్లయితే**, ఆ కాంట్రాక్ట్‌లో ఉపసంహరణ లేదా రికవరీ ఫంక్షన్ ఉందో లేదో తనిఖీ చేయండి (ఇది చాలా అరుదు)
 
-- **If you know the owner of the address**, contact them directly and ask them to return the funds
-- **If the address belongs to an exchange or known service**, contact their support team, as they may be able to help
-- **If you sent tokens to a contract address**, check whether the contract has a withdrawal or recovery function (this is rare)
+చాలా సందర్భాలలో, నిధులను తిరిగి పొందే మార్గం లేదు. ఎథీరియం ఏ కేంద్ర సంస్థ, ఎంటిటీ లేదా వ్యక్తికి చెందినది కాదు, అంటే ఎవరూ లావాదేవీలను వెనక్కి తీసుకోలేరు. నిర్ధారించే ముందు ఎల్లప్పుడూ గ్రహీత చిరునామాను ఒకటికి రెండుసార్లు తనిఖీ చేయండి.
 
-In most cases, there is no way to recover the funds. No central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Always double-check the recipient address before confirming.
+## నేను నా వాలెట్ యాక్సెస్‌ను కోల్పోయాను {#lost-wallet-access}
 
-## I lost access to my wallet {#lost-wallet-access}
+మీ రికవరీ ఎంపికలు మీరు ఉపయోగించే వాలెట్ రకంపై ఆధారపడి ఉంటాయి.
 
-Your recovery options depend on the type of wallet you use.
+### మీ వద్ద మీ బీజ పదబంధం (రికవరీ పదబంధం) ఉంటే {#if-you-have-your-seed-phrase-recovery-phrase}
 
-### If you have your seed phrase (recovery phrase)
+మీరు మీ బీజ పదబంధాన్ని ఉపయోగించి ఏదైనా అనుకూలమైన వాలెట్ యాప్‌లో మీ వాలెట్‌ను పునరుద్ధరించవచ్చు. అందుకే మీ బీజ పదబంధాన్ని ఆఫ్‌లైన్‌లో సురక్షితంగా నిల్వ ఉంచడం చాలా ముఖ్యం. పునరుద్ధరణ సూచనల కోసం మీ వాలెట్ ప్రొవైడర్ డాక్యుమెంటేషన్‌ను తనిఖీ చేయండి.
 
-You can restore your wallet in any compatible wallet app using your seed phrase. This is why it is critical to keep your seed phrase stored safely offline. Check your wallet provider's documentation for restore instructions.
+### మీరు మీ బీజ పదబంధాన్ని కోల్పోయినట్లయితే {#if-you-have-lost-your-seed-phrase}
 
-### If you have lost your seed phrase
+మీ బీజ పదబంధం లేదా ప్రైవేట్ కీలు లేకుండా, మీ నిధులను తిరిగి పొందలేరు. ethereum.org తో సహా ఎవరూ మీ పాస్‌వర్డ్‌ను రీసెట్ చేయలేరు లేదా స్వయం సంరక్షణ వాలెట్ యాక్సెస్‌ను పునరుద్ధరించలేరు.
 
-Without your seed phrase or private keys, your funds cannot be recovered. No one, including ethereum.org, can reset your password or restore access to a self-custody wallet.
+### మీ ఖాతా ఎక్స్ఛేంజ్‌లో ఉంటే {#if-your-account-is-on-an-exchange}
 
-### If your account is on an exchange
-
-If your account is on a centralized exchange like Coinbase, Binance, or Kraken, contact the exchange's support team directly. They control accounts on their platform and may be able to help with password resets or account recovery.
+మీ ఖాతా కాయిన్‌బేస్, బైనాన్స్ లేదా Kraken వంటి కేంద్రీకృత ఎక్స్ఛేంజ్‌లో ఉంటే, నేరుగా ఎక్స్ఛేంజ్ మద్దతు బృందాన్ని సంప్రదించండి. వారు తమ ప్లాట్‌ఫారమ్‌లోని ఖాతాలను నియంత్రిస్తారు మరియు పాస్‌వర్డ్ రీసెట్‌లు లేదా ఖాతా రికవరీలో సహాయం చేయగలరు.
 
 <Alert variant="warning">
 <AlertEmoji text=":shield:"/>
 <AlertContent>
 <AlertDescription>
 
-**Never share your seed phrase with anyone** claiming to help you recover your wallet. This is one of the most common scam tactics. No legitimate service will ever ask for your seed phrase.
+**మీ వాలెట్‌ను పునరుద్ధరించడంలో సహాయం చేస్తామని చెప్పే ఎవరితోనూ మీ బీజ పదబంధాన్ని ఎప్పుడూ పంచుకోవద్దు**. ఇది అత్యంత సాధారణ స్కామ్ వ్యూహాలలో ఒకటి. ఏ చట్టబద్ధమైన సేవ కూడా మీ బీజ పదబంధాన్ని అడగదు.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
 <DocLink href="/guides/how-to-use-a-wallet/">
-  How to use a wallet
+  వాలెట్‌ను ఎలా ఉపయోగించాలి
 </DocLink>
 
-## My transaction is stuck or pending {#stuck-transaction}
+## నా లావాదేవీ నిలిచిపోయింది లేదా పెండింగ్‌లో ఉంది {#stuck-transaction}
 
-Transactions on Ethereum can get stuck when the gas fee you set was lower than what the network currently requires. Most wallets let you fix this:
+మీరు సెట్ చేసిన గ్యాస్ ఫీజు నెట్‌వర్క్‌కు ప్రస్తుతం అవసరమైన దానికంటే తక్కువగా ఉన్నప్పుడు ఎథీరియం పై లావాదేవీలు నిలిచిపోవచ్చు. చాలా వాలెట్‌లు దీన్ని పరిష్కరించడానికి మిమ్మల్ని అనుమతిస్తాయి:
 
-- **Speed up:** Resubmit the same transaction with a higher gas fee
-- **Cancel:** Send a 0 ETH transaction to your own address using the same nonce as the pending transaction
+- **వేగవంతం చేయండి:** అదే లావాదేవీని ఎక్కువ గ్యాస్ ఫీజుతో మళ్లీ సమర్పించండి
+- **రద్దు చేయండి:** పెండింగ్ లావాదేవీకి ఉపయోగించిన అదే నాన్స్‌ను ఉపయోగించి మీ స్వంత చిరునామాకు 0 ETH లావాదేవీని పంపండి
 
-### Helpful guides
+### సహాయక మార్గదర్శకాలు {#helpful-guides}
 
-- [How to speed up or cancel a pending transaction on MetaMask](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
-- [పెండింగ్‌లో ఉన్న ఇతీరియము లావాదేవీలను ఎలా రద్దు చేయాలి](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+- [మెటామాస్క్‌లో పెండింగ్ లావాదేవీని ఎలా వేగవంతం చేయాలి లేదా రద్దు చేయాలి](https://support.metamask.io/transactions-and-gas/transactions/how-to-speed-up-or-cancel-a-pending-transaction/)
+- [పెండింగ్ ఎథీరియం లావాదేవీలను ఎలా రద్దు చేయాలి](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-## నా ఇతీరియము గివ్అవేని నేను ఎలా క్లెయిమ్ చేయగలను? {#giveaway-scam}
+## నా ఎథీరియం బహుమతిని నేను ఎలా క్లెయిమ్ చేయగలను? {#giveaway-scam}
 
-ఇతీరియము గివ్అవేలు మీ ETHని దొంగిలించడానికి రూపొందించిన స్కామ్‌లు. Do not be tempted by offers that seem too good to be true. If you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
+ఎథీరియం బహుమతులు మీ ETH ని దొంగిలించడానికి రూపొందించబడిన స్కామ్‌లు. నిజం కావడానికి చాలా మంచివిగా అనిపించే ఆఫర్‌లకు ఆకర్షితులు కావద్దు. మీరు బహుమతి చిరునామాకు ETH పంపితే, మీకు ఎలాంటి బహుమతి రాదు మరియు మీరు మీ నిధులను తిరిగి పొందలేరు.
 
-[స్కామ్ నివారణపై మరిన్ని వివరాలు](/security/#common-scams)
+[స్కామ్ నివారణ గురించి మరింత సమాచారం](/security/#common-scams)
 
-## How do I stake ETH? {#how-to-stake}
+## నేను ETH ని ఎలా స్టేక్ చేయాలి? {#how-to-stake}
 
-వాలిడేటర్‌గా మారడానికి, మీరు ఇతీరియము డిపాజిట్ కాంట్రాక్ట్‌లో 32 ETH స్టేక్ చేయాలి మరియు ఒక వాలిడేటర్ నోడ్‌ను సెటప్ చేయాలి. You can also participate with less ETH through staking pools.
+ధృవీకర్త కావడానికి, మీరు ఎథీరియం డిపాజిట్ కాంట్రాక్ట్‌లో 32 ETH ని స్టేక్ చేయాలి మరియు ధృవీకర్త నోడ్‌ను సెటప్ చేయాలి. మీరు స్టేకింగ్ పూల్స్ ద్వారా తక్కువ ETH తో కూడా పాల్గొనవచ్చు.
 
-More information is available on our [staking pages](/staking/) and at [the staking launchpad](https://launchpad.ethereum.org/).
+మరింత సమాచారం మా [స్టేకింగ్ పేజీలలో](/staking/) మరియు [స్టేకింగ్ లాంచ్‌ప్యాడ్‌లో](https://launchpad.ethereum.org/) అందుబాటులో ఉంది.
 
-## నేను ఇతీరియమును ఎలా మైన్ చేయాలి? {#mining-ethereum}
+## నేను ఎథీరియంను ఎలా మైనింగ్ చేయాలి? {#mining-ethereum}
 
-ఇతీరియము మైనింగ్ ఇప్పుడు సాధ్యం కాదు. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos) during [The Merge](/roadmap/merge/) in September 2022. ఇప్పుడు, మైనర్‌లకు బదులుగా, ఇతీరియములో వాలిడేటర్‌లు ఉన్నారు. నెట్‌వర్క్‌ను సురక్షితంగా ఉంచడానికి వాలిడేటర్ సాఫ్ట్‌వేర్‌ను అమలు చేయడం కోసం ఎవరైనా ETHను [స్టేక్](/glossary/#staking) చేయవచ్చు మరియు స్టేకింగ్ రివార్డులను పొందవచ్చు.
+ఎథీరియం మైనింగ్ ఇకపై సాధ్యం కాదు. సెప్టెంబర్ 2022 లో [ది మెర్జ్](/roadmap/merge/) సమయంలో ఎథీరియం [ప్రూఫ్-ఆఫ్-వర్క్ (PoW)](/glossary/#pow) నుండి [ప్రూఫ్-ఆఫ్-స్టేక్ (PoS)](/glossary/#pos) కు మారినప్పుడు మైనింగ్ నిలిపివేయబడింది. ఇప్పుడు, మైనర్లకు బదులుగా, ఎథీరియం ధృవీకర్తలను కలిగి ఉంది. ఎవరైనా ETH ని [స్టేక్](/glossary/#staking) చేయవచ్చు మరియు నెట్‌వర్క్‌ను సురక్షితం చేయడానికి ధృవీకర్త సాఫ్ట్‌వేర్‌ను రన్ చేసినందుకు స్టేకింగ్ రివార్డ్‌లను పొందవచ్చు.
