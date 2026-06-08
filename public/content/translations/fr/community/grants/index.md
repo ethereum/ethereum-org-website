@@ -23,6 +23,10 @@ Ces programmes soutiennent l'écosystème Ethereum au sens large en offrant des 
 - [Explorateur de subventions ESP](https://esp.ethereum.foundation/funded-projects) - _Annuaire consultable de plus de 1 000 projets soutenus par le programme de soutien à l'écosystème_
 - [Subventions académiques](https://esp.ethereum.foundation/academic-grants) - _Subventions pour soutenir les travaux académiques liés à Ethereum_
 
+
+## Agrégateurs de listes de subventions et plateformes
+
+Ces ressources compilent et organisent diverses opportunités de subventions à travers l'écosystème Ethereum, facilitant ainsi la découverte d'opportunités de financement qui correspondent aux besoins de votre projet. Nous les avons organisées par profil pour vous aider à commencer à trouver les ressources les plus pertinentes en fonction de vos besoins de financement spécifiques.
 ## Agrégateurs et plateformes de listes de subventions {#grant-list-aggregators}
 
 Ces ressources compilent et organisent diverses opportunités de subventions à travers l'écosystème Ethereum, facilitant ainsi la découverte d'opportunités de financement qui correspondent aux besoins de votre projet. Nous les avons organisées par profil pour vous aider à commencer à trouver les ressources les plus pertinentes en fonction de vos besoins de financement spécifiques.
@@ -62,6 +66,10 @@ Ces programmes se concentrent sur le financement de projets qui profitent à la 
 - [Artizen](https://artizen.fund/) - _Aide les créateurs à cofinancer de nouveaux projets à la frontière de l'art, de la science, de la technologie et de la culture_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Programme d'accélération de start-ups qui utilise le financement quadratique pour soutenir des projets qui profitent au bien public_
 
+
+## Travailler dans l'écosystème Ethereum
+
+Vous n'êtes pas prêt à lancer votre propre projet ? Des centaines d'entreprises recherchent activement des personnes passionnées pour travailler et contribuer à l'écosystème Ethereum. Vous cherchez plus d'informations ? [Consultez les offres d'emploi liées à Ethereum](/community/get-involved/#ethereum-jobs)
 ## Travailler dans Ethereum {#work-in-ethereum}
 
 Vous n'êtes pas prêt à lancer votre propre projet ? Des centaines d'entreprises recherchent activement des personnes passionnées pour travailler et contribuer à l'écosystème Ethereum. Vous cherchez plus d'informations ? [Consultez les offres d'emploi liées à Ethereum](/community/get-involved/#ethereum-jobs)

@@ -1,61 +1,59 @@
 ---
-title: "Ajouter des outils de développement"
+title: Ajouter des outils de développement
 lang: fr
-description: "Nos critères de référencement des outils de développement sur ethereum.org"
+description: Nos critères pour lister les outils de développement sur ethereum.org
 ---
 
-# Ajout d'outils de développement {#contributing-to-ethereumorg-}
+Nous voulons nous assurer de lister les meilleures ressources de développement possibles afin que les gens puissent construire en toute confiance et bénéficier du soutien dont ils ont besoin.
 
-Nous voulons nous assurer de lister les meilleures ressources de développement possible pour que vous puissiez construire en toute confiance et bénéficier du soutien dont vous avez besoin.
+S'il y a un outil de développement utile que nous avons manqué, n'hésitez pas à le suggérer à l'endroit approprié.
 
-S'il y a un outil de développement utile que nous avons oublié, n'hésitez pas à le suggérer sur la page adéquate.
+Nous listons actuellement les outils de développement sur l'ensemble de notre [portail pour développeurs](/developers/).
 
-Nous listons actuellement les outils de développement sur notre [portail des développeurs](/developers/).
-
-**N'hésitez pas à proposer de nouveaux ajouts aux pages appropriées.**
+**N'hésitez pas à suggérer de nouveaux ajouts sur les pages appropriées.**
 
 ## Comment nous décidons {#ways-to-contribute}
 
-Les propositions d'outils de développement seront évaluées selon les critères suivants :
+Les soumissions d'outils de développement seront évaluées selon les critères suivants :
 
-**Se distingue-t-il de manière pertinente des outils déjà listés?**
+**Se différencie-t-il de manière significative des outils déjà listés ?**
 
-- Nouvelles catégories ou nouveaux types d'outils
+- Nouvelles catégories ou types d'outils
 - Nouvelles fonctionnalités par rapport aux outils similaires existants
-- Destiné à un cas d'utilisation spécifique qui n'est pas couvert par les outils similaires existants
+- Ciblé sur un cas d'utilisation distinct non couvert par les outils similaires existants
 
-**L'outil est-il bien documenté?**
+**L'outil est-il bien documenté ?**
 
 - Existe-t-il une documentation ?
 - Est-elle suffisante pour utiliser l'outil ?
-- A-t-elle été récemment mise à jour ?
+- A-t-elle été mise à jour récemment ?
 
-**L'outil est-il largement utilisé?**
+**L'outil est-il largement utilisé ?**
 
-- Nous tiendrons compte de critères tels que les étoiles GitHub, les statistiques de téléchargement et l'utilisation de l'outil en question par des entreprises ou des projets connus
+- Nous prendrons en compte des métriques telles que les étoiles GitHub, les statistiques de téléchargement et s'il est utilisé par des entreprises ou des projets connus
 
-**L'outil est-il de bonne qualité?**
+**L'outil est-il de qualité suffisante ?**
 
-- Existe-t-il des bogues récurrents ?
+- Y a-t-il des bugs récurrents ?
 - L'outil est-il fiable ?
 - L'outil est-il activement maintenu ?
 
-**L'outil est-il open source?**
+**L'outil est-il open source ?**
 
-De nombreux projets dans l'espace Ethereum sont open source. Nous sommes plus susceptibles de lister des projets open source, qui permettent aux développeurs de la communauté d'inspecter le code et d'y contribuer.
-
----
-
-## Commande de produits {#product-ordering}
-
-À moins que les produits ne soient délibérément classés autrement, par exemple par ordre alphabétique, ils seront affichés par ordre d'ajout sur la page : du moins récent au plus récent. En d'autres termes, les produits les plus récents sont ajoutés au bas de la liste.
+De nombreux projets dans l'écosystème Ethereum sont open source. Nous sommes plus enclins à lister des projets open source qui permettent aux développeurs de la communauté d'inspecter le code et d'y contribuer.
 
 ---
 
-## Ajoutez votre outil de développement {#how-decisions-about-the-site-are-made}
+## Ordre des produits {#product-ordering}
 
-Si vous souhaitez ajouter un outil de développement à ethereum.org et qu'il répond aux critères, créez un ticket sur GitHub.
+À moins que les produits ne soient spécifiquement classés autrement, par exemple par ordre alphabétique, ils seront affichés du moins récent au plus récemment ajouté à la page. En d'autres termes, les produits les plus récents sont ajoutés en bas de la liste.
+
+---
+
+## Ajouter votre outil de développement {#how-decisions-about-the-site-are-made}
+
+Si vous souhaitez ajouter un outil de développement sur ethereum.org et qu'il répond aux critères, créez une issue sur GitHub.
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
-  Créer un ticket
+  Créer une issue
 </ButtonLink>
