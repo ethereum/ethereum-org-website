@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/contributing/adding-glossary-terms/index.md",
+  "generatedAt": "2026-06-08T07:44:04.824Z",
+  "rootHash": "61240d4b7eb1",
+  "tree": {
+    "contentHash": "8f1ab74732bb",
+    "anchorHash": "88ee4b1fc1df",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "9a5324274e59",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "frontmatter:description": {
+        "contentHash": "fa26a6c3b06b",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "prose:1": {
+        "contentHash": "0aeddf6731ea",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "3f5dcb46d438",
+        "anchorHash": "8e4d8f471153"
+      },
+      "prose:2": {
+        "contentHash": "615dc47f0c8f",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "criteria": {
+        "contentHash": "488c34ce11ce",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "71708699acf8",
+        "children": {
+          "_label": {
+            "contentHash": "71708699acf8",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "71e24aad076c",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "how-decisions-about-the-site-are-made": {
+        "contentHash": "586a619a0b5b",
+        "anchorHash": "fe1def0ec940",
+        "labelHash": "267c105606fd",
+        "children": {
+          "_label": {
+            "contentHash": "267c105606fd",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "bde56f0eca43",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "0ee7e98b12ef",
+            "anchorHash": "7d1af82ee295"
+          },
+          "prose:2": {
+            "contentHash": "cdb4ee2aea69",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "link:0",
+          "prose:2"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:lang",
+      "frontmatter:description",
+      "prose:1",
+      "link:0",
+      "prose:2",
+      "criteria",
+      "how-decisions-about-the-site-are-made"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

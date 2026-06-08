@@ -23,6 +23,9 @@ lang: zh
 - [ESP 资助浏览器](https://esp.ethereum.foundation/funded-projects) - _可搜索的目录，包含生态系统支持计划支持的 1000 多个项目_
 - [学术资助](https://esp.ethereum.foundation/academic-grants) - _支持以太坊相关学术工作的资助_
 
+
+## 资助列表聚合器和平台
+这些资源汇编并整理了整个以太坊生态系统中的各种资助机会，使你更容易发现符合项目需求的资金机会。我们按角色对它们进行了分类，以帮助你根据特定的资金需求开始寻找最相关的资源。
 ## 资助列表聚合器和平台 {#grant-list-aggregators}
 
 这些资源汇编并整理了整个以太坊生态系统中的各种资助机会，使你更容易发现符合项目需求的资金机会。我们按受众角色对它们进行了分类，以帮助你根据具体的资金需求开始寻找最相关的资源。
@@ -62,6 +65,9 @@ lang: zh
 - [Artizen](https://artizen.fund/) - _帮助创作者在艺术、科学、技术和文化的前沿领域为新项目提供匹配资金_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _使用二次方融资来支持造福公共物品的项目的初创加速器计划_
 
+
+## 在以太坊工作
+还没准备好启动自己的项目？有数百家公司正在积极寻找充满热情的人才，在以太坊生态系统中工作并做出贡献。想了解更多信息？[查看以太坊相关工作](/community/get-involved/#ethereum-jobs)
 ## 在以太坊工作 {#work-in-ethereum}
 
 还没准备好启动你自己的项目？有数百家公司正在积极寻找充满热情的人才，在以太坊生态系统中工作并做出贡献。想了解更多信息？[查看以太坊相关工作](/community/get-involved/#ethereum-jobs)

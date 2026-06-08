@@ -1,119 +1,118 @@
 ---
-title: Maswali yanayoulizwa mara nyingi kwenye progrmu hii ya ufasiri
+title: Mwongozo wa kutafsiri ethereum.org
+metaTitle: Maswali yanayoulizwa mara kwa mara kuhusu Programu ya Kutafsiri (FAQ)
 lang: sw
-description: Maswali yanayoulizwa mara nyingi juu ya programu ya ufasiri wa ethereum.org
+description: Maswali yanayoulizwa mara kwa mara kuhusu Programu ya Kutafsiri ya ethereum.org
 ---
 
-# Mwongozo wa kutafsiri ethereum.org {#translating-ethereum-guide}
+Ikiwa wewe ni mgeni kwenye Programu ya Kutafsiri na unasita kuanza, haya ni baadhi ya maswali yanayoulizwa mara kwa mara (FAQs) yanayoweza kukusaidia kuanza. Tumia mwongozo huu kupata majibu ya maswali ya kawaida.
 
-Kama wewe ni mpya kwenye programu hii ya ufasiri na unawasiwasi wa kujiunga, kuna miongozo kadhaa itakusaidia kuanza. Tumia muongozo huu upate majibu juu ya maswali yanayopulizwa mara kwa mara.
+## Je, ninaweza kulipwa kwa kutafsiri ethereum.org? {#compensation}
 
-## Je ninaweza kupata malipo kwa kufasiri ethereum.org? {#compensation}
+Ethereum.org ni tovuti ya chanzo wazi (open-source), ambayo inamaanisha kuwa mtu yeyote anaweza kushiriki na kuchangia.
 
-Ethereum.org ni tovuti ya chanzo-cha-wazi, inamaanisha kwamba mtu yeyote anaweza kujihusisha na kuchangia.
+Programu ya Kutafsiri ya ethereum.org ni mwendelezo wa hilo na imeandaliwa kwa kuzingatia falsafa sawa.
 
-Programu ya ufasirir wa Ethereum.org ni ugani wa tovuti hii na inapangwa na falsafa sawa.
+Lengo la Programu ya Kutafsiri ni kufanya maudhui ya Ethereum yapatikane kwa kila mtu, bila kujali lugha wanazozungumza. Pia inaruhusu mtu yeyote anayezungumza lugha mbili kushiriki katika mfumo wa ikolojia wa Ethereum na kuchangia kwa njia inayofikika.
 
-Lengo la programu ya kutafsiri ni kufanya maudhui ya Ethereum kufikia na kupatikana kwa kila mmoja, bila kujali lugha wanayozungumza. Pia hurusu mtu yeyote anaezungumza lugha zaidi ya moja kujihusisha kwenye ikolojia ya Ethereum na kuchangia kwa njia rahisi.
+Kwa sababu hii, Programu ya Kutafsiri iko wazi na ni ya hiari, na ushiriki haulipwi. Ikiwa tungewalipa watafsiri kwa idadi ya maneno wanayotafsiri, tungeweza tu kuwaalika wale walio na uzoefu wa kutosha wa kutafsiri (watafsiri wa kitaalamu) kujiunga na Programu ya Kutafsiri. Hili lingefanya Programu ya Kutafsiri iwe ya kibaguzi na kutuzuia kufikia malengo yaliyoainishwa, haswa: kuruhusu kila mtu kushiriki na kujihusisha na mfumo wa ikolojia.
 
-Kwasababu hii, programu ya ufasiri iko wazi na ya hiyari, na ushiriki wako haukupi dhamana ya malipo yoyote. Kama tungekuwa tunalipa wafasiri kwa idadi ya maneno wanayofasiri, tungealika wale wenye sifa nzuri na uzoefu katika kazi ya kutafsiri( wataalamu wa kutafsiri) kujiunga na programu ya ufasiri. Hii ingeifanya Programu ya Tafsiri kuwa ya kibaguzi na kutuzuia kufikia malengo yaliyoainishwa, haswa: kumruhusu kila mtu kushiriki na kujihusisha na mfumo ikolojia.
+Tunafanya kila jitihada kuwawezesha wachangiaji wetu kufanikiwa katika mfumo wa ikolojia wa Ethereum; motisha nyingi zisizo za kifedha zimewekwa kama vile: [kutoa POAP](/contributing/translation-program/acknowledgements/#poap) na [cheti cha mtafsiri](/contributing/translation-program/acknowledgements/#certificate), pamoja na kuandaa [Bodi za Viongozi za Kutafsiri](/contributing/translation-program/acknowledgements/) na [kuorodhesha watafsiri wetu wote kwenye tovuti](/contributing/translation-program/contributors/).
 
-Tunafanya kila juhudi kuwawezesha wachangiaji wetu kufanikiwa katika mfumo ikolojia wa Ethereum; motisha nyingi zisizo za kifedha zipo kama vile: [kutoa POAPs](/contributing/translation-program/acknowledgements/#poap) na [cheti cha mtafsiri](/contributing/translation-program/acknowledgements/#certificate), pamoja na kuandaa [Bao za wanaoongoza katika Tafsiri](/contributing/translation-program/acknowledgements/) na [kuorodhesha watafsiri wetu wote kwenye tovuti](/contributing/translation-program/contributors/).
+## Je, ninatafsiri vipi tungo zenye `<HTML tags>`? {#tags}
 
-## Ninawezaje kutafsiri mifuatano yenye `<HTML tags>`? {#tags}
+Sio kila tungo imeandikwa kwa muundo wa maandishi matupu. Kuna baadhi ya tungo zinazojumuisha hati mchanganyiko kama vile lebo za HTML (`<0>`, `</0>`). Hii kwa kawaida ni kwa ajili ya viungo au mitindo mbadala katikati ya sentensi.
 
-Sio kila mlolongo umeandikwa kwa maneno halisi. Kuna baadhi ya mifuatano ambayo ina maandishi mchanganyiko kama vile tagi za HTML (`<0>`, `</0>`). Hii kwa kawaida ni kwa ajili ya viungo au mtindo mbadala katikati ya sentensi.
+- Tafsiri maandishi yaliyo ndani ya lebo lakini sio lebo zenyewe. Chochote kilicho katika `<` na `>` hakipaswi kutafsiriwa au kuondolewa.
+- Ili kuweka tungo salama, tunapendekeza ubofye kitufe cha "Copy Source" (Nakili Chanzo) upande wa chini kushoto. Hii itanakili tungo asili na kuibandika kwenye kisanduku cha maandishi. Hii inakuwezesha kufafanua mahali lebo zilipo na inakusaidia kuepuka makosa.
 
-- Tafsiri maneno yalio ndani ya tagi/vitambulisho lakini sio tagi zenyewe. Chochote kilicho ndani ya `<` na `>` hakipaswi kutafsiriwa au kuondolewa.
-- Kuacha maneno salama, tushauri ubonyeze kitufe cha "kunakikili chanzo" chini kushoto. Hii itanakili maandishi ya mwanzo na kuyabandika kwenye sanduku la maandishi. Hii inakusaidia kutoa maelezo ni wapi tagi zinapatikana na inakusaidia kuepuka makosa.
+![Crowdin interface with copy source button highlighted](./html-tag-strings.png)
 
-![Kiolesura cha Crowdin chenye kitufe cha kunakili chanzo kikiwa kimeangaziwa](./html-tag-strings.png)
+Unaweza kusogeza nafasi ya lebo ndani ya tungo ili kuifanya iwe ya asili zaidi katika lugha yako – hakikisha tu unasogeza lebo nzima.
 
-Unaweza kuhamsiha sehemu ya tagi ndani ya maandishi kuifanya kuwa halisi kulingana na lugha yako - hakikisha uanhamisha tagi nzima.
+Kwa maelezo ya kina zaidi kuhusu kushughulikia lebo na vijisehemu vya msimbo, tafadhali rejelea [Mwongozo wa Mtindo wa Kutafsiri wa ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
-Kwa maelezo ya kina zaidi kuhusu kushughulikia tagi na vijisehemu vya msimbo, tafadhali rejelea [Mwongozo wa Mtindo wa Tafsiri wa ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
+## Tungo zinapatikana wapi? {#strings}
 
-## Maandishi yanaishi wapi? {#strings}
+Mara nyingi tungo chanzo pekee zinaweza zisiwe za kutosha kwako kutoa tafsiri sahihi.
 
-Mara nyingi chanzo cha maandishi kinaweza kuwa na uhaba ili uweze kutafsiri ipasavyo.
+- Angalia "screenshots" (picha za skrini) na "context" (muktadha) kwa maelezo zaidi. Katika sehemu ya tungo chanzo, utaona picha ya skrini imeambatishwa ambayo itakuonyesha jinsi tunavyotumia tungo katika muktadha.
+- Ikiwa bado huna uhakika, inua bendera katika "comment section" (sehemu ya maoni). [Huna uhakika jinsi ya kuacha maoni?](#comment)
 
-- Angalia katika "picha" hizi na "muktadha" kwa taarifa zaidi. Kwenye kitengo cha chanzo cha maandishi, utaona picha iliounganishwa itakayokuonyesh jinsi tunavyotumia muktadha wa maandshi.
-- Kama bado huna uhakika, inua kibendera kwenye "kitengo cha maoni". [Huna uhakika jinsi ya kuacha maoni?](#comment)
+![Showing how context can be provided for a string with a screenshot](./source-string.png)
 
-![Inaonyesha jinsi muktadha unavyoweza kutolewa kwa mfuatano wenye picha ya skrini](./source-string.png)
+![An example screenshot added for context](./source-string-2.png)
 
-![Mfano wa picha ya skrini iliyoongezwa kwa ajili ya muktadha](./source-string-2.png)
+## Ninawezaje kuacha maoni au kuuliza maswali? Ningependa kuripoti suala au makosa ya chapa... {#comment}
 
-## Nawezaje kuacha maoni au kuuliza maswali? Ningependa kunyanyua kibendera juu ya swala au makosa ya kiuandishi... {#comment}
+Ikiwa unataka kuripoti tungo fulani inayohitaji uangalizi, jisikie huru kuwasilisha maoni.
 
-Kama unataka kunyoosha kibendera juu ya maandishi maalum yanayohitaji umakini, jisikie huru kuwasilisha maoni.
+- Bofya kitufe cha pili cha upau wa juu kulia. Kichupo kilichofichwa kitaonekana upande wako wa kulia. Acha maoni mapya na ubofye kisanduku cha kuteua cha "Issue" (Suala) chini. Unaweza kubainisha aina ya suala kwa kuchagua mojawapo ya chaguo kutoka kwenye menyu kunjuzi.
+- Baada ya kuwasilishwa, itaripotiwa kwa timu yetu. Tutasuluhisha suala hilo na kukujulisha kwa kujibu maoni yako na kufunga suala hilo.
+- Ikiwa utaripoti tafsiri isiyo sahihi, tafsiri na mbadala uliopendekeza vitakaguliwa na mzungumzaji asilia wakati wa ukaguzi unaofuata.
 
-- Bonyeza kitufe cha pili juu kulia kwako. Kichupo kilichofichw kitattokea upande wako wa kulia. Acha maoni mapya na bonyeza kitufe cha "suala" hapo chini. Unaweza kubainisha aina ya suala kwa kuchagua chaguzi kwenye orodha.
-- Utakapoiwasilisha, itaripoitwa kwenye timu yetu. Tutataua tatizo na tutakupa taarifa kwa kujibu oni lako na kufunga suala.
-- Ukitoa taarifa juu ya tafsiri isio sahihi, tafsiri na pendekezo lako vitafanyiwa uchunguzi na mzawa wa lugha hio kwenye uhakiki ujao.
+![Showing how to make comments and issues](./comment-issue.png)
 
-![Inaonyesha jinsi ya kutoa maoni na masuala](./comment-issue.png)
+## Kumbukumbu ya Kutafsiri (TM) ni nini? {#translation-memory}
 
-## Kumbukumbu ya Tasfiri ni nini(KT)? {#translation-memory}
+Kumbukumbu ya Kutafsiri (TM) ni kipengele cha Crowdin kinachohifadhi tungo zote zilizotafsiriwa hapo awali kote kwenye ethereum.org. Wakati tungo inatafsiriwa, inahifadhiwa kiotomatiki kwenye TM ya mradi wetu. Hiki kinaweza kuwa chombo muhimu cha kukusaidia kuokoa muda wako!
 
-Kumbukumbu ya Tasfiri ni nini(KT) ni huduma inayotolewa na Crowdin inayotunza maneno yaliotafsiriwa hapo awali katika ethereum.org. Pale maandishi yanpotafsiriwa, inatunzwa moja kwa moja kwenye KT. Hiki kinaweza kua kifaa kitakachokufaa na kukusaidia kuoka mda!
+- Angalia sehemu ya "TM and MT Suggestions" (Mapendekezo ya TM na MT) na utaona jinsi watafsiri wengine walivyotafsiri tungo sawa au inayofanana. Ikiwa utapata pendekezo lenye kiwango cha juu cha kulingana, jisikie huru kurejelea tafsiri kwa kuibofya.
+- Ikiwa hakuna chochote kwenye orodha, unaweza kutafuta kwenye TM kwa tafsiri zilizofanywa hapo awali na kuzitumia tena kwa uthabiti.
 
-- Angalia "mapendekezo ya KT na TK" na utaoina jinsi ambavyo watafsiri wengine wametafsiri kitu hicho hicho. Ukipata pendekezo lenye ufanano wa pointi za juu, jisikia huru kupendekeza tafsiri hio kwa kuibonyeza.
-- Kama hama kitu kwenye orodha, unaweza kutafuta kwenye KT kwa tafsiri za nyuma zilizoshafanywa na kuzitumia tena ili kuwe na ufanano.
+![A screenshot of the translation memory](./translation-memory.png)
 
-![Picha ya skrini ya kumbukumbu ya tafsiri](./translation-memory.png)
+## Ninatumiaje faharasa ya Crowdin? {#glossary}
 
-## Nawezaje kutumia faharasa ya crowdin? {#glossary}
+Istilahi za Ethereum ni sehemu nyingine muhimu ya kazi yetu ya kutafsiri kwani mara nyingi maneno mapya ya kiteknolojia yatakuwa bado hayajatafsiriwa katika lugha nyingi. Pia, kuna maneno ambayo yana maana tofauti katika muktadha tofauti. [Zaidi kuhusu kutafsiri istilahi za Ethereum](#terminology)
 
-Ethereum ni moja ya maneno yenye utata katika kazi ya kutafsiri kama jinsi maneno mapya ya kiteknolojia hayatawekwa katika lugha zingine hiivi karibuni. Licha ya hilo kuna maneno yenye maana tofauti katika mazingira tofauti. [Zaidi kuhusu kutafsiri istilahi za Ethereum](#terminology)
+Faharasa ya Crowdin ndio mahali pazuri pa kupata ufafanuzi wa maneno na fasili. Kuna njia mbili za kurejelea faharasa.
 
-Maktaba ya Crowdin ndio sehemu nzuri ya kufanya uhakiki wa maneno na maana zake. Kuna namna mbili za kufikia maktaba.
+- Kwanza, unapopata neno lililopigiwa mstari kwenye tungo chanzo, unaweza kuweka kipanya chako juu yake na kuona fasili fupi yake.
 
-- Kwanza, pale unapokutana na neno lililopigiwa mstari, unaweza kutumia kipanya kuona maana yake kwa ufupi.
+![An example glossary definition](./glossary-definition.png)
 
-![Mfano wa ufafanuzi wa faharasa](./glossary-definition.png)
+- Pili, Ikiwa unaona neno ambalo hulifahamu lakini halijapigiwa mstari, unaweza kutafuta katika kichupo cha faharasa (kitufe cha tatu cha safu wima ya kulia). Utapata maelezo ya maneno maalum na yale yanayotumiwa mara kwa mara katika mradi.
 
-- Pili, utakapoona neno geni sana kwako lakini halijapigiwa mstari, unaweza kulitafuta kwenye maktaba ( kitufer cha tatu cha safu ya kulia). Utapata maana ya maneno maalum na yale yanayotumika mara nyingi kwenye mradi.
+![A screenshot showing where to find the glossary tab in Crowdin](./glossary-tab.png)
 
-![Picha ya skrini inayoonyesha mahali pa kupata kichupo cha faharasa katika Crowdin](./glossary-tab.png)
+- Ikiwa bado huwezi kuipata, ni nafasi yako ya kuongeza neno jipya! Tunakuhimiza ulitafute kwenye mtambo wa kutafuta na uongeze maelezo kwenye faharasa. Itakuwa msaada mkubwa kwa watafsiri wengine kuelewa neno hilo vizuri zaidi.
 
-- Kama bado hujalipata, ni nafasi yako ya kuongeza neno/maneno mapya! Tunashauri kuangalia neno kwenye injini ya utafutaji na kuongeza maelezoi kwenye maktaba. Itakua msaada mkubwa sana kwa watafsiri wengine ili waweze kuelewa maana kamili ya neno au sentesi ilioandikwa.
+![A screenshot showing how to add a glossary term to Crowdin](./add-glossary-term.png)
 
-![Picha ya skrini inayoonyesha jinsi ya kuongeza neno la faharasa kwa Crowdin](./add-glossary-term.png)
+### Sera ya kutafsiri istilahi {#terminology}
 
-### Sera ya tafsiri ya istilahi {#terminology}
+_Kwa majina (chapa, kampuni, watu) na maneno mapya ya kiteknolojia (Mnyororo wa Beacon, minyororo ya shadi, n.k.)_
 
-_Kwa majina (chapa, makampuni, watu) na istilahi mpya za teknolojia (Mnyororo Kioleza, shard chains, nk.)_
+Ethereum inawasilisha maneno mengi mapya ambayo yamebuniwa hivi karibuni. Baadhi ya maneno yatatofautiana kutoka kwa mtafsiri hadi mtafsiri kwani hakuna tafsiri rasmi katika lugha zao husika. Kutokubaliana kama huko kunaweza kusababisha kutoelewana na kupunguza usomaji.
 
-Ethereum inaleta maneno mapya mengi yaliosarafiwa hivi karibuni. Baadhi ya maneno yatatofautina kati ya mtafsiri mmoja na mwingine kwakua hamna tafsiri halisi ya lugha iliotafsiriwa. Tofauti hizi zinaweza kuleta kutokuelewana na kupunguza usomekaji.
+Kutokana na utofauti wa lugha na viwango tofauti katika kila lugha, imekuwa karibu haiwezekani kuja na sera ya pamoja ya kutafsiri istilahi inayoweza kubadilishwa katika lugha zote zinazotumika.
 
-Kwasababu za utofauti tofauti wa kiismu na viwango tofauti katika kila lugha, imekua ngumu sana kukaribia kua na neno moja la muungano wa sera za utafsiri amabazo zinaweza kutumiwa na lugha husika.
+Baada ya kuzingatia kwa uangalifu, tumefikia uamuzi wa kuacha istilahi zinazotumiwa mara kwa mara kwenu, watafsiri.
 
-Baada ya kuzingatiwa kw umakini, tumeamua kuacha maneno yanayotumika mara kwa mara iwe uamuzi wako wewe, mtafsiri.
+Hapa kuna kile tunachopendekeza, unapopata neno ambalo hulifahamu:
 
-Tunapendekeza, pale unapokutana na neno ambalo ni geni kwako:
+- Rejelea [Faharasa ya maneno](#glossary), unaweza kupata jinsi watafsiri wengine walivyolitafsiri hapo awali. Ikiwa unafikiri neno lililotafsiriwa hapo awali halifai, jisikie huru kurejesha tafsiri yako kwa kuongeza neno jipya kwenye Faharasa ya Crowdin.
+- Ikiwa tafsiri kama hiyo ya awali haipo kwenye Faharasa, tunakuhimiza uitafute kwenye mtambo wa kutafuta au makala ya vyombo vya habari inayoonyesha jinsi neno hilo linavyotumiwa katika jamii yako.
+- Ikiwa hutapata marejeleo yoyote, jisikie huru kuamini angalizo lako na kupendekeza tafsiri mpya kwa lugha yako!
+- Ikiwa unajisikia huna ujasiri wa kufanya hivyo, acha neno hilo bila kutafsiriwa. Wakati mwingine, maneno ya Kiingereza yanatosha zaidi katika kutoa fasili sahihi.
 
-- Rejelea [Faharasa ya istilahi](#glossary), unaweza kupata jinsi watafsiri wengine walivyotafsiri hapo awali. Kama unafikiri tafsiri ya hapo mwanzo sio sahihi, jisikie huru kutunza tafsri yako kwa kuongeza maneno kwenye maktaba ya Crowdin.
-- Iwapo tafsiri kama hiyo ya awali haipo katika Faharasa, tunakuhimiza utafute kwenye injini ya utafutaji au makala ya maudhui ambayo yanaonyesha jinsi neno hili linavyotumika katika jumuiya yako.
-- Ikiwa hutapata marejeleo yoyote hata kidogo, jisikie huru kuamini angavu yako na kupendekeza tafsiri mpya kwa lugha yako!
-- Iwapo hujiamini kufanya hivyo, liache neno bila kutafsiriwa. Wakati mwingine, maneno ya Kiingereza ni zaidi ya kutosha katika kutoa ufafanuzi sahihi.
+Tunapendekeza uache majina ya chapa, kampuni, na wafanyakazi bila kutafsiriwa kwani tafsiri inaweza kusababisha mkanganyiko usio wa lazima na matatizo ya SEO.
 
-Tunapendekeza uache majina ya chapa, makampuni na wafanyakazi bila kutafsiriwa kama tafsiri inaweza kusababisha mkanganyiko usiohitajika na matatizo ya SEO.
+## Mchakato wa ukaguzi unafanyaje kazi? {#review-process}
 
-## Mchakato wa uhakiki unafanyaje kazi? {#review-process}
+Ili kuhakikisha kiwango fulani cha ubora na uthabiti katika tafsiri zetu, tunafanya kazi na [Acolad](https://www.acolad.com/), mmoja wa watoa huduma wakubwa wa lugha ulimwenguni. Acolad ina wataalamu wa lugha 20,000, ambayo inamaanisha kuwa wanaweza kutoa wakaguzi wa kitaalamu kwa kila lugha na aina ya maudhui tunayohitaji.
 
-Ili kuhakikisha kiwango fulani cha ubora na uthabiti katika tafsiri zetu, tunafanya kazi na [Acolad](https://www.acolad.com/), mmoja wa watoa huduma wakubwa zaidi wa lugha ulimwenguni. Acolad ina wataalamu wa lugha 20,000, ambayo ina maana kwamba wanaweza kutoa wahakiki wa kitaalamu kwa kila lugha na aina ya maudhui tunayohitaji.
+Mchakato wa ukaguzi ni wa moja kwa moja; mara tu seti ya maudhui inapotafsiriwa kwa 100%, tunaagiza ukaguzi kwa kundi hilo la maudhui. Mchakato wa ukaguzi unafanyika moja kwa moja katika Crowdin. Mara tu ukaguzi utakapokamilika, tunasasisha tovuti na maudhui yaliyotafsiriwa.
 
-Mchakato wa uhakiki ni wa moja kwa moja; pindi seti ya maudhui inapotafsiriwa 100%, tunaagiza uhakiki kwa kundi hilo la maudhui. Mchakato wa uhakiki unafanyika moja kwa moja katika Crowdin. Uhakiki ukikamilika, tunasasisha tovuti na maudhui yaliyotafsiriwa.
+## Ninawezaje kuongeza maudhui katika lugha yangu? {#adding-foreign-language-content}
 
-## Naongezaje maudhui kwenye lugha yangu? {#adding-foreign-language-content}
+Kwa sasa, maudhui yote yasiyo ya Kiingereza yanatafsiriwa moja kwa moja kutoka kwa maudhui chanzo ya Kiingereza, na maudhui yoyote ambayo hayapo katika Kiingereza hayawezi kuongezwa kwa lugha nyingine.
 
-Kwa sasa, maudhui yote yasiyo ya kiingereza yanatafsiriwa moja kwa moja kutoka kwenye chanzo kilochondikwa kwa lugha ya kiingereza, na maudhui yoyote amabayo hayapo katika lugha ya kiingereza hayawezi kuongezwa na lugha zingine.
+Ili kupendekeza maudhui mapya kwa ethereum.org, unaweza [kuunda suala](https://github.com/ethereum/ethereum-org-website/issues) kwenye GitHub. Ikiwa yataongezwa, maudhui yataandikwa kwa Kiingereza na kutafsiriwa kwa lugha nyingine kwa kutumia Crowdin.
 
-Ili kupendekeza maudhui mapya kwa ajili ya ethereum.org, unaweza [kufungua suala](https://github.com/ethereum/ethereum-org-website/issues) kwenye GitHub. Kama kuna maudhui yalioongezwa, yataandikwa kwa kiingereza na kutafsiriwa kwenda kwenye lugha zingine kwa kutumia Crowdin.
-
-Tunampango wa kuongeza na kuunga mkono maudhui yaongezwe katika kwa kutumia lugha zingine hivi karibuni.
+Tunapanga kuongeza usaidizi wa nyongeza za maudhui yasiyo ya Kiingereza katika siku za usoni.
 
 ## Wasiliana nasi {#contact}
 
-Asante kwa kusoma haya yote. Tunatumaini hii itakusaidia kuingia kwenye programu yetu. Jisikie huru kujiunga na [chaneli yetu ya tafsiri ya Discord](https://discord.gg/ethereum-org) kuuliza maswali na kushirikiana na watafsiri wengine, au wasiliana nasi kwa translations@ethereum.org!
+Asante kwa kusoma haya yote. Tunatumai hii inakusaidia kujiunga na programu yetu. Jisikie huru kujiunga na [chaneli yetu ya kutafsiri ya Discord](https://discord.gg/ethereum-org) ili kuuliza maswali na kushirikiana na watafsiri wengine, au wasiliana nasi kupitia translations@ethereum.org!

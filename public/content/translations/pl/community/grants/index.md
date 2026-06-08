@@ -23,6 +23,10 @@ Te programy wspierają szeroki ekosystem Ethereum, oferując granty dla szerokie
 - [ESP Grant Explorer](https://esp.ethereum.foundation/funded-projects) – _Katalog z możliwością wyszukiwania ponad 1000 projektów wspieranych przez Program Wsparcia Ekosystemu_
 - [Granty akademickie](https://esp.ethereum.foundation/academic-grants) – _Granty wspierające prace akademickie związane z Ethereum_
 
+
+## Agregatory list grantów i platformy
+
+Te zasoby gromadzą i organizują różne możliwości uzyskania grantów w całym ekosystemie Ethereum, ułatwiając odkrywanie możliwości finansowania, które odpowiadają potrzebom Twojego projektu. Podzieliliśmy je według profili, aby pomóc Ci rozpocząć poszukiwania najbardziej odpowiednich zasobów w oparciu o Twoje konkretne potrzeby finansowe.
 ## Agregatory list grantów i platformy {#grant-list-aggregators}
 
 Te zasoby gromadzą i organizują różne możliwości uzyskania grantów w całym ekosystemie Ethereum, ułatwiając odkrywanie opcji finansowania odpowiadających potrzebom Twojego projektu. Podzieliliśmy je według grup docelowych, aby pomóc Ci w znalezieniu najbardziej odpowiednich zasobów w oparciu o Twoje konkretne potrzeby finansowe.
@@ -62,6 +66,10 @@ Te programy skupiają się na finansowaniu projektów przynoszących korzyści s
 - [Artizen](https://artizen.fund/) – _Pomoc twórcom we współfinansowaniu nowych projektów na pograniczu sztuki, nauki, technologii i kultury_
 - [Quadratic Accelerator](https://qacc.giveth.io/) – _Program akceleracyjny dla startupów, który wykorzystuje finansowanie kwadratowe do wspierania projektów przynoszących korzyści dla dobra publicznego_
 
+
+## Praca w Ethereum
+
+Nie jesteś gotowy na rozpoczęcie własnego projektu? Istnieją setki firm aktywnie poszukujących pasjonatów do pracy i wnoszenia wkładu w ekosystem Ethereum. Szukasz więcej informacji? [Sprawdź oferty pracy związane z Ethereum](/community/get-involved/#ethereum-jobs)
 ## Praca w Ethereum {#work-in-ethereum}
 
 Nie jesteś gotowy na rozpoczęcie własnego projektu? Istnieją setki firm aktywnie poszukujących pasjonatów do pracy i wnoszenia wkładu w ekosystem Ethereum. Szukasz więcej informacji? [Sprawdź oferty pracy związane z Ethereum](/community/get-involved/#ethereum-jobs)

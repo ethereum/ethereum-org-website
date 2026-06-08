@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "locale": "vi",
+  "translatedAt": "2026-06-08T07:36:31.128Z",
+  "englishManifestHash": "49fd512dd49a",
+  "placeholderOrder": [
+    "LINK-4dbf4b",
+    "LINK-88300a",
+    "LINK-e65150",
+    "LINK-d1e41a",
+    "LINK-3bbe37",
+    "LINK-8f06db",
+    "LINK-e3f5f8",
+    "LINK-8d776d",
+    "LINK-c543a0",
+    "LINK-64ef1a",
+    "LINK-037fa7",
+    "LINK-669582",
+    "LINK-944325",
+    "LINK-8a4f66",
+    "LINK-2abfba",
+    "LINK-f7d70f",
+    "LINK-554af6",
+    "COMPONENT-86c3ac",
+    "LINK-a2945e",
+    "COMPONENT-f8b8e0",
+    "COMPONENT-ea912e",
+    "COMPONENT-ff304f",
+    "LINK-8d776d"
+  ],
+  "placeholderMap": {
+    "COMPONENT-86c3ac": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SupportScamPage",
+        "eventName": "clicked giveaway scam"
+      }
+    },
+    "LINK-a2945e": {
+      "type": "link",
+      "values": {
+        "url": "/security/#common-scams"
+      }
+    },
+    "COMPONENT-f8b8e0": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SupportScamPage",
+        "eventName": "clicked impersonation scam"
+      }
+    },
+    "COMPONENT-ea912e": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SupportScamPage",
+        "eventName": "clicked recovery scam"
+      }
+    },
+    "COMPONENT-ff304f": {
+      "type": "component",
+      "values": {
+        "componentName": "ExpandableCard",
+        "eventCategory": "SupportScamPage",
+        "eventName": "clicked phishing scam"
+      }
+    },
+    "LINK-8d776d": {
+      "type": "link",
+      "values": {
+        "url": "https://phishtank.org/"
+      }
+    },
+    "LINK-4dbf4b": {
+      "type": "link",
+      "values": {
+        "url": "#scam-types"
+      }
+    },
+    "LINK-88300a": {
+      "type": "link",
+      "values": {
+        "url": "https://revoke.cash/"
+      }
+    },
+    "LINK-e65150": {
+      "type": "link",
+      "values": {
+        "url": "https://revoke.blockscout.com/"
+      }
+    },
+    "LINK-d1e41a": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/tokenapprovalchecker"
+      }
+    },
+    "LINK-3bbe37": {
+      "type": "link",
+      "values": {
+        "url": "https://www.chainabuse.com/"
+      }
+    },
+    "LINK-8f06db": {
+      "type": "link",
+      "values": {
+        "url": "https://info.etherscan.com/report-address/"
+      }
+    },
+    "LINK-e3f5f8": {
+      "type": "link",
+      "values": {
+        "url": "https://cryptoscamdb.org/"
+      }
+    },
+    "LINK-c543a0": {
+      "type": "link",
+      "values": {
+        "url": "https://safebrowsing.google.com/safebrowsing/report_phish/"
+      }
+    },
+    "LINK-64ef1a": {
+      "type": "link",
+      "values": {
+        "url": "https://report.netcraft.com/report/mistake"
+      }
+    },
+    "LINK-037fa7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.ic3.gov/"
+      }
+    },
+    "LINK-669582": {
+      "type": "link",
+      "values": {
+        "url": "https://www.actionfraud.police.uk/"
+      }
+    },
+    "LINK-944325": {
+      "type": "link",
+      "values": {
+        "url": "https://www.europol.europa.eu/report-a-crime"
+      }
+    },
+    "LINK-8a4f66": {
+      "type": "link",
+      "values": {
+        "url": "https://eth.blockscout.com/"
+      }
+    },
+    "LINK-2abfba": {
+      "type": "link",
+      "values": {
+        "url": "https://etherscan.io/"
+      }
+    },
+    "LINK-f7d70f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.chainabuse.com/"
+      }
+    },
+    "LINK-554af6": {
+      "type": "link",
+      "values": {
+        "url": "https://metasleuth.io/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T07:36:31.128Z",
+      "status": "success"
+    }
+  }
+}

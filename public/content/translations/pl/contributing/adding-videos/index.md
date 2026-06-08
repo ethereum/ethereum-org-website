@@ -18,6 +18,8 @@ Ethereum.org to neutralne, edukacyjne źródło informacji. Galeria wideo jest m
 
 Strona nie umieszcza filmów, które w głównej mierze promują konkretny produkt, token lub usługę komercyjną.
 
+
+## Kryteria dodania
 ## Kryteria włączenia {#criteria-for-inclusion}
 
 ### Wymagania konieczne {#must-haves}
@@ -34,6 +36,8 @@ Strona nie umieszcza filmów, które w głównej mierze promują konkretny produ
 - **Pochodzi z wiarygodnego źródła** – Treści od uznanych edukatorów, badaczy i źródeł mają priorytet.
 - **Aktualne i ponadczasowe** – Treści, które pozostają aktualne z biegiem czasu, są preferowane w stosunku do materiałów szybko tracących na ważności.
 
+
+## Jak dodać film
 ## Jak dodać film {#how-to-add-a-video}
 
 ### Opcja 1: Otwórz zgłoszenie (issue) {#open-an-issue}
@@ -141,6 +145,15 @@ Możesz również użyć nowych tagów — będą one dostępne dla przyszłych 
 
 Otwórz pull request ze swoimi zmianami do gałęzi `dev`. Zespół przejrzy Twoje zgłoszenie i przekaże opinię.
 
+
+## Utrzymanie
+Opublikowane filmy są regularnie sprawdzane, aby upewnić się, że:
+
+- Nadal spełniają kryteria dodania
+- Zawierają dokładne, aktualne informacje
+- Mają działające linki do hostingu/YouTube
+
+Jeśli zauważysz problem z opublikowanym filmem, [utwórz zgłoszenie (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) lub wyślij e-mail na adres [website@ethereum.org](mailto:website@ethereum.org).
 ## Utrzymanie {#maintenance}
 
 Umieszczone filmy są rutynowo sprawdzane, aby upewnić się, że:
@@ -151,6 +164,9 @@ Umieszczone filmy są rutynowo sprawdzane, aby upewnić się, że:
 
 Jeśli zauważysz problem z umieszczonym filmem, [utwórz zgłoszenie (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) lub wyślij e-mail na adres [website@ethereum.org](mailto:website@ethereum.org).
 
+
+## Warunki użytkowania
+Zapoznaj się z [warunkami użytkowania](/terms-of-use/) ethereum.org. Informacje na stronie ethereum.org są udostępniane wyłącznie w ogólnych celach informacyjnych.
 ## Warunki użytkowania {#terms-of-use}
 
 Zapoznaj się z [warunkami użytkowania](/terms-of-use/) ethereum.org. Informacje na ethereum.org są udostępniane wyłącznie w ogólnych celach informacyjnych.

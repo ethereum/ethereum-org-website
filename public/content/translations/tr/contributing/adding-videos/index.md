@@ -18,6 +18,8 @@ Ethereum.org tarafsız, eğitici bir kaynaktır. Video galerisi şunlar için de
 
 Site, öncelikli olarak belirli bir ürünü, Token'ı veya ticari hizmeti tanıtan videoları listelemez.
 
+
+## Dahil edilme kriterleri
 ## Dahil edilme kriterleri {#criteria-for-inclusion}
 
 ### Olmazsa olmazlar {#must-haves}
@@ -34,6 +36,8 @@ Site, öncelikli olarak belirli bir ürünü, Token'ı veya ticari hizmeti tanı
 - **Güvenilir bir kaynaktan olması** – Köklü eğitimcilerden, araştırmacılardan ve kaynaklardan gelen içeriklere öncelik verilir.
 - **Zamanında ve her zaman geçerli** – Zaman içinde geçerliliğini koruyan içerikler, zamana duyarlı materyallere tercih edilir.
 
+
+## Nasıl video eklenir
 ## Nasıl video eklenir {#how-to-add-a-video}
 
 ### 1. Seçenek: Bir sorun (issue) açın {#open-an-issue}
@@ -141,6 +145,15 @@ Ayrıca yeni etiketler de kullanabilirsiniz; bunlar gelecekteki kategori gruplan
 
 Değişikliklerinizle birlikte `dev` dalına (branch) bir çekme isteği (pull request) açın. Ekip gönderiminizi inceleyecek ve geri bildirim sağlayacaktır.
 
+
+## Bakım
+Listelenen videolar, aşağıdakilerden emin olmak için düzenli olarak incelenir:
+
+- Listeleme kriterlerini hala karşıladıklarından
+- Doğru, güncel bilgiler içerdiklerinden
+- Çalışan barındırma/YouTube bağlantılarına sahip olduklarından
+
+Listelenen bir videoyla ilgili bir sorun fark ederseniz, [bir sorun (issue) oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) veya [website@ethereum.org](mailto:website@ethereum.org) adresine bir e-posta gönderin.
 ## Bakım {#maintenance}
 
 Listelenen videolar, aşağıdakilerden emin olmak için düzenli olarak incelenir:
@@ -151,6 +164,9 @@ Listelenen videolar, aşağıdakilerden emin olmak için düzenli olarak incelen
 
 Listelenen bir videoyla ilgili bir sorun fark ederseniz, [bir sorun (issue) oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) veya [website@ethereum.org](mailto:website@ethereum.org) adresine bir e-posta gönderin.
 
+
+## Kullanım koşulları
+Lütfen ethereum.org'un [kullanım koşullarına](/terms-of-use/) bakın. ethereum.org'daki bilgiler yalnızca genel bilgilendirme amacıyla sağlanmaktadır.
 ## Kullanım koşulları {#terms-of-use}
 
 Lütfen ethereum.org'un [kullanım koşullarına](/terms-of-use/) başvurun. ethereum.org'daki bilgiler yalnızca genel bilgilendirme amacıyla sağlanmaktadır.

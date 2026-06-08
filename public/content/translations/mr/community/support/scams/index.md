@@ -1,159 +1,159 @@
 ---
-title: Scam help & reporting
-description: What to do if you have been scammed, how to secure your remaining assets, and where to report fraud.
+title: माझी फसवणूक झाली आहे किंवा माझा निधी गमावला आहे
+metaTitle: फसवणूक मदत आणि तक्रार
+description: तुमची फसवणूक झाली असल्यास काय करावे, तुमची उर्वरित मालमत्ता कशी सुरक्षित करावी आणि फसवणुकीची तक्रार कुठे करावी.
 lang: mr
 ---
 
-# I was scammed or lost funds {#scam-help}
-
-Cryptocurrency scams target people of all experience levels, including professionals in finance and technology. You are not alone, and being here is the right first step.
+क्रिप्टोकरन्सी फसवणूक सर्व अनुभव स्तरावरील लोकांना लक्ष्य करते, ज्यामध्ये वित्त आणि तंत्रज्ञान क्षेत्रातील व्यावसायिकांचाही समावेश आहे. तुम्ही एकटे नाही आहात आणि येथे येणे हे योग्य पहिले पाऊल आहे.
 
 <Alert variant="error">
 <AlertEmoji text=":rotating_light:"/>
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**कोणीही ब्लॉकचेन व्यवहार उलट करू शकत नाही.** जर कोणी तुमच्याशी संपर्क साधून फी घेऊन तुमचा निधी परत मिळवून देण्याचा दावा करत असेल, तर तो बहुधा दुसरा घोटाळा असू शकतो. खालील [रिकव्हरी घोटाळे](#scam-types) पहा.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Secure your remaining assets {#secure-assets}
+## तुमची उर्वरित मालमत्ता सुरक्षित करा {#secure-assets}
 
-If you interacted with a scammer or suspect your wallet is compromised, take these steps immediately:
+जर तुम्ही एखाद्या फसवणूक करणाऱ्याशी संवाद साधला असेल किंवा तुमचे वॉलेट धोक्यात आल्याचा संशय असेल, तर त्वरित ही पावले उचला:
 
-1. **Move remaining funds** to a new, secure wallet that the scammer does not have access to
-2. **Revoke token approvals.** Scammers often trick you into approving unlimited token spending. Revoking these permissions prevents further draining of your wallet
-3. **Change passwords** on any exchange accounts that may be linked
-4. **Enable two-factor authentication (2FA)** on all crypto-related accounts
+1. **उर्वरित निधी** एका नवीन, सुरक्षित वॉलेटमध्ये हलवा ज्यावर फसवणूक करणाऱ्याचा प्रवेश नाही
+2. **टोकन मंजुरी रद्द करा.** फसवणूक करणारे अनेकदा तुम्हाला अमर्यादित टोकन खर्चास मंजुरी देण्यास फसवतात. या परवानग्या रद्द केल्याने तुमचे वॉलेट आणखी रिकामे होण्यापासून वाचते
+3. जोडलेल्या कोणत्याही एक्सचेंज खात्यांचे **पासवर्ड बदला**
+4. सर्व क्रिप्टो-संबंधित खात्यांवर **टू-फॅक्टर ऑथेंटिकेशन (2FA) सक्षम करा**
 
-### How to revoke token approvals {#revoke-approvals}
+### टोकन मंजुरी कशी रद्द करावी {#revoke-approvals}
 
-When you interact with a dapp or smart contract, you may have granted it permission to spend your tokens. If a scammer tricked you into approving a malicious contract, they can continue draining your tokens even after the initial scam.
+जेव्हा तुम्ही एखाद्या विकेंद्रित ॲप्लिकेशन (dapp) किंवा स्मार्ट कॉन्ट्रॅक्टशी संवाद साधता, तेव्हा तुम्ही त्याला तुमचे टोकन खर्च करण्याची परवानगी दिलेली असू शकते. जर एखाद्या फसवणूक करणाऱ्याने तुम्हाला दुर्भावनापूर्ण कॉन्ट्रॅक्ट मंजूर करण्यास फसवले असेल, तर ते सुरुवातीच्या घोटाळ्यानंतरही तुमचे टोकन रिकामे करणे सुरू ठेवू शकतात.
 
-Use these tools to check and revoke approvals:
+मंजुरी तपासण्यासाठी आणि रद्द करण्यासाठी या साधनांचा वापर करा:
 
-- [Revoke.cash](https://revoke.cash/): connect your wallet to see all active approvals and revoke them
-- [Revokescout](https://revoke.blockscout.com/): check and revoke approvals via Blockscout
-- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): check and revoke approvals via Etherscan
+- [Revoke.cash](https://revoke.cash/): सर्व सक्रिय मंजुरी पाहण्यासाठी आणि त्या रद्द करण्यासाठी तुमचे वॉलेट कनेक्ट करा
+- [Revokescout](https://revoke.blockscout.com/): Blockscout द्वारे मंजुरी तपासा आणि रद्द करा
+- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): Etherscan द्वारे मंजुरी तपासा आणि रद्द करा
 
 <DocLink href="/guides/how-to-revoke-token-access/">
-  Step-by-step guide: How to revoke token access
+  टप्प्याटप्प्याने मार्गदर्शक: टोकन प्रवेश कसा रद्द करावा
 </DocLink>
 
-## Report scam addresses and websites {#report}
+## फसव्या पत्त्यांची आणि वेबसाइट्सची तक्रार करा {#report}
 
-Reporting helps warn other users and may assist law enforcement investigations. Document everything: transaction hashes, wallet addresses, screenshots, and any communication with the scammer.
+तक्रार केल्याने इतर वापरकर्त्यांना सावध करण्यात मदत होते आणि कायद्याची अंमलबजावणी करणाऱ्या संस्थांच्या तपासात मदत होऊ शकते. प्रत्येक गोष्टीची नोंद ठेवा: व्यवहार हॅश, वॉलेट पत्ते, स्क्रीनशॉट्स आणि फसवणूक करणाऱ्याशी झालेला कोणताही संवाद.
 
-### Report a scam address {#report-address}
+### फसव्या पत्त्याची तक्रार करा {#report-address}
 
-- [Chainabuse](https://www.chainabuse.com/): community-driven scam and fraud reporting database. Submit reports and search for known scam addresses
-- [Etherscan report](https://info.etherscan.com/report-address/): flag an address on the most-used Ethereum block explorer
-- [CryptoScamDB](https://cryptoscamdb.org/): open-source database tracking cryptocurrency scams
+- [Chainabuse](https://www.chainabuse.com/): समुदाय-चालित घोटाळा आणि फसवणूक अहवाल डेटाबेस. अहवाल सबमिट करा आणि ज्ञात फसव्या पत्त्यांसाठी शोधा
+- [Etherscan report](https://info.etherscan.com/report-address/): सर्वाधिक वापरल्या जाणाऱ्या इथेरियम ब्लॉक एक्सप्लोररवर पत्ता फ्लॅग करा
+- [CryptoScamDB](https://cryptoscamdb.org/): क्रिप्टोकरन्सी घोटाळ्यांचा मागोवा घेणारा ओपन-सोर्स डेटाबेस
 
-### Report a scam website or social media account {#report-website}
+### फसव्या वेबसाइट किंवा सोशल मीडिया खात्याची तक्रार करा {#report-website}
 
-- [PhishTank](https://phishtank.org/): submit and verify phishing URLs
-- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): report phishing sites to Google so they get blocked in Chrome and other browsers
-- [Netcraft](https://report.netcraft.com/report/mistake): report malicious and fraudulent websites
-- Report directly on the social media platform where the scam occurred (Twitter/X, Discord, Telegram all have reporting features)
+- [PhishTank](https://phishtank.org/): फिशिंग URL सबमिट करा आणि सत्यापित करा
+- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): गुगलकडे फिशिंग साइट्सची तक्रार करा जेणेकरून त्या क्रोम् आणि इतर ब्राउझरमध्ये ब्लॉक केल्या जातील
+- [Netcraft](https://report.netcraft.com/report/mistake): दुर्भावनापूर्ण आणि फसव्या वेबसाइट्सची तक्रार करा
+- ज्या सोशल मीडिया प्लॅटफॉर्मवर घोटाळा झाला तिथे थेट तक्रार करा (ट्विटर्/X, डिस्कॉर्ड्, टेलिग्राम् या सर्वांमध्ये तक्रार करण्याची वैशिष्ट्ये आहेत)
 
-### Report to law enforcement {#report-law-enforcement}
+### कायद्याची अंमलबजावणी करणाऱ्या संस्थांकडे तक्रार करा {#report-law-enforcement}
 
-- **United States:** [FBI Internet Crime Complaint Center (IC3)](https://www.ic3.gov/)
-- **United Kingdom:** [Action Fraud](https://www.actionfraud.police.uk/)
-- **European Union:** [Europol](https://www.europol.europa.eu/report-a-crime)
-- **Other countries:** file a report with your local police. Cryptocurrency fraud is a crime in most jurisdictions
+- **युनायटेड स्टेट्स:** [FBI इंटरनेट क्राईम कंप्लेंट सेंटर (IC3)](https://www.ic3.gov/)
+- **युनायटेड किंगडम:** [Action Fraud](https://www.actionfraud.police.uk/)
+- **युरोपियन युनियन:** [Europol](https://www.europol.europa.eu/report-a-crime)
+- **इतर देश:** तुमच्या स्थानिक पोलिसांकडे तक्रार दाखल करा. बहुतांश अधिकारक्षेत्रांमध्ये क्रिप्टोकरन्सी फसवणूक हा गुन्हा आहे
 
-## Analyze what happened {#analyze}
+## काय घडले याचे विश्लेषण करा {#analyze}
 
-Understanding where your funds went can help with reports and may support recovery efforts if the funds land on a centralized exchange.
+तुमचा निधी कुठे गेला हे समजून घेतल्यास अहवालांमध्ये मदत होऊ शकते आणि जर निधी एखाद्या केंद्रीकृत एक्सचेंजवर पोहोचला तर तो परत मिळवण्याच्या प्रयत्नांना पाठबळ मिळू शकते.
 
-- [Blockscout](https://eth.blockscout.com/): open-source block explorer to look up any transaction hash or wallet address to see where funds were sent
-- [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
-- [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
-- [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
+- [Blockscout](https://eth.blockscout.com/): निधी कुठे पाठवला गेला हे पाहण्यासाठी कोणताही व्यवहार हॅश किंवा वॉलेट पत्ता शोधण्यासाठी ओपन-सोर्स ब्लॉक एक्सप्लोरर
+- [Etherscan](https://etherscan.io/): निधी कुठे पाठवला गेला हे पाहण्यासाठी कोणताही व्यवहार हॅश किंवा वॉलेट पत्ता शोधा
+- [Chainabuse lookup](https://www.chainabuse.com/): इतर पीडितांनी आधीच एखाद्या पत्त्याची तक्रार केली आहे का ते तपासा
+- BlockSec द्वारे [MetaSleuth](https://metasleuth.io/): निधीच्या प्रवाहाचा नकाशा तयार करणारे व्हिज्युअल ट्रान्झॅक्शन ट्रेसिंग टूल
 
-**If funds were sent to a centralized exchange** (like Coinbase, Binance, Kraken), contact their support team immediately with the transaction details. Exchanges can sometimes freeze accounts flagged for fraud.
+**जर निधी केंद्रीकृत एक्सचेंजवर पाठवला गेला असेल** (जसे की कॉइनबेस्, बायनान्स्, Kraken), तर व्यवहाराच्या तपशीलांसह त्यांच्या सपोर्ट टीमशी त्वरित संपर्क साधा. एक्सचेंजेस कधीकधी फसवणुकीसाठी फ्लॅग केलेली खाती गोठवू शकतात.
 
-## The hard truth {#hard-truth}
+## कटू सत्य {#hard-truth}
 
-Because Ethereum is decentralized, no central authority can reverse transactions or recover stolen funds. Once a transaction is confirmed on the blockchain, it is final.
+इथेरियम विकेंद्रित असल्यामुळे, कोणताही केंद्रीय प्राधिकरण व्यवहार उलट करू शकत नाही किंवा चोरीला गेलेला निधी परत मिळवू शकत नाही. एकदा ब्लॉकचेनवर व्यवहाराची पुष्टी झाली की, तो अंतिम असतो.
 
-Reporting is still valuable. Reports help law enforcement track organized fraud rings, and flagging addresses on Chainabuse and Etherscan warns future potential victims.
+तक्रार करणे तरीही मौल्यवान आहे. अहवाल कायद्याची अंमलबजावणी करणाऱ्या संस्थांना संघटित फसवणूक टोळ्यांचा मागोवा घेण्यास मदत करतात आणि Chainabuse आणि Etherscan वर पत्ते फ्लॅग केल्याने भविष्यातील संभाव्य पीडितांना सावध केले जाते.
 
-## Types of scams to watch for {#scam-types}
+## लक्ष ठेवण्यासारखे घोटाळ्यांचे प्रकार {#scam-types}
 
 <ExpandableCard
-title="गिव्हअवे आणि एअरड्रॉप स्कॅम"
-contentPreview="कोणीही मोफत ETH देत नाही. अशा ऑफर्स नेहमी स्कॅम असतात."
+title="Giveaway and airdrop scams"
+contentPreview="No one is giving away free ETH. These offers are always scams."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
-
 >
 
-Scammers create fake giveaways promising to multiply your ETH or give you free tokens. They often impersonate well-known figures like Vitalik Buterin. If you send ETH to a "giveaway" address, you will not receive anything back.
+फसवणूक करणारे तुमचे ETH दुप्पट करण्याचे किंवा तुम्हाला मोफत टोकन देण्याचे आश्वासन देऊन बनावट गिव्हअवे (giveaways) तयार करतात. ते अनेकदा विटालिक् बुटेरिन् सारख्या सुप्रसिद्ध व्यक्तींची तोतयागिरी करतात. जर तुम्ही "गिव्हअवे" पत्त्यावर ETH पाठवले, तर तुम्हाला परत काहीही मिळणार नाही.
 
-**Remember:** Vitalik and other prominent figures will never ask you to send them ETH.
+**लक्षात ठेवा:** विटालिक् आणि इतर प्रमुख व्यक्ती तुम्हाला कधीही त्यांना ETH पाठवण्यास सांगणार नाहीत.
 
-[More on common scams](/security/#common-scams)
+[सामान्य घोटाळ्यांबद्दल अधिक माहिती](/security/#common-scams)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="तोतयागिरी आणि बनावट सपोर्ट"
-contentPreview="Ethereum किंवा ethereum.org कडून कोणीही तुमच्याशी स्वतःहून संपर्क साधणार नाही."
+title="Impersonation and fake support"
+contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
-
 >
 
-Scammers impersonate Ethereum team members, moderators, or support agents on Discord, Telegram, and social media. They may send you direct messages offering help or claiming there is a problem with your account.
+फसवणूक करणारे डिस्कॉर्ड्, टेलिग्राम् आणि सोशल मीडियावर इथेरियम टीमचे सदस्य, नियंत्रक (moderators) किंवा सपोर्ट एजंट्सची तोतयागिरी करतात. ते तुम्हाला मदतीची ऑफर देणारे किंवा तुमच्या खात्यात समस्या असल्याचा दावा करणारे थेट संदेश (DM) पाठवू शकतात.
 
-**Remember:**
+**लक्षात ठेवा:**
 
-- There is no "Ethereum support team"
-- Real moderators will never DM you first
-- Never share your seed phrase or private keys with anyone, for any reason
-- Never click links sent in unsolicited messages
+- कोणतीही "इथेरियम सपोर्ट टीम" नाही
+- खरे नियंत्रक तुम्हाला कधीही आधी DM करणार नाहीत
+- तुमचे बीज वाक्य किंवा खाजगी की कोणत्याही कारणासाठी कोणाशीही शेअर करू नका
+- न मागता आलेल्या संदेशांमधील लिंक्सवर कधीही क्लिक करू नका
+
 </ExpandableCard>
 
 <ExpandableCard
-title="रिकव्हरी स्कॅम"
-contentPreview="फसवणूक झाल्यानंतर, बनावट 'क्रिप्टो रिकव्हरी एक्सपर्ट्स' पासून सावध राहा."
+title="Recovery scams"
+contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
-
 >
 
-Recovery scams specifically target people who have already lost funds. Scammers monitor social media for people talking about being scammed, then reach out posing as "blockchain investigators" or "crypto recovery experts."
+रिकव्हरी घोटाळे विशेषतः अशा लोकांना लक्ष्य करतात ज्यांनी आधीच निधी गमावला आहे. फसवणूक करणारे सोशल मीडियावर फसवणूक झाल्याबद्दल बोलणाऱ्या लोकांवर लक्ष ठेवतात आणि नंतर "ब्लॉकचेन अन्वेषक" किंवा "क्रिप्टो रिकव्हरी तज्ञ" म्हणून त्यांच्याशी संपर्क साधतात.
 
-They promise to trace and recover your stolen crypto for an upfront fee. After you pay, they disappear.
+ते आगाऊ फी घेऊन तुमची चोरीला गेलेली क्रिप्टो शोधून काढण्याचे आणि परत मिळवून देण्याचे आश्वासन देतात. तुम्ही पैसे दिल्यानंतर ते गायब होतात.
 
-**No legitimate service can reverse blockchain transactions.** Anyone promising this is lying. This is one of the most common follow-up scams.
+**कोणतीही कायदेशीर सेवा ब्लॉकचेन व्यवहार उलट करू शकत नाही.** असे आश्वासन देणारा कोणीही खोटे बोलत आहे. हा सर्वात सामान्य फॉलो-अप घोटाळ्यांपैकी एक आहे.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="फिशिंग वेबसाइट्स आणि बनावट ॲप्स"
-contentPreview="स्कॅम साइट्स तुमची क्रेडेन्शियल्स चोरण्यासाठी खऱ्या वॉलेट्स आणि एक्सचेंजेसची नक्कल करतात."
+title="Phishing websites and fake apps"
+contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
-
 >
 
-Phishing sites look identical to real wallet apps, exchanges, or DeFi platforms. They trick you into entering your seed phrase or connecting your wallet, then drain your funds.
+फिशिंग साइट्स खऱ्या वॉलेट ॲप्स, एक्सचेंजेस किंवा विकेंद्रित वित्त (DeFi) प्लॅटफॉर्मसारख्याच दिसतात. ते तुम्हाला तुमचे बीज वाक्य प्रविष्ट करण्यास किंवा तुमचे वॉलेट कनेक्ट करण्यास फसवतात आणि नंतर तुमचा निधी काढून घेतात.
 
-**Protect yourself:**
+**स्वतःचे रक्षण करा:**
 
-- Always verify the URL before connecting your wallet
-- Bookmark the official sites you use regularly
-- Never enter your seed phrase on any website. Legitimate apps never ask for it
-- Use [PhishTank](https://phishtank.org/) to check suspicious URLs
+- तुमचे वॉलेट कनेक्ट करण्यापूर्वी नेहमी URL सत्यापित करा
+- तुम्ही नियमितपणे वापरत असलेल्या अधिकृत साइट्स बुकमार्क करा
+- कोणत्याही वेबसाइटवर तुमचे बीज वाक्य कधीही प्रविष्ट करू नका. कायदेशीर ॲप्स कधीही ते मागत नाहीत
+- संशयास्पद URL तपासण्यासाठी [PhishTank](https://phishtank.org/) वापरा
 
 <DocLink href="/guides/how-to-id-scam-tokens/">
-  How to identify scam tokens
+  फसवे टोकन कसे ओळखावे
 </DocLink>
-</ExpandableCard>
+
+</DocLink>
 
 <DocLink href="/security/">
-  Full guide to Ethereum security and scam prevention
+  इथेरियम सुरक्षा आणि फसवणूक प्रतिबंधासाठी संपूर्ण मार्गदर्शक
 </DocLink>

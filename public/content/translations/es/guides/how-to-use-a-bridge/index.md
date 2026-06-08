@@ -1,23 +1,21 @@
 ---
-title: "Cómo pasar los tókenes a la capa 2"
-description: "Una guía que explica cómo pasar tókenes de Ethereum a la capa 2 usando un puente."
+title: Cómo transferir tokens a la capa 2 mediante un puente
+description: Una guía que explica cómo mover tokens de Ethereum a la capa 2 usando un puente.
 lang: es
 ---
 
-# Cómo pasar los tókenes a la capa 2
+Si hay mucho tráfico en Ethereum, puede volverse costoso. Una solución a esto es crear nuevas "capas": es decir, diferentes redes que operan de manera similar a la propia Ethereum. Estas llamadas capas 2 (l2) ayudan a reducir la congestión y el costo en Ethereum al procesar muchas más transacciones con tarifas más bajas, y solo almacenan el resultado de estas en Ethereum de vez en cuando. Como tal, estas capas 2 nos permiten realizar transacciones con mayor velocidad y menores costos. Muchos proyectos cripto populares se están moviendo a las capas 2 debido a estos beneficios. La forma más sencilla de mover tokens de Ethereum a la capa 2 es usar un puente.
 
-Si hay mucho tráfico en la red de Ethereum, puede ser costoso. Una solución para esto es crear nuevas «capas», es decir, diferentes redes que funcionan de manera similar al propio Ethereum. Las denominadas capas 2 ayudan a reducir la congestión y el coste en Ethereum procesando muchas más transacciones a tarifas más bajas, y almacenando sólo el resultado de en Ethereum de vez en cuando. Como tal, estas capas 2 nos permiten realizar transacciones con mayor velocidad y menores costes. Muchos proyectos criptográficos populares se están pasando a la capa 2 debido a estos beneficios. La forma más sencilla de pasar los tókenes de Ethereum a la capa 2 es usar un puente.
+**Requisitos previos:** 
 
-**Requisitos previos:**
+- tener una billetera cripto; si no tienes una, sigue esta guía para [crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
+- agregar fondos a tu billetera
 
-- tener una billetera de criptomonedas; si no tiene una, siga esta guía para [crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
-- añadir fondos a su cartera
+## 1. Determina qué red de capa 2 quieres usar {#1-determine-which-layer-2-network-you-want-to-use}
 
-## 1. Determine la red de capa 2 que quiere usar
+Puedes obtener más información sobre los diferentes proyectos y enlaces importantes en nuestra [página de capa 2](/layer-2/).
 
-Puede obtener más información sobre los diferentes proyectos y enlaces importantes en nuestra [página de capa 2](/layer-2/).
-
-## 2. Vaya al puente seleccionado
+## 2. Ve al puente seleccionado {#2-go-to-the-selected-bridge}
 
 Algunas capas 2 populares son:
 
@@ -25,48 +23,49 @@ Algunas capas 2 populares son:
 - [Puente de Optimism](https://app.optimism.io/bridge/deposit)
 - [Puente de la red Boba](https://hub.boba.network/)
 
-## 3. Conéctese al puente con su cartera
+## 3. Conéctate al puente con tu billetera {#3-connect-to-the-bridge-with-your-wallet}
 
-Asegúrese de que su cartera esté conectada a la red principal de Ethereum. Si no lo está, el sitio web le pedirá automáticamente que cambie de red.
+Asegúrate de que tu billetera esté conectada a la red principal de Ethereum. Si no lo está, el sitio web te pedirá automáticamente que cambies de red.
 
-![Interfaz común para puentear tókenes](./bridge1.png)
+![Common interface for bridging tokens](./bridge1.png)
 
-## 4. Especifique la cantidad y mueva los fondos
+## 4. Especifica la cantidad y mueve los fondos {#4-specify-the-amount-and-move-the-funds}
 
-Revise la cantidad que obtendrá a cambio de la red capa 2 y las comisiones para evitar sorpresas desagradables.
+Revisa la cantidad que obtendrás a cambio en la red de capa 2 y las tarifas para evitar sorpresas desagradables.
 
-![Interfaz común para puentear tókenes](./bridge2.png)
+![Common interface for bridging tokens](./bridge2.png)
 
-## 5. Confirme la transacción en su cartera
+## 5. Confirma la transacción en tu billetera {#5-confirm-the-transaction-in-your-wallet}
 
-Tendrá que pagar una tasa (llamada [gas](/glossary/#gas)) en ETH para procesar la transacción.
+Tendrás que pagar una tarifa (llamada [gas](/glossary/#gas)) en forma de ETH para procesar la transacción.
 
-![Interfaz común para puentear tókenes](./bridge3.png)
+![Common interface for bridging tokens](./bridge3.png)
 
-## 6. Espere a que sus fondos se transfieran
+## 6. Espera a que se muevan tus fondos {#6-wait-for-your-funds-to-be-moved}
 
 Este proceso no debería tardar más de 10 minutos.
 
-## 7. Añada la red de la capa 2 seleccionada a su cartera (opcional)
+## 7. Agrega la red de capa 2 seleccionada a tu billetera (opcional) {#7-add-the-selected-layer-2-network-to-your-wallet-optional}
 
-Puede utilizar [chainlist.org](https://chainlist.org) para encontrar los detalles RPC de la red. Una vez que se añada la red y la transacción haya finalizado, deberían aparecer los tókenes en su cartera. <br />
+Puedes usar [chainlist.org](https://chainlist.org) para encontrar los detalles de RPC de la red. Una vez que se agregue la red y finalice la transacción, deberías ver los tokens en tu billetera.
+<br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>¿Quiere saber más?</div>
+  <div>¿Quieres aprender más?</div>
   <ButtonLink href="/guides/">
-    Consulte nuestras demás guías
+    Consulta nuestras otras guías
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Preguntas más frecuentes
+## Preguntas frecuentes {#frequently-asked-questions}
 
-### ¿Qué pasa si tengo fondos en un intercambio?
+### ¿Qué pasa si tengo fondos en un exchange? {#what-if-i-have-funds-on-an-exchange}
 
-Es posible que pueda retirar de algunas redes de capa 2 directamente desde algunos intercambios. Consulte la sección «Mover a la capa 2» de nuestra [página de la capa 2](/layer-2/) para más información.
+Es posible que puedas retirar a algunas capas 2 directamente desde un exchange. Consulta la sección «Mover a la capa 2» de nuestra [página de capa 2](/layer-2/) para obtener más información.
 
-### ¿Puedo volver a la red principal de Ethereum después de conectar mis tókenes a L2?
+### ¿Puedo volver a la red principal de Ethereum después de transferir mis tokens a la L2 mediante un puente? {#can-i-go-back-to-ethereum-mainnet-after-i-bridge-my-tokens-to-l2}
 
-Sí, siempre puede pasar sus fondos a la red principal usando el mismo puente.
+Sí, siempre puedes mover tus fondos de vuelta a la red principal usando el mismo puente.

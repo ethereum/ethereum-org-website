@@ -18,6 +18,9 @@ Ethereum.org 是一个中立的教育资源。视频库的策划旨在：
 
 本网站不收录主要用于推广特定产品、代币或商业服务的视频。
 
+
+## 收录标准
+
 ## 收录标准 {#criteria-for-inclusion}
 
 ### 必备条件 {#must-haves}
@@ -33,6 +36,9 @@ Ethereum.org 是一个中立的教育资源。视频库的策划旨在：
 - **附带文字稿** – 带有文字稿的视频可提高无障碍访问性和搜索引擎优化 (SEO)。如果你没有文字稿，ethereum.org 团队可以协助生成。
 - **来源可靠** – 来自知名教育工作者、研究人员和可靠来源的内容将获优先考虑。
 - **及时且长青** – 随着时间推移仍保持相关性的内容优先于时效性强的内容。
+
+
+## 如何添加视频
 
 ## 如何添加视频 {#how-to-add-a-video}
 
@@ -141,6 +147,16 @@ title: "..."
 
 开启一个拉取请求，将你的更改提交到 `dev` 分支。团队将审核你的提交并提供反馈。
 
+
+## 维护
+我们会定期审查已上架的视频，以确保它们：
+
+- 仍然符合上架标准
+- 包含准确、最新的信息
+- 具有有效的托管/YouTube 链接
+
+如果你发现已上架的视频存在问题，请[开启一个议题 (Issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) 或发送电子邮件至 [website@ethereum.org](mailto:website@ethereum.org)。
+
 ## 维护 {#maintenance}
 
 我们会定期审查已收录的视频，以确保它们：
@@ -150,6 +166,10 @@ title: "..."
 - 具有有效的托管/YouTube 链接
 
 如果你发现已收录的视频存在问题，请[开启一个议题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml)或发送电子邮件至 [website@ethereum.org](mailto:website@ethereum.org)。
+
+
+## 使用条款
+请参阅 ethereum.org 的[使用条款](/terms-of-use/)。ethereum.org 上的信息仅供一般参考之用。
 
 ## 使用条款 {#terms-of-use}
 

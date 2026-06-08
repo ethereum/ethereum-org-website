@@ -23,6 +23,10 @@ Mipango hii inasaidia mfumo mpana wa ikolojia wa Ethereum kwa kutoa ruzuku kwa w
 - [Kichunguzi cha Ruzuku cha ESP](https://esp.ethereum.foundation/funded-projects) - _Saraka inayotafutika ya miradi 1,000+ inayoungwa mkono na Mpango wa Usaidizi wa Ikolojia_
 - [Ruzuku za Kitaaluma](https://esp.ethereum.foundation/academic-grants) - _Ruzuku za kusaidia kazi za kitaaluma zinazohusiana na Ethereum_
 
+
+## Vijumuishi vya orodha ya ruzuku na majukwaa
+
+Rasilimali hizi hukusanya na kupanga fursa mbalimbali za ruzuku katika mfumo mzima wa ikolojia wa Ethereum, na kurahisisha kugundua fursa za ufadhili zinazolingana na mahitaji ya mradi wako. Tumezipanga kulingana na aina ya mtumiaji ili kukusaidia kuanza kupata rasilimali muhimu zaidi kulingana na mahitaji yako mahususi ya ufadhili.
 ## Vijumuishi vya orodha ya ruzuku na majukwaa {#grant-list-aggregators}
 
 Rasilimali hizi zinakusanya na kupanga fursa mbalimbali za ruzuku katika mfumo mzima wa ikolojia wa Ethereum, na kurahisisha kugundua fursa za ufadhili zinazolingana na mahitaji ya mradi wako. Tumezipanga kulingana na aina ya mtu ili kukusaidia kuanza kupata rasilimali muhimu zaidi kulingana na mahitaji yako mahususi ya ufadhili.
@@ -62,6 +66,10 @@ Mipango hii inalenga kufadhili miradi inayonufaisha jamii pana, bidhaa za umma, 
 - [Artizen](https://artizen.fund/) - _Kusaidia wabunifu kulinganisha ufadhili wa miradi mipya katika Eneo Jipya la sanaa, sayansi, teknolojia na utamaduni_
 - [Kiharakishi cha Kipeo cha Pili](https://qacc.giveth.io/) - _Mpango wa kuharakisha kampuni zinazoanza ambao unatumia ufadhili wa kipeo cha pili kusaidia miradi inayonufaisha umma_
 
+
+## Fanya kazi katika Ethereum
+
+Huko tayari kuanzisha mradi wako mwenyewe? Kuna mamia ya kampuni zinazotafuta kikamilifu watu wenye shauku ya kufanya kazi na kuchangia katika mfumo wa ikolojia wa Ethereum. Unatafuta maelezo zaidi? [Angalia kazi zinazohusiana na Ethereum](/community/get-involved/#ethereum-jobs)
 ## Fanya kazi katika Ethereum {#work-in-ethereum}
 
 Huko tayari kuanzisha mradi wako mwenyewe? Kuna mamia ya kampuni zinazotafuta kikamilifu watu wenye shauku ya kufanya kazi na kuchangia katika mfumo wa ikolojia wa Ethereum. Unatafuta maelezo zaidi? [Angalia kazi zinazohusiana na Ethereum](/community/get-involved/#ethereum-jobs)

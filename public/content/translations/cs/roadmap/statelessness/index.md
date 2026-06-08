@@ -1,107 +1,105 @@
 ---
-title: Bezstavovost, expirace stavu a expirace historie
-description: "Vysvětlení expirace historie a bezstavového Etherea"
+title: Bezstavovost, exspirace stavu a exspirace historie
+description: Vysvětlení exspirace historie a bezstavového Etherea
 lang: cs
 ---
 
-# Bezstavovost, expirace stavu a expirace historie {#statelessness}
+Schopnost provozovat [Ethereum](/) uzly na skromném hardwaru je kritická pro skutečnou decentralizaci. Je to proto, že provozování uzlu dává uživatelům možnost ověřovat informace nezávislým prováděním kryptografických kontrol, místo aby důvěřovali třetí straně, že jim bude dodávat data. Provozování uzlu umožňuje uživatelům odesílat transakce přímo do peer-to-peer sítě Etherea, místo aby museli důvěřovat zprostředkovateli. Decentralizace není možná, pokud jsou tyto výhody dostupné pouze uživatelům s drahým hardwarem. Místo toho by uzly měly být schopny běžet s extrémně skromnými požadavky na zpracování a paměť, aby mohly běžet na mobilních telefonech, mikropočítačích nebo nepozorovaně na domácím počítači.
 
-Možnost provozovat uzly Etherea na obyčejném hardwaru je pro skutečnou decentralizaci zásadní. A to z toho důvodu, že provozování uzlu dává uživatelům možnost ověřovat informace nezávislým prováděním kryptografických kontrol, místo aby se spoléhali na třetí stranu, která jim poskytne data. Provozování uzlu umožňuje uživatelům odesílat transakce přímo do peer-to-peer sítě Etherea, aniž by museli důvěřovat zprostředkovateli. Decentralizace není možná, pokud jsou tyto výhody dostupné pouze uživatelům s drahým hardwarem. Místo toho by uzly měly být schopny fungovat se skromnými požadavky na zpracování a paměť, aby mohly fungovat na mobilních telefonech, mikropočítačích nebo na domácím počítači, aniž by zpomalily jeho výkon.
+Dnes jsou vysoké požadavky na místo na disku hlavní překážkou bránící univerzálnímu přístupu k uzlům. To je primárně způsobeno nutností ukládat velké části dat stavu Etherea. Tato data stavu obsahují kritické informace potřebné ke správnému zpracování nových bloků a transakcí. V době psaní tohoto textu se pro provoz plného uzlu Etherea doporučuje rychlý 2TB SSD disk. U uzlu, který nepromazává žádná starší data, roste požadavek na úložiště o zhruba 14 GB týdně a archivní uzly, které ukládají všechna data od genesis bloku, se blíží 12 TB (v době psaní tohoto textu, v únoru 2023).
 
-Dnes je hlavní překážkou bránící univerzálnímu přístupu k uzlům vysoká potřeba úložného prostoru. To je primárně způsobeno nutností ukládat velké množství stavových dat Etherea. Tato stavová data obsahují kritické informace potřebné pro správné zpracování nových bloků a transakcí. V době psaní tohoto textu je pro provozování plného uzlu na Ethereu doporučováno rychlé SSD s kapacitou 2 TB. U uzlu, který neodstraňuje žádná starší data, rostou požadavky na úložiště přibližně o 14 GB týdně a archivační uzly, které ukládají všechna data od vzniku sítě, se blíží 12 TB (v době psaní, únor 2023).
-
-Levnější pevné disky mohou být použity k ukládání starších dat, ale ty jsou příliš pomalé na to, aby držely krok s příchozími bloky. Zachování současných modelů úložiště pro klienty, při současném zlevnění a zjednodušení ukládání dat, je pouze dočasným a částečným řešením problému, protože růst stavových dat Etherea je „neomezený“, což znamená, že požadavky na úložiště se mohou pouze zvyšovat a technologické zlepšení bude muset neustále držet krok s pokračujícím růstem stavu. Proto musí klienti hledat nové způsoby, jak ověřovat bloky a transakce, které nezávisí na vyhledávání dat z místních databází.
+K ukládání starších dat lze použít levnější pevné disky, ale ty jsou příliš pomalé na to, aby držely krok s příchozími bloky. Zachování současných modelů úložiště pro klienty a zároveň zlevnění a usnadnění ukládání dat je pouze dočasným a částečným řešením problému, protože růst stavu Etherea je „neomezený“, což znamená, že požadavky na úložiště se mohou pouze zvyšovat a technologická vylepšení budou muset vždy držet krok s neustálým růstem stavu. Místo toho musí klienti najít nové způsoby ověřování bloků a transakcí, které nespoléhají na vyhledávání dat z lokálních databází.
 
 ## Snížení úložiště pro uzly {#reducing-storage-for-nodes}
 
-Existuje několik způsobů, jak snížit množství dat, která musí každý uzel ukládat, přičemž každý z nich vyžaduje odlišný rozsah aktualizace základního protokolu Etherea:
+Existuje několik způsobů, jak snížit množství dat, které musí každý uzel ukládat, přičemž každý vyžaduje aktualizaci základního protokolu Etherea v jiném rozsahu:
 
-- **Expirace historie**: Dovoluje uzlům odstraňovat stavová data starší než X bloků, aniž by se změnil způsob, jakým klienti Etherea s těmito daty pracují.
-- **Expirace stavu**: Umožňuje stavovým datům, která se často nepoužívají, stát se neaktivními. Neaktivní data mohou klienty ignorovat, dokud nebudou znovu oživena.
-- **Slabá bezstavovost**: Pouze producenti bloků potřebují přístup k plným stavovým datům, ostatní uzly mohou ověřovat bloky bez místní stavové databáze.
-- **Silná bezstavovost**: Žádné uzly nepotřebují přístup k úplným stavovým datům.
+- **Exspirace historie**: umožňuje uzlům zahodit data stavu starší než X bloků, ale nemění způsob, jakým klienti Etherea nakládají s daty stavu.
+- **Exspirace stavu**: umožňuje, aby se data stavu, která se často nepoužívají, stala neaktivními. Neaktivní data mohou klienti ignorovat, dokud nejsou obnovena.
+- **Slabá bezstavovost**: přístup k úplným datům stavu potřebují pouze tvůrci bloků, ostatní uzly mohou ověřovat bloky bez lokální databáze stavu.
+- **Silná bezstavovost**: žádné uzly nepotřebují přístup k úplným datům stavu.
 
-## Expirace dat {#data-expiry}
+## Exspirace dat {#data-expiry}
 
-### Expirace historie {#history-expiry}
+### Exspirace historie {#history-expiry}
 
-Expirace historie znamená, že klienty mažou data, která pravděpodobně nebudou potřebovat, takže ukládají pouze malé množství historických dat a odstraňují starší data, když přijdou nová. Klienty vyžadují historická data ze dvou důvodů: synchronizace a zpracování žádostí o data. Původně se klienty musely synchronizovat od genesis bloku, ověřováním, že každý následující blok je správný, až k hlavě řetězce. Dnes klienti používají „slabé kontrolní body subjektivity“ k bootstrapování cesty k hlavě řetězce. Tyto kontrolní body jsou důvěryhodné výchozí body, jako kdyby genesis blok byl blízko přítomnosti, spíše než první blok Etherea. To znamená, že klienty mohou odstranit všechna data před posledním slabým kontrolním bodem subjektivity, aniž by ztratili schopnost synchronizovat se s hlavou řetězce. Klienty v současnosti zpracovávají žádosti (přicházející přes JSON-RPC) o historická data doručováním ze svých místních databází. Se zavedením expirace historie to však nebude možné, pokud budou požadovaná data odstraněna. Sdílení těchto historických dat je oblastí, ve které jsou potřeba inovativní řešení.
+Exspirace historie znamená, že klienti promazávají starší data, která pravděpodobně nebudou potřebovat, takže ukládají pouze malé množství historických dat a při příchodu nových dat ta starší zahazují. Existují dva důvody, proč klienti vyžadují historická data: synchronizace a obsluha datových požadavků. Původně se klienti museli synchronizovat od genesis bloku a ověřovat, že každý následující blok je správný až k vrcholu řetězce. Dnes klienti používají „kontrolní body slabé subjektivity“, aby se dostali k vrcholu řetězce. Tyto kontrolní body jsou důvěryhodné výchozí body, jako byste měli genesis blok blízko současnosti, a ne na samém začátku Etherea. To znamená, že klienti mohou zahodit všechny informace před nejnovějším kontrolním bodem slabé subjektivity, aniž by ztratili schopnost synchronizace s vrcholem řetězce. Klienti v současnosti obsluhují požadavky (přicházející přes JSON-RPC) na historická data tak, že je získávají ze svých lokálních databází. S exspirací historie to však nebude možné, pokud byla požadovaná data promazána. Právě při poskytování těchto historických dat jsou zapotřebí inovativní řešení.
 
-Jedním z řešení je, že klienty budou požadovat historická data od peerů pomocí projektů, jako je Portal Network. Portal Network je rozvíjející se peer-to-peer síť pro poskytování historických dat, kam každý uzel ukládá malý kousek historie Etherea, takže celá historie je distribuována po celé síti. Žádosti jsou v tomto případě zpracovávány vyhledáváním peerů, kteří ukládají příslušná data, a vysíláním žádostí o tato data směrem k nim. Alternativně, protože historická data obecně vyžadují hlavně aplikace, může být jejich odpovědností je ukládat. V prostoru Etherea by také mohl být dostatek altruistických aktérů, kteří by byli ochotni udržovat historické archivy. Mohla by to být DAO, která by vznikla za účelem správy úložiště historických dat, nebo ideálně by to byla kombinace všech těchto možností. Tito poskytovatelé by mohli šířit data různými způsoby, např. prostřednictvím torrentu, FTP, Filecoinu nebo IPFS.
+Jednou z možností je, že klienti požadují historická data od peerů pomocí řešení, jako je Portal Network. Portal Network je vyvíjená peer-to-peer síť pro poskytování historických dat, kde každý uzel ukládá malý kousek historie Etherea tak, že celá historie existuje distribuovaně napříč sítí. Požadavky jsou obsluhovány vyhledáním peerů, kteří ukládají příslušná data, a jejich vyžádáním od nich. Alternativně, protože přístup k historickým datům obecně vyžadují aplikace, může se stát jejich odpovědností je ukládat. V prostoru Etherea může být také dostatek altruistických aktérů, kteří by byli ochotni udržovat historické archivy. Mohla by to být DAO, která vznikne za účelem správy úložiště historických dat, nebo to v ideálním případě bude kombinace všech těchto možností. Tito poskytovatelé by mohli data poskytovat mnoha způsoby, například přes torrent, FTP, Filecoin nebo IPFS.
 
-Expirace historie je poněkud kontroverzní, protože dosud Ethereum vždy implicitně zaručovalo dostupnost jakýchkoliv historických dat. Plná synchronizace od vzniku sítě byla standardně možná, i když se někdy spoléhala na obnovu některých starších dat ze snapshotů. Expirace historie přesouvá odpovědnost za poskytování této záruky mimo hlavní protokol Etherea. To by mohlo zavést nová rizika cenzury, pokud by se poskytování historických dat ujaly centralizované organizace.
+Exspirace historie je poněkud kontroverzní, protože Ethereum dosud vždy implicitně zaručovalo dostupnost jakýchkoli historických dat. Plná synchronizace od genesis bloku byla vždy standardně možná, i když spoléhá na obnovu některých starších dat ze snímků. Exspirace historie přesouvá odpovědnost za poskytování této záruky mimo základní protokol Etherea. To by mohlo přinést nová rizika cenzury, pokud by historická data nakonec poskytovaly centralizované organizace.
 
-EIP-4444 ještě není připraveno k implementaci, ale je předmětem aktivní diskuse. Zajímavostí je, že výzvy spojené s EIP-4444 nejsou ani tak technické, ale spíše souvisejí s řízením komunity. Aby bylo možné tento návrh na vylepšení Etherea uvést do chodu, musí získat podporu komunity, což zahrnuje nejen souhlas, ale také závazky k ukládání a poskytování historických dat od důvěryhodných subjektů.
+EIP-4444 ještě není připraveno k nasazení, ale aktivně se o něm diskutuje. Zajímavé je, že výzvy spojené s EIP-4444 nejsou ani tak technické, jako spíše komunitní. Aby mohlo být nasazeno, je zapotřebí podpora komunity, která zahrnuje nejen dohodu, ale také závazky k ukládání a poskytování historických dat od důvěryhodných subjektů.
 
-Toto vylepšení zásadně nemění způsob, jakým uzly Etherea pracují se stavovými daty, mění pouze způsob přístupu k historickým datům.
+Tento upgrade zásadně nemění způsob, jakým uzly Etherea nakládají s daty stavu, pouze mění způsob přístupu k historickým datům.
 
-### Expirace stavu {#state-expiry}
+### Exspirace stavu {#state-expiry}
 
-Expirace stavu znamená odstranění stavových dat z jednotlivých uzlů v případě, že nebyl v poslední době využit. Existuje několik způsobů implementace, včetně:
+Exspirace stavu znamená odstranění stavu z jednotlivých uzlů, pokud k němu v nedávné době nebylo přistupováno. Existuje několik způsobů, jak by to mohlo být implementováno, včetně:
 
-- **Expirace na základě nájmu**: účtování „nájmu“ účtům a jejich expirace, když jejich nájem dosáhne nuly
-- **Expirace na základě času**: Deaktivace účtů, pokud po určitou dobu nedošlo k jejich čtení/zápisu.
+- **Exspirace podle nájmu**: účtování „nájmu“ účtům a jejich exspirace, když jejich nájem klesne na nulu
+- **Exspirace podle času**: zneaktivnění účtů, pokud na daném účtu po určitou dobu neprobíhá žádné čtení/zápis
 
-Expirace na základě nájmu by mohla spočívat v přímém počítání nájmu účtům za účelem jejich udržení v aktivní stavové databázi. Expirace na základě času by mohla být odpočítáváním od poslední interakce s účtem, nebo by mohlo jít o periodickou expiraci všech účtů. Mohly by také existovat mechanismy, které kombinují prvky obou modelů založených na čase a nájmu, např. jednotlivé účty by zůstaly v aktivním stavu, pokud by zaplatily malý poplatek před vypršením času. U expirace stavu je důležité si uvědomit, že neaktivní stav **není smazán**, je pouze uložen odděleně od aktivního stavu. Neaktivní stav může být obnoven do aktivního stavu.
+Exspirace podle nájmu by mohla představovat přímý nájem účtovaný účtům za jejich udržení v databázi aktivního stavu. Exspirace podle času by mohla probíhat odpočítáváním od poslední interakce s účtem, nebo by mohlo jít o periodickou exspiraci všech účtů. Mohly by existovat i mechanismy, které kombinují prvky modelů založených na čase i nájmu, například jednotlivé účty zůstanou v aktivním stavu, pokud před časovou exspirací zaplatí nějaký malý poplatek. U exspirace stavu je důležité poznamenat, že neaktivní stav **není smazán**, je pouze uložen odděleně od aktivního stavu. Neaktivní stav lze obnovit do aktivního stavu.
 
-To by mohlo fungovat tak, že by existoval stavový strom pro specifická časová období (řekněme ~1 rok). Kdykoli začne nové období, začíná i zcela nový stavový strom. Pouze aktuální stavový strom může být modifikován, všechny ostatní jsou neměnné. Od uzlů Etherea se očekává, že budou držet pouze aktuální stavový strom a nejnovější předchozí strom. K tomu je zapotřebí najít způsob, jak spojit adresu s obdobím, ve kterém existuje. Existuje [několik možných způsobů](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607), jak toho dosáhnout, ale hlavní možnost vyžaduje [prodloužení adres](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485), aby se do nich vešly další informace, s přidanou výhodou, že delší adresy jsou mnohem bezpečnější. Položka v plánu, která toto řeší, se nazývá [rozšíření adresního prostoru](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
+Způsob, jakým by to fungovalo, by pravděpodobně spočíval v existenci stromu stavu pro konkrétní časová období (např. ~1 rok). Kdykoli začne nové období, začne i zcela nový strom stavu. Upravovat lze pouze aktuální strom stavu, všechny ostatní jsou neměnné. Očekává se, že uzly Etherea budou uchovávat pouze aktuální strom stavu a ten bezprostředně předcházející. To vyžaduje způsob, jak opatřit adresu časovým razítkem s obdobím, ve kterém existuje. Existuje [několik možných způsobů](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607), jak to udělat, ale hlavní možnost vyžaduje [prodloužení adres](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485), aby se do nich vešly dodatečné informace, s přidanou výhodou, že delší adresy jsou mnohem bezpečnější. Položka v roadmapě, která to řeší, se nazývá [rozšíření adresního prostoru](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
 
-Podobně jako u expirace historie, v případě expirací stavu je odpovědnost za ukládání starých stavových dat odebrána jednotlivým uživatelům a přenesena na jiné subjekty, jako jsou centralizovaní poskytovatelé, altruističtí členové komunity nebo futurističtější decentralizovaná řešení, jako je Portal Network.
+Podobně jako u exspirace historie je v rámci exspirace stavu odpovědnost za ukládání starých dat stavu odebrána jednotlivým uživatelům a přesunuta na jiné subjekty, jako jsou centralizovaní poskytovatelé, altruističtí členové komunity nebo futurističtější decentralizovaná řešení, jako je Portal Network.
 
-Expirace stavu je stále ve fázi výzkumu a v současné době není připravena ke spuštění. Expirace stavu bude pravděpodobně spuštěna později než bezstavové klienty a expirace historie, protože tato vylepšení umožňují většině validátorů snadné zpracování velkých stavových objemů.
+Exspirace stavu je stále ve fázi výzkumu a zatím není připravena k nasazení. K exspiraci stavu může dojít později než k bezstavovým klientům a exspiraci historie, protože tyto upgrady činí velké velikosti stavu snadno zvládnutelnými pro většinu validátorů.
 
-## Bezstavovost {#statelessness}
+## Bezstavovost {#statelessness-2}
 
-Bezstavovost je trochu zavádějící termín, protože neznamená, že by byl koncept „stavu“ eliminován, ale zahrnuje změny ve způsobu, jakým uzly Etherea pracují se stavovými daty. Bezstavovost sama o sobě má dvě podoby: slabou bezstavovost a silnou bezstavovost. Slabá bezstavovost umožňuje většině uzlů být bezstavovými tím, že přenáší odpovědnost za ukládání stavu na méně uzlů. Silná bezstavovost úplně odstraňuje potřebu jakéhokoliv uzlu ukládat plná stavová data. Slabá i silná bezstavovost nabízí běžným validátorům následující výhody:
+Bezstavovost je trochu zavádějící pojem, protože neznamená, že by byl koncept „stavu“ eliminován, ale zahrnuje změny v tom, jak uzly Etherea nakládají s daty stavu. Samotná bezstavovost se vyskytuje ve dvou variantách: slabá bezstavovost a silná bezstavovost. Slabá bezstavovost umožňuje většině uzlů přejít do bezstavového režimu tím, že přenese odpovědnost za ukládání stavu na několik málo z nich. Silná bezstavovost zcela odstraňuje potřebu jakéhokoli uzlu ukládat úplná data stavu. Jak slabá, tak silná bezstavovost nabízejí běžným validátorům následující výhody:
 
-- téměř okamžitou synchronizaci,
-- schopnost ověřovat bloky mimo pořadí,
-- uzly mohou být spuštěny s velmi nízkými hardwarovými požadavky (např. na telefonech)
-- uzly mohou být spuštěny na levných pevných discích, protože neexistuje potřeba čtení/zápisu na disk,
-- kompatibilitu s budoucími vylepšeními kryptografie Etherea.
+- téměř okamžitá synchronizace
+- schopnost ověřovat bloky mimo pořadí
+- uzly schopné běžet s velmi nízkými hardwarovými požadavky (např. na telefonech)
+- uzly mohou běžet na levných pevných discích, protože není vyžadováno žádné čtení/zápis na disk
+- kompatibilita s budoucími upgrady kryptografie Etherea
 
 ### Slabá bezstavovost {#weak-statelessness}
 
-Slabá bezstavovost zahrnuje změny ve způsobu, jakým uzly Etherea ověřují změny stavu, ale zcela neodstraňuje potřebu ukládání stavových dat ve všech uzlech sítě. Místo toho slabá bezstavovost přenáší odpovědnost za ukládání stavových dat na navrhovatele bloků, zatímco všechny ostatní uzly v síti ověřují bloky bez uložení plných stavových dat.
+Slabá bezstavovost sice zahrnuje změny ve způsobu, jakým uzly Etherea ověřují změny stavu, ale zcela neeliminuje potřebu ukládání stavu ve všech uzlech v síti. Místo toho slabá bezstavovost přenáší odpovědnost za ukládání stavu na navrhovatele bloků, zatímco všechny ostatní uzly v síti ověřují bloky bez ukládání úplných dat stavu.
 
-**Při slabé bezstavovosti vyžaduje navrhování bloků přístup k plným stavovým datům, ale ověřování bloků nevyžaduje žádná stavová data**
+**Při slabé bezstavovosti vyžaduje navrhování bloků přístup k úplným datům stavu, ale ověřování bloků nevyžaduje žádná data stavu**
 
-Aby k tomu mohlo dojít, musí být v klientech Etherea již implementovány [Verkle trees](/roadmap/verkle-trees/). Verkle trees jsou nová datová struktura pro ukládání stavových dat Etherea, která umožňuje předávat mezi peery malé, stejně velké „svědky“ dat, jež mohou být použity k ověřování bloků namísto ověřování bloků proti místním databázím. Je také nutné [oddělení navrhovatelů a sestavovatelů bloků](/roadmap/pbs/), protože to umožňuje, aby sestavovatelé bloků byli specializované uzly s výkonnějším hardwarem, a to jsou ty, které vyžadují přístup k plným stavovým datům.
+Aby k tomu mohlo dojít, musí být v klientech Etherea již implementovány [Verkle stromy](/roadmap/verkle-trees/). Verkle stromy jsou náhradní datovou strukturou pro ukládání dat stavu Etherea, která umožňuje předávat mezi peery malé „svědky“ pevné velikosti k datům a používat je k ověřování bloků namísto ověřování bloků vůči lokálním databázím. Vyžaduje se také [oddělení navrhovatele a tvůrce (PBS)](/roadmap/pbs/), protože to umožňuje, aby tvůrci bloků byli specializovanými uzly s výkonnějším hardwarem, a právě ti vyžadují přístup k úplným datům stavu.
 
 <ExpandableCard title="Proč je v pořádku spoléhat se na méně navrhovatelů bloků?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
-Bezstavovost spoléhá na to, že sestavovatelé bloků udržují kopii plných stavových dat, aby mohli generovat svědky, kteří mohou být použiti k ověření bloku. Ostatní síťové uzly nepotřebují přístup ke stavovým datům, všechny informace potřebné k ověření bloku jsou dostupné ve svědkovi. To vede k situaci, kdy je navrhování bloku nákladné, ale ověřování bloku je levné, což naznačuje, že méně operátorů bude provozovat uzly navrhující bloky. Decentralizace navrhovatelů bloků však není kritická, pokud si co nejvíce účastníků může nezávisle ověřit, že bloky, které navrhují, jsou platné.
+Bezstavovost spoléhá na to, že tvůrci bloků udržují kopii úplných dat stavu, aby mohli generovat svědky, které lze použít k ověření bloku. Ostatní uzly nepotřebují přístup k datům stavu, všechny informace potřebné k ověření bloku jsou k dispozici ve svědkovi. To vytváří situaci, kdy je navrhování bloku drahé, ale ověřování bloku je levné, což znamená, že uzel navrhující bloky bude provozovat méně operátorů. Decentralizace navrhovatelů bloků však není kritická, pokud co nejvíce účastníků může nezávisle ověřit, že jimi navržené bloky jsou platné.
 
-<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Další informace najdete v Dankradových poznámkách</ButtonLink>
-</ExpandableCard>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Přečtěte si více v Dankradových poznámkách</ButtonLink>
+</ButtonLink>
 
-Navrhovatelé bloků používají stavová data k vytvoření „svědků“ – minimální sady dat, která prokazuje hodnoty stavů, jež jsou transakcemi v bloku změněny. Ostatní validátoři stavová data neuchovávají, pouze ukládají kořen stavu (hash celého stavu). Dostanou blok a svědka a jejich pomocí aktualizují svůj kořen stavu. Díky tomu je ověřovací uzel tak lehký.
+Navrhovatelé bloků používají data stavu k vytvoření „svědků“ – minimální sady dat, která prokazuje hodnoty stavu, jež jsou měněny transakcemi v bloku. Ostatní validátoři nedrží stav, ukládají pouze kořen stavu (hash celého stavu). Přijmou blok a svědka a použijí je k aktualizaci svého kořene stavu. Díky tomu je validující uzel extrémně nenáročný.
 
-Slabá bezstavovost je v pokročilém stadiu výzkumu, ale spoléhá na implementaci oddělení navrhovatelů a sestavovatelů bloků a Verkle trees, aby malí svědci mohli být předáváni mezi peery. To znamená, že slabá bezstavovost bude pravděpodobně na hlavní síti Etherea spuštěna až za několik let.
+Slabá bezstavovost je v pokročilém stádiu výzkumu, ale spoléhá na to, že bude implementováno oddělení navrhovatele a tvůrce (PBS) a Verkle stromy, aby bylo možné mezi peery předávat malé svědky. To znamená, že slabá bezstavovost je pravděpodobně ještě několik let vzdálena od nasazení na Ethereum Mainnet.
 
-zkEVM pro ověřování L1 je doplňková technologie, která by mohla dále vylepšit bezstavové ověřování. Namísto pouhé kontroly svědků by validátoři mohli ověřit důkaz s nulovým rozšířením znalostí, že celý blok byl proveden správně -- poskytující kryptografickou jistotu bez opětovného provádění transakce.
+[zkEVM pro ověřování na vrstvě 1 (l1)](/roadmap/zkevm/) je doplňková technologie, která by mohla dále vylepšit bezstavové ověřování. Místo pouhé kontroly svědků by validátoři mohli ověřit důkaz s nulovou znalostí, že celý blok byl proveden správně – což by poskytlo kryptografickou jistotu bez nutnosti znovu provádět transakce.
 
 ### Silná bezstavovost {#strong-statelessness}
 
-Silná bezstavovost odstraňuje potřebu jakéhokoliv uzlu uchovávat stavová data. Místo toho jsou transakce odesílány se svědky, kteří mohou být sdružováni producenty bloků. Producenti bloků jsou pak zodpovědní za ukládání pouze těch stavových dat, která jsou potřeba pro generování svědků k příslušným účtům. Odpovědnost za stav se téměř úplně přesouvá na uživatele, kteří posílají svědky a „přístupové seznamy“, aby deklarovali, s jakými účty a klíči úložiště interagují. To by umožnilo extrémně lehké uzly, ale za cenu kompromisů, včetně toho, že transakce s chytrými kontrakty by byly obtížnější.
+Silná bezstavovost odstraňuje potřebu jakéhokoli uzlu ukládat data stavu. Místo toho jsou transakce odesílány se svědky, které mohou tvůrci bloků agregovat. Tvůrci bloků jsou pak zodpovědní za ukládání pouze toho stavu, který je potřebný pro generování svědků pro příslušné účty. Odpovědnost za stav je téměř zcela přesunuta na uživatele, protože ti posílají svědky a „seznamy přístupů“, aby deklarovali, se kterými účty a klíči úložiště interagují. To by umožnilo extrémně nenáročné uzly, ale existují zde kompromisy, včetně ztížení provádění transakcí s chytrými kontrakty.
 
-Silnou bezstavovost zkoumali výzkumní vývojáři, ale v současnosti se neočekává, že by byla součástí plánu Etherea – jako pravděpodobnější varianta se jeví, že slabá bezstavovost bude pro potřeby škálování Etherea dostatečná.
+Silná bezstavovost byla zkoumna výzkumníky, ale v současné době se neočekává, že by byla součástí roadmapy Etherea – je pravděpodobnější, že pro potřeby škálování Etherea bude dostačující slabá bezstavovost.
 
-## Aktuální postup {#current-progress}
+## Současný pokrok {#current-progress}
 
-Slabá bezstavovost, expirace historie a expirace stavu jsou všechny ve fázi výzkumu a očekává se, že budou nasazeny za několik let. Neexistuje žádná záruka, že všechny tyto návrhy budou implementovány, např. pokud bude nejdříve implementována expirace stavu, nemusí být nutné implementovat i expiraci historie. Existují také další položky v plánu, jako jsou [Verkle trees](/roadmap/verkle-trees) a [oddělení navrhovatelů a sestavovatelů bloků](/roadmap/pbs), které je třeba dokončit jako první.
+Slabá bezstavovost, exspirace historie a exspirace stavu jsou všechny ve fázi výzkumu a očekává se, že budou nasazeny za několik let. Neexistuje žádná záruka, že všechny tyto návrhy budou implementovány; například pokud bude jako první implementována exspirace stavu, možná nebude nutné implementovat také exspiraci historie. Existují také další položky roadmapy, jako jsou [Verkle stromy](/roadmap/verkle-trees) a [oddělení navrhovatele a tvůrce (PBS)](/roadmap/pbs), které je třeba dokončit jako první.
 
 ## Další čtení {#further-reading}
 
 - [Co je bezstavové Ethereum?](https://stateless.fyi/)
 - [Vitalikovo AMA o bezstavovosti](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Teorie správy velikosti stavu](https://hackmd.io/@vbuterin/state_size_management)
-- [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
-- [Cesty k bezstavovosti a expiraci stavu](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [Omezení stavu s minimalizací konfliktů při obnově](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
+- [Cesty k bezstavovosti a exspiraci stavu](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Specifikace EIP-4444](https://eips.ethereum.org/EIPS/eip-4444)
 - [Alex Stokes o EIP-4444](https://youtu.be/SfDC_qUZaos)
 - [Proč je tak důležité přejít na bezstavovost](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
 - [Původní poznámky ke konceptu bezstavového klienta](https://ethresear.ch/t/the-stateless-client-concept/172)
-- [Více o expiraci stavu](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
-- [Ještě více o expiraci stavu](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+- [Více o exspiraci stavu](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
+- [Ještě více o exspiraci stavu](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
 - [Informační stránka o bezstavovém Ethereu](https://stateless.fyi)

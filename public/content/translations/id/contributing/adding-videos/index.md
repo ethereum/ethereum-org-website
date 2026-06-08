@@ -18,6 +18,8 @@ Ethereum.org adalah sumber daya edukasi yang netral. Galeri video dikurasi untuk
 
 Situs ini tidak mencantumkan video yang utamanya mempromosikan produk, token, atau layanan komersial tertentu.
 
+
+## Kriteria penyertaan
 ## Kriteria penyertaan {#criteria-for-inclusion}
 
 ### Wajib ada {#must-haves}
@@ -34,6 +36,8 @@ Situs ini tidak mencantumkan video yang utamanya mempromosikan produk, token, at
 - **Dari sumber yang kredibel** – Konten dari pendidik, peneliti, dan sumber yang sudah mapan mendapat prioritas.
 - **Tepat waktu dan abadi (evergreen)** – Konten yang tetap relevan seiring berjalannya waktu lebih disukai daripada materi yang sensitif terhadap waktu.
 
+
+## Cara menambahkan video
 ## Cara menambahkan video {#how-to-add-a-video}
 
 ### Opsi 1: Buka sebuah isu (issue) {#open-an-issue}
@@ -141,6 +145,15 @@ Anda juga dapat menggunakan tag baru — tag tersebut akan tersedia untuk pengel
 
 Buka pull request dengan perubahan Anda ke cabang `dev`. Tim akan meninjau kiriman Anda dan memberikan umpan balik.
 
+
+## Pemeliharaan
+Video yang dicantumkan ditinjau secara rutin untuk memastikan video tersebut:
+
+- Masih memenuhi kriteria pencantuman
+- Berisi informasi yang akurat dan mutakhir
+- Memiliki tautan hosting/YouTube yang berfungsi
+
+Jika Anda menemukan masalah pada video yang dicantumkan, [buat sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) atau kirim email ke [website@ethereum.org](mailto:website@ethereum.org).
 ## Pemeliharaan {#maintenance}
 
 Video yang dicantumkan ditinjau secara rutin untuk memastikan video tersebut:
@@ -151,6 +164,9 @@ Video yang dicantumkan ditinjau secara rutin untuk memastikan video tersebut:
 
 Jika Anda melihat masalah pada video yang dicantumkan, [buat sebuah isu](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) atau kirim email ke [website@ethereum.org](mailto:website@ethereum.org).
 
+
+## Ketentuan penggunaan
+Silakan merujuk pada [ketentuan penggunaan](/terms-of-use/) ethereum.org. Informasi di ethereum.org disediakan semata-mata untuk tujuan informasi umum.
 ## Ketentuan penggunaan {#terms-of-use}
 
 Harap merujuk pada [ketentuan penggunaan](/terms-of-use/) ethereum.org. Informasi di ethereum.org disediakan semata-mata untuk tujuan informasi umum.

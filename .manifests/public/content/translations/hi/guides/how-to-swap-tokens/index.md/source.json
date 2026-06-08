@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/guides/how-to-swap-tokens/index.md",
+  "generatedAt": "2026-06-08T09:51:44.327Z",
+  "rootHash": "b886653525d5",
+  "tree": {
+    "contentHash": "95006caf8706",
+    "anchorHash": "0ae2552812aa",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "d7834a22fa0d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:description": {
+        "contentHash": "b122e0ba8bc3",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:4": {
+        "contentHash": "77926955fcbe",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:0": {
+        "contentHash": "19136d380ad5",
+        "anchorHash": "625667549f9a"
+      },
+      "prose:5": {
+        "contentHash": "f83ccc11368d",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:1": {
+        "contentHash": "1f090d6c3bb9",
+        "anchorHash": "7fdc86ff2220"
+      },
+      "prose:6": {
+        "contentHash": "2c35ac8810d4",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:2": {
+        "contentHash": "3dbcb8eb075a",
+        "anchorHash": "de6693d6d477"
+      },
+      "prose:7": {
+        "contentHash": "d76d28e5f570",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "link:3": {
+        "contentHash": "0dacb65d8770",
+        "anchorHash": "6baff4bd9072"
+      },
+      "prose:8": {
+        "contentHash": "321ce2572e86",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "1-connect-your-wallet-to-the-decentralized-exchange-dex-of-your-choice": {
+        "contentHash": "8d6de86d75d4",
+        "anchorHash": "84de2ed3b3cc",
+        "labelHash": "5bf5a7e7f950",
+        "children": {
+          "_label": {
+            "contentHash": "5bf5a7e7f950",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "b87d51b26b61",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "a14e93e8f764",
+            "anchorHash": "a0410b1ada62"
+          },
+          "prose:6": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "1d730c8441de",
+            "anchorHash": "1c80ad50b7d0"
+          },
+          "prose:7": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "1bf170665898",
+            "anchorHash": "7563d9b24a63"
+          },
+          "prose:8": {
+            "contentHash": "3973e022e932",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "2a45c07314b2",
+            "anchorHash": "cbeb34225e58"
+          },
+          "prose:9": {
+            "contentHash": "41d1d8164f08",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "d137496b1994",
+            "anchorHash": "2ed84ce0b61c"
+          },
+          "prose:10": {
+            "contentHash": "0eb1c509faa7",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:5",
+          "link:0",
+          "prose:6",
+          "link:1",
+          "prose:7",
+          "link:2",
+          "prose:8",
+          "link:3",
+          "prose:9",
+          "link:4",
+          "prose:10"
+        ]
+      },
+      "2-select-the-pair-of-tokens-you-wish-to-swap": {
+        "contentHash": "cf38fcb0e3f3",
+        "anchorHash": "d830cb82dfe0",
+        "labelHash": "d7c8a7cf520d",
+        "children": {
+          "_label": {
+            "contentHash": "d7c8a7cf520d",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "b95d84f46935",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "156c22ae75cf",
+            "anchorHash": "927a7c836036"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "3-enter-the-amount-of-tokens-you-want-to-trade-and-click-swap": {
+        "contentHash": "2b183d772977",
+        "anchorHash": "70d8a2fff30f",
+        "labelHash": "284d7f5fad91",
+        "children": {
+          "_label": {
+            "contentHash": "284d7f5fad91",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "6d24bf10baa3",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "156c22ae75cf",
+            "anchorHash": "2e46c8fcac7f"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "4-confirm-the-transaction": {
+        "contentHash": "6ecc6571e8e0",
+        "anchorHash": "26d3dead6e89",
+        "labelHash": "d56bbc9a15fc",
+        "children": {
+          "_label": {
+            "contentHash": "d56bbc9a15fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:1": {
+            "contentHash": "e124fa2fc63c",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "image:0": {
+            "contentHash": "cbbaa226073c",
+            "anchorHash": "3bfc62678c50"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:1",
+          "image:0"
+        ]
+      },
+      "5-wait-for-the-transaction-to-be-processed": {
+        "contentHash": "3e03533f9c20",
+        "anchorHash": "a953f7c2f208",
+        "labelHash": "db1fdbb26f40",
+        "children": {
+          "_label": {
+            "contentHash": "db1fdbb26f40",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "c52bc2cf4b63",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:2": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:3": {
+            "contentHash": "1019a51618fb",
+            "anchorHash": "922415cc666f",
+            "children": {
+              "attr:variant": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "2937013f2181"
+              },
+              "component:0": {
+                "contentHash": "4b9f7d802648",
+                "anchorHash": "491aaf33b92d",
+                "children": {
+                  "attr:text": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "252d79a64486"
+                  }
+                }
+              },
+              "component:1": {
+                "contentHash": "e2a6d4a15100",
+                "anchorHash": "102fdc653ece",
+                "children": {
+                  "attr:className": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e796b9e20a49"
+                  },
+                  "prose:1": {
+                    "contentHash": "9aec37764785",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "html-tag:0": {
+                    "contentHash": "b47f8105a440",
+                    "anchorHash": "b9dbc082e3fe"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:className",
+                  "prose:1",
+                  "html-tag:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "attr:variant",
+              "component:0",
+              "component:1"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "component:2",
+          "component:3"
+        ]
+      },
+      "frequently-asked-questions": {
+        "contentHash": "edb100b7b9ca",
+        "anchorHash": "e2c84f5cb440",
+        "labelHash": "e956a9404b46",
+        "children": {
+          "_label": {
+            "contentHash": "e956a9404b46",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "can-i-swap-eth-for-btc-from-my-wallet": {
+            "contentHash": "8b245d1957d2",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "6fd7a9e1512b",
+            "children": {
+              "_label": {
+                "contentHash": "6fd7a9e1512b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "7b0430ae9872",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          },
+          "what-is-slippage": {
+            "contentHash": "9656c95293a3",
+            "anchorHash": "4b9f7d802648",
+            "labelHash": "f9600914f576",
+            "children": {
+              "_label": {
+                "contentHash": "f9600914f576",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:0": {
+                "contentHash": "bf7d2ed71298",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "can-i-swap-eth-for-btc-from-my-wallet",
+          "what-is-slippage"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:4",
+      "link:0",
+      "prose:5",
+      "link:1",
+      "prose:6",
+      "link:2",
+      "prose:7",
+      "link:3",
+      "prose:8",
+      "1-connect-your-wallet-to-the-decentralized-exchange-dex-of-your-choice",
+      "2-select-the-pair-of-tokens-you-wish-to-swap",
+      "3-enter-the-amount-of-tokens-you-want-to-trade-and-click-swap",
+      "4-confirm-the-transaction",
+      "5-wait-for-the-transaction-to-be-processed",
+      "frequently-asked-questions"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}

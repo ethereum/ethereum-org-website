@@ -1,71 +1,69 @@
 ---
-title: Abstrakcja kont
-description: "Przegląd planów Ethereum mających zapewnić prostsze w użytkowaniu i bezpieczniejsze konta użytkowników"
+title: Abstrakcja konta
+description: Przegląd planów Ethereum dotyczących uproszczenia i zwiększenia bezpieczeństwa kont użytkowników
 lang: pl
 summaryPoints:
-  - Abstrakcja kont znacząco ułatwia tworzenie portfeli inteligentnych kontraktów
-  - Portfele inteligentnych kontraktów znacząco ułatwiają zarządzanie dostępem do kont Ethereum
-  - Zgubione i ujawnione klucze można odzyskać przy użyciu wielu różnych kopii zapasowych
+  - Abstrakcja konta znacznie ułatwia tworzenie portfeli opartych na inteligentnych kontraktach
+  - Portfele oparte na inteligentnych kontraktach znacznie ułatwiają zarządzanie dostępem do kont Ethereum
+  - Utracone i ujawnione klucze można odzyskać za pomocą wielu kopii zapasowych
 ---
 
-# Abstrakcja kont {#account-abstraction}
+Większość obecnych użytkowników wchodzi w interakcję z [Ethereum](/) za pomocą **[kont posiadanych zewnętrznie (EOA)](/glossary/#eoa)**. Ogranicza to sposób, w jaki użytkownicy mogą korzystać z Ethereum. Na przykład utrudnia to wykonywanie partii transakcji i wymaga od użytkowników ciągłego utrzymywania salda ETH w celu uiszczania opłat transakcyjnych.
 
-Większość obecnych użytkowników wchodzi w interakcję z Ethereum za pomocą **[kont zewnętrznych (EOA)](/glossary/#eoa)**. Ogranicza to jednak możliwości interakcji użytkowników z Ethereum. Przykładowo, utrudnia to wysyłanie wielu transakcji naraz i wymaga od użytkowników ciągłego utrzymywania salda ETH, aby móc opłacić opłaty transakcyjne.
+Abstrakcja konta to sposób na rozwiązanie tych problemów poprzez umożliwienie użytkownikom elastycznego programowania większego bezpieczeństwa i lepszych doświadczeń użytkownika na ich kontach. Może się to odbyć poprzez [aktualizację EOA](https://eips.ethereum.org/EIPS/eip-7702) (EIP-7702), aby mogły być kontrolowane przez inteligentne kontrakty. Istnieje również inna ścieżka polegająca na dodaniu [drugiego, oddzielnego systemu transakcji](https://eips.ethereum.org/EIPS/eip-4337) (EIP-4337), który działałby równolegle do istniejącego protokołu. Niezależnie od wybranej drogi, rezultatem jest dostęp do Ethereum za pośrednictwem portfeli opartych na inteligentnych kontraktach, natywnie obsługiwanych jako część istniejącego protokołu lub za pośrednictwem dodatkowej sieci transakcyjnej.
 
-Abstrakcja kont jest sposobem rozwiązania tych problemów poprzez pozwalanie użytkownikom na elastyczne zaprogramowanie większego bezpieczeństwa i lepszych doświadczeń użytkownika na ich kontach. Może to zostać osiągnięte poprzez [ulepszenie kont EOA](https://eips.ethereum.org/EIPS/eip-7702) (EIP-7702), aby mogły być kontrolowane przez inteligentne kontrakty. Istnieje również inna ścieżka, polegająca na dodaniu [drugiego, oddzielnego systemu transakcji](https://eips.ethereum.org/EIPS/eip-4337) (EIP-4337), który będzie działał równolegle do istniejącego protokołu. Niezależnie od wybranej metody, rezultatem jest dostęp do Ethereum za pomocą portfeli inteligentnych kontraktów, obsługiwanych natywnie przez istniejący protokół lub przez dodatkową sieć transakcyjną.
+Portfele oparte na inteligentnych kontraktach odblokowują wiele korzyści dla użytkownika, w tym:
 
-Portfele inteligentnych kontraktów odblokowują wiele korzyści dla użytkownika, w tym:
+- definiowanie własnych, elastycznych zasad bezpieczeństwa
+- odzyskiwanie konta w przypadku utraty kluczy
+- współdzielenie bezpieczeństwa konta między zaufanymi urządzeniami lub osobami
+- opłacanie gazu za kogoś innego lub pozwolenie komuś innemu na opłacenie Twojego
+- grupowanie transakcji (np. zatwierdzenie i wykonanie wymiany za jednym zamachem)
+- więcej możliwości dla twórców zdecentralizowanych aplikacji (dapp) i portfeli na wprowadzanie innowacji w zakresie doświadczeń użytkownika
 
-- definiowanie własnych elastycznych zasad bezpieczeństwa
-- odzyskanie konta w przypadku utraty kluczy
-- udostępnianie zabezpieczeń konta zaufanym urządzeniom lub osobom
-- płacenie za cudzy gaz lub na odwrót
-- grupowanie transakcji razem (np. zatwierdzanie i wykonywanie wymiany za jednym razem)
-- więcej możliwości dla twórców zdecentralizowanych aplikacji i portfeli w zakresie innowacji doświadczeń użytkownika
-
-Korzyści te nie są obecnie natywnie obsługiwane, ponieważ tylko konta zewnętrzne ([EOA](/glossary/#eoa)) mogą rozpoczynać transakcje. EOA to po prostu pary kluczy publiczno-prywatnych. Działają w następujący sposób:
+Te korzyści nie są obecnie natywnie obsługiwane, ponieważ tylko konta posiadane zewnętrznie ([EOA](/glossary/#eoa)) mogą inicjować transakcje. EOA to po prostu pary kluczy publicznych i prywatnych. Działają one w następujący sposób:
 
 - jeśli masz klucz prywatny, możesz zrobić _wszystko_ w ramach zasad Wirtualnej Maszyny Ethereum (EVM)
 - jeśli nie masz klucza prywatnego, nie możesz zrobić _nic_.
 
-Jeśli stracisz swoje klucze, nie będzie można ich odzyskać, a skradzione klucze dają złodziejowi natychmiastowy dostęp do wszystkich środków na Twoim koncie.
+Jeśli zgubisz swoje klucze, nie można ich odzyskać, a skradzione klucze dają złodziejom natychmiastowy dostęp do wszystkich środków na koncie.
 
-Portfele inteligentnych kontraktów są rozwiązaniem tych problemów, ale obecnie trudno je zaprogramować, ponieważ ostatecznie każdą wdrażaną przez nie logikę należy przetłumaczyć na zestaw transakcji EOA, zanim będzie mogła ona zostać przetworzona przez Ethereum. Abstrakcja kont umożliwia inteligentnym kontraktom na samodzielne inicjowanie transakcji, dzięki czemu każda logika, którą użytkownik chce zaimplementować, może zostać zaprogramowana w samym portfelu inteligentnego kontraktu i wykonana na Ethereum.
+Portfele oparte na inteligentnych kontraktach są rozwiązaniem tych problemów, ale obecnie są trudne do zaprogramowania, ponieważ ostatecznie każda logika, którą implementują, musi zostać przetłumaczona na zestaw transakcji EOA, zanim będą mogły zostać przetworzone przez Ethereum. Abstrakcja konta umożliwia inteligentnym kontraktom samodzielne inicjowanie transakcji, dzięki czemu każda logika, którą użytkownik chce zaimplementować, może zostać zakodowana w samym portfelu opartym na inteligentnym kontrakcie i wykonana w Ethereum.
 
-W ostatecznym rozrachunku abstrakcja kont poprawia wsparcie dla portfeli inteligentnych kontraktów, dzięki czemu będą one łatwiejsze w tworzeniu i bezpieczniejsze w użyciu. Dzięki abstrakcji kont użytkownicy mogą korzystać ze wszystkich zalet Ethereum bez konieczności rozumienia stojących za nim technologii.
+Ostatecznie abstrakcja konta poprawia wsparcie dla portfeli opartych na inteligentnych kontraktach, ułatwiając ich tworzenie i zwiększając bezpieczeństwo ich użytkowania. Dzięki abstrakcji konta użytkownicy mogą cieszyć się wszystkimi korzyściami płynącymi z Ethereum bez konieczności rozumienia technologii leżącej u ich podstaw.
 
-## Poza frazami seed {#beyond-seed-phrases}
+## Poza frazami odzyskiwania {#beyond-seed-phrases}
 
-Dzisiejsze konta są zabezpieczone kluczami prywatnymi, które są obliczane z fraz seed. Każdy z dostępem do tej frazy, może z łatwością poznać klucz prywatny ochraniający konto i uzyskać dostęp do wszystkich aktywów. Jeśli klucz prywatny i fraza seed zostaną utracone, aktywa stają się trwale niedostępne. Zabezpieczenie tych fraz seed jest kłopotliwe nawet dla doświadczonych użytkowników, a wyłudzanie fraz seed jest jednym z najczęstszych oszustw.
+Dzisiejsze konta są zabezpieczone za pomocą kluczy prywatnych, które są obliczane na podstawie fraz odzyskiwania. Każdy, kto ma dostęp do frazy odzyskiwania, może łatwo odkryć klucz prywatny chroniący konto i uzyskać dostęp do wszystkich chronionych przez niego aktywów. Jeśli klucz prywatny i fraza odzyskiwania zostaną utracone, aktywa stają się trwale niedostępne. Zabezpieczenie tych fraz odzyskiwania jest kłopotliwe, nawet dla zaawansowanych użytkowników, a phishing fraz odzyskiwania jest jednym z najczęstszych oszustw.
 
-Abstrakcja kont rozwiązuje ten problem poprzez użycie inteligentnych kontraktów do przechowywania aktywów i autoryzowania transakcji. Inteligentne kontrakty mogą zawierać niestandardową logikę zapewniającą maksymalne bezpieczeństwo i użyteczność. Użytkownicy nadal używają kluczy prywatnych do kontrolowania dostępu, ale z ulepszonymi środkami bezpieczeństwa.
+Abstrakcja konta rozwiązuje ten problem, wykorzystując inteligentny kontrakt do przechowywania aktywów i autoryzacji transakcji. Inteligentne kontrakty mogą zawierać niestandardową logikę dostosowaną do maksymalnego bezpieczeństwa i użyteczności. Użytkownicy nadal używają kluczy prywatnych do kontrolowania dostępu, ale z ulepszonymi środkami bezpieczeństwa.
 
-Przykładowo, do portfela można dodać klucze zapasowe, umożliwiające wymianę klucza głównego w przypadku jego ujawnienia. Każdy klucz może być zabezpieczony w inny sposób lub rozdzielony pomiędzy zaufanymi osobami, co znacznie zwiększa bezpieczeństwo. Dodatkowe reguły portfela mogą ograniczać skutki wynikające z ujawnienia klucza, na przykład poprzez wymaganie wielu podpisów przy transakcjach o wysokiej wartości lub ograniczanie transakcji tylko do zaufanych adresów.
+Na przykład do portfela można dodać klucze zapasowe, co umożliwia wymianę klucza w przypadku naruszenia bezpieczeństwa klucza głównego. Każdy klucz może być zabezpieczony w inny sposób lub rozdzielony między zaufane osoby, co znacznie zwiększa bezpieczeństwo. Dodatkowe reguły portfela mogą złagodzić szkody wynikające z ujawnienia klucza, na przykład wymagając wielu podpisów dla transakcji o dużej wartości lub ograniczając transakcje do zaufanych adresów.
 
-## Lepsze wrażenia użytkownika {#better-user-experience}
+## Lepsze doświadczenie użytkownika {#better-user-experience}
 
-Abstrakcja kont znacząco poprawia doświadczenia użytkowników i bezpieczeństwo, dzięki natywnemu wsparciu portfeli inteligentnych kontraktów na poziomie protokołu. Deweloperzy zyskują swobodę innowacji, mogąc usprawniać łączenie transakcji dla większej szybkości i wydajności. Proste wymiany mogą stać się operacjami wymagającymi tylko jednego kliknięcia, co znacznie poprawia łatwość korzystania.
+Abstrakcja konta znacznie poprawia doświadczenie użytkownika i bezpieczeństwo, wspierając portfele oparte na inteligentnych kontraktach na poziomie protokołu. Deweloperzy mogą swobodnie wprowadzać innowacje, ulepszając grupowanie transakcji w celu zwiększenia szybkości i wydajności. Proste wymiany mogą stać się operacjami wykonywanymi jednym kliknięciem, co znacznie poprawia łatwość obsługi.
 
-Zarządzanie gazem również ulega dużej poprawie. Aplikacje mogą płacić opłaty za gaz za użytkowników lub umożliwiać jego opłacanie w tokenach innych niż ETH, eliminując konieczność utrzymywania salda ETH.
+Zarządzanie gazem ulega znacznej poprawie. Aplikacje mogą opłacać opłaty za gaz użytkowników lub umożliwiać płatności w tokenach innych niż ETH, eliminując potrzebę utrzymywania salda ETH.
 
-## W jaki sposób wdrożona zostanie abstrakcja kont? {#how-will-aa-be-implemented}
+## Jak zostanie wdrożona abstrakcja konta? {#how-will-aa-be-implemented}
 
-Obecnie wdrożenie portfeli inteligentnych kontraktów jest trudne, ponieważ opierają się one na złożonym kodzie opakowującym standardowe transakcje. Ethereum może to zmienić, umożliwiając inteligentnym kontraktom bezpośrednio inicjować transakcje, osadzając logikę w inteligentnych kontraktach Ethereum, zamiast polegać na zewnętrznych przekaźnikach.
+Obecnie portfele oparte na inteligentnych kontraktach są trudne do wdrożenia, ponieważ opierają się na złożonym kodzie opakowującym standardowe transakcje. Ethereum może to zmienić, pozwalając inteligentnym kontraktom na bezpośrednie inicjowanie transakcji, osadzając logikę w inteligentnych kontraktach Ethereum, zamiast polegać na zewnętrznych przekaźnikach.
 
-### EIP-4337: Abstrakcja kont bez zmian w protokole
+### EIP-4337: Abstrakcja konta bez zmian w protokole {#eip-4337-account-abstraction-without-protocol-changes}
 
-EIP-4337 umożliwia natywną obsługę portfeli inteligentnych kontraktów bez modyfikacji głównego protokołu Ethereum. Wprowadza obiekty `UserOperation`, które są zbierane w pakiety transakcji przez walidatorów, co upraszcza rozwój portfeli. Kontrakt EntryPoint EIP-4337 został wdrożony do sieci głównej Ethereum 1 marca 2023 roku i od tego czasu umożliwił stworzenie ponad 26 milionów inteligentnych portfeli oraz ponad 170 milionów obiektów UserOperation.
+EIP-4337 umożliwia natywną obsługę portfeli opartych na inteligentnych kontraktach bez modyfikowania głównego protokołu Ethereum. Wprowadza obiekty `UserOperation` zbierane w pakiety transakcji przez walidatorów, upraszczając rozwój portfeli. Kontrakt EntryPoint EIP-4337 został wdrożony w sieci głównej Ethereum 1 marca 2023 r. i ułatwił utworzenie ponad 26 milionów inteligentnych portfeli oraz 170 milionów operacji UserOperations.
 
-## Aktualny postęp {#current-progress}
+## Obecny postęp {#current-progress}
 
-EIP-7702 zostanie wdrożony 7 maja 2025 roku w ramach aktualizacji Ethereum o nazwie Pectra. EIP-4337 został szeroko przyjęty – [wdrożono ponad 26 milionów inteligentnych kont i przetworzono ponad 170 milionów obiektów UserOperation](https://www.bundlebear.com/erc4337-overview/all).
+W ramach aktualizacji Pectra w Ethereum, wdrożenie EIP-7702 zaplanowano na 7 maja 2025 r. EIP-4337 został szeroko przyjęty, [z ponad 26 milionami wdrożonych inteligentnych kont i ponad 170 milionami przetworzonych operacji UserOperations](https://www.bundlebear.com/erc4337-overview/all).
 
 ## Dalsza lektura {#further-reading}
 
 - [erc4337.io](https://docs.erc4337.io/)
 - [Dokumentacja EIP-4337](https://eips.ethereum.org/EIPS/eip-4337)
 - [Dokumentacja EIP-7702](https://eips.ethereum.org/EIPS/eip-7702)
-- [Panel adopcji ERC-4337](https://www.bundlebear.com/erc4337-overview/all)
-- ["Droga do abstrakcji kont" Vitalika](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
+- [Pulpit nawigacyjny adopcji ERC-4337](https://www.bundlebear.com/erc4337-overview/all)
+- [„Droga do abstrakcji konta” według Vitalika](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
 - [Blog Vitalika o portfelach z odzyskiwaniem społecznościowym](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Awesome Account Abstraction](https://github.com/4337Mafia/awesome-account-abstraction)

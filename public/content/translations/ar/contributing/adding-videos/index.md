@@ -18,6 +18,8 @@ lang: ar
 
 لا يُدرج الموقع مقاطع الفيديو التي تروج بشكل أساسي لمنتج معين، أو رمز مميز، أو خدمة تجارية.
 
+
+## معايير الإدراج
 ## معايير الإدراج {#criteria-for-inclusion}
 
 ### المتطلبات الأساسية {#must-haves}
@@ -34,6 +36,8 @@ lang: ar
 - **من مصدر موثوق** – يُعطى المحتوى المقدم من معلمين وباحثين ومصادر راسخة الأولوية.
 - **محتوى دائم الصلاحية** – يُفضل المحتوى الذي يظل ذا صلة بمرور الوقت على المواد الحساسة للوقت.
 
+
+## كيفية إضافة مقطع فيديو
 ## كيفية إضافة مقطع فيديو {#how-to-add-a-video}
 
 ### الخيار 1: فتح مشكلة (Issue) {#open-an-issue}
@@ -141,6 +145,15 @@ title: "..."
 
 افتح طلب سحب (Pull request) بتغييراتك على فرع `dev`. سيقوم الفريق بمراجعة طلبك وتقديم الملاحظات.
 
+
+## الصيانة
+تتم مراجعة مقاطع الفيديو المدرجة بشكل روتيني للتأكد من أنها:
+
+- لا تزال تلبي معايير الإدراج
+- تحتوي على معلومات دقيقة ومُحدّثة
+- تحتوي على روابط استضافة/يوتيوب تعمل بشكل صحيح
+
+إذا لاحظت مشكلة في مقطع فيديو مدرج، [قم بإنشاء مشكلة (Issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) أو أرسل بريداً إلكترونياً إلى [<span dir="ltr">website@ethereum.org</span>](mailto:website@ethereum.org).
 ## الصيانة {#maintenance}
 
 تتم مراجعة مقاطع الفيديو المدرجة بشكل روتيني للتأكد من أنها:
@@ -151,6 +164,9 @@ title: "..."
 
 إذا لاحظت مشكلة في مقطع فيديو مدرج، [قم بإنشاء مشكلة (Issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) أو أرسل بريداً إلكترونياً إلى [<span dir="ltr">website@ethereum.org</span>](mailto:website@ethereum.org).
 
+
+## شروط الاستخدام
+يُرجى الرجوع إلى [شروط الاستخدام](/terms-of-use/) الخاصة بموقع <span dir="ltr">ethereum.org</span>. يتم توفير المعلومات على موقع <span dir="ltr">ethereum.org</span> لأغراض المعلومات العامة فقط.
 ## شروط الاستخدام {#terms-of-use}
 
 يُرجى الرجوع إلى [شروط استخدام](/terms-of-use/) <span dir="ltr">ethereum.org</span>. يتم توفير المعلومات على <span dir="ltr">ethereum.org</span> لأغراض المعلومات العامة فقط.

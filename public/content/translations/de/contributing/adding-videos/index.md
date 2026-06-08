@@ -18,6 +18,8 @@ Ethereum.org ist eine neutrale, lehrreiche Ressource. Die Videogalerie wird kura
 
 Die Website listet keine Videos auf, die in erster Linie ein bestimmtes Produkt, einen bestimmten Token oder eine kommerzielle Dienstleistung bewerben.
 
+
+## Kriterien für die Aufnahme
 ## Aufnahmekriterien {#criteria-for-inclusion}
 
 ### Grundvoraussetzungen {#must-haves}
@@ -34,6 +36,8 @@ Die Website listet keine Videos auf, die in erster Linie ein bestimmtes Produkt,
 - **Von einer glaubwürdigen Quelle** – Inhalte von etablierten Pädagogen, Forschern und Quellen haben Vorrang.
 - **Zeitlos und dauerhaft relevant** – Inhalte, die über die Zeit hinweg relevant bleiben, werden gegenüber zeitkritischem Material bevorzugt.
 
+
+## Wie man ein Video hinzufügt
 ## So fügen Sie ein Video hinzu {#how-to-add-a-video}
 
 ### Option 1: Ein Issue eröffnen {#open-an-issue}
@@ -141,6 +145,15 @@ Sie können auch neue Tags verwenden – diese stehen dann für zukünftige Kate
 
 Erstellen Sie einen Pull Request mit Ihren Änderungen für den Branch `dev`. Das Team wird Ihre Einreichung überprüfen und Feedback geben.
 
+
+## Wartung
+Gelistete Videos werden regelmäßig überprüft, um sicherzustellen, dass sie:
+
+- weiterhin die Aufnahmekriterien erfüllen
+- korrekte, aktuelle Informationen enthalten
+- über funktionierende Hosting-/YouTube-Links verfügen
+
+Wenn Ihnen ein Problem mit einem gelisteten Video auffällt, [erstellen Sie ein Issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) oder senden Sie eine E-Mail an [website@ethereum.org](mailto:website@ethereum.org).
 ## Wartung {#maintenance}
 
 Gelistete Videos werden regelmäßig überprüft, um sicherzustellen, dass sie:
@@ -151,6 +164,9 @@ Gelistete Videos werden regelmäßig überprüft, um sicherzustellen, dass sie:
 
 Wenn Ihnen ein Problem mit einem gelisteten Video auffällt, [erstellen Sie ein Issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) oder senden Sie eine E-Mail an [website@ethereum.org](mailto:website@ethereum.org).
 
+
+## Nutzungsbedingungen
+Bitte beachten Sie die [Nutzungsbedingungen](/terms-of-use/) von ethereum.org. Die Informationen auf ethereum.org werden ausschließlich zu allgemeinen Informationszwecken bereitgestellt.
 ## Nutzungsbedingungen {#terms-of-use}
 
 Bitte beachten Sie die [Nutzungsbedingungen](/terms-of-use/) von ethereum.org. Die Informationen auf ethereum.org werden ausschließlich zu allgemeinen Informationszwecken bereitgestellt.

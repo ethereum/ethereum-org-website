@@ -1,93 +1,92 @@
 ---
-title: Kanuni za kubuni
+title: Kanuni zetu za muundo
+metaTitle: Kanuni za muundo
 lang: sw
-description: Kanuni za usanifu na maamuzi ya maudhui ya ethereum.org
+description: Kanuni zinazoongoza maamuzi ya muundo na maudhui ya ethereum.org
 ---
 
-# Kanuni zetu za usanifu {#contributing-to-ethereumorg-}
+<Emoji text=":wave:" size={1} /> Hujambo, na karibu kwenye kanuni za muundo za ethereum.org. Hii ni sehemu ya mchakato unaoendelea wa kuboresha na kuendeleza ethereum.org.
 
-<Emoji text=":wave:" size={1} /> Hujambo, na karibu kwenye kanuni za usanifu za ethereum.org. Hii ni sehemu ya mchakato unaoendelea wa kubadilika na kuboresha ethereum.org.
+Kanuni zetu zinaongoza mwonekano na hisia za tovuti na maudhui yaliyomo.
 
-Kanuni zetu hufahamisha mwonekano na hisia za tovuti na maudhui yaliyomo.
+Unapaswa kusoma haya kabla ya [kuchangia kwenye ethereum.org](/contributing/).
 
-Unapaswa kusoma hizi kabla ya [kuchangia ethereum.org](/contributing/).
+## Kanuni za muundo ni nini? {#ways-to-contribute}
 
-## Kanuni za kubuni ni nini? {#ways-to-contribute}
+Usiwe na wasiwasi, ni rahisi sana! **Kanuni za muundo** ni seti ya miongozo tunayorejelea wakati wa kuunda (yaani, kutengeneza, kudumisha au kusasisha) kitu.
 
-Usijali, wao ni rahisi sana! **Kanuni za usanifu** ni seti ya miongozo tunayorejelea wakati wa kusanifu (yaani, kuunda, kutunza au kusasisha) kitu.
+Katika muktadha wa ethereum.org kanuni hizi za muundo ni msingi wa kile tunachotaka tovuti iwakilishe na kuonyesha kwa ulimwengu. Ni za kutia moyo **na** za kiutendaji. Sio tu jinsi tovuti _inavyoonekana_, bali pia jinsi _inavyofanya kazi_ na hata jinsi inavyomfanya mtu _ahisi._ Kila kitu, kuanzia rangi hadi mpangilio wa kurasa hadi jinsi tunavyozungumza kuhusu Ethereum kwenye tovuti kinapaswa kuongozwa na kanuni hizi.
 
-Katika muktadha wa ethereum.org kanuni hizi za usanifu ndizo msingi wa kile tunachotaka tovuti iwakilishe na kutayarisha kwa ulimwengu. Zote mbili ni za kutia moyo **na** za kiutendaji. Sio tu jinsi tovuti _inavyoonekana_, lakini pia jinsi _inavyofanya kazi_ na hata jinsi inavyomfanya mtu _ajisikie._ Kila kitu, kuanzia rangi hadi mpangilio wa kurasa hadi jinsi tunavyozungumza kuhusu Ethereum kwenye tovuti kinapaswa kuongozwa na kanuni hizi.
+## Kanuni katika vitendo {#how-decisions-about-the-site-are-made}
 
-## Kanuni katika utendaji {#how-decisions-about-the-site-are-made}
-
-Hebu tuangalie mfano. Mojawapo ya kanuni ni “Inayoaminika”, ambayo ina maana kwamba tunataka wageni kwenye tovuti _wahisi_ na _wajue_ kwamba tovuti ni ya kuaminika - kama ilivyo mfumo mkuu wa ikolojia wa Ethereum. Kwa mujibu wa kanuni hiyo, tuna "kanuni ndogo" 3 zinazofanya kazi ambazo tunaamini ni hatua zinazoweza kuchukuliwa ili kufanya tovuti iaminike:
+Hebu tuangalie mfano. Moja ya kanuni ni "Inayoaminika", ambayo inamaanisha kuwa tunataka watembeleaji wa tovuti _wahisi_ na _kujua_ kwamba tovuti inaaminika - kama tu mfumo mpana wa ikolojia wa Ethereum. Ndani ya kanuni hiyo, tuna "kanuni ndogo" 3 za kiutendaji ambazo tunaamini ni hatua zinazoweza kutekelezwa tunazoweza kuchukua ili kufanya tovuti iaminike:
 
 - _“Mpya”_ yaani, kuweka maudhui yakiwa yamesasishwa.
-- _“Uthibitisho wa Kijamii”_ yaani, onyesha ukubwa, utofauti na shughuli za mfumo wa ikolojia (unajua: maendeleo ya sasisho la Ethereum, DeFi, michezo ya kubahatisha, hackathon zote, n.k.)
-- _“Thabiti”_ yaani, uthabiti katika usanifu wa tovuti na sauti na usahihi wa maandishi.
+- _“Uthibitisho wa Kijamii”_ yaani, kuonyesha ukubwa, utofauti na shughuli za mfumo wa ikolojia (unajua: maendeleo ya uboreshaji wa Ethereum, fedha zilizogatuliwa (DeFi), michezo, hackathon zote, n.k.)
+- _“Inayolingana”_ yaani, msimamo katika muundo wa tovuti na sauti na usahihi wa uandishi.
 
-Kwa hivyo tunapofanya maamuzi ya muundo, au maamuzi ya uandishi, basi tunaweza kurejelea kanuni ya "Inayoaminika" na kuuliza:
+Kwa hivyo tunapofanya maamuzi ya muundo, au maamuzi ya uandishi, tunaweza kurejelea kanuni ya "Inayoaminika" na kuuliza:
 
-- _“Je, tovuti inaakisi taarifa za sasa?”_
-- _“Tunaonyesha vipi na wapi ukubwa na shughuli za mfumo wa ikolojia?”_
-- _“Je, michango mipya iliyopendekezwa na mwanajumuiya ninayoikagua inalingana na usanifu wa sasa na uandishi kwenye tovuti?”_
+- _“Je, tovuti inaonyesha taarifa za sasa?”_
+- _“Ni vipi na wapi tunaonyesha ukubwa na shughuli za mfumo wa ikolojia?”_
+- _“Je, michango mipya iliyopendekezwa na mwanajamii ninayoikagua inalingana na muundo na uandishi wa sasa kwenye tovuti?”_
 
-## Kanuni za usanifu za ethereum.org {#contributors}
+## Kanuni za muundo za ethereum.org {#contributors}
 
-### 1. Ya kutia moyo {#1-inspirational}
+### 1. Ya Kutia Moyo {#1-inspirational}
 
-Tovuti inapaswa kuhamasisha watumiaji kuota jinsi Ethereum inaweza kubadilisha ulimwengu. Inapaswa kuwahamasisha watu kuchunguza, kucheza na kucheza kwa kutumia zana na programu za mfumo ikolojia wa Ethereum.
+Tovuti inapaswa kuwatia moyo watumiaji kuota jinsi Ethereum inavyoweza kubadilisha ulimwengu. Inapaswa kuwahamasisha watu kuchunguza, kucheza na kujaribu zana na programu za mfumo wa ikolojia wa Ethereum.
 
-- **Radical:** Tovuti inapaswa kuwasilisha malengo makuu ya Ethereum ya kubadilisha ulimwengu kwa njia yenye maana. Inapaswa kuwa wazi kuwa Ethereum sio tu safu mpya ya teknolojia - ni teknolojia ya mabadiliko.
-- **Uwezeshaji kupitia elimu:** Tovuti inapaswa kuwaelimisha watu ili waweze kuelewa uwezo wa Ethereum, wapate nafasi yao katika mfumo wa ikolojia, na wajisikie wamewezeshwa kushiriki ndani yake.
+- **Kali:** Tovuti inapaswa kuwasilisha malengo makubwa ya Ethereum ya kubadilisha ulimwengu kwa njia yenye maana. Inapaswa kuwa wazi kwamba Ethereum sio tu mkusanyiko mpya wa teknolojia - ni teknolojia ya kuleta mabadiliko.
+- **Uwezeshaji kupitia elimu:** Tovuti inapaswa kuelimisha watu ili waweze kuelewa uwezo wa Ethereum, kupata nafasi yao katika mfumo wa ikolojia, na kuhisi wamewezeshwa kushiriki ndani yake.
 
-Mwelekeo Unaoonekana • Maudhui
+Mwelekeo wa Kuona • Maudhui
 
-### 2. Kwa wote {#2-universal}
+### 2. Ya Ulimwengu Wote {#2-universal}
 
-Ethereum ni mradi wa kimataifa, umfumo mtawanyo na watazamaji wetu wanaonyesha hili. Tovuti inapaswa kutamani kupatikana kwa kila mtu, na nyeti kwa tamaduni nyingi za ulimwengu.
+Ethereum ni mradi wa kimataifa, uliogatuliwa na hadhira yetu inaonyesha hili. Tovuti inapaswa kulenga kufikiwa na kila mtu, na kuzingatia tamaduni nyingi za ulimwengu.
 
-- **Inayofikika:** Tovuti inapaswa kufuata miongozo ya ufikivu - ikiwa ni pamoja na kwa watu wenye miunganisho ya kipimo data cha chini.
-- **Moja kwa moja:** Tovuti inapaswa kuwa rahisi na isiyo na utata. Nakala haipaswi kutumia lugha ambayo inaweza kutafsiriwa vibaya au kupotea katika tafsiri.
-- **Ethereum ina vipengele vingi:** Ethereum ni mradi, msingi wa msimbo, jumuiya, na dira. Ethereum ni ya thamani kwa watu tofauti kwa sababu tofauti, na kuna njia nyingi za kuhusika.
+- **Inayofikika:** Tovuti inapaswa kufuata miongozo ya ufikivu - ikiwa ni pamoja na kwa watu wenye miunganisho ya intaneti yenye kasi ndogo.
+- **Ya Moja kwa Moja:** Tovuti inapaswa kuwa rahisi na isiyo na utata. Nakala haipaswi kutumia lugha inayoweza kutafsiriwa vibaya au kupoteza maana wakati wa kutafsiriwa.
+- **Ethereum ina pande nyingi:** Ethereum ni mradi, msingi wa msimbo, jamii, na maono. Ethereum ina thamani kwa watu tofauti kwa sababu tofauti, na kuna njia nyingi za kuhusika.
 
-Mifumo ya uandishi • Matumizi ya rangi • Mwelekeo Unaoonekana • Maudhui
+Mifumo ya uandishi • Matumizi ya rangi • Mwelekeo wa Kuona • Maudhui
 
 ### 3. Hadithi Nzuri {#3-a-good-story}
 
-Tovuti inapaswa kufanya kazi kama hadithi nzuri. Wageni wako safarini, na maudhui unayochangia ni sehemu yake. Michango yako inapaswa kutoshea ndani ya masimulizi ya wazi: yenye mwanzo (utangulizi/mahali pa kuingilia), katikati (seti ya mafunzo na maarifa), na mwisho (viungo) vya nyenzo husika, au hatua zinazofuata).
+Tovuti inapaswa kufanya kazi kama hadithi nzuri. Wanaotembelea wako kwenye safari, na maudhui unayochangia ni sehemu ya hiyo. Michango yako inapaswa kutoshea ndani ya simulizi wazi: yenye mwanzo (utangulizi/sehemu ya kuanzia), katikati (seti ya mafunzo na maarifa), na mwisho (kiungo/viungo vya rasilimali husika, au hatua zinazofuata).
 
-- **Kidaraja**: Usanifu wazi wa habari, uliopangwa kidaraja huwasaidia wageni wa ethereum.org kuvinjari tovuti "kama hadithi" wanapotafuta kufikia malengo yao.
-- **Jiwe la Kukanyagia:** Sisi ni jiwe la kukanyagia kwa yeyote anayetafuta majibu. Hatutaki kubadilisha au kuwa mbadala wa rasilimali nyingi ambazo tayari zipo. Tunatoa jibu na kutoa hatua zinazofuata za kuaminika.
+- **Ya Kimuundo**: Usanifu wa taarifa ulio wazi na uliopangwa kimuundo huwasaidia watembeleaji wa ethereum.org kuvinjari tovuti "kama hadithi" wanapotafuta kufikia malengo yao.
+- **Hatua ya Kuanzia:** Sisi ni hatua ya kuanzia kwa yeyote anayetafuta majibu. Hatutaki kuchukua nafasi au kuwa mbadala wa rasilimali nyingi ambazo tayari zipo. Tunatoa jibu na kutoa hatua zinazofuata za kuaminika.
 
-Safari za Mtumiaji • Maudhui
+Safari za Watumiaji • Maudhui
 
 ### 4. Inayoaminika {#4-credible}
 
-Huenda watu wanatafuta kuanzishwa kwao kwa mfumo ikolojia wa Ethereum au wanaweza kuwa na wasiwasi. Tambua wajibu huo katika jinsi unavyowasiliana. Hakikisha kwamba wote wawili wanaondoka kwa ujasiri mkubwa katika mfumo wa ikolojia wa Ethereum.
+Watu wanaweza kuwa wanatafuta utangulizi wao kwenye mfumo wa ikolojia wa Ethereum au wanaweza kuwa na shaka. Tambua jukumu hilo katika jinsi unavyowasiliana. Hakikisha kwamba wote wanaondoka wakiwa na imani kubwa zaidi katika mfumo wa ikolojia wa Ethereum.
 
 - **Mpya:** Imesasishwa kila wakati.
 - **Uthibitisho wa Kijamii:** Onyesha ukubwa, utofauti na shughuli za mfumo wa ikolojia.
-- **Thabiti:** Uthabiti katika usanifu na maudhui huwasilisha uaminifu.
+- **Inayolingana:** Msimamo katika muundo na maudhui huwasilisha uaminifu.
 
-Mwelekeo Unaoonekana • Maudhui
+Mwelekeo wa Kuona • Maudhui
 
 ### 5. Uboreshaji wa Pamoja {#5-collaborative-improvement}
 
-Tovuti ni zao la wachangiaji wengi, kama vile mfumo wa ikolojia kwa ujumla.
+Tovuti ni zao la wachangiaji wengi, kama tu mfumo wa ikolojia kwa ujumla.
 
-- **Wazi:** Idhimishe uwazi wa msimbo chanzo, michakato na miradi katika mfumo wote wa ikolojia.
-- **Inayoweza Kupanuliwa:** Mfumo wa sehemu ni lengo muhimu nyuma ya kila kitu tunachofanya, na kwa hivyo michango inapaswa pia kuwa ya kimfumo wa sehemu. Usanifu mkuu, msimbo wa kijenzi na utekelezaji wa tovuti unapaswa kuiwezesha kupanuliwa kwa urahisi katika siku zijazo.
-- **Kijaribio:** Tunafanya majaribio, kupima na kurudia kila mara.
-- **Shirikishi:** Mradi huu unatuleta sote pamoja.
-- **Endelevu:** Kuweka mazingira kwa ajili ya matengenezo ya muda mrefu na jamii
+- **Wazi:** Sherehekea uwazi wa msimbo wa chanzo, michakato na miradi kote kwenye mfumo wa ikolojia.
+- **Inayoweza Kupanuliwa:** Uundaji wa vipengele ni lengo kuu nyuma ya kila kitu tunachofanya, na kwa hivyo michango inapaswa kuwa ya vipengele pia. Muundo wa msingi, msimbo wa kijenzi na utekelezaji wa tovuti unapaswa kuiwezesha kupanuliwa kwa urahisi katika siku zijazo.
+- **Ya Kijaribio:** Tunafanya majaribio, kupima na kurudia mara kwa mara.
+- **Ya Kushirikiana:** Mradi huu unatuleta sote pamoja.
+- **Endelevu:** Kuweka mipangilio kwa ajili ya matengenezo ya muda mrefu na jamii
 
-Unaweza kuona kanuni zetu za usanifu zikifanya kazi [katika tovuti yetu yote](/).
+Unaweza kuona kanuni zetu za muundo zikifanya kazi [kote kwenye tovuti yetu](/).
 
 ## Toa maoni {#give-feedback}
 
-**Shiriki maoni yako kuhusu hati hii!** Mojawapo ya kanuni zetu zilizopendekezwa ni “**Uboreshaji wa Pamoja**” ambayo ina maana kwamba tunataka tovuti iwe zao la wachangiaji wengi. Kwa hiyo katika roho ya kanuni hiyo, tunataka kushiriki kanuni hizi za kubuni na jumuiya ya Ethereum.
+**Shiriki maoni yako kuhusu waraka huu!** Moja ya kanuni zetu zilizopendekezwa ni "**Uboreshaji wa Pamoja**" ambayo inamaanisha kuwa tunataka tovuti iwe zao la wachangiaji wengi. Kwa hivyo katika roho ya kanuni hiyo, tunataka kushiriki kanuni hizi za muundo na jamii ya Ethereum.
 
-Ingawa kanuni hizi zinalenga tovuti ya ethereum.org, tunatumai kuwa nyingi kati yazo zinawakilisha maadili ya mfumo mzima wa ikolojia wa Ethereum. Labda hata unataka kuingiza baadhi yao katika mradi wako mwenyewe!
+Ingawa kanuni hizi zinalenga tovuti ya ethereum.org, tunatumai kuwa nyingi kati yazo zinawakilisha maadili ya mfumo wa ikolojia wa Ethereum kwa ujumla. Labda hata unataka kujumuisha baadhi yazo kwenye mradi wako mwenyewe!
 
-Tujulishe mawazo yako kwenye [seva ya Discord](https://discord.gg/ethereum-org) au kwa [kufungua hoja](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Tujulishe mawazo yako kwenye [seva ya Discord](https://discord.gg/ethereum-org) au kwa [kuunda suala](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
