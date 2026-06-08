@@ -1,26 +1,23 @@
 ---
 title: Misja i wizja
 lang: pl
-description: "Misja i wizja Programu Tłumaczeń ethereum.org"
+description: Misja i wizja Programu Tłumaczeń ethereum.org
 ---
 
-# Misja i wizja {#mission-and-vision}
+Społeczność Ethereum dąży do tego, aby być globalną i inkluzywną, jednak znaczna część jej treści jest skierowana wyłącznie do osób anglojęzycznych, pomijając 6 miliardów ludzi na świecie, którzy nie mówią po angielsku. Aby ethereum.org mogło pełnić rolę portalu do Ethereum dla społeczności z całego świata, uważamy, że dostarczanie osobom nieanglojęzycznym treści o Ethereum w ich ojczystych językach jest niezbędne.
 
-Społeczność Ethereum stara się być globalna i integracyjna, ale większość jej treści jest przeznaczona wyłącznie dla osób anglojęzycznych, pomijając 6 miliardów osób na świecie niemówiących po angielsku. Uważamy, że aby Ethereum.org działała jako portal do Ethereum dla społeczności na całym świecie, niezbędne jest zapewnienie osobom nieanglojęzycznym treści Ethereum w ich ojczystych językach.
-
-Program Tłumaczeń ethereum.org ma na celu udostępnienie Ethereum wszystkim poprzez tłumaczenie ethereum.org i innych treści Ethereum na jak najwięcej języków.
+Program Tłumaczeń ethereum.org ma na celu uczynienie Ethereum dostępnym dla każdego poprzez tłumaczenie ethereum.org oraz innych treści związanych z Ethereum na jak najwięcej języków.
 
 ## Nasza misja {#our-mission}
 
-- Zapewnienie przetłumaczonych wersji strony internetowej, aby umożliwić odwiedzającym na całym świecie poznanie Ethereum w ich ojczystym języku
-- Ułatwienie dołączania większej liczby członków do globalnej społeczności Ethereum
-- Umożliwienie bardziej dostępnego i integracyjnego sposobu dzielenia się informacjami i wiedzą
-  na temat Ethereum
-- Umożliwienie członkom społeczności możliwości przyczynienia się do tłumaczeń Ethereum i zaznaczenia swojego śladu w ekosystemie
-- Identyfikowanie, nawiązywanie kontaktu i udzielanie wskazówek zaangażowanym współtwórcą, którzy chcą zaangażować się w ekosystem
+- Dostarczanie przetłumaczonych wersji strony internetowej, aby umożliwić odwiedzającym z całego świata naukę o Ethereum w ich ojczystym języku
+- Ułatwienie onboardingu nowych członków do globalnej społeczności Ethereum
+- Umożliwienie bardziej przystępnego i inkluzywnego dzielenia się informacjami i wiedzą o Ethereum
+- Umożliwienie członkom społeczności wnoszenia wkładu w postaci tłumaczeń dla Ethereum i pozostawienia swojego śladu w ekosystemie
+- Identyfikowanie, nawiązywanie kontaktów i udzielanie wskazówek pełnym pasji współtwórcom, którzy chcą zaangażować się w ekosystem
 
 ## Nasza wizja {#our-vision}
 
-- Tłumaczenie istotnych treści dla członków społeczności Ethereum z jak największej liczby krajów i części świata
-- Wspieranie dzielenia się, wiedzą w różnych językach, aby stworzyć lepiej poinformowaną i wykształconą społeczność Ethereum
-- Zwiększenie dostępności Ethereum, usuwając bariery językowe uniemożliwiające osobom nieanglojęzycznym dołączanie do ekosystemu
+- Przetłumaczenie kluczowych treści dla członków społeczności Ethereum z jak największej liczby krajów i części świata
+- Wspieranie dzielenia się wiedzą ponad barierami językowymi w celu stworzenia lepiej poinformowanej i wyedukowanej społeczności Ethereum
+- Zwiększenie inkluzywności i dostępności Ethereum poprzez usuwanie barier językowych, które powstrzymują osoby nieanglojęzyczne przed dołączeniem do ekosystemu
