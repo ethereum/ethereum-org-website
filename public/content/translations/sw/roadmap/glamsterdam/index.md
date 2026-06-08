@@ -47,6 +47,9 @@ Uboreshaji wa Glamsterdam unajikita katika malengo makuu matatu:
 
 Kwa ufupi, Glamsterdam italeta mabadiliko ya kimuundo ili kuhakikisha kwamba kadiri mtandao unavyoongeza uwezo, unasalia kuwa endelevu na utendaji unabaki juu.
 
+
+## Kuongeza uwezo wa tabaka la 1 (l1) na uchakataji sambamba
+Kuongeza uwezo wa tabaka la 1 (l1) kwa maana kunahitaji kuachana na dhana za uaminifu nje ya itifaki na vizuizi vya utekelezaji wa mfululizo. Glamsterdam inashughulikia hili kwa kuweka rasmi utengano wa majukumu fulani ya ujenzi wa kitalu na kuanzisha miundo mipya ya data inayoruhusu mtandao kujiandaa kwa uchakataji sambamba.
 ## Kuongeza uwezo wa tabaka la 1 (l1) na uchakataji sambamba {#scale-l1}
 
 Uongezaji uwezo wa maana wa tabaka la 1 (l1) unahitaji kuondokana na dhana za uaminifu nje ya itifaki na vikwazo vya utekelezaji wa mfululizo. Glamsterdam inashughulikia hili kwa kuweka rasmi utengano wa majukumu fulani ya ujenzi wa kitalu na kuanzisha miundo mipya ya data inayoruhusu mtandao kujiandaa kwa uchakataji sambamba.
@@ -101,6 +104,9 @@ Ubadilishanaji wa Orodha ya Ufikiaji wa Kitalu (eth/71 au EIP-8159) ni mshirika 
 - [Uainisho wa kiufundi wa EIP-7928](https://eips.ethereum.org/EIPS/eip-7928)
 - [Uainisho wa kiufundi wa EIP-8159](https://eips.ethereum.org/EIPS/eip-8159)
 
+
+## Uendelevu wa mtandao
+Kadiri mtandao wa Ethereum unavyokua kwa kasi, ni muhimu kuhakikisha kwamba gharama ya kuutumia inalingana na uchakavu wa maunzi yanayoendesha Ethereum. Mtandao unahitaji kuongeza vikomo vyake vya uwezo wa jumla ili kuongeza uwezo kwa usalama na kuchakata miamala zaidi.
 ## Uendelevu wa mtandao {#network-sustainability}
 
 Kadiri mtandao wa Ethereum unavyokua kwa kasi, ni muhimu kuhakikisha kwamba gharama ya kuutumia inalingana na uchakavu wa maunzi yanayoendesha Ethereum. Mtandao unahitaji kuongeza vikomo vyake vya uwezo wa jumla ili kuongeza uwezo kwa usalama na kuchakata miamala zaidi.
@@ -144,6 +150,9 @@ Kwa kupanga bei ya vitendo vya ufikiaji wa hali kwa usahihi zaidi Ethereum inawe
 
 **Rasilimali**: [Uainisho wa kiufundi wa EIP-8038](https://eips.ethereum.org/EIPS/eip-8038)
 
+
+## Uthabiti wa mtandao
+Maboresho kwenye majukumu ya mthibitishaji na michakato ya kujitoa yanahakikisha uthabiti wa mtandao wakati wa matukio ya ukataji wa watu wengi na kuweka kidemokrasia ukwasi. Maboresho haya yanafanya mtandao kuwa thabiti zaidi na kuhakikisha kwamba washiriki wote, wakubwa na wadogo, wanatendewa kwa haki.
 ## Uthabiti wa mtandao {#network-resilience}
 
 Maboresho ya majukumu ya mthibitishaji na michakato ya kujitoa yanahakikisha uthabiti wa mtandao wakati wa matukio ya ukataji wa watu wengi na kuweka ukwasi kidemokrasia. Maboresho haya yanafanya mtandao kuwa thabiti zaidi na kuhakikisha kwamba washiriki wote, wakubwa na wadogo, wanatendewa kwa haki.
@@ -183,6 +192,9 @@ Kuweka kidemokrasia ufikiaji wa foleni ya ujumuishaji kutaongeza kasi ambayo wat
 
 **Rasilimali**: [Uainisho wa kiufundi wa EIP-8080](https://eips.ethereum.org/EIPS/eip-8080)
 
+
+## Kuboresha uzoefu wa mtumiaji na msanidi
+Uboreshaji wa Glamsterdam wa Ethereum unalenga kuboresha uzoefu wa mtumiaji, kuimarisha ugunduzi wa data, na kushughulikia ukubwa wa ujumbe unaoongezeka ili kuzuia kushindwa kwa usawazishaji. Hii inafanya iwe rahisi kufuatilia kile kinachotokea mnyororoni huku ikizuia matatizo ya kiufundi kadiri mtandao unavyoongeza uwezo.
 ## Kuboresha uzoefu wa mtumiaji na msanidi {#improve-user-developer-experience}
 
 Uboreshaji wa Glamsterdam wa Ethereum unalenga kuboresha uzoefu wa mtumiaji, kuongeza ugunduzi wa data, na kushughulikia ukubwa wa ujumbe unaoongezeka ili kuzuia kushindwa kwa usawazishaji. Hii inafanya iwe rahisi kufuatilia kile kinachotokea mnyororoni huku ikizuia matatizo ya kiufundi kadiri mtandao unavyoongeza uwezo.
@@ -241,6 +253,13 @@ Mabadiliko haya yangezuia kushindwa kwa usawazishaji wa mtandao wakati wa vipind
 
 **Rasilimali**: [Uainisho wa kiufundi wa EIP-7975](https://eips.ethereum.org/EIPS/eip-7975)
 
+
+## Usomaji zaidi
+- [Ramani ya njia ya Ethereum](/roadmap/)
+- [Forkcast: Glamsterdam](https://forkcast.org/upgrade/glamsterdam)
+- [Glamsterdam Meta EIP](https://eips.ethereum.org/EIPS/eip-7773)
+- [Tangazo la blogu la Sasisho la Vipaumbele vya Itifaki kwa 2026](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
+- [Podikasti ya The Daily Gwei Refuel - Ethereum ya baada ya kwanta, Glamsterdam inakuja](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 ## Usomaji zaidi {#further-reading}
 
 - [Ramani ya njia ya Ethereum](/roadmap/)
@@ -249,6 +268,8 @@ Mabadiliko haya yangezuia kushindwa kwa usawazishaji wa mtandao wakati wa vipind
 - [Tangazo la blogu la Sasisho la Vipaumbele vya Itifaki kwa 2026](https://blog.ethereum.org/2026/02/18/protocol-priorities-update-2026)
 - [Podikasti ya The Daily Gwei Refuel - Ethereum ya baada ya kwanta, Glamsterdam inakuja](https://www.youtube.com/watch?v=qx9sd50uQjQ)
 
+
+## Maswali Yanayoulizwa Mara kwa Mara
 ## Maswali Yanayoulizwa Mara kwa Mara {#faq}
 
 ### Je, ETH inawezaje kubadilishwa baada ya mchepuo mgumu wa Glamsterdam? {#how-can-eth-be-converted-after-the-hardfork}
