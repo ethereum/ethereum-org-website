@@ -1488,8 +1488,8 @@
     {
       "name": "Curvegrid MultiBaas",
       "description": "Curvegrid offers cutting-edge solutions for blockchain application development. Curvegrid's flagship product, MultiBaas, streamlines the DApp development process with a user-friendly web UI and a robust REST API. Supporting multiple EVM chains, MultiBaas accelerates time-to-market for sectors including finance, DeFi, gaming, art, and logistics.",
-      "thumbnail_url": "https://cdn.charmverse.io/user-content/cae02d37-eadb-4a01-a063-d72588a78203/a6dfa7b6-3b1c-4ff3-b5e5-f82624024c5e/Icon-(Color).svg",
-      "banner_url": "https://cdn.charmverse.io/user-content/cae02d37-eadb-4a01-a063-d72588a78203/3151e0b3-b99e-4da6-9fdf-e98c3e985c22/Curvegrid-Banner-(1).png",
+      "thumbnail_url": null,
+      "banner_url": null,
       "twitter": "https://x.com/curvegridinc",
       "repos": [
         {
@@ -1551,8 +1551,8 @@
     {
       "name": "Vyper",
       "description": "Pythonic Smart Contract Language for the EVM",
-      "thumbnail_url": "https://cdn.charmverse.io/user-content/5302de23-eae6-4cda-97aa-25fefd829726/9aa6f15f-e32a-4bca-a40a-5b1e1122babb/2024-06-11_23-25.png",
-      "banner_url": "https://cdn.charmverse.io/user-content/5302de23-eae6-4cda-97aa-25fefd829726/6c137923-55fc-4dc9-9424-5dad59f82ab4/vyper-optimism.png",
+      "thumbnail_url": null,
+      "banner_url": null,
       "twitter": "https://x.com/vyperlang?lang=en",
       "repos": [
         {
@@ -3521,8 +3521,8 @@
     {
       "name": "EVM Explorer",
       "description": "We are excited to introduce EVM Explorer, a powerful, open-source web interface designed to streamline the exploration and analysis of blockchain data across multiple EVM chains. EVM Explorer utilizes the BlockScout API and viem library to enable users to delve into transaction patterns, user behavior, and smart contract data, providing a versatile tool for efficient and insightful blockchain exploration.",
-      "thumbnail_url": "https://cdn.charmverse.io/user-content/9c114ea1-adb5-4858-b4f2-40050fa74370/99b90eeb-a7ea-4ca6-938e-410fff892510/Social.png",
-      "banner_url": "https://cdn.charmverse.io/user-content/9c114ea1-adb5-4858-b4f2-40050fa74370/b2606c27-a963-43aa-8e78-e38e89897808/pexels-mont-photographs-385313-2948636.jpg",
+      "thumbnail_url": null,
+      "banner_url": null,
       "twitter": "https://x.com/ExplorerEVM",
       "repos": [
         {
@@ -5009,8 +5009,8 @@
     {
       "name": "Ackee",
       "description": "Ackee is trusted by top-tier organizations in web3. Our mission is to contribute to a stronger blockchain ecosystem by providing security services, tooling and education.",
-      "thumbnail_url": "https://cdn.charmverse.io/user-content/2d6a8f50-45c2-4658-a66a-74eca1149aa3/102ec612-ed55-4da8-b9fb-0bb3f5447e84/Ackee-Blockchain-Security-logo.jpg",
-      "banner_url": "https://cdn.charmverse.io/user-content/2d6a8f50-45c2-4658-a66a-74eca1149aa3/f1984493-d1a1-424e-afc1-36e1fc33f573/Ackee-Blockchain-Twitter-Banner.jpeg",
+      "thumbnail_url": null,
+      "banner_url": null,
       "twitter": "ackeeblockchain",
       "repos": [
         {
@@ -6351,8 +6351,8 @@
     {
       "name": "Opstack Kit",
       "description": "Bridging hooks for OP Stack Chains\nnpm i opstack-kit | is a toolkit for all upgrades. To easily connect and interact with the OP-Stack (Superchain)\n\n - Focus on Your Dapp\nEffortlessly create awesome OP-Stack (Superchain) sites with just npm i opstack-kit.\n\n - Enjoy the \"opstack-kit\"\nInstant server start, lightning fast hot updates, and leverage OP-Stack (Superchain) ecosystem.\n\n - Customize with OP-Stack\nUse syntax and components directly in \"opstack-kit\", or build custom themes.\n\n - Ship Fast Sites\nStart creating quickly \"opstack-kit\" after that deploy it to your network.\n\nFeatures\n- Simplifies cross L1 & L2 interactions\n- Supports \"CustomGasToken\" deposit & withdrawal functions\n- Supports multi-functionality & new fault-proof feature\n- CLI command development tools (prove, finalize)",
-      "thumbnail_url": "https://cdn.charmverse.io/user-content/e3eb66db-408b-4e21-bc69-c2927fd15b32/552ea203-8cee-4111-9a61-82fd3da74367/ok.png",
-      "banner_url": "https://cdn.charmverse.io/user-content/e3eb66db-408b-4e21-bc69-c2927fd15b32/874ceabb-8637-48ef-935d-747218d514fc/opstackkit-cover.jpg",
+      "thumbnail_url": null,
+      "banner_url": null,
       "twitter": "opstackkit",
       "repos": [
         {
