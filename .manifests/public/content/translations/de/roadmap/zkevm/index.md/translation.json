@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "locale": "de",
+  "translatedAt": "2026-06-08T10:50:02.897Z",
+  "englishManifestHash": "dd3dfe3c25fa",
+  "placeholderOrder": [
+    "LINK-9a9318",
+    "LINK-e4a93e",
+    "LINK-2257cf",
+    "LINK-c38e8e",
+    "LINK-22e441",
+    "LINK-e48a2b",
+    "LINK-113267",
+    "LINK-662d23",
+    "LINK-8c4641",
+    "LINK-6b6ecd",
+    "LINK-a6d5c4",
+    "LINK-a406ce",
+    "LINK-47943c",
+    "LINK-44f02f",
+    "LINK-e1ebcd",
+    "LINK-15e943",
+    "LINK-f2e2ec",
+    "LINK-222069",
+    "LINK-552737",
+    "LINK-57e3d0",
+    "LINK-1ac071",
+    "LINK-6a543c"
+  ],
+  "placeholderMap": {
+    "LINK-9a9318": {
+      "type": "link",
+      "values": {
+        "url": "/zero-knowledge-proofs/"
+      }
+    },
+    "LINK-e4a93e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#validator"
+      }
+    },
+    "LINK-2257cf": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/scaling/zk-rollups/"
+      }
+    },
+    "LINK-c38e8e": {
+      "type": "link",
+      "values": {
+        "url": "/glossary/#gas-limit"
+      }
+    },
+    "LINK-22e441": {
+      "type": "link",
+      "values": {
+        "url": "/zero-knowledge-proofs/#types-of-zero-knowledge-proofs"
+      }
+    },
+    "LINK-e48a2b": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/"
+      }
+    },
+    "LINK-113267": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/openvm-org/openvm"
+      }
+    },
+    "LINK-662d23": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/risc0/risc0"
+      }
+    },
+    "LINK-8c4641": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/matter-labs/zksync-airbender"
+      }
+    },
+    "LINK-6b6ecd": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/a16z/jolt"
+      }
+    },
+    "LINK-a6d5c4": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/0xPolygonHermez/zisk"
+      }
+    },
+    "LINK-a406ce": {
+      "type": "link",
+      "values": {
+        "url": "https://zkevm.ethereum.foundation/zkvm-tracker"
+      }
+    },
+    "LINK-47943c": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/verkle-trees/"
+      }
+    },
+    "LINK-44f02f": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/statelessness/"
+      }
+    },
+    "LINK-e1ebcd": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/pbs/"
+      }
+    },
+    "LINK-15e943": {
+      "type": "link",
+      "values": {
+        "url": "/roadmap/single-slot-finality/"
+      }
+    },
+    "LINK-f2e2ec": {
+      "type": "link",
+      "values": {
+        "url": "https://zkevm.ethereum.foundation"
+      }
+    },
+    "LINK-222069": {
+      "type": "link",
+      "values": {
+        "url": "https://ethproofs.org/"
+      }
+    },
+    "LINK-552737": {
+      "type": "link",
+      "values": {
+        "url": "https://zkevm.fyi"
+      }
+    },
+    "LINK-57e3d0": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/privacy-scaling-explorations/zkevm-specs"
+      }
+    },
+    "LINK-1ac071": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2024/10/23/futures4.html"
+      }
+    },
+    "LINK-6a543c": {
+      "type": "link",
+      "values": {
+        "url": "https://zkevm.ethereum.foundation/blog"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:50:02.897Z",
+      "status": "success"
+    }
+  }
+}
