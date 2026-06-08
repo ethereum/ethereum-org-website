@@ -1,159 +1,159 @@
 ---
-title: Scam help & reporting
-description: What to do if you have been scammed, how to secure your remaining assets, and where to report fraud.
+title: Fui vítima de golpe ou perdi fundos
+metaTitle: Ajuda e denúncia de golpes
+description: O que fazer se você foi vítima de um golpe, como proteger seus ativos restantes e onde denunciar fraudes.
 lang: pt-br
 ---
 
-# I was scammed or lost funds {#scam-help}
-
-Cryptocurrency scams target people of all experience levels, including professionals in finance and technology. You are not alone, and being here is the right first step.
+Golpes com criptomoedas têm como alvo pessoas de todos os níveis de experiência, incluindo profissionais de finanças e tecnologia. Você não está sozinho, e estar aqui é o primeiro passo certo.
 
 <Alert variant="error">
 <AlertEmoji text=":rotating_light:"/>
 <AlertContent>
 <AlertDescription>
 
-**No one can reverse blockchain transactions.** If someone contacts you claiming they can recover your funds for a fee, that is almost certainly a second scam. See [recovery scams](#recovery-scams) below.
+**Ninguém pode reverter transações na blockchain.** Se alguém entrar em contato com você alegando que pode recuperar seus fundos mediante o pagamento de uma taxa, isso é quase certamente um segundo golpe. Veja [golpes de recuperação](#scam-types) abaixo.
+
 </AlertDescription>
 </AlertContent>
 </Alert>
 
-## Secure your remaining assets {#secure-assets}
+## Proteja seus ativos restantes {#secure-assets}
 
-If you interacted with a scammer or suspect your wallet is compromised, take these steps immediately:
+Se você interagiu com um golpista ou suspeita que sua carteira está comprometida, siga estes passos imediatamente:
 
-1. **Move remaining funds** to a new, secure wallet that the scammer does not have access to
-2. **Revoke token approvals.** Scammers often trick you into approving unlimited token spending. Revoking these permissions prevents further draining of your wallet
-3. **Change passwords** on any exchange accounts that may be linked
-4. **Enable two-factor authentication (2FA)** on all crypto-related accounts
+1. **Mova os fundos restantes** para uma nova carteira segura à qual o golpista não tenha acesso
+2. **Revogue as aprovações de token.** Os golpistas costumam enganar você para aprovar gastos ilimitados de tokens. Revogar essas permissões evita que sua carteira continue sendo esvaziada
+3. **Altere as senhas** de quaisquer contas de corretoras (exchanges) que possam estar vinculadas
+4. **Ative a autenticação de dois fatores (2FA)** em todas as contas relacionadas a cripto
 
-### How to revoke token approvals {#revoke-approvals}
+### Como revogar aprovações de token {#revoke-approvals}
 
-When you interact with a dapp or smart contract, you may have granted it permission to spend your tokens. If a scammer tricked you into approving a malicious contract, they can continue draining your tokens even after the initial scam.
+Quando você interage com um aplicativo descentralizado (dapp) ou contrato inteligente, pode ter concedido a ele permissão para gastar seus tokens. Se um golpista o enganou para aprovar um contrato malicioso, ele pode continuar esvaziando seus tokens mesmo após o golpe inicial.
 
-Use these tools to check and revoke approvals:
+Use estas ferramentas para verificar e revogar aprovações:
 
-- [Revoke.cash](https://revoke.cash/): connect your wallet to see all active approvals and revoke them
-- [Revokescout](https://revoke.blockscout.com/): check and revoke approvals via Blockscout
-- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): check and revoke approvals via Etherscan
+- [Revoke.cash](https://revoke.cash/): conecte sua carteira para ver todas as aprovações ativas e revogá-las
+- [Revokescout](https://revoke.blockscout.com/): verifique e revogue aprovações via Blockscout
+- [Etherscan Token Approval Checker](https://etherscan.io/tokenapprovalchecker): verifique e revogue aprovações via Etherscan
 
 <DocLink href="/guides/how-to-revoke-token-access/">
-  Step-by-step guide: How to revoke token access
+  Guia passo a passo: Como revogar o acesso a tokens
 </DocLink>
 
-## Report scam addresses and websites {#report}
+## Denuncie endereços e sites fraudulentos {#report}
 
-Reporting helps warn other users and may assist law enforcement investigations. Document everything: transaction hashes, wallet addresses, screenshots, and any communication with the scammer.
+Denunciar ajuda a alertar outros usuários e pode auxiliar nas investigações das autoridades policiais. Documente tudo: hashes de transação, endereços de carteira, capturas de tela e qualquer comunicação com o golpista.
 
-### Report a scam address {#report-address}
+### Denuncie um endereço fraudulento {#report-address}
 
-- [Chainabuse](https://www.chainabuse.com/): community-driven scam and fraud reporting database. Submit reports and search for known scam addresses
-- [Etherscan report](https://info.etherscan.com/report-address/): flag an address on the most-used Ethereum block explorer
-- [CryptoScamDB](https://cryptoscamdb.org/): open-source database tracking cryptocurrency scams
+- [Chainabuse](https://www.chainabuse.com/): banco de dados de denúncias de golpes e fraudes voltado para a comunidade. Envie denúncias e pesquise por endereços fraudulentos conhecidos
+- [Denúncia no Etherscan](https://info.etherscan.com/report-address/): sinalize um endereço no explorador de blocos mais usado do Ethereum
+- [CryptoScamDB](https://cryptoscamdb.org/): banco de dados de código aberto que rastreia golpes com criptomoedas
 
-### Report a scam website or social media account {#report-website}
+### Denuncie um site ou conta de rede social fraudulenta {#report-website}
 
-- [PhishTank](https://phishtank.org/): submit and verify phishing URLs
-- [Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/): report phishing sites to Google so they get blocked in Chrome and other browsers
-- [Netcraft](https://report.netcraft.com/report/mistake): report malicious and fraudulent websites
-- Report directly on the social media platform where the scam occurred (Twitter/X, Discord, Telegram all have reporting features)
+- [PhishTank](https://phishtank.org/): envie e verifique URLs de phishing
+- [Navegação Segura do Google](https://safebrowsing.google.com/safebrowsing/report_phish/): denuncie sites de phishing ao Google para que sejam bloqueados no Chrome e em outros navegadores
+- [Netcraft](https://report.netcraft.com/report/mistake): denuncie sites maliciosos e fraudulentos
+- Denuncie diretamente na plataforma de rede social onde o golpe ocorreu (Twitter/X, Discord e Telegram possuem recursos de denúncia)
 
-### Report to law enforcement {#report-law-enforcement}
+### Denuncie às autoridades policiais {#report-law-enforcement}
 
-- **United States:** [FBI Internet Crime Complaint Center (IC3)](https://www.ic3.gov/)
-- **United Kingdom:** [Action Fraud](https://www.actionfraud.police.uk/)
-- **European Union:** [Europol](https://www.europol.europa.eu/report-a-crime)
-- **Other countries:** file a report with your local police. Cryptocurrency fraud is a crime in most jurisdictions
+- **Estados Unidos:** [Centro de Reclamações de Crimes na Internet do FBI (IC3)](https://www.ic3.gov/)
+- **Reino Unido:** [Action Fraud](https://www.actionfraud.police.uk/)
+- **União Europeia:** [Europol](https://www.europol.europa.eu/report-a-crime)
+- **Outros países:** registre um boletim de ocorrência na polícia local. A fraude com criptomoedas é um crime na maioria das jurisdições
 
-## Analyze what happened {#analyze}
+## Analise o que aconteceu {#analyze}
 
-Understanding where your funds went can help with reports and may support recovery efforts if the funds land on a centralized exchange.
+Entender para onde seus fundos foram pode ajudar nas denúncias e pode apoiar os esforços de recuperação se os fundos chegarem a uma corretora centralizada.
 
-- [Blockscout](https://eth.blockscout.com/): open-source block explorer to look up any transaction hash or wallet address to see where funds were sent
-- [Etherscan](https://etherscan.io/): look up any transaction hash or wallet address to see where funds were sent
-- [Chainabuse lookup](https://www.chainabuse.com/): check if an address has already been reported by other victims
-- [MetaSleuth](https://metasleuth.io/) by BlockSec: visual transaction tracing tool that maps fund flows
+- [Blockscout](https://eth.blockscout.com/): explorador de blocos de código aberto para pesquisar qualquer hash da transação ou endereço de carteira para ver para onde os fundos foram enviados
+- [Etherscan](https://etherscan.io/): pesquise qualquer hash da transação ou endereço de carteira para ver para onde os fundos foram enviados
+- [Pesquisa no Chainabuse](https://www.chainabuse.com/): verifique se um endereço já foi denunciado por outras vítimas
+- [MetaSleuth](https://metasleuth.io/) da BlockSec: ferramenta visual de rastreamento de transações que mapeia os fluxos de fundos
 
-**If funds were sent to a centralized exchange** (like Coinbase, Binance, Kraken), contact their support team immediately with the transaction details. Exchanges can sometimes freeze accounts flagged for fraud.
+**Se os fundos foram enviados para uma corretora centralizada** (como Coinbase, Binance, Kraken), entre em contato com a equipe de suporte deles imediatamente com os detalhes da transação. As corretoras às vezes podem congelar contas sinalizadas por fraude.
 
-## The hard truth {#hard-truth}
+## A dura verdade {#hard-truth}
 
-Because Ethereum is decentralized, no central authority can reverse transactions or recover stolen funds. Once a transaction is confirmed on the blockchain, it is final.
+Como o Ethereum é descentralizado, nenhuma autoridade central pode reverter transações ou recuperar fundos roubados. Uma vez que uma transação é confirmada na blockchain, ela é definitiva.
 
-Reporting is still valuable. Reports help law enforcement track organized fraud rings, and flagging addresses on Chainabuse and Etherscan warns future potential victims.
+Denunciar ainda é valioso. As denúncias ajudam as autoridades policiais a rastrear quadrilhas organizadas de fraude, e sinalizar endereços no Chainabuse e no Etherscan alerta futuras vítimas em potencial.
 
-## Types of scams to watch for {#scam-types}
+## Tipos de golpes para ficar atento {#scam-types}
 
 <ExpandableCard
-title="Golpes de sorteios e airdrops"
-contentPreview="Ninguém dá ETH de graça. Essas ofertas são sempre golpes."
+title="Giveaway and airdrop scams"
+contentPreview="No one is giving away free ETH. These offers are always scams."
 eventCategory="SupportScamPage"
 eventName="clicked giveaway scam"
-
 >
 
-Scammers create fake giveaways promising to multiply your ETH or give you free tokens. They often impersonate well-known figures like Vitalik Buterin. If you send ETH to a "giveaway" address, you will not receive anything back.
+Os golpistas criam falsos sorteios (giveaways) prometendo multiplicar seu ETH ou dar tokens gratuitos. Eles frequentemente se passam por figuras conhecidas como Vitalik Buterin. Se você enviar ETH para um endereço de "sorteio", não receberá nada de volta.
 
-**Remember:** Vitalik and other prominent figures will never ask you to send them ETH.
+**Lembre-se:** Vitalik e outras figuras proeminentes nunca pedirão que você envie ETH para eles.
 
-[More on common scams](/security/#common-scams)
+[Mais sobre golpes comuns](/security/#common-scams)
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Personificação e suporte falso"
-contentPreview="Ninguém do Ethereum ou do ethereum.org entrará em contato com você primeiro."
+title="Impersonation and fake support"
+contentPreview="No one from Ethereum or ethereum.org will ever contact you first."
 eventCategory="SupportScamPage"
 eventName="clicked impersonation scam"
-
 >
 
-Scammers impersonate Ethereum team members, moderators, or support agents on Discord, Telegram, and social media. They may send you direct messages offering help or claiming there is a problem with your account.
+Os golpistas se passam por membros da equipe do Ethereum, moderadores ou agentes de suporte no Discord, Telegram e nas redes sociais. Eles podem enviar mensagens diretas oferecendo ajuda ou alegando que há um problema com sua conta.
 
-**Remember:**
+**Lembre-se:**
 
-- There is no "Ethereum support team"
-- Real moderators will never DM you first
-- Never share your seed phrase or private keys with anyone, for any reason
-- Never click links sent in unsolicited messages
+- Não existe uma "equipe de suporte do Ethereum"
+- Moderadores reais nunca enviarão uma mensagem direta (DM) para você primeiro
+- Nunca compartilhe sua frase semente ou chaves privadas com ninguém, por nenhum motivo
+- Nunca clique em links enviados em mensagens não solicitadas
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Golpes de recuperação"
-contentPreview="Depois de sofrer um golpe, cuidado com falsos 'especialistas em recuperação de cripto'."
+title="Recovery scams"
+contentPreview="After being scammed, watch out for fake 'crypto recovery experts.'"
 eventCategory="SupportScamPage"
 eventName="clicked recovery scam"
-
 >
 
-Recovery scams specifically target people who have already lost funds. Scammers monitor social media for people talking about being scammed, then reach out posing as "blockchain investigators" or "crypto recovery experts."
+Os golpes de recuperação têm como alvo específico pessoas que já perderam fundos. Os golpistas monitoram as redes sociais em busca de pessoas falando sobre terem sido vítimas de golpes e, em seguida, entram em contato se passando por "investigadores de blockchain" ou "especialistas em recuperação de cripto".
 
-They promise to trace and recover your stolen crypto for an upfront fee. After you pay, they disappear.
+Eles prometem rastrear e recuperar suas criptomoedas roubadas mediante uma taxa antecipada. Depois que você paga, eles desaparecem.
 
-**No legitimate service can reverse blockchain transactions.** Anyone promising this is lying. This is one of the most common follow-up scams.
+**Nenhum serviço legítimo pode reverter transações na blockchain.** Qualquer pessoa que prometa isso está mentindo. Este é um dos golpes subsequentes mais comuns.
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Sites de phishing e apps falsos"
-contentPreview="Sites fraudulentos imitam carteiras e corretoras reais para roubar suas credenciais."
+title="Phishing websites and fake apps"
+contentPreview="Scam sites mimic real wallets and exchanges to steal your credentials."
 eventCategory="SupportScamPage"
 eventName="clicked phishing scam"
-
 >
 
-Phishing sites look identical to real wallet apps, exchanges, or DeFi platforms. They trick you into entering your seed phrase or connecting your wallet, then drain your funds.
+Sites de phishing parecem idênticos a aplicativos de carteira reais, corretoras ou plataformas de finanças descentralizadas (DeFi). Eles enganam você para inserir sua frase semente ou conectar sua carteira e, em seguida, esvaziam seus fundos.
 
-**Protect yourself:**
+**Proteja-se:**
 
-- Always verify the URL before connecting your wallet
-- Bookmark the official sites you use regularly
-- Never enter your seed phrase on any website. Legitimate apps never ask for it
-- Use [PhishTank](https://phishtank.org/) to check suspicious URLs
+- Sempre verifique a URL antes de conectar sua carteira
+- Adicione aos favoritos os sites oficiais que você usa regularmente
+- Nunca insira sua frase semente em nenhum site. Aplicativos legítimos nunca pedem por ela
+- Use o [PhishTank](https://phishtank.org/) para verificar URLs suspeitas
 
 <DocLink href="/guides/how-to-id-scam-tokens/">
-  How to identify scam tokens
+  Como identificar tokens fraudulentos
 </DocLink>
-</ExpandableCard>
+
+</DocLink>
 
 <DocLink href="/security/">
-  Full guide to Ethereum security and scam prevention
+  Guia completo sobre segurança no Ethereum e prevenção de golpes
 </DocLink>

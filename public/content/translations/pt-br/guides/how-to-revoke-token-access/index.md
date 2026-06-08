@@ -1,75 +1,73 @@
 ---
-title: Como revogar o acesso ao contrato inteligente aos seus fundos cripto
-description: Um guia sobre como revogar o acesso explorativo ao token de contrato inteligente
+title: Como revogar o acesso de contratos inteligentes aos seus fundos de criptomoedas
+description: Um guia prático sobre como revogar o acesso exploratório de contratos inteligentes a tokens
 lang: pt-br
 ---
 
-# Como revogar o acesso ao contrato inteligente aos seus fundos cripto
+Este guia ensinará como visualizar uma lista de todos os [contratos inteligentes](/glossary/#smart-contract) aos quais você permitiu acesso aos seus fundos e como cancelá-los.
 
-Este guia ensinará como visualizar uma lista de todos os [contratos inteligentes](/glossary/#smart-contract) aos quais você permitiu acesso aos seus fundos e como cancelar essas permissões.
+Às vezes, desenvolvedores mal-intencionados criam backdoors em contratos inteligentes que permitem o acesso aos fundos de usuários desavisados que interagem com o contrato inteligente. O que frequentemente acontece é que essas plataformas pedem ao usuário permissão para gastar um **número ilimitado de tokens** em uma tentativa de economizar pequenas quantidades de [gás](/glossary/#gas) no futuro, mas isso traz um risco maior.
 
-Às vezes, desenvolvedores maliciosos constroem backdoors em contratos inteligentes que permitem acesso aos fundos de usuários desinformados que interagem com contratos inteligentes. O que acontece com frequência é que essas plataformas pedem permissão ao usuário para gastar um **número ilimitado de tokens** na tentativa de economizar pequenas quantidades de [gás](/glossary/#gas) no futuro, mas isso acarreta um risco maior.
+Uma vez que uma plataforma tem direitos de acesso ilimitado a um token na sua [carteira](/glossary/#wallet), eles podem gastar todos esses tokens, mesmo que você tenha retirado seus fundos da plataforma deles para a sua carteira. Agentes mal-intencionados ainda podem acessar seus fundos e retirá-los para as carteiras deles, sem deixar nenhuma opção de recuperação para você.
 
-Depois que uma plataforma tem direitos de acesso ilimitados a um token em sua [carteira](/glossary/#wallet), ela pode gastar todos esses tokens, mesmo que você tenha retirado seus fundos da plataforma para sua carteira. Atores maliciosos ainda podem acessar seus fundos e retirá-los para suas carteiras sem uma opção de recuperação para você.
+As únicas proteções são evitar o uso de novos projetos não testados, aprovar apenas o que você precisa ou revogar o acesso regularmente. Então, como você faz isso?
 
-As únicas proteções são deixar de usar novos projetos não testados, aprovar apenas o que você precisa, ou revogar o acesso regularmente. Então, como fazer isso?
+## Passo 1: Use ferramentas de revogação de acesso {#step-1-use-revoke-access-tools}
 
-## Passo 1: Usar ferramentas de revogação de acesso
-
-Vários sites permitem que você veja e revogue os contratos inteligentes conectados ao seu endereço. Visite o site e conecte sua carteira:
+Vários sites permitem que você visualize e revogue contratos inteligentes conectados ao seu endereço. Visite o site e conecte sua carteira:
 
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Blockscout](https://eth.blockscout.com/apps/revokescout) (Ethereum)
-- [Revoke](https://revoke.cash/) (múltiplas redes)
-- [Unrekt](https://app.unrekt.net/) (múltiplas redes)
-- [EverRevoke](https://everrise.com/everrevoke/) (múltiplas redes)
+- [Blockscout](https://eth.blockscout.com/essential-dapps/revoke) (Ethereum)
+- [Revoke](https://revoke.cash/) (várias redes)
+- [Unrekt](https://app.unrekt.net/) (várias redes)
+- [EverRevoke](https://everrise.com/everrevoke/) (várias redes)
 
-## Passo 2: Conecte sua carteira
+## Passo 2: Conecte sua carteira {#step-2-connect-your-wallet}
 
-Assim que estiver no site, clique em “Conectar carteira”. O site deverá solicitar que você conecte sua carteira.
+Assim que estiver no site, clique em “Connect wallet” (Conectar carteira). O site deve solicitar que você conecte sua carteira.
 
-Certifique-se de usar a mesma rede em sua carteira e site. Você verá apenas os contratos inteligentes relacionados à rede selecionada. Por exemplo, se você se conectar à Ethereum Mainnet (Rede principal do Ethereum), você verá apenas contratos do Ethereum, não contratos de outras redes, como a Polygon.
+Certifique-se de usar a mesma rede na sua carteira e no site. Você verá apenas os contratos inteligentes relacionados à rede selecionada. Por exemplo, se você se conectar à Rede Principal do Ethereum, verá apenas contratos do Ethereum, não contratos de outras cadeias, como a Polygon.
 
-## Passo 3: Selecione um contrato inteligente que deseja revogar
+## Passo 3: Selecione um contrato inteligente que você deseja revogar {#step-3-select-a-smart-contract-you-wish-to-revoke}
 
-Você deve ver todos os contratos aos quais é permitido acesso a seus tokens e seus limites de gastos. Encontre aquele que você deseja encerrar.
+Você deve ver todos os contratos que têm acesso permitido aos seus tokens e o limite de gastos deles. Encontre aquele que você deseja encerrar.
 
-Se você não sabe qual contrato escolher, você pode revogar todos eles. Isso não criará nenhum problema para você, mas terá que conceder um novo conjunto de permissões na próxima vez que interagir com qualquer um desses contratos.
+Se você não sabe qual contrato escolher, pode revogar todos eles. Isso não criará nenhum problema para você, mas você terá que conceder um novo conjunto de permissões na próxima vez que interagir com qualquer um desses contratos.
 
-## Passo 4: Revogar o acesso aos seus fundos
+## Passo 4: Revogue o acesso aos seus fundos {#step-4-revoke-access-to-your-funds}
 
-Ao clicar em revogar, você verá uma nova sugestão de transação na sua carteira. Isso é o que se espera que aconteça. Você terá que pagar a tarifa para o cancelamento ser bem-sucedido. Dependendo da rede, isso pode levar de um a vários minuto para ser processado.
+Assim que você clicar em revogar, deverá ver uma nova sugestão de transação na sua carteira. Isso é esperado. Você terá que pagar a taxa para que o cancelamento seja bem-sucedido. Dependendo da rede, isso pode levar de um a vários minutos para ser processado.
 
-Aconselhamos que você atualize a ferramenta de revogação após alguns minutos e conecte sua carteira novamente para ter certeza de que o contrato revogado desapareceu da lista.
+Aconselhamos que você atualize a ferramenta de revogação após alguns minutos e conecte sua carteira novamente para verificar se o contrato revogado desapareceu da lista.
 
-<mark>Recomendamos que você nunca permita que projetos tenham acesso ilimitado aos seus tokens e revogue regularmente todas as permissões de acesso a tokens. Revogar o acesso a tokens nunca deve resultar em perda de fundos, especialmente se você usar as ferramentas listadas acima.</mark>
+<mark>Recomendamos que você nunca permita que projetos tenham acesso ilimitado aos seus tokens e revogue todo o acesso de permissão de tokens regularmente. Revogar o acesso a tokens nunca deve resultar em perda de fundos, especialmente se você usar as ferramentas listadas acima.</mark>
 
-<br />
+ <br />
 
 <Alert variant="update">
 <AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
-  <div>Quer saber mais?</div>
+  <div>Quer aprender mais?</div>
   <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
 </AlertContent>
 </Alert>
 
-## Perguntas frequentes
+## Perguntas frequentes {#frequently-asked-questions}
 
-### A revogação do acesso ao token também encerrará staking, pooling, empréstimo, etc?
+### Revogar o acesso ao token também encerra staking, pooling, empréstimo, etc.? {#does-revoking-token-access-also-terminate-staking-pooling-lending-etc}
 
-Não, isso não afetará nenhuma de suas estratégias de [DeFi](/glossary/#defi). Você permanecerá em suas posições e continuará recebendo recompensas, etc.
+Não, isso não afetará nenhuma das suas estratégias de [finanças descentralizadas (DeFi)](/glossary/#defi). Você permanecerá em suas posições e continuará recebendo recompensas, etc.
 
-### Desconectar uma carteira de um projeto é o mesmo que remover a permissão para usar meus fundos?
+### Desconectar uma carteira de um projeto é o mesmo que remover a permissão para usar meus fundos? {#is-disconnecting-a-wallet-from-a-project-the-same-as-removing-permission-to-use-my-funds}
 
-Não, se você desconectar sua carteira do projeto, mas tiver concedido permissões de acesso aos tokens, eles ainda podem usar esses tokens. Você precisa revogar esse acesso.
+Não, se você desconectar sua carteira do projeto, mas tiver concedido permissões de token, eles ainda poderão usar esses tokens. Você precisa revogar esse acesso.
 
-### Quando a permissão do contrato expirará?
+### Quando a permissão do contrato expirará? {#when-will-the-contract-permission-expire}
 
-Não há datas de validade nas permissões do contrato. Se você conceder permissões contratuais, elas podem ser usadas, mesmo anos após serem concedidas.
+Não há datas de validade nas permissões de contrato. Se você conceder permissões de contrato, elas poderão ser usadas, mesmo anos após serem concedidas.
 
-### Por que os projetos definem a permissão de token ilimitada?
+### Por que os projetos definem permissão de token ilimitada? {#why-do-projects-set-unlimited-token-allowance}
 
-Projetos muitas vezes fazem isso para minimizar o número de solicitações necessárias, ou seja, o usuário só tem que aprovar uma vez e pagar a taxa de transação apenas uma vez. Embora conveniente, isso pode ser perigoso para os usuários aprovarem descuidadamente, em sites que não são comprovados com o tempo ou auditados. Algumas carteiras permitem que você restrinja manualmente a quantidade de tokens a serem aprovados para limitar o seu risco. Contate seu provedor de carteira para obter mais informações.
+Os projetos costumam fazer isso para minimizar o número de solicitações necessárias, o que significa que o usuário só precisa aprovar uma vez e pagar a taxa de transação apenas uma vez. Embora conveniente, pode ser perigoso para os usuários aprovar de forma descuidada, em sites que não foram comprovados com o tempo ou auditados. Algumas carteiras permitem que você restrinja manualmente a quantidade de tokens sendo aprovados para limitar seu risco. Verifique com o provedor da sua carteira para obter mais informações.
