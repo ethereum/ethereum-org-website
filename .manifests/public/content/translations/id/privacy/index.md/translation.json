@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "locale": "id",
+  "translatedAt": "2026-06-08T10:01:55.918Z",
+  "englishManifestHash": "636f2837eb7e",
+  "placeholderOrder": [
+    "LINK-ec994d",
+    "LINK-5d6098",
+    "LINK-85cd38",
+    "LINK-9f7125",
+    "LINK-5f7f20",
+    "LINK-b74814",
+    "LINK-8e34e4",
+    "LINK-fa9dbc",
+    "LINK-f8eda7",
+    "LINK-95fc45",
+    "LINK-dca2e2",
+    "LINK-2812de",
+    "LINK-535525",
+    "LINK-8d5afb",
+    "LINK-c19793",
+    "LINK-41b6a0",
+    "LINK-0178dc",
+    "LINK-bdcf14",
+    "LINK-a0e92a",
+    "LINK-091b0e",
+    "LINK-40ba05",
+    "LINK-232350",
+    "LINK-43cef5",
+    "LINK-b89402",
+    "LINK-a36c77",
+    "LINK-8053c4",
+    "LINK-8e7acf",
+    "LINK-8ecddb",
+    "LINK-7f7774",
+    "LINK-99ff6e",
+    "LINK-2736a2"
+  ],
+  "placeholderMap": {
+    "LINK-ec994d": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2025/04/14/privacy.html"
+      }
+    },
+    "LINK-5d6098": {
+      "type": "link",
+      "values": {
+        "url": "/decentralized-identity/#public-key-cryptography"
+      }
+    },
+    "LINK-85cd38": {
+      "type": "link",
+      "values": {
+        "url": "https://docs.privacypools.com/"
+      }
+    },
+    "LINK-9f7125": {
+      "type": "link",
+      "values": {
+        "url": "https://tornado.cash/"
+      }
+    },
+    "LINK-5f7f20": {
+      "type": "link",
+      "values": {
+        "url": "https://www.railgun.org/"
+      }
+    },
+    "LINK-b74814": {
+      "type": "link",
+      "values": {
+        "url": "https://aztec.network/"
+      }
+    },
+    "LINK-8e34e4": {
+      "type": "link",
+      "values": {
+        "url": "https://vitalik.eth.limo/general/2023/01/20/stealth.html"
+      }
+    },
+    "LINK-fa9dbc": {
+      "type": "link",
+      "values": {
+        "url": "https://app.umbra.cash/faq"
+      }
+    },
+    "LINK-f8eda7": {
+      "type": "link",
+      "values": {
+        "url": "https://www.fluidkey.com/"
+      }
+    },
+    "LINK-95fc45": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/plasma-fold"
+      }
+    },
+    "LINK-dca2e2": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/maci"
+      }
+    },
+    "LINK-2812de": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/semaphore"
+      }
+    },
+    "LINK-535525": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec"
+      }
+    },
+    "LINK-8d5afb": {
+      "type": "link",
+      "values": {
+        "url": "https://hackmd.io/@brech1/ethereum-privacy-pir?utm_source=preview-mode&utm_medium=rec"
+      }
+    },
+    "LINK-c19793": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/voprf"
+      }
+    },
+    "LINK-41b6a0": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1"
+      }
+    },
+    "LINK-0178dc": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/machina-io"
+      }
+    },
+    "LINK-bdcf14": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/client-side-proving"
+      }
+    },
+    "LINK-a0e92a": {
+      "type": "link",
+      "values": {
+        "url": "https://tlsnotary.org/"
+      }
+    },
+    "LINK-091b0e": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/mopro"
+      }
+    },
+    "LINK-40ba05": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/private-proof-delegation"
+      }
+    },
+    "LINK-232350": {
+      "type": "link",
+      "values": {
+        "url": "https://noir-lang.org/"
+      }
+    },
+    "LINK-43cef5": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/blog/zero-to-start-applied-fully-homomorphic-encryption-fhe-part-1"
+      }
+    },
+    "LINK-b89402": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/projects/machina-io"
+      }
+    },
+    "LINK-a36c77": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/blog/secure-multi-party-computation"
+      }
+    },
+    "LINK-8053c4": {
+      "type": "link",
+      "values": {
+        "url": "/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important"
+      }
+    },
+    "LINK-8e7acf": {
+      "type": "link",
+      "values": {
+        "url": "https://pse.dev/"
+      }
+    },
+    "LINK-8ecddb": {
+      "type": "link",
+      "values": {
+        "url": "https://web3privacy.info/"
+      }
+    },
+    "LINK-7f7774": {
+      "type": "link",
+      "values": {
+        "url": "https://beta.walletbeat.eth.limo/wallet/summary/"
+      }
+    },
+    "LINK-99ff6e": {
+      "type": "link",
+      "values": {
+        "url": "https://zkkit.pse.dev/"
+      }
+    },
+    "LINK-2736a2": {
+      "type": "link",
+      "values": {
+        "url": "/apps/categories/privacy/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T10:01:55.918Z",
+      "status": "success"
+    }
+  }
+}
