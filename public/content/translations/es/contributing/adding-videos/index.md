@@ -18,6 +18,8 @@ Ethereum.org es un recurso educativo y neutral. La galería de videos está sele
 
 El sitio no incluye videos que promuevan principalmente un producto, token o servicio comercial específico.
 
+
+## Criterios de inclusión
 ## Criterios de inclusión {#criteria-for-inclusion}
 
 ### Requisitos indispensables {#must-haves}
@@ -34,6 +36,8 @@ El sitio no incluye videos que promuevan principalmente un producto, token o ser
 - **Provenir de una fuente creíble**: el contenido de educadores, investigadores y fuentes establecidas recibe prioridad.
 - **Oportuno y atemporal**: se prefiere el contenido que sigue siendo relevante a lo largo del tiempo sobre el material que depende del tiempo.
 
+
+## Cómo añadir un video
 ## Cómo añadir un video {#how-to-add-a-video}
 
 ### Opción 1: Abrir un problema (issue) {#open-an-issue}
@@ -141,6 +145,15 @@ También puede usar etiquetas nuevas; estarán disponibles para futuras agrupaci
 
 Abra una solicitud de extracción (pull request) con sus cambios a la rama `dev`. El equipo revisará su envío y le proporcionará comentarios.
 
+
+## Mantenimiento
+Los videos incluidos se revisan de forma rutinaria para garantizar que:
+
+- Sigan cumpliendo con los criterios de inclusión
+- Contengan información precisa y actualizada
+- Tengan enlaces de alojamiento/YouTube que funcionen
+
+Si nota algún problema con un video incluido, [cree un problema (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org).
 ## Mantenimiento {#maintenance}
 
 Los videos incluidos se revisan de forma rutinaria para garantizar que:
@@ -151,6 +164,9 @@ Los videos incluidos se revisan de forma rutinaria para garantizar que:
 
 Si nota algún problema con un video incluido, [cree un problema (issue)](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+✨,content+🖋️&template=suggest_video.yaml) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org).
 
+
+## Términos de uso
+Consulte los [términos de uso](/terms-of-use/) de ethereum.org. La información en ethereum.org se proporciona únicamente con fines de información general.
 ## Términos de uso {#terms-of-use}
 
 Consulte los [términos de uso](/terms-of-use/) de ethereum.org. La información en ethereum.org se proporciona únicamente con fines de información general.
