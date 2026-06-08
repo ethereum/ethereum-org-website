@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "locale": "ja",
+  "translatedAt": "2026-06-08T08:22:01.117Z",
+  "englishManifestHash": "c2516db218de",
+  "placeholderOrder": [
+    "LINK-8ad263",
+    "LINK-70d3e6",
+    "LINK-a56f06",
+    "LINK-1fbc8f",
+    "LINK-bb6b09",
+    "LINK-95778f",
+    "LINK-45131c",
+    "LINK-a79574",
+    "LINK-ef6d46",
+    "LINK-733e65",
+    "LINK-92684e",
+    "LINK-d1973f",
+    "LINK-92684e"
+  ],
+  "placeholderMap": {
+    "LINK-8ad263": {
+      "type": "link",
+      "values": {
+        "url": "https://discord.com/invite/ethereum-org"
+      }
+    },
+    "LINK-70d3e6": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8"
+      }
+    },
+    "LINK-a56f06": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+      }
+    },
+    "LINK-1fbc8f": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8"
+      }
+    },
+    "LINK-bb6b09": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8"
+      }
+    },
+    "LINK-95778f": {
+      "type": "link",
+      "values": {
+        "url": "https://www.figma.com/community/file/1134414495420383395"
+      }
+    },
+    "LINK-45131c": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request"
+      }
+    },
+    "LINK-a79574": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/labels/design%20system"
+      }
+    },
+    "LINK-ef6d46": {
+      "type": "link",
+      "values": {
+        "url": "/developers/docs/design-and-ux/"
+      }
+    },
+    "LINK-733e65": {
+      "type": "link",
+      "values": {
+        "url": "/contributing/design/adding-design-resources"
+      }
+    },
+    "LINK-92684e": {
+      "type": "link",
+      "values": {
+        "url": "https://github.com/ethereum/ethereum-org-website/issues/new"
+      }
+    },
+    "LINK-d1973f": {
+      "type": "link",
+      "values": {
+        "url": "/assets/"
+      }
+    }
+  },
+  "sections": {
+    "_all": {
+      "translatedAt": "2026-06-08T08:22:01.117Z",
+      "status": "success"
+    }
+  }
+}
