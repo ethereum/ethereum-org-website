@@ -1,0 +1,527 @@
+{
+  "version": 1,
+  "sourceFile": "public/content/community/support/scams/index.md",
+  "generatedAt": "2026-06-08T07:35:47.156Z",
+  "rootHash": "49fd512dd49a",
+  "tree": {
+    "contentHash": "524ebff650db",
+    "anchorHash": "811be091e67e",
+    "children": {
+      "frontmatter:title": {
+        "contentHash": "b4466d4c117c",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:metaTitle": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "e97e3c2d0de2"
+      },
+      "frontmatter:description": {
+        "contentHash": "cc916a1aa382",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "frontmatter:lang": {
+        "contentHash": "e3b0c44298fc",
+        "anchorHash": "dbd3a49d0d90"
+      },
+      "prose:0": {
+        "contentHash": "9a5797384747",
+        "anchorHash": "e3b0c44298fc"
+      },
+      "component:5": {
+        "contentHash": "bd59f1ee3396",
+        "anchorHash": "81c5143c6dcb",
+        "children": {
+          "attr:variant": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "ca00fccfb408"
+          },
+          "component:0": {
+            "contentHash": "4b9f7d802648",
+            "anchorHash": "280bc4c54c4a",
+            "children": {
+              "attr:text": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "5b8133c2cbbf"
+              }
+            }
+          },
+          "component:1": {
+            "contentHash": "bd78cfc352f2",
+            "anchorHash": "36dedf8fb92b",
+            "children": {
+              "component:0": {
+                "contentHash": "d03d5d22513b",
+                "anchorHash": "aaa0a7ff00b2",
+                "children": {
+                  "prose:1": {
+                    "contentHash": "06e6baa5aec7",
+                    "anchorHash": "e3b0c44298fc"
+                  },
+                  "link:0": {
+                    "contentHash": "cfb5b81aa474",
+                    "anchorHash": "968cfa6050d8"
+                  },
+                  "prose:2": {
+                    "contentHash": "a46435f4df98",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "prose:1",
+                  "link:0",
+                  "prose:2"
+                ]
+              }
+            }
+          }
+        },
+        "childrenOrder": [
+          "attr:variant",
+          "component:0",
+          "component:1"
+        ]
+      },
+      "secure-assets": {
+        "contentHash": "2d2205396549",
+        "anchorHash": "cca98f4042f3",
+        "labelHash": "d1aa19e1fcde",
+        "children": {
+          "_label": {
+            "contentHash": "d1aa19e1fcde",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "fa68a94577ec",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "revoke-approvals": {
+            "contentHash": "b5be324920fd",
+            "anchorHash": "4adf9486952c",
+            "labelHash": "093e61fd8bfe",
+            "children": {
+              "_label": {
+                "contentHash": "093e61fd8bfe",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "ecab474689fb",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "85e9dd05d2c0",
+                "anchorHash": "85e6de2830ef"
+              },
+              "prose:4": {
+                "contentHash": "152e4f6fc0f5",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "99f3a34e3519",
+                "anchorHash": "a3aa204f3f6f"
+              },
+              "prose:5": {
+                "contentHash": "518cee8977b9",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "d5313148f689",
+                "anchorHash": "0d2f25f8875b"
+              },
+              "prose:6": {
+                "contentHash": "1ce9d8f8a9b4",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "component:8": {
+                "contentHash": "826bf3933b5f",
+                "anchorHash": "94c0df5f9ebf",
+                "children": {
+                  "attr:href": {
+                    "contentHash": "e3b0c44298fc",
+                    "anchorHash": "e99a14df0c81"
+                  },
+                  "prose:0": {
+                    "contentHash": "f271aa51958c",
+                    "anchorHash": "e3b0c44298fc"
+                  }
+                },
+                "childrenOrder": [
+                  "attr:href",
+                  "prose:0"
+                ]
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6",
+              "component:8"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "revoke-approvals"
+        ]
+      },
+      "report": {
+        "contentHash": "b7761da496d3",
+        "anchorHash": "064dde17d3ca",
+        "labelHash": "d378611a0c8a",
+        "children": {
+          "_label": {
+            "contentHash": "d378611a0c8a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "cdc04d8a3394",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "report-address": {
+            "contentHash": "bbc355b4f3d7",
+            "anchorHash": "028b3e2dda53",
+            "labelHash": "fc3e250cd83f",
+            "children": {
+              "_label": {
+                "contentHash": "fc3e250cd83f",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "dcdcdc4a35e9",
+                "anchorHash": "a63b46d52c58"
+              },
+              "prose:4": {
+                "contentHash": "edefa9d5c687",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "1da0aa7167cf",
+                "anchorHash": "14885b34118b"
+              },
+              "prose:5": {
+                "contentHash": "8289aed87212",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "84ef4ef797f9",
+                "anchorHash": "b0a65ae8093a"
+              },
+              "prose:6": {
+                "contentHash": "949472a422a2",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "report-website": {
+            "contentHash": "20a13fc40796",
+            "anchorHash": "335a11c8a5ce",
+            "labelHash": "6c4709e757e3",
+            "children": {
+              "_label": {
+                "contentHash": "6c4709e757e3",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "3973e022e932",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "ee6dacf19eb5",
+                "anchorHash": "e41e6c9cd188"
+              },
+              "prose:4": {
+                "contentHash": "76d37e79149e",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "743371d01f80",
+                "anchorHash": "6acc5d325184"
+              },
+              "prose:5": {
+                "contentHash": "a3d86178a63c",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "08e24c718dd1",
+                "anchorHash": "cd17412d05f7"
+              },
+              "prose:6": {
+                "contentHash": "3bd4ac29f1ef",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          },
+          "report-law-enforcement": {
+            "contentHash": "ff28d7fc8ebc",
+            "anchorHash": "cac2ebe2d4ca",
+            "labelHash": "a0346968252d",
+            "children": {
+              "_label": {
+                "contentHash": "a0346968252d",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "prose:3": {
+                "contentHash": "023b3d7b19b0",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:0": {
+                "contentHash": "b1491e6ed10b",
+                "anchorHash": "5a59669b48e2"
+              },
+              "prose:4": {
+                "contentHash": "f4884cafbe8b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:1": {
+                "contentHash": "52ac41f8791f",
+                "anchorHash": "00f6c8fa2c89"
+              },
+              "prose:5": {
+                "contentHash": "846fd508853b",
+                "anchorHash": "e3b0c44298fc"
+              },
+              "link:2": {
+                "contentHash": "fbd94bd54863",
+                "anchorHash": "646e8f9f814e"
+              },
+              "prose:6": {
+                "contentHash": "bfa56d77b1b6",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "_label",
+              "prose:3",
+              "link:0",
+              "prose:4",
+              "link:1",
+              "prose:5",
+              "link:2",
+              "prose:6"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0",
+          "report-address",
+          "report-website",
+          "report-law-enforcement"
+        ]
+      },
+      "analyze": {
+        "contentHash": "4d55f43f8cf3",
+        "anchorHash": "f7bfca7b62c8",
+        "labelHash": "05ddd021c036",
+        "children": {
+          "_label": {
+            "contentHash": "05ddd021c036",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:4": {
+            "contentHash": "d663ecd4ae25",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:0": {
+            "contentHash": "3dee05652774",
+            "anchorHash": "146b245b34dd"
+          },
+          "prose:5": {
+            "contentHash": "3b594d80a63a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:1": {
+            "contentHash": "d0299bb7f22b",
+            "anchorHash": "37ab6f3e27a9"
+          },
+          "prose:6": {
+            "contentHash": "60f96a68534e",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:2": {
+            "contentHash": "da872bf93b92",
+            "anchorHash": "a63b46d52c58"
+          },
+          "prose:7": {
+            "contentHash": "9af825bd37b4",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:3": {
+            "contentHash": "5b81532afbaf",
+            "anchorHash": "7b13f1821b80"
+          },
+          "prose:8": {
+            "contentHash": "c84aef9ef4fc",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:4",
+          "link:0",
+          "prose:5",
+          "link:1",
+          "prose:6",
+          "link:2",
+          "prose:7",
+          "link:3",
+          "prose:8"
+        ]
+      },
+      "hard-truth": {
+        "contentHash": "1c44ca0749bb",
+        "anchorHash": "4b9f7d802648",
+        "labelHash": "15132b896b60",
+        "children": {
+          "_label": {
+            "contentHash": "15132b896b60",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:0": {
+            "contentHash": "ddcc4372dbfe",
+            "anchorHash": "e3b0c44298fc"
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "prose:0"
+        ]
+      },
+      "scam-types": {
+        "contentHash": "d3df74705789",
+        "anchorHash": "629921053593",
+        "labelHash": "e96dd68e3ab0",
+        "children": {
+          "_label": {
+            "contentHash": "e96dd68e3ab0",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "html-tag:0": {
+            "contentHash": "246ad5dea770",
+            "anchorHash": "c26455fe5c22"
+          },
+          "html-tag:1": {
+            "contentHash": "25ad6a23c815",
+            "anchorHash": "04cbf8e4acf3"
+          },
+          "html-tag:2": {
+            "contentHash": "7e291086323f",
+            "anchorHash": "9831e13b0e9b"
+          },
+          "html-tag:3": {
+            "contentHash": "e3b0c44298fc",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "prose:5": {
+            "contentHash": "67f8aee37d6b",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "link:4": {
+            "contentHash": "ee6dacf19eb5",
+            "anchorHash": "e41e6c9cd188"
+          },
+          "prose:6": {
+            "contentHash": "6ee6554a8002",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:8": {
+            "contentHash": "c2e7dfa79e40",
+            "anchorHash": "ef35f9a34daf",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "1a15925e0cf0"
+              },
+              "prose:0": {
+                "contentHash": "8ba6867e2274",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          },
+          "prose:0": {
+            "contentHash": "00751b5afc7a",
+            "anchorHash": "e3b0c44298fc"
+          },
+          "component:10": {
+            "contentHash": "2fe4399bf908",
+            "anchorHash": "961a65c8b2b9",
+            "children": {
+              "attr:href": {
+                "contentHash": "e3b0c44298fc",
+                "anchorHash": "a66cf66c9cba"
+              },
+              "prose:0": {
+                "contentHash": "a506069525fa",
+                "anchorHash": "e3b0c44298fc"
+              }
+            },
+            "childrenOrder": [
+              "attr:href",
+              "prose:0"
+            ]
+          }
+        },
+        "childrenOrder": [
+          "_label",
+          "html-tag:0",
+          "html-tag:1",
+          "html-tag:2",
+          "html-tag:3",
+          "prose:5",
+          "link:4",
+          "prose:6",
+          "component:8",
+          "prose:0",
+          "component:10"
+        ]
+      }
+    },
+    "childrenOrder": [
+      "frontmatter:title",
+      "frontmatter:metaTitle",
+      "frontmatter:description",
+      "frontmatter:lang",
+      "prose:0",
+      "component:5",
+      "secure-assets",
+      "report",
+      "analyze",
+      "hard-truth",
+      "scam-types"
+    ]
+  },
+  "sourceCommitSha": "3386cef003bcde632c49b86dc3a898f33b1363d4"
+}
