@@ -67,4 +67,4 @@ lang: te
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     DAOల గురించి మరింత తెలుసుకోండి
   </ButtonLink>
-</ButtonLink>
+</Callout>

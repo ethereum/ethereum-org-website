@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   घोटाले वाले टोकन की पहचान कैसे करें
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   इथेरियम सुरक्षा और घोटाला रोकथाम के लिए पूरी मार्गदर्शिका

@@ -200,7 +200,7 @@ Příklad slabého hesla: RoztomilaChlupataKotatka!
 Příklad silného hesla: ymv\*azu.EAC8eyp8umf
 ```
 
-Další častou chybou je používání hesel, která lze snadno uhodnout nebo odhalit prostřednictvím [sociálního inženýrství](<https://wikipedia.org/wiki/Social_engineering_(security)). Zahrnutí rodného příjmení vaší matky, jmen vašich dětí nebo domácích mazlíčků, případně dat narození do vašeho hesla zvýší riziko hacknutí.
+Další častou chybou je používání hesel, která lze snadno uhodnout nebo odhalit prostřednictvím [sociálního inženýrství](<https://wikipedia.org/wiki/Social_engineering_(security)>). Zahrnutí rodného příjmení vaší matky, jmen vašich dětí nebo domácích mazlíčků, případně dat narození do vašeho hesla zvýší riziko hacknutí.
 
 #### Osvědčené postupy pro hesla: {#good-password-practices}
 

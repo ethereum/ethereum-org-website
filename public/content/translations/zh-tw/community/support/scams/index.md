@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   如何識別詐騙代幣
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   以太坊安全與防範詐騙完整指南

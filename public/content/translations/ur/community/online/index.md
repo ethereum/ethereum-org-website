@@ -67,4 +67,4 @@ lang: ur
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     <span dir="ltr">DAOs</span> کے بارے میں مزید جانیں
   </ButtonLink>
-</ButtonLink>
+</Callout>

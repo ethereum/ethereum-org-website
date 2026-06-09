@@ -71,7 +71,7 @@ Ili hili lifanyike, [Miti ya Verkle](/roadmap/verkle-trees/) lazima iwe tayari i
 Ubilahali unategemea wajengaji wa vitalu kudumisha nakala ya data kamili ya hali ili waweze kuzalisha mashahidi ambao wanaweza kutumika kuthibitisha kitalu. Nodi zingine hazihitaji ufikiaji wa data ya hali, taarifa zote zinazohitajika kuthibitisha kitalu zinapatikana kwa shahidi. Hii inaunda hali ambapo kupendekeza kitalu ni ghali, lakini kuthibitisha kitalu ni nafuu, ambayo inamaanisha waendeshaji wachache wataendesha nodi ya kupendekeza kitalu. Hata hivyo, ugatuzi wa wapendekezaji wa vitalu sio muhimu mradi tu washiriki wengi iwezekanavyo wanaweza kuthibitisha kwa kujitegemea kwamba vitalu wanavyopendekeza ni halali.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Soma zaidi kwenye madokezo ya Dankrad</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 Wapendekezaji wa vitalu hutumia data ya hali kuunda "mashahidi" - seti ndogo ya data inayothibitisha thamani za hali zinazobadilishwa na miamala katika kitalu. Wathibitishaji wengine hawashikilii hali, wanahifadhi tu mzizi wa hali (heshi ya hali nzima). Wanapokea kitalu na shahidi na kuvitumia kusasisha mzizi wao wa hali. Hii inafanya nodi ya kuthibitisha kuwa nyepesi sana.
 

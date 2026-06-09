@@ -71,7 +71,7 @@ Para que isso aconteça, as [árvores Verkle](/roadmap/verkle-trees/) já devem 
 A ausência de estado depende de construtores de blocos mantendo uma cópia dos dados de estado completos para que possam gerar testemunhas que podem ser usadas para verificar o bloco. Outros nós não precisam de acesso aos dados de estado, todas as informações exigidas para verificar o bloco estão disponíveis na testemunha. Isso cria uma situação em que propor um bloco é caro, mas verificar o bloco é barato, o que implica que menos operadores executarão um nó de proposição de bloco. No entanto, a descentralização dos propositores de blocos não é crítica, desde que o maior número possível de participantes possa verificar de forma independente se os blocos que eles propõem são válidos.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leia mais nas notas de Dankrad</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 Os propositores de blocos usam os dados de estado para criar "testemunhas" - o conjunto mínimo de dados que provam os valores do estado que estão sendo alterados pelas transações em um bloco. Outros validadores não mantêm o estado, eles armazenam apenas a raiz do estado (um hash de todo o estado). Eles recebem um bloco e uma testemunha e os usam para atualizar sua raiz de estado. Isso torna um nó de validação extremamente leve.
 

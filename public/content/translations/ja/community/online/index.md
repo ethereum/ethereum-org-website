@@ -67,4 +67,4 @@ lang: ja
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     DAOについてさらに詳しく
   </ButtonLink>
-</ButtonLink>
+</Callout>

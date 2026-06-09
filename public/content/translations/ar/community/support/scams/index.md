@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   كيفية التعرف على الرموز المميزة الاحتيالية
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   الدليل الشامل لأمان إيثيريوم والوقاية من الاحتيال

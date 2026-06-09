@@ -67,4 +67,4 @@ lang: ko
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     DAO에 대해 자세히 알아보기
   </ButtonLink>
-</ButtonLink>
+</Callout>

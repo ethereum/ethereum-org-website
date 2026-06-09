@@ -200,7 +200,7 @@ _注意：存在可能代表已质押 ETH 的衍生代币/代码（即来自 Roc
 强密码示例：ymv\*azu.EAC8eyp8umf
 ```
 
-另一个常见的错误是使用容易被猜到或通过[社会工程学](<https://wikipedia.org/wiki/Social_engineering_(security)）发现的密码。在密码中包含你母亲的娘家姓、你的孩子或宠物的名字，或者出生日期，都会增加被黑客攻击的风险。
+另一个常见的错误是使用容易被猜到或通过[社会工程学](<https://wikipedia.org/wiki/Social_engineering_(security)>)发现的密码。在密码中包含你母亲的娘家姓、你的孩子或宠物的名字，或者出生日期，都会增加被黑客攻击的风险。
 
 #### 良好的密码习惯： {#good-password-practices}
 

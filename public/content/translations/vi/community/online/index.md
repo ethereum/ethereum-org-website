@@ -67,4 +67,4 @@ Nếu bạn cho rằng một cộng đồng nên được thêm vào hoặc xóa
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Tìm hiểu thêm về DAO
   </ButtonLink>
-</ButtonLink>
+</Callout>

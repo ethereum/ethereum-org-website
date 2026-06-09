@@ -152,7 +152,7 @@ Sites de phishing parecem idênticos a aplicativos de carteira reais, corretoras
   Como identificar tokens fraudulentos
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Guia completo sobre segurança no Ethereum e prevenção de golpes

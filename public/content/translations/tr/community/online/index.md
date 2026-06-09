@@ -67,4 +67,4 @@ Bu yönergelere dayanarak bir topluluğun eklenmesi veya kaldırılması gerekti
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     DAO'lar hakkında daha fazla bilgi edinin
   </ButtonLink>
-</ButtonLink>
+</Callout>

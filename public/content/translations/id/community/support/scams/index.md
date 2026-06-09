@@ -152,7 +152,7 @@ Situs phishing terlihat identik dengan aplikasi dompet, bursa, atau platform keu
   Cara mengidentifikasi token penipuan
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Panduan lengkap tentang keamanan Ethereum dan pencegahan penipuan

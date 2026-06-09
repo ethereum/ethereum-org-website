@@ -67,4 +67,4 @@ Wenn du der Meinung bist, dass eine Community basierend auf diesen Richtlinien h
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Erfahre mehr über DAOs
   </ButtonLink>
-</ButtonLink>
+</Callout>

@@ -152,7 +152,7 @@ Les sites d'hameçonnage semblent identiques aux vraies applications de portefeu
   Comment identifier les jetons frauduleux
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Guide complet sur la sécurité d'Ethereum et la prévention des arnaques

@@ -152,7 +152,7 @@ Los sitios de phishing se ven idénticos a las aplicaciones de billetera, interc
   Cómo identificar tokens fraudulentos
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Guía completa sobre seguridad en Ethereum y prevención de estafas

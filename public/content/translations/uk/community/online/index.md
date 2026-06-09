@@ -67,4 +67,4 @@ lang: uk
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Дізнатися більше про DAO
   </ButtonLink>
-</ButtonLink>
+</Callout>

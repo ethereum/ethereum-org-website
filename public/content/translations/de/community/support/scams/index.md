@@ -152,7 +152,7 @@ Phishing-Websites sehen identisch aus wie echte Wallet-Apps, Börsen oder Plattf
   So erkennen Sie Betrugs-Token
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Vollständiger Leitfaden zur Ethereum-Sicherheit und Betrugsprävention

@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   Как распознать мошеннические токены
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Полное руководство по безопасности Эфириума и предотвращению мошенничества

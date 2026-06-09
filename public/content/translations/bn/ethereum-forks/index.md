@@ -52,8 +52,8 @@ authors: ["নিক্সো"]
 | [বেলাট্রিক্স](https://en.wikipedia.org/wiki/Bellatrix)      | 6 সেপ্টেম্বর, 2022  |
 | [ক্যাপেলা](https://en.wikipedia.org/wiki/Capella)          | 12 এপ্রিল, 2023 |
 | [ডেনেব](https://en.wikipedia.org/wiki/Deneb)              | 13 মার্চ, 2024 |
-| [ইলেক্ট্রা](<https://en.wikipedia.org/wiki/Electra_(star)) | 7 মে, 2025  |
-| [ফুলু](<https://en.wikipedia.org/wiki/Fulu_(star))       | 3 ডিসেম্বর, 2025  |
+| [ইলেক্ট্রা](<https://en.wikipedia.org/wiki/Electra_(star)>) | 7 মে, 2025  |
+| [ফুলু](<https://en.wikipedia.org/wiki/Fulu_(star)>)       | 3 ডিসেম্বর, 2025  |
 | [**গ্লোয়াস**](https://en.wikipedia.org/wiki/WASP-13)        | TBD - পরবর্তী   |
 | [_হেজে_](https://en.wikipedia.org/wiki/Zeta_Virginis)     | TBD          |
 

@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   কীভাবে স্ক্যাম টোকেন শনাক্ত করবেন
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   ইথেরিয়াম নিরাপত্তা এবং স্ক্যাম প্রতিরোধের সম্পূর্ণ গাইড

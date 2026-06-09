@@ -67,4 +67,4 @@ Pokud se domníváte, že by nějaká komunita měla být na základě těchto p
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Zjistěte více o DAO
   </ButtonLink>
-</ButtonLink>
+</Callout>

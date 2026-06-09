@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   స్కామ్ టోకెన్‌లను ఎలా గుర్తించాలి
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   ఎథీరియం భద్రత మరియు స్కామ్ నివారణకు పూర్తి మార్గదర్శి

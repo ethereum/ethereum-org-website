@@ -71,7 +71,7 @@ Affinché ciò avvenga, gli [alberi di Verkle](/roadmap/verkle-trees/) devono es
 L'assenza di stato si basa sul fatto che i costruttori di blocchi mantengano una copia dei dati di stato completi in modo da poter generare testimoni che possono essere utilizzati per verificare il blocco. Gli altri nodi non necessitano dell'accesso ai dati di stato, tutte le informazioni richieste per verificare il blocco sono disponibili nel testimone. Questo crea una situazione in cui proporre un blocco è costoso, ma verificare il blocco è economico, il che implica che meno operatori eseguiranno un nodo proponente di blocchi. Tuttavia, la decentralizzazione dei proponenti di blocchi non è critica fintanto che il maggior numero possibile di partecipanti può verificare in modo indipendente che i blocchi che propongono siano validi.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leggi di più sugli appunti di Dankrad</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 I proponenti di blocchi utilizzano i dati di stato per creare "testimoni": l'insieme minimo di dati che dimostra i valori dello stato che vengono modificati dalle transazioni in un blocco. Gli altri validatori non mantengono lo stato, archiviano solo la radice dello stato (un hash dell'intero stato). Ricevono un blocco e un testimone e li usano per aggiornare la loro radice dello stato. Questo rende un nodo di convalida estremamente leggero.
 

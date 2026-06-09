@@ -152,7 +152,7 @@ Strony phishingowe wyglądają identycznie jak prawdziwe aplikacje portfeli, gie
   Jak rozpoznać fałszywe tokeny
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Pełny przewodnik po bezpieczeństwie Ethereum i zapobieganiu oszustwom

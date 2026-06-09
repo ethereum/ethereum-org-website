@@ -71,7 +71,7 @@ Para que esto suceda, los [árboles Verkle](/roadmap/verkle-trees/) ya deben hab
 La ausencia de estado depende de que los constructores de bloques mantengan una copia de los datos completos del estado para que puedan generar testigos que se puedan usar para verificar el bloque. Otros nodos no necesitan acceso a los datos del estado, toda la información requerida para verificar el bloque está disponible en el testigo. Esto crea una situación en la que proponer un bloque es costoso, pero verificar el bloque es barato, lo que implica que menos operadores ejecutarán un nodo proponente de bloques. Sin embargo, la descentralización de los proponentes de bloques no es crítica siempre y cuando la mayor cantidad posible de participantes pueda verificar de forma independiente que los bloques que proponen son válidos.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leer más en las notas de Dankrad</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 Los proponentes de bloques utilizan los datos del estado para crear "testigos": el conjunto mínimo de datos que prueban los valores del estado que están siendo cambiados por las transacciones en un bloque. Otros validadores no mantienen el estado, solo almacenan la raíz del estado (un hash de todo el estado). Reciben un bloque y un testigo y los utilizan para actualizar su raíz del estado. Esto hace que un nodo validador sea extremadamente ligero.
 

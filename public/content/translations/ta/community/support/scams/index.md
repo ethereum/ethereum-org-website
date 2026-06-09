@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   மோசடி வில்லைகளை எவ்வாறு கண்டறிவது
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   எத்திரியம் பாதுகாப்பு மற்றும் மோசடி தடுப்புக்கான முழுமையான வழிகாட்டி

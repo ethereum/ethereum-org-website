@@ -152,7 +152,7 @@ Tovuti za kuhadaa ili kupata maelezo ya kibinafsi (phishing) zinaonekana sawa na
   Jinsi ya kutambua tokeni za utapeli
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Mwongozo kamili wa usalama wa Ethereum na kuzuia utapeli

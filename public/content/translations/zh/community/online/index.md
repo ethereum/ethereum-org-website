@@ -67,4 +67,4 @@ lang: zh
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     了解有关 DAO 的更多信息
   </ButtonLink>
-</ButtonLink>
+</Callout>

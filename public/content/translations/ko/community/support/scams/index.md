@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   사기 토큰 식별 방법
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   이더리움 보안 및 사기 예방 전체 가이드

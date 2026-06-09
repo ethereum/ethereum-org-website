@@ -152,7 +152,7 @@ I siti di phishing sembrano identici alle vere app di portafoglio, agli exchange
   Come identificare i token truffaldini
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Guida completa alla sicurezza di Ethereum e alla prevenzione delle truffe

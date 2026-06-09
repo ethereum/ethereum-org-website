@@ -152,7 +152,7 @@ Phishingové stránky vypadají identicky jako skutečné aplikace peněženek, 
   Jak identifikovat podvodné tokeny
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Kompletní průvodce bezpečností Etherea a prevencí podvodů

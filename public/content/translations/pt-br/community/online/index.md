@@ -67,4 +67,4 @@ Se você acredita que uma comunidade deve ser adicionada ou removida com base ne
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Saiba mais sobre DAOs
   </ButtonLink>
-</ButtonLink>
+</Callout>

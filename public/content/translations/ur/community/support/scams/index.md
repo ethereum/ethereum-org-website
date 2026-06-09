@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   سکیم ٹوکنز کی شناخت کیسے کریں
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   ایتھیریم سیکیورٹی اور سکیم سے بچاؤ کی مکمل گائیڈ

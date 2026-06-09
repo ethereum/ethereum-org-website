@@ -67,4 +67,4 @@ Jeśli uważasz, że społeczność powinna zostać dodana lub usunięta na pods
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Dowiedz się więcej o DAO
   </ButtonLink>
-</ButtonLink>
+</Callout>

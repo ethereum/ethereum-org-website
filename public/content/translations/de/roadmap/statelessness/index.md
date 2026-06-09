@@ -71,7 +71,7 @@ Damit dies geschehen kann, müssen [Verkle-Bäume](/roadmap/verkle-trees/) berei
 Zustandslosigkeit beruht darauf, dass Block-Builder eine Kopie der vollständigen Zustandsdaten pflegen, damit sie Zeugen generieren können, die zur Verifizierung des Blocks verwendet werden können. Andere Knoten benötigen keinen Zugriff auf die Zustandsdaten, alle zur Verifizierung des Blocks erforderlichen Informationen sind im Zeugen verfügbar. Dies schafft eine Situation, in der das Vorschlagen eines Blocks teuer ist, das Verifizieren des Blocks jedoch billig, was impliziert, dass weniger Betreiber einen Knoten zum Vorschlagen von Blöcken betreiben werden. Die Dezentralisierung von Block-Proposern ist jedoch nicht kritisch, solange so viele Teilnehmer wie möglich unabhängig verifizieren können, dass die von ihnen vorgeschlagenen Blöcke gültig sind.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Lesen Sie mehr in Dankrads Notizen</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 Block-Proposer verwenden die Zustandsdaten, um „Zeugen“ zu erstellen – den minimalen Datensatz, der die Werte des Zustands beweist, die durch die Transaktionen in einem Block geändert werden. Andere Validatoren halten den Zustand nicht, sie speichern nur die Zustands-Root (einen Hash des gesamten Zustands). Sie empfangen einen Block und einen Zeugen und verwenden diese, um ihre Zustands-Root zu aktualisieren. Dies macht einen validierenden Knoten extrem leichtgewichtig.
 

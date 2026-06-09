@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   詐欺トークンを特定する方法
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   イーサリアムのセキュリティと詐欺防止に関する完全ガイド

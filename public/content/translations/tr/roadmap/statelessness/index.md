@@ -71,7 +71,7 @@ Bunun gerçekleşmesi için [Verkle Ağaçları](/roadmap/verkle-trees/) Ethereu
 Durumsuzluk, blok oluşturucuların bloğu doğrulamak için kullanılabilecek tanıklar üretebilmeleri için tam durum verilerinin bir kopyasını tutmalarına dayanır. Diğer düğümlerin durum verilerine erişmesine gerek yoktur, bloğu doğrulamak için gereken tüm bilgiler tanıkta mevcuttur. Bu, bir blok önermenin pahalı, ancak bloğu doğrulamanın ucuz olduğu bir durum yaratır, bu da daha az operatörün bir blok önerme düğümü çalıştıracağı anlamına gelir. Bununla birlikte, mümkün olduğunca çok katılımcı önerdikleri blokların geçerli olduğunu bağımsız olarak doğrulayabildiği sürece blok teklifçilerinin merkeziyetsizliği kritik değildir.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Dankrad'ın notlarında daha fazlasını okuyun</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 Blok teklifçileri, bir bloktaki işlemler tarafından değiştirilen durum değerlerini kanıtlayan minimum veri seti olan "tanıklar" oluşturmak için durum verilerini kullanır. Diğer doğrulayıcılar durumu tutmazlar, yalnızca durum kökünü (tüm durumun bir hash'i) depolarlar. Bir blok ve bir tanık alırlar ve bunları durum köklerini güncellemek için kullanırlar. Bu, doğrulayıcı bir düğümü son derece hafif hale getirir.
 

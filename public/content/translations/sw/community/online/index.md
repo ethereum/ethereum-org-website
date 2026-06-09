@@ -67,4 +67,4 @@ Ikiwa unaamini jamii inapaswa kuongezwa au kuondolewa kulingana na miongozo hii,
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Jifunze zaidi kuhusu DAO
   </ButtonLink>
-</ButtonLink>
+</Callout>

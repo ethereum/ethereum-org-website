@@ -200,7 +200,7 @@ Ví dụ về mật khẩu yếu: CuteFluffyKittens!
 Ví dụ về mật khẩu mạnh: ymv\*azu.EAC8eyp8umf
 ```
 
-Một sai lầm phổ biến khác là sử dụng mật khẩu có thể dễ dàng đoán được hoặc bị phát hiện thông qua [tấn công phi kỹ thuật (social engineering)](<https://wikipedia.org/wiki/Social_engineering_(security). Việc bao gồm tên thời con gái của mẹ bạn, tên của con cái hoặc thú cưng của bạn, hoặc ngày sinh trong mật khẩu của bạn sẽ làm tăng rủi ro bị tấn công.
+Một sai lầm phổ biến khác là sử dụng mật khẩu có thể dễ dàng đoán được hoặc bị phát hiện thông qua [tấn công phi kỹ thuật (social engineering)](<https://wikipedia.org/wiki/Social_engineering_(security)>). Việc bao gồm tên thời con gái của mẹ bạn, tên của con cái hoặc thú cưng của bạn, hoặc ngày sinh trong mật khẩu của bạn sẽ làm tăng rủi ro bị tấn công.
 
 #### Các phương pháp hay về mật khẩu: {#good-password-practices}
 

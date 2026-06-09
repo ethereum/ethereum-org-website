@@ -67,4 +67,4 @@ Si vous pensez qu'une communauté devrait être ajoutée ou supprimée sur la ba
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     En savoir plus sur les DAO
   </ButtonLink>
-</ButtonLink>
+</Callout>

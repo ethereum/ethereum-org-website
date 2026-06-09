@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   फसवे टोकन कसे ओळखावे
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   इथेरियम सुरक्षा आणि फसवणूक प्रतिबंधासाठी संपूर्ण मार्गदर्शक

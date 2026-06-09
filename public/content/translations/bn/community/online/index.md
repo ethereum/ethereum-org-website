@@ -67,4 +67,4 @@ lang: bn
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     DAO সম্পর্কে আরও জানুন
   </ButtonLink>
-</ButtonLink>
+</Callout>

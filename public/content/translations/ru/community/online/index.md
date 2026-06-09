@@ -67,4 +67,4 @@ lang: ru
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     Узнать больше о ДАО
   </ButtonLink>
-</ButtonLink>
+</Callout>

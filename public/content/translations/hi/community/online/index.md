@@ -67,4 +67,4 @@ lang: hi
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     DAO के बारे में अधिक जानें
   </ButtonLink>
-</ButtonLink>
+</Callout>

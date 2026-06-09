@@ -71,7 +71,7 @@ Agar hal ini terjadi, [Pohon Verkle](/roadmap/verkle-trees/) harus sudah diimple
 Ketiadaan state bergantung pada pembangun blok yang memelihara salinan data state penuh sehingga mereka dapat menghasilkan saksi yang dapat digunakan untuk memverifikasi blok. Node lain tidak memerlukan akses ke data state, semua informasi yang diwajibkan untuk memverifikasi blok tersedia di dalam saksi. Hal ini menciptakan situasi di mana mengusulkan blok itu mahal, tetapi memverifikasi blok itu murah, yang menyiratkan lebih sedikit operator yang akan menjalankan node pengusul blok. Namun, desentralisasi pengusul blok tidaklah kritis selama sebanyak mungkin peserta dapat memverifikasi secara mandiri bahwa blok yang mereka usulkan adalah valid.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Baca selengkapnya di catatan Dankrad</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 Pengusul blok menggunakan data state untuk membuat "saksi" - kumpulan data minimal yang membuktikan nilai state yang sedang diubah oleh transaksi dalam sebuah blok. Validator lain tidak memegang state, mereka hanya menyimpan akar state (hash dari seluruh state). Mereka menerima blok dan saksi lalu menggunakannya untuk memperbarui akar state mereka. Hal ini membuat node validasi menjadi sangat ringan.
 

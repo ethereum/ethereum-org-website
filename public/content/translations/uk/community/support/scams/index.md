@@ -152,7 +152,7 @@ eventName="clicked phishing scam"
   Як розпізнати шахрайські токени
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Повний посібник з безпеки Етеріуму та запобігання шахрайству

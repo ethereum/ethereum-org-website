@@ -71,7 +71,7 @@ Aby k tomu mohlo dojít, musí být v klientech Etherea již implementovány [Ve
 Bezstavovost spoléhá na to, že tvůrci bloků udržují kopii úplných dat stavu, aby mohli generovat svědky, které lze použít k ověření bloku. Ostatní uzly nepotřebují přístup k datům stavu, všechny informace potřebné k ověření bloku jsou k dispozici ve svědkovi. To vytváří situaci, kdy je navrhování bloku drahé, ale ověřování bloku je levné, což znamená, že uzel navrhující bloky bude provozovat méně operátorů. Decentralizace navrhovatelů bloků však není kritická, pokud co nejvíce účastníků může nezávisle ověřit, že jimi navržené bloky jsou platné.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Přečtěte si více v Dankradových poznámkách</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 Navrhovatelé bloků používají data stavu k vytvoření „svědků“ – minimální sady dat, která prokazuje hodnoty stavu, jež jsou měněny transakcemi v bloku. Ostatní validátoři nedrží stav, ukládají pouze kořen stavu (hash celého stavu). Přijmou blok a svědka a použijí je k aktualizaci svého kořene stavu. Díky tomu je validující uzel extrémně nenáročný.
 

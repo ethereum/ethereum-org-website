@@ -67,4 +67,4 @@ lang: ar
   <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
     تعرف على المزيد حول المنظمات المستقلة اللامركزية (DAOs)
   </ButtonLink>
-</ButtonLink>
+</Callout>

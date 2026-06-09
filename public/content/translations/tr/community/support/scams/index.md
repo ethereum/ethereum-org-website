@@ -152,7 +152,7 @@ Kimlik avı siteleri gerçek cüzdan uygulamalarına, borsalara veya merkeziyets
   Dolandırıcı token'lar nasıl tespit edilir
 </DocLink>
 
-</DocLink>
+</ExpandableCard>
 
 <DocLink href="/security/">
   Ethereum güvenliği ve dolandırıcılığı önleme için tam rehber

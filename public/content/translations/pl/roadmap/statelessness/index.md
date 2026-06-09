@@ -71,7 +71,7 @@ Aby tak się stało, [drzewa Verkle](/roadmap/verkle-trees/) muszą być już za
 Bezstanowość opiera się na tym, że budujący bloki utrzymują kopię pełnych danych stanu, dzięki czemu mogą generować świadków, których można użyć do weryfikacji bloku. Inne węzły nie potrzebują dostępu do danych stanu, wszystkie informacje wymagane do weryfikacji bloku są dostępne u świadka. Stwarza to sytuację, w której proponowanie bloku jest drogie, ale weryfikacja bloku jest tania, co oznacza, że mniej operatorów będzie uruchamiać węzeł proponujący bloki. Jednak decentralizacja proponujących bloki nie ma kluczowego znaczenia, o ile jak najwięcej uczestników może niezależnie zweryfikować, czy proponowane przez nich bloki są prawidłowe.
 
 <ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Przeczytaj więcej w notatkach Dankrada</ButtonLink>
-</ButtonLink>
+</ExpandableCard>
 
 Proponujący bloki używają danych stanu do tworzenia „świadków” – minimalnego zestawu danych, które dowodzą wartości stanu zmienianych przez transakcje w bloku. Inni walidatorzy nie przechowują stanu, przechowują jedynie korzeń stanu (hash całego stanu). Otrzymują blok i świadka, a następnie używają ich do aktualizacji swojego korzenia stanu. Dzięki temu węzeł walidujący jest niezwykle lekki.
 
